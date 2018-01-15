@@ -829,11 +829,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a4fc6c962ffeaeb8c81da8053aeb2e96aad448c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1d622c2b10b9483a1c40a99bd4956ad24fa07f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 提供 MFC 程式庫中所有視窗類別的基本功能。  
@@ -844,17 +845,17 @@ ms.lasthandoff: 10/24/2017
 class CWnd : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWnd::CWnd](#cwnd)|建構 `CWnd` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWnd::accDoDefaultAction](#accdodefaultaction)|由架構呼叫以執行物件的預設動作。|  
 |[CWnd::accHitTest](#acchittest)|由架構呼叫以擷取畫面中給定點的子項目或子物件。|  
@@ -1095,9 +1096,9 @@ class CWnd : public CCmdTarget
 |[CWnd::WindowFromPoint](#windowfrompoint)|識別包含指定點的視窗。|  
 |[CWnd::WinHelp](#winhelp)|呼叫以初始化 WinHelp 應用程式。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWnd::Default](#default)|呼叫預設視窗程序，提供應用程式不會處理的任何視窗訊息的預設處理程序。|  
 |[CWnd::DefWindowProc](#defwindowproc)|呼叫預設視窗程序，提供應用程式不會處理的任何視窗訊息的預設處理程序。|  
@@ -1268,7 +1269,7 @@ class CWnd : public CCmdTarget
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[HWND cwnd:: Operator](#operator_hwnd)|呼叫以取得視窗的控制代碼。|  
 |[Cwnd:: Operator ！ =](#operator_neq)|判斷視窗是否不是控制代碼的視窗相同[m_hWnd](#m_hwnd)。|  
@@ -1276,7 +1277,7 @@ class CWnd : public CCmdTarget
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWnd::m_hWnd](#m_hwnd)|指出 `HWND` 附加至此 `CWnd`。|  
   
@@ -1628,7 +1629,7 @@ virtual void CalcWindowRect(
  [in、out] `lpClientRect`  
  矩形結構的指標。 輸入時，此結構包含用戶端矩形。 此方法完成之後，這個結構會包含可以包含指定的用戶端矩形視窗矩形。  
   
- [in] `nAdjustType`  
+ [輸入] `nAdjustType`  
  使用`CWnd::adjustBorder`計算視窗座標不含`WS_EX_CLIENTEDGE`樣式; 否則，請使用`CWnd::adjustOutside`。  
   
 ### <a name="remarks"></a>備註  
@@ -1834,25 +1835,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszClassName`  
+ [輸入] `lpszClassName`  
  以 null 終止的字串，其中包含系統註冊的視窗類別; 名稱的指標或預先定義的系統視窗類別名稱。  
   
- [in] `lpszWindowName`  
+ [輸入] `lpszWindowName`  
  以 null 終止的字串，包含視窗的指標會顯示名稱。否則`NULL`任何視窗的顯示名稱。  
   
- [in] `dwStyle`  
+ [輸入] `dwStyle`  
  位元組合 (OR)[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 `WS_POPUP`選項不是有效的樣式。  
   
- [in] `rect`  
+ [輸入] `rect`  
  大小和視窗相對於父視窗的左上角的位置。  
   
- [in] `pParentWnd`  
+ [輸入] `pParentWnd`  
  父視窗的指標。  
   
- [in] `nID`  
+ [輸入] `nID`  
  視窗的識別碼。  
   
- [in] `pContext`  
+ [輸入] `pContext`  
  指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)用於自訂應用程式的文件檢視架構的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -4981,7 +4982,7 @@ BOOL IsZoomed() const;
  為非零，如果`CWnd`最大化; 否則為 0。  
   
 ##  <a name="killtimer"></a>CWnd::KillTimer  
- 從先前的調用中將由 `nIDEvent`標識的定時器事件殺死為`SetTimer`。  
+ 從先前的調用中將由 `nIDEvent` 標識的定時器事件殺死為 `SetTimer`。  
   
 ```  
 BOOL KillTimer(UINT_PTR nIDEvent);
@@ -5359,10 +5360,10 @@ afx_msg void OnAppCommand(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pWnd`|指標`CWnd`物件，代表的視窗，其中使用者已按下命令按鈕或按下命令按鍵。 此視窗可以是子視窗的視窗接收訊息。|  
-|[in] `nCmd`|表示應用程式命令。 如需可能值的清單，請參閱底下的命令*cmd*區段`lParam`參數[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。|  
-|[in] `nDevice`|產生的輸入的事件的輸入的裝置。 如需可能值的清單，請參閱下的裝置*uDevice*區段`lParam`參數[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。|  
-|[in] `nKey`|表示已關機、 CTRL 鍵或滑鼠左的按鈕等任何虛擬按鍵。 如需可能值的清單，請參閱下方的索引鍵*dwKeys*區段`lParam`參數[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。 如需詳細資訊，請參閱中的 「 訊息參數 」 子標題[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
+|[輸入] `pWnd`|指標`CWnd`物件，代表的視窗，其中使用者已按下命令按鈕或按下命令按鍵。 此視窗可以是子視窗的視窗接收訊息。|  
+|[輸入] `nCmd`|表示應用程式命令。 如需可能值的清單，請參閱底下的命令*cmd*區段`lParam`參數[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。|  
+|[輸入] `nDevice`|產生的輸入的事件的輸入的裝置。 如需可能值的清單，請參閱下的裝置*uDevice*區段`lParam`參數[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。|  
+|[輸入] `nKey`|表示已關機、 CTRL 鍵或滑鼠左的按鈕等任何虛擬按鍵。 如需可能值的清單，請參閱下方的索引鍵*dwKeys*區段`lParam`參數[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)。 如需詳細資訊，請參閱中的 「 訊息參數 」 子標題[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)通知 Windows SDK 中所述。  
@@ -5617,8 +5618,8 @@ afx_msg void OnColorizationColorChanged(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `dwColorizationColor`|指定新的顏色標示色彩。<br /><br /> 色彩格式是十六進位數字的表單 0xAARRGGBB，其中每四個元件範圍從 0x00 到 0xFF。 AA 元件是 alpha 值、 RR 是紅色、 GG 為綠色，、 BB 是藍色。|  
-|[in] `bOpacity`|`true`如果新的色彩會與不透明度; 混合`false`如果不是。|  
+|[輸入] `dwColorizationColor`|指定新的顏色標示色彩。<br /><br /> 色彩格式是十六進位數字的表單 0xAARRGGBB，其中每四個元件範圍從 0x00 到 0xFF。 AA 元件是 alpha 值、 RR 是紅色、 GG 為綠色，、 BB 是藍色。|  
+|[輸入] `bOpacity`|`true`如果新的色彩會與不透明度; 混合`false`如果不是。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388198)通知訊息時，Windows SDK 中所述。  
@@ -5868,7 +5869,7 @@ afx_msg void OnDeadChar(
  `nFlags`  
  指定的掃描程式碼、 索引鍵轉換程式碼、 前一個索引鍵的狀態和內容的程式碼，如下列清單所示：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |0-7|掃描代碼 （OEM 相依值）。 高序位字組的低位元組。|  
 |8|擴充索引鍵，例如函式的索引鍵或 （1，表示它是一種擴充的金鑰; 否則為 0） 的數字鍵台上的索引鍵。|  
@@ -6373,9 +6374,9 @@ afx_msg void OnHotKey(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nHotKeyId`|熱鍵產生訊息識別項。 如果訊息已由系統定義的快速鍵產生，此參數將會是下列值之一：<br /><br /> - `IDHOT_SNAPDESKTOP`的已按下嵌入式管理單元桌面熱鍵。<br />- `IDHOT_SNAPWINDOW`的已按下嵌入式管理單元視窗熱鍵。|  
-|[in] `nKey1`|位元組合 (OR) 旗標，表示已按下組合與所指定之索引鍵的索引鍵`nKey2`參數。 可能值為：<br /><br /> - `MOD_ALT`-向下保留任一 ALT 鍵。<br />- `MOD_CONTROL`-向下保留任一 CTRL 鍵。<br />- `MOD_SHIFT`-向下保留任一 SHIFT 鍵。<br />- `MOD_WIN`-任一 WINDOWS 金鑰已同時按住。 Microsoft Windows 爦羆則標示為這些機碼。|  
-|[in] `nKey2`|熱鍵虛擬按鍵碼。|  
+|[輸入] `nHotKeyId`|熱鍵產生訊息識別項。 如果訊息已由系統定義的快速鍵產生，此參數將會是下列值之一：<br /><br /> - `IDHOT_SNAPDESKTOP`的已按下嵌入式管理單元桌面熱鍵。<br />- `IDHOT_SNAPWINDOW`的已按下嵌入式管理單元視窗熱鍵。|  
+|[輸入] `nKey1`|位元組合 (OR) 旗標，表示已按下組合與所指定之索引鍵的索引鍵`nKey2`參數。 可能值為：<br /><br /> - `MOD_ALT`-向下保留任一 ALT 鍵。<br />- `MOD_CONTROL`-向下保留任一 CTRL 鍵。<br />- `MOD_SHIFT`-向下保留任一 SHIFT 鍵。<br />- `MOD_WIN`-任一 WINDOWS 金鑰已同時按住。 Microsoft Windows 爦羆則標示為這些機碼。|  
+|[輸入] `nKey2`|熱鍵虛擬按鍵碼。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279)通知 Windows SDK 中所述。 此訊息會放在頂端的已註冊的熱鍵的執行緒相關聯的訊息佇列。 使用[RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)註冊全系統的便捷鍵的函式。  
@@ -6549,7 +6550,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `uFlag`|這個旗標可以包含下列值：<br /><br /> - `GIDC_ARRIVAL`-新的裝置已經加入至系統。<br />- `GIDC_REMOVAL`-裝置已從系統中移除。|  
+|[輸入] `uFlag`|這個旗標可以包含下列值：<br /><br /> - `GIDC_ARRIVAL`-新的裝置已經加入至系統。<br />- `GIDC_REMOVAL`-裝置已從系統中移除。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_INPUT_DEVICE_CHANGE](http://msdn.microsoft.com/library/windows/desktop/ms645591)通知 Windows SDK 中所述。 是一般輸入的裝置訊息。  
@@ -6570,8 +6571,8 @@ afx_msg void OnInputLangChange(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nCharSet`|新的地區設定的字元集。 如需詳細資訊，請參閱`lfCharSet`參數[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。|  
-|[in] `nLocaleId`|輸入法地區設定識別項。 如需詳細資訊，請參閱[語言識別項常數和字串](http://msdn.microsoft.com/library/windows/desktop/dd318693)。|  
+|[輸入] `nCharSet`|新的地區設定的字元集。 如需詳細資訊，請參閱`lfCharSet`參數[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。|  
+|[輸入] `nLocaleId`|輸入法地區設定識別項。 如需詳細資訊，請參閱[語言識別項常數和字串](http://msdn.microsoft.com/library/windows/desktop/dd318693)。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_INPUTLANGCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms632629)通知訊息時，Windows SDK 中所述。  
@@ -6592,8 +6593,8 @@ afx_msg void OnInputLangChangeRequest(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nFlags`|位元 (OR) 旗標的組合，以指出從上一個或下一個地區設定的地區設定中，已安裝的清單中選取新的地區設定或新輸入地區設定的鍵盤配置可以搭配系統字元集。<br /><br /> 可能的值為`INPUTLANGCHANGE_BACKWARD`， `INPUTLANGCHANGE_FORWARD`，和`INPUTLANGCHANGE_SYSCHARSET`。|  
-|[in] `nLocaleId`|輸入法地區設定識別項。 如需詳細資訊，請參閱[語言識別項常數和字串](http://msdn.microsoft.com/library/windows/desktop/dd318693)。|  
+|[輸入] `nFlags`|位元 (OR) 旗標的組合，以指出從上一個或下一個地區設定的地區設定中，已安裝的清單中選取新的地區設定或新輸入地區設定的鍵盤配置可以搭配系統字元集。<br /><br /> 可能的值為`INPUTLANGCHANGE_BACKWARD`， `INPUTLANGCHANGE_FORWARD`，和`INPUTLANGCHANGE_SYSCHARSET`。|  
+|[輸入] `nLocaleId`|輸入法地區設定識別項。 如需詳細資訊，請參閱[語言識別項常數和字串](http://msdn.microsoft.com/library/windows/desktop/dd318693)。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_INPUTLANGCHANGEREQUEST](http://msdn.microsoft.com/library/windows/desktop/ms632630)通知訊息時，Windows SDK 中所述。 當使用者選擇新的輸入的語言，與在鍵盤控制台應用程式，或從系統工作列上的指示指定的任一快速鍵，就會公佈此訊息。  
@@ -6621,7 +6622,7 @@ afx_msg void OnKeyDown(
  `nFlags`  
  指定的掃描程式碼、 索引鍵轉換程式碼、 前一個索引鍵的狀態和內容的程式碼，如下列清單所示：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |0-7|掃描代碼 （OEM 相依值）。|  
 |8|擴充索引鍵，例如函式的索引鍵或 (1，表示它是擴充的索引鍵) 的數字鍵台上的索引鍵。|  
@@ -6663,7 +6664,7 @@ afx_msg void OnKeyUp(
  `nFlags`  
  指定的掃描程式碼、 索引鍵轉換程式碼、 前一個索引鍵的狀態和內容的程式碼，如下列清單所示：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |0-7|掃描代碼 （OEM 相依值）。 高序位字組的低位元組。|  
 |8|擴充索引鍵，例如函式的索引鍵或 （1，表示它是一種擴充的金鑰; 否則為 0） 的數字鍵台上的索引鍵。|  
@@ -6989,8 +6990,8 @@ afx_msg UINT OnMenuDrag(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nPos`|在拖曳作業開始時之功能表項目的索引位置。|  
-|[in] `pMenu`|指標[CMenu](../../mfc/reference/cmenu-class.md)物件，其中包含功能表項目。|  
+|[輸入] `nPos`|在拖曳作業開始時之功能表項目的索引位置。|  
+|[輸入] `pMenu`|指標[CMenu](../../mfc/reference/cmenu-class.md)物件，其中包含功能表項目。|  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -7016,7 +7017,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pMenu`|指標[MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572)上是結構，其中包含滑鼠游標拖放功能表的相關資訊。|  
+|[輸入] `pMenu`|指標[MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572)上是結構，其中包含滑鼠游標拖放功能表的相關資訊。|  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -7044,8 +7045,8 @@ afx_msg void OnMenuRButtonUp(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nPos`|放開滑鼠按鈕時，功能表項目的索引位置。|  
-|[in] `pMenu`|指標[CMenu](../../mfc/reference/cmenu-class.md)物件，其中包含功能表項目。|  
+|[輸入] `nPos`|放開滑鼠按鈕時，功能表項目的索引位置。|  
+|[輸入] `pMenu`|指標[CMenu](../../mfc/reference/cmenu-class.md)物件，其中包含功能表項目。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610)通知 Windows SDK 中所述。 [WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610)訊息可讓應用程式功能表項目指定的訊息中提供的內容相關性功能表。  
@@ -7152,8 +7153,8 @@ afx_msg void OnMouseHover(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
+|[輸入] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。|  
+|[輸入] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_MOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645613)通知 Windows SDK 中所述。  
@@ -7187,9 +7188,9 @@ afx_msg void OnMouseHWheel(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。<br /><br /> 如需旗標的清單，請參閱中的 「 訊息參數 」 子標題[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
-|[in] `zDelta`|表示旋轉滾輪，在倍數或部門中的距離`WHEEL_DELTA`，這是 120。 正值表示滾輪已旋轉至右側。負數值表示滾輪已向左旋轉。|  
-|[in] `pt`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
+|[輸入] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。<br /><br /> 如需旗標的清單，請參閱中的 「 訊息參數 」 子標題[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
+|[輸入] `zDelta`|表示旋轉滾輪，在倍數或部門中的距離`WHEEL_DELTA`，這是 120。 正值表示滾輪已旋轉至右側。負數值表示滾輪已向左旋轉。|  
+|[輸入] `pt`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_MOUSEHWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645614)通知訊息時，Windows SDK 中所述。 此訊息會傳送至視窗具有焦點時滑鼠的水平滾輪傾斜或旋轉。  
@@ -7569,8 +7570,8 @@ afx_msg void OnNcMouseHover(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nHitTest`|所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)訊息。|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於螢幕左上角的座標。|  
+|[輸入] `nHitTest`|所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)訊息。|  
+|[輸入] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於螢幕左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_NCMOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645625)通知 Windows SDK 中所述。  
@@ -7699,7 +7700,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `bIsRendering`|`true`如果有啟用桌面視窗管理員 (DWM) 呈現之非工作區視窗;`false`如果轉譯已停用。|  
+|[輸入] `bIsRendering`|`true`如果有啟用桌面視窗管理員 (DWM) 呈現之非工作區視窗;`false`如果轉譯已停用。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388200)通知 Windows SDK 中所述。  
@@ -7721,9 +7722,9 @@ void OnNcXButtonDblClk(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nHitTest`|所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)訊息。|  
-|[in] `nButton`|值為`XBUTTON1`，按兩下第一個 Microsoft intellimouse 滑鼠的 X 按鈕時或`XBUTTON2`如果第二個 X 按鈕按兩下時。|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
+|[輸入] `nHitTest`|所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)訊息。|  
+|[輸入] `nButton`|值為`XBUTTON1`，按兩下第一個 Microsoft intellimouse 滑鼠的 X 按鈕時或`XBUTTON2`如果第二個 X 按鈕按兩下時。|  
+|[輸入] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244)通知 Windows SDK 中所述。 此訊息會發佈到包含游標的視窗。 如果視窗已捕捉滑鼠，這個訊息將不會張貼。  
@@ -7745,9 +7746,9 @@ afx_msg void OnNcXButtonDown(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nHitTest`|所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)訊息。|  
-|[in] `nButton`|值為`XBUTTON1`如果按下的第一個滑鼠 X 按鈕時，或`XBUTTON2`如果第二個 X 按鈕按下。|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於螢幕左上角的座標。|  
+|[輸入] `nHitTest`|所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)訊息。|  
+|[輸入] `nButton`|值為`XBUTTON1`如果按下的第一個滑鼠 X 按鈕時，或`XBUTTON2`如果第二個 X 按鈕按下。|  
+|[輸入] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於螢幕左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_NCXBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645632)通知 Windows SDK 中所述。 此訊息會發佈到包含游標的視窗。 如果視窗已捕捉滑鼠，這個訊息將不會張貼。  
@@ -7769,9 +7770,9 @@ afx_msg void OnNcXButtonUp(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nHitTest`|所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)訊息。|  
-|[in] `nButton`|值為`XBUTTON1`放開第一個滑鼠 X 按鈕時，或`XBUTTON2`如果第二個 X 按鈕已釋放。|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於螢幕左上角的座標。|  
+|[輸入] `nHitTest`|所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618)訊息。|  
+|[輸入] `nButton`|值為`XBUTTON1`放開第一個滑鼠 X 按鈕時，或`XBUTTON2`如果第二個 X 按鈕已釋放。|  
+|[輸入] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於螢幕左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_NCXBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646240)通知 Windows SDK 中所述。 此訊息會發佈到包含游標的視窗。 如果視窗已捕捉滑鼠，這個訊息將不會張貼。  
@@ -7792,8 +7793,8 @@ afx_msg void OnNextMenu(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nKey`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。<br /><br /> 如需旗標的清單，請參閱中的 「 訊息參數 」 子標題[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
-|[in] `lpMdiNextMenu`|指標[MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561)結構，其中包含 [啟動] 功能表的相關資訊。|  
+|[輸入] `nKey`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。<br /><br /> 如需旗標的清單，請參閱中的 「 訊息參數 」 子標題[有關滑鼠輸入](http://msdn.microsoft.com/library/windows/desktop/ms645601)。|  
+|[輸入] `lpMdiNextMenu`|指標[MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561)結構，其中包含 [啟動] 功能表的相關資訊。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614)通知 Windows SDK 中所述。 回應這個訊息，在您的應用程式可以設定`hmenuNext`隸屬[MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561)結構，以指定要切換的功能表和`hwndNext`成員，以指定的視窗來接收功能表通知訊息.  
@@ -7844,8 +7845,8 @@ afx_msg UINT OnNotifyFormat(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pWnd`|指標`CWnd`物件，表示視窗傳送[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)訊息。<br /><br /> 這個參數是控制項的指標，如果`nCommand`參數是`NF_QUERY`，控制項的父視窗的指標或如果`nCommand`是`NF_REQUERY`。|  
-|[in] `nCommand`|特製化的命令值**WM_NOTIFY**訊息。 可能值為：<br /><br /> - `NF_QUERY` -<br />     訊息是一個查詢，以判斷是否應在使用 ANSI 或 Unicode 結構**WM_NOTIFY**訊息。 此訊息會傳送自控制項至其父視窗建立控制項，並在回應期間`NF_REQUERY`此訊息的形式。<br />- `NF_REQUERY` -<br />     訊息是將控制項傳送的要求`NF_QUERY`此訊息至其父視窗的形式。 此要求從父視窗，傳送，會要求重新查詢中使用之型別的結構相關父控制項**WM_NOTIFY**訊息。 如果`nCommand`參數是`NF_REQUERY`，則傳回值是重新查詢作業的結果。|  
+|[輸入] `pWnd`|指標`CWnd`物件，表示視窗傳送[WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)訊息。<br /><br /> 這個參數是控制項的指標，如果`nCommand`參數是`NF_QUERY`，控制項的父視窗的指標或如果`nCommand`是`NF_REQUERY`。|  
+|[輸入] `nCommand`|特製化的命令值**WM_NOTIFY**訊息。 可能值為：<br /><br /> - `NF_QUERY` -<br />     訊息是一個查詢，以判斷是否應在使用 ANSI 或 Unicode 結構**WM_NOTIFY**訊息。 此訊息會傳送自控制項至其父視窗建立控制項，並在回應期間`NF_REQUERY`此訊息的形式。<br />- `NF_REQUERY` -<br />     訊息是將控制項傳送的要求`NF_QUERY`此訊息至其父視窗的形式。 此要求從父視窗，傳送，會要求重新查詢中使用之型別的結構相關父控制項**WM_NOTIFY**訊息。 如果`nCommand`參數是`NF_REQUERY`，則傳回值是重新查詢作業的結果。|  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -7993,8 +7994,8 @@ afx_msg UINT OnPowerBroadcast(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nPowerEvent`|電源管理事件。|  
-|[in] `nEventData`|事件的特定資料。|  
+|[輸入] `nPowerEvent`|電源管理事件。|  
+|[輸入] `nEventData`|事件的特定資料。|  
   
 ### <a name="return-value"></a>傳回值  
  如果事件的要求，傳回`true`授與要求，或`BROADCAST_QUERY_DENY`為拒絕要求。  
@@ -8088,8 +8089,8 @@ afx_msg void OnRawInput(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nInputCode`|指出輸入發生時應用程式已在前景或未驗證的輸入程式碼。 在任一情況下，應用程式必須呼叫[CWnd::DefWindowProc](#defwindowproc)讓系統可以執行清除作業。<br /><br /> 這個參數可以是下列值之一：<br /><br /> - `RIM_INPUT`輸入時發生應用程式在前景。<br />- `RIM_INPUTSINK`輸入應用程式不在前景時發生。|  
-|[in] `hRawInput`|控制代碼[RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562)結構，其中包含從裝置的原始輸入。|  
+|[輸入] `nInputCode`|指出輸入發生時應用程式已在前景或未驗證的輸入程式碼。 在任一情況下，應用程式必須呼叫[CWnd::DefWindowProc](#defwindowproc)讓系統可以執行清除作業。<br /><br /> 這個參數可以是下列值之一：<br /><br /> - `RIM_INPUT`輸入時發生應用程式在前景。<br />- `RIM_INPUTSINK`輸入應用程式不在前景時發生。|  
+|[輸入] `hRawInput`|控制代碼[RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562)結構，其中包含從裝置的原始輸入。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[澗](http://msdn.microsoft.com/library/windows/desktop/ms646275)通知 Windows SDK 中所述。  
@@ -8254,8 +8255,8 @@ afx_msg void OnSessionChange(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nSessionState`|狀態碼說明工作階段狀態變更。|  
-|[in] `nId`|工作階段識別項。|  
+|[輸入] `nSessionState`|狀態碼說明工作階段狀態變更。|  
+|[輸入] `nId`|工作階段識別項。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828)通知 Windows SDK 中所述。  
@@ -8950,9 +8951,9 @@ afx_msg void OnUniChar(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nChar`|指定的按鍵的字元碼。|  
-|[in] `nRepCnt`|指定目前的訊息的重複計數。 值為的按鍵是因為使用者按住鍵 autorepeated 的次數。 如果按鍵會保留時間夠長，傳送多則訊息。 不過，不是累計的重複計數。|  
-|[in] `nFlags`|下表所示，指定掃描程式碼、 擴充的索引鍵、 內容程式碼，先前狀態和轉換狀態的旗標：<br /><br /> **0-7:**指定掃描程式碼。 值取決於原始設備製造商 (OEM)。<br /><br /> **8:**指定擴充的金鑰，例如增強的 101 或 102 鍵鍵盤會出現右 ALT 和 CTRL 鍵。 旗標為 1，如果索引鍵是擴充的索引鍵;否則，它可以是 0。<br /><br /> **9-12:**內部使用的 Windows。<br /><br /> **13:**指定內容的程式碼。 旗標為 1，如果按下按鍵; 時，按住 ALT 鍵否則，值為 0。<br /><br /> **14:**指定前一個索引鍵的狀態。 旗標是如果金鑰已關閉，傳送訊息之前, 的 1 或 0，如果是往上的索引鍵。<br /><br /> **15:**指定轉換狀態。 旗標是放開按鍵時，1 或 0，如果按下索引鍵。|  
+|[輸入] `nChar`|指定的按鍵的字元碼。|  
+|[輸入] `nRepCnt`|指定目前的訊息的重複計數。 值為的按鍵是因為使用者按住鍵 autorepeated 的次數。 如果按鍵會保留時間夠長，傳送多則訊息。 不過，不是累計的重複計數。|  
+|[輸入] `nFlags`|下表所示，指定掃描程式碼、 擴充的索引鍵、 內容程式碼，先前狀態和轉換狀態的旗標：<br /><br /> **0-7:**指定掃描程式碼。 值取決於原始設備製造商 (OEM)。<br /><br /> **8:**指定擴充的金鑰，例如增強的 101 或 102 鍵鍵盤會出現右 ALT 和 CTRL 鍵。 旗標為 1，如果索引鍵是擴充的索引鍵;否則，它可以是 0。<br /><br /> **9-12:**內部使用的 Windows。<br /><br /> **13:**指定內容的程式碼。 旗標為 1，如果按下按鍵; 時，按住 ALT 鍵否則，值為 0。<br /><br /> **14:**指定前一個索引鍵的狀態。 旗標是如果金鑰已關閉，傳送訊息之前, 的 1 或 0，如果是往上的索引鍵。<br /><br /> **15:**指定轉換狀態。 旗標是放開按鍵時，1 或 0，如果按下索引鍵。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)通知 Windows SDK 中所述。 [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)訊息為了傳送或 ANSI windows 張貼 Unicode 字元。 它相當於[WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)訊息，但使用 Unicode 轉換格式-32 編碼方式 (utf-32)，而[WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)訊息會使用 utf-16。  
@@ -8973,8 +8974,8 @@ afx_msg void OnUnInitMenuPopup(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pMenu`|指標[CMenu](../../mfc/reference/cmenu-class.md)物件，表示功能表或子功能表。|  
-|[in] `nFlags`|已被終結功能表。 目前，它只能是 [視窗] 功能表中， `MF_SYSMENU`。|  
+|[輸入] `pMenu`|指標[CMenu](../../mfc/reference/cmenu-class.md)物件，表示功能表或子功能表。|  
+|[輸入] `nFlags`|已被終結功能表。 目前，它只能是 [視窗] 功能表中， `MF_SYSMENU`。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614)通知 Windows SDK 中所述。  
@@ -9154,7 +9155,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `bIsMaximized`|`true`如果目前的視窗最大化，並`false`如果不是。|  
+|[輸入] `bIsMaximized`|`true`如果目前的視窗最大化，並`false`如果不是。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_DWMWINDOWMAXIMIZEDCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd388201)通知訊息時，Windows SDK 中所述。  
@@ -9267,9 +9268,9 @@ afx_msg void OnXButtonDblClk(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。|  
-|[in] `nButton`|值為`XBUTTON1`，按兩下第一個 Microsoft intellimouse 滑鼠的 X 按鈕時或`XBUTTON2`如果第二個 X 按鈕按兩下時。|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
+|[輸入] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。|  
+|[輸入] `nButton`|值為`XBUTTON1`，按兩下第一個 Microsoft intellimouse 滑鼠的 X 按鈕時或`XBUTTON2`如果第二個 X 按鈕按兩下時。|  
+|[輸入] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244)通知 Windows SDK 中所述。 如果沒有擷取滑鼠，將訊息張貼到視窗下方的資料指標。 否則，將訊息張貼至已捕捉滑鼠的視窗。  
@@ -9303,9 +9304,9 @@ afx_msg void OnXButtonDown(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。|  
-|[in] `nButton`|值為`XBUTTON1`如果第一個 Microsoft intellimouse 滑鼠的 X 按鈕已按下，或`XBUTTON2`如果第二個 X 按鈕已按下。|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
+|[輸入] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。|  
+|[輸入] `nButton`|值為`XBUTTON1`如果第一個 Microsoft intellimouse 滑鼠的 X 按鈕已按下，或`XBUTTON2`如果第二個 X 按鈕已按下。|  
+|[輸入] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_XBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646245)通知 Windows SDK 中所述。 如果沒有擷取滑鼠，將訊息張貼到視窗下方的資料指標。 否則，將訊息張貼至已捕捉滑鼠的視窗。  
@@ -9339,9 +9340,9 @@ afx_msg void OnXButtonUp(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。|  
-|[in] `nButton`|值為`XBUTTON1`如果第一個 Microsoft intellimouse 滑鼠的 X 按鈕被按兩下，或`XBUTTON2`如果第二個 X 按鈕被按兩下。|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
+|[輸入] `nFlags`|的位元組合 (OR) 旗標，表示哪個輔助按鍵按下按鍵。 例如，`MK_CONTROL`旗標表示，按下 CTRL 鍵。|  
+|[輸入] `nButton`|值為`XBUTTON1`如果第一個 Microsoft intellimouse 滑鼠的 X 按鈕被按兩下，或`XBUTTON2`如果第二個 X 按鈕被按兩下。|  
+|[輸入] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*和*y*游標相對於工作區的左上角的座標。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_XBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646246)通知 Windows SDK 中所述。 如果沒有擷取滑鼠，將訊息張貼到視窗下方的資料指標。 否則，將訊息張貼至已捕捉滑鼠的視窗。  
@@ -11132,7 +11133,7 @@ virtual void ResizeDynamicLayout();
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)   

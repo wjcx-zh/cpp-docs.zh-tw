@@ -25,11 +25,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7bd25efdc75590e8451d2c20045e183e8d231dd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99ed2e99c3a08b473dcc786ed47bc088b8fd8a4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>圖示和游標：顯示裝置的影像資源 (圖示影像編輯器)
 圖示和游標為圖形化資源，可包含不同類型之顯示裝置的多種影像 (不同的大小和色彩配置)。 此外，游標具有「作用點」(hot spot)，Windows 會用它來追蹤游標的位置。 您可以使用影像編輯器來建立及編輯圖示和游標，就像是點陣圖和其他影像一樣。  
@@ -73,12 +76,12 @@ ms.lasthandoff: 10/24/2017
   
 -   [設定游標的作用點](../windows/setting-a-cursor-s-hot-spot-image-editor-for-icons.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [圖示影像編輯器](../windows/image-editor-for-icons.md)   
  [圖示](http://msdn.microsoft.com/library/windows/desktop/ms646973)   
  [資料指標](http://msdn.microsoft.com/library/windows/desktop/ms646970)

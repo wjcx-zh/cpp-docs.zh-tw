@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d901b6674c19cda5a2cc9da2826c9523280b58c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6b4f451fa408f2f6470281206e5de3670d069b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 類別
 提供結構描述資料列集的實作。  
@@ -35,7 +38,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
  `SessionClass`  
  繼承自 `IDBSchemaRowsetImpl` 的類別。 一般而言，此類別會是使用者的工作階段類別。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -66,7 +69,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IDBSchemaRowsetImpl 類別成員](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [支援結構描述資料列集](../../data/oledb/supporting-schema-rowsets.md)

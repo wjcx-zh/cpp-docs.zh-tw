@@ -33,36 +33,22 @@ f1_keywords:
 - math/fmax
 - math/fmaxf
 - math/fmaxl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fmax function
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: 2c8520367d07f0c42f9245421040cbc665771722
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6f580738ba73a7e0a8fac8662be7126edb5a9e95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax、fmaxf、fmaxl
 決定兩個指定數值的較大者。  
@@ -98,10 +84,10 @@ long double fmaxl(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `x`  
+ [輸入] `x`  
  要比較的第一個值。  
   
- [in] `y`  
+ [輸入] `y`  
  要比較的第二個值。  
   
 ## <a name="return-value"></a>傳回值  
@@ -109,10 +95,10 @@ long double fmaxl(
   
  否則，可能會傳回下列其中一個值：  
   
-|問題|返回|  
+|問題|Return|  
 |-----------|------------|  
-|`x` = NaN|`y`|  
-|`y` = NaN|`x`|  
+|`x` = NAN|`y`|  
+|`y` = NAN|`x`|  
 |`x` 和 `y` = NaN|NaN|  
   
  此函式不會使用 [_matherr](../../c-runtime-library/reference/matherr.md) 中所指定的錯誤。  
@@ -122,12 +108,12 @@ long double fmaxl(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`fmax`, `fmaxf`, `fmaxl`|\<math.h>|\<cmath> 或 \<math.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fmin、fminf、fminl](fmin-fminf-fminl.md)  

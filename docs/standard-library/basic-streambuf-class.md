@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_streambuf
 - streambuf/std::basic_streambuf
 - streambuf/std::basic_streambuf::char_type
 - streambuf/std::basic_streambuf::int_type
@@ -55,35 +53,64 @@ f1_keywords:
 - streambuf/std::basic_streambuf::underflow
 - streambuf/std::basic_streambuf::xsgetn
 - streambuf/std::basic_streambuf::xsputn
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- basic_streambuf class
+- std::basic_streambuf [C++]
+- std::basic_streambuf [C++], char_type
+- std::basic_streambuf [C++], int_type
+- std::basic_streambuf [C++], off_type
+- std::basic_streambuf [C++], pos_type
+- std::basic_streambuf [C++], traits_type
+- std::basic_streambuf [C++], eback
+- std::basic_streambuf [C++], egptr
+- std::basic_streambuf [C++], epptr
+- std::basic_streambuf [C++], gbump
+- std::basic_streambuf [C++], getloc
+- std::basic_streambuf [C++], gptr
+- std::basic_streambuf [C++], imbue
+- std::basic_streambuf [C++], in_avail
+- std::basic_streambuf [C++], overflow
+- std::basic_streambuf [C++], pbackfail
+- std::basic_streambuf [C++], pbase
+- std::basic_streambuf [C++], pbump
+- std::basic_streambuf [C++], pptr
+- std::basic_streambuf [C++], pubimbue
+- std::basic_streambuf [C++], pubseekoff
+- std::basic_streambuf [C++], pubseekpos
+- std::basic_streambuf [C++], pubsetbuf
+- std::basic_streambuf [C++], pubsync
+- std::basic_streambuf [C++], sbumpc
+- std::basic_streambuf [C++], seekoff
+- std::basic_streambuf [C++], seekpos
+- std::basic_streambuf [C++], setbuf
+- std::basic_streambuf [C++], setg
+- std::basic_streambuf [C++], setp
+- std::basic_streambuf [C++], sgetc
+- std::basic_streambuf [C++], sgetn
+- std::basic_streambuf [C++], showmanyc
+- std::basic_streambuf [C++], snextc
+- std::basic_streambuf [C++], sputbackc
+- std::basic_streambuf [C++], sputc
+- std::basic_streambuf [C++], sputn
+- std::basic_streambuf [C++], stossc
+- std::basic_streambuf [C++], sungetc
+- std::basic_streambuf [C++], swap
+- std::basic_streambuf [C++], sync
+- std::basic_streambuf [C++], uflow
+- std::basic_streambuf [C++], underflow
+- std::basic_streambuf [C++], xsgetn
+- std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0e20dfefcfc46871d43ec5b89f492102d07a9610
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bd79ff07ff5e70c3d2d95482c5676df72dd41612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 類別
 描述抽象的基底類別，用以衍生資料流緩衝區，其控制項目如何傳入或傳出資料流的特定表示。  
@@ -229,7 +256,7 @@ basic_streambuf(const basic_streambuf& right);
  第二個受保護的建構函式會從 `right` 複製指標和地區設定。  
   
 ##  <a name="char_type"></a>  basic_streambuf::char_type  
- 將類型名稱與 **Elem** 樣板參數產生關聯。  
+ 將類型名稱與 **Elem** 範本參數建立關聯。  
   
 ```  
 typedef Elem char_type;  
@@ -388,7 +415,7 @@ basic_streambuf& operator=(const basic_streambuf& right);
  用來指派值給此物件的 `basic_streambuf` 左值參考物件。  
   
 ### <a name="remarks"></a>備註  
- 受保護的成員運算子會從 `right` 複製控制輸入緩衝區和輸出緩衝區的指標。 它也會在 `locale object` 中儲存 `right``.`[getloc()](#getloc)。 它會傳回 `*this`。  
+ 受保護的成員運算子會從 `right` 複製控制輸入緩衝區和輸出緩衝區的指標。 它也會在 `locale object` 中儲存 `right.`[getloc()](#getloc)。 它會傳回 `*this`。  
   
 ##  <a name="overflow"></a>  basic_streambuf::overflow  
  受保護的虛擬函式，可在將新字元插入已滿的緩衝區時呼叫。  
@@ -409,7 +436,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
   
 -   如果有`write position`可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。  
   
--   藉由為輸出緩衝區配置新的或額外的儲存體，即可提供寫入位置。  
+-   為輸出緩衝區配置新的或額外的儲存空間，即可提供寫入位置。  
   
 -   藉由將輸出緩衝區的開頭指標和下一個指標之間的部分或所有元素寫出至特定外部目的地，即可提供寫入位置。  
   
@@ -436,7 +463,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
  如果函式不成功，則傳回 **traits_type::eof** 或擲回例外狀況。 否則，它會傳回其他值。 預設行為是傳回 **traits_type::eof**。  
   
 ### <a name="remarks"></a>備註  
- 如果 _ *Meta* 與 **traits_type::eof** 比較的結果相等，要推回的元素實際上是一個已在資料流中目前元素之前的元素。 否則會以 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 取代該元素。 此函式可以透過下列各種方式來放回元素：  
+ 如果 _ *Meta* 與 **traits_type::eof** 比較的結果相等，要推回的元素實際上是一個已在資料流中目前元素之前的元素。 否則會以 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) 取代該元素。 函式可透過下列各種方式來放回項目：  
   
 -   如果有放回位置可供使用，它可以將元素儲存在放回位置，並遞減輸入緩衝區的下一個指標。  
   
@@ -1076,12 +1103,12 @@ void swap(basic_streambuf& right);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`right`|用來交換值的 `basic_streambuf` 左值參考物件。|  
   
 ### <a name="remarks"></a>備註  
- 此受保護的成員函式以 `right` 交換控制 `input buffer` 和 `output buffer` 的所有指標。 它也會將 `right``.`[getloc()](#getloc) 與 `locale` 物件交換。  
+ 此受保護的成員函式以 `right` 交換控制 `input buffer` 和 `output buffer` 的所有指標。 它也會將 `right.`[getloc()](#getloc) 與 `locale` 物件交換。  
   
 ##  <a name="sync"></a>  basic_streambuf::sync  
  受保護的虛擬函式，會嘗試與任何相關聯的外部資料流同步處理控制資料流。  
@@ -1195,9 +1222,8 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 ### <a name="remarks"></a>備註  
  此受保護的虛擬成員函式可從以 `ptr` 開頭的陣列，將最多 `count` 個元素插入輸出資料流，就像是重複呼叫 [sbumpc](#sputc) 一樣。 寫入所有 `count` 個字元之後，或如果呼叫 `sputc( count)` 會傳回 `traits::eof()`，則會停止將字元插入輸出資料流。 它會傳回實際插入的元素數目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   
  [iostream 慣例](../standard-library/iostreams-conventions.md)
-
 

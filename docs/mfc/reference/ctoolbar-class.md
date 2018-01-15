@@ -55,11 +55,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e0e4b0699f17e4bf00106b3d4a22938569a2254
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dec2dac93dae9860dfadd347584fbdf465d15838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctoolbar-class"></a>CToolBar 類別
 有一列點陣圖按鈕和選擇性分隔線的控制列。  
@@ -70,17 +71,17 @@ ms.lasthandoff: 10/24/2017
 class CToolBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CToolBar::CToolBar](#ctoolbar)|建構 `CToolBar` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CToolBar::CommandToIndex](#commandtoindex)|傳回與指定的命令識別碼的按鈕索引|  
 |[CToolBar::Create](#create)|建立 Windows 工具列，並將它附加至`CToolBar`物件。|  
@@ -649,7 +650,7 @@ void SetSizes(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CTRLBARS](../../visual-cpp-samples.md)   
  [MFC 範例 DLGCBR32](../../visual-cpp-samples.md)   
  [MFC 範例 DOCKTOOL](../../visual-cpp-samples.md)   

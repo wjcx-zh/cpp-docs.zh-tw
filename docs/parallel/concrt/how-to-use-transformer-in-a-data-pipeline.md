@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 97591a66f7499e136072d47e2a7c5b87870a4702
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76c8a50bd5a58d9fe6e4a68f05d9732e50fd04e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>如何：在資料管線中使用轉換程式
 本主題包含基本範例，示範如何使用[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)在資料管線中的類別。 如需更完整的範例執行映像處理時，用以在資料管線，請參閱[逐步解說： 建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。  
@@ -61,7 +62,7 @@ The result is -42.
   
  **cl.exe /EHsc data-pipeline.cpp**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)   
  [逐步解說：建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)

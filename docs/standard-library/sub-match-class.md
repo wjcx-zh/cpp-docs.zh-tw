@@ -31,11 +31,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0c9e6b7daf3fb23faa390b34b32f61df89bc80c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d26e17fd496507f6985f7896eb01f7a79c900e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="submatch-class"></a>sub_match 類別
 描述子相符項目。  
@@ -71,7 +72,7 @@ public:
   
  如果擷取群組與物件的資料成員不符，則 `matched` 為 false，且兩個迭代器 `first` 和 `second` (繼承自基底 `std::pair`) 相等。 如果擷取群組相符，則 `matched` 為 true，迭代器 `first` 會指向目標序列中符合擷取群組的第一個字元，而 `second` 會指向目標序列中符合擷取群組之最後一個字元後的一個位置。 請注意，如果零長度與成員相符，則 `matched` 為零，且兩個迭代器相等，並且都會指向相符項目的位置。  
   
- 當擷取群組只包含一個判斷提示，或包含一個允許重複零的重複項目時，可能會發生零長度相符的情況。 例如：  
+ 當擷取群組只包含一個判斷提示，或包含一個允許重複零的重複項目時，可能會發生零長度相符的情況。 例如:   
   
  "^" 與目標序列 "a" 相符；對應至擷取群組 0 的 `sub_match` 物件會保存同時指向序列中第一個字元的兩個迭代器。  
   
@@ -606,6 +607,6 @@ compare(string) == 1
 compare(sub) == 0  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<regex>](../standard-library/regex.md)   
  [sub_match](../standard-library/sub-match-class.md)

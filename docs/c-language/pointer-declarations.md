@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7d8b351f7cc58d37d4da8bc273d8541aee54446
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ac15c18ce3277e8268b6b4582de4046f5f74d64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-declarations"></a>指標宣告
 「指標宣告」用於命名指標變數，並且會指定變數所指向的物件類型。 宣告為指標的變數會保留記憶體位址。  
@@ -127,5 +128,5 @@ struct id
   
  變數 *record* 具有結構類型 *id*。請注意，*pname* 會宣告為另一個名為 *name* 之結構類型的指標。 這個宣告可以在定義 *name* 類型之前出現。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

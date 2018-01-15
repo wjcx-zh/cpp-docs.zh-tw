@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 30ac02e96786682a61ac44a8de9cefa24e2ead7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b766bec977f35f9f346723cbaf3f62e48c8c878
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="last-character-in-a-string"></a>字串中的最後一個字元
 使用下列秘訣：  
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/24/2017
   
      此程式碼使用 MBCS 函式`_mbsrchr`和`_mbsinc`。 因為這些函數是 MBCS 感知，他們可以區別 '\\'字元和後隨位元組'\\'。 如果字串中的最後一個字元是 null ('\0')，該程式碼會執行某些動作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MBCS 程式設計提示](../text/mbcs-programming-tips.md)   
  [字元指派](../text/character-assignment.md)

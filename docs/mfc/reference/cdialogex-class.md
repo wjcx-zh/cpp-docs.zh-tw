@@ -23,11 +23,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8efd028a8dd07d22dc1255dfe58a951bf9a8de8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c22e258c8306eab1f55fa94f875dde5b68256c71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogex-class"></a>CDialogEx 類別
 `CDialogEx` 類別會指定對話方塊的背景影像和背景色彩。  
@@ -38,18 +39,18 @@ ms.lasthandoff: 10/24/2017
 class CDialogEx : public CDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDialogEx::CDialogEx](#cdialogex)|建構 `CDialogEx` 物件。|  
 |`CDialogEx::~CDialogEx`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDialogEx::SetBackgroundColor](#setbackgroundcolor)|設定對話方塊的背景色彩。|  
 |[CDialogEx::SetBackgroundImage](#setbackgroundimage)|設定對話方塊的背景影像。|  
@@ -90,16 +91,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIDTemplate`  
+ [輸入] `nIDTemplate`  
  對話方塊範本資源識別碼。  
   
- [in] `lpszTemplateName`  
+ [輸入] `lpszTemplateName`  
  對話方塊範本資源名稱。  
   
- [in] `pParent`  
+ [輸入] `pParent`  
  父視窗的指標。 預設值是 `NULL`。  
   
- [in] `pParentWnd`  
+ [輸入] `pParentWnd`  
  父視窗的指標。 預設值是 `NULL`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -116,10 +117,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `color`  
+ [輸入] `color`  
  RGB 色彩值。  
   
- [in] `bRepaint`  
+ [輸入] `bRepaint`  
  `TRUE`若要立即更新畫面。否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -142,19 +143,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hBitmap`  
+ [輸入] `hBitmap`  
  背景影像控制代碼。  
   
- [in] `uiBmpResId`  
+ [輸入] `uiBmpResId`  
  背景影像的資源識別碼。  
   
- [in] `location`  
+ [輸入] `location`  
  其中一個`CDialogEx::BackgroundLocation`指定影像位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 預設值是 BACKGR_TILE。  
   
- [in] `bAutoDestroy`  
+ [輸入] `bAutoDestroy`  
  `TRUE`若要自動損毀的背景影像。否則， `FALSE`。  
   
- [in] `bRepaint`  
+ [輸入] `bRepaint`  
  `TRUE`若要立即重繪對話方塊中。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -163,7 +164,7 @@ BOOL SetBackgroundImage(
 ### <a name="remarks"></a>備註  
  您指定的映像不會延伸以納入對話方塊用戶端區域。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)   

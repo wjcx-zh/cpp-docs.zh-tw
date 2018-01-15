@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ead03bc7cd89667f16905e2a3f76ee48ebbc14d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76a0a16ff0a2c90c6dd6060badc2c79dde1af231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS 結構
 `NCCALCSIZE_PARAMS`結構包含的應用程式可以使用時處理資訊`WM_NCCALCSIZE`計算大小、 位置和視窗的工作區的有效內容的訊息。  
@@ -43,7 +44,7 @@ typedef struct tagNCCALCSIZE_PARAMS {
 ## <a name="requirements"></a>需求  
  **標頭：** winuser.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)
 

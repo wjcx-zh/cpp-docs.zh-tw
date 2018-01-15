@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7f0d348fe11dda5cdc2ae5c0cfc601203de6261a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94c3c96ad9322480a17a30a19ca80bb9460a5513
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isclass-class"></a>is_class 類別
 測試類型是否為類別。  
@@ -75,7 +76,7 @@ is_class<int> == false
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)   
  [is_compound 類別](../standard-library/is-compound-class.md)   
  [is_union 類別](../standard-library/is-union-class.md)

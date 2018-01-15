@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30cba3056cbc6bd6cf9137aad50b981d58c24546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5d72b26167a51c6d25e2a9d569ab0424e097a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d 命名空間
 提供[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)和[make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法。  
@@ -31,11 +32,11 @@ ms.lasthandoff: 10/24/2017
 namespace direct3d;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="functions"></a>函式  
   
-|名稱<br /><br /> 說明|  
+|名稱<br /><br /> 描述|  
 |--------------------------|  
 |[get_sampler](concurrency-graphics-direct3d-namespace-functions.md#get_sampler)<br /><br /> 取得在指定加速器上的 Direct3D 取樣器狀態介面檢視表示的指定取樣器物件。|  
 |[get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture)<br /><br /> 取得指定基礎 Direct3D 紋理介面[紋理](texture-class.md)物件。|  
@@ -48,5 +49,5 @@ namespace direct3d;
   
  **命名空間：** concurrency:: graphics  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

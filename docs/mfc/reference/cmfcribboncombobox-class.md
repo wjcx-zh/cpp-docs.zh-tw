@@ -51,11 +51,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 921be1bdcebfabbcca8e07cefc2ee9a0b40f84f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f748630549c0a26a2818bc7c96e5162d7d36ed4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 類別
 `CMFCRibbonComboBox`類別會實作可以加入功能區列、 功能區面板或功能區的快顯功能表的下拉式方塊控制項。  
@@ -70,13 +71,13 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|建構 CMFCRibbonComboBox 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::AddItem](#additem)|將唯一的項目附加至清單方塊。|  
 |[CMFCRibbonComboBox::DeleteItem](#deleteitem)|從清單方塊中刪除指定的項目。|  
@@ -127,10 +128,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszItem`  
+ [輸入] `lpszItem`  
  要加入之項目的字串。  
   
- [in] `dwData`  
+ [輸入] `dwData`  
  要加入的項目與相關的資料。  
   
 ### <a name="return-value"></a>傳回值  
@@ -153,19 +154,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  下拉式方塊的識別碼。  
   
- [in] `bHasEditBox`  
+ [輸入] `bHasEditBox`  
  `TRUE`如果您想編輯方塊控制項; 內`FALSE`否則。  
   
- [in] `nWidth`  
+ [輸入] `nWidth`  
  像素為單位; 下拉式方塊的寬度或-1 可進行的預設寬度。  
   
- [in] `lpszLabel`  
+ [輸入] `lpszLabel`  
  下拉式方塊顯示標籤。  
   
- [in] `nImage`  
+ [輸入] `nImage`  
  下拉式方塊的小型影像索引。  
   
 ### <a name="remarks"></a>備註  
@@ -182,13 +183,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  要刪除的項目以零為起始的索引。  
   
- [in] `dwData`  
+ [輸入] `dwData`  
  要刪除的項目與相關的資料。  
   
- [in] `lpszText`  
+ [輸入] `lpszText`  
  要刪除之項目的字串。 如果有多個項目，使用相同的字串，則會刪除第一個項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -204,7 +205,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`若要啟用 調整大小;`FALSE`停用調整大小。  
   
 ### <a name="remarks"></a>備註  
@@ -218,7 +219,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszText`  
+ [輸入] `lpszText`  
  清單方塊中項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -268,7 +269,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  下拉式方塊的裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -285,7 +286,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -301,7 +302,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -340,7 +341,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nItem`  
+ [輸入] `nItem`  
  選取之項目的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -366,13 +367,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  清單方塊中的項目以零為起始的索引。  
   
- [in] `dwData`  
+ [輸入] `dwData`  
  清單方塊中的項目與相關的資料。  
   
- [in] `lpszText`  
+ [輸入] `lpszText`  
  清單方塊中項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -388,13 +389,13 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nHeight`  
+ [輸入] `nHeight`  
  高度 （像素為單位的清單方塊）。  
   
 ### <a name="remarks"></a>備註  
  預設高度為 150 像素。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonEdit 類別](../../mfc/reference/cmfcribbonedit-class.md)

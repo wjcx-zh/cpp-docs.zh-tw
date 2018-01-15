@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5e822bf88091d8124a58f6f462ae7934450b5b7c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e849ee51a231c6f0d3d696a3aaa9b1c1ac77c33c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (最佳化全域資料)
 將全域資料封裝在 COMDAT 區段中以進行最佳化。  
@@ -55,6 +56,6 @@ ms.lasthandoff: 10/24/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

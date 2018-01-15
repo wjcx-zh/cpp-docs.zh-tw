@@ -53,11 +53,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea16f46628cd12e0aa4e70f777cede46fd63e703
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 142a000b5521458e3bdace8f840295efd07209fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 類別
 支援以 `CString` 物件為索引鍵的 `CString` 物件對應。  
@@ -79,19 +80,19 @@ class CMapStringToString : public CObject
   
 ### <a name="public-structures"></a>公用結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMapStringToString::CPair](#cpair)|巢狀的結構，包含索引鍵的值，以及相關聯的 string 物件的值。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|在此對應中傳回的項目數。|  
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|判斷目前的雜湊表中的元素數目。|  
@@ -112,7 +113,7 @@ class CMapStringToString : public CObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將項目插入對應 — 運算子替代`SetAt`。|  
   
@@ -212,7 +213,7 @@ CPair* PLookup(LPCTSTR key);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#74](../../mfc/codesnippet/cpp/cmapstringtostring-class_2.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

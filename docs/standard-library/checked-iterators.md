@@ -20,11 +20,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bbd902066e86d2dbe04e4bc709a1042c40dffe8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8997741b4290214aa8f147aa7b841424467e296b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 已檢查的迭代器能確保您的容器界限不會被覆寫。 已檢查的迭代器適用於發行組建和偵錯組建。 如需如何在偵錯模式編譯時使用偵錯迭代器的詳細資訊，請參閱[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。  
@@ -225,7 +226,7 @@ a7: 0 7 14 21 28 35 42 49 56 63 70 77 84 91 98 105
 a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)   
- [偵錯迭代器支援](../standard-library/debug-iterator-support.md)
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 

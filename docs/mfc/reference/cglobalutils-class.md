@@ -49,11 +49,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e84486f37ea0c0e7be4c7b910d20fadf5336ad4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d8dd803daf1d3f56239f1f4cceed00650bb1a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils 類別
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -64,11 +65,11 @@ ms.lasthandoff: 10/24/2017
 class CGlobalUtils  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||  
 |[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||  
@@ -105,7 +106,7 @@ void AdjustRectToworkArea(
   
 ### <a name="parameters"></a>參數  
  [in、out] `rect`  
- [in] `pRectDelta`  
+ [輸入] `pRectDelta`  
   
 ### <a name="remarks"></a>備註  
   
@@ -123,9 +124,9 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `barContainerManager`  
- [in] `pWndTodock`  
- [in] `ptMouse`  
+ [輸入] `barContainerManager`  
+ [輸入] `pWndTodock`  
+ [輸入] `ptMouse`  
  [輸出] `rectResult`  
  [輸出] `bDrawTab`  
  [輸出] `ppTargetBar`  
@@ -140,7 +141,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -154,7 +155,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -176,14 +177,14 @@ BOOL CheckAlignment(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
- [in] `pBar`  
- [in] `nSensitivity`  
- [in] `pDockManager`  
- [in] `bOuterEdge`  
+ [輸入] `point`  
+ [輸入] `pBar`  
+ [輸入] `nSensitivity`  
+ [輸入] `pDockManager`  
+ [輸入] `bOuterEdge`  
  [輸出] `dwAlignment`  
- [in] `dwEnabledDockBars`  
- [in] `lpRectBounds`  
+ [輸入] `dwEnabledDockBars`  
+ [輸入] `lpRectBounds`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -200,7 +201,7 @@ BOOL CyFromString(
   
 ### <a name="parameters"></a>參數  
  [輸出] `cy`  
- [in] `psz`  
+ [輸入] `psz`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -217,7 +218,7 @@ BOOL DecimalFromString(
   
 ### <a name="parameters"></a>參數  
  [輸出] `decimal`  
- [in] `psz`  
+ [輸入] `psz`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -234,7 +235,7 @@ void FlipRect(
   
 ### <a name="parameters"></a>參數  
  [in、out] `rect`  
- [in] `nDegrees`  
+ [輸入] `nDegrees`  
   
 ### <a name="remarks"></a>備註  
   
@@ -250,8 +251,8 @@ void ForceAdjustLayout(
   
 ### <a name="parameters"></a>參數  
  [in、out] `pDockManager`  
- [in] `bForce`  
- [in] `bForceInvisible`  
+ [輸入] `bForce`  
+ [輸入] `bForceInvisible`  
   
 ### <a name="remarks"></a>備註  
   
@@ -263,7 +264,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -277,7 +278,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwAlign`  
+ [輸入] `dwAlign`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -297,8 +298,8 @@ BOOL GetPaneAndAlignFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `barContainerManager`  
- [in] `pt`  
+ [輸入] `barContainerManager`  
+ [輸入] `pt`  
  [輸出] `ppTargetControlBar`  
  [輸出] `dwAlignment`  
  [輸出] `bTabArea`  
@@ -316,7 +317,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -333,9 +334,9 @@ void SetNewParent(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lstControlBars`  
- [in] `pNewParent`  
- [in] `bCheckVisibility`  
+ [輸入] `lstControlBars`  
+ [輸入] `pNewParent`  
+ [輸入] `bCheckVisibility`  
   
 ### <a name="remarks"></a>備註  
   
@@ -350,7 +351,7 @@ BOOL StringFromCy(
   
 ### <a name="parameters"></a>參數  
  [輸出] `str`  
- [in] `cy`  
+ [輸入] `cy`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -367,12 +368,12 @@ BOOL StringFromDecimal(
   
 ### <a name="parameters"></a>參數  
  [輸出] `str`  
- [in] `decimal`  
+ [輸入] `decimal`  
   
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

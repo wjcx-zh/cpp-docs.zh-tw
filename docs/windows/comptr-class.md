@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96b46fe15b2c101ed3ebc8bb58033074f409b41c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 04f8181c7308d63cc4fe07aaf4a05d34ccfaf132
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptr-class"></a>ComPtr 類別
 建立代表範本參數所指定之介面的 *「智慧型指標」* (Smart Pointer) 類型。 ComPtr 自動維護基礎介面指標的參考計數，並在參考計數歸零時釋放介面。  
@@ -60,14 +63,14 @@ friend class ComPtr;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ComPtr::ComPtr 建構函式](../windows/comptr-comptr-constructor.md)|初始化 ComPtr 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。|  
 |[ComPtr::~ComPtr 解構函式](../windows/comptr-tilde-comptr-destructor.md)|取消初始化 ComPtr 的執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ComPtr::As 方法](../windows/comptr-as-method.md)|傳回 ComPtr 物件，代表指定範本參數所識別的介面。|  
 |[ComPtr::AsIID 方法](../windows/comptr-asiid-method.md)|傳回 ComPtr 物件，代表指定介面 ID 所識別的介面。|  
@@ -83,14 +86,14 @@ friend class ComPtr;
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ComPtr::InternalAddRef 方法](../windows/comptr-internaladdref-method.md)|遞增與這個 ComPtr 相關聯之介面的參考計數。|  
 |[ComPtr::InternalRelease 方法](../windows/comptr-internalrelease-method.md)|在與這個 ComPtr 相關聯的介面上，執行 COM 釋放作業。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ComPtr::operator Microsoft::WRL::Details::BoolType 運算子](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)|表示 ComPtr 是否正在管理介面的物件存留期。|  
 |[ComPtr::operator& 運算子](../windows/comptr-operator-ampersand-operator.md)|擷取目前 ComPtr 的位址。|  
@@ -101,7 +104,7 @@ friend class ComPtr;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ComPtr::ptr_ 資料成員](../windows/comptr-ptr-data-member.md)|包含與這個 ComPtr 相關聯並受其管理之介面的指標。|  
   
@@ -113,5 +116,5 @@ friend class ComPtr;
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

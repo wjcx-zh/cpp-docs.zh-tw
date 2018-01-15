@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2db9cc041ec9a38b9d1e5fa489b1abdf27b73769
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 56a41a7901e41f4c76fbb9fcbf5930ec97c3b866
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-resources"></a>資訊清單資源
 資訊清單資源是描述應用程式所用相依性的 XML 檔案。 例如，在 Visual Studio 中，MFC 精靈產生的資訊清單檔案會定義應用程式應該使用哪些 Windows 通用控制項 DLL (5.0 或 6.0 版)：  
@@ -53,6 +56,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [控制項](../mfc/controls-mfc.md)   
  [使用資源檔](../windows/working-with-resource-files.md)

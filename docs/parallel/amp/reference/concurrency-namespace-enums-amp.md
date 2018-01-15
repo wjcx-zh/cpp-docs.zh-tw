@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 809ea614924444b4f753153f821118cee6d29e6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8979ab026d5bf6aef9d0dd8677bf2ec47a8c6142
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Concurrency 命名空間列舉 (AMP)
 |||  
@@ -34,7 +35,7 @@ enum access_type;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`access_type_auto`|自動選擇最適合`access_type`快速鍵。|  
 |`access_type_none`|專用。 只能存取在加速器上，而不是在 CPU 配置。|  
@@ -51,10 +52,10 @@ enum queuing_mode;
 ``` 
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`queuing_mode_immediate`|佇列的模式，指定的任何命令，例如[parallel_for_each 函式 (c + + AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)，因為它們會傳回給呼叫者會傳送至對應的加速器裝置。|  
 |`queuing_mode_automatic`|指定命令會排在對應至命令佇列的佇列模式[accelerator_view](accelerator-view-class.md)物件。 命令傳送至裝置時[accelerator_view:: flush](accelerator-view-class.md#flush)呼叫。|   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

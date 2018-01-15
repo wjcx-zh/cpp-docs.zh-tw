@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca6e6cd8dd9f7d67ba8a000f33143a12c0978a25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d81d288453e56acfb02a123075692b907d371578
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-a-dialog-box"></a>測試對話方塊
 當您設計對話方塊時，您可以模擬和測試其執行階段行為，而不用重新編譯程式。 在這個模式下，您可以：  
@@ -51,7 +54,7 @@ ms.lasthandoff: 10/24/2017
   
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [對話方塊編輯器](../windows/dialog-editor.md)   
  [顯示或隱藏對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)

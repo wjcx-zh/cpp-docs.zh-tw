@@ -29,11 +29,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec11875a7004f8b833869440e59252325558cada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efe0a5f6dae2cece571eddabc4094ebb87df175b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-ole"></a>功能表和資源 (OLE)
 本系列文件說明如何使用功能表和 MFC OLE 文件應用程式中的資源。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
   
  由於這些問題，使用應用程式精靈建立 OLE 文件應用程式可以有最多四個不同的功能表和快速鍵對應表資源。 這些可用，原因如下：  
   
-|資源名稱|用法|  
+|資源名稱|使用|  
 |-------------------|---------|  
 |**IDR_MAINFRAME**|使用 MDI 應用程式如果沒有檔案開啟，或開啟的檔案無論 SDI 應用程式。 這是在非 OLE 應用程式中使用的標準功能表。|  
 |**IDR_\<專案 > 類型**|檔案開啟時，MDI 應用程式中使用。 執行獨立應用程式時使用。 這是在非 OLE 應用程式中使用的標準功能表。|  
@@ -69,6 +70,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE](../mfc/ole-in-mfc.md)
 

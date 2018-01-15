@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d0595078c9515c5c705a1cbfb1ed6b5e55db788
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e35d0efc92e011cfb4d93746efd1b03ac94a0779
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子：&amp;&amp;
 保留右值運算式的參考。  
@@ -59,7 +60,7 @@ int main()
   
  之前的 Visual c + + 2010 中，每個呼叫`operator+`配置並傳回新的暫存`string`物件 （右值）。 `operator+` 無法將字串附加至其他字串，因為它不知道原始字串是左值還是右值。 如果原始字串都是左值，程式中其他位置可能會參考它們，因此不得加以修改。 使用右值參考可以修改 `operator+` 以採用右值，程式中的其他位置不能參考右值。 因此，`operator+` 現在可以將字串附加至另一個字串。 這可以大幅減少 `string` 類別必須執行的動態記憶體配置數目。 如需有關`string`類別，請參閱[basic_string 類別](../standard-library/basic-string-class.md)。  
   
- 當編譯器無法使用傳回值最佳化 (RVO) 或具名傳回值最佳化 (NRVO) 時，移動語意也能有所幫助。 在這些情況下，如果類型定義了移動建構函式，則編譯器會加以呼叫。 如需具名傳回值最佳化的詳細資訊，請參閱[具名傳回值最佳化在 Visual c + + 2005年](http://go.microsoft.com/fwlink/?LinkId=131571)。  
+ 當編譯器無法使用傳回值最佳化 (RVO) 或具名傳回值最佳化 (NRVO) 時，移動語意也能有所幫助。 在這些情況下，如果類型定義了移動建構函式，則編譯器會加以呼叫。 如需具名傳回值最佳化的詳細資訊，請參閱[具名傳回值最佳化在 Visual c + + 2005年](http://go.microsoft.com/fwlink/p/?linkid=131571)。  
   
  若要進一步了解移動語意，請參考將項目插入至 `vector` 物件的範例。 如果超出 `vector` 物件的容量，`vector` 物件必須重新配置其項目的記憶體，然後將每個項目複製到另一個記憶體位置，以便為插入的項目騰出空間。 當插入作業複製項目時，會建立新的項目，呼叫複製建構函式複製上一個項目的資料到新項目，然後終結上一個項目。 移動語意可讓您直接移動物件，而不必執行耗費大量資源的記憶體配置和複製作業。  
   
@@ -405,10 +406,10 @@ print_type_and_value<string&>(string& t)
   
  樣板引數推算是實作完美轉送的要素。 本主題先前的＜完美轉送＞一節更詳細說明完美轉送。  
   
-## <a name="summary"></a>摘要  
+## <a name="summary"></a>總結  
  右值參考會區分左值與右值。 它們可以消除不必要的記憶體配置和複製作業，因此能協助您改善應用程式效能。 此外，也可以讓您撰寫接受任意引數並轉送至另一個函式的函式版本，就如同直接呼叫另一個函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)   
  [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)   

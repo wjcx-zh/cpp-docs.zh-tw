@@ -1,23 +1,22 @@
 ---
 title: "如何回報 Visual C++ 工具組問題 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: C++
-ms.assetid: ec24a49c-411d-47ce-aa4b-8398b6d3e8f6
-caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a669b2935e4c21421d0c760e6de0c5c7340bed4
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: b1a5cdb873d536702ecf8536d9a9e7c0205cc923
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>如何回報 Visual C++ 工具組問題
 
@@ -29,9 +28,9 @@ ms.lasthandoff: 11/15/2017
 
 - [如何準備報表](#prepare)，以及什麼構成良好報表。
 
-- [報表傳送方式](#send)，以及什麼讓它們不同。
-
 - [如何產生重現](#generate)，以及不同類型的重現。
+
+- [報表傳送方式](#send)，以及什麼讓它們不同。
 
 您的報表對我們和您這類其他開發人員而言十分重要。 感謝您協助我們改善 Visual C++！
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 11/15/2017
 
 - 所遇到問題的詳細描述。
 
-- 「重現」 - 示範問題的原始程式碼。
+- 「重現」：顯現問題的原始程式碼。
 
 請閱讀以深入了解我們需要的特定資訊以及可以找到它的位置。
 
@@ -94,7 +93,7 @@ cl : Command line error D8003 : missing source filename
 
 #### <a name="to-report-the-contents-of-the-command-line"></a>回報命令列內容
 
-1. 找到並開啟 **CL.command.1.tlog** 檔案。 這個檔案預設位於 \\...\Visual Studio 版本\Projects\方案名稱\ProjectName\Config\專案名稱.tlog\CL.command.1.tlog。
+1. 找到並開啟 **CL.command.1.tlog** 檔案。 根據預設，此檔案位於 \\...\Visual Studio *version*\Projects\\*SolutionName*\\*ProjectName*\Config\\*ProjectName*.tlog\CL.command.1.tlog。
 
    在此檔案內，您可以找到後接用來編譯原始程式碼檔之命令列引數的原始程式碼檔名稱，而且一行一個引數。
 
@@ -213,7 +212,7 @@ CONTEXT:
   Dr2    = 0000000000000000  Dr7    = 0000000000000000
 ```
 
-如果啟用累加連結，並且只有在初始連結之後才會發生損毀 (即只有在根據後續累加連結的第一個完全連結之後)，也請提供一份物件 (.obj) 和程式庫 (.lib) 檔案，而這些檔案對應到初始連結完成之後修改的原始程式檔。
+如果已啟用累加連結，並且只有在初始連結之後才發生損毀 (也就是只有在後續累加連結所依據的第一個完整連結之後)，也請提供物件 (.obj) 和程式庫 (.lib) 檔案的複本，這些檔案必須對應到初始連結完成後經過修改的來源檔案。
 
 #### <a name="bad-code-generation"></a>產生錯誤的程式碼
 
@@ -221,50 +220,13 @@ CONTEXT:
 
 針對這種損毀，如果您正在使用連結時間產生程式碼 (LTCG)，請提供[連結重現](#link-repros)否則，請提供[前置處理過的重現](#preprocessed-repros)。 LTGC 是由 cl.exe 的 `/GL` 命令列引數所啟用。
 
-## <a name="send"></a> 報表的傳送方式
-
-有幾種方式可以將您的報表送給我們。 您可以使用 Visual Studio 的內建[回報問題工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或傳送電子郵件給我們。 報表的最佳選擇取決於您所遇到的問題類型、想要如何與調查您報表的工程師互動，以及是要追蹤其進度還是與社群分享您的報表。
-
-> [!NOTE]
-> 不論您如何提交報表，Microsoft 都會尊重您的隱私權。 如需我們如何處理您所傳送之資料的相關資訊，請參閱 [Microsoft Visual Studio 產品系列隱私權聲明](https://www.visualstudio.com/dn948229)。
-
-### <a name="send-an-email"></a>傳送電子郵件
-
-電子郵件是直接將報表傳送給 Visual C++ 小組的另一種方式；您可以透過 [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com) 連絡我們。
-
-如果您選擇透過電子郵件傳送報表，則可以使用下列範本作為電子郵件訊息的本文。 如果您未在電子郵件本文中加入這項資訊，請不要忘了附加原始程式碼或其他檔案。
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
-### <a name="use-the-report-a-problem-tool"></a>使用回報問題工具
-
-Visual Studio 中的回報問題工具是 Visual Studio 使用者用來回報各種問題的方式，而這只需要按幾下即可。 它提供簡單的表單以用來指定您所遇到問題的詳細資訊，然後提交報表，而不需要離開 IDE。
-
-透過回報問題工具回報問題對本文件中所討論的工具組問題類型十分常見；不過，如果它適合您的喜好設定，則是您可以選擇的選項。
-
-> [!TIP]
-> 針對您可能會在 Visual Studio 中遇到與工具組無關的其他問題類型 (例如，UI 問題、中斷的 IDE 功能或一般當機)，回報問題工具可能是特別不錯的選擇，原因是其螢幕擷取畫面功能以及記錄導致您所遇到問題之 UI 動作的能力。 您應該永遠不透過寄送電子郵件至 compilercrash@microsoft.com 來回報這些其他類型的錯誤。
-
 ## <a name="generate"></a> 產生重現
 
-重現是一個完整獨立程式碼範例，可示範您要回報的問題。 重現**不**是程式碼片段，它必須是建置並執行的完整範例 (或您所回報問題所產生的錯誤例外)。 它應該包含所有必要 #include 指示詞，即使針對標準標頭也是一樣。
+重現是一個完整獨立程式碼範例，可示範您要回報的問題。 重現**不**是程式碼片段，而必須是完整的建置加執行 (或先前的建置加執行，但您回報的問題所產生的錯誤除外) 範例。 它應該包含所有必要 #include 指示詞，即使針對標準標頭也是一樣。
 
 甚至，好的重現為
 
-- **最少**。 重現應該越小越好，但仍然確切地示範您所遇到的問題。 重現不需要複雜或實際；簡單且恰當的重現較佳。 它們不需要包含運作的計數器範例程式碼，但若為說明之用，則可能需要；只有造成問題的範例程式碼才是必要的。
+- **最少**。 重現應該越小越好，但仍然確切地示範您所遇到的問題。 重現不需要很複雜或真實；簡單且準確的重現較佳。 它們不需要包含運作的計數器範例程式碼，但若為說明之用，則可能需要；只有造成問題的範例程式碼才是必要的。
 
 - **獨立。** 重現應該避免不必要的相依性。 如果您可以重現問題，而不需要協力廠商程式庫，則請這樣做。 如果您可以重現問題，而不需要任何程式庫程式碼 (可以使用 `std::out`、`printf()`)，則請這樣做。 減少視為可能造成問題的程式碼數量十分有幫助。
 
@@ -330,3 +292,51 @@ Visual Studio 中的回報問題工具是 Visual Studio 使用者用來回報各
 如果您無法將問題減少為單一原始程式檔或前置處理過的重現，而且問題不需要連結重現，則我們可以調查 IDE 專案。 專案內的程式碼應該仍為最少，而且這份文件的所有指引都依然適用。
 
 將重現建立為最少 IDE 專案，然後將整個目錄結構壓縮成 .zip 檔案或類似檔案以進行封裝，並將其附加至報表。
+
+## <a name="send"></a> 報表的傳送方式
+
+有幾種方式可以將您的報表送給我們。 您可以使用 Visual Studio 的內建[回報問題工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)頁面。 您也可以透過電子郵件傳送報告，但建議您採取前兩種方式。 方法的選擇取決於您想要如何與調查報告的工程師互動，及是否要追蹤其進度或是否要與社群分享您的報告。
+
+> [!NOTE]
+> 不論您如何提交報表，Microsoft 都會尊重您的隱私權。 如需我們如何處理您所傳送之資料的相關資訊，請參閱 [Microsoft Visual Studio 產品系列隱私權聲明](https://www.visualstudio.com/dn948229)。
+
+### <a name="use-the-report-a-problem-tool"></a>使用回報問題工具
+
+Visual Studio 中的 [回報問題] 工具是 Visual Studio 使用者用來回報各種問題的方式，只要按幾下就可回報問題。 它提供簡單的表單以用來指定您所遇到問題的詳細資訊，然後提交報表，而不需要離開 IDE。
+
+從 IDE 透過 [回報問題] 工具回報問題簡單又方便。 您可以選擇 [快速啟動] 搜尋方塊旁的**傳送意見反應**圖示從標題列存取這項工具，也可以在功能表列上的 [協助] > [傳送意見反應] > [回報問題] 中找到該工具。
+
+當您選擇回報問題時，請先在開發人員社群中搜尋是否有類似問題。 如果其他人之前回報過相關問題，請附議主題並新增留言，提出具體細節。 如果您找不到類似問題，請選擇 Visual Studio 意見反應對話方塊底部的 [回報新問題] 按鈕，然後遵循這些步驟回報問題。
+
+### <a name="use-the-visual-studio-developer-community-pages"></a>使用 Visual Studio 開發人員社群頁面
+
+Visual Studio 開發人員社群頁面提供另一種方便的途徑，讓您回報 Visual Studio、C++ 編譯器、工具和程式庫的問題和尋找其解決方案。 [Visual Studio 問題](https://developercommunity.visualstudio.com/spaces/8/index.html)頁面可供您回報 IDE 或安裝問題。 若要回報 C++ 編譯器、連結器，及其他工具和程式庫的相關問題，則請使用 [C++ 問題](https://developercommunity.visualstudio.com/spaces/62/index.html)頁面。
+
+在開發人員社群中，靠近每個頁面頂端的橫幅為搜尋方塊，您可用來尋找回報類似您問題的文章或主題。 您也許可在現有主題中發現到與您問題相關的解決方案或其他有用資訊。 如果其他人已回報過相同的問題，請附議該主題並留言，而非建立新的問題回報。
+
+如果其他人未回報過該問題，請選擇開發人員社群頁面上搜尋方塊旁的 [回報問題] 按鈕。 系統可能會要求您登入 Visual Studio 帳戶，及同意將您設定檔的存取權授予開發人員社群應用程式。 登入後，您會直接前往可回報問題的頁面。 您可以包含您重新產生的程式碼和命令列、螢幕擷取畫面、相關討論的連結，及其他您認為相關且有用的任何資訊。
+
+### <a name="send-an-email"></a>傳送電子郵件
+
+電子郵件是將報告直接傳送給 Visual C++ 小組的另一種方式。 寄信到 [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com) 即可與我們連絡。因為透過 [回報問題] 工具或網頁回報至開發人員社群的問題較能密切追蹤，而且透過電子郵件回報無法讓留言和解決方案供其他 Visual Studio 使用者參考，所以請只在無法使用其他兩種方式時，再使用此方式。
+
+如果您選擇透過電子郵件傳送報表，則可以使用下列範本作為電子郵件訊息的本文。 如果您未在電子郵件本文中加入這項資訊，請不要忘了附加原始程式碼或其他檔案。
+
+```Example
+To: compilercrash@microsoft.com
+Subject: Visual C++ Error Report
+-----
+
+Compiler version:
+
+CL.EXE command line:
+
+Problem description:
+
+Source code and repro steps:
+
+```
+
+> [!TIP]
+> 針對您可能會在 Visual Studio 中遇到與工具組無關的其他問題類型 (例如，UI 問題、中斷的 IDE 功能或一般當機)，回報問題工具可能是特別不錯的選擇，原因是其螢幕擷取畫面功能以及記錄導致您所遇到問題之 UI 動作的能力。 您應該永遠不透過寄送電子郵件至 compilercrash@microsoft.com 來回報這些其他類型的錯誤。
+

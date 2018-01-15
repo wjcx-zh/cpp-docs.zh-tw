@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e04bea5b4a76172e5d9f28358d013ed7cbd3538c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4bf5f696eeff3e4e26a9d77714c0d5a6f093aaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 類別
 用於 OLE 視覺化編輯伺服程式、Automation 伺服程式和連結容器 (支援內嵌連結的應用程式)。  
@@ -40,17 +41,17 @@ ms.lasthandoff: 10/24/2017
 class COleTemplateServer : public COleObjectFactory  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|建構 `COleTemplateServer` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|連接到基礎的文件範本`COleObjectFactory`物件。|  
 |[COleTemplateServer::Unregister](#unregister)|取消註冊的相關聯的文件範本。|  
@@ -164,7 +165,7 @@ void UpdateRegistry(
   
  如需詳細資訊，請參閱 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [COleObjectFactory 類別](../../mfc/reference/coleobjectfactory-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -1,32 +1,33 @@
 ---
-title: "ActivationFactoryCallback 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::ActivationFactoryCallback"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivationFactoryCallback 函式"
+title: "ActivationFactoryCallback 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::ActivationFactoryCallback
+dev_langs: C++
+helpviewer_keywords: ActivationFactoryCallback function
 ms.assetid: dd40c79b-1273-4f2a-8c24-ae9926fb4fd9
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e88a6f9cb89746cd0380587789fbdd68f80d5e36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ActivationFactoryCallback 函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="activationfactorycallback-function"></a>ActivationFactoryCallback 函式
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(  
@@ -35,25 +36,25 @@ inline HRESULT STDAPICALLTYPE ActivationFactoryCallback(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `activationId`  
- 指定的執行階段類別名稱的字串的控制代碼。  
+ 控制代碼指定的執行階段類別名稱的字串。  
   
  `ppFactory`  
- 這個作業完成時，對應至參數 `activationId`的啟用處理站。  
+ 這項作業完成時，會對應至參數的啟用 factory `activationId`。  
   
-## 傳回值  
- 如果成功，則為 S\_OK，否則即為描述失敗的 HRESULT。  可能的失敗 HRESULT 是 CLASS\_E\_CLASSNOTAVAILABLE 和 E\_INVALIDARG 。  
+## <a name="return-value"></a>傳回值  
+ 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。 可能的失敗 Hresult 而 CLASS_E_CLASSNOTAVAILABLE E_INVALIDARG。  
   
-## 備註  
- 取得指定之啟動 ID的啟用 Factory  
+## <a name="remarks"></a>備註  
+ 啟動處理站取得所指定的啟用識別碼。  
   
- 在Windows執行階段呼叫這個回呼函式所需的執行階段類別名稱指定的物件。  
+ Windows 執行階段呼叫這個要求由執行階段類別名稱指定物件的回呼函式。  
   
-## 需求  
- **標題:** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

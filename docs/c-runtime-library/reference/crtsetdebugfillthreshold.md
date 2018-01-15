@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetDebugFillThreshold
+apiname: _CrtSetDebugFillThreshold
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,8 +23,7 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -34,16 +31,16 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0d8fcbf7f354def49056c1e519e910edccde56cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 4af73cd84e21ea23f7bdacdeff91cacdda322198
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 擷取或修改控制偵錯函式中緩衝區填入行為的臨界值。  
@@ -108,11 +105,11 @@ size_t _CrtSetDebugFillThreshold(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_CrtSetDebugFillThreshold`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -181,5 +178,5 @@ With buffer-filling off:
 00  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

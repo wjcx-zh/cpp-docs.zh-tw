@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetBreakAlloc
+apiname: _CrtSetBreakAlloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 70262673935e67fc6ee868a400fd57358a31547a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a11b7847e83a129099e0f54cccce35032cf68fe4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 在指定的物件配置順序編號設定中斷點 (僅限偵錯版本)。  
@@ -66,15 +63,15 @@ ms.lasthandoff: 10/09/2017
   
  物件配置順序編號會儲存在定義於 Crtdbg.h 中的 **_CrtMemBlockHeader** 結構的 *lRequest* 欄位內。 當記憶體區塊的相關資訊由其中一個偵錯傾印函式回報時，此編號會包含在大括號裡，例如 {36}。  
   
- 如需如何搭配其他記憶體管理函式使用 `_CrtSetBreakAlloc` 的詳細資訊，請參閱[追蹤堆積配置要求](/visualstudio/debugger/crt-debug-heap-details)。 如需如何在偵錯版本的基底堆積中配置、初始化和管理記憶體區塊的詳細資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。  
+ 如需如何搭配其他記憶體管理函式使用 `_CrtSetBreakAlloc` 的詳細資訊，請參閱[追蹤堆積配置要求](/visualstudio/debugger/crt-debug-heap-details)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_CrtSetBreakAlloc`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -125,5 +122,5 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

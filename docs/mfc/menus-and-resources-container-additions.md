@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3c8bec06315982725cce531476cbe7daaf154a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-container-additions"></a>功能表和資源：容器新增
 這篇文章會說明需要功能表和其他視覺編輯容器應用程式中的資源進行的變更。  
@@ -65,13 +66,13 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_container_application_accelerator_table_additions"></a>容器應用程式快速鍵對應表加入  
  不需要，如果您要支援就地啟用容器應用程式的快速鍵對應表資源的小型變更。 第一項變更可讓使用者按 escape 鍵 (ESC) 取消就地編輯模式。 將下列項目加入至主要快速鍵對應表：  
   
-|ID|Key|類型|  
+|識別碼|Key|類型|  
 |--------|---------|----------|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**針對 VIRTKEY**|  
   
  第二項變更是建立新的快速鍵對應表對應至為就地啟動建立新的功能表資源。 這個資料表有除了檔案和視窗的功能表項目**VK_ESCAPE**以上項目。 下列範例會建立就地啟用 MFC 範例中的快速鍵對應表[容器](../visual-cpp-samples.md):  
   
-|ID|Key|類型|  
+|識別碼|Key|類型|  
 |--------|---------|----------|  
 |`ID_FILE_NEW`|CTRL+N|**針對 VIRTKEY**|  
 |`ID_FILE_OPEN`|CTRL+O|**針對 VIRTKEY**|  
@@ -84,12 +85,12 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_string_table_additions_for_container_applications"></a>容器應用程式的字串資料表加入  
  大部分的容器應用程式的字串資料表的變更會對應至所述的額外功能表項目[容器功能表加入](#_core_container_menu_additions)。 它們提供顯示每個功能表項目時，[狀態] 列中顯示的文字。 例如，以下是應用程式精靈產生的字串資料表項目：  
   
-|ID|字串|  
+|識別碼|String|  
 |--------|------------|  
 |**IDP_OLE_INIT_FAILED**|OLE 初始化失敗。 請確定 OLE 程式庫的正確版本。|  
 |**IDP_FAILED_TO_CREATE**|無法建立物件。 請確定該物件已登錄在系統登錄。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)   
  [功能表和資源：伺服器新增](../mfc/menus-and-resources-server-additions.md)
 

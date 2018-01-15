@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce9d0335aa2f8a74f20459a89d895050dc975ec9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1c9b64ef3b164c45a1633281bbaebd6525df659
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045：Long Varchar/Varbinary 的 MFC/資料庫支援
 > [!NOTE]
@@ -122,7 +123,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
 > [!NOTE]
 >  Long 資料行未繫結架構，因為它的變更並不會處理與`CRecordset::Update`呼叫。 您必須建立並傳送所需的 SQL**插入**和**更新**陳述式自己。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

@@ -19,11 +19,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c826d3999ac1f044bcc0ffc25e58f86ec7b7e881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3d8e65a62dcac8e97f8f416cd54050a76920afe6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-desktop-applications-c"></a>Windows 桌面應用程式 (C++)
 本節討論如何建立可在視窗中執行的 c + + 桌面應用程式。  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="prerequisites"></a>必要條件  
  這些主題假設您已了解 c + + 語言的基本概念。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [Win32 應用程式精靈](../windows/win32-application-wizard.md)  
   
@@ -43,6 +46,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用資源檔](../windows/working-with-resource-files.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Visual Studio 中的 visual c + +](../visual-cpp-in-visual-studio.md)
 

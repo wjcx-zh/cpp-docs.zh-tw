@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c0bdcd8c1372f49c03e3ada06e98fcfd36815196
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5cc24746771c4e494648796847afee58e0bdf09c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 計算反正弦值。  
@@ -102,18 +86,18 @@ long double asinl(
 |&#124;x&#124;>1|`INVALID`|`_DOMAIN`|  
   
 ## <a name="remarks"></a>備註  
- 因為 C++ 允許多載，所以您可以呼叫具有 `float` 和 `long double` 值的 `asin` 多載。 在 C 程式中，`asin` 一律會採用並傳回雙精度浮點數。  
+ 因為 C++ 允許多載，所以您可以呼叫具有 `float` 和 `long double` 值的 `asin` 多載。 在 C 程式中，`asin` 一律採用及傳回雙精度浮點數。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`asin`, `asinf`, `asinl`|\<math.h>|  
   
 ## <a name="example"></a>範例  
  如需詳細資訊，請參閱 [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [atan、atanf、atanl、atan2、atan2f、atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   

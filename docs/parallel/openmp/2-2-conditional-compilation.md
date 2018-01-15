@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ddfb754e3aa4142b6d070f2b5fe20ac7a63512e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fb58458710c18f89f4057061b9c67b4eef1bbf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="22-conditional-compilation"></a>2.2 條件式編譯
 _**OPENMP** OpenMP 相容的實作定義巨集名稱為十進位常數*yyyymm*，這將成為的年和月的已核准的規格。 這個巨集不能主旨**#define**或**#undef**前置處理器指示詞。  

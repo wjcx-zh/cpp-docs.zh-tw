@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: de741e8e36f6358b0b0f100eaa266336c0338ca2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3eb5a5d383044e0e44a0913c06afa73c6fe2f0ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seedseq-class"></a>seed_seq 類別
 儲存不帶正負號的整數值的向量，可以提供亂數引擎的隨機化種子。  
@@ -81,7 +82,7 @@ public:
 使用輸入迭代器範圍中提供的所有元素，來初始化內部序列。                  
 `iterator_traits<InputIterator>::value_type` 必須是整數類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="generating-functions"></a>產生函式  
  `template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);`   
@@ -171,7 +172,7 @@ Generating a sequence of 5 elements into an array:
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<random>](../standard-library/random.md)
 
 

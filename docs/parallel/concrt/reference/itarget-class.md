@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a40b73d752a40c94a8ea47acef40ea12f2e4504
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b67bf07ed7f1621ceb9a9428a03244ee5661707
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itarget-class"></a>ITarget 類別
 `ITarget` 類別是所有目標區塊的介面。 目標區塊會使用 `ISource` 區塊提供給它們的訊息。  
@@ -43,32 +44,32 @@ class ITarget;
  `T`  
  目標區塊接受訊息內裝載的資料類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`filter_method`|傳回的區塊所使用的任何方法的簽章`bool`值，以判斷是否應該接受提供的訊息。|  
 |`type`|類型別名`T`。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[~ ITarget 解構函式](#dtor)|終結`ITarget`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[傳播](#propagate)|在衍生類別中覆寫，以非同步方式傳遞訊息從來源區塊到此目標區塊。|  
 |[傳送](#send)|在衍生類別中覆寫，以同步方式將訊息傳遞給目標區塊。|  
 |[supports_anonymous_source](#supports_anonymous_source)|在衍生類別中覆寫時，會根據訊息區塊是否會接受未與它連結的來源所提供的訊息傳回 true 或 false。 如果覆寫的方法傳回 `true`，目標就不可延後提供的訊息，因為之後要使用延後的訊息就需要在其來源連結登錄中識別來源。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[link_source](#link_source)|在衍生類別中覆寫，將指定的來源區塊連結至這個`ITarget`區塊。|  
 |[unlink_source](#unlink_source)|當在衍生類別中覆寫時，取消連結指定的來源區塊從這個`ITarget`區塊。|  
@@ -192,6 +193,6 @@ virtual void unlink_source(_Inout_ ISource<T>* _PSource) = 0;
 virtual void unlink_sources() = 0;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [ISource 類別](isource-class.md)

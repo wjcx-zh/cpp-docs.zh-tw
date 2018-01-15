@@ -24,11 +24,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e38029e13bc342895922f4f3624076ab513f7a45
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c639bd760b837923f3011e9209d923fef31f8aee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ischeduler-structure"></a>IScheduler 結構
 工作排程器抽象概念的介面。 並行執行階段的資源管理員會使用這個介面與工作排程器通訊。  
@@ -39,11 +40,11 @@ ms.lasthandoff: 10/24/2017
 struct IScheduler;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|提供一組的虛擬處理器根排程器，其用途。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行工作，代表排程器的權限。|  
 |[Ischeduler:: Getid](#getid)|排程器傳回的唯一識別碼。|  
@@ -206,7 +207,7 @@ virtual void Statistics(
   
  不存在的統計資訊，資源管理員要用來進行資源配置和移轉決策的硬體執行緒訂用帳戶層級。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [SchedulerPolicy 類別](schedulerpolicy-class.md)   

@@ -243,11 +243,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9337c6dd384213d086bad2138ba7d426b0b305f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93db9b8d8c56a23254972af29c7381e368766381
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 類別
 `CMFCRibbonBaseElement`類別是基底類別，您可以加入的所有項目的[功能區列](../../mfc/reference/cmfcribbonbar-class.md)。 功能區項目的範例包括功能區按鈕、功能區核取方塊和功能區下拉式方塊。  
@@ -258,7 +259,7 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonBaseElement : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -268,7 +269,7 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|將 keytip 的功能區項目加入至陣列的按鍵提示。|  
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|將功能區項目加入至指定的功能區命令清單方塊。|  
@@ -382,9 +383,9 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|變更顯示的高度的功能區項目至指定的資料列的高度。|  
 |[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|使用功能區項目的命令資源更新的工具提示文字。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|當使用者按下快速鍵時由架構呼叫。|  
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|功能區項目接收或失去輸入的焦點時，由架構呼叫。|  
@@ -423,7 +424,7 @@ virtual void AddToKeyList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `arElems`  
+ [輸入] `arElems`  
  若要參考[CArray](../../mfc/reference/carray-class.md)的按鍵提示。  
   
 ### <a name="remarks"></a>備註  
@@ -439,10 +440,10 @@ virtual int AddToListBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndListBox`  
+ [輸入] `pWndListBox`  
  命令的清單方塊的指標。  
   
- [in] `bDeep`  
+ [輸入] `bDeep`  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -529,7 +530,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `src`  
+ [輸入] `src`  
  來源[CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
@@ -555,13 +556,13 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `type`  
+ [輸入] `type`  
  映像類型列舉值。 請參閱 < 備註 > 一節如需可能的值。  
   
- [in] `rectImage`  
+ [輸入] `rectImage`  
  影像的矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -583,7 +584,7 @@ virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pElement`  
+ [輸入] `pElement`  
  功能區項目的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -599,7 +600,7 @@ virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwData`  
+ [輸入] `dwData`  
  與功能區項目相關聯的資料。  
   
 ### <a name="return-value"></a>傳回值  
@@ -615,7 +616,7 @@ virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiCmdID`  
+ [輸入] `uiCmdID`  
  功能區項目的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -631,7 +632,7 @@ virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pOriginal`  
+ [輸入] `pOriginal`  
  功能區項目的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -648,7 +649,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -713,10 +714,10 @@ virtual void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiCmdID`  
+ [輸入] `uiCmdID`  
  功能區項目的命令識別碼。  
   
- [in] `arElements`  
+ [輸入] `arElements`  
  功能區項目的陣列。  
   
 ### <a name="remarks"></a>備註  
@@ -761,7 +762,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -787,10 +788,10 @@ virtual CRect GetKeyTipRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `bIsMenu`  
+ [輸入] `bIsMenu`  
  `TRUE`如果功能區項目會顯示快顯功能表。否則`FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -807,7 +808,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -825,7 +826,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="return-value"></a>傳回值  
  A`RibbonElementLocation`列舉值。 下表列出可能的值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`RibbonElementNotInGroup`|功能區項目不會包含在功能區群組中。|  
 |`RibbonElementSingleInGroup`|功能區項目會顯示為功能區群組中唯一的項目。|  
@@ -965,7 +966,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -984,7 +985,7 @@ virtual CSize GetSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1083,7 +1084,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1126,7 +1127,7 @@ virtual BOOL IsAutoRepeatMode(int& nDelay) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nDelay`  
+ [輸入] `nDelay`  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1378,7 +1379,7 @@ BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bWithDelay`  
+ [輸入] `bWithDelay`  
  `TRUE`命令通知新增至訊息佇列的父視窗。`FALSE`立即將訊息傳送至父視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1394,7 +1395,7 @@ virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIndex`  
+ [輸入] `nIndex`  
  在清單中的功能區項目的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -1407,7 +1408,7 @@ virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `qat`  
+ [輸入] `qat`  
  快速存取工具列。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1423,7 +1424,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1450,7 +1451,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1465,10 +1466,10 @@ virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pPanelMenuBar`  
+ [輸入] `pPanelMenuBar`  
  不使用這個參數。  
   
- [in] `pHot`  
+ [輸入] `pHot`  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1482,7 +1483,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1499,13 +1500,13 @@ virtual void OnDrawKeyTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rect`  
+ [輸入] `rect`  
  Keytip 的界限矩形。  
   
- [in] `bIsMenu`  
+ [輸入] `bIsMenu`  
  `TRUE`如果 keytip 是針對快顯功能表按鈕。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1520,10 +1521,10 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rect`  
+ [輸入] `rect`  
  功能表影像的矩形。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1545,22 +1546,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的功能區項目的指標。  
   
- [in] `strText`  
+ [輸入] `strText`  
  顯示文字。  
   
- [in] `nTextOffset`  
+ [輸入] `nTextOffset`  
  像素為單位，從清單方塊來顯示文字的左邊算起的距離。  
   
- [in] `rect`  
+ [輸入] `rect`  
  功能區元素的顯示矩形。  
   
- [in] `bIsSelected`  
+ [輸入] `bIsSelected`  
  不使用這個參數。  
   
- [in] `bHighlighted`  
+ [輸入] `bHighlighted`  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1574,7 +1575,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bIsMenuKey`  
+ [輸入] `bIsMenuKey`  
  `TRUE`如果 keytip 顯示快顯功能表。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1590,7 +1591,7 @@ virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nUpperChar`  
+ [輸入] `nUpperChar`  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1607,7 +1608,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nChar`  
+ [輸入] `nChar`  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1624,7 +1625,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bIsRTL`  
+ [輸入] `bIsRTL`  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1648,7 +1649,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bShow`  
+ [輸入] `bShow`  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1672,7 +1673,7 @@ void PostMenuCommand(UINT uiCmdId);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiCmdId`  
+ [輸入] `uiCmdId`  
  未使用的參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1718,7 +1719,7 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bCompactMode`  
+ [輸入] `bCompactMode`  
  `TRUE`若要減少顯示的功能區項目; 的大小`FALSE`增加的功能區元素的顯示大小。  
   
 ### <a name="remarks"></a>備註  
@@ -1739,7 +1740,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwData`  
+ [輸入] `dwData`  
  資料值。  
   
 ##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
@@ -1750,7 +1751,7 @@ void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bIsDefaultMenuLook`  
+ [輸入] `bIsDefaultMenuLook`  
  `TRUE`若要設定的功能區項目顯示為快顯的命令;否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1763,7 +1764,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszText`  
+ [輸入] `lpszText`  
  功能區項目的描述。  
   
 ### <a name="remarks"></a>備註  
@@ -1777,7 +1778,7 @@ virtual void SetID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  命令 ID。  
   
 ##  <a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
@@ -1788,7 +1789,7 @@ virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bOneRow`  
+ [輸入] `bOneRow`  
  `TRUE`若要限制壓縮或中繼; 功能區元素的顯示大小否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1804,10 +1805,10 @@ virtual void SetKeys(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszKeys`  
+ [輸入] `lpszKeys`  
  功能區項目的 keytip。  
   
- [in] `lpszMenuKeys`  
+ [輸入] `lpszMenuKeys`  
  快顯功能表功能區項目的 keytip。  
   
 ##  <a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
@@ -1818,7 +1819,7 @@ virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pOriginal`  
+ [輸入] `pOriginal`  
  功能區項目的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1832,7 +1833,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pParent`  
+ [輸入] `pParent`  
  功能區分類的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1846,7 +1847,7 @@ virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMenuBar`  
+ [輸入] `pMenuBar`  
  在父功能表。  
   
 ### <a name="remarks"></a>備註  
@@ -1859,7 +1860,7 @@ virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pRibbonBar`  
+ [輸入] `pRibbonBar`  
  父功能區列的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1872,7 +1873,7 @@ void SetRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
+ [輸入] `rect`  
  矩形的維度。  
   
 ### <a name="remarks"></a>備註  
@@ -1885,7 +1886,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszText`  
+ [輸入] `lpszText`  
  文字和 keytip 的功能區項目。  
   
 ### <a name="remarks"></a>備註  
@@ -1910,7 +1911,7 @@ virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSet`  
+ [輸入] `bSet`  
  `TRUE`在右側; 顯示文字否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1923,7 +1924,7 @@ virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszText`  
+ [輸入] `lpszText`  
  工具提示文字。  
   
 ##  <a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
@@ -1934,7 +1935,7 @@ void SetVisible(BOOL bIsVisible);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bIsVisible`  
+ [輸入] `bIsVisible`  
  `TRUE`若要顯示的功能區項目。`FALSE`隱藏功能區項目。  
   
 ### <a name="remarks"></a>備註  
@@ -1959,10 +1960,10 @@ virtual BOOL StretchToWholeRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  不使用這個參數。  
   
- [in] `nHeight`  
+ [輸入] `nHeight`  
  資料列的高度。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1992,6 +1993,6 @@ virtual BOOL HasFocus() const;
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

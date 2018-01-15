@@ -71,11 +71,12 @@ helpviewer_keywords:
 - std::atomic_store_explicit [C++]
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
-ms.openlocfilehash: 75dff27cd050ae1a218cb8d61abaffff05d38661
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 232333280ae44838b0afd41bf0e00255d8a78dc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 函式
 ||||  
@@ -883,7 +884,7 @@ Ty kill_dependency(Ty Arg) noexcept;
 ### <a name="return-value"></a>傳回值  
  傳回值為 `Arg`。 `Arg` 的評估不會執行與函式呼叫的相依性。 透過中斷可能的相依性鏈結，此函式可能會讓編譯器產生更具效率的程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<atomic>](../standard-library/atomic.md)
 
 

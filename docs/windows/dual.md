@@ -1,32 +1,33 @@
 ---
-title: "dual | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.dual"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dual attribute"
+title: "雙重 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.dual
+dev_langs: C++
+helpviewer_keywords: dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e5ea633ca0d6e9f654e5462f8cebded18d9b9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# dual
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將.idl 檔內的介面以雙重介面。  
+# <a name="dual"></a>dual
+雙重介面置於.idl 檔案介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,11 +35,11 @@ caps.handback.revision: 9
   
 ```  
   
-## 備註  
- 當**雙** C\+\+ 屬性之前的介面，它會放置在產生的.idl 檔中的文件庫區塊內的介面。  
+## <a name="remarks"></a>備註  
+ 當**雙重**c + + 屬性位於介面，它會使要放在程式庫中的區塊所產生的.idl 檔案內的介面。  
   
-## 範例  
- 下列程式碼是使用屬性區塊**雙**介面定義之前：  
+## <a name="example"></a>範例  
+ 下列程式碼會使用屬性區塊**雙重**介面定義之前：  
   
 ```  
 // cpp_attr_ref_dual.cpp  
@@ -72,24 +73,23 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|`interface`|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|**dispinterface**|  
+|**必要屬性**|無|  
+|**無效屬性**|**dispinterface**|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [custom](../windows/custom-cpp.md)   
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [屬性的用法](../windows/attributes-by-usage.md)   
+ [自訂](../windows/custom-cpp.md)   
  [dispinterface](../windows/dispinterface.md)   
  [object](../windows/object-cpp.md)   
- [\_\_interface](../cpp/interface.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+ [__interface](../cpp/interface.md)   

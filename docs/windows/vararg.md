@@ -1,32 +1,33 @@
 ---
-title: "vararg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.vararg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vararg attribute"
+title: "vararg |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.vararg
+dev_langs: C++
+helpviewer_keywords: vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ee82536c4cb172fb825487c7780bafcc1f007a59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vararg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定函式接收不定個數的引數。  
+# <a name="vararg"></a>vararg
+指定函式接受可變數目的引數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,11 +35,11 @@ caps.handback.revision: 9
   
 ```  
   
-## 備註  
- **Vararg**  C\+\+ 屬性具有相同的功能，為 [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Vararg** c + + 屬性具有相同的功能[vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) MIDL 屬性。  
   
-## 範例  
- 下列程式碼範例將示範用法 **vararg**：  
+## <a name="example"></a>範例  
+ 下列程式碼將示範使用**vararg**:  
   
 ```  
 // cpp_attr_ref_vararg.cpp  
@@ -54,20 +55,19 @@ __interface X : public IUnknown
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|介面方法|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [方法屬性](../windows/method-attributes.md)   

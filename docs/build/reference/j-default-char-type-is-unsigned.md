@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a49220bf5ee4d990096140f4b2139992b03ad95
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5195822908c13217244a344357a6140d67a9e7df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (預設 char 類型為 unsigned)
 將預設 `char` 類型從 `signed char` 變更為 `unsigned char`，而且 `char` 類型在擴展為 `int` 類型時，是以零擴充的。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/24/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [使用專案屬性](../../ide/working-with-project-properties.md)

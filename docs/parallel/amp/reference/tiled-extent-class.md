@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a73a29a7cdcd20c969680e1dbb69b6a6ede4dbb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledextent-class"></a>tiled_extent 類別
 A`tiled_extent`物件是`extent`細分成一段、 兩段或 3d 圖格的範圍空間一到三個維度的物件。  
@@ -65,18 +66,18 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
  `_Dim2`  
  最小顯著性維度的長度。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[tiled_extent 建構函式](#ctor)|初始化 `tiled_extent` 類別的新執行個體。|  
 
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|傳回`extent`物件，以擷取的值`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|  
 |[填補](#pad)|傳回新`tiled_extent`向上調整為整除磚維度的範圍的物件。|  
@@ -84,14 +85,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|將指定的內容複製`tiled_index`成這一個物件。|  
 
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[tile_dim0 常數](#tile_dim0)|會儲存最重要的維度的長度。|  
 |[tile_dim1 常數](#tile_dim1)|儲存下一步 以最重要維度的長度。|  
@@ -100,7 +101,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[tile_extent](#tile_extent)|取得`extent`物件，以擷取的值`tiled_extent`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|  
   
@@ -224,5 +225,5 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 ```  
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

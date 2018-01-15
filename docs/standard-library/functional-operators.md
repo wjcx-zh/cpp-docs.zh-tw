@@ -17,18 +17,19 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0c165950500982698fc2ae631cae8e305ec5322a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f820a75d7fbfbbc287ef7ade533be87d5d8f603f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 運算子
 |||  
 |-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  測試可呼叫的物件是否是空的。  
   
 ```  
@@ -85,7 +86,7 @@ empty == true
 empty == false  
 ```  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  測試可呼叫的物件是否不是空的。  
   
 ```  
@@ -142,6 +143,6 @@ not empty == false
 not empty == true  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<functional>](../standard-library/functional.md)
 

@@ -1,32 +1,33 @@
 ---
-title: "Make 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Make"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Make 函式"
+title: "Make 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Make
+dev_langs: C++
+helpviewer_keywords: Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aac2a50e3c50941d607dea32c9f7c9eecde8e589
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Make 函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-初始化指定的 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 類別。  使用這個函式例示相同模組中定義的元件。  
+# <a name="make-function"></a>Make 函式
+初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同模組中定義的元件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <  
@@ -170,36 +171,36 @@ template <
 ComPtr<T> Make();  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 繼承自 `WRL::RuntimeClass`的使用者特定的類別。  
+ 使用者指定的類別繼承自`WRL::RuntimeClass`。  
   
  `TArg1`  
- 傳遞至指定的執行階段的類別引數 1 的型別。  
+ 傳遞至指定的執行階段類別的引數 1 的類型。  
   
  `TArg2`  
- 傳遞至指定的執行階段的類別引數 2 的型別。  
+ 傳遞至指定的執行階段類別的引數 2 的型別。  
   
  `TArg3`  
- 傳遞至指定的執行階段的類別引數 3 的型別。  
+ 傳遞至指定的執行階段類別的引數 3 的類型。  
   
  `TArg4`  
- 傳遞至指定的執行階段的類別引數 4 的型別。  
+ 傳遞至指定的執行階段類別的引數 4 的類型。  
   
  `TArg5`  
- 傳遞至指定的執行階段的類別引數 5 的型別。  
+ 傳遞至指定的執行階段類別的引數 5 的型別。  
   
  `TArg6`  
- 傳遞至指定的執行階段的類別引數 6 的型別。  
+ 傳遞至指定的執行階段類別的引數 6 種。  
   
  `TArg7`  
- 傳遞至指定的執行階段的類別引數 7 的型別。  
+ 傳遞至指定的執行階段類別的引數 7 的類型。  
   
  `TArg8`  
- 傳遞至指定的執行階段的類別引數 8 的型別。  
+ 傳遞至指定的執行階段類別的引數 8 的型別。  
   
  `TArg9`  
- 傳遞至指定的執行階段的類別引數 9 的型別。  
+ 型別傳遞至指定的執行階段類別的引數 9。  
   
  `arg1`  
  傳遞至指定的執行階段類別的引數 1。  
@@ -228,16 +229,16 @@ ComPtr<T> Make();
  `arg9`  
  傳遞至指定的執行階段類別的引數 9。  
   
-## 傳回值  
- `ComPtr<T>` 物件，如果成功;則為，否則為 `nullptr`。  
+## <a name="return-value"></a>傳回值  
+ A`ComPtr<T>`物件，如果成功，否則`nullptr`。  
   
-## 備註  
- 請參閱 [如何：直接執行個體化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md) 認識這個函式和 [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) 的差異及範例。  
+## <a name="remarks"></a>備註  
+ 請參閱[如何： 直接執行個體化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md)若要了解此函式之間的差異和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)，及範例。  
   
-## 需求  
- **標頭：**implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

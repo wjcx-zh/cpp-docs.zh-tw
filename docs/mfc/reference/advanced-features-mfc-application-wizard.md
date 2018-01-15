@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 957894b69953f9b2c596f61cd0004c47c6d6e1cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c2a9bb9ebb1837dc303e89e04ced496b52d1cdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 應用程式精靈、進階功能
 本主題列出應用程式的其他功能選項，例如說明、列印支援等。 請在各章節中，指明這些進階功能的額外支援。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/24/2017
  新增支援[Windows 重新啟動管理員](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx)。 這部影片示範如何使用 MFC 的重新啟動管理員：[如何： 使用新的重新啟動管理員](http://msdn.microsoft.com/vstudio/ee886407)。  
   
  **進階的框架窗格**  
- |選項|說明|  
+ |選項|描述|  
 |------------|-----------------|  
 |**總管停駐窗格**|建立類似 Visual Studio 的停駐窗格**方案總管 中**主框架視窗的左邊。|  
 |**輸出停駐**|建立類似 Visual Studio 的停駐窗格**輸出**位於主框架視窗下的窗格。|  
@@ -69,6 +70,6 @@ ms.lasthandoff: 10/24/2017
  **最近使用的檔案清單上的檔案數目**  
  指定最近使用的檔案清單中列出的檔案數量。 預設值為 4。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
 

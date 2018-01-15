@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8307b8984ee1b5b6074ee309fdf8a74fe46ea9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd7b6be66c3049c1d82aa549cf362a840fd6f265
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>網際網路上的非同步 Moniker
 由於網路存取的速度很慢，網際網路需要加入新的方法至應用程式設計。 應用程式應該以非同步方式執行網路存取，避免讓使用者介面失去作用。 MFC 類別[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)下載檔案時，提供非同步支援。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
   
  非同步下載 ActiveX 控制項中的詳細資訊，請參閱[網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

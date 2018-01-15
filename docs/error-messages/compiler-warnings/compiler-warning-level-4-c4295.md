@@ -1,7 +1,7 @@
 ---
 title: "編譯器警告 （層級 4） C4295 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -16,27 +16,30 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 1424302c5c109ff79f35c922d1e5051b15655554
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.openlocfilehash: 56ffdce8c2790a3944a8f79753177bc80e249778
+ms.sourcegitcommit: bc086a7acbe2d9fd77d115f269cc2a0dbeeb5b88
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="compiler-warning-level-4-c4295"></a>編譯器警告 (層級 4) C4295
   
 > '*陣列*': 陣列是太小無法包含結束的 null 字元  
   
- 初始化陣列，但陣列中的最後一個字元不是 null。存取陣列可能會產生非預期的結果。  
+初始化陣列，但陣列中的最後一個字元不是 null。存取陣列做為字串可能會產生非預期的結果。  
   
 ## <a name="example"></a>範例  
   
- 下列範例會產生 C4295。 若要修正此問題，您可以宣告陣列大小更大，以保存終止 null 從初始設定式。  
+下列範例會產生 C4295。 若要修正此問題，您可以宣告陣列大小更大，以保存結束的 null 從初始設定式的字串，或您可以使用陣列初始設定式清單進行這是陣列的意圖清除`char`，不是以 null 結束的字串。  
   
 ```C  
-// C4295.c  
-// compile with: /W4  
-  
-int main() {  
-   char a[3] = "abc";   // C4295  
-}  
+// C4295.c
+// compile with: /W4
+
+
+int main() {
+   char a[3] = "abc";           // C4295
+   char b[3] = {'d', 'e', 'f'}; // No warning
+   a[0] = b[2];
+}
 ```

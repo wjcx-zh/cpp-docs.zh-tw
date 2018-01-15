@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25780092d11580225bef325c53e99c82263267b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9098026c1a38f8e60093415ba1c5a2b3678b64d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-document-frame-windows"></a>建立文件框架視窗
 [文件/檢視建立](../mfc/document-view-creation.md)示範如何[CDocTemplate](../mfc/reference/cdoctemplate-class.md)物件協調建立框架視窗、 文件和檢視，和它們一起連接。 三個[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)引數`CDocTemplate`建構函式指定框架視窗、 文件和文件範本建立以動態方式以回應使用者命令，例如新的命令，在檔案上的檢視類別功能表或 MDI 視窗功能表的 [新視窗] 命令。 建立檢視和文件框架視窗時，文件範本會儲存這項資訊供日後使用。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [終結框架視窗](../mfc/destroying-frame-windows.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用框架視窗](../mfc/using-frame-windows.md)
 

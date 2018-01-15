@@ -1,60 +1,62 @@
 ---
-title: "Toolbar (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "Graphics toolbar"
-  - "Image editor [C++], toolbar"
-  - "Image editor [C++], Option selector"
-  - "Properties window"
-  - "Option selector, Image editor"
+title: "工具列 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.bitmap
+- vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- Graphics toolbar
+- Image editor [C++], toolbar
+- Image editor [C++], Option selector
+- Properties window
+- Option selector, Image editor
 ms.assetid: a0af4209-6273-4106-a7c1-0edecc9b5755
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 800fb1007076902703abd3d3185c398dbf40fdb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Toolbar (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\[影像編輯器\] 工具列包含用於繪圖、繪製、輸入文字、清除及操作檢視的工具。  它也包含選項選取器，可讓您用來選取使用各項工具的選項。  例如，您可選擇各式各樣的筆刷寬度、縮放比例倍數，以及線條樣式。  
+# <a name="toolbar-image-editor-for-icons"></a>工具列 (圖示影像編輯器)
+**影像編輯器**工具列包含繪圖、 繪製、 輸入文字、 清除和操作檢視工具。 它也包含選項選取器，與您可以選取使用各項工具的選項。 例如，您可以選擇不同的筆刷寬度、 縮放比例倍數和線條樣式。  
   
 > [!NOTE]
->  \[影像編輯器\] 工具列上的所有工具，也可以在 \[影像\] 功能表中 \(在 \[工具\] 命令底下\) 找到。  
+>  提供所有工具**影像編輯器**工具列，您也可以從**映像**功能表 (下**工具**命令)。  
   
- ![影像編輯器工具列](../mfc/media/vcimageeditortoolbar.png "vcImageEditorToolbar")  
+ ![影像編輯器工具列](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
 影像編輯器工具列  
   
- 若要使用 \[影像編輯器\] 工具列和 \[選項\] 選取器，請按一下您要使用的工具或選項。  
+ 若要使用**影像編輯器**工具列和**選項**選取器按一下工具，或您想要的選項。  
   
 > [!TIP]
->  當您將游標移到工具列按鈕上時，即出現工具提示。  這些提示可協助您識別每一個按鈕的功能。  
+>  將游標停留在工具列按鈕時，就會出現工具提示。 這些提示可協助您識別每個按鈕的功能。  
   
- 利用 \[**選項**\] 選取器，您可指定線條的寬度、筆刷筆劃等等。  \[**選項**\] 選取器按鈕上的圖示會隨您所選取的工具而有所不同。  
+ 與**選項**選取器，您可以指定線條、 筆刷筆觸和其他內容的寬度。上的圖示**選項**根據哪一種工具，您已選取選取器按鈕變更。  
   
- ![&#91;影像編輯器&#93; 工具列上的繪製形狀選取器](../mfc/media/vcimageeditortoolbaroptionselector.png "vcImageEditorToolbarOptionSelector")  
+ ![繪圖 &#45; 圖形影像編輯器工具列上的選取器](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
 影像編輯器工具列上的選項選取器  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-## 需求  
- None  
+## <a name="requirements"></a>需求  
+ 無  
   
-## 請參閱  
- [Displaying or Hiding the Toolbar](../mfc/displaying-or-hiding-the-toolbar-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [顯示或隱藏工具列](displaying-or-hiding-the-toolbar-image-editor-for-icons.md)   
+ [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)
+

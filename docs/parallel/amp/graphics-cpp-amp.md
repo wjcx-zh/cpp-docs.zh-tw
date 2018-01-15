@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 601cf58a8238e34b1186e9d5d022a315342d4e6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="graphics-c-amp"></a>圖形 (C++ AMP)
 C + + AMP 包含在多個 Api [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)命名空間可讓您存取 Gpu 的紋理支援。 以下是一些常見的情節：  
@@ -32,7 +33,7 @@ C + + AMP 包含在多個 Api [concurrency:: graphics](../../parallel/amp/refere
  `norm`和`unorm`類型都是限制的範圍的純量類型`float`值; 這稱為*夾緊*。 這些類型可以從其他純量類型明確建構。 在轉型時，值會先轉換成`float`，然後壓制由 norm [-1.0，1.0] 或 unorm [0.0，1.0] 允許個別地區。 從 +/- 無限大轉型會傳回 +/-1。 並未定義從 NaN 轉型。 norm 可以從 unorm 隱含建構，而且資料不會遺失。 將運算子隱含轉換為 float 是在這些類型上定義。 例如二元運算子定義這些類型和其他內建的純量類型之間`float`和`int`: +、-，*、 /、 = =、 ！ =、 >， \<，> =、 < =。 也支援複合指派運算子: + =、-=、 \*=、 / =。 一元負運算子 (-) 則是針對 norm 類別定義。  
   
 ## <a name="short-vector-library"></a>短向量庫  
- 短向量庫提供的功能部分[向量類型](http://go.microsoft.com/fwlink/p/linkid=248500)HLSL 中定義而且通常用來定義材質。 短向量是一種資料結構，可保存相同類型的一到四個值。 支援的類型包括 `double`、`float`、`int`、`norm`、`uint` 和 `unorm`。 下表顯示類型名稱。 每一種類型都有一個對應的 `typedef`，其名稱不含底線。 有底線的型別位於[concurrency:: graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 有沒有底線類型[Concurrency::graphics::direct3d 命名空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)這樣會清楚地分隔同樣名為基本類型從這類`__int8`和`__int16`。  
+ 短向量庫提供的功能部分[向量類型](http://go.microsoft.com/fwlink/p/?linkid=248500)HLSL 中定義而且通常用來定義材質。 短向量是一種資料結構，可保存相同類型的一到四個值。 支援的類型包括 `double`、`float`、`int`、`norm`、`uint` 和 `unorm`。 下表顯示類型名稱。 每一種類型都有一個對應的 `typedef`，其名稱不含底線。 有底線的型別位於[concurrency:: graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 有沒有底線類型[Concurrency::graphics::direct3d 命名空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)這樣會清楚地分隔同樣名為基本類型從這類`__int8`和`__int16`。  
   
 ||Length 2|長度為 3|長度為 4|  
 |-|--------------|--------------|--------------|  
@@ -71,7 +72,7 @@ C + + AMP 包含在多個 Api [concurrency:: graphics](../../parallel/amp/refere
   
 -   擁有兩個或四個元件的短向量。 唯一的例外狀況是 `double_4`，它不可使用。  
   
- `texture` 物件的順位可以是 1、2 或 3。 `texture` 物件只能在呼叫 `parallel_for_each` 的 Lambda 中以傳址方式擷取。 紋理會做為 Direct3D 紋理物件儲存在 GPU 上。 多個紋理和材質在 Direct3D 中的詳細資訊，請參閱[簡介在 Direct3D 11 的紋理](http://go.microsoft.com/fwlink/p/linkid=248502)。  
+ `texture` 物件的順位可以是 1、2 或 3。 `texture` 物件只能在呼叫 `parallel_for_each` 的 Lambda 中以傳址方式擷取。 紋理會做為 Direct3D 紋理物件儲存在 GPU 上。 多個紋理和材質在 Direct3D 中的詳細資訊，請參閱[簡介在 Direct3D 11 的紋理](http://go.microsoft.com/fwlink/p/?linkid=248502)。  
   
  您使用的材質類型可能是圖形程式設計中所使用眾多紋理格式的其中一種。 例如，RGBA 格式可以使用 32 位元，其中 R、G、B 和 A 純量元素各使用 8 位元。 圖形卡的紋理硬體可以根據格式存取個別元素。 例如，如果您使用 RGBA 格式，紋理硬體可以將各 8 位元的元素擷取至 32 位元格式內。 在 C++ AMP 中，您可以設定材質中每個純量元素的位元，如此就能在程式碼中自動存取個別純量元素，而不需使用位元位移。  
   
@@ -365,10 +366,10 @@ void declareTextureViews()
   
 |類型|元件|讀取|Write|取樣|Mipmap 存取|  
 |----------|----------------|----------|-----------|--------------|-------------------|  
-|texture_view\<const T、 N >|1, 2, 4|是|否 (1)|是|是，可索引。 範圍於具現化時決定。|  
-|Texture_view\<T、 N >|1<br /><br /> 2, 4|是<br /><br /> 否 （2)|是<br /><br /> 是|否 (1)<br /><br /> 否 (1)|是，一個層次。 層次於具現化時決定。<br /><br /> 是，一個層次。 層次於具現化時決定。|  
+|texture_view\<const T、 N >|1, 2, 4|[是]|否 (1)|[是]|是，可索引。 範圍於具現化時決定。|  
+|Texture_view\<T、 N >|1<br /><br /> 2, 4|[是]<br /><br /> 否 （2)|[是]<br /><br /> [是]|否 (1)<br /><br /> 否 (1)|是，一個層次。 層次於具現化時決定。<br /><br /> 是，一個層次。 層次於具現化時決定。|  
   
- 從這個表中可以看見，唯讀的紋理檢視完全支援新功能，但會犧牲寫入檢視的功能。 可寫入的紋理檢視會有所限制，只能存取一個 Mipmap 層次。 讀寫紋理檢視比可寫入檢視更為特製化，因為前者加入了紋理檢視的元素類型只有一個元件的需求。 請注意，可寫入紋理檢視不支援取樣，因為它是讀取導向的作業。  
+ 從這個表中可以看見，唯讀的紋理檢視完全支援新功能，但會犧牲寫入檢視的功能。 可寫入的紋理檢視會有所限制，只能存取一個 Mipmap 層次。 讀寫紋理檢閱比可寫入檢閱更為特製化，因為前者加入了紋理檢閱的元素類型只有一個元件的需求。 請注意，可寫入紋理檢視不支援取樣，因為它是讀取導向的作業。  
   
 ### <a name="reading-from-texture-view-objects"></a>從紋理檢視物件讀取  
  除了紋理是以傳址的方式擷取，而紋理檢視是以傳值的方式擷取之外，透過紋理檢視讀取未取樣的紋理資料就像是從紋理本身讀取一樣。 下面兩個程式碼範例將進行示範，首先只使用 `texture`：  
@@ -429,9 +430,9 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>互通性  
 
- C + + AMP 執行階段會支援之間的互通性`texture<T,1>`和[ID3D11Texture1D 介面](http://go.microsoft.com/fwlink/p/LinkId=248503)之間`texture<T,2>`和[ID3D11Texture2D 介面](http://go.microsoft.com/fwlink/p/LinkId=255317)，以及之間`texture<T,3>`和[ID3D11Texture3D 介面](http://go.microsoft.com/fwlink/p/LinkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法會採用`texture`物件並傳回`IUnknown`介面。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法會採用`IUnknown`介面和`accelerator_view`物件並傳回`texture`物件。  
+ C + + AMP 執行階段會支援之間的互通性`texture<T,1>`和[ID3D11Texture1D 介面](http://go.microsoft.com/fwlink/p/?linkId=248503)之間`texture<T,2>`和[ID3D11Texture2D 介面](http://go.microsoft.com/fwlink/p/?linkId=255317)，以及之間`texture<T,3>`和[ID3D11Texture3D 介面](http://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法會採用`texture`物件並傳回`IUnknown`介面。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法會採用`IUnknown`介面和`accelerator_view`物件並傳回`texture`物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [double_2 類別](../../parallel/amp/reference/double-2-class.md)   
  [double_3 類別](../../parallel/amp/reference/double-3-class.md)   
  [double_4 類別](../../parallel/amp/reference/double-4-class.md)   

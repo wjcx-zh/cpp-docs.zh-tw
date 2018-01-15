@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9c7c14dc24bf76444b62adb0870b85fac449e67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: def0a79556d74616d153a97ee5a0cc9f521944ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfacelist-structure"></a>InterfaceList 結構
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -44,11 +47,11 @@ struct InterfaceList;
 ## <a name="remarks"></a>備註  
  用來建立介面的遞迴式清單。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`FirstT`|樣板參數的同義字`T`。|  
 |`RestT`|樣板參數的同義字`U`。|  
@@ -61,5 +64,5 @@ struct InterfaceList;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

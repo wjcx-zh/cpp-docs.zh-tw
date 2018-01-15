@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60552547087ce97a92429c94654238f9c7d2870c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5044416ca38f6b3ead743c571ea7175022d51fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-notification-messages"></a>樹狀目錄控制項通知訊息
 樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 會傳送下列通知訊息做為**WM_NOTIFY**訊息：  
   
-|通知訊息|說明|  
+|通知訊息|描述|  
 |--------------------------|-----------------|  
 |**TVN_BEGINDRAG**|表示在拖放作業的開始|  
 |**TVN_BEGINLABELEDIT**|表示開始的位置在標籤編輯|  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
 |**TVN_SELCHANGING**|表示即將變更為另一項目選取|  
 |**TVN_SETDISPINFO**|若要更新的項目所維護的資訊通知|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0cb598a5b0f87080a937218962037d849275d7bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tiles"></a>使用磚
 若要最大化的加速應用程式，您可以使用並排顯示。 並排顯示執行緒分成相等矩形的子集或*磚*。 如果您使用適當的並排顯示大小和並排顯示的演算法，您可以從 c + + AMP 程式碼來取得更多的加速。 並排顯示的基本元件如下：  
@@ -335,7 +336,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [tile_static 關鍵字](../../cpp/tile-static-keyword.md)
 

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtMemCheckpoint
+apiname: _CrtMemCheckpoint
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,36 +24,21 @@ f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
 - crtdbg/_CrtMemCheckpoint
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 1904bf5c2632b0913db8e5a9fb838a602615cb45
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 39f2a901404a9c2c34dc9147cb4ed51f070396a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 取得偵錯堆積的目前狀態，並儲存在應用程式提供的 `_CrtMemState` 結構中 (僅限偵錯版本)。  
@@ -79,18 +62,18 @@ void _CrtMemCheckpoint(
   
  如需堆積狀態函式及 `_CrtMemState` 結構的詳細資訊，請參閱 [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。  
   
- 如果 `state` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 會設定為 `EINVAL`，並傳回函式。  
+ 如果 `state` 為 `NULL`，將會叫用無效參數處理常式，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 會設定為 `EINVAL`，並傳回函式。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_CrtMemCheckpoint`|\<crtdbg.h>、\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
  **程式庫：** 僅限 UCRT 的偵錯版本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
  [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md)

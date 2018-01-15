@@ -1,56 +1,59 @@
 ---
-title: "Aligning Groups of Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], aligning"
+title: "對齊控制項群組 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: controls [C++], aligning
 ms.assetid: a4f49a73-4a17-44b3-8568-aa35f646b5cf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ebec5697faf252a13befdf2a9b3c98888db96c19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Aligning Groups of Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程序將說明如何對齊控制項群組。  
+# <a name="aligning-groups-of-controls"></a>對齊控制項群組
+下列程序會示範如何對齊控制項群組。  
   
-### 若要對齊控制項組  
+### <a name="to-align-groups-of-controls"></a>對齊控制項群組  
   
-1.  [選取控制項](../mfc/selecting-multiple-controls.md)，以進行對齊。  在執行對齊或調整大小命令之前，請務必先選取要做為主控制項的控制項，或者將它設為主控項。  
+1.  [選取控制項](../windows/selecting-multiple-controls.md)要對齊。 請務必選取您想要先做為主控制項的控制項或將它設為主控執行對齊或調整大小命令之前。  
   
-     控制項群組的最後位置視主控項的位置而定。  如需選取主控項的詳細資訊，請參閱[指定主控項](../mfc/specifying-the-dominant-control.md)。  
+     控制項群組的最後一個位置取決於主控制項的位置。 如需有關選取主控的詳細資訊，請參閱[指定主控](../windows/specifying-the-dominant-control.md)。  
   
-2.  從 \[格式\] 功能表選擇 \[對齊\]，然後選取下列其中一項對齊方式：  
+2.  從**格式**功能表上，選擇**對齊**，然後選擇下列的對齊方式的其中一個：  
   
-    -   **左**：將已選取的控制項沿著左邊對齊。  
+    -   **靠左**： 將選取的控制項，沿著左對齊。  
   
-    -   **置中**：將已選取的控制項沿著水平的中央點對齊。  
+    -   **中心**： 將選取的控制項沿著中心點的水平對齊。  
   
-    -   **右**：將已選取的控制項沿著右邊對齊。  
+    -   **權限**： 將選取的控制項沿著右側對齊。  
   
-    -   **上**：將已選取的控制項沿著上邊緣對齊。  
+    -   **頂端**： 將選取的控制項沿著上邊緣對齊。  
   
-    -   **中**：將已選取的控制項沿著垂直的中央點對齊。  
+    -   **中心點**： 將選取的控制項沿著垂直中間點對齊。  
   
-    -   **下**：將已選取的控制項沿著下邊緣對齊。  
+    -   **下**： 將選取的控制項，沿著下邊緣對齊。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
  Win32  
   
-## 請參閱  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>請參閱  
+ [在對話方塊上的控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [控制項](../mfc/controls-mfc.md)
+

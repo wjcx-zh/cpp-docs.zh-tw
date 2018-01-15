@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba07a13c8955a45c49797619ba69f7f89f71d5bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efc240a12835da1bda0fe840e347200a4f58bcc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="removepointer-class"></a>remove_pointer 類別
 從類型指標建立類型  
@@ -70,6 +71,6 @@ remove_pointer_t<int *> == int
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)   
  [add_pointer 類別](../standard-library/add-pointer-class.md)

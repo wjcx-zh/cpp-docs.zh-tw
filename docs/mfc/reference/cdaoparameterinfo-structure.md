@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68e2eff68eb4a5ae2d7868929bca169e399a7347
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aabdb1dd59e1039f81d2ffe75c0d9e0770e43db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 結構
 `CDaoParameterInfo`結構包含的資料存取物件 (DAO) 定義的參數物件的相關資訊。  
@@ -62,6 +63,6 @@ struct CDaoParameterInfo
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoQueryDef 類別](../../mfc/reference/cdaoquerydef-class.md)

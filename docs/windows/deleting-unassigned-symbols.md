@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60a90c62e823db79e4251f727fe6a0f41b4737ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b697c3aacbc727c55cb86eb98c5271120f875542
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleting-unassigned-symbols"></a>刪除未指定的符號
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>刪除未指派 (未使用) 的符號  
@@ -33,11 +36,11 @@ ms.lasthandoff: 10/24/2017
   
 
   
- **Requirements**  
+ **需求**  
   
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [變更未指定的符號](../windows/changing-unassigned-symbols.md)   
  [符號名稱限制](../windows/symbol-name-restrictions.md)   
  [符號值限制](../windows/symbol-value-restrictions.md)   

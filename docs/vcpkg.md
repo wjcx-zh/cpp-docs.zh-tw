@@ -11,11 +11,12 @@ ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
 dev_langs: C++
 manager: ghogen
-ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0728827cb2cd604ec4e7ff1ef58b68ed8fb64532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg：適用於 Windows 的 C++ 套件管理員 
 vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝協力廠商程式庫的流程。 如果您的專案使用協力廠商程式庫，我們建議您使用 vcpkg 加以安裝。 vcpkg 支援開放原始碼和專屬程式庫。 vcpkg 公用目錄中的所有程式庫皆已通過 Visual Studio 2015 和 Visual Studio 2017 的相容性測試。 截至 2017 年 5 月，目錄中有超過 238 個程式庫，而且 C++ 社群還持續不斷新增更多的程式庫。
@@ -107,14 +108,16 @@ zlib:x86-windows        1.2.11   A compression library
 公用目錄會隨程式庫最新版本保持在最新狀態。 若要判斷哪些本機程式庫已過期，請使用 `vcpkg update`。 當你準備將連接埠集合更新至公用目錄的最新版本時，請只對 github 儲存機制執行 git 提取作業，或建立新的複製品並保留舊的 (如仍需要)。
 
 ### <a name="contribute-new-libraries"></a>提供新的程式庫
-您可以在私人連接埠集合中包含喜歡的任何程式庫。 若要建議公用目錄新程式庫， 
-
+您可以在私人連接埠集合中包含喜歡的任何程式庫。 若要為公用類別目錄建議新的程式庫，請前往 [GitHub vcpkg 問題頁面](https://github.com/Microsoft/vcpkg/issues)提出問題。
 
 ### <a name="remove-a-library"></a>移除程式庫
 鍵入 `vcpkg remove` 可移除已安裝的程式庫。 如有任何其他程式庫與其相依，系統會要求您以 `--recurse` 重新執行命令，這會移除所有的下游程式庫。
 
 ### <a name="customize-vcpkg"></a>自訂 vcpkg
 您可以用任何喜歡的方式修改您的 vcpkg 複製品。 您可以建立多個 vcpkg 複製品，並修改各複製品的 portfile 以取得特定的程式庫版本，或指定命令列參數。 例如，在企業中，一組開發人員可能正在處理有相依性集合的軟體，而另一組人馬則可能有其他集合。 您可以設定兩個 vcpkg 複製品，然後修改每個複製品，根據您的需求下載程式庫版本和編譯參數等等。 
+
+### <a name="uninstall-vcpkg"></a>將 vcpkg 解除安裝
+只要刪除目錄即完成。 
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg 資料夾階層
 所有 vcpkg 功能和資料都是完全獨立在單一目錄階層中，稱之為「執行個體」。 沒有登錄設定或環境變數。 您可以在電腦上建立無數個執行個體，而不必擔心互相干擾的問題。 

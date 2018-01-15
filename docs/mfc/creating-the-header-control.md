@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c47e458d4cd6e9df556eef5e1f61806633208011
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 33f536a86a21e56eb36e546109f916ae5d6ca806
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-header-control"></a>建立標題控制項
 標題控制項不是直接使用對話方塊編輯器中 （雖然您可以新增清單控制項，包括標頭控制項）。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱[建立標題控制項](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

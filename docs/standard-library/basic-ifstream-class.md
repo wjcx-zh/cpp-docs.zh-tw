@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c1c70749a805d94c79fd1b9d2521575cc99022
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 類別
 描述一個物件，該物件可控制如何從具有 `Elem` 類型元素之 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 類別的資料流緩衝區擷取元素和編碼物件；其中該類型的字元特性是由 `Tr` 類別所決定。  
@@ -143,7 +144,7 @@ basic_ifstream(basic_ifstream&& right);
  [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。  
   
  `_Prot`  
- 預設檔案開啟保護，相當於 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。  
+ 預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。  
   
 ### <a name="remarks"></a>備註  
  第一個建構函式會藉由呼叫 [basic_istream](../standard-library/basic-istream-class.md)( `sb`) 初始化基底類別，其中 `sb` 是 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 類別的預存物件。 它也會藉由呼叫 `basic_filebuf`< `Elem`, `Tr`> 初始化 `sb`。  
@@ -184,7 +185,7 @@ void close();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會呼叫 [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。  
+ 成員函式呼叫[rdbuf](#rdbuf)  **->**  [關閉](../standard-library/basic-filebuf-class.md#close)。  
   
 ### <a name="example"></a>範例  
   如需使用 **close** 的範例，請參閱 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)。  
@@ -200,7 +201,7 @@ bool is_open() const;
  若已開啟檔案，即為 **true**；否則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)。  
+ 成員函式傳回[rdbuf](#rdbuf)  **->**  [is_open](../standard-library/basic-filebuf-class.md#is_open)。  
   
 ### <a name="example"></a>範例  
   如需使用 `is_open` 的範例，請參閱 [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open)。  
@@ -236,7 +237,7 @@ void open(
  [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。  
   
  `_Prot`  
- 預設檔案開啟保護，相當於 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。  
+ 預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。  
   
 ### <a name="remarks"></a>備註  
  此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; **ios_base::in**)。 如果開啟失敗，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)，而可能擲回 ios_base::failure 例外狀況。  
@@ -288,7 +289,7 @@ void swap(basic_ifstream& right);
 ### <a name="remarks"></a>備註  
  成員函式會將此物件的內容與 `right` 的內容交換。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   
  [iostream 慣例](../standard-library/iostreams-conventions.md)

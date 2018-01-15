@@ -39,11 +39,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a56efa9c4e26da89a5d2263c32e1406be5f28211
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8680842f0aeeebf98eabc0f278089781290ad902
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 類別
 用於 OLE 的 [選擇性貼上] 對話方塊。  
@@ -54,17 +55,17 @@ ms.lasthandoff: 10/24/2017
 class COlePasteSpecialDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|建構 `COlePasteSpecialDialog` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|格式可以貼上您的應用程式清單中加入自訂格式。|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|將新的項目加入至支援的剪貼簿格式的清單。|  
@@ -78,7 +79,7 @@ class COlePasteSpecialDialog : public COleDialog
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COlePasteSpecialDialog::m_ps](#m_ps)|型別的結構**OLEUIPASTESPECIAL**控制對話方塊中的函式。|  
   
@@ -357,7 +358,7 @@ OLEUIPASTESPECIAL m_ps;
   
  如需詳細資訊，請參閱[OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) Windows SDK 中的結構。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

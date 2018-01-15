@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b5c7635a3d6d9253a0e8dce52f78158f7681b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dbdf7cd626cca0d333b3979fa30cd8770c940701
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-properties-for-an-activex-control"></a>編輯 ActiveX 控制項的屬性
 獨立廠商所提供的 ActiveX 控制項可能都配有其自己的內容和特性。 ActiveX 控制項的屬性會顯示在 [屬性] 視窗中。 此外，ActiveX 控制項的寫入器所建立的任何屬性頁面會顯示在**屬性頁**對話方塊 (若要檢視特定的 ActiveX 控制項的屬性頁面，按一下 [屬性頁中的按鈕[屬性] 視窗](/visualstudio/ide/reference/properties-window))。  
@@ -38,13 +41,13 @@ ms.lasthandoff: 10/24/2017
   
 3.  在屬性頁中視需要進行變更。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檢視和對話方塊中加入 ActiveX 控制項](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)   
  [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   

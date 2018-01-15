@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8dc17ee63caf62ddeea4a134d61f8fbd47e0061c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b765be1043ac69ed735eb91deaf9419bce7f017
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 類別
 `concurrent_vector` 類別是一種序列容器類別，允許以隨機方式存取任何項目。 它會啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。  
@@ -72,7 +73,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`allocator_type`|代表並行向量的配置器類別的類型。|  
 |`const_iterator`|類型提供的隨機存取迭代器可讀取`const`並行向量的元素。|  
@@ -89,14 +90,14 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[concurrent_vector](#ctor)|多載。 建構並行向量。|  
 |[~ concurrent_vector 解構函式](#dtor)|清除所有項目，並終結此並行向量。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[assign](#assign)|多載。 清除並行向量的元素，並將指派給它可能是`_N`副本`_Item`，或指定的迭代器範圍值 [ `_Begin`， `_End`)。 這個方法不是並行安全。|  
 |[at](#at)|多載。 提供存取的並行向量中的指定索引處的項目。 這個方法是並行安全對於讀取作業，以及同時成長，只要您已確保之值的向量，`_Index`小於並行向量的大小。|  
@@ -126,7 +127,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator]](#operator_at)|多載。 提供存取的並行向量中的指定索引處的項目。 這個方法是並行安全對於讀取作業，以及同時成長，只要您已確保之值的向量，`_Index`小於並行向量的大小。|  
 |[operator=](#operator_eq)|多載。 另一個內容指派`concurrent_vector`給這一個物件。 這個方法不是並行安全。|  
@@ -646,7 +647,7 @@ void swap(concurrent_vector& _Vector);
  `_Vector`  
  `concurrent_vector`來交換內容的物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)
 

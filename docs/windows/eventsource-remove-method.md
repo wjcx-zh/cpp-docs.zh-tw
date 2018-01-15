@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1879c939237275c279e1dd4bd1861ab3b02b468
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a11bce6d70c70bba2a4e75753c55d83bec32329f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove 方法
 刪除指定的事件註冊語彙基元所代表與目前的 EventSource 物件相關聯的事件處理常式集合的事件處理常式。  
@@ -47,5 +50,5 @@ HRESULT Remove(
   
  **命名空間：** Microsoft::WRL
  
- ## <a name="see-also"></a>另請參閱
+ ## <a name="see-also"></a>請參閱
  [EventSource 類別](../windows/eventsource-class.md)

@@ -14,17 +14,15 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 7c37cc1a2708346ed8af0fd8b5df9a91a625feb6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 運算子
 ||||  
@@ -33,7 +31,7 @@ ms.lasthandoff: 10/03/2017
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  不同物件的不等於比較。  
   
 ```  
@@ -258,7 +256,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="op_lt_lt"></a>  運算子&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  在資料流中插入 sub_match。  
   
 ```  
@@ -316,7 +314,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="op_lt_eq"></a>  運算子&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  不同物件的小於或等於比較。  
   
 ```  
@@ -424,7 +422,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  不同物件的等於比較。  
   
 ```  
@@ -549,7 +547,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  不同物件的大於比較。  
   
 ```  
@@ -657,7 +655,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="op_gt_eq"></a>  運算子&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  不同物件的大於或等於比較。  
   
 ```  
@@ -764,7 +762,7 @@ sub >= "aab" == false
 sub >= 'a' == true  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<regex>](../standard-library/regex.md)  
 [regex_constants 類別](../standard-library/regex-constants-class.md)  
 [regex_error 類別](../standard-library/regex-error-class.md)  
@@ -773,6 +771,5 @@ sub >= 'a' == true
 [regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
 [regex_traits 類別](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
-
 
 

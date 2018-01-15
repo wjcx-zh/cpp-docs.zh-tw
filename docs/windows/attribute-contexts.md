@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fceb15c713eee25c4ae04ef2a095737e587170a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 662b540548c0594364bf11087c3b52420d29cf0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-contexts"></a>屬性內容
 C + + 屬性可以使用四個基本的欄位描述： 將它們套用至目標 (**套用至**) 或不屬於可重複，(**Repeatable**)、 所需的其他屬性 (存在**必要屬性**)，並與其他屬性的不相容 (**屬性無效**)。 在每個屬性的參考主題中的表格會列出這些欄位。 下面會描述每一個欄位。  
@@ -37,5 +40,5 @@ C + + 屬性可以使用四個基本的欄位描述： 將它們套用至目標 
 ## <a name="invalid-attributes"></a>無效的屬性  
  此欄位會列出與指定的屬性不相容的其他屬性。 這很有任何項目，這個欄位的屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 屬性參考](../windows/cpp-attributes-reference.md)

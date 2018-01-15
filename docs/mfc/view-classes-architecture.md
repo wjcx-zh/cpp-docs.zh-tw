@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 184245411f44a9aa9a6747adda0aafa5a8f68010
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b2761253da0907b1736754068fa196dda361a8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-classes-architecture"></a>檢視類別 (架構)
 `CView`其衍生的類別是代表框架視窗的工作區的子視窗。 檢視可顯示資料，並接受輸入的文件。  
@@ -74,6 +75,6 @@ ms.lasthandoff: 10/24/2017
  [CTreeView](../mfc/reference/ctreeview-class.md)  
  包含 Windows 樹狀目錄控制項的檢視 (請參閱[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 樹狀目錄控制項顯示圖示和排列方式，類似於左窗格的 [檔案總管] 中的階層中的字串。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

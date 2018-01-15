@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c306e8920bb058b64133b7fec18f21a243e1f715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1effec5bc753f1b23f8d43a8406c61cb6663fa56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
 回溯資料資訊結構用來記錄的影響函式的堆疊指標和靜態暫存器儲存在堆疊上的位置：  
@@ -86,5 +87,5 @@ ms.lasthandoff: 10/24/2017
  **鏈結的回溯資訊**  
  如果在設定旗標 UNW_FLAG_CHAININFO UNWIND_INFO 結構結尾三個 UWORDs。  這些 UWORDs 代表 RUNTIME_FUNCTION 的資訊函式的鏈結的回溯。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [回溯資料以進行例外狀況處理與偵錯工具支援](../build/unwind-data-for-exception-handling-debugger-support.md)

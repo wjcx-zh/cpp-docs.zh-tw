@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetReportFile
+apiname: _CrtSetReportFile
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8487ca011355ad248bc38c2fc2d3265f0fad4995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7769c38c939b0deb1e1c61d53fad6b500f3860dd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 使用 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 指定 `_CRTDBG_MODE_FILE` 之後，您可以指定要接收訊息文字的檔案控制代碼。 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 也會使用 `_CrtSetReportFile` 指定文字的目的地 (僅限偵錯版本)。  
@@ -70,7 +67,7 @@ _HFILE _CrtSetReportFile(
  下表顯示 `reportFile` 的可用選項及 `_CrtDbgReport` 的結果行為清單。 這些選項在 Crtdbg.h 中定義為位元旗標。  
   
  `file handle`  
- 將作為訊息目的地的檔案控制代碼。 不會嘗試驗證此控制代碼的有效性。 您必須開啟和關閉檔案控制代碼。 例如：  
+ 將作為訊息目的地的檔案控制代碼。 不會嘗試驗證此控制代碼的有效性。 您必須開啟和關閉檔案控制代碼。 例如:   
   
 ```  
 HANDLE hLogFile;  
@@ -105,13 +102,13 @@ _RPT0(_CRT_ERROR,"1st message\n");
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_CrtSetReportFile`|\<crtdbg.h>|\<errno.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
  **程式庫：**僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

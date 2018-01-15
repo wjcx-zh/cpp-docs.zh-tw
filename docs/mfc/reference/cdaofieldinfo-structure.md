@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c673f82b452abc87b7eb79811ccec81ac424403
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 結構
 `CDaoFieldInfo`結構包含的資料存取物件 (DAO) 定義的欄位物件的相關資訊。  
@@ -85,7 +86,7 @@ struct CDaoFieldInfo
  *m_lSize*  
  表示大小上限，以位元組為單位，DAO 欄位物件，其中包含文字或是包含文字或數值的欄位物件的固定的大小的值。 如需詳細資訊，請參閱主題 DAO [說明] 中的 「 大小屬性 」。 大小可以是下列值之一：  
   
-|類型|大小 (位元組)|說明|  
+|類型|大小 (位元組)|描述|  
 |----------|--------------------|-----------------|  
 |**dbBoolean**|1 個位元組|是/否 （如同 True/False）|  
 |**dbByte**|1|Byte|  
@@ -159,7 +160,7 @@ struct CDaoFieldInfo
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)   
  [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)   

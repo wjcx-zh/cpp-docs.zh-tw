@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- exception
-dev_langs:
-- C++
-helpviewer_keywords:
-- exception class
+f1_keywords: exception
+dev_langs: C++
+helpviewer_keywords: exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 33e6d0ed3153b31c231790610de1a7c4da1a94ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e9aac8e51764a50cd674c389b370ae0fa1a54415
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-class"></a>exception 類別
 此類別可作為特定運算式和 C++ 標準程式庫所擲回之所有例外狀況的基底類別。  
@@ -58,9 +54,8 @@ class exception {
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,44 +22,30 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - ceil
 - ceilf
 - ceill
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - calculating value ceilings
 - ceill function
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 1fd4b888c8fc332c07aed62af03b340864dfe3bf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4831b9f6f046dbc1a5d337f22e6be3dc3f4a5662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 計算最大值。  
@@ -96,23 +81,23 @@ long double ceill(
 |-----------|-------------------|-----------------------|  
 |± `QNAN`,`IND`|無|`_DOMAIN`|  
   
- `ceil` 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
+ `ceil` 有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
 ## <a name="remarks"></a>備註  
- 因為 C++ 允許多載，所以您可以呼叫 `ceil` 的多載。 在 C 程式中，`ceil` 一律會採用並傳回雙精度浮點數。  
+ 因為 C++ 允許多載，所以您可以呼叫 `ceil` 的多載。 在 C 程式中，`ceil` 一律採用及傳回雙精度浮點數。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`ceil`, `ceilf`, `ceill`|\<math.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  請參閱 [floor](../../c-runtime-library/reference/floor-floorf-floorl.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [floor、floorf、floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
  [fmod、fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   

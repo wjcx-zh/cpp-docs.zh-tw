@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecedf4f43ed9aafaf3eebfe5c05a87ee32d2e4cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f98cbc2cf8431262b1ba50885a7f25e87cde24df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt;= (&lt;範例容器&gt;)
 > [!NOTE]
@@ -49,6 +50,6 @@ bool operator<=(
 ## <a name="return-value"></a>傳回值  
  傳回 `!(right < left)`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<範例容器>](../standard-library/sample-container.md)
 

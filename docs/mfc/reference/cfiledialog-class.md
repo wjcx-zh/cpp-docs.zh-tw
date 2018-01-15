@@ -143,11 +143,12 @@ caps.latest.revision: "47"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2dead08eaeb525e626e9c1f02af346b0c3998260
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 611f26b07bc8ebd14fc394437ddda07cb65ab4e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 封裝檔案開啟或儲存作業檔案所用的通用對話方塊。  
@@ -158,17 +159,17 @@ ms.lasthandoff: 10/24/2017
 class CFileDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileDialog::CFileDialog](#cfiledialog)|建構 `CFileDialog` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileDialog::AddCheckButton](#addcheckbutton)|加入對話方塊中的核取記號按鈕。|  
 |[CFileDialog::AddComboBox](#addcombobox)|將下拉式方塊加入至對話方塊。|  
@@ -221,9 +222,9 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::StartVisualGroup](#startvisualgroup)|宣告可見的群組，在對話方塊中。 任何 「 加入 」 方法的後續呼叫會將這些項目新增至此群組。|  
 |[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|更新儲存在資料`m_ofn`成員變數，以符合檔案對話方塊中的目前狀態。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|當按一下按鈕時呼叫。|  
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|選取/取消核取核取方塊時呼叫。|  
@@ -239,7 +240,7 @@ class CFileDialog : public CCommonDialog
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileDialog::m_ofn](#m_ofn)|Windows`OPENFILENAME`結構。 提供基本檔案對話方塊方塊參數的存取權。|  
   
@@ -522,28 +523,28 @@ explicit CFileDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bOpenFileDialog`  
+ [輸入] `bOpenFileDialog`  
  指定的對話方塊來建立類型的參數。 將它設定為`TRUE`建構**開啟舊檔** 對話方塊。 將它設定為`FALSE`建構**檔案另存新檔** 對話方塊。  
   
- [in] `lpszDefExt`  
+ [輸入] `lpszDefExt`  
  預設的副檔名。 如果使用者不是已知的副檔名 （一個在使用者電腦上有關聯） 包含檔案名稱 方塊中，所指定的延伸`lpszDefExt`自動附加至檔案名稱。 如果這個參數是`NULL`，沒有副檔名附加。  
   
- [in] `lpszFileName`  
+ [輸入] `lpszFileName`  
  初始檔案名稱出現在檔案名稱 方塊中。 如果`NULL`，沒有任何初始檔案名稱會出現。  
   
- [in] `dwFlags`  
+ [輸入] `dwFlags`  
  您可以使用自訂對話方塊中的一或多個旗標的組合。 如需這些旗標的說明，請參閱[OPENFILENAME](http://msdn.microsoft.com/library/windows/desktop/ms646839) Windows SDK 中的結構。 如果您修改`m_ofn.Flags`結構成員，請使用您的變更的位元 OR 運算子，以保留的預設行為保持不變。  
   
- [in] `lpszFilter`  
+ [輸入] `lpszFilter`  
  指定篩選條件的字串組一系列您可以套用至檔案。 如果您指定檔案篩選器時，符合篩選準則的檔案會出現在檔案清單。 請參閱 < 備註 > 一節，如需有關如何使用檔案篩選器。  
   
- [in] `pParentWnd`  
+ [輸入] `pParentWnd`  
  [檔案] 對話方塊的父系或擁有者視窗的指標。  
   
- [in] `dwSize`  
+ [輸入] `dwSize`  
  大小`OPENFILENAME`結構。 這個值取決於作業系統版本。 MFC 用來決定對話方塊來建立適當類型的這個參數 (例如，new[!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)]對話方塊而不是 NT4 對話方塊)。 預設大小為 0 表示 MFC 程式碼會決定要使用的正確對話方塊方塊大小會根據程式執行所在的作業系統版本。  
   
- [in] `bVistaStyle`  
+ [輸入] `bVistaStyle`  
  **請注意**此參數可在 Visual Studio 2008 及更新版本，且會導致新樣式對話方塊，您在執行時，才使用[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]或更新版本。  
   
  指定的檔案對話方塊樣式參數。 將它設定為`TRUE`使用新的 Vista 樣式檔案對話方塊。 否則，您將使用舊樣式的對話方塊。 請參閱 < 備註 」 一節，如需詳細資訊的相關 Vista 下執行。  
@@ -1346,10 +1347,10 @@ void SetControlText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  這是要設定的文字控制項的 ID。  
   
- [in] `lpsz`  
+ [輸入] `lpsz`  
  包含要設定的控制項文字的字串指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1435,16 +1436,16 @@ void SetTemplate(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nWin3ID`  
+ [輸入] `nWin3ID`  
  包含的範本資源的非 Explorer 識別碼`CFileDialog`物件。 在 Windows NT 3.51 或 OFN_EXPLORER 樣式不存在時，只會使用此範本。  
   
- [in] `nWin4ID`  
+ [輸入] `nWin4ID`  
  [總管] 中包含的範本資源的 ID 編號`CFileDialog`物件。 此範本僅用於[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更新版本、 Windows 95 和更新版本中，或出現 OFN_EXPLORER 樣式時。  
   
- [in] `lpWin3ID`  
+ [輸入] `lpWin3ID`  
  包含名稱的範本資源的非 explorer`CFileDialog`物件。 在 Windows NT 3.51 或 OFN_EXPLORER 樣式不存在時，只會使用此範本。  
   
- [in] `lpWin4ID`  
+ [輸入] `lpWin4ID`  
  包含名稱的 [總管] 中的範本資源`CFileDialog`物件。 此範本僅用於[!INCLUDE[WinNt4Family](../../mfc/reference/includes/winnt4family_md.md)]和更新版本、 Windows 95 和更新版本中，或出現 OFN_EXPLORER 樣式時。  
   
 ### <a name="remarks"></a>備註  
@@ -1490,7 +1491,7 @@ void UpdateOFNFromShellDialog();
   
  [!code-cpp[NVC_MFC_CFileDialog#1](../../mfc/reference/codesnippet/cpp/cfiledialog-class_7.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

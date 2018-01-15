@@ -1,30 +1,31 @@
 ---
-title: "Module::RegisterWinRTObject 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::RegisterWinRTObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RegisterWinRTObject 方法"
+title: "Module:: registerwinrtobject 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::RegisterWinRTObject
+dev_langs: C++
+helpviewer_keywords: RegisterWinRTObject method
 ms.assetid: a2782c9c-b9c5-4e4b-9c8d-ef513aea20c5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 279a661fae0def63443c9a42d2f290b8d23fa2a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Module::RegisterWinRTObject 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-一或多個暫存器 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 讓其他應用程式可以連接至這些物件。  
+# <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject 方法
+註冊一個或多個 Windows 執行階段物件，讓其他應用程式可以連接到它們。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,24 +38,24 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
   
 #### <a name="parameters"></a>參數  
  `serverName`  
- 指定此作業所影響的物件子集名稱。  
+ 指定此作業所影響的物件子集的名稱。  
   
  `activatableClassIds`  
- 註冊可啟動 Clsid 的陣列。  
+ 若要註冊的可啟動 Clsid 的陣列。  
   
  `cookie`  
- 識別已註冊的類別物件的值。 若要撤銷註冊稍後會使用此值。  
+ 識別已註冊類別物件的值。 若要撤銷註冊稍後會使用此值。  
   
  `count`  
  若要註冊的物件數目。  
   
 ## <a name="return-value"></a>傳回值  
- S_OK，如果登錄成功。否則，錯誤 HRESULT CO_E_OBJISREG 指出的原因，例如作業失敗。  
+ 若成功，則為 S_OK否則，例如 CO_E_OBJISREG 表示原因的 HRESULT 錯誤的作業失敗。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** module.h  
+ **標頭：** module.h  
   
  **命名空間：** Microsoft::WRL
  
- ## <a name="see-also"></a>另請參閱
- [模組類別](../windows/module-class.md)
+ ## <a name="see-also"></a>請參閱
+ [Module 類別](../windows/module-class.md)

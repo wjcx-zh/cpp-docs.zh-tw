@@ -1,45 +1,47 @@
 ---
-title: "新增工具列資源對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.newtoolbarresource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "新增工具列資源對話方塊"
+title: "新增工具列資源對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.newtoolbarresource
+dev_langs: C++
+helpviewer_keywords: New Toolbar Resource dialog box
 ms.assetid: 52dd01ad-e748-4ab2-b3eb-59f5df990ca6
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c30301b8887013d72e7ae2ab2d70650de7d7f0e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 新增工具列資源對話方塊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\[新增工具列資源\] 對話方塊可讓您指定加入工具列資源的按鈕的寬度和長度。  預設值為 16 × 15 像素。  
+# <a name="new-toolbar-resource-dialog-box"></a>新增工具列資源對話方塊
+新增工具列資源對話方塊可讓您指定您要加入至工具列資源的按鈕的高度與寬度。 預設為 16 × 15 像素。  
   
- 用來建立工具列的點陣圖最多可容許 2048 的寬度。  因此如果您將 \[**按鈕寬度**\] 設成 512，您只能有四個按鈕。  如果您將寬度設成 513，則只能有三個按鈕。  
+ 用來建立工具列點陣圖的最大寬度為 2048年。 因此，如果您設定**按鈕寬度**為 512，您只能有四個按鈕。 如果您將寬度設 513 時，您只能有三個按鈕。  
   
  **按鈕寬度**  
- 提供一個空間，讓您替經由點陣圖資源轉換成工具列資源所產生的工具列按鈕輸入寬度。  影像將剪裁為指定的寬度和長度，而色彩則調整為使用標準的工具列色彩 \(16 色\)。  
+ 提供空間讓您輸入您從點陣圖資源轉換成工具列資源的工具列按鈕的寬度。 影像已裁剪成的寬度和高度指定，並調整色彩來使用標準工具列色彩 （16 個色彩）。  
   
  **按鈕高度**  
- 提供一個空間，讓您替經由點陣圖資源轉換成工具列資源所產生的工具列按鈕輸入長度。  影像將剪裁為指定的寬度和長度，而色彩則調整為使用標準的工具列色彩 \(16 色\)。  
+ 提供空間讓您輸入您從點陣圖資源轉換成工具列資源的工具列按鈕的高度。 影像已裁剪成的寬度和高度指定，並調整色彩來使用標準工具列色彩 （16 個色彩）。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  MFC 或 ATL  
   
-## 請參閱  
- [Toolbar Button Properties](../mfc/toolbar-button-properties.md)   
- [Converting Bitmaps to Toolbars](../mfc/converting-bitmaps-to-toolbars.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>請參閱  
+ [工具列按鈕屬性](../windows/toolbar-button-properties.md)   
+ [轉換點陣圖為工具列](../windows/converting-bitmaps-to-toolbars.md)   
+ [工具列編輯器](../windows/toolbar-editor.md)
+

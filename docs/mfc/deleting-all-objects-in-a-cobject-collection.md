@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8065af989f220f5954b851149c1b7c7a814a7d1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>刪除 CObject 集合中的所有物件
 本文說明如何刪除集合中的所有物件 (不需刪除集合物件本身)。  
@@ -87,6 +88,6 @@ ms.lasthandoff: 10/24/2017
   
  您可以呼叫 `RemoveAll` 移除對應或 `RemoveKey` 的所有項目，以移除具有指定索引鍵的個別項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [存取集合的所有成員](../mfc/accessing-all-members-of-a-collection.md)
 

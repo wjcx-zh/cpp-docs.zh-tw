@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f293f074f2b8e2334dc70fbebba8e6f4c17efecc
-ms.openlocfilehash: dc71a6958a352ebf1c46406114c32d77b7fb8887
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準程式庫容器
 標準程式庫提供用來存放相關物件集合的各種類型安全容器。 這些容器是類別範本；當您宣告容器變數時，您會指定容器將會保留的項目類型。 容器可與初始設定式清單一起建構。 它們有成員函式，可供加入和移除項目以及執行其他作業。  
@@ -79,7 +63,7 @@ ms.lasthandoff: 02/24/2017
 std::set<BigObject, std::less<>> myNewSet;  
 ```  
   
- 如果您使用預設比較運算子，則容器行為就像在 C++&11; 或更早版本中一樣。  
+ 如果您使用預設比較運算子，則容器行為就像在 C++ 11 或更早版本中一樣。  
   
  下列範例示範如何多載 `operator<`，讓 `std::set` 的使用者只要傳入可與每個物件的 `BigObject::id` 成員進行比較的小字串即可進行查閱。  
   
@@ -182,15 +166,14 @@ int main()
 >  您也可以使用[範圍架構的 for 迴圈](../cpp/range-based-for-statement-cpp.md)來逐一執行 C++ 標準程式庫集合。  
   
 ## <a name="comparing-containers"></a>比較容器  
- 所有容器多都載 operator==，以便比較兩個具有相同項目類型的同類型容器。 您可以使用 ==，將一個 vector\<string> 與另一個 vector\<string> 進行比較，但無法用來比較 vector\<string> 與 list\<string> 或比較 vector\<string> 與 vector\<char*>。  在 C++98/03 中，您可以使用 [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae) 或 [std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) 來比較不同的容器類型和/或項目類型。 在 C++11 中，您也可以使用 [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f)。 但在上述所有情況下，函式會假設容器的長度相同。 如果第二個範圍比第一個範圍短，則會造成未定義的行為。 如果第二個範圍比較長，則結果仍然可能不正確，因為超過第一個範圍的結尾就不會繼續比較。  
+ 所有容器多都載 operator==，以便比較兩個具有相同項目類型的同類型容器。 您可以使用 ==，將一個 vector\<string> 與另一個 vector\<string> 進行比較，但無法用來比較 vector\<string> 與 list\<string> 或比較 vector\<string> 與 vector\<char*>。  在 C++98/03 中，您可以使用 [std::equal](algorithm-functions.md#equal) 或 [std::mismatch](algorithm-functions.md#mismatch) 來比較不同的容器類型和/或項目類型。 在 C++11 中，您也可以使用 [std::is_permutation](algorithm-functions.md#is_permutation)。 但在上述所有情況下，函式會假設容器的長度相同。 如果第二個範圍比第一個範圍短，則會造成未定義的行為。 如果第二個範圍比較長，則結果仍然可能不正確，因為超過第一個範圍的結尾就不會繼續比較。  
   
 ### <a name="comparing-dissimilar-containers-c14"></a>比較不同的容器 (C++14)  
- 在 C++14 和更新版本中，您可以使用其中一個採用兩個完整範圍的 [std::equal](http://msdn.microsoft.com/Library/56533afd-b696-40a0-8fa9-d366539e49ae)、[std::mismatch](http://msdn.microsoft.com/Library/a9fe78f3-9a86-44dc-9400-0c2ed1083323) 或 [std::is_permutation](http://msdn.microsoft.com/Library/3384e786-e210-4648-b2bc-3896b5e14f1f) 函式多載，來比較不同的容器和/或不同的項目類型。 這些多載可讓您比較具有不同長度的容器。 這些多載比較不容易發生使用者錯誤並已最佳化，以在比較不同長度的容器時的常數時間傳回 false。 因此，我們建議您使用這些多載，除非 (1) 您有非常清楚的理由不要使用，或 (2) 您使用未受益於雙重範圍最佳化的 [std::list](../standard-library/list-class.md) 容器。  
+ 在 C++14 和更新版本中，您可以使用其中一個採用兩個完整範圍的 **std::equal**、**std::mismatch** 或 **std::is_permutation** 函式多載，來比較不同的容器和/或不同的項目類型。 這些多載可讓您比較具有不同長度的容器。 這些多載比較不容易發生使用者錯誤並已最佳化，以在比較不同長度的容器時的常數時間傳回 false。 因此，我們建議您使用這些多載，除非 (1) 您有非常清楚的理由不要使用，或 (2) 您使用未受益於雙重範圍最佳化的 [std::list](../standard-library/list-class.md) 容器。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)   
  [\<sample container>](../standard-library/sample-container.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

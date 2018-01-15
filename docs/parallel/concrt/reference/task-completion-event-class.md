@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,38 +13,22 @@ f1_keywords:
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs:
-- C++
-helpviewer_keywords:
-- task_completion_event class
+dev_langs: C++
+helpviewer_keywords: task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b37ecb250c0794370fc586f0463f93023ca47603
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 類別
-`task_completion_event` 類別可讓您延遲工作的執行，直到滿足條件為止，或者啟動工作以回應外部事件。  
+`task_completion_event` 類別可讓您延遲執行工作，直到滿足某條件，或是為了回應外部事件而開始工作。  
   
 ## <a name="syntax"></a>語法  
   
@@ -89,7 +72,7 @@ class task_completion_event<void>;
  `task_completion_event`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** ppltasks.h  
+ **標頭：** ppltasks.h  
   
  **命名空間：** concurrency  
   
@@ -108,10 +91,10 @@ bool set() const ;
  要設定與此事件的結果。  
   
 ### <a name="return-value"></a>傳回值  
- 方法會傳回`true`如果它已成功地設定事件。 它會傳回`false`如果已經設定了此事件。  
+ 方法會傳回`true`如果它已順利設定事件。 它會傳回`false`若已設定事件。  
   
 ### <a name="remarks"></a>備註  
- 有多個並行呼叫或`set`，只有第一個呼叫會成功 （如果有的話），其結果會儲存在工作完成事件。 而其餘組會被忽略，則方法會傳回 false。 當您設定工作完成事件時，所有工作都建立從事件將會立即完成，，它，如果有的話，都會排定接續。 工作完成的物件具有`_ResultType`以外`void`會將值傳遞給其接續。  
+ 如果存在多個並行呼叫或`set`，只有第一次呼叫會成功，且其結果 （如果有的話） 會儲存在工作完成事件。 將其餘會忽略，而該方法會傳回 false。 當您設定工作完成事件時，所有工作從都建立事件將會立即完成，，和其接續，如果有的話，將排程。 工作完成的物件`_ResultType`以外`void`會將值傳遞給其接續。  
   
 ##  <a name="set_exception"></a>set_exception 
 
@@ -139,6 +122,5 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 task_completion_event();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

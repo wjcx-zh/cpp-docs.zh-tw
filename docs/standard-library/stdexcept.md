@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cebff3122ed32a8c166324283a8e18f3b247361
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b67e1bdd9377c81965dd212836e0f224ff618788
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 定義數個標準類別，用於報告例外狀況。 類別構成的衍生階層全都衍生自 [exception](../standard-library/exception-class.md)，而且類別會包含兩種一般的例外狀況類型：邏輯錯誤和執行階段錯誤。 邏輯錯誤會造成程式設計錯誤。 它們衍生自基底類別 logic_error，也包含：  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
 |[runtime_error 類別](../standard-library/runtime-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告僅當程式執行時假定可偵測的錯誤。|  
 |[underflow_error 類別](../standard-library/underflow-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告算術反向溢位。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

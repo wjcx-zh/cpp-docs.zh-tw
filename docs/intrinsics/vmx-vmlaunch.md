@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 019c295130de7edf14285da813bed79db5ee5404
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45986af1a63f79e4466227f767fdf96fd1c2cb35
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmlaunch"></a>__vmx_vmlaunch
 **Microsoft 特定的**  
@@ -46,7 +47,7 @@ unsigned char __vmx_vmlaunch(
 ## <a name="remarks"></a>備註  
  應用程式可以執行 VM 輸入作業使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)或[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函式。 [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函數只能搭配其啟動狀態的 VMCS `Clear`，而[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函數只能搭配其啟動狀態的 VMCS `Launched`。 因此，使用[__vmx_vmclear](../intrinsics/vmx-vmclear.md)函式可設定以 VMCS 的啟動狀態`Clear`，然後使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函式的第一個 VM 輸入作業和[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函式，針對後續的 VM 輸入作業。  
   
- `__vmx_vmlaunch`函數即相當於`VMLAUNCH`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件，而 < Intel 虛擬化技術規格的 ia-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127)站台。  
+ `__vmx_vmlaunch`函數即相當於`VMLAUNCH`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件，而 < Intel 虛擬化技術規格的 ia-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站台。  
   
 ## <a name="requirements"></a>需求  
   
@@ -56,9 +57,9 @@ unsigned char __vmx_vmlaunch(
   
  **標頭檔** \<intrin.h >  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [__vmx_vmresume](../intrinsics/vmx-vmresume.md)   
  [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

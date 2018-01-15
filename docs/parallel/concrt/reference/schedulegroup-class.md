@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac169e7cc01682b8ecd0dc4fb5dd387f3be38504
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1ca427842245701c1d8dfbcef946ef1586acbf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 類別
 代表排程群組的抽象概念。 排程群組會將一組相關的工作組織在一起，以讓這些工作獲得暫時緊密排程在一起的優勢，其方法如下：透過在同一個群組中執行另一個工作再移至另一個群組；透過再同一個 NUMA 節點或實體通訊端的同一個群組內執行多個項目。  
@@ -40,16 +41,16 @@ class ScheduleGroup;
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[~ ScheduleGroup 解構函式](#dtor)||  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[識別碼](#id)|傳回群組所屬的排程器內必須是唯一的排程群組的識別碼。|  
-|[參考](#reference)|遞增排程器群組的參考計數。|  
+|[參考資料](#reference)|遞增排程器群組的參考計數。|  
 |[發行](#release)|遞減排程器群組的參考計數。|  
 |[ScheduleTask](#scheduletask)|排程的排程群組中的輕量工作。|  
   
@@ -147,7 +148,7 @@ virtual void ScheduleTask(
 ### <a name="remarks"></a>備註  
  呼叫`ScheduleTask`方法隱含會參考計數放在適當的時間執行工作後執行階段所移除的排程群組上。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [CurrentScheduler 類別](currentscheduler-class.md)   
  [Scheduler 類別](scheduler-class.md)   

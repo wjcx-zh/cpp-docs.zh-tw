@@ -1,69 +1,70 @@
 ---
-title: "保留字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "code"
-  - "CONFORMING"
-  - "DISCARDABLE"
-  - "Description"
-  - "base"
-  - "APPLOADER"
-  - "Data"
-  - "DYNAMIC"
-  - "DEV386"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def 檔案 [C++], 保留字"
-  - "def 檔案 [C++], 保留字"
-  - "連結器 [C++], 保留字"
-  - "保留字 [C++]"
+title: "保留字 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- code
+- CONFORMING
+- DISCARDABLE
+- Description
+- base
+- APPLOADER
+- Data
+- DYNAMIC
+- DEV386
+dev_langs: C++
+helpviewer_keywords:
+- .def files [C++], reserved words
+- def files [C++], reserved words
+- linker [C++], reserved words
+- reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 35f9a3e907b72b4b8cf8e673e771832ba3fc0527
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 保留字
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-以下是連結器的保留字。  只有當名稱是以雙引號 \(""\) 括住時，才能在[模組定義陳述式](../../build/reference/module-definition-dot-def-files.md)中使用這些名稱做為引數。  
+# <a name="reserved-words"></a>保留字
+連結器會保留下列文字。 這些名稱可以當做引數中[模組定義陳述式](../../build/reference/module-definition-dot-def-files.md)才以雙引號括住的名稱 ("")。  
   
 ||||  
 |-|-|-|  
-|**APPLOADER**1|**INITINSTANCE**2|**PRELOAD**|  
-|**BASE**|**IOPL**|**PRIVATE**|  
-|**CODE**|**LIBRARY**1|**PROTMODE**2|  
-|**CONFORMING**|**LOADONCALL**1|**PURE**1|  
-|**DATA**|**LONGNAMES**2|**READONLY**|  
-|**DESCRIPTION**|`MOVABLE`1|**READWRITE**|  
-|**DEV386**|**MOVEABLE**1|**REALMODE**1|  
-|**DISCARDABLE**|**MULTIPLE**|**RESIDENT**|  
-|**DYNAMIC**|**NAME**|**RESIDENTNAME**1|  
-|**EXECUTE\-ONLY**|**NEWFILES**2|**SECTIONS**|  
-|**EXECUTEONLY**|`NODATA`1|**SEGMENTS**|  
-|**EXECUTEREAD**|**NOIOPL**1|**SHARED**|  
-|**EXETYPE**|**NONAME**|**SINGLE**|  
-|**EXPORTS**|**NONCONFORMING**1|**STACKSIZE**|  
-|**FIXED**1|**NONDISCARDABLE**|**STUB**|  
-|**FUNCTIONS**2|**NONE**|**VERSION**|  
-|**HEAPSIZE**|**NONSHARED**|**WINDOWAPI**|  
-|**IMPORTS**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
-|**IMPURE**1|**OBJECTS**|**WINDOWS**|  
-|**INCLUDE**2|**OLD**1||  
+|**APPLOADER**1|**INITINSTANCE**2|**預先載入**|  
+|**基底**|**IOPL**|**私用**|  
+|**程式碼**|**程式庫**1|**PROTMODE**2|  
+|**不符合**|**LOADONCALL**1|**純**1|  
+|**資料**|**LONGNAMES**2|**READONLY**|  
+|**描述**|**可移動**1|**READWRITE**|  
+|**DEV386**|**可移動**1|**REALMODE**1|  
+|**可捨棄**|**多個**|**內建**|  
+|**動態**|**名稱**|**RESIDENTNAME**1|  
+|**僅執行**|**NEWFILES**2|**區段**|  
+|**EXECUTEONLY**|**為 NODATA**1|**區段**|  
+|**執行讀取**|**NOIOPL**1|**共用**|  
+|**EXETYPE**|**NONAME**|**單一**|  
+|**EXPORTS**|**不合格**1|**STACKSIZE**|  
+|**固定**1|**NONDISCARDABLE**|**STUB**|  
+|**函式**2|**無**|**版本**|  
+|**HEAPSIZE**|**非共用**|**WINDOWAPI**|  
+|**匯入**|**NOTWINDOWCOMPAT**1|**WINDOWCOMPAT**|  
+|**非純虛擬**1|**物件**|**WINDOWS**|  
+|**包含**2|**舊**1||  
   
- 1 連結器在碰到這個字的時候會發出警告 \(「已忽略」\)。  不過，這個字仍然會被保留。  
+ 1 當它遇到這個詞彙，，連結器就會發出警告 （「 忽略 」）。 不過，word 會仍保留。  
   
- 2 連結器會忽略這個字，但是不會發出警告。  
+ 2 連結器會忽略這個字，但不會發出警告。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

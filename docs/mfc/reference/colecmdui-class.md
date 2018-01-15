@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17eb8bd65277c5aa97996261fabc74dc668dc10e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9d26ce9e674168f3d3d1c67dc48bb16b1a87169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 類別
 實作 MFC 的方法以更新與應用程式 `IOleCommandTarget`驅動功能相關聯之使用者介面物件的狀態。  
@@ -40,17 +41,17 @@ ms.lasthandoff: 10/24/2017
 class COleCmdUI : public CCmdUI  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleCmdUI::COleCmdUI](#colecmdui)|建構 `COleCmdUI` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleCmdUI::Enable](#enable)|設定或清除 啟用命令旗標。|  
 |[COleCmdUI::SetCheck](#setcheck)|設定狀態的開關切換命令。|  
@@ -116,7 +117,7 @@ virtual void SetCheck(int nCheck);
  `nCheck`  
  值，判斷要設定的開關切換狀態命令。 值為：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**1**|若要在設定的命令。|  
 |**2**|將命令設定為不定。因為這個命令的屬性上並關閉相關的選取範圍中的狀態處於無法判斷狀態。|  
@@ -133,7 +134,7 @@ virtual void SetText(LPCTSTR lpszText);
  `lpszText`  
  要搭配此命令的文字指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

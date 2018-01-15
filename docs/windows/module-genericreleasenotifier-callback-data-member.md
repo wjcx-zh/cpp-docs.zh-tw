@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9d9a38b0cf464ff72d1f306f991bc11e492c856
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1368acd2e64ac612c89aed47304d01148a7f68f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulegenericreleasenotifiercallback-data-member"></a>Module::GenericReleaseNotifier::callback_ 資料成員
 保存 lambda、 函式或與目前的 module:: genericreleasenotifier 物件相關聯的函式指標事件處理常式。  
@@ -35,5 +38,5 @@ T callback_;
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Module::GenericReleaseNotifier 類別](../windows/module-genericreleasenotifier-class.md)

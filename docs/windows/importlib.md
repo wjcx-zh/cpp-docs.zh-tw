@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27c74785f56d7cb339eff25a645191ece1e14b32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7c62db5b1e10f115a57da1ea00cd87760b96a71f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importlib"></a>importlib
 讓已編譯成其他類型程式庫的類型可供正在建立的類型程式庫使用。  
@@ -63,7 +66,7 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器屬性](../windows/compiler-attributes.md)   
  [獨立屬性](../windows/stand-alone-attributes.md)   
  [匯入](../windows/import.md)   

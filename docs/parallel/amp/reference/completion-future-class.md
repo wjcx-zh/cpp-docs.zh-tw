@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40f4c4821a6141e7795f37f5a276a544677ba48b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="completionfuture-class"></a>completion_future 類別
 表示未來對應 c + + AMP 的非同步作業。  
@@ -39,18 +40,18 @@ ms.lasthandoff: 10/24/2017
 class completion_future;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[completion_future 建構函式](#ctor)|初始化 `completion_future` 類別的新執行個體。|  
 |[~ completion_future 解構函式](#dtor)|終結`completion_future`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[get](#get)|等候直到相關聯的非同步作業完成為止。|  
 |[然後](#then)|鏈結的回呼函式物件`completion_future`關聯的非同步作業執行完成時要執行的物件。|  
@@ -62,7 +63,7 @@ class completion_future;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[運算子 std::shared_future\<void >](#operator_shared_future)|會隱含地轉換`completion_future`物件`std::shared_future`物件。|  
 |[operator=](#operator_eq)|將指定的內容複製`completion_future`成這一個物件。|  
@@ -98,7 +99,7 @@ completion_future(
   
 ### <a name="overloads-list"></a>多載清單  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`completion_future();`|初始化的新執行個體`completion_future`類別|  
 |`completion_future(const completion_future& _Other);`|初始化的新執行個體`completion_future`藉由複製建構函式的類別。|  
@@ -147,7 +148,7 @@ completion_future&  operator= (completion_future&& _Other );
   
 ## <a name="overloads-list"></a>多載清單  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`completion_future& operator=(const completion_future& _Other);`|將指定的內容複製`completion_future`物件到這裡，使用的深層複本。|  
 |`completion_future& operator=(completion_future&& _Other);`|將指定的內容複製`completion_future`成這一個，使用一個移動指派的物件。|  
@@ -284,5 +285,5 @@ std::future_status::future_status wait_until(
 ~completion_future();  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

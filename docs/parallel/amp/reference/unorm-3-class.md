@@ -83,11 +83,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73f8b08fce39103936215292c3368f0e77a76017
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4051b7f872803a8ef799178b7ad158e588da08bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm3-class"></a>unorm_3 類別
 表示短向量的三個不帶正負號的一般數字。  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/24/2017
 class unorm_3;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -108,13 +109,13 @@ class unorm_3;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[unorm_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |unorm_3::get_x||  
 |unorm_3::get_xy||  
@@ -155,7 +156,7 @@ class unorm_3;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |unorm_3::operator-||  
 |unorm_3::operator * =||  
@@ -167,13 +168,13 @@ class unorm_3;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[大小常數](#unorm_3__size)||  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |unorm_3::b||  
 |unorm_3::bg||  
@@ -299,5 +300,5 @@ explicit inline unorm_3(
 static const int size = 3;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

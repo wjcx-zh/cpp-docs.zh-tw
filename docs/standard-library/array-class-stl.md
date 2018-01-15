@@ -107,11 +107,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ceec96efcfde06af2ad98178dff41f8569a81d85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 864e155bf921bb273ad0e7eb9d2e014c01760543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 說明的物件可控制長度 `N` 之 `Ty` 類型項目的序列。 序列會儲存成陣列 `Ty`，包含在 `array<Ty, N>` 物件中。  
@@ -127,15 +128,15 @@ class array;
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Ty`|元素的類型。|  
 |`N`|元素數。|  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |||  
 |-|-|  
-|類型定義|說明|  
+|類型定義|描述|  
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
 |[const_pointer](#const_pointer)|項目的常數指標類型。|  
 |[const_reference](#const_reference)|項目的常數參考類型。|  
@@ -150,7 +151,7 @@ class array;
   
 |||  
 |-|-|  
-|成員函式|說明|  
+|成員函式|描述|  
 |[array](#array)|建構陣列物件。|  
 |[assign](#assign)|取代所有項目。|  
 |[at](#at)|存取指定位置的項目。|  
@@ -178,7 +179,7 @@ class array;
 |[array::operator[]](#op_at)|存取指定位置的項目。|  
   
 ## <a name="remarks"></a>備註  
- 該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如：  
+ 該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如，套用至物件的  
   
 ```  
 array<int, 4> ai = { 1, 2, 3 };  
@@ -947,7 +948,7 @@ void fill(const Type& val);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|插入陣列中之項目的值。|  
   
 ### <a name="remarks"></a>備註  
@@ -1544,7 +1545,7 @@ void swap(array& right);
  要與之交換內容的陣列。  
   
 ### <a name="remarks"></a>備註  
-成員函式會交換 `*this` 和 `right`之間受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。  
+成員函式會交換 `*this` 和 `right` 之間受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。  
 
 也會有非成員 [swap](array-functions.md#swap) 函式可用來交換兩個 `array` 執行個體。  
   
@@ -1643,6 +1644,6 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<array>](../standard-library/array.md)
 

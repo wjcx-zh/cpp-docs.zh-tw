@@ -1,53 +1,50 @@
 ---
-title: "include() | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "include()"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "include() 屬性"
+title: "include （) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: include()
+dev_langs: C++
+helpviewer_keywords: include() attribute
 ms.assetid: 86c9dcb2-d9e0-4fd5-97d7-0bb3e23d6ecc
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 794152aa30c57f22bc611ef758af23b2f205b7b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# include()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**C\+\+ 專有的**  
+# <a name="include"></a>include()
+**C + + 特定的**  
   
  停用自動排除。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 include("Name1"[,"Name2", ...])  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `Name1`  
  要強制包含的第一個項目。  
   
  `Name2`  
- 要強制包含的第二個項目 \(如果需要的話\)。  
+ 要強制包含的第二個項目 (如果需要的話)。  
   
-## 備註  
- 類型程式庫可能包含在系統標頭或其他類型程式庫中定義的項目。  `#import` 會自動排除這類項目以嘗試避開多個定義錯誤。  如果項目已排除 \(如 [編譯器警告 \(層級 3\) C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md) 所指\)，但是不應該排除這些項目，則可以使用這個屬性來停用自動排除。  這個屬性可以接受任意數目的引數，每個引數都會是要包含的類型程式庫項目名稱。  
+## <a name="remarks"></a>備註  
+ 類型程式庫可能包含在系統標頭或其他類型程式庫中定義的項目。 `#import` 會自動排除這類項目以嘗試避開多個定義錯誤。 如果項目已排除，由[編譯器警告 （層級 3） C4192](../error-messages/compiler-warnings/compiler-warning-level-3-c4192.md)，而且它們不能有已，這個屬性可以用來停用自動排除。 這個屬性可以接受任意數目的引數，每個引數都會是要包含的類型程式庫項目名稱。  
   
- **END C\+\+ 特定的**  
+ **END c + + 特定的**  
   
-## 請參閱  
- [\#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
- [\#import 指示詞](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

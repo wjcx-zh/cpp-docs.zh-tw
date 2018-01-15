@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e85ee1a0c250cf67f2a379ccad8c11a99b96f76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c6aa769faaacd128bb51a422227230fa4a851
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>平行診斷工具 (並行執行階段)
 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 可廣泛支援多執行緒應用程式的偵錯和分析。  
@@ -32,13 +33,13 @@ ms.lasthandoff: 10/24/2017
 ## <a name="event-tracing"></a>事件追蹤  
  並行執行階段會使用[Windows 事件追蹤](http://msdn.microsoft.com/library/windows/desktop/bb968803)(ETW) 各種事件發生時，通知檢測工具，分析工具，例如。 這些事件時，包含當排程器為啟用或停用、 在內容開始、 結束、 封鎖、 解除封鎖，或時，和平行演算法的開頭或結尾。  
   
- 之類的工具[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)利用此功能; 因此，您通常不必直接使用這些事件。 不過，這些事件可在開發自訂的程式碼剖析工具，或當您使用事件追蹤工具例如[Xperf](http://go.microsoft.com/fwlink/linkid=160628)。  
+ 之類的工具[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)利用此功能; 因此，您通常不必直接使用這些事件。 不過，這些事件可在開發自訂的程式碼剖析工具，或當您使用事件追蹤工具例如[Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628)。  
   
  並行執行階段會引發這些事件只有在啟用追蹤時。 呼叫[concurrency:: enabletracing](reference/concurrency-namespace-functions.md#enabletracing)函式會啟用事件追蹤和[disabletracing](reference/concurrency-namespace-functions.md#disabletracing)函式來停用追蹤。  
   
  下表說明事件追蹤功能啟用時，執行階段引發的事件：  
   
-|事件|描述|值|  
+|Event - 事件|描述|值|  
 |-----------|-----------------|-----------|  
 
 |[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|並行執行階段的 ETW 提供者識別項。 |`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|  
@@ -69,6 +70,6 @@ ms.lasthandoff: 10/24/2017
   
  執行階段追蹤，讓您呼叫次數`EnableTracing`和`DisableTracing`。 因此，如果您呼叫`EnableTracing`多次，您必須呼叫`DisableTracing`相同數目的時間才能停用追蹤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [並行執行階段](../../parallel/concrt/concurrency-runtime.md)
 

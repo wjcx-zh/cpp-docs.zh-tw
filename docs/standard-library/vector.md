@@ -4,43 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <vector>
-- std.<vector>
-- std::<vector>
-dev_langs:
-- C++
-helpviewer_keywords:
-- vector header
+f1_keywords: <vector>
+dev_langs: C++
+helpviewer_keywords: vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 77c13a5f8d813bbeaa0dae2307769a575bb22fa8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0ac628b660c37c4d281c1b889ccf5a3628240573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 定義容器範本類別 vector 以及數個支援的範本。  
@@ -140,9 +120,8 @@ void swap (
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

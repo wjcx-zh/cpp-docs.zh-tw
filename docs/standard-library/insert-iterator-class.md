@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b74c2f092088c5dfb6d19417c9a435905bc51d40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5b893e3c1d30d457d479f5c2dcf42fb97bb978f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="insertiterator-class"></a>insert_iterator 類別
 描述滿足輸出迭代器需求的迭代器配接器。 它在序列中插入項目 (而不是覆寫)，因此其語意不同於 C++ 序列容器和關聯容器的迭代器所提供的覆寫語意。 `insert_iterator` 類別是根據所調整容器的類型樣板化。  
@@ -416,7 +417,7 @@ The first element in the list L is: 10.
 *\  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

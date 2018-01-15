@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e3663f185380a7bb925a5c1bd94888dc3f37b79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22bb8144f3c83ca98bffa2f95e73eff31ddb89be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="serialization-making-a-serializable-class"></a>序列化：建立可序列化的類別
 製作可序列化類別需要進行五個主要步驟。 以下會列出這些步驟，並在下列各節進行說明：  
@@ -98,6 +99,6 @@ ms.lasthandoff: 10/24/2017
   
  一旦您擁有可序列化的類別，您可以將物件序列化的類別，文件中所述[序列化： 序列化物件](../mfc/serialization-serializing-an-object.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [序列化](../mfc/serialization-in-mfc.md)
 

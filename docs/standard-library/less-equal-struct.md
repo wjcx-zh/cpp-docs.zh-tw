@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::less_equal
-- less_equal
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::less_equal
+dev_langs: C++
 helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 58e188cc830140ace78777a03959a7f4e170f328
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 15a4d46b299ddaf99db8f39c39caaec233f8747e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lessequal-struct"></a>less_equal 結構
 在其引數上執行小於或等於運算 ( `operator<=`) 的二元述詞。  
@@ -75,7 +57,7 @@ struct less_equal<void>
  小於或等於運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
   
 ## <a name="return-value"></a>傳回值  
- `Left``<=``Right` 的結果。 此特製化範本會完整轉送結果 (具有 `operator<=` 所傳回的類型)。  
+ `Left <= Right` 的結果。 此特製化範本會完整轉送結果 (具有 `operator<=` 所傳回的類型)。  
   
 ## <a name="remarks"></a>備註  
  二元述詞 `less_equal`< `Type`> 會提供嚴格弱式排序來將一組 `Type` 類型的元素值分割成等價類別，但只有在此類型滿足以此方式排序的標準數學需求時，才會這麼做。 任何指標類型的特製化都會產生元素的總排序，其中所有不同值的元素都會依照彼此的相關順序排序。  
@@ -146,9 +128,8 @@ Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6789bd74924912361b3045d112c91ec6dcaedbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1796351dc594712ef69ec5562f85501b30997104
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 類別
 `concurrent_priority_queue` 類別允許多個執行緒同時推入和彈出項目。 項目會以優先權順序做為彈出依據，而優先權由函式提供的樣板引數決定。  
@@ -58,7 +59,7 @@ template <typename T,
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`allocator_type`|代表並行優先權佇列之配置器類別的類型。|  
 |`const_reference`|代表儲存在並行優先權佇列中的類型項目之常數參考的類型。|  
@@ -68,13 +69,13 @@ template <typename T,
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[concurrent_priority_queue](#ctor)|多載。 建構並行優先權佇列。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[clear](#clear)|清除並行優先權中的所有項目。 這個方法不是並行安全。|  
 |[empty](#empty)|測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全。|  
@@ -86,7 +87,7 @@ template <typename T,
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|多載。 另一個內容指派`concurrent_priority_queue`給這一個物件。 這個方法不是並行安全。|  
   
@@ -270,7 +271,7 @@ bool try_pop(reference _Elem);
 ### <a name="return-value"></a>傳回值  
  `true`如果值已推出，`false`否則。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)
 

@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8be6dabf4eaae1c76ebe31c35ad5b7b30743953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34fbb82a28c145ad2d376f0647fbd75faeb9401c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-management-heap-allocation"></a>記憶體管理：堆積配置
 堆積可為程式保留所需的記憶體配置。 這是屬於程式碼和堆疊以外的區域。 典型的 C 程式使用函式`malloc`和**可用**配置及取消配置堆積記憶體。 MFC 的偵錯版本提供修改的過的 c + + 內建運算子**新**和**刪除**配置及取消配置堆積記憶體中的物件。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 10/24/2017
   
  請注意，堆積上配置物件的總大小受限於您系統上可用的虛擬記憶體大小。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體管理](../mfc/memory-management.md)
 

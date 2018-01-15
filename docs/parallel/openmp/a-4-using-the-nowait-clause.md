@@ -1,27 +1,27 @@
 ---
-title: "A.4   Using the nowait Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "使用 nowait 子句 A.4 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d3de2111-05ea-4ee3-a66c-57bd988712af
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf910f1223a4ccfdd85734ef9bd314d5664679ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# A.4   Using the nowait Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-如果有多個獨立的迴圈放在平行區域內，您可以使用`nowait`子句 \([區段 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) 11 頁上\) 以避免隱含的障盾結尾的`for`指示詞，如下所示：  
+# <a name="a4---using-the-nowait-clause"></a>A.4 使用 nowait 子句
+如果有多個獨立的迴圈的平行區域內，您可以使用`nowait`子句 ([區段 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) 11 頁面上) 若要避免隱含的屏障結尾`for`指示詞，如下所示：  
   
 ```  
 #pragma omp parallel  

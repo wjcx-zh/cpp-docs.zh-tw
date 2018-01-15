@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ccae0f5c4dc84360a33f5031aa7d81061429d068
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c7776a19a934a03809bfeb9e1cad9d7cb572672
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tuple-class"></a>元組類別
 包裝固定長度的元素序列。  
@@ -216,7 +217,7 @@ template <class... Types>
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`left`|其元素要與 tuple `right` 交換的 tuple。|  
 |`right`|其元素要與 tuple `left` 交換的 tuple。|  
@@ -335,7 +336,7 @@ int main()
  4 5 6 7  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<tuple>](../standard-library/tuple.md)   
  [make_tuple](../standard-library/tuple-functions.md#make_tuple)
 

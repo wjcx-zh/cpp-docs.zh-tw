@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45cb4bb1537f7d897b1dd53ada413e73a54162ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
 C++ 是世界上最廣泛使用的程式語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 這種語言較其他語言更具彈性，因為您可以用它來建立各種應用程式，從好玩刺激的遊戲到高效能科學軟體、裝置驅動程式、內嵌程式和 Windows 用戶端應用程式，一應俱全。 20 多年來，C++ 已經用來解決這類和許多其他的問題。 您可能不知道的是，有越來越多的 C++ 程式設計人員已經捲藏過時的 C-Style 程式設計舊衣，換上了現代 C++ 的新裝。  
@@ -116,9 +117,9 @@ for( auto& s : v ) {
   
 -   [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
- 如需詳細資訊，請參閱 StackOverflow 文章[哪些 c + + 慣用語中 C + + 11 中已被取代](http://go.microsoft.com/fwlink/?LinkId=402836)  
+ 如需詳細資訊，請參閱 StackOverflow 文章[哪些 c + + 慣用語中 C + + 11 中已被取代](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)  

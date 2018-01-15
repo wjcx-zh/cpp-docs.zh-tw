@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 61f0617a07d71624e11f2c9adaceac7691192585
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8d3aaeb5d3e71dfced4bf78384a62898d99a5ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (啟用 OpenMP 2.0 支援)
 可讓編譯器處理`#pragma` [omp](../../preprocessor/omp.md)。  
@@ -120,6 +121,6 @@ int main(int argc, char* argv[]) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5d9fb768c4c1030a43094565aae5f88fdabf4eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f56321b71642f9d615c4d85fd66f878b19e44485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftmbase-class"></a>FtmBase 類別
 代表無限制執行緒封送處理器物件。  
@@ -36,17 +39,17 @@ class FtmBase : public Microsoft::WRL::Implements<
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱 MSDN Library 中的 < COM 參考 > 主題的 「 COM 介面"副主題"IMarshal 」 主題。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[FtmBase::FtmBase 建構函式](../windows/ftmbase-ftmbase-constructor.md)|初始化 FtmBase 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[FtmBase::CreateGlobalInterfaceTable 方法](../windows/ftmbase-createglobalinterfacetable-method.md)|建立全域介面表 (GIT)。|  
 |[FtmBase::DisconnectObject 方法](../windows/ftmbase-disconnectobject-method.md)|強制釋放物件的所有外部連接。 物件的伺服器會呼叫這個方法之前關閉物件的實作。|  
@@ -58,7 +61,7 @@ class FtmBase : public Microsoft::WRL::Implements<
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[FtmBase::marshaller_ 資料成員](../windows/ftmbase-marshaller-data-member.md)|保留無限制執行緒封送處理器的參考。|  
   
@@ -70,5 +73,5 @@ class FtmBase : public Microsoft::WRL::Implements<
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

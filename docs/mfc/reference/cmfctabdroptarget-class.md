@@ -27,11 +27,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df98908522fd57b0b5cfd4af2e8bb0582028b122
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ff17f7312f5e04b6ae900e792523155705a3b4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 類別
 提供索引標籤控制項和 OLE 程式庫之間的溝通機制。  
@@ -42,20 +43,20 @@ ms.lasthandoff: 10/24/2017
 class CMFCTabDropTarget : public COleDropTarget  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |`CMFCTabDropTarget::CMFCTabDropTarget`|預設建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |[CMFCTabDropTarget::OnDragEnter](#ondragenter)|在使用者拖曳物件到索引標籤視窗時，由架構呼叫。 (覆寫[COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)。)|  
 |[CMFCTabDropTarget::OnDragLeave](#ondragleave)|在使用者拖曳物件之外的索引標籤視窗具有焦點時，由架構呼叫。 (覆寫[COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave)。)|  
 |[CMFCTabDropTarget::OnDragOver](#ondragover)|當使用者將物件拖曳至 [索引標籤] 視窗具有焦點時，由架構呼叫。 (覆寫[COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)。)|  
@@ -100,10 +101,10 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |參數|描述|  
-|[in] `pWnd`|未使用。|  
-|[in] `pDataObject`|在使用者拖曳物件的指標。|  
-|[in] `dwKeyState`|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
-|[in] `point`|用戶端座標中的資料指標的位置。|  
+|[輸入] `pWnd`|未使用。|  
+|[輸入] `pDataObject`|在使用者拖曳物件的指標。|  
+|[輸入] `dwKeyState`|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
+|[輸入] `point`|用戶端座標中的資料指標的位置。|  
   
 ### <a name="return-value"></a>傳回值  
  如果下拉式清單，就會發生在所指定的位置會造成的效果`point`。 它可以是下列一或多個項目：  
@@ -135,7 +136,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |參數|描述|  
-|[in] `pWnd`|未使用。|  
+|[輸入] `pWnd`|未使用。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`CMFCBaseTabCtrl::OnDragLeave`方法，以執行拖曳作業。  
@@ -156,10 +157,10 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |參數|描述|  
-|[in] `pWnd`|未使用。|  
-|[in] `pDataObject`|在使用者拖曳物件的指標。|  
-|[in] `dwKeyState`|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
-|[in] `point`|滑鼠指標在用戶端座標中的位置。|  
+|[輸入] `pWnd`|未使用。|  
+|[輸入] `pDataObject`|在使用者拖曳物件的指標。|  
+|[輸入] `dwKeyState`|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
+|[輸入] `point`|滑鼠指標在用戶端座標中的位置。|  
   
 ### <a name="return-value"></a>傳回值  
  如果下拉式清單，就會發生在所指定的位置會造成的效果`point`。 它可以是下列一或多個項目：  
@@ -196,11 +197,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |參數|描述|  
-|[in] `pWnd`|未使用。|  
-|[in] `pDataObject`|在使用者拖曳物件的指標。|  
-|[in] `dropEffect`|預設拖放作業。|  
-|[in] `dropList`|未使用。|  
-|[in] `point`|滑鼠指標在用戶端座標中的位置。|  
+|[輸入] `pWnd`|未使用。|  
+|[輸入] `pDataObject`|在使用者拖曳物件的指標。|  
+|[輸入] `dropEffect`|預設拖放作業。|  
+|[輸入] `dropList`|未使用。|  
+|[輸入] `point`|滑鼠指標在用戶端座標中的位置。|  
   
 ### <a name="return-value"></a>傳回值  
  產生的置放效果。 它可以是下列一或多個項目：  
@@ -232,7 +233,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |參數|描述|  
-|[in] `pOwner`|要登錄為置放目標的索引標籤控制項。|  
+|[輸入] `pOwner`|要登錄為置放目標的索引標籤控制項。|  
   
 ### <a name="return-value"></a>傳回值  
  如果登錄成功，則為非零否則便是 0。  
@@ -240,7 +241,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[COleDropTarget::Register](../../mfc/reference/coledroptarget-class.md#register)註冊拖放作業的控制項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [拖放 (OLE)](../../mfc/drag-and-drop-ole.md)

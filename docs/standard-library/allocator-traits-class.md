@@ -51,11 +51,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 5ddb30840a3f92de70d688cc763394e92b356417
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 類別
 此範本類別所描述的物件補充說明「配置器類型」。 配置器類型是任何類型，可描述用來管理所配置儲存空間的配置器物件。 具體來說，針對任何配置器類型 `Alloc`，您可以使用 `allocator_traits<Alloc>` 來判斷啟用配置器之容器所需的所有資訊。 如需詳細資訊，請參閱預設 [allocator 類別](../standard-library/allocator-class.md)。  
@@ -86,7 +87,7 @@ class allocator_traits;
 ### <a name="static-methods"></a>靜態方法  
  下列靜態方法會在指定的配置器參數上呼叫對應方法。  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[allocate](#allocate)|靜態方法，使用指定的配置器參數來配置記憶體。|  
 |[construct](#construct)|靜態方法，使用指定的配置器來建構物件。|  
@@ -221,7 +222,7 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 ### <a name="remarks"></a>備註  
  此方法用來在建構複製相關聯的容器時指定配置器。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<memory>](../standard-library/memory.md)   
  [pointer_traits 結構](../standard-library/pointer-traits-struct.md)   
  [scoped_allocator_adaptor 類別](../standard-library/scoped-allocator-adaptor-class.md)

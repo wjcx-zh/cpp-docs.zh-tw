@@ -32,11 +32,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a614e37c8fe106289d1530a9dac01daee8b8a88a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac777b2e2a7ca791821be52b68f136998c33d243
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
 將用戶端定義的配置函式連結到 C 執行階段偵錯記憶體配置處理序，以進行安裝 (僅限偵錯版本)。  
@@ -84,11 +85,11 @@ lineNumber);
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_CrtSetAllocHook`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -96,6 +97,6 @@ lineNumber);
 ## <a name="example"></a>範例  
  如需如何使用 `_CrtSetAllocHook` 的範例，請參閱 [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
  [_CrtGetAllocHook](../../c-runtime-library/reference/crtgetallochook.md)

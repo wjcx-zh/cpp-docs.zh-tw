@@ -1,33 +1,33 @@
 ---
-title: "source (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "source attribute"
+title: "來源 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.source
+dev_langs: C++
+helpviewer_keywords: source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f4bfc79a76ece278c62b4895cdeb2e10d6df42aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# source (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在類別上指定的連接點的 COM 物件的來源介面。  在屬性或方法中，指出成員傳回一個物件或 VARIANT 是一個事件的來源。  
+# <a name="source-c"></a>source (C++)
+在類別上指定的連接點的 COM 物件的來源介面。 在屬性或方法中，會指出成員傳回的物件或為資料來源的事件的 VARIANT。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,16 +36,16 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `interfaces`  
- 一或多個介面您可指定當您套用的來源屬性至類別。  未在原始檔套用至屬性或方法時，會使用這個參數。  
+ 您指定當您將套用之來源的一或多個介面的類別屬性。 未在來源套用至屬性或方法時，會使用此參數。  
   
-## 備註  
- **來源** C\+\+ 屬性具有相同的功能，為 [來源](http://msdn.microsoft.com/library/windows/desktop/aa367166) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **來源**c + + 屬性具有相同的功能[來源](http://msdn.microsoft.com/library/windows/desktop/aa367166)MIDL 屬性。  
   
- 您可以使用[預設](../windows/default-cpp.md)屬性來指定物件的預設值來源介面。  
+ 您可以使用[預設](../windows/default-cpp.md)屬性來指定物件的預設來源介面。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_source.cpp  
@@ -79,22 +79,21 @@ class NN : public b
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**class**, `struct`,`interface`|  
+|**適用於**|**類別**， `struct`，`interface`|  
 |**可重複**|否|  
-|**必要的屬性**|**coclass** \(當套用到類別或結構\)|  
-|**無效的屬性**|None|  
+|**必要屬性**|**coclass** （當套用至類別或結構）|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   
+ [方法屬性](../windows/method-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

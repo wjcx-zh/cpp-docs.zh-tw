@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83efa172517e7a7e5161bc77821e139297024191
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ad7e82db687b3fdf81e25285e4a75e32ac1cbbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="domainerror-class"></a>domain_error 類別
 此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告網域錯誤。  
@@ -71,7 +72,7 @@ Type: class std::domain_error
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [logic_error 類別](../standard-library/logic-error-class.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,8 +12,7 @@ f1_keywords:
 - m_bPreMultiplyCheck
 - CMFCRibbonPanelMenuBar.IsCategoryPopup
 - CMFCCustomizeMenuButton.SetSiblingsButton
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - UpdateTabs method [MFC]
 - Start method [MFC]
@@ -316,23 +314,23 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f8848bb9d8599fcff5ed24d3bccf82ef581a0eb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: c571a86aaa93a6712cb57ebff5ccd275c73bd4af
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-classes"></a>內部類別
 在 MFC 內部使用下列類別。 為求完整起見，本節會說明這些內部類別，但是它們並不適合直接在您的程式碼中使用。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |`CCommandManager Class`|`CCommandManager`類別會管理命令和其關聯的影像。|  
 |`CDialogImpl Class (MFC)`|提供實作細節，以對話方塊方塊為基礎的類別，例如`CDialogEx`。|  
@@ -421,7 +419,6 @@ ms.lasthandoff: 10/09/2017
 |`CVSListBoxEditCtrl Class`|會擴充標準的清單方塊中編輯控制項所顯示的小按鈕會開啟一個對話方塊。|  
 |`CVSToolsListBox Class`|藉由提供其他按鈕來新增、 刪除和移動清單方塊中的項目會擴充標準的清單方塊控制項。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 傳統型應用程式](../../mfc/mfc-desktop-applications.md)
-
 

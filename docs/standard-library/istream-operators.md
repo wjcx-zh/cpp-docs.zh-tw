@@ -6,25 +6,23 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- istream/std::operator&gt;&gt;
-dev_langs:
-- C++
+f1_keywords: istream/std::operator&gt;&gt;
+dev_langs: C++
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a33a333cc9e70ee57cd1d5612e6de008d49b1d72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 30cb2b182d8047eb1b2a5eaa384b01c719799043
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 運算子
  
-##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  從資料流中擷取字元和字串。  
   
 ```  
@@ -175,7 +173,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<istream>](../standard-library/istream.md)
-
 

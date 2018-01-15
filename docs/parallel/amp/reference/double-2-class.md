@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,33 +33,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::operator-
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: cb780d4164099b9b2b609a0d430054af8cd8aa25
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aa341c7bb36bb198c4be581eab335c9e3209fe62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="double2-class"></a>double_2 類別
 代表 2 雙短向量。  
@@ -71,7 +55,7 @@ ms.lasthandoff: 03/17/2017
 class double_2;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -104,7 +88,7 @@ class double_2;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |double_2::operator-||  
 |double_2::operator-||  
@@ -138,9 +122,9 @@ class double_2;
  `double_2`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_short_vectors.h  
+ **標頭：** amp_short_vectors.h  
   
- **命名空間︰** concurrency:: graphics  
+ **命名空間：** concurrency:: graphics  
   
 ##  <a name="ctor"></a>double_2 
 
@@ -211,6 +195,5 @@ explicit inline double_2(
 static const int size = 2;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
-

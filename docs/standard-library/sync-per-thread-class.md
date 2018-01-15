@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,23 @@ f1_keywords:
 - allocators/stdext::sync_per_thread::allocate
 - allocators/stdext::sync_per_thread::deallocate
 - allocators/stdext::sync_per_thread::equals
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::sync_per_thread
 - stdext::sync_per_thread [C++], allocate
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9f0c3e4a2b35ee0d5581320aea7eff47c9bae3e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 817f52e11a39de64288c4433b5f29c48ae45ca22
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncperthread-class"></a>sync_per_thread 類別
 描述可為每個執行緒物件提供不同快取物件的[同步處理篩選](../standard-library/allocators-header.md)。  
@@ -44,7 +42,7 @@ class sync_per_thread
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Cache`|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|  
   
@@ -73,7 +71,7 @@ void *allocate(std::size_t count);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`count`|陣列中要配置的項目數。|  
   
@@ -106,7 +104,7 @@ bool equals(const sync<Cache>& Other) const;
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Cache`|同步處理篩選的快取物件。|  
 |`Other`|要比較是否相等的快取物件。|  
@@ -116,9 +114,8 @@ bool equals(const sync<Cache>& Other) const;
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

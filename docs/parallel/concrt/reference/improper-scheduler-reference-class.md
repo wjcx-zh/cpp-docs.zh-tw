@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 367f939145b0fa716d2d975b7bf2315594a760a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f48ac19ca1b246bc21bc94a84d5d489f8831e144
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference 類別
 這個類別描述在被關閉的 `Scheduler` 物件 (來自不屬於排程器的內容) 上呼叫 `Reference` 方法所擲回的例外狀況。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class improper_scheduler_reference : public std::exception;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[improper_scheduler_reference](#ctor)|多載。 建構 `improper_scheduler_reference` 物件。|  
   
@@ -65,6 +66,6 @@ improper_scheduler_reference() throw();
  `_Message`  
  錯誤的描述性訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)

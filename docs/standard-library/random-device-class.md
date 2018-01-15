@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,10 +13,7 @@ f1_keywords:
 - random/std::random_device::max
 - random/std::random_device::entropy
 - random/std::random_device::operator()
-- random/std::random_device::entropy
-- random/std::random_device::operator()
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::random_device [C++]
 - std::random_device [C++], min
@@ -25,16 +21,16 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e12c446ec97bc4cf9d2f2caff642b0ed6fb210d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f4256ac0a58f3cc21322ff84565838d36174a00a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="randomdevice-class"></a>random_device 類別
 從外部裝置產生隨機序列。  
@@ -149,7 +145,6 @@ result_type operator()();
 ### <a name="remarks"></a>備註  
 傳回統一分佈在封閉間隔 [`min, max`] 中的值，而此間隔是透過成員函式 `min()` 和 `max()` 所決定。 如果無法取得亂數，會擲回衍生自 [exception](../standard-library/exception-class.md) 之實作定義類型的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<random>](../standard-library/random.md)
-
 

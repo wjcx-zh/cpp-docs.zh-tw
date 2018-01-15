@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8586ddb10561364d9fb56be5e45874edcd91cdbe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdb47301f890cc96d21bf797444c44b48da3761b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 結構
 代表排程器的指標。 這個類別是為了允許使用 shared_ptr 共用存留期的規格，或只是使用原始指標的簡單參考。  
@@ -34,23 +35,23 @@ ms.lasthandoff: 10/24/2017
 struct scheduler_ptr;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[scheduler_ptr:: scheduler_ptr](#ctor)|多載。 從排程器 shared_ptr 建立排程器指標|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[scheduler_ptr:: get](#get)|傳回排程器的原始指標|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[scheduler_ptr:: operator bool](#operator_bool)|測試排程器指標是否為非 null|  
 |[scheduler_ptr:: operator-&gt;](#operator_ptr)|作用如同指標|  

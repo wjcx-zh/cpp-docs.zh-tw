@@ -25,11 +25,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f9750c1c3a108e6e007b7d8890a31a17b9a3e39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7627fbc7cb5d36bd82e130264d2653d5a8464545
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 類別
 實作 DocObject 伺服器專屬的 OLE 伺服器動詞命令。  
@@ -44,19 +45,19 @@ class CDocObjectServerItem : public COleServerItem
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|建構 `CDocObjectServerItem` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDocObjectServerItem::GetDocument](#getdocument)|擷取包含之項目的文件的指標。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDocObjectServerItem::OnHide](#onhide)|如果架構嘗試隱藏 DocObject 項目，就會擲回例外狀況。|  
 |[CDocObjectServerItem::OnShow](#onshow)|由架構呼叫以讓 DocObject 項目就地使用中。 如果未 DocObject 項目，會呼叫[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|  
@@ -129,7 +130,7 @@ virtual void OnShow();
 ### <a name="remarks"></a>備註  
  如果項目不是 DocObject 的預設實作會呼叫[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen)。 如果您想要執行特殊處理開啟 DocObject 項目時，請覆寫這個函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [COleServerItem 類別](../../mfc/reference/coleserveritem-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDocObjectServer 類別](../../mfc/reference/cdocobjectserver-class.md)   

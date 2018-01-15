@@ -25,11 +25,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f42c738983cb0d2017614279a35ab79ae677fb1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-extension-dlls"></a>MFC 擴充 Dll
 MFC 擴充 DLL 是通常會實作可重複使用的類別衍生自現有 Mfc 程式庫的 DLL。  
@@ -136,5 +137,5 @@ head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE
   
 -   [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

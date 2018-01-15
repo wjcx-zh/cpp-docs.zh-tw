@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 312e777d86d2fd24ae84fe05b4162e1470f77e3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f389a621991418c054b62be477a64f02c4afaae2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>選擇集合類別的建議
 本文所包含的詳細資訊，旨在協助您選擇特定應用程式所需的集合類別。  
@@ -60,8 +61,8 @@ ms.lasthandoff: 10/24/2017
   
 |圖形|排序|編製索引|插入項目|搜尋指定的項目|重複的項目|  
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|  
-|清單|是|否|快速|緩慢|是|  
-|陣列|是|依 int|緩慢|緩慢|是|  
+|清單|[是]|否|快速|緩慢|[是]|  
+|陣列|[是]|依 int|緩慢|緩慢|[是]|  
 |對應|否|依索引鍵|快速|快速|否 (索引鍵) 是 (值)|  
   
  以下的 [MFC 集合類別的特性](#_core_characteristics_of_mfc_collection_classes)表格摘要說明特定 MFC 集合類別的其他重要特性，可作為選擇時的指南。 您的選擇可能取決於下列因素：類別是否依據 C++ 範本、其元素是否可透過 MFC 的文件 [序列化](../mfc/serialization-in-mfc.md) 機制進行序列化、其元素是否可透過 MFC 的診斷傾印機制進行傾印，或者類別是否為型別安全 (換句話說，您是否可以保證元素的類型儲存在以類別為基礎的集合中，並從中擷取)。  
@@ -70,29 +71,29 @@ ms.lasthandoff: 10/24/2017
   
 |類別|使用 C++<br /><br /> 範本|可以是<br /><br /> 已序列化|可以是<br /><br /> 已傾印|為<br /><br /> Type-Safe - 類型安全|  
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|  
-|`CArray`|是|是 1|是 1|否|  
-|`CByteArray`|否|是|是|是 3|  
-|`CDWordArray`|否|是|是|是 3|  
-|`CList`|是|是 1|是 1|否|  
-|`CMap`|是|是 1|是 1|否|  
+|`CArray`|[是]|是 1|是 1|否|  
+|`CByteArray`|否|是|[是]|是 3|  
+|`CDWordArray`|否|是|[是]|是 3|  
+|`CList`|[是]|是 1|是 1|否|  
+|`CMap`|[是]|是 1|是 1|否|  
 |`CMapPtrToPtr`|否|否|是|否|  
 |`CMapPtrToWord`|否|否|是|否|  
 |`CMapStringToOb`|否|是|是|否|  
 |`CMapStringToPtr`|否|否|是|否|  
-|`CMapStringToString`|否|是|是|是 3|  
+|`CMapStringToString`|否|是|[是]|是 3|  
 |`CMapWordToOb`|否|是|是|否|  
 |`CMapWordToPtr`|否|否|是|否|  
 |`CObArray`|否|是|是|否|  
 |`CObList`|否|是|是|否|  
 |`CPtrArray`|否|否|是|否|  
 |`CPtrList`|否|否|是|否|  
-|`CStringArray`|否|是|是|是 3|  
-|`CStringList`|否|是|是|是 3|  
-|`CTypedPtrArray`|是|不一定 2|是|是|  
-|`CTypedPtrList`|是|不一定 2|是|是|  
-|`CTypedPtrMap`|是|不一定 2|是|是|  
-|`CUIntArray`|否|否|是|是 3|  
-|`CWordArray`|否|是|是|是 3|  
+|`CStringArray`|否|是|[是]|是 3|  
+|`CStringList`|否|是|[是]|是 3|  
+|`CTypedPtrArray`|[是]|不一定 2|[是]|是|  
+|`CTypedPtrList`|[是]|不一定 2|[是]|是|  
+|`CTypedPtrMap`|[是]|不一定 2|[是]|是|  
+|`CUIntArray`|否|否|[是]|是 3|  
+|`CWordArray`|否|是|[是]|是 3|  
   
  1. 若要序列化，您必須明確呼叫集合物件的`Serialize`函式; 若要傾印，您必須明確呼叫其`Dump`函式。 您不能使用 `ar << collObj` 格式進行序列化，也不能使用 `dmp` `<< collObj` 格式進行傾印。  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/24/2017
   
  3. 如果在此欄中標示為 [是]，則非範本集合類別為型別安全 (但前提是您必須如預期般使用它)。 例如，如果您將位元組儲存在 `CByteArray`中，則陣列為型別安全。 但是，如果您用來儲存字元，就不一定是型別安全。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [集合](../mfc/collections.md)   
  [樣板架構類別](../mfc/template-based-classes.md)   
  [如何： 建立類型安全集合](../mfc/how-to-make-a-type-safe-collection.md)   

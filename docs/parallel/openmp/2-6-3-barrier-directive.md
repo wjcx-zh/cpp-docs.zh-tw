@@ -1,33 +1,33 @@
 ---
-title: "2.6.3 barrier Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.6.3 barrier 指示詞 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4485a3d7-533f-4fec-8128-a131bec7fa16
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d9c64787d9c6cc2dd0809f75f8f9db9819174d0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6.3 barrier Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**障盾**指示詞會同步處理小組中的所有執行緒。  會發生，小組中的每一個執行緒等待直到所有的其他使用者已經達到這一點。  語法**障盾**指示詞時，如下所示：  
+# <a name="263-barrier-directive"></a>2.6.3 barrier 指示詞
+**屏障**指示詞會同步處理在小組中的所有執行緒。 當遇到，小組中的每個執行緒會等到所有其他已經達到這個點為止。 語法**屏障**指示詞時，如下所示：  
   
 ```  
 #pragma omp barrier new-line  
 ```  
   
- 小組中的所有執行緒所都遇到的障礙之後，小組中的每一個執行緒開始執行平行障盾指示詞之後的陳述式時。  請注意，因為**障盾**指示詞並沒有 c 語言陳述式做為其語法的一部分，有一些限制，在程式中的位置上。  請參閱 [＜ 附錄 c](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) 的正式的文法。  下列範例會示範這些限制。  
+ 在小組中的所有執行緒都遇到屏障之後，小組中的每個執行緒會開始之後 barrier 指示詞，以平行方式執行的陳述式。 請注意，因為**屏障**指示詞沒有 C 語言陳述式，其語法的一部分，有一些限制，在程式中的位置。 請參閱[旓紵 C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)正式文法。 下列範例會示範這些限制。  
   
 ```  
 /* ERROR - The barrier directive cannot be the immediate  

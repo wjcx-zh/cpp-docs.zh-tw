@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 967c8e8cc397a7f9efdb145bf337049627f24a2c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 978379c64f22026f19dd76afa39af08402cebc65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass 方法
 取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 載入此 DLL 來建立未初始化的執行個體的 proxy。  
@@ -67,5 +70,5 @@ STDMETHODIMP GetUnmarshalClass(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [FtmBase 類別](../windows/ftmbase-class.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::gamma_distribution::param_type::beta
 - random/std::gamma_distribution::param_type::operator==
 - random/std::gamma_distribution::param_type::operator!=
-- random/std::gamma_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::gamma_distribution [C++]
 - std::gamma_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cfbaa595c16f6ac3b58d92ff45b7b0335a985a8b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 048f1956d84837512a3273eeae089d6ffef00ced
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 類別
 產生 Gamma 分佈。  
@@ -95,7 +92,7 @@ public:
   
 屬性函式 `alpha()` 和 `beta()` 會針對預存分佈參數 *alpha* 和 *beta* 分別傳回各自的值。  
   
-屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。  
+屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。  
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
   
@@ -105,7 +102,7 @@ public:
   
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
-如需有關 Gamma 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Gamma 分佈 (英文)](http://go.microsoft.com/fwlink/LinkId=401111)。  
+如需有關 Gamma 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Gamma 分佈 (英文)](http://go.microsoft.com/fwlink/p/?linkid=401111)。  
   
 ## <a name="example"></a>範例  
   
@@ -249,9 +246,8 @@ struct param_type {
   
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<random>](../standard-library/random.md)
-
 
 
 

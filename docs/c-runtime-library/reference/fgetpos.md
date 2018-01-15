@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fgetpos
+apiname: fgetpos
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- fgetpos
-dev_langs:
-- C++
+f1_keywords: fgetpos
+dev_langs: C++
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c53e5742a518934ad0afcfaa06ad4e5905c484e3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 418de3c365c2c42c1cfc41d386a1a823d7e8cfad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fgetpos"></a>fgetpos
 取得資料流的檔案位置指標。  
@@ -83,11 +65,11 @@ int fgetpos(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`fgetpos`|\<stdio.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -144,6 +126,6 @@ after fgetpos: gets a stream
 after fsetpos: gets a stream  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fsetpos](../../c-runtime-library/reference/fsetpos.md)

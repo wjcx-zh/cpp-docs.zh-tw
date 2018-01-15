@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::mem_fun_ref_t
-- mem_fun_ref_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- mem_fun_ref_t class
+f1_keywords: xfunctional/std::mem_fun_ref_t
+dev_langs: C++
+helpviewer_keywords: mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: a462fa28f086f2ff0f74e35594dbd651e6d416d9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5e610db4ff4a80a240708c45dd0e32ae890f9b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t 類別
 配接器類別，可允許將不接受任何引數的 **non_const** 成員函式在以參考引數初始化時，當作一元函式物件來呼叫。  
@@ -78,10 +59,9 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

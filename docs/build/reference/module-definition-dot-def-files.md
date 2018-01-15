@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 15dbdfcd1074b32e2a707616571484db3ced9d2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-definition-def-files"></a>模組定義檔案 (.Def)
 模組定義 (.def) 檔會提供連結器匯出、 屬性和連結的程式的其他資訊的相關資訊。 建置 DLL 時，便最有用.def 檔。 因為有[連結器選項](../../build/reference/linker-options.md)可用而不是模組定義陳述式，.def 檔案通常不是必要。 您也可以使用[__declspec （dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md)做為指定的方式匯出的函式。  
@@ -54,6 +55,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [保留的字](../../build/reference/reserved-words.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
  [連結器選項](../../build/reference/linker-options.md)  

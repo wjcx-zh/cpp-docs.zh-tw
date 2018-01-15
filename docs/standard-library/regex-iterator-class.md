@@ -27,11 +27,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ef28175227bc35641909af71268a86804218649e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13744086b9e25c5f3be880885fae624822fd5f73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regexiterator-class"></a>regex_iterator 類別
 相符項目的迭代器類別。  
@@ -769,7 +770,7 @@ match == a
 match == a  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<regex>](../standard-library/regex.md)  
 [regex_constants 類別](../standard-library/regex-constants-class.md)  
 [regex_error 類別](../standard-library/regex-error-class.md)  

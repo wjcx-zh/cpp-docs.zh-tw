@@ -49,11 +49,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6178c35ff5d9ed0fbe53af7d488cc24cbcf81f2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bc6d855b1ff1776cdbb1777a4250317accac68a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeget-class"></a>time_get 類別
 此樣板類別描述可以做為地區設定 facet 的物件，以控制類型 `CharType` 的序列轉換為時間值。  
@@ -311,7 +312,7 @@ virtual iter_type do_get_date(iter_type first,
  格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。  
   
  `state`  
- 根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。  
+ 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。  
   
  `ptm`  
  指向日期資訊儲存位置的指標。  
@@ -395,7 +396,7 @@ virtual iter_type do_get_time(iter_type first,
  未使用。  
   
  `state`  
- 根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。  
+ 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。  
   
  `ptm`  
  指向日期資訊儲存位置的指標。  
@@ -479,7 +480,7 @@ virtual iter_type do_get_year(iter_type first,
  格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。  
   
  `state`  
- 根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。  
+ 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。  
   
  `ptm`  
  指向年份資訊儲存位置的指標。  
@@ -582,7 +583,7 @@ iter_type get_date(iter_type first,
  格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。  
   
  `state`  
- 根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。  
+ 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。  
   
  `ptm`  
  指向日期資訊儲存位置的指標。  
@@ -760,7 +761,7 @@ iter_type get_time(iter_type first,
  未使用。  
   
  `state`  
- 根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。  
+ 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。  
   
  `ptm`  
  指向日期資訊儲存位置的指標。  
@@ -910,7 +911,7 @@ iter_type get_year(iter_type first,
  格式旗標，設定時表示可以省略貨幣符號。否則，一定要有貨幣符號。  
   
  `state`  
- 根據作業是否成功，將適當的位元遮罩元素設定為資料流狀態。  
+ 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。  
   
  `ptm`  
  指向年份資訊儲存位置的指標。  
@@ -996,7 +997,7 @@ explicit time_get(size_t refs = 0);
   
  建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `refs`) 將其基底物件初始化。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<locale>](../standard-library/locale.md)   
  [time_base 類別](../standard-library/time-base-class.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

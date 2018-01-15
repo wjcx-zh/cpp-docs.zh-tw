@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55bc43f1948f0e4d185d2cafe14b317d7df7e677
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad6361266ebf2f09b8f34d150de835b25c55720b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042：ODBC 驅動程式開發人員建議
 > [!NOTE]
@@ -114,7 +115,7 @@ ms.lasthandoff: 10/24/2017
   
  此外，如果要求封閉式鎖定時，呼叫**SQLSetPos** irow 1、 fRefresh FALSE 與 fLock **SQL_LCK_EXCLUSIVE**不會進行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

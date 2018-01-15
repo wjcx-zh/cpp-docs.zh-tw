@@ -73,11 +73,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaabdbbcab97366aa272e51f57d215b63a0161a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be9752822ee009ceddb735806d36ea3507242951
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 類別
 擴充 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 的功能，以支援建立索引標籤式視窗。  
@@ -88,17 +89,17 @@ ms.lasthandoff: 10/24/2017
 class CBaseTabbedPane : public CDockablePane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CBaseTabbedPane::CBaseTabbedPane`|預設建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Cbasetabbedpane:: Addtab](#addtab)|將新的索引標籤加入至索引標籤式窗格。|  
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|指定是否可以終結空的索引標籤式的窗格。|  
@@ -176,13 +177,13 @@ virtual BOOL AddTab(
  [in][out]`pNewBar`  
  若要加入窗格指標。 此指標可能會變成無效之後呼叫這個方法。 如需詳細資訊，請參閱＜備註＞一節。  
   
- [in] `bVisible`  
+ [輸入] `bVisible`  
  `TRUE`若要顯示 [] 索引標籤。否則， `FALSE`。  
   
- [in] `bSetActive`  
+ [輸入] `bSetActive`  
  `TRUE`讓 [] 索引標籤作用中的索引標籤。否則， `FALSE`。  
   
- [in] `bDetachable`  
+ [輸入] `bDetachable`  
  `TRUE`要中斷連結; 索引標籤否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -212,7 +213,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bUseTabIndexes`  
+ [輸入] `bUseTabIndexes`  
  由架構內部使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -249,7 +250,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bActiveTabOnly`  
+ [輸入] `bActiveTabOnly`  
  當您轉換的索引標籤式的窗格時，指定`TRUE`轉換使用中索引標籤。指定`FALSE`轉換在窗格中的所有索引標籤。  
   
 ##  <a name="detachpane"></a>Cbasetabbedpane:: Detachpane  
@@ -262,10 +263,10 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
  若要卸離 窗格的指標。  
   
- [in] `bHide`  
+ [輸入] `bHide`  
  布林值參數，指定卸離之後，架構是否隱藏窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -282,7 +283,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`與使用中索引標籤標題; 同步處理的索引標籤式的窗格的標題否則， `FALSE`。  
   
 ##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
@@ -303,7 +304,7 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uBarID`  
+ [輸入] `uBarID`  
  指定要尋找窗格的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -322,10 +323,10 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nTabNum`  
+ [輸入] `nTabNum`  
  指定要擷取的索引標籤的以零為起始的索引。  
   
- [in] `bGetWrappedBar`  
+ [輸入] `bGetWrappedBar`  
  `TRUE`要傳回而不是本身; 窗格 窗格的 基礎 （包裝） 視窗否則`FALSE`。 這只適用於衍生自窗格[CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -349,13 +350,13 @@ virtual BOOL FloatTab(
  [in][out]`pBar`  
  Float 窗格指標。  
   
- [in] `nTabID`  
+ [輸入] `nTabID`  
  指定 float 索引標籤的以零為起始的索引。  
   
- [in] `dockMethod`  
+ [輸入] `dockMethod`  
  指定要用來讓窗格浮動方法。 如需詳細資訊，請參閱＜備註＞一節。  
   
- [in] `bHide`  
+ [輸入] `bHide`  
  `TRUE`若要隱藏窗格之前浮點數;否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -387,7 +388,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTabNum`  
+ [輸入] `iTabNum`  
  整數的參考。 這個方法會寫入第一個顯示索引標籤的以零為起始的索引至這個參數，則為-1 如果未顯示索引標籤上找到。  
   
 ### <a name="return-value"></a>傳回值  
@@ -434,7 +435,7 @@ virtual void GetPaneList(
  [輸出] `lst`  
  A`CObList`填入索引標籤式窗格中所包含的窗格。  
   
- [in] `pRTCFilter`  
+ [輸入] `pRTCFilter`  
  如果不是`NULL`，傳回的清單包含屬於指定的執行階段類別的窗格。  
   
 ##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
@@ -540,7 +541,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bAutoDestroy`  
+ [輸入] `bAutoDestroy`  
  `TRUE`如果以動態方式建立索引標籤式的窗格，而且您不會控制其存留期。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -558,16 +559,16 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
  若要顯示或隱藏窗格指標。  
   
- [in] `bShow`  
+ [輸入] `bShow`  
  `TRUE`若要顯示窗格。`FALSE`隱藏窗格。  
   
- [in] `bDelay`  
+ [輸入] `bDelay`  
  `TRUE`若要延遲的調整 索引標籤的版面配置。否則， `FALSE`。  
   
- [in] `bActivate`  
+ [輸入] `bActivate`  
  `TRUE`讓 [] 索引標籤作用中的索引標籤。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -600,16 +601,16 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bMode`  
+ [輸入] `bMode`  
  `TRUE`若要啟用自動隱藏模式。`FALSE`啟用一般停駐的模式。  
   
- [in] `dwAlignment`  
+ [輸入] `dwAlignment`  
  指定要建立 [自動隱藏] 窗格的對齊方式。 如需可能值的清單，請參閱[CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)。  
   
  [in][out]`pCurrAutoHideBar`  
  目前的自動隱藏工具列指標。 可以是`NULL`。  
   
- [in] `bUseTimer`  
+ [輸入] `bUseTimer`  
  指定是否要使用的自動隱藏效果，當使用者切換窗格為 自動隱藏模式，或是立即隱藏窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -622,7 +623,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
   
  呼叫這個方法來以程式設計方式切換到 自動隱藏模式的索引標籤式的窗格。 必須停駐於主框架視窗窗格 ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider)必須傳回的有效指標[CPaneDivider](../../mfc/reference/cpanedivider-class.md))。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)

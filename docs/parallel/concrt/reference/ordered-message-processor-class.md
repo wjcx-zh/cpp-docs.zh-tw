@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e816c6c837dfd4b7602ce7d683e0ba321b90f27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b97d0003469acbe307b75b3278c8821628e333d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="orderedmessageprocessor-class"></a>ordered_message_processor 類別
 `ordered_message_processor` 是 `message_processor`，可讓訊息區塊按照接收順序處理訊息。  
@@ -44,24 +45,24 @@ class ordered_message_processor : public message_processor<T>;
  `T`  
  處理器所處理之訊息的裝載類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`type`|類型別名`T`。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ordered_message_processor](#ctor)|建構 `ordered_message_processor` 物件。|  
 |[~ ordered_message_processor 解構函式](#dtor)|終結`ordered_message_processor`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[async_send](#async_send)|非同步訊息排入佇列，並開始處理工作中，如果這已經不做。 (覆寫[message_processor:: async_send](message-processor-class.md#async_send)。)|  
 |[初始化](#initialize)|初始化`ordered_message_processor`與適當的回呼函式、 排程器和排程群組的物件。|  
@@ -69,9 +70,9 @@ class ordered_message_processor : public message_processor<T>;
 |[sync_send](#sync_send)|同步訊息排入佇列，並開始處理工作中，如果這已經不做。 (覆寫[message_processor:: sync_send](message-processor-class.md#sync_send)。)|  
 |[等候](#wait)|處理器專屬微調等候中之訊息區塊解構函式用來確定所有非同步處理工作已完成，然後再終結區塊的時間。 (覆寫[message_processor:: wait](message-processor-class.md#wait)。)|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[process_incoming_message](#process_incoming_message)|以非同步方式呼叫的處理函式。 它會從佇列取出訊息，並開始處理它們。 (覆寫[message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message)。)|  
   
@@ -185,5 +186,5 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 virtual void wait();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

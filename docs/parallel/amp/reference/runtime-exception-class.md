@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffc18357c4c10eec4fde900cda001cd0d3528680
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 類別
 C + + Accelerated Massive Parallelism (AMP) 程式庫中的例外狀況的基底類型。  
@@ -34,25 +35,25 @@ C + + Accelerated Massive Parallelism (AMP) 程式庫中的例外狀況的基底
 class runtime_exception : public std::exception;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[runtime_exception 建構函式](#ctor)|初始化 `runtime_exception` 類別的新執行個體。|  
 |[~ runtime_exception 解構函式](#dtor)|終結`runtime_exception`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[get_error_code](#runtime_exception__get_error_code)|傳回造成例外狀況的錯誤碼。|  
 
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|將指定的內容複製`runtime_exception`成這一個物件。|  
   
@@ -135,5 +136,5 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
   
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

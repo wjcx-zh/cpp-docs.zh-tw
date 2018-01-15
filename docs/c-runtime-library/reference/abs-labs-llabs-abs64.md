@@ -47,11 +47,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04c06a172485525105c1e49de88855273984e145
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64c09dc8c8ce1ce5493ac4b2515c6b0be2910627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
 計算引數的絕對值。  
@@ -106,7 +107,7 @@ __int64 _abs64(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的 C 標頭|必要的 C++ 標頭|  
+|常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|  
 |-------------|-----------------------|---------------------------|  
 |`abs`, `labs`, `llabs`|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|  
 |`_abs64`|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|  
@@ -170,7 +171,7 @@ Microsoft implementation-specific results:
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [_cabs](../../c-runtime-library/reference/cabs.md)   

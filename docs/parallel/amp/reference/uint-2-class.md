@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,37 +33,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60d3379da90611fe51b5ebb3bc6cdc2dbf4968d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint2-class"></a>uint_2 類別
-表示兩個不帶正負號整數的短向量。  
+表示短向量的兩個不帶正負號的整數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -72,7 +55,7 @@ ms.lasthandoff: 03/17/2017
 class uint_2;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -105,19 +88,19 @@ class uint_2;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |uint_2::operator-||  
 |uint_2::operator %=||  
-|uint_2::operator = i||  
+|uint_2::operator （& a) =||  
 |uint_2::operator * =||  
 |uint_2::operator / =||  
 |uint_2::operator ^ =||  
-|uint_2::operator | =||  
+|uint_2::operator &#124; =||  
 |uint_2::operator ~||  
 |uint_2::operator + +||  
 |uint_2::operator + =||  
-|uint_2::operator\<=||  
+|uint_2::operator <\<=||  
 |uint_2::operator =||  
 |uint_2::operator =||  
 |uint_2::operator >> =||  
@@ -145,9 +128,9 @@ class uint_2;
  `uint_2`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_short_vectors.h  
+ **標頭：** amp_short_vectors.h  
   
- **命名空間︰** concurrency:: graphics  
+ **命名空間：** concurrency:: graphics  
   
 ##  <a name="ctor"></a>uint_2 
 
@@ -218,6 +201,5 @@ explicit inline uint_2(
 static const int size = 2;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
-

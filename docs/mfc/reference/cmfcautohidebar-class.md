@@ -49,11 +49,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 925396faea529f2c8123f869b465e2aa4fdd4fea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fdf8ae6346335b54e22170d4397ac95e8918470
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。  
@@ -65,17 +66,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCAutoHideBar : public CPane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::CMFCAutoHideBar](#cmfcautohidebar)||  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||  
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(覆寫 `CPane::AllowShowOnPaneMenu`。)|  
@@ -94,7 +95,7 @@ class CMFCAutoHideBar : public CPane
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCAutoHideBar::m_nShowAHWndDelay](#m_nshowahwnddelay)|當使用者將滑鼠游標置於目前的時間間隔[CMFCAutoHideButton 類別](../../mfc/reference/cmfcautohidebutton-class.md)和目前的架構時顯示相關聯的視窗。|  
   
@@ -136,10 +137,10 @@ CMFCAutoHideButton* AddAutoHideWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pAutoHideWnd`  
+ [輸入] `pAutoHideWnd`  
  您要隱藏的視窗。  
   
- [in] `dwAlignment`  
+ [輸入] `dwAlignment`  
  指定自動隱藏按鈕與應用程式視窗之對齊方式的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -176,8 +177,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bStretch`  
- [in] `bHorz`  
+ [輸入] `bStretch`  
+ [輸入] `bHorz`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -207,13 +208,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszClassName`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `nID`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [輸入] `lpszClassName`  
+ [輸入] `dwStyle`  
+ [輸入] `rect`  
+ [輸入] `pParentWnd`  
+ [輸入] `nID`  
+ [輸入] `dwControlBarStyle`  
+ [輸入] `pContext`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -261,7 +262,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `CPoint`  
+ [輸入] `CPoint`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -305,7 +306,7 @@ void SetRecentVisibleState(BOOL bState);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bState`  
+ [輸入] `bState`  
   
 ### <a name="remarks"></a>備註  
   
@@ -342,10 +343,10 @@ virtual CSize StretchPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nLength`  
+ [輸入] `nLength`  
  這是基底實作中未使用的值。 在衍生實作中，這個值可用來表示已調整窗格的長度。  
   
- [in] `bVert`  
+ [輸入] `bVert`  
  這是基底實作中未使用的值。 在衍生實作中，使用`TRUE`以處理的情況，其中自動隱藏列垂直摺疊，和`FALSE`其中自動隱藏列是水平摺疊的案例。  
   
 ### <a name="return-value"></a>傳回值  
@@ -376,7 +377,7 @@ void UpdateVisibleState();
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CPane 類別](../../mfc/reference/cpane-class.md)   

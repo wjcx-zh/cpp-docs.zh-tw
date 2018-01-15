@@ -51,11 +51,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50250a1f8716ba4caac7f57b3ae7938286a2aec6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c42a0ba40797312a2108a288fecdea55c6873f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage 類別
 表示屬性工作表的個別頁面，也稱為索引標籤對話方塊。  
@@ -66,17 +67,17 @@ ms.lasthandoff: 10/24/2017
 class CPropertyPage : public CDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPropertyPage::CPropertyPage](#cpropertypage)|建構 `CPropertyPage` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPropertyPage::CancelToClose](#canceltoclose)|變更為 關閉，確定 按鈕，並停用取消 5d; 按鈕之後發生無法復原變更的強制回應屬性工作表頁。|  
 |[CPropertyPage::Construct](#construct)|建構 `CPropertyPage` 物件。 使用`Construct`如果您想要在執行階段，指定您的參數，或如果您使用的陣列。|  
@@ -96,7 +97,7 @@ class CPropertyPage : public CDialog
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](http://msdn.microsoft.com/library/windows/desktop/bb774548)結構。 提供基本的屬性頁參數的存取權。|  
   
@@ -524,7 +525,7 @@ void SetModified(BOOL bChanged = TRUE);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#127](../../mfc/codesnippet/cpp/cpropertypage-class_17.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)   
  [MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)   
  [MFC 範例 PROPDLG](../../visual-cpp-samples.md)   

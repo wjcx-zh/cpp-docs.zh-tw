@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdc475e674a1316f5e1441adadb6add65a52df5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d45d1cd6b0b0e4d12ee9a5567ee172cb7e772c3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atomicflag-structure"></a>atomic_flag 結構
 描述以不可部分完成方式設定和清除 `bool` 旗標的物件。 不可部分完成的旗標之作業永遠是無鎖定。  
@@ -32,11 +33,11 @@ ms.lasthandoff: 10/24/2017
 struct atomic_flag;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[clear](#clear)|將已儲存的旗標設定為 `false`。|  
 |[test_and_set](#test_and_set)|將已儲存的旗標設定為 `true` 並傳回初始旗標值。|  
@@ -76,7 +77,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 ### <a name="return-value"></a>傳回值  
  儲存於 `*this` 之旗標的初始值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<atomic>](../standard-library/atomic.md)
 
 

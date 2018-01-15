@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37e43514c116f93841b1479103a6f29ec708bfa0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea92126cf57bf122ebd720d6bd8e6f12a98f65ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>DHtmlUrlEventMapEntry 結構
 `DHtmlUrlEventMapEntry`結構提供多個 URL 事件對應支援。  
@@ -44,6 +45,6 @@ const DHtmlEventMapEntry *pEventMap;
 ## <a name="requirements"></a>需求  
  **標頭：** afxdhtml.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

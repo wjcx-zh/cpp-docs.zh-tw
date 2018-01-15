@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 337bca0c446faa36b54e2b033f503f21db4af71d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3206fa7f67fcd676b1490c6fad3be9a03c1ea40
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 **Microsoft 特定的**  
@@ -40,11 +41,11 @@ void __svm_invlpga(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `Va`|要使頁面的虛擬位址。|  
-|[in] `ASID`|位址空間 (ASID) 頁面的識別碼失效。|  
+|[輸入] `Va`|要使頁面的虛擬位址。|  
+|[輸入] `ASID`|位址空間 (ASID) 頁面的識別碼失效。|  
   
 ## <a name="remarks"></a>備註  
- `__svm_invlpga`函數即相當於`INVLPGA`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746)站台。  
+ `__svm_invlpga`函數即相當於`INVLPGA`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
   
 ## <a name="requirements"></a>需求  
   
@@ -54,7 +55,7 @@ void __svm_invlpga(
   
  **標頭檔** \<intrin.h >  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

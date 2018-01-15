@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtIsMemoryBlock
+apiname: _CrtIsMemoryBlock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ec6bea115ba509c7275a2d220cf4b10c6faecae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 739a3625f264492ec59d3b5e9f9fef67b3c20df7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 確認指定的記憶體區塊位於本機堆積，且具有有效的偵錯堆積區塊類型識別項 (僅限偵錯版本)。  
@@ -58,10 +55,10 @@ int _CrtIsMemoryBlock(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `userData`  
+ [輸入] `userData`  
  要確認之記憶體區塊開頭的指標。  
   
- [in] `size`  
+ [輸入] `size`  
  指定區塊的大小 (以位元組為單位)。  
   
  [輸出] `requestNumber`  
@@ -88,15 +85,15 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
 &filename, &linenumber ) );  
 ```  
   
- 如需如何搭配其他偵錯函式和巨集使用 `_CrtIsMemoryBlock` 的詳細資訊，請參閱[報告巨集](/visualstudio/debugger/macros-for-reporting)。 如需如何在偵錯版本的基底堆積中配置、初始化和管理記憶體區塊的資訊，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。  
+ 如需如何搭配其他偵錯函式和巨集使用 `_CrtIsMemoryBlock` 的詳細資訊，請參閱[報告巨集](/visualstudio/debugger/macros-for-reporting)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_CrtIsMemoryBlock`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -104,5 +101,5 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
 ## <a name="example"></a>範例  
  請參閱 [_CrtIsValidHeapPointer](../../c-runtime-library/reference/crtisvalidheappointer.md) 主題的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

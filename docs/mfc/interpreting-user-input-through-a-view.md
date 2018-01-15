@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 88308000e35853a2e2159fa33a0629a3def7a7a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 263afe7b444722174d1787594f869087d606a235
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpreting-user-input-through-a-view"></a>透過檢視解譯使用者輸入
 檢視的其他成員函式處理，並解譯所有使用者輸入。 您通常會在您要處理的檢視類別定義訊息處理常式成員函式：  
@@ -48,6 +49,6 @@ ms.lasthandoff: 10/24/2017
   
  您的檢視可能也會處理某些功能表命令，例如剪下、 複製、 貼上，或刪除選取的資料使用剪貼簿的 [編輯] 功能表命令。 這類處理常式會呼叫某些剪貼簿 相關的成員函式類別的`CWnd`傳送選取的資料項目或從剪貼簿。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用檢視](../mfc/using-views.md)
 

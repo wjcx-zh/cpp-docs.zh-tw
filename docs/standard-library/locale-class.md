@@ -32,11 +32,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f53f9a32da84c450825fc61b8316593e1041784c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0227c6bd088337a4ad3024faebed2c72d870d360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale-class"></a>locale 類別
 描述地區設定物件的類別，將特定文化特性資訊封裝做為共同定義特定當地語系化環境的一組 facet。  
@@ -713,7 +714,7 @@ locales loc1 (German_Germany.1252)
  and loc3 (English_United States.1252) are not equal.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<locale>](../standard-library/locale.md)   
  [字碼頁](../c-runtime-library/code-pages.md)   
  [地區設定名稱、語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   

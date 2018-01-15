@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DTextLayout::SetFontFamilyName
 - AFXRENDERTARGET/CD2DTextLayout::SetLocaleName
 - AFXRENDERTARGET/CD2DTextLayout::m_pTextLayout
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DTextLayout [MFC], CD2DTextLayout
 - CD2DTextLayout [MFC], Create
@@ -37,16 +35,16 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9dc216014fb88ac7995b9283ab59d0c011f3184f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 3d1307eb4f747fa06a21d9b2b8fd65dec2defbe5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout 類別
 IDWriteTextLayout 包裝函式。  
@@ -57,18 +55,18 @@ IDWriteTextLayout 包裝函式。
 class CD2DTextLayout : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|建構 CD2DTextLayout 物件。|  
 |[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|解構函式。 D2D 文字配置物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DTextLayout::Create](#create)|建立 CD2DTextLayout。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
 |[CD2DTextLayout::Destroy](#destroy)|CD2DTextLayout 物件已遭終結。 (覆寫[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|  
@@ -82,13 +80,13 @@ class CD2DTextLayout : public CD2DResource;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|傳回 IDWriteTextLayout 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|IDWriteTextLayout 指標。|  
   
@@ -277,6 +275,5 @@ BOOL SetLocaleName(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b35791f67b712139210f383a0f9ef605efbacd0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9c3d9fc9afb7a6f65be8ace5fec085db9bd92191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncuuid"></a>async_uuid
 指定指示 MIDL 編譯器定義 COM 介面的同步和非同步版本的 UUID。  
@@ -67,6 +70,6 @@ __interface ICustom {
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [介面屬性](../windows/interface-attributes.md)   

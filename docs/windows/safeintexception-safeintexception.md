@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d9a1e2666aef593cde385f121065397226bad9d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 85bf6bae5ba07154bdeb807171dd2d3df61d0774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
 建立 `SafeIntException` 物件。  
@@ -38,7 +41,7 @@ SafeIntException(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `code`  
+ [輸入] `code`  
  描述發生之錯誤的列舉的資料值。  
   
 ## <a name="remarks"></a>備註  
@@ -55,7 +58,7 @@ SafeIntException(
   
  **命名空間：** msl::utilities  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeIntException 類別](../windows/safeintexception-class.md)   
  [SafeInt 類別](../windows/safeint-class.md)

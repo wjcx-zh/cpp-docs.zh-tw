@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_bValue
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_gValue
 - AFXANIMATIONCONTROLLER/CAnimationColor::m_rValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationColor [MFC], CAnimationColor
 - CAnimationColor [MFC], AddTransition
@@ -39,16 +37,16 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd6ec3b6d8ee6a37fbe189ff70a2a633cfda9c8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d380a2ea464737e29e32c9a79622aed7f1dada15
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 類別
 實作紅色、綠色和藍色元件可以動畫顯示的色彩功能。  
@@ -59,17 +57,17 @@ ms.lasthandoff: 10/09/2017
 class CAnimationColor : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationColor::CAnimationColor](#canimationcolor)|多載。 會建構一個動畫色彩物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationColor::AddTransition](#addtransition)|新增轉換紅色、 綠色和藍色元件。|  
 |[CAnimationColor::GetB](#getb)|提供存取權 CAnimationVariable 代表藍色元件。|  
@@ -79,22 +77,22 @@ class CAnimationColor : public CAnimationBaseObject;
 |[CAnimationColor::GetValue](#getvalue)|傳回目前的值。|  
 |[CAnimationColor::SetDefaultValue](#setdefaultvalue)|設定預設值。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|將封裝的動畫變數放入清單。 (覆寫[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationColor::operator COLORREF](#operator_colorref)||  
 |[CAnimationColor::operator =](#operator_eq)|將色彩指派給 CAnimationColor。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|表示動畫色彩的藍色元件之封裝的動畫變數。|  
 |[CAnimationColor::m_gValue](#m_gvalue)|表示動畫色彩的綠色元件之封裝的動畫變數。|  
@@ -302,6 +300,5 @@ void SetDefaultValue(COLORREF color);
 ### <a name="remarks"></a>備註  
  使用此函式設動畫物件的預設值。 這個方法會將預設值指派給動畫色彩的色彩元件。 如果尚未建立，它也會重建基礎 COM 物件。 如果您已訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件時，您需要重新啟用這些事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

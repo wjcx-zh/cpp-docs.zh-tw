@@ -1,46 +1,47 @@
 ---
-title: "inline_recursion | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "inline_recursion_CPP"
-  - "vc-pragma.inline_recursion"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inline_recursion pragma"
-  - "Pragma, inline_recursion"
+title: "inline_recursion |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- inline_recursion_CPP
+- vc-pragma.inline_recursion
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, inline_recursion
+- inline_recursion pragma
 ms.assetid: cfef5791-63b7-45ac-9574-623747b9b9c9
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d749753e7eaf81284de72314f5f940fd2790962c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# inline_recursion
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="inlinerecursion"></a>inline_recursion
 控制直接或相互遞迴函式呼叫的內嵌展開。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 #pragma inline_recursion( [{on | off}] )  
 ```  
   
-## 備註  
- 使用這個 pragma 控制標記為 [inline](../misc/inline-inline-forceinline.md) 和 [\_\_inline](../misc/inline-inline-forceinline.md) 的函式，或是編譯器會自動在 \/Ob2 選項底下展開的函式。  使用這個 pragma 必須搭配 [\/Ob](../build/reference/ob-inline-function-expansion.md) 編譯器選項設定 \(1 或 2\)。  `inline_recursion` 的預設狀態是關閉的。  這個 pragma 會在 pragma 出現後的第一個函式呼叫中生效，而且不會影響該函式的定義。  
+## <a name="remarks"></a>備註  
+ 使用這個 pragma 控制函式標示為[內嵌](../cpp/inline-functions-cpp.md)和[__inline](../cpp/inline-functions-cpp.md)或編譯器會自動在 /Ob2 選項底下展開的函式。 使用這個 pragma 必須[須遵循 /Ob](../build/reference/ob-inline-function-expansion.md)編譯器選項設定為 1 或 2。 `inline_recursion` 的預設狀態是關閉的。 這個 pragma 會在 pragma 出現後的第一個函式呼叫中生效，而且不會影響該函式的定義。  
   
- `inline_recursion` pragma 控制遞迴函式的展開方式。  如果 `inline_recursion` 已關閉，且內嵌函式呼叫其本身 \(直接或間接\)，則該函式只會展開一次。  如果 `inline_recursion` 已開啟，則該函式會展開多次，直到達到以 [inline\_depth](../preprocessor/inline-depth.md) pragma 設定的值 \(`inline_depth` pragma 定義之遞迴函式的預設值\) 或容量限制為止。  
+ `inline_recursion` pragma 控制遞迴函式的展開方式。 如果 `inline_recursion` 已關閉，且內嵌函式呼叫其本身 (直接或間接)，則該函式只會展開一次。 如果`inline_recursion`函式會展開多次，直到達到設定的值為 on， [inline_depth](../preprocessor/inline-depth.md) pragma，遞迴函式所定義的預設值`inline_depth`pragma 或容量限制.  
   
-## 請參閱  
- [Pragma 指示詞和 \_\_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline\_depth](../preprocessor/inline-depth.md)   
- [\/Ob \(內嵌函式展開\)](../build/reference/ob-inline-function-expansion.md)
+## <a name="see-also"></a>請參閱  
+ [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ [inline_depth](../preprocessor/inline-depth.md)   
+ [/Ob (內嵌函式展開)](../build/reference/ob-inline-function-expansion.md)

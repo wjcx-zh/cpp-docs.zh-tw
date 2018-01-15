@@ -13,11 +13,14 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c3da3529d9f2bc0bb45119c6850f14afe794051
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 876cab344f1177000f63740ca6c33bc1db1afefe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enum-class--c-component-extensions"></a>enum class (C++ 元件擴充功能)
 在命名空間範圍內宣告列舉，這是使用者定義的類型，由一組稱為列舉值的具名常數所組成。  
@@ -64,7 +67,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
  如需詳細資訊與範例，請參閱 [列舉](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)。  
   
- 請注意，如果定義列舉程式值的常數運算式無法以 *基礎類型*表示，編譯器將會發出錯誤訊息。  不過，編譯器不會報告不適合基礎類型之值的錯誤。 例如：  
+ 請注意，如果定義列舉程式值的常數運算式無法以 *基礎類型*表示，編譯器將會發出錯誤訊息。  不過，編譯器不會報告不適合基礎類型之值的錯誤。 例如:   
   
 -   如果 *基礎類型* 是數值，而列舉程式指定了該類型的最大值，則無法表示下一個隱含定義之列舉的值。  
   
@@ -230,5 +233,5 @@ convert to int: 1
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

@@ -32,11 +32,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7599a7ca1c486de453fb3404fa69cab8a09e2d0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8702a92e1c9eb44f2221d3be9fe38ed2c685f13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="edit-control-handlers"></a>編輯控制處理常式
 下列的對應項目對應至函式原型。  
@@ -52,6 +53,6 @@ ms.lasthandoff: 10/24/2017
 |ON_EN_UPDATE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
 |ON_EN_VSCROLL (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [訊息對應](../../mfc/reference/message-maps-mfc.md)
 

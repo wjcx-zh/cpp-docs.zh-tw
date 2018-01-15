@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32cb9a76a9415fc051faf11ecd3268d461297450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b654a4f27ca78cda680a7ceb69f0c6e2ea0db9a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 列舉
 指定 GetResults() 方法所傳回的結果類型。  
@@ -30,11 +33,11 @@ ms.lasthandoff: 10/24/2017
 enum AsyncResultType;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`MultipleResults`|多個結果之間開始狀態，並在呼叫 close （） 之前漸進式呈現的一組。|  
 |`SingleResult`|單一結果，會顯示完整的事件發生之後。|  
@@ -44,5 +47,5 @@ enum AsyncResultType;
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

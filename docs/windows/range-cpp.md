@@ -1,33 +1,33 @@
 ---
-title: "range (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range attribute"
+title: "範圍 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.range
+dev_langs: C++
+helpviewer_keywords: range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b95b1bfd093a12bca5398c266d6a7c8236140105
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# range (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定引數，或是在 run time 設定其值的欄位的允許值的範圍。  
+# <a name="range-c"></a>range (C++)
+指定引數或在執行階段設定其值的欄位的允許值的範圍。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -37,17 +37,17 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 參數  
- *低*  
- 低範圍值。  
+#### <a name="parameters"></a>參數  
+ *low*  
+ 下限範圍值。  
   
- *高*  
- 高範圍值。  
+ *high*  
+ 上限範圍值。  
   
-## 備註  
- **範圍** C\+\+ 屬性具有相同的功能，為 [範圍](http://msdn.microsoft.com/library/windows/desktop/aa367151) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **範圍**c + + 屬性具有相同的功能[範圍](http://msdn.microsoft.com/library/windows/desktop/aa367151)MIDL 屬性。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_range.cpp  
@@ -63,22 +63,21 @@ __interface ICustom {
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|介面方法，介面參數|  
+|**適用於**|介面方法的介面參數|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [方法屬性](../windows/method-attributes.md)   
+ [參數屬性](../windows/parameter-attributes.md)   
+ [資料成員屬性](../windows/data-member-attributes.md)   

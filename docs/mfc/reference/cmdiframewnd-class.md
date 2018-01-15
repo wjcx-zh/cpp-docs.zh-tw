@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1968d34302cea355f174c96fb51b5bec3941fcb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc40ac38d4f74848448b26284ad225faad04864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 類別
 提供 Windows 多重文件介面 (MDI) 框架視窗的功能，以及管理視窗的成員。  
@@ -60,17 +61,17 @@ ms.lasthandoff: 10/24/2017
 class CMDIFrameWnd : public CFrameWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|建構 `CMDIFrameWnd`。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMDIFrameWnd::CreateClient](#createclient)|建立的 Windows **MDICLIENT**這個視窗`CMDIFrameWnd`。 由呼叫`OnCreate`成員函式`CWnd`。|  
 |[CMDIFrameWnd::CreateNewChild](#createnewchild)|建立新的子視窗。|  
@@ -119,7 +120,7 @@ class CMDIFrameWnd : public CFrameWnd
   
 -   MDI 框架視窗也會有的實作**ID_WINDOW_NEW**，它會建立新的框架及目前的文件上的檢視。 應用程式可以覆寫以自訂 MDI 視窗處理這些預設命令實作。  
   
- 不使用 c + +**刪除**終結框架視窗的運算子。 請改用 `CWnd::DestroyWindow` 。 `CFrameWnd`實作`PostNcDestroy`當視窗終結時，將會刪除 c + + 物件。 當使用者關閉框架視窗時，預設值`OnClose`處理常式會呼叫`DestroyWindow`。  
+ 不使用 c + +**刪除**終結框架視窗的運算子。 請改用 `CWnd::DestroyWindow`。 `CFrameWnd`實作`PostNcDestroy`當視窗終結時，將會刪除 c + + 物件。 當使用者關閉框架視窗時，預設值`OnClose`處理常式會呼叫`DestroyWindow`。  
   
  如需有關`CMDIFrameWnd`，請參閱[框架視窗](../../mfc/frame-windows.md)。  
   
@@ -412,7 +413,7 @@ void MDITile(int nType);
 ### <a name="example"></a>範例  
  請參閱範例的[CMDIFrameWnd::MDICascade](#mdicascade)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 MDI](../../visual-cpp-samples.md)   
  [MFC 範例 MDIDOCVW](../../visual-cpp-samples.md)   
  [MFC 範例 SNAPVW](../../visual-cpp-samples.md)   

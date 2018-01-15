@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51c48e486eb3636d2151fb52ba301b1057d5f3e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>例外狀況：從 MFC 例外狀況巨集轉換
 這是進階的主題。  
@@ -119,6 +120,6 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱[例外狀況： 使用 MFC 巨集和 c + + 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [例外狀況處理](../mfc/exception-handling-in-mfc.md)
 

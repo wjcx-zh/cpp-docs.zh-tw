@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c56eec9249f073f27b063778df460ef7347a6e7b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16338888d64155ddeab188159030ac060ebb2b17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 定義容器範本類別 set 和 multiset，以及其支援的範本。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="operators"></a>運算子  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="specialized-template-functions"></a>特製化樣板函式  
   
-|set 版本|multiset 版本|說明|  
+|set 版本|multiset 版本|描述|  
 |-----------------|----------------------|-----------------|  
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|交換兩個 set 或 multiset 的項目。|  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
 |[set 類別](../standard-library/set-class.md)|用於在集合中儲存和擷取資料，集合中包含的項目值是唯一的，而且這些項目值做為索引鍵值，據此自動排序資料。|  
 |[multiset 類別](../standard-library/multiset-class.md)|用於在集合中儲存和擷取資料，集合中包含的項目值不須是唯一的，而且這些項目值做為索引鍵值，據此自動排序資料。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

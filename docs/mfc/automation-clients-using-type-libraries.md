@@ -24,11 +24,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 696765451079301e2a25cc831c34e41802dd33f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b63f6d05415b163e523589756ba2eb67ab2c61a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-clients-using-type-libraries"></a>Automation 用戶端：使用類型程式庫
 Automation 用戶端必須具有伺服器物件的屬性和方法的相關資訊，如果用戶端管理伺服器的物件。 屬性有資料類型。方法通常會傳回值，而且接受參數。 用戶端需要所有這些資料類型的相關資訊，才能以靜態方式將繫結至該伺服器物件類型。  
@@ -66,6 +67,6 @@ Automation 用戶端必須具有伺服器物件的屬性和方法的相關資訊
   
      精靈接著將要撰寫的程式碼，為您的分派類別，使用指定的類別和檔案名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Automation 用戶端](../mfc/automation-clients.md)
 

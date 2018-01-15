@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _futime
 - futime64
 - _futime64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _futime function
 - futime32 function
@@ -41,16 +39,16 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 204e87183a8df076da8443ee4547825948fb5a2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 03eda993cbc087d5dc39f2c9d0f985ac5db48099
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
 設定已開啟之檔案的修改時間。  
@@ -89,7 +87,7 @@ int _futime64(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|選擇性標頭|  
+|功能|必要的標頭|選擇性標頭|  
 |--------------|---------------------|---------------------|  
 |`_futime`|\<sys/utime.h>|\<errno.h>|  
 |`_futime32`|\<sys/utime.h>|\<errno.h>|  
@@ -161,5 +159,5 @@ Volume in drive Z has no label.
 File time modified  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)

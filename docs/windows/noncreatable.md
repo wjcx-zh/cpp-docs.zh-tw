@@ -1,32 +1,33 @@
 ---
-title: "noncreatable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.noncreatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "noncreatable attribute"
+title: "noncreatable |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.noncreatable
+dev_langs: C++
+helpviewer_keywords: noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bb9f67b4efac28a1cacd6301c8ca849246f9a481
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# noncreatable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-定義無法單獨執行個體化的物件。  
+# <a name="noncreatable"></a>noncreatable
+定義本身無法具現化的物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,12 +35,12 @@ caps.handback.revision: 9
   
 ```  
   
-## 備註  
- **變成無法建立** C\+\+ 屬性具有相同的功能，為 [變成無法建立](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 屬性，會自動加入產生通過。編譯器的 IDL 檔。  
+## <a name="remarks"></a>備註  
+ **Noncreatable** c + + 屬性具有相同的功能[noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) MIDL 屬性並自動傳遞至所產生。編譯器的 IDL 檔案。  
   
- 使用 ATL 專案中使用這個屬性時，便會變更屬性的行為。  除了上述的行為，屬性也會插入 [OBJECT\_ENTRY\_NON\_CREATEABLE\_EX\_AUTO](../Topic/OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO.md) 巨集。  此巨集表示 ATL 無法從外部建立的物件。  
+ 使用 ATL 專案中使用這個屬性時，屬性的行為變更。 除了上述的行為，此屬性也會插入[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)巨集。 這個巨集指示 ATL 物件無法從外部建立。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_noncreatable.cpp  
@@ -59,20 +60,19 @@ class CMyClass : public A
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**類別**，`struct`|  
+|**適用於**|**class**、 `struct`|  
 |**可重複**|否|  
-|**必要的屬性**|**coclass**|  
-|**無效的屬性**|None|  
+|**必要屬性**|**coclass**|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   

@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 8eb50d8e49b195ffb3322bb30a8f147c2f248273
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>使用含有 _MBCS 程式碼的 TCHAR.H 資料類型
 當資訊清單常數**_MBCS**是定義，在指定的一般文字常式對應至下列幾種常式的其中一個：  
@@ -75,5 +76,5 @@ ms.lasthandoff: 10/24/2017
   
      當您採用這個方法時，您必須小心確保使用適當的資料類型的字串引數和傳回值的字串。 您可以使用型別轉型來確保符合適當的型別，或者您可以使用**_TXCHAR**泛用文字資料類型。 **_TXCHAR**對應至輸入`char`SBCS 程式碼，但對應至輸入中`unsigned` `char` MBCS 程式碼中。 如需一般文字巨集的詳細資訊，請參閱[泛用文字對應](../c-runtime-library/generic-text-mappings.md)中*執行階段程式庫參考*。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)

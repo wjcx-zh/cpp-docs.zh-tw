@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89bccb4ce3803708d919f0778c49428c399a3b70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combinable-class"></a>combinable 類別
 `combinable<T>` 物件適用於提供資料的執行緒私用複本，在平行演算法期間執行無鎖定的執行緒-本機子運算。 在平行作業結尾處，可以將執行緒私用子運算合併於最終結果。 這個類別可以用來代替共用變數，而且如果該共用變數有許多爭用情形，則可能可以改進效能。  
@@ -42,18 +43,18 @@ class combinable;
  `T`  
  最後的合併結果的資料類型。 類型必須有複製建構函式和預設建構函式。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[可組合的類別](#ctor)|多載。 建構新`combinable`物件。|  
 |[~ combinable 解構函式](#dtor)|終結 `combinable` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[clear](#clear)|清除任何計算的中繼結果，從先前的使用方式。|  
 |[combine](#combine)|藉由呼叫提供的結合仿函式計算執行緒-本機子運算集中的最後一個值。|  
@@ -62,7 +63,7 @@ class combinable;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|將指派給`combinable`從另一個物件`combinable`物件。|  
   
@@ -190,5 +191,5 @@ combinable& operator= (const combinable& _Copy);
 ### <a name="return-value"></a>傳回值  
  此參考`combinable`物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

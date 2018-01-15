@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 29b161d889aefc55e818a16233212a55bdcb45de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6604ada6dc4d322011a835c03731f6a48be472f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 類別
 指定使用者調整視窗大小時，控制項在視窗中如何移動和調整大小。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 class CMFCDynamicLayout : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -52,7 +53,7 @@ class CMFCDynamicLayout : public CObject
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Cmfcdynamiclayout:: Additem](#additem)|將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。|  
 |[Cmfcdynamiclayout:: Adjust](#adjust)|將子視窗 (通常是控制項) 加入至動態配置管理員所控制的視窗清單。|  
@@ -75,7 +76,7 @@ class CMFCDynamicLayout : public CObject
   
 ## <a name="nested-types"></a>巢狀類型  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Cmfcdynamiclayout:: Movesettings 結構](#movesettings_structure)|為動態配置中控制項封裝移動資料。|  
 |[Cmfcdynamiclayout:: Sizesettings 結構](#sizesettings_structure)|為動態配置中的控制項封裝大小變更資料。|  
@@ -461,6 +462,6 @@ static SizeSettings SizeVertical(int nRatio);
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

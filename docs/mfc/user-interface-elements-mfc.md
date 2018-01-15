@@ -17,16 +17,17 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d323e32cf52530ab8f03c151ca2fa30cb5ebe42b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f32f1b1906dbcd0a653f6dfe0b3f573dd0836a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-elements-mfc"></a>使用者介面項目 (MFC)
 如需如何使用 Microsoft Foundation Class (MFC) 程式庫中建立您的應用程式的使用者介面的資訊，請參閱下列主題。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ActiveX 控制項](../mfc/activex-controls.md)  
  描述如何使用可重複使用的軟體元件為基礎的元件物件模型 (COM)，其支援各種不同的 OLE 功能，而且可以自訂以符合多個軟體需求  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f81e7c2e3f07074f451446d9ccc1796e1c393bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 594a23113159c7d4afa9e3119952b001f8ee7ed4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view 類別
 存取 writeonly 紋理。  
@@ -51,37 +52,37 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
  `_Rank`  
  紋理的陣序規範。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`scalar_type`||  
 |`value_type`|紋理中的項目類型。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[writeonly_texture_view 建構函式](#ctor)|初始化 `writeonly_texture_view` 類別的新執行個體。|  
 |[~ writeonly_texture_view 解構函式](#ctor)|終結`writeonly_texture_view`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[set](#set)|設定指定索引處的元素的值。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|複製指定`writeonly_texture_view`給這一個物件。|  
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[rank 常數](#rank)|取得的順位`writeonly_texture_view`物件。|  
   
@@ -169,5 +170,5 @@ writeonly_texture_view(
  `_Src`  
  用來建立紋理`writeonly_texture_view`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

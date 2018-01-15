@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_delay
 - AFXANIMATIONCONTROLLER/CDiscreteTransition::m_hold
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CDiscreteTransition [MFC], CDiscreteTransition
 - CDiscreteTransition [MFC], Create
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd4b1b7c868c13176d2cd99204b0bae1e2b9992d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 4c79d2afb95ad5be1ae2f79e02deaeb8309a748f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 類別
 封裝離散的轉換。  
@@ -45,23 +43,23 @@ ms.lasthandoff: 10/09/2017
 class CDiscreteTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDiscreteTransition::CDiscreteTransition](#cdiscretetransition)|建構離散的轉換物件並初始化其參數。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDiscreteTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDiscreteTransition::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|  
 |[CDiscreteTransition::m_delay](#m_delay)|所要依據的延遲時間的瞬間交換器的最終值的時間量。|  
@@ -137,6 +135,5 @@ UI_ANIMATION_SECONDS m_delay;
 UI_ANIMATION_SECONDS m_hold;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

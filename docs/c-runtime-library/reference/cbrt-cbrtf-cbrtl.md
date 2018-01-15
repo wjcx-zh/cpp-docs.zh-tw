@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,37 +28,22 @@ f1_keywords:
 - cbrtl
 - cbrt
 - cbrtf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cbrtl function
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3f336ef0f5b84f6e49e7f923c71769508c17efe7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9dd91b5ac59917e7f77cfb38faea96b03068b3e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 計算立方根。  
@@ -100,11 +84,11 @@ long double cbrtl(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`cbrt`, `cbrtf`, `cbrtl`|\<math.h>|\<cmath>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -130,7 +114,7 @@ int main( void )
 The cube root of -64.64 is -4.013289  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [exp、 expf，總管](../../c-runtime-library/reference/exp-expf.md)   
  [log、logf、log10、log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   

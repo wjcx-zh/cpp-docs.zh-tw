@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9c09137da32c7ef9d42f0302087379af922652f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-and-alignment-of-structures"></a>結構的儲存和對齊
 **Microsoft 特定的**  
@@ -47,7 +48,7 @@ min( n, sizeof( item ) )
   
  Microsoft C 編譯器的位元欄位預設大小為 **long**。 結構成員會依類型的大小或 /Zp[*n*] 的大小 (取兩者中較小者) 來對齊。 預設大小為 4。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構宣告](../c-language/structure-declarations.md)

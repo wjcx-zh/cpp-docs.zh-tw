@@ -1,64 +1,63 @@
 ---
-title: "conform | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "conform_CPP"
-  - "vc-pragma.conform"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "conform pragma"
-  - "forScope conform pragma"
-  - "Pragma, conform"
+title: "符合 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- conform_CPP
+- vc-pragma.conform
+dev_langs: C++
+helpviewer_keywords:
+- conform pragma
+- forScope conform pragma
+- pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5f876c1b921a00c251010d22e2cdd000a405a651
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# conform
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**C\+\+ 專有的**  
+# <a name="conform"></a>conform
+**C + + 特定的**  
   
- 指定 [\/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 編譯器選項的執行階段行為。  
+ 指定的執行階段行為[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma conform(name [, show ] [, on | off ] [ [, push | pop ] [, identifier ] ] )  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *name*  
- 指定要修改的編譯器選項名稱。  唯一有效的 *name* 為 `forScope`。  
+ 指定要修改的編譯器選項名稱。 唯一有效*名稱*是`forScope`。  
   
- **show** \(選擇性\)  
- 在編譯期間透過警告訊息顯示 *name* \(true 或 false\) 的目前設定。  例如，`#pragma conform(forScope, show)`。  
+ **顯示**（選擇性）  
+ 會導致目前的設定*名稱*（true 或 false） 在編譯期間透過警告訊息會顯示。 例如，`#pragma conform(forScope, show)`。  
   
- **on, off**\(選擇性\)  
- 將 *name* 設定為 **on** 以啟用 [\/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) 編譯器選項。  預設值是 **off**。  
+ **開、 關**（選擇性）  
+ 設定*名稱*至**上**啟用[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。 預設值是**關閉**。  
   
- **push** \(選擇性\)  
- 將 *name* 目前的值推入至內部編譯器堆疊。  如果指定了 *identifier*，則可以指定 **on** 或 **off** 值，以便將 *name* 推入堆疊上。  例如，`#pragma conform(forScope, push, myname, on)`。  
+ **推入**（選擇性）  
+ 推播通知的目前值*名稱*至內部編譯器堆疊。 如果您指定*識別碼*，您可以指定**上**或**關閉**值*名稱*推入堆疊。 例如，`#pragma conform(forScope, push, myname, on)`。  
   
- **pop** \(選擇性\)  
- 將 *name* 的值設定為內部編譯器堆疊頂端的值，然後再從堆疊中推出。  如果是使用 **pop** 指定識別項，則會將其推回堆疊中，直到找到具有 *identifier* 的記錄，此記錄也會從堆疊推出，而堆疊中下一個記錄內的 *name* 值將會變成 *name* 的新值。  如果指定要推出的 *identifier* 並不存在於堆疊上的記錄中，則會忽略 **pop**。  
+ **pop** （選擇性）  
+ 設定的值*名稱*頂端的內部編譯器堆疊，然後從堆疊中推出的值。 如果您指定的識別項**pop**，將會推出堆疊，直到它找到的記錄*識別碼*，這也會從; 目前的值*名稱*中在堆疊上的下一個記錄會變成新值*名稱*。 如果您指定要推出*識別碼*不在堆疊上的記錄**pop**會被忽略。  
   
- *identifier*\(選擇性\)  
- 可以包含在 **push** 或 **pop** 命令中。  如果使用了 *identifier*，則也可以使用 **on** 或 **off** 指定名稱。  
+ *識別項*（選擇性）  
+ 可能包含在**發送**或**pop**命令。 如果*識別碼*使用時，則**上**或**關閉**規範也可以使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // pragma_directive_conform.cpp  
@@ -76,5 +75,5 @@ manager: "ghogen"
 int main() {}  
 ```  
   
-## 請參閱  
- [Pragma 指示詞和 \_\_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>請參閱  
+ [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

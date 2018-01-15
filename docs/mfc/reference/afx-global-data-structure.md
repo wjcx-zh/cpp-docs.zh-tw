@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54ca5ac28d4f5fb044b78ad7b846cd20d73e2c22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68b4a5ba27d4fcb6fcaac7c80662d778c7cbbca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
 `AFX_GLOBAL_DATA` 結構包含的欄位和方法，用於管理架構，或自訂應用程式外觀和行為。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
 struct AFX_GLOBAL_DATA  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -43,7 +44,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::CleanUp](#cleanup)|釋出架構配置的資源，例如筆刷、字型和 DLL。|  
 |[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|建立環繞指定點依特定角度旋轉的旋轉轉換。|  
@@ -75,9 +76,9 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|重新初始化架構使用的邏輯字型。|  
 |[AFX_GLOBAL_DATA::UpdateSysColors](#updatesyscolors)|初始化架構使用的色彩、色彩深度、筆刷、畫筆與圖像。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|啟用或停用 Microsoft Active Accessibility 支援。 Active Accessibility 提供可靠的方法以公開使用者介面項目的相關資訊。|  
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|指出是否已啟用 Microsoft Active Accessibility 支援。|  
@@ -85,7 +86,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|指出目前的作業系統是否支援 Alpha 混色。|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|指出應用程式是在 Windows 7 作業系統或更高版本中執行。|  
@@ -111,7 +112,7 @@ struct AFX_GLOBAL_DATA
 ### <a name="requirements"></a>需求  
  **Header:** afxglobals.h  
   
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
@@ -171,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `pWnd`  
+ [輸入] `pWnd`  
  指向控制項視窗的指標。  
   
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `lpRect`  
+ [輸入] `lpRect`  
  指向限定要繪製區域的矩形的指標。 預設值是 `NULL`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -201,35 +202,35 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `hTheme`  
+ [輸入] `hTheme`  
  視窗佈景主題資料的控制代碼，或 `NULL`。 如果此參數不是 `NULL` ，且支援佈景主題，則此架構會使用指定的佈景主題來繪製文字。 否則，此架構不會使用佈景主題來繪製文字。  
   
  請使用 [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) 方法建立 `HTHEME`。  
   
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `iPartId`  
+ [輸入] `iPartId`  
  具有想要的文字外觀之控制項組件。 如需詳細資訊，請參閱 [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(組件和狀態) 表格中的 Parts 資料行。 如果此值為 0，則會使用預設字型來繪製文字；否則會使用裝置內容中所選取的字型。  
   
- [in] `iStateId`  
+ [輸入] `iStateId`  
  具有想要的文字外觀的控制項狀態。 如需詳細資訊，請參閱 [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(組件和狀態) 表格中的 States 資料行。  
   
- [in] `strText`  
+ [輸入] `strText`  
  要繪製的文字。  
   
- [in] `rect`  
+ [輸入] `rect`  
  在其中繪製指定文字的區域界限。  
   
- [in] `dwFlags`  
+ [輸入] `dwFlags`  
  旗標的位元組合 (OR)，指定如何繪製指定文字。  
   
  如果`hTheme`參數是`NULL`或如果您沒有支援並啟用，主題`nFormat`參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法會描述有效的旗標。 如果支援佈景主題， `dwFlags` DrawThemeTextEx [方法的](http://msdn.microsoft.com/library/windows/desktop/bb773317) 參數會描述有效的旗標。  
   
- [in] `nGlowSize`  
+ [輸入] `nGlowSize`  
  繪製指定文字前已繪製在背景上的光暈效果大小。 預設值為 0。  
   
- [in] `clrText`  
+ [輸入] `clrText`  
  用來繪製指定文字的色彩。 預設值為預設色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -238,7 +239,7 @@ BOOL DrawTextOnGlass(
 ### <a name="remarks"></a>備註  
  佈景主題會定義應用程式的視覺化樣式。 如果 `hTheme` 參數為 `NULL`、不支援 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) 方法，或 [桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) 組合已停用，就不會使用佈景主題來繪製文字。  
   
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
  [組件和狀態](http://msdn.microsoft.com/library/windows/desktop/bb773210)   
@@ -256,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE` 表示啟用協助工具支援，`FALSE` 則表示停用協助工具支援。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -265,7 +266,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
  使用[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)方法，以判斷是否已啟用 Microsoft Active Accessibility 支援。  
   
  
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [UI 自動化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)   
  [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
@@ -282,16 +283,16 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `strBuffer`  
+ [輸入] `strBuffer`  
  文字的緩衝區。  
   
- [in] `lpszTag`  
+ [輸入] `lpszTag`  
  一組的開頭和結尾 XML 標記名稱。  
   
  [輸出] `strTag`  
  此方法傳回時，`strTag`參數包含文字的開頭和結尾 XML 之間的命名方式的標記`lpszTag`參數。 修剪任何開頭或尾端空白字元的結果。  
   
- [in] `bIsCharsList`  
+ [輸入] `bIsCharsList`  
  `TRUE`要轉換中的逸出字元的符號`strTag`參數插入實際逸出字元。`FALSE`不是用來執行轉換。預設值是`FALSE`。 如需詳細資訊，請參閱＜備註＞。  
   
 ### <a name="return-value"></a>傳回值  
@@ -321,7 +322,7 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `nColor`  
+ [輸入] `nColor`  
  指定將擷取其色彩之使用者介面項目的值。 如需有效值的清單，請參閱`nIndex`參數[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
   
 ### <a name="return-value"></a>傳回值  
@@ -330,7 +331,7 @@ COLORREF GetColor(int nColor);
 ### <a name="remarks"></a>備註  
  如果 `nColor` 參數超出範圍，則傳回值為零。 由於零也是有效的 RGB 值，您無法使用這個方法來判斷目前的作業系統是否支援系統色彩。 請改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，這個方法會傳回`NULL`若色彩不支援。  
   
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
 
  [GetSysColor 函式](http://msdn.microsoft.com/library/windows/desktop/ms724371)   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
@@ -374,7 +375,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
  `TRUE`如果此方法成功。否則， `FALSE`。  
  
   
-### <a name="see-also"></a>另請參閱   
+### <a name="see-also"></a>請參閱   
  [NONCLIENTMETRICS 結構](http://msdn.microsoft.com/library/windows/desktop/ff729175)
 
 ## <a name="gettextheight"></a>AFX_GLOBAL_DATA::GetTextHeight
@@ -386,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `bHorz`  
+ [輸入] `bHorz`  
  `TRUE`擷取字元的高度時執行文字水平空間。`FALSE`文字以垂直方式執行時擷取字元的高度。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -467,7 +468,7 @@ BOOL IsAccessibilitySupport() const;
  使用[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)方法以啟用或停用 Active Accessibility 支援。  
   
 
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [UI 自動化和 Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
@@ -492,7 +493,7 @@ BOOL IsDwmCompositionEnabled();
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果[桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 組合已啟用，否則`FALSE`。  
   
-### <a name="see-also"></a>另請參閱    
+### <a name="see-also"></a>請參閱    
  [桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)   
  [啟用和控制 DWM 組合](http://msdn.microsoft.com/library/windows/desktop/aa969538)
 
@@ -644,7 +645,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `lpszClassNamePrefix`  
+ [輸入] `lpszClassNamePrefix`  
  要註冊之視窗類別的名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -653,7 +654,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ### <a name="remarks"></a>備註  
  傳回值是 `lpszClassNamePrefix` 參數字串的冒號分隔清單，並且是表示目前應用程式執行個體之控制代碼的十六進位文字；應用程式游標，即識別項為 IDC_ARROW 的箭號游標；以及背景筆刷。 如需註冊 MFC 視窗類別的詳細資訊，請參閱[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
   
-### <a name="see-also"></a>另請參閱    
+### <a name="see-also"></a>請參閱    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
  [AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
 
@@ -684,22 +685,22 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `hwnd`  
+ [輸入] `hwnd`  
  層疊視窗的控制代碼。  
   
- [in] `crKey`  
+ [輸入] `crKey`  
  透明色彩索引鍵[桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)使用來構成層疊的視窗。  
   
- [in] `bAlpha`  
+ [輸入] `bAlpha`  
  Alpha 值，用來描述層疊視窗的不透明度。  
   
- [in] `dwFlags`  
+ [輸入] `dwFlags`  
  位元組合 (OR) 或旗標，指定要使用哪些方法參數。 指定 LWA_COLORKEY 以使用 `crKey` 參數做為透明色彩。 指定 LWA_ALPHA 使用 `bAlpha` 參數來判斷層疊視窗的不透明度。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果此方法成功。否則， `FALSE`。   
  
-### <a name="see-also"></a>另請參閱   
+### <a name="see-also"></a>請參閱   
  [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)   
  [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)
 
@@ -714,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>參數   
- [in] `lpLogFont`  
+ [輸入] `lpLogFont`  
  包含字型的屬性的結構指標。  
   
- [in] `bHorz`  
+ [輸入] `bHorz`  
  `TRUE`若要指定的文字往返水平空間。`FALSE`來指定文字以垂直方式執行。  
   
 ### <a name="return-value"></a>傳回值  

@@ -32,11 +32,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7745054066a928c414360a215605cf343971ddf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d17f49535078261669841ea502c6af821aa5e29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>變更 MFC 所建立之視窗的樣式
 其版`WinMain`函式，MFC 會為您註冊數個標準的視窗類別。 因為您通常不編輯 MFC 的`WinMain`，該函式給予您沒有機會變更 MFC 預設視窗樣式。 本文說明如何變更現有的應用程式中的這類的預先登錄的視窗類別樣式。  
@@ -85,6 +86,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [視窗樣式](http://msdn.microsoft.com/library/windows/desktop/ms632600)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [框架視窗樣式](../mfc/frame-window-styles-cpp.md)
 

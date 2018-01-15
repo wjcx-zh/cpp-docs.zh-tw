@@ -32,11 +32,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd359bd46546bf6b220e83301f92b862bea247c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c84e829876282a43fb9a8a17713a612e387f5216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="feupdateenv"></a>feupdateenv
 儲存目前引發的浮點例外狀況、還原指定的浮點環境狀態，然後引發儲存的浮點例外狀況。  
@@ -63,13 +64,13 @@ int feupdateenv(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`feupdateenv`|\<fenv.h>|\<cfenv>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [fegetenv](../../c-runtime-library/reference/fegetenv1.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
  [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - memory/std::allocator::destroy
 - memory/std::allocator::max_size
 - memory/std::allocator::rebind
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::allocator [C++]
 - std::allocator [C++], const_pointer
@@ -43,16 +41,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 50967f59b594cfba30167b67dcb2802541a5eafc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>allocator 類別
 此範本類別所描述的物件管理 **Type** 類型物件陣列的儲存空間配置和釋放。 **allocator** 類別的物件是建構函式中指定的預設配置器物件，為針對 C++ 標準程式庫中的數個容器範本類別所指定。  
@@ -65,7 +63,7 @@ class allocator
 ```  
   
 #### <a name="parameters"></a>參數  
- *Type*  
+ *類型*  
  正在配置或取消配置儲存體的物件類型。  
   
 ## <a name="remarks"></a>備註  
@@ -89,7 +87,7 @@ class allocator
   
  **C++ 11 和更新版本：**若要在您的配置器中啟用移動運算，請使用最小的配置器介面與實作複製建構函式、== 和 != 運算子、配置及解除配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -1049,7 +1047,6 @@ The modified vector v is:
  ( 150 200 300 400 500 600 700 ).  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

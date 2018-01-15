@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa15cb2eac229201dd0f686428133224b2f32afe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>從 UNIX 移植到 Win32
 將應用程式從 UNIX 移轉至 Windows 時，有幾個選擇：  
@@ -44,11 +45,11 @@ ms.lasthandoff: 10/24/2017
 ### <a name="unix-migration-guides"></a>UNIX 移轉指南  
  《UNIX 自訂應用程式移轉指南》提供有關將程式碼從 UNIX 移轉至 Win32 環境的技術說明。  
   
- [http://go.microsoft.com/fwlink/?LinkId=95428](http://go.microsoft.com/fwlink/?LinkId=95428)  
+ [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  《Unix 移轉專案指南》藉由提供有關將大量專案從 UNIX 移轉至 Win32 的高階說明，來補充說明《UNIX 自訂應用程式移轉指南》。 該指南針對專案移轉的每個階段所要考量的問題，提出了建議。 您可以從下列網址進行下載：  
   
- [http://go.microsoft.com/fwlink/?linkid=20012](http://go.microsoft.com/fwlink/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Microsoft Windows Services for UNIX (SFU)  
  Microsoft Windows Services for UNIX (SFU) 針對將 Windows 整合至現有的 UNIX 環境，提供了全方位的跨平台服務。 Services for UNIX 提供檔案共用、遠端存取和管理、密碼同步處理、通用目錄管理、通用公用程式集和 Shell。  
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="windows-posix-subsystem"></a>Windows POSIX 子系統  
  UNIX 程式設計人員還會考慮的另一個做法是使用 Windows POSIX 子系統。 不過，它只支援 POSIX 1003.1，這是建立 Windows NT 時唯一標準化的 POSIX 版本。 在這之後，由於大多數應用程式已轉換成 Win32，因此對於擴充這個子系統的需求很少。 完整功能的應用程式對 1003.1 系統不感興趣，因為它未包含許多功能 (例如 1003.2 的功能、網路支援等)。 在 Windows POSIX 子系統下執行之完整功能的應用程式無法存取 Win32 應用程式可用的 Windows 功能，例如記憶體對應檔案、網路和圖形。 VI、LS 和 GREP 等應用程式都是 Windows POSIX 子系統的主要目標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++ 移植和升級指南](visual-cpp-change-history-2003-2015.md)   
  [UNIX](../c-runtime-library/unix.md)   
  [推斷規則](../build/inference-rules.md)

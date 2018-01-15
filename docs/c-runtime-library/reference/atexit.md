@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a385ebeba2d9dd58b59df179884f7add02b03a42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e812f39041287d17ee87766f6971d299654f0f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atexit"></a>atexit
 於結束時處理指定的函式。  
@@ -63,7 +64,7 @@ int atexit(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`atexit`|\<stdlib.h>|  
   
@@ -112,7 +113,7 @@ This is executed first.
 This is executed next.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   

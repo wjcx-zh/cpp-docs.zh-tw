@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 27d7ee77d527e8d8715d182609f1cb847b10a3d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58430f8211f8859b65103b53d1f98a173c4635ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stub"></a>STUB
 建立虛擬裝置驅動程式 (VxD) 模組定義檔中使用時，可讓您指定檔案名稱包含 （定義於 WINNT IMAGE_DOS_HEADER 結構。H) 以用於虛擬裝置驅動程式 (VxD)，而不是預設的標題。  
@@ -33,5 +34,5 @@ STUB:filename
   
  虛設常式時為有效的模組定義檔中只建置 VxD。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)

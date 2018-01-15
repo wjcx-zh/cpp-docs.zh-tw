@@ -1,32 +1,33 @@
 ---
-title: "call_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.call_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_as attribute"
+title: "call_as |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.call_as
+dev_langs: C++
+helpviewer_keywords: call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3df1cd801a82533592594618742b7727051bde53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# call_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可讓[本機](../windows/local-cpp.md)會對應至遠端函式，因此呼叫遠端函式時，要叫用本機的函式的函式。  
+# <a name="callas"></a>call_as
+可讓[本機](../windows/local-cpp.md)使遠端函式呼叫時，會叫用本機函式對應至遠端函式的函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,15 +36,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 參數  
- *Function \- 功用*  
- 您想要呼叫遠端函式叫用時本機函式。  
+#### <a name="parameters"></a>參數  
+ *function*  
+ 您想要在遠端函式會叫用時呼叫本機函式。  
   
-## 備註  
- **Call\_as** C\+\+ 屬性具有相同的功能，為 [call\_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Call_as** c + + 屬性具有相同的功能[call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) MIDL 屬性。  
   
-## 範例  
- 下列程式碼將示範如何使用 **call\_as** ，將對應的 nonremotable 函式 \(**f1**\) 可遠端處理的函式 \(**Remf1**\)：  
+## <a name="example"></a>範例  
+ 下列程式碼將示範如何使用**call_as**對應分為函式 (**f1**) 的遠端執行函式 (**Remf1**):  
   
 ```  
 // cpp_attr_ref_call_as.cpp  
@@ -57,21 +58,20 @@ __interface IMInterface {
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|介面方法|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [local](../windows/local-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [方法屬性](../windows/method-attributes.md)   
+ [本機](../windows/local-cpp.md)   

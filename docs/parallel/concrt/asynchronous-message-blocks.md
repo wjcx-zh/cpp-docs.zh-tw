@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e2c2641ada0f6bbcd1b19c4297ba85b3bb4d393
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asynchronous-message-blocks"></a>非同步訊息區
 
@@ -116,15 +117,15 @@ ms.lasthandoff: 10/24/2017
   
 |訊息區塊類型|傳播類型 （來源、 目標，或兩者）|訊息排序 （Ordered 或 Unordered）|來源計數|目標計數|  
 |------------------------|--------------------------------------------------|-----------------------------------------------|------------------|------------------|  
-|`unbounded_buffer`|兩種模式|Ordered|未繫結|未繫結|  
-|`overwrite_buffer`|兩種模式|Ordered|未繫結|未繫結|  
-|`single_assignment`|兩種模式|Ordered|未繫結|未繫結|  
-|`call`|目標|Ordered|未繫結|不適用|  
-|`transformer`|兩種模式|Ordered|未繫結|1|  
-|`choice`|兩種模式|Ordered|10|1|  
-|`join`|兩種模式|Ordered|未繫結|1|  
-|`multitype_join`|兩種模式|Ordered|10|1|  
-|`timer`|來源|不適用|不適用|1|  
+|`unbounded_buffer`|兩種模式|排序|未繫結|未繫結|  
+|`overwrite_buffer`|兩種模式|排序|未繫結|未繫結|  
+|`single_assignment`|兩種模式|排序|未繫結|未繫結|  
+|`call`|目標|排序|未繫結|不適用|  
+|`transformer`|兩種模式|排序|未繫結|1|  
+|`choice`|兩種模式|排序|10|1|  
+|`join`|兩種模式|排序|未繫結|1|  
+|`multitype_join`|兩種模式|排序|10|1|  
+|`timer`|原始程式檔|不適用|不適用|1|  
   
  下列章節將更詳細的訊息區塊類型。  
   
@@ -352,6 +353,6 @@ bool (T const &)
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)
 

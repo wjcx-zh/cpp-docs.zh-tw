@@ -13,10 +13,9 @@ f1_keywords:
 - queue/std::operator&lt;
 - queue/std::operator&lt;=
 - queue/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7c435b48-175c-45b0-88eb-24561044019c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (queue)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: c3d30f04ad3b8f330c70b75ca21bdab44913f336
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 運算子
 ||||  
@@ -38,7 +36,7 @@ ms.lasthandoff: 10/03/2017
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  測試運算子左邊的佇列物件是否不等於右邊的佇列物件。  
   
 ```  
@@ -101,7 +99,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  測試運算子左邊的佇列物件是否小於右邊的佇列物件。  
   
 ```  
@@ -160,7 +158,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  測試運算子左邊的佇列物件是否小於或等於右邊的佇列物件。  
   
 ```  
@@ -221,7 +219,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  測試運算子左邊的佇列物件是否等於右邊的佇列物件。  
   
 ```  
@@ -283,7 +281,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  測試運算子左邊的佇列物件是否大於右邊的佇列物件。  
   
 ```  
@@ -345,7 +343,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  測試運算子左邊的佇列物件是否大於或等於右邊的佇列物件。  
   
 ```  
@@ -406,7 +404,6 @@ The queue q1 is less than the queue q2.
 The queue q1 is greater than or equal to the queue q3.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<queue>](../standard-library/queue.md)
-
 

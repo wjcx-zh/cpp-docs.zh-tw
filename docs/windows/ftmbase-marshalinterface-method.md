@@ -1,32 +1,33 @@
 ---
-title: "FtmBase::MarshalInterface 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::MarshalInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MarshalInterface 方法"
+title: "Ftmbase:: Marshalinterface 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::MarshalInterface
+dev_langs: C++
+helpviewer_keywords: MarshalInterface method
 ms.assetid: fc8421b4-06e4-4925-b908-c285fe4790d2
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9df1e5d7559b434c1af0f1feff3b73b8141a8865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# FtmBase::MarshalInterface 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-寫入所要求的資料至資料流中以初始化某個用戶端處理序中的 Proxy 物件。  
+# <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface 方法
+初始化 proxy 物件，在某些用戶端處理序中的所需的資料寫入資料流。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 STDMETHODIMP MarshalInterface(  
@@ -39,46 +40,46 @@ STDMETHODIMP MarshalInterface(
 ) override;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pStm`  
- 在封送處理期間所要使用之資料流的指標。  
+ 封送處理期間所要使用資料流指標。  
   
  `riid`  
- 要封送處理的介面識別項的參考。  必須以 IUnknown 介面衍生這個介面。  
+ 要封送處理介面的識別項參考。 此介面必須衍生自 IUnknown 介面。  
   
  `pv`  
- 要封送處理介面的指標;如果呼叫端沒有所需的介面指標，則可為 NULL。  
+ 指標的介面指標無法封送處理。如果呼叫端所需的介面沒有指標，可以是 NULL。  
   
  `dwDestContext`  
- 要解除指定介面封送處理的目的端內容。  
+ 要解除封送處理指定的介面則為其中的目的端內容。  
   
  指定一或多個 MSHCTX 列舉值。  
   
- Unmarshaling 可能發生在目前處理序 \(MSHCTX\_INPROC\) 的另一個 Apartment 或在同一個電腦上的其他處理序，就像目前處理序 \(MSHCTX\_LOCAL\) 。  
+ 解封送處理，可能會發生在目前的處理序 (MSHCTX_INPROC) 的另一個 apartment 或目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序。  
   
  `pvDestContext`  
  保留以備將來之用；必須為零。  
   
  `mshlflags`  
- 指定要封送處理的資料是否要傳送回用戶端處理序—一般情況或被寫進全域資料表時，可由多個用戶端擷取。  
+ 指定要傳送回用戶端處理序是否要封送處理資料 — 一般的情況下，或寫入全域的資料表，其中多個用戶端擷取。  
   
-## 傳回值  
- S\_OK  
- 介面指標成功封送處理。  
+## <a name="return-value"></a>傳回值  
+ S_OK  
+ 介面指標封送處理成功。  
   
- E\_NOINTERFACE  
- 不支援指定的型別。  
+ E_NOINTERFACE  
+ 不支援指定的介面。  
   
- STG\_E\_MEDIUMFULL  
+ STG_E_MEDIUMFULL  
  資料流已滿。  
   
- E\_FAIL  
+ E_FAIL  
  作業失敗。  
   
-## 需求  
- **標題:** ftm.h  
+## <a name="requirements"></a>需求  
+ **標頭：** ftm.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [FtmBase 類別](../windows/ftmbase-class.md)

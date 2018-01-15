@@ -33,11 +33,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae23fabc33d744265677e395310ba1f14dcb64ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dba8ba22325d3ea9e68411f0372cfac4d6b0659d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame 類別
 實作主要畫面格的基本功能。  
@@ -48,17 +49,17 @@ ms.lasthandoff: 10/24/2017
 class CBaseKeyFrame : public CObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|建構主要畫面格的物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|加入分鏡腳本主要畫面格。|  
 |[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|傳回基礎主要畫面格的值。|  
@@ -67,7 +68,7 @@ class CBaseKeyFrame : public CObject;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBaseKeyFrame::m_bAdded](#m_badded)|指定是否已加入這個主要畫面格的分鏡腳本。|  
 |[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|指定這個主要畫面格是否應加入至分鏡腳本的位移，從現有的主要畫面格另一個，或結尾的某些轉換。|  
@@ -173,5 +174,5 @@ BOOL m_bIsKeyframeAtOffset;
 UI_ANIMATION_KEYFRAME m_keyframe;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

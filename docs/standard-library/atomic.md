@@ -59,11 +59,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4de72103a06230c88025e7df8f4f862b9a25ca53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c7eb0c56b34232725cdb7268ed09477063b1a1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 定義類別和範本類別，用於建立可支援不可部分完成作業的類型。  
@@ -166,14 +167,14 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="enums"></a>列舉  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[memory_order 列舉](../standard-library/atomic-enums.md#memory_order_enum)|為記憶體位置上的同步處理作業提供符號名稱。 這些作業會影響一個執行緒的指派如何在其他執行緒中變成可見。|  
   
 ## <a name="functions"></a>函式  
  在下列清單中，結尾不是 `_explicit` 的函式具有對應 `_explicit` 的語意，差異在於它們具有 `memory_order_seq_cst`的隱含 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引數。  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|執行「不可部分完成比較和交換」作業。|  
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|執行「不可部分完成比較和交換」作業。|  
@@ -205,7 +206,7 @@ ms.lasthandoff: 10/24/2017
 |[atomic_thread_fence](../standard-library/atomic-functions.md#atomic_thread_fence)|作為「範圍」，可建立與其他範圍有關的記憶體順序需求。|  
 |[kill_dependency](../standard-library/atomic-functions.md#kill_dependency)|中斷可能的相依性鏈結。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
 

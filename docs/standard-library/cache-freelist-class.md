@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dae377a89cb3264d8129c7d863d9d922d7bef876
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c971a4aebcd0f0a7c0baa59a445059f681f7e8af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachefreelist-class"></a>cache_freelist 類別
 定義[區塊配置器](../standard-library/allocators-header.md)以配置及解除配置單一大小的記憶體區塊。  
@@ -39,9 +40,9 @@ class cache_freelist
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
-|`Sz`|要配置的陣列元素數目。|  
+|`Sz`|所配置陣列中的元素數。|  
 |`Max`|表示可用清單大小上限的 max 類別。 可以是 [max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。|  
   
 ## <a name="remarks"></a>備註  
@@ -76,9 +77,9 @@ void *allocate(std::size_t count);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
-|`count`|陣列中要配置的項目數。|  
+|`count`|所配置陣列中的元素數。|  
   
 ### <a name="return-value"></a>傳回值  
  所配置物件的指標。  
@@ -110,7 +111,7 @@ void deallocate(void* ptr, std::size_t count);
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

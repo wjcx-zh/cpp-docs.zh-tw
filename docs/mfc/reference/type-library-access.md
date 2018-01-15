@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.macros
-dev_langs:
-- C++
-helpviewer_keywords:
-- type libraries [MFC], accessing
+f1_keywords: vc.mfc.macros
+dev_langs: C++
+helpviewer_keywords: type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bbc5ceabe60d7ee15d85495bb1a431955a589849
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 8f05738c02fd70fde5fc2d92c5ee1e823747797c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-library-access"></a>類型程式庫存取
 類型程式庫會將 OLE 控制項的介面公開給其他 OLE 感知應用程式。 如果有一個或多個介面要公開，則每個 OLE 控制項都必須有類型程式庫。  
@@ -81,6 +77,5 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
    
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
-

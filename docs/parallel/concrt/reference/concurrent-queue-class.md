@@ -26,11 +26,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cb1f1618f140ad9183d50d8aaacc8e9cc59c75d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e2e572574bfd8313106dbdda64b63077d5d2e7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 類別
 `concurrent_queue` 類別是一種序列容器類別，允許以先進先出的方式存取其項目。 它會啟用一組有限的並行安全作業，例如 `push` 和 `try_pop` 等。  
@@ -53,7 +54,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`allocator_type`|代表並行佇列之配置器類別的類型。|  
 |`const_iterator`|表示非安全執行緒的型別`const`迭代器在並行佇列中的項目。|  
@@ -66,14 +67,14 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|多載。 建構並行佇列。|  
 |[~ concurrent_queue 解構函式](#dtor)|終結並行佇列。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[clear](#clear)|清除並行佇列，破壞任何目前項目加入佇列。 這個方法不是並行安全。|  
 |[empty](#empty)|測試如果並行佇列是空的此時會呼叫這個方法。 這個方法是並行安全。|  
@@ -267,5 +268,5 @@ size_type unsafe_size() const;
 ### <a name="remarks"></a>備註  
  `unsafe_size`不是並行安全和可產生不正確的結果，如果呼叫方法的呼叫與`push`， `try_pop`，和`empty`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

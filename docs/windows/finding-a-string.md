@@ -1,57 +1,58 @@
 ---
-title: "Finding a String | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.string"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strings [C++], searching"
-  - "strings [C++]"
+title: "尋找字串 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.string
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], searching
+- strings [C++]
 ms.assetid: c2497173-f356-4f77-97d6-f0ac41782510
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a66b5dd34aa21a2a0791ecbc71bfd4abcc90c4fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Finding a String
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可在字串資料表內搜尋一個或多個字串，並配合 \[檔案中尋找\] 命令 \(\[編輯\] 功能表\) 使用[規則運算式](../Topic/Using%20Regular%20Expressions%20in%20Visual%20Studio.md)，找出符合某模式的所有字串。  
+# <a name="finding-a-string"></a>尋找字串
+您可以搜尋的一或多個字串在字串資料表中，並使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)與**檔案中尋找**命令 (**編輯**功能表) 以找出所有的執行個體的字串符合的模式。  
   
-### 若要在字串資料表內尋找字串  
+### <a name="to-find-a-string-in-the-string-table"></a>以字串資料表中尋找字串  
   
-1.  按兩下[資源檢視](../windows/resource-view-window.md)內的字串資料表圖示來開啟字串資料表。  
+1.  開啟字串資料表，其在圖示上按兩下[資源檢視](../windows/resource-view-window.md)。  
   
     > [!NOTE]
-    >  如果您的專案並未包含 .rc 檔案，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
+    >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在 \[編輯\] 功能表中按一下 \[尋找和取代\]，然後選擇 \[尋找\]。  
+2.  在**編輯**功能表上，按一下 **尋找和取代**，然後選擇 **尋找**。  
   
-3.  在 \[尋找目標\] 方塊中，從下拉式清單選取先前的搜尋字串，或輸入您要尋找的字串之標題文字或資源識別項。  
+3.  在**尋找**方塊中，從下拉式清單中選取先前的搜尋字串或輸入您想要尋找之字串的標題文字或資源識別碼。  
   
-4.  選取任何 \[尋找\] 選項。  
+4.  選取任何**尋找**選項。  
   
-5.  按一下 \[**找下一個**\]。  
+5.  按一下**找下一個**。  
   
     > [!TIP]
-    >  若要在搜尋檔案時使用規則運算式，請使用 \[檔案中尋找\] 命令。  輸入一個符合某模式的規則運算式，或按一下 \[尋找目標\] 方塊右邊的按鈕，顯示規則搜尋運算式的清單。  當您從此清單中選取了一個運算式之後，它會替代成 \[尋找目標\] 方塊內的搜尋文字。  如果您在使用規則運算式，請確定已經選取 \[使用：規則運算式\] 核取方塊。  
+    >  若要搜尋檔案時，請使用規則運算式，使用**檔案中尋找**命令。 輸入的規則運算式比對模式，或按一下右邊的按鈕**尋找**方塊來顯示規則搜尋運算式的清單。 當您從這份清單中選取運算式時，它會替代做為搜尋文字中**尋找**方塊。 如果您使用規則運算式，請務必**使用： 規則運算式**選取核取方塊。  
   
- 如需將資源加入至 Managed 專案的詳細資訊 \(以 Common Language Runtime 為目標\)，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案 （其會以 common language runtime 為目標） 的資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) 和 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
  **需求**  
   
  Win32  
   
-## 請參閱  
- [String Editor](../mfc/string-editor.md)   
- [字串](_win32_Strings)   
- [關於字串](_win32_About_Strings_cpp)
+## <a name="see-also"></a>請參閱  
+ [字串編輯器](../windows/string-editor.md)   
+

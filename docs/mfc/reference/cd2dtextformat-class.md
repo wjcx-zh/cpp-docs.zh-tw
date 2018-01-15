@@ -35,11 +35,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1a2c8dbf78fdf7ea8f895b4eb1a4d9a97bbc3ee5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26fbbbe2d9f5edde6e247d69e9e6bc840f05a55b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 類別
 IDWriteTextFormat 包裝函式。  
@@ -50,18 +51,18 @@ IDWriteTextFormat 包裝函式。
 class CD2DTextFormat : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|建構 CD2DTextFormat 物件。|  
 |[CD2DTextFormat:: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|解構函式。 D2D 文字格式化物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DTextFormat::Create](#create)|建立 CD2DTextFormat。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
 |[CD2DTextFormat::Destroy](#destroy)|CD2DTextFormat 物件已遭終結。 (覆寫[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|  
@@ -73,13 +74,13 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|傳回 IDWriteTextFormat 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|IDWriteTextFormat 指標。|  
   
@@ -228,5 +229,5 @@ virtual HRESULT ReCreate(CRenderTarget* */);
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

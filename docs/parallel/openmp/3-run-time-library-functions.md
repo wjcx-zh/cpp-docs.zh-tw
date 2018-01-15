@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f693c3ff8bc3e44d47f885b6fb4c0d09b36fdbde
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1cbedf8782c9c5ccb25bda3f8b43df8a526f268
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="3-run-time-library-functions"></a>3.執行階段程式庫函式
 本章節描述 OpenMP C 和 c + + 執行階段程式庫函式。 標頭 **\<omp.h >**會宣告兩種類型，可用來控制和查詢的平行執行環境，並鎖定函式，可用來同步處理資料的存取權的幾個函式。  

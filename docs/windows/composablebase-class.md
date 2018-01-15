@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 784a864e1b1ecda734fe84932346851b4f34c612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 75dcb009ff60b5350c5ba76279e61a9509eb9b56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="composablebase-class"></a>ComposableBase 類別
 ## <a name="syntax"></a>語法  
@@ -40,5 +43,5 @@ class ComposableBase;
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

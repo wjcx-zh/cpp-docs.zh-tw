@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- private
-dev_langs:
-- C++
-helpviewer_keywords:
-- private OpenMP clause
+f1_keywords: private
+dev_langs: C++
+helpviewer_keywords: private OpenMP clause
 ms.assetid: 772904a2-1345-4562-90e6-eb4dc85aea1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7dc111f5ad953aa3a466a1ae8d5c098860359c0e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6fe390b0b344fcc149654454294c919f29d9a507
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 指定每個執行緒都應該有自己的執行個體的變數。  
@@ -56,15 +38,15 @@ private(var)
  要在每個執行緒的執行個體的變數。  
   
 ## <a name="remarks"></a>備註  
- **私用**適用於下列指示詞︰  
+ **私用**適用於下列指示詞：  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [平行](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
--   [單一](../../../parallel/openmp/reference/single.md)  
+-   [single](../../../parallel/openmp/reference/single.md)  
   
  如需詳細資訊，請參閱[2.7.2.1 私人](../../../parallel/openmp/2-7-2-1-private.md)。  
   
@@ -246,5 +228,5 @@ nThreadPrivate = 0 (The last value in the master thread)
        nShared = 1 (The value assigned, from the delayed thread, 1)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

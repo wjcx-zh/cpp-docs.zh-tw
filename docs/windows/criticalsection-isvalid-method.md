@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fae598dbe765a6162f183cf5c38cc389f497f2d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b880dcb84171c473dc2d11ca8044ce1d34e5b35b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid 方法
 指出目前的重要區段是否有效。  
@@ -38,5 +41,5 @@ bool IsValid() const;
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CriticalSection 類別](../windows/criticalsection-class.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 82f33d178799f56465f0d1a9794dacad7c01c77a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 073c906e7ecdfcf933e4b91cbcf8d6a77324df76
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (自動平行化工具)
 可讓[Auto-parallelizer](../../parallel/auto-parallelization-and-auto-vectorization.md)編譯器自動平行化迴圈程式碼中的功能。  
@@ -48,10 +49,10 @@ ms.lasthandoff: 10/24/2017
   
 -   請使用 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 中的範例程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)   
  [/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [#pragma loop （)](../../preprocessor/loop.md)   
- [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/?LinkId=263662)
+ [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)

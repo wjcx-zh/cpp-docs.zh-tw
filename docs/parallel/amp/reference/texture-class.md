@@ -28,11 +28,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a891a03f9b54946060cc41d535c7dfc44fd94e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="texture-class"></a>texture 類別
 紋理是將資料彙總上`accelerator_view`範圍網域中。 它是變數，其中每個項目範圍網域中的集合。 每個變數會保存至 c + + 基本類型對應的值 ( `unsigned int`， `int`， `float`， `double`)、 純量類型 ( `norm`，或`unorm`)，或短向量類型。  
@@ -51,25 +52,25 @@ class texture;
  `_Rank`  
  紋理的陣序規範。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`scalar_type`|純量類型。|  
 |`value_type`|實值類型。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[紋理建構函式](#ctor)|初始化 `texture` 類別的新執行個體。|  
 |[~ texture 解構函式](#ctor)|終結`texture`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|複製`texture`物件到目的地時，所進行的深層複本。|  
 |[data](#data)|傳回這個的紋理的未經處理資料的 CPU 指標。|  
@@ -81,7 +82,7 @@ class texture;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator （)](#operator_call)|傳回參數所指定的項目值。|  
 |[operator]](#operator_at)|傳回指定索引處的項目。|  
@@ -89,13 +90,13 @@ class texture;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[rank 常數](#rank)|取得的順位`texture`物件。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[associated_accelerator_view](#associated_accelerator_view)|取得[accelerator_view](accelerator-view-class.md)也就是要複製到這個紋理的慣用的目標。|  
 |[depth_pitch](#depth_pitch)|取得在 CPU 上臨時 3D 材質中每個深度切割之間的位元組數目。|  
@@ -615,5 +616,5 @@ texture(
  `_Rank`  
  區段的陣序規範。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

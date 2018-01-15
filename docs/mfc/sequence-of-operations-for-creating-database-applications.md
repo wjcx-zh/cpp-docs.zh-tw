@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58939d60401af9061288fa5a9b61c25b6278aec8
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: f3403807e38f59abc68bf93f510476951c5ec8ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>建立資料庫應用程式的作業順序
 下表顯示您的角色和架構的角色中撰寫資料庫應用程式。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
 |...也建立明確[CDatabase](../mfc/reference/cdatabase-class.md)中您想要開啟每個資料庫的程式碼。|資料錄集物件的基礎資料庫物件。|資料庫物件提供資料來源的介面。|  
 |繫結資料行至您的資料錄集以動態方式。|在 ODBC 中，將程式碼加入至衍生的資料錄集類別來管理繫結。 請參閱文章[資料錄集： 動態地繫結資料行 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。||  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在架構上建置](../mfc/building-on-the-framework.md)   
  [建置 MFC 應用程式的作業順序](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
  [建立 OLE 應用程式的作業順序](../mfc/sequence-of-operations-for-creating-ole-applications.md)   

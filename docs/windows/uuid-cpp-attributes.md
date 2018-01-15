@@ -15,11 +15,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2a4c4ce8023901eb901555519c38c2fa07500dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ba35dc89ae2567a499d4623f0c74293d2dbdcca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 屬性)
 指定類別或介面的唯一識別碼。  
@@ -62,7 +65,7 @@ ms.lasthandoff: 10/24/2017
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [介面屬性](../windows/interface-attributes.md)   
  [類別屬性](../windows/class-attributes.md)   

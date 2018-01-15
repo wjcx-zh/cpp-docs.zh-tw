@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _fpreset
+apiname: _fpreset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 0d5bf6ef97700e010a6565eccf7087a613adf9c3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5d4381d45adc2e6b1330bfbacd960b2dac8d51d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fpreset"></a>_fpreset
 重設浮點套件。  
@@ -70,15 +53,15 @@ void _fpreset( void );
 ## <a name="remarks"></a>備註  
  `_fpreset` 函式會重新初始化浮點數學套件。 `_fpreset` 通常是與 `signal`、`system`、`_exec` 或 `_spawn` 函式搭配使用。 如果程式使用 `signal` 來捕捉浮點錯誤信號 (`SIGFPE`)，則可以叫用 `_fpreset` 和使用 `longjmp` 來安全地復原浮點錯誤。  
   
- 此函式已被取代，以編譯時[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 僅支援預設浮點有效位數。  
+ 此函式已被取代，以編譯時[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 只支援預設的浮點精確度。  
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`_fpreset`|\<float.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -194,7 +177,7 @@ Dividing    5 by    0...
 Error 131: Divide by zero  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)   
  [signal](../../c-runtime-library/reference/signal.md)   

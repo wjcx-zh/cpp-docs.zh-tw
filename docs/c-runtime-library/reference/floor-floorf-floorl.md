@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,38 +29,23 @@ f1_keywords:
 - floorl
 - _floorl
 - floorf
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - floor function
 - floorf function
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: ac3b84ab134b4b67dc7bd6ed5086d2f295b10156
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a3bad88cdfbc9ee589a695de5da5f3bf722ace56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 計算最小值。  
@@ -97,18 +81,18 @@ long double floorl(
 |-----------|-------------------|-----------------------|  
 |± QNAN、IND|無|_DOMAIN|  
   
- `floor` 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
+ `floor` 有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
 ## <a name="remarks"></a>備註  
  C++ 允許多載，因此您可以呼叫採用並傳回 `float` 和 `long double` 值之 `floor` 的多載。 在 C 程式中，`floor` 會一律採用並傳回 `double`。  
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`floor`, `floorf`, `floorl`|\<math.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -145,7 +129,7 @@ The ceil of 2.8 is 3.000000
 The ceil of -2.8 is -2.000000  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [ceil、ceilf、ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
  [round、roundf、roundl](../../c-runtime-library/reference/round-roundf-roundl.md)   

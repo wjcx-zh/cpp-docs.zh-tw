@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - context_self_unblock
 - CONCRT/concurrency::context_self_unblock
 - CONCRT/concurrency::context_self_unblock::context_self_unblock
-dev_langs:
-- C++
-helpviewer_keywords:
-- context_self_unblock class
+dev_langs: C++
+helpviewer_keywords: context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a5fa917c2873cf23bdb3b527f1d3e86055b6f8eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0478e018aadd0e8e73da3691d2b9bf6974569f23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="contextselfunblock-class"></a>context_self_unblock 類別
 這個類別描述從同樣的內容呼叫 `Context` 物件的 `Unblock` 方法所擲回的例外狀況。 這會指出指定內容自行解除封鎖的嘗試。  
@@ -51,11 +34,11 @@ ms.lasthandoff: 03/17/2017
 class context_self_unblock : public std::exception;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[context_self_unblock](#ctor)|多載。 建構 `context_self_unblock` 物件。|  
   
@@ -65,7 +48,7 @@ class context_self_unblock : public std::exception;
  `context_self_unblock`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** concrt.h  
+ **標頭：** concrt.h  
   
  **命名空間：** concurrency  
   
@@ -84,6 +67,5 @@ context_self_unblock() throw();
  `_Message`  
  錯誤的描述性訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

@@ -1,63 +1,64 @@
 ---
-title: "Constraints on Generic Type Parameters (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "where"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "where keyword [C++]"
-  - "constraints, C++"
+title: "泛型條件約束的型別參數 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: where
+dev_langs: C++
+helpviewer_keywords:
+- where keyword [C++]
+- constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-caps.latest.revision: 25
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "25"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Constraints on Generic Type Parameters (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在泛型型別或方法宣告，您可以加上條件約束的型別參數。  條件約束是型別使用的要求，型別引數必須滿足。  例如，條件約束會是型別引數必須實作特定介面或從特定類別繼承。  
+# <a name="constraints-on-generic-type-parameters-ccli"></a>泛型型別參數的條件約束 (C++/CLI)
+在泛型類型或方法宣告中，您可以使用條件約束限定型別參數。 條件約束是做為型別引數使用的類型必須符合的需求。 例如，條件約束可能是指，類型引數必須實作特定介面或從特定類別繼承。  
   
- 條件約束是選擇性的；未指定條件約束在參數與限制該參數相當於 <xref:System.Object>。  
+ 條件約束是選擇性的，未在參數上指定條件約束就相當於將該參數限制為 <xref:System.Object>。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 where type-parameter: constraint list  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *型別參數*  
- 一個型別參數，要限制。  
+ 其中一個要限制的型別參數。  
   
  *條件約束清單*  
- *條件約束清單* 是條件約束規格的逗號分隔清單。  清單可以包含這個型別實作介面的參數。  
+ *條件約束清單*是以逗號分隔清單的條件約束規格。 清單可以包括型別參數要實作的介面。  
   
- 清單也可以包括類別。  對於這個型別符合基底類別條件約束的引數，它必須是相同的類別條件約束或從條件約束衍生。  
+ 清單也可以包括類別。 為了讓型別引數符合基底類別條件約束，它必須與條件約束的類別相同，或是衍生自條件約束。  
   
- 您也可以指定 `gcnew()` 表示型別引數必須有公用的無參數建構函式：或者表示型別的 `ref class` 引數必須是參考型別，包括任何類別、介面、委派或陣列型別;或者表示型別的 `value class` 引數必須是實值型別。  您可以指定空的 \<T\> 以外的任何實值型別。  
+ 您也可以指定 `gcnew()`，表示類型引數必須有公用的無參數建構函式，或是指定 `ref class`，表示類型引數必須是參考類型，包括任何類別、介面、委派或陣列類型，或者是指定 `value class`，表示類型引數必須是實值類型。 型別可為 Null 以外的任何值\<T > 您可以指定。  
   
- 您也可以指定泛型參數做為條件約束。  這個型別為您限制的型別提供的引數必須是或從條件約束的型別衍生。  這稱為 Naked 型別條件約束。  
+ 您也可以指定泛型參數做為條件約束。 針對您要限制的類型提供的型別引數必須是或衍生自條件約束的類型。 這稱為巢狀類型條件約束。  
   
-## 備註  
- 條件約束子句包含型別的參數，冒號 \(**:**\) 和條件式後面接著 **where** ，在型別參數中指定這個限制的性質。  **where** 為內容相關性關鍵字。如需詳細資訊，請參閱[視內容而有所區別的關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  以空格分隔多個 **where** 子句。  
+## <a name="remarks"></a>備註  
+ 條件約束子句包括**其中**後面接著類型參數、 冒號 (**:**)，而條件約束指定型別參數上限制的性質。 **其中**是即時線上關鍵字; 請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)如需詳細資訊。 分隔多個**其中**子句加上空格。  
   
- 條件約束套用至型別參數加入至可當做引數為泛型型別或方法之型別的限制。  
+ 條件約束套用至型別參數後，就會對可做為泛型類型或方法的引數使用的類型加以限制。  
   
- 類別和介面條件約束指定引數型別必須是或衍生自指定的類別繼承或實作特定的介面。  
+ 類別和介面條件約束會指定，引數類型必須是或繼承自指定的類別，或是實作指定的介面。  
   
- 條件約束的應用程式對泛型型別或方法的允許該型別或方法的程式碼使用條件約束型別的已知的功能。  例如，您可以宣告泛型類別 ，其中指定由型別參數來實作 **IComparable\<T\>**：  
+ 將條件約束應用至泛型類型或方法，可讓該類型或方法中的程式碼利用條件約束類型的已知功能。 比方說，您可以宣告泛型類別的型別參數實作**IComparable\<T >**介面：  
   
 ```  
 // generics_constraints_1.cpp  
@@ -68,15 +69,15 @@ where T : IComparable<T>
 ref class List {};  
 ```  
   
- 這個條件約束要求在編譯時期型別用於 `T` 的引數實作 `IComparable<T>`。  它也允許介面方法來呼叫，例如 **CompareTo**。  轉換不需要在型別參數中的執行個體呼叫介面方法。  
+ 這個條件約束會要求型別引數用於`T`實作`IComparable<T>`在編譯時間。 它也可讓介面的方法，例如**CompareTo**呼叫。 呼叫介面方法時，不需要再型別參數的執行個體上進行轉型。  
   
- 在型別引數之類別的靜態方法無法透過型別參數呼叫；它們只可以被實際具名型別呼叫。  
+ 型別引數類別中的靜態方法無法透過型別參數呼叫，只能透過實際的具名類型呼叫。  
   
- 條件約束不能是實值型別，包括內建型別 \(例如 `int` 或 **double**。  因為實值型別不能有衍生類別，只有一個類別可以滿足條件約束。  在這種情況下，泛型可以覆寫與型別特定實值型別取代參數。  
+ 條件約束不能是實值類型，包括內建類型，例如`int`或**double**。 由於實值類型不能有衍生類別，因此只有一個類別能夠符合條件約束。 在這種情況下，可以重新撰寫泛型，將類型參數取代為特定實值類型。  
   
- 在某些情況下需要條件約束，因為編譯器不允許使用方法或未知型別的其他功能，除非條件約束表示未知的型別支援方法或介面。  
+ 在某些情況下會需要條件約束，因為編譯器不允許使用未知類型的方法或其他功能，除非條件約束表示未知的類型支援方法或介面。  
   
- 同一個型別參數的條件約束會以逗號分隔的清單中加以指定。  
+ 同一個型別參數的多個條件約束可以使用逗號分隔清單指定。  
   
 ```  
 // generics_constraints_2.cpp  
@@ -88,7 +89,7 @@ where T : List<T>, IComparable<T>
 ref class List {};  
 ```  
   
- 如果是多重型別參數，則每個型別參數都要有一個 **where** 子句  例如：  
+ 有多個類型參數，使用其中一個**其中**每個類型參數的子句。 例如:   
   
 ```  
 // generics_constraints_3.cpp  
@@ -102,13 +103,13 @@ generic <typename K, typename V>
 ref class Dictionary {};  
 ```  
   
- 總之，在程式碼使用條件約束會根據下列規則:  
+ 總而言之，請根據下列規則在程式碼中使用條件約束：  
   
--   如果多個條件約束清單，條件約束可以任何順序列出。  
+-   如果列出了多個條件約束，條件約束可依照任意順序列出。  
   
--   條件約束也是類別型別，例如抽象基底類別。  不過，條件約束不可以是實值型別或密封類別。  
+-   條件約束也可以是類別類型，例如抽象基底類別。 不過，條件約束不可以是實值類型或密封類別。  
   
--   條件約束本身不能是型別參數，但是，在開放式建構型別可以包含型別參數。  例如：  
+-   條件約束本身不能是類型參數，但是可以在開放式建構類型中包含類型參數。 例如:   
   
     ```  
     // generics_constraints_4.cpp  
@@ -121,8 +122,8 @@ ref class Dictionary {};
     ref class G2{};  
     ```  
   
-## 範例  
- 下列範例會在呼叫型別參數的執行個體方法中使用條件約束。  
+## <a name="example"></a>範例  
+ 下列範例將示範在型別參數上使用條件約束呼叫執行個體方法。  
   
 ```  
 // generics_constraints_5.cpp  
@@ -177,14 +178,17 @@ int main() {
 }  
 ```  
   
-  **"parent" is not a senior**  
-**"grandfather" is a senior**   
-## 範例  
- 當泛型型別參數當做條件約束時，稱為 Naked 型別條件約束。  表示與其型別參數的 10% 成員函式需要限制該參數至包含型別時，型別參數 Naked 型別條件約束就很有用。  
+```Output  
+"parent" is not a senior  
+"grandfather" is a senior  
+```  
   
- 在下列範例中， T 是加入方法內容中 Naked 型別條件約束。  
+## <a name="example"></a>範例  
+ 當泛型型別參數做為條件約束使用時，它稱為巢狀類型條件約束。 當具有自己的型別參數之成員函式需要將該參數限制為包含類型的型別參數時，巢狀類型條件約束就很有用。  
   
- Naked 型別參數也可以在泛型類別定義中使用。  做為 Naked 型別條件約束對泛型類別來說不會有用，因為編譯器除了只能將 Naked 型別約束條件視為是衍生自 <xref:System.Object> 之外，無法做任何假設。  如果您要強制兩型別參數之間的繼承關係時，請在泛型類別上使用 Naked 型別條件約束。  
+ 在下列範例中，T 是 Add 方法內容中的巢狀類型條件約束。  
+  
+ 巢狀類型參數也可以在泛型類別定義中使用。 巢狀類型條件約束對泛型類別來說並不那麼實用，因為編譯器除了會假設巢狀類型約束條件衍生自 <xref:System.Object> 之外，不會再做其他任何假設。 如果您要強制兩個型別參數之間具有繼承關係，請在泛型類別上使用巢狀類型條件約束。  
   
 ```  
 // generics_constraints_6.cpp  
@@ -201,5 +205,5 @@ where A : C
 ref struct SampleClass {};  
 ```  
   
-## 請參閱  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>請參閱  
+ [泛型](../windows/generics-cpp-component-extensions.md)

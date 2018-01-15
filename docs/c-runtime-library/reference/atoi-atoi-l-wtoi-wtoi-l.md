@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -49,31 +47,16 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 5ed38a5d4c5a9ff6d976302cc52cc14672a4d60b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f3430389002b4b68d132b1b524b98cb1f7dea1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 將字串轉換成整數。  
@@ -118,7 +101,7 @@ int _wtoi_l(
   
  A`whitespace`包含空格或定位字元，都會被忽略;`sign`是加號 （+） 或減號 （-）; 和`digits`一或多個位數。  
   
- 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -181,7 +164,7 @@ Function: atoi( "3336402735171707160320" ) = 2147483647
 Overflow condition occurred.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [地區設定](../../c-runtime-library/locale.md)   

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b03ec43ff213e330c88886fb485c0e18700c8a86
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: a45dce64ce0dfb2f5112b22c7577c7174effc12b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="includealias"></a>include_alias
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
 
 ## <a name="remarks"></a>備註
 
-有些檔案系統可使用比 8.3 FAT 檔案系統所限制更長的標頭檔名稱。 由於較長標頭檔名稱的前八個字元不一定是唯一的，因此編譯器無法依照 8.3 的限制直接截斷較長的名稱。 只要編譯器遇到*long_filename*字串，以取代*short_filename*，並尋找標頭檔*short_filename*改為。 這個 pragma 必須出現在對應的 `#include` 指示詞前面。 例如：
+有些檔案系統可使用比 8.3 FAT 檔案系統所限制更長的標頭檔名稱。 由於較長標頭檔名稱的前八個字元不一定是唯一的，因此編譯器無法依照 8.3 的限制直接截斷較長的名稱。 只要編譯器遇到*long_filename*字串，以取代*short_filename*，並尋找標頭檔*short_filename*改為。 這個 pragma 必須出現在對應的 `#include` 指示詞前面。 例如: 
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -113,6 +114,6 @@ myfile.h(15) : error C2059 : syntax error
 
 編譯器會搜尋 TWO.H 這個檔案，而不是 THREE.H。  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

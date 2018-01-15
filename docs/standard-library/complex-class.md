@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e47cdfaadcf164a3298d06901fe4f723b9aa0f25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4fe9411d306e08f16df138786d6d55e4ea1647c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="complex-class"></a>complex 類別
 此範本類別描述一個物件，該物件會儲存兩個類型皆為 **Type** 的物件，其中一個代表複數的實數部分，而另一個代表虛數部分。  
@@ -766,7 +767,7 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [complex 成員](http://msdn.microsoft.com/en-us/d5c4466c-43a0-4817-aca1-9a5d492dae28)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

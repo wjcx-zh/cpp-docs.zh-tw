@@ -61,11 +61,12 @@ caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd6322b372a9cfb6ef75875d183d1b3e0a3e79c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596d39f5d6338f7a16e7a6090fbc47f5ca799d6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 類別
 `CMFCRibbonStatusBar`類別會實作狀態列控制項可以顯示功能區項目。  
@@ -76,11 +77,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonStatusBar : public CMFCRibbonBar  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|將動態項目加入至功能區狀態列。|  
 |[CMFCRibbonStatusBar::AddElement](#addelement)|將新的功能區項目加入至功能區狀態列。|  
@@ -104,9 +105,9 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 |[CMFCRibbonStatusBar::RemoveElement](#removeelement)|移除具有指定的命令識別碼，從功能區狀態列的元素。|  
 |[CMFCRibbonStatusBar::SetInformation](#setinformation)|啟用或停用功能區狀態列的資訊模式。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|在功能區狀態列的資訊模式啟用時顯示資訊的字串，會出現。|  
   
@@ -149,7 +150,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pElement`  
+ [輸入] `pElement`  
  動態項目之指標。  
   
 ### <a name="remarks"></a>備註  
@@ -166,13 +167,13 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pElement`  
+ [輸入] `pElement`  
  加入項目的指標。  
   
- [in] `lpszLabel`  
+ [輸入] `lpszLabel`  
  項目的文字標籤。  
   
- [in] `bIsVisible`  
+ [輸入] `bIsVisible`  
  `TRUE`如果您想要將項目新增為可見，`FALSE`如果您想要新增項目，做為隱藏。  
   
 ##  <a name="addextendedelement"></a>CMFCRibbonStatusBar::AddExtendedElement  
@@ -186,13 +187,13 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pElement`  
+ [輸入] `pElement`  
  加入項目的指標。  
   
- [in] `lpszLabel`  
+ [輸入] `lpszLabel`  
  項目的文字標籤。  
   
- [in] `bIsVisible`  
+ [輸入] `bIsVisible`  
  `TRUE`如果您想要將項目新增為可見，`FALSE`如果您想要新增項目，做為隱藏。  
   
 ### <a name="remarks"></a>備註  
@@ -219,13 +220,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pParentWnd`  
+ [輸入] `pParentWnd`  
  父視窗的指標。  
   
- [in] `dwStyle`  
+ [輸入] `dwStyle`  
  邏輯 OR 組合的控制項樣式。  
   
- [in] `nID`  
+ [輸入] `nID`  
  狀態列控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -266,8 +267,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiCmdID`  
- [in] `BOOL`  
+ [輸入] `uiCmdID`  
+ [輸入] `BOOL`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -281,7 +282,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiID`  
+ [輸入] `uiID`  
  項目的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -305,7 +306,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIndex`  
+ [輸入] `nIndex`  
  指定位於狀態列控制項的主要區域中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -331,7 +332,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIndex`  
+ [輸入] `nIndex`  
  指定位於狀態列控制項擴充區域中之元素的以零起始索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -347,7 +348,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
+ [輸入] `rect`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -383,7 +384,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pElement`  
+ [輸入] `pElement`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -413,13 +414,13 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `strInfo`  
+ [輸入] `strInfo`  
  資訊的字串。  
   
- [in] `rectInfo`  
+ [輸入] `rectInfo`  
  週框。  
   
 ### <a name="remarks"></a>備註  
@@ -449,7 +450,7 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiID`  
+ [輸入] `uiID`  
  從 [狀態] 列中移除項目的 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -463,7 +464,7 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszInfo`  
+ [輸入] `lpszInfo`  
  資訊的字串。  
   
 ### <a name="remarks"></a>備註  
@@ -471,7 +472,7 @@ void SetInformation(LPCTSTR lpszInfo);
   
  LpszInfo 時`NULL`，狀態列會還原為一般模式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)   

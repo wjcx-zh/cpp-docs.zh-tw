@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18e427c4b66969b92b6ba0683b9b40cf25caac08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9da47cd7fe5c69a7506bcb339cb1ad09d22c3984
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX 控制項的容器
 您可以使用其他應用程式，以開發 Visual c + + ActiveX 控制項，只要它們支援 ActiveX 控制項內含項目。 許多 Microsoft 應用程式，開頭列出的版本支援 ActiveX 控制項內含項目。  
@@ -58,6 +59,6 @@ ms.lasthandoff: 10/24/2017
   
 -   NCompass Netscape navigator 外掛程式  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ActiveX 控制項容器](../mfc/activex-control-containers.md)
 

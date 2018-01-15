@@ -34,11 +34,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 940d4c2604f65166faa95ca06ef3cc9b81a47b3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddda6fd1643d828f3ad566b679fa8bf80c49845b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution 類別
 產生指數分佈。  
@@ -92,9 +93,9 @@ public:
   
 屬性成員函式 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。  
   
-如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
-如需指數分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Exponential Distribution](http://go.microsoft.com/fwlink/LinkId=401098) (指數分佈)。  
+如需指數分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Exponential Distribution](http://go.microsoft.com/fwlink/p/?linkid=401098) (指數分佈)。  
   
 ## <a name="example"></a>範例  
   
@@ -197,7 +198,7 @@ explicit exponential_distribution(const param_type& parm);
   
 第一個建構函式的物件，其預存的 `lambda` 值具有 *lambda* 值。  
   
-第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
   
 ##  <a name="param_type"></a>  exponential_distribution::param_type  
 儲存分佈的參數。  
@@ -225,6 +226,6 @@ struct param_type {
   
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<random>](../standard-library/random.md)
 

@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4cb43b7c3535fd5e09d08e1e488cf9ea3f39631a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ad914a9aa5e7207d1b39e4917a965d755564848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (使用多處理序建置)
 **/MP** 選項可縮短在命令列上編譯原始程式檔的總時間。 **/MP** 選項可讓編譯器在不同的處理序中，建立一或多個本身的複本。 然後這些複本會同時編譯原始程式檔， 使得建置原始程式檔的總時間大幅地降低。  
@@ -129,6 +130,6 @@ ms.lasthandoff: 10/24/2017
 #### <a name="the-gm-compiler-option"></a>/Gm 編譯器選項  
  根據預設，專案建置會啟用偵錯組建的 **/Gm** 編譯器選項 (累加建置)，而停用發行組件的這個選項。 因此，偵錯組建中的 **/MP** 編譯器選項會自動停用，因為這個選項和預設的 **/Gm** 編譯器選項衝突。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)   
  [命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)

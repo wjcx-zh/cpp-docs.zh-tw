@@ -69,11 +69,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c72946edb68212e09ab93e9d36d2dfa8afd5630e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 類別
 表示資料庫的連接，您可以透過這個連接來操作資料。  
@@ -84,17 +85,17 @@ ms.lasthandoff: 10/24/2017
 class CDaoDatabase : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoDatabase::CDaoDatabase](#cdaodatabase)|建構 `CDaoDatabase` 物件。 呼叫**開啟**來連接到資料庫的物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoDatabase::CanTransact](#cantransact)|傳回非零，如果資料庫支援交易。|  
 |[CDaoDatabase::CanUpdate](#canupdate)|傳回非零，如果`CDaoDatabase`是可更新的物件 （不唯讀）。|  
@@ -122,7 +123,7 @@ class CDaoDatabase : public CObject
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|基礎的 DAO 資料庫物件的指標。|  
 |[CDaoDatabase::m_pWorkspace](#m_pworkspace)|指標[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件，包含資料庫，以及定義它的交易空間。|  
@@ -133,7 +134,7 @@ class CDaoDatabase : public CObject
 > [!NOTE]
 >  MFC DAO 資料庫類別所 ODBC 為基礎之 MFC 資料庫類別不同。 所有的 DAO 資料庫類別名稱有"CDao"前置詞。 類別`CDaoDatabase`提供介面類似於 ODBC 類別[CDatabase](../../mfc/reference/cdatabase-class.md)。 主要差異是`CDatabase`DBMS 透過開放式資料庫連接 (ODBC) 和 ODBC 驅動程式存取該 DBMS。 `CDaoDatabase`透過資料存取物件 (DAO) 依據 Microsoft Jet database engine 存取的資料。 一般情況下，根據 DAO MFC 類別會更能夠比 ODBC; 為基礎的 MFC 類別DAO 類別都可以存取資料，包括透過 ODBC 驅動程式，透過它們自己的資料庫引擎。 DAO 類別也支援資料定義語言 (DDL) 作業，例如新增而不需要直接呼叫 DAO 類別，透過資料表。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  隱含的當您建立資料錄集物件時，您可以建立資料庫物件。 但是，您也可以明確建立資料庫物件。 若要使用的現有資料庫明確`CDaoDatabase`，執行下列其中一項：  
   
 -   建構`CDaoDatabase`物件，傳遞的指標來開啟[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件。  
@@ -824,7 +825,7 @@ void SetQueryTimeout(short nSeconds);
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 < QueryTimeout 屬性 >。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDaoWorkspace 類別](../../mfc/reference/cdaoworkspace-class.md)   

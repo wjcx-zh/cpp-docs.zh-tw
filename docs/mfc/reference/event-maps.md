@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8100119dba1094ced9358e5ff0102d831a713b2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-maps"></a>事件對應
 每當控制項要通知其容器已發生一些動作 (例如按鍵動作、滑鼠點選或變更為控制項的狀態) 時 (由控制項開發人員決定)，會呼叫引發事件函式。 這個函式會透過引發相關事件，來通知控制項容器已發生一些重要動作。  
@@ -254,5 +255,5 @@ ON_STDOLEVERB(iVerb,   memberFxn)
 ### <a name="requirements"></a>需求  
   **標頭**afxole.h  
     
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

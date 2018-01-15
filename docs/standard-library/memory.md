@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21948def2d4c67f14b5342b213754b3b669731d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6133b5a2f60cba4554ac4a0f1a358380df0dc7c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 定義幫助配置和釋放物件的類別、運算子和數個範本。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="functions"></a>函式  
   
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[allocator\<void>](../standard-library/allocator-void-class.md)|void 類型的樣板類別配置器特製化，只用於定義在此特殊內容中具有意義的成員形別。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

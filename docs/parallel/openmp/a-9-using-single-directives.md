@@ -1,27 +1,27 @@
 ---
-title: "A.9   Using single Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.9 使用單一指示詞 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0c0f9495-5794-4db9-883b-a12e3a9f1328
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 11d41d62448d41d7a11ef747e65cc6ac47e4bd7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# A.9   Using single Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列範例會示範`single`指示詞 \([一節 2.4.3](../../parallel/openmp/2-4-3-single-construct.md) 在頁面上 15\)。  在範例中，只有一個執行緒 \(通常發生在第一個執行緒`single`指示詞\) 列印進度訊息。  使用者必須不做任何假設，到哪一個執行緒會執行`single`一節。  將略過其他所有執行緒`single`區段，然後在障盾結尾處停止`single`建構。  如果其他執行緒才能繼續而不需等待執行緒執行`single` \] 區段中， `nowait`子句可以指定在`single`指示詞。  
+# <a name="a9---using-single-directives"></a>A.9 使用 single 指示詞
+下列範例會示範`single`指示詞 ([區段 2.4.3](../../parallel/openmp/2-4-3-single-construct.md)在頁面上 15)。 在範例中，只有一個執行緒 (通常是第一個執行緒所遇到之`single`指示詞) 會列印進度訊息。 使用者必須要將執行的執行緒不做任何假設`single`> 一節。 所有其他執行緒會略過`single`區段，並在結尾處屏障停止`single`建構。 如果其他的執行緒可以繼續執行，而不等候執行緒執行`single` 區段中，`nowait`子句上指定`single`指示詞。  
   
 ```  
 #pragma omp parallel  

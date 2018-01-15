@@ -45,17 +45,18 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bb903ad6ad61a7263559ad9dd3d47d85cb67e413
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d305dd1d33c04a87cc5f76965b0e422164298f5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock、_getwch_nolock
 從無回應且未鎖定執行緒的主控台取得字元。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -78,12 +79,12 @@ wint_t _getwch_nolock( void );
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_getch_nolock`|\<conio.h>|  
 |`_getwch_nolock`|\<conio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -121,7 +122,7 @@ abcdefy
 Type 'Y' when finished typing keys: Y  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
  [_getche、_getwche](../../c-runtime-library/reference/getche-getwche.md)   
  [_cgets、_cgetws](../../c-runtime-library/cgets-cgetws.md)   

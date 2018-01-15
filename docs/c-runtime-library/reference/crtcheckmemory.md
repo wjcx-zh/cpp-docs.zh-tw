@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtCheckMemory
+apiname: _CrtCheckMemory
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtCheckMemory
 - _CrtCheckMemory
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 82b64afbdd80e9b1433f8f9873b4e295fc2e20c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60909079a4d7c30b3a3e6c00257d882d76467585
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtcheckmemory"></a>_CrtCheckMemory
 確認在偵錯堆積中配置之記憶體區塊的完整性 (僅限偵錯版本)。  
@@ -85,11 +67,11 @@ _ASSERTE( _CrtCheckMemory( ) );
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_CrtCheckMemory`|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -97,7 +79,7 @@ _ASSERTE( _CrtCheckMemory( ) );
 ## <a name="example"></a>範例  
  如需如何使用 `_CrtCheckMemory` 的範例，請參閱 [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)   
  [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
  [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md)

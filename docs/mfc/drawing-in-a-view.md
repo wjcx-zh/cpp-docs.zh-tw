@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a41ca93c91fad26c507c4e468e3c4ebf007c3aab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3457597edce1b7ce36b132d1bdd16d286cb94d03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-in-a-view"></a>在檢視中繪圖
 在您的應用程式中的幾乎所有繪製在檢視中，就會發生`OnDraw`成員函式，您必須在您的檢視類別中覆寫。 (例外狀況是滑鼠繪製、 述[解譯使用者輸入透過檢視](../mfc/interpreting-user-input-through-a-view.md)。)您`OnDraw`覆寫：  
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/24/2017
   
  如需如何撰寫的範例`OnDraw`，請參閱[MFC 範例](../visual-cpp-samples.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用檢視](../mfc/using-views.md)
 

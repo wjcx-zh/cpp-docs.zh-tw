@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9aee6ce3d9a3554e4722a143bcb683c40b78ea14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 458a650214ab2186f9697ca587b2b429e9cb5a6f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Microsoft 特定的**  
@@ -40,10 +41,10 @@ void __svm_vmload(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `VmcbPhysicalAddress`|VMCB 實體位址。|  
+|[輸入] `VmcbPhysicalAddress`|VMCB 實體位址。|  
   
 ## <a name="remarks"></a>備註  
- `__svm_vmload`函數即相當於`VMLOAD`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746)站台。  
+ `__svm_vmload`函數即相當於`VMLOAD`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
   
 ## <a name="requirements"></a>需求  
   
@@ -53,9 +54,9 @@ void __svm_vmload(
   
  **標頭檔** \<intrin.h >  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [__svm_vmrun](../intrinsics/svm-vmrun.md)   
  [__svm_vmsave](../intrinsics/svm-vmsave.md)

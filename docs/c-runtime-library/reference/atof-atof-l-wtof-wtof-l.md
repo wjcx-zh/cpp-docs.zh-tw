@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -39,8 +38,7 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -55,31 +53,16 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3bb571d759b8a6360326554f4915e60d6ab0aa93
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d3232acdfdda7cf5a9e19eeb34d4578b9443cc3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof、_atof_l、_wtof、_wtof_l
 將字串轉換成雙精度浮點數。  
@@ -194,7 +177,7 @@ Function: atof("  -2,309e-25") = -2.000000e+00
 Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [地區設定](../../c-runtime-library/locale.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3d6baf4ba1622a9a9b54dcb25ed42eae89c86a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-class-helpers"></a>集合類別 Helper
 集合類別`CMap`， `CList`，和`CArray`樣板化的全域 helper 函式用於等目的的比較、 複製和序列化項目。 為您的基礎類別實作的一部分`CMap`， `CList`，和`CArray`，您必須使用符合您地圖、 清單或陣列中儲存的資料類型的版本覆寫視需要這些函式。 如需覆寫 helper 函式時，例如`SerializeElements`，請參閱文章[集合： 如何製作類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意， **ConstructElements**和**DestructElements**已被取代。  
@@ -211,7 +212,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ### <a name="requirements"></a>需求  
   **標頭**afxtempl.h 
     
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [CMap 類別](cmap-class.md)   
  [CList 類別](clist-class.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 870895dae8aa6fe4b3720b9319359672fcb576af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 612abe97de27b179f710b2b09811535829885c5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a16---using-locks"></a>A.16 使用鎖定
 在下列範例中，(如[第 3.2 節](../../parallel/openmp/3-2-lock-functions.md)41 頁面上) 鎖定函式的引數必須有型別附註`omp_lock_t`，以及是否有不需要清除它。  鎖定函式會造成執行緒等候第一個關鍵區段的項目處於閒置狀態，但可以執行其他工作，等待第二個項目。  `omp_set_lock`函式區塊，但`omp_test_lock`函式不存在，完成 skip() 中允許的工作。  

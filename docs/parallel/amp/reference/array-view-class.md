@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,35 +29,19 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- array_view class
+dev_langs: C++
+helpviewer_keywords: array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e921ae841aa1eade25fdf2ec272039cc41007a9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrayview-class"></a>array_view 類別
 代表 N 維檢視儲存在另一個容器中的資料。  
@@ -86,7 +69,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
  `_Rank`  
  陣序`array_view`物件。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -116,7 +99,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator （)](#operator_call)|傳回值的參數或參數所指定的項目。|  
 |[operator]](#operator_at)|傳回參數所指定的項目。|  
@@ -141,7 +124,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  您可以存取`array_view`物件所在的來源資料 （本機），或在不同的快速鍵或連貫性網域 （遠端）。 當您從遠端存取物件時，檢視已複製，並視快取。 除了自動快取的影響`array_view`物件有類似的效能設定檔`array`物件。 透過檢視存取資料時，會對輕微的效能帶來負面影響。  
   
- 有三個遠端的使用案例︰  
+ 有三個遠端的使用案例：  
   
 -   藉由傳遞到系統的記憶體指標的檢視[parallel_for_each](../../../parallel/concrt/reference/concurrency-namespace-functions.md#parallel_for_each)加速器而且加速器上存取。  
   
@@ -153,7 +136,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  您必須同步處理的任何多執行緒的存取相同的資料來源。  
   
- 執行階段並快取中的資料有關的下列保證`array_view`物件︰  
+ 執行階段並快取中的資料有關的下列保證`array_view`物件：  
   
 -   良好的同步處理存取`array`物件和`array_view`程式順序中的物件在其上遵守序列發生-關聯性之前。  
   
@@ -842,6 +825,5 @@ array_view<const value_type,_New_rank> view_as(
 ### <a name="return-value"></a>傳回值  
  `array_view`建構物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

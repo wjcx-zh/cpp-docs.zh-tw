@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f70ef6431f8dab37b6df185efe1c7494ff0d9b1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>如何：轉換使用取消的 OpenMP 迴圈來使用並行執行階段
 某些平行迴圈不需要執行所有的反覆項目。 例如，搜尋值的演算法可以終止之後在找到的值。 OpenMP 不提供一個機制來中斷平行迴圈。 不過，您可以使用布林值或旗標，以便表示方案已找到迴圈的反覆項目。 並行執行階段提供功能，可讓一項工作來取消尚未開始的其他工作。  
@@ -56,7 +57,7 @@ Using the Concurrency Runtime...
   
  **cl.exe /EHsc /openmp concrt-omp-平行-any-of.cpp**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [從 OpenMP 移轉至並行執行階段](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
  [PPL 中的取消](cancellation-in-the-ppl.md)   
  [平行演算法](../../parallel/concrt/parallel-algorithms.md)

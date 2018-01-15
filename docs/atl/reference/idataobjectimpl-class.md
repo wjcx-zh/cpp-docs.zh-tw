@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be2fbd11ac875906c9fc4fca4c58d3979f49cc3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 644f498a491605fb69b18ec53afee689f5f90a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl 類別
 這個類別會提供方法以支援制式資料傳輸，並管理連接。  
@@ -54,11 +55,11 @@ class IDataObjectImpl
  `T`  
  您的類別，衍生自`IDataObjectImpl`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IDataObjectImpl::DAdvise](#dadvise)|建立資料物件和通知接收之間的連接。 這可讓通知接收以接收的變更通知的物件。|  
 |[IDataObjectImpl::DUnadvise](#dunadvise)|終止透過先前建立的連線`DAdvise`。|  
@@ -226,5 +227,5 @@ HRESULT SetData(
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

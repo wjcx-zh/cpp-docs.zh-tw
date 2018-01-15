@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- list
 - list/std::list
 - list/std::list::allocator_type
 - list/std::list::const_iterator
@@ -57,35 +55,66 @@ f1_keywords:
 - list/std::list::splice
 - list/std::list::swap
 - list/std::list::unique
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- list class
+- std::list [C++]
+- std::list [C++], allocator_type
+- std::list [C++], const_iterator
+- std::list [C++], const_pointer
+- std::list [C++], const_reference
+- std::list [C++], const_reverse_iterator
+- std::list [C++], difference_type
+- std::list [C++], iterator
+- std::list [C++], pointer
+- std::list [C++], reference
+- std::list [C++], reverse_iterator
+- std::list [C++], size_type
+- std::list [C++], value_type
+- std::list [C++], assign
+- std::list [C++], back
+- std::list [C++], begin
+- std::list [C++], cbegin
+- std::list [C++], cend
+- std::list [C++], clear
+- std::list [C++], crbegin
+- std::list [C++], crend
+- std::list [C++], emplace
+- std::list [C++], emplace_back
+- std::list [C++], emplace_front
+- std::list [C++], empty
+- std::list [C++], end
+- std::list [C++], erase
+- std::list [C++], front
+- std::list [C++], get_allocator
+- std::list [C++], insert
+- std::list [C++], max_size
+- std::list [C++], merge
+- std::list [C++], pop_back
+- std::list [C++], pop_front
+- std::list [C++], push_back
+- std::list [C++], push_front
+- std::list [C++], rbegin
+- std::list [C++], remove
+- std::list [C++], remove_if
+- std::list [C++], rend
+- std::list [C++], resize
+- std::list [C++], reverse
+- std::list [C++], size
+- std::list [C++], sort
+- std::list [C++], splice
+- std::list [C++], swap
+- std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b53e8b2f708b03d1b2575beee7e93b51fbf4b398
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ca9848ba0ad3f5be1584e299a8a2d2b69f472425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="list-class"></a>list 類別
 「C++ 標準程式庫」list 類別是序列容器的範本類別，這些容器是以線性排列方式維護其元素，可讓在序列內任何位置進行的插入和刪除都相當有效率。 此序列會儲存為雙向連結的元素清單，每一個都包含某種 *Type* 類型的成員。  
@@ -98,7 +127,7 @@ class list
 ```  
   
 #### <a name="parameters"></a>參數  
- *Type*  
+ *類型*  
  要存放在清單中的元素資料類型。  
   
  `Allocator`  
@@ -393,7 +422,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>備註  
  傳回值為 `cbegin` 時，無法修改範圍中的項目。  
   
- 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為任何一種支援 `begin()` 和 `cbegin()` 的可修改 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `begin()` 和 `cbegin()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -690,14 +719,14 @@ The number '30' is in c1 collection 3 times.
  將就地建構的元素插入清單的指定位置。  
   
 ```  
-void emplace_back(iterator Where, Type&& val);
+void emplace(iterator Where, Type&& val);
 ```  
   
 ### <a name="parameters"></a>參數  
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Where`|目標 [list](../standard-library/list-class.md) 中第一個元素的插入位置。|  
 |`val`|加入至 `list` 結尾的元素。|  
   
@@ -729,7 +758,7 @@ Moved first element: a
 ```  
   
 ##  <a name="emplace_back"></a>  list::emplace_back  
- 將就地建構的元素加入至清單的開頭。  
+ 將就地建構的元素加入至清單的結尾。  
   
 ```  
 void emplace_back(Type&& val);
@@ -1028,7 +1057,7 @@ Allocator get_allocator() const;
  清單使用的配置器。  
   
 ### <a name="remarks"></a>備註  
- list 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
+ list 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
   
 ### <a name="example"></a>範例  
   
@@ -1433,7 +1462,7 @@ list& operator=(list&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|要複製到 `list` 中的 [list](../standard-library/list-class.md)。|  
   
 ### <a name="remarks"></a>備註  
@@ -2500,9 +2529,8 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<list>](../standard-library/list.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

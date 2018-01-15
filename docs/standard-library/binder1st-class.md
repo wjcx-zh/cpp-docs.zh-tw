@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::binder1st
-- binder1st
-dev_langs:
-- C++
-helpviewer_keywords:
-- binder1st class
+f1_keywords: xfunctional/std::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 4f9198d5b3f29799d38036ce4fd0dd0a67b66137
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed005f1e8d87841eb0d78d5f7283baff2039897a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binder1st-class"></a>binder1st 類別
 提供一個建構函式的樣板類別，這個建構函式透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。  
@@ -141,10 +122,9 @@ The number of elements in v1 less than 10 is: 2.
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

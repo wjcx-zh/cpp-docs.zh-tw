@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -37,8 +36,7 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -54,36 +52,22 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: c96743fc777a53f2fe849d5f88f3fd7299054d02
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 984cb8fb3c034d19f4d171f756f2336773187976
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 格式化並列印至主控台。 已有更安全的版本可用；請參閱 [_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](../../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -118,7 +102,7 @@ int _cwprintf_l(
  已列印的字元數。  
   
 ## <a name="remarks"></a>備註  
- 這些函式會使用 `_putch` 函式 (`_putwch` 用於 `_cwprintf`) 來輸出字元，直接格式化一系列的字元和值，並將其列印到主控台。 在每個引數`argument_list`（如果有的話） 會轉換和輸出對應格式規格中根據`format`。 `format`引數會使用[格式規格語法 printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 不同於`fprintf`， `printf`，和`sprintf`函式，兩者都不`_cprintf`也`_cwprintf`換行字元轉譯為歸位字元-換 (CR-LF) 組合輸出時。  
+ 這些函式會使用 `_putch` 函式 (`_putwch` 用於 `_cwprintf`) 來輸出字元，直接格式化一系列的字元和值，並將其列印到主控台。 在每個引數`argument_list`（如果有的話） 會轉換和輸出中的對應格式規格根據`format`。 `format`引數會使用[格式規格語法 printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 不同於`fprintf`， `printf`，和`sprintf`函式，兩者都不`_cprintf`也`_cwprintf`換行字元轉譯為歸位字元-換 (CR-LF) 組合輸出時。  
   
  重要的差異在於`_cwprintf`會顯示在 Windows 中使用時的 Unicode 字元。 不同於 `_cprintf`，`_cwprintf` 會使用目前的主控台地區設定。  
   
@@ -138,12 +122,12 @@ int _cwprintf_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_cprintf`、`_cprintf_l`|\<conio.h>|  
 |`_cwprintf`, `_cwprintf_l`|\<conio.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -173,7 +157,7 @@ int main( void )
 -16  001d  62511  A Test  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
  [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
  [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   

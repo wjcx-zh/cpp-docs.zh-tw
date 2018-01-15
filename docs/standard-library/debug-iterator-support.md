@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0c2f0153d216292169b72e3e75d5d40fb5f35cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 Visual C++ 執行階段程式庫可在執行階段偵測不正確的迭代器用法、進行判斷提示並顯示對話方塊。 若要啟用偵錯迭代器支援，您必須使用 C++ 標準程式庫和 C 執行階段程式庫的偵錯版本來編譯您的程式。 如需詳細資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。 如需如何使用已檢查的迭代器的資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
@@ -195,7 +196,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
 
 

@@ -1,33 +1,33 @@
 ---
-title: "sections (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "section"
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sections OpenMP directive"
+title: "區段 (OpenMP) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- section
+- SECTIONS
+dev_langs: C++
+helpviewer_keywords: sections OpenMP directive
 ms.assetid: 4cd1d776-e198-470e-930a-01fb0ab0a0bd
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 458d62bf17ce7f8778e40a4e90592aa59ba09e4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# sections (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-識別分割為所有的執行緒之間的程式碼區段。  
+# <a name="sections-openmp"></a>sections (OpenMP)
+識別要當做被除數所有執行緒之間的程式碼區段。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma omp [parallel] sections [clauses]  
@@ -35,20 +35,20 @@ caps.handback.revision: 11
    #pragma omp section  
    {  
       code_block   
-   }   
+   }   
 }  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
- `clause` \(選擇項\)  
- 零個或多個子句。  請參閱 ＜ 備註 ＞ 一節清單所支援的子句的**章節**。  
+ `clause` (選擇性)  
+ 零個或多個子句。 請參閱 < 備註 > 一節如需所支援的子句**區段**。  
   
-## 備註  
- **章節** 指示詞可以包含零或更多 **一節**指示詞。  
+## <a name="remarks"></a>備註  
+ **區段**指示詞可以包含零或多個**區段**指示詞。  
   
- **章節**指示詞可支援下列 OpenMP 子句：  
+ **區段**指示詞可支援下列 OpenMP 子句：  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
@@ -60,11 +60,11 @@ caps.handback.revision: 11
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- 如果**平行**指定了， `clause`可以任何子句所接受**平行**或**章節**指示詞，除非`nowait`。  
+ 如果**平行**也指定`clause`可以任何子句接受**平行**或**區段**指示詞，除了`nowait`。  
   
- 如需詳細資訊，請參閱 [2.4.2 sections Construct](../../../parallel/openmp/2-4-2-sections-construct.md)。  
+ 如需詳細資訊，請參閱[2.4.2 sections 建構](../../../parallel/openmp/2-4-2-sections-construct.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_sections.cpp  
@@ -82,7 +82,10 @@ int main() {
 }  
 ```  
   
-  **從執行緒 0 的 hello**  
-**從執行緒 0 的 hello**   
-## 請參閱  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Hello from thread 0  
+Hello from thread 0  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

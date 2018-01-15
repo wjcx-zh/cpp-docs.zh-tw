@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75065ba914356db06f75e80acc4ca3a6350237de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06f9fb737ac57ad04a661eb0e8438b3d557c0e3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fputc-fputwc"></a>fputc、fputwc
 將一個字元寫入資料流。  
@@ -82,7 +83,7 @@ wint_t fputwc(
   
  常式特定備註如下。  
   
-|常式|備註|  
+|常式傳回的值|備註|  
 |-------------|-------------|  
 |`fputc`|相當於 `putc`，但僅實作為函式，而不是函式和巨集。|  
 |`fputwc`|`fputc` 的寬字元版本。 根據以文字模式還是二進位模式開啟 `stream`，將 `c` 寫入為多位元組字元或寬字元。|  
@@ -95,12 +96,12 @@ wint_t fputwc(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`fputc`|\<stdio.h>|  
 |`fputwc`|\<stdio.h> 或 \<wchar.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -127,7 +128,7 @@ int main( void )
 This is a test of fputc!!  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fgetc、fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
  [putc、putwc](../../c-runtime-library/reference/putc-putwc.md)

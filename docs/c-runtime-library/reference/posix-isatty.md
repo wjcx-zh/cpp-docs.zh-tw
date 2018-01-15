@@ -28,11 +28,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 255a3987216c3a00f498d09d23616af422d55ad8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb2debed0742d2d18c2279a87645d6d207198f45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isatty"></a>isatty
 此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_isatty](../../c-runtime-library/reference/isatty.md)。

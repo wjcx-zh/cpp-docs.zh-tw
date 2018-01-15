@@ -1,32 +1,33 @@
 ---
-title: "entry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.entry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "entry attribute"
+title: "項目 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.entry
+dev_langs: C++
+helpviewer_keywords: entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9ffd90ccdcce39ab73f1c1b550b466541dacf8a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# entry
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-用來識別在 DLL 中的進入點在模組中指定的匯出函式或常數。  
+# <a name="entry"></a>entry
+識別 DLL 中的進入點在模組中指定的匯出函式或常數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,29 +36,28 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `id`  
- 進入點的 ID。  
+ 進入點的識別碼。  
   
-## 備註  
- **項目** C\+\+ 屬性具有相同的功能，為 [項目](http://msdn.microsoft.com/library/windows/desktop/aa366815) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **項目**c + + 屬性具有相同的功能[項目](http://msdn.microsoft.com/library/windows/desktop/aa366815)MIDL 屬性。  
   
-## 範例  
- 請參閱範例的 [idl\_module](../windows/idl-module.md) 的範例使用**項目**。  
+## <a name="example"></a>範例  
+ 請參閱範例的[idl_module](../windows/idl-module.md)使用的範例如**項目**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|`idl_module` 屬性|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   

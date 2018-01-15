@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c5c10ba2a1fee400ef99799c7c83a3bdcacd084f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f12d9f8af028d1e2e1fc149eeb77181c2f6b1730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-send-a-message-at-a-regular-interval"></a>如何：定期傳送訊息
 這個範例示範如何使用 concurrency::[timer 類別](../../parallel/concrt/reference/timer-class.md)定期傳送訊息。  
@@ -43,7 +44,7 @@ Performing a lengthy operation..........done.
   
  **cl.exe /EHsc report-progress.cpp**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)   
  [訊息傳遞函式](../../parallel/concrt/message-passing-functions.md)

@@ -275,11 +275,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47d12b9cef2aa36aae8e43d6de2d74875808a3cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4d11da722ee9c933e6fbded6d8724db3da47ff4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 封裝「清單檢視控制項」的功能，顯示項目集合，其中每個項目是由圖示 (來自影像清單) 和標籤所組成的。  
@@ -290,17 +291,17 @@ ms.lasthandoff: 10/24/2017
 class CListCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CListCtrl::CListCtrl](#clistctrl)|建構 `CListCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|決定顯示清單檢視控制項的項目所需的高度與寬度。|  
 |[CListCtrl::Arrange](#arrange)|對齊方格中的項目。|  
@@ -1276,7 +1277,7 @@ BOOL GetGroupInfoByIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `iIndex`|群組的以零為起始的索引。|  
+|[輸入] `iIndex`|群組的以零為起始的索引。|  
 |[輸出] `pGroup`|指標[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)接收所指定之群組的相關資訊的結構`iIndex`參數。<br /><br /> 呼叫端會負責初始化的成員[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。 設定`cbSize`成員的結構大小的旗標`mask`來指定要擷取之資訊的成員。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -1353,9 +1354,9 @@ BOOL GetGroupRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `iGroupId`|指定的群組。|  
+|[輸入] `iGroupId`|指定的群組。|  
 |[in、out] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果此方法成功，結構將會收到群組所指定的矩形座標`iGroupId`。|  
-|[in] `iCoords`|指定要擷取的矩形座標。 使用下列值之一：<br /><br /> - `LVGGR_GROUP`-整個展開群組的 （預設值） 座標。<br />- `LVGGR_HEADER`座標只標頭 （摺疊的群組）。<br />- `LVGGR_SUBSETLINK`座標只有子集連結 （標記子集）。|  
+|[輸入] `iCoords`|指定要擷取的矩形座標。 使用下列值之一：<br /><br /> - `LVGGR_GROUP`-整個展開群組的 （預設值） 座標。<br />- `LVGGR_HEADER`座標只標頭 （摺疊的群組）。<br />- `LVGGR_SUBSETLINK`座標只有子集連結 （標記子集）。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1406,8 +1407,8 @@ UINT GetGroupState(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `iGroupId`|群組的以零為起始的索引。|  
-|[in] `dwMask`|指定要擷取指定群組的狀態值的遮罩。 如需詳細資訊，請參閱`mask`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。|  
+|[輸入] `iGroupId`|群組的以零為起始的索引。|  
+|[輸入] `dwMask`|指定要擷取指定群組的狀態值的遮罩。 如需詳細資訊，請參閱`mask`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的群組，或 0，如果找不到該群組所要求的狀態。  
@@ -1660,9 +1661,9 @@ BOOL GetItemIndexRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)子項目的父項的結構。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 此參數不得為`NULL`。|  
-|[in] `iColumn`|控制項中的資料行以零為起始的索引。|  
-|[in] `rectType`|這擷取週框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> `LVIR_BOUNDS`-傳回整個子項目，包括圖示與標籤的周框矩形。<br /><br /> `LVIR_ICON`-傳回圖示或小圖示的子項目的週的框。<br /><br /> `LVIR_LABEL`-傳回子項目文字的週框矩形。|  
+|[輸入] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)子項目的父項的結構。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 此參數不得為`NULL`。|  
+|[輸入] `iColumn`|控制項中的資料行以零為起始的索引。|  
+|[輸入] `rectType`|這擷取週框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> `LVIR_BOUNDS`-傳回整個子項目，包括圖示與標籤的周框矩形。<br /><br /> `LVIR_ICON`-傳回圖示或小圖示的子項目的週的框。<br /><br /> `LVIR_LABEL`-傳回子項目文字的週框矩形。|  
 |[輸出] `pRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的周框的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 此參數不得為`NULL`。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -1821,7 +1822,7 @@ BOOL GetItemSpacing(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `fSmall`|要擷取的項目間距的檢視。 指定`true`小圖示檢視或`false`圖示檢視。|  
+|[輸入] `fSmall`|要擷取的項目間距的檢視。 指定`true`小圖示檢視或`false`圖示檢視。|  
 |[輸出] `pnHorzSpacing`|包含項目之間的水平間距。|  
 |[輸出] `pnVertSpacing`|包含項目之間的垂直間距。|  
   
@@ -1945,7 +1946,7 @@ BOOL GetNextItemIndex(
 |參數|描述|  
 |---------------|-----------------|  
 |[in、out] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目開始搜尋，或是-1，尋找符合中的旗標的第一個項目`nFlags`參數。<br /><br /> 如果此方法成功，`LVITEMINDEX`結構描述搜尋找到的項目。|  
-|[in] `nFlags`|的位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能會相依於索引、 狀態或外觀的目標項目，或以指定的目標項目實體位置，相對於項目`pItemIndex`參數。 如需詳細資訊，請參閱`flags`中的參數[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|  
+|[輸入] `nFlags`|的位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能會相依於索引、 狀態或外觀的目標項目，或以指定的目標項目實體位置，相對於項目`pItemIndex`參數。 如需詳細資訊，請參閱`flags`中的參數[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -2647,7 +2648,7 @@ BOOL IsItemVisible(int index) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `index`|目前的清單檢視控制項中的項目以零為起始的索引。|  
+|[輸入] `index`|目前的清單檢視控制項中的項目以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  `true`如果指定的項目為可見，否則`false`。  
@@ -2666,7 +2667,7 @@ UINT MapIDToIndex(UINT id) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `id`|項目的唯一識別碼。|  
+|[輸入] `id`|項目的唯一識別碼。|  
   
 ### <a name="return-value"></a>傳回值  
  目前的索引，針對指定的識別碼。  
@@ -2689,7 +2690,7 @@ UINT MapIndexToID(UINT index) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `index`|項目以零為起始的索引。|  
+|[輸入] `index`|項目以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  指定項目的唯一 ID。  
@@ -2773,10 +2774,10 @@ void MoveItemToGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `idItemFrom`  
+ [輸入] `idItemFrom`  
  要移動之項目的索引。  
   
- [in] `idGroupTo`  
+ [輸入] `idGroupTo`  
  群組識別碼的項目將會移至。  
   
 ### <a name="remarks"></a>備註  
@@ -3496,9 +3497,9 @@ BOOL SetItemIndexState(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目。 呼叫端會負責配置此結構，並設定其成員項目。|  
-|[in] `dwState`|設定項目，狀態即的位元組合[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。 指定 0 時可重設，或其中一個設定，狀態。|  
-|[in] `dwMask`|所指定的狀態的有效位元遮罩`dwState`參數。 指定的位元組合 (OR)[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。|  
+|[輸入] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目。 呼叫端會負責配置此結構，並設定其成員項目。|  
+|[輸入] `dwState`|設定項目，狀態即的位元組合[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。 指定 0 時可重設，或其中一個設定，狀態。|  
+|[輸入] `dwMask`|所指定的狀態的有效位元遮罩`dwState`參數。 指定的位元組合 (OR)[清單檢視項目狀態](http://msdn.microsoft.com/library/windows/desktop/bb774733)。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -3838,12 +3839,12 @@ BOOL SortItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pfnCompare`  
+ [輸入] `pfnCompare`  
  應用程式定義的比較函式的位址。  
   
  排序作業呼叫的比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是類別的靜態成員，或是獨立函式不是類別的任何類別的成員。  
   
- [in] `dwData`  
+ [輸入] `dwData`  
  應用程式定義的值傳遞給比較函式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -3899,8 +3900,8 @@ BOOL SortItemsEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pfnCompare`|應用程式定義的比較函式的位址。<br /><br /> 排序作業呼叫的比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是類別的靜態成員，或是獨立函式不是類別的任何類別的成員。|  
-|[in] `dwData`|應用程式定義的值傳遞給比較函式。|  
+|[輸入] `pfnCompare`|應用程式定義的比較函式的位址。<br /><br /> 排序作業呼叫的比較函式每次需要判斷兩個清單項目的相對順序。 比較函式必須是類別的靜態成員，或是獨立函式不是類別的任何類別的成員。|  
+|[輸入] `dwData`|應用程式定義的值傳遞給比較函式。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -4027,7 +4028,7 @@ BOOL Update(int nItem);
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetSelectedCount](#getselectedcount)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 ROWLIST](../../visual-cpp-samples.md)   
  [CWnd 類別](cwnd-class.md)   
  [階層架構圖表](../hierarchy-chart.md)   

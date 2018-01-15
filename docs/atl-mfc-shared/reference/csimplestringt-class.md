@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,37 +37,22 @@ f1_keywords:
 - ATLSIMPSTR/ATL::CSimpleStringT::StringLength
 - ATLSIMPSTR/ATL::CSimpleStringT::Truncate
 - ATLSIMPSTR/ATL::CSimpleStringT::UnlockBuffer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - shared classes, CSimpleStringT
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0b60a7b5c58c33ed4d8be67e1de603ef5f711742
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: acbf4753bb29b8f28cac9fe4fb6ceff72ceda8a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 此類別代表`CSimpleStringT`物件。  
@@ -90,7 +74,7 @@ class CSimpleStringT
   
 - **TCHAR** （適用於 ANSI 和 Unicode 字元字串）。  
 
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -109,7 +93,7 @@ class CSimpleStringT
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleStringT::Append](#append)|將附加`CSimpleStringT`物件到現有`CSimpleStringT`物件。|  
 |[CSimpleStringT::AppendChar](#appendchar)|將字元附加至現有`CSimpleStringT`物件。|  
@@ -138,7 +122,7 @@ class CSimpleStringT
 
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|直接存取儲存在字元`CSimpleStringT`物件做為 C 樣式字串。|  
 |[CSimpleStringT::operator\[\]](#operator_at)|傳回指定位置處的字元-運算子替代`GetAt`。|  
@@ -149,7 +133,7 @@ class CSimpleStringT
  `CSimpleStringT`為 Visual c + + 所支援的各種字串類別的基底類別。 它提供最小支援的字串物件和基本緩衝區操作的記憶體管理。 對於更進階的字串物件，請參閱[CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsimpstr.h  
+ **標頭：** atlsimpstr.h  
 
 
 ## <a name="append"></a>CSimpleStringT::Append
@@ -282,7 +266,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
  長度的字元陣列的指標`nLength`、 null 結尾。  
   
  `pszSrc`  
- 以 null 結束的字串複製到這個`CSimpleStringT`物件。  
+ 以 null 結束的字串複製到這`CSimpleStringT`物件。  
   
  `nLength`  
  中的字元數的計數`pch`。  
@@ -321,7 +305,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 void Empty() throw();  
 ```  
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[字串︰ CString 例外狀況清除](../cstring-exception-cleanup.md)。  
+ 如需詳細資訊，請參閱[字串： CString 例外狀況清除](../cstring-exception-cleanup.md)。  
   
 ### <a name="example"></a>範例  
  下列範例示範 `CSimpleStringT::Empty` 的用法。  
@@ -369,7 +353,7 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
 ```
   
 ### <a name="remarks"></a>備註  
- 此範例的輸出如下所示︰  
+ 此範例的輸出如下所示：  
   
  `Alloc length is 1031, String length is 1024`  
   
@@ -461,7 +445,7 @@ s.ReleaseBuffer();
 ```
   
 ##  <a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength  
-傳回的內部字元緩衝區的指標`CSimpleStringT`物件、 截斷或有需要完全符合指定的長度增加其長度`nLength`。  
+傳回的內部字元緩衝區的指標`CSimpleStringT`物件、 截斷或成長它的長度，如有必要完全符合指定的長度`nLength`。  
   
 ### <a name="syntax"></a>語法  
   
@@ -486,7 +470,7 @@ PXSTR GetBufferSetLength(int nLength);
   
  如果您追蹤的字串長度自行，請勿不附加結束的 null 字元。 當您放開緩衝區使用時，您必須指定最終字串長度`ReleaseBuffer`。 如果您不要附加結束的 null 字元，當您呼叫`ReleaseBuffer`，傳遞 – 1 （預設值） 的長度為`ReleaseBuffer`，和`ReleaseBuffer`將會執行`strlen`來判斷其長度的緩衝區上。  
   
- 如需有關參考計數的詳細資訊，請參閱下列文章︰  
+ 如需有關參考計數的詳細資訊，請參閱下列文章：  
   
 - [管理透過參考計數的物件存留期](http://msdn.microsoft.com/library/windows/desktop/ms687260)Windows SDK 中。 
   
@@ -539,7 +523,7 @@ IAtlStringMgr* GetManager() const throw();
  指標，memory manager`CSimpleStringT`物件。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以擷取記憶體管理員所使用`CSimpleStringT`物件。 記憶體管理員與字串物件的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。  
+ 呼叫此方法以擷取記憶體管理員所使用`CSimpleStringT`物件。 如需有關記憶體管理員和字串物件的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。  
   
 ##  <a name="getstring"></a>CSimpleStringT::GetString
 擷取的字元字串。  
@@ -601,7 +585,7 @@ PXSTR LockBuffer();
  指標`CSimpleStringT`物件或以 null 結束的字串。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法來鎖定緩衝的`CSimpleStringT`物件。 藉由呼叫`LockBuffer`，您建立一份字串中，參考計數為-1。 當參考計數值為-1 時，緩衝區中的字串會被視為 「 鎖定 」 的狀態。 處於鎖定狀態時，字串是在兩種方式受到保護︰  
+ 呼叫這個方法來鎖定緩衝的`CSimpleStringT`物件。 藉由呼叫`LockBuffer`，您建立一份字串中，參考計數為-1。 當參考計數值為-1 時，緩衝區中的字串會被視為 「 鎖定 」 的狀態。 處於鎖定狀態時，字串是在兩種方式受到保護：  
   
 -   任何其他字串可以鎖定字串中不取得資料的參考，即使該字串指派給鎖定字串。  
   
@@ -614,7 +598,7 @@ PXSTR LockBuffer();
 > [!NOTE]
 >  如果您呼叫[GetBuffer](#getbuffer)鎖定的緩衝區，而且您在設定`GetBuffer`參數`nMinBufferLength`大於目前的緩衝區的長度，您將會遺失緩衝區鎖定。 這類呼叫`GetBuffer`終結目前緩衝區、 取代緩衝區的要求的大小，並將參考計數重設為零。  
   
- 如需有關參考計數的詳細資訊，請參閱下列文章︰  
+ 如需有關參考計數的詳細資訊，請參閱下列文章：  
   
 - [管理透過參考計數的物件存留期](http://msdn.microsoft.com/library/windows/desktop/ms687260)windows SDK  
   
@@ -771,7 +755,7 @@ operator PCXSTR() const throw();
  字串資料的字元指標。  
   
 ### <a name="remarks"></a>備註  
- 沒有字元會複製;只有指標會傳回。 請謹慎使用這個運算子。 如果您變更`CString`物件取得字元指標之後，可能會導致重新配置的記憶體，讓指標失效。  
+ 沒有字元會複製;只有指標會傳回。 請謹慎使用這個運算子。 如果您變更`CString`物件取得字元指標之後，您可能會導致重新配置的記憶體，讓指標失效。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何使用**CSimpleStringT::operator PCXSTR**。  
@@ -941,7 +925,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
  新的記憶體管理員指標。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以指定新的記憶體管理員所使用`CSimpleStringT`物件。 記憶體管理員與字串物件的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。  
+ 呼叫此方法以指定新的記憶體管理員所使用`CSimpleStringT`物件。 如需有關記憶體管理員和字串物件的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。  
   
 ### <a name="example"></a>範例  
  下列範例示範 `CSimpleStringT::SetManager` 的用法。  
@@ -1067,6 +1051,6 @@ void UnlockBuffer() throw();
 ### <a name="remarks"></a>備註  
  呼叫此方法以終結`CSimpleStringT`物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)

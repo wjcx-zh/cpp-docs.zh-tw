@@ -19,16 +19,17 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3531ab24116cd64778f43604fa6196b9ffd67f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c341f208d9aa54e60568b066f462db65b9172394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>結構、樣式、回呼和訊息對應
 本節說明 MFC 程式庫和 MFC 訊息對應使用的結構、樣式和回呼函式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [MFC 使用的結構](../../mfc/reference/structures-used-by-mfc.md)  
  提供從各種成員函式呼叫的結構。  
   

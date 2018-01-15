@@ -13,11 +13,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 284d9393f7f967230fd3f7deb497a0e245d78dec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f005969908252602cb2fb4bdd73d3b55ae342a99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空間
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -28,11 +31,11 @@ ms.lasthandoff: 10/24/2017
 namespace Microsoft::WRL::Details;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="classes"></a>類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ComPtrRef 類別](../windows/comptrref-class.md)|表示 ComPtr 類型的物件參考\<T >。|  
 |[ComPtrRefBase 類別](../windows/comptrrefbase-class.md)|表示基底類別[ComPtrRef](../windows/comptrref-class.md)類別。|  
@@ -45,7 +48,7 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="structures"></a>結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ArgTraits 結構](../windows/argtraits-structure.md)|宣告指定的委派介面和匿名成員函式具有指定的參數數目。|  
 |[ArgTraitsHelper 結構](../windows/argtraitshelper-structure.md)|有助於定義委派引數的一般的特性。|  
@@ -71,13 +74,13 @@ namespace Microsoft::WRL::Details;
   
 ### <a name="enumerations"></a>列舉  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AsyncStatusInternal 列舉](../windows/asyncstatusinternal-enumeration.md)|指定狀態的非同步作業的內部列舉型別之間的對應和**Windows::Foundation::AsyncStatus**列舉型別。|  
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ActivationFactoryCallback 函式](../windows/activationfactorycallback-function.md)|啟動處理站取得所指定的啟用識別碼。|  
 |[Move 函式](../windows/move-function.md)|將指定的引數從一個位置移到另一個。|  
@@ -90,6 +93,6 @@ namespace Microsoft::WRL::Details;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft:: wrl 命名空間](../windows/microsoft-wrl-namespace.md)   
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 849f430caaaf8dacef53ecedd5dc4897041b624a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46b4962e30a6990f6de2c67437fc2af3989c2407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空間
 `direct3d`命名空間提供支援 D3D 互通性函式。 它可讓您順暢使用 D3D 資源 AMP 程式碼中的計算，以及允許在 AMP 建立 D3D 程式碼中，而不需要建立重複的中繼複本的資源使用。 您可以逐步進行加速使用 c + + AMP 計算密集區段 DirectX 應用程式，並從 AMP 計算所產生的資料上使用 D3D API。  
@@ -35,23 +36,23 @@ ms.lasthandoff: 10/24/2017
 namespace direct3d;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="classes"></a>類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[scoped_d3d_access_lock 類別](scoped-d3d-access-lock-class.md)|RAII 包裝函式上的 D3D 存取鎖定`accelerator_view`物件。|  
   
 ### <a name="structures"></a>結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[adopt_d3d_access_lock_t 結構](adopt-d3d-access-lock-t-structure.md)|標記型別以表示 D3D 存取鎖定應該採用而取得。|  
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|傳回引數的絕對值|  
 |[有縮短時間差](concurrency-direct3d-namespace-functions-amp.md#clamp)|多載。 強加 _X 指定 _Min 和 （_m） 的範圍|  
@@ -84,5 +85,5 @@ namespace direct3d;
   
  **命名空間：** 並行  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

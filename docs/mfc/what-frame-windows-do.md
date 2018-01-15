@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cda73727a7481c6c7d8b5002467ceeef378fdae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5143bab1ea84392efe1bd5783889c45375365ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-frame-windows-do"></a>框架視窗執行什麼功能
 除了框架檢閱以外，框架視窗負責協調框架與其檢閱及與應用程式相關的各種工作。 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)和[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)繼承自[CFrameWnd](../mfc/reference/cframewnd-class.md)，因此，它們需要`CFrameWnd`功能，以及它們所加入的新功能。 子視窗的範例包括檢視、控制項 (例如按鈕和清單方塊)，以及控制列 (包括工具列、狀態列和對話方塊列)。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [控制項](../mfc/controls-mfc.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [框架視窗](../mfc/frame-windows.md)
 

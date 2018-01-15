@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b9eac9e9ebd25f0004cafb0ea1ed03fad1d34d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 574f4def0f480741876df8f0d74f87a60f69671c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-internet-classes"></a>Win32 網際網路類別
 MFC 包裝 Win32 Internet (WinInet) 和 ActiveX 技術來讓網際網路程式設計更容易。  
@@ -67,6 +68,6 @@ MFC 包裝 Win32 Internet (WinInet) 和 ActiveX 技術來讓網際網路程式�
  [CInternetException](../mfc/reference/cinternetexception-class.md)  
  表示與網際網路作業相關的例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

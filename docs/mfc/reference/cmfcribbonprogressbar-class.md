@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45f16a197152827a1d0cf56b2d3d67547b544631
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1354b0b15837a733a890c438c7771ffe39526773
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 類別
 實作以視覺效果指示長時間作業進度的控制項。  
@@ -52,17 +53,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonProgressBar : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|建構並初始化 `CMFCRibbonProgressBar` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonProgressBar::GetPos](#getpos)|傳回目前的進度。|  
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|傳回目前範圍的最大值。|  
@@ -106,13 +107,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  指定功能區進度列的命令 ID。  
   
- [in] `nWidth`  
+ [輸入] `nWidth`  
  指定的寬度，以像素的功能區進度列。  
   
- [in] `nHeight`  
+ [輸入] `nHeight`  
  指定高度，單位為像素的功能區進度列。  
   
 ##  <a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
@@ -158,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -185,7 +186,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="remarks"></a>備註  
   
@@ -197,7 +198,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSet`  
+ [輸入] `bSet`  
  `TRUE`若要指定無限的模式，進度列否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -213,10 +214,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nPos`  
+ [輸入] `nPos`  
  指定設定的進度列的位置。  
   
- [in] `bRedraw`  
+ [輸入] `bRedraw`  
  指定是否應該重新繪製進度列。  
   
 ### <a name="remarks"></a>備註  
@@ -232,16 +233,16 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nMin`  
+ [輸入] `nMin`  
  指定範圍的最小值。  
   
- [in] `nMax`  
+ [輸入] `nMax`  
  指定範圍的最大值。  
   
 ### <a name="remarks"></a>備註  
  使用這個方法來定義進度列範圍，藉由設定 最小和最大值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonBaseElement 類別](../../mfc/reference/cmfcribbonbaseelement-class.md)   

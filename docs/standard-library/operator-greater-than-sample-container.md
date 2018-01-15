@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,22 +12,21 @@ f1_keywords:
 - operator>
 - std::>
 - '>'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '> operator, comparing specific objects'
 - operator >
 ms.assetid: 49bd417a-3305-4ffa-9884-39d3904ed87d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 047132a1281a33f3f93b5dc3afe5b0807a63b6bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 57550a5bb1daa5621b54d8cc22f8803cf0f936dd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorgt-ltsample-containergt"></a>operator&gt; (&lt;範例容器&gt;)
 > [!NOTE]
@@ -48,7 +46,6 @@ bool operator*gt;(
 ## <a name="return-value"></a>傳回值  
  傳回 `right < left`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<範例容器>](../standard-library/sample-container.md)
-
 

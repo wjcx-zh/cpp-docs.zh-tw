@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8e97253f74365ef0b3c3a235257c85ceee37b3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>建立檔案總管樣式的 MFC 應用程式
 許多 Windows 系統應用程式會使用檔案總管 中的使用者介面 (UI)。 當您啟動檔案總管 中時，例如，您會看到的分割線的用戶端區域的垂直分割的應用程式。 工作區的左半部提供巡覽和瀏覽功能，以及用戶端區域的右側會顯示詳細資料與選取項目相關的左窗格中。 當使用者按一下左窗格中的項目時，應用程式會重新填入右窗格。 MDI 應用程式中，您可以使用命令上**檢視**功能表變更顯示在右窗格中的詳細資料量。 （SDI 或多個最上層文件應用程式中，您可以變更的詳細資料，使用工具列按鈕）。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [應用程式設計選擇](../../mfc/application-design-choices.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)   
  [建立 Web 瀏覽器樣式的 MFC 應用程式](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)   
  [建立表單架構的 MFC 應用程式](../../mfc/reference/creating-a-forms-based-mfc-application.md)

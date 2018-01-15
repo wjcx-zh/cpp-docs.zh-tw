@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -39,31 +37,16 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: bce9249134b9d0e3716d8b79a0bc0642c64fc5e6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0702b99990728bdb732654fdd1eacbefa373dda6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp-expf-expl"></a>exp、 expf，總管
 計算指數。  
@@ -109,11 +92,11 @@ long double expl(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的 C 標頭|必要的 C++ 標頭|  
+|功能|必要的 C 標頭|必要的 C++ 標頭|  
 |--------------|---------------------|---|  
 |`exp`, `expf`|\<math.h>|\<cmath> 或 \<math.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -136,7 +119,7 @@ int main( void )
 exp( 2.302585 ) = 10.000000  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [log、logf、log10、log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   
  [_CIexp](../../c-runtime-library/ciexp.md)

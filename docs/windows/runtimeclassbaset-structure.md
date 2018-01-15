@@ -14,11 +14,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fd2f654a27792336488d950a72cedfa4b3ed6527
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8798372b96074cb8424b4e747b188abcaf826849
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 結構
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -39,7 +42,7 @@ friend struct Details::RuntimeClassBaseT;
 ## <a name="remarks"></a>備註  
  提供 helper 方法來`QueryInterface`作業和取得的介面識別碼。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `RuntimeClassBaseT`  
@@ -49,6 +52,6 @@ friend struct Details::RuntimeClassBaseT;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [參考 （Windows 執行階段程式庫）](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

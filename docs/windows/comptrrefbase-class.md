@@ -1,32 +1,33 @@
 ---
-title: "ComPtrRefBase 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtrRefBase 類別"
+title: "ComPtrRefBase 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase
+dev_langs: C++
+helpviewer_keywords: ComPtrRefBase class
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 071598c83086afe12e1d19ef541dbfb3d0dbc55a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRefBase 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="comptrrefbase-class"></a>ComPtrRefBase 類別
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <  
@@ -35,41 +36,41 @@ template <
 class ComPtrRefBase;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- [ComPtr\<T\>](../windows/comptr-class.md) 型別或衍生自其本身的型別，而不僅是 ComPtr 表示的介面。  
+ A [ComPtr\<T >](../windows/comptr-class.md)型別或型別衍生自它不只是 ComPtr 所代表的介面。  
   
-## 備註  
- 表示 [ComPtrRef](../windows/comptrref-class.md) 類別 \(Class\) 的基底類別 \(Base Class\)。  
+## <a name="remarks"></a>備註  
+ 表示基底類別[ComPtrRef](../windows/comptrref-class.md)類別。  
   
-## 成員  
+## <a name="members"></a>成員  
   
-### 公用 Typedefs  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
-|--------|--------|  
-|`InterfaceType`|範本參數 `T`類型之同義資料表。|  
+|名稱|描述|  
+|----------|-----------------|  
+|`InterfaceType`|範本參數的型別同義`T`。|  
   
-### 公用運算子  
+### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
-|--------|--------|  
-|[ComPtrRefBase::operator IInspectable\*\* 運算子](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|將目前 [ptr\_](../windows/comptrrefbase-ptr-data-member.md) 資料成員轉型至 IInspectable 介面指標的指標。|  
-|[ComPtrRefBase::operator IUnknown\*\* 運算子](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|將目前 [ptr\_](../windows/comptrrefbase-ptr-data-member.md) 資料成員轉型至 IUnknown 介面的指標的指標。|  
+|名稱|描述|  
+|----------|-----------------|  
+|[ComPtrRefBase::operator IInspectable** 運算子](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|會轉換目前[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標--a-指標-將 IInspectable 介面。|  
+|[ComPtrRefBase::operator IUnknown** 運算子](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|會轉換目前[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標--a-指標-將 IUnknown 介面。|  
   
-### 受保護的資料成員  
+### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
-|--------|--------|  
-|[ComPtrRefBase::ptr\_ 資料成員](../windows/comptrrefbase-ptr-data-member.md)|對目前樣板參數所指定型別的指標。|  
+|名稱|描述|  
+|----------|-----------------|  
+|[ComPtrRefBase::ptr_ 資料成員](../windows/comptrrefbase-ptr-data-member.md)|目前的範本參數所指定之類型的指標。|  
   
-## 繼承階層  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `ComPtrRefBase`  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

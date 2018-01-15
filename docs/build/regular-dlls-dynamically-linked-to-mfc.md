@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c1835ad660c9dbb9f8e4b43dbf697ea960f82ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 930d56f7bc296225e6fefcf92e49087a2aed99cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>動態連結至 MFC 的標準 MFC Dll
 MFC DLL 動態連結至 MFC 一般是在內部使用 MFC 的 DLL，而且在 DLL 中匯出的函式可以由呼叫 MFC 或非 MFC 可執行檔。 如同名稱所說明，使用動態連結程式庫版本的 MFC （也稱為 MFC 的共用版本） 建置這類型的 DLL。 函式通常是從一般使用標準 C 介面的 MFC DLL 匯出。  
@@ -104,5 +105,5 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
   
 -   [將 MFC 當成 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DLL 的種類](../build/kinds-of-dlls.md)

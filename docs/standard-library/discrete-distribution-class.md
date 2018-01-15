@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::discrete_distribution::param_type::probabilities
 - random/std::discrete_distribution::param_type::operator==
 - random/std::discrete_distribution::param_type::operator!=
-- random/std::discrete_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::discrete_distribution [C++]
 - std::discrete_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dbd82957b213a88792d7dba8a7e7dc17b8b28bb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 092185d577b28b0507be554d48e4dacf0439e60c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 類別
 產生散整數分佈，其中有統一寬度間隔，且每個間隔中有統一可能性。  
@@ -98,7 +95,7 @@ public:
   
  屬性函式 `vector<double> probabilities()` 會傳回每個產生之整數的個別可能性。  
   
- 如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+ 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -297,9 +294,8 @@ struct param_type {
 ### <a name="remarks"></a>備註  
  這個參數套件可以傳遞至 `operator()` 以產生傳回值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<random>](../standard-library/random.md)
-
 
 
 

@@ -1,33 +1,33 @@
 ---
-title: "idl_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_quote attribute"
+title: "idl_quote |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_quote
+dev_langs: C++
+helpviewer_keywords: idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# idl_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可讓您使用最新版的 Visual C\+\+ 中不支援的 IDL 建構，並將它們下載到產生的.idl 檔。  
+# <a name="idlquote"></a>idl_quote
+可讓您使用目前版本的 Visual c + + 中不支援的 IDL 建構函式，並將它們傳遞至產生的.idl 檔案。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,15 +36,15 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 參數  
- *text*  
- 您想要下載到產生的.idl 檔但未傳回編譯器錯誤 Visual C\+\+ 編譯器屬性名稱。  
+#### <a name="parameters"></a>參數  
+ *文字*  
+ 您想要傳遞至產生的.idl 檔案而不需傳回編譯器錯誤的 Visual c + + 編譯器的屬性名稱。  
   
-## 備註  
- 如果 **idl\_quote** C\+\+ 屬性作為獨立的屬性 \(與之後的分號的右括號\)，然後*文字*會置於現狀合併的.idl 檔。  如果 **idl\_quote** 的符號，適用於*文字*會放置在該符號的屬性區塊內。  
+## <a name="remarks"></a>備註  
+ 如果**idl_quote** c + + 屬性做為獨立屬性 （具有後面的分號右括號），然後*文字*放在因為合併的.idl 檔案。 如果**idl_quote**適用於一種符號，*文字*會放置在該符號的屬性區塊內。  
   
-## 範例  
- 下列程式碼將示範如何，您可以指定不受支援的屬性 \(使用**在**，支援這種\)，以及如何定義和使用未定義的.idl 建構：  
+## <a name="example"></a>範例  
+ 下列程式碼將示範如何您也可以指定不支援的屬性 (使用**中**，支援的)，以及如何定義及使用未定義的.idl 建構：  
   
 ```  
 // cpp_attr_ref_idl_quote.cpp  
@@ -79,22 +79,21 @@ __interface IStatic{
 };  
 ```  
   
- 這段程式碼會讓 MYFLOT 和 MYDUB 和*文字* ，無法放在產生的.idl 檔的項目。  *名稱* 參數的軍隊 *文字* 之前所參考的任何項目放到 *名稱*產生的.idl 檔內。  *的相依性* 參數會強制相依性清單定義，才能放到 *文字*產生的.idl 檔內。  
+ 此程式碼會造成 MYFLOT 和 MYDUB 和*文字*放置產生的.idl 檔案中的項目。 *名稱*參數強制*文字*之前的任何項目會參考要放置*名稱*產生的.idl 檔案中。 *相依性*參數會強制之前要放置的相依性清單定義*文字*產生的.idl 檔案中。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|全螢幕輸入|  
+|**適用於**|任何位置|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [獨立屬性](../windows/stand-alone-attributes.md)   

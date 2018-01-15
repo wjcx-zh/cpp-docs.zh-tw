@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33e0ca4c92d22d8afaed4523a7f274b6b5d20a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap 類別
 封裝 Windows 繪圖裝置介面 (GDI) 點陣圖，並提供操作點陣圖的成員函式。  
@@ -60,17 +61,17 @@ ms.lasthandoff: 10/24/2017
 class CBitmap : public CGdiObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBitmap::CBitmap](#cbitmap)|建構 `CBitmap` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBitmap::CreateBitmap](#createbitmap)|初始化具有指定的寬度、 高度和位元模式的裝置而異的記憶體點陣圖的物件。|  
 |[Bitmap](#createbitmapindirect)|初始化物件的點陣圖寬度、 高度和位元模式 （如果已指定） 中指定**點陣圖**結構。|  
@@ -88,7 +89,7 @@ class CBitmap : public CGdiObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[HBITMAP CBitmap::operator](#operator_hbitmap)|傳回附加至的 Windows 控制代碼`CBitmap`物件。|  
   
@@ -374,7 +375,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>備註  
  根據預設，`LoadMappedBitmap`將對應常用於按鈕字符的色彩。  
   
- 如需建立對應的點陣圖的資訊，請參閱 Windows 函式[CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562)和[COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Windows SDK 中的結構。  
+ 如需建立對應的點陣圖的資訊，請參閱 Windows 函式[CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)和[COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Windows SDK 中的結構。  
   
 ##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  載入 Windows 所使用的預先定義的點陣圖。  
@@ -471,7 +472,7 @@ CSize SetBitmapDimension(
 ### <a name="remarks"></a>備註  
  GDI 不會使用這些值除了到它們時傳回應用程式呼叫[GetBitmapDimension](#getbitmapdimension)成員函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 MDI](../../visual-cpp-samples.md)   
  [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

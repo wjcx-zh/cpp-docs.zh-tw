@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- CDaoRelationInfo
-dev_langs:
-- C++
+f1_keywords: CDaoRelationInfo
+dev_langs: C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 047b81ebaa903d2b9bdddcf6c606d1e9fe649482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: ba437105fad22a95173b99e93aa49babab6ab5ae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 結構
 `CDaoRelationInfo`結構包含定義兩個資料表中的欄位之間的關聯性的相關資訊[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件。  
@@ -89,6 +86,5 @@ struct CDaoRelationInfo
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDaoRelationFieldInfo 結構](../../mfc/reference/cdaorelationfieldinfo-structure.md)
-

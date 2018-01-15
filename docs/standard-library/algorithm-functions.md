@@ -8,172 +8,90 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - algorithm/std::adjacent_find
-- adjacent_find
 - algorithm/std::all_of
-- all_of
 - algorithm/std::any_of
-- any_of
 - algorithm/std::binary_search
-- binary_search
 - algorithm/std::copy
-- copy
 - algorithm/std::copy_backward
-- copy_backward
 - algorithm/std::copy_if
-- copy_if
 - algorithm/std::copy_n
-- copy_n
 - algorithm/std::equal
-- equal
 - algorithm/std::equal_range
-- equal_range
 - algorithm/std::fill
-- fill
 - algorithm/std::fill_n
-- fill_n
 - algorithm/std::find
-- find
 - algorithm/std::find_end
-- find_end
 - algorithm/std::find_first_of
-- find_first_of
 - algorithm/std::find_if
-- find_if
 - algorithm/std::find_if_not
-- find_if_not
 - algorithm/std::for_each
-- for_each
 - algorithm/std::generate
-- generate
 - algorithm/std::generate_n
-- generate_n
 - algorithm/std::includes
-- includes
 - algorithm/std::inplace_merge
-- inplace_merge
 - algorithm/std::is_heap
-- is_heap
 - algorithm/std::is_heap_until
-- is_heap_until
 - algorithm/std::is_partitioned
-- is_partitioned
 - algorithm/std::is_permutation
-- is_permutation
 - algorithm/std::is_sorted
-- is_sorted
 - algorithm/std::is_sorted_until
-- is_sorted_until
 - algorithm/std::iter_swap
-- iter_swap
 - algorithm/std::lexicographical_compare
-- lexicographical_compare
 - algorithm/std::lower_bound
-- lower_bound
 - algorithm/std::make_heap
-- make_heap
 - algorithm/std::max
-- max
 - algorithm/std::max_element
-- max_element
 - algorithm/std::merge
-- merge
 - algorithm/std::min
-- min
 - algorithm/std::minmax
-- minmax
 - algorithm/std::minmax_element
-- minmax_element
 - algorithm/std::min_element
-- min_element
 - algorithm/std::mismatch
-- mismatch
 - algorithm/std::move
-- move
 - algorithm/std::move_backward
-- move_backward
 - algorithm/std::next_permutation
-- next_permutation
 - algorithm/std::none_of
-- none_of
 - algorithm/std::nth_element
-- nth_element
 - algorithm/std::partial_sort
-- partial_sort
 - algorithm/std::partial_sort_copy
-- partial_sort_copy
 - algorithm/std::partition
-- partition
 - algorithm/std::partition_point
-- partition_point
 - algorithm/std::pop_heap
-- pop_heap
 - algorithm/std::prev_permutation
-- prev_permutation
 - algorithm/std::push_heap
-- push_heap
 - algorithm/std::random_shuffle
-- random_shuffle
 - algorithm/std::remove
-- remove
 - algorithm/std::remove_copy
-- remove_copy
 - algorithm/std::remove_copy_if
-- remove_copy_if
 - algorithm/std::remove_if
-- remove_if
 - algorithm/std::replace
-- replace
 - algorithm/std::replace_copy
-- replace_copy
 - algorithm/std::replace_copy_if
-- replace_copy_if
 - algorithm/std::replace_if
-- replace_if
 - algorithm/std::reverse
-- reverse
 - algorithm/std::reverse_copy
-- reverse_copy
 - algorithm/std::rotate
-- rotate
 - algorithm/std::rotate_copy
-- rotate_copy
 - algorithm/std::search
-- search
 - algorithm/std::search_n
-- search_n
 - algorithm/std::set_difference
-- set_difference
 - algorithm/std::set_intersection
-- set_intersection
 - algorithm/std::set_symmetric_difference
-- set_symmetric_difference
 - algorithm/std::set_union
-- set_union
 - algorithm/std::shuffle
-- shuffle
 - algorithm/std::sort
-- sort
 - algorithm/std::sort_heap
-- sort_heap
 - algorithm/std::stable_partition
-- stable_partition
 - algorithm/std::stable_sort
-- stable_sort
 - algorithm/std::swap_ranges
-- swap_ranges
 - algorithm/std::transform
-- transform
 - algorithm/std::unique
-- unique
 - algorithm/std::unique_copy
-- unique_copy
 - algorithm/std::upper_bound
-- upper_bound
 - xutility/std::copy
 - xutility/std::copy_backward
 - xutility/std::copy_n
 - xutility/std::count
-- count
 - xutility/std::equal
 - xutility/std::fill
 - xutility/std::fill_n
@@ -187,19 +105,117 @@ f1_keywords:
 - algorithm/std::count_if
 - algorithm/std::partition_copy
 - algorithm/std::swap
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: c10b0c65-410c-4c83-abf8-8b7f61bba8d0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 6b3c288921fd86c4c02a8e2ffa09a060fe5fd3a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
-
+helpviewer_keywords:
+- std::adjacent_find [C++]
+- std::all_of [C++]
+- std::any_of [C++]
+- std::binary_search [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_if [C++]
+- std::copy_n [C++]
+- std::equal [C++]
+- std::equal_range [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::find_end [C++]
+- std::find_first_of [C++]
+- std::find_if [C++]
+- std::find_if_not [C++]
+- std::for_each [C++]
+- std::generate [C++]
+- std::generate_n [C++]
+- std::includes [C++]
+- std::inplace_merge [C++]
+- std::is_heap [C++]
+- std::is_heap_until [C++]
+- std::is_partitioned [C++]
+- std::is_permutation [C++]
+- std::is_sorted [C++]
+- std::is_sorted_until [C++]
+- std::iter_swap [C++]
+- std::lexicographical_compare [C++]
+- std::lower_bound [C++]
+- std::make_heap [C++]
+- std::max [C++]
+- std::max_element [C++]
+- std::merge [C++]
+- std::min [C++]
+- std::minmax [C++]
+- std::minmax_element [C++]
+- std::min_element [C++]
+- std::mismatch [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::next_permutation [C++]
+- std::none_of [C++]
+- std::nth_element [C++]
+- std::partial_sort [C++]
+- std::partial_sort_copy [C++]
+- std::partition [C++]
+- std::partition_point [C++]
+- std::pop_heap [C++]
+- std::prev_permutation [C++]
+- std::push_heap [C++]
+- std::random_shuffle [C++]
+- std::remove [C++]
+- std::remove_copy [C++]
+- std::remove_copy_if [C++]
+- std::remove_if [C++]
+- std::replace [C++]
+- std::replace_copy [C++]
+- std::replace_copy_if [C++]
+- std::replace_if [C++]
+- std::reverse [C++]
+- std::reverse_copy [C++]
+- std::rotate [C++]
+- std::rotate_copy [C++]
+- std::search [C++]
+- std::search_n [C++]
+- std::set_difference [C++]
+- std::set_intersection [C++]
+- std::set_symmetric_difference [C++]
+- std::set_union [C++]
+- std::shuffle [C++]
+- std::sort [C++]
+- std::sort_heap [C++]
+- std::stable_partition [C++]
+- std::stable_sort [C++]
+- std::swap_ranges [C++]
+- std::transform [C++]
+- std::unique [C++]
+- std::unique_copy [C++]
+- std::upper_bound [C++]
+- std::copy [C++]
+- std::copy_backward [C++]
+- std::copy_n [C++]
+- std::count [C++]
+- std::equal [C++]
+- std::fill [C++]
+- std::fill_n [C++]
+- std::find [C++]
+- std::is_permutation [C++]
+- std::lexicographical_compare [C++]
+- std::move [C++]
+- std::move_backward [C++]
+- std::reverse [C++]
+- std::rotate [C++]
+- std::count_if [C++]
+- std::partition_copy [C++]
+- std::swap [C++]
+ms.workload: cplusplus
+ms.openlocfilehash: 4f19fcbd350ea13004df5298beb95f10661e1f61
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 ||||  
@@ -722,7 +738,7 @@ template<class InputIterator, class OutputIterator, class BinaryPredicate>
   
  `if (_Pred(*_First + N)) * dest++ = *(_First + N))`  
   
- 範圍 `[0, last - first)` 中的每個 `N`，才能嚴格地從最低值開始增加 `N` 值。 如果 `dest` 和 `first` 指定儲存區域，`dest` 不得在範圍 `[` `first``,` `last``)`內。  
+ 範圍 `[0, last - first)` 中的每個 `N`，才能嚴格地從最低值開始增加 `N` 值。 如果`dest`和`first`指定儲存區域，`dest`不得在範圍`[ first, last )`。  
   
 ##  <a name="copy_n"></a> copy_n  
  複製指定的項目數目。  
@@ -2077,7 +2093,7 @@ bool includes(
   
  演算法 **merge**不會修改來源範圍。  
   
- 輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 更精確地說，演算法會測試所指定二元述詞下第一個排序範圍中的所有元素是否都有第二個排序範圍中元素的對等順序。  
+ 輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 更精確地說，演算法會測試所指定二元述詞下第一個排序範圍中的所有元素是否都有第二個排序範圍中元素的對等順序。  
   
  演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-(* last2-first2 *))-1 非空白來源範圍的比較。  
   
@@ -2409,7 +2425,7 @@ bool is_heap(
  如果指定範圍內的元素形成堆積，則傳回 `true`，否則會傳回 `false`。  
   
 ### <a name="remarks"></a>備註  
- 第一個範本函式會傳回 [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first``,` `last``) ==` `last`。  
+ 第一個範本函式會傳回 [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(` `first ,` `last ) ==` `last`。  
   
  第二個範本函式會傳回  
   
@@ -2445,7 +2461,7 @@ RandomAccessIterator is_heap_until(
  如果指定的範圍形成堆積，或包含一個或更少的項目，則傳回 `end`。 否則會傳回所找到第一個不符合堆積條件之項目的迭代器。  
   
 ### <a name="remarks"></a>備註  
- 第一個範本函式會傳回 `[``begin``,` `end``]` 中的最後一個迭代器 `next`，其中 `[``begin``, next)` 是依函式物件 `std::less<>` 排序的堆積。 如果距離 `end` `-` `begin` `< 2`，此函式就會傳回 `end`。  
+ 第一個樣板函式傳回的最後一個迭代器`next`中`[ begin , end ]`其中`[ begin , next)`是依函式物件堆積`std::less<>`。 如果距離`end - begin < 2`，此函數會傳回`end`。  
   
  第二個樣板函式的行為與第一個樣板函式相同，但會使用述詞 `compare` (而不是 `std::less<>`) 做為堆積排序條件。  
   
@@ -2474,7 +2490,7 @@ bool is_partitioned(
  如果指定範圍內針對條件測試為 `true` 的所有元素都是在測試為 `false` 的任何元素之前，則傳回 true，否則會傳回 `false`。  
   
 ### <a name="remarks"></a>備註  
- 只有在透過 `comp` 分割 `[` `first``,` `last``)` 中的所有元素時，這個範本函式才會傳回 `true`；亦即，`[` `first``,` `last``)` 中 `comp``(X)` 為 true 的所有元素 `X`發生在 `comp``(Y)` 為 `false`的所有元素 `Y` 之前。  
+ 只有在透過 `comp` 分割 `[` `first ,` `last )` 中的所有元素時，這個範本函式才會傳回 `true`；亦即，`[` `first ,` `last )` 中 `comp (X)` 為 true 的所有元素 `X`發生在 `comp (Y)` 為 `false`的所有元素 `Y` 之前。  
   
 ##  <a name="is_permutation"></a> is_permutation  
  如果兩個範圍包含相同的項目，則不論項目的順序是否相同，都會傳回 true。 使用 C++14 程式碼中的雙重範圍多載，因為如果第二個範圍超過第一個範圍，只為第二個範圍採用單一迭代器的多載不會偵測到差異；而如果第二個範圍比第一個範圍短，則會導致未定義的行為。  
@@ -2619,9 +2635,9 @@ bool is_sorted(
  要測試以判斷兩個元素間之順序的條件。 述詞會接受單一引數，並傳回 `true` 或 `false`。 這會執行與 `operator<` 相同的工作。  
   
 ### <a name="remarks"></a>備註  
- 第一個範本函式會傳回 [is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`(` `first``,` `last``) ==` `last`。 operator< 函式會執行順序比較。  
+ 第一個樣板函式會傳回[is_sorted_until](http://msdn.microsoft.com/en-us/bbad99d0-deaa-4fe6-ae58-eb5b3e4dded0)`( first, last ) == last`。 `operator<`函式會執行順序比較。  
   
- 第二個範本函式會傳回 `is_sorted_until``(` `first``,` `last``,` `comp``) ==` `last`。 `comp` 述詞函式會執行順序比較。  
+ 第二個樣板函式會傳回`is_sorted_until( first, last , comp ) == last`。 `comp` 述詞函式會執行順序比較。  
   
 ##  <a name="is_sorted_until"></a> is_sorted_until  
  傳回 `ForwardIterator`，以設定為指定範圍中依排序順序的最後一個元素。  
@@ -2656,9 +2672,9 @@ template<class ForwardIterator, class BinaryPredicate>
  傳回設定為排序順序中最後一個元素的 `ForwardIterator`。 排序序列開始於 `first`。  
   
 ### <a name="remarks"></a>備註  
- 第一個範本函式會傳回 `[` `first``,` `last``]` 中的最後一個迭代器 `next`，因此 `[` `first``, next)` 是依 `operator<`所排列的排序序列。 如果 `distance()` `< 2`，此函式會傳回 `last`。  
+ 第一個範本函式會傳回 `[` `first ,` `last ]` 中的最後一個迭代器 `next`，因此 `[` `first , next)` 是依 `operator<`所排列的排序序列。 如果 `distance()` `< 2`，此函式會傳回 `last`。  
   
- 第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `comp``(X, Y)`。  
+ 第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `comp (X, Y)`。  
   
 ##  <a name="iter_swap"></a> iter_swap  
  交換由一組指定之迭代器所參考的兩個值。  
@@ -3408,7 +3424,7 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
  正向迭代器，定址要搜尋最大元素之範圍中最後一個元素之後的位置。  
   
  `comp`  
- 使用者定義述詞函式物件，定義一個元素大於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
+ 使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
   
 ### <a name="return-value"></a>傳回值  
  正向迭代器，定址所搜尋範圍中第一次出現最大元素的位置。  
@@ -3558,7 +3574,7 @@ OutputIterator merge(
  輸出迭代器，用於定址目的範圍中第一個項目的位置，在此目的範圍中，兩個來源範圍會結合成單一排序範圍。  
   
  `comp`  
- 使用者定義述詞函式物件，定義一個元素大於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
+ 使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
   
 ### <a name="return-value"></a>傳回值  
  輸出迭代器，用於定址排序目的範圍中最後一個項目的後面一個位置。  
@@ -3572,7 +3588,7 @@ OutputIterator merge(
   
  這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法 **merge**不會修改來源範圍。  
   
- 輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。  
+ 輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。  
   
  演算法的複雜度為線性，最多 (* last1-first1*)-(* last2-first2*)-1 比較。  
   
@@ -3919,7 +3935,7 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
  正向迭代器，定址要搜尋最小元素之範圍中最後一個元素之後的位置。  
   
  `comp`  
- 使用者定義述詞函式物件，定義一個元素大於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
+ 使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
   
 ### <a name="return-value"></a>傳回值  
  正向迭代器，定址所搜尋範圍中第一次出現最小元素的位置。  
@@ -4073,18 +4089,18 @@ template<class ForwardIterator, class BinaryPredicate>
   
  `pair<ForwardIterator, ForwardIterator>`  
   
- `(` [min_element](../standard-library/algorithm-functions.md#min_element)(  `first`, `last`), [max_element](../standard-library/algorithm-functions.md#max_element)(  `first`, `last`))。  
+ `(`[min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`。  
   
 ### <a name="remarks"></a>備註  
  第一個範本函式會傳回  
   
  `pair<ForwardIterator,ForwardIterator>`  
   
- `(min_element(_First,Last),max_element(_First,Last))`.  
+ `(min_element(_First,Last), max_element(_First,Last))`.  
   
- 第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `comp``(X, Y)`。  
+ 第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `comp (X, Y)`。  
   
- 如果序列不是空的，此函式最多執行 `3 * (``last` `-`  `first` `- 1) / 2` 次比較。  
+ 如果序列是空白，函式在執行最多`3 * (last - first - 1) / 2`比較。  
   
 ##  <a name="minmax"></a> minmax  
  比較兩個輸入參數並作為一組傳回，從小排到大。  
@@ -4128,7 +4144,7 @@ template<class Type, class BinaryPredicate>
  包含要比較之成員的 initializer_list。  
   
 ### <a name="remarks"></a>備註  
- 如果 `right` 小於 `left`，則第一個範本函式會傳回 `pair<const Type&, const Type&>(``right``,` `left``)`。 否則，它會傳回 `pair<const Type&, const Type&>(``left``,` `right``)`。  
+ 第一個樣板函式會傳回`pair<const Type&, const Type&>( right , left )`如果`right`是小於`left`。 否則它會傳回 `pair<const Type&, const Type&>( left , right )`。  
   
  第二個成員函式會傳回一個配對，其中，透過述詞 `comp` 比較時，第一個元素較小，而第二個較大。  
   
@@ -4520,7 +4536,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a> nth_element  
- 分割某範圍的元素，將序列的第 *n* 個元素正確放入範圍中，以便在它前面的所有元素小於或等於它，而且序列中在它後面的所有元素大於或等於它。  
+ 分割範圍的項目正確放 *n* th 項目範圍中的順序，讓它前面的所有元素小於或等於它，而且序列中在它後面的所有項目大於或等於它的回覆。  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4547,7 +4563,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>備註  
  參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。  
   
- `nth_element` 演算法不保證會排序第 *n* 個元素之子範圍任一端中的元素。 因此，它的保證低於 `partial_sort`，其可排序範圍中低於某個所選擇元素的元素，而且可以在不需要排序較低範圍時用作 `partial_sort` 的較快替代方式。  
+ `nth_element`演算法並不保證在子範圍的項目可能是端的 *n* th 項目排序。 因此，它的保證低於 `partial_sort`，其可排序範圍中低於某個所選擇元素的元素，而且可以在不需要排序較低範圍時用作 `partial_sort` 的較快替代方式。  
   
  如果任一個都不小於另一個，則元素對等，但不一定相等。  
   
@@ -4906,7 +4922,7 @@ template<class BidirectionalIterator, class Predicate>
   
  如果 *Pr* (*a*, *b*) 為 false 且 *Pr* (*b*, *a*) 為 false (其中 *Pr* 是參數指定的述詞)，則元素 *a* 和 *b* 對等，但不一定相等。 **partition** 演算法不穩定，因此不保證保留對等元素的相對順序。 **stable_partition** 演算法確實會保留這個原始順序。  
   
- 複雜度為線性︰ 有 ( `last`  -   `first`) 應用程式的`comp`且最 ( `last`  -   `first`) / 2 交換。  
+ 複雜度為線性： 有 ( `last`  -   `first`) 應用程式的`comp`且最 ( `last`  -   `first`) / 2 交換。  
   
 ### <a name="example"></a>範例  
   
@@ -5388,7 +5404,7 @@ int main( ) {
 ```  
   
 ##  <a name="random_shuffle"></a> random_shuffle  
- Std::random_shuffle() 函式已被取代，取代[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 如需程式碼範例和詳細資訊，請參閱[\<隨機 >](../standard-library/random.md)以及 stackoverflow 文章[std:: random_shuffle 方法為何正在取代 C + + 14？](http://go.microsoft.com/fwlink/?LinkId=397954)。  
+ Std::random_shuffle() 函式已被取代，取代[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 如需程式碼範例和詳細資訊，請參閱[\<隨機 >](../standard-library/random.md)以及 stackoverflow 文章[std:: random_shuffle 方法為何正在取代 C + + 14？](http://go.microsoft.com/fwlink/p/?linkid=397954)。  
   
 ##  <a name="remove"></a>  remove  
  從指定範圍中排除指定的值，而不會干擾其餘項目的順序，並傳回沒有指定值、新範圍的結尾。  
@@ -5582,7 +5598,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性︰ 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派。  
+ 複雜度為線性： 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派。  
   
  如需這些函式運作方式的相關資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
   
@@ -5653,7 +5669,7 @@ template<class ForwardIterator, class Predicate>
  正向迭代器，指向要從中移除元素之範圍中最後一個元素之後的位置。  
   
  `_Pred`  
- 必須符合的一元述詞，也就是要被取代的元素值。  
+ 必須符合的一元述詞，也就是要被取代的項目值。  
   
 ### <a name="return-value"></a>傳回值  
  轉送迭代器，定址修改過範圍的新結束位置，也就是指定值外的剩餘序列中，最後一個元素後方的位置。  
@@ -5665,7 +5681,7 @@ template<class ForwardIterator, class Predicate>
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性︰ 有 ( `last`  -   `first`) 相等比較。  
+ 複雜度為線性： 有 ( `last`  -   `first`) 相等比較。  
   
  list 具有更具效率之成員函式版本的 remove，而這會重新連結指標。  
   
@@ -5827,7 +5843,7 @@ int main( ) {
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性︰ 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派新值。  
+ 複雜度為線性： 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派新值。  
   
 ### <a name="example"></a>範例  
   
@@ -6009,7 +6025,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
  迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。  
   
  `_Pred`  
- 必須符合的一元述詞，也就是要被取代的元素值。  
+ 必須符合的一元述詞，也就是要被取代的項目值。  
   
  `val`  
  要指派給其舊值符合此述詞之項目的新值。  
@@ -6023,7 +6039,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
  用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。  
   
- 複雜度為線性︰ 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派新值。  
+ 複雜度為線性： 有 ( `last`  -   `first`) 比較是否相等，而且最 ( `last`  -   `first`) 指派新值。  
   
 ### <a name="example"></a>範例  
   
@@ -6705,7 +6721,7 @@ OutputIterator set_difference(
  輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的差異。  
   
  `comp`  
- 使用者定義述詞函式物件，定義一個元素大於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
+ 使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
   
 ### <a name="return-value"></a>傳回值  
  輸出迭代器，用於定址排序目的範圍中最後一個元素的後面一個位置，此目的範圍代表兩個來源範圍的差異。  
@@ -6882,7 +6898,7 @@ OutputIterator set_intersection(
  輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的交集。  
   
  `comp`  
- 使用者定義述詞函式物件，定義一個元素大於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
+ 使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
   
 ### <a name="return-value"></a>傳回值  
  輸出迭代器，用於定址排序目的範圍中最後一個元素的後面一個位置，此目的範圍代表兩個來源範圍的交集。  
@@ -7229,7 +7245,7 @@ OutputIterator set_union(
  輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的聯集。  
   
  `comp`  
- 使用者定義述詞函式物件，定義一個元素大於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
+ 使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。  
   
 ### <a name="return-value"></a>傳回值  
  輸出迭代器，用於定址排序目的範圍中最後一個元素的後面一個位置，此目的範圍代表兩個來源範圍的聯集。  
@@ -7243,7 +7259,7 @@ OutputIterator set_union(
   
  這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法 **merge**不會修改來源範圍。  
   
- 輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。  
+ 輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。  
   
  演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-( *last2-first2*))-1 比較。  
   
@@ -7422,7 +7438,7 @@ template<class RandomAccessIterator, class Predicate>
   
  如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort` 演算法不穩定，因此不保證保留對等元素的相對順序。 `stable_sort` 演算法確實會保留這個原始順序。  
   
- 排序複雜度的平均值是*O*( *N*記錄*N*)，其中*N* =  *上次-先*。  
+ 排序複雜度的平均值是*O*( *N*記錄*N*)，其中*N* =  *姓氏-名字*.  
   
 ### <a name="example"></a>範例  
   
@@ -7690,7 +7706,7 @@ void stable_sort(
   
  如果任一個都不小於另一個，則元素對等，但不一定相等。 **sort** 演算法穩定，並且保證保留對等元素的相對順序。  
   
- 執行時間複雜性`stable_sort`取決於可用的記憶體數量是最好的情況下 （要有足夠的記憶體），但*O*( *N*記錄*N*) 最壞的情況下，且*O*( *N* (記錄*N* ) 2)，其中*N* =  *上次-第一次。* 通常，**sort** 演算法大幅快於 `stable_sort`。  
+ 執行時間複雜性`stable_sort`取決於可用的記憶體數量是最好的情況下 （要有足夠的記憶體），但*O*( *N*記錄*N*) 和最差的案例是*O*( *N* (記錄*N* ) 2)，其中*N* =  *上次-第一次。* 通常，**sort** 演算法大幅快於 `stable_sort`。  
   
 ### <a name="example"></a>範例  
   
@@ -8445,5 +8461,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>另請參閱   
+## <a name="see-also"></a>請參閱   
  [\<algorithm>](../standard-library/algorithm.md)

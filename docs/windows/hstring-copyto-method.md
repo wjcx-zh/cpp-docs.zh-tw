@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b49031359c2a51f6bdc28c52fb38ca4e29cb3e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8dd0cab708832a9872c55c53ad058fe0cd78e6bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringcopyto-method"></a>HString::CopyTo 方法
 複製目前 HString HSTRING 物件的物件。  
@@ -43,5 +46,5 @@ HRESULT CopyTo(
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [HString 類別](../windows/hstring-class.md)

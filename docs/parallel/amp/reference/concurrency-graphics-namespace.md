@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aef7e219190584ec91b08e9c44b4c921ec91d787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空間
 圖形命名空間提供型別和函式針對圖形程式設計所設計。  
@@ -29,30 +30,30 @@ ms.lasthandoff: 10/24/2017
 namespace graphics;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="namespaces"></a>命名空間  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Concurrency::graphics::direct3d 命名空間](concurrency-graphics-direct3d-namespace.md)|Direct3D interop 提供函式。|  
   
-### <a name="typedefs"></a>Typedef  
+### <a name="typedefs"></a>Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`uint`|項目類型[uint_2 類別](uint-2-class.md)， [uint_3 類別](uint-3-class.md)，和[uint_4 類別](uint-4-class.md)。 定義為`typedef unsigned int uint;`。|  
   
 ### <a name="enumerations"></a>列舉  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[address_mode 列舉](concurrency-graphics-namespace-enums.md#address_mode)。|指定位址模式支援紋理取樣。|  
 |[filter_mode 列舉](concurrency-graphics-namespace-enums.md#filter_mode)|指定支援紋理取樣的篩選模式。|  
   
 ### <a name="classes"></a>類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[texture 類別](texture-class.md)|紋理是將資料彙總上 accelerator_view 範圍網域中。 它是變數，其中每個項目範圍網域中的集合。 每個變數持有值，對應至 c + + 基本型別 (不帶正負號的 int、 int、 float、 double)，或在 concurrency:: graphics 中定義的純量型別 norm 或 unorm （定義於 concurrency:: graphics） 或符合資格的短向量類型。|  
 |[writeonly_texture_view 類別](writeonly-texture-view-class.md)|Writeonly_texture_view 存取 writeonly 紋理。|  
@@ -81,7 +82,7 @@ namespace graphics;
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[copy](concurrency-graphics-namespace-functions.md#copy)|多載。 將來源紋理的內容複製到目的地主機的緩衝區。|  
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|多載。 以非同步方式將來源紋理的內容複製到目的地主機的緩衝區。|  
@@ -91,5 +92,5 @@ namespace graphics;
   
  **命名空間：** 並行  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

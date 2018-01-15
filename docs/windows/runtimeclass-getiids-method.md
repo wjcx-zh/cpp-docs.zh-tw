@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d80e5ea7b068b1d362b46430a1c55f7ff6e620a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e26101377aaf85cbae24e400557280d06d1402fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids 方法
 取得陣列，其中可以包含由目前 RuntimeClass 物件的識別碼實作的介面。  
@@ -49,5 +52,5 @@ STDMETHOD(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [RuntimeClass 類別](../windows/runtimeclass-class.md)

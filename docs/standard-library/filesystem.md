@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 包含用於存取類別和函式的標頭 &lt;filesystem>，以操作並擷取路徑、檔案和目錄的相關資訊。  
@@ -111,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="structs"></a>結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[space_info 結構](../standard-library/space-info-structure.md)|保留磁碟區的相關資訊。|  
   
@@ -123,14 +124,14 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="enumerations"></a>列舉  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60)，並在已存在目的地檔案時決定行為。|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|  
 |[權限](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
 
 

@@ -16,11 +16,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 114ea9d40c5d4e8e1f271e7b099bd4b4075dbccd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (C++ 元件擴充功能)
 `nullptr`關鍵字表示*null 指標值*。 使用 null 指標值表示的物件控制代碼、 內部指標或原生指標類型不是指向物件。  
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  `nullptr`關鍵字相當於`Nothing`在 Visual Basic 和`null`C# 中。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  `nullptr`關鍵字可以使用任何可使用控制代碼、 原生指標或函式引數位置。  
   
  `nullptr`關鍵字不是型別和不支援搭配使用：  
@@ -240,6 +243,6 @@ int main() {
 ## <a name="requirements"></a>需求  
  編譯器選項: (不需要，則所有的程式碼產生選項，包括支援**/ZW**和**/clr**)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [nullptr](../cpp/nullptr.md)

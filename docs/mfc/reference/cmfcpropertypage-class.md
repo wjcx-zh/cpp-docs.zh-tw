@@ -18,11 +18,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 20f3a702ea1f98e3bd06c6dca0cfcdd4b78f1d8b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d11f9e4849a0c632e6a63d794dc294fa504d196a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 類別
 `CMFCPropertyPage`類別支援在屬性頁上顯示快顯功能表。  
@@ -33,18 +34,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCPropertyPage : public CPropertyPage  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|建構 `CMFCPropertyPage` 物件。|  
 |`CMFCPropertyPage::~CMFCPropertyPage`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CMFCPropertyPage::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
 |`CMFCPropertyPage::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
@@ -101,7 +102,7 @@ CMFCPropertyPage(
 ### <a name="remarks"></a>備註  
  如需建構函式參數的詳細資訊，請參閱[CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCPropertySheet 類別](../../mfc/reference/cmfcpropertysheet-class.md)

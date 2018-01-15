@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetReportMode
+apiname: _CrtSetReportMode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportMode
 - CrtSetReportMode
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtSetReportMode function
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 75d71ae4df727df1dd82ff88a793dc4e9c462b76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 3b5e6aedfb1cc216c621a18c74d45cdf084c5d11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 指定 `_CrtDbgReport` 以及任何呼叫 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 之巨集 (例如 [_ASSERT、_ASSERTE、_ASSERT_EXPR 巨集](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)；[_ASSERT、_ASSERTE、_ASSERT_EXPR 巨集](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)；[_RPT、_RPTF、_RPTW、_RPTFW 巨集](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)；以及 [_RPT、_RPTF、_RPTW、_RPTFW 巨集](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)) 所產生之特定報表類型的一或多個目的地 (僅限偵錯版本)。  
@@ -105,13 +102,13 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_CrtSetReportMode`|\<crtdbg.h>|\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
  **程式庫：**僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

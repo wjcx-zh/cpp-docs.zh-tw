@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ae6696123ffa016a1c3f64ed2310efe571b55978
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21438bf8f214c10525aa7e9a5829f835b8a33f2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack"></a>/STACK
 ```  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
  選擇性`commit`引數受限於作業系統所解譯。 在 Windows NT、 Windows 95 和 Windows 98、`commit`指定一次配置的實體記憶體數量。 已認可的虛擬記憶體會造成要保留在分頁檔的空間。 較高`commit`值可以節省的時間，當應用程式需要較多的堆疊空間，但會增加記憶體需求且可能啟動時間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [EDITBIN 選項](../../build/reference/editbin-options.md)

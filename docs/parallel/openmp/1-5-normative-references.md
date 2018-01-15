@@ -1,30 +1,30 @@
 ---
-title: "1.5 Normative References | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "1.5 規範參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d95e51f9-94da-4150-8e28-85d8fe24bd5f
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d5f47d43d0bd1097f721e86d545c68278c985cad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 1.5 Normative References
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
--   ISO\/IEC 9899:1999 *資訊技術\-程式設計語言\-C*。  這項 OpenMP API 規格稱之為 ISO\/IEC 9899:1999 C99。  
+# <a name="15-normative-references"></a>1.5 規範參考
+-   ISO/IEC 9899: 1999，*資訊技術的程式設計語言-C*。此 API OpenMP 規格是指 ISO/IEC 9899: 1999 C99。  
   
--   ISO\/IEC 9899:1990 *資訊技術\-程式設計語言\-C*。  這項 OpenMP API 規格稱之為 ISO\/IEC 9899:1990 C90。  
+-   ISO/IEC 9899: 1990，*資訊技術的程式設計語言-C*。此 API OpenMP 規格是指 ISO/IEC 9899: 1990 C90。  
   
--   ISO\/IEC 14882:1998 *資訊技術\-程式設計語言\-C\+\+*。  這項 OpenMP API 規格稱之為 ISO\/IEC 14882:1998 C\+\+。  
+-   ISO/IEC 14882:1998*資訊技術程式設計語言為 c + +*。 為 c + + ISO/IEC 14882:1998 參考此 OpenMP API 規格。  
   
- 在此 OpenMP API 規格指的是 c，參考基底實作所支援的語言。
+ 此 OpenMP API 規格 」 指的是 C，其中進行參考，以實作所支援的基底語言。

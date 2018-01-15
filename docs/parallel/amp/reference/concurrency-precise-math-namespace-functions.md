@@ -100,11 +100,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f11d008afed6743594043ee2dd95d98c09f5505
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02a792717690215c572089f11525f1f92c0e90e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空間函式
 ||||  
@@ -2415,5 +2416,5 @@ inline float truncf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的整數部分  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::precise_math 命名空間](concurrency-precise-math-namespace.md)

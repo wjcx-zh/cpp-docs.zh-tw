@@ -1,32 +1,33 @@
 ---
-title: "CreatorMap::factoryCreator 資料成員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreatorMap::factoryCreator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "factoryCreator 資料成員"
+title: "Creatormap:: Factorycreator 資料成員 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreatorMap::factoryCreator
+dev_langs: C++
+helpviewer_keywords: factoryCreator data member
 ms.assetid: c9aac363-8f38-4cfd-9605-1e6ac74c5097
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e145bf91539274763c27650bd123120cafb184bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CreatorMap::factoryCreator 資料成員
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="creatormapfactorycreator-data-member"></a>CreatorMap::factoryCreator 資料成員
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 HRESULT (*factoryCreator)(  
@@ -36,30 +37,30 @@ HRESULT (*factoryCreator)(
  IUnknown** factory);  
 ```  
   
-## 參數  
+## <a name="parameters"></a>參數  
  `currentflags`  
- [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 列舉值其中之一。  
+ 其中一個[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。  
   
  `entry`  
  CreatorMap。  
   
  `iidClassFactory`  
- Class Factory 的介面 ID。  
+ Class factory 介面 ID。  
   
  `factory`  
- 當作業完成時，class factory 的位址。  
+ 作業完成時，class factory 的位址。  
   
-## 傳回值  
- 如果成功，則為 S\_OK，否則，則為表示錯誤的 HRESULT。  
+## <a name="return-value"></a>傳回值  
+ 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
   
-## 備註  
- 建立 CreatorMap 指定的 factory。  
+## <a name="remarks"></a>備註  
+ 建立指定 CreatorMap factory。  
   
-## 需求  
- **標題:** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CreatorMap 結構](../windows/creatormap-structure.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

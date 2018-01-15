@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69b35d3007a26cd7ca605617b7441525f44ef3ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-enumeration-declarations"></a>C 列舉宣告
 列舉是由一組具名整數常數所組成。 列舉類型宣告會提供 (選擇性) 列舉標記的名稱，以及定義具名整數識別項集合 (稱為「列舉集合」、「列舉程式常數」、「列舉程式」或「成員」)。 具有列舉類型的變數會儲存該類型所定義列舉集合的其中一個值。  
@@ -156,5 +157,5 @@ if ( match_flag == false )
 enum { yes, no } response;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [列舉](../cpp/enumerations-cpp.md)

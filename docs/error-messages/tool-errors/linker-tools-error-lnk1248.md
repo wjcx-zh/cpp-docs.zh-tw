@@ -1,29 +1,27 @@
 ---
-title: "連結器工具錯誤 LNK1248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1248"
-ms.assetid: bcddf9e5-d6df-474c-a207-af28d086f491
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+title: "連結器工具錯誤 LNK1248 |Microsoft 文件"
+ms.custom: 
+ms.date: 12/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1248
+dev_langs: C++
+helpviewer_keywords: LNK1248
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cb5c1792fa86636a72d492c86170a20bdce19309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
-# 連結器工具錯誤 LNK1248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="linker-tools-error-lnk1248"></a>連結器工具錯誤 LNK1248
 
-映像大小 \('size'\) 已超出允許大小的上限 \(80000000\)  
-  
- 連結器判定輸出檔的大小會超過程式映像可容許的最大範圍。  您必須將程式做成多個 DLL。  如需程式執行檔 \(PE\) 的詳細資訊，請參閱 [MSDN Library](http://go.microsoft.com/fwlink/?linkid=556) 中有關＜深入 PE：Win32 可移植的可執行檔案格式教學課程＞\(英文\) 內容的文件。
+> 影像大小 ('*大小*') 超過最大容許大小 (80000000)
+
+連結器會決定輸出檔的大小會超過最大可能的 32 位元程式映像的大小。 若要讓程式到多個 Dll。

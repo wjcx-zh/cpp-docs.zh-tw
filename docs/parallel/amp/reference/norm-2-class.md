@@ -39,11 +39,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee6c906748be7d784b65144ceee63cf7c4bb53aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c593121846c3eace21c16d00013af1bd46f54fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="norm2-class"></a>norm_2 類別
 代表兩個一般數字的短向量。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
 class norm_2;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -64,13 +65,13 @@ class norm_2;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[norm_2 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |norm_2::get_x||  
 |norm_2::get_xy||  
@@ -87,7 +88,7 @@ class norm_2;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |norm_2::operator-||  
 |norm_2::operator-||  
@@ -100,13 +101,13 @@ class norm_2;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[大小常數](#norm_2__size)||  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |norm_2::g||  
 |norm_2::gr||  
@@ -211,5 +212,5 @@ explicit inline norm_2(
 static const int size = 2;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

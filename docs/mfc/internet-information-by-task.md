@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 855b533b0fb822a4b631a9f94e032cb33f27ec62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8b76495ce5418be052ee0fba8a1eb420a51db4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internet-information-by-task"></a>依工作分類的網際網路資訊
 本主題中所列的工作會根據您想要完成的工作來排序的。  
@@ -59,6 +60,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [撰寫 Gopher 用戶端應用程式](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

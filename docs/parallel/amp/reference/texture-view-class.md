@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d03b67b1207827ae753c9d2583d57eab49dc223a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="textureview-class"></a>texture_view 類別
 提供對紋理的寫入權限和讀取權限。 `texture_view`只可以用來讀取其值類型的紋理`int`， `unsigned int`，或`float`具有預設值 32 位元 bpse。 若要閱讀其他紋理的格式，使用`texture_view<const value_type, _Rank>`。  
@@ -56,11 +57,11 @@ class texture_view<const value_type, _Rank>
  `_Rank`  
  陣序`texture_view`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`value_type`|紋理彙總中的項目類型。|  
 |`coordinates_type`|用來指定在材質座標的型別`texture_view`— 也就是`short_vector`具有相關聯的紋理，其的實值類型為相同的陣序`float`。|  
@@ -68,14 +69,14 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[texture_view 建構函式](#ctor)|多載。 建構`texture_view`執行個體。|  
 |[~ texture_view 解構函式](#ctor)|終結`texture_view`執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[gather_alpha](#gather_alpha)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的 alpha (w) 元件。|  
 |[gather_blue](#gather_blue)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的藍色 (z) 元件。|  
@@ -87,7 +88,7 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator （)](#operator_call)|多載。 依索引取得的項目值。|  
 |[operator]](#operator_at)|多載。 依索引取得的項目值。|  
@@ -95,7 +96,7 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[value_type](#value_type)|實值型別項目的`texture_view`。|  
   
@@ -500,5 +501,5 @@ void set(
 typedef typename const value_type value_type;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

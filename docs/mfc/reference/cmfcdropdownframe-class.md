@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c80d8617047c2c4428ccffb12cc3e89e562102f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01b3e5b56621d7bf8d42aad12e216208338bbacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 類別
 提供下拉式清單框架視窗功能下拉式工具列和下拉式工具列按鈕。  
@@ -42,13 +43,13 @@ ms.lasthandoff: 10/24/2017
 class CMFCDropDownFrame : public CMiniFrameWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |`CMFCDropDownFrame::CMFCDropDownFrame`|預設建構函式。|  
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|解構函式。|  
   
@@ -56,7 +57,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |[CMFCDropDownFrame::Create](#create)|建立 `CMFCDropDownFrame` 物件。|  
 |`CMFCDropDownFrame::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
 |[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|擷取下拉式清單畫面格的父功能表列。|  
@@ -107,10 +108,10 @@ virtual BOOL Create(
 |||  
 |-|-|  
 |參數|描述|  
-|[in] `pWndParent`|下拉式清單畫面格的父視窗。|  
-|[in] `x`|位置清單向下框架的水平的螢幕座標。|  
-|[in] `y`|位置清單向下框架的垂直的螢幕座標。|  
-|[in] `pWndOriginToolbar`|這個方法來填入新的下拉式清單框架物件會使用下拉按鈕的工具列。|  
+|[輸入] `pWndParent`|下拉式清單畫面格的父視窗。|  
+|[輸入] `x`|位置清單向下框架的水平的螢幕座標。|  
+|[輸入] `y`|位置清單向下框架的垂直的螢幕座標。|  
+|[輸入] `pWndOriginToolbar`|這個方法來填入新的下拉式清單框架物件會使用下拉按鈕的工具列。|  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果已成功建立下拉式框架;否則`FALSE`。  
@@ -158,7 +159,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 |||  
 |-|-|  
 |參數|描述|  
-|[in] `bNotify`|未使用。|  
+|[輸入] `bNotify`|未使用。|  
   
 ### <a name="remarks"></a>備註  
  當建立下拉式框架，或調整父視窗的大小，架構會呼叫這個方法。 這個方法的位置和大小的下拉式清單框架使用計算的位置與父視窗的大小。  
@@ -171,13 +172,13 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bAutoDestroy`  
+ [輸入] `bAutoDestroy`  
  `TRUE`會自動終結相關聯的下拉式清單工具列的視窗。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  如果`bAutoDestroy`是`TRUE`，然後在`CMFCDropDownFrame`解構函式終結相關聯的下拉式清單工具列視窗。 預設值是 `TRUE`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)   

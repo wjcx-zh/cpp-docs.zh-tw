@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b863f841d5edf04ccdfcc1a3376df43ffe2429b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6a3a961ca0197eb80a8fafeee16c6e54cce8579
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-mfc-applications"></a>撰寫 MFC 應用程式
 本文說明開發應用程式的初始步驟。 首先，您必須決定您要撰寫的應用程式種類。 有幾個選項都中有所討論[應用程式設計選擇](../mfc/application-design-choices.md)。 您的應用程式會：  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [WinInet 基本概念](../mfc/wininet-basics.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

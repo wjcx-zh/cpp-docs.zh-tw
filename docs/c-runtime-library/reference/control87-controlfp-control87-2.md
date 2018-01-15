@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - controlfp
 - control87_2
 - _control87_2
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - _control87 function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: 25dfd357f0b3385f1e9bdcc4249ad3cf4399e0b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/28/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4c6188917737e46807979d5f4a7fec350cb3e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="control87-controlfp-control872"></a>_control87、_controlfp、__control87_2
 取得和設定浮點控制字組。 `_controlfp` 已有更安全的版本可用；請參閱 [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md)。  
@@ -147,7 +131,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
  在 ARM 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 架構上，不支援變更無效模式或浮點精確度。 如果在 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 平台上使用精確度控制遮罩，此函式會引發判斷提示，並叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。  
   
 > [!NOTE]
-> ARM 或 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 結構不支援  `__control87_2`。 如果您使用 `__control87_2`，並針對 ARM 或 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 結構編譯您的程式，編譯器會產生錯誤。  
+>  ARM 或 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 結構不支援 `__control87_2`。 如果您使用 `__control87_2`，並針對 ARM 或 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 結構編譯您的程式，編譯器會產生錯誤。  
   
  當您使用時，這些函式會忽略[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)編譯，因為 common language runtime (CLR) 只支援預設的浮點精確度。  
   
@@ -165,11 +149,11 @@ _controlfp(_DN_FLUSH, _MCW_DN);
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_control87`, `_controlfp`, `_control87_2`|\<float.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -218,7 +202,7 @@ Default:  0x0001
 0.1 * 0.1 = 1.000000000000000e-002  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [_clear87、_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)   
  [_status87、_statusfp、_statusfp2](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)   

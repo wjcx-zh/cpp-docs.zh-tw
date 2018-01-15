@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eef69b562f01f284a6e87af608b3ef6e90942af2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c59d9843a727449bef48efac9980e9164225baae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semaphoresemaphore-constructor"></a>Semaphore::Semaphore 建構函式
 初始化 Semaphore 類別的新執行個體。  
@@ -45,5 +48,5 @@ WRL_NOTHROW Semaphore(
   
  **命名空間：** Microsoft::WRL::Wrappers
  
- ## <a name="see-also"></a>另請參閱
+ ## <a name="see-also"></a>請參閱
  [Semaphore 類別](../windows/semaphore-class.md)

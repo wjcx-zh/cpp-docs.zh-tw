@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4a2e91effe6cf13ce7a03f8e69c6d67d622ebdcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a853e417ad79ed27f7579ce50186974abfe21c3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxfixedsize-class"></a>max_fixed_size 類別
 描述 [max 類別](../standard-library/allocators-header.md)物件，此物件可將 [freelist](../standard-library/freelist-class.md) 物件的長度上限限制為固定值。  
@@ -45,7 +46,7 @@ class max_fixed_size
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Max`|max 類別，可決定要在 `freelist` 中儲存的元素數目上限。|  
   
@@ -79,7 +80,7 @@ void allocated(std::size_t _Nx = 1);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`_Nx`|遞增值。|  
   
@@ -95,7 +96,7 @@ void deallocated(std::size_t _Nx = 1);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`_Nx`|遞增值。|  
   
@@ -145,7 +146,7 @@ void saved();
 ### <a name="remarks"></a>備註  
  此成員函式會遞增預存值 `_Nblocks`。 每當 `cache_freelist::deallocate` 將記憶體區塊放到可用清單上時，都會呼叫此成員函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

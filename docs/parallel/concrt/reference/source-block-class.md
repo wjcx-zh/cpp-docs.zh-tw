@@ -43,11 +43,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01961cf610a50ff9f0c858eeb0269288120edbe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1709ebf0a831fa7c1bba79b338a2978d6c6dae86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourceblock-class"></a>source_block 類別
 `source_block` 類別是僅限來源區塊的抽象基底類別。 類別會提供基本連結管理功能與常見的錯誤檢查功能。  
@@ -66,24 +67,24 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
  `_MessageProcessorType`  
  針對訊息處理的處理器類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`target_iterator`|查核連接的目標迭代器。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[source_block](#ctor)|建構 `source_block` 物件。|  
 |[~ source_block 解構函式](#dtor)|終結`source_block`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[接受](#accept)|接受的訊息，有提供這`source_block`物件，將擁有權傳送給呼叫者。|  
 |[acquire_ref](#acquire_ref)|取得這個參考計數`source_block`物件，以防止刪除。|  
@@ -95,9 +96,9 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |[unlink_target](#unlink_target)|取消連結的目標區塊，從這個`source_block`物件。|  
 |[unlink_targets](#unlink_targets)|取消連結所有目標區塊，從這個`source_block`物件。 (覆寫[isource:: Unlink_targets](isource-class.md#unlink_targets)。)|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|當在衍生類別中覆寫時，可以接受來源所提供的訊息。 訊息區塊應該覆寫此方法以驗證`_MsgId`，並傳回訊息。|  
 |[async_send](#async_send)|非同步訊息排入佇列而啟動的傳播工作，如果這已經未完成|  
@@ -498,6 +499,6 @@ virtual void unlink_targets();
 void wait_for_outstanding_async_sends();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [ISource 類別](isource-class.md)

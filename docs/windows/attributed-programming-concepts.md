@@ -1,58 +1,61 @@
 ---
-title: "Attributed Programming Concepts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributed programming [C++]"
-  - "attributes [C++]"
-  - "programming [C++], attributed programming"
+title: "屬性化程式設計概念 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs: C++
+helpviewer_keywords:
+- attributed programming [C++]
+- attributes [C++]
+- programming [C++], attributed programming
 ms.assetid: 563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2e5477d91d50ab239732adf3521a2bf07d92a1c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Attributed Programming Concepts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 包含各種不同的內容，以幫助您在程式中使用屬性。  在 Visual C\+\+ 中，新功能的屬性僅適用於簡化 COM 程式設計和。NET Framework 通用語言執行階段開發。  當您在原始程式檔中包含屬性時，編譯器會處理提供者動態連結程式庫 \(DLL\)，來插入程式碼，或修改產生的目的檔中的程式碼。  有幫助在.idl 檔案、 介面、 型別程式庫，及其他 COM 項目的建立的屬性。  在整合式的開發環境 \(IDE\) 中，由精靈和 \[屬性\] 視窗所支援的屬性。  
+# <a name="attributed-programming-concepts"></a>屬性化程式設計概念
+Visual c + + 包含各種不同的內容，以協助您在程式中使用屬性。 屬性，Visual c + + 的新功能被設計來簡化 COM 程式設計和.NET Framework 通用語言執行階段開發。 當您將屬性納入原始程式檔時，編譯器會搭配提供者動態連結程式庫 (DLL)，以插入程式碼或修改產生的目的檔中的程式碼。 有幫助的.idl 檔案、 介面、 類型程式庫與其他 COM 元件建立的屬性。 在整合式的開發環境 (IDE) 中，由精靈和 [屬性] 視窗所支援屬性。  
   
- 由於屬性會排除某些詳細寫 COM 物件所需的編碼，因此您需要在背景 [COM 基礎](http://msdn.microsoft.com/library/windows/desktop/ms694363)徹底運用它們。  
+ 屬性會排除部分寫入 COM 物件所需的詳細編碼時，您必須在背景[COM 基本概念](http://msdn.microsoft.com/library/windows/desktop/ms694363)最適合使用它們。  
   
-## 在本節中  
- [屬性的目的](../windows/purpose-of-attributes.md)  
- 提供屬性化程式設計的概觀。  
+## <a name="in-this-section"></a>本節內容  
+ [屬性用途](../windows/purpose-of-attributes.md)  
+ 顯示屬性化程式設計的概觀。  
   
  [屬性的基本機制](../windows/basic-mechanics-of-attributes.md)  
- 說明在專案中屬性的運作方式。  
+ 描述屬性在您的專案中的運作方式。  
   
- [建立屬性化的程式](../windows/building-an-attributed-program.md)  
- 提供在專案中使用 C\+\+ 編譯器選項的相關資訊。  
+ [建置屬性化程式](../windows/building-an-attributed-program.md)  
+ 提供有關在您的專案中使用 c + + 編譯器選項的資訊。  
   
- [屬性類別](../windows/attribute-categories.md)  
- 提供連結到 Visual C\+\+ 中使用屬性的類別。  
+ [屬性分類](../windows/attribute-categories.md)  
+ 提供 Visual c + + 中使用屬性的類別目錄的連結。  
   
  [屬性 Programmming 常見問題集](../windows/attribute-programming-faq.md)  
- 常見問題集解答關於屬性化程式設計。  
+ 答案需屬性化程式設計的常見問題。  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [屬性參考](../windows/cpp-attributes-reference.md)  
- 提供描述個別的屬性和其用法的參考主題的連結。  
+ 提供描述個別的屬性和其使用的參考主題的連結。  
   
- [偵錯插入程式碼](../Topic/How%20to:%20Debug%20Injected%20Code.md)  
- 說明偵錯屬性化的程式。  
+ [偵錯插入程式碼](/visualstudio/debugger/how-to-debug-injected-code)  
+ 描述偵錯屬性化的程式。  
   
- [\_\_super](../cpp/super.md)和  [\_\_interface](../cpp/interface.md)  
- 新的 C\+\+ 關鍵字與屬性化程式設計相關的連結。  
+ [__super](../cpp/super.md)和[__interface](../cpp/interface.md)  
+ 連結至新的 c + + 關鍵字相關的屬性化程式設計。  
   
- [\(NOTINBUILD\)Visual C\+\+ Programming Methodologies](http://msdn.microsoft.com/zh-tw/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
- 提供主題連結，這些主題將描述 Visual C\+\+ 程式庫的概念性資訊，以及討論各種程式碼撰寫技術和技巧。
+ [(NOTINBUILD)Visual c + + 程式設計方法](http://msdn.microsoft.com/en-us/0822f806-fa81-4b65-bf0f-1e2921f30c95)  
+ 提供主題連結，這些主題將描述 Visual C++ 程式庫的概念性資訊，以及討論各種程式碼撰寫技術和技巧。

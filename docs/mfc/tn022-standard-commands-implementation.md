@@ -69,11 +69,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3851cd7deff77c9703a11ee73ee1d9daa020c848
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022：標準命令實作
 > [!NOTE]
@@ -492,7 +493,7 @@ ms.lasthandoff: 10/24/2017
   
  如果您選擇實作這些指示器，我們建議您使用這些標記識別碼以及維護自己的狀態列的指示器的順序 (也就是依此順序： EXT、 CAP、 NUM、 SCRL、 OVR、 REC)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

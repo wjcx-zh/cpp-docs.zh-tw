@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f267ebf6526ed46cf3ef5670c6aeeb93a5a075e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c3f4ce550bd0d0d25d73284c87c33b6fa71647a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dup-dup2"></a>_dup、_dup2
 建立已開啟檔案的第二個檔案描述項 (`_dup`)，或重新指派檔案描述項 (`_dup2`)。  
@@ -70,7 +71,7 @@ int _dup2(
 ## <a name="return-value"></a>傳回值  
  `_dup` 會傳回新的檔案描述項。 `_dup2` 會傳回 0，表示作業成功。 如果發生錯誤時，每個函式會傳回-1 和集合`errno`至`EBADF`如果的檔案描述項無效，或以`EMFILE`如果沒有更多檔案描述項可用。 如果檔案描述項無效，函式也會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
   
- 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
  `_dup` 和 `_dup2` 函式會建立第二個檔案描述項與目前開啟之檔案的關聯。 這些函式可用來建立預先定義之檔案描述項 (例如針對 `stdout`) 與其他檔案的關聯。 可使用任一檔案描述項來執行檔案作業。 建立新的描述項不會影響檔案所允許的存取類型。 `_dup` 會傳回指定檔案的下一個可用的檔案描述項。 `_dup2` 會強制 `fd2` 與 `fd1` 參考相同的檔案。 如果 `fd2` 在呼叫時與已開啟的檔案相關聯，則會關閉該檔案。  
@@ -83,12 +84,12 @@ int cstderr = _dup( _fileno( stderr ));
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_dup`|\<io.h>|  
 |`_dup2`|\<io.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -152,7 +153,7 @@ The file 'data' contains:
 This goes to file 'data'  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_close](../../c-runtime-library/reference/close.md)   
  [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   

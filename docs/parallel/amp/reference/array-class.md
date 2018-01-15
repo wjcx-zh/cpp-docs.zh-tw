@@ -32,11 +32,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad9e098ad485c7a96670c4249770b038333e1bc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class"></a>array 類別
 表示用來將資料移至對應的資料容器。  
@@ -55,17 +56,17 @@ friend class array;
  `_Rank`  
  陣列陣序。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[陣列建構函式](#ctor)|初始化 `array` 類別的新執行個體。|  
 |[~ array 解構函式](#dtor)|終結`array`物件。|  
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|將陣列的內容複製到另一個陣列。|  
 |[data](#data)|傳回陣列的未經處理資料的指標。|  
@@ -79,7 +80,7 @@ friend class array;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[運算子 std:: vector&lt;value_type&gt;](#operator_vec)|使用`copy(*this, vector)`將隱含地將陣列轉換成 std::[向量](../../../standard-library/vector-class.md)物件。|  
 |[operator （)](#operator_call)|傳回參數所指定的項目值。|  
@@ -88,13 +89,13 @@ friend class array;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[rank 常數](#rank)|儲存陣列的陣序規範。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[accelerator_view](#accelerator_view)|取得[accelerator_view](accelerator-view-class.md)物件，代表陣列的配置位置。 在 CPU 上只可以存取此屬性。|  
 |[associated_accelerator_view](#associated_accelerator_view)|取得第二個[accelerator_view](accelerator-view-class.md)臨時的建構函式呼叫來具現化時，做為參數傳遞的物件`array`物件。|  
@@ -816,5 +817,5 @@ array_view<const value_type,_New_rank> view_as(
 ### <a name="return-value"></a>傳回值  
  [Array_view](array-view-class.md)建構物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

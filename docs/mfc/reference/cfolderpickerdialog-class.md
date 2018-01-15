@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15a010eaa4d3b59005b619c34d19b9a6ee452c13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e93bb9c9ac6aa447e3df43d4612bd792df091e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 類別
 CFolderPickerDialog 類別實作資料夾選擇器模式的 CFileDialog。  
@@ -33,11 +34,11 @@ CFolderPickerDialog 類別實作資料夾選擇器模式的 CFileDialog。
 class CFolderPickerDialog : public CFileDialog;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFolderPickerDialog:: ~ CFolderPickerDialog](#cfolderpickerdialog__~cfolderpickerdialog)|解構函式。|  
 |[CFolderPickerDialog::CFolderPickerDialog](#cfolderpickerdialog)|建構函式。|  
@@ -97,5 +98,5 @@ virtual ~CFolderPickerDialog();
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

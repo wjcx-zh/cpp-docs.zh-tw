@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: feb84e03b189186342bd8ffcc8a75a07d6e99c64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75bf84eeaf9277c5cf037c4fa59c28d109d95856
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 執行階段程式庫行為  
   
@@ -188,7 +189,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
   
 多執行緒處理的控制代碼隨附於範例初始化函式[使用執行緒區域儲存區中之動態連結程式庫](http://msdn.microsoft.com/library/windows/desktop/ms686997)Windows SDK 中。 請注意，此範例包含呼叫的進入點函式`LibMain`，但您應該將此函式`DllMain`使其可與 MFC 與 C 執行階段程式庫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
   
 [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)  
 [DllMain 進入點](https://msdn.microsoft.com/library/windows/desktop/ms682583.aspx)  

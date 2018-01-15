@@ -1,35 +1,34 @@
 ---
-title: "比較並行執行階段和其他並行模型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/08/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "並行執行階段, 與其他模型比較"
+title: "比較並行執行階段與其他並行模型 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 比較並行執行階段和其他並行模型
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>比較並行執行階段和其他並行模型
 本文件說明並行執行階段和其他技術在功能和程式設計模型方面的差異。 藉由了解並行執行階段優點與其他程式設計模型優點的比較結果，您可以選取最符合應用程式需求的技術。  
   
  如果您目前使用 Windows 執行緒集區或 OpenMP 等其他程式設計模型，在某些情況下適合移轉至並行執行階段。 例如， [Migrating from OpenMP to the Concurrency Runtime](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md) 主題說明何時適合從 OpenMP 移轉至並行執行階段。 不過，如果您對應用程式效能和目前的偵錯支援感到滿意，則不需要移轉。  
   
  您可以利用並行執行階段的功能和生產力優勢，彌補使用其他並行模型之現有應用程式的不足之處。 當多個工作排程器爭用相同運算資源時，並行執行階段無法保證負載平衡。 不過，當工作負載不重疊時，此影響幾乎不存在。  
   
-##  <a name="a-nametopa-sections"></a><a name="top"></a> 章節  
+##  <a name="top"></a> 章節  
   
 -   [比較先佔式排程與合作式排程](#models)  
   
@@ -37,7 +36,7 @@ manager: "ghogen"
   
 -   [比較並行執行階段與 OpenMP](#openmp)  
   
-##  <a name="a-namemodelsa-comparing-preemptive-scheduling-to-cooperative-scheduling"></a><a name="models"></a> 比較先佔式排程與合作式排程  
+##  <a name="models"></a> 比較先佔式排程與合作式排程  
  先佔式模型與合作式排程模型是兩種可讓多項工作共用運算資源 (例如處理器或硬體執行緒) 的常用方式。  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>先佔式與合作式排程  
@@ -56,12 +55,12 @@ manager: "ghogen"
   
  [[靠上](#top)]  
   
-##  <a name="a-namewinapia-comparing-the-concurrency-runtime-to-the-windows-api"></a><a name="winapi"></a> 比較並行執行階段與 Windows API  
+##  <a name="winapi"></a> 比較並行執行階段與 Windows API  
  Microsoft Windows 應用程式開發介面 (通常稱為 Windows API，其前身為 Win32) 提供可讓應用程式並行處理的程式設計模型。 並行執行階段建置於 Windows API 上，可另行提供無法從基礎作業系統使用的其他程式設計模型。  
   
  並行執行階段建置於 Windows API 執行緒模型上，用以執行平行工作。 它也會使用 Windows API 記憶體管理和執行緒區域儲存區機制。 在 Windows 7 和 Windows Server 2008 R2 上，它會以 Windows API 支援使用者可排程的執行緒，以及硬體執行緒超過 64 個的電腦。 並行執行階段可提供合作式工作排程器和工作竊取演算法，讓運算資源發揮最大的效用，並且可讓多個排程器執行個體同時運作，以擴充 Windows API 模型。  
    
-### <a name="programming-languages"></a>程式語言  
+### <a name="programming-languages"></a>程式語言：  
  Windows API 可使用 C 程式設計語言公開程式設計模型。 並行執行階段提供可利用 C++ 語言之最新功能的 C++ 程式設計介面。 例如，Lambda 函式可提供型別安全的簡潔機制，用以定義平行工作函式。 如需並行執行階段所使用之最新 C++ 功能的詳細資訊，請參閱[概觀](../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ### <a name="threads-and-thread-pools"></a>執行緒與執行緒集區  
@@ -82,8 +81,8 @@ manager: "ghogen"
   
  [[靠上](#top)]  
   
-##  <a name="a-nameopenmpa-comparing-the-concurrency-runtime-to-openmp"></a><a name="openmp"></a> 比較並行執行階段與 OpenMP  
- 並行執行階段支援多種不同的程式設計模型。 這些模型有可能相互重疊，但或許也可彌補其他程式庫之模型的不足之處。 本節將比較並行執行階段與 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add)。  
+##  <a name="openmp"></a> 比較並行執行階段與 OpenMP  
+ 並行執行階段支援多種不同的程式設計模型。 這些模型有可能相互重疊，但或許也可彌補其他程式庫之模型的不足之處。 本節將比較並行執行階段與 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)。  
   
  OpenMP 程式設計模型是以開放標準定義的，具有定義完善的 Fortran 和 C/C++ 程式設計語言繫結。 OpenMP 2.0 和 2.5 版均適用於反覆執行的平行演算法；也就是說，它們可對資料陣列執行平行的反覆運算。 當平行處理原則程度已預先決定且符合系統可用資源時，OpenMP 最有效率。 OpenMP 模型特別適用於高效能運算，因為在此環境中，非常龐大的計算問題會分散到一部電腦的不同處理資源。 在此情況下，硬體環境為已知，因此開發人員可以在執行演算法時，合理預期能夠取得運算資源的獨佔存取權。  
   
@@ -95,9 +94,9 @@ manager: "ghogen"
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [並行執行階段](../../parallel/concrt/concurrency-runtime.md)     
  [概觀](../../parallel/concrt/asynchronous-message-blocks.md)   
  [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   
- [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp_in_visual_c_add_add)
+ [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bff566967749068f9792a98dc3cf2151e4df3d9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2517e19b49f1314e7432bb265756193ea3bb8f91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="261-master-construct"></a>2.6.1 master 建構
 **主要**指示詞會識別指定的結構化的區塊由小組主要執行緒執行的建構。 語法**主要**指示詞時，如下所示：  

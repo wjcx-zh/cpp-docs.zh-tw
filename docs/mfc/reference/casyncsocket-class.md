@@ -85,11 +85,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1043273a7a0c8d34428289664b651ccb158a8e9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24ef9c6e39d72e756b95472daee46b7d39503943
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 類別
 表示 Windows Socket — 網路通訊的端點。  
@@ -100,17 +101,17 @@ ms.lasthandoff: 10/24/2017
 class CAsyncSocket : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAsyncSocket::CAsyncSocket](#casyncsocket)|建構 `CAsyncSocket` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAsyncSocket::Accept](#accept)|接受通訊端上的連接。|  
 |[CAsyncSocket::AsyncSelect](#asyncselect)|通訊端要求事件通知。|  
@@ -139,9 +140,9 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::ShutDown](#shutdown)|停用**傳送**及/或**接收**通訊端上呼叫。|  
 |[CASyncSocket::Socket](#socket)|配置通訊端控制代碼。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAsyncSocket::OnAccept](#onaccept)|通知接聽的通訊端，其可接受暫止的連接要求，藉由呼叫**接受**。|  
 |[CAsyncSocket::OnClose](#onclose)|告知通訊端通訊端連接到它已關閉。|  
@@ -152,14 +153,14 @@ class CAsyncSocket : public CObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAsyncSocket::operator =](#operator_eq)|指派新值`CAsyncSocket`物件。|  
 |[CAsyncSocket::operator 通訊端](#operator_socket)|使用此運算子來擷取**通訊端**控點`CAsyncSocket`物件。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAsyncSocket::m_hSocket](#m_hsocket)|指出**通訊端**控制代碼附加至此`CAsyncSocket`物件。|  
   
@@ -1717,7 +1718,7 @@ BOOL Socket(
 ### <a name="remarks"></a>備註  
  這個方法配置的通訊端控制代碼。 它不會呼叫[CAsyncSocket::Bind](#bind)至指定的位址、 繫結通訊端，因此您必須呼叫`Bind`更新版本，才能繫結至指定之位址的通訊端。 您可以使用[CAsyncSocket::SetSockOpt](#setsockopt)之前它已繫結設定的通訊端選項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CSocket 類別](../../mfc/reference/csocket-class.md)   

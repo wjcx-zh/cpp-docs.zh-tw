@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: a031176d6636aedddbeac28c858c777c26625f5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 擴充整數基本項目，來協助防止整數溢位，並讓您比較不同類型的整數。  
@@ -45,11 +48,11 @@ class SafeInt;
 |[in] 我|輸入的參數，代表數個獨立的函式中的運算子右邊的值。|  
 |[in] 位元|輸入的參數，代表數個獨立的函式中的運算子右邊的值。|  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SafeInt::SafeInt](../windows/safeint-safeint.md)|預設建構函式。|  
   
@@ -223,6 +226,6 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
   
  **命名空間：** msl::utilities  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeIntException 類別](../windows/safeintexception-class.md)

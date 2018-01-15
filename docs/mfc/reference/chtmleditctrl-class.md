@@ -25,11 +25,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e18c2b38215e75d6fe12b1c78c93d3d9fe147df9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3ea794bfcb3d7e62a53ed8423918e5448990dae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 類別
 在 MFC 視窗中提供 WebBrowser ActiveX 控制項的功能。  
@@ -41,17 +42,17 @@ class CHtmlEditCtrl: public CWnd,
     public CHtmlEditCtrlBase<CHtmlEditCtrl>  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHtmlEditCtrl::CHtmlEditCtrl](#chtmleditctrl)|建構 `CHtmlEditCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHtmlEditCtrl::Create](#create)|建立 WebBrowser ActiveX 控制項，並將它附加至`CHtmlEditCtrl`物件。 此函式會自動會將 WebBrowser ActiveX 控制項進入編輯模式。|  
 |[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|擷取[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)自主 WebBrowser 控制項中目前載入文件上的介面。|  
@@ -134,6 +135,6 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 virtual LPCTSTR GetStartDocument();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

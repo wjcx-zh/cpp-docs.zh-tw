@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c592af17d4248db2ed94adf53b8eddca4aa4d67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：OLE Automation 伺服程式的雙重介面支援
 > [!NOTE]
@@ -61,7 +62,7 @@ interface IDualAClick : IDispatch
  };  
 ```  
   
- 一旦您已備妥介面陳述式，開始加入的方法和屬性的項目。 雙重介面，您需要重新排列參數清單，因此，您的方法和雙重介面中的屬性存取子函式傳回`HRESULT`，並將其傳回值傳遞做為參數的屬性`[retval,out]`。 請記住，對於屬性，您必須加入兩個讀取 (`propget`) 和寫入 (`propput`) 存取函式具有相同的識別碼。例如：  
+ 一旦您已備妥介面陳述式，開始加入的方法和屬性的項目。 雙重介面，您需要重新排列參數清單，因此，您的方法和雙重介面中的屬性存取子函式傳回`HRESULT`，並將其傳回值傳遞做為參數的屬性`[retval,out]`。 請記住，對於屬性，您必須加入兩個讀取 (`propget`) 和寫入 (`propput`) 存取函式具有相同的識別碼。例如:   
   
 ```  
 [propput,
@@ -72,7 +73,7 @@ interface IDualAClick : IDispatch
     retval] BSTR* retval);
 ```  
   
- 您的方法和屬性會定義之後，您需要在 coclass 陳述式中加入介面陳述式的參考。 例如：  
+ 您的方法和屬性會定義之後，您需要在 coclass 陳述式中加入介面陳述式的參考。 例如:   
   
 ```  
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]  
@@ -131,7 +132,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc,
 END_INTERFACE_MAP()  
 ```  
   
- 接著，您必須填寫介面的實作。 大部分的情況下，您將能夠委派給現有的 MFC`IDispatch`實作。 例如：  
+ 接著，您必須填寫介面的實作。 大部分的情況下，您將能夠委派給現有的 MFC`IDispatch`實作。 例如:   
   
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()  
@@ -234,7 +235,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }  
 ```  
   
- 物件的方法和屬性存取子函式，您需要在實作填滿。 方法和屬性函式通常可以回到使用 ClassWizard 所產生的方法委派。 不過，如果您直接存取變數設定屬性，您需要撰寫程式碼以取得/放置值到變數。 例如：  
+ 物件的方法和屬性存取子函式，您需要在實作填滿。 方法和屬性函式通常可以回到使用 ClassWizard 所產生的方法委派。 不過，如果您直接存取變數設定屬性，您需要撰寫程式碼以取得/放置值到變數。 例如:   
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
@@ -257,7 +258,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>傳遞雙重介面指標  
- 雙重介面指標傳遞並不簡單，特別是當您需要呼叫`CCmdTarget::FromIDispatch`。 `FromIDispatch`只適用於 MFC 的`IDispatch`指標。 一種方式來解決這個問題是原始查詢`IDispatch`指標集由 MFC 並將該指標傳遞至需要的函數。 例如：  
+ 雙重介面指標傳遞並不簡單，特別是當您需要呼叫`CCmdTarget::FromIDispatch`。 `FromIDispatch`只適用於 MFC 的`IDispatch`指標。 一種方式來解決這個問題是原始查詢`IDispatch`指標集由 MFC 並將該指標傳遞至需要的函數。 例如:   
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -275,7 +276,7 @@ return NOERROR;
 }  
 ```  
   
- 之前將指標傳遞回透過雙重介面方法，您可能需要將它從 MFC 轉換`IDispatch`雙重介面指標的指標。 例如：  
+ 之前將指標傳遞回透過雙重介面方法，您可能需要將它從 MFC 轉換`IDispatch`雙重介面指標的指標。 例如:   
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(

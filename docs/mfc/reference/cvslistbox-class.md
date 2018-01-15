@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f0ddb2a69d49a7dc581d22ce59cefb448ade15a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f97d55b0b23302920e71dfd35766bfa0a4294d97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 類別
 `CVSListBox`類別支援可編輯的清單控制項。  
@@ -54,18 +55,18 @@ ms.lasthandoff: 10/24/2017
 class CVSListBox : public CVSListBoxBase  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CVSListBox::CVSListBox](#cvslistbox)|建構 `CVSListBox` 物件。|  
 |`CVSListBox::~CVSListBox`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CVSListBox::AddItem](#additem)|將字串新增至清單控制項。 (覆寫 `CVSListBoxBase::AddItem`。)|  
 |[CVSListBox::EditItem](#edititem)|啟動的文字編輯作業的清單控制項項目。 (覆寫 `CVSListBoxBase::EditItem`。)|  
@@ -78,9 +79,9 @@ class CVSListBox : public CVSListBoxBase
 |[CVSListBox::SelectItem](#selectitem)|選取的可編輯的清單控制項字串。 (覆寫 `CVSListBoxBase::SelectItem`。)|  
 |[CVSListBox::SetItemData](#setitemdata)|將特定應用程式的 32 位元值與可編輯的清單控制項項目產生關聯。 (覆寫 `CVSListBoxBase::SetItemData`。)|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CVSListBox::GetListHwnd](#getlisthwnd)|傳回目前的內嵌的清單檢視控制項的控制代碼。|  
   
@@ -124,13 +125,13 @@ virtual int AddItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strIext`  
+ [輸入] `strIext`  
  字串的參考。  
   
- [in] `dwData`  
+ [輸入] `dwData`  
  特定應用程式的 32 位元值與字串相關聯。 預設值為 0。  
   
- [in] `iIndex`  
+ [輸入] `iIndex`  
  將保留在字串的位置以零為起始的索引。 如果`iIndex`參數為-1，字串會新增至清單的結尾。 預設值為 -1。  
   
 ### <a name="return-value"></a>傳回值  
@@ -158,7 +159,7 @@ virtual BOOL EditItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  清單控制項項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -188,7 +189,7 @@ virtual DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  可編輯的清單控制項項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -205,7 +206,7 @@ virtual CString GetItemText(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  可編輯的清單控制項項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -246,7 +247,7 @@ virtual BOOL RemoveItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  可編輯的清單控制項項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -262,7 +263,7 @@ virtual BOOL SelectItem(int iItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iItem`  
+ [輸入] `iItem`  
  可編輯的清單控制項項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -281,14 +282,14 @@ virtual void SetItemData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
  可編輯的清單控制項項目以零為起始的索引。  
   
- [in] `dwData`  
+ [輸入] `dwData`  
  32 位元值。 這個值可以是應用程式特定整數或其他資料的指標。  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

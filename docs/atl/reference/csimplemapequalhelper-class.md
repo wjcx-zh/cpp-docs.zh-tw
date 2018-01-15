@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42c6ef6562b737952782edfac41d3ba405a60ed1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ecc32dc8e6e9b249b0b8b334ec3d08bf26cbd1ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper 類別
 這個類別是 helper [CSimpleMap](../../atl/reference/csimplemap-class.md)類別。  
@@ -42,11 +43,11 @@ class CSimpleMapEqualHelper
  `TVal`  
  Value 元素中。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|（靜態）測試兩個索引鍵相等。|  
 |[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|（靜態）測試兩個值相等。|  
@@ -91,6 +92,6 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 ### <a name="return-value"></a>傳回值  
  如果值相等，false 否則，就會傳回 true。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CSimpleMapEqualHelperFalse 類別](../../atl/reference/csimplemapequalhelperfalse-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

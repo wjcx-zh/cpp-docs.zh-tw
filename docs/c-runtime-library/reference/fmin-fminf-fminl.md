@@ -1,5 +1,5 @@
 ---
-title: "fmin、 fminf、 fminl |Microsoft 文件"
+title: "fmin fminf，fminl |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -38,29 +38,16 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: b7fd6a2b91c1bc7cd973d2ac60f2d6fc39d322bb
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3428afcdcf403c733e5282b2b3c4347ba94497d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 決定兩個指定值的較小者。  
@@ -117,12 +104,12 @@ long double fminl(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`fmin`, `fminf`, `fminl`|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)  
  [fmax、fmaxf、fmaxl](fmax-fmaxf-fmaxl.md)  

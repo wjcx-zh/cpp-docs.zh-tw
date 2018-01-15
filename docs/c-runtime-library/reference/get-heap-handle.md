@@ -35,11 +35,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e8c08ed0ccffb7196133de89d4b9588333e1bfa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3445aab4a7ca4407d1a6913de2bcea3f5ec274a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 傳回 C 執行階段系統所使用之堆積的控制代碼。  
@@ -58,11 +59,11 @@ intptr_t _get_heap_handle( void );
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_get_heap_handle`|\<malloc.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="sample"></a>範例  
   
@@ -87,5 +88,5 @@ int main(void)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)

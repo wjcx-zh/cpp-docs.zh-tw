@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 942f34f8ef34a14a2e59e5a4a7e7ca9c3356f62b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-terminating-threads"></a>多執行緒：結束執行緒
 有兩種一般情況會導致執行緒終止： 控制函式會結束，或不允許執行緒執行到完成為止。 如果文書處理器用於列印背景的執行緒，控制函式就會在列印成功完成的話正常結束。 如果使用者想要取消列印，不過，有提前終止列印背景的執行緒。 本主題說明如何實作每種情況以及如何終止之後取得執行緒的結束代碼。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/24/2017
   
  這兩種方法可讓您判斷為什麼`CWinThread`終止的物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 c + + 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)   
  [_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)   
  [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   

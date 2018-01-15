@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ffe559be159bf54bdbbb9832dfb9a70bc47db13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f98d0c85a3149e4d865ec8bdfb82bfd032eb9c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unsupportedos-class"></a>unsupported_os 類別
 這個類別會描述使用不支援的作業系統時擲回的例外狀況。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class unsupported_os : public std::exception;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[unsupported_os](#ctor)|多載。 建構 `unsupported_os` 物件。|  
   
@@ -65,5 +66,5 @@ unsupported_os() throw();
  `_Message`  
  錯誤的描述性訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

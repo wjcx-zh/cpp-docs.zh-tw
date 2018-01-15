@@ -40,11 +40,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e349f9656a6ae0d7f1ae78abbee13ca4bed5f52d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d8453209a92b8f7485a9e7f575fb8810196d27fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Microsoft 對 C 和 C++ 的擴充功能
 Visual C++ 擴充 ANSI C 和 ANSI C++ 標準如下。  
@@ -76,7 +77,7 @@ __declspec(selectany) const int CMyClass::max = 5;
 ## <a name="casts"></a>轉型  
  C++ 編譯器和 C 編譯器都支援這些類型的非 ANSI 轉換：  
   
--   非 ANSI 轉換產生左值 (L-Value)。 例如：  
+-   非 ANSI 轉換產生左值 (L-Value)。 例如:   
   
     ```  
     char *p;  
@@ -92,7 +93,7 @@ __declspec(selectany) const int CMyClass::max = 5;
     p = ( char * )(( int * )p + 1 );  
     ```  
   
--   從函式指標至資料指標的非 ANSI 轉換。 例如：  
+-   從函式指標至資料指標的非 ANSI 轉換。 例如:   
   
     ```  
     int ( * pfunc ) ();   
@@ -297,7 +298,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/Za、 /Ze （停用語言擴充功能）](../../build/reference/za-ze-disable-language-extensions.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

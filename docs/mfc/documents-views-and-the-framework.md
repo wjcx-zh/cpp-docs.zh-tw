@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b6034dc13c554769ab62b37bd1ca143527b5f82e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documents-views-and-the-framework"></a>文件、檢視和架構
 MFC 架構的核心是文件和檢視的概念。 文件是一種在編輯工作階段與使用者進行互動的資料物件。 它由`New`或**開啟**命令**檔案**功能表上，通常會儲存在檔案中。 (標準 MFC 文件，衍生自類別**CDocument**，不同於主動式文件和 OLE 複合文件。)檢視是一種使用者與文件互動的視窗物件。  
@@ -66,12 +67,12 @@ MFC 架構的核心是文件和檢視的概念。 文件是一種在編輯工作
   
      如果您的應用程式建立不同的執行緒 — 例如，若要在背景中執行計算，您將使用的類別衍生自[CWinThread](../mfc/reference/cwinthread-class.md)。 [CWinApp](../mfc/reference/cwinapp-class.md)本身衍生自`CWinThread`和應用程式中代表主執行緒的執行 （或主要處理序）。 您也可以在次要執行緒中使用 MFC。  
   
- 在執行中的應用程式中，這些物件會一起回應使用者動作，並透過命令和其他訊息繫結在一起。 單一應用程式物件會管理一個或多個文件範本。 每個文件範本會建立和管理一個或多個文件 (根據應用程式為 SDI 還是 MDI 而定)。 使用者透過框架視窗中的檢視來檢視和操作文件。 下圖顯示 SDI 應用程式中這些物件之間的關聯性。  
+ 在執行中的應用程式中，這些物件會一起回應使用者動作，並透過命令和其他訊息繫結程序在一起。 單一應用程式物件會管理一個或多個文件範本。 每個文件範本會建立和管理一個或多個文件 (根據應用程式為 SDI 還是 MDI 而定)。 使用者透過框架視窗中的檢視來檢視和操作文件。 下圖顯示 SDI 應用程式中這些物件之間的關聯性。  
   
  ![執行中 SDI 應用程式中的物件](../mfc/media/vc386v1.gif "vc386v1")  
 執行中 SDI 應用程式內的物件  
   
  這一系列的其他文章說明架構工具、MFC 應用程式精靈和資源編輯器如何建立這些物件、它們如何一起運作，以及如何在您的程式設計中使用它們。 文件、 檢視和框架視窗會更詳細地討論[視窗物件](../mfc/window-objects.md)和[文件/檢視架構](../mfc/document-view-architecture.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)

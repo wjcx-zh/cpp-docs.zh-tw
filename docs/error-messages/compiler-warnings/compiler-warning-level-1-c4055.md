@@ -1,5 +1,3 @@
----
----
 # <a name="compiler-warning-level-1-c4055"></a>編譯器警告 (層級 1) C4055  
   
 'conversion': 從資料指標 'type1' 到函式指標 'type2'  

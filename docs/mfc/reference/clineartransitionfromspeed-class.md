@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 41c15851be56520f1452e9167ce19ee657df5a02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ae7d972c97bdf2d94596004baa71462de7532c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed 類別
 封裝線性速度轉換。  
@@ -40,23 +41,23 @@ ms.lasthandoff: 10/24/2017
 class CLinearTransitionFromSpeed : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|建構線性速度轉換物件並初始化速度與最終值。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CLinearTransitionFromSpeed::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|  
 |[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|變數的速度的絕對值。|  
@@ -120,5 +121,5 @@ DOUBLE m_dblFinalValue;
 DOUBLE m_dblSpeed;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

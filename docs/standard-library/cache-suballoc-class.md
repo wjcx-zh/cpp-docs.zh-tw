@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f835efbe84b05359a9a835f3afbdccf5839fc31c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d53e0438d73aa73a32f26d417ea60c4540162125
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 類別
 定義[區塊配置器](../standard-library/allocators-header.md)以配置及解除配置單一大小的記憶體區塊。  
@@ -39,7 +40,7 @@ class cache_suballoc
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Sz`|陣列中要配置的項目數。|  
   
@@ -75,9 +76,9 @@ void *allocate(std::size_t count);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
-|`count`|陣列中要配置的項目數。|  
+|`count`|所配置陣列中的元素數。|  
   
 ### <a name="return-value"></a>傳回值  
  所配置物件的指標。  
@@ -109,7 +110,7 @@ void deallocate(void* ptr, std::size_t count);
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

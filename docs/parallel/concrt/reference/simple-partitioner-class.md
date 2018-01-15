@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9e4526f86423d1b374bf08a6837e47afb884960
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1d509afd9cddd8ac119d12ce2a0cb88906e83aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner 類別
 `simple_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將這個範圍分割成區塊，每個區塊都有由區塊大小指定之反覆項目的最少次數。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class simple_partitioner;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[simple_partitioner](#ctor)|建構 `simple_partitioner` 物件。|  
 |[~ simple_partitioner 解構函式](#dtor)|終結 `simple_partitioner` 物件。|  
@@ -69,5 +70,5 @@ explicit simple_partitioner(_Size_type _Chunk_size);
 ### <a name="parameters"></a>參數  
  `_Chunk_size`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

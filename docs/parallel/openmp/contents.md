@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90f1277375d6c42c99df80f583d5062cf17c083f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a46a879f8509aaf0ec97346b3c7e8d8c9457cade
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="contents"></a>內容
 [1.簡介](../../parallel/openmp/1-introduction.md)  
@@ -226,5 +227,5 @@ ms.lasthandoff: 10/24/2017
   
  [F.2.0 版中的新功能和釐清的內容](../../parallel/openmp/f-new-features-and-clarifications-in-version-2-0.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 和 c + + 應用程式開發介面](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)

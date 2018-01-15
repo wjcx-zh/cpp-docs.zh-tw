@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5efc5a12acbad786039b687e5a9e3bb00e62e090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2a852e597c06a08c3e9eb83731dc7da7df077435
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drag-and-drop-ole"></a>拖放 (OLE)
 OLE 的拖放功能主要是複製並貼上資料的捷徑。 當您使用 [剪貼簿] 複製或貼上資料時，需要幾個步驟。 您選取的資料，請按一下**剪下**或**複製**從**編輯**功能表上，移至目的地檔案、 視窗或應用程式中，將游標放在想要的位置，然後按一下**貼上**從**編輯**功能表。  
@@ -47,7 +48,7 @@ OLE 的拖放功能主要是複製並貼上資料的捷徑。 當您使用 [剪�
   
 -   [拖放：自訂](../mfc/drag-and-drop-customizing.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE](../mfc/ole-in-mfc.md)   
  [資料物件和資料來源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)
 

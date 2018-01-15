@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4375b995ec60197f1e1f9f8238f1542ec7d1d313
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c6386c5baf4af7447e4d3c711e644cb2ae5209a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctabctrl"></a>使用 CTabCtrl
 「索引標籤控制項」類似於筆記本裡的分隔頁或檔案櫃中的標籤資料夾。 使用此索引標籤控制項，類別所代表[CTabCtrl](../mfc/reference/ctabctrl-class.md)，若要顯示多頁的資訊或控制項給使用者，一次，建議的對等或邏輯關聯性，每個頁面之間的格式。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [處理索引標籤控制項通知訊息](../mfc/processing-tab-control-notification-messages.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [控制項](../mfc/controls-mfc.md)
 

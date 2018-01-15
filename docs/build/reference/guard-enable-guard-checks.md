@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbc987f7db1e3a1bce0b73f0c21e875b7c9e5eda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48abdc4f923ed01ecba482b82da897d06fd56dcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (啟用防護檢查)
 指定在可執行映像中進行控制流程防護檢查的支援。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
 3.  在**其他選項**，輸入`/GUARD:CF`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/guard （啟用控制流程防護）](../../build/reference/guard-enable-control-flow-guard.md)   
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

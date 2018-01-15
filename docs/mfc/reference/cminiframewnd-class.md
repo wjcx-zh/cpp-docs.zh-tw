@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13abe38c4d5a632a2d13d0c5770109b23f86bc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
 表示通常在浮動工具列周圍出現的半高度框架視窗。  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class CMiniFrameWnd : public CFrameWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|建構 `CMiniFrameWnd` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMiniFrameWnd::Create](#create)|建立`CMiniFrameWnd`完成建構後的物件。|  
 |[CMiniFrameWnd::CreateEx](#createex)|建立`CMiniFrameWnd`完成建構後的物件 （使用其他選項）。|  
@@ -200,7 +201,7 @@ virtual BOOL CreateEx(
   
  不再支援的舊樣式的調色盤 [工具箱] 視窗。 支援舊版的 Windows 上執行 MFC 應用程式時的舊樣式，並沒有"X"按鈕，但已不再支援 Visual c + +.NET 中。 只有新`WS_EX_TOOLWINDOW`樣式現在支援; 如需此樣式的說明，請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)

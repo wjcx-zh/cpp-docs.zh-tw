@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ae60f200b9c90c30879370329220d039d7eb03c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7bb80775b6da51c3b70597ce9ad6297cc3021df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wrl-reference"></a>WRL 參考
 本節包含的 Windows 執行階段 c + + 樣板程式庫 (WRL) 的參考資訊。  
@@ -25,7 +28,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  Windows 執行階段 c + + 樣板程式庫會定義支援的 Windows 執行階段 c + + 樣板程式庫的基礎結構，並不是直接從您的程式碼使用的功能。 這類功能加註在此文件中。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)  
  定義 Windows 執行階段 c + + 樣板程式庫所組成的基本類型。  
   

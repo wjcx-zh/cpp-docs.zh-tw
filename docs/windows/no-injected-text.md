@@ -1,32 +1,33 @@
 ---
-title: "no_injected_text | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.no_injected_text"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "no_injected_text attribute"
+title: "no_injected_text |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.no_injected_text
+dev_langs: C++
+helpviewer_keywords: no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8c74d3134b5381be4ec330742726b26fea6155da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# no_injected_text
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以防止編譯器插入的屬性使用的程式碼。  
+# <a name="noinjectedtext"></a>no_injected_text
+防止編譯器插入程式碼，因為屬性使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,26 +36,25 @@ caps.handback.revision: 10
 ) ];  
 ```  
   
-#### 參數  
- `boolean`\(選擇性\)  
- **真** 如果您想要插入的程式碼不  **，則為 false** 讓要插入的程式碼。  **真**是預設值。  
+#### <a name="parameters"></a>參數  
+ `boolean` (選擇性)  
+ **true**如果您想不要插入的程式，任何程式碼**false**允許無法插入的程式碼。 **true**是預設值。  
   
-## 備註  
- 最常用的 **no\_injected\_text** C\+\+ 屬性是由 [\/fx 將加入](../build/reference/fx-merge-injected-code.md) 編譯器選項，插入  **no\_injected\_text** .mrg 檔案中的屬性。  
+## <a name="remarks"></a>備註  
+ 最常見的用法**no_injected_text** c + + 屬性是由[/Fx](../build/reference/fx-merge-injected-code.md)編譯器選項，它會插入**no_injected_text**到.mrg 檔中的屬性。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|全螢幕輸入|  
+|**適用於**|任何位置|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [編譯器屬性](../windows/compiler-attributes.md)   

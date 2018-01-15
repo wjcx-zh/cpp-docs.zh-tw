@@ -127,11 +127,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dda4a847f19d756d4d33372d91053a6fa78d9900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ecde926a27fbf4fa74cabdec6ff4d54f7d89216
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 功能像訊息方塊，但是可向使用者顯示其他資訊的快顯對話方塊。 `CTaskDialog` 也包含從使用者收集資訊的功能。  
@@ -270,16 +271,16 @@ void AddCommandControl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nCommandControlID`  
+ [輸入] `nCommandControlID`  
  命令控制項識別碼。  
   
- [in] `strCaption`  
+ [輸入] `strCaption`  
  字串，`CTaskDialog`向使用者顯示。 使用這個字串，以說明命令的目的。  
   
- [in] `bEnabled`  
+ [輸入] `bEnabled`  
  布林值參數，指出是否啟用或停用 [新增] 按鈕。  
   
- [in] `bRequiresElevation`  
+ [輸入] `bRequiresElevation`  
  布林值參數，指出命令是否需要提高權限。  
   
 ### <a name="remarks"></a>備註  
@@ -301,13 +302,13 @@ void CTaskDialog::AddRadioButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRadioButtonID`  
+ [輸入] `nRadioButtonID`  
  選項按鈕的識別碼。  
   
- [in] `strCaption`  
+ [輸入] `strCaption`  
  字串，`CTaskDialog`旁邊的選項按鈕會顯示。  
   
- [in] `bEnabled`  
+ [輸入] `bEnabled`  
  布林值參數，指出是否已啟用的選項按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -327,7 +328,7 @@ void ClickCommandControl(int nCommandControlID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nCommandControlID`  
+ [輸入] `nCommandControlID`  
  按一下控制項的命令識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -342,7 +343,7 @@ void ClickRadioButton(int nRadioButtonID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRadioButtonID`  
+ [輸入] `nRadioButtonID`  
  按一下選項按鈕的識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -373,28 +374,28 @@ CTaskDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strContent`  
+ [輸入] `strContent`  
  若要使用內容的字串`CTaskDialog`。  
   
- [in] `strMainInstruction`  
+ [輸入] `strMainInstruction`  
  主要指示`CTaskDialog`。  
   
- [in] `strTitle`  
+ [輸入] `strTitle`  
  標題`CTaskDialog`。  
   
- [in] `nCommonButtons`  
+ [輸入] `nCommonButtons`  
  要加入至一般按鈕的遮罩`CTaskDialog`。  
   
- [in] `nTaskDialogOptions`  
+ [輸入] `nTaskDialogOptions`  
  一組選項用於`CTaskDialog`。  
   
- [in] `strFooter`  
+ [輸入] `strFooter`  
  要做為頁尾的字串。  
   
- [in] `nIDCommandControlsFirst`  
+ [輸入] `nIDCommandControlsFirst`  
  第一個命令字串識別碼。  
   
- [in] `nIDCommandControlsLast`  
+ [輸入] `nIDCommandControlsLast`  
  最後一個命令字串識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -415,7 +416,7 @@ INT_PTR DoModal (HWND hParent = ::GetActiveWindow());
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hParent`  
+ [輸入] `hParent`  
  父視窗`CTaskDialog`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -452,7 +453,7 @@ int GetCommonButtonFlag(int nButtonId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nButtonId`  
+ [輸入] `nButtonId`  
  標準 Windows 按鈕的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -466,7 +467,7 @@ int GetCommonButtonId(int nFlag);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nFlag`  
+ [輸入] `nFlag`  
  常見的按鈕類型相關聯的`CTaskDialog`類別。  
   
 ### <a name="return-value"></a>傳回值  
@@ -541,7 +542,7 @@ BOOL IsCommandControlEnabled(int nCommandControlID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nCommandControlID`  
+ [輸入] `nCommandControlID`  
  若要測試的命令按鈕控制項或按鈕 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -563,7 +564,7 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRadioButtonID`  
+ [輸入] `nRadioButtonID`  
  若要測試的選項按鈕的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -601,10 +602,10 @@ void LoadCommandControls(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIDCommandControlsFirst`  
+ [輸入] `nIDCommandControlsFirst`  
  第一個命令字串識別碼。  
   
- [in] `nIDCommandControlsLast`  
+ [輸入] `nIDCommandControlsLast`  
  最後一個命令字串識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -625,10 +626,10 @@ void LoadRadioButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIDRadioButtonsFirst`  
+ [輸入] `nIDRadioButtonsFirst`  
  第一個選項按鈕的字串識別碼。  
   
- [in] `nIDRadioButtonsLast`  
+ [輸入] `nIDRadioButtonsLast`  
  最後一個選項按鈕的字串識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -648,7 +649,7 @@ void NavigateTo(CTaskDialog& oTaskDialog) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `oTaskDialog`  
+ [輸入] `oTaskDialog`  
  `CTaskDialog`接收焦點。  
   
 ### <a name="remarks"></a>備註  
@@ -662,7 +663,7 @@ virtual HRESULT OnCommandControlClick(int nCommandControlID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nCommandControlID`  
+ [輸入] `nCommandControlID`  
  使用者選取命令按鈕控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -705,7 +706,7 @@ virtual HRESULT OnExpandButtonClicked(BOOL bExpanded);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bExpanded`  
+ [輸入] `bExpanded`  
  非零值表示會顯示額外的資訊。0 表示隱藏的額外資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -735,7 +736,7 @@ virtual HRESULT OnHyperlinkClick(const CString& strHref);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strHref`  
+ [輸入] `strHref`  
  字串，代表超連結。  
   
 ### <a name="return-value"></a>傳回值  
@@ -780,7 +781,7 @@ virtual HRESULT OnRadioButtonClick(int nRadioButtonID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRadioButtonID`  
+ [輸入] `nRadioButtonID`  
  使用者已按一下選項按鈕控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -797,7 +798,7 @@ virtual HRESULT OnTimer(long lTime);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lTime`  
+ [輸入] `lTime`  
  時間以來的毫秒數`CTaskDialog`建立或計時器重設。  
   
 ### <a name="return-value"></a>傳回值  
@@ -814,7 +815,7 @@ virtual HRESULT OnVerificationCheckboxClick(BOOL bChecked);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bChecked`  
+ [輸入] `bChecked`  
  `TRUE`表示已選取 [驗證] 核取方塊。`FALSE`表示它不是。  
   
 ### <a name="return-value"></a>傳回值  
@@ -854,13 +855,13 @@ void SetCommandControlOptions(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nCommandControlID`  
+ [輸入] `nCommandControlID`  
  若要更新命令控制項 ID。  
   
- [in] `bEnabled`  
+ [輸入] `bEnabled`  
  表示如果啟用或停用指定的命令按鈕控制項的布林參數。  
   
- [in] `bRequiresElevation`  
+ [輸入] `bRequiresElevation`  
  布林值參數，指出是否指定的命令按鈕控制項需要提高權限。  
   
 ### <a name="remarks"></a>備註  
@@ -879,10 +880,10 @@ void SetCommonButtonOptions(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nDisabledButtonMask`  
+ [輸入] `nDisabledButtonMask`  
  若要停用，一般按鈕的遮罩。  
   
- [in] `nElevationButtonMask`  
+ [輸入] `nElevationButtonMask`  
  需要提高權限的一般按鈕遮罩。  
   
 ### <a name="remarks"></a>備註  
@@ -906,13 +907,13 @@ void SetCommonButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nButtonMask`  
+ [輸入] `nButtonMask`  
  要加入至按鈕遮罩`CTaskDialog`。  
   
- [in] `nDisabledButtonMask`  
+ [輸入] `nDisabledButtonMask`  
  若要停用按鈕的遮罩。  
   
- [in] `nElevationButtonMask`  
+ [輸入] `nElevationButtonMask`  
  遮罩需要提高權限的按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -935,7 +936,7 @@ void SetContent(const CString& strContent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strContent`  
+ [輸入] `strContent`  
  要向使用者顯示的字串。  
   
 ### <a name="remarks"></a>備註  
@@ -952,7 +953,7 @@ void SetDefaultCommandControl(int nCommandControlID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nCommandControlID`  
+ [輸入] `nCommandControlID`  
  設為預設命令按鈕控制項的識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -971,7 +972,7 @@ void SetDefaultRadioButton(int nRadioButtonID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRadioButtonID`  
+ [輸入] `nRadioButtonID`  
  設為預設的選項按鈕的識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -990,7 +991,7 @@ void SetDialogWidth(int nWidth = 0);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nWidth`  
+ [輸入] `nWidth`  
  對話方塊中，單位為像素寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -1012,13 +1013,13 @@ void SetExpansionArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strExpandedInformation`  
+ [輸入] `strExpandedInformation`  
  字串，`CTaskDialog`顯示在對話方塊中的主要本文中，當使用者按一下 [展開] 按鈕。  
   
- [in] `strCollapsedLabel`  
+ [輸入] `strCollapsedLabel`  
  字串，`CTaskDialog`擴充的區域是否摺疊時，[擴充] 按鈕旁邊會顯示。  
   
- [in] `strExpandedLabel`  
+ [輸入] `strExpandedLabel`  
  字串，`CTaskDialog`時展開的區域會顯示 [展開] 按鈕旁邊會顯示。  
   
 ### <a name="remarks"></a>備註  
@@ -1038,10 +1039,10 @@ void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hFooterIcon`  
+ [輸入] `hFooterIcon`  
  新圖示`CTaskDialog`。  
   
- [in] `lpszFooterIcon`  
+ [輸入] `lpszFooterIcon`  
  新圖示`CTaskDialog`。  
   
 ### <a name="remarks"></a>備註  
@@ -1062,7 +1063,7 @@ void SetFooterText(const CString& strFooterText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strFooterText`  
+ [輸入] `strFooterText`  
  新的頁尾文字。  
   
 ### <a name="remarks"></a>備註  
@@ -1080,10 +1081,10 @@ void SetMainIcon(LPCWSTR lpszMainIcon);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hMainIcon`  
+ [輸入] `hMainIcon`  
  [新增] 圖示。  
   
- [in] `lpszMainIcon`  
+ [輸入] `lpszMainIcon`  
  [新增] 圖示。  
   
 ### <a name="remarks"></a>備註  
@@ -1102,7 +1103,7 @@ void SetMainInstruction(const CString& strInstructions);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strInstructions`  
+ [輸入] `strInstructions`  
  新的主要指示。  
   
 ### <a name="remarks"></a>備註  
@@ -1119,7 +1120,7 @@ void SetOptions(int nOptionFlag);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nOptionFlag`  
+ [輸入] `nOptionFlag`  
  旗標，以用於一組`CTaskDialog`。  
   
 ### <a name="remarks"></a>備註  
@@ -1188,10 +1189,10 @@ void SetProgressBarMarquee(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnabled`  
+ [輸入] `bEnabled`  
  `TRUE`若要啟用跑馬燈 列中。`FALSE`以停用跑馬燈列，並移除從`CTaskDialog`。  
   
- [in] `nMarqueeSpeed`  
+ [輸入] `nMarqueeSpeed`  
  整數，表示跑馬燈列的速度。  
   
 ### <a name="remarks"></a>備註  
@@ -1212,7 +1213,7 @@ void SetProgressBarPosition(int nProgressPos);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nProgressPos`  
+ [輸入] `nProgressPos`  
  進度列位置。  
   
 ### <a name="remarks"></a>備註  
@@ -1231,10 +1232,10 @@ void SetProgressBarRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRangeMin`  
+ [輸入] `nRangeMin`  
  進度列的下限。  
   
- [in] `nRangeMax`  
+ [輸入] `nRangeMax`  
  進度列的上限。  
   
 ### <a name="remarks"></a>備註  
@@ -1255,7 +1256,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nState`  
+ [輸入] `nState`  
  進度列狀態。 請參閱 < 備註 > 一節提供可能的值。  
   
 ### <a name="remarks"></a>備註  
@@ -1287,10 +1288,10 @@ void SetRadioButtonOptions(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRadioButtonID`  
+ [輸入] `nRadioButtonID`  
  選項按鈕控制項的識別碼。  
   
- [in] `bEnabled`  
+ [輸入] `bEnabled`  
  `TRUE`若要啟用的選項按鈕。`FALSE`停用的選項按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -1307,7 +1308,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bChecked`  
+ [輸入] `bChecked`  
  `TRUE`將 驗證 核取方塊時選取`CTaskDialog`隨即出現。`FALSE`能夠驗證 核取方塊未選取時`CTaskDialog`隨即出現。  
   
 ### <a name="example"></a>範例  
@@ -1321,7 +1322,7 @@ void SetVerificationCheckboxText(CString& strVerificationText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strVerificationText`  
+ [輸入] `strVerificationText`  
  這個方法會驗證核取方塊旁顯示的文字。  
   
 ### <a name="remarks"></a>備註  
@@ -1338,7 +1339,7 @@ void SetWindowTitle(CString& strWindowTitle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strWindowTitle`  
+ [輸入] `strWindowTitle`  
  新標題`CTaskDialog`。  
   
 ### <a name="remarks"></a>備註  
@@ -1362,28 +1363,28 @@ static INT_PTR ShowDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strContent`  
+ [輸入] `strContent`  
  若要使用內容的字串`CTaskDialog`。  
   
- [in] `strMainInstruction`  
+ [輸入] `strMainInstruction`  
  主要指示`CTaskDialog`。  
   
- [in] `strTitle`  
+ [輸入] `strTitle`  
  標題`CTaskDialog`。  
   
- [in] `nIDCommandControlsFirst`  
+ [輸入] `nIDCommandControlsFirst`  
  第一個命令字串識別碼。  
   
- [in] `nIDCommandControlsLast`  
+ [輸入] `nIDCommandControlsLast`  
  最後一個命令字串識別碼。  
   
- [in] `nCommonButtons`  
+ [輸入] `nCommonButtons`  
  要加入至按鈕遮罩`CTaskDialog`。  
   
- [in] `nTaskDialogOptions`  
+ [輸入] `nTaskDialogOptions`  
  一組選項用於`CTaskDialog`。  
   
- [in] `strFooter`  
+ [輸入] `strFooter`  
  要做為頁尾的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1415,19 +1416,19 @@ HRESULT TaskDialogCallback(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hwnd`  
+ [輸入] `hwnd`  
  控制代碼`m_hWnd`結構`CTaskDialog`。  
   
- [in] `uNotification`  
+ [輸入] `uNotification`  
  指定產生之訊息的通知程式碼。  
   
- [in] `wParam`  
+ [輸入] `wParam`  
  訊息的詳細資訊。  
   
- [in] `lParam`  
+ [輸入] `lParam`  
  訊息的詳細資訊。  
   
- [in] `dwRefData`  
+ [輸入] `dwRefData`  
  指標`CTaskDialog`回呼訊息所套用的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1452,7 +1453,7 @@ HRESULT TaskDialogCallback(
 |`TDN_HELP`|未使用。|未使用。|  
 |`TDN_EXPANDO_BUTTON_CLICKED`|0，如果擴充區域摺疊。如果擴充文字會顯示為非零。|未使用。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

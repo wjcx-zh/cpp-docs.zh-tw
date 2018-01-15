@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - wtoi64_l
 - _atoi64_l
 - atoi64_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tstoi64 function
 - wtoi64 function
@@ -55,31 +53,16 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 749ce35fdb4ed530bf301539b13ba3cb0471b996
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 33337f0db51e81da06c193cc42cac1e5df085218
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 將字串轉換成 64 位元整數。  
@@ -132,7 +115,7 @@ __int64 _wtoi64_l(
   
  `_wtoi64` 與 `_atoi64` 相同，差別在於它採用寬字元作為參數。  
   
- 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -196,7 +179,7 @@ Function: _atoi64( "3336402735171707160320" ) = -1
 Overflow condition occurred.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [地區設定](../../c-runtime-library/locale.md)   

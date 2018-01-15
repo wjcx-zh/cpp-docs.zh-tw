@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 648122a9c8f3cf97d08128e6e12090ebc12631d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d954abc593fcba3887da4f7ee4bd5ce1e443e18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="special-characters-in-macros"></a>巨集中的特殊字元
 定義會指定註解後，數字符號 （#）。 若要指定常值的數字符號在巨集中，使用插入號 (^)，做為 ^ #。  
@@ -34,5 +35,5 @@ CMDS = cls^
 dir  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)

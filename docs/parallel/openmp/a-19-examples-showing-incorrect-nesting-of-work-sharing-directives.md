@@ -13,14 +13,15 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1cc5ed3a3a5ddd4117a3332703613a8d525853a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a3f8a4e1ca62a77c16dafedd0921ca842d7a048
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19 巢狀使用工作共用指示詞的錯誤範例
-本節中的範例說明的指示詞的巢狀規則。 如需詳細指示詞的巢狀結構的詳細資訊，請參閱[區段 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33 頁面上。  
+本節中的範例說明的指示詞的巢狀規則。 如需詳細指示詞的巢狀結構的詳細資訊，請參閱[區段 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33] 頁面上。  
   
  下列範例是不符合規定因為內部和外部`for`指示詞為巢狀，並繫結至相同`parallel`指示詞：  
   

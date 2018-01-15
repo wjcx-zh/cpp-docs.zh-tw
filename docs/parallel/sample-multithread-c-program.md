@@ -1,31 +1,31 @@
 ---
-title: "多執行緒 C 程式範例 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "範例 多執行緒 C 程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 多執行緒 C 程式範例
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bounce.c 是一個多執行緒程式範例，在每次輸入字母 **a** 或 **A** 時會建立新的執行緒。  每一個執行緒在螢幕周圍彈出不同顏色的快樂臉。  最多可以建立 32 個執行緒。  當輸入 `q` 或 **Q** 時，程式便正常結束。  如需編譯和連結 Bounce.c 的詳細資訊，請參閱[編譯和連結多執行緒程式](../parallel/compiling-and-linking-multithread-programs.md)。  
+# <a name="sample-multithread-c-program"></a>多執行緒 C 程式範例
+Bounce.c 是一個多執行緒程式範例，建立新執行緒的每個時間字母或**A**型別。 每個執行緒退笑臉，在螢幕的不同色彩。 最多 32 個執行緒可以建立。 程式的正常終止，就會發生時`q`或**Q**型別。 編譯和連結 Bounce.c 的相關資訊，請參閱[編譯和連結多執行緒程式](../parallel/compiling-and-linking-multithread-programs.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // sample_multithread_c_program.c  
@@ -212,12 +212,12 @@ void ClearScreen( void )
 }  
 ```  
   
-### 輸入  
+### <a name="input"></a>輸入  
   
 ```  
 a  
 q  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)

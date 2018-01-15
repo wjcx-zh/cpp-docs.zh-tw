@@ -67,11 +67,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e12874dcc35c4c98b765aa773d5307d3b35dbe60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e890e59896d1f69264ab479168385cf2a05d9fb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfilefind-class"></a>CFileFind 類別
 執行本機檔案搜尋，而且可的基底類別[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)和[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)，會執行網際網路檔案搜尋。  
@@ -82,17 +83,17 @@ ms.lasthandoff: 10/24/2017
 class CFileFind : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileFind::CFileFind](#cfilefind)|建構 `CFileFind` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileFind::Close](#close)|關閉搜尋要求。|  
 |[CFileFind::FindFile](#findfile)|搜尋指定的檔案名稱的目錄。|  
@@ -117,15 +118,15 @@ class CFileFind : public CObject
 |[CFileFind::IsTemporary](#istemporary)|判斷找到的檔案是否為暫存。|  
 |[CFileFind::MatchesMask](#matchesmask)|表示要尋找檔案所需的檔案屬性。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileFind::CloseContext](#closecontext)|關閉目前的搜尋控制代碼所指定的檔案。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileFind::m_pTM](#m_ptm)|指向 `CAtlTransactionManager` 物件的指標。|  
   
@@ -742,7 +743,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#35](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_5.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFtpFileFind 類別](../../mfc/reference/cftpfilefind-class.md)   

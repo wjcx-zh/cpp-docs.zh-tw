@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46aaf6677a779ada2457814aecba5c84a59e1f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1eef6199f67702aeb3d3a886c52e910302a7dcad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-local-storage"></a>執行緒區域儲存區
 **Microsoft 特定的**  
@@ -38,7 +39,7 @@ __declspec( thread ) int tls_i = 1;
   
  當您宣告靜態繫結的執行緒區域變數時，必須遵守下列方針：  
   
--   使用 **__declspec(thread)** 可能會干擾 DLL 匯入的[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)**。**  
+-   具有動態初始化的執行緒區域變數只會在使 DLL 載入的執行緒和已在處理序中執行的執行緒上初始化。 如需詳細資訊，請參閱[執行緒](../cpp/thread.md)。  
   
 -   您只能將 thread 屬性套用至資料宣告和定義。 它不可使用於函式宣告或定義。 例如，下列程式碼會產生編譯器錯誤：  
   
@@ -84,7 +85,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;      /* Error */  
     ```  
   
--   C 允許使用需要自我參考的運算式來初始化變數，但只限於非靜態範圍的物件。 例如：  
+-   C 允許使用需要自我參考的運算式來初始化變數，但只限於非靜態範圍的物件。 例如:   
   
     ```  
     #define Thread   __declspec( thread )  
@@ -99,7 +100,7 @@ __declspec( thread ) int tls_i = 1;
   
  如需使用 thread 屬性的詳細資訊，請參閱[多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)

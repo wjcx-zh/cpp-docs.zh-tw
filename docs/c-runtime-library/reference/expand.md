@@ -40,11 +40,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09906e3cdf8455a2a221601f475074a18a72b1b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 103ff4077bdc68b8886c5181ce317b5c0d0d2b79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expand"></a>_expand
 變更記憶體區塊的大小。  
@@ -86,11 +87,11 @@ void *_expand(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`_expand`|\<malloc.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -126,7 +127,7 @@ Allocated 512 bytes at 002C12BC
 Expanded block to 1024 bytes at 002C12BC  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   

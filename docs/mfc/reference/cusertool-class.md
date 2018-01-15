@@ -41,11 +41,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dbccf88ee493b0d9343660bbbcd447049ca8c19c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38600b2e6eac6ad181baf1263d9e4d10295732b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cusertool-class"></a>CUserTool 類別
 使用者工具是執行外部應用程式的功能表項目。 **工具** 索引標籤**自訂**對話方塊 ( [CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 可讓使用者加入使用者工具，並指定名稱、 命令、 引數，並每個使用者工具的初始目錄。  
@@ -56,11 +57,11 @@ ms.lasthandoff: 10/24/2017
 class CUserTool : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||  
 |[CUserTool::DrawToolIcon](#drawtoolicon)|指定的矩形中繪製使用者工具圖示。|  
@@ -71,15 +72,15 @@ class CUserTool : public CObject
 |[CUserTool::SetCommand](#setcommand)|設定使用者工具相關聯的命令。|  
 |[CUserTool::SetToolIcon](#settoolicon)|從工具相關聯的應用程式載入使用者工具的圖示。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CUserTool::LoadDefaultIcon](#loaddefaulticon)|載入使用者工具的預設圖示。|  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|使用者工具的命令列引數。|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|使用者工具的初始目錄。|  
@@ -122,10 +123,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rectImage`  
+ [輸入] `rectImage`  
  指定要顯示圖示的區域的座標。  
   
 ##  <a name="getcommand"></a>CUserTool::GetCommand  
@@ -211,7 +212,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ar`  
+ [輸入] `ar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -223,7 +224,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszCmd`  
+ [輸入] `lpszCmd`  
  指定要與使用者工具相關聯的新應用程式。  
   
 ### <a name="remarks"></a>備註  
@@ -242,7 +243,7 @@ virtual HICON SetToolIcon();
 ### <a name="remarks"></a>備註  
  呼叫這個方法來載入功能表項目上顯示的圖示。 這個方法會搜尋工具使用的可執行檔中的圖示。 它沒有預設的圖示，圖示所提供的[CUserTool::LoadDefaultIcon](#loaddefaulticon)改為使用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)   

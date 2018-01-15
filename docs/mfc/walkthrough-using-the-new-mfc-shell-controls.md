@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0169cf171e519a4fd620cacd7e684c400f94929d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>逐步解說：使用新的 MFC Shell 控制項
 在此逐步解說中，您會建立類似檔案總管的應用程式。 您將建立包含兩個窗格的視窗。 左的窗格將包含[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)桌面上顯示階層式檢視中的物件。 在右窗格會包含[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)的左窗格中選取的資料夾中顯示的檔案。  
@@ -195,6 +196,6 @@ ms.lasthandoff: 10/24/2017
   
 -   `CMFCShellListCtrl`支援在不同模式中，檢視檔案，例如**大圖示**，**小圖示**，**清單**，和**詳細資料**。 更新您的應用程式實作這項功能。 提示： 請參閱[Visual c + + 範例](../visual-cpp-samples.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [逐步解說](../mfc/walkthroughs-mfc.md)
 

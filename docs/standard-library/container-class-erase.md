@@ -14,15 +14,16 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 92be2dd430babc621e5f4b1f89999cf0e498306a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef45ec608736640f8f17a375838d3778d3ecc9b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="container-classerase"></a>容器類別::erase
 > [!NOTE]
->  本主題為 Visual C++ 文件中 C++ 標準程式庫所用容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。  
+>  本主題位於 Visual C++ 文件內，可做為 C++ 標準程式庫中所用容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。  
   
  插入元素。  
   
@@ -43,5 +44,5 @@ iterator erase(
   
  只有當複製作業擲回例外狀況時，成員函式才會擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [範例容器類別](../standard-library/sample-container-class.md)

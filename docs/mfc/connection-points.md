@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a96c3ebe943e2ede844c554cf943555e2aa83fc6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d8bbb131aa5d4ce1b12cba84c3928b80a8b2a7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-points"></a>連接點
 這篇文章說明如何實作連接點 （先前稱為 OLE 連接點 」） 使用 MFC 類別`CCmdTarget`和`CConnectionPoint`。  
@@ -72,6 +73,6 @@ ms.lasthandoff: 10/24/2017
   
  這個範例會擷取目前的資料集的連接上`SampleConnPt`呼叫的連接點`CConnectionPoint::GetConnections`。 它接著會逐一連接並呼叫**ISampleSink::SinkFunc**上作用中的每個連接。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC COM](../mfc/mfc-com.md)
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_offset
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_pExistingKeyFrame
 - AFXANIMATIONCONTROLLER/CKeyFrame::m_pTransition
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CKeyFrame [MFC], CKeyFrame
 - CKeyFrame [MFC], AddToStoryboard
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 03cfc0766dd15a2762612cf5f41e72ffb1c1885f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 67121027293171c9692362fd148a8598f649cfe2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame 類別
 表示動畫主要畫面格。  
@@ -55,17 +53,17 @@ ms.lasthandoff: 10/09/2017
 class CKeyFrame : public CBaseKeyFrame;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CKeyFrame::CKeyFrame](#ckeyframe)|多載。 建構主要取決於其他主要畫面格的畫面格。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CKeyFrame::AddToStoryboard](#addtostoryboard)|將分鏡腳本的主要畫面格。 (覆寫[CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard)。)|  
 |[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|加入主要畫面格在轉換後的分鏡腳本。|  
@@ -76,7 +74,7 @@ class CKeyFrame : public CBaseKeyFrame;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CKeyFrame::m_offset](#m_offset)|指定這個主要畫面格 m_pExistingKeyFrame 中儲存的主要畫面格位移。|  
 |[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|儲存至現有的 keframe 的指標。 這個主要畫面格加入與現有的主要畫面格的 m_offset 分鏡腳本。|  
@@ -246,6 +244,5 @@ CBaseKeyFrame* m_pExistingKeyFrame;
 CBaseTransition* m_pTransition;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

@@ -1,50 +1,50 @@
 ---
-title: "F. New Features and Clarifications in Version 2.0 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "F. 新功能和 2.0 版中的 說明 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b9a661f183816fec0f7a71c990f1508338100f4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# F. New Features and Clarifications in Version 2.0
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本附錄摘要關鍵 OpenMP C\/C\+\+ 規格中從 1.0 版移到 2.0 版中所做的變更。  下列項目會新增到規格的新功能：  
+# <a name="f-new-features-and-clarifications-in-version-20"></a>F. 新功能及 2.0 版中的說明
+本附錄摘要中將 1.0 版移到 2.0 版的 OpenMP C/c + + 規格的金鑰變更。 下列項目會加入規格的新功能：  
   
--   OpenMP 指示詞中允許逗點 \([2.1 節](../../parallel/openmp/2-1-directive-format.md)在頁面上 7\)。  
+-   逗號可以在 OpenMP 指示詞 ([2.1 節](../../parallel/openmp/2-1-directive-format.md)上第 7 頁)。  
   
--   額外的`num_threads`子句。  這個子句可讓使用者要求特定數目的執行緒的平行建構 \([2.3 節](../../parallel/openmp/2-3-parallel-construct.md)在頁面上 8\)。  
+-   新增`num_threads`子句。 這個子句可讓使用者要求特定數目的執行緒的平行建構 ([2.3 節](../../parallel/openmp/2-3-parallel-construct.md)在 8 頁面上)。  
   
--   `threadprivate`指示詞已經擴充以接受靜態的區塊範圍變數 \([一節 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) 第 23 頁\)。  
+-   `threadprivate`指示詞已擴充至接受靜態的區塊範圍變數 ([區段 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md)在頁面上 23)。  
   
--   C99 變數長度的陣列是完整的型別，並因此可以指定任何一處完整的型別，舉個例說中允許的清單， `private`， `firstprivate`，以及`lastprivate`子句 \([區段 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 在頁面上 25\)。  
+-   C99 可變長度陣列都是完整的類型，因此您可以指定任何地方完成中允許的類型，例如清單`private`， `firstprivate`，和`lastprivate`子句 ([區段 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)頁面 25 上)。  
   
--   在平行區域中的私用變數可以標記為私用一次在巢狀指示詞 \([一節 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) 在頁面上 25\)。  
+-   私用一次在巢狀指示詞標示在平行區域中的私用變數 ([區段 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)頁面 25 上)。  
   
--   `copyprivate`子句會新增。  它提供一項機制使用私用變數，從一個小組成員的值，廣播給其他成員。  它會提供共用的變數會難以 \(例如，在需要不同的變數，每個層級遞迴函式\) 時，使用共用的變數值的替代方法。  `copyprivate`子句只能出現在**單一**指示詞 \([一節 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) 在 32\] 頁面上\)。  
+-   `copyprivate`子句已加入。 它提供一個機制，從一個小組成員的值廣播到的其他成員使用私用變數。 它會提供這類共用的變數會很難 （例如，在需要不同的變數在每個層級的遞迴函式） 時，使用共用的變數值的替代方案。 `copyprivate`子句只能出現在**單一**指示詞 ([區段 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md)在頁面上 32)。  
   
--   加入預存時間常式的`omp_get_wtick`和`omp_get_wtime` MPI 常式類似。  這些函式所需的執行牆上的時鐘時間 \([區段 3.3.1](../../parallel/openmp/3-3-1-omp-get-wtime-function.md) 在頁面上 44 和[區段 3.3.2](../../parallel/openmp/3-3-2-omp-get-wtick-function.md) 在 45\] 頁面上\)。  
+-   加入的計時常式`omp_get_wtick`和`omp_get_wtime`MPI 常式類似。 這些函式所需的執行牆上的時鐘時間 ([區段 3.3.1](../../parallel/openmp/3-3-1-omp-get-wtime-function.md)頁面 44 上和[第 3.3.2 節](../../parallel/openmp/3-3-2-omp-get-wtick-function.md)在 45 頁面上)。  
   
--   已新增一份實作定義的行為在 OpenMP C\/C\+\+ 附錄。  實作都必須定義並記載在這些情況下其行為 \([附錄 e](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md) 在頁面上 97\)。  
+-   已加入附錄實作所定義的行為在 OpenMP C/c + + 的清單。 實作可用來定義，並在這些情況下，其行為的文件 ([附錄 E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md) 97 頁面上)。  
   
--   釐清或更正功能，先前 OpenMP API 規格 C\/C\+\+ 中的，做下列變更：  
+-   若要釐清或更正先前 OpenMP API 規格的 C/c + + 中的功能，有下列變更：  
   
-    -   Clarified 的行為的`omp_set_nested`和`omp_set_dynamic`時`omp_in_parallel`傳回非零值則表示未定義 \([區段 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 39，頁面上和[區段 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) 在頁面上 40\)。  
+    -   釐清的行為`omp_set_nested`和`omp_set_dynamic`時`omp_in_parallel`為非零，傳回未定義 ([區段 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 39，頁面上和[區段 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md)在 40 頁面上)。  
   
-    -   Clarified 指示詞的巢狀結構，巢狀的平行使用時 \([一節 2.9](../../parallel/openmp/2-9-directive-nesting.md) 在 33\] 頁面上\)。  
+    -   釐清指示詞的巢狀結構，使用巢狀的平行時 ([區段 2.9](../../parallel/openmp/2-9-directive-nesting.md)在頁面上 33)。  
   
-    -   鎖定初始化和鎖定解構函式可以呼叫在平行區域 \([區段 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) 在 42\] 頁面上和[區段 3.2.2](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md) 在 42\] 頁面上\)。  
+    -   鎖定初始化和鎖定解構函式時，才能呼叫在平行區域 ([區段 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)在頁面上 42 和[區段 3.2.2](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md) 42 頁面上)。  
   
-    -   已新增新的範例 \([附錄 a](../../parallel/openmp/a-examples.md) 在 51\] 頁面上\)。
+    -   已加入新的範例 ([附錄 A](../../parallel/openmp/a-examples.md)在頁面上 51)。

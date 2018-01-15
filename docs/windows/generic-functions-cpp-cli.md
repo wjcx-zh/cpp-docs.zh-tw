@@ -1,101 +1,101 @@
 ---
-title: "Generic Functions (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "functions [C++], generic"
-  - "generic methods"
-  - "generics [C++], functions"
-  - "methods [C++], generic"
-  - "generic functions"
+title: "泛型函式 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], generic
+- generic methods
+- generics [C++], functions
+- methods [C++], generic
+- generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Generic Functions (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-泛型函式是宣告具有型別參數的函式。  呼叫時，使用實際型別而不是型別參數。  
+# <a name="generic-functions-ccli"></a>泛型函式 (C++/CLI)
+泛型函式會宣告具有型別參數的函式。 呼叫時，會使用實際的類型，而不是型別參數。  
   
-## 所有平台  
+## <a name="all-platforms"></a>所有平台  
  **備註**  
   
- 此功能不適用於所有平台。  
+ 這項功能不適用於所有平台。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 執行階段  
  **備註**  
   
- 在[!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]中不支援此功能。  
+ Windows 執行階段中不支援此功能。  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- 泛型函式是宣告具有型別參數的函式。  呼叫時，使用實際型別而不是型別參數。  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ 泛型函式會宣告具有型別參數的函式。 呼叫時，會使用實際的類型，而不是型別參數。  
   
  **語法**  
   
 ```  
 [attributes] [modifiers]  
-return-type identifier <type-parameter identifier(s)>  
+return-type identifier<type-parameter identifier(s)>  
 [type-parameter-constraints clauses]  
   
 ([formal-parameters])  
-{  
-   function-body  
-}  
+{function-body}  
 ```  
   
  **參數**  
   
- *attributes* \(選擇性\)  
- 補充宣告資訊。  如需關於屬性及屬性類別的詳細資訊，請參閱屬性。  
+ *屬性*（選擇性）  
+ 其他宣告資訊。 如需有關屬性和屬性類別的詳細資訊，請參閱屬性。  
   
- *modifiers*\(選擇性的\)  
- 函式的修飾詞，例如 `static`。因為虛擬方法不可為泛型，`virtual` 不允許。  
+ *修飾詞*（選擇性）  
+ 對於函式，例如靜態修飾詞。  `virtual`不允許因為虛擬方法不是泛型。  
   
- *return\-type*  
- 此方法傳回的型別。  如果傳回型別為虛值，則不需要傳回值。  
+ *傳回型別*  
+ 此方法傳回的型別。 如果傳回型別為 void，沒有傳回值需要。  
   
  *identifier*  
  函式名稱。  
   
- *type\-parameter identifier\(s\)*  
- 逗號分隔識別項的清單。  
+ *型別參數的識別項*  
+ 以逗號分隔的識別項清單。  
   
- *formal\-parameters* \(選擇性\)  
- 參數清單  
+ *正式參數*（選擇性）  
+ 參數清單。  
   
- *type\-parameter\-constraints\-clauses*  
- 這可以用來做為型別引數的型別指定限制，而且會在 [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)中指定的表單。  
+ *型別參數的條件約束子句*  
+ 這可做為型別引數，型別上指定的限制，並採用形式中指定[泛型型別參數的條件約束 (C + + /CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
   
- *function\-body*  
- 方法的主體，可能代表型別參數識別項。  
+ *函式主體*  
+ 可能會參考型別參數識別項的方法主體。  
   
  **備註**  
   
- 泛型函式是宣告具有泛型型別參數的函式。  它們可能是類別或結構的方法或獨立函式。  單一泛型宣告隱含宣告在不同的實際型別替代只在於泛型型別參數的函式系列。  
+ 泛型函式是以泛型型別參數宣告的函式。 可能是類別或結構或獨立的函式中的方法。 單一泛型宣告隱含宣告了一系列的差異只在於不同的實際類型為泛型型別參數的替代函式。  
   
- 在 [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]中，類別或結構建構函式不可宣告為泛型型別參數。  
+ Visual c + + 類別或結構的建構函式不可以宣告具有泛型型別參數。  
   
- 呼叫時，實際型別取代泛型型別參數。  這個實際型別在角括弧可能明確指定使用語法類似於樣板函式呼叫。  如果沒用型別參數呼叫，則編譯器會嘗試從在函式呼叫提供的參數推算這個實際型別。  如果預期的型別引數不能從所使用的參數推算得出，編譯器就會報告錯誤。  
+ 呼叫時，泛型型別參數取代為實際的類型。 使用類似於範本函式呼叫語法的角括號括住可明確指定實際的型別。 如果不使用型別參數呼叫，編譯器會嘗試推算函式呼叫中所提供的參數中的實際型別。 如果無法從使用的參數推論預定的型別引數，則編譯器會回報錯誤。  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  **範例**  
   
  下列程式碼範例示範泛型函式。  
@@ -133,7 +133,7 @@ int main() {
   
  **範例**  
   
- 泛型函式可以多載根據簽章或 Arity，函式的型別參數數目。  此外，函式只要在某些不同型別參數，泛型函式可以多載同名的非泛型函式。  例如，可多載下列函式：  
+ 泛型函式可以根據簽章或引數數目、 函式的型別參數數目多載。 此外，泛型函式可以多載具有相同名稱的非泛型函式，只要在某些型別參數的函式不同。 例如，下列函式可以多載：  
   
 ```  
 // generics_generic_function_2.cpp  
@@ -151,7 +151,7 @@ ref struct MyClass {
   
  **範例**  
   
- 下列範例使用泛型函式尋找陣列的第一個項目。  宣告 `MyClass`，從基底類別`MyBaseClass`繼承。  `MyClass` 包含泛型函式，則為 `MyFunction`，呼叫另一個泛型函式，則為 `MyBaseClassFunction`，在基底類別中。  使用不同的型別引數，在 **main**，泛型函式，則為 `MyFunction` 呼叫。  
+ 下列範例會使用泛型函式，來尋找陣列中的第一個項目。 它會宣告`MyClass`，後者繼承自基底類別`MyBaseClass`。 `MyClass`包含泛型函式， `MyFunction`，另一個泛型函式，呼叫`MyBaseClassFunction`，基底類別內。 在**主要**，泛型函式， `MyFunction`，使用不同的型別引數來呼叫。  
   
 ```  
 // generics_generic_function_3.cpp  
@@ -187,10 +187,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **My function returned an int: 2003**  
- **My function returned a string: Hello generic functions\!**   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+My function returned an int: 2003  
+My function returned a string: Hello generic functions!  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
+ [泛型](../windows/generics-cpp-component-extensions.md)

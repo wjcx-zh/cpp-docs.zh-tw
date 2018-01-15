@@ -1,48 +1,49 @@
 ---
-title: "C-Style Casts with /clr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C-style casts and /clr"
+title: "C 樣式會與 clr 轉換 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e529a40f8eb876791f49559d3970696fdece489d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# C-Style Casts with /clr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="c-style-casts-with-clr-ccli"></a>使用 /clr 進行 C-Style 轉換 (C++/CLI)
 下列主題只適用於 Common Language Runtime。  
   
- 當使用 CLR 型別，編譯器會嘗試將 C\-Style 轉換到會依照下列順序下面所列的，其中一個轉換:  
+ CLR 型別搭配使用時，編譯器會嘗試對應 c-style 轉換成其中一個下面列出依下列順序中的轉換：  
   
-1.  const\_cast  
+1.  const_cast  
   
-2.  safe\_cast  
+2.  safe_cast  
   
-3.  safe\_cast 加上 const\_cast  
+3.  safe_cast 加上 const_cast  
   
-4.  static\_cast  
+4.  static_cast  
   
-5.  static\_cast 加上 const\_cast  
+5.  static_cast 加上 const_cast  
   
- 如果轉換都沒有清單頂端，有效，而且，如果運算式的型別和目標型別是 CLR 參考型別， C\-Style 轉換對應至執行階段檢查 \(castclass MSIL 指令\)。  否則， C 樣式轉換視為無效，所以編譯器會發出錯誤。  
+ 如果無上面所列的轉換是有效的而且運算式的類型和目標類型是 CLR 參考類型，c-style 轉換會對應至執行階段檢查 （castclass MSIL 指示）。 否則，c-style 轉換被認為無效，則編譯器會發出錯誤。  
   
-## 備註  
- 不建議使用 C 樣式轉換。  使用 [\/clr \(Common Language Runtime 編譯\)](../build/reference/clr-common-language-runtime-compilation.md)編譯時，請使用 [safe\_cast](../windows/safe-cast-cpp-component-extensions.md)。  
+## <a name="remarks"></a>備註  
+ 不建議在 c-style 轉換。 編譯時[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)，使用[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。  
   
- 下列範例顯示 C 樣式轉換其對應至 `const_cast`。  
+ 下列範例會示範 c-style 轉換對應至`const_cast`。  
   
 ```  
 // cstyle_casts_1.cpp  
@@ -56,7 +57,7 @@ int main() {
 }  
 ```  
   
- 下列範例顯示 C 樣式轉換其對應至 `safe_cast`。  
+ 下列範例會示範 c-style 轉換對應至`safe_cast`。  
   
 ```  
 // cstyle_casts_2.cpp  
@@ -68,7 +69,7 @@ int main() {
 }  
 ```  
   
- 下列範例顯示 C 樣式轉換其對應至 `safe_cast` 加上 `const_cast`。  
+ 下列範例會示範 c-style 轉換對應至`safe_cast`加上`const_cast`。  
   
 ```  
 // cstyle_casts_3.cpp  
@@ -89,7 +90,7 @@ int main() {
 }  
 ```  
   
- 下列範例顯示 C 樣式轉換其對應至 `static_cast`。  
+ 下列範例會示範 c-style 轉換對應至`static_cast`。  
   
 ```  
 // cstyle_casts_4.cpp  
@@ -110,7 +111,7 @@ int main() {
 }  
 ```  
   
- 下列範例顯示 C 樣式轉換其對應至 `static_cast` 加上 `const_cast`。  
+ 下列範例會示範 c-style 轉換對應至`static_cast`加上`const_cast`。  
   
 ```  
 // cstyle_casts_5.cpp  
@@ -131,7 +132,7 @@ int main() {
 }  
 ```  
   
- 下列範例顯示 C 樣式轉換其對應至執行階段檢查。  
+ 下列範例顯示 c-style 轉換對應至執行階段檢查。  
   
 ```  
 // cstyle_casts_6.cpp  
@@ -152,7 +153,7 @@ int main() {
 }  
 ```  
   
- 下列範例顯示無效的 C 樣式轉換，使編譯器發出錯誤。  
+ 下列範例顯示無效 c-style 轉換，因而導致編譯器發出錯誤。  
   
 ```  
 // cstyle_casts_7.cpp  
@@ -164,8 +165,8 @@ int main() {
 }  
 ```  
   
-## 需求  
- 編譯器選項：**\/clr**  
+## <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

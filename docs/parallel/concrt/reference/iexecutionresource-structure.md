@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13e9e103167009ae5c1ede792a8b550e07fd4fa0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd22fdb38b1828e1fa86ca79b9967a546ccb9456
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 結構
 硬體執行緒的抽象概念。  
@@ -36,11 +37,11 @@ ms.lasthandoff: 10/24/2017
 struct IExecutionResource;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Iexecutionresource:: Currentsubscriptionlevel](#currentsubscriptionlevel)|傳回已啟動的虛擬處理器數目根與訂閱的目前與這個執行資源所代表的基礎硬體執行緒相關聯的外部執行緒。|  
 |[Iexecutionresource:: Getexecutionresourceid](#getexecutionresourceid)|傳回表示這個執行資源的硬體執行緒的唯一識別碼。|  
@@ -127,6 +128,6 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  `invalid_operation`如果擲回參數`pScheduler`是排程器，或與獨立執行資源，建立這個執行資源的不同，如果目前的執行緒與建立執行緒的訂用帳戶的執行緒不同。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [IVirtualProcessorRoot 結構](ivirtualprocessorroot-structure.md)

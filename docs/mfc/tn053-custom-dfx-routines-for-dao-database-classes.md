@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c03c00f6873259ea3fdbf5da0e26f433a855115d
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: c6935e4b3f2c8159677d1d322f6f875246160da2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 資料庫類別的自訂 DFX 常式
 > [!NOTE]
@@ -131,7 +132,7 @@ PopUpEmployeeData(emp.m_strFirstName,
   
  DFX 注重機制是`CDaoRecordset`衍生類別的`DoFieldExchange`函式。 此函式將呼叫分派至適當的作業類型的個別的 DFX 函式。 然後再呼叫`DoFieldExchange`內部 MFC 函式會將作業類型。 下表列出各種作業類型和簡短描述。  
   
-|運算|說明|  
+|運算|描述|  
 |---------------|-----------------|  
 |**AddToParameterList**|組建參數子句|  
 |**AddToSelectList**|組建的 SELECT 子句|  
@@ -211,7 +212,7 @@ PopUpEmployeeData(emp.m_strFirstName,
 > [!TIP]
 >  模型標準的資料類型的現有 DFX 常式的自訂 DFX 常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.mfc.exe.ui
-dev_langs:
-- C++
-helpviewer_keywords:
-- MFC Application Wizard, user interface features
+f1_keywords: vc.appwiz.mfc.exe.ui
+dev_langs: C++
+helpviewer_keywords: MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 78bc0d034c7f4e3b5c34596ee83de1b68d8d9173
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>MFC 應用程式精靈、使用者介面功能
 本主題說明您可用來指定您的應用程式的外觀的選項。 可供您專案的使用者介面功能取決於您在中指定的應用程式類型[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)MFC 應用程式精靈頁面。 例如，如果您建立單一文件介面應用程式，您無法加入子框架樣式。  
@@ -32,7 +28,7 @@ ms.lasthandoff: 10/09/2017
  **主框架樣式**  
  設定您的應用程式主視窗框架的功能。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**粗框架**|建立有調整大小框線的視窗。 預設值。|  
 |**最小化方塊**|包含在主框架視窗中的最小化方塊。 預設值。|  
@@ -47,7 +43,7 @@ ms.lasthandoff: 10/09/2017
  **子框架樣式**  
  指定應用程式中的外觀及子框架的初始狀態。 對於 MDI 應用程式只使用子框架樣式。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**子系最小化方塊**|指定的子視窗是否有最小化按鈕 （預設為啟用）。|  
 |**子系最大化方塊**|指定的子視窗是否有最大化按鈕 （預設為啟用）。|  
@@ -56,7 +52,7 @@ ms.lasthandoff: 10/09/2017
  **命令列 （功能表/工具列/功能區）**  
  指出您的應用程式包含功能表、 工具列和/或功能區。 不可以使用對話方塊架構應用程式。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**使用傳統功能表**|指定您的應用程式包含傳統的非可拖曳的功能表。|  
 |**使用傳統停駐工具列**|將標準的 Windows 工具列加入至您的應用程式。 工具列包含按鈕建立新的文件。開啟和儲存文件檔案;剪下複製、 貼上或列印的文字;並輸入說明模式。 啟用此選項時，也會將功能表命令，以顯示或隱藏工具列。|  
@@ -69,7 +65,6 @@ ms.lasthandoff: 10/09/2017
  **對話方塊標題**  
  如[CDialog 類別](../../mfc/reference/cdialog-class.md)-架構應用程式，這個標題會出現在對話方塊的標題列。 若要編輯這個欄位，您必須先選取**對話方塊架構**選項在**應用程式類型**。 如需詳細資訊，請參閱[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
-
 

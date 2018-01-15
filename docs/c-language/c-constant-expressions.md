@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7b9beac4d87e0580279190cca005fc56c951af8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596f558ea5c22f1850800d95b0d4ad0b5edd6a8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-constant-expressions"></a>C 常數運算式
 常數運算式會在編譯時期評估，而不是在執行階段評估，而且可用於可以使用常數的任何位置。 常數運算式必須評估為常數，並且必須在該類型可顯示值的範圍內。 常數運算式的運算元可以是整數常數、字元常數、浮點常數、列舉常數、類型轉換、`sizeof` 運算式和其他常數運算式。  
@@ -54,5 +55,5 @@ ms.lasthandoff: 10/24/2017
   
  前置處理器指示詞中所使用的常數運算式必須遵守其他限制。 因此，這些運算式稱為「受限制的常數運算式」。 受限制的常數運算式不能包含 `sizeof` 運算式、列舉常數、任何類型的類型轉換，或浮點類型常數。 不過，此類運算式可以包含特殊常數運算式 `defined (`*identifier*`)`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算元和運算式](../c-language/operands-and-expressions.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b31fdcbad35bc65b2d8ca26ccab69e875c1d3aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f8f6234bf2dff0dab801c982a585dc30e338bb7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr 建構函式
 初始化 ComPtr 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。  
@@ -84,5 +87,5 @@ WRL_NOTHROW ComPtr(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ComPtr 類別](../windows/comptr-class.md)

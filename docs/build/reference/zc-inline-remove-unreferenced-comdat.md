@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7031a5f7a92a6775718b77ea20a69623ae3066c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c8d14f6055c96f5c9feed16d2ad0b996f0d0b94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (移除未參考的 COMDAT)
 移除作為 COMDAT 或僅具有內部連結的未參考函式或資料。 當**/zc: inline**指定時，編譯器需要使用內嵌資料或內嵌函式的轉譯單位還必須包含資料或函式的定義。  
@@ -137,5 +138,5 @@ void main() {
   
 4.  修改**其他選項**屬性，以包括`/Zc:inline`，然後選擇 **確定**。  
   
-## <a name="see-also"></a>另請參閱  
- [/Zc （一致性）](../../build/reference/zc-conformance.md)
+## <a name="see-also"></a>請參閱  
+ [/Zc (一致性)](../../build/reference/zc-conformance.md)

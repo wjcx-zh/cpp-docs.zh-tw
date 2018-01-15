@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b128257c06c2d2a0c1e19b67aa33217138d88c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1127a6ec3e921e19c9626cc51197eb2a87d6ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatorbase-class"></a>allocator_base 類別
 定義從同步處理篩選條件建立使用者定義的配置器時所需的基底類別和一般功能。  
@@ -117,9 +118,9 @@ char *_Charalloc(size_type count);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
-|`count`|陣列中要配置的項目數。|  
+|`count`|所配置陣列中的元素數。|  
   
 ### <a name="return-value"></a>傳回值  
  所配置物件的指標。  
@@ -175,7 +176,7 @@ pointer allocate(size_type _Nx);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`_Nx`|所配置陣列中的元素數。|  
 |`_Hint`|這個參數已忽略。|  
@@ -198,7 +199,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`right`|要複製的配置器物件。|  
   
@@ -228,7 +229,7 @@ void construct(pointer ptr, const Type& val);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`ptr`|要建構物件之位置的指標。|  
 |`val`|用來初始化所建構物件的值。|  
@@ -262,7 +263,7 @@ void destroy(pointer ptr);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`ptr`|指定要終結之物件位址的指標。|  
   
@@ -317,7 +318,7 @@ typedef std::size_t size_type;
 typedef Type value_type;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

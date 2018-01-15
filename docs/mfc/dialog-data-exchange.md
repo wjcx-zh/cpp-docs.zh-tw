@@ -30,11 +30,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e6da394a91eab08f0c79b3edb33132e3c85401af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange"></a>對話方塊資料交換
 如果您使用 DDX 機制，通常您會在 `OnInitDialog` 處理常式或對話方塊建構函式中，設定對話方塊物件成員變數的初始值設定。 立即在對話方塊顯示之前，框架的 DDX 機制會將成員變數的值傳送至對話方塊中，出現的位置中的控制項時對話方塊本身顯示以回應`DoModal`或**建立**. `OnInitDialog` 的 `CDialog` 預設實作會呼叫類別 `UpdateData` 的 `CWnd` 成員函式，以初始化對話方塊中的控制項。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/24/2017
   
  如果使用者取消強制回應對話方塊`OnCancel`成員函式會結束此對話方塊和`DoModal`傳回的值**IDCANCEL**。 在這種情況下，對話方塊和對話方塊物件之間不會進行資料交換。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)   
  [對話方塊資料驗證](../mfc/dialog-data-validation.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d141ec66aa7ed0bac53c8242a87d08e092272eaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cdf7598e00bab72966fe79454567b0a59dcbaae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25 copyprivate 資料屬性子句範例
 **範例 1:** `copyprivate`子句 ([區段 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md)在頁面上 32) 可用來廣播由單一執行緒直接私用變數中的其他執行緒的所有執行個體所取得的值。  

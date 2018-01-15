@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e21b07685943559bace8b8e2b0fbdebdb3a870c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a9e88a28ca99fdad07e91ab305944b2de276db8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 計算反雙曲正切。  
@@ -84,11 +85,11 @@ long double atanhl(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`atanh`, `atanhf`, `atanhl`|\<math.h>|\<cmath>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -118,7 +119,7 @@ tanh( 0.785398 ) = 0.655794
 atanh( 0.655794 ) = 0.785398  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin、asinf、asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   

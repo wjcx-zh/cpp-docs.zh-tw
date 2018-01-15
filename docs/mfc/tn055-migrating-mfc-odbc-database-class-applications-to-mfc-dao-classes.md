@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb9b4041f9c288b40a6efb1ef7978d323bad2fb4
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：將 MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
 > [!NOTE]
@@ -114,7 +115,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的文件，如果快照集 (**STATIC_CURSORS**) 處於唯讀狀態。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

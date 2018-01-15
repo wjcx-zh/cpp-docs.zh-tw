@@ -173,11 +173,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5437cef55a0e46f38eaf0e97b56ed9f82b4bb31c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 573b81ce8d78cde67b63579caa5ed96bbe557ae3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 提供 Windows 通用樹狀檢閱控制項的功能。  
@@ -188,17 +189,17 @@ ms.lasthandoff: 10/24/2017
 class CTreeCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|建構 `CTreeCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CTreeCtrl::Create](#create)|建立樹狀檢視控制項，並將它附加至`CTreeCtrl`物件。|  
 |[CTreeCtrl::CreateDragImage](#createdragimage)|建立指定的樹狀檢視項目產生拖曳點陣圖。|  
@@ -465,7 +466,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `fCancelWithoutSave`|`true`捨棄變更的樹狀檢視項目之前完成的編輯作業，或`false`之前完成操作，將變更儲存到樹狀結構檢視項目。|  
+|[輸入] `fCancelWithoutSave`|`true`捨棄變更的樹狀檢視項目之前完成的編輯作業，或`false`之前完成操作，將變更儲存到樹狀結構檢視項目。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -732,7 +733,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `hItem`|控制代碼的樹狀檢視控制項項目。|  
+|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的項目展開的狀態時所顯示之影像的索引。  
@@ -798,8 +799,8 @@ BOOL GetItemPartRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `hItem`|控制代碼的樹狀檢視控制項項目。|  
-|[in] `nPart`|組件識別碼。 必須設定為`TVGIPR_BUTTON`。|  
+|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
+|[輸入] `nPart`|組件識別碼。 必須設定為`TVGIPR_BUTTON`。|  
 |[輸出] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果此方法成功，結構接收部分所指定的矩形座標`hItem`和`nPart`。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -879,7 +880,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `hItem`|控制代碼的樹狀檢視控制項項目。|  
+|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
   
 ### <a name="return-value"></a>傳回值  
  項目的擴充的狀態。 如需詳細資訊，請參閱`uStateEx`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。  
@@ -1322,13 +1323,13 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `uAccId`|樹狀檢視項目中的項目範圍識別項。|  
+|[輸入] `uAccId`|樹狀檢視項目中的項目範圍識別項。|  
   
 ### <a name="return-value"></a>傳回值  
  樹狀檢視項目之控制代碼 ( `HTREEITEM`) 會對應至`uAccId`參數。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。  
   
 ### <a name="remarks"></a>備註  
- 協助工具是應用程式，協助殘障人士使用電腦。 存取範圍識別項由`IAccessible`介面來唯一地指定在視窗中的項目。 如需有關存取範圍識別項的詳細資訊，請搜尋"有關 Active Accessibility 支援 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322)。  
+ 協助工具是應用程式，協助殘障人士使用電腦。 存取範圍識別項由`IAccessible`介面來唯一地指定在視窗中的項目。 如需有關存取範圍識別項的詳細資訊，請搜尋"有關 Active Accessibility 支援 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。  
   
  這個方法會傳送[TVM_MAPACCIDTOHTREEITEM](http://msdn.microsoft.com/library/windows/desktop/bb773734) Windows SDK 中所述的訊息。  
   
@@ -1353,13 +1354,13 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `hItem`|樹狀檢視中的項目控制項的控制代碼。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
+|[輸入] `hItem`|樹狀檢視中的項目控制項的控制代碼。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  存取範圍識別項對應至`hItem`參數。  
   
 ### <a name="remarks"></a>備註  
- 協助工具是應用程式，協助殘障人士使用電腦。 存取範圍識別項由`IAccessible`介面來唯一地指定在視窗中的項目。 如需有關存取範圍識別項的詳細資訊，請搜尋"有關 Active Accessibility 支援 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322)。  
+ 協助工具是應用程式，協助殘障人士使用電腦。 存取範圍識別項由`IAccessible`介面來唯一地指定在視窗中的項目。 如需有關存取範圍識別項的詳細資訊，請搜尋"有關 Active Accessibility 支援 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。  
   
  這個方法會傳送[TVM_MAPHTREEITEMTOACCID](http://msdn.microsoft.com/library/windows/desktop/bb773735) Windows SDK 中所述的訊息。  
   
@@ -1474,8 +1475,8 @@ BOOL SetAutoscrollInfo(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `uPixelsPerSec`|每秒来捲動的像素數目。|  
-|[in] `uUpdateTime`|更新控制項的時間間隔。|  
+|[輸入] `uPixelsPerSec`|每秒来捲動的像素數目。|  
+|[輸入] `uUpdateTime`|更新控制項的時間間隔。|  
   
 ### <a name="return-value"></a>傳回值  
  一律傳回 `true`。  
@@ -1555,8 +1556,8 @@ DWORD SetExtendedStyle(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `dwExMask`|位元遮罩，指定目前的樹狀檢視控制項中的樣式會受到這個方法。 如果此參數為零，則會忽略，而`dwExStyles`參數指派給樹狀檢視控制項。<br /><br /> 指定零或的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。|  
-|[in] `dwExStyles`|位元遮罩，指定目前的樹狀檢視中的樣式控制才能設定或清除。<br /><br /> 若要設定樣式的組合，指定的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。 若要清除的樣式的一組，指定零。|  
+|[輸入] `dwExMask`|位元遮罩，指定目前的樹狀檢視控制項中的樣式會受到這個方法。 如果此參數為零，則會忽略，而`dwExStyles`參數指派給樹狀檢視控制項。<br /><br /> 指定零或的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。|  
+|[輸入] `dwExStyles`|位元遮罩，指定目前的樹狀檢視中的樣式控制才能設定或清除。<br /><br /> 若要設定樣式的組合，指定的位元組合 (OR) 中所述的樣式[樹狀檢視控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb759981)。 若要清除的樣式的一組，指定零。|  
   
 ### <a name="return-value"></a>傳回值  
  值，包含先前擴充控制項的樣式。  
@@ -1747,8 +1748,8 @@ BOOL SetItemExpandedImageIndex(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `hItem`|控制代碼的樹狀檢視控制項項目。|  
-|[in] `iExpandedImage`|指定的項目展開的狀態時所顯示之影像的索引。|  
+|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
+|[輸入] `iExpandedImage`|指定的項目展開的狀態時所顯示之影像的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1858,8 +1859,8 @@ BOOL SetItemStateEx(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `hItem`|控制代碼的樹狀檢視控制項項目。|  
-|[in] `uStateEx`|項目的擴充的狀態。 如需詳細資訊，請參閱`uStateEx`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
+|[輸入] `hItem`|控制代碼的樹狀檢視控制項項目。|  
+|[輸入] `uStateEx`|項目的擴充的狀態。 如需詳細資訊，請參閱`uStateEx`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1984,10 +1985,10 @@ void ShowInfoTip(HTREEITEM hItem);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `hItem`|樹狀檢視中的項目控制項控制代碼。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
+|[輸入] `hItem`|樹狀檢視中的項目控制項控制代碼。 如需詳細資訊，請參閱`hItem`隸屬[TVITEMEX](http://msdn.microsoft.com/library/windows/desktop/bb773459)結構。|  
   
 ### <a name="remarks"></a>備註  
- 如需有關工具提示和資訊提示之間的差異的詳細資訊，請搜尋 「 工具提示和資訊提示 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/linkid=56322)。  
+ 如需有關工具提示和資訊提示之間的差異的詳細資訊，請搜尋 「 工具提示和資訊提示 」 主題，網址[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。  
   
  這個方法會傳送[TVM_SHOWINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb773779) Windows SDK 中所述的訊息。  
   
@@ -2035,7 +2036,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
   
  [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

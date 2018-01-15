@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Critical
-dev_langs:
-- C++
-helpviewer_keywords:
-- critical OpenMP directive
+f1_keywords: Critical
+dev_langs: C++
+helpviewer_keywords: critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5693a16faebbc0f8c0a29cf28910110fbff66318
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1df2a70c53272415789ef381874fe4bc46327381
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="critical"></a>critical
 指定程式碼只會執行一個執行緒上一次。  
@@ -56,12 +38,12 @@ ms.lasthandoff: 02/24/2017
  其中：  
   
  (`name`) （選擇性）  
- 要找出重要的程式碼的名稱。 請注意該名稱必須括在括號括住。  
+ 識別關鍵程式碼的名稱。 請注意，該名稱必須括在括號。  
   
 ## <a name="remarks"></a>備註  
  **重大**指示詞可支援不含 OpenMP 子句。  
   
- 如需詳細資訊，請參閱[2.6.2 重大建構](../../../parallel/openmp/2-6-2-critical-construct.md)。  
+ 如需詳細資訊，請參閱[2.6.2 關鍵建構](../../../parallel/openmp/2-6-2-critical-construct.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -121,5 +103,5 @@ int main()
 max = 29358  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

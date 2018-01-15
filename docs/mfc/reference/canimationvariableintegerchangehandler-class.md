@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,24 +14,23 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::CreateInstance
 - AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
 - AFXANIMATIONCONTROLLER/CAnimationVariableIntegerChangeHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], CAnimationVariableIntegerChangeHandler
 - CAnimationVariableIntegerChangeHandler [MFC], CreateInstance
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d94576c2a831f9e7fa744d0a3c5a50a33809aaa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 5348c1cdb665c7b50e4f3bbb504ed9f7d6606ea4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler 類別
 實作回呼，當動畫變數的值變更時由動畫 API 呼叫。  
@@ -43,17 +41,17 @@ ms.lasthandoff: 10/09/2017
 class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntegerChangeHandlerBase<CAnimationVariableIntegerChangeHandler>;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler](#canimationvariableintegerchangehandler)|建構 `CAnimationVariableIntegerChangeHandler` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|建立的執行個體`CAnimationVariableIntegerChangeHandler`回呼。|  
 |[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|當動畫變數的值已變更時呼叫。 (覆寫 `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`。)|  
@@ -137,6 +135,5 @@ void SetAnimationController(CAnimationController* pAnimationController);
  `pAnimationController`  
  動畫控制器，將會收到事件指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

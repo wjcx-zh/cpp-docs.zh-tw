@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b3a64db489865463f914fa94c096605f8c9c56b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae095b59b07132bd7e4c6892b8e58d9e69fb39c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-an-unclipped-device-context"></a>使用未裁剪的裝置內容
 如果您完全確定您的控制項不會繪製到其用戶端矩形之外，您也可以停用 `IntersectClipRect` 所進行的 `COleControl` 呼叫，以獲得小而可偵測的速度增益。 若要這樣做，請移除**colecontrol:: Getcontrolflags**集中所傳回的旗標的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如:   
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
   
  如果您使用無視窗啟用，這個最佳化不會有作用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)
 

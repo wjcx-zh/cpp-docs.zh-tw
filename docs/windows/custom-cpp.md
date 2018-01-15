@@ -15,11 +15,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f811197526d2d3da0700af27be84151da79d67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e55fd4ad47470a86a0a3d61cc847c20fb21768e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-c"></a>custom (C++)
 類型程式庫中定義物件的中繼資料。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/24/2017
  *uuid*  
  唯一 ID。  
   
- *value*  
+ *值*  
  值，這個值可以放入變數。  
   
 ## <a name="remarks"></a>備註  
@@ -53,13 +56,13 @@ ms.lasthandoff: 10/24/2017
 |||  
 |-|-|  
 |**適用於**|非 COM `interface`，**類別**， `enum`s，`idl_module`方法、 介面成員、 介面參數`typedef`s， **union**s， `struct`s|  
-|**可重複**|是|  
+|**可重複**|[是]|  
 |**必要屬性**|**coclass** （時在類別上使用）|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [獨立屬性](../windows/stand-alone-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   

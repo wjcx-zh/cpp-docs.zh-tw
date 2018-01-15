@@ -171,11 +171,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b834b46a9a899b9b5ae7cce0d399593588ff2d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aaf355d15679bdb30b7561fe28dd6f927688ede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton 類別
 提供工具列按鈕功能。  
@@ -186,18 +187,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCToolBarButton : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|建構並初始化 `CMFCToolBarButton` 物件。|  
 |`CMFCToolBarButton::~CMFCToolBarButton`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|指定使用者是否可以在自訂期間放置工具列或功能表上的按鈕。|  
 |[CMFCToolBarButton::CanBeStored](#canbestored)|指定是否可以儲存 按鈕。|  
@@ -269,7 +270,7 @@ class CMFCToolBarButton : public CObject
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarButton::m_bImage](#m_bimage)|指定是否在按鈕上顯示的影像。|  
 |[CMFCToolBarButton::m_bText](#m_btext)|指定是否在按鈕上顯示的文字標籤。|  
@@ -315,7 +316,7 @@ virtual BOOL CanBeDropped(CMFCToolBar* pToolbar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pToolbar`  
+ [輸入] `pToolbar`  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
@@ -371,19 +372,19 @@ CMFCToolBarButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiID`  
+ [輸入] `uiID`  
  按鈕的命令識別碼。  
   
- [in] `iImage`  
+ [輸入] `iImage`  
  使用的影像集合中的按鈕影像索引。  
   
- [in] `lpszText`  
+ [輸入] `lpszText`  
  按鈕的文字標籤。 可以是`NULL`。  
   
- [in] `bUserButton`  
+ [輸入] `bUserButton`  
  布林值，判斷是否為使用者定義 按鈕。 如果這個參數是`TRUE`，是使用者定義的按鈕。 否則，從資源載入按鈕影像。  
   
- [in] `bLocked`  
+ [輸入] `bLocked`  
  布林值，決定是否可以自訂按鈕。 如果這個參數是`TRUE`，無法自訂按鈕。 否則，您可以自訂按鈕。  
   
 ##  <a name="comparewith"></a>CMFCToolBarButton::CompareWith  
@@ -394,7 +395,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `other`  
+ [輸入] `other`  
  要與這個執行個體比較的物件參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -411,7 +412,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `src`  
+ [輸入] `src`  
  要從中複製來源 按鈕參考。  
   
 ### <a name="remarks"></a>備註  
@@ -425,7 +426,7 @@ static CMFCToolBarButton* __stdcall CreateFromOleData(COleDataObject* pDataObjec
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDataObject`  
+ [輸入] `pDataObject`  
  來源的 OLE 資料物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -442,7 +443,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  這個參數設定為`TRUE`若要啟用的輸入，或`FALSE`停用的輸入。  
   
 ### <a name="remarks"></a>備註  
@@ -456,7 +457,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `menuButton`  
+ [輸入] `menuButton`  
  目標功能表按鈕的參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -742,7 +743,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hwnd`  
+ [輸入] `hwnd`  
  視窗控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -891,7 +892,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iNotifyCode`  
+ [輸入] `iNotifyCode`  
  與命令相關聯的通知訊息。  
   
 ### <a name="return-value"></a>傳回值  
@@ -935,7 +936,7 @@ virtual BOOL OnBeforeDrop(CMFCToolBar* pTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pTarget`  
+ [輸入] `pTarget`  
  拖放作業的目標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -957,13 +958,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容顯示的按鈕。  
   
- [in] `sizeDefault`  
+ [輸入] `sizeDefault`  
  按鈕的預設大小。  
   
- [in] `bHorz`  
+ [輸入] `bHorz`  
  為父工具列停駐狀態。 這個參數是`TRUE`工具列水平停駐或浮動，如果或`FALSE`若垂直停駐工具列。  
   
 ### <a name="return-value"></a>傳回值  
@@ -994,7 +995,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndParent`  
+ [輸入] `pWndParent`  
  新的父視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -1012,10 +1013,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  父視窗的工具列按鈕。  
   
- [in] `bDelay`  
+ [輸入] `bDelay`  
  `TRUE`如果應該處理訊息，且延遲時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1049,7 +1050,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  父視窗的工具列按鈕。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1070,10 +1071,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容顯示的按鈕。  
   
- [in] `nCtlColor`  
+ [輸入] `nCtlColor`  
  特定色彩的通知。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1094,7 +1095,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMenu`  
+ [輸入] `pMenu`  
  若要自訂功能表。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1111,7 +1112,7 @@ virtual void OnDblClk(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  -   按鈕的父視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -1135,28 +1136,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容顯示的按鈕。  
   
- [in] `rect`  
+ [輸入] `rect`  
  按鈕的週框。  
   
- [in] `pImages`  
+ [輸入] `pImages`  
  與按鈕相關聯的工具列影像集合。  
   
- [in] `bHorz`  
+ [輸入] `bHorz`  
  為父工具列停駐狀態。 這個參數是`TRUE`當按鈕會停駐水平及`FALSE`當按鈕會停駐垂直。  
   
- [in] `bCustomizeMode`  
+ [輸入] `bCustomizeMode`  
  指定工具列是否為自訂模式。 這個參數是`TRUE`工具列時自訂模式和`FALSE`當工具列不是以自訂模式。  
   
- [in] `bHighlight`  
+ [輸入] `bHighlight`  
  指定按鈕會反白顯示。 這個參數是`TRUE`按鈕反白顯示和`FALSE`時的按鈕不強調顯示。  
   
- [in] `bDrawBorder`  
+ [輸入] `bDrawBorder`  
  指定按鈕是否應顯示框線。 這個參數是`TRUE`按鈕時應該顯示框線和`FALSE`當按鈕不應該顯示框線。  
   
- [in] `bGrayDisabledButtons`  
+ [輸入] `bGrayDisabledButtons`  
  指定是否要加上陰影停用的按鈕，或使用已停用的影像集合。 這個參數是`TRUE`已停用的按鈕時應該會有陰影和`FALSE`當這個方法應該使用已停用的影像集合。  
   
 ### <a name="remarks"></a>備註  
@@ -1173,13 +1174,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容顯示的按鈕。  
   
- [in] `rect`  
+ [輸入] `rect`  
  按鈕的週框。  
   
- [in] `bSelected`  
+ [輸入] `bSelected`  
  指定是否已選取 [] 按鈕。 如果這個參數是`TRUE`，選取 [] 按鈕。 如果這個參數是`FALSE`，請勿選取按鈕。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1239,7 +1240,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bShow`  
+ [輸入] `bShow`  
  指定按鈕是否可見。 如果這個參數是`TRUE`，按鈕會顯示。 否則，按鈕看不到。  
   
 ### <a name="remarks"></a>備註  
@@ -1253,7 +1254,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iSize`  
+ [輸入] `iSize`  
  新按鈕的寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -1269,10 +1270,10 @@ virtual BOOL OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  按鈕的父視窗。 可以是`NULL`。  
   
- [in] `pTI`  
+ [輸入] `pTI`  
  A`TOOLINFO`結構，其中包含一項工具的工具提示控制項的相關資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1299,13 +1300,13 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndParent`  
+ [輸入] `pWndParent`  
  父視窗。  
   
- [in] `iButtonIndex`  
+ [輸入] `iButtonIndex`  
  父代按鈕集合中的按鈕之以零為起始索引。  
   
- [in] `wndToolTip`  
+ [輸入] `wndToolTip`  
  在顯示工具提示文字的控制項。  
   
  [輸出] `str`  
@@ -1325,7 +1326,7 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `srcItem`  
+ [輸入] `srcItem`  
  A`COleDataSource`儲存拖放作業的相關狀態資訊的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1380,7 +1381,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ar`  
+ [輸入] `ar`  
  `CArchive`從中或要序列化的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -1398,10 +1399,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pParent`  
+ [輸入] `pParent`  
  父視窗的工具列按鈕。  
   
- [in] `data`  
+ [輸入] `data`  
  A`CAccessibilityData`工具列按鈕的協助工具資料填入的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1418,7 +1419,7 @@ static void __stdcall SetClipboardFormatName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszName`  
+ [輸入] `lpszName`  
  通用的剪貼簿格式的新名稱。 不能`NULL`。  
   
 ### <a name="remarks"></a>備註  
@@ -1434,7 +1435,7 @@ virtual void SetImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iImage`  
+ [輸入] `iImage`  
  集合中的工具列影像的影像索引。  
   
 ### <a name="remarks"></a>備註  
@@ -1450,7 +1451,7 @@ static void SetProtectedCommands(const CList<UINT,UINT>& lstCmds);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lstCmds`  
+ [輸入] `lstCmds`  
  受保護的命令清單。  
   
 ### <a name="remarks"></a>備註  
@@ -1476,7 +1477,7 @@ void SetRect(const CRect rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
+ [輸入] `rect`  
  新週框的按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -1490,7 +1491,7 @@ virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nStyle`  
+ [輸入] `nStyle`  
  新按鈕的樣式。  
   
 ### <a name="remarks"></a>備註  
@@ -1504,7 +1505,7 @@ void SetVisible(BOOL bShow=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bShow`  
+ [輸入] `bShow`  
  布林值，指定是否要顯示或隱藏按鈕。 如果這個參數是`TRUE`，按鈕會顯示。 如果參數是`FALSE`，則會隱藏按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -1518,7 +1519,7 @@ void Show(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bShow`  
+ [輸入] `bShow`  
  布林值，指定是否要顯示或隱藏按鈕。 如果這個參數是`TRUE`，按鈕會顯示。 如果參數是`FALSE`，則會隱藏按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -1528,7 +1529,7 @@ void Show(BOOL bShow);
   
  這個方法會呼叫[CMFCToolBarButton::OnShow](#onshow)之後便會更新按鈕的可見性狀態的方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)   

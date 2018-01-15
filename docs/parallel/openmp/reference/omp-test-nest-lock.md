@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_test_nest_lock
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_test_nest_lock OpenMP function
+f1_keywords: omp_test_nest_lock
+dev_langs: C++
+helpviewer_keywords: omp_test_nest_lock OpenMP function
 ms.assetid: 4c909bbe-80e0-4100-aca6-d415d7dc5294
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 61f1a227400354a9d8c22f87e14093e6992a950e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ecc5371dc522e288531292ef95d557220f2d5023
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="omptestnestlock"></a>omp_test_nest_lock
 嘗試設定可巢狀的鎖定，但不會封鎖執行緒的執行。  
@@ -55,7 +37,7 @@ int omp_test_nest_lock(
  其中：  
   
  `lock`  
- 型別的變數[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)初始化與[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)。  
+ 類型的變數[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)初始化與[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)。  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[3.2.5 omp_test_lock 和 omp_test_nest_lock 函式](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)。  
@@ -132,5 +114,5 @@ Thread 2 - released nestable_lock
 Thread 2 - released nestable_lock  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式](../../../parallel/openmp/reference/openmp-functions.md)

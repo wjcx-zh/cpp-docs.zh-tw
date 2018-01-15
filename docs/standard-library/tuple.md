@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df03116e230a9cba7721a37701e9b67ac8e8a518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca10e245c4adf108799896b8dfad2e21c4f3758
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 定義樣板 `tuple`，其執行個體會保留各種不同類型的物件。  
@@ -57,6 +58,6 @@ ms.lasthandoff: 10/24/2017
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|從元素值製作 `tuple`。|  
 |[tie](../standard-library/tuple-functions.md#tie)|從元素參考製作 `tuple`。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<array>](../standard-library/array.md)
 

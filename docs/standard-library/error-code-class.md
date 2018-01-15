@@ -25,17 +25,17 @@ helpviewer_keywords:
 - std::error_code::clear
 - std::error_code::default_error_condition
 - std::error_code::message
-- 
 ms.assetid: c09b4a96-cb14-4281-a319-63543f9b2b4a
 caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7674aeb2a2a1e15ceb38af662f51964884b81ada
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2d451de1cacbb9654d7aafeb59cb1c23006dce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcode-class"></a>error_code 類別
 表示實作特定的低層級系統錯誤。  
@@ -95,7 +95,7 @@ void assign(value_type val, const error_category& _Cat);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`val`|要儲存在 `error_code` 中的錯誤碼值。|  
 |`_Cat`|要儲存在 `error_code` 中的錯誤分類。|  
@@ -151,7 +151,7 @@ error_code(_Enum _Errcode,
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`val`|要儲存在 `error_code` 中的錯誤碼值。|  
 |`_Cat`|要儲存在 `error_code` 中的錯誤分類。|  
@@ -194,7 +194,7 @@ bool operator==(const error_code& right) const;
  如果物件相等，即為 **true**；如果物件不相等，則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 成員運算子會傳回 `category() == right.category() && value == right.value()`。  
+ 此成員運算子會傳回 `category() == right.category() && value == right.value()`。  
   
 ##  <a name="op_neq"></a>  error_code::operator!=  
  測試 `error_code` 物件是否不相等。  
@@ -213,7 +213,7 @@ bool operator!=(const error_code& right) const;
  如果 `error_code` 不等於傳入 `right` 的 `error_code` 物件，即為 **true**；否則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 成員運算子會傳回 `!(*this == right)`。  
+ 此成員運算子會傳回 `!(*this == right)`。  
   
 ##  <a name="op_lt"></a>  error_code::operator&lt;  
  測試 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 物件是否小於傳入以進行比較的 `error_code` 物件。  
@@ -232,7 +232,7 @@ bool operator<(const error_code& right) const;
  如果 `error_code` 小於傳入以進行比較的 `error_code` 物件，即為 **true**；否則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 成員運算子會傳回 `category() < right.category() || category() == right.category() && value < right.value()`。  
+ 此成員運算子會傳回 `category() < right.category() || category() == right.category() && value < right.value()`。  
   
 ##  <a name="op_eq"></a>  error_code::operator=  
  將新的列舉值指派給 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 物件。  
@@ -246,7 +246,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`_Errcode`|要指派給 `error_code` 物件的列舉值。|  
   
@@ -291,7 +291,7 @@ typedef int value_type;
 ### <a name="remarks"></a>備註  
  此類型定義與 `int` 同義。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [error_category 類別](../standard-library/error-category-class.md)   
  [<system_error>](../standard-library/system-error.md)
 

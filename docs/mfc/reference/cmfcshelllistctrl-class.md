@@ -53,11 +53,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 455ac8911e99843c14cdab80a6c97e243259c5a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4b5204fe92685431ccdd2c6735553c9b7ce85bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 類別
 `CMFCShellListCtrl`類別提供視窗清單控制項功能，並加入顯示 shell 項目清單的能力擴充。  
@@ -68,11 +69,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCShellListCtrl : public CMFCListCtrl  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCShellListCtrl::DisplayFolder](#displayfolder)|顯示所提供的資料夾中包含的項目清單。|  
 |[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|顯示目前所顯示的資料夾的父系資料夾中包含的項目清單。|  
@@ -130,10 +131,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszPath`  
+ [輸入] `lpszPath`  
  字串，包含的資料夾路徑。  
   
- [in] `lpItemInfo`  
+ [輸入] `lpItemInfo`  
  指標`LPAFX_SHELLITEMINFO`描述要顯示的資料夾結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -157,7 +158,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  布林值，指定架構是否啟用快顯功能表。  
   
 ##  <a name="getcurrentfolder"></a>CMFCShellListCtrl::GetCurrentFolder  
@@ -230,7 +231,7 @@ BOOL GetItemPath(
  [輸出] `strPath`  
  接收路徑字串的參考。  
   
- [in] `iItem`  
+ [輸入] `iItem`  
  清單項目的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -273,9 +274,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lParam1`  
- [in] `lParam2`  
- [in] `iColumn`  
+ [輸入] `lParam1`  
+ [輸入] `lParam2`  
+ [輸入] `iColumn`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -291,7 +292,7 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `tmFile`  
+ [輸入] `tmFile`  
  與檔案關聯的日期。  
   
  [輸出] `str`  
@@ -310,7 +311,7 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lFileSize`  
+ [輸入] `lFileSize`  
  架構會顯示檔案的大小。  
   
  [輸出] `str`  
@@ -329,10 +330,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iItem`  
+ [輸入] `iItem`  
  項目索引。  
   
- [in] `pItem`  
+ [輸入] `pItem`  
  A`LPAFX_SHELLITEMINFO`參數描述項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -354,13 +355,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iItem`  
+ [輸入] `iItem`  
  項目索引。  
   
- [in] `iColumn`  
+ [輸入] `iColumn`  
  感興趣的資料行。  
   
- [in] `pItem`  
+ [輸入] `pItem`  
  A`LPAFX_SHELLITEMINFO`參數描述項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -402,13 +403,13 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nTypes`  
+ [輸入] `nTypes`  
  項目的清單類型`CMFCShellListCtrl`物件支援。  
   
 ### <a name="remarks"></a>備註  
  項目類型的清單的相關資訊，請參閱[SHCONTF](http://msdn.microsoft.com/library/windows/desktop/bb762539)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCListCtrl 類別](../../mfc/reference/cmfclistctrl-class.md)   

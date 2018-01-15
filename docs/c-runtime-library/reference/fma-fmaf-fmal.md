@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec77e462b357708153f26b5289f35c2ee7b7a104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 將兩個值相乘，並加上第三個值，然後對結果進行四捨五入，而且不會因中值四捨五入而遺失任何精確度。  
@@ -88,13 +89,13 @@ long double fmal(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `x`  
+ [輸入] `x`  
  要相乘的第一個值。  
   
- [in] `y`  
+ [輸入] `y`  
  要相乘的第二個值。  
   
- [in] `z`  
+ [輸入] `z`  
  要加入的值。  
   
 ## <a name="return-value"></a>傳回值  
@@ -102,16 +103,16 @@ long double fmal(
   
  否則，可能會傳回下列其中一個值：  
   
-|問題|返回|  
+|問題|Return|  
 |-----------|------------|  
 |`x` = INFINITY、`y` = 0 或<br /><br /> `x` = 0、`y` = INFINITY|NaN|  
-|`x` 或 `y` = 完全相同 ± INFINITY、`z` = INFINITY (含相反的正負號)|NaN|  
+|`x`或`y`= 確切 ± 無限大，`z`正負號相反 = 無限|NaN|  
 |`x` 或 `y` = NaN|NaN|  
 |非 (`x` = 0、`y`= 無限制) 和 `z` = NaN<br /><br /> 非 (`x`=無限制、`y`=0) 和 `z` = NaN|NaN|  
-|溢位範圍錯誤|±HUGE_VAL、±HUGE_VALF 或 ±HUGE_VALL|  
+|溢位範圍錯誤|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|  
 |反向溢位範圍錯誤|四捨五入後的正確值。|  
   
- 依 [_matherr](../../c-runtime-library/reference/matherr.md) 的指定回報錯誤。  
+ 依 [_matherr](../../c-runtime-library/reference/matherr.md) 中的指定回報錯誤。  
   
 ## <a name="remarks"></a>備註  
  因為 c + + 允許多載，所以您可以呼叫的多載`fma`採用並傳回**float**和**長雙精度**型別。 在 C 程式中，`fma`一律採用並傳回**double**。  
@@ -120,13 +121,13 @@ long double fmal(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [remainder、remainderf、remainderl](../../c-runtime-library/reference/remainder-remainderf-remainderl.md)   
  [remquo、remquof、remquol](../../c-runtime-library/reference/remquo-remquof-remquol.md)

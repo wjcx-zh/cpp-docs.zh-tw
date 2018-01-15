@@ -13,18 +13,19 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a4c9d15f5b86aea78ae02837f0b7073189894d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 198fd62e8134a14930d88b478d5ed78b1e8d8e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC 精靈和對話方塊
 Microsoft Foundation Class (MFC) 精靈會產生各種元件和物件的未定案程式碼。 您可以藉由開啟的專案中的捷徑功能表執行精靈**方案總管 中**，然後選擇**新增**，**類別**。  
   
 ## <a name="related-articles"></a>相關文章  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[建立 MFC DLL 專案](../../mfc/reference/creating-an-mfc-dll-project.md)|建立以 MFC 為基礎的 DLL。|  
 |[建立 MFC 應用程式](../../mfc/reference/creating-an-mfc-application.md)|產生 MFC 應用程式。|  

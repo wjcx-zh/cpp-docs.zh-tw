@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- concrt/concurrency::invalid_scheduler_policy_thread_specification
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_scheduler_policy_thread_specification class
+f1_keywords: concrt/concurrency::invalid_scheduler_policy_thread_specification
+dev_langs: C++
+helpviewer_keywords: invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d9b49f65d8b862a7b85cdf3e09137f326fa8a1fa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 82c53e760d09ecdcc39f50b30d68a6c0b5290c4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification 類別
 這個類別描述嘗試設定 `SchedulerPolicy` 物件的並行存取限制，以致 `MinConcurrency` 機碼的值小於 `MaxConcurrency` 機碼的值時擲回的例外狀況。  
@@ -49,13 +31,13 @@ ms.lasthandoff: 03/17/2017
 class invalid_scheduler_policy_thread_specification : public std::exception;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_thread_specification](不正確的排程器-原則-值-class.md #ctor|多載。 建構 `invalid_scheduler_policy_value` 物件。|  
+|[invalid_scheduler_policy_thread_specification](不正確-排程器-原則-值-class.md #ctor|多載。 建構 `invalid_scheduler_policy_value` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -63,7 +45,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
  `invalid_scheduler_policy_thread_specification`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** concrt.h  
+ **標頭：** concrt.h  
   
  **命名空間：** concurrency  
 ##  <a name="ctor"></a>invalid_scheduler_policy_thread_specification 
@@ -80,7 +62,6 @@ invalid_scheduler_policy_thread_specification() throw();
  `_Message`  
  錯誤的描述性訊息。  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [SchedulerPolicy 類別](schedulerpolicy-class.md)
-

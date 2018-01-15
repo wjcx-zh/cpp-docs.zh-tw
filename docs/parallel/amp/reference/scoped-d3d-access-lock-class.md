@@ -4,44 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: fd7f377e1dfe4e99f566da4782be5c2ccfdddbff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37dadc932701354de317d253a39bd2f2ee71a495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock 類別
-RAII 包裝函式的 D3D 存取鎖定 accelerator_view 物件。  
+Accelerator_view 物件上的 D3D 存取鎖定 RAII 包裝函式。  
   
 ### <a name="syntax"></a>語法  
   
@@ -49,28 +33,28 @@ RAII 包裝函式的 D3D 存取鎖定 accelerator_view 物件。
 class scoped_d3d_access_lock;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[scoped_d3d_access_lock 建構函式](#ctor)|多載。 建構 `scoped_d3d_access_lock` 物件。 當此物件超出範圍時，會釋放鎖定。|  
-|[~ scoped_d3d_access_lock 解構函式](#dtor)|釋放相關聯的 D3D 存取鎖定`accelerator_view`物件。|  
+|[~ scoped_d3d_access_lock 解構函式](#dtor)|釋出相關聯的 D3D 存取鎖定`accelerator_view`物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|取得從另一個鎖定的擁有權`scoped_d3d_access_lock`。|  
+|[operator=](#operator_eq)|取得擁有權的鎖定，從另一個`scoped_d3d_access_lock`。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `scoped_d3d_access_lock`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amprt.h  
+ **標頭：** amprt.h  
   
- **命名空間︰** concurrency:: direct3d  
+ **命名空間：** concurrency:: direct3d  
 
 ##  <a name="ctor"></a>scoped_d3d_access_lock 
 
@@ -98,14 +82,14 @@ scoped_d3d_access_lock(// [3] move constructor
  `adopt_d3d_access_lock_t` 物件。  
   
  `_Other`  
- `scoped_d3d_access_lock`要移動的現有鎖定的來源物件。  
+ `scoped_d3d_access_lock`用來移動現有的鎖定物件。  
   
 ## <a name="construction"></a>建構  
  [1] 建構函式  
- 取得 D3D 存取鎖定在指定[accelerator_view](accelerator-view-class.md)物件。 建構封鎖，直到取得鎖定。  
+ 取得的 D3D 存取鎖定上指定[accelerator_view](accelerator-view-class.md)物件。 建構會封鎖已取得鎖定為止。  
   
  [2] 建構函式  
- 採用 D3D 存取鎖定，從給定[accelerator_view](accelerator-view-class.md)物件。  
+ 採用的 D3D 存取鎖定給定[accelerator_view](accelerator-view-class.md)物件。  
   
  [3] 移動建構函式  
  會從另一個現有的 D3D 存取鎖定`scoped_d3d_access_lock`物件。 建構不會封鎖。  
@@ -113,14 +97,14 @@ scoped_d3d_access_lock(// [3] move constructor
   
 ##  <a name="dtor"></a>~ scoped_d3d_access_lock 
 
- 釋放相關聯的 D3D 存取鎖定`accelerator_view`物件。  
+ 釋出相關聯的 D3D 存取鎖定`accelerator_view`物件。  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
 ## <a name="operator_eq"></a>運算子 = 
 
-取得從另一個 D3D 存取鎖定的擁有權`scoped_d3d_access_lock`釋放先前鎖定的物件。  
+取得擁有權從另一個的 D3D 存取鎖定`scoped_d3d_access_lock`釋放先前鎖定的物件。  
  
 ```  
 scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
@@ -131,8 +115,7 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
  要從中移動 D3D 存取鎖定 accelerator_view。  
   
 ### <a name="return-value"></a>傳回值  
- 參考`scoped_accelerator_view_lock`。  
+ 此參考`scoped_accelerator_view_lock`。  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::direct3d 命名空間](concurrency-direct3d-namespace.md)
-

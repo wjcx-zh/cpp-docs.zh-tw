@@ -1,94 +1,96 @@
 ---
-title: "類型特性的編譯器支援 (C++ 元件擴充功能) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__is_simple_value_class"
-  - "__has_trivial_destructor"
-  - "__has_assign"
-  - "__is_union"
-  - "__is_class"
-  - "__is_abstract"
-  - "__has_trivial_assign"
-  - "__has_virtual_destructor"
-  - "__is_ref_array"
-  - "__is_base_of"
-  - "__has_copy"
-  - "__is_polymorphic"
-  - "__has_nothrow_constructor"
-  - "__is_ref_class"
-  - "__is_delegate"
-  - "__is_convertible_to"
-  - "__is_value_class"
-  - "__is_interface_class"
-  - "__has_nothrow_copy"
-  - "__is_sealed"
-  - "__has_trivial_constructor"
-  - "__has_trivial_copy"
-  - "__is_enum"
-  - "__has_nothrow_assign"
-  - "__has_finalizer"
-  - "__is_empty"
-  - "__is_pod"
-  - "__has_user_destructor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__is_class 關鍵字 [C++]"
-  - "__is_pod 關鍵字 [C++]"
-  - "__is_delegate 關鍵字 [C++]"
-  - "__is_value_class 關鍵字 [C++]"
-  - "__has_copy 關鍵字 [C++]"
-  - "__has_nothrow_copy 關鍵字 [C++]"
-  - "__is_interface_class 關鍵字 [C++]"
-  - "__is_sealed 關鍵字 [C++]"
-  - "__is_convertible_to 關鍵字 [C++]"
-  - "__is_ref_class 關鍵字 [C++]"
-  - "__has_trivial_copy 關鍵字 [C++]"
-  - "__has_user_destructor 關鍵字 [C++]"
-  - "__is_abstract 關鍵字 [C++]"
-  - "__is_empty 關鍵字 [C++]"
-  - "__has_trivial_assign 關鍵字 [C++]"
-  - "__has_nothrow_constructor 關鍵字 [C++]"
-  - "__is_ref_array 關鍵字 [C++]"
-  - "__is_base_of 關鍵字 [C++]"
-  - "__has_nothrow_assign 關鍵字 [C++]"
-  - "__has_virtual_destructor 關鍵字 [C++]"
-  - "__has_finalizer 關鍵字 [C++]"
-  - "__is_union 關鍵字 [C++]"
-  - "__has_assign 關鍵字 [C++]"
-  - "__has_trivial_destructor 關鍵字 [C++]"
-  - "__is_polymorphic 關鍵字 [C++]"
-  - "__is_enum 關鍵字 [C++]"
-  - "__is_simple_value_class 關鍵字 [C++]"
-  - "__has_trivial_constructor 關鍵字 [C++]"
+title: "類型特性 （c + + 元件擴充功能） 編譯器支援 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __is_simple_value_class
+- __has_trivial_destructor
+- __has_assign
+- __is_union
+- __is_class
+- __is_abstract
+- __has_trivial_assign
+- __has_virtual_destructor
+- __is_ref_array
+- __is_base_of
+- __has_copy
+- __is_polymorphic
+- __has_nothrow_constructor
+- __is_ref_class
+- __is_delegate
+- __is_convertible_to
+- __is_value_class
+- __is_interface_class
+- __has_nothrow_copy
+- __is_sealed
+- __has_trivial_constructor
+- __has_trivial_copy
+- __is_enum
+- __has_nothrow_assign
+- __has_finalizer
+- __is_empty
+- __is_pod
+- __has_user_destructor
+dev_langs: C++
+helpviewer_keywords:
+- __is_class keyword [C++]
+- __is_pod keyword [C++]
+- __is_delegate keyword [C++]
+- __is_value_class keyword [C++]
+- __has_copy keyword [C++]
+- __has_nothrow_copy keyword [C++]
+- __is_interface_class keyword [C++]
+- __is_sealed keyword [C++]
+- __is_convertible_to keyword [C++]
+- __is_ref_class keyword [C++]
+- __has_trivial_copy keyword [C++]
+- __has_user_destructor keyword [C++]
+- __is_abstract keyword [C++]
+- __is_empty keyword [C++]
+- __has_trivial_assign keyword [C++]
+- __has_nothrow_constructor keyword [C++]
+- __is_ref_array keyword [C++]
+- __is_base_of keyword [C++]
+- __has_nothrow_assign keyword [C++]
+- __has_virtual_destructor keyword [C++]
+- __has_finalizer keyword [C++]
+- __is_union keyword [C++]
+- __has_assign keyword [C++]
+- __has_trivial_destructor keyword [C++]
+- __is_polymorphic keyword [C++]
+- __is_enum keyword [C++]
+- __is_simple_value_class keyword [C++]
+- __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 類型特性的編譯器支援 (C++ 元件擴充功能)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-編譯器支援 *輸入特性*, ，表示在編譯時期型別的各種特性。  
+# <a name="compiler-support-for-type-traits-c-component-extensions"></a>類型特性的編譯器支援 (C++ 元件擴充功能)
+編譯器支援*類型特性*，表示在編譯時間類型的各種特性。  
   
 ## <a name="all-runtimes"></a>所有執行階段  
- **註解**  
+ **備註**  
   
  類型特性特別適用於撰寫程式庫的程式設計人員。  
   
  下列清單包含編譯器所支援的類型特性。 如果不符合類型特性名稱所指定的條件，則所有類型特性都會傳回 `false`。  
   
- (下面程式碼範例只在撰寫 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]。 但除非另有說明，否則在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中也會支援對應的類型特性。 「平台類型」一詞是指 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 類型或 Common Language Runtime 類型。)  
+ (在下列清單中，程式碼範例會寫入只在 C + + /CLI。 但除非另有說明，否則在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中也會支援對應的類型特性。 詞彙 「 平台類型 」 是指 Windows 執行階段類型或 common language runtime 類型。）  
   
 -   `__has_assign(` `type` `)`  
   
@@ -124,7 +126,7 @@ manager: "ghogen"
   
 -   `__has_finalizer(` `type` `)`  
   
-     (在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中不支援。)如果 CLR 類型具有完成項，則傳回 true。 請參閱 [解構函式和完成項中 Visual c + +](../misc/destructors-and-finalizers-in-visual-cpp.md) 如需詳細資訊。  
+     (在 [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] 中不支援。)如果 CLR 類型具有完成項，則傳回 true。 請參閱[解構函式與完成項中如何： 定義和使用類別和結構 (C + + /CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)如需詳細資訊。  
   
     ```  
   
@@ -302,9 +304,9 @@ manager: "ghogen"
   
 -   `__is_abstract(` `type` `)`  
   
-     如果類型是抽象類型，則傳回 true。 如需有關原生的抽象類型的詳細資訊，請參閱 [抽象](../windows/abstract-cpp-component-extensions.md)。  
+     如果類型是抽象類型，則傳回 true。 如需有關原生抽象類型的詳細資訊，請參閱[抽象](../windows/abstract-cpp-component-extensions.md)。  
   
-     `__is_abstract` 也適用於平台類型。 至少有一個成員的介面是參考類型，至少有一個抽象成員的介面是參考類型。 如需有關抽象的平台類型的詳細資訊，請參閱 [抽象類別](../cpp/abstract-classes-cpp.md)  
+     `__is_abstract` 也適用於平台類型。 至少有一個成員的介面是參考類型，至少有一個抽象成員的介面是參考類型。 如需抽象平台類型的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)  
   
     ```  
   
@@ -325,7 +327,7 @@ manager: "ghogen"
   
      如果第一種類型是第二種類型的基底類別，或這兩種類型相同，則傳回 true。  
   
-     `__is_base_of` 也適用於平台類型。 比方說，它會傳回 true，如果第一種 [介面類別](../windows/interface-class-cpp-component-extensions.md) 和第二個型別實作的介面。  
+     `__is_base_of` 也適用於平台類型。 比方說，它會傳回 true，如果第一個型別是[介面類別](../windows/interface-class-cpp-component-extensions.md)和第二個型別所實作的介面。  
   
     ```  
   
@@ -382,7 +384,7 @@ manager: "ghogen"
   
 -   `__is_delegate(` `type` `)`  
   
-     如果 `type` 是委派，則傳回 true。 如需詳細資訊，請參閱 [委派 （c + + 元件擴充功能）](../windows/delegate-cpp-component-extensions.md)。  
+     如果 `type` 是委派，則傳回 true。 如需詳細資訊，請參閱[委派 （c + + 元件擴充功能）](../windows/delegate-cpp-component-extensions.md)。  
   
     ```  
   
@@ -437,7 +439,7 @@ manager: "ghogen"
   
 -   `__is_interface_class(` `type` `)`  
   
-     如果傳遞平台介面，則傳回 true。 如需詳細資訊，請參閱 [介面類別](../windows/interface-class-cpp-component-extensions.md)。  
+     如果傳遞平台介面，則傳回 true。 如需詳細資訊，請參閱[介面類別](../windows/interface-class-cpp-component-extensions.md)。  
   
     ```  
   
@@ -489,7 +491,7 @@ manager: "ghogen"
   
 -   `__is_ref_array(` `type` `)`  
   
-     如果傳遞平台陣列，則傳回 true。 如需詳細資訊，請參閱 [陣列](../windows/arrays-cpp-component-extensions.md)。  
+     如果傳遞平台陣列，則傳回 true。 如需詳細資訊，請參閱[陣列](../windows/arrays-cpp-component-extensions.md)。  
   
     ```  
   
@@ -503,7 +505,7 @@ manager: "ghogen"
   
 -   `__is_ref_class(` `type` `)`  
   
-     如果傳遞參考類別，則傳回 true。 如需有關使用者定義的參考類型的詳細資訊，請參閱 [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     如果傳遞參考類別，則傳回 true。 如需有關使用者定義的參考類型的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
   
@@ -518,7 +520,7 @@ manager: "ghogen"
   
 -   `__is_sealed(` `type` `)`  
   
-     如果傳遞平台或標示為密封的原生類型，則傳回 true。 如需詳細資訊，請參閱 [密封](../windows/sealed-cpp-component-extensions.md)。  
+     如果傳遞平台或標示為密封的原生類型，則傳回 true。 如需詳細資訊，請參閱[密封](../windows/sealed-cpp-component-extensions.md)。  
   
     ```  
   
@@ -531,7 +533,7 @@ manager: "ghogen"
   
 -   `__is_simple_value_class(` `type` `)`  
   
-     如果傳遞值類型，且其中不含對記憶體回收堆積的參考，則傳回 true。 如需有關使用者定義的實值類型的詳細資訊，請參閱 [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     如果傳遞值類型，且其中不含對記憶體回收堆積的參考，則傳回 true。 如需有關使用者定義的實值類型的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
   
@@ -570,7 +572,7 @@ manager: "ghogen"
   
 -   `__is_value_class(` `type` `)`  
   
-     如果傳遞值類型，則傳回 true。 如需有關使用者定義的實值類型的詳細資訊，請參閱 [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
+     如果傳遞值類型，則傳回 true。 如需有關使用者定義的實值類型的詳細資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
     ```  
   
@@ -582,16 +584,16 @@ manager: "ghogen"
   
     ```  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **註解**  
+## <a name="windows-runtime"></a>Windows 執行階段  
+ **備註**  
   
-  `__has_finalizer(`*類型*`)` 不支援類型特性，因為此平台不支援完成項。  
+ `__has_finalizer(`*類型*`)`不支援的類型特性，因為這個平台不支援完成項。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **註解**  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ **備註**  
   
  (沒有這項功能的平台特定備註。)  
   
@@ -601,7 +603,7 @@ manager: "ghogen"
 ### <a name="examples"></a>範例  
  **範例**  
   
- 下列程式碼範例示範如何使用類別樣板中公開的編譯器型別特性 **/clr** 編譯。 如需詳細資訊，請參閱 [Windows 執行階段和 Managed 樣板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
+ 下列程式碼範例示範如何使用類別範本來公開的編譯器類型特性**/clr**編譯。 如需詳細資訊，請參閱[Windows 執行階段和 Managed 樣板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
   
 ```  
 // compiler_type_traits.cpp  
@@ -629,5 +631,5 @@ int main () {
 R is a ref class  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

@@ -25,11 +25,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 5d2567c5ced5b42dc40529a07535458e9fe34d75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5eadeac762e894a409fb6c3d949e38aaeabdf04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex 類別
 代表 mutex 類型。 相較於 [mutex](../standard-library/mutex-class-stl.md)，已針對已經鎖定的物件妥善定義呼叫鎖定方法的行為。  
@@ -40,18 +41,18 @@ ms.lasthandoff: 10/24/2017
 class recursive_mutex;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[recursive_mutex](#recursive_mutex)|建構 `recursive_mutex` 物件。|  
-|[~recursive_mutex 解構函式](#dtorrecursive_mutex_destructor)|釋放 `recursive_mutex` 物件使用的所有資源。|  
+|[~recursive_mutex 解構函式](#dtorrecursive_mutex_destructor)|釋出 `recursive_mutex` 物件所使用的任何資源。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[lock](#lock)|在呼叫執行緒取得 mutex 的擁有權之前，封鎖該執行緒。|  
 |[try_lock](#try_lock)|嘗試在不封鎖 mutex 的情況下，取得它的擁有權。|  
@@ -114,7 +115,7 @@ void unlock();
   
  如果呼叫的執行緒未擁有 `mutex`，則行為是未定義的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 

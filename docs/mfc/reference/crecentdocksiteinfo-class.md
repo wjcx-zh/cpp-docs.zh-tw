@@ -41,11 +41,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 564d7a301ad224c6ae41b83b56b685ba1f427333
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d0c3869b2a290de348b7c93630907d0e0c7613d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 類別
 `CRecentDockSiteInfo`類別會儲存最新狀態資訊的協助程式類別[CPane 類別](../../mfc/reference/cpane-class.md)。  
@@ -56,17 +57,17 @@ ms.lasthandoff: 10/24/2017
 class CRecentDockSiteInfo : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CRecentDockSiteInfo::CRecentDockSiteInfo`|預設建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRecentDockSiteInfo::CleanUp](#cleanup)||  
 |[CRecentDockSiteInfo::GetRecentDefaultPaneDivider](#getrecentdefaultpanedivider)||  
@@ -112,7 +113,7 @@ CRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -135,7 +136,7 @@ int GetRecentDockedPercent(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bForSlider`  
+ [輸入] `bForSlider`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -149,7 +150,7 @@ CRect& GetRecentDockedRect(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bForSlider`  
+ [輸入] `bForSlider`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -163,7 +164,7 @@ CList<HWND, HWND>& GetRecentListOfPanes(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bForSlider`  
+ [輸入] `bForSlider`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -177,7 +178,7 @@ CPaneContainer* GetRecentPaneContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bForSlider`  
+ [輸入] `bForSlider`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -191,7 +192,7 @@ CPaneContainer* GetRecentTabContainer(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bForSlider`  
+ [輸入] `bForSlider`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -214,7 +215,7 @@ BOOL IsRecentLeftPane(BOOL bForSlider);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bForSlider`  
+ [輸入] `bForSlider`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -228,7 +229,7 @@ CRecentDockSiteInfo& operator=(CRecentDockSiteInfo& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `src`  
+ [輸入] `src`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -244,9 +245,9 @@ void SaveListOfRecentPanes(CList<HWND,
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `CList<HWND`  
- [in] `lstOrg`  
- [in] `bForSlider`  
+ [輸入] `CList<HWND`  
+ [輸入] `lstOrg`  
+ [輸入] `bForSlider`  
   
 ### <a name="remarks"></a>備註  
   
@@ -260,8 +261,8 @@ virtual void SetInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bForSlider`  
- [in] `srcInfo`  
+ [輸入] `bForSlider`  
+ [輸入] `srcInfo`  
   
 ### <a name="remarks"></a>備註  
   
@@ -275,12 +276,12 @@ virtual void StoreDockInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pRecentContainer`  
- [in] `pTabbedBar`  
+ [輸入] `pRecentContainer`  
+ [輸入] `pTabbedBar`  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CDockSite 類別](../../mfc/reference/cdocksite-class.md)

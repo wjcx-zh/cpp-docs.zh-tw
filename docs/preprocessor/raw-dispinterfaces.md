@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c73a30779bf85e39ca97d0e6f4979c070de4e00c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d92c6940c4eabc83143ce1054604ae4648347d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
 **C + + 特定的**  
@@ -37,6 +38,6 @@ raw_dispinterfaces
   
  **END c + + 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
  [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

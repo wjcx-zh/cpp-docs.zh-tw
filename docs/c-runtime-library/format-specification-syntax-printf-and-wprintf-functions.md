@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e8c81bfa9f87d9612d989cef84ddf538ff28d98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
@@ -73,18 +74,18 @@ ms.lasthandoff: 10/24/2017
 |**u**|整數|不帶正負號的十進位整數。|
 |**x**|整數|不帶正負號的十六進位整數；使用 "abcdef"。|
 |**X**|整數|不帶正負號的十六進位整數；使用 "ABCDEF"。|
-|**e**|浮點|具有 [-]*d.dddd*__e±__*dd*[*d*] 形式之帶有正負號的值，其中 *d* 是一個十進位數字，*dddd* 是一或多個十進位數字，*dd*[*d*] 是兩個或三個十進位數字 (取決於[輸出格式](../c-runtime-library/set-output-format.md)和該指數的大小)。|
+|**e**|浮點|帶正負號的值，形式為 [-]*d.dddd*__e±__*dd*[*d*]，其中 *d* 是一個十進位數，*dddd* 是一或多個十進位數字 (視指定的精確度而定)，或根據預設為六，而 *dd*[*d*] 是兩個或三個十進位數 (視[輸出格式](../c-runtime-library/set-output-format.md)和指數的大小而定)。|
 |**E**|浮點|與 **e** 格式相同，除了由 **E** 而非 **e** 引入該指數以外。|
 |**f**|浮點|具有 [-]*dddd*__.__*dddd* 形式之帶正負號的值，其中 *dddd* 是一或多個十進位數字。 小數點前面的位數取決於數字的大小，小數點後面的位數則取決於要求的精確度，或是預設為六。|
 |**F**|浮點|與 **f** 格式相同，除了無限及 NAN 輸出為大寫以外。|
 |**g**|浮點|帶正負號的值會以 **f** 或 **e** 格式顯示，視何種格式對所指定的值和精確度而言較為精簡。 只有在該值的指數小於 -4 或大於等於 *precision* 引數時會使用 **e** 格式。 會截斷尾端的零，僅當一或多個數字位於小數點後面時，才會顯示小數點。|
 |**G**|浮點|與 **g** 格式相同，除了由 **E** 而非 **e** 在適當時引入該指數以外。|
-|**a**|浮點|具有 [-]0x*h.hhhh*__p±__*dd* 形式之帶正負號的十六進位雙精確度浮點數的值，其中 *h.hhhh* 是尾數的十六進位數 (使用小寫字母)，而 *dd* 是指數的一或多個位數。 指定小數點之後位數的精確度。|
-|**A**|浮點|具有 [-]0X*h.hhhh*__P±__*dd* 形式之帶正負號的十六進位雙精確度浮點數的值，其中 *h.hhhh* 是尾數的十六進位數 (使用大寫字母)，而 *dd* 是指數的一或多個位數。 指定小數點之後位數的精確度。|
+|**a**|浮點|帶正負號的十六進位雙精確度浮點值，形式為 [-]0x*h.hhhh*__p±__*dd*，其中 *h.hhhh* 是尾數的十六進位數 (使用小寫字母)，而 *dd* 是指數的一或多個位數。 指定小數點之後位數的精確度。|
+|**A**|浮點|帶正負號的十六進位雙精確度浮點值，形式為 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾數的十六進位數 (使用大寫字母)，而 *dd* 是指數的一或多個位數。 指定小數點之後位數的精確度。|
 |**n**|整數的指標|目前已成功寫入此資料流或緩衝區的字元數。 會將這個值儲存在整數中，該整數的位址會做為引數而受指定。 引數大小規格前置詞可以控制指向整數的大小。 **n** 指定名稱預設會停用；如需資訊，請參閱重要安全性注意事項。|
 |**p**|指標類型|顯示引數為十六進位數字的位址。|
-|**s**|字串|當搭配 `printf` 函式使用時，會指定單一位元組或多位元組字元字串；當搭配 `wprintf` 函式使用時，會指定寬字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
-|**S**|字串|當搭配 `printf` 函式使用時，會指定寬字元字串；當搭配 `wprintf` 函式使用時，會指定單一位元組或多位元組字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
+|**s**|String|當搭配 `printf` 函式使用時，會指定單一位元組或多位元組字元字串；當搭配 `wprintf` 函式使用時，會指定寬字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
+|**S**|String|當搭配 `printf` 函式使用時，會指定寬字元字串；當搭配 `wprintf` 函式使用時，會指定單一位元組或多位元組字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
 |**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 結構|當 [ANSI_STRING](http://msdn.microsoft.com/library/windows/hardware/ff540605.aspx) 或 [UNICODE_STRING](http://msdn.microsoft.com/library/windows/hardware/ff564879.aspx) 結構的位址作為引數傳遞時，顯示結構的 `Buffer` 欄位所指向之緩衝區中所包含的字串。 使用 **w** 的 *size* 修飾詞前置來指定 `UNICODE_STRING` 引數，例如 `%wZ`。 該結構的 `Length` 欄位必須設定為此字串的長度，以位元組為單位。 該結構的 `MaximumLength` 欄位必須設定為此緩衝區的長度，以位元組為單位。<br /><br /> 通常，**Z** 類型字元只在驅動程式偵錯函式中使用，該函式使用像是 `dbgPrint` 和 `kdPrint` 的轉換規格。|
 
 自 Visual Studio 2015 起，如果對應於浮點轉換規範 (**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**) 的引數是無限大、不確定或 NAN，則格式化輸出符合 C99 標準。 下表列出格式化輸出︰
@@ -215,7 +216,7 @@ ms.lasthandoff: 10/24/2017
 > **Microsoft 特定的**  
 > **I** (大寫 i)、**I32**、**I64** 及 **w** 引數大小修飾詞前置詞為 Microsoft 延伸模組，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  

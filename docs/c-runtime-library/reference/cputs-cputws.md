@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -39,37 +37,22 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: b773a7b9ae2ad6a7af7aa178fa277be2362c2c11
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/28/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f90b953c8055ac2b6de59d7b41880ea6b6fe133
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cputs-cputws"></a>_cputs、_cputws
 將字串放入主控台。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -102,12 +85,12 @@ int _cputws(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_cputs`|\<conio.h>|\<errno.h>|  
 |`_cputws`|\<conio.h>|\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -169,6 +152,6 @@ Hello world (courtesy of _cputs)!
 Hello world (courtesy of _cputws)!  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
  [_putch、_putwch](../../c-runtime-library/reference/putch-putwch.md)

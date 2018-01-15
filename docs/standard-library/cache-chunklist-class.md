@@ -4,31 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::cache_chunklist
 - allocators/stdext::cache_chunklist::allocate
 - allocators/stdext::cache_chunklist::deallocate
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::cache_chunklist
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13d81e3eab6e93a138ac55ca53cbf8e61f195507
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3d8047844a96cf80e64ab7aae5d1e7d9f4a85474
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist 類別
 定義[區塊配置器](../standard-library/allocators-header.md)以配置及解除配置單一大小的記憶體區塊。  
@@ -42,7 +40,7 @@ class cache_chunklist
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Sz`|陣列中要配置的項目數。|  
   
@@ -78,9 +76,9 @@ void *allocate(std::size_t count);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
-|`count`|陣列中要配置的項目數。|  
+|`count`|所配置陣列中的元素數。|  
   
 ### <a name="return-value"></a>傳回值  
  所配置物件的指標。  
@@ -112,9 +110,8 @@ void deallocate(void* ptr, std::size_t count);
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

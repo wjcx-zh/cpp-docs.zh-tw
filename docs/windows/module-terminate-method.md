@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb3e977ab86e5bcde92ba57bc08f91ac513d3c93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2ced22c1cc464df6e7d0c9f205fabc1de56bfe35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moduleterminate-method"></a>Module::Terminate 方法
 會導致所有具現化要關閉之模組的 factory。  
@@ -38,5 +41,5 @@ void Terminate();
   
  **命名空間：** Microsoft::WRL
  
- ## <a name="see-also"></a>另請參閱
+ ## <a name="see-also"></a>請參閱
  [Module 類別](../windows/module-class.md)

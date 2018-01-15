@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b73fd6d6dbebe764960a7a20c00ddb91aa0b24f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控制項容器：從 ActiveX 控制項中處理事件
 本文說明如何使用 [屬性] 視窗在 ActiveX 控制項容器中安裝 ActiveX 控制項的事件處理常式。 事件處理常式可用來接收通知 （控制項） 的特定事件並在回應中執行某些動作。 此通知會呼叫 「 引發 」 事件。  
@@ -72,6 +73,6 @@ ms.lasthandoff: 10/24/2017
   
 6.  按兩下新的處理常式函式，從 [類別檢視] 來跳到實作中的事件處理常式程式碼 (。Cpp) 的`CContainerDlg`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ActiveX 控制項容器](../mfc/activex-control-containers.md)
 

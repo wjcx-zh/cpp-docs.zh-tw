@@ -1,35 +1,35 @@
 ---
-title: "__svm_vmrun | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_vmrun"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內建 __svm_vmrun"
-  - "VMRUN 指令"
+title: "__svm_vmrun |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_vmrun
+dev_langs: C++
+helpviewer_keywords:
+- __svm_vmrun intrinsic
+- VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 000e798dce3fba367a8666d4b5c97bd25fd53253
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
-# __svm_vmrun
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="svmvmrun"></a>__svm_vmrun
+**Microsoft 特定的**  
   
- 執行虛擬機器的來賓程式碼相對於指定的虛擬機器的控制區 \(VMCB\) 就會啟動。  
+ 開始執行的虛擬機器客體程式碼對應至指定的虛擬機器控制區塊 (VMCB)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void __svm_vmrun(  
@@ -37,28 +37,28 @@ void __svm_vmrun(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |參數|描述|  
-|--------|--------|  
-|\[in\] `VmcbPhysicalAddress`|VMCB 實體位址。|  
+|---------------|-----------------|  
+|[輸入] `VmcbPhysicalAddress`|VMCB 實體位址。|  
   
-## 備註  
- `__svm_vmrun`函式使用 VMCB 中極少量的資訊，能開始執行的虛擬機器來賓程式碼。  使用[\_\_svm\_vmsave](../intrinsics/svm-vmsave.md)或[\_\_svm\_vmload](../intrinsics/svm-vmload.md)函式，如果您需要更多的資訊，來處理複雜的插斷，或切換至另一台來賓。  
+## <a name="remarks"></a>備註  
+ `__svm_vmrun`函數 VMCB 中使用最少量的資訊來開始執行的虛擬機器客體程式碼。 使用[__svm_vmsave](../intrinsics/svm-vmsave.md)或[__svm_vmload](../intrinsics/svm-vmload.md)函式，如果您需要處理複雜的插斷，或切換到另一個客體的詳細資訊。  
   
- `__svm_vmrun`函式相當於`VMRUN`機器指令。  這個函式會以來賓作業系統與它的應用程式支援主應用程式的虛擬機器監視器的互動。  如需詳細資訊，搜尋的文件中，"AMD64 架構程式設計人員手動磁碟區 2: 系統的程式設計中，「 文件編號 24593、 修訂 3.11 \(含\) 以後，在[AMD 公司](http://go.microsoft.com/fwlink/?LinkId=23746)站台。  
+ `__svm_vmrun`函數即相當於`VMRUN`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計 」 文件編號 24593、 修訂 3.11 或更新版本，在[AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__svm_vmrun`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__svm_vmrun`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 結束 Microsoft 特定  
+**結束 Microsoft 特定的**  
   
-## 請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)   
- [\_\_svm\_vmsave](../intrinsics/svm-vmsave.md)   
- [\_\_svm\_vmload](../intrinsics/svm-vmload.md)
+## <a name="see-also"></a>請參閱  
+ [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
+ [__svm_vmsave](../intrinsics/svm-vmsave.md)   
+ [__svm_vmload](../intrinsics/svm-vmload.md)

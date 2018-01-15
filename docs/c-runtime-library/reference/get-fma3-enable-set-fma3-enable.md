@@ -30,11 +30,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b4c5a5a76a56567e0c0dd41a70b569327eda1cd4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0a2810a8d6602efb689896cfe35cf61338eb24f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getfma3enable-setfma3enable"></a>_get_FMA3_enable _set_FMA3_enable
 取得或設定旗標，指定是否將超越數學浮點數的程式庫函式使用 FMA3 指示在編譯程式碼適用於 X64 平台。  
@@ -62,12 +63,12 @@ FMA3 實作使用不同的演算法，因為有些微差異計算的結果可能
   
 `_set_FMA3_enable`和`_get_FMA3_enable`函式只會在 X64 版本的 CRT。  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_set_FMA3_enable` <br /><br /> `_get_FMA3_enable`| C：\<math.h><br /><br /> C + +: \<h > 或\<math.h >|  
   
-`_set_FMA3_enable` 和 `_get_FMA3_enable` 函式是 Microsoft 特有的。 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+`_set_FMA3_enable` 和 `_get_FMA3_enable` 函式是 Microsoft 特有的。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [浮點支援](../../c-runtime-library/floating-point-support.md)
 [浮點數的移轉問題](../../porting/floating-point-migration-issues.md)  

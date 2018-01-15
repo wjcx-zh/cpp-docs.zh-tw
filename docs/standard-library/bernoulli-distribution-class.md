@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator!=
-- random/std::bernoulli_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::bernoulli_distribution [C++]
 - std::bernoulli_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 19212e7b594b21a08d6f1fb174a3385e9c46d159
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e66f7d0cc0385fea47a9d023f9cb67170de48cb4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 類別
 產生白努利 (Bernoulli) 分佈。  
@@ -91,7 +88,7 @@ public:
   
 屬性成員 `p()` 會傳回目前儲存的分佈參數值 `p`。  
   
-屬性成員 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。  
+屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。  
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
   
@@ -99,9 +96,9 @@ public:
   
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
   
-如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
-如需白努利分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Bernoulli Distribution](http://go.microsoft.com/fwlink/LinkId=398467) (白努利分佈)。  
+如需白努利分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Bernoulli Distribution](http://go.microsoft.com/fwlink/p/?linkid=398467) (白努利分佈)。  
   
 ## <a name="example"></a>範例  
   
@@ -208,8 +205,7 @@ struct param_type {
   
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<random>](../standard-library/random.md)
-
 
 

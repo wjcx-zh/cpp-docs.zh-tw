@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5092b4b21a1eea11559c30aa95c747816f098e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24fda25f0d0766442e05c1661dce5e2f08a01b09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-program-startup-and-termination"></a>C++ 程式啟動和終止
 C++ 程式執行的作業和 C 程式在執行程式啟動和程式終止時執行的相同，再加上幾個此處概述的作業。  
@@ -43,7 +44,7 @@ C++ 程式執行的作業和 C 程式在執行程式啟動和程式終止時執�
   
  和使用 C 相同，從 `main` 傳回或進行`exit` 呼叫時，系統會依據登錄的相反順序，呼叫在 `atexit` 中登錄的所有函式。 從這類已登錄函式擲回的例外狀況皆會呼叫 `terminate`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

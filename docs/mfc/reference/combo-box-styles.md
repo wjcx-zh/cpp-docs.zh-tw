@@ -42,11 +42,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 52cfd21df2f0f72da10589745fb3a8be3e0b24e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 028a58c443ba45a4b8167a17f73f6f3fa54e4ca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="combo-box-styles"></a>下拉式方塊樣式
 MFC 中提供下列下拉式方塊樣式。  
@@ -77,7 +78,7 @@ MFC 中提供下列下拉式方塊樣式。
   
 -   **CBS_UPPERCASE** ：將選取欄位和清單中的所有文字轉換成大寫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 使用的樣式](../../mfc/reference/styles-used-by-mfc.md)   
  [CComboBox::Create](ccombobox class.md # ccombobox__create   
 

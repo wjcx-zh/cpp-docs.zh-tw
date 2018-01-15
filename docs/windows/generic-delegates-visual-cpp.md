@@ -1,32 +1,34 @@
 ---
-title: "Generic Delegates (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic delegates"
-  - "delegates, generic [C++]"
+title: "泛型委派 （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generic delegates
+- delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2511034af4399c983b8114ec01a86e3290bd2a8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Generic Delegates (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可使用具有委派的泛型型別參數  如需委派的詳細資訊，請參閱[delegate](../windows/delegate-cpp-component-extensions.md)。  
+# <a name="generic-delegates-visual-c"></a>泛型委派 (Visual C++)
+您可以使用具有委派的泛型型別參數。 如需委派的詳細資訊，請參閱[委派 （c + + 元件擴充功能）](../windows/delegate-cpp-component-extensions.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 [attributes]   
@@ -36,30 +38,30 @@ generic < [class | typename] type-parameter-identifiers >
 ([formal-parameters]);  
 ```  
   
-#### 參數  
- `attributes` \(選擇性\)  
- 補充宣告資訊。  如需關於屬性及屬性類別的詳細資訊，請參閱屬性。  
+#### <a name="parameters"></a>參數  
+ `attributes`（選擇性）  
+ 其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。  
   
- *type\-parameter\-identifier\(s\)*  
- 以逗號分隔的型別參數識別碼清單。  
+ *類型為參數的識別項*  
+ 以逗號分隔的型別參數識別項清單。  
   
  `type-parameter-constraints-clauses`  
- 指定在 [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) 中拿到表格。  
+ 中指定的形式[泛型型別參數的條件約束 (C + + /CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *存取範圍修飾詞* \(選擇性\)  
- Accessibility modifiers \(如  **public**，`private`\)。  
+ *存取範圍修飾詞*（選擇性）  
+ 存取範圍修飾詞 (例如**公用**， `private`)。  
   
  *結果型別*  
- 委派的傳回型別。  
+ 委派的傳回類型。  
   
  *identifier*  
- 委派名稱。  
+ 委派的名稱。  
   
- *正規參數*\(選擇性\)  
+ *正式參數*（選擇性）  
  委派的參數清單。  
   
-## 範例  
- 委派型別參數指定於指標，而委派物件在此指標建立。  委派跟與其關聯的方法必須擁有相同的簽章。  以下為泛型委派的宣告範例。  
+## <a name="example"></a>範例  
+ 委派型別參數是在委派物件建立時指定。 委派以及與其相關聯的方法必須擁有相同的簽章。 以下為泛型委派宣告的範例。  
   
 ```  
 // generics_generic_delegate1.cpp  
@@ -68,14 +70,14 @@ generic < class ItemType>
 delegate ItemType GenDelegate(ItemType p1, ItemType% p2);  
 ```  
   
-## 範例  
- 以下範例說明這點  
+## <a name="example"></a>範例  
+ 以下範例將示範  
   
--   您不能使用相同的委派物件於不同的結構型別。  針對不同的型別建立不同的委派物件。  
+-   您不能使用不同結構類型的相同委派物件。 為不同的類型建立不同的委派物件。  
   
 -   泛型委派可以與泛型方法產生關聯。  
   
--   當呼叫泛型方法而沒有指定型別引數時，編譯器嘗試推斷出此呼叫的型別引數。  
+-   若呼叫泛型方法時沒有指定型別引數，則編譯器會嘗試推斷呼叫的型別引數。  
   
 ```  
 // generics_generic_delegate2.cpp  
@@ -111,8 +113,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列範例宣告泛型委派`GenDelegate<ItemType>`，接著相關至使用型別參數`ItemType`的方法`MyMethod`來實作之。  創立並觸發（一個整數和一個雙數）的兩個委派實作個體。  
+## <a name="example"></a>範例  
+ 下列範例會宣告泛型委派 `GenDelegate<ItemType>`，接著將它與使用類型參數 `MyMethod` 的方法 `ItemType` 產生關聯，藉此將它具現化。 將會建立並叫用委派的兩個執行個體 (一個整數和一個雙精度浮點數)。  
   
 ```  
 // generics_generic_delegate.cpp  
@@ -162,7 +164,10 @@ int main() {
 }  
 ```  
   
-  **Invoking the integer delegate: i \= 123, j \= 123**  
-**Invoking the double delegate: m \= 0.123, n \= 0.123**   
-## 請參閱  
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+Invoking the integer delegate: i = 123, j = 123  
+Invoking the double delegate: m = 0.123, n = 0.123  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [泛型](../windows/generics-cpp-component-extensions.md)

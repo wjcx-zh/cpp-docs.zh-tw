@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6ebcb3bd7ab831d58704457b27172a4f6fc19da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb2bd4e46776e55c1b40ee2aef7c8a3469483a5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="root-class-cobject"></a>根類別：CObject
 大部分的 Microsoft Foundation Class (MFC) 程式庫中的類別被衍生自類別階層架構的根目錄中單一基底類別。 `CObject`提供數個實用的功能，以從其衍生的負荷極低的所有類別。 如需有關`CObject`和其功能，請參閱[使用 CObject](../mfc/using-cobject.md)。  
@@ -34,6 +35,6 @@ ms.lasthandoff: 10/24/2017
  [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
  用來在執行階段決定物件的確切類別結構。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

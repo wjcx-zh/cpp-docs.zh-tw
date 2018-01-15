@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fac78eddcdf36ecc295841019f9e3f05e537802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-application-wizard"></a>MFC 應用程式精靈
 MFC 應用程式精靈產生應用程式，編譯時，實作 Windows 可執行檔 (.exe) 應用程式的基本功能。 MFC 起始應用程式包括 c + + 來源 (.cpp) 檔案、 資源 (.rc) 檔、 標頭 (.h) 檔案和專案 (.vcxproj) 檔案。 產生起始檔案中的程式碼是以 MFC 為基礎。  
@@ -29,7 +30,7 @@ MFC 應用程式精靈產生應用程式，編譯時，實作 Windows 可執行�
 > [!NOTE]
 >  根據您選取的選項，精靈會建立其他檔案專案中。 例如，如果您選取**即時線上說明**上[進階功能](../../mfc/reference/advanced-features-mfc-application-wizard.md) 頁面上，精靈會建立編譯專案的說明檔所需的檔案。 如需精靈建立的檔案的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)，並查看專案的 Readme.txt 檔案。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  這個精靈頁面說明 MFC 應用程式所建立的目前應用程式設定。 依預設，此精靈建立專案，如下所示：  
   
 -   [MFC 應用程式精靈、應用程式類型](../../mfc/reference/application-type-mfc-application-wizard.md)  
@@ -42,7 +43,7 @@ MFC 應用程式精靈產生應用程式，編譯時，實作 Windows 可執行�
   
     -   專案使用 Visual Studio 專案樣式建立，並啟用視覺化樣式切換。  
   
-    -   專案會使用 MFC 共用 dll。 如需詳細資訊，請參閱[Visual c + + 中的 Dll](../../build/dlls-in-visual-cpp.md)。  
+    -   專案會使用 MFC 共用 dll。 如需詳細資訊，請參閱 [Visual C++ 中的 DLL](../../build/dlls-in-visual-cpp.md)。  
   
 -   [MFC 應用程式精靈、複合文件支援](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   
@@ -86,7 +87,7 @@ MFC 應用程式精靈產生應用程式，編譯時，實作 Windows 可執行�
   
  建立 MFC 應用程式專案之後，您可以將物件或控制項加入您專案中使用 Visual c + +[程式碼精靈](../../ide/adding-functionality-with-code-wizards-cpp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立 MFC 應用程式](../../mfc/reference/creating-an-mfc-application.md)   
  [MFC 桌面應用程式](../../mfc/mfc-desktop-applications.md)   
  [使用類別來編寫 Windows 應用程式](../../mfc/using-the-classes-to-write-applications-for-windows.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af833219039a03e7e403f7e3cd10210057f3abfa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3190c1f6914ae8ea24b968a8cf286de1867938cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyin"></a>copyin
 可讓執行緒存取主執行緒的值，如[threadprivate](../../../parallel/openmp/reference/threadprivate.md)變數。  
@@ -50,5 +51,5 @@ copyin(var)
 ## <a name="example"></a>範例  
  請參閱[threadprivate](../../../parallel/openmp/reference/threadprivate.md)的使用範例`copyin`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

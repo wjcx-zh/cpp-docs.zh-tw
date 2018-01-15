@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0184d013b0a36aeb77bebbba9f6e4ecef47b7f85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 378007ee4ebbb457fb8922d44d063b3bdf05729d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csemaphore-class"></a>CSemaphore 類別
 類別的物件`CSemaphore`表示 「 號誌 」 — 允許有限的數目的執行緒在一或多個處理序存取持續目前存取指定之資源的執行緒數目的計數的同步處理物件。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class CSemaphore : public CSyncObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSemaphore::CSemaphore](#csemaphore)|建構 `CSemaphore` 物件。|  
   
@@ -94,7 +95,7 @@ CSemaphore(
 > [!IMPORTANT]
 >  在建立之後`CSemaphore`物件，請使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以確保，mutex 原本不存在。 如果未意外存在 mutex，可能表示 rogue 程序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序是關閉此控制代碼，並繼續如同在建立物件時發生失敗。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

@@ -103,11 +103,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f41fc2d55cb5aeb2a8173e9912ddb7c67c582ab9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6c752d1b9570ce11e232020393cc6d7982baa80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton 類別
 包含快顯功能表的工具列按鈕。  
@@ -119,17 +120,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCToolBarMenuButton : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|建構 `CMFCToolBarMenuButton` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|比較這個執行個體使用提供`CMFCToolBarButton`物件。 (覆寫[CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith)。)|  
 |[Cmfctoolbarmenubutton:: Copyfrom](#copyfrom)|將另一個工具列按鈕的內容複製到目前的按鈕。 (覆寫[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)。)|  
@@ -172,15 +173,15 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::SetRadio](#setradio)|強制工具列功能表按鈕，以顯示圖示，表示已選取。|  
 |[CMFCToolBarMenuButton::SetTearOff](#settearoff)|指定分割的快顯功能表列識別碼。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|繪製功能表按鈕的圖示。|  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarMenuButton::m_bAlwaysCallOwnerDraw](#m_balwayscallownerdraw)|如果`TRUE`，架構會一律呼叫[CFrameWndEx::OnDrawMenuImage](../../mfc/reference/cframewndex-class.md#ondrawmenuimage)繪製按鈕時。|  
   
@@ -220,22 +221,22 @@ CMFCToolBarMenuButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `src`  
+ [輸入] `src`  
  現有`CMFCToolBarMenuButton`物件複製到這個`CMFCToolBarMenuButton`物件。  
   
- [in] `uiID`  
+ [輸入] `uiID`  
  當使用者按一下按鈕; 若要執行的命令識別碼或 ( `UINT`) 不會直接執行命令的功能表按鈕的-1。  
   
- [in] `hMenu`  
+ [輸入] `hMenu`  
  功能表; 的控點或`NULL`如果按鈕沒有功能表。  
   
- [in] `iImage`  
+ [輸入] `iImage`  
  按鈕; 映像的索引則為-1，如果此按鈕，並沒有圖示，或針對所指定的命令會使用圖示`uiID`。 索引是針對每個相同`CMFCToolBarImages`應用程式中的物件。  
   
- [in] `lpszText`  
+ [輸入] `lpszText`  
  工具列功能表按鈕的文字。  
   
- [in] `bUserButton`  
+ [輸入] `bUserButton`  
  `TRUE`如果按鈕顯示的使用者定義的映像。`FALSE`如果按鈕會顯示與所指定的命令相關聯的預先定義的映像`uiID`。  
   
 ### <a name="remarks"></a>備註  
@@ -254,7 +255,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `other`  
+ [輸入] `other`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -268,7 +269,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `src`  
+ [輸入] `src`  
   
 ### <a name="remarks"></a>備註  
   
@@ -280,7 +281,7 @@ virtual void CreateFromMenu(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hMenu`  
+ [輸入] `hMenu`  
  功能表的控點。  
   
 ### <a name="remarks"></a>備註  
@@ -327,13 +328,13 @@ void DrawDocumentIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rectImage`  
+ [輸入] `rectImage`  
  影像的周框的座標。  
   
- [in] `hIcon`  
+ [輸入] `hIcon`  
  圖示的控制代碼。  
   
 ### <a name="remarks"></a>備註  
@@ -560,9 +561,9 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `sizeDefault`  
- [in] `bHorz`  
+ [輸入] `pDC`  
+ [輸入] `sizeDefault`  
+ [輸入] `bHorz`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -585,7 +586,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndParent`  
+ [輸入] `pWndParent`  
   
 ### <a name="remarks"></a>備註  
   
@@ -599,8 +600,8 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
- [in] `bDelay`  
+ [輸入] `pWnd`  
+ [輸入] `bDelay`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -629,7 +630,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -651,14 +652,14 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rect`  
- [in] `pImages`  
- [in] `bHorz`  
- [in] `bCustomizeMode`  
- [in] `bHighlight`  
- [in] `bDrawBorder`  
- [in] `bGrayDisabledButtons`  
+ [輸入] `pDC`  
+ [輸入] `rect`  
+ [輸入] `pImages`  
+ [輸入] `bHorz`  
+ [輸入] `bCustomizeMode`  
+ [輸入] `bHighlight`  
+ [輸入] `bDrawBorder`  
+ [輸入] `bGrayDisabledButtons`  
   
 ### <a name="remarks"></a>備註  
   
@@ -673,9 +674,9 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rect`  
- [in] `bSelected`  
+ [輸入] `pDC`  
+ [輸入] `rect`  
+ [輸入] `bSelected`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -689,7 +690,7 @@ virtual BOOL OpenPopupMenu(CWnd* pWnd=NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  指定接收下拉功能表命令視窗。 它可以是`NULL`工具列功能表按鈕有父視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -725,7 +726,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ar`  
+ [輸入] `ar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -759,7 +760,7 @@ void SetMenuOnly(BOOL bMenuOnly);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bMenuOnly`  
+ [輸入] `bMenuOnly`  
  `TRUE`這個按鈕顯示為功能表按鈕，當它具有有效的命令 ID 和子功能表，`FALSE`它具有有效的命令 ID 和子功能表時，顯示此按鈕為分割按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -775,10 +776,10 @@ void SetMenuPaletteMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bMenuPaletteMode`  
+ [輸入] `bMenuPaletteMode`  
  指定下拉式選單是否處於調色盤模式。  
   
- [in] `nPaletteRows`  
+ [輸入] `nPaletteRows`  
  調色盤中的資料列數目。  
   
 ### <a name="remarks"></a>備註  
@@ -792,7 +793,7 @@ void SetMessageWnd(CWnd* pWndMessage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndMessage`  
+ [輸入] `pWndMessage`  
   
 ### <a name="remarks"></a>備註  
   
@@ -816,7 +817,7 @@ virtual void SetTearOff(UINT uiBarID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiBarID`  
+ [輸入] `uiBarID`  
  指定新分割列識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -824,7 +825,7 @@ virtual void SetTearOff(UINT uiBarID);
   
  呼叫[CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)來啟用應用程式中的 tear-off 功能表功能。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)   

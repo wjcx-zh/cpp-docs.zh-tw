@@ -85,11 +85,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f56f356de8cb85bb919469a189618220c0843f3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd64d6a2cf4fe36e62f5c6599521780c4ee002ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 類別
 提供 OLE 項目的伺服器介面。  
@@ -104,13 +105,13 @@ class COleServerItem : public CDocItem
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleServerItem::COleServerItem](#coleserveritem)|建構 `COleServerItem` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|將放在簡報和轉換格式`COleDataSource`物件。|  
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|將項目複製到剪貼簿。|  
@@ -141,9 +142,9 @@ class COleServerItem : public CDocItem
 |[COleServerItem::OnUpdateItems](#onupdateitems)|呼叫以更新簡報的快取伺服器文件中的所有項目。|  
 |[COleServerItem::SetItemName](#setitemname)|設定項目的名稱。 用於連結項目。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleServerItem::GetDataSource](#getdatasource)|取得用來儲存轉換格式的物件。|  
 |[COleServerItem::OnHide](#onhide)|由架構呼叫以隱藏 OLE 項目。|  
@@ -152,7 +153,7 @@ class COleServerItem : public CDocItem
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|告知伺服器有多少 OLE 項目可見。|  
   
@@ -892,7 +893,7 @@ void SetItemName(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>備註  
  名稱必須是唯一的文件中。 若要編輯連結的項目呼叫伺服器應用程式時，應用程式會使用此名稱尋找項目。 您不需要呼叫此函式的內嵌項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [CDocItem 類別](../../mfc/reference/cdocitem-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

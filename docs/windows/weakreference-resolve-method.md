@@ -1,32 +1,33 @@
 ---
-title: "WeakReference::Resolve 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::Resolve"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Resolve 方法"
+title: "Weakreference:: Resolve 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::Resolve
+dev_langs: C++
+helpviewer_keywords: Resolve method
 ms.assetid: fc65a4b7-48a0-4d64-a793-37f566fdd8e7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d4da4689ffd8fa0a633b3f481b0292d060e57345
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# WeakReference::Resolve 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="weakreferenceresolve-method"></a>WeakReference::Resolve 方法
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,29 +37,29 @@ STDMETHOD(Resolve)
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `riid`  
- 介面 ID。  
+ 介面識別碼。  
   
  `ppvObject`  
- 這個作業完成時，目前的強式參考的複本，如果強式參考計數不為零。  
+ 這項作業完成時，一份目前的強式參考，如果強式參考計數不是零。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
   
--   S\_OK，則作業成功和強式參考計數為零。  將 `ppvObject` 屬性設為 `nullptr`。  
+-   如果這項作業成功，而且強式參考計數為零，即 S_OK。 `ppvObject` 參數設定為 `nullptr`。  
   
--   S\_OK，則作業成功和強式參考計數不為零。  `ppvObject` 參數被設定為強式參考。  
+-   如果這項作業成功，而且強式參考計數不是零，即 S_OK。 `ppvObject`參數設定為強式參考。  
   
--   否則， HRESULT 表示這個的作業失敗的原因。  
+-   否則，失敗的 HRESULT，指出原因這項作業。  
   
-## 備註  
- 如果強式參考計數不為零，設定指定的指標指向目前的強式參考值。  
+## <a name="remarks"></a>備註  
+ 如果強式參考計數不是零，則您可以將目前強式參考值的指定的指標。  
   
-## 需求  
- **標頭：**implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
- [WeakReference 類別](../windows/weakreference-class1.md)   
+## <a name="see-also"></a>請參閱  
+ [WeakReference Class1](../windows/weakreference-class1.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

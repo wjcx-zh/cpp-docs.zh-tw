@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ae47ec92ecea46aba5f0e1bf144a34fd5532af9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>決定要轉散發哪些 DLL
 
@@ -39,7 +40,7 @@ Visual Studio 的安裝中也包含個別的可轉散發 Dll。 根據預設，�
 
 若要判斷必須隨應用程式一起轉散發的 DLL，請收集應用程式所依賴的 DLL 並做成一份清單。 這些通常列在匯入程式庫連結器輸入。 某些程式庫，例如 vcruntime 和通用 C 執行階段程式庫 (UCRT)，包含預設值。 如果您的應用程式或其相依性的其中一個使用 LoadLibrary 以動態方式載入的 DLL，DLL 可能不會列在連結器輸入。 一種方式來收集動態載入的 Dll 清單為您的應用程式上執行 Dependency Walker (depends.exe) 中所述[了解 Visual c + + 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)。 不幸的是，此工具已經過時，而且可能會回報，找不到某些 Dll。
 
-當您有相依性的清單時，比較在 Microsoft Visual Studio 安裝目錄下找到該 Redist.txt 檔案的連結清單或 「 可轉散發清單 」 可轉散發 Dll 的 「 可散布程式碼檔案 > 一節中所參考Visual Studio 的 Microsoft 軟體授權條款。 Visual Studio 2017，請參閱[Microsoft Visual Studio 2017 （包括公用程式、 擴充性及 BuildServer 檔案） 的可散發程式碼](http://go.microsoft.com/fwlink/?LinkId=823098)。 Visual Studio 2015，請參閱[Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK （包含公用程式與 BuildServer 檔案） 的可散發程式碼](http://go.microsoft.com/fwlink/?LinkId=799794)。 Visual Studio 2013，清單位於線上[Microsoft Visual Studio 2013 和 Microsoft Visual Studio 2013 SDK 可散發程式碼](http://go.microsoft.com/fwlink/p/?LinkId=313603)。
+當您有相依性的清單時，比較在 Microsoft Visual Studio 安裝目錄下找到該 Redist.txt 檔案的連結清單或 「 可轉散發清單 」 可轉散發 Dll 的 「 可散布程式碼檔案 > 一節中所參考Visual Studio 的 Microsoft 軟體授權條款。 Visual Studio 2017，請參閱[Microsoft Visual Studio 2017 （包括公用程式、 擴充性及 BuildServer 檔案） 的可散發程式碼](http://go.microsoft.com/fwlink/p/?linkid=823098)。 Visual Studio 2015，請參閱[Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK （包含公用程式與 BuildServer 檔案） 的可散發程式碼](http://go.microsoft.com/fwlink/p/?linkid=799794)。 Visual Studio 2013，清單位於線上[Microsoft Visual Studio 2013 和 Microsoft Visual Studio 2013 SDK 可散發程式碼](http://go.microsoft.com/fwlink/p/?LinkId=313603)。
 
 在 Visual Studio 2015 之前的 Visual Studio 版本，C 執行階段程式庫 (CRT) 並以可轉散發的 DLL，msvc 中包括*版本*.dll。 從 Visual Studio 2015 開始，CRT 中的函式已重構為 vcruntime 和 UCRT。 UCRT 現在是在 Windows 10 中，由 Windows Update 管理的系統元件。 所有 Windows 10 作業系統上使用。 若要部署到舊版作業系統的應用程式，您可能需要重新發佈 UCRT 也。 如果已不安裝任何版本的 UCRT，UCRT 的較早版本是包含在 Visual Studio 可轉散發檔案，只能安裝在作業系統早於 Windows 10，而且只。 以 Microsoft 系統更新封裝的形式為下層系統 UCRT 可安裝的版本，請參閱[Windows 10 通用 C 執行階段](https://www.microsoft.com/en-us/download/details.aspx?id=48234)在 Microsoft 下載中心取得。
 
@@ -69,7 +70,7 @@ Visual Studio 的安裝中也包含個別的可轉散發 Dll。 根據預設，�
 
 一般而言，您並不需要轉散發系統 Dll，因為它們是作業系統的一部分。 但是，還是有一些例外情形，例如當應用程式會在數個版本的 Microsoft 作業系統上執行時。 在此情況下，請務必閱讀對應的授權條款。 另外，請嘗試透過 Windows Update、Service Pack 或 Microsoft 提供的可轉散發套件，將系統 DLL 升級。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [選擇部署方法](../ide/choosing-a-deployment-method.md)
 

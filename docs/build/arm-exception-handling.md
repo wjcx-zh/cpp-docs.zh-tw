@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 803e4e0556026eaa5a3fb75c8faa7fd87f34052f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-exception-handling"></a>ARM 例外狀況處理
 Windows on ARM 對非同步硬體產生的例外狀況和同步軟體產生的例外狀況，使用相同的結構化例外狀況處理機制。 語言專屬例外狀況處理常式使用語言協助程式函式，以 Windows 結構化例外狀況處理為基礎，進行建置。 本文件描述 Windows on ARM 中的例外狀況處理，以及由 MASM 和 Visual C++ 編譯器產生之程式碼所使用的語言協助程式。  
@@ -734,6 +735,6 @@ Function:
   
     -   *堆疊調整*= 1，指出 1 × 4 位元組堆疊調整  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)   
  [Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)

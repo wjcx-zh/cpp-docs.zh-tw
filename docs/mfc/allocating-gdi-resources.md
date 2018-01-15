@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976852b11101a608a47f37ec1c796ef1363ec648
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7420dbdc1f7560eae9bc5b1a15954c3d68b59678
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocating-gdi-resources"></a>配置 GDI 資源
 本文說明如何配置和取消配置列印所需的 Windows 圖形裝置介面 (GDI) 物件。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
  若要取消配置這些 GDI 物件，覆寫[OnEndPrinting](../mfc/reference/cview-class.md#onendprinting)成員函式。 架構會每個列印工作結束時呼叫此函式，讓您有機會在應用程式回到其他工作之前取消配置列印特定 GDI 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [列印](../mfc/printing.md)   
  [如何完成預設列印](../mfc/how-default-printing-is-done.md)
 

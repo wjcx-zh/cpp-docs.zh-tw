@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d56bef1545d582caab72b9e309b27a540ac62f39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a3730c7e0ae1dbbae299ddbe6128044effa101a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 網際網路擴充功能 (WinInet)
 網際網路用戶端應用程式是可從網路資料來源 （伺服器） 使用網際網路通訊協定，例如 gopher、 FTP 或 HTTP 存取資訊的程式。 網際網路用戶端應用程式可能會存取要擷取資料，例如對應天氣、 股票價格或頭條，例如的伺服器。 網際網路用戶端可以透過外部網路 （網際網路） 或 （有時候稱為內部網路） 的內部網路存取伺服器。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [一般 HTTP 用戶端應用程式中的步驟](../mfc/steps-in-a-typical-http-client-application.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)   
  [WinInet 基本概念](../mfc/wininet-basics.md)
 

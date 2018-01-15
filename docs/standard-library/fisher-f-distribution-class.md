@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 200e50e2a10470e7078d31b35849c82ee9c11fd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da8fba1e5be97c692b08b8e89cf36b4ae6f5ddab
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 類別
 產生費雪 F 分佈。  
@@ -90,7 +91,7 @@ public:
   
  屬性函式 `m()` 和 `n()` 會分別傳回儲存的分佈參數 `m` 和 `n` 的值。  
   
-屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。  
+屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。  
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
   
@@ -98,9 +99,9 @@ public:
   
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
   
- 如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+ 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
- 如需 F 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [F-Distribution](http://go.microsoft.com/fwlink/LinkId=400899) (F 分佈)。  
+ 如需 F 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [F-Distribution](http://go.microsoft.com/fwlink/p/?linkid=400899) (F 分佈)。  
   
 ## <a name="example"></a>範例  
   
@@ -263,7 +264,7 @@ explicit fisher_f_distribution(const param_type& parm);
   
  第一個建構函式會建構一個物件的預存`m`值保留值*m* ，且預存`n`值保留值 *n* 。  
   
- 第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+ 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
   
 ##  <a name="param_type"></a>  fisher_f_distribution::param_type  
  儲存分佈的參數。  
@@ -294,7 +295,7 @@ struct param_type {
   
  此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<random>](../standard-library/random.md)
 
 

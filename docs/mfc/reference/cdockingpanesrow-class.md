@@ -101,11 +101,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 173be0b50b0a69f10e48abac9b4018b809e96991
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb8cb38c8ad5f744cab49c25d8de9c7cea58959a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 類別
 管理與停駐位置位於相同水平或垂直列 (欄) 之窗格的清單。  
@@ -118,17 +119,17 @@ ms.lasthandoff: 10/24/2017
 class CDockingPanesRow : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CDockingPanesRow::CDockingPanesRow`|預設建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDockingPanesRow::AddPane](#addpane)||  
 |[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||  
@@ -201,10 +202,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
- [in] `dockMethod`  
- [in] `lpRect`  
- [in] `bAddLast`  
+ [輸入] `pControlBar`  
+ [輸入] `dockMethod`  
+ [輸入] `lpRect`  
+ [輸入] `bAddLast`  
   
 ### <a name="remarks"></a>備註  
   
@@ -218,8 +219,8 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
- [in] `dockMethod`  
+ [輸入] `pControlBar`  
+ [輸入] `dockMethod`  
   
 ### <a name="remarks"></a>備註  
   
@@ -233,10 +234,10 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nMargin`  
+ [輸入] `nMargin`  
  以指定的位移，從資料列的左上角的第一個窗格的像素為單位。  
   
- [in] `nSpacing`  
+ [輸入] `nSpacing`  
  指定單位為像素的窗格間的間距。  
   
 ### <a name="remarks"></a>備註  
@@ -252,8 +253,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bStretch`  
- [in] `bHorz`  
+ [輸入] `bStretch`  
+ [輸入] `bHorz`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -270,9 +271,9 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pParentDockBar`  
- [in] `nOffset`  
- [in] `nHeight`  
+ [輸入] `pParentDockBar`  
+ [輸入] `nOffset`  
+ [輸入] `nHeight`  
   
 ### <a name="remarks"></a>備註  
   
@@ -315,8 +316,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bMoveBackToVirtualRect`  
- [in] `pBarToExclude`  
+ [輸入] `bMoveBackToVirtualRect`  
+ [輸入] `pBarToExclude`  
   
 ### <a name="remarks"></a>備註  
   
@@ -328,7 +329,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bUseVirtualRect`  
+ [輸入] `bUseVirtualRect`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -342,7 +343,7 @@ virtual void GetAvailableSpace(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
+ [輸入] `rect`  
   
 ### <a name="remarks"></a>備註  
   
@@ -354,7 +355,7 @@ void GetClientRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
+ [輸入] `rect`  
   
 ### <a name="remarks"></a>備註  
   
@@ -390,8 +391,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
- [in] `lst`  
+ [輸入] `pBar`  
+ [輸入] `lst`  
   
 ### <a name="remarks"></a>備註  
   
@@ -414,7 +415,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSkipHiddenBars`  
+ [輸入] `bSkipHiddenBars`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -494,7 +495,7 @@ void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
+ [輸入] `rect`  
   
 ### <a name="remarks"></a>備註  
   
@@ -506,7 +507,7 @@ BOOL HasPane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -564,7 +565,7 @@ virtual void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nOffset`  
+ [輸入] `nOffset`  
   
 ### <a name="remarks"></a>備註  
   
@@ -599,14 +600,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
- [in] `ptOffset`  
- [in] `bSwapControlBars`  
- [in] `hdwp`  
- [in] `rectTarget`  
- [in] `nOffset`  
- [in] `bForward`  
- [in] `nAbsolutOffset`  
+ [輸入] `pControlBar`  
+ [輸入] `ptOffset`  
+ [輸入] `bSwapControlBars`  
+ [輸入] `hdwp`  
+ [輸入] `rectTarget`  
+ [輸入] `nOffset`  
+ [輸入] `bForward`  
+ [輸入] `nAbsolutOffset`  
   
 ### <a name="remarks"></a>備註  
   
@@ -618,7 +619,7 @@ virtual void OnResizePane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -639,7 +640,7 @@ virtual void RemovePane(CPane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -653,8 +654,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBarOld`  
- [in] `pBarNew`  
+ [輸入] `pBarOld`  
+ [輸入] `pBarNew`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -672,10 +673,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rectNewParentBarArea`  
- [in] `nSide`  
- [in] `bExpand`  
- [in] `nOffset`  
+ [輸入] `rectNewParentBarArea`  
+ [輸入] `nSide`  
+ [輸入] `bExpand`  
+ [輸入] `nOffset`  
   
 ### <a name="remarks"></a>備註  
   
@@ -687,7 +688,7 @@ virtual int Resize(int nOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nOffset`  
+ [輸入] `nOffset`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -701,7 +702,7 @@ virtual int ResizeByPaneDivider(int);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `int`  
+ [輸入] `int`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -715,7 +716,7 @@ void ScreenToClient(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
+ [輸入] `rect`  
   
 ### <a name="remarks"></a>備註  
   
@@ -729,8 +730,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nExtraSpace`  
- [in] `rowExtraAlign`  
+ [輸入] `nExtraSpace`  
+ [輸入] `rowExtraAlign`  
   
 ### <a name="remarks"></a>備註  
   
@@ -744,8 +745,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bShow`  
- [in] `bDelay`  
+ [輸入] `bShow`  
+ [輸入] `bDelay`  
   
 ### <a name="remarks"></a>備註  
   
@@ -760,9 +761,9 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
- [in] `bShow`  
- [in] `bDelay`  
+ [輸入] `pControlBar`  
+ [輸入] `bShow`  
+ [輸入] `bDelay`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -776,11 +777,11 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bDelay`  
+ [輸入] `bDelay`  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   

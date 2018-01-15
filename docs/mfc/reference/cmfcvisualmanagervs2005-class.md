@@ -49,11 +49,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a774573a2a42904d89159697dd444db98ddc8243
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9678ef4472f2bcb44a04d3484988033542aae243
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 類別
 `CMFCVisualManagerVS2005`讓應用程式的 Microsoft Visual Studio 2005 的外觀。  
@@ -64,11 +65,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|當它繪製為停駐和索引標籤式窗格時，架構會呼叫這個方法。 (覆寫[CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize)。)|  
 |[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|架構會呼叫這個方法，它繪製視窗前，判斷 /mditabs 視窗的框線大小。 (覆寫[CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize)。)|  
@@ -143,7 +144,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pPropList`  
+ [輸入] `pPropList`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -166,15 +167,15 @@ virtual void GetTabFrameColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pTabWnd`  
- [in] `clrDark`  
- [in] `clrBlack`  
- [in] `clrHighlight`  
- [in] `clrFace`  
- [in] `clrDarkShadow`  
- [in] `clrLight`  
- [in] `pbrFace`  
- [in] `pbrBlack`  
+ [輸入] `pTabWnd`  
+ [輸入] `clrDark`  
+ [輸入] `clrBlack`  
+ [輸入] `clrHighlight`  
+ [輸入] `clrFace`  
+ [輸入] `clrDarkShadow`  
+ [輸入] `clrLight`  
+ [輸入] `pbrFace`  
+ [輸入] `pbrBlack`  
   
 ### <a name="remarks"></a>備註  
   
@@ -201,10 +202,10 @@ virtual void OnDrawAutoHideButtonBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rectBounds`  
- [in] `rectBorderSize`  
- [in] `pButton`  
+ [輸入] `pDC`  
+ [輸入] `rectBounds`  
+ [輸入] `rectBorderSize`  
+ [輸入] `pButton`  
   
 ### <a name="remarks"></a>備註  
   
@@ -223,13 +224,13 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `pButton`  
- [in] `bActive`  
- [in] `bHorz`  
- [in] `bMaximized`  
- [in] `bDisabled`  
- [in] `nImageID`  
+ [輸入] `pDC`  
+ [輸入] `pButton`  
+ [輸入] `bActive`  
+ [輸入] `bHorz`  
+ [輸入] `bMaximized`  
+ [輸入] `bDisabled`  
+ [輸入] `nImageID`  
   
 ### <a name="remarks"></a>備註  
   
@@ -246,11 +247,11 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `pBar`  
- [in] `bActive`  
- [in] `rectCaption`  
- [in] `rectButtons`  
+ [輸入] `pDC`  
+ [輸入] `pBar`  
+ [輸入] `bActive`  
+ [輸入] `rectCaption`  
+ [輸入] `rectButtons`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -268,10 +269,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsHoriz`  
+ [輸入] `pDC`  
+ [輸入] `pBar`  
+ [輸入] `rect`  
+ [輸入] `bIsHoriz`  
   
 ### <a name="remarks"></a>備註  
   
@@ -288,11 +289,11 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rectTab`  
- [in] `iTab`  
- [in] `bIsActive`  
- [in] `pTabWnd`  
+ [輸入] `pDC`  
+ [輸入] `rectTab`  
+ [輸入] `iTab`  
+ [輸入] `bIsActive`  
+ [輸入] `pTabWnd`  
   
 ### <a name="remarks"></a>備註  
   
@@ -306,8 +307,8 @@ virtual void OnDrawToolBoxFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rect`  
+ [輸入] `pDC`  
+ [輸入] `rect`  
   
 ### <a name="remarks"></a>備註  
   
@@ -322,9 +323,9 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
+ [輸入] `pDC`  
+ [輸入] `rect`  
+ [輸入] `pTabWnd`  
   
 ### <a name="remarks"></a>備註  
   
@@ -339,9 +340,9 @@ virtual void OnFillAutoHideButtonBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
+ [輸入] `pDC`  
+ [輸入] `rect`  
+ [輸入] `pButton`  
   
 ### <a name="remarks"></a>備註  
   
@@ -357,10 +358,10 @@ virtual void OnFillHighlightedArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rect`  
- [in] `pBrush`  
- [in] `pButton`  
+ [輸入] `pDC`  
+ [輸入] `rect`  
+ [輸入] `pBrush`  
+ [輸入] `pButton`  
   
 ### <a name="remarks"></a>備註  
   
@@ -376,10 +377,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rectCaption`  
- [in] `pFrameWnd`  
- [in] `bActive`  
+ [輸入] `pDC`  
+ [輸入] `rectCaption`  
+ [輸入] `pFrameWnd`  
+ [輸入] `bActive`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -394,7 +395,7 @@ virtual void OnUpdateSystemColors();
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)   

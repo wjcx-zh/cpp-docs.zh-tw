@@ -1,44 +1,46 @@
 ---
-title: "Inverting the Colors in a Selection (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.color"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colors [C++], image"
-  - "Image editor [C++], color inversion"
-  - "images [C++], colors"
-  - "colors [C++], inverting"
+title: "反轉選取範圍 （圖示影像編輯器） 中的色彩 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.color
+dev_langs: C++
+helpviewer_keywords:
+- colors [C++], image
+- Image editor [C++], color inversion
+- images [C++], colors
+- colors [C++], inverting
 ms.assetid: ec8c724c-6595-4ae8-8893-56e40c14033e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 835c6e8824c29b46fa32bf219518c6d1dc64fa39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Inverting the Colors in a Selection (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>反轉選取範圍內的色彩 (圖示影像編輯器)
 影像編輯器可方便您反轉所選影像部分中的色彩，以便指出影像如何以反轉的色彩顯示。  
   
-### 反轉目前選取範圍中的色彩  
+### <a name="to-invert-colors-in-the-current-selection"></a>反轉目前選取範圍中的色彩  
   
-1.  在 \[**影像**\] 功能表上，按一下 \[**反轉色彩**\]。  
+1.  在**映像**功能表上，按一下 **色彩對換**。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源檔加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+
   
  需求  
   
  無  
   
-## 請參閱  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

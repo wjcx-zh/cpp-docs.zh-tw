@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ee68bfc7ddace32432f64d4325d9a4c669e0819b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bc333e539ba67b2a999bbeb5a08b9002da4e1fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="runtimechecks"></a>runtime_checks
 停用或還原 [/RTC](../build/reference/rtc-run-time-error-checks.md) 設定。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
 |**C**|將值指派給會造成資料損失的較小資料類型時回報。|  
 |**u**|變數在定義之前即使用時回報。|  
   
- 這些是與搭配 /RTC 編譯器選項使用的相同字母。 例如：  
+ 這些是與搭配 /RTC 編譯器選項使用的相同字母。 例如:   
   
 ```  
 #pragma runtime_checks( "sc", restore )  
@@ -70,5 +71,5 @@ ms.lasthandoff: 10/24/2017
 #pragma runtime_checks( "", restore )   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   

@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce9716e810f48c237eabb0ea11b222e3590d795b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c4b28d49d698f5bc39d8a3915c635c28ecca4193
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="window-panes-image-editor-for-icons"></a>視窗窗格 (圖示影像編輯器)
 影像編輯器 視窗通常會以分隔列分隔的兩個窗格中顯示的影像。 檢視是實際大小和其他變大時 （預設的放大係數是 6）。 這兩個窗格中的檢視表會自動更新： 一個窗格中的變更會立即顯示在其他。 兩個窗格，方便您處理您的映像，在其中您可以區分個別像素為單位，在相同的時間，觀察您的工作對映像的實際大小 檢視的放大檢視。  
@@ -36,12 +39,12 @@ ms.lasthandoff: 10/24/2017
   
  如果影像編輯器窗格放大，因數為 4 或更新版本，您可以[顯示像素格線](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md)，用來分隔個別的像素的映像中。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
  [圖示影像編輯器](../windows/image-editor-for-icons.md)
 

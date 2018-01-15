@@ -10,10 +10,9 @@ f1_keywords:
 - array/std::array::get
 - array/std::get
 - array/std::swap
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e0700a33-a833-4655-8735-16e71175efc8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -21,12 +20,12 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
+ms.workload: cplusplus
+ms.openlocfilehash: 7116d8bd3517bb412eecf4c0ba9040ce3fe0f7b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: be5128d8a5a8d3b6d60395633122fa3dd697435e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函式
 \<array> 標頭包含兩個非成員函式 `get` 和 `swap` 以作業於 `array` 物件。  
@@ -94,7 +93,7 @@ int main()
 1 3  
 ```  
   
-##  <a name="swap"></a> swap  
+##  <a name="swap"></a>  swap  
 交換兩個 `array` 物件之 `std::swap` 的非成員範本特製化。  
   
 ```  
@@ -164,7 +163,6 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<array>](../standard-library/array.md)
-
 

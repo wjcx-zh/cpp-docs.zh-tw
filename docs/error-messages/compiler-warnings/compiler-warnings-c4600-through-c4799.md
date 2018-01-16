@@ -1,6 +1,6 @@
 ---
 title: "編譯器警告 C4600 到 C4799 |Microsoft 文件"
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -67,22 +67,20 @@ ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 456d35247f25d20684e8b6957d61428a2b113ca0
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>編譯器警告 C4600 到 C4799
 
-這一部分的文件中的文章包含 Visual c + + 編譯器警告的資訊子集。 您可以在此存取資訊或者，在 Visual Studio 中的 輸出 視窗中，您可以選取錯誤代碼，然後按下 F1 鍵。
+文件的本節文章說明編譯器所產生的警告訊息的子集。
 
-> [!NOTE]
-> 並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤或警告會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。
-
-## <a name="in-this-section"></a>本章節內容
+## <a name="warning-messages"></a>警告訊息
 
 |警告|訊息|
 |-------------|-------------|
@@ -163,7 +161,7 @@ ms.lasthandoff: 11/11/2017
 |[編譯器警告 （錯誤） C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': 密封抽象類別不能實作介面 'interface'|
 |編譯器警告 （層級 1） C4688|'constraint': 條件約束清單含有組件私用類型 'type'，將無法由組件外部存取|
 |編譯器警告 （層級 1） C4689|'%c'： 不支援 #pragma detect_mismatch; 中的字元忽略 #pragma|
-|編譯器警告 （層級 4） C4690|[emitidl (pop)]: pop|
+|編譯器警告 （層級 4） C4690|[ emitidl( pop ) ]: pop|
 |[編譯器警告 (層級 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': 未參考組件 'file'，而是會使用目前的轉譯單位中定義的型別中，必須有參考類型|
 |[編譯器警告 (層級 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'function': 非私用成員的簽章含有組件私用原生類型 'native_type'|
 |[編譯器警告 （層級 1，錯誤） C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'class': 密封抽象類別不能有任何執行個體成員 '執行個體 member'|

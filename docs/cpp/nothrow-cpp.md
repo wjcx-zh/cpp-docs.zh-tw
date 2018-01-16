@@ -1,7 +1,7 @@
 ---
 title: "nothrow （c + +） |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/03/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-language
@@ -13,45 +13,50 @@ helpviewer_keywords:
 - __declspec keyword [C++], nothrow
 - nothrow __declspec keyword
 ms.assetid: 0a475139-459c-4ec6-99e8-7ecd0d7f44a3
-caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a6200a8207fdf25b533c7db7e05247797592744e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e0f5f40fbcfcb95952fd956060801e862e9cdaf
+ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
-**Microsoft 特定的**  
-  
- 可在函式的宣告中使用的 `__declspec` 擴充屬性。  
-  
+
+**Microsoft 特定的**
+
+可在函式的宣告中使用的 `__declspec` 擴充屬性。
+
 ## <a name="syntax"></a>語法  
   
-```  
-  
-return-type __declspec(nothrow) [call-convention] function-name ([argument-list])  
-```  
-  
-## <a name="remarks"></a>備註  
- 這個屬性會告知編譯器其所呼叫的已宣告函式絕對不會擲回例外狀況。 使用同步例外狀況處理模型時 (現在為預設值)，編譯器可以排除在這類函式中追蹤某些無法還原物件存留期的機制，並大幅降低程式碼大小。 指定下列前置處理器指示詞與下列三種函式宣告相同：  
-  
-```  
-#define WINAPI __declspec(nothrow) __stdcall   
-  
-void WINAPI f1();  
-void __declspec(nothrow) __stdcall f2();  
-void __stdcall f3() throw();  
-```  
-  
- 使用 `void __declspec(nothrow) __stdcall f2();` 的好處是您可以在一組函式上使用一個 API 定義 (例如 `#define` 陳述式所示)，以方便您指定 `nothrow`。 第三個宣告 `, void __stdcall f3() throw();` 是 C++ 標準所定義的語法。  
-  
-  
- **結束 Microsoft 特定的**  
-  
-## <a name="see-also"></a>請參閱  
- [__declspec](../cpp/declspec.md)   
- [關鍵字](../cpp/keywords-cpp.md)
+> *return-type* __declspec(nothrow) [*call-convention*] *function-name* ([*argument-list*])
+
+## <a name="remarks"></a>備註
+
+我們建議所有新的程式碼使用[noexcept](noexcept-cpp.md)運算子而不是`__declspec(nothrow)`。
+
+這個屬性會告知編譯器其所呼叫的已宣告函式絕對不會擲回例外狀況。 不過，它不會強制執行指示詞。 換句話說，它永遠不會造成[std:: terminate](../standard-library/exception-functions.md#terminate)叫用時，不像`noexcept`，或在**std:c + + 17**模式 (Visual Studio 2017 15.5 和更新版本)， `throw()`。
+
+使用同步例外狀況處理模型時 (現在為預設值)，編譯器可以排除在這類函式中追蹤某些無法還原物件存留期的機制，並大幅降低程式碼大小。 指定下列前置處理器指示詞，以下三個函式宣告相當於**/std:c + + 14**模式：
+
+```cpp
+#define WINAPI __declspec(nothrow) __stdcall
+
+void WINAPI f1();
+void __declspec(nothrow) __stdcall f2();
+void __stdcall f3() throw();
+```
+
+在**/std:c + + 17**模式中，`throw()`不等同於其他使用`__declspec(nothrow)`因為這會導致`std::terminate`從函式擲回的例外狀況時要叫用。
+
+`void __stdcall f3() throw();`宣告會使用 c + + 標準所定義的語法。 在 C + + 17`throw()`關鍵字已被取代。
+
+**結束 Microsoft 特定的**
+
+## <a name="see-also"></a>另請參閱
+
+[__declspec](../cpp/declspec.md)  
+[noexcept](noexcept-cpp.md)  
+[關鍵字](../cpp/keywords-cpp.md)  

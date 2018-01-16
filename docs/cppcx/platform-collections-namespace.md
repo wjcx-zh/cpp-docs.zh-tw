@@ -16,27 +16,27 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 0c328ebbaa18ad318981a63c717cafd614bc1521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a93282a233f98d7a384d1fdad2ba6ca862e9e3f2
+ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 命名空間
-Platform::Collection 命名空間包含 `Map`、 `MapView`、 `Vector`和 `VectorView` 類別。 這些類別是 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空間中定義的相對應介面的具象實作。 實體集合類型無法橫跨 ABI 移植 (例如，當 Javascript 或 C# 程式呼叫 C++ 元件時)，但是可以隱含地轉換成對應的介面類型。 例如，如果您實作公用方法來填入和傳回集合，請使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在內部實作集合，並使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作為傳回類型。 如需詳細資訊，請參閱[集合](../cppcx/collections-c-cx.md)和[c + + 中建立 Windows 執行階段元件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)。  
+Platform:: collections 命名空間包含`Map`， `MapView`， `Vector`，和`VectorView`類別。 這些類別是 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空間中定義的相對應介面的具象實作。 實體集合類型無法橫跨 ABI 移植 (例如，當 Javascript 或 C# 程式呼叫 C++ 元件時)，但是可以隱含地轉換成對應的介面類型。 例如，如果您實作公用方法來填入和傳回集合，請使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在內部實作集合，並使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作為傳回類型。 如需詳細資訊，請參閱[集合](../cppcx/collections-c-cx.md)和[c + + 中建立 Windows 執行階段元件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)。  
   
  您可以從 [std::vector](../standard-library/vector-class.md) 建構 Platform::Collections::Vector，也可以從 [std::map](../cppcx/platform-collections-map-class.md) 建構 [Platform::Collections::Map](../standard-library/map-class.md)。  
   
- 此外，platform:: collection 命名空間還支援後端插入和輸入的迭代器，以及`Vector`和`VectorView`迭代器。  
+ 此外，platform:: collections 命名空間還支援後端插入和輸入的迭代器，以及`Vector`和`VectorView`迭代器。  
   
- 您必須包含 (`#include`) collection.h 標頭，才能使用 Platform::Collection 命名空間中的類型。  
+ 您必須包含 (`#include`) collection.h 標頭，才能使用 platform:: collections 命名空間中的類型。  
   
 ## <a name="syntax"></a>語法  
   
 ```cpp  
   
 #include <collection.h>  
-using namespace Platform::Collection;  
+using namespace Platform::Collections;  
 ```  
   
 ### <a name="members"></a>成員  

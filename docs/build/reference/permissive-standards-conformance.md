@@ -18,11 +18,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 90ff6d2be6174f32d7d93252ebd8b693b422076d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="permissive--standards-conformance"></a>寬鬆 /-（標準的一致性）
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="syntax"></a>語法
 
-> **寬鬆 /-**
+> **/permissive-**
 
 ## <a name="remarks"></a>備註
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 
 **/ 寬鬆-**選項集[/zc: strictstrings](../../build/reference/zc-conformance.md)和[/zc: rvaluecast](../../build/reference/zc-conformance.md)合格行為的選項。 它們會預設為不合格的行為。 您可以傳遞特定**/Zc**後選項**/ 寬鬆-**覆寫這個行為在命令列上。
 
-在 Visual Studio 2017 版本 15.3，一開始編譯器的版本中**/ 寬鬆-**選項集**/Zc:ternary**選項。 編譯器也會實作多個兩階段的名稱查閱的需求。 當**/ 寬鬆-**設定選項時，編譯器會剖析函式和類別識別相依及非相依名稱的範本中所使用的範本定義。 在此版本中，執行名稱相依性分析。
+在 Visual Studio 2017 版本 15.3，一開始編譯器的版本中**/ 寬鬆-**選項集[/Zc:ternary](../../build/reference/zc-ternary.md)選項。 編譯器也會實作多個兩階段的名稱查閱的需求。 當**/ 寬鬆-**設定選項時，編譯器會剖析函式和類別識別相依及非相依名稱的範本中所使用的範本定義。 在此版本中，執行名稱相依性分析。
 
 環境特定擴充功能和標準保留最多實作的語言區域不會受到**/ 寬鬆-**。 例如，Microsoft 專有`__declspec`，呼叫慣例和結構化例外狀況處理關鍵字，以及特定編譯器的 pragma 指示詞或屬性未標示在編譯器**/ 寬鬆-**模式。
 

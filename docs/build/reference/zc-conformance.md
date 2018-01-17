@@ -20,11 +20,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="zc-conformance"></a>/Zc (一致性)
 
@@ -43,19 +43,20 @@ ms.lasthandoff: 12/21/2017
 |選項|行為|
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|啟用 C + + 17 過度對齊動態配置 （預設在 C + + 17）。|
-|[自動\[-\]](zc-auto-deduce-variable-type.md)|強制執行針對新的標準 c + + 意義`auto`(在預設情況下)。|
+|[auto\[-\]](zc-auto-deduce-variable-type.md)|強制執行針對新的標準 c + + 意義`auto`(在預設情況下)。|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|啟用外部連結的`constexpr`變數 （預設為關閉）。|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|強制執行標準 c + +`for`設定規則的範圍 (在預設情況下)。|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|啟用隱含`noexcept`對必要函式 (在預設情況下)。|
-|[內嵌\[-\]](zc-inline-remove-unreferenced-comdat.md)|如果它是 COMDAT 或只有內部連結中移除未參考的函式或資料 （預設為關閉）。|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|如果它是 COMDAT 或只有內部連結中移除未參考的函式或資料 （預設為關閉）。|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|強制執行 C + + 17 noexcept 規則 (上依預設，在 C + + 17 或更新版本)。|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|UDT 暫存不會繫結到非 const 左值參考 （預設為關閉）。|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|強制執行標準 c + + 明確類型轉換規則 （預設為關閉）。|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|啟用 C + + 14 全域調整大小解除配置函式 (在預設情況下)。|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|停用字串常值至`char*`或`wchar_t*`轉換 （預設為關閉）。|
+|[ternary\[-\]](zc-ternary.md)|強制執行條件運算子的運算元類型的規則 （預設為關閉）。|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|啟用安全執行緒本機靜態初始設定 (在預設情況下)。|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|假設`operator new`在失敗時擲回 （預設為關閉）。|
-|[三併詞\[-\]](zc-trigraphs-trigraphs-substitution.md)|啟用三併詞 （已過時，關閉的預設值）。|
+|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|啟用三併詞 （已過時，關閉的預設值）。|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`是原生類型，而不是 typedef (在預設情況下)。|
 
 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。

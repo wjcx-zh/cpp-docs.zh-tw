@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>在 Visual c + + 中開啟專案資料夾
 Visual Studio 2017 導入了 「 開啟資料夾 」 功能，可讓您開啟來源檔案的資料夾並立即開始撰寫程式碼以支援 IntelliSense、 瀏覽、 重構、 偵錯等等。 會不載入任何.sln 或.vcxproj 檔案;如有需要您可以指定自訂工作，以及建置並啟動參數，透過簡單的.json 檔案。 由開啟的資料夾，Visual c + + 現在可以支援不僅鬆散集合的檔案，而且也幾乎任何建置系統，包括 CMake、 忍者一樣，QMake （適用於 Qt 專案），又試過 gyp、 SCons、 Gradle、 Buck、 請等等。 
@@ -72,19 +72,130 @@ IntelliSense 和瀏覽的行為部分取決於作用中的組建組態，它會�
 |`undefines`|是未定義 （對應至如 MSVC /U） 巨集清單|
 |`intelliSenseMode`|使用 IntelliSense 引擎。 您可以指定架構特定變體 MSVC、 gcc 或 Clang:
 - msvc x86 （預設值）
-- msvc x64
-- msvc arm
-- clang-x86
-- clang-x64
+- msvc-x64
+- msvc-arm
+- windows-clang-x86
+- windows-clang-x64
 - windows-clang-arm
-- Linux x64
-- Linux x86
+- Linux-x64
+- Linux-x86
 - Linux arm
 - gccarm
 
-CppProperties.json 支援環境變數展開將包含路徑和其他屬性值。 語法是`${env.FOODIR}`展開環境變數`%FOODIR%`。
+#### <a name="environment-variables"></a>環境變數
+CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性值。 語法是`${env.FOODIR}`展開環境變數`%FOODIR%`。 也支援下列系統定義的變數：
 
-您也會有這個檔案內的存取權下列內建的巨集：
+|變數名稱|描述|  
+|-----------|-----------------|
+|vsdev|預設的 Visual Studio 環境|
+|msvc_x86|適用於 x86 使用 x86 編譯工具|
+|msvc_arm|使用 x86 arm 編譯工具|
+|msvc_arm64|使用 x86 ARM64 針對編譯工具|
+|msvc_x86_x64|使用 x86 AMD64 針對編譯工具|
+|msvc_x64_x64|使用 64 位元工具針對 AMD64 編譯|
+|msvc_arm_x64|為 ARM 使用 64 位元工具進行編譯|
+|msvc_arm64_x64|使用 64 位元工具針對 ARM64 編譯|
+
+安裝 Linux 工作負載時，就有一個下列環境可供從遠端目標 Linux 和 WSL:
+
+|變數名稱|描述|  
+|-----------|-----------------|
+|linux_x86|目標 x86 Linux 遠端|
+|linux_x64|目標 x64 Linux 遠端|
+|linux_arm|從遠端目標 ARM Linux|
+
+您可以定義自訂的環境變數中 CppProperties.json 是全域或每個組態。 下列範例會示範如何預設和自訂的環境變數可宣告及使用。 全域**環境**屬性會宣告名為的變數**INCLUDE** ，可以由任何設定：
+
+```json
+{
+  // The "environments" property is an array of key value pairs of the form
+  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 32-bit environment and toolchain.
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "inheritEnvironments": [
+        // Inherit the MSVC 64-bit environment and toolchain.
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined above.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+您也可以定義**環境**屬性設定，讓它只適用於該組態，並覆寫相同名稱的任何全域變數內。 在下列範例中，x64 組態會定義本機**INCLUDE**會覆寫全域值的變數：
+
+```json
+{
+  "environments": [
+    {
+      "INCLUDE": "${workspaceRoot}\\src\\includes"
+    }
+  ],
+ 
+  "configurations": [
+    {
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "name": "x86",
+      "includePath": [
+        // Use the include path defined in the global environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x86"
+    },
+    {
+      "environments": [
+        {
+          // Append 64-bit specific include path to env.INCLUDE.
+          "INCLUDE": "${env.INCLUDE};${workspaceRoot}\\src\\includes64"
+        }
+      ],
+ 
+      "inheritEnvironments": [
+        "msvc_x64"
+      ],
+      "name": "x64",
+      "includePath": [
+        // Use the include path defined in the local environments property.
+        "${env.INCLUDE}"
+      ],
+      "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
+      "intelliSenseMode": "msvc-x64"
+    }
+  ]
+}
+```
+
+所有自訂和預設環境變數也可以在 tasks.vs.json 和 launch.vs.json。
+
+#### <a name="macros"></a>巨集
+您可以存取內 CppProperties.json 下列內建的巨集：
 |||
 |-|-|
 |`${workspaceRoot}`| 工作區資料夾的完整路徑|
@@ -138,7 +249,7 @@ CppProperties.json 支援環境變數展開將包含路徑和其他屬性值。 
 
 ![開啟資料夾設定工作](media/open-folder-config-tasks.png)
 
-這會建立 （或開啟） `tasks.vs.json` .vs 資料夾會在根專案資料夾中建立 Visual Studio 中的檔案。 您可以定義此檔案中的任何任意的工作，然後再叫用它從**方案總管 中**操作功能表。 下列範例會示範 tasks.vs.json 檔案，以定義單一工作。 `taskName`在內容功能表中會定義顯示的名稱。 `appliesTo`定義哪些檔案可執行命令。 `command`屬性參考到 COMSPEC 環境變數，可用來識別主控台 (在 Windows 上的 cmd.exe) 的路徑。 `args`屬性會指定要叫用的命令列。 `${file}`巨集擷取選取的檔案中**方案總管 中**。 下列範例會顯示目前選取的.cpp 檔案的檔案名稱。
+這會建立 （或開啟） `tasks.vs.json` .vs 資料夾會在根專案資料夾中建立 Visual Studio 中的檔案。 您可以定義此檔案中的任何任意的工作，然後再叫用它從**方案總管 中**操作功能表。 下列範例會示範 tasks.vs.json 檔案，以定義單一工作。 `taskName`在內容功能表中會定義顯示的名稱。 `appliesTo`定義哪些檔案可執行命令。 `command`屬性參考到 COMSPEC 環境變數，可用來識別主控台 (在 Windows 上的 cmd.exe) 的路徑。 您也可以參考環境變數中 CppProperties.json 或 CMakeSettings.json 宣告。 `args`屬性會指定要叫用的命令列。 `${file}`巨集擷取選取的檔案中**方案總管 中**。 下列範例會顯示目前選取的.cpp 檔案的檔案名稱。
 
 ```json
 {
@@ -155,6 +266,8 @@ CppProperties.json 支援環境變數展開將包含路徑和其他屬性值。 
 }
 ```
 您可以在儲存之後 tasks.vs.json，以滑鼠右鍵按一下資料夾中的任何.cpp 檔案、 選擇**回應檔名**從內容功能表中，並請參閱 [輸出] 視窗中顯示的檔案名稱。
+
+
 
 #### <a name="appliesto"></a>appliesTo
 您可以建立的任何檔案或資料夾的工作，藉由指定其名稱中的`appliesTo`欄位，例如`"appliesTo" : "hello.cpp"`。 當做值，就可以使用下列的檔案遮罩：

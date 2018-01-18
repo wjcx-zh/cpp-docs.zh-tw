@@ -142,6 +142,7 @@
 ##### [/Zc:rvalueCast (強制執行類型轉換規則)](zc-rvaluecast-enforce-type-conversion-rules.md)
 ##### [/Zc:sizedDealloc (啟用調整大小後的全域解除配置函式)](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)
 ##### [/Zc:strictStrings (停用字串常值類型轉換)](zc-strictstrings-disable-string-literal-type-conversion.md)
+##### [/Zc:ternary (強制執行條件運算子規則)](zc-ternary.md)
 ##### [/Zc:threadSafeInit (安全執行緒區域靜態變數初始設定)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew (假設擲回運算子 new)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (三併詞替代)](zc-trigraphs-trigraphs-substitution.md)

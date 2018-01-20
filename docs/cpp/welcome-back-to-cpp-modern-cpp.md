@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: d26cfad945278a45eccad2dc031d90e27da63dc0
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
 C++ 是世界上最廣泛使用的程式語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 這種語言較其他語言更具彈性，因為您可以用它來建立各種應用程式，從好玩刺激的遊戲到高效能科學軟體、裝置驅動程式、內嵌程式和 Windows 用戶端應用程式，一應俱全。 20 多年來，C++ 已經用來解決這類和許多其他的問題。 您可能不知道的是，有越來越多的 C++ 程式設計人員已經捲藏過時的 C-Style 程式設計舊衣，換上了現代 C++ 的新裝。  
@@ -50,40 +50,60 @@ C++ 是世界上最廣泛使用的程式語言之一。 編寫完善的 C++ 程�
  C++ 語言本身也有所演變。 比較下列程式碼片段。 這是顯示 C++ 過去一般狀況的程式碼片段：  
   
 ```cpp  
-// circle and shape are user-defined types  
-circle* p = new circle( 42 );   
-vector<shape*> v = load_shapes();  
-  
-for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
-    if( *i && **i == *p )  
-        cout << **i << " is a match\n";  
-}  
-  
-for( vector<circle*>::iterator i = v.begin();  
-        i != v.end(); ++i ) {  
-    delete *i; // not exception safe  
-}  
-  
-delete p;  
-```  
-  
+
+#include <vector>
+
+void f()
+{
+    // Assume circle and shape are user-defined types  
+    circle* p = new circle( 42 );   
+    vector<shape*> v = load_shapes();  
+
+    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
+        if( *i && **i == *p )  
+            cout << **i << " is a match\n";  
+    }  
+
+    // CAUTION: If v's pointers own the objects, then you
+    // must delete them all before v goes out of scope.
+    // If v's pointers do not own the objects, and you delete
+    // them here, any code that tries to dereference copies
+    // of the pointers will cause null pointer exceptions.
+    for( vector<circle*>::iterator i = v.begin();  
+            i != v.end(); ++i ) {  
+        delete *i; // not exception safe  
+    }  
+
+    // Don't forget to delete this, too.  
+    delete p;  
+} // end f()
+```
+
  在現代 C++ 中達成相同狀況的做法如下：  
   
-```cpp  
+```cpp
+
 #include <memory>  
 #include <vector>  
-// ...  
-// circle and shape are user-defined types  
-auto p = make_shared<circle>( 42 );  
-vector<shared_ptr<shape>> v = load_shapes();  
-  
-for( auto& s : v ) {  
-    if( s && *s == *p )  
-        cout << *s << " is a match\n";  
-} 
-```  
-  
- 在現代 C++ 中，因為可以改用智慧型指標，就不需要使用 new/delete 或明確例外狀況處理。 當您使用`auto`類型推算和[lambda 函式](../cpp/lambda-expressions-in-cpp.md)您可以撰寫速度更快的程式碼更強化且更容易了解。 `for_each` 會比 `for` 迴圈更清楚、更輕鬆使用，而且比較不容易發生未知的錯誤。 您可以使用未定案程式碼搭配最少的程式行來撰寫應用程式。 您可以使該程式碼成為記憶體安全和例外狀況安全，而且沒有要處理的配置/解除配置或錯誤碼。  
+
+void f()
+{
+    // ...  
+    auto p = make_shared<circle>( 42 );  
+    vector<shared_ptr<shape>> v = load_shapes();  
+
+    for( auto& s : v ) 
+    {  
+        if( s && *s == *p )
+        {
+            cout << *s << " is a match\n";
+        }
+    }
+}
+
+```
+
+ 在現代 C++ 中，因為可以改用智慧型指標，就不需要使用 new/delete 或明確例外狀況處理。 當您使用`auto`類型推算和[lambda 函式](../cpp/lambda-expressions-in-cpp.md)您可以撰寫速度更快的程式碼更強化且更容易了解。 範圍架構和`for`迴圈是較為簡潔、 容易使用，且較不容易發生非預期的錯誤 c-style`for`迴圈。 您可以使用未定案程式碼搭配最少的程式行來撰寫應用程式。 您可以使該程式碼成為記憶體安全和例外狀況安全，而且沒有要處理的配置/解除配置或錯誤碼。  
   
  現代 C++ 結合了兩種多型：編譯時期 (透過樣板) 和執行階段 (透過繼承和虛擬化)。 您可以混合使用這兩種多型來產生良好效果。 C + + 標準程式庫範本`shared_ptr`使用內部虛擬方法，來完成其顯然毫不費力的類型清除。 但是當範本是較佳選擇時，請勿對多型過度使用虛擬。 樣板有可觀的強大功能。  
   

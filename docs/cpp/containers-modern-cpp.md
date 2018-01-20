@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ffad61c015c38d808b35ebffd98f74733d0997de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fc8bbc3a983e6fa50e4ae5e8590e1f1de37f02f
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="containers-modern-c"></a>容器 (現代 C++)  
   
@@ -41,7 +41,7 @@ apple_color["Granny Smith"] = "Green";
   
 1.  [陣列](../standard-library/array-class-stl.md)輸入內嵌很重要的比方說，做為成員。  
   
-2.  未排序關聯容器，例如 [unordered_map] ((../standard-library/unordered-map-class.md)。 這些具有額外負荷較低的每個元素，並定時查閱，但它們可能不容易使用正確且有效率。  
+2.  例如，未排序關聯容器[unordered_map](../standard-library/unordered-map-class.md)。 這些具有額外負荷較低的每個元素，並定時查閱，但它們可能不容易使用正確且有效率。  
   
 3.  排序`vector`。 如需詳細資訊，請參閱[演算法](../cpp/algorithms-modern-cpp.md)。  
   

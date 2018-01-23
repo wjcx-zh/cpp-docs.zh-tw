@@ -17,11 +17,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67c1924b1e9ed3f533fc1f22fbc0f34a2ecf03be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d7d2d69cfdfd12f0a8dbdcf3a771e01db19da2c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows 程式開發符號
 這些符號也是 MFC 支援檔案的一部分，但是它們可以支援標準的 Windows 應用程式函式和動作。 這些符號主要用於功能表。 當您使用功能表功能表編輯器中時，這些符號會出現在 [屬性] 視窗功能表的常見命令與相關聯。 比方說，如果您的應用程式檔案功能表與 [結束] 命令，該命令會與相關聯的符號 ID_APP_EXIT 中[屬性視窗](/visualstudio/ide/reference/properties-window)。  
@@ -67,6 +70,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  MFC  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 預先定義的符號](../windows/mfc-predefined-symbols.md)   
  [符號：資源識別項](../windows/symbols-resource-identifiers.md)

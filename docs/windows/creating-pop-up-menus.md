@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 529e0b4a659a3ea0c879db2c3b2a3bd4a9a3d160
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6185f52eeaf56ac0d31cb8e9f22715db36514725
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-pop-up-menus"></a>建立快顯功能表
 [快顯功能表](../mfc/menus-mfc.md) 會顯示常用命令。 它們可隨著指標位置顯示相關內容。 要在您的應用程式中使用快顯功能表，必須建置功能表本身，然後將它連接到應用程式程式碼。  
@@ -50,6 +53,6 @@ ms.lasthandoff: 10/24/2017
   
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快顯功能表連接至您的應用程式](../windows/connecting-a-pop-up-menu-to-your-application.md)   
  [功能表編輯器](../windows/menu-editor.md)

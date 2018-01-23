@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21febf38be647513ca58560078875691a82d22aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc7fbb58aa1ac85c185756eb336737cbaf33a48e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>處理輸入/輸出的建議
 無論您使用以檔案為基礎的 I/O 或不是取決於您如何回應下列決策樹狀結構中的問題：  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
      **沒有應用程式整個檔案讀取到記憶體上開啟檔案，並將整個檔案寫回至磁碟上儲存檔案嗎**  
   
-    -   [是]: 這是預設的 MFC 文件大小寫。 使用**CDocument**序列化。  
+    -   是: 這是預設的 MFC 文件大小寫。 使用**CDocument**序列化。  
   
     -   否： 這通常是交易式更新檔案的大小寫。 在您更新每個交易為基礎的檔案，並不需要**CDocument**序列化。  
   
@@ -56,5 +57,5 @@ ms.lasthandoff: 10/24/2017
   
  如需序列化資訊，請參閱[序列化](../mfc/serialization-in-mfc.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [序列化︰序列化和資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)

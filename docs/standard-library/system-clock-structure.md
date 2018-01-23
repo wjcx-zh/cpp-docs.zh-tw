@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7e57faa98571c59515a9b669d0ce5d53459b103
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 603415b438578258e982f0934161d2de436e2a3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="systemclock-structure"></a>system_clock 結構
 代表以系統時鐘為基礎的「計時類型」。  
@@ -57,7 +58,7 @@ struct system_clock;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[from_time_t](#from_time_t)|靜態。 傳回最接近指定時間的 `time_point`。|  
 |[現在](#now)|靜態。 傳回目前時間。|  
@@ -73,7 +74,7 @@ struct system_clock;
 ## <a name="requirements"></a>需求  
  **標頭：** \<chrono >  
   
- **命名空間：**std::chrono  
+ **命名空間：** std::chrono  
   
 ##  <a name="from_time_t"></a>system_clock:: from_time_t
  靜態方法，會傳回估計最接近 `Tm` 所表示之時間的 [time_point](../standard-library/time-point-class.md)。  
@@ -133,7 +134,7 @@ static time_t to_time_t(const time_point& Time) noexcept;
  `Time`  
  [time_point](../standard-library/time-point-class.md) 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
  [steady_clock 結構](../standard-library/steady-clock-struct.md)

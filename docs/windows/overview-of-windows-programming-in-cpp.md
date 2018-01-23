@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bf25d8f3653d2146774efd333daff74a5fb33e2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/03/2018
 
 ##  <a name="BK_WindowsUniversal"></a> Windows Universal Apps
 
-使用 Windows 10，應用程式能夠在所有 Windows 10 裝置如平板電腦和行動電話，以及在桌上型電腦上執行。 在桌上型電腦，它們能夠以桌面視窗執行，而不是永遠以全螢幕方式執行。 在 Xbox 和未來的裝置上，也可以執行這些應用程式。  兩種應用程式類型的程式設計模型與 Win32 桌面應用程式不同。 這些 Windows 應用程式是在 Windows 執行階段上執行，後者提供使用者介面項目、這些應用程式的基本服務，並提供與受支援之各種硬體裝置的介面。 這些應用程式編譯為原生程式碼，且具有 XAML 使用者介面，或使用 DirectX。 您也可以在其他 Windows 應用程式可以取用的原生程式碼中撰寫 Windows 執行階段元件，包括以 C#、 Visual Basic 或 JavaScript 撰寫的應用程式。 如需詳細資訊，請參閱[c + + 中建立通用 Windows 平台應用程式](http://go.microsoft.com/fwlink/p/?linkid=534976)，[建立第一個使用 DirectX UWP 遊戲](http://go.microsoft.com/fwlink/p/?LinkId=244656)，和[c + + 中的建立 Windows 執行階段元件](http://go.microsoft.com/fwlink/p/?LinkId=244658)。
+使用 Windows 10，應用程式能夠在所有 Windows 10 裝置如平板電腦和行動電話，以及在桌上型電腦上執行。 在桌上型電腦，它們能夠以桌面視窗執行，而不是永遠以全螢幕方式執行。 在 Xbox 和未來的裝置上，也可以執行這些應用程式。  兩種應用程式類型的程式設計模型與 Win32 桌面應用程式不同。 這些 Windows 應用程式是在 Windows 執行階段上執行，後者提供使用者介面項目、這些應用程式的基本服務，並提供與受支援之各種硬體裝置的介面。 這些應用程式編譯為原生程式碼，且具有 XAML 使用者介面，或使用 DirectX。 您也可以在其他 Windows 應用程式可以取用的原生程式碼中撰寫 Windows 執行階段元件，包括以 C#、 Visual Basic 或 JavaScript 撰寫的應用程式。 如需詳細資訊，請參閱[在 c + + 中建立的 UWP"Hello world"應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)，[使用 DirectX 建立簡單的 UWP 遊戲](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game)，和[c + + 中的建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 > [!TIP]
 > 適用於 Windows 10 中，您可以使用桌面應用程式轉換工具來封裝您現有的桌面應用程式以透過 Windows 市集的部署。 如需詳細資訊，請參閱 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (在 Centennial 專案中使用 Visual C++ 執行階段) 和[使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)。

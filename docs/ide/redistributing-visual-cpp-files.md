@@ -20,13 +20,17 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89795e19df46b3701cf8dcc7a402540f693db94
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="redistributing-visual-c-files"></a>轉散發 Visual C++ 檔案
+
+> [!NOTE]
+> 會在您此處因為您所需的其中一個 Visual c + + 執行階段檔案的下載？ 移至[Microsoft](http://www.microsoft.com/)網站，並輸入**Visual c + + 可轉散發**[搜尋] 方塊中。 下載並安裝您的電腦 (例如，x64 如果您執行 Windows 64 位元) 的架構和您需要的 Visual c + + 版本的可轉散發套件。   
+  
 當您部署應用程式時，您也必須部署必要的支援檔案。 如果其中有任何檔案是由 Microsoft 提供，請檢查您否有權限轉散發。 若要檢視 Visual Studio 授權條款，請參閱在 ide 中的 [關於 Microsoft Visual Studio] 對話方塊中的 [授權條款] 連結，或下載[Microsoft 軟體授權條款](http://go.microsoft.com/fwlink/p/?LinkId=831114)檔案。 若要檢視的 「 可轉散發清單 」 特定版本的 Visual Studio 的 Microsoft 軟體授權條款 < 可散發程式碼 > 一節中所參考，請參閱[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 的可散發程式碼SDK （包含公用程式與 BuildServer 檔案）](http://go.microsoft.com/fwlink/p/?LinkId=823098)，或適用於 Visual Studio 2015，請參閱[Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 可散發程式碼](http://go.microsoft.com/fwlink/p/?LinkId=523763)。 如需可轉散發檔案的詳細資訊，請參閱[判斷要轉散發哪些 Dll](../ide/determining-which-dlls-to-redistribute.md)和[部署範例](../ide/deployment-examples.md)。  
   
  若要部署可轉散發 Visual c + + 檔案，您可以使用 Visual c + + 可轉散發套件 (VCRedist\_x86.exe，VCRedist\_x64.exe 或 VCRedist\_arm.exe) 包含在 Visual Studio。 在 Visual Studio 2017，這些檔案位於 Program Files [(x86)]\\Microsoft Visual Studio\\2017年\\_edition_\\VC\\可轉散發套件\\MSVC\\_lib 版本_資料夾，其中_edition_是安裝，Visual Studio 版本和_lib 版本_的版本轉散發程式庫。 在 Visual Studio 2015 中，這些檔案位於您的 Visual Studio 安裝目錄下 Program Files [(x86)] \Microsoft Visual Studio*版本*\VC\redist\\*地區設定*\\. 另一個選項是使用可轉散發合併模組 （.msm 檔案） 位於 Program Files [(x86)]; 在 Visual Studio 2017\\Microsoft Visual Studio\\2017年\\_edition_ \\VC\\可轉散發套件\\MSVC\\_lib 版本_\\MergeModules\\資料夾。 Visual Studio 2015 中可以找到這些位於 Program Files [(x86)] \common 模組\\。 也可以直接安裝中的可轉散發 Visual c + + Dll*應用程式本機資料夾*，這是包含可執行應用程式檔案的資料夾。 對於維護原因，建議您不要使用此安裝位置。  

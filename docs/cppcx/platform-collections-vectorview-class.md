@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView 類別
 代表物件之循序集合的唯讀檢視，這些物件可透過索引加以個別存取。 集合中每個物件的類型，由樣板參數指定。  
@@ -54,17 +54,17 @@ template <typename T, typename E>
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Vectorview:: Vectorview](#ctor)|初始化 VectorView 類別的新執行個體。|  
+|[VectorView::VectorView](#ctor)|初始化 VectorView 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Vectorview:: First](#first)|傳回迭代器，指定 VectorView 中的第一個項目。|  
-|[Vectorview:: Getat](#getat)|擷取由指定之索引所表示的目前 VectorView 項目。|  
-|[Vectorview:: Getmany](#getmany)|由指定的索引處開始，從目前 VectorView 擷取一連串項目。|  
-|[Vectorview:: Indexof](#indexof)|在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。|  
-|[Vectorview:: Size](#size)|傳回目前 VectorView 物件中的項目數。|  
+|[VectorView::First](#first)|傳回迭代器，指定 VectorView 中的第一個項目。|  
+|[VectorView::GetAt](#getat)|擷取由指定之索引所表示的目前 VectorView 項目。|  
+|[VectorView::GetMany](#getmany)|由指定的索引處開始，從目前 VectorView 擷取一連串項目。|  
+|[VectorView::IndexOf](#indexof)|在目前 VectorView 中搜尋指定的項目，如果找到，則傳回項目的索引。|  
+|[VectorView::Size](#size)|傳回目前 VectorView 物件中的項目數。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `VectorView`  
@@ -277,4 +277,4 @@ VectorView(
   
 ## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)   
- [在 c + + 中建立 Windows 執行階段元件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)
+ [在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

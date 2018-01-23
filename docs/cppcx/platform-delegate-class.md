@@ -16,11 +16,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a95dad9833bcf1bebe9d9f74eceb05efcfa8ce0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 661e96cd2455610e6a7f669928d49c915b7d7575
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformdelegate-class"></a>Platform::Delegate 類別
 表示函式物件。  
@@ -35,7 +35,7 @@ public delegate void delegate_name();
  委派類別具有衍生自 [Platform::Object Class](../cppcx/platform-object-class.md)的 Equals()、GetHashCode() 和 ToString() 方法。  
   
 ### <a name="remarks"></a>備註  
- 使用 [委派](../windows/delegate-cpp-component-extensions.md) 關鍵字建立委派，請勿明確使用 Platform::Delegate。 如需詳細資訊，請參閱[委派](../cppcx/delegates-c-cx.md)。 如需如何建立和使用委派的範例，請參閱 [Creating Windows Runtime Components in C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)。  
+ 使用 [委派](../windows/delegate-cpp-component-extensions.md) 關鍵字建立委派，請勿明確使用 Platform::Delegate。 如需詳細資訊，請參閱[委派](../cppcx/delegates-c-cx.md)。 如需如何建立和使用委派的範例，請參閱[c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。  
   
 ### <a name="requirements"></a>需求  
  **最低支援用戶端：** Windows 8  

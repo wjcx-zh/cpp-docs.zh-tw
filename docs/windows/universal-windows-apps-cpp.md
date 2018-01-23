@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55a6f21a8b4589b5288b8aff462dbb0234a10300
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 應用程式 (C++)
 通用 Windows 平台 (UWP) 應用程式具體表現一組設計原則，以強調為主的不同裝置上的不同螢幕大小自動調整的內容的簡單使用者介面。 您會在 XAML 標記中建立 UI，並在原生 C++ 中建立程式碼後置。 您也可以建立元件 (DLL)，供其他語言所撰寫的 UWP 應用程式使用。 用於 UWP 應用程式開發介面是 Windows 執行階段，這是構造良好的程式庫提供各種不同的作業系統服務。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 |[Visual C++ 語言參考 (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)|描述一組擴充功能，簡化 c + + 使用的 Windows 執行階段 Api，並啟用根據例外狀況的錯誤處理。|  
 |[建置應用程式和程式庫 (C++/CX)](../cppcx/building-apps-and-libraries-c-cx.md)|說明如何建立可以從 C++/CX 應用程式或元件存取的 DLL 和靜態程式庫。|  
 |[教學課程：使用 C++ 建立您的第一個 Windows 市集應用程式](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|此逐步解說介紹 c + + 通用 Windows 平台應用程式開發的基本概念。 (尚未更新有關在 Windows 10 上開發 UWP 的資訊)。|  
-|[在 C++ 中建立 Windows 執行階段元件](https://docs.microsoft.com/en-us/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|描述如何建立其他的通用 Windows 平台應用程式和元件可以使用的 Dll。|  
+|[在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|描述如何建立其他的通用 Windows 平台應用程式和元件可以使用的 Dll。|  
 |[開發遊戲](https://docs.microsoft.com/en-us/windows/uwp/gaming/)|說明如何使用 DirectX 和 C++ 來建立遊戲。|  
   
 ## <a name="universal-windows-platform-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 的通用 Windows 平台應用程式 

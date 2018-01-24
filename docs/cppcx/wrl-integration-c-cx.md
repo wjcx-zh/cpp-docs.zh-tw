@@ -21,7 +21,7 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="wrl-integration-ccx"></a>WRL 整合 (C++/CX)
 
-自由可以混合使用 WRL 程式碼[!INCLUDE[cppwrl](includes/cppwrl-md.md)]([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) 程式碼。 在同一個轉譯單位中，您可以使用 WRL 物件控制代碼與宣告的物件 (`^`) 標記法和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]智慧型指標 (`ComPtr<T>`) 標記法。 不過，您必須手動處理傳回值，和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]HRESULT 錯誤碼和 WRL 例外狀況。
+自由可以混合使用 WRL 程式碼[!INCLUDE[cppwrl](includes/cppwrl-md.md)] ([!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]) 程式碼。 在同一個轉譯單位中，您可以使用 WRL 物件控制代碼與宣告的物件 (`^`) 標記法和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]智慧型指標 (`ComPtr<T>`) 標記法。 不過，您必須手動處理傳回值，和[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)]HRESULT 錯誤碼和 WRL 例外狀況。
   
 ## <a name="includecppwrlshortincludescppwrl-short-mdmd-development"></a>[!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] 開發
 

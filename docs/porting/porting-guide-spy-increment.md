@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 11b50aa8eb5c44a8949228d03b0b733de90fb0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
+ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 本移植案例研究的設計，是為了讓您了解什麼是典型移植專案、您可能遇到的問題類型，並提供一些可用於解決移植問題的一般秘訣和訣竅。 這不是最終移植指南，因為移植專案的體驗主要取決於程式碼的細節。  
@@ -141,7 +141,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
   
 ```  
   
- 目前正在使用 MBCS (多位元組字元集) 建置專案，因此 char 是適當的字元資料類型。 不過，為了更輕鬆地將程式碼更新為 UTF-16 Unicode，我們將此更新為 TCHAR，以根據專案設定中的 [字元集] 屬性設定為 MBCS 或 Unicode，解析成 char 或 wchar_t。  
+ 目前使用 MBCS (多位元組字元集) 來建置專案，因此 `char` 是適當的字元資料類型。 不過，為了更輕鬆地將程式碼更新為 UTF-16 Unicode，我們將此更新為 `TCHAR`，以根據專案設定中的 [字元集] 屬性設定為 MBCS 或 Unicode，解析成 `char` 或 `wchar_t`。  
   
  還需要更新其他一些程式碼片段。  我們以 ios_base 取代基底類別 ios，並以 basic_ostream\<T> 取代 ostream。 我們加入兩個額外的 typedef，並編譯這個區段。  
   
@@ -514,8 +514,9 @@ warning C4211: nonstandard extension used: redefined extern to static
   
  當變數先宣告為 `extern`，稍後再宣告為 `static` 時，就會發生這個問題。 這兩個儲存類別規範的意思互斥，但允許做為 Microsoft 擴充功能。 如果您想要讓程式碼可以移植到其他編譯器，或者想要使用 /Za (ANSI 相容性) 進行編譯，您需要變更宣告以擁有相符的儲存類別規範。  
   
-##  <a name="porting_to_unicode"></a> 步驟 11： 從 MBCS 移植到 Unicode  
- 請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前的程式碼使用 MBCS，為了繼續使用，我們需要下載 MFC 的 MBCS 版本。  這個相當大的程式庫已從預設 Visual Studio 安裝移除，因此必須另外下載。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 一旦您下載這個程式庫並重新啟動 Visual Studio，即可使用 MFC 的 MBCS 版本進行編譯並與之連結，但若要移除 MBCS 的相關警告，您還應該在專案屬性的 [前置處理器] 區段中，將 NO_WARN_MBCS_MFC_DEPRECATION 加入預先定義的巨集清單，或加入 stdafx.h 標頭檔或其他常見標頭檔的開頭。  
+##  <a name="porting_to_unicode"></a> 步驟 11： 從 MBCS 移植到 Unicode
+
+ 請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 已在 Visual Studio 2013 和 2015 中取代 MBCS 版的 MFC，但在 Visual Studio 2017 中不再予以取代。 如果使用 Visual Studio 2013 或 2015，則在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前程式碼使用 MBCS，而為了繼續使用，我們需要安裝 MFC 的 ANSI/MBCS 版本。 相當大的 MFC 程式庫不是預設 Visual Studio **使用 C++ 的桌面開發**安裝的一部分，因此您必須從安裝程式的選擇性元件中選取它。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 下載這個程式庫並重新啟動 Visual Studio 之後，即可使用 MFC 的 MBCS 版本進行編譯並與之連結，但若要在使用 Visual Studio 2013 或 2015 時移除 MBCS 的相關警告，則也應該在專案屬性的 [前置處理器] 區段中，將 **NO_WARN_MBCS_MFC_DEPRECATION** 新增至預先定義的巨集清單，或新增於 stdafx.h 標頭檔或其他常見標頭檔的開頭。  
   
  現在出現一些連結器錯誤。  
   
@@ -531,7 +532,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
   
  現在讓我們實際將舊版多位元組字元集 (MBCS) 程式碼更新為 Unicode。 由於這是與 Windows 桌面平台緊密繫結的 Windows 應用程式，因此我們會將其移植到 Windows 所使用的 UTF-16 Unicode。 如果您想要撰寫跨平台程式碼，或將 Windows 應用程式移植到其他平台，您可能需要考慮移植到其他作業系統廣泛使用的 UTF-8。  
   
- 移植到 UTF-16 Unicode 時，我們必須決定是否仍然需要編譯為 MBCS 的選項。  如果想要有支援 MBCS 的選項，我們應該使用 TCHAR 巨集做為字元類型，以根據編譯期間定義 _MBCS 或 _UNICODE，解析成 char 或 wchar_t。 切換為 TCHAR 和 TCHAR 版的各式 API，而不是 wchar_t 及其關聯的 API，表示您只要定義 _MBCS 巨集 (而不是 _UNICODE)，就能返回程式碼的 MBCS 版本。 除了 TCHAR 之外，還存在廣泛使用之 typedef、巨集和函式的各種 TCHAR 版本。 例如，以 LPCTSTR 取代 LPCSTR 等。 在專案屬性對話方塊中，於 [組態屬性] 的 [一般] 區段中，將 [字元集] 屬性從 [使用 MBCS 字元集] 變更為 [使用 Unicode 字元集]。 這個設定會影響在編譯期間預先定義的巨集。 同時會影響 UNICODE 巨集和 _UNICODE 巨集。 這個專案屬性對兩者的影響會一致。 Windows 標頭使用 UNICODE，而 Visual C++ 標頭 (例如 MFC) 使用 _UNICODE，但是當定義其中一個時，另一個一律會取得定義。  
+ 移植到 UTF-16 Unicode 時，我們必須決定是否仍然需要編譯為 MBCS 的選項。  如果想要有支援 MBCS 的選項，我們應該使用 TCHAR 巨集作為字元類型，以根據編譯期間定義 _MBCS 或 _UNICODE，解析成 `char` 或 `wchar_t`。 切換為 TCHAR 和 TCHAR 版的各式 API，而不是 `wchar_t` 及其關聯的 API，表示您只要定義 _MBCS 巨集 (而不是 _UNICODE)，就能返回程式碼的 MBCS 版本。 除了 TCHAR 之外，還存在廣泛使用之 typedef、巨集和函式的各種 TCHAR 版本。 例如，以 LPCTSTR 取代 LPCSTR 等。 在專案屬性對話方塊中，於 [組態屬性] 的 [一般] 區段中，將 [字元集] 屬性從 [使用 MBCS 字元集] 變更為 [使用 Unicode 字元集]。 這個設定會影響在編譯期間預先定義的巨集。 同時會影響 UNICODE 巨集和 _UNICODE 巨集。 這個專案屬性對兩者的影響會一致。 Windows 標頭使用 UNICODE，而 Visual C++ 標頭 (例如 MFC) 使用 _UNICODE，但是當定義其中一個時，另一個一律會取得定義。  
   
  目前有使用 TCHAR 從 MBCS 移植到 UTF-16 Unicode 的良好[指南](http://msdn.microsoft.com/library/cc194801.aspx)。 我們將選擇這個方法。 首先，我們將 [字元集] 屬性變更為 [使用 Unicode 字元集] 並重建專案。  
   
@@ -555,7 +556,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);  
 ```  
   
- _T 巨集的效果是根據 MBCS 或 UNICODE 的設定，將字串常值編譯為 char 字串或 wchar_t 字串。 若要在 Visual Studio 中以 _T 取代所有字串，請先開啟 [快速取代]\(快速鍵：Ctrl+F) 方塊或 [檔案中取代]\(快速鍵：Ctrl+Shift+H)，然後選擇 [使用規則運算式] 核取方塊。 輸入 `((\".*?\")|('.+?'))` 做為搜尋文字，以及 `_T($1)` 做為取代文字。 如果某些字串周圍已經有 _T 巨集，這個程序會再加入巨集一次；您也可能發現不需要 _T 的情況 (例如使用 `#include` 時)，因此最好使用 [取代下一個]，而不是 [全部取代]。  
+ _T 巨集的效果是根據 MBCS 或 UNICODE 的設定，將字串常值編譯為 `char` 字串或 `wchar_t` 字串。 若要在 Visual Studio 中以 _T 取代所有字串，請先開啟 [快速取代]\(快速鍵：Ctrl+F) 方塊或 [檔案中取代]\(快速鍵：Ctrl+Shift+H)，然後選擇 [使用規則運算式] 核取方塊。 輸入 `((\".*?\")|('.+?'))` 做為搜尋文字，以及 `_T($1)` 做為取代文字。 如果某些字串周圍已經有 _T 巨集，這個程序會再加入巨集一次；您也可能發現不需要 _T 的情況 (例如使用 `#include` 時)，因此最好使用 [取代下一個]，而不是 [全部取代]。  
   
  這個特定函式 [wsprintf](https://msdn.microsoft.com/library/windows/desktop/ms647550.aspx) 實際上是定義於 Windows 標頭中，其文件建議不要使用它，因為可能會發生緩衝區滿溢的情況。 `szTmp` 緩衝區未指定大小，因此該函式無法檢查緩衝區是否可以保留寫入的所有資料。 請參閱下一節有關移植到安全 CRT 的資訊，我們在該節中會修正其他類似問題。 我們最後會以 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 來取代它。  
   
@@ -573,7 +574,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- 即使使用了 _tcscpy 函式 (用於複製字串的 TCHAR strcpy 函式)，配置的緩衝區還是 char 緩衝區。 您可以輕鬆變更為 TCHAR。  
+ 即使使用 _tcscpy 函式 (用於複製字串的 TCHAR strcpy 函式)，配置的緩衝區還是 `char` 緩衝區。 您可以輕鬆變更為 TCHAR。  
   
 ```cpp  
 pParentNode->m_szText = new TCHAR[strTitle.GetLength() + 1];  
@@ -581,7 +582,7 @@ _tcscpy(pParentNode->m_szText, strTitle);
   
 ```  
   
- 同樣地，如果保證是編譯器錯誤，則會將 `LPSTR` (STRing 的長指標) 和 `LPCSTR` (常數 STRing 的長指標) 分別變更為 `LPTSTR` (TCHAR STRing 的長指標) 和 `LPCTSTR` (常數 TCHAR STRing 的長指標)。 由於必須個別檢查每種情況，因此我們選擇不使用全域搜尋和取代來進行這類取代。 在某些情況下，需要 char 版本，例如處理使用具有 A 尾碼之 Windows 結構的特定 Windows 訊息時。 在 Windows API 中，尾碼 A 表示 ASCII 或 ANSI (也適用於 MBCS)，而尾碼 W 表示寬字元或 UTF-16 Unicode。 Windows 標頭使用這個命名模式，但是當我們必須加入只在 MBCS 版本中定義的 Unicode 版函式時，也會在 Spy++ 程式碼中遵循這個模式。  
+ 同樣地，如果保證是編譯器錯誤，則會將 `LPSTR` (STRing 的長指標) 和 `LPCSTR` (常數 STRing 的長指標) 分別變更為 `LPTSTR` (TCHAR STRing 的長指標) 和 `LPCTSTR` (常數 TCHAR STRing 的長指標)。 由於必須個別檢查每種情況，因此我們選擇不使用全域搜尋和取代來進行這類取代。 在某些情況下，需要 `char` 版本，例如處理使用具有 A 尾碼之 Windows 結構的特定 Windows 訊息時。 在 Windows API 中，尾碼 A 表示 ASCII 或 ANSI (也適用於 MBCS)，而尾碼 W 表示寬字元或 UTF-16 Unicode。 Windows 標頭使用這個命名模式，但是當我們必須加入只在 MBCS 版本中定義的 Unicode 版函式時，也會在 Spy++ 程式碼中遵循這個模式。  
   
  在某些情況下，我們必須取代類型，才能使用正確解析的版本 (例如以 WNDCLASS 取代 WNDCLASSA)。  
   

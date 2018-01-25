@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -32,7 +32,7 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
 
 本內容是為撰寫程式的 C++ 開發人員所撰寫。
 
-- 如果您在尋找 C++ 可轉散發套件及執行階段元件以便執行程式，請前往 [Microsoft 下載中心](http://www.microsoft.com/en-us/download/) ，並在搜尋方塊中輸入 **Visual C++** 。
+- 如果您要尋找特定 C++ 可轉散發套件和執行階段元件以執行程式，請移至 [Microsoft](http://www.microsoft.com/) 網站，並在搜尋方塊中輸入 **Visual C++ Redistributable**。 下載並安裝電腦架構的可轉散發套件 (例如，如果您執行 64 位元 Windows，則為 x64) 以及您所需的 Visual C++ 版本。 
 
 - 如果您在尋找 C++ 程式設計概念的簡介，請前往其中一個提供此內容的網站，或取得一份由 C++ 發明人 Bjarne Stroustup 所著的 [程式設計 - 使用 C++ 的原則和作法 (第二版)](http://stroustrup.com/Programming/) 。 Visual C++ 內容假定您已經對 C++ 有基本的熟悉程度。
 

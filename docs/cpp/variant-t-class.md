@@ -21,11 +21,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a670d18ab64637b54b063cfeb38f8d0cd8fee5d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a4d7e4019e742ff8adc50bb78a926dff34d55a
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="variantt-class"></a>_variant_t 類別
 **Microsoft 特定的**  
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |[運算子 =](../cpp/variant-t-operator-equal.md)|將新值指派給現有的 `_variant_t` 物件。|  
-|[運算子 = =、 ！ =](../cpp/variant-t-relational-operators.md)|比較兩個 `_variant_t` 物件是否相等或不等。|  
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|比較兩個 `_variant_t` 物件是否相等或不等。|  
 |[擷取器](../cpp/variant-t-extractors.md)|從封裝擷取資料**VARIANT**物件。|  
   
 **結束 Microsoft 特定的**  
   
 ## <a name="requirements"></a>需求  
- **標頭：** comutil.h  
+ **標頭：** \<comutil.h >  
   
  **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   

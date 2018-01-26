@@ -12,9 +12,9 @@ helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
 - exception handling [C++], timing
-- SETJMPEX.H
+- setjmpex.h
 - termination handlers [C++], timing
-- SETJMP.H
+- setjmp.h
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 5d4b522286a727f428cd445bf67d12a1360b49b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9e14f89bba02a53af5956ec2a2dcb52bfb1a38c
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>例外狀況處理的時機：摘要
 無論 `__try` 陳述式區塊以何種方式終止，都會執行終止處理常式。 原因包括跳出 `__try` 區塊、`longjmp` 陳述式將控制權傳輸到區塊外部，以及因為進行例外狀況處理而回溯堆疊。  
   
 > [!NOTE]
->  Visual C++ 支援兩種形式的 `setjmp` 和 `longjmp` 陳述式。 快速版本會略過終止處理，但是會更有效率。 若要使用這個版本，請包含檔案 SETJMP.H。 另一個版本支援終止處理，如先前段落中所述。 若要使用這個版本，請包含檔案 SETJMPEX.H。 快速版本的效能提升取決於硬體組態。  
+>  Visual C++ 支援兩種形式的 `setjmp` 和 `longjmp` 陳述式。 快速版本會略過終止處理，但是會更有效率。 若要使用這個版本，將該檔案包含\<setjmp.h >。 另一個版本支援終止處理，如先前段落中所述。 若要使用這個版本，將該檔案包含\<setjmpex.h >。 快速版本的效能提升取決於硬體組態。  
   
  作業系統會先依適當的順序執行所有終止處理常式，型執行其他程式碼，包括例外狀況處理常式的主體。  
   

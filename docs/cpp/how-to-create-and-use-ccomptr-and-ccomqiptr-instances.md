@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 342fd293983840257e83e287df3a8ef6767826c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35f007cadb3afca1ccacebf1e831ba761602c904
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：建立和使用 CComPtr 和 CComQIPtr 執行個體
 在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 (或更精確地說是 COM 伺服器)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 如需 COM 基本概念的資訊，請參閱 [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` 及其相關項目是 ATL 的一部分且已定義在 atlcomcli.h。 `_com_ptr_t` 在 comip.h 中宣告。 當編譯器產生類型程式庫的包裝函式類別時，編譯器會建立 `_com_ptr_t` 的特製化。  
+ `CComPtr`及其相關項目是 ATL 的一部分且已定義在\<atlcomcli.h >。 `_com_ptr_t`宣告中\<comip.h >。 當編譯器產生類型程式庫的包裝函式類別時，編譯器會建立 `_com_ptr_t` 的特製化。  
   
 ## <a name="example"></a>範例  
  ATL 也提供 `CComQIPtr`，查詢 COM 物件以擷取其他介面的語法更簡單。 然而，建議使用 `CComPtr` ，因為 `CComQIPtr` 可以執行的所有作業，它也可以執行，而且在語意上與原始 COM 介面指標更加一致。 如果您使用 `CComPtr` 查詢介面，新介面指標是放在 out 參數中。 如果呼叫失敗，傳回 HRESULT，這是一般的 COM 模式。 使用 `CComQIPtr`，傳回值是指標本身，而且如果呼叫失敗，無法存取內部 HRESULT 傳回值。 下列兩行顯示 `CComPtr` 和 `CComQIPtr` 的錯誤處理機制之間的差異。  

@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ad4362b8e84d7ffb4bb090a4e513538cdb26ae25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c999b429cb789167eeb754b6f11a8b3d90c28642
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="uuid-c"></a>uuid (C++)
 **Microsoft 特定的**  
@@ -33,9 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-__declspec( uuid("  
-ComObjectGUID  
-") ) declarator  
+__declspec( uuid("ComObjectGUID") ) declarator  
 ```  
   
 ## <a name="remarks"></a>備註  
@@ -46,7 +44,7 @@ struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;
 struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;  
 ```  
   
- 這個屬性可以在重新宣告中套用。 這可讓系統標頭提供介面的定義，例如**IUnknown**，並且在某些其他標頭 （例如 COMDEF 重新宣告。H) 以提供 GUID。  
+ 這個屬性可以在重新宣告中套用。 這可讓系統標頭提供介面的定義，例如**IUnknown**，並且在某些其他標頭中的重新宣告 (例如\<comdef.h >) 以提供 GUID。  
   
  關鍵字[__uuidof](../cpp/uuidof-operator.md)可以套用至擷取 GUID 附加至使用者定義類型的常數。  
   

@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>_com_error 類別
 **Microsoft 特定的**  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[運算子 =](../cpp/com-error-operator-equal.md)|將現有的 `_com_error` 物件指派給另一個物件。|  
+|[operator =](../cpp/com-error-operator-equal.md)|將現有的 `_com_error` 物件指派給另一個物件。|  
   
 ### <a name="extractor-functions"></a>擷取程式函式  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[描述](../cpp/com-error-description.md)|呼叫`IErrorInfo::GetDescription`函式。|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|呼叫`IErrorInfo::GetHelpContext`函式。|  
-|[說明檔](../cpp/com-error-helpfile.md)|呼叫`IErrorInfo::GetHelpFile`函式|  
+|[HelpFile](../cpp/com-error-helpfile.md)|呼叫`IErrorInfo::GetHelpFile`函式|  
 |[Source](../cpp/com-error-source.md)|呼叫`IErrorInfo::GetSource`函式。|  
 |[GUID](../cpp/com-error-guid.md)|呼叫`IErrorInfo::GetGUID`函式。|  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[錯誤訊息](../cpp/com-error-errormessage.md)|擷取字串訊息的 HRESULT 會儲存在`_com_error`物件。|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|擷取字串訊息的 HRESULT 會儲存在`_com_error`物件。|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>以 HRESULT 自行 ExepInfo.wCode  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 **結束 Microsoft 特定的**  
   
 ## <a name="requirements"></a>需求  
- **標頭：** comdef.h  
+ **標頭：** \<comdef.h >  
   
  `Lib:`comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   

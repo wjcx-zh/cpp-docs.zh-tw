@@ -25,11 +25,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98601b9d4293417d03dcdcc96b2ae0bb54defdc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb616945a831502077066bdf306bef306f543eb
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raising-software-exceptions"></a>引發軟體例外狀況
 某些常見的程式錯誤來源是系統未標示為例外狀況。 例如，如果您嘗試配置記憶體區塊，但是沒有足夠的記憶體，執行階段或 API 函式不會引發例外狀況，而是傳回錯誤碼。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用例外狀況處理篩選條件測試您所定義的例外狀況代碼。  
   
- WINERROR.H 檔案會顯示例外狀況代碼的格式。 為確保您定義的代碼不會與現有的例外狀況代碼發生衝突，請將第三個最高有效位元設為 1。 四個最高有效位元都應該依照下表所示進行設定。  
+ \<Winerror.h > 檔案會顯示例外狀況代碼的格式。 為確保您定義的代碼不會與現有的例外狀況代碼發生衝突，請將第三個最高有效位元設為 1。 四個最高有效位元都應該依照下表所示進行設定。  
   
 |Bits|建議的二進位設定|描述|  
 |----------|--------------------------------|-----------------|  

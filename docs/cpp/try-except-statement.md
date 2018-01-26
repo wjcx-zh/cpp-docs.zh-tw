@@ -37,11 +37,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>try-except 陳述式
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > {  
 >    防護程式碼  
 > }  
-> **__except** (*運算式*)  
+> **__except** ( *expression* )  
 > {  
 >    例外狀況處理常式程式碼  
 > }  
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-指標類型`PEXCEPTION_RECORD`和`PCONTEXT`WINNT include 檔案中所定義。H、 和`_EXCEPTION_RECORD`和`_CONTEXT`EXCPT include 檔案中所定義。H
+指標類型`PEXCEPTION_RECORD`和`PCONTEXT`include 檔中定義\<winnt.h >，並`_EXCEPTION_RECORD`和`_CONTEXT`include 檔中定義\<excpt.h >
 
 您可以使用`GetExceptionCode`例外狀況處理常式內。 不過，您可以使用`GetExceptionInformation`只能在例外狀況篩選條件運算式內。 它所指向的資訊通常位於堆疊上，而且在控制項傳送至例外狀況處理常式之後就不再提供。
 
 內建函式`AbnormalTermination`終止處理常式內可供使用。 它會傳回 0，如果主體**再試一次最後**循序陳述式會終止。 在所有其他情況下，它會傳回 1。
 
-EXCPT.H 會為這些內建定義一些替代名稱：
+excpt.h 會定義一些替代名稱，這些內建函式：
 
 `GetExceptionCode`相當於`_exception_code`
 

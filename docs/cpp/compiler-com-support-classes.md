@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54377893135c2b933c25387bccbb750d2f3eb734
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="compiler-com-support-classes"></a>編譯器 COM 支援類別
 **Microsoft 特定的**  
   
- 標準類別用來支援某些 COM 類型。 這些類別是在 comdef.h 中定義，而這些標頭檔是從類型程式庫產生的。  
+ 標準類別用來支援某些 COM 類型。 類別定義於\<comdef.h > 和產生類型程式庫的標頭檔。  
   
 |類別|用途|  
 |-----------|-------------|  

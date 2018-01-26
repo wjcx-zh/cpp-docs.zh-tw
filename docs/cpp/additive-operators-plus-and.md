@@ -24,11 +24,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="additive-operators--and--"></a>加法類運算子：+ 和 -
 ## <a name="syntax"></a>語法  
@@ -55,21 +55,21 @@ expression - expression
   
 |類型|意義|  
 |----------|-------------|  
-|*算術運算*|整數和浮點類型統稱為「算術」類型。|  
-|*整數*|各種大小 (long、short) 的 char 和 int 及列舉是「整數」類型。|  
-|*純量*|純量運算元是算術或指標類型的運算元。|  
+|*arithmetic*|整數和浮點類型統稱為「算術」類型。|  
+|*integral*|各種大小 (long、short) 的 char 和 int 及列舉是「整數」類型。|  
+|*scalar*|純量運算元是算術或指標類型的運算元。|  
   
  這些運算子的有效組合包括：  
   
- *算術* + *算術*  
+ *arithmetic* + *arithmetic*  
   
- *純量* + *整數*  
+ *scalar* + *integral*  
   
- *整數類資料* + *純量*  
+ *integral* + *scalar*  
   
- *算術* - *算術*  
+ *arithmetic* - *arithmetic*  
   
- *純量* - *純量*  
+ *scalar* - *scalar*  
   
  請注意，加法和減法並非對等的運算。  
   
@@ -116,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 >  `pIntArray = pIntArray + 1` 形式的程式碼在 C++ 程式中很少見，若要執行遞增作業，使用下列形式會更好：`pIntArray++` 或 `pIntArray += 1`。  
   
 ## <a name="pointer-subtraction"></a>指標減法  
- 如果兩個運算元都是指標，則減法運算的結果為兩個運算元之間的差數 (以陣列元素為單位)。 減法運算式會產生 ptrdiff_t 類型的帶正負號整數結果 (定義於標準的 Include 檔案 STDDEF.H 中)。  
+ 如果兩個運算元都是指標，則減法運算的結果為兩個運算元之間的差數 (以陣列元素為單位)。 減法運算式會產生 ptrdiff_t 類型帶正負號的整數結果 (在標準 include 檔中定義\<stddef.h >)。  
   
  兩個運算元中的第二個運算元可以是整數類資料類型。 減法運算的結果與原始指標的類型相同。 減法的值是指標 (*n* - *我*) 個陣列元素，其中 *n* 指向元素原始指標和*我*是第二個運算元的整數值。  
   

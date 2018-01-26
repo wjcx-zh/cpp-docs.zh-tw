@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 244af2a6afe87757c6a242c8a750f1bc3c99e557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072dbd8d41a867f7cd31316ef0bc1c20660952ef
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sizeof-operator"></a>sizeof 運算子
 就類型 `char` 的大小而言，會產生其運算元的大小。  
@@ -36,7 +36,7 @@ sizeof  ( type-name )
 ```  
   
 ## <a name="remarks"></a>備註  
- `sizeof` 運算子的結果是 `size_t` 類型，這是 Include 檔 STDDEF.H 中定義的整數類資料類型。 這個運算子可以避免在您的程式中指定與電腦相關的資料大小。  
+ 結果`sizeof`運算子的類型是`size_t`，包含檔案中定義之整數類資料類型\<stddef.h >。 這個運算子可以避免在您的程式中指定與電腦相關的資料大小。  
   
  `sizeof` 的運算元可以是下列其中一項：  
   

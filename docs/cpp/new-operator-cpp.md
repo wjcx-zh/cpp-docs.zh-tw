@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>new 運算子 (C++)
 為物件或物件的陣列配置記憶體*型別名稱*從可用存放區，並傳回具適當類型，則為非零的指標物件。  
@@ -69,10 +69,10 @@ delete *p;
   
  下列清單描述的文法項目**新**:  
   
- *放置*  
+ *placement*  
  提供一個方式來傳遞其他引數，如果您多載**新**。  
   
- *型別名稱*  
+ *type-name*  
  指定要配置的類型；它可以是內建或使用者定義的類型。 如果類型規格是複雜的，請以括號括住類型規格以強制繫結的順序。  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  當編譯器遇到**新**運算子配置類型的物件`type`，就會發出呼叫`type` **:: 運算子 new (sizeof (** `type` **))**或，如果不是使用者定義`operator new`定義， **:: 運算子 new (sizeof (** `type` **))**。 因此，**新**運算子可以配置給物件的正確的記憶體數量。  
   
 > [!NOTE]
->  引數`operator new`的型別**size_t**。 此類型是在 DIRECT.H、MALLOC.H、MEMORY.H、SEARCH.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H 和 TIME.H 中定義。  
+>  引數`operator new`的型別**size_t**。 此類型定義於\<direct.h >， \<malloc.h >， \<memory.h >， \<search.h >， \<stddef.h >， \<stdio.h >， \<stdlib.h >， \<h >，並\<h >。  
   
  在文法中的選項允許指定*放置*(請參閱的文法[new 運算子](../cpp/new-operator-cpp.md))。 *放置*參數只能用於使用者定義的實作`operator new`; 它可讓額外的資訊傳遞給`operator new`。 使用運算式*放置*欄位，例如`T *TObject = new ( 0x0040 ) T;`轉譯成`T *TObject = T::operator new( sizeof( T ), 0x0040 );`如果類別 T 的成員運算子是 new，否則要`T *TObject = ::operator new( sizeof( T ), 0x0040 );`。  
   

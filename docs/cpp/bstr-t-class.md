@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 34af81829c90aa5e56c7358a3e0b23d6f6ab949f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t 類別
 **Microsoft 特定的**  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[指派](../cpp/bstr-t-assign.md)|將 `BSTR` 複製到 `BSTR` 所包裝的 `_bstr_t` 中。|  
+|[Assign](../cpp/bstr-t-assign.md)|將 `BSTR` 複製到 `BSTR` 所包裝的 `_bstr_t` 中。|  
 |[Attach](../cpp/bstr-t-attach.md)|將 `_bstr_t` 包裝函式連結至 `BSTR`。|  
 |[copy](../cpp/bstr-t-copy.md)|建構已封裝 `BSTR` 的複本。|  
 |[Detach](../cpp/bstr-t-detach.md)|傳回 `BSTR` 所包裝的 `_bstr_t`，並將 `BSTR` 與 `_bstr_t` 中斷連結。|  
@@ -52,8 +52,8 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[運算子 =](../cpp/bstr-t-operator-equal.md)|將新值指派給現有的 `_bstr_t` 物件。|  
-|[運算子 + =](../cpp/bstr-t-operator-add-equal-plus.md)|將字元附加至 `_bstr_t` 物件的結尾。|  
+|[operator =](../cpp/bstr-t-operator-equal.md)|將新值指派給現有的 `_bstr_t` 物件。|  
+|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|將字元附加至 `_bstr_t` 物件的結尾。|  
 |[運算子 +](../cpp/bstr-t-operator-add-equal-plus.md)|串連兩個字串。|  
 |[運算子 !](../cpp/bstr-t-operator-logical-not.md)|如果會檢查封裝`BSTR`是**NULL**字串。|  
 |[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/bstr-t-relational-operators.md)|比較兩個 `_bstr_t` 物件。|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 **結束 Microsoft 特定的**  
   
 ## <a name="requirements"></a>需求  
- **標頭：** comutil.h  
+ **標頭：** \<comutil.h >  
   
  **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   

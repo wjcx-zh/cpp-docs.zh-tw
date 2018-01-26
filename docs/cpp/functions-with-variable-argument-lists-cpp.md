@@ -21,17 +21,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a715662ac6680218e3b15822108f429733569bfa
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>函式具有變數引數清單 （c + +）
 最後一個成員是省略符號 (...) 的函式宣告可以接受可變數目的引數。 在這些情況下，C++ 只會針對明確宣告的引數提供類型檢查。 需要撰寫連引數數目和類型都可以不同的一般函式時，您可以使用變數引數清單。 系列的函式是使用變數引數清單的函式的範例。`printf`*引數宣告清單*  
   
 ## <a name="functions-with-variable-arguments"></a>具有變數引數的函式  
- 若要在宣告引數之後存取引數，請使用包含在標準 Include 檔 STDARG.H 中的巨集 (如下所述)。  
+ 若要宣告之後存取引數，請使用包含在標準 include 檔案中的巨集\<stdarg.h > 如下所述。  
   
  **Microsoft 特定的**  
   
@@ -43,9 +43,9 @@ ms.lasthandoff: 12/21/2017
   
  將類型 `char` 的引數當成變數引數傳遞時，會將這些引數轉換為 `int` 類型。 同樣地，當的型別引數**float**會傳遞做為變數引數，所以會轉換成輸入**double**。 其他類型的引數受限於一般整數和浮點數提升。 請參閱[標準轉換](standard-conversions.md)如需詳細資訊。  
   
- 需要變數清單的函式是使用引數清單中的省略符號 (...) 宣告。 使用 STDARG.H Include 檔案中所述的類型和巨集，即可存取變數清單傳遞的引數。 如需有關這些巨集的詳細資訊，請參閱[va_arg、 va_copy、 va_end、 va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 (位於 C 執行階段程式庫文件中)。  
+ 需要變數清單的函式是使用引數清單中的省略符號 (...) 宣告。 使用的類型和巨集，如下所述\<stdarg.h > 包含存取引數傳遞的變數清單的檔案。 如需有關這些巨集的詳細資訊，請參閱[va_arg、 va_copy、 va_end、 va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 (位於 C 執行階段程式庫文件中)。  
   
- 下列範例示範如何與類型 （宣告於 STDARG 搭配巨集。H): 
+ 下列範例示範巨集與類型搭配運作的方式 (宣告於\<stdarg.h >): 
   
 ```  
 // variable_argument_lists.cpp  

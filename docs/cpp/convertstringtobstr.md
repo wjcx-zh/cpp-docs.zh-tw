@@ -1,26 +1,31 @@
 ---
-title: "ConvertStringToBSTR |Microsoft 文件"
+title: ConvertStringToBSTR | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: ConvertStringToBSTR
-dev_langs: C++
-helpviewer_keywords: ConvertStringToBSTR function
+f1_keywords:
+- ConvertStringToBSTR
+dev_langs:
+- C++
+helpviewer_keywords:
+- ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a4347fdcf25373e088a8d8bc54cc3219285aa347
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b396930f6a16c3773b917dc21b2c61525350f397
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Microsoft 特定的**  
@@ -69,7 +74,7 @@ BSTR text: Test
 **結束 Microsoft 特定的**  
   
 ## <a name="requirements"></a>需求  
- **標頭：** comutil.h  
+ **標頭：** \<comutil.h >  
   
  **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   

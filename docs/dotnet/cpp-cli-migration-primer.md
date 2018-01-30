@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++/CLI Version 2
 - upgrading Visual C++ applications, Managed Extensions for C++ to Visual C++ 2005 syntax
@@ -15,21 +17,21 @@ helpviewer_keywords:
 - Managed Extensions for C++, upgrading syntax
 - C++/CLI Version 2, managed extensions
 ms.assetid: 8ec926b5-73f6-4f0c-bcdf-5203d293849a
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1dcbb3b54cbde323cda0856ca68b2281d669cb7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17474b347a6daf2d477a6ed731e13db86e068b05
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="ccli-migration-primer"></a>C++/CLI 移轉入門
-這是前往 Visual c + + 程式從 Managed Extensions for c + + Visual c + + 的指引。 如需檢查清單的摘要語法變更，請參閱[(NOTINBUILD) Managed Extensions for c + + 語法升級檢查清單](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada)。  
+這是前往 Visual c + + 程式從 Managed Extensions for c + + Visual c + + 的指引。 
   
  C + + CLI 延伸 ISO c + + 標準語言的動態元件程式設計典範。 新的語言提供顯著的改善了許多透過 Managed Extensions。 本章節會提供 Managed Extensions for c + + 語言功能的列舉的清單以及其對應至 Visual c + +，這類對應存在，而且將點出對應不存在，這些建構。  
   

@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [MFC], most recently used
 - DragAcceptFiles method [MFC]
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8734bfd4e673e1298d6822bbd272e2d70ff7a81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="special-cwinapp-services"></a>特殊 CWinApp 服務
 除了執行訊息迴圈，並讓您有機會初始化應用程式和之後，清除[CWinApp](../mfc/reference/cwinapp-class.md)提供數個其他服務。  
@@ -60,9 +63,9 @@ ms.lasthandoff: 12/21/2017
   
  `CWinApp` 中的此項自動註冊支援，不需要以應用程式傳輸 .reg 檔案或執行特殊安裝工作。  
   
- 如果您想要初始化 GDI + 您的應用程式 (藉由呼叫 [Initinstance]-brokenlink-(_gdiplus_FUNC_GdiplusStartup_token_input_output_) 在您[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)函式)，您必須隱藏 GDI + 背景執行緒。  
+ 如果您想要初始化 GDI + 您的應用程式 (藉由呼叫[Initinstance](https://msdn.microsoft.com/library/ms534077)中您[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)函式)，您必須隱藏 GDI + 背景執行緒。  
   
- 您可以藉由設定**Gdiplusstartupinput**成員 [GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput) 結構**TRUE**。 當隱藏 GDI + 背景執行緒， **NotificationHook**和**NotificationUnhook**呼叫 （請參閱 [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) 應該進行之前進入和退出應用程式的訊息迴圈。 因此，若要呼叫的好地方**Initinstance**與攔截通知函式會在虛擬函式的覆寫[cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)，如下所示：  
+ 您可以藉由設定**Gdiplusstartupinput**隸屬[Suppressbackgroundthread](https://msdn.microsoft.com/library/ms534067)結構以**TRUE**。 當隱藏 GDI + 背景執行緒， **NotificationHook**和**NotificationUnhook**呼叫應該要對先前只進入和退出應用程式的訊息迴圈。 如需有關這些呼叫的詳細資訊，請參閱[GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)。 因此，若要呼叫的好地方**Initinstance**與攔截通知函式會在虛擬函式的覆寫[cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)，如下所示：  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

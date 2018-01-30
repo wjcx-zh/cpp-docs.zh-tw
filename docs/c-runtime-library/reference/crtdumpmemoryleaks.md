@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: _CrtDumpMemoryLeaks
+apiname:
+- _CrtDumpMemoryLeaks
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,7 +29,8 @@ f1_keywords:
 - CrtDumpMemoryLeaks
 - _CrtDumpMemoryLeaks
 - _CRTDBG_CHECK_CRT_DF
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CrtDumpMemoryLeaks function
 - CRTDBG_LEAK_CHECK_DF macro
@@ -36,16 +39,17 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fe47ee058f6dc4a33013e4773a7b3a057056b380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 859f1918afc69054b13cab161f2d7b4801bcbd78
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 發生記憶體流失時，傾印偵錯堆積中的所有記憶體區塊 (僅限偵錯版本)。  
@@ -83,7 +87,7 @@ int _CrtDumpMemoryLeaks( void );
  僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
 ## <a name="example"></a>範例  
- 如需如何使用 `_CrtDumpMemoryLeaks` 的範例，請參閱 [crt_dbg1](http://msdn.microsoft.com/en-us/17b4b20c-e849-48f5-8eb5-dca6509cbaf9)。  
+ 如需如何使用 `_CrtDumpMemoryLeaks` 的範例，請參閱 [crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1)。  
   
 ## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

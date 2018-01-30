@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>演算法
 演算法是 C++ 標準程式庫的基礎部分。 演算法不會對容器本身執行，而是對迭代器執行。 因此，相同的演算法可供大部分甚至所有的 C++ 標準程式庫容器使用。 本節討論 C++ 標準程式庫演算法的慣例和術語。  
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  迭代器在範圍 [`First`, `Last`) 中指定的一序列元素，會是依 operator**<** 排序的序列，前提是，對於範圍 [0, `Last` - `First`) 中的每個 *N*，以及範圍 (N, `Last` - `First`) 中的每個 *M*，述詞 !(\*(`First` + *M*) < \*(*First* + *N*)) 為 true。 (請注意，元素會以遞增順序排序)。述詞函式 **operator<** (或任何替代項目) 不可變更其任一運算元。 它在每次評估時必須產生相同的 `bool` 結果，且在以其中一個運算元的複本替代運算元時必須產生相同結果。 此外，它必須對它所比較的運算元強制執行嚴格弱式排序。  
   
- 迭代器在範圍 [`First`, `Last`) 中指定的一序列元素，會是依 **operator<** 排序的堆積，前提是，對於範圍 [1, `Last` - `First`) 中的每個 *N*述詞 !(\*`First` < \*(`First` + *N*)) 為 true。 (第一個元素最大。)只有範本函式 [make_heap](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2)、[pop_heap]--brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap) 和 [push_heap]-brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap) 才知道其內部結構。 與排序順序相同，述詞函式 **operator<** (或任何替代項目) 不可變更其任一運算元，且必須對它所比較的運算元強制執行嚴格弱式排序。 它在每次評估時必須產生相同的 `bool` 結果，且在以其中一個運算元的複本替代運算元時必須產生相同結果。  
+ 迭代器在範圍 [`First`, `Last`) 中指定的一序列元素，會是依 **operator<** 排序的堆積，前提是，對於範圍 [1, `Last` - `First`) 中的每個 *N*述詞 !(\*`First` < \*(`First` + *N*)) 為 true。 (第一個元素最大。)其內部結構否則只有知道樣板函式[make_heap](../standard-library/algorithm-functions.md#make_heap)， [pop_heap](../standard-library/algorithm-functions.md#pop_heap)，和[push_heap](../standard-library/algorithm-functions.md#push_heap)。 與排序順序相同，述詞函式 **operator<** (或任何替代項目) 不可變更其任一運算元，且必須對它所比較的運算元強制執行嚴格弱式排序。 它在每次評估時必須產生相同的 `bool` 結果，且在以其中一個運算元的複本替代運算元時必須產生相同結果。  
   
  C++ 標準程式庫演算法位於 [\<algorithm>](../standard-library/algorithm.md) 和 [\<numeric>](../standard-library/numeric.md) 標頭檔中。  
   

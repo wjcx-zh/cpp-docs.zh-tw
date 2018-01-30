@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>使用插入運算子和控制格式
 本主題說明如何控制格式，以及如何為您自己的類別的建立插入運算子。 插入 (**<<**) 運算子已針對所有標準 C++ 資料類型預先排定，可將位元組傳送至輸出資料流物件。 插入運算子會使用預先定義的「操作工具」，這是會變更整數引數預設格式的元素。  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  此行為可以手動修改，但為了讓字串的往返更簡便、C++14 在 `<iomanip>` 中加入了 `std::quoted` 資料流操作工具。 在插入時，`quoted()` 會在字串兩側加上分隔符號 (預設為雙引號 '"')，並在進行擷取時使資料流擷取所有字元，直到最後一個分隔符號為止。 任何內嵌引號都會以逸出字元 (預設為 '\\\\') 逸出。  
   
- 分隔符號只會出現在資料流物件中；它們不會出現在擷取的字串中，但會出現在 [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)() 傳回的字串中。  
+ 分隔符號會只在資料流物件。它們不會出現在擷取的字串，但會出現在所傳回的字串[basic_stringstream:: str](../standard-library/basic-stringstream-class.md#str)。  
   
  插入和擷取作業的空白行為與字串在程式碼中的呈現方式無關，因此無論輸入字串是原始字串常值還是一般字串，加上引號的運算子都有效用。 輸入字串無論採用何種格式，都可以有內嵌引號、換行符號、定位字元等項目，且 quoted() 操作工具會保留前述所有的項目。  
   
- 如需詳細資訊以及完整的程式碼範例，請參閱 [quoted]--brokenlink--(../Topic/%3Cios%3E%20functions.md#quoted)。  
+ 如需詳細資訊與完整程式碼範例，請參閱[加上引號](../standard-library/iomanip-functions.md#quoted)。  
   
 ## <a name="see-also"></a>請參閱  
  [輸出資料流](../standard-library/output-streams.md)   

@@ -1,13 +1,15 @@
 ---
 title: "函式 （c + +） |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88031e4f47bea363c441986c72d5f890c03447f7
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="functions-c"></a>函式 (C++)
 函式是執行某項作業的程式碼區塊。 函式可以選擇性地定義輸入參數，以讓呼叫端將引數傳遞給函式。 函式可以選擇性地傳回值做為輸出。 函式適用於將一般作業封裝在單一可重複使用的區塊中，而且其名稱最好可清楚描述該函式的作用。 下列函式接受呼叫端的兩個整數並傳回其總和;`a`和`b`是*參數*型別的`int`。  
@@ -50,6 +53,8 @@ int main()
  函式長度沒有實際限制，但良好的設計目標在於函式可以執行單一完整定義的工作。 如果可能，應該將複雜演算法分解成容易了解的較簡單函式。  
   
  在類別範圍定義的函式稱為成員函式。 與其他語言不同，在 C++ 中，函式也可以定義於命名空間範圍 (包括隱含全域命名空間)。 這類函式的呼叫*免費函式*或*非成員函式*; 它們廣泛用於標準程式庫。  
+
+函式可能*多載*，這表示函式的不同版本可能會共用相同的名稱，如果它們的數目及/或型式參數的類型不同。 如需詳細資訊，請參閱[函式多載](../cpp/function-overloading.md)。
   
 ## <a name="parts-of-a-function-declaration"></a>函式宣告的組件  
  最小的函式*宣告*包含傳回型別、 函式名稱和參數清單 （這可能是空的），以及提供編譯器其他指示的選擇性關鍵字。 下列範例是函式宣告：
@@ -127,7 +132,7 @@ int sum(int a, int b)
   
 7.  (僅限成員函式) 套用至成員函式的 `static` 表示函式未與類別的任何物件執行個體相關聯。  
   
-8.  （只有非靜態成員函式）Ref-qualifier，指定給編譯器選擇何時將函式多載的隱含物件參數 (* 這) 是左值參考和右值參考。  
+8.  （只有非靜態成員函式）Ref-qualifier，指定給編譯器選擇何時將函式多載的隱含物件參數 (* 這) 是左值參考和右值參考。 如需詳細資訊，請參閱[函式多載](function-overloading.md#ref-qualifiers)。 
   
  下圖顯示函式定義的組件。 陰影區域是函式主體。  
   
@@ -373,7 +378,7 @@ int main()
 }
 ```
 
-4. 除了使用本身的傳回值，您可以 「 傳回 」 值藉由定義任何數目的參數使用傳址方式傳遞，以便函式可以修改或初始化之物件的呼叫端提供的值。 如需詳細資訊，請參閱[參考類型函式引數](reference-type-function-arguments.md)。
+4. 除了使用本身的傳回值，您可以 「 傳回 」 值藉由定義任何數目的參數使用傳址方式傳遞，以便函式可以修改或初始化之物件的呼叫端提供的值。 如需詳細資訊，請參閱[參考類型函式引數](reference-type-function-arguments.md)。  
   
 ## <a name="function-pointers"></a>函式指標  
  C++ 支援函式指標的方式與 C 語言相同。 不過，較具類型安全的替代方案通常是使用函式物件。  

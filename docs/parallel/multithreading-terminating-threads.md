@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>多執行緒：結束執行緒
 有兩種一般情況會導致執行緒終止： 控制函式會結束，或不允許執行緒執行到完成為止。 如果文書處理器用於列印背景的執行緒，控制函式就會在列印成功完成的話正常結束。 如果使用者想要取消列印，不過，有提前終止列印背景的執行緒。 本主題說明如何實作每種情況以及如何終止之後取得執行緒的結束代碼。  
@@ -58,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 -   設定`m_bAutoDelete`資料成員，才能**FALSE**。 這可讓`CWinThread`存留在執行緒終止之後的物件。 然後您可以存取`m_hThread`執行緒終止之後的資料成員。 如果您使用這項技術，不過，您必須負責終結`CWinThread`物件，因為架構不會自動刪除它為您。 這是慣用的方法。  
   
--   個別存放區的執行緒控制代碼。 執行緒建立之後，請複製它`m_hThread`資料成員 (使用**:: DuplicateHandle**) 給另一個變數，並利用該變數存取它。 當終止時，而您仍然可以找出執行緒結束的原因，會自動刪除此物件的方式。 請小心執行緒並不會終止之前，您可以複製的控制代碼。 若要這樣做最安全的方法是傳遞**CREATE_SUSPENDED**至[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)，存放區控制代碼，然後繼續執行緒藉由呼叫[ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread)。  
+-   個別存放區的執行緒控制代碼。 執行緒建立之後，請複製它`m_hThread`資料成員 (使用**:: DuplicateHandle**) 給另一個變數，並利用該變數存取它。 當終止時，而您仍然可以找出執行緒結束的原因，會自動刪除此物件的方式。 請小心執行緒並不會終止之前，您可以複製的控制代碼。 若要這樣做最安全的方法是傳遞**CREATE_SUSPENDED**至[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)，存放區控制代碼，然後繼續執行緒藉由呼叫[ResumeThread](../mfc/reference/cwinthread-class.md#resumethread)。  
   
  這兩種方法可讓您判斷為什麼`CWinThread`終止的物件。  
   

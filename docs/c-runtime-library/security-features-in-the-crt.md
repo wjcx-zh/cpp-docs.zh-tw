@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - _CRT_SECURE_NO_DEPRECATE
 - _CRT_NONSTDC_NO_WARNINGS
 - _CRT_SECURE_NO_WARNINGS
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - security deprecation warnings [C++]
 - CRT_NONSTDC_NO_DEPRECATE
@@ -31,16 +33,17 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d32a69e179acee501c17d96218cc4ef2e10f0c3
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全性功能
 許多舊的 CRT 函式都有較新且更安全的版本。 如果存在較安全的函式，則較舊且較不安全的版本會被標示為已取代，而且新的版本會有 `_s` (「安全」) 後置詞。  
@@ -65,7 +68,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
  對於那些沒有安全範本多載的已取代函式，您便應該考慮手動更新您的程式碼，以使用安全的版本。  
   
- 另一個與安全性無關的已取代警告來源是 POSIX 函式。 使用 POSIX 函式的標準對等版本來取代 POSIX 函式名稱 (例如，將 [access](../c-runtime-library/reference/access-crt.md) 變更為 [_access](../c-runtime-library/reference/access-waccess.md))，或透過定義 `_CRT_NONSTDC_NO_WARNINGS` 來停用 POSIX 相關的取代警告。 如需詳細資訊，請參閱[已取代的 CRT 函式](http://msdn.microsoft.com/en-us/7e259932-c6c8-4c1a-9637-639e591681a5) \(英文\)。  
+ 另一個與安全性無關的已取代警告來源是 POSIX 函式。 使用 POSIX 函式的標準對等版本來取代 POSIX 函式名稱 (例如，將 [access](../c-runtime-library/reference/access-crt.md) 變更為 [_access](../c-runtime-library/reference/access-waccess.md))，或透過定義 `_CRT_NONSTDC_NO_WARNINGS` 來停用 POSIX 相關的取代警告。 如需詳細資訊，請參閱[相容性](compatibility.md)。  
   
 ## <a name="additional-security-features"></a>其他的安全性功能  
  安全性功能包括下列各項：  

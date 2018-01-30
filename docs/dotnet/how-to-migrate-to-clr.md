@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - upgrading Visual C++ applications, /clr compiler option
 - compiling native code [C++]
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：移轉至 /clr
 本主題討論編譯原生程式碼時，會發生的問題**/clr** (請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊)。 **/clr**可讓 Visual c + + 模組，以叫用，並叫用.NET 組件從同時保留與未受管理模組的相容性。 請參閱[混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)和[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)如需使用編譯的優點**/clr**。  
@@ -147,7 +149,7 @@ COMObj2->Method(args);  // C++ equivalent
 ## <a name="using-new-visual-c-features"></a>使用 Visual c + + 的新功能  
  之後您的應用程式編譯、 連結和執行，您可以開始使用.NET 功能中使用編譯任何模組**/clr**。 如需詳細資訊，請參閱[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)。  
   
- 如果您使用 Managed Extensions for c + + 時，您可以將轉換程式碼以使用新語法。 如需語法差異的摘要，請參閱[(NOTINBUILD) Managed Extensions for c + + 語法升級檢查清單](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada)。 如需如何 Managed Extensions for c + + 將轉換的詳細資訊，請參閱[C + + /CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)。  
+ 如果您使用 Managed Extensions for c + + 時，您可以將轉換程式碼以使用新語法。 如需如何 Managed Extensions for c + + 將轉換的詳細資訊，請參閱[C + + /CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)。  
   
  如需.NET 程式設計 Visual c + + 中，請參閱：  
   

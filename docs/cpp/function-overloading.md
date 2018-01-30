@@ -1,33 +1,38 @@
 ---
 title: "函式多載 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>函式多載
-C++ 允許在相同範圍內指定多個同名的函式。 這些函式稱為多載函式，將在＜多載＞中詳細說明。 多載函式可讓程式設計人員根據引數的類型和數目，為函式提供不同的語意。  
+C++ 允許在相同範圍內指定多個同名的函式。 這種讀取稱為*多載*函式。 多載函式可讓您提供不同的語意，根據，函式的型別和引數數目。 
   
- 例如，**列印**函式可接受 string (或**char \*** ) 引數執行非常不同工作使用的型別引數的其中一個**double**. 多載允許統一命名，並且可讓程式設計人員不必自創名稱，例如 `print_sz` 或 `print_d`。 下表將說明 C++ 使用函式宣告的哪些部分區分在相同範圍內具有相同名稱的函式群組。  
+ 例如，**列印**函式採用**std:: string**引數可能會執行完全不同工作使用的型別引數的其中一個**double**。 多載可讓您不必使用名稱，例如`print_string`或`print_double`。 在編譯時期，編譯器會選擇要使用哪一個多載根據引數由呼叫端傳遞的型別。  如果您呼叫**print(42.0)**則**void 列印 (雙 d)**函式會叫用。 如果您呼叫**列印 ("hello world")**則**void print(std::string)**將叫用多載。
+
+您可以多載成員函式和非成員函式。 下表將說明 C++ 使用函式宣告的哪些部分區分在相同範圍內具有相同名稱的函式群組。  
   
 ### <a name="overloading-considerations"></a>多載考量  
   
@@ -39,9 +44,8 @@ C++ 允許在相同範圍內指定多個同名的函式。 這些函式稱為多
 |省略符號是否存在|[是]|  
 |是否使用 `typedef` 名稱|否|  
 |未指定的陣列範圍|否|  
-|**const**或`volatile`（請參閱下文）|[是]|  
-  
- 雖然函式可以依傳回型別加以區別，但無法在這個基礎上多載。  `Const`或`volatile`僅適用於做為基礎如果它們要套用至類別中使用多載**這**類別，而不函式的傳回類型的指標。  換句話說，才適用多載**const**或`volatile`關鍵字接在宣告中函式的引數清單後面。  
+|**const**或`volatile`|是的當套用至整個函式|
+|[ref-qualifier](#ref-qualifier)|[是]|  
   
 ## <a name="example"></a>範例  
  下列範例將示範如何使用多載。  
@@ -51,68 +55,71 @@ C++ 允許在相同範圍內指定多個同名的函式。 這些函式稱為多
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,14 +261,14 @@ volatile Over&
   
 |轉換來源類型|轉換目標類型|  
 |-----------------------|---------------------|  
-|*型別名稱*|*型別名稱***&**|  
-|*型別名稱***&**|*型別名稱*|  
-|*型別名稱* **]**|*型別名稱\**|  
-|*型別名稱* **(** *引數清單* **)**|**(** *\*型別名稱* **) (** *引數清單* **)**|  
-|*型別名稱*|**const** *型別名稱*|  
-|*型別名稱*|`volatile`*型別名稱*|  
-|*型別名稱\**|**const** *型別名稱\**|  
-|*型別名稱\**|`volatile`*型別名稱\**|  
+|*type-name*|*type-name* **&**|  
+|*type-name* **&**|*type-name*|  
+|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
+|*type-name*|**const** *type-name*|  
+|*type-name*|`volatile` *type-name*|  
+|*type-name\**|**const** *type-name\**|  
+|*type-name\**|`volatile` *type-name\**|  
   
  轉換嘗試執行的序列如下：  
   
@@ -399,8 +406,47 @@ obj.name
 ```  
   
  `->*` 和 `.*` (成員的指標) 運算子的左運算元處理方式，與具有相符引數的 `.` 和 `->` (成員選取) 運算子相同。  
+
+## <a name="ref-qualifiers"></a>成員函式的 ref 限定詞  
+Ref 限定詞會使其可多載成員函式，根據是否指向的物件由`this`是右值或左值。  這項功能可用來避免不必要的複製作業在案例中，您選擇不提供存取的資料指標。 例如，假設類別**C**初始化其建構函式中的部分資料，並在成員函式會傳回該資料的複本**get_data()**。 如果型別的物件**C**是右值，為即將終結，則編譯器會選擇**get_data() （& s) （& s)**多載，會將資料，而不是將它複製。 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>限制  
+## <a name="restrictions-on-overloading"></a>多載的限制  
  有幾項限制負責管理一組可接受的多載函式：  
   
 -   一組多載函式中的任兩個函式必須具有不同的引數清單。  
@@ -443,10 +489,13 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>宣告比對  
+## <a name="overloading-overriding-and-hiding"></a>多載，覆寫和隱藏
+  
  同一個範圍中任何兩個相同名稱的函式宣告可以參考同一個函式，也可以參考兩個多載的個別函式。 如果宣告的引數清單包含相同類型的引數 (如先前章節所述)，函式宣告會參考相同的函式。 否則，它們會參考使用多載選取的兩個不同函式。  
   
- 類別範圍會受到嚴密的觀察；因此，在基底類別中宣告的函式和在衍生類別中宣告的函式不在同一個範圍內。 如果將衍生類別中的函式宣告為與基底類別中的函式相同名稱，該衍生類別函式會隱藏基底類別函式，而不會引發多載。  
+ 類別範圍會受到嚴密的觀察；因此，在基底類別中宣告的函式和在衍生類別中宣告的函式不在同一個範圍內。 如果在衍生類別中的函式宣告具有相同名稱的基底類別，衍生類別函式中的虛擬函式*會覆寫*基底類別函式。 如需詳細資訊，請參閱[虛擬函式](../cpp/virtual-functions.md)。
+
+如果基底類別函式未宣告為 'virtual'，則在衍生的類別函式稱為*隱藏*它。 覆寫和隱藏所不同多載。  
   
  區塊範圍會受到嚴密的觀察；因此，在檔案範圍中宣告的函式和在本機宣告的函式不在同一個範圍內。 如果本機宣告的函式與在檔案範圍中宣告的函式相同名稱，本機宣告的函式會隱藏檔案範圍涵式，而不會引發多載。 例如:  
   
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>請參閱  
  [函式 (C++)](../cpp/functions-cpp.md)

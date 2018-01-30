@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c91928edf1617d8572cf6a6087afecb8e08eec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 66461f2721cae60edbaca80409a3a91cefe6e4ec
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 前置處理器參考
 *C/c + + 前置處理器參考 》*說明前置處理器，因為它實作在 Microsoft C/c + +。 前置處理器會先對 C 和 C++ 檔案執行初步作業，再將檔案傳遞至編譯器。 您可以使用前置處理器，有條件地編譯程式碼、插入檔案、指定編譯時間錯誤訊息，以及將電腦特定規則加入至程式碼區段。  
@@ -48,9 +51,6 @@ ms.lasthandoff: 12/21/2017
   
  [建置 C/c + + 程式](../build/reference/c-cpp-building-reference.md)  
  提供討論編譯器和連結器選項的主題連結。  
-  
- [Visual C++ 程式庫](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- 提供 Visual c + +，包括 ATL、 MFC、 OLE DB、 C 執行階段程式庫和 c + + 標準程式庫提供的各種程式庫的連結。  
   
  [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)  
  說明 Visual Studio 使用者介面，可讓您指定專案系統將搜尋的目錄，以尋找您的 C++ 專案的檔案。

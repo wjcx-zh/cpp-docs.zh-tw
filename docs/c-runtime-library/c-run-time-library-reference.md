@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.runtime
-dev_langs: C++
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9b393bc72bbc6722d353295dc244f75f504b9730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7683dd8c6c896f972df3e47d5ba37a0f413724fa
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="c-run-time-library-reference"></a>C 執行階段程式庫參考
 Microsoft 執行階段程式庫提供一些為 Microsoft Windows 作業系統設計程式所需的常式。 這些常式會自動執行 C 和 C++ 語言所未提供的許多常見的程式設計工作。  
@@ -62,11 +66,5 @@ Microsoft 執行階段程式庫提供一些為 Microsoft Windows 作業系統設
  [DLL 和 Visual C++ 執行階段程式庫行為](../build/run-time-library-behavior.md)  
  討論用於 DLL 的進入點和啟動程式碼。  
   
- [Visual C++ 程式庫](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- 提供 Visual C++ 隨附之各種程式庫的連結，這些程式庫包括 ATL、MFC、OLE DB 樣板、C 執行階段程式庫和 C++ 標準程式庫。  
-  
  [偵錯](/visualstudio/debugger/debugging-in-visual-studio)  
  提供使用 Visual Studio 偵錯工具來更正應用程式或預存程序 (Stored Procedure) 中邏輯錯誤的連結。  
-  
-## <a name="see-also"></a>請參閱  
- [Visual C++ 程式庫參考](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)

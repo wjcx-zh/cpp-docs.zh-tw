@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname: _get_wpgmptr
+apiname:
+- _get_wpgmptr
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - get_wpgmptr
 - _get_wpgmptr
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _wpgmptr global variable
 - get_wpgmptr function
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8ad1d467c6cd99d911e27d32f71a75470a19ca0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d80fddf79be3c94eda07958919a886735666dc0d
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="getwpgmptr"></a>_get_wpgmptr
 取得 `_wpgmptr` 全域變數的目前值。  
@@ -61,7 +65,7 @@ errno_t _get_wpgmptr(
  如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果 `pValue` 為 `NULL`，則會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 若允許繼續執行，此函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
   
 ## <a name="remarks"></a>備註  
- `_wpgmptr` 全域變數包含與處理相關聯的可執行檔的完整路徑做為寬字元字串。 如需詳細資訊，請參閱 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。  
+ 只能呼叫`_get_wpgmptr`如果您的程式有廣泛的進入點，如`wmain()`或`wWinMain()`。 `_wpgmptr` 全域變數包含與處理相關聯的可執行檔的完整路徑做為寬字元字串。 如需詳細資訊，請參閱 [_pgmptr、_wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)。  
   
 ## <a name="requirements"></a>需求  
   

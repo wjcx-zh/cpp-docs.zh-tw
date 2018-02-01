@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.programs
-dev_langs: C++
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compatibility"></a>相容性
 通用 C 執行階段程式庫 (UCRT) 支援與 C++ 相容所需的大部分 C 標準程式庫。 除了 \<tgmath.h> 中所定義的泛型巨集及 \<complex.h> 中的 Strict 類型相容性之外，其會實作 C99 (ISO/IEC 9899:1999) 程式庫。 UCRT 也會實作 POSIX.1 的大型子集 (ISO/IEC 9945-1:1996，POSIX 系統應用程式開發介面) C 程式庫，但不全然符合任何特定的 POSIX 標準。  此外，UCRT 會實作數個 Microsoft 特有但不包含在標準之中的函式與巨集。  
@@ -34,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  標準 C 程式庫中有某些函式曾因為誤用參數及未檢查緩衝區而有使用方式不安全的記錄。 這些函式通常是程式碼中安全性問題的來源。 Microsoft 為這些函式建立了一套更安全的版本，可以檢查參數的使用方式，並能在執行階段偵測到問題時，叫用無效參數處理常式。  根據預設，當現行函式有更安全的變體可供使用時，Visual C++ 編譯器便會發出已被取代警告。 當您將程式碼編譯成 C++ 時您可以將 `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` 定義為 1，以排除大部分的警告。 這會使用範本多載來呼叫更安全的變體，同時維護可攜式程式碼。 若要停止顯示警告，請先定義 `_CRT_SECURE_NO_WARNINGS` ，然後再將標頭加入使用這些函式的程式碼中。 如需詳細資訊，請參閱 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)。  
   
- 除了文件中所述有關這些特殊函式的相關資訊之外，UCRT 也相容於 Windows API。  某些函式在 Windows 8 市集應用程式或 Windows 10 上的通用 Windows 應用程式中不受支援。 這些函式列在 [/ZW 不支援的 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)中，其中將列舉 [Windows 執行階段](http://msdn.microsoft.com/en-us/9a1a18b8-9802-4ec5-b9de-0d2dfdf414e9)不支援的函式。  
+ 除了文件中所述有關這些特殊函式的相關資訊之外，UCRT 也相容於 Windows API。  在 Window 8 市集應用程式或 Windows 10 上的通用 Windows 平台應用程式不支援某些函式。 這些函式列在 [通用 Windows 平台應用程式不支援的 CRT 函式](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)，其列舉出 Windows 執行階段與 [UWP](/uwp) 不支援的函式。  
   
 ## <a name="related-articles"></a>相關文章  
   

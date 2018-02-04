@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.codewiz.classes.member.variable
-dev_langs: C++
+f1_keywords:
+- vc.codewiz.classes.member.variable
+dev_langs:
+- C++
 helpviewer_keywords:
 - member variables, adding
 - member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 52d98e3eae6e468db7c2737efac8c2b7ab04abd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ea3f5327568b1ad8380ce905987a570541e8f44f
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="adding-a-member-variable--visual-c"></a>加入成員變數 (Visual C++)
 您可以使用 類別檢視的類別中加入成員變數。 成員變數可以是做為[資料交換和驗證資料](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈是特別設計的相關資訊並使用原始程式檔的適當位置中插入項目。 您可以加入成員變數從[對話方塊編輯器](../windows/dialog-editor.md)中[資源檢視](../windows/resource-view-window.md)，或從[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  

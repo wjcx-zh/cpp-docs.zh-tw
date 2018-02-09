@@ -531,7 +531,6 @@
 ##### [圖形物件](graphic-objects.md)
 ###### [一階段和兩階段的物件建構](one-stage-and-two-stage-construction-of-objects.md)
 ###### [選取圖形物件放入裝置內容中](selecting-a-graphic-object-into-a-device-context.md)
-###### [舊版作業系統上的 CImage 限制](cimage-limitations-with-earlier-operating-systems.md)
 #### [框架視窗](frame-windows.md)
 ##### [框架視窗類別](frame-window-classes.md)
 ###### [應用程式精靈所建立的框架視窗類別](frame-window-classes-created-by-the-application-wizard.md)

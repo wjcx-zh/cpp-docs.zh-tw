@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -17,26 +19,17 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
-Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通用 Windows 應用程式、原生傳統型和伺服器應用程式、在 Android 和 iOS 以及 Windows 上執行的跨平台程式庫，以及在 .NET Framework 上執行的 Managed 應用程式。
-
-**這份文件的對象是哪類讀者？**
-
-本內容是為撰寫程式的 C++ 開發人員所撰寫。
-
-- 如果您要尋找特定 C++ 可轉散發套件和執行階段元件以執行程式，請移至 [Microsoft](http://www.microsoft.com/) 網站，並在搜尋方塊中輸入 **Visual C++ Redistributable**。 下載並安裝電腦架構的可轉散發套件 (例如，如果您執行 64 位元 Windows，則為 x64) 以及您所需的 Visual C++ 版本。 
-
-- 如果您在尋找 C++ 程式設計概念的簡介，請前往其中一個提供此內容的網站，或取得一份由 C++ 發明人 Bjarne Stroustup 所著的 [程式設計 - 使用 C++ 的原則和作法 (第二版)](http://stroustrup.com/Programming/) 。 Visual C++ 內容假定您已經對 C++ 有基本的熟悉程度。
-
-- 如果您在尋找 Visual C++ 編譯器，則必須從 [https://www.visualstudio.com/](https://www.visualstudio.com/) 下載付費或免費的 Visual Studio 版本。
+Microsoft Visual C++ 通常簡稱為 Visual C++ 或 MSVC，是 C++、C 及組合語言開發工具與程式庫的名稱，屬於 Windows 上的 Visual Studio 可用內容。 這些工具與程式庫可讓您建立通用 Windows 平台 (UWP) 應用程式、原生 Windows 傳統型與伺服器應用程式、跨平台程式庫與應用程式 (於 Windows、Linux、Android 及 iOS 上執行) 以及使用 .NET Framework 的受控應用程式與程式庫。 您可以使用 Visual C++ 撰寫任何項目，涵蓋範圍從簡單的主控台應用程式到最精密複雜的 Windows 傳統型應用程式；從裝置驅動程式與作業系統元件到行動裝置的跨平台遊戲；及從最小的 IoT 裝置到 Azure 雲端中的多伺服器高效能運算。
 
 ## <a name="general-information-about-visual-c"></a>Visual C++ 的一般資訊
 
@@ -47,7 +40,7 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
 了解 Visual Studio 2017 中的 C++ 一致性改善。
 
 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)  
-Visual C++ 依據功能的一致性狀態清單。
+MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 
 [Visual C++ 變更歷程記錄 2003 - 2015](porting/visual-cpp-change-history-2003-2015.md)  
 了解舊版的重大變更。
@@ -59,13 +52,13 @@ Visual C++ 依據功能的一致性狀態清單。
  了解如何針對 Visual C++ 工具組 (編譯器、連結器及其他工具) 建立有效的錯誤報表，以及提交報表的方式。
 
 [Visual C++ 移植和升級指南](porting/visual-cpp-porting-and-upgrading-guide.md)  
-在 Visual Studio 2017 中移植程式碼到 Visual C++ 及將專案升級至 Visual C++ 的指引，包括將 C++ 程式碼移植到 Windows 10 及通用 Windows 平台。
+將程式碼移植到 Visual Studio 2017 及將專案升級至 Visual Studio 2017 的指引，包括將 C++ 程式碼移植到 Windows 10 及通用 Windows 平台。
 
 [Visual C++ Team 部落格](http://blogs.msdn.com/b/vcblog/)  
  進一步了解新功能以及 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]開發人員提供的最新資訊。
 
 [Visual Studio 下載](http://go.microsoft.com/fwlink/p/?linkid=235233)  
-下載 Visual C++。
+下載 Visual Studio。
 
 [Visual Studio 版本中的 Visual C++ 工具和功能](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)  
 了解不同的 Visual Studio 版本。
@@ -84,7 +77,7 @@ Visual C++ 依據功能的一致性狀態清單。
 [通用 Windows 應用程式](windows/universal-windows-apps-cpp.md)  
 尋找 Windows 開發人員中心網站上的指南和參考內容。 如需開發 Windows 市集應用程式的詳細資訊，請參閱 [使用 Visual Studio 開發 Windows 市集應用程式](http://go.microsoft.com/fwlink/p/?LinkId=248364) 和 [使用 C++ 建立 Windows 市集應用程式的藍圖](http://go.microsoft.com/fwlink/p/?LinkId=244654)。
 
-[傳統型應用程式 (Visual C++)](windows/desktop-applications-visual-cpp.md)  
+[傳統型應用程式 (C++)](windows/desktop-applications-visual-cpp.md)  
 學習如何建立含有訊息迴圈和回呼的桌面應用程式。
 
 [Visual C++ 中的 DLL](build/dlls-in-visual-cpp.md)  
@@ -117,7 +110,7 @@ Visual C++ 依據功能的一致性狀態清單。
 
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio 中的 C++ 程式庫
 
-下列各節提供 Visual C++ 所包含的不同 C++ 程式庫的相關資訊。
+下列各節提供 Visual Studio 所包含之不同 C 與 C++ 程式庫的相關資訊。
 
 [C 執行階段程式庫參考](c-runtime-library/c-run-time-library-reference.md)  
 包含已知會造成安全性問題的函式的安全性增強替代項目。
@@ -140,25 +133,16 @@ GPU 上執行的大量平行演算法。
 [Windows 執行階段範本庫 (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
 [!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] 應用程式和元件。
 
-[以 C++/CLI 進行 .NET 程式設計 (Visual C++)](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[以 C++/CLI 進行 .NET 程式設計](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 通用語言執行平台 (CLR) 的程式設計。
 
 另請參閱 [STL/CLR](dotnet/stl-clr-library-reference.md) 與 [C++ Support Library](dotnet/cpp-support-library.md)的說明文件。
 
 ## <a name="other-c-libraries"></a>其他 C++ 程式庫
 
-本節包含未隨附於 Visual Studio 中，但可以下載並搭配 Visual C++ 使用的程式庫連結。
-
-[Boost](http://www.boost.org/)  
-熱門並廣泛使用的程式庫。
-
-[C++ REST SDK](http://casablanca.codeplex.com)。  
-透過 HTTP 與 Web 服務通訊的 Microsoft 程式庫。
+您可以使用 vcpkg 命令列工具大幅簡化 600 個以上 C++ 開放原始碼程式庫的探索與安裝。 請參閱 [vcpkg：適用於 Windows 的 C++ 套件管理員](vcpkg.md)。
 
 ## <a name="more-resources"></a>更多資源
-
-[Visual C++ 資源](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
-其他 Visual C++ 資源。
 
 [標準 C++](http://isocpp.org/)  
 深入了解 C++、取得 Modern C++ 的概觀，以及找到相關書籍、文件、討論和活動的連結

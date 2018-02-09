@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d5751899dc064da4b17e240411878187a80acbdc
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
 本主題提供升級 Visual C++ 程式碼的指南。 其中包括如何讓程式碼能夠在新版工具上正確編譯和執行，以及利用新語言和 Visual Studio 功能。 本主題也包含將舊版應用程式移轉至更新式平台的相關資訊。  
@@ -82,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 |標題|描述|  
 |-----------|-----------------|  
 |[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|討論如何使用在舊版 Visual C++ 中建立的專案。|  
-|[Visual Studio 2017 RC 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)|從 Visual Studio 2015 到 Visual Studio 2017 的 IDE 和工具變更|  
+|[Visual Studio 2017 RC 中 C++ 編譯器的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)|從 Visual Studio 2015 到 Visual Studio 2017 的 IDE 和工具變更|  
 |[Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)|從 Visual Studio 2015 到 Visual Studio 2017 的標準一致性改善|  
 |[Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)|從 Visual Studio 2003 到 2015 之 Visual C++ 程式庫和建置工具的所有變更清單，可能需要在程式碼中進行變更。|  
 |[從 2003 到 2015 的 Visual C++ 新功能](visual-cpp-what-s-new-2003-through-2015.md)|從 Visual Studio 2003 到 Visual Studio 2015 之 Visual C++ 的所有「新功能」資訊。|  

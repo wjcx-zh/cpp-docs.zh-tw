@@ -1,22 +1,24 @@
 ---
 title: "Visual Studio 中 Visual C++ 的新功能 | Microsoft Docs"
 ms.date: 11/15/2017
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f266e17e88118e41550da68e77434f52b3456261
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新功能
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 帶來 Visual C++ 環境的多個更新與修正。 我們已修正超過 250 錯誤，並回報的問題，編譯器和工具，許多提交客戶透過[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://visualstudio.uservoice.com/)選項底下**傳送意見反應**. 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的新功能](https://go.microsoft.com/fwlink/p/?linkid=834481)。
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 帶來 Visual C++ 環境的多項更新與修正。 我們已修正超過 250 錯誤，並回報的問題，編譯器和工具，許多提交客戶透過[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://visualstudio.uservoice.com/)選項底下**傳送意見反應**. 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的新功能](https://go.microsoft.com/fwlink/p/?linkid=834481)。
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -32,11 +34,11 @@ ms.lasthandoff: 01/03/2018
 
    **Visual Studio 2017 15.3 版**：
 
-   使用 **/std:c++17** 選項能讓 Visual C++ 編譯器實作一整組 C++17 功能。 此選項會對 C++ 標準中，在 C++17 之後推出但屬於進行中草稿及瑕疵更新版本的變更或新增功能，停用編譯器及標準程式庫支援。 若要啟用這些功能，請使用 **/std:c++latest**。
+   **/std:c++17** 選項讓編譯器可實作整組 C++17 功能。 此選項會對 C++ 標準中，在 C++17 之後推出但屬於進行中草稿及瑕疵更新版本的變更或新增功能，停用編譯器及標準程式庫支援。 若要啟用這些功能，請使用 **/std:c++latest**。
 
    **Visual Studio 2017 15.5 版**：
 
-   Visual C++ 編譯器支援 C++17 中約 75% 的新功能，包括結構化繫結、`constexpr` Lambda、`if constexpr`、內嵌變數、摺疊運算式，以及將 `noexcept` 新增至類型系統。 您可從 **/std:c++17** 選項使用這些功能。 如需詳細資訊，請參閱 [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)
+   編譯器支援 C++17 中約 75% 的新功能，包括結構化繫結、`constexpr` Lambda、`if constexpr`、內嵌變數、摺疊運算式，以及將 `noexcept` 新增至型別系統。 您可從 **/std:c++17** 選項使用這些功能。 如需詳細資訊，請參閱 [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)
 
 - [/permissive-](build/reference/permissive-standards-conformance.md)︰啟用所有嚴格的標準一致性編譯器選項，並停用大部分 Microsoft 專用的編譯器延伸模組 (但 `__declspec(dllimport)` 即為不包含在內的例子)。 根據預設，這個選項會關閉，但將來某個時候會改為根據預設開啟。
 

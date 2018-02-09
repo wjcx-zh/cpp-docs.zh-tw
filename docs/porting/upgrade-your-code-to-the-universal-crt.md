@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e63945dc51fe55d81963790e7373a3d4dc9b0efe
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>將程式碼升級至通用 CRT
 
@@ -42,7 +43,7 @@ C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援�
   
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>通用 CRT 的部署和轉散發
   
-因為 UCRT 現在是 Microsoft Windows 作業系統元件，所以是 Windows 10 中作業系統的一部分，並可透過 Windows Vista 到 Windows 8.1 的較舊作業系統的 Windows Update 取得。 Windows XP 具有可轉散發版本。 作為作業系統元件，不管 Visual Studio 和 Visual C++ 編譯器版本為何，Windows Update 都會管理 UCRT 更新和服務。 因為 UCRT 是 Windows 元件，所以基於更新的安全性和簡易性，以及較小的影像大小，強烈建議集中部署您應用程式的 UCRT。  
+因為 UCRT 現在是 Microsoft Windows 作業系統元件，所以是 Windows 10 中作業系統的一部分，並可透過 Windows Vista 到 Windows 8.1 的較舊作業系統的 Windows Update 取得。 Windows XP 具有可轉散發版本。 作為作業系統元件，不管 Visual Studio 和 Microsoft C++ 編譯器版本為何，Windows Update 都會管理 UCRT 更新和服務。 因為 UCRT 是 Windows 元件，所以基於更新的安全性和簡易性，以及較小的影像大小，強烈建議集中部署您應用程式的 UCRT。  
   
 您可以在 Visual Studio 2015 或 Visual Studio 2017 支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 套件進行轉散發。 vcredist 套件包括 UCRT 元件，並將它們自動安裝在預設未安裝它們的 Windows 作業系統上。 如需詳細資訊，請參閱[轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)。  
   

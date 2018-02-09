@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 09/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: UNIX [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 06e4b772288f2e7374bb10f1298da33fbc6dcac0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 258f08db457761a37822a872415633d6359b7b47
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>針對 UNIX 使用者的 Visual C++ 簡介
 
-本主題提供資訊給剛開始使用 Visual C++，並想更有效率使用 Visual C++ 和 Visual Studio 整合式開發環境 (IDE) 的 UNIX 使用者。  
+本主題提供資訊給剛開始使用 Visual Studio，並想更有效率使用 C++ 和 Visual Studio 整合式開發環境 (IDE) 的 UNIX 使用者。
   
 ## <a name="getting-started-on-the-command-line"></a>從命令列開始使用  
 
-您可以透過與使用 UNIX 命令列環境類似的方式，從命令列使用 Visual C++。 您可以從命令提示字元，使用命令列 C 和 C++ 編譯器 (CL.EXE)、連結器 (LINK.EXE) 和其他工具進行編譯，包括 Microsoft 版的 UNIX make 公用程式 NMAKE.EXE。  
+您可以透過與使用 UNIX 命令列環境類似的方式，從命令列使用 C++ 編譯器。 您可以從命令提示字元，使用命令列 C 和 C++ 編譯器 (CL.EXE)、連結器 (LINK.EXE) 和其他工具進行編譯，包括 Microsoft 版的 UNIX make 公用程式 NMAKE.EXE。  
   
-在 UNIX 中，命令會安裝在通用資料夾中，例如 /usr/bin。 在 Visual C++ 中，命令列工具會安裝在您的 Visual Studio 安裝目錄 (VC\bin 子目錄中) 及其子目錄中。 不同於 UNIX，這些工具無法從一般命令提示字元視窗存取。 若要使用命令列工具，請使用開發人員命令提示字元捷徑，或執行開發人員命令檔案 (例如 vcvarsall.bat)。 這會設定從命令列編譯 Visual C++ 程式所需的路徑和其他環境變數。 如需詳細資訊，請參閱[在命令列上建置 C/C++ 程式碼](../build/building-on-the-command-line.md)和[逐步解說：在命令列上編譯原生 C++ 程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
+在 UNIX 中，命令會安裝在通用資料夾中，例如 /usr/bin。 在 Visual Studio 中，命令列工具會安裝在您的 Visual Studio 安裝目錄 (VC\bin 子目錄中) 及其子目錄中。 不同於 UNIX，這些工具無法從一般命令提示字元視窗存取。 若要使用命令列工具，請使用開發人員命令提示字元捷徑，或執行開發人員命令檔案 (例如 vcvarsall.bat)。 這會設定從命令列編譯 C++ 程式所需的路徑和其他環境變數。 如需詳細資訊，請參閱[在命令列上建置 C/C++ 程式碼](../build/building-on-the-command-line.md)和[逐步解說：在命令列上編譯原生 C++ 程式](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
   
 若要開啟開發人員命令提示字元捷徑，請在桌面搜尋控制項中輸入「開發人員命令提示字元」，然後選擇適用於您 Visual Studio 版本的 [開發人員命令提示字元] 結果。 若要選擇針對特定主機和目標架構預先設定的開發人員命令提示字元，請開啟 [開始] 功能表 (桌面角落的 Windows 圖示)，然後捲動至您 Visual Studio 版本的資料夾 (例如 **Visual Studio 2017**)。 開啟資料夾，然後針對您慣用的主機和目標架構選擇命令提示字元捷徑。
   
@@ -47,11 +51,11 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="importing-your-existing-code"></a>匯入現有的程式碼 
  
-您可以使用 Visual C++ 來建置現有的程式碼，並將其設定為以 Makefile 或不以 Makefile 編譯，然後放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 專案。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
+您可以使用 C++ 編譯器來建置現有的程式碼，並將其設定為以 Makefile 或不以 Makefile 編譯，然後放入 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 專案。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
   
 ## <a name="creating-a-new-project"></a>建立新專案  
 
-您可以在開發環境中建立新專案。 Visual C++ 提供許多範本，其中的標準程式碼適用於各種常見專案。 您可以使用應用程式精靈，來產生具有適用於各種應用程式類型之程式碼大綱的專案。  
+您可以在開發環境中建立新專案。 Visual Studio 提供許多範本，其中的標準程式碼適用於各種常見專案。 您可以使用應用程式精靈，來產生具有適用於各種應用程式類型之程式碼大綱的專案。  
   
 您可以使用 [主控台應用程式 (Win32) 精靈]，從空專案開始。 選取 [空專案] 核取方塊。 您可以稍後再將新的和現有的檔案加入專案。  
   
@@ -59,9 +63,9 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="microsoft-specific-modifiers"></a>Microsoft 專有的修飾詞  
 
-Visual C++ 包含標準 C++ 程式設計語言的數個延伸模組，以便支援 Windows 作業系統的程式設計。 這些擴充功能可用來指定儲存類別屬性、函式呼叫慣例和基底定址等。 如需所有 Visual C++ 延伸模組的完整清單，請參閱 [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
+Microsoft Visual C++ 編譯器實作標準 C++ 程式設計語言的數個延伸模組，以支援 Windows 作業系統的程式設計。 這些擴充功能可用來指定儲存類別屬性、函式呼叫慣例和基底定址等。 如需所有支援之 C++ 延伸模組的完整清單，請參閱 [Microsoft 專用的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
   
-您可以使用 **/Za** 編譯器選項，來停用 C++ 的所有 Microsoft 特定延伸模組。 如果您想要撰寫程式碼以在多個平台上執行，建議使用這個選項。 如需 **/Za** 編譯器選項的詳細資訊，請參閱 [/Za、/Ze (停用語言延伸模組)](../build/reference/za-ze-disable-language-extensions.md)。 如需 Visual C++ 一致性的詳細資訊，請參閱[非標準行為](../cpp/nonstandard-behavior.md)。  
+您可以使用 **/Za** 編譯器選項，來停用 C++ 的所有 Microsoft 特定延伸模組。 如果您想要撰寫程式碼以在多個平台上執行，建議使用這個選項。 如需 **/Za** 編譯器選項的詳細資訊，請參閱 [/Za、/Ze (停用語言延伸模組)](../build/reference/za-ze-disable-language-extensions.md)。 如需有關 C++ 編譯器一致性的詳細資訊，請參閱 [Visual C++ 語言一致性](../visual-cpp-language-conformance.md)與[非標準行為](../cpp/nonstandard-behavior.md)。  
   
 ## <a name="precompiled-headers"></a>先行編譯標頭檔  
 

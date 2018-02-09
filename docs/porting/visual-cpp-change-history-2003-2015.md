@@ -4,32 +4,38 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: breaking changes [C++]
+dev_langs:
+- C++
+helpviewer_keywords:
+- breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-caps.latest.revision: "124"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 271831fb4dd946739414fb40b00fadf83b5e0ed1
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
-這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」與「過去」表示 Visual Studio 2013 及更舊版本。 
- 
- 如需 Visual Studio 2017 的資訊，請參閱 [Visual Studio 2017 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)及[Visual Studio 2017 中 Visual C++ 的合規性改進](../cpp-conformance-improvements-2017.md)。 
- > [!NOTE]
- > Visual Studio 2015 與 Visual Studio 2017 之間沒有二進位檔重大變更。
 
-當您升級到 Visual C++ 編譯器的新版本時，先前正常編譯及執行的程式碼可能會發生編譯和/或執行階段錯誤。 新版本中會造成這類問題的變更稱為 *「重大變更」*(Breaking Change)，在進行 C++ 語言標準、函式簽章或記憶體內部物件配置的修改時通常都會有重大變更。  
-  
+這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」與「過去」表示 Visual Studio 2013 及更舊版本。
+
+如需 Visual Studio 2017 的資訊，請參閱 [Visual Studio 2017 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)及[Visual Studio 2017 中 Visual C++ 的合規性改進](../cpp-conformance-improvements-2017.md)。 
+
+> [!NOTE]
+> Visual Studio 2015 與 Visual Studio 2017 之間沒有二進位檔重大變更。
+
+當您升級到新版 Visual Studio 時，先前正常編譯及執行的程式碼可能會發生編譯和 (或) 執行階段錯誤。 新版本中會造成這類問題的變更稱為 *「重大變更」*(Breaking Change)，在進行 C++ 語言標準、函式簽章或記憶體內部物件配置的修改時通常都會有重大變更。
+
  為了避免發生難以偵測及診斷的執行階段錯誤，我們建議您絕不要以靜態方式連結至使用不同版本編譯器所編譯的二進位檔。 此外，當您升級 EXE 或 DLL 專案時，請務必也要升級它所連結的程式庫。 若是使用 CRT (C 執行階段) 或 C++ 標準程式庫 (C++ 標準程式庫) 類型，請勿在使用不同版本編譯器所編譯的二進位檔 (包括 DLL) 之間傳遞這些類型。 如需詳細資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
   
  我們還要建議您不要為不是 COM 介面或 POD 物件的物件撰寫依賴特定配置的程式碼。 如果您撰寫了這種程式碼，則必須確定它在升級之後可以正確運作。 如需詳細資訊，請參閱 [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)。  
@@ -105,9 +111,8 @@ ms.lasthandoff: 12/21/2017
   
 -   **printf 與 scanf 系列的函式現在會在函式中定義。** 所有 printf 與 scanf 函式的定義均已移至 \<stdio.h>、\<conio.h> 及其他 CRT 標頭內。 對於區域宣告這些函式，但不包含適當的 CRT 標頭之任何程式而言，這是會導致連結器錯誤 (LNK2019，無法解析的外部符號) 的重大變更。 如有可能，您應更新程式碼，將 CRT標頭 (亦即加入 #include \<stdio.h>) 及內嵌函式加入其中；若您不想修改程式碼來加入這些標頭檔案，也可以採用替代解決方法，在您的連結器輸入 legacy_stdio_definitions.lib 中新增額外的程式庫。  
   
-     若要將您在此 IDE 中的連結器輸入加入這個程式庫，請開啟專案節點的操作功能表，選擇 [屬性] ，接著在 [專案屬性]  對話方塊中選擇 [連結器] ，並編輯 [連結器輸入]  ，將 legacy_stdio_definitions.lib 加入此分號分隔的清單。  
-  
-     如果您的專案以靜態程式庫連結，且此程式庫使用早於 2015的 Visual C++ 版本編譯，則此連結器可能會報告無法解析的外部符號。 這些錯誤可能會參考 _iob、_iob_func 的內部 stdio 定義，或某些以 _imp\_* 格式宣告之 stdio 函式的相關匯入。 Microsoft 建議當您升級專案時，應以最新版本的 Visual C++ 編譯器和程式庫重新編譯所有的靜態程式庫。 如果該程式庫是協力廠商程式庫，其來源無法取得，您應該向協力廠商要求更新的二進位檔，或將該程式庫的使用方式封裝成不同的 DLL，其中您使用舊版的 Visual C++ 編譯器和程式庫編譯該 DLL。  
+     若要將您在此 IDE 中的連結器輸入加入這個程式庫，請開啟專案節點的操作功能表，選擇 [屬性] ，接著在 [專案屬性]  對話方塊中選擇 [連結器] ，並編輯 [連結器輸入]  ，將 legacy_stdio_definitions.lib 加入此分號分隔的清單。
+     如果您的專案與靜態程式庫連結，且此程式庫使用 2015 之前的 Visual Studio 版本進行編譯，則此連結器可能會回報無法解析的外部符號。 這些錯誤可能會參考 _iob、_iob_func 的內部 stdio 定義，或某些以 _imp\_* 格式宣告之 stdio 函式的相關匯入。 Microsoft 建議您在升級專案時，應以最新版本的 C++ 編譯器和程式庫重新編譯所有的靜態程式庫。 如果該程式庫是協力廠商程式庫，其來源無法取得，您應該向協力廠商要求更新的二進位檔，或將該程式庫的使用方式封裝成以舊版編譯器和舊版程式庫編譯的獨立 DLL。
   
     > [!WARNING]
     >  如果您要以 Windows SDK 8.1 或更早版本連結，您可能會遇到這些無法解析的外部符號錯誤。 在該情況下，您應該如先前所述地將 legacy_stdio_definitions.lib 加入連結器輸入來解決此錯誤。  
@@ -122,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **_cgets 與 _cgetws**：[_cgets](../c-runtime-library/cgets-cgetws.md) 與 [_cgetws](../c-runtime-library/cgets-cgetws.md) 函式已移除。 您可以考慮使用這些函式的替代函數 [_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) 與 [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
   
--   **無限大與 NaN 格式** 在舊版本中，會使用一組 Visual C++ 特定的 Sentinel 字串，將無限大和 NaN 格式化。  
+-   **無限大與 NaN 格式化**在舊版本中，會使用一組 MSVC 專用的 Sentinel 字串，將無限大和 NaN 格式化。  
   
     -   無限大：1.#INF  
   
@@ -132,7 +137,7 @@ ms.lasthandoff: 12/21/2017
   
     -   不確定的 NaN：1.#IND  
   
-     其中任何一項都可能有正負號的前置詞，也可能根據欄位寬度和精確度而有稍微不同的格式 (有時會有不尋常的效果，例如：printf("%.2f\n", INFINITY) 可能會列印 1.#J，因為有可能會將 #INF「四捨五入」為 2 位數的精確度)。 C99 導入了無限大和 NaN 格式化方式之新的需求。 現在的 Visual C++ 實作符合這些需求。 新的字串如下：  
+     其中任何一項都可能有正負號的前置詞，也可能根據欄位寬度和精確度而有稍微不同的格式 (有時會有不尋常的效果，例如：printf("%.2f\n", INFINITY) 可能會列印 1.#J，因為有可能會將 #INF「四捨五入」為 2 位數的精確度)。 C99 導入了無限大和 NaN 格式化方式之新的需求。 MSVC 實作現在符合這些需求。 新的字串如下：  
   
     -   無限大：inf  
   
@@ -240,11 +245,11 @@ ms.lasthandoff: 12/21/2017
 -   **CLOCKS_PER_SEC** 現在 CLOCKS_PER_SEC 巨集會展開成整數的類型 clock_t，如同 C 語言所要求的。  
   
 ####  <a name="BK_STL"></a>C++ 標準程式庫  
- 為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤  (_MSC_VER 是包含此編譯器主要版本的巨集，例如對於 Visual Studio 2013 為 1800。)這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。  
+ 為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤  (_MSC_VER 是包含此編譯器主要版本的巨集，例如對於 Visual Studio 2013 為 1800。)這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual Studio 2008 及較舊版的混合。  
   
 -   **C++ 標準程式庫包含檔案**：有一些變更讓 C++ 標準程式庫標頭可以加入結構。 C++ 標準程式庫標頭可以一些未經指定的方式加入彼此之中。 一般來說，您在撰寫程式碼時，應依據 C++ 標準小心地加入程式碼所需的所有標頭，而不要使用 C++ 標準程式庫標頭相互加入的這項特性。 這使其成為可攜式跨版本和跨平台的程式碼。 在 Visual Studio 2015 中，至少有兩種標頭的變更會影響使用者程式碼。 首先，\<string> 不再包含 \<iterator>。 其次，\<tuple> 現在只會宣告 std::array，而不會加入所有的 \<array>。此函式可以經由下列程式碼建構組合中斷程式碼：您的程式碼具有名為 "array" 的變數及 using 指示詞 "using namespace std;"，而且包含內有 \<tuple> (現在會宣告 std::array) 的 C++ 標準程式庫標頭 (例如 \<functional>)。  
   
--   **steady_clock**：為求穩定及單純，[steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 實作已變更為遵循 C++ 標準的要求。 現在 steady_clock 以 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 為基礎，而 high_resolution_clock 現在是 steady_clock 的 typedef。 如此一來，在 Visual C++ 中， steady_clock::time_point 現在是 chrono::time_point<steady_clock> 的 typedef；不過，這不一定也會發生在其他實作中。  
+-   **steady_clock**：為求穩定及單純，[steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 實作已變更為遵循 C++ 標準的要求。 現在 steady_clock 以 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 為基礎，而 high_resolution_clock 現在是 steady_clock 的 typedef。 所以，在 Visual Studio 中，steady_clock::time_point 現在是 chrono::time_point<steady_clock> 的 typedef；不過，這不一定也會發生在其他實作中。  
   
 -   **配置器和常數** 我們現在要求配置器的等號/不等比較要在兩邊接受常數引數。  如果您的配置器定義這些運算子，如下所示：  
   
@@ -258,9 +263,9 @@ ms.lasthandoff: 12/21/2017
     bool operator==(const MyAlloc& other) const  
     ```  
   
--   **const elements**：C++ 標準一律禁止常數項目 (例如 vector\<const T> 或 set\<const T>) 的容器。 Visual C++ 2013 及更早版本接受這類容器。 在目前版本中，這類容器無法編譯。  
+-   **const elements**：C++ 標準一律禁止常數項目 (例如 vector\<const T> 或 set\<const T>) 的容器。 Visual Studio 2013 及較舊版接受這類容器。 在目前版本中，這類容器無法編譯。  
   
--   **std::allocator::deallocate** 在 Visual C++ 2013 和舊版中，std::allocator::deallocate(p, n) 忽略針對 n 而傳遞進來的引數。  C++ 標準永遠要求 n 與做為第一個引數傳遞的值相等，該值傳遞至配置的引動過程，其中此配置會傳回 p。 不過，在目前版本中，會檢查 n 的值。 對於所傳遞之 n 的引數和此標準要求不同的程式碼，這有可能會在執行階段當機。  
+-   **std::allocator::deallocate** 在 Visual Studio 2013 和較舊版中，std::allocator::deallocate(p, n) 略過針對 n 而傳遞進來的引數。  C++ 標準永遠要求 n 與做為第一個引數傳遞的值相等，該值傳遞至配置的引動過程，其中此配置會傳回 p。 不過，在目前版本中，會檢查 n 的值。 對於所傳遞之 n 的引數和此標準要求不同的程式碼，這有可能會在執行階段當機。  
   
 -   **hash_map 與 hash_set**：非標準的標頭檔案 hash_map 及 hash_set 在 Visual Studio 2015 中已淘汰，並將於後續版本中移除。 請改用 unordered_map 和 unordered_set。  
   
@@ -316,16 +321,16 @@ ms.lasthandoff: 12/21/2017
     (concurrency::Context::Yield)();  
     ```  
   
-## <a name="compiler-conformance-improvements-in-visual-c-2015"></a>Visual C++ 2015 的編譯器合規性改進  
- 從舊版升級程式碼時，也可能會因為 Visual C++ 2015 的合規性改進而造成一些編譯器錯誤。 這些改進對於舊版 Visual C++ 的二進位相容性沒有影響，但可能會產生過去從未發生的編譯器錯誤。 如需詳細資訊，請參閱[Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ 2003 至 2015 的新功能)。  
+## <a name="compiler-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 的編譯器一致性改進  
+ 從舊版升級程式碼時，也可能會因為 Visual Studio 2015 的一致性改進而發生編譯器錯誤。 這些改進並不影響較舊版 Visual Studio 的二進位相容性，但可能會產生之前從未發生過的編譯器錯誤。 如需詳細資訊，請參閱[Visual C++ What's New 2003 through 2015](../porting/visual-cpp-what-s-new-2003-through-2015.md) (Visual C++ 2003 至 2015 的新功能)。  
   
- 在 Visual C++ 2015 中，隨著編譯器合規性不斷改進，有時候可能會改變編譯器解讀您現有原始程式碼的方式。 當發生這種情況時，可能會在您建置時發生不同或新的錯誤，甚至程式碼的行為與上版組建不同，而且看似正常運作。  
+ 在 Visual Studio 2015 中，隨著編譯器一致性不斷改進，有時候可能會改變編譯器解讀您現有原始程式碼的方式。 當發生這種情況時，可能會在您建置時發生不同或新的錯誤，甚至程式碼的行為與上版組建不同，而且看似正常運作。  
   
  所幸這些差異對於您大部分的原始程式碼影響很小，甚至完全沒有影響。即使有需要變更原始程式碼或進行其他變更才能解決這些差異，這類修正通常很少而且簡單明瞭。 我們加入了許多先前接受，但後來可能需要變更的原始程式碼範例 *(之前)*，以及用以更正的修正 *(之後)*。  
   
- 雖然這些差異可脦會影響您的原始程式碼或其他組建成品，但不會影響每版 Visual C++ 更新之間的二進位相容性。 「重大變更」是較重大的變更類型，會影響二進位檔相容性，但這些類型的二進位相容性只會在 Visual C++ 的主要版本之間中斷。 例如 Visual C++ 2013 與 Visual C++ 2015 之間。 如需 Visual C++ 2013 與 Visual C++ 2015 之間的重大變更資訊，請參閱 [Visual C++ 2015 的合規性變更](#VC_2015)。  
+ 雖然這些差異可能影響您的原始程式碼或其他組建成品，但並不影響每版 Visual Studio 更新之間的二進位相容性。 「中斷變更」是較嚴重的變更類型，會影響二進位相容性，但這類二進位相容性中斷只會發生在 Visual Studio 的主要版本之間。 例如，在 Visual Studio 2013 與 Visual Studio 2015 之間。 如需 Visual Studio 2013 與 Visual Studio 2015 之間的中斷變更資訊，請參閱 [Visual Studio 2015 一致性變更](#VC_2015)。  
   
--   [Visual C++ 2015 的合規性改進](#VS_RTM)  
+-   [Visual Studio 2015 的一致性改善](#VS_RTM)  
   
 -   [Update 1 的合規性改進](#VS_Update1)  
   
@@ -333,7 +338,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Update 3 的合規性改進](#VS_Update3)  
   
-###  <a name="VS_RTM"></a> Visual C++ 2015 的合規性改進  
+###  <a name="VS_RTM"></a> Visual Studio 2015 的一致性改善  
   
 -   /Zc:forScope- 選項  
   
@@ -376,7 +381,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
-     舊版的 Visual C++ 編譯器可接受這種做法，但現在該編譯器會產生下列錯誤：  
+     舊版的編譯器可接受這種做法，但現在該編譯器會產生下列錯誤：  
   
     ```Output  
     error C2071: 'S::r': illegal storage class  
@@ -408,7 +413,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **非類型範本參數**  
   
-     在您提供明確的樣板引數之際，和非類型樣板參數有關的特定程式碼之類型相容性檢查即為正確。 例如，下列程式碼可在舊版的 Visual C++ 中正確無誤地編譯。  
+     在您提供明確的樣板引數之際，和非類型樣板參數有關的特定程式碼之類型相容性檢查即為正確。 例如，下列程式碼可在舊版的 Visual Studio 中正確無誤地編譯。  
   
     ```cpp  
     struct S1  
@@ -574,7 +579,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
-     您已定義的 placement delete 運算子和新的全域調整大小 delete 運算子之間的函式簽章比對會導致此問題發生。 針對 placement new 和 delete 運算子，請考慮是否可以使用 size_t 以外的不同類型。  請注意 size_t typedef 的類型是編譯器相依的；它是 Visual C++ 中不帶正負號的 int 之 typedef。 較佳的解決方案是使用這類列舉類型：  
+     您已定義的 placement delete 運算子和新的全域調整大小 delete 運算子之間的函式簽章比對會導致此問題發生。 針對 placement new 和 delete 運算子，請考慮是否可以使用 size_t 以外的不同類型。  請注意，size_t typedef 類型相依於編譯器，其在 MSVC 中是不帶正負號 int 的 typedef。 較佳的解決方案是使用這類列舉類型：  
   
     ```cpp  
     enum class my_type : size_t {};  
@@ -2298,7 +2303,7 @@ C c;
   
 -   **靜態成員函式不支援 cv 限定詞**  
   
-     舊版 Visual C++ 2015 允許靜態成員函式擁有 cv 限定詞。 此行為起因於 Visual C++ 2015 與 Visual C++ 2015 Update 1 的迴歸；Visual C++ 2013 與舊版 Visual C++ 拒絕以此方式撰寫的程式碼。 Visual C++ 2015 與 Visual C++ 2015 Update 1 的行為不正確，且不符合 C++ 標準。  Visual Studio 2015 Update 2 拒絕以此方式撰寫的程式碼，並會發出編譯器錯誤 C2511。  
+     舊版 Visual Studio 2015 允許靜態成員函式擁有 cv 限定詞。 此行為起因於 Visual Studio 2015 與 Visual Studio 2015 Update 1 的迴歸；Visual Studio 2013 與舊版編譯器拒絕以此方式撰寫的程式碼。 Visual Studio 2015 與 Visual Studio 2015 Update 1 的行為不正確，且不符合 C++ 標準。  Visual Studio 2015 Update 2 拒絕以此方式撰寫的程式碼，並會發出編譯器錯誤 C2511。  
   
     ```Output  
     error C2511: 'void A::func(void) const': overloaded member function not found in 'A'  
@@ -2452,7 +2457,7 @@ C c;
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");  
     ```  
   
-     在舊版 Visual C++ 中，因為 `std::is_convertable<>::value` 不正確地設定為 `true`，致使此範例底部的靜態判斷提示能夠通過。 `std::is_convertable<>::value` 現在會正確地設定為 `false`，讓靜態判斷提示失敗。  
+     在舊版編譯器中，因為 `std::is_convertable<>::value` 不正確地設定為 `true`，致使此範例底部的靜態判斷提示能夠通過。 `std::is_convertable<>::value` 現在會正確地設定為 `false`，讓靜態判斷提示失敗。  
   
 -   **預設或已刪除的 trivial 複製及移動建構函式會採用存取指定名稱**  
   
@@ -2505,7 +2510,7 @@ C c;
   
 -   **屬性化 ATL 程式碼支援已標示為即將淘汰** (層級 1 (/W1) 預設為開啟)  
   
-     舊版編譯器支援屬性化 ATL 程式碼。 [自 Visual C++ 2008 開始下一個階段移除對屬性化 ATL 程式碼支援的下一個階段](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)起，即已將屬性化 ATL 程式碼標示為即將淘汰。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。  
+     舊版編譯器支援屬性化 ATL 程式碼。 因為從 [Visual Studio 2008 開始](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)下一階段對屬性化 ATL 支援的移除，所以已淘汰屬性化 ATL 程式碼。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。  
   
     ```Output  
     warning C4467: Usage of ATL attributes is deprecated  
@@ -2683,7 +2688,7 @@ C c;
   
     ```  
   
-## <a name="visual-c-2013-conformance-changes"></a>Visual C++ 2013 的合規性變更  
+## <a name="visual-studio-2013-conformance-changes"></a>Visual Studio 2013 一致性變更  
   
 ### <a name="compiler"></a>編譯器  
   
@@ -2740,7 +2745,7 @@ C c;
   
     ```  
   
--   此 C++ 標準不允許在類別中明確特製化。 雖然 Visual C++ 在某些情況下允許這種做法，但是在像下列範例這樣的情況下，現在就會產生錯誤，因為編譯器不會將第二個函式視為第一個函式的特製化。  
+-   此 C++ 標準不允許在類別中明確特製化。 雖然 Microsoft Visual C++ 編譯器在某些情況下允許這種做法，但是在像下列範例這樣的情況下，現在就會產生錯誤，因為編譯器不會將第二個函式視為第一個函式的特製化。  
   
     ```cpp  
     template < int N>  
@@ -2761,7 +2766,7 @@ C c;
   
     ```  
   
--   Visual C++ 已不會再嘗試清楚區別下列範例中的兩個函式，且現在還會發出錯誤：  
+-   編譯器不會再嘗試清楚區別下列範例中的兩個函式，且現在還會發出錯誤：  
   
     ```cpp  
     template< typename T> void Func(T* t = nullptr);  
@@ -2833,7 +2838,7 @@ C c;
   
     ```  
   
--   名稱查閱已變更。 Visual Studio 2012 與 Visual Studio 2013 中的 Visual C++ 會以不同方式解析下列程式碼︰  
+-   名稱查閱已變更。 Visual Studio 2012 與 Visual Studio 2013 中的 C++ 編譯器 會以不同方式解析下列程式碼︰  
   
     ```cpp  
     enum class E1 { a };  
@@ -2847,9 +2852,9 @@ C c;
   
     ```  
   
-     在 Visual Studio 2012 的 Visual C++ 中，運算式 E1::b 中的 E1 會解析為全域範圍的 ::E1。 在 Visual Studio 2013 的 Visual C++ 中，運算式 E1::b 中的 E1 會解析為 main() 中的 typedef E2 定義且類型為 ::E2。  
+     在 Visual Studio 2012 中，運算式 E1::b 中的 E1 會解析為全域範圍的 ::E1。 在 Visual Studio 2013 中，運算式 E1::b 中的 E1 會解析為 main() 中的 typedef E2 定義且類型為 ::E2。  
   
--   物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它具有虛擬函式，但沒有具有虛擬函式的基底類別，則編譯器的物件模型會在資料成員配置之後在虛擬函式表中插入指標。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以 Visual Studio 2013 的 Visual C++ 已將其移除。 例如，請參考這個程式碼：  
+-   物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它具有虛擬函式，但沒有具有虛擬函式的基底類別，則編譯器的物件模型會在資料成員配置之後在虛擬函式表中插入指標。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以在 Visual Studio 2013 中已將其移除。 例如，請參考這個程式碼：  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2863,7 +2868,7 @@ C c;
   
     ```  
   
--   在 Visual Studio 2013 的 Visual C++ 中，x64 上 sizeof(S2) 的結果為 48，但在舊版中會評估為 32。 若要讓 x64 之 Visual Studio 2013 中的 Visual C++ 將此評估為 32，可新增具有虛擬函式的虛擬基底類別︰  
+-   在 Visual Studio 2013 中，x64 上 sizeof(S2) 的結果為 48，但在舊版中會評估為 32。 若要讓 x64 版 Visual Studio 2013 中的 C++ 編譯器將其評估為 32，可新增具有虛擬函式的虛設基底類別︰  
   
     ```cpp  
     __declspec(align(16)) struct S1 {  
@@ -2896,9 +2901,9 @@ C c;
   
     ```  
   
-     在 Visual Studio 2013 之 Visual C++ 之前的 Visual C++ 編譯器中，此程式碼會輸出如下訊息︰「警告 C4370: 'S2': 因為可提供較佳的封裝，類別配置可能已在舊版本的編譯器中變更」  
+     在 Visual Studio 2013 前，此程式碼會輸出此訊息：「警告 C4370: 'S2': 因為可提供較佳的封裝，類別配置可能已在舊版本的編譯器中變更」。  
   
-     在所有 Visual C++ 版本中，x86 編譯器都具有相同的配置不佳問題。 例如，如果這個程式碼是為 x86 而編譯：  
+     在所有版本的編譯器中，x86 編譯器都具有相同的配置不佳問題。 例如，如果這個程式碼是為 x86 而編譯：  
   
     ```cpp  
     struct S {  
@@ -2925,7 +2930,7 @@ C c;
     ```  
   
 ### <a name="standard-library"></a>標準程式庫  
- Visual Studio 2013 中的 Visual C++ 可偵測 _ITERATOR_DEBUG_LEVEL 中不相符的情況 (這是在 Visual C++ 2010 中所實作) 以及 RuntimeLibrary 不相符的情況。 當編譯器選項 /MT (靜態發行)、/MTd (靜態偵錯)、/MD (動態發行) 及 /MDd (動態偵錯) 混用時即會發生這些情況。  
+ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符的情況 (實作於 Visual Studio 2010 中) 以及 RuntimeLibrary 不符的情況。 當編譯器選項 /MT (靜態發行)、/MTd (靜態偵錯)、/MD (動態發行) 及 /MDd (動態偵錯) 混用時即會發生這些情況。  
   
 -   若您的程式碼認可舊版的模擬別名範本，必須加以變更。 例如過去使用 allocator_traits\<A>::rebind_alloc\<U>::other，現在必須改成宣告 allocator_traits\<A>::rebind_alloc\<U>。 雖然 ratio_add\<R1, R2>::type 已不再需要 ，而且我們建議您宣告 ratio_add\<R1, R2>，但因為 \<N, D> 的縮減比率必須是類型 typedef (若已縮減，則類型相同)，所以仍會編譯前者。  
   
@@ -2947,7 +2952,7 @@ C c;
   
 -   C++ 標準程式庫不支援 /clr:oldSyntax。  
   
--   C++11 的 common_type<> 指定會出現未預期及預期外的結果，特別是會讓 common_type\<int, int>::type 傳回 int&&。 因此，Visual C++ 實作了針對程式庫工作小組問題 2141 所提出的解決方法，讓 common_type\<int, int="">::type 傳回 int。  
+-   C++11 的 common_type<> 指定會出現未預期及預期外的結果，特別是會讓 common_type\<int, int>::type 傳回 int&&。 因此，編譯器實作了針對程式庫工作小組問題 2141 所提出的解決方法，讓 common_type\<int, int="">::type 傳回 int。  
   
      這項變更的副作用就是無法再使用識別案例 (common_type\<T> 不一定會產生類型 T)。 這個結果符合建議的解決方法，不過它會破壞依賴之前行為的任何程式碼。  
   
@@ -2962,7 +2967,7 @@ C c;
   
 ### <a name="mfc-and-atl"></a>MFC 和 ATL  
   
--  **僅限 Visual Studio 2013**：因為 Unicode 現在已相當普遍，MBCS 的使用率大幅降低，所以 Visual Studio 未隨附 MFC MBCS 程式庫。 這項變更也讓 MFC 與 Windows SDK 本身更為相符，因為許多新的控制項和訊息都限用 Unicode。 不過，如果您必須繼續使用 MBCS MFC 程式庫，您可以從 MSDN 下載中心下載 [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770)。 Visual C++ 可轉散發套件仍然包含這個程式庫。  (注意：在 Visual Studio 2015 和更新版本中，MBCS DLL 會隨附於 Visual C++ 安裝程式元件)。
+-  **僅限 Visual Studio 2013**：因為 Unicode 現在已相當普遍，MBCS 的使用率大幅降低，所以 Visual Studio 未隨附 MFC MBCS 程式庫。 這項變更也讓 MFC 與 Windows SDK 本身更為相符，因為許多新的控制項和訊息都限用 Unicode。 不過，如果您必須繼續使用 MBCS MFC 程式庫，您可以從 MSDN 下載中心下載 [Multibyte MFC Library for Visual Studio 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40770)。 Visual C++ 可轉散發套件仍然包含這個程式庫。  (注意：在 Visual Studio 2015 和較新版中，MBCS DLL 會隨附於 C++ 安裝程式元件)。
   
 -   MFC 功能區的協助工具已有變更。  一改過去的單層架構，現在改為階層式架構。 您仍可呼叫 CRibbonBar::EnableSingleLevelAccessibilityMode() 來使用舊行為。  
   
@@ -3043,19 +3048,19 @@ C c;
   
 -   以下是 C++98/03 與 C++11 標準之間的重大變更。在 Visual Studio 2012 的 Visual C++ 中使用明確範本引數呼叫 make_pair() (例如make_pair\<int, int >(x, y)) 通常不會執行編譯。 解決方法是只呼叫 make_pair()，而不要指定明確範本引數 (例如 make_pair(x, y))。 提供明確的範本引數會導致函式失效。 若您需要精確控制所產生的類型，請使用 pair，而不要使用 make_pair (例如 pair\<short, short>(int1, int2))。  
   
--   C++98/03 與 C++11 標準之間的另一項重大變更︰當 A 隱含表示可轉換成 B，B 隱含表示可轉換成 C，但並未隱含表示可轉換成 C 時，C++98/03 與 Visual C++ 2010 允許pair\<A, X> 轉換 (隱含或明確) 成 pair\<C, X>  (另一個類型 X 不是此處的重點，而不是 pair 中第一種類型的專用類型)。因為 C++11 與 Visual Studio 2012 中的 Visual C++ 偵測到 A 並未隱含表示可轉換成 C，所以會從多載解析中移除 pair 轉換。 這對許多狀況而言是好的改變。 例如多載 func(const pair\<int, int>&) 及 func(const pair\<string, string>&)，以及呼叫 字串 func() 並指定pair\<const char *, const char \*> 將會透過這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 make_pair (static_cast\<B>(a)、 x) 傳遞給需要 pair\<C, X> 的函式。  
+-   C++98/03 與 C++11 標準之間的另一項重大變更︰當 A 隱含表示可轉換成 B，B 隱含表示可轉換成 C，但並未隱含表示可轉換成 C 時，C++98/03 與 Visual C++ 2010 允許pair\<A, X> 轉換 (隱含或明確) 成 pair\<C, X>  (另一個類型 X 不是此處的重點，而不是 pair 中第一種類型的專用類型)。因為 C++11 與 Visual Studio 2012 中的 C++ 編譯器偵測到 A 並未隱含表示可轉換成 C，所以會從多載解析中移除 pair 轉換。 這對許多狀況而言是好的改變。 例如多載 func(const pair\<int, int>&) 及 func(const pair\<string, string>&)，以及呼叫 字串 func() 並指定pair\<const char *, const char \*> 將會透過這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 make_pair (static_cast\<B>(a)、 x) 傳遞給需要 pair\<C, X> 的函式。  
   
--   Visual C++ 2010 可模擬 variadic 範本 (例如 make_shared\<T>(arg1, arg2, argN)) 高達 10 個引數之多，方法是停止前置處理器機器的多載與特製化。 Visual Studio 2012 的 Visual C++ 中將此限制縮減為 5 成引數，以改善大多數使用者的編譯時間及編譯器的記憶體耗用量。 但您可以藉由將 _VARIADIC_MAX 明確定義為 10 來將整個專案設定成先前的限制。  
+-   Visual C++ 2010 可模擬 variadic 範本 (例如 make_shared\<T>(arg1, arg2, argN)) 高達 10 個引數之多，方法是停止前置處理器機器的多載與特製化。 在 Visual Studio 2012 中，此限制縮減為 5 個引數，以改善大多數使用者的編譯時間及編譯器的記憶體耗用量。 但您可以藉由將 _VARIADIC_MAX 明確定義為 10 來將整個專案設定成先前的限制。  
   
 -   當包含 C++ 標準程式庫標頭時，C++11 17.6.4.3.1 [macro.names]/2 會禁止將關鍵字巨集化。 當標頭偵測巨集化的關鍵字時，會發出編譯器錯誤  (定義 _ALLOW_KEYWORD_MACROS 可允許編譯這類程式碼，但極力建議不要如此定義)。預設會允許巨集化的 new，而這是唯一允許的例外狀況，原因是標頭會使用 #pragma push_macro("new")/#undef new/#pragma pop_macro("new") 全面自我保護。 定義 _ENFORCE_BAN_OF_MACRO_NEW 不全然如其名稱所示。  
   
--   為實作各種最佳化及偵錯檢查，C++ 標準程式庫實作是刻意中斷了各版 Visual Studio (2005、2008、2010、2012) 之間的二進位相容性。 當使用 C++ 標準程式庫時，這會導致無法將物件檔案與使用不同版本編譯的靜態程式庫混合成一個二進位檔 (EXE 或 DLL)，而且也無法在使用不同版本編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 混合物件檔案與靜態程式庫 (並用由 Visual Studio 2010 編譯的 C++ 標準程式庫與 Visual Studio 2012 之 Visual C++ 編譯的 C++ 標準程式庫) 會發出有關於 _MSC_VER 不符的連結器錯誤，其中 _MSC_VER 是包含編譯器主要版本 (Visual Studio 2012 的 Visual C++ 為 1700) 的巨集。 這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。  
+-   為實作各種最佳化及偵錯檢查，C++ 標準程式庫實作是刻意中斷了各版 Visual Studio (2005、2008、2010、2012) 之間的二進位相容性。 當使用 C++ 標準程式庫時，這會導致無法將物件檔案與使用不同版本編譯的靜態程式庫混合成一個二進位檔 (EXE 或 DLL)，而且也無法在使用不同版本編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 混合物件檔案與靜態程式庫 (使用由 Visual Studio 2010 編譯的 C++ 標準程式庫與使用 Visual Studio 2012 之 C++ 編譯器編譯的 C++ 標準程式庫) 會發出有關於 _MSC_VER 不符的連結器錯誤，其中 _MSC_VER 是包含編譯器主要版本 (Visual Studio 2012 的 Visual C++ 為 1700) 的巨集。 這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。  
   
--   除了偵測 _ITERATOR_DEBUG_LEVEL 不符的情況 (由 Visual Studio 2010 之 Visual C++ 實作) 之外，Visual Studio 2012 的 Visual C++ 還會偵測執行階段程式庫不符的錯誤。 當混用編譯器選項 /MT (靜態發行)、/MTd (靜態偵錯)、/MD (動態發行) 及 /MDd (動態偵錯) 時，即會發生這些情況。  
+-   除了偵測 _ITERATOR_DEBUG_LEVEL 不符的情況 (實作於 Visual Studio C++ 2010) 之外，Visual Studio 2012 的 C++ 編譯器還會偵測執行階段程式庫不符的錯誤。 當混用編譯器選項 /MT (靜態發行)、/MTd (靜態偵錯)、/MD (動態發行) 及 /MDd (動態偵錯) 時，即會發生這些情況。  
   
 -   在舊版中 operator\<()、operator>(), operator\<=() 及 operator>=() 可供 std::unordered_map andstdext::hash_map 容器系列使用，但不盡實用。 因此 Visual Studio 2012 的 Visual C++ 移除了這些非標準運算子。 此外，thestd::unordered_map 系列的 operator==() 與 operator!=() 實作經擴充之後，已涵蓋了 stdext::hash_map 系列  (建議您避免在新的程式碼中使用 thestdext::hash_map 系列)。  
   
--   C++11 22.4.1.4 [locale.codecvt] 指定 codecvt::length() 及 codecvt::do_length() 應使用可修改 stateT i 參數，但 Visual C++ 2010 則是使用 const stateT&。 而 Visual Studio 2012 的 Visual C++ 因為遵循標準而採用了 stateT&。 對於想要覆寫虛擬函式 do_length() 的使用者而言，此差異相當大。  
+-   C++11 22.4.1.4 [locale.codecvt] 指定 codecvt::length() 及 codecvt::do_length() 應使用可修改 stateT i 參數，但 Visual C++ 2010 則是使用 const stateT&。 而 Visual Studio 2012 的 C++ 編譯器則因為遵循標準而採用了 stateT&。 對於想要覆寫虛擬函式 do_length() 的使用者而言，此差異相當大。  
   
 ### <a name="crt"></a>CRT  
   

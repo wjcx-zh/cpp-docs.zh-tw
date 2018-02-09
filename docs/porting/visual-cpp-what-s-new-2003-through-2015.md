@@ -9,18 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c401aa7a063ab7e76353a5781f008243204bc35
-ms.sourcegitcommit: b5ff17bcd5e5e02bc21717859165a6b819a0ab84
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1485,7 +1487,7 @@ ms.lasthandoff: 01/11/2018
 
 #### <a name="compiler"></a>編譯器
 
-Microsoft C++ 編譯器支援下列 ISO C++11 語言功能：
+Microsoft Visual C++ 編譯器支援下列 ISO C++11 語言功能：
 
 - 函式樣板的預設樣板引數。
 - 委派建構函式
@@ -1502,8 +1504,8 @@ Microsoft C++ 編譯器支援下列 ISO C++11 語言功能：
 - 複合常值。
 - 指定的初始設定式。
 - 程式碼的混合宣告。
-- 字串常值轉換為可修改的值可以使用新的編譯器選項 /Zc:strictStrings 來禁止。 在 C++98 中，從字串常值到 char\* (以及寬字串常值到 wchar_t\*) 的轉換已被取代。 在 C++11 中，轉換已完全移除。 雖然編譯器可以嚴格遵守這個標準，但可提供 /Zc:strictStrings 選項，讓您可以控制轉換。 選項預設為關閉。 請注意，當您在偵錯模式中使用這個選項時，無法編譯 STL。
-- 左/右值參考轉換。 使用右值參考，C++11 可以清楚區別左值和右值。 在過去，Visual C++ 編譯器在特定轉換情節中不提供此功能。 已新增新的編譯器選項 /Zc:rvalueCast，將使編譯器符合 C++ 語言工作文件 (請參閱第 5.4 節 [expr.cast]/1)。 當這個選項未指定時的預設行為，與 Visual Studio 2012 中的預設行為相同。
+- 您可以使用新的編譯器選項 **/Zc:strictStrings** 禁止將字串常值轉換為可修改的值。 在 C++98 中，從字串常值到 char\* (以及寬字串常值到 wchar_t\*) 的轉換已被取代。 在 C++11 中，轉換已完全移除。 雖然編譯器可以嚴格遵守這個標準，但其提供 **/Zc:strictStrings** 選項，讓您可以控制轉換。 選項預設為關閉。 請注意，當您在偵錯模式中使用這個選項時，無法編譯 STL。
+- 左/右值參考轉換。 使用右值參考，C++11 可以清楚區別左值和右值。 在過去，編譯器在特定轉換情節中不提供此功能。 已新增編譯器選項 **/Zc:rvalueCast**，將使編譯器符合 C++ 語言工作文件 (請參閱第 5.4 節 [expr.cast]/1)。 當這個選項未指定時的預設行為，與 Visual Studio 2012 中的預設行為相同。
   - 注意：在預設的函式中，不支援使用 =default 要求成員移動建構函式和移動指派運算子。
 
 ### <a name="c99-libraries"></a>C99 程式庫

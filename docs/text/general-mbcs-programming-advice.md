@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], dialog box fonts
 - MS Shell Dlg
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a09bfb9b30e279e8d0b7696055c1e54ac56bfae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b379c163963a9ae0dd0c59c7d0fc809fee4f46d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="general-mbcs-programming-advice"></a>一般 MBCS 程式設計的建議
 使用下列秘訣：  
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   在設計對話方塊時，允許大約 30%結尾的 MBCS 轉譯為靜態文字控制項的額外空間。  
   
--   時請小心選取字型，您的應用程式，因為有些字型並不適用於所有系統。 例如，日文版的 Windows 2000 不支援新細明體字型。  
+-   時請小心選取字型，您的應用程式，因為有些字型並不適用於所有系統。  
   
 -   當選取的字型對話方塊時，使用[MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112)而不是新細明體或新細明體。 MS Shell Dlg 會取代正確的字型，由系統建立對話方塊之前。 使用 MS Shell Dlg，可確保作業系統來處理這種字型中的任何變更會自動使用。 （MFC 取代 MS Shell Dlg DEFAULT_GUI_FONT 或 Windows 95、 Windows 98 和 Windows NT 4 上的系統字型因為這些系統未正確處理 MS Shell Dlg。）  
   

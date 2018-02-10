@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows common controls [MFC]
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd146ecd4a5c1b431ea63a98e770b0cb2e0917d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b18979ec502ea645cf8cdac39ca9ea75cb229e61
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="controls-mfc"></a>控制項 (MFC)
 控制項是使用者可以與之互動，以輸入或操作資料的物件。 它們通常會出現在對話方塊或工具列中。 本主題系列涵蓋三種主要的控制項︰  
@@ -36,15 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="windows-common-controls"></a>Windows 通用控制項  
  Windows 作業系統長久以來一直提供許多 Windows 通用控制項。 這些控制項物件可程式化，而且 Visual C++ 對話方塊編輯器支援將這些控制項加入您的對話方塊。 MFC 程式庫提供類別來封裝上述每個控制項，如 [Windows 通用控制項和 MFC 類別](#_core_windows_common_controls_and_mfc_classes)表格所示。 (表格中的某些項目具有進一步說明的相關主題。 至於缺乏主題的控制項，請參閱 MFC 類別的文件。)  
   
- [CWnd](../mfc/reference/cwnd-class.md) 類別是所有視窗類別 (包括所有控制項類別) 的基底類別。 下列環境支援 Windows 通用控制項︰  
-  
--   Windows 95、Windows 98 和 Windows 2000  
-  
--   Windows NT 3.51 版及更新版本  
-  
--   Win32 1.3 版 (Visual C++ 4.2 版及更新版本不支援 Win32)  
-  
- 舊版通用控制項 (核取方塊、下拉式方塊、編輯方塊、清單方塊、選項按鈕、按鈕、捲軸控制項和靜態控制項) 在舊版 Windows 中也可以使用。  
+ [CWnd](../mfc/reference/cwnd-class.md) 類別是所有視窗類別 (包括所有控制項類別) 的基底類別。 
   
 ## <a name="activex-controls"></a>ActiveX 控制項  
  ActiveX 控制項 (先前稱為 OLE 控制項) 可用於 Windows 應用程式的對話方塊中，或全球資訊網的 HTML 網頁中。 如需詳細資訊，請參閱 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)。  

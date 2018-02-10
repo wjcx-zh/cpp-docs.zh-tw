@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /openmp
 - VC.Project.VCCLCompilerTool.OpenMP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8d3aaeb5d3e71dfced4bf78384a62898d99a5ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c8217a901f071f50dbd2d7dfcbffccf4014a9444
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (啟用 OpenMP 2.0 支援)
 可讓編譯器處理`#pragma` [omp](../../preprocessor/omp.md)。  
@@ -37,8 +40,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>備註  
  `#pragma omp`用來指定[指示詞](../../parallel/openmp/reference/openmp-directives.md)和[子句](../../parallel/openmp/reference/openmp-clauses.md)。 如果**/openmp**未指定在編譯中，編譯器會忽略 OpenMP 子句和指示詞。 [OpenMP 函式](../../parallel/openmp/reference/openmp-functions.md)編譯器即使處理呼叫**/openmp**未指定。  
-  
- 應用程式編譯**/openmp**和使用[文件庫](../../parallel/openmp/reference/openmp-libraries.md)只能在 Windows 2000 或更新版本的作業系統上執行。  
   
  使用應用程式編譯**/openmp**和**/clr**只能在單一應用程式網域程序中執行; 不支援多個應用程式定義域。 也就是執行模組建構函式 (.cctor) 時，它會偵測處理程序會使用編譯**/openmp** ，如果應用程式載入到非預設的執行階段。 如需詳細資訊，請參閱[appdomain](../../cpp/appdomain.md)， [/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)，和[初始化的混合的組件](../../dotnet/initialization-of-mixed-assemblies.md)。  
   

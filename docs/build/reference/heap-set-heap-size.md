@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.HeapCommitSize
 - /heap
 - VC.Project.VCLinkerTool.HeapReserveSize
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - -HEAP linker option
 - heap allocation, setting heap size
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1ddbbeb373a5c1c9a7b5a14d124900782048fbeb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5dd4ba44a76fa7881ebee2ec2f472dad8675e2c8
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (設定堆積大小)
 ```  
@@ -39,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  *保留*引數指定虛擬記憶體中堆積配置的總計。 預設的堆積大小為 1 MB。 連結器會無條件進位到最接近的 4 個位元組指定的值。  
   
- 選擇性`commit`引數受限於作業系統所解譯。 在 NT/Windows 2000 中，它會指定一次配置的實體記憶體數量。 已認可的虛擬記憶體會造成要保留在分頁檔的空間。 較高`commit`值可以節省的時間，當應用程式需要較多的堆積空間，但會增加記憶體需求且可能的啟動時間。  
+ 選擇性`commit`引數會指定一次配置的實體記憶體數量。 已認可的虛擬記憶體會造成要保留在分頁檔的空間。 較高`commit`值可以節省的時間，當應用程式需要較多的堆積空間，但會增加記憶體需求且可能的啟動時間。  
   
  指定*保留*和`commit`decimal 或 C 語言標記法中的值。  
   

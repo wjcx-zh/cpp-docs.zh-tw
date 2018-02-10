@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.classes.dialog
-dev_langs: C++
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialog-box-classes"></a>對話方塊類別
 類別`CDialog`和其衍生的類別封裝對話方塊中的功能。 對話方塊是一種特殊的視窗中，因為`CDialog`衍生自`CWnd`。 衍生您的對話方塊類別從`CDialog`或其中一個使用的通用對話方塊類別為標準的對話方塊，例如開啟或儲存檔案、 列印、 選取的字型或色彩，初始化搜尋和取代作業，或執行各種 OLE 相關作業。  
@@ -58,7 +62,7 @@ ms.lasthandoff: 12/21/2017
  列印檔案中提供的標準對話方塊。  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- 提供 Windows 2000 列印屬性工作表。  
+ 提供 Windows 列印屬性工作表。  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
  封裝 Windows 通用 版面設定對話方塊所提供的額外支援以及設定和修改列印邊界的服務。  

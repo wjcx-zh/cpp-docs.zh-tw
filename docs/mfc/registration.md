@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>註冊
 當使用者要將 OLE 項目插入至應用程式時，OLE 會顯示物件類型清單以供選擇。 OLE 會從系統註冊資料庫中取得此清單，其中包含所有伺服器應用程式提供的資訊。 當伺服器註冊其本身時，其放入系統註冊資料庫的項目 (登錄) 會說明其所提供的每個物件類型、副檔名和通往的路徑，以及其他資訊。  
@@ -44,12 +47,12 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  應用程式精靈產生的 MFC 應用程式在用做獨立的應用程式執行時，會自動自我註冊。  
   
- 如果您想要在安裝期間註冊應用程式，請使用 RegEdit.exe 程式  (在 Windows 95、Windows 98 和 Windows ME 中，RegEdit 位在 Windows 目錄中。 在 Windows NT 和 Windows 2000 中，RegEdit 位在 Windows System32 目錄中)。如果您的應用程式中包含的安裝程式，讓安裝程式執行"RegEdit /S *appname*.reg"。 (/S 旗標表示無訊息作業，也就是說，不會顯示對話方塊報告命令成功完成)。否則，請指示使用者手動執行 RegEdit。  
+ 如果您想要在安裝期間註冊應用程式，請使用 RegEdit.exe 程式  如果您的應用程式中包含的安裝程式，讓安裝程式執行"RegEdit /S *appname*.reg"。 (/S 旗標表示無訊息作業，也就是說，不會顯示對話方塊報告命令成功完成)。否則，請指示使用者手動執行 RegEdit。  
   
 > [!NOTE]
 >  應用程式精靈建立的 .reg 檔案不包含可執行檔的完整路徑。 您的安裝程式必須將 .reg 檔案修改為包含可執行檔的完整路徑，或者將 PATH 環境變數修改為包含安裝目錄。  
   
- RegEdit 會合併 .reg 文字檔的內容至註冊資料庫。 若要驗證或修復資料庫，請使用登錄編輯程式。 請避免刪除必要的 OLE 項目  (在 Windows 95、Windows 98 和 Windows ME 中，登錄編輯程式是 RegEdit.exe。 在 Windows NT 和 Windows 2000 中，則是 RegEdit32.exe)。  
+ RegEdit 會合併 .reg 文字檔的內容至註冊資料庫。 若要驗證或修復資料庫，請使用登錄編輯程式。 請避免刪除必要的 OLE 項目   
   
 ##  <a name="_core_server_initialization"></a>伺服器初始化  
  當您使用應用程式精靈建立伺服器應用程式時，精靈自動為您完成所有初始化工作。 本節說明手動撰寫伺服器應用程式時必須做的事情。  

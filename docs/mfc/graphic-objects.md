@@ -4,14 +4,16 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - HRGN
 - HFONT
 - HBITMAP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRgn class [MFC], HRGN handle type
 - HPEN [MFC]
@@ -48,22 +50,23 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fabeeae17b5bc81fdf592ed452a088b75bae544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6dfdba311ed13b1ffbd5e1f830d6fa87cfce915d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="graphic-objects"></a>圖形物件
 Windows 在裝置內容中提供各式各樣的可用繪圖工具。 它提供可繪製線條的畫筆、可填滿內部的筆刷和可繪製文字的字型。 MFC 提供相當於 Windows 中繪圖工具的圖形物件類別。 下表顯示可用的類別和對等的 Windows 繪圖裝置介面 (GDI) 控制代碼類型。  
   
 > [!NOTE]
->  GDI+ 隨附於 Windows XP 中，並且可做為 Windows NT 4.0 SP6、Windows 2000、Windows 98 和 Windows Me 的可轉散發套件。 若要下載最新版本可轉散發，請參閱[http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm](http://www.microsoft.com/msdownload/platformsdk/sdkupdate/psdkredist.htm)。 如需詳細資訊，請參閱 GDI + SDK 文件，網址： [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)。  
+>  如需詳細資訊，請參閱 GDI + SDK 文件，網址： [http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](http://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)。  
   
  這篇文章說明如何使用這些圖形物件類別：  
   
@@ -111,8 +114,6 @@ Windows 在裝置內容中提供各式各樣的可用繪圖工具。 它提供�
 -   [選取圖形物件放入裝置內容中](../mfc/selecting-a-graphic-object-into-a-device-context.md)  
   
 -   [裝置內容](../mfc/device-contexts.md)  
-  
--   [舊版作業系統上的 CImage 限制](../mfc/cimage-limitations-with-earlier-operating-systems.md)  
   
 ## <a name="see-also"></a>請參閱  
  [視窗物件](../mfc/window-objects.md)

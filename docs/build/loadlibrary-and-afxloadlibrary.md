@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 處理呼叫[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 明確地連結到 DLL。 如果函式成功，它對應指定的 DLL 呼叫處理序的位址空間，並將控制代碼傳回至可與其他函式中明確連結的 DLL — 比方說，`GetProcAddress`和`FreeLibrary`。  
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  如果 Windows 無法載入 DLL，處理程序可以嘗試從錯誤中復原。 例如，處理程序無法通知錯誤的使用者，並要求使用者指定的 DLL 的另一個路徑。  
   
 > [!IMPORTANT]
->  如果程式碼是 Windows NT 4、 Windows 2000 或 Windows XP （SP1 之前的版本） 下執行，請確定指定的任何 Dll 的完整路徑。 在這些作業系統上，載入檔案時，會先搜尋目前的目錄。 如果不符合檔案的路徑，可能會載入並不是預期的檔案。  
+>  請確定指定的任何 Dll 的完整路徑。 載入檔案時，會先搜尋目前的目錄。 如果不符合檔案的路徑，可能會載入並不是預期的檔案。  
   
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   

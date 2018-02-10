@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,19 +38,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs: C++
-helpviewer_keywords: CSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 類別
 這個類別是包裝函式**SECURITY_DESCRIPTOR**結構。  
@@ -70,14 +74,14 @@ class CSecurityDesc
 |名稱|描述|  
 |----------|-----------------|  
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|建構函式。|  
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|解構函式。|  
+|[CSecurityDesc::~CSecurityDesc](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
 |[CSecurityDesc::FromString](#fromstring)|將字串格式的安全性描述元轉換成有效、 功能安全性描述元。|  
-|[Csecuritydesc:: Getcontrol](#getcontrol)|擷取控制資訊的安全性描述元。|  
+|[CSecurityDesc::GetControl](#getcontrol)|擷取控制資訊的安全性描述元。|  
 |[CSecurityDesc::GetDacl](#getdacl)|擷取的安全性描述元的判別存取控制清單 (DACL) 資訊。|  
 |[CSecurityDesc::GetGroup](#getgroup)|擷取的安全性描述元主要群組資訊。|  
 |[CSecurityDesc::GetOwner](#getowner)|擷取的安全性描述元擁有者資訊。|  
@@ -97,10 +101,10 @@ class CSecurityDesc
 |[CSecurityDesc::MakeAbsolute](#makeabsolute)|呼叫此方法以將安全性描述元轉換成絕對的格式。|  
 |[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|呼叫此方法以將安全性描述元轉換成自我關聯的格式。|  
 |[CSecurityDesc::SetControl](#setcontrol)|設定安全性描述元的控制位元。|  
-|[Csecuritydesc:: Setdacl](#setdacl)|DACL 中設定。 如果 DACL 中已有的安全性描述元，它會取代它。|  
-|[Csecuritydesc:: Setgroup](#setgroup)|設定絕對格式安全性描述元，以取代任何現有的主要群組資訊的主要群組資訊。|  
-|[Csecuritydesc:: Setowner](#setowner)|設定絕對格式安全性描述元，以取代任何現有的擁有者資訊的擁有者資訊。|  
-|[Csecuritydesc:: Setsacl](#setsacl)|設定的 SACL 中的資訊。 如果已經存在的安全性描述元中 SACL，則會取代它。|  
+|[CSecurityDesc::SetDacl](#setdacl)|DACL 中設定。 如果 DACL 中已有的安全性描述元，它會取代它。|  
+|[CSecurityDesc::SetGroup](#setgroup)|設定絕對格式安全性描述元，以取代任何現有的主要群組資訊的主要群組資訊。|  
+|[CSecurityDesc::SetOwner](#setowner)|設定絕對格式安全性描述元，以取代任何現有的擁有者資訊的擁有者資訊。|  
+|[CSecurityDesc::SetSacl](#setsacl)|設定的 SACL 中的資訊。 如果已經存在的安全性描述元中 SACL，則會取代它。|  
 |[CSecurityDesc::ToString](#tostring)|將安全性描述元轉換成字串格式。|  
   
 ### <a name="public-operators"></a>公用運算子  
@@ -120,7 +124,7 @@ class CSecurityDesc
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
   
-##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
+##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc  
  建構函式。  
   
 ```
@@ -136,7 +140,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="remarks"></a>備註  
  `CSecurityDesc`物件可以選擇性地建立使用**SECURITY_DESCRIPTOR**結構或先前已定義`CSecurityDesc`物件。  
   
-##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc  
+##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc  
  解構函式。  
   
 ```
@@ -146,7 +150,7 @@ virtual ~CSecurityDesc() throw();
 ### <a name="remarks"></a>備註  
  解構函式會釋放所有配置的資源。  
   
-##  <a name="fromstring"></a>CSecurityDesc::FromString  
+##  <a name="fromstring"></a>  CSecurityDesc::FromString  
  將字串格式的安全性描述元轉換成有效、 功能安全性描述元。  
   
 ```
@@ -163,9 +167,9 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>備註  
  字串可由使用[CSecurityDesc::ToString](#tostring)。 將安全性描述元轉換成字串，可以更輕鬆地儲存及傳輸。  
   
- 這個方法僅可與 Windows 2000 和更新版本因為它會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)。  
+ 這個方法會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)。  
   
-##  <a name="getcontrol"></a>Csecuritydesc:: Getcontrol  
+##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  擷取控制資訊的安全性描述元。  
   
 ```
@@ -180,9 +184,9 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  如果此方法成功則為 false 失敗時傳回 true。  
   
 ### <a name="remarks"></a>備註  
- 這個方法僅有意義，當使用 Windows 2000 或更新版本，因為它會呼叫[GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647)。  
+ 這個方法會呼叫[GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647)。  
   
-##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
+##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  擷取的安全性描述元的判別存取控制清單 (DACL) 資訊。  
   
 ```
@@ -205,7 +209,7 @@ bool GetDacl(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功則為 false 失敗時傳回 true。  
   
-##  <a name="getgroup"></a>CSecurityDesc::GetGroup  
+##  <a name="getgroup"></a>  CSecurityDesc::GetGroup  
  擷取的安全性描述元主要群組資訊。  
   
 ```
@@ -224,7 +228,7 @@ bool GetGroup(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功則為 false 失敗時傳回 true。  
   
-##  <a name="getowner"></a>CSecurityDesc::GetOwner  
+##  <a name="getowner"></a>  CSecurityDesc::GetOwner  
  擷取的安全性描述元擁有者資訊。  
   
 ```
@@ -243,7 +247,7 @@ bool GetOwner(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功則為 false 失敗時傳回 true。  
   
-##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
+##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  將指標傳回至**SECURITY_DESCRIPTOR**結構。  
   
 ```
@@ -253,7 +257,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ### <a name="return-value"></a>傳回值  
  將指標傳回至[SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)結構。  
   
-##  <a name="getsacl"></a>CSecurityDesc::GetSacl  
+##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  擷取的安全性描述元的系統存取控制清單 (SACL) 資訊。  
   
 ```
@@ -276,7 +280,7 @@ bool GetSacl(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功則為 false 失敗時傳回 true。  
   
-##  <a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited  
+##  <a name="isdaclautoinherited"></a>  CSecurityDesc::IsDaclAutoInherited  
  決定是否判別存取控制清單 (DACL) 已設定為支援自動傳播。  
   
 ```
@@ -289,7 +293,7 @@ bool IsDaclAutoInherited() const throw();
 ### <a name="remarks"></a>備註  
  執行自動繼承演算法物件和其現有的子物件時，系統就會設定此位元。  
   
-##  <a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted  
+##  <a name="isdacldefaulted"></a>  CSecurityDesc::IsDaclDefaulted  
  決定是否使用預設的判別存取控制清單 (DACL) 設定的安全性描述元。  
   
 ```
@@ -306,7 +310,7 @@ bool IsDaclDefaulted() const throw();
   
  若要設定此旗標，使用[csecuritydesc:: Setdacl](#setdacl)方法。  
   
-##  <a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent  
+##  <a name="isdaclpresent"></a>  CSecurityDesc::IsDaclPresent  
  判斷安全性描述元是否包含判別存取控制清單 (DACL)。  
   
 ```
@@ -323,7 +327,7 @@ bool IsDaclPresent() const throw();
   
  若要設定此旗標，使用[csecuritydesc:: Setdacl](#setdacl)方法。  
   
-##  <a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected  
+##  <a name="isdaclprotected"></a>  CSecurityDesc::IsDaclProtected  
  決定是否判別存取控制清單 (DACL) 為了避免修改設定。  
   
 ```
@@ -336,9 +340,9 @@ bool IsDaclProtected() const throw();
 ### <a name="remarks"></a>備註  
  若要設定此旗標，使用[csecuritydesc:: Setdacl](#setdacl)方法。  
   
- 這個方法僅有意義的 Windows 2000 或更新版本中，只有 Windows 2000 支援自動傳播繼承 Ace。  
+ 這個方法支援自動傳播繼承 Ace。  
   
-##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
+##  <a name="isgroupdefaulted"></a>  CSecurityDesc::IsGroupDefaulted  
  決定是否預設已設定的安全性描述元群組安全性識別碼 (SID)。  
   
 ```
@@ -351,7 +355,7 @@ bool IsGroupDefaulted() const throw();
 ### <a name="remarks"></a>備註  
  若要設定此旗標，使用[csecuritydesc:: Setgroup](#setgroup)方法。  
   
-##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
+##  <a name="isownerdefaulted"></a>  CSecurityDesc::IsOwnerDefaulted  
  決定是否預設已設定的安全性描述元擁有者安全性識別碼 (SID)。  
   
 ```
@@ -364,7 +368,7 @@ bool IsOwnerDefaulted() const throw();
 ### <a name="remarks"></a>備註  
  若要設定此旗標，使用[csecuritydesc:: Setowner](#setowner)方法。  
   
-##  <a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited  
+##  <a name="issaclautoinherited"></a>  CSecurityDesc::IsSaclAutoInherited  
  決定系統存取控制清單 (SACL) 是否已設定為支援自動傳播。  
   
 ```
@@ -377,7 +381,7 @@ bool IsSaclAutoInherited() const throw();
 ### <a name="remarks"></a>備註  
  執行自動繼承演算法物件和其現有的子物件時，系統就會設定此位元。  
   
-##  <a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted  
+##  <a name="issacldefaulted"></a>  CSecurityDesc::IsSaclDefaulted  
  決定是否使用預設系統存取控制清單 (SACL) 設定的安全性描述元。  
   
 ```
@@ -392,7 +396,7 @@ bool IsSaclDefaulted() const throw();
   
  若要設定此旗標，使用[csecuritydesc:: Setsacl](#setsacl)方法。  
   
-##  <a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent  
+##  <a name="issaclpresent"></a>  CSecurityDesc::IsSaclPresent  
  判斷安全性描述元是否包含系統存取控制清單 (SACL)。  
   
 ```
@@ -405,7 +409,7 @@ bool IsSaclPresent() const throw();
 ### <a name="remarks"></a>備註  
  若要設定此旗標，使用[csecuritydesc:: Setsacl](#setsacl)方法。  
   
-##  <a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected  
+##  <a name="issaclprotected"></a>  CSecurityDesc::IsSaclProtected  
  決定系統存取控制清單 (SACL) 是否設定為防止進行修改。  
   
 ```
@@ -418,9 +422,9 @@ bool IsSaclProtected() const throw();
 ### <a name="remarks"></a>備註  
  若要設定此旗標，使用[csecuritydesc:: Setsacl](#setsacl)方法。  
   
- 這個方法僅有意義的 Windows 2000 或更新版本中，只有 Windows 2000 支援自動傳播繼承 Ace。  
+ 這個方法支援自動傳播繼承 Ace。  
   
-##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
+##  <a name="isselfrelative"></a>  CSecurityDesc::IsSelfRelative  
  決定是否自我相關格式的安全性描述元。  
   
 ```
@@ -430,7 +434,7 @@ bool IsSelfRelative() const throw();
 ### <a name="return-value"></a>傳回值  
  如果安全性描述元是自我關聯的格式與連續的記憶體區塊中的所有安全性資訊，則傳回 true。 如果安全性描述元是絕對格式，就會傳回 false。 如需詳細資訊，請參閱[Absolute 和 Self-Relative 安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa374807)。  
   
-##  <a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute  
+##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  呼叫此方法以將安全性描述元轉換成絕對的格式。  
   
 ```
@@ -443,7 +447,7 @@ bool MakeAbsolute() throw(...);
 ### <a name="remarks"></a>備註  
  絕對格式的安全性描述元包含指向它所包含的資訊，而不是本身的資訊。 自我相關格式的安全性描述元包含連續的記憶體區塊中的資訊。 自我關聯的安全性描述元中**SECURITY_DESCRIPTOR**結構永遠啟動的詳細資訊，但安全性描述元的其他元件可以依照任何順序中的結構。 而不是使用的記憶體位址，自我關聯的安全性描述元的元件會識別的安全性描述元開頭的位移。 當必須儲存在磁碟上或透過通訊協定傳輸的安全性描述元，則此格式會很有用。 如需詳細資訊，請參閱[Absolute 和 Self-Relative 安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa374807)。  
   
-##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
+##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  呼叫此方法以將安全性描述元轉換成自我關聯的格式。  
   
 ```
@@ -456,7 +460,7 @@ bool MakeSelfRelative() throw(...);
 ### <a name="remarks"></a>備註  
  絕對格式的安全性描述元包含指向它所包含的資訊，而不是包含本身的資訊。 自我相關格式的安全性描述元包含連續的記憶體區塊中的資訊。 自我關聯的安全性描述元中**SECURITY_DESCRIPTOR**結構永遠啟動的詳細資訊，但安全性描述元的其他元件可以依照任何順序中的結構。 而不是使用的記憶體位址，從安全性描述元開頭的位移所識別的安全性描述元的元件。 當必須儲存在磁碟上或透過通訊協定傳輸的安全性描述元，則此格式會很有用。 如需詳細資訊，請參閱[Absolute 和 Self-Relative 安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa374807)。  
   
-##  <a name="operator_eq"></a>CSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CSecurityDesc::operator =  
  指派運算子。  
   
 ```
@@ -471,14 +475,14 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="return-value"></a>傳回值  
  傳回已更新`CSecurityDesc`物件。  
   
-##  <a name="operator_const_security_descriptor__star"></a>CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
+##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator const SECURITY_DESCRIPTOR *  
  將值轉換為指標**SECURITY_DESCRIPTOR**結構。  
   
 ```  
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```  
   
-##  <a name="setcontrol"></a>CSecurityDesc::SetControl  
+##  <a name="setcontrol"></a>  CSecurityDesc::SetControl  
  設定安全性描述元的控制位元。  
   
 ```
@@ -498,9 +502,9 @@ bool SetControl(
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 這個方法是使用僅限 Windows 2000 和更新版本，因為它會呼叫[SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)。  
+ 這個方法會呼叫[SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)。  
   
-##  <a name="setdacl"></a>Csecuritydesc:: Setdacl  
+##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  判別存取控制清單 (DACL) 中設定資訊。 如果 DACL 中已有的安全性描述元，它會取代它。  
   
 ```
@@ -529,7 +533,7 @@ inline void SetDacl(
 ### <a name="remarks"></a>備註  
  沒有一項重要差異空之間不存在的 DACL。 DACL 是空的它包含沒有任何存取控制項目，並沒有存取權限已明確授與。 如此一來，會隱含拒絕物件的存取權。 當物件具有沒有 DACL 時，相反地，沒有保護指派給物件，並授與任何存取要求。  
   
-##  <a name="setgroup"></a>Csecuritydesc:: Setgroup  
+##  <a name="setgroup"></a>  CSecurityDesc::SetGroup  
  設定絕對格式安全性描述元，以取代任何現有的主要群組資訊的主要群組資訊。  
   
 ```
@@ -546,7 +550,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="setowner"></a>Csecuritydesc:: Setowner  
+##  <a name="setowner"></a>  CSecurityDesc::SetOwner  
  設定絕對格式的安全性描述元的擁有者資訊。 它會取代任何現有的擁有者資訊。  
   
 ```
@@ -563,7 +567,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="setsacl"></a>Csecuritydesc:: Setsacl  
+##  <a name="setsacl"></a>  CSecurityDesc::SetSacl  
  設定系統存取控制清單 (SACL) 中的資訊。 如果已經存在的安全性描述元中 SACL，則會取代它。  
   
 ```
@@ -580,7 +584,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>傳回值  
  如果成功則傳回 true，失敗則傳回 false。  
   
-##  <a name="tostring"></a>CSecurityDesc::ToString  
+##  <a name="tostring"></a>  CSecurityDesc::ToString  
  將安全性描述元轉換成字串格式。  
   
 ```
@@ -616,7 +620,7 @@ bool ToString(
   
  如果 DACL 受到 NULL 輸入的安全性描述元中未設定 SE_DACL_PRESENT 控制位元，產生的安全性描述元字串中沒有 d： 元件。 請參閱[安全性描述元字串格式](http://msdn.microsoft.com/library/windows/desktop/aa379570)如需詳細資訊。  
   
- 這個方法僅可與 Windows 2000 和更新版本，因為它會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)。  
+ 這個方法會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)。  
   
 ## <a name="see-also"></a>請參閱  
  [安全性範例](../../visual-cpp-samples.md)   

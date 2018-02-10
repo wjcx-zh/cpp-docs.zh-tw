@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vc.codewiz.class.atl.simple.options
-dev_langs: C++
-helpviewer_keywords: ATL Simple Object Wizard, options
+f1_keywords:
+- vc.codewiz.class.atl.simple.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c57206cb5be251e609f14132b4f0913a22b31534
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 37341dc23f95e1863aeae4a1b57c01d24d6ad365
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="options-atl-simple-object-wizard"></a>選項, ATL 簡單物件精靈
 您可以使用 ATL 簡單物件精靈的這個頁面來設計以提升的效率及錯誤支援物件。  
@@ -38,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |**Apartment**|指定物件使用 apartment 執行緒。 相當於單一執行緒 apartment。 Apartment 執行緒元件的每個物件會指派它的執行緒與物件的存留期的 apartment不過，多個執行緒可以用於多個物件。 每個 apartment 繫結至特定的執行緒，而且 Windows 訊息幫浦 （預設值）。<br /><br /> 請參閱[單一執行緒 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112)如需詳細資訊。|  
 |**兩者**|指定的物件可以使用 apartment 或無限制執行緒，取決於哪種執行緒建立。|  
 |**可用**|指定物件使用無限制執行緒。 無限制執行緒相當於多執行緒 apartment 模型。 請參閱[多執行緒 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms693421)如需詳細資訊。|  
-|**中性**(Windows 2000)|指定物件會遵循多執行緒 apartment 的指導方針，但它可以在任何種類的執行緒上執行。|  
+|**Neutral**|指定物件會遵循多執行緒 apartment 的指導方針，但它可以在任何種類的執行緒上執行。|  
   
  **彙總**  
  指出物件是否使用[彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)。 彙總的物件可讓您選擇的介面來公開 （expose） 給用戶端，並介面會公開一樣加以彙總物件實作。 彙總物件的用戶端通訊只能搭配彙總的物件。  
@@ -54,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
 |選項|描述|  
 |------------|-----------------|  
-|**雙重**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式加上晚期繫結`IDispatch`方法)。 可讓兩個 COM 用戶端和[Automation 控制器](../../mfc/automation-clients.md)來存取的物件。 預設值。|  
+|**Dual**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式加上晚期繫結`IDispatch`方法)。 可讓兩個 COM 用戶端和[Automation 控制器](../../mfc/automation-clients.md)來存取的物件。 預設值。|  
 |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以比雙重介面，更快，尤其是跨處理序界限。<br /><br /> -   **Automation 相容**可讓 Automation 控制器，來存取自訂介面支援的物件。|  
   
  **支援**  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs: C++
-helpviewer_keywords: CPrivateObjectSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
 此類別代表私用物件安全性描述元物件。  
@@ -45,7 +49,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |名稱|描述|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|建構函式。|  
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|解構函式。|  
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -60,7 +64,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
   
 |||  
 |-|-|  
-|[運算子 =](#operator_eq)|指派運算子。|  
+|[operator =](#operator_eq)|指派運算子。|  
   
 ## <a name="remarks"></a>備註  
  這個類別，衍生自[CSecurityDesc](../../atl/reference/csecuritydesc-class.md)，提供方法來建立及管理 private 物件的安全性描述元。  
@@ -75,7 +79,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
   
-##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  呼叫此方法以將安全性描述元和其存取控制清單 (Acl) 轉換成其格式可支援自動傳播繼承的存取控制項目 (Ace)。  
   
 ```
@@ -105,7 +109,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>備註  
  這個方法會嘗試判斷是否的 Ace 判別存取控制清單 (DACL) 和目前的安全性描述元的系統存取控制清單 (SACL) 繼承自父安全性描述元。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403)函式。  
   
-##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  建構函式。  
   
 ```
@@ -115,7 +119,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>備註  
  初始化 `CPrivateObjectSecurityDesc` 物件。  
   
-##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc  
  解構函式。  
   
 ```
@@ -125,7 +129,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>備註  
  解構函式會釋放所有配置的資源，並刪除私用物件的安全性描述元。  
   
-##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create  
  呼叫這個方法來配置及初始化呼叫的資源管理員所建立的私用物件的自我關聯的安全性描述元。  
   
 ```
@@ -177,12 +181,12 @@ bool Create(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405)或[CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581)。  
   
- 第二個方法，允許指定的新物件的物件類型的 GUID 或控制如何繼承 Ace，只可在執行 Windows 2000 的系統上取得和更新版本。  
+ 第二種方法可讓指定的新物件的物件類型的 GUID 或控制如何繼承 Ace。  
   
 > [!NOTE]
 >  自我關聯的安全性描述元是記憶體的連續區塊中儲存所有的安全性資訊的安全性描述元。  
   
-##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  呼叫此方法以擷取私用物件的安全性描述元中的資訊。  
   
 ```
@@ -204,7 +208,7 @@ bool Get(
 ### <a name="remarks"></a>備註  
  安全性描述元是結構和相關聯的資料，其中包含安全性實體物件的安全性資訊。  
   
-##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =  
  指派運算子。  
   
 ```
@@ -218,7 +222,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>傳回值  
  傳回已更新`CPrivateObjectSecurityDesc`物件。  
   
-##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set  
  呼叫此方法以修改私用物件的安全性描述元。  
   
 ```
@@ -256,7 +260,7 @@ bool Set(
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- 第二個方法，允許指定物件的物件類型的 GUID 或控制如何繼承 Ace，只可在執行 Windows 2000 的系統上取得和更新版本。  
+ 第二種方法允許指定物件的物件類型的 GUID 或控制如何繼承 Ace。  
   
 ## <a name="see-also"></a>請參閱  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

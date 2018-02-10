@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, creating programs
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, creating programs
 ms.assetid: 8eb31320-1037-4029-b1f3-fdc9406dbaf1
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: deb832e0baed30507ef3f9929fb5f12805b7a807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>建立使用 Remote Automation 的程式
 不需要變更原始程式碼、不需要重新編譯，也不需要重新連結，任何的 Automation 物件和任何 Automation 控制器，都可以使用 Remote Automation。 一旦有在本機設定工作 (也就是在相同的電腦)，您只需用幾個步驟就能遠端執行。  
@@ -46,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  步驟 3 是在選取的伺服器電腦或電腦上正確安裝和註冊伺服器應用程式。 如果應用程式在自我註冊，執行應用程式一次也會進行註冊。  
   
- 第 4 步驟是將伺服器設定為允許遠端執行。 在伺服器電腦上執行 RAC 管理員，並確定**用戶端存取** 索引標籤有焦點。 選擇您想要啟用模型 (通常**允許依索引鍵的遠端建立**。 如果您選擇此選項，您也需要按一下**允許遠端啟用**核取方塊以設定的值為 'Y' 的登錄項目)。 如果您正在執行 Windows NT 或 Windows 2000，而您選擇允許遠端建立 (ACL)，您也可以選擇以編輯 ACL 推送**編輯 ACL**  按鈕。  
+ 第 4 步驟是將伺服器設定為允許遠端執行。 在伺服器電腦上執行 RAC 管理員，並確定**用戶端存取** 索引標籤有焦點。 選擇您想要啟用模型 (通常**允許依索引鍵的遠端建立**。 如果您選擇此選項，您也需要按一下**允許遠端啟用**核取方塊以設定的值為 'Y' 的登錄項目)。 如果您選擇允許遠端建立 (ACL) 選項時，您也可以選擇以編輯 ACL 推送**編輯 ACL**  按鈕。  
   
  若要允許遠 Remote Automation 運作，您必須確認已安裝 Automation 管理員，且已在伺服器電腦或電腦上執行。 如果尚未安裝，請複製 AUTMGR32.EXE 到 Windows 系統目錄。 如需如何執行這項操作的資訊，請參閱[遠端自動化安裝](../mfc/remote-automation-installation.md)。 若要啟動 Remote Automation，請執行 Automation 管理員。 如此將會出現一個小型狀態視窗，其中會顯示一些訊息。 一旦啟動，它將會自行最小化。 如果您想要繼續查看狀態資訊，您可以按一下**Automation 管理員**以還原視窗的工作列中的索引標籤。  
   

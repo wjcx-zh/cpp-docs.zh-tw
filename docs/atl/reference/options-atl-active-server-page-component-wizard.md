@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vc.codewiz.class.atl.asp.options
-dev_langs: C++
-helpviewer_keywords: ATL Active Server Page Component Wizard, options
+f1_keywords:
+- vc.codewiz.class.atl.asp.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6564b340458ae7e9a8e137d2338ba68b3e729a0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>選項, ATL Active Server Page 元件精靈
 您可以使用 ATL Active Server Page 元件精靈的這個頁面來設計以提升的效率及錯誤支援物件。  
@@ -38,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |**Apartment**|指定物件使用 apartment 執行緒。 相當於單一執行緒 apartment。 Apartment 執行緒元件的每個物件會指派它的執行緒與物件的存留期的 apartment不過，多個執行緒可以用於多個物件。 每個 apartment 繫結至特定的執行緒，而且 Windows 訊息幫浦 （預設值）。<br /><br /> 請參閱[單一執行緒 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms680112)如需詳細資訊。|  
 |**兩者**|指定的物件可以使用 apartment 或無限制執行緒，取決於哪種執行緒建立。|  
 |**可用**|指定物件使用無限制執行緒。 無限制執行緒相當於多執行緒 apartment 模型。 請參閱[多執行緒 Apartment](http://msdn.microsoft.com/library/windows/desktop/ms693421)如需詳細資訊。|  
-|**中性**(Windows 2000)|指定物件會遵循多執行緒 apartment 的指導方針，但它可以在任何種類的執行緒上執行。|  
+|**Neutral**|指定物件會遵循多執行緒 apartment 的指導方針，但它可以在任何種類的執行緒上執行。|  
   
  **彙總**  
  指出物件是否使用[彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)。 彙總的物件可讓您選擇的介面來公開 （expose） 給用戶端，並介面會公開一樣加以彙總物件實作。 彙總物件的用戶端通訊只能搭配彙總的物件。  

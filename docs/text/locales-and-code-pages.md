@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - locales [C++], about locales
 - locale IDs [C++]
@@ -22,16 +24,17 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f1134d106949918c7e8984835b86bbc4c6062f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="locales-and-code-pages"></a>地區設定和字碼頁
 地區設定識別碼反映當地慣例和語言特定地理區域。 一種指定語言可以在一個以上的國家/地區使用，例如巴西和葡萄牙都說葡萄牙語。 反過來說，一個國家/地區可能有一種以上的官方語言。 例如，加拿大有兩種語言： 英文和法文。 因此，加拿大有兩個不同的地區設定： 加拿大英文和加拿大法文。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  如需字碼頁的詳細資訊，請參閱 [Code Pages](../c-runtime-library/code-pages.md)。  
   
- C 執行階段程式庫具有兩種類型的內部的字碼頁： 地區設定和多位元組。 您可以在程式執行期間變更目前的字碼頁 (請參閱文件[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)和[_setmbcp](../c-runtime-library/reference/setmbcp.md)函式)。 此外，可能會取得執行階段程式庫，並使用作業系統字碼頁的值。 在 Windows 2000 作業系統字碼頁會是 「 系統預設 ANSI"字碼頁。 在程式執行期間，在此字碼頁是常數。  
+ C 執行階段程式庫具有兩種類型的內部的字碼頁： 地區設定和多位元組。 您可以在程式執行期間變更目前的字碼頁 (請參閱文件[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)和[_setmbcp](../c-runtime-library/reference/setmbcp.md)函式)。 此外，可能會取得執行階段程式庫，並使用作業系統字碼頁，在程式執行的持續時間為常數的值。  
   
  當地區設定字碼頁變更時，地區設定相關變更集的函式所選擇的字碼頁所指定的行為。 根據預設，所有地區設定相關函式時開始執行以"C"地區設定特有的地區設定字碼頁。 您可以變更內部的地區設定字碼頁 （以及其他地區設定特定的屬性），藉由呼叫`setlocale`函式。 呼叫`setlocale`(LC_ALL，"") 來指出作業系統使用者地區設定所設定的地區設定。  
   

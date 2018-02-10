@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>CSacl 類別
 這個類別是 SACL （系統存取控制清單） 結構的包裝函式。  
@@ -48,7 +52,7 @@ class CSacl : public CAcl
 |名稱|描述|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|建構函式。|  
-|[CSacl:: ~ CSacl](#dtor)|解構函式。|  
+|[CSacl::~CSacl](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -82,7 +86,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
   
-##  <a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>  CSacl::AddAuditAce  
  將稽核存取控制項目 (ACE) 加入至`CSacl`物件。  
   
 ```
@@ -129,11 +133,11 @@ bool AddAuditAce(
  傳回**true**如果 ACE 新增至`CSacl`物件**false**失敗。  
   
 ### <a name="remarks"></a>備註  
- A`CSacl`物件包含指定的安全性事件記錄檔中產生稽核記錄的存取嘗試類型的存取控制項目 (Ace)。 這個方法會加入至這類 ACE`CSacl`物件。 第二種`AddAuditAce`才可於 Windows 2000 和更新版本。  
+ A`CSacl`物件包含指定的安全性事件記錄檔中產生稽核記錄的存取嘗試類型的存取控制項目 (Ace)。 這個方法會加入至這類 ACE`CSacl`物件。  
   
  請參閱[ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919)可以在中設定各種旗標的描述`AceFlags`參數。  
   
-##  <a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>  CSacl::CSacl  
  建構函式。  
   
 ```
@@ -148,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>備註  
  `CSacl`物件可以選擇性地建立使用現有**ACL**結構。 確定此參數是系統存取控制清單 (SACL) 並不是判別存取控制清單 (DACL)。 在偵錯組建中，如果未提供 DACL，則會發生判斷提示。 在發行組建會忽略來自 DACL 的任何項目。  
   
-##  <a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>  CSacl::~CSacl  
  解構函式。  
   
 ```
@@ -158,7 +162,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>備註  
  解構函式會釋放物件，包括所有存取控制項目 (Ace) 來取得所有資源。  
   
-##  <a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>  CSacl::GetAceCount  
  傳回中的存取控制項目 (Ace) 數目`CSacl`物件。  
   
 ```
@@ -168,7 +172,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回中所包含的 Ace 數目`CSacl`物件。  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  指派運算子。  
   
 ```
@@ -182,7 +186,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>傳回值  
  將參考傳回給更新`CSacl`物件。 請確認**ACL**參數是實際系統存取控制清單 (SACL) 而不是判別存取控制清單 (DACL)。 在偵錯組建，就會進行判斷提示，並在發行組建中**ACL**參數將會被忽略。  
   
-##  <a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>  CSacl::RemoveAce  
  移除特定的 ACE （存取控制的項目） **CSacl**物件。  
   
 ```
@@ -196,7 +200,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>備註  
  這個方法衍生自[CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat)。  
   
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  移除存取控制項目 (Ace) 中所包含的所有`CSacl`物件。  
   
 ```
@@ -208,7 +212,7 @@ void RemoveAllAces() throw();
   
 ## <a name="see-also"></a>請參閱  
  [CAcl 類別](../../atl/reference/cacl-class.md)   
- [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
+ [ACLs](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)

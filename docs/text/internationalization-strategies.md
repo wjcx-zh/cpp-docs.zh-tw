@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - language-portable code [C++]
@@ -18,21 +20,22 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6b7ab27bb7a6458efde84451febaeb6f3ef37115
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ead6470bbbeacd43326f4373877eb991e5899116
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="internationalization-strategies"></a>國際化策略
 根據您的目標作業系統和市場，您有數個國際化策略：  
   
--   您的應用程式使用 Unicode，因此執行 Windows 2000 和 Windows NT、 但不是能在 Windows 95 或 Windows 98。  
+-   您的應用程式會使用 Unicode。  
   
      使用 Unicode 特有的功能和所有字元都是 16 位元寬 （雖然您可以使用程式的某些部分中的 ANSI 字元的特殊用途）。 C 執行階段程式庫提供僅限 Unicode 程式設計函式、 巨集和資料類型。 MFC 已完全啟用 Unicode。  
   
@@ -41,8 +44,6 @@ ms.lasthandoff: 12/21/2017
      您使用 MBCS 特有的功能。 字串可以包含單一位元字元，雙位元組字元或兩者。 C 執行階段程式庫提供僅限 MBCS 程式設計函式、 巨集和資料類型。 MFC 會完全啟用 MBCS。  
   
 -   您的應用程式的原始程式碼會寫入完整的可攜性，重新編譯使用的符號**_UNICODE**或符號**_MBCS**定義，您可以產生使用的版本。 如需詳細資訊，請參閱[Tchar.h 中的泛用文字對應](../text/generic-text-mappings-in-tchar-h.md)。  
-  
--   應用程式會使用包裝函式程式庫遺失 Unicode 函式，在 Windows 95、 Windows 98 和 Windows ME 上的一樣，一個述[設計單一的 Unicode 應用程式同時 Windows 98 和 Windows 2000 上執行](http://go.microsoft.com/fwlink/p/?LinkId=250770)。 包裝函式程式庫也會提供功能商業化上市。  
   
      您可以使用完全可攜 C 執行階段函式、 巨集和資料類型。 MFC 的彈性支援任何這些策略。  
   

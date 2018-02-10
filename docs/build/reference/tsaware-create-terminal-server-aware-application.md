@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /tsaware
 - VC.Project.VCLinkerTool.TerminalServerAware
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Terminal Server
 - /TSAWARE linker option
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4c6fb783f717f730945f8d34c8fe2a03f5e1f6d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2956bd2ed8aa0c36e730468a15856cecfaf7e23f
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (建立終端伺服器感知應用程式)
 ```  
@@ -43,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  如果您使用 /TSAWARE，而且您的應用程式仍會使用 INI 檔案，檔案會共用系統的所有使用者。 如果是可接受，您仍然可以連結 /TSAWARE; 您的應用程式否則，您必須使用 /tsaware: no。  
   
- /TSAWARE 選項會啟用預設 Windows 2000 和更新版本，適用於 Windows 和主控台應用程式。 請參閱[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)和[/VERSION](../../build/reference/version-version-information.md)資訊。  
+ /TSAWARE 選項會預設啟用適用於 Windows 和主控台應用程式。 請參閱[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)和[/VERSION](../../build/reference/version-version-information.md)資訊。  
   
  /TSAWARE 不正確的驅動程式、 Vxd 或 Dll。  
   

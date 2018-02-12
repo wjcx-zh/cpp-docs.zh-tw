@@ -1,28 +1,32 @@
 ---
 title: "noalias |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords: noalias_cpp
-dev_langs: C++
+f1_keywords:
+- noalias_cpp
+dev_langs:
+- C++
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 92e96ce931ea5bc44e03a5803865daa66f960e92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fd57b10aba4298ff7facd725ab3ce1934ccf1ab
+ms.sourcegitcommit: f3c398b1c7dbf36ab71b5ca89d365b1913afa307
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="noalias"></a>noalias
 
@@ -32,13 +36,15 @@ ms.lasthandoff: 12/21/2017
 
 如果函式標註為 `noalias`，則除了參數本身外，最佳化程式可以假設函式內只參考或修改指標參數的第一層間接取值。 這個可見的全域狀態是在編譯範圍外未定義或未參考的所有資料，而且不會採用其位址。 在編譯範圍是所有原始程式檔 ([/LTCG （連結時間程式碼產生）](../build/reference/ltcg-link-time-code-generation.md)建置) 或單一來源檔案 (非**/LTCG**建置)。
 
+`noalias`註釋只適用於標註函式主體內。 標示為函式`__declspec(noalias)`不會影響函數所傳回的指標的別名。
+
+可能會影響別名的另一個註解，請參閱[__declspec （restrict)](../cpp/restrict.md)。
+
 ## <a name="example"></a>範例
 
-下列範例示範使用 `__declspec(restrict)` 和 `__declspec(noalias)`。 一般來說，從傳回的記憶體`malloc`是`restrict`因為已適當地裝飾 CRT 標頭。
+下列範例示範如何使用`__declspec(noalias)`。
 
-不過，在此範例中，指標`mempool`和`memptr`是全域的所以編譯器不保證記憶體不受別名限制。 裝飾以 `__declspec(restrict)` 傳回指標的函式可讓編譯器知道傳回值所指向的記憶體沒有別名。
-
-裝飾範例中以 `__declspec(noalias)` 存取記憶體的函式可讓編譯器知道，除了透過其參數清單中的指標外，此函式不會干擾全域狀態。
+當函式`multiply`存取記憶體已標註`__declspec(noalias)`，它會告訴編譯器此函式不會修改全域狀態除了透過其參數清單中的指標。
 
 ```C
 // declspec_noalias.c
@@ -51,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 
 float * mempool, * memptr;
 
-__declspec(restrict) float * ma(int size)
+float * ma(int size)
 {
     float * retval;
     retval = memptr;
@@ -59,7 +65,7 @@ __declspec(restrict) float * ma(int size)
     return retval;
 }
 
-__declspec(restrict) float * init(int m, int n)
+float * init(int m, int n)
 {
     float * a;
     int i, j;
@@ -101,7 +107,7 @@ int main()
     a = init(M, N);
     b = init(N, P);
     c = init(M, P);
-
+ 
     multiply(a, b, c);
 }
 ```
@@ -109,4 +115,5 @@ int main()
 ## <a name="see-also"></a>請參閱
 
 [__declspec](../cpp/declspec.md)  
-[關鍵字](../cpp/keywords-cpp.md)
+[關鍵字](../cpp/keywords-cpp.md)  
+[__declspec(restrict)](../cpp/restrict.md)  

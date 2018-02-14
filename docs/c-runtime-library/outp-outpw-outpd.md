@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _outpd
 - _outp
 - outpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - outpw function
 - words
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: edcb3f8da6252705fe494acaa64c623b8a22ed3b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f2b32b17ed65120aa98b19ed3b2cf599364fee0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="outp-outpw-outpd"></a>_outp、_outpw、_outpd
 從連接埠輸出一個位元組 (`_outp`)、一個字組 (`_outpw`) 或雙字組 (`_outpd`)。  
@@ -91,7 +94,7 @@ unsigned long dataword
 ## <a name="remarks"></a>備註  
  `_outp`、 `_outpw`及 `_outpd` 函式會個別寫入一個位元組、一個字組及雙字組到指定的輸出連接埠。 *port* 引數可以是介於 0 - 65,535 之間任何不帶正負號的整數；*databyte* 可以是介於 0 - 255 之間的任何整數；*dataword* 可以位於整數、不帶正負號之 short 整數，或不帶正負號之 long 整數範圍內的任何值。  
   
- 因為這些函式會直接寫入 I/O 連接埠，所以無法在 Windows NT、Windows 2000、Windows XP 及 Windows Server 2003 的使用者程式碼中使用。 如需如何使用這些作業系統中之 I/O 連接埠的資訊，請前往 MSDN 搜尋 "Serial Communications in Win32"。  
+ 由於這些函式直接寫入 I/O 連接埠，因此無法用於使用者程式碼。 如需如何使用這些作業系統中之 I/O 連接埠的資訊，請前往 MSDN 搜尋 "Serial Communications in Win32"。  
   
 ## <a name="requirements"></a>需求  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,7 +26,8 @@ f1_keywords:
 - _inp
 - _inpw
 - _inpd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - inp function
 - inpw function
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 15fa7169f46e84cf60e1b869e5eb68a392b16a3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7b73d8287954a401b8b966fb1220cfcecfc416eb
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
 從連接埠輸入一個位元組 (`_inp`)、一個字組 (`_inpw`) 或雙字組 (`_inpd`)。  
@@ -80,7 +83,7 @@ unsigned long _inpd(
 ## <a name="remarks"></a>備註  
  `_inp`、 `_inpw`及 `_inpd` 函式會從指定的輸入連接埠讀取位元組、字組及雙字組。 輸入的值可以是 0 - 65535 之間任何不帶正負號的 short 整數。  
   
- 因為這些函式會直接讀取 I/O 連接埠，所以無法在 Windows NT、 Windows 2000、Windows XP 及 Windows Server 2003 的使用者程式碼中使用。  
+ 由於這些函式直接從 I/O 連接埠讀取，因此無法用於使用者程式碼。  
   
 ## <a name="requirements"></a>需求  
   

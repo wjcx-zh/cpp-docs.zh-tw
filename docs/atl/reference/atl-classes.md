@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-classes"></a>ATL 類別
 Active Template Library (ATL) 包含下列類別。 若要依分類尋找特定的類別，請參閱[ATL 類別概觀](../../atl/atl-class-overview.md)。  
@@ -95,7 +98,7 @@ Active Template Library (ATL) 包含下列類別。 若要依分類尋找特定�
 |[CComModule](../../atl/reference/ccommodule-class.md)|為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組](../../atl/atl-module-classes.md)如需詳細資訊。|atlbase.h|  
 |[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)|這個類別提供安全執行緒方法遞增和遞減之變數的值。|atlbase.h|  
 |[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)|這個類別提供安全執行緒方法遞增和遞減變數的值，而不需要重要區段的鎖定或解除鎖定功能。|atlbase.h|  
-|[Ccomobject<](../../atl/reference/ccomobject-class.md)|這個類別會實作**IUnknown**非彙總的物件。|atlcom.h|  
+|[CComObject](../../atl/reference/ccomobject-class.md)|這個類別會實作**IUnknown**非彙總的物件。|atlcom.h|  
 |[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)|這個類別會管理上包含的模組的參考計數程式`Base`物件。|atlcom.h|  
 |[CComObjectNoLock](../../atl/reference/ccomobjectnolock-class.md)|這個類別會實作**IUnknown**的非彙總的物件，但是不會遞增中建構函式的模組鎖定計數。|atlcom.h|  
 |[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)|此 typedef 的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)執行緒模型的伺服器預設值根據。|atlcom.h|  
@@ -216,7 +219,7 @@ Active Template Library (ATL) 包含下列類別。 若要依分類尋找特定�
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|這個類別提供的預設實作`ISupportErrorInfo Interface`介面，並只有單一介面會產生錯誤的物件上時才能使用。|atlcom.h|  
 |[IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)|這個介面會提供設定執行緒集區的方法。|atlutil.h|  
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|這個類別會實作**IUnknown**和提供的預設實作[IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763)， [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318)，和[IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)介面。|atlctl.h|  
-|[IWorkerThreadClient 介面](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`是由用戶端的服務所實作的介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)類別。|atlutil.h|  
+|[IWorkerThreadClient 介面](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` 是由用戶端的服務所實作的介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)類別。|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|這個類別會提供包裝函式**CreateWindow**和**CreateWindowEx**。|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|這個引數的配接器類別，可讓 `RECT`指標或參考傳遞至函式指標來實作。|atlwin.h|  
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|這個引數的介面卡類別可讓任一資源名稱 (`LPCTSTR`s) 或資源識別碼 (**UINT**s) 而不需要將 ID 為字串，使用呼叫端傳遞至函式**MAKEINTRESOURCE**巨集。|atlwin.h|  
@@ -227,7 +230,7 @@ Active Template Library (ATL) 包含下列類別。 若要依分類尋找特定�
  [函式](../../atl/reference/atl-functions.md)   
  [全域變數](../../atl/reference/atl-global-variables.md)   
  [結構](../../atl/reference/atl-structures.md)   
- [Typedef](../../atl/reference/atl-typedefs.md)   
+ [Typedefs](../../atl/reference/atl-typedefs.md)   
  [類別概觀](../../atl/atl-class-overview.md)
 
 

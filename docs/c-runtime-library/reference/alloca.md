@@ -1,13 +1,15 @@
 ---
-title: "_alloca |Microsoft 文件"
+title: _alloca | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _alloca
+ms.topic: reference
+apiname:
+- _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104c3df4e6f69d31c5090a87c8029351accd1e1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alloca"></a>_alloca
 在堆疊上配置記憶體。 此函式已被取代，因為更安全的版本可用;請參閱[_malloca](../../c-runtime-library/reference/malloca.md)。  
@@ -61,7 +65,7 @@ void *_alloca(
  如果無法配置空間，則會產生堆疊溢位例外狀況。 堆疊溢位例外狀況不是 C++ 例外狀況，而是結構化例外狀況。 您必須使用[結構化例外狀況處理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而不是使用 C++ 例外狀況處理。  
   
 ## <a name="remarks"></a>備註  
- `_alloca`配置`size`位元組程式堆疊。 （不超出範圍只是通過配置） 時，呼叫的函式結束時，會自動釋放已配置的空間。 因此，不會傳遞所傳回的指標值`_alloca`做為引數[可用](../../c-runtime-library/reference/free.md)。  
+ `_alloca` 配置`size`位元組程式堆疊。 （不超出範圍只是通過配置） 時，呼叫的函式結束時，會自動釋放已配置的空間。 因此，不會傳遞所傳回的指標值`_alloca`做為引數[可用](../../c-runtime-library/reference/free.md)。  
   
  在例外狀況處理常式 (EH) 中明確呼叫 `_alloca` 有一些限制。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，在下列任何情節中明確呼叫 `_alloca`，會在傳回至呼叫的 EH 常式期間導致程式失敗：  
   

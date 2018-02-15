@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _CrtSetReportMode
+ms.topic: reference
+apiname:
+- _CrtSetReportMode
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,21 +25,23 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetReportMode
 - CrtSetReportMode
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _CrtSetReportMode function
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 75d71ae4df727df1dd82ff88a793dc4e9c462b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 45319f7584d0c18533433d01b3467ccfeecac8df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 指定 `_CrtDbgReport` 以及任何呼叫 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 之巨集 (例如 [_ASSERT、_ASSERTE、_ASSERT_EXPR 巨集](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)；[_ASSERT、_ASSERTE、_ASSERT_EXPR 巨集](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)；[_RPT、_RPTF、_RPTW、_RPTFW 巨集](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)；以及 [_RPT、_RPTF、_RPTW、_RPTFW 巨集](../../c-runtime-library/reference/rpt-rptf-rptw-rptfw-macros.md)) 所產生之特定報表類型的一或多個目的地 (僅限偵錯版本)。  

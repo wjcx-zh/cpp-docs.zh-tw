@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: QueryInterface
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- QueryInterface
+dev_langs:
+- C++
 helpviewer_keywords:
 - interfaces, pointers
 - interfaces, availability
 - QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5714eab684066e74a6d56144d915460b4312f4c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ce14ebef3649cea78e8cf4315a62392cfa142152
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="queryinterface"></a>QueryInterface
 雖然沒有的機制之物件可以用來表示它提供以靜態方式 （它具現化之前） 的功能，但基本的 COM 機制是使用**IUnknown**方法呼叫[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

@@ -1,13 +1,15 @@
 ---
 title: signal | Microsoft Docs
 ms.custom: 
-ms.date: 1/02/2018
+ms.date: 02/12/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: signal
+ms.topic: reference
+apiname:
+- signal
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,18 +23,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: signal
-dev_langs: C++
-helpviewer_keywords: signal function
+f1_keywords:
+- signal
+dev_langs:
+- C++
+helpviewer_keywords:
+- signal function
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 337bc5e222ee7fcb313d0b7ea0722dbb5cacea75
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 23eae404bf5f8e2227d68189938defb2308f5e6b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="signal"></a>signal
 
@@ -44,21 +50,19 @@ ms.lasthandoff: 01/05/2018
 ## <a name="syntax"></a>語法
 
 ```C
-void (__cdecl *signal(
-   int sig,
-   void (__cdecl *func ) (int [, int ] )))(int);
+void __cdecl *signal(int sig, int (*func)(int, int));
 ```
 
 ### <a name="parameters"></a>參數
 _sig_  
 訊號值。
 
-_函式_  
-要執行的函式。 第一個參數是訊號值，而第二個參數是可在第一個參數是 SIGFPE 時使用的子程式碼。
+_func_  
+第二個參數是要執行函式的指標。 第一個參數是訊號值，而第二個參數是可在第一個參數是 SIGFPE 時使用的子程式碼。
 
 ## <a name="return-value"></a>傳回值
 
-`signal`傳回先前的值_func_ ，具有相關聯的特定的訊號。 例如，如果先前的值_func_已`SIG_IGN`，傳回值也是`SIG_IGN`。 傳回值 `SIG_ERR` 表示錯誤；在該情況下，`errno` 會設為 `EINVAL`。
+`signal` 傳回具有相關聯的特定訊號的 func 的舊值。 例如，如果先前的值_func_已`SIG_IGN`，傳回值也是`SIG_IGN`。 傳回值 `SIG_ERR` 表示錯誤；在該情況下，`errno` 會設為 `EINVAL`。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -66,7 +70,7 @@ _函式_
 
 `signal` 函式可讓處理序選擇數種方式中的其中一種來處理來自作業系統的插斷訊號。 _Sig_引數是要插斷`signal`回應; 它必須是下列訊號中定義的資訊清單常數之一。H.
 
-|_sig_值|描述|
+|_sig_ value|描述|
 |-----------------|-----------------|
 |`SIGABRT`|異常終止|
 |`SIGFPE`|浮點錯誤|

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fseeki64
 - fseek
@@ -25,7 +26,8 @@ apitype: DLLExport
 f1_keywords:
 - fseek
 - _fseeki64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fseeki64 function
 - fseeki64 function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 90af1581910ceaadf814050be39bc537cfc3881c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4dd4c4e6550946bafdaf0ad8f521e1e942ae04c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fseek-fseeki64"></a>fseek、_fseeki64
 將檔案指標移至指定的位置。  
@@ -88,7 +91,7 @@ int _fseeki64(
  `SEEK_SET`  
  檔案開頭。  
   
- 您可以使用 `fseek` 和 `_fseeki64` 將指標重新放置在檔案中的任何位置。 指標也可以放置在超過檔案結尾的位置。 `fseek`和`_fseeki64`清除檔案結尾指標，並取消任何之前的效果`ungetc`針對呼叫`stream`。  
+ 您可以使用 `fseek` 和 `_fseeki64` 將指標重新放置在檔案中的任何位置。 指標也可以放置在超過檔案結尾的位置。 `fseek` 和`_fseeki64`清除檔案結尾指標，並取消任何之前的效果`ungetc`針對呼叫`stream`。  
   
  檔案因為附加資料而開啟時，目前的檔案位置取決於最後一個 I/O 作業，而不是下一次寫入的位置。 如果開啟以供附加的檔案上尚未發生任何 I/O 作業，該檔案的位置是檔案的開頭。  
   

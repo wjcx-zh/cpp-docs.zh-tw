@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: operator <
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- operator <
+dev_langs:
+- C++
 helpviewer_keywords:
 - operator <
 - < operator, comparing specific objects
 ms.assetid: 1d5fc8f1-a62f-4a3d-824d-619c6f421a04
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 51ad66350c13167e2da0730d6f05f6931ca359d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4479b6029c425ff0192ee95ddabcfe69a3116ed
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="operator-lt-masm-run-time"></a>運算子&lt;（MASM 執行階段）
 是小於。 只有在使用[。如果](../../assembler/masm/dot-if.md)， [。雖然](../../assembler/masm/dot-while.md)，或[。重複](../../assembler/masm/dot-repeat.md)封鎖，且在執行階段，不是在組件時進行評估。  

@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, DCOM
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 4c4c8176-cfc0-44f7-bc87-b690f069ad2f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="where-does-remote-automation-fit-in"></a>Remote Automation 適用於什麼情況？
 DCOM 發行於 1996 年，並且只適用於 32 位元和 64 位元平台。 Microsoft 的 Visual Basic 小組一直將 Visual Basic 視為使用 Automation 來允許其元件進行通訊。 缺少分散式版本嚴重限制了這些功能在企業環境中的使用，因此開發 Visual Basic 4.0 企業版的小組決定調查其為 OLE 和 COM 的 Automation 組件所建立的一組遠端元件。 顯然主要目標是為了確保結果會相容，並且可以在 DCOM 可用時由其取代。 他們接著繼續實作 16 位元和 32 位元 Windows 平台的 Remote Automation (RA)。  

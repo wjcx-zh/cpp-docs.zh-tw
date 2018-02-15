@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 64bd526bfd72c16cc993d3992c179f107a35fbd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：在命令列上編譯原生 C++ 程式
-Visual C++ 包含命令列的 C++ 編譯器，可讓您建立各式各樣的應用程式，從基本的主控應用程式，到通用 Windows 應用程式、Windows 市集應用程式及 .NET 元件，一應俱全。  
+Visual c + + 包含命令列的 c + + 編譯器可讓您建立的所有項目從基本的主控台應用程式通用 Windows 平台應用程式、 傳統型應用程式、 裝置驅動程式和.NET 元件。  
   
  在本逐步解說，您會建立"Hello，World"的基本-樣式 c + + 程式，使用文字編輯器 中，，然後在命令列進行編譯。 如果您想要再試一次 Visual Studio IDE，而不是使用命令列，請參閱[逐步解說： 使用專案和方案 （c + +）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用 c + + 桌面開發的 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
   

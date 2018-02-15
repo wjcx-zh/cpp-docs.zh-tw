@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C++/CX 程式
-您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用 C++/CX，以建置 Windows Phone 8.1、Windows 市集及 Windows 桌面的應用程式。 如需詳細資訊，請參閱[教學課程的 C + /CX](http://msdn.microsoft.com/magazine/dn166929.aspx)和[執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)。  
+您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用 C + + /CX，以建置通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面應用程式。 如需詳細資訊，請參閱[教學課程的 C + /CX](http://msdn.microsoft.com/magazine/dn166929.aspx)和[執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)。  
   
  在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CX 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CX 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CX 程式碼範例。 這項技術對於建置和測試不包含 UI 項目的小模組非常有用)。  
   
 > [!NOTE]
->  您還可以使用 Visual Studio IDE，來編譯 C++/CX 程式。 因為這個 IDE 包括設計、偵錯、模擬以及在命令列上無法使用的部署支援，我們建議您使用 IDE 建置 Windows 市集應用程式。 如需詳細資訊，請參閱[建立基本的 c + + 市集應用程式](http://msdn.microsoft.com/library/windows/apps/dn263168)。  
+>  您還可以使用 Visual Studio IDE，來編譯 C++/CX 程式。 因為這個 IDE 包括設計、 偵錯、 模擬，以及命令列沒有可用的部署支援，我們建議您使用 IDE 建置通用 Windows 平台 (UWP) 應用程式。 如需詳細資訊，請參閱[在 c + + 中建立的 UWP 應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。  
   
 ## <a name="prerequisites"></a>必要條件  
  您必須了解 C++ 語言的基本概念。  

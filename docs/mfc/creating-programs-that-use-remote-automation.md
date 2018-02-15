@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>建立使用 Remote Automation 的程式
 不需要變更原始程式碼、不需要重新編譯，也不需要重新連結，任何的 Automation 物件和任何 Automation 控制器，都可以使用 Remote Automation。 一旦有在本機設定工作 (也就是在相同的電腦)，您只需用幾個步驟就能遠端執行。  

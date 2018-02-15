@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _open_osfhandle
+ms.topic: reference
+apiname:
+- _open_osfhandle
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,22 +26,24 @@ apitype: DLLExport
 f1_keywords:
 - _open_osfhandle
 - open_osfhandle
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - open_osfhandle function
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ff05c99180ff8933316e1db9366da3b985c10305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 34f60a327f3bc4c6a6ce1beb6d7b399faa393a70
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -72,13 +76,13 @@ int _open_osfhandle (
 
 .H 會定義下列資訊清單常數：
 
-**\_O\_附加**  
+**\_O\_APPEND**  
 在每次寫入作業之前，將檔案指標置放到檔案的結尾。
 
 **\_O\_RDONLY**  
 開啟檔案為僅供讀取。
 
-**\_O\_文字**  
+**\_O\_TEXT**  
 以文字 (已轉譯) 模式開啟檔案。
 
 **\_O\_WTEXT**  

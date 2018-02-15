@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -29,7 +30,8 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 242646319193e070e59256c71c53a25268e10e64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 333e772c2716b87b43cb71ac1797e714af709b3e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper、_isupper_l、iswupper、_iswupper_l
 判斷整數是否代表大寫字元。  
@@ -81,7 +84,7 @@ int _iwsupper_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果`c`表示特定的大寫字母，這些常式都會傳回非零值。 `isupper`傳回非零值，如果`c`是大寫字元 (A-Z)。 如果 `c` 是對應至一個大寫字母的寬字元，或如果 `c` 是寬字元實作定義字元集的其中一個，且 `iswcntrl`、`iswdigit`、`iswpunct`或 `iswspace` 均不是非零，則 `iswupper` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
+ 如果`c`表示特定的大寫字母，這些常式都會傳回非零值。 `isupper` 傳回非零值，如果`c`是大寫字元 (A-Z)。 如果 `c` 是對應至一個大寫字母的寬字元，或如果 `c` 是寬字元實作定義字元集的其中一個，且 `iswcntrl`、`iswdigit`、`iswpunct`或 `iswspace` 均不是非零，則 `iswupper` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
  這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數來處理其地區設定相關行為，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   

@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Remote Automation, DCOM
 - DCOM, about DCOM
 - DCOM
 ms.assetid: c21aa0ea-1396-4b52-b77f-88fb0fdd2a5c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 6ef567c39c93c3d43fdfc0fa63886144b03cd474
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="history-of-dcom"></a>DCOM 的歷史
 當早期 1993年引進自動化時，它是能夠只會在相同電腦上執行的應用程式之間所使用。 不過，因為它共用相同的 underpinnings OLE，也就是說，COM （或元件物件模型） 的其他部分，它一律是 COM 本身已更新為包含遠端執行功能時，它會變成 「 遠端 」。 它也計劃純粹的本機作業轉換至分散式作業需要少量或沒有現有的程式碼變更。  

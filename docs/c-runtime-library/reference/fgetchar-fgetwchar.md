@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fgetchar
 - _fgetwchar
@@ -29,7 +30,8 @@ f1_keywords:
 - _fgetchar
 - _fgetwchar
 - fgettchar
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fgetwchar function
 - _fgetchar function
@@ -39,16 +41,17 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7b82613d11d2002c0236a720072826e66cb87d7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0eabf9bd54764aaa37bd860eb5bdb7d1ac5232ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
 從 `stdin` 讀取字元。  
@@ -83,7 +86,7 @@ wint_t _fgetwchar( void );
 |`_fgetchar`|\<stdio.h>|  
 |`_fgetwchar`|\<stdio.h> 或 \<wchar.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ 通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台與相關聯的標準資料流控制代碼 —`stdin`， `stdout`，和`stderr`— C 執行階段函式才能使用它們在必須重新導向 [！INCLUDEUWP 應用程式。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   

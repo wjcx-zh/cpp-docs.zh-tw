@@ -4,39 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
-helpviewer_keywords: operators [ATL]
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [ATL]
 ms.assetid: 58ccd252-2869-45ee-8a5c-3ca40ee7f8a2
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bcd8ce5e46617958f0188a3563771061a37d22c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bcbe04fb057ffc8077f422cd784b5d31691df1e3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-operators"></a>ATL 運算子
 此章節包含 ATL 全域運算子參考主題。  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|[運算子 = =](#operator_eq_eq)|比較兩個`CSid`物件或`SID`結構是否相等。|  
-|[運算子 ！ =](#operator_neq)|比較兩個`CSid`物件或`SID`結構是否不相等。|  
+|[operator ==](#operator_eq_eq)|比較兩個`CSid`物件或`SID`結構是否相等。|  
+|[operator !=](#operator_neq)|比較兩個`CSid`物件或`SID`結構是否不相等。|  
 |[運算子 <](#operator_lt)|測試如果`CSid`物件或`SID`運算子左邊的結構是小於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|  
-|[運算子 >](#operator_gt)|測試如果`CSid`物件或`SID`運算子左邊的結構大於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|  
-|[運算子 < =](#operator_lt__eq)|測試如果`CSid`物件或`SID`運算子左邊的結構是小於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|  
-|[運算子 > =](#operator_gt__eq)|測試如果`CSid`物件或`SID`運算子左邊的結構是大於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|  
+|[operator >](#operator_gt)|測試如果`CSid`物件或`SID`運算子左邊的結構大於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|  
+|[operator <=](#operator_lt__eq)|測試如果`CSid`物件或`SID`運算子左邊的結構是小於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|  
+|[operator >=](#operator_gt__eq)|測試如果`CSid`物件或`SID`運算子左邊的結構是大於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h。  
   
-##  <a name="operator_eq_eq"></a>運算子 = =  
+##  <a name="operator_eq_eq"></a>  operator ==  
  比較`CSid`物件或`SID`（安全性識別碼） 結構是否相等。  
   
 ```   
@@ -53,7 +57,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**如果物件相等， **false**如果物件不相等。  
   
-##  <a name="operator_neq"></a>運算子 ！ =  
+##  <a name="operator_neq"></a>  運算子 ！ =  
  比較`CSid`物件或`SID`（安全性識別碼） 結構是否不相等。  
   
 ```   
@@ -70,7 +74,7 @@ bool operator==(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**物件不相等，如果**false**兩者是否相等。  
   
-##  <a name="operator_lt"></a>運算子 <  
+##  <a name="operator_lt">運算子 <</a>  
  測試如果`CSid`物件或`SID`運算子左邊的結構是小於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。  
   
 ```   
@@ -90,7 +94,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>備註  
  這個運算子是充當的位址`CSid`物件或`SID`結構，而且會實作以提供與 c + + 標準程式庫集合類別的相容性。  
   
-##  <a name="operator_gt"></a>運算子 >  
+##  <a name="operator_gt"></a>  operator >  
  測試如果`CSid`物件或`SID`運算子左邊的結構大於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。  
   
 ```   
@@ -110,7 +114,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>備註  
  這個運算子是充當的位址`CSid`物件或`SID`結構，而且會實作以提供與 c + + 標準程式庫集合類別的相容性。  
   
-##  <a name="operator_lt__eq"></a>運算子 < =  
+##  <a name="operator_lt__eq"></a>  運算子 < =  
  測試如果`CSid`物件或`SID`運算子左邊的結構是小於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。  
   
 ```   
@@ -130,7 +134,7 @@ bool operator<(const CSid& lhs, const CSid& rhs) throw();
 ### <a name="remarks"></a>備註  
  這個運算子是充當的位址`CSid`物件或`SID`結構，而且會實作以提供與 c + + 標準程式庫集合類別的相容性。  
   
-##  <a name="operator_gt__eq"></a>運算子 > =  
+##  <a name="operator_gt__eq"></a>  operator >=  
  測試如果`CSid`物件或`SID`運算子左邊的結構是大於或等於`CSid`物件或`SID`（適用於 c + + 標準程式庫相容性） 右側的結構。  
   
 ```   

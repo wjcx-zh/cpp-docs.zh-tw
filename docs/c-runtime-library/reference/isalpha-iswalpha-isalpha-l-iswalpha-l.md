@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -33,7 +34,8 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -45,16 +47,17 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 04f3d1720420ce7b32e9386ccd384de25c78ac79
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 判斷整數是否代表字母字元。  
@@ -86,7 +89,7 @@ int _iswalpha_l(
  取代目前地區設定而使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `c` 表示特定的字母字元，則這些常式都會傳回非零。 `isalpha`傳回非零值，如果`c`A-Z 或 a-z 的範圍內。 只有針對 `iswupper` 或`iswlower` 為非零值的寬字元，`iswalpha` 才會傳回非零值；也就是說，對於屬於任何實作定義字元集中的寬字元，且 `iswcntrl`、`iswdigit`、`iswpunct`或 `iswspace` 均非為非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
+ 如果 `c` 表示特定的字母字元，則這些常式都會傳回非零。 `isalpha` 傳回非零值，如果`c`A-Z 或 a-z 的範圍內。 只有針對 `iswupper` 或`iswlower` 為非零值的寬字元，`iswalpha` 才會傳回非零值；也就是說，對於屬於任何實作定義字元集中的寬字元，且 `iswcntrl`、`iswdigit`、`iswpunct`或 `iswspace` 均非為非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
  這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   

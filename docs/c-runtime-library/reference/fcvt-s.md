@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _fcvt_s
+ms.topic: reference
+apiname:
+- _fcvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,23 +26,25 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba668d9c5604ee07b2cafdc4a9b8f70ae1cc884e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fcvts"></a>_fcvt_s
 將浮點數轉換為字串。 這是如 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [_lfind](../../c-runtime-library/reference/fcvt.md) 版本。  
@@ -110,7 +114,7 @@ errno_t _fcvt_s(
   
  長度 `_CVTBUFSIZE` 的緩衝區足可供任何浮點值使用。  
   
- `_ecvt_s` 和 `_fcvt_s` 之間的差異位於 `count` 參數解譯中。 `_ecvt_s`解譯`count`做為輸出字串中的位數總數和`_fcvt_s`解譯`count`小數點之後位數的數目。  
+ `_ecvt_s` 和 `_fcvt_s` 之間的差異位於 `count` 參數解譯中。 `_ecvt_s` 解譯`count`做為輸出字串中的位數總數和`_fcvt_s`解譯`count`小數點之後位數的數目。  
   
  在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   

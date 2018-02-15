@@ -1,26 +1,31 @@
 ---
-title: "區段 |Microsoft 文件"
+title: SEGMENT | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SEGMENT
-dev_langs: C++
-helpviewer_keywords: SEGMENT directive
+ms.topic: reference
+f1_keywords:
+- SEGMENT
+dev_langs:
+- C++
+helpviewer_keywords:
+- SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce18933c27a62b1a89551320f75df7e25a67ef03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="segment"></a>SEGMENT
 定義程式區段，稱為*名稱*區段屬性  
@@ -50,9 +55,9 @@ name ENDS
  如果未指定這個參數， **PARA**預設會使用。  
   
  *combine*  
- **公用**，**堆疊**，**常見**，**記憶體**，**在***位址*， **私用**  
+ **公用**，**堆疊**，**常見**，**記憶體**，**在 * * * 位址*，**私用**  
   
- *使用*  
+ *use*  
  **USE16**， **USE32**，**一般**  
   
  `characteristics`  
@@ -66,7 +71,7 @@ name ENDS
  不支援與**/omf**。  
   
  `class`  
- 指定應該如何結合並排序組合檔案中區段。 典型值為， `'DATA'`， `'CODE'`，`'CONST'`和`'STACK'`  
+ 指定應該如何結合並排序組合檔案中區段。 典型值為， `'DATA'`， `'CODE'`，`'CONST'`和 `'STACK'`  
   
 ## <a name="remarks"></a>備註  
  如`ALIGN(n)`，`n`可能是任何 2 的乘冪從 1 到 8192; 不支援**/omf**。  

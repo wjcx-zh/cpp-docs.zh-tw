@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 呼叫此函式可規範化 URL，包括將 Unsafe 字元和空格轉換成逸出序列。  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  ATL_URL 旗標控制此函式的行為。 
 
-- `ATL_URL_BROWSER_MODE`不會進行編碼或解碼字元之後"#"或"？"，並不會移除尾端空白字元之後"？"。 如果未指定此值，會編碼整個 URL，並移除尾端空白字元。
-- `ATL_URL_DECODE`將所有 %xx 序列都轉換成字元，包括逸出序列之前在剖析 URL。
-- `ATL_URL_ENCODE_PERCENT`任何遇到的百分比符號會將編碼。 根據預設，未編碼的百分比符號。
-- `ATL_URL_ENCODE_SPACES_ONLY`空間只會將編碼。
-- `ATL_URL_ESCAPE`將所有逸出序列 （%xx) 轉換成其對應的字元。
-- `ATL_URL_NO_ENCODE`不會轉換成逸出序列不安全的字元。
-- `ATL_URL_NO_META`不會移除中繼序列 (例如"。"和"..") 從 URL。 
+- `ATL_URL_BROWSER_MODE` 不會進行編碼或解碼字元之後"#"或"？"，並不會移除尾端空白字元之後"？"。 如果未指定此值，會編碼整個 URL，並移除尾端空白字元。
+- `ATL_URL_DECODE` 將所有 %xx 序列都轉換成字元，包括逸出序列之前在剖析 URL。
+- `ATL_URL_ENCODE_PERCENT` 任何遇到的百分比符號會將編碼。 根據預設，未編碼的百分比符號。
+- `ATL_URL_ENCODE_SPACES_ONLY` 空間只會將編碼。
+- `ATL_URL_ESCAPE` 將所有逸出序列 （%xx) 轉換成其對應的字元。
+- `ATL_URL_NO_ENCODE` 不會轉換成逸出序列不安全的字元。
+- `ATL_URL_NO_META` 不會移除中繼序列 (例如"。"和"..") 從 URL。 
   
 ### <a name="return-value"></a>傳回值  
  傳回**TRUE**成功時， **FALSE**失敗。  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>請參閱  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  呼叫此函式可將基底 URL 和相對 URL 結合成單一、標準的 URL。  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>備註  
  行為類似的目前版本[InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) ，但不需要安裝的 WinInet 或 Internet Explorer。  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  呼叫此函式會將所有 Unsafe 字元轉換成逸出序列。  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>傳回值  
  [ATL_URL_PORT](atl-typedefs.md#atl_url_port)與指定的配置或 ATL_URL_INVALID_PORT_NUMBER 相關，如果無法辨識的配置。  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  呼叫此函式可了解在 URL 中使用某個字元是否安全。  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>備註  
  不應在 Url 中的字元可以使用這個函式進行測試，並使用轉換[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  呼叫此函式將逸出字元轉換回其原始值。  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>備註  
  反轉所套用的轉換程序[AtlEscapeUrl](#atlescapeurl)。  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 將轉換[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)色彩值的 HTML 文字的值。  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>備註  
  HTML 色彩值是井字號後面接著 6 位數的十六進位值，使用 2 位數的每個色彩的紅色、 綠色和藍色元件 （例如，#FFFFFF 是白色）。  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 呼叫此函式將系統時間轉換成採用適合在 HTTP 標頭中使用之格式的字串。  
   
 ```  

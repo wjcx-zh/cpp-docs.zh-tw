@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgets
 - fgetws
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgetts
 - fgetws
 - fgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fgetts function
 - streams, getting strings from
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgets-fgetws"></a>fgets、fgetws
 從資料流取得字串。  
@@ -81,7 +84,7 @@ wchar_t *fgetws(
  如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
- `fgets` 函式會從輸入 `stream` 引數讀取字串，並將其儲存在 `str`。 `fgets`讀取從目前的資料流位置，第一個新行字元，包括結尾的資料流，或直到讀取的字元數目等於到字元`n`-1，第一個為準。 `str` 中所儲存的結果會附加 Null 字元。 讀取的新行字元包含在字串中。  
+ `fgets` 函式會從輸入 `stream` 引數讀取字串，並將其儲存在 `str`。 `fgets` 讀取從目前的資料流位置，第一個新行字元，包括結尾的資料流，或直到讀取的字元數目等於到字元`n`-1，第一個為準。 `str` 中所儲存的結果會附加 Null 字元。 讀取的新行字元包含在字串中。  
   
  `fgetws` 是 `fgets` 的寬字元版本。  
   

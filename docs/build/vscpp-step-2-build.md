@@ -4,19 +4,22 @@ description: "安裝 Visual c + + 的 Visual Studio 支援"
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>建置並執行的 c + + 主控台應用程式專案
 
@@ -83,6 +86,8 @@ ms.lasthandoff: 12/21/2017
 ### <a name="run-your-code-in-a-command-window-issues"></a>在命令視窗中執行程式碼問題
 
 您也可以瀏覽至方案的偵錯資料夾，在命令列執行您的應用程式。 您無法從其他目錄中執行應用程式，而不指定應用程式路徑。 不過，您可以將您的應用程式複製到另一個目錄，並從該處執行。
+
+如果您沒有看到**複製為路徑**快顯功能表中，關閉功能表，並接著按住 Shift 鍵，同時再次開啟。 這是為了方便起見。 您可以從 檔案總管 中搜尋 列複製到資料夾的路徑，並將它貼入**執行** 對話方塊中，然後輸入 最後可執行檔的名稱。 它會變得更強的但具有相同的結果。
 
 [返回。](#run-your-code-in-a-command-window)
 

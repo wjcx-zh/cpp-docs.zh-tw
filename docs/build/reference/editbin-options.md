@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: editbin
-dev_langs: C++
-helpviewer_keywords: EDITBIN program, options
+f1_keywords:
+- editbin
+dev_langs:
+- C++
+helpviewer_keywords:
+- EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2658b2ca23ef34b63e0788791f3fb528107e1efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="editbin-options"></a>EDITBIN 選項
 您可以使用 EDITBIN 來修改物件的檔案、 可執行檔，以及動態連結程式庫 (Dll)。 選項會指定 EDITBIN 所做的變更。  
@@ -33,24 +38,24 @@ ms.lasthandoff: 12/21/2017
 |------------|-------------|  
 |[/ALLOWBIND](../../build/reference/allowbind.md)|指定 DLL 是否可以繫結。|  
 |[/ALLOWISOLATION](../../build/reference/allowisolation.md)|指定 DLL 或可執行檔資訊清單查閱行為。|  
-|[/APPCONTAINER](../../build/reference/appcontainer.md)|指定應用程式是否必須在 AppContainer 中執行，例如 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]應用程式。|  
-|[/ 繫結](../../build/reference/bind.md)|在指定的物件中設定進入點位址，以加速載入時間。|  
+|[/APPCONTAINER](../../build/reference/appcontainer.md)|指定是否必須在 AppContainer 中執行應用程式 — 例如，UWP 應用程式。|  
+|[/BIND](../../build/reference/bind.md)|在指定的物件中設定進入點位址，以加速載入時間。|  
 |[/DYNAMICBASE](../../build/reference/dynamicbase.md)|指定 DLL 或可執行映像是否可以使用位址空間配置隨機載入 (ASLR) 功能，於載入時隨機重訂基底。|  
 |[/ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|向 Microsoft 報告內部錯誤。|  
-|[/ 堆積](../../build/reference/heap.md)|設定可執行映像的堆積大小 (位元組)。|  
+|[/HEAP](../../build/reference/heap.md)|設定可執行映像的堆積大小 (位元組)。|  
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|指定 DLL 或可執行映像是否支援高熵 (64 位元) 位址空間配置隨機載入 (ASLR)。|  
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|指定是否在載入時間檢查數位簽章。|  
 |[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|指定物件是否支援大於 2 GB 的位址。|  
 |[/NOLOGO](../../build/reference/nologo-editbin.md)|隱藏 EDITBIN 程式啟始資訊。|  
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|指定可執行映像是否與 Windows 資料執行防止功能相容。|  
-|[/ 重訂基底](../../build/reference/rebase.md)|設定指定之物件的基底位址。|  
-|[/ 版次](../../build/reference/release.md)|在標頭中設定總和檢查碼。|  
-|[/ 區段](../../build/reference/section-editbin.md)|覆寫區段的屬性。|  
-|[/ 堆疊](../../build/reference/stack.md)|設定可執行映像的堆疊大小 (位元組)。|  
-|[/ 子系統](../../build/reference/subsystem.md)|指定執行環境。|  
+|[/REBASE](../../build/reference/rebase.md)|設定指定之物件的基底位址。|  
+|[/RELEASE](../../build/reference/release.md)|在標頭中設定總和檢查碼。|  
+|[/SECTION](../../build/reference/section-editbin.md)|覆寫區段的屬性。|  
+|[/STACK](../../build/reference/stack.md)|設定可執行映像的堆疊大小 (位元組)。|  
+|[/SUBSYSTEM](../../build/reference/subsystem.md)|指定執行環境。|  
 |[/SWAPRUN](../../build/reference/swaprun.md)|指定可執行映像必須複製到分頁檔，再從分頁檔執行映像。|  
 |[/TSAWARE](../../build/reference/tsaware.md)|指定應用程式是設計成在多使用者環境中執行。|  
-|[/ 版本](../../build/reference/version.md)|在標頭中設定版本號碼。|  
+|[/VERSION](../../build/reference/version.md)|在標頭中設定版本號碼。|  
   
 ## <a name="see-also"></a>請參閱  
  [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   

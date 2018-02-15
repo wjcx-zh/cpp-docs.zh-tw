@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - AllowRemoteActivation [MFC]
 - Remote Automation [MFC], security
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - object activation [MFC]
 - security [MFC], Remote Automation
 ms.assetid: 276b300d-c0b5-4bd8-8bf5-0270994b9cfa
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: e535fac6330d6268629e8e3681fec47c7b0d65d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="security-in-remote-automation"></a>Remote Automation 中的安全性
 Remote Automation 支援基本層級的安全性，可讓伺服器應用程式撰寫者 (或其系統管理員) 指定可以什麼方式遠端啟動特定物件。 在指定系統上的所有自動化物件可能全域設定為「不允許遠端啟用」或「允許遠端啟用」。 此外，通常會提供個別物件這類功能。 Remote Automation 在每個物件的登錄設定中，使用金鑰**AllowRemoteActivation**，以決定給定的伺服器是否可遠端啟用。 如果全系統設定使用此模式，則登錄中的每個物件可能會指派這個機碼，而每一個的個別狀態可能會適當地設定為 [是] 或 [否]。  

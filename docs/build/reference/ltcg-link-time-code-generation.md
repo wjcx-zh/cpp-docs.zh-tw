@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (連結時間產生程式碼)
 ```  
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>/LTCG 與 MSIL 模組  
  以 [/GL](../../build/reference/gl-whole-program-optimization.md) 和 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 編譯的模組可以在指定 **/LTCG** 時用做連結器的輸入。  
   
--   **/LTCG**可接受原生物件檔、 混合原生 /managed 物件檔案 (使用編譯的**/clr**)，純物件檔案 (使用編譯的**/clr: pure**)，和安全物件檔案 （用來編譯**/clr: safe**)。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
+-   **/LTCG**可接受原生物件的檔案和混合原生 /managed 物件檔案 (使用編譯的**/clr**)。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
--   **/LTCG**可以接受 safe.netmodules，可以建立使用**/clr: safe /LN** Visual c + + 和**/target: module**任何.NET Visual Studio 編譯器中。 **/clr** 不接受使用 **/clr:pure** 或 **/LTCG**產生的 .netmodule。  
-  
--   /LTCG:PGI 不接受使用 **/GL** 和 **/clr**編譯的原生模組，或純模組 (使用 **/clr:pure**產生的)  
+-   /Ltcg: pgi 不接受使用所編譯的原生模組**/GL**和**/clr**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   

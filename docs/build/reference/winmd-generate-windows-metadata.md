@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VC.Project.VCLinkerTool.GenerateWindowsMetadata
-dev_langs: C++
+f1_keywords:
+- VC.Project.VCLinkerTool.GenerateWindowsMetadata
+dev_langs:
+- C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 903ab6875457aa8c069c47a2be7f8ff1f5c884a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7517ec459677659067e80930ee48caccf84d52f3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (產生 Windows 中繼資料)
 啟用產生 Windows 執行階段中繼資料 (.winmd) 檔案。  
@@ -30,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>備註  
  /WINMD  
- 預設設定[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]應用程式。 連結器會產生二進位可執行檔和.winmd 中繼資料檔案。  
+ 通用 Windows 平台應用程式的預設設定。 連結器會產生二進位可執行檔和.winmd 中繼資料檔案。  
   
  /WINMD:NO  
  連結器會產生只有二進位可執行檔，但不是.winmd 檔案。  

@@ -1,26 +1,29 @@
 ---
-title: "-APPCONTAINER （Windows 市集應用程式） |Microsoft 文件"
+title: "/APPCONTAINER （UWP/Microsoft 市集應用程式） |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22ca7bec885f20518950626d33f7e3af553d0d52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1cc6e1d4c6e18cd2118571e57f671f85a0a3fb55
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="appcontainer-windows-store-app"></a>/APPCONTAINER (Windows 市集應用程式)
+# <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER （Microsoft Store 應用程式）
 指定連結器是否會建立可執行映像必須在應用程式容器中執行。  
   
 ## <a name="syntax"></a>語法  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  根據預設，/APPCONTAINER 為關閉。  
   
- 這個選項修改可執行檔，以指出是否必須在 appcontainer 處理序隔離環境中執行應用程式。 /APPCONTAINER 指定必須在 appcontainer 環境中執行的應用程式 — 例如，[!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)]應用程式。 (選項會自動設定 Visual Studio 中建立時[!INCLUDE[win8_appstore_long](../../build/reference/includes/win8_appstore_long_md.md)]從範本的應用程式。)桌面應用程式中，指定 /APPCONTAINER:NO 或只省略選項。  
+ 這個選項修改可執行檔，以指出是否必須在 appcontainer 處理序隔離環境中執行應用程式。 /APPCONTAINER 指定必須在 appcontainer 環境中執行的應用程式 — 例如，通用 Windows 平台 (UWP) 或 Windows Phone 8.x 應用程式。 （選項會自動設定 Visual Studio 中從範本建立通用 Windows 應用程式時。）桌面應用程式中，指定 /APPCONTAINER:NO 或只省略選項。  
   
  /APPCONTAINER 選項已引入[!INCLUDE[win8](../../build/reference/includes/win8_md.md)]。  
   

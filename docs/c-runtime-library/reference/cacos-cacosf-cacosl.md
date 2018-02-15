@@ -8,7 +8,7 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -33,22 +33,24 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de09d89b81b536bd26c0e62d8ab294df3de6c67c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 301fff247244ce4d37b2e7079926a1c64e5a8e1c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
 擷取複數，與實際的軸間隔 [-1，+ 1] 以外的分支剪下反餘弦值。  

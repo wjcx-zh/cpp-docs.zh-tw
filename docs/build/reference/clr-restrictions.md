@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>/clr 限制
 請注意下列限制使用**/clr**:  
@@ -60,11 +64,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **/ZI**  
   
--   組合`_STATIC_CPPLIB`前置處理器定義 (`/D_STATIC_CPPLIB`) 和**/clr**或**/clr: pure**編譯器選項不支援。 這是，因為定義可能會導致您的應用程式連結到靜態多執行緒 c + + 標準程式庫，不支援。 如需詳細資訊，請參閱[/MD、 /MT、 /LD （使用執行階段程式庫）](../../build/reference/md-mt-ld-use-run-time-library.md)主題。  
-  
--   [/J](../../build/reference/j-default-char-type-is-unsigned.md)不支援**/clr: safe**或**/clr: pure**。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
-  
--   ATL 和 MFC 程式庫不會受到純模式編譯 (**/clr: pure**)。 您可以使用**/clr: pure**與 c + + 標準程式庫和 CRT 如果也使用編譯**/MD**或**/MDd**。  
+-   組合`_STATIC_CPPLIB`前置處理器定義 (`/D_STATIC_CPPLIB`) 和**/clr**編譯器選項不支援。 這是，因為定義可能會導致您的應用程式連結到靜態多執行緒 c + + 標準程式庫，不支援。 如需詳細資訊，請參閱[/MD、 /MT、 /LD （使用執行階段程式庫）](../../build/reference/md-mt-ld-use-run-time-library.md)主題。  
   
 -   當使用**/Zi**與**/clr**，效能的影響。 如需詳細資訊，請參閱[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/21/2017
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/GS](../../build/reference/gs-buffer-security-check.md)編譯時，會忽略**/clr**，除非您的函式是在`#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md)或如果必須為原生編譯的函式，在此情況下，編譯器會產生警告 C4793，預設為關閉。  
+-   [/GS](../../build/reference/gs-buffer-security-check.md)編譯時，會忽略**/clr**，除非您的函式是在`#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md)或者如果必須為原生編譯的函式，在此情況下，編譯器會產生警告 C4793，預設為關閉。  
   
 -   請參閱[/ENTRY](../../build/reference/entry-entry-point-symbol.md)的受管理的應用程式的函式簽章需求。  
   
@@ -84,8 +84,6 @@ ms.lasthandoff: 12/21/2017
 -   接受可變數目的引數 (varargs) 數的函式將會以原生函式產生。 變數引數位置中的任何 managed 的資料類型會封送處理至原生類型。 請注意，<xref:System.String?displayProperty=fullName>類型實際上的寬字元字串，但它們會封送處理至單一位元組字元字串。 因此如果 printf 規範 %S （wchar_t *），它會封送處理為 %s 字串改為。  
   
 -   時使用 va_arg 巨集，您可能會收到非預期的結果以編譯時**/clr: pure**。  如需詳細資訊，請參閱[va_arg、 va_copy、 va_end、 va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。  
-  
--   如果您的應用程式的型別引數傳遞[va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)函式宣告為接受可變數目的引數，數，且您的應用程式時加以編譯**/clr: pure**，CLR 就會擲回<xref:System.NotSupportedException>。 如果**/clr**用相反地，受影響的函式會編譯成原生程式碼，並正確執行。 如果**/clr: safe**是使用，會發出診斷錯誤。  
   
 -   您不應該呼叫，從 managed 程式碼，以便取得參數資訊 （函式引數），堆疊查核行程的任何函式P/Invoke 層可讓該堆疊的深處進一步的資訊。  例如，不會編譯 proxy/stub 與**/clr**。  
   
@@ -101,7 +99,5 @@ ms.lasthandoff: 12/21/2017
   
     -   包含參考的函式對齊類型，也就是使用宣告型別`__declspec(align(...))`。  
   
--   您無法使用[編譯器 COM 支援](../../cpp/compiler-com-support.md)類別與**/clr: pure**或**/clr: safe**。  
-  
 ## <a name="see-also"></a>請參閱  
- [/clr （common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (通用語言執行平台編譯)](../../build/reference/clr-common-language-runtime-compilation.md)

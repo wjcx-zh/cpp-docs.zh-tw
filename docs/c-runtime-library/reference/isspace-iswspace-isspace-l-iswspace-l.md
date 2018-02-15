@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -29,7 +30,8 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 618ba621f385307d3609667c6df5cf56c91da2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5eef3b216ed70bb7fa6a22d02827dec34b44c3b3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace、iswspace、_isspace_l、_iswspace_l
 判斷整數是否代表空格字元。  
@@ -81,7 +84,7 @@ int _iswspace_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `c` 表示特定的空白字元，這些常式都會傳回非零值。 `isspace`傳回非零值，如果`c`為泛空白字元 (0x09-0x0D 或 0x20)。 `isspace` 函式測試條件的結果取決於地區設定的 `LC_CTYPE` 類別設定；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本使用目前地區設定來處理任何地區設定相關行為；具有 `_l` 尾碼的版本則完全相同，但會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
+ 如果 `c` 表示特定的空白字元，這些常式都會傳回非零值。 `isspace` 傳回非零值，如果`c`為泛空白字元 (0x09-0x0D 或 0x20)。 `isspace` 函式測試條件的結果取決於地區設定的 `LC_CTYPE` 類別設定；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本使用目前地區設定來處理任何地區設定相關行為；具有 `_l` 尾碼的版本則完全相同，但會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `c` 是對應至標準空白字元的寬字元，則 `iswspace` 會傳回非零值。  
   

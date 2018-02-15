@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, DCOM
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 269ad218-e164-40ef-9b87-25fcc8ba21de
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: a4a82b26a1e6c208a584dfd19ebfd4530b4bdf76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="what-does-remote-automation-provide"></a>Remote Automation 提供什麼功能？
 Remote Automation 可讓程式在各部電腦間叫用 `IDispatch` 實作。 它也支援 Automation 所需，特別是其他介面**IEnumVARIANT**集合支援。 不提供散發任何其他 COM 介面的功能 (除了**IUnknown**當然) 而且像一般 Automation，包含只針對 Automation 支援的這些資料類型的封送處理支援。  

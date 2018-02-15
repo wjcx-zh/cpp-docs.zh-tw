@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ee78c1fb5c66974c946d0571db981d899f405fe3
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="remote-automation-connection-manager"></a>Remote Automation 連接管理員
 若要設定用戶端和伺服器電腦，您必須變更登錄的內容。 您不需手動執行這項作業，使用 [遠端 Automation 連接 (RAC) 管理員] 工具會較為容易。 您需要將這個工具 (RACMGR32.EXE 連同 RACREG32.DLL) 複製到您所選擇的目錄。 若將此路徑放入 PATH 中，您就可以從工作列使用 [執行] 來執行該工具。 或者，您可以在 [開始] 功能表上為其建立捷徑或放置該工具的參考。  

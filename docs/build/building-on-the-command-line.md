@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5780fb725ab9ccfbba189894c22c991c415f6c2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9f613c20e0cab45a8eaa802c4c7ba0c6ac391357
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>在命令列上建置 C/c + + 程式碼
 
@@ -82,12 +85,12 @@ ms.lasthandoff: 01/03/2018
 >   
 > 在不同的版本上，vcvarsall.bat 也可能不同。 如果也有較早版本的 Visual c + + 的電腦上安裝目前版本的 Visual c + +，不會執行 vcvarsall.bat 或另一個命令檔從相同的命令提示字元視窗中的不同版本。  
  
-若要在現有的 [命令] 視窗中指定特定組建架構最簡單的方式是使用 vcvarsall.bat 檔案。 您可以設定環境變數，以設定命令列針對原生 32 位元或 64 位元編譯中，或為 x86、 x64 或 ARM 處理器; 交互編譯中使用 vcvarsall.bat以 Windows 市集、 通用 Windows 平台或 Windows 桌面平台為目標若要指定要使用; 哪個 Windows SDK與指定的平台工具組版本。 如果沒有提供任何引數，則 vcvarsall.bat 會設定環境變數，適用於 x86 使用目前的 32 位元原生編譯器的 Windows 桌面的目標。 不過，您可以使用它來設定任何的原生或跨編譯器工具。 如果您指定未安裝或不在組建電腦架構的編譯器組態時，會顯示錯誤訊息。 下表顯示支援的架構引數：  
+若要在現有的 [命令] 視窗中指定特定組建架構最簡單的方式是使用 vcvarsall.bat 檔案。 您可以設定環境變數，以設定命令列針對原生 32 位元或 64 位元編譯中，或為 x86、 x64 或 ARM 處理器; 交互編譯中使用 vcvarsall.bat以 Microsoft Store、 通用 Windows 平台或 Windows 桌面平台為目標若要指定要使用; 哪個 Windows SDK與指定的平台工具組版本。 如果沒有提供任何引數，則 vcvarsall.bat 會設定環境變數，適用於 x86 使用目前的 32 位元原生編譯器的 Windows 桌面的目標。 不過，您可以使用它來設定任何的原生或跨編譯器工具。 如果您指定未安裝或不在組建電腦架構的編譯器組態時，會顯示錯誤訊息。 下表顯示支援的架構引數：  
   
 |Vcvarsall.bat 架構引數|編譯器|主機電腦架構|組建輸出架構|  
 |----------------------------|--------------|----------------------------------|-------------------------------|  
 |x86|x86 32 位元原生|x86、x64|x86|  
-|x86\_amd64 或 x86\_x64|在 x86 x64 cross|x86、x64|X64|  
+|x86\_amd64 or x86\_x64|在 x86 x64 cross|x86、x64|X64|  
 |x86_arm|ARM on x86 (跨平台)|x86、x64|ARM|  
 |amd64 或 x64|x64 64 位元原生|X64|X64|  
 |amd64\_x86 或 x64\_x86|x64 x86 cross|X64|x86|  
@@ -135,7 +138,7 @@ ms.lasthandoff: 01/03/2018
 [CL](../build/reference/compiling-a-c-cpp-program.md)  
 使用編譯器 (cl.exe)，來編譯原始程式碼檔，並將其連結至應用程式、程式庫及 DLL。  
   
-[連結](../build/reference/linking.md)  
+[Link](../build/reference/linking.md)  
 使用連結器 (link.exe)，將已編譯的物件檔及程式庫，連結至應用程式及 DLL。  
   
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)  
@@ -176,7 +179,7 @@ ms.lasthandoff: 01/03/2018
   
 ## <a name="related-sections"></a>相關章節  
 
-[/MD、 /MT、 /LD （使用執行階段程式庫）](../build/reference/md-mt-ld-use-run-time-library.md)  
+[/MD、/MT、/LD (使用執行階段程式庫)](../build/reference/md-mt-ld-use-run-time-library.md)  
 描述如何使用這些編譯器選項，來使用偵錯或發行執行階段程式庫。  
   
 [C/c + + 編譯器選項](../build/reference/compiler-options.md)  

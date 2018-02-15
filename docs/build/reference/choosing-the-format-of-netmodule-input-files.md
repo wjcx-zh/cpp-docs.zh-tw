@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a46c2fa9ce553948c03cd2ab6ad20001d0021bed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c6b83039a054e19e62cbbe87befbe08dd7997e51
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>選擇 .netmodule 輸入檔的格式
 為 MSIL 的.obj 檔案 (以編譯[/clr](../../build/reference/clr-common-language-runtime-compilation.md)) 也可用來當作.netmodule 檔。  .obj 檔案包含中繼資料和原生符號。  .netmodule 僅包含中繼資料。  
@@ -26,7 +29,7 @@ ms.lasthandoff: 12/21/2017
  您可以將的 MSIL 的.obj 檔案傳遞給其他 Visual Studio 編譯器中，透過 /addmodule 編譯器選項 （但請留意.obj 檔案會成為產生的組件的一部分，以及必須隨附於組件）。  例如，Visual C# 和 Visual Basic 有 /addmodule 編譯器選項。  
   
 > [!NOTE]
->  在大部分情況下，您需要從建立 .net 模組的編譯中傳遞 .obj 檔給連結器。  一個例外是如果.netmodule 的建立目的[/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)。  傳遞 .dll 或 .netmodule MSIL 模組檔案給連結器可能會產生 LNK1107。  
+>  在大部分情況下，您需要從建立 .net 模組的編譯中傳遞 .obj 檔給連結器。  傳遞 .dll 或 .netmodule MSIL 模組檔案給連結器可能會產生 LNK1107。  
   
  .obj 檔案加上其相關聯的 .h 檔案 (經由原始程式碼中的 #include 加以參考)，可以讓 C++ 應用程式使用模組中的原生類型，而在 .netmodule 檔中，只有 Managed 類型才能由 C++ 應用程式加以使用。  如果您嘗試傳遞.obj 檔案，以 #using，原生類型的資訊將無法使用。# 請改為 include.obj 檔案的.h 檔案。  
   
@@ -41,8 +44,6 @@ ms.lasthandoff: 12/21/2017
 -   如果您的模組會用來建置 （未受管理） 的原生程式庫，.obj 檔做為模組輸入至連結器和產生的.lib 程式庫檔案。  
   
 -   如果您的模組會用來建置 Managed 程式庫，而且如果連結器的所有模組輸入都能夠進行驗證 (以 /clr:safe 產生)，請使用 .obj 檔案做為連結器的模組輸入，然後產生 .dll (組件) 或 .netmodule (模組) 程式庫檔。  
-  
--   如果您的模組會用來建置 managed 程式庫，而且會以產生連結器的所有模組輸入**/clr: pure**或**/clr: safe**、.obj 檔做為模組輸入至連結器，並產生.dll （組件） 或.netmodule （模組） 如果您只想要公開從程式庫的 managed 型別。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。 如果您想要公開 （expose） 從程式庫的 managed 型別，而且如果也想使用的原生型別程式庫中的 c + + 應用程式，您的程式庫所組成 （您也要出貨每個模組的.h 檔案的元件程式庫模組的.obj 檔案以便它們可以參考以 #include 從來源程式碼)。  
   
 -   如果您的模組會用來建置 managed 程式庫，而且會以 /clr 產生連結器的一或多個模組輸入，.obj 檔做為模組輸入至連結器，並產生.dll （組件）。  如果您想要公開 （expose） 從程式庫的 managed 型別，而且如果也想使用的原生型別程式庫中的 c + + 應用程式，您的程式庫所組成 （您也要出貨每個模組的.h 檔案的元件程式庫模組的.obj 檔案以便它們可以參考以 #include 從來源程式碼)。  
   

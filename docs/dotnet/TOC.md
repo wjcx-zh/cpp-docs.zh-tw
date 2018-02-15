@@ -105,7 +105,6 @@
 #### [safe_cast<> 的轉換標記法和簡介](cast-notation-and-introduction-of-safe-cast-angles.md)
 ## [純粹的和可驗證的程式碼 (C++/CLI)](pure-and-verifiable-code-cpp-cli.md)
 ### [混合的、純粹的和可驗證的功能比較 (C++/CLI)](mixed-pure-and-verifiable-feature-comparison-cpp-cli.md)
-### [如何：移轉至 -clr:pure (C++/CLI)](how-to-migrate-to-clr-pure-cpp-cli.md)
 ### [如何：建立可驗證的 C++ 專案 (C++/CLI)](how-to-create-verifiable-cpp-projects-cpp-cli.md)
 ### [如何：移轉至 -clr:safe (C++/CLI)](how-to-migrate-to-clr-safe-cpp-cli.md)
 ### [使用可驗證的組件搭配 SQL Server (C++/CLI)](using-verifiable-assemblies-with-sql-server-cpp-cli.md)

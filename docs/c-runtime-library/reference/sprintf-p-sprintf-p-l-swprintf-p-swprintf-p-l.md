@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -33,7 +34,8 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -49,16 +51,17 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f5d2daf238a952eb7691257e1fab68cf16b969b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 46e82b8485458290629916a1eb9f44a2bf2f23ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 將格式化資料寫入字串，而且可以指定在格式字串中使用參數的順序。  
@@ -120,7 +123,7 @@ int _swprintf_p_l(
   
  `_swprintf_p` 是 `_sprintf_p` 的寬字元版本，`_swprintf_p` 的指標引數是寬字元字串。 `_swprintf_p` 的編碼錯誤偵測可能不同於 `_sprintf_p`。 `_swprintf_p` 和 `fwprintf_p` 的運作方式完全相同，不同處在於 `_swprintf_p` 會將輸出寫入字串，而非類型 `FILE` 的目的地，而且 `_swprintf_p` 需要 `count` 參數指定要寫入的字元數上限。 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定，而不使用目前的執行緒地區設定。  
   
- `_sprintf_p` 會傳回儲存在 `buffer` 中的位元組數目，不計入終止 `NULL` 字元。 `_swprintf_p`傳回儲存在寬字元數目`buffer`，不計結束`NULL`寬字元。 如果 `buffer` 或 `format` 為 Null 指標，或者此格式字串包含無效格式化字元，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
+ `_sprintf_p` 會傳回儲存在 `buffer` 中的位元組數目，不計入終止 `NULL` 字元。 `_swprintf_p` 傳回儲存在寬字元數目`buffer`，不計結束`NULL`寬字元。 如果 `buffer` 或 `format` 為 Null 指標，或者此格式字串包含無效格式化字元，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   

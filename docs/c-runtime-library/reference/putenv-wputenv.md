@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _putenv
 - _wputenv
@@ -29,7 +30,8 @@ f1_keywords:
 - _putenv
 - wputenv
 - tputenv
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _putenv function
 - environment variables, deleting
@@ -41,22 +43,23 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12b1379ea70c841f1689a8b83fae7ca7f43f5789
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="putenv-wputenv"></a>_putenv、_wputenv
 建立、修改或移除環境變數。 這些函式已有更安全的版本可用，請參閱 [_putenv_s、_wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -91,7 +94,7 @@ int _wputenv(
   
  請不要直接變更環境項目，而是使用 `_putenv` 或 `_wputenv` 進行變更。 特別的是，直接釋出 `_environ[]` 全域陣列的元素可能會造成需要處理的無效記憶體。  
   
- `getenv` 和 `_putenv` 使用全域變數 `_environ` 來存取環境資料表；`_wgetenv` 和 `_wputenv` 使用 `_wenviron`。 `_putenv`和`_wputenv`可能的值變更`_environ`和`_wenviron`，因此失效`_envp`引數`main`和`_wenvp`引數`wmain`。 因此，較安全的作法是使用 `_environ` 或 `_wenviron` 來存取環境資訊。 如需 `_putenv` 和 `_wputenv` 與全域變數之關聯的詳細資訊，請參閱 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。  
+ `getenv` 和 `_putenv` 使用全域變數 `_environ` 來存取環境資料表；`_wgetenv` 和 `_wputenv` 使用 `_wenviron`。 `_putenv` 和`_wputenv`可能的值變更`_environ`和`_wenviron`，因此失效`_envp`引數`main`和`_wenvp`引數`wmain`。 因此，較安全的作法是使用 `_environ` 或 `_wenviron` 來存取環境資訊。 如需 `_putenv` 和 `_wputenv` 與全域變數之關聯的詳細資訊，請參閱 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。  
   
 > [!NOTE]
 >  `_putenv` 和 `_getenv` 系列的函式不是安全執行緒。 `_putenv` 正在修改字串時，`_getenv` 可能會傳回字串指標，因而導致隨機失敗。 確定這些函式的呼叫已同步。  

@@ -4,33 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.editors.insertresource
-dev_langs: C++
+f1_keywords:
+- vc.editors.insertresource
+dev_langs:
+- C++
 helpviewer_keywords:
 - resources [Visual Studio], adding
 - Add Resource dialog box
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fde90f5d7c7822155e36b77c74cd80cdf56b10d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aab285109b34b1de2187e02956cfff2e5a0ba724
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="add-resource-dialog-box"></a>加入資源對話方塊
 使用這個對話方塊將資源加入至 C++ Windows 桌面應用程式專案。  
   
 > [!NOTE]
->  這項資訊不適用於 Windows 市集應用程式的資源。 了解的詳細資訊，請參閱[定義應用程式資源](http://msdn.microsoft.com/en-us/476ea844-632c-4467-9ce3-966be1350dd4)。  
+>  這項資訊不適用於通用 Windows 平台應用程式中的資源。 了解的詳細資訊，請參閱[應用程式資源和資源管理系統](/windows/uwp/app-resources/)。  
   
  **資源類型**  
  指定您想要建立的資源種類。  

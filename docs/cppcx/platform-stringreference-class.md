@@ -6,25 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
 - VCCORLIB/Platform::StringReference::Data
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 類別
 可以用來從 `Platform::String^` 輸入參數將字串資料傳遞給其他方法的最佳化類型，可將複製作業減至最少。  
@@ -43,23 +45,23 @@ class StringReference
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Stringreference:: Stringreference](#ctor)|用來建立 `StringReference`執行個體的兩個建構函式。|  
+|[StringReference::StringReference](#ctor)|用來建立 `StringReference`執行個體的兩個建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Stringreference:: Data](#data)|傳回字串資料當做 char16 值的陣列。|  
-|[Stringreference:: Length](#length)|傳回字串中的字元數。|  
-|[Stringreference:: Gethstring](#gethstring)|傳回字串資料當做 HSTRING。|  
-|[Stringreference:: Getstring](#getstring)|傳回字串資料當做 `Platform::String^`。|  
+|[StringReference::Data](#data)|傳回字串資料當做 char16 值的陣列。|  
+|[StringReference::Length](#length)|傳回字串中的字元數。|  
+|[StringReference::GetHSTRING](#gethstring)|傳回字串資料當做 HSTRING。|  
+|[StringReference::GetString](#getstring)|傳回字串資料當做 `Platform::String^`。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Stringreference:: Operator =](#operator-assign)|將 `StringReference` 指定給新的 `StringReference` 執行個體。|  
-|[Stringreference](#operator-call)|將 `StringReference` 轉換成 `Platform::String^`。|  
+|[StringReference::operator=](#operator-assign)|將 `StringReference` 指定給新的 `StringReference` 執行個體。|  
+|[StringReference::operator()](#operator-call)|將 `StringReference` 轉換成 `Platform::String^`。|  
   
 ### <a name="requirements"></a>需求  
  **最低支援用戶端：** Windows 8  
@@ -70,7 +72,7 @@ class StringReference
   
  **標頭：** vccorlib.h  
 
-## <a name="data"></a>Stringreference:: Data 方法
+## <a name="data"></a>  Stringreference:: Data 方法
 傳回這個內容`StringReference`當做 char16 值的陣列。  
   
 ### <a name="syntax"></a>語法  
@@ -84,7 +86,7 @@ const ::default::char16 * Data() const
   
 
 
-## <a name="gethstring"></a>Stringreference:: Gethstring 方法
+## <a name="gethstring"></a>  Stringreference:: Gethstring 方法
 傳回 `__abi_HSTRING` 形式的字串內容。  
   
 ### <a name="syntax"></a>語法  
@@ -101,7 +103,7 @@ __abi_HSTRING GetHSTRING() const
   
 
 
-## <a name="getstring"></a>Stringreference:: Getstring 方法
+## <a name="getstring"></a>  Stringreference:: Getstring 方法
 傳回 `Platform::String^` 形式的字串內容。  
   
 ### <a name="syntax"></a>語法  
@@ -114,7 +116,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 ### <a name="return-value"></a>傳回值  
  包含字串資料的 `Platform::String^`。  
 
-## <a name="length"></a>Stringreference:: Length 方法
+## <a name="length"></a>  Stringreference:: Length 方法
 傳回字串中的字元數。  
   
 ### <a name="syntax"></a>語法  
@@ -130,7 +132,7 @@ unsigned int Length() const
   
 
 
-## <a name="operator-assign"></a>Stringreference:: Operator = 運算子
+## <a name="operator-assign"></a>  Stringreference:: Operator = 運算子
 將指定的物件指定給目前的 `StringReference` 物件。  
   
 ### <a name="syntax"></a>語法  
@@ -155,7 +157,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>Stringreference 運算子
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 將 `StringReference` 物件轉換成 `Platform::String^` 物件。  
   
 ### <a name="syntax"></a>語法  

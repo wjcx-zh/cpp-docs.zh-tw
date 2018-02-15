@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _ultoa
 - _ultow
@@ -29,7 +30,8 @@ f1_keywords:
 - _ultoa
 - _ultow
 - _ultot
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ultot function
 - converting integers
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _ultoa function
 - converting numbers, to strings
 ms.assetid: 7a472dc4-5652-4513-93c3-3358522c23be
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e555275f4516d92318ec5cfffbca3472c2a5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 94073b947848199bdc093f959ddceadcb1835f16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ultoa-ultow"></a>_ultoa、_ultow
 將不帶正負號的長整數轉換為字串。 這些函式已有更安全的版本可供使用，請參閱 [_ultoa_s、_ultow_s](../../c-runtime-library/reference/ultoa-s-ultow-s.md)。  
@@ -95,7 +98,7 @@ wchar_t *_ultow(
  所有這些函式都會傳回 `str` 的指標。 不會傳回錯誤。  
   
 ## <a name="remarks"></a>備註  
- `_ultoa` 函式會將 `value` 轉換為以 Null 結束的字元字串，並將結果 (最多 33 個位元組) 儲存為 `str`。 不會執行任何溢位檢查。 `radix`指定的基底`value`;`radix`必須在範圍 2-36。 `_ultow` 是 `_ultoa` 的寬字元版本。  
+ `_ultoa` 函式會將 `value` 轉換為以 Null 結束的字元字串，並將結果 (最多 33 個位元組) 儲存為 `str`。 不會執行任何溢位檢查。 `radix` 指定的基底`value`;`radix`必須在範圍 2-36。 `_ultow` 是 `_ultoa` 的寬字元版本。  
   
 > [!IMPORTANT]
 >  若要防止緩衝區溢位，請確定 `str` 緩衝區夠大，足以容納轉換的數字加上尾端的 Null 字元。  

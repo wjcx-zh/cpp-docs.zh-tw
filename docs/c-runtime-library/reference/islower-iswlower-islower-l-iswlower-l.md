@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswlower
 - _islower_l
@@ -35,7 +36,8 @@ f1_keywords:
 - _islower _l
 - _islower_l
 - iswlower
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _islower _l function
 - _ismbclower_l function
@@ -48,16 +50,17 @@ helpviewer_keywords:
 - iswlower function
 - _islower_l function
 ms.assetid: fcc3b70a-2b47-45fd-944d-e5c1942e6457
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6aa6f584db325694b081f367f8b78146776764ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 649e723fc56fd27e816b05963aef88eec3c37a02
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="islower-iswlower-islowerl-iswlowerl"></a>islower、iswlower、_islower_l、_iswlower_l
 判斷整數是否代表小寫字元。  
@@ -89,7 +92,7 @@ int _iswlower_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `c` 表示特定的小寫字元，則這些常式都會傳回非零。 `islower`傳回非零值，如果`c`是小寫字元 (a-z)。 如果 `c` 是對應至一個小寫字母的寬字元，或如果 `c` 是寬字元實作定義字元集的其中一個，且 `iswcntrl`、`iswdigit`、`iswpunct`或 `iswspace` 均不是非零，則 `iswlower` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
+ 如果 `c` 表示特定的小寫字元，則這些常式都會傳回非零。 `islower` 傳回非零值，如果`c`是小寫字元 (a-z)。 如果 `c` 是對應至一個小寫字母的寬字元，或如果 `c` 是寬字元實作定義字元集的其中一個，且 `iswcntrl`、`iswdigit`、`iswpunct`或 `iswspace` 均不是非零，則 `iswlower` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
  這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數來處理其地區設定相關行為，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   

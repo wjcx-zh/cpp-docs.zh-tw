@@ -4,39 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CDynamicStringAccessorA
-dev_langs: C++
-helpviewer_keywords: CDynamicStringAccessorA class
+f1_keywords:
+- CDynamicStringAccessorA
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDynamicStringAccessorA class
 ms.assetid: ed0d9821-a655-41f1-a902-43c3042ac49c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 25d53a92f24fa485e080f02c6c889263b3abe18f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0514dd3cd87788a6512b18d0aa3f2a5b7a842317
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicstringaccessora-class"></a>CDynamicStringAccessorA 類別
 可讓您存取資料來源，當您在不知道資料庫結構描述 （基礎結構）。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 typedef CDynamicStringAccessorT<CHAR, DBTYPE_STR> CDynamicStringAccessorA;  
 ```  
   
 ## <a name="remarks"></a>備註  
  它們都要求提供者擷取從資料存放區做為字串資料存取的所有資料，但`CDynamicStringAccessor`要求 ANSI 字串資料。  
   
- `CDynamicStringAccessorA`繼承**GetString**和`SetString`從`CDynamicStringAccessor`。 當您使用這些方法進行`CDynamicStringAccessorA`物件***BaseType***是**CHAR**。  
+ `CDynamicStringAccessorA` 繼承**GetString**和`SetString`從`CDynamicStringAccessor`。 當您使用這些方法進行`CDynamicStringAccessorA`物件***BaseType***是**CHAR**。  
   
 ## <a name="requirements"></a>需求  
  **標頭檔**：atldbcli.h  

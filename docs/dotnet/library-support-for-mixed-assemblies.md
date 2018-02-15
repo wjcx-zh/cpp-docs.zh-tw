@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - msvcm90[d].dll
 - mixed assemblies [C++], library support
 - msvcmrt[d].lib
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9b3bc50416eceac64c134a31a4d7384e33db69b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f999a75a8f818fccabada840a2a6e9fc70447cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="library-support-for-mixed-assemblies"></a>混合組件的程式庫支援
 Visual c + + 支援 c + + 標準程式庫，一般的執行階段程式庫 (CRT)，使用 ATL 和 MFC 應用程式，以編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。 這可讓使用.NET Framework 功能，以及使用這些程式庫的現有應用程式。  
@@ -33,8 +35,6 @@ Visual c + + 支援 c + + 標準程式庫，一般的執行階段程式庫 (CRT)
  這項支援導入了下列新 DLL 和匯入程式庫：  
   
 -   如果您以 /clr 編譯的 Msvcmrt [d].lib。 混合的組件連結至這個匯入程式庫。  
-  
--   Msvcm90 [d].dll 和 Msvcurt [d].lib 如果編譯以 /clr: pure。 DLL 是混合的組件，提供受管理的 C 執行階段 (CRT) 支援，而且是 managed 組件安裝在全域組件快取 (GAC) 的一部分。 此匯入程式庫和最後會繫結至 Msvcm90.dll 純粹組件連結。  
   
  這項支援會提供數個相關的優點：  
   
@@ -50,9 +50,7 @@ Visual c + + 支援 c + + 標準程式庫，一般的執行階段程式庫 (CRT)
   
  此外，這項支援會提供下列限制：  
   
--   支援只 CRT DLL 模型 (同時以 /clr 或 /clr 編譯的程式碼： pure)。  
-  
--   如果這些物件會使用 Visual c + + 程式庫 （因為所有的物件必須是純在純映像），您不能混用純粹的和混合的單一映像中的物件。 如果您這樣做，您會收到連結時間錯誤。  
+-   CRT DLL 模型支援以 /clr 編譯的程式碼。  
   
  因為它不會保證使用較早版本，您應該更新 commn language runtime (CLR) 至目前版本。 這些變更內建的程式碼將不會執行 CLR 版本 1.x。  
   

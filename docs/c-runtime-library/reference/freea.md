@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _freea
+ms.topic: reference
+apiname:
+- _freea
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - freea
 - _freea
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _freea function
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 921687fbc5d8ab0b509e5a2e43c9c9ff4b18727a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6bf2bd2d3dacba307f529798727e7af745bf7cf9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freea"></a>_freea
 取消配置或釋放記憶體區塊。  
@@ -61,7 +65,7 @@ void _freea(
 ## <a name="remarks"></a>備註  
  `_freea` 函式會取消配置 [_malloca](../../c-runtime-library/reference/malloca.md) 呼叫先前所配置的記憶體區塊 (`memblock`)。 `_freea` 確認是否在堆積或堆疊上配置記憶體。 如果配置於堆疊，則 `_freea` 不會執行任何動作。 如果配置於堆積，所釋放的位元組數目相當於配置區塊時所要求的位元組數目。 如果 `memblock` 是 `NULL`，則會忽略指標，並立即傳回 `_freea`。 嘗試釋放無效指標 (未由 `_malloca` 所配置之記憶體區塊的指標) 可能會影響後續配置要求，並導致錯誤。  
   
- `_freea`呼叫`free`內部如果找到，在堆積上配置記憶體。 記憶體在堆積還是堆疊上取決於在記憶體之已配置記憶體正前方的位址所放置的標記。  
+ `_freea` 呼叫`free`內部如果找到，在堆積上配置記憶體。 記憶體在堆積還是堆疊上取決於在記憶體之已配置記憶體正前方的位址所放置的標記。  
   
  若釋放記憶體發生錯誤，會使用來自作業系統且具有失敗性質的資訊設定 `errno`。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   

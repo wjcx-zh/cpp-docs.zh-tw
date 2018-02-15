@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _fdopen
 - _wfdopen
@@ -28,7 +29,8 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7108fdedb2698e6065c22ebe6905d897ee389ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2474c25d30415d48252a2621ae5f7e69e5fed4d3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen、_wfdopen
 
@@ -82,7 +85,7 @@ FILE *_wfdopen(
 
 ## <a name="remarks"></a>備註
 
-`_fdopen`函式會將 I/O 資料流關聯的檔案，由*fd*，因此允許進行緩衝處理和格式化的低層級 I/O 開啟的檔案。 `_wfdopen`是寬字元版本的`_fdopen`;*模式*引數`_wfdopen`是寬字元字串。 除此之外，`_wfdopen` 和 `_fdopen` 的行為相同。
+`_fdopen`函式會將 I/O 資料流關聯的檔案，由*fd*，因此允許進行緩衝處理和格式化的低層級 I/O 開啟的檔案。 `_wfdopen` 是寬字元版本的`_fdopen`;*模式*引數`_wfdopen`是寬字元字串。 除此之外，`_wfdopen` 和 `_fdopen` 的行為相同。
 
 檔案描述傳入`_fdopen`擁有所傳回`FILE *`資料流。 如果`_fdopen`成功時，請勿呼叫[\_關閉](../../c-runtime-library/reference/close.md)上的檔案描述項。 呼叫[fclose](../../c-runtime-library/reference/fclose-fcloseall.md)針對傳回`FILE *`也會關閉的檔案描述項。
 
@@ -134,7 +137,7 @@ FILE *_wfdopen(
 
 有效字元*模式*中使用字串`fopen`和`_fdopen`對應至*oflag*引數中使用[\_開啟](../../c-runtime-library/reference/open-wopen.md)和[\_sopen](../../c-runtime-library/reference/sopen-wsopen.md)，如本表所示：
 
-|在字元*模式*字串|對等*oflag*值`_open`和`_sopen`|
+|在字元*模式*字串|對等*oflag*值`_open`和 `_sopen`|
 |---------------------------------|---------------------------------------------------|
 |`a`|**\_O\_WRONLY &#124;\_O\_附加**(通常 **\_O\_WRONLY &#124;\_O\_CREAT &#124;\_O\_附加**)|
 |`a+`|**\_O\_RDWR &#124;\_O\_附加**(通常 **\_O\_RDWR &#124;\_O\_附加 &#124;\_O\_CREAT** )|
@@ -142,8 +145,8 @@ FILE *_wfdopen(
 |`r+`|**\_O\_RDWR**|
 |`w`|**\_O\_WRONLY** (通常 **\_O\_WRONLY &#124;\_O\_CREAT &#124;\_O\_TRUNC**)|
 |`w+`|**\_O\_RDWR** (通常 **\_O\_RDWR &#124;\_O\_CREAT &#124;\_O\_TRUNC**)|
-|`b`|**\_O\_二進位**|
-|`t`|**\_O\_文字**|
+|`b`|**\_O\_BINARY**|
+|`t`|**\_O\_TEXT**|
 |`c`|無|
 |`n`|無|
 
@@ -209,8 +212,8 @@ Lines in file: 2
 ## <a name="see-also"></a>另請參閱
 
 [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
-[\_dup、 \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
+[\_dup, \_dup2](../../c-runtime-library/reference/dup-dup2.md)   
 [fclose、 \_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
 [fopen、 \_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
-[freopen、 \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
+[freopen, \_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
 [\_開啟， \_wopen](../../c-runtime-library/reference/open-wopen.md)

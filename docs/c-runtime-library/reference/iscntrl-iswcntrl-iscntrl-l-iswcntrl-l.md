@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 判斷整數是否代表控制字元。  
@@ -83,7 +86,7 @@ int _iswcntrl_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `c` 表示特定的控制字元，則這些常式都會傳回非零。 `iscntrl`傳回非零值，如果`c`是控制字元 (0x00-0x1F 或 0x7F)。 如果 `c` 是控制寬字元，`iswcntrl` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
+ 如果 `c` 表示特定的控制字元，則這些常式都會傳回非零。 `iscntrl` 傳回非零值，如果`c`是控制字元 (0x00-0x1F 或 0x7F)。 如果 `c` 是控制寬字元，`iswcntrl` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
  這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   

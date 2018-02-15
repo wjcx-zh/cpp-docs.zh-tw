@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8c505c44fe18f75eeb64c6b31ca222405f570761
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>如何：使用 WRL 完成非同步作業
 本文件說明如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 若要啟動非同步作業和作業完成時執行工作。  
@@ -36,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  下列步驟開始非同步的計時器，並等候計時器過期。 完整的範例如下。  
   
 > [!WARNING]
->  雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台應用程式中，此範例會使用主控台應用程式的圖例。 函式，如`wprintf_s`所沒有的通用 Windows 平台應用程式。 多個型別和函式，您可以使用通用 Windows 平台應用程式中的詳細資訊，請參閱[/ZW 不支援的 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)和[Win32 和 COM 適用於 Windows 市集應用程式](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+>  雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台 (UWP) 應用程式中，此範例會使用主控台應用程式的圖例。 函式，如`wprintf_s`所沒有的 UWP 應用程式。 如需型別和函式，您可以在 UWP 應用程式中使用的詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)和[Win32 和 COM 用於 UWP 應用程式](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。  
   
 1.  包含 (`#include`) 任何必要的 Windows 執行階段、 Windows 執行階段 c + + 樣板程式庫或 c + + 標準程式庫標頭。  
   
@@ -78,7 +80,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯程式碼，將它複製然後將它貼入 Visual Studio 專案中，或將它貼入名為的檔案中`wrl-consume-async.cpp`，然後在 Visual Studio 命令提示字元視窗中執行下列命令。  
   
- **cl.exe wrl 取用 async.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>範例： 使用背景執行緒  
  下列步驟啟動背景工作執行緒，並定義該執行緒所執行的動作。 完整的範例如下。  

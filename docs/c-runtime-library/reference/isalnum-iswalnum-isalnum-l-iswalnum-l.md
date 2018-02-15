@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -43,16 +45,17 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0c5ee9588635a50ca618a39e919661f9df08a27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f71ab6a960dbc92c4e6d8399e833f2ddf0e2ac1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 判斷整數是否代表英數字元。  
@@ -84,7 +87,7 @@ int _iswalnum_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `c` 表示特定的英數字元，則這些常式都會傳回非零。 `isalnum`傳回非零值，如果`isalpha`或`isdigit`非零代表`c`，也就是如果`c`是在範圍內 A-Z、 a-z 或 0-9。 如果 `iswalpha` 或 `iswdigit` 對於 `c` 為非零，則 `iswalnum` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
+ 如果 `c` 表示特定的英數字元，則這些常式都會傳回非零。 `isalnum` 傳回非零值，如果`isalpha`或`isdigit`非零代表`c`，也就是如果`c`是在範圍內 A-Z、 a-z 或 0-9。 如果 `iswalpha` 或 `iswdigit` 對於 `c` 為非零，則 `iswalnum` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
  這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   

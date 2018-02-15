@@ -27,11 +27,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e4336f200f736ea7656af11c7c7c43ca32f27f9
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="choosing-a-deployment-method"></a>選擇部署方法
 除非您的 Visual c + + 應用程式是獨立的而且可以使用複製命令來部署，否則我們建議您部署使用 Windows Installer。 Windows Installer 支援安裝、修復或解除安裝，同時也支援不可部分完成更新應用程式檔案、相依性和登錄項目。  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="redistributing-visual-c-libraries"></a>轉散發 Visual C++ 程式庫  
  在您的部署中，您可以轉散發具有轉散發授權的任何 Visual C++ 程式庫版本。 部署方法有三種：  
   
--   使用集中部署時可轉散發套件，可安裝 Visual c + + 程式庫共用的 Dll 在 %windir%\system32 中為\\。 (必須要有系統管理員權限才能安裝至此資料夾)。在目標電腦上安裝應用程式之前，您可以建立會執行可轉散發套件的指令碼或安裝程式。 可轉散發套件適用於 x86、x64 和 ARM 平台 (VCRedist_x86.exe、VCRedist_x64.exe 或 VCRedist_arm.exe)。 Visual Studio 將這些套件包含在 Visual Studio 的 %programfiles (x86) %\Microsoft `version`\VC\Redist\\`locale ID`\\。 您也可以下載從[Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793)。 (在 [下載中心] 上搜尋 「 Visual c + + 可轉散發套件*Visual Studio 版本及更新*"符合您的應用程式。 例如，若您使用 Visual Studio 2012 Update 4 建置應用程式，請搜尋「Visual C++ 可轉散發套件 2012 Update 4」)。如需如何使用可轉散發套件的資訊，請參閱[逐步解說： 部署 Visual c + + 應用程式所使用 Visual c + + 可轉散發套件](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。  
+-   使用集中部署時可轉散發套件，可安裝 Visual c + + 程式庫共用的 Dll 在 %windir%\system32 中為\\。 (必須要有系統管理員權限才能安裝至此資料夾)。在目標電腦上安裝應用程式之前，您可以建立會執行可轉散發套件的指令碼或安裝程式。 可轉散發套件適用於 x86、x64 和 ARM 平台 (VCRedist_x86.exe、VCRedist_x64.exe 或 VCRedist_arm.exe)。 Visual Studio 將這些套件包含在 Visual Studio 的 %programfiles (x86) %\Microsoft `version`\VC\Redist\\`locale ID`\\。 您也可以下載從[Microsoft Download Center](http://go.microsoft.com/fwlink/p/?linkid=132793)。 (「 下載中心 」 中使用 [搜尋] 方塊來搜尋 「 Visual c + + 可轉散發套件*Visual Studio 版本及更新*"符合您的應用程式。 例如，如果您使用 Visual Studio 2015 update 3 來建置應用程式，然後搜尋 「 Visual c + + 可轉散發套件 2015 update 3"。)如需如何使用可轉散發套件的資訊，請參閱[逐步解說： 部署 Visual c + + 應用程式所使用 Visual c + + 可轉散發套件](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。  
   
 -   集中部署時使用合併模組，其中每個安裝特定的 Visual c + + 程式庫做為共用的 DLL 在 %windir%\system32\\。 (必須要有系統管理員權限才能安裝至此資料夾)。合併模組會變成應用程式 .msi 安裝程式檔案的一部分。 Visual c + + 可轉散發合併模組包含在 Visual Studio 的 \Program Files (x86) \common 模組\\。 如需詳細資訊，請參閱[所使用合併模組轉散發](../ide/redistributing-components-by-using-merge-modules.md)。  
   

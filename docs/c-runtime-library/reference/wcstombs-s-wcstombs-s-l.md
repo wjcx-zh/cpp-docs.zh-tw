@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _wcstombs_s_l
 - wcstombs_s
@@ -26,7 +27,8 @@ apitype: DLLExport
 f1_keywords:
 - wcstombs_s
 - _wcstombs_s_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - wcstombs_s function
 - string conversion, wide characters
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 105f2d33-221a-4f6d-864c-23c1865c42af
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b5c57a82bef1a56925b414302fe2017df255ce2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 863f6dc5b1c7a41145607e8f8ba83466324dac07
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s、_wcstombs_s_l
 
@@ -91,16 +94,16 @@ errno_t _wcstombs_s_l(
   
 #### <a name="parameters"></a>參數  
 
-[out]*pReturnValue*  
+[out] *pReturnValue*  
 已轉換的字元數。  
   
-[out]*mbstr*  
+[out] *mbstr*  
 所產生之已轉換的多位元組字串的緩衝區位址。  
   
-[in]*sizeInBytes*  
+[in] *sizeInBytes*  
 以位元組為單位的大小*mbstr*緩衝區。  
   
-[in]*wcstr*  
+[in] *wcstr*  
 指向要轉換的寬字元字串。  
   
 [in]*計數*  
@@ -116,7 +119,7 @@ errno_t _wcstombs_s_l(
 |錯誤狀況|傳回值和 `errno`|  
 |---------------------|------------------------------|  
 |*mbstr*是`NULL`和*sizeInBytes* > 0|`EINVAL`|  
-|*wcstr*是`NULL`|`EINVAL`|  
+|*wcstr*是 `NULL`|`EINVAL`|  
 |目的地緩衝區為太小，無法包含已轉換的字串 (除非*計數*是`_TRUNCATE`; 請參閱下面的備註)|`ERANGE`|  
   
 如果發生上述任何一種情況，則會叫用無效的參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回錯誤碼，並將 `errno` 設為如表中所示。  

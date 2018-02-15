@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMapView
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e1bb555cc804069aed3c778acf1ac71e795a11ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Platform::Collections::UnorderedMapView 類別
 表示 *對應 (Map)*(機碼值組的集合) 的唯讀檢視。  
@@ -52,17 +54,17 @@ ref class UnorderedMapView sealed;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Unorderedmapview:: Unorderedmapview](#ctor)|初始化 UnorderedMapView 類別的新執行個體。|  
+|[UnorderedMapView::UnorderedMapView](#ctor)|初始化 UnorderedMapView 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Unorderedmapview:: First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|  
-|[Unorderedmapview:: Haskey](#haskey)|判斷目前 UnorderedMapView 是否包含指定的機碼。|  
-|[Unorderedmapview:: Lookup](#lookup)|取得目前 UnorderedMapView 物件中，所指定機碼處的項目。|  
-|[Unorderedmapview:: Size](#size)|傳回目前 UnorderedMapView 物件中的元素數目。|  
-|[Unorderedmapview:: Split](#split)|將原始 UnorderedMapView 物件分割為兩個 UnorderedMapView 物件。|  
+|[UnorderedMapView::First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|  
+|[UnorderedMapView::HasKey](#haskey)|判斷目前 UnorderedMapView 是否包含指定的機碼。|  
+|[UnorderedMapView::Lookup](#lookup)|取得目前 UnorderedMapView 物件中，所指定機碼處的項目。|  
+|[UnorderedMapView::Size](#size)|傳回目前 UnorderedMapView 物件中的元素數目。|  
+|[UnorderedMapView::Split](#split)|將原始 UnorderedMapView 物件分割為兩個 UnorderedMapView 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `UnorderedMapView`  

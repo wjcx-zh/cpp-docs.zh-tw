@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - wcstold
 - strtold
@@ -32,18 +33,20 @@ f1_keywords:
 - strtold
 - _strtold_l
 - wcstold
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 814145a5efade94da53830bf6448d7e5422027bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e21329d29bcf65362d837697f2adfe00e27ce3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、wcstold、_wcstold_l
 將字串轉換為長雙精確度浮點數值。  
@@ -82,7 +85,7 @@ long double wcstold_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- `strtold`傳回當做浮點數的值`long double`，除了當表示法會造成溢位 — 在此情況下，此函數會傳回 + /-`HUGE_VALL`。 `HUGE_VALL` 的正負號符合無法表示之值的正負號。 如果沒有任何轉換可執行，`strtold` 會傳回 0，否則會發生反向溢位。  
+ `strtold` 傳回當做浮點數的值`long double`，除了當表示法會造成溢位 — 在此情況下，此函數會傳回 + /-`HUGE_VALL`。 `HUGE_VALL` 的正負號符合無法表示之值的正負號。 如果沒有任何轉換可執行，`strtold` 會傳回 0，否則會發生反向溢位。  
   
  `wcstold` 傳回類似 `strtold` 的值。 如果發生溢位或反向溢位且叫用無效的參數處理常式，這兩個函式的 `errno` 都會設為 `ERANGE`，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
   

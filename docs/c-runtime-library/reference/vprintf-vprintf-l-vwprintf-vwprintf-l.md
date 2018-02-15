@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - vprintf
 - _vwprintf_l
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - vwprintf
 - _vtprintf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - vwprintf function
 - _vwprintf_l function
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - _vtprintf_l function
 - formatted text [C++]
 ms.assetid: 44549505-00a0-4fa7-9a85-f2e666f55a38
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 455f335b359aa7867b844fb7d339d7671e9a2f9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b1f55df49b554fd43912eac252fef1575b3bc411
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="vprintf-vprintfl-vwprintf-vwprintfl"></a>vprintf、_vprintf_l、vwprintf、_vwprintf_l
 使用引數清單的指標，撰寫格式化的輸出。 這些函式已有更安全的版本，請參閱 [vprintf_s、_vprintf_s_l、vwprintf_s、_vwprintf_s_l](../../c-runtime-library/reference/vprintf-s-vprintf-s-l-vwprintf-s-vwprintf-s-l.md)。  
@@ -119,9 +122,9 @@ int _vwprintf_l(
 |`vprintf`, `_vprintf_l`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
 |`vwprintf`, `_vwprintf_l`|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|  
   
- \* UNIX V 相容性的必要項。  
+ \* UNIX V 相容性的必要項目。  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼`stdin`， `stdout`，和`stderr`，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
   
 ## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   

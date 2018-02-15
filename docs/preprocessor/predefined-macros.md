@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/16/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -74,7 +75,8 @@ f1_keywords:
 - _WIN64
 - _WINRT_DLL
 - __func__
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - timestamps, preprocessor macro
 - cl.exe compiler, version number
@@ -149,16 +151,17 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 86905a879abe9b81302a8f196e200c1d0c227bb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 53acac18902e261eede565987d6b9c053a8f1707
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="predefined-macros"></a>預先定義的巨集
 
@@ -372,7 +375,7 @@ Microsoft Visual c + + 支援這些額外的預先定義巨集。
 
 - **&#95;MSC &#95;VER**定義為整數常值，可以編碼編譯器的版本號碼的主要和次要編號項目。 主要號碼是句號分隔版本號碼的第一個元素，而次要號碼是第二個元素。 例如，如果 Visual c + + 編譯器的版本號碼是 17.00.51106.1， **&#95;MSC &#95;VER**巨集判斷值為 1700年。 輸入**cl /？** 在命令列，以檢視編譯器的版本號碼。 一律定義此巨集。
 
-- **&#95;MSVC &#95;LANG**定義為整數常值，指定編譯器為目標的 c + + 語言標準。 當編譯為 c + +，巨集如果是整數常值 201402 [/std:c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項設定，或根據預設，它設定為 201703 如果[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)編譯器選項設定;，且設定為較高、 未指定值時[/std:c + + 最新](../build/reference/std-specify-language-standard-version.md)。 否則，巨集未定義。 **&#95;MSVC &#95;LANG**巨集和[/std （指定語言標準版）](../build/reference/std-specify-language-standard-version.md)編譯器選項會從開始使用 Visual Studio 2015 Update 3。
+- **&#95;MSVC &#95;LANG**定義為整數常值，指定編譯器為目標的 c + + 語言標準。 當編譯為 c + +，巨集如果是整數常值 201402 L [/std:c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項設定，或根據預設，它設定為 201703 L 如果[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)編譯器選項設定;，且設定為較高、 未指定值時[/std:c + + 最新](../build/reference/std-specify-language-standard-version.md)。 否則，巨集未定義。 **&#95;MSVC &#95;LANG**巨集和[/std （指定語言標準版）](../build/reference/std-specify-language-standard-version.md)編譯器選項會從開始使用 Visual Studio 2015 Update 3。
 
 - **&#95; &#95;MSVC &#95;RUNTIME &#95;檢查**定義為當一 1 的[/RTC](../build/reference/rtc-run-time-error-checks.md)編譯器選項設定。 否則為未定義。
 
@@ -413,6 +416,6 @@ Microsoft Visual c + + 支援這些額外的預先定義巨集。
 
 ## <a name="see-also"></a>請參閱
 
-[巨集 （C/c + +）](../preprocessor/macros-c-cpp.md)   
+[Macros (C/C++)](../preprocessor/macros-c-cpp.md)   
 [前置處理器運算子](../preprocessor/preprocessor-operators.md)   
 [前置處理器指示詞](../preprocessor/preprocessor-directives.md)

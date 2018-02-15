@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e3adff365269ad9dae2d6b850470a869250e3dd8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的平行應用程式。 它會引發抽象的層級，讓您不需要管理並行存取相關的基礎結構詳細資料。 您也可以使用它來指定符合您應用程式服務需求品質的排程原則。 使用這些資源以協助您開始使用並行執行階段。  
@@ -67,13 +70,13 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 |[PPL 中的取消](cancellation-in-the-ppl.md)|描述 PPL 中取消的角色，包括如何起始和回應取消的要求。|  
 |[如何：使用取消來中斷平行迴圈](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br /><br /> [如何：使用例外狀況處理來中斷平行迴圈](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|示範兩種用來取消資料平行工作的方式。|  
   
-## <a name="windows-store-apps"></a>Windows 市集 App  
+## <a name="universal-windows-platform-apps"></a>通用 Windows 平台應用程式  
   
 |||  
 |-|-|  
-|[使用 C++ 為 Windows 市集應用程式建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述一些當您在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用並行執行階段產生非同步作業時務必牢記的重要觀念。|  
-|[逐步解說：使用工作和 XML HTTP 要求連接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|示範如何結合將 PPL 與 `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 介面結合以將 HTTP GET 和 POST 要求傳送至 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中的 Web 服務。|  
-|[Windows 市集應用程式範例](http://code.msdn.microsoft.com/windowsapps)|包含 [!INCLUDE[win8](../../build/reference/includes/win8_md.md)]的可下載程式碼範例和示範應用程式。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|  
+|[在 c + + UWP 應用程式建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述一些重要觀念，當您使用並行執行階段產生非同步作業的 UWP 應用程式時，請記住。|  
+|[逐步解說：使用工作和 XML HTTP 要求連接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|示範如何將 ppl 與結合`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的介面。|  
+|[Windows 執行階段應用程式範例](http://code.msdn.microsoft.com/windowsapps)|包含可下載程式碼範例和示範應用程式適用於 Windows 8.x。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|  
   
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>非同步代理程式程式庫中的資料流程程式撰寫  
   
@@ -108,7 +111,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
   
 |||  
 |-|-|  
-|[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作 Hilo (使用 C++ 和 XAML 的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式) 中的非同步作業。|  
+|[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](http://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，使用 c + + 和 XAML 的 Windows 執行階段應用程式。|  
 |[並行執行階段和 Visual Studio 2010 中的平行模式程式庫的程式碼範例](http://go.microsoft.com/fwlink/p/?linkid=183875)|提供示範並行執行階段的範例應用程式和公用程式。|  
 |[機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|  
 |[C + + 和機器碼論壇中的平行運算](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|  

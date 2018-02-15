@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbdc9b583501bb0de08139acc78943c8c4d88a91
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：利用 WRL 啟動與使用 Windows 執行階段元件
 本文件示範如何初始化 Windows 執行階段使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 以及如何啟用和使用 Windows 執行階段元件。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
  下列步驟會使用`Windows::Foundation::IUriRuntimeClass`介面，以示範如何建立 Windows 執行階段元件的啟動處理站，建立該元件的執行個體，和擷取屬性值。 它們也會顯示如何初始化 Windows 執行階段。 完整的範例如下。  
   
 > [!IMPORTANT]
->  雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台應用程式中，此範例會使用主控台應用程式的圖例。 函式，如`wprintf_s`所沒有的通用 Windows 平台應用程式。 多個型別和函式，您可以使用通用 Windows 平台應用程式中的詳細資訊，請參閱[/zw 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)和[Win32 和 COM 適用於 Windows 市集應用程式](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+>  雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台 (UWP) 應用程式中，此範例會使用主控台應用程式的圖例。 函式，如`wprintf_s`所沒有的 UWP 應用程式。 如需型別和函式，您可以在 UWP 應用程式中使用的詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)和[Win32 和 COM 用於 UWP 應用程式](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。  
   
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>若要啟用和使用 Windows 執行階段元件  
   

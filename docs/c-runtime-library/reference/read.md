@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _read
+ms.topic: reference
+apiname:
+- _read
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,8 +23,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords: _read
-dev_langs: C++
+f1_keywords:
+- _read
+dev_langs:
+- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -31,16 +35,17 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0c55e2607a706648c818fc94e73197756470110c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ad5b18300ec36cc55a6eb02476b454829193cd8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="read"></a>_read
 
@@ -69,7 +74,7 @@ int _read(
   
 ## <a name="return-value"></a>傳回值  
 
-`_read`傳回讀取位元組數，這可能會小於比*計數*如果少於*計數*位元組保留檔案中，或如果在文字模式中開啟檔案，在此情況下每個歸位字元傳回的換行字元組`\r\n`以單行換行字元的字元取代`\n`。 在傳回值中只會計算單一換行字元。 這種取代不會影響檔案指標。  
+`_read` 傳回讀取位元組數，這可能會小於比*計數*如果少於*計數*位元組保留檔案中，或如果在文字模式中開啟檔案，在此情況下每個歸位字元傳回的換行字元組`\r\n`以單行換行字元的字元取代`\n`。 在傳回值中只會計算單一換行字元。 這種取代不會影響檔案指標。  
   
 如果函式嘗試讀取檔案的結尾，則會傳回 0。 如果*fd*不是正確，檔案不是開啟可供讀取，或檔案鎖定、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回 -1 並將 `errno` 設定為 `EBADF`。  
   

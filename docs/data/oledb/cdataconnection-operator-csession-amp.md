@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,31 +13,31 @@ f1_keywords:
 - CDataConnection::operatorCSession&
 - CDataConnection.operatorCSession&
 - operatorCSession&
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - operator CSession&
 - CSession& operator
 ms.assetid: fba1e498-e482-4dda-8e0f-2542163bf627
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 35e28b96c3daddcdf8a9ea4bdf06f9b1410463f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ce7a03d90225457c482c12a4d7df1d6135cd8ac
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="cdataconnectionoperator-csessionamp"></a>Cdataconnection:: Operator CSession&amp;
+# <a name="cdataconnectionoperator-csessionamp"></a>CDataConnection::operator CSession&amp;
 將參考傳回給包含`CSession`物件。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```cpp
 operator const CSession&();  
   
 ```  

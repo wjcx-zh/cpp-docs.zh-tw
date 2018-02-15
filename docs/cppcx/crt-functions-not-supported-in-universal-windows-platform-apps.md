@@ -6,23 +6,24 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 65d058780ee71731559733ac07eef3f614a47784
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 295b7810c562e141f1b2e22c993bcc7455c0f1d9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>通用 Windows 平台應用程式不支援 CRT 函式
-當您建置通用 Windows 平台 (UWP) 應用程式時，許多 C 執行階段 (CRT) 函式都無法使用。 在某些情況下，因應措施可用---例如，您可以使用 Windows 執行階段或 Win32 Api。 不過，在其他情況下則已禁止使用 CRT 函式，因為 UWP 應用程式無法使用對應至這些函式的功能或支援的 API。  
+當您建置通用 Windows 平台 (UWP) 應用程式時，許多 C 執行階段 (CRT) 函式都無法使用。 在某些情況下，因應措施可用---例如，您可以使用 Windows 執行階段或 Win32 Api。 不過，在其他情況下則已禁止使用 CRT 函式，因為 UWP 應用程式無法使用對應至這些函式的功能或支援的 API。 若要尋找支援為 Windows 執行階段的替代方法，請參閱[UWP 應用程式中的 Windows Api 替代方案](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)。  
   
- 下表列出當您建置 UWP 應用程式時無法使用的 CRT 函式，並指出任何可行的因應措施。  
+下表列出當您建置 UWP 應用程式時無法使用的 CRT 函式，並指出任何可行的因應措施。  
   
 ## <a name="unsupported-crt-functions"></a>不支援的 CRT 函式  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|UWP 應用程式無法使用環境變數。|沒有因應措施。 若要設定時區，請使用 _tzset。|  
 |_loaddll _getdllprocaddr _unloaddll|這些是舊版 CRT 中已過時的函式。 此外，除非來自相同的應用程式封裝，否則使用者無法載入 DLL。|請使用 Win32 API `LoadPackagedLibrary`、 `GetProcAddress`和 `FreeLibrary` 來載入及使用封裝的 DLL。|  
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|UWP 應用程式中無法使用此功能。 UWP 應用程式無法叫用另一個 UWP 應用程式或傳統型應用程式。|沒有因應措施。|  
-|_heapwalk _heapadd _heapchk _heapset _heapused|這些函式通常可用來處理堆積。 不過，UWP 應用程式不支援對應的 Win32 API。 此外，應用程式無法再建立或使用私用堆積。|沒有因應措施。 不過，DEBUG CRT 中可以使用 `_heapwalk` ，但僅限偵錯使用。 這些函式無法用於上傳至 Windows 市集的應用程式。|  
+|_heapwalk _heapadd _heapchk _heapset _heapused|這些函式通常可用來處理堆積。 不過，UWP 應用程式不支援對應的 Win32 API。 此外，應用程式無法再建立或使用私用堆積。|沒有因應措施。 不過，DEBUG CRT 中可以使用 `_heapwalk` ，但僅限偵錯使用。 這些無法上傳至 Microsoft Store 的應用程式中使用。|  
   
  下列函式在 CRT 用於 UWP 應用程式，但是無法使用對應的 Win32 或 Windows 執行階段 Api 時，才應該使用 — 例如，當您移植大型程式碼基底時才  
   

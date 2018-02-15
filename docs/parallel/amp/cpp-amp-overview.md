@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -15,23 +17,24 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
-C + + Accelerated Massive Parallelism (c + + AMP) 藉由運用在獨立圖形顯示卡的圖形處理單元 (GPU) 之類的資料平行硬體加速執行 c + + 程式碼。 藉由使用 c + + AMP，您可以撰寫多維度資料的演算法，因此可加快執行異質硬體上使用平行處理原則。 C + + AMP 程式撰寫模型包含多維度陣列、 索引、 記憶體傳輸、 並排顯示和數學函式程式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何將 cpu 移到 GPU 上, 一步，這樣可以改善效能。  
+C + + Accelerated Massive Parallelism (c + + AMP) 藉由運用在獨立圖形顯示卡的圖形處理單元 (GPU) 之類的資料平行硬體加速執行 c + + 程式碼。 藉由使用 c + + AMP，您可以撰寫多維度資料的演算法，因此可加快執行異質硬體上使用平行處理原則。 C++ AMP 程式設計模型包含多維陣列、索引、記憶體傳輸、並排顯示和數學函式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何將 cpu 移到 GPU 上, 一步，這樣可以改善效能。  
   
 ## <a name="system-requirements"></a>系統需求  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)]、[!INCLUDE[win8](../../build/reference/includes/win8_md.md)]、[!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] 或 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)][!INCLUDE[win8](../../build/reference/includes/win8_md.md)]， [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)]，或 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   DirectX 11 功能層級 11.0 或更新版本的硬體  
   
@@ -236,7 +239,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="shared-memory-with-array-and-arrayview"></a>Array_view 與陣列的共用的記憶體  
  共用的記憶體是可以存取的 CPU 和快速鍵。 使用共用記憶體排除，或會大幅降低 CPU 與對應鍵之間複製資料的額外負荷。 雖然共用記憶體時，不能存取同時 CPU 和快速鍵，而且這樣做會導致未定義的行為。  
   
- `array`物件可以用來指定共用記憶體的使用更細微的控制，如果相關聯的快速鍵支援它。 快速鍵是否支援共用的記憶體由 accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)屬性，它會傳回`true`支援共用的記憶體時。 支援共用的記憶體，則為預設[access_type 列舉](reference/concurrency-namespace-enums-amp.md#access_type)記憶體加速器上的配置由`default_cpu_access_type`屬性。 根據預設，`array`和`array_view`物件需要在同一個`access_type`為相關聯的主要`accelerator`。  
+ `array` 物件可以用來指定共用記憶體的使用更細微的控制，如果相關聯的快速鍵支援它。 快速鍵是否支援共用的記憶體由 accelerator [supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)屬性，它會傳回`true`支援共用的記憶體時。 支援共用的記憶體，則為預設[access_type 列舉](reference/concurrency-namespace-enums-amp.md#access_type)記憶體加速器上的配置由`default_cpu_access_type`屬性。 根據預設，`array`和`array_view`物件需要在同一個`access_type`為相關聯的主要`accelerator`。  
   
  藉由設定[array:: cpu_access_type 資料成員](reference/array-class.md#cpu_access_type)屬性`array`明確，您可以更細緻的練習控制透過如何共用記憶體的使用，讓您可以最佳化的硬體效能的應用程式特性，根據其計算核心的記憶體存取模式。 `array_view`反映相同`cpu_access_type`為`array`與其相關聯或 array_view 建構不具資料來源，其`access_type`會反映第一次會使配置存放集區的環境。 亦即，如果主機 (CPU) 的第一次存取它，然後它會假設它所建立的 CPU 資料來源與共用`access_type`的`accelerator_view`擷取相關聯; 不過，如果是第一次存取`accelerator_view`，則它的行為會如同建立容錯移轉`array`上，建立`accelerator_view`並共用`array`的`access_type`。  
   
@@ -465,10 +468,10 @@ void MathExample() {
   
 - [短向量庫](http://msdn.microsoft.com/en-us/4c4f5bed-c396-493b-a238-c347563f645f)： 定義一組的長度為 2、 3 和 4 為基礎的短向量類型`int`， `uint`， `float`， `double`， [norm](../../parallel/amp/reference/norm-class.md)，或[unorm](../../parallel/amp/reference/unorm-class.md).  
   
-## <a name="includewin8appnamelongbuildincludeswin8appnamelongmdmd-apps"></a>[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式  
- 如同其他 c + + 程式庫中，您也可以使用 c + + AMP 中您[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]應用程式。 這些文章說明如何在應用程式包含 c + + AMP 程式碼所建立的 c + +、 C#、 Visual Basic 或 JavaScript 使用：  
+## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 應用程式  
+ 類似其他 c + + 程式庫中，您可以使用 c + + AMP UWP 應用程式中。 這些文章說明如何在應用程式包含 c + + AMP 程式碼所建立的 c + +、 C#、 Visual Basic 或 JavaScript 使用：  
   
-- [在 Windows 市集應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [在 UWP 應用程式中使用 c + + AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [逐步解說： 以 c + + 建立基本 Windows 執行階段元件，然後從 JavaScript 呼叫該](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   

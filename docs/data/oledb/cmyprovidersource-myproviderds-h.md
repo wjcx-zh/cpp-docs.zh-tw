@@ -4,34 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - myproviderds.h
 - cmyprovidersource
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d59cdb44ca6832c255ce8d553159ad19580e6a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8704a4a0733ea8bf688378953af9ff01314271d1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 提供者類別使用多重繼承。 下列程式碼顯示資料來源物件的繼承鏈結：  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // CMyProviderSource  
 class ATL_NO_VTABLE CMyProviderSource :   
@@ -44,7 +46,7 @@ class ATL_NO_VTABLE CMyProviderSource :
    public IInternalConnectionImpl<CMyProviderSource>  
 ```  
   
- 所有 COM 元件會都衍生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx`提供的所有實作**IUnknown**介面。 它可以處理任何執行緒模型。 `CComCoClass`處理所需的任何錯誤支援。 如果您想要更豐富的錯誤資訊傳送給用戶端，您可以使用某些錯誤應用程式開發介面中`CComCoClass`。  
+ 所有 COM 元件會都衍生自`CComObjectRootEx`和`CComCoClass`。 `CComObjectRootEx` 提供的所有實作**IUnknown**介面。 它可以處理任何執行緒模型。 `CComCoClass` 處理所需的任何錯誤支援。 如果您想要更豐富的錯誤資訊傳送給用戶端，您可以使用某些錯誤應用程式開發介面中`CComCoClass`。  
   
  資料來源物件也會從數個 'Impl' 類別繼承。 每個類別會提供介面的實作。 資料來源物件實作`IPersist`， `IDBProperties`， **IDBInitialize**，和**IDBCreateSession**介面。 每個介面會實作所需 OLE db 資料來源物件。 您可以選擇支援或不支援繼承，或不繼承自其中一個 'Impl' 類別的特定功能。 如果您想要支援**IDBDataSourceAdmin**介面，繼承自**IDBDataSourceAdminImpl**類別，以取得所需的功能。  
   

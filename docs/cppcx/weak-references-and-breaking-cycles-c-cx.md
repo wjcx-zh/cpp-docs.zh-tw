@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5adb4f2376213d2c297b40f82382261fcf961349
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3a98dc4dd43b40f378a91713770c4c5500c790d0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>弱式參考與中斷循環 (C++/CX)
 以參考計數為基礎的類型系統有一個問題，就是對類型的參考會形成「 *循環*」(Cycles)，也就是說，一個物件參考第二個物件、第二個參考第三個物件，以此類推，直到某個最終物件再度參考第一個物件。 在循環中，當一個物件的參考計數變成零時，將無法正確刪除物件。 若要協助您解決這個問題，C + + /CX 提供[platform:: weakreference 類別](../cppcx/platform-weakreference-class.md)類別。 `WeakReference` 物件支援 [Resolve](../cppcx/platform-weakreference-class.md#resolve) 方法。如果物件不再存在，這個方法會傳回 null；如果物件存在但其類型不是 [，則會擲回](../cppcx/platform-invalidcastexception-class.md) Platform::InvalidCastException `T`。  

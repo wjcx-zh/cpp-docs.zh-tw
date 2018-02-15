@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbset
 - _mbsnbset_l
@@ -28,7 +29,8 @@ f1_keywords:
 - mbsnbset_l
 - _mbsnbset
 - _mbsnbset_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - tcsnset function
 - _tcsnset_l function
@@ -39,22 +41,23 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9f868cdf5d0200df174c5df3629b5578dbf06d31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c98745ae2d995dea5a65caab55cc7e45172a9f53
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset、_mbsnbset_l
 將多位元組字元字串的前 `n` 個位元組設定為指定的字元。 這些函式已有更安全的版本可用，請參閱 [_mbsnbset_s、_mbsnbset_s_l](../../c-runtime-library/reference/mbsnbset-s-mbsnbset-s-l.md)。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -89,9 +92,9 @@ unsigned char *_mbsnbset_l(
  `_mbsnbset` 會傳回變更後字串的指標。  
   
 ## <a name="remarks"></a>備註  
- `_mbsnbset` 和 `_mbsnbset_l` 函式會將 `str` 的最多前 `count` 個位元組設為 `c`。 如果 `count` 大於 `str` 的長度，則會使用 `str` 的長度，而非 `count`。 如果 `c` 是多位元組字元，而且無法將其完全設定到 `count` 所指定的最後一個位元組，則此最後一個位元組會以空白的字元填補。 `_mbsnbset`和`_mbsnbset_l`並不會終止 null 結尾的`str`。  
+ `_mbsnbset` 和 `_mbsnbset_l` 函式會將 `str` 的最多前 `count` 個位元組設為 `c`。 如果 `count` 大於 `str` 的長度，則會使用 `str` 的長度，而非 `count`。 如果 `c` 是多位元組字元，而且無法將其完全設定到 `count` 所指定的最後一個位元組，則此最後一個位元組會以空白的字元填補。 `_mbsnbset` 和`_mbsnbset_l`並不會終止 null 結尾的`str`。  
   
- `_mbsnbset`和`_mbsnbset_l`類似於`_mbsnset`，只不過它會設定`count`位元組而非`count`字元`c`。  
+ `_mbsnbset` 和`_mbsnbset_l`類似於`_mbsnset`，只不過它會設定`count`位元組而非`count`字元`c`。  
   
  如果 `str` 是 `NULL`，或 `count` 為零，則此函式會產生無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行， `errno` 會設為 `EINVAL` ，且此函式會傳回 `NULL`。 此外，如果 `c` 不是有效的多位元組字元，則會將 `errno` 設為 `EINVAL`，並改用一個空格。  
   

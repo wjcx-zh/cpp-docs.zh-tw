@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs: C++
-helpviewer_keywords: Platform::COMException Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 類別
 代表應用程式執行期間所發生的 COM 錯誤。 COMException 是一組預先定義的標準例外狀況所適用的基底類別。  
@@ -55,8 +58,8 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
 |成員|描述|  
 |------------|-----------------|  
-|[Exception:: hresult](#hresult)|對應於例外狀況的 HRESULT。|  
-|[Exception:: message](#message)|說明例外狀況的訊息。|  
+|[Exception::HResult](#hresult)|對應於例外狀況的 HRESULT。|  
+|[Exception::Message](#message)|說明例外狀況的訊息。|  
   
 ## <a name="derived-exceptions"></a>衍生的例外狀況  
  下列預先定義的例外狀況衍生自 COMException。 它們與 COMException 的差異，僅在於其名稱、其建構函式的名稱以及其基礎 HRESULT 值。  
@@ -86,7 +89,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **中繼資料：** platform.winmd  
 
-## <a name="ctor"></a>Comexception:: Comexception 建構函式
+## <a name="ctor"></a> COMException::COMException Constructor
 初始化 COMException 類別的新執行個體。  
   
 ### <a name="syntax"></a>語法  
@@ -101,7 +104,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a>Comexception:: Hresult 屬性
+## <a name="hresult"></a> COMException::HResult Property
 對應於例外狀況的 HRESULT。  
   
 ### <a name="syntax"></a>語法  
@@ -116,7 +119,7 @@ public:property int HResult {    int get();}
 ### <a name="remarks"></a>備註  
  如需如何解譯 HRESULT 值的詳細資訊，請參閱[結構 COM 錯誤碼的](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
 
-## <a name="message"></a>Comexception:: Message 屬性
+## <a name="message"></a> COMException::Message Property
 說明例外狀況的訊息。  
   
 ### <a name="syntax"></a>語法  

@@ -6,19 +6,21 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: collection/Platform::Collections::UnorderedMap
+ms.topic: reference
+f1_keywords:
+- collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8b2266e43f3168fca823147f4c2c7e2c33513343
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 類別
 
@@ -102,7 +104,7 @@ ref class Map sealed;
 
 **命名空間：** Platform::Collections
 
-## <a name="clear"></a>Unorderedmap:: Clear 方法
+## <a name="clear"></a>  Unorderedmap:: Clear 方法
 
 從目前 UnorderedMap 物件移除所有機碼值組。
 
@@ -112,7 +114,7 @@ ref class Map sealed;
 virtual void Clear();
 ```
 
-## <a name="first"></a>Unorderedmap:: First 方法
+## <a name="first"></a>  Unorderedmap:: First 方法
 
 傳回指定第一個迭代器[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)未排序對應中的項目。
 
@@ -132,7 +134,7 @@ virtual Windows::Foundation::Collections::IIterator<
 
 若要保留 first （） 所傳回的迭代器的簡便方法是宣告的變數指派傳回值**自動**型别推斷關鍵字。 例如，`auto x = myUnorderedMap->First();`。
 
-## <a name="getview"></a>Unorderedmap:: Getview 方法
+## <a name="getview"></a>  Unorderedmap:: Getview 方法
 
 傳回目前 UnorderedMap 的唯讀檢視也就是說， [Platform::Collections::UnorderedMapView 類別](../cppcx/platform-collections-unorderedmapview-class.md)實作[Windows::Foundation::Collections::IMapView::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx)介面。
 
@@ -146,7 +148,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `UnorderedMapView` 物件。
 
-## <a name="haskey"></a>Unorderedmap:: Haskey 方法
+## <a name="haskey"></a>  Unorderedmap:: Haskey 方法
 
 判斷目前 UnorderedMap 是否包含指定的機碼。
 
@@ -190,9 +192,9 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>傳回值
 
-`true`如果目前 Map 中現有項目的機碼符合*金鑰*，而且該項目的值部分設定為*值*。 `false`如果目前 Map 中的沒有任何現有項目符合*金鑰*和*金鑰*和*值*參數會成為索引鍵-值組，而且接著加入目前 UnorderedMap。
+`true` 如果目前 Map 中現有項目的機碼符合*金鑰*，而且該項目的值部分設定為*值*。 `false` 如果目前 Map 中的沒有任何現有項目符合*金鑰*和*金鑰*和*值*參數會成為索引鍵-值組，而且接著加入目前 UnorderedMap。
 
-## <a name="lookup"></a>Unorderedmap:: Lookup 方法
+## <a name="lookup"></a>  Unorderedmap:: Lookup 方法
 
 取得與類型為 K 之指定機碼相關聯且類型為 V 的值。
 
@@ -229,9 +231,9 @@ A [Mapchangedeventhandler<k\<K，V >](http://msdn.microsoft.com/library/windows/
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
-Windows 市集應用程式使用 C# 或 Visual Basic 專案 Imap<k\<K，V > 做為 Idictionary<k\<K，V >。
+Windows 執行階段應用程式使用 C# 或 Visual Basic 專案 Imap<k\<K，V > 做為 Idictionary<k\<K，V >。
 
-## <a name="remove"></a>Unorderedmap:: Remove 方法
+## <a name="remove"></a>  Unorderedmap:: Remove 方法
 
 從目前 UnorderedMap 物件中刪除指定的機碼值組。
 
@@ -247,7 +249,7 @@ virtual void Remove(
 *key*  
 機碼值組的機碼部分。 型別*金鑰*為 typename *K*。
 
-## <a name="size"></a>Unorderedmap:: Size 方法
+## <a name="size"></a>  Unorderedmap:: Size 方法
 
 傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx) UnorderedMap 中的項目。
 

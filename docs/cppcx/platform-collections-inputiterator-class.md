@@ -6,21 +6,25 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
-f1_keywords: COLLECTION/Platform::Collections::InputIterator::InputIterator
-dev_langs: C++
-helpviewer_keywords: InputIterator Class
+ms.topic: reference
+f1_keywords:
+- COLLECTION/Platform::Collections::InputIterator::InputIterator
+dev_langs:
+- C++
+helpviewer_keywords:
+- InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 類別
 衍生自 Windows 執行階段的集合提供標準樣板程式庫 InputIterator。  
@@ -44,15 +48,15 @@ class InputIterator;
 |----------|-----------------|  
 |`difference_type`|指標差異 (ptrdiff_t)。|  
 |`iterator_category`|輸入迭代器的類別 (::std::input_iterator_tag)。|  
-|`pointer`|指標`const X`|  
-|`reference`|參考`const X`|  
+|`pointer`|指標 `const X`|  
+|`reference`|參考 `const X`|  
 |`value_type`|`X` typename。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Inputiterator:: Inputiterator](#ctor)|初始化 InputIterator 類別的新執行個體。|  
+|[InputIterator::InputIterator](#ctor)|初始化 InputIterator 類別的新執行個體。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -72,7 +76,7 @@ class InputIterator;
   
  **命名空間：** Platform::Collections  
 
-## <a name="ctor"></a>Inputiterator:: Inputiterator 建構函式
+## <a name="ctor"></a>  Inputiterator:: Inputiterator 建構函式
 初始化 InputIterator 類別的新執行個體。  
   
 ### <a name="syntax"></a>語法  
@@ -88,7 +92,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>Inputiterator:: Operator-&gt;運算子
+## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
 擷取目前 InputIterator 指定的項目位址。  
   
 ### <a name="syntax"></a>語法  
@@ -102,7 +106,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>Inputiterator:: Operator * 運算子
+## <a name="operator-dereference"></a>  InputIterator::operator* Operator
 擷取目前 InputIterator 指定之項目的參考。  
   
 ### <a name="syntax"></a>語法  
@@ -116,7 +120,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>Inputiterator:: Operator = = 運算子
+## <a name="operator-equality"></a>  InputIterator::operator== Operator
 指出目前 InputIterator 是否等於指定的 InputIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -134,7 +138,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>Inputiterator:: Operator + + 運算子
+## <a name="operator-increment"></a>  InputIterator::operator++ Operator
 遞增目前 InputIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -154,7 +158,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>Inputiterator:: Operator ！ = 運算子
+## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
 指出目前 InputIterator 是否不等於指定的 InputIterator。  
   
 ### <a name="syntax"></a>語法  

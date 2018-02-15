@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空間和類型可視性 (C++/CX)
 命名空間是標準 C++ 建構，可將具有相關功能的類型組合在一起，並防止程式庫中發生名稱衝突。 Windows 執行階段類型系統會要求所有 Windows 執行階段的公用類型，包括您自己的程式碼中，必須都宣告在命名空間範圍的命名空間中。 在全域範圍中宣告或以巢狀方式存在於其他類別中的公用型別會造成編譯時期錯誤。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |private|預設存取範圍。 等同於在 Standard C++ 中。|否|  
 |protected|等同於在 Standard C++ 中，同時在應用程式 (或元件) 和中繼資料內。|是|  
 |public|等同於在 Standard C++ 中。|[是]|  
-|`public protected`-或者-`protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|[是]|  
+|`public protected` -or- `protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|[是]|  
 |`protected private` 或 `private protected`|在中繼資料內是不可見的，在應用程式或元件內為受保護存取範圍。||  
 |`internal` 或 `private public`|此成員在應用程式或元件內是公用的，但是在中繼資料內是不可見的。|否|  
   

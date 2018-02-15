@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mktime32
 - mktime
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33ab39945526ac2f53eab653ec374856953fc27e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ee2673f98f219559fd42d192dd934c8fe3eaed8c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime、_mktime32、_mktime64
 將當地時間轉換成月曆值。  
@@ -73,7 +76,7 @@ __time64_t _mktime64(
 ## <a name="return-value"></a>傳回值  
  `_mktime32` 會傳回指定的月曆時間，並編碼為 [time_t](../../c-runtime-library/standard-types.md) 類型的值。 如果*timeptr*參考 1970 年 1 月 1 日的午夜之前的日期或如果無法表示月曆時間，`_mktime32`傳回-1 轉換為類型`time_t`。 當使用`_mktime32`如果*timeptr*參考的日期之後 23:59:59 2038 年 1 月 18 日，Coordinated Universal Time (UTC)，它會傳回-1 轉換為類型`time_t`。  
   
- `_mktime64`會傳回-1 轉換為類型`__time64_t`如果*timeptr*參考 23:59:59，3000 年 12 月 31 日 UTC 之後的日期。  
+ `_mktime64` 會傳回-1 轉換為類型`__time64_t`如果*timeptr*參考 23:59:59，3000 年 12 月 31 日 UTC 之後的日期。  
   
 ## <a name="remarks"></a>備註  
  `mktime`、`_mktime32` 和 `_mktime64` 函式會將 *timeptr* 所指向的指定時間結構 (可能不完整)，轉換為具有標準化值的完整定義結構，然後將該結構轉換為 `time_t` 月曆時間值。 轉換後的時間和 [time](../../c-runtime-library/reference/time-time32-time64.md) 函式傳回的值具有相同的編碼。 會略過 *timeptr* 結構中 `tm_wday` 和 `tm_yday` 元件的原始值，且不會限制其他元件的原始值在其正確範圍中。  

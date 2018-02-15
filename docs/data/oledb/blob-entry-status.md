@@ -1,47 +1,40 @@
 ---
-title: "BLOB_ENTRY_STATUS |Microsoft 文件"
+title: BLOB_ENTRY_STATUS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: BLOB_ENTRY_STATUS
-dev_langs: C++
-helpviewer_keywords: BLOB_ENTRY_STATUS macro
+f1_keywords:
+- BLOB_ENTRY_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- BLOB_ENTRY_STATUS macro
 ms.assetid: 191007f4-dfcc-4ae2-a7fc-6f7899accc9f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 61bbc537f74813c266cd3a5652251005818516df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 465d8ab8ddfce53131307ca4910a89882142c687
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="blobentrystatus"></a>BLOB_ENTRY_STATUS
 搭配`BEGIN_COLUMN_MAP`或`BEGIN_ACCESSOR_MAP`繫結的二進位大型物件 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過此巨集也會取得 BLOB 資料行的狀態。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-BLOB_ENTRY_STATUS(  
-nOrdinal  
-,   
-IID  
-,   
-flags  
-,   
-data  
-,   
-status  
- )  
+```cpp
+BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)  
   
 ```  
   

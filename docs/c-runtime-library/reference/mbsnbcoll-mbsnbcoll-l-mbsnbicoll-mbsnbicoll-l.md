@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mbsnbicoll_l
 - _mbsnbcoll_l
@@ -34,7 +35,8 @@ f1_keywords:
 - _ftcsnicoll
 - _ftcsncoll
 - mbsnbcoll_l
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mbsnbcoll_l function
 - mbsnbcoll_l function
@@ -49,22 +51,23 @@ helpviewer_keywords:
 - tcsncoll function
 - tcsnicoll function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b0ab65644f4a7bcb93ceb2156a5354a81358e47c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0e2c83f9c5d6ccc39b9eadda8f561c63ff91117f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l
 使用多位元組字碼頁資訊，比較兩個多位元組字元字串的 `n` 個位元組。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -117,7 +120,7 @@ int _mbsnbicoll_l(
 ## <a name="remarks"></a>備註  
  所有這些函式最多會對照 `string1` 和 `string2` 中的前 `count` 個位元組，並傳回指出所產生的 `string1` 子字串和 `string2` 子字串之間關聯性的值。 如果 `string1` 子字串或 `string2` 子字串中的最後一個位元組是前導位元組，則不會包含在比較中；這些函式只會比較子字串中的字元。 `_mbsnbicoll` 是不區分大小寫版本的 `_mbsnbcoll`。 如同 `_mbsnbcmp` 和 `_mbsnbicmp`，`_mbsnbcoll` 和 `_mbsnbicoll` 會根據目前使用的多位元組[字碼頁](../../c-runtime-library/code-pages.md)所指定的詞典編纂順序，來對照兩個多位元組字元字串。  
   
- 針對某些字碼頁和對應的字元集，字元集中的字元順序可能與詞典編纂的字元順序不同。 在 "C" 地區設定中則不然：ASCII 字元集中的字元順序會與詞典編纂的字元順序相同。 不過，在某些歐洲字碼頁中，例如，字元 'a' （值 0x61） 前面的字元 'ä' （值 0xE4） 中的字元設定，但字元 'ä' 前面的字元 'a' 辭典編纂順序。 若要在此情況下逐字元組執行字串的詞典編纂比較，請使用 `_mbsnbcoll` 而不是 `_mbsnbcmp`；若只要檢查字串是否相等，請使用 `_mbsnbcmp`。  
+ 針對某些字碼頁和對應的字元集，字元集中的字元順序可能與詞典編纂的字元順序不同。 在 "C" 地區設定中則不然：ASCII 字元集中的字元順序會與詞典編纂的字元順序相同。 不過，某些歐洲字碼頁中的字元順序卻不同，例如，字元 'a' (值 0x61) 在字元集中排在字元 'ä' (值 0xE4) 之前，但在詞典編纂上，字元 'a' 卻排在字元 'ä' 之後。 若要在此情況下逐字元組執行字串的詞典編纂比較，請使用 `_mbsnbcoll` 而不是 `_mbsnbcmp`；若只要檢查字串是否相等，請使用 `_mbsnbcmp`。  
   
  因為 `coll` 函式會以詞典編纂方式對照字串以進行比較，而 `cmp` 函式只會測試字串是否相等，所以 `coll` 函式比對應的 `cmp` 版本慢很多。 因此，只有在字元集順序與目前字碼頁中的字典編纂字元順序不同時，以及比較注意這項差異時，才應該使用 `coll` 函式。  
   

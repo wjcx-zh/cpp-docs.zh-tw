@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0dc7610b56d55fc5d42a0c4b73a5405be3d4dda9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>編譯器和連結器選項 (C++/CX)
 環境變數，C + + /CX 編譯器選項和連結器選項均支援的應用程式建置為 Windows 執行階段。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |選項|描述|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|將可執行檔標記為可在 appcontainer 中執行 (僅限)。|  
-|/ WINMD [: {否 &#124; 僅}]|發出 .winmd 檔案和相關聯的二進位檔。 這個選項必須傳遞至連結器，才能發出 .winmd。<br /><br /> **NO**- 不發出 .winmd 檔案，但發出二進位檔案。<br /><br /> **ONLY**- 發出 .winmd 檔案，但不發出二進位檔案。|  
+|/WINMD[:{NO&#124;ONLY}]|發出 .winmd 檔案和相關聯的二進位檔。 這個選項必須傳遞至連結器，才能發出 .winmd。<br /><br /> **NO**- 不發出 .winmd 檔案，但發出二進位檔案。<br /><br /> **ONLY**- 發出 .winmd 檔案，但不發出二進位檔案。|  
 |/WINMDFILE:*檔案名稱*|要發出的 .winmd 檔案名稱，而不是預設 .winmd 檔案名稱。 如果命令列上指定多個檔案名稱，則會使用最後一個名稱。|  
 |/WINMDDELAYSIGN[:NO]|部分簽署 .winmd 檔案，並將公開金鑰放在二進位檔中。<br /><br /> **NO**- (預設值) 不簽署 .winmd 檔案。<br /><br /> 除非同時指定 /WINMDKEYFILE 或 /WINMDKEYCONTAINER，否則 /WINMDDELAYSIGN 沒有作用。|  
 |/WINMDKEYCONTAINER:*name*|指定用於簽署組件的金鑰容器。 *name* 參數對應至用於簽署中繼資料檔的金鑰容器。|  

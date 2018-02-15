@@ -1,29 +1,31 @@
 ---
-title: "逐步解說： 建立使用 WRL 和媒體基礎的 Windows 市集應用程式 |Microsoft 文件"
+title: "逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>逐步解說：使用 WRL 和媒體基礎建立 Windows 市集應用程式
-了解如何建立通用 Windows 平台應用程式會使用 Windows 執行階段 c + + 樣板程式庫 (WRL) [Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
+# <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式
+了解如何建立通用 Windows 平台 (UWP) 應用程式會使用 Windows 執行階段 c + + 樣板程式庫 (WRL) [Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
   
  這個範例會建立自訂的媒體基礎轉換，可將灰階效果套用到從網路攝影機擷取的映像。 應用程式會使用 C++ 定義自訂的轉換，並使用 C# 以使用元件來轉換擷取的映像。  
   
@@ -59,13 +61,13 @@ ms.lasthandoff: 12/21/2017
   
 -   將您的元件 DLL 連結至 runtimeobject.lib。 也指定[/WINMD](../cppcx/compiler-and-linker-options-c-cx.md)產生 Windows 中繼資料的連結器列。  
   
--   若要使 WRL 元件可供通用 Windows 平台應用程式存取使用專案參考。  
+-   讓 UWP 應用程式都能存取 WRL 元件使用專案參考。  
   
 ### <a name="to-use-the-wrl-to-create-the-media-foundation-grayscale-transform-component"></a>若要使用 WRL 建立媒體基礎灰階轉換元件  
   
 1.  在 Visual Studio 中建立**空白方案**專案。 為專案命名，例如`MediaCapture`。  
   
-2.  新增**DLL （Windows 市集應用程式）**專案加入方案。 為專案命名，例如`GrayscaleTransform`。  
+2.  新增**DLL (通用 Windows)**專案加入方案。 為專案命名，例如`GrayscaleTransform`。  
   
 3.  新增**Midl 檔 (.idl)**檔案加入專案中。 為檔案命名，例如`GrayscaleTransform.idl`。  
   

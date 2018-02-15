@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>並行執行階段概觀
 本文件提供並行執行階段的總覽。 內容描述並行執行階段的優點、使用時機，以及其元件如何與彼此、與作業系統及應用程式互動。  
@@ -42,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Requirements](#requirements)  
   
-##  <a name="runtime"></a>並行執行階段之所以重要的原因  
+##  <a name="runtime">並行執行階段之所以重要的原因</a>  
  並行執行階段為同時執行的應用程式與應用程式元件提供一致性和可預測性。 有兩個並行執行階段的優點例子*合作式工作排程*和*合作式封鎖*。  
   
  並行執行階段會使用實作工作竊取演算法的合作式工作排程器，有效率地在運算資源之間分散工作。 例如，假設有個應用程式具有兩個執行緒，且都是由相同的執行階段管理。 如果一個執行緒完成其排定工作，它便可以從另一個執行緒卸載工作。 這項機制可在應用程式的整體工作負載之間取得平衡。  
@@ -59,7 +62,7 @@ ms.lasthandoff: 12/21/2017
  ![並行執行階段架構](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")  
   
 > [!IMPORTANT]
->  工作排程器和資源管理員元件無法從 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式取得，當您使用 task 類別或 ppltasks.h 中的其他類型時也無法使用。  
+>  無法使用從通用 Windows 平台 (UWP) 應用程式，或當您使用 task 類別或其他類型 ppltasks.h 中的工作排程器和資源管理員元件。  
   
  並行執行階段強烈*組合*，也就是說，您可以結合現有的功能，執行其他動作。 並行執行階段會組合來自較低層級元件的許多功能，例如平行演算法。  
   
@@ -95,7 +98,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="lambda"></a>C + + Lambda 運算式  
+##  <a name="lambda">C + + Lambda 運算式</a>  
  並行執行階段所定義的許多類型和演算法會實作為 C++ 範本。 其中有些類型和演算法需要執行工作的常式做為參數。 這個參數可以是 Lambda 函式、函式物件或函式指標。 這些實體也稱為*工作函式*或*處理常式*。  
   
  Lambda 運算式是一項重要的新 Visual C++ 語言功能，因為此運算式提供簡潔的方式來定義平行處理用的工作函式。 函式物件和函式指標可讓您使用並行執行階段搭配現有的程式碼。 不過，我們建議您在撰寫新程式碼時使用 Lambda 運算式，因為它們提供安全性和產能優勢。  

@@ -1,46 +1,40 @@
 ---
-title: "COLUMN_NAME_PS_STATUS |Microsoft 文件"
+title: COLUMN_NAME_PS_STATUS | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: COLUMN_NAME_PS_STATUS
-dev_langs: C++
-helpviewer_keywords: COLUMN_NAME_PS_STATUS macro
+f1_keywords:
+- COLUMN_NAME_PS_STATUS
+dev_langs:
+- C++
+helpviewer_keywords:
+- COLUMN_NAME_PS_STATUS macro
 ms.assetid: 134e1bfe-abfa-4b64-9159-e492f31de44b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a773891e7a3a0a623d10e8eb55069bf46fc10f21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e28307fbc42dbee793fdbb60f2c466d863ac6b2b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="columnnamepsstatus"></a>COLUMN_NAME_PS_STATUS
 表示資料列集中的特定資料行之繫結的資料列集。 類似於[COLUMN_NAME](../../data/oledb/column-name.md)，只不過此巨集也會採用有效位數、 小數位數和資料行的狀態。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-COLUMN_NAME_PS_STATUS(  
-pszName  
-,   
-nPrecision  
-,   
-nScale  
-,   
-data  
-,   
-status )  
+```cpp
+COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )  
 ```  
   
 #### <a name="parameters"></a>參數  

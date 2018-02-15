@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18fb141ab1000d8befda2370f993a5d5ee06d973
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 446f2c4f18f68a4a52614397b697409d34b958de
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="properties-ccx"></a>屬性 (C++/CX)
 Windows 執行階段類型將公用資料公開為屬性。 用戶端程式碼可將此屬性視為公用 Datamember 加以存取。 此屬性在內部可實作為包含 get 存取子方法和 (或) set 存取子方法的區塊。 使用存取子方法，可讓您在擷取值之前或之後執行其他動作，例如，您可以引發事件或執行驗證檢查。  

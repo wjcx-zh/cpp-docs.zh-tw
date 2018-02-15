@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data access [C++], XML data
 - XML [C++], accessing data
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9379abfd27f4dd8297864160f35367da0727935
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="accessing-xml-data"></a>存取 XML 資料
 有兩種不同的方法，從資料來源擷取 XML 資料： 一個是使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md)和其他用途[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。  
@@ -53,7 +55,7 @@ CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
 ```  
   
- 通常當您呼叫`CCommand::Open`(例如，指定`CRowset`為`TRowset`類別)，它會取得`IRowset`指標。 `ICommand::Execute`傳回`IRowset`指標，它會儲存在`m_spRowset`隸屬`CRowset`物件。 這類方法`MoveFirst`， `MoveNext`，和`GetData`使用該指標來擷取資料。  
+ 通常當您呼叫`CCommand::Open`(例如，指定`CRowset`為`TRowset`類別)，它會取得`IRowset`指標。 `ICommand::Execute` 傳回`IRowset`指標，它會儲存在`m_spRowset`隸屬`CRowset`物件。 這類方法`MoveFirst`， `MoveNext`，和`GetData`使用該指標來擷取資料。  
   
  相反地，當您呼叫`CCommand::Open`(但指定`CStreamRowset`為`TRowset`類別)，`ICommand::Execute`傳回`ISequentialStream`指標，它會儲存在`m_spStream`資料成員[CStreamRowset](../../data/oledb/cstreamrowset-class.md). 然後使用`Read`方法來擷取 XML 格式 （Unicode 字串） 資料。 例如:   
   
@@ -69,7 +71,7 @@ myCmd.m_spStream->Read()
 >  XML 支援使用`CStreamRowset`只適用於 SQL Server 2000，而且需要 SQL Server 2000 （安裝 MDAC） 的 OLE DB 提供者。  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>使用 CXMLAccessor 擷取 XML 資料  
- [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)可讓您存取資料從資料來源，以字串資料時有不知道資料存放區的結構描述。 `CXMLAccessor`運作方式類似`CDynamicStringAccessorW`不同之處在於前者會將轉換從資料存放區做為 XML 格式 （標記） 的資料存取的所有資料。 XML 標記名稱會儘可能密集地符合資料存放區的資料行名稱。  
+ [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)可讓您存取資料從資料來源，以字串資料時有不知道資料存放區的結構描述。 `CXMLAccessor` 運作方式類似`CDynamicStringAccessorW`不同之處在於前者會將轉換從資料存放區做為 XML 格式 （標記） 的資料存取的所有資料。 XML 標記名稱會儘可能密集地符合資料存放區的資料行名稱。  
   
  使用`CXMLAccessor`如同任何其他存取子類別，將它傳遞為範本參數，以`CCommand`或`CTable`:  
   
@@ -82,7 +84,8 @@ CTable<CXMLAccessor, CRowset> rs;
 ```  
 // Open data source, session, and rowset  
 hr = rs.MoveFirst();  
-while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
+
+while(SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )  
 {  
     CStringW strRowData;  
     myCmd.GetXMLRowData(strRowData);  

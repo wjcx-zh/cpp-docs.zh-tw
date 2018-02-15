@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/27/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b2206151f68e02ebadbfab5785a7a1e90be67468
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: b204783e3b2c418e5e719ca5c6efcf9c2d31c6df
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 01/22/2018
 
 您可以使用 Visual C++ 開發數種廣泛的 Windows 應用程式分類。 這些分類有不同的程式設計模型或應用程式模型，也就是說它們使用不同的程式庫和 API，提供平台存取和使用者介面。
 
-- [Windows 通用應用程式](#BK_WindowsUniversal)。 Windows 應用程式的第三個分類在 Windows 8 中引入，並在 Windows 10 中繼續支援這類應用程式。 這些應用程式經常只稱為「Windows 應用程式」，而且其中包含以各種裝置為目標的桌上型電腦和行動應用程式。 您可以用 C++/CX 撰寫這些應用程式，這是包含 Windows 執行階段開發支援的 C++ 方言，或是使用標準 C++ 搭配使用 Windows 執行階段程式庫 (WRL) 的 COM 來撰寫。 這些應用程式原本專為全螢幕執行而設計，但是在 Windows 10 使用者可以選擇在桌面視窗中執行它們。 這些應用程式是觸控式導向，但如果使用者偏好的話，或是無法使用觸控式螢幕的情況，也很容易可用滑鼠來操作。 這些應用程式從 Windows 市集散發，因此它們被稱為「Windows 市集應用程式」。
+- [Windows 通用應用程式](#BK_WindowsUniversal)。 Windows 應用程式的第三個分類在 Windows 8 中引入，並在 Windows 10 中繼續支援這類應用程式。 這些應用程式經常只稱為「Windows 應用程式」，而且其中包含以各種裝置為目標的桌上型電腦和行動應用程式。 您可以用 C++/CX 撰寫這些應用程式，這是包含 Windows 執行階段開發支援的 C++ 方言，或是使用標準 C++ 搭配使用 Windows 執行階段程式庫 (WRL) 的 COM 來撰寫。 這些應用程式原本專為全螢幕執行而設計，但是在 Windows 10 使用者可以選擇在桌面視窗中執行它們。 這些應用程式是觸控式導向，但如果使用者偏好的話，或是無法使用觸控式螢幕的情況，也很容易可用滑鼠來操作。 這些應用程式會從 Microsoft 存放區，因此它們被稱為 「 市集 」 應用程式散發。
 
 - [桌面、伺服器和雲端應用程式與遊戲](#BK_Native)。 這個分類包括 Windows 桌面應用程式，有時也稱為 Win32 應用程式，因為這些應用程式在 Windows 8 之前使用 Win32 API，所有的 Windows 應用程式過去都在此分類中。 此分類中的應用程式可以使用 MFC 處理使用者介面，使用 ATL 與 Windows 元件 (通常是 COM 物件) 進行互動。
 
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/22/2018
 使用 Windows 10，應用程式能夠在所有 Windows 10 裝置如平板電腦和行動電話，以及在桌上型電腦上執行。 在桌上型電腦，它們能夠以桌面視窗執行，而不是永遠以全螢幕方式執行。 在 Xbox 和未來的裝置上，也可以執行這些應用程式。  兩種應用程式類型的程式設計模型與 Win32 桌面應用程式不同。 這些 Windows 應用程式是在 Windows 執行階段上執行，後者提供使用者介面項目、這些應用程式的基本服務，並提供與受支援之各種硬體裝置的介面。 這些應用程式編譯為原生程式碼，且具有 XAML 使用者介面，或使用 DirectX。 您也可以在其他 Windows 應用程式可以取用的原生程式碼中撰寫 Windows 執行階段元件，包括以 C#、 Visual Basic 或 JavaScript 撰寫的應用程式。 如需詳細資訊，請參閱[在 c + + 中建立的 UWP"Hello world"應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)，[使用 DirectX 建立簡單的 UWP 遊戲](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game)，和[c + + 中的建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 > [!TIP]
-> 適用於 Windows 10 中，您可以使用桌面應用程式轉換工具來封裝您現有的桌面應用程式以透過 Windows 市集的部署。 如需詳細資訊，請參閱 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (在 Centennial 專案中使用 Visual C++ 執行階段) 和[使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)。
+> 適用於 Windows 10 中，您可以使用桌面應用程式轉換工具來封裝您現有的桌面應用程式以透過 Microsoft 市集部署。 如需詳細資訊，請參閱 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (在 Centennial 專案中使用 Visual C++ 執行階段) 和[使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)。
 
 如需通用 Windows 平台範例，請參閱 [GitHub 上的 Windows 通用範例](https://github.com/Microsoft/Windows-universal-samples)
 

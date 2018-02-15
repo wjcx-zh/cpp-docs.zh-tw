@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CAccessorBase
-dev_langs: C++
-helpviewer_keywords: CAccessorBase class
+f1_keywords:
+- CAccessorBase
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessorBase class
 ms.assetid: 389b65be-11ca-4ae0-9290-60c621c4982b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9b7c12430c4e7a6872afd46e72e93a29a3189333
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f57c771f0d129683bde0629f9c28cfbaa897ee4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 類別
-OLE DB 樣板中的所有存取子是衍生自這個類別。 `CAccessorBase`可讓一個資料列集來管理多個存取子。 它也會提供繫結參數和輸出資料行。  
+OLE DB 樣板中的所有存取子是衍生自這個類別。 `CAccessorBase` 可讓一個資料列集來管理多個存取子。 它也會提供繫結參數和輸出資料行。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 // Replace with syntax  
 ```  
   

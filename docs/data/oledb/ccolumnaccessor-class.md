@@ -4,58 +4,61 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CColumnAccessor
 - ATL::CColumnAccessor
 - ATL.CColumnAccessor
-dev_langs: C++
-helpviewer_keywords: CColumnAccessor class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CColumnAccessor class
 ms.assetid: 6ce1e67f-6a20-490d-9326-c168b43eee7e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 55c77a53cb6e6c4a103c509aa3d527803d91af3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73463530c7c769f63b70f74cabbf73affeaa011b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ccolumnaccessor-class"></a>CColumnAccessor 類別
 產生插入的消費者程式碼。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 class CColumnAccessor : public CAccessorBase  
 ```  
   
 ## <a name="remarks"></a>備註  
  插入程式碼中，每個資料行繫結為個別的存取子。 您應該注意在插入程式碼會使用這個類別 （例如，您可能會遇到它進行偵錯時），但您通常不必直接使用它或它的方法。  
   
- `CColumnAccessor`會實作下列的虛設常式方法，其中每一個都對應到其他存取子類別方法的功能：  
+ `CColumnAccessor` 會實作下列的虛設常式方法，其中每一個都對應到其他存取子類別方法的功能：  
   
--   `CColumnAccessor`建構函式。執行個體化並初始化`CColumnAccessor`物件。  
+-   `CColumnAccessor` 建構函式。執行個體化並初始化`CColumnAccessor`物件。  
   
--   `CreateAccessor`資料行繫結結構配置記憶體並初始化的資料行的資料成員。  
+-   `CreateAccessor` 資料行繫結結構配置記憶體並初始化的資料行的資料成員。  
   
 -   **BindColumns**至存取子繫結資料行。  
   
 -   **SetParameterBuffer**參數用來配置緩衝區。  
   
--   `AddParameter`將參數項目加入至參數項目結構。  
+-   `AddParameter` 將參數項目加入至參數項目結構。  
   
 -   **HasOutputColumns**判斷存取子是否有輸出資料行  
   
 -   **HasParameters**判斷存取子是否有參數。  
   
--   `BindParameters`將建立的參數繫結至資料行。  
+-   `BindParameters` 將建立的參數繫結至資料行。  
   
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  

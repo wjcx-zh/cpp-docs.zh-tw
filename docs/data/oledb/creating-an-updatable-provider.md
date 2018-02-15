@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, updatable
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d65bce2b262b7582f9194eb8047d71ce06f3ca16
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-an-updatable-provider"></a>建立可更新的提供者
 Visual c + + 支援可更新的提供者或可更新的提供者 （寫入） 資料存放區。 本主題討論如何建立可更新的提供者使用 OLE DB 樣板。  
@@ -36,7 +38,7 @@ Visual c + + 支援可更新的提供者或可更新的提供者 （寫入） �
 > [!NOTE]
 >  UpdatePV 是可更新的提供者的範例。 為 MyProv，但具有可更新的支援 UpdatePV 都是相同的。  
   
-##  <a name="vchowmakingprovidersupdatable"></a>讓提供者可更新  
+##  <a name="vchowmakingprovidersupdatable"></a> 讓提供者可更新  
  讓提供者可更新的索引鍵了解您想要您的提供者在資料存放區和方式想要執行這些作業的提供者上執行哪些的作業。 具體來說，主要的問題是是否要立即完成或延後更新資料存放區 （批次處理） 直到發出 update 命令。  
   
  您必須先決定是否要繼承自`IRowsetChangeImpl`或`IRowsetUpdateImpl`在您的資料列集類別。 其中您選擇實作，根據三種方法的功能會受到影響： `SetData`， **InsertRows**，和`DeleteRows`。  
@@ -146,7 +148,7 @@ Visual c + + 支援可更新的提供者或可更新的提供者 （寫入） �
   
      比方說的內容的設定方式，請參閱這個屬性中設定地圖**CUpdateCommand** （在 Rowset.h) 中[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)。  
   
-##  <a name="vchowwritingtothedatasource"></a>寫入資料來源  
+##  <a name="vchowwritingtothedatasource"></a> 寫入資料來源  
  若要從資料來源讀取，呼叫**Execute**函式。 若要寫入的資料來源，請呼叫`FlushData`函式。 （一般的意義而言，排清方法來儲存您對資料表或索引到磁碟的修改）。  
   
 ```  
@@ -160,13 +162,13 @@ FlushData(HROW, HACCESSOR);
 ### <a name="when-to-flush"></a>排清的時機  
  提供者範本呼叫`FlushData`每當資料以供需要寫到資料存放區，這通常 （但並非一定） 會發生下列函式呼叫的結果：  
   
--   **Irowsetchange:: Deleterows**  
+-   **IRowsetChange::DeleteRows**  
   
--   **Irowsetchange:: Setdata**  
+-   **IRowsetChange::SetData**  
   
 -   **IRowsetChange::InsertRows** （如果沒有要插入資料列中的新資料）  
   
--   **Irowsetupdate:: Update**  
+-   **IRowsetUpdate::Update**  
   
 ### <a name="how-it-works"></a>它的運作方式  
  取用者會呼叫需要排清 (例如**更新**) 和這個呼叫會傳遞給提供者，一律會進行下列作業：  
@@ -217,7 +219,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  下列範例會示範如何`FlushData`中實作`RUpdateRowset`類別[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例 （在範例程式碼，請參閱 Rowset.h）：  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////////  
 // class RUpdateRowset (in rowset.h)  
 ...  
@@ -316,7 +318,7 @@ HRESULT FlushData(HROW, HACCESSOR)
   
  下列範例會示範如何**CommonGetColInfo**函式中實作**CUpdateCommand** （請參閱 UpProvRS.cpp） UpdatePV 中。 請注意如何的資料行具有這**DBCOLUMNFLAGS_ISNULLABLE**可為 null 的資料行。  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////////  
 // CUpdateCommand (in UpProvRS.cpp)  
   
@@ -412,7 +414,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 ```  
   
 ### <a name="column-flags"></a>資料行旗標  
- 如果您在您的資料行上支援預設值，您需要設定它使用中繼資料中的 **\<** *提供者類別***> SchemaRowset**類別。 設定*m_bColumnHasDefault* = `VARIANT_TRUE`。  
+ 如果您在您的資料行上支援預設值，您需要設定它使用中繼資料中的 **\<***提供者類別***> SchemaRowset**類別。 設定*m_bColumnHasDefault* = `VARIANT_TRUE`。  
   
  您也可以設定資料行旗標，會使用指定的責任**DBCOLUMNFLAGS**列舉型別。 資料行旗標描述資料行的特性。  
   
@@ -428,6 +430,7 @@ trData[0].m_nNumericPrecision = 10;
 trData[0].m_ulColumnFlags = DBCOLUMNFLAGS_WRITE |  
                             DBCOLUMNFLAGS_ISFIXEDLENGTH;  
 lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));  
+
 m_rgRowData.Add(trData[0]);  
 ```  
   

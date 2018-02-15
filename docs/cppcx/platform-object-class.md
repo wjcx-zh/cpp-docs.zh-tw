@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
 - VCCORLIB/Platform::Object::Equals
@@ -14,22 +14,25 @@ f1_keywords:
 - VCCORLIB/Platform::Object::ReferenceEquals
 - VCCORLIB/Platform::ToString
 - VCCORLIB/Platform::GetType
-dev_langs: C++
-helpviewer_keywords: Object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object 類別
-為 Windows 市集應用程式中的 ref 類別或 ref 結構提供一般行為。 所有 ref 類別和 ref 結構執行個體都會隱含轉換為 Platform::Object^，而且也都能覆寫其虛擬 ToString 方法。  
+提供一般行為的 ref 類別或 ref 結構，在 Windows 執行階段應用程式中。 所有 ref 類別和 ref 結構執行個體都會隱含轉換為 Platform::Object^，而且也都能覆寫其虛擬 ToString 方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,15 +46,15 @@ public ref class Object : Object
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Object:: object](#ctor)|初始化 Object 類別的新執行個體。|  
+|[Object::Object](#ctor)|初始化 Object 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Object:: equals](#equals)|判斷指定的物件是否等於目前的物件。|  
-|[Object:: gethashcode](#gethashcode)|傳回這個執行個體的雜湊碼。|  
-|[Object:: referenceequals](#referenceequals)|判斷指定的物件執行個體是否為相同的執行個體。|  
+|[Object::Equals](#equals)|判斷指定的物件是否等於目前的物件。|  
+|[Object::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|  
+|[Object::ReferenceEquals](#referenceequals)|判斷指定的物件執行個體是否為相同的執行個體。|  
 |[ToString](#tostring)|傳回代表目前物件的字串。 可以被覆寫。|  
 |[GetType](#gettype)|取得可描述目前執行個體的 [Platform::Type](../cppcx/platform-type-class.md) 。|  
   
@@ -66,7 +69,7 @@ public ref class Object : Object
  **命名空間：** Platform  
 
   
-## <a name="equals"></a>Object:: equals 方法
+## <a name="equals"></a> Object:: equals 方法
 判斷指定的物件是否等於目前的物件。  
   
 ### <a name="syntax"></a>語法  
@@ -87,7 +90,7 @@ bool Equals(
   
 
 
-## <a name="gethashcode"></a>Object:: gethashcode 方法
+## <a name="gethashcode"></a>  Object::GetHashCode Method
 傳回這個執行個體的 `IUnknown`* 識別值 (如果它是 COM 物件)，或計算的雜湊值 (如果它不是 COM 物件)。  
   
 ### <a name="syntax"></a>語法  
@@ -104,7 +107,7 @@ public:int GetHashCode()
   
 
 
-## <a name="gettype"></a>Object:: gettype 方法
+## <a name="gettype"></a>  Object:: gettype 方法
 傳回[platform:: type](../cppcx/platform-type-class.md)描述物件的執行階段類型的物件。  
   
 ### <a name="syntax"></a>語法  
@@ -131,9 +134,9 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ## <a name="see-also"></a>請參閱  
  [Platform:: type 類別](../cppcx/platform-type-class.md)   
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)   
- [型別 System](../cppcx/type-system-c-cx.md
+ [Type System](../cppcx/type-system-c-cx.md
   
-## <a name="ctor"></a>Object:: object 建構函式
+## <a name="ctor"></a>  Object:: object 建構函式
 初始化 Object 類別的新執行個體。  
   
 ### <a name="syntax"></a>語法  
@@ -142,7 +145,7 @@ rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 public:Object()  
 ```  
 
-## <a name="referenceequals"></a>Object:: referenceequals 方法
+## <a name="referenceequals"></a>  Object:: referenceequals 方法
 判斷指定的物件執行個體是否為相同的執行個體。  
   
 ### <a name="syntax"></a>語法  
@@ -161,7 +164,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2)
 ### <a name="return-value"></a>傳回值  
  如果這兩個物件相同則為 `true`，否則為 `false`。  
  
-## <a name="tostring"></a>Object:: tostring 方法 (C + + /CX)
+## <a name="tostring"></a>  Object:: tostring 方法 (C + + /CX)
 傳回代表目前物件的字串。  
   
 ### <a name="syntax"></a>語法  

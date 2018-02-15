@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,29 +14,30 @@ f1_keywords:
 - m_rgRowHandles
 - ATL::IRowsetImpl::m_rgRowHandles
 - ATL.IRowsetImpl.m_rgRowHandles
-dev_langs: C++
-helpviewer_keywords: m_rgRowHandles
+dev_langs:
+- C++
+helpviewer_keywords:
+- m_rgRowHandles
 ms.assetid: d3c2578f-58c4-4301-bf59-cf101a523a95
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bdb68e9eac5204da8c293742bcfd6ddcfdba1652
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f97536a5ce984004bf7009584de679d19520a9f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetimplmrgrowhandles"></a>IRowsetImpl::m_rgRowHandles
 目前回應中的提供者所包含的資料列控制代碼的對應`GetNextRows`。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
+```cpp
 MapClass  
  m_rgRowHandles;  
   

@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e36360279adf22857cfdb5b2f79ffdd7486ca008
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="exceptions-ccx"></a>例外狀況 (C++/CX)
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 01/22/2018
 
 在 c + + 程式中，您可以擲回並攔截來自 Windows 執行階段作業的例外狀況，例外狀況衍生自`std::exception`，或使用者定義型別。 您必須擲回 Windows 執行階段例外狀況，才會跨應用程式二進位介面 (ABI) 界限，比方說，以 JavaScript 撰寫的程式碼攔截例外狀況時。 當非 Windows 執行階段 c + + 例外狀況到達 ABI 界限時，會轉譯成`Platform::FailureException`例外狀況，表示 E_FAIL HRESULT。 如需 ABI 的詳細資訊，請參閱[c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
-您可以透過採用 HRESULT 參數或採用 HRESULT 參數和 [Platform::String](platform-exception-class.md) ^ 參數的兩個建構函式之一，來宣告可跨 ABI 傳遞至任何處理例外狀況的 Windows 市集應用程式的 [Platform::Exception](platform-string-class.md)。 或者，您可以透過採用 HRESULT 參數或採用 HRESULT 參數和 [參數的兩個](platform-exception-class.md#createexception) Exception::CreateException 方法 `Platform::String^` 多載之一，來宣告例外狀況。
+您可以宣告[platform:: exception](platform-exception-class.md)透過採用 HRESULT 參數或採用 HRESULT 參數的兩個建構函式和[platform:: string](platform-string-class.md)^ 可以之間傳遞的參數ABI 到任何 Windows 執行階段應用程式會處理它。 或者，您可以透過採用 HRESULT 參數或採用 HRESULT 參數和 [參數的兩個](platform-exception-class.md#createexception) Exception::CreateException 方法 `Platform::String^` 多載之一，來宣告例外狀況。
 
 ## <a name="standard-exceptions"></a>標準例外狀況
 

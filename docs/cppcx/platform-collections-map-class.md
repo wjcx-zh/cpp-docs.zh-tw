@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
 - COLLECTION/Platform::Collections::Map::Clear
@@ -17,19 +17,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Map::Lookup
 - COLLECTION/Platform::Collections::Map::Remove
 - COLLECTION/Platform::Collections::Map::Size
-dev_langs: C++
-helpviewer_keywords: Map Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b58ba1d4407f719bc2f9f1e08715d7e53a11fb58
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
@@ -115,7 +118,7 @@ Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 
 
 **命名空間：** Platform::Collections
 
-## <a name="clear"></a>Map:: clear 方法
+## <a name="clear"></a>  Map:: clear 方法
 
 從目前 Map 物件移除所有機碼值組。
 
@@ -125,7 +128,7 @@ Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 
 virtual void Clear();
 ```
 
-## <a name="first"></a>Map:: first 方法
+## <a name="first"></a>  Map:: first 方法
 
 傳回指定 Map 中第一個元素的迭代器。如果 Map 是空的，則傳回 `nullptr`。
 
@@ -144,7 +147,7 @@ Windows::Foundation::Collections::IKeyValuePair<K, V>^>^ First();
 
 若要保留 first （） 所傳回的迭代器的簡便方法是宣告的變數指派傳回值**自動**型别推斷關鍵字。 例如，`auto x = myMap->First();`。
 
-## <a name="getview"></a>Map:: getview 方法
+## <a name="getview"></a>  Map:: getview 方法
 
 傳回目前 Map 的唯讀檢視也就是說， [Platform::Collections::MapView 類別](../cppcx/platform-collections-mapview-class.md)，它會實作[Windows::Foundation::Collections::IMapView\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226037.aspx)介面。
 
@@ -158,7 +161,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 `MapView` 物件。
 
-## <a name="haskey"></a>Map:: haskey 方法
+## <a name="haskey"></a>  Map:: haskey 方法
 
 判斷目前 Map 是否包含指定的機碼。
 
@@ -177,7 +180,7 @@ bool HasKey(K key);
 
 如果找到機碼則為 `true`，否則為 `false`。
 
-## <a name="insert"></a>Map:: insert 方法
+## <a name="insert"></a>  Map:: insert 方法
 
 將指定的機碼值組加入目前 Map 物件中。
 
@@ -197,9 +200,9 @@ virtual bool Insert(K key, V value);
 
 ### <a name="return-value"></a>傳回值
 
-`true`如果目前 Map 中現有項目的機碼符合*金鑰*，而且該項目的值部分設定為*值*。 `false`如果目前 Map 中的沒有任何現有項目符合*金鑰*和*金鑰*和*值*參數會成為索引鍵-值組，而且接著加入目前 Map。
+`true` 如果目前 Map 中現有項目的機碼符合*金鑰*，而且該項目的值部分設定為*值*。 `false` 如果目前 Map 中的沒有任何現有項目符合*金鑰*和*金鑰*和*值*參數會成為索引鍵-值組，而且接著加入目前 Map。
 
-## <a name="lookup"></a>Map:: lookup 方法
+## <a name="lookup"></a>  Map:: lookup 方法
 
 取得與類型為 K 之指定機碼 (如果該機碼存在的話) 相關聯且類型為 V 的值。
 
@@ -222,7 +225,7 @@ V Lookup(K key);
 
 如果索引鍵不存在，則[platform:: outofboundsexception](../cppcx/platform-outofboundsexception-class.md)就會擲回。
 
-## <a name="ctor"></a>Map:: map 建構函式
+## <a name="ctor"></a>  Map:: map 建構函式
 
 初始化 Map 類別的新執行個體。
 
@@ -256,7 +259,7 @@ Map(
 *last*  
 用來初始化目前 Map 的項目範圍以外第一個項目的輸入迭代器。
 
-## <a name="mapchanged"></a>Map:: mapchanged 事件
+## <a name="mapchanged"></a>  Map:: mapchanged 事件
 
 在對應中插入或移除項目時引發。
 
@@ -272,9 +275,9 @@ A [Mapchangedeventhandler<k\<K，V >](http://msdn.microsoft.com/library/windows/
 
 ## <a name="net-framework-equivalent"></a>.NET Framework 同等
 
-Windows 市集應用程式使用 C# 或 Visual Basic 專案 Imap<k\<K，V > 做為 Idictionary<k\<K，V >。
+Windows 執行階段應用程式使用 C# 或 Visual Basic 專案 Imap<k\<K，V > 做為 Idictionary<k\<K，V >。
 
-## <a name="remove"></a>Map:: remove 方法
+## <a name="remove"></a>  Map:: remove 方法
 
 從目前 Map 物件中刪除指定的機碼值組。
 
@@ -289,7 +292,7 @@ virtual void Remove(K key);
 *key*  
 機碼值組的機碼部分。 型別*金鑰*為 typename *K*。
 
-## <a name="size"></a>Map:: size 方法
+## <a name="size"></a>  Map:: size 方法
 
 傳回的數目[Windows::Foundation::Collections::IKeyValuePair\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226031.aspx)對應中的項目。
 

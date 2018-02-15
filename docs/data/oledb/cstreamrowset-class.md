@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,28 +14,30 @@ f1_keywords:
 - CStreamRowset
 - ATL.CStreamRowset<TAccessor>
 - ATL.CStreamRowset
-dev_langs: C++
-helpviewer_keywords: CStreamRowset class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStreamRowset class
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32c4aa20f805ee141918e7c073709ec33b4d29ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e499d732beb2d73dbb6ec0bbe0b360eeb394b9d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset 類別
 用於`CCommand`或`CTable`宣告。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 template <class TAccessor = CAccessorBase>  
 class CStreamRowset  
 ```  
@@ -61,7 +64,7 @@ class CStreamRowset
   
  [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
   
- `ICommand::Execute`傳回`ISequentialStream`指標，它會儲存在`m_spStream`。 然後使用**讀取**方法來擷取 XML 格式 （Unicode 字串） 資料。 例如:   
+ `ICommand::Execute` 傳回`ISequentialStream`指標，它會儲存在`m_spStream`。 然後使用**讀取**方法來擷取 XML 格式 （Unicode 字串） 資料。 例如:   
   
  [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
   

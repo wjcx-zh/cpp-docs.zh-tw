@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,62 +13,61 @@ f1_keywords:
 - ATL::CCommand::Open
 - CCommand.Open
 - CCommand::Open
-dev_langs: C++
-helpviewer_keywords: Open method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open method
 ms.assetid: 4c9b8f31-faf3-452d-9a29-3d3e5f54d6f8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b6aa938d53cfdf11d5956a63d944dfb1bd6afea1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a58dc67735a4f236c79ff6c777a4510dfdfcd12
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ccommandopen"></a>CCommand::Open
 執行，並選擇性地將命令繫結。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      HRESULT Open(  
-   const CSession& session,  
+```cpp
+HRESULT Open(const CSession& session,  
    LPCWSTR wszCommand,  
    DBPROPSET *pPropSet = NULL,  
    DBROWCOUNT* pRowsAffected = NULL,  
    REFGUID guidCommand = DBGUID_DEFAULT,  
    bool bBind = true,  
-   ULONG ulPropSets = 0  
-) throw( );  
-HRESULT Open(  
-   const CSession& session,  
+   ULONG ulPropSets = 0) throw();  
+
+
+HRESULT Open(const CSession& session,  
    LPCSTR szCommand,  
    DBPROPSET *pPropSet = NULL,  
    DBROWCOUNT* pRowsAffected = NULL,  
    REFGUID guidCommand = DBGUID_DEFAULT,  
    bool bBind = true,  
-   ULONG ulPropSets = 0  
-) throw( );  
-HRESULT Open(  
-   const CSession& session,  
+   ULONG ulPropSets = 0) throw();  
+
+
+HRESULT Open(const CSession& session,  
    INT szCommand = NULL,  
    DBPROPSET *pPropSet = NULL,  
    DBROWCOUNT* pRowsAffected = NULL,  
    REFGUID guidCommand = DBGUID_DEFAULT,  
    bool bBind = true,  
-   ULONG ulPropSets = 0  
-) throw( );  
-HRESULT Open(  
-   DBPROPSET *pPropSet = NULL,  
+   ULONG ulPropSets = 0) throw();  
+
+
+HRESULT Open(DBPROPSET *pPropSet = NULL,  
    DBROWCOUNT* pRowsAffected = NULL,  
    bool bBind = true,  
-   ULONG ulPropSets = 0  
-) throw( );  
+   ULONG ulPropSets = 0) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -80,7 +80,7 @@ HRESULT Open(
  `szCommand`  
  [in]與相同`wszCommand`不同之處在於此參數採用的 ANSI 命令字串。 這個方法的第四個形式可接受 NULL 值。 本文稍後如需詳細資訊，請參閱 < 備註 >。  
   
- *Dbpropset*  
+ *pPropSet*  
  [in]陣列的指標[DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)結構，其中包含要設定屬性和值。 請參閱[屬性集和屬性群組](https://msdn.microsoft.com/en-us/library/ms713696.aspx)中*OLE DB 程式設計人員參考*Windows SDK 中。  
   
  `pRowsAffected`  
@@ -88,9 +88,9 @@ HRESULT Open(
   
 |如果|然後|  
 |--------|----------|  
-|**CParamSets**元素`pParams`大於 1|*`pRowsAffected`表示受到執行所指定的參數集的所有資料列的總數。|  
-|不受影響的資料列的編號|*`pRowsAffected`設定為-1。|  
-|此命令不會更新、 刪除或插入資料列|*`pRowsAffected`未定義。|  
+|**CParamSets**元素`pParams`大於 1|*`pRowsAffected` 表示受到執行所指定的參數集的所有資料列的總數。|  
+|不受影響的資料列的編號|*`pRowsAffected` 設定為-1。|  
+|此命令不會更新、 刪除或插入資料列|*`pRowsAffected` 未定義。|  
   
  `guidCommand`  
  [in]剖析命令文字中指定的語法和一般的規則，若要使用的提供者的 GUID。 請參閱[ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx)和[icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)中*OLE DB 程式設計人員參考*如需詳細資訊。  

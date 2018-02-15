@@ -4,34 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - cmyprovidersession
 - myprovidersess.h
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMyProviderSession class in MyProviderSess.H
 - OLE DB providers, wizard-generated files
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3cf8a75a416f03fed1ae7e0deb9118b3c40ea5fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4ffb1a0ca8e9a2cd5b90d33c21423beb0969a4f4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H 包含宣告和實作的 OLE DB 工作階段物件。 資料來源物件建立的工作階段物件，並代表消費者和提供者之間的交談。 多個同時進行的工作階段可以有一個資料來源開啟。 繼承清單`CMyProviderSession`遵循：  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // CMyProviderSession  
 class ATL_NO_VTABLE CMyProviderSession :   

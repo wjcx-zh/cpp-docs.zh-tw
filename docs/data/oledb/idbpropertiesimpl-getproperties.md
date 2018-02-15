@@ -4,42 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - IDBPropertiesImpl::GetProperties
 - IDBPropertiesImpl.GetProperties
 - GetProperties
-dev_langs: C++
-helpviewer_keywords: GetProperties method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetProperties method
 ms.assetid: ab24aebd-366d-49a1-b49b-bb46c6d90f05
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac54b08dba170dd33d2e5e19cae50715aeab4fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 576c5845e47c8dfaec715edb71f7325955d55222
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="idbpropertiesimplgetproperties"></a>IDBPropertiesImpl::GetProperties
 傳回目前所設定的資料來源物件或目前設於初始化屬性群組中的屬性值的資料來源、 資料來源資訊，以及初始化屬性群組中的屬性值列舉值。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      STDMETHOD(GetProperties)(   
-   ULONG cPropertySets,   
+```cpp
+      STDMETHOD(GetProperties)(ULONG cPropertySets,   
    const DBPROPIDSET rgPropertySets[],   
    ULONG * pcProperties,   
-   DBPROPSET ** prgProperties    
-);  
+   DBPROPSET ** prgProperties);  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -62,5 +62,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>請參閱  
  [IDBPropertiesImpl 類別](../../data/oledb/idbpropertiesimpl-class.md)   
- [Idbpropertiesimpl:: Getpropertyinfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)   
+ [IDBPropertiesImpl::GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)   
  [IDBPropertiesImpl::SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)

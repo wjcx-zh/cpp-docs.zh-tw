@@ -1,35 +1,38 @@
 ---
-title: "CMyProviderWindowsFile |Microsoft 文件"
+title: CMyProviderWindowsFile | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cmyproviderwindowsfile
-dev_langs: C++
+f1_keywords:
+- cmyproviderwindowsfile
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0ac247c418efa7800eeef469ecf54da75f5b15c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
-精靈會建立類別可以包含一個資料列的資料;在此情況下，它會呼叫`CMyProviderWindowsFile`。 下列程式碼的`CMyProviderWindowsFile`是產生的精靈，並列出目錄中的所有檔案使用**WIN32_FIND_DATA**結構。 `CMyProviderWindowsFile`繼承自**WIN32_FIND_DATA**結構：  
+精靈會建立類別可以包含一個資料列的資料;在此情況下，它會呼叫`CMyProviderWindowsFile`。 下列程式碼的`CMyProviderWindowsFile`是產生的精靈，並列出目錄中的所有檔案使用**WIN32_FIND_DATA**結構。 `CMyProviderWindowsFile` 繼承自**WIN32_FIND_DATA**結構：  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   
@@ -47,11 +50,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile`呼叫[使用者記錄類別](../../data/oledb/user-record.md)因為它也包含描述提供者的資料列集中的資料行的對應。 提供者資料行對應會包含每個欄位中使用 PROVIDER_COLUMN_ENTRY 巨集的資料列集的項目。 巨集指定資料行名稱，序數，和位移結構項目。 上述程式碼中的提供者的資料行項目包含位移到**WIN32_FIND_DATA**結構。 當取用者呼叫**irowset:: Getdata**，以一個連續緩衝區傳輸資料。 而不是讓您進行算術的指標，地圖可讓您指定的資料成員。  
+ `CMyProviderWindowsFile` 呼叫[使用者記錄類別](../../data/oledb/user-record.md)因為它也包含描述提供者的資料列集中的資料行的對應。 提供者資料行對應會包含每個欄位中使用 PROVIDER_COLUMN_ENTRY 巨集的資料列集的項目。 巨集指定資料行名稱，序數，和位移結構項目。 上述程式碼中的提供者的資料行項目包含位移到**WIN32_FIND_DATA**結構。 當取用者呼叫**irowset:: Getdata**，以一個連續緩衝區傳輸資料。 而不是讓您進行算術的指標，地圖可讓您指定的資料成員。  
   
- `CMyProviderRowset`類別也包含`Execute`方法。 `Execute`是什麼實際讀取的資料來源的原生。 下列程式碼會顯示精靈產生`Execute`方法。 此函數會使用 Win32 **FindFirstFile**和`FindNextFile`擷取目錄中檔案的相關資訊，並將它們放在執行個體 Api`CMyProviderWindowsFile`類別。  
+ `CMyProviderRowset`類別也包含`Execute`方法。 `Execute` 是什麼實際讀取的資料來源的原生。 下列程式碼會顯示精靈產生`Execute`方法。 此函數會使用 Win32 **FindFirstFile**和`FindNextFile`擷取目錄中檔案的相關資訊，並將它們放在執行個體 Api`CMyProviderWindowsFile`類別。  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
   

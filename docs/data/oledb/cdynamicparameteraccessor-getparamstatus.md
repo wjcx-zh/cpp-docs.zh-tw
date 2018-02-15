@@ -1,10 +1,11 @@
 ---
-title: "Cdynamicparameteraccessor:: Getparamstatus |Microsoft 文件"
+title: CDynamicParameterAccessor::GetParamStatus | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,36 +14,34 @@ f1_keywords:
 - ATL.CDynamicParameterAccessor.GetParamStatus
 - ATL::CDynamicParameterAccessor::GetParamStatus
 - GetParamStatus
-dev_langs: C++
-helpviewer_keywords: GetParamStatus method
+dev_langs:
+- C++
+helpviewer_keywords:
+- GetParamStatus method
 ms.assetid: 9300225a-616c-4a7d-82d0-8c2ecd4d8185
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ecee1f92e1b8e5e185e1c193ae52161ab9032df8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f5be77da4c46a82892db0a0ff990382ef2a9f71
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdynamicparameteraccessorgetparamstatus"></a>CDynamicParameterAccessor::GetParamStatus
 擷取儲存在緩衝區中的指定參數的狀態。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      bool GetParamStatus(  
-   DBORDINAL nParam,  
-   DBSTATUS* pStatus  
-);  
-DBSTATUS* GetParamStatus(   
-   DBORDINAL nParam    
-) const throw( );  
+```
+bool GetParamStatus(DBORDINAL nParam,  
+  DBSTATUS* pStatus);  
+
+DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();  
 ```  
   
 #### <a name="parameters"></a>參數  

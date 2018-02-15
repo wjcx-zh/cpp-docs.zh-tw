@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
 - VCCORLIB/Platform::String::Begin
@@ -21,19 +21,22 @@ f1_keywords:
 - VCCORLIB/Platform::String::IsFastPass
 - VCCORLIB/Platform::String::Length
 - VCCORLIB/Platform::String::ToString
-dev_langs: C++
-helpviewer_keywords: Platform::String
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformstring-class"></a>Platform::String 類別
 用來代表文字之 Unicode 字元的循序集合。 如需詳細資訊和範例，請參閱[字串](../cppcx/strings-c-cx.md)。  
@@ -65,7 +68,7 @@ public ref class String sealed : Object,
   
 |成員|描述|  
 |------------|-----------------|  
-|[String:: string](#ctor)|初始化字串類別的新執行個體。|  
+|[String::String](#ctor)|初始化字串類別的新執行個體。|  
   
  **方法**  
   
@@ -73,18 +76,18 @@ public ref class String sealed : Object,
   
 |方法|描述|  
 |------------|-----------------|  
-|[String:: begin](#begin)|讓指標回到目前字串的開頭。|  
-|[String:: compareordinal](#compareordinal)|評估物件所代表之兩個字串值中的對應字元數值，藉以比較兩個 `String` 物件。|  
-|[String:: concat](#concat)|串連兩個 String 物件的值。|  
-|[String:: data](#data)|讓指標回到目前字串的開頭。|  
-|[String:: dispose](#dispose)|釋放或釋出資源。|  
-|[String:: end](#end)|讓指標回到目前字串的結尾之後。|  
-|[String:: equals](#equals)|指出指定的物件是否等同於目前的物件。|  
-|[String:: gethashcode](#gethashcode)|傳回這個執行個體的雜湊碼。|  
-|[String:: isempty](#isempty)|指出目前 String 物件是否為空。|  
-|[String:: isfastpass](#isfastpass)|指出目前 String 物件是否參與「 *快速傳遞* 」(Fast Pass) 作業。 在快速傳遞作業時，參考計數會暫停。|  
-|[String:: length](#length)|擷取目前 String 物件的長度。|  
-|[String:: tostring](#tostring)|傳回值與目前字串相同的 String 物件。|  
+|[String::Begin](#begin)|讓指標回到目前字串的開頭。|  
+|[String::CompareOrdinal](#compareordinal)|評估物件所代表之兩個字串值中的對應字元數值，藉以比較兩個 `String` 物件。|  
+|[String::Concat](#concat)|串連兩個 String 物件的值。|  
+|[String::Data](#data)|讓指標回到目前字串的開頭。|  
+|[String::Dispose](#dispose)|釋放或釋出資源。|  
+|[String::End](#end)|讓指標回到目前字串的結尾之後。|  
+|[String::Equals](#equals)|指出指定的物件是否等同於目前的物件。|  
+|[String::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|  
+|[String::IsEmpty](#isempty)|指出目前 String 物件是否為空。|  
+|[String::IsFastPass](#isfastpass)|指出目前 String 物件是否參與「 *快速傳遞* 」(Fast Pass) 作業。 在快速傳遞作業時，參考計數會暫停。|  
+|[String::Length](#length)|擷取目前 String 物件的長度。|  
+|[String::ToString](#tostring)|傳回值與目前字串相同的 String 物件。|  
   
  **運算子**  
   
@@ -109,7 +112,7 @@ public ref class String sealed : Object,
  **標頭** ：vccorlib.h (預設包含)  
 
  
-## <a name="begin"></a>String:: begin 方法
+## <a name="begin"></a>  String:: begin 方法
 讓指標回到目前字串的開頭。  
   
 ### <a name="syntax"></a>語法  
@@ -122,7 +125,7 @@ char16* Begin()
 ### <a name="return-value"></a>傳回值  
  位於目前字串開頭處的指標。  
   
-## <a name="compareordinal"></a>String:: compareordinal 方法
+## <a name="compareordinal"></a>  String:: compareordinal 方法
 評估物件所代表之兩個字串值中的對應字元數值，藉以比較兩個 `String` 物件。  
   
 ### <a name="syntax"></a>語法  
@@ -153,7 +156,7 @@ int CompareOrdinal(
   
 
 
-## <a name="concat"></a>String:: concat 方法
+## <a name="concat"></a>  String:: concat 方法
 串連兩個 String 物件的值。  
   
 ### <a name="syntax"></a>語法  
@@ -176,7 +179,7 @@ String^ Concat( String^ str1, String^ str2)
   
 
 
-## <a name="data"></a>String:: data 方法
+## <a name="data"></a>  String:: data 方法
 傳回物件資料緩衝區開頭的指標當做 `char16` (`wchar_t`) 元素的 C-style 陣列。  
   
 ### <a name="syntax"></a>語法  
@@ -193,7 +196,7 @@ const char16* Data()
   
 
 
-## <a name="dispose"></a>String:: dispose 方法
+## <a name="dispose"></a>  String:: dispose 方法
 釋放或釋出資源。  
   
 ### <a name="syntax"></a>語法  
@@ -203,7 +206,7 @@ const char16* Data()
 virtual override void Dispose()  
 ```  
 
-## <a name="end"></a>String:: end 方法
+## <a name="end"></a>  String:: end 方法
 讓指標回到目前字串的結尾之後。  
   
 ### <a name="syntax"></a>語法  
@@ -221,7 +224,7 @@ char16* End()
   
 
 
-## <a name="equals"></a>String:: equals 方法
+## <a name="equals"></a>  String:: equals 方法
 指出指定的字串是否擁有與目前物件相同的值。  
   
 ### <a name="syntax"></a>語法  
@@ -246,7 +249,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>String:: gethashcode 方法
+## <a name="gethashcode"></a>  String::GetHashCode Method
 傳回這個執行個體的雜湊碼。  
   
 ### <a name="syntax"></a>語法  
@@ -261,7 +264,7 @@ virtual override int GetHashCode()
   
 
 
-## <a name="isempty"></a>String:: isempty 方法
+## <a name="isempty"></a>  String:: isempty 方法
 指出目前 String 物件是否為空。  
   
 ### <a name="syntax"></a>語法  
@@ -275,7 +278,7 @@ bool IsEmpty()
   
 
 
-## <a name="isfastpass"></a>String:: isfastpass 方法
+## <a name="isfastpass"></a>  String:: isfastpass 方法
 指出目前 String 物件是否參與「 *快速傳遞* 」(Fast Pass) 作業。 在快速傳遞作業時，參考計數會暫停。  
   
 ### <a name="syntax"></a>語法  
@@ -292,7 +295,7 @@ bool IsFastPass();
   
 
 
-## <a name="length"></a>String:: length 方法
+## <a name="length"></a>  String:: length 方法
 擷取目前 String 物件中的字元數。  
   
 ### <a name="syntax"></a>語法  
@@ -316,7 +319,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>String:: operator + 運算子
+## <a name="operator-plus"></a>  String::operator+ Operator
 串連兩個[字串](../cppcx/platform-string-class.md)物件至新[字串](../cppcx/platform-string-class.md)物件。
   
 ### <a name="syntax"></a>語法  
@@ -339,7 +342,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>備註  
  這個運算子會建立 `String^` 物件，其中包含這兩個運算元的資料。 當極端的效能不重要時，可基於方便的理由使用它。 在函式中呼叫 "`+`" 幾次可能不會被注意到，但是，如果您在緊密迴圈中操作大型物件或文字資料，請使用標準 C++ 機制和類型。  
   
-##  <a name="operator-equality"></a>String:: operator = = 運算子
+##  <a name="operator-equality"></a> String::operator== Operator
 指出兩個指定的 String 物件是否具有相同的文字值。  
   
 ### <a name="syntax"></a>語法  
@@ -363,7 +366,7 @@ bool String::operator==( String^ str1, String^ str2)
   
 
 
-##  <a name="operator-greater-than"></a>String::&gt; 
+##  <a name="operator-greater-than"></a>  String::operator&gt; 
 指出其中一個 String 物件的值是否大於另一個 String 物件的值。  
   
 ### <a name="syntax"></a>語法  
@@ -387,7 +390,7 @@ bool String::operator>( String^ str1, String^ str2)
   
 
 
-## <a name="operator-greater-than-or-equals"></a>String::&gt;= 
+## <a name="operator-greater-than-or-equals"></a> String::operator&gt;= 
 指出其中一個 String 物件的值是否大於或等於另一個 String 物件的值。  
   
 ### <a name="syntax"></a>語法  
@@ -408,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a>String:: operator ！ = 
+## <a name="operator-inequality"></a> String::operator!= 
 指出兩個指定的 String 物件是否具有不同的值。  
   
 ### <a name="syntax"></a>語法  
@@ -428,7 +431,7 @@ bool String::operator!=( String^ str1, String^ str2)
  如果 `true` 不等於 `str1`，則為 `str2`，否則為 `false`。   
 
 
-## <a name="operator-less-than"></a>String::&lt; 
+## <a name="operator-less-than"></a> String::operator&lt; 
 指出其中一個 String 物件的值是否小於另一個 String 物件的值。  
   
 ### <a name="syntax"></a>語法  
@@ -447,7 +450,7 @@ bool String::operator<( String^ str1, String^ str2)
 ### <a name="return-value"></a>傳回值  
  如果 `str1` 的值小於 `str2` 的值，則為 `true`，否則為 `false`。  
   
-## <a name="ctor"></a>String:: string 建構函式
+## <a name="ctor"></a> String:: string 建構函式
 使用輸入字串資料的複本初始化 String 類別的新執行個體。  
   
 ### <a name="syntax"></a>語法  
@@ -473,7 +476,7 @@ String(char16* s, unsigned int n)
 String^ s = L"Hello!";  
 ```  
   
-## <a name="tostring"></a>String:: tostring
+## <a name="tostring"></a> String::ToString
 傳回值與目前字串相同的 String 物件。  
   
 ### <a name="syntax"></a>語法  

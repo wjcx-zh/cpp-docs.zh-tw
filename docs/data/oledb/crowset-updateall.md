@@ -1,10 +1,11 @@
 ---
-title: "Updateall |Microsoft 文件"
+title: CRowset::UpdateAll | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,34 +18,33 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::UpdateAll
 - CRowset<TAccessor>::UpdateAll
 - ATL::CRowset::UpdateAll
-dev_langs: C++
-helpviewer_keywords: UpdateAll method
+dev_langs:
+- C++
+helpviewer_keywords:
+- UpdateAll method
 ms.assetid: e5b26c0a-40fc-4c91-a293-5084951788e6
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 048db34bd08ab3db5769fbcb096578a7a6ae8073
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7dc38544641043f95d24cf9a8f9cf40ccca1dbf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 傳輸任何暫止的變更到所有資料列自上次擷取或**更新**上呼叫。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      HRESULT UpdateAll(   
-   DBCOUNTITEM* pcRows = NULL,   
+```cpp
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,   
    HROW** pphRow = NULL,   
-   DBROWSTATUS** ppStatus = NULL    
-) throw( );  
+   DBROWSTATUS** ppStatus = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/21/2017
  [out]位置指標，其中**更新**傳回的資料列狀態的值。 如果傳回任何狀態`ppStatus`為 null。  
   
 ## <a name="remarks"></a>備註  
- 傳輸任何暫止變更對所有資料列，因為這些資料列上次提取，或使用更新[更新](../../data/oledb/crowset-update.md)或`UpdateAll`。 `UpdateAll`將會更新已被修改，不論您是否仍具有控點，每個資料列 (請參閱`pphRow`) 與否。  
+ 傳輸任何暫止變更對所有資料列，因為這些資料列上次提取，或使用更新[更新](../../data/oledb/crowset-update.md)或`UpdateAll`。 `UpdateAll` 將會更新已被修改，不論您是否仍具有控點，每個資料列 (請參閱`pphRow`) 與否。  
   
  例如，如果您使用**插入**要插入資料列集中的五個資料列，您可以呼叫**更新**五次或呼叫`UpdateAll`更新全部一次。  
   
@@ -72,6 +72,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)   
- [Irowsetupdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [Crowset:: Setdata](../../data/oledb/crowset-setdata.md)   
+ [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [CRowset::SetData](../../data/oledb/crowset-setdata.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

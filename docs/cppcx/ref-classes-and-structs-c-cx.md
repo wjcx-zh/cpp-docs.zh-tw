@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 類別與結構 (C++/CX)
 C + + /CX 支援使用者定義*ref 類別*和*ref 結構*，和使用者定義*值類別*和*值結構*。 這些資料結構是主要的容器的 C + /CX 支援 Windows 執行階段類型系統。 其內容會根據某些特定規則，中繼資料中發出，這樣可讓他們在 Windows 執行階段元件和以 c + + 或其他語言撰寫的通用 Windows 平台應用程式之間傳遞。  
@@ -100,7 +101,7 @@ C + + /CX 支援使用者定義*ref 類別*和*ref 結構*，和使用者定義*
   
  如果您嘗試存取的類別成員已執行其解構函式，則表示此行為是未定義的；這很有可能會導致程式當機。 針對沒有公用解構函式的類型呼叫 `delete t` 沒有作用。 針對在類型或基底類別的類型階層中，已知有 `delete this` 或 `private` 解構函式的類型或基底類別呼叫 `protected private` 也沒有作用。  
   
- 當您宣告公用解構函式時，編譯器會產生程式碼，讓 ref 類別實作 `Platform::IDisposable` ，且解構函式實作 `Dispose` 方法。 `Platform::IDisposable`是 C + + /CX 投影的`Windows::Foundation::IClosable`。 絕對不要明確實作這些介面。  
+ 當您宣告公用解構函式時，編譯器會產生程式碼，讓 ref 類別實作 `Platform::IDisposable` ，且解構函式實作 `Dispose` 方法。 `Platform::IDisposable` 是 C + + /CX 投影的`Windows::Foundation::IClosable`。 絕對不要明確實作這些介面。  
   
 ## <a name="inheritance"></a>繼承  
  Platform::Object 是所有 ref 類別的通用基底類別。 所有 ref 類別都會隱含轉換為 Platform::Object，而且也都能覆寫 [Object::ToString](../cppcx/platform-object-class.md#tostring)。 不過，Windows 執行階段的繼承模型不能用於一般繼承模型，在 C + + /CX，這表示使用者定義的公用 ref 類別不能做為基底類別。  

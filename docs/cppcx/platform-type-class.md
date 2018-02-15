@@ -6,23 +6,26 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
 - VCCORLIB/Platform::Type::FullName
-dev_langs: C++
-helpviewer_keywords: Platform::Type Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c292426b9d04fd5b3d9785224f9b2d48f129f0db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type 類別
 包含與類型 (特別是此項)、字串名稱和 typecode 相關的執行階段資訊。 藉由呼叫取得[object:: gettype](../cppcx/platform-object-class.md#gettype)任何物件或使用[typeid](../windows/typeid-cpp-component-extensions.md)操作員的類別或結構的名稱。  
@@ -50,7 +53,7 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[Type:: fullname](#fullname)|傳回表示類型之完整名稱的 [Platform::String 類別](../cppcx/platform-string-class.md)^，並使用 . （點） 做為分隔符號，不:: （雙冒號） — 比方說， `MyNamespace.MyClass`。|  
+|[Type::FullName](#fullname)|傳回表示類型之完整名稱的 [Platform::String 類別](../cppcx/platform-string-class.md)^，並使用 . （點） 做為分隔符號，不:: （雙冒號） — 比方說， `MyNamespace.MyClass`。|  
   
 ## <a name="conversion-operators"></a>轉換運算子  
   
@@ -111,7 +114,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>備註  
  Gettypecode （） 成員方法相當`typeid`屬性。
 
-## <a name="tostring"></a>Type::ToString 方法
+## <a name="tostring">Type::ToString 方法</a>
 擷取類型的名稱。  
   
 ### <a name="syntax"></a>語法  

@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - marshaling [C++], arrays
 - platform invoke [C++], arrays
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3694d6628005c49cc824e52d710e64e060822f96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50ff0e0a6e61b3c2c691296f92f6ad471a3007e9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>如何：使用 PInvoke 封送處理陣列
 本主題說明如何原生函式接受 C 樣式字串可以使用 CLR 字串型別呼叫<xref:System.String>使用.NET Framework 平台叫用支援。 Visual c + + 程式設計人員會建議 （自動），而是使用 c + + Interop 功能，因為 P/Invoke 提供極少的編譯時間錯誤報告，不是類型安全，就必須等待冗長實作。 如果未受管理的應用程式開發介面會封裝為 DLL 不是可用的原始程式碼，P/Invoke 是唯一的選項 (否則請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md))。  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  下列程式碼是由 unmanaged 和 managed 的模組所組成。 未受管理的模組會定義接受整數的陣列的函式的 DLL。 第二個模組是受管理的命令列應用程式匯入這個函式，但定義方面的受管理的陣列，並使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>屬性來指定陣列應該將轉換成原生陣列時呼叫。  
   
- 受管理的模組使用 /clr，但 /clr: pure 的運作方式。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
+ 以 /clr 編譯 managed 的模組。  
   
 ```cpp  
 // TraditionalDll4.cpp  

@@ -6,24 +6,27 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Array Constructors
 - VCCORLIB/Namespace not found::Platform::Array::Value
-dev_langs: C++
-helpviewer_keywords: Platform::Array Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7aa3a29615f6c744a3c790dd7b223225bc31f87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8e3d2964e1488e74e7a07f20c38ee4fbbcf6e387
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformarray-class"></a>Platform::Array 類別
 表示可修改的一維陣列，可在不同的應用程式二進位介面 (ABI) 之間接收和傳遞。  
@@ -53,7 +56,7 @@ private ref class Array<TArg, 1> :
   
 |||  
 |-|-|  
-|[Array:: value](#value)|擷取目前陣列的控制代碼。|  
+|[Array::Value](#value)|擷取目前陣列的控制代碼。|  
   
 ### <a name="remarks"></a>備註  
  Array 類別已密封，無法被繼承。  
@@ -70,7 +73,7 @@ private ref class Array<TArg, 1> :
  編譯器選項： **/ZW**  
 
  
-## <a name="ctor"></a>陣列建構函式
+## <a name="ctor"></a>  陣列建構函式
 初始化類別範本參數所指定的類型的一維可修改陣列*T*。  
   
 ## <a name="syntax"></a>語法  
@@ -93,7 +96,7 @@ Array(T* data, unsigned int size);
 ### <a name="remarks"></a>備註  
  如需如何建立 platform:: array 執行個體的詳細資訊，請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
-## <a name="get"></a>Array:: get 方法
+## <a name="get"></a>  Array:: get 方法
 在指定的索引位置擷取對陣列元素的參考。  
   
 ## <a name="syntax"></a>語法  
@@ -109,7 +112,7 @@ T& get(unsigned int index)  const;
 ### <a name="return-value"></a>傳回值  
  `index` 參數所指定的陣列元素。  
   
-## <a name="value"></a>Array:: value 屬性
+## <a name="value"></a>  Array:: value 屬性
 擷取目前陣列的控制代碼。  
   
 ## <a name="syntax"></a>語法  

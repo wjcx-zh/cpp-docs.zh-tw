@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,88 +13,74 @@ f1_keywords:
 - ATL.CDataSource.Open
 - CDataSource::Open
 - CDataSource.Open
-dev_langs: C++
-helpviewer_keywords: Open method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open method
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3f2215b84600e2691f6b3aeb0407c5c6b96ebd00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 438ed0d649319830201883421f7c2191b361b529
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 開啟資料來源使用的連接**CLSID**， **ProgID**，或`CEnumerator`moniker 或以定位程式對話方塊提示使用者。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      HRESULT Open(  
-   const CLSID& clsid,  
+```cpp
+HRESULT Open(const CLSID& clsid,  
    DBPROPSET* pPropSet = NULL,  
-   ULONG nPropertySets = 1   
-) throw( );  
-HRESULT Open(  
-   const CLSID& clsid,  
+   ULONG nPropertySets = 1) throw();  
+
+
+HRESULT Open(const CLSID& clsid,  
    LPCTSTR pName,  
    LPCTSTR pUserName = NULL,  
    LPCTSTR pPassword = NULL,  
-   long nInitMode = 0   
-) throw( );  
-HRESULT Open(  
-   LPCTSTR szProgID,  
+   long nInitMode = 0) throw();HRESULT Open(LPCTSTR szProgID,  
+  DBPROPSET* pPropSet = NULL,  
+   ULONG nPropertySets = 1) throw();HRESULT Open(LPCTSTR szProgID,  
+   LPCTSTR pName,  LPCTSTR pUserName = NULL,  
+   LPCTSTR pPassword = NULL,  
+   long nInitMode = 0) throw();  
+
+HRESULT Open(const CEnumerator& enumerator,  
    DBPROPSET* pPropSet = NULL,  
-   ULONG nPropertySets = 1   
-) throw( );  
-HRESULT Open(  
-   LPCTSTR szProgID,  
+   ULONG nPropertySets = 1) throw();  
+
+HRESULT Open(const CEnumerator& enumerator,  
    LPCTSTR pName,  
    LPCTSTR pUserName = NULL,  
    LPCTSTR pPassword = NULL,  
-   long nInitMode = 0   
-) throw( );  
-HRESULT Open(  
-   const CEnumerator& enumerator,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG nPropertySets = 1   
-) throw( );  
-HRESULT Open(  
-   const CEnumerator& enumerator,  
-   LPCTSTR pName,  
-   LPCTSTR pUserName = NULL,  
-   LPCTSTR pPassword = NULL,  
-   long nInitMode = 0   
-) throw( );  
-HRESULT Open(  
-   HWND hWnd = GetActiveWindow( ),  
-   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_WIZARDSHEET   
-) throw( );  
-HRESULT Open(   
-   LPCWSTR szProgID,   
-   DBPROPSET* pPropSet = NULL,   
-   ULONG nPropertySets = 1   
-) throw( );  
-HRESULT Open(   
-   LPCSTR szProgID,   
-   LPCTSTR pName,   
-   LPCTSTR pUserName = NULL,   
+   long nInitMode = 0) throw();  
+
+HRESULT Open(HWND hWnd = GetActiveWindow(),  
+   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_WIZARDSHEET) throw();
+
+HRESULT Open(LPCWSTR szProgID,   
+  DBPROPSET* pPropSet = NULL,   
+   ULONG nPropertySets = 1) throw();
+
+HRESULT Open(LPCSTR szProgID,   
+   LPCTSTR pName,LPCTSTR pUserName = NULL,   
    LPCTSTR pPassword = NULL,   
-   long nInitMode = 0   
-) throw( );  
+   long nInitMode = 0) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
  `clsid`  
  [in]**CLSID**的資料提供者。  
   
- *Dbpropset*  
+ *pPropSet*  
  [in]陣列的指標[DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)結構，其中包含要設定屬性和值。 請參閱[屬性集和屬性群組](https://msdn.microsoft.com/en-us/library/ms713696.aspx)中*OLE DB 程式設計人員參考*Windows SDK 中。  
   
  *nPropertySets*  

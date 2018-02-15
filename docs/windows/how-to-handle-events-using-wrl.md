@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 處理事件
 本文件說明如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 訂閱和處理 Windows 執行階段物件的事件。  
@@ -31,7 +33,7 @@ ms.lasthandoff: 12/21/2017
  下列步驟開始`ABI::Windows::System::Threading::IDeviceWatcher`物件，並使用事件處理常式來監視進度。 `IDeviceWatcher`介面可讓您以非同步的方式，或在背景中列舉的裝置和裝置新增、 移除或變更時收到通知。 [回呼](../windows/callback-function-windows-runtime-cpp-template-library.md)函式是此範例中的重要部分，因為它可讓它指定處理結果的背景作業的事件處理常式。 完整的範例如下。  
   
 > [!WARNING]
->  雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台應用程式中，此範例會使用主控台應用程式的圖例。 函式，如`wprintf_s`所沒有的通用 Windows 平台應用程式。 多個型別和函式，您可以使用通用 Windows 平台應用程式中的詳細資訊，請參閱[/zw 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)和[Win32 和 COM 適用於 Windows 市集應用程式](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+>  雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台應用程式中，此範例會使用主控台應用程式的圖例。 函式，如`wprintf_s`所沒有的通用 Windows 平台應用程式。 多個型別和函式，您可以使用通用 Windows 平台應用程式中的詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)和[Win32 和 COM 用於 UWP 應用程式](/uwp/win32-and-com/win32-and-com-for-uwp-apps)。  
   
 1.  包含 (`#include`) 任何必要的 Windows 執行階段、 Windows 執行階段 c + + 樣板程式庫或 c + + 標準程式庫標頭。  
   
@@ -94,7 +96,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯程式碼，將它複製然後將它貼入 Visual Studio 專案中，或將它貼入名為的檔案中`wrl-consume-events.cpp`，然後在 Visual Studio 命令提示字元視窗中執行下列命令。  
   
- **cl.exe wrl 取用 events.cpp runtimeobject.lib**  
+ **cl.exe wrl-consume-events.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>請參閱  
  [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

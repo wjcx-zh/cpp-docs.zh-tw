@@ -6,7 +6,7 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
 - COLLECTION/Platform::Collections::Vector::Append
@@ -23,19 +23,22 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs: C++
-helpviewer_keywords: Vector Class (C++/Cx)
+dev_langs:
+- C++
+helpviewer_keywords:
+- Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8f77962a6ba1eeb86abf4d91b3a308b4fb0d65ef
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -117,7 +120,7 @@ Vector 物件中包含的元素型別。
 
 **命名空間：** Platform::Collections
 
-## <a name="append"></a>Vector:: append 方法
+## <a name="append"></a>  Vector:: append 方法
 
 在目前 Vector 的最後一個項目之後插入指定的項目。
 
@@ -132,7 +135,7 @@ virtual void Append(T item);
 *index*  
 要插入 Vector 中的項目。 型別*項目*由定義*T*類型名稱。
 
-## <a name="clear"></a>Vector:: clear 方法
+## <a name="clear"></a>  Vector:: clear 方法
 
 刪除目前 Vector 的所有項目。
 
@@ -142,7 +145,7 @@ virtual void Append(T item);
 virtual void Clear();
 ```
 
-## <a name="first"></a>Vector:: first 方法
+## <a name="first"></a>  Vector:: first 方法
 
 傳回指向 Vector 中第一項元素的迭代器。
 
@@ -162,7 +165,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 當您需要對 STL 函式傳遞的迭代器的一組時，使用受限的函式[collections:: begin](../cppcx/begin-function.md)和[不](../cppcx/end-function.md)
 
-## <a name="getat"></a>Vector:: getat 方法
+## <a name="getat"></a>  Vector:: getat 方法
 
 擷取由指定之索引所識別的目前 Vector 項目。
 
@@ -181,7 +184,7 @@ virtual T GetAt(unsigned int index);
 
 指定的項目*索引*參數。 項目類型由所定義*T*類型名稱。
 
-## <a name="getmany"></a>Vector:: getmany 方法
+## <a name="getmany"></a>  Vector:: getmany 方法
 
 從目前的 Vector 中，從指定的索引處開始，擷取一連串的項目，並將其複製到呼叫端配置的陣列中。
 
@@ -209,7 +212,7 @@ virtual unsigned int GetMany(
 
 此函式並非直接供用戶端程式碼使用。 其用於內部[to_vector 函式](../cppcx/to-vector-function.md)以便有效率地轉換成 std:: vector 執行個體地 platform。
 
-## <a name="getview"></a>Vector:: getview 方法
+## <a name="getview"></a>  Vector:: getview 方法
 
 傳回 Vector 的唯讀檢視，也就是 IVectorView。
 
@@ -223,7 +226,7 @@ Windows::Foundation::Collections::IVectorView<T>^ GetView();
 
 IVectorView 物件。
 
-## <a name="indexof"></a>Vector:: indexof 方法
+## <a name="indexof"></a>  Vector:: indexof 方法
 
 在目前 Vector 中搜尋指定的項目，如果找到，則傳回項目的索引。
 
@@ -251,7 +254,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 IndexOf 使用 std::find_if 尋找項目。 因此，自訂元素類型應多載 == 和 != 運算子，以啟用 find_if 所需的等號比較。
 
-##  <a name="insertat"></a>Vector:: insertat 方法
+##  <a name="insertat"></a>  Vector:: insertat 方法
 
 將指定的項目插入至目前 Vector 中，指定之索引所識別項目的後面。
 
@@ -269,7 +272,7 @@ virtual void InsertAt(unsigned int index, T item)
 *item*  
 要插入 Vector 所指定的項目之後的項目*索引*。 型別*項目*由定義*T*類型名稱。
 
-## <a name="removeat"></a>Vector:: removeat 方法
+## <a name="removeat"></a>  Vector:: removeat 方法
 
 從目前向量中刪除指定索引所識別的元素。
 
@@ -284,7 +287,7 @@ virtual void RemoveAt(unsigned int index);
 *index*  
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-## <a name="removeatend"></a>Vector:: removeatend 方法
+## <a name="removeatend"></a>  Vector:: removeatend 方法
 
 刪除目前 Vector 結尾處的項目。
 
@@ -294,7 +297,7 @@ virtual void RemoveAt(unsigned int index);
 virtual void RemoveAtEnd();
 ```
 
-## <a name="replaceall"></a>Vector:: replaceall 方法
+## <a name="replaceall"></a>  Vector:: replaceall 方法
 
 刪除目前 Vector 中的元素，然後從指定的陣列插入元素。
 
@@ -309,7 +312,7 @@ virtual void ReplaceAll(const ::Platform::Array<T>^ arr);
 *arr*  
 物件所定義的型別陣列*T*類型名稱。
 
-## <a name="setat"></a>Vector:: setat 方法
+## <a name="setat"></a>  Vector:: setat 方法
 
 在目前 Vector 中，將指定的值指派給由指定的索引所識別的元素。
 
@@ -327,7 +330,7 @@ virtual void SetAt(unsigned int index, T item);
 *item*  
 要指派給指定項目的值。 型別*項目*由定義*T*類型名稱。
 
-## <a name="size"></a>Vector:: size 方法
+## <a name="size"></a>  Vector:: size 方法
 
 傳回目前 Vector 物件中的項目數。
 
@@ -341,7 +344,7 @@ virtual property unsigned int Size;
 
 目前 Vector 中的項目數。
 
-## <a name="ctor"></a>Vector:: vector 建構函式
+## <a name="ctor"></a>  Vector:: vector 建構函式
 
 初始化 Vector 類別的新執行個體。
 

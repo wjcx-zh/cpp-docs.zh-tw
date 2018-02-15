@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="casting-ccx"></a>轉型 (C++/CX)
 適用於 Windows 執行階段類型的四個不同的轉換運算子： [static_cast 運算子](../cpp/static-cast-operator.md)， [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)， **safe_cast 運算子**，和[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。 如果無法執行轉換，`safe_cast` 和 `static_cast` 會擲回例外狀況。此外， [static_cast 運算子](../cpp/static-cast-operator.md) 也可以執行編譯階段類型檢查。 如果`dynamic_cast` 無法轉換類型，則會傳回 `nullptr` 。 雖然 `reinterpret_cast` 會傳回非 null 值，但是可能無效。 因此，我們建議您不要使用 `reinterpret_cast` ，除非您知道轉型成功。 此外，我們建議您不要使用 c-style 轉型您 C + /CX 程式碼，因為它們是相同`reinterpret_cast`。  
@@ -61,7 +62,7 @@ Windows 執行階段是 COM 抽象概念，它會使用 HRESULT 錯誤碼，而�
 ```  
   
 ## <a name="dynamiccast"></a>dynamic_cast  
- 使用`dynamic_cast`當您將物件轉型 (更明確地說，也就是 hat `^`) 衍生程度較大的類型，您會預期目標物件有時可能會是`nullptr`或轉型可能會失敗，而且您想要處理該條件當做正常程式碼路徑而非例外狀況。 例如，在 [ **Windows 市集空白應用程式** ] 專案範本中， `OnLaunched` 中的 `app.xamp.cpp` 方法會使用 `dynamic_cast` 測試應用程式視窗是否有內容。 如果它沒有內容也並非錯誤，因為這是預期的情況。 `Windows::Current::Content` 是 `Windows::UI::XAML::UIElement` 並且會轉換為 `Windows::UI.XAML::Controls::Frame`，這在繼承階層架構中是屬於衍生程度較高的類型。  
+ 使用`dynamic_cast`當您將物件轉型 (更明確地說，也就是 hat `^`) 衍生程度較大的類型，您會預期目標物件有時可能會是`nullptr`或轉型可能會失敗，而且您想要處理該條件當做正常程式碼路徑而非例外狀況。 例如，在**空白應用程式 (通用 Windows)**專案範本`OnLaunched`方法中的`app.xamp.cpp`使用`dynamic_cast`來測試應用程式視窗是否有內容。 如果它沒有內容也並非錯誤，因為這是預期的情況。 `Windows::Current::Content` 是 `Windows::UI::XAML::UIElement` 並且會轉換為 `Windows::UI.XAML::Controls::Frame`，這在繼承階層架構中是屬於衍生程度較高的類型。  
 ```
 void App::OnLaunched(Windows::ApplicationModel::Activation::LaunchActivatedEventArgs^ args)  
 {  

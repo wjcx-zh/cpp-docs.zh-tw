@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ AMP (see C++ Accelerated Massive Parallelism)
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6bda8be9d3cc939e95ccfe68397eef259dd3a2f4
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 514c45599bce85bf66bf473ac597dab255888ba8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 C + + AMP (c + + Accelerated Massive Parallelism) 利用通常呈現為圖形處理器 (GPU) 上獨立圖形顯示卡的資料平行硬體加速您的 c + + 程式碼執行。 C + + AMP 程式撰寫模型包含多維度陣列編製索引，記憶體傳輸和並排的支援。 它也包含數學函式程式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何將 cpu 移到 GPU 和備份。  
@@ -34,7 +37,7 @@ C + + AMP (c + + Accelerated Massive Parallelism) 利用通常呈現為圖形處
 |[使用 Lambda、函式物件和限制函式](../../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md)|描述如何使用 lambda 運算式、 函式物件和限制函式呼叫中[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。|  
 |[使用磚](../../parallel/amp/using-tiles.md)|描述如何使用磚，以加速您的 c + + AMP 程式碼。|  
 |[使用 accelerator 和 accelerator_view 物件](../../parallel/amp/using-accelerator-and-accelerator-view-objects.md)|描述如何使用加速器，以自訂您的程式碼在 GPU 上執行。|  
-|[在 Windows 市集應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)|描述如何使用 c + + AMP 中[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]使用 Windows 執行階段類型的應用程式。|  
+|[在 UWP 應用程式中使用 c + + AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)|描述如何使用 Windows 執行階段類型的通用 Windows 平台 (UWP) 應用程式中使用 c + + AMP。|  
 |[圖形 (C++ AMP)](../../parallel/amp/graphics-cpp-amp.md)|描述如何使用 c + + AMP 圖形文件庫。|  
 |[逐步解說：矩陣乘法](../../parallel/amp/walkthrough-matrix-multiplication.md)|示範如何使用 c + + AMP 程式碼和並排矩陣乘法。|  
 |[逐步解說：偵錯 C++ AMP 應用程式](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)|說明如何建立及偵錯的應用程式使用平行減少要加總整數的大型陣列。|  

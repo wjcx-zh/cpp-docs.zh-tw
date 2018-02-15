@@ -1,10 +1,11 @@
 ---
-title: "Icolumnsinfoimpl:: Mapcolumnids |Microsoft 文件"
+title: IColumnsInfoImpl::MapColumnIDs | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,34 +17,33 @@ f1_keywords:
 - IColumnsInfoImpl::MapColumnIDs
 - ATL.IColumnsInfoImpl<T>.MapColumnIDs
 - ATL.IColumnsInfoImpl.MapColumnIDs
-dev_langs: C++
-helpviewer_keywords: MapColumnIDs method
+dev_langs:
+- C++
+helpviewer_keywords:
+- MapColumnIDs method
 ms.assetid: 7aa2d011-75ba-440a-bafe-ab8fccd16dfb
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c39cb7201ce60e8dfadd375956d738c30a6fdd61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21971da73444404397a111b69986a840f14a804b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="icolumnsinfoimplmapcolumnids"></a>IColumnsInfoImpl::MapColumnIDs
 在指定的資料行識別碼所識別的資料列集傳回的資料行序數的陣列。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      STDMETHOD (MapColumnIDs)(  
-   DBORDINAL cColumnIDs,  
+```cpp
+      STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
    const DBID rgColumnIDs[],  
-   DBORDINAL rgColumns[]   
-);  
+   DBORDINAL rgColumns[]);  
 ```  
   
 #### <a name="parameters"></a>參數  

@@ -4,41 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IRowsetImpl
-dev_langs: C++
-helpviewer_keywords: IRowsetImpl class
+f1_keywords:
+- IRowsetImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7b4d8dd6f6dced2b4847939b0d7ed560f1d59479
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54b9fd321c4240e9ba02cc63d809a492ffa4d439
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 類別
 提供 `IRowset` 介面的實作。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 template <  
    class T,   
    class RowsetInterface,  
    class RowClass = CSimpleRow,  
    class MapClass = CAtlMap <  
       RowClass::KeyType,  
-      RowClass*   
-   >  
->  
+      RowClass*>>  
 class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface  
 ```  
   
@@ -69,7 +71,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[IRowsetImpl](../../data/oledb/irowsetimpl-class.md)|建構函式。 並非由使用者直接呼叫。|  
 |[RefRows](../../data/oledb/irowsetimpl-refrows.md)|由呼叫[AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md)和[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)。 並非由使用者直接呼叫。|  
 |[ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)|釋放資料列。|  
-|[Restartposition 於](../../data/oledb/irowsetimpl-restartposition.md)|重新定位下一個提取位置，為其初始位置。也就是說，它的位置，第一個資料列集時建立。|  
+|[RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)|重新定位下一個提取位置，為其初始位置。也就是說，它的位置，第一個資料列集時建立。|  
 |[SetDBStatus](../../data/oledb/irowsetimpl-setdbstatus.md)|設定指定之欄位的狀態旗標。|  
   
 ### <a name="data-members"></a>資料成員  

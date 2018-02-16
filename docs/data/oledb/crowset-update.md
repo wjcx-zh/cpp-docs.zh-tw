@@ -1,10 +1,11 @@
 ---
-title: "Crowset |Microsoft 文件"
+title: CRowset::Update | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,34 +17,33 @@ f1_keywords:
 - CRowset::Update
 - CRowset<TAccessor>.Update
 - ATL::CRowset::Update
-dev_langs: C++
-helpviewer_keywords: Update method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Update method
 ms.assetid: cd5fedc8-2b85-4cb8-8c40-c79576316903
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 26cbada107bbefe4c5e32243f2761193b1912a0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac465bdb5cfa228e5621a3ccf0d791f5f5271421
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetupdate"></a>CRowset::Update
 傳輸任何暫止的變更與目前資料列自上次擷取或**更新**上呼叫。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      HRESULT Update(   
-   DBCOUNTITEM* pcRows = NULL,   
+```cpp
+HRESULT Update(DBCOUNTITEM* pcRows = NULL,   
    HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL    
-) throw( );  
+   DBROWSTATUS* pStatus = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -69,6 +69,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)   
- [Irowsetupdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [Updateall](../../data/oledb/crowset-updateall.md)   
+ [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md)   
  [CRowset::SetData](../../data/oledb/crowset-setdata.md)

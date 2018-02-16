@@ -4,42 +4,45 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - CRowsetImpl
 - ATL.CRowsetImpl
 - ATL::CRowsetImpl
-dev_langs: C++
-helpviewer_keywords: CRowsetImpl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRowsetImpl class
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c126c757ae4776d0b2a5d2bec352ee8d58c4f0d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 類別
 提供標準的 OLE DB 資料列集實作，而不需要許多實作介面的多重繼承。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 template <  
    class T,  
    class Storage,  
    class CreatorClass,  
    class ArrayType = CAtlArray<Storage>,   
    class RowClass = CSimpleRow,   
-   class RowsetInterface = IRowsetImpl < T, IRowset >   
+   class RowsetInterface = IRowsetImpl <T, IRowset>   
 >  
 class CRowsetImpl :    
    public CComObjectRootEx<CreatorClass::_ThreadModel>,   
@@ -86,7 +89,7 @@ class CRowsetImpl :
 |[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)|包含資料列集的起始索引。|  
   
 ## <a name="remarks"></a>備註  
- `CRowsetImpl`提供靜態向上轉型成為表單中的覆寫。 方法會控制在其中指定的資料列集將會驗證命令文字的方式。 您可以建立自己`CRowsetImpl`-樣式藉由實作介面多重繼承的類別。 唯一的方法，您必須提供實作**Execute**。 根據您建立哪種類型的資料列集，creator 方法將會針對不同的簽章**Execute**。 例如，如果您使用`CRowsetImpl`-衍生類別來實作結構描述資料列**Execute**方法會有下列簽章：  
+ `CRowsetImpl` 提供靜態向上轉型成為表單中的覆寫。 方法會控制在其中指定的資料列集將會驗證命令文字的方式。 您可以建立自己`CRowsetImpl`-樣式藉由實作介面多重繼承的類別。 唯一的方法，您必須提供實作**Execute**。 根據您建立哪種類型的資料列集，creator 方法將會針對不同的簽章**Execute**。 例如，如果您使用`CRowsetImpl`-衍生類別來實作結構描述資料列**Execute**方法會有下列簽章：  
   
  `HRESULT Execute(LONG* pcRows, ULONG cRestrictions, const VARIANT* rgRestrictions)`  
   

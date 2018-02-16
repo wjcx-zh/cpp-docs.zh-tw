@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - interop [C++], strings
 - marshaling [C++], strings
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 86f51c31cb329b05f58452818b7a9292d7699273
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1887a88bcfcdec9daf2661eca56a0adcf59ba08
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>如何：使用 PInvoke 封送處理字串
 本主題說明如何原生函式接受 C 樣式字串可以呼叫使用 CLR 字串類型使用.NET Framework 平台叫用支援的 system:: string。 Visual c + + 程式設計人員會建議 （自動），而是使用 c + + Interop 功能，因為 P/Invoke 提供極少的編譯時間錯誤報告，不是類型安全，就必須等待冗長實作。 如果未受管理的應用程式開發介面會封裝為 DLL，且不提供原始程式碼，P/Invoke 是唯一的選項，但否則看到[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
@@ -36,8 +38,6 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>範例  
  下列程式碼是由 unmanaged 和 managed 的模組所組成。 未受管理的模組是定義函式，呼叫可接受 ANSI C 樣式字串形式的 char * TakesAString 的 DLL。 受管理的模組是命令列應用程式匯入 TakesAString 函式，但定義為受管理的 System.String，而不是 char\*。 <xref:System.Runtime.InteropServices.MarshalAsAttribute>屬性用來指示如何的 managed 的字串應該封送處理呼叫 TakesAString 時。  
-  
- 受管理的模組使用 /clr，但 /clr: pure 的運作方式。  
   
 ```  
 // TraditionalDll2.cpp  

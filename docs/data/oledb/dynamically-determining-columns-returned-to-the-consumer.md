@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed7ad9ab7b28758419c2b7c848852678f69bc3e2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>動態決定傳回給消費者的資料行
 PROVIDER_COLUMN_ENTRY 巨集通常處理**icolumnsinfo:: Getcolumnsinfo**呼叫。 不過，取用者可能會選擇使用書籤，因為提供者必須是能夠變更傳回根據取用者是否要求書籤的資料行。  
   
  若要處理**icolumnsinfo:: Getcolumnsinfo**呼叫時，刪除 PROVIDER_COLUMN_MAP，定義的函式`GetColumnInfo`，從`CAgentMan`使用者記錄 MyProviderRS.h 中並取代為您自己的定義`GetColumnInfo`函式：  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
 class CAgentMan  
@@ -53,11 +55,11 @@ public:
   
  接下來，實作`GetColumnInfo`MyProviderRS.cpp，在函式，如下列程式碼所示。  
   
- `GetColumnInfo`會先檢查，請參閱如果 OLE DB 屬性**DBPROP_BOOKMARKS**設定。 若要取得屬性，`GetColumnInfo`會使用指標 (`pRowset`) 的資料列集物件。 `pThis`指標表示建立資料列集，這是一個類別的屬性對應所在的類別。 `GetColumnInfo`類型轉換`pThis`指標`RMyProviderRowset`指標。  
+ `GetColumnInfo` 會先檢查，請參閱如果 OLE DB 屬性**DBPROP_BOOKMARKS**設定。 若要取得屬性，`GetColumnInfo`會使用指標 (`pRowset`) 的資料列集物件。 `pThis`指標表示建立資料列集，這是一個類別的屬性對應所在的類別。 `GetColumnInfo` 類型轉換`pThis`指標`RMyProviderRowset`指標。  
   
  若要檢查**DBPROP_BOOKMARKS**屬性，`GetColumnInfo`使用`IRowsetInfo`介面，您可以藉由呼叫取得`QueryInterface`上`pRowset`介面。 或者，您可以使用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md)方法改為。  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////  
 // MyProviderRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
@@ -118,12 +120,11 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
  這個範例會使用靜態陣列，包含資料行資訊。 如果取用者不想書籤資料行，在陣列中的一個項目未使用。 若要處理的資訊，您會建立兩個陣列巨集： ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 採用額外的參數， `flags`，也就是如果您指定的書籤資料行需要。  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
   
-#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision,   
-scale, guid, dataClass, member) \  
+#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
@@ -134,8 +135,7 @@ scale, guid, dataClass, member) \
    _rgColumns[ulCols].bScale = (BYTE)scale; \  
    _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);  
   
-#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type,   
-precision, scale, guid, dataClass, member, flags) \  
+#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
    _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
    _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  

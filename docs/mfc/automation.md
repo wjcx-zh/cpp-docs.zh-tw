@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Automation servers, about Automation servers
 - clients, Automation
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ce34abd10b4681ba378cf4fbd777c96277f4db4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="automation"></a>Automation
 Automation (先前稱為 OLE Automation) 可讓應用程式操作另一個應用程式中實作的物件，或者公開物件以便提供給其他程式操作。  
@@ -47,7 +50,7 @@ Automation (先前稱為 OLE Automation) 可讓應用程式操作另一個應用
   
 -   Automation (區域)。  
   
--   [遠端 Automation](../mfc/remote-automation.md) (在網路上使用分散式 COM 或 DCOM)。  
+-   （在網路上使用分散式 COM 或 DCOM） 遠端 Automation。  
   
  當應用程式提供可供其他應用程式使用的功能時，公開物件是有益處的。 例如，某個 ActiveX 控制項是一種 Automation 伺服器類型，此時裝載 ActiveX 控制項的應用程式即是該控制項的 Automation 用戶端。  
   
@@ -81,8 +84,6 @@ Automation (先前稱為 OLE Automation) 可讓應用程式操作另一個應用
 -   [Automation 用戶端](../mfc/automation-clients.md)  
   
 -   [Automation 伺服程式](../mfc/automation-servers.md)  
-  
--   [遠端 Automation](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   

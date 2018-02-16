@@ -4,38 +4,40 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - IRowsetUpdateImpl
 - ATL.IRowsetUpdateImpl
 - ATL::IRowsetUpdateImpl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - providers, updatable
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 206f3d25069eaa12efce8150e82c4f54fc96f4fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36282ea38922656484b208f3215c881f8ed8cf34
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 類別
 OLE DB 樣板實作[IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx)介面。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 template <  
    class T,   
    class Storage,   
@@ -43,13 +45,13 @@ template <
    class RowClass = CSimpleRow,   
    class MapClass = CAtlMap <RowClass::KeyType, RowClass*>   
 >  
+
 class IRowsetUpdateImpl : public IRowsetChangeImpl<  
    T,   
    Storage,   
    IRowsetUpdate,   
    RowClass,   
-   MapClass  
->  
+   MapClass>  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -83,7 +85,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|取得最近傳送到，或從資料來源，略過暫止的變更取得的資料。|  
 |[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|傳回資料列有暫止的變更的清單。|  
 |[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|傳回指定的資料列的狀態。|  
-|[復原](../../data/oledb/irowsetupdateimpl-undo.md)|復原自上次擷取或更新的資料列的任何變更。|  
+|[Undo](../../data/oledb/irowsetupdateimpl-undo.md)|復原自上次擷取或更新的資料列的任何變更。|  
 |[更新](../../data/oledb/irowsetupdateimpl-update.md)|會傳送自上次擷取或更新資料列所做的變更。|  
   
 ### <a name="implementation-methods-callback"></a>實作方法 （回呼）  
@@ -101,7 +103,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ## <a name="remarks"></a>備註  
  您應該先閱讀並了解的文件[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)，因為那里所述的所有項目也適用於此處。 您也應該讀取的第 6 章*OLE DB 程式設計人員參考*上設定資料。  
   
- `IRowsetUpdateImpl`實作 OLE DB`IRowsetUpdate`介面，讓取用者延遲與所做的變更傳輸`IRowsetChange`到資料來源，並復原變更再傳輸。  
+ `IRowsetUpdateImpl` 實作 OLE DB`IRowsetUpdate`介面，讓取用者延遲與所做的變更傳輸`IRowsetChange`到資料來源，並復原變更再傳輸。  
   
 > [!IMPORTANT]
 >  強烈建議您先閱讀下列文件，然後再嘗試將實作您的提供者：  

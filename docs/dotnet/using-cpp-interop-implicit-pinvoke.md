@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -27,18 +29,18 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ Interop (隱含 PInvoke)
 不同於其他.NET 語言中，Visual c + + 已經在同一個應用程式，甚至相同的檔案，可讓存在於 managed 和 unmanaged 程式碼的互通性支援 (使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma)。 這可讓 Visual c + + 開發人員整合至現有的 Visual c + + 應用程式的.NET 功能，也不會干擾其餘的應用程式。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/21/2017
  明確的 PInvoke.NET Framework 所支援，可在大部分的.NET 語言。 但是，正如其名，是 Visual c + + 特有的 c + + Interop。  
   
 ## <a name="c-interop"></a>C++ Interop  
- C + + Interop 建議透過明確的 PInvoke 因為它提供更佳的型別安全實作通常較不費時，為時更寬容 unmanaged 的 API 已經過修改，並讓效能增強功能可能就無法使用，明確PInvoke。 不過，c + + Interop 不可能或如果無法使用未受管理的來源程式碼編譯時**/clr: safe**。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。 如需資訊，請參閱[純粹的和可驗證程式碼 (C + + /CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
+ C + + Interop 建議透過明確的 PInvoke 因為它提供更佳的型別安全實作通常較不費時，為時更寬容 unmanaged 的 API 已經過修改，並讓效能增強功能可能就無法使用，明確PInvoke。 不過，c + + Interop 不可能，如果未受管理的來源程式碼無法使用。  
   
 ## <a name="c-com-interop"></a>C++ COM Interop  
  與 COM 元件相互操作時，支援 Visual c + + 的互通性功能會提供其他.NET 語言特定的優勢。 而不是以.NET framework 限制受限於[Tlbimp.exe （類型程式庫匯入工具）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，例如有限支援資料類型，以及強制公開的每個 COM 介面的每個成員，c + + Interop 允許 COM要在存取元件將而且不需要個別的 interop 組件。 如需詳細資訊，請參閱[使用 COM 從.NET](http://msdn.microsoft.com/en-us/03976661-6278-4227-a6c1-3b3315502c15)。  

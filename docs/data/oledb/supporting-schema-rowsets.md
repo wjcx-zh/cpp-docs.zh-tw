@@ -4,33 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - schema rowsets
 - OLE DB consumer templates, schema rowsets
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b969349ee09e5882677b701030ef9c0792522a
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
 結構描述資料列集可讓取用者取得的資料存放區的相關資訊，而不需要知道其基礎結構描述。 例如，資料存放區可能會不有組織成使用者定義階層，所以會有任何方式可以讀取它確保知識以外的結構描述的資料表。 （另一個範例，請注意，Visual c + + 精靈會產生取用者的存取子使用結構描述資料列）。若要讓取用者，若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作**IDBSchemaRowset**。  
   
- `IDBSchemaRowsetImpl`支援下列方法：  
+ `IDBSchemaRowsetImpl` 支援下列方法：  
   
 -   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md)檢查限制針對結構描述資料列集的有效性。  
   
@@ -57,11 +59,11 @@ ms.lasthandoff: 12/21/2017
   
 -   **C** *ShortName* **SessionColSchemaRowset**會處理要求資料行資訊 ( **DBSCHEMA_COLUMNS**結構描述資料列)。 精靈會提供範例實作，這些類別，傳回 DOS 提供者的結構描述資訊。  
   
--   **C** *ShortName* **SessionPTSchemaRowset**處理提供者類型的結構描述資訊的要求 ( **DBSCHEMA_PROVIDER_TYPES**結構描述資料列）。 精靈所提供的預設實作會傳回`S_OK`。  
+-   **C** *ShortName* **SessionPTSchemaRowset**處理提供者類型的結構描述資訊的要求 ( **DBSCHEMA_PROVIDER_TYPES**結構描述資料列集）。 精靈所提供的預設實作會傳回`S_OK`。  
   
  您可以自訂這些類別來處理您的提供者適用的結構描述資訊：  
   
--   在**C***ShortName***SessionTRSchemaRowset**，您必須先填寫目錄、 資料表和描述欄位 (**trData.m_szType**，**trData.m_szTable**，和**trData.m_szDesc**)。 精靈產生的範例會使用只有一個資料列 （資料表）。 其他提供者可能會傳回一個以上的資料表。  
+-   在**C***ShortName***SessionTRSchemaRowset**，您必須先填寫目錄、 資料表和描述欄位 (**trData.m_szType**， **trData.m_szTable**，和**trData.m_szDesc**)。 精靈產生的範例會使用只有一個資料列 （資料表）。 其他提供者可能會傳回一個以上的資料表。  
   
 -   在**C***ShortName***SessionColSchemaRowset**，傳遞做為資料表的名稱**DBID**。  
   
@@ -103,7 +105,7 @@ class CUpdateSessionTRSchemaRowset :
   
 |結構描述資料列集限制|限制值|  
 |-------------------------------|-----------------------|  
-|**TABLE_CATALOG 排列**|0x1 (二進位 1)|  
+|**TABLE_CATALOG**|0x1 (二進位 1)|  
 |**TABLE_SCHEMA**|0x2 (二進位 10)|  
 |**TABLE_NAME**|0x4 (二進位 100)|  
 |**TABLE_TYPE**|0x8 (二進位 1000)|  
@@ -216,7 +218,9 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 ```  
 // Bring over the data:  
 wcspy_s(trData.m_szType, OLESTR("TABLE"), 5);  
+
 wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);  
+
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   

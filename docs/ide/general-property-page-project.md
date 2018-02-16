@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - VC.Project.VCConfiguration.AppSupport
 - VC.Project.VCConfiguration.ToolFiles
 - VC.Project.VCConfiguration.useOfATL
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
@@ -35,12 +37,13 @@ helpviewer_keywords:
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bbe19414dbbe664f15ea2bbbc35a26827ac5b831
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="general-property-page-project"></a>一般屬性頁 (專案)
 
@@ -149,7 +152,7 @@ ms.lasthandoff: 01/03/2018
 指定[/GL](../build/reference/gl-whole-program-optimization.md)編譯器選項和[/LTCG](../build/reference/ltcg-link-time-code-generation.md)連結器選項。 根據預設，這是停用偵錯組態，並啟用零售組態。
 
 **Windows 市集應用程式支援**  
-指定此專案是否支援 Windows 市集應用程式。 如需詳細資訊，請參閱[/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)，和 Windows 開發人員中心。
+指定此專案是否支援 Windows 執行階段 （通用 Windows 平台） 應用程式。 如需詳細資訊，請參閱[/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)，和 Windows 開發人員中心。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d4898b2d67de4b23d31227e572c0f270aa6f37
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 0c0ae9514736b66be104198c95c3764772a87ef8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>開發 Visual C++ 的 IDE 和工具
 
@@ -115,7 +115,7 @@ Visual Studio 包含同時適用於原生 C++ 和 C++/CLI 的單元測試架構�
 
 ## <a name="deploy-completed-applications"></a>部署完成的應用程式
 
-您將 UWP 應用程式部署至客戶透過 Windows 市集**專案** > **存放區**功能表選項。 CRT 的部署會在背景自動處理。 如需詳細資訊，請參閱 [銷售應用程式](http://go.microsoft.com/fwlink/p/?LinkId=262280)。
+您將 UWP 應用程式部署至客戶透過 Microsoft 市集**專案** > **存放區**功能表選項。 CRT 的部署會在背景自動處理。 如需詳細資訊，請參閱 [銷售應用程式](http://go.microsoft.com/fwlink/p/?LinkId=262280)。
 
 當您將原生 C++ 桌面應用程式部署至另一部電腦時，您必須安裝該應用程式本身及其相依的所有程式庫檔案。 若要部署的應用程式通用的 c + + 執行階段 (UCRT) 的三種方式： 集中部署、 本機部署或靜態連結。 如需詳細資訊，請參閱[部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)。
 

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords: R6019
-dev_langs: C++
-helpviewer_keywords: R6019
+f1_keywords:
+- R6019
+dev_langs:
+- C++
+helpviewer_keywords:
+- R6019
 ms.assetid: 8129923e-7db2-40ee-9602-def9365f8d28
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c0e027907476eeacf10515556544160e402cd0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4ab7054bdce76aa1dd0b443993cfac8eeb8ecc7
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="c-runtime-error-r6019"></a>C 執行階段錯誤 R6019
 無法開啟主控台裝置  
@@ -37,4 +42,4 @@ ms.lasthandoff: 12/21/2017
   
  **程式設計人員的資訊**  
   
- 應用程式呼叫主控台函式，但作業系統未授與主控台的存取權，就會發生這個錯誤。 除了在偵錯模式中，主控台函式通常不允許在 Windows 市集應用程式。 如果您的應用程式需要系統管理員權限，才能執行，請確定它預設安裝到系統管理員身分執行。
+ 應用程式呼叫主控台函式，但作業系統未授與主控台的存取權，就會發生這個錯誤。 除了在偵錯模式中，主控台函式通常不允許 Microsoft 市集應用程式中。 如果您的應用程式需要系統管理員權限，才能執行，請確定它預設安裝到系統管理員身分執行。

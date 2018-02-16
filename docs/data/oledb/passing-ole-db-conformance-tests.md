@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0df51ea0086104a45385673b310b5717bfa1c9ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2c999692a2715301b68fd1a4bd7f719fde83
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通過 OLE DB 一致性測試
 若要讓提供者更為一致，Data Access SDK 會提供一組 OLE DB 一致性測試。 測試檢查您的提供者的所有層面，並提供您合理做為您提供者函式預期的保證。 您可以在 Microsoft Data Access SDK 中找到 OLE DB 一致性測試。 本節著重於您應該將一致性測試執行。 如需執行 OLE DB 一致性測試的詳細資訊，請參閱 SDK。  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  下列程式碼是**ValidateCommandID**驗證常式：  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////  
 // MyProviderRS.H  
 // Class: CMyProviderRowset   

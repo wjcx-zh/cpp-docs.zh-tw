@@ -1,52 +1,51 @@
 ---
-title: "Iopenrowsetimpl:: Createrowset |Microsoft 文件"
+title: IOpenRowsetImpl::CreateRowset | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - IOpenRowsetImpl.CreateRowset
 - IOpenRowsetImpl::CreateRowset
 - CreateRowset
-dev_langs: C++
-helpviewer_keywords: CreateRowset method
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateRowset method
 ms.assetid: 69041cf6-7a2f-4409-a26e-6e984c24986e
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ada7e23a3ff48ea9b97263c8fa94a7970185f7a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7aa478d86ba21dd482c3507352fb7f321df2ee0e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iopenrowsetimplcreaterowset"></a>IOpenRowsetImpl::CreateRowset
 建立資料列集物件。 並非由使用者直接呼叫。 請參閱[iopenrowset:: Openrowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)中*OLE DB 程式設計人員參考。*  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      template <class   
-      RowsetClass  
+```cpp
+      template template <class RowsetClass  
       >  
-HRESULT CreateRowset(  
-   IUnknown* pUnkOuter,  
+HRESULT CreateRowset(IUnknown* pUnkOuter,  
    DBID* pTableID,  
    DBID* pIndexID,  
    REFIID riid,  
    ULONG cPropertySets,  
    DBPROPSET rgPropertySets[],  
    IUnknown** ppRowset,  
-   RowsetClass*& pRowsetObj   
-);  
+   RowsetClass*& pRowsetObj);  
 ```  
   
 #### <a name="parameters"></a>參數  

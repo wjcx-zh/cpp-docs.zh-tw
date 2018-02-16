@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - testing, OLE DB providers
 - testing providers
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd224163f11a4ebafde8faf6b0c3156d89de1781
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="testing-the-read-only-provider"></a>測試唯讀提供者
 若要測試的提供者，您需要取用者。 如果取用者可以比對與提供者，它可幫助。 OLE DB 消費者樣板是 OLE DB 的精簡型包裝函式，而且與提供者 COM 物件相符。 來源隨附的取用者範本，因為很容易進行偵錯與它們的提供者。 消費者樣板也是開發取用者應用程式非常小且更快速的方式。  
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  開啟對話方塊類別 （在此案例的 TestProvDlg.h) 的標頭檔。 將下列程式碼加入至標頭檔 （之外的任何類別宣告）：  
   
-```  
+```cpp
 ////////////////////////////////////////////////////////////////////////  
 // TestProvDlg.h  
   
@@ -76,13 +78,13 @@ END_COLUMN_MAP()
   
  加入處理常式函式的**執行**按住 ctrl 鍵並按兩下按鈕**執行** 按鈕。 下列程式碼置於函式：  
   
-```  
+```cpp
 ///////////////////////////////////////////////////////////////////////  
 // TestProvDlg.cpp  
   
 void CtestProvDlg::OnRun()  
 {  
-   CCommand<CAccessor<CProvider> > table;  
+   CCommand<CAccessor<CProvider>> table;  
    CDataSource source;  
    CSession   session;  
   
@@ -122,7 +124,7 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
   
  傳遞字串"c:\\\samples\\\myprov\\\MyData.txt 」 中`table.Open`列。 如果您將逐步執行`Open`呼叫時，您會看到這個字串會傳遞至`SetCommandText`提供者中的方法。 請注意，`ICommandText::Execute`使用該字串的方法。  
   
- 若要擷取的資料，呼叫`MoveNext`資料表上。 `MoveNext`呼叫**irowset:: Getnextrows**， `GetRowCount`，和`GetData`函式。 當沒有任何多個資料列 (亦即，資料列集的目前位置是大於`GetRowCount`)，迴圈會終止：  
+ 若要擷取的資料，呼叫`MoveNext`資料表上。 `MoveNext` 呼叫**irowset:: Getnextrows**， `GetRowCount`，和`GetData`函式。 當沒有任何多個資料列 (亦即，資料列集的目前位置是大於`GetRowCount`)，迴圈會終止：  
   
 ```  
 while (table.MoveNext() == S_OK)  

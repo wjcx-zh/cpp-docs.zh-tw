@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CUtlProps
-dev_langs: C++
-helpviewer_keywords: CUtlProps class
+f1_keywords:
+- CUtlProps
+dev_langs:
+- C++
+helpviewer_keywords:
+- CUtlProps class
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 75e92f48729d0aae9f85cc7b7c5c97e4778f96a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 291094cf913d9c64c91070a281968524227e1376
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
 會實作各種不同的 OLE DB 屬性的介面屬性 (例如， `IDBProperties`， `IDBProperties`，和`IRowsetInfo`)。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 template < class T >  
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase  
 ```  
@@ -53,7 +57,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ## <a name="remarks"></a>備註  
  此類別大部分是實作詳細資料。  
   
- `CUtlProps`在內部設定屬性包含兩個成員： [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)和[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。  
+ `CUtlProps` 在內部設定屬性包含兩個成員： [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)和[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)。  
   
  如需有關屬性的集合對應中使用的巨集的詳細資訊，請參閱[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)和[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)。  
   

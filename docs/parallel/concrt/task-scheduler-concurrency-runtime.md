@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - oversubscription [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], oversubscription
@@ -23,22 +25,23 @@ helpviewer_keywords:
 - scheduler policies [Concurrency Runtime]
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d2d2d1fa21299867ba7a295ad9ef17759cab6c86
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>工作排程器 (並行執行階段)
 文件中這一部分的主題將說明並行執行階段工作排程器的重要功能。 工作排程器適用於您想要微調使用並行執行階段之現有程式碼的效能時。  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]應用程式中未提供工作排程器。 如需詳細資訊，請參閱[c + + 為 Windows 市集應用程式建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
+>  無法從通用 Windows 平台 (UWP) 應用程式使用工作排程器。 如需詳細資訊，請參閱[建立非同步作業以 c + + UWP 應用程式](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
 >   
 >  在 Visual Studio 2015 和更新版本， [concurrency:: task](../../parallel/concrt/reference/task-class.md)類別及 ppltasks.h 中的相關的類型使用 Windows 執行緒集區做為其排程器。 本主題不再適用於 ppltasks.h 中所定義的類型。 平行演算法 (例如 parallel_for) 會繼續使用並行執行階段做為預設排程器。  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,19 +24,22 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs: C++
-helpviewer_keywords: Concurrency namespace
+dev_langs:
+- C++
+helpviewer_keywords:
+- Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8662011107f9befef63ec247060a319172569300
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 86513e9196a3bdc8da2f414fcc792cbeb67b706d
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空間
 `Concurrency` 命名空間提供可讓您存取並行執行階段 (C++ 的並行程式設計架構) 的類別和函式。 如需詳細資訊，請參閱[並行執行階段](../../../parallel/concrt/concurrency-runtime.md)。  
@@ -137,7 +141,7 @@ namespace concurrency;
 |[task 類別 (並行執行階段)](task-class.md)|平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 您也可以使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 等模式，將工作與其他工作組合在一起。|  
 |[task_canceled 類別](task-canceled-class.md)|這個類別描述 PPL 工作分層為了強制目前工作取消，而擲回的例外狀況。 它也會由擲回`get()`方法[工作](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)，已取消的工作。|  
 |[task_completion_event 類別](task-completion-event-class.md)|`task_completion_event` 類別可讓您延遲執行工作，直到滿足某條件，或是為了回應外部事件而開始工作。|  
-|[task_continuation_context 類別](task-continuation-context-class.md)|`task_continuation_context` 類別可讓您指定您想要執行接續的位置。 只有從 Windows 市集應用程式使用這個類別才有用。 針對非 Windows 市集應用程式，工作接續的執行內容是由執行階段決定，而且無法設定。|  
+|[task_continuation_context 類別](task-continuation-context-class.md)|`task_continuation_context` 類別可讓您指定您想要執行接續的位置。 僅適用於 UWP 應用程式從這個類別。 針對非 Windows 執行階段應用程式，工作接續的執行內容會是取決於執行階段，而且不可設定。|  
 |[task_group 類別](task-group-class.md)|`task_group` 類別表示可以等候或取消的平行工作集合。|  
 |[task_handle 類別](task-handle-class.md)|`task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。|  
 |[task_options 類別 (並行執行階段)](task-options-class-concurrency-runtime.md)|表示用於建立工作的允許選項|  
@@ -223,7 +227,7 @@ namespace concurrency;
 |[run_with_cancellation_token 函式](concurrency-namespace-functions.md#run_with_cancellation_token)|在指定的取消語彙基元內容中立即和同步地執行函式物件。|  
 |[send 函式](concurrency-namespace-functions.md#send)|多載。 同步傳送作業，其會等候直到目標接受或拒絕訊息。|  
 |[set_ambient_scheduler 函式 （並行執行階段）](concurrency-namespace-functions.md#set_ambient_scheduler)||  
-|[set_task_execution_resources 函式](concurrency-namespace-functions.md#set_task_execution_resources)|多載。 依據指定的同質性集，限制並行執行階段之內部背景工作執行緒使用的執行資源。<br /><br /> 只有在資源管理員建立之前，或在兩個資源管理員存留期之間，才能有效地呼叫這個方法。 只要資源管理員不在引動過程期間，即可多次叫用此函式。 在同質性限制設定之後，直到下次有效呼叫 `set_task_execution_resources` 方法之前，該限制會持續有效。
+|[set_task_execution_resources Function](concurrency-namespace-functions.md#set_task_execution_resources)|多載。 依據指定的同質性集，限制並行執行階段之內部背景工作執行緒使用的執行資源。<br /><br /> 只有在資源管理員建立之前，或在兩個資源管理員存留期之間，才能有效地呼叫這個方法。 只要資源管理員不在引動過程期間，即可多次叫用此函式。 在同質性限制設定之後，直到下次有效呼叫 `set_task_execution_resources` 方法之前，該限制會持續有效。
 <br /><br /> 提供的同質性遮罩不需為處理序同質性遮罩的子集。 您可視需要更新處理序的同質性遮罩。|  
 |[swap 函式](concurrency-namespace-functions.md#swap)|交換兩個 `concurrent_vector` 物件的項目。|  
 |[task_from_exception 函式 （並行執行階段）](concurrency-namespace-functions.md#task_from_exception)||  

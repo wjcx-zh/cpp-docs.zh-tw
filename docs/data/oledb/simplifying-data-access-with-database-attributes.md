@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,7 +15,8 @@ f1_keywords:
 - vc-attr.db_command
 - vc-attr.db_table
 - vc-attr.db_source
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - attributes [C++], database
 - attributes [C++], data access
@@ -25,18 +27,18 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 584b83c4b3aa9ea5fd2f98fd59969ab46ce712ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec5eed15f9837637cff51c47c4b000b7e30eeb25
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>以資料庫屬性簡化資料存取
 本主題示範如何使用資料庫屬性，以簡化資料庫作業。  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 -   **Db_table**呼叫屬性化的版本中是相當於下列的樣板宣告：  
   
     ```  
-    class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
+    class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 -   **Db_column**呼叫屬性化的版本中都相當於資料行對應 (請參閱`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) 樣板宣告中。  
@@ -66,11 +68,11 @@ ms.lasthandoff: 12/21/2017
  本主題所討論的屬性相關資訊，請參閱[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)。  
   
 ## <a name="table-and-accessor-declaration-using-attributes"></a>使用資料表和存取子宣告屬性  
- 下列程式碼會呼叫`db_source`和**db_table**資料表類別上。 `db_source`指定要使用的連接與資料來源。 **db_table**會將適當的範本程式碼，來宣告資料表類別。 **db_column**指定資料行對應，以及將存取子宣告。 您可以在任何支援 ATL 的專案中使用 OLE DB 消費者屬性  
+ 下列程式碼會呼叫`db_source`和**db_table**資料表類別上。 `db_source` 指定要使用的連接與資料來源。 **db_table**會將適當的範本程式碼，來宣告資料表類別。 **db_column**指定資料行對應，以及將存取子宣告。 您可以在任何支援 ATL 的專案中使用 OLE DB 消費者屬性  
   
  以下是使用屬性的資料表和存取子宣告：  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // Table and accessor declaration using attributes  
 // authors.h  
@@ -106,7 +108,7 @@ public:
 ## <a name="table-and-accessor-declaration-using-templates"></a>使用資料表和存取子宣告範本  
  以下是使用範本的資料表和存取子宣告。  
   
-```  
+```cpp
 //////////////////////////////////////////////////////////////////////  
 // Table and user record class declaration using templates  
 // authors.h  
@@ -134,7 +136,8 @@ public:
    HRESULT OpenDataSource()  
    {  
       CDataSource _db;  
-      HRESULT hr;  
+
+HRESULT hr;  
       hr = _db.OpenFromInitializationString(L"your connection string");  
       if (FAILED(hr))  
       {  
@@ -160,12 +163,12 @@ public:
       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, m_dwYearBornLength, m_dwYearBornStatus)  
    END_COLUMN_MAP()  
 };  
-class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor> >  
+class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
 {  
 public:  
    HRESULT OpenAll()  
    {  
-      HRESULT hr;  
+HRESULT hr;  
       hr = OpenDataSource();  
       if (FAILED(hr))  
          return hr;  
@@ -192,7 +195,7 @@ public:
    }  
    HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
    {  
-      HRESULT hr = Open(m_session, "Authors", pPropSet);  
+HRESULT hr = Open(m_session, "Authors", pPropSet);  
 #ifdef _DEBUG  
       if(FAILED(hr))  
          AtlTraceErrorRecords(hr);  

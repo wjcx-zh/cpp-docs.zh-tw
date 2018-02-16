@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: OLE DB providers, reading strings into
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e798b3e85bbb5d6b362900c25d4c3414458ea63d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b57c9e9a71e8a0b603207a095e2bede333ed6ed6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>將字串讀入 OLE DB 提供者內
-`RMyProviderRowset::Execute`函式的形式開啟檔案，並讀取字串。 取用者傳遞給提供者的檔案名稱，藉由呼叫[icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)。 提供者接收的檔案名稱，並將它儲存在成員變數`m_szCommandText`。 `Execute`讀取的檔案名稱`m_szCommandText`。 如果檔案名稱無效，或檔案無法使用，`Execute`會傳回錯誤。 否則，它會開啟檔案，並在呼叫`fgets`來擷取字串。 針對每個設定的字串讀取`Execute`建立使用者資料錄的執行個體 (`CAgentMan`) 並將它放入陣列。  
+`RMyProviderRowset::Execute`函式的形式開啟檔案，並讀取字串。 取用者傳遞給提供者的檔案名稱，藉由呼叫[icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)。 提供者接收的檔案名稱，並將它儲存在成員變數`m_szCommandText`。 `Execute` 讀取的檔案名稱`m_szCommandText`。 如果檔案名稱無效，或檔案無法使用，`Execute`會傳回錯誤。 否則，它會開啟檔案，並在呼叫`fgets`來擷取字串。 針對每個設定的字串讀取`Execute`建立使用者資料錄的執行個體 (`CAgentMan`) 並將它放入陣列。  
   
  如果無法開啟檔案，`Execute`必須傳回**DB_E_NOTABLE**。 如果它傳回**E_FAIL**提供者搭配許多取用者將無法運作而無法通過 OLE DB[一致性測試](../../data/oledb/testing-your-provider.md)。  
   
@@ -35,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="code"></a>程式碼  
   
-```  
+```cpp
 /////////////////////////////////////////////////////////////////////////  
 // MyProviderRS.h  
 class RMyProviderRowset : public CRowsetImpl< RMyProviderRowset, CAgentMan, CRMyProviderCommand>  

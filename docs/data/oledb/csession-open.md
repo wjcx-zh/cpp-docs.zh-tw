@@ -1,10 +1,11 @@
 ---
-title: "Csession:: Open |Microsoft 文件"
+title: CSession::Open | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -12,41 +13,40 @@ f1_keywords:
 - CSession::Open
 - CSession.Open
 - ATL.CSession.Open
-dev_langs: C++
-helpviewer_keywords: Open method
+dev_langs:
+- C++
+helpviewer_keywords:
+- Open method
 ms.assetid: c2050c2c-9817-4857-be49-189f346968f6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b3aa0f6b694bc594ec00511ce39b7887bf26ecae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 919e87efcf38442954544c0471698fcbe5d563c9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="csessionopen"></a>CSession::Open
 開啟資料來源物件的新工作階段。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      HRESULT Open(  
-   const CDataSource& ds,  
+```cpp
+HRESULT Open(const CDataSource& ds,  
    DBPROPSET *pPropSet = NULL,  
-   ULONG ulPropSets = 0  
-) throw( );  
+   ULONG ulPropSets = 0) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
  `ds`  
  [in]若要開啟工作階段的資料來源。  
   
- *Dbpropset*  
+ *pPropSet*  
  [in]陣列的指標[DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)結構，其中包含要設定屬性和值。 請參閱[屬性集和屬性群組](https://msdn.microsoft.com/en-us/library/ms713696.aspx)中*OLE DB 程式設計人員參考*Windows SDK 中。  
   
  `ulPropSets`  

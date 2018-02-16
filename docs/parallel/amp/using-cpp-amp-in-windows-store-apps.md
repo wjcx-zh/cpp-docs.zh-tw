@@ -1,30 +1,33 @@
 ---
-title: "在 Windows 市集應用程式中使用 c + + AMP |Microsoft 文件"
+title: "在 UWP 應用程式中使用 c + + AMP |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 481ea5918e7572375fdafd9ba489da34730fef84
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="using-c-amp-in-windows-store-apps"></a>在 Windows 市集應用程式中使用 C++ AMP
-您可以使用 c + + AMP (c + + Accelerated Massive Parallelism) 中您[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]GPU （圖形處理單元） 或其他計算加速器上執行計算的應用程式。 然而，C++ AMP 並未提供可直接搭配 Windows 執行階段類型使用的 API，而 Windows 執行階段也未提供 C++ AMP 的包裝函式。 當您在程式碼中使用 Windows 執行階段類型 (包括您自行建立的類型) 時，必須將這些類型轉換成與 C++ AMP 相容的類型。  
+# <a name="using-c-amp-in-uwp-apps"></a>在 UWP 應用程式中使用 c + + AMP
+在 GPU （圖形處理單元） 或其他計算加速器上執行計算，您可以在通用 Windows 平台 (UWP) 應用程式中使用 c + + AMP (c + + Accelerated Massive Parallelism)。 然而，C++ AMP 並未提供可直接搭配 Windows 執行階段類型使用的 API，而 Windows 執行階段也未提供 C++ AMP 的包裝函式。 當您在程式碼中使用 Windows 執行階段類型 (包括您自行建立的類型) 時，必須將這些類型轉換成與 C++ AMP 相容的類型。  
   
 ## <a name="performance-considerations"></a>效能考量  
- 如果您使用[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 來建立您[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]應用程式中，我們建議您使用純舊資料 (POD) 類型，以及連續的儲存體 — 比方說， `std::vector` c-style 陣列或-將使用與 c + + AMP 的資料。 這可協助您達到更高的效能比使用非 POD 類型或 Windows RT 容器，因為沒有封送處理發生。  
+ 如果您使用[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)]([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 來建立通用 Windows 平台 (UWP) 應用程式，我們建議您先使用連續的儲存體以及純舊資料 (POD) 類型 — 例如， `std::vector` c-style 陣列或-將使用的資料與 c + + AMP。 這可協助您達到更高的效能比使用非 POD 類型或 Windows RT 容器，因為沒有封送處理發生。  
   
  在 c + + AMP 核心，如此一來，儲存的存取資料只包裝`std::vector`或陣列中的儲存體`concurrency::array_view`，然後使用中的陣列檢視`concurrency::parallel_for_each`迴圈：  
   
@@ -120,6 +123,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>請參閱  
- [建立第一個 Windows 市集應用程式使用 c + +](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [建立第一個 UWP 應用程式使用 c + +](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)   
  [在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

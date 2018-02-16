@@ -4,31 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, bookmarks
 - OLE DB provider templates, bookmarks
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41c8e5a44130eebfddc9e99ab7ef815b6e8e43a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27c6b4a98eeaf3ffcae07d8277e823375176eed2
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="using-bookmarks"></a>使用書籤
-開啟資料列集之前，您必須告訴提供者想要使用書籤。 若要這樣做，請設定**DBPROP_BOOKMARKS**屬性**true**在您的屬性集。 提供者會擷取書籤做為資料行是零，因此您必須使用特殊的巨集`BOOKMARK_ENTRY`和`CBookmark`類別，如果您使用靜態存取子。 `CBookmark`位置引數是以位元組為單位的書籤緩衝區的長度是範本類別。 所需的書籤緩衝區的長度，取決於提供者。 如果您使用的 ODBC OLE DB 提供者，如下列範例所示，緩衝區必須是 4 個位元組。  
+開啟資料列集之前，您必須告訴提供者想要使用書籤。 若要這樣做，請設定**DBPROP_BOOKMARKS**屬性**true**在您的屬性集。 提供者會擷取書籤做為資料行是零，因此您必須使用特殊的巨集`BOOKMARK_ENTRY`和`CBookmark`類別，如果您使用靜態存取子。 `CBookmark` 位置引數是以位元組為單位的書籤緩衝區的長度是範本類別。 所需的書籤緩衝區的長度，取決於提供者。 如果您使用的 ODBC OLE DB 提供者，如下列範例所示，緩衝區必須是 4 個位元組。  
   
 ```  
 class CProducts  
@@ -42,9 +44,11 @@ public:
 };  
   
 CDBPropSet propset(DBPROPSET_ROWSET);  
+
 propset.AddProperty(DBPROP_BOOKMARKS, true);  
   
-CTable<CAccessor<CProducts> > product;  
+
+CTable<CAccessor<CProducts>> product;  
 product.Open(session, "Products", &propset);  
 ```  
   
@@ -55,9 +59,13 @@ CTable<CDynamicAccessor> product;
 CBookmark<>              bookmark;  
 CDBPropSet propset(DBPROPSET_ROWSET);  
   
+
 propset.AddProperty(DBPROP_BOOKMARKS, true);  
+
 product.Open(session, "Products", &propset);  
+
 product.MoveNext();  
+
 product.GetBookmark(&bookmark);  
 ```  
   

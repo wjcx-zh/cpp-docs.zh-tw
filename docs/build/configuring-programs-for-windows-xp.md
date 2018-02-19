@@ -17,18 +17,17 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02ddf1d602fa88caa3ab069e6f2304ccb066621a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>為 Windows XP 設定程式
 
 由於 Visual Studio 支援多個平台工具組，您可以為目標的作業系統和執行階段程式庫不支援的預設工具組。 例如，藉由切換平台工具組，您可以使用 C + + 11、 C + + 14 中和支援的 Visual c + + 編譯器，Visual Studio 中的 C + + 17 語言增強功能來建立應用程式目標[!INCLUDE[winxp](../build/includes/winxp_md.md)]和[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]。 您可以也使用舊版平台工具組來保留二進位相容的舊版程式碼，同時仍然利用 Visual Studio IDE 的最新功能。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安裝 Windows XP 平台工具組
-
 若要取得的平台工具組和以目標元件[!INCLUDE[winxp](../build/includes/winxp_md.md)]和[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]在 Visual Studio 2017，執行 Visual Studio 安裝程式。 當您初次安裝 Visual Studio 或您選擇**修改**若要修改現有的安裝，請確定**的 c + + 桌面應用程式開發**選取工作負載。 在此工作負載的選用元件的清單中選擇**c + + 的 Windows XP 支援**，然後選擇 **安裝**或**修改**。
 
 ## <a name="windows-xp-targeting-experience"></a>以 Windows XP 為目標的體驗
@@ -65,7 +64,7 @@ ms.lasthandoff: 02/14/2018
 
 - **C + + 語言功能**
 
-   只有 c + + 語言功能在 Visual Studio 2012 中實作支援應用程式中的 v110\_xp 平台工具組。 只有 c + + 語言功能在 Visual Studio 2013 中實作支援應用程式中的 v120\_xp 平台工具組。 只有 c + + 語言功能在 Visual Studio 2012 中實作支援應用程式中的 v140\_xp 平台工具組。 建置使用舊版平台工具組時，visual Studio 會使用對應的編譯器。 若要充分利用該版本的編譯器中實作的其他 c + + 語言功能使用最新的 Windows XP 平台工具組。
+   只有 c + + 語言功能在 Visual Studio 2012 中實作支援應用程式中的 v110\_xp 平台工具組。 只有 c + + 語言功能在 Visual Studio 2013 中實作支援應用程式中的 v120\_xp 平台工具組。 只有 c + + 語言功能在 Visual Studio 2015 中實作支援應用程式中的 v140\_xp 平台工具組。 建置使用舊版平台工具組時，visual Studio 會使用對應的編譯器。 若要充分利用該版本的編譯器中實作的其他 c + + 語言功能使用最新的 Windows XP 平台工具組。
 
 - **遠端偵錯**
 

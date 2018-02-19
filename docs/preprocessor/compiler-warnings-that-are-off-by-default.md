@@ -15,15 +15,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c447389de1accfe95674855645fe044e1d3df41
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
+ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
-編譯器包含預設為關閉的警告，因為大多數的使用者不想看到它們。 不過，您可以使用下列其中一個選項啟用這類警告。
+編譯器會包含已關閉預設因為大部分的開發人員不想要看到它們的警告。 不過，您可以使用下列其中一個選項啟用這類警告。
 
 **#pragma 警告 (預設：** *warning_number* **)**  
 指定的警告 (*warning_number*) 會在其預設層級啟用。 警告的文件包含警告的預設層級。

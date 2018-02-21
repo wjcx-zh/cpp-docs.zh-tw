@@ -182,7 +182,7 @@
 ### [/ALIGN (區段記憶體對齊)](align-section-alignment.md)
 ### [/ALLOWBIND (防止 DLL 繫結)](allowbind-prevent-dll-binding.md)
 ### [/ALLOWISOLATION (資訊清單查閱)](allowisolation-manifest-lookup.md)
-### [/APPCONTAINER (Windows 市集應用程式)](appcontainer-windows-store-app.md)
+### [/APPCONTAINER (UWP/Microsoft Store 應用程式)](appcontainer-windows-store-app.md)
 ### [/ASSEMBLYDEBUG (新增 DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)
 ### [/ASSEMBLYLINKRESOURCE (連結到 .NET Framework 資源)](assemblylinkresource-link-to-dotnet-framework-resource.md)
 ### [/ASSEMBLYMODULE (將 MSIL 模組新增至組件)](assemblymodule-add-a-msil-module-to-the-assembly.md)

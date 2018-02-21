@@ -1,7 +1,7 @@
 # [C 執行階段程式庫參考](c-run-time-library-reference.md)
 # [CRT 程式庫功能](crt-library-features.md)
 ## [相容性](compatibility.md)
-### [Windows 市集應用程式、Windows 執行階段和 C 執行階段](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
+### [UWP 應用程式、Windows 執行階段及 C 執行階段](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
 ### [ANSI C 合規性](ansi-c-compliance.md)
 ### [UNIX](unix.md)
 ### [Windows 平台 (CRT)](windows-platforms-crt.md)

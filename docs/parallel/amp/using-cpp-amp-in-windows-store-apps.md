@@ -27,7 +27,7 @@ ms.lasthandoff: 02/14/2018
 在 GPU （圖形處理單元） 或其他計算加速器上執行計算，您可以在通用 Windows 平台 (UWP) 應用程式中使用 c + + AMP (c + + Accelerated Massive Parallelism)。 然而，C++ AMP 並未提供可直接搭配 Windows 執行階段類型使用的 API，而 Windows 執行階段也未提供 C++ AMP 的包裝函式。 當您在程式碼中使用 Windows 執行階段類型 (包括您自行建立的類型) 時，必須將這些類型轉換成與 C++ AMP 相容的類型。  
   
 ## <a name="performance-considerations"></a>效能考量  
- 如果您使用[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)]([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 來建立通用 Windows 平台 (UWP) 應用程式，我們建議您先使用連續的儲存體以及純舊資料 (POD) 類型 — 例如， `std::vector` c-style 陣列或-將使用的資料與 c + + AMP。 這可協助您達到更高的效能比使用非 POD 類型或 Windows RT 容器，因為沒有封送處理發生。  
+ 如果您使用[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 來建立通用 Windows 平台 (UWP) 應用程式，我們建議您先使用連續的儲存體以及純舊資料 (POD) 類型 — 例如， `std::vector` c-style 陣列或-將使用的資料與 c + + AMP。 這可協助您達到更高的效能比使用非 POD 類型或 Windows RT 容器，因為沒有封送處理發生。  
   
  在 c + + AMP 核心，如此一來，儲存的存取資料只包裝`std::vector`或陣列中的儲存體`concurrency::array_view`，然後使用中的陣列檢視`concurrency::parallel_for_each`迴圈：  
   

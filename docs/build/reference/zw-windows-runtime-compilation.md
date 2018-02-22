@@ -33,7 +33,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 02/14/2018
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Windows 執行階段編譯)
-編譯原始程式碼，以支援[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)]([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 來建立通用 Windows 平台 (UWP) 應用程式。  
+編譯原始程式碼，以支援[!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) 來建立通用 Windows 平台 (UWP) 應用程式。  
   
  當您使用**/ZW**進行編譯時，一定要指定**/EHsc**以及。  
   

@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c6d022edae8e63a5a6b8ec98ea67fceb4750b173
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 67bed0f5cc3ad07ae7b726b9e120aa56120186e6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 在 UWP 環境中執行傳統型程式的最簡單方式，可能是使用傳統型橋接器技術。 其中包括 Desktop App Converter，這會將現有應用程式封裝為 UWP 應用程式，而不需要變更程式碼。 如需詳細資訊，請參閱 [Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) (使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP))。
@@ -27,9 +30,9 @@ ms.lasthandoff: 12/21/2017
   
  UWP 應用程式會在受保護的環境中執行，因此不允許執行許多可能會危害平台安全性的 Win32、COM 及 CRT API 呼叫。 如果使用 /ZW 選項，編譯器能夠偵測這類呼叫，還能產生錯誤。 您可以在應用程式上使用應用程式認證套件，來偵測呼叫禁止使用之 API 的程式碼。 請參閱[使用 Windows 應用程式認證套件](https://msdn.microsoft.com/library/windows/apps/hh694081.aspx)。  
   
- 如果程式庫有可用的原始程式碼，您也許能夠排除禁止的 API 呼叫。 如需包含允許或禁止之 API 清單的詳細資訊，請參閱[適用於 Windows 執行階段應用程式與 Windows 通用平台 (UWP) 應用程式的 Win32 與 COM](https://msdn.microsoft.com/library/windows/apps/br205762.aspx) 和[不支援使用 /ZW 的 CRT 函式](https://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。 一些其他替代方案，請參閱 [Windows 執行階段應用程式和通用 Windows 平台 (UWP) 應用程式中 Windows API 的替代方法](https://msdn.microsoft.com/library/windows/apps/hh464945.aspx)。  
+ 如果程式庫有可用的原始程式碼，您也許能夠排除禁止的 API 呼叫。 如需包含允許或禁止之 API 清單的詳細資料，請參閱[適用於 Windows 執行階段應用程式與通用 Windows 平台 (UWP) 應用程式的 Win32 與 COM](https://msdn.microsoft.com/library/windows/apps/br205762.aspx) 和 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。 [UWP 應用程式中的 Windows API 替代方案](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)也提供了幾種替代方案。  
   
- 如果您只是嘗試將通用的 Windows 專案的參考加入傳統桌面程式庫，您會收到指出程式庫並不相容的錯誤訊息。 如果是靜態程式庫，您只要像傳統的 Win32 應用程式中一樣，將程式庫 (.lib 檔案) 加入您的連結器輸入，就可以連結程式庫。 其中只有二進位檔可用的程式庫，這是唯一的選項。 靜態程式庫可連結至應用程式可執行檔，但您必須將 UWP 應用程式中使用的 Win32 DLL 納入專案中並標示為內容以封裝為應用程式。 若要在通用 Windows 平台應用程式中載入 Win32 DLL，您還必須呼叫 [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx)，而不是 LoadLibrary 或 LoadLibraryEx。  
+ 如果您只是嘗試將通用的 Windows 專案的參考加入傳統桌面程式庫，您會收到指出程式庫並不相容的錯誤訊息。 如果是靜態程式庫，您只要像傳統的 Win32 應用程式中一樣，將程式庫 (.lib 檔案) 加入您的連結器輸入，就可以連結程式庫。 其中只有二進位檔可用的程式庫，這是唯一的選項。 靜態程式庫可連結至應用程式可執行檔，但您必須將 UWP 應用程式中使用的 Win32 DLL 納入專案中並標示為內容以封裝為應用程式。 若要在 UWP 應用程式中載入 Win32 DLL，您還必須呼叫 [LoadPackagedLibrary](https://msdn.microsoft.com/library/windows/desktop/hh447159.aspx)，而不是 LoadLibrary 或 LoadLibraryEx。  
   
  如果您有 DLL 或靜態程式庫的原始程式碼，您可以使用 /ZW 重新編譯為 UWP 專案。 如果您這麼做，可以使用 [方案總管] 加入參考，然後在 C++ UWP 應用程式中使用。 若為 DLL，請您使用匯出程式庫來連結。  
   
@@ -37,11 +40,11 @@ ms.lasthandoff: 12/21/2017
   
  前述討論不適用於必須以不同方式處理的 COM 元件。 如果您在 EXE 或 DLL 中有 COM 伺服器，則可以在通用 Windows 專案中使用它，只要將它封裝為[免註冊的 COM 元件](https://msdn.microsoft.com/library/dd408052.aspx)，並當成內容檔案新增至專案，然後使用 [CoCreateInstanceFromApp](https://msdn.microsoft.com/library/windows/apps/hh404137.aspx) 加以具現化即可。 請參閱 [Using Free-COM DLL in Windows Store C++ Project](http://blogs.msdn.com/b/win8devsupport/archive/2013/05/20/using-free-com-dll-in-windows-store-c-project.aspx) (在 Windows 市集 C++ 專案中使用免費 COM DLL)。  
   
- 如果您有想要移植到通用 Windows 平台的現有 COM 程式庫，則可以使用 [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md) 將它轉換成 Windows 執行階段元件。 WRL 不支援所有的 ATL 與 OLE 功能，因此這類移植是否可行，取決於 COM 程式碼有多麼依存於您的元件所需的那些 COM、ATL 及 OLE 功能。  
+ 若您有想要移植到 UWP 的現有 COM 程式庫，則可以使用 [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md) 將其轉換成 Windows 執行階段元件。 WRL 不支援所有的 ATL 與 OLE 功能，因此這類移植是否可行，取決於 COM 程式碼有多麼依存於您的元件所需的那些 COM、ATL 及 OLE 功能。  
   
- 您有許多不同的方式可以在通用 Windows 平台專案中使用現有 C++ 程式碼。 某些方式不需要在啟用 (也就是使用 /ZW 選項) 元件擴充功能 (C++/CX) 的情況下重新編譯程式碼，但某些則需要，因此如果您需要保留標準 C++ 的程式碼，或為一些程式碼保留傳統的 Win32 編譯環境，就可以這樣做，搭配使用適當的架構選項。 例如，包含通用 Windows 平台 UI 與型別且要向 C#、Visual Basic 及 JavaScript 呼叫端公開的所有程式碼，都應該放在 Windows 應用程式專案與 Windows 執行階段元件專案中。 只需要在 C++ (包括 C++/CX) 程式碼中使用的程式碼，可以放在使用 /WX 選項編譯的專案或標準 C++ 專案中。 將程式碼連結為靜態程式庫，或和應用程式一起封裝為內容，然後只有在它不會使用禁止 API 時才以 DLL 載入，就可以使用僅限二進位的程式碼。  
+ 您有許多不同的方式可以在 UWP 專案中使用現有 C++ 程式碼。 某些方式不需要在啟用 (也就是使用 /ZW 選項) 元件擴充功能 (C++/CX) 的情況下重新編譯程式碼，但某些則需要，因此如果您需要保留標準 C++ 的程式碼，或為一些程式碼保留傳統的 Win32 編譯環境，就可以這樣做，搭配使用適當的架構選項。 例如，包含 UWP UI 的所有程式碼，以及要向 C#、Visual Basic 及 JavaScript 呼叫端公開的類型，都應該放在 Windows 應用程式專案與 Windows 執行階段元件專案中。 只需要在 C++ (包括 C++/CX) 程式碼中使用的程式碼，可以放在使用 /WX 選項編譯的專案或標準 C++ 專案中。 將程式碼連結為靜態程式庫，或和應用程式一起封裝為內容，然後只有在它不會使用禁止 API 時才以 DLL 載入，就可以使用僅限二進位的程式碼。  
   
- 不論您選擇哪一種開發案例，都應該注意可在程式碼中使用的許多巨集，如此才能根據傳統桌面 Win32 與通用 Windows 平台有條件地編譯程式碼。  
+ 不論您選擇哪一種開發案例，都應該留意您可在程式碼中使用的許多巨集定義，如此才能同時根據傳統桌面 Win32 與 UWP 有條件地編譯程式碼。  
   
 ```cpp  
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_PC_APP)  
@@ -50,17 +53,17 @@ ms.lasthandoff: 12/21/2017
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
 ```  
   
- 這些陳述式分別適用於 Windows 市集應用程式、Windows Phone 市集應用程式、兩者都適用或兩者均不適用 (僅傳統 Win32 桌面)。 這些巨集只能在 Windows SDK 8.1 和更新版本中使用，因此如果您的程式碼需要使用舊版 Windows SDK 編譯或用於 Windows 以外的其他平台，那麼您也應該考慮無一定義的情況。  
+ 這些陳述式分別適用於 UWP 應用程式、Windows Phone Store 應用程式、兩者都適用或兩者均不適用 (僅傳統 Win32 桌面)。 這些巨集只能在 Windows SDK 8.1 和更新版本中使用，因此如果您的程式碼需要使用舊版 Windows SDK 編譯或用於 Windows 以外的其他平台，那麼您也應該考慮無一定義的情況。  
   
  本主題包含下列程序：  
   
-1.  [在通用 Windows 平台應用程式中使用 Win32 DLL](#BK_Win32DLL)  
+1.  [在 UWP 應用程式中使用 Win32 DLL ](#BK_Win32DLL)  
   
 2.  [在 UWP 應用程式中使用原生 C++ 靜態程式庫](#BK_StaticLib)  
   
 3.  [將 C++ 程式庫移植到 Windows 執行階段元件](#BK_WinRTComponent)  
   
-##  <a name="BK_Win32DLL"></a> 在通用 Windows 平台應用程式中使用 Win32 DLL  
+##  <a name="BK_Win32DLL"></a> 在 UWP 應用程式中使用 Win32 DLL  
  為使安全性和可靠性更佳，通用 Windows 應用程式會在受限制的執行階段環境中執行，因此您不能像在傳統 Windows 桌面應用程式那樣使用任何的原生 DLL。 如果您有 DLL 的原始程式碼，就可以移植程式碼，使其在 UWP 上執行。 首先可變更幾個專案設定和專案檔案中繼資料，將該專案識別為 UWP 專案。 您需要使用 /ZW 選項啟用 C++/CX 來編譯程式庫。 由於與該環境相關聯的控制項更加嚴格，因此 UWP 應用程式中不允許特定 API 呼叫。 請參閱[適用於 Windows 執行階段應用程式和通用 Windows 平台 (UWP) 應用程式的 Win32 和 COM](https://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
   
  下列程序適用於您具有使用 __declspec (dllexport) 公開函式的原生 DLL 案例。  

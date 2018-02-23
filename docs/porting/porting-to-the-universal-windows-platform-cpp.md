@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 在本主題中，您可以找到有關如何移植現有 C++ 程式碼到 Windows 10 應用程式平台 (通用 Windows 平台) 的詳細資訊。 *「通用」* (Universal) 一詞表示您的程式碼可以在任何執行 Windows 10 的裝置上執行，包括桌上型電腦、手機、平板電腦及任何執行 Windows 10 的新款裝置。 您可以建立在執行 Windows 10 之任何裝置上順利運作的單一專案和單一 XAML 使用者介面。 您可以在 XAML 中使用動態配置功能，以允許應用程式的 UI 適應不同的顯示器大小。  
@@ -73,7 +76,7 @@ ms.lasthandoff: 12/21/2017
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)  
     ```  
   
-     這些陳述式分別適用於 Windows 市集應用程式、Windows Phone 市集應用程式、兩者都適用或兩者均不適用 (僅傳統 Win32 桌面)。 這些巨集只能在 Windows SDK 8.1 和更新版本中使用，因此如果您的程式碼需要使用舊版 Windows SDK 編譯或用於 Windows 以外的其他平台，那麼您也應該考慮無一定義的情況。  
+     這些陳述式分別適用於 UWP 應用程式、Windows Phone Store 應用程式、兩者都適用或兩者均不適用 (僅傳統 Win32 桌面)。 這些巨集只能在 Windows SDK 8.1 和更新版本中使用，因此如果您的程式碼需要使用舊版 Windows SDK 編譯或用於 Windows 以外的其他平台，那麼您也應該考慮無一定義的情況。  
   
 11. 針對應用程式支援的每個裝置類型，請在模擬器或實體裝置上執行和偵錯應用程式。 若要執行模擬器，您需要在實體電腦上執行 Visual Studio，而不是虛擬機器。  
   
@@ -91,7 +94,7 @@ ms.lasthandoff: 12/21/2017
 4.  建置並解決任何起因於 Windows SDK 不同版本間之重大變更的錯誤。  
   
 ## <a name="troubleshooting"></a>疑難排解  
- 在程式碼移植到通用 Windows 平台的程序期間，您可能會遇到各種錯誤。 以下是一些可能會遇到的問題。  
+ 在將程式碼移植到 UWP 的過程中，可能會遇到多種問題。 以下是一些可能會遇到的問題。  
   
  **專案組態問題**  
   
@@ -111,7 +114,7 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 <ApplicationTypeRevision>10.0</ApplicationTypeRevision>  
 ```  
   
- 若是使用 Visual Studio 建立新的通用 Windows 平台專案，應不會出現此錯誤。  
+ 若是使用 Visual Studio 建立新的 UWP 專案，應不會出現此錯誤。  
   
 ## <a name="see-also"></a>請參閱  
  [Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)   

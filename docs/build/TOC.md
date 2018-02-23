@@ -96,7 +96,6 @@
 ### [匯入和匯出內嵌函式](importing-and-exporting-inline-functions.md)
 ## [Active 技術和 DLL](active-technology-and-dlls.md)
 ## [DLL 中的 Automation](automation-in-a-dll.md)
-## [MFC DLL 命名慣例](naming-conventions-for-mfc-dlls.md)
 ## [從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)
 # [編譯器內建和組件語言](../intrinsics/TOC.md)
 # [在命令列上建置 C/C++ 程式碼](building-on-the-command-line.md)

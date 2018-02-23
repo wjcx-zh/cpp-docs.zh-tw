@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="compatibility"></a>相容性
 通用 C 執行階段程式庫 (UCRT) 支援與 C++ 相容所需的大部分 C 標準程式庫。 除了 \<tgmath.h> 中所定義的泛型巨集及 \<complex.h> 中的 Strict 類型相容性之外，其會實作 C99 (ISO/IEC 9899:1999) 程式庫。 UCRT 也會實作 POSIX.1 的大型子集 (ISO/IEC 9945-1:1996，POSIX 系統應用程式開發介面) C 程式庫，但不全然符合任何特定的 POSIX 標準。  此外，UCRT 會實作數個 Microsoft 特有但不包含在標準之中的函式與巨集。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/29/2018
   
 |標題|描述|  
 |-----------|-----------------|  
-|[Windows 市集應用程式、Windows 執行階段和 C 執行階段](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|說明 UCRT 常式與通用 Windows 應用程式或 Windows 市集應用程式不相容的情況。|  
+|[UWP 應用程式、Windows 執行階段及 C 執行階段](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|說明 UCRT 常式與通用 Windows 應用程式或 Microsoft Store 應用程式不相容的情況。|  
 |[ANSI C 合規性](../c-runtime-library/ansi-c-compliance.md)|說明 UCRT 中符合規範的命名。|  
 |[UNIX](../c-runtime-library/unix.md)|提供移植程式至 UNIX 的指導方針。|  
 |[Windows 平台 (CRT)](../c-runtime-library/windows-platforms-crt.md)|列出此 CRT 支援的作業系統。|  

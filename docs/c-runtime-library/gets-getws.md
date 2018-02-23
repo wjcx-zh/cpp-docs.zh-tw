@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -23,7 +24,8 @@ f1_keywords:
 - _getts
 - gets
 - _getws
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - getws function
 - getts function
@@ -34,16 +36,17 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6193445dace47b62cf8793d69ad45e0f73a2f10d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 01f26f8b9dbe75d37927c4d4f3055f04378ef4a1
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="gets-getws"></a>gets、_getws
 從 `stdin` 資料流取得行。 這些函式已有更安全的版本，請參閱 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
@@ -52,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 >  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。 這些函式的安全版本，但 gets_s 及 _getws_s 仍可繼續使用。 如需這些替代函式的資訊，請參閱 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。  
   
 ## <a name="syntax"></a>語法  
   

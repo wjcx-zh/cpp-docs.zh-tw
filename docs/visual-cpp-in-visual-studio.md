@@ -21,11 +21,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a1cfde0baec56931f7b3a5603d8166df6067eb5
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -75,7 +75,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 ## <a name="writing-applications-in-c"></a>使用 C++ 撰寫應用程式
 
 [通用 Windows 應用程式](windows/universal-windows-apps-cpp.md)  
-尋找 Windows 開發人員中心網站上的指南和參考內容。 如需開發 Windows 市集應用程式的詳細資訊，請參閱 [使用 Visual Studio 開發 Windows 市集應用程式](http://go.microsoft.com/fwlink/p/?LinkId=248364) 和 [使用 C++ 建立 Windows 市集應用程式的藍圖](http://go.microsoft.com/fwlink/p/?LinkId=244654)。
+尋找 Windows 開發人員中心網站上的指南和參考內容。 如需開發 UWP 應用程式的相關資訊，請參閱[通用 Windows 平台簡介](/windows/uwp/get-started/universal-application-platform-guide)和[使用 C++ 建立您的第一個 UWP 應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
 [傳統型應用程式 (C++)](windows/desktop-applications-visual-cpp.md)  
 學習如何建立含有訊息迴圈和回呼的桌面應用程式。
@@ -131,7 +131,7 @@ CPU 上執行的非同步和平行演算法。
 GPU 上執行的大量平行演算法。
 
 [Windows 執行階段範本庫 (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-[!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)] 應用程式和元件。
+通用 Windows 平台 (UWP) 應用程式與元件。
 
 [以 C++/CLI 進行 .NET 程式設計](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
 通用語言執行平台 (CLR) 的程式設計。

@@ -48,11 +48,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2b32b17ed65120aa98b19ed3b2cf599364fee0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 85cc0953b92df0b26583f9c9028498beb3e1271f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="outp-outpw-outpd"></a>_outp、_outpw、_outpd
 從連接埠輸出一個位元組 (`_outp`)、一個字組 (`_outpw`) 或雙字組 (`_outpd`)。  
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/09/2018
 >  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。  
   
 ## <a name="syntax"></a>語法  
   

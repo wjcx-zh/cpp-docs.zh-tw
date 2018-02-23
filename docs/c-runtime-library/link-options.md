@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - nothrownew.obj
 - newmode.obj
@@ -36,21 +38,22 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ece67a7c2b50423ea9ff4610e638dcdc2b979e14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d0108ecd9d0b9caaa2df3d450c185d5937a96463
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="link-options"></a>連結選項
 CRT lib 目錄包含多個小型物件檔案，不需要變更任何程式碼即可啟用特定的 CRT 功能。 它們稱之為「連結選項」，因為它們必須加入連結器命令列才能使用。  
   
- 純模式版本存在，但在 Visual Studio 2015 中已被取代。 原生和 /clr 程式碼使用一般版本，/clr:pure 模式使用純的版本 (前置詞為 p)。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
+ 純模式版本已自 Visual Studio 2015 起淘汰。 請使用機器碼與 /clr 程式碼的一般版本。  
   
 |原生和 /clr|純的模式|描述|  
 |----------------------|---------------|-----------------|  

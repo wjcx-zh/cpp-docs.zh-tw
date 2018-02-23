@@ -18,11 +18,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e730d7d47a8742d3c4f1f7c4636aabd8785cc93
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1545,16 +1545,16 @@ Microsoft Visual C++ 編譯器支援下列 ISO C++11 語言功能：
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>特性指引最佳化 (PGO) 加強功能
 
 - 由縮減使用 PGO 所最佳化之應用程式工作集而產生的效能提升。
-- 進行 Windows 市集應用程式開發的新 PGO。
+- Windows 執行階段應用程式開發的新 PGO。
 
-### <a name="windows-store-app-development-support"></a>Windows 市集應用程式開發支援
+### <a name="windows-runtime-app-development-support"></a>Windows 執行階段應用程式開發支援
 
-- **支援值結構中的 Boxed 類型。** 透過使用可為 Null 的欄位 (例如 IBox<int>^ 而非 int)，您現在可以定義實值型別。這表示欄位可以有值或等於 nullptr。
+- **支援值結構中的 Boxed 類型。** 透過使用可為 Null 的欄位 (例如 IBox\<int>^ 而非 int)，您現在可以定義實值型別。這表示欄位可以有值或等於 nullptr。
 - **更豐富的例外狀況資訊。** C++/CX 支援新 Windows 錯誤模型，能夠跨應用程式二進位介面 (ABI) 擷取及散佈豐富的例外狀況資訊，包括呼叫堆疊和自訂訊息字串。
 - **Object::ToString() 現在是虛擬的。** 您現在可以覆寫使用者定義的 Windows 執行階段 ref 類型中的 ToString。
 - **支援被取代的 API。** 公用 Windows 執行階段應用程式開發介面現在已標示為已被取代，並且有指定的、顯示為建置警告的自訂訊息，可以提供移轉指引。
 - **偵錯工具改善。** 支援原生/JavaScript Interop 偵錯、Windows 執行階段例外狀況診斷和非同步程式碼偵錯 (Windows 執行階段和 PPL)。
-  - 注意：除了本節所述的 C++ 特定功能和加強功能之外，Visual Studio 中的其他加強功能也可以協助您撰寫更好的 Windows 市集應用程式。
+  - 注意：除了本章節說明的 C++ 特定功能及功能加強外，Visual Studio 中其他功能加強也能協助您撰寫出更完善的 Windows 執行階段應用程式。
 
 ### <a name="diagnostics-enhancements"></a>診斷加強功能
 
@@ -1632,12 +1632,12 @@ func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
 func1(Element::Helium); // OK
    ```
 
-### <a name="windows-store-app-development-support"></a>Windows 市集應用程式開發支援
+### <a name="windows-runtime-app-development-support"></a>Windows 執行階段應用程式開發支援
 
-- **原生 XAML UI 模型**。 針對 Windows 市集應用程式，您可以使用新的原生 XAML UI 模型。
-- **Visual C++ 元件延伸模組**。 這些延伸模組可以簡化 Windows 執行階段物件的耗用，而這些物件是 Windows 市集應用程式的必要部分。 如需詳細資訊，請參閱＜使用 C++ 和 Visual C++ 語言參考 (C++/CX) 建立 Windows 市集應用程式的藍圖＞
-- **DirectX 遊戲**。 您可以使用 Windows 市集應用程式的新 DirectX 支援，來開發更吸引人的遊戲。
-- **XAML/DirectX Interop**。 同時使用 XAML 和 DirectX 的 Windows 市集應用程式現在可以有效率地交互操作。
+- **原生 XAML UI 模型**。 對於 Windows 執行階段應用程式，您可以使用新的原生 XAML UI 模型。
+- **Visual C++ 元件延伸模組**。 這些延伸模組可精簡 Windows 執行階段物件的使用，而這些物件是 Windows 執行階段應用程式的必要部分。 如需詳細資訊，請參閱[使用 C++ 的 Windows 執行階段應用程式藍圖](../windows/universal-windows-apps-cpp.md)和 [Visual C++ 語言參考 (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **DirectX 遊戲**。 您可以使用 Windows 執行階段應用程式的全新 DirectX 支援來開發引人入勝的遊戲。
+- **XAML/DirectX Interop**。 同時使用 XAML 和 DirectX 的 Windows 執行階段應用程式現在可以有效率地共同運作。
 - **Windows 執行階段元件 DLL 開發**。 元件 DLL 開發可讓您延伸 Windows 執行階段環境。
 
 ### <a name="compiler-and-linker"></a>編譯器和連結器
@@ -1941,7 +1941,7 @@ __sptr、__uptr
 - `64 位元原生和跨編譯器。
 - 已新增 /analyze (企業程式碼分析) 編譯器選項。
 - 已新增 /bigobj 編譯器選項。
-- 已新增 /clr:pure、/clr:safe 和 /clr:oldSyntax。
+- 已新增 /clr:pure、/clr:safe 和 /clr:oldSyntax。 (之後於 Visual Studio 2015 中淘汰。)
 - 已取代的編譯器選項：在此版本中，已取代許多編譯器選項；如需詳細資訊，請參閱＜已被取代的編譯器選項＞。
 - 已減少 /clr 程式碼中的 Double Thunking；如需詳細資訊，請參閱 Double Thunking (C++)。
 - /EH (例外狀況處理模型) 或 /EHs 不再用來攔截因擲回以外的事件而引發的例外狀況；請使用 /EHa。

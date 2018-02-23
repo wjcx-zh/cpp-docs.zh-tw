@@ -1,59 +1,61 @@
 ---
-title: "Windows 市集應用程式、Windows 執行階段和 C 執行階段 | Microsoft Docs"
+title: "UWP 應用程式、Windows 執行階段和 C 執行階段 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c75d66fcbe9ef437980878e7789a82dc94b68573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 120e02caab735455224ad75f0944ceb25f4baf33
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
-# <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Windows 市集應用程式、Windows 執行階段和 C 執行階段
-[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式是在「Windows 執行階段」(在 [!INCLUDE[win8](../build/reference/includes/win8_md.md)] 上執行) 中執行的程式。  「Windows 執行階段」是可信賴的環境，控制可供 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式使用的函式、變數和資源。 不過，根據設計，「Windows 執行階段」的限制會使得大部分 C 執行階段程式庫 (CRT) 的功能無法在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式中使用。  
-  
- 「Windows 執行階段」不支援下列 CRT 功能：  
-  
--   與不支援的功能相關之大部分 CRT 函式。  
-  
-     例如，[!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式無法使用 `exec` 和 `spawn` 系列的常式建立處理序。  
-  
-     當 CRT 函式在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式中不受支援時，會記載該事實於其參考文件中。  
-  
--   大部分的多位元組字元和字串的函式。  
-  
-     不過，Unicode 和 ANSI 文字皆受到支援。  
-  
--   主控台應用程式和命令列引數。  
-  
-     不過，傳統型應用程式仍然支援主控台和命令列引數。  
-  
--   環境變數。  
-  
--   目前工作目錄的概念。  
-  
--   與 CRT 靜態連結並使用 [/MT](../build/reference/md-mt-ld-use-run-time-library.md) 或 `/MTd` 編譯器選項建置的 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式和 DLL。  
-  
-     也就是使用 CRT 的多執行緒、靜態版本的應用程式。  
-  
--   使用 [/MDd](../build/reference/md-mt-ld-use-run-time-library.md) 編譯器選項建置的應用程式。  
-  
-     也就是說，CRT 的偵錯、多執行緒和特定 DLL 的版本。 這類應用程式在 [!INCLUDE[win8_appstore_long](../build/reference/includes/win8_appstore_long_md.md)] 中不受支援。  
-  
- 如需在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式無法提供使用的 CRT 函式完整清單與替代函式的建議，請參閱 [/ZW 不支援的 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
-  
-## <a name="see-also"></a>請參閱  
- [相容性](../c-runtime-library/compatibility.md)   
- [Windows 執行階段不支援的 CRT 函式](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)   
- [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)
+# <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 應用程式、Windows 執行階段和 C 執行階段
+
+通用 Windows 平台 (UWP) 應用程式是在 Windows 執行階段 (執行於 [!INCLUDE[win8](../build/reference/includes/win8_md.md)]) 中執行的程式。 Windows 執行階段是可信賴的環境，控制可供 UWP 應用程式使用的函式、變數及資源。 不過，根據設計，Windows 執行階段限制會讓大多數的 C 執行階段程式庫 (CRT) 功能無法在 UWP 應用程式中使用。
+
+「Windows 執行階段」不支援下列 CRT 功能：
+
+- 與不支援的功能相關之大部分 CRT 函式。
+
+   例如，UWP 應用程式無法使用 `exec` 與 `spawn` 系列常式來建立處理序。
+
+   當 CRT 函式不受 UWP 應用程式支援時，該事實會記載在其參考文件中。
+
+- 大部分的多位元組字元和字串的函式。
+
+   不過，Unicode 和 ANSI 文字皆受到支援。
+
+- 主控台應用程式和命令列引數。
+
+   不過，傳統型應用程式仍然支援主控台和命令列引數。
+
+- 環境變數。
+
+- 目前工作目錄的概念。
+
+- 與 CRT 靜態連結並使用 [/MT](../build/reference/md-mt-ld-use-run-time-library.md) 或 `/MTd` 編譯器選項建置的 UWP 應用程式和 DLL。
+
+   也就是使用 CRT 的多執行緒、靜態版本的應用程式。
+
+- 使用 [/MDd](../build/reference/md-mt-ld-use-run-time-library.md) 編譯器選項建置的應用程式。
+
+   也就是說，CRT 的偵錯、多執行緒和特定 DLL 的版本。 Windows 執行階段不支援這類應用程式。
+
+如需於 UWP 應用程式中無法使用的 CRT 函式完整清單與替代函式建議，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="see-also"></a>請參閱
+ [相容性](../c-runtime-library/compatibility.md) [Windows 執行階段不支援的 CRT 函式](../c-runtime-library/windows-runtime-unsupported-crt-functions.md) [依分類區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

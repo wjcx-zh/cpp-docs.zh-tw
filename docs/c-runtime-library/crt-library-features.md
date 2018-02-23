@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.runtime
-dev_langs: C++
+f1_keywords:
+- c.runtime
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSVCR71.dll
 - libraries [C++], multithreaded
@@ -24,22 +27,23 @@ helpviewer_keywords:
 - libraries [C++], run-time
 - linking [C++], libraries
 ms.assetid: a889fd39-807d-48f2-807f-81492612463f
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104119afba696f51598af202c8eb7f1afe79aa93
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
 本主題討論組成 C 執行階段程式庫的各種 .lib 檔案，以及其相關聯的編譯器選項與前置處理器指示詞。  
   
 ## <a name="c-run-time-libraries-crt"></a>C 執行階段程式庫 (CRT)  
- C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程式庫的一部分。 實作 CRT 的 Visual C++ 程式庫支援機器碼開發、混合機器碼與 Managed 程式碼，以及適用於 .NET 開發的純粹 Managed 程式碼。 CRT 的所有版本都支援多執行緒開發。 大部分程式庫都支援靜態連結和動態連結，靜態連結可將程式庫直接連結到您的程式碼，而動態連結則可讓您的程式碼使用通用 DLL 檔案。  
+ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程式庫的一部分。 實作 CRT 的 Visual C++ 程式庫支援機器碼開發，以及混合的機器碼與受控碼。 CRT 的所有版本都支援多執行緒開發。 大部分程式庫都支援靜態連結和動態連結，靜態連結可將程式庫直接連結到您的程式碼，而動態連結則可讓您的程式碼使用通用 DLL 檔案。  
   
  自 Visual Studio 2015 起，CRT 已重構為新的二進位檔。 通用 CRT (UCRT) 包含標準 C99 CRT 程式庫所匯出的函式和全域變數。 UCRT 現在是 Windows 元件，而且隨附於 Windows 10。 靜態程式庫、DLL 匯入程式庫和 UCRT 的標頭檔現在都位於 Windows 10 SDK 中。 當您安裝 Visual C++ 時，Visual Studio 安裝程式會安裝使用 UCRT 所需的一部分 Windows 10 SDK。 您可以在 Visual Studio 2015 及以上版本支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 來轉散發。 如需詳細資訊，請參閱 [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md)。  
   
@@ -86,9 +90,7 @@ ms.lasthandoff: 12/21/2017
   
  如果您使用 **/clr** 編譯器參數，您的程式碼將會連結到靜態程式庫 msvcurt.lib。 靜態程式庫會提供 Managed 程式碼與原生 CRT 之間的 Proxy。 請勿將靜態連結的 CRT ( **/MT** 或 **/MTd** 選項) 與 **/clr**並用。 請改用動態連結程式庫 (**/MD** 或 **/MDd**)。  
   
- 如果您使用 **/clr:pure** 編譯器參數，您的程式碼將連結到靜態程式庫 msvcurt.lib。 一如 **/clr**，您無法連結到靜態連結的程式庫。 **/clr:pure** 和 **/clr:safe** 編譯器選項自 Visual Studio 2015 起已被取代。  
-  
- 如需使用 CRT 與 **/clr** 的詳細資訊，請參閱[混合的 (原生與受管理的) 組件 ](../dotnet/mixed-native-and-managed-assemblies.md)；若搭配 **/clr:pure**，請參閱[純粹的和可驗證的程式碼 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
+ 如需使用 CRT 與 **/clr** 的詳細資訊，請參閱[混合 (機器與受控) 組件](../dotnet/mixed-native-and-managed-assemblies.md)。  
   
  若要建置應用程式的偵錯版本，必須定義 [_DEBUG](../c-runtime-library/debug.md) 旗標，且應用程式必須連結到這些程式庫的任一偵錯版本。 如需如何使用程式庫檔案之偵錯版本的詳細資訊，請參閱 [CRT 偵錯技術](/visualstudio/debugger/crt-debugging-techniques)。  
   

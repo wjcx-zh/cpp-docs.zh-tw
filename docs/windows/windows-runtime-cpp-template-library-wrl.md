@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
-Windows 執行階段 c + + 樣板程式庫 (WRL) 是提供低階方式撰寫和使用 Windows 執行階段元件的範本庫。  
+Windows 執行階段 C++ 範本庫 (WRL) 是提供低階方式撰寫和使用 Windows 執行階段元件的範本庫。  
   
 ## <a name="benefits"></a>優點  
  Windows 執行階段 c + + 樣板程式庫可讓您更輕鬆地實作和使用元件物件模型 (COM) 元件。 它提供環境維護技術，如參考計數來管理物件的存留期，以及測試 `HRESULT` 值來判斷作業成功或失敗。 若要順利使用 Windows 執行階段 c + + 樣板程式庫，您必須小心遵循這些規則和技術。  
@@ -45,7 +47,7 @@ Windows 執行階段 c + + 樣板程式庫 (WRL) 是提供低階方式撰寫和�
  以下是一些資源可協助您開始使用 Windows 執行階段 c + + 樣板程式庫以立即開始。  
   
  [Windows 執行階段程式庫 (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
- 在這個 Channel 9 影片，進一步了解 Windows 執行階段 c + + 樣板程式庫如何協助您撰寫的通用 Windows 平台應用程式，以及如何撰寫和使用 Windows 執行階段元件。  
+ 在這個 Channel 9 影片，進一步了解 Windows 執行階段 c + + 樣板程式庫如何協助您撰寫的通用 Windows 平台 (UWP) 應用程式，以及如何撰寫和使用 Windows 執行階段元件。  
   
  [如何： 啟用和使用 Windows 執行階段元件](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
  示範如何使用 Windows 執行階段 c + + 樣板程式庫初始化 Windows 執行階段以及啟用和使用 Windows 執行階段元件。  
@@ -57,10 +59,10 @@ Windows 執行階段 c + + 樣板程式庫 (WRL) 是提供低階方式撰寫和�
  示範如何使用 Windows 執行階段 c + + 樣板程式庫訂閱和處理 Windows 執行階段物件的事件。  
   
  [逐步解說： 建立基本 Windows 執行階段元件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- 示範如何使用 Windows 執行階段 c + + 樣板程式庫建立兩個數目相加的基本 Windows 執行階段元件。 也會示範如何引發事件，並從使用 JavaScript 之通用 Windows 平台應用程式使用元件。  
+ 示範如何使用 Windows 執行階段 c + + 樣板程式庫建立兩個數目相加的基本 Windows 執行階段元件。 也會示範如何引發事件，並從使用 JavaScript UWP 應用程式使用元件。  
   
- [逐步解說：使用 WRL 和媒體基礎建立 Windows 市集應用程式](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
- 了解如何建立通用 Windows 平台應用程式使用[Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
+ [逐步解說： 使用 WRL 與媒體基礎建立 UWP 應用程式](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ 了解如何建立 UWP 應用程式使用[Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
   
  [如何： 建立傳統 COM 元件](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
  示範如何使用 Windows 執行階段 c + + 樣板程式庫來建立基本的 COM 元件，以及註冊和使用桌面應用程式的 COM 元件的基本方法。  
@@ -72,10 +74,10 @@ Windows 執行階段 c + + 樣板程式庫 (WRL) 是提供低階方式撰寫和�
  顯示如何透過從 .winmd 中繼資料建立 IDL 檔案，使用 WRL 的自訂 Windows 執行階段元件。  
   
  [逐步解說：使用工作和 XML HTTP 要求連接](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
- 示範如何使用[IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)和[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)介面，以及將 HTTP GET 和 POST 要求傳送至通用 Windows 平台應用程式中的 web 服務工作。  
+ 示範如何使用[IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)和[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)介面，以及將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務工作。  
   
  [Bing 地圖服務路線最佳化程式範例](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
- 使用`HttpRequest`中定義的類別[逐步解說： 使用工作和 XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)完整的通用 Windows 平台應用程式的內容中。  
+ 使用`HttpRequest`中定義的類別[逐步解說： 使用工作和 XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)完整的 UWP 應用程式的內容中。  
   
  [使用 c + + 範例建立 Windows 執行階段 DLL 元件](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
  示範如何使用 Windows 執行階段 c + + 樣板程式庫，若要建立同處理序 DLL 元件，然後使用它從 C + + /CX、 JavaScript 和 C#。  
@@ -89,7 +91,7 @@ Windows 執行階段 c + + 樣板程式庫 (WRL) 是提供低階方式撰寫和�
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows 執行階段 c + + 樣板程式庫和 ATL 比較  
  Windows 執行階段 c + + 樣板程式庫類似 Active Template Library (ATL)，因為您可以用它來建立小型、 快速的 COM 物件。 Windows 執行階段 c + + 樣板程式庫和 ATL 也共用概念，例如在模組中，明確註冊介面，物件的定義，以及使用 factory 開放式建立物件。 您可能會想要 Windows 執行階段 c + + 樣板程式庫如果您熟悉 ATL  
   
- Windows 執行階段 c + + 樣板程式庫支援 COM 功能所需的通用 Windows 平台應用程式。 因此，它與 ATL 不同，因為後者省略直接支援 COM 功能，例如：  
+ Windows 執行階段 c + + 樣板程式庫支援 COM 功能所需的 UWP 應用程式。 因此，它與 ATL 不同，因為後者省略直接支援 COM 功能，例如：  
   
 -   彙總  
   

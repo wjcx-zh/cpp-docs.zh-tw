@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], operating on type
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53ed733bc710aa66061c40587e79f41e553b260
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0b14b45752559c80f4aafb60aa4ba23cb0d51b91
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="class-templates"></a>類別樣板
 本主題描述的特定 c + + 類別範本規則。  
@@ -203,7 +206,7 @@ X<T>::Y<U>::~Y()
  區域類別不可以有成員樣板。  
   
 ## <a name="template-friends"></a>樣板 friend  
- 類別樣板可以有[朋友](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681)。 類別或類別樣板、函式或函式樣板可以是樣板類別的 friend。 friend 也可以是類別樣板或函式樣板的特製化，但不是部分特製化。  
+ 類別樣板可以有[朋友](friend-cpp.md)。 類別或類別樣板、函式或函式樣板可以是樣板類別的 friend。 friend 也可以是類別樣板或函式樣板的特製化，但不是部分特製化。  
   
  在下列範例中，friend 函式會定義為類別樣板中的函式樣板。 此程式碼會為樣板的每個執行個體產生一個 friend 函式版本。 如果您的 friend 函式取決於與類別相同的樣板參數，這個建構會很有用。  
   

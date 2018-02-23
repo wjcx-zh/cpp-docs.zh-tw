@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ed3679d29b8d181e2cbd9896d0322fea634bfbf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 14f8a0914b1bb7f2d3a16681a3a66091eda71d73
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="dlls-in-visual-c"></a>Visual C++ 中的 DLL  
   
@@ -124,7 +127,7 @@ ms.lasthandoff: 12/21/2017
  [DLL 中的 Automation](../build/automation-in-a-dll.md)  
  說明 MFC DLL 精靈提供的 Automation 選項。  
   
- [MFC DLL 命名慣例](../build/naming-conventions-for-mfc-dlls.md)  
+ [MFC DLL 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)  
  討論包含在 MFC 的 DLL 和程式庫如何遵守結構化的命名慣例。  
   
  [從 Visual Basic 應用程式呼叫 DLL 函式](../build/calling-dll-functions-from-visual-basic-applications.md)  

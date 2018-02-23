@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c0ae9514736b66be104198c95c3764772a87ef8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4b6ff3f709e5db16f06569ab3406cfef44cabf11
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>開發 Visual C++ 的 IDE 和工具
 
@@ -131,4 +131,4 @@ Visual Studio 包含同時適用於原生 C++ 和 C++/CLI 的單元測試架構�
 |[建置 C/C++ 程式](../build/building-c-cpp-programs.md)|說明如何建置 C++ 專案。|
 |[部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)|提供 C++ 應用程式的部署概觀，以及詳細說明部署的其他文章連結。|
 |[Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)|有關如何升級在舊版的 Visual Studio 中，所建立的 c + + 應用程式以及如何使用 Visual Studio 以外工具所建立的應用程式移轉的詳細的資訊。|
-|[Visual C++](../top/visual-cpp-in-visual-studio.md)|說明 Visual Studio 中的 Visual C++ 主要功能，以及 Visual C++ 文件其餘部分的連結。|
+|[Visual C++](../visual-cpp-in-visual-studio.md)|說明 Visual Studio 中的 Visual C++ 主要功能，以及 Visual C++ 文件其餘部分的連結。|

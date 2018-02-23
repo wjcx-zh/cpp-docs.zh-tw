@@ -1,7 +1,8 @@
 ---
 title: "編譯器警告 C4400 透過 C4599 |Microsoft 文件"
 ms.date: 11/17/2017
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -36,6 +37,10 @@ f1_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -43,6 +48,10 @@ f1_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -98,6 +107,10 @@ helpviewer_keywords:
 - C4459
 - C4464
 - C4472
+- C4474
+- C4475
+- C4476
+- C4478
 - C4480
 - C4482
 - C4483
@@ -105,6 +118,10 @@ helpviewer_keywords:
 - C4492
 - C4493
 - C4494
+- C4495
+- C4496
+- C4497
+- C4498
 - C4499
 - C4509
 - C4519
@@ -127,17 +144,19 @@ helpviewer_keywords:
 - C4593
 - C4594
 - C4595
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 44b0c76c6aba144229923a969cf3da026de54201
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>編譯器警告 C4400 透過 C4599
 
@@ -165,7 +184,7 @@ ms.lasthandoff: 12/21/2017
 |[編譯器警告 (層級 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*函式*': 函式簽章含有類型'*類型*';C + + 物件是純程式碼之間傳遞的不安全與混合或原生。|
 |編譯器警告 C4413|'classname::member': 參考成員已初始化成建構函式結束之後，就不存在的暫存|
 |[編譯器警告 (層級 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*函式*': 函式的 short 跳躍指令被轉換為 near|
-|編譯器警告 （層級 1） C4415|重複的 __declspec (code_seg ('*名稱*'))|
+|編譯器警告 （層級 1） C4415|duplicate __declspec(code_seg('*name*'))|
 |編譯器警告 （層級 1） C4416|__declspec(code_seg(...)) 包含空字串： 忽略|
 |編譯器警告 （層級 1） C4417|明確樣板具現化不能有 __declspec(code_seg(...))： 忽略|
 |編譯器警告 （層級 1） C4418|__declspec(code_seg(...)) 忽略列舉|
@@ -214,7 +233,13 @@ ms.lasthandoff: 12/21/2017
 |[編譯器警告 (層級 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|浮點控制 pragma 在 /clr 下會忽略|
 |[編譯器警告 （層級 4） C4471](compiler-warning-level-4-c4471.md)|'*列舉*': 不限範圍列舉的向前宣告必須含有基礎類型 (假設為 int)|
 |編譯器警告 （層級 1） C4472|'*識別碼*' 是原生列舉： 新增存取規範 (private/public) 以便宣告 ' WinRT &#124; managed' 列舉|
-|編譯器警告 C4480|使用非標準擴充： 指定列舉的基礎型別 '*列舉*'|
+|[編譯器警告 （層級 1） C4473](c4473.md)|'*函式*': 沒有足夠的引數傳遞給格式字串|
+|編譯器警告 （層級 3） C4474|'*函式*': 太多引數傳遞給格式字串|
+|編譯器警告 （層級 3） C4475|'*函式*': 長度修飾詞'*修飾詞*'不能與型別欄位字元'*字元*' 格式規範中|
+|編譯器警告 （層級 3） C4476|'*函式*': 未知的型別欄位字元'*字元*' 格式規範中|
+|[編譯器警告 （層級 1） C4477](c4477.md)|'*函式*': 格式字串'*字串*'需要類型的引數'*類型*'，但 variadic 引數*數目*具有類型 '*類型*'|
+|編譯器警告 （層級 1） C4478|'*函式*': 無法在相同的格式字串中混合位置和非位置的預留位置|
+|編譯器警告 C4480 （錯誤）|使用非標準擴充： 指定列舉的基礎型別 '*列舉*'|
 |[編譯器警告 (層級 4) C4481](../../error-messages/compiler-warnings/compiler-warning-level-4-c4481.md)|使用非標準擴充： 覆寫規範 '*關鍵字*'|
 |編譯器警告 C4482|使用非標準擴充： 列舉 '*列舉*' 限定名稱中使用|
 |編譯器警告 （層級 1，錯誤） C4483|語法錯誤： 必須是 c + + 關鍵字|
@@ -229,6 +254,10 @@ ms.lasthandoff: 12/21/2017
 |編譯器警告 （層級 1，錯誤） C4492|'*function1*': 符合基底 ref 類別方法'*function2*'，但未標記為 'override'|
 |編譯器警告 （層級 3，錯誤） C4493|刪除運算式沒有任何作用的解構函式為 '*類型*' 沒有 'public' 可及性|
 |編譯器警告 （層級 1） C4494|'*函式*': 忽略 __declspec （allocator），因為函式傳回型別不是指標或參考|
+|編譯器警告 C4495|使用非標準擴充 ' __super ': 取代為明確的基底類別名稱|
+|編譯器警告 C4496|使用非標準擴充 'for each': 取代為 ranged-for 陳述式|
+|編譯器警告 C4497|使用非標準擴充 'sealed': 取代為 'final'|
+|編譯器警告 C4498|使用非標準擴充: '*延伸*'|
 |編譯器警告 （層級 4） C4499|*函式*': 明確特製化不能有儲存類別 （忽略） 」|
 |[編譯器警告 (層級 1) C4502](../../error-messages/compiler-warnings/compiler-warning-level-1-c4502.md)|'*連結規格*' 必須使用關鍵字 'extern'，必須在所有其他規範之前|
 |[編譯器警告 (層級 1) C4503](../../error-messages/compiler-warnings/compiler-warning-level-1-c4503.md)|'*識別碼*': 裝飾名稱長度超出範圍，名稱已遭截斷|

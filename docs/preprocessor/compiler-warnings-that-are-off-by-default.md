@@ -15,24 +15,29 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b1da3688e2c0524256f5128d5bb15f69b5070
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
-ms.translationtype: MT
+ms.openlocfilehash: ca1fdff6f5be88d7562f1735ea31323ca5a70360
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
-編譯器會包含已關閉預設因為大部分的開發人員不想要看到它們的警告。 不過，您可以使用下列其中一個選項啟用這類警告。
+編譯器包含預設關閉的警告，因為大部分的開發人員不想要看到它們。 在某些情況下，它們代表樣式的選擇，或常見慣用語位於較舊的程式碼，或利用語言的 Microsoft 擴充功能。 在其他情況下，它們可以表示的區域的程式設計人員通常都會正確運作，可能會導致非預期或未定義的行為。 有些警告可能非常累贅程式庫標頭中。
 
-**#pragma 警告 (預設：** *warning_number* **)**  
-指定的警告 (*warning_number*) 會在其預設層級啟用。 警告的文件包含警告的預設層級。
+您可以使用下列選項之一，以啟用這些警告：
 
-**#pragma warning(** *warning_level* **:** *warning_number* **)**  
-指定的警告 (*warning_number*) 指定的層級啟用 (*warning_level*)。
+- **#pragma 警告 (預設：** *warning_number* **)**  
+   指定的警告 (*warning_number*) 會在其預設層級啟用。 警告的文件包含警告的預設層級。
 
-[/Wall](../build/reference/compiler-option-warning-level.md)  
-**/ 牆**啟用都預設為關閉的所有警告。
+- **#pragma warning(** *warning_level* **:** *warning_number* **)**  
+   指定的警告 (*warning_number*) 指定的層級啟用 (*warning_level*)。
+
+- [/Wall](../build/reference/compiler-option-warning-level.md)  
+   **/ 牆**啟用都預設為關閉的所有警告。 如果您使用此選項時，您可以關閉個別的警告使用[/wd](../build/reference/compiler-option-warning-level.md)選項。
+
+- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
+   這可讓警告 *nnnn* 層級*l*。
 
 根據預設，下列警告會關閉。
 
@@ -131,6 +136,7 @@ ms.lasthandoff: 02/19/2018
 |C5032 （層級 4）|偵測到任何對應 「 #pragma warning （pop 的) #pragma warning|
 |C5035|使用功能 '*功能*' 函式會導致*函式*編譯為客體程式碼|
 |C5036 （層級 1）|varargs 函式的指標轉換時使用 /hybrid:x86arm64 編譯 '*type1*'to'*type2*'|
+|[C5038](../error-messages/compiler-warnings/c5038.md)|資料成員 '*member1*'將初始化資料成員之後'*member2*'|
 
 除非已關閉這些警告[/ 寬鬆-](../build/reference/permissive-standards-conformance.md)編譯器選項設定：
 

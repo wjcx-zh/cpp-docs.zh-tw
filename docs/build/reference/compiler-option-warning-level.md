@@ -71,11 +71,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be7e86065b52ee5c55058b9a672f3bf543454cf8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ee6ac53bd92873279c08dc7458114612d00ff791
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w、 /W0、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd，/ /wo，我們 /Wv，/WX （警告等級）
 
@@ -111,7 +111,7 @@ ms.lasthandoff: 02/14/2018
 |**/w**|隱藏所有的編譯器警告。|
 |**/W0**<br /><br /> **/W1**<br /><br /> **/W2**<br /><br /> **/W3**<br /><br /> **/W4**|指定要由編譯器產生的警告層級。 有效的警告層級的範圍從 0 到 4:<br />**/W0**會抑制所有警告。 這相當於**/w**。<br />**/ W1**會顯示警告層級 1 （嚴重）。 **/ W1**是命令列編譯器中的預設設定。<br />**/W2**顯示層級 1 和 2 （重大） 的警告層級。<br />**/W3**顯示層級 1、 層級 2 和 3 （實際執行品質） 警告層級。 **/W3**是在 IDE 中的預設設定。<br />**/W4**顯示層級 1、 2、 層級和層級 3 警告，和所有層級 4 （資訊） 的警告不預設關閉的。 我們建議您使用此選項，以提供類似 lint 的警告。 對於新專案時，可能最好使用**/W4**中所有編譯; 這樣可以確保可能難找到的程式碼缺失數最少。|
 |**/Wall**|顯示所顯示的所有警告**/W4**以及所有其他警告， **/W4**不包含 — 例如，預設為關閉的警告。 如需詳細資訊，請參閱[編譯器警告，是 Off By Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
-|**/Wv**\[**:**_version_]|顯示編譯器版本中導入的警告*版本*及更早版本。 您可以使用此選項，隱藏程式碼中的新警告，當您移轉至更新版本的編譯器，以及維護您現有的建置程序時加以修正。 選擇性參數*版本*的形式 *nn* [。*mm*[。*bbbbb*]] 其中 *nn* 是主要版本號碼，*公釐*是選用的次要版本號碼，和*bbbbb*是選擇性的組建編號的編譯器。 例如，使用*/Wv:17*来顯示在 Visual Studio 2012 （也就是任何具有 17 主要版本號碼的編譯器版本） 或更早，導入的警告，但是 Visual Studio 2013 （主要版本中導入的警告18） 及更新版本。 根據預設， **/Wv**會使用目前的編譯器版本號碼和警告都會被隱藏。 了解哪種編譯器版本隱藏警告的資訊，請參閱[編譯器版本的編譯器警告](../..//error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md)。|
+|**/Wv**\[**:**_version_]|顯示編譯器版本中導入的警告*版本*及更早版本。 您可以使用此選項，隱藏程式碼中的新警告，當您移轉至更新版本的編譯器，以及維護您現有的建置程序時加以修正。 選擇性參數*版本*的形式 *nn* [。*mm*[。*bbbbb*]] 其中 *nn* 是主要版本號碼，*公釐*是選用的次要版本號碼，和*bbbbb*是選擇性的組建編號的編譯器。 例如，使用*/Wv:17*来顯示在 Visual Studio 2012 （也就是任何具有 17 主要版本號碼的編譯器版本） 或更早，導入的警告，但是 Visual Studio 2013 （主要版本中導入的警告18） 及更新版本。 根據預設， **/Wv**會使用目前的編譯器版本號碼和警告都會被隱藏。 了解哪種編譯器版本隱藏警告的資訊，請參閱[編譯器版本的編譯器警告](../../error-messages/compiler-warnings/compiler-warnings-by-compiler-version.md)。|
 |**/WX**|將所有編譯器警告視為錯誤。 對於新專案時，可能最好使用**/WX**中所有編譯; 解決所有警告可確保難找到可能的程式碼缺失數最少。<br /><br /> 連結器也有**/WX**選項。 如需詳細資訊，請參閱 [/WX (將連結器警告視為錯誤)](../../build/reference/wx-treat-linker-warnings-as-errors.md)。|
 |**/w1**_nnnn_<br /><br /> **/w2**_nnnn_<br /><br /> **/w3**_nnnn_<br /><br /> **/w4**_nnnn_|設定指定的警告數字的警告層級 _nnnn_ 。 這可讓您設定特定的警告層級時，變更該警告的編譯器行為。 您可以與其他警告選項搭配使用這些選項，強制執行您自己撰寫程式碼的警告，而不是預設的 Visual Studio 所提供的標準。<br /><br /> 例如， **/w34326**會使 C4326 必須產生做為層級 3 警告，而不是層級 1。 如果您使用同時編譯**/w34326**選項和**/W2**選項時，警告 C4326 不會產生。|
 |**/wd**_nnnn_|隱藏所指定的編譯器警告 _nnnn_ 。<br /><br /> 例如， **/wd4326 會**會隱藏編譯器警告 C4326。|

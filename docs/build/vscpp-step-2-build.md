@@ -1,6 +1,6 @@
 ---
 title: "建置並執行的 c + + 主控台應用程式專案 |Microsoft 文件"
-description: "安裝 Visual c + + 的 Visual Studio 支援"
+description: "建置並執行 Visual c + + 中的 Hello World 主控台應用程式"
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 119d39c6aac479c8e08cd017b4d5f8da794c836d
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>建置並執行的 c + + 主控台應用程式專案
 

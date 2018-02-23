@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +14,24 @@ f1_keywords:
 - AFX/CException::CException
 - AFX/CException::Delete
 - AFX/CException::ReportError
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CException [MFC], CException
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69fb88fc9c12994d413de2cbe2037cc4fc845760
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="cexception-class"></a>CException 類別
 MFC 程式庫中所有例外狀況的基底類別。  
@@ -63,7 +66,7 @@ class AFX_NOVTABLE CException : public CObject
 |-|-|  
 |[CSimpleException](../../mfc/reference/csimpleexception-class.md)|資源關鍵 MFC 例外狀況的基底類別|  
 |[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)|無效的引數例外狀況|  
-|[Afxthrowmemoryexception](../../mfc/reference/cmemoryexception-class.md)|記憶體不足例外狀況|  
+|[CMemoryException](../../mfc/reference/cmemoryexception-class.md)|記憶體不足例外狀況|  
 |[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)|不支援的作業要求|  
 |[CArchiveException](../../mfc/reference/carchiveexception-class.md)|封存特定的例外狀況|  
 |[CFileException](../../mfc/reference/cfileexception-class.md)|檔案特定的例外狀況|  
@@ -91,7 +94,7 @@ class AFX_NOVTABLE CException : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="cexception"></a>CException::CException  
+##  <a name="cexception"></a>  CException::CException  
  此成員函式會建構`CException`物件。  
   
 ```  
@@ -105,7 +108,7 @@ explicit CException(BOOL bAutoDelete);
 ### <a name="remarks"></a>備註  
  您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生類別，並呼叫其建構函式，或它應該使用其中一個 MFC 擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 擲回預先定義的類型。 這份文件只為完整性而提供。  
   
-##  <a name="delete"></a>CException::Delete  
+##  <a name="delete"></a>  CException::Delete  
  此函式會查看**CException**堆積上建立物件，如果是的話，它會呼叫**刪除**物件上的運算子。  
   
 ```  
@@ -169,7 +172,7 @@ if (pFile != NULL)
 }   
  ```
   
-##  <a name="reporterror"></a>CException::ReportError  
+##  <a name="reporterror"></a>  CException::ReportError  
  在訊息方塊中，使用者呼叫此成員函式，來報告錯誤文字。  
   
 ```  
@@ -180,7 +183,7 @@ virtual int ReportError(
   
 ### <a name="parameters"></a>參數  
  `nType`  
- 指定訊息方塊樣式。 套用的任何組合[訊息方塊樣式](message-box-styles.md)到方塊。 如果您未指定這個參數，預設值是**MB_OK**。  
+ 指定訊息方塊樣式。 套用的任何組合[訊息方塊樣式](styles-used-by-mfc.md#message-box-styles)到方塊。 如果您未指定這個參數，預設值是**MB_OK**。  
   
  *nMessageID*  
  指定要顯示的例外狀況物件不具有錯誤訊息時的訊息的資源識別碼 （字串資料表項目）。 如果為 0，訊息 「 沒有錯誤訊息已使用 」 隨即出現。  

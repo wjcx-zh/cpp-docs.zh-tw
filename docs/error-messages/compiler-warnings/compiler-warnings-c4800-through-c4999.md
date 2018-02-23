@@ -94,7 +94,6 @@ f1_keywords:
 - C5035
 - C5036
 - C5037
-- C5038
 - C5039
 - C5040
 - C5041
@@ -103,17 +102,16 @@ f1_keywords:
 - C5044
 dev_langs:
 - C++
-ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f31846158e8e1899c600ae7bf765d6594a8abca
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>編譯器警告 C4800 透過 C5999
 
@@ -245,6 +243,7 @@ ms.lasthandoff: 02/14/2018
 |編譯器警告 C5035|使用功能 '*功能*' 函式會導致*函式*編譯為客體程式碼|
 |編譯器警告 （層級 1） C5036|varargs 函式的指標轉換時使用 /hybrid:x86arm64 編譯 '*type1*'to'*type2*'|
 |編譯器警告 （錯誤） C5037|'*成員函式*': 類別樣板的成員的行外定義不能有預設引數|
+|[編譯器警告 C5038](c5038.md)|資料成員 '*member1*'將初始化資料成員之後'*member2*'|
 |編譯器警告 C5039|'*函式*': 指標或參考可能會擲回函式傳遞至下-/ehc extern C 函式。 如果此函式會擲回的例外狀況，可能會發生未定義的行為。|
 |編譯器警告 C5040|動態例外狀況規格是有效的只有在 C + + 14 和舊版中;視為 noexcept|
 |編譯器警告 C5041|'*定義*': 不需要 constexpr 靜態資料成員的行外定義，而且已被取代的 C + + 17|

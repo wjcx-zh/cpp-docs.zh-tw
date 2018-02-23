@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: afxdll
-dev_langs: C++
+f1_keywords:
+- afxdll
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -21,16 +24,17 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 45e94997dbeb2c6413ffcdc1272a3a46a7e220ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="mfc-extension-dlls"></a>MFC 擴充 Dll
 MFC 擴充 DLL 是通常會實作可重複使用的類別衍生自現有 Mfc 程式庫的 DLL。  
@@ -61,7 +65,7 @@ MFC 擴充 DLL 是通常會實作可重複使用的類別衍生自現有 Mfc 程
   
  4.0 版之前的 MFC，這種類型的 DLL 呼叫 AFXDLL。 AFXDLL 指`_AFXDLL`建置 DLL 時，會定義的前置處理器符號。  
   
- MFC 的共用版本的匯入程式庫會根據中所述的慣例來命名[MFC Dll 命名慣例](../build/naming-conventions-for-mfc-dlls.md)。 Visual c + + 會提供預先建立的版本的 MFC Dll，再加上數字的非 MFC Dll，您可以使用並與您的應用程式一起散發。 這些案例記載 Redist.txt，其會安裝到 Program Files\Microsoft Visual Studio 資料夾中。  
+ MFC 的共用版本的匯入程式庫會根據中所述的慣例來命名[MFC Dll 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 Visual c + + 會提供預先建立的版本的 MFC Dll，再加上數字的非 MFC Dll，您可以使用並與您的應用程式一起散發。 這些案例記載 Redist.txt，其會安裝到 Program Files\Microsoft Visual Studio 資料夾中。  
   
  如果您要匯出使用.def 檔，將下列程式碼放在開頭和結尾的標頭檔：  
   
@@ -89,7 +93,7 @@ MFC 擴充 DLL 是通常會實作可重複使用的類別衍生自現有 Mfc 程
 ## <a name="sharing-resources-and-classes"></a>共用資源和類別  
  匯出資源是透過資源的清單。 每個應用程式包含單向連結的清單**CDynLinkLibrary**物件。 大部分的載入資源的標準 MFC 實作資源時，尋找在目前的資源模組的第一個 (`AfxGetResourceHandle`)，如果資源找不到查核清單**CDynLinkLibrary**物件嘗試載入要求的資源。  
   
- 查核清單有缺點，它會稍微慢一點，而且必須管理資源 ID 範圍。 它的優點是連結到數個 MFC 擴充 Dll 的用戶端應用程式可以使用任何提供 DLL 的資源，而不需要指定 DLL 的執行個體控制代碼。 `AfxFindResourceHandle`API 用查核資源清單來查詢給定的相符項目。 它會使用名稱和資源類型，並傳回其第一次找到的資源控制代碼 （或 NULL）。  
+ 查核清單有缺點，它會稍微慢一點，而且必須管理資源 ID 範圍。 它的優點是連結到數個 MFC 擴充 Dll 的用戶端應用程式可以使用任何提供 DLL 的資源，而不需要指定 DLL 的執行個體控制代碼。 `AfxFindResourceHandle` API 用查核資源清單來查詢給定的相符項目。 它會使用名稱和資源類型，並傳回其第一次找到的資源控制代碼 （或 NULL）。  
   
  如果您不希望查核清單，並只從特定位置中載入資源，使用函數`AfxGetResourceHandle`和`AfxSetResourceHandle`儲存舊的控制代碼，並將新的控制代碼。 請務必還原舊的資源控制代碼傳回至用戶端應用程式之前。 使用這個方法來明確載入功能表的範例，請參閱 MFC 範例 Testdll2.cpp [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。  
   

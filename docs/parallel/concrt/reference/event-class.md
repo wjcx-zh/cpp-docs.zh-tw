@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs: C++
-helpviewer_keywords: event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a8c14cce1f34e4957b8c22bdbb8eab82fb4c0c58
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="event-class"></a>event 類別
 其為並行執行階段明確察覺的手動重設事件。  
@@ -52,7 +56,7 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|事件重設為未收到信號狀態。|  
 |[set](#set)|通知事件。|  
-|[等候](#wait)|等待事件發出訊號。|  
+|[wait](#wait)|等待事件發出訊號。|  
 |[wait_for_multiple](#wait_for_multiple)|等候發出訊號的多個事件。|  
   
 ### <a name="public-constants"></a>公用常數  
@@ -72,7 +76,7 @@ class event;
   
  **命名空間：** concurrency  
   
-##  <a name="ctor"></a>事件 
+##  <a name="ctor"></a> 事件 
 
  建構新的事件。  
   
@@ -82,7 +86,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="dtor"></a>~ 事件 
+##  <a name="dtor"></a> ~ 事件 
 
  終結事件。  
   
@@ -93,7 +97,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>備註  
  應該沒有執行緒正在等候該事件解構函式執行時。 允許事件解構仍在等候的執行緒，會導致未定義的行為發生。  
   
-##  <a name="reset"></a>重設 
+##  <a name="reset"></a> 重設 
 
  事件重設為未收到信號狀態。  
   
@@ -101,7 +105,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a>設定 
+##  <a name="set"></a> 設定 
 
  通知事件。  
   
@@ -112,7 +116,7 @@ void set();
 ### <a name="remarks"></a>備註  
  發出事件訊號會使事件上正在等候的任意數目內容變為可執行。  
   
-##  <a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a> timeout_infinite 
 
  值，表示等候應該永遠不會逾時。  
   
@@ -120,7 +124,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a>等候 
+##  <a name="wait"></a> 等候 
 
  等待事件發出訊號。  
   
@@ -136,9 +140,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
  如果已滿足等候，值`0`會傳回，否則值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時不變得發出信號的事件。  
   
 > [!IMPORTANT]
->  在 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式中，請勿呼叫在 ASTA 執行緒上的 `wait`，因為這個呼叫可能會封鎖目前的執行緒，而且造成應用程式變成沒有回應。  
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 ASTA 執行緒上因為這個呼叫可能會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。  
   
-##  <a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
  等候發出訊號的多個事件。  
   
@@ -170,7 +174,7 @@ static size_t __cdecl wait_for_multiple(
  如果參數`_FWaitAll`設定為值`true`函數所傳回的索引來指示必須成為所有事件發出都信號，以滿足等候，帶有沒有特殊的意義不是值的事實以外`COOPERATIVE_WAIT_TIMEOUT`。  
   
 > [!IMPORTANT]
->  在 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式中，請勿呼叫在 ASTA 執行緒上的 `wait_for_multiple`，因為這個呼叫可能會封鎖目前的執行緒，而且造成應用程式變成沒有回應。  
+>  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait_for_multiple`在 ASTA 執行緒上因為這個呼叫可能會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。  
   
 ## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

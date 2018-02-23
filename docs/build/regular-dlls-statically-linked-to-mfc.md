@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - regular MFC DLLs [C++]
 - DLLs [C++], regular
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>一般 MFC 靜態連結至 MFC 的 Dll
 MFC DLL 靜態連結至 MFC 一般是在內部使用 MFC 的 DLL，而且在 DLL 中匯出的函式可以由呼叫 MFC 或非 MFC 可執行檔。 如同名稱所說明，這類型的 DLL 是建置使用 MFC 靜態連結程式庫版本。 函式通常是從一般使用標準 C 介面的 MFC DLL 匯出。 如需如何撰寫、 建置及使用 MFC 的標準 DLL 的範例，請參閱範例[DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)。  
@@ -72,7 +75,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
   
  以靜態方式連結至 MFC 的 DLL 也會動態地無法共用 MFC Dll 連結。 以靜態方式連結至 MFC 的 DLL 是動態地繫結至應用程式就像任何其他 DLL;應用程式連結，就像任何其他 DLL。  
   
- 標準 MFC 靜態連結程式庫會根據所述的慣例命名[MFC Dll 命名慣例](../build/naming-conventions-for-mfc-dlls.md)。 不過，mfc 3.0 版和更新版本，它不再需要手動指定連結器您要連結 MFC 程式庫的版本。 相反地，MFC 標頭檔會自動判斷正確版本的 MFC 程式庫，連結根據前置處理器定義，例如**\_偵錯**或**_UNICODE**。 MFC 標頭檔新增 /DEFAULTLIB 指示詞，指示連結器連結特定版本的 MFC 程式庫。  
+ 標準 MFC 靜態連結程式庫會根據所述的慣例命名[MFC Dll 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 不過，mfc 3.0 版和更新版本，它不再需要手動指定連結器您要連結 MFC 程式庫的版本。 相反地，MFC 標頭檔會自動判斷正確版本的 MFC 程式庫，連結根據前置處理器定義，例如**\_偵錯**或**_UNICODE**。 MFC 標頭檔新增 /DEFAULTLIB 指示詞，指示連結器連結特定版本的 MFC 程式庫。  
   
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   

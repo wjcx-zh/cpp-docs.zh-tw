@@ -22,11 +22,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3cb156d4fb8f50c12c2fce172c65dc2b313a24e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
+ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 巨集組合程式參考
 Microsoft Macro Assembler (MASM) 提供了許多優於內嵌組譯碼。 MASM 包含巨集語言，包含功能，例如迴圈、 算術、 和文字字串處理。 MASM 也讓您進一步控制硬體，因為它支援 386 486 及 Pentium 處理器的指令集。 藉由使用 MASM，您也可以降低時間和記憶體的負荷。  
@@ -54,7 +54,7 @@ Microsoft Macro Assembler (MASM) 提供了許多優於內嵌組譯碼。 MASM �
  如何建立輸出檔案[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]。  
   
 ## <a name="related-sections"></a>相關章節  
- [Visual C++](../../top/visual-cpp-in-visual-studio.md)  
+ [Visual C++](../../visual-cpp-in-visual-studio.md)  
  提供的 Visual Studio 和 Visual c + + 文件的不同區域的連結。  
   
 ## <a name="see-also"></a>請參閱  

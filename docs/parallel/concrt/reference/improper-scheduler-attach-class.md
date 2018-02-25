@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - improper_scheduler_attach
 - CONCRT/concurrency::improper_scheduler_attach
 - CONCRT/concurrency::improper_scheduler_attach::improper_scheduler_attach
-dev_langs: C++
-helpviewer_keywords: improper_scheduler_attach class
+dev_langs:
+- C++
+helpviewer_keywords:
+- improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6735c8a4ea69b56ead58d3fc7cb29fd0b2208d8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f6bcf9a03db1d604e2ff16dcf92758b7fdc88b5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="improperschedulerattach-class"></a>improper_scheduler_attach 類別
 這個類別描述當 `Scheduler` 物件已經附加到目前的內容上時呼叫 `Attach` 方法擲回的例外狀況。  
@@ -52,7 +56,7 @@ class improper_scheduler_attach : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="ctor"></a>improper_scheduler_attach 
+##  <a name="ctor"></a> improper_scheduler_attach 
 
  建構 `improper_scheduler_attach` 物件。  
   

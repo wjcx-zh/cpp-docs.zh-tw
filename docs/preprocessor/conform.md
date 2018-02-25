@@ -1,31 +1,34 @@
 ---
-title: "符合 |Microsoft 文件"
+title: conform | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - conform pragma
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f876c1b921a00c251010d22e2cdd000a405a651
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 476228dc1331d005e4886c905256fad23353874c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conform"></a>conform
 **C + + 特定的**  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/21/2017
  **pop** （選擇性）  
  設定的值*名稱*頂端的內部編譯器堆疊，然後從堆疊中推出的值。 如果您指定的識別項**pop**，將會推出堆疊，直到它找到的記錄*識別碼*，這也會從; 目前的值*名稱*中在堆疊上的下一個記錄會變成新值*名稱*。 如果您指定要推出*識別碼*不在堆疊上的記錄**pop**會被忽略。  
   
- *識別項*（選擇性）  
+ *identifier*(optional)  
  可能包含在**發送**或**pop**命令。 如果*識別碼*使用時，則**上**或**關閉**規範也可以使用。  
   
 ## <a name="example"></a>範例  

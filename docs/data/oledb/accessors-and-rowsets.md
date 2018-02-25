@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -24,37 +26,37 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="accessors-and-rowsets"></a>存取子和資料列集
 若要設定及擷取資料，OLE DB 樣板會使用存取子和資料列集，透過[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)類別。 這個類別可以處理不同類型的多個存取子。  
   
 ## <a name="accessor-types"></a>存取子類型  
- 所有存取子是衍生自[CAccessorBase](../../data/oledb/caccessorbase-class.md)。 `CAccessorBase`提供參數和資料行繫結。  
+ 所有存取子是衍生自[CAccessorBase](../../data/oledb/caccessorbase-class.md)。 `CAccessorBase` 提供參數和資料行繫結。  
   
  下圖顯示存取子類型。  
   
  ![存取子類型](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 存取子類別  
   
--   [CAccessor](../../data/oledb/caccessor-class.md)使用此存取子，當您在執行階段知道資料庫來源的結構。 `CAccessor`以靜態方式將資料庫的記錄，其中包含緩衝區，繫結至資料來源。  
+-   [CAccessor](../../data/oledb/caccessor-class.md)使用此存取子，當您在執行階段知道資料庫來源的結構。 `CAccessor` 以靜態方式將資料庫的記錄，其中包含緩衝區，繫結至資料來源。  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)使用此存取子，當您在設計階段不知道資料庫的結構。 `CDynamicAccessor`呼叫`IColumnsInfo::GetColumnInfo`取得資料庫資料行資訊。 它會建立並管理存取子和緩衝區。  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)使用此存取子，當您在設計階段不知道資料庫的結構。 `CDynamicAccessor` 呼叫`IColumnsInfo::GetColumnInfo`取得資料庫資料行資訊。 它會建立並管理存取子和緩衝區。  
   
 -   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)使用此存取子，來處理未知的命令類型。 當您準備命令，`CDynamicParameterAccessor`可以取得參數資訊從`ICommandWithParameters`介面，提供者支援`ICommandWithParameters`。  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)， [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)，和[CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)當您不知道資料庫結構描述時使用這些類別。 `CDynamicStringAccessorA`擷取資料做為 ANSI 字串。`CDynamicStringAccessorW`擷取成 Unicode 字串資料。  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)， [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)，和[CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)當您不知道資料庫結構描述時使用這些類別。 `CDynamicStringAccessorA` 擷取資料做為 ANSI 字串。`CDynamicStringAccessorW`擷取成 Unicode 字串資料。  
   
 -   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md)與這個類別中，您可以使用任何您想要提供者可以將類型轉換時的資料類型。 它會處理結果資料行和命令參數。  
   

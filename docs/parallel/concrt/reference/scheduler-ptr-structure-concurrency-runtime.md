@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::scheduler_ptr
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdb47301f890cc96d21bf797444c44b48da3761b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 結構
 代表排程器的指標。 這個類別是為了允許使用 shared_ptr 共用存留期的規格，或只是使用原始指標的簡單參考。  
@@ -41,20 +44,20 @@ struct scheduler_ptr;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: scheduler_ptr](#ctor)|多載。 從排程器 shared_ptr 建立排程器指標|  
+|[scheduler_ptr::scheduler_ptr](#ctor)|多載。 從排程器 shared_ptr 建立排程器指標|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: get](#get)|傳回排程器的原始指標|  
+|[scheduler_ptr::get](#get)|傳回排程器的原始指標|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[scheduler_ptr:: operator bool](#operator_bool)|測試排程器指標是否為非 null|  
-|[scheduler_ptr:: operator-&gt;](#operator_ptr)|作用如同指標|  
+|[scheduler_ptr::operator bool](#operator_bool)|測試排程器指標是否為非 null|  
+|[scheduler_ptr::operator-&gt;](#operator_ptr)|作用如同指標|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `scheduler_ptr`  
@@ -64,7 +67,7 @@ struct scheduler_ptr;
   
  **命名空間：** concurrency  
   
-##  <a name="get"></a>scheduler_ptr:: get 方法  
+##  <a name="get"></a>  scheduler_ptr:: get 方法  
  傳回排程器的原始指標  
   
 ```
@@ -73,7 +76,7 @@ scheduler_interface* get() const;
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="operator_bool"></a>scheduler_ptr:: operator bool   
+##  <a name="operator_bool"></a>  scheduler_ptr:: operator bool   
  測試排程器指標是否為非 null  
   
 '' 運算子 bool() const;
@@ -92,7 +95,7 @@ scheduler_interface * operator-> const; （)
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-明確 scheduler_ptr （std:: shared_ptr < scheduler_interface > 排程器）。
+explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
 
 明確 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
 ```  

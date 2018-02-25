@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -13,7 +13,7 @@ f1_keywords:
 - utility/std::move
 - utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::exchange [C++]
@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: d2b444c2de41651ac74047717ed54a7059866f86
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a442f3a4b03a62363d465107b7e2ae5f3e975249
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函式
 ||||  
@@ -95,7 +95,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Type`|傳入 `Arg` 的實值類型，可能不同於 `Arg` 的類型。 通常由轉送函式的樣板引數所決定。|  
 |`Arg`|要轉型的引數。|  
@@ -293,7 +293,7 @@ void swap(pair<T, U>& left, pair<T, U>& right);
 ### <a name="remarks"></a>備註  
  `swap` 的其中一個優點是，編譯器會自動決定所儲存物件的類型，不需要明確指定。 當您使用 `swap<int, int>(1, 2)` 時不要使用明確樣板引數 (例如 `swap`)，因為它具有不必要的詳細資訊，並新增可能導致編譯錯誤的複雜右值參考問題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<utility>](../standard-library/utility.md)
 
 

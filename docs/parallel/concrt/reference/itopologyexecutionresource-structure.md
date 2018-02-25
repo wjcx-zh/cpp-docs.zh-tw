@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITopologyExecutionResource
 - CONCRTRM/concurrency::ITopologyExecutionResource
 - CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetId
 - CONCRTRM/concurrency::ITopologyExecutionResource::ITopologyExecutionResource::GetNext
-dev_langs: C++
-helpviewer_keywords: ITopologyExecutionResource structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: caf2cc77cd31df611f71d07c5a0a49f600767f81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f9b044575fdaccead8c30bd8dca955923a8c5f9e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 結構
 資源管理員所定義的執行資源介面。  
@@ -41,8 +45,8 @@ struct ITopologyExecutionResource;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Itopologyexecutionresource:: Getid](#getid)|傳回這個執行資源的資源管理員唯一識別項。|  
-|[Itopologyexecutionresource:: Getnext](#getnext)|讓介面返回列舉順序中的下一個執行資源。|  
+|[ITopologyExecutionResource::GetId](#getid)|傳回這個執行資源的資源管理員唯一識別項。|  
+|[ITopologyExecutionResource::GetNext](#getnext)|讓介面返回列舉順序中的下一個執行資源。|  
   
 ## <a name="remarks"></a>備註  
  通常利用此介面為觀察到由資源管理員逐步系統的拓撲。  
@@ -55,7 +59,7 @@ struct ITopologyExecutionResource;
   
  **命名空間：** concurrency  
   
-##  <a name="getid"></a>Itopologyexecutionresource:: Getid 方法  
+##  <a name="getid"></a>  Itopologyexecutionresource:: Getid 方法  
  傳回這個執行資源的資源管理員唯一識別項。  
   
 ```
@@ -65,7 +69,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>傳回值  
  這個執行資源的資源管理員唯一識別項。  
   
-##  <a name="getnext"></a>Itopologyexecutionresource:: Getnext 方法  
+##  <a name="getnext"></a>  Itopologyexecutionresource:: Getnext 方法  
  讓介面返回列舉順序中的下一個執行資源。  
   
 ```

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_set
 - hash_set/stdext::hash_set::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_set/stdext::hash_set::swap
 - hash_set/stdext::hash_set::upper_bound
 - hash_set/stdext::hash_set::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_set
 - stdext::hash_set::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 964e11310c6ae6a815c0b2ee97825aa35a6ae4b1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashset-class"></a>hash_set 類別
 > [!NOTE]
@@ -124,10 +127,10 @@ class hash_set
  要存放在 hash_set 中的項目資料類型。  
   
  `Traits`  
- 包含兩個函式物件的類型：一個是屬於 compare 類別 (此為二元述詞，能夠將兩個元素值以排序索引鍵做比較來判斷其相對順序)；一個是雜湊函式 (此為一元述詞，可將元素的索引鍵值對應到 **size_t** 類型的不帶正負號整數)。 這個引數是選用引數，且預設值是 `hash_compare`*<Key,* **less***\<Key> >*。  
+ 包含兩個函式物件的類型：一個是屬於 compare 類別 (此為二元述詞，能夠將兩個元素值以排序索引鍵做比較來判斷其相對順序)；一個是雜湊函式 (此為一元述詞，可將元素的索引鍵值對應到 **size_t** 類型的不帶正負號整數)。 這個引數是選擇性的而`hash_compare` *< 索引鍵，* **小於 * * *\<金鑰 >>*是預設值。  
   
  `Allocator`  
- 代表預存配置器物件的類型，其會封裝有關 hash_set 之記憶體配置與解除配置的詳細資訊。 這是選用引數，而預設值為 **allocator***\<Key>*。  
+ 代表預存配置器物件的類型，其會封裝有關 hash_set 之記憶體配置與解除配置的詳細資訊。 這個引數是選擇性的而且預設值是 **配置器 * * *\<金鑰 >。*  
   
 ## <a name="remarks"></a>備註  
  hash_set 是：  

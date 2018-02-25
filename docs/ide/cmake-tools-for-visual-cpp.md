@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 08/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: CMake in Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33c768d419215d6bee6d5d8acff707ec129b7cd5
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
+ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake 專案中 Visual c + +
 
@@ -161,7 +165,7 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 
    ![CMakeLists.txt 檔案錯誤](media/cmake-cmakelists-error.png "CMakeLists.txt 檔案錯誤")
 
-## <a name="cmake_settings"></a>CMake 設定和自訂設定
+## <a name="cmake_settings"></a> CMake 設定和自訂設定
 
 根據預設，Visual Studio 會提供六個預設 CMake 設定 （x86 偵錯、 x86 發行、 x64 偵錯、 x64-發行 」、 「 Linux 偵錯 」 和 「 Linux 發行 」）。 這些設定會定義如何 CMake.exe 會叫用來建立針對指定的專案 CMake 快取。 若要修改這些設定，或建立新的自訂組態，選擇**CMake |變更 CMake 設定**，然後選擇的設定套用至 CMakeLists.txt 檔案。 **變更 CMake 設定**命令也會提供檔案的內容功能表上**方案總管 中**。 此命令會建立 CMakeSettings.json 檔案的專案資料夾中。 此檔案用於重新建立 CMake 快取檔案，例如之後**清除**作業。 
 
@@ -215,13 +219,13 @@ JSON IntelliSense 可協助您編輯 CMakeSettings.json 檔案：
 CMakeSettings.json 也支援使用環境變數，在任何先前所述的屬性。 若要使用的語法是`${env.FOO}`展開環境變數 %FOO%。
 您還必須存取內建的巨集，在此檔案：
 
-- `${workspaceRoot}`– 提供工作區資料夾的完整路徑
-- `${workspaceHash}`– 工作區的位置，雜湊適用於建立目前的工作區 （例如，資料夾路徑中使用） 的唯一識別碼
-- `${projectFile}`– 根 CMakeLists.txt 檔案的完整路徑
-- `${projectDir}`– 根 CMakeLists.txt 檔案的資料夾的完整路徑
-- `${thisFile}`– CMakeSettings.json 檔案的完整路徑
-- `${name}`– 組態的名稱
-- `${generator}`– 此組態中使用 CMake 產生器的名稱
+- `${workspaceRoot}` – 提供工作區資料夾的完整路徑
+- `${workspaceHash}` – 工作區的位置，雜湊適用於建立目前的工作區 （例如，資料夾路徑中使用） 的唯一識別碼
+- `${projectFile}` – 根 CMakeLists.txt 檔案的完整路徑
+- `${projectDir}` – 根 CMakeLists.txt 檔案的資料夾的完整路徑
+- `${thisFile}` – CMakeSettings.json 檔案的完整路徑
+- `${name}` – 組態的名稱
+- `${generator}` – 此組態中使用 CMake 產生器的名稱
 
 ### <a name="ninja-command-line-arguments"></a>忍者一樣命令列引數
 
@@ -248,8 +252,7 @@ usage: ninja [options] [targets...]
 |   -w 旗標  | 調整警告 （使用-w 清單加入至清單警告）|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>繼承的環境 (Visual Studio 2017 15.5 版本)
-
-CmakeSettings.json 現在支援繼承的環境。 這項功能可讓您 （1） 繼承預設環境和 （2） 建立自訂的環境變數執行時，會傳遞給 CMake.exe。
+CMakeSettings.json 現在支援繼承的環境。 這項功能可讓您 （1） 繼承預設環境和 （2） 建立自訂的環境變數執行時，會傳遞給 CMake.exe。
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -271,7 +274,7 @@ CmakeSettings.json 現在支援繼承的環境。 這項功能可讓您 （1） 
 |msvc_arm64_x64|使用 64 位元工具針對 ARM64 編譯|
 
 ### <a name="custom-environment-variables"></a>自訂環境變數
-CmakeSettings.json，您可以在定義自訂的環境變數全域或每個組態中**環境**屬性。 下列範例會定義一個全域變數， **BuildDir**，偵錯 x86 和 x64 偵錯組態中繼承。 每個組態會使用變數指定的值**buildRoot**該組態的屬性。 也請注意每個組態如何使用**inheritEnvironments**屬性，以指定的變數，只適用於該組態。
+CMakeSettings.json，您可以在定義自訂的環境變數全域或每個組態中**環境**屬性。 下列範例會定義一個全域變數， **BuildDir**，偵錯 x86 和 x64 偵錯組態中繼承。 每個組態會使用變數指定的值**buildRoot**該組態的屬性。 也請注意每個組態如何使用**inheritEnvironments**屬性，以指定的變數，只適用於該組態。
 
 ```json
 {
@@ -290,8 +293,7 @@ CmakeSettings.json，您可以在定義自訂的環境變數全域或每個組�
       "configurationType": "Debug",
       // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    },
+      "buildRoot": "${env.BuildDir}\\${name}"    },
     {
       "name": "x64-Debug",
       "generator": "Ninja",
@@ -346,7 +348,7 @@ CmakeSettings.json，您可以在定義自訂的環境變數全域或每個組�
 }
 ```
 
-## <a name="cmake-configure-step"></a>Cmake 設定步驟
+## <a name="cmake-configure-step"></a>CMake 設定步驟
 
 重大變更時 CMakeSettings.json 或 CMakeLists.txt 檔案，Visual Studio 會自動重新執行 CMake 設定步驟。 如果沒有錯誤，完成設定步驟，所收集的資訊會位於 c + + IntelliSense 和語言服務，此外，在建置和偵錯作業。
 

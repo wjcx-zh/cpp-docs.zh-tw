@@ -5,26 +5,27 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 615e2f69a45a17b34b38190ac1c7def1de09d8c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 96f04fc312f718bae28576a5e248823a45950e03
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; 運算子
 |||||  
 |-|-|-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_unordered_multiset)|[operator==](#op_eq_eq_unordered_multiset)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  測試運算子左邊的 [unordered_set](../standard-library/unordered-set-class.md) 物件是否不等於右邊的 unordered_set 物件。  
   
 ```
@@ -89,7 +90,7 @@ int main()
   
  `c2 != c3: true`  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  測試運算子左邊的 [unordered_set](../standard-library/unordered-set-class.md) 物件是否等於右邊的 unordered_set 物件。  
   
 ```
@@ -154,7 +155,7 @@ int main()
   
  `c2 == c3: false`  
   
-##  <a name="op_neq_unordered_multiset"></a>  operator!=  
+##  <a name="op_neq_unordered_multiset"></a> operator!=  
  測試運算子左邊的 [unordered_multiset](../standard-library/unordered-multiset-class.md) 物件是否不等於右邊的 unordered_multiset 物件。  
   
 ```
@@ -222,7 +223,7 @@ int main()
   
  `c2 != c3: true`  
   
-##  <a name="op_eq_eq_unordered_multiset"></a>  operator==  
+##  <a name="op_eq_eq_unordered_multiset"></a> operator==  
  測試運算子左邊的 [unordered_multiset](../standard-library/unordered-multiset-class.md) 物件是否等於右邊的 unordered_multiset 物件。  
   
 ```
@@ -290,7 +291,7 @@ int main()
   
  `c2 == c3: false`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<unordered_set>](../standard-library/unordered-set.md)
 
 

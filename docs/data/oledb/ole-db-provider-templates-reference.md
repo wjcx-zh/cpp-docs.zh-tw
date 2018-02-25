@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vc.templates.ole
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates
+ms.topic: reference
+f1_keywords:
+- vc.templates.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供者樣板參考
 類別和介面的 OLE DB 提供者樣板可以分為下列類別。 參考資料也包含下列資訊[OLE DB 提供者樣板巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)。  
@@ -42,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  提供標準的 OLE DB 資料列集實作，而不需要許多實作介面的多重繼承。 唯一的方法，您必須提供實作**Execute**。  
   
  [CSimpleRow](../../data/oledb/csimplerow-class.md)  
- 提供資料列控制代碼，使用中的預設實作`IRowsetImpl`類別。 資料列控制代碼邏輯上是唯一的標記的結果資料列。 `IRowsetImpl`建立新`CSimpleRow`要求中的每個資料列`IRowsetImpl::GetNextRows`。  
+ 提供資料列控制代碼，使用中的預設實作`IRowsetImpl`類別。 資料列控制代碼邏輯上是唯一的標記的結果資料列。 `IRowsetImpl` 建立新`CSimpleRow`要求中的每個資料列`IRowsetImpl::GetNextRows`。  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
  OLE DB 需要實作的提供者**HACCESSOR**，即為陣列的標記**DBBINDING**結構。 提供**HACCESSOR**是位址的 s **BindType**結構。 資料列集和命令上的必要項。  
@@ -63,7 +67,7 @@ ms.lasthandoff: 12/21/2017
  實作 OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)介面，讓更新的現有資料列，刪除資料列，並插入新資料列中的資料行的值。  
   
  [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
- 此類別繼承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)和覆寫[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 `IRowsetCreatorImpl`執行相同的函式做為`IObjectWithSite`但也可讓 OLE DB 屬性**DBPROPCANSCROLLBACKWARDS**和**DBPROPCANFETCHBACKWARDS**。  
+ 此類別繼承自[IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)和覆寫[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。 `IRowsetCreatorImpl` 執行相同的函式做為`IObjectWithSite`但也可讓 OLE DB 屬性**DBPROPCANSCROLLBACKWARDS**和**DBPROPCANFETCHBACKWARDS**。  
   
  [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
  實作**IRowsetIdentity**介面，可讓您比較是否兩個資料列或不完全相同。  
@@ -103,7 +107,7 @@ ms.lasthandoff: 12/21/2017
  建立和刪除與取用者的連接。 在資料來源物件與在列舉值的選擇性介面上的強制介面。  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties`是資料來源物件的強制介面和列舉值的選用介面。 不過，如果列舉值公開**IDBInitialize**，它必須公開`IDBProperties`（資料來源上的屬性）。  
+ `IDBProperties` 是資料來源物件的強制介面和列舉值的選用介面。 不過，如果列舉值公開**IDBInitialize**，它必須公開`IDBProperties`（資料來源上的屬性）。  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
  取得資料來源物件的介面指標。 在工作階段上的強制介面。  

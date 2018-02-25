@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::set_x
 - amp_short_vectors/Concurrency::graphics::double_2::operator+=
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::operator-
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa341c7bb36bb198c4be581eab335c9e3209fe62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1c447587fcefbd922cbe6c1ba5f63ef1d3a2efce
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="double2-class"></a>double_2 類別
 代表 2 雙短向量。  
@@ -91,13 +94,13 @@ class double_2;
 |名稱|描述|  
 |----------|-----------------|  
 |double_2::operator-||  
-|double_2::operator-||  
-|double_2::operator * =||  
-|double_2::operator / =||  
-|double_2::operator + +||  
-|double_2::operator + =||  
-|double_2::operator =||  
-|double_2::operator =||  
+|double_2::operator--||  
+|double_2::operator*=||  
+|double_2::operator/=||  
+|double_2::operator++||  
+|double_2::operator+=||  
+|double_2::operator=||  
+|double_2::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -126,7 +129,7 @@ class double_2;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>double_2 
+##  <a name="ctor"></a> double_2 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -189,7 +192,7 @@ explicit inline double_2(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="double_2__size"></a>大小 
+##  <a name="double_2__size"></a> 大小 
 
 ```  
 static const int size = 2;  

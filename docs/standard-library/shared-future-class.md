@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::shared_future
 - future/std::shared_future::shared_future
@@ -15,9 +16,10 @@ f1_keywords:
 - future/std::shared_future::wait
 - future/std::shared_future::wait_for
 - future/std::shared_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d008142b78bc7901ef67f66f4327ad9229688bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedfuture-class"></a>shared_future 類別
 描述「非同步傳回物件」。 相對於 [future](../standard-library/future-class.md) 物件，「非同步提供者」可以與任意數目的 `shared_future` 物件相關聯。  
@@ -64,8 +67,8 @@ class shared_future;
 |名稱|描述|  
 |----------|-----------------|  
 |[get](#get)|擷取以「相關聯的非同步狀態」儲存的結果。|  
-|[有效](#valid)|指定物件是否不是空的。|  
-|[等候](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|  
+|[valid](#valid)|指定物件是否不是空的。|  
+|[wait](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|  
 |[wait_for](#wait_for)|封鎖直到相關聯的非同步狀態就緒為止，或直到指定的時間已過為止。|  
 |[wait_until](#wait_until)|封鎖直到相關聯的非同步狀態就緒為止，或直到到了指定的時間點為止。|  
   
@@ -80,7 +83,7 @@ class shared_future;
   
  **命名空間：** std  
   
-##  <a name="get"></a>shared_future:: get
+##  <a name="get"></a>  shared_future::get
  擷取以「相關聯的非同步狀態」儲存的結果。  
   
 ```
@@ -141,7 +144,7 @@ shared_future(const shared_future& Right);
   
  第四個建構函式所建構的 `shared_future` 物件，會具備與 `Right` 相同的相關聯非同步狀態。  
   
-##  <a name="valid"></a>shared_future:: valid
+##  <a name="valid"></a>  shared_future::valid
  指定物件是否具有「相關聯的非同步狀態」。  
   
 ```
@@ -151,7 +154,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>傳回值  
  如果物件有關聯的非同步狀態，就是 `true`，否則為 `false`。  
   
-##  <a name="wait"></a>shared_future:: wait
+##  <a name="wait"></a>  shared_future::wait
  封鎖目前的執行緒，直到「相關聯的非同步狀態」就緒為止。  
   
 ```
@@ -161,7 +164,7 @@ void wait() const;
 ### <a name="remarks"></a>備註  
  只有在非同步提供者儲存傳回值或儲存例外狀況後，相關聯的非同步狀態才會就緒。  
   
-##  <a name="wait_for"></a>shared_future:: wait_for
+##  <a name="wait_for"></a>  shared_future::wait_for
  封鎖目前的執行緒，直到相關聯的非同步狀態「就緒」為止，或直到指定的時間已過為止。  
   
 ```
@@ -180,7 +183,7 @@ future_status wait_for(
 ### <a name="remarks"></a>備註  
  只有在非同步提供者儲存了傳回值或儲存了例外狀況之後，相關聯的非同步狀態才會「就緒」。  
   
-##  <a name="wait_until"></a>shared_future:: wait_until
+##  <a name="wait_until"></a>  shared_future::wait_until
  封鎖目前的執行緒，直到相關聯的非同步狀態「就緒」為止，或直到指定的時間點過後為止。  
   
 ```

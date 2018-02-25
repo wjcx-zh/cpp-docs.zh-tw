@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d6db2c999692a2715301b68fd1a4bd7f719fde83
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 38f822496bd5b257a782e9e04047e164ac9681d8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通過 OLE DB 一致性測試
 若要讓提供者更為一致，Data Access SDK 會提供一組 OLE DB 一致性測試。 測試檢查您的提供者的所有層面，並提供您合理做為您提供者函式預期的保證。 您可以在 Microsoft Data Access SDK 中找到 OLE DB 一致性測試。 本節著重於您應該將一致性測試執行。 如需執行 OLE DB 一致性測試的詳細資訊，請參閱 SDK。  

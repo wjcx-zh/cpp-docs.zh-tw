@@ -1,29 +1,33 @@
 ---
-title: "#<a name=\"include-directive-cc--microsoft-docs\"></a>include 指示詞 （C/c + +） |Microsoft 文件"
+title: "#include 指示詞 （C/c + +） |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#include'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#include'
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor, directives
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f724d566703300d0f929df680b659b7adbfa9577
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cee268b68d9be823c6919780f8f4f25e78e1eb74
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="include-directive-cc"></a>#include 指示詞 (C/C++)
 指示前置處理器，將指定之檔案的內容當做已在指示詞出現之處出現於原始程式中一般來處理。  

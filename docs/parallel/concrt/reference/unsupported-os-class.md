@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unsupported_os
 - CONCRT/concurrency::unsupported_os
 - CONCRT/concurrency::unsupported_os::unsupported_os
-dev_langs: C++
-helpviewer_keywords: unsupported_os class
+dev_langs:
+- C++
+helpviewer_keywords:
+- unsupported_os class
 ms.assetid: 6fa57636-341b-4b51-84cc-261d283ff736
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1f98d0c85a3149e4d865ec8bdfb82bfd032eb9c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a147bc429268c7342667e770de083dc6660fa955
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unsupportedos-class"></a>unsupported_os 類別
 這個類別會描述使用不支援的作業系統時擲回的例外狀況。  
@@ -52,7 +56,7 @@ class unsupported_os : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="ctor"></a>unsupported_os 
+##  <a name="ctor"></a> unsupported_os 
 
  建構 `unsupported_os` 物件。  
   

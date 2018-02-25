@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IThreadProxy
 - CONCRTRM/concurrency::IThreadProxy
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
-dev_langs: C++
-helpviewer_keywords: IThreadProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc0808d7b6eae3db64695d2d3e0b40d092361a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 結構
 執行緒的抽象概念。 視您所建立之排程器的 `SchedulerType` 原則機碼而定，資源管理員會授與您支援一般 Win32 執行緒或可使用者模式排程 (UMS) 執行緒的執行緒 Proxy。 安裝 Windows 7 (含以上) 版本的 64 位元作業系統支援 UMS 執行緒。  
@@ -43,10 +47,10 @@ struct IThreadProxy;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Ithreadproxy:: Getid](#getid)|執行緒 proxy 傳回的唯一識別碼。|  
-|[Ithreadproxy:: Switchout](#switchout)|解除基礎虛擬處理器根內容的關聯。|  
-|[Ithreadproxy:: Switchto](#switchto)|從目前正在執行的內容，執行將合作內容切換至另一部。|  
-|[Ithreadproxy:: Yieldtosystem](#yieldtosystem)|造成呼叫執行緒執行目前處理器上已就緒可執行的其他執行緒。 作業系統會選擇要執行的下一個執行緒。|  
+|[IThreadProxy::GetId](#getid)|執行緒 proxy 傳回的唯一識別碼。|  
+|[IThreadProxy::SwitchOut](#switchout)|解除基礎虛擬處理器根內容的關聯。|  
+|[IThreadProxy::SwitchTo](#switchto)|從目前正在執行的內容，執行將合作內容切換至另一部。|  
+|[IThreadProxy::YieldToSystem](#yieldtosystem)|造成呼叫執行緒執行目前處理器上已就緒可執行的其他執行緒。 作業系統會選擇要執行的下一個執行緒。|  
   
 ## <a name="remarks"></a>備註  
  執行緒 proxy 會結合介面所代表的執行內容`IExecutionContext`分派工作的方法。  
@@ -59,7 +63,7 @@ struct IThreadProxy;
   
  **命名空間：** concurrency  
   
-##  <a name="getid"></a>Ithreadproxy:: Getid 方法  
+##  <a name="getid"></a>  Ithreadproxy:: Getid 方法  
  執行緒 proxy 傳回的唯一識別碼。  
   
 ```
@@ -69,7 +73,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>傳回值  
  的唯一整數識別碼。  
   
-##  <a name="switchout"></a>Ithreadproxy:: Switchout 方法  
+##  <a name="switchout"></a>  Ithreadproxy:: Switchout 方法  
  解除基礎虛擬處理器根內容的關聯。  
   
 ```
@@ -89,11 +93,11 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  已重新初始化的虛擬處理器根與資源管理員授與排程器的全新虛擬處理器根並無不同。 您可以在執行內容中使用 `IVirtualProcessorRoot::Activate` 啟用它，這樣就可以用它來執行。  
   
- `SwitchOut`必須在呼叫`IThreadProxy`介面，表示目前執行中執行緒或結果會是未定義。  
+ `SwitchOut` 必須在呼叫`IThreadProxy`介面，表示目前執行中執行緒或結果會是未定義。  
   
  在隨附於 Visual Studio 2010 的程式庫和標頭中，這個方法不會使用參數，也不會重新初始化虛擬處理器根。 若要保留舊有行為，可以提供預設參數值 `Blocking`。  
   
-##  <a name="switchto"></a>Ithreadproxy:: Switchto 方法  
+##  <a name="switchto"></a>  Ithreadproxy:: Switchto 方法  
  從目前正在執行的內容，執行將合作內容切換至另一部。  
   
 ```
@@ -118,9 +122,9 @@ virtual void SwitchTo(
   
  使用值`Nesting`當您想要暫時卸離執行所在的虛擬處理器根這個執行緒 proxy，而排程器其分派工作。 呼叫`SwitchTo`搭配參數`switchState`設`Nesting`會導致執行內容`pContext`開始執行和目前的執行緒 proxy 也會繼續執行，而不需要虛擬處理器根。 執行緒 proxy 會被視為已離開排程器，直到它會呼叫[ithreadproxy:: Switchout](#switchout)方法在稍後的時間。 `IThreadProxy::SwitchOut`方法無法在虛擬處理器根可用於重新排定其前封鎖執行緒 proxy。  
   
- `SwitchTo`必須在呼叫`IThreadProxy`介面，表示目前執行中執行緒或結果會是未定義。 此函式會擲回`invalid_argument`如果參數`pContext`設`NULL`。  
+ `SwitchTo` 必須在呼叫`IThreadProxy`介面，表示目前執行中執行緒或結果會是未定義。 此函式會擲回`invalid_argument`如果參數`pContext`設`NULL`。  
   
-##  <a name="yieldtosystem"></a>Ithreadproxy:: Yieldtosystem 方法  
+##  <a name="yieldtosystem"></a>  Ithreadproxy:: Yieldtosystem 方法  
  造成呼叫執行緒執行目前處理器上已就緒可執行的其他執行緒。 作業系統會選擇要執行的下一個執行緒。  
   
 ```
@@ -130,7 +134,7 @@ virtual void YieldToSystem() = 0;
 ### <a name="remarks"></a>備註  
  呼叫由一般的 Windows 執行緒，支援的執行緒 proxy 時`YieldToSystem`完全相同 Windows 函式的行為`SwitchToThread`。 不過，當從使用者模式可排程 (UMS) 執行緒呼叫`SwitchToThread`函式委派挑選的下一個執行緒來執行使用者模式排程器，不是作業系統的工作。 若要達成的系統中切換至不同的就緒執行緒所需的效果，請使用`YieldToSystem`。  
   
- `YieldToSystem`必須在呼叫`IThreadProxy`介面，表示目前執行中執行緒或結果會是未定義。  
+ `YieldToSystem` 必須在呼叫`IThreadProxy`介面，表示目前執行中執行緒或結果會是未定義。  
   
 ## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - static_partitioner
 - PPL/concurrency::static_partitioner
 - PPL/concurrency::static_partitioner::static_partitioner
-dev_langs: C++
-helpviewer_keywords: static_partitioner class
+dev_langs:
+- C++
+helpviewer_keywords:
+- static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2c7f41a2d2a592bff5e1f2217b39b6047d5093ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 20dad961b694042c721f388c9a40e0bf99b9b77d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="staticpartitioner-class"></a>static_partitioner 類別
 `static_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將範圍分成許多區塊，其數量與基礎排程器可用的背景工作數量相等。  
@@ -41,7 +45,7 @@ class static_partitioner;
 |名稱|描述|  
 |----------|-----------------|  
 |[static_partitioner](#ctor)|建構 `static_partitioner` 物件。|  
-|[~ static_partitioner 解構函式](#dtor)|終結 `static_partitioner` 物件。|  
+|[~static_partitioner Destructor](#dtor)|終結 `static_partitioner` 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `static_partitioner`  
@@ -51,7 +55,7 @@ class static_partitioner;
   
  **命名空間：** concurrency  
   
-##  <a name="dtor"></a>~ static_partitioner 
+##  <a name="dtor"></a> ~static_partitioner 
 
  終結 `static_partitioner` 物件。  
   
@@ -59,7 +63,7 @@ class static_partitioner;
 ~static_partitioner();
 ```  
   
-##  <a name="ctor"></a>static_partitioner 
+##  <a name="ctor"></a> static_partitioner 
 
  建構 `static_partitioner` 物件。  
   

@@ -5,17 +5,19 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: vector/std::swap
+ms.topic: reference
+f1_keywords:
+- vector/std::swap
 ms.assetid: 6cdcf043-eef6-4330-83f0-4596fb9f968a
-helpviewer_keywords: std::swap [vector]
-caps.latest.revision: "10"
+helpviewer_keywords:
+- std::swap [vector]
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e031d39204dd019281b52fd8d3a0127ecbc0424e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: e752c3d39787466928b11ff8d644cf9a6558b656
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvectorgt-functions"></a>&lt;vector&gt; 函式
 
@@ -41,6 +43,6 @@ void swap(vector<Type, Allocator>& left, vector<Type, Allocator>& right);
 ### <a name="example"></a>範例  
   如需使用 `swap` 的樣板版本的範例，請參閱成員函式 [vector::swap](../standard-library/vector-class.md) 的程式碼範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<vector>](../standard-library/vector.md)
 

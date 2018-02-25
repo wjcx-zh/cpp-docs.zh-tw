@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::packaged_task
 - future/std::packaged_task::packaged_task
@@ -17,9 +18,10 @@ f1_keywords:
 - future/std::packaged_task::valid
 - future/std::packaged_task::operator()
 - future/std::packaged_task::operator bool
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.workload: cplusplus
-ms.openlocfilehash: e060a7d9a73cd275810541fc57ad34a2c62c4097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ce3db6f4685d8448efd88bf2203d541cc864abd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="packagedtask-class"></a>packaged_task 類別
 描述「非同步提供者」，它是呼叫簽章為 `Ty(ArgTypes...)` 的呼叫包裝函式。 除了可能的結果外，它的「相關聯非同步狀態」會保存其可呼叫物件的複本。  
@@ -65,7 +68,7 @@ class packaged_task;
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|呼叫儲存在相關聯非同步狀態中的可呼叫物件，並以不可部分完成的方式儲存傳回的值。|  
 |[reset](#reset)|取代相關聯的非同步狀態。|  
 |[swap](#swap)|交換指定之物件的相關聯非同步狀態。|  
-|[有效](#valid)|指定物件是否具有相關的非同步狀態。|  
+|[valid](#valid)|指定物件是否具有相關的非同步狀態。|  
   
 ### <a name="public-operators"></a>公用運算子  
   

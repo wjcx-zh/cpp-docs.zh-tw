@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - extent
 - AMP/extent
@@ -15,19 +16,22 @@ f1_keywords:
 - AMP/Concurrency::extent::size
 - AMP/Concurrency::extent::tile
 - AMP/Concurrency::extent::rank Constant
-dev_langs: C++
-helpviewer_keywords: extent structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f93bcd69a6f0b05f9566fe3a2ffb6025729b63de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="extent-class-c-amp"></a>extent 類別 (C++ AMP)
 代表向量*N*整數值，指定的界限*N*-維度具有 0 的原點的空間。 在向量中的值為從最大顯著性到最小顯著性排序。  
@@ -60,9 +64,9 @@ class extent;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[包含](#contains)|確認指定`extent`物件具有指定的陣序規範。|  
+|[contains](#contains)|確認指定`extent`物件具有指定的陣序規範。|  
 |[size](#size)|傳回線性的大小總計 （以元素為單位） 的範圍。|  
-|[圖格](#tile)|會產生`tiled_extent`指定維度與所指定的圖格範圍的物件。|  
+|[tile](#tile)|會產生`tiled_extent`指定維度與所指定的圖格範圍的物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -73,7 +77,7 @@ class extent;
 |[operator%=](#operator_mod_eq)|計算每個項目中的模數 （餘數）`extent`物件時數字除以該元素。|  
 |[operator*=](#operator_star_eq)|乘以每個項目`extent`物件數目。|  
 |[operator/=](#operator_min_eq)|將分割的每個項目`extent`物件數目。|  
-|[extent:: operator\[\]](#operator_at)|傳回指定索引處的項目。|  
+|[extent::operator\[\]](#operator_at)|傳回指定索引處的項目。|  
 |[operator+](#operator_add)|傳回新`extent`由加入對應的物件`index`和`extent`項目。|  
 |[operator++](#operator_add_add)|遞增的每個項目`extent`物件。|  
 |[operator+=](#operator_add_eq)|將指定的數目的每個項目加入`extent`物件。|  
@@ -91,7 +95,7 @@ class extent;
  `extent`  
 
 
-## <a name="contains"></a>包含 
+## <a name="contains"></a> 包含 
 
 指出是否指定[索引](index-class.md)'範圍' 物件中包含值。  
   
@@ -106,9 +110,9 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
  `index`来測試值。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果指定`index`值包含於`extent`物件; 否則`false`。  
+ `true` 如果指定`index`值包含於`extent`物件; 否則`false`。  
   
-##  <a name="ctor"></a>範圍 
+##  <a name="ctor"></a> 範圍 
 
 初始化 '範圍' 類別的新執行個體。  
   
@@ -147,7 +151,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  如果陣列用來建構`extent`物件陣列的長度必須符合的陣序`extent`物件。  
   
-##  <a name="operator_mod_eq"></a>operator %= 
+##  <a name="operator_mod_eq"></a> operator%= 
 
 數字除以該元素時，計算每個項目的 '範圍' 中的模數 （餘數）。  
   
@@ -164,7 +168,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>傳回值  
  `extent` 物件。  
   
-##  <a name="operator_star_eq"></a>運算子 * = 
+##  <a name="operator_star_eq"></a> operator*= 
 
 乘上每個項目中指定數目的 '範圍' 物件。  
   
@@ -181,7 +185,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  `extent` 物件。  
   
-## <a name="operator_add"></a>operator + 
+## <a name="operator_add"></a> operator + 
 
 傳回新`extent`物件藉由新增對應建立`index`和`extent`項目。  
   
@@ -198,7 +202,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  新的 `extent` 物件。  
   
-##  <a name="operator_add_add"></a>operator + + 
+##  <a name="operator_add_add"></a> operator + + 
 
 遞增 '範圍' 物件的每個項目。  
   
@@ -212,7 +216,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  前置運算子，如`extent`物件 (`*this`)。 若為後置運算子，新`extent`物件。  
   
-##  <a name="operator_add_eq"></a>運算子 + = 
+##  <a name="operator_add_eq"></a> operator+= 
 
 將指定的數字加入至 '範圍' 物件的每個項目。  
   
@@ -231,7 +235,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  產生 `extent` 物件。  
   
-##  <a name="operator_min"></a>operator- 
+##  <a name="operator_min"></a> operator- 
 
 建立新`extent`物件所指定的每個元素減去`index`從對應的項目，這個物件`extent`物件。  
   
@@ -248,7 +252,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  新的 `extent` 物件。  
   
-##  <a name="operator_min_min"></a>--運算子 
+##  <a name="operator_min_min"></a> --運算子 
 
 遞減 '範圍' 物件中的每個項目。  
   
@@ -262,7 +266,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  前置運算子，如`extent`物件 (`*this`)。 若為後置運算子，新`extent`物件。  
   
-##  <a name="operator_div_eq"></a>operator / = 
+##  <a name="operator_div_eq"></a> operator / = 
 
 指定的數字除以 '範圍' 物件中的每個項目。  
   
@@ -279,7 +283,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  `extent` 物件。  
   
-##  <a name="operator_min_eq"></a>運算子 = 
+##  <a name="operator_min_eq"></a> 運算子 = 
 
 指定從數目減掉 '範圍' 物件的每個項目。  
   
@@ -298,7 +302,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  產生 `extent` 物件。  
   
-##  <a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a> 運算子 = 
 
 另一個 '範圍' 物件的內容複製到這裡。  
   
@@ -315,7 +319,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  此參考`extent`物件。  
   
-##  <a name="operator_at"></a>extent:: operator\[\] 
+##  <a name="operator_at"></a> extent:: operator \[\] 
 傳回指定索引處的項目。  
   
 ### <a name="syntax"></a>語法  
@@ -332,7 +336,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  所指定索引處的項目。  
   
-##  <a name="rank_constant"></a>順位 
+##  <a name="rank_constant"></a> 順位 
 
 儲存 '範圍' 物件的排列次序。  
   
@@ -342,7 +346,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 static const int rank = _Rank;  
 ```  
   
-##  <a name="size"></a>大小 
+##  <a name="size"></a> 大小 
 
 傳回的線性大小總計`extent`物件 （以元素為單位）。  
   
@@ -352,7 +356,7 @@ static const int rank = _Rank;
 unsigned int size() const restrict(amp,cpu);  
 ```  
   
-## <a name="tile"></a>圖格 
+## <a name="tile"></a> 圖格 
 
 產生具有指定的並排顯示維度 tiled_extent 物件。
 
@@ -367,9 +371,9 @@ template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ```  
 ### <a name="parameters"></a>參數
-`_Dim0`並排顯示範圍的最重要的元件。
-`_Dim1`並排顯示範圍的下一步-到-最高有效的元件。
-`_Dim2`並排顯示範圍的最不重要的元件。
+`_Dim0` 並排顯示範圍的最重要的元件。
+`_Dim1` 並排顯示範圍的下一步-到-最高有效的元件。
+`_Dim2` 並排顯示範圍的最不重要的元件。
 
 
   

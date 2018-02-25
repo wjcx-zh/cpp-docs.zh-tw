@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: COLUMN_ENTRY_MAP
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- COLUMN_ENTRY_MAP
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], accessors
 - COLUMN_ENTRY macro
@@ -21,23 +24,23 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="user-records"></a>使用者資料錄
 若要使用靜態存取子 (也就是存取子，衍生自**CAccessor)**，您取用者都必須有使用者記錄。 使用者資料錄是 c + + 類別，包含要處理輸入或輸出的資料元素。 ATL OLE DB 消費者精靈產生使用者記錄您的消費者。 您可以將方法加入至選擇性工作，例如處理命令的使用者記錄中。  
   
- 下列程式碼顯示範例記錄處理命令。 在使用者記錄中，`BEGIN_COLUMN_MAP`表示資料資料列集提供者從傳遞至取用者。 `BEGIN_PARAM_MAP`代表一組命令參數。 這個範例會使用[CCommand](../../data/oledb/ccommand-class.md)類別來處理命令參數。 資料成員中對應項目代表一個連續類別的每個執行個體的記憶體區塊位移。 `COLUMN_ENTRY`巨集對應至`PROVIDER_COLUMN_ENTRY`巨集提供者端。  
+ 下列程式碼顯示範例記錄處理命令。 在使用者記錄中，`BEGIN_COLUMN_MAP`表示資料資料列集提供者從傳遞至取用者。 `BEGIN_PARAM_MAP` 代表一組命令參數。 這個範例會使用[CCommand](../../data/oledb/ccommand-class.md)類別來處理命令參數。 資料成員中對應項目代表一個連續類別的每個執行個體的記憶體區塊位移。 `COLUMN_ENTRY`巨集對應至`PROVIDER_COLUMN_ENTRY`巨集提供者端。  
   
  如需有關**COLUMN_MAP**和**PARAM_MAP**巨集，請參閱[OLE DB 消費者樣板的巨集](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
   

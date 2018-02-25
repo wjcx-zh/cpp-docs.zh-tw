@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - completion_future
 - AMPRT/completion_future
@@ -18,18 +19,20 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="completionfuture-class"></a>completion_future 類別
 表示未來對應 c + + AMP 的非同步作業。  
@@ -54,10 +57,10 @@ class completion_future;
 |名稱|描述|  
 |----------|-----------------|  
 |[get](#get)|等候直到相關聯的非同步作業完成為止。|  
-|[然後](#then)|鏈結的回呼函式物件`completion_future`關聯的非同步作業執行完成時要執行的物件。|  
+|[then](#then)|鏈結的回呼函式物件`completion_future`關聯的非同步作業執行完成時要執行的物件。|  
 |[to_task](#to_task)|傳回`task`對應至相關聯的非同步作業的物件。|  
-|[有效](#valid)|取得布林值，指出物件是否與非同步作業相關聯。|  
-|[等候](#wait)|相關聯的非同步作業完成之前的區塊。|  
+|[valid](#valid)|取得布林值，指出物件是否與非同步作業相關聯。|  
+|[wait](#wait)|相關聯的非同步作業完成之前的區塊。|  
 |[wait_for](#wait_for)|封鎖，直到相關聯的非同步作業完成或所指定的時間`_Rel_time`過了。|  
 |[wait_until](#wait_until)|封鎖，直到相關聯的非同步作業完成或直到目前的時間超過指定的值`_Abs_time`。|  
   
@@ -65,7 +68,7 @@ class completion_future;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[運算子 std::shared_future\<void >](#operator_shared_future)|會隱含地轉換`completion_future`物件`std::shared_future`物件。|  
+|[operator std::shared_future\<void>](#operator_shared_future)|會隱含地轉換`completion_future`物件`std::shared_future`物件。|  
 |[operator=](#operator_eq)|將指定的內容複製`completion_future`成這一個物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -77,7 +80,7 @@ class completion_future;
  **命名空間：** concurrency  
 
 
-## <a name="ctor"></a>completion_future 
+## <a name="ctor"></a> completion_future 
 
 初始化 `completion_future` 類別的新執行個體。  
   
@@ -105,7 +108,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|初始化的新執行個體`completion_future`藉由複製建構函式的類別。|  
 |`completion_future(completion_future&& _Other);`|初始化的新執行個體`completion_future`移動建構函式的類別。|  
   
-## <a name="get"></a>取得 
+## <a name="get"></a> 取得 
 
 等候直到相關聯的非同步作業完成為止。 如果其中一個非同步作業期間發生，就會擲回的預存的例外狀況。  
   
@@ -115,7 +118,7 @@ completion_future(
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a>運算子 std::shared_future<void> 
+## <a name="operator_shared_future"></a> 運算子 std::shared_future<void> 
 
 會隱含地轉換`completion_future`物件`std::shared_future`物件。  
   
@@ -128,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>傳回值  
  `std::shared_future` 物件。  
   
-## <a name="operator_eq"></a>運算子 = 
+## <a name="operator_eq"></a> 運算子 = 
 
 將指定的內容複製`completion_future`成這一個物件。  
   
@@ -153,7 +156,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|將指定的內容複製`completion_future`物件到這裡，使用的深層複本。|  
 |`completion_future& operator=(completion_future&& _Other);`|將指定的內容複製`completion_future`成這一個，使用一個移動指派的物件。|  
   
-## <a name="then"></a>然後 
+## <a name="then"></a> 然後 
 
 鏈結的回呼函式物件`completion_future`關聯的非同步作業執行完成時要執行的物件。  
   
@@ -171,7 +174,7 @@ void then(const _Functor & _Func ) const;
  `_Func`  
  回呼函式物件。  
   
-## <a name="to_task"></a>to_task 
+## <a name="to_task"></a> to_task 
 
 傳回`task`對應至相關聯的非同步作業的物件。  
   
@@ -184,7 +187,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>傳回值  
  A`task`對應至相關聯的非同步作業的物件。  
   
-## <a name="valid"></a>有效 
+## <a name="valid"></a> valid 
 
 取得布林值，該值會指出物件是否與非同步作業相關聯。  
   
@@ -195,9 +198,9 @@ bool valid() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果物件是非同步作業; 相關聯否則， `false`。  
+ `true` 如果物件是非同步作業; 相關聯否則， `false`。  
   
-## <a name="wait"></a>等候 
+## <a name="wait"></a> 等候 
 
 相關聯的非同步作業完成之前的區塊。  
   
@@ -207,7 +210,7 @@ bool valid() const;
 void wait() const;  
 ```  
   
-## <a name="wait_for"></a>wait_for 
+## <a name="wait_for"></a> wait_for 
 
 封鎖，直到相關聯的非同步作業完成或所指定的時間`_Rel_time`過了。  
   
@@ -235,13 +238,13 @@ std::future_status::future_status wait_for(
 ### <a name="return-value"></a>傳回值  
  會傳回：  
   
--   `std::future_status::deferred`如果關聯的非同步作業並未執行。  
+-   `std::future_status::deferred` 如果關聯的非同步作業並未執行。  
   
--   `std::future_status::ready`如果關聯的非同步作業已完成。  
+-   `std::future_status::ready` 如果關聯的非同步作業已完成。  
   
--   `std::future_status::timeout`如果指定的時間期限到期為止。  
+-   `std::future_status::timeout` 如果指定的時間期限到期為止。  
   
-## <a name="wait_until"></a>wait_until 
+## <a name="wait_until"></a> wait_until 
 
 封鎖，直到相關聯的非同步作業完成或直到目前的時間超過指定的值`_Abs_time`。  
   
@@ -269,13 +272,13 @@ std::future_status::future_status wait_until(
 ### <a name="return-value"></a>傳回值  
  會傳回：  
   
-1.  `std::future_status::deferred`如果關聯的非同步作業並未執行。  
+1.  `std::future_status::deferred` 如果關聯的非同步作業並未執行。  
   
-2.  `std::future_status::ready`如果關聯的非同步作業已完成。  
+2.  `std::future_status::ready` 如果關聯的非同步作業已完成。  
   
-3.  `std::future_status::timeout`如果指定的時間期間已過期。  
+3.  `std::future_status::timeout` 如果指定的時間期間已過期。  
   
-## <a name="dtor"></a>~ completion_future 
+## <a name="dtor"></a> ~completion_future 
 
 終結`completion_future`物件。  
   

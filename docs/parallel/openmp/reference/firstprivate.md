@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: firstprivate
-dev_langs: C++
-helpviewer_keywords: firstprivate OpenMP clause
+ms.topic: reference
+f1_keywords:
+- firstprivate
+dev_langs:
+- C++
+helpviewer_keywords:
+- firstprivate OpenMP clause
 ms.assetid: db479766-6d3b-4bbd-b28e-b192d826788c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c7d4a5ba23e343f7858bf3320ed05ebce84f1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0438d98467b7843b6f70e0d075dc3b61375c48ca
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="firstprivate"></a>firstprivate
 指定每個執行緒都應該有自己的變數中，執行個體和具有變數的值，應該先初始化變數，因為它存在於平行建構之前。  
@@ -40,13 +45,13 @@ firstprivate(var)
 ## <a name="remarks"></a>備註  
   
 ## <a name="remarks"></a>備註  
- `firstprivate`適用於下列指示詞：  
+ `firstprivate` 適用於下列指示詞：  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   

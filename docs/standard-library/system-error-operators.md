@@ -5,26 +5,27 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: ed01a5abeb54f5071968555b563849e2cd4ac1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 84cac348fcc2c9577b3a0e1f72ac56a4bbabf90f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 運算子
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&lt;](#op_lt)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  測試運算子左邊的物件是否等於右邊的物件。  
   
 ```
@@ -48,7 +49,7 @@ bool operator==(const error_condition& left,
 ### <a name="remarks"></a>備註  
  此函式會傳回 `left.category() == right.category() && left.value() == right.value()`。  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  測試運算子左邊的物件是否不等於右邊的物件。  
   
 ```
@@ -72,7 +73,7 @@ bool operator!=(const error_condition& left,
 ### <a name="remarks"></a>備註  
  此函式會傳回 `!(left == right)`。  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  測試物件是否小於傳入的物件以進行比較。  
   
 ```
@@ -101,7 +102,7 @@ inline bool operator<(
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`left`|要比較的物件。|  
 |`right`|要比較的物件。|  
@@ -112,7 +113,7 @@ inline bool operator<(
 ### <a name="remarks"></a>備註  
  這個功能測試錯誤順序。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<system_error>](../standard-library/system-error.md)
 
 

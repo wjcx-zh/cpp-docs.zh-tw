@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9185f1eb3640a4baeb8f7cc1d7b20169c980a8e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8788de8ad28dc3c746155f59dee3ba5bb763bcaa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overriding-provider-service-defaults"></a>覆寫提供者服務預設值
 提供者的登錄值**OLEDB_SERVICES**傳回的預設值為[DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx)資料來源物件上的初始化屬性。  
@@ -32,11 +34,11 @@ ms.lasthandoff: 12/21/2017
   
 |預設的服務啟用|DBPROP_INIT_OLEDBSERVICES 屬性值|連接字串中的值|  
 |------------------------------|------------------------------------------------|--------------------------------|  
-|所有服務 （預設值）|**DBPROPVAL_OS_ENABLEALL**|「 OLE DB 服務 =-1;"|  
-|除了共用及自動編列|**DBPROPVAL_OS_ENABLEALL （& S)**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING （& S)**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT**|「 OLE DB 服務 =-4。 」|  
-|除了用戶端資料指標|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|「 OLE DB 服務 =-5;"|  
-|以外所有共用、 自動編列和用戶端資料指標|**DBPROPVAL_OS_ENABLEALL （& S)**<br /><br /> **~ DBPROPVAL_OS_TXNENLISTMENT （& S)**<br /><br /> **~ DBPROPVAL_OS_CLIENTCURSOR**|「 OLE DB 服務 =-7;"|  
-|沒有任何服務|~**DBPROPVAL_OS_ENABLEALL**|「 OLE DB 服務 0;"|  
+|所有服務 （預設值）|**DBPROPVAL_OS_ENABLEALL**|"OLE DB Services = -1;"|  
+|除了共用及自動編列|**DBPROPVAL_OS_ENABLEALL （& S)**<br /><br /> **~DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT**|"OLE DB Services = -4;"|  
+|除了用戶端資料指標|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB Services = -5;"|  
+|以外所有共用、 自動編列和用戶端資料指標|**DBPROPVAL_OS_ENABLEALL （& S)**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB Services = -7;"|  
+|沒有任何服務|~**DBPROPVAL_OS_ENABLEALL**|"OLE DB Services = 0;"|  
   
  如果提供者的登錄項目不存在，元件管理員將不會彙總提供者的物件，並沒有任何服務將會叫用，即使明確要求的使用者。  
   

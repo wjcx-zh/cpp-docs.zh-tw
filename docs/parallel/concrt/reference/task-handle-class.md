@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
 - PPL/concurrency::task_handle::task_handle
-dev_langs: C++
-helpviewer_keywords: task_handle class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 38da8f97dfd689037f52f5e7c67bb51f4577a05a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskhandle-class"></a>task_handle 類別
 `task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。  
@@ -54,14 +58,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator （)](#task_handle__operator_call)|執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。|  
+|[operator()](#task_handle__operator_call)|執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。|  
   
 ## <a name="remarks"></a>備註  
- `task_handle`物件可以用於搭配`structured_task_group`或多個一般`task_group`物件，將工作分解成平行工作。 如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ `task_handle` 物件可以用於搭配`structured_task_group`或多個一般`task_group`物件，將工作分解成平行工作。 如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
  請注意，建立者`task_handle`物件都負責維護的存留期建立`task_handle`物件，直到它已不再需要之並行執行階段。 通常，這表示`task_handle`物件必須不解構直到`wait`或`run_and_wait`方法`task_group`或`structured_task_group`的佇列已呼叫。  
   
- `task_handle`物件通常用於搭配 c + + lambda。 因為您不知道的 lambda，則為 true 的型別[make_task](concurrency-namespace-functions.md#make_task)函式通常用來建立`task_handle`物件。  
+ `task_handle` 物件通常用於搭配 c + + lambda。 因為您不知道的 lambda，則為 true 的型別[make_task](concurrency-namespace-functions.md#make_task)函式通常用來建立`task_handle`物件。  
   
  執行階段建立一份工作函式傳遞給`task_handle`物件。 因此，任何狀態變更發生在函數中的物件將傳遞至`task_handle`物件不會出現在您的函式物件的複本。  
   
@@ -73,7 +77,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
   
  **命名空間：** concurrency  
   
-##  <a name="task_handle__operator_call"></a>operator （) 
+##  <a name="task_handle__operator_call"></a> operator （) 
 
  執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。  
   
@@ -83,7 +87,7 @@ void operator()() const;
  
 ```  
   
-##  <a name="task_handle__ctor"></a>task_handle 
+##  <a name="task_handle__ctor"></a> task_handle 
 
  建構新`task_handle`物件。 工作的工作會執行叫用指定做為參數的建構函式的函式。  
   
@@ -98,7 +102,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>備註  
  執行階段建立一份您傳遞給建構函式的工作函式。 因此，任何狀態變更發生在函數中的物件將傳遞至`task_handle`物件不會出現在您的函式物件的複本。  
   
-##  <a name="dtor"></a>~ task_handle 
+##  <a name="dtor"></a> ~task_handle 
 
  終結`task_handle`物件。  
   

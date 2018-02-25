@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>#import 指示詞 (C++)
 **C + + 特定的**  
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>備註  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>檔案名稱的搜尋順序  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> 檔案名稱的搜尋順序  
  *檔名*可以選擇性加上目錄規格。 檔案名稱必須指定現有的檔案名稱。 兩個語法形式之間的差異在於未完整指定路徑時，前置處理器搜尋類型程式庫檔案的順序。  
   
 |語法形式|動作|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |有引號的形式|指示前置處理器先在包含 `#import` 陳述式檔案的目錄中，然後在包含 (`#include`) 該檔案之任何檔案目錄中，尋找目錄中的類型程式庫檔案。 然後，前置處理器會沿著如下所示的路徑搜尋。|  
 |角括弧形式|指示前置處理器依照下列路徑搜尋類型程式庫檔案：<br /><br /> 1.**路徑**環境變數路徑清單<br />2.**LIB**環境變數路徑清單<br />3./I 所指定的路徑 (其他 include 目錄) 編譯器選項，但是編譯器搜尋類型程式庫已從另一個類型程式庫，與參考它[no_registry](../preprocessor/no-registry.md)屬性。|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>指定當地語系化 ID 和版本號碼  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> 指定當地語系化 ID 和版本號碼  
  當您指定 ProgID 時，也可以指定 ProgID 的當地語系化 ID 和版本號碼。 例如:   
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果沒有指定版本號碼，就會使用最新版本。  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>匯入所建立的標頭檔  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> 匯入所建立的標頭檔  
  `#import` 會建立兩個標頭檔，以重新建構 C++ 原始程式碼的類型程式庫內容。 主要標頭檔類似於由 Microsoft 介面定義語言 (MIDL) 編譯器產生的檔案，但是另有編譯器產生的其他程式碼和資料。 [主要標頭檔](#_predir_the_primary_type_library_header_file)為類型程式庫中，具有相同的基底名稱加上。TLH 延伸模組。 次要標頭檔具有和類型程式庫相同的基底名稱，再加上 .TLI 副檔名。 它包含編譯器產生的成員函式的實作，而且已在主要標頭檔中包含 (`#include`)。  
   
  如果匯入使用 byref 參數的 dispinterface 屬性，#import 不會產生 __declspec ([屬性](../cpp/property-cpp.md)) 函式的陳述式。  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  `#import` 指示詞也會參與最少的重建，而且可以放置在先行編譯標頭檔中。 請參閱[建立先行編譯標頭檔](../build/reference/creating-precompiled-header-files.md)如需詳細資訊。  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>主要類型程式庫標頭檔  
+###  <a name="_predir_the_primary_type_library_header_file"></a> 主要類型程式庫標頭檔  
  主要類型程式庫標頭檔包含七個區段：  
   
 -   標題重複使用區段：包含註解、COMDEF.H 的 `#include` 陳述式 (會定義標題中使用的一些標準巨集)，以及其他設定資訊。  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  如需詳細資訊，請參閱知識庫文件＜#import 包裝函式方法可能造成存取違規＞(Q242527) 或＜當您使用 XML 與 #import 時發生編譯器錯誤＞(Q269194)。 您可以在 MSDN Library 媒體上或在找到知識庫文章[Microsoft 支援服務](https://support.microsoft.com/)。  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>#import 屬性  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 屬性  
  `#import` 可以選擇性地包含一個或多個屬性。 這些屬性會指示編譯器修改類型程式庫標頭的內容。 反斜線 (**\\**) 符號可用來在單一包含其他行`#import`陳述式。 例如:   
   
 ```  

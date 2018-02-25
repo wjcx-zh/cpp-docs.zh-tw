@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
 - CONCRT/concurrency::Concrt_TraceFlags
@@ -16,18 +16,20 @@ f1_keywords:
 - CONCRT/concurrency::WinRTInitializationType
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5092c61860b4d7308ef6d1762363ee905b56b10b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-enums"></a>concurrency 命名空間列舉
 ||||  
@@ -38,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
 |[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="agent_status"></a>agent_status 列舉  
+##  <a name="agent_status"></a>  agent_status Enumeration  
  `agent` 的有效狀態。  
   
 ```
@@ -60,7 +62,7 @@ enum agent_status;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h
 
-##  <a name="agents_eventtype"></a>Agents_EventType 列舉  
+##  <a name="agents_eventtype"></a>  Agents_EventType Enumeration  
  可以使用代理程式程式庫所提供之追蹤功能追蹤的事件類型。  
   
 ```
@@ -83,7 +85,7 @@ enum Agents_EventType;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h
 
-##  <a name="concrt_eventtype"></a>ConcRT_EventType 列舉  
+##  <a name="concrt_eventtype"></a>  ConcRT_EventType Enumeration  
  可以使用並行執行階段所提供的追蹤功能追蹤的事件類型。  
   
 ```
@@ -106,7 +108,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h**命名空間：**並行
 
-##  <a name="concrt_traceflags"></a>Concrt_TraceFlags 列舉  
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
  事件類型的追蹤旗標。  
   
 ```
@@ -127,7 +129,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h
 
-##  <a name="criticalregiontype"></a>CriticalRegionType 列舉  
+##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
  內含內容之關鍵區域的類型。  
   
 ```
@@ -144,7 +146,7 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>需求  
  **標頭：** concrtrm.h 
 
-##  <a name="dynamicprogressfeedbacktype"></a>DynamicProgressFeedbackType 列舉  
+##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
  `DynamicProgressFeedback` 原則用來描述要根據從排程器收集到的統計資訊重新平衡排程器的資源，或者只要根據透過 `IVirtualProcessorRoot` 介面上的 `Activate` 和 `Deactivate` 方法呼叫進出閒置狀態的虛擬處理器。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -156,7 +158,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|排程器不會收集進度資訊。 重新平衡是根據完全以基礎硬體執行緒的訂用帳戶層級。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)。<br /><br /> 這個值被保留供執行階段。|  
 |`ProgressFeedbackEnabled`|排程器收集進度資訊，並將它傳遞給資源管理員。 資源管理員會利用此重新平衡資源代表除了訂用帳戶層級基礎的硬體執行緒的排程器的統計資訊。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)。|  
-##  <a name="join_type"></a>join_type 列舉  
+##  <a name="join_type"></a>  join_type 列舉  
  `join` 傳訊區塊的類型。  
   
 ```
@@ -172,7 +174,7 @@ enum join_type;
 ### <a name="requirements"></a>需求  
  **標頭：** agents.h  
 
-##  <a name="message_status"></a>message_status 列舉  
+##  <a name="message_status"></a>  message_status Enumeration  
  `message` 物件對區塊提供項目的有效回應。  
   
 ```
@@ -190,7 +192,7 @@ enum message_status;
 ### <a name="requirements"></a>需求  
  **標頭：** agents.h  
 
-##  <a name="policyelementkey"></a>PolicyElementKey 列舉  
+##  <a name="policyelementkey"></a>  PolicyElementKey Enumeration  
  描述排程器行為方面的原則機碼。 每個原則項目由一個機碼值組描述。 排程器上排程器原則和其影響的相關資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
 ```
@@ -200,22 +202,22 @@ enum PolicyElementKey;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`ContextPriority`|作業系統執行緒排程器中的每個內容的優先順序。 如果此機碼設定為值`INHERIT_THREAD_PRIORITY`排程器中的內容會繼承建立排程器執行緒的優先權。<br /><br /> 有效值： 任何有效的值，適用於 Windows`SetThreadPriority`函式和特殊值`INHERIT_THREAD_PRIORITY`<br /><br /> 預設值：`THREAD_PRIORITY_NORMAL`|  
+|`ContextPriority`|作業系統執行緒排程器中的每個內容的優先順序。 如果此機碼設定為值`INHERIT_THREAD_PRIORITY`排程器中的內容會繼承建立排程器執行緒的優先權。<br /><br /> 有效值： 任何有效的值，適用於 Windows`SetThreadPriority`函式和特殊值 `INHERIT_THREAD_PRIORITY`<br /><br /> 預設值： `THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|每個內容，以 kb 為單位排程器中保留的堆疊大小。<br /><br /> 有效值： 正整數<br /><br /> 預設值： `0`，表示可用於處理序的堆疊大小的預設值。|  
-|`DynamicProgressFeedback`|決定是否將會根據從排程器蒐集，或只根據訂用帳戶層級的基礎硬體執行緒的統計資訊重新平衡排程器的資源。 如需詳細資訊，請參閱[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)。<br /><br /> 有效值： 隸屬`DynamicProgressFeedbackType`列舉型別，在`ProgressFeedbackEnabled`或`ProgressFeedbackDisabled`<br /><br /> 預設值：`ProgressFeedbackEnabled`|  
-|`LocalContextCacheSize`|當`SchedulingProtocol`原則機碼設定為值`EnhanceScheduleGroupLocality`，這會指定可執行的內容快取中每個虛擬處理器的本機佇列中允許的最大數目。 這類內容通常會以先進先出 (LIFO) 順序，使其變成可執行的虛擬處理器上執行。 請注意，此原則機碼的沒有意義時`SchedulingProtocol`機碼設定為值`EnhanceForwardProgress`。<br /><br /> 有效值： 是非負值整數<br /><br /> 預設值：`8`|  
-|`MaxConcurrency`|最大的並行層級所需排程器。 資源管理員會試著一開始配置這麼多虛擬處理器。 特殊值[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)表示所需的並行層級是相同的電腦上的硬體執行緒數目。 如果指定的值`MinConcurrency`大於 1 的電腦上的硬體執行緒數目和`MaxConcurrency`指定為`MaxExecutionResources`，值`MaxConcurrency`自乘至符合的設定為何`MinConcurrency`。<br /><br /> 有效的值： 整數和特殊值`MaxExecutionResources`<br /><br /> 預設值：`MaxExecutionResources`|  
+|`DynamicProgressFeedback`|決定是否將會根據從排程器蒐集，或只根據訂用帳戶層級的基礎硬體執行緒的統計資訊重新平衡排程器的資源。 如需詳細資訊，請參閱[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)。<br /><br /> 有效值： 隸屬`DynamicProgressFeedbackType`列舉型別，在`ProgressFeedbackEnabled`或 `ProgressFeedbackDisabled`<br /><br /> 預設值： `ProgressFeedbackEnabled`|  
+|`LocalContextCacheSize`|當`SchedulingProtocol`原則機碼設定為值`EnhanceScheduleGroupLocality`，這會指定可執行的內容快取中每個虛擬處理器的本機佇列中允許的最大數目。 這類內容通常會以先進先出 (LIFO) 順序，使其變成可執行的虛擬處理器上執行。 請注意，此原則機碼的沒有意義時`SchedulingProtocol`機碼設定為值`EnhanceForwardProgress`。<br /><br /> 有效值： 是非負值整數<br /><br /> 預設值： `8`|  
+|`MaxConcurrency`|最大的並行層級所需排程器。 資源管理員會試著一開始配置這麼多虛擬處理器。 特殊值[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)表示所需的並行層級是相同的電腦上的硬體執行緒數目。 如果指定的值`MinConcurrency`大於 1 的電腦上的硬體執行緒數目和`MaxConcurrency`指定為`MaxExecutionResources`，值`MaxConcurrency`自乘至符合的設定為何`MinConcurrency`。<br /><br /> 有效的值： 整數和特殊值 `MaxExecutionResources`<br /><br /> 預設值： `MaxExecutionResources`|  
 |`MaxPolicyElementKey`|最大的原則項目索引鍵。 不是有效的項目索引鍵。|  
-|`MinConcurrency`|必須由資源管理員的 排程器提供最小並行層級。 指派給排程器的虛擬處理器數目將永遠不會低於最小值。 特殊值[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)表示的最小並行層級是相同的電腦上的硬體執行緒數目。 如果指定的值`MaxConcurrency`小於電腦上的硬體執行緒數目和`MinConcurrency`指定為`MaxExecutionResources`，值`MinConcurrency`降低到符合的設定為何`MaxConcurrency`。<br /><br /> 有效值： 非負整數和特殊值`MaxExecutionResources`。 請注意，對於用於建構並行執行階段排程器的排程器原則，`0` 值無效。<br /><br /> 預設值：`1`|  
+|`MinConcurrency`|必須由資源管理員的 排程器提供最小並行層級。 指派給排程器的虛擬處理器數目將永遠不會低於最小值。 特殊值[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)表示的最小並行層級是相同的電腦上的硬體執行緒數目。 如果指定的值`MaxConcurrency`小於電腦上的硬體執行緒數目和`MinConcurrency`指定為`MaxExecutionResources`，值`MinConcurrency`降低到符合的設定為何`MaxConcurrency`。<br /><br /> 有效值： 非負整數和特殊值`MaxExecutionResources`。 請注意，對於用於建構並行執行階段排程器的排程器原則，`0` 值無效。<br /><br /> 預設值： `1`|  
 |`SchedulerKind`|排程器會使用之基礎執行內容的執行緒類型。 如需詳細資訊，請參閱[SchedulerType](#schedulertype)。<br /><br /> 有效值：`SchedulerType` 列舉的成員，例如 `ThreadScheduler`。<br /><br /> 預設值： `ThreadScheduler`。 這會轉譯為在所有作業系統上的 Win32 執行緒。|  
-|`SchedulingProtocol`|描述排程演算法會使用排程器。 如需詳細資訊，請參閱[SchedulingProtocolType](#schedulingprotocoltype)。<br /><br /> 有效值： 隸屬`SchedulingProtocolType`列舉型別，在`EnhanceScheduleGroupLocality`或`EnhanceForwardProgress`<br /><br /> 預設值：`EnhanceScheduleGroupLocality`|  
-|`TargetOversubscriptionFactor`|暫時的虛擬處理器，每個硬體執行緒數目。 如有必要，資源管理員可以增加目標過度訂閱因數，以滿足電腦上硬體執行緒的 `MaxConcurrency`。<br /><br /> 有效值： 正整數<br /><br /> 預設值：`1`|  
+|`SchedulingProtocol`|描述排程演算法會使用排程器。 如需詳細資訊，請參閱[SchedulingProtocolType](#schedulingprotocoltype)。<br /><br /> 有效值： 隸屬`SchedulingProtocolType`列舉型別，在`EnhanceScheduleGroupLocality`或 `EnhanceForwardProgress`<br /><br /> 預設值： `EnhanceScheduleGroupLocality`|  
+|`TargetOversubscriptionFactor`|暫時的虛擬處理器，每個硬體執行緒數目。 如有必要，資源管理員可以增加目標過度訂閱因數，以滿足電腦上硬體執行緒的 `MaxConcurrency`。<br /><br /> 有效值： 正整數<br /><br /> 預設值： `1`|  
 |`WinRTInitialization`||  
   
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h  
 
-##  <a name="schedulertype"></a>SchedulerType 列舉  
+##  <a name="schedulertype"></a>  SchedulerType Enumeration  
  `SchedulerKind` 原則用來描述排程器應用於基礎執行內容的執行緒類型。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -232,7 +234,7 @@ enum SchedulerType;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h  
   
-##  <a name="schedulingprotocoltype"></a>SchedulingProtocolType 列舉  
+##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType Enumeration  
  `SchedulingProtocol` 原則用於描述排程器將使用的排程演算法。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -248,7 +250,7 @@ enum SchedulingProtocolType;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h  
  
-##  <a name="switchingproxystate"></a>SwitchingProxyState 列舉  
+##  <a name="switchingproxystate"></a>  SwitchingProxyState 列舉  
  用來表示執行緒 Proxy 所處的狀態 (當它正在執行將合作內容切換到不同的執行緒 Proxy 時)。  
   
 ```
@@ -267,7 +269,7 @@ enum SwitchingProxyState;
   
  如需有關如何使用這種類型的詳細資訊，請參閱[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)。  
   
-##  <a name="task_group_status"></a>task_group_status 列舉  
+##  <a name="task_group_status"></a>  task_group_status Enumeration  
  描述 `task_group` 或 `structured_task_group` 物件的執行狀態。 等待預定工作群組完成工作的許多方法，會傳回這個類型的值。  
   
 ```
@@ -284,7 +286,7 @@ enum task_group_status;
 ### <a name="requirements"></a>需求  
  **標頭：** pplinterface.h  
 
-##  <a name="winrtinitializationtype"></a>WinRTInitializationType 列舉  
+##  <a name="winrtinitializationtype"></a>  WinRTInitializationType Enumeration  
  由 `WinRTInitialization` 原則用來描述 Windows 執行階段是否會在執行 Windows 8 (含) 以後版本作業系統之應用程式的排程器執行緒上初始化，以及如何進行初始化。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```

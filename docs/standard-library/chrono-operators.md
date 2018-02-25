@@ -5,16 +5,17 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: chrono/std::operator modulo
+ms.topic: reference
+f1_keywords:
+- chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-caps.latest.revision: "8"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: bcd1813ec127b7b5243d61e015bb8bec444cf9cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 27e47127369c78c331cc052d934f4d62d6d00707
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 運算子
 ||||  
@@ -68,7 +69,7 @@ constexpr typename common_type<Duration1, Duration2>::type
   
  第三個函式傳回 `duration` 物件，代表 `Left` 和 `Right` 之間的時間間隔。  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件的不等比較運算子。  
   
 ```  
@@ -208,7 +209,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
   
  第二個和第三個函式傳回的 `time_point` 物件，代表因時間間隔 `Dur` 形成與時間點 `Time` 的偏移。  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  判斷某個 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件是否小於另一個 `duration` 或 `time_point` 物件。  
   
 ```  
@@ -236,7 +237,7 @@ constexpr bool operator<(
   
  第二個函式會傳回 `true`，如果 `Left` 在 `Right` 之前。 否則，此函式會傳回 `false`。  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  判斷某個 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件是否小於或等於另一個 `duration` 或 `time_point` 物件。  
   
 ```  
@@ -261,7 +262,7 @@ constexpr bool operator<=(
 ### <a name="return-value"></a>傳回值  
  每個函式都會傳回 `!(Right < Left)`。  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  判斷兩個 `duration` 物件是否代表具有相同長度的時間間隔，或兩個 `time_point` 物件是否代表相同的時間點。  
   
 ```  
@@ -288,7 +289,7 @@ constexpr bool operator==(
   
  第二個函式會傳回 `true`，如果 `Left` 和 `Right` 代表相同的時間點。 否則，此函式會傳回 `false`。  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  判斷某個 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件是否大於另一個 `duration` 或 `time_point` 物件。  
   
 ```  
@@ -313,7 +314,7 @@ constexpr bool operator>(
 ### <a name="return-value"></a>傳回值  
  每個函式都會傳回 `Right < Left`。  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  判斷某個 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件是否大於或等於另一個 `duration` 或 `time_point` 物件。  
   
 ```  
@@ -373,6 +374,6 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
   
  第二個函式傳回的值代表 `Left` 除以 `Right` 的餘數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<chrono>](../standard-library/chrono.md)
 

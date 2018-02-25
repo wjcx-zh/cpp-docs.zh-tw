@@ -5,29 +5,31 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8979ab026d5bf6aef9d0dd8677bf2ec47a8c6142
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d17378a34698cc80d356983898e0023b76877140
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Concurrency 命名空間列舉 (AMP)
 |||  
 |-|-|  
-|[access_type 列舉](#access_type)|[queuing_mode 列舉](#queuing_mode)|  
+|[access_type Enumeration](#access_type)|[queuing_mode 列舉](#queuing_mode)|  
   
-##  <a name="access_type"></a>access_type 列舉  
+##  <a name="access_type"></a>  access_type Enumeration  
  用來表示資料的存取權的各種類型的列舉類型。  
   
 ```  
@@ -44,7 +46,7 @@ enum access_type;
 |`access_type_write`|共用。 在配置加速器上存取和可讀取且可寫入的 CPU 上。|  
 
   
-##  <a name="queuing_mode"></a>queuing_mode 列舉  
+##  <a name="queuing_mode"></a>  queuing_mode Enumeration  
  指定的佇列模式所支援的快速鍵。  
   
 ```  

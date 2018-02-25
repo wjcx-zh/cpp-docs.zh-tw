@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: lastprivate
-dev_langs: C++
-helpviewer_keywords: lastprivate OpenMP clause
+ms.topic: reference
+f1_keywords:
+- lastprivate
+dev_langs:
+- C++
+helpviewer_keywords:
+- lastprivate OpenMP clause
 ms.assetid: 6ef87b31-375a-47e8-8d0d-281be45fb56a
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ad36a68078856706a4d1d994e72fd001c36dbaf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7945edb879d81bb50753619c1206b9da575dbcda
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lastprivate"></a>lastprivate
 指定變數的版本，封入內容設定等於私用版本的任何執行緒執行的最後一個反覆項目 （如迴圈建構） 或最後一節 （#pragma 區段）。  
@@ -38,11 +43,11 @@ lastprivate(var)
  此變數會設為等於執行緒私用版本執行的最後一個反覆項目 （如迴圈建構） 或最後一節 （#pragma 區段）。  
   
 ## <a name="remarks"></a>備註  
- `lastprivate`適用於下列指示詞：  
+ `lastprivate` 適用於下列指示詞：  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
  如需詳細資訊，請參閱[2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)。  
   

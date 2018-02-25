@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - critical_section
 - CONCRT/concurrency::critical_section
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRT/concurrency::critical_section::try_lock
 - CONCRT/concurrency::critical_section::try_lock_for
 - CONCRT/concurrency::critical_section::unlock
-dev_langs: C++
-helpviewer_keywords: critical_section class
+dev_langs:
+- C++
+helpviewer_keywords:
+- critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="criticalsection-class"></a>critical_section 類別
 其為並行執行階段明確察覺且不可重新進入的 Mutex。  
@@ -59,7 +63,7 @@ class critical_section;
 |名稱|描述|  
 |----------|-----------------|  
 |[critical_section](#ctor)|建構新的重要區段。|  
-|[~ critical_section 解構函式](#dtor)|終結的重要區段。|  
+|[~critical_section Destructor](#dtor)|終結的重要區段。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -82,7 +86,7 @@ class critical_section;
   
  **命名空間：** concurrency  
   
-##  <a name="ctor"></a>critical_section 
+##  <a name="ctor"></a> critical_section 
 
  建構新的重要區段。  
   
@@ -90,7 +94,7 @@ class critical_section;
 critical_section();
 ```  
   
-##  <a name="dtor"></a>~ critical_section 
+##  <a name="dtor"></a> ~critical_section 
 
  終結的重要區段。  
   
@@ -101,7 +105,7 @@ critical_section();
 ### <a name="remarks"></a>備註  
  預期解構函式執行時，不會再保留鎖定。 允許重要區段的鎖定解構仍保留未定義的行為結果。  
   
-##  <a name="lock"></a>鎖定 
+##  <a name="lock"></a> 鎖定 
 
  取得此重要區段。  
   
@@ -114,7 +118,7 @@ void lock();
   
  如果程式在呼叫端的內容，就已經持有鎖定[improper_lock](improper-lock-class.md)擲回例外狀況。  
   
-##  <a name="native_handle"></a>native_handle 
+##  <a name="native_handle"></a> native_handle 
 
  傳回平台特定原生控制代碼，如果存在的話。  
   
@@ -128,14 +132,14 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>備註  
  A`critical_section`物件不是 Windows 作業系統的平台特定原生控制代碼相關聯。 方法只會傳回物件本身的參考。  
   
-##  <a name="critical_section__scoped_lock_class"></a>critical_section:: scoped_lock 類別  
+##  <a name="critical_section__scoped_lock_class">critical_section:: scoped_lock 類別</a>  
  例外狀況安全 RAII 包裝函式`critical_section`物件。  
   
 ```
 class scoped_lock;
 ```  
   
-##  <a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock 
 
  建構`scoped_lock`物件，並取得`critical_section`物件傳入`_Critical_section`參數。 如果重要區段由另一個執行緒，這個呼叫會封鎖。  
   
@@ -147,7 +151,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  要鎖定的重要區段。  
   
-##  <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
 
  終結`scoped_lock`物件，並釋放其建構函式中所提供的重要區段。  
   
@@ -155,7 +159,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ~scoped_lock();
 ```  
   
-##  <a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a> try_lock 
 
  嘗試取得鎖定，而不會封鎖。  
   
@@ -166,7 +170,7 @@ bool try_lock();
 ### <a name="return-value"></a>傳回值  
  取得鎖定時，如果值`true`; 否則值`false`。  
   
-##  <a name="try_lock_for"></a>try_lock_for 
+##  <a name="try_lock_for"></a> try_lock_for 
 
  嘗試取得鎖定，而不進行特定毫秒數的封鎖。  
   
@@ -181,7 +185,7 @@ bool try_lock_for(unsigned int _Timeout);
 ### <a name="return-value"></a>傳回值  
  取得鎖定時，如果值`true`; 否則值`false`。  
   
-##  <a name="unlock"></a>解除鎖定 
+##  <a name="unlock"></a> 解除鎖定 
 
  解除鎖定的重要區段。  
   

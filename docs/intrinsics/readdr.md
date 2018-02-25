@@ -1,26 +1,31 @@
 ---
-title: "__readdr |Microsoft 文件"
+title: __readdr | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: __readdr
-dev_langs: C++
-helpviewer_keywords: __readdr intrinsic
+ms.topic: reference
+f1_keywords:
+- __readdr
+dev_langs:
+- C++
+helpviewer_keywords:
+- __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ba898d71895b74c43ad5de737355606a1d2b69ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 99b40b8134832e9300bf9635a60cd3664f717793
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="readdr"></a>__readdr
 讀取指定的偵錯暫存器的值。  
@@ -46,7 +51,7 @@ unsigned __int64 __readdr(unsigned int DebugRegister);
   
 |內建|架構|  
 |---------------|------------------|  
-|`__readdr`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readdr`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **標頭檔** \<intrin.h >  
   

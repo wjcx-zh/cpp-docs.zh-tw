@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - reading data [C++], iostream programming
 - data [C++], reading
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7084a0fb74d963532e01623e8e9047768c67f801
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7515c587a651b31bce7f3d1c56777a2a908c488a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what-a-stream-is"></a>什麼是資料流
 如同 C，C++ 不具內建的輸入/輸出功能。 不過，所有的 C++ 編譯器都會搭配一個系統化的物件導向 I/O 封裝 (稱為 iostream 類別)。 資料流是 iostream 類別的中心概念。 您可以將資料流物件視為智慧型檔案，以做為位元組的來源和目的地。 資料流的特性取決於它的類別及自訂的插入和擷取運算子。  

@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - insertq instruction
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f7a2b52c8a41a3689cc668846e038505425aab4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc85f56660702afe1c05f3626b3b28b0b566dbd5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64、_mm_inserti_si64
 **Microsoft 特定的**  
@@ -51,13 +54,13 @@ __m128i _mm_inserti_si64(
  [輸入] `Source1`  
  輸入中的資料欄位插入其較低 64 個位元 128 位元欄位。  
   
- [in]`Source2`  
+ [in]  `Source2`  
  要插入的低位元中的資料與 128 位元欄位。  如`_mm_insert_si64`，也包含在其高的位元欄位描述元。  
   
- [in]`Length`  
+ [in]  `Length`  
  整數常數，指定要插入之欄位的長度。  
   
- [in]`Index`  
+ [in]  `Index`  
  整數常數，指定將插入資料之欄位的最小顯著性位元的索引。  
   
 ## <a name="return-value"></a>傳回值  

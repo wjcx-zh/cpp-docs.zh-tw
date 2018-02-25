@@ -1,29 +1,33 @@
 ---
-title: "&lt;地區設定&gt;|Microsoft 文件"
+title: '&lt;locale&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs: C++
-helpviewer_keywords: locale header
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ac044246cf9dea3d5760d60453182b2ec5711d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 定義樣板類別和函式，C++ 程式可以用來封裝和操作有關數字、貨幣和行事曆資料表示和格式化的不同文化特性慣例，包括字元分類和字串定序的國際化支援。  
@@ -65,7 +69,7 @@ ms.lasthandoff: 12/21/2017
 |[collate](../standard-library/collate-class.md)|定序樣板類別，提供處理字串排序慣例的 facet。|  
 |[collate_byname](../standard-library/collate-byname-class.md)|衍生的樣板類別，描述可以做為特定地區設定的定序 facet 的物件，啟用有關字串排序慣例的文化特性區域特定資訊的擷取。|  
 |[ctype](../standard-library/ctype-class.md)|樣板類別，提供用於字元分類、大小寫轉換，以及原生字元集和地區設定所用字元集之間轉換的 facet。|  
-|[ctype\<char >](../standard-library/ctype-char-class.md)|是範本類別明確特製化的類別**ctype\<CharType**> 輸入`char`，描述可以做為地區設定 facet 描述的字元類型的各種屬性的物件`char`.|  
+|[ctype\<char>](../standard-library/ctype-char-class.md)|是範本類別明確特製化的類別**ctype\<CharType**> 輸入`char`，描述可以做為地區設定 facet 描述的字元類型的各種屬性的物件`char`.|  
 |[ctype_base](../standard-library/ctype-base-class.md)|ctype 類別的基底類別，用來定義用於個別字元或在整個範圍內字元分類或測試的列舉類型。|  
 |[ctype_byname](../standard-library/ctype-byname-class.md)|衍生的樣板類別，描述可以做為特定地區設定的 ctype facet 的物件，啟用字元分類、大小寫字元轉換，以及原生字元集和地區設定所指定字元集之間的轉換。|  
 |[locale](../standard-library/locale-class.md)|描述地區設定物件的類別，將特定文化特性資訊封裝做為共同定義特定當地語系化環境的一組 facet。|  

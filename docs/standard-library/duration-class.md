@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -14,19 +15,22 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], duration
-ms.workload: cplusplus
-ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], duration
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 742c6acf9f404275fbf9c74a55abd661224d5bc6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="duration-class"></a>duration 類別
 描述的類型具有「時間間隔」，這是兩個時間點之間的已耗用時間。  
@@ -58,7 +62,7 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[持續時間](#duration)|建構 `duration` 物件。|  
+|[duration](#duration)|建構 `duration` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -67,7 +71,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[count](#count)|傳回時間間隔內的時鐘刻度數目。|  
 |[max](#max)|靜態。 傳回範本參數 `Ref` 容許的最大值。|  
 |[min](#min)|靜態。 傳回範本參數 `Ref` 容許的最小值。|  
-|[零](#zero)|靜態。 實際上，系統會傳回 `Rep`(0)。|  
+|[zero](#zero)|靜態。 實際上，系統會傳回 `Rep`(0)。|  
   
 ### <a name="public-operators"></a>公用運算子  
   

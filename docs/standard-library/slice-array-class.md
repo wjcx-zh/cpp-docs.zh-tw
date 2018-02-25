@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: valarray/std::slice_array
-dev_langs: C++
-helpviewer_keywords: slice_array class
+ms.topic: reference
+f1_keywords:
+- valarray/std::slice_array
+dev_langs:
+- C++
+helpviewer_keywords:
+- slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2935ec42892c2d28d7e0ccab1a8222bdb771e944
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f2f9ae76aad8078511ed2c37e8f15efcee361cc4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="slicearray-class"></a>slice_array 類別
 可藉由提供 valarray 之切割所定義的子集陣列之間的作業，支援切割物件的內部、輔助的範本類別。  

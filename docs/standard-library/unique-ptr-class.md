@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::unique_ptr
 - memory/std::unique_ptr::deleter_type
@@ -17,7 +18,8 @@ f1_keywords:
 - memory/std::unique_ptr::release
 - memory/std::unique_ptr::reset
 - memory/std::unique_ptr::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::unique_ptr [C++]
 - std::unique_ptr [C++], deleter_type
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ba6ac8e50764801052c051703a211c4605a33601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0ba8adc1da5e29d1bd6cbf082c6c38fe0692d925
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 類別
 儲存自有物件或陣列的指標。 沒有任何其他 `unique_ptr` 擁有此物件/陣列。 當 `unique_ptr` 終結時，物件/陣列也會終結。  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
 - amp_math/Concurrency::precise_math::acosh
@@ -94,18 +94,20 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::tgamma
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 02a792717690215c572089f11525f1f92c0e90e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空間函式
 ||||  
@@ -173,7 +175,7 @@ inline double acos(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反餘弦值  
   
-##  <a name="acosf"></a>acosf  
+##  <a name="acosf"></a>  acosf  
  計算引數的反餘弦  
   
 ```  
@@ -187,7 +189,7 @@ inline float acosf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反餘弦值  
   
-##  <a name="acosh"></a>acosh  
+##  <a name="acosh"></a>  acosh  
  計算引數的反雙曲餘弦  
   
 ```  
@@ -204,7 +206,7 @@ inline double acosh(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反雙曲餘弦值  
   
-##  <a name="acoshf"></a>acoshf  
+##  <a name="acoshf"></a>  acoshf  
  計算引數的反雙曲餘弦  
   
 ```  
@@ -235,7 +237,7 @@ inline double asin(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反正弦值  
   
-##  <a name="asinf"></a>asinf  
+##  <a name="asinf"></a>  asinf  
  計算引數的反正弦  
   
 ```  
@@ -249,7 +251,7 @@ inline float asinf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反正弦值  
   
-##  <a name="asinh"></a>asinh  
+##  <a name="asinh"></a>  asinh  
  計算引數的反雙曲正弦  
   
 ```  
@@ -266,7 +268,7 @@ inline double asinh(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反雙曲正弦值  
   
-##  <a name="asinhf"></a>asinhf  
+##  <a name="asinhf"></a>  asinhf  
  計算引數的反雙曲正弦  
   
 ```  
@@ -321,7 +323,7 @@ inline double atan2(
 ### <a name="return-value"></a>傳回值  
  傳回平均數/_X 的反正切值  
   
-##  <a name="atan2f"></a>atan2f  
+##  <a name="atan2f"></a>  atan2f  
  計算反正切平均數/_X  
   
 ```  
@@ -340,7 +342,7 @@ inline float atan2f(
 ### <a name="return-value"></a>傳回值  
  傳回平均數/_X 的反正切值  
   
-##  <a name="atanf"></a>atanf  
+##  <a name="atanf"></a>  atanf  
  計算引數的反正切  
   
 ```  
@@ -354,7 +356,7 @@ inline float atanf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反正切值  
   
-##  <a name="atanh"></a>atanh  
+##  <a name="atanh"></a>  atanh  
  計算引數的反雙曲正切  
   
 ```  
@@ -371,7 +373,7 @@ inline double atanh(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反雙曲正切值  
   
-##  <a name="atanhf"></a>atanhf  
+##  <a name="atanhf"></a>  atanhf  
  計算引數的反雙曲正切  
   
 ```  
@@ -385,7 +387,7 @@ inline float atanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的反雙曲正切值  
   
-##  <a name="cbrt"></a>cbrt  
+##  <a name="cbrt"></a>  cbrt  
  計算引數的實際的立方根  
   
 ```  
@@ -402,7 +404,7 @@ inline double cbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的實際的立方根  
   
-##  <a name="cbrtf"></a>cbrtf  
+##  <a name="cbrtf"></a>  cbrtf  
  計算引數的實際的立方根  
   
 ```  
@@ -416,7 +418,7 @@ inline float cbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的實際的立方根  
   
-##  <a name="ceil"></a>ceil  
+##  <a name="ceil"></a>  ceil  
  計算引數的上限  
   
 ```  
@@ -433,7 +435,7 @@ inline double ceil(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的上限  
   
-##  <a name="ceilf"></a>ceilf  
+##  <a name="ceilf"></a>  ceilf  
  計算引數的上限  
   
 ```  
@@ -447,7 +449,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的上限  
   
-##  <a name="copysign"></a>copysign  
+##  <a name="copysign"></a>  copysign  
  會產生具有 _X 且平均數的正負號的值  
   
 ```  
@@ -471,7 +473,7 @@ inline double copysign(
 ### <a name="return-value"></a>傳回值  
  傳回具有 _X 且平均數的正負號的值  
   
-##  <a name="copysignf"></a>copysignf  
+##  <a name="copysignf"></a>  copysignf  
  會產生具有 _X 且平均數的正負號的值  
   
 ```  
@@ -507,7 +509,7 @@ inline double cos(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的餘弦值  
   
-##  <a name="cosf"></a>cosf  
+##  <a name="cosf"></a>  cosf  
  計算引數的餘弦  
   
 ```  
@@ -538,7 +540,7 @@ inline double cosh(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲餘弦值  
   
-##  <a name="coshf"></a>coshf  
+##  <a name="coshf"></a>  coshf  
  計算引數的雙曲餘弦值  
   
 ```  
@@ -552,7 +554,7 @@ inline float coshf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲餘弦值  
   
-##  <a name="cospi"></a>cospi  
+##  <a name="cospi"></a>  cospi  
  會計算 pi 的餘弦值 * _X  
   
 ```  
@@ -569,7 +571,7 @@ inline double cospi(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 pi 的餘弦值 * _X  
   
-##  <a name="cospif"></a>cospif  
+##  <a name="cospif"></a>  cospif  
  會計算 pi 的餘弦值 * _X  
   
 ```  
@@ -583,7 +585,7 @@ inline float cospif(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 pi 的餘弦值 * _X  
   
-##  <a name="erf"></a>erf  
+##  <a name="erf"></a>  erf  
  計算 _X 錯誤函式  
   
 ```  
@@ -600,7 +602,7 @@ inline double erf(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 _X 錯誤函式  
   
-##  <a name="erfc"></a>erfc  
+##  <a name="erfc"></a>  erfc  
  計算 _X 補充錯誤函式  
   
 ```  
@@ -617,7 +619,7 @@ inline double erfc(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回互補誤差函數的 _X  
   
-##  <a name="erfcf"></a>erfcf  
+##  <a name="erfcf"></a>  erfcf  
  計算 _X 補充錯誤函式  
   
 ```  
@@ -631,7 +633,7 @@ inline float erfcf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回互補誤差函數的 _X  
   
-##  <a name="erfcinv"></a>erfcinv  
+##  <a name="erfcinv"></a>  erfcinv  
  計算 _X 反向的補充錯誤函式  
   
 ```  
@@ -648,7 +650,7 @@ inline double erfcinv(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 _X 反向的補充錯誤函式  
   
-##  <a name="erfcinvf"></a>erfcinvf  
+##  <a name="erfcinvf"></a>  erfcinvf  
  計算 _X 反向的補充錯誤函式  
   
 ```  
@@ -662,7 +664,7 @@ inline float erfcinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 _X 反向的補充錯誤函式  
   
-##  <a name="erff"></a>erff  
+##  <a name="erff"></a>  erff  
  計算 _X 錯誤函式  
   
 ```  
@@ -676,7 +678,7 @@ inline float erff(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 _X 錯誤函式  
   
-##  <a name="erfinv"></a>erfinv  
+##  <a name="erfinv"></a>  erfinv  
  計算 _X 反向錯誤函式  
   
 ```  
@@ -693,7 +695,7 @@ inline double erfinv(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 _X 反向錯誤函式  
   
-##  <a name="erfinvf"></a>erfinvf  
+##  <a name="erfinvf"></a>  erfinvf  
  計算 _X 反向錯誤函式  
   
 ```  
@@ -707,7 +709,7 @@ inline float erfinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 _X 反向錯誤函式  
   
-##  <a name="exp10"></a>exp10  
+##  <a name="exp10"></a>  exp10  
  計算指數引數的基底為 10  
   
 ```  
@@ -724,7 +726,7 @@ inline double exp10(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回基底 10 引數的指數  
   
-##  <a name="exp10f"></a>exp10f  
+##  <a name="exp10f"></a>  exp10f  
  計算指數引數的基底為 10  
   
 ```  
@@ -738,7 +740,7 @@ inline float exp10f(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回基底 10 引數的指數  
   
-##  <a name="expm1"></a>expm1  
+##  <a name="expm1"></a>  expm1  
  計算引數以 e 為底數的指數，減 1。  
   
 ```  
@@ -755,7 +757,7 @@ inline double expm1(double exponent) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數以 e 為底數的指數，減 1。  
   
-##  <a name="expm1f"></a>expm1f  
+##  <a name="expm1f"></a>  expm1f  
  計算引數以 e 為底數的指數，減 1。  
   
 ```  
@@ -786,7 +788,7 @@ inline double exp(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回以 e 為底數的指數的引數  
   
-##  <a name="expf"></a>expf  
+##  <a name="expf"></a>  expf  
  計算以 e 為底數的引數的指數  
   
 ```  
@@ -800,7 +802,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回以 e 為底數的指數的引數  
   
-##  <a name="exp2"></a>exp2  
+##  <a name="exp2"></a>  exp2  
  計算基底 2 指數的引數  
   
 ```  
@@ -817,7 +819,7 @@ inline double exp2(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回基底 2 指數的引數  
   
-##  <a name="exp2f"></a>exp2f  
+##  <a name="exp2f"></a>  exp2f  
  計算基底 2 指數的引數  
   
 ```  
@@ -831,7 +833,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回基底 2 指數的引數  
   
-##  <a name="fabs"></a>fabs  
+##  <a name="fabs"></a>  fabs  
  傳回引數的絕對值  
   
 ```  
@@ -848,7 +850,7 @@ inline double fabs(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的絕對值  
   
-##  <a name="fabsf"></a>fabsf  
+##  <a name="fabsf"></a>  fabsf  
  傳回引數的絕對值  
   
 ```  
@@ -862,7 +864,7 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的絕對值  
 
-## <a name="fdim"></a>fdim  
+## <a name="fdim"></a> fdim  
 計算引數之間的正差異。
 ```  
 inline float fdim(
@@ -875,13 +877,13 @@ inline double fdim(
 ) restrict(amp);
 ``` 
 ### <a name="parameters"></a>參數
-`_X`浮點值`_Y`浮點值。
+`_X` 浮點值`_Y`浮點值。
 
 
 ### <a name="return-value"></a>傳回值
 _X 和平均數 _X 是否大於平均數; 之間的差異否則，+ 0。
  
-## <a name="fdimf"></a>fdimf  
+## <a name="fdimf"></a> fdimf  
 計算引數之間的正差異。
 ```
 inline float fdimf(
@@ -890,12 +892,12 @@ inline float fdimf(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>參數
-`_X`浮點值`_Y`浮點值。
+`_X` 浮點值`_Y`浮點值。
 
 ### <a name="return-value"></a>傳回值
 _X 和平均數 _X 是否大於平均數; 之間的差異否則，+ 0。 
   
-##  <a name="floor"></a>floor  
+##  <a name="floor"></a>  floor  
  計算引數的最低限度值  
   
 ```  
@@ -912,7 +914,7 @@ inline double floor(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的最低限度值  
   
-##  <a name="floorf"></a>floorf  
+##  <a name="floorf"></a>  floorf  
  計算引數的最低限度值  
   
 ```  
@@ -926,7 +928,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的最低限度值  
 
-## <a name="a-namefma-fma"></a><a name="fma">fma  
+## <a name="a-namefma-fma"></a><a name="fma"> fma  
 會計算產品的第一個和第二個指定的引數，然後將第三個指定的引數加入至結果。整個計算都會當做單一作業執行。
 ```
 inline float fma(
@@ -942,14 +944,14 @@ inline double fma(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>參數
-`_X`第一個浮點引數。
-`_Y`第二個浮點引數。
-`_Z`第三個浮點引數。
+`_X` 第一個浮點引數。
+`_Y` 第二個浮點引數。
+`_Z` 第三個浮點引數。
 
 ### <a name="return-value"></a>傳回值
 運算式的結果 (_X * 平均數) + _Z。 整個計算會執行成單一作業。也就是說，子運算式會計算，以無限的精確度，而且最終的結果會捨入。 
 
-## <a name="fmaf"></a>fmaf  
+## <a name="fmaf"></a> fmaf  
 會計算產品的第一個和第二個指定的引數，然後將第三個指定的引數加入至結果。整個計算都會當做單一作業執行。
 ```
 inline float fmaf(
@@ -959,14 +961,14 @@ inline float fmaf(
 ) restrict(amp);
 ```  
 ### <a name="parameters"></a>參數
-`_X`第一個浮點引數。
-`_Y`第二個浮點引數。
-`_Z`第三個浮點引數。
+`_X` 第一個浮點引數。
+`_Y` 第二個浮點引數。
+`_Z` 第三個浮點引數。
 
 ### <a name="return-value"></a>傳回值
 運算式的結果 (_X * 平均數) + _Z。 整個計算會執行成單一作業。也就是說，子運算式會計算，以無限的精確度，而且最終的結果會捨入。
   
-##  <a name="fmax"></a>fmax  
+##  <a name="fmax"></a>  fmax  
  判斷的最大的數值引數  
   
 ```  
@@ -990,7 +992,7 @@ inline double fmax(
 ### <a name="return-value"></a>傳回值  
  傳回的最大的數值引數  
   
-##  <a name="fmaxf"></a>fmaxf  
+##  <a name="fmaxf"></a>  fmaxf  
  判斷的最大的數值引數  
   
 ```  
@@ -1009,7 +1011,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>傳回值  
  傳回的最大的數值引數  
   
-##  <a name="fmin"></a>fmin  
+##  <a name="fmin"></a>  fmin  
  判斷引數的最小數值  
   
 ```  
@@ -1033,7 +1035,7 @@ inline double fmin(
 ### <a name="return-value"></a>傳回值  
  傳回引數的最小數值  
   
-##  <a name="fminf"></a>fminf  
+##  <a name="fminf"></a>  fminf  
  判斷引數的最小數值  
   
 ```  
@@ -1052,7 +1054,7 @@ inline float fminf(
 ### <a name="return-value"></a>傳回值  
  傳回引數的最小數值  
   
-##  <a name="fmod"></a>fmod 函式 (c + + AMP)  
+##  <a name="fmod"></a>  fmod 函式 (c + + AMP)  
  計算第一個指定的引數除以第二個指定的引數的其餘部分。  
   
 ```  
@@ -1076,7 +1078,7 @@ inline double fmod(
 ### <a name="return-value"></a>傳回值  
  其餘部分`_X`除以`_Y`; 也就是值`_X`  -  `_Y`  *n* ，其中 *n* 是整數，範圍`_X`  -  `_Y`  *n* 小於幅度`_Y`。  
   
-##  <a name="fmodf"></a>fmodf  
+##  <a name="fmodf"></a>  fmodf  
  計算第一個指定的引數除以第二個指定的引數的其餘部分。  
   
 ```  
@@ -1095,7 +1097,7 @@ inline float fmodf(
 ### <a name="return-value"></a>傳回值  
  其餘部分`_X`除以`_Y`; 也就是值`_X`  -  `_Y`  *n* ，其中 *n* 是整數，範圍`_X`  -  `_Y`  *n* 小於幅度`_Y`。  
   
-##  <a name="fpclassify"></a>fpclassify  
+##  <a name="fpclassify"></a>  fpclassify  
  將分類的引數值，為 NaN、 無限，normal subnormal，零  
   
 ```  
@@ -1112,7 +1114,7 @@ inline int fpclassify(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回數字分類巨集的值適用於引數的值。  
   
-##  <a name="frexp"></a>frexp  
+##  <a name="frexp"></a>  frexp  
  取得的尾數和指數的 _X  
   
 ```  
@@ -1136,7 +1138,7 @@ inline double frexp(
 ### <a name="return-value"></a>傳回值  
  傳回尾數 _X  
   
-##  <a name="frexpf"></a>frexpf  
+##  <a name="frexpf"></a>  frexpf  
  取得的尾數和指數的 _X  
   
 ```  
@@ -1155,7 +1157,7 @@ inline float frexpf(
 ### <a name="return-value"></a>傳回值  
  傳回尾數 _X  
   
-##  <a name="hypot"></a>hypot  
+##  <a name="hypot"></a>  hypot  
  計算平方的 _X 和平均數的平方根  
   
 ```  
@@ -1179,7 +1181,7 @@ inline double hypot(
 ### <a name="return-value"></a>傳回值  
  傳回 _X 和平均數的平方總和的平方根  
   
-##  <a name="hypotf"></a>hypotf  
+##  <a name="hypotf"></a>  hypotf  
  計算平方的 _X 和平均數的平方根  
   
 ```  
@@ -1198,7 +1200,7 @@ inline float hypotf(
 ### <a name="return-value"></a>傳回值  
  傳回 _X 和平均數的平方總和的平方根  
   
-##  <a name="ilogb"></a>ilogb  
+##  <a name="ilogb"></a>  ilogb  
  擷取 _X 指數做為帶正負號的 int 值  
   
 ```  
@@ -1215,7 +1217,7 @@ inline int ilogb(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回做為帶正負號的 int 值 _X 指數  
   
-##  <a name="ilogbf"></a>ilogbf  
+##  <a name="ilogbf"></a>  ilogbf  
  擷取 _X 指數做為帶正負號的 int 值  
   
 ```  
@@ -1229,7 +1231,7 @@ inline int ilogbf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回做為帶正負號的 int 值 _X 指數  
   
-##  <a name="isfinite"></a>isfinite  
+##  <a name="isfinite"></a>  isfinite  
  決定是否引數的有限值  
   
 ```  
@@ -1246,7 +1248,7 @@ inline int isfinite(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回非零值，並僅有的引數具有有限的值  
   
-##  <a name="isinf"></a>isinf  
+##  <a name="isinf"></a>  isinf  
  判斷是否引數為無限  
   
 ```  
@@ -1263,7 +1265,7 @@ inline int isinf(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回非零值，並僅有引數的無限值  
   
-##  <a name="isnan"></a>isnan  
+##  <a name="isnan"></a>  isnan  
  判斷引數是否為 NaN  
   
 ```  
@@ -1280,7 +1282,7 @@ inline int isnan(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回非零值，並僅有的引數具有 NaN 值  
   
-##  <a name="isnormal"></a>isnormal  
+##  <a name="isnormal"></a>  isnormal  
  判斷引數是否為一般  
   
 ```  
@@ -1297,7 +1299,7 @@ inline int isnormal(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回非零值，並僅有的引數具有一般的值  
   
-##  <a name="ldexp"></a>ldexp  
+##  <a name="ldexp"></a>  ldexp  
  計算實數從指定的尾數和指數。  
   
 ```  
@@ -1321,7 +1323,7 @@ inline double ldexp(
 ### <a name="return-value"></a>傳回值  
  傳回 _X * 2 ^ _Exp  
   
-##  <a name="ldexpf"></a>ldexpf  
+##  <a name="ldexpf"></a>  ldexpf  
  計算實數從指定的尾數和指數。  
   
 ```  
@@ -1340,7 +1342,7 @@ inline float ldexpf(
 ### <a name="return-value"></a>傳回值  
  傳回 _X * 2 ^ _Exp  
   
-##  <a name="lgamma"></a>lgamma  
+##  <a name="lgamma"></a>  lgamma  
  計算絕對值的 gamma 引數的自然對數  
   
 ```  
@@ -1364,7 +1366,7 @@ inline double lgamma(
 ### <a name="return-value"></a>傳回值  
  傳回 gamma 引數的絕對值的自然對數  
   
-##  <a name="lgammaf"></a>lgammaf  
+##  <a name="lgammaf"></a>  lgammaf  
  計算絕對值的 gamma 引數的自然對數  
   
 ```  
@@ -1417,7 +1419,7 @@ inline double log10(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 10 對數  
   
-##  <a name="log10f"></a>log10f  
+##  <a name="log10f"></a>  log10f  
  計算引數的基底 10 對數  
   
 ```  
@@ -1431,7 +1433,7 @@ inline float log10f(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 10 對數  
   
-##  <a name="log1p"></a>log1p  
+##  <a name="log1p"></a>  log1p  
  計算 1 加上引數的基底 e 對數  
   
 ```  
@@ -1448,7 +1450,7 @@ inline double log1p(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回以 e 為底數的對數 1 加上引數  
   
-##  <a name="log1pf"></a>log1pf  
+##  <a name="log1pf"></a>  log1pf  
  計算 1 加上引數的基底 e 對數  
   
 ```  
@@ -1462,7 +1464,7 @@ inline float log1pf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回以 e 為底數的對數 1 加上引數  
   
-##  <a name="log2"></a>log2  
+##  <a name="log2"></a>  log2  
  計算引數的底數-2 對數  
   
 ```  
@@ -1479,7 +1481,7 @@ inline double log2(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 10 對數  
   
-##  <a name="log2f"></a>log2f  
+##  <a name="log2f"></a>  log2f  
  計算引數的底數-2 對數  
   
 ```  
@@ -1493,7 +1495,7 @@ inline float log2f(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 10 對數  
   
-##  <a name="logb"></a>logb  
+##  <a name="logb"></a>  logb  
  擷取成浮點數格式的帶正負號的整數值 _X 指數  
   
 ```  
@@ -1510,7 +1512,7 @@ inline double logb(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回的 _X 帶正負號的指數  
   
-##  <a name="logbf"></a>logbf  
+##  <a name="logbf"></a>  logbf  
  擷取成浮點數格式的帶正負號的整數值 _X 指數  
   
 ```  
@@ -1524,7 +1526,7 @@ inline float logbf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回的 _X 帶正負號的指數  
   
-##  <a name="logf"></a>logf  
+##  <a name="logf"></a>  logf  
  計算引數的基底 e 對數  
   
 ```  
@@ -1538,7 +1540,7 @@ inline float logf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的基底 e 對數  
   
-##  <a name="modf"></a>modf  
+##  <a name="modf"></a>  modf  
  分割分數到指定的引數和整數部分。  
   
 ```  
@@ -1556,13 +1558,13 @@ inline double modf(
  `_X`  
  浮點值。  
   
- `_Iptr`(out 參數）  
+ `_Iptr` (out 參數）  
  整數部分`_X`，為浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  帶正負號的小數部分的`_X`。  
   
-##  <a name="modff"></a>modff  
+##  <a name="modff"></a>  modff  
  分割分數到指定的引數和整數部分。  
   
 ```  
@@ -1581,7 +1583,7 @@ inline float modff(
 ### <a name="return-value"></a>傳回值  
  傳回的帶正負號的小數部分`_X`。  
   
-##  <a name="nan"></a>nan  
+##  <a name="nan"></a>  nan  
  傳回無訊息 NaN  
   
 ```  
@@ -1595,7 +1597,7 @@ inline double nan(int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  如果可用內容所示 _X，傳回無訊息 NaN、  
   
-##  <a name="nanf"></a>nanf  
+##  <a name="nanf"></a>  nanf  
  傳回無訊息 NaN  
   
 ```  
@@ -1609,7 +1611,7 @@ inline float nanf(int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  如果可用內容所示 _X，傳回無訊息 NaN、  
   
-##  <a name="nearbyint"></a>nearbyint  
+##  <a name="nearbyint"></a>  nearbyint  
  捨入浮點格式，使用目前的捨入方向的整數值的引數。  
   
 ```  
@@ -1626,7 +1628,7 @@ inline double nearbyint(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回捨入的整數值。  
   
-##  <a name="nearbyintf"></a>nearbyintf  
+##  <a name="nearbyintf"></a>  nearbyintf  
  捨入浮點格式，使用目前的捨入方向的整數值的引數。  
   
 ```  
@@ -1640,7 +1642,7 @@ inline float nearbyintf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回捨入的整數值。  
   
-##  <a name="nextafter"></a>nextafter  
+##  <a name="nextafter"></a>  nextafter  
  之後的平均數方向 _X 判斷下一步 表示值，函式的類型  
   
 ```  
@@ -1664,7 +1666,7 @@ inline double nextafter(
 ### <a name="return-value"></a>傳回值  
  下一步 表示值，函式的類型會在之後傳回 _X 平均數的方向  
   
-##  <a name="nextafterf"></a>nextafterf  
+##  <a name="nextafterf"></a>  nextafterf  
  之後的平均數方向 _X 判斷下一步 表示值，函式的類型  
   
 ```  
@@ -1683,7 +1685,7 @@ inline float nextafterf(
 ### <a name="return-value"></a>傳回值  
  下一步 表示值，函式的類型會在之後傳回 _X 平均數的方向  
   
-##  <a name="phi"></a>phi  
+##  <a name="phi"></a>  phi  
  會傳回累計分佈函數的引數  
   
 ```  
@@ -1700,7 +1702,7 @@ inline double phi(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  會傳回累計分佈函數的引數  
   
-##  <a name="phif"></a>phif  
+##  <a name="phif"></a>  phif  
  會傳回累計分佈函數的引數  
   
 ```  
@@ -1737,7 +1739,7 @@ inline double pow(
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="powf"></a>powf  
+##  <a name="powf"></a>  powf  
  計算 _X 的乘冪的平均數  
   
 ```  
@@ -1755,7 +1757,7 @@ inline float powf(
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="probit"></a>probit  
+##  <a name="probit"></a>  probit  
  傳回反向累積分佈函數的引數  
   
 ```  
@@ -1772,7 +1774,7 @@ inline double probit(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回反向累積分佈函數的引數  
   
-##  <a name="probitf"></a>probitf  
+##  <a name="probitf"></a>  probitf  
  傳回反向累積分佈函數的引數  
   
 ```  
@@ -1786,7 +1788,7 @@ inline float probitf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回反向累積分佈函數的引數  
   
-##  <a name="rcbrt"></a>rcbrt  
+##  <a name="rcbrt"></a>  rcbrt  
  傳回對等的引數的立方根  
   
 ```  
@@ -1803,7 +1805,7 @@ inline double rcbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回對等的引數的立方根  
   
-##  <a name="rcbrtf"></a>rcbrtf  
+##  <a name="rcbrtf"></a>  rcbrtf  
  傳回對等的引數的立方根  
   
 ```  
@@ -1817,7 +1819,7 @@ inline float rcbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回對等的引數的立方根  
   
-##  <a name="remainder"></a>餘數  
+##  <a name="remainder"></a>  餘數  
  計算餘數： _X REM 平均數  
   
 ```  
@@ -1841,7 +1843,7 @@ inline double remainder(
 ### <a name="return-value"></a>傳回值  
  傳回 _X REM 平均數  
   
-##  <a name="remainderf"></a>remainderf  
+##  <a name="remainderf"></a>  remainderf  
  計算餘數： _X REM 平均數  
   
 ```  
@@ -1860,7 +1862,7 @@ inline float remainderf(
 ### <a name="return-value"></a>傳回值  
  傳回 _X REM 平均數  
   
-##  <a name="remquo"></a>remquo  
+##  <a name="remquo"></a>  remquo  
  計算第一個指定的引數除以第二個指定的引數的其餘部分。 也會計算第一個指定的引數除以第二個指定的引數的有效數字的有效數字的商數，並傳回商數使用第三個引數中指定的位置。  
   
 ```  
@@ -1883,13 +1885,13 @@ inline double remquo(
  `_Y`  
  第二個浮點引數。  
   
- `_Quo`(out 參數）  
+ `_Quo` (out 參數）  
  用來傳回商數的分數的位元的整數的位址`_X`除以小數的位元的`_Y`。  
   
 ### <a name="return-value"></a>傳回值  
  傳回的其餘部分`_X`除以`_Y`。  
   
-##  <a name="remquof"></a>remquof  
+##  <a name="remquof"></a>  remquof  
  計算第一個指定的引數除以第二個指定的引數的其餘部分。 也會計算第一個指定的引數除以第二個指定的引數的有效數字的有效數字的商數，並傳回商數使用第三個引數中指定的位置。  
   
 ```  
@@ -1906,13 +1908,13 @@ inline float remquof(
  `_Y`  
  第二個浮點引數。  
   
- `_Quo`(out 參數）  
+ `_Quo` (out 參數）  
  用來傳回商數的分數的位元的整數的位址`_X`除以小數的位元的`_Y`。  
   
 ### <a name="return-value"></a>傳回值  
  傳回的其餘部分`_X`除以`_Y`。  
   
-##  <a name="round"></a>捨入  
+##  <a name="round"></a>  round  
  四捨五入為最接近整數 _X  
   
 ```  
@@ -1929,7 +1931,7 @@ inline double round(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回最接近的整數的 _X  
   
-##  <a name="roundf"></a>roundf  
+##  <a name="roundf"></a>  roundf  
  四捨五入為最接近整數 _X  
   
 ```  
@@ -1943,7 +1945,7 @@ inline float roundf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回最接近的整數的 _X  
   
-##  <a name="rsqrt"></a>rsqrt  
+##  <a name="rsqrt"></a>  rsqrt  
  傳回對等的引數的平方根  
   
 ```  
@@ -1960,7 +1962,7 @@ inline double rsqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回對等的引數的平方根  
   
-##  <a name="rsqrtf"></a>rsqrtf  
+##  <a name="rsqrtf"></a>  rsqrtf  
  傳回對等的引數的平方根  
   
 ```  
@@ -1974,7 +1976,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回對等的引數的平方根  
   
-##  <a name="scalb"></a>scalb  
+##  <a name="scalb"></a>  scalb  
  乘以 _X FLT_RADIX 所要電源平均數  
   
 ```  
@@ -1998,7 +2000,7 @@ inline double scalb(
 ### <a name="return-value"></a>傳回值  
  傳回 _X * (FLT_RADIX ^ 平均數)  
   
-##  <a name="scalbf"></a>scalbf  
+##  <a name="scalbf"></a>  scalbf  
  乘以 _X FLT_RADIX 所要電源平均數  
   
 ```  
@@ -2017,7 +2019,7 @@ inline float scalbf(
 ### <a name="return-value"></a>傳回值  
  傳回 _X * (FLT_RADIX ^ 平均數)  
   
-##  <a name="scalbn"></a>scalbn  
+##  <a name="scalbn"></a>  scalbn  
  乘以 _X FLT_RADIX 所要電源平均數  
   
 ```  
@@ -2041,7 +2043,7 @@ inline double scalbn(
 ### <a name="return-value"></a>傳回值  
  傳回 _X * (FLT_RADIX ^ 平均數)  
   
-##  <a name="scalbnf"></a>scalbnf  
+##  <a name="scalbnf"></a>  scalbnf  
  乘以 _X FLT_RADIX 所要電源平均數  
   
 ```  
@@ -2060,7 +2062,7 @@ inline float scalbnf(
 ### <a name="return-value"></a>傳回值  
  傳回 _X * (FLT_RADIX ^ 平均數)  
   
-##  <a name="signbit"></a>signbit  
+##  <a name="signbit"></a>  signbit  
  判斷是否 _X 的正負號為負數  
   
 ```  
@@ -2077,7 +2079,7 @@ inline int signbit(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回非零值，如果且只有 _X 的正負號為負數  
   
-##  <a name="signbitf"></a>signbitf  
+##  <a name="signbitf"></a>  signbitf  
  判斷是否 _X 的正負號為負數  
   
 ```  
@@ -2108,7 +2110,7 @@ inline double sin(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的正弦值  
   
-##  <a name="sinf"></a>sinf  
+##  <a name="sinf"></a>  sinf  
  計算引數的正弦值  
   
 ```  
@@ -2122,7 +2124,7 @@ inline float sinf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的正弦值  
   
-##  <a name="sincos"></a>sincos  
+##  <a name="sincos"></a>  sincos  
  計算正弦函數 」 與 「 餘弦值 _X  
   
 ```  
@@ -2148,7 +2150,7 @@ inline void sincos(
  `_C`  
  傳回 _X 的餘弦值  
   
-##  <a name="sincosf"></a>sincosf  
+##  <a name="sincosf"></a>  sincosf  
  計算正弦函數 」 與 「 餘弦值 _X  
   
 ```  
@@ -2185,7 +2187,7 @@ inline double sinh(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲正弦值  
   
-##  <a name="sinhf"></a>sinhf  
+##  <a name="sinhf"></a>  sinhf  
  計算引數的雙曲正弦值  
   
 ```  
@@ -2199,7 +2201,7 @@ inline float sinhf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲正弦值  
   
-##  <a name="sinpi"></a>sinpi  
+##  <a name="sinpi"></a>  sinpi  
  會計算 pi 的正弦值 * _X  
   
 ```  
@@ -2216,7 +2218,7 @@ inline double sinpi(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 pi 的正弦值 * _X  
   
-##  <a name="sinpif"></a>sinpif  
+##  <a name="sinpif"></a>  sinpif  
  會計算 pi 的正弦值 * _X  
   
 ```  
@@ -2247,7 +2249,7 @@ inline double sqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的 squre 根目錄  
   
-##  <a name="sqrtf"></a>sqrtf  
+##  <a name="sqrtf"></a>  sqrtf  
  計算引數的 squre 根目錄  
   
 ```  
@@ -2278,7 +2280,7 @@ inline double tan(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回正切函數的引數的值  
   
-##  <a name="tanf"></a>tanf  
+##  <a name="tanf"></a>  tanf  
  計算引數的正切函數的值  
   
 ```  
@@ -2309,7 +2311,7 @@ inline double tanh(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲正切值  
   
-##  <a name="tanhf"></a>tanhf  
+##  <a name="tanhf"></a>  tanhf  
  計算引數的雙曲正切值  
   
 ```  
@@ -2323,7 +2325,7 @@ inline float tanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的雙曲正切值  
   
-##  <a name="tanpi"></a>tanpi  
+##  <a name="tanpi"></a>  tanpi  
  計算正切函數的 pi 值 * _X  
   
 ```  
@@ -2340,7 +2342,7 @@ inline double tanpi(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 pi 的正切值 * _X  
   
-##  <a name="tanpif"></a>tanpif  
+##  <a name="tanpif"></a>  tanpif  
  計算正切函數的 pi 值 * _X  
   
 ```  
@@ -2354,7 +2356,7 @@ inline float tanpif(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 pi 的正切值 * _X  
   
-##  <a name="tgamma"></a>tgamma  
+##  <a name="tgamma"></a>  tgamma  
  計算 gamma 函數的 _X  
   
 ```  
@@ -2371,7 +2373,7 @@ inline double tgamma(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 gamma 函數的 _X 的結果  
   
-##  <a name="tgammaf"></a>tgammaf  
+##  <a name="tgammaf"></a>  tgammaf  
  計算 gamma 函數的 _X  
   
 ```  
@@ -2385,7 +2387,7 @@ inline float tgammaf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回 gamma 函數的 _X 的結果  
   
-##  <a name="trunc"></a>trunc  
+##  <a name="trunc"></a>  trunc  
  截斷的整數部分的引數  
   
 ```  
@@ -2402,7 +2404,7 @@ inline double trunc(double _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的整數部分  
   
-##  <a name="truncf"></a>truncf  
+##  <a name="truncf"></a>  truncf  
  截斷的整數部分的引數  
   
 ```  

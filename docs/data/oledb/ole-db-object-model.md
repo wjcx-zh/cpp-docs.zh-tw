@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>OLE DB 物件模型
 OLE DB 物件模型包含下列物件或元件。 第四個物件或 （資料來源、 工作階段、 命令和資料列集） 所列出的元件，可讓您連接到資料來源並加以檢視。 顯示時使用的資料與相關聯的其餘部分，從存取子中，開始。  
@@ -55,7 +57,7 @@ OLE DB 物件模型包含下列物件或元件。 第四個物件或 （資料�
 ## <a name="accessors"></a>存取子  
  只有 OLE DB 使用存取子的概念。 存取子會描述資料如何儲存在取用者。 它包含資料列集的欄位 （資料行） 和您在消費者中宣告的資料成員之間的一組繫結 （稱為資料行對應）。  
   
-##  <a name="vcconoledbcomponents_transactions"></a>交易  
+##  <a name="vcconoledbcomponents_transactions"></a> 交易  
  認可或中止在最低層級以外的巢狀的交易時，可以使用交易物件。 交易是不可分割的工作單位 ACID 測試所定義。 ACID (line-of-business):  
   
 -   不可部分完成性： 無法分割成較小的工作單位。  

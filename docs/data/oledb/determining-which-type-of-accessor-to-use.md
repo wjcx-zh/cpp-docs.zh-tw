@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb2e18c8b0c5ab110b9818e46e7fc68c08656274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28173b18e1f2ab6e7c916679d5fa5a27c08caaeb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>決定使用哪一種存取子
 在編譯時期或執行階段，您可以判斷資料列集的資料類型。  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 |`CAccessor`|建立使用者資料錄與`COLUMN_ENTRY`巨集。 巨集繫結至資料成員中該記錄的存取子。 建立資料列集時，無法解除繫結資料行。|是，透過使用**PARAM_MAP**巨集項目。 一旦完成繫結參數不可以是未繫結。|最快速存取子，因為少量的程式碼。|  
 |`CDynamicAccessor`|自動的。|否。|如果您不知道的資料列集中的資料型別很有用。|  
 |`CDynamicParameterAccessor`|自動執行的但可以是[覆寫](../../data/oledb/overriding-a-dynamic-accessor.md)。|是，如果提供者支援`ICommandWithParameters`。 自動繫結參數。|低於`CDynamicAccessor`但適用於一般的預存程序的呼叫。|  
-|**CDynamicStringAccessor [，W]**|自動的。|否。|擷取從資料存放區做為字串資料存取的資料。|  
+|**CDynamicStringAccessor[A,W]**|自動的。|否。|擷取從資料存放區做為字串資料存取的資料。|  
 |`CManualAccessor`|手動使用`AddBindEntry`。|使用手動`AddParameterEntry`。|速度非常快。參數和資料行繫結一次。 您決定要使用資料的類型。 (請參閱[DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)範例的範例。)需要更多的程式碼比`CDynamicAccessor`或`CAccessor`。 它則更像直接呼叫 OLE DB。|  
 |`CXMLAccessor`|自動的。|否。|擷取從資料存放區做為字串資料存取的資料，並將它格式化為 XML 標記的資料。|  
   

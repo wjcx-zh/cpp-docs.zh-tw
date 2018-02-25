@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
 - amp_short_vectors/Concurrency::graphics::unorm_4::gbra
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 204e33b14c48dee7ad52af65fa55c650b74de5d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm4-class"></a>unorm_4 類別
 表示短向量的四個一般的不帶正負號數字。  
@@ -307,7 +310,7 @@ class unorm_4;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[unorm_4 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+|[unorm_4 Constructor](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -455,13 +458,13 @@ class unorm_4;
 |名稱|描述|  
 |----------|-----------------|  
 |unorm_4::operator-||  
-|unorm_4::operator-||  
-|unorm_4::operator * =||  
-|unorm_4::operator / =||  
-|unorm_4::operator + +||  
-|unorm_4::operator + =||  
-|unorm_4::operator =||  
-|unorm_4::operator =||  
+|unorm_4::operator--||  
+|unorm_4::operator*=||  
+|unorm_4::operator/=||  
+|unorm_4::operator++||  
+|unorm_4::operator+=||  
+|unorm_4::operator=||  
+|unorm_4::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -610,7 +613,7 @@ class unorm_4;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>unorm_4 
+##  <a name="ctor"></a> unorm_4 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -694,7 +697,7 @@ explicit inline unorm_4(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="unorm_4__size"></a>大小 
+##  <a name="unorm_4__size"></a> 大小 
 
 ```  
 static const int size = 4;  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
 - amp_short_vectors/Concurrency::graphics::float_4::zxw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_x
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 049099c5a6b2a08d1482f4074b8b316ccb14562d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="float4-class"></a>float_4 類別
 表示短向量的四個浮點數。  
@@ -377,14 +380,14 @@ class float_4;
 |float_4::get_zywx||  
 |float_4::get_zyx||  
 |float_4::get_zyxw||  
-|float_4:: ref_a||  
-|float_4:: ref_b||  
-|float_4:: ref_g||  
-|float_4:: ref_r||  
-|float_4:: ref_w||  
-|float_4:: ref_x||  
-|float_4:: ref_y||  
-|float_4:: ref_z||  
+|float_4::ref_a||  
+|float_4::ref_b||  
+|float_4::ref_g||  
+|float_4::ref_r||  
+|float_4::ref_w||  
+|float_4::ref_x||  
+|float_4::ref_y||  
+|float_4::ref_z||  
 |float_4::set_w||  
 |float_4::set_wx||  
 |float_4::set_wxy||  
@@ -455,13 +458,13 @@ class float_4;
 |名稱|描述|  
 |----------|-----------------|  
 |float_4::operator-||  
-|float_4::operator-||  
-|float_4::operator * =||  
-|float_4::operator / =||  
-|float_4::operator + +||  
-|float_4::operator + =||  
-|float_4::operator =||  
-|float_4::operator =||  
+|float_4::operator--||  
+|float_4::operator*=||  
+|float_4::operator/=||  
+|float_4::operator++||  
+|float_4::operator+=||  
+|float_4::operator=||  
+|float_4::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -610,7 +613,7 @@ class float_4;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>float_4 
+##  <a name="ctor"></a> float_4 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -681,7 +684,7 @@ explicit inline float_4(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="float_4__size"></a>大小 
+##  <a name="float_4__size"></a> 大小 
 
 ```  
 static const int size = 4;  

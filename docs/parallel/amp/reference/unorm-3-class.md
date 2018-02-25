@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_zy
 - amp_short_vectors/Concurrency::graphics::unorm_3::zxy
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_y
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4051b7f872803a8ef799178b7ad158e588da08bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6aeded2e1d503ae26091d53a0cd12e75648e4254
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm3-class"></a>unorm_3 類別
 表示短向量的三個不帶正負號的一般數字。  
@@ -111,7 +114,7 @@ class unorm_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[unorm_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+|[unorm_3 Constructor](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -132,12 +135,12 @@ class unorm_3;
 |unorm_3::get_zxy||  
 |unorm_3::get_zy||  
 |unorm_3::get_zyx||  
-|Unorm_3:: ref_b||  
-|Unorm_3:: ref_g||  
-|Unorm_3:: ref_r||  
-|Unorm_3:: ref_x||  
-|Unorm_3:: ref_y||  
-|Unorm_3:: ref_z||  
+|Unorm_3::ref_b||  
+|Unorm_3::ref_g||  
+|Unorm_3::ref_r||  
+|Unorm_3::ref_x||  
+|Unorm_3::ref_y||  
+|Unorm_3::ref_z||  
 |unorm_3::set_x||  
 |unorm_3::set_xy||  
 |unorm_3::set_xyz||  
@@ -158,13 +161,13 @@ class unorm_3;
   
 |名稱|描述|  
 |----------|-----------------|  
-|unorm_3::operator-||  
-|unorm_3::operator * =||  
-|unorm_3::operator / =||  
-|unorm_3::operator + +||  
-|unorm_3::operator + =||  
-|unorm_3::operator =||  
-|unorm_3::operator =||  
+|unorm_3::operator--||  
+|unorm_3::operator*=||  
+|unorm_3::operator/=||  
+|unorm_3::operator++||  
+|unorm_3::operator+=||  
+|unorm_3::operator=||  
+|unorm_3::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -215,7 +218,7 @@ class unorm_3;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>unorm_3 
+##  <a name="ctor"></a> unorm_3 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -294,7 +297,7 @@ explicit inline unorm_3(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="unorm_3__size"></a>大小 
+##  <a name="unorm_3__size"></a> 大小 
 
 ```  
 static const int size = 3;  

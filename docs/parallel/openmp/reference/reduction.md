@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: reduction
-dev_langs: C++
-helpviewer_keywords: reduction OpenMP clause
+ms.topic: reference
+f1_keywords:
+- reduction
+dev_langs:
+- C++
+helpviewer_keywords:
+- reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f43ae9afac7bdbabe12b7532e2bbc7005fe59a0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reduction"></a>reduction
 指定每個執行緒私用的一個或多個變數是減少作業在平行區域結尾處的主題。  
@@ -41,13 +46,13 @@ reduction(operation:var)
  在其上執行純量減少一個以上的變數。 如果指定了多個變數，請以逗號分隔變數名稱。  
   
 ## <a name="remarks"></a>備註  
- `reduction`適用於下列指示詞：  
+ `reduction` 適用於下列指示詞：  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
  如需詳細資訊，請參閱[2.7.2.6 減少](../../../parallel/openmp/2-7-2-6-reduction.md)。  
   

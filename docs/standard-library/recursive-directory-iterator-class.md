@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: filesystem/std::tr2::sys::recursive_directory_iterator
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- filesystem/std::tr2::sys::recursive_directory_iterator
+dev_langs:
+- C++
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55e44e447ee8ad2e449c46acb5535a41346fd19f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c432cde8a4c565e6195658ab27ce5f2cb1838f6a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator 類別
 描述可循序遍訪目錄中的檔案名稱的輸入迭代器，可能會以遞迴方式下降到子目錄。 對於迭代器 X，運算式 *X 會評估為 directory_entry 類別的物件，該物件會包裝檔案名稱及其狀態的任何已知項目。  

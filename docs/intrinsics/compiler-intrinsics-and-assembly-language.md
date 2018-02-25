@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
@@ -17,11 +17,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6a10201edd55c378d1df3a244b0732d64ecd08f
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
-ms.translationtype: HT
+ms.openlocfilehash: ee992c5e33cb29e1a499293787030b38438de6e8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>編譯器內建和組件語言
 本文件章節包含關於編譯器內建功能和組合語言的資訊。  

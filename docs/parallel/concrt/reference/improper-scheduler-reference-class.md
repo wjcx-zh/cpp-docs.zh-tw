@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - improper_scheduler_reference
 - CONCRT/concurrency::improper_scheduler_reference
 - CONCRT/concurrency::improper_scheduler_reference::improper_scheduler_reference
-dev_langs: C++
-helpviewer_keywords: improper_scheduler_reference class
+dev_langs:
+- C++
+helpviewer_keywords:
+- improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f48ac19ca1b246bc21bc94a84d5d489f8831e144
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2fe3662d64ae03c242a3f3c3fefd4c3880d4157f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference 類別
 這個類別描述在被關閉的 `Scheduler` 物件 (來自不屬於排程器的內容) 上呼叫 `Reference` 方法所擲回的例外狀況。  
@@ -52,7 +56,7 @@ class improper_scheduler_reference : public std::exception;
   
  **命名空間：** concurrency  
   
-##  <a name="ctor"></a>improper_scheduler_reference 
+##  <a name="ctor"></a> improper_scheduler_reference 
 
  建構 `improper_scheduler_reference` 物件。  
   

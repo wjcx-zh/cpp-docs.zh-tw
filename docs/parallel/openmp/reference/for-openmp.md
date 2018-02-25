@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: for
-dev_langs: C++
-helpviewer_keywords: for OpenMP directive
+ms.topic: reference
+f1_keywords:
+- for
+dev_langs:
+- C++
+helpviewer_keywords:
+- for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97c32bd93ca208d76fbcb418c6e851e3c50f49ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ab923dd43dfb29a458d12f57eb1ceefdb5539daf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="for-openmp"></a>for (OpenMP)
 會導致在執行工作分割為個執行緒在平行區域內的迴圈。  
@@ -50,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
--   [排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
+-   [ordered](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   

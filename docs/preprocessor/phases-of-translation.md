@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - translation phases
 - preprocessor, translation
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22d73156d4f03a32bd9aa382dd0cc610f8a5f03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21cf6efeba83758bed8abe45aba36f025ace16f4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="phases-of-translation"></a>轉譯階段
 C 和 C++ 程式是由一個或多個原始程式檔所組成，每個原始程式檔會包含一些程式文字。 原始程式檔連同其 include 檔 (使用 `#include` 前置處理器指示詞所包含的檔案) 稱為「轉譯單位」，但不包括條件式編譯指示詞 (例如 `#if`) 所移除的程式碼區段。  
@@ -64,7 +67,7 @@ C 和 C++ 程式是由一個或多個原始程式檔所組成，每個原始程�
  *字串串連*  
  所有相鄰字串和寬字串常值都會串連。 例如，`"String " "concatenation"` 會成為 `"String concatenation"`。  
   
- *轉譯*  
+ *Translation*  
  所有語彙基元都會經過語法和語意上的分析，而且這些語彙基元會轉換成目的碼。  
   
  *連結*  

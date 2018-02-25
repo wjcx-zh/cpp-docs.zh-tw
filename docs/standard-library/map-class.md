@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::map [C++]
 - std::map [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d83bebb0953ee3ed7acec9e0e732cef6e5b3816f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="map-class"></a>map 類別
 從每個項目都是資料值與排序鍵組的集合，用於資料儲存和擷取。 索引鍵的值是唯一的，用於自動排序資料。  
@@ -1504,7 +1507,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- map 所定義的 **iterator** 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 `pair`*\<***constKey**, **Type***>*，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
+ **迭代器**地圖點的物件項目所定義[value_type](#value_type)，也就是類型的`pair` * \< * **constKey**，**類型 * * * >*、 其第一個成員是索引鍵的項目和其成員則是項目所保留的對應的資材的第二個。  
   
  若要對指向 map 中某個元素的 **iterator**`Iter` 進行取值，請使用 **->** 運算子。  
   
@@ -2310,7 +2313,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>備註  
  類型 `reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 map。  
   
- map 所定義的 `reverse_iterator` 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 `pair`*\<***constKey**, **Type***>*，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
+ `reverse_iterator`地圖點的物件項目所定義[value_type](#value_type)，也就是類型的`pair` * \< * **constKey**，**型別 * * * >*、 其第一個成員是索引鍵的項目和其成員則是項目所保留的對應的資材的第二個。  
   
  取值 （dereference) `reverse_iterator` `rIter`指向對應中的項目，使用 **->** 運算子。  
   

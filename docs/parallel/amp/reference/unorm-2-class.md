@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::unnorm_2::y
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::get_x
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d050e819361175f1808a440671de684499ebfa3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 80e5cf0a1a1c3e2a4e10520772ebea931fdf3634
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm2-class"></a>unorm_2 類別
 表示兩個不帶正負號的一般數字的短向量。  
@@ -77,10 +80,10 @@ class unorm_2;
 |unorm_2::get_xy||  
 |unorm_2::get_y||  
 |unorm_2::get_yx||  
-|unorm_2:: ref_g||  
-|unorm_2:: ref_r||  
-|unorm_2:: ref_x||  
-|unorm_2:: ref_y||  
+|unorm_2::ref_g||  
+|unorm_2::ref_r||  
+|unorm_2::ref_x||  
+|unorm_2::ref_y||  
 |unorm_2::set_x||  
 |unorm_2::set_xy||  
 |unorm_2::set_y||  
@@ -90,13 +93,13 @@ class unorm_2;
   
 |名稱|描述|  
 |----------|-----------------|  
-|unorm_2::operator-||  
-|unorm_2::operator * =||  
-|unorm_2::operator / =||  
-|unorm_2::operator + +||  
-|unorm_2::operator + =||  
-|unorm_2::operator =||  
-|unorm_2::operator =||  
+|unorm_2::operator--||  
+|unorm_2::operator*=||  
+|unorm_2::operator/=||  
+|unorm_2::operator++||  
+|unorm_2::operator+=||  
+|unorm_2::operator=||  
+|unorm_2::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -125,7 +128,7 @@ class unorm_2;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>unorm_2 
+##  <a name="ctor"></a> unorm_2 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -199,7 +202,7 @@ explicit inline unorm_2(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="unorm_2__size"></a>大小 
+##  <a name="unorm_2__size"></a> 大小 
 
 ```  
 static const int size = 2;  

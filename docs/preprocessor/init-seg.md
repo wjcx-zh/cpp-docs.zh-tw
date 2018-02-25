@@ -1,31 +1,34 @@
 ---
-title: "init_seg |Microsoft 文件"
+title: init_seg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, init_seg
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="initseg"></a>init_seg
 **C + + 特定的**  
@@ -46,23 +49,23 @@ ms.lasthandoff: 12/21/2017
   
  所要的選項**init_seg** pragma 會：  
   
- **編譯器**  
+ **compiler**  
  針對 Microsoft C 執行階段程式庫初始化保留。 這個群組中的物件會最先結構。  
   
  **lib**  
  可供協力廠商類別程式庫廠商進行初始化。 此群組中的物件建構後不久標示為**編譯器**之前的任何其他。  
   
- **使用者**  
+ **user**  
  可供任何使用者使用。 這個群組中的物件會最後結構。  
   
- *區段名稱*  
+ *section-name*  
  允許明確指定初始化區段。 在使用者指定的物件*區段名稱*不會隱含建構; 不過，其位址會放在名為區段*區段名稱*。  
   
  您提供的區段名稱將包含 Helper 函式的指標，這類函式將建構在該模組中 pragma 後面宣告的全域物件。  
   
  如需建立區段時，不應該使用的名稱，請參閱[/section](../build/reference/section-specify-section-attributes.md)。  
   
- *函式名稱*  
+ *func-name*  
  指定程式結束時，要取代 `atexit` 呼叫的函式。 這個 helper 函式也會呼叫[atexit](../c-runtime-library/reference/atexit.md)與全域物件的解構函式的指標。 如果您使用下列形式的 pragma 指定函式識別項：  
   
 ```  

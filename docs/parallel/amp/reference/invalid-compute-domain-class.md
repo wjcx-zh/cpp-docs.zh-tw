@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - invalid_compute_domain
 - AMPRT/invalid_compute_domain
 - AMPRT/Concurrency::invalid_compute_domain::invalid_compute_domain
-dev_langs: C++
-helpviewer_keywords: invalid_compute_domain class
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9dc142b921efb6b52fd5b5ce7a89432b4727951c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cf8393e3af29c09376d4213bcdcec7642a593081
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain 類別
 執行階段無法啟動一個核心使用在指定的計算網域時，會擲回的例外狀況[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼叫站台。  
@@ -56,7 +60,7 @@ class invalid_compute_domain : public runtime_exception;
   
  **命名空間：** 並行  
 
-## <a name="ctor"></a>invalid_compute_domain 
+## <a name="ctor"></a> invalid_compute_domain 
 
 初始化類別的新執行個體。  
   

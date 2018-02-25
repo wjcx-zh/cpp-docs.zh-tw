@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::get_zyx
 - amp_short_vectors/Concurrency::graphics::float_3::set_y
@@ -77,19 +78,22 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::gbr
 - amp_short_vectors/Concurrency::graphics::float_3::operator*=
 - amp_short_vectors/Concurrency::graphics::float_3::get_xy
-dev_langs: C++
-helpviewer_keywords: amp_short_vectors/Concurrency::graphics::float_3
+dev_langs:
+- C++
+helpviewer_keywords:
+- amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 28a26910aae471d237e0f4324f7f837eff0f6240
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dda70c9e19e4b446ac0e3cec8f3358732f4c57f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="float3-class"></a>float_3 類別
 表示短向量的三個浮點數。  
@@ -160,13 +164,13 @@ class float_3;
 |名稱|描述|  
 |----------|-----------------|  
 |float_3::operator-||  
-|float_3::operator-||  
-|float_3::operator * =||  
-|float_3::operator / =||  
-|float_3::operator + +||  
-|float_3::operator + =||  
-|float_3::operator =||  
-|float_3::operator =||  
+|float_3::operator--||  
+|float_3::operator*=||  
+|float_3::operator/=||  
+|float_3::operator++||  
+|float_3::operator+=||  
+|float_3::operator=||  
+|float_3::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -217,7 +221,7 @@ class float_3;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>float_3 
+##  <a name="ctor"></a> float_3 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -284,7 +288,7 @@ explicit inline float_3(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="float_3__size"></a>大小 
+##  <a name="float_3__size"></a> 大小 
 
 ```  
 static const int size = 3;  

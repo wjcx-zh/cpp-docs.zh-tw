@@ -1,5 +1,5 @@
 ---
-title: "execution_character_set |Microsoft 文件"
+title: execution_character_set | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,23 +8,26 @@ ms.technology:
 - cpp
 - devlang-cpp
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - execution_character_set
 - vc-pragma.execution_character_set
-dev_langs: C++
-helpviewer_keywords: pragma execution_character_set
+dev_langs:
+- C++
+helpviewer_keywords:
+- pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1064f5cf97ba6b919e718c60c8346e86d643ced
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eda04de6975708b2460e53681e50f8ea4f9dbcd3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 指定執行字元集，用於字串和字元常值。 這個指示詞不需要加上 u8 前置詞的常值。  
@@ -51,4 +54,4 @@ ms.lasthandoff: 12/21/2017
 ## <a name="see-also"></a>請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
  [/execution-charset (設定執行 Character Set)](../build/reference/execution-charset-set-execution-character-set.md)   
- [/utf-8 （設定來源和可執行檔字元集為 utf-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+ [/utf-8 (將來源和可執行檔字元集設定為 UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

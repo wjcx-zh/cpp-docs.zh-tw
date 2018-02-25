@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IResourceManager
 - CONCRTRM/concurrency::IResourceManager
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Reference
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::RegisterScheduler
 - CONCRTRM/concurrency::IResourceManager::IResourceManager::Release
-dev_langs: C++
-helpviewer_keywords: IResourceManager structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0a88cfafe9bbfdc04776050a0a956bf9a8b6766e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 結構
 並行執行階段資源管理員的介面。 這是排程器用來與資源管理員通訊的介面。  
@@ -46,18 +50,18 @@ struct IResourceManager;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Iresourcemanager:: Osversion](#osversion)|代表作業系統版本的列舉類型。|  
+|[IResourceManager::OSVersion](#osversion)|代表作業系統版本的列舉類型。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Iresourcemanager:: Createnodetopology](#createnodetopology)|目前只在偵錯組建的執行階段，這個方法是設計來加速測試資源管理員的各種硬體拓撲，而不需要實際的硬體符合組態上測試勾點。 執行階段的零售版本，這個方法會傳回而不執行任何動作。|  
-|[Iresourcemanager:: Getavailablenodecount](#getavailablenodecount)|傳回可供資源管理員使用的節點數目。|  
-|[Iresourcemanager:: Getfirstnode](#getfirstnode)|傳回資源管理員所定義之列舉順序中的第一個節點。|  
-|[Iresourcemanager:: Reference](#reference)|資源管理員執行個體上的參考計數遞增。|  
-|[Iresourcemanager:: Registerscheduler](#registerscheduler)|註冊排程器與資源管理員。 排程器註冊後，它應該與資源管理員使用`ISchedulerProxy`傳回的介面。|  
-|[Iresourcemanager:: Release](#release)|資源管理員執行個體的參考計數遞減。 資源管理員會終結其參考計數變成`0`。|  
+|[IResourceManager::CreateNodeTopology](#createnodetopology)|目前只在偵錯組建的執行階段，這個方法是設計來加速測試資源管理員的各種硬體拓撲，而不需要實際的硬體符合組態上測試勾點。 執行階段的零售版本，這個方法會傳回而不執行任何動作。|  
+|[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|傳回可供資源管理員使用的節點數目。|  
+|[IResourceManager::GetFirstNode](#getfirstnode)|傳回資源管理員所定義之列舉順序中的第一個節點。|  
+|[IResourceManager::Reference](#reference)|資源管理員執行個體上的參考計數遞增。|  
+|[IResourceManager::RegisterScheduler](#registerscheduler)|註冊排程器與資源管理員。 排程器註冊後，它應該與資源管理員使用`ISchedulerProxy`傳回的介面。|  
+|[IResourceManager::Release](#release)|資源管理員執行個體的參考計數遞減。 資源管理員會終結其參考計數變成`0`。|  
   
 ## <a name="remarks"></a>備註  
  使用[CreateResourceManager](concurrency-namespace-functions.md)函數來取得單一資源管理員執行個體的介面。 方法遞增參考計數在資源管理員，並且應該叫用[iresourcemanager:: Release](#release)方法，以釋放參考，當您完成使用資源管理員。 一般而言，您所建立的每個排程器會叫用這個方法在建立期間，並關機後釋放資源管理員的參考。  
@@ -70,7 +74,7 @@ struct IResourceManager;
   
  **命名空間：** concurrency  
   
-##  <a name="createnodetopology"></a>Iresourcemanager:: Createnodetopology 方法  
+##  <a name="createnodetopology"></a>  Iresourcemanager:: Createnodetopology 方法  
  目前只在偵錯組建的執行階段，這個方法是設計來加速測試資源管理員的各種硬體拓撲，而不需要實際的硬體符合組態上測試勾點。 執行階段的零售版本，這個方法會傳回而不執行任何動作。  
   
 ```
@@ -99,7 +103,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md)如果處理序中的其他排程器存在時，會呼叫這個方法會擲回。  
   
-##  <a name="getavailablenodecount"></a>Iresourcemanager:: Getavailablenodecount 方法  
+##  <a name="getavailablenodecount"></a>  Iresourcemanager:: Getavailablenodecount 方法  
  傳回可供資源管理員使用的節點數目。  
   
 ```
@@ -109,7 +113,7 @@ virtual unsigned int GetAvailableNodeCount() const = 0;
 ### <a name="return-value"></a>傳回值  
  使用資源管理員的節點數目。  
   
-##  <a name="getfirstnode"></a>Iresourcemanager:: Getfirstnode 方法  
+##  <a name="getfirstnode"></a>  Iresourcemanager:: Getfirstnode 方法  
  傳回資源管理員所定義之列舉順序中的第一個節點。  
   
 ```
@@ -119,14 +123,14 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>傳回值  
  資源管理員所定義的列舉順序中的第一個節點。  
   
-##  <a name="iresourcemanager__osversion"></a>Iresourcemanager:: Osversion 列舉  
+##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration  
  代表作業系統版本的列舉類型。  
   
 ```
 enum OSVersion;
 ```  
   
-##  <a name="reference"></a>Iresourcemanager:: Reference 方法  
+##  <a name="reference"></a>  Iresourcemanager:: Reference 方法  
  資源管理員執行個體上的參考計數遞增。  
   
 ```
@@ -136,7 +140,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="return-value"></a>傳回值  
  產生的參考計數。  
   
-##  <a name="registerscheduler"></a>Iresourcemanager:: Registerscheduler 方法  
+##  <a name="registerscheduler"></a>  Iresourcemanager:: Registerscheduler 方法  
  註冊排程器與資源管理員。 排程器註冊後，它應該與資源管理員使用`ISchedulerProxy`傳回的介面。  
   
 ```
@@ -160,7 +164,7 @@ virtual ISchedulerProxy *RegisterScheduler(
   
  方法會擲回`invalid_argument`例外狀況如果參數`pScheduler`值`NULL`或參數`version`不是有效的版本的通訊介面。  
   
-##  <a name="release"></a>Iresourcemanager:: Release 方法  
+##  <a name="release"></a>  Iresourcemanager:: Release 方法  
  資源管理員執行個體的參考計數遞減。 資源管理員會終結其參考計數變成`0`。  
   
 ```

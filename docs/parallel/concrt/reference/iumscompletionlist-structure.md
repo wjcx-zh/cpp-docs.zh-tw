@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList
 - CONCRTRM/concurrency::IUMSCompletionList::IUMSCompletionList::GetUnblockNotifications
-dev_langs: C++
-helpviewer_keywords: IUMSCompletionList structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 50fd2381174e947e243ad6aa40516be5fd728902
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 378eccbc0e29a9356ffd89699039b9877c76c751
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList 結構
 代表 UMS 完成清單。 當 UMS 執行緒封鎖時，會分派排程器的指定排程內容，以決定封鎖原始執行緒時要在基礎虛擬處理器根排程的內容。 原始執行緒解除封鎖時，作業系統會將它佇列到可透過此介面存取的完成清單中。 排程器可以在指派的排程內容或其搜尋工作的其他任何位置查詢完成清單。  
@@ -40,7 +44,7 @@ struct IUMSCompletionList;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Iumscompletionlist:: Getunblocknotifications](#getunblocknotifications)|擷取一連串`IUMSUnblockNotification`代表其相關聯的執行緒 proxy 已解除封鎖，因為上一次這個方法叫用的執行內容的介面。|  
+|[IUMSCompletionList::GetUnblockNotifications](#getunblocknotifications)|擷取一連串`IUMSUnblockNotification`代表其相關聯的執行緒 proxy 已解除封鎖，因為上一次這個方法叫用的執行內容的介面。|  
   
 ## <a name="remarks"></a>備註  
  排程器必須小心 hierarchy 之後使用這個介面來清除佇列中的完成清單項目執行哪些動作。 項目應該放在排程器的清單中的可執行的內容，並且儘速是普遍可存取。 它是鎖定的完全有可能從佇列中清除項目具有指定任意擁有權。 排程器可以進行的呼叫來清除佇列的項目與那些項目，通常可從排程器內的清單上的位置之間可能會封鎖任何任意函式呼叫。  
@@ -53,7 +57,7 @@ struct IUMSCompletionList;
   
  **命名空間：** concurrency  
   
-##  <a name="getunblocknotifications"></a>Iumscompletionlist:: Getunblocknotifications 方法  
+##  <a name="getunblocknotifications"></a>  Iumscompletionlist:: Getunblocknotifications 方法  
  擷取一連串`IUMSUnblockNotification`代表其相關聯的執行緒 proxy 已解除封鎖，因為上一次這個方法叫用的執行內容的介面。  
   
 ```

@@ -1,30 +1,33 @@
 ---
-title: "code_seg |Microsoft 文件"
+title: code_seg | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - code_seg_CPP
 - vc-pragma.code_seg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 35ead52e9e084eb1770e3532d15848e168d8af90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 57511efccff22a1f1d6e7dcd957d75066b072c55
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="codeseg"></a>code_seg
 指定文字區段，其中函式儲存在 .obj 檔案中。  
@@ -44,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  沒有參數的 `code_seg` pragma 指示詞會將後續目的碼的文字區段名稱變更為 .text。  
   
- **推播**（選擇性）  
+ **推入**（選擇性）  
  將記錄放置到內部編譯器堆疊上。 A**發送**可以有`identifier`和`segment-name`。  
   
  **pop** （選擇性）  
@@ -53,7 +56,7 @@ ms.lasthandoff: 12/21/2017
  `identifier` (選擇性)  
  當搭配**發送**，會指派名稱給內部編譯器堆疊的記錄。 當搭配**pop**，會將記錄在內部堆疊，直到`identifier`已移除; 如果`identifier`找不到在內部堆疊，不會推出。  
   
- `identifier`可讓多筆記錄即可只使用一個推出**pop**命令。  
+ `identifier` 可讓多筆記錄即可只使用一個推出**pop**命令。  
   
  "`segment-name`" (選擇項)  
  區段的名稱。 當搭配**pop**，時會推出堆疊和`segment-name`會變成作用中的文字區段名稱。  

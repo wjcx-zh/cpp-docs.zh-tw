@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::grab
 - amp_short_vectors/Concurrency::graphics::norm_4::agrb
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::get_wzy
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd224633ae41fcdfdae09f4fe2f7de97e0b3836
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e15af7601483fd1d69462291c9c45dc62b5aded4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm4-class"></a>norm_4 類別
 表示短向量的四個一般數字。  
@@ -455,13 +458,13 @@ class norm_4;
 |名稱|描述|  
 |----------|-----------------|  
 |norm_4::operator-||  
-|norm_4::operator-||  
-|norm_4::operator * =||  
-|norm_4::operator / =||  
-|norm_4::operator + +||  
-|norm_4::operator + =||  
-|norm_4::operator =||  
-|norm_4::operator =||  
+|norm_4::operator--||  
+|norm_4::operator*=||  
+|norm_4::operator/=||  
+|norm_4::operator++||  
+|norm_4::operator+=||  
+|norm_4::operator=||  
+|norm_4::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -610,7 +613,7 @@ class norm_4;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>norm_4 
+##  <a name="ctor"></a> norm_4 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -702,7 +705,7 @@ explicit inline norm_4(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="norm_4__size"></a>大小 
+##  <a name="norm_4__size"></a> 大小 
 
 ```  
 static const int size = 4;  

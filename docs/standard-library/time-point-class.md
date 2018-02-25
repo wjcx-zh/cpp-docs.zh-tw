@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::time_point
 - chrono/std::chrono::time_point::time_point
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], time_point
-ms.workload: cplusplus
-ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], time_point
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d81f49fd94dcedacfe33de75e307a441f74a94e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timepoint-class"></a>time_point 類別
 `time_point` 描述可代表時間點的類型。 其會保留類型 [duration](../standard-library/duration-class.md) 的物件，儲存自樣板引數 `Clock` 所表示的 epoch 之後的已耗用時間。  
@@ -75,7 +79,7 @@ class time_point;
   
  **命名空間：** std::chrono  
   
-##  <a name="max"></a>time_point:: max
+##  <a name="max"></a>  time_point::max
  靜態方法會傳回型別 `time_point::ref` 的上限值。  
   
 ```  
@@ -85,7 +89,7 @@ static constexpr time_point max();
 ### <a name="return-value"></a>傳回值  
  實際上，系統會傳回 `time_point(duration::max())`。  
   
-##  <a name="min"></a>time_point:: min
+##  <a name="min"></a>  time_point::min
  靜態方法會傳回型別 `time_point::ref` 的下限值。  
   
 ```  
@@ -149,7 +153,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
   
  第三個建構函式會使用 `Tp.time_since_epoch()` 初始化其 `duration` 值。  
   
-##  <a name="time_since_epoch"></a>time_point:: time_since_epoch
+##  <a name="time_since_epoch"></a>  time_point::time_since_epoch
  擷取預存的[duration](../standard-library/duration-class.md) 值。  
   
 ```  

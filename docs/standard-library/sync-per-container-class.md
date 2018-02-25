@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - allocators/stdext::sync_per_container
 - allocators/stdext::sync_per_container::equals
-dev_langs: C++
-helpviewer_keywords: sync_per_container class
+dev_langs:
+- C++
+helpviewer_keywords:
+- sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7864b6367d716ff7504982c4a8cbbed55f7784c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2c98e8f7524864e5249c08e2b6f3d4a38ea8e4be
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container 類別
 描述可為每個配置器物件提供不同快取物件的[同步處理篩選](../standard-library/allocators-header.md)。  

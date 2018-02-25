@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB consumer templates [C++], transaction support
 - transactions [C++], OLE DB support for
@@ -16,29 +18,29 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9be6fb1c86b43f7833818648d84875b1e4c55b59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84849b2d9bfd899a0ffd8a5d8eafe12f91a4adce
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="supporting-transactions-in-ole-db"></a>支援 OLE DB 中的異動
 A[交易](../../data/transactions-mfc-data-access.md)是群組，或批次，一系列的資料來源的更新，讓不是全部成功就無法認可一次就 （如果有任何一個將會失敗） 就無法認可任何的方法和回復整個交易。 此程序可確保資料來源上的結果的完整性。  
   
  OLE DB 支援交易，與下列三種方法：  
   
--   [Itransactionlocal:: Starttransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
+-   [ITransactionLocal::StartTransaction](https://msdn.microsoft.com/en-us/library/ms709786.aspx)  
   
--   [Itransaction:: Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
+-   [ITransaction::Commit](https://msdn.microsoft.com/en-us/library/ms713008.aspx)  
   
--   [Itransaction:: Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
+-   [ITransaction::Abort](https://msdn.microsoft.com/en-us/library/ms709833.aspx)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>工作階段和交易的關聯性  
  單一資料來源物件可以建立一或多個工作階段物件，其中每一個都可以是內部或外部交易，以在指定的時間範圍。  

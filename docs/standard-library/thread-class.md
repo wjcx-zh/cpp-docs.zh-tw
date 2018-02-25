@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - thread/std::thread
 - thread/std::thread::id Class
@@ -18,9 +19,10 @@ f1_keywords:
 - thread/std::thread::joinable
 - thread/std::thread::native_handle
 - thread/std::thread::swap
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: df249bc7-ff81-4ff9-a6d6-5e3d9a8f56a1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -34,12 +36,13 @@ helpviewer_keywords:
 - std::thread [C++], joinable
 - std::thread [C++], native_handle
 - std::thread [C++], swap
-ms.workload: cplusplus
-ms.openlocfilehash: 2e2d9d1bd19b34cd4b542d0325b06ad57e1a7c51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8a681e61888653c0abada81c5b35ff3b96b75200
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="thread-class"></a>thread 類別
 定義一個物件，用來觀察和管理應用程式內執行的執行緒。  
@@ -73,7 +76,7 @@ class thread;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[卸離](#detach)|從 `thread` 物件中斷連結相關聯的執行緒。|  
+|[detach](#detach)|從 `thread` 物件中斷連結相關聯的執行緒。|  
 |[get_id](#get_id)|傳回相關聯執行緒的唯一識別碼。|  
 |[hardware_concurrency](#hardware_concurrency)|靜態。 傳回硬體執行緒內容的估計數目。|  
 |[join](#join)|封鎖，直到相關聯的執行緒完成為止。|  
@@ -92,7 +95,7 @@ class thread;
   
  **命名空間：** std  
   
-##  <a name="detach"></a>thread:: detach
+##  <a name="detach"></a>  thread::detach
  中斷連結相關聯的執行緒。 作業系統會變成負責在終止時釋放執行緒資源。  
   
 ```
@@ -106,7 +109,7 @@ void detach();
   
  如果與呼叫物件相關聯的執行緒無效，函式會擲回 `system_error`，且錯誤碼為 `no_such_process`。  
   
-##  <a name="get_id"></a>thread:: get_id
+##  <a name="get_id"></a>  thread::get_id
  取得相關聯執行緒的唯一識別碼。  
   
 ```
@@ -116,7 +119,7 @@ id get_id() const noexcept;
 ### <a name="return-value"></a>傳回值  
  可唯一識別相關聯執行緒的 [thread:: id](#id_class) 物件，或者，如果沒有與物件相關聯的執行緒，則會傳回 `thread::id()`。  
   
-##  <a name="hardware_concurrency"></a>thread:: hardware_concurrency
+##  <a name="hardware_concurrency"></a>  thread::hardware_concurrency
  靜態方法，會傳回硬體執行緒內容的估計數目。  
   
 ```
@@ -140,7 +143,7 @@ class thread::id {
   
  所有預設建構的 `thread::id` 物件都會比較是否相等。  
   
-##  <a name="join"></a>thread:: join
+##  <a name="join"></a>  thread::join
  封鎖，直到與呼叫物件相關聯之執行的執行緒完成為止。  
   
 ```
@@ -150,7 +153,7 @@ void join();
 ### <a name="remarks"></a>備註  
  如果呼叫成功，針對呼叫物件後續呼叫 [get_id](#get_id) 就會傳回預設的 [thread:: id](#id_class)，而其不會比較是否等於任何現有執行緒的 `thread::id`；如果呼叫失敗，則 `get_id` 所傳回的值就會保持不變。  
   
-##  <a name="joinable"></a>thread:: joinable
+##  <a name="joinable"></a>  thread::joinable
  指定是否「可加入」相關聯的執行緒。  
   
 ```
@@ -163,7 +166,7 @@ bool joinable() const noexcept;
 ### <a name="remarks"></a>備註  
  如果 `get_id() != id()`，執行緒物件就是「可加入」。  
   
-##  <a name="native_handle"></a>thread:: native_handle
+##  <a name="native_handle"></a>  thread::native_handle
  傳回代表執行緒控制代碼的實作特定類型。 您可以利用實作特定的方式來使用執行緒控制代碼。  
   
 ```
@@ -192,7 +195,7 @@ thread& operator=(thread&& Other) noexcept;
   
  建立關聯之後，會將 `Other` 設為預設建構狀態。  
   
-##  <a name="swap"></a>thread:: swap
+##  <a name="swap"></a>  thread::swap
  與指定 `thread` 物件的狀態交換物件狀態。  
   
 ```

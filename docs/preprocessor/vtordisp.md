@@ -1,30 +1,33 @@
 ---
-title: "vtordisp |Microsoft 文件"
+title: vtordisp | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.vtordisp
 - vtordisp_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2b06584862e7aa09b7a271f1c999787eed84d7af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3cdb90de659dfe0f366d6501bc18c18e0cf39fff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vtordisp"></a>vtordisp
 **C + + 特定的**  
@@ -63,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
  指定 `1` 或 `on` 時，預設會在所需的位置啟用隱藏的 `vtordisp` 成員。  
   
- 指定`2`啟用隱藏`vtordisp`具有虛擬函式的所有虛擬基底的成員。  `vtordisp(2)`可能需要確保正確的效能`dynamic_cast`部分建構的物件上。 如需詳細資訊，請參閱[編譯器警告 （層級 1） C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)。  
+ 指定`2`啟用隱藏`vtordisp`具有虛擬函式的所有虛擬基底的成員。  `vtordisp(2)` 可能需要確保正確的效能`dynamic_cast`部分建構的物件上。 如需詳細資訊，請參閱[編譯器警告 （層級 1） C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)。  
   
  `#pragma vtordisp()` (不含引數)，將 vtordisp 設定還原為其初始設定值。  
   

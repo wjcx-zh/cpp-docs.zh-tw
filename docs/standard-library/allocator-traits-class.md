@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::allocator_traits
 - memory/std::allocator_traits::propagate_on_container_move_assignment
@@ -26,9 +27,10 @@ f1_keywords:
 - memory/std::allocator_traits::destroy
 - memory/std::allocator_traits::max_size
 - memory/std::allocator_traits::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -51,12 +53,13 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.workload: cplusplus
-ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d732b91a1c7a288cf22fea61e9565a794bb3380d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 類別
 此範本類別所描述的物件補充說明「配置器類型」。 配置器類型是任何類型，可描述用來管理所配置儲存空間的配置器物件。 具體來說，針對任何配置器類型 `Alloc`，您可以使用 `allocator_traits<Alloc>` 來判斷啟用配置器之容器所需的所有資訊。 如需詳細資訊，請參閱預設 [allocator 類別](../standard-library/allocator-class.md)。  
@@ -101,7 +104,7 @@ class allocator_traits;
   
  **命名空間：** std  
   
-##  <a name="allocate"></a>allocator_traits:: allocate
+##  <a name="allocate"></a>  allocator_traits::allocate
  靜態方法，使用指定的配置器參數來配置記憶體。  
   
 ```cpp  
@@ -128,7 +131,7 @@ static pointer allocate(Alloc& al, size_type count,
   
  如果該運算式的格式良好，則第二個方法會傳回 `al.allocate(count, hint)`；否則會傳回 `al.allocate(count)`。  
   
-##  <a name="construct"></a>allocator_traits:: construct
+##  <a name="construct"></a>  allocator_traits::construct
  靜態方法，使用指定的配置器來建構物件。  
   
 ```cpp  
@@ -149,7 +152,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ### <a name="remarks"></a>備註  
  如果該運算式的格式良好，則靜態成員函式會呼叫 `al.construct(ptr, args...)`；否則會評估 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`。  
   
-##  <a name="deallocate"></a>allocator_traits:: deallocate
+##  <a name="deallocate"></a>  allocator_traits::deallocate
  靜態方法，使用指定的配置器來解除配置指定數目的物件。  
   
 ```cpp  
@@ -173,7 +176,7 @@ static void deallocate(Alloc al,
   
  這個方法不會擲回任何項目。  
   
-##  <a name="destroy"></a>allocator_traits:: destroy
+##  <a name="destroy"></a>  allocator_traits::destroy
  靜態方法，使用指定的配置器在物件上呼叫解構函式，而不解除配置其記憶體。  
   
 ```cpp  
@@ -191,7 +194,7 @@ static void destroy(Alloc& al, Uty* ptr);
 ### <a name="remarks"></a>備註  
  如果該運算式的格式良好，則此方法會呼叫 `al.destroy(ptr)`；否則會評估 `ptr->~Uty()`。  
   
-##  <a name="max_size"></a>allocator_traits:: max_size
+##  <a name="max_size"></a>  allocator_traits::max_size
  靜態方法，使用指定的配置器來決定可配置的物件數目上限。  
   
 ```cpp  
@@ -205,7 +208,7 @@ static size_type max_size(const Alloc& al);
 ### <a name="remarks"></a>備註  
  如果該運算式的格式良好，則此方法會傳回 `al.max_size()`；否則會傳回 `numeric_limits<size_type>::max()`。  
   
-##  <a name="select_on_container_copy_construction"></a>allocator_traits:: select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
  靜態方法，可在指定的配置器上呼叫 `select_on_container_copy_construction`。  
   
 ```cpp  

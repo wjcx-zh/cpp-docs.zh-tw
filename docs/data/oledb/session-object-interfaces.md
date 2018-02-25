@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - session objects [OLE DB]
 - session objects [OLE DB], interfaces
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: abb869becff4f2a4af9d489736c21b66674cc112
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71ac196508fc5b5054015bdc161476b75af2a598
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="session-object-interfaces"></a>工作階段物件介面
 下表顯示 OLE DB 所定義的工作階段物件的必要和選擇性介面。  
@@ -47,10 +49,10 @@ ms.lasthandoff: 12/21/2017
 |[ITableCreation](https://msdn.microsoft.com/en-us/library/ms713639.aspx)|Optional|否|  
 |[ITableDefinition](https://msdn.microsoft.com/en-us/library/ms714277.aspx)|Optional|否|  
 |[ITableDefinitionWithConstraints](https://msdn.microsoft.com/en-us/library/ms720947.aspx)|Optional|否|  
-|[Itransaction::](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Optional|否|  
+|[ITransaction](https://msdn.microsoft.com/en-us/library/ms723053.aspx)|Optional|否|  
 |[ITransactionJoin](https://msdn.microsoft.com/en-us/library/ms718071.aspx)|Optional|否|  
 |[ITransactionLocal](https://msdn.microsoft.com/en-us/library/ms714893.aspx)|Optional|否|  
-|[J](https://msdn.microsoft.com/en-us/library/ms713659.aspx)|Optional|否|  
+|[ITransactionObject](https://msdn.microsoft.com/en-us/library/ms713659.aspx)|Optional|否|  
   
  工作階段物件建立資料列集物件。 如果提供者支援的命令，在工作階段也會建立命令物件 (`CCommand`，實作 OLE DB **TCommand**)。 命令物件會實作`ICommand`介面並使用`ICommand::Execute`資料列集上執行命令，如下圖所示的方法。  
   

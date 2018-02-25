@@ -5,23 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97f03dbf71c0f8b97b750532279e4cc76d01fb64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空間函式
 ||||  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>get_sampler  
+##  <a name="get_sampler"></a>  get_sampler  
  取得在指定加速器上的 D3D 取樣器狀態介面檢視表示指定的取樣器物件。  
   
 ```  
@@ -49,7 +51,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>傳回值  
  對應至 D3D 取樣器狀態，表示指定的取樣器 IUnknown 介面指標。  
   
-##  <a name="get_texture"></a>get_texture  
+##  <a name="get_texture"></a>  get_texture  
  取得指定基礎 Direct3D 紋理介面[紋理](texture-class.md)物件。  
   
 ```  
@@ -92,7 +94,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>傳回值  
  對應至基礎紋理 Direct3D 紋理 IUnknown 介面指標。  
   
-##  <a name="make_sampler"></a>make_sampler  
+##  <a name="make_sampler"></a>  make_sampler  
  建立從 D3D 取樣器狀態的介面指標的取樣器。  
   
 ```  
@@ -106,7 +108,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  樣本中，代表提供的 D3D 取樣器狀態。  
   
-##  <a name="make_texture"></a>make_texture  
+##  <a name="make_texture"></a>  make_texture  
  建立[紋理](texture-class.md)物件使用指定的參數。  
   
 ```  
@@ -139,7 +141,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>傳回值  
  使用提供的 D3D 紋理紋理。  
   
-##  <a name="msad4"></a>msad4  
+##  <a name="msad4"></a>  msad4  
  比較 4 位元組參考值取值並且 8 個位元組的來源值，並且累積文件 4 加總的向量。 每個總和會對應至遮罩絕對差異不同位元組對齊的參考值取值並且來源值的總和。  
   
 ```  
@@ -165,7 +167,7 @@ inline uint4 msad4(
 ## <a name="requirements"></a>需求  
  **標頭：** amp_graphics.h  
   
- **命名空間：** Concurrency::graphics::direct3d 
+ **Namespace:** Concurrency::graphics::direct3d 
 
 ## <a name="see-also"></a>請參閱  
  [Concurrency::graphics::direct3d 命名空間](concurrency-graphics-direct3d-namespace.md)

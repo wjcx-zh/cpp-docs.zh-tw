@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#define'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#define'
+dev_langs:
+- C++
 helpviewer_keywords:
 - define directive (#define), syntax
 - preprocessor, directives
@@ -16,24 +19,25 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a42b1b823ac69ba9a92535076ba8ec45f6c9710d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-directive-cc"></a>#define 指示詞 (C/C++)
 `#define`建立*巨集*，這是識別項或參數化識別項與語彙基元字串的關聯。 定義巨集之後，編譯器就可以使用語彙基元字串替代原始程式檔中出現的每個識別項。  
   
 ## <a name="syntax"></a>語法  
- `#define`*識別碼**語彙基元字串*選擇加入  
+ `#define` *識別項**語彙基元字串*選擇加入  
   
- `#define`*識別碼* `(` *識別碼*選擇`,`*...* `,`*識別碼*選擇`)`*語彙基元字串*選擇加入  
+ `#define` *identifier* `(` *identifier*opt`,`*...*`,`*identifier*opt`)`*token-string*opt  
   
 ## <a name="remarks"></a>備註  
  `#define`指示詞會造成編譯器替代*語彙基元字串*每次發生*識別碼*原始程式檔中。 *識別碼*只有當組件可構成語彙基元會被取代。 也就是說，*識別碼*如果它顯示在註解，在字串中，或為較長的識別項部分未被取代。 如需詳細資訊，請參閱[語彙基元](../cpp/tokens-cpp.md)。  
@@ -73,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  如果新定義與原始定義在語法上相同，Microsoft C/C++ 可讓您重新定義巨集。 換句話說，這兩個定義可以有不同的參數名稱。 這個行為與 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C 不同，後者要求這兩個定義在語彙上應完全相同。  
   
- 例如，下列兩個巨集除了參數名稱之外完全相同。 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]C 不允許這類重新定義，但 Microsoft C/c + + 所編譯的是它不會發生錯誤。  
+ 例如，下列兩個巨集除了參數名稱之外完全相同。 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C 不允許這類重新定義，但 Microsoft C/c + + 所編譯的是它不會發生錯誤。  
   
 ```  
 #define multiply( f1, f2 ) ( f1 * f2 )  

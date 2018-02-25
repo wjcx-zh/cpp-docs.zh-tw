@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::get_z
 - amp_short_vectors/Concurrency::graphics::norm_3::operator=
@@ -77,18 +78,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_yx
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3145aa734b37a965430810727962f3f13e5fe49f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b697dec751cade2accb262c59b23983ac75d4205
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm3-class"></a>norm_3 類別
 表示短向量的三個一般數字。  
@@ -132,12 +135,12 @@ class norm_3;
 |norm_3::get_zxy||  
 |norm_3::get_zy||  
 |norm_3::get_zyx||  
-|norm_3:: ref_b||  
-|norm_3:: ref_g||  
-|norm_3:: ref_r||  
-|norm_3:: ref_x||  
-|norm_3:: ref_y||  
-|norm_3:: ref_z||  
+|norm_3::ref_b||  
+|norm_3::ref_g||  
+|norm_3::ref_r||  
+|norm_3::ref_x||  
+|norm_3::ref_y||  
+|norm_3::ref_z||  
 |norm_3::set_x||  
 |norm_3::set_xy||  
 |norm_3::set_xyz||  
@@ -159,13 +162,13 @@ class norm_3;
 |名稱|描述|  
 |----------|-----------------|  
 |norm_3::operator-||  
-|norm_3::operator-||  
-|norm_3::operator * =||  
-|norm_3::operator / =||  
-|norm_3::operator + +||  
-|norm_3::operator + =||  
-|norm_3::operator =||  
-|norm_3::operator =||  
+|norm_3::operator--||  
+|norm_3::operator*=||  
+|norm_3::operator/=||  
+|norm_3::operator++||  
+|norm_3::operator+=||  
+|norm_3::operator=||  
+|norm_3::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -216,7 +219,7 @@ class norm_3;
   
  **命名空間：** concurrency:: graphics  
 
-## <a name="ctor"></a>norm_3 建構函式
+## <a name="ctor">norm_3 建構函式</a>
 預設建構函式，初始化為 0 的所有項目。  
   
 ## <a name="syntax"></a>語法  

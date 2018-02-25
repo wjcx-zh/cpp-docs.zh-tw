@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::get_ywxz
 - amp_short_vectors/Concurrency::graphics::int_4::xzyw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::abrg
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fa890cf7fc41160b91d77a564328f8f674a11c32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 947ed0a89e4b940a9c35e2b87eeeb860f71a7ab9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="int4-class"></a>int_4 類別
 代表簡短的四個整數向量。  
@@ -307,7 +310,7 @@ class int_4;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[int_4 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
+|[int_4 Constructor](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -455,20 +458,20 @@ class int_4;
 |名稱|描述|  
 |----------|-----------------|  
 |int_4::operator-||  
-|int_4::operator-||  
-|int_4::operator %=||  
-|int_4::operator （& a) =||  
-|int_4::operator * =||  
-|int_4::operator / =||  
-|int_4::operator ^ =||  
-|int_4::operator &#124; =||  
-|int_4::operator ~||  
-|int_4::operator + +||  
-|int_4::operator + =||  
-|int_4::operator <\<=||  
-|int_4::operator =||  
-|int_4::operator =||  
-|int_4::operator >> =||  
+|int_4::operator--||  
+|int_4::operator%=||  
+|int_4::operator&=||  
+|int_4::operator*=||  
+|int_4::operator/=||  
+|int_4::operator^=||  
+|int_4::operator&#124;=||  
+|int_4::operator~||  
+|int_4::operator++||  
+|int_4::operator+=||  
+|int_4::operator<\<=||  
+|int_4::operator=||  
+|int_4::operator-=||  
+|int_4::operator>>=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -617,7 +620,7 @@ class int_4;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>int_4 
+##  <a name="ctor"></a> int_4 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -688,7 +691,7 @@ explicit inline int_4(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="int_4__size"></a>大小 
+##  <a name="int_4__size"></a> 大小 
 
 ```  
 static const int size = 4;  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -23,7 +24,8 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bitset-class"></a>bitset 類別
 描述物件類型，其可儲存由固定位元數所組成的序列，以提供精簡的方式，來保留一組項目或條件的旗標。 bitset 類別支援類型 bitset 物件上的作業，該作業包含位元的集合，並提供每一個位元的常數時間存取。  
@@ -466,7 +469,7 @@ bitset\<N>& flip(size_t _Pos);
  叫用成員函式之已修改的 bitset 複本。  
   
 ### <a name="remarks"></a>備註  
- 如果指定為參數的位置大於已反轉其位元之 **bitset\<***N***>** 的大小 *N*，第二個成員函式會擲回 [out_of_range](../standard-library/out-of-range-class.md) 例外狀況。  
+ 第二個成員函式會擲回[out_of_range](../standard-library/out-of-range-class.md)例外狀況的位置指定為參數是否大於大小*N*的**bitset\<***N*** >** 具有位元已反轉。  
   
 ### <a name="example"></a>範例  
   
@@ -1173,7 +1176,7 @@ public:
  針對類別參考的第一個、第二個和第五個成員函式，會是引數位置所指定之 bitset 中的位元參考；針對類別參考的第三個和第四個成員函式，會是 **true** 或 **false**，以反映 bitset 中已修改的位元值。  
   
 ### <a name="remarks"></a>備註  
- 類別 `reference` 只有作為 bitset `operator[]` 的協助程式類別時才會出現。 此成員類別描述可存取 bitset 中個別位元的物件。 讓 *b* 成為 `bool` 類型的物件、讓 *x* 和 *y* 物件屬於 **bitset\<***N***>** 類型，並讓 *i* 和 *j* 成為這類物件中的有效位置。 標記法 *x [i]* 參考位於 bitset *x* 中位置 *i* 的位元。 `reference` 類別的成員函式會依序提供下列作業：  
+ 類別 `reference` 只有作為 bitset `operator[]` 的協助程式類別時才會出現。 此成員類別描述可存取 bitset 中個別位元的物件。 可讓*b*是類型的物件`bool`， *x*和*y*類型的物件**bitset\<***N*** >**，和*我*和*j*這類物件中的有效位置。 標記法 *x [i]* 參考位於 bitset *x* 中位置 *i* 的位元。 `reference` 類別的成員函式會依序提供下列作業：  
   
 |運算|定義|  
 |---------------|----------------|  

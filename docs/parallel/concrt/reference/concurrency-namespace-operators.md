@@ -5,22 +5,24 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9305f860fb393d2f5d3149300d8df4cfa9f6e5a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ad453a764a87d0d7e54b914b935fd46f56cd4cac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 命名空間運算子
 ||||  
@@ -29,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>運算子 &#124; &#124;運算子  
+##  <a name="operator_lor"></a>  operator&#124;&#124; Operator  
  建立工作，這個工作將會在兩個當做引數提供的任一工作已順利完成時成功完成。  
   
 ```  
@@ -72,7 +74,7 @@ inline task<void> operator||(
 ### <a name="remarks"></a>備註  
  如果兩個工作都取消或擲回例外狀況，則傳回的工作會以已取消狀態完成，而且其中一個例外狀況 (如果有發生) 會在您呼叫該工作上的 `get()` 或 `wait()` 時擲回。  
   
-##  <a name="operator_amp_amp"></a>運算子&amp;&amp;運算子  
+##  <a name="operator_amp_amp"></a>  operator&amp;&amp; Operator  
  建立工作，這個工作將會在兩個當做引數提供的工作都已順利完成時成功完成。  
   
 ```  
@@ -121,7 +123,7 @@ inline task<void>  operator&&(
 ### <a name="remarks"></a>備註  
  如果其中一個工作取消或擲回例外狀況，則傳回的工作會在已取消狀態中提早完成，而且例外狀況 (如果有發生) 會在您呼叫該工作上的 `get()` 或 `wait()` 時擲回。  
   
-##  <a name="operator_eq_eq"></a>運算子 = = 運算子  
+##  <a name="operator_eq_eq"></a>  operator== Operator  
  測試運算子左邊的 `concurrent_vector` 物件是否等於右邊的 `concurrent_vector` 物件。  
   
 ```  
@@ -148,14 +150,14 @@ inline bool operator== (
  `concurrent_vector` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果運算子左邊的並行向量和相等運算子; 右邊的並行向量否則`false`。  
+ `true` 如果運算子左邊的並行向量和相等運算子; 右邊的並行向量否則`false`。  
   
 ### <a name="remarks"></a>備註  
  兩個的並行向量相等，如果它們有相同數目的項目，而且個別元素擁有相同的值。 反之則為不相等。  
   
  這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
-##  <a name="operator_neq"></a>運算子 ！ = 運算子  
+##  <a name="operator_neq"></a>  運算子 ！ = 運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否不等於右邊的 `concurrent_vector` 物件。  
   
 ```  
@@ -182,14 +184,14 @@ inline bool operator!= (
  `concurrent_vector` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果並行向量是否不相等。`false`並行向量是否相等。  
+ `true` 如果並行向量是否不相等。`false`並行向量是否相等。  
   
 ### <a name="remarks"></a>備註  
  兩個的並行向量相等，如果它們有相同數目的項目，而且個別元素擁有相同的值。 反之則為不相等。  
   
  這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
-##  <a name="operator_lt"></a>運算子&lt;運算子  
+##  <a name="operator_lt"></a>  運算子&lt;運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否小於右邊的 `concurrent_vector` 物件。  
   
 ```  
@@ -216,14 +218,14 @@ inline bool operator<(
  `concurrent_vector` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果運算子左邊的並行向量小於運算子; 右邊的並行向量否則`false`。  
+ `true` 如果運算子左邊的並行向量小於運算子; 右邊的並行向量否則`false`。  
   
 ### <a name="remarks"></a>備註  
  這個運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
   
  這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
-##  <a name="operator_lt_eq"></a>運算子&lt;= 運算子  
+##  <a name="operator_lt_eq"></a>  運算子&lt;= 運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否小於或等於右邊的 `concurrent_vector` 物件。  
   
 ```  
@@ -250,14 +252,14 @@ inline bool operator<= (
  `concurrent_vector` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果運算子左邊的並行向量小於或等於運算子; 右邊的並行向量否則`false`。  
+ `true` 如果運算子左邊的並行向量小於或等於運算子; 右邊的並行向量否則`false`。  
   
 ### <a name="remarks"></a>備註  
  這個運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
   
  這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
-##  <a name="operator_gt"></a>運算子&gt;運算子  
+##  <a name="operator_gt"></a>  運算子&gt;運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否大於右邊的 `concurrent_vector` 物件。  
   
 ```  
@@ -291,7 +293,7 @@ inline bool operator>(
   
  這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
-##  <a name="operator_gt_eq"></a>運算子&gt;= 運算子  
+##  <a name="operator_gt_eq"></a>  運算子&gt;= 運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否大於或等於右邊的 `concurrent_vector` 物件。  
   
 ```  
@@ -318,7 +320,7 @@ inline bool operator>= (
  `concurrent_vector` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果運算子左邊的並行向量大於或等於運算子; 右邊的並行向量否則`false`。  
+ `true` 如果運算子左邊的並行向量大於或等於運算子; 右邊的並行向量否則`false`。  
   
 ### <a name="remarks"></a>備註  
  這個運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::get_xw
 - amp_short_vectors/Concurrency::graphics::double_4::wxz
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::set_xwyz
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9a5e0df270914eb469ced57936df2d5bfe617948
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1762d985bacb5dc35f7b8e61633bd53c6e08c03a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="double4-class"></a>double_4 類別
 表示短向量的四個雙精度浮點數。  
@@ -377,14 +380,14 @@ class double_4;
 |double_4::get_zywx||  
 |double_4::get_zyx||  
 |double_4::get_zyxw||  
-|double_4:: ref_a||  
-|double_4:: ref_b||  
-|double_4:: ref_g||  
-|double_4:: ref_r||  
-|double_4:: ref_w||  
-|double_4:: ref_x||  
-|double_4:: ref_y||  
-|double_4:: ref_z||  
+|double_4::ref_a||  
+|double_4::ref_b||  
+|double_4::ref_g||  
+|double_4::ref_r||  
+|double_4::ref_w||  
+|double_4::ref_x||  
+|double_4::ref_y||  
+|double_4::ref_z||  
 |double_4::set_w||  
 |double_4::set_wx||  
 |double_4::set_wxy||  
@@ -455,13 +458,13 @@ class double_4;
 |名稱|描述|  
 |----------|-----------------|  
 |double_4::operator-||  
-|double_4::operator-||  
-|double_4::operator * =||  
-|double_4::operator / =||  
-|double_4::operator + +||  
-|double_4::operator + =||  
-|double_4::operator =||  
-|double_4::operator =||  
+|double_4::operator--||  
+|double_4::operator*=||  
+|double_4::operator/=||  
+|double_4::operator++||  
+|double_4::operator+=||  
+|double_4::operator=||  
+|double_4::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -610,7 +613,7 @@ class double_4;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>double_4 
+##  <a name="ctor"></a> double_4 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -681,7 +684,7 @@ explicit inline double_4(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="double_4__size"></a>大小 
+##  <a name="double_4__size"></a> 大小 
 
 ```  
 static const int size = 4;  

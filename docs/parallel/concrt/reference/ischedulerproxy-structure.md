@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ISchedulerProxy
 - CONCRTRM/concurrency::ISchedulerProxy
@@ -16,19 +17,22 @@ f1_keywords:
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::Shutdown
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::SubscribeCurrentThread
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::UnbindContext
-dev_langs: C++
-helpviewer_keywords: ISchedulerProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b151e68c9cce0113c46f0eaffff8e19ed4d5c896
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9fa2a67b432fac1dc7ec685e6563acb87fd69087
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 結構
 排程器用來與並行執行階段的資源管理員通訊，以協調資源配置的介面。  
@@ -45,12 +49,12 @@ struct ISchedulerProxy;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Ischedulerproxy:: Bindcontext](#bindcontext)|如果它尚未與一個，關聯的執行緒 proxy，將執行內容。|  
-|[Ischedulerproxy:: Createoversubscriber](#createoversubscriber)|建立新的虛擬處理器根上現有的執行資源相關聯的硬體執行緒。|  
-|[Ischedulerproxy:: Requestinitialvirtualprocessors](#requestinitialvirtualprocessors)|要求的初始配置的虛擬處理器根。 每個虛擬處理器根代表執行一個執行緒可以執行工作排程器的能力。|  
-|[Ischedulerproxy:: Shutdown](#shutdown)|向資源管理員通知排程器正在關閉。 這會導致立即回收授與給排程器的所有資源的資源管理員。|  
-|[Ischedulerproxy:: Subscribecurrentthread](#subscribecurrentthread)|註冊目前的執行緒與資源管理員，將它與這個排程器產生關聯。|  
-|[Ischedulerproxy:: Unbindcontext](#unbindcontext)|從所指定的執行內容的執行緒 proxy 會解除關聯`pContext`參數並傳回至執行緒 proxy 處理站可用集區。 這個方法只能呼叫執行內容是透過繫結[ischedulerproxy:: Bindcontext](#bindcontext)方法而且尚未啟動透過正在`pContext`參數[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)方法呼叫。|  
+|[ISchedulerProxy::BindContext](#bindcontext)|如果它尚未與一個，關聯的執行緒 proxy，將執行內容。|  
+|[ISchedulerProxy::CreateOversubscriber](#createoversubscriber)|建立新的虛擬處理器根上現有的執行資源相關聯的硬體執行緒。|  
+|[ISchedulerProxy::RequestInitialVirtualProcessors](#requestinitialvirtualprocessors)|要求的初始配置的虛擬處理器根。 每個虛擬處理器根代表執行一個執行緒可以執行工作排程器的能力。|  
+|[ISchedulerProxy::Shutdown](#shutdown)|向資源管理員通知排程器正在關閉。 這會導致立即回收授與給排程器的所有資源的資源管理員。|  
+|[ISchedulerProxy::SubscribeCurrentThread](#subscribecurrentthread)|註冊目前的執行緒與資源管理員，將它與這個排程器產生關聯。|  
+|[ISchedulerProxy::UnbindContext](#unbindcontext)|從所指定的執行內容的執行緒 proxy 會解除關聯`pContext`參數並傳回至執行緒 proxy 處理站可用集區。 這個方法只能呼叫執行內容是透過繫結[ischedulerproxy:: Bindcontext](#bindcontext)方法而且尚未啟動透過正在`pContext`參數[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)方法呼叫。|  
   
 ## <a name="remarks"></a>備註  
  資源管理員交給`ISchedulerProxy`介面，以註冊使用每一個排程器[iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler)方法。  
@@ -63,7 +67,7 @@ struct ISchedulerProxy;
   
  **命名空間：** concurrency  
   
-##  <a name="bindcontext"></a>Ischedulerproxy:: Bindcontext 方法  
+##  <a name="bindcontext"></a>  Ischedulerproxy:: Bindcontext 方法  
  如果它尚未與一個，關聯的執行緒 proxy，將執行內容。  
   
 ```
@@ -77,9 +81,9 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 ### <a name="remarks"></a>備註  
  一般來說， [ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)方法會依需求執行內容項目繫結的執行緒 proxy。 有，不過，情況就必須繫結內容，事先才能確保`SwitchTo`方法切換至已繫結的內容。 這是在 UMS 排程內容，因為它無法呼叫方法，以配置記憶體的案例，而繫結的執行緒 proxy 可能涉及記憶體配置，如果執行緒 proxy 不便於使用的執行緒 proxy 處理站可用集區中。  
   
- `invalid_argument`如果擲回參數`pContext`值`NULL`。  
+ `invalid_argument` 如果擲回參數`pContext`值`NULL`。  
   
-##  <a name="createoversubscriber"></a>Ischedulerproxy:: Createoversubscriber 方法  
+##  <a name="createoversubscriber"></a>  Ischedulerproxy:: Createoversubscriber 方法  
  建立新的虛擬處理器根上現有的執行資源相關聯的硬體執行緒。  
   
 ```
@@ -98,7 +102,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
   
  因為 `IVirtualProcessorRoot` 介面繼承自 `IExecutionResource` 介面，所以您甚至可以過度訂閱現有的虛擬處理器根。  
   
-##  <a name="requestinitialvirtualprocessors"></a>Ischedulerproxy:: Requestinitialvirtualprocessors 方法  
+##  <a name="requestinitialvirtualprocessors"></a>  ISchedulerProxy::RequestInitialVirtualProcessors Method  
  要求的初始配置的虛擬處理器根。 每個虛擬處理器根代表執行一個執行緒可以執行工作排程器的能力。  
   
 ```
@@ -123,7 +127,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
   
  指訂閱執行緒會增加 1 基礎硬體執行緒的訂用帳戶層級。 訂用帳戶層級會減 1 結束訂用帳戶時。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-##  <a name="shutdown"></a>Ischedulerproxy:: Shutdown 方法  
+##  <a name="shutdown"></a>  Ischedulerproxy:: Shutdown 方法  
  向資源管理員通知排程器正在關閉。 這會導致立即回收授與給排程器的所有資源的資源管理員。  
   
 ```
@@ -137,7 +141,7 @@ virtual void Shutdown() = 0;
   
  排程器不需要透過呼叫 `Remove` 方法的方式，分別傳回資源管理員授與它的所有虛擬處理器根，因為所有虛擬處理器根都會在關閉時傳回資源管理員。  
   
-##  <a name="subscribecurrentthread"></a>Ischedulerproxy:: Subscribecurrentthread 方法  
+##  <a name="subscribecurrentthread"></a>  Ischedulerproxy:: Subscribecurrentthread 方法  
  註冊目前的執行緒與資源管理員，將它與這個排程器產生關聯。  
   
 ```
@@ -154,7 +158,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
   
  指訂閱執行緒會增加 1 基礎硬體執行緒的訂用帳戶層級。 訂用帳戶層級會減 1 結束訂用帳戶時。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-##  <a name="unbindcontext"></a>Ischedulerproxy:: Unbindcontext 方法  
+##  <a name="unbindcontext"></a>  Ischedulerproxy:: Unbindcontext 方法  
  從所指定的執行內容的執行緒 proxy 會解除關聯`pContext`參數並傳回至執行緒 proxy 處理站可用集區。 這個方法只能呼叫執行內容是透過繫結[ischedulerproxy:: Bindcontext](#bindcontext)方法而且尚未啟動透過正在`pContext`參數[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)方法呼叫。  
   
 ```

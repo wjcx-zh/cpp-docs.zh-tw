@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IScheduler
 - CONCRTRM/concurrency::IScheduler
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IScheduler::IScheduler::NotifyResourcesExternallyIdle
 - CONCRTRM/concurrency::IScheduler::IScheduler::RemoveVirtualProcessors
 - CONCRTRM/concurrency::IScheduler::IScheduler::Statistics
-dev_langs: C++
-helpviewer_keywords: IScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c639bd760b837923f3011e9209d923fef31f8aee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler 結構
 工作排程器抽象概念的介面。 並行執行階段的資源管理員會使用這個介面與工作排程器通訊。  
@@ -46,13 +50,13 @@ struct IScheduler;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|提供一組的虛擬處理器根排程器，其用途。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行工作，代表排程器的權限。|  
-|[Ischeduler:: Getid](#getid)|排程器傳回的唯一識別碼。|  
-|[Ischeduler:: Getpolicy](#getpolicy)|傳回排程器原則的複本。 如需排程器原則的詳細資訊，請參閱[SchedulerPolicy](schedulerpolicy-class.md)。|  
-|[Ischeduler:: Notifyresourcesexternallybusy](#notifyresourcesexternallybusy)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`現在正由其他排程器。|  
-|[Ischeduler:: Notifyresourcesexternallyidle](#notifyresourcesexternallyidle)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`不正由其他排程器。|  
-|[Ischeduler:: Removevirtualprocessors](#removevirtualprocessors)|起始移除先前配置給這個排程器的虛擬處理器根。|  
-|[Ischeduler:: Statistics](#statistics)|提供工作從抵達到完成率和排程器佇列長度的變更相關資訊。|  
+|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|提供一組的虛擬處理器根排程器，其用途。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行工作，代表排程器的權限。|  
+|[IScheduler::GetId](#getid)|排程器傳回的唯一識別碼。|  
+|[IScheduler::GetPolicy](#getpolicy)|傳回排程器原則的複本。 如需排程器原則的詳細資訊，請參閱[SchedulerPolicy](schedulerpolicy-class.md)。|  
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`現在正由其他排程器。|  
+|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`不正由其他排程器。|  
+|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|起始移除先前配置給這個排程器的虛擬處理器根。|  
+|[IScheduler::Statistics](#statistics)|提供工作從抵達到完成率和排程器佇列長度的變更相關資訊。|  
   
 ## <a name="remarks"></a>備註  
  如果您實作自訂的排程器進行通訊與資源管理員，您應該提供的實作`IScheduler`介面。 這個介面是通訊的雙向的排程器與資源管理員之間通道的一端。 另一端由`IResourceManager`和`ISchedulerProxy`介面會實作資源管理員。  
@@ -65,7 +69,7 @@ struct IScheduler;
   
  **命名空間：** concurrency  
   
-##  <a name="addvirtualprocessors"></a>Ischeduler:: Addvirtualprocessors 方法  
+##  <a name="addvirtualprocessors"></a>  Ischeduler:: Addvirtualprocessors 方法  
  提供一組的虛擬處理器根排程器，其用途。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行工作，代表排程器的權限。  
   
 ```
@@ -84,7 +88,7 @@ virtual void AddVirtualProcessors(
 ### <a name="remarks"></a>備註  
  資源管理員會叫用`AddVirtualProcessor`授與一組初始的虛擬處理器根排程器的方法。 它也無法叫用方法時它會重新平衡排程器之間的資源，將虛擬處理器根排程器。  
   
-##  <a name="getid"></a>Ischeduler:: Getid 方法  
+##  <a name="getid"></a>  Ischeduler:: Getid 方法  
  排程器傳回的唯一識別碼。  
   
 ```
@@ -99,7 +103,7 @@ virtual unsigned int GetId() const = 0;
   
  從不同來源取得的識別項可能會導致未定義的行為。  
   
-##  <a name="getpolicy"></a>Ischeduler:: Getpolicy 方法  
+##  <a name="getpolicy"></a>  Ischeduler:: Getpolicy 方法  
  傳回排程器原則的複本。 如需排程器原則的詳細資訊，請參閱[SchedulerPolicy](schedulerpolicy-class.md)。  
   
 ```
@@ -109,7 +113,7 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 ### <a name="return-value"></a>傳回值  
  排程器原則的複本。  
   
-##  <a name="notifyresourcesexternallybusy"></a>Ischeduler:: Notifyresourcesexternallybusy 方法  
+##  <a name="notifyresourcesexternallybusy"></a>  Ischeduler:: Notifyresourcesexternallybusy 方法  
  這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`現在正由其他排程器。  
   
 ```
@@ -134,7 +138,7 @@ virtual void NotifyResourcesExternallyBusy(
   
  排程器會評估符合通知時，取得一組初始的通知而建立，告知到它已指派的資源會從外部忙碌或閒置。  
   
-##  <a name="notifyresourcesexternallyidle"></a>Ischeduler:: Notifyresourcesexternallyidle 方法  
+##  <a name="notifyresourcesexternallyidle"></a>  Ischeduler:: Notifyresourcesexternallyidle 方法  
  這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`不正由其他排程器。  
   
 ```
@@ -159,7 +163,7 @@ virtual void NotifyResourcesExternallyIdle(
   
  排程器會評估符合通知時，取得一組初始的通知而建立，告知到它已指派的資源會從外部忙碌或閒置。  
   
-##  <a name="removevirtualprocessors"></a>Ischeduler:: Removevirtualprocessors 方法  
+##  <a name="removevirtualprocessors"></a>  Ischeduler:: Removevirtualprocessors 方法  
  起始移除先前配置給這個排程器的虛擬處理器根。  
   
 ```
@@ -180,7 +184,7 @@ virtual void RemoveVirtualProcessors(
   
  參數`ppVirtualProcessorRoots`指向之介面的陣列。 要移除的虛擬處理器根物件的集合，之間根目錄有從未啟用可以使用立即傳回`Remove`方法。 根目錄，已啟用和任一個執行的工作，或已遭停用而且正在等候送達時，工作應該會以非同步方式傳回。 排程器必須進行不斷嘗試以便盡快移除虛擬處理器根。 延遲的虛擬處理器根移除可能會導致意外的過度訂閱的排程器內。  
   
-##  <a name="statistics"></a>Ischeduler:: Statistics 方法  
+##  <a name="statistics"></a>  Ischeduler:: Statistics 方法  
  提供工作從抵達到完成率和排程器佇列長度的變更相關資訊。  
   
 ```

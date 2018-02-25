@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ISource
 - AGENTS/concurrency::ISource
@@ -19,19 +20,22 @@ f1_keywords:
 - AGENTS/concurrency::ISource::reserve
 - AGENTS/concurrency::ISource::unlink_target
 - AGENTS/concurrency::ISource::unlink_targets
-dev_langs: C++
-helpviewer_keywords: ISource class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6db1fe614de8a3f47bae989ccb26512c375cec50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="isource-class"></a>ISource 類別
 `ISource` 類別是所有來源區塊的介面。 來源區塊會將訊息傳播至 `ITarget` 區塊。  
@@ -65,9 +69,9 @@ class ISource;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[接受](#accept)|當在衍生類別中覆寫時，接受有提供此訊息`ISource`區塊中，將擁有權傳送給呼叫者。|  
+|[accept](#accept)|當在衍生類別中覆寫時，接受有提供此訊息`ISource`區塊中，將擁有權傳送給呼叫者。|  
 |[acquire_ref](#acquire_ref)|當在衍生類別中覆寫時，取得這個參考計數`ISource`區塊，導致無法刪除。|  
-|[使用](#consume)|當在衍生類別中覆寫時，會使用先前提供由此訊息`ISource`封鎖，且已成功保留目標，將擁有權傳送給呼叫者。|  
+|[consume](#consume)|當在衍生類別中覆寫時，會使用先前提供由此訊息`ISource`封鎖，且已成功保留目標，將擁有權傳送給呼叫者。|  
 |[link_target](#link_target)|在衍生類別中覆寫，將目標區塊連結至這個`ISource`區塊。|  
 |[release](#release)|當在衍生類別中覆寫時，釋放先前成功的訊息保留。|  
 |[release_ref](#release_ref)|當在衍生類別中覆寫時，釋放此參考計數`ISource`區塊。|  
@@ -86,7 +90,7 @@ class ISource;
   
  **命名空間：** concurrency  
   
-##  <a name="accept"></a>接受 
+##  <a name="accept"></a> 接受 
 
  當在衍生類別中覆寫時，接受有提供此訊息`ISource`區塊中，將擁有權傳送給呼叫者。  
   
@@ -109,7 +113,7 @@ virtual message<T>* accept(
 ### <a name="remarks"></a>備註  
  `accept`由此所提供的訊息時，方法呼叫目標`ISource`區塊。 訊息指標傳回可能不同於傳遞給`propagate`方法`ITarget`封鎖，如果此來源決定要建立一份訊息。  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  當在衍生類別中覆寫時，取得這個參考計數`ISource`區塊，導致無法刪除。  
   
@@ -124,7 +128,7 @@ virtual void acquire_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`ITarget`連結到這個期間的來源物件`link_target`方法。  
   
-##  <a name="consume"></a>使用 
+##  <a name="consume"></a> 使用 
 
  當在衍生類別中覆寫時，會使用先前提供由此訊息`ISource`封鎖，且已成功保留目標，將擁有權傳送給呼叫者。  
   
@@ -147,7 +151,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>備註  
  `consume`方法很類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。  
   
-##  <a name="dtor"></a>~ ISource 
+##  <a name="dtor"></a> ~ISource 
 
  終結`ISource`物件。  
   
@@ -155,7 +159,7 @@ virtual message<T>* consume(
 virtual ~ISource();
 ```  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  在衍生類別中覆寫，將目標區塊連結至這個`ISource`區塊。  
   
@@ -167,7 +171,7 @@ virtual void link_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  正在連結到此目標區塊的指標`ISource`區塊。  
   
-##  <a name="release"></a>發行 
+##  <a name="release"></a> 發行 
 
  當在衍生類別中覆寫時，釋放先前成功的訊息保留。  
   
@@ -184,7 +188,7 @@ virtual void release(
  `_PTarget`  
  正在呼叫的目標區塊的指標`release`方法。  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  當在衍生類別中覆寫時，釋放此參考計數`ISource`區塊。  
   
@@ -199,7 +203,7 @@ virtual void release_ref(_Inout_ ITarget<T>* _PTarget) = 0;
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`ITarget`要從這個來源取消連結的物件。 來源區塊，才能釋放任何資源保留給目標區塊。  
   
-##  <a name="reserve"></a>保留 
+##  <a name="reserve"></a> 保留 
 
  當在衍生類別中覆寫時，會保留先前提供的這一則訊息`ISource`區塊。  
   
@@ -217,12 +221,12 @@ virtual bool reserve(
  正在呼叫的目標區塊的指標`reserve`方法。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果訊息已成功保留，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。  
+ `true` 如果訊息已成功保留，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。  
   
 ### <a name="remarks"></a>備註  
  在您呼叫後`reserve`，如果成功，您必須呼叫`consume`或`release`才能採取或放棄擁有的訊息，分別。  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  當在衍生類別中覆寫時，取消連結的目標區塊從這個`ISource`如果封鎖先前連結中找到。  
   
@@ -234,7 +238,7 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
  `_PTarget`  
  正在從這個連結的目標區塊的指標`ISource`區塊。  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  當在衍生類別中覆寫時，取消連結所有目標區塊，從這個`ISource`區塊。  
   

@@ -1,26 +1,31 @@
 ---
-title: "copyin |Microsoft 文件"
+title: copyin | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: copyin
-dev_langs: C++
-helpviewer_keywords: copyin OpenMP clause
+ms.topic: reference
+f1_keywords:
+- copyin
+dev_langs:
+- C++
+helpviewer_keywords:
+- copyin OpenMP clause
 ms.assetid: 369efa88-613c-4cb1-9e11-7b9ee08a4b25
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3190c1f6914ae8ea24b968a8cf286de1867938cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ae680b2af468b9b11a7d2de44966ad554eec0150
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="copyin"></a>copyin
 可讓執行緒存取主執行緒的值，如[threadprivate](../../../parallel/openmp/reference/threadprivate.md)變數。  
@@ -38,13 +43,13 @@ copyin(var)
  `threadprivate`存在於之前平行建構將主執行緒中的變數的值初始化的變數。  
   
 ## <a name="remarks"></a>備註  
- `copyin`適用於下列指示詞：  
+ `copyin` 適用於下列指示詞：  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
  如需詳細資訊，請參閱[2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)。  
   

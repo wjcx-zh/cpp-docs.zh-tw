@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3aa6fc5331340c110f2325762bbe46409d53d1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96927d7e1a6718f4663ca42248140ac5a7d8fe50
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="input-stream-member-functions"></a>輸入資料流成員函式
 輸入資料流成員函式是用於磁碟輸入。 成員函式包括：  
@@ -52,7 +55,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12"></a>Get
+##  <a name="vclrfthegetfunctionanchor12">Get</a>
  未格式化的 **get** 成員函式運作方式與 **>>** 運算子相同，但有兩個例外。 第一，**get** 函式包含空白字元，但在已設定 **skipws** 旗標 (預設) 的情況下，擷取器則會排除空白字元。 第二，**get** 函式較不可能導致將繫結的輸出資料流 (例如 `cout`) 清除。  
   
  **get** 函式的變化可指定緩衝區位址，以及要讀取的字元數上限。 這對於限制傳送給特定變數的字元數來說，相當有用，如以下範例所示：  
@@ -86,7 +89,7 @@ int main()
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13"></a>Getline
+##  <a name="vclrfthegetlinefunctionanchor13">Getline</a>
  **getline** 成員函式與 **get** 函式類似。 這兩個函式都允許使用第三引數來指定輸入的終止字元。 預設值是新行字元。 這兩個函式都會保留一個字元作為所需的終止字元。 不過，**get** 會保留資料流中的終止字元，而 **getline** 則是會移除終止字元。  
   
  以下範例會指定輸入資料流的終止字元：  
@@ -112,7 +115,7 @@ int main( )
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14"></a>唯讀
+##  <a name="vclrfthereadfunctionanchor14">唯讀</a>
  **read** 成員函式會從檔案將位元組讀取到指定的記憶體區域。 長度引數會決定所讀取的位元組數目。 如果您未將該引數包含在內，則在到達檔案的實際結尾時就會停止讀取，或在文字模式檔案的案例中，則是會在讀取到內嵌的 `EOF` 字元時停止讀取。  
   
  此範例會從薪資檔案將二進位記錄讀取到結構中：  

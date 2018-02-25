@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
 - amp_short_vectors/Concurrency::graphics::uint_4::get_yxw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::set_xywz
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4de759866580cce03dae40c5fe2fe5cb9482013b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d70672b5d862164607afefde3de758fdd269d60
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uint4-class"></a>uint_4 類別
 表示短向量的四個不帶正負號的整數。  
@@ -378,14 +381,14 @@ class uint_4;
 |uint_4::get_zywx||  
 |uint_4::get_zyx||  
 |uint_4::get_zyxw||  
-|uint_4:: ref_a||  
-|uint_4:: ref_b||  
-|uint_4:: ref_g||  
-|uint_4:: ref_r||  
-|uint_4:: ref_w||  
-|uint_4:: ref_x||  
-|uint_4:: ref_y||  
-|uint_4:: ref_z||  
+|uint_4::ref_a||  
+|uint_4::ref_b||  
+|uint_4::ref_g||  
+|uint_4::ref_r||  
+|uint_4::ref_w||  
+|uint_4::ref_x||  
+|uint_4::ref_y||  
+|uint_4::ref_z||  
 |uint_4::set_w||  
 |uint_4::set_wx||  
 |uint_4::set_wxy||  
@@ -456,13 +459,13 @@ class uint_4;
 |名稱|描述|  
 |----------|-----------------|  
 |uint_4::operator-||  
-|uint_4::operator-||  
-|uint_4::operator * =||  
-|uint_4::operator / =||  
-|uint_4::operator + +||  
-|uint_4::operator + =||  
-|uint_4::operator =||  
-|uint_4::operator =||  
+|uint_4::operator--||  
+|uint_4::operator*=||  
+|uint_4::operator/=||  
+|uint_4::operator++||  
+|uint_4::operator+=||  
+|uint_4::operator=||  
+|uint_4::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -612,7 +615,7 @@ class uint_4;
   
  **命名空間：** concurrency:: graphics  
   
-## <a name="uint_4__ctor"></a>uint_4 
+## <a name="uint_4__ctor"></a> uint_4 
 
 預設建構函式，初始化為 0 的所有項目。
   
@@ -668,7 +671,7 @@ explicit inline uint_4(
  `_Other`  
  用來初始化物件。  
   
-## <a name=""></a>大小 
+## <a name=""></a> 大小 
 
 ## <a name="syntax"></a>語法  
   

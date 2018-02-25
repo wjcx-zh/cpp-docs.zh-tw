@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ITopologyNode
 - CONCRTRM/concurrency::ITopologyNode
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetId
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNext
 - CONCRTRM/concurrency::ITopologyNode::ITopologyNode::GetNumaNode
-dev_langs: C++
-helpviewer_keywords: ITopologyNode structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9c2e989dca783e90d975bd46a6f5f44cdfa469ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 結構
 資源管理員所定義的拓撲節點介面。 節點可包含一個或多個執行資源。  
@@ -44,11 +48,11 @@ struct ITopologyNode;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|傳回結合在這個節點下的執行資源數目。|  
-|[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|傳回依列舉順序在這個節點下設為群組的第一個執行資源。|  
-|[Itopologynode:: Getid](#getid)|傳回這個節點的資源管理員的唯一識別碼。|  
-|[Itopologynode:: Getnext](#getnext)|讓介面返回列舉順序中的下一個拓撲節點。|  
-|[Itopologynode:: Getnumanode](#getnumanode)|傳回 Windows 指派給這個資源管理員節點所屬的 NUMA 節點數目。|  
+|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|傳回結合在這個節點下的執行資源數目。|  
+|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|傳回依列舉順序在這個節點下設為群組的第一個執行資源。|  
+|[ITopologyNode::GetId](#getid)|傳回這個節點的資源管理員的唯一識別碼。|  
+|[ITopologyNode::GetNext](#getnext)|讓介面返回列舉順序中的下一個拓撲節點。|  
+|[ITopologyNode::GetNumaNode](#getnumanode)|傳回 Windows 指派給這個資源管理員節點所屬的 NUMA 節點數目。|  
   
 ## <a name="remarks"></a>備註  
  通常利用此介面為觀察到由資源管理員逐步系統的拓撲。  
@@ -61,7 +65,7 @@ struct ITopologyNode;
   
  **命名空間：** concurrency  
   
-##  <a name="getexecutionresourcecount"></a>Itopologynode:: Getexecutionresourcecount 方法  
+##  <a name="getexecutionresourcecount"></a>  ITopologyNode::GetExecutionResourceCount Method  
  傳回結合在這個節點下的執行資源數目。  
   
 ```
@@ -71,7 +75,7 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 ### <a name="return-value"></a>傳回值  
  結合在這個節點下的執行資源數目。  
   
-##  <a name="getfirstexecutionresource"></a>Itopologynode:: Getfirstexecutionresource 方法  
+##  <a name="getfirstexecutionresource"></a>  Itopologynode:: Getfirstexecutionresource 方法  
  傳回依列舉順序在這個節點下設為群組的第一個執行資源。  
   
 ```
@@ -81,7 +85,7 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ### <a name="return-value"></a>傳回值  
  依列舉順序在這個節點下設為群組的第一個執行資源。  
   
-##  <a name="getid"></a>Itopologynode:: Getid 方法  
+##  <a name="getid"></a>  Itopologynode:: Getid 方法  
  傳回這個節點的資源管理員的唯一識別碼。  
   
 ```
@@ -96,7 +100,7 @@ virtual unsigned int GetId() const = 0;
   
  您可以從函式取得的節點數目[GetProcessorNodeCount](concurrency-namespace-functions.md)。  
   
-##  <a name="getnext"></a>Itopologynode:: Getnext 方法  
+##  <a name="getnext"></a>  Itopologynode:: Getnext 方法  
  讓介面返回列舉順序中的下一個拓撲節點。  
   
 ```
@@ -106,7 +110,7 @@ virtual ITopologyNode *GetNext() const = 0;
 ### <a name="return-value"></a>傳回值  
  介面返回列舉順序中的下一個節點。 如果系統拓撲的列舉順序中沒有其他節點，這個方法將傳回值 `NULL`。  
   
-##  <a name="getnumanode"></a>Itopologynode:: Getnumanode 方法  
+##  <a name="getnumanode"></a>  Itopologynode:: Getnumanode 方法  
  傳回 Windows 指派給這個資源管理員節點所屬的 NUMA 節點數目。  
   
 ```

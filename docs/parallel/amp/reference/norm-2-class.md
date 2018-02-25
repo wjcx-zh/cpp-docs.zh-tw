@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::set_x
 - amp_short_vectors/Concurrency::graphics::norm_2::set_xy
@@ -33,18 +34,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8c593121846c3eace21c16d00013af1bd46f54fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8a3cf125ab89c159f27fe212018780699926e79
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="norm2-class"></a>norm_2 類別
 代表兩個一般數字的短向量。  
@@ -91,13 +94,13 @@ class norm_2;
 |名稱|描述|  
 |----------|-----------------|  
 |norm_2::operator-||  
-|norm_2::operator-||  
-|norm_2::operator * =||  
-|norm_2::operator / =||  
-|norm_2::operator + +||  
-|norm_2::operator + =||  
-|norm_2::operator =||  
-|norm_2::operator =||  
+|norm_2::operator--||  
+|norm_2::operator*=||  
+|norm_2::operator/=||  
+|norm_2::operator++||  
+|norm_2::operator+=||  
+|norm_2::operator=||  
+|norm_2::operator-=||  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -126,7 +129,7 @@ class norm_2;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="ctor"></a>norm_2 
+##  <a name="ctor"></a> norm_2 
 
  預設建構函式，初始化為 0 的所有項目。  
   
@@ -206,7 +209,7 @@ explicit inline norm_2(
  `_Other`  
  用來初始化物件。  
   
-##  <a name="norm_2__size"></a>大小 
+##  <a name="norm_2__size"></a> 大小 
 
 ```  
 static const int size = 2;  

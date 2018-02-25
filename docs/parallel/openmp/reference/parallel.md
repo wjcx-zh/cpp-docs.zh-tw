@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: parallel
-dev_langs: C++
-helpviewer_keywords: parallel OpenMP directive
+ms.topic: reference
+f1_keywords:
+- parallel
+dev_langs:
+- C++
+helpviewer_keywords:
+- parallel OpenMP directive
 ms.assetid: b8e90073-e85b-4d39-8ed8-0364441794fb
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9f6b10c681eb12d38d33c50fe9e652ffd095dd4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9293a70ce0615adf1e40bcb19b1706d9e39d4cca
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="parallel"></a>parallel
 定義在平行區域，也就是將由多個執行緒以平行方式執行的程式碼。  
@@ -57,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [共用](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
   
  **平行**也可用以[區段](../../../parallel/openmp/reference/sections-openmp.md)和[如](../../../parallel/openmp/reference/for-openmp.md)指示詞。  
   

@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 51d501139d0610d670f7d646dc985a694a5b741c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e8d47e6376b3786b27305e65bdb55f0c292995d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="openmp-directives"></a>OpenMP 指示詞
 提供使用 OpenMP API 中的指示詞連結。  
@@ -33,9 +36,9 @@ ms.lasthandoff: 12/21/2017
 |[flush](../../../parallel/openmp/reference/flush-openmp.md)|指定所有執行緒都有相同檢視的所有共用物件的記憶體。|  
 |[for](../../../parallel/openmp/reference/for-openmp.md)|會導致在執行工作分割為個執行緒在平行區域內的迴圈。|  
 |[master](../../../parallel/openmp/reference/master.md)|指定只有主要 threadshould 執行的程式 > 一節。|  
-|[排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)|指定應該執行迴圈，像是循序迴圈平行化該程式碼。|  
+|[ordered](../../../parallel/openmp/reference/ordered-openmp-directives.md)|指定應該執行迴圈，像是循序迴圈平行化該程式碼。|  
 |[parallel](../../../parallel/openmp/reference/parallel.md)|定義在平行區域，也就是將由多個執行緒以平行方式執行的程式碼。|  
-|[區段](../../../parallel/openmp/reference/sections-openmp.md)|識別要當做被除數所有執行緒之間的程式碼區段。|  
+|[sections](../../../parallel/openmp/reference/sections-openmp.md)|識別要當做被除數所有執行緒之間的程式碼區段。|  
 |[single](../../../parallel/openmp/reference/single.md)|可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。|  
 |[threadprivate](../../../parallel/openmp/reference/threadprivate.md)|指定在執行緒私用變數。|  
   

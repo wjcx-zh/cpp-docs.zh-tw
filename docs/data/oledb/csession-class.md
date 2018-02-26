@@ -4,35 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CSession
 - ATL::CSession
 - ATL.CSession
-dev_langs: C++
-helpviewer_keywords: CSession class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSession class
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d8b6bb75d12b4ab96c3a44c74f4487eb8a70efc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5f2a764aaa7e10b957955dc11ee35ee44f9472
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csession-class"></a>CSession 類別
 代表單一資料庫存取工作階段。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 class CSession  
 ```  
   
@@ -44,7 +47,7 @@ class CSession
 |-|-|  
 |[中止](../../data/oledb/csession-abort.md)|取消 （終止） 交易。|  
 |[關閉](../../data/oledb/csession-close.md)|關閉工作階段。|  
-|[認可](../../data/oledb/csession-commit.md)|認可的交易。|  
+|[Commit](../../data/oledb/csession-commit.md)|認可的交易。|  
 |[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|傳回有關交易的資訊。|  
 |[開啟](../../data/oledb/csession-open.md)|開啟資料來源物件的新工作階段。|  
 |[StartTransaction](../../data/oledb/csession-starttransaction.md)|開始新的交易，此工作階段。|  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - choice
 - AGENTS/concurrency::choice
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::choice::unlink_target
 - AGENTS/concurrency::choice::unlink_targets
 - AGENTS/concurrency::choice::value
-dev_langs: C++
-helpviewer_keywords: choice class
+dev_langs:
+- C++
+helpviewer_keywords:
+- choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ec7383340e9502764514bb61ce8e10f6cb64c616
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="choice-class"></a>choice 類別
 `choice` 傳訊區塊是多來源的單一目標區塊，代表與一組來源的控制流程互動。 選擇區塊會等候多個來源的其中一個來產生訊息，而且會傳播產生訊息之來源的索引。  
@@ -65,18 +69,18 @@ class choice: public ISource<size_t>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[選擇](#ctor)|多載。 建構 `choice` 傳訊區塊。|  
+|[choice](#ctor)|多載。 建構 `choice` 傳訊區塊。|  
 |[~ choice 解構函式](#dtor)|終結`choice`傳訊區塊。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[接受](#accept)|接受的訊息，有提供這`choice`區塊中，將擁有權傳送給呼叫者。|  
+|[accept](#accept)|接受的訊息，有提供這`choice`區塊中，將擁有權傳送給呼叫者。|  
 |[acquire_ref](#acquire_ref)|取得這個參考計數`choice`傳訊區塊，導致無法刪除。|  
-|[使用](#consume)|會使用先前提供由此訊息`choice`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。|  
+|[consume](#consume)|會使用先前提供由此訊息`choice`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。|  
 |[has_value](#has_value)|檢查是否這`choice`傳訊區塊具有值尚未初始化。|  
-|[索引](#index)|傳回指數`tuple`代表所選取的項目`choice`傳訊區塊。|  
+|[index](#index)|傳回指數`tuple`代表所選取的項目`choice`傳訊區塊。|  
 |[link_target](#link_target)|將目標區塊連結至這個`choice`傳訊區塊。|  
 |[release](#release)|釋放先前成功的訊息保留。|  
 |[release_ref](#release_ref)|釋放此參考計數`choice`傳訊區塊。|  
@@ -100,7 +104,7 @@ class choice: public ISource<size_t>;
   
  **命名空間：** concurrency  
   
-##  <a name="accept"></a>接受 
+##  <a name="accept"></a> 接受 
 
  接受的訊息，有提供這`choice`區塊中，將擁有權傳送給呼叫者。  
   
@@ -120,7 +124,7 @@ virtual message<size_t>* accept(
 ### <a name="return-value"></a>傳回值  
  呼叫端現在具有的擁有權的訊息指標。  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  取得這個參考計數`choice`傳訊區塊，導致無法刪除。  
   
@@ -135,7 +139,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`ITarget`連結到這個期間的來源物件`link_target`方法。  
   
-##  <a name="ctor"></a>選擇 
+##  <a name="ctor"></a> 選擇 
 
  建構 `choice` 傳訊區塊。  
   
@@ -176,7 +180,7 @@ choice(
   
  移動建構函式不會在鎖定下執行，這表示使用者必須確認在移動時沒有任何輕量工作在執行中。 否則，可能發生許多競爭情況，導致例外狀況或不一致的狀態。  
   
-##  <a name="dtor"></a>~ 選擇 
+##  <a name="dtor"></a> ~choice 
 
  終結`choice`傳訊區塊。  
   
@@ -184,7 +188,7 @@ choice(
 ~choice();
 ```  
   
-##  <a name="consume"></a>使用 
+##  <a name="consume"></a> 使用 
 
  會使用先前提供由此訊息`choice`傳訊區塊和目標，將擁有權傳送給呼叫者已成功保留。  
   
@@ -207,7 +211,7 @@ virtual message<size_t>* consume(
 ### <a name="remarks"></a>備註  
  `consume`方法很類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。  
   
-##  <a name="has_value"></a>has_value 
+##  <a name="has_value"></a> has_value 
 
  檢查是否這`choice`傳訊區塊具有值尚未初始化。  
   
@@ -218,9 +222,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果區塊已接收值，`false`否則。  
+ `true` 如果區塊已接收值，`false`否則。  
   
-##  <a name="index"></a>索引 
+##  <a name="index"></a> 索引 
 
  傳回指數`tuple`代表所選取的項目`choice`傳訊區塊。  
   
@@ -234,7 +238,7 @@ size_t index();
 ### <a name="remarks"></a>備註  
  可以使用擷取訊息裝載`get`方法。  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  將目標區塊連結至這個`choice`傳訊區塊。  
   
@@ -246,7 +250,7 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  指標`ITarget`區塊連結至這個`choice`傳訊區塊。  
   
-##  <a name="release"></a>發行 
+##  <a name="release"></a> 發行 
 
  釋放先前成功的訊息保留。  
   
@@ -263,7 +267,7 @@ virtual void release(
  `_PTarget`  
  正在呼叫的目標區塊的指標`release`方法。  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  釋放此參考計數`choice`傳訊區塊。  
   
@@ -278,7 +282,7 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`ITarget`要從這個來源取消連結的物件。 來源區塊，才能釋放任何資源保留給目標區塊。  
   
-##  <a name="reserve"></a>保留 
+##  <a name="reserve"></a> 保留 
 
  由此先前提供的訊息會保留`choice`傳訊區塊。  
   
@@ -296,12 +300,12 @@ virtual bool reserve(
  正在呼叫的目標區塊的指標`reserve`方法。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果訊息已成功保留，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。  
+ `true` 如果訊息已成功保留，`false`否則。 保留失敗可能有許多原因，包括：訊息已經保留或已由另一個目標接受、來源拒絕保留等等。  
   
 ### <a name="remarks"></a>備註  
  在您呼叫後`reserve`，如果成功，您必須呼叫`consume`或`release`才能採取或放棄擁有的訊息，分別。  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  取消連結的目標區塊，從這個`choice`傳訊區塊。  
   
@@ -313,7 +317,7 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  指標`ITarget`從此取消連結的區塊`choice`傳訊區塊。  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  取消連結所有從這個目標`choice`傳訊區塊。  
   
@@ -324,7 +328,7 @@ virtual void unlink_targets();
 ### <a name="remarks"></a>備註  
  這個方法不需要從解構函式呼叫，因為解構函式內部`single_assignment`區塊將會取消連結正確。  
   
-##  <a name="value"></a>值 
+##  <a name="value"></a> 值 
 
  取得索引的所選取的訊息`choice`傳訊區塊。  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - combinable
 - PPL/concurrency::combinable
@@ -15,19 +16,22 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs: C++
-helpviewer_keywords: combinable class
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="combinable-class"></a>combinable 類別
 `combinable<T>` 物件適用於提供資料的執行緒私用複本，在平行演算法期間執行無鎖定的執行緒-本機子運算。 在平行作業結尾處，可以將執行緒私用子運算合併於最終結果。 這個類別可以用來代替共用變數，而且如果該共用變數有許多爭用情形，則可能可以改進效能。  
@@ -49,7 +53,7 @@ class combinable;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[可組合的類別](#ctor)|多載。 建構新`combinable`物件。|  
+|[combinable](#ctor)|多載。 建構新`combinable`物件。|  
 |[~ combinable 解構函式](#dtor)|終結 `combinable` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
@@ -59,7 +63,7 @@ class combinable;
 |[clear](#clear)|清除任何計算的中繼結果，從先前的使用方式。|  
 |[combine](#combine)|藉由呼叫提供的結合仿函式計算執行緒-本機子運算集中的最後一個值。|  
 |[combine_each](#combine_each)|藉由呼叫執行緒區域子計算每一次提供的結合仿函式計算執行緒-本機子運算集中的最後一個值。 最終的結果會累積函式物件。|  
-|[本機](#local)|多載。 傳回執行緒私用子運算的參考。|  
+|[local](#local)|多載。 傳回執行緒私用子運算的參考。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -78,7 +82,7 @@ class combinable;
   
  **命名空間：** concurrency  
   
-##  <a name="clear"></a>清除 
+##  <a name="clear"></a> 清除 
 
  清除任何計算的中繼結果，從先前的使用方式。  
   
@@ -86,7 +90,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>可組合的類別 
+##  <a name="ctor"></a> 可組合的類別 
 
  建構新`combinable`物件。  
   
@@ -116,7 +120,7 @@ combinable(const combinable& _Copy);
   
  第三個建構函式是複製建構函式。  
   
-##  <a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a> ~ combinable 
 
  終結 `combinable` 物件。  
   
@@ -124,7 +128,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine"></a>結合 
+##  <a name="combine"></a> 結合 
 
  藉由呼叫提供的結合仿函式計算執行緒-本機子運算集中的最後一個值。  
   
@@ -143,7 +147,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>傳回值  
  最終結合所有執行緒私用子運算的結果。  
   
-##  <a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a> combine_each 
 
  藉由呼叫執行緒區域子計算每一次提供的結合仿函式計算執行緒-本機子運算集中的最後一個值。 最終的結果會累積函式物件。  
   
@@ -159,7 +163,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  仿函式用來合併一次計算。 其簽章是`void (T)`或`void (const T&)`，而且必須是關聯式和交換式。  
   
-##  <a name="local"></a>本機 
+##  <a name="local"></a> 本機 
 
  傳回執行緒私用子運算的參考。  
   
@@ -176,7 +180,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>傳回值  
  執行緒私用子運算的參考。  
   
-##  <a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a> 運算子 = 
 
  將指派給`combinable`從另一個物件`combinable`物件。  
   

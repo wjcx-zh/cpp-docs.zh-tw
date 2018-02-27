@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: preprocessor
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 596e17d0574f9f4935cf31ec71eb74cb2587d312
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75caab67343e7806e1dd97fb673114949c68a94c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor"></a>前置處理器
 前置處理器是文字處理器，會在轉譯的第一個階段操作原始程式檔的文字。 前置處理器不會剖析原始程式文字，但會將原始程式文字分解為用於尋找巨集呼叫的語彙基元。 雖然編譯器通常在第一次傳遞時叫用前置處理器，但也可以分別叫用前置處理器，在不進行編譯的情況下處理文字。  
@@ -40,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  **結束 Microsoft 特定的**  
   
-##  <a name="_predir_special_terminology"></a>特殊術語  
+##  <a name="_predir_special_terminology"></a> 特殊術語  
  在前置處理器文件中，「引數」一詞是指傳遞至函式的實體。 某些情況下，會以「實際」或「型式」修飾「引數」一詞，分別用於說明函式呼叫中指定的引數運算式，以及函式定義中指定的引數宣告。  
   
  「變數」一詞是指簡單的 C 類型資料物件。 「物件」一詞是指 C++ 物件和變數；屬於內含的詞彙。  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array_view
 - AMP/array_view
@@ -29,19 +30,22 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs: C++
-helpviewer_keywords: array_view class
+dev_langs:
+- C++
+helpviewer_keywords:
+- array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="arrayview-class"></a>array_view 類別
 代表 N 維檢視儲存在另一個容器中的資料。  
@@ -88,7 +92,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[get_extent](#get_extent)|傳回 array_view 物件的範圍物件。|  
 |[get_ref](#get_ref)|傳回索引項目的參考。|  
 |[get_source_accelerator_view](#get_source_accelerator_view)|傳回[accelerator_view](accelerator-view-class.md)其中的資料來源的`array_view`所在。|  
-|[重新整理](#refresh)|通知`array_view`其繫結的記憶體外部修改過的物件`array_view`介面。 呼叫這個方法會轉譯過時所有快取的資訊。|  
+|[refresh](#refresh)|通知`array_view`其繫結的記憶體外部修改過的物件`array_view`介面。 呼叫這個方法會轉譯過時所有快取的資訊。|  
 |[reinterpret_as](#reinterpret_as)|傳回一維陣列，包含中的所有項目`array_view`物件。|  
 |[section](#section)|傳回的子區段`array_view`物件位於指定的來源，並選擇性地，具有指定的範圍。|  
 |[synchronize](#synchronize)|同步處理所做的任何修改`array_view`回到其來源資料的物件。|  
@@ -101,8 +105,8 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator （)](#operator_call)|傳回值的參數或參數所指定的項目。|  
-|[operator]](#operator_at)|傳回參數所指定的項目。|  
+|[operator()](#operator_call)|傳回值的參數或參數所指定的項目。|  
+|[operator[]](#operator_at)|傳回參數所指定的項目。|  
 |[operator=](#operator_eq)|將指定的內容複製`array_view`成這一個物件。|  
   
 ### <a name="public-constants"></a>公用常數  
@@ -158,7 +162,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  **命名空間：** 並行  
   
-##  <a name="dtor"></a>~ array_view 
+##  <a name="dtor"></a> ~array_view 
 
  終結`array_view`物件。  
   
@@ -166,7 +170,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 ~array_view()restrict(amp,cpu);
 ```  
   
-##  <a name="ctor"></a>array_view 
+##  <a name="ctor"></a> array_view 
 
  初始化 `array_view` 類別的新執行個體。  
   
@@ -386,7 +390,7 @@ array_view(
  `_Src`  
  來源資料，將會複製到新的陣列指標。  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  複製的內容`array_view`物件與指定的目的地物件，藉由呼叫`copy(*this, dest)`。  
   
@@ -406,7 +410,7 @@ void copy_to(
  `_Dest`  
  要複製到的物件。  
   
-##  <a name="data"></a>資料 
+##  <a name="data"></a> 資料 
 
  讓指標回到的未經處理資料`array_view`。  
   
@@ -422,7 +426,7 @@ const value_type* data() const restrict(amp,
 ### <a name="return-value"></a>傳回值  
  未經處理資料的指標`array_view`。  
   
-##  <a name="discard_data"></a>discard_data 
+##  <a name="discard_data"></a> discard_data 
 
  捨棄目前的資料，此檢視的基礎。 這是用來避免將目前檢視的內容複製到目標為執行階段最佳化提示`accelerator_view`存取，並不需要現有的內容時，建議使用。 這個方法不沒有任何作業時使用 restrict （amp） 內容中  
   
@@ -430,7 +434,7 @@ const value_type* data() const restrict(amp,
 void discard_data() const restrict(cpu);
 ```  
   
-##  <a name="extent"></a>範圍 
+##  <a name="extent"></a> 範圍 
 
  取得定義 `extent` 物件形狀的 `array_view` 物件。  
   
@@ -438,7 +442,7 @@ void discard_data() const restrict(cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a> get_extent 
 
  傳回[範圍](extent-class.md)物件`array_view`物件。  
   
@@ -449,7 +453,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 ### <a name="return-value"></a>傳回值  
  `extent`物件`array_view`物件  
   
-##  <a name="get_ref"></a>get_ref 
+##  <a name="get_ref"></a> get_ref 
 
  取得由 _Index 編製索引的項目參考。 不同於其他索引運算子來存取在 CPU 上的 array_view，這個方法不會隱含地同步此 array_view 內容的 cpu。 存取遠端位置上的 array_view 或執行複製作業，涉及此 array_view 之後，使用者要負責明確地呼叫這個方法之前同步處理的 cpu array_view。 若要這樣做導致未定義的行為。  
   
@@ -465,7 +469,7 @@ value_type& get_ref(
 ### <a name="return-value"></a>傳回值  
  以 _Index 編製索引的項目參考  
   
-##  <a name="get_source_accelerator_view"></a>get_source_accelerator_view 
+##  <a name="get_source_accelerator_view"></a> get_source_accelerator_view 
 
  傳回 accelerator_view array_view 的資料來源所在的位置。 如果 array_view 並沒有資料來源，此 API 會擲回 runtime_exception  
   
@@ -477,7 +481,7 @@ accelerator_view get_source_accelerator_view() const;
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="operator_call"></a>operator （) 
+##  <a name="operator_call"></a> operator （) 
 
  傳回值的參數或參數所指定的項目。  
   
@@ -524,7 +528,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>傳回值  
  元素所指定的參數或參數的值。  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator] 
 
  傳回參數所指定的項目。  
   
@@ -547,7 +551,7 @@ value_type& operator[] (
 ### <a name="return-value"></a>傳回值  
  索引處的項目值或`array_view`投影最有效的維度上。  
   
-##  <a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a> 運算子 = 
 
  將指定的內容複製`array_view`給這一個物件。  
   
@@ -567,7 +571,7 @@ array_view& operator= (
 ### <a name="return-value"></a>傳回值  
  此參考`array_view`物件。  
   
-##  <a name="rank"></a>順位 
+##  <a name="rank"></a> 順位 
 
  儲存的陣序`array_view`物件。  
   
@@ -575,14 +579,14 @@ array_view& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="refresh"></a>重新整理 
+##  <a name="refresh"></a> 重新整理 
 
  通知`array_view`其繫結的記憶體外部修改過的物件`array_view`介面。 呼叫這個方法會轉譯過時所有快取的資訊。  
   
 ```  
 void refresh() const restrict(cpu);
 ```  
-## <a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a> reinterpret_as 
 
 轉換到一維 array_view，它做為選項可以有不同的值型別比來源 array_view array_view。  
   
@@ -623,7 +627,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);  
 ```  
     
-##  <a name="section"></a>區段 
+##  <a name="section"></a> 區段 
 
  傳回的子區段`array_view`物件位於指定的來源，並選擇性地，具有指定的範圍。  
   
@@ -699,7 +703,7 @@ array_view section(
 ### <a name="return-value"></a>傳回值  
  子區段的`array_view`物件位於指定的來源，並選擇性地，具有指定的範圍。 只有當`index`指定的物件、 小節包含有索引大於索引中的項目與相關聯的範圍中所有項目`index`物件。  
   
-##  <a name="source_accelerator_view"></a>source_accelerator_view 
+##  <a name="source_accelerator_view"></a> source_accelerator_view 
 
  取得此 array_view 聯來源 accelerator_view。  
   
@@ -707,7 +711,7 @@ array_view section(
 __declspec(property(get= get_source_accelerator_view)) accelerator_view source_accelerator_view;  
 ```  
   
-##  <a name="synchronize"></a>同步處理 
+##  <a name="synchronize"></a> 同步處理 
 
  同步處理所做的任何修改`array_view`回到其來源資料的物件。  
   
@@ -722,7 +726,7 @@ void synchronize() const restrict(cpu);
  `_Access_type`  
  所需的[access_type](concurrency-namespace-enums-amp.md#access_type)目標上[accelerator_view](accelerator-view-class.md)。 此參數有預設值是`access_type_read`。  
   
-##  <a name="synchronize_async"></a>synchronize_async 
+##  <a name="synchronize_async"></a> synchronize_async 
 
  以非同步方式同步處理所做的任何修改`array_view`回到其來源資料的物件。  
   
@@ -740,7 +744,7 @@ concurrency::completion_future synchronize_async() const restrict(cpu);
 ### <a name="return-value"></a>傳回值  
  在未來的等候作業完成。  
   
-##  <a name="synchronize_to"></a>synchronize_to 
+##  <a name="synchronize_to"></a> synchronize_to 
 
  同步處理對這個 array_view 來指定 accelerator_view 任何修改。  
   
@@ -761,7 +765,7 @@ void synchronize_to(
  `_Access_type`  
  在目標 accelerator_view 上所需的 access_type。 此參數有預設值是 access_type_read。  
   
-##  <a name="synchronize_to_async"></a>synchronize_to_async 
+##  <a name="synchronize_to_async"></a> synchronize_to_async 
 
  以非同步方式同步處理對這個 array_view 來指定 accelerator_view 任何修改。  
   
@@ -785,7 +789,7 @@ concurrency::completion_future synchronize_to_async(
 ### <a name="return-value"></a>傳回值  
  在未來的等候作業完成。  
   
-##  <a name="value_type"></a>value_type 
+##  <a name="value_type"></a> value_type 
 
  Array_view 值類型的繫結的陣列。  
   
@@ -793,7 +797,7 @@ concurrency::completion_future synchronize_to_async(
 typedef typenamevalue_type value_type;  
 ```  
   
-##  <a name="view_as"></a>view_as 
+##  <a name="view_as"></a> view_as 
 
  此轉換`array_view`為`array_view`不同陣序規範。  
   

@@ -4,34 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vcplatformsdk
-dev_langs: C++
+f1_keywords:
+- vcplatformsdk
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows applications [C++]
 - applications [C++], Windows
 - Visual C++, Windows applications
 - Windows applications [C++], about creating Windows applications
 ms.assetid: be15855a-fa3f-41e9-89cd-41b9484ebfdb
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d8e65a62dcac8e97f8f416cd54050a76920afe6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 142019b10f7108934e5cd7d6de9e987eaab5a5dc
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="windows-desktop-applications-c"></a>Windows 桌面應用程式 (C++)
 本節討論如何建立可在視窗中執行的 c + + 桌面應用程式。  
 > [!TIP]  
-> 適用於 Windows 10 中，您可以使用桌面應用程式轉換工具來封裝您現有的桌面應用程式以透過 Windows 市集的部署。 如需詳細資訊，請參閱 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (在 Centennial 專案中使用 Visual C++ 執行階段) 和[使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)。
+> 適用於 Windows 10 中，您可以使用桌面應用程式轉換工具來封裝您現有的桌面應用程式以透過 Microsoft 市集部署。 如需詳細資訊，請參閱 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) (在 Centennial 專案中使用 Visual C++ 執行階段) 和[使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP)](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root)。
   
 ## <a name="prerequisites"></a>必要條件  
  這些主題假設您已了解 c + + 語言的基本概念。  

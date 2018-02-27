@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - multi_link_registry
 - AGENTS/concurrency::multi_link_registry
@@ -17,19 +18,22 @@ f1_keywords:
 - AGENTS/concurrency::multi_link_registry::count
 - AGENTS/concurrency::multi_link_registry::remove
 - AGENTS/concurrency::multi_link_registry::set_bound
-dev_langs: C++
-helpviewer_keywords: multi_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c5d95a98d56ea666ed823f3caef2190dea1591cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f87da4852fff0256b5ca55cfd47d839531b8a03
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 類別
 `multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。  
@@ -60,7 +64,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|新增連結`multi_link_registry`物件。 (覆寫[network_link_registry:: add](network-link-registry-class.md#add)。)|  
 |[begin](#begin)|傳回迭代器中的第一個項目`multi_link_registry`物件。 (覆寫[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
-|[包含](#contains)|搜尋`multi_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
+|[contains](#contains)|搜尋`multi_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
 |[count](#count)|計算中的項目數目`multi_link_registry`物件。 (覆寫[network_link_registry:: count](network-link-registry-class.md#count)。)|  
 |[remove](#remove)|移除連結，以從`multi_link_registry`物件。 (覆寫[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
 |[set_bound](#set_bound)|上的連結數目設定上限`multi_link_registry`物件可以保存。|  
@@ -75,7 +79,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
  **命名空間：** concurrency  
   
-##  <a name="add"></a>新增 
+##  <a name="add"></a> 新增 
 
  新增連結`multi_link_registry`物件。  
   
@@ -90,7 +94,7 @@ virtual void add(_EType _Link);
 ### <a name="remarks"></a>備註  
  方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況或連結是否已存在於登錄中，如果繫結至已設定使用`set_bound`函式和連結已被移除。  
   
-##  <a name="begin"></a>開始 
+##  <a name="begin"></a> 開始 
 
  傳回迭代器中的第一個項目`multi_link_registry`物件。  
   
@@ -104,7 +108,7 @@ virtual iterator begin();
 ### <a name="remarks"></a>備註  
  結束狀態會表示`NULL`連結。  
   
-##  <a name="contains"></a>包含 
+##  <a name="contains"></a> 包含 
 
  搜尋`multi_link_registry`物件指定的區塊。  
   
@@ -117,9 +121,9 @@ virtual bool contains(_EType _Link);
  在搜尋區塊的指標`multi_link_registry`物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找不到指定的區塊，`false`否則。  
+ `true` 如果找不到指定的區塊，`false`否則。  
   
-##  <a name="count"></a>計數 
+##  <a name="count"></a> 計數 
 
  計算中的項目數目`multi_link_registry`物件。  
   
@@ -130,7 +134,7 @@ virtual size_t count();
 ### <a name="return-value"></a>傳回值  
  中的項目數`multi_link_registry`物件。  
   
-##  <a name="ctor"></a>multi_link_registry 
+##  <a name="ctor"></a> multi_link_registry 
 
  建構 `multi_link_registry` 物件。  
   
@@ -138,7 +142,7 @@ virtual size_t count();
 multi_link_registry();
 ```  
   
-##  <a name="dtor"></a>~ multi_link_registry 
+##  <a name="dtor"></a> ~multi_link_registry 
 
  終結`multi_link_registry`物件。  
   
@@ -149,7 +153,7 @@ virtual ~multi_link_registry();
 ### <a name="remarks"></a>備註  
  方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況會移除所有的連結之前呼叫。  
   
-##  <a name="remove"></a>移除 
+##  <a name="remove"></a> 移除 
 
  移除連結，以從`multi_link_registry`物件。  
   
@@ -162,9 +166,9 @@ virtual bool remove(_EType _Link);
  要移除，如果在區塊的指標找到。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找到並移除，連結`false`否則。  
+ `true` 如果找到並移除，連結`false`否則。  
   
-##  <a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a> set_bound 
 
  上的連結數目設定上限`multi_link_registry`物件可以保存。  
   

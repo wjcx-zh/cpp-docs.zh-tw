@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
 - concrt/concurrency::DisableTracing
@@ -37,23 +37,25 @@ f1_keywords:
 - concrt/concurrency::wait
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6c40cd99c03d4e6e3adcef9d709ae85163804c94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 命名空間函式
 ||||  
 |-|-|-|  
-|[配置](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
+|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
 |[EnableTracing](#enabletracing)|[可用](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|  
@@ -63,13 +65,13 @@ ms.lasthandoff: 12/21/2017
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|  
 |[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|  
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|  
-|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[接收](#receive)|  
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|  
 |[run_with_cancellation_token](#run_with_cancellation_token)|[傳送](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|  
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|  
-|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[等候](#wait)|  
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|  
 |[when_all](#when_all)|[when_any](#when_any)|  
   
-##  <a name="alloc"></a>配置  
+##  <a name="alloc"></a>  Alloc  
  會透過並行執行階段的快取子配置器指定的大小，來配置記憶體區塊。  
   
 ```
@@ -86,7 +88,7 @@ void* __cdecl Alloc(size_t _NumBytes);
 ### <a name="remarks"></a>備註  
  哪些應用程式中的案例可能受益於使用快取子配置器的詳細資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
-##  <a name="asend"></a>asend  
+##  <a name="asend"></a>  asend  
  非同步傳送作業，會排程工作將資料傳播到目標區塊。  
   
 ```
@@ -112,12 +114,12 @@ bool asend(
  傳送資料的參考。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果訊息已接受，則方法會傳回，`false`否則。  
+ `true` 如果訊息已接受，則方法會傳回，`false`否則。  
   
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
   
-##  <a name="cancel_current_task"></a>cancel_current_task  
+##  <a name="cancel_current_task"></a>  cancel_current_task  
  取消目前執行的工作。 這個函式可以從工作主體內呼叫，以中止工作執行並導致它進入 `canceled` 狀態。  
   
  如果不是在 `task` 的主體中，這就不是支援呼叫這個函式的情況。 這樣做會在應用程式中導致未定義的行為，例如當機或停止回應。  
@@ -126,7 +128,7 @@ bool asend(
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```  
   
-##  <a name="clear"></a>清除  
+##  <a name="clear"></a>  clear  
  清除並行佇列，破壞任何目前項目加入佇列。 這個方法不是並行安全。  
   
 ```
@@ -138,7 +140,7 @@ void concurrent_queue<T, _Ax>::clear();
  `T`  
  `_Ax`  
   
-##  <a name="create_async"></a>create_async  
+##  <a name="create_async"></a>  create_async  
  以使用者提供的 Lambda 或函式物件為基礎，建立 Windows 執行階段非同步建構。 根據傳遞至方法的 Lambda 簽章，`create_async` 的傳回類型是下列其中一個：`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^`。  
   
 ```
@@ -168,9 +170,9 @@ __declspec(noinline) auto create_async(const _Function& _Func)
   
  如果 Lambda 的主體傳回工作，則 Lambda 會內嵌執行，而且藉由宣告 Lambda 接受屬於類型 `cancellation_token` 的引數，您可以觸發任何工作的取消作業，這些工作是您建立工作時，透過傳入該語彙基元，在 Lambda 建立的。 您也可以在語彙基元使用 `register_callback` 方法，使執行階段在您在非同步作業或產生的動作呼叫 `IAsyncInfo::Cancel` 時叫用回呼。  
   
- 這個函式只供 Windows 市集應用程式使用。  
+ 此函式只適用於 Windows 執行階段應用程式。  
   
-##  <a name="createresourcemanager"></a>CreateResourceManager  
+##  <a name="createresourcemanager"></a>  CreateResourceManager  
  傳回代表並行執行階段資源管理員單一執行個體的介面。 資源管理員會負責將資源指派給想要與彼此相互合作的排程器。  
   
 ```
@@ -185,7 +187,7 @@ IResourceManager* __cdecl CreateResourceManager();
   
  [unsupported_os](unsupported-os-class.md)如果作業系統不支援之並行執行階段會擲回。  
   
-##  <a name="create_task"></a>create_task  
+##  <a name="create_task"></a>  create_task  
  建立 PPL[工作](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。  
   
 ```
@@ -203,7 +205,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  `_ReturnType`  
  `_Param`  
- 從中要建構工作的參數。 這可能是 lambda 或函式的物件，`task_completion_event`物件、 不同`task`物件或如果您在 Windows 市集應用程式中使用工作 Windows::Foundation::IAsyncInfo 介面。  
+ 從中要建構工作的參數。 這可能是 lambda 或函式的物件，`task_completion_event`物件、 不同`task`的物件或如果您在 UWP 應用程式中使用工作 Windows::Foundation::IAsyncInfo 介面。  
   
  `_TaskOptions`  
  `_Task`  
@@ -218,9 +220,9 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
   
  傳回工作的類型是從第一個參數推斷函式。 如果`_Param`是`task_completion_event<T>`、 `task<T>`，或函式會傳回其中一個型別`T`或`task<T>`，建立之工作的類型是`task<T>`。  
   
- 在 Windows 市集應用程式中，如果`_Param`的型別 Windows::Foundation::IAsyncOperation\<T > ^ 或 Windows::Foundation::IAsyncOperationWithProgress\<T、 P > ^，或函式會傳回這些類型，建立工作類型將會是`task<T>`。 如果`_Param`的型別 Windows::Foundation::IAsyncAction ^ 或 Windows::Foundation::IAsyncActionWithProgress\<P > ^，或傳回這些型別的函式，建立的工作將會有輸入`task<void>`。  
+ 在 UWP 應用程式中，如果`_Param`的型別 Windows::Foundation::IAsyncOperation\<T > ^ 或 Windows::Foundation::IAsyncOperationWithProgress\<T、 P > ^，或傳回這些型別的函式，建立的工作，都屬於型別`task<T>`。 如果`_Param`的型別 Windows::Foundation::IAsyncAction ^ 或 Windows::Foundation::IAsyncActionWithProgress\<P > ^，或傳回這些型別的函式，建立的工作將會有輸入`task<void>`。  
   
-##  <a name="disabletracing"></a>DisableTracing  
+##  <a name="disabletracing"></a>  DisableTracing  
  停用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已移除註冊而被取代。  
   
 ```
@@ -230,7 +232,7 @@ __declspec(deprecated("Concurrency::DisableTracing is a deprecated function.")) 
 ### <a name="return-value"></a>傳回值  
  如果正確地停用追蹤，`S_OK`傳回。 如果先前未啟始追蹤，則會傳回 `E_NOT_STARTED`  
   
-##  <a name="enabletracing"></a>EnableTracing  
+##  <a name="enabletracing"></a>  EnableTracing  
  啟用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已開啟而被取代。  
   
 ```
@@ -240,7 +242,7 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ### <a name="return-value"></a>傳回值  
  如果追蹤已正確初始化，請`S_OK`會傳回，否則`E_NOT_STARTED`傳回。  
   
-##  <a name="free"></a>可用  
+##  <a name="free"></a>  Free  
  釋放先前由 `Alloc` 方法配置的記憶體區塊至並行執行階段的快取子配置器。  
   
 ```
@@ -254,7 +256,7 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ### <a name="remarks"></a>備註  
  哪些應用程式中的案例可能受益於使用快取子配置器的詳細資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
-##  <a name="get_ambient_scheduler"></a>get_ambient_scheduler  
+##  <a name="get_ambient_scheduler"></a>  get_ambient_scheduler  
   
 ```
 inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler();
@@ -262,7 +264,7 @@ inline std::shared_ptr<::Concurrency::scheduler_interface> get_ambient_scheduler
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="getexecutioncontextid"></a>GetExecutionContextId  
+##  <a name="getexecutioncontextid"></a>  GetExecutionContextId  
  傳回可指派給實作 `IExecutionContext` 介面之執行內容的唯一識別碼。  
   
 ```
@@ -275,7 +277,7 @@ unsigned int __cdecl GetExecutionContextId();
 ### <a name="remarks"></a>備註  
  使用這個方法來取得執行內容的識別項，才能傳遞`IExecutionContext`做為任何提供資源管理員的方法參數的介面。  
   
-##  <a name="getosversion"></a>GetOSVersion  
+##  <a name="getosversion"></a>  GetOSVersion  
  傳回作業系統版本。  
   
 ```
@@ -288,7 +290,7 @@ IResourceManager::OSVersion __cdecl GetOSVersion();
 ### <a name="remarks"></a>備註  
  [unsupported_os](unsupported-os-class.md)如果作業系統不支援之並行執行階段會擲回。  
   
-##  <a name="getprocessorcount"></a>GetProcessorCount  
+##  <a name="getprocessorcount"></a>  GetProcessorCount  
  傳回基礎系統上的硬體執行緒數目。  
   
 ```
@@ -301,7 +303,7 @@ unsigned int __cdecl GetProcessorCount();
 ### <a name="remarks"></a>備註  
  [unsupported_os](unsupported-os-class.md)如果作業系統不支援之並行執行階段會擲回。  
   
-##  <a name="getprocessornodecount"></a>GetProcessorNodeCount  
+##  <a name="getprocessornodecount"></a>  GetProcessorNodeCount  
  傳回基礎系統上的 NUMA 節點或處理器套件數目。  
   
 ```
@@ -316,7 +318,7 @@ unsigned int __cdecl GetProcessorNodeCount();
   
  [unsupported_os](unsupported-os-class.md)如果作業系統不支援之並行執行階段會擲回。  
   
-##  <a name="getschedulerid"></a>GetSchedulerId  
+##  <a name="getschedulerid"></a>  GetSchedulerId  
  傳回可指派給實作 `IScheduler` 介面之排程器的唯一識別碼。  
   
 ```
@@ -329,7 +331,7 @@ unsigned int __cdecl GetSchedulerId();
 ### <a name="remarks"></a>備註  
  使用這個方法來取得您的排程器識別項之前先`IScheduler`做為任何提供資源管理員的方法參數的介面。  
   
-##  <a name="internal_assign_iterators"></a>internal_assign_iterators  
+##  <a name="internal_assign_iterators"></a>  internal_assign_iterators  
   
 ```
 template<typename T, class _Ax>
@@ -346,7 +348,7 @@ void concurrent_vector<T, _Ax>::internal_assign_iterators(
  `first`  
  `last`  
   
-##  <a name="interruption_point"></a>interruption_point  
+##  <a name="interruption_point"></a>  interruption_point  
  建立取消的中斷點。 如果這個函式呼叫的內容正在取消，則會擲出中止目前執行之平行工作執行的內部例外狀況。 如果取消不在進行中，函式不會執行任何動作。  
   
 ```
@@ -356,7 +358,7 @@ inline void interruption_point();
 ### <a name="remarks"></a>備註  
  您不應該攔截 `interruption_point()` 函式擲回的內部取消例外狀況。 例外狀況會由執行階段攔截並處理，而攔截它可能會造成程式行為異常。  
   
-##  <a name="is_current_task_group_canceling"></a>is_current_task_group_canceling  
+##  <a name="is_current_task_group_canceling"></a>  is_current_task_group_canceling  
  傳回指示，以說明目前正以內嵌方式在目前內容上執行的工作群組是否正在取消 (或即將取消)。 請注意，如果目前沒有任何工作群組以內嵌方式在目前的內容上執行，會傳回 `false`。  
   
 ```
@@ -364,12 +366,12 @@ bool __cdecl is_current_task_group_canceling();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `true`正在取消目前正在執行的工作群組，如果`false`否則。  
+ `true` 正在取消目前正在執行的工作群組，如果`false`否則。  
   
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[取消](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。  
   
-##  <a name="make_choice"></a>make_choice  
+##  <a name="make_choice"></a>  make_choice  
  從選擇性的 `choice` 或 `Scheduler` 和兩個或多個輸入來源建立 `ScheduleGroup` 傳訊區塊。  
   
 ```
@@ -419,7 +421,7 @@ choice<std::tuple<T1, T2, Ts...>> make_choice(
 ### <a name="return-value"></a>傳回值  
  有兩個或多個輸入來源的 `choice` 訊息區塊。  
   
-##  <a name="make_greedy_join"></a>make_greedy_join  
+##  <a name="make_greedy_join"></a>  make_greedy_join  
  從選擇性的 `greedy multitype_join` 或 `Scheduler` 和兩個或多個輸入來源建立 `ScheduleGroup` 傳訊區塊。  
   
 ```
@@ -469,7 +471,7 @@ multitype_join<std::tuple<T1, T2, Ts...>, greedy> make_greedy_join(
 ### <a name="return-value"></a>傳回值  
  有兩個或多個輸入來源的 `greedy multitype_join` 訊息區塊。  
   
-##  <a name="make_join"></a>make_join  
+##  <a name="make_join"></a>  make_join  
  從選擇性的 `non_greedy multitype_join` 或 `Scheduler` 和兩個或多個輸入來源建立 `ScheduleGroup` 傳訊區塊。  
   
 ```
@@ -520,7 +522,7 @@ multitype_join<std::tuple<T1, T2, Ts...>> make_join(
 ### <a name="return-value"></a>傳回值  
  有兩個或多個輸入來源的 `non_greedy multitype_join` 訊息區塊。  
   
-##  <a name="make_task"></a>make_task  
+##  <a name="make_task"></a>  make_task  
  建立 `task_handle` 物件的 Factory 方法。  
   
 ```
@@ -541,7 +543,7 @@ task_handle<_Function> make_task(const _Function& _Func);
 ### <a name="remarks"></a>備註  
  此函式時，您必須建立`task_handle`物件與 lambda 運算式，因為它可讓您建立的物件，而不需要知道的 lambda 函式，則為 true 的類型。  
   
-##  <a name="parallel_buffered_sort"></a>parallel_buffered_sort  
+##  <a name="parallel_buffered_sort"></a>  parallel_buffered_sort  
  將在指定範圍中的項目排列成非遞減順序，或是依據二元述詞指定的順序準則以平行方式排列。 這個函式語意與 `std::sort` 類似：皆是以比較為基礎、不穩定、就地排序的；差別為它需要 `O(n)` 額外的空間，且必須預設初始化需排序的項目。  
   
 ```
@@ -625,7 +627,7 @@ inline void parallel_buffered_sort(
   
  演算法會將輸入範圍分成兩個區塊，接著在將每個區塊分成兩個子區塊以進行平行執行。 選擇性的引數 `_Chunk_size` 可用來對演算法指出，它應該依序處理大小 < `_Chunk_size` 的區塊。  
   
-##  <a name="parallel_for"></a>parallel_for  
+##  <a name="parallel_for"></a>  parallel_for  
  `parallel_for` 會逐一查看某個範圍的索引，並以平行方式在每個反覆項目上執行使用者提供的函式。  
   
 ```
@@ -701,7 +703,7 @@ void parallel_for(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
-##  <a name="parallel_for_each"></a>parallel_for_each  
+##  <a name="parallel_for_each"></a>  parallel_for_each  
  `parallel_for_each` 會平行套用指定的函式到範圍內的每個項目。 在語意上，它相當於 `std` 命名空間中的 `for_each` 函式，但項目的反覆項目會平行執行，而且不會指定反覆項目的順序。 `_Func` 引數必須支援 `operator()(T)` 形式的函式呼叫運算子，其中 `T` 參數是要逐一查看之容器的項目類型。  
   
 ```
@@ -746,7 +748,7 @@ void parallel_for_each(
   
  如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
-##  <a name="parallel_invoke"></a>parallel_invoke  
+##  <a name="parallel_invoke"></a>  parallel_invoke  
  平行執行提供作為參數的函式物件，並加以封鎖直到完成執行為止。 函式物件可能是 Lambda 運算式、函式指標，或是支援函式呼叫運算子與簽章 `void operator()()` 版本的任何物件。  
   
 ```
@@ -942,7 +944,7 @@ void parallel_invoke(
   
  如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
-##  <a name="parallel_radixsort"></a>parallel_radixsort  
+##  <a name="parallel_radixsort"></a>  parallel_radixsort  
  使用基數排序演算法，將指定範圍內的項目排列成非遞減順序。 這是一個穩定的排序函式，其需要可將項目排序成不帶正負號的整數機碼的投影函式。 要排序的項目都必須進行預設初始化。  
   
 ```
@@ -1022,7 +1024,7 @@ inline void parallel_radixsort(
   
  演算法會將輸入範圍分成兩個區塊，接著在將每個區塊分成兩個子區塊以進行平行執行。 選擇性的引數 `_Chunk_size` 可用來對演算法指出，它應該依序處理大小 < `_Chunk_size` 的區塊。  
   
-##  <a name="parallel_reduce"></a>parallel_reduce  
+##  <a name="parallel_reduce"></a>  parallel_reduce  
  以平行方式，透過計算後繼元素的部分總和來計算在一定範圍內所有項目的總和，或是計算部分後繼結果 (取得方式是使用指定的二進位運算而非總和運算得出) 的結果。 `parallel_reduce` 語意與 `std::accumulate` 類似；不同的是，它需要關聯的二進位運算，而且需要識別值而不是初始值。  
   
 ```
@@ -1091,7 +1093,7 @@ inline _Reduce_type parallel_reduce(
   
  第三個多載中，身分識別值類型必須相同減少的結果型別，但迭代器的`value_type`可能都不同。 範圍減少函式`_Range_fun`做為起始的值，並將二元函式第一個階段中使用的識別值用於`_Sym_reduce_fun`套用至子中的第二個階段的結果。  
   
-##  <a name="parallel_sort"></a>parallel_sort  
+##  <a name="parallel_sort"></a>  parallel_sort  
  將在指定範圍中的項目排列成非遞減順序，或是依據二元述詞指定的順序準則以平行方式排列。 這個函式語意與 `std::sort` 類似，皆是以比較為基礎、不穩定、就地排序的。  
   
 ```
@@ -1134,7 +1136,7 @@ inline void parallel_sort(
   
  演算法會將輸入範圍分成兩個區塊，接著在將每個區塊分成兩個子區塊以進行平行執行。 選擇性的引數 `_Chunk_size` 可用來對演算法指出，它應該依序處理大小 < `_Chunk_size` 的區塊。  
   
-##  <a name="parallel_transform"></a>parallel_transform  
+##  <a name="parallel_transform"></a>  parallel_transform  
  以平行方式，將指定的函式物件套用至來源範圍中的每個項目，或是一組來自兩個來源範圍的項目，並複製函式物件的傳回值到目的範圍。 此函式在語意上等於 `std::transform`。  
   
 ```
@@ -1257,7 +1259,7 @@ _Output_iterator parallel_transform(
   
  如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
-##  <a name="receive"></a>接收  
+##  <a name="receive"></a>  receive  
  一般接收實作，可讓內容等候來自一個來源的資料，並且篩選所接受的值。  
   
 ```
@@ -1305,7 +1307,7 @@ T receive(
   
  如需詳細資訊，請參閱[訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
   
-##  <a name="run_with_cancellation_token"></a>run_with_cancellation_token  
+##  <a name="run_with_cancellation_token"></a>  run_with_cancellation_token  
  在指定的取消語彙基元內容中立即和同步地執行函式物件。  
   
 ```
@@ -1328,7 +1330,7 @@ void run_with_cancellation_token(
 ### <a name="remarks"></a>備註  
  函式物件中的所有中斷點都會在 `cancellation_token` 取消時觸發。 如果父項擁有不同的語彙基元或沒有語彙基元，則明確的語彙基元 `_Ct` 會將這個 `_Func` 與父取消隔離。  
   
-##  <a name="send"></a>傳送  
+##  <a name="send"></a>  send  
  同步傳送作業，其會等候直到目標接受或拒絕訊息。  
   
 ```
@@ -1350,12 +1352,12 @@ bool send(ITarget<T>& _Trg, const T& _Data);
  傳送資料的參考。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果訊息已接受，`false`否則。  
+ `true` 如果訊息已接受，`false`否則。  
   
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
   
-##  <a name="set_ambient_scheduler"></a>set_ambient_scheduler  
+##  <a name="set_ambient_scheduler"></a>  set_ambient_scheduler  
   
 ```
 inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_interface> _Scheduler);
@@ -1364,7 +1366,7 @@ inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_inter
 ### <a name="parameters"></a>參數  
  `_Scheduler`  
   
-##  <a name="set_task_execution_resources"></a>set_task_execution_resources  
+##  <a name="set_task_execution_resources"></a>  set_task_execution_resources  
  依據指定的同質性集，限制並行執行階段之內部背景工作執行緒使用的執行資源。  
   
  只有在資源管理員建立之前，或在兩個資源管理員存留期之間，才能有效地呼叫這個方法。 只要資源管理員不在引動過程期間，即可多次叫用此函式。 在同質性限制設定之後，直到下次有效呼叫 `set_task_execution_resources` 方法之前，該限制會持續有效。
@@ -1422,11 +1424,11 @@ inline void swap(
  並行向量提供待交換，項目或其項目要與並行向量交換的向量`_A`。  
   
 ### <a name="remarks"></a>備註  
- 樣板函式是演算法特製化的容器類別`concurrent_vector`執行成員函式`_A`。 [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`)。 這是編譯器所執行函式樣板部分排序的執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 樣板函式的一般版本`template <class T> void swap(T&, T&)`，演算法中類別的運作方式是指派和很慢的作業。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
+ 樣板函式是演算法特製化的容器類別`concurrent_vector`執行成員函式`_A`。 [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). 這是編譯器所執行函式樣板部分排序的執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 樣板函式的一般版本`template <class T> void swap(T&, T&)`，演算法中類別的運作方式是指派和很慢的作業。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
   
  這個方法不是並行安全。 您必須確定沒有其他執行緒正在執行的並行向量的任何作業，當您呼叫這個方法。  
   
-##  <a name="task_from_exception"></a>task_from_exception  
+##  <a name="task_from_exception"></a>  task_from_exception  
   
 ```
 template<typename _TaskType, typename _ExType>
@@ -1443,7 +1445,7 @@ task<_TaskType> task_from_exception(
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="task_from_result"></a>task_from_result  
+##  <a name="task_from_result"></a>  task_from_result  
   
 ```
 template<typename T>
@@ -1464,7 +1466,7 @@ inline task<void> task_from_result(
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="trace_agents_register_name"></a>Trace_agents_register_name  
+##  <a name="trace_agents_register_name"></a>  Trace_agents_register_name  
  將指定的名稱與 ETW 追蹤的訊息區塊或代理程式產生關聯。  
   
 ```
@@ -1484,7 +1486,7 @@ void Trace_agents_register_name(
  `_Name`  
  所指物件的名稱。  
   
-##  <a name="try_receive"></a>try_receive  
+##  <a name="try_receive"></a>  try_receive  
  一般嘗試-接收實作，可讓內容尋找來自特定一個來源的資料，並且篩選所接受的值。 如果資料還沒準備好，方法會傳回 false。  
   
 ``` 
@@ -1526,7 +1528,7 @@ bool try_receive(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[訊息傳遞函式](../../../parallel/concrt/message-passing-functions.md)。  
   
-##  <a name="wait"></a>等候  
+##  <a name="wait"></a>  等候  
  暫停目前的內容達指定的時間長度。  
   
 ```
@@ -1540,7 +1542,7 @@ void __cdecl wait(unsigned int _Milliseconds);
 ### <a name="remarks"></a>備註  
  並行執行階段排程器內容上呼叫此方法時，如果排程器會尋找基礎資源上執行不同的內容。 由於排程器是合作性質，因此在指定的毫秒數之後，這個內容不會確實繼續進行。 如果排程器忙於執行其他不能配合排程器的工作，則等候期間可能會是無限期。  
   
-##  <a name="when_all"></a>when_all  
+##  <a name="when_all"></a>  when_all  
  建立工作，這個工作將會在當做引數提供的所有工作都已順利完成時成功完成。  
   
 ```
@@ -1569,13 +1571,13 @@ auto when_all(
  在所有輸入工作都順利完成時會成功完成的工作。 如果輸入工作屬於類型 `T`，此函式的輸出將會是 `task<std::vector<T>>`。 如果輸入工作屬於類型 `void`，則輸出工作也會是 `task<void>`。  
   
 ### <a name="remarks"></a>備註  
- `when_all` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](task-class.md#wait)，您可以放心呼叫此函式[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]ASTA (應用程式 STA) 執行緒上的應用程式。  
+ `when_all` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](task-class.md#wait)，您可以放心在 ASTA (應用程式 STA) 執行緒上的 UWP 應用程式呼叫此函式。  
   
  如果其中一項工作取消或擲回例外狀況，則傳回的工作會提早完成，已取消的狀態，而且例外狀況，如果其中有發生，會擲回您呼叫[task:: get](task-class.md#get)或`task::wait`於該工作。  
   
  如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
-##  <a name="when_any"></a>when_any  
+##  <a name="when_any"></a>  when_any  
  建立工作，當成引數來提供的任何工作順利完成時，此工作就會順利成功。  
   
 ```
@@ -1618,7 +1620,7 @@ auto when_any(
  一項工作會在所有輸入工作都順利完成時，順利完成。 如果輸入工作的類型為 `T`，則這個函式的輸出會是 `task<std::pair<T, size_t>>>`，其中配對的第一個項目是完成工作的結果，而第二個項目是已完成工作的索引。 如果輸入工作的類型為 `void`，則輸出是 `task<size_t>`，其中結果是完成工作的索引。  
   
 ### <a name="remarks"></a>備註  
- `when_any` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](task-class.md#wait)，您可以放心呼叫此函式[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]ASTA (應用程式 STA) 執行緒上的應用程式。  
+ `when_any` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](task-class.md#wait)，您可以放心在 ASTA (應用程式 STA) 執行緒上的 UWP 應用程式呼叫此函式。  
   
  如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   

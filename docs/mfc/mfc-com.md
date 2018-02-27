@@ -1,14 +1,17 @@
 ---
-title: "MFC COM |Microsoft 文件"
+title: MFC COM | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 MFC 的子集為了支援 COM，雖然大部分的 Active Template Library (ATL) 設計的 COM 程式設計。 本節的主題描述在 MFC 的 COM 支援  
@@ -53,7 +57,7 @@ MFC 的子集為了支援 COM，雖然大部分的 Active Template Library (ATL)
   
 -   [自動化](../mfc/automation.md)（先前稱為 OLE Automation） 可讓一個應用程式操作另一個的應用程式中實作的物件，或者 「 公開 」 物件以便可以操作。  
   
-     自動化的物件可能會是本機或[遠端](../mfc/remote-automation.md)（在另一部電腦可透過網路存取）。 Aurotmation 可供 OLE 和 COM 物件使用。  
+     自動化的物件可能是本機或遠端 （在網路上存取另一部電腦） 上。 Aurotmation 可供 OLE 和 COM 物件使用。  
   
 -   本章節也提供如何撰寫使用 MFC，例如，在 COM 元件資訊[連接點](../mfc/connection-points.md)。  
   
@@ -65,8 +69,6 @@ MFC 的子集為了支援 COM，雖然大部分的 Active Template Library (ATL)
  [主動式文件內含項目](../mfc/active-document-containment.md)  
   
  [Automation](../mfc/automation.md)  
-  
- [Remote Automation](../mfc/remote-automation.md)  
   
  [連接點](../mfc/connection-points.md)  
   

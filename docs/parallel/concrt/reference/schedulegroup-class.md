@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ScheduleGroup
 - CONCRT/concurrency::ScheduleGroup
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: ScheduleGroup class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1ca427842245701c1d8dfbcef946ef1586acbf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 類別
 代表排程群組的抽象概念。 排程群組會將一組相關的工作組織在一起，以讓這些工作獲得暫時緊密排程在一起的優勢，其方法如下：透過在同一個群組中執行另一個工作再移至另一個群組；透過再同一個 NUMA 節點或實體通訊端的同一個群組內執行多個項目。  
@@ -49,7 +53,7 @@ class ScheduleGroup;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[識別碼](#id)|傳回群組所屬的排程器內必須是唯一的排程群組的識別碼。|  
+|[Id](#id)|傳回群組所屬的排程器內必須是唯一的排程群組的識別碼。|  
 |[參考資料](#reference)|遞增排程器群組的參考計數。|  
 |[發行](#release)|遞減排程器群組的參考計數。|  
 |[ScheduleTask](#scheduletask)|排程的排程群組中的輕量工作。|  
@@ -62,7 +66,7 @@ class ScheduleGroup;
   
  **命名空間：** concurrency  
   
-##  <a name="id"></a>識別碼 
+##  <a name="id"></a> Id 
 
  傳回群組所屬的排程器內必須是唯一的排程群組的識別碼。  
   
@@ -73,7 +77,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>傳回值  
  排程群組中的群組所屬的排程器的唯一識別碼。  
   
-##  <a name="operator_delete"></a>delete 運算子 
+##  <a name="operator_delete"></a> delete 運算子 
 
  A`ScheduleGroup`終結物件內部執行階段時它的所有外部參考。 它不可明確刪除。  
   
@@ -92,7 +96,7 @@ void operator delete(
  `_PObject`  
  要刪除物件的指標。  
   
-##  <a name="reference"></a>參考 
+##  <a name="reference"></a> 參考 
 
  遞增排程器群組的參考計數。  
   
@@ -106,7 +110,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>備註  
  這通常用來管理排程群組的存留期的組合。 當排程群組的參考計數降至零時，則執行階段會刪除排程群組。 建立使用排程群組[currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup)方法，或[scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup)方法開始於其中一個的參考計數。  
   
-##  <a name="release"></a>發行 
+##  <a name="release"></a> 發行 
 
  遞減排程器群組的參考計數。  
   
@@ -122,13 +126,13 @@ virtual unsigned int Release() = 0;
   
  排程群組是與特定的排程器執行個體相關聯。 您必須先確定已釋放排程群組的所有參考，才能釋放排程器的所有參考，因為後者可能會使排程器遭到終結。 正在進行其他方式導致未定義的行為。  
   
-##  <a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a> ~ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  排程的排程群組中的輕量工作。  
   

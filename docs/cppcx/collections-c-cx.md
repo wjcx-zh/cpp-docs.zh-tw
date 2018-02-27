@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 在 C + + /CX 程式，您可以進行自由使用 Standard Template Library (STL) 容器或任何其他使用者定義的集合型別。 不過，當您集合來回傳遞 Windows 執行階段應用程式二進位介面 (ABI) 之間 — 比方說，至 XAML 控制項或 JavaScript 用戶端，您必須使用 Windows 執行階段集合型別。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 12/21/2017
    
   
 ## <a name="vectorproxy-elements"></a>VectorProxy 元素  
- [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)和[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)啟用`range for`迴圈以及像是演算法[std:: sort](../standard-library/algorithm-functions.md#sort)與[IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx)容器。 但是，您無法透過 C++ 指標取值存取 `IVector` 項目，只能透過 [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) 和 [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) 方法存取。 因此，基於 STL 的要求，這些迭代器會使用 Proxy 類別 `Platform::Details::VectorProxy<T>` 和 `Platform::Details::ArrowProxy<T>` 透過 `*`、 `->`和 `[]` 運算子存取個別元素。 嚴格來說，如果指定 `IVector<Person^> vec`，則 `*begin(vec)` 的類型就是 `VectorProxy<Person^>`。 不過，對您的程式碼來說，Proxy 物件永遠都像是不存在一樣。 這些 Proxy 物件沒有記錄在文件中，因為它們僅供迭代器在內部使用，但是了解機制如何運作還是很重要。  
+ [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)和[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)啟用`range for`迴圈以及像是演算法[std:: sort](../standard-library/algorithm-functions.md#sort) 與[IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx)容器。 但是，您無法透過 C++ 指標取值存取 `IVector` 項目，只能透過 [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) 和 [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) 方法存取。 因此，基於 STL 的要求，這些迭代器會使用 Proxy 類別 `Platform::Details::VectorProxy<T>` 和 `Platform::Details::ArrowProxy<T>` 透過 `*`、 `->`和 `[]` 運算子存取個別元素。 嚴格來說，如果指定 `IVector<Person^> vec`，則 `*begin(vec)` 的類型就是 `VectorProxy<Person^>`。 不過，對您的程式碼來說，Proxy 物件永遠都像是不存在一樣。 這些 Proxy 物件沒有記錄在文件中，因為它們僅供迭代器在內部使用，但是了解機制如何運作還是很重要。  
   
  當您針對 `range for` 容器使用 `IVector` 迴圈時，請使用 `auto&&` 讓迭代器變數能夠正確繫結至 `VectorProxy` 元素。 如果您使用 `auto` 或 `auto&`，就會引發編譯器警告 C4239，而且警告文字中會提及 `VectoryProxy` 。  
   
@@ -135,11 +136,11 @@ void FindButton(UIElementCollection^ col)
   
 |Iterators|函式|  
 |---------------|---------------|  
-|[Platform::Collections::VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (在內部儲存[collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)和 int)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
-|[Platform::Collections::VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (在內部儲存[IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ 和 int)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
-|[Platform::Collections::InputIterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections::InputIterator < Inputiterator<ikeyvaluepair<k\<K，V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IMap\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)。|  
-|[Platform::Collections::InputIterator < Inputiterator<ikeyvaluepair<k\<K，V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (在內部儲存[collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)和 int)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (在內部儲存[IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ 和 int)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
+|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IMap\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)。|  
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>集合變更事件  
  `Vector` 和 `Map` 藉由實作變更或重設集合物件時，或者插入、移除或變更集合的任何元素時所發生的事件，來支援 XAML 集合中的資料繫結。 您可以撰寫自己的型別來支援資料繫結，但是您無法繼承自 `Map` 或 `Vector` ，因為這些型別是密封型別。  

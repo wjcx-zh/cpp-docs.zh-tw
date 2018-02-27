@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2a177f30829719022afdedd810ecc265c94130d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>工作平行處理原則 (並行執行階段)
 並行執行階段，*工作*是執行特定作業，且通常會與其他工作平行執行的工作單位。 工作可以分解成其他更細部的工作，並組織成*工作群組*。  
@@ -81,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
 - [穩固程式設計](#robust)  
   
-##  <a name="lambdas"></a>使用 Lambda 運算式  
+##  <a name="lambdas"></a> 使用 Lambda 運算式  
  由於 Lambda 運算式的語法簡潔，因此 Lambda 運算式是定義工作和工作群組所執行工作的常見方式。 以下有一些使用提示：  
   
 -   工作通常是在背景執行緒上執行，因此當您擷取 Lambda 運算式中的變數時請注意物件存留期。 當您以傳值方式擷取變數時，會在 Lambda 主體中建立該變數的複本。 當您以傳址方式擷取時，則不會建立複本。 因此，請確定您以傳址方式擷取的任何變數，存留期比使用它的工作還長。  
@@ -98,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。  
   
-##  <a name="task-class"></a>工作類別  
+##  <a name="task-class"></a> 工作類別  
  您可以使用[concurrency:: task](../../parallel/concrt/reference/task-class.md)類別將工作組合成一組相依的作業。 這個組合模式支援的概念*接續*。 時執行的接續可讓程式碼在上一個或*前項*，工作完成。 前項工作的結果會傳遞做為一或多個接續工作的輸入。 當前項工作完成時，等候它的任何接續工作都會排定執行。 每個接續工作會收到一份前項工作之結果的複本。 這些接續工作也可能依次成為其他接續的前項工作，藉此建立工作鏈結。 接續可協助您建立任意長度的工作鏈結，這些工作之間有特定的相依性。 此外，工作可以在工作啟動之前參與取消，或是在工作執行時以合作的方式參與取消。 如需有關這個取消模型的詳細資訊，請參閱[PPL 中的取消](cancellation-in-the-ppl.md)。  
   
  `task` 是範本類別。 類型參數 `T` 是工作所產生之結果的類型。 如果工作不會傳回值，此類型可以是 `void`。 `T` 無法使用 `const` 修飾詞。  
@@ -124,9 +127,9 @@ ms.lasthandoff: 12/21/2017
  如需範例，會使用`task`， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)，取消作業，請參閱[逐步解說： 使用工作和 XML HTTP 要求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。 (本文件稍後會說明 `task_completion_event` 類別。)  
   
 > [!TIP]
->  若要了解詳細資料中的工作特有的[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]應用程式，請參閱[c + + 中的非同步程式設計](http://msdn.microsoft.com/en-us/512700b7-7863-44cc-93a2-366938052f31)和[c + + 為 Windows 市集應用程式建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
+>  若要深入了解特有 UWP 應用程式中工作的詳細資訊，請參閱[c + + 中的非同步程式設計](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)和[建立非同步作業以 c + + UWP 應用程式](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。  
   
-##  <a name="continuations"></a>接續工作  
+##  <a name="continuations"></a> 接續工作  
  在非同步程式設計中，非同步作業完成時叫用第二個作業，並將資料傳遞給它，是非常普遍的。 傳統上，這項作業使用回呼方法完成。 並行執行階段中，相同的功能由提供*接續工作*。 接續工作 （也只稱為接續） 是由另一個工作，也就是叫用的非同步工作*前項*、 當前項完成時。 藉由使用接續，您可以：  
   
 -   將資料從前項傳遞至接續。  
@@ -135,7 +138,7 @@ ms.lasthandoff: 12/21/2017
   
 -   在接續開始之前或在執行時以合作的方式取消接續。  
   
--   提供有關該如何排定接續的提示。 (這只適用於 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式。 如需詳細資訊，請參閱[c + + 為 Windows 市集應用程式建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。)  
+-   提供有關該如何排定接續的提示。 （這適用於僅限通用 Windows 平台 (UWP) 應用程式。 如需詳細資訊，請參閱[建立非同步作業以 c + + UWP 應用程式](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。)  
   
 -   從相同前項叫用多個接續。  
   
@@ -159,21 +162,21 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[concrt-continuation-chain#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_6.cpp)]  
   
- 接續也可以傳回另一項工作。 如果沒有取消，則這項工作會在後續的接續之前執行。 這項技術稱為*非同步解除包裝*。 非同步解除包裝適用於您想要在背景中執行其他工作，但不是想讓目前的工作阻擋目前的執行緒時。 (這常見於 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式，接續在應用程式中可在 UI 執行緒上執行)。 下列範例顯示三個工作。 第一項工作會傳回另一項在接續工作之前執行的工作。  
+ 接續也可以傳回另一項工作。 如果沒有取消，則這項工作會在後續的接續之前執行。 這項技術稱為*非同步解除包裝*。 非同步解除包裝適用於您想要在背景中執行其他工作，但不是想讓目前的工作阻擋目前的執行緒時。 （這是通常在 UWP 應用程式中，接續可讓 UI 執行緒上執行）。 下列範例顯示三個工作。 第一項工作會傳回另一項在接續工作之前執行的工作。  
   
  [!code-cpp[concrt-async-unwrapping#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_7.cpp)]  
   
 > [!IMPORTANT]
 >  當工作的接續傳回類型 `N` 的巢狀工作時，產生的工作類型為 `N`，而非 `task<N>`，並且會在巢狀工作完成時完成。 換句話說，接續會執行巢狀工作的解除包裝。  
   
-##  <a name="value-versus-task"></a>值為基礎與以工作為基礎的接續  
+##  <a name="value-versus-task"></a> 值為基礎與以工作為基礎的接續  
  假如有 `task` 物件，其傳回類型是 `T`，則您可以提供類型 `T` 或 `task<T>` 的值給其接續工作。 會採用型別接續`T`稱為*值為基礎的接續*。 以值為基礎的接續會排定在前項工作完成且沒有錯誤也未取消時執行。 會採用型別接續`task<T>`為其參數稱為*工作為基礎的接續*。 以工作為基礎的接續一定會排定在前項工作完成時執行，即使當前項工作取消或擲回例外狀況時亦然。 接著您便可以呼叫 `task::get` 取得前項工作的結果。 如果前項工作已取消，`task::get`會擲回[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)。 如果前項工作擲回例外狀況，`task::get` 會重新擲回該例外狀況。 以工作為基礎的接續在其前項工作取消時，不會標示為已取消。  
   
-##  <a name="composing-tasks"></a>組成工作  
+##  <a name="composing-tasks"></a> 組成工作  
  本章節描述[concurrency:: when_all](reference/concurrency-namespace-functions.md#when_all)和[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函式，可協助您組合多個工作來實作常見的模式。  
 
   
-###  <a name="when-all"></a>When_all 函式  
+###  <a name="when-all"></a> When_all 函式  
  `when_all` 函式會產生在一組工作完成之後完成的工作。 此函數會傳回 std::[向量](../../standard-library/vector-class.md)物件，其中包含在集合中每個工作的結果。 下列基本範例使用 `when_all` 來建立代表其他三個工作已完成的工作。  
   
  [!code-cpp[concrt-join-tasks#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_8.cpp)]  
@@ -197,7 +200,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]  
   
- 請考慮使用 C++ 和 XAML 的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式，並將一組檔案寫入至磁碟。 下列範例顯示如何使用 `when_all` 和 `observe_all_exceptions` 以確保程式會觀察到所有例外狀況。  
+ 請考慮使用 c + + 和 XAML，和一組檔案寫入磁碟的 UWP 應用程式。 下列範例顯示如何使用 `when_all` 和 `observe_all_exceptions` 以確保程式會觀察到所有例外狀況。  
   
  [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]  
   
@@ -219,10 +222,10 @@ ms.lasthandoff: 12/21/2017
   
 > [!TIP]
 
-> `when_all` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](reference/task-class.md#wait)，您可以放心呼叫此函式[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]ASTA (應用程式 STA) 執行緒上的應用程式。  
+> `when_all` 是未封鎖的函式，會產生 `task` 做為其結果。 不同於[task:: wait](reference/task-class.md#wait)，您可以放心在 ASTA (應用程式 STA) 執行緒上的 UWP 應用程式呼叫此函式。  
 
   
-###  <a name="when-any"></a>When_any 函式  
+###  <a name="when-any"></a> When_any 函式  
  `when_any` 函式會產生在一組工作的第一項工作完成之後完成的工作。 此函數會傳回[std:: pair](../../standard-library/pair-structure.md)物件，其中包含已完成工作的結果，以及該工作在集合中的索引。  
   
  `when_any` 函式在下列情節中特別有用：  
@@ -249,9 +252,9 @@ ms.lasthandoff: 12/21/2017
  `auto t = t1 || t2; // same as when_any`  
   
 > [!TIP]
->  如同 `when_all`，`when_any` 是未封鎖的函式，可以在 ASTA 執行緒上的 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中安全地呼叫。  
+>  如同`when_all`，`when_any`非封鎖，且可安全地呼叫在 ASTA 執行緒上的 UWP 應用程式。  
   
-##  <a name="delayed-tasks"></a>延遲的執行工作  
+##  <a name="delayed-tasks"></a> 延遲的執行工作  
  有時必須要延遲工作的執行，直到滿足條件為止，或者啟動工作以回應外部事件。 例如在非同步程式設計中，您可能必須啟動工作以回應 I/O 完成事件。  
   
  有兩種方法可以完成這項作業：使用接續，或啟動工作並等待工作之工作函式內的事件。 然而，在某些情況中無法使用這些方法。 例如，若要建立接續，您必須要有前項工作。 不過，如果您沒有前項工作，您可以建立*工作完成事件*然後在可用時加以鏈結前項工作完成事件。 此外，因為等待中的工作也會阻擋執行緒，您可以使用工作完成事件在非同步作業完成時執行工作，並藉此釋放執行緒。  
@@ -260,7 +263,7 @@ ms.lasthandoff: 12/21/2017
   
  如需範例，會使用`task_completion_event`實作會在延遲之後完成的工作，請參閱[How to： 建立工作的完成後延遲](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)。  
   
-##  <a name="task-groups"></a>工作群組  
+##  <a name="task-groups"></a> 工作群組  
  A*工作群組*將組織工作的集合。 工作群組將工作推送至竊取工作的佇列。 排程器將工作從這個佇列移除，並在可用的運算資源上執行。 將工作加入工作群組之後，您可以等待所有工作完成，或取消尚未開始的工作。  
   
  PPL 使用[concurrency:: task_group](reference/task-group-class.md)和[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)類別來代表工作群組和[concurrency:: task_handle](../../parallel/concrt/reference/task-handle-class.md)類別代表在這些群組中執行的工作。 `task_handle` 類別會封裝執行工作的程式碼。 就像 `task` 類別，此工作函式的形式會是 Lambda 函式、函式指標或函式物件。 您通常不需要直接使用 `task_handle` 物件。 相反地，您會將工作函式傳遞至工作群組，而工作群組會建立和管理 `task_handle` 物件。  
@@ -277,7 +280,7 @@ ms.lasthandoff: 12/21/2017
   
  執行階段也提供例外狀況處理模型，可讓您從工作擲回例外狀況，並在等候相關聯的工作群組完成時，處理該例外狀況。 如需有關此例外狀況處理模型的詳細資訊，請參閱[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。  
   
-##  <a name="comparing-groups"></a>比較 task_group 與 structured_task_group  
+##  <a name="comparing-groups"></a> 比較 task_group 與 structured_task_group  
  雖然我們建議您使用 `task_group` 或 `parallel_invoke`，而不要使用 `structured_task_group` 類別，但在某些情況下您會想要使用 `structured_task_group`，例如您撰寫平行處理演算法 (可執行數目可變的工作或要求取消的支援) 時。 本章節將說明 `task_group` 和 `structured_task_group` 類別之間的差異。  
   
  `task_group` 類別是安全執行緒。 因此，您可以從多個執行緒將工作加入 `task_group` 物件，並從多個執行緒等候或取消 `task_group` 物件。 `structured_task_group` 物件的建構和解構必須出現在相同的語彙範圍中。 此外，`structured_task_group` 物件上的所有作業必須在同一個執行緒上進行。 此規則的例外狀況是[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)和[concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling)方法。 子工作可以呼叫這些方法來取消父工作群組，或在任何時候檢查取消。  
@@ -313,7 +316,7 @@ Message from task: 42
   
  如需完整範例，示範如何使用`parallel_invoke`演算法，請參閱[How to： 使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[How to： 使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). 如需完整的範例使用`task_group`類別來實作非同步未來，請參閱[逐步解說： 實作未來](../../parallel/concrt/walkthrough-implementing-futures.md)。  
   
-##  <a name="robust"></a>穩固程式設計  
+##  <a name="robust">穩固程式設計</a>  
  請確定當您使用工作、工作群組和平行演算法時，了解取消和例外狀況處理的角色。 例如，在平行工作的樹狀中，已取消的工作會導致子工作無法執行。 如果其中一項子工作所執行的作業對應用程式很重要 (例如釋放資源)，這可能會造成問題。 此外，如果子工作擲回例外狀況，該例外狀況可能會透過物件解構函式散佈，並在應用程式中導致未定義的行為。 如需說明這些點的範例，請參閱[了解如何取消和例外狀況處理物件解構的影響](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)平行模式程式庫文件中的最佳作法 > 一節。 如需取消作業和 PPL 中的例外狀況處理模型的詳細資訊，請參閱[取消](../../parallel/concrt/cancellation-in-the-ppl.md)和[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。  
   
 ## <a name="related-topics"></a>相關主題  

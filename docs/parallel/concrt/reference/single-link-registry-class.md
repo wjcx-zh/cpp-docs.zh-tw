@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - single_link_registry
 - AGENTS/concurrency::single_link_registry
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::single_link_registry::contains
 - AGENTS/concurrency::single_link_registry::count
 - AGENTS/concurrency::single_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: single_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 74167dcc03754c7f25d83058ec814798d40931a2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 類別
 `single_link_registry` 物件是只管理單一來源或目標區塊的 `network_link_registry`。  
@@ -59,7 +63,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|新增連結`single_link_registry`物件。 (覆寫[network_link_registry:: add](network-link-registry-class.md#add)。)|  
 |[begin](#begin)|傳回迭代器中的第一個項目`single_link_registry`物件。 (覆寫[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
-|[包含](#contains)|搜尋`single_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
+|[contains](#contains)|搜尋`single_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
 |[count](#count)|計算中的項目數目`single_link_registry`物件。 (覆寫[network_link_registry:: count](network-link-registry-class.md#count)。)|  
 |[remove](#remove)|移除連結，以從`single_link_registry`物件。 (覆寫[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
   
@@ -73,7 +77,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
  **命名空間：** concurrency  
   
-##  <a name="add"></a>新增 
+##  <a name="add"></a> 新增 
 
  新增連結`single_link_registry`物件。  
   
@@ -88,7 +92,7 @@ virtual void add(_EType _Link);
 ### <a name="remarks"></a>備註  
  方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況，如果此登錄中已經有一個連結。  
   
-##  <a name="begin"></a>開始 
+##  <a name="begin"></a> 開始 
 
  傳回迭代器中的第一個項目`single_link_registry`物件。  
   
@@ -102,7 +106,7 @@ virtual iterator begin();
 ### <a name="remarks"></a>備註  
  結束狀態會表示`NULL`連結。  
   
-##  <a name="contains"></a>包含 
+##  <a name="contains"></a> 包含 
 
  搜尋`single_link_registry`物件指定的區塊。  
   
@@ -115,9 +119,9 @@ virtual bool contains(_EType _Link);
  在搜尋區塊的指標`single_link_registry`物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找不到連結，`false`否則。  
+ `true` 如果找不到連結，`false`否則。  
   
-##  <a name="count"></a>計數 
+##  <a name="count"></a> 計數 
 
  計算中的項目數目`single_link_registry`物件。  
   
@@ -128,7 +132,7 @@ virtual size_t count();
 ### <a name="return-value"></a>傳回值  
  中的項目數`single_link_registry`物件。  
   
-##  <a name="remove"></a>移除 
+##  <a name="remove"></a> 移除 
 
  移除連結，以從`single_link_registry`物件。  
   
@@ -141,9 +145,9 @@ virtual bool remove(_EType _Link);
  要移除，如果在區塊的指標找到。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找到並移除，連結`false`否則。  
+ `true` 如果找到並移除，連結`false`否則。  
   
-##  <a name="ctor"></a>single_link_registry 
+##  <a name="ctor"></a> single_link_registry 
 
  建構 `single_link_registry` 物件。  
   
@@ -151,7 +155,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```  
   
-##  <a name="dtor"></a>~ single_link_registry 
+##  <a name="dtor"></a> ~single_link_registry 
 
  終結`single_link_registry`物件。  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - texture
 - AMP_GRAPHICS/texture
@@ -22,18 +23,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="texture-class"></a>texture 類別
 紋理是將資料彙總上`accelerator_view`範圍網域中。 它是變數，其中每個項目範圍網域中的集合。 每個變數會保存至 c + + 基本類型對應的值 ( `unsigned int`， `int`， `float`， `double`)、 純量類型 ( `norm`，或`unorm`)，或短向量類型。  
@@ -84,8 +87,8 @@ class texture;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator （)](#operator_call)|傳回參數所指定的項目值。|  
-|[operator]](#operator_at)|傳回指定索引處的項目。|  
+|[operator()](#operator_call)|傳回參數所指定的項目值。|  
+|[operator[]](#operator_at)|傳回指定索引處的項目。|  
 |[operator=](#operator_eq)|複製指定[紋理](texture-class.md)給這一個物件。|  
   
 ### <a name="public-constants"></a>公用常數  
@@ -112,7 +115,7 @@ class texture;
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="dtor"></a>~ 紋理 
+##  <a name="dtor"></a> ~ 紋理 
 
  終結`texture`物件。  
   
@@ -120,7 +123,7 @@ class texture;
 ~texture() restrict(cpu);
 ```  
   
-##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
  取得[accelerator_view](accelerator-view-class.md)也就是要複製到這個紋理的慣用的目標。  
   
@@ -128,7 +131,7 @@ class texture;
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  複製`texture`物件到目的地時，所進行的深層複本。  
   
@@ -147,7 +150,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
  `value_type`  
  紋理中的項目類型。  
   
-##  <a name="data"></a>資料 
+##  <a name="data"></a> 資料 
 
  傳回這個的紋理的未經處理資料的 CPU 指標。  
   
@@ -161,7 +164,7 @@ const void* data() const restrict(cpu);
 ### <a name="return-value"></a>傳回值  
  紋理的未經處理資料指標。  
   
-##  <a name="depth_pitch"></a>depth_pitch 
+##  <a name="depth_pitch"></a> depth_pitch 
 
  取得在 CPU 上臨時 3D 材質中每個深度切割之間的位元組數目。  
   
@@ -169,7 +172,7 @@ const void* data() const restrict(cpu);
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;  
 ```  
   
-##  <a name="get"></a>取得 
+##  <a name="get"></a> 取得 
 
  傳回指定索引處的項目值。  
   
@@ -184,7 +187,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ### <a name="return-value"></a>傳回值  
  位於指定索引處的項目值。  
   
-##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
  傳回這個紋理複製到其中的慣用目標 accelerator_view。  
   
@@ -195,7 +198,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 ### <a name="return-value"></a>傳回值  
  [Accelerator_view](accelerator-view-class.md)也就是要複製到這個紋理的慣用的目標。  
   
-##  <a name="get_depth_pitch"></a>get_depth_pitch 
+##  <a name="get_depth_pitch"></a> get_depth_pitch 
 
  傳回位元組的數目之間 3D 暫存 CPU 上的紋理中的每個深度切割。  
   
@@ -206,7 +209,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 ### <a name="return-value"></a>傳回值  
  3D 暫存 CPU 上的紋理中的每個深度切割之間的位元組數目。  
   
-##  <a name="get_row_pitch"></a>get_row_pitch 
+##  <a name="get_row_pitch"></a> get_row_pitch 
 
  深度配量 3d 臨時的紋理中的每個資料列或 2 維度的臨時材質中每個資料列之間，則傳回位元組的數目。  
   
@@ -217,7 +220,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 ### <a name="return-value"></a>傳回值  
  深度配量 3d 臨時的紋理中的每個資料列或 2 維度的臨時材質中每個資料列之間的位元組數目。  
   
-##  <a name="operator_call"></a>operator （) 
+##  <a name="operator_call"></a> operator （) 
 
  傳回參數所指定的項目值。  
   
@@ -260,7 +263,7 @@ const value_type operator() (
 ### <a name="return-value"></a>傳回值  
  參數所指定項目值。  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator] 
 
  傳回指定索引處的項目。  
   
@@ -281,7 +284,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>傳回值  
  所指定索引處的項目。  
   
-##  <a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a> 運算子 = 
 
  複製指定[紋理](texture-class.md)給這一個物件。  
   
@@ -301,7 +304,7 @@ texture& operator= (
 ### <a name="return-value"></a>傳回值  
  此參考`texture`物件。  
   
-##  <a name="rank"></a>順位 
+##  <a name="rank"></a> 順位 
 
  取得的順位`texture`物件。  
   
@@ -309,7 +312,7 @@ texture& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="row_pitch"></a>row_pitch 
+##  <a name="row_pitch"></a> row_pitch 
 
  取得以 2D 或 3D 每個資料列之間的位元組數的暫存 CPU 上的紋理。  
   
@@ -317,7 +320,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="set"></a>設定 
+##  <a name="set"></a> 設定 
 
  設定指定索引處的元素的值。  
   
@@ -337,7 +340,7 @@ void set(
  `value`  
  項目的新值。  
   
-##  <a name="ctor"></a>紋理 
+##  <a name="ctor"></a> 紋理 
 
  初始化 `texture` 類別的新執行個體。  
   

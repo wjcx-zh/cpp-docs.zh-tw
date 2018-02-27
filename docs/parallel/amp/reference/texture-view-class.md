@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - texture_view
 - AMP_GRAPHICS/texture_view
@@ -19,21 +20,23 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="textureview-class"></a>texture_view 類別
-提供對紋理的寫入權限和讀取權限。 `texture_view`只可以用來讀取其值類型的紋理`int`， `unsigned int`，或`float`具有預設值 32 位元 bpse。 若要閱讀其他紋理的格式，使用`texture_view<const value_type, _Rank>`。  
+提供對紋理的寫入權限和讀取權限。 `texture_view` 只可以用來讀取其值類型的紋理`int`， `unsigned int`，或`float`具有預設值 32 位元 bpse。 若要閱讀其他紋理的格式，使用`texture_view<const value_type, _Rank>`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -83,15 +86,15 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的綠色 (y) 元件。|  
 |[gather_red](#gather_red)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的紅色 (x) 元件。|  
 |[get](#get)|多載。 依索引取得的項目值。|  
-|[範例](#sample)|多載。 使用指定的取樣設定取樣的紋理指定的座標和層級的詳細資料。|  
+|[sample](#sample)|多載。 使用指定的取樣設定取樣的紋理指定的座標和層級的詳細資料。|  
 |[set](#set)|依索引設定項目的值。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[operator （)](#operator_call)|多載。 依索引取得的項目值。|  
-|[operator]](#operator_at)|多載。 依索引取得的項目值。|  
+|[operator()](#operator_call)|多載。 依索引取得的項目值。|  
+|[operator[]](#operator_at)|多載。 依索引取得的項目值。|  
 |[operator=](#operator_eq)|多載。 指派運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
@@ -110,7 +113,7 @@ class texture_view<const value_type, _Rank>
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="dtor"></a>~ texture_view 
+##  <a name="dtor"></a> ~texture_view 
 
  終結`texture_view`執行個體。  
   
@@ -118,7 +121,7 @@ class texture_view<const value_type, _Rank>
 ~texture_view() restrict(amp, cpu);
 ```  
   
-##  <a name="ctor"></a>texture_view 
+##  <a name="ctor"></a> texture_view 
 
  建構`texture_view`執行個體。  
   
@@ -180,7 +183,7 @@ texture_view(// [7] copy constructor
  `_Mip_levels`  
  可透過存取 mipmap 層次數目`texture_view`。  
   
-##  <a name="gather_red"></a>gather_red 
+##  <a name="gather_red"></a> gather_red 
 
  使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的紅色 (x) 元件。  
   
@@ -210,7 +213,7 @@ const gather_return_type gather_red(
 ### <a name="return-value"></a>傳回值  
  包含 4 的紅色 (x) 元件的陣序規範 4 短向量取樣材質值。  
   
-##  <a name="gather_green"></a>gather_green 
+##  <a name="gather_green"></a> gather_green 
 
  使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的綠色 (y) 元件。  
   
@@ -240,7 +243,7 @@ const gather_return_type gather_green(
 ### <a name="return-value"></a>傳回值  
  包含 4 的綠色 (y) 元件的陣序規範 4 短向量取樣材質值。  
   
-##  <a name="gather_blue"></a>gather_blue 
+##  <a name="gather_blue"></a> gather_blue 
 
  使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的藍色 (z) 元件。  
   
@@ -270,7 +273,7 @@ const gather_return_type gather_blue(
 ### <a name="return-value"></a>傳回值  
  包含 4 的紅色 (x) 元件的陣序規範 4 短向量取樣材質值。  
   
-##  <a name="gather_alpha"></a>gather_alpha 
+##  <a name="gather_alpha"></a> gather_alpha 
 
  使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的 alpha (w) 元件。  
   
@@ -300,7 +303,7 @@ const gather_return_type gather_alpha(
 ### <a name="return-value"></a>傳回值  
  陣序規範 4 短向量包含 alpha (w) 元件的 4 取樣材質值。  
   
-##  <a name="get"></a>取得 
+##  <a name="get"></a> 取得 
 
  取得指定索引處的元素的值。  
   
@@ -324,7 +327,7 @@ value_type get(
 ### <a name="return-value"></a>傳回值  
  項目的值。  
   
-##  <a name="operator_eq"></a>運算子 = 
+##  <a name="operator_eq"></a> 運算子 = 
 
  指派與指定的相同紋理檢視`texture_view`至此`texture_view`執行個體。  
   
@@ -352,7 +355,7 @@ texture_view<const value_type, _Rank>& operator= (// [3] copy constructor
 ### <a name="return-value"></a>傳回值  
  此參考`texture_view`執行個體。  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator] 
 
  依索引傳回項目值。  
   
@@ -379,7 +382,7 @@ value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>傳回值  
  以編製索引的項目值`_Index`。  
   
-##  <a name="operator_call"></a>operator （) 
+##  <a name="operator_call"></a> operator （) 
 
  依索引傳回項目值。  
   
@@ -437,7 +440,7 @@ value_type operator() (
 ### <a name="return-value"></a>傳回值  
  以編製索引的項目值`_Index`。  
   
-##  <a name="sample"></a>範例 
+##  <a name="sample"></a> 範例 
 
  使用指定的取樣設定取樣的紋理指定的座標和層級的詳細資料。  
   
@@ -476,7 +479,7 @@ value_type sample(
 ### <a name="return-value"></a>傳回值  
  插補的範例值。  
   
-##  <a name="set"></a>設定 
+##  <a name="set"></a> 設定 
 
  將項目的值設定為指定的值的指定索引處。  
   
@@ -493,7 +496,7 @@ void set(
  `value`  
  若要設定項目的值。  
   
-##  <a name="value_type"></a>value_type 
+##  <a name="value_type"></a> value_type 
 
  Texture_view 元素的值型別。  
   

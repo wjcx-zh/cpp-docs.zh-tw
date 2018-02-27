@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - source_link_manager
 - AGENTS/concurrency::source_link_manager
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs: C++
-helpviewer_keywords: source_link_manager class
+dev_langs:
+- C++
+helpviewer_keywords:
+- source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 類別
 `source_link_manager` 物件會管理 `ISource` 區塊與傳訊區塊網路的連結。  
@@ -64,7 +68,7 @@ class source_link_manager;
 |名稱|描述|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|建構 `source_link_manager` 物件。|  
-|[~ source_link_manager 解構函式](#dtor)|終結`source_link_manager`物件。|  
+|[~source_link_manager Destructor](#dtor)|終結`source_link_manager`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -72,7 +76,7 @@ class source_link_manager;
 |----------|-----------------|  
 |[add](#add)|將加入的來源連結`source_link_manager`物件。|  
 |[begin](#begin)|傳回迭代器中的第一個項目`source_link_manager`物件。|  
-|[包含](#contains)|搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。|  
+|[contains](#contains)|搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。|  
 |[count](#count)|計算中連結的區塊數目`source_link_manager`物件。|  
 |[reference](#reference)|取得參考上`source_link_manager`物件。|  
 |[register_target_block](#register_target_block)|註冊保存此目標區塊`source_link_manager`物件。|  
@@ -91,7 +95,7 @@ class source_link_manager;
   
  **命名空間：** concurrency  
   
-##  <a name="add"></a>新增 
+##  <a name="add"></a> 新增 
 
  將加入的來源連結`source_link_manager`物件。  
   
@@ -103,7 +107,7 @@ void add(_EType _Link);
  `_Link`  
  要加入區塊的指標。  
   
-##  <a name="begin"></a>開始 
+##  <a name="begin"></a> 開始 
 
  傳回迭代器中的第一個項目`source_link_manager`物件。  
   
@@ -117,7 +121,7 @@ iterator begin();
 ### <a name="remarks"></a>備註  
  迭代器的結束狀態以`NULL`連結。  
   
-##  <a name="contains"></a>包含 
+##  <a name="contains"></a> 包含 
 
  搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。  
   
@@ -130,9 +134,9 @@ bool contains(_EType _Link);
  在搜尋區塊的指標`source_link_manager`物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找不到指定的區塊，`false`否則。  
+ `true` 如果找不到指定的區塊，`false`否則。  
   
-##  <a name="count"></a>計數 
+##  <a name="count"></a> 計數 
 
  計算中連結的區塊數目`source_link_manager`物件。  
   
@@ -143,7 +147,7 @@ size_t count();
 ### <a name="return-value"></a>傳回值  
  在連結區塊數目`source_link_manager`物件。  
   
-##  <a name="reference"></a>參考 
+##  <a name="reference"></a> 參考 
 
  取得參考上`source_link_manager`物件。  
   
@@ -151,7 +155,7 @@ size_t count();
 void reference();
 ```  
   
-##  <a name="register_target_block"></a>register_target_block 
+##  <a name="register_target_block"></a> register_target_block 
 
  註冊保存此目標區塊`source_link_manager`物件。  
   
@@ -163,7 +167,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
  `_PTarget`  
  目標區塊保有這`source_link_manager`物件。  
   
-##  <a name="release"></a>發行 
+##  <a name="release"></a> 發行 
 
  在釋放參考`source_link_manager`物件。  
   
@@ -171,7 +175,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```  
   
-##  <a name="remove"></a>移除 
+##  <a name="remove"></a> 移除 
 
  移除連結，以從`source_link_manager`物件。  
   
@@ -184,9 +188,9 @@ bool remove(_EType _Link);
  要移除，如果在區塊的指標找到。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找到並移除，連結`false`否則。  
+ `true` 如果找到並移除，連結`false`否則。  
   
-##  <a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a> set_bound 
 
  設定來源連結，可以新增至這個最大數目`source_link_manager`物件。  
   
@@ -198,7 +202,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  連結的數目上限。  
   
-##  <a name="ctor"></a>source_link_manager 
+##  <a name="ctor"></a> source_link_manager 
 
  建構 `source_link_manager` 物件。  
   
@@ -206,7 +210,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="dtor"></a>~ source_link_manager 
+##  <a name="dtor"></a> ~source_link_manager 
 
  終結`source_link_manager`物件。  
   

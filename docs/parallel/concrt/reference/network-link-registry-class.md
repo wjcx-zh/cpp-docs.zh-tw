@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - network_link_registry
 - AGENTS/concurrency::network_link_registry
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs: C++
-helpviewer_keywords: network_link_registry class
+dev_langs:
+- C++
+helpviewer_keywords:
+- network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 類別
 `network_link_registry` 抽象基底類別會管理來源和目標區塊之間的連結。  
@@ -60,7 +64,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|當在衍生類別中覆寫時，將加入的連結`network_link_registry`物件。|  
 |[begin](#begin)|當在衍生類別中覆寫時，會傳回迭代器中的第一個項目`network_link_registry`物件。|  
-|[包含](#contains)|當在衍生類別中覆寫時，會搜尋`network_link_registry`物件指定的區塊。|  
+|[contains](#contains)|當在衍生類別中覆寫時，會搜尋`network_link_registry`物件指定的區塊。|  
 |[count](#count)|當在衍生類別中覆寫時，會傳回中的項目數`network_link_registry`物件。|  
 |[remove](#remove)|當在衍生類別中覆寫時，會移除從指定的區塊`network_link_registry`物件。|  
   
@@ -75,7 +79,7 @@ class network_link_registry;
   
  **命名空間：** concurrency  
   
-##  <a name="add"></a>新增 
+##  <a name="add"></a> 新增 
 
  當在衍生類別中覆寫時，將加入的連結`network_link_registry`物件。  
   
@@ -87,7 +91,7 @@ virtual void add(_EType _Link) = 0;
  `_Link`  
  要加入區塊的指標。  
   
-##  <a name="begin"></a>開始 
+##  <a name="begin"></a> 開始 
 
  當在衍生類別中覆寫時，會傳回迭代器中的第一個項目`network_link_registry`物件。  
   
@@ -101,7 +105,7 @@ virtual iterator begin() = 0;
 ### <a name="remarks"></a>備註  
  迭代器的結束狀態以`NULL`連結。  
   
-##  <a name="contains"></a>包含 
+##  <a name="contains"></a> 包含 
 
  當在衍生類別中覆寫時，會搜尋`network_link_registry`物件指定的區塊。  
   
@@ -114,9 +118,9 @@ virtual bool contains(_EType _Link) = 0;
  要搜尋在區塊的指標`network_link_registry`物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找不到此區塊，`false`否則。  
+ `true` 如果找不到此區塊，`false`否則。  
   
-##  <a name="count"></a>計數 
+##  <a name="count"></a> 計數 
 
  當在衍生類別中覆寫時，會傳回中的項目數`network_link_registry`物件。  
   
@@ -127,7 +131,7 @@ virtual size_t count() = 0;
 ### <a name="return-value"></a>傳回值  
  中的項目數`network_link_registry`物件。  
   
-##  <a name="remove"></a>移除 
+##  <a name="remove"></a> 移除 
 
  當在衍生類別中覆寫時，會移除從指定的區塊`network_link_registry`物件。  
   
@@ -140,7 +144,7 @@ virtual bool remove(_EType _Link) = 0;
  要移除，如果在區塊的指標找到。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找到並移除，連結`false`否則。  
+ `true` 如果找到並移除，連結`false`否則。  
   
 ## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   

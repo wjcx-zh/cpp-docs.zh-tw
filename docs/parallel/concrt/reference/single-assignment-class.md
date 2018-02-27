@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - single_assignment
 - AGENTS/concurrency::single_assignment
@@ -22,19 +23,22 @@ f1_keywords:
 - AGENTS/concurrency::single_assignment::reserve_message
 - AGENTS/concurrency::single_assignment::resume_propagation
 - AGENTS/concurrency::single_assignment::send_message
-dev_langs: C++
-helpviewer_keywords: single_assignment class
+dev_langs:
+- C++
+helpviewer_keywords:
+- single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 74d0dee7acb511add4b695506c0491368413e17b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0f4bf3effde2c7012a3ed901c9279bcc161cd670
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="singleassignment-class"></a>single_assignment 類別
 `single_assignment` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠儲存寫入一次的單一 `message`。  
@@ -101,7 +105,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
   
  **命名空間：** concurrency  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  接受的訊息，有提供這`single_assignment`傳訊區塊，一份訊息傳回給呼叫者。  
   
@@ -119,7 +123,7 @@ virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>備註  
  `single_assignment`傳訊區塊傳回副本的訊息，其目標，而不是傳送目前保留訊息的擁有權。  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  取用先前所提供的訊息`single_assignment`和目標，傳回的訊息複本給呼叫者所保留。  
   
@@ -137,7 +141,7 @@ virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>備註  
  類似於`accept`，但呼叫一律置於`reserve`。  
   
-##  <a name="has_value"></a>has_value 
+##  <a name="has_value"></a> has_value 
 
  檢查是否這`single_assignment`傳訊區塊具有值尚未初始化。  
   
@@ -146,9 +150,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果區塊已接收值，`false`否則。  
+ `true` 如果區塊已接收值，`false`否則。  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  告知新目標的已連結至這個回呼`single_assignment`傳訊區塊。  
   
@@ -160,7 +164,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  新連結的目標指標。  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  以非同步方式傳遞訊息從`ISource`至此區塊`single_assignment`傳訊區塊。 所叫用`propagate`方法，由來源區塊呼叫時。  
   
@@ -180,7 +184,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>傳回值  
  A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  上的芳鄰`message``_PMessage`以此`single_assignment`傳訊區塊，並提供其所有連結的目標。  
   
@@ -192,7 +196,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
  `_PMessage`  
  指標`message`這個`single_assignment`傳訊區塊已取得的擁有權。  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  釋放先前訊息保留。  
   
@@ -204,7 +208,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity`的`message`物件時釋放。  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  由此先前提供的訊息會保留`single_assignment`傳訊區塊。  
   
@@ -217,12 +221,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity`的`message`物件被保留。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果訊息已成功保留，`false`否則。  
+ `true` 如果訊息已成功保留，`false`否則。  
   
 ### <a name="remarks"></a>備註  
  之後`reserve`呼叫時，如果它傳回`true`，`consume`或`release`必須呼叫需要或釋出訊息的擁有權。  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  釋放保留項目之後，請繼續傳播。  
   
@@ -230,7 +234,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  以同步方式將傳遞訊息，以從`ISource`至此區塊`single_assignment`傳訊區塊。 所叫用`send`方法，由來源區塊呼叫時。  
   
@@ -250,7 +254,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>傳回值  
  A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
   
-##  <a name="ctor"></a>single_assignment 
+##  <a name="ctor"></a> single_assignment 
 
  建構`single_assignment`傳訊區塊。  
   
@@ -290,7 +294,7 @@ single_assignment(
   
  型別`filter_method`是函式簽章`bool (T const &)`由此叫用`single_assignment`傳訊區塊，以判斷它是否應該接受提供的訊息。  
   
-##  <a name="dtor"></a>~ single_assignment 
+##  <a name="dtor"></a> ~ single_assignment 
 
  終結`single_assignment`傳訊區塊。  
   
@@ -298,7 +302,7 @@ single_assignment(
 ~single_assignment();
 ```  
   
-##  <a name="value"></a>值 
+##  <a name="value"></a> 值 
 
  取得參考的訊息儲存在目前裝載`single_assignment`傳訊區塊。  
   

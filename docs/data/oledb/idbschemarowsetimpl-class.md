@@ -4,32 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: IDBSchemaRowsetImpl
-dev_langs: C++
-helpviewer_keywords: IDBSchemaRowsetImpl class
+ms.topic: reference
+f1_keywords:
+- IDBSchemaRowsetImpl
+dev_langs:
+- C++
+helpviewer_keywords:
+- IDBSchemaRowsetImpl class
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6b4f451fa408f2f6470281206e5de3670d069b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2895aeebd49e38b157ab55912fcc4b7c52ba953e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 類別
 提供結構描述資料列集的實作。  
   
-## <a name="syntax"></a>語法  
-  
-```  
+## <a name="syntax"></a>語法
+
+```cpp
 template <class SessionClass>  
 class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset  
 ```  

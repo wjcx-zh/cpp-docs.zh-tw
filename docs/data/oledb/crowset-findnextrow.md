@@ -1,12 +1,13 @@
 ---
-title: "Crowset:: Findnextrow |Microsoft 文件"
+title: CRowset::FindNextRow | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CRowset.FindNextRow
 - CRowset<TAccessor>.FindNextRow
@@ -17,39 +18,38 @@ f1_keywords:
 - ATL.CRowset<TAccessor>.FindNextRow
 - ATL::CRowset<TAccessor>::FindNextRow
 - FindNextRow
-dev_langs: C++
-helpviewer_keywords: FindNextRow method
+dev_langs:
+- C++
+helpviewer_keywords:
+- FindNextRow method
 ms.assetid: 36484df9-3625-4f15-bf69-db73a8d91c55
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08dd2a80040c4affb89b19dfff3b22103b4e9547
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3808666693d9a134d6ebcf12333c090cb2ff8ba3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetfindnextrow"></a>CRowset::FindNextRow
 尋找指定的書籤之後的下一個相符的資料列。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-      HRESULT FindNextRow(   
-   DBCOMPAREOP op,   
-   BYTE* pData,   
+```
+HRESULT FindNextRow(DBCOMPAREOP op,   
+  BYTE* pData,   
    DBTYPE wType,   
    DBLENGTH nLength,   
    BYTE bPrecision,   
    BYTE bScale,   
    BOOL bSkipCurrent = TRUE,   
-   CBookmarkBase* pBookmark = NULL    
-) throw( );  
+   CBookmarkBase* pBookmark = NULL) throw();  
 ```  
   
 #### <a name="parameters"></a>參數  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/21/2017
  [in]取得資料時使用小數位數。 使用的唯有`wType`是`DBTYPE_NUMERIC`或**DBTYPE_DECIMAL**。 如需詳細資訊，請參閱[涉及 DBTYPE_NUMERIC 或 DBTYPE_DECIMAL 轉換](https://msdn.microsoft.com/en-us/library/ms719714.aspx)中*OLE DB 程式設計人員參考*。  
   
  *bSkipCurrent*  
- [in]從開始搜尋的書籤的資料列數目。  
+ [in]從 開始搜尋的書籤的資料列數目。  
   
  `pBookmark`  
  [in]要開始搜尋位置的書籤。  

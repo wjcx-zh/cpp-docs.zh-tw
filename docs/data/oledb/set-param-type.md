@@ -1,39 +1,40 @@
 ---
-title: "SET_PARAM_TYPE |Microsoft 文件"
+title: SET_PARAM_TYPE | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: SET_PARAM_TYPE
-dev_langs: C++
-helpviewer_keywords: SET_PARAM_TYPE macro
+ms.topic: reference
+f1_keywords:
+- SET_PARAM_TYPE
+dev_langs:
+- C++
+helpviewer_keywords:
+- SET_PARAM_TYPE macro
 ms.assetid: 85979070-2d55-4c67-94b1-9b9058babc59
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 024cf67033cdc35917f37c2e6183e60042c40d45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c2355b69be471f2f644a0126533bf17c4702cdc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 指定 `COLUMN_ENTRY` 巨集輸入、輸出或輸入/輸出之後的 `SET_PARAM_TYPE` 巨集。  
   
 ## <a name="syntax"></a>語法  
   
-```  
-  
-SET_PARAM_TYPE(  
-type  
- )  
+```cpp
+SET_PARAM_TYPE(type)  
   
 ```  
   
@@ -53,7 +54,8 @@ type
 -   **DBPARAMIO_INPUT &#124;DBPARAMIO_OUTPUT**參數是輸入和輸出參數。  
   
 ## <a name="example"></a>範例  
-```cpp  
+```
+cpp  
 class CArtistsProperty
 {
 public:

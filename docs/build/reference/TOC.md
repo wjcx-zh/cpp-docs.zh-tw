@@ -148,6 +148,7 @@
 ##### [/Zc:throwingNew (假設擲回運算子 new)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (三併詞替代)](zc-trigraphs-trigraphs-substitution.md)
 ##### [/Zc:wchar_t (wchar_t 是原生類型)](zc-wchar-t-wchar-t-is-native-type.md)
+#### [/Zf (PDB 產生速度加快)](zf.md)
 #### [/Zg (產生函式原型)](zg-generate-function-prototypes.md)
 #### [/Zl (省略預設程式庫名稱)](zl-omit-default-library-name.md)
 #### [/Zm (指定先行編譯標頭檔的記憶體配置上限)](zm-specify-precompiled-header-memory-allocation-limit.md)

@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
+- using_CPP
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,11 +26,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="namespaces-c"></a>命名空間 (C++)
 命名空間是提供其內識別項 (類型、函式、變數等的名稱) 範圍的宣告式區域。 命名空間用來將程式碼組織成邏輯群組，以及防止特別在程式碼基底包含多個程式庫時可能會發生的名稱衝突。 在命名空間範圍的所有識別項都可以看得到彼此，沒有限制。 命名空間外部的識別項可以使用完整的名稱，每個識別項，例如存取成員`std::vector<std::string> vec;`，或藉由[using 宣告](../cpp/using-declaration.md)單一識別項 (`using std::string`)，或[using 指示詞](../cpp/namespaces-cpp.md#using_directives)針對命名空間中的所有識別項 (`using namespace std;`)。 標頭檔中的程式碼應該一律使用完整命名空間名稱。  
@@ -76,7 +77,7 @@ Func(mgr);
   
 ```  
   
-## <a id="using_directives"></a>using 指示詞  
+## <a id="using_directives"></a> using 指示詞  
  `using`指示詞可讓中的所有名稱**命名空間**沒有*命名空間名稱*做為明確限定詞。 使用 using 指示詞在實作檔 (也就是 *.cpp) 如果您使用數個不同的識別項中的命名空間。如果您只使用一個或兩個識別項，然後考慮使用 using 宣告只這些識別項帶入範圍並不是所有的識別項命名空間中。 如果區域變數的名稱和命名空間變數相同，命名空間變數將會隱藏。 命名空間變數的名稱與全域變數名稱相同，會產生錯誤。  
   
 > [!NOTE]
@@ -258,7 +259,7 @@ namespace Contoso
   
 ```  
   
-## <a id="namespace_aliases"></a>命名空間別名  
+## <a id="namespace_aliases"></a> 命名空間別名  
  命名空間名稱必須是唯一的，這表示通常應該不會太短。 如果名稱長度導致難以讀取程式碼，或在不能使用 using 指示詞的標頭檔中所輸入的名稱長度過於冗長，則可以建立命名空間別名做為實際名稱的縮寫。 例如:   
   
 ```cpp  

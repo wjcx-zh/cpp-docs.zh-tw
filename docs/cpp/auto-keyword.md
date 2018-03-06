@@ -8,13 +8,8 @@ ms.technology:
 - cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- auto_cpp
 dev_langs:
 - C++
-helpviewer_keywords:
-- automatic storage class [C++], auto keyword
-- auto keyword [C++]
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 caps.latest.revision: 
 author: mikeblome
@@ -22,11 +17,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3508217e7dc333543fa2dbff9cf0643d6faff060
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.openlocfilehash: 48c21ec8304fa5c56bb29f07eea4bec169fbda83
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="auto-keyword"></a>auto 關鍵字
 `auto` 關鍵字是一個宣告指定名稱。 不過，C++ 標準為此關鍵字定義了原始和修訂的意義。 Visual c + + 2010 之前,`auto`關鍵字會宣告中的變數*自動*儲存類別，也就是具有區域存留期的變數。 從 Visual c + + 2010，開始`auto`關鍵字宣告的型別推算其宣告中的初始化運算式的變數。 [/Zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md)編譯器選項可控制的意義`auto`關鍵字。  

@@ -60,11 +60,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96bcc3de4b59601e18043bb18fb82802abd4c8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9e236d7b880b2bcc5a66f8f2494990c6b420193
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 使用引數清單的指標，寫入格式化輸出。 這些函式已有更安全的版本，請參閱 [vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)。  
@@ -157,7 +157,7 @@ int _vswprintf_l(
  這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定，而不使用目前的執行緒地區設定。  
   
 > [!IMPORTANT]
->  若使用 `vsprintf`，沒有方法可限制寫入的字元數，這表示使用此函式的程式碼很容易發生緩衝區溢位。 請改用 [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)，或呼叫 [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 來判斷需要多大的緩衝區。 也請確定 `format` 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
+>  使用`vsprintf`、 那里任何方法可以限制的字元數寫入時，這表示使用這個函式的程式碼容易發生緩衝區溢位。 請改用 [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)，或呼叫 [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 來判斷需要多大的緩衝區。 也請確定 `format` 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
  `vswprintf` 符合 ISO C 標準，其需要 `size_t` 類型的第二個參數 `count`。 若要強制執行舊的非標準行為，請定義 `_CRT_NON_CONFORMING_SWPRINTFS.`。未來版本可能會移除舊的行為，所以應該變更程式碼，以便使用符合新標準的行為。  
   

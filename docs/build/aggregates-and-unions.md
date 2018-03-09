@@ -19,14 +19,14 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="aggregates-and-unions"></a>彙總和等位
-其他類型，例如陣列、 結構和等位有更嚴格的對齊需求可確保一致彙總和等位的儲存體和資料擷取。 以下是陣列、 結構和等位的定義：  
+其他類型，例如陣列、 結構和等位，有更嚴格的對齊需求可確保一致彙總和等位的儲存體和資料擷取。 以下是陣列、 結構和等位的定義：  
   
  陣列  
  包含已排序的一整組相鄰的資料物件。 每個物件稱為項目。 在陣列中的所有項目具有相同的大小和資料類型。  
@@ -53,8 +53,8 @@ ms.lasthandoff: 12/21/2017
 |**FP32 （單一有效位數）**|**float**|Doubleword|  
 |**FP64 （雙精確度）**|**double**|Quadword|  
 |**指標**|**\***|Quadword|  
-|`__m64`|**結構 __m64**|Quadword|  
-|`__m128`|**結構 __m128**|Octaword|  
+|`__m64`|**struct __m64**|Quadword|  
+|`__m128`|**struct __m128**|Octaword|  
   
  適用下列彙總的對齊方式規則：  
   

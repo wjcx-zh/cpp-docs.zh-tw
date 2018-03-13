@@ -1,12 +1,9 @@
 ---
-title: "-FUNCTIONPADMIN （建立可線上修補的映像） |Microsoft 文件"
+title: "/FUNCTIONPADMIN （建立可線上修補的映像） |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/09/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /functionpadmin
@@ -16,53 +13,49 @@ helpviewer_keywords:
 - -FUNCTIONPADMIN linker option
 - /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f737cdb412420ffb87664024b2314941e67b045b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c941ec7f0e94ba03979c914ddd26b8bd21237369
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (建立可線上修補的影像)
-準備映像進行 hotpatch。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-/FUNCTIONPADMIN[:space]  
-```  
-  
-## <a name="remarks"></a>備註  
- 其中：  
-  
- `space` (選擇性)  
- 要加入的每個函式，開頭的填補數量 5、 6 或 16。  x86 映像需要五個位元組填補，x64 映像只需要 6 個位元組，並針對 Itanium 處理器系列建置的映像需要 16 個位元組填補，每個函式的開頭。  
-  
- 根據預設，編譯器會加入至映像，並根據映像的電腦類型的正確的空間量。  
-  
- 為了讓連結器產生的可線上修補的映像，.obj 檔中必須有已編譯[/hotpatch （建立可線上修補的影像）](../../build/reference/hotpatch-create-hotpatchable-image.md)。  
-  
- 當您編譯和連結 cl.exe，一次引動的映像**/hotpatch**意味著**/functionpadmin**。  
-  
-### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
-  
-1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  按一下**連結器**資料夾。  
-  
-3.  按一下 [命令列]  屬性頁。  
-  
-4.  輸入到選項**其他選項**方塊。  
-  
-### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
-  
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
-  
-## <a name="see-also"></a>請參閱  
- [設定連結器選項](../../build/reference/setting-linker-options.md)   
- [連結器選項](../../build/reference/linker-options.md)
+
+準備映像進行 hotpatch。
+
+## <a name="syntax"></a>語法
+
+> **/FUNCTIONPADMIN**[**:**_space_]  
+
+### <a name="arguments"></a>引數
+
+*space*<br/>
+若要加入至每個函式，以位元組為單位的開頭的填補量。 在 x86 上就會預設為 5 個位元組填補，並在 x64 上就會預設為 6 個位元組。 在其他目標上必須提供值。
+
+## <a name="remarks"></a>備註
+
+為了讓連結器產生的可線上修補的映像，.obj 檔中必須有已編譯[/hotpatch （建立可線上修補的影像）](../../build/reference/hotpatch-create-hotpatchable-image.md)。
+
+當您編譯和連結 cl.exe，一次引動的映像**/hotpatch**意味著**/functionpadmin**。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
+
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。
+
+1. 選取**組態屬性** > **連結器** > **命令列**屬性頁。
+
+1. 輸入**/FUNCTIONPADMIN**選項**其他選項**。 選擇**確定**以儲存變更。
+
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
+
+- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
+
+## <a name="see-also"></a>另請參閱
+
+[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
+[連結器選項](../../build/reference/linker-options.md)

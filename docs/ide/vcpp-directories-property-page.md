@@ -1,7 +1,7 @@
 ---
 title: "VC + + 目錄屬性頁 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/28/2017
+ms.date: 03/09/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -28,11 +28,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c92a97ccd28a1bc7d1fae518cf499b45d339dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
+ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>VC + + 目錄屬性頁 (Windows)
 
@@ -42,23 +42,25 @@ ms.lasthandoff: 12/21/2017
 
 若要存取**VC + + 目錄**屬性頁：
 
-1. 從主要功能表選擇 [**檢視 |方案總管]**
-1. 以滑鼠右鍵按一下專案節點 （而不是最上層方案），然後選擇 **屬性**
-1. 在左窗格中**屬性頁**對話方塊方塊中，展開 **組態屬性**選取**VC + + 目錄**。  
+1. 如果**方案總管 中**看不到視窗，然後在主功能表上選擇 **檢視** > **方案總管 中**。
+1. 以滑鼠右鍵按一下專案節點 （而不是最上層方案），然後選擇 **屬性**。
+1. 在左窗格中**屬性頁**對話方塊中，選取**組態屬性** > **VC + + 目錄**。  
 
-VC + + 目錄屬性會套用至專案，而不是最上層方案節點：
+VC + + 目錄屬性會套用至專案，而不是最上層方案節點。 如果您沒有看到**VC + + 目錄**下**組態屬性**，c + + 中選取專案節點**方案總管 中**視窗： 
 
 ![選取專案節點](media/vcppdir.png "選取專案節點，請參閱 VC + + 目錄屬性")
 
-如果您沒有看到屬性頁上，確定您有中選取專案節點**方案總管 中**。 請注意， **VC + + 目錄**跨平台專案屬性頁看起來不同。 對於非 Windows 的專案，請參閱[VC + + 目錄 （Linux c + +）](../linux/prop-pages/directories-linux.md)或。 
+請注意， **VC + + 目錄**跨平台專案屬性頁看起來不同。 Linux c + + 專案的特定資訊，請參閱[VC + + 目錄 （Linux c + +）](../linux/prop-pages/directories-linux.md)。 
  
 如果您不熟悉*專案屬性*在 Visual Studio 中，您也許會很有幫助第一次讀取[使用專案屬性](working-with-project-properties.md)。 
  
-VC + + 目錄的預設設定是根據專案類型而定。 對於傳統型專案它們包含特定的平台工具組的 VC + + 工具位置和 Windows SDK 的位置。 您可以變更**平台工具組**和**Windows SDK 版本**上**組態屬性 – 一般**頁面。 若要檢視的任何目錄的值：
+預設設定**VC + + 目錄**屬性取決於專案類型。 對於傳統型專案它們包含 c + + 工具的位置特定的平台工具組和 Windows SDK 的位置。 您可以變更**平台工具組**和**Windows SDK 版本**上**組態屬性** > **一般**頁面。 
 
-1. 在右窗格中**VC + + 目錄**頁面上，選取一個資料列。 例如，**程式庫目錄**
-1. 選擇右邊的向下箭頭按鈕
-1. 選擇**編輯**。
+若要檢視的任何目錄的值：
+
+1. 選取其中一個屬性中**VC + + 目錄**頁面。 例如，選擇**程式庫目錄**。
+1. 選擇向下鍵按鈕，屬性值欄位的結尾。
+1. 在下拉式功能表中，選擇 **編輯**。
 
 ![編輯程式庫目錄](media/vcppdir_libdir_edit.png "對話方塊，以編輯的程式庫路徑")
 
@@ -74,7 +76,7 @@ VC + + 目錄的預設設定是根據專案類型而定。 對於傳統型專案
 
 ![請參閱巨集值](media/vcppdir_libdir_macros.png "對話方塊，以編輯巨集")
 
-注意： 當您輸入時，將會填入清單。 請勿按**Enter**。
+注意： 當您輸入時，會填入此清單。 請勿按**Enter**。
 
 如需有關巨集和為什麼您應該而非硬式編碼路徑，請盡可能使用它們的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros)。 
 
@@ -90,22 +92,25 @@ VC + + 目錄的預設設定是根據專案類型而定。 對於傳統型專案
 
 您也可以指定其他目錄，如下所示。  
   
-**可執行檔目錄**  
+**可執行檔目錄**<br/>
 要在其中搜尋可執行檔的目錄。 對應至**路徑**環境變數。
 
-**Include 目錄**  
+**Include 目錄**<br/>
 要在其中搜尋原始程式碼中所參考之 Include 檔案的目錄。 對應至**INCLUDE**環境變數。
 
-**參考目錄**  
+**參考目錄**<br/>
  要在其中搜尋組件和模組 （中繼資料） 檔案的原始程式碼中所參考目錄[#using](../preprocessor/hash-using-directive-cpp.md)指示詞。 對應至**LIBPATH**環境變數。
 
-**程式庫目錄**  
-要在其中搜尋程式庫 (.lib) 檔案的目錄；包括執行階段程式庫。 對應至**LIB**環境變數。 此設定不適用於.obj 檔案，若要連結.obj 檔案，在[連結器](../ide/linker-property-pages.md)**一般**屬性頁上，選取**其他程式庫相依性**，然後指定檔案的相對路徑。
+**程式庫目錄**<br/>
+要在其中搜尋程式庫 (.lib) 檔案的目錄；包括執行階段程式庫。 對應至**LIB**環境變數。 此設定不適用於.obj 檔案，若要連結.obj 檔案，在**組態屬性** > **連結器** > **一般**屬性頁上，選取**其他程式庫相依性**，然後指定檔案的相對路徑。 如需詳細資訊，請參閱[連結器屬性頁](../ide/linker-property-pages.md)。
 
-**來源目錄**  
+**程式庫 WinRT 目錄**<br/>
+要搜尋的 WinRT 程式庫檔案的目錄用於通用 Windows 平台 (UWP) 應用程式。 
+
+**來源目錄**<br/>
 要在其中搜尋用於 IntelliSense 之來源檔的目錄。
 
-**排除目錄**  
+**排除目錄**<br/>
 檢查組建相依性時不會搜尋的目錄。
 
 ## <a name="sharing-the-settings"></a>共用設定

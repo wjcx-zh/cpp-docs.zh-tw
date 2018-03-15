@@ -1,6 +1,6 @@
 ---
 title: "/Zc:ternary （強制執行條件式運算子規則） |Microsoft 文件"
-ms.date: 1/12/2018
+ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -15,11 +15,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c4f4e17d3cf72284ec68cf10e75824722d5440
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 198da679e9d0d7bd58e034ca9c04c3102748af20
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary （強制執行條件式運算子規則）
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/17/2018
 
 Visual Studio 版本 15.3 可讓 c + + 標準的條件式 （或三元） 運算子的編譯器支援 (**？:**) 行為。 C + + 標準需要的任一個運算元是相同的型別和 cv 限定，或可以明確地轉換為相同的類型和 cv-限定性條件與其他，只有一個運算元或是一個或兩個運算元都是擲回運算式。 在 Visual Studio 版本 15.5 之前的版本，編譯器會允許轉換視為模稜兩可的標準。 當**/Zc:ternary**指定選項時，編譯器會符合標準，並拒絕不符合的規則相符的型別和 cv 限定的第二個和第三個運算元的程式碼。
 
-**/Zc:ternary**選項預設為關閉。 使用**/Zc:ternary**啟用合格的行為，或**/Zc:ternary-**明確指定先前的不合格編譯器行為。 [/ 寬鬆-](permissive-standards-conformance.md)選項可讓**/Zc:ternary**。 
+**/Zc:ternary**選項預設為關閉。 使用**/Zc:ternary**啟用合格的行為，或**/Zc:ternary-**明確指定先前的不合格編譯器行為。 [/ 寬鬆-](permissive-standards-conformance.md)選項會隱含地啟用此選項，但可以使用覆寫**/Zc:ternary-**。
 
 ### <a name="examples"></a>範例
 

@@ -1,12 +1,9 @@
 ---
-title: "-Zc （一致性） |Microsoft 文件"
+title: "/Zc （一致性） |Microsoft 文件"
 ms.custom: 
-ms.date: 9/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - /zc
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: dda62dc6644fd49cf9213b176a4efe563474f740
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zc-conformance"></a>/Zc (一致性)
 
@@ -36,11 +32,11 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="syntax"></a>語法
 
-> / Zc:_選項_{，_選項_}
+> **/Zc:**_option_{,_option_}
 
 ## <a name="remarks"></a>備註
 
-當 Visual Studio 已實作的 C 或 c + + 不是與標準相容的擴充功能時，您可以使用`/Zc`一致性選項來指定標準符合或 Microsoft 特定的行為。 某些選項，Microsoft 特定行為的預設值是，若要避免大規模的重大變更對現有程式碼。 在其他情況下，預設會為標準的行為，其中改善安全性、 效能或相容性優先於高層的重大變更的成本。 較新版本的 Visual Studio 可能會變更每個一致性選項的預設設定。 如需有關每個一致性選項的詳細資訊，請參閱特定選項的主題。
+當 Visual Studio 已實作的 C 或 c + + 不是與標準相容的擴充功能時，您可以使用`/Zc`一致性選項來指定標準符合或 Microsoft 特定的行為。 某些選項，Microsoft 特定行為的預設值是，若要避免大規模的重大變更對現有程式碼。 在其他情況下，預設會為標準的行為，其中改善安全性、 效能或相容性優先於高層的重大變更的成本。 較新版本的 Visual Studio 可能會變更每個一致性選項的預設設定。 如需有關每個一致性選項的詳細資訊，請參閱特定選項的主題。 [/ 寬鬆-](permissive-standards-conformance.md)編譯器選項會隱含地設定不由其符合設定的預設設定的一致性選項。
 
 這些是`/Zc`編譯器選項：
 
@@ -61,7 +57,8 @@ ms.lasthandoff: 01/17/2018
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|啟用安全執行緒本機靜態初始設定 (在預設情況下)。|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|假設`operator new`在失敗時擲回 （預設為關閉）。|
 |[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|啟用三併詞 （已過時，關閉的預設值）。|
-|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`是原生類型，而不是 typedef (在預設情況下)。|
+|[twoPhase-](zc-twophase.md)|使用不合格的範本，剖析行為 （預設為不符合）。|
+|[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t` 是原生類型，而不是 typedef (在預設情況下)。|
 
 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 

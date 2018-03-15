@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1b0e209462295f907f5e518299d34fb18aade4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af455b9a781295f3e6f446b7dc5c3d253fe2f4c5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes （c + + 17 noexcept 規則）
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="remarks"></a>備註
 
-當**/Zc:noexceptTypes**指定選項時，編譯器會符合 C + + 17 標準，並將[throw （)](../../cpp/exception-specifications-throw-cpp.md)做為別名[noexcept](../../cpp/noexcept-cpp.md)，移除`throw(<type list>)`和`throw(...)`，並允許特定類型包含`noexcept`。 **/Zc:noexceptTypes**選項時，才可以使用[/std:c + + 17](std-specify-language-standard-version.md)或[/std:latest](std-specify-language-standard-version.md)已啟用。 **/Zc:noexceptTypes**以符合 ISO C + + 17 標準預設會啟用。 關閉此選項指定**/Zc:noexceptTypes-**成 C + + 14 的行為`noexcept`時**/std::C + + 17**或**/std::latest**指定。
+當**/Zc:noexceptTypes**指定選項時，編譯器會符合 C + + 17 標準，並將[throw （)](../../cpp/exception-specifications-throw-cpp.md)做為別名[noexcept](../../cpp/noexcept-cpp.md)，移除`throw(<type list>)`和`throw(...)`，並允許特定類型包含`noexcept`。 **/Zc:noexceptTypes**選項時，才可以使用[/std:c + + 17](std-specify-language-standard-version.md)或[/std:latest](std-specify-language-standard-version.md)已啟用。 **/Zc:noexceptTypes**以符合 ISO C + + 17 標準預設會啟用。 [/ 寬鬆-](permissive-standards-conformance.md)選項不會影響**/Zc:noexceptTypes**。 關閉此選項指定**/Zc:noexceptTypes-**成 C + + 14 的行為`noexcept`時**/std::C + + 17**或**/std::latest**指定。
 
 從 Visual Studio 2017 15.5 版本開始，c + + 編譯器診斷宣告 C + + 17 模式中的多個不相符的例外狀況規格或當[/ 寬鬆-](permissive-standards-conformance.md)指定選項。
 
@@ -84,7 +84,7 @@ struct B : A
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。
 
-1. 選取**命令列**中的 屬性頁**C/c + +**資料夾。
+1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
 
 1. 修改**其他選項**屬性，以包括**/Zc:noexceptTypes**或**/Zc:noexceptTypes-** ，然後選擇 **確定**。
 

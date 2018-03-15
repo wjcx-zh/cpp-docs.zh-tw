@@ -21,11 +21,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da744d2a037d865ddd0028e59ef3ba3c56d3bdd7
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="permissive--standards-conformance"></a>寬鬆 /-（標準的一致性）
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/17/2018
 
 ## <a name="remarks"></a>備註
 
-您可以使用**/ 寬鬆-**編譯器選項以指定符合標準的編譯器行為。 此選項會停用 寬鬆的行為，並設定[/Zc](../../build/reference/zc-conformance.md)嚴格一致性的編譯器選項。 在 IDE 中，此選項也讓 IntelliSense 引擎底線不合格的程式碼。 
+您可以使用**/ 寬鬆-**編譯器選項以指定符合標準的編譯器行為。 此選項會停用 寬鬆的行為，並設定[/Zc](../../build/reference/zc-conformance.md)嚴格一致性的編譯器選項。 在 IDE 中，此選項也讓 IntelliSense 引擎底線不合格的程式碼。
 
 根據預設， **/ 寬鬆-**選項設定新建立的 Visual Studio 2017 版本 15.5 和更新版本的專案中。 根據預設，在舊版中未設定它。 當設定此選項、 編譯器會產生診斷錯誤或警告非標準的語言建構時偵測到您的程式碼中時，包括一些常見的錯誤在前置的 C + + 11 程式碼。
 
@@ -416,7 +416,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-1. 在下**組態屬性**，依序展開**C/c + +**資料夾，然後選擇 **命令列**屬性頁。
+1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
 
 1. 輸入**/ 寬鬆-**編譯器選項在**其他選項**方塊。 選擇**確定**或**套用**以儲存變更。
 

@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="mfc-library-versions"></a>MFC 程式庫版本
 
@@ -98,7 +98,7 @@ MFC 專案使用的前置處理器符號 **\_UNICODE**表示 utf-16 寬字元 Un
 
 Mfc 靜態程式庫使用下列命名慣例。 程式庫名稱的格式如下
 
-> *u*AFX*c * * d*。LIB
+> *u*AFX*c**d*.LIB
 
 其中顯示為斜體小寫的字母是指定名稱的預留位置，其意義如下表所示：
 
@@ -114,10 +114,10 @@ Mfc 靜態程式庫使用下列命名慣例。 程式庫名稱的格式如下
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 靜態連結程式庫，發行版本|
 |NAFXCWD.LIB|MFC 靜態連結程式庫，偵錯版本|
-|UAFXCW。LIB|MFC 靜態連結程式庫 (支援 Unicode)，發行版本|
-|UAFXCWD。LIB|MFC 靜態連結程式庫 (支援 Unicode)，偵錯版本|
-|AFXNMCD。LIB|不含 MFC 對話方塊控制項，發行版本的 MFC 靜態連結程式庫|
-|AFXNMCDD。LIB|不含 MFC 對話方塊控制項，偵錯版本的 MFC 靜態連結程式庫|
+|UAFXCW.LIB|MFC 靜態連結程式庫 (支援 Unicode)，發行版本|
+|UAFXCWD.LIB|MFC 靜態連結程式庫 (支援 Unicode)，偵錯版本|
+|AFXNMCD.LIB|不含 MFC 對話方塊控制項，發行版本的 MFC 靜態連結程式庫|
+|AFXNMCDD.LIB|不含 MFC 對話方塊控制項，偵錯版本的 MFC 靜態連結程式庫|
 
 偵錯工具有相同的基底名稱和.pdb 副檔名的檔案也可供每個靜態程式庫。
 
@@ -129,14 +129,14 @@ MFC Dll 具有*版本*數字，指出二進位碼相容性。 使用具有相同
 
 |DLL|描述|
 |---------|-----------------|
-|MFC*版本*。DLL|MFC DLL、 ANSI 或 MBCS 發行版本|
-|MFC*版本*U.DLL|MFC DLL，Unicode 發行版本|
-|MFC*版本*d.D|MFC DLL、 ANSI 或 MBCS 偵錯版本|
-|MFC*版本*UD。DLL|MFC DLL，Unicode 偵錯版本|
-|MFCM*版本*。DLL|使用 Windows Form 控制項的 MFC DLL ANSI 或 MBCS 發行版本|
-|MFCM*版本*U.DLL|使用 Windows Form 控制項，Unicode 發行版本的 MFC DLL|
-|MFCM*版本*d.D|使用 Windows Form 控制項的 MFC DLL ANSI 或 MBCS 偵錯版本|
-|MFCM*版本*UD。DLL|使用 Windows Form 控制項，Unicode 偵錯版本的 MFC DLL|
+|MFC*version*.DLL|MFC DLL、 ANSI 或 MBCS 發行版本|
+|MFC*version*U.DLL|MFC DLL，Unicode 發行版本|
+|MFC*version*D.DLL|MFC DLL、 ANSI 或 MBCS 偵錯版本|
+|MFC*version*UD.DLL|MFC DLL，Unicode 偵錯版本|
+|MFCM*version*.DLL|使用 Windows Form 控制項的 MFC DLL ANSI 或 MBCS 發行版本|
+|MFCM*version*U.DLL|使用 Windows Form 控制項，Unicode 發行版本的 MFC DLL|
+|MFCM*version*D.DLL|使用 Windows Form 控制項的 MFC DLL ANSI 或 MBCS 偵錯版本|
+|MFCM*version*UD.DLL|使用 Windows Form 控制項，Unicode 偵錯版本的 MFC DLL|
 
 建置應用程式或 MFC 擴充 Dll 使用這些共用的 Dll 所需的匯入程式庫與 DLL 相同的基底名稱，但有.lib 檔案的副檔名。 當您使用共用的 Dll 時，必須仍然與您的程式碼; 連結小型的靜態程式庫此程式庫名為 MFCS*版本*.lib {U} {D}。
 

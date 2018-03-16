@@ -132,10 +132,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895b0921785e29a49bd367c2676995ba9af8e309
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstring-class"></a>basic_string 類別
 由範本類別 `basic_string` 所控制的序列為標準 C++ 字串類別，且通常稱為字串，但它們不應該和 C++ 標準程式庫中所使用之以 Null 結束的 C 樣式字串混淆。 標準 C++ 字串是一個容器，讓字串用作標準類型，例如比較和串連運算、迭代器、C++ 標準程式庫演算法，以及使用類別配置器 Managed 記憶體進行複製和指派。 如果您需要將標準 C++ 字串轉換為以 Null 結束的 C 樣式字串，請使用 [basic_string::c_str](#c_str) 成員。  
@@ -607,7 +607,7 @@ reference at(size_type _Off);
  位於參數索引所指定之位置的字串字元參考。  
   
 ### <a name="remarks"></a>備註  
- 字串的第一個項目具有索引零和下列項目會以正值的整數，連續索引以便長度的字串 *n* 具有 *n* th以數字的項目編製索引*n-* 1。  
+ 字串的第一個項目具有索引零和下列項目會以正值的整數，連續索引以便長度的字串*n*具有*n*th 項目編製索引編號*n-* 1。  
   
  成員 [operator&#91;&#93;](#op_at) 比成員函式 **at** 更快提供字串元素的讀取和寫入權限。  
   
@@ -3432,7 +3432,7 @@ reference operator[](size_type _Off);
  位於參數索引所指定之位置的字串字元參考。  
   
 ### <a name="remarks"></a>備註  
- 字串的第一個項目具有索引值為零，且下列項目會以正值的整數，連續索引以便長度的字串 *n* 具有 *n* th 項目數目以做為索引 *n*  -1。  
+ 字串之第一個元素的索引為零，接下來的元素則會以正整數連續編製索引，因此長度為 *n* 之字串的第 *n* 個元素是以數字 *n -* 1 來編製索引。  
   
  `operator[]` 會比成員函式 [at](#at) 更快提供字串元素的讀取和寫入權限。  
   
@@ -4701,7 +4701,7 @@ The character ch1 is: G.
 The character ch2 is: H.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<string>](../standard-library/string.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

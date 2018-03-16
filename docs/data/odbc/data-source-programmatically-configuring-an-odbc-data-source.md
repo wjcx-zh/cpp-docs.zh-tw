@@ -26,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>資料來源：以程式設計方式設定 ODBC 資料來源
 本主題說明如何以程式設計方式設定開放式資料庫連接 (ODBC) 資料來源名稱。 這可讓您彈性來存取資料而不未強制使用者明確使用 ODBC 管理員或其他程式來指定資料來源的名稱。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  不過，有許多 Dbms 允許以程式設計方式的資料來源建立。 某些資料來源會維護資料庫的目錄規格。 也就是目錄的資料來源，而且每個資料來源中的資料表儲存在個別的檔案 （若為 dBASE，每個資料表就是.dbf 檔案）。 其他的 ODBC 資料庫，例如 Microsoft Access 和 SQL Server 驅動程式需要在建立資料來源之前，無法滿足某個特定準則。 例如，當 SQL Server ODBC 驅動程式，您需要建立 SQL Server 電腦。  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>SQLConfigDataSource 範例  
+##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource 範例  
  下列範例會使用**:: SQLConfigDataSource**呼叫新的 Excel 資料來源建立新的 Excel 資料來源的 ODBC API 函式：  
   
 ```  
@@ -64,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  雖然此資訊無法直接寫入登錄而不使用**:: SQLConfigDataSource**，這樣做的任何應用程式依賴驅動程式管理員會使用來維護其資料的目前技巧。 如果不同的方式保留資料來源的 ODBC 驅動程式管理員實作記錄有較新版本，任何使用這項技術的應用程式已中斷。 時，通常建議使用 API 函數時所提供。 比方說，您的程式碼時從 16 位元移植至 32 位元您使用**:: SQLConfigDataSource**函式，因為函式會正確地寫入至 Odbc.ini 檔案或登錄。  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>SQLConfigDataSource 參數  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters  
  以下說明的參數**:: SQLConfigDataSource**函式。 大部分的資訊取自 ODBC API*程式設計人員參考*提供 Visual c + + 1.5 版及更新版本。  
   
-###  <a name="_core_function_prototype"></a>函式原型  
+###  <a name="_core_function_prototype"></a> 函式原型  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -75,7 +75,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>備註  
   
-####  <a name="_core_parameters_and_usage"></a>參數和使用方式  
+####  <a name="_core_parameters_and_usage"></a> 參數和使用方式  
  *hwndParent*  
  指定為擁有者的任何 ODBC 驅動程式管理員或特定的 ODBC 驅動程式會建立新的資料來源的相關使用者從取得其他資訊的對話方塊視窗。 如果`lpszAttributes`參數沒有提供足夠的資訊，會出現一個對話方塊。 *HwndParent*參數可能為**NULL**。  
   
@@ -125,5 +125,5 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
  當 ODBC 管理員顯示建立新的資料來源，該特定驅動程式的資訊時，請按一下**協助**。 這會開啟該特定的驅動程式，通常包含有關使用驅動程式的重要資訊的說明檔。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)

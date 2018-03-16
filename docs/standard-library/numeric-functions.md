@@ -22,10 +22,10 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: b0437225718e402ac2c8b9a22af5b4825128cbd6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函式
 ||||  
@@ -319,7 +319,7 @@ Type inner_product(
   
  第二個成員函式會傳回：  
   
- `val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )  
+ `val` *binary_op1* ( 1 *binary_op2* *b*1) *binary_op1* ( 2 *binary_op2* *b*2) *binary_op1* ...*binary_op1* ( n *binary_op2* *b*n)  
   
  藉由反覆地取代`val`與`val` *binary_op1* ( 我*binary_op2* *b*我)。  
   
@@ -580,6 +580,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<numeric>](../standard-library/numeric.md)
 

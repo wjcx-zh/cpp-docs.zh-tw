@@ -1,12 +1,9 @@
 ---
 title: "部署 Visual c + + |Microsoft 文件"
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - C++
@@ -14,17 +11,16 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
@@ -50,6 +46,8 @@ ms.lasthandoff: 12/21/2017
 
 在本機部署程式庫檔案會安裝在您的應用程式資料夾，以及可執行檔。 不同版本的 Visual c + + 可轉散發程式庫可以安裝在相同的資料夾，因為每個版本的檔案名稱包含其版本號碼。 例如，c + + 執行階段程式庫第 12 版也 msvcp120.dll，版本 14 msvcp140.dll。
 
+程式庫可能分散在多個其他的 Dll，又稱為*點文件庫*。 比方說，在 Visual Studio 2017 版本 15.6 中發行的標準程式庫中的某些功能已加入到 msvcp140_1.dll，preverve msvcp140.dll 的 ABI 相容性。 如果您使用 Visual Studio 2017 版本 15.6 （工具組 14.13） 或更新版本的工具組，從 Visual Studio 2017，您可能需要在本機部署這些點程式庫，以及主要程式庫。 ABI 變更時，這些點個別文件庫接著復原基底文件庫的下一個主要版本。
+
 由於 Microsoft 無法自動更新本機部署 Visual c + + 程式庫，我們不建議本機部署這些程式庫。 如果您決定使用可轉散發程式庫的本機部署，建議您自行實作能夠自動更新本機部署程式庫的方法。
 
 ## <a name="static-linking"></a>靜態連結
@@ -60,6 +58,6 @@ ms.lasthandoff: 12/21/2017
 
 Visual c + + 程式庫的載入順序是系統而定。 若要診斷載入器問題，請使用 depends.exe 或 where.exe。 如需詳細資訊，請參閱[動態連結程式庫搜尋順序 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

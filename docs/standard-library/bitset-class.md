@@ -50,10 +50,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="bitset-class"></a>bitset 類別
 描述物件類型，其可儲存由固定位元數所組成的序列，以提供精簡的方式，來保留一組項目或條件的旗標。 bitset 類別支援類型 bitset 物件上的作業，該作業包含位元的集合，並提供每一個位元的常數時間存取。  

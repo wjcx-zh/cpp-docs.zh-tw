@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮點表示
 Microsoft Visual c + + 是 IEEE 數值標準一致。 有三種內部實際數字。 實際\*4 和 real\*8 Visual c + + 中使用。 實際\*4 宣告使用 word **float**。 實際\*使用 word 來宣告 8 **double**。 在 Windows 32 位元程式設計`long double`資料類型會對應至**double**。 沒有，不過，組件語言支援使用真正的計算 * 10 個資料類型。  
@@ -41,7 +41,7 @@ Microsoft Visual c + + 是 IEEE 數值標準一致。 有三種內部實際數�
 |-----------|---------------|  
 |real * 4|正負號位元、 8 位元的指數，23 位元尾數|  
 |real * 8|正負號位元，11 位元的指數，52 位元尾數|  
-|real * 10|正負號位元，15 位元的指數，64 位元尾數|  
+|real*10|正負號位元，15 位元的指數，64 位元尾數|  
   
  在真實 * 4 和 real\*8 格式，不會儲存在記憶體中，因此即使儲存只有 23 或 52 位元尾數實際 24 或 53 個位元，則表示尾數中沒有所擔任的前置數字 1。 真正\*10 格式實際儲存此位元。  
   
@@ -61,13 +61,13 @@ Microsoft Visual c + + 是 IEEE 數值標準一致。 有三種內部實際數�
   
  格式，然後針對各種大小如下所示：  
   
-|格式|1 位元組|2 位元組|位元組 3|位元組 4|...|位元組 n|  
+|格式|BYTE 1|BYTE 2|BYTE 3|位元組 4|...|位元組 n|  
 |------------|------------|------------|------------|------------|---------|------------|  
 |real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
 |real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
-|real * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|real*10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
- `S`表示正負號位元`X`的指數的位元，而`M`的尾數的位元。 請注意，最左邊的位元會假設即時 * 4 和 real\*8 格式，但呈現為"1"中的實際位元組 3\*10 的格式。  
+ `S` 表示正負號位元`X`的指數的位元，而`M`的尾數的位元。 請注意，最左邊的位元會假設即時 * 4 和 real\*8 格式，但呈現為"1"中的實際位元組 3\*10 的格式。  
   
  要正確移位二進位的點，您先必須指數然後二進位移到右邊或左適當位元數。  
   
@@ -125,5 +125,5 @@ Microsoft Visual c + + 是 IEEE 數值標準一致。 有三種內部實際數�
   
 -   `0  = 1.0 * 2**-128 = all zeros--a special case.`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點數會失去精確度的原因](../../build/reference/why-floating-point-numbers-may-lose-precision.md)

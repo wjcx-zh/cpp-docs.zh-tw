@@ -36,10 +36,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1c006c18b9e00e5c79ff686dfb31fa9ccf56fd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 擷取器
 **Microsoft 特定的**  
@@ -74,5 +74,5 @@ operator bool( ) const throw( );
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)

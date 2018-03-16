@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。  
@@ -88,15 +88,15 @@ int main()
 ## <a name="character-literals"></a>字元常值  
  *「字元常值」* (character literal) 是由常數字元所組成。 其表示方式是以單引號括住字元。 有五種類型的字元常值：  
   
--   一般字元常值型別的`char`，例如`'a'`  
+-   一般字元常值型別的`char`，例如 `'a'`  
   
--   Utf-8 字元常值型別的`char`，例如`u8'a'`  
+-   Utf-8 字元常值型別的`char`，例如 `u8'a'`  
   
 -   `wchar_t`類型的全形字元常值，例如 `L'a'`  
   
--   Utf-16 字元常值型別的`char16_t`，例如`u'a'`  
+-   Utf-16 字元常值型別的`char16_t`，例如 `u'a'`  
   
--   Utf-32 字元常值型別的`char32_t`，例如`U'a'`  
+-   Utf-32 字元常值型別的`char32_t`，例如 `U'a'`  
   
  用於字元常值的字元可以是任何字元，除了保留的字元反斜線 ('\\')、 單引號 （'） 或新行。 使用逸出序列可指定保留字元。 只要類型大到足以容納字元，就可以使用通用字元名稱指定字元。  
   
@@ -403,7 +403,7 @@ const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Character Sets](../cpp/character-sets2.md)   
  [數值、 布林值和指標常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [使用者定義常值](../cpp/user-defined-literals-cpp.md)

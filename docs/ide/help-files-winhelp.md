@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a5698f7001512c5a4f8c45b5c787f35c9ce0ca6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="help-files-winhelp"></a>說明檔 (WinHelp)
 當選取 加入應用程式的說明支援 WinHelp 類型會建立下列檔案**即時線上說明**核取方塊，然後選取  **WinHelp 格式**中[進階功能](../mfc/reference/advanced-features-mfc-application-wizard.md)MFC 應用程式精靈頁面。  
@@ -46,5 +46,5 @@ ms.lasthandoff: 12/21/2017
 |Makehelp.bat|*專案名稱*|原始程式檔|用來編譯專案時，建置說明專案系統。|  
 |Bullet.bmp|*專案名稱*|資源檔|使用標準的說明檔主題來代表項目符號清單。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)

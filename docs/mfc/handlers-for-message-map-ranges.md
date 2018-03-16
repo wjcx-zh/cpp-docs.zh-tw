@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>訊息對應範圍的處理常式
 本文說明如何將一個範圍的訊息對應到單一訊息處理函式 （而不是只有一個函式對應一個訊息）。  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [控制項 Id 的範圍內的範例](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>撰寫訊息對應項目  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> 撰寫訊息對應項目  
  在中。CPP 檔案中加入您的訊息對應項目，如下列範例所示：  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
      第三個巨集， `ON_CONTROL_RANGE`，會採用額外的第一個參數： 控制項通知訊息，例如**EN_CHANGE**。  
   
-##  <a name="_core_declaring_the_handler_function"></a>宣告處理常式函式  
+##  <a name="_core_declaring_the_handler_function"></a> 宣告處理常式函式  
  加入您的處理常式函式宣告中。H 檔案。 下列程式碼將示範可能的外觀，如下所示：  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/21/2017
   
  如需更新處理常式函式的參數需求的詳細資訊，請參閱[範例為某個範圍的命令識別碼](#_core_example_for_a_range_of_command_ids)。  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>命令 Id 範圍的範例  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> 命令 Id 範圍的範例  
  當可能會使用其中一個範例是在處理命令，例如 MFC 範例中的 [縮放] 命令範圍[HIERSVR](../visual-cpp-samples.md)。 此命令放大檢視中，調整 25%到其一般大小的 300%之間。 HIERSVR 的檢視類別與訊息對應項目，類似一個框住這個處理的縮放命令使用的範圍：  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
  更新處理常式函式，針對單一命令通常會接受一個參數， `pCmdUI`，型別**CCmdUI\***。 不同於處理常式函式，如訊息對應範圍的更新處理常式函式不需要額外的參數， `nID`，型別**UINT**。 若要指定哪個指令使用者實際上選擇所需的命令 ID 位於`CCmdUI`物件。  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>控制項 Id 範圍的範例  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> 控制項 Id 範圍的範例  
  另一個有趣的情況下對應至單一處理常式的某一範圍的控制項 Id 的控制項通知訊息。 假設使用者可以按一下任何 10 個按鈕。 若要將所有 10 個按鈕對應至一個處理常式，您的訊息對應項目看起來會像這樣：  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  
@@ -154,5 +154,5 @@ ms.lasthandoff: 12/21/2017
   
  範例所示的程式碼通常是： 將值傳遞至轉換`int`內訊息的範圍和判斷提示，這大小寫。 然後，您可能需要不同的動作依據 button 已按下。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告訊息處理函式](../mfc/declaring-message-handler-functions.md)

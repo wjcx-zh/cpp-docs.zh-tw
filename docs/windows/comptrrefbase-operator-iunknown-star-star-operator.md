@@ -23,10 +23,10 @@ ms.workload:
 - cplusplus
 - uwp
 ms.openlocfilehash: 04eaa2992c74b4cb46954ac73aa7b5a8ae735f82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown** 運算子
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -45,8 +45,8 @@ operator IUnknown**() const;
 ## <a name="requirements"></a>需求  
  **標頭：** client.h  
   
- **命名空間：** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ComPtrRefBase 類別](../windows/comptrrefbase-class.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

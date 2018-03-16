@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c96cd6ad904439f556f2baa51602353ea00c5ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="help-files-html-help"></a>說明檔 (HTML 說明)
 當選取 加入應用程式的說明支援的 HTML 說明類型會建立下列檔案**即時線上說明**核取方塊，然後選取  **HTML 說明格式**中[進階功能](../mfc/reference/advanced-features-mfc-application-wizard.md)MFC 應用程式精靈頁面。  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 |Makehtmlhelp.bat|*專案名稱*|原始程式檔|用來編譯專案時，建置說明專案系統。|  
 |Afxcore.htm|*Projname*\hlp|HTML [說明] 主題|包含標準 MFC 命令和螢幕物件的標準說明主題。 加入這個檔案中的說明主題。|  
 |Afxprint.htm|*Projname*\hlp|HTML [說明] 主題|包含列印命令的說明主題。|  
-|*.jpg;\*.gif|*Projname*\hlp\Images|資源檔|包含不同產生的說明檔主題的影像。|  
+|*.jpg; \*.gif|*Projname*\hlp\Images|資源檔|包含不同產生的說明檔主題的影像。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)

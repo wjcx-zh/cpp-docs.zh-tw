@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="segment"></a>SEGMENT
 定義程式區段，稱為*名稱*區段屬性  
@@ -50,7 +50,7 @@ name ENDS
 |**DWORD**|下一個可用的雙字組位址 （每個雙字組 4 個位元組）。|  
 |**PARA**|下一個可用的段落位址 （每個段落的 16 位元組）。|  
 |**PAGE**|下一個可用的頁面位址 （每一頁的 256 個位元組）。|  
-|**對齊**(*n*)|下一個可用 *n*個位元組的位址。 如需詳細資訊，請參閱 < 備註 > 一節。|  
+|**對齊**(*n*)|下一個可用*n*個位元組的位址。 如需詳細資訊，請參閱 < 備註 > 一節。|  
   
  如果未指定這個參數， **PARA**預設會使用。  
   
@@ -76,5 +76,5 @@ name ENDS
 ## <a name="remarks"></a>備註  
  如`ALIGN(n)`，`n`可能是任何 2 的乘冪從 1 到 8192; 不支援**/omf**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

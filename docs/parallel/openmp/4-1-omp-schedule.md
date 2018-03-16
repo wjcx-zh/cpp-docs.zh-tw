@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 330e5ea576e3cd779a7c17c21d00b6459f5e7043
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE**僅適用於**如**和**平行的**有排程類型的指示詞**執行階段**。 所有這類迴圈的排程類型和區塊大小可以藉由設定這個環境變數，任何可辨識的排程類型，並選擇性設定在執行階段*chunk_size*。  

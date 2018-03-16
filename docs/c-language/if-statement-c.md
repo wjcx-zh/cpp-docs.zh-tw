@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cb0e4929b55d6cfc0ef01ee183b74b2439b85d10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="if-statement-c"></a>if 陳述式 (C)
 **if** 陳述式可控制條件分支。 如果運算式的值為非零值，就會執行 **if** 陳述式的主體。 **if** 陳述式的語法有兩種形式。  
@@ -83,5 +83,5 @@ else
   
  在這個範例中，括住內部 **if** 陳述式的大括號會使 **else** 子句成為外部 **if** 陳述式的一部分。 如果 `i` 小於或等於 0，會將 `i` 指派給 `x`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [if-else 陳述式 (C++)](../cpp/if-else-statement-cpp.md)

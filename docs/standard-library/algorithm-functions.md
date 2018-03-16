@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 ||||  
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a> nth_element  
- 分割範圍的項目正確放 *n* th 項目範圍中的順序，讓它前面的所有元素小於或等於它，而且序列中在它後面的所有項目大於或等於它的回覆。  
+ 分割某範圍的元素，將序列的第 *n* 個元素正確放入範圍中，以便在它前面的所有元素小於或等於它，而且序列中在它後面的所有元素大於或等於它。  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,7 +4565,7 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>備註  
  參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。  
   
- `nth_element`演算法並不保證在子範圍的項目可能是端的 *n* th 項目排序。 因此，它的保證低於 `partial_sort`，其可排序範圍中低於某個所選擇元素的元素，而且可以在不需要排序較低範圍時用作 `partial_sort` 的較快替代方式。  
+ `nth_element` 演算法不保證會排序第 *n* 個元素之子範圍任一端中的元素。 因此，它的保證低於 `partial_sort`，其可排序範圍中低於某個所選擇元素的元素，而且可以在不需要排序較低範圍時用作 `partial_sort` 的較快替代方式。  
   
  如果任一個都不小於另一個，則元素對等，但不一定相等。  
   
@@ -8463,5 +8463,5 @@ int main( )
 }  
   
 ```  
-## <a name="see-also"></a>請參閱   
+## <a name="see-also"></a>另請參閱   
  [\<algorithm>](../standard-library/algorithm.md)

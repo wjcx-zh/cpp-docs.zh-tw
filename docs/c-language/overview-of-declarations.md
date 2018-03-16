@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarations"></a>宣告概觀
 「宣告」會指定一組識別項的解譯和屬性。 如果宣告也為以識別項命名的物件或函式保留儲存區，則稱為「定義」。 變數、函式和類型的 C 宣告具有下列語法：  
@@ -81,7 +81,7 @@ int const *fp;
   
  有兩個 *type-qualifier* 終端項：**const** 和 `volatile`。 這些限定詞可指定只有透過左值來存取該類型的物件時，才會相關聯的其他類型屬性。 如需 **const** 和 `volatile` 的詳細資訊，請參閱[類型限定詞](../c-language/type-qualifiers.md)。 如需左值定義的詳細資訊，請參閱[左值和右值運算式](../c-language/l-value-and-r-value-expressions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C 語言語法摘要](../c-language/c-language-syntax-summary.md)   
  [宣告和類型](../c-language/declarations-and-types.md)   
  [宣告摘要](../c-language/summary-of-declarations.md)

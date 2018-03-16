@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="active-documents-on-the-internet"></a>網際網路上的主動式文件
 主動式文件提供傳統的內嵌物件的擴充功能。 主動式文件可能會多頁，而且會顯示整個工作區中。 它們執行傳統功能表交涉，且可以就地與伺服器應用程式中開啟的視窗中編輯。 而不是顯示為以陰影的框線括住的小矩形，主動式文件會是完整的畫面格和一律就地啟用作用中。  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
 |-------------------------|---------------------------------|  
 |使用複合檔案做為其儲存機制。|`IPersistStorage`.|  
 |支援主動式文件，包括從檔案建立的基礎內嵌功能。|`IPersistFile`、`IOleObject` 和 `IDataObject`。|  
-|支援就地啟用。|`IOleInPlaceObject`和`IOleInPlaceActiveObject`(使用容器的`IOleInPlaceSite`和**IOleInPlaceFrame**介面)。|  
+|支援就地啟用。|`IOleInPlaceObject` 和`IOleInPlaceActiveObject`(使用容器的`IOleInPlaceSite`和**IOleInPlaceFrame**介面)。|  
 |支援包含這些新介面的使用中文件副檔名。 某些介面是選擇性的。|`IOleDocument`、`IOleDocumentView`、`IOleCommandTarget`和`IPrint`。|  
   
  MFC 提供支援，以擴充現有內嵌的伺服器支援主動式文件。  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="add-active-document-support-to-a-new-application"></a>主動式文件支援加入新的應用程式  
  若要建立新的應用程式與主動式文件支援： MFC 應用程式精靈 」 中，於**複合文件支援**頁面上，「 選取的複合文件支援 」 底下選擇**全伺服器**或**容器/全伺服器**，然後在 [選取其他選項] 下選取核取方塊**主動式文件伺服**。  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a>將現有的 MFC 同處理序伺服器轉換成使用中文件伺服器  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> 將現有的 MFC 同處理序伺服器轉換成使用中文件伺服器  
  如果您的應用程式建立 Visual c + + 4.2 版之前的版本，並且已經在處理序伺服器，您可以藉由變更下列類別加入使用中文件支援：  
   
 |類別型別|先前，衍生自|若要從衍生的變更|  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  您也會變更在登錄中，輸入資訊的方式，並進行數個其他變更。 如果您的應用程式目前不有任何 COM 元件支援，您可以新增以執行應用程式精靈，並整合與您現有的應用程式的 COM 元件專屬的程式碼的伺服器支援。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

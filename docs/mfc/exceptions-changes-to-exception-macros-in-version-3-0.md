@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外狀況：3.0 版例外狀況巨集的變更
 這是進階的主題。  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [重新擲回例外狀況](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>例外狀況類型和 CATCH 巨集  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> 例外狀況類型和 CATCH 巨集  
  在舊版的 MFC，**攔截**巨集使用 MFC 的執行階段類型資訊來判斷例外狀況的類型，例外狀況的類型決定，也就是說，在 catch 站台。 與 c + + 例外狀況，不過，例外狀況的類型是一律決定在擲回站台就會擲回的例外狀況物件類型。 這會導致不相容的少數情況下，不同於擲回之物件的型別擲回的物件指標的類型。  
   
  下列範例將說明這 MFC 3.0 版和舊版之間的差異的結果：  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  若要解決這個問題，將擲回運算式從函式呼叫的程式碼，編譯器會產生例外狀況時的已知型別的實際發生例外狀況。  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>重新擲回例外狀況  
+##  <a name="_core_re.2d.throwing_exceptions"></a> 重新擲回例外狀況  
  Catch 區塊不會擲回相同它攔截的例外狀況指標。  
   
  比方說，這段程式碼在較舊的版本中有效，但會有非預期的結果 3.0 版：  
@@ -71,6 +71,6 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱[例外狀況： 攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [例外狀況處理](../mfc/exception-handling-in-mfc.md)
 

@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 476e4e23b22527accaa095d80b827c95aed58c15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="24-work-sharing-constructs"></a>2.4 工作共用的建構
 工作共用建構會發生這個情形的團隊成員之間相關聯的陳述式執行。 工作共用指示詞不會啟動新的執行緒，並在項目到工作共用建構函式沒有隱含的屏障。  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  OpenMP 定義下列的工作共用建構，以及這些詳述於以下各節：  
   
--   **如**指示詞  
+-   **for** directive  
   
 -   **區段**指示詞  
   

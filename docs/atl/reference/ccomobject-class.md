@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobject-class"></a>Ccomobject< 類別
 這個類別會實作**IUnknown**非彙總的物件。  
@@ -54,7 +54,7 @@ class CComObject : public Base
 |名稱|描述|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|建構函式。|  
-|[Ccomobject<:: ~ Ccomobject<](#dtor)|解構函式。|  
+|[CComObject::~CComObject](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -66,7 +66,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|遞減參考計數物件。|  
   
 ## <a name="remarks"></a>備註  
- `CComObject`實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非彙總的物件。 不過，呼叫`QueryInterface`， `AddRef`，和**發行**委派給`CComObjectRootEx`。  
+ `CComObject` 實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)非彙總的物件。 不過，呼叫`QueryInterface`， `AddRef`，和**發行**委派給`CComObjectRootEx`。  
   
  如需有關使用`CComObject`，請參閱文章[ATL COM 物件基礎觀念](../../atl/fundamentals-of-atl-com-objects.md)。  
   
@@ -78,7 +78,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>  CComObject::AddRef  
  在物件上的參考計數遞增。  
   
 ```
@@ -88,7 +88,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>傳回值  
  此函式會傳回新的遞增的參考計數物件上。 這個值可能是適用於診斷或測試。  
   
-##  <a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>  CComObject::CComObject  
  建構函式會遞增模組鎖定計數。  
   
 ```
@@ -97,14 +97,14 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>參數  
  **void\***  
- [in]不使用這個未命名的參數。 其存在與其他對稱**CCom***XXX*`Object`*XXX*建構函式。  
+ [in]不使用這個未命名的參數。 其存在與其他對稱 **CCom * * * XXX*`Object`*XXX*建構函式。  
   
 ### <a name="remarks"></a>備註  
  解構函式遞減它。  
   
  如果`CComObject`-衍生的物件已成功建構使用**新**運算子，初始的參考計數為 0。 若要設定為適當的值 (1) 的參考計數，呼叫以[AddRef](#addref)函式。  
   
-##  <a name="dtor"></a>Ccomobject<:: ~ Ccomobject<  
+##  <a name="dtor"></a>  CComObject::~CComObject  
  解構函式。  
   
 ```
@@ -115,7 +115,7 @@ CComObject();
  會釋放所有配置的資源，呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)，並遞減模組鎖定計數。  
 
   
-##  <a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>  CComObject::CreateInstance  
  此靜態函式可讓您建立新**Ccomobject< <** `Base`  **>** 物件，無需額外[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
@@ -139,7 +139,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComObject::QueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -161,7 +161,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="release"></a>CComObject::Release  
+##  <a name="release"></a>  CComObject::Release  
  遞減參考計數物件。  
   
 ```
@@ -171,7 +171,7 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>傳回值  
  此函式會傳回新的遞減參考計數物件上。 在偵錯組建中，傳回的值可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
  [CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   

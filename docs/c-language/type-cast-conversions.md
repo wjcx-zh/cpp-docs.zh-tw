@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f402eb49e86c8d6d3ce6c332172375125f577a2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="type-cast-conversions"></a>類型轉換
 您可以使用類型轉換明確地轉換類型。  
@@ -68,5 +68,5 @@ ms.lasthandoff: 12/21/2017
   
  您可以使用轉換將運算式轉換成類型 `void`，但是產生的運算式只能在不需要值的位置使用。 轉換成 **void \*** 的物件指標，再轉換回原始類型將會傳回其原始值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型轉換](../c-language/type-conversions-c.md)

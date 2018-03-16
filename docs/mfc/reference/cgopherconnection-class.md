@@ -30,10 +30,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 類別
 管理您與 Gopher 網際網路伺服器的連接。  
@@ -82,7 +82,7 @@ class CGopherConnection : public CInternetConnection
 ## <a name="requirements"></a>需求  
  **標頭：** afxinet.h  
   
-##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
  呼叫此成員函式會建構`CGopherConnection`物件。  
   
 ```  
@@ -113,7 +113,7 @@ CGopherConnection(
  包含 FTP 伺服器名稱的字串指標。  
   
  `dwContext`  
- 作業的內容識別碼。 `dwContext`識別作業的狀態資訊傳回[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 預設是設為 1。不過，您可以明確指派作業的特定內容識別碼。 物件，且任何工作，它會將相關聯的內容識別碼。  
+ 作業的內容識別碼。 `dwContext` 識別作業的狀態資訊傳回[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。 預設是設為 1。不過，您可以明確指派作業的特定內容識別碼。 物件，且任何工作，它會將相關聯的內容識別碼。  
   
  `pstrUserName`  
  以 null 終止的字串，指定使用者登入名稱的指標。 如果**NULL**，預設值是匿名的。  
@@ -134,7 +134,7 @@ CGopherConnection(
 ### <a name="remarks"></a>備註  
  您絕對不要建立`CGopherConnection`直接。 相反地，呼叫[CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)，它會建立`CGopherConnection`物件，並傳回的指標。  
   
-##  <a name="createlocator"></a>CGopherConnection::CreateLocator  
+##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
  呼叫此成員函式建立 gopher 定位器尋找或識別在 gopher 伺服器上的檔案。  
   
 ```  
@@ -159,7 +159,7 @@ static CGopherLocator CreateLocator(
  包含 gopher 文件或要擷取的目錄名稱的字串指標。 如果`pstrDisplayString`參數是**NULL**，就會傳回 gopher 伺服器的預設目錄。  
   
  `pstrSelectorString`  
- 若要擷取項目傳送至 gopher 伺服器的選取器字串指標。 `pstrSelectorString`可以是**NULL**。  
+ 若要擷取項目傳送至 gopher 伺服器的選取器字串指標。 `pstrSelectorString` 可以是**NULL**。  
   
  *dwGopherType*  
  這會指定是否`pstrSelectorString`指的是目錄或文件，且該要求是否是 gopher +。 請參閱結構屬性[GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows SDK 中。  
@@ -181,7 +181,7 @@ static CGopherLocator CreateLocator(
   
  若要從 gopher 伺服器擷取資訊，應用程式必須先取得 gopher 定位器。 應用程式然後必須將視為不透明的語彙基元的定位器 （也就是應用程式可以使用定位程式，但不是直接操作或比較）。 一般來說，應用程式的呼叫中使用定位器[CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile)成員函式來擷取特定資訊。  
   
-##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
  呼叫此成員函式可擷取特定的屬性資訊項目從 gopher 伺服器。  
   
 ```  
@@ -203,7 +203,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
-##  <a name="openfile"></a>CGopherConnection::OpenFile  
+##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  呼叫此成員函式，以開啟 gopher 伺服器上的檔案。  
   
 ```  
@@ -233,7 +233,7 @@ CGopherFile* OpenFile(
 ### <a name="remarks"></a>備註  
  覆寫`dwContext`預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CGopherConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFtpConnection 類別](../../mfc/reference/cftpconnection-class.md)   

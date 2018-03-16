@@ -41,10 +41,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27152fc2ebc7944e4b96dce75937ac3c3b04616d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="directoryiterator-class"></a>directory_iterator 類別
 描述可循序遍訪目錄中的檔案名稱的輸入迭代器。 對於迭代器 X，運算式 *X 會評估為 directory_entry 類別的物件，該物件會包裝檔案名稱及其狀態的任何已知項目。  
@@ -143,7 +143,7 @@ directory_iterator& operator++(int);
   
  **命名空間：**std::experimental::filesystem  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
  [檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)

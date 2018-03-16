@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="standard-conversions"></a>標準轉換
 C++ 語言定義其基本類型之間的轉換。 同時定義指標、參考及成員指標衍生類型的轉換。 這些轉換稱為「標準轉換」  (如需有關類型、 標準的類型和衍生的類型的詳細資訊，請參閱[類型](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  保留值的提升和保留正負號狀態的提升通常會產生相同的結果。 不過，如果提升的物件是下列其中一項，則兩者可能會產生不同的結果：  
   
--   運算元的 **/** ， `%`， `/=`， `%=`，  **<** ，  **\< =** ， **>** ，或**>=**  
+-   運算元的 **/** ， `%`， `/=`， `%=`，  **<** ，  **\< =** ， **>** ，或 **>=**  
   
      這些運算子需要依據正負號判斷結果。 因此，保留值和保留正負號的提升套用至這些運算元時，會產生不同的結果。  
   
--   左的運算元 **>>** 或**>>=**  
+-   左的運算元 **>>** 或 **>>=**  
   
      執行移位作業時，這些運算子會將帶正負號和不帶正負號的數量視為不同。 對於帶正負號的數量，將數量右移會造成正負號位元傳播至空出的位元位置。 對於不帶正負號的數量，空出的位元位置會以零填滿。  
   
@@ -199,7 +199,7 @@ int main() {
   
  基底類別是否可存取，取決於衍生中所使用的繼承種類。 請參考下圖中說明的繼承。  
   
- ![繼承圖表顯示基底 &#45; 類別存取範圍](../cpp/media/vc38xa1.gif "vc38XA1")  
+ ![顯示基底的繼承圖形&#45;類別存取範圍](../cpp/media/vc38xa1.gif "vc38XA1")  
 說明基底類別存取範圍的繼承圖表  
   
  下表說明圖中所示情況的基底類別存取範圍。  
@@ -330,5 +330,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

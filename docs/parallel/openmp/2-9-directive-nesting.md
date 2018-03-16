@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bd3c4f790681b1b044f435c03d185585b565eb62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="29-directive-nesting"></a>2.9 巢狀使用指示詞
 動態巢狀指示詞必須遵守下列規則：  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **如**，**區段**，和**單一**動態的範圍中不允許指示詞**重大**，**排序**，和**主要**如果指示詞繫結至相同的區域**平行**為區域。  
   
--   **屏障**動態的範圍中不允許指示詞**如**，**排序**，**區段**，**單一**，**主要**，和**重大**如果指示詞繫結至相同的區域**平行**為區域。  
+-   **屏障**動態的範圍中不允許指示詞**如**，**排序**，**區段**，**單一**， **主要**，和**重大**如果指示詞繫結至相同的區域**平行**為區域。  
   
 -   **主要**動態的範圍中不允許指示詞**如**，**區段**，和**單一**指示詞如果**master**指示詞繫結至相同**平行**為工作共用指示詞。  
   

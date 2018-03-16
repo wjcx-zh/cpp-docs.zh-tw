@@ -350,10 +350,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 開發 OLE 控制項的強大基底類別。  
@@ -381,7 +381,7 @@ class COleControl : public CWnd
 |[COleControl::AmbientDisplayName](#ambientdisplayname)|容器會傳回所指定控制項的名稱。|  
 |[COleControl::AmbientFont](#ambientfont)|傳回環境字型屬性值。|  
 |[COleControl::AmbientForeColor](#ambientforecolor)|傳回的環境前景色彩屬性的值。|  
-|[Colecontrol:: Ambientlocaleid](#ambientlocaleid)|傳回容器的地區設定識別碼。|  
+|[COleControl::AmbientLocaleID](#ambientlocaleid)|傳回容器的地區設定識別碼。|  
 |[COleControl::AmbientScaleUnits](#ambientscaleunits)|傳回容器所使用的單位的類型。|  
 |[COleControl::AmbientShowGrabHandles](#ambientshowgrabhandles)|決定是否應該顯示抓取控點。|  
 |[COleControl::AmbientShowHatching](#ambientshowhatching)|決定是否應該顯示影線。|  
@@ -403,7 +403,7 @@ class COleControl : public CWnd
 |[COleControl::ExchangeVersion](#exchangeversion)|將序列化控制的版本號碼。|  
 |[COleControl::FireClick](#fireclick)|引發股票`Click`事件。|  
 |[COleControl::FireDblClick](#firedblclick)|引發股票`DblClick`事件。|  
-|[Colecontrol:: Fireerror](#fireerror)|引發股票`Error`事件。|  
+|[COleControl::FireError](#fireerror)|引發股票`Error`事件。|  
 |[COleControl::FireEvent](#fireevent)|引發自訂事件。|  
 |[COleControl::FireKeyDown](#firekeydown)|引發股票`KeyDown`事件。|  
 |[COleControl::FireKeyPress](#firekeypress)|引發股票`KeyPress`事件。|  
@@ -422,7 +422,7 @@ class COleControl : public CWnd
 |[COleControl::GetClientOffset](#getclientoffset)|擷取控制項的矩形區域的左上的角和其工作區的左上的角的差異。|  
 |[COleControl::GetClientRect](#getclientrect)|擷取控制項的工作區的大小。|  
 |[COleControl::GetClientSite](#getclientsite)|查詢的物件，其目前的用戶端站台容器中的指標。|  
-|[Clippaintdc](#getcontrolflags)|擷取控制旗標設定。|  
+|[COleControl::GetControlFlags](#getcontrolflags)|擷取控制旗標設定。|  
 |[COleControl::GetControlSize](#getcontrolsize)|傳回 OLE 控制項的大小與位置。|  
 |[COleControl::GetDC](#getdc)|提供無視窗控制項從其容器中取得的裝置內容的方法。|  
 |[COleControl::GetEnabled](#getenabled)|傳回存貨 Enabled 屬性的值。|  
@@ -433,21 +433,21 @@ class COleControl : public CWnd
 |[COleControl::GetForeColor](#getforecolor)|傳回內建的前景色彩屬性的值。|  
 |[COleControl::GetHwnd](#gethwnd)|傳回內建的 hWnd 屬性的值。|  
 |[COleControl::GetMessageString](#getmessagestring)|提供功能表項目中的狀態列文字。|  
-|[Colecontrol:: Getnotsupported](#getnotsupported)|控制項的屬性值，使用者無法存取。|  
+|[COleControl::GetNotSupported](#getnotsupported)|控制項的屬性值，使用者無法存取。|  
 |[COleControl::GetReadyState](#getreadystate)|傳回控制項的整備狀態。|  
 |[COleControl::GetRectInContainer](#getrectincontainer)|傳回相對於其容器的控制項的矩形。|  
 |[COleControl::GetStockTextMetrics](#getstocktextmetrics)|傳回的標準的內建字型屬性。|  
 |[COleControl::GetText](#gettext)|傳回內建的 Text 或 Caption 屬性值。|  
-|[Colecontrol:: Getwindowlessdroptarget](#getwindowlessdroptarget)|覆寫，以允許無視窗控制項作為目標的拖曳和卸除作業。|  
+|[COleControl::GetWindowlessDropTarget](#getwindowlessdroptarget)|覆寫，以允許無視窗控制項作為目標的拖曳和卸除作業。|  
 |[COleControl::InitializeIIDs](#initializeiids)|通知與控制項將使用的 Iid 的基底類別。|  
 |[COleControl::InternalGetFont](#internalgetfont)|傳回`CFontHolder`內建字型屬性的物件。|  
 |[COleControl::InternalGetText](#internalgettext)|擷取內建的標題或文字屬性。|  
-|[Colecontrol:: Internalsetreadystate](#internalsetreadystate)|設定控制項的整備狀態並引發已備妥狀態變更事件。|  
+|[COleControl::InternalSetReadyState](#internalsetreadystate)|設定控制項的整備狀態並引發已備妥狀態變更事件。|  
 |[COleControl::InvalidateControl](#invalidatecontrol)|失效的區域顯示的控制項，讓它重新繪製。|  
 |[COleControl::InvalidateRgn](#invalidatergn)|使給定區域內的容器視窗的工作區。 可用來進行無視窗控制項重繪區域中。|  
 |[COleControl::IsConvertingVBX](#isconvertingvbx)|可讓 OLE 控制項的特製化的載入。|  
 |[COleControl::IsModified](#ismodified)|判斷是否已變更的控制項狀態。|  
-|[Colecontrol:: Isoptimizeddraw](#isoptimizeddraw)|指出容器是否支援目前的繪圖作業最佳化的繪圖。|  
+|[COleControl::IsOptimizedDraw](#isoptimizeddraw)|指出容器是否支援目前的繪圖作業最佳化的繪圖。|  
 |[COleControl::IsSubclassedControl](#issubclassedcontrol)|呼叫以判斷是否控制項子類別的 Windows 控制。|  
 |[COleControl::Load](#load)|重設任何先前非同步資料，並起始新載入控制項非同步屬性。|  
 |[COleControl::LockInPlaceActive](#lockinplaceactive)|如果您的控制項可以停用容器的決定。|  
@@ -459,7 +459,7 @@ class COleControl : public CWnd
 |[COleControl::OnClose](#onclose)|通知控制項，`IOleControl::Close`已呼叫。|  
 |[COleControl::OnDoVerb](#ondoverb)|執行控制動詞後呼叫。|  
 |[COleControl::OnDraw](#ondraw)|當控制項被要求重繪其本身時呼叫。|  
-|[Colecontrol:: Ondrawmetafile](#ondrawmetafile)|當控制項被要求重繪其本身使用中繼檔裝置內容時，由容器呼叫。|  
+|[COleControl::OnDrawMetafile](#ondrawmetafile)|當控制項被要求重繪其本身使用中繼檔裝置內容時，由容器呼叫。|  
 |[COleControl::OnEdit](#onedit)|由 UI 啟動容器呼叫 OLE 控制項。|  
 |[COleControl::OnEnabledChanged](#onenabledchanged)|股票 Enabled 屬性已變更時呼叫。|  
 |[COleControl::OnEnumVerbs](#onenumverbs)|呼叫以列舉控制項的動詞命令的容器。|  
@@ -492,7 +492,7 @@ class COleControl : public CWnd
 |[COleControl::OnRenderFileData](#onrenderfiledata)|由架構呼叫以擷取指定格式的檔案中的資料。|  
 |[COleControl::OnRenderGlobalData](#onrenderglobaldata)|由架構呼叫以擷取指定格式的全域記憶體中的資料。|  
 |[COleControl::OnResetState](#onresetstate)|將控制項的屬性重設為預設值。|  
-|[Colecontrol:: Onsetclientsite](#onsetclientsite)|通知控制項，`IOleControl::SetClientSite`已呼叫。|  
+|[COleControl::OnSetClientSite](#onsetclientsite)|通知控制項，`IOleControl::SetClientSite`已呼叫。|  
 |[COleControl::OnSetData](#onsetdata)|控制項的資料取代為另一個值。|  
 |[COleControl::OnSetExtent](#onsetextent)|控制項的寬度變更後呼叫。|  
 |[COleControl::OnSetObjectRects](#onsetobjectrects)|呼叫後已變更控制項的維度。|  
@@ -526,11 +526,11 @@ class COleControl : public CWnd
 |[COleControl::SetForeColor](#setforecolor)|設定的內建的前景色彩屬性的值。|  
 |[COleControl::SetInitialSize](#setinitialsize)|設定 OLE 控制項的容器中第一次顯示時的大小。|  
 |[COleControl::SetModifiedFlag](#setmodifiedflag)|變更控制項的已修改的狀態。|  
-|[Colecontrol:: Setnotpermitted](#setnotpermitted)|表示編輯要求已失敗。|  
-|[Colecontrol:: Setnotsupported](#setnotsupported)|防止使用者控制項的屬性值的修改。|  
+|[COleControl::SetNotPermitted](#setnotpermitted)|表示編輯要求已失敗。|  
+|[COleControl::SetNotSupported](#setnotsupported)|防止使用者控制項的屬性值的修改。|  
 |[COleControl::SetRectInContainer](#setrectincontainer)|設定相對於其容器的控制項的矩形。|  
 |[COleControl::SetText](#settext)|設定內建的 Text 或 Caption 屬性值。|  
-|[Colecontrol:: Throwerror](#throwerror)|OLE 控制項中發生錯誤的訊號。|  
+|[COleControl::ThrowError](#throwerror)|OLE 控制項中發生錯誤的訊號。|  
 |[COleControl::TransformCoords](#transformcoords)|轉換座標容器和控制項之間的值。|  
 |[COleControl::TranslateColor](#translatecolor)|將轉換**OLE_COLOR**值設定為**COLORREF**值。|  
 |[COleControl::WillAmbientsBeValidDuringLoad](#willambientsbevalidduringload)|決定是否環境屬性可以使用下一次載入控制項。|  
@@ -581,7 +581,7 @@ class COleControl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxctl.h  
   
-##  <a name="ambientbackcolor"></a>COleControl::AmbientBackColor  
+##  <a name="ambientbackcolor"></a>  COleControl::AmbientBackColor  
  傳回環境 BackColor 屬性值。  
   
 ```  
@@ -594,7 +594,7 @@ OLE_COLOR AmbientBackColor();
 ### <a name="remarks"></a>備註  
  環境背景色彩屬性使用的所有控制項，由容器所定義。 請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambientdisplayname"></a>COleControl::AmbientDisplayName  
+##  <a name="ambientdisplayname"></a>  COleControl::AmbientDisplayName  
  容器已指派給控制項的名稱可以用於向使用者顯示錯誤訊息。  
   
 ```  
@@ -607,7 +607,7 @@ CString AmbientDisplayName();
 ### <a name="remarks"></a>備註  
  請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambientfont"></a>COleControl::AmbientFont  
+##  <a name="ambientfont"></a>  COleControl::AmbientFont  
  傳回環境字型屬性值。  
   
 ```  
@@ -620,7 +620,7 @@ LPFONTDISP AmbientFont();
 ### <a name="remarks"></a>備註  
  環境字型屬性是容器所定義，並可供所有控制項。請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambientforecolor"></a>COleControl::AmbientForeColor  
+##  <a name="ambientforecolor"></a>  COleControl::AmbientForeColor  
  傳回的環境前景色彩屬性的值。  
   
 ```  
@@ -633,7 +633,7 @@ OLE_COLOR AmbientForeColor();
 ### <a name="remarks"></a>備註  
  環境的前景色彩屬性使用的所有控制項，由容器所定義。 請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambientlocaleid"></a>Colecontrol:: Ambientlocaleid  
+##  <a name="ambientlocaleid"></a>  COleControl::AmbientLocaleID  
  傳回容器的地區設定識別碼。  
   
 ```  
@@ -646,7 +646,7 @@ LCID AmbientLocaleID();
 ### <a name="remarks"></a>備註  
  控制項可以調整為特定地區設定其使用者介面使用地區設定識別碼。 請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambientappearance"></a>COleControl::AmbientAppearance  
+##  <a name="ambientappearance"></a>  COleControl::AmbientAppearance  
  擷取目前的控制項物件的外觀設定。  
   
 ```  
@@ -663,7 +663,7 @@ short AmbientAppearance();
 ### <a name="remarks"></a>備註  
  呼叫此函式可擷取的目前值**DISPID_AMBIENT_APPEARANCE**控制項的屬性。  
   
-##  <a name="ambientscaleunits"></a>COleControl::AmbientScaleUnits  
+##  <a name="ambientscaleunits"></a>  COleControl::AmbientScaleUnits  
  傳回容器所使用的單位的類型。  
   
 ```  
@@ -676,7 +676,7 @@ CString AmbientScaleUnits();
 ### <a name="remarks"></a>備註  
  容器的環境 ScaleUnits 屬性可以用來顯示位置或維度，加上所選的單位，例如 twip 還是以公分。 請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambientshowgrabhandles"></a>COleControl::AmbientShowGrabHandles  
+##  <a name="ambientshowgrabhandles"></a>  COleControl::AmbientShowGrabHandles  
  請判斷容器是否允許控制項本身現用時顯示抓取控點。  
   
 ```  
@@ -689,7 +689,7 @@ BOOL AmbientShowGrabHandles();
 ### <a name="remarks"></a>備註  
  請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambientshowhatching"></a>COleControl::AmbientShowHatching  
+##  <a name="ambientshowhatching"></a>  COleControl::AmbientShowHatching  
  決定容器是否允許控制項來顯示本身具有影線圖樣時 UI 作用。  
   
 ```  
@@ -702,7 +702,7 @@ BOOL AmbientShowHatching();
 ### <a name="remarks"></a>備註  
  請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambienttextalign"></a>COleControl::AmbientTextAlign  
+##  <a name="ambienttextalign"></a>  COleControl::AmbientTextAlign  
  判斷慣用控制項容器的環境的文字對齊方式。  
   
 ```  
@@ -724,7 +724,7 @@ short AmbientTextAlign();
 ### <a name="remarks"></a>備註  
  此屬性可用於所有內嵌控制項，而且由容器所定義。 請注意，容器不需要可支援此屬性。  
   
-##  <a name="ambientuidead"></a>COleControl::AmbientUIDead  
+##  <a name="ambientuidead"></a>  COleControl::AmbientUIDead  
  請判斷容器是否想要回應使用者介面動作的控制項。  
   
 ```  
@@ -737,7 +737,7 @@ BOOL AmbientUIDead();
 ### <a name="remarks"></a>備註  
  例如，容器可能會將此設**TRUE**在設計模式。  
   
-##  <a name="ambientusermode"></a>COleControl::AmbientUserMode  
+##  <a name="ambientusermode"></a>  COleControl::AmbientUserMode  
  決定是否容器是在設計模式或使用者模式。  
   
 ```  
@@ -750,7 +750,7 @@ BOOL AmbientUserMode();
 ### <a name="remarks"></a>備註  
  例如，容器可能會將此設**FALSE**在設計模式。  
   
-##  <a name="boundpropertychanged"></a>COleControl::BoundPropertyChanged  
+##  <a name="boundpropertychanged"></a>  COleControl::BoundPropertyChanged  
  繫結的屬性值已變更的訊號。  
   
 ```  
@@ -764,7 +764,7 @@ void BoundPropertyChanged(DISPID dispid);
 ### <a name="remarks"></a>備註  
  這必須在每次屬性變更，即使在不透過屬性進行變更的情況下的值設定方法呼叫。 請特別注意的繫結會對應至成員變數的屬性。 這類成員變數的變更，每當`BoundPropertyChanged`必須呼叫。  
   
-##  <a name="boundpropertyrequestedit"></a>COleControl::BoundPropertyRequestEdit  
+##  <a name="boundpropertyrequestedit"></a>  COleControl::BoundPropertyRequestEdit  
  要求的權限`IPropertyNotifySink`介面，以變更控制項所提供的繫結的屬性值。  
   
 ```  
@@ -781,7 +781,7 @@ BOOL BoundPropertyRequestEdit(DISPID dispid);
 ### <a name="remarks"></a>備註  
  如果權限遭到拒絕，控制項必須讓屬性變更的值。 這可藉由忽略或失敗的嘗試要變更屬性值的動作。  
   
-##  <a name="clienttoparent"></a>COleControl::ClientToParent  
+##  <a name="clienttoparent"></a>  COleControl::ClientToParent  
  將轉譯的座標`pPoint`為父座標。  
   
 ```  
@@ -800,7 +800,7 @@ virtual void ClientToParent(
 ### <a name="remarks"></a>備註  
  在輸入`pPoint`是相對於來源的 OLE 控制項 （用戶端區域控制項的左上角） 工作區。 在輸出`pPoint`是相對於來源的父代 （的容器左上角）。  
   
-##  <a name="clipcaretrect"></a>COleControl::ClipCaretRect  
+##  <a name="clipcaretrect"></a>  COleControl::ClipCaretRect  
  如果它完全或部分涵蓋重疊的不透明物件，請調整插入號矩形。  
   
 ```  
@@ -821,7 +821,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
   
  建立插入號的物件應該提交的插入號矩形`ClipCaretRect`插入號以用於調整的矩形。 如果插入號完全隱藏的這個方法會傳回**FALSE**而且插入號應該不會顯示所有在此情況下。  
   
-##  <a name="colecontrol"></a>COleControl::COleControl  
+##  <a name="colecontrol"></a>  COleControl::COleControl  
  建構 `COleControl` 物件。  
   
 ```  
@@ -831,7 +831,7 @@ COleControl();
 ### <a name="remarks"></a>備註  
  通常不會直接呼叫此函式。 改為 OLE 控制項通常會建立其 class factory。  
   
-##  <a name="controlinfochanged"></a>COleControl::ControlInfoChanged  
+##  <a name="controlinfochanged"></a>  COleControl::ControlInfoChanged  
  此控制項所支援的助憶鍵的集合變更時，請呼叫此函式。  
   
 ```  
@@ -841,7 +841,7 @@ void ControlInfoChanged();
 ### <a name="remarks"></a>備註  
  在收到此通知時，控制項的容器會取得一組新的助憶鍵藉由呼叫[IOleControl::GetControlInfo](http://msdn.microsoft.com/library/windows/desktop/ms693730)。 請注意，容器並不需要回應此通知。  
   
-##  <a name="displayerror"></a>COleControl::DisplayError  
+##  <a name="displayerror"></a>  COleControl::DisplayError  
  內建的錯誤事件已處理 （除非事件處理常式已隱藏的錯誤顯示） 之後，由架構呼叫。  
   
 ```  
@@ -874,7 +874,7 @@ virtual void DisplayError(
   
  覆寫此函式可自訂錯誤的顯示方式。  
   
-##  <a name="doclick"></a>COleControl::DoClick  
+##  <a name="doclick"></a>  COleControl::DoClick  
  模擬滑鼠按一下控制項上的動作。  
   
 ```  
@@ -886,7 +886,7 @@ void DoClick();
   
  此函式會受到`COleControl`做為內建方法，稱為 DoClick 基底類別。 如需詳細資訊，請參閱文章[ActiveX 控制項： 方法](../../mfc/mfc-activex-controls-methods.md)。  
   
-##  <a name="dopropexchange"></a>COleControl::DoPropExchange  
+##  <a name="dopropexchange"></a>  COleControl::DoPropExchange  
  載入或儲存控制項的永續性儲存體表示法，例如資料流或屬性的設定時，架構呼叫。  
   
 ```  
@@ -902,7 +902,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
   
  如果控制項精靈已經用來建立 OLE 控制項的專案，此函式的覆寫的版本會序列化所支援的內建屬性`COleControl`基底類別函式呼叫`COleControl::DoPropExchange`。 當您新增到您的 OLE 控制項的使用者定義的屬性，您必須修改此函式可序列化新的屬性。 如需序列化的詳細資訊，請參閱文章[ActiveX 控制項： 序列化](../../mfc/mfc-activex-controls-serializing.md)。  
   
-##  <a name="dosuperclasspaint"></a>COleControl::DoSuperclassPaint  
+##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint  
  重新繪製已子類別化 Windows 控制項從 OLE 控制項。  
   
 ```  
@@ -923,7 +923,7 @@ void DoSuperclassPaint(
   
  如需有關這個函式和子類別化 Windows 控制項的詳細資訊，請參閱文章[ActiveX 控制項： 子類別化 Windows 控制項](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。  
   
-##  <a name="drawcontent"></a>COleControl::DrawContent  
+##  <a name="drawcontent"></a>  COleControl::DrawContent  
  當控制項的外觀需要更新時由架構呼叫。  
   
 ```  
@@ -942,7 +942,7 @@ void DrawContent(
 ### <a name="remarks"></a>備註  
  此函式直接呼叫可覆寫`OnDraw`函式。  
   
-##  <a name="drawmetafile"></a>COleControl::DrawMetafile  
+##  <a name="drawmetafile"></a>  COleControl::DrawMetafile  
  使用中繼檔裝置內容時，由架構呼叫。  
   
 ```  
@@ -958,7 +958,7 @@ void DrawMetafile(
  `rc`  
  在中繪製的矩形區域。  
   
-##  <a name="enablesimpleframe"></a>COleControl::EnableSimpleFrame  
+##  <a name="enablesimpleframe"></a>  COleControl::EnableSimpleFrame  
  可讓 OLE 控制項的簡單框架特性。  
   
 ```  
@@ -968,7 +968,7 @@ void EnableSimpleFrame();
 ### <a name="remarks"></a>備註  
  這種特性可讓控制項以支援 visual 的內含項目，其他控制項，但不是正確的 OLE 內含項目。 範例會使用數個內控制項群組方塊。 這些控制項不是 OLE 所包含，但在相同群組中。  
   
-##  <a name="exchangeextent"></a>COleControl::ExchangeExtent  
+##  <a name="exchangeextent"></a>  COleControl::ExchangeExtent  
  序列化或初始化的狀態控制項的寬度 (在其維度**HIMETRIC**單位)。  
   
 ```  
@@ -985,7 +985,7 @@ BOOL ExchangeExtent(CPropExchange* pPX);
 ### <a name="remarks"></a>備註  
  通常會呼叫此函式的預設實作`COleControl::DoPropExchange`。  
   
-##  <a name="exchangestockprops"></a>COleControl::ExchangeStockProps  
+##  <a name="exchangestockprops"></a>  COleControl::ExchangeStockProps  
  序列化或初始化控制項的內建屬性的狀態。  
   
 ```  
@@ -999,7 +999,7 @@ void ExchangeStockProps(CPropExchange* pPX);
 ### <a name="remarks"></a>備註  
  通常會呼叫此函式的預設實作`COleControl::DoPropExchange`。  
   
-##  <a name="exchangeversion"></a>COleControl::ExchangeVersion  
+##  <a name="exchangeversion"></a>  COleControl::ExchangeVersion  
  序列化或初始化控制項的版本資訊的狀態。  
   
 ```  
@@ -1027,7 +1027,7 @@ BOOL ExchangeVersion(
   
  如需持續性和版本控制的詳細資訊，請參閱文章[ActiveX 控制項： 序列化](../../mfc/mfc-activex-controls-serializing.md)。  
   
-##  <a name="fireclick"></a>COleControl::FireClick  
+##  <a name="fireclick"></a>  COleControl::FireClick  
  作用中的控制項上按一下滑鼠時由架構呼叫。  
   
 ```  
@@ -1039,7 +1039,7 @@ void FireClick();
   
  自動進行的按一下事件的引發，控制項的事件對應必須有內建 Click 事件定義。  
   
-##  <a name="firedblclick"></a>COleControl::FireDblClick  
+##  <a name="firedblclick"></a>  COleControl::FireDblClick  
  當使用中的控制項上按兩下滑鼠時由架構呼叫。  
   
 ```  
@@ -1051,7 +1051,7 @@ void FireDblClick();
   
  自動發生目的 DblClick 事件的引發，控制項的事件對應必須有定義的內建目的 DblClick 事件。  
   
-##  <a name="fireerror"></a>Colecontrol:: Fireerror  
+##  <a name="fireerror"></a>  COleControl::FireError  
  引發內建的錯誤事件。  
   
 ```  
@@ -1080,7 +1080,7 @@ void FireError(
   
  若要修正此問題，以手動方式變更`SCODE`中控制項的參數。ODL 檔案**長**。 此外，任何自訂事件、 方法或屬性，會使用`SCODE`參數也會導致相同的問題。  
   
-##  <a name="fireevent"></a>COleControl::FireEvent  
+##  <a name="fireevent"></a>  COleControl::FireEvent  
  就會引發任何數目的選擇性引數，與您控制從使用者定義事件。  
   
 ```  
@@ -1122,7 +1122,7 @@ void AFX_CDECL FireEvent(
 > [!NOTE]
 >  所有的 variant 類型已定義其他的 variant 常數例外**VTS_FONT**和**VTS_PICTURE**，可提供 variant 資料常數指標。 這些常數會使用名為**VTS_P** `constantname`慣例。 例如， **VTS_PCOLOR**是指向**VTS_COLOR**常數。  
   
-##  <a name="firekeydown"></a>COleControl::FireKeyDown  
+##  <a name="firekeydown"></a>  COleControl::FireKeyDown  
  當控制項的 UI 使用中時按下按鍵時由架構呼叫。  
   
 ```  
@@ -1149,7 +1149,7 @@ void FireKeyDown(
   
  自動發生 KeyDown 事件的引發，控制項的事件對應必須有定義的內建 KeyDown 事件。  
   
-##  <a name="firekeypress"></a>COleControl::FireKeyPress  
+##  <a name="firekeypress"></a>  COleControl::FireKeyPress  
  索引鍵是按下並釋放自訂控制項容器內處於作用中的 UI 時由架構呼叫。  
   
 ```  
@@ -1167,7 +1167,7 @@ void FireKeyPress(USHORT* pnChar);
   
  KeyPress 事件發生的自動引發，控制項的事件對應必須有定義的內建 KeyPress 事件。  
   
-##  <a name="firekeyup"></a>COleControl::FireKeyUp  
+##  <a name="firekeyup"></a>  COleControl::FireKeyUp  
  自訂控制項處於作用中的 UI 容器內，且放開按鍵時由架構呼叫。  
   
 ```  
@@ -1194,7 +1194,7 @@ void FireKeyUp(
   
  自動發生 KeyUp 事件的引發，控制項的事件對應必須有定義的內建 KeyUp 事件。  
   
-##  <a name="firemousedown"></a>COleControl::FireMouseDown  
+##  <a name="firemousedown"></a>  COleControl::FireMouseDown  
  作用中的自訂控制項上按下滑鼠按鈕時由架構呼叫。  
   
 ```  
@@ -1235,7 +1235,7 @@ void FireMouseDown(
   
  MouseDown 事件發生的自動引發，控制項的事件對應必須有定義的內建 MouseDown 事件。  
   
-##  <a name="firemousemove"></a>COleControl::FireMouseMove  
+##  <a name="firemousemove"></a>  COleControl::FireMouseMove  
  將游標移至作用中的自訂控制項時，由架構呼叫。  
   
 ```  
@@ -1276,7 +1276,7 @@ void FireMouseMove(
   
  自動發生 MouseMove 事件的引發，控制項的事件對應必須有定義的內建 MouseMove 事件。  
   
-##  <a name="firemouseup"></a>COleControl::FireMouseUp  
+##  <a name="firemouseup"></a>  COleControl::FireMouseUp  
  作用中的自訂控制項上放開滑鼠按鈕時由架構呼叫。  
   
 ```  
@@ -1317,7 +1317,7 @@ void FireMouseUp(
   
  自動發生 MouseUp 事件的引發，控制項的事件對應必須有定義的內建 MouseUp 事件。  
   
-##  <a name="firereadystatechange"></a>COleControl::FireReadyStateChange  
+##  <a name="firereadystatechange"></a>  COleControl::FireReadyStateChange  
  引發事件的目前值的控制項的就緒狀態。  
   
 ```  
@@ -1346,7 +1346,7 @@ void FireReadyStateChange();
   
  [InternalSetReadyState](#internalsetreadystate)就緒狀態變更為指定的值，則會呼叫`FireReadyStateChange`。  
   
-##  <a name="getactivationpolicy"></a>COleControl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>  COleControl::GetActivationPolicy  
  支援的控制項的預設啟動行為會改變`IPointerInactive`介面。  
   
 ```  
@@ -1388,7 +1388,7 @@ virtual DWORD GetActivationPolicy();
   
  [!code-cpp[NVC_MFCAxCtl#10](../../mfc/reference/codesnippet/cpp/colecontrol-class_2.cpp)]  
   
-##  <a name="getambientproperty"></a>COleControl::GetAmbientProperty  
+##  <a name="getambientproperty"></a>  COleControl::GetAmbientProperty  
  取得容器的環境屬性的值。  
   
 ```  
@@ -1412,9 +1412,9 @@ BOOL GetAmbientProperty(
 |------------|--------------------|  
 |`VT_BOOL`|**BOOL\***|  
 |`VT_BSTR`|**CString\***|  
-|`VT_I2`|**短\***|  
-|`VT_I4`|**長\***|  
-|`VT_R4`|**浮點數\***|  
+|`VT_I2`|**short\***|  
+|`VT_I4`|**long\***|  
+|`VT_R4`|**float\***|  
 |`VT_R8`|**double\***|  
 |`VT_CY`|**CY\***|  
 |**VT_COLOR**|**OLE_COLOR\***|  
@@ -1429,7 +1429,7 @@ BOOL GetAmbientProperty(
   
  請注意，函式已經提供的共用環境的屬性，例如[AmbientBackColor](#ambientbackcolor)和[AmbientFont](#ambientfont)。  
   
-##  <a name="getappearance"></a>COleControl::GetAppearance  
+##  <a name="getappearance"></a>  COleControl::GetAppearance  
  實作控制項的內建外觀屬性的 Get 函式。  
   
 ```  
@@ -1439,7 +1439,7 @@ short GetAppearance ();
 ### <a name="return-value"></a>傳回值  
  傳回值指定為目前的外觀設定**簡短**( `VT_I2`) 如果成功，則值。 如果控制項的外觀，而且一般 1 3D 控制項的外觀時，這個值會是零。  
   
-##  <a name="getbackcolor"></a>COleControl::GetBackColor  
+##  <a name="getbackcolor"></a>  COleControl::GetBackColor  
  實作控制項的內建的背景色彩屬性的 Get 函式。  
   
 ```  
@@ -1449,7 +1449,7 @@ OLE_COLOR GetBackColor();
 ### <a name="return-value"></a>傳回值  
  傳回值，指定與目前的背景色彩**OLE_COLOR**如果成功，則值。 這個值可以轉譯成**COLORREF**值呼叫`TranslateColor`。  
   
-##  <a name="getborderstyle"></a>COleControl::GetBorderStyle  
+##  <a name="getborderstyle"></a>  COleControl::GetBorderStyle  
  實作控制項的內建的框線樣式屬性的 Get 函式。  
   
 ```  
@@ -1459,7 +1459,7 @@ short GetBorderStyle();
 ### <a name="return-value"></a>傳回值  
  如果控制項的標準框線;，1如果控制項的框線是 0。  
   
-##  <a name="getcapture"></a>COleControl::GetCapture  
+##  <a name="getcapture"></a>  COleControl::GetCapture  
  決定是否`COleControl`物件具有滑鼠捕捉。  
   
 ```  
@@ -1474,7 +1474,7 @@ CWnd* GetCapture();
 ### <a name="remarks"></a>備註  
  已啟動的無視窗控制項接收滑鼠捕捉時[SetCapture](#setcapture)呼叫。  
   
-##  <a name="getclassid"></a>COleControl::GetClassID  
+##  <a name="getclassid"></a>  COleControl::GetClassID  
  由架構呼叫以擷取 OLE 類別 ID 的控制項。  
   
 ```  
@@ -1482,7 +1482,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- *createtable*  
+ *pclsid*  
  指標位置的類別識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1491,7 +1491,7 @@ virtual HRESULT GetClassID(LPCLSID pclsid) = 0;
 ### <a name="remarks"></a>備註  
  通常由實作[IMPLEMENT_OLECREATE_EX](class-factories-and-licensing.md#implement_olecreate_ex)。  
   
-##  <a name="getclientoffset"></a>COleControl::GetClientOffset  
+##  <a name="getclientoffset"></a>  COleControl::GetClientOffset  
  擷取控制項的矩形區域的左上的角和其工作區的左上的角的差異。  
   
 ```  
@@ -1508,7 +1508,7 @@ virtual void GetClientOffset(long* pdxOffset, long* pdyOffset) const;
 ### <a name="remarks"></a>備註  
  OLE 控制項有其容器中的矩形區域。 控制項的用戶端區域是排除框線和捲軸的控制項區域。 所擷取的位移`GetClientOffset`是控制項的矩形區域的左上的角和其工作區的左上的角的差異。 如果您的控制項具有非工作項目以外的標準框線和捲軸，覆寫此成員函式，以指定的位移。  
   
-##  <a name="getclientrect"></a>COleControl::GetClientRect  
+##  <a name="getclientrect"></a>  COleControl::GetClientRect  
  擷取控制項的工作區的大小。  
   
 ```  
@@ -1519,7 +1519,7 @@ virtual void GetClientRect(LPRECT lpRect) const;
  `lpRect`  
  指標`RECT`包含無視窗控制項的用戶端區域的維度結構，也就是控制項的大小減去視窗框線、 框架、 捲軸等。 `lpRect`參數表示控制項的用戶端矩形，不是它的位置的大小。  
   
-##  <a name="getclientsite"></a>COleControl::GetClientSite  
+##  <a name="getclientsite"></a>  COleControl::GetClientSite  
  查詢的物件，其目前的用戶端站台容器中的指標。  
   
 ```  
@@ -1532,7 +1532,7 @@ LPOLECLIENTSITE GetClientSite();
 ### <a name="remarks"></a>備註  
  傳回的指標指向的執行個體`IOleClientSite`。 `IOleClientSite`容器所實作的介面是物件的 檢視其內容的： 它所錨定在文件中取得其存放裝置、 使用者介面及其他資源。  
   
-##  <a name="getcontrolflags"></a>Clippaintdc  
+##  <a name="getcontrolflags"></a>  COleControl::GetControlFlags  
  擷取控制旗標設定。  
   
 ```  
@@ -1576,7 +1576,7 @@ enum ControlFlags {
   
  如需有關`GetControlFlags`和其他最佳化的 OLE 控制項，請參閱[ActiveX 控制項： 最佳化](../../mfc/mfc-activex-controls-optimization.md)。  
   
-##  <a name="getcontrolsize"></a>COleControl::GetControlSize  
+##  <a name="getcontrolsize"></a>  COleControl::GetControlSize  
  擷取 OLE 控制項視窗的大小。  
   
 ```  
@@ -1595,7 +1595,7 @@ void GetControlSize(
 ### <a name="remarks"></a>備註  
  請注意，所有用於控制 windows 座標是相對於控制項的左上角。  
   
-##  <a name="getdc"></a>COleControl::GetDC  
+##  <a name="getdc"></a>  COleControl::GetDC  
  從其容器提供無視窗物件取得螢幕 （或相容） 裝置內容。  
   
 ```  
@@ -1621,9 +1621,9 @@ CDC* GetDC(
  容器的顯示裝置內容的指標`CWnd`用戶端區域如果成功，否則傳回值就會是**NULL**。 顯示裝置內容可以用於後續的 GDI 函式，來繪製容器的視窗的工作區中。  
   
 ### <a name="remarks"></a>備註  
- [ReleaseDC](#releasedc)成員函式必須呼叫以繪製之後釋出內容。 當呼叫`GetDC`，物件會傳遞他們想要在自己的用戶端座標中繪製的矩形。 `GetDC`會轉譯這些容器工作區的座標。 物件不應該要求所要繪製矩形大於它自己的用戶端區域矩形，其大小可以擷取與[GetClientRect](#getclientrect)。 這可防止不小心繪圖中它們都不應該是物件。  
+ [ReleaseDC](#releasedc)成員函式必須呼叫以繪製之後釋出內容。 當呼叫`GetDC`，物件會傳遞他們想要在自己的用戶端座標中繪製的矩形。 `GetDC` 會轉譯這些容器工作區的座標。 物件不應該要求所要繪製矩形大於它自己的用戶端區域矩形，其大小可以擷取與[GetClientRect](#getclientrect)。 這可防止不小心繪圖中它們都不應該是物件。  
   
-##  <a name="getenabled"></a>COleControl::GetEnabled  
+##  <a name="getenabled"></a>  COleControl::GetEnabled  
  實作控制項的內建 Enabled 屬性的 Get 函式。  
   
 ```  
@@ -1633,7 +1633,7 @@ BOOL GetEnabled();
 ### <a name="return-value"></a>傳回值  
  如果控制項已啟用，則為非零否則便是 0。  
   
-##  <a name="getextendedcontrol"></a>COleControl::GetExtendedControl  
+##  <a name="getextendedcontrol"></a>  COleControl::GetExtendedControl  
  取得物件代表具有一組延伸的內容控制項的容器所維護的指標。  
   
 ```  
@@ -1648,7 +1648,7 @@ LPDISPATCH GetExtendedControl();
 ### <a name="remarks"></a>備註  
  呼叫此函式的函式會負責釋放指標時完成的物件。 請注意，容器不需要支援此物件。  
   
-##  <a name="getfocus"></a>COleControl::GetFocus  
+##  <a name="getfocus"></a>  COleControl::GetFocus  
  決定是否`COleControl`物件具有焦點。  
   
 ```  
@@ -1663,7 +1663,7 @@ CWnd* GetFocus();
 ### <a name="remarks"></a>備註  
  已啟動的無視窗控制項取得焦點時[SetFocus](#setfocus)呼叫。  
   
-##  <a name="getfont"></a>COleControl::GetFont  
+##  <a name="getfont"></a>  COleControl::GetFont  
  實作內建字型屬性的 Get 函式。  
   
 ```  
@@ -1676,7 +1676,7 @@ LPFONTDISP GetFont();
 ### <a name="remarks"></a>備註  
  請注意，呼叫端必須釋放完成時的物件。 在控制項實作，使用`InternalGetFont`存取控制項的內建字型物件。 如需有關如何使用您的控制項字型的詳細資訊，請參閱文章[ActiveX 控制項： 在 ActiveX 控制項中使用的字型](../../mfc/mfc-activex-controls-using-fonts.md)。  
   
-##  <a name="getfonttextmetrics"></a>COleControl::GetFontTextMetrics  
+##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics  
  任何量值的文字度量`CFontHolder`控制項所擁有的物件。  
   
 ```  
@@ -1693,11 +1693,11 @@ void GetFontTextMetrics(
  若要參考[CFontHolder](../../mfc/reference/cfontholder-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
- 可以與選取這種字型[COleControl::SelectFontObject](#selectfontobject)函式。 `GetFontTextMetrics`將初始化`TEXTMETRIC`結構所指`lptm`有效的度量資訊`fontHolder`的字型，如果成功，或如果不成功，以零填入結構。 您應該使用此函式，而不是[GetTextMetrics](http://msdn.microsoft.com/library/windows/desktop/dd144941)何時繪製控制項的控制項，例如任何內嵌 OLE 物件，可能是因為需要本身呈現在中繼檔。  
+ 可以與選取這種字型[COleControl::SelectFontObject](#selectfontobject)函式。 `GetFontTextMetrics` 將初始化`TEXTMETRIC`結構所指`lptm`有效的度量資訊`fontHolder`的字型，如果成功，或如果不成功，以零填入結構。 您應該使用此函式，而不是[GetTextMetrics](http://msdn.microsoft.com/library/windows/desktop/dd144941)何時繪製控制項的控制項，例如任何內嵌 OLE 物件，可能是因為需要本身呈現在中繼檔。  
   
  `TEXTMETRIC`結構的預設字型為重新整理時[SelectFontObject](#selectfontobject)呼叫函式。 您應該呼叫`GetFontTextMetrics`只有選取內建字型屬性，以確保它所提供的資訊有效之後。  
   
-##  <a name="getforecolor"></a>COleControl::GetForeColor  
+##  <a name="getforecolor"></a>  COleControl::GetForeColor  
  實作內建的前景色彩屬性的 Get 函式。  
   
 ```  
@@ -1707,7 +1707,7 @@ OLE_COLOR GetForeColor();
 ### <a name="return-value"></a>傳回值  
  傳回值，指定與目前的前景色彩**OLE_COLOR**如果成功，則值。 這個值可以轉譯成[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值呼叫`TranslateColor`。  
   
-##  <a name="gethwnd"></a>COleControl::GetHwnd  
+##  <a name="gethwnd"></a>  COleControl::GetHwnd  
  實作內建的 hWnd 屬性的 Get 函式。  
   
 ```  
@@ -1717,7 +1717,7 @@ OLE_HANDLE GetHwnd();
 ### <a name="return-value"></a>傳回值  
  OLE 控制項的視窗控制代碼，如果有的話。否則**NULL**。  
   
-##  <a name="getmessagestring"></a>COleControl::GetMessageString  
+##  <a name="getmessagestring"></a>  COleControl::GetMessageString  
  由架構呼叫以取得描述所識別的功能表項目的用途的簡短字串`nID`。  
   
 ```  
@@ -1736,7 +1736,7 @@ virtual void GetMessageString(
 ### <a name="remarks"></a>備註  
  這可用來取得功能表項目反白顯示的狀態列中顯示的訊息。 預設實作會嘗試載入所識別的字串資源`nID`。  
   
-##  <a name="getnotsupported"></a>Colecontrol:: Getnotsupported  
+##  <a name="getnotsupported"></a>  COleControl::GetNotSupported  
  控制項的屬性值，使用者無法存取。  
   
 ```  
@@ -1746,7 +1746,7 @@ void GetNotSupported();
 ### <a name="remarks"></a>備註  
  呼叫此函式取代任何屬性的 Get 函式不支援擷取控制項的使用者屬性的位置。 一個範例是唯寫屬性。  
   
-##  <a name="getreadystate"></a>COleControl::GetReadyState  
+##  <a name="getreadystate"></a>  COleControl::GetReadyState  
  傳回控制項的整備狀態。  
   
 ```  
@@ -1774,7 +1774,7 @@ long GetReadyState();
 ### <a name="remarks"></a>備註  
  大多數的簡單控制項永遠都不需要區分**LOADED**和`INTERACTIVE`。 不過，支援的資料路徑屬性的控制項可能無法將會互動，直到至少部分的資料以非同步方式接收。 控制項應該嘗試盡成為互動式。  
   
-##  <a name="getrectincontainer"></a>COleControl::GetRectInContainer  
+##  <a name="getrectincontainer"></a>  COleControl::GetRectInContainer  
  取得相對於容器，以裝置的單位表示控制項的矩形座標。  
   
 ```  
@@ -1791,7 +1791,7 @@ BOOL GetRectInContainer(LPRECT lpRect);
 ### <a name="remarks"></a>備註  
  矩形才有效，如果控制項是就地啟用作用中。  
   
-##  <a name="getstocktextmetrics"></a>COleControl::GetStockTextMetrics  
+##  <a name="getstocktextmetrics"></a>  COleControl::GetStockTextMetrics  
  控制項的內建字型屬性，可以使用選取的文字度量會測量[SelectStockFont](#selectstockfont)函式。  
   
 ```  
@@ -1807,7 +1807,7 @@ void GetStockTextMetrics(LPTEXTMETRIC lptm);
   
  `TEXTMETRIC`結構的預設字型為重新整理時`SelectStockFont`呼叫函式。 只有選取內建的字型，才能確保它所提供的資訊有效之後，您應該呼叫此函式。  
   
-##  <a name="gettext"></a>COleControl::GetText  
+##  <a name="gettext"></a>  COleControl::GetText  
  實作內建的 Text 或 Caption 屬性的 Get 函式。  
   
 ```  
@@ -1823,7 +1823,7 @@ BSTR GetText();
 ### <a name="remarks"></a>備註  
  請注意，呼叫此函式的呼叫端必須`SysFreeString`字串傳回以免費資源。 在控制項實作，使用`InternalGetText`存取控制項的內建的 Text 或 Caption 屬性。  
   
-##  <a name="getwindowlessdroptarget"></a>Colecontrol:: Getwindowlessdroptarget  
+##  <a name="getwindowlessdroptarget"></a>  COleControl::GetWindowlessDropTarget  
  覆寫`GetWindowlessDropTarget`當您想將無視窗控制項作為目標的 OLE 拖放作業。  
   
 ```  
@@ -1838,7 +1838,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
   
  [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]  
   
-##  <a name="initializeiids"></a>COleControl::InitializeIIDs  
+##  <a name="initializeiids"></a>  COleControl::InitializeIIDs  
  通知與控制項將使用的 Iid 的基底類別。  
   
 ```  
@@ -1857,7 +1857,7 @@ void InitializeIIDs(
 ### <a name="remarks"></a>備註  
  控制項的建構函式以通知的介面識別碼將會使用您的控制項的基底類別中呼叫此函式。  
   
-##  <a name="internalgetfont"></a>COleControl::InternalGetFont  
+##  <a name="internalgetfont"></a>  COleControl::InternalGetFont  
  存取控制項的內建字型屬性  
   
 ```  
@@ -1867,7 +1867,7 @@ CFontHolder& InternalGetFont();
 ### <a name="return-value"></a>傳回值  
  若要參考[CFontHolder](../../mfc/reference/cfontholder-class.md)物件，其中包含內建字型物件。  
   
-##  <a name="internalgettext"></a>COleControl::InternalGetText  
+##  <a name="internalgettext"></a>  COleControl::InternalGetText  
  存取控制項的內建的 Text 或 Caption 屬性。  
   
 ```  
@@ -1877,7 +1877,7 @@ const CString& InternalGetText();
 ### <a name="return-value"></a>傳回值  
  控制項的文字字串的參考。  
   
-##  <a name="internalsetreadystate"></a>Colecontrol:: Internalsetreadystate  
+##  <a name="internalsetreadystate"></a>  COleControl::InternalSetReadyState  
  設定控制項的整備狀態。  
   
 ```  
@@ -1906,7 +1906,7 @@ void InternalSetReadyState(long lNewReadyState);
 ### <a name="remarks"></a>備註  
  大多數的簡單控制項永遠都不需要區分**LOADED**和`INTERACTIVE`。 不過，支援的資料路徑屬性的控制項可能無法將會互動，直到至少部分的資料以非同步方式接收。 控制項應該嘗試盡成為互動式。  
   
-##  <a name="invalidatecontrol"></a>COleControl::InvalidateControl  
+##  <a name="invalidatecontrol"></a>  COleControl::InvalidateControl  
  強制控制項將重繪其本身。  
   
 ```  
@@ -1925,7 +1925,7 @@ void InvalidateControl(
 ### <a name="remarks"></a>備註  
  如果`lpRect`具有**NULL**值，將會重新繪製整個控制項。 如果`lpRect`不**NULL**，這表示控制項的矩形失效的一部分。 控制項沒有視窗中，或不在目前作用中，矩形會被忽略，而且呼叫用戶端站台的[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)成員函式。 使用此函式，而不是`CWnd::InvalidateRect`或`InvalidateRect`。  
   
-##  <a name="invalidatergn"></a>COleControl::InvalidateRgn  
+##  <a name="invalidatergn"></a>  COleControl::InvalidateRgn  
  使給定區域內的容器視窗的工作區。  
   
 ```  
@@ -1944,7 +1944,7 @@ void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
   
  如果`bErase`是**TRUE**更新區域的任何部分，在整個區域中，不只是在特定的組件，背景會被清除。  
   
-##  <a name="isconvertingvbx"></a>COleControl::IsConvertingVBX  
+##  <a name="isconvertingvbx"></a>  COleControl::IsConvertingVBX  
  可讓 OLE 控制項的特製化的載入。  
   
 ```  
@@ -1967,7 +1967,7 @@ BOOL IsConvertingVBX();
   
  在控制項的`DoPropExchange`函式，您可以檢查這個條件，並為 true，如果執行這項轉換 （例如先前範例中） 的特定程式碼載入。 如果控制項不會進行轉換，您可以執行一般的載入程式碼。 這項功能僅適用於 VBX 對應項目要轉換的控制項。  
   
-##  <a name="isinvokeallowed"></a>COleControl::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>  COleControl::IsInvokeAllowed  
  可讓 automation 方法引動過程。  
   
 ```  
@@ -1978,9 +1978,9 @@ BOOL IsInvokeAllowed(DISPID dispid);
  為非零，如果已初始化控制項。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 架構的實作**idispatch:: Invoke**呼叫**IsInvokeAllowed**判斷指定的函式 (由`dispid`) 可能會叫用。 OLE 控制項的預設行為是讓自動化方法，以初始化的控制項; 時，才會叫用不過， **IsInvokeAllowed**是虛擬函式，而且可能會覆寫必要 （例如，當為 automation 伺服器使用的控制項）。 如需詳細資訊，請參閱知識庫文章 Q166472，"如何： 使用 OLE 控制項為 Automation 伺服器。 」 知識庫文件位於[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 架構的實作**idispatch:: Invoke**呼叫**IsInvokeAllowed**判斷指定的函式 (由`dispid`) 可能會叫用。 OLE 控制項的預設行為是讓自動化方法，以初始化的控制項; 時，才會叫用不過， **IsInvokeAllowed**是虛擬函式，而且可能會覆寫必要 （例如，當為 automation 伺服器使用的控制項）。 如需詳細資訊，請參閱知識庫文章 Q166472，"如何： 使用 OLE 控制項為 Automation 伺服器。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="ismodified"></a>COleControl::IsModified  
+##  <a name="ismodified"></a>  COleControl::IsModified  
  決定是否已修改控制項的狀態。  
   
 ```  
@@ -1993,7 +1993,7 @@ BOOL IsModified();
 ### <a name="remarks"></a>備註  
  屬性值變更時，會修改控制項的狀態。  
   
-##  <a name="isoptimizeddraw"></a>Colecontrol:: Isoptimizeddraw  
+##  <a name="isoptimizeddraw"></a>  COleControl::IsOptimizedDraw  
  判斷容器是否支援目前的繪圖作業最佳化的繪圖。  
   
 ```  
@@ -2006,7 +2006,7 @@ BOOL IsOptimizedDraw();
 ### <a name="remarks"></a>備註  
  如果支援最佳化的繪圖，然後控制項需要選取舊的畫筆、 筆刷、 字型 （等） 的物件放入裝置內容完成繪圖。  
   
-##  <a name="issubclassedcontrol"></a>COleControl::IsSubclassedControl  
+##  <a name="issubclassedcontrol"></a>  COleControl::IsSubclassedControl  
  由架構呼叫以判斷是否控制項子類別的 Windows 控制。  
   
 ```  
@@ -2019,7 +2019,7 @@ virtual BOOL IsSubclassedControl();
 ### <a name="remarks"></a>備註  
  您必須覆寫這個函式，並傳回**TRUE**如果您的 OLE 控制項的子類別的 Windows 控制項。  
   
-##  <a name="load"></a>COleControl::Load  
+##  <a name="load"></a>  COleControl::Load  
  重設所有先前的資料，以非同步方式載入，並開始新載入控制項非同步屬性。  
   
 ```  
@@ -2030,10 +2030,10 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
  *strNewPath*  
  含有參考非同步控制項屬性的絕對位置路徑的字串指標。  
   
- *p o p*  
+ *prop*  
  A [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)實作非同步控制項屬性的物件。  
   
-##  <a name="lockinplaceactive"></a>COleControl::LockInPlaceActive  
+##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive  
  容器可防止停用您的控制項。  
   
 ```  
@@ -2050,7 +2050,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 ### <a name="remarks"></a>備註  
  請注意，每個控制項的鎖定必須搭配控制項完成後解除鎖定。 您應該只鎖定您的控制項短，例如時引發事件。  
   
-##  <a name="onambientpropertychange"></a>COleControl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>  COleControl::OnAmbientPropertyChange  
  當容器的環境屬性值變更時由架構呼叫。  
   
 ```  
@@ -2061,7 +2061,7 @@ virtual void OnAmbientPropertyChange(DISPID dispid);
  *dispID*  
  變更，環境屬性的分派識別碼或**DISPID_UNKNOWN**如果多個屬性已變更。  
   
-##  <a name="onappearancechanged"></a>COleControl::OnAppearanceChanged  
+##  <a name="onappearancechanged"></a>  COleControl::OnAppearanceChanged  
  內建的外觀屬性值變更時由架構呼叫。  
   
 ```  
@@ -2071,7 +2071,7 @@ virtual void OnAppearanceChanged ();
 ### <a name="remarks"></a>備註  
  如果您想要在這個屬性變更之後的通知，請覆寫這個函式。 預設實作會呼叫`InvalidateControl`。  
   
-##  <a name="onbackcolorchanged"></a>COleControl::OnBackColorChanged  
+##  <a name="onbackcolorchanged"></a>  COleControl::OnBackColorChanged  
  內建的 BackColor 屬性值變更時由架構呼叫。  
   
 ```  
@@ -2081,7 +2081,7 @@ virtual void OnBackColorChanged();
 ### <a name="remarks"></a>備註  
  如果您想要在這個屬性變更之後的通知，請覆寫這個函式。 預設實作會呼叫`InvalidateControl`。  
   
-##  <a name="onborderstylechanged"></a>COleControl::OnBorderStyleChanged  
+##  <a name="onborderstylechanged"></a>  COleControl::OnBorderStyleChanged  
  內建 BorderStyle 屬性值變更時由架構呼叫。  
   
 ```  
@@ -2093,7 +2093,7 @@ virtual void OnBorderStyleChanged();
   
  如果您想要在這個屬性變更之後的通知，請覆寫這個函式。  
   
-##  <a name="onclick"></a>COleControl::OnClick  
+##  <a name="onclick"></a>  COleControl::OnClick  
  在按一下滑鼠按鈕，或已叫用 DoClick 內建方法時，由架構呼叫。  
   
 ```  
@@ -2115,7 +2115,7 @@ virtual void OnClick(USHORT iButton);
   
  覆寫來修改或擴充的預設處理此成員函式。  
   
-##  <a name="onclose"></a>COleControl::OnClose  
+##  <a name="onclose"></a>  COleControl::OnClose  
  容器控制項的呼叫時由架構呼叫**iolecontrol:: Close**函式。  
   
 ```  
@@ -2135,7 +2135,7 @@ virtual void OnClose(DWORD dwSaveOption);
 ### <a name="remarks"></a>備註  
  根據預設，`OnClose`儲存控制項物件，如果已修改和`dwSaveOption`是`OLECLOSE_SAVEIFDIRTY`或`OLECLOSE_PROMPTSAVE`。  
   
-##  <a name="ondoverb"></a>COleControl::OnDoVerb  
+##  <a name="ondoverb"></a>  COleControl::OnDoVerb  
  當容器呼叫時由架構呼叫**IOleObject::DoVerb**成員函式。  
   
 ```  
@@ -2167,7 +2167,7 @@ virtual BOOL OnDoVerb(
   
  若要變更動詞命令的預設處理此函式會覆寫。  
   
-##  <a name="ondraw"></a>COleControl::OnDraw  
+##  <a name="ondraw"></a>  COleControl::OnDraw  
  由架構呼叫以繪製指定的週框矩形，使用指定的裝置內容中的 OLE 控制項。  
   
 ```  
@@ -2188,9 +2188,9 @@ virtual void OnDraw(
  無效的控制項矩形區域。  
   
 ### <a name="remarks"></a>備註  
- `OnDraw`通常會呼叫傳遞做為螢幕裝置內容的螢幕上的`pDC`。 `rcBounds`參數會識別 （相對於其目前的對應模式） 的目標裝置內容中的矩形。 `rcInvalid`參數是無效的實際矩形。 在某些情況下，這會是較小的區域，比`rcBounds`。  
+ `OnDraw` 通常會呼叫傳遞做為螢幕裝置內容的螢幕上的`pDC`。 `rcBounds`參數會識別 （相對於其目前的對應模式） 的目標裝置內容中的矩形。 `rcInvalid`參數是無效的實際矩形。 在某些情況下，這會是較小的區域，比`rcBounds`。  
   
-##  <a name="ondrawmetafile"></a>Colecontrol:: Ondrawmetafile  
+##  <a name="ondrawmetafile"></a>  COleControl::OnDrawMetafile  
  由架構呼叫以繪製指定的週框矩形，使用指定的中繼檔裝置內容中的 OLE 控制項。  
   
 ```  
@@ -2209,7 +2209,7 @@ virtual void OnDrawMetafile(
 ### <a name="remarks"></a>備註  
  預設實作會呼叫[OnDraw](#ondraw)函式。  
   
-##  <a name="onedit"></a>COleControl::OnEdit  
+##  <a name="onedit"></a>  COleControl::OnEdit  
  使控制項由 UI 啟動。  
   
 ```  
@@ -2239,7 +2239,7 @@ virtual BOOL OnEdit(
   
  [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]  
   
-##  <a name="onenabledchanged"></a>COleControl::OnEnabledChanged  
+##  <a name="onenabledchanged"></a>  COleControl::OnEnabledChanged  
  當股票 Enabled 屬性值變更時由架構呼叫。  
   
 ```  
@@ -2249,7 +2249,7 @@ virtual void OnEnabledChanged();
 ### <a name="remarks"></a>備註  
  如果您想要在這個屬性變更之後的通知，請覆寫這個函式。 預設實作會呼叫[InvalidateControl](#invalidatecontrol)。  
   
-##  <a name="onenumverbs"></a>COleControl::OnEnumVerbs  
+##  <a name="onenumverbs"></a>  COleControl::OnEnumVerbs  
  當容器呼叫時由架構呼叫**IOleObject::EnumVerbs**成員函式。  
   
 ```  
@@ -2268,7 +2268,7 @@ virtual BOOL OnEnumVerbs(LPENUMOLEVERB* ppenumOleVerb);
   
  覆寫此函式可變更列舉動詞命令的預設方式。  
   
-##  <a name="oneventadvise"></a>COleControl::OnEventAdvise  
+##  <a name="oneventadvise"></a>  COleControl::OnEventAdvise  
  連接或中斷連線的 OLE 控制項的事件處理常式時由架構呼叫。  
   
 ```  
@@ -2279,7 +2279,7 @@ virtual void OnEventAdvise(BOOL bAdvise);
  `bAdvise`  
  **TRUE**表示事件處理常式已連接到控制項。 **FALSE**表示事件處理常式具有已中斷連接控制項。  
   
-##  <a name="onfontchanged"></a>COleControl::OnFontChanged  
+##  <a name="onfontchanged"></a>  COleControl::OnFontChanged  
  內建字型屬性值變更時由架構呼叫。  
   
 ```  
@@ -2294,7 +2294,7 @@ virtual void OnFontChanged();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAxCtl#6](../../mfc/reference/codesnippet/cpp/colecontrol-class_7.cpp)]  
   
-##  <a name="onforecolorchanged"></a>COleControl::OnForeColorChanged  
+##  <a name="onforecolorchanged"></a>  COleControl::OnForeColorChanged  
  內建的前景色彩屬性值變更時由架構呼叫。  
   
 ```  
@@ -2306,7 +2306,7 @@ virtual void OnForeColorChanged();
   
  如果您想要在這個屬性變更之後的通知，請覆寫這個函式。  
   
-##  <a name="onfreezeevents"></a>COleControl::OnFreezeEvents  
+##  <a name="onfreezeevents"></a>  COleControl::OnFreezeEvents  
  容器呼叫之後，由架構呼叫**iolecontrol:: Freezeevents**。  
   
 ```  
@@ -2322,7 +2322,7 @@ virtual void OnFreezeEvents(BOOL bFreeze);
   
  如果您要其他的行為，當您凍結或解除凍結事件處理時，覆寫這個函式。  
   
-##  <a name="ongetcolorset"></a>COleControl::OnGetColorSet  
+##  <a name="ongetcolorset"></a>  COleControl::OnGetColorSet  
  當容器呼叫時由架構呼叫**IViewObject::GetColorSet**成員函式。  
   
 ```  
@@ -2350,7 +2350,7 @@ virtual BOOL OnGetColorSet(
   
  覆寫這個函式來執行這項要求的任何特殊處理。  
   
-##  <a name="ongetcontrolinfo"></a>COleControl::OnGetControlInfo  
+##  <a name="ongetcontrolinfo"></a>  COleControl::OnGetControlInfo  
  當控制項的容器要求控制項的相關資訊，由架構呼叫。  
   
 ```  
@@ -2366,7 +2366,7 @@ virtual void OnGetControlInfo(LPCONTROLINFO pControlInfo);
   
  如果控制項需要處理助憶鍵，請覆寫這個函式。  
   
-##  <a name="ongetdisplaystring"></a>COleControl::OnGetDisplayString  
+##  <a name="ongetdisplaystring"></a>  COleControl::OnGetDisplayString  
  由架構呼叫以取得字串，代表所識別之屬性的目前值`dispid`。  
   
 ```  
@@ -2388,7 +2388,7 @@ virtual BOOL OnGetDisplayString(
 ### <a name="remarks"></a>備註  
  如果您的控制項具有的屬性，其值無法直接轉換為字串，而且您想要在容器提供屬性瀏覽器中顯示屬性的值會覆寫這個函式。  
   
-##  <a name="ongetinplacemenu"></a>COleControl::OnGetInPlaceMenu  
+##  <a name="ongetinplacemenu"></a>  COleControl::OnGetInPlaceMenu  
  當控制項的 UI 以取得合併到現有的容器的功能表的功能表啟動時由架構呼叫。  
   
 ```  
@@ -2401,7 +2401,7 @@ virtual HMENU OnGetInPlaceMenu();
 ### <a name="remarks"></a>備註  
  如需有關合併 OLE 資源的詳細資訊，請參閱文章[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
-##  <a name="ongetnaturalextent"></a>COleControl::OnGetNaturalExtent  
+##  <a name="ongetnaturalextent"></a>  COleControl::OnGetNaturalExtent  
  為了回應容器的架構呼叫**IViewObjectEx::GetNaturalExtent**要求。  
   
 ```  
@@ -2457,7 +2457,7 @@ virtual BOOL OnGetNaturalExtent(
 ### <a name="remarks"></a>備註  
  覆寫此函式可傳回建議的大小和範圍模式中最接近物件的顯示大小**DVEXTENTINFO**結構。 預設實作會傳回**FALSE** ，並讓沒有進行調整的大小。  
   
-##  <a name="ongetpredefinedstrings"></a>COleControl::OnGetPredefinedStrings  
+##  <a name="ongetpredefinedstrings"></a>  COleControl::OnGetPredefinedStrings  
  由架構呼叫以取得一組預先定義的字串，代表屬性的可能值。  
   
 ```  
@@ -2483,7 +2483,7 @@ virtual BOOL OnGetPredefinedStrings(
 ### <a name="remarks"></a>備註  
  如果您的控制項具有一組可以表示為字串的可能值的屬性，請覆寫這個函式。 每個項目加入至`pStringArray`，您應該加入至對應的"cookie"項目*pCookieArray。* 這些"cookie"值稍後將傳遞至架構`COleControl::OnGetPredefinedValue`函式。  
   
-##  <a name="ongetpredefinedvalue"></a>COleControl::OnGetPredefinedValue  
+##  <a name="ongetpredefinedvalue"></a>  COleControl::OnGetPredefinedValue  
  由架構呼叫以取得對應至其中一個預先定義的覆寫先前傳回的字串值`COleControl::OnGetPredefinedStrings`。  
   
 ```  
@@ -2506,7 +2506,7 @@ virtual BOOL OnGetPredefinedValue(
 ### <a name="return-value"></a>傳回值  
  如果有傳回值，則為非零`lpvarOut`; 否則為 0。  
   
-##  <a name="ongetviewextent"></a>COleControl::OnGetViewExtent  
+##  <a name="ongetviewextent"></a>  COleControl::OnGetViewExtent  
  為了回應容器的架構呼叫[IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032)要求。  
   
 ```  
@@ -2519,7 +2519,7 @@ virtual BOOL OnGetViewExtent(
   
 ### <a name="parameters"></a>參數  
  *dwDrawAspect*  
- `DWORD`描述哪些表單或外觀時，物件就是會顯示。 有效的值取自列舉[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)或**DVASPECT2**。  
+ `DWORD` 描述哪些表單或外觀時，物件就是會顯示。 有效的值取自列舉[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)或**DVASPECT2**。  
   
  *lindex*  
  物件，為感興趣的部分。 目前只有-1 是有效的。  
@@ -2536,7 +2536,7 @@ virtual BOOL OnGetViewExtent(
 ### <a name="remarks"></a>備註  
  如果您的控制項使用兩段式繪圖，且其不透明和透明組件具有不同維度，請覆寫這個函式。  
   
-##  <a name="ongetviewrect"></a>COleControl::OnGetViewRect  
+##  <a name="ongetviewrect"></a>  COleControl::OnGetViewRect  
  為了回應容器的架構呼叫**IViewObjectEx::GetRect**要求。  
   
 ```  
@@ -2545,9 +2545,9 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
   
 ### <a name="parameters"></a>參數  
  `dwAspect`  
- `DWORD`描述哪些表單或外觀時，物件就是會顯示。 有效的值取自列舉[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)或**DVASPECT2**:  
+ `DWORD` 描述哪些表單或外觀時，物件就是會顯示。 有效的值取自列舉[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318)或**DVASPECT2**:  
   
-- `DVASPECT_CONTENT`將整個物件的週框。 在物件的來源和大小等於傳回的程度的左上角**GetViewExtent***。*  
+- `DVASPECT_CONTENT` 將整個物件的週框。 在物件的來源和大小等於傳回的程度的左上角 **GetViewExtent * * *。*  
   
 - **DVASPECT_OPAQUE**與矩形的不透明區域的物件傳回的矩形。 其他失敗。  
   
@@ -2562,7 +2562,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 ### <a name="remarks"></a>備註  
  物件的大小由轉換`OnGetViewRect`到特定位置 （預設值是顯示畫面的左上的角） 開始的矩形。 如果您的控制項使用兩段式繪圖，且其不透明和透明組件具有不同維度，請覆寫這個函式。  
   
-##  <a name="ongetviewstatus"></a>COleControl::OnGetViewStatus  
+##  <a name="ongetviewstatus"></a>  COleControl::OnGetViewStatus  
  為了回應容器的架構呼叫**IViewObjectEx::GetViewStatus**要求。  
   
 ```  
@@ -2587,7 +2587,7 @@ virtual DWORD OnGetViewStatus();
 ### <a name="remarks"></a>備註  
  如果您的控制項使用兩段式繪圖，覆寫這個函式。 預設實作會傳回**VIEWSTATUS_OPAQUE**。  
   
-##  <a name="onhidetoolbars"></a>COleControl::OnHideToolBars  
+##  <a name="onhidetoolbars"></a>  COleControl::OnHideToolBars  
  當控制項的 UI 停用時由架構呼叫。  
   
 ```  
@@ -2597,7 +2597,7 @@ virtual void OnHideToolBars();
 ### <a name="remarks"></a>備註  
  實作應該隱藏所有顯示的工具列`OnShowToolbars`。  
   
-##  <a name="oninactivemousemove"></a>COleControl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>  COleControl::OnInactiveMouseMove  
  由下滑鼠指標在收到的非作用中物件的容器呼叫`WM_MOUSEMOVE`訊息。  
   
 ```  
@@ -2624,7 +2624,7 @@ virtual void OnInactiveMouseMove(
 ### <a name="remarks"></a>備註  
  請注意視窗工作區座標 （像素為單位） 用來傳遞滑鼠游標位置。 這樣做可能也會將物件的週框矩形傳遞相同的座標系統中。  
   
-##  <a name="oninactivesetcursor"></a>COleControl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>  COleControl::OnInactiveSetCursor  
  由下滑鼠指標在收到的非作用中物件的容器呼叫`WM_SETCURSOR`訊息。  
   
 ```  
@@ -2658,7 +2658,7 @@ virtual BOOL OnInactiveSetCursor(
 ### <a name="remarks"></a>備註  
  請注意視窗工作區座標 （像素為單位） 用來傳遞滑鼠游標位置。 這樣做可能也會將物件的週框矩形傳遞相同的座標系統中。  
   
-##  <a name="onkeydownevent"></a>COleControl::OnKeyDownEvent  
+##  <a name="onkeydownevent"></a>  COleControl::OnKeyDownEvent  
  已處理的內建 KeyDown 事件之後，由架構呼叫。  
   
 ```  
@@ -2683,7 +2683,7 @@ virtual void OnKeyDownEvent(
 ### <a name="remarks"></a>備註  
  如果控制項需要索引鍵資訊的存取權之後在引發事件, 會覆寫這個函式。  
   
-##  <a name="onkeypressevent"></a>COleControl::OnKeyPressEvent  
+##  <a name="onkeypressevent"></a>  COleControl::OnKeyPressEvent  
  由架構呼叫之後的存貨已經引發 KeyPress 事件。  
   
 ```  
@@ -2699,7 +2699,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
   
  如果您想要通知之後就會發生此事件，請覆寫這個函式。  
   
-##  <a name="onkeyupevent"></a>COleControl::OnKeyUpEvent  
+##  <a name="onkeyupevent"></a>  COleControl::OnKeyUpEvent  
  已處理的內建 KeyDown 事件之後，由架構呼叫。  
   
 ```  
@@ -2724,7 +2724,7 @@ virtual void OnKeyUpEvent(
 ### <a name="remarks"></a>備註  
  如果控制項需要索引鍵資訊的存取權之後在引發事件, 會覆寫這個函式。  
   
-##  <a name="onmappropertytopage"></a>COleControl::OnMapPropertyToPage  
+##  <a name="onmappropertytopage"></a>  COleControl::OnMapPropertyToPage  
  由架構呼叫以取得實作指定的屬性編輯的屬性頁類別識別碼。  
   
 ```  
@@ -2750,7 +2750,7 @@ virtual BOOL OnMapPropertyToPage(
 ### <a name="remarks"></a>備註  
  覆寫此函式可提供方法來叫用容器的屬性瀏覽器從您的控制項屬性頁。  
   
-##  <a name="onmnemonic"></a>COleControl::OnMnemonic  
+##  <a name="onmnemonic"></a>  COleControl::OnMnemonic  
  容器已偵測到的 OLE 控制項的助憶鍵已按下時由架構呼叫。  
   
 ```  
@@ -2761,7 +2761,7 @@ virtual void OnMnemonic(LPMSG pMsg);
  `pMsg`  
  助憶鍵 (Mnemonic) 按鍵所產生之 Windows 訊息的指標。  
   
-##  <a name="onproperties"></a>COleControl::OnProperties  
+##  <a name="onproperties"></a>  COleControl::OnProperties  
  已叫用容器的控制項屬性的動詞時由架構呼叫。  
   
 ```  
@@ -2789,7 +2789,7 @@ virtual BOOL OnProperties(
   
  您也可以使用此函式會造成您的控制項屬性頁的顯示。 呼叫以`OnProperties`函式，將控制項的父代中的控制代碼傳遞`hWndParent`參數。 在此情況下，值`lpMsg`和`lpRect`參數被忽略。  
   
-##  <a name="onqueryhitpoint"></a>COleControl::OnQueryHitPoint  
+##  <a name="onqueryhitpoint"></a>  COleControl::OnQueryHitPoint  
  為了回應容器的架構呼叫**IViewObjectEx::QueryHitPoint**要求。  
   
 ```  
@@ -2829,9 +2829,9 @@ virtual BOOL OnQueryHitPoint(
  為非零，如果成功傳回叫用的結果。否則便是 0。 叫用次數是與 OLE 控制項顯示區域重疊。  
   
 ### <a name="remarks"></a>備註  
- 查詢物件的顯示矩形是否重疊指定的點 （點擊點）。 `QueryHitPoint`您可以覆寫測試針對非矩形的物件。  
+ 查詢物件的顯示矩形是否重疊指定的點 （點擊點）。 `QueryHitPoint` 您可以覆寫測試針對非矩形的物件。  
   
-##  <a name="onqueryhitrect"></a>COleControl::OnQueryHitRect  
+##  <a name="onqueryhitrect"></a>  COleControl::OnQueryHitRect  
  為了回應容器的架構呼叫**IViewObjectEx::QueryHitRect**要求。  
   
 ```  
@@ -2867,9 +2867,9 @@ virtual BOOL OnQueryHitRect(
  為非零，如果成功傳回叫用的結果。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 查詢物件的顯示矩形是否重疊的任何時間點指定的矩形 （點擊矩形）。 `QueryHitRect`您可以覆寫測試針對非矩形的物件。  
+ 查詢物件的顯示矩形是否重疊的任何時間點指定的矩形 （點擊矩形）。 `QueryHitRect` 您可以覆寫測試針對非矩形的物件。  
   
-##  <a name="onrenderdata"></a>COleControl::OnRenderData  
+##  <a name="onrenderdata"></a>  COleControl::OnRenderData  
  由架構呼叫以擷取指定格式的資料。  
   
 ```  
@@ -2897,7 +2897,7 @@ virtual BOOL OnRenderData(
   
  如需詳細資訊，請參閱**FORMATETC**和**STGMEDIUM** Windows SDK 中的結構。  
   
-##  <a name="onrenderfiledata"></a>COleControl::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleControl::OnRenderFileData  
  由架構呼叫以擷取指定的格式中的資料儲存媒體為檔案時。  
   
 ```  
@@ -2923,7 +2923,7 @@ virtual BOOL OnRenderFileData(
   
  如需詳細資訊，請參閱**FORMATETC** Windows SDK 中的結構。  
   
-##  <a name="onrenderglobaldata"></a>COleControl::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleControl::OnRenderGlobalData  
  由架構呼叫以時指定的儲存體中是全域記憶體擷取資料，以指定的格式。  
   
 ```  
@@ -2951,7 +2951,7 @@ virtual BOOL OnRenderGlobalData(
   
  如需詳細資訊，請參閱**FORMATETC** Windows SDK 中的結構。  
   
-##  <a name="onresetstate"></a>COleControl::OnResetState  
+##  <a name="onresetstate"></a>  COleControl::OnResetState  
  當控制項的屬性應該設定為其預設值，由架構呼叫。  
   
 ```  
@@ -2963,7 +2963,7 @@ virtual void OnResetState();
   
  控制寫入器可以在此插入 OLE 控制項的初始化程式碼可覆寫。 此函式時，會呼叫[IPersistStream::Load](http://msdn.microsoft.com/library/windows/desktop/ms680568)或[ipersiststorage:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680557)失敗，或[IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234)或[IPersistStorage:: InitNew](http://msdn.microsoft.com/library/windows/desktop/ms687194)呼叫時，不含第一個呼叫**IPersistStream::Load**或**ipersiststorage:: Load**。  
   
-##  <a name="onsetclientsite"></a>Colecontrol:: Onsetclientsite  
+##  <a name="onsetclientsite"></a>  COleControl::OnSetClientSite  
  容器控制項的呼叫時由架構呼叫**IOleControl::SetClientSite**函式。  
   
 ```  
@@ -2975,7 +2975,7 @@ virtual void OnSetClientSite();
   
  覆寫這個函式來執行這項通知的任何特殊處理。 特別是，此函式的覆寫應呼叫基底類別。  
   
-##  <a name="onsetdata"></a>COleControl::OnSetData  
+##  <a name="onsetdata"></a>  COleControl::OnSetData  
  由架構呼叫以將控制項的資料取代為指定的資料。  
   
 ```  
@@ -3005,7 +3005,7 @@ virtual BOOL OnSetData(
   
  如需詳細資訊，請參閱**FORMATETC**和**STGMEDIUM** Windows SDK 中的結構。  
   
-##  <a name="onsetextent"></a>COleControl::OnSetExtent  
+##  <a name="onsetextent"></a>  COleControl::OnSetExtent  
  當控制項的寬度需要變更，由於呼叫時由架構呼叫[IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330)。  
   
 ```  
@@ -3024,7 +3024,7 @@ virtual BOOL OnSetExtent(LPSIZEL lpSizeL);
   
  覆寫此函式可變更您的控制項的預設調整大小。  
   
-##  <a name="onsetobjectrects"></a>COleControl::OnSetObjectRects  
+##  <a name="onsetobjectrects"></a>  COleControl::OnSetObjectRects  
  由架構呼叫以實作呼叫[IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767)。  
   
 ```  
@@ -3048,7 +3048,7 @@ virtual BOOL OnSetObjectRects(
   
  覆寫這個函式來變更此函式的預設行為。  
   
-##  <a name="onshowtoolbars"></a>COleControl::OnShowToolBars  
+##  <a name="onshowtoolbars"></a>  COleControl::OnShowToolBars  
  當控制項以 UI 啟動時由架構呼叫。  
   
 ```  
@@ -3058,7 +3058,7 @@ virtual void OnShowToolBars();
 ### <a name="remarks"></a>備註  
  預設實作不做任何動作。  
   
-##  <a name="ontextchanged"></a>COleControl::OnTextChanged  
+##  <a name="ontextchanged"></a>  COleControl::OnTextChanged  
  內建的標題或文字屬性值變更時由架構呼叫。  
   
 ```  
@@ -3070,7 +3070,7 @@ virtual void OnTextChanged();
   
  如果您想要在這個屬性變更之後的通知，請覆寫這個函式。  
   
-##  <a name="onwindowlessmessage"></a>COleControl::OnWindowlessMessage  
+##  <a name="onwindowlessmessage"></a>  COleControl::OnWindowlessMessage  
  為了回應容器的架構呼叫**IOleInPlaceObjectWindowless::OnWindowMessage**要求。  
   
 ```  
@@ -3098,11 +3098,11 @@ virtual BOOL OnWindowlessMessage(
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 處理無視窗控制項的視窗訊息。 `COleControl``OnWindowlessMessage`應該用於訊息滑鼠和鍵盤訊息以外的視窗訊息。 `COleControl`提供[SetCapture](#setcapture)和[SetFocus](#setfocus)特別為取得無視窗的 OLE 物件中的滑鼠擷取和鍵盤焦點。  
+ 處理無視窗控制項的視窗訊息。 `COleControl``OnWindowlessMessage`應該用於訊息滑鼠和鍵盤訊息以外的視窗訊息。 `COleControl` 提供[SetCapture](#setcapture)和[SetFocus](#setfocus)特別為取得無視窗的 OLE 物件中的滑鼠擷取和鍵盤焦點。  
   
- 由於無視窗物件沒有視窗，他們需要一個機制，讓容器分派訊息傳送到這些。 無視窗的 OLE 物件取得訊息其容器，從透過`OnWindowMessage`方法`IOleInPlaceObjectWindowless`介面 (副檔名為[IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646)無視窗的支援)。 `OnWindowMessage`不接受`HWND`參數。  
+ 由於無視窗物件沒有視窗，他們需要一個機制，讓容器分派訊息傳送到這些。 無視窗的 OLE 物件取得訊息其容器，從透過`OnWindowMessage`方法`IOleInPlaceObjectWindowless`介面 (副檔名為[IOleInPlaceObject](http://msdn.microsoft.com/library/windows/desktop/ms692646)無視窗的支援)。 `OnWindowMessage` 不接受`HWND`參數。  
   
-##  <a name="parenttoclient"></a>COleControl::ParentToClient  
+##  <a name="parenttoclient"></a>  COleControl::ParentToClient  
  將轉譯的座標`pPoint`為用戶端座標。  
   
 ```  
@@ -3176,7 +3176,7 @@ virtual UINT ParentToClient(
 ### <a name="remarks"></a>備註  
  在輸入`pPoint`是相對於來源的父代 （的容器左上角）。 在輸出`pPoint`是相對於來源的 OLE 控制項 （用戶端區域控制項的左上角） 工作區。  
   
-##  <a name="postmodaldialog"></a>COleControl::PostModalDialog  
+##  <a name="postmodaldialog"></a>  COleControl::PostModalDialog  
  告知容器已關閉強制回應對話方塊。  
   
 ```  
@@ -3190,7 +3190,7 @@ void PostModalDialog(HWND hWndParent = NULL);
 ### <a name="remarks"></a>備註  
  顯示任何強制回應對話方塊之後呼叫此函式。 您必須呼叫此函式，使容器可以啟用停用任何最上層視窗`PreModalDialog`。 此函式應該搭配呼叫`PreModalDialog`。  
   
-##  <a name="premodaldialog"></a>COleControl::PreModalDialog  
+##  <a name="premodaldialog"></a>  COleControl::PreModalDialog  
  通知即將顯示強制回應對話方塊中的容器。  
   
 ```  
@@ -3204,7 +3204,7 @@ void PreModalDialog(HWND hWndParent = NULL);
 ### <a name="remarks"></a>備註  
  顯示任何強制回應對話方塊之前呼叫此函式。 您必須呼叫此函式，因此容器可以停用所有最上層的視窗。 已顯示強制回應對話方塊後，然後您必須呼叫`PostModalDialog`。  
   
-##  <a name="recreatecontrolwindow"></a>COleControl::RecreateControlWindow  
+##  <a name="recreatecontrolwindow"></a>  COleControl::RecreateControlWindow  
  終結並重新建立控制項的視窗。  
   
 ```  
@@ -3214,7 +3214,7 @@ void RecreateControlWindow();
 ### <a name="remarks"></a>備註  
  這可能需要變更視窗的樣式位元。  
   
-##  <a name="refresh"></a>COleControl::Refresh  
+##  <a name="refresh"></a>  COleControl::Refresh  
  會強制重新繪製的 OLE 控制項。  
   
 ```  
@@ -3224,7 +3224,7 @@ void Refresh();
 ### <a name="remarks"></a>備註  
  此函式會受到`COleControl`基底類別做為內建方法，呼叫重新整理。 這可讓 OLE 控制項的使用者在特定時間重新繪製控制項。 如需有關這個方法的詳細資訊，請參閱文章[ActiveX 控制項： 方法](../../mfc/mfc-activex-controls-methods.md)。  
   
-##  <a name="releasecapture"></a>COleControl::ReleaseCapture  
+##  <a name="releasecapture"></a>  COleControl::ReleaseCapture  
  釋放滑鼠捕捉。  
   
 ```  
@@ -3237,7 +3237,7 @@ BOOL ReleaseCapture();
 ### <a name="remarks"></a>備註  
  如果控制項目前具有滑鼠擷取，則會釋放擷取。 否則，此函式沒有任何作用。  
   
-##  <a name="releasedc"></a>COleControl::ReleaseDC  
+##  <a name="releasedc"></a>  COleControl::ReleaseDC  
  釋放容器的無視窗控制項時，釋放由其他應用程式使用的裝置內容顯示裝置內容。  
   
 ```  
@@ -3254,7 +3254,7 @@ int ReleaseDC(CDC* pDC);
 ### <a name="remarks"></a>備註  
  應用程式必須呼叫`ReleaseDC`每次呼叫[GetDC](#getdc)。  
   
-##  <a name="reparentcontrolwindow"></a>COleControl::ReparentControlWindow  
+##  <a name="reparentcontrolwindow"></a>  COleControl::ReparentControlWindow  
  設定控制項的父代。  
   
 ```  
@@ -3273,7 +3273,7 @@ virtual void ReparentControlWindow(
 ### <a name="remarks"></a>備註  
  呼叫此函式可重設控制項視窗的父代。  
   
-##  <a name="resetstockprops"></a>COleControl::ResetStockProps  
+##  <a name="resetstockprops"></a>  COleControl::ResetStockProps  
  初始化的狀態`COleControl`內建屬性設為預設值。  
   
 ```  
@@ -3288,7 +3288,7 @@ void ResetStockProps();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAxCtl#7](../../mfc/reference/codesnippet/cpp/colecontrol-class_8.cpp)]  
   
-##  <a name="resetversion"></a>COleControl::ResetVersion  
+##  <a name="resetversion"></a>  COleControl::ResetVersion  
  初始化為指定值的版本號碼。  
   
 ```  
@@ -3302,7 +3302,7 @@ void ResetVersion(DWORD dwVersionDefault);
 ### <a name="remarks"></a>備註  
  您可以使用來改善控制項的二進位初始化效能`ResetVersion`和`ResetStockProps`覆寫`COleControl::OnResetState`。 請參閱在範例[ResetStockProps](#resetstockprops)。 進一步最佳化初始化的詳細資訊，請參閱[ActiveX 控制項： 最佳化](../../mfc/mfc-activex-controls-optimization.md)。  
   
-##  <a name="scrollwindow"></a>COleControl::ScrollWindow  
+##  <a name="scrollwindow"></a>  COleControl::ScrollWindow  
  允許捲動的區域在螢幕上其就地使用中映像內無視窗的 OLE 物件。  
   
 ```  
@@ -3326,7 +3326,7 @@ void ScrollWindow(
  `lpClipRect`  
  指向`CRect`物件或`RECT`結構，指定要剪輯的矩形。 在矩形內部的像素將捲動。 即使是在矩形外的位元不受影響`lpRect`矩形。 如果`lpClipRect`是**NULL**，沒有裁剪部分不會對捲動矩形。  
   
-##  <a name="selectfontobject"></a>COleControl::SelectFontObject  
+##  <a name="selectfontobject"></a>  COleControl::SelectFontObject  
  放入裝置內容中選取的字型。  
   
 ```  
@@ -3345,7 +3345,7 @@ CFont* SelectFontObject(
 ### <a name="return-value"></a>傳回值  
  先前選取的字型指標。 呼叫端已經完成使用的所有繪圖作業時*fontHolder，*它應該藉由傳遞為參數，以重新選取先前選取的字型[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)。  
   
-##  <a name="selectstockfont"></a>COleControl::SelectStockFont  
+##  <a name="selectstockfont"></a>  COleControl::SelectStockFont  
  選取放入裝置內容的內建字型屬性。  
   
 ```  
@@ -3359,7 +3359,7 @@ CFont* SelectStockFont(CDC* pDC);
 ### <a name="return-value"></a>傳回值  
  先前選取的指標`CFont`物件。 您應該使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)完成時，這種字型選取回裝置內容。  
   
-##  <a name="serializeextent"></a>COleControl::SerializeExtent  
+##  <a name="serializeextent"></a>  COleControl::SerializeExtent  
  序列化或初始化分配給控制項的顯示空間的狀態。  
   
 ```  
@@ -3376,7 +3376,7 @@ void SerializeExtent(CArchive& ar);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAxCtl#8](../../mfc/reference/codesnippet/cpp/colecontrol-class_9.cpp)]  
   
-##  <a name="serializestockprops"></a>COleControl::SerializeStockProps  
+##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps  
  序列化或初始化的狀態`COleControl`內建屬性： 外觀、 背景色彩、 框線樣式、 標題、 啟用、 字型、 前景色彩和文字。  
   
 ```  
@@ -3392,7 +3392,7 @@ void SerializeStockProps(CArchive& ar);
   
  您可以使用來改善控制項的二進位的持續性效能`SerializeStockProps`， `SerializeExtent`，和`SerializeVersion`覆寫**COleControl::Serialize**。 如需範例，請參閱 < 在程式碼[SerializeExtent](#serializeextent)。 進一步最佳化初始化的詳細資訊，請參閱[ActiveX 控制項： 最佳化](../../mfc/mfc-activex-controls-optimization.md)。  
   
-##  <a name="serializeversion"></a>COleControl::SerializeVersion  
+##  <a name="serializeversion"></a>  COleControl::SerializeVersion  
  序列化或初始化控制項的版本資訊的狀態。  
   
 ```  
@@ -3418,7 +3418,7 @@ DWORD SerializeVersion(
 ### <a name="remarks"></a>備註  
  您可以使用來改善控制項的二進位的持續性效能`SerializeVersion`， `SerializeExtent`，和`SerializeStockProps`覆寫**COleControl::Serialize**。 如需範例，請參閱 < 在程式碼[SerializeExtent](#serializeextent)。 進一步最佳化初始化的詳細資訊，請參閱[ActiveX 控制項： 最佳化](../../mfc/mfc-activex-controls-optimization.md)。  
   
-##  <a name="setappearance"></a>COleControl::SetAppearance  
+##  <a name="setappearance"></a>  COleControl::SetAppearance  
  設定控制項的內建的外觀屬性值。  
   
 ```  
@@ -3432,7 +3432,7 @@ void SetAppearance (short sAppearance);
 ### <a name="remarks"></a>備註  
  如需詳細資訊的內建屬性，請參閱[ActiveX 控制項： 屬性](../../mfc/mfc-activex-controls-properties.md)。  
   
-##  <a name="setbackcolor"></a>COleControl::SetBackColor  
+##  <a name="setbackcolor"></a>  COleControl::SetBackColor  
  設定控制項的內建的 BackColor 屬性值。  
   
 ```  
@@ -3446,7 +3446,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 ### <a name="remarks"></a>備註  
  如需有關使用這個屬性和其他相關的屬性，請參閱文章[ActiveX 控制項： 屬性](../../mfc/mfc-activex-controls-properties.md)。  
   
-##  <a name="setborderstyle"></a>COleControl::SetBorderStyle  
+##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle  
  設定控制項的內建的 BorderStyle 屬性值。  
   
 ```  
@@ -3460,7 +3460,7 @@ void SetBorderStyle(short sBorderStyle);
 ### <a name="remarks"></a>備註  
  [控制] 視窗就會重新建立和`OnBorderStyleChanged`呼叫。  
   
-##  <a name="setcapture"></a>COleControl::SetCapture  
+##  <a name="setcapture"></a>  COleControl::SetCapture  
  會使控制項的容器視窗控制項的代表採取擁有滑鼠捕捉。  
   
 ```  
@@ -3473,7 +3473,7 @@ CWnd* SetCapture();
 ### <a name="remarks"></a>備註  
  如果啟用並無視窗控制項，這個函式會導致控制項代表採取滑鼠捕捉，擁有控制項的容器視窗。 否則，這個函式會導致控制項本身需要擁有滑鼠捕捉 (相同`CWnd::SetCapture`)。  
   
-##  <a name="setcontrolsize"></a>COleControl::SetControlSize  
+##  <a name="setcontrolsize"></a>  COleControl::SetControlSize  
  設定 OLE 控制項視窗的大小，並通知控制項站台正在變更的容器。  
   
 ```  
@@ -3495,7 +3495,7 @@ BOOL SetControlSize(int cx, int cy);
   
  請注意，所有用於控制 windows 座標是相對於控制項的左上角。  
   
-##  <a name="setenabled"></a>COleControl::SetEnabled  
+##  <a name="setenabled"></a>  COleControl::SetEnabled  
  設定內建控制項的 Enabled 屬性值。  
   
 ```  
@@ -3509,7 +3509,7 @@ void SetEnabled(BOOL bEnabled);
 ### <a name="remarks"></a>備註  
  設定這個屬性之後, **OnEnabledChange**呼叫。  
   
-##  <a name="setfocus"></a>COleControl::SetFocus  
+##  <a name="setfocus"></a>  COleControl::SetFocus  
  會使控制項的代表採取擁有輸入焦點的控制項的容器視窗。  
   
 ```  
@@ -3524,7 +3524,7 @@ CWnd* SetFocus();
   
  如果控制項不是無視窗，這個函式會導致本身需要擁有輸入焦點的控制項 (相同`CWnd::SetFocus`)。  
   
-##  <a name="setfont"></a>COleControl::SetFont  
+##  <a name="setfont"></a>  COleControl::SetFont  
  設定控制項的內建字型屬性。  
   
 ```  
@@ -3535,7 +3535,7 @@ void SetFont(LPFONTDISP pFontDisp);
  *pFontDisp*  
  字型分派介面指標。  
   
-##  <a name="setforecolor"></a>COleControl::SetForeColor  
+##  <a name="setforecolor"></a>  COleControl::SetForeColor  
  設定控制項的內建的前景色彩屬性值。  
   
 ```  
@@ -3549,7 +3549,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 ### <a name="remarks"></a>備註  
  如需有關使用這個屬性和其他相關的屬性，請參閱文章[ActiveX 控制項： 屬性](../../mfc/mfc-activex-controls-properties.md)。  
   
-##  <a name="setinitialdataformats"></a>COleControl::SetInitialDataFormats  
+##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats  
  由架構呼叫以初始化此控制項所支援的資料格式的清單。  
   
 ```  
@@ -3559,7 +3559,7 @@ virtual void SetInitialDataFormats();
 ### <a name="remarks"></a>備註  
  預設實作會指定兩種格式：`CF_METAFILEPICT`和持續性的屬性集。  
   
-##  <a name="setinitialsize"></a>COleControl::SetInitialSize  
+##  <a name="setinitialsize"></a>  COleControl::SetInitialSize  
  設定 OLE 控制項的容器中第一次顯示時的大小。  
   
 ```  
@@ -3578,7 +3578,7 @@ void SetInitialSize(
 ### <a name="remarks"></a>備註  
  若要設定您控制的初始大小您建構函式中呼叫此函式。 以裝置單位或像素為單位的初始大小。 建議您將控制項的建構函式中進行這個呼叫。  
   
-##  <a name="setmodifiedflag"></a>COleControl::SetModifiedFlag  
+##  <a name="setmodifiedflag"></a>  COleControl::SetModifiedFlag  
  變更控制項的已修改的狀態。  
   
 ```  
@@ -3592,7 +3592,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ### <a name="remarks"></a>備註  
  呼叫此函式，每次變更發生時，會影響控制項的永續性狀態。 例如，如果持續性屬性的值變更時，呼叫這個函式`bModified` **TRUE**。  
   
-##  <a name="setnotpermitted"></a>Colecontrol:: Setnotpermitted  
+##  <a name="setnotpermitted"></a>  COleControl::SetNotPermitted  
  表示編輯要求已失敗。  
   
 ```  
@@ -3602,7 +3602,7 @@ void SetNotPermitted();
 ### <a name="remarks"></a>備註  
  呼叫此函式時`BoundPropertyRequestEdit`失敗。 此函式會擲回的例外狀況型別的**COleDispScodeException**來表示，不允許設定作業。  
   
-##  <a name="setnotsupported"></a>Colecontrol:: Setnotsupported  
+##  <a name="setnotsupported"></a>  COleControl::SetNotSupported  
  防止使用者控制項的屬性值的修改。  
   
 ```  
@@ -3612,7 +3612,7 @@ void SetNotSupported();
 ### <a name="remarks"></a>備註  
  呼叫此函式取代任何屬性的 Set 函式不支援修改控制項的使用者屬性值的位置。 其中一個範例會唯讀的屬性。  
   
-##  <a name="setrectincontainer"></a>COleControl::SetRectInContainer  
+##  <a name="setrectincontainer"></a>  COleControl::SetRectInContainer  
  設定相對於容器，以裝置的單位表示控制項的矩形座標。  
   
 ```  
@@ -3629,7 +3629,7 @@ BOOL SetRectInContainer(LPCRECT lpRect);
 ### <a name="remarks"></a>備註  
  如果控制項已開啟，它會調整大小;否則容器的**OnPosRectChanged**呼叫函式。  
   
-##  <a name="settext"></a>COleControl::SetText  
+##  <a name="settext"></a>  COleControl::SetText  
  設定控制項的內建的標題或文字屬性的值。  
   
 ```  
@@ -3643,7 +3643,7 @@ void SetText(LPCTSTR pszText);
 ### <a name="remarks"></a>備註  
  請注意，內建的標題和文字屬性會對應到相同的值。 這表示可能是屬性所做的變更將會自動變更這兩個屬性。 一般情況下，控制項應該支援股票標題或文字屬性，但非兩者。  
   
-##  <a name="throwerror"></a>Colecontrol:: Throwerror  
+##  <a name="throwerror"></a>  COleControl::ThrowError  
  表示控制項中的錯誤次數。  
   
 ```  
@@ -3675,7 +3675,7 @@ void ThrowError(
 ### <a name="remarks"></a>備註  
  此函式應該只從呼叫 Get 或 Set 函式中的 OLE 屬性或 OLE automation 方法的實作。 如果您需要發出信號，在其他時間發生的錯誤，您應該引發內建的錯誤事件。  
   
-##  <a name="transformcoords"></a>COleControl::TransformCoords  
+##  <a name="transformcoords"></a>  COleControl::TransformCoords  
  轉換座標之間的值**HIMETRIC**單位和容器的原生單位。  
   
 ```  
@@ -3706,7 +3706,7 @@ void TransformCoords(
 ### <a name="remarks"></a>備註  
  前兩個旗標， **XFORMCOORDS_POSITION**和**XFORMCOORDS_SIZE**，指出是否應該將座標視為位置或大小。 其餘的兩個旗標會指出轉換的方向。  
   
-##  <a name="translatecolor"></a>COleControl::TranslateColor  
+##  <a name="translatecolor"></a>  COleControl::TranslateColor  
  將轉換中的色彩值**OLE_COLOR**資料型別[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)資料型別。  
   
 ```  
@@ -3728,7 +3728,7 @@ COLORREF TranslateColor(
 ### <a name="remarks"></a>備註  
  此函式可以轉譯至內建的前景色彩和背景色彩屬性**COLORREF**所使用的類型[CDC](../../mfc/reference/cdc-class.md)成員函式。  
   
-##  <a name="willambientsbevalidduringload"></a>COleControl::WillAmbientsBeValidDuringLoad  
+##  <a name="willambientsbevalidduringload"></a>  COleControl::WillAmbientsBeValidDuringLoad  
  決定控制項之後載入從永續性狀態時，是否應該使用的環境屬性的值做為預設值。  
   
 ```  
@@ -3741,7 +3741,7 @@ BOOL WillAmbientsBeValidDuringLoad();
 ### <a name="remarks"></a>備註  
  在某些容器中，您的控制項可能沒有存取至其環境屬性的覆寫的初始呼叫期間`COleControl::DoPropExchange`。 這是大小寫，如果容器呼叫[IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730)或[ipersiststorage:: Load](http://msdn.microsoft.com/library/windows/desktop/ms680557)之前呼叫[IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) （也就是說，如果沒有接受**OLEMISC_SETCLIENTSITEFIRST**狀態位元)。  
   
-##  <a name="windowproc"></a>COleControl::WindowProc  
+##  <a name="windowproc"></a>  COleControl::WindowProc  
  提供的 Windows 處理程序`COleControl`物件。  
   
 ```  
@@ -3767,7 +3767,7 @@ virtual LRESULT WindowProc(
 ### <a name="remarks"></a>備註  
  呼叫此函式可透過控制項的訊息對應的特定訊息分派。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 CIRC3](../../visual-cpp-samples.md)   
  [MFC 範例 TESTHELP](../../visual-cpp-samples.md)   
  [COlePropertyPage 類別](../../mfc/reference/colepropertypage-class.md)   

@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>優先順序和評估順序
 C 運算子的優先順序和順序關聯性會影響運算式中運算元的群組和求值。 有其他優先順序更高或更低的運算子存在時，運算子的優先順序才有意義。 具有較高優先順序運算子的運算式會先進行求值。 優先順序也可以用「繫結」(Binding) 這個詞描述。 具有較高優先順序的運算子可視為具有更緊密的繫結。  
@@ -94,5 +94,5 @@ C 運算子的優先順序和順序關聯性會影響運算式中運算元的群
   
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C 運算子](../c-language/c-operators.md)

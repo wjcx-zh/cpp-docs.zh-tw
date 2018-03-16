@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="function-overloading"></a>函式多載
 C++ 允許在相同範圍內指定多個同名的函式。 這種讀取稱為*多載*函式。 多載函式可讓您提供不同的語意，根據，函式的型別和引數數目。 
@@ -44,7 +44,7 @@ C++ 允許在相同範圍內指定多個同名的函式。 這種讀取稱為*�
 |省略符號是否存在|[是]|  
 |是否使用 `typedef` 名稱|否|  
 |未指定的陣列範圍|否|  
-|**const**或`volatile`|是的當套用至整個函式|
+|**const**或 `volatile`|是的當套用至整個函式|
 |[ref-qualifier](#ref-qualifier)|[是]|  
   
 ## <a name="example"></a>範例  
@@ -188,7 +188,7 @@ F1 = Add( 3, 6 );
   
  請注意，這兩個集合的交集為空集合。 因此，編譯器會產生錯誤訊息。  
   
- 比對的函式的引數 *n* 預設引數會被視為 *n* + 1 個別函式各有不同數目的引數。  
+ 比對的函式的引數*n*預設引數會被視為*n*+ 1 個別函式各有不同數目的引數。  
   
  省略符號 (...) 做為萬用字元使用，它會比對任何實質引數。 如果設計多載函式集合時沒有特別小心，這種情況就可能導致許多模稜兩可的集合出現。  
   
@@ -301,7 +301,7 @@ volatile Over&
   
  前述規則僅適用於所指的衍生路徑。 以下圖顯示的圖形為例。  
   
- ![多重 &#45; 顯示偏好的轉換的繼承](../cpp/media/vc391t2.gif "vc391T2")  
+ ![多重&#45;顯示偏好的轉換的繼承](../cpp/media/vc391t2.gif "vc391T2")  
 用於說明慣用轉換的多重繼承圖形  
   
  從 `C*` 類型轉換成 `B*` 類型，比從 `C*` 類型轉換成 `A*` 類型更理想。 這是因為它們位於相同路徑上，且 `B*` 較接近。 不過，從 `C*` 類型轉換成 `D*` 類型不會比轉換成 `A*` 類型理想，因為轉換遵循的路徑不相同。  
@@ -407,7 +407,7 @@ obj.name
   
  `->*` 和 `.*` (成員的指標) 運算子的左運算元處理方式，與具有相符引數的 `.` 和 `->` (成員選取) 運算子相同。  
 
-## <a name="ref-qualifiers"></a>成員函式的 ref 限定詞  
+## <a name="ref-qualifiers"></a> 成員函式的 ref 限定詞  
 Ref 限定詞會使其可多載成員函式，根據是否指向的物件由`this`是右值或左值。  這項功能可用來避免不必要的複製作業在案例中，您選擇不提供存取的資料指標。 例如，假設類別**C**初始化其建構函式中的部分資料，並在成員函式會傳回該資料的複本**get_data()**。 如果型別的物件**C**是右值，為即將終結，則編譯器會選擇**get_data() （& s) （& s)**多載，會將資料，而不是將它複製。 
 
 ```cpp
@@ -470,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );  
     ```  
   
-     上述兩個函式擁有相同的引數清單。 `PSTR`型別同義**char \*** 。 在成員範圍內，這個程式碼會產生錯誤。  
+     上述兩個函式擁有相同的引數清單。 `PSTR` 型別同義**char \*** 。 在成員範圍內，這個程式碼會產生錯誤。  
   
 -   列舉類型是不同的類型，可以用來區別多載函式。  
   
@@ -580,5 +580,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式 (C++)](../cpp/functions-cpp.md)

@@ -15,10 +15,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 45f22597944084ecd2d30fe29bf4e8ab3ef80201
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-and-155improvements155"></a>Visual Studio 2017 15.0、[15.3](#improvements_153) 和 [15.5](#improvements_155) 版中的 C++ 一致性改善
 

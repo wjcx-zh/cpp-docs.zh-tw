@@ -4,37 +4,39 @@ ms.custom:
 ms.date: 11/16/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: dbcd323292e301857c65d908047ab14948b86573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="extract-function"></a>擷取函式
 **項目：**可讓您開啟的程式碼片段到它自己的函式。
 
 **當：**某些需要從另一個函式呼叫的函式中有現有的程式碼片段。  
 
-**原因：**您無法複製/貼上該程式碼，但這就可能會導致重複。  更好的解決方案是該片段重構與其他任何函式可以自由地呼叫它自己函數。
+**原因：**您可以複製/貼上該程式碼，但那樣會造成重複。  更好的解決方案是該片段重構與其他任何函式可以自由地呼叫它自己函數。
 
-**如何：**
+**做法：**
 
-1. 反白顯示要擷取的程式碼：
+1. 醒目標示的擷取的程式碼：
 
-   ![反白顯示的程式碼](images/extractfunction_highlight.png)
+   ![醒目標示的程式碼](images/extractfunction_highlight.png)
 
-1. 接下來，執行下列其中一項：
+1. 接著，執行下列其中一項操作：
    * **鍵盤**
-     * 按**Ctrl + R**，然後**Ctrl + M**。  (請注意，根據您所選取的設定檔，鍵盤快速鍵可能會不同)。
-     * 按**Ctrl +。** 觸發程序**快速控制項目及重構**功能表，然後選取**擷取函式 （實驗）**從內容功能表。
+     * 按 **CTRL+R**，再按 **CTRL+M**。  (請注意，根據您所選取的設定檔，鍵盤快速鍵可能會不同)。
+     * 按 **Ctrl+.** 觸發程序**快速控制項目及重構**功能表，然後選取**擷取函式 （實驗）**從內容功能表。
    * **滑鼠**
      * 選取**編輯 > 重構 > 擷取函式 （實驗）**。
      * 以滑鼠右鍵按一下程式碼中，選取**快速控制項目及重構**功能表，然後選取**擷取函式 （實驗）**從內容功能表。

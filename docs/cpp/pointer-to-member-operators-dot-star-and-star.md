@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6db7b7190a1374564071775ce2ea6c0777bdf567
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>成員指標運算子:。 * 和-&gt;*
 ## <a name="syntax"></a>語法  
@@ -144,6 +144,6 @@ int main() {
 > [!NOTE]
 >  如果其中一個成員指標運算子的結果是函式，則結果只能做為函式呼叫運算子的運算元使用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 

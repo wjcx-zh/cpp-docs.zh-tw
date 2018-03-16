@@ -56,10 +56,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c9891f67c376d13794778c82b167092237df3f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 類別
 描述資料流緩衝區，其控制類型 `Elem` 的項目 (其字元特性由類別 `Tr` 所決定)，與外部檔案中儲存的項目序列之間的往來傳輸。  
@@ -624,7 +624,7 @@ virtual int_type underflow();
   
 -   它可以讀取類型的一或多個項目`char`，像是由表單的後續呼叫`fgetc`(**fp**)，並將其轉換的項目**ch**型別的**Elem**呼叫使用檔案轉換 facet /fac **fac.in**視。 如果任何讀取或轉換失敗，則函式會失敗。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<fstream>](../standard-library/fstream.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   

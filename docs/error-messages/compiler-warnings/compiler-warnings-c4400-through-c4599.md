@@ -35,7 +35,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -105,7 +104,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -152,11 +150,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>編譯器警告 C4400 透過 C4599
 
@@ -177,7 +175,7 @@ ms.lasthandoff: 02/21/2018
 |[編譯器警告 (層級 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|'*識別碼*': 識別項是保留的字|
 |[編譯器警告 (層級 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|已忽略指示詞上的運算元|
 |[編譯器警告 (層級 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|不同成員指標表示法之間的轉換，編譯器可能會產生不正確的程式碼|
-|[編譯器警告 (層級 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|匿名 'struct &#124; union' 沒有宣告任何資料成員|
+|[編譯器警告 (層級 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|匿名 'struct&#124;等位' 沒有宣告任何資料成員|
 |[編譯器警告 (層級 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|不合法指令的大小|
 |[編譯器警告 (層級 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|運算元的大小不合法|
 |[編譯器警告 (層級 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|'*識別碼*': 符號解析至替代登錄|
@@ -210,7 +208,7 @@ ms.lasthandoff: 02/21/2018
 |編譯器警告 （層級 1） C4442|__annotation 引數中的內嵌 null 結束字元。  值會被截斷。|
 |編譯器警告 （層級 1） C4443|pragma 參數必須為 '0'、 '1' 或 '2'|
 |編譯器警告 （層級 3） C4444|'*識別碼*': 這個內容中不會實作最上層 '__unaligned'|
-|[編譯器警告 (層級 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*函式*': 在' WinRT &#124; managed' 類型的虛擬方法不可為私用|
+|[編譯器警告 (層級 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*函式*': 在' WinRT&#124;managed' 類型的虛擬方法不可為私用|
 |編譯器警告 （層級 1） C4446|'*類型*': 無法將對應的成員'*name1*' 至此類型，因為型別名稱發生衝突。 方法已重新命名為 '*name2*'|
 |編譯器警告 （層級 1） C4447|發現沒有執行緒模型的 'main' 簽章。 請考慮使用 ' int main (platform:: array\<platform:: string ^ > ^ args)'。|
 |編譯器警告 C4448|'*類型*1' 沒有中繼資料中指定的預設介面。 挑選: '*type2*'，這可能會在執行階段失敗。|
@@ -225,14 +223,14 @@ ms.lasthandoff: 02/21/2018
 |[編譯器警告 (層級 4) C4457](compiler-warning-level-4-c4457.md)|宣告的 '*識別碼*' 會隱藏函式參數|
 |[編譯器警告 (層級 4) C4458](compiler-warning-level-4-c4458.md)|宣告的 '*識別碼*' 會隱藏類別成員|
 |[編譯器警告 （層級 4） C4459](compiler-warning-level-4-c4459.md)|宣告的 '*識別碼*' 會隱藏全域宣告|
-|[編譯器警告 (層級 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT &#124; managed' 運算子'*運算子*'，具有參考所傳遞參數。 'WinRT &#124; managed' 運算子'*運算子*'具有來自不同語意 c + + 運算子'*cpp_operator*'，您是否想要傳值方式傳遞？|
+|[編譯器警告 (層級 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT&#124;managed' 運算子'*運算子*'，具有參考所傳遞參數。 'WinRT&#124;managed' 運算子'*運算子*'具有來自 c + + 運算子的不同語意'*cpp_operator*'，您是否想要傳值方式傳遞？|
 |[編譯器警告 (層級 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': 這個類別具有完成項' ！*完成項*'，但沒有解構函式 ' ~*dtor*'|
 |[編譯器警告 （層級 1，錯誤） C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*類型*': 無法判斷類型的 GUID。 程式可能在執行階段失敗。|
 |[編譯器警告 （層級 4） C4463](compiler-warning-level-4-c4463.md)|溢位。指派 '*值*'給只能保留值的位元欄位'*min_value*'to'*max_value*'|
-|編譯器警告 （層級 4） C4464|相對 include 路徑包含 '..'|
+|[編譯器警告 （層級 4） C4464](../../error-messages/compiler-warnings/c4464.md)|相對 include 路徑包含 '..'|
 |[編譯器警告 (層級 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|浮點控制 pragma 在 /clr 下會忽略|
 |[編譯器警告 （層級 4） C4471](compiler-warning-level-4-c4471.md)|'*列舉*': 不限範圍列舉的向前宣告必須含有基礎類型 (假設為 int)|
-|編譯器警告 （層級 1） C4472|'*識別碼*' 是原生列舉： 新增存取規範 (private/public) 以便宣告 ' WinRT &#124; managed' 列舉|
+|編譯器警告 （層級 1） C4472|'*識別碼*' 是原生列舉： 新增存取規範 (private/public) 以便宣告 ' WinRT&#124;managed' 列舉|
 |[編譯器警告 （層級 1） C4473](c4473.md)|'*函式*': 沒有足夠的引數傳遞給格式字串|
 |編譯器警告 （層級 3） C4474|'*函式*': 太多引數傳遞給格式字串|
 |編譯器警告 （層級 3） C4475|'*函式*': 長度修飾詞'*修飾詞*'不能與型別欄位字元'*字元*' 格式規範中|

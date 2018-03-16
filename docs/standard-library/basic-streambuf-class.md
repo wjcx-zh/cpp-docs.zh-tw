@@ -110,10 +110,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 924a0b48736d327c571941ebd7d640ab3f4b30bb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 類別
 描述抽象的基底類別，用以衍生資料流緩衝區，其控制項目如何傳入或傳出資料流的特定表示。  
@@ -1225,7 +1225,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 ### <a name="remarks"></a>備註  
  此受保護的虛擬成員函式可從以 `ptr` 開頭的陣列，將最多 `count` 個元素插入輸出資料流，就像是重複呼叫 [sbumpc](#sputc) 一樣。 寫入所有 `count` 個字元之後，或如果呼叫 `sputc( count)` 會傳回 `traits::eof()`，則會停止將字元插入輸出資料流。 它會傳回實際插入的元素數目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   
  [iostream 慣例](../standard-library/iostreams-conventions.md)

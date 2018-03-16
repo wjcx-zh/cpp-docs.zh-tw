@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：OLE Automation 伺服程式的雙重介面支援
 > [!NOTE]
@@ -262,7 +262,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>傳遞雙重介面指標  
- 雙重介面指標傳遞並不簡單，特別是當您需要呼叫`CCmdTarget::FromIDispatch`。 `FromIDispatch`只適用於 MFC 的`IDispatch`指標。 一種方式來解決這個問題是原始查詢`IDispatch`指標集由 MFC 並將該指標傳遞至需要的函數。 例如:   
+ 雙重介面指標傳遞並不簡單，特別是當您需要呼叫`CCmdTarget::FromIDispatch`。 `FromIDispatch` 只適用於 MFC 的`IDispatch`指標。 一種方式來解決這個問題是原始查詢`IDispatch`指標集由 MFC 並將該指標傳遞至需要的函數。 例如:   
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -306,10 +306,10 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
 -   在您的應用程式中`InitInstance`函式中，找出呼叫`COleObjectFactory::UpdateRegistryAll`。 遵循此呼叫，將呼叫加入`AfxOleRegisterTypeLib`，並指定**LIBID**對應至類型程式庫，以及您的型別程式庫的名稱：  
   
  '' * / / 伺服器應用程式啟動時獨立的所以最好 * / / 到更新系統登錄，以防已損毀。  
-    m_server。UpdateRegistry(OAT_DISPATCH_OBJECT);
+    m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll();* / DUAL_SUPPORT_START * / / 請確定已註冊型別程式庫，或雙重介面將無法運作。  
-AfxOleRegisterTypeLib(AfxGetInstanceHandle()，LIBID_ACDual，_T("AutoClik.TLB"));* / DUAL_SUPPORT_END  
+AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); *// DUAL_SUPPORT_END  
  ```  
   
 ## Modifying Project Build Settings to Accommodate Type Library Changes  
@@ -350,9 +350,9 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle()，LIBID_ACDual，_T("AutoClik.TLB")
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
 {  
-    METHOD_PROLOGUE （CAutoClickDoc、 DualAClick）  
+    METHOD_PROLOGUE(CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC 會自動將轉換的 Unicode BSTR * / / Ansi CString，視...  
-    pThis]-> [m_str = newText;  
+    pThis->m_str = newText;  
     傳回 NOERROR。  
  }  
     CATCH_ALL_DUAL}  
@@ -365,7 +365,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e]-> [m_wCode + 0x200));
+ (e->m_wCode + 0x200));
 
  ```  
   
@@ -390,25 +390,25 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    METHOD_PROLOGUE （CAutoClickDoc、 SupportErrorInfo）   
-    傳回 pThis]-> [ExternalAddRef();
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    return pThis->ExternalAddRef();
 
 }   
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    METHOD_PROLOGUE （CAutoClickDoc、 SupportErrorInfo）   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     傳回 pThis]-> [ExternalRelease();
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface （REFIID iid，LPVOID * ppvObj）   
 {   
-    METHOD_PROLOGUE （CAutoClickDoc、 SupportErrorInfo）   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     傳回 pThis]-> [ExternalQueryInterface & iid (ppvObj）;
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (REFIID iid)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo( REFIID iid)   
 {   
-    METHOD_PROLOGUE （CAutoClickDoc、 SupportErrorInfo）   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     傳回 (iid = = IID_IDualAClick) S_OK: S_FALSE。   
 }  
 ```  

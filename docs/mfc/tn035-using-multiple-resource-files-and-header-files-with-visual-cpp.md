@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多個資源檔和標頭檔
 > [!NOTE]
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES.H 會定義標準符號，例如 Framework 所使用 (特別是用在 AFXRES.RC 中) 的 `ID_FILE_NEW`。 AFXRES.H 也會以 #include 包含 WINRES.H，後者含有 Visual C++ 產生之 .RC 檔以及 AFXRES.RC 所需的 WINDOWS.H 子集。 AFXRES.H 中定義的符號可供您在編輯應用程式資源檔 (MYAPP.RC) 時使用。 例如，`ID_FILE_NEW` 是用於 MYAPP.RC 功能表資源中的 [開新檔案] 功能表項目。 您無法變更或刪除這些 Framework 定義的符號。  
   
-## <a name="_mfcnotes_tn035_including"></a>包含其他標頭檔  
+## <a name="_mfcnotes_tn035_including"></a> 包含其他標頭檔  
   
  AppWizard 建立的應用程式只會包含兩個標頭檔：RESOURCE.H 和 AFXRES.H。 只有 RESOURCE.H 是應用程式專用的。 您可能需要在下列情況中包含其他唯讀標頭檔：  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++ 永遠會在儲存檔案時，將 //{{NO_DEPENDENCIES}} 註解行加入至 .RC 檔。 在某些情況下，避開 RESOURCE.H 的組建相依性可能導致連結時偵測不到執行階段錯誤。 例如，當您使用符號瀏覽器變更指派給資源符號的數值時，如果沒有重新編譯參考資源的 .CPP 檔案，就無法在應用程式執行階段正確找到和載入資源。 在這種情況下，您應該明確地重新編譯任何。在資源中符號變更會影響您知道的 CPP 檔案。H 或選取**全部重建**。 如果您需要經常變更的特定資源群組的符號值，您可能會發現它更方便且更安全，若要分割成個別的唯讀標頭檔，這些符號上一節中所述[包括其他標頭檔](#_mfcnotes_tn035_including)。  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>如何管理 Visual c + + 集包含資訊 * *  
+## <a name="_mfcnotes_tn035_set_includes"></a> 如何管理 Visual c + + 集包含資訊 * *  
   
  如前所述，[File] 功能表 [Set Includes] 命令可讓您指定三種類型的資訊：  
   
@@ -391,7 +391,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

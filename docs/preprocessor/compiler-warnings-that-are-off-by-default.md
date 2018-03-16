@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619e2c517305246937ed7428eadbcf40be31fe5b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/23/2018
    **/ 牆**啟用都預設為關閉的所有警告。 如果您使用此選項時，您可以關閉個別的警告使用[/wd](../build/reference/compiler-option-warning-level.md)選項。
 
 - [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   這可讓警告 *nnnn* 層級*l*。
+   這可讓警告*nnnn*層級*l*。
 
 根據預設，下列警告會關閉。
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/23/2018
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （層級 4）|'*class1*': /vd2 底下的物件配置將因虛擬基底而變更'*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （層級 4）|從虛擬基底 dynamic_cast '*class1*'to'*class2*' 某些內容中可能會失敗|
 |C4444 （層級 3）|此內容未實作最上層的 '__unaligned'|
-|C4464 （層級 4）|相對 include 路徑包含 '..'|
+|[C4464](../error-messages/compiler-warnings/c4464.md) （層級 4）|相對 include 路徑包含 '..'|
 |C4472 （層級 1）|'*識別碼*' 是原生列舉： 新增存取規範 (private/public) 以便宣告 managed 的列舉|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) （層級 4）|'*函式*': 已移除未參考的內嵌函式|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) （層級 4）|'type name': 類型名稱超出中繼資料的限制 '*限制*' 字元|
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/23/2018
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) （層級 1）|'*函式*': 非私用成員簽章含有組件私用原生類型'*native_type*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) （層級 4）|'*函式*': 未內嵌函式|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) （層級 3）|在記憶體中儲存 32 位元浮點結果，可能會損失效能|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|暫時性存取 '*運算式*' 受限於 /volatile:\<iso &#124; ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|暫時性存取 '*運算式*' 受限於 /volatile:\<iso&#124;ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式|
 |C4749 （層級 4）|有條件地支援： 套用至 non standard 配置類型的 offsetof '*類型*'|
 |C4767 （層級 4）|區段名稱 '*符號*' 超過 8 個字元，將由連結器截斷|
 |C4768 （層級 3）|就會忽略 __declspec 屬性之前連結規格|
@@ -160,6 +160,6 @@ ms.lasthandoff: 02/23/2018
 |-|-|
 |[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) （層級 4）|遺漏類型規範 - 假設為 int。 注意: C 已不再支援 default-int|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [warning](../preprocessor/warning.md)

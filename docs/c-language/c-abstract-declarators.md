@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0e16711a61b3c8060396ce10aa2061600903499e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-abstract-declarators"></a>C 抽象宣告子
 抽象宣告子是一個沒有識別項的宣告子，由一個或多個指標、陣列或函式修飾符組成。 指標修飾詞 (**\***) 永遠會位於宣告子的識別項之前，陣列 (**[ ]**) 和函式 ( **( )** ) 修飾詞會位於識別項的後方。 知道這一點後，您就可以判斷識別項會出現在抽象宣告子的哪個位置，並據以解譯宣告子。 如需複雜宣告子的詳細資訊和範例，請參閱[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)。 通常可使用 `typedef` 來簡化宣告子。 請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。  
@@ -58,5 +58,5 @@ int (*const []) ( unsigned int, ... )
 > [!NOTE]
 >  由一組空括號 "**( )**" 組成的抽象宣告子會造成模稜兩可的情況，因此不允許使用。 要判斷隱含的識別項是落在括號內部 (在此情況下它是未經修改的類型) 或在括號前面 (在此情況下它是函式類型) 是不可能的。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

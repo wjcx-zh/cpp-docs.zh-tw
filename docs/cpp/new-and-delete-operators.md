@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 運算子
 
@@ -38,7 +38,7 @@ C + + 支援動態配置和解除配置的物件使用[新](../cpp/new-operator-
   
  如需組成 C 執行階段程式庫和 c + + 標準程式庫的程式庫檔案的清單，請參閱[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。  
   
-##  <a id="new_operator"></a> New 運算子  
+##  <a id="new_operator"> </a> New 運算子  
  在程式中遇到下面這類陳述式時，陳述式就會轉譯成 `operator new` 函式的呼叫：  
   
 ```cpp  
@@ -144,7 +144,7 @@ int main() {
   
  還有另一種方式可以處理記憶體配置要求失敗： 撰寫自訂的復原常式來處理這類失敗，然後註冊您的函式呼叫[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)執行階段函式。  
   
-##  <a id="delete_operator"></a> Delete 運算子  
+##  <a id="delete_operator"> </a> Delete 運算子  
  使用動態配置的記憶體**新**運算子可以釋放使用**刪除**運算子。 Delete 運算子會呼叫**運算子 delete**函式，這樣會釋放回可用的集區的記憶體。 使用**刪除**運算子也會使類別解構函式 （如果有的話） 來呼叫。  
   
  有全域和類別範圍**運算子 delete**函式。 只有一個**運算子 delete**函式可以指定之類別定義; 如果定義，它會隱藏全域**運算子 delete**函式。 全域**運算子 delete**函式一定會呼叫任何類型的陣列。  

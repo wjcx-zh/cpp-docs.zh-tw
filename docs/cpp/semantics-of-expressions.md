@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>運算式的語意
 運算式會根據其運算子的優先順序和群組進行評估。 ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[語彙慣例](../cpp/lexical-conventions.md)，顯示的關聯性的 c + + 運算子加諸於運算式。)  
@@ -80,10 +80,10 @@ int main()
   
 |預期的類型|允許的類型|  
 |-------------------|-------------------|  
-|*type*|`const`*類型*<br /> `volatile`*類型*<br /> *型別*&<br /> `const`*類型*&<br /> `volatile`*類型*&<br /> `volatile const`*類型*<br /> `volatile const`*類型*&|  
-|*型別*\*|*型別*\*<br /> `const`*類型*\*<br /> `volatile`*類型*\*<br /> `volatile const`*類型*\*|  
-|`const`*類型*|*type*<br /> `const`*類型*<br />`const`*類型*&|  
-|`volatile`*類型*|*type*<br /> `volatile`*類型*<br /> `volatile`*類型*&|  
+|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|  
+|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
+|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|  
+|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|  
   
  由於上述規則一律可以搭配使用，因此可以在預期出現指標的位置提供 volatile 物件的 const 指標。  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   邏輯 AND 運算子 (&&) 的左運算元。 繼續之前會完整評估邏輯 AND 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 AND 運算子的右運算元。  
   
--   邏輯 OR 運算子 (&#124; &#124;) 的左的運算元。 繼續之前會完整評估邏輯 OR 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 OR 運算子的右運算元。  
+-   邏輯 OR 運算子的左運算元 (&#124;&#124;)。 繼續之前會完整評估邏輯 OR 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 OR 運算子的右運算元。  
   
 -   逗號運算子的左運算元。 繼續之前會完整評估逗號運算子的左運算元，並且完成所有副作用。 逗號運算子的兩個運算元會一律進行評估。  
   
@@ -125,5 +125,5 @@ func( i, ++i );
   
 -   return 陳述式中的運算式。 會完整評估運算式，且其所有副作用會在控制回到呼叫函式之前完成。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式](../cpp/expressions-cpp.md)

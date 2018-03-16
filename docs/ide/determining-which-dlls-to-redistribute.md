@@ -1,7 +1,7 @@
 ---
 title: "判斷要轉散發哪些 Dll |Microsoft 文件"
 ms.custom: 
-ms.date: 09/21/2017
+ms.date: 03/13/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cc7b80e16abeecc756e7fa480c7bfe71682382
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>決定要轉散發哪些 DLL
 
@@ -53,18 +53,18 @@ Visual Studio 的安裝中也包含個別的可轉散發 Dll。 根據預設，�
 
 |Visual C++ 程式庫|描述|適用於|
 |--------------------------|-----------------|----------------|
-|vcruntime*版本*.dll|原生程式碼的執行階段程式庫。|使用一般 C 和 c + + 語言啟動和終止服務的應用程式。|
-|vccorlib*版本*.dll|Managed 程式碼的執行階段程式庫。|使用 managed 程式碼的 c + + 語言服務的應用程式。|
-|msvcp*版本*.dll|原生程式碼針對 c + + 標準程式庫。|使用應用程式[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。|
-|concrt*版本*.dll|並行執行階段程式庫，原生程式碼。|使用應用程式[並行執行階段](../parallel/concrt/concurrency-runtime.md)。|
-|mfc*版本*.dll|Microsoft Foundation Class (MFC) 程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)。|
-|mfc*版本**語言*.dll|Microsoft Foundation Class (MFC) 程式庫資源。|Mfc 使用特定語言資源的應用程式。|
-|mfc*版本*u.dll|具有 Unicode 支援的 MFC 程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)並需要 Unicode 支援。|
+|vcruntime*version*.dll|原生程式碼的執行階段程式庫。|使用一般 C 和 c + + 語言啟動和終止服務的應用程式。|
+|vccorlib*version*.dll|Managed 程式碼的執行階段程式庫。|使用 managed 程式碼的 c + + 語言服務的應用程式。|
+|msvcp*版本*.dll 和 msvcp*版本*_*dotnumber*.dll|原生程式碼針對 c + + 標準程式庫。|使用應用程式[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。|
+|concrt*version*.dll|並行執行階段程式庫，原生程式碼。|使用應用程式[並行執行階段](../parallel/concrt/concurrency-runtime.md)。|
+|mfc*version*.dll|Microsoft Foundation Class (MFC) 程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)。|
+|mfc*version* *language*.dll|Microsoft Foundation Class (MFC) 程式庫資源。|Mfc 使用特定語言資源的應用程式。|
+|mfc*version*u.dll|具有 Unicode 支援的 MFC 程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)並需要 Unicode 支援。|
 |mfcmifc80.dll|MFC Managed 介面程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)與[Windows Form 控制項](/dotnet/framework/winforms/controls/index)。|
-|mfcm*版本*.dll|MFC Managed 程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)與[Windows Form 控制項](/dotnet/framework/winforms/controls/index)。|
-|mfcm*版本*u.dll|具有 Unicode 支援的 MFC Managed 程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)與[Windows Form 控制項](/dotnet/framework/winforms/controls/index)並需要 Unicode 支援。|
-|vcamp*版本*.dll|原生程式碼 AMP 程式庫。|使用應用程式[c + + AMP 程式庫](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)程式碼。|
-|vcomp*版本*.dll|原生程式碼的 OpenMP 程式庫。|使用應用程式[c + + OpenMP 程式庫](../parallel/openmp/openmp-in-visual-cpp.md)程式碼。|
+|mfcm*version*.dll|MFC Managed 程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)與[Windows Form 控制項](/dotnet/framework/winforms/controls/index)。|
+|mfcm*version*u.dll|具有 Unicode 支援的 MFC Managed 程式庫。|使用應用程式[MFC 程式庫](../mfc/mfc-desktop-applications.md)與[Windows Form 控制項](/dotnet/framework/winforms/controls/index)並需要 Unicode 支援。|
+|vcamp*version*.dll|原生程式碼 AMP 程式庫。|使用應用程式[c + + AMP 程式庫](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)程式碼。|
+|vcomp*version*.dll|原生程式碼的 OpenMP 程式庫。|使用應用程式[c + + OpenMP 程式庫](../parallel/openmp/openmp-in-visual-cpp.md)程式碼。|
 
 > [!NOTE]
 > 您不再需要以個別 DLL 的形式轉散發 Active Template Library。 其功能已移至標頭和靜態程式庫。
@@ -73,7 +73,7 @@ Visual Studio 的安裝中也包含個別的可轉散發 Dll。 根據預設，�
 
 一般而言，您並不需要轉散發系統 Dll，因為它們是作業系統的一部分。 但是，還是有一些例外情形，例如當應用程式會在數個版本的 Microsoft 作業系統上執行時。 在此情況下，請務必閱讀對應的授權條款。 另外，請嘗試透過 Windows Update、Service Pack 或 Microsoft 提供的可轉散發套件，將系統 DLL 升級。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [選擇部署方法](../ide/choosing-a-deployment-method.md)
 

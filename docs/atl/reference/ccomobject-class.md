@@ -97,7 +97,7 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>參數  
  **void\***  
- [in]不使用這個未命名的參數。 其存在與其他對稱 **CCom * * * XXX*`Object`*XXX*建構函式。  
+ [in]不使用這個未命名的參數。 其存在與其他對稱 **CCom***XXX*`Object`*XXX* 建構函式。  
   
 ### <a name="remarks"></a>備註  
  解構函式遞減它。  

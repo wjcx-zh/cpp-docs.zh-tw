@@ -23,7 +23,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
 ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/16/2018
 ---
@@ -77,7 +77,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  如需參考 *declarator* 的語法資訊，請參閱[宣告概觀](../c-language/overview-of-declarations.md)或 [C 語言語法摘要](../c-language/c-language-syntax-summary.md)中的 *declaration* 語法。  
   
- 當宣告子包含未修改的識別項時，要宣告的項目會具有基底類型。 如果識別碼的左邊出現一個星號 (**\***)，表示會將類型修改為指標類型。 如果識別碼的後面接著一個方括弧 (**[ ]**)，表示這個類型已修改為陣列類型。 如果識別項的後面接著一個括號，表示這個類型已修改為函式類型。 如需解譯宣告中優先順序的詳細資訊，請參閱[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)。  
+ 當宣告子包含未修改的識別項時，要宣告的項目會具有基底類型。 如果識別碼的左邊出現一個星號 (**\***)，表示會將類型修改為指標類型。 如果識別碼的後面接著一個方括弧 (**[ ]***)，表示這個類型已修改為陣列類型。 如果識別項的後面接著一個括號，表示這個類型已修改為函式類型。 如需解譯宣告中優先順序的詳細資訊，請參閱[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)。  
   
  每個宣告子至少會宣告一個識別項。 宣告子必須包含類型指定名稱，才是一個完整的宣告。 類型指定名稱會指定陣列類型的元素類型、以指標類型定址的物件類型，或是函式的傳回型別。  
   

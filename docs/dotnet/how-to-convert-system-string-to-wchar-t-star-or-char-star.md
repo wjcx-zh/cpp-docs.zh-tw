@@ -1,5 +1,5 @@
 ---
-title: "如何： 將 system:: string 轉換為 wchar_t * 或 char * |Microsoft 文件"
+title: "如何： 將 system:: string 轉換為 wchar_t* 或 char* |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

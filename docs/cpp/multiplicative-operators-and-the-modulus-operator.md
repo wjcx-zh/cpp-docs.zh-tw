@@ -48,7 +48,7 @@ expression % expression
 ## <a name="remarks"></a>備註  
  乘法類運算子包括：  
   
--   乘法 (**\***)  
+-   乘法 (**\****)  
   
 -   除法 (**/**)  
   

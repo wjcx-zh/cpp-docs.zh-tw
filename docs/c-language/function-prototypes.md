@@ -36,7 +36,7 @@ ms.lasthandoff: 03/16/2018
  `declaration`：  
  *declaration-specifiers attribute-seq* opt*init-declarator-list* opt**;**  
   
- /\* *attribute-seq* opt 是 Microsoft 特定的 */  
+ /\* *attribute-seq* opt 是 Microsoft 特定的 \*/  
   
  *declaration-specifiers*：  
  *storage-class-specifier declaration-specifiers* opt  

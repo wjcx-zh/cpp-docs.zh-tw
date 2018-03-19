@@ -38,7 +38,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* 是 Microsoft 專有 */  
+ /\* *attribute-seq* 是 Microsoft 專有 \*/  
   
  *declaration-specifiers*：  
  *storage-class-specifier declaration-specifiers* opt  

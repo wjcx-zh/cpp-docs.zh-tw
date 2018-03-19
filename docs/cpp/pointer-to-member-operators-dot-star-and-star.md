@@ -1,5 +1,5 @@
 ---
-title: "成員指標運算子:。 * 和-&gt;* |Microsoft 文件"
+title: "成員指標運算子:。* 和 -&gt;* |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/16/2018
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>成員指標運算子:。 * 和-&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>成員指標運算子:。* 和 -&gt;*
 ## <a name="syntax"></a>語法  
   
 ```  

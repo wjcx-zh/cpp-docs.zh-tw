@@ -147,6 +147,7 @@
 ##### [/Zc:threadSafeInit (安全執行緒區域靜態變數初始設定)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew (假設擲回運算子 new)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (三併詞替代)](zc-trigraphs-trigraphs-substitution.md)
+##### [/Zc:twoPhase- (停用兩階段名稱查閱)](zc-twophase.md)
 ##### [/Zc:wchar_t (wchar_t 是原生類型)](zc-wchar-t-wchar-t-is-native-type.md)
 #### [/Zf (PDB 產生速度加快)](zf.md)
 #### [/Zg (產生函式原型)](zg-generate-function-prototypes.md)

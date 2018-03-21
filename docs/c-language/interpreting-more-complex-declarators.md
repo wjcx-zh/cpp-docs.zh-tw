@@ -20,11 +20,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82779e423a1958c0392aebb55d29e41bdd132cc1
+ms.sourcegitcommit: 6576d4d8a768279b4d340d036581e0f8a2974ea7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="interpreting-more-complex-declarators"></a>解譯更複雜的宣告子
 您可以用括號括住所有宣告子，以指定「複雜宣告子」的特定解譯。 複雜宣告子是以一個以上的陣列、指標或函式修飾詞限定的識別項。 您可以將各種不同的陣列、指標及函式修飾詞組合套用至單一識別項。 通常可使用 `typedef` 簡化宣告。 請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/21/2017
      7   6  4 2 1   3    5  
     ```  
   
- 在本範例中，步驟是依序編號，並可解譯為如下：  
+在本範例中，步驟是依序編號，並可解譯為如下：  
   
 1.  `var` 識別項宣告為  
   

@@ -13,11 +13,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
@@ -37,9 +37,11 @@ ms.lasthandoff: 02/03/2018
 
 C++ 沒有穩定的應用程式二進位介面 (ABI)。 Visual Studio 會為版本的所有次要版本維持穩定的 C++ ABI。 例如，Visual Studio 2017 和其所有更新都是與二進位檔相容。 但是，在 Visual Studio 的主要版本之間，ABI 不一定相容 (2015 和 2017 除外，兩者_皆與_二進位檔相容)。 即，我們可能會對 C++ 類型版面配置、名稱裝飾、例外狀況處理和 C++ ABI 的其他部分進行重大變更。 因此，如果您的目的檔包含具有 C++ 連結的外部符號，則該目的檔可能未正確地連結到使用 工具組之不同主要版本所產生的目的檔。 請注意，這裡的「可能無法運作」有許多可能的結果︰連結可能完全失敗 (例如，如果名稱裝飾已變更)、連結可能成功但項目無法在執行階段運作 (例如，類型版面配置已變更)，或項目在許多情況下可能可以運作且不會發生錯誤。 也請注意，雖然 C++ ABI 不穩定，但是 COM 所需的 C ABI 和 C++ ABI 子集則十分穩定。
 
+若您連結到匯入程式庫，在執行階段即會使用會保留 ABI 相容性的 Visual Studio 可轉散發程式庫之任一新版。 例如，如果您的應用程式使用 Visual Studio 2015 Update 3 工具組進行編譯及連結，可以使用任一 Visual Studio 2017 的可轉散發套件，因為 2015 與 2017 的程式庫有保留二進位的回溯相容性。 但反之卻不成立，您使用的可轉散發套件版本不可早於用於建置您程式碼的工具組，即使它們有相容的 ABI 也不行。
+
 ### <a name="libraries"></a>程式庫
 
-如果您使用特定版本的 Visual Studio C++ 程式庫標頭檔來編譯來源檔案 (方法是使用 #including 包含標頭)，則產生的目的檔必須連結到相同版本的程式庫。 因此，例如，如果使用 Visual Studio 2017 \<immintrin.h> 編譯原始程式檔，則必須連結到 Visual Studio 2017 vcruntime 程式庫。 同樣地，如果使用 Visual Studio 2017 \<iostream> 編譯原始程式檔，則必須連結到 Visual Studio 2017 Standard C++ 程式庫：msvcprt。 不支援混合和比對。
+如果您使用特定版本的 Visual Studio C++ 程式庫標頭檔來編譯來源檔案 (方法是使用 #including 包含標頭)，則產生的目的檔必須連結到相同版本的程式庫。 因此，例如，若您使用 Visual Studio 2015 Update 3 \<immintrin.h> 編譯原始程式檔，即必須連結到 Visual Studio 2015 Update 3 vcruntime 程式庫。 同樣地，若您使用 Visual Studio 2017 15.5 版的 \<iostream> 編譯原始程式檔，即必須連結到 Visual Studio 2017 15.5 版標準 C++ 程式庫：msvcprt。 不支援混合和比對。
 
 針對 C++ 標準程式庫，自 Visual Studio 2010 之後，已透過在標準標頭中使用 `#pragma detect_mismatch` 明確不允許混合和比對。 如果您嘗試連結不相容的物件檔案，或嘗試連結到錯誤的標準程式庫，連結將會失敗。
 

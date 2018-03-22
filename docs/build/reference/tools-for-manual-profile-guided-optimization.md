@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: fb8d4474b69d60b9ced342c478ec0f6ba4e1a933
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 5cd2e3e51ecc8d9fc0d889555b4bfa193ba1d6a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="tools-for-manual-profile-guided-optimization"></a>手動特性指引最佳化工具
 下列工具支援特性指引最佳化：  
@@ -37,5 +37,5 @@ ms.lasthandoff: 12/21/2017
  [pgomgr](../../build/reference/pgomgr.md)  
  將分析資料從一個或多個.pgc 檔案加入至.pgd 檔。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [特性指引最佳化](../../build/reference/profile-guided-optimizations.md)

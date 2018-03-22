@@ -1,5 +1,5 @@
 ---
-title: "VCPROFILE_PATH |Microsoft 文件"
+title: VCPROFILE_PATH | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ea682b70f4417ef49bfca530af5f12f21699a389
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 5cd2e3e51ecc8d9fc0d889555b4bfa193ba1d6a5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="vcprofilepath"></a>VCPROFILE_PATH
 指定要建立的.pgc 檔案的目錄。  
@@ -49,5 +49,5 @@ VCPROFILE_PATH=path
 set VCPROFILE_PATH=c:\  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [特性指引最佳化的環境變數](../../build/reference/environment-variables-for-profile-guided-optimizations.md)

@@ -1,12 +1,12 @@
 ---
-title: "Runtimeclassbaset:: Getimplementediids 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Runtimeclassbaset:: Getimplementediids 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - GetImplementedIIDS method
 ms.assetid: adae54da-521d-4add-87f5-242fbd85f33b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 25410ac57e1812d3f4648151afff4f97d413689b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 478be22e54732cccddbc212cdb192c2847a1a235
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS 方法
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -34,9 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 __forceinline static HRESULT GetImplementedIIDS(  
    _In_ T* implements,  
    _Out_ ULONG *iidCount,  
@@ -66,7 +64,7 @@ __forceinline static HRESULT GetImplementedIIDS(
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  
   
- **命名空間：** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [RuntimeClassBaseT 結構](../windows/runtimeclassbaset-structure.md)

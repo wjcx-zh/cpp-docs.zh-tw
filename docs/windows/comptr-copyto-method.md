@@ -1,12 +1,12 @@
 ---
-title: "Comptr:: Copyto 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Comptr:: Copyto 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr::CopyTo
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - CopyTo method
 ms.assetid: 8801bc49-6db4-4393-a55f-a701ae3b8718
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f47df584fb456c721c92823a87ca525beb052d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: baa8c64187be3d1ddf52bf7056a00b7c13abeceb
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo 方法
 複製與這個 ComPtr 的指定指標，相關聯的目前或指定的介面。  
@@ -42,10 +42,8 @@ HRESULT CopyTo(
    REFIID riid,  
    _Deref_out_ void** ptr  
 ) const;  
-template<  
-   typename U  
->  
-  
+
+template<typename U>  
 HRESULT CopyTo(  
    _Deref_out_ U** ptr  
 ) const;  
@@ -76,5 +74,5 @@ HRESULT CopyTo(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ComPtr 類別](../windows/comptr-class.md)

@@ -1,12 +1,12 @@
 ---
-title: "Module:: genericreleasenotifier 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Module:: genericreleasenotifier 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GenericReleaseNotifier
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - GenericReleaseNotifier class
 ms.assetid: 244a8fbe-f89b-409b-aa65-db3e37f9b125
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c87205d1d52c8273ac7eea55fcc5385810349f1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f867b0cff559ead40be9b2e3ff0722fdb9943034
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier 類別
 發行目前的模組中的最後一個物件時，會叫用事件處理常式。 Lambda、 函式或函式指標上所指定的事件處理常式。  
@@ -34,9 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 class GenericReleaseNotifier : public ReleaseNotifier;  
 ```  
   
@@ -74,5 +72,5 @@ class GenericReleaseNotifier : public ReleaseNotifier;
   
  **命名空間：** Microsoft::WRL
  
- ## <a name="see-also"></a>請參閱
+ ## <a name="see-also"></a>另請參閱
  [Module 類別](../windows/module-class.md)

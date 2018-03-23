@@ -1,31 +1,36 @@
 ---
-title: "Windows 執行階段 c + + 樣板程式庫 (WRL) |Microsoft 文件"
-ms.custom: 
+title: Windows 執行階段 c + + 樣板程式庫 (WRL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
-Windows 執行階段 C++ 範本庫 (WRL) 是提供低階方式撰寫和使用 Windows 執行階段元件的範本庫。  
+Windows 執行階段 C++ 範本庫 (WRL) 是提供低階方式撰寫和使用 Windows 執行階段元件的範本庫。
+
+> [!NOTE]
+> WRL 現在取代 C + WinRT，standard C + + 17 語言投影適用於 Windows 執行階段 Api。 C + + WinRT 適用於 Windows 10 SDK 版本 1803年開始。 C + + WinRT 是完全在標頭檔中實作及設計來提供您具有第一級的存取權的現代 Windows api。
+
+> 使用 C + + WinRT，您可以使用及撰寫 Windows 執行階段 Api 使用任何符合標準的 C + + 17 編譯器。 C + + WinRT 通常更好，而且會產生較小的二進位檔，比為 Windows 執行階段的其他語言選項。 我們將繼續支援 C + + /CX 和 WRL，但強烈建議您，新的應用程式使用 C + + WinRT。 如需詳細資訊，請參閱[C + + WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。   
   
 ## <a name="benefits"></a>優點  
  Windows 執行階段 c + + 樣板程式庫可讓您更輕鬆地實作和使用元件物件模型 (COM) 元件。 它提供環境維護技術，如參考計數來管理物件的存留期，以及測試 `HRESULT` 值來判斷作業成功或失敗。 若要順利使用 Windows 執行階段 c + + 樣板程式庫，您必須小心遵循這些規則和技術。  
@@ -57,9 +62,6 @@ Windows 執行階段 C++ 範本庫 (WRL) 是提供低階方式撰寫和使用 Wi
   
  [如何： 處理事件](../windows/how-to-handle-events-using-wrl.md)  
  示範如何使用 Windows 執行階段 c + + 樣板程式庫訂閱和處理 Windows 執行階段物件的事件。  
-  
- [逐步解說： 建立基本 Windows 執行階段元件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- 示範如何使用 Windows 執行階段 c + + 樣板程式庫建立兩個數目相加的基本 Windows 執行階段元件。 也會示範如何引發事件，並從使用 JavaScript UWP 應用程式使用元件。  
   
  [逐步解說： 使用 WRL 與媒體基礎建立 UWP 應用程式](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  了解如何建立 UWP 應用程式使用[Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
@@ -144,7 +146,6 @@ Windows 執行階段 C++ 範本庫 (WRL) 是提供低階方式撰寫和使用 Wi
   
 |||  
 |-|-|  
-|[類別庫專案範本](../windows/wrl-class-library-project-template.md)|說明如何存取 WRL 類別庫專案範本。 這個範本可協助簡化使用 Visual Studio 建立 Windows 執行階段元件的工作。|  
 |[依類別目錄的索引鍵 Api](../windows/key-wrl-apis-by-category.md)|反白顯示主要的 Windows 執行階段 c + + 樣板程式庫類型、 函數和巨集。|  
 |[參考資料](../windows/wrl-reference.md)|包含 Windows 執行階段 c + + 樣板程式庫的參考資訊。|  
 |[快速參考 （Windows 執行階段和 Visual c + +）](http://go.microsoft.com/fwlink/p/?linkid=229180)|簡短描述 C + + /CX 支援 Windows 執行階段的功能。|  

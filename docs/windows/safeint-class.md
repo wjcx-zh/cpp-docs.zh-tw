@@ -1,12 +1,12 @@
 ---
-title: "SafeInt 類別 |Microsoft 文件"
-ms.custom: 
+title: SafeInt 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SafeInt
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61b9ee9ca030d8661ce9c4cabf03e59c55ac88b1
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 擴充整數基本項目，來協助防止整數溢位，並讓您比較不同類型的整數。  
@@ -178,9 +178,9 @@ class SafeInt;
   
  本主題中的運算子資料表會列出所支援的數學和比較運算子`SafeInt`類別。 最數學運算子會傳回`SafeInt`型別的物件`T`。  
   
- 之間的比較作業`SafeInt`和整數類資料類型可以執行任一方向。 如需範例，`SafeInt<int>(x) < y`和`y > SafeInt<int>(x)`有效，並且會傳回相同的結果。  
+ 之間的比較作業`SafeInt`和整數類資料類型可以執行任一方向。 如需範例，`SafeInt<int>(x) < y`和`y> SafeInt<int>(x)`有效，並且會傳回相同的結果。  
   
- 許多二元運算子不支援使用兩個不同`SafeInt`型別。 一個範例是`&`運算子。 `SafeInt<T, E> & int`支援，但`SafeInt<T, E> & SafeInt<U, E>`不是。 在第二個範例中，編譯器不知道何種參數來傳回。 這個問題的解決方案之一是轉換回基底類型的第二個參數。 使用相同的參數，這可以使用`SafeInt<T, E> & (U)SafeInt<U, E>`。  
+ 許多二元運算子不支援使用兩個不同`SafeInt`型別。 一個範例是`&`運算子。 `SafeInt<T, E> & int` 支援，但`SafeInt<T, E> & SafeInt<U, E>`不是。 在第二個範例中，編譯器不知道何種參數來傳回。 這個問題的解決方案之一是轉換回基底類型的第二個參數。 使用相同的參數，這可以使用`SafeInt<T, E> & (U)SafeInt<U, E>`。  
   
 > [!NOTE]
 >  針對任何位元運算，兩個不同的參數應該是相同大小。 如果大小不同，編譯器將會擲回[ASSERT](../mfc/reference/diagnostic-services.md#assert)例外狀況。 這項作業的結果無法保證能夠精確。 若要解決此問題，將參數轉型小之前相同的大小較大的參數。  
@@ -213,12 +213,12 @@ Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   
- `T`和`U`布林型別、 字元類型或整數類型可以指派。 類型可以帶正負號或不帶正負號的整數，任何從 8 位元到 64 位元的大小。  
+ `T` 和`U`布林型別、 字元類型或整數類型可以指派。 類型可以帶正負號或不帶正負號的整數，任何從 8 位元到 64 位元的大小。  
   
 > [!NOTE]
 >  雖然`SafeInt`類別接受任何類型的整數，就會執行更有效率地使用不帶正負號的類型。  
   
- `E`錯誤處理機制，`SafeInt`使用。 SafeInt 程式庫會提供兩種錯誤處理機制。 預設原則是`SafeIntErrorPolicy_SafeIntException`，哪些則會擲回[SafeIntException 類別](../windows/safeintexception-class.md)發生錯誤時的例外狀況。 另一項原則是`SafeIntErrorPolicy_InvalidParameter`，發生錯誤時停止程式。  
+ `E` 錯誤處理機制，`SafeInt`使用。 SafeInt 程式庫會提供兩種錯誤處理機制。 預設原則是`SafeIntErrorPolicy_SafeIntException`，哪些則會擲回[SafeIntException 類別](../windows/safeintexception-class.md)發生錯誤時的例外狀況。 另一項原則是`SafeIntErrorPolicy_InvalidParameter`，發生錯誤時停止程式。  
   
  有兩個選項來自訂原則時發生錯誤。 第一個選項是設定參數`E`當您建立`SafeInt`。 使用此選項，當您想要變更的錯誤處理原則的其中一個`SafeInt`。 若要定義的另一個選項是`_SAFEINT_DEFAULT_ERROR_POLICY`要自訂的錯誤處理類別後再納入`SafeInt`程式庫。 使用此選項，當您想要變更預設的錯誤處理原則的所有執行個體`SafeInt`程式碼中的類別。  
   
@@ -230,6 +230,6 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
   
  **命名空間：** msl::utilities  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeIntException 類別](../windows/safeintexception-class.md)

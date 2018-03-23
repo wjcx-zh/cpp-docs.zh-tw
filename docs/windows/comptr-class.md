@@ -1,12 +1,12 @@
 ---
-title: "ComPtr 類別 |Microsoft 文件"
-ms.custom: 
+title: ComPtr 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - ComPtr class
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04f8181c7308d63cc4fe07aaf4a05d34ccfaf132
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36ecb5fdf292873c18df8f6b2f032865f44bafd2
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="comptr-class"></a>ComPtr 類別
 建立代表範本參數所指定之介面的 *「智慧型指標」* (Smart Pointer) 類型。 ComPtr 自動維護基礎介面指標的參考計數，並在參考計數歸零時釋放介面。  
@@ -34,14 +34,10 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-template <  
-   typename T  
->  
+template <typename T>  
 class ComPtr;  
   
-template<  
-   class U  
->  
+template<class T>  
 friend class ComPtr;  
 ```  
   
@@ -120,5 +116,5 @@ friend class ComPtr;
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

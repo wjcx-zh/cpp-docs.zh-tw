@@ -1,12 +1,12 @@
 ---
-title: "MakeAllocator 類別 |Microsoft 文件"
-ms.custom: 
+title: MakeAllocator 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAllocator
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 523bcdb17fc0a1b74fe615e5ff15a6fcef99cc32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33ba172099fd2554709cc539eeee8999c0e42cef
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="makeallocator-class"></a>MakeAllocator 類別
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -38,17 +38,13 @@ ms.lasthandoff: 12/21/2017
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
-         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>,   
-   T)> , T)> class MakeAllocator;  
+         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>, T)>
+ class MakeAllocator;  
   
-template<  
-   typename T  
->  
+template<typename T>  
 class MakeAllocator<T, false>;  
   
-template<  
-   typename T  
->  
+template<typename T>  
 class MakeAllocator<T, true>;  
 ```  
   
@@ -57,7 +53,7 @@ class MakeAllocator<T, true>;
  類型名稱。  
   
  `hasWeakReferenceSupport`  
- `true`為支援弱式參考; 的物件配置記憶體`false`不支援弱式參考的物件配置記憶體。  
+ `true` 為支援弱式參考; 的物件配置記憶體`false`不支援弱式參考的物件配置記憶體。  
   
 ## <a name="remarks"></a>備註  
  可啟用類別，或不支援弱式參考，會配置記憶體。  
@@ -88,7 +84,7 @@ class MakeAllocator<T, true>;
 ## <a name="requirements"></a>需求  
  **標頭：** implements.h  
   
- **命名空間：** Microsoft::WRL::Details  
+ **Namespace:** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

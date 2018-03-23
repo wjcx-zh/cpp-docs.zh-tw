@@ -1,12 +1,12 @@
 ---
-title: "實作 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 實作 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - vc-attr.implements
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="implements-c"></a>implements (C++)
 指定強制為成員的 IDL coclass 的分派介面。  
@@ -42,11 +42,11 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 #### <a name="parameters"></a>參數  
- **介面**  
+ **interfaces**  
  以逗號分隔的 IDL coclass 的成員的介面清單。 指定單一介面的簡略方法是**實作 (***interface_name***)**。  
   
- **分配介面**  
- 以逗號分隔清單的成員 IDL coclass 的分配介面。 指定單一的分配介面的簡略方法是**實作 (dispinterface** *= dispinterface_name***)**。  
+ **dispinterfaces**  
+ 以逗號分隔清單的成員 IDL coclass 的分配介面。 指定單一的分配介面的簡略方法是**實作 (dispinterface** * = dispinterface_name ***)**。  
   
 ## <a name="remarks"></a>備註  
  根據預設，只有 COM 介面的 coclass 的基底類別會加入 IDL coclass。 **實作**可讓您強制執行其他 IDL coclass 成員的介面。  
@@ -486,7 +486,7 @@ public:
       if (pDispParams == 0) {  
          return DISP_E_BADVARTYPE;  
       }  
-      if (pDispParams->cArgs > 0) {  
+      if (pDispParams->cArgs> 0) {  
          return DISP_E_BADPARAMCOUNT;  
       }  
       if (pVarResult != 0) {  
@@ -555,6 +555,6 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器屬性](../windows/compiler-attributes.md)   
  [類別屬性](../windows/class-attributes.md)   

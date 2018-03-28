@@ -1,12 +1,12 @@
 ---
-title: "_ultoa_s、_ultow_s | Microsoft Docs"
-ms.custom: 
+title: _ultoa_s、_ultow_s | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ultow_s
@@ -40,17 +40,17 @@ helpviewer_keywords:
 - converting numbers, to strings
 - ultow_s function
 ms.assetid: 606ce905-6752-46ac-a15a-bdc22920e1d4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e6b882e8e4017410e0f377aaf4b49b658b39afa
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="ultoas-ultows"></a>_ultoa_s、_ultow_s
 將不帶正負號的長整數轉換為字串。 這些是 [_ultoa、_ultow](../../c-runtime-library/reference/ultoa-ultow.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -115,14 +115,14 @@ errno_t _ultow_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式傳回的值|必要的標頭|  
+|常式|必要的標頭|  
 |-------------|---------------------|  
 |`_ultoa_s`|\<stdlib.h>|  
 |`_ultow_s`|\<stdlib.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [_ultoa、_ultow](../../c-runtime-library/reference/ultoa-ultow.md)   
  [_ltoa、_ltow](../../c-runtime-library/reference/ltoa-ltow.md)   

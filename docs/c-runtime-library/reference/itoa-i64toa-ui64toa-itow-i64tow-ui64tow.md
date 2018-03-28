@@ -1,12 +1,12 @@
 ---
-title: "_itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow | Microsoft Docs"
-ms.custom: 
+title: _itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _itow
@@ -63,17 +63,17 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bdfe837630a4f8b36ca57970c6b23d832740f59d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="itoa-i64toa-ui64toa-itow-i64tow-ui64tow"></a>_itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow
 將整數轉換成字串。 這些函式已有更安全的版本可供使用；請參閱[_itoa_s、_i64toa_s、_ui64toa_s、_itow_s、_i64tow_s、_ui64tow_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)。  
@@ -180,7 +180,7 @@ wchar_t * _ui64tow(
   
 ## <a name="requirements"></a>需求  
   
-|常式傳回的值|必要的標頭|  
+|常式|必要的標頭|  
 |-------------|---------------------|  
 |`_itoa`|\<stdlib.h>|  
 |`_i64toa`|\<stdlib.h>|  
@@ -261,7 +261,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [_ltoa、_ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
  [_ltoa_s、_ltow_s](../../c-runtime-library/reference/ltoa-s-ltow-s.md)   

@@ -1,12 +1,12 @@
 ---
-title: "snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l | Microsoft Docs"
-ms.custom: 
+title: snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _snwprintf
@@ -25,6 +25,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _snprintf
@@ -56,17 +57,17 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d235f1034d8e916ddcd9e268e72aadacaf90911
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 92a4939c9fc71245528198c686ca9ed7024c858d
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l
 將格式化資料寫入字串。 這些函式已有更安全的版本可供使用，請參閱 [_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](../../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)。  
@@ -177,9 +178,9 @@ int _snwprintf_l(
 > [!IMPORTANT]
 >  確認 `format` 不是使用者定義的字串。 由於 `_snprintf` 函式並不保證 NULL 結束，尤其是當傳回值為 `count`時，請務必在這些函式後方附上可加入 null 結束字元的程式碼。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- 自 Visual Studio 2015 及 Windows 10 的 UCRT 起， `snprintf` 即不再等同於 `_snprintf`。 `snprintf` 函式行為現在符合 C99 標準。  
+ 自 Visual Studio 2015 及 Windows 10 的 UCRT 起， `snprintf` 即不再等同於 `_snprintf`。 `snprintf` 函式行為現在符合 C99 規範。  
   
- `_snwprintf` 是 `_snprintf`的寬字元版本， `_snwprintf` 的指標引數是寬字元字串。 `_snwprintf` 中的編碼錯誤偵測可能不同於 `_snprintf`。 `_snwprintf`與 `swprintf`類似，會將輸出寫入輸出字串，而不是 `FILE`類型的目的地。  
+ `_snwprintf` 是 `_snprintf` 的寬字元版本，`_snwprintf` 的指標引數是寬字元字串。 `_snwprintf` 中的編碼錯誤偵測可能不同於 `_snprintf`。 `_snwprintf` 與 `swprintf` 類似，會將輸出寫入輸出字串，而不是 `FILE` 類型的目的地。  
   
  這些有 `_l` 尾碼的函式版本都相同，不同之處在於會使用傳入的地區設定參數，而不使用目前的執行緒地區設定。  
   
@@ -194,10 +195,10 @@ int _snwprintf_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式傳回的值|必要的標頭|  
+|常式|必要的標頭|  
 |-------------|---------------------|  
 |`snprintf`、`_snprintf`、`_snprintf_l`|\<stdio.h>|  
-|`_snwprintf`、 `_snwprintf_l`|\<stdio.h> 或 \<wchar.h>|  
+|`_snwprintf`, `_snwprintf_l`|\<stdio.h> 或 \<wchar.h>|  
   
  如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
@@ -314,7 +315,7 @@ Output:
 character count = 69  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
  [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   

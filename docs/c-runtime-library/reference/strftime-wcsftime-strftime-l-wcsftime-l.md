@@ -1,12 +1,9 @@
 ---
-title: "strftime、wcsftime、_strftime_l、_wcsftime_l | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: strftime、wcsftime、_strftime_l、_wcsftime_l | Microsoft Docs
+ms.custom: ''
+ms.date: 03/22/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apiname:
 - strftime
@@ -30,6 +27,8 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
+- _strftime_l
+- _wcsftime_l
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,187 +40,169 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 990dab2b4cedbdb464a2e546a4c83758cb46c89a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc71dc09b6634e01b1ba78621344dfb5c589c8d5
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
-設定時間字串的格式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-size_t strftime(  
-   char *strDest,  
-   size_t maxsize,  
-   const char *format,  
-   const struct tm *timeptr   
-);  
-size_t _strftime_l(  
-   char *strDest,  
-   size_t maxsize,  
-   const char *format,  
-   const struct tm *timeptr,  
-   _locale_t locale  
-);  
-size_t wcsftime(  
-   wchar_t *strDest,  
-   size_t maxsize,  
-   const wchar_t *format,  
-   const struct tm *timeptr   
-);  
-size_t _wcsftime_l(  
-   wchar_t *strDest,  
-   size_t maxsize,  
-   const wchar_t *format,  
-   const struct tm *timeptr,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `strDest`  
- 輸出字串。  
-  
- `maxsize`  
- `strDest` 緩衝區的大小，以字元 (`char` 或 `wchart_t`) 為單位。  
-  
- `format`  
- 格式控制字串。  
-  
- `timeptr`  
- `tm` 資料結構。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- `strftime` 會傳回放在 `strDest` 中的字元數，而 `wcsftime` 會傳回對應的寬字元數。  
-  
- 如果總字元數 (包括結束 Null) 超個 `maxsize`，`strftime` 和 `wcsftime` 會傳回 0 且無法確定 `strDest` 的內容。  
-  
- `strDest` 中的字元數等於 `format` 中的常值字元數加上可能透過格式代碼新增至 `format` 的任何字元數。 字串的結束 Null 不會計入傳回值。  
-  
-## <a name="remarks"></a>備註  
- `strftime`和`wcsftime`函式格式`tm`時間值中的`timeptr`根據提供`format`引數和存放區的緩衝區中的結果`strDest`。 字串中最多可放置 `maxsize` 個字元。 如需 `timeptr` 結構中的欄位說明，請參閱 [asctime](../../c-runtime-library/reference/asctime-wasctime.md)。 `wcsftime` 是 `strftime` 的寬字元對應項，其字串指標引數會指向寬字元字串。 除此之外，這些函式的行為相同。  
-  
+
+設定時間字串的格式。
+
+## <a name="syntax"></a>語法
+
+```
+size_t strftime(
+   char *strDest,
+   size_t maxsize,
+   const char *format,
+   const struct tm *timeptr
+);
+size_t _strftime_l(
+   char *strDest,
+   size_t maxsize,
+   const char *format,
+   const struct tm *timeptr,
+   _locale_t locale
+);
+size_t wcsftime(
+   wchar_t *strDest,
+   size_t maxsize,
+   const wchar_t *format,
+   const struct tm *timeptr
+);
+size_t _wcsftime_l(
+   wchar_t *strDest,
+   size_t maxsize,
+   const wchar_t *format,
+   const struct tm *timeptr,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*strDest*<br/>
+輸出字串。
+
+*maxsize*<br/>
+大小*strDest*以字元為單位的緩衝區 (**char**或**wchar_t**)。
+
+*格式*<br/>
+格式控制字串。
+
+*timeptr*<br/>
+**tm**資料結構。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+`strftime` 傳回的字元放在數*strDest*和`wcsftime`傳回對應的寬字元數目。
+
+如果的總字元數，包括結束的 null 是多個*maxsize*，這兩個`strftime`和`wcsftime`傳回 0 到的內容*strDest*就無法確定。
+
+中的字元數*strDest*等於常值中的字元數*格式*以及可能會加入至任何字元*格式*透過格式化程式碼。 字串的結束 Null 不會計入傳回值。
+
+## <a name="remarks"></a>備註
+
+`strftime`和`wcsftime`函式格式**tm**時間值中的*timeptr*根據提供*格式*引數並將結果儲存在緩衝區*strDest*。 最多*maxsize*字元會放在字串中。 如需說明中的欄位*timeptr*結構，請參閱[asctime](../../c-runtime-library/reference/asctime-wasctime.md)。 `wcsftime` 是 `strftime` 的寬字元對應項，其字串指標引數會指向寬字元字串。 除此之外，這些函式的行為相同。
+
 > [!NOTE]
->  Visual C++ 2005 之前的版本文件將 `wcsftime` 的 `format` 參數描述成具有資料類型 `const wchar_t *`，但 `format` 資料類型的實際實作為 `const char *`。 實作`format`資料類型已更新以反映的先前和目前文件，也就是`const wchar_t *`。  
-  
- 這個函式會驗證它的參數。 如果`strDest`， `format`，或`timeptr`為 null 指標，或如果`tm`資料結構所定址`timeptr`無效 （例如，如果它包含超出範圍值的時間或日期），或如果`format`字串包含無效格式化程式碼無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EINVAL`。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
-  
- `format` 引數是由一或多個程式碼所組成；例如在 `printf` 中，格式代碼前會加上百分比符號 (`%`)。 不是以字元`%`會複製到不變`strDest`。 目前地區設定的 `LC_TIME` 分類會影響 `strftime` 的輸出格式 (如需 `LC_TIME` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md))。沒有 `_l` 後置字元的函式會使用目前設定的地區設定。 具有 `_l` 後置字元的函式版本與其相同，只不過它會採用地區設定作為參數，並使用該地區設定，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
- 以下列出 `strftime` 的格式代碼：  
-  
- `%a`  
- 工作日名稱縮寫  
-  
- `%A`  
- 完整工作日名稱  
-  
- `%b`  
- 月份名稱縮寫  
-  
- `%B`  
- 完整月份名稱  
-  
- `%c`  
- 適用於地區設定的日期和時間表示  
-  
- `%d`  
- 月份 (01 – 31) 的十進位數字日期  
-  
- `%H`  
- 24 小時制的小時 (00-23)  
-  
- `%I`  
- 12 小時制 (01-12) 的  
-  
- `%j`  
- 一天的年份為十進位數字 (001 到 366)  
-  
- `%m`  
- 月份 (01-12) 的十進位數字  
-  
- `%M`  
- 十進位數字為分鐘 (00-59)  
-  
- `%p`  
- 目前地區設定的上下/下午 12 小時制的指標  
-  
- `%S`  
- 第二個十進位數字 (00-59)  
-  
- `%U`  
- 十進位數字，其中星期日是週第一天的年度週次 (00-53)  
-  
- `%w`  
- Weekday 為十進位數字 (0-6;星期日是 0）  
-  
- `%W`  
- 十進位數字，以星期一做為一週的第一天的年度週次 (00-53)  
-  
- `%x`  
- 適用於目前地區設定的日期表示  
-  
- `%X`  
- 適用於目前地區設定的時間表示  
-  
- `%y`  
- 不含世紀，為十進位數字的年份 (00-99)  
-  
- `%Y`  
- 含世紀的年份，以十進位數字表示  
-  
- `%z, %Z`  
- 時區名稱或時區縮寫，視登錄設定而定；如果時區不明，則沒有任何字元  
-  
- `%%`  
- 百分比符號  
-  
- 如同 `printf` 函式，`#` 旗標前面可以加上任何格式代碼。 在此情況下，格式代碼的意義會變更如下。  
-  
-|格式化程式碼|意義|  
-|-----------------|-------------|  
-|`%#a, %#A, %#b, %#B, %#p, %#X, %#z, %#Z, %#%`|會忽略 `#` 旗標。|  
-|`%#c`|適用於目前地區設定的完整日期和時間表示。 例如：「1995 年 3 月 14 日星期二 12:41:29」。|  
-|`%#x`|適用於目前地區設定的完整日期表示。 例如：「1995 年 3 月 14 日星期二」。|  
-|`%#d, %#H, %#I, %#j, %#m, %#M, %#S, %#U, %#w, %#W, %#y, %#Y`|移除前置零 (如果有)。|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`strftime`|\<time.h>|  
-|`wcsftime`|\<time.h> 或 \<wchar.h>|  
-|`_strftime_l`|\<time.h>|  
-|`_wcsftime_l`|\<time.h> 或 \<wchar.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
- 請參閱 [time](../../c-runtime-library/reference/time-time32-time64.md) 的範例。  
-  
-## <a name="see-also"></a>請參閱  
- [地區設定](../../c-runtime-library/locale.md)   
- [時間管理](../../c-runtime-library/time-management.md)   
- [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [localeconv](../../c-runtime-library/reference/localeconv.md)   
- [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [strcoll 函式](../../c-runtime-library/strcoll-functions.md)   
- [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)
+>  在 Visual c + + 2005年之前的版本，文件所述*格式*參數`wcsftime`為具有資料型別`const wchar_t *`，但實際的實作*格式*資料類型為`const char *`。 實作*格式*資料類型已更新以反映的先前和目前文件，也就是`const wchar_t *`。
+
+這個函式會驗證它的參數。 如果*strDest*，*格式*，或*timeptr*為 null 指標，或如果**tm**資料結構所定址*timeptr*無效 （例如，如果它包含超出範圍值的時間或日期），或如果*格式*字串包含無效的格式化程式碼、 無效參數處理常式會叫用，中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，函數會傳回 0 和集合允許執行**errno**至**EINVAL**。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|`_tcsftime`|`strftime`|`strftime`|`wcsftime`|
+
+*格式*引數包含一個或多個程式碼，如下所示`printf`，格式化的代碼前面加上百分比符號 (**%**)。 不是以字元**%**會複製到不變`strDest`。 **LC_TIME**類別目前的地區設定會影響輸出格式設定的`strftime`。 (如需有關**LC_TIME**，請參閱[setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。)`strftime`和`wcsftime`函式會使用目前設定的地區設定。 `_strftime_l`和`_wcsftime_l`這些函式版本是一樣的只不過它們會做為參數的地區設定並使用，而非目前已設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+`strftime`函式支援這些格式化程式碼：
+
+|||
+|-|-|
+|程式碼|取代字串|
+|`%a`|地區設定的縮寫的星期幾名稱|
+|`%A`|完整的工作日名稱的地區設定|
+|`%b`|縮寫的月份名稱的地區設定|
+|`%B`|地區設定中的完整月份名稱|
+|`%c`|適用於地區設定的日期和時間表示|
+|`%C`|年份分成 100，而被截斷為整數，以十進位數字 (00−99)|
+|`%d`|十進位數字 (01 – 31) 月份日期|
+|`%D`|相當於 `%m/%d/%y`。|
+|`%e`|十進位數字 (1-31)，其中單一數字前置空格月份日期|
+|`%F`|相當於 `%Y-%m-%d`。|
+|`%g`|以十進位數字的 ISO 8601 週為基礎年份的最後 2 位數字 (00-99)|
+|`%G`|以十進位數字的 ISO 8601 週為基礎年份|
+|`%h`|縮寫的月份名稱 (相當於`%b`)|
+|`%H`|24 小時制的小時 (00-23)|
+|`%I`|12 小時制 (01-12) 的|
+|`%j`|以十進位數字 (001 到 366) 表示的年份的日期|
+|`%m`|(01-12) 的十進位數字月份|
+|`%M`|分鐘數的十進位數字 (00-59)|
+|`%n`|新行字元 (**\n**)|
+|`%p`|地區設定的 a.m./p.m.。 12 小時制的指標|
+|`%r`|地區設定的 12 小時制的時間|
+|`%R`|相當於 `%H:%M`。|
+|`%S`|第二個十進位數字 (00-59)|
+|`%t`|水平定位字元 (**\t**)|
+|`%T`|相當於`%H:%M:%S`，ISO 8601 時間格式|
+|`%u`|ISO 8601 週間日的十進位數字 (1-7;星期一為 1）|
+|`%U`|以十進位數字的年份的週次 (00-53)，其中第一個星期日是第 1 週的第一天|
+|`%V`|ISO 8601 週數的十進位數字 (00-53)|
+|`%w`|工作日的十進位數字 (0-6;星期日是 0）|
+|`%W`|以十進位數字的年份的週次 (00-53)，其中第一個星期一是第 1 週的第一天|
+|`%x`|日期表示地區設定|
+|`%X`|地區設定的時間表示法|
+|`%y`|不含世紀，為十進位數字的年份 (00-99)|
+|`%Y`|含世紀的年份，以十進位數字表示|
+|`%z`|從 UTC 的位移，採用 ISO 8601 格式。如果時區不知道任何字元|
+|`%Z`|地區設定的時區名稱或時區縮寫，取決於登錄設定。如果時區不知道任何字元|
+|`%%`|百分比符號|
+
+如同 `printf` 函式，`#` 旗標前面可以加上任何格式代碼。 在此情況下，格式代碼的意義會變更如下。
+
+|格式化程式碼|意義|
+|-----------------|-------------|
+|`%#a`, `%#A`, `%#b`, `%#B`, `%#g`, `%#G`, `%#h`, `%#n`, `%#p`, `%#t`, `%#u`, `%#w`, `%#X`, `%#z`, `%#Z`, `%#%`|會忽略 `#` 旗標。|
+|`%#c`|長時間的日期和時間表示法，適當的地區設定。 例如：「1995 年 3 月 14 日星期二 12:41:29」。|
+|`%#x`|完整日期表示，適當的地區設定。 例如：「1995 年 3 月 14 日星期二」。|
+|`%#d`, `%#D`, `%#e`, `%#F`, `%#H`, `%#I`, `%#j`, `%#m`, `%#M`, `%#r`, `%#R`, `%#S`, `%#T`, `%#U`, `%#V`, `%#W`, `%#y`, `%#Y`|移除前置的零或空格 （如果有的話）。|
+
+所產生的 ISO 8601 週和每週為基礎的年份`%V`， `%g`，和`%G`，會使用以星期一，開始一週第 1 週所在包含年 1 月第 4 個，也就是包含至少 4 天的年份的第一週的一週。 如果年份的第一個星期一第 2，3，或第 4 個，上述天屬於上述年的最後一週。 如這些發行日， `%V` 53，和會取代`%g`和`%G`取代上述年中的數字。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|`strftime`|\<time.h>|
+|`wcsftime`|\<time.h> 或 \<wchar.h>|
+|`_strftime_l`|\<time.h>|
+|`_wcsftime_l`|\<time.h> 或 \<wchar.h>|
+
+`_strftime_l`和`_wcsftime_l`函式是 Microsoft 專有。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+請參閱 [time](../../c-runtime-library/reference/time-time32-time64.md) 的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[地區設定](../../c-runtime-library/locale.md) <br/>
+[時間管理](../../c-runtime-library/time-management.md) <br/>
+[字串操作](../../c-runtime-library/string-manipulation-crt.md) <br/>
+[localeconv](../../c-runtime-library/reference/localeconv.md) <br/>
+[setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) <br/>
+[strcoll 函式](../../c-runtime-library/strcoll-functions.md) <br/>
+[strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](../../c-runtime-library/reference/strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

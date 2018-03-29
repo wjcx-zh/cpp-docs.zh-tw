@@ -1,27 +1,27 @@
 ---
-title: "加入控制項 (ATL 教學課程，第 2 部分) |Microsoft 文件"
-ms.custom: 
+title: 加入控制項 (ATL 教學課程，第 2 部分) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>加入控制項 (ATL 教學課程，第 2 部分)
 在此步驟中，您將控制項加入您的專案，建置，和測試在網頁上。  
@@ -32,9 +32,9 @@ ms.lasthandoff: 12/21/2017
   
 1.  在 類別檢視，以滑鼠右鍵按一下多邊形專案。  
   
-2.  指向**新增**捷徑功能表，然後按一下 **類別**子功能表中。  
+2.  指向**新增**捷徑功能表，然後按一下 **新項目**子功能表中。  
   
-     **加入類別** 對話方塊隨即出現。 在左側的樹狀結構中，會列出不同的物件類別。  
+     [新增項目] 對話方塊隨即出現。 在左側的樹狀結構中，會列出不同的物件類別。  
   
 3.  按一下**ATL**資料夾。  
   
@@ -113,8 +113,8 @@ ms.lasthandoff: 12/21/2017
   
  接下來，您會將自訂屬性加入控制項。  
   
- [步驟 1 至](../atl/creating-the-project-atl-tutorial-part-1.md)&#124;[至步驟 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [步驟 1 至](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [至步驟 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
 

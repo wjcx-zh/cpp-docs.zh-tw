@@ -1,12 +1,9 @@
 ---
 title: _countof Macro | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 03/22/2018
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,71 +26,75 @@ helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f83244ce231ff3e11bc6fee1bbd221840fc1b83
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="countof-macro"></a>_countof 巨集
-計算靜態配置陣列中的元素數目。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-size_t _countof(   
-   array  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `array`  
- 陣列的名稱。  
-  
-## <a name="return-value"></a>傳回值  
- 陣列中的元素數目，表示為 `size_t`。  
-  
-## <a name="remarks"></a>備註  
- 請確定 `array` 實際上是陣列，而不是指標。 在 C 中，如果 `array` 是指標，則 `_countof` 將產生錯誤的結果。 在 C++ 中，如果 `array` 是指標，則 `_countof` 將無法編譯。  
-  
-## <a name="requirements"></a>需求  
-  
-|巨集|必要的標頭|  
-|-----------|---------------------|  
-|`_countof`|\<stdlib.h>|  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_countof.cpp  
-#define _UNICODE  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <tchar.h>  
-  
-int main( void )  
-{  
-   _TCHAR arr[20], *p;  
-   printf( "sizeof(arr) = %zu bytes\n", sizeof(arr) );  
-   printf( "_countof(arr) = %zu elements\n", _countof(arr) );  
-   // In C++, the following line would generate a compile-time error:  
-   // printf( "%zu\n", _countof(p) ); // error C2784 (because p is a pointer)  
-  
-   _tcscpy_s( arr, _countof(arr), _T("a string") );  
-   // unlike sizeof, _countof works here for both narrow- and wide-character strings  
-}  
-```  
-  
-```Output  
-sizeof(arr) = 40 bytes  
-_countof(arr) = 20 elements  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [sizeof 運算子](../../cpp/sizeof-operator.md)
+
+計算靜態配置陣列中的項目數。
+
+## <a name="syntax"></a>語法
+
+```C
+#define _countof(array) (sizeof(array) / sizeof(array[0]))
+```
+
+### <a name="parameters"></a>參數
+
+*array*<br/>
+陣列的名稱。
+
+## <a name="return-value"></a>傳回值
+
+在陣列中，以表示的項目數**size_t**。
+
+## <a name="remarks"></a>備註
+
+`_countof` 會實作為函式類似前置處理器巨集。 C + + 版本都有額外的範本機制，來偵測在編譯時期，如果將指標傳遞而不是以靜態方式宣告陣列。
+
+請確認*陣列*其實是一個陣列，而非指標。 在 C 中，`_countof`會產生錯誤的結果，如果*陣列*的指標。 C + +`_countof`無法編譯如果*陣列*的指標。  陣列當做參數傳遞至函式*指標 decays*，這表示，在函式，您無法使用`_countof`來判斷陣列的範圍。
+
+## <a name="requirements"></a>需求
+
+|巨集|必要的標頭|
+|-----------|---------------------|
+|`_countof`|\<stdlib.h>|
+
+## <a name="example"></a>範例
+
+```cpp
+// crt_countof.cpp
+#define _UNICODE
+#include <stdio.h>
+#include <stdlib.h>
+#include <tchar.h>
+
+int main( void )
+{
+   _TCHAR arr[20], *p;
+   printf( "sizeof(arr) = %zu bytes\n", sizeof(arr) );
+   printf( "_countof(arr) = %zu elements\n", _countof(arr) );
+   // In C++, the following line would generate a compile-time error:
+   // printf( "%zu\n", _countof(p) ); // error C2784 (because p is a pointer)
+
+   _tcscpy_s( arr, _countof(arr), _T("a string") );
+   // unlike sizeof, _countof works here for both narrow- and wide-character strings
+}
+```
+
+```Output
+sizeof(arr) = 40 bytes
+_countof(arr) = 20 elements
+```
+
+## <a name="see-also"></a>另請參閱
+
+[sizeof 運算子](../../cpp/sizeof-operator.md)<br/>

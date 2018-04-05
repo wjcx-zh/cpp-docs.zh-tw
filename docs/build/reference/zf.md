@@ -1,6 +1,6 @@
 ---
-title: "/Zf （產生更快的 PDB） |Microsoft 文件"
-ms.date: 02/22/2018
+title: /Zf （產生更快的 PDB） |Microsoft 文件
+ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7012777643f993c552f79b58a02d4806c0ce4caa
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 7ae27e08e79d19e58c8440a5d7e5161eac9c306f
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf （速度 PDB 的產生）
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/08/2018
 
 因為**/Zf**選項僅適用於產生 PDB，它需要[/Zi](z7-zi-zi-debug-information-format.md)或[/ZI](z7-zi-zi-debug-information-format.md)選項。
 
-**/Zf**選項從開始使用 Visual Studio 2017 版本 15.1，並預設為關閉。
+**/Zf**選項是從開始使用 Visual Studio 2017 版本 15.1，其中它預設為關閉。 從 Visual Studio 2017 版本 15.7 Preview 3，此選項預設為開啟時**/Zi**或**/ZI**啟用選項。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
@@ -46,5 +46,5 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="see-also"></a>另請參閱
 
-[依字母順序排列的編譯器選項](compiler-options-listed-alphabetically.md)  
-[/MP (使用多處理序建置)](mp-build-with-multiple-processes.md)  
+[依字母順序排列的編譯器選項](compiler-options-listed-alphabetically.md)<br/>
+[/MP (使用多處理序建置)](mp-build-with-multiple-processes.md)<br/>

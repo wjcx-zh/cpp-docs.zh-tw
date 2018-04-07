@@ -1,12 +1,12 @@
 ---
-title: "靜態成員 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 靜態成員 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 420139a8e7eba02411ef0e1e3cf39cecc5b3e97a
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="static-members-c"></a>靜態成員 (C++)
 類別可以包含靜態資料成員和成員函式。 當資料成員宣告為**靜態**，只能有一個複本的資料會保留類別的所有物件。
   
  靜態資料成員不是特定類別類型之物件的一部分。 因此，靜態資料成員的宣告不視為定義。 資料成員是在類別範圍中宣告的，不過，定義是在檔案範圍執行。 這些靜態成員具有外部連結。 下面這個範例可說明這點：  
   
-```  
+```cpp  
 // static_data_members.cpp  
 class BufferedOutput  
 {  
@@ -72,13 +72,13 @@ int main()
   
  靜態資料成員可以在不參考類別類型物件的情況下參考。 使用 `BufferedOutput` 物件撰寫的位元組數目可以如下取得：  
   
-```  
+```cpp  
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- 若要靜態成員存在，不需要有類別類型的物件存在。 靜態成員也可以存取使用成員選取 (**。** 和 **->** ) 運算子。 例如:   
+ 若要靜態成員存在，不需要有類別類型的物件存在。 靜態成員也可以存取使用成員選取 (**。** 和**->**) 運算子。 例如:   
   
-```  
+```cpp  
 BufferedOutput Console;  
   
 long nBytes = Console.bytecount;  
@@ -90,5 +90,5 @@ long nBytes = Console.bytecount;
   
  靜態成員的類型未以類別名稱限定。 因此，`BufferedOutput::bytecount` 的類型是 `long`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

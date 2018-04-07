@@ -1,33 +1,33 @@
 ---
-title: "智慧型指標 （現代 c + +） |Microsoft 文件"
-ms.custom: 
+title: 智慧型指標 （現代 c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 
+caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="smart-pointers-modern-c"></a>智慧型指標 (現代 C++)
 在現代 c + + 程式設計中，標準程式庫包含*智慧型指標*、 用來協助確保程式可用的記憶體和資源流失，和例外狀況之虞。  
   
 ## <a name="uses-for-smart-pointers"></a>智慧型指標的用途  
- 智慧型指標中所定義`std`命名空間中的[\<記憶體 >](../standard-library/memory.md)標頭檔。 它們是非常重要[RAII](../cpp/objects-own-resources-raii.md)或*資源擷取為 Initialialization*程式設計慣用語。 這個慣用語主要目標是確保在初始化物件的同時會進行擷取資源，使建立物件的所有資源在一行程式碼中建立並且準備就緒。 實際上，RAII 的主要原則就是將任何堆積配置資源的擁有權 (例如，動態配置記憶體或系統物件控制代碼) 提供給含有刪除或釋放資源程式碼的解構函式，以及任何相關清除程式碼的堆疊配置物件。  
+ 智慧型指標中所定義`std`命名空間中的[\<記憶體 >](../standard-library/memory.md)標頭檔。 它們是非常重要[RAII](../cpp/objects-own-resources-raii.md)或*資源擷取即初始化*程式設計慣用語。 這個慣用語主要目標是確保在初始化物件的同時會進行擷取資源，使建立物件的所有資源在一行程式碼中建立並且準備就緒。 實際上，RAII 的主要原則就是將任何堆積配置資源的擁有權 (例如，動態配置記憶體或系統物件控制代碼) 提供給含有刪除或釋放資源程式碼的解構函式，以及任何相關清除程式碼的堆疊配置物件。  
   
  大部分情況下，當您初始化原始指標或資源控制代碼以指向實際資源時，會立即將指標傳遞給智慧型指標。 在現代 C++ 中，原始指標只能用於極重視效能且擁有權不會混淆之有限範圍的小型程式碼區塊、迴圈或 Helper 函式。  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/21/2017
  使用這些智慧型指標做為封裝純舊 C++ 物件 (POCO) 指標的首要選擇。  
   
 -   `unique_ptr`   
-     只允許一個基礎指標的擁有者。 用做 POCO 的預設選項，除非您確信自己需要 `shared_ptr`。 可以移至新擁有者，但不可複製或共用。 替換已被取代的 `auto_ptr`。 與 `boost::scoped_ptr` 比較。 `unique_ptr`既小又有效率。大小是一個指標，可支援快速插入和擷取的 c + + 標準程式庫集合右值參考。 標頭檔：`<memory>`。 如需詳細資訊，請參閱[How to： 建立和使用 unique_ptr 執行個體](../cpp/how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 類別](../standard-library/unique-ptr-class.md)。  
+     只允許一個基礎指標的擁有者。 用做 POCO 的預設選項，除非您確信自己需要 `shared_ptr`。 可以移至新擁有者，但不可複製或共用。 替換已被取代的 `auto_ptr`。 與 `boost::scoped_ptr` 比較。 `unique_ptr` 既小又有效率。大小是一個指標，可支援快速插入和擷取的 c + + 標準程式庫集合右值參考。 標頭檔：`<memory>`。 如需詳細資訊，請參閱[How to： 建立和使用 unique_ptr 執行個體](../cpp/how-to-create-and-use-unique-ptr-instances.md)和[unique_ptr 類別](../standard-library/unique-ptr-class.md)。  
   
 -   `shared_ptr`   
      參考計數的智慧型指標。 在您想要將原始指標指派給多個擁有者時使用，例如，當您從容器傳回指標的複本，但是想要保留原來的指標時。 原始指標只有在所有的 `shared_ptr` 擁有者都超出範圍或放棄擁有權之後，才會被刪除。 大小是兩個指標；一個針對物件，另一個則針對含有參考計數的共用控制區塊。 標頭檔：`<memory>`。 如需詳細資訊，請參閱[How to： 建立和使用 shared_ptr 執行個體](../cpp/how-to-create-and-use-shared-ptr-instances.md)和[shared_ptr 類別](../standard-library/shared-ptr-class.md)。  
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/21/2017
  [CAutoPtrList 類別](../atl/reference/cautoptrlist-class.md)  
  將方法封裝以操作 `CAutoPtr` 節點清單的類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)   

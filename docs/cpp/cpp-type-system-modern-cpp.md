@@ -1,27 +1,27 @@
 ---
-title: "C + + 類型系統 （現代 c + +） |Microsoft 文件"
-ms.custom: 
+title: C + + 類型系統 （現代 c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="c-type-system-modern-c"></a>C++ 類型系統 (現代 C++)
 概念*類型*c + + 中非常重要。 每個變數、函式引數和函式傳回值都必須有類型才能編譯。 此外，在評估之前，編譯器會以隱含的方式指定每一個運算式 (包括常值) 的類型。 類型的一些範例包括`int`儲存整數值，`double`儲存浮點數值 (也稱為*純量*資料型別)，或標準程式庫類別[std::basic_string](../standard-library/basic-string-class.md)儲存文字。 您可以藉由定義 `class` 或 `struct`，建立自己的類型。 此類型會指定配置給變數 (或運算式結果) 的記憶體數量、可在該變數中存放的值種類、這些值 (位元模式) 的解譯方式，以及可對其執行的作業。 本文包含 C++ 類型系統主要功能的簡略概觀。  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  下列範例示範一些簡單的變數宣告，這些宣告各有一些描述。 這個範例也會示範編譯器如何使用類型資訊允許或不允許對變數進行某些後續作業。  
   
-```  
+```cpp  
   
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
@@ -70,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
   
  下圖顯示內建類型的相對大小：  
   
- ![大小 （位元組） 的內建 &#45; 類型中](../cpp/media/built-intypesizes.png "內建 inTYpeSizes")  
+ ![大小 （位元組） 的內建&#45;類型中](../cpp/media/built-intypesizes.png "內建 inTYpeSizes")  
   
  下表列出最常用的基本類型：  
   
@@ -91,7 +91,7 @@ int maxValue;                // Not recommended! maxValue contains
 ## <a name="const-type-qualifier"></a>常數類型限定詞  
  任何內建或使用者定義的類型都可以由 const 關鍵字限定。 此外，成員函式可能是受 `const` 限定的，甚至是 `const` 多載。 `const` 類型的值，在初始化之後，就無法修改。  
   
-```  
+```cpp  
   
 const double PI = 3.1415;  
 PI = .75 //Error. Cannot modify const variable.  
@@ -119,7 +119,7 @@ PI = .75 //Error. Cannot modify const variable.
   
  您首先應該知道的事就是，宣告原始指標變數時只會配置，在儲存該指標在被取值時所參考之記憶體位置位址時所需的記憶體。 資料值本身的記憶體配置 (也稱為*備份存放區*) 尚未配置。 換句話說，宣告原始指標變數，即是在建立記憶體位址變數，而不是實際資料變數。 在確定變數包含可用於備份存放區的有效位址之前就先取值指標變數，會導致程式中產生未定義的行為 (通常是嚴重錯誤)。 下列範例示範這種錯誤：  
   
-```  
+```cpp  
   
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
@@ -131,7 +131,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  這個範例會對指標類型取值，但不配置任何記憶體的來儲存指派給它的實際整數資料或有效記憶體位址。 下列程式碼示範這些錯誤：  
   
-```  
+```cpp  
   
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
@@ -151,7 +151,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  不過，很容易會忘記刪除，動態配置物件尤其是在複雜程式碼，造成資源 bug，稱為*記憶體流失*。 因此，強烈建議您不要在現代 C++ 使用原始指標。 通常最好是原始指標包裝在[智慧型指標](../cpp/smart-pointers-modern-cpp.md)，這樣就會自動釋放記憶體 （當程式碼超出智慧型指標範圍時），則會叫用其解構函式; 使用智慧型指標您幾乎排除了整個類別的 c + + 程式中的 bug。 下列範例中，假設 `MyClass` 是具有公用方法 `DoSomeWork();` 的使用者定義類型  
   
-```  
+```cpp  
   
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
@@ -179,7 +179,7 @@ void someFunction() {
 |[實值型別](../cpp/value-types-modern-cpp.md)|描述*實值型別的*以及與其用途相關的問題。|  
 |[型別轉換和類型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)|描述一般類型轉換問題並顯示如何避免這些問題。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

@@ -14,11 +14,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6799b1b53366d342dc2dacec7bff756c7396d7cb
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 版中的 C++ 一致性改善
 
@@ -88,7 +88,7 @@ Lambda 運算式中的 `*this` 物件現已可以值擷取。 這可用在平行
 
 ### <a name="removing-operator-for-bool"></a>移除 bool 的 operator++
 
-`bool` 類型已不再支援 `operator++`。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
+`bool` 類型已不再支援 `operator++`。 如需詳細資訊，請參閱[移除已過時的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
 
 ### <a name="removing-deprecated-register-keyword"></a>移除已淘汰的 "register" 關鍵字
 
@@ -1711,6 +1711,32 @@ int main() {
 }
 
 ```
+
+### <a name="variadic-template-constructor-base-class-initialization-list"></a>Variadic 範本建構函式基底類別初始化清單
+
+在先前的 Visual Studio 版本中，有一個缺少範本引數的 variadic 範本建構函式基底類別初始化清單錯誤地被允許而未產生錯誤。 在 Visual Studio 2017 15.7 版中，會引發編譯器錯誤。
+
+Visual Studio 2017 15.7 版中的下列程式碼範例會引發*錯誤 C2614: D\<int>: 成員初始化不合法: 'B' 不是基底或成員類別*
+
+```cpp
+template<typename T>
+struct B {};
+
+template<typename T>
+struct D : B<T>
+{
+
+    template<typename ...C>
+    D() : B() {} // C2614. Missing template arguments to B.
+};
+
+D<int> d;
+
+```
+
+若要修正錯誤，請將 B() 運算式變更為 B\<T>()。
+
+
 
 ## <a name="see-also"></a>另請參閱
 

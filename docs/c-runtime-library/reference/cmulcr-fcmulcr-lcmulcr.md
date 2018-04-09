@@ -1,5 +1,5 @@
 ---
-title: creal、crealf、creall | Microsoft Docs
+title: _Cmulcr _FCmulcr，_LCmulcr |Microsoft 文件
 ms.custom: ''
 ms.date: 03/30/2018
 ms.technology:
@@ -7,9 +7,9 @@ ms.technology:
 - devlang-cpp
 ms.topic: reference
 apiname:
-- creal
-- crealf
-- creall
+- _Cmulcr
+- _FCmulcr
+- _LCmulcr
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,75 +24,74 @@ apilocation:
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
-- creal
-- crealf
-- creall
-- complex/creal
-- complex/crealf
-- complex/creall
+- _Cmulcr
+- _FCmulcr
+- _LCmulcr
+- complex/_Cmulcr
+- complex/_FCmulcr
+- complex/_LCmulcr
 dev_langs:
 - C++
 helpviewer_keywords:
-- creal function
-- crealf function
-- creall function
-ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
+- _Cmulcr function
+- _FCmulcr function
+- _LCmulcr function
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc43c72c4fcbaf9d24c1a2c4cc7b7923d0c67878
+ms.openlocfilehash: a1de966b1eb5bd48d4a3120d23c9ffc0de647956
 ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="creal-crealf-creall"></a>creal、crealf、creall
+# <a name="cmulcr-fcmulcr-lcmulcr"></a>_Cmulcr _FCmulcr _LCmulcr
 
-擷取複數的實數部分。
+將複數的浮點數。
 
 ## <a name="syntax"></a>語法
 
 ```C
-double creal( _Dcomplex z );
-float crealf( _Fcomplex z );
-long double creall( _Lcomplex z );
-```
-
-```cpp
-float creal( _Fcomplex z );  // C++ only
-long double creal( _Lcomplex z );  // C++ only
+_Dcomplex _Cmulcr( _Dcomplex x, double y );
+_Fcomplex _FCmulcr( _Fcomplex x, float y );
+_Lcomplex _LCmulcr( _Lcomplex x, long double y );
 ```
 
 ### <a name="parameters"></a>參數
 
-*z*<br/>
-複數。
+*x*<br/>
+要相乘的複雜運算元的其中一個。
+
+*y*<br/>
+要相乘的浮點運算元。
 
 ## <a name="return-value"></a>傳回值
 
-實數部分*z*。
+A **_Dcomplex**， **_Fcomplex**，或**_Lcomplex**結構，表示複雜複數的乘積*x*和flaoting 點數*y*。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，所以您可以呼叫的多載`creal`採用**_Fcomplex**或**_Lcomplex**值，並傳回**float**或**長double**值。 在 C 程式中，`creal`一律採用**_Dcomplex**值並傳回**double**值。
+因為內建算術運算子無法運作的複雜型別中，Microsoft 實作**_Cmulcr**， **_FCmulcr**，和**_LCmulcr**函式簡化的浮點類型的複雜型別的乘法。
 
 ## <a name="requirements"></a>需求
 
 |常式|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|`creal`, `crealf`, `creall`|\<complex.h>|\<ccomplex>|
+|`_Cmulcr`,`_FCmulcr`, `_LCmulcr`|\<complex.h>|\<ccomplex>|
 
-**_Fcomplex**， **_Dcomplex**，和**_Lcomplex**型別是 Microsoft 特定的對等的未實作的原生 C99 類型**float _Complex**， **double _Complex**，和**長雙精度 _Complex**分別。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+這些函式是 Microsoft 特定的。 型別**_Dcomplex**， **_Fcomplex**，和**_Lcomplex**是 Microsoft 特定對等項目未實作 C99 原生類型**double _Complex**， **float _Complex**，和**長雙精度 _Complex**分別。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_Cbuild _FCbuild _LCbuild](../../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)<br/>
+[_Cmulcc, _FCmulcc, _LCmulcc](../../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)<br/>
 [norm、normf、norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
 [cproj、cprojf、cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
 [conj、conjf、conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
+[creal、crealf、creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
 [cimag、cimagf、cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
 [carg、cargf、cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
 [cabs、cabsf、cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>

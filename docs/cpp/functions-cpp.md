@@ -23,11 +23,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a78f3bf043c08586916a1776806b0a759beb827
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -310,6 +310,35 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
+<<<<<<< HEAD
+4. 除了使用本身的傳回值，您可以 「 傳回 」 值藉由定義任何數目的參數使用傳址方式傳遞，以便函式可以修改或初始化之物件的呼叫端提供的值。 如需詳細資訊，請參閱[參考類型函式引數](reference-type-function-arguments.md)。  
+  
+## <a name="function-pointers"></a>函式指標  
+ C++ 支援函式指標的方式與 C 語言相同。 不過，較具類型安全的替代方案通常是使用函式物件。  
+  
+ 如果要宣告傳回函式指標類型的函式，建議您使用 `typedef` 宣告函式指標類型的別名。  例如  
+  
+```  
+typedef int (*fp)(int);  
+fp myFunction(char* s); // function returning function pointer  
+```  
+  
+ 如果沒有這樣做，函式宣告的適當語法可能會從函式指標的宣告子語法推算，方法是將識別項 (在上述範例中為 `fp`) 取代為函式名稱和引數清單，如下所示：  
+  
+```  
+int (*myFunction(char* s))(int);  
+```  
+  
+ 上述宣告相當於上面使用 typedef 的宣告。  
+  
+## <a name="see-also"></a>另請參閱  
+ [函式多載](../cpp/function-overloading.md)   
+ [具有變數引數清單的函式](../cpp/functions-with-variable-argument-lists-cpp.md)   
+ [明確預設和刪除函式](../cpp/explicitly-defaulted-and-deleted-functions.md)   
+ [函式的引數相依名稱 (Koenig) 查閱](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
+ [預設引數](../cpp/default-arguments.md)   
+ [內嵌函式](../cpp/inline-functions-cpp.md)
+=======
 ## <a name="returning-multiple-values-from-a-function"></a>從函數傳回多個值
 
 有各種方式從函式傳回一個以上的值：
@@ -446,3 +475,4 @@ int (*myFunction(char* s))(int);
 - [函式上的引數相依名稱 (Koenig) 查閱](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [預設引數](../cpp/default-arguments.md)
 - [內嵌函式](../cpp/inline-functions-cpp.md)
+>>>>>>> 主要

@@ -1,12 +1,12 @@
 ---
-title: "如何： 在 MSBuild 專案中使用建置事件 |Microsoft 文件"
-ms.custom: 
+title: 如何： 在 MSBuild 專案中使用建置事件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen

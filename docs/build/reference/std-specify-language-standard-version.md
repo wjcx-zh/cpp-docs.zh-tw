@@ -1,10 +1,10 @@
 ---
-title: "-std （指定語言 Standard 版本） |Microsoft 文件"
-ms.custom: 
+title: -std （指定語言 Standard 版本） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - /std
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen

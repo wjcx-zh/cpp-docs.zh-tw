@@ -1,12 +1,12 @@
 ---
-title: "-GT （支援 Fiber-safe 執行緒區域儲存區） |Microsoft 文件"
-ms.custom: 
+title: -GT （支援 Fiber-safe 執行緒區域儲存區） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen

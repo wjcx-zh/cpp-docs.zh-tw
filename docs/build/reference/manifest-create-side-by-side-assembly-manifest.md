@@ -1,12 +1,12 @@
 ---
-title: "-資訊清單 （建立為並存組件資訊清單） |Microsoft 文件"
-ms.custom: 
+title: -資訊清單 （建立為並存組件資訊清單） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateManifest
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen

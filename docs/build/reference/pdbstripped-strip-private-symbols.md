@@ -1,12 +1,12 @@
 ---
-title: "-PDBSTRIPPED （移除專用符號） |Microsoft 文件"
-ms.custom: 
+title: -PDBSTRIPPED （移除專用符號） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - /pdbstripped
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - PDB files, stripping private symbols
 - PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

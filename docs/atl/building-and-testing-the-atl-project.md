@@ -1,12 +1,12 @@
 ---
-title: "建置和測試 ATL 專案 |Microsoft 文件"
-ms.custom: 
+title: 建置和測試 ATL 專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - composite controls, building and testing the project
 - composite controls, containers for
 ms.assetid: 5c1541f8-f6cb-4c22-bd22-c66bcfbaa077
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen

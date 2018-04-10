@@ -1,12 +1,12 @@
 ---
-title: ".Obj 檔做為連結器輸入 |Microsoft 文件"
-ms.custom: 
+title: .Obj 檔做為連結器輸入 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++

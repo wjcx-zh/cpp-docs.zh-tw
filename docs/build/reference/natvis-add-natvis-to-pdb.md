@@ -1,7 +1,7 @@
 ---
-title: "-NATVIS （加入至 PDB 的 Natvis） |Microsoft 文件"
+title: -NATVIS （加入至 PDB 的 Natvis） |Microsoft 文件
 ms.date: 08/10/2017
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.technology:
 - cpp-tools
 ms.topic: article

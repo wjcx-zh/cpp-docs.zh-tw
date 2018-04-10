@@ -1,12 +1,12 @@
 ---
-title: "-Fd （程式資料庫檔名） |Microsoft 文件"
-ms.custom: 
+title: -Fd （程式資料庫檔名） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - /FD
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - .pdb files, creating
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen

@@ -1,17 +1,17 @@
 ---
-title: "逐步解說： 編譯 C + + /CLI 程式命令列上的 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 編譯 C + + /CLI 程式命令列上的 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen

@@ -1,12 +1,12 @@
 ---
-title: "-防護 （啟用控制流程防護） |Microsoft 文件"
-ms.custom: 
+title: -防護 （啟用控制流程防護） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - /guard
@@ -14,7 +14,7 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen

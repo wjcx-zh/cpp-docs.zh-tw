@@ -1,12 +1,12 @@
 ---
-title: "相依性的副作用 |Microsoft 文件"
-ms.custom: 
+title: 相依性的副作用 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - dependencies, side effects
 - NMAKE program, dependents
 ms.assetid: d4e8db25-fdc0-4d73-81ec-1538f2e1b3e8
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen

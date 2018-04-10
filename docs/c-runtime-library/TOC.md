@@ -29,6 +29,7 @@
 ## [緩衝區操作](buffer-manipulation.md)
 ## [位元組分類](byte-classification.md)
 ## [字元分類](character-classification.md)
+## [複雜的數學運算支援](complex-math-support.md)
 ## [資料對齊](data-alignment.md)
 ## [資料轉換](data-conversion.md)
 ## [偵錯常式](debug-routines.md)

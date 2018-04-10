@@ -1,12 +1,12 @@
 ---
-title: "IDocHostUIHandlerDispatch 介面 |Microsoft 文件"
-ms.custom: 
+title: IDocHostUIHandlerDispatch 介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - IDocHostUIHandlerDispatch
@@ -16,7 +16,7 @@ dev_langs:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen

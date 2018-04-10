@@ -1,12 +1,12 @@
 ---
-title: "uint_3 類別 |Microsoft 文件"
-ms.custom: 
+title: uint_3 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::get_xz
@@ -81,7 +81,7 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen

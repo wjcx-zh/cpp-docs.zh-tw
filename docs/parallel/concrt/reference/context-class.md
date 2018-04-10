@@ -1,12 +1,12 @@
 ---
-title: "內容類別 |Microsoft 文件"
-ms.custom: 
+title: 內容類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="context-class"></a>Context 類別
 代表執行內容的抽象概念。  
@@ -56,7 +56,7 @@ class Context;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[~ Context 解構函式](#dtor)||  
+|[~Context Destructor](#dtor)||  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -70,7 +70,7 @@ class Context;
 |[Id](#id)|傳回目前內容中目前的內容所屬的排程器的唯一識別碼。|  
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|指示會傳回目前在目前內容執行內嵌工作集合是在使用中的取消 （或即將）。|  
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|決定以同步方式被封鎖的內容。 內容會被視為會以同步方式封鎖，如果它明確執行造成封鎖的動作。|  
-|[Oversubscribe](#oversubscribe)|將額外的虛擬處理器插入至排程器中，該排程器中的虛擬處理器的其中一個上執行的內容上叫用時的程式碼區塊的持續期間。|  
+|[過度訂閱](#oversubscribe)|將額外的虛擬處理器插入至排程器中，該排程器中的虛擬處理器的其中一個上執行的內容上叫用時的程式碼區塊的持續期間。|  
 |[ScheduleGroupId](#schedulegroupid)|傳回目前的內容目前正在處理的排程群組的識別碼。|  
 |[Unblock](#unblock)|解除封鎖的內容，並使其成為可執行。|  
 |[VirtualProcessorId](#virtualprocessorid)|傳回目前內容上執行之虛擬處理器的識別碼。|  
@@ -91,7 +91,7 @@ class Context;
   
  **命名空間：** concurrency  
   
-##  <a name="block"></a> 區塊 
+##  <a name="block"></a> Block 
 
  封鎖目前的內容。  
   
@@ -108,7 +108,7 @@ static void __cdecl Block();
   
  這個方法可以擲回的例外狀況，其中包含各種[scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)。  
   
-##  <a name="dtor"></a> ~ 內容 
+##  <a name="dtor"></a> ~Context 
 
 ```
 virtual ~Context();
@@ -240,7 +240,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>傳回值  
  如果目前的內容會附加至排程器與排程器的識別項使用排程群組，群組的目前內容正在進行。否則，值`-1`。  
   
-##  <a name="unblock"></a> 解除封鎖 
+##  <a name="unblock"></a> Unblock 
 
  解除封鎖的內容，並使其成為可執行。  
   
@@ -293,7 +293,7 @@ static void __cdecl YieldExecution();
   
  此函式是在新[!INCLUDE[vs_dev14](../../../ide/includes/vs_dev14_md.md)]且等同[產生](#yield)函式，但與 Windows.h 中的 Yield 巨集不會衝突。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)   
  [工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

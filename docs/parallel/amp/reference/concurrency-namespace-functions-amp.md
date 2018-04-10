@@ -1,10 +1,10 @@
 ---
-title: "Concurrency 命名空間函式 (AMP) |Microsoft 文件"
-ms.custom: 
+title: Concurrency 命名空間函式 (AMP) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::all_memory_fence
@@ -20,17 +20,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 360c253860931f00e65575250d3944b05dc9c4a9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 命名空間函式 (AMP)
 ||||  
@@ -93,7 +93,7 @@ inline bool atomic_compare_exchange(
  如果作業成功，則為 `true`，否則為 `false`。  
   
 
-##  <a name="atomic_exchange">atomic_exchange 函式 (c + + AMP)</a>  
+##  <a name="atomic_exchange"></a>  atomic_exchange 函式 (c + + AMP)  
  將目的地位置的值設定為不可部分完成的作業。  
   
 ```  
@@ -126,7 +126,7 @@ inline float atomic_exchange(
  目的地位置的原始值。  
   
 
-##  <a name="atomic_fetch_add">atomic_fetch_add 函式 (c + + AMP)</a>  
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add 函式 (c + + AMP)  
  以不可分割方式將值加入至記憶體位置的值。  
   
 ```  
@@ -152,7 +152,7 @@ inline unsigned int atomic_fetch_add(
 ### <a name="return-value"></a>傳回值  
  記憶體位置的原始值。  
   
-##  <a name="atomic_fetch_and">atomic_fetch_and 函式 (c + + AMP)</a>  
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and 函式 (c + + AMP)  
  以不可分割方式執行位元 AND 運算的值以及記憶體位置的值。  
   
 ```  
@@ -265,7 +265,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>傳回值  
  儲存在指定的位置的位置的原始值。  
   
-##  <a name="atomic_fetch_or">atomic_fetch_or 函式 (c + + AMP)</a>  
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or 函式 (c + + AMP)  
  以不可分割方式執行值、 的記憶體位置的值的位元 OR 運算。  
   
 ```  
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 ### <a name="return-value"></a>傳回值  
  記憶體位置的原始值。  
   
-##  <a name="atomic_fetch_sub">atomic_fetch_sub 函式 (c + + AMP)</a>  
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub 函式 (c + + AMP)  
  以不可分割方式減去中的記憶體位置的值。  
   
 ```  
@@ -317,7 +317,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>傳回值  
  記憶體位置的原始值。  
   
-##  <a name="atomic_fetch_xor">atomic_fetch_xor 函式 (c + + AMP)</a>  
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor 函式 (c + + AMP)  
  以不可分割方式 peforms 值和記憶體位置的位元 XOR 運算。  
   
 ```  
@@ -586,7 +586,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Tile_barrier 物件  
   
-##  <a name="parallel_for_each">parallel_for_each 函式 (c + + AMP)</a>  
+##  <a name="parallel_for_each"></a>  parallel_for_each 函式 (c + + AMP)  
  在計算網域中執行的函式。 如需詳細資訊，請參閱[c + + AMP 概觀](../../../parallel/amp/cpp-amp-overview.md)。  
   
 ```  
@@ -678,5 +678,5 @@ inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp)
  `_Barrier`  
  Tile_barrier 物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,29 +1,29 @@
 ---
-title: "task_options 類別 （並行執行階段） |Microsoft 文件"
-ms.custom: 
+title: task_options 類別 （並行執行階段） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - ppltasks/concurrency::task_options
 dev_langs:
 - C++
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6ad83e9e0a871ddc2d8f2c767cb0690da1e6f349
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>task_options 類別 (並行執行階段)
 表示用於建立工作的允許選項  
@@ -62,7 +62,7 @@ class task_options;
   
  **命名空間：** concurrency  
   
-##  <a name="get_cancellation_token">task_options:: get_cancellation_token 方法 （並行執行階段）</a>  
+##  <a name="get_cancellation_token"></a>  task_options:: get_cancellation_token 方法 （並行執行階段）  
  傳回取消語彙基元  
   
 ```
@@ -71,7 +71,7 @@ cancellation_token get_cancellation_token() const;
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="get_continuation_context">task_options:: get_continuation_context 方法 （並行執行階段）</a>  
+##  <a name="get_continuation_context"></a>  task_options:: get_continuation_context 方法 （並行執行階段）  
  傳回接續內容  
   
 ```
@@ -80,7 +80,7 @@ task_continuation_context get_continuation_context() const;
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="get_scheduler">task_options:: get_scheduler 方法 （並行執行階段）</a>  
+##  <a name="get_scheduler"></a>  task_options:: get_scheduler 方法 （並行執行階段）  
  傳回排程器  
   
 ```
@@ -89,7 +89,7 @@ scheduler_ptr get_scheduler() const;
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="has_cancellation_token">task_options:: has_cancellation_token 方法 （並行執行階段）</a>  
+##  <a name="has_cancellation_token"></a>  task_options:: has_cancellation_token 方法 （並行執行階段）  
  表示使用者是否已指定取消語彙基元  
   
 ```
@@ -98,7 +98,7 @@ bool has_cancellation_token() const;
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="has_scheduler">task_options:: has_scheduler 方法 （並行執行階段）</a>  
+##  <a name="has_scheduler"></a>  task_options:: has_scheduler 方法 （並行執行階段）  
  表示使用者是否已指定排程器  
   
 ```
@@ -107,7 +107,7 @@ bool has_scheduler() const;
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="set_cancellation_token">task_options:: set_cancellation_token 方法 （並行執行階段）</a>  
+##  <a name="set_cancellation_token"></a>  task_options:: set_cancellation_token 方法 （並行執行階段）  
  設定選項中的指定語彙基元  
   
 ```
@@ -117,7 +117,7 @@ void set_cancellation_token(cancellation_token _Token);
 ### <a name="parameters"></a>參數  
  `_Token`  
   
-##  <a name="set_continuation_context">task_options:: set_continuation_context 方法 （並行執行階段）</a>  
+##  <a name="set_continuation_context"></a>  task_options:: set_continuation_context 方法 （並行執行階段）  
  設定選項中的指定接續內容  
   
 ```
@@ -127,7 +127,7 @@ void set_continuation_context(task_continuation_context _ContinuationContext);
 ### <a name="parameters"></a>參數  
  `_ContinuationContext`  
   
-##  <a name="ctor">task_options:: task_options 建構函式 （並行執行階段）</a>  
+##  <a name="ctor"></a>  task_options:: task_options 建構函式 （並行執行階段）  
  工作建立選項的預設清單  
   
 ```
@@ -164,5 +164,5 @@ task_options(
  `_Scheduler`  
  `_TaskOptions`  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

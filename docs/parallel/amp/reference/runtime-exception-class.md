@@ -1,12 +1,12 @@
 ---
-title: "runtime_exception 類別 |Microsoft 文件"
-ms.custom: 
+title: runtime_exception 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - runtime_exception
@@ -18,17 +18,17 @@ dev_langs:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 類別
 C + + Accelerated Massive Parallelism (AMP) 程式庫中的例外狀況的基底類型。  
@@ -71,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **命名空間：** 並行  
 
-## <a name="runtime_exception__ctor">runtime_exception 建構函式</a>  
+## <a name="runtime_exception__ctor"></a>  runtime_exception 建構函式  
 初始化類別的新執行個體。  
   
 ### <a name="syntax"></a>語法  
@@ -101,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>傳回值  
  `runtime_exception` 物件。  
 
-## <a name="dtor">~ runtime_exception 解構函式</a>  
+## <a name="dtor"></a>  ~runtime_exception Destructor  
 物件已遭終結。  
   
 ### <a name="syntax"></a>語法  
@@ -140,5 +140,5 @@ runtime_exception & operator= (    const runtime_exception & _Other ) throw();
   
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

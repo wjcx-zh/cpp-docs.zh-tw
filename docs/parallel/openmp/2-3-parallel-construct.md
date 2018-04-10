@@ -1,27 +1,27 @@
 ---
-title: "2.3 parallel 建構 |Microsoft 文件"
-ms.custom: 
+title: 2.3 parallel 建構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel 建構
 下列指示詞定義平行的區域，而是由多個執行緒以平行方式執行程式的區域。 這是開始平行執行的基本結構。  
@@ -32,21 +32,21 @@ ms.lasthandoff: 12/21/2017
   
  *子句*是下列其中之一：  
   
- **如果 (** *純量運算式* **)**  
+ **if(** *scalar-expression* **)**  
   
- **私用 (** *變數清單* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *變數清單* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **預設 (共用 &#124; 無)**  
+ **default(shared &#124; none)**  
   
- **共用 (** *變數清單* **)**  
+ **shared(** *variable-list* **)**  
   
- **copyin (** *變數清單* **)**  
+ **copyin(** *variable-list* **)**  
   
- **減少 (** *運算子* **:***變數清單* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
- **num_threads (** *整數運算式* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  當執行緒發現平行建構時，其中一個在下列情況時，會建立小組的執行緒：  
   

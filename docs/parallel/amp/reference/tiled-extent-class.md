@@ -1,12 +1,12 @@
 ---
-title: "tiled_extent 類別 |Microsoft 文件"
-ms.custom: 
+title: tiled_extent 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent 類別
 A`tiled_extent`物件是`extent`細分成一段、 兩段或 3d 圖格的範圍空間一到三個維度的物件。  
@@ -97,9 +97,9 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[tile_dim0 Constant](#tile_dim0)|會儲存最重要的維度的長度。|  
-|[tile_dim1 Constant](#tile_dim1)|儲存下一步 以最重要維度的長度。|  
-|[tile_dim2 Constant](#tile_dim2)|會儲存最小顯著性維度的長度。|  
+|[tile_dim0 常數](#tile_dim0)|會儲存最重要的維度的長度。|  
+|[tile_dim1 常數](#tile_dim1)|儲存下一步 以最重要維度的長度。|  
+|[tile_dim2 常數](#tile_dim2)|會儲存最小顯著性維度的長度。|  
 
   
 ### <a name="public-data-members"></a>公用資料成員  
@@ -118,7 +118,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
  **命名空間：** 並行  
 
-## <a name="ctor">tiled_extent 建構函式</a>  
+## <a name="ctor"> </a>  tiled_extent 建構函式  
 初始化 `tiled_extent` 類別的新執行個體。  
   
 ### <a name="syntax"></a>語法  
@@ -228,5 +228,5 @@ __declspec(property(get= get_tile_extent)) Concurrency::extent<rank> tile_extent
 ```  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

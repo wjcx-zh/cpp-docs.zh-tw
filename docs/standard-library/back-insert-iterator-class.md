@@ -1,12 +1,12 @@
 ---
-title: "back_insert_iterator 類別 | Microsoft Docs"
-ms.custom: 
+title: back_insert_iterator 類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - iterator/std::back_insert_iterator
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7646b26c1651ccf93fcc3bcb6828ae402ea5ca07
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 類別
 描述滿足輸出迭代器需求的迭代器配接器。 它在序列後端插入項目 (而不是覆寫)，因此其語意不同於 C++ 序列容器的迭代器所提供的覆寫語意。 `back_insert_iterator` 類別是根據容器的類型樣板化。  
@@ -414,7 +414,7 @@ The vector vec is: ( 1 2 3 ).
 The last element in the vector vec is: 3.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

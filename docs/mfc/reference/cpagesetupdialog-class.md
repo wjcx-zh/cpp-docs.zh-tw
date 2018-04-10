@@ -1,12 +1,12 @@
 ---
-title: "CPageSetupDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CPageSetupDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CPageSetupDialog
@@ -39,17 +39,17 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3ca193c59c5d9c914f5bf8827601f389c546ea85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別
 封裝 Windows 通用 OLE 版面設定對話方塊所提供的服務，以及設定和修改列印邊界的額外支援。  
@@ -94,7 +94,7 @@ class CPageSetupDialog : public CCommonDialog
   
  若要使用`CPageSetupDialog`物件，請先建立物件使用`CPageSetupDialog`建構函式。 一旦建構的對話方塊中，您可以設定或修改中的任何值`m_psd`資料成員，才能初始化對話方塊的控制項的值。 [M_psd](#m_psd)結構的類型是**PAGESETUPDLG**。  
   
- 初始化對話方塊控制項之後呼叫`DoModal`成員函式，以顯示對話方塊，並允許使用者選取列印選項。 `DoModal`傳回使用者是否選取 [確定] ( **IDOK**) 或 [取消] ( **IDCANCEL**) 按鈕。  
+ 初始化對話方塊控制項之後呼叫`DoModal`成員函式，以顯示對話方塊，並允許使用者選取列印選項。 `DoModal` 傳回使用者是否選取 [確定] ( **IDOK**) 或 [取消] ( **IDCANCEL**) 按鈕。  
   
  如果`DoModal`傳回**IDOK**，您可以使用數個`CPageSetupDialog`的成員函式或存取`m_psd`来擷取使用者的資訊輸入的資料成員。  
   
@@ -117,7 +117,7 @@ class CPageSetupDialog : public CCommonDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxdlgs.h  
   
-##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
+##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
  呼叫此函式來建構`CPageSetupDialog`物件。  
   
 ```  
@@ -175,7 +175,7 @@ CPageSetupDialog(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
  建立印表機裝置內容從[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。  
   
 ```  
@@ -185,7 +185,7 @@ HDC CreatePrinterDC();
 ### <a name="return-value"></a>傳回值  
  新建立的印表機裝置內容 (DC) 的控制代碼。  
   
-##  <a name="domodal"></a>CPageSetupDialog::DoModal  
+##  <a name="domodal"></a>  CPageSetupDialog::DoModal  
  呼叫此函式，以顯示 Windows 通用 OLE 版面設定對話方塊中，並允許使用者選取各種列印設定選項，例如列印邊界、 大小和方向的紙張，以及目的地印表機。  
   
 ```  
@@ -209,7 +209,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>範例  
   請參閱範例的[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)。  
   
-##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
+##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName  
  呼叫此函式之後`DoModal`擷取目前所選印表機的名稱。  
   
 ```  
@@ -219,7 +219,7 @@ CString GetDeviceName() const;
 ### <a name="return-value"></a>傳回值  
  所使用的裝置名稱**CPageSetupDialog**物件。  
   
-##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
+##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  呼叫此函式之後呼叫`DoModal`擷取印表機裝置內容的相關資訊`CPageSetupDialog`物件。  
   
 ```  
@@ -229,7 +229,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="return-value"></a>傳回值  
  [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)資料結構，其中包含裝置初始化和環境的列印驅動程式的相關資訊。 您必須解除鎖定這個 Windows 結構的記憶體[GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595)函式，Windows SDK 中所述。  
   
-##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
+##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
  呼叫此函式之後呼叫[DoModal](../../mfc/reference/cprintdialog-class.md#domodal)擷取系統定莪印表機裝置驅動程式的名稱。  
   
 ```  
@@ -242,7 +242,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>備註  
  使用指標`CString`所傳回物件`GetDriverName`做為值`lpszDriverName`呼叫[CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)。  
   
-##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
+##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins  
  呼叫此函式呼叫之後`DoModal`擷取印表機裝置驅動程式的邊界。  
   
 ```  
@@ -258,7 +258,7 @@ void GetMargins(
  *lpRectMinMargins*  
  指標`RECT`結構或`CRect`描述 （在 1/1000年英吋或 1/100 公釐） 的最小的列印邊界，目前所選印表機的物件。 傳遞**NULL**這個參數，如果您不想要在此矩形內。  
   
-##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
+##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize  
  呼叫此函式可擷取列印選取的紙張大小。  
   
 ```  
@@ -268,7 +268,7 @@ CSize GetPaperSize() const;
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含 （在 1/1000年英吋或公 1/100） 選取列印的紙張大小。  
   
-##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
+##  <a name="getportname"></a>  CPageSetupDialog::GetPortName  
  呼叫此函式之後呼叫`DoModal`擷取目前選取的印表機連接埠的名稱。  
   
 ```  
@@ -278,7 +278,7 @@ CString GetPortName() const;
 ### <a name="return-value"></a>傳回值  
  目前選取的印表機連接埠的名稱。  
   
-##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
+##  <a name="m_psd"></a>  CPageSetupDialog::m_psd  
  型別的結構**PAGESETUPDLG**，其成員儲存對話方塊物件的特性。  
   
 ```  
@@ -294,7 +294,7 @@ PAGESETUPDLG m_psd;
   
  請參閱範例的[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)。  
   
-##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
+##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage  
  由架構呼叫以繪製於列印頁面的畫面影像。  
   
 ```  
@@ -338,7 +338,7 @@ virtual UINT OnDrawPage(
   
  請注意，您不需要處理的每個案例`nMessage`。 您可以選擇來處理映像的映像或整個區域的數個元件的一個元件。  
   
-##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
+##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  繪製列印頁面的螢幕影像之前，由架構呼叫。  
   
 ```  
@@ -380,7 +380,7 @@ virtual UINT PreDrawPage(
 ### <a name="remarks"></a>備註  
  覆寫這個函式來自訂繪製影像。 如果您覆寫這個函式，並傳回**TRUE**，您必須繪製整個影像。 如果您覆寫這個函式，並傳回**FALSE**，由架構繪製整個預設影像。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 WORDPAD](../../visual-cpp-samples.md)   
  [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

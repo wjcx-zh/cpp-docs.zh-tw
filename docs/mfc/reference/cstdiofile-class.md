@@ -1,12 +1,12 @@
 ---
-title: "Cgopherfile 類別 |Microsoft 文件"
-ms.custom: 
+title: Cgopherfile 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>Cgopherfile 類別
 代表執行階段函式所開啟的 C 執行階段資料流檔案[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
@@ -92,7 +92,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  建構並初始化 `CStdioFile` 物件。  
   
 ```  
@@ -141,7 +141,7 @@ CStdioFile(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  `m_pStream`資料成員是開啟的檔案指標所傳回的 C 執行階段函式`fopen`。  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>備註  
  它是**NULL**如果從未開啟檔案，或已關閉。  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  多載。 開啟適用於與預設`CStdioFile`建構函式。  
   
 ```  
@@ -173,7 +173,7 @@ virtual BOOL Open(
  所需的檔案的路徑字串。 路徑可以是相對或絕對。  
   
  `nOpenFlags`  
- 共用及存取模式。 指定開啟檔案時要採取的動作。 您可以使用位元 OR (&#124;) 來結合選項運算子。 一個存取權限，以及一個共用選項是必要的。modeCreate 和 modeNoInherit 模式是選擇性的。  
+ 共用及存取模式。 指定開啟檔案時要採取的動作。 您可以藉由使用位元 OR 結合選項 (&#124;) 運算子。 一個存取權限，以及一個共用選項是必要的。modeCreate 和 modeNoInherit 模式是選擇性的。  
   
  `pError`  
  將會收到失敗的作業狀態的現有檔案例外狀況物件指標。  
@@ -186,7 +186,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  文字資料讀入緩衝區中，最大的限制`nMax`-1 個字元，與關聯的檔案從`CStdioFile`物件。  
   
 ```  
@@ -221,7 +221,7 @@ virtual BOOL ReadString(CString& rString);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  在先前開啟的檔案會重新調整位置指標。  
   
 ```  
@@ -258,7 +258,7 @@ virtual ULONGLONG Seek(
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  緩衝區中的資料寫入至與相關聯的檔案`CStdioFile`物件。  
   
 ```  
@@ -281,7 +281,7 @@ virtual void WriteString(LPCTSTR lpsz);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CFile 類別](../../mfc/reference/cfile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFile 類別](../../mfc/reference/cfile-class.md)   

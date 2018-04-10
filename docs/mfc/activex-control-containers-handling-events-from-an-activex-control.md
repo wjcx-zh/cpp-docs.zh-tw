@@ -1,12 +1,12 @@
 ---
-title: "ActiveX 控制項容器： 處理事件從 ActiveX 控制項 |Microsoft 文件"
-ms.custom: 
+title: ActiveX 控制項容器： 處理事件從 ActiveX 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控制項容器：從 ActiveX 控制項中處理事件
 本文說明如何使用 [屬性] 視窗在 ActiveX 控制項容器中安裝 ActiveX 控制項的事件處理常式。 事件處理常式可用來接收通知 （控制項） 的特定事件並在回應中執行某些動作。 此通知會呼叫 「 引發 」 事件。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  如需事件接收對應的詳細資訊，請參閱[事件接收對應](../mfc/reference/event-sink-maps.md)中*類別庫參考*。  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a>事件處理常式修改專案  
+##  <a name="_core_event_handler_modifications_to_the_project"></a> 事件處理常式修改專案  
  當您使用 [屬性] 視窗來加入事件處理常式時，事件接收對應宣告，然後在您的專案中定義。 下列陳述式加入至控制項。CPP 檔案會加入事件處理常式的第一次。 此程式碼會宣告事件接收對應的對話方塊類別 (在此情況下， `CContainerDlg`):  
   
  [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
@@ -76,6 +76,6 @@ ms.lasthandoff: 12/21/2017
   
 6.  按兩下新的處理常式函式，從 [類別檢視] 來跳到實作中的事件處理常式程式碼 (。Cpp) 的`CContainerDlg`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ActiveX 控制項容器](../mfc/activex-control-containers.md)
 

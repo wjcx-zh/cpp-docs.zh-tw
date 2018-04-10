@@ -1,12 +1,12 @@
 ---
-title: "task 類別 （並行執行階段） |Microsoft 文件"
-ms.custom: 
+title: task 類別 （並行執行階段） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +23,17 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
 平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 也可以撰寫工作與其他工作，使用接續 ( `then`)，和聯結 ( `when_all`) 和 choice ( `when_any`) 模式。  
@@ -144,7 +144,7 @@ bool is_done() const;
 ### <a name="remarks"></a>備註  
  如果工作已完成或取消 （不論有無使用者例外狀況），則函數會傳回 true。  
   
-##  <a name="operator_neq"></a> 運算子 ！ = 
+##  <a name="operator_neq"></a> operator!= 
 
  判斷兩個 `task` 物件是否表示不同的內部工作。  
   
@@ -160,7 +160,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>傳回值  
  如果這些物件參考不同的基礎工作則為 `true`，否則為 `false`。  
   
-##  <a name="operator_eq"></a> 運算子 = 
+##  <a name="operator_eq"></a> operator= 
 
  將某個 `task` 物件的內容取代為另一個物件的內容。  
   
@@ -179,7 +179,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>備註  
  由於 `task` 的表現就像智慧型指標，因此在複製指派之後，這個 `task` 物件和 `_Other` 一樣，都表示相同的實際工作。  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 運算子 = = 
 
  判斷兩個 `task` 物件是否表示相同的內部工作。  
   
@@ -332,5 +332,5 @@ task_status wait() const;
 > [!IMPORTANT]
 >  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait`在 STA 執行的程式碼 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫[concurrency](#get)方法以接收以工作為基礎的接續在前項工作的結果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

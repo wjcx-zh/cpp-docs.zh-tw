@@ -1,10 +1,10 @@
 ---
-title: "concurrency 命名空間函式 |Microsoft 文件"
-ms.custom: 
+title: concurrency 命名空間函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,17 +40,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 命名空間函式
 ||||  
@@ -1424,7 +1424,7 @@ inline void swap(
  並行向量提供待交換，項目或其項目要與並行向量交換的向量`_A`。  
   
 ### <a name="remarks"></a>備註  
- 樣板函式是演算法特製化的容器類別`concurrent_vector`執行成員函式`_A`。 [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). 這是編譯器所執行函式樣板部分排序的執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 樣板函式的一般版本`template <class T> void swap(T&, T&)`，演算法中類別的運作方式是指派和很慢的作業。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
+ 樣板函式是演算法特製化的容器類別`concurrent_vector`執行成員函式`_A`。 [concurrent_vector:: swap](concurrent-vector-class.md#swap)( `_B`)。 這是編譯器所執行函式樣板部分排序的執行個體。 當樣板與函式呼叫不是唯一配對，而使得樣板函式多載時，編譯器會選取最特製化的樣板函式版本。 樣板函式的一般版本`template <class T> void swap(T&, T&)`，演算法中類別的運作方式是指派和很慢的作業。 每個容器中的特製化版本運作速度會更快，因為它可以與容器類別的內部表示法一起運作。  
   
  這個方法不是並行安全。 您必須確定沒有其他執行緒正在執行的並行向量的任何作業，當您呼叫這個方法。  
   
@@ -1624,5 +1624,5 @@ auto when_any(
   
  如需詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

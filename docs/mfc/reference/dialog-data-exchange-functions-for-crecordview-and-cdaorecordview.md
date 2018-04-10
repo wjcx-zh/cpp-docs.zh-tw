@@ -1,12 +1,12 @@
 ---
-title: "對話方塊資料交換函式 CRecordView 和 CDaoRecordView 的 |Microsoft 文件"
-ms.custom: 
+title: 對話方塊資料交換函式 CRecordView 和 CDaoRecordView 的 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - AFXDAO/DDX_FieldCBIndex
@@ -29,17 +29,17 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 和 CDaoRecordView 的對話方塊資料交換函式
 本主題列出用來交換資料之間的 DDX_Field 函式[CRecordset](../../mfc/reference/crecordset-class.md)和[CRecordView](../../mfc/reference/crecordview-class.md)表單或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)和[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)表單。  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 |[DDX_FieldSlider](#ddx_fieldslider)|同步處理資料錄檢視中的滑桿控制項捲動方塊位置和`int`資料錄集的欄位資料成員。 |
 |[DDX_FieldText](#ddx_fieldtext)|多載的版本可供傳送`int`， **UINT**，**長**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float****double**，**簡短**， [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)，和[COleCurrency](../../mfc/reference/colecurrency-class.md)之間的資料錄集欄位資料成員和編輯的資料方塊`CRecordView`或`CDaoRecordView`。|  
   
-##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
+##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex  
  `DDX_FieldCBIndex`函式會同步處理選取的項目在清單方塊控制項的資料錄檢視中的下拉式方塊控制項中的索引和`int`資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -87,7 +87,7 @@ void AFXAPI DDX_FieldCBIndex(
  `nIDC`  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
- *索引*  
+ *index*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
  `pRecordset`  
@@ -106,7 +106,7 @@ void AFXAPI DDX_FieldCBIndex(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
 
-##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
+##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
  `DDX_FieldCBString`函式會管理的傳輸[CString](../../atl-mfc-shared/reference/cstringt-class.md)之間的資料錄檢視中的下拉式方塊控制項的編輯控制項的資料和`CString`資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -149,7 +149,7 @@ void AFXAPI DDX_FieldCBString(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
+## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
  `DDX_FieldCBStringExact`函式會管理的傳輸[CString](../../atl-mfc-shared/reference/cstringt-class.md)之間的資料錄檢視中的下拉式方塊控制項的編輯控制項的資料和`CString`資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -192,7 +192,7 @@ void AFXAPI DDX_FieldCBStringExact(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
+##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
  `DDX_FieldCheck`函式會管理的傳輸`int`在對話方塊中，核取方塊控制項之間的資料形成檢視或控制項檢視物件和`int`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -230,7 +230,7 @@ void AFXAPI DDX_FieldCheck(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
+##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
  `DDX_FieldLBIndex`函式會同步處理選取的項目在清單方塊控制項中資料錄檢視的索引和`int`資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -254,7 +254,7 @@ void AFXAPI DDX_FieldLBIndex(
  `nIDC`  
  中的控制項識別碼[CRecordView](../../mfc/reference/crecordview-class.md)或[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)物件。  
   
- *索引*  
+ *index*  
  在相關聯的欄位資料成員的參考`CRecordset`或`CDaoRecordset`物件。  
   
  `pRecordset`  
@@ -273,7 +273,7 @@ void AFXAPI DDX_FieldLBIndex(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
+##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString  
  `DDX_FieldLBString`複製資料錄檢視中的清單方塊控制項的目前選取範圍[CString](../../atl-mfc-shared/reference/cstringt-class.md)資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -316,7 +316,7 @@ void AFXAPI DDX_FieldLBString(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
+##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact  
  `DDX_FieldLBStringExact`函式會將清單方塊控制項的目前選取範圍複製資料錄檢視中[CString](../../atl-mfc-shared/reference/cstringt-class.md)資料錄檢視相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -359,7 +359,7 @@ void AFXAPI DDX_FieldLBStringExact(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
+##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
  `DDX_FieldRadio`函式將以零為起始`int`成員變數的資料錄檢視的資料錄集與資料錄檢視中的選項按鈕群組中的目前選取的選項按鈕。  
   
 ```  
@@ -402,7 +402,7 @@ void AFXAPI DDX_FieldRadio(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
+##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
  `DDX_FieldScroll`函式會同步處理資料錄檢視中的捲軸控制項捲軸位置和`int`與資料錄檢視 （或您選擇將它對應至任何整數變數） 相關聯的資料錄集欄位資料成員。  
   
 ```  
@@ -445,7 +445,7 @@ void AFXAPI DDX_FieldScroll(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>名稱 ="ddx_fieldslider"></a> DDX_FieldSlider
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
 `DDX_FieldSlider`函式會同步處理資料錄檢視中的滑桿控制項捲動方塊位置和`int`與資料錄檢視 （或您選擇將它對應至任何整數變數） 相關聯的資料錄集欄位資料成員。  
    
 ### <a name="syntax"></a>語法  
@@ -478,7 +478,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="remarks"></a>備註  
  當從資料錄集的資料移動滑桿中，則此函式會將滑桿的位置中指定的值*值*。 在從資料錄集傳輸至控制項，如果資料錄集欄位為 Null，滑桿控制項的位置會設定為 0。 在從控制項傳輸至資料錄集，如果控制項是空的資料錄集欄位的值為 0。  
   
- `DDX_FieldSlider`不交換與滑桿控制項能夠設定範圍，而不是只需位置的範圍資訊。  
+ `DDX_FieldSlider` 不交換與滑桿控制項能夠設定範圍，而不是只需位置的範圍資訊。  
   
  如果您正在使用的 ODBC 為基礎的類別，請使用函式的第一個覆寫。 使用 DAO 類別中的第二個覆寫。  
   
@@ -490,10 +490,10 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
   
-##  <a name="ddx_fieldtext"></a>DDX_FieldText  
+##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
  `DDX_FieldText`函式會管理的傳輸`int`，**簡短**，**長**， `DWORD`， [CString](../../atl-mfc-shared/reference/cstringt-class.md)， **float**， **double**， **BOOL**，或**位元組**編輯方塊控制項和資料錄集的欄位資料成員之間的資料。  
   
 ```  
@@ -635,5 +635,5 @@ void AFXAPI DDX_FieldText(
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

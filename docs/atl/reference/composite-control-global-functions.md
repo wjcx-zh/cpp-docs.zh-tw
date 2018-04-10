@@ -1,12 +1,12 @@
 ---
-title: "複合控制項全域函式 |Microsoft 文件"
-ms.custom: 
+title: 複合控制項全域函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +27,17 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 這些函式會提供建立對話方塊，以及建立、 裝載和授權 ActiveX 控制項的支援。  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atlhost.h  
 
-##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox  
  從使用者提供的對話方塊範本中建立強制回應對話方塊。  
    
 ```
@@ -107,7 +107,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
   
  如需有關一般中對話方塊的詳細資訊，請參閱[對話方塊中](http://msdn.microsoft.com/library/windows/desktop/ms645452)和[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK 中。  
   
-##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  從使用者提供的對話方塊範本中建立非強制回應對話方塊。  
   
 ```
@@ -143,7 +143,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  請參閱[CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434)和[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK 中。  
   
-##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  建立 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。  
   
 
@@ -163,9 +163,9 @@ ATLAPI AtlAxCreateControl(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID  
   
--   例如，"http://www.microsoft.com"的 URL  
+-   URL，例如"http://www.microsoft.com"  
   
--   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
+-   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
   
 -   這類的 HTML 片段"MSHTML:\<HTML >\<主體 > 這是一行文字\</B >\</HTML > 」  
   
@@ -189,7 +189,7 @@ ATLAPI AtlAxCreateControl(
   
  若要建立授權的 ActiveX 控制項，請參閱[AtlAxCreateControlLic](#atlaxcreatecontrollic)。  
   
-##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx  
  建立 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。 另外也可以建立新控制項的介面指標和事件接收器。  
   
 ```
@@ -211,9 +211,9 @@ ATLAPI AtlAxCreateControlEx(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID  
   
--   例如，"http://www.microsoft.com"的 URL  
+-   URL，例如"http://www.microsoft.com"  
   
--   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
+-   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
   
 -   這類的 HTML 片段"MSHTML:\<HTML >\<主體 > 這是一行文字\</B >\</HTML > 」  
   
@@ -242,11 +242,11 @@ ATLAPI AtlAxCreateControlEx(
  其中一個標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- `AtlAxCreateControlEx`類似於[AtlAxCreateControl](#atlaxcreatecontrol)還能讓您接收新建立的控制項的介面指標，並將事件接收器設定為接收控制項引發的事件。  
+ `AtlAxCreateControlEx` 類似於[AtlAxCreateControl](#atlaxcreatecontrol)還能讓您接收新建立的控制項的介面指標，並將事件接收器設定為接收控制項引發的事件。  
   
  若要建立授權的 ActiveX 控制項，請參閱[AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)。  
   
-##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic  
  建立授權的 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。  
 
 ```
@@ -266,9 +266,9 @@ ATLAPI AtlAxCreateControlLic(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID  
   
--   例如，"http://www.microsoft.com"的 URL  
+-   URL，例如"http://www.microsoft.com"  
   
--   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
+-   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
   
 -   這類的 HTML 片段"MSHTML:\<HTML >\<主體 > 這是一行文字\</B >\</HTML > 」  
   
@@ -293,7 +293,7 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="example"></a>範例  
  請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如需使用方式的範例`AtlAxCreateControlLic`。  
   
-##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx  
  建立授權的 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。 另外也可以建立新控制項的介面指標和事件接收器。  
   
 ```
@@ -316,9 +316,9 @@ ATLAPI AtlAxCreateControlLicEx(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID  
   
--   例如，"http://www.microsoft.com"的 URL  
+-   URL，例如"http://www.microsoft.com"  
   
--   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
+-   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
   
 -   這類的 HTML 片段"MSHTML:\<HTML >\<主體 > 這是一行文字\</B >\</HTML > 」  
   
@@ -350,12 +350,12 @@ ATLAPI AtlAxCreateControlLicEx(
  其中一個標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- `AtlAxCreateControlLicEx`類似於[AtlAxCreateControlLic](#atlaxcreatecontrollic)還能讓您接收新建立的控制項的介面指標，並將事件接收器設定為接收控制項引發的事件。  
+ `AtlAxCreateControlLicEx` 類似於[AtlAxCreateControlLic](#atlaxcreatecontrollic)還能讓您接收新建立的控制項的介面指標，並將事件接收器設定為接收控制項引發的事件。  
   
 ### <a name="example"></a>範例  
  請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如需使用方式的範例`AtlAxCreateControlLicEx`。  
   
-##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl  
  將先前建立的控制項加入至指定的視窗。  
   
 ```
@@ -384,7 +384,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  要附加的控制項物件必須先呼叫正確地初始化`AtlAxAttachControl`。  
   
-##  <a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>  AtlAxGetHost  
  在考慮控制代碼的情況下，取得所指定視窗 (如果有) 之容器的直接介面指標。  
   
 ```
@@ -401,7 +401,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl  
  在考慮控制代碼的情況下，取得所指定視窗內包含之控制項的直接介面指標。  
   
 ```
@@ -418,7 +418,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>  AtlSetChildSite  
  呼叫此函式可設定子物件的站台**IUnknown**父物件。  
   
 ```
@@ -435,7 +435,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>傳回值  
  標準的 HRESULT 值。  
   
-##  <a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>  AtlAxWinInit  
  此函式會初始化 ATL 的控制項裝載程式碼，藉由註冊**"AtlAxWin80"**和**"AtlAxWinLic80"**視窗類別以及幾個自訂視窗訊息。  
   
 ```
@@ -448,7 +448,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>備註  
  使用 ATL 控制項裝載 API 之前，必須呼叫此函式。 此函式，呼叫**"AtlAxWin"**視窗類別可用於呼叫[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)、 Windows SDK 中所述。  
 
-##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  此函式未初始化 ATL 的控制項裝載程式碼取消註冊**"AtlAxWin80"**和**"AtlAxWinLic80"**視窗類別。  
   
 ```
@@ -463,7 +463,7 @@ inline BOOL AtlAxWinTerm();
   
  呼叫此函式，如果您呼叫所有現有的主控件 windows 已終結後進行清理[AtlAxWinInit](#atlaxwininit)和您不需要再建立主應用程式視窗。 如果您未呼叫此函式，視窗類別會自動取消註冊處理序終止時。  
   
-##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface  
  呼叫此函式可擷取物件的預設來源介面的相關資訊。  
   
 ```
@@ -495,16 +495,16 @@ ATLAPI AtlGetObjectSourceInterface(
  標準的 HRESULT 值。  
   
 ### <a name="remarks"></a>備註  
- `AtlGetObjectSourceInterface`可以提供您的預設來源介面，以及 LIBID 和主要的介面 ID 以及描述該介面的類型程式庫的次要版本號碼。  
+ `AtlGetObjectSourceInterface` 可以提供您的預設來源介面，以及 LIBID 和主要的介面 ID 以及描述該介面的類型程式庫的次要版本號碼。  
   
 > [!NOTE]
 >  若要成功擷取要求的資訊。 這個函式，表示的物件`punkObj`必須實作`IDispatch`(和傳回型別資訊透過**IDispatch::GetTypeInfo**) 加上它也必須實作`IProvideClassInfo2`或`IPersist`。 來源介面的型別資訊必須位於相同的型別程式庫的型別資訊當做`IDispatch`。  
   
 ### <a name="example"></a>範例  
- 下列範例示範如何定義事件接收器類別中， `CEasySink`，您可以傳遞給範本引數數目，以減少`IDispEventImpl`至基本的必要。 `EasyAdvise`和`EasyUnadvise`使用`AtlGetObjectSourceInterface`初始化[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)成員之前呼叫[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)或[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)。  
+ 下列範例示範如何定義事件接收器類別中， `CEasySink`，您可以傳遞給範本引數數目，以減少`IDispEventImpl`至基本的必要。 `EasyAdvise` 和`EasyUnadvise`使用`AtlGetObjectSourceInterface`初始化[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)成員之前呼叫[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)或[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)。  
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)   
  [複合控制項巨集](../../atl/reference/composite-control-macros.md)

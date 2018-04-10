@@ -1,12 +1,12 @@
 ---
-title: "-GS （緩衝區安全性檢查） |Microsoft 文件"
-ms.custom: 
+title: -GS （緩衝區安全性檢查） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-caps.latest.revision: 
+caps.latest.revision: 40
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="gs-buffer-security-check"></a>/GS (緩衝區安全性檢查)  
   
@@ -169,7 +169,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
   
 [編譯器選項](../../build/reference/compiler-options.md)   
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

@@ -1,12 +1,12 @@
 ---
-title: "concurrency 命名空間 |Microsoft 文件"
-ms.custom: 
+title: concurrency 命名空間 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 
+caps.latest.revision: 37
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 79a6334dae9835901198387d58316ef34e81ce50
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空間
 `Concurrency` 命名空間提供可讓您存取並行執行階段 (C++ 的並行程式設計架構) 的類別和函式。 如需詳細資訊，請參閱[並行執行階段](../../../parallel/concrt/concurrency-runtime.md)。  
@@ -227,7 +227,7 @@ namespace concurrency;
 |[run_with_cancellation_token 函式](concurrency-namespace-functions.md#run_with_cancellation_token)|在指定的取消語彙基元內容中立即和同步地執行函式物件。|  
 |[send 函式](concurrency-namespace-functions.md#send)|多載。 同步傳送作業，其會等候直到目標接受或拒絕訊息。|  
 |[set_ambient_scheduler 函式 （並行執行階段）](concurrency-namespace-functions.md#set_ambient_scheduler)||  
-|[set_task_execution_resources Function](concurrency-namespace-functions.md#set_task_execution_resources)|多載。 依據指定的同質性集，限制並行執行階段之內部背景工作執行緒使用的執行資源。<br /><br /> 只有在資源管理員建立之前，或在兩個資源管理員存留期之間，才能有效地呼叫這個方法。 只要資源管理員不在引動過程期間，即可多次叫用此函式。 在同質性限制設定之後，直到下次有效呼叫 `set_task_execution_resources` 方法之前，該限制會持續有效。
+|[set_task_execution_resources 函式](concurrency-namespace-functions.md#set_task_execution_resources)|多載。 依據指定的同質性集，限制並行執行階段之內部背景工作執行緒使用的執行資源。<br /><br /> 只有在資源管理員建立之前，或在兩個資源管理員存留期之間，才能有效地呼叫這個方法。 只要資源管理員不在引動過程期間，即可多次叫用此函式。 在同質性限制設定之後，直到下次有效呼叫 `set_task_execution_resources` 方法之前，該限制會持續有效。
 <br /><br /> 提供的同質性遮罩不需為處理序同質性遮罩的子集。 您可視需要更新處理序的同質性遮罩。|  
 |[swap 函式](concurrency-namespace-functions.md#swap)|交換兩個 `concurrent_vector` 物件的項目。|  
 |[task_from_exception 函式 （並行執行階段）](concurrency-namespace-functions.md#task_from_exception)||  
@@ -277,6 +277,6 @@ namespace concurrency;
 ## <a name="requirements"></a>需求  
  **標頭：** agents.h、 concrt.h、 concrtrm.h、 concurrent_priority_queue.h、 concurrent_queue.h、 concurrent_unordered_map.h、 concurrent_unordered_set.h、 concurrent_vector.h、 internal_concurrent_hash.h、 internal_split_ordered_list.h、 ppl.h、 pplcancellation_token.h、 pplconcrt.h、 pplinterface.h、 ppltasks.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考資料](reference-concurrency-runtime.md)
 

@@ -1,12 +1,12 @@
 ---
-title: "格式規格語法：printf 和 wprintf 函式 | Microsoft Docs"
-ms.custom: 
+title: 格式規格語法：printf 和 wprintf 函式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/21/2017
 |**G**|浮點|與 **g** 格式相同，除了由 **E** 而非 **e** 在適當時引入該指數以外。|
 |**a**|浮點|帶正負號的十六進位雙精確度浮點值，形式為 [-]0x*h.hhhh*__p±__*dd*，其中 *h.hhhh* 是尾數的十六進位數 (使用小寫字母)，而 *dd* 是指數的一或多個位數。 指定小數點之後位數的精確度。|
 |**A**|浮點|帶正負號的十六進位雙精確度浮點值，形式為 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾數的十六進位數 (使用大寫字母)，而 *dd* 是指數的一或多個位數。 指定小數點之後位數的精確度。|
-|**n**|整數的指標|目前已成功寫入此資料流或緩衝區的字元數。 會將這個值儲存在整數中，該整數的位址會做為引數而受指定。 引數大小規格前置詞可以控制指向整數的大小。 **n** 指定名稱預設會停用；如需資訊，請參閱重要安全性注意事項。|
+|**n**|整數的指標|目前已成功寫入此資料流或緩衝區的字元數。 會將這個值儲存在整數中，該整數的位址會做為引數而受指定。 引數大小規格前置詞可以控制指向整數的大小。 **n** 規範預設會停用；如需資訊，請參閱重要安全性注意事項。|
 |**p**|指標類型|顯示引數為十六進位數字的位址。|
 |**s**|String|當搭配 `printf` 函式使用時，會指定單一位元組或多位元組字元字串；當搭配 `wprintf` 函式使用時，會指定寬字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
 |**S**|String|當搭配 `printf` 函式使用時，會指定寬字元字串；當搭配 `wprintf` 函式使用時，會指定單一位元組或多位元組字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
@@ -219,7 +219,7 @@ ms.lasthandoff: 12/21/2017
 > **Microsoft 特定的**  
 > **I** (大寫 i)、**I32**、**I64** 及 **w** 引數大小修飾詞前置詞為 Microsoft 延伸模組，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  

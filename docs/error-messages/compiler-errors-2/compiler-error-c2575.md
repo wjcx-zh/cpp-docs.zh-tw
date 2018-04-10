@@ -1,12 +1,12 @@
 ---
-title: "編譯器錯誤 C2575 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2575 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C2575
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2575
 ms.assetid: 9eb45706-37ef-4481-b373-6d193ba13634
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen

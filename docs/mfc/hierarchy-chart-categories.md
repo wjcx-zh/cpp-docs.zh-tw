@@ -1,12 +1,12 @@
 ---
-title: "階層架構圖表分類 |Microsoft 文件"
-ms.custom: 
+title: 階層架構圖表分類 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vc.mfc
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - MFC, hierarchy
 ms.assetid: 1f109428-4b84-4f7c-90a9-e71fe071311e
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,12 +1,12 @@
 ---
-title: "嚴重錯誤 C1308 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1308 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C1308
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C1308
 ms.assetid: 46177997-069e-433a-8e20-93c846d78ffd
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen

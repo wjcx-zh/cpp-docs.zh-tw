@@ -1,12 +1,12 @@
 ---
-title: "嚴重錯誤 C1054 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1054 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C1054
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C1054
 ms.assetid: 9cfb7307-b22a-4418-b7c0-2621b0ab5b1b
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen

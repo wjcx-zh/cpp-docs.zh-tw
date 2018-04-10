@@ -1,12 +1,12 @@
 ---
-title: "編譯器錯誤 C3395 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3395 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C3395
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C3395
 ms.assetid: 26a9ebc9-ed97-47ce-b436-19aa2bcf6e50
-caps.latest.revision: 
+caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen

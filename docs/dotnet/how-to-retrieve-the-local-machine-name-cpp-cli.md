@@ -1,12 +1,12 @@
 ---
-title: "如何： 擷取本機電腦名稱 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 如何： 擷取本機電腦名稱 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - machine name, retrieving
 - computer name
 ms.assetid: 6c7acb9a-3f9b-43b2-a756-bd4fb859e697
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,12 +1,12 @@
 ---
-title: "嚴重錯誤 C1211 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1211 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C1211
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen

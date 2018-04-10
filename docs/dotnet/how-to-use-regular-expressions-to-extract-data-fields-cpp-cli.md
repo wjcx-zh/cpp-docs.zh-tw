@@ -1,12 +1,12 @@
 ---
-title: "如何： 使用規則運算式來擷取資料欄位 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用規則運算式來擷取資料欄位 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - regular expressions [C++], extracting data fields
 - data [C++], extracting from strings
 ms.assetid: b581d9b6-630e-48fa-94fe-20b0f7b89b06
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen

@@ -1,12 +1,12 @@
 ---
-title: "編譯器錯誤 C3216 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3216 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C3216
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C3216
 ms.assetid: bbab1efe-8779-4489-8bb0-b11e45f5cbe5
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

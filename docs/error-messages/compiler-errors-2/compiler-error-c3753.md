@@ -1,12 +1,12 @@
 ---
-title: "編譯器錯誤 C3753 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3753 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C3753
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C3753
 ms.assetid: a5b99e28-796c-4107-a673-97c2ae3bb2b9
-caps.latest.revision: 
+caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen

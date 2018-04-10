@@ -1,19 +1,19 @@
 ---
-title: "您可能對預設程式碼 （MFC 資料存取） 變更 |Microsoft 文件"
-ms.custom: 
+title: 您可能對預設程式碼 （MFC 資料存取） 變更 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
 - record views [C++], customizing default code
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen

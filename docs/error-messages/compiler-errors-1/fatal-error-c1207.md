@@ -1,12 +1,12 @@
 ---
-title: "嚴重錯誤 C1207 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1207 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C1207
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C1207
 ms.assetid: cd31b410-9523-47db-883c-e69a9351ffa2
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen

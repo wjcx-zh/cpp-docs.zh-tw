@@ -1,12 +1,12 @@
 ---
-title: "編譯器錯誤 C2913 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2913 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C2913
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2913
 ms.assetid: c6cf6090-02e8-49a5-913f-5bc6f864b769
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

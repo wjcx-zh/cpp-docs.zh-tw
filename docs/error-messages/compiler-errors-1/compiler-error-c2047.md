@@ -1,12 +1,12 @@
 ---
-title: "編譯器錯誤 C2047 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2047 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C2047
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2047
 ms.assetid: 686a5a81-3857-4753-84a0-5c2e7149cbee
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen

@@ -1,12 +1,12 @@
 ---
-title: "編譯器錯誤 C3075 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3075 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - C3075
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C3075
 ms.assetid: f431daa9-e0fa-48f0-a5c3-f99be96b55e3
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen

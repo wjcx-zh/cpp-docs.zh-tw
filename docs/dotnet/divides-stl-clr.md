@@ -1,12 +1,12 @@
 ---
-title: "將分割 (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 將分割 (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - cliext::divides
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - divides function [STL/CLR]
 ms.assetid: 4c36026a-02ba-475d-af68-854599647f4b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

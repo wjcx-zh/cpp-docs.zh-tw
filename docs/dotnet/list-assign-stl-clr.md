@@ -1,12 +1,12 @@
 ---
-title: "list:: assign (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'list:: assign (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - cliext::list::assign
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - assign member [STL/CLR]
 ms.assetid: c5f2b131-d0e1-4188-9d4b-d617280e4032
-caps.latest.revision: 
+caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen

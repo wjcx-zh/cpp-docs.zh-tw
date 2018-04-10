@@ -1,12 +1,12 @@
 ---
-title: "list:: remove_if (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'list:: remove_if (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - cliext::list::remove_if
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - remove_if member [STL/CLR]
 ms.assetid: cbc66192-751b-41c5-b557-d5d7bbc2a840
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen

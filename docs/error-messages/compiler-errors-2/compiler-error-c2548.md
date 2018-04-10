@@ -1,12 +1,12 @@
 ---
-title: "編譯器錯誤 C2548 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2548 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C2548
@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - C2548
 ms.assetid: 01e9c835-9bf3-4020-9295-5ee448c519f3
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen

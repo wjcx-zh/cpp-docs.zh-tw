@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>建置系統變更
 MSBuild 系統用於建置 Visual C++ 專案。 不過，在 Visual Studio 2008 和較早版本使用 VCBuild 系統。 某些檔案類型和依賴 VCBuild 的概念已不存在，或是目前系統的表示方式。 本文件討論了目前建置系統中的差異。  
@@ -59,24 +59,24 @@ MSBuild 系統用於建置 Visual C++ 專案。 不過，在 Visual Studio 2008 
   
  在目前版本中，藉由指定屬性的值串連的一個或多個常值和屬性的巨集以支援繼承。 **$ （inherit)**和**$ （noinherit)**巨集不支援。  
   
- 在下列範例中，以分號分隔的清單被指派給屬性頁上的屬性。 清單所組成的串連*\<值 >*常值和值`MyProperty`屬性，會使用巨集標記法來存取， **$(** *MyProperty***)**。  
+ 在下列範例中，以分號分隔的清單被指派給屬性頁上的屬性。 清單所組成的串連*\<值 >*常值和值`MyProperty`屬性，會使用巨集標記法來存取， **$(***MyProperty***)**.  
   
 ```  
 Property=<value>;$(MyProperty)  
 ```  
   
-## <a name="vcxprojuser-files"></a>。.vcxproj.user 檔案  
- 使用者檔案 (。.vcxproj.user) 會儲存使用者特定的屬性，例如偵錯和部署設定。 .Vcxproj.user 檔案適用於所有專案特定的使用者。  
+## <a name="vcxprojuser-files"></a>.vcxproj.user 檔案  
+ 使用者檔案 (.vcxproj.user) 會儲存使用者特定的屬性，例如偵錯和部署設定。 .Vcxproj.user 檔案適用於所有專案特定的使用者。  
   
-## <a name="vcxprojfilters-file"></a>。 vcxproj.filters 檔案  
- 當**方案總管 中**用來將檔案加入專案時，篩選檔 (。 vcxproj.filters) 定義中的 where**方案總管 中**樹狀的檢視新增檔案時，根據檔案的副檔名。  
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
+ 當**方案總管中**用來將檔案加入專案時，篩選檔 (。 vcxproj.filters) 定義中的 where**方案總管中**樹狀的檢視新增檔案時，根據檔案的副檔名。  
   
 ## <a name="vc-directories-settings"></a>VC + + 目錄設定  
  Visual c + + 目錄設定中指定[VC + + 目錄屬性頁](../ide/vcpp-directories-property-page.md)。 在舊版的 Visual Studio 中，目錄設定適用於每個使用者，並已排除的目錄清單指定 sysincl.dat 檔案中。  
   
- 您無法變更的 VC + + 目錄設定，如果您執行[devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe)在命令列。 您也無法變更設定如果您開啟**工具**功能表上，按一下 **匯入和匯出設定**，然後選取**重設所有設定**選項。  
+ 您無法變更的 VC + + 目錄設定，如果您執行[devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe)在命令列。 您也無法變更設定如果您開啟**工具**功能表上，按一下**匯入和匯出設定**，然後選取**重設所有設定**選項。  
   
- 移轉 VC + + 目錄設定從舊版 Visual c + + 所建立的.vssettings 檔。 開啟**工具**功能表上，按一下 **匯入和匯出設定**，選取**匯入選取的環境設定**，然後依照精靈的指示進行。 當您啟動 Visual Studio，在第一次上或**選擇預設環境設定**對話方塊中，選取**從舊版移轉我符合資格的設定，並將其套用的預設值下面選取**。  
+ 移轉 VC + + 目錄設定從舊版 Visual c + + 所建立的.vssettings 檔。 開啟**工具**功能表上，按一下**匯入和匯出設定**，選取**匯入選取的環境設定**，然後依照精靈的指示進行。 當您啟動 Visual Studio，在第一次上或**選擇預設環境設定**對話方塊中，選取**從舊版移轉我符合資格的設定，並將其套用的預設值下面選取**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

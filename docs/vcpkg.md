@@ -1,10 +1,10 @@
 ---
-title: "vcpkg -- 適用於 Windows 的 C++ 套件管理員 | Microsoft Docs"
-description: "vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝開放原始碼 C++ 程式庫的流程。"
+title: vcpkg -- 適用於 Windows 的 C++ 套件管理員 | Microsoft Docs
+description: vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝開放原始碼 C++ 程式庫的流程。
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 02/01/2018
+ms.date: 04/06/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -15,11 +15,11 @@ dev_langs:
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b7f4b3c5d77c7c31001a656667b7d2602a74b9
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg：適用於 Windows 的 C++ 套件管理員
 
@@ -39,7 +39,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows 上取得和安�
 
 ## <a name="installation"></a>安裝
 
-從 GitHub 複製 vcpkg 儲存機制：https://github.com/Microsoft/vcpkg。 您可以下載到您偏好的任何資料夾位置。
+複製 GitHub 的 vcpkg 存放庫：https://github.com/Microsoft/vcpkg。 您可以下載到您偏好的任何資料夾位置。
 
 在根資料夾中執行啟動程序：**bootstrap-vcpkg.bat**。
 
@@ -53,7 +53,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows 上取得和安�
 
 ```cmd
 ace       6.4.3   The ADAPTIVE Communication Environment
-anax      2.1.0-1 An open source C++ entity system. <https://github...
+anax      2.1.0-1 An open source C++ entity system. \<https://github...
 antlr4    4.6-1   ANother Tool for Language Recognition
 apr       1.5.2   The Apache Portable Runtime (APR) is a C library ...
 asio      1.10.8  Asio is a cross-platform C++ library for network ...
@@ -86,7 +86,6 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>列出已安裝的程式庫
-
 在您安裝了部分程式庫之後，就可以使用 **vcpkg list** 查看現有的內容：
 
 ```cmd
@@ -106,9 +105,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 執行 **vcpkg integrate install** 以設定 Visual Studio 針對每個使用者逐一尋找所有 vcpkg 標頭檔和二進位檔，而不需要手動編輯 VC++ 目錄路徑。 如有多個複製品，此命令執行所在的複製品就會成為新的預設位置。
 
-現在您只要鍵入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 將其標頭放在 \installed 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 `/was` 子資料夾中的 Include 檔清單：
-
-現在您只要鍵入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 將其標頭放在 \installed 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 \was 子資料夾中的 Include 檔清單：
+現在您只要鍵入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 會將其標頭放在 **/installed** 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 **/was** 子資料夾中的 Include 檔清單：
 
 ![vcpkg Intellisense 整合](media/vcpkg-intellisense.png "vcpkg 與 Intellisense")
 
@@ -144,6 +141,36 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="upgrade-example"></a>升級範例
 
+### <a name="per-project"></a>每個專案
+如果您要使用的特定程式庫版本與使用中 vcpkg 執行個體的程式庫版本不同，請遵循下列步驟：
+
+1. 建立新的 vcpkg 複製品 
+1. 修改程式庫的連接埠檔案以取得您需要的版本
+1. 執行 **vcpkg install \<library>**。
+1. 使用 **vcpkg integrate project** 依每個專案建立參考該程式庫的 NuGet 套件。
+
+
+## <a name="export-compiled-binaries-and-headers"></a>匯出編譯的二進位檔和標頭
+要求小組所有人都下載及建置程式庫很沒效率。 一名小組成員即可完成該作業，然後使用 **vcpkg export** 建立二進位檔和標頭的 ZIP 檔案，輕輕鬆鬆和其他小組成員共用。 
+
+## <a name="updateupgrade-installed-libraries"></a>更新/升級安裝的程式庫
+公用目錄會隨程式庫最新版本保持在最新狀態。 若要判斷哪些本機程式庫已過期，請使用 **vcpkg update**。 當您準備好將連接埠集合更新至最新版公用目錄時，請執行 **vcpkg upgrade** 命令，以自動下載及重建任何或所有已安裝的過期程式庫。
+
+根據預設，**upgrade** 命令只列出過期的程式庫，而不將其升級。 若要執行升級，請使用 **--no-dry-run** 選項。 
+
+```cmd
+  vcpkg upgrade --no-dry-run 
+```
+
+### <a name="upgrade-options"></a>升級選項
+
+- **--no-dry-run**  執行升級；若未指定，命令只列出過期的套件。 
+- **--keep-going**  即使其中一個套件失敗仍繼續安裝。 
+- **--triplet \<t>**  設定不合格套件的預設 triplet。 
+- **--vcpkg-root \<path>**  指定要使用的 vcpkg 目錄，而不是目前目錄或工具目錄。 
+
+### <a name="upgrade-example"></a>升級範例
+
 下列範例示範如何只升級指定的程式庫。 請注意，vcpgk 會視需要根據相依性自動提取。
 
 ```cmd
@@ -160,27 +187,21 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>提供新的程式庫
-
 您可以在私人連接埠集合中包含喜歡的任何程式庫。 若要為公用類別目錄建議新的程式庫，請前往 [GitHub vcpkg 問題頁面](https://github.com/Microsoft/vcpkg/issues)提出問題。
 
 ## <a name="remove-a-library"></a>移除程式庫
-
 鍵入 **vcpkg remove** 可移除安裝的程式庫。 如有任何其他程式庫與其相依，系統會要求您以 **--recurse** 重新執行命令，這會移除所有下游程式庫。
 
 ## <a name="customize-vcpkg"></a>自訂 vcpkg
-
 您可以用任何喜歡的方式修改您的 vcpkg 複製品。 您可以建立多個 vcpkg 複製品，並修改各複製品的 portfile 以取得特定的程式庫版本，或指定命令列參數。 例如，在企業中，一組開發人員可能正在處理有相依性集合的軟體，而另一組人馬則可能有其他集合。 您可以設定兩個 vcpkg 複製品，然後修改每個複製品，根據您的需求下載程式庫版本和編譯參數等等。 
 
 ## <a name="uninstall-vcpkg"></a>將 vcpkg 解除安裝
-
 只要刪除目錄即完成。 
 
 ## <a name="send-feedback-about-vcpkg"></a>傳送 vcpkg 的相關意見反應
-
 使用 **--survey** 命令可向 Microsoft 傳送 vcpkg 的相關意見反應，包括功能的 Bug 回報與建議。
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg 資料夾階層
-
 所有 vcpkg 功能與資料皆完全獨立於單一目錄階層中，稱為「執行個體」。 沒有登錄設定或環境變數。 您可以在電腦上建立無數個執行個體，其並不會互相干擾。 
 
 vcpkg 執行個體的內容如下： 

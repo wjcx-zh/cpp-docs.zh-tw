@@ -1,12 +1,12 @@
 ---
-title: "部署、執行和偵錯 Linux 專案 | Microsoft Docs"
-ms.custom: 
+title: 部署、執行和偵錯 Linux 專案 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 author: corob-msft
@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 6c904c721eedb8f15e254abd68fca56da7fe0e6a
-ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
+ms.openlocfilehash: ebd8783bdcf3c188e04c1d6808d5a727a2bc7cdd
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
 
@@ -29,9 +29,6 @@ ms.lasthandoff: 02/01/2018
 
 * 使用中斷點、監看式視窗以及將滑鼠指標停留在變數上等傳統 Visual Studio 功能進行偵錯。 使用這些方法，可讓您以對其他專案類型所使用的一般方式進行偵錯。
 * 在特殊的主控台視窗中檢視目標電腦的輸出。 您也可以使用主控台將輸出傳送到目標電腦。
-
-> [!NOTE]
-> 若要了解如何在 Linux 上進行 ARM 偵錯，請參閱此部落格文章：[Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (在 Visual Studio 中對內嵌 ARM 裝置進行)。
 
 ## <a name="debug-your-linux-project"></a>對 Linux 專案進行偵錯
 
@@ -89,6 +86,12 @@ ms.lasthandoff: 02/01/2018
 * 使用 [其他偵錯工具命令] 項目，可以將特定偵錯工具選項傳遞至 GDB。  例如，您可能想要忽略 SIGILL (不合法指令) 訊號。  您可以使用 **handle** 命令來進行這項作業。  如上所示將下列項目新增至 [其他偵錯工具命令] 項目：
 
   ```handle SIGILL nostop noprint```
+
+## <a name="next-steps"></a>後續步驟
+
+* 若要在 Linux 上偵錯 ARM 裝置，請參閱此部落格文章：[Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) (在 Visual Studio 中對內嵌 ARM 裝置進行偵錯)。
+
+* 若要使用 **Attach to Process**命令進行偵錯，請參閱此部落格文章：[Linux C++ Workload improvements to the Project System, Linux Console Window, rsync and Attach to Process](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/) (專案系統、Linux 主控台視窗、rsync 及附加至處理序的 Linux C++ 工作負載改善)。
 
 ## <a name="see-also"></a>另請參閱
 [C++ 偵錯工具屬性 (Linux C++)](../linux/prop-pages/debugging-linux.md)。

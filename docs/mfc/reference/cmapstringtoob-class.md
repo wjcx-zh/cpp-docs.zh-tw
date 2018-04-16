@@ -232,7 +232,7 @@ void GetNextAssoc(
 |類別|成員函式|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void GetNextAssoc (位置 （& s)** *rNextPosition* **，void\* &**  *rKey* **，void\* &**  *右值* **) const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc (位置 （& s)** *rNextPosition* **，void\* &**  *rKey* **，文字 &***右值* **) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void GetNextAssoc (位置 （& s)** *rNextPosition*  **， void\*&** *rKey* **，文字 &** *右值* **) const;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void GetNextAssoc (位置 （& s)** *rNextPosition* **，CString &** *rKey* **，void\* &** *右值* **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void GetNextAssoc (位置 （& s)** *rNextPosition* **，CString &** *rKey* **，CString &** *右值* **) const;**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void GetNextAssoc (位置 （& s)** *rNextPosition* **，WORD （& s)** *rKey* **，CObject\* &** *右值* **) const;**|  

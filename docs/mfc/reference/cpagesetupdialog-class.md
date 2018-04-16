@@ -94,7 +94,7 @@ class CPageSetupDialog : public CCommonDialog
   
  若要使用`CPageSetupDialog`物件，請先建立物件使用`CPageSetupDialog`建構函式。 一旦建構的對話方塊中，您可以設定或修改中的任何值`m_psd`資料成員，才能初始化對話方塊的控制項的值。 [M_psd](#m_psd)結構的類型是**PAGESETUPDLG**。  
   
- 初始化對話方塊控制項之後呼叫`DoModal`成員函式，以顯示對話方塊，並允許使用者選取列印選項。 `DoModal` 傳回使用者是否選取 [確定] ( **IDOK**) 或 [取消] ( **IDCANCEL**) 按鈕。  
+ 初始化對話方塊控制項之後呼叫`DoModal`成員函式，以顯示對話方塊，並允許使用者選取列印選項。 `DoModal` 傳回使用者是否選取 [確定] \( **IDOK**) 或 [取消] \( **IDCANCEL**) 按鈕。  
   
  如果`DoModal`傳回**IDOK**，您可以使用數個`CPageSetupDialog`的成員函式或存取`m_psd`来擷取使用者的資訊輸入的資料成員。  
   

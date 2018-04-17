@@ -1,12 +1,12 @@
 ---
-title: "已被取代 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 已被取代 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
-本主題是關於 Microsoft 專有 declspec 宣告已被取代。 如需 C + + 14`[[deprecated]]`屬性，以及何時使用與 Microsoft 專有 declspec 或 pragma，該屬性的指導方針請參閱[c + + 標準屬性](attributes2.md)。
+本主題是關於 Microsoft 專有 declspec 宣告已被取代。 如需 C + + 14`[[deprecated]]`屬性，以及何時使用與 Microsoft 專有 declspec 或 pragma，該屬性的指導方針請參閱[c + + 標準屬性](attributes.md)。
 
  下面，例外狀況**取代**宣告可提供相同的功能[已被取代](../preprocessor/deprecated-c-cpp.md)pragma:  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   巨集，才可以標示為已被取代的**取代**pragma。  
   
- 如果編譯器遇到取代識別項或標準使用[ `[[deprecated]]` ](attributes2.md)屬性[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告就會擲回。  
+ 如果編譯器遇到取代識別項或標準使用[ `[[deprecated]]` ](attributes.md)屬性[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)警告就會擲回。  
   
 ## <a name="example"></a>範例  
  下列範例將示範使用 deprecated 函式時，如何將函式標示為取代以及如何指定要在編譯時期顯示的訊息。  
@@ -81,6 +81,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [__declspec](../cpp/declspec.md)   
  [關鍵字](../cpp/keywords-cpp.md)

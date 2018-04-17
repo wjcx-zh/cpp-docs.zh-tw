@@ -1,12 +1,12 @@
 ---
-title: "編譯器警告 （層級 3） C4996 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 （層級 3） C4996 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>編譯器警告 （層級 3） C4996
 
@@ -37,13 +37,13 @@ ms.lasthandoff: 12/21/2017
 
 - [此函式或變數可能不安全。請考慮使用*safe_version*改為。若要停用已被取代，請使用\_CRT\_SECURE\_否\_警告。如需詳細資料，請參閱線上說明。](#unsafe-crt-library-functions)
 
-- [' std::*function_name*::\_未核取\_迭代器::\_Deprecate' 呼叫 std::*function_name*參數的可能不安全-此呼叫依賴由呼叫端確認傳遞的值正確無誤。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。請參閱有關如何使用 Visual c + + ' Checked Iterators' 的文件](#unsafe-standard-library-functions)
+- [' std::*function_name*::\_未核取\_迭代器::\_Deprecate' 呼叫 std::*function_name*參數的可能不安全-此呼叫須由呼叫端確認傳遞的值正確無誤。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。請參閱有關如何使用 Visual c + + ' Checked Iterators' 的文件](#unsafe-standard-library-functions)
 
 - [此函式或變數已被取代的較新的文件庫或作業系統功能。請考慮使用*new_item*改為。如需詳細資料，請參閱線上說明。](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>原因
 
-當編譯器遇到函式或標示為的變數，就會發生 C4996[取代](../../cpp/deprecated-cpp.md)使用`__declspec(deprecated)`修飾詞，或當您嘗試存取函式、 類別成員或具有 C + + 14 的 typedef [ \[\[取代\]\] ](../../cpp/attributes2.md)屬性。 您可以使用`__declspec(deprecated)`修飾詞或`[[deprecated]]`自行屬性在文件庫或標頭檔，以警告您有關已被取代的函式、 變數、 成員或 typedef 的用戶端。
+當編譯器遇到函式或標示為的變數，就會發生 C4996[取代](../../cpp/deprecated-cpp.md)使用`__declspec(deprecated)`修飾詞，或當您嘗試存取函式、 類別成員或具有 C + + 14 的 typedef [ \[\[取代\]\] ](../../cpp/attributes.md)屬性。 您可以使用`__declspec(deprecated)`修飾詞或`[[deprecated]]`自行屬性在文件庫或標頭檔，以警告您有關已被取代的函式、 變數、 成員或 typedef 的用戶端。
 
 ## <a name="remarks"></a>備註
 

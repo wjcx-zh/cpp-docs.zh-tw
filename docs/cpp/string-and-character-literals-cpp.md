@@ -1,12 +1,12 @@
 ---
-title: "字串和字元常值 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 字串和字元常值 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。  
@@ -83,7 +83,7 @@ int main()
 }  
 ```  
   
- 字串常值可以沒有前置詞，或者以 `u8`、 `L`、 `u`和  `U` 前置詞分別表示半形字元 (單一位元組或多位元組)、UTF-8、全形字元 (UCS-2 或 UTF-16)、UTF-16 和 UTF-32 編碼。 原始字串常值可以有 `R`、 `u8R`、 `LR`、 `uR` 和 `UR` 前置詞，相當於這些編碼方式的原始版本。  若要建立暫存或靜態的 std::string 值，字串常值或原始字串常值可以搭配使用 `s` 後置詞。 如需詳細資訊，請參閱下節的＜字串常值＞。 如需基本原始程式碼字元集、通用字元名稱，以及使用原始程式碼擴充字碼頁字元的詳細資訊，請參閱 [Character Sets](../cpp/character-sets2.md)。  
+ 字串常值可以沒有前置詞，或者以 `u8`、 `L`、 `u`和  `U` 前置詞分別表示半形字元 (單一位元組或多位元組)、UTF-8、全形字元 (UCS-2 或 UTF-16)、UTF-16 和 UTF-32 編碼。 原始字串常值可以有 `R`、 `u8R`、 `LR`、 `uR` 和 `UR` 前置詞，相當於這些編碼方式的原始版本。  若要建立暫存或靜態的 std::string 值，字串常值或原始字串常值可以搭配使用 `s` 後置詞。 如需詳細資訊，請參閱下節的＜字串常值＞。 如需基本原始程式碼字元集的詳細資訊，通用字元名稱，以及在原始程式碼中使用擴充字碼頁的字元，請參閱[字元集](../cpp/character-sets.md)。  
   
 ## <a name="character-literals"></a>字元常值  
  *「字元常值」* (character literal) 是由常數字元所組成。 其表示方式是以單引號括住字元。 有五種類型的字元常值：  
@@ -210,7 +210,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  通用字元名稱無法編碼在 surrogate 字碼指標範圍 D800-DFFF 內的值。 至於 Unicode surrogate 字組，請使用 `\UNNNNNNNN`指定通用字元名稱，這裡的 NNNNNNNN 為字元的八位數字碼指標。 如有需要，編譯器會產生 surrogate 字組。  
   
- 過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 這已在 C++11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱 [Character Sets](../cpp/character-sets2.md)。 如需 Unicode 的詳細資訊，請參閱 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 如需 Surrogate 字組的詳細資訊，請參閱 [Surrogate 字組和補充字元](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx)。  
+ 過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 這已在 C++11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱[字元集](../cpp/character-sets.md)。 如需 Unicode 的詳細資訊，請參閱 [Unicode](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)。 如需 Surrogate 字組的詳細資訊，請參閱 [Surrogate 字組和補充字元](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx)。  
   
 ## <a name="string-literals"></a>字串常值  
  字串常值代表構成 null 結束字串的一連串字元。 這些字元必須使用雙引號括起來。 有下列字串常值類型：  
@@ -404,6 +404,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Character Sets](../cpp/character-sets2.md)   
+ [字元集](../cpp/character-sets.md)   
  [數值、 布林值和指標常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [使用者定義常值](../cpp/user-defined-literals-cpp.md)

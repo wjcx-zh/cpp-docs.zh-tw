@@ -1,12 +1,12 @@
 ---
-title: "已被取代 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: 已被取代 （C/c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vc-pragma.deprecated
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5df80fffb5b9cdeabfe19d5a5de6eb771d35d3d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65333f72f71ded1338956ab1a3c51c2be980cb1a
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
 **取代**pragma 可讓您指出，函式、 類型或任何其他識別項可能不再支援未來版本，或應該不會再使用。  
 > [!NOTE]
-> 如需 C + + 14`[[deprecated]]`屬性，以及何時使用該指引屬性 vs Microsoft declspec 或 pragma，請參閱[c + + 標準屬性](../cpp/attributes2.md)屬性。
+> 如需 C + + 14`[[deprecated]]`屬性，以及何時使用該指引屬性 vs Microsoft declspec 或 pragma，請參閱[c + + 標準屬性](../cpp/attributes.md)屬性。
   
 ## <a name="syntax"></a>語法  
   
@@ -86,5 +86,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,37 +1,35 @@
 ---
-title: "指派運算子 |Microsoft 文件"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 指派運算子 |Microsoft 文件
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>指派運算子
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>備註  
- 指派運算子會將值儲存在左運算元所指定的物件。 有兩種指派運算：簡單指派，第二個運算元的值儲存在第一個運算元所指定的物件；複合指派，在儲存結果之前執行算術、移位或位元運算。 下表中除了 = 運算子以外的所有指派運算子都是複合指派運算子。  
+ 指派運算子會將值儲存在左運算元所指定的物件。 有三種指派運算： 
+
+1. 簡單指派，第二個運算元的值儲存在第一個運算元所指定的物件中。 1. 複合指派，算術、 移位或位元運算儲存結果之前已執行。
+1. 在無需先行複製傳送哪些資源移動指派 （適用於類別類型）。
+
+
+下表中的所有設定運算子都 except = 和 （& s) （& a) = 運算子都是複合指派運算子。  
   
 ### <a name="assignment-operators"></a>指派運算子  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|將第一個運算元的值往右移位由第二個運算元的值所指定的位元數；將結果儲存在第一個運算元所指定的物件。|  
 |**&=**|取得第一和第二個運算元的位元 AND；將結果儲存在第一個運算元所指定的物件。|  
 |`^=`|取得第一和第二個運算元的位元排除 OR；將結果儲存在第一個運算元所指定的物件。|  
-|`&#124;=`|取得第一和第二個運算元的位元包含 OR；將結果儲存在第一個運算元所指定的物件。|  
+|`&#124;=`|取得第一和第二個運算元的位元包含 OR；將結果儲存在第一個運算元所指定的物件。|
+|**&&=**| 移動指派運算子 （只有類別類型）。 如果第二個運算元是右值，其將資源移至第一個運算元 （而不將它們複製）。 請參閱[移動建構函式和移動指派運算子](move-constructors-and-move-assignment-operators-cpp.md)如需詳細資訊。|
   
  **運算子關鍵字**  
   
@@ -206,7 +209,7 @@ B = A;
   
  在 ANSI C 中，指派運算式的結果不是左值。 因此，合法的 C++ 運算式 `(a += b) += c` 在 C 中是不合法的。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 指派運算子](../c-language/c-assignment-operators.md)

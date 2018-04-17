@@ -1,32 +1,32 @@
 ---
-title: "移動建構函式和移動指派運算子 （c + +） |Microsoft 文件"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 如何： 定義移動建構函式和移動指派運算子 （c + +） |Microsoft 文件
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
-- move constructor
+- move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69280eff199b9c04b51bf9b7aa298a67bf31bd89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bc9ce3d397b96ec45a0dbee5fefdb09d01b3f28
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動建構函式和移動指派運算子 (C++)
-本主題說明如何撰寫*移動建構函式*和移動指派運算子的 c + + 類別。 移動建構函式可讓您實作移動語意，大幅改善應用程式的效能。 如需移動語意的詳細資訊，請參閱[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+本主題說明如何撰寫*移動建構函式*和移動指派運算子的 c + + 類別。 移動建構函式可讓您無需先行複製變成左值的右值物件所擁有的資源。 如需移動語意的詳細資訊，請參閱[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
  這個主題是以下列管理記憶體緩衝區的 C++ 類別 `MemoryBlock` 為基礎。  
   
@@ -135,7 +135,7 @@ private:
     ```  
   
 ### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>建立 C++ 類別的移動指派運算子  
-  
+
 1.  定義空的指派運算子，該運算子會接受以類別類型的右值參考做為其參數，並傳回對類別類型的參考，如下列範例所示範：  
   
     ```cpp  
@@ -230,7 +230,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例示範移動語意如何改善應用程式的效能。 此範例會在向量物件中加入兩個元素，然後在兩個現有元素之間插入新的元素。 在 Visual c + + 2010、`vector`類別會使用移動語意，以有效率地執行插入作業，藉由移動而非複製向量的元素。  
+ 下列範例示範移動語意如何改善應用程式的效能。 此範例會在向量物件中加入兩個元素，然後在兩個現有元素之間插入新的元素。 `vector`類別會使用移動語意，以有效率地執行插入作業，藉由移動而非複製向量的元素。  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -275,7 +275,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- Visual c + + 2010 之前, 這個範例會產生下列輸出：  
+ Visual Studio 2010 之前, 此範例會產生下列輸出：  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -319,6 +319,6 @@ MemoryBlock(MemoryBlock&& other)
   
  [Std:: move](../standard-library/utility-functions.md#move)函式會保留的右值屬性`other`參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [右值參考宣告子： & （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)   
  [\<公用程式 > 移動](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

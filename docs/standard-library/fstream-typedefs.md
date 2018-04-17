@@ -1,10 +1,10 @@
 ---
 title: '&lt;fstream&gt; typedefs | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - fstream/std::filebuf
@@ -16,13 +16,13 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-caps.latest.revision: 
+caps.latest.revision: 11
 manager: ghogen
-ms.openlocfilehash: 5e0c09cdef9a20d7614f26189f34a5302b46a3ff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 613a96cb4d6ca174c7cf2d1bcfcf024dacf75980
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; typedefs
 ||||  
@@ -61,7 +61,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 ```  
   
 ### <a name="remarks"></a>備註  
- 這個類型與專為具有預設字元特性之 char 類型項目所特製化的樣板類別 `basic_ifstream` 同義。 例如，  
+ 類型是樣板類別的同義字[basic_ifstream](../standard-library/basic-ifstream-class.md)特製化的預設字元特性與 char 類型項目。 例如，  
   
  `using namespace std;`  
   
@@ -129,7 +129,7 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 ### <a name="remarks"></a>備註  
  這個類型與 [basic_filebuf](../standard-library/basic-filebuf-class.md) 範本類別同義，該範本類別是專為具有預設字元特性的 `wchar_t` 類型元素所特製化。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<fstream>](../standard-library/fstream.md)
 
 

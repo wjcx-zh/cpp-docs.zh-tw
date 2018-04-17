@@ -1,12 +1,12 @@
 ---
-title: "值的類別： Lvalues 和 Rvalues （Visual c + +） |Microsoft 文件"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 值的類別： Lvalues 和 Rvalues （Visual c + +） |Microsoft 文件
+ms.custom: ''
+ms.date: 04/06/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,73 +14,74 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-caps.latest.revision: 
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e06dca827d6b5cb5d457a2eda6aa143bb5d0fe5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6512be9e64cdd5fb56d94fe1842be4f38d93d52c
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues （Visual c + +）
-每個 c + + 運算式具有類型，並屬於*值類別*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。 
+
+每個 c + + 運算式具有類型，並屬於*值類別*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。
 
  C + + 17 標準會定義運算式值的類別，如下所示：
 
-- A *glvalue*是的運算式的評估判斷物件、 位元欄位或函式的識別。 
-- A *prvalue*是的運算式的評估初始化物件或位元欄位，或計算運算子的運算元的值，請在它出現內容所指定。 
-- *Xvalue*是 glvalue 代表物件或位元欄位 （通常是因為它是其存留期結尾附近），可以重複使用的資源。 [範例： 特定種類的運算式涉及右值參考 (8.3.2) 產生 xvalues，例如傳回型別是右值參考的函式呼叫或轉型為右值參考類型。 ] 
-- *左值*是不是 xvalue glvalue。 
-- *右值*prvalue 或 xvalue。 
+- A *glvalue*是的運算式的評估判斷物件、 位元欄位或函式的識別。
+- A *prvalue*是的運算式的評估初始化物件或位元欄位，或計算運算子的運算元的值，請在它出現內容所指定。
+- *Xvalue*是 glvalue 代表物件或位元欄位 （通常是因為它是其存留期結尾附近），可以重複使用的資源。 [範例： 特定種類的運算式涉及右值參考 (8.3.2) 產生 xvalues，例如傳回型別是右值參考的函式呼叫或轉型為右值參考類型。 ]
+- *左值*是不是 xvalue glvalue。
+- *右值*prvalue 或 xvalue。
 
 下圖說明兩個類別之間的關聯性：
 
- ![C + + 運算式值分類](media/value_categories.png "c + + 運算式值類別")  
- 
- 左值會有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括`const`變數陣列元素中，函式會傳回左值參考，位元欄位、 等位和類別成員的呼叫。 
- 
- Prvalue 運算式有沒有可存取您的程式的位址。 Prvalue 運算式的範例包括常值、 函式呼叫傳回非參考類型，並只能由編譯器建立運算式評估期間，但可存取的暫存物件。 
+ ![C + + 運算式值分類](media/value_categories.png "c + + 運算式值類別")
 
- Xvalue 運算式沒有位址，但是可以用來初始化為右值參考，可讓您存取運算式。 範例包括傳回右值參考，陣列註標、 成員和指標成員運算式的陣列或物件是右值參考的函式呼叫。 
- 
- 下列範例將示範數種正確和不正確的左值和右值用法：  
-  
-```  
-// lvalues_and_rvalues2.cpp  
-int main()  
-{  
-   int i, j, *p;  
-  
-   // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.  
-   i = 7;  
-  
-   // Incorrect usage: The left operand must be an lvalue (C2106).  `j * 4` is a prvalue.
-   7 = i; // C2106  
-   j * 4 = 7; // C2106  
-  
-   // Correct usage: the dereferenced pointer is an lvalue.  
-   *p = i;   
-  
-   const int ci = 7;  
-   // Incorrect usage: the variable is a non-modifiable lvalue (C3892).  
-   ci = 9; // C3892  
-  
-   // Correct usage: the conditional operator returns an lvalue.  
-   ((i < 3) ? i : j) = 7;  
-}  
-```  
-  
+ 左值會有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括`const`變數陣列元素中，函式會傳回左值參考，位元欄位、 等位和類別成員的呼叫。
+
+ Prvalue 運算式有沒有可存取您的程式的位址。 Prvalue 運算式的範例包括常值、 函式呼叫傳回非參考類型，並只能由編譯器建立運算式評估期間，但可存取的暫存物件。
+
+ Xvalue 運算式都有一個位址，無法再存取您的程式，但可以用來初始化為右值參考，可讓您存取運算式。 範例包括傳回右值參考，陣列註標、 成員和指標成員運算式的陣列或物件是右值參考的函式呼叫。
+
+## <a name="example"></a>範例
+
+ 下列範例將示範數種正確和不正確的左值和右值用法：
+
+```cpp
+// lvalues_and_rvalues2.cpp
+int main()
+{
+ int i, j, *p;
+
+ // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.
+ i = 7;
+
+ // Incorrect usage: The left operand must be an lvalue (C2106).`j * 4` is a prvalue.
+ 7 = i; // C2106
+ j * 4 = 7; // C2106
+
+ // Correct usage: the dereferenced pointer is an lvalue.
+ *p = i;
+
+ const int ci = 7;
+ // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
+ ci = 9; // C3892
+
+ // Correct usage: the conditional operator returns an lvalue.
+ ((i < 3) ? i : j) = 7;
+}
+```
+
 > [!NOTE]
->  本主題中的範例將說明運算子未多載時的正確和不正確用法。 藉由多載運算子，您就可以讓像是 `j * 4` 這樣的運算式變成左值。  
+> 本主題中的範例將說明運算子未多載時的正確和不正確用法。 藉由多載運算子，您就可以讓像是 `j * 4` 這樣的運算式變成左值。
 
-  
- 條款*左值*和*右值*經常參考的物件參考時。 多個參考的詳細資訊，請參閱[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)和[右值參考宣告子: （& s) （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [基本概念](../cpp/basic-concepts-cpp.md)   
- [左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)   
- [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)
+條款*左值*和*右值*經常參考的物件參考時。 多個參考的詳細資訊，請參閱[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)和[右值參考宣告子: （& s) （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)。
+
+## <a name="see-also"></a>另請參閱
+
+ [基本概念](../cpp/basic-concepts-cpp.md)[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md) [右值參考宣告子： & （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)

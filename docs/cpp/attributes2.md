@@ -1,19 +1,19 @@
 ---
-title: "C + + 標準屬性 |Microsoft 文件"
-ms.custom: 
+title: C + + 標準屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 manager: ghogen
 ms.openlocfilehash: d2dcce6b0e289588c426792a334ee4ec38d1ab5f
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/13/2018
 ---
 # <a name="attributes-in-c"></a>C + + 中的屬性
 
@@ -39,17 +39,17 @@ void g() {
 void Foo(int);
 ```
 
-屬性代表 #pragma 指示詞，__declspec （Visual c + +），例如特定廠商延伸模組的標準化替代方案或 &#95; &#95; 屬性 &#95; &#95;(GNU)。 不過，您仍然必須使用廠商專屬建構大部分的用途。 標準目前指定符合的編譯器應該會辨識下列屬性：
+屬性代表 #pragma 指示詞，__declspec （Visual c + +），例如特定廠商延伸模組的標準化替代方案或&#95;&#95;屬性&#95;&#95; (GNU)。 不過，您仍然必須使用廠商專屬建構大部分的用途。 標準目前指定符合的編譯器應該會辨識下列屬性：
 
-- `[[noreturn]]`指定函式永遠不會傳回。亦即它一律會擲回例外狀況。 編譯器可以調整其編譯規則`[[noreturn]]`實體。
+- `[[noreturn]]` 指定函式永遠不會傳回。亦即它一律會擲回例外狀況。 編譯器可以調整其編譯規則`[[noreturn]]`實體。
 
-- `[[carries_dependency]]`指定函式會傳播資料相依性順序與執行緒同步處理。 屬性可以套用至一或多個參數，以指定傳入的引數傳送至函式主體的相依性。 屬性可以套用至函式本身，以指定的傳回值會移到函式的相依性。 編譯器可以使用這項資訊來產生更有效率的程式碼。
+- `[[carries_dependency]]` 指定函式會傳播資料相依性順序與執行緒同步處理。 屬性可以套用至一或多個參數，以指定傳入的引數傳送至函式主體的相依性。 屬性可以套用至函式本身，以指定的傳回值會移到函式的相依性。 編譯器可以使用這項資訊來產生更有效率的程式碼。
 
-- `[[deprecated]]`**Visual Studio 2015 和更新版本：**指定，函式不為了在使用，而且可能會存在在未來的版本的程式庫介面。 編譯器可以使用此用戶端程式碼嘗試呼叫函式時，產生參考用訊息。 可以套用至類別、 typedef 名稱、 變數、 非靜態資料成員、 函式、 命名空間、 列舉型別、 列舉值，或樣板特製化的宣告。  
+- `[[deprecated]]` **Visual Studio 2015 和更新版本：**指定，函式不為了在使用，而且可能會存在在未來的版本的程式庫介面。 編譯器可以使用此用戶端程式碼嘗試呼叫函式時，產生參考用訊息。 可以套用至類別、 typedef 名稱、 變數、 非靜態資料成員、 函式、 命名空間、 列舉型別、 列舉值，或樣板特製化的宣告。  
 
-- `[[fallthrough]]`**2017年和更新版本的 visual Studio:** (適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性可用的內容中[切換](switch-statement-cpp.md)提示陳述式編譯器 （或任何人閱讀程式碼），目的是 fallthrough 行為。 Visual c + + 編譯器目前不會在警告上 fallthrough 行為，所以此屬性不有任何效果編譯器行為。
+- `[[fallthrough]]` **2017 和更新版本的 visual Studio:** (適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性可用的內容中[切換](switch-statement-cpp.md)編譯器 （或任何人讀取提示陳述式程式碼），目的是 fallthrough 行為。 Visual c + + 編譯器目前不會在警告上 fallthrough 行為，所以此屬性不有任何效果編譯器行為。
 
-- `[[nodiscard]]`**Visual Studio 2017 15.3 和更新版本：** (適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 指定函式的傳回值並不適合被捨棄。 引發警告 C4834，如本範例所示：
+- `[[nodiscard]]` **Visual Studio 2017 15.3 和更新版本：** (適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 指定函式的傳回值並不適合被捨棄。 引發警告 C4834，如本範例所示：
 
    ```cpp
    [[nodiscard]]
@@ -62,11 +62,11 @@ void Foo(int);
    }
    ```
 
-- `[[maybe_unused]]`**Visual Studio 2017 15.3 和更新版本：** (適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 可能會指定該變數中，函式類別，typedef、 非靜態資料成員、 列舉或範本的特製化刻意不能使用。 實體標記時，編譯器不會警告`[[maybe_unused]]`未使用。 屬性，反之亦然，稍後可以重新宣告沒有屬性宣告的實體。 實體會被視為標記為標示為其第一個宣告會分析之後，和目前的轉譯單位的轉譯的其餘部分。
+- `[[maybe_unused]]` **Visual Studio 2017 15.3 和更新版本：** (適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 指定的變數、 函式、 類別、 typedef、 非靜態資料成員、 列舉或樣板特製化可能會刻意不會使用。 實體標記時，編譯器不會警告`[[maybe_unused]]`未使用。 屬性，反之亦然，稍後可以重新宣告沒有屬性宣告的實體。 實體會被視為標記為標示為其第一個宣告會分析之後，和目前的轉譯單位的轉譯的其餘部分。
 
 ## <a name="microsoft-specific-attributes"></a>Microsoft 特定屬性
 
-- `[[gsl::suppress(rules)]]`此 Microsoft 特定的屬性用來隱藏警告的強制執行的西洋棋[指導方針支援程式庫 (GSL)](https://github.com/Microsoft/GSL)程式碼中的規則。 例如，請考慮此程式碼片段：
+- `[[gsl::suppress(rules)]]` 此 Microsoft 特定的屬性用來隱藏警告的強制執行的西洋棋[指導方針支援程式庫 (GSL)](https://github.com/Microsoft/GSL)程式碼中的規則。 例如，請考慮此程式碼片段：
 
     ```cpp
     void main()

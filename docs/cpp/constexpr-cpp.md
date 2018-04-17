@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -49,6 +49,7 @@ constexpr ctor (params);
 
 ## <a name="return-value"></a>傳回值
 
+
  Constexpr 變數或函式必須傳回[常值型別](trivial-standard-layout-and-pod-types.md#literal_types)。
 
 ## <a name="constexpr-variables"></a>constexpr 變數
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>constexpr 函式
+## <a name="constexpr_functions"></a> constexpr 函式
 
 A **constexpr**函式是耗用程式碼需要它時，可以在編譯計算其傳回的值。  當其引數為**constexpr**值，而且耗用程式碼需要傳回值在編譯時期，例如初始化**constexpr**變數，或提供非類型樣板引數，它會產生編譯時間常數。 當呼叫與非**constexpr**引數，或不在編譯時間需要其值時，便會像一般函式的執行階段產生值。  (這種雙行為讓您不必撰寫**constexpr**和非-**constexpr**相同函式的版本。)
 

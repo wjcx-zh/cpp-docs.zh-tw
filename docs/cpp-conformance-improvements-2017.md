@@ -14,11 +14,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ce15db75d4d08ef128e561fa9671b643946c71c3
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 版中的 C++ 一致性改善
 
@@ -72,7 +72,7 @@ Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>不重複使用屬性命名空間
 
-新的語法讓您在屬性清單中可只用單一命名空間識別項。 如需詳細資訊，請參閱 [C++ 中的屬性](cpp/attributes2.md)。
+新的語法讓您在屬性清單中可只用單一命名空間識別項。 如需詳細資訊，請參閱 [C++ 中的屬性](cpp/attributes.md)。
 
 ### <a name="structured-bindings"></a>結構化繫結
 
@@ -88,7 +88,7 @@ Lambda 運算式中的 `*this` 物件現已可以值擷取。 這可用在平行
 
 ### <a name="removing-operator-for-bool"></a>移除 bool 的 operator++
 
-`bool` 類型已不再支援 `operator++`。 如需詳細資訊，請參閱[移除已過時的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
+`bool` 類型已不再支援 `operator++`。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
 
 ### <a name="removing-deprecated-register-keyword"></a>移除已淘汰的 "register" 關鍵字
 

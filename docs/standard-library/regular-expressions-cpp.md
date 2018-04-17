@@ -1,12 +1,12 @@
 ---
-title: "規則運算式 (C++) | Microsoft Docs"
-ms.custom: 
+title: 規則運算式 (C++) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce781d026712a8c93df6e8d177417f170092bfd2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf33b5be2556108f3caa2182bfcc5b5035b3a51e
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="regular-expressions-c"></a>規則運算式 (C++)
 C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可用的文法變化時使用規則運算式。  
@@ -50,7 +50,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
 零或多個旗標可能會結合指定的規則運算式引擎行為的文法。 如果只指定旗標，`ECMAScript`會假定為文法。
 
-### <a name="element"></a>元素  
+### <a name="element"></a>項目  
  項目可以是下列其中一項：  
   
 -   「一般字元」，符合目標序列中的相同字元。  
@@ -93,7 +93,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
  在 `ECMAScript` 中，項目也可以是下列其中一項：  
   
--   格式為 "(: *subexpression* )" 的「非擷取群組」。 符合目標序列中由分隔符號之間的模式所比對的字元序列。  
+-   A*非擷取群組*形式的"(？: *subexpression* ) 」。 符合目標序列中由分隔符號之間的模式所比對的字元序列。  
   
 -   格式為 "\f"、"\n"、"\r"、"\t" 或 "\v" 的有限「檔案格式逸出」。 這些分別符合目標序列中的換頁字元、新行字元、歸位字元、水平索引標籤和垂直索引標籤。  
   
@@ -115,7 +115,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
  例如：  
   
--   "(:a)" 符合目標序列 "a"，但 "(:a)\1" 無效，因為沒有擷取群組 1。  
+-   "(?:a)" 符合目標序列 "a"，但是 "(?:a)\1" 無效，因為沒有擷取群組 1。  
   
 -   "(=a)a" 符合目標序列 "a"。 正判斷提示符合目標序列中的初始序列 "a"，而在規則運算式中的最後 "a" 符合目標序列中的初始序列 "a"。  
   
@@ -162,7 +162,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
 -   "a+" 符合目標序列 "a"、目標序列 "aa" 等等，但不符合目標序列 ""。  
   
- 在 `ECMAScript` 中，所有重複計數格式後面都可接著字元 ''，其會指定「非窮盡重複」。  
+ 在`ECMAScript`，所有重複計數格式都後面可以接著字元 '？ '，其中指定*非窮盡重複*。  
   
 ### <a name="concatenation"></a>串連  
  規則運算式項目 (不論是否有「重複計數」) 可串連來形成較長的規則運算式。 結果運算式符合由個別項目所比對之序列串連而成的目標序列。 例如，"a{2,3}b" 符合目標序列 "aab" 和目標序列 "aaab"，但不符合目標序列 "ab" 或目標序列 "aaaab"。  
@@ -180,7 +180,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
 ##  <a name="grammarsummary"></a> 文法摘要  
  下表摘要說明各種規則運算式文法的功能：  
   
-|元素|基本|延伸|ECMAScript|grep|egrep|awk|  
+|項目|基本|延伸|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
 |使用 '&#124;' 的替代||+|+||+|+|  
 |使用 '\n' 的替代||||+|+||  
@@ -365,7 +365,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
  如果目標字串中的目前位置不是緊接在「字邊界」之後，負字邊界判斷提示就會相符。  
   
 ### <a name="non-capture-group"></a>非擷取群組  
- 非擷取群組將其內容標記為規則運算式文法中的單一單位，但不會標記目標文字。 例如，"(a)(:b)\*(c)"符合目標"abbc"，並將擷取群組 1 與子序列""並將擷取群組 2 與子序列"c"。  
+ 非擷取群組將其內容標記為規則運算式文法中的單一單位，但不會標記目標文字。 例如，"(a)(?:b)\*(c)"符合目標"abbc"，並將擷取群組 1 與子序列""並將擷取群組 2 與子序列"c"。  
   
 ### <a name="non-greedy-repetition"></a>非窮盡重複  
  非窮盡重複使用目標序列中符合模式的最短子序列。 窮盡重複使用最長子序列。 例如，"(a+) (\*b)"符合目標序列"aaab"。 使用非窮盡重複時，它會將擷取群組 1 與目標序列開頭的子序列 "a" 關聯，並將擷取群組 2 與目標序列結尾的子序列 "aab" 關聯。 使用窮盡重複時，它會將擷取群組 1 與子序列 "aaa" 關聯，並將擷取群組 2 與子序列 "b" 關聯。  
@@ -465,6 +465,6 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
 ||"\\\n"|"\n"|  
 |"$nn"||符合位置之擷取群組的字元序列`nn`，其中`nn`是介於 10 到 99 之間的數字 (`[match[nn].first, match[nn].second)`)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
 

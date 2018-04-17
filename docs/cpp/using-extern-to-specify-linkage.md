@@ -1,7 +1,7 @@
 ---
 title: 使用 extern 指定連結 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 04/06/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -23,18 +23,17 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db93feb8c8fad13cf8de082858e68b89f93b5323
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 319ee69d30ad49ff745df05172db10503b3b42e0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-extern-to-specify-linkage"></a>使用 extern 指定連結
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      extern string-literal { declaration-list }  
+extern string-literal { declaration-list }  
 extern string-literal declaration  
 ```  
   
@@ -124,7 +123,7 @@ extern "C" int CFunc2(); // Error: not the first declaration of
   
  函式和物件明確宣告為**靜態**複合連結指定名稱的主體內 (**{}**) 會被視為靜態函式或物件; 連結規範會被忽略。 其他函式和物件的行為會就像使用 `extern` 關鍵字宣告一般  (請參閱[使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)如需詳細資訊`extern`關鍵字。)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [extern 儲存類別規範](../c-language/extern-storage-class-specifier.md)   
  [識別項的行為](../c-language/behavior-of-identifiers.md)   

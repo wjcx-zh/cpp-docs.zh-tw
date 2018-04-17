@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cfb315c0dece0edc6228f70ed3900be80543cc7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7294270778d0b9351d3e58e8afd285f021bb0066
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset (設定執行 Character Set)
 可讓您指定可執行檔的執行字元集。  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  您可以使用**/execution-charset**選項來指定執行字元集。 執行字元集是用於程式輸入至在所有前置處理步驟編譯階段的文字編碼方式。 這個字元集用於在已編譯的程式碼中任何字串或字元常值的內部表示法。 設定此選項來指定原始程式檔包含無法以基本執行字元集的字元時所要使用的擴充的執行字元集。 您可以使用任一 IANA 或 ISO 字元集的名稱，或點 （.） 後面接著指定要使用的字元集 3 到 5 位數十進位的字碼頁識別項。 一份支援程式碼頁面識別碼和字元集的名稱，請參閱[程式碼頁面識別碼](http://msdn.microsoft.com/library/windows/desktop/dd317756)。  
   
- 根據預設，Visual Studio 會偵測來判斷來源檔案是否已編碼的 Unicode 格式，例如，utf-8 或 utf-16 位元組順序標記。 如果找到沒有位元組順序標記，它會假設來源檔案編碼使用目前使用者的字碼頁，除非您已指定為字元使用設定名稱或程式碼頁**/source-charset**選項或**/utf-8**選項。 Visual Studio 可讓您使用數種字元編碼的任何儲存您的 c + + 程式碼。 來源和執行字元集的相關資訊，請參閱[字元集](../../cpp/character-sets2.md)語言文件中。  
+ 根據預設，Visual Studio 會偵測來判斷來源檔案是否已編碼的 Unicode 格式，例如，utf-8 或 utf-16 位元組順序標記。 如果找到沒有位元組順序標記，它會假設來源檔案編碼使用目前使用者的字碼頁，除非您已指定為字元使用設定名稱或程式碼頁**/source-charset**選項或**/utf-8**選項。 Visual Studio 可讓您使用數種字元編碼的任何儲存您的 c + + 程式碼。 來源和執行字元集的相關資訊，請參閱[字元集](../../cpp/character-sets.md)語言文件中。  
   
  如果您想要設定來源字元集和執行字元集為 utf-8，您可以使用**/utf-8**較快速的編譯器選項。 它相當於指定**/來源-charset:utf-8 /execution-charset:utf-8**命令列上。 這些選項也可讓**/validate-charset**預設選項。  
   
@@ -63,9 +63,9 @@ ms.lasthandoff: 12/21/2017
   
 4.  選擇**確定**以儲存變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [/source-charset (設定來源 Character Set)](../../build/reference/source-charset-set-source-character-set.md)   
  [/utf-8 （設定來源和可執行檔字元集為 utf-8）](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)   
- [/validate-charset （驗證相容的字元）](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+ [/validate-charset (驗證字元是否相容)](../../build/reference/validate-charset-validate-for-compatible-characters.md)

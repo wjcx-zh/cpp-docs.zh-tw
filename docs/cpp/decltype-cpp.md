@@ -1,5 +1,5 @@
 ---
-title: decltype （c + +） |Microsoft 文件
+title: decltype （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -30,7 +30,7 @@ ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="decltype--c"></a>decltype （c + +）
+# <a name="decltype--c"></a>decltype （C++）
 `decltype` 類型規範會產生指定之運算式的類型。 `decltype`搭配類型規範， [auto 關鍵字](../cpp/auto-cpp.md)，適合主要用於開發人員撰寫樣板程式庫。 使用 `auto` 和 `decltype` 來宣告其傳回類型視樣板引數而定的樣板函式。 或是使用 `auto` 和 `decltype` 來宣告包裝對其他函式的呼叫，再傳回所包裝函式之類型的樣板函式。  
   
 ## <a name="syntax"></a>語法  
@@ -78,7 +78,7 @@ const A* a = new A();
 |`decltype((a->x));`|`const double&`|括號內的陳述式會評估為運算式而不是成員存取。 而且，因為 `a` 已宣告為 `const` 指標，所以其類型會是 `const double` 的參考。|  
   
 ## <a name="decltype-and-auto"></a>Decltype 和 Auto  
- 在 C + + 14 中，您可以使用`decltype(auto)`沒有尾端傳回型別的宣告樣板函式的傳回型別取決於樣板引數型別。  
+ 在 C++ 14 中，你可以使用`decltype(auto)`不带尾随返回类型来声明其返回类型的模板函数取决于其模板自变量的类型。   
   
  在 C++11 中，您可以搭配使用尾端傳回類型上的 `decltype` 類型規範與 `auto` 關鍵字，來宣告其傳回類型視樣板引數而定的樣板函式。 例如，請考慮下列程式碼範例，其中樣板函式的傳回型別取決於樣板引數的類型。 在程式碼範例中，*未知*預留位置表示不能指定傳回型別。  
   
@@ -91,7 +91,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  下列原型說明替代函式宣告的語法。 請注意，`const`和`volatile`限定詞和`throw`[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)是選擇性的。 *Function_body*預留位置代表指定函式的作用的複合陳述式。 以程式設計方式，是最佳*運算式*中的預留位置`decltype`陳述式應該符合所指定的運算式`return`陳述式，如果有的話，在*function_body*。  
   
- **自動** *function_name* **(** *參數*<sub>選擇</sub> **)** **const**<sub>選擇</sub> **volatile**<sub>選擇</sub>  **->**  **decltype (***運算式* **)** **擲回**<sub>選擇</sub> **{** *function_body***};**  
+ **自動** *function_name* **(** *參數*<sub>選擇</sub> **)** **const**<sub>選擇</sub> **volatile**<sub>選擇</sub> **->** **decltype (***運算式* **)** **擲回**<sub>選擇</sub> **{** *function_body***};**  
   
  下列程式碼範例中，`myFunc` 樣板函式的晚期指定傳回類型由 `t` 和 `u` 樣板引數的類型決定。 基於最佳編碼作法，程式碼範例也使用右值參考和`forward`函式樣板，其支援*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   

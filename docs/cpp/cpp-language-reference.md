@@ -1,5 +1,5 @@
 ---
-title: C + + 語言參考 |Microsoft 文件
+title: C++ 语言参考 |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -29,13 +29,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
-本參考資料將說明 Microsoft Visual C++ 中實作的 C++ 程式語言。 組織根據*標註 c + + 參考手冊*作者 Margaret Ellis 和 Bjarne Stroustrup 與 ANSI/ISO c + + 國際標準 (ISO/IEC FDIS 14882)。 已包含 Microsoft 專有 C++ 語言功能實作。  
+本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 于组织*C++ 参考手册批注 》* Margaret Ellis 和 Bjarne stroustrup 撰写和 ANSI/ISO C++ 国际标准 (ISO/IEC FDIS 14882)。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。   
 
-如需現代 c + + 程式設計做法的概觀，請參閱[歡迎回到 c + +](welcome-back-to-cpp-modern-cpp.md)。
+有关现代 C++ 编程做法的概述，请参阅[欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)。
   
  請參閱下表，快速尋找關鍵字或運算子：  
   
--   [C + + 關鍵字](../cpp/keywords-cpp.md)  
+-   [C++ 关键字](../cpp/keywords-cpp.md)  
   
 -   [C++ 運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 12/21/2017
  [非標準行為](../cpp/nonstandard-behavior.md)  
  有關 Visual C++ 編譯器非標準行為的資訊。  
 
- [歡迎回到 c + +](welcome-back-to-cpp-modern-cpp.md)概觀現代 c + + 程式設計做法撰寫安全、 正確且有效率的程式。
+ [欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)用于编写安全、 正确且高效程序做法现代 C++ 编程的概述。
   
 ## <a name="related-sections"></a>相關章節  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)  

@@ -1,12 +1,12 @@
 ---
-title: "_mbctombb、_mbctombb_l | Microsoft Docs"
-ms.custom: 
+title: _mbctombb、_mbctombb_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctombb_l
@@ -37,65 +37,70 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b360eaf014747cec2359efbf3792d45323178f57
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 45567a2486a0783cd4b1f82e5a81046e529c49df
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb、_mbctombb_l
-將雙位元組的多位元組字元轉換成對應之單一位元組的多位元組字元。  
-  
+
+將雙位元組的多位元組字元轉換成對應之單一位元組的多位元組字元。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-unsigned int _mbctombb(  
-   unsigned int c   
-);  
-unsigned int _mbctombb_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 要轉換的多位元組字元。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功的話，`_mbctombb`和`_mbctombb_l`傳回對應至單一位元組字元`c`; 否則它會傳回`c`。  
-  
-## <a name="remarks"></a>備註  
- `_mbctombb`和`_mbctombb_l`函式會將指定的多位元組字元轉換成對應的單一位元組多位元組字元。 字元必須對應到 0x20-0x7E 或 0xA1-範圍內的單一位元組字元轉換 0xDF。  
-  
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這個沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本與其相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
- 在舊版中，`_mbctombb` 稱為 `zentohan`。 請改用 `_mbctombb`。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_mbctombb`|\<mbstring.h>|  
-|`_mbctombb_l`|\<mbstring.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [資料轉換](../../c-runtime-library/data-conversion.md)   
- [_mbbtombc、_mbbtombc_l](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
- [_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
- [_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
- [_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+unsigned int _mbctombb(
+   unsigned int c
+);
+unsigned int _mbctombb_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+要轉換的多位元組字元。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+如果成功的話， **_mbctombb**和 **_mbctombb_l**傳回對應至單一位元組字元*c*; 否則它會傳回*c*.
+
+## <a name="remarks"></a>備註
+
+**_Mbctombb**和 **_mbctombb_l**函式會將指定的多位元組字元轉換成對應的單一位元組多位元組字元。 字元必須對應到 0x20-0x7E 或 0xA1-範圍內的單一位元組字元轉換 0xDF。
+
+輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale](setlocale-wsetlocale.md)如需詳細資訊。 這個函數，而不需要的版本 **_l**後置詞會針對地區設定相關行為; 使用目前的地區設定的版本與 **_l**尾碼是完全相同，不同之處在於它會使用傳入的地區設定參數中改用。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+在舊版中， **_mbctombb**呼叫**zentohan**。 使用 **_mbctombb**改為。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_mbctombb**|\<mbstring.h>|
+|**_mbctombb_l**|\<mbstring.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[資料轉換](../../c-runtime-library/data-conversion.md)<br/>
+[_mbbtombc、_mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>
+[_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>
+[_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l](mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)<br/>
+[_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_cexit、_c_exit | Microsoft Docs"
-ms.custom: 
+title: _cexit、_c_exit | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _c_exit
@@ -38,59 +38,62 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825ed933d5a164fd6a07f13319d30fdf97a928e1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b4310ac5c0bac6853da23f7f491a757a7014ebe
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cexit-cexit"></a>_cexit、_c_exit
-執行清除作業，並傳回而不終止處理序。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void _cexit( void );  
-void _c_exit( void );  
-```  
-  
-## <a name="remarks"></a>備註  
- `_cexit` 函式會以後進先出 (LIFO) 的順序呼叫 `atexit` 和 `_onexit` 所註冊的函式。 `_cexit` 接著會清除所有 I/O 緩衝區，並在傳回之前關閉所有開啟的資料流。 `_c_exit` 與 `_exit` 相同，但傳回到呼叫處理序，而不處理 `atexit` 或 `_onexit` 或者清除資料流緩衝區。 下表顯示 `exit`、`_exit`、`_cexit` 和 `_c_exit` 的行為。  
-  
-|函式|行為|  
-|--------------|--------------|  
-|`exit`|執行完整的 C 程式庫終止程序，並終止處理序，然後因提供的狀態碼而結束。|  
-|`_exit`|執行快速 C 程式庫終止程序，並終止處理序，然後因提供的狀態碼而結束。|  
-|`_cexit`|執行完整的 C 程式庫終止程序，並傳回給呼叫端，但不終止處理序。|  
-|`_c_exit`|執行快速 C 程式庫終止程序，並傳回給呼叫端，但不終止處理序。|  
-  
- 當您呼叫 `_cexit` 或 `_c_exit` 函式時，不會呼叫任何在呼叫時即存在之暫存或自動物件的解構函式。 自動物件定義於未將物件宣告成靜態的函式中。 暫存物件是編譯器所建立的物件。 若要先終結自動物件，再呼叫 `_cexit` 或 `_c_exit`，請明確地呼叫該物件的解構函式，如下所示：  
-  
-```  
-myObject.myClass::~myClass( );  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_cexit`|\<process.h>|  
-|`_c_exit`|\<process.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>請參閱  
- [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)   
- [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit、_onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_spawn、_wspawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system、_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+執行清除作業，並傳回而不終止處理序。
+
+## <a name="syntax"></a>語法
+
+```C
+void _cexit( void );
+void _c_exit( void );
+```
+
+## <a name="remarks"></a>備註
+
+**_Cexit**函式呼叫，後進先出 (LIFO) 順序、 所註冊的函式中**atexit**和 **_onexit**。 然後 **_cexit**清除所有的 I/O 緩衝區，並在傳回前關閉所有開啟的資料流。 **_c_exit**相同 **_exit**傳回呼叫程序，而不需要處理，但**atexit**或 **_onexit**或排清資料流緩衝區。 行為**結束**， **_exit**， **_cexit**，和 **_c_exit**下表所示。
+
+|功能|行為|
+|--------------|--------------|
+|**exit**|執行完整的 C 程式庫終止程序，並終止處理序，然後因提供的狀態碼而結束。|
+|**_exit**|執行快速 C 程式庫終止程序，並終止處理序，然後因提供的狀態碼而結束。|
+|**_cexit**|執行完整的 C 程式庫終止程序，並傳回給呼叫端，但不終止處理序。|
+|**_c_exit**|執行快速 C 程式庫終止程序，並傳回給呼叫端，但不終止處理序。|
+
+當您呼叫 **_cexit**或 **_c_exit**函式，在呼叫時存在的任何暫存或自動物件的解構函式不會呼叫。 自動物件定義於未將物件宣告成靜態的函式中。 暫存物件是編譯器所建立的物件。 若要終結自動物件之前先呼叫 **_cexit**或 **_c_exit**，請明確呼叫解構函式物件，如下所示：
+
+```cpp
+myObject.myClass::~myClass( );
+```
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_cexit**|\<process.h>|
+|**_c_exit**|\<process.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit、_Exit、_exit](exit-exit-exit.md)<br/>
+[_onexit、_onexit_m](onexit-onexit-m.md)<br/>
+[_spawn、_wspawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system、_wsystem](system-wsystem.md)<br/>

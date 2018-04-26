@@ -1,13 +1,13 @@
 ---
-title: "fmax、fmaxf、fmaxl | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fmax、fmaxf、fmaxl | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fmax
@@ -40,82 +40,87 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d9992c149dca5a2fc5be52ae0029494b10e4bbe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b108a01201e75d466f95f029f296c87c9b1430c7
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax、fmaxf、fmaxl
-決定兩個指定數值的較大者。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-double fmax(  
-   double x,   
-   double y  
-);  
-  
-float fmax(  
-   float x,   
-   float y  
-); //C++ only  
-  
-long double fmax(  
-   long double x,   
-   long double y  
-); //C++ only  
-  
-float fmaxf(  
-   float x,   
-   float y  
-);  
-  
-long double fmaxl(  
-   long double x,   
-   long double y  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- [輸入] `x`  
- 要比較的第一個值。  
-  
- [輸入] `y`  
- 要比較的第二個值。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功，會傳回 `x` 或 `y` 的較大者。 傳回的值會完全相同，而且不是取決於任何形式的四捨五入。  
-  
- 否則，可能會傳回下列其中一個值：  
-  
-|問題|Return|  
-|-----------|------------|  
-|`x` = NAN|`y`|  
-|`y` = NAN|`x`|  
-|`x` 和 `y` = NaN|NaN|  
-  
- 此函式不會使用 [_matherr](../../c-runtime-library/reference/matherr.md) 中所指定的錯誤。  
-  
-## <a name="remarks"></a>備註  
- 因為 C++ 允許多載，所以您可以呼叫採用並傳回浮點數和長雙精度浮點數類型之 fmax 的多載。 在 C 程式中，fmax 一律會採用並傳回雙精度浮點數。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|C 標頭|C++ 標頭|  
-|--------------|--------------|------------------|  
-|`fmax`, `fmaxf`, `fmaxl`|\<math.h>|\<cmath> 或 \<math.h>|  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmin、fminf、fminl](fmin-fminf-fminl.md)  
+
+決定兩個指定數值的較大者。
+
+## <a name="syntax"></a>語法
+
+```C
+double fmax(
+   double x,
+   double y
+);
+
+float fmax(
+   float x,
+   float y
+); //C++ only
+
+long double fmax(
+   long double x,
+   long double y
+); //C++ only
+
+float fmaxf(
+   float x,
+   float y
+);
+
+long double fmaxl(
+   long double x,
+   long double y
+);
+
+```
+
+### <a name="parameters"></a>參數
+
+*x*<br/>
+要比較的第一個值。
+
+*y*<br/>
+要比較的第二個值。
+
+## <a name="return-value"></a>傳回值
+
+如果成功，傳回較大的*x*或*y*。 傳回的值會完全相同，而且不是取決於任何形式的四捨五入。
+
+否則，可能會傳回下列其中一個值：
+
+|問題|Return|
+|-----------|------------|
+|*x* = NaN|*y*|
+|*y* = NaN|*x*|
+|*x*和*y* = NaN|NaN|
+
+此函式不會使用 [_matherr](matherr.md) 中所指定的錯誤。
+
+## <a name="remarks"></a>備註
+
+因為 C++ 允許多載，所以您可以呼叫採用並傳回浮點數和長雙精度浮點數類型之 fmax 的多載。 在 C 程式中，fmax 一律會採用並傳回雙精度浮點數。
+
+## <a name="requirements"></a>需求
+
+|功能|C 標頭|C++ 標頭|
+|--------------|--------------|------------------|
+|**fmax**， **fmaxf**， **fmaxl**|\<math.h>|\<cmath> 或 \<math.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[fmin、fminf、fminl](fmin-fminf-fminl.md)<br/>

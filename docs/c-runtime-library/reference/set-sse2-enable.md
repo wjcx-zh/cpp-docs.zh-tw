@@ -1,12 +1,12 @@
 ---
 title: _set_SSE2_enable | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_SSE2_enable
@@ -33,92 +33,97 @@ helpviewer_keywords:
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a1d96390925a81935f9d6d07c7ff5b8ce61a3bf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bf9983eb830efb53bafa2e67b6bbcea645145819
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
-啟用或停用在 CRT 數學常式 Streaming SIMD Extensions 2 (SSE2) 指令的使用。 (因為預設會啟用 SSE2，所以此函式不適用於 x64 結構)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _set_SSE2_enable(  
-   int flag  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `flag`  
- 1 啟用 SSE2 實作；0 停用 SSE2 實作。 根據預設，會在支援它的處理器上啟用 SSE2 實作。  
-  
-## <a name="return-value"></a>傳回值  
- 如果啟用 SSE2 實作，則為非零；如果停用 SSE2 實作，則為零。  
-  
-## <a name="remarks"></a>備註  
- 下列函式具有可使用 `_set_SSE2_enable` 所啟用的 SSE2 實作：  
-  
--   [atan](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)  
-  
--   [ceil](../../c-runtime-library/reference/ceil-ceilf-ceill.md)  
-  
--   [exp](../../c-runtime-library/reference/exp-expf.md)  
-  
--   [floor](../../c-runtime-library/reference/floor-floorf-floorl.md)  
-  
--   [log](../../c-runtime-library/reference/log-logf-log10-log10f.md)  
-  
--   [log10](../../c-runtime-library/reference/log-logf-log10-log10f.md)  
-  
--   [modf](../../c-runtime-library/reference/modf-modff-modfl.md)  
-  
--   [pow](../../c-runtime-library/reference/pow-powf-powl.md)  
-  
- 因為 SSE2 中間值是 64 位元浮點數量，但預設實作中間值是 80 位元浮點數量，所以這些函式的 SSE2 實作所提供的答案可能會與預設實作略有不同。  
-  
+
+啟用或停用在 CRT 數學常式 Streaming SIMD Extensions 2 (SSE2) 指令的使用。 (因為預設會啟用 SSE2，所以此函式不適用於 x64 結構)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _set_SSE2_enable(
+   int flag
+);
+```
+
+### <a name="parameters"></a>參數
+
+*flag*<br/>
+1 啟用 SSE2 實作；0 停用 SSE2 實作。 根據預設，會在支援它的處理器上啟用 SSE2 實作。
+
+## <a name="return-value"></a>傳回值
+
+如果啟用 SSE2 實作，則為非零；如果停用 SSE2 實作，則為零。
+
+## <a name="remarks"></a>備註
+
+下列的函式具有 SSE2 的實作，可以使用啟用 **_set_SSE2_enable**:
+
+- [atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
+
+- [ceil](ceil-ceilf-ceill.md)
+
+- [exp](exp-expf.md)
+
+- [floor](floor-floorf-floorl.md)
+
+- [log](log-logf-log10-log10f.md)
+
+- [log10](log-logf-log10-log10f.md)
+
+- [modf](modf-modff-modfl.md)
+
+- [pow](pow-powf-powl.md)
+
+因為 SSE2 中間值是 64 位元浮點數量，但預設實作中間值是 80 位元浮點數量，所以這些函式的 SSE2 實作所提供的答案可能會與預設實作略有不同。
+
 > [!NOTE]
->  如果您使用 [/Oi (產生內建函式)](../../build/reference/oi-generate-intrinsic-functions.md) 編譯器選項來編譯專案，則可能會顯示 `_set_SSE2_enable` 沒有作用。 `/Oi` 編譯器選項可授權編譯器使用內建來取代 CRT 呼叫；這種行為會覆寫 `_set_SSE2_enable` 的效果。 如果您想要保證 `/Oi` 不覆寫 `_set_SSE2_enable`，請使用 `/Oi-` 來編譯專案。 當您使用表示 `/Oi` 的其他編譯器參數時，這也可能是不錯做法。  
-  
- 只有在遮罩所有例外狀況時，才會使用 SSE2 實作。 使用 [_control87、_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md) 來遮罩例外狀況。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_set_SSE2_enable`|\<math.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_set_SSE2_enable.c  
-// processor: x86  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main()  
-{  
-   int i = _set_SSE2_enable(1);  
-  
-   if (i)  
-      printf("SSE2 enabled.\n");  
-   else  
-      printf("SSE2 not enabled; processor does not support SSE2.\n");  
-}  
-```  
-  
- **輸出**  
-  
- `SSE2 enabled.`  
-  
-## <a name="see-also"></a>請參閱  
- [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)
+> 如果您使用[/Oi （產生內建函式）](../../build/reference/oi-generate-intrinsic-functions.md)編譯器選項，來編譯專案，它可能會顯示 **_set_SSE2_enable**沒有任何作用。 **/Oi**編譯器選項可讓編譯器用來取代 CRT 呼叫內建函式的授權單位; 這個行為會覆寫的效果 **_set_SSE2_enable**。 如果您想要保證 **/Oi**不會覆寫 **_set_SSE2_enable**，使用 **/Oi-** 編譯專案。 當您使用其他編譯器參數隱含的權限時，這可能也會很好的作法 **/Oi**。
+
+只有在遮罩所有例外狀況時，才會使用 SSE2 實作。 使用 [_control87、_controlfp](control87-controlfp-control87-2.md) 來遮罩例外狀況。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_set_SSE2_enable**|\<math.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_set_SSE2_enable.c
+// processor: x86
+#include <math.h>
+#include <stdio.h>
+
+int main()
+{
+   int i = _set_SSE2_enable(1);
+
+   if (i)
+      printf("SSE2 enabled.\n");
+   else
+      printf("SSE2 not enabled; processor does not support SSE2.\n");
+}
+```
+
+```Output
+SSE2 enabled.
+```
+
+## <a name="see-also"></a>另請參閱
+
+[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)<br/>

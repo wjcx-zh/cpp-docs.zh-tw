@@ -1,12 +1,12 @@
 ---
-title: "strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l | Microsoft Docs"
-ms.custom: 
+title: strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strncpy
@@ -70,232 +70,238 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-caps.latest.revision: 
+caps.latest.revision: 42
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f881508cfa72686a791dae61af44c615e72cbfdc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 219fe2a9c163da1a7653568675b9c776ecad9d66
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
-將一個字串的字元複製到另一個。 這些函式已有更安全的版本可供使用，請參閱 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)。  
-  
+
+將一個字串的字元複製到另一個。 這些函式已有更安全的版本可供使用，請參閱 [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)。
+
 > [!IMPORTANT]
->  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsncpy` 和 `_mbsncpy_l`。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-char *strncpy(  
-   char *strDest,  
-   const char *strSource,  
-   size_t count   
-);  
-char *_strncpy_l(  
-   char *strDest,  
-   const char *strSource,  
-   size_t count,  
-   locale_t locale   
-);  
-wchar_t *wcsncpy(  
-   wchar_t *strDest,  
-   const wchar_t *strSource,  
-   size_t count   
-);  
-wchar_t *_wcsncpy_l(  
-   wchar_t *strDest,  
-   const wchar_t *strSource,  
-   size_t count,  
-   locale_t locale   
-);  
-unsigned char *_mbsncpy(  
-   unsigned char *strDest,  
-   const unsigned char *strSource,  
-   size_t count   
-);  
-unsigned char *_mbsncpy_l(  
-   unsigned char *strDest,  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-char *strncpy(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-char *_strncpy_l(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count,  
-   locale_t locale   
-); // C++ only  
-template <size_t size>  
-wchar_t *wcsncpy(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-wchar_t *_wcsncpy_l(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count,  
-   locale_t locale   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsncpy(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsncpy_l(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>參數  
- `strDest`  
- 目的字串。  
-  
- `strSource`  
- 來源字串。  
-  
- `count`  
- 要複製的字元數。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 傳回 `strDest`。 未保留表示錯誤的傳回值。  
-  
-## <a name="remarks"></a>備註  
- `strncpy` 函式會將 `strSource` 的初始 `count` 字元複製到 `strDest`，並傳回 `strDest`。 如果 `count` 小於或等於 `strSource` 的長度，則 null 字元不會自動附加至複製的字串。 如果 `count` 大於 `strSource` 的長度，則會以 null 字元填補目的字串，直到長度達 `count` 為止。 如果來源和目的字串重疊，則 `strncpy` 的行為未定義。  
-  
+> **_mbsncpy**和 **_mbsncpy_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+char *strncpy(
+   char *strDest,
+   const char *strSource,
+   size_t count
+);
+char *_strncpy_l(
+   char *strDest,
+   const char *strSource,
+   size_t count,
+   locale_t locale
+);
+wchar_t *wcsncpy(
+   wchar_t *strDest,
+   const wchar_t *strSource,
+   size_t count
+);
+wchar_t *_wcsncpy_l(
+   wchar_t *strDest,
+   const wchar_t *strSource,
+   size_t count,
+   locale_t locale
+);
+unsigned char *_mbsncpy(
+   unsigned char *strDest,
+   const unsigned char *strSource,
+   size_t count
+);
+unsigned char *_mbsncpy_l(
+   unsigned char *strDest,
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+char *strncpy(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+char *_strncpy_l(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count,
+   locale_t locale
+); // C++ only
+template <size_t size>
+wchar_t *wcsncpy(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+wchar_t *_wcsncpy_l(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count,
+   locale_t locale
+); // C++ only
+template <size_t size>
+unsigned char *_mbsncpy(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+unsigned char *_mbsncpy_l(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>參數
+
+*strDest*<br/>
+目的字串。
+
+*strSource*<br/>
+來源字串。
+
+*count*<br/>
+要複製的字元數。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+傳回*strDest*。 未保留表示錯誤的傳回值。
+
+## <a name="remarks"></a>備註
+
+**Strncpy**函式會將初始複製*計數*字元*strSource*至*strDest*並傳回*strDest*. 如果*計數*小於或等於長度*strSource*，null 字元不會自動附加至複製的字串。 如果*計數*大於的長度*strSource*，以 null 字元，長度字元填補目的字串*計數*。 行為**strncpy**是未定義的如果來源和目的字串重疊。
+
 > [!IMPORTANT]
->  `strncpy` 不會檢查在 `strDest` 中是否有足夠的空間；使得這成為緩衝區滿溢的潛在原因。 `count` 引數會限制複製的字元數目；這並非 `strDest` 大小上的限制。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
-  
- 如果 `strDest` 或 `strSource` 為 `NULL` 指標，或如果 `count` 小於或等於零，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則這些函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
-  
- `wcsncpy` 和 `_mbsncpy` 是寬字元和多位元組字元版本的 `strncpy`。 `wcsncpy` 和 `_mbsncpy` 的引數和傳回值會隨之改變。 除此之外，這六個函式的行為相同。  
-  
- 尾碼為 `_l` 的這些函式版本是一樣的，只不過與地區設定相關的行為使用了傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
- 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsncpy`|`strncpy`|`_mbsnbcpy`|`wcsncpy`|  
-|`_tcsncpy_l`|`_strncpy_l`|`_mbsnbcpy_l`|`_wcsncpy_l`|  
-  
+> **strncpy**不會檢查有足夠的空間中*strDest*; 這使得緩衝區滿溢的潛在原因。 *計數*引數會限制複製的字元數目; 它不是，限制的大小*strDest*。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+
+如果*strDest*或*strSource*是**NULL**指標，或如果*計數*小於或等於零，會叫用無效參數處理常式，中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+
+**wcsncpy**和 **_mbsncpy**是寬字元和多位元組字元版本的**strncpy**。 引數和傳回值**wcsncpy**和 **_mbsncpy**會隨之改變。 除此之外，這六個函式的行為相同。
+
+這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳入的地區設定而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
+|**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
+
 > [!NOTE]
->  `_strncpy_l` 和 `_wcsncpy_l` 沒有任何地區設定相依性；它們只是為了 `_tcsncpy_l` 而提供，而不是用於直接呼叫。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`strncpy`|\<string.h>|  
-|`wcsncpy`|\<string.h> 或 \<wchar.h>|  
-|`_mbsncpy`, `_mbsncpy_l`|\<mbstring.h>|  
-  
- 如需其他平台的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
- 下列範例示範 `strncpy` 如何使用和如何遭誤用，導致程式 Bug 和安全性問題。 每次呼叫 `strncpy` 編譯器都會產生警告，類似 **crt_strncpy_x86.c(15)︰警告 C4996：'strncpy'：這個函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**  
-  
-```  
-// crt_strncpy_x86.c  
-// Use this command in an x86 developer command prompt to compile:   
-// cl /TC /W3 crt_strncpy_x86.c  
-  
-#include <stdio.h>  
-#include <string.h>  
-  
-int main() {  
-   char t[20];  
-   char s[20];  
-   char *p = 0, *q = 0;  
-  
-   strcpy_s(s, sizeof(s), "AA BB CC");  
-   // Note: strncpy is deprecated; consider using strncpy_s instead  
-   strncpy(s, "aa", 2);     // "aa BB CC"         C4996  
-   strncpy(s + 3, "bb", 2); // "aa bb CC"         C4996  
-   strncpy(s, "ZZ", 3);     // "ZZ",              C4996  
-                            // count greater than strSource, null added  
-   printf("%s\n", s);  
-  
-   strcpy_s(s, sizeof(s), "AA BB CC");  
-   p = strstr(s, "BB");  
-   q = strstr(s, "CC");  
-   strncpy(s, "aa", p - s - 1);   // "aa BB CC"   C4996  
-   strncpy(p, "bb", q - p - 1);   // "aa bb CC"   C4996  
-   strncpy(q, "cc",  q - s);      // "aa bb cc"   C4996  
-   strncpy(q, "dd", strlen(q));   // "aa bb dd"   C4996  
-   printf("%s\n", s);  
-  
-   // some problems with strncpy  
-   strcpy_s(s, sizeof(s), "test");  
-   strncpy(t, "this is a very long string", 20 ); // C4996  
-   // Danger: at this point, t has no terminating null,  
-   // so the printf continues until it runs into one.  
-   // In this case, it will print "this is a very long test"  
-   printf("%s\n", t);  
-  
-   strcpy_s(t, sizeof(t), "dogs like cats");  
-   printf("%s\n", t);  
-  
-   strncpy(t + 10, "to chase cars.", 14); // C4996  
-   printf("%s\n", t);  
-  
-   // strncpy has caused a buffer overrun and corrupted string s  
-   printf("Buffer overrun: s = '%s' (should be 'test')\n", s);  
-   // Since the stack grows from higher to lower addresses, buffer  
-   // overruns can corrupt function return addresses on the stack,  
-   // which can be exploited to run arbitrary code.  
-}  
-```  
-  
- 輸出  
-  
-```Output  
- ZZ  
-aa bb dd  
-this is a very long test  
-dogs like cats  
-dogs like to chase cars.  
-Buffer overrun: s = 'ars.' (should be 'test')  
-```  
-  
- 自動變數的配置以及錯誤偵測和程式碼保護的層級可能會隨變更的編譯器設定而異。 建置在其他編譯環境中，或藉由其他編譯器選項建置時，此範例可能會有不同的結果。  
-  
-## <a name="see-also"></a>請參閱  
- [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcpy、_mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
- [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [strcpy_s、wcscpy_s、_mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)
+> **_strncpy_l**和 **_wcsncpy_l**有沒有地區設定相依性; 他們可以只針對 **_tcsncpy_l** ，請勿直接呼叫。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**strncpy**|\<string.h>|
+|**wcsncpy**|\<string.h> 或 \<wchar.h>|
+|**_mbsncpy**， **_mbsncpy_l**|\<mbstring.h>|
+
+如需其他平台的相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+下列範例示範如何使用**strncpy**和如何遭誤用導致程式 bug 和安全性問題。 編譯器會產生警告，以每次呼叫**strncpy**類似**crt_strncpy_x86.c(15)： 警告 C4996: 'strncpy': 這個函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
+
+```C
+// crt_strncpy_x86.c
+// Use this command in an x86 developer command prompt to compile:
+// cl /TC /W3 crt_strncpy_x86.c
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char t[20];
+   char s[20];
+   char *p = 0, *q = 0;
+
+   strcpy_s(s, sizeof(s), "AA BB CC");
+   // Note: strncpy is deprecated; consider using strncpy_s instead
+   strncpy(s, "aa", 2);     // "aa BB CC"         C4996
+   strncpy(s + 3, "bb", 2); // "aa bb CC"         C4996
+   strncpy(s, "ZZ", 3);     // "ZZ",              C4996
+                            // count greater than strSource, null added
+   printf("%s\n", s);
+
+   strcpy_s(s, sizeof(s), "AA BB CC");
+   p = strstr(s, "BB");
+   q = strstr(s, "CC");
+   strncpy(s, "aa", p - s - 1);   // "aa BB CC"   C4996
+   strncpy(p, "bb", q - p - 1);   // "aa bb CC"   C4996
+   strncpy(q, "cc",  q - s);      // "aa bb cc"   C4996
+   strncpy(q, "dd", strlen(q));   // "aa bb dd"   C4996
+   printf("%s\n", s);
+
+   // some problems with strncpy
+   strcpy_s(s, sizeof(s), "test");
+   strncpy(t, "this is a very long string", 20 ); // C4996
+   // Danger: at this point, t has no terminating null,
+   // so the printf continues until it runs into one.
+   // In this case, it will print "this is a very long test"
+   printf("%s\n", t);
+
+   strcpy_s(t, sizeof(t), "dogs like cats");
+   printf("%s\n", t);
+
+   strncpy(t + 10, "to chase cars.", 14); // C4996
+   printf("%s\n", t);
+
+   // strncpy has caused a buffer overrun and corrupted string s
+   printf("Buffer overrun: s = '%s' (should be 'test')\n", s);
+   // Since the stack grows from higher to lower addresses, buffer
+   // overruns can corrupt function return addresses on the stack,
+   // which can be exploited to run arbitrary code.
+}
+```
+
+輸出
+
+```Output
+ZZ
+aa bb dd
+this is a very long test
+dogs like cats
+dogs like to chase cars.
+Buffer overrun: s = 'ars.' (should be 'test')
+```
+
+自動變數的配置以及錯誤偵測和程式碼保護的層級可能會隨變更的編譯器設定而異。 建置在其他編譯環境中，或藉由其他編譯器選項建置時，此範例可能會有不同的結果。
+
+## <a name="see-also"></a>另請參閱
+
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
+[strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)<br/>
+[strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)<br/>

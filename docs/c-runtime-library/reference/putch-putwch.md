@@ -1,12 +1,12 @@
 ---
-title: "_putch、_putwch | Microsoft Docs"
-ms.custom: 
+title: _putch、_putwch | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putwch
@@ -38,70 +38,76 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75094625553a5e080c9e1b4ec6a1f96a7a76d9b7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2c1810207b9af2cfccbd0bf9502952ad96fb9465
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putch-putwch"></a>_putch、_putwch
-將字元寫入至主控台。  
-  
+
+將字元寫入至主控台。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      int _putch(  
-int c   
-);  
-wint_t _putwch(  
-   wchar_t c  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 要輸出的字元。  
-  
-## <a name="return-value"></a>傳回值  
- 若成功，會傳回 `c`。 如果 `_putch` 失敗，則會傳回 `EOF`；如果 **_putwch** 失敗，則會傳回 **WEOF**。  
-  
-## <a name="remarks"></a>備註  
- 這些函式會不經緩衝處理就直接將字元 `c` 寫入至主控台。 在 Windows NT 中，**_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。  
-  
- 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 如需詳細資訊，請參閱 `_putch_nolock`、`_putwch_nolock`。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|**_puttch**|`_putch`|`_putch`|**_putwch**|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_putch`|\<conio.h>|  
-|**_putwch**|\<conio.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱 [_getch](../../c-runtime-library/reference/getch-getwch.md) 的範例。  
-  
-## <a name="see-also"></a>請參閱  
- [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
- [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [_getch、_getwch](../../c-runtime-library/reference/getch-getwch.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _putch(
+int c
+);
+wint_t _putwch(
+   wchar_t c
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+要輸出的字元。
+
+## <a name="return-value"></a>傳回值
+
+如果成功，則會傳回 *c*。 如果 **_putch**失敗，它會傳回**EOF**; 如果 **_putwch**失敗，它會傳回**WEOF**。
+
+## <a name="remarks"></a>備註
+
+這些函式將字元寫入*c*直接管理，而不緩衝，到主控台。 在 Windows NT 中，**_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。
+
+具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 如需詳細資訊，請參閱 **_putch_nolock**， **_putwch_nolock**。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttch**|**_putch**|**_putch**|**_putwch**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_putch**|\<conio.h>|
+|**_putwch**|\<conio.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="example"></a>範例
+
+請參閱 [_getch](getch-getwch.md) 的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
+[_getch、_getwch](getch-getwch.md)<br/>

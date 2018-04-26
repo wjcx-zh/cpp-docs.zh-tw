@@ -1,12 +1,12 @@
 ---
-title: "_dupenv_s_dbg、_wdupenv_s_dbg | Microsoft Docs"
-ms.custom: 
+title: _dupenv_s_dbg、_wdupenv_s_dbg | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _dupenv_s_dbg
@@ -38,122 +38,124 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f9f35fba63fd5b0866a8f2fe13164855d722588
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: dc6aa566770bd8b2e12cefac22c414fd4c43a118
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg、_wdupenv_s_dbg
-從目前環境取得值  這是使用 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) 配置記憶體以提供其他偵錯資訊的 [_dupenv_s、_wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md) 版本。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-errno_t _dupenv_s_dbg(  
-   char **buffer,  
-   size_t *numberOfElements,  
-   const char *varname,  
-   int blockType,  
-   const char *filename,  
-   int linenumber  
-);  
-errno_t _wdupenv_s_dbg(  
-   wchar_t **buffer,  
-   size_t * numberOfElements,  
-   const wchar_t *varname,  
-   int blockType,  
-   const char *filename,  
-   int linenumber  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `buffer`  
- 要儲存變數的值的緩衝區。  
-  
- `numberOfElements`  
- 
-          `buffer` 的大小。  
-  
- `varname`  
- 環境變數名稱。  
-  
- `blockType`  
- 要求的記憶體區塊類型：`_CLIENT_BLOCK` 或 `_NORMAL_BLOCK`。  
-  
- `filename`  
- 原始程式檔名的指標，或為 `NULL`。  
-  
- `linenumber`  
- 原始程式檔中的行號，或為 `NULL`。  
-  
-## <a name="return-value"></a>傳回值  
- 若成功，就是零；若失敗，則為錯誤碼。  
-  
- 這些函式會驗證其參數；若 `buffer` 或 `varname` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，函式會將 `errno` 設定為 `EINVAL` 並傳回 `EINVAL`。  
-  
- 若這些函是無法配置足夠的記憶體，會將 `buffer` 設定為 `NULL`，將 `numberOfElements` 設定為 0，並傳回 `ENOMEM`。  
-  
-## <a name="remarks"></a>備註  
- `_dupenv_s_dbg` 和 `_wdupenv_s_dbg` 函式與 `_dupenv_s` 和 `_wdupenv_s` 相同，唯一不同的是當定義 `_DEBUG` 時，這些函式會使用 [malloc](../../c-runtime-library/reference/malloc.md) 的偵錯版本 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md) 來配置環境變數值的記憶體。 如需 `_malloc_dbg` 之偵錯版本的詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
-  
- 在大多數情況中，您不需要明確地呼叫這些函式。 但您可以定義 `_CRTDBG_MAP_ALLOC` 旗標。 定義 `_CRTDBG_MAP_ALLOC` 時，呼叫 `_dupenv_s` 和 `_wdupenv_s` 會分別重新對應至 `_dupenv_s_dbg` 和 `_wdupenv_s_dbg`，且 `blockType` 會設為 `_NORMAL_BLOCK`。 因此，您不需要呼叫這些函式，除非您想要將堆積區塊標示為 `_CLIENT_BLOCK`。 如需區塊類型的詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tdupenv_s_dbg`|`_dupenv_s_dbg`|`_dupenv_s_dbg`|`_wdupenv_s_dbg`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_dupenv_s_dbg`|\<crtdbg.h>|  
-|`_wdupenv_s_dbg`|\<crtdbg.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_dupenv_s_dbg.c  
-#include  <stdlib.h>  
-#include <crtdbg.h>  
-  
-int main( void )  
-{  
-   char *pValue;  
-   size_t len;  
-   errno_t err = _dupenv_s_dbg( &pValue, &len, "pathext",  
-      _NORMAL_BLOCK, __FILE__, __LINE__ );  
-   if ( err ) return -1;  
-   printf( "pathext = %s\n", pValue );  
-   free( pValue );  
-   err = _dupenv_s_dbg( &pValue, &len, "nonexistentvariable",  
-      _NORMAL_BLOCK, __FILE__, __LINE__ );  
-   if ( err ) return -1;  
-   printf( "nonexistentvariable = %s\n", pValue );  
-   free( pValue ); // It's OK to call free with NULL  
-}  
-```  
-  
-## <a name="sample-output"></a>範例輸出  
-  
-```  
-pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl  
-nonexistentvariable = (null)  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
- [環境常數](../../c-runtime-library/environmental-constants.md)   
- [getenv_s、_wgetenv_s](../../c-runtime-library/reference/getenv-s-wgetenv-s.md)   
- [putenv_s、_wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)
+
+從目前環境取得值  這是使用 [_malloc_dbg](malloc-dbg.md) 配置記憶體以提供其他偵錯資訊的 [_dupenv_s、_wdupenv_s](dupenv-s-wdupenv-s.md) 版本。
+
+## <a name="syntax"></a>語法
+
+```C
+errno_t _dupenv_s_dbg(
+   char **buffer,
+   size_t *numberOfElements,
+   const char *varname,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+errno_t _wdupenv_s_dbg(
+   wchar_t **buffer,
+   size_t * numberOfElements,
+   const wchar_t *varname,
+   int blockType,
+   const char *filename,
+   int linenumber
+);
+```
+
+### <a name="parameters"></a>參數
+
+*buffer*<br/>
+要儲存變數的值的緩衝區。
+
+*numberOfElements*<br/>
+大小*緩衝區*。
+
+*varname*<br/>
+環境變數名稱。
+
+*blockType*<br/>
+要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
+
+*filename*<br/>
+指標的原始程式檔的名稱或**NULL**。
+
+*linenumber*<br/>
+原始程式檔中的行號或**NULL**。
+
+## <a name="return-value"></a>傳回值
+
+若成功，就是零；若失敗，則為錯誤碼。
+
+這些函式會驗證它們的參數;如果*緩衝區*或*varname*是**NULL**，會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+
+若這些函式無法配置足夠的記憶體，這些設定*緩衝區*至**NULL**和*numberOfElements*為 0，並傳回**ENOMEM**。
+
+## <a name="remarks"></a>備註
+
+**_Dupenv_s_dbg**和 **_wdupenv_s_dbg**函式完全相同 **_dupenv_s**和 **_wdupenv_s**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本[malloc](malloc.md)， [_malloc_dbg](malloc-dbg.md)、 配置記憶體給環境變數的值。 如需有關偵錯功能的詳細 **_malloc_dbg**，請參閱[_malloc_dbg](malloc-dbg.md)。
+
+在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以在其中定義的旗標 **_CRTDBG_MAP_ALLOC**。 當 **_CRTDBG_MAP_ALLOC**定義，但呼叫 **_dupenv_s**和 **_wdupenv_s**重新對應至 **_dupenv_s_dbg**和 **_wdupenv_s_dbg**，分別與*blockType*設 **_NORMAL_BLOCK**。 因此，您不需要明確地呼叫這些函式，除非您想要將做為堆積區塊標示 **_CLIENT_BLOCK**。 如需區塊類型的詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tdupenv_s_dbg**|**_dupenv_s_dbg**|**_dupenv_s_dbg**|**_wdupenv_s_dbg**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_dupenv_s_dbg**|\<crtdbg.h>|
+|**_wdupenv_s_dbg**|\<crtdbg.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_dupenv_s_dbg.c
+#include  <stdlib.h>
+#include <crtdbg.h>
+
+int main( void )
+{
+   char *pValue;
+   size_t len;
+   errno_t err = _dupenv_s_dbg( &pValue, &len, "pathext",
+      _NORMAL_BLOCK, __FILE__, __LINE__ );
+   if ( err ) return -1;
+   printf( "pathext = %s\n", pValue );
+   free( pValue );
+   err = _dupenv_s_dbg( &pValue, &len, "nonexistentvariable",
+      _NORMAL_BLOCK, __FILE__, __LINE__ );
+   if ( err ) return -1;
+   printf( "nonexistentvariable = %s\n", pValue );
+   free( pValue ); // It's OK to call free with NULL
+}
+```
+
+```Output
+pathext = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.pl
+nonexistentvariable = (null)
+```
+
+## <a name="see-also"></a>另請參閱
+
+[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[環境常數](../../c-runtime-library/environmental-constants.md)<br/>
+[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)<br/>
+[_putenv_s、_wputenv_s](putenv-s-wputenv-s.md)<br/>

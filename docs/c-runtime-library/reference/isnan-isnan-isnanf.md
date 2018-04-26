@@ -1,12 +1,12 @@
 ---
-title: "isnan、_isnan、_isnanf | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: isnan、_isnan、_isnanf | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isnan
@@ -41,68 +41,73 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d0997b1a6b304634c612f0f1615a059fd812b2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6b8552f59bc0d49ebae0d4a534225af5d9f5facb
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
-測試浮點值是否為非數字 (NAN)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int isnan(  
-   /* floating-point */ x   
-); /* C-only macro */  
-  
-int _isnan(  
-   double x   
-);  
-  
-int _isnanf(  
-   float x  
-); /* x64 only */  
-  
-template <class T>  
-bool isnan(  
-   T x  
-) throw(); /* C++ only */  
-```  
-  
-#### <a name="parameters"></a>參數  
- *x*  
- 要測試的浮點值。  
-  
-## <a name="return-value"></a>傳回值  
- 在 C 中，如果引數 `x` 為 NAN，`isnan` 巨集和`_isnan` 和 `_isnanf` 函式會傳回非零值；否則會傳回 0。  
-  
- 在 C++ 中，如果引數 `x` 為 NAN，`isnan` 範本函式會傳回 `true`，否則會傳回`false`。  
-  
-## <a name="remarks"></a>備註  
- C 的 `isnan` 巨集和 `_isnan``_isnanf` 函式測試浮點值*x*，如果 *x* 不是數字 (NAN) 值，則傳回非零值。 浮點運算的結果無法以指定之類型的 IEEE-754 浮點數格式表示時，就會產生 NAN。 如需 NaN 如何在輸出中表示的資訊，請參閱 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)。  
-  
- 當編譯為 C++ 時，`isnan` 巨集為未定義，並改為定義 `isnan` 範本函式。 它會傳回類型 `bool` 的值，而不是整數。  
-  
- `_isnan` 和 `_isnanf` 函式是 Microsoft 特有的。 `_isnanf` 函式只適用於 x64 編譯時。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|  
-|-------------|---------------------------|-------------------------------|  
-|`isnan`, `_isnanf`|\<math.h>|\<math.h> 或 \<cmath>|  
-|`_isnan`|\<float.h>|\<float.h> 或 \<cfloat>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [_finite、_finitef](../../c-runtime-library/reference/finite-finitef.md)   
- [_fpclass、_fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)
+
+測試浮點值是否為非數字 (NAN)。
+
+## <a name="syntax"></a>語法
+
+```C
+int isnan(
+   /* floating-point */ x
+); /* C-only macro */
+
+int _isnan(
+   double x
+);
+
+int _isnanf(
+   float x
+); /* x64 only */
+
+template <class T>
+bool isnan(
+   T x
+) throw(); /* C++ only */
+```
+
+### <a name="parameters"></a>參數
+
+*x*<br/>
+要測試的浮點值。
+
+## <a name="return-value"></a>傳回值
+
+在 C 中， **isnan**巨集和 **_isnan**和 **_isnanf**函式會傳回非零值，如果引數*x*為 NAN，否則為它們傳回 0。
+
+C + + **isnan**範本函式會傳回**true**如果引數*x*為 NAN; 否則傳回**false**。
+
+## <a name="remarks"></a>備註
+
+C **isnan**巨集和 **_isnan**和 **_isnanf**函式會測試浮點值*x*，傳回非零值，如果*x*不是數字 (NAN) 值。 浮點運算的結果無法以指定之類型的 IEEE-754 浮點數格式表示時，就會產生 NAN。 如需 NaN 如何在輸出中表示的資訊，請參閱 [printf](printf-printf-l-wprintf-wprintf-l.md)。
+
+編譯為 c + +， **isnan**巨集未定義時，和**isnan**改為定義樣板函式。 它會傳回型別的值**bool**而不是整數。
+
+**_Isnan**和 **_isnanf**函式是 Microsoft 專有的。 **_Isnanf**函式，才可以使用時針對 x64 所編譯。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭 (C)|必要的標頭 (C++)|
+|-------------|---------------------------|-------------------------------|
+|**isnan**， **_isnanf**|\<math.h>|\<math.h> 或 \<cmath>|
+|**_isnan**|\<float.h>|\<float.h> 或 \<cfloat>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
+[_finite、_finitef](finite-finitef.md)<br/>
+[_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>

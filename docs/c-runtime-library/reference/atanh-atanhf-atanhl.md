@@ -1,12 +1,12 @@
 ---
-title: "atanh、atanhf、atanhl | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: atanh、atanhf、atanhl | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - atanhl
@@ -36,98 +36,94 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043a08b2064efcd10a9d5165a6cff97118dc965d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5f56568fa4e38d68e45acf976a8802971e63ea66
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
-計算反雙曲正切。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-double atanh(  
-   double x   
-);  
-float atanh(  
-   float x   
-);  // C++ only  
-long double atanh(  
-   long double x  
-);  // C++ only  
-float atanhf(  
-   float x   
-);  
-long double atanhl(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `x`  
- 浮點值。  
-  
-## <a name="return-value"></a>傳回值  
- `atanh` 函式會傳回 `x` 的反雙曲正切 (Arc 雙曲正切)。 如果`x`大於 1 或小於-1，`errno`設`EDOM`且結果為無訊息 NaN。 若 `x` 等於 1 或 -1，則會分別傳回無限大的正數或負數，且 `errno` 會設為 `ERANGE`。  
-  
-|輸入|SEH 例外狀況|`Matherr` 例外狀況|  
-|-----------|-------------------|-------------------------|  
-|± QNAN、IND|無|無|  
-|`X` ≥ 1; `x` ≤ -1|無|無|  
-  
-## <a name="remarks"></a>備註  
- 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `atanh` 或 `float` 值的 `long double` 的多載。 在 C 程式中，`atanh` 會一律採用並傳回 `double`。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|C 標頭|C++ 標頭|  
-|--------------|--------------|------------------|  
-|`atanh`, `atanhf`, `atanhl`|\<math.h>|\<cmath>|  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_atanh.c  
-// This program displays the hyperbolic tangent of pi / 4  
-// and the arc hyperbolic tangent of the result.  
-//  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double pi = 3.1415926535;  
-   double x, y;  
-  
-   x = tanh( pi / 4 );  
-   y = atanh( x );  
-   printf( "tanh( %f ) = %f\n", pi/4, x );  
-   printf( "atanh( %f ) = %f\n", x, y );  
-}  
-```  
-  
-```Output  
-tanh( 0.785398 ) = 0.655794  
-atanh( 0.655794 ) = 0.785398  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
- [asin、asinf、asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   
- [atan、atanf、atanl、atan2、atan2f、atan2l](../../c-runtime-library/reference/atan-atanf-atanl-atan2-atan2f-atan2l.md)   
- [cos、cosf、cosl、cosh、coshf、coshl](../../c-runtime-library/reference/cos-cosf-cosl-cosh-coshf-coshl.md)   
- [sin、sinf、sinl、sinh、sinhf、sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md)   
- [tan、tanf、tanl、tanh、tanhf、tanhl](../../c-runtime-library/reference/tan-tanf-tanl-tanh-tanhf-tanhl.md)   
- [_CItan](../../c-runtime-library/citan.md)
+
+計算反雙曲正切。
+
+## <a name="syntax"></a>語法
+
+```C
+double atanh( double x );
+float atanhf( float x );
+long double atanhl( long double x );
+```
+
+```cpp
+float atanh( float x );  // C++ only
+long double atanh( long double x );  // C++ only
+```
+
+### <a name="parameters"></a>參數
+
+*x*<br/>
+浮點值。
+
+## <a name="return-value"></a>傳回值
+
+**Atanh**函式會傳回的反雙曲正切函數 （arc 雙曲正切） *x*。 如果*x*大於 1 或小於-1， **errno**設**EDOM**且結果為無訊息 NaN。 如果*x*是等於 1 或-1，正或負的無限值會分別傳回，和**errno**設**為 ERANGE**。
+
+|輸入|SEH 例外狀況|**Matherr**例外狀況|
+|-----------|-------------------|-------------------------|
+|± QNAN、IND|無|無|
+|*X* ≥ 1;*x* ≤-1|無|無|
+
+## <a name="remarks"></a>備註
+
+因為 c + + 允許多載，所以您可以呼叫的多載**atanh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **atanh**一律採用並傳回**double**。
+
+## <a name="requirements"></a>需求
+
+|功能|C 標頭|C++ 標頭|
+|--------------|--------------|------------------|
+|**atanh**， **atanhf**， **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_atanh.c
+// This program displays the hyperbolic tangent of pi / 4
+// and the arc hyperbolic tangent of the result.
+//
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double pi = 3.1415926535;
+   double x, y;
+
+   x = tanh( pi / 4 );
+   y = atanh( x );
+   printf( "tanh( %f ) = %f\n", pi/4, x );
+   printf( "atanh( %f ) = %f\n", x, y );
+}
+```
+
+```Output
+tanh( 0.785398 ) = 0.655794
+atanh( 0.655794 ) = 0.785398
+```
+
+## <a name="see-also"></a>另請參閱
+
+[浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
+[acosh、acoshf、acoshl](acosh-acoshf-acoshl.md)<br/>
+[asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>
+[cosh、coshf、coshl](cosh-coshf-coshl.md)<br/>
+[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)<br/>
+[tanh、tanhf、tanhl](tanh-tanhf-tanhl.md)<br/>

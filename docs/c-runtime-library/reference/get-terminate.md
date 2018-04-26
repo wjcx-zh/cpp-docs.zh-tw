@@ -1,12 +1,12 @@
 ---
 title: _get_terminate | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_terminate
@@ -34,41 +34,44 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b95b7b10db522e3c6df7a9a0c993b11af2fa35e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f63b082baf46fadb95a3513c3616116b6aed785d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getterminate"></a>_get_terminate
-傳回應由 `terminate` 呼叫的終止常式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-terminate_function _get_terminate( void );  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 將指標傳回由 [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md) 註冊的函式。 如果尚未設定任何函式，傳回的值可能會用於還原預設行為；這個值可以是 NULL。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_get_terminate`|\<eh.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>請參閱  
- [例外狀況處理常式](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [terminate](../../c-runtime-library/reference/terminate-crt.md)   
- [unexpected](../../c-runtime-library/reference/unexpected-crt.md)
+
+傳回由呼叫終止常式**終止**。
+
+## <a name="syntax"></a>語法
+
+```C
+terminate_function _get_terminate( void );
+```
+
+## <a name="return-value"></a>傳回值
+
+將指標傳回由 [set_terminate](set-terminate-crt.md) 註冊的函式。 如果尚未設定任何函式，傳回的值可能會用於還原預設行為；這個值可以是 NULL。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_get_terminate**|\<eh.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[例外狀況處理常式](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[terminate](terminate-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

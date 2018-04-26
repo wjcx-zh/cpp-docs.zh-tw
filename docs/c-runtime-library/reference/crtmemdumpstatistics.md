@@ -1,12 +1,12 @@
 ---
 title: _CrtMemDumpStatistics | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtMemDumpStatistics
@@ -31,49 +31,52 @@ helpviewer_keywords:
 - _CrtMemDumpStatistics function
 - CrtMemDumpStatistics function
 ms.assetid: 27b9d731-3184-4a2d-b9a7-6566ab28a9fe
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 175497b0bd51a8c651af4662991f6b0b85c273f5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 69a96cf29d4cb9d7f6dbec3f079852beb528778d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtmemdumpstatistics"></a>_CrtMemDumpStatistics
-針對採用使用者可讀格式的指定堆積狀態，傾印偵錯標頭資訊 (僅限偵錯版本)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void _CrtMemDumpStatistics(   
-   const _CrtMemState *state   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `state`  
- 要傾印的堆積狀態指標。  
-  
-## <a name="remarks"></a>備註  
- `_CrtMemDumpStatistics` 函式會針對採用使用者可讀格式的指定堆積狀態，傾印偵錯標頭資訊。 應用程式會使用此傾印統計資料追蹤配置及偵測記憶體問題。 記憶體狀態可能包含特定堆積狀態或兩個狀態之間的差異。 未定義 [_DEBUG](../../c-runtime-library/debug.md) 時，會在前置處理期間移除 `_CrtMemDumpStatistics` 的呼叫。  
-  
- `state` 參數必須是指向 `_CrtMemState` 結構的指標，該結構已由 [_CrtMemCheckpoint](../../c-runtime-library/reference/crtmemcheckpoint.md) 填入或由 [_CrtMemDifference](../../c-runtime-library/reference/crtmemdifference.md) 傳回再呼叫 `_CrtMemDumpStatistics`。 如果 `state` 為 `NULL`，將會叫用無效參數處理常式，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則 `errno` 會設定為 `EINVAL` ，而且不會採取任何動作。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
- 如需堆積狀態函式及 `_CrtMemState` 結構的詳細資訊，請參閱 [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|選擇性標頭|  
-|-------------|---------------------|----------------------|  
-|`_CrtMemDumpStatistics`|\<crtdbg.h>|\<errno.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
- **程式庫：**僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [偵錯常式](../../c-runtime-library/debug-routines.md)
+
+針對採用使用者可讀格式的指定堆積狀態，傾印偵錯標頭資訊 (僅限偵錯版本)。
+
+## <a name="syntax"></a>語法
+
+```C
+void _CrtMemDumpStatistics(
+   const _CrtMemState *state
+);
+```
+
+### <a name="parameters"></a>參數
+
+*狀態*來傾印的堆積狀態指標。
+
+## <a name="remarks"></a>備註
+
+**_CrtMemDumpStatistics**函式傾印偵錯標頭資訊，指定使用者可讀取形式堆積的狀態。 應用程式會使用此傾印統計資料追蹤配置及偵測記憶體問題。 記憶體狀態可能包含特定堆積狀態或兩個狀態之間的差異。 當[_DEBUG](../../c-runtime-library/debug.md)未定義時，呼叫 **_CrtMemDumpStatistics**會在前置處理期間移除。
+
+*狀態*參數必須是指向 **_CrtMemState**已所填入的結構[_CrtMemCheckpoint](crtmemcheckpoint.md)或傳回[_CrtMemDifference](crtmemdifference.md)之前 **_CrtMemDumpStatistics**呼叫。 如果*狀態*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並沒有採取任何動作。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+如需堆積狀態函式和 **_CrtMemState**結構，請參閱[堆積狀態報告函式](/visualstudio/debugger/crt-debug-heap-details)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|選擇性標頭|
+|-------------|---------------------|----------------------|
+|**_CrtMemDumpStatistics**|\<crtdbg.h>|\<errno.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+**程式庫：**僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[偵錯常式](../../c-runtime-library/debug-routines.md)<br/>

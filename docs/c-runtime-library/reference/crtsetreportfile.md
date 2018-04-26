@@ -1,12 +1,12 @@
 ---
 title: _CrtSetReportFile | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _CrtSetReportFile
@@ -31,88 +31,97 @@ helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a97e3f856dae60eeae9b96f3d5b422f8a262c68a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d4f2c7aeda689e3b941d460c05c0c5be5d69d69d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
-使用 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 指定 `_CRTDBG_MODE_FILE` 之後，您可以指定要接收訊息文字的檔案控制代碼。 [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 也會使用 `_CrtSetReportFile` 指定文字的目的地 (僅限偵錯版本)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-_HFILE _CrtSetReportFile(   
-   int reportType,  
-   _HFILE reportFile   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `reportType`  
- 報表類型：`_CRT_WARN`、`_CRT_ERROR` 和 `_CRT_ASSERT`。  
-  
- `reportFile`  
- `reportType` 的新報表檔案。  
-  
-## <a name="return-value"></a>傳回值  
- 成功完成時，`_CrtSetReportFile` 會傳回為 `reportType` 中指定之報表類型定義的先前報表檔案。 如果針對 `reportType` 傳入的值無效，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`errno` 會設為 `EINVAL`，且此函式會傳回 `_CRTDBG_HFILE_ERROR`。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
-## <a name="remarks"></a>備註  
- `_CrtSetReportFile` 可搭配 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 函式使用，以定義 `_CrtDbgReport` 所產生之特定報表類型的一或多個目的地。 呼叫 `_CrtSetReportMode` 為特定報表類型指派 `_CRTDBG_MODE_FILE` 報告模式之後，應接著呼叫 `_CrtSetReportFile` 定義要作為目的地使用的特定檔案或資料流。 若未定義 [_DEBUG](../../c-runtime-library/debug.md)，將會在前置處理期間移除對 `_CrtSetReportFile` 的呼叫。  
-  
- 下表顯示 `reportFile` 的可用選項及 `_CrtDbgReport` 的結果行為清單。 這些選項在 Crtdbg.h 中定義為位元旗標。  
-  
- `file handle`  
- 將作為訊息目的地的檔案控制代碼。 不會嘗試驗證此控制代碼的有效性。 您必須開啟和關閉檔案控制代碼。 例如:   
-  
-```  
-HANDLE hLogFile;  
-hLogFile = CreateFile("c:\\log.txt", GENERIC_WRITE,   
-   FILE_SHARE_WRITE, NULL, CREATE_ALWAYS,   
-   FILE_ATTRIBUTE_NORMAL, NULL);  
-_CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_FILE);  
-_CrtSetReportFile(_CRT_WARN, hLogFile);  
-  
-_RPT0(_CRT_WARN,"file message\n");  
-CloseHandle(hLogFile);  
-```  
-  
- `_CRTDBG_FILE_STDERR`  
- 將訊息寫入至可如下重新導向的 `stderr`：  
-  
-```  
-freopen( "c:\\log2.txt", "w", stderr);  
-_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_FILE);  
-_CrtSetReportFile(_CRT_ERROR, _CRTDBG_FILE_STDERR);  
-  
-_RPT0(_CRT_ERROR,"1st message\n");  
-```  
-  
- `_CRTDBG_FILE_STDOUT`  
- 將訊息寫入至您可以重新導向的 `stdout`。  
-  
- `_CRTDBG_REPORT_FILE`  
- 傳回目前的報表模式。  
-  
- 可個別控制每個報表類型所使用的報表檔案。 例如，您可以指定將 `_CRT_ERROR` 的 `reportType` 回報給 `stderr`，並將 `_CRT_ASSERT` 的 `reportType` 回報給使用者定義的檔案控制代碼或資料流。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|選擇性標頭|  
-|-------------|---------------------|---------------------|  
-|`_CrtSetReportFile`|\<crtdbg.h>|\<errno.h>|  
-  
- 通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —`stdin`， `stdout`，和`stderr`，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
- **程式庫：**僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [偵錯常式](../../c-runtime-library/debug-routines.md)
+
+使用之後[_CrtSetReportMode](crtsetreportmode.md)指定 **_CRTDBG_MODE_FILE**，您可以指定要接收的訊息文字的檔案控制代碼。 **_CrtSetReportFile**也會使用[_CrtDbgReport、 _CrtDbgReportW](crtdbgreport-crtdbgreportw.md)指定的文字 （僅限偵錯版本） 的目的地。
+
+## <a name="syntax"></a>語法
+
+```C
+_HFILE _CrtSetReportFile(
+   int reportType,
+   _HFILE reportFile
+);
+```
+
+### <a name="parameters"></a>參數
+
+*reportType*<br/>
+報告類型： **_CRT_WARN**， **_CRT_ERROR**，和 **_CRT_ASSERT**。
+
+*reportFile*<br/>
+新的報表檔案*reportType*。
+
+## <a name="return-value"></a>傳回值
+
+成功完成， **_CrtSetReportFile**傳回先前的報表檔案中指定的報表類型的定義*reportType*。 如果無效的值傳入*reportType*，此函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式 **_CRTDBG_HFILE_ERROR**。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+## <a name="remarks"></a>備註
+
+**_CrtSetReportFile**搭配[_CrtSetReportMode](crtsetreportmode.md)函式定義的目的地或針對特定報表類型所產生的目的地 **_CrtDbgReport**。 當 **_CrtSetReportMode**呼叫指派 **_CRTDBG_MODE_FILE** reporting 模式的特定報表類型， **_CrtSetReportFile**然後呼叫以定義特定檔案或使用做為目的地的資料流。 當[_DEBUG](../../c-runtime-library/debug.md)未定義時，呼叫 **_CrtSetReportFile**會在前置處理期間移除。
+
+下列清單顯示可用的選項，如*reportFile*和所產生的行為的 **_CrtDbgReport**。 這些選項在 Crtdbg.h 中定義為位元旗標。
+
+- **檔案控制代碼**
+
+   將作為訊息目的地的檔案控制代碼。 不會嘗試驗證此控制代碼的有效性。 您必須開啟和關閉檔案控制代碼。 例如: 
+
+   ```C
+   HANDLE hLogFile;
+   hLogFile = CreateFile("c:\\log.txt", GENERIC_WRITE,
+      FILE_SHARE_WRITE, NULL, CREATE_ALWAYS,
+      FILE_ATTRIBUTE_NORMAL, NULL);
+   _CrtSetReportMode(_CRT_WARN, _CRTDBG_MODE_FILE);
+   _CrtSetReportFile(_CRT_WARN, hLogFile);
+
+   _RPT0(_CRT_WARN,"file message\n");
+   CloseHandle(hLogFile);
+   ```
+
+- **_CRTDBG_FILE_STDERR**
+
+   將訊息寫入至**stderr**，其可重新導向，如下所示：
+
+   ```C
+   freopen( "c:\\log2.txt", "w", stderr);
+   _CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_FILE);
+   _CrtSetReportFile(_CRT_ERROR, _CRTDBG_FILE_STDERR);
+
+   _RPT0(_CRT_ERROR,"1st message\n");
+   ```
+
+- **_CRTDBG_FILE_STDOUT**
+
+   將訊息寫入至**stdout**，其中您可以重新導向。
+
+- **_CRTDBG_REPORT_FILE**
+
+   傳回目前的報表模式。
+
+可個別控制每個報表類型所使用的報表檔案。 例如，便可指定*reportType*的 **_CRT_ERROR**回報給**stderr**，雖然*reportType* 的 **_CRT_ASSERT**回報到使用者定義的檔案控制代碼或資料流。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|選擇性標頭|
+|-------------|---------------------|---------------------|
+|**_CrtSetReportFile**|\<crtdbg.h>|\<errno.h>|
+
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+**程式庫：**僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[偵錯常式](../../c-runtime-library/debug-routines.md)<br/>

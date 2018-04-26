@@ -1,12 +1,12 @@
 ---
-title: "_mbbtype、_mbbtype_l | Microsoft Docs"
-ms.custom: 
+title: _mbbtype、_mbbtype_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbbtype
@@ -37,76 +37,81 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beaa8e11b8593205dd192547097e6f7228625410
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cc67c09d1196308df89d70a02cf2cea4c713b0d2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype、_mbbtype_l
-根據上一個位元組傳回位元組類型。  
-  
+
+根據上一個位元組傳回位元組類型。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _mbbtype(  
-   unsigned char c,  
-   int type   
-);  
-int _mbbtype_l(  
-   unsigned char c,  
-   int type,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 要測試的字元。  
-  
- `type`  
- 要測試的位元組類型。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- `_mbbtype` 傳回字串中的位元組類型。 這項決策是即時線上的，如提供控制項測試條件的 `type` 值所指定。 `type` 是該字串中前一個位元組的類型。 下表中的資訊清單常數定義於 Mbctype.h。  
-  
-|`type` 的值|`_mbbtype` 測試|傳回值|`c`|  
-|---------------------|--------------------------|------------------|---------|  
-|1 以外的任何值|有效的單一位元組或前導位元|`_MBC_SINGLE` (0)|單一位元組 (0x20-0x7E、 0xA1-0xDF)|  
-|1 以外的任何值|有效的單一位元組或前導位元|`_MBC_LEAD` (1)|多位元組字元的前導位元組 (0x81-0x9F、 0xE0-0xFC)|  
-|1 以外的任何值|有效的單一位元組或前導位元|`_MBC_ILLEGAL`<br /><br /> ( -1)|無效的字元 (任何值除了 0x20-0x7E、 0xA1-0xDF、 0x81-0x9F、 0xE0-0xFC|  
-|1|有效的後隨位元組|`_MBC_TRAIL` (2)|結尾的多位元組字元位元組 (0x40-0x7E、 0x80-0xFC)|  
-|1|有效的後隨位元組|`_MBC_ILLEGAL`<br /><br /> ( -1)|無效的字元 (任何值除了 0x20-0x7E、 0xA1-0xDF、 0x81-0x9F、 0xE0-0xFC|  
-  
-## <a name="remarks"></a>備註  
- `_mbbtype` 函式會判斷多位元組字元中的位元組類型。 如果 `type` 的值為 1 以外的任何值，則 `_mbbtype` 會針對多位元組字元之有效的單一位元組或前導位元組進行測試。 如果 `type` 的值為 1，則 `_mbbtype` 會針對多位元組字元之有效的後隨位元組進行測試。  
-  
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這個函式的 `_mbbtype` 版本會針對地區設定相關的行為使用目前的地區設定；而 `_mbbtype_l` 版本也一樣，除了改用傳入的地區設定以外。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
- 在舊版中，`_mbbtype` 名為 `chkctype`。 對於新的程式碼，請改用 `_mbbtype`。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|選擇性標頭|  
-|-------------|---------------------|---------------------|  
-|`_mbbtype`|\<mbstring.h>|\<mbctype.h>*|  
-|`_mbbtype_l`|\<mbstring.h>|\<mbctype.h>*|  
-  
- \* 針對可作為傳回值使用之資訊清單常數的定義。  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [位元組分類](../../c-runtime-library/byte-classification.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _mbbtype(
+   unsigned char c,
+   int type
+);
+int _mbbtype_l(
+   unsigned char c,
+   int type,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+要測試的字元。
+
+*type*<br/>
+要測試的位元組類型。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+**_mbbtype**傳回字串中的位元組類型。 這項決策是即時的值所指定*類型*，這樣會提供控制項測試條件。 *型別*是一個位元組的字串中的型別。 下表中的資訊清單常數定義於 Mbctype.h。
+
+|值*類型*|**_mbbtype**測試|傳回值|*C*|
+|---------------------|--------------------------|------------------|---------|
+|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_SINGLE** (0)|單一位元組 (0x20-0x7E、 0xA1-0xDF)|
+|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_LEAD** (1)|多位元組字元的前導位元組 (0x81-0x9F、 0xE0-0xFC)|
+|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_ILLEGAL**<br /><br /> ( -1)|無效的字元 (任何值除了 0x20-0x7E、 0xA1-0xDF、 0x81-0x9F、 0xE0-0xFC|
+|1|有效的後隨位元組|**_MBC_TRAIL** (2)|結尾的多位元組字元位元組 (0x40-0x7E、 0x80-0xFC)|
+|1|有效的後隨位元組|**_MBC_ILLEGAL**<br /><br /> ( -1)|無效的字元 (任何值除了 0x20-0x7E、 0xA1-0xDF、 0x81-0x9F、 0xE0-0xFC|
+
+## <a name="remarks"></a>備註
+
+**_Mbbtype**函式會判斷多位元組字元中的位元組類型。 如果值*類型*是 1，以外的任何值 **_mbbtype**有效的單一位元組或前導位元組的多位元組字元的測試。 如果值*類型*為 1， **_mbbtype**針對多位元組字元的有效的後隨位元組進行測試。
+
+輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 **_Mbbtype**此函式版本會使用目前的地區設定針對此與地區設定相關行為; **_mbbtype_l**版本也一樣，只不過它會改用傳入的地區設定參數. 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+在舊版中， **_mbbtype**命名為**chkctype**。 對於新的程式碼， **_mbbtype**改為。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|選擇性標頭|
+|-------------|---------------------|---------------------|
+|**_mbbtype**|\<mbstring.h>|\<mbctype.h>*|
+|**_mbbtype_l**|\<mbstring.h>|\<mbctype.h>*|
+
+\* 針對可作為傳回值使用之資訊清單常數的定義。
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[位元組分類](../../c-runtime-library/byte-classification.md)<br/>

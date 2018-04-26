@@ -1,13 +1,13 @@
 ---
-title: fegetenv1 | Microsoft Docs
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fegetenv |Microsoft 文件
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fetegenv
@@ -32,50 +32,54 @@ dev_langs:
 helpviewer_keywords:
 - fetegenv function
 ms.assetid: 68962421-6978-4b27-8e4c-ad1577830cf6
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 025b934ec6a2d9bc98d46cabbd13b93e263cd777
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3569b015784f41fae4a4a91b6a32fe08dd57284
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fegetenv"></a>fegetenv
-將目前的浮點環境儲存在指定的物件中。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int fegetenv(  
-   fenv_t *penv  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- `penv`  
- `fenv_t` 物件的指標，包含目前的浮點環境值。  
-  
-## <a name="return-value"></a>傳回值  
- 如果浮點環境已成功儲存在 `penv` 中，則傳回 0。 否則，傳回非零值。  
-  
-## <a name="remarks"></a>備註  
- `fegetenv` 函式會將目前的浮點環境儲存在 `penv` 指向的物件中。 浮點點環境是一組會影響浮點計算的狀態旗標和控制項模式。 這包括捨入方向模式以及處理浮點例外狀況的狀態旗標。  如果 `penv` 不指向有效的 `fenv_t` 物件，則不定義後續行為。  
-  
- 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|C 標頭|C++ 標頭|  
-|--------------|--------------|------------------|  
-|`fegetenv`|\<fenv.h>|\<cfenv>|  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fesetenv](../../c-runtime-library/reference/fesetenv1.md)
+
+將目前的浮點環境儲存在指定的物件中。
+
+## <a name="syntax"></a>語法
+
+```C
+int fegetenv(
+   fenv_t *penv
+);
+```
+
+### <a name="parameters"></a>參數
+
+*penv*<br/>
+指標**fenv_t**包含目前的浮點環境值的物件。
+
+## <a name="return-value"></a>傳回值
+
+傳回 0 表示浮點環境已成功儲存在*penv*。 否則，傳回非零值。
+
+## <a name="remarks"></a>備註
+
+**Fegetenv**函式會將目前的浮點環境所指向的物件存放至*penv*。 浮點點環境是一組會影響浮點計算的狀態旗標和控制項模式。 這包括捨入方向模式以及處理浮點例外狀況的狀態旗標。  如果*penv*並未指向有效**fenv_t**物件，後續的行為是未定義。
+
+若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
+
+## <a name="requirements"></a>需求
+
+|功能|C 標頭|C++ 標頭|
+|--------------|--------------|------------------|
+|**fegetenv**|\<fenv.h>|\<cfenv>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[fesetenv](fesetenv1.md)<br/>

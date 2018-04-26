@@ -1,12 +1,12 @@
 ---
-title: "remainder、remainderf、remainder | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: remainder、remainderf、remainder | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - remainderl
@@ -36,95 +36,87 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7a5d55fd079f03338a6860755a783ba4d82b76
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 52abbfef2e20bebd531ef2d6c7a414f8345d996b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
-計算兩個浮點值商數的餘數，四捨五入為最接近的整數值。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-double remainder(   
-   double numer,  
-   double denom  
-);  
-float remainder(   
-   float numer,  
-   float denom  
-); /* C++ only */  
-long double remainder(   
-   long double numer,  
-   long double denom  
-); /* C++ only */  
-float remainderf(   
-   float numer,  
-   float denom  
-);  
-long double remainderl(   
-   long double numer,  
-   long double denom  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- `numer`  
- 分子。  
-  
- `denom`  
- 分母。  
-  
-## <a name="return-value"></a>傳回值  
- `x` / `y` 的浮點餘數。 如果 `y` 的值為 0.0，則 `remainder` 會傳回無訊息 NaN。 如需透過 `printf` 系列表示無訊息 NaN 的資訊，請參閱 [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)。  
-  
-## <a name="remarks"></a>備註  
- `remainder` 函式會計算 `x` / `y` 之 `r` 的浮點數餘數，使得 `x` = `n` * `y` + `r`，其中 `n` 是值最接近 `x` / `y` 的整數，且每當 &#124; `n` - `x` / `y` &#124; = 1/2 時，`n` 是偶數。 當 `r` = 0 時，`r` 的正負號與 `x` 相同。  
-  
- 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `remainder` 或 `float` 值的 `long double` 的多載。 在 C 程式中，`remainder` 一律會採用兩個雙精度浮點數並傳回一個雙精度浮點數。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|必要的標頭|  
-|--------------|---------------------|  
-|`remainder`, `remainderf`, `remainderl`|\<math.h>|  
-  
- 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```C  
-// crt_remainder.c  
-// This program displays a floating-point remainder.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double w = -10.0, x = 3.0, z;  
-  
-   z = remainder(w, x);  
-   printf("The remainder of %.2f / %.2f is %f\n", w, x, z);  
-}  
-```  
-  
-```Output  
-The remainder of -10.00 / 3.00 is -1.000000  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [ldiv、lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
- [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   
- [fmod、fmodf](../../c-runtime-library/reference/fmod-fmodf.md)   
- [remquo、remquof、remquol](../../c-runtime-library/reference/remquo-remquof-remquol.md)
+
+計算兩個浮點值商數的餘數，四捨五入為最接近的整數值。
+
+## <a name="syntax"></a>語法
+
+```C
+double remainder( double x, double y );
+float remainderf( float x, float y );
+long double remainderl( long double x, long double y );
+```
+
+```cpp
+float remainder( float x, float y ); /* C++ only */
+long double remainder( long double x, long double y ); /* C++ only */
+```
+
+### <a name="parameters"></a>參數
+
+*x*<br/>
+分子。
+
+*y*<br/>
+分母。
+
+## <a name="return-value"></a>傳回值
+
+浮點數的其餘部分*x* / *y*。 如果值*y*為 0.0，**餘數**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)。
+
+## <a name="remarks"></a>備註
+
+**餘數**函數會計算浮點數餘數*r*的*x* / *y*使得*x*  =  *n* * *y* + *r*，其中*n*是整數值到最接近*x* / *y*和*n*甚至是每當&#124; *n*  - *x* / *y* &#124; = 1/2。 當*r* = 0， *r*具有相同的簽章為*x*。
+
+因為 c + + 允許多載，所以您可以呼叫的多載**餘數**採用並傳回**float**或**長** **double**值。 在 C 程式中，**餘數**一律會採用兩個**double**引數並傳回**double**。
+
+## <a name="requirements"></a>需求
+
+|功能|必要的標頭 (C)|必要的標頭 (C++)|
+|--------------|---------------------|-|
+|**餘數**， **remainderf**， **remainderl**|\<math.h>|\<cmath> 或 \<math.h>|
+
+如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_remainder.c
+// This program displays a floating-point remainder.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double w = -10.0, x = 3.0, z;
+
+   z = remainder(w, x);
+   printf("The remainder of %.2f / %.2f is %f\n", w, x, z);
+}
+```
+
+```Output
+The remainder of -10.00 / 3.00 is -1.000000
+```
+
+## <a name="see-also"></a>另請參閱
+
+[浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
+[ldiv、lldiv](ldiv-lldiv.md)<br/>
+[imaxdiv](imaxdiv.md)<br/>
+[fmod、fmodf](fmod-fmodf.md)<br/>
+[remquo、remquof、remquol](remquo-remquof-remquol.md)<br/>

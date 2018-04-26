@@ -1,16 +1,17 @@
 ---
-title: "fmod、fmodf | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fmod、 fmodf，fmodl |Microsoft 文件
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fmod
 - fmodf
+- fmodl
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -33,90 +34,100 @@ dev_langs:
 helpviewer_keywords:
 - calculating floating-point remainders
 - fmodf function
+- fmodl function
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042bf7fec2d8e05628f09297f4af92011237fc5f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c31ec67e3b5c75c334a985461365c7b139758427
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="fmod-fmodf"></a>fmod、fmodf
-計算浮點餘數。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-double fmod(   
-   double x,  
-   double y   
-);  
-float fmod(  
-   float x,  
-   float y   
-);  // C++ only  
-long double fmod(  
-   long double x,  
-   long double y  
-);  // C++ only  
-float fmodf(   
-   float x,  
-   float y   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `x`, `y`  
- 浮點值。  
-  
-## <a name="return-value"></a>傳回值  
- `fmod` 會傳回 `x` / `y` 的浮點餘數。 如果 `y` 的值為 0.0，則 `fmod` 會傳回無訊息 NaN。 如需透過 `printf` 系列表示無訊息 NaN 的資訊，請參閱 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)。  
-  
-## <a name="remarks"></a>備註  
- 如果 `x` = `i` `*` `y` + `f`，`fmod` 函式會計算 `x` / `y` 的浮點餘數 `f`，其中 `i` 是整數、`f` 的正負號與 `x` 相同，而且 `f` 的絕對值小於 `y` 的絕對值。  
-  
- C++ 允許多載，因此您可以呼叫 `fmod` 的多載。 在 C 程式中，`fmod` 一律會採用兩個雙精度浮點數並傳回一個雙精度浮點數。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|必要的標頭|  
-|--------------|---------------------|  
-|`fmod`, `fmodf`|\<math.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_fmod.c  
-// This program displays a floating-point remainder.  
-  
-#include <math.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   double w = -10.0, x = 3.0, z;  
-  
-   z = fmod( w, x );  
-   printf( "The remainder of %.2f / %.2f is %f\n", w, x, z );  
-}  
-```  
-  
-```Output  
-The remainder of -10.00 / 3.00 is -1.000000  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [浮點支援](../../c-runtime-library/floating-point-support.md)   
- [ceil、ceilf、ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   
- [fabs、fabsf、fabsl](../../c-runtime-library/reference/fabs-fabsf-fabsl.md)   
- [floor、floorf、floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
- [_CIfmod](../../c-runtime-library/cifmod.md)
+# <a name="fmod-fmodf-fmodl"></a>fmod、 fmodf fmodl
+
+計算浮點餘數。
+
+## <a name="syntax"></a>語法
+
+```C
+double fmod(
+   double x,
+   double y
+);
+float fmod(
+   float x,
+   float y
+);  // C++ only
+long double fmod(
+   long double x,
+   long double y
+);  // C++ only
+float fmodf(
+   float x,
+   float y
+);
+long double fmodl(
+   long double x,
+   long double y
+);
+```
+
+### <a name="parameters"></a>參數
+
+*x*， *y*<br/>
+浮點值。
+
+## <a name="return-value"></a>傳回值
+
+**fmod**傳回浮點餘數*x* / *y*。 如果值*y*為 0.0， **fmod**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
+
+## <a name="remarks"></a>備註
+
+**Fmod**函式會計算浮點數餘數*f*的*x* / *y*使得*x* = *我* * *y* + *f*，其中*我*是整數， *f*具有相同的簽章為*x*，和數值的絕對值*f*數值的絕對值小於*y*。
+
+C + + 允許多載，所以您可以呼叫的多載**fmod**採用並傳回**float**和**長** **double**值。 在 C 程式中， **fmod**一律會採用兩個**double**引數並傳回**double**。
+
+## <a name="requirements"></a>需求
+
+|功能|必要的標頭|
+|--------------|---------------------|
+|**fmod**， **fmodf**， **fmodl**|\<math.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_fmod.c
+// This program displays a floating-point remainder.
+
+#include <math.h>
+#include <stdio.h>
+
+int main( void )
+{
+   double w = -10.0, x = 3.0, z;
+
+   z = fmod( w, x );
+   printf( "The remainder of %.2f / %.2f is %f\n", w, x, z );
+}
+```
+
+```Output
+The remainder of -10.00 / 3.00 is -1.000000
+```
+
+## <a name="see-also"></a>另請參閱
+
+[浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
+[ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>
+[fabs、fabsf、fabsl](fabs-fabsf-fabsl.md)<br/>
+[floor、floorf、floorl](floor-floorf-floorl.md)<br/>
+[_CIfmod](../../c-runtime-library/cifmod.md)<br/>

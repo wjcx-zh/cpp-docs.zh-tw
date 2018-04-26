@@ -1,12 +1,12 @@
 ---
-title: "iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l | Microsoft Docs"
-ms.custom: 
+title: iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _iswcsym_l
@@ -71,17 +71,17 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85c650efa09bb093da65be874c890c77282d3fa3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 225a5ab6dd00619b825be5b7e5220de70aafc3ba
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l
 
@@ -124,32 +124,32 @@ int _iswcsymf_l(
 
 ### <a name="parameters"></a>參數
 
-*C*  
+*C*<br/>
 待測試整數。 *c*應在 0-255 窄字元版本的函式的範圍內。
 
-*locale*  
+*locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-同時`__iscsym`和`__iswcsym`傳回非零值，如果*c*是字母、 底線或數字。 同時`__iscsymf`和`__iswcsymf`傳回非零值，如果*c*值為字母或底線。 這些常式都會傳回 0，如果*c*不符合測試條件。 這些函式版本`_l`尾碼是一樣的不同之處在於會使用*地區設定*傳遞中而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+同時 **__iscsym**和 **__iswcsym**傳回非零值，如果*c*是字母、 底線或數字。 同時 **__iscsymf**和 **__iswcsymf**傳回非零值，如果*c*值為字母或底線。 這些常式都會傳回 0，如果*c*不符合測試條件。 這些函式版本 **_l**尾碼是一樣的不同之處在於會使用*地區設定*傳遞中而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>備註
 
 除非已定義前置處理器巨集 _CTYPE_DISABLE_MACROS，否則這些常式會被定義為巨集。 當您使用這些常式的巨集版本時，引數可多次評估。 您使用在引數清單中具有副作用的運算式時，請務必小心。
 
-回溯相容性，`iscsym`和`iscsymf`定義為巨集時，才[&#95; &#95;STDC #95; &#95;](../../preprocessor/predefined-macros.md)未定義或定義為 0; 否則，它們會未定義。
+回溯相容性， **iscsym**和**iscsymf**定義為巨集時，才[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)未定義或定義為 0;否則，它們會未定義。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
-|`iscsym`, `iscsymf`, `__iscsym`, `__iswcsym`, `__iscsymf`, `__iswcsymf`, `_iscsym_l`, `_iswcsym_l`, `_iscsymf_l`, `_iswcsymf_l`|C：\<ctype.h><br /><br /> C++：\<cctype> 或 \<ctype.h>|
+|**iscsym**， **iscsymf**， **__iscsym**， **__iswcsym**， **__iscsymf**， **__iswcsymf**， **_iscsym_l**， **_iswcsym_l**， **_iscsymf_l**， **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> 或 \<ctype.h>|
 
-`iscsym`、`iscsymf`、`__iscsym`、`__iswcsym`、`__iscsymf`、`__iswcsymf`、`_iscsym_l`、`_iswcsym_l`、`_iscsymf_l` 和 `_iswcsymf_l` 是 Microsoft 的特定常式。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**Iscsym**， **iscsymf**， **__iscsym**， **__iswcsym**， **__iscsymf**， **__iswcsymf**， **_iscsym_l**， **_iswcsym_l**， **_iscsymf_l**，和 **_iswcsymf_l**常式Microsoft 專有的。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[字元分類](../../c-runtime-library/character-classification.md)   
-[地區設定](../../c-runtime-library/locale.md)   
-[is、isw 常式](../../c-runtime-library/is-isw-routines.md)
+[字元分類](../../c-runtime-library/character-classification.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

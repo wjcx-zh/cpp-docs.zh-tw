@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>_countof 巨集
 
@@ -58,15 +58,15 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="remarks"></a>備註
 
-`_countof` 會實作為函式類似前置處理器巨集。 C + + 版本都有額外的範本機制，來偵測在編譯時期，如果將指標傳遞而不是以靜態方式宣告陣列。
+**_countof**實作為函式類似前置處理器巨集。 C + + 版本都有額外的範本機制，來偵測在編譯時期，如果將指標傳遞而不是以靜態方式宣告陣列。
 
-請確認*陣列*其實是一個陣列，而非指標。 在 C 中，`_countof`會產生錯誤的結果，如果*陣列*的指標。 C + +`_countof`無法編譯如果*陣列*的指標。  陣列當做參數傳遞至函式*指標 decays*，這表示，在函式，您無法使用`_countof`來判斷陣列的範圍。
+請確認*陣列*其實是一個陣列，而非指標。 在 C 中， **_countof**會產生錯誤的結果，如果*陣列*的指標。 C + + **_countof**無法編譯如果*陣列*的指標。  陣列當做參數傳遞至函式*指標 decays*，這表示，在函式，您無法使用 **_countof**來判斷陣列的範圍。
 
 ## <a name="requirements"></a>需求
 
 |巨集|必要的標頭|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>範例
 

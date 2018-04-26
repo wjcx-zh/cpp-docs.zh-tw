@@ -1,12 +1,12 @@
 ---
-title: "_rmdir、_wrmdir | Microsoft Docs"
-ms.custom: 
+title: _rmdir、_wrmdir | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wrmdir
@@ -42,78 +42,81 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 527b9baa6da22ae33ef0bd14ded46780aecaa0d2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f1532aebb588ca67316a1317e0d27184309a5701
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir、_wrmdir
-刪除目錄。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      int _rmdir(  
-   const char *dirname   
-);  
-int _wrmdir(  
-   const wchar_t *dirname   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `dirname`  
- 要移除之目錄的路徑。  
-  
-## <a name="return-value"></a>傳回值  
- 如果已成功刪除目錄，所有這些函式都會傳回 0。 傳回值-1 表示錯誤和`errno`設為下列值之一：  
-  
- **ENOTEMPTY**  
- 指定的路徑不是目錄、目錄不是空的，或是目錄是目前工作目錄或根目錄。  
-  
- `ENOENT`  
- 路徑無效。  
-  
- **EACCES**  
- 程式已有目錄的開啟控制代碼。  
-  
- 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
-## <a name="remarks"></a>備註  
- `_rmdir` 函式會刪除 `dirname` 所指定的目錄。 目錄必須是空的，而且它不得是目前工作目錄或根目錄。  
-  
- `_wrmdir` 是寬字元版本的 `_rmdir`；`dirname` 的 `_wrmdir` 引數是寬字元字串。 否則，`_wrmdir` 和 `_rmdir` 的行為即會相同。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_trmdir`|`_rmdir`|`_rmdir`|`_wrmdir`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_rmdir`|\<direct.h>|  
-|`_wrmdir`|\<direct.h> 或 \<wchar.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱 [_mkdir](../../c-runtime-library/reference/mkdir-wmkdir.md) 的範例。  
-  
-## <a name="see-also"></a>請參閱  
- [目錄控制](../../c-runtime-library/directory-control.md)   
- [_chdir、_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_mkdir、_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)
+
+刪除目錄。
+
+## <a name="syntax"></a>語法
+
+```C
+int _rmdir(
+   const char *dirname
+);
+int _wrmdir(
+   const wchar_t *dirname
+);
+```
+
+### <a name="parameters"></a>參數
+
+*dirname*<br/>
+要移除之目錄的路徑。
+
+## <a name="return-value"></a>傳回值
+
+如果已成功刪除目錄，所有這些函式都會傳回 0。 傳回值-1 表示錯誤和**errno**設為下列值之一：
+
+|errno 值|條件|
+|-|-|
+**ENOTEMPTY**|指定的路徑不是目錄、目錄不是空的，或是目錄是目前工作目錄或根目錄。
+**ENOENT**|路徑無效。
+**EACCES**|程式已有目錄的開啟控制代碼。
+
+如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+## <a name="remarks"></a>備註
+
+**_Rmdir**函式會刪除所指定的目錄*dirname*。 目錄必須是空的，而且它不得是目前工作目錄或根目錄。
+
+**_wrmdir**是寬字元版本的 **_rmdir**; *dirname*引數 **_wrmdir**是寬字元字串。 **_wrmdir**和 **_rmdir**除此之外的行為相同。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_trmdir**|**_rmdir**|**_rmdir**|**_wrmdir**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_rmdir**|\<direct.h>|
+|**_wrmdir**|\<direct.h> 或 \<wchar.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="example"></a>範例
+
+請參閱 [_mkdir](mkdir-wmkdir.md) 的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[目錄控制](../../c-runtime-library/directory-control.md)<br/>
+[_chdir、_wchdir](chdir-wchdir.md)<br/>
+[_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>

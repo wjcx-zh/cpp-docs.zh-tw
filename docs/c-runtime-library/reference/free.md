@@ -1,12 +1,12 @@
 ---
 title: free | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - free
@@ -31,63 +31,67 @@ helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 161b067c432a30e58db51410f0540d60d5e74bc8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ecb214f5b7f53682fe1f1327089836a172319015
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="free"></a>free
-取消配置或釋放記憶體區塊。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void free(   
-   void *memblock   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `memblock`  
- 要釋放之先前配置的記憶體區塊。  
-  
-## <a name="remarks"></a>備註  
- `free` 函式會取消配置 `calloc`、`malloc` 或 `realloc` 呼叫先前所配置的記憶體區塊 (`memblock`)。 所釋放的位元組數目相當於配置 (或重新配置，如果為 `realloc`) 區塊時所要求的位元組數目。 如果 `memblock` 是 `NULL`，則會忽略指標，並立即傳回 `free`。 嘗試釋放無效指標 (`calloc`、`malloc` 或 `realloc` 未配置之記憶體區塊的指標) 可能會影響後續配置要求，並導致錯誤。  
-  
- 若釋放記憶體發生錯誤，會使用來自作業系統且具有失敗性質的資訊設定 `errno`。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
- 釋放記憶體區塊之後，[_heapmin](../../c-runtime-library/reference/heapmin.md) 會聯合未使用的區域並將它們釋放回作業系統，以將堆積上的可用記憶體數量降到最低。 未釋放給作業系統的已釋放記憶體會還原到可用集區，並且再度可供重新配置。  
-  
- 當應用程式與偵錯版本的 C 執行階段程式庫相連結時，`free` 會解析為 [_free_dbg](../../c-runtime-library/reference/free-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。  
-  
- `free` 標記為 `__declspec(noalias)`，表示保證函式不會修改全域變數。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md)。  
-  
- 若要釋放使用 [_malloca](../../c-runtime-library/reference/malloca.md) 所配置的記憶體，請使用 [_freea](../../c-runtime-library/reference/freea.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|必要的標頭|  
-|--------------|---------------------|  
-|`free`|\<stdlib.h> 和 \<malloc.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
- 請參閱 [malloc](../../c-runtime-library/reference/malloc.md) 的範例。  
-  
-## <a name="see-also"></a>請參閱  
- [記憶體配置](../../c-runtime-library/memory-allocation.md)   
- [_alloca](../../c-runtime-library/reference/alloca.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [malloc](../../c-runtime-library/reference/malloc.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)   
- [_free_dbg](../../c-runtime-library/reference/free-dbg.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [_freea](../../c-runtime-library/reference/freea.md)
+
+取消配置或釋放記憶體區塊。
+
+## <a name="syntax"></a>語法
+
+```C
+void free(
+   void *memblock
+);
+```
+
+### <a name="parameters"></a>參數
+
+*memblock*先前配置要釋放的記憶體區塊。
+
+## <a name="remarks"></a>備註
+
+**可用**函式會取消配置的記憶體區塊 (*memblock*) 先前呼叫所配置的**calloc**， **malloc**，或**realloc**。 釋出的位元組數目就相當於要求時已配置區塊的位元組數目 (或重新配置後，如果是**realloc**)。 如果*memblock*是**NULL**，指標就會忽略和**可用**立即傳回。 嘗試釋放指標無效 (未配置的記憶體區塊的指標**calloc**， **malloc**，或**realloc**) 可能會影響後續的配置要求而且會發生錯誤。
+
+如果發生錯誤時即釋放記憶體， **errno**設為從作業系統在本質上失敗的資訊。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+釋放記憶體區塊之後，[_heapmin](heapmin.md) 會聯合未使用的區域並將它們釋放回作業系統，以將堆積上的可用記憶體數量降到最低。 未釋放給作業系統的已釋放記憶體會還原到可用集區，並且再度可供重新配置。
+
+當應用程式的 C 執行階段程式庫的偵錯版本連結時**可用**解析成[_free_dbg](free-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+
+**免費**標示`__declspec(noalias)`，這表示，此函式保證不會修改全域變數。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md)。
+
+若要釋放使用 [_malloca](malloca.md) 所配置的記憶體，請使用 [_freea](freea.md)。
+
+## <a name="requirements"></a>需求
+
+|功能|必要的標頭|
+|--------------|---------------------|
+|**free**|\<stdlib.h> 和 \<malloc.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+請參閱 [malloc](malloc.md) 的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
+[_alloca](alloca.md)<br/>
+[calloc](calloc.md)<br/>
+[malloc](malloc.md)<br/>
+[realloc](realloc.md)<br/>
+[_free_dbg](free-dbg.md)<br/>
+[_heapmin](heapmin.md)<br/>
+[_freea](freea.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _kbhit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _kbhit
@@ -39,79 +39,84 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 643a02b8c3617689900eb4114d19fad6f46ad280
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3440227be02fbfda2d4431d91b1286d965e8bc79
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="kbhit"></a>_kbhit
-檢查主控台的鍵盤輸入。  
-  
+
+檢查主控台的鍵盤輸入。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-int _kbhit( void );  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 如果已按下任意按鍵，則 `_kbhit` 會傳回非零值。 否則它會傳回 0。  
-  
-## <a name="remarks"></a>備註  
- `_kbhit` 函式會檢查主控台的最新按鍵輸入。 如果函式傳回非零值，則緩衝區中有等候的按鍵輸入。 程式接著就可以呼叫 `_getch` 或 `_getche` 以取得該按鍵輸入。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_kbhit`|\<conio.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_kbhit.c  
-// compile with: /c  
-/* This program loops until the user  
- * presses a key. If _kbhit returns nonzero, a  
- * keystroke is waiting in the buffer. The program  
- * can call _getch or _getche to get the keystroke.  
- */  
-  
-#include <conio.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   /* Display message until key is pressed. */  
-   while( !_kbhit() )  
-      _cputs( "Hit me!! " );  
-  
-   /* Use _getch to throw key away. */  
-   printf( "\nKey struck was '%c'\n", _getch() );  
-}  
-```  
-  
-## <a name="sample-output"></a>範例輸出  
-  
-```  
-Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!  
-Key struck was 'q'   
-```  
-  
-## <a name="see-also"></a>請參閱  
- [主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+
+int _kbhit( void );
+```
+
+## <a name="return-value"></a>傳回值
+
+**_kbhit**傳回非零值，如果按下按鍵。 否則它會傳回 0。
+
+## <a name="remarks"></a>備註
+
+**_Kbhit**函式會檢查新按鍵的主控台。 如果函式傳回非零值，則緩衝區中有等候的按鍵輸入。 然後可以呼叫程式 **_getch**或 **_getche**取得按鍵。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_kbhit**|\<conio.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_kbhit.c
+// compile with: /c
+/* This program loops until the user
+* presses a key. If _kbhit returns nonzero, a
+* keystroke is waiting in the buffer. The program
+* can call _getch or _getche to get the keystroke.
+*/
+
+#include <conio.h>
+#include <stdio.h>
+
+int main( void )
+{
+   /* Display message until key is pressed. */
+   while( !_kbhit() )
+      _cputs( "Hit me!! " );
+
+   /* Use _getch to throw key away. */
+   printf( "\nKey struck was '%c'\n", _getch() );
+}
+```
+
+### <a name="sample-output"></a>範例輸出
+
+```Output
+Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
+Key struck was 'q'
+```
+
+## <a name="see-also"></a>另請參閱
+
+[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>

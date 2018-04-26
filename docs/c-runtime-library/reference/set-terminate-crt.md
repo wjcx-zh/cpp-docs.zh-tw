@@ -1,12 +1,12 @@
 ---
 title: set_terminate (CRT) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - set_terminate
@@ -32,67 +32,71 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eba062bd1b791f055b2ae1c74c2a0107a4039d23
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 02c38d8c832c4b84725dc15c280c8b3f3fd27841
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
-安裝您要由 `terminate` 呼叫的專屬終止常式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-terminate_function set_terminate(  
-   terminate_function termFunction  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `termFunction`  
- 所撰寫之終止函式的指標。  
-  
-## <a name="return-value"></a>傳回值  
- 傳回 `set_terminate` 所註冊之先前函式的指標，因此，稍後可以還原先前函式。 如果尚未設定先前函式，傳回值可能用於還原預設行為；這個值可以是 NULL。  
-  
-## <a name="remarks"></a>備註  
- `set_terminate` 函式透過 `terminate` 呼叫時會安裝 `termFunction`。 `set_terminate` 是與 C++ 例外狀況處理搭配使用，而且可以在擲回例外狀況之前於程式中的任何位置呼叫。 `terminate` 預設會呼叫 `abort`。 您可以變更這個預設值，方法是撰寫您自己的終止函式，並使用您的函式名稱作為引數呼叫 `set_terminate`。 `terminate` 會呼叫指定為 `set_terminate` 之引數的最後一個函式。 執行任何所需的清除工作之後，`termFunction` 應該會結束程式。 如果它未結束 (如果將它傳回至呼叫端)，則會呼叫 `abort`。  
-  
- 在多執行緒環境中，會分別維護每個執行緒的終止函式。 每個新執行緒都需要安裝它自己的終止函式。 因此，每個執行緒都會負責它自己的終止處理。  
-  
- `terminate_function` 類型定義於 EH.H 中，作為傳回 `void` 之使用者定義終止函式 `termFunction` 的指標。 自訂函式 `termFunction` 無法接受任何引數，而且不應該傳回至其呼叫端。 如果是這樣的話，會呼叫 `abort`。 可能不會從 `termFunction` 擲回例外狀況。  
-  
-```  
-typedef void ( *terminate_function )( );  
-```  
-  
+
+會安裝由呼叫終止常式**終止**。
+
+## <a name="syntax"></a>語法
+
+```cpp
+terminate_function set_terminate( terminate_function termFunction );
+```
+
+### <a name="parameters"></a>參數
+
+*termFunction*<br/>
+所撰寫之終止函式的指標。
+
+## <a name="return-value"></a>傳回值
+
+傳回先前註冊的函式的指標**set_terminate**以便日後還原先前的函數。 如果尚未設定先前函式，傳回值可能用於還原預設行為；這個值可以是 NULL。
+
+## <a name="remarks"></a>備註
+
+**Set_terminate**函式會安裝*termFunction*呼叫的函式為**終止**。 **set_terminate**會與 c + + 例外狀況處理和擲回例外狀況之前無法呼叫在程式中的任何時間點。 **終止**呼叫[中止](abort.md)預設。 您可以透過撰寫自己的中止函式和呼叫來變更此預設**set_terminate**您為其引數的函式的名稱。 **終止**做為引數所指定的最後一個函式會呼叫**set_terminate**。 執行任何所需的清除工作之後, *termFunction*應該結束程式。 如果它未結束 （如果它傳回至呼叫端），[中止](abort.md)呼叫。
+
+在多執行緒環境中，會分別維護每個執行緒的終止函式。 每個新執行緒都需要安裝它自己的終止函式。 因此，每個執行緒都會負責它自己的終止處理。
+
+**Terminate_function** EH 中定義類型。為使用者定義的終止函式的指標 H *termFunction*傳回**void**。 您的自訂函式*termFunction*可以接受任何引數，不應傳回其呼叫端。 若是如此，[中止](abort.md)呼叫。 例外狀況不會擲回從*termFunction*。
+
+```cpp
+typedef void ( *terminate_function )( );
+```
+
 > [!NOTE]
->  `set_terminate` 函式僅作用於偵錯工具外部。  
-  
- 所有動態連結的 DLL 或 EXE 都有一個單一 `set_terminate` 處理常式；即使您呼叫 `set_terminate`，還是會將您的處理常式取代為其他處理常式，或是取代其他 DLL 或 EXE 所設定的處理常式。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`set_terminate`|\<eh.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
- 請參閱 [terminate](../../c-runtime-library/reference/terminate-crt.md) 的範例。  
-  
-## <a name="see-also"></a>請參閱  
- [例外狀況處理常式](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [_get_terminate](../../c-runtime-library/reference/get-terminate.md)   
- [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [terminate](../../c-runtime-library/reference/terminate-crt.md)   
- [unexpected](../../c-runtime-library/reference/unexpected-crt.md)
+> **Set_terminate**函式僅適用於偵錯工具外部。
+
+沒有單一**set_terminate**處理常式所有以動態方式連結的 Dll 或 Exe，即使您呼叫**set_terminate**您的處理常式可能會取代另一個，或您可能會取代另一個設定的處理常式DLL 或 EXE。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**set_terminate**|\<eh.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+請參閱 [terminate](terminate-crt.md) 的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[例外狀況處理常式](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_get_terminate](get-terminate.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[terminate](terminate-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

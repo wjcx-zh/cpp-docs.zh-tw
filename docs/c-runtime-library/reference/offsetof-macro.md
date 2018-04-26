@@ -1,12 +1,12 @@
 ---
-title: "offsetof 巨集 | Microsoft Docs"
-ms.custom: 
+title: offsetof 巨集 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -28,57 +28,62 @@ helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a70bb2823f29caf3f76224bfb91c3c9642bbdcf1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 686de81ecfd4216f3011c93d3bf9be1bfdc55365
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="offsetof-macro"></a>offsetof 巨集
-從其父結構開頭擷取成員的位移。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      size_t offsetof(  
-   structName,  
-   memberName   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- *structName*  
- 父資料結構的名稱。  
-  
- `memberName`  
- 要判斷其位移之父資料結構中成員的名稱。  
-  
-## <a name="return-value"></a>傳回值  
- `offsetof` 會傳回所指定成員從其父資料結構開頭的位移 (位元組)。 位元欄位並未定義它。  
-  
-## <a name="remarks"></a>備註  
- `offsetof` 巨集會將 `memberName` 從 *structName* 所指定結構開頭的位移 (位元組) 傳回類型為 `size_t` 的值。 您可以指定類型與 `struct` 關鍵字。  
-  
+
+從其父結構開頭擷取成員的位移。
+
+## <a name="syntax"></a>語法
+
+```C
+size_t offsetof(
+   structName,
+   memberName
+);
+```
+
+### <a name="parameters"></a>參數
+
+*structName*<br/>
+父資料結構的名稱。
+
+*成員名稱*<br/>
+要判斷其位移之父資料結構中成員的名稱。
+
+## <a name="return-value"></a>傳回值
+
+**offsetof**傳回以位元組為單位的指定成員的位移，從其父資料結構的開頭。 位元欄位並未定義它。
+
+## <a name="remarks"></a>備註
+
+**Offsetof**巨集傳回的位移，以位元組為單位的*memberName*從所指定結構開頭*structName*類型的值為**size_t**。 您可以指定類型與**結構**關鍵字。
+
 > [!NOTE]
->  `offsetof` 不是函式，而且無法使用 C 原型進行描述。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`offsetof`|\<stddef.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [記憶體配置](../../c-runtime-library/memory-allocation.md)
+> **offsetof**函式，且不能使用 C 原型所述。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**offsetof**|\<stddef.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_cscanf、_cscanf_l、_cwscanf、_cwscanf_l | Microsoft Docs"
-ms.custom: 
+title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _cscanf_l
@@ -54,127 +54,128 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 341cc89c1cc73552bfa5c0da79bd75e7bea65ce0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9518859bb4837b846386a897933972272ec6dd9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
-從主控台讀取格式化資料。 這些函式已有更安全的版本可用；請參閱 [_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)。  
-  
+
+從主控台讀取格式化資料。 這些函式已有更安全的版本可用；請參閱 [_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _cscanf(   
-   const char *format [,  
-   argument] ...   
-);  
-int _cscanf_l(   
-   const char *format,  
-   locale_t locale [,  
-   argument] ...   
-);  
-int _cwscanf(   
-   const wchar_t *format [,  
-   argument] ...   
-);  
-int _cwscanf_l(   
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument] ...   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `format`  
- 格式控制字串。  
-  
- `argument`  
- 選擇性參數。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 已成功轉換並指派的欄位數目。 此傳回值不包含已讀取但未指派的欄位。 若嘗試讀取檔案結尾，則傳回值為 `EOF`。 當鍵盤輸入在作業系統命令列層級重新導向時，就會發生此情況。 傳回值 0 表示未指派任何欄位。  
-  
-## <a name="remarks"></a>備註  
- `_cscanf` 函式會將資料直接從主控台讀入 `argument` 指定的位置。 [_getche](../../c-runtime-library/reference/getch-getwch.md)函式可用來讀取字元。 每個選擇性參數都必須是其類型對應至 `format` 中類型規範的變數指標。 該格式會控制輸入欄位的解譯，而且形式和功能與 [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 函式的 `format` 參數相同。 雖然 `_cscanf` 在正常情況下會回應輸入字元，但如果上次的呼叫是針對 `_ungetch`，則不會這麼做。  
-  
- 這個函式會驗證它的參數。 如果格式為 NULL，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`errno` 會設為 `EINVAL`，且此函式會傳回 `EOF`。  
-  
- 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定，而不使用目前的執行緒地區設定。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcscanf`|`_cscanf`|`_cscanf`|`_cwscanf`|  
-|`_tcscanf_l`|`_cscanf_l`|`_cscanf_l`|`_cwscanf_l`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_cscanf`、`_cscanf_l`|\<conio.h>|  
-|`_cwscanf`, `_cwscanf_l`|\<conio.h> 或 \<wchar.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_cscanf.c  
-// compile with: /c /W3  
-/* This program prompts for a string  
- * and uses _cscanf to read in the response.  
- * Then _cscanf returns the number of items  
- * matched, and the program displays that number.  
- */  
-  
-#include <stdio.h>  
-#include <conio.h>  
-  
-int main( void )  
-{  
-   int   result, i[3];  
-  
-   _cprintf_s( "Enter three integers: ");  
-   result = _cscanf( "%i %i %i", &i[0], &i[1], &i[2] ); // C4996  
-   // Note: _cscanf is deprecated; consider using _cscanf_s instead  
-   _cprintf_s( "\r\nYou entered " );  
-   while( result-- )  
-      _cprintf_s( "%i ", i[result] );  
-   _cprintf_s( "\r\n" );  
-}  
-```  
-  
-## <a name="input"></a>輸入  
-  
-```  
-1 2 3  
-```  
-  
-## <a name="output"></a>輸出  
-  
-```  
-Enter three integers: 1 2 3  
-You entered 3 2 1  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
- [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf、_fscanf_l、fwscanf、_fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf、_sscanf_l、swscanf、_swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _cscanf(
+   const char *format [,
+   argument] ...
+);
+int _cscanf_l(
+   const char *format,
+   locale_t locale [,
+   argument] ...
+);
+int _cwscanf(
+   const wchar_t *format [,
+   argument] ...
+);
+int _cwscanf_l(
+   const wchar_t *format,
+   locale_t locale [,
+   argument] ...
+);
+```
+
+### <a name="parameters"></a>參數
+
+*格式*<br/>
+格式控制字串。
+
+*引數*<br/>
+選擇性參數。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+已成功轉換並指派的欄位數目。 此傳回值不包含已讀取但未指派的欄位。 傳回值是**EOF**嘗試讀取檔案結尾處的情況。 當鍵盤輸入在作業系統命令列層級重新導向時，就會發生此情況。 傳回值 0 表示未指派任何欄位。
+
+## <a name="remarks"></a>備註
+
+**_Cscanf**函式會將資料直接從主控台讀入指定的位置*引數*。 [_getche](getch-getwch.md)函式可用來讀取字元。 每個選擇性參數必須是對應於型別規範中的型別變數指標*格式*。 格式控制項的輸入解譯欄位，並具有相同的形式和功能*格式*參數[scanf](scanf-scanf-l-wscanf-wscanf-l.md)函式。 雖然 **_cscanf**通常會回應輸入的字元，它不會這樣如果在上次呼叫 **_ungetch**。
+
+這個函式會驗證它的參數。 如果格式為 NULL，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**EOF**。
+
+這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
+|**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_cscanf**， **_cscanf_l**|\<conio.h>|
+|**_cwscanf**， **_cwscanf_l**|\<conio.h> 或 \<wchar.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_cscanf.c
+// compile with: /c /W3
+/* This program prompts for a string
+* and uses _cscanf to read in the response.
+* Then _cscanf returns the number of items
+* matched, and the program displays that number.
+*/
+
+#include <stdio.h>
+#include <conio.h>
+
+int main( void )
+{
+   int   result, i[3];
+
+   _cprintf_s( "Enter three integers: ");
+   result = _cscanf( "%i %i %i", &i[0], &i[1], &i[2] ); // C4996
+   // Note: _cscanf is deprecated; consider using _cscanf_s instead
+   _cprintf_s( "\r\nYou entered " );
+   while( result-- )
+      _cprintf_s( "%i ", i[result] );
+   _cprintf_s( "\r\n" );
+}
+```
+
+```Input
+1 2 3
+```
+
+```Output
+Enter three integers: 1 2 3
+You entered 3 2 1
+```
+
+## <a name="see-also"></a>另請參閱
+
+[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
+[fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
+[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
+[sscanf、_sscanf_l、swscanf、_swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "strcspn、wcscspn、_mbscspn、_mbscspn_l | Microsoft Docs"
-ms.custom: 
+title: strcspn、wcscspn、_mbscspn、_mbscspn_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbscspn_l
@@ -48,126 +48,131 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459eaaaa914161fdd2dd8d27876b2972fe1e6618
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00b9fd51b22dfbe33dacd74070188ce2f75a9f6f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
-傳回字串中屬於字元集之第一個出現的字元索引。  
-  
+
+傳回字串中屬於字元集之第一個出現的字元索引。
+
 > [!IMPORTANT]
->  在 Windows 執行階段中執行的應用程式中無法使用 `_mbschr` 和 `_mbschr_l`。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-size_t strcspn(  
-   const char *str,  
-   const char *strCharSet   
-);  
-size_t wcscspn(  
-   const wchar_t *str,  
-   const wchar_t *strCharSet   
-);  
-size_t _mbscspn(  
-   const unsigned char *str,  
-   const unsigned char *strCharSet   
-);  
-size_t _mbscspn_l(  
-   const unsigned char *str,  
-   const unsigned char *strCharSet,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `str`  
- 以 Null 結束的搜尋字串。  
-  
- `strCharSet`  
- 以 Null 結束的字元集。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 這些函式會傳回 `str` 中位於 `strCharSet` 的第一個字元索引。 如果 `str` 中沒有位於 `strCharSet` 的字元，則傳回值會是 `str` 的長度。  
-  
- 未保留表示錯誤的傳回值。  
-  
-## <a name="remarks"></a>備註  
- `wcscspn` 和 `_mbscspn` 是寬字元和多位元組字元版本的 `strcspn`。 `wcscspn` 的引數是寬字元字串，而 `_mbscspn` 的引數則是多位元組字元字串。  
-  
- `_mbscspn` 會驗證其參數。 如果 `str` 或 `strCharSet` 為 null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EINVAL`。 `strcspn` 和 `wcscspn` 不會驗證其參數。 除此之外，這三個函式的行為相同。  
-  
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcscspn`|`strcspn`|`_mbscspn`|`wcscspn`|  
-|`n/a`|`n/a`|`_mbscspn_l`|`n/a`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`strcspn`|\<string.h>|  
-|`wcscspn`|\<string.h> 或 \<wchar.h>|  
-|`_mbscspn`, `_mbscspn_l`|\<mbstring.h>|  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_strcspn.c  
-  
-#include <string.h>  
-#include <stdio.h>  
-  
-void test( const char * str, const char * strCharSet )  
-{  
-   int pos = strcspn( str, strCharSet );  
-   printf( "strcspn( \"%s\", \"%s\" ) = %d\n", str, strCharSet, pos );      
-}  
-  
-int main( void )  
-{  
-   test( "xyzbxz", "abc" );  
-   test( "xyzbxz", "xyz" );  
-   test( "xyzbxz", "no match" );  
-   test( "xyzbxz", "" );  
-   test( "", "abc" );  
-   test( "", "" );  
-}  
-```  
-  
-```Output  
-strcspn( "xyzbxz", "abc" ) = 3  
-strcspn( "xyzbxz", "xyz" ) = 0  
-strcspn( "xyzbxz", "no match" ) = 6  
-strcspn( "xyzbxz", "" ) = 6  
-strcspn( "", "abc" ) = 0  
-strcspn( "", "" ) = 0  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **_mbschr**和 **_mbschr_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+size_t strcspn(
+   const char *str,
+   const char *strCharSet
+);
+size_t wcscspn(
+   const wchar_t *str,
+   const wchar_t *strCharSet
+);
+size_t _mbscspn(
+   const unsigned char *str,
+   const unsigned char *strCharSet
+);
+size_t _mbscspn_l(
+   const unsigned char *str,
+   const unsigned char *strCharSet,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*str*<br/>
+以 Null 結束的搜尋字串。
+
+*strCharSet*<br/>
+以 Null 結束的字元集。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+這些函式傳回的第一個字元的索引*str*位於*strCharSet*。 如果沒有任何字元在*str*處於*strCharSet*，則傳回值是長度*str*。
+
+未保留表示錯誤的傳回值。
+
+## <a name="remarks"></a>備註
+
+**wcscspn**和 **_mbscspn**是寬字元和多位元組字元版本的**strcspn**。 引數**wcscspn**是寬字元字串; **_mbscspn**是多位元組字元字串。
+
+**_mbscspn**會驗證其參數。 如果有任一個*str*或*strCharSet*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，函數會傳回 0 和集合允許執行**errno**至**EINVAL**。 **strcspn**和**wcscspn**不會驗證它們的參數。 除此之外，這三個函式的行為相同。
+
+輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
+|N/A|N/A|**_mbscspn_l**|N/A|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**strcspn**|\<string.h>|
+|**wcscspn**|\<string.h> 或 \<wchar.h>|
+|**_mbscspn**， **_mbscspn_l**|\<mbstring.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_strcspn.c
+
+#include <string.h>
+#include <stdio.h>
+
+void test( const char * str, const char * strCharSet )
+{
+   int pos = strcspn( str, strCharSet );
+   printf( "strcspn( \"%s\", \"%s\" ) = %d\n", str, strCharSet, pos );
+}
+
+int main( void )
+{
+   test( "xyzbxz", "abc" );
+   test( "xyzbxz", "xyz" );
+   test( "xyzbxz", "no match" );
+   test( "xyzbxz", "" );
+   test( "", "abc" );
+   test( "", "" );
+}
+```
+
+```Output
+strcspn( "xyzbxz", "abc" ) = 3
+strcspn( "xyzbxz", "xyz" ) = 0
+strcspn( "xyzbxz", "no match" ) = 6
+strcspn( "xyzbxz", "" ) = 6
+strcspn( "", "abc" ) = 0
+strcspn( "", "" ) = 0
+```
+
+## <a name="see-also"></a>另請參閱
+
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

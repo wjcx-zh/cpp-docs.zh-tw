@@ -1,12 +1,12 @@
 ---
-title: "getchar、getwchar | Microsoft Docs"
-ms.custom: 
+title: getchar、getwchar | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - getchar
@@ -36,85 +36,89 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2e3af8fbc613a3c1634e24011e22283dd8520f7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ab9e7dfa0e42bcb6225917be991c43dd0f844da
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
-從標準輸入讀取字元。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int getchar();  
-wint_t getwchar();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 傳回讀取的字元。 若要表示讀取錯誤或檔案結尾條件，`getchar` 會傳回 `EOF`，而`getwchar` 會傳回 `WEOF`。 針對 `getchar`，使用 `ferror` 或 `feof` 來檢查錯誤或檔案結尾。  
-  
-## <a name="remarks"></a>備註  
- 每個常式從 `stdin` 讀取單一位元組，並遞增相關聯的檔案指標以指向下一個字元。 `getchar` 與 [_fgetchar](../../c-runtime-library/reference/fgetc-fgetwc.md) 相同，但它實作為函式以及巨集。  
-  
- 這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getchar_nolock、_getwchar_nolock](../../c-runtime-library/reference/getchar-nolock-getwchar-nolock.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_gettchar`|`getchar`|`getchar`|`getwchar`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`getchar`|\<stdio.h>|  
-|`getwchar`|\<stdio.h> 或 \<wchar.h>|  
-  
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼`stdin`， `stdout`，和`stderr`，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_getchar.c  
-// Use getchar to read a line from stdin.  
-  
-#include <stdio.h>  
-  
-int main()  
-{  
-    char buffer[81];  
-    int i, ch;  
-  
-    for (i = 0; (i < 80) && ((ch = getchar()) != EOF)  
-                         && (ch != '\n'); i++)  
-    {  
-        buffer[i] = (char) ch;  
-    }  
-  
-    // Terminate string with a null character   
-    buffer[i] = '\0';  
-    printf( "Input was: %s\n", buffer);  
-}  
-```  
-  
-```Output  
-  
-This textInput was: This text  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
- [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)   
- [fgetc、fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
- [_getch、_getwch](../../c-runtime-library/reference/getch-getwch.md)   
- [putc、putwc](../../c-runtime-library/reference/putc-putwc.md)   
- [ungetc、ungetwc](../../c-runtime-library/reference/ungetc-ungetwc.md)
+
+從標準輸入讀取字元。
+
+## <a name="syntax"></a>語法
+
+```C
+int getchar();
+wint_t getwchar();
+```
+
+## <a name="return-value"></a>傳回值
+
+傳回讀取的字元。 若要表示讀取的錯誤或檔案結尾條件**getchar**傳回**EOF**，和**getwchar**傳回**WEOF**。 如**getchar**，使用**ferror**或**feof**檢查錯誤的檔案結尾。
+
+## <a name="remarks"></a>備註
+
+每個常式會讀取來自單一字元**stdin**並遞增相關聯的檔案指標指向下一個字元。 **getchar**相同[_fgetchar](fgetc-fgetwc.md)，但它實作為函式以及巨集。
+
+這些函式鎖定呼叫執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_gettchar**|**getchar**|**getchar**|**getwchar**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**getchar**|\<stdio.h>|
+|**getwchar**|\<stdio.h> 或 \<wchar.h>|
+
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_getchar.c
+// Use getchar to read a line from stdin.
+
+#include <stdio.h>
+
+int main()
+{
+    char buffer[81];
+    int i, ch;
+
+    for (i = 0; (i < 80) && ((ch = getchar()) != EOF)
+                         && (ch != '\n'); i++)
+    {
+        buffer[i] = (char) ch;
+    }
+
+    // Terminate string with a null character
+    buffer[i] = '\0';
+    printf( "Input was: %s\n", buffer);
+}
+```
+
+```Output
+
+This textInput was: This text
+```
+
+## <a name="see-also"></a>另請參閱
+
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[getc、getwc](getc-getwc.md)<br/>
+[fgetc、fgetwc](fgetc-fgetwc.md)<br/>
+[_getch、_getwch](getch-getwch.md)<br/>
+[putc、putwc](putc-putwc.md)<br/>
+[ungetc、ungetwc](ungetc-ungetwc.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_ismbbkpunct、_ismbbkpunct_l | Microsoft Docs"
-ms.custom: 
+title: _ismbbkpunct、_ismbbkpunct_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkpunct_l
@@ -37,52 +37,56 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bcf41bfa1e06643aebaf77575d98409be694a48
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 73f9ee94dc405163d09f100422d98c9e823f6c77
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct、_ismbbkpunct_l
-檢查多位元組字元是否為標點符號字元。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _ismbbkpunct(  
-   unsigned int c   
-);  
-int _ismbbkpunct_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 待測試整數。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 如果整數 `c` 是非 ASCII 標點符號，則 `_ismbbkpunct` 會傳回非零值；如果是 ASCII 標點符號，則傳回 0。 例如，只在字碼頁 932 中的片假名標點符號之 `_ismbbkpunct` 測試。 針對任何地區設定相關的字元設定，`_ismbbkpunct` 會使用目前的地區設定。 `_ismbbkpunct_l` 也相同，但是它會用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_ismbbkpunct`|\<mbctype.h>|  
-|`_ismbbkpunct_l`|\<mbctype.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [位元組分類](../../c-runtime-library/byte-classification.md)   
- [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)
+
+檢查多位元組字元是否為標點符號字元。
+
+## <a name="syntax"></a>語法
+
+```C
+int _ismbbkpunct(
+   unsigned int c
+);
+int _ismbbkpunct_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+待測試整數。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+**_ismbbkpunct**傳回非零值，如果整數*c*為非 ASCII 標點符號，則為 0，如果它不是。 例如，在僅限字碼頁 932， **_ismbbkpunct**片假名標點符號的測試。 **_ismbbkpunct**針對任何地區設定相關的字元設定使用目前的地區設定。 **_ismbbkpunct_l**是完全相同，不同之處在於它會使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_ismbbkpunct**|\<mbctype.h>|
+|**_ismbbkpunct_l**|\<mbctype.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[位元組分類](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb 常式](../../c-runtime-library/ismbb-routines.md)<br/>

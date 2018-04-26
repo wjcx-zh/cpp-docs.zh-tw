@@ -1,12 +1,12 @@
 ---
-title: "標準轉換 |Microsoft 文件"
-ms.custom: 
+title: 標準轉換 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>標準轉換
 C++ 語言定義其基本類型之間的轉換。 同時定義指標、參考及成員指標衍生類型的轉換。 這些轉換稱為「標準轉換」  (如需有關類型、 標準的類型和衍生的類型的詳細資訊，請參閱[類型](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  保留值的提升和保留正負號狀態的提升通常會產生相同的結果。 不過，如果提升的物件是下列其中一項，則兩者可能會產生不同的結果：  
   
--   運算元的 **/** ， `%`， `/=`， `%=`，  **<** ，  **\< =** ， **>** ，或 **>=**  
+-   運算元的**/**， `%`， `/=`， `%=`， **<**， **\< =**，**>**，或 **>=**  
   
      這些運算子需要依據正負號判斷結果。 因此，保留值和保留正負號的提升套用至這些運算元時，會產生不同的結果。  
   
--   左的運算元 **>>** 或 **>>=**  
+-   左的運算元**>>** 或 **>>=**  
   
      執行移位作業時，這些運算子會將帶正負號和不帶正負號的數量視為不同。 對於帶正負號的數量，將數量右移會造成正負號位元傳播至空出的位元位置。 對於不帶正負號的數量，空出的位元位置會以零填滿。  
   
@@ -120,8 +120,7 @@ int main()
   
  不帶正負號整數類資料類型的物件可以轉換成對應的帶正負號資料類型。 不過，如果不帶正負號的物件的值超出可由帶正負號類型表示的範圍，這種轉換可能會造成資料的錯譯，如下列範例所示：  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  如果其範圍可由該類型表示，則浮動類型的物件可以轉換為較不精確的類型。 (請參閱[浮動限制](../cpp/floating-limits.md)是浮動類型的範圍。)如果無法精確地表示原始值，可以將它轉換為下一個較高或下一個較小的可表示值。 如果這個值不存在，則結果會是未定義。 參考下列範例：  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- 型別所表示的最大值**float**是 3.402823466E38 — 更小的數字比 1E300。 因此，該數字會轉換為無限大，而結果會是 1.#INF。  
+ 型別所表示的最大值**float**是 3.402823466E38 — 更小的數字比 1E300。 因此，數值會轉換為無限大，而且結果會是"inf"。  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>整數與浮點類型之間的轉換  
  某些運算式可能會導致浮點類型的物件轉換成整數類型，反之亦然。 當整數類資料類型的物件轉換成浮點類型，且原始值無法正確表示時，結果會是下一個較大或較小的可顯示值。  

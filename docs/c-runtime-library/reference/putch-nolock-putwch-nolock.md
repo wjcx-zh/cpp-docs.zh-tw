@@ -1,12 +1,12 @@
 ---
-title: "_putch_nolock、_putwch_nolock | Microsoft Docs"
-ms.custom: 
+title: _putch_nolock、_putwch_nolock | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putwch_nolock
@@ -42,65 +42,70 @@ helpviewer_keywords:
 - console, writing characters to
 - _putwch_nolock function
 ms.assetid: edbc811d-bac6-47fa-a872-fe4f3a1590b0
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13db2622b7dd9829b744a0164fbb0a025f4013ae
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24d0f847e272c31edda3dea0ea0b0369148c2f73
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putchnolock-putwchnolock"></a>_putch_nolock、_putwch_nolock
-將字元寫入至主控台，而不需要鎖定執行緒。  
-  
+
+將字元寫入至主控台，而不需要鎖定執行緒。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      int _putch_nolock(  
-int c  
-);  
-wint_t _putwch_nolock(  
-wchar_t c  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- *C*  
- 要輸出的字元。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功，則會傳回 *c*。 如果 **_putch_nolock** 失敗，則會傳回 **EOF**；如果 **_putwch_nolock** 失敗，則會傳回 **WEOF**。  
-  
-## <a name="remarks"></a>備註  
- **_putch_nolock** 和 **_putwch_nolock** 分別與 **_putch** 和 **_putwch** 相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|**_puttch_nolock**|**_putch_nolock**|**_putch_nolock**|**_putwch_nolock**|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|**_putch_nolock**|\<conio.h>|  
-|**_putwch_nolock**|\<conio.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
- [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [_getch、_getwch](../../c-runtime-library/reference/getch-getwch.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _putch_nolock(
+int c
+);
+wint_t _putwch_nolock(
+wchar_t c
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+要輸出的字元。
+
+## <a name="return-value"></a>傳回值
+
+如果成功，則會傳回 *c*。 如果 **_putch_nolock** 失敗，則會傳回 **EOF**；如果 **_putwch_nolock** 失敗，則會傳回 **WEOF**。
+
+## <a name="remarks"></a>備註
+
+**_putch_nolock** 和 **_putwch_nolock** 分別與 **_putch** 和 **_putwch** 相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttch_nolock**|**_putch_nolock**|**_putch_nolock**|**_putwch_nolock**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_putch_nolock**|\<conio.h>|
+|**_putwch_nolock**|\<conio.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
+[_getch、_getwch](getch-getwch.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _unlock_file | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _unlock_file
@@ -34,46 +34,49 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7bcfc3cf3bba84bf50933be9fa4137954e84a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 503087d84e65e556fa610efbf0054c66ee774d48
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unlockfile"></a>_unlock_file
-解除鎖定檔案，並允許其他處理序存取檔案。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-void _unlock_file(  
-   FILE* file  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `file`  
- 檔案控制代碼。  
-  
-## <a name="remarks"></a>備註  
- `_unlock_file` 函式會解除鎖定 `file` 所指定的檔案。 解除鎖定檔案可讓其他處理序存取檔案。 除非之前在 `file` 指標上呼叫過 `_lock_file`，否則不應該呼叫此函式。 對未鎖定的檔案呼叫 `_unlock_file` 可能會導致死結。 如需範例，請參閱 [_lock_file](../../c-runtime-library/reference/lock-file.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_unlock_file`|\<stdio.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>請參閱  
- [檔案處理](../../c-runtime-library/file-handling.md)   
- [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_lock_file](../../c-runtime-library/reference/lock-file.md)
+
+解除鎖定檔案，並允許其他處理序存取檔案。
+
+## <a name="syntax"></a>語法
+
+```C
+void _unlock_file(
+   FILE* file
+);
+```
+
+### <a name="parameters"></a>參數
+
+*檔案*檔案控制代碼。
+
+## <a name="remarks"></a>備註
+
+**_Unlock_file**函式所指定的檔案會解除鎖定*檔案*。 解除鎖定檔案可讓其他處理序存取檔案。 此函式不應該呼叫除非 **_lock_file**之前已呼叫上*檔案*指標。 呼叫 **_unlock_file**不會遭到鎖定的檔案上可能會導致死結。 如需範例，請參閱 [_lock_file](lock-file.md)。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_unlock_file**|\<stdio.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[檔案處理](../../c-runtime-library/file-handling.md)<br/>
+[_creat、_wcreat](creat-wcreat.md)<br/>
+[_open、_wopen](open-wopen.md)<br/>
+[_lock_file](lock-file.md)<br/>

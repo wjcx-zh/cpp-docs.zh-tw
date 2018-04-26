@@ -1,12 +1,12 @@
 ---
-title: "_isctype、iswctype、_isctype_l、_iswctype_l | Microsoft Docs"
-ms.custom: 
+title: _isctype、iswctype、_isctype_l、_iswctype_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isctype_l
@@ -47,81 +47,86 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe43830894be3c004fb21598b0324b864fe5b9b0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 25df7ddaaea8c1f4df0907ebd92827f2a4865007
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
-針對 `desc` 引數所指定的屬性測試 `c`。 針對每一個 `desc` 的有效值，都有對等的寬字元分類常式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _isctype(  
-   int c,  
-   _ctype_t desc  
-);  
-int _isctype_l(  
-   int c,  
-   _ctype_t desc,  
-   _locale_t locale  
-);  
-int iswctype(  
-   wint_t c,  
-   wctype_t desc   
-);  
-int _iswctype_l(  
-   wint_t c,  
-   wctype_t desc,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 待測試整數。  
-  
- `desc`  
- 需要測試的屬性。 這通常使用 ctype 或 [wctype](../../c-runtime-library/reference/wctype.md) 擷取。  
-  
- `locale`  
- 針對任何地區設定相關測試所使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 如果 `c` 目前的地區設定中具有 `desc` 所指定的屬性，則 `_isctype` 和`iswctype` 會傳回非零值，如果不具備則傳回 0。 尾碼為 `_l` 的這些函式版本是一樣的，只不過與地區設定相關的行為使用了傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
- 如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `_isctype` 和 `_isctype_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`n/a`|`_isctype`|`n/a`|`_iswctype`|  
-|`n/a`|`_isctype_l`|`n/a`|`_iswctype_l`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_isctype`|\<ctype.h>|  
-|`iswctype`|\<ctype.h> 或 \<wchar.h>|  
-|`_isctype_l`|\<ctype.h>|  
-|`_iswctype_l`|\<ctype.h> 或 \<wchar.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [字元分類](../../c-runtime-library/character-classification.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [is、isw 常式](../../c-runtime-library/is-isw-routines.md)
+
+測試*c* ctype 屬性所指定*desc*引數。 針對每一個有效值的*desc*，沒有對等的寬字元分類常式。
+
+## <a name="syntax"></a>語法
+
+```C
+int _isctype(
+   int c,
+   _ctype_t desc
+);
+int _isctype_l(
+   int c,
+   _ctype_t desc,
+   _locale_t locale
+);
+int iswctype(
+   wint_t c,
+   wctype_t desc
+);
+int _iswctype_l(
+   wint_t c,
+   wctype_t desc,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+待測試整數。
+
+*desc*<br/>
+需要測試的屬性。 這通常使用 ctype 或 [wctype](wctype.md) 擷取。
+
+*locale*<br/>
+針對任何地區設定相關測試所使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+**_isctype**和**iswctype**傳回非零值，如果*c*具有所指定的屬性*desc*中目前的地區設定或 0，如果不存在。 這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳入的地區設定而不是目前的地區設定的地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+行為 **_isctype**和 **_isctype_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|N/A|**_isctype**|N/A|**_iswctype**|
+|N/A|**_isctype_l**|N/A|**_iswctype_l**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_isctype**|\<ctype.h>|
+|**iswctype**|\<ctype.h> 或 \<wchar.h>|
+|**_isctype_l**|\<ctype.h>|
+|**_iswctype_l**|\<ctype.h> 或 \<wchar.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[字元分類](../../c-runtime-library/character-classification.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

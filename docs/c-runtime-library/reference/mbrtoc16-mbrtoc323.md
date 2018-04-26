@@ -1,13 +1,13 @@
 ---
-title: "mbrtoc16、mbrtoc323 | Microsoft Docs"
-ms.custom: 
+title: mbrtoc16、mbrtoc323 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - mbrtoc16
@@ -36,84 +36,89 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e686a39266587fdc214ddbb0757672a57b94314
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 842950535dd71ba678e00a3203df17625ab50a4d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
-將窄字串的第一個多位元組字元轉譯為對等的 UTF-16 或 UTF-32 字元。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-size_t mbrtoc16(   
-   char16_t* destination,   
-   const char* source,   
-   size_t max_bytes,   
-   mbstate_t* state   
-);  
-  
-size_t mbrtoc32(  
-   char32_t* destination,   
-   const char* source,   
-   size_t max_bytes,   
-   mbstate_t* state   
-);  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- `destination`  
- `char16_t` 或 `char32_t` 指標相當於要轉換的多位元組字元。 如果是 null，函式不會儲存值。  
-  
- `source`  
- 要轉換的多位元組字元字串的指標。  
-  
- `max_bytes`  
- `source` 的位元組數目上限，用來檢查是否有要轉換字元。 此值應該介於一與 `source`中所餘下的位元組數目之間，包括任何 null 結束字元。  
-  
- `state`  
- 將多位元組字串轉譯成一或多個輸出字元所使用的 `mbstate_t` 轉換狀態物件指標。  
-  
-## <a name="return-value"></a>傳回值  
- 成功時會傳回適用條件中第一個條件的值，假設目前的 `state` 值是：  
-  
-|值|條件|  
-|-----------|---------------|  
-|0|下一組數目為 `max_bytes` 以下且轉換自 `source` 的字元與 null 寬字元對應，如果 `destination` 不是 null，就會儲存這個值。<br /><br /> `state` 包含初始移位狀態。|  
-|介於 1 和 `max_bytes`(含) 之間|傳回的值是完成有效多位元組字元的 `source` 位元組數目。 如果 `destination` 不是 null，就會儲存已轉換的寬字元。|  
-|-3|如果 `destination` 不是 null，因先前的函式呼叫所產生的下一個寬字元就已儲存在 `destination` 中。 這個函式呼叫不會消耗 `source` 任何位元組。<br /><br /> 當  `source` 指向需要多個寬字元來表示的多位元組字元時 (例如，surrogate 字組)，就會更新 `state` 值，以便下個函式呼叫寫出額外的字元。|  
-|-2|下一個 `max_bytes` 位元組代表不完整但可能有效的多位元組字元。 沒有任何值儲存於 `destination`。 如果 `max_bytes` 為零就可能發生這個結果。|  
-|-1|發生了編碼錯誤。 後 `max_bytes` 個位元組 (或更少個位元組) 不會產生完整且有效的多位元組字元。 沒有任何值儲存在 `destination`中。<br /><br /> `EILSEQ` 儲存在 `errno` 中，而轉換狀態 `state` 尚未指定。|  
-  
-## <a name="remarks"></a>備註  
- `mbrtoc16` 函式最多從 `max_bytes` 讀取 `source` 位元組以尋找第一個完整有效的多位元組字元，然後將對等的 UTF-16 字元儲存在 `destination`。 來源位元組會根據目前執行緒的多位元組地區設定解譯。 如果多位元組字元需要多個 UTF-16 輸出字元，例如 surrogate 字組，則會設定 `state` 值，使其在下次呼叫 `destination` 時，將下一個 UTF-16字元儲存於 `mbrtoc16`。 `mbrtoc32` 函式相同，但輸出儲存為 UTF-32 字元。  
-  
- 如果 `source` 是 null，這些函式會對 `NULL` 使用 `destination`的引數、對 `""` 使用 `source`的引數、對 `1` 使用 `max_bytes`的引數，傳回呼叫產生的對等項。 忽略 `destination` 和 `max_bytes` 傳遞的值。  
-  
- 如果 `source` 不是 null，函式會從字串開頭開始檢查到 `max_bytes` 位元組，判斷完成下一個多位元組字元所需要的位元組數目，包括任何移位序列。 如果檢查的位元組包含有效且完整的多位元組字元，函式會將字元轉換成相等的 16 位元或 32 位元寬字元或字元。 如果 `destination` 不是 null，函式會將第一個 (且可能是唯一) 結果的字元儲存於目的地。 如果需要其他輸出字元，會在 `state`設定值，以便後續呼叫讓函式輸出其他字元，並傳回值 -3。 如果不需要更多輸出字元，則 `state` 設為初始移位狀態。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|C 標頭|C++ 標頭|  
-|--------------|--------------|------------------|  
-|`mbrtoc16`,                `mbrtoc32`|\<uchar.h>|\<cuchar>|  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [資料轉換](../../c-runtime-library/data-conversion.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [c16rtomb、c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
- [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   
- [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md)   
- [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md)
+
+將窄字串的第一個多位元組字元轉譯為對等的 UTF-16 或 UTF-32 字元。
+
+## <a name="syntax"></a>語法
+
+```C
+size_t mbrtoc16(
+   char16_t* destination,
+   const char* source,
+   size_t max_bytes,
+   mbstate_t* state
+);
+
+size_t mbrtoc32(
+   char32_t* destination,
+   const char* source,
+   size_t max_bytes,
+   mbstate_t* state
+);
+
+```
+
+### <a name="parameters"></a>參數
+
+*目的地*<br/>
+指標**char16_t**或**char32_t**来轉換的多位元組字元的對等。 如果是 null，函式不會儲存值。
+
+*來源*<br/>
+要轉換的多位元組字元字串的指標。
+
+*max_bytes*<br/>
+中的位元組數目上限*來源*來檢查是否要轉換的字元。 這應該是一個功能，包括任何 null 結束字元中, 剩餘的位元組數目之間的值*來源*。
+
+*state*<br/>
+指標**mbstate_t**轉換狀態物件，用來解譯為一或多個輸出字元的多位元組字串。
+
+## <a name="return-value"></a>傳回值
+
+成功時會傳回的第一個值會套用這些條件，提供目前*狀態*值：
+
+|值|條件|
+|-----------|---------------|
+|0|下一步 *max_bytes*或從較少的字元轉換*來源*對應到 null 寬字元，如果儲存的值*目的地*不是 null。<br /><br /> *狀態*包含初始移位狀態。|
+|介於 1 和*max_bytes*(含） 之間|傳回的值是的位元組數*來源*，完成有效多位元組字元。 如果儲存已轉換的寬字元*目的地*不是 null。|
+|-3|已儲存在先前的呼叫函式所產生的下一個寬字元*目的地*如果*目的地*不是 null。 從任何位元組*來源*所使用的這個呼叫函式。<br /><br /> 當*來源*指向多位元組字元需要多個寬字元來代表 （例如，surrogate 字組），然後在*狀態*值會更新，讓下一個函式呼叫寫 出額外的字元。|
+|-2|下一步 *max_bytes*位元組代表不完整但可能有效的多位元組字元。 沒有值儲存在*目的地*。 如果，可能會發生這個結果*max_bytes*為零。|
+|-1|發生了編碼錯誤。 下一步 *max_bytes*或較少位元組不會產生完整且有效的多位元組字元。 沒有值儲存在*目的地*。<br /><br /> **EILSEQ**會儲存在**errno**而轉換狀態*狀態*未指定。|
+
+## <a name="remarks"></a>備註
+
+**Mbrtoc16**函式會讀取最多*max_bytes*位元組從*來源*尋找第一個完整的有效多位元組字元，然後將對等的 utf-16在字元*目的地*。 來源位元組會根據目前執行緒的多位元組地區設定解譯。 如果多位元組字元需要多個 utf-16 輸出字元，例如 surrogate 字組，然後在*狀態*值設為存放區中的下一個 utf-16 字元*目的地*在下一個呼叫**mbrtoc16**。 **Mbrtoc32**函式相同，但輸出儲存為 utf-32 字元。
+
+如果*來源*是的 null，傳回這些函式使用的引數進行呼叫的對等項目**NULL**如*目的地*， **""** 的*來源*，，1 表示*max_bytes*。 傳遞的值*目的地*和*max_bytes*都會被忽略。
+
+如果*來源*是不是 null，函式會從字串的開頭，然後檢查到*max_bytes*來判斷完成下一個多位元組字元中，所需的位元組數目的位元組包括任何移位序列。 如果檢查的位元組包含有效且完整的多位元組字元，函式會將字元轉換成相等的 16 位元或 32 位元寬字元或字元。 如果*目的地*不是 null，在目的地中字元的第一個 （且可能是唯一） 結果的函式存放區。 如果需要其他輸出字元，則設定值*狀態*，以便後續呼叫函式輸出其他字元，並傳回值-3。 如果沒有更多輸出字元是必要的然後*狀態*設為初始移位狀態。
+
+## <a name="requirements"></a>需求
+
+|功能|C 標頭|C++ 標頭|
+|--------------|--------------|------------------|
+|**mbrtoc16**， **mbrtoc32**|\<uchar.h>|\<cuchar>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[資料轉換](../../c-runtime-library/data-conversion.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[c16rtomb、c32rtomb](c16rtomb-c32rtomb1.md)<br/>
+[mbrtowc](mbrtowc.md)<br/>
+[mbsrtowcs](mbsrtowcs.md)<br/>
+[mbsrtowcs_s](mbsrtowcs-s.md)<br/>

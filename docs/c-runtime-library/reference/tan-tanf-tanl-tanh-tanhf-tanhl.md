@@ -1,12 +1,12 @@
 ---
-title: "tan、tanf、tanl、tanh、tanhf、tanhl | Microsoft Docs"
-ms.custom: 
+title: tan、tanf、tanl、tanh、tanhf、tanhl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - tanhf
@@ -53,17 +53,17 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c3391d07e78ba177a3ce31abb26bd5b6ef0449c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tan-tanf-tanl-tanh-tanhf-tanhl"></a>tan、tanf、tanl、tanh、tanhf、tanhl
 計算正切 (`tan`、`tanf` 或 `tanl`) 或雙曲正切 (`tanh`、`tanhf` 或 `tanhl`)。  
@@ -122,7 +122,7 @@ long double tanhl(
   
 ## <a name="requirements"></a>需求  
   
-|常式傳回的值|必要的標頭|  
+|常式|必要的標頭|  
 |-------------|---------------------|  
 |`tan`, `tanf`, `tanl`, `tanh`, `tanhf`, `tanhl`|\<math.h>|  
   
@@ -156,7 +156,7 @@ tan( 0.785398 ) = 1.000000
 tanh( 1.000000 ) = 0.761594  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin、asinf、asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   

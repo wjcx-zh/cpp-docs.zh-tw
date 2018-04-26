@@ -1,12 +1,12 @@
 ---
-title: "puts、_putws | Microsoft Docs"
-ms.custom: 
+title: puts、_putws | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putws
@@ -39,89 +39,93 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06f90cf85d19fab3dd08b8b0c3d789d263c55fbf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a823106478e575f9b2d65bc4e739236098da5124
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="puts-putws"></a>puts、_putws
-將字串寫入至 **stdout**。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      int puts(  
-   const char *str   
-);  
-int _putws(  
-   const wchar_t *str   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `str`  
- 輸出字串。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功，則傳回非負值。 如果 `puts` 失敗，則會傳回 `EOF`；如果 `_putws` 失敗，則會傳回 **WEOF**。 如果 `str` 為 null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EOF` 或 **WEOF**。  
-  
- 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
-## <a name="remarks"></a>備註  
- `puts` 函式會將 `str` 寫入至標準輸出資料流 **stdout**，並在輸出資料流中以新行字元 ('\n') 取代字串的結束 Null 字元 ('\0')。  
-  
- `_putws` 是寬字元版本的 `puts`；如果資料流是以 ANSI 模式開啟，則這兩個函式的行為相同。 `puts` 目前不支援輸出至 UNICODE 資料流。  
-  
-  **_putwch**寫入使用目前的主控台地區設定的 Unicode 字元。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_putts`|`puts`|`puts`|`_putws`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`puts`|\<stdio.h>|  
-|`_putws`|\<stdio.h>|  
-  
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼`stdin`， `stdout`，和`stderr`，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_puts.c  
-/* This program uses puts to write a string to stdout.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   puts( "Hello world from puts!" );  
-}  
-```  
-  
-## <a name="output"></a>輸出  
-  
-```  
-Hello world from puts!  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fputs、fputws](../../c-runtime-library/reference/fputs-fputws.md)   
- [fgets、fgetws](../../c-runtime-library/reference/fgets-fgetws.md)
+
+將字串寫入至 **stdout**。
+
+## <a name="syntax"></a>語法
+
+```C
+int puts(
+   const char *str
+);
+int _putws(
+   const wchar_t *str
+);
+```
+
+### <a name="parameters"></a>參數
+
+*str*<br/>
+輸出字串。
+
+## <a name="return-value"></a>傳回值
+
+如果成功，則傳回非負值。 如果**放**失敗，它會傳回**EOF**; 如果 **_putws**失敗，它會傳回**WEOF**。 如果*str*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**至**EINVAL**並傳回**EOF**或**WEOF**。
+
+如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+## <a name="remarks"></a>備註
+
+**放**函式寫入*str*標準輸出資料流**stdout**，取代字串的終止新行字元 ('\n') 的 null 字元 ('\0')輸出資料流。
+
+**_putws**是寬字元版本的**放**; 兩個函式的資料流在 ANSI 模式中開啟時即會相同行為。 **將**目前不支援 UNICODE 資料流輸出。
+
+**_putwch**寫入使用目前的主控台地區設定的 Unicode 字元。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_putts**|**puts**|**puts**|**_putws**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**puts**|\<stdio.h>|
+|**_putws**|\<stdio.h>|
+
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_puts.c
+// This program uses puts to write a string to stdout.
+
+#include <stdio.h>
+
+int main( void )
+{
+   puts( "Hello world from puts!" );
+}
+```
+
+### <a name="output"></a>輸出
+
+```Output
+Hello world from puts!
+```
+
+## <a name="see-also"></a>另請參閱
+
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fputs、fputws](fputs-fputws.md)<br/>
+[fgets、fgetws](fgets-fgetws.md)<br/>

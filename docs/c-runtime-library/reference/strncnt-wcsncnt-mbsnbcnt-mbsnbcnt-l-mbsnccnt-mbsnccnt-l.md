@@ -1,12 +1,12 @@
 ---
-title: "_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l | Microsoft Docs"
-ms.custom: 
+title: _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcnt_l
@@ -59,132 +59,137 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc69e67058e782bd3ce43b835497dab756347a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 37e420754c3e534ec3518d6e4764a5366332fd96
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
-傳回指定計次數內的字元或位元組數目。  
-  
+
+傳回指定計次數內的字元或位元組數目。
+
 > [!IMPORTANT]
->  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsnbcnt`、`_mbsnbcnt_l`、`_mbsnccnt` 和 `_mbsnccnt_l`。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-size_t _strncnt(  
-   const char *str,  
-   size_t count  
-);  
-size_t _wcsncnt(  
-   const wchar_t *str,  
-   size_t count  
-);  
-size_t _mbsnbcnt(  
-   const unsigned char *str,  
-   size_t count   
-);  
-size_t _mbsnbcnt_l(  
-   const unsigned char *str,  
-   size_t count,  
-   _locale_t locale  
-);  
-size_t _mbsnccnt(  
-   const unsigned char *str,  
-   size_t count  
-);  
-size_t _mbsnccnt_l(  
-   const unsigned char *str,  
-   size_t count,  
-   _locale_t locale  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- `str`  
- 要檢查的字串。  
-  
- `count`  
- 要以 `str` 檢查的字元或位元組數。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- `_mbsnbcnt` 和 `_mbsnbcnt_l` 傳回在 `str` 的前 `count` 個多位元組字元中找到的位元組數目。 `_mbsnccnt` 和 `_mbsnccnt_l` 傳回在 `str` 的前 `count` 個位元組中找到的字元數目。 如果在 `str` 檢查完成前碰到 NULL 字元，它們會傳回在 NULL 字元前找到的字元或位元組數。 如果 `str` 的組成字元或位元組數少於 `count`，它們會傳回字串中的字元或位元組數。 如果 `count` 小於零，它們會傳回 0。 在舊版中，這些函式有 `int` 類型的傳回值，而不是 `size_t`。  
-  
- `_strncnt` 傳回單一位元組字串 `str` 的前 `count` 個位元組。 `_wcsncnt` 傳回寬字元字串 `str` 的前 `count` 個寬字元。  
-  
-## <a name="remarks"></a>備註  
- `_mbsnbcnt` 和 `_mbsnbcnt_l` 計算在 `str` 的前 `count` 個多位元組字元中找到的位元組數目。 `_mbsnbcnt` 和 `_mbsnbcnt_l` 取代 `mtob`，應該用於取代 `mtob`。  
-  
- `_mbsnccnt` 和 `_mbsnccnt_l` 計算在 `str` 的前 `count` 個位元組中找到的字元數目。 如果 `_mbsnccnt` 和 `_mbsnccnt_l` 在雙位元組字元的第二個位元組碰到 NULL，則第一個位元組也視為 NULL 且不包含在傳回的計數值中。 `_mbsnccnt` 和 `_mbsnccnt_l` 取代 `btom`，應該用於取代 `btom`。  
-  
- 如果 `str` 為 Null 指標，或 `count` 為 0，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述，`errno` 設為 `EINVAL` 且函式傳回 0。  
-  
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|常式傳回的值|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|-------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsnbcnt`|`_strncnt`|`_mbsnbcnt`|`_wcsncnt`|  
-|`_tcsnccnt`|`_strncnt`|`_mbsnbcnt`|`n/a`|  
-|`_wcsncnt`|`n/a`|`n/a`|`_mbsnbcnt`|  
-|`_wcsncnt`|`n/a`|`n/a`|`_mbsnccnt`|  
-|`n/a`|`n/a`|`_mbsnbcnt_l`|`_mbsnccnt_l`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_mbsnbcnt`|\<mbstring.h>|  
-|`_mbsnbcnt_l`|\<mbstring.h>|  
-|`_mbsnccnt`|\<mbstring.h>|  
-|`_mbsnccnt_l`|\<mbstring.h>|  
-|`_strncnt`|\<tchar.h>|  
-|`_wcsncnt`|\<tchar.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_mbsnbcnt.c  
-  
-#include  <mbstring.h>  
-#include  <stdio.h>  
-  
-int main( void )  
-{  
-   unsigned char str[] = "This is a multibyte-character string.";  
-   unsigned int char_count, byte_count;  
-   char_count = _mbsnccnt( str, 10 );  
-   byte_count = _mbsnbcnt( str, 10 );  
-   if ( byte_count - char_count )  
-      printf( "The first 10 characters contain %d multibyte characters\n", char_count );  
-   else  
-      printf( "The first 10 characters are single-byte.\n");  
-}  
-```  
-  
-## <a name="output"></a>輸出  
-  
-```  
-The first 10 characters are single-byte.  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcat、_mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)
+> **_mbsnbcnt**， **_mbsnbcnt_l**， **_mbsnccnt**，和 **_mbsnccnt_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+size_t _strncnt(
+   const char *str,
+   size_t count
+);
+size_t _wcsncnt(
+   const wchar_t *str,
+   size_t count
+);
+size_t _mbsnbcnt(
+   const unsigned char *str,
+   size_t count
+);
+size_t _mbsnbcnt_l(
+   const unsigned char *str,
+   size_t count,
+   _locale_t locale
+);
+size_t _mbsnccnt(
+   const unsigned char *str,
+   size_t count
+);
+size_t _mbsnccnt_l(
+   const unsigned char *str,
+   size_t count,
+   _locale_t locale
+);
+
+```
+
+### <a name="parameters"></a>參數
+
+*str*<br/>
+要檢查的字串。
+
+*count*<br/>
+字元數或位元組檢查*str*。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+**_mbsnbcnt**和 **_mbsnbcnt_l**傳回找到的位元組數目在第一個*計數*的多位元組字元的*str*。 **_mbsnccnt**和 **_mbsnccnt_l**傳回找到的字元數中第一個*計數*個位元組的*str*。 NULL 字元的檢查就碰到*str*已完成，傳回的 NULL 字元之前找到的字元或位元組數。 如果*str*組成少於*計數*字元或位元組，它們在字串中傳回的字元或位元組數。 如果*計數*小於零，它們會傳回 0。 在舊版中，這些函式必須傳回值的型別**int**而**size_t**。
+
+**_strncnt**傳回第一個範圍中的字元數*計數*單一位元組字串位元組*str*。 **_wcsncnt**傳回第一個範圍中的字元數*計數*寬字元字串的寬字元*str*。
+
+## <a name="remarks"></a>備註
+
+**_mbsnbcnt**和 **_mbsnbcnt_l**計算找到的位元組數目在第一個*計數*的多位元組字元的*str*。 **_mbsnbcnt**和 **_mbsnbcnt_l**取代**mtob** ，應該用於取代**mtob**。
+
+**_mbsnccnt**和 **_mbsnccnt_l**找到字元的次數中第一個*計數*個位元組的*str*。 如果 **_mbsnccnt**和 **_mbsnccnt_l**遇到雙位元組字元的第二個位元組中的 NULL，則也會被視為 null 的第一個位元組，並不包含在傳回的計數值。 **_mbsnccnt**和 **_mbsnccnt_l**取代**btom** ，應該用於取代**btom**。
+
+如果*str*為 null 指標，或為*計數*是 0，則這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)， **errno**設**EINVAL**，而且函數會傳回 0。
+
+輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|-------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
+|**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|N/A|
+|**_wcsncnt**|N/A|N/A|**_mbsnbcnt**|
+|**_wcsncnt**|N/A|N/A|**_mbsnccnt**|
+|N/A|N/A|**_mbsnbcnt_l**|**_mbsnccnt_l**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_mbsnbcnt**|\<mbstring.h>|
+|**_mbsnbcnt_l**|\<mbstring.h>|
+|**_mbsnccnt**|\<mbstring.h>|
+|**_mbsnccnt_l**|\<mbstring.h>|
+|**_strncnt**|\<tchar.h>|
+|**_wcsncnt**|\<tchar.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_mbsnbcnt.c
+
+#include  <mbstring.h>
+#include  <stdio.h>
+
+int main( void )
+{
+   unsigned char str[] = "This is a multibyte-character string.";
+   unsigned int char_count, byte_count;
+   char_count = _mbsnccnt( str, 10 );
+   byte_count = _mbsnbcnt( str, 10 );
+   if ( byte_count - char_count )
+      printf( "The first 10 characters contain %d multibyte characters\n", char_count );
+   else
+      printf( "The first 10 characters are single-byte.\n");
+}
+```
+
+### <a name="output"></a>輸出
+
+```Output
+The first 10 characters are single-byte.
+```
+
+## <a name="see-also"></a>另請參閱
+
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

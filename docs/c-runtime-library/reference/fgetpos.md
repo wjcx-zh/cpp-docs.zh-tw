@@ -1,12 +1,12 @@
 ---
 title: fgetpos | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fgetpos
@@ -31,106 +31,111 @@ helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3740fdc7924e12fc9eeb2de4ab108ad376c764da
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 10734497ac8db77e09f6e3077aa5eb123a179f88
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetpos"></a>fgetpos
-取得資料流的檔案位置指標。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int fgetpos(   
-   FILE *stream,  
-   fpos_t *pos   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `stream`  
- 目標資料流。  
-  
- `pos`  
- 位置指標儲存區。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功，`fgetpos` 會傳回 0。 失敗時，它會傳回非零值，並將 `errno` 設為下列其中一個資訊清單常數 (定義於 STDIO.H)：`EBADF` 表示指定的資料流不是有效的檔案指標或無法存取，`EINVAL` 則表示 `stream` 值或 `pos` 的值無效 (例如，如果任一項是 Null 指標)。 如果 `stream` 或 `pos` 是 `NULL` 指標，則此函式會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。  
-  
-## <a name="remarks"></a>備註  
- `fgetpos` 函式會取得 `stream` 引數之檔案位置指標的目前值，並將它儲存在 `pos` 所指向的物件。 `fsetpos` 函式稍後可以使用 `pos` 中所儲存的資訊，在呼叫 `fgetpos` 時，將 `stream` 引數的指標重設為其位置。 `pos` 值是以內部格式儲存，並且僅供 `fgetpos` 和 `fsetpos` 使用。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|必要的標頭|  
-|--------------|---------------------|  
-|`fgetpos`|\<stdio.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_fgetpos.c  
-// This program uses fgetpos and fsetpos to  
-// return to a location in a file.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE   *stream;  
-   fpos_t pos;  
-   char   buffer[20];  
-  
-   if( fopen_s( &stream, "crt_fgetpos.txt", "rb" ) ) {  
-      perror( "Trouble opening file" );  
-      return -1;  
-   }  
-  
-   // Read some data and then save the position.   
-   fread( buffer, sizeof( char ), 8, stream );  
-   if( fgetpos( stream, &pos ) != 0 ) {  
-      perror( "fgetpos error" );  
-      return -1;  
-   }  
-  
-   fread( buffer, sizeof( char ), 13, stream );  
-   printf( "after fgetpos: %.13s\n", buffer );  
-  
-   // Restore to old position and read data   
-   if( fsetpos( stream, &pos ) != 0 ) {  
-      perror( "fsetpos error" );  
-      return -1;  
-   }  
-  
-   fread( buffer, sizeof( char ), 13, stream );  
-   printf( "after fsetpos: %.13s\n", buffer );  
-   fclose( stream );  
-}  
-```  
-  
-## <a name="input-crtfgetpostxt"></a>輸入：crt_fgetpos.txt  
-  
-```  
-fgetpos gets a stream's file-position indicator.  
-```  
-  
-### <a name="output-crtfgetpostxt"></a>輸出 crt_fgetpos.txt  
-  
-```  
-after fgetpos: gets a stream  
-after fsetpos: gets a stream  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fsetpos](../../c-runtime-library/reference/fsetpos.md)
+
+取得資料流的檔案位置指標。
+
+## <a name="syntax"></a>語法
+
+```C
+int fgetpos(
+   FILE *stream,
+   fpos_t *pos
+);
+```
+
+### <a name="parameters"></a>參數
+
+*資料流*<br/>
+目標資料流。
+
+*pos*<br/>
+位置指標儲存區。
+
+## <a name="return-value"></a>傳回值
+
+如果成功的話， **fgetpos**傳回 0。 如果失敗，它會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 STDIO。H): **EBADF**，這表示指定的資料流不是有效的檔案指標或無法存取，或**EINVAL**，這表示*資料流*值或值*pos*是無效的例如，如果不是 null 指標。 如果*資料流*或*pos*是**NULL**指標，函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md).
+
+## <a name="remarks"></a>備註
+
+**Fgetpos**函式取得的目前值*資料流*引數的檔案位置指標，該物件中所指向的存放區*pos*。**Fsetpos**函式可以稍後使用資訊儲存在*pos*重設*資料流*時其位置引數的指標**fgetpos**呼叫。 *Pos*值會儲存在內部格式，並僅適用於**fgetpos**和**fsetpos**。
+
+## <a name="requirements"></a>需求
+
+|功能|必要的標頭|
+|--------------|---------------------|
+|**fgetpos**|\<stdio.h>|
+
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_fgetpos.c
+// This program uses fgetpos and fsetpos to
+// return to a location in a file.
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE   *stream;
+   fpos_t pos;
+   char   buffer[20];
+
+   if( fopen_s( &stream, "crt_fgetpos.txt", "rb" ) ) {
+      perror( "Trouble opening file" );
+      return -1;
+   }
+
+   // Read some data and then save the position.
+   fread( buffer, sizeof( char ), 8, stream );
+   if( fgetpos( stream, &pos ) != 0 ) {
+      perror( "fgetpos error" );
+      return -1;
+   }
+
+   fread( buffer, sizeof( char ), 13, stream );
+   printf( "after fgetpos: %.13s\n", buffer );
+
+   // Restore to old position and read data
+   if( fsetpos( stream, &pos ) != 0 ) {
+      perror( "fsetpos error" );
+      return -1;
+   }
+
+   fread( buffer, sizeof( char ), 13, stream );
+   printf( "after fsetpos: %.13s\n", buffer );
+   fclose( stream );
+}
+```
+
+## <a name="input-crtfgetpostxt"></a>輸入：crt_fgetpos.txt
+
+```Input
+fgetpos gets a stream's file-position indicator.
+```
+
+### <a name="output-crtfgetpostxt"></a>輸出 crt_fgetpos.txt
+
+```Output
+after fgetpos: gets a stream
+after fsetpos: gets a stream
+```
+
+## <a name="see-also"></a>另請參閱
+
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fsetpos](fsetpos.md)<br/>

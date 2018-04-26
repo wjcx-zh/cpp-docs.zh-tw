@@ -1,12 +1,12 @@
 ---
 title: _memccpy | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _memccpy
@@ -31,102 +31,107 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b83b4915eead8c38025e983d4634b8324568fe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 661f148e1af0877d0e961d743272de84c485ff32
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memccpy"></a>_memccpy
-從緩衝區複製字元。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      void *_memccpy(  
-   void *dest,  
-   const void *src,  
-   int c,  
-   size_t count   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- *dest*  
- 目的地的指標。  
-  
- *src*  
- 來源的指標。  
-  
- `c`  
- 要複製的最後一個字元。  
-  
- *count*  
- 字元數。  
-  
-## <a name="return-value"></a>傳回值  
- 如果已複製字元 `c`，`_memccpy` 會傳回 *dest* 中的 Char 指標，後面緊接著此字元。 如果未複製 `c`，則會傳回 **NULL**。  
-  
-## <a name="remarks"></a>備註  
- `_memccpy` 函式會將 *src* 的 0 個或多個字元複製到 *dest*，並在已複製字元 `c` 或已複製 *count* 個字元時 (視何者較早發生) 暫停。  
-  
- **安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_memccpy`|\<memory.h> 或 \<string.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_memccpy.c  
-  
-#include <memory.h>  
-#include <stdio.h>  
-#include <string.h>  
-  
-char string1[60] = "The quick brown dog jumps over the lazy fox";  
-  
-int main( void )  
-{  
-   char buffer[61];  
-   char *pdest;  
-  
-   printf( "Function: _memccpy 60 characters or to character 's'\n" );  
-   printf( "Source: %s\n", string1 );  
-   pdest = _memccpy( buffer, string1, 's', 60 );  
-   *pdest = '\0';  
-   printf( "Result: %s\n", buffer );  
-   printf( "Length: %d characters\n", strlen( buffer ) );  
-}  
-```  
-  
-## <a name="output"></a>輸出  
-  
-```  
-Function: _memccpy 60 characters or to character 's'  
-Source: The quick brown dog jumps over the lazy fox  
-Result: The quick brown dog jumps  
-Length: 25 characters  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   
- [memchr、wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
- [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   
- [memset、wmemset](../../c-runtime-library/reference/memset-wmemset.md)
+
+從緩衝區複製字元。
+
+## <a name="syntax"></a>語法
+
+```C
+void *_memccpy(
+   void *dest,
+   const void *src,
+   int c,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>參數
+
+*dest*<br/>
+目的地的指標。
+
+*src*<br/>
+來源的指標。
+
+*C*<br/>
+要複製的最後一個字元。
+
+*count*<br/>
+字元數。
+
+## <a name="return-value"></a>傳回值
+
+如果字元*c*複製時， **_memccpy**讓指標回到中 char*目的地*，緊接在後面的字元。 如果*c*不複製，它會傳回**NULL**。
+
+## <a name="remarks"></a>備註
+
+**_Memccpy**函式會將複製的 0 或更多字元*src*至*目的地*，暫止時字元*c*已複製或當*計數*已複製的字元、 何者較早。
+
+**安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_memccpy**|\<memory.h> 或 \<string.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_memccpy.c
+
+#include <memory.h>
+#include <stdio.h>
+#include <string.h>
+
+char string1[60] = "The quick brown dog jumps over the lazy fox";
+
+int main( void )
+{
+   char buffer[61];
+   char *pdest;
+
+   printf( "Function: _memccpy 60 characters or to character 's'\n" );
+   printf( "Source: %s\n", string1 );
+   pdest = _memccpy( buffer, string1, 's', 60 );
+   *pdest = '\0';
+   printf( "Result: %s\n", buffer );
+   printf( "Length: %d characters\n", strlen( buffer ) );
+}
+```
+
+### <a name="output"></a>輸出
+
+```Output
+Function: _memccpy 60 characters or to character 's'
+Source: The quick brown dog jumps over the lazy fox
+Result: The quick brown dog jumps
+Length: 25 characters
+```
+
+## <a name="see-also"></a>另請參閱
+
+[緩衝區操作](../../c-runtime-library/buffer-manipulation.md)<br/>
+[memchr、wmemchr](memchr-wmemchr.md)<br/>
+[memcmp、wmemcmp](memcmp-wmemcmp.md)<br/>
+[memcpy、wmemcpy](memcpy-wmemcpy.md)<br/>
+[memset、wmemset](memset-wmemset.md)<br/>

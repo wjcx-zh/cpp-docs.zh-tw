@@ -1,12 +1,12 @@
 ---
-title: "_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l | Microsoft Docs"
-ms.custom: 
+title: _strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsspnp
@@ -51,114 +51,119 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7379218425c640b9730d9b7d743163a5799f5b60
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8bb99fe01d32c3c0eeacf455682e8faaff289b33
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
-傳回不在另一個指定字串中之指定字串的第一個字元指標。  
-  
+
+傳回不在另一個指定字串中之指定字串的第一個字元指標。
+
 > [!IMPORTANT]
->  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsspnp` 和 `_mbsspnp_l`。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-char *_strspnp(  
-   const char *str,  
-   const char *charset  
-);  
-wchar_t *_wcsspnp(  
-   const unsigned wchar_t *str,  
-   const unsigned wchar_t *charset  
-);  
-unsigned char *_mbsspnp(  
-   const unsigned char *str,  
-   const unsigned char *charset  
-);  
-unsigned char *_mbsspnp_l(  
-   const unsigned char *str,  
-   const unsigned char *charset,  
-   _locale_t locale  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- `str`  
- 以 Null 終止的待搜尋字串。  
-  
- `charset`  
- 以 Null 結束的字元集。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- `_strspnp``_wcsspnp`，和`_mbsspnp`傳回的第一個字元的指標`str`，不屬於集合中的字元`charset`。 所有這些函式傳回`NULL`如果`str`組成的字元`charset`。 針對所有這些函式，不保留任何表示錯誤的傳回值。  
-  
-## <a name="remarks"></a>備註  
- `_mbsspnp` 函式傳回不屬於 `charset` 字元集，但為 `str` 第一個字元的多位元組字元指標。 `_mbsspnp` 根據目前使用的[多位元組字碼頁](../../c-runtime-library/code-pages.md)來辨識多位元組字元序列。 搜尋不包含終止的 Null 字元。  
-  
- 如果 `str` 或 `charset` 為 Null 指標，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回 `NULL`，並將 `errno` 設為 `EINVAL`。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tcsspnp`|`_strspnp`|`_mbsspnp`|`_wcsspnp`|  
-  
- `_strspnp` 和 `_wcsspnp` 是 `_mbsspnp` 的單一位元組字元版本和寬字元版本。 否則，`_strspnp` 和 `_wcsspnp` 的行為與 `_mbsspnp` 相同，它們只會提供此對應使用，不應該用於任何其他用途。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。  
-  
- `_mbsspnp_l` 也相同，但是它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_mbsspnp`|\<mbstring.h>|  
-|`_strspnp`|\<tchar.h>|  
-|`_wcsspnp`|\<tchar.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_mbsspnp.c  
-#include <mbstring.h>  
-#include <stdio.h>  
-  
-int main( void ) {  
-   const unsigned char string1[] = "cabbage";  
-   const unsigned char string2[] = "c";  
-   unsigned char *ptr = 0;  
-   ptr = _mbsspnp( string1, string2 );  
-   printf( "%s\n", ptr);  
-}  
-```  
-  
-## <a name="output"></a>輸出  
-  
-```  
-abbage  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](../../c-runtime-library/reference/strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)   
- [strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+> **_mbsspnp**和 **_mbsspnp_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+char *_strspnp(
+   const char *str,
+   const char *charset
+);
+wchar_t *_wcsspnp(
+   const unsigned wchar_t *str,
+   const unsigned wchar_t *charset
+);
+unsigned char *_mbsspnp(
+   const unsigned char *str,
+   const unsigned char *charset
+);
+unsigned char *_mbsspnp_l(
+   const unsigned char *str,
+   const unsigned char *charset,
+   _locale_t locale
+);
+
+```
+
+### <a name="parameters"></a>參數
+
+*str*<br/>
+以 Null 終止的待搜尋字串。
+
+*字元集*<br/>
+以 Null 結束的字元集。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+**_strspnp**， **_wcsspnp**，和 **_mbsspnp**傳回的第一個字元的指標*str* ，不屬於中的字元組*charset*。 所有這些函式傳回**NULL**如果*str*組成的字元*charset*。 針對所有這些函式，不保留任何表示錯誤的傳回值。
+
+## <a name="remarks"></a>備註
+
+**_Mbsspnp**函式傳回的第一個字元的多位元組字元的指標*str* ，不屬於集合中的字元*charset*。 **_mbsspnp**根據來辨識多位元組字元序列[多位元組字碼頁](../../c-runtime-library/code-pages.md)目前使用中。 搜尋不包含終止的 Null 字元。
+
+如果有任一個*str*或*charset*為 null 指標，此函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回**NULL**並設定**errno**至**EINVAL**。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
+
+**_strspnp**和 **_wcsspnp**是單一位元組字元和寬字元版本的 **_mbsspnp**。 **_strspnp**和 **_wcsspnp**行為即會相同與 **_mbsspnp**否則只有針對此對應所提供，不應該用於任何其他原因。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
+
+**_mbsspnp_l**是完全相同，不同之處在於它會改用傳入的地區設定參數的使用。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_mbsspnp**|\<mbstring.h>|
+|**_strspnp**|\<tchar.h>|
+|**_wcsspnp**|\<tchar.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_mbsspnp.c
+#include <mbstring.h>
+#include <stdio.h>
+
+int main( void ) {
+   const unsigned char string1[] = "cabbage";
+   const unsigned char string2[] = "c";
+   unsigned char *ptr = 0;
+   ptr = _mbsspnp( string1, string2 );
+   printf( "%s\n", ptr);
+}
+```
+
+### <a name="output"></a>輸出
+
+```Output
+abbage
+```
+
+## <a name="see-also"></a>另請參閱
+
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>
+[strncmp、wcsncmp、_mbsncmp、_mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)<br/>
+[_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>

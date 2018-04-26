@@ -1,12 +1,12 @@
 ---
-title: "_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32 | Microsoft Docs"
-ms.custom: 
+title: _stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wstat64
@@ -115,237 +115,223 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c84ed9e6ad7edab34dc80a4d2b446b7333f95c2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fb70840985c7d6f574a37aef535f35f63c0f4333
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
-取得檔案的狀態資訊。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _stat(  
-   const char *path,  
-   struct _stat *buffer   
-);  
-int _stat32(  
-   const char *path,  
-   struct __stat32 *buffer   
-);  
-int _stat64(  
-   const char *path,  
-   struct __stat64 *buffer   
-);  
-int _stati64(  
-   const char *path,  
-   struct _stati64 *buffer   
-);  
-int _stat32i64(  
-   const char *path,  
-   struct _stat32i64 *buffer   
-);  
-int _stat64i32(  
-   const char *path,  
-   struct _stat64i32 *buffer   
-);  
-int _wstat(  
-   const wchar_t *path,  
-   struct _stat *buffer   
-);  
-int _wstat32(  
-   const wchar_t *path,  
-   struct __stat32 *buffer   
-);  
-int _wstat64(  
-   const wchar_t *path,  
-   struct __stat64 *buffer   
-);  
-int _wstati64(  
-   const wchar_t *path,  
-   struct _stati64 *buffer   
-);  
-int _wstat32i64(  
-   const wchar_t *path,  
-   struct _stat32i64 *buffer   
-);  
-int _wstat64i32(  
-   const wchar_t *path,  
-   struct _stat64i32 *buffer   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `path`  
- 包含現有檔案或目錄路徑的字串指標。  
-  
- `buffer`  
- 儲存結果的結構指標。  
-  
-## <a name="return-value"></a>傳回值  
- 上述每個函式會在取得檔案狀態資訊時傳回 0。 傳回值-1 表示錯誤，在此情況下`errno`設`ENOENT`，指出，檔案名稱或路徑找不到。 傳回值 `EINVAL` 表示參數無效，在此情況下也會將 `errno` 設定為 `EINVAL` 。  
-  
- 如需這個及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
-  
- 如果是 1970 年 1 月 1 日午夜到 3000 年 12 月 31 日 23:59:59 (UTC) 的檔案，則會在檔案上表示日期戳記；除非您使用 `_stat32` 或 `_wstat32`，或者已定義 `_USE_32BIT_TIME_T`，在此情況下，只能表示 2038 年 1 月 18 日 23:59:59 (UTC) 以前的日期。  
-  
-## <a name="remarks"></a>備註  
- `_stat` 函式會取得 `path` 所指定之檔案或目錄的相關資訊，並將其儲存在 `buffer`所指向的結構中。 `_stat` 會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。  
-  
- `_wstat` 是寬字元版本的 `_stat`； `path` 的 `_wstat` 引數是寬字元字串。 `_wstat` 與 `_stat` 的運作方式完全相同，不同之處在於 `_wstat` 不會處理多位元組字元字串。  
-  
- 這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數值後置字元 (`32` 或 `64`) 表示所使用的時間類型大小，第二個後置字元為 `i32` 或 `i64`，表示檔案大小是以 32 位元或 64 位元整數來表示。  
-  
- `_stat` 相當於 `_stat64i32`，且 `struct _stat` 包含 64 位元時間。 上述情況只有在定義 `_USE_32BIT_TIME_T` 時才不成立，在此情況下，會採用舊版行為，也就是 `_stat` 使用 32 位元時間，且 `struct _stat` 包含 32 位元時間。 對於 `_stati64`也是如此。  
-  
+
+取得檔案的狀態資訊。
+
+## <a name="syntax"></a>語法
+
+```C
+int _stat(
+   const char *path,
+   struct _stat *buffer
+);
+int _stat32(
+   const char *path,
+   struct __stat32 *buffer
+);
+int _stat64(
+   const char *path,
+   struct __stat64 *buffer
+);
+int _stati64(
+   const char *path,
+   struct _stati64 *buffer
+);
+int _stat32i64(
+   const char *path,
+   struct _stat32i64 *buffer
+);
+int _stat64i32(
+   const char *path,
+   struct _stat64i32 *buffer
+);
+int _wstat(
+   const wchar_t *path,
+   struct _stat *buffer
+);
+int _wstat32(
+   const wchar_t *path,
+   struct __stat32 *buffer
+);
+int _wstat64(
+   const wchar_t *path,
+   struct __stat64 *buffer
+);
+int _wstati64(
+   const wchar_t *path,
+   struct _stati64 *buffer
+);
+int _wstat32i64(
+   const wchar_t *path,
+   struct _stat32i64 *buffer
+);
+int _wstat64i32(
+   const wchar_t *path,
+   struct _stat64i32 *buffer
+);
+```
+
+### <a name="parameters"></a>參數
+
+*path*<br/>
+包含現有檔案或目錄路徑的字串指標。
+
+*buffer*<br/>
+儲存結果的結構指標。
+
+## <a name="return-value"></a>傳回值
+
+上述每個函式會在取得檔案狀態資訊時傳回 0。 傳回值-1 表示錯誤，在此情況下**errno**設**ENOENT**，指出，檔案名稱或路徑找不到。 傳回值為**EINVAL**表示無效的參數;**errno**也會設為**EINVAL**在此情況下。
+
+如需這個及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
+
+可以表示的檔案上的日期戳記，如果是 1970 年 1 月 1 日午夜且之前 23:59:59，3000 年 12 月 31 日 UTC，除非您使用 **_stat32**或 **_wstat32**，或者已定義 **_USE_32BIT_TIME_T**，在此情況下只到 23:59:59 2038 年 1 月 18 日，UTC 代表的日期。
+
+## <a name="remarks"></a>備註
+
+**_Stat**函式會取得資訊的檔案或目錄所指定*路徑*並將它儲存在結構中所指*緩衝區*。 **_stat**自動多位元組字元字串引數處理為適當且可辨識的多位元組字元序列，會根據目前使用中的多位元組字碼頁。
+
+**_wstat**是寬字元版本的 **_stat**;*路徑*引數 **_wstat**是寬字元字串。 **_wstat**和 **_stat**行為相同，除了 **_wstat**不會處理多位元組字元字串。
+
+這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數字尾碼 (**32**或**64**) 表示時間的大小類型使用; 第二個後置詞是**i32**或**i64**，表示檔案大小以 32 位元或 64 位元整數。
+
+**_stat**相當於 **_stat64i32**，和**結構** **_stat**包含 64 位元時間。 這是 true 除非 **_USE_32BIT_TIME_T**定義在此情況下舊的行為是作用中。**_stat**使用 32 位元時間和**結構** **_stat**包含 32 位元時間。 同樣適用於 **_stati64**。
+
 > [!NOTE]
->  `_wstat` 不適用於 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] 符號連結。 在這些情況下， `_wstat` 一律會回報檔案大小為 0。 `_stat` 則適用於符號連結。  
-  
- 這個函式會驗證它的參數。 如果 `path` 或 `buffer` 為 `NULL`，則會叫用無效的參數處理常式，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)所指向的結構中。  
-  
-### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 的時間類型和檔案長度類型版本  
-  
-|函式|是否已定義 _USE_32BIT_TIME_T？|時間類型|檔案長度類型|  
-|---------------|------------------------------------|---------------|----------------------|  
-|`_stat`, `_wstat`|未定義|64 位元|32 位元|  
-|`_stat`, `_wstat`|已定義|32 位元|32 位元|  
-|`_stat32`, `_wstat32`|不會受到巨集定義的影響|32 位元|32 位元|  
-|`_stat64`, `_wstat64`|不會受到巨集定義的影響|64 位元|64 位元|  
-|`_stati64`, `_wstati64`|未定義|64 位元|64 位元|  
-|`_stati64`, `_wstati64`|已定義|32 位元|64 位元|  
-|`_stat32i64`, `_wstat32i64`|不會受到巨集定義的影響|32 位元|64 位元|  
-|`_stat64i32`, `_wstat64i32`|不會受到巨集定義的影響|64 位元|32 位元|  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tstat`|`_stat`|`_stat`|`_wstat`|  
-|`_tstat64`|`_stat64`|`_stat64`|`_wstat64`|  
-|`_tstati64`|`_stati64`|`_stati64`|`_wstati64`|  
-|`_tstat32i64`|`_stat32i64`|`_stat32i64`|`_wstat32i64`|  
-|`_tstat64i32`|`_stat64i32`|`_stat64i32`|`_wstat64i32`|  
-  
- 在 SYS\STAT.H 中定義的 `_stat` 結構包含下列欄位。  
-  
- `st_gid`  
- 擁有檔案 (UNIX 特定) 之群組的數值識別碼。這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。  
-  
- `st_atime`  
- 檔案的上次存取時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。  
-  
- `st_ctime`  
- 檔案的建立時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。  
-  
- `st_dev`  
- 內含檔案之磁碟的磁碟機數目 (與 `st_rdev`相同)。  
-  
- `st_ino`  
- 檔案 (UNIX 特定) 的資訊節點數目 ( `inode`)。 在 UNIX 檔案系統上， `inode` 會描述檔案日期和時間戳記、權限，以及內容。 當檔案彼此永久連結時，這些檔案會共用相同的 `inode`。 `inode`及之後的 `st_ino`對 FAT、HPFS 或 NTFS 檔案系統沒有意義。  
-  
- `st_mode`  
- 檔案模式資訊的位元遮罩。 如果 `_S_IFDIR` 指定目錄，會設定 `path` 位元；如果 `_S_IFREG` 指定一般檔案或裝置，會設定 `path` 位元。 使用者讀取/寫入位元會根據檔案的權限模式進行設定；使用者執行位元會根據副檔名進行設定。  
-  
- `st_mtime`  
- 檔案的上次修改時間。  
-  
- `st_nlink`  
- 在非 NTFS 檔案系統上一律為 1。  
-  
- `st_rdev`  
- 內含檔案之磁碟的磁碟機數目 (與 `st_dev`相同)。  
-  
- `st_size`  
- 檔案大小 (以位元組為單位)；後置字元為 `i64` 的版本使用 64 位元整數**。**  
-  
- `st_uid`  
- 擁有檔案 (UNIX 特定) 之使用者的數值識別碼。 這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。  
-  
- 如果 `path` 參考裝置， `st_size`結構中的 `st_dev`、各種時間欄位、 `st_rdev` 和 `_stat` 都沒有意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) 類型，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|選擇性標頭|  
-|-------------|---------------------|----------------------|  
-|`_stat`, `_stat32`, `_stat64`, `_stati64`, `_stat32i64`, `_stat64i32`|\<sys/types.h>，後面接著 \<sys/stat.h>|\<errno.h>|  
-|`_wstat`, `_wstat32`, `_wstat64`, `_wstati64`, `_wstat32i64`, `_wstat64i32`|\<sys/types.h>，後面接著 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_stat.c  
-// This program uses the _stat function to  
-// report information about the file named crt_stat.c.  
-  
-#include <time.h>  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <stdio.h>  
-#include <errno.h>  
-  
-int main( void )  
-{  
-   struct _stat buf;  
-   int result;  
-   char timebuf[26];  
-   char* filename = "crt_stat.c";  
-   errno_t err;  
-  
-   // Get data associated with "crt_stat.c":   
-   result = _stat( filename, &buf );  
-  
-   // Check if statistics are valid:   
-   if( result != 0 )  
-   {  
-      perror( "Problem getting information" );  
-      switch (errno)  
-      {  
-         case ENOENT:  
-           printf("File %s not found.\n", filename);  
-           break;  
-         case EINVAL:  
-           printf("Invalid parameter to _stat.\n");  
-           break;  
-         default:  
-           /* Should never be reached. */  
-           printf("Unexpected error in _stat.\n");  
-      }  
-   }  
-   else  
-   {  
-      // Output some of the statistics:   
-      printf( "File size     : %ld\n", buf.st_size );  
-      printf( "Drive         : %c:\n", buf.st_dev + 'A' );  
-      err = ctime_s(timebuf, 26, &buf.st_mtime);  
-      if (err)  
-      {  
-         printf("Invalid arguments to ctime_s.");  
-         exit(1);  
-      }  
-      printf( "Time modified : %s", timebuf );  
-   }  
-}  
-```  
-  
-```Output  
-File size     : 732  
-Drive         : C:  
-Time modified : Thu Feb 07 14:39:36 2002  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [檔案處理](../../c-runtime-library/file-handling.md)   
- [_access、_waccess](../../c-runtime-library/reference/access-waccess.md)   
- [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [_setmbcp](../../c-runtime-library/reference/setmbcp.md)
+> **_wstat**不適用於 Windows Vista 的符號連結。 在這些情況下， **_wstat**一律會回報檔案大小為 0。 **_stat**運作正常與符號連結。
+
+這個函式會驗證它的參數。 如果有任一個*路徑*或*緩衝區*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。
+
+### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat 的時間類型和檔案長度類型版本
+
+|函式|是否已定義 _USE_32BIT_TIME_T？|時間類型|檔案長度類型|
+|---------------|------------------------------------|---------------|----------------------|
+|**_stat**， **_wstat**|未定義|64 位元|32 位元|
+|**_stat**， **_wstat**|已定義|32 位元|32 位元|
+|**_stat32**， **_wstat32**|不會受到巨集定義的影響|32 位元|32 位元|
+|**_stat64**， **_wstat64**|不會受到巨集定義的影響|64 位元|64 位元|
+|**_stati64**， **_wstati64**|未定義|64 位元|64 位元|
+|**_stati64**， **_wstati64**|已定義|32 位元|64 位元|
+|**_stat32i64**， **_wstat32i64**|不會受到巨集定義的影響|32 位元|64 位元|
+|**_stat64i32**， **_wstat64i32**|不會受到巨集定義的影響|64 位元|32 位元|
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tstat**|**_stat**|**_stat**|**_wstat**|
+|**_tstat64**|**_stat64**|**_stat64**|**_wstat64**|
+|**_tstati64**|**_stati64**|**_stati64**|**_wstati64**|
+|**_tstat32i64**|**_stat32i64**|**_stat32i64**|**_wstat32i64**|
+|**_tstat64i32**|**_stat64i32**|**_stat64i32**|**_wstat64i32**|
+
+**_Stat** SYS\STAT 中定義的結構。H、 包含下列欄位。
+
+|欄位||
+|-|-|
+**st_gid**|擁有檔案 (UNIX 特定) 之群組的數值識別碼。這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。
+**st_atime**|檔案的上次存取時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。
+**st_ctime**|檔案的建立時間。 適用於 NTFS，但不適用 FAT 格式的磁碟機。
+**st_dev**|磁碟機包含檔案的磁碟數目 (與相同**st_rdev**)。
+**st_ino**|資訊節點數目 ( **inode**) 檔案 （UNIX 特定）。 在 UNIX 檔案系統， **inode**描述檔案日期和時間戳記、 權限，以及內容。 檔案是硬式連結至另一個，它們共用相同**inode**。 **Inode**，因此**st_ino**，FAT、 HPFS 或 NTFS 檔案系統中沒有任何意義。
+**st_mode**|檔案模式資訊的位元遮罩。 **_S_IFDIR**會設定位元，如果*路徑*指定的目錄; **_S_IFREG**會設定位元，如果*路徑*指定一般檔案或裝置。 使用者讀取/寫入位元會根據檔案的權限模式進行設定；使用者執行位元會根據副檔名進行設定。
+**st_mtime**|檔案的上次修改時間。
+**st_nlink**|在非 NTFS 檔案系統上一律為 1。
+**st_rdev**|磁碟機包含檔案的磁碟數目 (與相同**st_dev**)。
+**st_size**|以位元組為單位; 檔案的大小版本使用 64 位元整數**i64**後置詞。
+**st_uid**|擁有檔案 (UNIX 特定) 之使用者的數值識別碼。 這個欄位在 Windows 系統上一律為零。 重新導向的檔案會歸類為 Windows 檔案。
+
+如果*路徑*裝置是指**st_size**，各種時間欄位、 **st_dev**，和**st_rdev**中欄位 **_stat**結構是無意義。 因為 STAT.H 使用在 TYPES.H 中定義的 [_dev_t](../../c-runtime-library/standard-types.md) ，所以您必須在程式碼中的 STAT.H 之前包含 TYPES.H。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|選擇性標頭|
+|-------------|---------------------|----------------------|
+|**_stat**， **_stat32**， **_stat64**， **_stati64**， **_stat32i64**， **_stat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h>|\<errno.h>|
+|**_wstat**， **_wstat32**， **_wstat64**， **_wstati64**， **_wstat32i64**， **_wstat64i32**|\<sys/types.h>，後面接著 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_stat.c
+// This program uses the _stat function to
+// report information about the file named crt_stat.c.
+
+#include <time.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <stdio.h>
+#include <errno.h>
+
+int main( void )
+{
+   struct _stat buf;
+   int result;
+   char timebuf[26];
+   char* filename = "crt_stat.c";
+   errno_t err;
+
+   // Get data associated with "crt_stat.c":
+   result = _stat( filename, &buf );
+
+   // Check if statistics are valid:
+   if( result != 0 )
+   {
+      perror( "Problem getting information" );
+      switch (errno)
+      {
+         case ENOENT:
+           printf("File %s not found.\n", filename);
+           break;
+         case EINVAL:
+           printf("Invalid parameter to _stat.\n");
+           break;
+         default:
+           /* Should never be reached. */
+           printf("Unexpected error in _stat.\n");
+      }
+   }
+   else
+   {
+      // Output some of the statistics:
+      printf( "File size     : %ld\n", buf.st_size );
+      printf( "Drive         : %c:\n", buf.st_dev + 'A' );
+      err = ctime_s(timebuf, 26, &buf.st_mtime);
+      if (err)
+      {
+         printf("Invalid arguments to ctime_s.");
+         exit(1);
+      }
+      printf( "Time modified : %s", timebuf );
+   }
+}
+```
+
+```Output
+File size     : 732
+Drive         : C:
+Time modified : Thu Feb 07 14:39:36 2002
+```
+
+## <a name="see-also"></a>另請參閱
+
+[檔案處理](../../c-runtime-library/file-handling.md)<br/>
+[_access、_waccess](access-waccess.md)<br/>
+[_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_getmbcp](getmbcp.md)<br/>
+[_setmbcp](setmbcp.md)<br/>

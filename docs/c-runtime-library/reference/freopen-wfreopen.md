@@ -1,12 +1,12 @@
 ---
-title: "freopen、_wfreopen | Microsoft Docs"
-ms.custom: 
+title: freopen、_wfreopen | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - freopen
@@ -38,149 +38,146 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-caps.latest.revision: 
+caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49f1e2cd11606d2ebe53281a9d2f1d27533b4068
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e371076ce095116930908174d4fa29e9cfd876e5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="freopen-wfreopen"></a>freopen、_wfreopen
-重新指派檔案指標。 這些函式已有更安全的版本可用；請參閱 [freopen_s、_wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-FILE *freopen(   
-   const char *path,  
-   const char *mode,  
-   FILE *stream   
-);  
-FILE *_wfreopen(   
-   const wchar_t *path,  
-   const wchar_t *mode,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `path`  
- 新檔案的路徑。  
-  
- `mode`  
- 允許的存取類型。  
-  
- `stream`  
- `FILE` 結構的指標。  
-  
-## <a name="return-value"></a>傳回值  
- 所有這些函式都會傳回新開啟檔案的指標。 如果發生錯誤，就會關閉原始檔案，而且函式會傳回 `NULL` 指標值。 如果 `path`、`mode` 或 `stream` 為 Null 指標，或 `filename` 為空字串，則這些函式會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `NULL`。  
-  
- 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
-## <a name="remarks"></a>備註  
- 這些函式已有更安全的版本，請參閱 [freopen_s、_wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md)。  
-  
- `freopen`函式會關閉目前與相關聯的檔案`stream`並重試`stream`所指定的檔案`path`。 `_wfreopen` 是 `_freopen` 的寬字元版本；`_wfreopen` 的 `path` 和 `mode` 引數是寬字元字串。 否則，`_wfreopen` 和 `_freopen` 的行為即會相同。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tfreopen`|`freopen`|`freopen`|`_wfreopen`|  
-  
- `freopen` 通常用來將已預先開啟的檔案 `stdin`、`stdout` 和 `stderr` 導向至使用者所指定的檔案。 新的檔案與相關聯`stream`開啟`mode`，這是字元字串，指定對檔案要求的如下所示的存取類型：  
-  
- `"r"`  
- 開啟以讀取。 如果檔案不存在或找不到， `freopen` 呼叫就會失敗。  
-  
- `"w"`  
- 開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。  
-  
- `"a"`  
- 開啟以供在檔案結尾寫入 (附加)，並且在新資料寫入檔案之前，不會移除 EOF 標記；如果該檔案不存在，便會先建立檔案。  
-  
- `"r+"`  
- 開啟以進行讀取和寫入。 (檔案必須存在)。  
-  
- `"w+"`  
- 開啟空白檔案以進行讀取和寫入。 如果指定的檔案已存在，其內容將被終結。  
-  
- `"a+"`  
- 開啟以進行讀取和附加；此附加作業包含在將新資料寫入檔案之前移除 EOF 標記，且寫入完成後會復原 EOF 標記；如果該檔案不存在，便會先建立檔案。  
-  
- 請小心使用 `"w"` 和 `"w+"` 類型，因為它們可以終結現有的檔案。  
-  
- 使用 `"a"` 或 `"a+"` 存取類型開啟檔案時，所有寫入作業都會在檔案結尾進行。 雖然檔案指標可以使用 `fseek` 或 `rewind` 重新調整位置，但是在執行任何寫入作業之前，一律會將此檔案指標移回至檔案結尾。因此，無法覆寫現有資料。  
-  
- 在附加到檔案之前，`"a"` 模式不會移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 在附加到檔案之前，`"a+"` 模式會移除 EOF 標記。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 附加至以 CTRL+Z EOF 標記終止的資料流檔案時，需要 `"a+"` 模式。  
-  
- 指定 `"r+"`、`"w+"` 或 `"a+"` 存取類型時，同時允許讀取和寫入 (表示檔案是要開啟以供「更新」之用)。 不過，當您在讀取和寫入之間切換時，必須有中間的 [fsetpos](../../c-runtime-library/reference/fsetpos.md)、[fseek](../../c-runtime-library/reference/fseek-fseeki64.md) 或 [rewind](../../c-runtime-library/reference/rewind.md) 作業。 如有需要，可以針對 `fsetpos` 或 `fseek` 作業指定目前位置。 除了上面的值之外，可以將下列字元包含在 `mode` 字串中以指定新行的轉譯模式。  
-  
- `t`  
- 以文字 （已轉譯） 模式開啟。歸位字元傳回換行字元 (CR-LF) 組合中轉譯成單行換行字元 (LF) 字元上輸入，會將 LF 字元轉譯為 CR-LF 組合輸出上。 此外，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在為了讀取或以 `"a+"` 讀取和寫入而開啟的檔案中，該執行階段程式庫會盡可能檢查檔案結尾是否有 Ctrl+Z，並加以移除。 之所以這樣做，是因為使用 `fseek` 和 `ftell` 在檔案內移動可能會讓 `fseek` 在檔案結尾附近產生不當行為。 `t` 選項是 Microsoft 擴充功能，不應在需要 ANSI 可攜性的情況中使用。  
-  
- `b`  
- 在二進位 (未轉譯) 模式中開啟；會隱藏上述轉譯。  
-  
- 如果 `t` 中未指定 `b` 或 `mode`，則預設轉譯模式由全域變數 [_fmode](../../c-runtime-library/fmode.md)定義。 如果引數前置 `t` 或 `b` ，則函式失敗並傳回 `NULL`。  
-  
- 如需文字和二進位模式的討論，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|必要的標頭|  
-|--------------|---------------------|  
-|`freopen`|\<stdio.h>|  
-|`_wfreopen`|\<stdio.h> 或 \<wchar.h>|  
-  
- 通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —`stdin`， `stdout`，和`stderr`，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_freopen.c  
-// compile with: /W3  
-// This program reassigns stderr to the file  
-// named FREOPEN.OUT and writes a line to that file.  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-FILE *stream;  
-  
-int main( void )  
-{  
-   // Reassign "stderr" to "freopen.out":   
-   stream = freopen( "freopen.out", "w", stderr ); // C4996  
-   // Note: freopen is deprecated; consider using freopen_s instead  
-  
-   if( stream == NULL )  
-      fprintf( stdout, "error on freopen\n" );  
-   else  
-   {  
-      fprintf( stdout, "successfully reassigned\n" ); fflush( stdout );  
-      fprintf( stream, "This will go to the file 'freopen.out'\n" );  
-      fclose( stream );  
-   }  
-   system( "type freopen.out" );  
-}  
-```  
-  
-```Output  
-successfully reassigned  
-This will go to the file 'freopen.out'  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
- [_fdopen、_wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_fileno](../../c-runtime-library/reference/fileno.md)   
- [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_setmode](../../c-runtime-library/reference/setmode.md)
+
+重新指派檔案指標。 這些函式已有更安全的版本可用；請參閱 [freopen_s、_wfreopen_s](freopen-s-wfreopen-s.md)。
+
+## <a name="syntax"></a>語法
+
+```C
+FILE *freopen(
+   const char *path,
+   const char *mode,
+   FILE *stream
+);
+FILE *_wfreopen(
+   const wchar_t *path,
+   const wchar_t *mode,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>參數
+
+*path*<br/>
+新檔案的路徑。
+
+*mode*<br/>
+允許的存取類型。
+
+*資料流*<br/>
+**FILE** 結構的指標。
+
+## <a name="return-value"></a>傳回值
+
+所有這些函式都會傳回新開啟檔案的指標。 如果發生錯誤，原始的檔案已關閉並傳回函式**NULL**指標值。 如果*路徑*，*模式*，或*資料流*為 null 指標，或如果*filename*為空字串，這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回**NULL**。
+
+如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
+## <a name="remarks"></a>備註
+
+這些函式已有更安全的版本，請參閱 [freopen_s、_wfreopen_s](freopen-s-wfreopen-s.md)。
+
+**Freopen**函式會關閉目前與相關聯的檔案*資料流*並重試*資料流*所指定的檔案*路徑*。 **_wfreopen**是寬字元版本的 **_freopen**;*路徑*和*模式*引數 **_wfreopen**是寬字元字串。 **_wfreopen**和 **_freopen**除此之外的行為相同。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tfreopen**|**freopen**|**freopen**|**_wfreopen**|
+
+**freopen**通常用來重新導向預先開啟的檔案**stdin**， **stdout**，和**stderr**使用者所指定的檔案。 新的檔案與相關聯*資料流*開啟*模式*，這是字元字串，指定對檔案要求的如下所示的存取類型：
+
+|*mode*|存取|
+|-|-|
+**"r"**|開啟以讀取。 如果檔案不存在或找不到**freopen**呼叫就會失敗。
+**"w"**|開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。
+**"a"**|開啟以供在檔案結尾寫入 (附加)，並且在將新資料寫入檔案之前，不會移除檔案結尾 (EOF) 標記。 如果檔案不存在時，建立檔案。
+**"r+"**|開啟以進行讀取和寫入。 檔案必須存在。
+**"w+"**|開啟空白檔案以進行讀取和寫入。 如果檔案存在，其內容會遭到銷毀。
+**"a+"**|開啟以進行讀取和附加。 附加作業包括在將新資料寫入檔案之前移除 EOF 標記。 寫入完成後，不會還原 EOF 標記。 如果檔案不存在時，建立檔案。
+
+使用 **"w"** 和 **"w +"** 類型時請務必小心，因為它們可以終結現有的檔案。
+
+當開啟檔案時，與 **"a"** 或 **"+"** 存取類型，所有寫入作業發生在檔案結尾處。 雖然檔案指標可以使用定位[fseek](fseek-fseeki64.md)或[倒轉](rewind.md)，檔案指標會一律移回至檔案結尾之前任何寫入作業會執行。因此，無法覆寫現有資料。
+
+**"A"** 模式不會附加到檔案之前移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 **"+"** 模式會附加到檔案之前移除 EOF 標記。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 **"+"** 模式是需要附加至以 CTRL + Z EOF 標記終止的資料流檔案。
+
+當 **"r +"**， **"w +"**，或 **"+"** 指定存取型別，允許進行讀取和寫入 （檔案要開啟以供 「 更新 」）。 不過，當您在讀取和寫入之間切換時，必須有中間的 [fsetpos](fsetpos.md)、[fseek](fseek-fseeki64.md) 或 [rewind](rewind.md) 作業。 可以針對指定的目前位置[fsetpos](fsetpos.md)或[fseek](fseek-fseeki64.md)作業，如有需要。 除了上述的值，下列字元的其中一個可能包含在*模式*字串，指定新行的轉譯模式。
+
+|*模式*修飾詞|轉譯模式|
+|-|-|
+**t**|以文字 (已轉譯) 模式開啟。
+**b**|以二進位 (未轉譯) 模式開啟；抑制涉及歸位字元和換行字元的轉譯。
+
+在文字 （轉譯） 模式下，歸位字元傳回換行字元 (CR-LF) 組合會轉譯成單行換行字元 (LF) 字元上輸入，會將 LF 字元轉譯為 CR-LF 組合輸出上。 此外，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在以讀取和寫入而開啟的讀取或檔案 **"+"**，執行階段程式庫會檢查是否有 CTRL + Z，檔案的結尾，並盡可能加以移除。 這是因為使用[fseek](fseek-fseeki64.md)和[ftell](ftell-ftelli64.md)為的檔案內移動可能會導致[fseek](fseek-fseeki64.md)檔案結尾附近產生不當行為。 **t**選項是 Microsoft 擴充功能，不應在需要 ANSI 可攜性。
+
+如果**t**或**b**中未指定*模式*，則預設轉譯模式由全域變數[_fmode](../../c-runtime-library/fmode.md)。 如果**t**或**b**前置引數，函式失敗並傳回**NULL**。
+
+如需文字和二進位模式的討論，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。
+
+## <a name="requirements"></a>需求
+
+|功能|必要的標頭|
+|--------------|---------------------|
+|**freopen**|\<stdio.h>|
+|**_wfreopen**|\<stdio.h> 或 \<wchar.h>|
+
+通用 Windows 平台 (UWP) 應用程式中不支援主控台。 在主控台中，與相關聯的標準資料流控制代碼**stdin**， **stdout**，和**stderr**，必須重新導向之後 C 執行階段函式可以在 UWP 應用程式中使用它們,. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_freopen.c
+// compile with: /W3
+// This program reassigns stderr to the file
+// named FREOPEN.OUT and writes a line to that file.
+#include <stdio.h>
+#include <stdlib.h>
+
+FILE *stream;
+
+int main( void )
+{
+   // Reassign "stderr" to "freopen.out":
+   stream = freopen( "freopen.out", "w", stderr ); // C4996
+   // Note: freopen is deprecated; consider using freopen_s instead
+
+   if( stream == NULL )
+      fprintf( stdout, "error on freopen\n" );
+   else
+   {
+      fprintf( stdout, "successfully reassigned\n" ); fflush( stdout );
+      fprintf( stream, "This will go to the file 'freopen.out'\n" );
+      fclose( stream );
+   }
+   system( "type freopen.out" );
+}
+```
+
+```Output
+successfully reassigned
+This will go to the file 'freopen.out'
+```
+
+## <a name="see-also"></a>另請參閱
+
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fclose、_fcloseall](fclose-fcloseall.md)<br/>
+[_fdopen、wfdopen](fdopen-wfdopen.md)<br/>
+[_fileno](fileno.md)<br/>
+[fopen、_wfopen](fopen-wfopen.md)<br/>
+[_open、_wopen](open-wopen.md)<br/>
+[_setmode](setmode.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _chdrive | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _chdrive
@@ -33,63 +33,69 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1290f5a29ce2b6d80f98889fbb0fc5709cfa43e4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d2ea43a3c6d890a1e101ae3f3c390b031c5f5ee9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chdrive"></a>_chdrive
-變更目前工作磁碟機。  
-  
+
+變更目前工作磁碟機。
+
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _chdrive(   
-   int drive   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `drive`  
- 1 到 26 範圍內指定目前工作磁碟機的整數 (1=A、2=B 等)。  
-  
-## <a name="return-value"></a>傳回值  
- 若已成功變更目前工作磁碟機即為零 (0)；否則為 -1。  
-  
-## <a name="remarks"></a>備註  
- 如果 `drive` 不在 1 到 26 的範圍內，則會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，**_chdrive** 函式會傳回 -1、將 `errno` 設為 `EACCES`，並將 `_doserrno` 設為 `ERROR_INVALID_DRIVE`。  
-  
- **_chdrive** 函式不是安全執行緒，原因是其取決於本身不是安全執行緒的 **SetCurrentDirectory** 函式。 若要在多執行緒應用程式中安全地使用 **_chdrive**，您必須提供自己的執行緒同步處理。 如需詳細資訊，請前往 [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542)，然後搜尋 **SetCurrentDirectory**。  
-  
- **_chdrive** 函式只會變更目前工作磁碟機；**_chdir** 則會變更目前工作目錄。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|**_chdrive**|\<direct.h>|  
-  
- 如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱 [_getdrive](../../c-runtime-library/reference/getdrive.md) 的範例。  
-  
-## <a name="see-also"></a>請參閱  
- [目錄控制](../../c-runtime-library/directory-control.md)   
- [_chdir、_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
- [_fullpath、_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
- [_getcwd、_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   
- [_getdrive](../../c-runtime-library/reference/getdrive.md)   
- [_mkdir、_wmkdir](../../c-runtime-library/reference/mkdir-wmkdir.md)   
- [_rmdir、_wrmdir](../../c-runtime-library/reference/rmdir-wrmdir.md)   
- [system、_wsystem](../../c-runtime-library/reference/system-wsystem.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _chdrive(
+   int drive
+);
+```
+
+### <a name="parameters"></a>參數
+
+*磁碟機*<br/>
+1 到 26 範圍內指定目前工作磁碟機的整數 (1=A、2=B 等)。
+
+## <a name="return-value"></a>傳回值
+
+若已成功變更目前工作磁碟機即為零 (0)；否則為 -1。
+
+## <a name="remarks"></a>備註
+
+如果*磁碟機*是不在範圍從 1 到 26 無效參數處理常式叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 **_chdrive**函式會傳回-1， **errno**設**EACCES**，和 **_doserrno**設**ERROR_INVALID_DRIVE**。
+
+**_chdrive** 函式不是安全執行緒，原因是其取決於本身不是安全執行緒的 **SetCurrentDirectory** 函式。 若要在多執行緒應用程式中安全地使用 **_chdrive**，您必須提供自己的執行緒同步處理。 如需詳細資訊，請前往 [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542)，然後搜尋 **SetCurrentDirectory**。
+
+**_chdrive** 函式只會變更目前工作磁碟機；**_chdir** 則會變更目前工作目錄。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_chdrive**|\<direct.h>|
+
+如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+請參閱 [_getdrive](getdrive.md) 的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[目錄控制](../../c-runtime-library/directory-control.md)<br/>
+[_chdir、_wchdir](chdir-wchdir.md)<br/>
+[_fullpath、_wfullpath](fullpath-wfullpath.md)<br/>
+[_getcwd、_wgetcwd](getcwd-wgetcwd.md)<br/>
+[_getdrive](getdrive.md)<br/>
+[_mkdir、_wmkdir](mkdir-wmkdir.md)<br/>
+[_rmdir、_wrmdir](rmdir-wrmdir.md)<br/>
+[system、_wsystem](system-wsystem.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "wctomb、_wctomb_l | Microsoft Docs"
-ms.custom: 
+title: wctomb、_wctomb_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wctomb_l
@@ -37,92 +37,98 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adb05340bee89ff86c4ab30a61f32ca53c71519b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fe99a7394e9ec883780a1f70d8cecb004814e39c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
-將寬字元轉換為對應的多位元組字元。 這些函式已有更安全的版本，請參閱 [wctomb_s、_wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int wctomb(  
-   char *mbchar,  
-   wchar_t wchar   
-);  
-int _wctomb_l(  
-   char *mbchar,  
-   wchar_t wchar,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `mbchar`  
- 多位元組字元的位址。  
-  
- `wchar`  
- 寬字元。  
-  
-## <a name="return-value"></a>傳回值  
- 如果 `wctomb` 將寬字元轉換成多位元組字元，它會傳回寬字元的位元組數目 (絕不會大於 `MB_CUR_MAX`)。 如果 `wchar` 是寬字元的 Null 字元 (L'\0')，則 `wctomb` 傳回 1。 如果目標指標 `mbchar` 是 NULL，則 `wctomb` 會傳回 0。 如果轉換不可能在目前的地區設定，`wctomb`傳回-1 和`errno`設`EILSEQ`。  
-  
-## <a name="remarks"></a>備註  
- `wctomb` 函式會將其 `wchar` 引數轉換成對應的多位元組字元，並將結果儲存在 `mbchar`。 您可以在任何程式的任何點呼叫函式。 `wctomb` 會針對任何與地區設定相關的行為使用目前的地區設定，`_wctomb_l` 與 `wctomb` 相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
- `wctomb` 會驗證其參數。 如果 `mbchar` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， `errno` 會設定為 `EINVAL` ，且此函式會傳回 -1。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`wctomb`|\<stdlib.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
- 此程式說明 wctomb 函式的行為。  
-  
-```  
-// crt_wctomb.cpp  
-// compile with: /W3  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   int i;  
-   wchar_t wc = L'a';  
-   char *pmb = (char *)malloc( MB_CUR_MAX );  
-  
-   printf( "Convert a wide character:\n" );  
-   i = wctomb( pmb, wc ); // C4996  
-   // Note: wctomb is deprecated; consider using wctomb_s  
-   printf( "   Characters converted: %u\n", i );  
-   printf( "   Multibyte character: %.1s\n\n", pmb );  
-}  
-```  
-  
-```Output  
-Convert a wide character:  
-   Characters converted: 1  
-   Multibyte character: a  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [資料轉換](../../c-runtime-library/data-conversion.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [_mbclen、mblen、_mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)   
- [mbstowcs、_mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md)   
- [mbtowc、_mbtowc_l](../../c-runtime-library/reference/mbtowc-mbtowc-l.md)   
- [wcstombs、_wcstombs_l](../../c-runtime-library/reference/wcstombs-wcstombs-l.md)   
- [WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)
+
+將寬字元轉換為對應的多位元組字元。 這些函式已有更安全的版本，請參閱 [wctomb_s、_wctomb_s_l](wctomb-s-wctomb-s-l.md)。
+
+## <a name="syntax"></a>語法
+
+```C
+int wctomb(
+   char *mbchar,
+   wchar_t wchar
+);
+int _wctomb_l(
+   char *mbchar,
+   wchar_t wchar,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*mbchar*<br/>
+多位元組字元的位址。
+
+*wchar*<br/>
+寬字元。
+
+## <a name="return-value"></a>傳回值
+
+如果**wctomb**將轉換的寬字元的多位元組字元，它會傳回的位元組數 (不大於**MB_CUR_MAX**) 中的寬字元。 如果*wchar*是寬字元的 null 字元 (L '\0')， **wctomb**傳回 1。 如果目標指標*mbchar*是 NULL， **wctomb**傳回 0。 如果轉換不可能在目前的地區設定， **wctomb**傳回-1 和**errno**設**EILSEQ**。
+
+## <a name="remarks"></a>備註
+
+**Wctomb**函式將其*wchar*對應的多位元組字元的引數，並將儲存在結果*mbchar*。 您可以在任何程式的任何點呼叫函式。 **wctomb**針對任何地區設定相關行為; 使用目前的地區設定 **_wctomb_l**等同於**wctomb**不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+**wctomb**會驗證其參數。 如果*mbchar*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**而且函數會傳回-1。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**wctomb**|\<stdlib.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+此程式說明 wctomb 函式的行為。
+
+```cpp
+// crt_wctomb.cpp
+// compile with: /W3
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   int i;
+   wchar_t wc = L'a';
+   char *pmb = (char *)malloc( MB_CUR_MAX );
+
+   printf( "Convert a wide character:\n" );
+   i = wctomb( pmb, wc ); // C4996
+   // Note: wctomb is deprecated; consider using wctomb_s
+   printf( "   Characters converted: %u\n", i );
+   printf( "   Multibyte character: %.1s\n\n", pmb );
+}
+```
+
+```Output
+Convert a wide character:
+   Characters converted: 1
+   Multibyte character: a
+```
+
+## <a name="see-also"></a>另請參閱
+
+[資料轉換](../../c-runtime-library/data-conversion.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
+[mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
+[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
+[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
+[WideCharToMultiByte](http://msdn.microsoft.com/library/windows/desktop/dd374130)<br/>

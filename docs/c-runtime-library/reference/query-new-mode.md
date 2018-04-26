@@ -1,12 +1,12 @@
 ---
 title: _query_new_mode | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _query_new_mode
@@ -33,50 +33,54 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbbdec8c5a8cd9af5e6a17518cc40bca455b3f98
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67a7b52bc2a16e5c87e6ba83c3ba9c2710c2ed88
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="querynewmode"></a>_query_new_mode
-傳回整數，此整數表示 `_set_new_mode` 為 `malloc` 所設定的新處理常式模式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      int _query_new_mode(  
-   void   
-);  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 傳回 `malloc` 的目前新處理常式模式，也就是 0 或 1。 傳回值 1 表示無法配置記憶體時，`malloc` 會呼叫新的處理常式模式；傳回值 0 則表示不會呼叫。  
-  
-## <a name="remarks"></a>備註  
- C++ `_query_new_mode` 函式會傳回整數，此整數表示 C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md) 函式為 [malloc](../../c-runtime-library/reference/malloc.md) 所設定的新處理常式模式。 此新的處理常式模式會指出無法配置記憶體時，`malloc` 是否會呼叫 [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md) 所設定的新處理常式。 根據預設，`malloc` 不會在失敗時呼叫新處理常式。 您可以用 `_set_new_mode` 覆寫這個行為，以便在失敗時，`malloc` 會呼叫新處理常式，就和 **new** 運算子在無法配置記憶體時所執行的方法相同。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_query_new_mode`|\<new.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [記憶體配置](../../c-runtime-library/memory-allocation.md)   
- [calloc](../../c-runtime-library/reference/calloc.md)   
- [free](../../c-runtime-library/reference/free.md)   
- [realloc](../../c-runtime-library/reference/realloc.md)   
- [_query_new_handler](../../c-runtime-library/reference/query-new-handler.md)
+
+傳回一個整數，表示新的處理常式模式所設定 **_set_new_mode**如**malloc**。
+
+## <a name="syntax"></a>語法
+
+```C
+int _query_new_mode(
+   void
+);
+```
+
+## <a name="return-value"></a>傳回值
+
+傳回目前新處理常式的模式，也就是 0 或 1， **malloc**。 傳回值為 1，表示無法配置記憶體， **malloc**呼叫新的處理常式; 傳回值 0 表示，不會。
+
+## <a name="remarks"></a>備註
+
+C + + **_query_new_mode**函式會傳回一個整數，表示新的處理常式模式所設定的 c + + [_set_new_mode](set-new-mode.md)函式[malloc](malloc.md)。 新的處理常式模式指出是否在無法配置記憶體， **malloc**是新的處理常式呼叫所設定的[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會將新的處理常式呼叫失敗。 您可以使用 **_set_new_mode**因此覆寫這個行為的失敗**malloc**呼叫新的處理常式在相同的方式來**新**運算子會在無法時配置的記憶體。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_query_new_mode**|\<new.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
+[calloc](calloc.md)<br/>
+[free](free.md)<br/>
+[realloc](realloc.md)<br/>
+[_query_new_handler](query-new-handler.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l | Microsoft Docs"
-ms.custom: 
+title: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbspbrk
@@ -53,161 +53,166 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-caps.latest.revision: 
+caps.latest.revision: 30
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 360877af83694d969e07ff0a8933f1f6df64072a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b8cbcd53b46ec99fb81cb962a788c61107373fcf
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
-掃描字串是否有指定字元集的字元。  
-  
+
+掃描字串是否有指定字元集的字元。
+
 > [!IMPORTANT]
->  在 Windows 執行階段中執行的應用程式中無法使用 `_mbspbrk` 和 `_mbspbrk_l`。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-char *strpbrk(  
-   const char *str,  
-   const char *strCharSet   
-); // C only  
-char *strpbrk(  
-   char *str,  
-   const char *strCharSet   
-); // C++ only  
-const char *strpbrk(  
-   const char *str,  
-   const char *strCharSet   
-); // C++ only  
-wchar_t *wcspbrk(  
-   const wchar_t *str,  
-   const wchar_t *strCharSet   
-); // C only  
-wchar_t *wcspbrk(  
-   wchar_t *str,  
-   const wchar_t *strCharSet   
-); // C++ only  
-const wchar_t *wcspbrk(  
-   const wchar_t *str,  
-   const wchar_t *strCharSet   
-); // C++ only  
-unsigned char *_mbspbrk(  
-   const unsigned char *str,  
-   const unsigned char *strCharSet   
-); // C only  
-unsigned char *_mbspbrk(  
-   unsigned char *str,  
-   const unsigned char *strCharSet   
-); // C++ only  
-const unsigned char *_mbspbrk(  
-   const unsigned char *str,  
-   const unsigned char *strCharSet   
-); // C++ only  
-unsigned char *_mbspbrk_l(  
-   const unsigned char *str,  
-   const unsigned char *strCharSet,  
-   _locale_t locale  
-); // C only  
-unsigned char *_mbspbrk_l(  
-   unsigned char *str,  
-   const unsigned char *strCharSet,  
-   _locale_t locale  
-); // C++ only  
-const unsigned char *_mbspbrk_l(  
-   const unsigned char *str,  
-   const unsigned char* strCharSet,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>參數  
- `str`  
- 以 Null 終止的搜尋字串。  
-  
- `strCharSet`  
- 以 Null 結束的字元集。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 如果兩個字串引數沒有共同字元，則傳回 `str` 中 `strCharSet` 第一次出現的任何字元指標，或 `NULL` 指標。  
-  
-## <a name="remarks"></a>備註  
- `strpbrk` 函式會傳回屬於 `strCharSet` 字元集的 `str` 中第一次出現的字元指標。 搜尋不包含終止的 Null 字元。  
-  
- `wcspbrk` 和 `_mbspbrk` 是寬字元和多位元組字元版本的 `strpbrk`。 `wcspbrk` 的引數和傳回值是寬字元字串；`_mbspbrk` 的引數則是多位元組字元字串。  
-  
- `_mbspbrk` 會驗證其參數。 如果 `str` 或 `strCharSet` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`_mbspbrk` 會傳回 `NULL`，且 `errno` 設為 `EINVAL`。 `strpbrk` 和 `wcspbrk` 不會驗證其參數。 除此之外，這三個函式的行為相同。  
-  
- `_mbspbrk` 類似於 `_mbscspn`，不同之處在於 `_mbspbrk` 會傳回指標，而不是 [size_t](../../c-runtime-library/standard-types.md) 類型的值。  
-  
- 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 巨集`_CRT_CONST_CORRECT_OVERLOADS`如果兩個定義`const`和非-`const`這些函式的版本可供使用。 如果您需要非`const`行為對於這兩個 c + + 多載中，定義符號`_CONST_RETURN`。  
-  
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 尾碼的版本與其相同，只不過它會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcspbrk`|`strpbrk`|`_mbspbrk`|`wcspbrk`|  
-|**n/a**|**不適用**|`_mbspbrk_l`|**n/a**|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`strpbrk`|\<string.h>|  
-|`wcspbrk`|\<string.h> 或 \<wchar.h>|  
-|`_mbspbrk`, `_mbspbrk_l`|\<mbstring.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_strpbrk.c  
-  
-#include <string.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char string[100] = "The 3 men and 2 boys ate 5 pigs\n";  
-   char *result = NULL;  
-  
-   // Return pointer to first digit in "string".  
-   printf( "1: %s\n", string );  
-   result = strpbrk( string, "0123456789" );  
-   printf( "2: %s\n", result++ );  
-   result = strpbrk( result, "0123456789" );  
-   printf( "3: %s\n", result++ );  
-   result = strpbrk( result, "0123456789" );  
-   printf( "4: %s\n", result );  
-}  
-```  
-  
-```Output  
-1: The 3 men and 2 boys ate 5 pigs  
-  
-2: 3 men and 2 boys ate 5 pigs  
-  
-3: 2 boys ate 5 pigs  
-  
-4: 5 pigs  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strcspn、wcscspn、_mbscspn、_mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [strchr、wcschr、_mbschr、_mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
- [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)
+> **_mbspbrk**和 **_mbspbrk_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+char *strpbrk(
+   const char *str,
+   const char *strCharSet
+); // C only
+char *strpbrk(
+   char *str,
+   const char *strCharSet
+); // C++ only
+const char *strpbrk(
+   const char *str,
+   const char *strCharSet
+); // C++ only
+wchar_t *wcspbrk(
+   const wchar_t *str,
+   const wchar_t *strCharSet
+); // C only
+wchar_t *wcspbrk(
+   wchar_t *str,
+   const wchar_t *strCharSet
+); // C++ only
+const wchar_t *wcspbrk(
+   const wchar_t *str,
+   const wchar_t *strCharSet
+); // C++ only
+unsigned char *_mbspbrk(
+   const unsigned char *str,
+   const unsigned char *strCharSet
+); // C only
+unsigned char *_mbspbrk(
+   unsigned char *str,
+   const unsigned char *strCharSet
+); // C++ only
+const unsigned char *_mbspbrk(
+   const unsigned char *str,
+   const unsigned char *strCharSet
+); // C++ only
+unsigned char *_mbspbrk_l(
+   const unsigned char *str,
+   const unsigned char *strCharSet,
+   _locale_t locale
+); // C only
+unsigned char *_mbspbrk_l(
+   unsigned char *str,
+   const unsigned char *strCharSet,
+   _locale_t locale
+); // C++ only
+const unsigned char *_mbspbrk_l(
+   const unsigned char *str,
+   const unsigned char* strCharSet,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>參數
+
+*str*<br/>
+以 Null 終止的搜尋字串。
+
+*strCharSet*<br/>
+以 Null 結束的字元集。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+讓指標回到第一個出現的任何字元*strCharSet*中*str*，或**NULL**如果兩個字串引數的任何字元在一般的指標。
+
+## <a name="remarks"></a>備註
+
+**Strpbrk**函式會傳回第一個出現的字元指標*str*屬於中的字元組*strCharSet*。 搜尋不包含終止的 Null 字元。
+
+**wcspbrk**和 **_mbspbrk**是寬字元和多位元組字元版本的**strpbrk**。 引數和傳回值**wcspbrk**是寬字元字串; **_mbspbrk**是多位元組字元字串。
+
+**_mbspbrk**會驗證其參數。 如果*str*或*strCharSet*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行 **_mbspbrk**傳回**NULL**並設定**errno**至**EINVAL**。 **strpbrk**和**wcspbrk**不會驗證它們的參數。 除此之外，這三個函式的行為相同。
+
+**_mbspbrk**類似於 **_mbscspn**不同之處在於 **_mbspbrk**傳回指標，而不是類型的值[size_t](../../c-runtime-library/standard-types.md)。
+
+在 C 中，這些函數會使用 * * const * * 的第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載 * * const * * 將指標傳回至**const **; 版本採用一個指向非**const * * 將指標傳回至非**const **。巨集 **_CRT_CONST_CORRECT_OVERLOADS**如果兩個定義**const * * 和非-** const * * 這些函式的版本可供使用。如果您需要非**const * * 對於這兩個 c + + 多載中，行為會定義符號 **_CONST_RETURN**。
+
+輸出值會影響的設定**LC_CTYPE**類別目錄設定地區設定; 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些功能，但不包含新版 **_l**後置詞使用針對此與地區設定相關行為使用目前地區設定; 具有版本 **_l**尾碼是完全相同，不同之處在於它會使用的地區設定參數改為傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcspbrk**|**strpbrk**|**_mbspbrk**|**wcspbrk**|
+|**n/a**|**n/a**|**_mbspbrk_l**|**n/a**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**strpbrk**|\<string.h>|
+|**wcspbrk**|\<string.h> 或 \<wchar.h>|
+|**_mbspbrk**， **_mbspbrk_l**|\<mbstring.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_strpbrk.c
+
+#include <string.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char string[100] = "The 3 men and 2 boys ate 5 pigs\n";
+   char *result = NULL;
+
+   // Return pointer to first digit in "string".
+   printf( "1: %s\n", string );
+   result = strpbrk( string, "0123456789" );
+   printf( "2: %s\n", result++ );
+   result = strpbrk( result, "0123456789" );
+   printf( "3: %s\n", result++ );
+   result = strpbrk( result, "0123456789" );
+   printf( "4: %s\n", result );
+}
+```
+
+```Output
+1: The 3 men and 2 boys ate 5 pigs
+
+2: 3 men and 2 boys ate 5 pigs
+
+3: 2 boys ate 5 pigs
+
+4: 5 pigs
+```
+
+## <a name="see-also"></a>另請參閱
+
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
+[strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
+[strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>

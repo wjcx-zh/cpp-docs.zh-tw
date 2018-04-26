@@ -1,12 +1,12 @@
 ---
-title: "memcpy_s、wmemcpy_s | Microsoft Docs"
-ms.custom: 
+title: memcpy_s、wmemcpy_s | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - memcpy_s
@@ -33,124 +33,129 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-caps.latest.revision: 
+caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16926cfb0f95911b3e272013167e7fa09b072b25
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5442f70e246dd8e82a6f7b3e1e78810c6d197f41
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
-複製緩衝區之間的位元組。 這些是 [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-errno_t memcpy_s(  
-   void *dest,  
-   size_t destSize,  
-   const void *src,  
-   size_t count   
-);  
-errno_t wmemcpy_s(  
-   wchar_t *dest,  
-   size_t destSize,  
-   const wchar_t *src,  
-   size_t count  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `dest`  
- 新的緩衝區。  
-  
- `destSize`  
- memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位元組為單位)。  
-  
- `src`  
- 要複製的緩衝區。  
-  
- `count`  
- 要複製的字元數目。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功，就是零，如果失敗，則為錯誤碼。  
-  
-### <a name="error-conditions"></a>錯誤狀況  
-  
-|`dest`|`destSize`|`src`|`count`|傳回值|`dest` 的內容。|  
-|------------|----------------|-----------|---|------------------|------------------------|  
-|any|any|any|0|0|未修改|  
-|`NULL`|any|any|非零|`EINVAL`|未修改|  
-|any|any|`NULL`|非零|`EINVAL`|`dest` 已歸零|  
-|any|< `count`|any|非零|`ERANGE`|`dest` 已歸零|  
-  
-## <a name="remarks"></a>備註  
- `memcpy_s` 會將 `count` 位元組從 `src` 複製至 `dest`；`wmemcpy_s` 會複製 `count` 個寬字元 (兩個位元組)。 如果來源和目的地重疊，則 `memcpy_s` 的行為是未定義。 使用 `memmove_s` 處理重疊的區域。  
-  
- 這些函式會驗證它們的參數。 如果 `count` 為非零且 `dest` 或 `src` 為 null 指標，或是 `destSize` 小於 `count`，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `EINVAL` 或 `ERANGE`，並將 `errno` 設為傳回值。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`memcpy_s`|\<memory.h> 或 \<string.h>|  
-|`wmemcpy_s`|\<wchar.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_memcpy_s.c  
-// Copy memory in a more secure way.  
-  
-#include <memory.h>  
-#include <stdio.h>  
-  
-int main()  
-{  
-   int a1[10], a2[100], i;  
-   errno_t err;  
-  
-   // Populate a2 with squares of integers  
-   for (i = 0; i < 100; i++)  
-   {  
-      a2[i] = i*i;  
-   }  
-  
-   // Tell memcpy_s to copy 10 ints (40 bytes), giving  
-   // the size of the a1 array (also 40 bytes).  
-   err = memcpy_s(a1, sizeof(a1), a2, 10 * sizeof (int) );      
-   if (err)  
-   {  
-      printf("Error executing memcpy_s.\n");  
-   }  
-   else  
-   {  
-     for (i = 0; i < 10; i++)  
-       printf("%d ", a1[i]);  
-   }  
-   printf("\n");  
-}  
-```  
-  
-```Output  
-0 1 4 9 16 25 36 49 64 81   
-```  
-  
-## <a name="see-also"></a>請參閱  
- [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   
- [_memccpy](../../c-runtime-library/reference/memccpy.md)   
- [memchr、wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   
- [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
- [memmove、wmemmove](../../c-runtime-library/reference/memmove-wmemmove.md)   
- [memset、wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
- [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)   
- [strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)
+
+複製緩衝區之間的位元組。 這些是 [memcpy、wmemcpy](memcpy-wmemcpy.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
+
+## <a name="syntax"></a>語法
+
+```C
+errno_t memcpy_s(
+   void *dest,
+   size_t destSize,
+   const void *src,
+   size_t count
+);
+errno_t wmemcpy_s(
+   wchar_t *dest,
+   size_t destSize,
+   const wchar_t *src,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>參數
+
+*dest*<br/>
+新的緩衝區。
+
+*destSize*<br/>
+memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位元組為單位)。
+
+*src*<br/>
+要複製的緩衝區。
+
+*count*<br/>
+要複製的字元數目。
+
+## <a name="return-value"></a>傳回值
+
+如果成功，就是零，如果失敗，則為錯誤碼。
+
+### <a name="error-conditions"></a>錯誤狀況
+
+|*dest*|*destSize*|*src*|*count*|傳回值|內容*目的地*|
+|------------|----------------|-----------|---|------------------|------------------------|
+|任何|任何|任何|0|0|未修改|
+|**NULL**|任何|任何|非零|**EINVAL**|未修改|
+|任何|任何|**NULL**|非零|**EINVAL**|*目的地*已清空|
+|任何|< *計數*|任何|非零|**ERANGE**|*目的地*已清空|
+
+## <a name="remarks"></a>備註
+
+**memcpy_s**複本*計數*位元組從*src*至*目的地*;**wmemcpy_s**複本*計數*寬字元 （兩個位元組為單位）。 如果來源和目的地重疊，行為**memcpy_s**是未定義。 使用**memmove_s**處理重疊的區域。
+
+這些函式會驗證它們的參數。 如果*計數*為非零和*目的地*或*src*為 null 指標，或*destSize*小於*計數*，這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回**EINVAL**或**為 ERANGE**並設定**errno**的傳回值。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**memcpy_s**|\<memory.h> 或 \<string.h>|
+|**wmemcpy_s**|\<wchar.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_memcpy_s.c
+// Copy memory in a more secure way.
+
+#include <memory.h>
+#include <stdio.h>
+
+int main()
+{
+   int a1[10], a2[100], i;
+   errno_t err;
+
+   // Populate a2 with squares of integers
+   for (i = 0; i < 100; i++)
+   {
+      a2[i] = i*i;
+   }
+
+   // Tell memcpy_s to copy 10 ints (40 bytes), giving
+   // the size of the a1 array (also 40 bytes).
+   err = memcpy_s(a1, sizeof(a1), a2, 10 * sizeof (int) );
+   if (err)
+   {
+      printf("Error executing memcpy_s.\n");
+   }
+   else
+   {
+     for (i = 0; i < 10; i++)
+       printf("%d ", a1[i]);
+   }
+   printf("\n");
+}
+```
+
+```Output
+0 1 4 9 16 25 36 49 64 81
+```
+
+## <a name="see-also"></a>另請參閱
+
+[緩衝區操作](../../c-runtime-library/buffer-manipulation.md)<br/>
+[_memccpy](memccpy.md)<br/>
+[memchr、wmemchr](memchr-wmemchr.md)<br/>
+[memcmp、wmemcmp](memcmp-wmemcmp.md)<br/>
+[memmove、wmemmove](memmove-wmemmove.md)<br/>
+[memset、wmemset](memset-wmemset.md)<br/>
+[strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
+[strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)<br/>

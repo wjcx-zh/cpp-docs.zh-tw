@@ -1,12 +1,12 @@
 ---
-title: "strrchr、wcsrchr、_mbsrchr、_mbsrchr_l | Microsoft Docs"
-ms.custom: 
+title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strrchr
@@ -50,130 +50,136 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-caps.latest.revision: 
+caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2381a38dcf3532d50611068811e94101a3512746
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da5f430108b78c7c62a4acd1e2347cc7b689c97e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
-掃描字串尋找最後一個字元。  
-  
+
+掃描字串尋找最後一個字元。
+
 > [!IMPORTANT]
->  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsrchr` 和 `_mbsrchr_l`。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-char *strrchr(  
-   const char *str,  
-   int c   
-); // C only  
-char *strrchr(  
-   char *str,  
-   int c   
-); // C++ only  
-const char *strrchr(  
-   const char *str,  
-   int c   
-); // C++ only  
-wchar_t *wcsrchr(  
-   const wchar_t *str,  
-   wchar_t c   
-); // C only  
-wchar_t *wcsrchr(  
-   wchar_t *str,  
-   wchar_t c   
-); // C++ only  
-const wchar_t *wcsrchr(  
-   const wchar_t *str,  
-   wchar_t c   
-); // C++ only  
-unsigned char *_mbsrchr(  
-   const unsigned char *str,  
-   unsigned int c   
-); // C only  
-unsigned char *_mbsrchr(  
-   unsigned char *str,  
-   unsigned int c   
-); // C++ only  
-const unsigned char *_mbsrchr(  
-   const unsigned char *str,  
-   unsigned int c   
-); // C++ only  
-unsigned char *_mbsrchr_l(  
-   const unsigned char *str,  
-   unsigned int c,  
-   _locale_t locale  
-); // C only  
-unsigned char *_mbsrchr_l(  
-   unsigned char *str,  
-   unsigned int c,  
-   _locale_t locale  
-); // C++ only  
-const unsigned char *_mbsrchr_l(  
-   const unsigned char *str,  
-   unsigned int c,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>參數  
- `str`  
- 以 Null 終止的待搜尋字串。  
-  
- `c`  
- 待找出的字元。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 傳回 `str` 中最後一次出現的 `c` 指標，或如果找不到 `c`，則傳回 `NULL`。  
-  
-## <a name="remarks"></a>備註  
- `strrchr` 函式會尋找 `str` 中最後一次出現的 `c` (轉換成 `char`)。 搜尋包含終止的 Null 字元。  
-  
- `wcsrchr` 和 `_mbsrchr` 是寬字元和多位元組字元版本的 `strrchr`。 `wcsrchr` 的引數和傳回值是寬字元字串；`_mbsrchr` 的引數則是多位元組字元字串。  
-  
- 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 巨集`_CRT_CONST_CORRECT_OVERLOADS`如果兩個定義`const`和非-`const`這些函式的版本可供使用。 如果您需要非`const`行為對於這兩個 c + + 多載中，定義符號`_CONST_RETURN`。  
-  
- `_mbsrchr` 會驗證其參數。 如果 `str` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`errno` 會設為 `EINVAL`，且 `_mbsrchr` 會傳回 0。 `strrchr` 和 `wcsrchr` 不會驗證其參數。 除此之外，這三個函式的行為相同。  
-  
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|  
-|**n/a**|**不適用**|`_mbsrchr_l`|**n/a**|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`strrchr`|\<string.h>|  
-|`wcsrchr`|\<string.h> 或 \<wchar.h>|  
-|`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
- 如需使用 `strrchr` 的範例，請參閱 [strchr](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [strchr、wcschr、_mbschr、_mbschr_l](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)   
- [strcspn、wcscspn、_mbscspn、_mbscspn_l](../../c-runtime-library/reference/strcspn-wcscspn-mbscspn-mbscspn-l.md)   
- [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l](../../c-runtime-library/reference/strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)   
- [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **_mbsrchr**和 **_mbsrchr_l**不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+char *strrchr(
+   const char *str,
+   int c
+); // C only
+char *strrchr(
+   char *str,
+   int c
+); // C++ only
+const char *strrchr(
+   const char *str,
+   int c
+); // C++ only
+wchar_t *wcsrchr(
+   const wchar_t *str,
+   wchar_t c
+); // C only
+wchar_t *wcsrchr(
+   wchar_t *str,
+   wchar_t c
+); // C++ only
+const wchar_t *wcsrchr(
+   const wchar_t *str,
+   wchar_t c
+); // C++ only
+unsigned char *_mbsrchr(
+   const unsigned char *str,
+   unsigned int c
+); // C only
+unsigned char *_mbsrchr(
+   unsigned char *str,
+   unsigned int c
+); // C++ only
+const unsigned char *_mbsrchr(
+   const unsigned char *str,
+   unsigned int c
+); // C++ only
+unsigned char *_mbsrchr_l(
+   const unsigned char *str,
+   unsigned int c,
+   _locale_t locale
+); // C only
+unsigned char *_mbsrchr_l(
+   unsigned char *str,
+   unsigned int c,
+   _locale_t locale
+); // C++ only
+const unsigned char *_mbsrchr_l(
+   const unsigned char *str,
+   unsigned int c,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>參數
+
+*str*<br/>
+以 Null 終止的待搜尋字串。
+
+*C*<br/>
+待找出的字元。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+傳回最後一個出現的指標*c*中*str*，或**NULL**如果*c*找不到。
+
+## <a name="remarks"></a>備註
+
+**Strrchr**函式會尋找，最後一個出現*c* (轉換成**char**) 中*str*。 搜尋包含終止的 Null 字元。
+
+**wcsrchr**和 **_mbsrchr**是寬字元和多位元組字元版本的**strrchr**。 引數和傳回值**wcsrchr**是寬字元字串; **_mbsrchr**是多位元組字元字串。
+
+在 C 中，這些函數會使用 * * const * * 的第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載 * * const * * 將指標傳回至**const **; 版本採用一個指向非**const * * 將指標傳回至非**const **。巨集 **_CRT_CONST_CORRECT_OVERLOADS**如果兩個定義**const * * 和非-** const * * 這些函式的版本可供使用。如果您需要非**const * * 對於這兩個 c + + 多載中，行為會定義符號 **_CONST_RETURN**。
+
+**_mbsrchr**會驗證其參數。 如果*str*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**和 **_mbsrchr**傳回 0。 **strrchr**和**wcsrchr**不會驗證它們的參數。 除此之外，這三個函式的行為相同。
+
+輸出值會影響的設定**LC_CTYPE**類別目錄設定地區設定; 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsrchr**|**strrchr**|**_mbsrchr**|**wcsrchr**|
+|**n/a**|**n/a**|**_mbsrchr_l**|**n/a**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**strrchr**|\<string.h>|
+|**wcsrchr**|\<string.h> 或 \<wchar.h>|
+|**_mbsrchr**， **_mbsrchr_l**|\<mbstring.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+如需使用**strrchr**，請參閱[strchr](strchr-wcschr-mbschr-mbschr-l.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
+[strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
+[_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l](strpbrk-wcspbrk-mbspbrk-mbspbrk-l.md)<br/>
+[strspn、wcsspn、_mbsspn、_mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

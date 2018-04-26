@@ -1,12 +1,12 @@
 ---
-title: "_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l | Microsoft Docs"
-ms.custom: 
+title: _vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _vcprintf_s
@@ -52,126 +52,131 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f0ff7a77da54515e879315843cd6544d27194b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b2ec9a820aa827a194f0955a49da195db825e7d5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
-使用引數清單的指標，將格式化輸出寫入主控台。 這些版本的 [_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l](../../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
-  
+
+使用引數清單的指標，將格式化輸出寫入主控台。 這些版本的 [_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _vcprintf(  
-   const char* format,  
-   va_list argptr  
-);  
-int _vcprintf(  
-   const char* format,  
-   locale_t locale,  
-   va_list argptr  
-);  
-int _vcwprintf_s(  
-   const wchar_t* format,  
-   va_list argptr  
-);  
-int _vcwprintf_s_l(  
-   const wchar_t* format,  
-   locale_t locale,  
-   va_list argptr  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `format`  
- 格式規格。  
-  
- `argptr`  
- 引數清單的指標。  
-  
- `locale`  
- 要使用的地區設定。  
-  
- 如需詳細資訊，請參閱[格式規格語法：printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
-  
-## <a name="return-value"></a>傳回值  
- 寫入的字元數，或是當發生輸出錯誤時為負值。  
-  
- 與這些函式的不安全版本類似，如果 `format` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 此外，與這些函式的不安全版本不同，如果 `format` 未指定有效格式，則會產生無效參數例外狀況。 如果允許繼續執行，這些函式會傳回錯誤碼，並將 `errno` 設為該錯誤碼。 如果不套用更精確的值，預設的錯誤碼是 `EINVAL`。  
-  
-## <a name="remarks"></a>備註  
- 所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 `_vcwprintf_s` 是寬字元版本的 `_vcprintf_s`。 它接受寬字元字串作為引數。  
-  
- 這些有 `_l` 尾碼的函式版本都相同，不同之處在於會使用傳入的地區設定參數，而不使用目前的地區設定。  
-  
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _vcprintf(
+   const char* format,
+   va_list argptr
+);
+int _vcprintf(
+   const char* format,
+   locale_t locale,
+   va_list argptr
+);
+int _vcwprintf_s(
+   const wchar_t* format,
+   va_list argptr
+);
+int _vcwprintf_s_l(
+   const wchar_t* format,
+   locale_t locale,
+   va_list argptr
+);
+```
+
+### <a name="parameters"></a>參數
+
+*格式*<br/>
+格式規格。
+
+*argptr*<br/>
+引數清單的指標。
+
+*locale*<br/>
+要使用的地區設定。
+
+如需詳細資訊，請參閱[格式規格語法：printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+
+## <a name="return-value"></a>傳回值
+
+寫入的字元數，或是當發生輸出錯誤時為負值。
+
+如果要較不安全的版本，這些函式，*格式*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 此外，與不同的是較不安全的版本，這些函式，如果*格式*未指定有效的格式，會產生無效參數例外狀況。 若要繼續，這些函數會傳回錯誤程式碼和設定允許執行**errno**該錯誤碼。 預設的錯誤代碼是**EINVAL**如果未套用更精確的值。
+
+## <a name="remarks"></a>備註
+
+所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf_s**是寬字元版本的 **_vcprintf_s**。 它接受寬字元字串作為引數。
+
+有這些函式的版本 **_l**尾碼是一樣的不同之處在於它們使用傳入的地區設定參數，而不是目前的地區設定。
+
 > [!IMPORTANT]
->  確認 `format` 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_vtcprintf_s`|`_vcprintf_s`|`_vcprintf_s`|`_vcwprintf_s`|  
-|`_vtcprintf_s_l`|`_vcprintf_s_l`|`_vcprintf_s_l`|`_vcwprintf_s_l`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|選擇性標頭|  
-|-------------|---------------------|----------------------|  
-|`_vcprintf_s`, `_vcprintf_s_l`|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|  
-|`_vcwprintf_s`, `_vcwprintf_s_l`|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  
-  
- \* UNIX V 相容性的必要項目。  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_vcprintf_s.cpp  
-#include <conio.h>  
-#include <stdarg.h>  
-  
-// An error formatting function used to print to the console.  
-int eprintf_s(const char* format, ...)  
-{  
-  va_list args;  
-  va_start(args, format);  
-  int result = _vcprintf_s(format, args);  
-  va_end(args);  
-  return result;
-}  
-  
-int main()  
-{  
-   eprintf_s("  (%d:%d): Error %s%d : %s\n", 10, 23, "C", 2111,  
-           "<some error text>");  
-   eprintf_s("  (Related to symbol '%s' defined on line %d).\n",  
-           "<symbol>", 5 );  
-}  
-```  
-  
-```Output  
-(10,23): Error C2111 : <some error text>  
-  (Related to symbol '<symbol>' defined on line 5).  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
- [vprintf 函式](../../c-runtime-library/vprintf-functions.md)   
- [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   
- [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_vtcprintf_s**|**_vcprintf_s**|**_vcprintf_s**|**_vcwprintf_s**|
+|**_vtcprintf_s_l**|**_vcprintf_s_l**|**_vcprintf_s_l**|**_vcwprintf_s_l**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|選擇性標頭|
+|-------------|---------------------|----------------------|
+|**_vcprintf_s**， **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf_s**， **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+
+\* UNIX V 相容性的必要項目。
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```cpp
+// crt_vcprintf_s.cpp
+#include <conio.h>
+#include <stdarg.h>
+
+// An error formatting function used to print to the console.
+int eprintf_s(const char* format, ...)
+{
+    va_list args;
+    va_start(args, format);
+    int result = _vcprintf_s(format, args);
+    va_end(args);
+    return result;
+}
+
+int main()
+{
+    eprintf_s("(%d:%d): Error %s%d : %s\n", 10, 23, "C", 2111,
+              "<some error text>");
+    eprintf_s("    (Related to symbol '%s' defined on line %d).\n",
+              "<symbol>", 5 );
+}
+```
+
+```Output
+(10,23): Error C2111 : <some error text>
+    (Related to symbol '<symbol>' defined on line 5).
+```
+
+## <a name="see-also"></a>另請參閱
+
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[vprintf 函式](../../c-runtime-library/vprintf-functions.md)<br/>
+[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
+[fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
+[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>

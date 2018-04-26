@@ -1,12 +1,12 @@
 ---
-title: "_mbclen、mblen、_mblen_l | Microsoft Docs"
-ms.custom: 
+title: _mbclen、mblen、_mblen_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbclen
@@ -45,124 +45,127 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-caps.latest.revision: 
+caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 460de51d8f969f275ed392d293f90f517c168971
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4f0478d5d6337d185d30a7fee8d012104bdff13d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen、mblen、_mblen_l
-取得長度，並判斷多位元組字元的有效性。  
-  
+
+取得長度，並判斷多位元組字元的有效性。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-size_t _mbclen(  
-   const unsigned char *c   
-);  
-int mblen(  
-   const char *mbstr,  
-   size_t count   
-);  
-int _mblen_l(  
-   const char *mbstr,  
-   size_t count,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 多位元組字元。  
-  
- `mbstr`  
- 多位元組字元位元組序列的位址。  
-  
- `count`  
- 要檢查的位元組數目。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- `_mbclen` 會根據多位元組字元 `c` 是 1 或 2 個位元組長，傳回 1 或 2。 `_mbclen` 不會傳回錯誤。 如果 `mbstr` 不是 `NULL`，`mblen` 會傳回多位元組字元的長度 (以位元組為單位)。 如果 `mbstr` 為 `NULL`，或是指向寬字元的 Null 字元，`mblen` 會傳回 0。 如果物件的`mbstr`指向不會構成有效的多位元組字元內第一個`count`字元，`mblen`傳回-1。  
-  
-## <a name="remarks"></a>備註  
- `_mbclen` 函式會傳回多位元組字元 `c` 的長度 (以位元組為單位)。 如果 `c` 未指向隱含呼叫 `_ismbblead` 所決定之多位元組字元的前導位元組，`_mbclen` 的結果會無法預測。  
-  
- 如果它是有效的多位元組字元，而且判斷多位元組字元與字碼頁的關聯有效，`mbstr` 會傳回 `mblen` 的長度 (以位元組為單位)。 `mblen` 會檢查 `mbstr` 中所包含的 `count` 個或更少個位元組，但不得超過 `MB_CUR_MAX` 個位元組。  
-  
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tclen`|巨集或內嵌函式的對應|`_mbclen`|巨集或內嵌函式的對應|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_mbclen`|\<mbstring.h>|  
-|`mblen`|\<stdlib.h>|  
-|`_mblen_l`|\<stdlib.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_mblen.c  
-/* illustrates the behavior of the mblen function  
- */  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-    int      i;  
-    char    *pmbc = (char *)malloc( sizeof( char ) );  
-    wchar_t  wc   = L'a';  
-  
-    printf( "Convert wide character to multibyte character:\n" );  
-    wctomb_s( &i, pmbc, sizeof(char), wc );  
-    printf( "  Characters converted: %u\n", i );  
-    printf( "  Multibyte character: %x\n\n", *pmbc );  
-  
-    i = mblen( pmbc, MB_CUR_MAX );  
-    printf( "Length in bytes of multibyte character %x: %u\n", *pmbc, i );  
-  
-    pmbc = NULL;  
-    i = mblen( pmbc, MB_CUR_MAX );  
-    printf( "Length in bytes of NULL multibyte character %x: %u\n", pmbc, i );  
-}  
-```  
-  
-## <a name="output"></a>輸出  
-  
-```  
-Convert wide character to multibyte character:  
-  Characters converted: 1  
-  Multibyte character: 61  
-  
-Length in bytes of multibyte character 61: 1  
-Length in bytes of NULL multibyte character 0: 0  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [字元分類](../../c-runtime-library/character-classification.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbccpy、_mbccpy_l](../../c-runtime-library/reference/mbccpy-mbccpy-l.md)   
- [strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+size_t _mbclen(
+   const unsigned char *c
+);
+int mblen(
+   const char *mbstr,
+   size_t count
+);
+int _mblen_l(
+   const char *mbstr,
+   size_t count,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+多位元組字元。
+
+*mbstr*<br/>
+多位元組字元位元組序列的位址。
+
+*count*<br/>
+要檢查的位元組數目。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+**_mbclen**根據是否傳回 1 或 2，多位元組字元*c* 1 或 2 的長度是位元組。 沒有任何錯誤傳回的 **_mbclen**。 如果*mbstr*不**NULL**， **mblen**傳回長度，以位元組為單位的多位元組字元。 如果*mbstr*是**NULL**或它所指向的寬字元 null 字元**mblen**傳回 0。 如果物件的*mbstr*指向不會構成有效的多位元組字元內第一個*計數*字元， **mblen**傳回-1。
+
+## <a name="remarks"></a>備註
+
+**_Mbclen**函式會傳回長度，以位元組為單位的多位元組字元*c*。 如果*c*並未指向的隱含呼叫所決定的多位元組字元的前導位元組 **_ismbblead**，結果 **_mbclen**無法預測。
+
+**mblen**傳回的長度，以位元組為單位的*mbstr*如果它是有效的多位元組字元，並判斷多位元組字元的字碼頁相關聯的有效性。 **mblen**檢查*計數*或中包含的位元組更少*mbstr*，但是不能超過**MB_CUR_MAX**位元組。
+
+輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tclen**|巨集或內嵌函式的對應|**_mbclen**|巨集或內嵌函式的對應|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_mbclen**|\<mbstring.h>|
+|**mblen**|\<stdlib.h>|
+|**_mblen_l**|\<stdlib.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_mblen.c
+/* illustrates the behavior of the mblen function
+*/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void )
+{
+    int      i;
+    char    *pmbc = (char *)malloc( sizeof( char ) );
+    wchar_t  wc   = L'a';
+
+    printf( "Convert wide character to multibyte character:\n" );
+    wctomb_s( &i, pmbc, sizeof(char), wc );
+    printf( "   Characters converted: %u\n", i );
+    printf( "   Multibyte character: %x\n\n", *pmbc );
+
+    i = mblen( pmbc, MB_CUR_MAX );
+    printf( "Length in bytes of multibyte character %x: %u\n", *pmbc, i );
+
+    pmbc = NULL;
+    i = mblen( pmbc, MB_CUR_MAX );
+    printf( "Length in bytes of NULL multibyte character %x: %u\n", pmbc, i );
+}
+```
+
+```Output
+Convert wide character to multibyte character:
+   Characters converted: 1
+   Multibyte character: 61
+
+Length in bytes of multibyte character 61: 1
+Length in bytes of NULL multibyte character 0: 0
+```
+
+## <a name="see-also"></a>另請參閱
+
+[字元分類](../../c-runtime-library/character-classification.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md)<br/>
+[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>

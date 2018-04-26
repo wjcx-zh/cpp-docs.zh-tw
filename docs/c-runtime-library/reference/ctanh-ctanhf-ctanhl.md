@@ -1,13 +1,13 @@
 ---
-title: "ctanh、ctanhf、ctanhl | Microsoft Docs"
-ms.custom: 
+title: ctanh、ctanhf、ctanhl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ctanh
@@ -40,75 +40,80 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae85904fac6b68dfc04559dfe94c640477d12fb2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9a16e0e4afb901fce5c025165f62f9f0196065c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
-計算複數的複雜雙曲正切值。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-_Dcomplex ctanh(   
-   _Dcomplex z   
-);  
-_Fcomplex ctanh(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex ctanh(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex ctanhf(   
-   _Fcomplex z   
-);  
-_Lcomplex ctanhl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `z`  
- 代表角度的複數 (弧度)。  
-  
-## <a name="return-value"></a>傳回值  
- `z` 的複雜雙曲正切值。  
-  
-|輸入|SEH 例外狀況|`_matherr` 例外狀況|  
-|-----------|-------------------|--------------------------|  
-|± ∞、QNAN、IND|無|_DOMAIN|  
-|± ∞ （tan、 tanf）|無效|_DOMAIN|  
-  
-## <a name="remarks"></a>備註  
- 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `ctanh` 和 `_Fcomplex` 值的 `_Lcomplex` 的多載。 在 C 程式中， `ctanh` 會一律採用及傳回 `_Dcomplex` 。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|C 標頭|C++ 標頭|  
-|-------------|--------------|------------------|  
-|`ctanh`,               `ctanhf`, `ctanhl`|\<complex.h>|\<ccomplex>|  
-  
- 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [catanh、catanhf、catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [catan、catanf、catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh、csinhf、csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh、casinhf、casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh、ccoshf、ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh、cacoshf、cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [cacos、cacosf、cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
- [ctan、ctanf、ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin、csinf、csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin、casinf、casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos、ccosf、ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt、csqrtf、csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+計算複數的複雜雙曲正切值。
+
+## <a name="syntax"></a>語法
+
+```C
+_Dcomplex ctanh(
+   _Dcomplex z
+);
+_Fcomplex ctanh(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex ctanh(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex ctanhf(
+   _Fcomplex z
+);
+_Lcomplex ctanhl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>參數
+
+*z*<br/>
+代表角度的複數 (弧度)。
+
+## <a name="return-value"></a>傳回值
+
+複雜的雙曲線正切函數*z*。
+
+|輸入|SEH 例外狀況|**_matherr**例外狀況|
+|-----------|-------------------|--------------------------|
+|± ∞、QNAN、IND|無|_DOMAIN|
+|± ∞ （tan、 tanf）|無效|_DOMAIN|
+
+## <a name="remarks"></a>備註
+
+因為 c + + 允許多載，所以您可以呼叫的多載**ctanh**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **ctanh**一律採用並傳回 **_Dcomplex**值。
+
+## <a name="requirements"></a>需求
+
+|常式|C 標頭|C++ 標頭|
+|-------------|--------------|------------------|
+|**ctanh**， **ctanhf**， **ctanhl**|\<complex.h>|\<ccomplex>|
+
+如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
+[catan、catanf、catanl](catan-catanf-catanl.md)<br/>
+[csinh、csinhf、csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh、casinhf、casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh、ccoshf、ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh、cacoshf、cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[cacos、cacosf、cacosl](cacos-cacosf-cacosl.md)<br/>
+[ctan、ctanf、ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin、csinf、csinl](csin-csinf-csinl.md)<br/>
+[casin、casinf、casinl](casin-casinf-casinl.md)<br/>
+[ccos、ccosf、ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt、csqrtf、csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

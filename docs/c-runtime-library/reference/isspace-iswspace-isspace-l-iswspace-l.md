@@ -1,12 +1,12 @@
 ---
-title: "isspace、iswspace、_isspace_l、_iswspace_l | Microsoft Docs"
-ms.custom: 
+title: isspace、iswspace、_isspace_l、_iswspace_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - iswspace
@@ -42,72 +42,76 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eef3b216ed70bb7fa6a22d02827dec34b44c3b3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1da229dbb93e657b01d6f69e2d9b201ed72a7aad
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace、iswspace、_isspace_l、_iswspace_l
-判斷整數是否代表空格字元。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int isspace(  
-   int c   
-);  
-int iswspace(  
-   wint_t c   
-);  
-int _isspace_l(  
-   int c,  
-   _locale_t locale  
-);  
-int _iswspace_l(  
-   wint_t c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 待測試整數。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 如果 `c` 表示特定的空白字元，這些常式都會傳回非零值。 `isspace` 傳回非零值，如果`c`為泛空白字元 (0x09-0x0D 或 0x20)。 `isspace` 函式測試條件的結果取決於地區設定的 `LC_CTYPE` 類別設定；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本使用目前地區設定來處理任何地區設定相關行為；具有 `_l` 尾碼的版本則完全相同，但會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
- 如果 `c` 是對應至標準空白字元的寬字元，則 `iswspace` 會傳回非零值。  
-  
- 如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `isspace` 和 `_isspace_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|**_** `istspace`|`isspace`|[_ismbcspace](../../c-runtime-library/reference/ismbcgraph-functions.md)|`iswspace`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`isspace`|\<ctype.h>|  
-|`iswspace`|\<ctype.h> 或 \<wchar.h>|  
-|`_isspace_l`|\<ctype.h>|  
-|`_iswspace_l`|\<ctype.h> 或 \<wchar.h>|  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [字元分類](../../c-runtime-library/character-classification.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [is、isw 常式](../../c-runtime-library/is-isw-routines.md)
+
+判斷整數是否代表空格字元。
+
+## <a name="syntax"></a>語法
+
+```C
+int isspace(
+   int c
+);
+int iswspace(
+   wint_t c
+);
+int _isspace_l(
+   int c,
+   _locale_t locale
+);
+int _iswspace_l(
+   wint_t c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+待測試整數。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+每個這些常式傳回非零，如果*c*是空格字元的特定表示法。 **isspace**傳回非零值，如果*c*為泛空白字元 (0x09-0x0D 或 0x20)。 測試條件的結果**isspace**函式取決於**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 不需要這些函式的版本 **_l**針對任何地區設定相關行為的後置詞使用目前的地區設定; 沒有版本 **_l**尾碼是一樣的不同之處在於會使用改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+**iswspace**傳回非零值，如果*c*寬字元都會對應至標準的空格字元。
+
+行為**isspace**和 **_isspace_l**是未定義的如果*c*不 EOF 或 0 到 0xFF，（含) 範圍中。 當使用 CRT 偵錯程式庫和*c*不是其中一個函式產生，這些值的判斷提示。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**isspace**|\<ctype.h>|
+|**iswspace**|\<ctype.h> 或 \<wchar.h>|
+|**_isspace_l**|\<ctype.h>|
+|**_iswspace_l**|\<ctype.h> 或 \<wchar.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[字元分類](../../c-runtime-library/character-classification.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[is、isw 常式](../../c-runtime-library/is-isw-routines.md)<br/>

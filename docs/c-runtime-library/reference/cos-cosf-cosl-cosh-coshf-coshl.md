@@ -1,12 +1,12 @@
 ---
-title: "cos、cosf、cosl、cosh、coshf、coshl | Microsoft Docs"
-ms.custom: 
+title: cos、cosf、cosl、cosh、coshf、coshl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - coshl
@@ -50,17 +50,17 @@ helpviewer_keywords:
 - coshl function
 - hyperbolic functions
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b9ef8330842f090c5a63cfea65886e6b7c25cee3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="cos-cosf-cosl-cosh-coshf-coshl"></a>cos、cosf、cosl、cosh、coshf、coshl
 計算餘弦值 (`cos`、`cosf` 或 `cosl`) 或雙曲餘弦值 (`cosh`、`coshf` 或 `coshl`)。  
@@ -120,7 +120,7 @@ long double coshl(
   
 ## <a name="requirements"></a>需求  
   
-|常式傳回的值|必要的標頭|  
+|常式|必要的標頭|  
 |-------------|---------------------|  
 |`cos`, `cosh`, `cosf`, `coshf`, `cosl`, `coshl`|\<math.h>|  
   
@@ -129,7 +129,7 @@ long double coshl(
 ## <a name="example"></a>範例  
  請參閱 [sin、sinf、sinl、sinh、sinhf、sinhl](../../c-runtime-library/reference/sin-sinf-sinl-sinh-sinhf-sinhl.md) 中的範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin、asinf、asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   

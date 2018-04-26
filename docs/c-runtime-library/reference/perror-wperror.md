@@ -1,12 +1,12 @@
 ---
-title: "perror、_wperror | Microsoft Docs"
-ms.custom: 
+title: perror、_wperror | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wperror
@@ -39,118 +39,119 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3929d35ac258823a70bf063f2e90e3ce8f1dfb4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3f6be77354f4efa1485f32ed178dc68b594b4f75
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="perror-wperror"></a>perror、_wperror
-列印錯誤訊息。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      void perror(  
-   const char *string   
-);  
-void _wperror(  
-   const wchar_t *string   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `string`  
- 要列印的字串訊息。  
-  
-## <a name="remarks"></a>備註  
- `perror` 函式會將錯誤訊息列印至 `stderr`。 `_wperror` 是寬字元版本的 **_perror**；`_wperror` 的 `string` 引數是寬字元字串。 否則，`_wperror` 和 **_perror** 的行為即會相同。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tperror`|`perror`|`perror`|`_wperror`|  
-  
- `string` 會先列印，後面接著冒號，再接著上次產生錯誤之程式庫呼叫的系統錯誤訊息，最後接著新行字元。 如果 `string` 是 null 指標或 Null 字串的指標，`perror` 只會列印系統錯誤訊息。  
-  
- 錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 `perror` 會使用 `errno` 值作為 `_sys_errlist` 的索引，來列印適當的錯誤訊息。 變數 [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 的值已定義為 `_sys_errlist` 陣列中的元素數目上限。  
-  
- 如需準確的結果，請在程式庫常式傳回錯誤之後立即呼叫 `perror`。 否則，後續呼叫可能會覆寫 `errno` 值。  
-  
- 在 Windows 作業系統中，不會用到 ERRNO.H 中所列的一些 `errno` 值。 這些值會保留供 UNIX 作業系統使用。 如需 Windows 作業系統所使用的 `errno` 值清單，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 `perror` 會針對這些平台未使用的任何 `errno` 值列印空字串。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`perror`|\<stdio.h> 或 \<stdlib.h>|  
-|`_wperror`|\<stdio.h> 或 \<wchar.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_perror.c  
-// compile with: /W3  
-/* This program attempts to open a file named  
- * NOSUCHF.ILE. Because this file probably doesn't exist,  
- * an error message is displayed. The same message is  
- * created using perror, strerror, and _strerror.  
- */  
-  
-#include <fcntl.h>  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <io.h>  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <string.h>  
-#include <share.h>  
-  
-int main( void )  
-{  
-   int  fh;  
-  
-   if( _sopen_s( &fh, "NOSUCHF.ILE", _O_RDONLY, _SH_DENYNO, 0 ) != 0 )  
-   {  
-      /* Three ways to create error message: */  
-      perror( "perror says open failed" );  
-      printf( "strerror says open failed: %s\n",  
-         strerror( errno ) ); // C4996  
-      printf( _strerror( "_strerror says open failed" ) ); // C4996  
-      // Note: strerror and _strerror are deprecated; consider  
-      // using strerror_s and _strerror_s instead.  
-   }  
-   else  
-   {  
-      printf( "open succeeded on input file\n" );  
-      _close( fh );  
-   }  
-}  
-```  
-  
-## <a name="output"></a>輸出  
-  
-```  
-perror says open failed: No such file or directory  
-strerror says open failed: No such file or directory  
-_strerror says open failed: No such file or directory  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
- [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [ferror](../../c-runtime-library/reference/ferror.md)   
- [strerror、_strerror、_wcserror、\__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md)
+
+列印錯誤訊息。
+
+## <a name="syntax"></a>語法
+
+```C
+void perror(
+   const char *message
+);
+void _wperror(
+   const wchar_t *message
+);
+```
+
+### <a name="parameters"></a>參數
+
+*訊息*列印的字串訊息。
+
+## <a name="remarks"></a>備註
+
+**Perror**函式會列印錯誤訊息至**stderr**。 **_wperror**是寬字元版本的 **_perror**;*訊息*引數 **_wperror**是寬字元字串。 **_wperror**和 **_perror**除此之外的行為相同。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tperror**|**perror**|**perror**|**_wperror**|
+
+*訊息*會列印第一次後, 接冒號，然後是系統錯誤訊息，取得產生錯誤，最後一次程式庫呼叫，最後由新行字元。 如果*訊息*為 null 指標或 null 字串的指標**perror**會列印只有系統錯誤訊息。
+
+錯誤號碼會儲存在變數 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 中 (定義於 ERRNO.H 中)。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **perror**適當的錯誤訊息使用列印**errno**為的索引值 **_sys_errlist**。 變數的值[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)定義中的項目數目上限為 **_sys_errlist**陣列。
+
+針對精確的結果，呼叫**perror**之後立即在程式庫常式傳回錯誤。 否則，後續呼叫可能會覆寫**errno**值。
+
+在 Windows 作業系統，有些**errno** ERRNO 中列出的值。H 是未使用。 這些值會保留供 UNIX 作業系統使用。 請參閱[_doserrno，errno，_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)如的清單**errno** Windows 作業系統所使用的值。 **perror**列印任何空字串**errno**值不是由這些平台。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**perror**|\<stdio.h> 或 \<stdlib.h>|
+|**_wperror**|\<stdio.h> 或 \<wchar.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_perror.c
+// compile with: /W3
+/* This program attempts to open a file named
+* NOSUCHF.ILE. Because this file probably doesn't exist,
+* an error message is displayed. The same message is
+* created using perror, strerror, and _strerror.
+*/
+
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <io.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <share.h>
+
+int main( void )
+{
+   int  fh;
+
+   if( _sopen_s( &fh, "NOSUCHF.ILE", _O_RDONLY, _SH_DENYNO, 0 ) != 0 )
+   {
+      /* Three ways to create error message: */
+      perror( "perror says open failed" );
+      printf( "strerror says open failed: %s\n",
+         strerror( errno ) ); // C4996
+      printf( _strerror( "_strerror says open failed" ) ); // C4996
+      // Note: strerror and _strerror are deprecated; consider
+      // using strerror_s and _strerror_s instead.
+   }
+   else
+   {
+      printf( "open succeeded on input file\n" );
+      _close( fh );
+   }
+}
+```
+
+```Output
+perror says open failed: No such file or directory
+strerror says open failed: No such file or directory
+_strerror says open failed: No such file or directory
+```
+
+## <a name="see-also"></a>另請參閱
+
+[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[clearerr](clearerr.md)<br/>
+[ferror](ferror.md)<br/>
+[strerror、_strerror、_wcserror、\__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

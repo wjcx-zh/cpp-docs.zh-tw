@@ -1,12 +1,12 @@
 ---
 title: _fileno | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fileno
@@ -33,79 +33,84 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d0ce17b75ea74154121549209aed94b0a3affea
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9eb3950ce66f6bfeadd4cc25602ffe2f6abda409
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fileno"></a>_fileno
-取得與資料流相關聯的檔案描述項。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _fileno(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `stream`  
- `FILE` 結構的指標。  
-  
-## <a name="return-value"></a>傳回值  
- `_fileno` 會傳回檔案描述元。 不會傳回錯誤。 如果 `stream` 未指定開啟的檔案，則未定義結果。 如果資料流是 `NULL`，則 `_fileno` 會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
-  
- 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
-  
+
+取得與資料流相關聯的檔案描述項。
+
+## <a name="syntax"></a>語法
+
+```C
+int _fileno(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>參數
+
+*資料流*<br/>
+**FILE** 結構的指標。
+
+## <a name="return-value"></a>傳回值
+
+**_fileno**傳回檔案描述項。 不會傳回錯誤。 如果，則結果為未定義*資料流*未指定開啟的檔案。 如果資料流**NULL**， **_fileno**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，此函數會傳回-1 和設定允許執行**errno**至**EINVAL**。
+
+如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+
 > [!NOTE]
->  如果 `stdout` 或 `stderr` 與輸出資料流無關 (例如，在沒有主控台視窗的 Windows 應用程式中)，傳回的檔案描述元是 -2。 在舊版本中，傳回的檔案描述元是 -1。 此變更可讓應用程式區分這個條件與錯誤。  
-  
-## <a name="remarks"></a>備註  
- `_fileno` 常式會傳回目前與 `stream` 相關聯的檔案描述元。 此常式可當作函式和巨集來實作。 如需選擇其中一個實作的資訊，請參閱[選擇函式與巨集](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|必要的標頭|  
-|--------------|---------------------|  
-|`_fileno`|\<stdio.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_fileno.c  
-// This program uses _fileno to obtain  
-// the file descriptor for some standard C streams.  
-//  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   printf( "The file descriptor for stdin is %d\n", _fileno( stdin ) );  
-   printf( "The file descriptor for stdout is %d\n", _fileno( stdout ) );  
-   printf( "The file descriptor for stderr is %d\n", _fileno( stderr ) );  
-}  
-```  
-  
-```Output  
-The file descriptor for stdin is 0  
-The file descriptor for stdout is 1  
-The file descriptor for stderr is 2  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
- [_fdopen、_wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   
- [_filelength、_filelengthi64](../../c-runtime-library/reference/filelength-filelengthi64.md)   
- [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [freopen、_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)
+> 如果**stdout**或**stderr**沒有關聯的輸出資料流 （例如，在 Windows 應用程式沒有主控台視窗中），傳回的檔案描述項為-2。 在舊版本中，傳回的檔案描述元是 -1。 此變更可讓應用程式區分這個條件與錯誤。
+
+## <a name="remarks"></a>備註
+
+**_Fileno**常式會傳回目前與相關聯的檔案描述項*資料流*。 此常式可當作函式和巨集來實作。 如需選擇其中一個實作的資訊，請參閱[選擇函式與巨集](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
+
+## <a name="requirements"></a>需求
+
+|功能|必要的標頭|
+|--------------|---------------------|
+|**_fileno**|\<stdio.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_fileno.c
+// This program uses _fileno to obtain
+// the file descriptor for some standard C streams.
+//
+
+#include <stdio.h>
+
+int main( void )
+{
+   printf( "The file descriptor for stdin is %d\n", _fileno( stdin ) );
+   printf( "The file descriptor for stdout is %d\n", _fileno( stdout ) );
+   printf( "The file descriptor for stderr is %d\n", _fileno( stderr ) );
+}
+```
+
+```Output
+The file descriptor for stdin is 0
+The file descriptor for stdout is 1
+The file descriptor for stderr is 2
+```
+
+## <a name="see-also"></a>另請參閱
+
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[_fdopen、wfdopen](fdopen-wfdopen.md)<br/>
+[_filelength、_filelengthi64](filelength-filelengthi64.md)<br/>
+[fopen、_wfopen](fopen-wfopen.md)<br/>
+f[reopen、_wfreopen](freopen-wfreopen.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: _setmbcp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _setmbcp
@@ -33,69 +33,74 @@ helpviewer_keywords:
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42d2d43726ea533ab689a61c5211317c8dc033c4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2e879d4cf6ebc7cb7f61199b3bb52f1a5e3f5389
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setmbcp"></a>_setmbcp
-設定新的多位元組字碼頁。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _setmbcp(  
-   int codepage   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `codepage`  
- 與地區設定無關之多位元組常式的新字碼頁設定。  
-  
-## <a name="return-value"></a>傳回值  
- 如果成功設定字碼頁，則會傳回 0。 如果不正確的字碼頁值提供給`codepage`，傳回-1 和字碼頁設定為不變。 如果記憶體配置失敗，則會將 `errno` 設為 `EINVAL`。  
-  
-## <a name="remarks"></a>備註  
- `_setmbcp` 函式指定新的多位元組字碼頁。 根據預設，執行階段系統會自動將多位元組字碼頁設定為系統預設的 ANSI 字碼頁。 多位元組字碼頁設定會影響所有與地區設定無關的多位元組常式。 不過，可能會指示 `_setmbcp` 使用針對目前地區設定所定義的字碼頁 (請參閱下列資訊清單常數和相關聯行為結果的清單)。 如需依存於地區設定字碼頁而非多位元組字碼頁的多位元組常式清單，請參閱[解譯多位元組字元序列](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)。  
-  
- 多位元組字碼頁也會影響下列執行階段程式庫常式的多位元組字元處理︰  
-  
-||||  
-|-|-|-|  
-|[_exec 函式](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](../../c-runtime-library/reference/mktemp-wmktemp.md)|[_stat](../../c-runtime-library/reference/stat-functions.md)|  
-|[_fullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)|[_spawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-|[_makepath](../../c-runtime-library/reference/makepath-wmakepath.md)|[_splitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)|[tmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|  
-  
- 此外，接收多位元組字元 `argv` 或 `envp` 程式引數作為參數的所有執行階段程式庫常式引數 (例如 `_exec` 和 `_spawn` 系列) 都是根據多位元組字碼頁來處理這些字串。 因此，變更多位元組字碼頁的 `_setmbcp` 呼叫也會影響這些常式。  
-  
- `codepage` 引數可以設為下列任何一個值：  
-  
--   `_MB_CP_ANSI` 在程式啟動時，使用從作業系統取得的 ANSI 字碼頁。  
-  
--   `_MB_CP_LOCALE` 使用從先前 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 呼叫取得的目前地區設定字碼頁。  
-  
--   `_MB_CP_OEM` 在程式啟動時，使用從作業系統取得的 OEM 字碼頁。  
-  
--   `_MB_CP_SBCS` 使用單一位元組字碼頁。 字碼頁設定為 `_MB_CP_SBCS` 時，[_ismbblead](../../c-runtime-library/reference/ismbblead-ismbblead-l.md) 這類常式一律會傳回 false。  
-  
--   任何其他有效字碼頁值，不論值是 ANSI、OEM 或其他作業系統支援的字碼頁 (但不支援的 UTF-7 和 UTF-8 除外)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_setmbcp`|\<mbctype.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>請參閱  
- [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
- [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+設定新的多位元組字碼頁。
+
+## <a name="syntax"></a>語法
+
+```C
+int _setmbcp(
+   int codepage
+);
+```
+
+### <a name="parameters"></a>參數
+
+*字碼頁*<br/>
+與地區設定無關之多位元組常式的新字碼頁設定。
+
+## <a name="return-value"></a>傳回值
+
+如果成功設定字碼頁，則會傳回 0。 如果不正確的字碼頁值提供給*字碼頁*，傳回-1 和字碼頁設定為不變。 設定**errno**至**EINVAL**發生記憶體配置失敗。
+
+## <a name="remarks"></a>備註
+
+**_Setmbcp**函式可指定新的多位元組字碼頁。 根據預設，執行階段系統會自動將多位元組字碼頁設定為系統預設的 ANSI 字碼頁。 多位元組字碼頁設定會影響所有與地區設定無關的多位元組常式。 不過，它可能是指示 **_setmbcp**使用定義給目前的地區設定的字碼頁 （請參閱以下清單中的資訊清單常數和相關聯的行為結果）。 如需依存於地區設定字碼頁而非多位元組字碼頁的多位元組常式清單，請參閱[解譯多位元組字元序列](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)。
+
+多位元組字碼頁也會影響下列執行階段程式庫常式的多位元組字元處理︰
+
+||||
+|-|-|-|
+|[_exec 函式](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
+|[_fullpath](fullpath-wfullpath.md)|[_spawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+
+此外，接收多位元組字元的所有執行階段程式庫常式*argv*或*envp*程式做為參數的引數 (例如 **_exec**和 **_spawn**系列) 處理這些字串會根據多位元組字碼頁。 因此，這些常式也會受到呼叫 **_setmbcp**變更多位元組字碼頁。
+
+*字碼頁*引數可以設定為下列值之一：
+
+- **_MB_CP_ANSI**使用 ANSI 字碼頁取自在程式啟動的作業系統。
+
+- **_MB_CP_LOCALE**使用目前的地區設定字碼頁取自先前呼叫[setlocale](setlocale-wsetlocale.md)。
+
+- **_MB_CP_OEM**使用 OEM 字碼頁取自在程式啟動的作業系統。
+
+- **_MB_CP_SBCS**使用單一位元組字碼頁。 當設定的字碼頁為 **_MB_CP_SBCS**、 這類常式[_ismbblead](ismbblead-ismbblead-l.md)一律傳回 false。
+
+- 任何其他有效字碼頁值，不論值是 ANSI、OEM 或其他作業系統支援的字碼頁 (但不支援的 UTF-7 和 UTF-8 除外)。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_setmbcp**|\<mbctype.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[_getmbcp](getmbcp.md)<br/>
+[setlocale、_wsetlocale](setlocale-wsetlocale.md)<br/>

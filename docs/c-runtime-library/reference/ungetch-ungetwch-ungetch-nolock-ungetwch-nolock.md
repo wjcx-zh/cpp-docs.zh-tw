@@ -1,12 +1,12 @@
 ---
-title: "_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock | Microsoft Docs"
-ms.custom: 
+title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ungetch_nolock
@@ -53,112 +53,117 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e47415af123b592e55b0f01f5556bc19bcfb3a2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3478f451ee4c1200074bf066a9de6bcb026c5036
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
-推送回讀取自主控台的最後一個字元。  
-  
+
+推送回讀取自主控台的最後一個字元。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _ungetch(  
-   int c   
-);  
-wint_t _ungetwch(  
-   wint_t c   
-);  
-int _ungetch_nolock(  
-   int c   
-);  
-wint_t _ungetwch_nolock(  
-   wint_t c   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 要推送的字元。  
-  
-## <a name="return-value"></a>傳回值  
- 成功時，兩個函式都會傳回 `c` 字元。 如果沒有發生錯誤，`_ungetch`傳回值的`EOF`和`_ungetwch`傳回`WEOF`。  
-  
-## <a name="remarks"></a>備註  
- 這些函式推入字元`c`回到主控台中，造成`c`要讀取的下一個字元`_getch`或`_getche`(或`_getwch`或`_getwche`)。 如果在下次讀取之前多次呼叫 `_ungetch` 和 `_ungetwch`，則會失敗。 `c` 引數不能是 `EOF` (或 `WEOF`)。  
-  
- 具有 `_nolock` 尾碼的版本完全一致，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_ungettch`|`_ungetch`|`_ungetch`|`_ungetwch`|  
-|`_ungettch_nolock`|`_ungetch_nolock`|`_ungetch_nolock`|`_ungetwch_nolock`|  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_ungetch`, `_ungetch_nolock`|\<conio.h>|  
-|`_ungetwch`, `_ungetwch_nolock`|\<conio.h> 或 \<wchar.h>|  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_ungetch.c  
-// compile with: /c  
-// In this program, a white-space delimited   
-// token is read from the keyboard. When the program   
-// encounters a delimiter, it uses _ungetch to replace   
-// the character in the keyboard buffer.  
-//  
-  
-#include <conio.h>  
-#include <ctype.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char buffer[100];  
-   int count = 0;  
-   int ch;  
-  
-   ch = _getche();  
-   while( isspace( ch ) )      // Skip preceding white space.  
-      ch = _getche();  
-   while( count < 99 )         // Gather token.  
-   {  
-      if( isspace( ch ) )      // End of token.  
-         break;  
-      buffer[count++] = (char)ch;  
-      ch = _getche();  
-   }  
-   _ungetch( ch );            // Put back delimiter.  
-   buffer[count] = '\0';      // Null terminate the token.  
-   printf( "\ntoken = %s\n", buffer );  
-}  
-```  
-  
-```Output  
-  
-Whitetoken = White  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
- [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](../../c-runtime-library/reference/cscanf-cscanf-l-cwscanf-cwscanf-l.md)   
- [_getch、_getwch](../../c-runtime-library/reference/getch-getwch.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _ungetch(
+   int c
+);
+wint_t _ungetwch(
+   wint_t c
+);
+int _ungetch_nolock(
+   int c
+);
+wint_t _ungetwch_nolock(
+   wint_t c
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+要推送的字元。
+
+## <a name="return-value"></a>傳回值
+
+這兩個函數傳回的字元*c*如果成功的話。 如果沒有發生錯誤， **_ungetch**傳回值的**EOF**和 **_ungetwch**傳回**WEOF**。
+
+## <a name="remarks"></a>備註
+
+這些函式推入字元*c*回到主控台中，造成*c*要讀取的下一個字元 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**)。 **_ungetch**和 **_ungetwch**如果會多次呼叫下一個要讀取之前失敗。 *c*引數不可以是**EOF** (或**WEOF**)。
+
+具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
+|**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_ungetch**， **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**， **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_ungetch.c
+// compile with: /c
+// In this program, a white-space delimited
+// token is read from the keyboard. When the program
+// encounters a delimiter, it uses _ungetch to replace
+// the character in the keyboard buffer.
+//
+
+#include <conio.h>
+#include <ctype.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char buffer[100];
+   int count = 0;
+   int ch;
+
+   ch = _getche();
+   while( isspace( ch ) )      // Skip preceding white space.
+      ch = _getche();
+   while( count < 99 )         // Gather token.
+   {
+      if( isspace( ch ) )      // End of token.
+         break;
+      buffer[count++] = (char)ch;
+      ch = _getche();
+   }
+   _ungetch( ch );            // Put back delimiter.
+   buffer[count] = '\0';      // Null terminate the token.
+   printf( "\ntoken = %s\n", buffer );
+}
+```
+
+```Output
+
+Whitetoken = White
+```
+
+## <a name="see-also"></a>另請參閱
+
+[主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
+[_getch、_getwch](getch-getwch.md)<br/>

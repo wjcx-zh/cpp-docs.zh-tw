@@ -1,13 +1,13 @@
 ---
-title: "cacos、cacosf、cacosl | Microsoft Docs"
-ms.custom: 
+title: cacos、cacosf、cacosl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - cacos
@@ -40,70 +40,68 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 301fff247244ce4d37b2e7079926a1c64e5a8e1c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a15f2487b95375d0f6f83026c5cd2dc37402600b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
-擷取複數，與實際的軸間隔 [-1，+ 1] 以外的分支剪下反餘弦值。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-_Dcomplex cacos(   
-  _Dcomplex z   
-);  
-_Fcomplex cacos(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex cacos(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex cacosf(   
-   _Fcomplex z   
-);  
-_Lcomplex cacosl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `z`  
- 代表角度的複數 (弧度)。  
-  
-## <a name="return-value"></a>傳回值  
- `z` 的反餘弦值 (弧度)。 結果是在虛數軸中為未繫結，並且在實數軸的間隔 [0, π] 中。 如果 `z` 落在間隔 [-1, +1] 外部，則會發生網域錯誤。  
-  
-## <a name="remarks"></a>備註  
- 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `cacos` 和 `_Fcomplex` 值的 `_Lcomplex` 的多載。 在 C 程式中， `cacos` 會一律採用及傳回 `_Dcomplex` 。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|C 標頭|C++ 標頭|  
-|-------------|--------------|------------------|  
-|`cacos`,               `cacosf`, `cacosl`|\<complex.h>|\<ccomplex>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [catanh、catanhf、catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
- [ctanh、ctanhf、ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
- [catan、catanf、catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh、csinhf、csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
- [casinh、casinhf、casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
- [ccosh、ccoshf、ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
- [cacosh、cacoshf、cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
- [ctan、ctanf、ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   
- [csin、csinf、csinl](../../c-runtime-library/reference/csin-csinf-csinl.md)   
- [casin、casinf、casinl](../../c-runtime-library/reference/casin-casinf-casinl.md)   
- [ccos、ccosf、ccosl](../../c-runtime-library/reference/ccos-ccosf-ccosl.md)   
- [csqrt、csqrtf、csqrtl](../../c-runtime-library/reference/csqrt-csqrtf-csqrtl.md)
+
+擷取複數，與實際的軸間隔 [-1，+ 1] 以外的分支剪下反餘弦值。
+
+## <a name="syntax"></a>語法
+
+```C
+_Dcomplex cacos( _Dcomplex z );
+_Fcomplex cacosf( _Fcomplex z );
+_Lcomplex cacosl( _Lcomplex z );
+```
+
+```cpp
+_Fcomplex cacos( _Fcomplex z );  // C++ only
+_Lcomplex cacos( _Lcomplex z );  // C++ only
+```
+
+### <a name="parameters"></a>參數
+
+*z*<br/>
+代表角度的複數 (弧度)。
+
+## <a name="return-value"></a>傳回值
+
+反餘弦值*z*，以弧度為單位。 結果是在虛數軸中為未繫結，並且在實數軸的間隔 [0, π] 中。 如果會發生網域錯誤*z*超出間隔 [-1，+ 1]。
+
+## <a name="remarks"></a>備註
+
+因為 c + + 允許多載，所以您可以呼叫的多載**cacos**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **cacos**一律採用並傳回 **_Dcomplex**值。
+
+## <a name="requirements"></a>需求
+
+|常式|C 標頭|C++ 標頭|
+|-------------|--------------|------------------|
+|**cacos**， **cacosf**， **cacosl**|\<complex.h>|\<ccomplex>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[catanh、catanhf、catanhl](catanh-catanhf-catanhl.md)<br/>
+[ctanh、ctanhf、ctanhl](ctanh-ctanhf-ctanhl.md)<br/>
+[catan、catanf、catanl](catan-catanf-catanl.md)<br/>
+[csinh、csinhf、csinhl](csinh-csinhf-csinhl.md)<br/>
+[casinh、casinhf、casinhl](casinh-casinhf-casinhl.md)<br/>
+[ccosh、ccoshf、ccoshl](ccosh-ccoshf-ccoshl.md)<br/>
+[cacosh、cacoshf、cacoshl](cacosh-cacoshf-cacoshl.md)<br/>
+[ctan、ctanf、ctanl](ctan-ctanf-ctanl.md)<br/>
+[csin、csinf、csinl](csin-csinf-csinl.md)<br/>
+[casin、casinf、casinl](casin-casinf-casinl.md)<br/>
+[ccos、ccosf、ccosl](ccos-ccosf-ccosl.md)<br/>
+[csqrt、csqrtf、csqrtl](csqrt-csqrtf-csqrtl.md)<br/>

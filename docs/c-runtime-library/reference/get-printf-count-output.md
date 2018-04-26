@@ -1,12 +1,12 @@
 ---
 title: _get_printf_count_output | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_printf_count_output
@@ -33,43 +33,48 @@ helpviewer_keywords:
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05184838f9ac68e697cc7ff326c33c266f865875
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8b96aab9e075386f71439a5c528fcf072097d389
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
-表示 [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函式是否支援 `%n` 格式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _get_printf_count_output();  
-```  
-  
-## <a name="return-value"></a>傳回值  
- 如果支援 `%n` 則為非零，如果 `%n` 不受支援則為 0。  
-  
-## <a name="remarks"></a>備註  
- 如果 `%n` 不受支援 (預設值)，在任何 `printf` 函式的格式字串中遭遇 `%n` 時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果`%n`已啟用支援 (請參閱[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 然後`%n`中所述的行為[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_get_printf_count_output`|\<stdio.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
- 請參閱[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)的範例。  
-  
-## <a name="see-also"></a>請參閱  
-[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)  
+
+指出是否[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-系列函式支援 **%n**格式。
+
+## <a name="syntax"></a>語法
+
+```C
+int _get_printf_count_output();
+```
+
+## <a name="return-value"></a>傳回值
+
+如果是非零 **%n**支援，0 代表 **%n**不支援。
+
+## <a name="remarks"></a>備註
+
+如果 **%n**不是支援 （預設值），發生 **%n**格式字串中的任一**printf**函式會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果 **%n**已啟用支援 (請參閱[_set_printf_count_output](set-printf-count-output.md)) 然後 **%n**中所述的行為[格式規格語法： printf 和 wprintf函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_get_printf_count_output**|\<stdio.h>|
+
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+請參閱[_set_printf_count_output](set-printf-count-output.md)的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[_set_printf_count_output](set-printf-count-output.md)<br/>

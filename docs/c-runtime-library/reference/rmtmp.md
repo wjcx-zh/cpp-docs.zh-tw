@@ -1,12 +1,12 @@
 ---
 title: _rmtmp | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _rmtmp
@@ -36,50 +36,56 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 689c501743702ae208024fcf6126a02719a33bc8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 01585e2767806533ffaf99f2ca7795d26264958f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rmtmp"></a>_rmtmp
-移除暫存檔案。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-int _rmtmp( void );  
-```  
-  
-## <a name="return-value"></a>傳回值  
- `_rmtmp` 會傳回關閉和刪除的暫存檔案數目。  
-  
-## <a name="remarks"></a>備註  
- `_rmtmp` 函式會清除目前目錄中的所有暫存檔案。 此函式只會移除 `tmpfile` 所建立的檔案；請只將它用於建立暫存檔案的相同目錄。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_rmtmp`|\<stdio.h>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="example"></a>範例  
- 請參閱 [tmpfile](../../c-runtime-library/reference/tmpfile.md) 的範例。  
-  
-## <a name="see-also"></a>請參閱  
- [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
- [_flushall](../../c-runtime-library/reference/flushall.md)   
- [tmpfile](../../c-runtime-library/reference/tmpfile.md)   
- [_tempnam、_wtempnam、tmpnam、_wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)
+
+移除暫存檔案。
+
+## <a name="syntax"></a>語法
+
+```C
+
+int _rmtmp( void );
+```
+
+## <a name="return-value"></a>傳回值
+
+**_rmtmp**傳回關閉和刪除暫存檔的數目。
+
+## <a name="remarks"></a>備註
+
+**_Rmtmp**函式會清除目前的目錄中的所有暫存檔案。 函式會移除所建立的檔案**tmpfile**; 只有在建立暫存檔案所在的相同目錄中使用它。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_rmtmp**|\<stdio.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="example"></a>範例
+
+請參閱 [tmpfile](tmpfile.md) 的範例。
+
+## <a name="see-also"></a>另請參閱
+
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[_flushall](flushall.md)<br/>
+[tmpfile](tmpfile.md)<br/>
+[_tempnam、_wtempnam、tmpnam、_wtmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)<br/>

@@ -1,13 +1,13 @@
 ---
-title: "conj、conjf、conjl | Microsoft Docs"
-ms.custom: 
+title: conj、conjf、conjl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - conj
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b994d8c6afe416cd399c04d91fae422b217cf2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01feb4b30305f915a91d104d9134018c3d5b24e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="conj-conjf-conjl"></a>conj、conjf、conjl
-擷取複數的共軛複數。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-_Dcomplex conj(   
-   _Dcomplex z   
-);  
-_Fcomplex conj(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex conj(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex conjf(   
-   _Fcomplex z   
-);  
-_Lcomplex conjl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `z`  
- 複數。  
-  
-## <a name="return-value"></a>傳回值  
- `z` 的共軛複數。  結果的實數和虛數部分與 `z` 相同，但正負號相反。  
-  
-## <a name="remarks"></a>備註  
- 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `conj` 和 `_Fcomplex` 值的 `_Lcomplex` 的多載。 在 C 程式中， `conj` 會一律採用及傳回 `_Dcomplex` 。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|C 標頭|C++ 標頭|  
-|-------------|--------------|------------------|  
-|`conj`,               `conjf`, `conjl`|\<complex.h>|\<ccomplex>|  
-  
- 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm、normf、norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal、crealf、creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj、cprojf、cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [cimag、cimagf、cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg、cargf、cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs、cabsf、cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+擷取複數的共軛複數。
+
+## <a name="syntax"></a>語法
+
+```C
+_Dcomplex conj(
+   _Dcomplex z
+);
+_Fcomplex conj(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex conj(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex conjf(
+   _Fcomplex z
+);
+_Lcomplex conjl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>參數
+
+*z*<br/>
+複數。
+
+## <a name="return-value"></a>傳回值
+
+複數的共軛*z*。  結果將會有相同的實數和虛數部分為*z*，但正負號相反。
+
+## <a name="remarks"></a>備註
+
+因為 c + + 允許多載，所以您可以呼叫的多載**conj**採用並傳回 **_Fcomplex**和 **_Lcomplex**值。 在 C 程式中， **conj**一律採用並傳回 **_Dcomplex**值。
+
+## <a name="requirements"></a>需求
+
+|常式|C 標頭|C++ 標頭|
+|-------------|--------------|------------------|
+|**conj**， **conjf**， **conjl**|\<complex.h>|\<ccomplex>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[norm、normf、norml](norm-normf-norml1.md)<br/>
+[creal、crealf、creall](creal-crealf-creall.md)<br/>
+[cproj、cprojf、cprojl](cproj-cprojf-cprojl.md)<br/>
+[cimag、cimagf、cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg、cargf、cargl](carg-cargf-cargl.md)<br/>
+[cabs、cabsf、cabsl](cabs-cabsf-cabsl.md)<br/>

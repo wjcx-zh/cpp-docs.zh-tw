@@ -1,12 +1,12 @@
 ---
 title: _get_dstbias | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_dstbias
@@ -36,55 +36,57 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f6d43b904b96f7323c76637d1f38c024d4696f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 15d3b4167e030f3861b7f01bc20bcbd8358dc376
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdstbias"></a>_get_dstbias
-擷取日光節約時間位移 (秒)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      error_t _get_dstbias(   
-    int* seconds  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `seconds`  
- 日光節約時間的位移 (秒)。  
-  
-## <a name="return-value"></a>傳回值  
- 若成功，則為零；若發生錯誤，則為 `errno` 值。  
-  
-## <a name="remarks"></a>備註  
- `_get_dstbias` 函式會將日光節約時間的秒數擷取為整數。 若日光節約時間已生效，則預設位移為 3600 秒，此為一小時的秒數 (但少數地區是遵循兩小時的位移)。  
-  
- 如果 `seconds` 為 `NULL`，則會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 若允許繼續執行，此函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
-  
- 建議您使用此函式，而不是使用巨集 `_dstbias` 或已遭取代的函式 `__dstbias`。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_get_dstbias`|\<time.h>|  
-  
- 如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [時間管理](../../c-runtime-library/time-management.md)   
- [errno、_doserrno、_sys_errlist 和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
- [_get_daylight](../../c-runtime-library/reference/get-daylight.md)   
- [_get_timezone](../../c-runtime-library/reference/get-timezone.md)   
- [_get_tzname](../../c-runtime-library/reference/get-tzname.md)
+
+擷取日光節約時間位移 (秒)。
+
+## <a name="syntax"></a>語法
+
+```C
+error_t _get_dstbias( int* seconds );
+```
+
+### <a name="parameters"></a>參數
+
+*秒數*<br/>
+日光節約時間的位移 (秒)。
+
+## <a name="return-value"></a>傳回值
+
+如果成功或零**errno**值發生錯誤。
+
+## <a name="remarks"></a>備註
+
+**_Get_dstbias**函式會擷取為整數的日光節約時間的秒數。 若日光節約時間已生效，則預設位移為 3600 秒，此為一小時的秒數 (但少數地區是遵循兩小時的位移)。
+
+如果*秒*是**NULL**，會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+
+我們建議您利用這個函數，而不是巨集 **_dstbias**或已被取代的函式 **__dstbias**。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_get_dstbias**|\<time.h>|
+
+如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[時間管理](../../c-runtime-library/time-management.md)<br/>
+[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[_get_daylight](get-daylight.md)<br/>
+[_get_timezone](get-timezone.md)<br/>
+[_get_tzname](get-tzname.md)<br/>

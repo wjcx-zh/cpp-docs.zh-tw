@@ -1,12 +1,12 @@
 ---
 title: _purecall | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _purecall
@@ -32,35 +32,39 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c19324cde907f31ab18a312f3039c2da7a3a40c7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bfcd454aa6a4053ff30eef27b9c9c7d3d8bf7b34
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="purecall"></a>_purecall
-預設的純虛擬函式呼叫錯誤處理常式。 呼叫純虛擬成員函式時，編譯器會產生程式碼以呼叫此函式。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-extern "C" int __cdecl _purecall();  
-```  
-  
-## <a name="remarks"></a>備註  
- `_purecall` 函式是 Microsoft Visual C++ 編譯器的 Microsoft 特定實作詳細資料。 此函式不是由您的程式碼直接呼叫，而且沒有公用標頭宣告。 因為它是 C 執行階段程式庫的公用匯出，所以會在此進行說明。  
-  
- 呼叫純虛擬函式會產生錯誤，因為它有沒有實作。 呼叫純虛擬函式時，編譯器會產生程式碼以叫用 `_purecall` 錯誤處理函式。 根據預設，`_purecall` 會終止程式。 終止前，`_purecall` 函式會叫用 `_purecall_handler` 函式 (如果已針對處理序設定一個函式)。 您可以為純虛擬函式呼叫安裝您自己的錯誤處理函式，以攔截它們，用於偵錯或報告目的。 若要使用您自己的錯誤處理常式，請建立具有 `_purecall_handler` 簽章的函式，然後使用 [_set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) 使其成為目前的處理常式。  
-  
-## <a name="requirements"></a>需求  
- `_purecall` 函式沒有標頭宣告。 `_purecall_handler` typedef 定義於 \<stdlib.h> 中。  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [_get_purecall_handler、_set_purecall_handler](../../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)
+
+預設的純虛擬函式呼叫錯誤處理常式。 呼叫純虛擬成員函式時，編譯器會產生程式碼以呼叫此函式。
+
+## <a name="syntax"></a>語法
+
+```C
+extern "C" int __cdecl _purecall();
+```
+
+## <a name="remarks"></a>備註
+
+**_Purecall**函式是 Microsoft Visual c + + 編譯器的 Microsoft 特定實作詳細資料。 此函式不是由您的程式碼直接呼叫，而且沒有公用標頭宣告。 因為它是 C 執行階段程式庫的公用匯出，所以會在此進行說明。
+
+呼叫純虛擬函式會產生錯誤，因為它有沒有實作。 編譯器會產生程式碼叫用 **_purecall**錯誤處理常式函式呼叫純虛擬函式時。 根據預設， **_purecall**結束程式。 之前終止， **_purecall**函式會叫用 **_purecall_handler**函式，如果其中一個已設定處理程序。 您可以為純虛擬函式呼叫安裝您自己的錯誤處理函式，以攔截它們，用於偵錯或報告目的。 若要使用您自己的錯誤處理常式，建立的函式具有 **_purecall_handler**簽章，然後使用[_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)使其目前的處理常式。
+
+## <a name="requirements"></a>需求
+
+**_Purecall**函式沒有標頭宣告。 **_Purecall_handler**中所定義的 typedef \<stdlib.h >。
+
+## <a name="see-also"></a>另請參閱
+
+[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[_get_purecall_handler、_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)<br/>

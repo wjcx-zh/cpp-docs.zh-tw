@@ -1,12 +1,12 @@
 ---
 title: _set_printf_count_output | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_printf_count_output
@@ -33,73 +33,77 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279b14f0387348d322bbe09428af24daa5fd2f69
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 505d87a98ed212a4be7e23a05127686b370c9176
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
-啟用或停用 [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 系列函式中的 `%n` 格式支援。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _set_printf_count_output(  
-   int enable  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `enable`  
- 非零值以啟用 `%n` 支援，0 以停用 `%n` 支援。  
-  
-## <a name="property-valuereturn-value"></a>屬性值/傳回值  
- 呼叫這個函式之前的 `%n` 支援狀態：如果啟用 `%n` 支援，則為非零，如果予以停用，則為 0。  
-  
-## <a name="remarks"></a>備註  
- 基於安全性原因，預設會停用 `printf` 中 `%n` 格式指定名稱和其所有變體的支援。 如果在 `printf` 格式規格中遇到 `%n`，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 呼叫`_set_printf_count_output`具有非零引數會導致`printf`-系列的函式，來解譯`%n`中所述[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_set_printf_count_output`|\<stdio.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```C  
-// crt_set_printf_count_output.c  
-#include <stdio.h>  
-  
-int main()  
-{  
-   int e;  
-   int i;  
-   e = _set_printf_count_output( 1 );  
-   printf( "%%n support was %sabled.\n",  
-        e ? "en" : "dis" );  
-   printf( "%%n support is now %sabled.\n",  
-        _get_printf_count_output() ? "en" : "dis" );  
-   printf( "12345%n6789\n", &i ); // %n format should set i to 5  
-   printf( "i = %d\n", i );  
-}  
-```  
-  
-```Output  
-%n support was disabled.  
-%n support is now enabled.  
-123456789  
-i = 5  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)
+
+啟用或停用支援 **%n**中格式化[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-系列函式。
+
+## <a name="syntax"></a>語法
+
+```C
+int _set_printf_count_output(
+   int enable
+);
+```
+
+### <a name="parameters"></a>參數
+
+*啟用*非零值，以啟用 **%n**支援，0 表示停用 **%n**支援。
+
+## <a name="property-valuereturn-value"></a>屬性值/傳回值
+
+狀態 **%n**之前呼叫這個函式支援： 非零如果 **%n**支援已啟用，0，如果已停用。
+
+## <a name="remarks"></a>備註
+
+由於安全性理由，支援 **%n**格式規範中的預設會停用**printf**及其所有的變化。 如果 **%n**中遇到**printf**格式規格中，預設行為是叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 呼叫 **_set_printf_count_output**具有非零引數會導致**printf**-系列的函式，來解譯 **%n**中所述[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_set_printf_count_output**|\<stdio.h>|
+
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_set_printf_count_output.c
+#include <stdio.h>
+
+int main()
+{
+   int e;
+   int i;
+   e = _set_printf_count_output( 1 );
+   printf( "%%n support was %sabled.\n",
+        e ? "en" : "dis" );
+   printf( "%%n support is now %sabled.\n",
+        _get_printf_count_output() ? "en" : "dis" );
+   printf( "12345%n6789\n", &i ); // %n format should set i to 5
+   printf( "i = %d\n", i );
+}
+```
+
+```Output
+%n support was disabled.
+%n support is now enabled.
+123456789
+i = 5
+```
+
+## <a name="see-also"></a>另請參閱
+
+[_get_printf_count_output](get-printf-count-output.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: wcrtomb_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcrtomb_s
@@ -33,123 +33,129 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb7ae5e3246d020844bdd31f970f9678fede78c2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3dddfa0d39f41b4763ec8b636fded99b78f0c296
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
-將寬字元轉換為其多位元組字元表示法。 這是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [wcrtomb](../../c-runtime-library/reference/wcrtomb.md) 版本。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-errno_t wcrtomb_s(  
-   size_t *pReturnValue,  
-   char *mbchar,  
-   size_t sizeOfmbchar,  
-   wchar_t *wchar,  
-   mbstate_t *mbstate  
-);  
-template <size_t size>  
-errno_t wcrtomb_s(  
-   size_t *pReturnValue,  
-   char (&mbchar)[size],  
-   wchar_t *wchar,  
-   mbstate_t *mbstate  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>參數  
- [輸出] `pReturnValue`  
- 傳回寫入的位元組數目，如果發生錯誤則為 -1。  
-  
- [輸出] `mbchar`  
- 產生的多位元組轉換字元。  
-  
- [輸入] `sizeOfmbchar`  
- `mbchar` 變數的大小，以位元組為單位。  
-  
- [in] `wchar`  
- 要轉換的寬字元。  
-  
- [輸入] `mbstate`  
- `mbstate_t` 物件的指標。  
-  
-## <a name="return-value"></a>傳回值  
- 傳回零，如果發生錯誤則為 `errno` 值。  
-  
-## <a name="remarks"></a>備註  
- `wcrtomb_s` 函式會轉換寬字元，從 `mbstate` 包含的指定轉換狀態開始，從 `wchar` 包含的值中，變成 `mbchar` 代表的位址。 `pReturnValue` 值會是轉換的位元組數，但不超過 `MB_CUR_MAX` 個位元組，如果發生錯誤則為 -1。  
-  
- 如果 `mbstate` 為 Null，則使用內部的 `mbstate_t` 轉換狀態。 如果 `wchar` 包含的字元沒有對應的多位元組字元，則 `pReturnValue` 值會是 -1 且函式會傳回 `EILSEQ` 的 `errno` 值。  
-  
- `wcrtomb_s` 函式因為可以重新開機，而與 [wctomb_s、_wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md) 不同。 針對相同或其他可重新啟動的函式的後續呼叫，轉換狀態會儲存在 `mbstate` 中。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了 `wcsrtombs_s` 的後續呼叫，而不是 `wcstombs_s.`，應用程式應該使用 `wcsrlen`，而不是 `wcslen`。  
-  
- C++ 利用多載樣板簡化了此函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
-  
-## <a name="exceptions"></a>例外狀況  
- `wcrtomb_s` 函式是安全多執行緒，但前提是當這個函式執行中、且 `mbstate` 為 Null 時，目前執行緒中沒有任何函式呼叫 `setlocale`。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_wcrtomb_s.c  
-// This program converts a wide character  
-// to its corresponding multibyte character.  
-//  
-  
-#include <string.h>  
-#include <stdio.h>  
-#include <wchar.h>  
-  
-int main( void )  
-{  
-    errno_t     returnValue;  
-    size_t      pReturnValue;  
-    mbstate_t   mbstate;  
-    size_t      sizeOfmbStr = 1;  
-    char        mbchar = 0;  
-    wchar_t*    wchar = L"Q\0";  
-  
-    // Reset to initial conversion state  
-    memset(&mbstate, 0, sizeof(mbstate));  
-  
-    returnValue = wcrtomb_s(&pReturnValue, &mbchar, sizeof(char),  
-                            *wchar, &mbstate);  
-    if (returnValue == 0) {  
-        printf("The corresponding wide character \"");  
-        wprintf(L"%s\"", wchar);  
-        printf(" was converted to a the \"%c\" ", mbchar);  
-        printf("multibyte character.\n");  
-    }  
-    else  
-    {  
-        printf("No corresponding multibyte character "  
-               "was found.\n");  
-    }  
-}  
-```  
-  
-```Output  
-The corresponding wide character "Q" was converted to a the "Q" multibyte character.  
-```  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`wcrtomb_s`|\<wchar.h>|  
-  
-## <a name="see-also"></a>請參閱  
- [資料轉換](../../c-runtime-library/data-conversion.md)   
- [地區設定](../../c-runtime-library/locale.md)   
- [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbsinit](../../c-runtime-library/reference/mbsinit.md)
+
+將寬字元轉換為其多位元組字元表示法。 這是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [wcrtomb](wcrtomb.md) 版本。
+
+## <a name="syntax"></a>語法
+
+```C
+errno_t wcrtomb_s(
+   size_t *pReturnValue,
+   char *mbchar,
+   size_t sizeOfmbchar,
+   wchar_t *wchar,
+   mbstate_t *mbstate
+);
+template <size_t size>
+errno_t wcrtomb_s(
+   size_t *pReturnValue,
+   char (&mbchar)[size],
+   wchar_t *wchar,
+   mbstate_t *mbstate
+); // C++ only
+```
+
+### <a name="parameters"></a>參數
+
+*pReturnValue*<br/>
+傳回寫入的位元組數目，如果發生錯誤則為 -1。
+
+*mbchar*<br/>
+產生的多位元組轉換字元。
+
+*sizeOfmbchar*<br/>
+大小*mbchar*變數以位元組為單位。
+
+*wchar*<br/>
+要轉換的寬字元。
+
+*mbstate*<br/>
+指標**mbstate_t**物件。
+
+## <a name="return-value"></a>傳回值
+
+傳回零或**errno**值發生錯誤。
+
+## <a name="remarks"></a>備註
+
+**Wcrtomb_s**函式將轉換的寬字元，從包含在指定的轉換狀態*mbstate*中, 包含的值從*wchar*，到所代表的位址*mbchar*。 *PReturnValue*值將會是數個位元組轉換，但不是超過**MB_CUR_MAX**位元組，則為-1，發生錯誤。
+
+如果*mbstate*為 null，內部**mbstate_t**會使用轉換狀態。 如果字元包含在*wchar*沒有對應的多位元組字元，值*pReturnValue*是-1，此函數會傳回**errno**值**EILSEQ**。
+
+**Wcrtomb_s**函式不同於[wctomb_s、 _wctomb_s_l](wctomb-s-wctomb-s-l.md)重新。 轉換狀態會儲存在*mbstate*的相同或其他可重新啟動的函式的後續呼叫。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，應用程式會使用**wcsrlen**而**wcslen**，如果的後續呼叫**wcsrtombs_s**而不是使用**wcstombs_s**.
+
+C++ 利用多載樣板簡化了此函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+
+## <a name="exceptions"></a>例外狀況
+
+**Wcrtomb_s**函式是多執行緒安全，只要在目前執行緒中的任何函式呼叫**setlocale**此函式執行時和*mbstate*為 null。
+
+## <a name="example"></a>範例
+
+```C
+// crt_wcrtomb_s.c
+// This program converts a wide character
+// to its corresponding multibyte character.
+//
+
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+
+int main( void )
+{
+    errno_t     returnValue;
+    size_t      pReturnValue;
+    mbstate_t   mbstate;
+    size_t      sizeOfmbStr = 1;
+    char        mbchar = 0;
+    wchar_t*    wchar = L"Q\0";
+
+    // Reset to initial conversion state
+    memset(&mbstate, 0, sizeof(mbstate));
+
+    returnValue = wcrtomb_s(&pReturnValue, &mbchar, sizeof(char),
+                            *wchar, &mbstate);
+    if (returnValue == 0) {
+        printf("The corresponding wide character \"");
+        wprintf(L"%s\"", wchar);
+        printf(" was converted to a the \"%c\" ", mbchar);
+        printf("multibyte character.\n");
+    }
+    else
+    {
+        printf("No corresponding multibyte character "
+               "was found.\n");
+    }
+}
+```
+
+```Output
+The corresponding wide character "Q" was converted to a the "Q" multibyte character.
+```
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**wcrtomb_s**|\<wchar.h>|
+
+## <a name="see-also"></a>另請參閱
+
+[資料轉換](../../c-runtime-library/data-conversion.md)<br/>
+[地區設定](../../c-runtime-library/locale.md)<br/>
+[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[mbsinit](mbsinit.md)<br/>

@@ -1,13 +1,13 @@
 ---
-title: "fdim、fdimf、fdiml | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: fdim、fdimf、fdiml | Microsoft Docs
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fdim
@@ -40,90 +40,95 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e628f84dcadf7b1e214d526981191036428042
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8cf0036bc35f6e3b87daecf47225e59d2dc8f087
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
-判斷第一個和第二個值之間的正差。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-double fdim(  
-   double x,   
-   double y  
-);  
-  
-float fdim(  
-   float x,   
-   float y  
-); //C++ only  
-  
-long double fdim(  
-   long double x,   
-   long double y  
-); //C++ only  
-  
-float fdimf(  
-   float x,   
-   float y  
-);  
-  
-long double fdiml(  
-   long double x,   
-   long double y  
-);  
-  
-```  
-  
-#### <a name="parameters"></a>參數  
- [輸入] `x`  
- 第一個值。  
-  
- [輸入] `y`  
- 第二個值。  
-  
-## <a name="return-value"></a>傳回值  
- 傳回 `x` 與 `y` 之間的正差：  
-  
-|傳回值|情節|  
-|------------------|--------------|  
-|x-y|如果 x > y|  
-|0|如果 x <= y|  
-  
- 否則，可能會傳回下列一項錯誤：  
-  
-|問題|Return|  
-|-----------|------------|  
-|溢位範圍錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|  
-|反向溢位範圍錯誤|正確的值 (四捨五入後)|  
-|`x` 或 `y` 是 NaN|NaN|  
-  
- 依 [_matherr](../../c-runtime-library/reference/matherr.md) 中的指定回報錯誤。  
-  
-## <a name="remarks"></a>備註  
- 因為 C++ 允許多載，所以您可以呼叫採用並傳回浮點和長雙精度浮點數類型的 `fdim` 多載。 在 C 程式中，`fdim` 一律採用及傳回雙精度浮點數。  
-  
- 除了 NaN 處理中，此函式相當於`fmax(x - y, 0)`。  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|C 標頭|C++ 標頭|  
-|--------------|--------------|------------------|  
-|`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
-  
- 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fmax、fmaxf、fmaxl](../../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)   
- [abs、labs、llabs、_abs64](../../c-runtime-library/reference/abs-labs-llabs-abs64.md)
+
+判斷第一個和第二個值之間的正差。
+
+## <a name="syntax"></a>語法
+
+```C
+double fdim(
+   double x,
+   double y
+);
+
+float fdim(
+   float x,
+   float y
+); //C++ only
+
+long double fdim(
+   long double x,
+   long double y
+); //C++ only
+
+float fdimf(
+   float x,
+   float y
+);
+
+long double fdiml(
+   long double x,
+   long double y
+);
+
+```
+
+### <a name="parameters"></a>參數
+
+*x*<br/>
+第一個值。
+
+*y*<br/>
+第二個值。
+
+## <a name="return-value"></a>傳回值
+
+傳回的正差異*x*和*y*:
+
+|傳回值|情節|
+|------------------|--------------|
+|x-y|如果 x > y|
+|0|如果 x <= y|
+
+否則，可能會傳回下列一項錯誤：
+
+|問題|Return|
+|-----------|------------|
+|溢位範圍錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|
+|反向溢位範圍錯誤|正確的值 (四捨五入後)|
+|*x*或*y*是 NaN|NaN|
+
+依 [_matherr](matherr.md) 中的指定回報錯誤。
+
+## <a name="remarks"></a>備註
+
+因為 c + + 允許多載，所以您可以呼叫的多載**fdim**採用並傳回**float**和**長** **double**型別。 在 C 程式中， **fdim**一律採用並傳回**double**。
+
+除了 NaN 處理中，此函式相當於`fmax(x - y, 0)`。
+
+## <a name="requirements"></a>需求
+
+|功能|C 標頭|C++ 標頭|
+|--------------|--------------|------------------|
+|**fdim**， **fdimf**， **fdiml**|\<math.h>|\<cmath>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
+[fmax、fmaxf、fmaxl](fmax-fmaxf-fmaxl.md)<br/>
+[abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>

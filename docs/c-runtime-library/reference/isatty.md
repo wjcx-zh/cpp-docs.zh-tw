@@ -1,12 +1,12 @@
 ---
 title: _isatty | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _isatty
@@ -33,78 +33,81 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bea907f22496c3c1abe86462357ba14514a4aca7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3946ea4751b9ee654bcf24967fc5b109e14ac9b4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="isatty"></a>_isatty
-判斷檔案描述元是否與字元裝置相關聯。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-      int _isatty(  
-int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `fd`  
- 參照至需要測試之裝置的檔案描述元。  
-  
-## <a name="return-value"></a>傳回值  
- 如果描述元與字元裝置相關聯，則 `_isatty` 傳回非零值。 否則，`_isatty` 會傳回 0。  
-  
-## <a name="remarks"></a>備註  
- `_isatty` 函式會判斷`fd` 是否與字元裝置 (終端機、主控台、印表機或序列連接埠) 相關聯。  
-  
- 這個函式會驗證 `fd` 參數。 如果 `fd` 是不正確的檔案指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EBADF`。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_isatty`|\<io.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="libraries"></a>程式庫  
- 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_isatty.c  
-/* This program checks to see whether  
- * stdout has been redirected to a file.  
- */  
-  
-#include <stdio.h>  
-#include <io.h>  
-  
-int main( void )  
-{  
-   if( _isatty( _fileno( stdout ) ) )  
-      printf( "stdout has not been redirected to a file\n" );  
-   else  
-      printf( "stdout has been redirected to a file\n");  
-}  
-```  
-  
-## <a name="sample-output"></a>範例輸出  
-  
-```  
-stdout has not been redirected to a file  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [檔案處理](../../c-runtime-library/file-handling.md)
+
+判斷檔案描述元是否與字元裝置相關聯。
+
+## <a name="syntax"></a>語法
+
+```C
+int _isatty( int fd );
+```
+
+### <a name="parameters"></a>參數
+
+*fd*<br/>
+參照至需要測試之裝置的檔案描述元。
+
+## <a name="return-value"></a>傳回值
+
+**_isatty**字元裝置相關聯的描述元是否傳回非零值。 否則， **_isatty**傳回 0。
+
+## <a name="remarks"></a>備註
+
+**_Isatty**函式判斷是否*fd*字元裝置 （終端機、 主控台、 印表機或序列連接埠） 與相關聯。
+
+此函式會驗證*fd*參數。 如果*fd*是不正確的檔案指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，函數會傳回 0 和集合允許執行**errno**至**EBADF**。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_isatty**|\<io.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="libraries"></a>程式庫
+
+所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_isatty.c
+/* This program checks to see whether
+* stdout has been redirected to a file.
+*/
+
+#include <stdio.h>
+#include <io.h>
+
+int main( void )
+{
+   if( _isatty( _fileno( stdout ) ) )
+      printf( "stdout has not been redirected to a file\n" );
+   else
+      printf( "stdout has been redirected to a file\n");
+}
+```
+
+### <a name="sample-output"></a>範例輸出
+
+```Output
+stdout has not been redirected to a file
+```
+
+## <a name="see-also"></a>另請參閱
+
+[檔案處理](../../c-runtime-library/file-handling.md)<br/>

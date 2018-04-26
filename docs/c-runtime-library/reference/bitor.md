@@ -1,12 +1,12 @@
 ---
 title: bitor | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apilocation:
 - msvcrt.dll
@@ -29,57 +29,60 @@ dev_langs:
 helpviewer_keywords:
 - bitor function
 ms.assetid: 3c0a3711-9c74-41f2-b400-2f7797da30d1
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f02def9d8fba5f00bf87872bdab058ce0f10c32
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 995281f839db890dfa8b1205cd878672341e216c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="bitor"></a>bitor
-&#124; 運算子的替代項目。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-  
-#define bitor |  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 巨集會產生 &#124; 運算子。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// iso646_bitor.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <iso646.h>  
-  
-int main( )  
-{  
-   using namespace std;  
-   int a = 1, b = 2, result;  
-  
-   result = a | b;  
-   cout << result << endl;  
-  
-   result= a bitor b;  
-   cout << result << endl;  
-}  
-```  
-  
-```Output  
-3  
-3  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：**\<iso646.h>
+
+&#124; 運算子的替代項目。
+
+## <a name="syntax"></a>語法
+
+```C
+
+#define bitor |
+
+```
+
+## <a name="remarks"></a>備註
+
+巨集會產生 &#124; 運算子。
+
+## <a name="example"></a>範例
+
+```cpp
+// iso646_bitor.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <iso646.h>
+
+int main( )
+{
+   using namespace std;
+   int a = 1, b = 2, result;
+
+   result = a | b;
+   cout << result << endl;
+
+   result= a bitor b;
+   cout << result << endl;
+}
+```
+
+```Output
+3
+3
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：**\<iso646.h>

@@ -1,12 +1,12 @@
 ---
 title: _heapwalk | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _heapwalk
@@ -33,169 +33,160 @@ helpviewer_keywords:
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b2a69fba87d86b01c4f4e3b8ad140e2bcde3ef
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab80252b599d0a6d7a50e3b113824adc8d8d9926
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="heapwalk"></a>_heapwalk
-周遊堆積，並傳回下一個項目的相關資訊。  
-  
+
+周遊堆積，並傳回下一個項目的相關資訊。
+
 > [!IMPORTANT]
->  這個 API 除了偵錯組建之外，不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int _heapwalk(   
-   _HEAPINFO *entryinfo   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `entryinfo`  
- 包含堆積資訊的緩衝區。  
-  
-## <a name="return-value"></a>傳回值  
- `_heapwalk` 會傳回下列在 Malloc.h 中定義的整數資訊清單常數之一。  
-  
- `_HEAPBADBEGIN`  
- 找不到初始標頭資訊或其無效。  
-  
- `_HEAPBADNODE`  
- 堆積已損毀或找到故障的節點。  
-  
- `_HEAPBADPTR`  
- `_HEAPINFO` 結構的 `_pentry` 欄位進入堆積不包含有效的指標或 `entryinfo` 為 Null 指標。  
-  
- `_HEAPEND`  
- 已成功達到堆積的結尾。  
-  
- `_HEAPEMPTY`  
- 堆積未初始化。  
-  
- `_HEAPOK`  
- 到目前為止，沒有錯誤；已使用下一個堆積項目的相關資訊更新 `entryinfo`。  
-  
- 此外，若是發生錯誤，`_heapwalk` 會將 `errno` 設為 `ENOSYS`。  
-  
-## <a name="remarks"></a>備註  
- `_heapwalk` 函式可協助程式中堆積相關問題的偵錯。 函式會查核堆積，每次呼叫周遊一個項目，並將指標傳回至包含下一個堆積項目的 `_HEAPINFO` 類型結構。 Malloc.h 中定義的 `_HEAPINFO` 類型包含下列項目。  
-  
- `int *_pentry`  
- 堆積項目指標。  
-  
- `size_t _size`  
- 堆積項目大小。  
-  
- `int _useflag`  
- 表示堆積項目是否為使用中的旗標。  
-  
- 呼叫 `_heapwalk` 並傳回 `_HEAPOK` 時，項目大小會被儲存在 `_size` 欄位，並將 `_useflag` 欄位設定為 `_FREEENTRY` 或 `_USEDENTRY` 其中之一 (兩者都是 Malloc.h 中定義的常數)。 若要取得此堆積中第一個項目的資訊，請將 `_heapwalk` 指標傳遞至 `_pentry` 成員為 `NULL` 的`_HEAPINFO` 結構。 如果作業系統不支援 `_heapwalk` (例如，Windows 98)，函式會傳回 `_HEAPEND`，並將 `errno` 設定為 `ENOSYS`。  
-  
- 這個函式會驗證其參數。 如果 `entryinfo` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`errno` 會設為 `EINVAL`，且此函式會傳回 `_HEAPBADPTR`。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|選擇性標頭|  
-|-------------|---------------------|---------------------|  
-|`_heapwalk`|\<malloc.h>|\<errno.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_heapwalk.c  
-  
-// This program "walks" the heap, starting  
-// at the beginning (_pentry = NULL). It prints out each  
-// heap entry's use, location, and size. It also prints  
-// out information about the overall state of the heap as  
-// soon as _heapwalk returns a value other than _HEAPOK  
-// or if the loop has iterated 100 times.  
-  
-#include <stdio.h>  
-#include <malloc.h>  
-  
-void heapdump(void);  
-  
-int main(void)  
-{  
-    char *buffer;  
-  
-    heapdump();  
-    if((buffer = (char *)malloc(59)) != NULL)  
-    {  
-        heapdump();  
-        free(buffer);  
-    }  
-    heapdump();  
-}  
-  
-void heapdump(void)  
-{  
-    _HEAPINFO hinfo;  
-    int heapstatus;  
-    int numLoops;  
-    hinfo._pentry = NULL;  
-    numLoops = 0;  
-    while((heapstatus = _heapwalk(&hinfo)) == _HEAPOK &&  
-          numLoops < 100)  
-    {  
-        printf("%6s block at %Fp of size %4.4X\n",  
-               (hinfo._useflag == _USEDENTRY ? "USED" : "FREE"),  
-               hinfo._pentry, hinfo._size);  
-        numLoops++;  
-    }  
-  
-    switch(heapstatus)  
-    {  
-    case _HEAPEMPTY:  
-        printf("OK - empty heap\n");  
-        break;  
-    case _HEAPEND:  
-        printf("OK - end of heap\n");  
-        break;  
-    case _HEAPBADPTR:  
-        printf("ERROR - bad pointer to heap\n");  
-        break;  
-    case _HEAPBADBEGIN:  
-        printf("ERROR - bad start of heap\n");  
-        break;  
-    case _HEAPBADNODE:  
-        printf("ERROR - bad node in heap\n");  
-        break;  
-    }  
-}  
-```  
-  
-```Output  
-  USED block at 00310650 of size 0100  
-  USED block at 00310758 of size 0800  
-  USED block at 00310F60 of size 0080  
-  FREE block at 00310FF0 of size 0398  
-  USED block at 00311390 of size 000D  
-  USED block at 003113A8 of size 00B4  
-  USED block at 00311468 of size 0034  
-  USED block at 003114A8 of size 0039  
-...  
-  USED block at 00312228 of size 0010  
-  USED block at 00312240 of size 1000  
-  FREE block at 00313250 of size 1DB0  
-OK - end of heap  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [記憶體配置](../../c-runtime-library/memory-allocation.md)   
- [_heapadd](../../c-runtime-library/heapadd.md)   
- [_heapchk](../../c-runtime-library/reference/heapchk.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [_heapset](../../c-runtime-library/heapset.md)
+> 這個 API 除了偵錯組建之外，不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+int _heapwalk( _HEAPINFO *entryinfo );
+```
+
+### <a name="parameters"></a>參數
+
+*entryinfo*<br/>
+包含堆積資訊的緩衝區。
+
+## <a name="return-value"></a>傳回值
+
+**_heapwalk**傳回下列整數資訊清單常數在 Malloc.h 中定義的其中一個。
+
+|傳回值|意義|
+|-|-|
+|**_HEAPBADBEGIN**| 找不到初始標頭資訊或其無效。|
+|**_HEAPBADNODE**| 堆積已損毀或找到故障的節點。|
+|**_HEAPBADPTR**| **_Pentry**欄位 **_HEAPINFO**堆積結構未包含有效的指標或*entryinfo*為 null 指標。|
+|**_HEAPEND**| 已成功達到堆積的結尾。|
+|**_HEAPEMPTY**| 堆積未初始化。|
+|**_HEAPOK**| 沒有錯誤為止。*entryinfo*更新下一個堆積項目相關資訊。|
+
+此外，如果發生錯誤， **_heapwalk**設定**errno**至**ENOSYS**。
+
+## <a name="remarks"></a>備註
+
+**_Heapwalk**函式可協助偵錯堆積相關的問題，在程式中。 函式逐步解說堆積，周遊呼叫，每一個項目，並傳回類型的結構指標 **_HEAPINFO** ，其中包含下一個堆積項目的相關資訊。 **_HEAPINFO** Malloc.h 中, 所定義的類型包含下列項目。
+
+|欄位|意義|
+|-|-|
+|`int *_pentry`|堆積項目指標。|
+|`size_t _size`|堆積項目大小。|
+|`int _useflag`|表示堆積項目是否為使用中的旗標。|
+
+呼叫 **_heapwalk**傳回 **_HEAPOK**儲存中的項目大小 **_size**欄位並設定 **_useflag**欄位設為 **_FREEENTRY**或 **_USEDENTRY** （兩者都是在 Malloc.h 中定義的常數）。 若要取得此堆積中的第一個項目相關資訊，請傳遞 **_heapwalk**指標 **_HEAPINFO**結構其 **_pentry**成員是**NULL**. 如果作業系統不支援 **_heapwalk**（例如 Windows 98），則函數會傳回 **_HEAPEND**並設定**errno**至**ENOSYS**.
+
+這個函式會驗證其參數。 如果*entryinfo*為 null 指標，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式 **_HEAPBADPTR**。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|選擇性標頭|
+|-------------|---------------------|---------------------|
+|**_heapwalk**|\<malloc.h>|\<errno.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_heapwalk.c
+
+// This program "walks" the heap, starting
+// at the beginning (_pentry = NULL). It prints out each
+// heap entry's use, location, and size. It also prints
+// out information about the overall state of the heap as
+// soon as _heapwalk returns a value other than _HEAPOK
+// or if the loop has iterated 100 times.
+
+#include <stdio.h>
+#include <malloc.h>
+
+void heapdump(void);
+
+int main(void)
+{
+    char *buffer;
+
+    heapdump();
+    if((buffer = (char *)malloc(59)) != NULL)
+    {
+        heapdump();
+        free(buffer);
+    }
+    heapdump();
+}
+
+void heapdump(void)
+{
+    _HEAPINFO hinfo;
+    int heapstatus;
+    int numLoops;
+    hinfo._pentry = NULL;
+    numLoops = 0;
+    while((heapstatus = _heapwalk(&hinfo)) == _HEAPOK &&
+          numLoops < 100)
+    {
+        printf("%8s block at %Fp of size %4.4X\n",
+               (hinfo._useflag == _USEDENTRY ? "USED" : "FREE"),
+               hinfo._pentry, hinfo._size);
+        numLoops++;
+    }
+
+    switch(heapstatus)
+    {
+    case _HEAPEMPTY:
+        printf("OK - empty heap\n");
+        break;
+    case _HEAPEND:
+        printf("OK - end of heap\n");
+        break;
+    case _HEAPBADPTR:
+        printf("ERROR - bad pointer to heap\n");
+        break;
+    case _HEAPBADBEGIN:
+        printf("ERROR - bad start of heap\n");
+        break;
+    case _HEAPBADNODE:
+        printf("ERROR - bad node in heap\n");
+        break;
+    }
+}
+```
+
+```Output
+    USED block at 00310650 of size 0100
+    USED block at 00310758 of size 0800
+    USED block at 00310F60 of size 0080
+    FREE block at 00310FF0 of size 0398
+    USED block at 00311390 of size 000D
+    USED block at 003113A8 of size 00B4
+    USED block at 00311468 of size 0034
+    USED block at 003114A8 of size 0039
+...
+    USED block at 00312228 of size 0010
+    USED block at 00312240 of size 1000
+    FREE block at 00313250 of size 1DB0
+OK - end of heap
+```
+
+## <a name="see-also"></a>另請參閱
+
+[記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
+[_heapadd](../../c-runtime-library/heapadd.md)<br/>
+[_heapchk](heapchk.md)<br/>
+[_heapmin](heapmin.md)<br/>
+[_heapset](../../c-runtime-library/heapset.md)<br/>

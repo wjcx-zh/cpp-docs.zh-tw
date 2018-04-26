@@ -1,12 +1,12 @@
 ---
-title: "fgetc、fgetwc | Microsoft Docs"
-ms.custom: 
+title: fgetc、fgetwc | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - fgetwc
@@ -39,117 +39,122 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39149a3963e6950e708499d64efe3c412df96fb5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 82db726bc0296027536798771680cc1326fc00df
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
-從資料流讀取字元。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-int fgetc(   
-   FILE *stream   
-);  
-wint_t fgetwc(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `stream`  
- `FILE` 結構的指標。  
-  
-## <a name="return-value"></a>傳回值  
- `fgetc` 會傳回已讀取為 `int` 的字元，或傳回 `EOF` 表示錯誤或檔案結尾。 `fgetwc` 會以 [wint_t](../../c-runtime-library/standard-types.md) 形式傳回對應至所讀取字元的寬字元，或傳回 `WEOF` 表示錯誤或檔案結尾。 針對這兩個函式，使用 `feof` 或 `ferror` 來區分錯誤與檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果 `stream` 為 `NULL`，則 `fgetc` 和 `fgetwc` 會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EOF`。  
-  
-## <a name="remarks"></a>備註  
- 所有這些函式都會從與 `stream` 相關聯檔案的目前位置讀取單一字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。  
-  
- `fgetc` 相當於 `getc`，但僅實作為函式，而不是函式和巨集。  
-  
- `fgetwc` 是 `fgetc` 的寬字元版本，根據以文字模式還是二進位模式開啟 `stream`，將 `c` 讀取為多位元組字元或寬字元。  
-  
- 具有 `_nolock` 尾碼的版本完全一致，不同之處在於不受保護，不能免於其他執行緒的干擾。  
-  
- 如需在文字和二進位模式中處理寬字元和多位元組字元的詳細資訊，請參閱[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。  
-  
-### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
-  
-|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_fgettc`|`fgetc`|`fgetc`|`fgetwc`|  
-  
-## <a name="requirements"></a>需求  
-  
-|功能|必要的標頭|  
-|--------------|---------------------|  
-|`fgetc`|\<stdio.h>|  
-|`fgetwc`|\<stdio.h> 或 \<wchar.h>|  
-  
- 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
-  
-## <a name="example"></a>範例  
-  
-```  
-// crt_fgetc.c  
-// This program uses getc to read the first  
-// 80 input characters (or until the end of input)  
-// and place them into a string named buffer.  
-  
-#include <stdio.h>  
-#include <stdlib.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char buffer[81];  
-   int  i, ch;  
-  
-   // Open file to read line from:  
-   fopen_s( &stream, "crt_fgetc.txt", "r" );  
-   if( stream == NULL )  
-      exit( 0 );  
-  
-   // Read in first 80 characters and place them in "buffer":   
-   ch = fgetc( stream );  
-   for( i=0; (i < 80 ) && ( feof( stream ) == 0 ); i++ )  
-   {  
-      buffer[i] = (char)ch;  
-      ch = fgetc( stream );  
-   }  
-  
-   // Add null to end string   
-   buffer[i] = '\0';  
-   printf( "%s\n", buffer );  
-   fclose( stream );  
-}  
-```  
-  
-## <a name="input-crtfgetctxt"></a>輸入：crt_fgetc.txt  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-### <a name="output"></a>輸出  
-  
-```  
-Line one.  
-Line two.  
-```  
-  
-## <a name="see-also"></a>請參閱  
- [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
- [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+從資料流讀取字元。
+
+## <a name="syntax"></a>語法
+
+```C
+int fgetc(
+   FILE *stream
+);
+wint_t fgetwc(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>參數
+
+*資料流*<br/>
+**FILE** 結構的指標。
+
+## <a name="return-value"></a>傳回值
+
+**fgetc**傳回的字元讀取為**int**或傳回**EOF**表示錯誤或檔案結尾。 **fgetwc**傳回，作為[wint_t](../../c-runtime-library/standard-types.md)，寬字元會對應到讀取的字元，或傳回**WEOF**表示錯誤或檔案結尾。 對於這兩個函式，使用**feof**或**ferror**來區別錯誤，檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*資料流*是**NULL**， **fgetc**和**fgetwc**叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回**EOF**。
+
+## <a name="remarks"></a>備註
+
+所有這些函式讀取從目前位置的檔案與相關聯的單一字元*資料流*。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
+
+**fgetc**相當於**getc**，但只為函式，而不是函式和巨集實作。
+
+**fgetwc**是寬字元版本的**fgetc**; 它會讀取**c**為多位元組字元或寬字元是否根據*資料流*中開啟文字模式或二進位模式。
+
+具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。
+
+如需在文字和二進位模式中處理寬字元和多位元組字元的詳細資訊，請參閱[文字和二進位模式的 Unicode 資料流 I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)。
+
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應
+
+|TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_fgettc**|**fgetc**|**fgetc**|**fgetwc**|
+
+## <a name="requirements"></a>需求
+
+|功能|必要的標頭|
+|--------------|---------------------|
+|**fgetc**|\<stdio.h>|
+|**fgetwc**|\<stdio.h> 或 \<wchar.h>|
+
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="example"></a>範例
+
+```C
+// crt_fgetc.c
+// This program uses getc to read the first
+// 80 input characters (or until the end of input)
+// and place them into a string named buffer.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main( void )
+{
+   FILE *stream;
+   char buffer[81];
+   int  i, ch;
+
+   // Open file to read line from:
+   fopen_s( &stream, "crt_fgetc.txt", "r" );
+   if( stream == NULL )
+      exit( 0 );
+
+   // Read in first 80 characters and place them in "buffer":
+   ch = fgetc( stream );
+   for( i=0; (i < 80 ) && ( feof( stream ) == 0 ); i++ )
+   {
+      buffer[i] = (char)ch;
+      ch = fgetc( stream );
+   }
+
+   // Add null to end string
+   buffer[i] = '\0';
+   printf( "%s\n", buffer );
+   fclose( stream );
+}
+```
+
+## <a name="input-crtfgetctxt"></a>輸入：crt_fgetc.txt
+
+```Input
+Line one.
+Line two.
+```
+
+### <a name="output"></a>輸出
+
+```Output
+Line one.
+Line two.
+```
+
+## <a name="see-also"></a>另請參閱
+
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc、fputwc](fputc-fputwc.md)<br/>
+[getc、getwc](getc-getwc.md)<br/>

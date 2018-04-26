@@ -1,12 +1,12 @@
 ---
-title: "_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l | Microsoft Docs"
-ms.custom: 
+title: _mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctohira
@@ -47,78 +47,83 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 761aebe19fea4cced51a7b49372b4c3c9d6bbecb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 80f82098a033f7a3dec8cdb475476644381bed8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira、_mbctohira_l、_mbctokata、_mbctokata_l
-轉換平假名和片假名字元。  
-  
+
+轉換平假名和片假名字元。
+
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱[通用 Windows 平台應用程式不支援 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-unsigned int _mbctohira(  
-   unsigned int c   
-);  
-unsigned int _mbctohira_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-unsigned int _mbctokata(  
-   unsigned int c   
-);  
-unsigned int _mbctokata_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>參數  
- `c`  
- 要轉換的多位元組字元。  
-  
- `locale`  
- 要使用的地區設定。  
-  
-## <a name="return-value"></a>傳回值  
- 如果可能，所有這些函式都會傳回已轉換的字元 `c`。 否則會傳回未變更的字元 `c`。  
-  
-## <a name="remarks"></a>備註  
- `_mbctohira` 和 `_mbctokata` 函式會測試字元 `c`，如果可能的話，還會套用下列其中一個轉換。  
-  
-|常式|轉換|  
-|--------------|--------------|  
-|`_mbctohira,_mbctohira_l`|多位元組片假名到多位元組平假名。|  
-|`_mbctokata,_mbctokata_l`|多位元組平假名到多位元組片假名。|  
-  
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些函式的版本均相同，除了沒有 `_l` 後置碼的函式會針對此地區設定的相關行為使用目前的地區設定，而具有 `_l` 後置詞的函式會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
-  
- 在舊版中，`_mbctohira` 名為 `jtohira`，而 `_mbctokata` 名為 `jtokata`。 對於新的程式碼，請使用新名稱。  
-  
-## <a name="requirements"></a>需求  
-  
-|常式傳回的值|必要的標頭|  
-|-------------|---------------------|  
-|`_mbctohira`|\<mbstring.h>|  
-|`_mbctohira_l`|\<mbstring.h>|  
-|`_mbctokata`|\<mbstring.h>|  
-|`_mbctokata_l`|\<mbstring.h>|  
-  
- 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
-  
-## <a name="see-also"></a>請參閱  
- [資料轉換](../../c-runtime-library/data-conversion.md)   
- [_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
- [_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l](../../c-runtime-library/reference/mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)   
- [_mbctombb、_mbctombb_l](../../c-runtime-library/reference/mbctombb-mbctombb-l.md)
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+
+## <a name="syntax"></a>語法
+
+```C
+unsigned int _mbctohira(
+   unsigned int c
+);
+unsigned int _mbctohira_l(
+   unsigned int c,
+   _locale_t locale
+);
+unsigned int _mbctokata(
+   unsigned int c
+);
+unsigned int _mbctokata_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>參數
+
+*C*<br/>
+要轉換的多位元組字元。
+
+*locale*<br/>
+要使用的地區設定。
+
+## <a name="return-value"></a>傳回值
+
+所有這些函式會傳回已轉換的字元*c*如果可能。 否則它會傳回字元*c*不變。
+
+## <a name="remarks"></a>備註
+
+**_Mbctohira**和 **_mbctokata**函式會測試字元*c*和的話，請套用下列轉換。
+
+|常式|轉換|
+|--------------|--------------|
+|**_mbctohira**， **_mbctohira_l**|多位元組片假名到多位元組平假名。|
+|**_mbctokata**， **_mbctokata_l**|多位元組平假名到多位元組片假名。|
+
+輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些函式版本是相同的不同之處在於，不是有 **_l**後置詞使用針對此地區設定相關的行為而沒有目前的地區設定 **_l**改為後置詞使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+
+在舊版中， **_mbctohira**命名為**jtohira**和 **_mbctokata**命名為**jtokata**。 對於新的程式碼，請使用新名稱。
+
+## <a name="requirements"></a>需求
+
+|常式|必要的標頭|
+|-------------|---------------------|
+|**_mbctohira**|\<mbstring.h>|
+|**_mbctohira_l**|\<mbstring.h>|
+|**_mbctokata**|\<mbstring.h>|
+|**_mbctokata_l**|\<mbstring.h>|
+
+如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+
+## <a name="see-also"></a>另請參閱
+
+[資料轉換](../../c-runtime-library/data-conversion.md)<br/>
+[_mbcjistojms、_mbcjistojms_l、_mbcjmstojis、_mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>
+[_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l](mbctolower-mbctolower-l-mbctoupper-mbctoupper-l.md)<br/>
+[_mbctombb、_mbctombb_l](mbctombb-mbctombb-l.md)<br/>

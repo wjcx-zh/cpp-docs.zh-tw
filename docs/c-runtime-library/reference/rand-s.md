@@ -1,12 +1,12 @@
 ---
 title: rand_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - rand_s
@@ -41,15 +41,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2438b2ced054667a658f8f31a37c9a62112debc6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a0e548a4225a457f846d334768d981c924d41953
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="rands"></a>rand_s
 
-產生虛擬亂數。 這是更安全的函式版本[rand](../../c-runtime-library/reference/rand.md)，具有安全性增強功能中所述[CRT 中安全性功能](../../c-runtime-library/security-features-in-the-crt.md)。 
+產生虛擬亂數。 這是更安全的函式版本[rand](rand.md)，具有安全性增強功能中所述[CRT 中安全性功能](../../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -59,31 +59,31 @@ errno_t rand_s(unsigned int* randomValue);
 
 ### <a name="parameters"></a>參數
 
-*randomValue*  
+*randomValue*<br/>
 用於儲存產生的值為整數指標。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功則為零，否則為錯誤碼。 如果輸入的指標_機會也很小_為 null 指標，函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回 `EINVAL`，並將 `errno` 設為 `EINVAL`。 如果此函數失敗的任何其他原因，*_機會也很小_設為 0。
+如果成功則為零，否則為錯誤碼。 如果輸入的指標_機會也很小_為 null 指標，函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回**EINVAL**並設定**errno**至**EINVAL**。 如果此函數失敗的任何其他原因，*_機會也很小_設為 0。
 
 ## <a name="remarks"></a>備註
 
-`rand_s` 函式會將範圍介於 0 到 `UINT_MAX` 的虛擬隨機整數寫入輸入指標。 `rand_s` 函式使用作業系統來產生密碼編譯安全的亂數。 它不會使用 [srand](../../c-runtime-library/reference/srand.md) 函式所產生的種子，也不會影響 `rand` 使用的亂數順序。
+**Rand_s**函式會將虛擬隨機整數寫入中介於範圍 0 到**UINT_MAX**輸入的指標。 **Rand_s**函式會使用作業系統來產生密碼編譯安全隨機數字。 不會使用所產生的種子[srand](srand.md)函式，也不會影響所使用的隨機數字順序[rand](rand.md)。
 
-`rand_s` 函式需要先定義常數 `_CRT_RAND_S`，再定義要宣告之函式的包含陳述式，如下列範例所示︰
+**Rand_s**函式需要該常數 **_CRT_RAND_S**定義之前宣告，如下列範例所示的函式包含的陳述式：
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-`rand_s` 取決於 [RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694) API，這只能在 Windows XP 及更新版本使用。
+**rand_s**取決於[RtlGenRandom](http://msdn.microsoft.com/library/windows/desktop/aa387694)應用程式開發介面，因此僅可在 Windows XP 及更新版本。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
-|`rand_s`|\<stdlib.h>|
+|**rand_s**|\<stdlib.h>|
 
 如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
@@ -131,7 +131,7 @@ int main( void )
         {
             printf_s("The rand_s function failed!\n");
         }
-        printf_s( "  %g\n", (double) number / 
+        printf_s( "  %g\n", (double) number /
                           ((double) UINT_MAX + 1) * max );
     }
 }
@@ -165,6 +165,6 @@ int main( void )
 
 ## <a name="see-also"></a>另請參閱
 
-[浮點支援](../../c-runtime-library/floating-point-support.md)  
-[rand](../../c-runtime-library/reference/rand.md)  
-[srand](../../c-runtime-library/reference/srand.md)  
+[浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
+[rand](rand.md)<br/>
+[srand](srand.md)<br/>

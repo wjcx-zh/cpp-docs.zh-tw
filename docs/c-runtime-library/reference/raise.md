@@ -1,12 +1,12 @@
 ---
 title: raise | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>raise
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>參數
 
-*sig*  
+*sig*<br/>
 要產生的訊號。
 
 ## <a name="return-value"></a>傳回值
@@ -73,18 +73,18 @@ int raise(
 
 |訊號|意義|預設|
 |------------|-------------|-------------|
-|`SIGABRT`|異常終止|結束呼叫程式，結束代碼 3|
-|`SIGFPE`|浮點錯誤|結束呼叫程式|
-|`SIGILL`|不合法的指令|結束呼叫程式|
-|`SIGINT`|CTRL+C 中斷|結束呼叫程式|
-|`SIGSEGV`|不合法的儲存體存取|結束呼叫程式|
-|`SIGTERM`|終止傳送給程式的要求|忽略訊號|
+|**SIGABRT**|異常終止|結束呼叫程式，結束代碼 3|
+|**SIGFPE**|浮點錯誤|結束呼叫程式|
+|**SIGILL**|不合法的指令|結束呼叫程式|
+|**SIGINT**|CTRL+C 中斷|結束呼叫程式|
+|**SIGSEGV**|不合法的儲存體存取|結束呼叫程式|
+|**SIGTERM**|終止傳送給程式的要求|忽略訊號|
 
-如果引數不是有效的訊號，如上述所指定，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果未處理，則此函式會將 `errno` 設為 `EINVAL` 並傳回非零值。
+如果引數不是有效的訊號，如上述所指定，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果未處理，函式會將**errno**至**EINVAL**並傳回非零值。
 
 ## <a name="requirements"></a>需求
 
-|常式傳回的值|必要的標頭|
+|常式|必要的標頭|
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 
@@ -92,6 +92,6 @@ int raise(
 
 ## <a name="see-also"></a>另請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

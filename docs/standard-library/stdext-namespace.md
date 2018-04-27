@@ -1,12 +1,12 @@
 ---
-title: "stdext 命名空間 | Microsoft Docs"
-ms.custom: 
+title: stdext 命名空間 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - stdext
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - _DEFINE_DEPRECATED_HASH_CLASSES symbol
 - stdext namespace
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265a10e71064f2bf3a318a272b751009b1b193be
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c1baadcb29f4f30582f3e1cadd8a061fc72cd5a
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="stdext-namespace"></a>stdext 命名空間
 
@@ -34,15 +34,15 @@ ms.lasthandoff: 02/23/2018
 
 編譯時[/Ze](../build/reference/za-ze-disable-language-extensions.md)，這是預設值，編譯器會發出警告，於使用`std`之成員的\<hash_map > 和\<hash_set > 標頭檔。 若要停用警告，請使用 [warning](../preprocessor/warning.md) pragma。
 
-若要讓編譯器產生錯誤，而使用`std`之成員的\<hash_map > 和\<hash_set > 標頭檔與**/Ze**，加入下列指示詞，才能`#include`任何 c + + 標準程式庫標頭檔。
+若要讓編譯器產生錯誤，而使用`std`之成員的\<hash_map > 和\<hash_set > 標頭檔與 **/Ze**，加入下列指示詞，才能`#include`任何 c + + 標準程式庫標頭檔。
 
-```cpp  
-#define _DEFINE_DEPRECATED_HASH_CLASSES 0  
-```  
+```cpp
+#define _DEFINE_DEPRECATED_HASH_CLASSES 0
+```
 
-編譯時**/Za**，編譯器會產生錯誤。  
+編譯時 **/Za**，編譯器會產生錯誤。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
 

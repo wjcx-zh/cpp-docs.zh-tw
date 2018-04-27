@@ -1,12 +1,12 @@
 ---
-title: "exception 類別 | Microsoft Docs"
-ms.custom: 
+title: exception 類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - exception
@@ -15,23 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa11044218257b3471e2d65fe652ca32d39196
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 713600a72886b713c58c4a449c6f5270a3ccfe9a
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="exception-class"></a>exception 類別
-此類別可作為特定運算式和 C++ 標準程式庫所擲回之所有例外狀況的基底類別。  
-  
-## <a name="syntax"></a>語法  
-```  
+
+此類別可作為特定運算式和 C++ 標準程式庫所擲回之所有例外狀況的基底類別。
+
+## <a name="syntax"></a>語法
+
+```cpp
 class exception {
    public:
    exception();
@@ -41,26 +43,28 @@ class exception {
    exception& operator=(const exception &right);
    virtual ~exception();
    virtual const char *what() const;
-   };  
-``` 
-## <a name="remarks"></a>備註  
- 具體來說，這個基底類別是 [\<stdexcept>](../standard-library/stdexcept.md) 中定義之標準例外狀況類別的根本。 預設建構函式不會指定 `what` 所傳回的 C 字串值，但特定衍生類別的建構函式可能會將其定義為由實作定義的 C 字串。 所有成員函式都不會擲回任何例外狀況。  
-  
- 如果不應配置任何記憶體，可使用 `int` 參數來指定。 系統會忽略 `int` 值。  
-  
+   };
+```
+
+## <a name="remarks"></a>備註
+
+具體來說，這個基底類別是 [\<stdexcept>](../standard-library/stdexcept.md) 中定義之標準例外狀況類別的根本。 預設建構函式不會指定 `what` 所傳回的 C 字串值，但特定衍生類別的建構函式可能會將其定義為由實作定義的 C 字串。 所有成員函式都不會擲回任何例外狀況。
+
+如果不應配置任何記憶體，可使用 `int` 參數來指定。 系統會忽略 `int` 值。
+
 > [!NOTE]
->  建構函式 `exception(const char* const &message)` 和 `exception(const char* const &message, int)` 是 Microsoft 的 C++ 標準程式庫延伸模組。  
-  
-## <a name="example"></a>範例  
- 如需繼承自 `exception` 類別之標準例外狀況類別的用法範例，請參閱 [\<stdexcept>](../standard-library/stdexcept.md) 中定義的任何類別。  
-  
-## <a name="requirements"></a>需求  
- **標頭：**\<exception>  
-  
- **命名空間：** std  
-  
-## <a name="see-also"></a>請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+> 建構函式 `exception(const char* const &message)` 和 `exception(const char* const &message, int)` 是 Microsoft 的 C++ 標準程式庫延伸模組。
 
+## <a name="example"></a>範例
 
+如需繼承自 `exception` 類別之標準例外狀況類別的用法範例，請參閱 [\<stdexcept>](../standard-library/stdexcept.md) 中定義的任何類別。
 
+## <a name="requirements"></a>需求
+
+**標頭：**\<exception>
+
+**命名空間：** std
+
+## <a name="see-also"></a>另請參閱
+
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

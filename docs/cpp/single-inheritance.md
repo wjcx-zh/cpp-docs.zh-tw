@@ -1,12 +1,12 @@
 ---
-title: "單一繼承 |Microsoft 文件"
-ms.custom: 
+title: 單一繼承 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 003e407edfd50440a2bbeaf483c2fba94d178b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d005d4d973ca3ac1873b588975683b14624f21f
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="single-inheritance"></a>單一繼承
 在「單一繼承」(一種常見的繼承形式) 中，任何類別都只能有一個基底類別。 請考慮下圖中說明的關係。  
   
- ![基本的單一 &#45; 繼承圖形](../cpp/media/vc38xj1.gif "vc38XJ1")  
+ ![基本的單一&#45;繼承圖形](../cpp/media/vc38xj1.gif "vc38XJ1")  
 簡單的單一繼承圖形  
   
  請注意圖中從一般到特定的進展。 在大部分類別階層架構設計中，另一種常見的屬性是衍生類別，其與基底類別具有一種「種類」(kind of) 的關聯性。 在圖中，`Book` 是一種 `PrintedDocument`，而 `PaperbackBook` 是一種 `book`。  
@@ -155,8 +155,10 @@ class PaperbackBook : public Document {};
   
 int main() {  
    Document * DocLib[10];   // Library of ten documents.  
-   for (int i = 0 ; i < 10 ; i++)  
+   for (int i = 0 ; i < 5 ; i++)  
       DocLib[i] = new Document;  
+   for (int i = 5 ; i < 10 ; i++)  
+      DocLib[i] = new PaperbackBook;  
 }  
 ```  
   

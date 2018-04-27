@@ -1,12 +1,12 @@
 ---
-title: "is_function 類別 | Microsoft Docs"
-ms.custom: 
+title: is_function 類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - type_traits/std::is
@@ -16,78 +16,82 @@ helpviewer_keywords:
 - is_function class
 - is
 ms.assetid: e5c0dbcd-829b-415f-853f-8c5be47c5040
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4368cec0de623f4de81888fe8c51cfc54018591
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 251e3ee235fd9715f42182b15307a4963414964e
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="isfunction-class"></a>is_function 類別
-測試類型是否為函式類型。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-template <class Ty>  
-struct is_function;  
-```  
-  
-#### <a name="parameters"></a>參數  
- `Ty`  
- 要查詢的類型。  
-  
-## <a name="remarks"></a>備註  
- 如果類型 `Ty` 是函式類型，則類型述詞的執行個體為 true，否則為 false。  
-  
-## <a name="example"></a>範例  
-  
-```cpp  
-// std__type_traits__is_function.cpp   
-// compile with: /EHsc   
-#include <type_traits>   
-#include <iostream>   
-  
-struct trivial   
-    {   
-    int val;   
-    };   
-  
-struct functional   
-    {   
-    int f();   
-    };   
-  
-int main()   
-    {   
-    std::cout << "is_function<trivial> == " << std::boolalpha   
-        << std::is_function<trivial>::value << std::endl;   
-    std::cout << "is_function<functional> == " << std::boolalpha   
-        << std::is_function<functional>::value << std::endl;   
-    std::cout << "is_function<float()> == " << std::boolalpha   
-        << std::is_function<float()>::value << std::endl;   
-  
-    return (0);   
-    }  
-  
-```  
-  
-```Output  
-is_function<trivial> == false  
-is_function<functional> == false  
-is_function<float()> == true  
-```  
-  
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
-  
- **命名空間：** std  
-  
-## <a name="see-also"></a>請參閱  
- [<type_traits>](../standard-library/type-traits.md)   
- [is_object 類別](../standard-library/is-object-class.md)
+
+測試類型是否為函式類型。
+
+## <a name="syntax"></a>語法
+
+```cpp
+template <class Ty>
+struct is_function;
+```
+
+### <a name="parameters"></a>參數
+
+`Ty` 要查詢的類型。
+
+## <a name="remarks"></a>備註
+
+如果類型 `Ty` 是函式類型，則類型述詞的執行個體為 true，否則為 false。
+
+## <a name="example"></a>範例
+
+```cpp
+// std__type_traits__is_function.cpp
+// compile with: /EHsc
+#include <type_traits>
+#include <iostream>
+
+struct trivial
+    {
+    int val;
+    };
+
+struct functional
+    {
+    int f();
+    };
+
+int main()
+    {
+    std::cout << "is_function<trivial> == " << std::boolalpha
+        << std::is_function<trivial>::value << std::endl;
+    std::cout << "is_function<functional> == " << std::boolalpha
+        << std::is_function<functional>::value << std::endl;
+    std::cout << "is_function<float()> == " << std::boolalpha
+        << std::is_function<float()>::value << std::endl;
+
+    return (0);
+    }
+
+```
+
+```Output
+is_function<trivial> == false
+is_function<functional> == false
+is_function<float()> == true
+```
+
+## <a name="requirements"></a>需求
+
+**標頭：**\<type_traits>
+
+**命名空間：** std
+
+## <a name="see-also"></a>另請參閱
+
+[<type_traits>](../standard-library/type-traits.md)<br/>
+[is_object 類別](../standard-library/is-object-class.md)<br/>

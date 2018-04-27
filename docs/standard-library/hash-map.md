@@ -1,12 +1,12 @@
 ---
 title: '&lt;hash_map&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <hash_map>
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50716912b42aace87b1132672331c86d9eae162
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 177afaca1ddad1145c9465dc6b71863c846b6b5c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -52,9 +52,9 @@ ms.lasthandoff: 02/23/2018
 
 ### <a name="classes"></a>類別
 
-|||
+|類別|描述|
 |-|-|
-|[hash_compare Class](hash-compare-class.md)|描述一個物件，該物件可由任一雜湊相關聯的容器 (hash_map、hash_multimap、hash_set 或 hash_multiset) 當成預設 **Traits** 參數物件使用，以便排序與雜湊處理所包含的項目。|
+|[hash_compare 類別](hash-compare-class.md)|描述一個物件，該物件可由任一雜湊相關聯的容器 (hash_map、hash_multimap、hash_set 或 hash_multiset) 當成預設 **Traits** 參數物件使用，以便排序與雜湊處理所包含的項目。|
 |[value_compare 類別](value-compare-class.md)|提供函式物件，該物件可透過比較 hash_map 項目的索引鍵值來比較項目，以判斷項目在 hash_map 中的相對順序。|
 |[hash_map 類別](hash-map-class.md)|用以儲存及快速擷取集合中的資料，其中每個項目為具有排序鍵 (其值唯一) 和相關聯資料值的配對。|
 |[hash_multimap 類別](hash-multimap-class.md)|用以儲存及快速擷取集合中的資料，其中每個項目為具有排序鍵 (其值可重複) 和相關聯資料值的配對。|
@@ -67,6 +67,6 @@ ms.lasthandoff: 02/23/2018
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](cpp-standard-library-header-files.md)  
-[C++ 標準程式庫中的執行緒安全](thread-safety-in-the-cpp-standard-library.md)  
-[C++ 標準程式庫參考](cpp-standard-library-reference.md)  
+[標頭檔參考](cpp-standard-library-header-files.md)
+[c + + 標準程式庫中的執行緒安全](thread-safety-in-the-cpp-standard-library.md)
+[c + + 標準程式庫參考](cpp-standard-library-reference.md)

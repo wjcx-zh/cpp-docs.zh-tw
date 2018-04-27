@@ -1,12 +1,12 @@
 ---
 title: '&lt;iosfwd&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <iosfwd>
@@ -15,31 +15,32 @@ dev_langs:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da52a399718acb97f9d14c776091d33ad627a412
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 15005f088043b7d7904f57114fc125d3da80b1fc
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
-宣告對在所有 iostream 中使用之數個範本類別的向前參考。 所有這類範本類別都是在其他標準標頭中定義。 只有當您需要此標頭的其中一個宣告但不需要其定義時，才需要明確包含此標頭。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-#include <iosfwd>  
-  
-```  
-  
-## <a name="typedefs"></a>Typedefs  
-  
+
+宣告對在所有 iostream 中使用之數個範本類別的向前參考。 所有這類範本類別都是在其他標準標頭中定義。 只有當您需要此標頭的其中一個宣告但不需要其定義時，才需要明確包含此標頭。
+
+## <a name="syntax"></a>語法
+
+```cpp
+#include <iosfwd>
+
 ```
+
+## <a name="typedefs"></a>Typedefs
+
+```cpp
 typedef T1 streamoff;
 typedef T2 streamsize;
 typedef fpos streampos;
@@ -74,11 +75,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
-```  
-  
-## <a name="forward-declarationstemplate-classes"></a>向前宣告/範本類別  
-  
 ```
+
+## <a name="forward-declarationstemplate-classes"></a>向前宣告/範本類別
+
+```cpp
 template <class _Statetype>
 class fpos;
 
@@ -138,13 +139,11 @@ class basic_ofstream;
 
 template <class Elem, class Tr = char_traits<Elem>>
 class basic_fstream;
-```  
-  
-## <a name="see-also"></a>請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+```
 
+## <a name="see-also"></a>另請參閱
 
-
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
+[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>

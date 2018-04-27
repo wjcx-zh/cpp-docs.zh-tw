@@ -1,12 +1,12 @@
 ---
-title: "regex_constants 類別 | Microsoft Docs"
-ms.custom: 
+title: regex_constants 類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_constants
@@ -91,43 +91,47 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b14c219f755e50e1ede0e8fd58d9a5158283235
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 239dbe69d32a5d9a463e33d9d3c1076aa0e79f50
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="regexconstants-class"></a>regex_constants 類別
-規則運算式旗標的命名空間。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-namespace regex_constants {  
-    enum syntax_option_type;  
-    enum match_flag_type;  
-    enum error_type;  
- }  
-```  
-  
-## <a name="remarks"></a>備註  
- `regex_constants` 命名空間會封裝幾個旗標類型及其關聯的旗標值。  
-  
-## <a name="requirements"></a>需求  
- **標頭︰**\<regex>  
-  
- **命名空間：** std  
-  
-##  <a name="error_type"></a>  regex_constants::error_type  
- 規則運算式語法錯誤報告的旗標。  
-  
-```  
+
+規則運算式旗標的命名空間。
+
+## <a name="syntax"></a>語法
+
+```cpp
+namespace regex_constants {
+    enum syntax_option_type;
+    enum match_flag_type;
+    enum error_type;
+ }
+```
+
+## <a name="remarks"></a>備註
+
+`regex_constants` 命名空間會封裝幾個旗標類型及其關聯的旗標值。
+
+## <a name="requirements"></a>需求
+
+**標頭︰**\<regex>
+
+**命名空間：** std
+
+## <a name="error_type"></a>  regex_constants::error_type
+
+規則運算式語法錯誤報告的旗標。
+
+```cpp
 enum error_type
     {    // identify error
     error_collate,
@@ -145,49 +149,51 @@ enum error_type
     error_stack,
     error_parse,
     error_syntax
-    };  
-```  
-  
-### <a name="remarks"></a>備註  
- 此類型為列舉類型，描述可以保留錯誤旗標的物件。 不同的旗標值為：  
-  
- `error_backref` -- 運算式包含無效的反向參考  
-  
- `error_badbrace` -- 運算式在 { } 運算式中包含無效計數  
-  
- `error_badrepeat` -- 重複運算式 (大部分內容中含 '* '、''、'+'、' {' 其中之一) 之前沒有運算式  
-  
- `error_brace` -- 運算式包含不對稱的 '{' 或 '}'  
-  
- `error_brack` -- 運算式包含不對稱的 '[' 或 ']'  
-  
- `error_collate` -- 運算式包含無效的定序項目名稱  
-  
- `error_complexity` -- 嘗試比對因為太複雜而失敗  
-  
- `error_ctype` -- 運算式包含無效的字元類別名稱  
-  
- `error_escape` -- 運算式包含無效的逸出序列  
-  
- `error_paren` -- 運算式包含不對稱的 '(' 或 ')'  
-  
- `error_parse` -- 無法剖析運算式  
-  
- `error_range` -- 運算式包含無效的字元範圍規範  
-  
- `error_space` -- 剖析規則運算式失敗，因為沒有足夠的資源可供使用  
-  
- `error_stack` -- 嘗試比對失敗，因為沒有足夠的記憶體可供使用  
-  
- `error_syntax` -- 無法剖析語法錯誤  
-  
- `error_backref` -- 運算式包含無效的反向參考  
-  
-##  <a name="match_flag_type"></a>  regex_constants::match_flag_type  
- 規則運算式比對選項的旗標。  
-  
-```  
-enum match_flag_type 
+    };
+```
+
+### <a name="remarks"></a>備註
+
+此類型為列舉類型，描述可以保留錯誤旗標的物件。 不同的旗標值為：
+
+`error_backref` -- 運算式包含無效的反向參考
+
+`error_badbrace` -- 運算式在 { } 運算式中包含無效計數
+
+`error_badrepeat` -- 重複運算式 (大部分內容中含 '* '、''、'+'、' {' 其中之一) 之前沒有運算式
+
+`error_brace` -- 運算式包含不對稱的 '{' 或 '}'
+
+`error_brack` -- 運算式包含不對稱的 '[' 或 ']'
+
+`error_collate` -- 運算式包含無效的定序項目名稱
+
+`error_complexity` -- 嘗試比對因為太複雜而失敗
+
+`error_ctype` -- 運算式包含無效的字元類別名稱
+
+`error_escape` -- 運算式包含無效的逸出序列
+
+`error_paren` -- 運算式包含不對稱的 '(' 或 ')'
+
+`error_parse` -- 無法剖析運算式
+
+`error_range` -- 運算式包含無效的字元範圍規範
+
+`error_space` -- 剖析規則運算式失敗，因為沒有足夠的資源可供使用
+
+`error_stack` -- 嘗試比對失敗，因為沒有足夠的記憶體可供使用
+
+`error_syntax` -- 無法剖析語法錯誤
+
+`error_backref` -- 運算式包含無效的反向參考
+
+## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+
+規則運算式比對選項的旗標。
+
+```cpp
+enum match_flag_type
     {    // specify matching and formatting rules
     match_default = 0x0000,
     match_not_bol = 0x0001,
@@ -203,46 +209,48 @@ enum match_flag_type
     format_no_copy = 0x0800,
     format_first_only = 0x1000,
     _Match_not_null = 0x2000
-    };  
-```  
-  
-### <a name="remarks"></a>備註  
- 此類型是位元遮罩類型，描述根據規則運算式比對文字序列時所要使用的選項，以及取代文字時所要使用的格式旗標。 這些選項可以搭配 `|`使用。  
-  
- 比對選項包括：  
-  
- `match_default`  
-  
- `match_not_bol` -- 不會將目標序列中的第一個位置視為行首  
-  
- `match_not_eol` -- 不會將目標序列中超過結尾的位置視為行尾  
-  
- `match_not_bow` -- 不會將目標序列中的第一個位置視為字首  
-  
- `match_not_eow` -- 不會將目標序列中超過結尾的位置視為字尾  
-  
- `match_any` -- 如果可能有多個相符項目，則可接受所有相符項目  
-  
- `match_not_null` -- 不會將空的子序列視為相符項目  
-  
- `match_continuous` -- 只會從目標序列開頭搜尋相符項目  
-  
- `match_prev_avail` -- `--first` 是有效的迭代器；如果已設定，則會忽略 `match_not_bol` 和 `match_not_bow`  
-  
- 格式旗標包括：  
-  
- `format_default` -- 使用 ECMAScript 格式規則  
-  
- `format_sed` -- 使用 sed 格式規則  
-  
- `format_no_copy` -- 不會複製不符合規則運算式的文字  
-  
- `format_first_only` -- 只會搜尋第一個相符項目  
-  
-##  <a name="syntax_option_type"></a>  regex_constants::syntax_option_type  
- 用於選取語法選項的旗標。  
-  
-```  
+    };
+```
+
+### <a name="remarks"></a>備註
+
+此類型是位元遮罩類型，描述根據規則運算式比對文字序列時所要使用的選項，以及取代文字時所要使用的格式旗標。 這些選項可以搭配 `|`使用。
+
+比對選項包括：
+
+`match_default`
+
+`match_not_bol` -- 不會將目標序列中的第一個位置視為行首
+
+`match_not_eol` -- 不會將目標序列中超過結尾的位置視為行尾
+
+`match_not_bow` -- 不會將目標序列中的第一個位置視為字首
+
+`match_not_eow` -- 不會將目標序列中超過結尾的位置視為字尾
+
+`match_any` -- 如果可能有多個相符項目，則可接受所有相符項目
+
+`match_not_null` -- 不會將空的子序列視為相符項目
+
+`match_continuous` -- 只會從目標序列開頭搜尋相符項目
+
+`match_prev_avail` -- `--first` 是有效的迭代器；如果已設定，則會忽略 `match_not_bol` 和 `match_not_bow`
+
+格式旗標包括：
+
+`format_default` -- 使用 ECMAScript 格式規則
+
+`format_sed` -- 使用 sed 格式規則
+
+`format_no_copy` -- 不會複製不符合規則運算式的文字
+
+`format_first_only` -- 只會搜尋第一個相符項目
+
+## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+
+用於選取語法選項的旗標。
+
+```cpp
 enum syntax_option_type
     {    // specify RE syntax rules
     ECMAScript = 0x01,
@@ -257,42 +265,44 @@ enum syntax_option_type
     nosubs = 0x0200,
     optimize = 0x0400,
     collate = 0x0800
-    };  
-```  
-  
-### <a name="remarks"></a>備註  
- 此類型是位元遮罩類型，用於描述編譯規則運算式時，所要使用的語言規範和語法修飾詞。 這些選項可以搭配 `|`使用。 一次只能使用一個語言規範。  
-  
- 語言規範如下：  
-  
- `ECMAScript` -- 編譯成 ECMAScript  
-  
- `basic` -- 編譯成 BRE  
-  
- `extended` -- 編譯成 ERE  
-  
- `awk` -- 編譯成 awk  
-  
- `grep` -- 編譯成 grep  
-  
- `egrep` -- 編譯成 egrep  
-  
- 語法修飾詞如下：  
-  
- `icase` -- 使所有相符項目皆不區分大小寫  
-  
- `nosubs` -- 實作不需要持續追蹤擷取群組的內容  
-  
- `optimize` -- 實作應強調比對速度，而不是規則運算式的編譯速度  
-  
- `collate` -- 使所有相符項目皆區分地區設定  
-  
-## <a name="see-also"></a>請參閱  
-[\<regex>](../standard-library/regex.md)  
-[regex_error 類別](../standard-library/regex-error-class.md)  
-[\<regex> 函式](../standard-library/regex-functions.md)  
-[regex_iterator 類別](../standard-library/regex-iterator-class.md)  
-[\<regex> 運算子](../standard-library/regex-operators.md)  
-[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
-[regex_traits 類別](../standard-library/regex-traits-class.md)  
-[\<regex> typedefs](../standard-library/regex-typedefs.md)  
+    };
+```
+
+### <a name="remarks"></a>備註
+
+此類型是位元遮罩類型，用於描述編譯規則運算式時，所要使用的語言規範和語法修飾詞。 這些選項可以搭配 `|`使用。 一次只能使用一個語言規範。
+
+語言規範如下：
+
+`ECMAScript` -- 編譯成 ECMAScript
+
+`basic` -- 編譯成 BRE
+
+`extended` -- 編譯成 ERE
+
+`awk` -- 編譯成 awk
+
+`grep` -- 編譯成 grep
+
+`egrep` -- 編譯成 egrep
+
+語法修飾詞如下：
+
+`icase` -- 使所有相符項目皆不區分大小寫
+
+`nosubs` -- 實作不需要持續追蹤擷取群組的內容
+
+`optimize` -- 實作應強調比對速度，而不是規則運算式的編譯速度
+
+`collate` -- 使所有相符項目皆區分地區設定
+
+## <a name="see-also"></a>另請參閱
+
+[\<regex>](../standard-library/regex.md)<br/>
+[regex_error 類別](../standard-library/regex-error-class.md)<br/>
+[\<regex> 函式](../standard-library/regex-functions.md)<br/>
+[regex_iterator 類別](../standard-library/regex-iterator-class.md)<br/>
+[\<regex> 運算子](../standard-library/regex-operators.md)<br/>
+[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)<br/>
+[regex_traits 類別](../standard-library/regex-traits-class.md)<br/>
+[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>

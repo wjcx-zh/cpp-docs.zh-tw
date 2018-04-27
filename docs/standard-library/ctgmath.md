@@ -1,49 +1,49 @@
 ---
 title: '&lt;ctgmath&gt; | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac578edcfab6acb59360c80794c4f2c02470b470
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbff9bcb3e36ef65e811314d0c426c9992e87fda
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
-實際上，包括 C++ 標準程式庫標頭 \<ccomplex> 和 \<cmath>，提供相當於 \<tgmath.h> 的泛型算術巨集。  
-  
-## <a name="syntax"></a>語法  
-  
-```  
-#include <ctgmath>  
-  
-```  
-  
-## <a name="remarks"></a>備註  
- 標準 C 程式庫標頭 \<tgmath.h> 的功能是由 \<ccomplex> 和 \<cmath> 的多載提供。  
-  
- 包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。  
-  
-## <a name="see-also"></a>請參閱  
- [\<ccomplex>](../standard-library/ccomplex.md)   
- [\<cmath>](../standard-library/cmath.md)   
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+實際上，包括 C++ 標準程式庫標頭 \<ccomplex> 和 \<cmath>，提供相當於 \<tgmath.h> 的泛型算術巨集。
 
+## <a name="syntax"></a>語法
 
+```cpp
+#include <ctgmath>
+
+```
+
+## <a name="remarks"></a>備註
+
+標準 C 程式庫標頭 \<tgmath.h> 的功能是由 \<ccomplex> 和 \<cmath> 的多載提供。
+
+包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
+
+## <a name="see-also"></a>另請參閱
+
+[\<c >](../standard-library/ccomplex.md)<br/>
+[\<h >](../standard-library/cmath.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "time_get_byname 類別 | Microsoft Docs"
-ms.custom: 
+title: time_get_byname 類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xloctime/std::time_get_byname
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - time_get_byname class
 ms.assetid: 6e54153e-da40-4bb9-a942-1a6ce57b30c9
-caps.latest.revision: 
+caps.latest.revision: 25
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5da50c2079fe7345d2ac70855f0fb57c8eeecce7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 004c35e3c09f8acc55980024e4752ab26a26afa1
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="timegetbyname-class"></a>time_get_byname 類別
-衍生的樣板類別描述可做為類型 `time_get`\<CharType, InputIterator> 的地區設定 facet 的物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```
+
+衍生的樣板類別描述可做為類型 `time_get`\<CharType, InputIterator> 的地區設定 facet 的物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
 template <class Elem, class InputIterator =
     istreambuf_iterator<CharType, char_traits<CharType>>>
 class time_get_byname : public time_get<CharType, InputIterator>
@@ -49,25 +50,24 @@ public:
 protected:
     virtual ~time_get_byname()
 };
-```  
-  
-#### <a name="parameters"></a>參數  
- `_Locname`  
- 具名地區設定。  
-  
- `_Refs`  
- 初始參考計數。  
-  
-## <a name="requirements"></a>需求  
- 其行為取決於具名地區設定 `_Locname`。 每個建構函式會以 [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`) 初始化其基底物件。  
-  
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
-  
- **命名空間：** std  
-  
-## <a name="see-also"></a>請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+```
 
+### <a name="parameters"></a>參數
 
+`_Locname` 具名的地區設定。
 
+`_Refs` 初始參考計數。
+
+## <a name="requirements"></a>需求
+
+其行為取決於具名地區設定 `_Locname`。 每個建構函式會以 [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`) 初始化其基底物件。
+
+## <a name="requirements"></a>需求
+
+**標頭︰**\<locale>
+
+**命名空間：** std
+
+## <a name="see-also"></a>另請參閱
+
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

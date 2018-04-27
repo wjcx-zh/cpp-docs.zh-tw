@@ -1,28 +1,28 @@
 ---
-title: "如何： 使用 Windows 10 SDK 中的 Windows 桌面應用程式 |Microsoft 文件"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 如何： 使用 Windows 10 SDK 中的 Windows 桌面應用程式 |Microsoft 文件
+ms.custom: ''
+ms.date: 04/19/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面應用程式中使用 Windows 10 SDK
 當您建立傳統 Windows 桌面專案在 Visual Studio 2017 時，它會設定預設使用 c + + 桌面工作負載已安裝，或上次更新時已安裝的 Windows 10 sdk 版本來建置。 這個 Windows SDK 版本是與所有最新的 Windows 版本相容。 如果您想要以較早版本的 SDK 為目標，您可以開啟專案 |屬性，然後選擇 從可用的 Windows SDK 版本下拉式清單中的其他 SDK 版本。  
@@ -31,7 +31,8 @@ ms.lasthandoff: 01/03/2018
   
 ### <a name="to-target-the-windows-10-sdk"></a>以 Windows 10 SDK 為目標  
   
-1.  確定已安裝 Windows 10 SDK。 Windows 10 SDK 安裝的一部份[Tools for Windows 10](http://go.microsoft.com/fwlink/p/?linkid=617631)。  
+1.  確定已安裝 Windows 10 SDK。 Windows 10 SDK 安裝的一部份**的 c + + 桌面應用程式開發**工作負載。 獨立版本將會位於[下載和工具適用於 Windows 10](https://developer.microsoft.com/windows/downloads)。
+
   
 2.  開啟專案節點的捷徑功能表，然後選擇 [重定 SDK 版本目標] 。  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 01/03/2018
   
      ![包含目錄對話方塊](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
-     選擇**巨集 >>**按鈕，然後向下捲動至 Windows SDK 巨集，以查看所有新的值的巨集的清單。  
+     選擇**巨集 >>** 按鈕，然後向下捲動至 Windows SDK 巨集，以查看所有新的值的巨集的清單。  
   
      ![Windows SDK 巨集](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")  
   
@@ -69,5 +70,5 @@ ms.lasthandoff: 01/03/2018
   
 2.  在 [目標平台版本] 下拉式清單中，選擇 8.1。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 桌面應用程式 （Visual c + +）](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

@@ -1,12 +1,12 @@
 ---
-title: "time_put_byname 類別 | Microsoft Docs"
-ms.custom: 
+title: time_put_byname 類別 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xloctime/std::time_put_byname
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-caps.latest.revision: 
+caps.latest.revision: 25
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719df3a10b7c4b72cc90b0a5f8aad247cf915f4d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 34ac10a6456c2bc1b69d3076e5b3ba351507c3ee
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="timeputbyname-class"></a>time_put_byname 類別
-衍生的樣板類別描述可做為類型 `time_put`\< CharType, OutputIterator > 的地區設定 facet 的物件。  
-  
-## <a name="syntax"></a>語法  
-  
-```
+
+衍生的樣板類別描述可做為類型 `time_put`\< CharType, OutputIterator > 的地區設定 facet 的物件。
+
+## <a name="syntax"></a>語法
+
+```cpp
 template <class CharType, class OutIt = ostreambuf_iterator<CharType, char_traits<CharType>>>
 class time_put_byname : public time_put<CharType, OutputIterator>
 {
@@ -49,25 +50,24 @@ protected:
     virtual ~time_put_byname();
 
 };
-```  
-  
-#### <a name="parameters"></a>參數  
- `_Locname`  
- 地區設定名稱。  
-  
- `_Refs`  
- 初始參考計數。  
-  
-## <a name="remarks"></a>備註  
- 其行為取決於[具名](../standard-library/locale-class.md#name)地區設定 `_Locname`。 每個建構函式會以 [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`) 初始化其基底物件。  
-  
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
-  
- **命名空間：** std  
-  
-## <a name="see-also"></a>請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+```
 
+### <a name="parameters"></a>參數
 
+`_Locname` 地區設定名稱。
 
+`_Refs` 初始參考計數。
+
+## <a name="remarks"></a>備註
+
+其行為取決於[具名](../standard-library/locale-class.md#name)地區設定 `_Locname`。 每個建構函式會以 [time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator>( `_Refs`) 初始化其基底物件。
+
+## <a name="requirements"></a>需求
+
+**標頭︰**\<locale>
+
+**命名空間：** std
+
+## <a name="see-also"></a>另請參閱
+
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

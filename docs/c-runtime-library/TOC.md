@@ -24,7 +24,7 @@
 ## [連結選項](link-options.md)
 ## [跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](potential-errors-passing-crt-objects-across-dll-boundaries.md)
 ## [CRT 初始化](crt-initialization.md)
-# [依類別區分的執行階段常式](run-time-routines-by-category.md)
+# [依類別排序的通用 C 執行階段常式](run-time-routines-by-category.md)
 ## [引數存取](argument-access.md)
 ## [緩衝區操作](buffer-manipulation.md)
 ## [位元組分類](byte-classification.md)

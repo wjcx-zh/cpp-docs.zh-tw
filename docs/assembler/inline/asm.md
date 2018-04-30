@@ -1,13 +1,10 @@
 ---
-title: "__asm |Microsoft 文件"
-ms.custom: 
+title: __asm |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 f1_keywords:
 - __asm
 - __asm_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75a5d272e4ac26b87728506e45759733ffa26472
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77e09f6af92839c6113c9c5ba375a1583bcf7149
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="asm"></a>__asm
 **Microsoft 特定的**  
@@ -49,9 +44,9 @@ ms.lasthandoff: 12/21/2017
  `__asm {`  `assembly-instruction-list`  `};`選擇加入  
   
  *組件指示清單*:  
- `assembly-instruction``;`選擇加入  
+ `assembly-instruction` `;`選擇加入  
   
- `assembly-instruction``;` `assembly-instruction-list` `;`選擇加入  
+ `assembly-instruction` `;` `assembly-instruction-list` `;`選擇加入  
   
  如果不含大括號使用，`__asm` 關鍵字表示該行的其餘部分是組合語言的陳述式。 如果搭配大括號使用，表示在大括號之間的每一行都是組合語言的陳述式。 為了與舊版相容，`_asm` 是 `__asm` 的同義字。  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 __asm int 3  
 ```  
   
- 不會造成編譯時產生的原生程式碼**/clr**; 編譯器會轉譯為 CLR 中斷指令的指示。  
+ 不會造成編譯時產生的原生程式碼 **/clr**; 編譯器會轉譯為 CLR 中斷指令的指示。  
   
  `__asm int 3` 現在會產生函式的機器碼。 如果您想要在程式碼中導致中斷點，如果您想要編譯為 MSIL，該函數使用的函式[__debugbreak](../../intrinsics/debugbreak.md)。  
   
@@ -98,6 +93,6 @@ __asm mov al, 2   __asm mov dx, 0xD007   __asm out dx, al
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../../cpp/keywords-cpp.md)   
  [內嵌組合語言](../../assembler/inline/inline-assembler.md)

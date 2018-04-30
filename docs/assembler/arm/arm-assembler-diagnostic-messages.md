@@ -1,27 +1,22 @@
 ---
-title: "ARM 組合程式診斷訊息 |Microsoft 文件"
-ms.custom: 
+title: ARM 組合程式診斷訊息 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54dca3a864ca34107314ad33725793297fd93e4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1616b4bd9c4b64e771ec537a1b8cd7b582702222
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM 組合程式診斷訊息
 Microsoft ARM 組譯工具 (*armasm*) 時，會發出診斷警告和錯誤遇到它們。 這篇文章描述最常遇到的訊息。  
@@ -129,6 +124,6 @@ ADDEQ r0, r1, r8              ; A4509: This form of conditional instruction is d
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ARM 組合程式命令列參考](../../assembler/arm/arm-assembler-command-line-reference.md)   
  [ARM 組譯工具指示詞](../../assembler/arm/arm-assembler-directives.md)

@@ -1,12 +1,9 @@
 ---
 title: .SALL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - .SALL
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - .SALL directive
 ms.assetid: 2791e746-96aa-4ed5-ae69-abd072378f86
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc834a41e296e5c12ed9690d6756afffff2ac01f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5cd82c1e90dc59fd7df9edc91a23c17e57241975
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="sall"></a>.SALL
 請參閱[。NOLISTMACRO](../../assembler/masm/dot-nolistmacro.md)。  
@@ -38,5 +33,5 @@ ms.lasthandoff: 02/14/2018
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

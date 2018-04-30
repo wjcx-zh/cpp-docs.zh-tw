@@ -1,12 +1,9 @@
 ---
-title: "Microsoft Macro Assembler 參考 |Microsoft 文件"
-ms.custom: 
+title: Microsoft Macro Assembler 參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 713e11262a660bcd42aea27bcb0da9e5f7f0c956
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 巨集組合程式參考
 Microsoft Macro Assembler (MASM) 提供了許多優於內嵌組譯碼。 MASM 包含巨集語言，包含功能，例如迴圈、 算術、 和文字字串處理。 MASM 也讓您進一步控制硬體，因為它支援 386 486 及 Pentium 處理器的指令集。 藉由使用 MASM，您也可以降低時間和記憶體的負荷。  
@@ -57,7 +52,7 @@ Microsoft Macro Assembler (MASM) 提供了許多優於內嵌組譯碼。 MASM �
  [Visual C++](../../visual-cpp-in-visual-studio.md)  
  提供的 Visual Studio 和 Visual c + + 文件的不同區域的連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../../intrinsics/compiler-intrinsics.md)   
  [x86Intrinsics](../../intrinsics/x86-intrinsics-list.md)   
  [x64 (amd64) 內建函式](../../intrinsics/x64-amd64-intrinsics-list.md)

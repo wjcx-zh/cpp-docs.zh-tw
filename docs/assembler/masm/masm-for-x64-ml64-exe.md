@@ -1,12 +1,9 @@
 ---
-title: "MASM (ml64.exe) x64 |Microsoft 文件"
-ms.custom: 
+title: MASM (ml64.exe) x64 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a42b25b5d86d181bed907a3b437d28f3cbf5e820
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b17771239ff9c89b765576ba49515463db42386f
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="masm-for-x64-ml64exe"></a>適用於 x64 的 MASM (ml64.exe)
 
-Visual Studio 包含 32 位元和 64 位元裝載的版本 MASM 目標 x64 程式碼。 名為 ml64.exe，這是可接受 x64 組譯工具組譯工具的語言。 當您在 Visual Studio 安裝期間選擇的 c + + 工作負載時，會安裝 MASM 命令列工具。 無法使用個別下載這些工具。 若要下載並安裝 Visual Studio 的複本，請參閱[https://www.visualstudio.com/](https://www.visualstudio.com/)。 如果您不想要安裝 Visual Studio IDE 中，而只想要的命令列工具，請參閱**建置工具的 Visual Studio 2017**選項[Visual Studio 下載](https://www.visualstudio.com/downloads/)頁面。
+Visual Studio 包含 32 位元和 64 位元裝載的版本 MASM 目標 x64 程式碼。 名為 ml64.exe，這是可接受 x64 組譯工具組譯工具的語言。 當您在 Visual Studio 安裝期間選擇的 c + + 工作負載時，會安裝 MASM 命令列工具。 無法使用個別下載這些工具。 若要下載並安裝 Visual Studio 的複本，請參閱[ https://www.visualstudio.com/ ](https://www.visualstudio.com/)。 如果您不想要安裝 Visual Studio IDE 中，而只想要的命令列工具，請參閱**建置工具的 Visual Studio 2017**選項[Visual Studio 下載](https://www.visualstudio.com/downloads/)頁面。
 
 若要建置使用 MASM 程式碼適用於 x64 目標命令列上，您必須使用適用於 x64 的開發人員命令提示字元設定必要的路徑和其他環境變數的目標。 如需如何開發人員命令提示字元啟動資訊，請參閱[命令列上的建置 C/c + + 程式碼](../../build/building-on-the-command-line.md)。
 
@@ -49,7 +44,7 @@ Visual Studio 專案系統支援使用 c + + 專案中的 MASM 所建置的組�
 
 1. 在功能表列上選擇 **專案**，**加入新項目**。 
 
-1. 在**加入新項目**對話方塊中，選取**c + + 檔 (.cpp)**中間窗格內。 在**名稱**編輯控制項中，輸入新的檔案名稱具有**.asm**而不是.cpp 副檔名。 選擇**新增**將檔案加入您的專案，並關閉對話方塊。
+1. 在**加入新項目**對話方塊中，選取**c + + 檔 (.cpp)** 中間窗格內。 在**名稱**編輯控制項中，輸入新的檔案名稱具有 **.asm**而不是.cpp 副檔名。 選擇**新增**將檔案加入您的專案，並關閉對話方塊。
 
 您新增的.asm 檔案中建立您的組譯工具語言程式碼。 當您建置方案時，MASM 組合器會叫用來將.asm 檔組合成然後連結至您的專案檔。 若要簡化符號的存取，宣告組譯工具函式做為`extern "C"`在 c + + 程式碼中，而不是使用 c + + 名稱裝飾慣例，在您的組譯工具-語言原始程式檔。
   
@@ -94,6 +89,6 @@ mov eax, DWORD PTR [rcx*2+r10d]
 mov eax, DWORD PTR [ecx*2+r10+0100h]  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 
 [Microsoft 巨集組譯工具參考](../../assembler/masm/microsoft-macro-assembler-reference.md)

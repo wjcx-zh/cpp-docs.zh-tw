@@ -1,13 +1,10 @@
 ---
-title: "將 __asm 區塊定義為 C 巨集 |Microsoft 文件"
-ms.custom: 
+title: 將 __asm 區塊定義為 C 巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Visual C, macros
 - __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af95f7b2c74d797203a0e6b3ddd6a92ddcb51e5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69e1e7f2d4b980045a4e8993e39a69fc353a4f39
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="defining-asm-blocks-as-c-macros"></a>將 __asm 區塊定義為 C 巨集
 **Microsoft 特定的**  
@@ -68,5 +63,5 @@ __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [內嵌組合語言](../../assembler/inline/inline-assembler.md)

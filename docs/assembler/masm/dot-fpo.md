@@ -1,12 +1,9 @@
 ---
 title: .FPO | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - .FPO
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76f3fb3d06e3d09cdd63e48ef2ab8a6ce95c81e6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: df5185c0dc699764427989b2f46345d90ded1729
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="fpo"></a>.FPO
 。FPO 指示詞會控制如何發出偵錯記錄，到.debug$ F 區段或區段。  
@@ -69,5 +64,5 @@ cbFrame
  *cbFrame*  
  表示框架類型。  請參閱[FPO_DATA](http://msdn.microsoft.com/library/windows/desktop/ms679352)如需詳細資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

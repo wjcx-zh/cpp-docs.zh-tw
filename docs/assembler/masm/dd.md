@@ -1,12 +1,9 @@
 ---
-title: DD | Microsoft Docs
-ms.custom: 
+title: DD |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - dd
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DD directive
 ms.assetid: 0c238628-2fe2-437e-979d-a90bdae7b478
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f252c1f67fec7a35ac7e5915aa0de621881d246
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ff556b6ba25743df05073b56b57611346d316cb4
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="dd"></a>DD
 配置及選擇性的儲存體初始化雙字組 （4 個位元組），每個`initializer`。 `DD` 是的同義字[DWORD](../../assembler/masm/dword.md)。  
@@ -39,5 +34,5 @@ ms.lasthandoff: 02/14/2018
 ## <a name="remarks"></a>備註  
  也可用以做為類型指定型別是合法的任何位置。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

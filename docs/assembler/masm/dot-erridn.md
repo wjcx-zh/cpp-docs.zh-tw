@@ -1,12 +1,9 @@
 ---
 title: .ERRIDN] | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - .ERRIDN[[I]]
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - .ERRIDN[[I]] directive
 ms.assetid: 89507db3-7d40-4a5e-a378-24d30feda9d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34189117c48f80ea5ecd0d624f740e681e64a528
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e6948baa498cccb9f89eb030978b18363cfdddd6
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="erridn"></a>.ERRIDN]
 如果文字項目相同，則會產生錯誤。  
@@ -40,5 +35,5 @@ ms.lasthandoff: 02/14/2018
 ## <a name="remarks"></a>備註  
  如果**我**是假設，比較會區分大小寫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

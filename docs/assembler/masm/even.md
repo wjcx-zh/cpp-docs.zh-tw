@@ -1,12 +1,9 @@
 ---
-title: EVEN | Microsoft Docs
-ms.custom: 
+title: 即使 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - EVEN
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EVEN directive
 ms.assetid: 68938ba4-8cb9-44d4-914e-9f9fee6bcbf4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58a5a486328b79373bfbff8a73be88b16095b8cd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 77e75563e1871982c82a5b9ee0240b9d5844de57
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="even"></a>EVEN
 將下一個變數或指令甚至位元組對齊。  
@@ -38,5 +33,5 @@ EVEN
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

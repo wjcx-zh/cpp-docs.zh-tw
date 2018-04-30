@@ -1,12 +1,9 @@
 ---
-title: "選項 (MASM) |Microsoft 文件"
-ms.custom: 
+title: 選項 (MASM) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - option
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d8e8049ecea3775b9df85eb1d5c8ee5e94a9243
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 80291c805cad3ef041fffc58983ff399da07c9d9
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 啟用和停用 「 組合器 」 的功能。  
@@ -46,11 +41,11 @@ optionlist
 |-|-|-|-|  
 |**CASEMAP**|**DOTNAME**|**NODOTNAME**|**模擬器**|  
 |**NOEMULATOR**|**結尾**|**EXPR16**|**EXPR32**|  
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|  
+|**語言**|**LJMP**|**NOLJMP**|**M510**|  
 |**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|  
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|  
-|**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|  
-|**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|  
+|**PROC**|**序言**|**READONLY**|**NOREADONLY**|  
+|**範圍**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|  
   
  語言的語法是 **選項語言: * * * x*，其中*x*是其中一個 C、 SYSCALL、 STDCALL、 PASCAL、 FORTRAN 或 BASIC。  系統呼叫、 PASCAL、 FORTRAN 和 BASIC 不支援搭配[。模型](../../assembler/masm/dot-model.md)一般。  
   

@@ -1,13 +1,10 @@
 ---
-title: "在 __asm 區塊中使用 C 或 c + + |Microsoft 文件"
-ms.custom: 
+title: 在 __asm 區塊中使用 C 或 c + + |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ab706f682372cb0a76f0d3283157d4da9105ed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e9451a0b665e5377c2acaf871154ec78a38c8b5
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>在 __asm 區塊中使用 C 或 C++
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   巨集和前置處理器指示詞  
   
--   註解 (兩者 **/ \* \* /** 和 **//**  )  
+-   註解 (兩者**/ \* \* /** 和**//** )  
   
 -   類型名稱 (MASM 類型為合法的任何位置)  
   
--   `typedef`名稱，通常搭配運算子例如**PTR**和**類型**或指定結構或等位成員  
+-   `typedef` 名稱，通常搭配運算子例如**PTR**和**類型**或指定結構或等位成員  
   
  在 `__asm` 區塊內，您可以使用 C 標記法或組合語言基數標記法 (例如 0x100 和 100h 相等) 指定整數常數。 這樣您就可以在 C 中定義常數 (使用 `#define`)，然後在 C 或 C++ 中與程式的組合語言部分使用該常數。 您也可以在常數前面加上 0，指定八進位的常數。 例如，0777 會指定八進位常數。  
   
@@ -67,5 +62,5 @@ ms.lasthandoff: 12/21/2017
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [內嵌組合語言](../../assembler/inline/inline-assembler.md)

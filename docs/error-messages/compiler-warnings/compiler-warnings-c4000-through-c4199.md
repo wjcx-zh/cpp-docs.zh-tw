@@ -1,12 +1,12 @@
 ---
-title: "編譯器警告 C4000 透過 C4199 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 C4000 透過 C4199 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4000
@@ -98,17 +98,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 426f495a-43af-4906-ad2b-6e5822c09965
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61298ccfbe1fc1d0d6f74df983984d0b70ee30f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 5c66738ee482c9e244cf9e1a9cc6aecb157b9346
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="compiler-warnings-c4000-through-c4199"></a>編譯器警告 C4000 透過 C4199
 
@@ -159,6 +159,7 @@ ms.lasthandoff: 03/16/2018
 |編譯器警告 （層級 1） C4051|轉換類型，可能導致資料遺失|
 |編譯器警告 （層級 4） C4052|函式宣告不同; 一個包含變數引數|
 |編譯器警告 （層級 4） C4053|'?:' 有一類型為 void 的運算元|
+|[編譯器警告 （層級 1） C4055](compiler-warning-level-1-c4055.md)|'conversion': 從資料指標 '*type1*'到函式指標'*type2*'|
 |[編譯器警告 (層級 2) C4056](../../error-messages/compiler-warnings/compiler-warning-level-2-c4056.md)|在浮點常數算術中溢位|
 |編譯器警告 （層級 4） C4057|'operator': 'identifier1' 在間接取值和至不同基底類型有些許不同於 'identifier2'|
 |編譯器警告 C4060|switch 陳述式包含沒有 'case' 或 'default' 標籤|

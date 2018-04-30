@@ -1,13 +1,10 @@
 ---
-title: "在 __asm 區塊中使用組合語言 |Microsoft 文件"
-ms.custom: 
+title: 在 __asm 區塊中使用組合語言 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07a7e50c040ec52fe79cba25ca4c1e29ac05bd8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f93e8962d6ec562a3b51968be92fdd1facda14c4
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-assembly-language-in-asm-blocks"></a>在 __asm 區塊中使用組合語言
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -57,5 +52,5 @@ ms.lasthandoff: 12/21/2017
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [內嵌組合語言](../../assembler/inline/inline-assembler.md)

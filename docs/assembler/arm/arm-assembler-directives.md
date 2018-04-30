@@ -1,27 +1,22 @@
 ---
-title: "ARM 組合程式指示詞 |Microsoft 文件"
-ms.custom: 
+title: ARM 組合程式指示詞 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6d42e099ecf8d3630e54eeb629bb3f9f46fa363
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9f5ab97fb9ccdff19206b829383c622efd3f7921
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-directives"></a>ARM 組合程式指示詞
 大部分的情況下，Microsoft ARM 組件會使用 ARM 組譯語言，而其記錄在第 7 章[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。 不過，有些組件指示詞的 Microsoft 實作，ARM 組件指示詞而有所不同。 本文說明的差異。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 02/14/2018
  ATTR  
  不支援。  
   
- CODE16  
+ 代碼 16  
  由於這表示前置 UAL Thumb 語法 Microsoft ARM 組件不允許不支援。  請改用 THUMB 指示詞，以及 UAL 語法。  
   
  一般  
@@ -113,6 +108,6 @@ IMPORT sym{, WEAK alias{, TYPE t}}
  THUMBX  
  不支援，因為 Microsoft ARM 組件不支援捲動方塊 2EE 指令集。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ARM 組合程式命令列參考](../../assembler/arm/arm-assembler-command-line-reference.md)   
  [ARM 組譯工具診斷訊息](../../assembler/arm/arm-assembler-diagnostic-messages.md)

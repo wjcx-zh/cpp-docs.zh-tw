@@ -1,12 +1,9 @@
 ---
-title: "ML 非嚴重錯誤 A2050 |Microsoft 文件"
-ms.custom: 
+title: ML 非嚴重錯誤 A2050 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: error-reference
 f1_keywords:
 - A2050
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 887a18ee274b3e09624a07e214f235333e2a9665
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 159ed131c13166435114234b3b16a82cd4d41d1f
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ml-nonfatal-error-a2050"></a>ML 非嚴重錯誤 A2050
 **實數或不允許的 BCD 數字**  
@@ -40,5 +35,5 @@ ms.lasthandoff: 02/14/2018
   
 -   BCD 用來初始化指示詞以外`TBYTE`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

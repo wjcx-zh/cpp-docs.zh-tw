@@ -1,27 +1,22 @@
 ---
-title: "ARM 組合程式參考 |Microsoft 文件"
-ms.custom: 
+title: ARM 組合程式參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 08/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdfb3a9d47e0814eb6bd918aea95738785e3bb21
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 198e38547258837999c3e11903bc98575fdb036f
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-reference"></a>ARM 組合程式參考
 
@@ -37,7 +32,7 @@ ms.lasthandoff: 02/14/2018
 |[ARM 架構參考手冊](https://developer.arm.com/search#q=ARM%20Architecture%20Reference%20Manual)ARM 開發人員網站上。|選擇 ARM 架構的相關手冊。 每個包含有關 ARM、 姆指、 NEON，與 VFP，參考區段和 ARM 組件語言的其他資訊。|  
 |[ARM 編譯器 armasm 使用者指南](https://developer.arm.com/search#q=ARM%20Compiler%20armasm%20User%20Guide)ARM 開發人員網站上。|選擇最近的版本來尋找有關 ARM 組件語言的最新狀態資訊。 **注意：**指 ARM 開發人員網站的"armasm 「 組合器不是 Microsoft armasm 組譯工具隨附於 Visual Studio，並記錄在這一節。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 
  [ARM 內建函式](../../intrinsics/arm-intrinsics.md)   
  [編譯器內建](../../intrinsics/compiler-intrinsics.md)

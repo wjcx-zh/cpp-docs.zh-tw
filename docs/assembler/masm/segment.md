@@ -1,12 +1,9 @@
 ---
-title: SEGMENT | Microsoft Docs
-ms.custom: 
+title: 區段 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - SEGMENT
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: c55416cc5a757128c9cc97b2f342953911ac2946
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="segment"></a>SEGMENT
 定義程式區段，稱為*名稱*區段屬性  
@@ -68,13 +63,13 @@ name ENDS
  `ALIAS(` `string` `)`  
  這個字串會作為發出 COFF 物件中的區段名稱。  建立多個區段具有相同的外部名稱，以不同的 MASM 區段名稱。  
   
- 不支援與**/omf**。  
+ 不支援與 **/omf**。  
   
  `class`  
  指定應該如何結合並排序組合檔案中區段。 典型值為， `'DATA'`， `'CODE'`，`'CONST'`和 `'STACK'`  
   
 ## <a name="remarks"></a>備註  
- 如`ALIGN(n)`，`n`可能是任何 2 的乘冪從 1 到 8192; 不支援**/omf**。  
+ 如`ALIGN(n)`，`n`可能是任何 2 的乘冪從 1 到 8192; 不支援 **/omf**。  
   
 ## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

@@ -1,12 +1,9 @@
 ---
-title: .PUSHFRAME | Microsoft Docs
-ms.custom: 
+title: .PUSHFRAME |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - .PUSHFRAME
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - .PUSHFRAME directive
 ms.assetid: 17b123d0-4c6d-4fd2-85eb-798e8ad0a73c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fa9b03f1075418019f41f3d537607372bf8d498
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 66531207d21bb7e9e0c165db135f5a0c0d77e478
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 會產生`UWOP_PUSH_MACHFRAME`回溯程式碼項目。 如果選擇性`code`指定，則回溯程式碼項目會指定為 1 的修飾詞。 否則修飾詞是 0。  
@@ -41,5 +36,5 @@ ms.lasthandoff: 02/14/2018
   
  如需詳細資訊，請參閱[MASM (ml64.exe) x64](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

@@ -1,12 +1,9 @@
 ---
-title: "運算子 SHL |Microsoft 文件"
-ms.custom: 
+title: 運算子 SHL |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - operator SHL
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - SHL operator
 - operator SHL
 ms.assetid: 7c4fbc25-cbbf-41ee-a07e-d6a15e9192ff
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 441ef4206a60ca6466c0480ea789177cd6ebde12
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7b09d3a8704dcd1772dc6f0f48c2908101f8b43f
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="operator-shl"></a>運算子 SHL
 傳回的結果移位的位元*運算式*左*計數*的位元數字。  
@@ -39,5 +34,5 @@ ms.lasthandoff: 02/14/2018
 expression SHL count  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算子參考](../../assembler/masm/operators-reference.md)

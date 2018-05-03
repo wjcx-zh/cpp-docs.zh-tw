@@ -1,11 +1,12 @@
 ---
-title: "在 Visual Studio 中設定 Linux CMake 專案 | Microsoft Docs"
-ms.custom: 
+title: 在 Visual Studio 中設定 Linux CMake 專案 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2107
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 author: corob-msft
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 67665f3271caf71d16788b2e102d0e756d9f702f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 961419e9ffcd5dede0db01f81e1b1eedc3290436
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
   
@@ -103,19 +104,13 @@ cmake -E capabilities
 
 在輸出中，尋找 “serverMode”:true。 請注意，即使您如下所述從來源編譯 CMake，還是必須在完成時檢查功能。 您的 Linux 系統可能具有防止伺服器模式啟用的限制。
 
-若要在 Linux 系統殼層中開始從來源建置，請確定您的套件管理員是最新版本，而且您有 git 和 cmake 可用。 首先，複製 CMake 來源：
+若要在 Linux 系統殼層中開始從來源建置，請確定您的套件管理員是最新版本，而且您有 git 和 cmake 可用。 首先，從我們用於 Visual Studio CMake 支援的存放庫複製 CMake 來源：
 
 ```cmd
 sudo apt-get update
 sudo apt-get install -y git cmake
-git clone https://github.com/Kitware/CMake.git
+git clone https://github.com/Microsoft/CMake.git
 cd CMake
-```
-
-接下來，確定您使用的是 Visual Studio 支援的 CMake 版本。 我們將積極追蹤 CMake 開發，但無法保證支援最新版本。 若要建置 3.9.0 (舉例來說)，請先執行：
-
-```cmd
-git checkout tags/v3.9.0
 ```
 
 接下來，執行下列命令：

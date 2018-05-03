@@ -1,5 +1,5 @@
 ---
-title: 依類別區分的執行階段常式 | Microsoft Docs
+title: 依分類排序的通用 C 執行階段常式 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff178238e457d4a9346ba3659509c295bcf3794
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01bdb786c003894b4ab1bf6418aa9c492e909602
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="run-time-routines-by-category"></a>依類別區分的執行階段常式
+# <a name="universal-c-runtime-routines-by-category"></a>依分類排序的通用 C 執行階段常式
 
-本節列出並依分類說明 Microsoft 執行階段程式庫常式。 為了參考方便起見，某些常式分別列在一個以上的分類。 多位元組字元常式和寬字元常式，會使用其所在的單一位元組字元對應項目來分組。
+本節列出並依分類描述通用 C 執行階段 (UCRT) 程式庫常式。 為了參考方便起見，某些常式分別列在一個以上的分類。 多位元組字元常式和寬字元常式，會使用其所在的單一位元組字元對應項目來分組。
 
-## <a name="routine-categories"></a>常式類別
+## <a name="ucrt-library-routine-categories"></a>UCRT 程式庫常式分類
+
+UCRT 程式庫常式的主要分類如下︰
 
 |||
 |-|-|

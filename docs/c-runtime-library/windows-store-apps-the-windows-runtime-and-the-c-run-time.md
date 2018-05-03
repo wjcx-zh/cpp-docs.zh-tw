@@ -1,27 +1,27 @@
 ---
-title: "UWP 應用程式、Windows 執行階段和 C 執行階段 | Microsoft Docs"
-ms.custom: 
+title: UWP 應用程式、Windows 執行階段和 C 執行階段 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 120e02caab735455224ad75f0944ceb25f4baf33
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9e6053cdcd7797319379e1e5e7290bcff373b6f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 應用程式、Windows 執行階段和 C 執行階段
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 02/14/2018
 
 - 與不支援的功能相關之大部分 CRT 函式。
 
-   例如，UWP 應用程式無法使用 `exec` 與 `spawn` 系列常式來建立處理序。
+   例如，UWP 應用程式無法使用 **exec** 和 **spawn** 系列常式來建立處理序。
 
    當 CRT 函式不受 UWP 應用程式支援時，該事實會記載在其參考文件中。
 
@@ -58,4 +58,7 @@ ms.lasthandoff: 02/14/2018
 如需於 UWP 應用程式中無法使用的 CRT 函式完整清單與替代函式建議，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="see-also"></a>請參閱
- [相容性](../c-runtime-library/compatibility.md) [Windows 執行階段不支援的 CRT 函式](../c-runtime-library/windows-runtime-unsupported-crt-functions.md) [依分類區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)
+
+[相容性](../c-runtime-library/compatibility.md)<br/>
+[Windows 執行階段不支援的 CRT 函式](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>

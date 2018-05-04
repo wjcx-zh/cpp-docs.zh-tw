@@ -1,30 +1,25 @@
 ---
-title: "ERRLOOK 參考 |Microsoft 文件"
-ms.custom: 
+title: ERRLOOK 參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b35e0fa4c11c0cf2b42990f8265281acaa70ed18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ab70e590c0dd4db67f97f170f4e6ead05318704
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errlook-reference"></a>ERRLOOK 參考
 ERRLOOK 公用程式，可從 [工具] 功能表**錯誤查閱**，擷取系統錯誤訊息或模組錯誤訊息根據輸入的值。 ERRLOOK 擷取錯誤訊息文字會自動您拖放到 Visual Studio 偵錯工具中的十六進位或十進位值，如果**值**編輯控制項。 您也可以輸入值，藉由輸入**值**編輯控制項，或藉由從剪貼簿 貼上它和按一下**查閱**。  

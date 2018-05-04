@@ -1,13 +1,10 @@
 ---
-title: "匯出 C 函式以用於 C 或 c + + 語言可執行檔 |Microsoft 文件"
-ms.custom: 
+title: 匯出 C 函式以用於 C 或 c + + 語言可執行檔 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,21 +14,19 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 232cfb3a65dfe3e65eaa2eeef0a4a55e723b7f7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee1d572bbfaa31ac626bfeb2b6ed7f61604628c8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>匯出 C 函式以用於 C 或 C++ 語言可執行檔  
   
-如果您在以 C 撰寫，您想要存取從 C 語言或 c + + 語言的模組，您應該使用的 DLL 函式**__cplusplus**前置處理器巨集來判斷哪一種語言編譯，，，然後將這些宣告如果 c + + 語言模組中使用 C 連結函式。 如果您使用這項技術，並提供您的 DLL 的標頭檔，這些函式可供 C 和 c + + 的使用者，且不會變更。  
+如果您在以 C 撰寫，您想要存取從 C 語言或 c + + 語言的模組，您應該使用的 DLL 函式 **__cplusplus**前置處理器巨集來判斷哪一種語言編譯，，，然後將這些宣告如果 c + + 語言模組中使用 C 連結函式。 如果您使用這項技術，並提供您的 DLL 的標頭檔，這些函式可供 C 和 c + + 的使用者，且不會變更。  
   
 下列程式碼會顯示可供 C 和 c + + 的用戶端應用程式的標頭檔：  
   
@@ -78,5 +73,5 @@ extern "C" {
   
 -   [使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 DLL 匯出](../build/exporting-from-a-dll.md)

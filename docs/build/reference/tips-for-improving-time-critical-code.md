@@ -2,12 +2,9 @@
 title: 改善時間關鍵程式碼的秘訣 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ca6fc8c18a7f2f2013ffdeabd70a7eb9fb0057
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69e05d0aa49a895a9632b07fe07bf38d9e6d4d6b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tips-for-improving-time-critical-code"></a>改善時間關鍵程式碼的秘訣
 撰寫快速的程式碼需要瞭解應用程式的所有層面，以及它如何與系統互動。 本主題建議一些較明顯程式設計技巧的替代選擇，以協助您確定程式碼中時間關鍵的部分效能令人滿意。  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [小工作集](#_core_small_working_set)  
   
-##  <a name="_core_cache_hits_and_page_faults"></a>快取遺漏和分頁錯誤  
+##  <a name="_core_cache_hits_and_page_faults"></a> 快取遺漏和分頁錯誤  
  遺漏的快取命中 (在內部和外部快取) 以及分頁錯誤 (前往次要存放裝置取得程式指示和資料) 會減慢程式的效能。  
   
  CPU 快取命中可能耗費程式 10 20 個時脈週期。 外部快取命中可能耗費 20-40 個時脈週期。 分頁錯誤可能耗費一百萬個時脈週期 (假設是每秒可處理 5 億個指示的處理器，以及一次分頁錯誤要 2 毫秒)。 因此，撰寫減少遺漏快取命中和分頁錯誤數目的程式碼，對程式執行而言最有利。  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
   
 -   使用動態配置連結清單的雜湊表可能會降低效能。 藉由擴充，使用動態配置連結清單存放內容的雜湊表效能可能實質較差。 事實上，在最後的分析中，在陣列進行簡單的線性搜尋可能實際上較快 (視情況而定)。 以陣列為基礎的雜湊表 (所謂的「閉合雜湊」) 是經常被忽略的實作，它的效能經常都很卓越。  
   
-##  <a name="_core_sorting_and_searching"></a>排序和搜尋  
+##  <a name="_core_sorting_and_searching"></a> 排序和搜尋  
  排序與許多一般作業相比，本質就很耗時。 避免不必要的減緩，最好的方式就是避免在關鍵時刻進行排序。 您可以：  
   
 -   延遲的效能關鍵的時間排序。  
@@ -114,27 +109,27 @@ ms.lasthandoff: 12/21/2017
   
  搜尋的替代選擇比排序少。 如果搜尋時間很重要，二進位搜尋或雜湊表查閱幾乎永遠是最佳選擇，但就像排序一樣，您必須將位置牢記在心。 對於小陣列進行線性搜尋，可能會比對於具有許多指標導致分頁錯誤或快取遺漏的資料結構進行二進位搜尋來得快。  
   
-##  <a name="_core_mfc_and_class_libraries"></a>MFC 和類別庫  
+##  <a name="_core_mfc_and_class_libraries"></a> MFC 和類別庫  
  Microsoft Foundation Class (MFC) 可大幅簡化程式碼的撰寫。 在撰寫時間關鍵的程式碼時，您應該注意在部分類別中固有的額外負荷。 請檢查您的時間關鍵程式碼所使用的 MFC 程式碼，查看它是否符合您的效能要求。 下列清單顯示您應該注意的 MFC 類別和函式：  
   
--   `CString`MFC 呼叫 C 執行階段程式庫配置的記憶體[CString](../../atl-mfc-shared/reference/cstringt-class.md)動態。 一般而言，`CString` 效率和任何其他動態配置的字串一樣。 如同任何動態配置的字串，它也有動態配置和釋放的額外負荷。 堆疊上的簡單 `char` 陣列便經常可以達到相同的目的，且更快速。 請不要使用 `CString` 來存放常數字串。 請改用 `const char *`。 您對 `CString` 物件執行的任何作業都有一些額外負荷。 使用執行階段程式庫[字串函數](../../c-runtime-library/string-manipulation-crt.md)可能更快。  
+-   `CString` MFC 呼叫 C 執行階段程式庫配置的記憶體[CString](../../atl-mfc-shared/reference/cstringt-class.md)動態。 一般而言，`CString` 效率和任何其他動態配置的字串一樣。 如同任何動態配置的字串，它也有動態配置和釋放的額外負荷。 堆疊上的簡單 `char` 陣列便經常可以達到相同的目的，且更快速。 請不要使用 `CString` 來存放常數字串。 請改用 `const char *`。 您對 `CString` 物件執行的任何作業都有一些額外負荷。 使用執行階段程式庫[字串函數](../../c-runtime-library/string-manipulation-crt.md)可能更快。  
   
--   `CArray`A [CArray](../../mfc/reference/carray-class.md)提供彈性，不是一般的陣列，但您的程式可能不需要它。 如果您知道陣列的特定限制，可以改用全域固定陣列。 如果使用 `CArray`，請使用 `CArray::SetSize` 來建立其大小，並指定當需要重新配置時，它成長的項目個數。 否則，加入項目可能會導致您的陣列經常重新配置和複製，這樣沒有效率，且可能導致記憶體片段化。 另外也請注意，如果您在陣列中插入項目，`CArray` 會將後續項目移入記憶體，而可能需要加大陣列。 這些動作可能導致快取遺漏和分頁錯誤。 如果您瀏覽過 MFC 使用的程式碼，可能會發現您可以撰寫更專屬於您情節的程式碼，以改善效能。 例如，由於 `CArray` 是一個範本，您可能會針對特定類型提供 `CArray` 特製化。  
+-   `CArray` A [CArray](../../mfc/reference/carray-class.md)提供彈性，不是一般的陣列，但您的程式可能不需要它。 如果您知道陣列的特定限制，可以改用全域固定陣列。 如果使用 `CArray`，請使用 `CArray::SetSize` 來建立其大小，並指定當需要重新配置時，它成長的項目個數。 否則，加入項目可能會導致您的陣列經常重新配置和複製，這樣沒有效率，且可能導致記憶體片段化。 另外也請注意，如果您在陣列中插入項目，`CArray` 會將後續項目移入記憶體，而可能需要加大陣列。 這些動作可能導致快取遺漏和分頁錯誤。 如果您瀏覽過 MFC 使用的程式碼，可能會發現您可以撰寫更專屬於您情節的程式碼，以改善效能。 例如，由於 `CArray` 是一個範本，您可能會針對特定類型提供 `CArray` 特製化。  
   
--   `CList`[CList](../../mfc/reference/clist-class.md)是雙向連結的清單中，所以插入項目是快速在頭、 尾以及的已知位置 (`POSITION`) 清單中。 不過，以值或索引來查閱項目需要進行循序搜尋，如果清單很長便可能速度緩慢。 如果您的程式碼不需要雙向連結清單，可以重新考慮是否使用 `CList`。 使用單向連結清單可以節省針對所有作業更新額外指標的額外負荷，以及該指標的記憶體。 額外記憶體不太好，它是另一個可能出現快取遺漏或分頁錯誤的機會。  
+-   `CList` [CList](../../mfc/reference/clist-class.md)是雙向連結的清單中，所以插入項目是快速在頭、 尾以及的已知位置 (`POSITION`) 清單中。 不過，以值或索引來查閱項目需要進行循序搜尋，如果清單很長便可能速度緩慢。 如果您的程式碼不需要雙向連結清單，可以重新考慮是否使用 `CList`。 使用單向連結清單可以節省針對所有作業更新額外指標的額外負荷，以及該指標的記憶體。 額外記憶體不太好，它是另一個可能出現快取遺漏或分頁錯誤的機會。  
   
--   `IsKindOf`此函式可以產生許多呼叫，並存取大量的記憶體不同的資料區域中，導致參考位置不佳。 它適用於偵錯組建 (例如在 ASSERT 呼叫中)，但在發行組建裡請試著避免用它。  
+-   `IsKindOf` 此函式可以產生許多呼叫，並存取大量的記憶體不同的資料區域中，導致參考位置不佳。 它適用於偵錯組建 (例如在 ASSERT 呼叫中)，但在發行組建裡請試著避免用它。  
   
--   `PreTranslateMessage`使用`PreTranslateMessage`當特定視窗的樹狀結構需要不同的鍵盤快速鍵，或當您必須將訊息處理，在訊息幫浦內插入。 `PreTranslateMessage` 會修改 MFC 分派訊息。 如果您覆寫 `PreTranslateMessage`，請只在需要的層級上進行。 例如，如果您只對送到特定檢視之子系的訊息有興趣，就不必覆寫 `CMainFrame::PreTranslateMessage`。 請改成覆寫檢視類別的 `PreTranslateMessage`。  
+-   `PreTranslateMessage` 使用`PreTranslateMessage`當特定視窗的樹狀結構需要不同的鍵盤快速鍵，或當您必須將訊息處理，在訊息幫浦內插入。 `PreTranslateMessage` 會修改 MFC 分派訊息。 如果您覆寫 `PreTranslateMessage`，請只在需要的層級上進行。 例如，如果您只對送到特定檢視之子系的訊息有興趣，就不必覆寫 `CMainFrame::PreTranslateMessage`。 請改成覆寫檢視類別的 `PreTranslateMessage`。  
   
      請不要使用 `PreTranslateMessage` 處理送往任何視窗的任何訊息，而避開正常的分派路徑。 使用[視窗程序](../../mfc/registering-window-classes.md)和 MFC 訊息對應用於此用途。  
   
--   `OnIdle`閒置事件可能會發生在您不希望，例如`WM_KEYDOWN`和`WM_KEYUP`事件。 計時器可能是觸發程式碼更有效率的方式。 請不要藉由產生假訊息或一律從覆寫 `OnIdle` 傳回 `TRUE`，強制重複呼叫 `OnIdle`，這會永遠不允許您的執行緒睡眠。 同樣地，計時器或個別執行緒可能較適合。  
+-   `OnIdle` 閒置事件可能會發生在您不希望，例如`WM_KEYDOWN`和`WM_KEYUP`事件。 計時器可能是觸發程式碼更有效率的方式。 請不要藉由產生假訊息或一律從覆寫 `OnIdle` 傳回 `TRUE`，強制重複呼叫 `OnIdle`，這會永遠不允許您的執行緒睡眠。 同樣地，計時器或個別執行緒可能較適合。  
   
-##  <a name="vcovrsharedlibraries"></a>共用程式庫  
+##  <a name="vcovrsharedlibraries"></a> 共用程式庫  
  重複使用程式碼是合理的。 不過，如果您即將使用別人的程式碼，則應該確定您完全知道在效能對您很關鍵的情況下，它做些什麼事。 瞭解此點的最好方式就是逐步執行原始程式碼，或是使用例如 PView 或效能監視器的工具來進行測量。  
   
-##  <a name="_core_heaps"></a>堆積  
+##  <a name="_core_heaps"></a> 堆積  
  請謹慎使用多個堆積。 以 `HeapCreate` 和 `HeapAlloc` 建立的額外堆積讓您能管理然後處置相關的配置集合。 請不要認可過多記憶體。 如果您使用多個堆積，請特別注意一開始認可的記憶體數量。  
   
  若不用多個堆積，您可以使用 Helper 函式作為程式碼與預設堆積之間的介面。 Helper 函式有助於自訂配置策略，可以改善應用程式的效能。 例如，如果您經常執行小型配置，可能會想將這些配置集中在預設堆積的一個部分。 您可以配置大區塊的記憶體，然後使用 Helper 函式從該區塊再配置出來。 這麼做的話，您便不會有具有未使用記憶體的額外堆積，因為配置將來自預設堆積。  
@@ -154,7 +149,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱[閒置迴圈處理](../../mfc/idle-loop-processing.md)和[多執行緒](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
-##  <a name="_core_small_working_set"></a>小工作集  
+##  <a name="_core_small_working_set"></a> 小工作集  
  較小的工作集表示參考位置較佳、較少分頁錯誤，且會有較多的快取命中。 處理序工作集是作業系統直接提供來測量參考位置的最接近度量。  
   
 -   若要設定工作集上限和下限，使用[SetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms683226.aspx)。  
@@ -163,5 +158,5 @@ ms.lasthandoff: 12/21/2017
   
 -   若要檢視工作集的大小，請使用 Spy++。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化程式碼](../../build/reference/optimizing-your-code.md)

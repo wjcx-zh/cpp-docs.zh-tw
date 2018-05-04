@@ -1,13 +1,10 @@
 ---
-title: "連結器選項 |Microsoft 文件"
-ms.custom: 
+title: 連結器選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64f9bb94f6809ecfa189cd012dd0494506a3ca4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-options"></a>連結器選項
 
@@ -144,7 +139,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 
 如需詳細資訊，請參閱 [Compiler-Controlled LINK Options](../../build/reference/compiler-controlled-link-options.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)  
 [設定連結器選項](../../build/reference/setting-linker-options.md)  

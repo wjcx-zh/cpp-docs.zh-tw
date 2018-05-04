@@ -1,12 +1,9 @@
 ---
-title: "CRegKey 類別 |Microsoft 文件"
-ms.custom: 
+title: CRegKey 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRegKey
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dffc650c54c4a50fb4b3b1fe2c22ac82501b8b45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6daec3347aecaed3ba0aba5dec106d049a6a701
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 這個類別會提供方法來操作系統登錄中的項目。  
@@ -132,9 +127,9 @@ class CRegKey
 |[CRegKey::m_pTM](#m_ptm)|指標`CAtlTransactionManager`物件|  
   
 ## <a name="remarks"></a>備註  
- `CRegKey`提供方法來建立和刪除索引鍵和系統登錄中的值。 登錄包含安裝特定一組系統元件，例如軟體版本號碼、 已安裝的硬體和 COM 物件的邏輯實體對應的定義。  
+ `CRegKey` 提供方法來建立和刪除索引鍵和系統登錄中的值。 登錄包含安裝特定一組系統元件，例如軟體版本號碼、 已安裝的硬體和 COM 物件的邏輯實體對應的定義。  
   
- `CRegKey`指定的機器提供系統登錄的程式設計介面。 例如，若要開啟特定的登錄機碼，呼叫`CRegKey::Open`。 若要擷取或修改資料值，呼叫`CRegKey::QueryValue`或`CRegKey::SetValue`分別。 若要關閉的索引鍵，請呼叫`CRegKey::Close`。  
+ `CRegKey` 指定的機器提供系統登錄的程式設計介面。 例如，若要開啟特定的登錄機碼，呼叫`CRegKey::Open`。 若要擷取或修改資料值，呼叫`CRegKey::QueryValue`或`CRegKey::SetValue`分別。 若要關閉的索引鍵，請呼叫`CRegKey::Close`。  
   
  當您關閉的索引鍵時，其登錄資料會寫入 （清除） 的硬碟。 此程序可能需要幾秒鐘的時間。 如果您的應用程式必須明確登錄資料寫入硬碟，您可以呼叫[RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) Win32 函式。 不過， **RegFlushKey**使用多系統資源，並只在絕對必要時，應該呼叫。  
   
@@ -144,7 +139,7 @@ class CRegKey
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="attach"></a>CRegKey::Attach  
+##  <a name="attach"></a>  CRegKey::Attach  
  呼叫此方法以附加至 HKEY`CRegKey`物件藉由設定[m_hKey](#m_hkey)成員控制代碼`hKey`。  
   
 ```
@@ -158,7 +153,7 @@ void Attach(HKEY hKey) throw();
 ### <a name="remarks"></a>備註  
  **附加**會判斷提示，如果`m_hKey`為非 NULL。  
   
-##  <a name="close"></a>CRegKey::Close  
+##  <a name="close"></a>  CRegKey::Close  
  呼叫此方法以釋放[m_hKey](#m_hkey)成員處理，並將它設定為 NULL。  
   
 ```
@@ -168,7 +163,7 @@ LONG Close() throw();
 ### <a name="return-value"></a>傳回值  
  如果成功，傳回 ERROR_SUCCESS;否則會傳回錯誤值。  
   
-##  <a name="create"></a>CRegKey::Create  
+##  <a name="create"></a>  CRegKey::Create  
  呼叫這個方法來建立指定之索引鍵，如果它不存在的子機碼為`hKeyParent`。  
   
 ```
@@ -196,7 +191,7 @@ LONG Create(
  索引鍵的選項。 預設值是 REG_OPTION_NON_VOLATILE。 如需可能的值和描述的清單，請參閱[RegCreateKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724844) Windows SDK 中。  
   
  `samDesired`  
- 安全性的存取金鑰。 預設值是 KEY_READ &#124;KEY_WRITE。 如需可能的值和描述的清單，請參閱**RegCreateKeyEx**。  
+ 安全性的存取金鑰。 預設值是 KEY_READ &#124; KEY_WRITE。 如需可能的值和描述的清單，請參閱**RegCreateKeyEx**。  
   
  *lpSecAttr*  
  指標[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)結構，表示金鑰的控制代碼是否可以由子處理序繼承。 根據預設，這個參數是 NULL （表示無法繼承控制代碼）。  
@@ -210,7 +205,7 @@ LONG Create(
 ### <a name="remarks"></a>備註  
  **建立**設定[m_hKey](#m_hkey)此機碼的控制代碼的成員。  
   
-##  <a name="cregkey"></a>CRegKey::CRegKey  
+##  <a name="cregkey"></a>  CRegKey::CRegKey  
  建構函式。  
   
 ```
@@ -233,7 +228,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>備註  
  建立新的 `CRegKey` 物件。 物件可以建立從現有`CRegKey`物件，或從登錄機碼的控制代碼。  
   
-##  <a name="dtor"></a>CRegKey:: ~ CRegKey  
+##  <a name="dtor"></a>  CRegKey:: ~ CRegKey  
  解構函式。  
   
 ```
@@ -243,7 +238,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>備註  
  解構函式版本`m_hKey`。  
   
-##  <a name="deletesubkey"></a>CRegKey::DeleteSubKey  
+##  <a name="deletesubkey"></a>  CRegKey::DeleteSubKey  
  呼叫這個方法來移除登錄中指定之索引鍵。  
   
 ```
@@ -258,9 +253,9 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
  如果成功，傳回 ERROR_SUCCESS。 如果方法失敗，傳回值會是 WINERROR 中定義的非零的錯誤代碼。H.  
   
 ### <a name="remarks"></a>備註  
- `DeleteSubKey`只能刪除沒有子機碼的索引鍵。 如果機碼具有子機碼，呼叫[RecurseDeleteKey](#recursedeletekey)改為。  
+ `DeleteSubKey` 只能刪除沒有子機碼的索引鍵。 如果機碼具有子機碼，呼叫[RecurseDeleteKey](#recursedeletekey)改為。  
   
-##  <a name="deletevalue"></a>CRegKey::DeleteValue  
+##  <a name="deletevalue"></a>  CRegKey::DeleteValue  
  呼叫這個方法來移除值欄位從[m_hKey](#m_hkey)。  
   
 ```
@@ -274,7 +269,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="return-value"></a>傳回值  
  如果成功，傳回 ERROR_SUCCESS。 如果方法失敗，傳回值會是 WINERROR 中定義的非零的錯誤代碼。H.  
   
-##  <a name="detach"></a>CRegKey::Detach  
+##  <a name="detach"></a>  CRegKey::Detach  
  呼叫這個方法來卸離[m_hKey](#m_hkey)成員控制代碼與`CRegKey`物件，並設定`m_hKey`為 NULL。  
   
 ```
@@ -284,7 +279,7 @@ HKEY Detach() throw();
 ### <a name="return-value"></a>傳回值  
  與相關聯的 HKEY`CRegKey`物件。  
   
-##  <a name="enumkey"></a>CRegKey::EnumKey  
+##  <a name="enumkey"></a>  CRegKey::EnumKey  
  呼叫這個方法來列舉子機碼的開啟登錄機碼。  
   
 ```
@@ -314,7 +309,7 @@ LONG EnumKey(
 ### <a name="remarks"></a>備註  
  若要列舉子機碼，呼叫`CRegKey::EnumKey`索引為零。 遞增的索引值，並重複，直到該方法會傳回 ERROR_NO_MORE_ITEMS 為止。 如需詳細資訊，請參閱[RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) Windows SDK 中。  
   
-##  <a name="flush"></a>CRegKey::Flush  
+##  <a name="flush"></a>  CRegKey::Flush  
  呼叫這個方法在登錄中寫入的所有開啟的登錄機碼的屬性。  
   
 ```
@@ -327,7 +322,7 @@ LONG Flush() throw();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) Windows SDK 中。  
   
-##  <a name="getkeysecurity"></a>CRegKey::GetKeySecurity  
+##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  呼叫此方法以擷取保護開啟登錄機碼的安全性描述元的複本。  
   
 ```
@@ -353,14 +348,14 @@ LONG GetKeySecurity(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313)。  
   
-##  <a name="m_hkey"></a>CRegKey::m_hKey  
+##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  包含相關聯的登錄機碼的控制代碼`CRegKey`物件。  
   
 ```
 HKEY m_hKey;
 ```  
   
-##  <a name="m_ptm"></a>CRegKey::m_pTM  
+##  <a name="m_ptm"></a>  CRegKey::m_pTM  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ```
@@ -369,7 +364,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="notifychangekeyvalue"></a>CRegKey::NotifyChangeKeyValue  
+##  <a name="notifychangekeyvalue"></a>  CRegKey::NotifyChangeKeyValue  
  這個方法會通知呼叫端相關變更的屬性或開啟登錄機碼的內容。  
   
 ```
@@ -410,7 +405,7 @@ LONG NotifyChangeKeyValue(
   
  如需詳細資訊和範例程式，請參閱[RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892)。  
   
-##  <a name="open"></a>CRegKey::Open  
+##  <a name="open"></a>  CRegKey::Open  
  呼叫這個方法來開啟指定的索引鍵，然後設定[m_hKey](#m_hkey)這個機碼的控制代碼。  
   
 ```
@@ -438,14 +433,14 @@ LONG Open(
   
  不同於[CRegKey::Create](#create)，**開啟**如果不存在，則不會建立指定之索引鍵。  
   
-##  <a name="operator_hkey"></a>CRegKey::operator HKEY  
+##  <a name="operator_hkey"></a>  CRegKey::operator HKEY  
  將轉換`CRegKey`HKEY 的物件。  
   
 ```  
 operator HKEY() const throw();
 ```  
   
-##  <a name="operator_eq"></a>CRegKey::operator =  
+##  <a name="operator_eq"></a>  CRegKey::operator =  
  指派運算子。  
   
 ```
@@ -462,7 +457,7 @@ CRegKey& operator= (CRegKey& key) throw();
 ### <a name="remarks"></a>備註  
  這個運算子會卸離`key`從其目前的物件並將其指派給`CRegKey`改為物件。  
   
-##  <a name="querybinaryvalue"></a>CRegKey::QueryBinaryValue  
+##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue  
  呼叫此方法以擷取指定的值名稱的二進位資料。  
   
 ```
@@ -491,7 +486,7 @@ LONG QueryBinaryValue(
 > [!IMPORTANT]
 >  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確地處理都是 NULL 終止的字串。 這兩種條件必須檢查呼叫程式碼。  
   
-##  <a name="querydwordvalue"></a>CRegKey::QueryDWORDValue  
+##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  呼叫此方法以擷取指定的值名稱的 DWORD 資料。  
   
 ```
@@ -516,7 +511,7 @@ LONG QueryDWORDValue(
 > [!IMPORTANT]
 >  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確地處理都是 NULL 終止的字串。 這兩種條件必須檢查呼叫程式碼。  
   
-##  <a name="queryguidvalue"></a>CRegKey::QueryGUIDValue  
+##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  呼叫此方法以擷取指定的值名稱的 GUID 資料。  
   
 ```
@@ -541,7 +536,7 @@ LONG QueryGUIDValue(
 > [!IMPORTANT]
 >  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。  
   
-##  <a name="querymultistringvalue"></a>CRegKey::QueryMultiStringValue  
+##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue  
  呼叫此方法以擷取指定的值名稱的 multistring 資料。  
   
 ```
@@ -570,7 +565,7 @@ LONG QueryMultiStringValue(
 > [!IMPORTANT]
 >  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確地處理都是 NULL 終止的字串。 這兩種條件必須檢查呼叫程式碼。  
   
-##  <a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue  
+##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  呼叫此方法以擷取指定的值名稱的 QWORD 資料。  
   
 ```
@@ -595,7 +590,7 @@ LONG QueryQWORDValue(
 > [!IMPORTANT]
 >  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確地處理都是 NULL 終止的字串。 這兩種條件必須檢查呼叫程式碼。  
   
-##  <a name="querystringvalue"></a>CRegKey::QueryStringValue  
+##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  呼叫此方法以擷取指定的值名稱的字串資料。  
   
 ```
@@ -624,7 +619,7 @@ LONG QueryStringValue(
 > [!IMPORTANT]
 >  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外， [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911)這個方法所使用的函式不會明確地處理都是 NULL 終止的字串。 這兩種條件必須檢查呼叫程式碼。  
   
-##  <a name="queryvalue"></a>CRegKey::QueryValue  
+##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  呼叫此方法以擷取指定的值欄位的資料[m_hKey](#m_hkey)。 不再支援舊版的這個方法，並會標示為**ATL_DEPRECATED**。  
   
 ```
@@ -680,7 +675,7 @@ ATL_DEPRECATED LONG QueryValue(
 > [!IMPORTANT]
 >  這個方法可讓呼叫端指定任何登錄位置中，可能讀取且不可以是受信任的資料。 此外，這個方法所使用的 RegQueryValueEx 函式不會明確地處理字串，其為`NULL`終止。 這兩種條件必須檢查呼叫程式碼。  
   
-##  <a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey  
+##  <a name="recursedeletekey"></a>  CRegKey::RecurseDeleteKey  
  呼叫這個方法來移除登錄中指定之索引鍵和任何子機碼，明確地移除。  
   
 ```
@@ -697,7 +692,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="remarks"></a>備註  
  如果機碼具有子機碼，您必須呼叫這個方法，以刪除機碼。  
   
-##  <a name="setbinaryvalue"></a>CRegKey::SetBinaryValue  
+##  <a name="setbinaryvalue"></a>  CRegKey::SetBinaryValue  
  呼叫此方法以設定登錄機碼的二進位值。  
   
 ```
@@ -723,7 +718,7 @@ LONG SetBinaryValue(
 ### <a name="remarks"></a>備註  
  這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)寫入登錄值。  
   
-##  <a name="setdwordvalue"></a>CRegKey::SetDWORDValue  
+##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  呼叫此方法以設定登錄機碼 DWORD 值。  
   
 ```
@@ -743,7 +738,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ### <a name="remarks"></a>備註  
  這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)寫入登錄值。  
   
-##  <a name="setguidvalue"></a>CRegKey::SetGUIDValue  
+##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  呼叫此方法以設定登錄機碼的 GUID 值。  
   
 ```
@@ -763,7 +758,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ### <a name="remarks"></a>備註  
  這個方法會使用`CRegKey::SetStringValue`，將 GUID 轉換成字串，使用[StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893)。  
   
-##  <a name="setkeyvalue"></a>CRegKey::SetKeyValue  
+##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  呼叫此方法以將資料儲存在指定的值欄位的指定索引鍵。  
   
 ```
@@ -789,7 +784,7 @@ LONG SetKeyValue(
 ### <a name="remarks"></a>備註  
  呼叫這個方法來建立或開啟`lpszKeyName`金鑰及儲存`lpszValue`中的資料`lpszValueName`值欄位。  
   
-##  <a name="setkeysecurity"></a>CRegKey::SetKeySecurity  
+##  <a name="setkeysecurity"></a>  CRegKey::SetKeySecurity  
  呼叫此方法以設定登錄機碼的安全性。  
   
 ```
@@ -816,7 +811,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="remarks"></a>備註  
  設定機碼的安全性屬性。 請參閱[RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314)如需詳細資訊。  
   
-##  <a name="setmultistringvalue"></a>CRegKey::SetMultiStringValue  
+##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  呼叫此方法以設定登錄機碼的 multistring 值。  
   
 ```
@@ -836,7 +831,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ### <a name="remarks"></a>備註  
  這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)寫入登錄值。  
   
-##  <a name="setqwordvalue"></a>CRegKey::SetQWORDValue  
+##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  呼叫此方法以設定登錄機碼 QWORD 值。  
   
 ```
@@ -856,7 +851,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ### <a name="remarks"></a>備註  
  這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)寫入登錄值。  
   
-##  <a name="setstringvalue"></a>CRegKey::SetStringValue  
+##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  呼叫此方法以設定登錄機碼的字串值。  
   
 ```
@@ -882,7 +877,7 @@ LONG SetStringValue(
 ### <a name="remarks"></a>備註  
  這個方法會使用[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx)寫入登錄值。  
   
-##  <a name="setvalue"></a>CRegKey::SetValue  
+##  <a name="setvalue"></a>  CRegKey::SetValue  
  呼叫此方法以將資料儲存在指定的值欄位[m_hKey](#m_hkey)。 不再支援舊版的這個方法，並會標示為**ATL_DEPRECATED**。  
   
 ```
@@ -951,6 +946,6 @@ ATL_DEPRECATED LONG SetValue(
   
  第三個方法呼叫[RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DCOM 範例](../../visual-cpp-samples.md)   
  [類別概觀](../../atl/atl-class-overview.md)

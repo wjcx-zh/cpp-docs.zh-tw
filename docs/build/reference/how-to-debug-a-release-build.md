@@ -1,30 +1,25 @@
 ---
-title: "如何： 偵錯發行組建 |Microsoft 文件"
-ms.custom: 
+title: 如何： 偵錯發行組建 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31113d9a5935536ac10b22c7b5f5af27b0d29970
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e733375f01d4b2b8ec7090f7f70ad1ec5280cd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-debug-a-release-build"></a>如何：偵錯發行的組建
 您可以偵錯應用程式的發行組建。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下**C/c + +**節點。 設定**偵錯資訊格式**至[C7 相容 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md)或**程式資料庫 (/Zi)**。  
+2.  按一下**C/c + +** 節點。 設定**偵錯資訊格式**至[C7 相容 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md)或**程式資料庫 (/Zi)**。  
   
 3.  展開**連結器**按一下**一般**節點。 設定**啟用累加連結**至[否 (/ /INCREMENTAL: NO)](../../build/reference/incremental-link-incrementally.md)。  
   
@@ -49,5 +44,5 @@ ms.lasthandoff: 12/21/2017
   
      如需詳細資訊，請參閱[最佳化程式碼](../../build/reference/optimizing-your-code.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [解決發行組建的問題](../../build/reference/fixing-release-build-problems.md)

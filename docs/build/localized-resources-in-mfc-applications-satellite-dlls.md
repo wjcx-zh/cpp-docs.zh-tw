@@ -1,13 +1,10 @@
 ---
-title: "MFC 應用程式中的當地語系化資源： 附屬 Dll |Microsoft 文件"
-ms.custom: 
+title: MFC 應用程式中的當地語系化資源： 附屬 Dll |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc97e73998c581a40ed7d344b1ade5ca90b94ac2
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 0740f567f17c8d44069211274ab1a4c66da311c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 應用程式中的當地語系化資源：附屬 DLL
 MFC 7.0 和更新的版本會提供對附屬 Dll，協助建立當地語系化成多國語言的應用程式的功能的增強的支援。 附屬 dll[資源專用 DLL](../build/creating-a-resource-only-dll.md) ，其中包含特定語言的當地語系化的應用程式的資源。 當應用程式開始執行時，MFC 會自動載入當地語系化的資源，則最適合的環境。 例如，您可能會有兩個附屬 Dll，其中包含您的資源和另一個包含德文轉譯法文翻譯的英文語言資源的應用程式。 在英文語言的系統上執行應用程式時，它會使用英文的資源。 如果法文的系統上執行，它會使用法文的資源;如果安裝德文系統上執行，它會使用德文的資源。  
@@ -64,6 +59,6 @@ MFC 7.0 和更新的版本會提供對附屬 Dll，協助建立當地語系化�
   
  如果找到任何這些 Dll，MFC 會 LangExample.exe 中使用的資源。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual c + + 中的 Dll](../build/dlls-in-visual-cpp.md)   
  [TN057：MFC 元件的當地語系化](../mfc/tn057-localization-of-mfc-components.md)

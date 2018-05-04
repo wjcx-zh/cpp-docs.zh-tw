@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 編譯原生 c + + 程式命令列上 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 編譯原生 c + + 程式命令列上 |Microsoft 文件
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：在命令列上編譯原生 C++ 程式
 Visual c + + 包含命令列的 c + + 編譯器可讓您建立的所有項目從基本的主控台應用程式通用 Windows 平台應用程式、 傳統型應用程式、 裝置驅動程式和.NET 元件。  
@@ -179,7 +174,7 @@ Visual c + + 包含命令列的 c + + 編譯器可讓您建立的所有項目從
   
  Visual c + + 編譯器包含 C 執行階段程式庫 (CRT) 通常與 ISO C99 標準相容，但不完全相容。 在大部分情況下，可攜式程式碼會編譯，並如預期般執行。 Visual c + + 不支援的 CRT 變更某些 ISO C11 中。 Visual c + + 編譯器已被取代特定的程式庫函式和 POSIX 函式名稱。 支援的函式，但慣用的名稱已變更。 如需詳細資訊，請參閱[CRT 中安全性功能](../c-runtime-library/security-features-in-the-crt.md)和[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)   
  [編譯器選項](../build/reference/compiler-options.md)

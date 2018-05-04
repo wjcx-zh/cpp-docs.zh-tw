@@ -1,12 +1,9 @@
 ---
-title: "_com_ptr_t 類別 |Microsoft 文件"
-ms.custom: 
+title: _com_ptr_t 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8ec54735fce39cc54bdb5e396da7c637b889b92c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 類別
 **Microsoft 特定的**  
   
  `_com_ptr_t` 物件會封裝 COM 介面指標，並且稱為「智慧型」指標。 此範本類別管理資源配置和解除配置函式呼叫來透過**IUnknown**成員函式： `QueryInterface`， `AddRef`，和**發行**。  
   
- 所提供的 typedef 定義所參考的智慧型指標通常**_COM_SMARTPTR_TYPEDEF**巨集。 這個巨集會採用介面名稱和 IID，並且使用介面的名稱加上 `_com_ptr_t` 後置詞宣告 `Ptr` 的特製化。 例如:   
+ 所提供的 typedef 定義所參考的智慧型指標通常 **_COM_SMARTPTR_TYPEDEF**巨集。 這個巨集會採用介面名稱和 IID，並且使用介面的名稱加上 `_com_ptr_t` 後置詞宣告 `Ptr` 的特製化。 例如:   
   
 ```  
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
@@ -76,5 +71,5 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
   
  **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)

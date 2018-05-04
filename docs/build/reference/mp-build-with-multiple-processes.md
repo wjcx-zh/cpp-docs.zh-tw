@@ -1,6 +1,6 @@
 ---
-title: "/MP （使用多個處理序建置） |Microsoft 文件"
-ms.custom: 
+title: /MP （使用多個處理序建置） |Microsoft 文件
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (使用多處理序建置)
 
@@ -50,7 +49,7 @@ ms.lasthandoff: 02/28/2018
 
 ## <a name="incompatible-options-and-language-features"></a>不相容的選項和語言功能
 
-**/MP** 選項與某些編譯器選項和語言功能不相容。 如果您使用的不相容的編譯器選項來使用**/MP**選項，編譯器會發出警告**D9030**並忽略**/MP**選項。 如果您使用不相容的語言功能時，編譯器會發出錯誤[C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md)然後結束或繼續視目前編譯器警告層級的選項。
+**/MP** 選項與某些編譯器選項和語言功能不相容。 如果您使用的不相容的編譯器選項來使用 **/MP**選項，編譯器會發出警告**D9030**並忽略 **/MP**選項。 如果您使用不相容的語言功能時，編譯器會發出錯誤[C2813](../../error-messages/compiler-errors-2/compiler-error-c2813.md)然後結束或繼續視目前編譯器警告層級的選項。
 
 > [!NOTE]
 > 大部分的選項都不相容，這是因為如果允許這些選項，在同時執行編譯器時就會將編譯器的輸出一起寫入主控台或特定檔案中。 結果，輸出就會相互摻雜而且不完整。 有時候，結合選項還可能會使效能變得更差。
@@ -87,11 +86,11 @@ ms.lasthandoff: 02/28/2018
 
 例如，如果電腦有一個實體處理器，而處理器有一個核心且停用超執行緒，則該電腦會有一個有效的處理器。 相反地，如果電腦有兩個實體處理器，每一個都有兩個核心，且所有核心都啟用超執行緒，則這部電腦就有八個有效的處理器。 也就是說，（8 有效的處理器） = （2 個實體處理器） x （2 核心，每個實體處理器） x （每個因為超執行緒核心有效 2 個處理器）。
 
-如果您省略*processMax*引數中的**/MP**選項，編譯器會從作業系統中，取得有效的處理器數目並接著會建立每個有效的處理器的其中一個處理序。 不過，編譯器無法保證哪個處理序會在特定處理器上執行，因為這是由作業系統決定。
+如果您省略*processMax*引數中的 **/MP**選項，編譯器會從作業系統中，取得有效的處理器數目並接著會建立每個有效的處理器的其中一個處理序。 不過，編譯器無法保證哪個處理序會在特定處理器上執行，因為這是由作業系統決定。
 
 ### <a name="number-of-processes"></a>處理序數目
 
-編譯器會計算要用來編譯原始程式檔的處理序數目。 您在命令列上所指定的原始程式檔數目，以及使用 **/MP** 選項明確或隱含指定的處理序數目，兩者中較小的那個數目就是處理序的數目值。 如果您提供，您可以明確設定處理序數目上限*processMax*引數的**/MP**選項。 您可以使用預設值，也就是有效的處理器數目在電腦上，如果您省略或*processMax*引數。
+編譯器會計算要用來編譯原始程式檔的處理序數目。 您在命令列上所指定的原始程式檔數目，以及使用 **/MP** 選項明確或隱含指定的處理序數目，兩者中較小的那個數目就是處理序的數目值。 如果您提供，您可以明確設定處理序數目上限*processMax*引數的 **/MP**選項。 您可以使用預設值，也就是有效的處理器數目在電腦上，如果您省略或*processMax*引數。
 
 例如，假設您指定下列命令列：
 
@@ -123,17 +122,17 @@ ms.lasthandoff: 02/28/2018
 
 #### <a name="the-msbuildexe-tool"></a>MSBUILD.exe 工具
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 使用[MSBuild.exe](/visualstudio/msbuild/msbuild-reference)工具建立方案和專案。 **/Maxcpucount:**_數目_(或**/m:**_數目_) 命令列工具選項的 MSBuild.exe 可以建置在多個專案相同的時間。 而 **/MP** 編譯器選項可同時建置多個編譯單位。 如果應用程式適用的話，請使用 **/MP** 及/或 **/maxcpucount**來改善您的方案建置時間。
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 會使用 [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) 工具來建置方案和專案。 **/Maxcpucount:**_數目_(或 **/m:**_數目_) 命令列工具選項的 MSBuild.exe 可以建置在多個專案相同的時間。 而 **/MP** 編譯器選項可同時建置多個編譯單位。 如果應用程式適用的話，請使用 **/MP** 及/或 **/maxcpucount**來改善您的方案建置時間。
 
-您的方案建置時間有一部分取決於執行組建的處理序數目。 *數目*引數的[/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild 選項會指定要在同一時間建置專案的數目上限。 同樣地， *processMax*引數的**/MP**編譯器選項會指定在同一時間建置的編譯單元數目上限。 如果**/maxcpucount**選項會指定*P*專案和**/MP**選項會指定*C*處理時，最多*P* x *C*同時執行的處理程序。
+您的方案建置時間有一部分取決於執行組建的處理序數目。 *數目*引數的[/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild 選項會指定要在同一時間建置專案的數目上限。 同樣地， *processMax*引數的 **/MP**編譯器選項會指定在同一時間建置的編譯單元數目上限。 如果 **/maxcpucount**選項會指定*P*專案和 **/MP**選項會指定*C*處理時，最多*P* x *C*同時執行的處理程序。
 
- 決定是否要使用 MSBuild 的指導方針或**/MP**技術如下所示：
+ 決定是否要使用 MSBuild 的指導方針或 **/MP**技術如下所示：
 
 - 如果您有幾個檔案的每個專案中的許多專案，使用 MSBuild 工具。
 
 - 如果每個專案內的少數專案有許多檔案，請使用 **/MP** 選項。
 
-- 如果專案和每個專案檔案的數目由平衡，使用這兩個 MSBuild 和**/MP**。 一開始，請將 **/maxcpucount** 選項設定為要建置的專案數目，再將 **/MP** 選項設定為電腦上的處理器數目。 測量效能然後調整設定，以產生最佳結果。 重複這個循環，直到您滿意總建置時間為止。
+- 如果專案和每個專案檔案的數目由平衡，使用這兩個 MSBuild 和 **/MP**。 一開始，請將 **/maxcpucount** 選項設定為要建置的專案數目，再將 **/MP** 選項設定為電腦上的處理器數目。 測量效能然後調整設定，以產生最佳結果。 重複這個循環，直到您滿意總建置時間為止。
 
 #### <a name="the-gm-compiler-option"></a>/Gm 編譯器選項
 
@@ -143,4 +142,4 @@ ms.lasthandoff: 02/28/2018
 
 [#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf （速度 PDB 的產生）](zf.md)<br/>
+[/Zf (PDB 產生速度加快)](zf.md)<br/>

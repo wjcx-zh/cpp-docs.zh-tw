@@ -1,13 +1,10 @@
 ---
-title: "-errorReport （回報編譯器內部錯誤） |Microsoft 文件"
-ms.custom: 
+title: -errorReport （回報編譯器內部錯誤） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
 - /errorreport
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b34df09ca53441789fc90061748ad591149d6b2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 67e87143d31de98039f5d679c102a5815dd87abb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (回報編譯器內部錯誤)
 讓您可將內部編譯器錯誤 (ICE) 資訊直接提供給 Microsoft。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 01/03/2018
 ## <a name="remarks"></a>備註  
  編譯器無法處理原始程式碼檔案時，就會出現編譯器內部錯誤 (ICE)。 發生 ICE 時，編譯器不會產生輸出檔或任何有用的診斷，無法讓您修正程式碼。  
   
- 在舊版本中，有冰，您是鼓勵致電 Microsoft 產品支援服務以報告問題。 與**/errorReport**，您可以直接向 Microsoft 提供 ICE 資訊。 您的錯誤報告有助於改善未來的編譯器版本。  
+ 在舊版本中，有冰，您是鼓勵致電 Microsoft 產品支援服務以報告問題。 與 **/errorReport**，您可以直接向 Microsoft 提供 ICE 資訊。 您的錯誤報告有助於改善未來的編譯器版本。  
   
  使用者能否傳送報告，取決於電腦和使用者原則權限。  
   
@@ -72,6 +67,6 @@ ms.lasthandoff: 01/03/2018
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

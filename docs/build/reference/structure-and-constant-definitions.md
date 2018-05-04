@@ -1,27 +1,22 @@
 ---
-title: "結構和常數定義 |Microsoft 文件"
-ms.custom: 
+title: 結構和常數定義 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f77c74ab4b8c72973526007b2496554f5e672ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c39809c89b350f9c8754f05687363ecac6271c5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-constant-definitions"></a>結構和常數定義
 預設 helper 常式會使用數種結構來與通訊的攔截函式以及在任何例外狀況。 以下是通知] 和 [失敗值、 資訊結構，以及傳遞給攔截程序的函數來攔截指標類型：  
@@ -82,5 +77,5 @@ typedef struct ImgDelayDescr {
     } ImgDelayDescr, * PImgDelayDescr;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解協助協助程式函式](../../build/reference/understanding-the-helper-function.md)

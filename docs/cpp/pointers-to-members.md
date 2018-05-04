@@ -1,12 +1,9 @@
 ---
-title: "成員指標 |Microsoft 文件"
-ms.custom: 
+title: 成員指標 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointers-to-members"></a>成員的指標
 成員指標宣告是特殊的指標宣告。  函式是使用下列序列宣告：  
@@ -53,7 +48,7 @@ ms.lasthandoff: 03/16/2018
   
     -   :: 運算子。  
   
-    -    **\*** 運算子。  
+    -   **\*** 運算子。  
   
     -   選擇性**const**及/或`volatile`規範。  
   
@@ -61,9 +56,9 @@ ms.lasthandoff: 03/16/2018
   
     -   選擇性的初始設定式：  
   
-  **=** 運算子。  
+ **=** 運算子。  
   
-  **&** 運算子。  
+ **&** 運算子。  
   
  類別的限定名稱。  
   
@@ -117,7 +112,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 之間的差異**。\***和 **-> \*** 運算子 （成員指標運算子） 是**。\***運算子會選取指定物件或物件參考，而 **-> \*** 運算子會選取透過指標的成員。 (如需有關這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
+ 之間的差異**。\*** 和**-> \*** 運算子 （成員指標運算子） 是**。\*** 運算子會選取指定物件或物件參考，而**-> \*** 運算子會選取透過指標的成員。 (如需有關這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
   
  成員指標運算子的結果是成員的型別，在此情況下， **char \*** 。  
   
@@ -139,7 +134,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 ```  
   
 ## <a name="restrictions-on-pointers-to-members"></a>成員指標的限制  
- 靜態成員的位址不是成員的指標。 它是某一個靜態成員執行個體的一般指標。 因為只有一個執行個體的靜態成員存在之所有物件的指定類別，一般的地址的**(&)**取值 （dereference） 和**(\*)**運算子可用。  
+ 靜態成員的位址不是成員的指標。 它是某一個靜態成員執行個體的一般指標。 因為只有一個執行個體的靜態成員存在之所有物件的指定類別，一般的地址的 **(&)** 取值 （dereference） 和 **(\*)** 運算子可用。  
   
 ## <a name="pointers-to-members-and-virtual-functions"></a>成員指標和虛擬函式  
  透過成員指標函式叫用虛擬函式的運作方式就像直接呼叫函式，正確的函式會在 v-table 中查閱及叫用。  

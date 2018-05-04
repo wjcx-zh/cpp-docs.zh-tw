@@ -1,12 +1,9 @@
 ---
-title: "CNonStatelessWorker 類別 |Microsoft 文件"
-ms.custom: 
+title: CNonStatelessWorker 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CNonStatelessWorker
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CNonStatelessWorker class
 ms.assetid: d00936c6-9e7d-49fb-b87d-417b963367d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 565324b4853880f8dcfafd83f9ba03439b4a7efa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de03ded4bc0021a8884f608d10368e3d09c11cf8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 類別
 從執行緒集區接收要求，並將它們傳遞到會建立並終結背景工作物件中，每個要求。  
@@ -68,12 +63,12 @@ class CNonStatelessWorker
 ## <a name="remarks"></a>備註  
  這個類別是用於簡單的工作者執行緒[CThreadPool](../../atl/reference/cthreadpool-class.md)。 這個類別不會提供自己的任何要求處理功能。 相反地，它會具現化一個執行個體*工作者*每個要求並委派至該執行個體，其方法的實作。  
   
- 這個類別的好處是，它會提供便利的方式來變更現有的背景工作執行緒類別的狀態模型。 `CThreadPool`將建立的單一工作者執行緒的存留期間，如果背景工作類別保存狀態，它會保留它在多個要求。 藉由只包裝在該類別`CNonStatelessWorker`範本，然後再將它與`CThreadPool`、 存留期，背景工作以及它所保留限制為單一要求的狀態。  
+ 這個類別的好處是，它會提供便利的方式來變更現有的背景工作執行緒類別的狀態模型。 `CThreadPool` 將建立的單一工作者執行緒的存留期間，如果背景工作類別保存狀態，它會保留它在多個要求。 藉由只包裝在該類別`CNonStatelessWorker`範本，然後再將它與`CThreadPool`、 存留期，背景工作以及它所保留限制為單一要求的狀態。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlutil.h  
   
-##  <a name="execute"></a>CNonStatelessWorker::Execute  
+##  <a name="execute"></a>  CNonStatelessWorker::Execute  
  實作[WorkerArchetype::Execute](worker-archetype.md#execute)。  
 
   
@@ -88,7 +83,7 @@ void Execute(
  這個方法建立的執行個體*工作者*類別上的堆疊和呼叫[初始化](worker-archetype.md#initialize)上該物件。 如果初始化成功，這個方法也會呼叫[Execute](worker-archetype.md#execute)和[Terminate](worker-archetype.md#terminate)相同物件上。  
 
   
-##  <a name="initialize"></a>CNonStatelessWorker::Initialize  
+##  <a name="initialize"></a>  CNonStatelessWorker::Initialize  
  實作[WorkerArchetype::Initialize](worker-archetype.md#initialize)。  
   
 ```
@@ -101,7 +96,7 @@ BOOL Initialize(void* /* pvParam */) throw();
 ### <a name="remarks"></a>備註  
  這個類別不會執行任何初始設定`Initialize`。  
   
-##  <a name="requesttype"></a>CNonStatelessWorker::RequestType  
+##  <a name="requesttype"></a>  CNonStatelessWorker::RequestType  
  實作[WorkerArchetype::RequestType](worker-archetype.md#requesttype)。  
   
 ```
@@ -111,7 +106,7 @@ typedef Worker::RequestType RequestType;
 ### <a name="remarks"></a>備註  
  這個類別會處理相同類型的工作項目為類別，用於*工作者*樣板參數。 請參閱[CNonStatelessWorker 概觀](../../atl/reference/cnonstatelessworker-class.md)如需詳細資訊。  
   
-##  <a name="terminate"></a>CNonStatelessWorker::Terminate  
+##  <a name="terminate"></a>  CNonStatelessWorker::Terminate  
  實作[WorkerArchetype::Terminate](worker-archetype.md#terminate)。  
   
 ```
@@ -121,7 +116,7 @@ void Terminate(void* /* pvParam */) throw();
 ### <a name="remarks"></a>備註  
  這個類別不會執行任何清理`Terminate`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CThreadPool 類別](../../atl/reference/cthreadpool-class.md)   
  [背景工作原型](../../atl/reference/worker-archetype.md)   
  [類別](../../atl/reference/atl-classes.md)

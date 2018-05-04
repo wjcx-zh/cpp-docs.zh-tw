@@ -1,13 +1,10 @@
 ---
-title: "-SUBSYSTEM （指定子系統） |Microsoft 文件"
-ms.custom: 
+title: -SUBSYSTEM （指定子系統） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /subsystem
 - VC.Project.VCLinkerTool.SubSystem
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (指定子系統)
 ```  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  視窗  
  應用程式不需要主控台，可能是因為它會建立自己的使用者互動的視窗。 如果`WinMain`或`wWinMain`定義原生程式碼，或`WinMain(HISTANCE *, HINSTANCE *, char *, int)`或`wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)`定義為 managed 程式碼，WINDOWS 會是預設值。  
   
- `Major`和`minor`（選擇性）  
+ `Major` 和`minor`（選擇性）  
  指定子系統的最小必要的版本。 引數是 0 到 65535 的範圍中的十進位數字。 請參閱 < 備註 >，如需詳細資訊。 沒有上限的版本號碼。  
   
 ## <a name="remarks"></a>備註  
@@ -92,6 +87,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SubSystem%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

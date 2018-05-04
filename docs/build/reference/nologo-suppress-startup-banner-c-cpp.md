@@ -1,13 +1,10 @@
 ---
-title: "-nologo （隱藏程式啟始資訊） （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: -nologo （隱藏程式啟始資訊） （C/c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.SuppressStartupBanner
 - VC.Project.VCCLCompilerTool.SuppressStartupBanner
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - nologo compiler option [C++]
 - banners, suppressing startup
 ms.assetid: 75930d8b-b11c-4db8-99e5-b52f97da0693
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36ba1cc206e23d51ecc6d790b2b32dca22c5963
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51209280fe4ce4b32aa108adb02815c1b9cf57fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (隱藏程式啟始資訊) (C/C++)
 隱藏著作權橫幅編譯器啟動時的顯示和編譯期間顯示的參考用訊息。  
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SuppressStartupBanner%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

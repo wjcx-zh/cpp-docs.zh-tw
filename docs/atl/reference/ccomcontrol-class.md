@@ -1,12 +1,9 @@
 ---
-title: "CComControl 類別 |Microsoft 文件"
-ms.custom: 
+title: CComControl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComControl
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontrol-class"></a>CComControl 類別
 這個類別會提供方法來建立及管理 ATL 的控制項。  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |[CComControl::MessageBox](#messagebox)|呼叫這個方法來建立、 顯示和操作訊息方塊。|  
   
 ## <a name="remarks"></a>備註  
- `CComControl`是一組很有用的 helper 函式和 ATL 的控制項的必要資料成員。 當您建立標準控制項或 DHTML 控制項使用 ATL 控制項精靈時，精靈會自動衍生您的類別，從`CComControl`。 `CComControl`衍生大部分從其方法[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)。  
+ `CComControl` 是一組很有用的 helper 函式和 ATL 的控制項的必要資料成員。 當您建立標準控制項或 DHTML 控制項使用 ATL 控制項精靈時，精靈會自動衍生您的類別，從`CComControl`。 `CComControl` 衍生大部分從其方法[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)。  
   
  如需有關建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。 如需 ATL 專案精靈的詳細資訊，請參閱文章[ATL 專案建立](../../atl/reference/creating-an-atl-project.md)。  
   
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ## <a name="requirements"></a>需求  
  **標頭：** atlctl.h  
   
-##  <a name="ccomcontrol"></a>CComControl::CComControl  
+##  <a name="ccomcontrol"></a>  CComControl::CComControl  
  建構函式。  
   
 ```
@@ -106,7 +101,7 @@ CComControl();
 ### <a name="remarks"></a>備註  
  呼叫[CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase)建構函式，傳遞`m_hWnd`透過繼承的資料成員[CWindowImpl](../../atl/reference/cwindowimpl-class.md)。  
   
-##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -126,7 +121,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
-##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
  根據預設，會建立控制項的視窗呼叫`CWindowImpl::Create`。  
   
 ```
@@ -146,7 +141,7 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
-##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
+##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
  通知容器接收已變更的控制項屬性。  
   
 ```
@@ -168,7 +163,7 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
-##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
  控制項屬性即將變更和物件要如何繼續執行已要求接收通知的容器接收。  
   
 ```
@@ -191,7 +186,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
-##  <a name="messagebox"></a>CComControl::MessageBox  
+##  <a name="messagebox"></a>  CComControl::MessageBox  
  呼叫這個方法來建立、 顯示和操作訊息方塊。  
   
 ```
@@ -215,9 +210,9 @@ int MessageBox(
  傳回整數值，指定底下所列的功能表項目值的其中一個[MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 文件中。  
   
 ### <a name="remarks"></a>備註  
- `MessageBox`在開發期間，以輕鬆地向使用者顯示的錯誤或警告訊息，則會很有用。  
+ `MessageBox` 在開發期間，以輕鬆地向使用者顯示的錯誤或警告訊息，則會很有用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [CComControlBase 類別](../../atl/reference/ccomcontrolbase-class.md)   

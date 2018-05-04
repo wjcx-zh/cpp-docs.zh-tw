@@ -1,13 +1,10 @@
 ---
-title: "-Gd，ε λ，-Gv，-Gz （呼叫慣例） |Microsoft 文件"
-ms.custom: 
+title: -Gd，ε λ，-Gv，-Gz （呼叫慣例） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /gr
 - /Gv
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e88abf30c0f67fe5b104d560c40dd2adc57752
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0d3d7c750be9b6b6d1496c8a1e2265786264f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (呼叫慣例)
 這些選項會決定函式引數會推入堆疊中，是否呼叫的函式的呼叫端函式從結尾的呼叫堆疊中移除引數的順序和編譯器用來識別的名稱裝飾慣例個別的函式。  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  接受可變數目的引數的函式必須標示為`__cdecl`。  
   
- **/Gd**， **/Gr**， **/Gv**和**/Gz**與不相容[/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md)或**/clr: pure**. **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
+ **/Gd**， **/Gr**， **/Gv**和 **/Gz**與不相容[/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md)或 **/clr: pure**. **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
 > [!NOTE]
 >  根據預設，適用於 x86 處理器，c + + 成員函式使用[__thiscall](../../cpp/thiscall.md)。  
@@ -117,7 +112,7 @@ functionname@@number
   
 1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  選取**C/c + +**資料夾。  
+2.  選取**C/c + +** 資料夾。  
   
 3.  選取**進階**屬性頁。  
   
@@ -127,6 +122,6 @@ functionname@@number
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

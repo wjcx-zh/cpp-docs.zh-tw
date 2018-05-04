@@ -2,12 +2,9 @@
 title: -CLRSUPPORTLASTERROR （保留最後一個錯誤碼的 PInvoke 呼叫） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /CLRSUPPORTLASTERROR
 dev_langs:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e082637e25832c5c5036910f7b67aff53d867bdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 297414aa71e9d871da795c2ffe567573237c7e0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (保留最後的 PInvoke 呼叫錯誤碼)
-**/CLRSUPPORTLASTERROR**、 其預設為開啟，可保留透過 P/Invoke 機制，可讓您從程式碼呼叫 DLL 中的原生函式呼叫的函式的最後一個錯誤碼編譯與**/clr**。  
+**/CLRSUPPORTLASTERROR**、 其預設為開啟，可保留透過 P/Invoke 機制，可讓您從程式碼呼叫 DLL 中的原生函式呼叫的函式的最後一個錯誤碼編譯與 **/clr**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>備註  
- 保留的最後一個錯誤碼表示效能降低。  如果您不希望帶來的效能影響保留最後一個錯誤碼，以連結**/CLRSUPPORTLASTERROR:NO**。  
+ 保留的最後一個錯誤碼表示效能降低。  如果您不希望帶來的效能影響保留最後一個錯誤碼，以連結 **/CLRSUPPORTLASTERROR:NO**。  
   
- 您可以最小化的效能影響連結**/CLRSUPPORTLASTERROR:SYSTEMDLL**，只會為函式的最後一個錯誤碼保留在系統 Dll。  系統 DLL 被定義為下列其中一項：  
+ 您可以最小化的效能影響連結 **/CLRSUPPORTLASTERROR:SYSTEMDLL**，只會為函式的最後一個錯誤碼保留在系統 Dll。  系統 DLL 被定義為下列其中一項：  
   
 |||||  
 |-|-|-|-|  
@@ -109,7 +104,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例會使用 DLL，示範如何使用**/CLRSUPPORTLASTERROR**。  
+ 下列範例會使用 DLL，示範如何使用 **/CLRSUPPORTLASTERROR**。  
   
 ```  
 // CLRSUPPORTLASTERROR_client.cpp  
@@ -160,6 +155,6 @@ GetLastError for application call failed (127).
 GetLastError for system call succeeded (183).  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

@@ -1,12 +1,9 @@
 ---
-title: "硬體例外狀況 |Microsoft 文件"
-ms.custom: 
+title: 硬體例外狀況 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36272def7cf37d53e219011bef0e5151628d2299
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57a7e7127135837a426436c15e8ae8aff60227da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hardware-exceptions"></a>硬體例外狀況
 大部分可由作業系統辨識的標準例外狀況是硬體定義的例外狀況。 Windows 可辨識某些低階軟體例外狀況，不過，作業系統通常最適合處理這些例外狀況。  
@@ -53,6 +48,6 @@ ms.lasthandoff: 12/21/2017
   
  上表中列出的許多例外狀況主要是要由偵錯工具、作業系統，或其他低階程式碼處理。 除了整數和浮點數的錯誤之外，您的程式碼不應該處理這些錯誤。 因此，您通常應該使用例外狀況處理篩選條件來忽略例外狀況 (運算結果為 0)。 否則，您可以透過適當的回應來防止低階機制執行。 您可以不過，採取適當的預防措施，針對這些低階錯誤的潛在影響[撰寫終止處理常式](../cpp/writing-a-termination-handler.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

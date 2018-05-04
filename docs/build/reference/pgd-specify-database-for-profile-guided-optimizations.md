@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ProfileGuidedDatabase
 dev_langs:
@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9947e95e3d6c96d07eb12eb2f2a579e0ea1b3a6a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 7685f99137a1b599a5f9020fac9e3cae4ba3bc3c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (指定特性指引最佳化資訊庫)
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 03/22/2018
 
 ## <a name="syntax"></a>語法
 
-> **/PGD:**_filename_
+> **/PGD:**_檔名_
 
 ## <a name="argument"></a>引數
 
@@ -39,9 +38,9 @@ ms.lasthandoff: 03/22/2018
 
 ## <a name="remarks"></a>備註
 
-使用已被取代時[/ltcg: pginstrument](../../build/reference/ltcg-link-time-code-generation.md)選項，請使用**/PGD**指定非預設名稱或為.pgd 檔的位置。 如果您未指定**/PGD**，.pgd 檔基準名稱等同於輸出檔 （.exe 或.dll） 基底名稱，並從中連結已叫用的相同目錄中建立。
+使用已被取代時[/ltcg: pginstrument](../../build/reference/ltcg-link-time-code-generation.md)選項，請使用 **/PGD**指定非預設名稱或為.pgd 檔的位置。 如果您未指定 **/PGD**，.pgd 檔基準名稱等同於輸出檔 （.exe 或.dll） 基底名稱，並從中連結已叫用的相同目錄中建立。
 
-使用已被取代時**/ltcg: pgoptimize**選項，請使用**/PGD**選項來指定要用來建立最佳化映像的.pgd 檔的名稱。 *Filename*引數應該符合*filename*指定至**/ltcg: pginstrument**。
+使用已被取代時 **/ltcg: pgoptimize**選項，請使用 **/PGD**選項來指定要用來建立最佳化映像的.pgd 檔的名稱。 *Filename*引數應該符合*filename*指定至 **/ltcg: pginstrument**。
 
 如需詳細資訊，請參閱[特性指引最佳化](../../build/reference/profile-guided-optimizations.md)。
 

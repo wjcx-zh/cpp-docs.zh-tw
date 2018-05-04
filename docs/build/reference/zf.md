@@ -3,7 +3,7 @@ title: /Zf （產生更快的 PDB） |Microsoft 文件
 ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zf
 dev_langs:
@@ -13,12 +13,11 @@ helpviewer_keywords:
 - -Zf
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.openlocfilehash: 7ae27e08e79d19e58c8440a5d7e5161eac9c306f
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: 968ce17302fa608888c7ae2fedf695946b0119bd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf （速度 PDB 的產生）
 
@@ -32,9 +31,9 @@ ms.lasthandoff: 04/03/2018
 
 **/Zf**選項更快產生 PDB 檔的編譯器支援使用時，啟用[/MP （使用多個處理序建置）](mp-build-with-multiple-processes.md)選項，或當建置系統 (例如， [MSBuild](/visualstudio/msbuild/msbuild-reference)或[CMake](../../ide/cmake-tools-for-visual-cpp.md)) 可能時間內執行多個 cl.exe 編譯器處理程序相同。 此選項會使延遲產生的型別索引 PDB 檔案中每個型別記錄的編譯時，結束之前的編譯器前端然後 mspdbsrv.exe，而非讓 RPC 要求每一筆記錄的單一 RPC 呼叫中的所有要求。 這基本上可以改善建置輸送量藉由減少 mspdbsrv.exe 程序，在多個 cl.exe 編譯器處理序同時執行的所在的環境中的 RPC 負載。
 
-因為**/Zf**選項僅適用於產生 PDB，它需要[/Zi](z7-zi-zi-debug-information-format.md)或[/ZI](z7-zi-zi-debug-information-format.md)選項。
+因為 **/Zf**選項僅適用於產生 PDB，它需要[/Zi](z7-zi-zi-debug-information-format.md)或[/ZI](z7-zi-zi-debug-information-format.md)選項。
 
-**/Zf**選項是從開始使用 Visual Studio 2017 版本 15.1，其中它預設為關閉。 從 Visual Studio 2017 版本 15.7 Preview 3，此選項預設為開啟時**/Zi**或**/ZI**啟用選項。
+**/Zf**選項是從開始使用 Visual Studio 2017 版本 15.1，其中它預設為關閉。 從 Visual Studio 2017 版本 15.7 Preview 3，此選項預設為開啟時 **/Zi**或 **/ZI**啟用選項。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 04/03/2018
 
 1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
 
-1. 修改**其他選項**屬性，以包括**/Zf** ，然後選擇 **確定**。
+1. 修改**其他選項**屬性，以包括 **/Zf** ，然後選擇 **確定**。
 
 ## <a name="see-also"></a>另請參閱
 

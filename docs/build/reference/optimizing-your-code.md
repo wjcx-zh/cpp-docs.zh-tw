@@ -2,12 +2,9 @@
 title: 最佳化程式碼 |Microsoft 文件
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,14 +16,13 @@ helpviewer_keywords:
 - performance, compiler
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4306f825b9925dbdcdc994d287a2c4287ea7bfc2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a8b18ba4ce00eb751d8f30debbab3e87b9cce53e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimizing-your-code"></a>最佳化程式碼
 
@@ -40,7 +36,7 @@ ms.lasthandoff: 01/03/2018
 關鍵字和 pragma，您可以使用程式碼中以改善效能的清單。
 
 [依分類排列的編譯器選項](../../build/reference/compiler-options-listed-by-category.md)  
-一份**/O**編譯器選項會明確影響執行速度或程式碼大小。
+一份 **/O**編譯器選項會明確影響執行速度或程式碼大小。
 
 [右值參考宣告子：&&](../../cpp/rvalue-reference-declarator-amp-amp.md)  
 右值參考支援實作*移動語意*。 如果移動語意可用於實作樣板程式庫，使用這些範本的應用程式的效能可大幅改善。

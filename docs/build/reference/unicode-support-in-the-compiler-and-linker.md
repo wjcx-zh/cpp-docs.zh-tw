@@ -1,11 +1,10 @@
 ---
-title: "編譯器和連結器中的 Unicode 支援 |Microsoft 文件"
-ms.custom: 
+title: 編譯器和連結器中的 Unicode 支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UseUnicodeResponseFiles
 - VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
@@ -17,14 +16,13 @@ helpviewer_keywords:
 - Unicode, Visual C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe775a53914089648a868a94aa2c863ee87790c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0b84cd62f3fcca378ab55de16006925e685b37
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>編譯器和連結器中的 Unicode 支援
 
@@ -56,7 +54,7 @@ Unicode 可以輸入下列編碼中的原始程式碼檔：
 
 ## <a name="asm-and-cod-dumps"></a>.asm 和.cod 傾印
 
-.asm 和.cod 傾印的 ANSI 預設了與 MASM 的相容性。 使用[/FAu](../../build/reference/fa-fa-listing-file.md)輸出 utf-8。 請注意，如果您指定**/FAs**，混合的原始程式碼會直接列印和看起來可能亂碼，例如，如果原始碼為 utf-8，而您並未指定**/fasu 時**。
+.asm 和.cod 傾印的 ANSI 預設了與 MASM 的相容性。 使用[/FAu](../../build/reference/fa-fa-listing-file.md)輸出 utf-8。 請注意，如果您指定 **/FAs**，混合的原始程式碼會直接列印和看起來可能亂碼，例如，如果原始碼為 utf-8，而您並未指定 **/fasu 時**。
 
 ## <a name="see-also"></a>另請參閱
 

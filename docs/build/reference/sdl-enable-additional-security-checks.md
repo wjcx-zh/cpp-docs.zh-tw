@@ -1,29 +1,24 @@
 ---
-title: "-sdl （啟用其他安全性檢查） |Microsoft 文件"
-ms.custom: 
+title: -sdl （啟用其他安全性檢查） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 dev_langs:
 - C++
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbcb74272fa7cae3dd0c641bd6371c8f0f9c204
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8aa984b488f74043b8c90876047516ebca23d4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (啟用其他安全性檢查)
 加入建議的安全性開發週期 (SDL) 檢查。 這些檢查包括額外的安全性相關警告 (視為錯誤)，以及其他安全程式碼產生功能。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>備註  
- **/sdl**所提供的基準安全性檢查的超集，可讓[/GS](../../build/reference/gs-buffer-security-check.md)和覆寫**/GS-**。 根據預設， **/sdl**已關閉。 **/sdl-**停用其他安全性檢查。  
+ **/sdl**所提供的基準安全性檢查的超集，可讓[/GS](../../build/reference/gs-buffer-security-check.md)和覆寫 **/GS-**。 根據預設， **/sdl**已關閉。 **/sdl-** 停用其他安全性檢查。  
   
 ## <a name="compile-time-checks"></a>編譯時間檢查  
  **/sdl**可讓這些警告視為錯誤：  
@@ -53,9 +48,9 @@ ms.lasthandoff: 12/21/2017
 |[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|使用了函式標示為[取代](../../cpp/deprecated-cpp.md)。|  
   
 ## <a name="runtime-checks"></a>執行階段檢查  
- 當**/sdl**已啟用，則編譯器會產生程式碼，以在執行階段執行這些檢查：  
+ 當 **/sdl**已啟用，則編譯器會產生程式碼，以在執行階段執行這些檢查：  
   
--   Strict 模式可讓**/GS**執行階段緩衝區滿溢偵測，相當於使用編譯`#pragma strict_gs_check(push, on)`。  
+-   Strict 模式可讓 **/GS**執行階段緩衝區滿溢偵測，相當於使用編譯`#pragma strict_gs_check(push, on)`。  
   
 -   執行有限的指標淨化。 在未涉及取值的運算式中和沒有使用者定義解構函式的類型中，指標參考在呼叫 `delete` 之後設定為非有效位址。 這有助於防止過時的指標參考重複使用。  
   
@@ -68,10 +63,10 @@ ms.lasthandoff: 12/21/2017
   
 1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  選取**C/c + +**資料夾。  
+2.  選取**C/c + +** 資料夾。  
   
 3.  在**一般**頁面上，選取將選項從**SDL 檢查**下拉式清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

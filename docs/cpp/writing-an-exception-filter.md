@@ -1,29 +1,24 @@
 ---
-title: "撰寫例外狀況篩選條件 |Microsoft 文件"
-ms.custom: 
+title: 撰寫例外狀況篩選條件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>撰寫例外狀況篩選條件
 您可以藉由跳至例外狀況處理常式的層級或繼續執行的方式處理例外狀況。 除了使用例外狀況處理常式程式碼處理例外狀況並繼續之外，您可以使用*篩選*清除問題，然後傳回-1，繼續正常流程，而不清除堆疊。  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  最好使用函式呼叫中的*篩選*運算式每當*篩選*需要進行複雜的工作。 評估運算式會讓函式執行，在這個案例中是 `Eval_Exception`。  
   
- 請注意使用[GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356)判斷例外狀況。 您必須在 filter 本身內呼叫這個函式。 `Eval_Exception`無法呼叫**GetExceptionCode**，但是它必須有例外狀況代碼傳遞給它。  
+ 請注意使用[GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356)判斷例外狀況。 您必須在 filter 本身內呼叫這個函式。 `Eval_Exception` 無法呼叫**GetExceptionCode**，但是它必須有例外狀況代碼傳遞給它。  
   
  除非例外狀況是整數或浮點溢位，否則這個處理常式會將控制項傳遞至另一個處理常式。 如果是，處理常式會呼叫函式 (`ResetVars` 只是範例，不是應用程式開發介面函式) 重設部分全域變數。 *陳述式區塊 2*，在此範例空的可以永遠不會執行，因為`Eval_Exception`永遠不會傳回 EXCEPTION_EXECUTE_HANDLER (1)。  
   
@@ -90,6 +85,6 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

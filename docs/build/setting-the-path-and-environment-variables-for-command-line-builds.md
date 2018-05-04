@@ -1,13 +1,10 @@
 ---
 title: 設定命令列建置的路徑和環境變數 |Microsoft 文件
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - include
 - Lib
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76fa1a14b4fd60f249ab015f6618e386bda7c86f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b72f13fe25330b81a48d1447b707bdc4626ab3f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>設定命令列建置的路徑和環境變數
 
@@ -49,7 +44,7 @@ Visual c + + 命令列工具使用的路徑、 TMP、 INCLUDE、 LIB 及 LIBPATH
 > [!NOTE]
 >  數個命令列工具或工具選項，可能需要系統管理員權限。 如果您有權限問題，當您使用它們時，我們建議您利用開啟開發人員命令提示字元視窗**系統管理員身分執行**選項。 在 Windows 10 上按一下滑鼠右鍵以開啟 命令提示字元 視窗的捷徑功能表，然後選擇 **詳細**，**系統管理員身分執行**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 
 [在命令列上建置 C/c + + 程式碼](../build/building-on-the-command-line.md)   
 [連結](../build/reference/linking.md)   

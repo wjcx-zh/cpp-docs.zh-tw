@@ -2,12 +2,9 @@
 title: -Gw （最佳化全域資料） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Gw
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e849ee51a231c6f0d3d696a3aaa9b1c1ac77c33c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 173b9499477ee02cbb1f052d3d85445a9ffb7732
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (最佳化全域資料)
 將全域資料封裝在 COMDAT 區段中以進行最佳化。  
@@ -38,11 +33,11 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>備註  
- **/Gw**選項讓編譯器將全域資料封裝在個別的 COMDAT 區段中。 根據預設， **/Gw**已關閉，而且您必須明確啟用。 若要明確停用，請使用**/Gw-**。 當同時**/Gw**和[/GL](../../build/reference/gl-whole-program-optimization.md)會啟用，連結器會使用整個程式最佳化，多個目的檔中比較 COMDAT 區段，以排除未參考的全域資料或合併相同唯讀全域資料。 這可以大幅減小產生的二進位可執行檔之大小。  
+ **/Gw**選項讓編譯器將全域資料封裝在個別的 COMDAT 區段中。 根據預設， **/Gw**已關閉，而且您必須明確啟用。 若要明確停用，請使用 **/Gw-**。 當同時 **/Gw**和[/GL](../../build/reference/gl-whole-program-optimization.md)會啟用，連結器會使用整個程式最佳化，多個目的檔中比較 COMDAT 區段，以排除未參考的全域資料或合併相同唯讀全域資料。 這可以大幅減小產生的二進位可執行檔之大小。  
   
- 當您編譯和個別連結時，您可以使用[/opt: ref](../../build/reference/opt-optimizations.md)排除未參考的全域資料物件檔案中使用編譯的可執行檔的連結器選項**/Gw**選項。  
+ 當您編譯和個別連結時，您可以使用[/opt: ref](../../build/reference/opt-optimizations.md)排除未參考的全域資料物件檔案中使用編譯的可執行檔的連結器選項 **/Gw**選項。  
   
- 您也可以使用[/opt: icf](../../build/reference/opt-optimizations.md)和[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)連結器選項一起使用的多個目的檔任何相同唯讀全域資料編譯可執行檔中合併**/Gw**選項。  
+ 您也可以使用[/opt: icf](../../build/reference/opt-optimizations.md)和[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)連結器選項一起使用的多個目的檔任何相同唯讀全域資料編譯可執行檔中合併 **/Gw**選項。  
   
  如需詳細資訊，請參閱[簡介 /Gw 編譯器參數](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)Visual c + + 團隊部落格上。  
   
@@ -50,16 +45,16 @@ ms.lasthandoff: 12/21/2017
   
 1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  選取**C/c + +**資料夾。  
+2.  選取**C/c + +** 資料夾。  
   
 3.  選取**命令列**屬性頁。  
   
-4.  修改**其他選項**屬性，以包括**/Gw** ，然後選擇 **確定**。  
+4.  修改**其他選項**屬性，以包括 **/Gw** ，然後選擇 **確定**。  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

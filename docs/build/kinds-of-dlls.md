@@ -1,13 +1,10 @@
 ---
-title: "Dll 的種類 |Microsoft 文件"
-ms.custom: 
+title: Dll 的種類 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>DLL 的類型
 本主題提供資訊以協助您決定要建置的 DLL 的種類。  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>不同類型的 Dll 可用  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 不同類型的 Dll 可用  
  使用 Visual c + +，您可以建置在 C 或 c + + 中的 Win32 Dll 不是使用 Microsoft Foundation Class (MFC) 程式庫。 您可以使用 Win32 應用程式精靈建立的非 MFC DLL 專案。  
   
  數字的 Dll，以 MFC DLL 精靈或其中一個靜態連結程式庫中使用，在 MFC 程式庫本身。 如果您的 DLL 會使用 MFC，Visual c + + 支援三種不同的 DLL 開發案例：  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [若要使用的 DLL 的種類](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>決定要使用的 DLL 的種類  
+##  <a name="_core_which_kind_of_dll_to_use"></a> 決定要使用的 DLL 的種類  
  如果您的 DLL 不使用 MFC，使用 Visual c + + 來建立非 MFC Win32 DLL。 （靜態或動態） 連結至 MFC 的 DLL 會佔用大量的磁碟空間和記憶體。 除非您的 DLL 實際上會使用 MFC，您不應該連結至 MFC。  
   
  如果您的 DLL 將會使用 MFC，而且將供 MFC 或非 MFC 應用程式，您必須建置動態連結至 MFC 之標準 MFC DLL 或靜態連結至 MFC 之標準 MFC DLL。 在大部分情況下，您可能想要使用，因為 DLL 的檔案大小會小很多，節省的記憶體使用 MFC 的共用的版本可能會很顯著，動態連結至 MFC 的標準 MFC DLL。 如果您以靜態方式連結至 MFC，DLL 的檔案大小將會變大，並可能佔用額外的記憶體，因為它會載入它自己的 MFC 程式庫程式碼的私用複本。  
@@ -78,5 +73,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [MFC 延伸模組 DLL：概觀](../build/extension-dlls-overview.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

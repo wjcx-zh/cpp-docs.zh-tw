@@ -1,13 +1,10 @@
 ---
-title: "-EH （例外狀況處理模型） |Microsoft 文件"
-ms.custom: 
+title: -EH （例外狀況處理模型） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外狀況處理模型)
 指定編譯器所使用的例外狀況處理類型、何時要繼續最佳化例外狀況檢查，以及是否要終結因例外狀況而超出範圍的 C++ 物件。 如果沒有指定 **/EH** ，編譯器就會同時攔截非同步結構化例外狀況和 C++ 例外狀況，但不會終結因非同步例外狀況而超出範圍的 C++ 物件。  
@@ -105,9 +100,9 @@ int main() {
   
  如需 **/clr**下的例外狀況處理限制的相關資訊，請參閱 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)。  
   
- 使用 **-**符號就可以清除選項。 例如， **/EHsc-** 會解譯為 **/EHs /EHc-** ，相當於 **/EHs**。  
+ 使用 **-** 符號就可以清除選項。 例如， **/EHsc-** 會解譯為 **/EHs /EHc-** ，相當於 **/EHs**。  
   
- **/EHr** 編譯器選項會在所有具有 `noexcept` 屬性的函式中，強制執行執行階段終止檢查。 根據預設，如果編譯器後端判斷函式只會呼叫 *「非擲回」* (Non-throwing) 函式，則可能會繼續最佳化執行階段檢查。 非擲回函式是具有指定不會擲回任何例外狀況之屬性的任何函式。 其中包含標示為 `noexcept`、 `throw()`、 `__declspec(nothrow)`的函式，以及指定 **/EHc** 時的 `extern "C"` 函式一律產生執行階段終止檢查。 非擲回函式也包含編譯器判定檢查不會擲回任何例外狀況的任何函式。 您可以使用 **/EHr-**明確地設定預設值。  
+ **/EHr** 編譯器選項會在所有具有 `noexcept` 屬性的函式中，強制執行執行階段終止檢查。 根據預設，如果編譯器後端判斷函式只會呼叫 *「非擲回」* (Non-throwing) 函式，則可能會繼續最佳化執行階段檢查。 非擲回函式是具有指定不會擲回任何例外狀況之屬性的任何函式。 其中包含標示為 `noexcept`、 `throw()`、 `__declspec(nothrow)`的函式，以及指定 **/EHc** 時的 `extern "C"` 函式一律產生執行階段終止檢查。 非擲回函式也包含編譯器判定檢查不會擲回任何例外狀況的任何函式。 您可以使用 **/EHr-** 明確地設定預設值。  
   
  不過，非擲回屬性並不保證函式不會擲回任何例外狀況。 不同於 `noexcept` 函式的行為，Visual C++ 編譯器會將使用 `throw()`、 `__declspec(nothrow)`或 `extern "C"` 宣告之函式所擲回的例外狀況，視為未定義的行為。 使用這三種宣告屬性的函式，不會對例外狀況強制執行執行階段終止檢查。 您可以使用 **/EHr** 選項來識別這項未定義的行為，方法是強制編譯器針對逸出 `noexcept` 函式的未處理例外狀況，產生執行階段檢查。  
   
@@ -125,7 +120,7 @@ int main() {
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ExceptionHandling%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [錯誤和例外狀況處理](../../cpp/errors-and-exception-handling-modern-cpp.md)   

@@ -1,12 +1,9 @@
 ---
-title: "成員函式概觀 |Microsoft 文件"
-ms.custom: 
+title: 成員函式概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - inline functions [C++], treating member functions as
 - member functions [C++], definition in class declaration
 ms.assetid: 9f77a438-500e-40bb-a6c6-544678f3f4c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6389197119135e7e800a4f5ec142bf42b1ef6d39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b34be19c5fe67c087579e3d1cf0643d5afd71dc5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-member-functions"></a>成員函式概觀
 成員函式不是靜態就是非靜態。 靜態成員函式的行為會與從其他成員函式，因為靜態成員函式沒有隱含**這**引數。 非靜態成員函式具有**這**指標。 無論是靜態或非靜態的成員函式，都可以在類別宣告之內或之外定義。  

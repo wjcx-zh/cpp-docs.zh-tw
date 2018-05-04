@@ -1,12 +1,9 @@
 ---
-title: "進行 ATL 物件變成無法建立 |Microsoft 文件"
-ms.custom: 
+title: 進行 ATL 物件變成無法建立 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.objects
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e37779b081de457782ee59324a00cca5fedaea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05707c6771d641d383825a07d0b26a90fdf46cb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="making-an-atl-object-noncreatable"></a>進行 ATL 物件變成無法建立
 您可以變更 atl COM 物件的屬性，讓用戶端無法直接建立物件。 在此情況下，物件會將透過方法呼叫所傳回的另一個物件而直接建立。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  }  
  ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
  [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   

@@ -1,13 +1,10 @@
 ---
-title: "/FA、 /Fa （清單檔） |Microsoft 文件"
-ms.custom: 
+title: /FA、 /Fa （清單檔） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (清單檔)
 建立清單檔包含組譯程式碼。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 `s`  
 選擇性。 包含在清單中的原始程式碼。  
   
-`u`選擇性的。 將清單檔，以 utf-8 格式編碼，並包含位元組順序標記。 根據預設，檔案被編碼為 ANSI。 使用`u`建立清單檔正確地顯示在任何系統上，或如果您使用 Unicode 原始程式碼檔做為編譯器的輸入。  
+`u` 選擇項。 將清單檔，以 utf-8 格式編碼，並包含位元組順序標記。 根據預設，檔案被編碼為 ANSI。 使用`u`建立清單檔正確地顯示在任何系統上，或如果您使用 Unicode 原始程式碼檔做為編譯器的輸入。  
   
 如果兩個`s`和`u`要指定，以及如果的原始程式碼檔使用 Unicode 編碼方式，除了 utf-8，則程式碼檔中的行.asm 可能無法正確顯示。  
   
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  開啟**C/c + +**資料夾，然後選取**輸出檔**屬性頁。  
+2.  開啟**C/c + +** 資料夾，然後選取**輸出檔**屬性頁。  
   
 3.  修改**組合語言輸出**屬性來設定`/FAc`和`/FAs`組譯工具、 電腦及原始程式碼的選項。 修改**使用 Unicode 的組譯工具列出**屬性來設定`/FAu`ANSI 或 utf-8 輸出的選項。 修改**ASM 清單位置**設定`/Fa`選項以列出的檔案名稱和位置。  
   
@@ -102,7 +97,7 @@ ms.lasthandoff: 12/21/2017
 CL /FAcs HELLO.CPP  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   

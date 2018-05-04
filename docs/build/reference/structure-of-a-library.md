@@ -1,34 +1,29 @@
 ---
-title: "結構的文件庫 |Microsoft 文件"
-ms.custom: 
+title: 結構的文件庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries, structure
 ms.assetid: a5fda8e8-4a1b-4499-9095-0df935262ce4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1630636b0de552712f67bc43b5182f991b10ef0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6eff0000aef01790106b44b49b4855218fcf9332
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-of-a-library"></a>程式庫結構
 文件庫包含 COFF 物件。 文件庫中的物件包含函式和資料，以便在程式中其他物件的外部參照。 文件庫中的物件有時稱為 「 程式庫成員。  
   
  您可以執行 DUMPBIN 工具並使用 /LINKERMEMBER 選項，以取得文件庫內容的其他的資訊。 如需有關這個選項的詳細資訊，請參閱[DUMPBIN 參考](../../build/reference/dumpbin-reference.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LIB 概觀](../../build/reference/overview-of-lib.md)

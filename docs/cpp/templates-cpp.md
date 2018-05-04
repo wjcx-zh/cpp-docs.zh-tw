@@ -1,12 +1,9 @@
 ---
-title: "樣板 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 樣板 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>樣板 (C++)
 範本是 c + + 中的一般程式設計基礎。 為強型別語言，c + + 會需要有特定的類型，明確宣告的程式設計人員，或由編譯器所推斷的所有變數。 不過，許多資料結構與演算法一樣無論何種類型操作。 範本讓您定義類別或函式的作業，並讓使用者指定何種實體類型的作業應處理。  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- 上述程式碼說明具有單一類型參數的泛型函式範本`T`，其傳回值，並且呼叫參數 （lhs 與 rhs） 都此型別。 您可以類似，但由慣例單一大寫字母您最常使用的任何項目名稱的型別參數。 `T`是範本參數，`typename`關鍵字指出此參數類型的預留位置。 呼叫此函式時，編譯器將會取代每個執行個體`T`與使用者所指定，或由編譯器所推斷的具象型別引數。 處理序編譯器產生的類別或函式，從範本指*樣板具現化*;  `minimum<int>`範本的具現化`minimum<T>`。  
+ 上述程式碼說明具有單一類型參數的泛型函式範本`T`，其傳回值，並且呼叫參數 （lhs 與 rhs） 都此型別。 您可以類似，但由慣例單一大寫字母您最常使用的任何項目名稱的型別參數。 `T` 是範本參數，`typename`關鍵字指出此參數類型的預留位置。 呼叫此函式時，編譯器將會取代每個執行個體`T`與使用者所指定，或由編譯器所推斷的具象型別引數。 處理序編譯器產生的類別或函式，從範本指*樣板具現化*;  `minimum<int>`範本的具現化`minimum<T>`。  
   
  使用者可以在其他地方，宣告針對 int 特製化的範本執行個體假設 get_a() 和 get_b() 是函式會傳回 int:  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  編譯器在函式樣板中所執行的類型推算的規則根據一般函式的規則。 如需詳細資訊，請參閱[多載解析的函式樣板呼叫](../cpp/overload-resolution-of-function-template-calls.md)。  
   
-## <a id="type_parameters"></a>型別參數  
+## <a id="type_parameters"></a> 型別參數  
  在`minimum`範本以上版本，請注意，型別參數`T`未限定以任何方式直到它使用於函式呼叫參數中，加入 const 和參考限定詞的位置。  
   
  類型參數的數目沒有實際限制。 請以逗號分隔多個參數：  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  其他類型的值包括指標和參考可以當做非類型參數中傳遞。 比方說，您可以傳遞指標的函式或函式物件，以自訂的範本程式碼內的某些作業。  
   
-## <a id="template_parameters"></a>做為範本參數的範本  
+## <a id="template_parameters"></a> 做為範本參數的範本  
  範本可以是範本參數。 在此範例中，MyClass2 有兩個範本參數： typename 參數`T`和樣板參數`Arr`:  
   
 ```cpp  

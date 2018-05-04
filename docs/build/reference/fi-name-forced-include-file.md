@@ -1,13 +1,10 @@
 ---
-title: "-FI （命名強制的包含檔） |Microsoft 文件"
-ms.custom: 
+title: -FI （命名強制的包含檔） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.ForcedIncludes
 - VC.Project.VCCLCompilerTool.ForcedIncludeFiles
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b2003ab35bf76a8ac3e70288576af821a6c8e6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b85bfaebe09203f7aad76c24e8f8fbccfe009d80
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (命名強制的包含檔)
 造成前置處理器處理指定的標頭檔。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個選項擁有相同的效果與指定的檔案，以雙引號括在`#include`指示詞上指定命令列，在 CL 環境變數，或命令檔中每個原始程式檔的第一行。 如果您使用多個**/FI**選項，檔案會包含在 CL 處理的順序。  
+ 這個選項擁有相同的效果與指定的檔案，以雙引號括在`#include`指示詞上指定命令列，在 CL 環境變數，或命令檔中每個原始程式檔的第一行。 如果您使用多個 **/FI**選項，檔案會包含在 CL 處理的順序。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedIncludeFiles%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   

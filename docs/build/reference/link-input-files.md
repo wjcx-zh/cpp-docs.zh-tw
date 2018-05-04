@@ -1,13 +1,10 @@
 ---
-title: "連結輸入檔 |Microsoft 文件"
-ms.custom: 
+title: 連結輸入檔 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d0cae9498d2c9b49e52cf56991d2425de39d7e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-input-files"></a>LINK 輸入檔
 您可以提供連結器與包含物件、 匯入和標準程式庫、 資源、 模組定義和輸入的命令檔。 連結不使用副檔名來做出假設檔案的內容。 相反地，連結會檢查每個輸入的檔案，以判斷它是何種檔案。  
@@ -65,6 +60,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [.ilk 檔案](../../build/reference/dot-ilk-files-as-linker-input.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

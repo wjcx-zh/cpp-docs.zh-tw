@@ -1,13 +1,10 @@
 ---
-title: "擴充 Dll |Microsoft 文件"
-ms.custom: 
+title: 擴充 Dll |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - afxdll
 dev_langs:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36a57d47d32b4526ca6d383b67ca415f705dc982
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 6f60540735be44adf4305dcda77373faf8a83514
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mfc-extension-dlls"></a>MFC 擴充 Dll
 MFC 擴充 DLL 是通常會實作可重複使用的類別衍生自現有 Mfc 程式庫的 DLL。  
@@ -141,5 +136,5 @@ head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE
   
 -   [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

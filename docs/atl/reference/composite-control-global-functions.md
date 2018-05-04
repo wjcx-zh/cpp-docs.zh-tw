@@ -2,11 +2,8 @@
 title: 複合控制項全域函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7c62d5056f28460644084296598ae865c6ff5f48
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 這些函式會提供建立對話方塊，以及建立、 裝載和授權 ActiveX 控制項的支援。  
@@ -103,7 +98,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- 如需有關編輯資源指令碼的詳細資訊，請參閱[How to： 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[一般控制項參數](http://msdn.microsoft.com/library/windows/desktop/aa380902)下 Windows SDK*: SDK 工具*。  
+ 如需有關編輯資源指令碼的詳細資訊，請參閱[How to： 以文字格式開啟資源指令碼檔](../../windows/how-to-open-a-resource-script-file-in-text-format.md)。 如需有關控制資源定義陳述式的詳細資訊，請參閱[一般控制項參數](http://msdn.microsoft.com/library/windows/desktop/aa380902)下 Windows SDK *: SDK 工具*。  
   
  如需有關一般中對話方塊的詳細資訊，請參閱[對話方塊中](http://msdn.microsoft.com/library/windows/desktop/ms645452)和[CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows SDK 中。  
   
@@ -165,7 +160,7 @@ ATLAPI AtlAxCreateControl(
   
 -   URL，例如"http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
   
 -   這類的 HTML 片段"MSHTML:\<HTML >\<主體 > 這是一行文字\</B >\</HTML > 」  
   
@@ -213,7 +208,7 @@ ATLAPI AtlAxCreateControlEx(
   
 -   URL，例如"http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
   
 -   這類的 HTML 片段"MSHTML:\<HTML >\<主體 > 這是一行文字\</B >\</HTML > 」  
   
@@ -268,7 +263,7 @@ ATLAPI AtlAxCreateControlLic(
   
 -   URL，例如"http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
   
 -   這類的 HTML 片段"MSHTML:\<HTML >\<主體 > 這是一行文字\</B >\</HTML > 」  
   
@@ -318,7 +313,7 @@ ATLAPI AtlAxCreateControlLicEx(
   
 -   URL，例如"http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
   
 -   這類的 HTML 片段"MSHTML:\<HTML >\<主體 > 這是一行文字\</B >\</HTML > 」  
   
@@ -436,7 +431,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
  標準的 HRESULT 值。  
   
 ##  <a name="atlaxwininit"></a>  AtlAxWinInit  
- 此函式會初始化 ATL 的控制項裝載程式碼，藉由註冊**"AtlAxWin80"**和**"AtlAxWinLic80"**視窗類別以及幾個自訂視窗訊息。  
+ 此函式會初始化 ATL 的控制項裝載程式碼，藉由註冊 **"AtlAxWin80"** 和 **"AtlAxWinLic80"** 視窗類別以及幾個自訂視窗訊息。  
   
 ```
 ATLAPI_(BOOL) AtlAxWinInit();
@@ -446,10 +441,10 @@ ATLAPI_(BOOL) AtlAxWinInit();
  如果控制項裝載程式碼的初始化成功，則為非零否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
- 使用 ATL 控制項裝載 API 之前，必須呼叫此函式。 此函式，呼叫**"AtlAxWin"**視窗類別可用於呼叫[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)、 Windows SDK 中所述。  
+ 使用 ATL 控制項裝載 API 之前，必須呼叫此函式。 此函式，呼叫 **"AtlAxWin"** 視窗類別可用於呼叫[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)或[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)、 Windows SDK 中所述。  
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
- 此函式未初始化 ATL 的控制項裝載程式碼取消註冊**"AtlAxWin80"**和**"AtlAxWinLic80"**視窗類別。  
+ 此函式未初始化 ATL 的控制項裝載程式碼取消註冊 **"AtlAxWin80"** 和 **"AtlAxWinLic80"** 視窗類別。  
   
 ```
 inline BOOL AtlAxWinTerm();

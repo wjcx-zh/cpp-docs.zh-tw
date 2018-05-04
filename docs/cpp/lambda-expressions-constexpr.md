@@ -2,28 +2,23 @@
 title: constexpr c + + 中的 Lambda 運算式 |Microsoft 文件
 ms.custom: ''
 ms.date: 07/19/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-caps.latest.revision: 0
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 307ce6ab87ca36de561ebcf1ad8bd30eb73e4192
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e01f41aaf8b761020f57625e7cbf06f8fba2659
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr c + + 中的 Lambda 運算式
 **Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 可能會做為宣告的 lambda 運算式`constexpr`或 contant 運算式中使用時的每個資料成員初始設定它擷取或導入了常數運算式中允許使用。  
@@ -62,7 +57,7 @@ Lambda 會隱含地`constexpr`如果它的結果符合需求的`constexpr`函式
     constexpr int(*inc)(int) = Increment;
 ```
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C + + 標準程式庫中的函式物件](../standard-library/function-objects-in-the-stl.md)   
  [函式呼叫](../cpp/function-call-cpp.md)   

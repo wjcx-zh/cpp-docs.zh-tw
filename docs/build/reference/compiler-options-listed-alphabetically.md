@@ -1,25 +1,23 @@
 ---
-title: "依字母順序列出編譯器選項 |Microsoft 文件"
-ms.custom: 
+title: 依字母順序列出編譯器選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7906893c1dce20344a9da805ad508a7836b1291d
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/28/2018
 |[@](at-specify-a-compiler-response-file.md)|指定回應檔。|
 |[/?](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[/AI](ai-specify-metadata-directories.md)|指定一個要搜尋的目錄，以解析傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞的檔案參考。|
-|[/analyze](analyze-code-analysis.md)|啟用程式碼分析|
+|[分析 /](analyze-code-analysis.md)|啟用程式碼分析|
 |[/arch](arch-minimum-cpu-architecture.md)|為程式碼產生指定架構。|
 |[/await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
@@ -143,7 +141,7 @@ ms.lasthandoff: 02/28/2018
 |[/volatile](volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|
 |[/w](compiler-option-warning-level.md)|停用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|設定要輸出的警告層級。|
-|[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
+|[/w1、 /w2、 /w3、 /w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
 |[/Wall](compiler-option-warning-level.md)|啟用所有警告，包括預設停用的警告。|
 |[/wd](compiler-option-warning-level.md)|停用指定的警告。|
 |[/we](compiler-option-warning-level.md)|將指定的警告視為錯誤。|
@@ -172,5 +170,5 @@ ms.lasthandoff: 02/28/2018
 |[/Zs](zs-syntax-check-only.md)|僅檢查語法。|
 |[/ZW](zw-windows-runtime-compilation.md)|產生輸出檔案，以便在 Windows 執行階段上執行。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [C/c + + 建置參考](c-cpp-building-reference.md)[編譯器選項](compiler-options.md)[設定編譯器選項](setting-compiler-options.md)

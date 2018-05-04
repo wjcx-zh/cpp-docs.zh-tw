@@ -1,12 +1,9 @@
 ---
-title: "列舉型別 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 列舉型別 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - enum_cpp
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b1b29baaa779fda1e1f076daf3d8bd9335403b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c02a7670456dff9c7e5a3dfd1583892d918d268
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="enumerations-c"></a>列舉 (C++)
 列舉是使用者定義類型，其中包含一組具名的整數常數，稱為列舉值。  
@@ -194,6 +189,6 @@ int main()
 }
 ``` 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C 列舉宣告](../c-language/c-enumeration-declarations.md)   
  [關鍵字](../cpp/keywords-cpp.md)

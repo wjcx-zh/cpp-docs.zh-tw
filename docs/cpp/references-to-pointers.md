@@ -1,29 +1,24 @@
 ---
-title: "指標的參考 |Microsoft 文件"
-ms.custom: 
+title: 指標的參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3565c0f720d6f454fa53a2b3e8373c2b53f926ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9cfec6642604fb495051d44d816d4a3370e9a8e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="references-to-pointers"></a>指標的參考
 指標的參考可以透過與物件的參考類似的方式來宣告。 宣告指標的參考會產生一個可修改的值，其使用方式就像一般的指標。  
@@ -171,5 +166,5 @@ where:
 Input is from stdin.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考](../cpp/references-cpp.md)

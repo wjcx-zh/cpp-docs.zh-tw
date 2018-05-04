@@ -1,13 +1,10 @@
 ---
-title: "連結器命令列語法 |Microsoft 文件"
-ms.custom: 
+title: 連結器命令列語法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - linker command line [C++]
 - LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce42aa031b91d5a4ec21ed14ac7cb47643e1325
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd5b1b809bfbbb01bca91f3677774d396515f56e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-command-line-syntax"></a>連結器命令列語法
 若要執行連結。EXE，使用下列命令語法：  
@@ -45,6 +40,6 @@ LINK arguments
   
  link.exe 會傳回成功 （沒有錯誤） 的零。  否則，連結器會傳回停止連結的錯誤號碼。  例如，如果連結器產生 LNK1104，連結器會傳回 1104年。  因此，連結器發生錯誤時傳回的錯誤編號最小為 1000年。  傳回值為 128 代表作業系統或.config 檔案中，有設定問題載入器未載入 link.exe 或 c2.dll。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

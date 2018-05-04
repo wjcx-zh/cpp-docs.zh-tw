@@ -1,12 +1,9 @@
 ---
-title: "__if_exists 陳述式 |Microsoft 文件"
-ms.custom: 
+title: __if_exists 陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __if_exists_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - symbols, testing for existence
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7950e2fcd933bd4748c06adf93f5ce1c271b162
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd86b1756de2aa33fafdd992033cb56ca86266f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ifexists-statement"></a>__if_exists 陳述式
 `__if_exists` 陳述式會測試指定識別項是否存在。 如果識別項存在，就會執行指定的陳述式區塊。  
@@ -133,7 +128,7 @@ g_bFlag = 1
 C::f exists  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選擇陳述式](../cpp/selection-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [__if_not_exists 陳述式](../cpp/if-not-exists-statement.md)

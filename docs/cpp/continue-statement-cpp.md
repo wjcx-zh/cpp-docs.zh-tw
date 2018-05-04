@@ -1,12 +1,9 @@
 ---
-title: "繼續陳述式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 繼續陳述式 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - continue_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e4dd91489bfe22fca875f98110dadcb75def39d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="continue-statement-c"></a>continue 陳述式 (C++)
 強制將控制項傳輸至最小的封入的控制運算式[不要](../cpp/do-while-statement-cpp.md)，[如](../cpp/for-statement-cpp.md)，或[時](../cpp/while-statement-cpp.md)迴圈。  
@@ -72,6 +67,6 @@ before the continue
 after the do loop  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [跳躍陳述式](../cpp/jump-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)

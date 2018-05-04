@@ -1,12 +1,9 @@
 ---
-title: "bad_typeid 例外狀況 |Microsoft 文件"
-ms.custom: 
+title: bad_typeid 例外狀況 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bad_typeid
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9409bd83132877f73b58e12cb9503c41a3dc3cf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0771f5e93ba473c9ae1101996e8276bec4cd432a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="badtypeid-exception"></a>bad_typeid 例外狀況
 `bad_typeid`所擲回例外狀況[typeid 運算子](../cpp/typeid-operator.md)時的運算元`typeid`為 NULL 指標。  
@@ -87,6 +82,6 @@ catch (bad_typeid){
 Object is NULL  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段類型資訊](../cpp/run-time-type-information.md)   
  [關鍵字](../cpp/keywords-cpp.md)

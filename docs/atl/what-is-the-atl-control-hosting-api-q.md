@@ -1,13 +1,10 @@
 ---
-title: "什麼是 ATL 控制項裝載應用程式開發介面？ | Microsoft Docs"
-ms.custom: 
+title: 什麼是 ATL 控制項裝載應用程式開發介面？ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - control-hosting API
 - controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e985ffd3b514feec81f4fee540a95792eb3658e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30b104e21259006da41c236c168431d85b43e0d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>什麼是 ATL 控制項裝載應用程式開發介面？
 ATL 的控制項裝載應用程式開發介面是可做為 ActiveX 控制項容器的任何視窗函式的集合。 這些函式可以是靜態或動態連結至您的專案，因為它們都可做為原始碼和 ATL90.dll 所公開。 下表所列出的控制項裝載函式。  
@@ -51,5 +46,5 @@ ATL 的控制項裝載應用程式開發介面是可做為 ActiveX 控制項容�
 > [!NOTE]
 >  控制項裝載應用程式開發介面會形成 ATL 的 ActiveX 控制項內含項目支援的基礎。 不過，通常沒有幾乎不需要直接呼叫這些函式，如果您利用或充分利用 ATL 的包裝函式類別。 如需詳細資訊，請參閱[的 ATL 類別簡化 ActiveX 控制項內含項目](which-atl-classes-facilitate-activex-control-containment-q.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項內含項目常見問題集](which-atl-classes-facilitate-activex-control-containment-q.md)

@@ -1,12 +1,9 @@
 ---
-title: ConvertStringToBSTR | Microsoft Docs
-ms.custom: 
+title: ConvertStringToBSTR |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ConvertStringToBSTR
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ConvertStringToBSTR function
 ms.assetid: 071f9b3b-9643-4e06-a1e5-de96ed15bab2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b396930f6a16c3773b917dc21b2c61525350f397
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: d6dbf91f2d354bf3a68ce0f251bc6b5d9675af7f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="convertstringtobstr"></a>ConvertStringToBSTR
 **Microsoft 特定的**  
@@ -78,5 +73,5 @@ BSTR text: Test
   
  **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器 COM 全域函式](../cpp/compiler-com-global-functions.md)

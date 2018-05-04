@@ -1,12 +1,9 @@
 ---
-title: "__restrict |Microsoft 文件"
-ms.custom: 
+title: __restrict |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __restrict_cpp
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c21872c5d6fe6000038a3a2f4fe39451b566dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d96abd70990f1c01229004e9be000ec4e35a8595
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restrict"></a>__restrict
-像**__declspec ([限制](../cpp/restrict.md))**修飾詞，`__restrict`關鍵字會指出符號不是目前範圍中的別名。 `__restrict` 關鍵字與 `__declspec ( restrict )` 修飾詞具有下列差異：  
+像 **__declspec ([限制](../cpp/restrict.md))** 修飾詞，`__restrict`關鍵字會指出符號不是目前範圍中的別名。 `__restrict` 關鍵字與 `__declspec ( restrict )` 修飾詞具有下列差異：  
   
 -   `__restrict` 關鍵字只對變數有效，而 `__declspec ( restrict )` 只對函式宣告和定義有效。  
   
@@ -67,5 +62,5 @@ union z {
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)

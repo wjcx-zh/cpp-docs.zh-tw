@@ -1,22 +1,18 @@
 ---
-title: "ATL HTTP 公用程式函式 |Microsoft 文件"
-ms.custom: 
+title: ATL HTTP 公用程式函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 476ca29de5a44e8ebb20d53ec0b88834c7b03eea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 
@@ -74,7 +70,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="remarks"></a>備註  
  行為類似的目前版本[InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) ，但不需要安裝的 WinInet 或 Internet Explorer。  
   
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
  ## <a name="atlcombineurl"></a> AtlCombineUrl
@@ -258,7 +254,7 @@ inline void SystemTimeToHttpDate(
  *strTime*  
  接收 HTTP 日期時間，如 RFC 2616 中定義的字串變數的參考 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) 和 RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt))。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
 

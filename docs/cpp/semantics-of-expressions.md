@@ -1,12 +1,9 @@
 ---
-title: "運算式的語意 |Microsoft 文件"
-ms.custom: 
+title: 運算式的語意 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8419ea4e446c8bf2f555c680079ccb91cc26afb5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="semantics-of-expressions"></a>運算式的語意
 運算式會根據其運算子的優先順序和群組進行評估。 ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[語彙慣例](../cpp/lexical-conventions.md)，顯示的關聯性的 c + + 運算子加諸於運算式。)  
@@ -80,10 +75,10 @@ int main()
   
 |預期的類型|允許的類型|  
 |-------------------|-------------------|  
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|  
-|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|  
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|  
+|*type*|`const` *型別*<br /> `volatile` *型別*<br /> *type*&<br /> `const` *型別*&<br /> `volatile` *型別*&<br /> `volatile const` *型別*<br /> `volatile const` *型別*&|  
+|*type*\*|*type*\*<br /> `const` *型別*\*<br /> `volatile` *型別*\*<br /> `volatile const` *型別*\*|  
+|`const` *型別*|*type*<br /> `const` *型別*<br />`const` *型別*&|  
+|`volatile` *型別*|*type*<br /> `volatile` *型別*<br /> `volatile` *型別*&|  
   
  由於上述規則一律可以搭配使用，因此可以在預期出現指標的位置提供 volatile 物件的 const 指標。  
   

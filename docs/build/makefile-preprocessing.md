@@ -1,30 +1,25 @@
 ---
-title: "Makefile 前置處理 |Microsoft 文件"
-ms.custom: 
+title: Makefile 前置處理 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - preprocessing makefiles
 - makefiles, preprocessing
 ms.assetid: a9185139-97c9-4adb-b4a9-1ec395cce9f8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f08b1568bd205b02ff2069e096725a7a52730f4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4b304276f20f66e02808f3894e5b948dd994cbb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing"></a>Makefile 前置處理
 您可以使用前置處理器指示詞和運算式控制 NMAKE 工作階段。 Makefile 中的或 Tools.ini 可以放置前置處理指示。 Using 指示詞，您可以有條件地處理在 makefile，顯示錯誤訊息、 包含其他 makefile、 取消巨集，並開啟或關閉特定選項。  
@@ -34,5 +29,5 @@ ms.lasthandoff: 12/21/2017
   
  [Makefile 前置處理中的運算式](../build/expressions-in-makefile-preprocessing.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [NMAKE 參考](../build/nmake-reference.md)

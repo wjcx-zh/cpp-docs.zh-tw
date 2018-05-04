@@ -2,11 +2,8 @@
 title: 多重基底類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>多個基底類別
 中所述[多重繼承](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)，可以從一個以上的基底類別衍生一個類別。 在多重繼承模型中 （其中類別均衍生自多個基底類別），使用指定的基底類別*基底清單*文法項目。 例如，可以指定衍生自 `CollectionOfBook` 和 `Collection` 的 `Book` 類別宣告：  
@@ -69,7 +64,7 @@ class CollectionOfBook : public Book, public Collection {
   
  在圖中，`Queue` 為 `CashierQueue` 和 `LunchQueue` 的基底類別。 不過，在將這兩個類別合併為 `LunchCashierQueue` 時會發生下列問題：新的類別會內含兩個來自 `Queue` 類型的子物件，其中一個來自 `CashierQueue`，另一個則是來自 `LunchQueue`。 下圖顯示概念性的記憶體配置 (實際的記憶體配置可能會進行最佳化)。  
   
- ![模擬的午餐供應 &#45; 行 」 物件](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![模擬的午餐&#45;行 」 物件](../cpp/media/vc38xp2.gif "vc38XP2")  
 模擬的午餐線物件  
   
  請注意，`Queue` 物件中有兩個 `LunchCashierQueue` 子物件。 下列程式碼會將 `Queue` 宣告為虛擬基底類別：  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  使用 `virtual` 關鍵字可確保只會包含一個 `Queue` 子物件的複本 (請參閱下圖)。  
   
- ![模擬的午餐供應 &#45; 行 」 物件，虛擬基底類別](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![模擬的午餐&#45;行 」 物件、 虛擬基底類別](../cpp/media/vc38xp3.gif "vc38XP3")  
 含有虛擬基底類別的模擬 Lunch-Line 物件  
   
  一個類別可以擁有一個虛擬元件和一個特定類型的非虛擬元件。 此情況會發生在如下圖中示範的情況下。  
@@ -221,5 +216,5 @@ public:
   
  在圖中，透過非虛擬基底類別存取類別 `A` 的所有成員會產生模稜兩可的情況，編譯器不會提供是否要使用與 `B` 關聯的子物件，或使用與 `C` 關聯之子物件的資訊。 不過，當 `A` 指定為虛擬基底類別時，沒有存取子物件的問題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [繼承](../cpp/inheritance-cpp.md)

@@ -1,13 +1,10 @@
 ---
-title: "決定要使用哪一個匯出方法 |Microsoft 文件"
-ms.custom: 
+title: 決定要使用哪一個匯出方法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 ms.assetid: 66d773ed-935c-45c2-ad03-1a060874b34d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7375d4baf31c1564493fd29938ef2ac8ee034f3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03c88cee3504d8efef8f9ca19073ed06b66f6aeb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determining-which-exporting-method-to-use"></a>決定要使用哪一個匯出方法
 您可以使用兩種方式匯出檔案：.def 檔或 `__declspec(dllexport)` 關鍵字。 為了協助您決定針對您的 DLL 使用哪種方式較好，請考慮下列問題：  
@@ -71,5 +66,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [裝飾的名稱](../build/reference/decorated-names.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 DLL 匯出](../build/exporting-from-a-dll.md)

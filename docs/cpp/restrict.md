@@ -1,12 +1,9 @@
 ---
-title: "限制 |Microsoft 文件"
-ms.custom: 
+title: 限制 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - restrict_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __declspec keyword [C++], restrict
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec1a54e9c4f235de4aad796586cd7be3e7ee592e
-ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
+ms.openlocfilehash: ed5f91288671eaa3dcf4700ec35dae63ffaef172
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restrict"></a>restrict
 

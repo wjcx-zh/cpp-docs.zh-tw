@@ -1,27 +1,22 @@
 ---
-title: "-HIGHENTROPYVA (支援 64 位元 ASLR) |Microsoft 文件"
-ms.custom: 
+title: -HIGHENTROPYVA (支援 64 位元 ASLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059f6169cafc48fc67587ae2f5827966269e6ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de2487cbeff97ded6e95a36393fbbcfbd510e6d0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (支援 64 位元 ASLR)
 指定可執行映像支援高熵 64 位元位址空間配置隨機載入 (ASLR)。  
@@ -49,6 +44,6 @@ ms.lasthandoff: 12/21/2017
   
 5.  在**其他選項**，輸入`/HIGHENTROPYVA`或`/HIGHENTROPYVA:NO`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

@@ -1,13 +1,10 @@
 ---
-title: "-vd （停用建構替代） |Microsoft 文件"
-ms.custom: 
+title: -vd （停用建構替代） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vd
 dev_langs:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (停用建構替代)
 ## <a name="syntax"></a>語法  
@@ -54,12 +49,12 @@ ms.lasthandoff: 12/21/2017
  `2`  
  可讓您使用[dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)所建構的物件上。 例如，從虛擬基底類別的 dynamic_cast 在衍生類別。  
   
- **/vd2**將 vtordisp 欄位時，您必須具有虛擬函式的虛擬基底。 **/vd1**應已足夠。 最常見情況**/vd2**是必要的虛擬基底中的唯一的虛擬函式時解構函式。  
+ **/vd2**將 vtordisp 欄位時，您必須具有虛擬函式的虛擬基底。 **/vd1**應已足夠。 最常見情況 **/vd2**是必要的虛擬基底中的唯一的虛擬函式時解構函式。  
   
 ## <a name="remarks"></a>備註  
  這些選項只適用於使用虛擬基底的 c + + 程式碼。  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]實作 c + + 建構位移支援使用虛擬繼承的情況。 建構替代解決問題，當虛擬函式，宣告虛擬基底和衍生類別中覆寫時，建立，進一步衍生類別的建構期間從建構函式呼叫。  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 實作 c + + 建構位移支援使用虛擬繼承的情況。 建構替代解決問題，當虛擬函式，宣告虛擬基底和衍生類別中覆寫時，建立，進一步衍生類別的建構期間從建構函式呼叫。  
   
  虛擬函式可能會收到不正確的問題是`this`指標因此虛擬的替代間的不一致的基底類別和其衍生類別的替代。 解決方案可提供單一建構替代調整，針對每個虛擬基底類別的呼叫 vtordisp 欄位。  
   
@@ -81,6 +76,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

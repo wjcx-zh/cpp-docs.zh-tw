@@ -1,12 +1,9 @@
 ---
-title: "_com_ptr_t 擷取器 |Microsoft 文件"
-ms.custom: 
+title: _com_ptr_t 擷取器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::operatorInterface&
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c006c18b9e00e5c79ff686dfb31fa9ccf56fd4e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 擷取器
 **Microsoft 特定的**  
@@ -62,13 +57,13 @@ operator bool( ) const throw( );
   
 -   **operator Interface&\*** 傳回封裝的介面指標，這可能是**NULL**。  
   
--   **operator Interface& &**將參考傳回給封裝的介面指標，並會發出錯誤，如果指標位於**NULL**。  
+-   **operator Interface& &** 將參考傳回給封裝的介面指標，並會發出錯誤，如果指標位於**NULL**。  
   
 -   **運算子\*** 可讓智慧型指標物件作用就如同實際封裝的介面取值時一樣。  
   
--   **operator->**可讓智慧型指標物件作用就如同實際封裝的介面取值時一樣。  
+-   **operator->** 可讓智慧型指標物件作用就如同實際封裝的介面取值時一樣。  
   
--   **運算子 （& s)**釋放任何封裝的介面指標，它與取代**NULL**，並傳回封裝的指標的位址。 這可讓智慧型指標的位址傳遞至函式具有**出**透過它傳回介面指標的參數。  
+-   **運算子 （& s)** 釋放任何封裝的介面指標，它與取代**NULL**，並傳回封裝的指標的位址。 這可讓智慧型指標的位址傳遞至函式具有**出**透過它傳回介面指標的參數。  
   
 -   **運算子 bool**允許條件運算式中使用智慧型指標物件。 這個運算子會傳回**true**如果指標不是**NULL**。  
   

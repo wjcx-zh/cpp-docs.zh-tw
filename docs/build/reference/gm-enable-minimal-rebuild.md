@@ -1,13 +1,10 @@
 ---
-title: "-Gm （啟用最少重建） |Microsoft 文件"
-ms.custom: 
+title: -Gm （啟用最少重建） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MinimalRebuild
 - /Gm
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc9ff065de2b83d50b6fa905fcc6d1123dbe829
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e0b83c34b0ff8cacbca9d21a40c6c9572f516d1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (啟用最少重建)
 啟用最少重建，其可判定是否需要重新編譯包含已變更 C++ 類別定義 (儲存於標頭 (.h) 檔) 的 C++ 原始程式檔。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  最少重建依賴於包含檔之間未變更的類別定義。 對於專案來說，類別定義必須是全域的 (給定類別應該只有一個定義)，這是因為 .idb 檔中的相依性資訊是針對整個專案建立的。 如果專案中類別具有多個定義，請停用最少重建。  
   
- 因為 incremental 連結器不支援使用.obj 檔案中包含的 Windows 中繼資料[/ZW （Windows 執行階段編譯）](../../build/reference/zw-windows-runtime-compilation.md)選項， **/Gm**選項與不相容**/ZW**。  
+ 因為 incremental 連結器不支援使用.obj 檔案中包含的 Windows 中繼資料[/ZW （Windows 執行階段編譯）](../../build/reference/zw-windows-runtime-compilation.md)選項， **/Gm**選項與不相容 **/ZW**。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -65,6 +60,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.MinimalRebuild%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

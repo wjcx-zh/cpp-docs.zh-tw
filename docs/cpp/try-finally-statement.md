@@ -2,11 +2,8 @@
 title: try-finally 陳述式 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 **Microsoft 特定的**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>文法  
  *try-finally-statement*：  
- `__try`*複合陳述式*  
+ `__try` *複合陳述式*  
   
- `__finally`*複合陳述式*  
+ `__finally` *複合陳述式*  
   
  `try-finally` 陳述式是 C 和 C++ 語言的 Microsoft 擴充功能，可讓目標應用程式在執行程式碼的區塊中斷時，仍可保證會執行清除程式碼。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 `try-finally` 陳述式對於有多個地方要檢查可能會導致常式過早傳回的錯誤時會特別有用。  
   
@@ -80,7 +75,7 @@ __finally {
   
  例如，假設有一系列的函式呼叫連結了函式 A 與函式 D，如下圖所示。 每個函式都具有一個終止處理常式。 如果例外狀況在函式 D 中引發，並在函式 A 中處理，則會在系統回溯堆疊時，依此順序呼叫終止處理常式：D、C、B。  
   
- ![終止 &#45;順序，則處理常式執行](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![終止順序&#45;處理常式執行](../cpp/media/vc38cx1.gif "vc38CX1")  
 終止處理常式的執行順序  
   
 > [!NOTE]
@@ -100,7 +95,7 @@ __finally {
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)   
  [結構化的例外處理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   

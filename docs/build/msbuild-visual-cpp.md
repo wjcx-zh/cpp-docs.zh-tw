@@ -1,13 +1,10 @@
 ---
-title: "MSBuild （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: MSBuild （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db569d456a85418f01dfdf3abab116d68d99dff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 743aba156f9b937f28242b63e6deaf4c6dfb8369
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 您可以使用**MSBuild**建置 Visual c + + 應用程式從命令提示字元工具。 建置程序是在專案檔 (.vcxproj)，您可以建立和編輯資訊所控制。 專案檔指定為基礎的組建選項建置階段、 條件和事件。  
@@ -43,5 +38,5 @@ ms.lasthandoff: 12/21/2017
 |[如何：將自訂工具整合至專案屬性中](../build/how-to-integrate-custom-tools-into-the-project-properties.md)|示範如何將自訂工具的選項加入至專案屬性。|  
 |[如何：修改目標 Framework 和平台工具組](../build/how-to-modify-the-target-framework-and-platform-toolset.md)|示範如何編譯專案，以供多個架構和工具組。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在命令列上建置 C/C++ 程式碼](../build/building-on-the-command-line.md)

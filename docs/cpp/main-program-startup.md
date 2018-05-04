@@ -2,11 +2,8 @@
 title: main： 程式啟動 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - vc.main.startup
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbb3d19101358012df795000907a0b3e8139601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2999596fe30afca4c9945efc34a8537e9f45e14a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-program-startup"></a>main：程式啟動
 名為的特殊函式`main`是執行所有的 C 和 c + + 程式的起點。 如果您要撰寫的程式碼遵守 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 程式設計模型，您可以使用 `wmain` (寬字元版本的 `main`)。  
@@ -70,7 +65,7 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 **結束 Microsoft 特定的**  
  `argc` 和 `argv` 的類型是由語言定義。 `argc`、`argv` 和 `envp` 都是傳統名稱，但編譯器不需使用。 如需詳細資訊和範例，請參閱[引數定義](../cpp/argument-definitions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [使用 wmain 取代 main](../cpp/using-wmain-instead-of-main.md)   
  [main 函式限制](../cpp/main-function-restrictions.md)

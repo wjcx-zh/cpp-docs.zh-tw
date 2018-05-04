@@ -1,12 +1,9 @@
 ---
-title: "uuid （c + +） |Microsoft 文件"
-ms.custom: 
+title: uuid （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - uuid_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __declspec keyword [C++], uuid
 - uuid __declspec keyword
 ms.assetid: 9d004621-09bc-4a8d-871b-648f5d5102d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c999b429cb789167eeb754b6f11a8b3d90c28642
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: b143def4d758307c6ce6737281bdca1097aaa8c5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="uuid-c"></a>uuid (C++)
 **Microsoft 特定的**  
@@ -41,7 +36,7 @@ __declspec( uuid("ComObjectGUID") ) declarator
 ```  
   
 ## <a name="remarks"></a>備註  
- `uuid` 屬性可接受字串做為其引數。 這個字串名稱以標準登錄格式，不論 GUID **{}**分隔符號。 例如:   
+ `uuid` 屬性可接受字串做為其引數。 這個字串名稱以標準登錄格式，不論 GUID **{}** 分隔符號。 例如:   
   
 ```  
 struct __declspec(uuid("00000000-0000-0000-c000-000000000046")) IUnknown;  
@@ -54,6 +49,6 @@ struct __declspec(uuid("{00020400-0000-0000-c000-000000000046}")) IDispatch;
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [__declspec](../cpp/declspec.md)   
  [關鍵字](../cpp/keywords-cpp.md)

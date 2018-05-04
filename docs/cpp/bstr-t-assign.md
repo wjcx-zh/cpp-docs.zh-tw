@@ -1,12 +1,9 @@
 ---
-title: "_bstr_t:: assign |Microsoft 文件"
-ms.custom: 
+title: '_bstr_t:: assign |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t::Assign
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0455a544a83340c003917cc71eb2127d98722cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de790fa55299999be8c4cb4d2945e2b004d20a9e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 特定的**  
   
- 複製`BSTR`到`BSTR`包裝**_**`bstr_t`。  
+ 複製`BSTR`到`BSTR`包裝 **_**`bstr_t`。  
   
 ## <a name="syntax"></a>語法  
   
@@ -122,5 +117,5 @@ bstrWrapper2 = some text
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

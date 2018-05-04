@@ -1,12 +1,9 @@
 ---
-title: "_bstr_t:: operator + =，+ |Microsoft 文件"
-ms.custom: 
+title: '_bstr_t:: operator + =，+ |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t::operator+
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - += operator [C++], appending strings
 - + operator [C++], _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ceeec1461b05b25d4bb0b42321cb9b3988ce4b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e443b233e19f6cdc64d7d6021a9a9c078a4f327
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=、+
 **Microsoft 特定的**  
@@ -55,10 +50,10 @@ friend _bstr_t operator+(
 ```  
   
 #### <a name="parameters"></a>參數  
- *s1*  
+ *S1*  
  `_bstr_t` 物件。  
   
- *s2*  
+ *S2*  
  多位元組字串。  
   
  `s3`  
@@ -67,15 +62,15 @@ friend _bstr_t operator+(
 ## <a name="remarks"></a>備註  
  這些運算子會執行字串串連：  
   
--   **運算子 + = (***s1***)**將附加至封裝中的字元`BSTR`的*s1*到這個物件封裝結尾`BSTR`.  
+-   **運算子 + = (***s1***)** 將附加至封裝中的字元`BSTR`的*s1*到這個物件封裝結尾`BSTR`.      
   
--   **operator + (***s1***)**傳回新`_bstr_t`，藉由串連此物件的正確`BSTR`與*s1*。  
+-   **operator + (***s1***)** 傳回新`_bstr_t`，藉由串連此物件的正確`BSTR`與*s1*。      
   
--   **operator + (***s2***&#124;***s1***)**傳回新`_bstr_t`，藉由串連的多位元組字串構成*s2*，轉換成 Unicode，與`BSTR`封裝在*s1*。  
+-   **operator + (***s2***&#124;***s1***)** 傳回新`_bstr_t`，會串連起來所構成多位元組字串*s2*，轉換成 Unicode，與`BSTR`封裝在*s1*。          
   
--   **operator + (** `s3` **，***s1***)**傳回新`_bstr_t`Unicode 字串的串連，形成`s3`與`BSTR`封裝在*s1*。  
+-   **operator + (** `s3` **，***s1***)** 傳回新`_bstr_t`Unicode 字串的串連，形成`s3`與`BSTR`封裝在*s1*。        
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

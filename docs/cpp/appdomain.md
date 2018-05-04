@@ -1,12 +1,9 @@
 ---
-title: "appdomain |Microsoft 文件"
-ms.custom: 
+title: appdomain |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - appdomain_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36df0066d3e460efceb130d257a1b6f87231dd4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 14b6f23e5690c98553448c827fe287bd413d6f97
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appdomain"></a>appdomain
 指定 Managed 應用程式的每個應用程式定義域都應該有自己的特定全域變數或靜態成員變數複本。 請參閱[應用程式定義域和 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)如需詳細資訊。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 02/14/2018
   
  如果您希望 Common Language Runtime 中某個處理序內的所有應用程式定義域共用全域變數，請使用 `__declspec(process)` 修飾詞。 `__declspec(process)` 作用中的預設下是[/clr](../build/reference/clr-common-language-runtime-compilation.md)。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
- `__declspec(appdomain)` 只適用於當其中一個**/clr**編譯器選項使用。 只有全域變數、靜態成員變數或靜態區域變數可以擁有 `__declspec(appdomain)` 標記。 將 `__declspec(appdomain)` 套用至 Managed 類型的靜態成員會發生錯誤，因為這些成員會固定出現這類行為。  
+ `__declspec(appdomain)` 只適用於當其中一個 **/clr**編譯器選項使用。 只有全域變數、靜態成員變數或靜態區域變數可以擁有 `__declspec(appdomain)` 標記。 將 `__declspec(appdomain)` 套用至 Managed 類型的靜態成員會發生錯誤，因為這些成員會固定出現這類行為。  
   
  使用`__declspec(appdomain)`類似於使用[執行緒區域儲存區 (TLS)](../parallel/thread-local-storage-tls.md)。 執行緒擁有自己的儲存區，應用程式定義域也一樣。 使用 `__declspec(appdomain)` 可確保全域變數在針對這個應用程式建立的每個應用程式定義域中擁有自己的儲存區。  
   
@@ -147,6 +142,6 @@ __declspec(appdomain) CGlobal::~CGlobal destructor
 __declspec(process) CGlobal::~CGlobal destructor  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [__declspec](../cpp/declspec.md)   
  [關鍵字](../cpp/keywords-cpp.md)

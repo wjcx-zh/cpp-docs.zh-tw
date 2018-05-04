@@ -1,9 +1,9 @@
 ---
-title: "/ /FILEALIGN （檔案中的對齊區段） |Microsoft 文件"
+title: / /FILEALIGN （檔案中的對齊區段） |Microsoft 文件
 ms.date: 10/23/2017
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /filealign
 dev_langs:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 753f6c5fade4211654246aec19af60c60706d7ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8a737801663a2c7c1e896166291a1635fbbe6c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filealign-align-sections-in-files"></a>/ /FILEALIGN （檔案中的對齊區段）
 
@@ -52,13 +51,13 @@ ms.lasthandoff: 12/21/2017
 
 1. 選取**命令列**中的 屬性頁**連結器**資料夾。
 
-1. 輸入選項名稱**/FILEALIGN:**以及的大小**其他選項**方塊。
+1. 輸入選項名稱 **/FILEALIGN:** 以及的大小**其他選項**方塊。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
 - 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [設定連結器選項](../../build/reference/setting-linker-options.md)   
 [連結器選項](../../build/reference/linker-options.md)

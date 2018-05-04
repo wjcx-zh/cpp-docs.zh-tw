@@ -1,27 +1,22 @@
 ---
-title: "Visual c + + ARM 移轉常見問題 |Microsoft 文件"
-ms.custom: 
+title: Visual c + + ARM 移轉常見問題 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc34d472fb6db02eb902001ad5aac77dea5baf0
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 04253b5d71de75f6a06f2934dae24df2e6d4e3e2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 移轉時常見的問題
 
@@ -108,9 +103,9 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 MSVC 編譯器支援的兩個不同的方式解讀`volatile`您可以使用編譯器參數指定的儲存體限定詞。 [/Volatile: ms](../build/reference/volatile-volatile-keyword-interpretation.md)參數選取 Microsoft 擴充變動性保證強式排序的語意，因為已經過傳統情況適用於 x86 和 x64，因為這些架構的強式記憶體模型。 [/Volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)參數選取嚴格 c + + 標準動態語意，不保證強式排序。
 
-預設值是在 ARM 架構上**/volatile:iso**因為 ARM 處理器需要弱式排序記憶體模型，以及因為 ARM 軟體沒有舊版的信賴憑證者的擴充語意**/volatile: ms**而且通常不需要與軟體進行互動。 不過，它是仍有時方便或甚至不必編譯 ARM 程式來使用擴充的語意。 例如，可能是移植程式能夠使用 ISO c + + 語意的成本太高或驅動程式軟體可能要遵守的傳統的語意，才能正確運作。 在這些情況下，您可以使用**/volatile: ms**參數; 不過，若要重新建立 ARM 目標的傳統變動性的語意，編譯器必須插入周圍每個讀取或寫入的記憶體屏障`volatile`變數，以強制執行強式的順序，這可能對效能造成負面影響。
+預設值是在 ARM 架構上 **/volatile:iso**因為 ARM 處理器需要弱式排序記憶體模型，以及因為 ARM 軟體沒有舊版的信賴憑證者的擴充語意 **/volatile: ms**而且通常不需要與軟體進行互動。 不過，它是仍有時方便或甚至不必編譯 ARM 程式來使用擴充的語意。 例如，可能是移植程式能夠使用 ISO c + + 語意的成本太高或驅動程式軟體可能要遵守的傳統的語意，才能正確運作。 在這些情況下，您可以使用 **/volatile: ms**參數; 不過，若要重新建立 ARM 目標的傳統變動性的語意，編譯器必須插入周圍每個讀取或寫入的記憶體屏障`volatile`變數，以強制執行強式的順序，這可能對效能造成負面影響。
 
-在 x86 和 x64 架構的預設值是**/volatile: ms**因為大部分的軟體，已經建立這些架構使用 MSVC 依賴。 當您編譯 x86 和 x64 的程式時，您可以指定**/volatile:iso**參數以避免不必要依賴傳統變動性的語意，並將可攜性。
+在 x86 和 x64 架構的預設值是 **/volatile: ms**因為大部分的軟體，已經建立這些架構使用 MSVC 依賴。 當您編譯 x86 和 x64 的程式時，您可以指定 **/volatile:iso**參數以避免不必要依賴傳統變動性的語意，並將可攜性。
 
 ## <a name="see-also"></a>另請參閱
 

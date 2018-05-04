@@ -1,12 +1,9 @@
 ---
-title: "CComControlBase 類別 |Microsoft 文件"
-ms.custom: 
+title: CComControlBase 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComControlBase
@@ -89,17 +86,15 @@ dev_langs:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6109bfaf29ee26053bc1dcbb5af8f56a0612215
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8b72157db26d4cb7d576e32ca704a32b62b4c2da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 類別
 這個類別會提供方法來建立及管理 ATL 的控制項。  
@@ -217,7 +212,7 @@ class ATL_NO_VTABLE CComControlBase
 ## <a name="requirements"></a>需求  
  **標頭：** atlctl.h  
   
-##  <a name="appearancetype"></a>CComControlBase::AppearanceType  
+##  <a name="appearancetype"></a>  CComControlBase::AppearanceType  
  如果覆寫您**m_nAppearance**內建屬性的類型不**簡短**。  
   
 ```
@@ -227,7 +222,7 @@ typedef short AppearanceType;
 ### <a name="remarks"></a>備註  
  ATL 控制項精靈新增**m_nAppearance**內建類型的簡短的屬性。 覆寫`AppearanceType`如果您使用不同的資料類型。  
   
-##  <a name="ccomcontrolbase"></a>CComControlBase::CComControlBase  
+##  <a name="ccomcontrolbase"></a>  CComControlBase::CComControlBase  
  建構函式。  
   
 ```
@@ -241,7 +236,7 @@ CComControlBase(HWND& h);
 ### <a name="remarks"></a>備註  
  初始化 5080 X 5080 himetric 為單位的控制項大小 (2x"2")，並初始化`CComControlBase`資料成員值來**NULL**或**FALSE**。  
   
-##  <a name="dtor"></a>CComControlBase:: ~ CComControlBase  
+##  <a name="dtor"></a>  CComControlBase:: ~ CComControlBase  
  解構函式。  
   
 ```
@@ -251,7 +246,7 @@ CComControlBase(HWND& h);
 ### <a name="remarks"></a>備註  
  如果控制項是視窗，`~CComControlBase`終結藉由呼叫[DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)。  
   
-##  <a name="controlqueryinterface"></a>CComControlBase::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>  CComControlBase::ControlQueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -272,7 +267,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
   
-##  <a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
+##  <a name="doesverbactivate"></a>  CComControlBase::DoesVerbActivate  
  檢查`iVerb`所使用的參數`IOleObjectImpl::DoVerb`是啟動控制項的使用者介面 (`iVerb`等於`OLEIVERB_UIACTIVATE`)，定義當使用者按兩下控制項時所採取的動作 (`iVerb`等於`OLEIVERB_PRIMARY`)，顯示控制項 (`iVerb`等於`OLEIVERB_SHOW`)，或啟動控制項 (`iVerb`等於**OLEIVERB_INPLACEACTIVATE**)。  
   
 ```
@@ -289,7 +284,7 @@ BOOL DoesVerbActivate(LONG iVerb);
 ### <a name="remarks"></a>備註  
  您可以覆寫這個方法，以定義您自己的啟用指令動詞。  
   
-##  <a name="doesverbuiactivate"></a>CComControlBase::DoesVerbUIActivate  
+##  <a name="doesverbuiactivate"></a>  CComControlBase::DoesVerbUIActivate  
  檢查`iVerb`所使用的參數`IOleObjectImpl::DoVerb`會啟用控制項的使用者介面，並傳回**TRUE**。  
   
 ```
@@ -303,7 +298,7 @@ BOOL DoesVerbUIActivate(LONG iVerb);
 ### <a name="return-value"></a>傳回值  
  傳回**TRUE**如果`iVerb`等於`OLEIVERB_UIACTIVATE`， `OLEIVERB_PRIMARY`， `OLEIVERB_SHOW`，或**OLEIVERB_INPLACEACTIVATE**。 否則，方法會傳回**FALSE**。  
   
-##  <a name="doverbproperties"></a>CComControlBase::DoVerbProperties  
+##  <a name="doverbproperties"></a>  CComControlBase::DoVerbProperties  
  顯示控制項的屬性頁。  
   
 ```
@@ -325,7 +320,7 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
   
  [!code-cpp[NVC_ATL_COM#20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
   
-##  <a name="fireviewchange"></a>CComControlBase::FireViewChange  
+##  <a name="fireviewchange"></a>  CComControlBase::FireViewChange  
  呼叫此方法以告知容器來進行重繪控制項，或已變更控制項的檢視已註冊的通知接收的通知。  
   
 ```
@@ -341,7 +336,7 @@ HRESULT FireViewChange();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
   
-##  <a name="getambientappearance"></a>CComControlBase::GetAmbientAppearance  
+##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance  
  擷取**DISPID_AMBIENT_APPEARANCE**，目前設定控制項的外觀： 一般和 3d 1 0。  
   
 ```
@@ -358,7 +353,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
   
-##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
+##  <a name="getambientautoclip"></a>  CComControlBase::GetAmbientAutoClip  
  擷取**DISPID_AMBIENT_AUTOCLIP**、 旗標，指出容器是否支援自動裁剪控制項顯示區域。  
   
 ```
@@ -372,7 +367,7 @@ HRESULT GetAmbientAutoClip(BOOL& bAutoClip);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientbackcolor"></a>CComControlBase::GetAmbientBackColor  
+##  <a name="getambientbackcolor"></a>  CComControlBase::GetAmbientBackColor  
  擷取**DISPID_AMBIENT_BACKCOLOR**，容器所定義的所有控制項的環境背景色彩。  
   
 ```
@@ -386,7 +381,7 @@ HRESULT GetAmbientBackColor(OLE_COLOR& BackColor);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientcharset"></a>CComControlBase::GetAmbientCharSet  
+##  <a name="getambientcharset"></a>  CComControlBase::GetAmbientCharSet  
  擷取**DISPID_AMBIENT_CHARSET**，該環境的字集容器所定義的所有控制項。  
   
 ```
@@ -400,7 +395,7 @@ HRESULT GetAmbientCharSet(BSTR& bstrCharSet);
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="getambientcodepage"></a>CComControlBase::GetAmbientCodePage  
+##  <a name="getambientcodepage"></a>  CComControlBase::GetAmbientCodePage  
  擷取**DISPID_AMBIENT_CODEPAGE**，容器所定義的所有控制項的環境的字碼頁。  
   
 ```
@@ -414,7 +409,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="getambientdisplayasdefault"></a>CComControlBase::GetAmbientDisplayAsDefault  
+##  <a name="getambientdisplayasdefault"></a>  CComControlBase::GetAmbientDisplayAsDefault  
  擷取**DISPID_AMBIENT_DISPLAYASDEFAULT**的旗標**TRUE**如果容器已標示為預設按鈕，此站台中的控制項，因此按鈕控制項應繪製本身會向粗框架。  
   
 ```
@@ -428,7 +423,7 @@ HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientdisplayname"></a>CComControlBase::GetAmbientDisplayName  
+##  <a name="getambientdisplayname"></a>  CComControlBase::GetAmbientDisplayName  
  擷取**DISPID_AMBIENT_DISPLAYNAME**，容器已提供給控制項的名稱。  
   
 ```
@@ -442,7 +437,7 @@ HRESULT GetAmbientDisplayName(BSTR& bstrDisplayName);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientfont"></a>CComControlBase::GetAmbientFont  
+##  <a name="getambientfont"></a>  CComControlBase::GetAmbientFont  
  擷取容器的指標的環境`IFont`介面。  
   
 ```
@@ -459,7 +454,7 @@ HRESULT GetAmbientFont(IFont** ppFont);
 ### <a name="remarks"></a>備註  
  如果屬性是**NULL**，指標**NULL**。 如果指標不是**NULL**，呼叫端必須釋放指標。  
   
-##  <a name="getambientfontdisp"></a>CComControlBase::GetAmbientFontDisp  
+##  <a name="getambientfontdisp"></a>  CComControlBase::GetAmbientFontDisp  
  擷取容器的指標的環境**IFontDisp**分派介面。  
   
 ```
@@ -476,7 +471,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="remarks"></a>備註  
  如果屬性是**NULL**，指標**NULL**。 如果指標不是**NULL**，呼叫端必須釋放指標。  
   
-##  <a name="getambientforecolor"></a>CComControlBase::GetAmbientForeColor  
+##  <a name="getambientforecolor"></a>  CComControlBase::GetAmbientForeColor  
  擷取**DISPID_AMBIENT_FORECOLOR**，容器所定義的所有控制項的前景色彩。  
   
 ```
@@ -490,7 +485,7 @@ HRESULT GetAmbientForeColor(OLE_COLOR& ForeColor);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientlocaleid"></a>CComControlBase::GetAmbientLocaleID  
+##  <a name="getambientlocaleid"></a>  CComControlBase::GetAmbientLocaleID  
  擷取**DISPID_AMBIENT_LOCALEID**，容器所使用的語言識別項。  
   
 ```
@@ -507,7 +502,7 @@ HRESULT GetAmbientLocaleID(LCID& lcid);
 ### <a name="remarks"></a>備註  
  控制項可以使用這個識別碼，來調整其使用者介面，以不同的語言。  
   
-##  <a name="getambientmessagereflect"></a>CComControlBase::GetAmbientMessageReflect  
+##  <a name="getambientmessagereflect"></a>  CComControlBase::GetAmbientMessageReflect  
  擷取**DISPID_AMBIENT_MESSAGEREFLECT**、 旗標，指出容器是否要接收的視窗訊息 (例如`WM_DRAWITEM`) 做為事件。  
   
 ```
@@ -521,7 +516,7 @@ HRESULT GetAmbientMessageReflect(BOOL& bMessageReflect);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientpalette"></a>CComControlBase::GetAmbientPalette  
+##  <a name="getambientpalette"></a>  CComControlBase::GetAmbientPalette  
  擷取**DISPID_AMBIENT_PALETTE**，用來存取容器的`HPALETTE`。  
   
 ```
@@ -535,7 +530,7 @@ HRESULT GetAmbientPalette(HPALETTE& hPalette);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientproperty"></a>CComControlBase::GetAmbientProperty  
+##  <a name="getambientproperty"></a>  CComControlBase::GetAmbientProperty  
  擷取所指定的容器屬性`dispid`。  
   
 ```
@@ -555,7 +550,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 ### <a name="remarks"></a>備註  
  ATL 提供 helper 函式來擷取特定屬性，例如，一組[CComControlBase::GetAmbientBackColor](#getambientbackcolor)。 如果沒有任何合適的方法，使用`GetAmbientProperty`。  
   
-##  <a name="getambientrighttoleft"></a>CComControlBase::GetAmbientRightToLeft  
+##  <a name="getambientrighttoleft"></a>  CComControlBase::GetAmbientRightToLeft  
  擷取**DISPID_AMBIENT_RIGHTTOLEFT**，容器所顯示內容的方向。  
   
 ```
@@ -569,7 +564,7 @@ HRESULT GetAmbientRightToLeft(BOOL& bRightToLeft);
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="getambientscaleunits"></a>CComControlBase::GetAmbientScaleUnits  
+##  <a name="getambientscaleunits"></a>  CComControlBase::GetAmbientScaleUnits  
  擷取**DISPID_AMBIENT_SCALEUNITS**，容器的環境單位 （例如英吋或公分為單位） 的標記顯示。  
   
 ```
@@ -583,7 +578,7 @@ HRESULT GetAmbientScaleUnits(BSTR& bstrScaleUnits);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientshowgrabhandles"></a>CComControlBase::GetAmbientShowGrabHandles  
+##  <a name="getambientshowgrabhandles"></a>  CComControlBase::GetAmbientShowGrabHandles  
  擷取**DISPID_AMBIENT_SHOWGRABHANDLES**、 旗標，指出容器是否允許控制項本身現用時顯示抓取控點。  
   
 ```
@@ -597,7 +592,7 @@ HRESULT GetAmbientShowGrabHandles(BOOL& bShowGrabHandles);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientshowhatching"></a>CComControlBase::GetAmbientShowHatching  
+##  <a name="getambientshowhatching"></a>  CComControlBase::GetAmbientShowHatching  
  擷取**DISPID_AMBIENT_SHOWHATCHING**、 旗標，指出容器是否允許控制項本身顯示影線圖樣，當控制項的使用者介面在使用中。  
   
 ```
@@ -611,7 +606,7 @@ HRESULT GetAmbientShowHatching(BOOL& bShowHatching);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambientsupportsmnemonics"></a>CComControlBase::GetAmbientSupportsMnemonics  
+##  <a name="getambientsupportsmnemonics"></a>  CComControlBase::GetAmbientSupportsMnemonics  
  擷取**DISPID_AMBIENT_SUPPORTSMNEMONICS**、 旗標，指出容器是否支援鍵盤助憶鍵。  
   
 ```
@@ -625,7 +620,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign  
+##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign  
  擷取**DISPID_AMBIENT_TEXTALIGN**，容器所慣用的文字對齊方式： 0 代表一般對齊 （數字右邊，文字靠左對齊），1 表示靠左對齊、 置中對齊的 2，3 靠右對齊。  
   
 ```
@@ -639,7 +634,7 @@ HRESULT GetAmbientTextAlign(short& nTextAlign);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getambienttoptobottom"></a>CComControlBase::GetAmbientTopToBottom  
+##  <a name="getambienttoptobottom"></a>  CComControlBase::GetAmbientTopToBottom  
  擷取**DISPID_AMBIENT_TOPTOBOTTOM**，容器所顯示內容的方向。  
   
 ```
@@ -653,7 +648,7 @@ HRESULT GetAmbientTopToBottom(BOOL& bTopToBottom);
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="getambientuidead"></a>CComControlBase::GetAmbientUIDead  
+##  <a name="getambientuidead"></a>  CComControlBase::GetAmbientUIDead  
  擷取**DISPID_AMBIENT_UIDEAD**、 旗標，指出容器是否想要回應使用者介面動作的控制項。  
   
 ```
@@ -670,7 +665,7 @@ HRESULT GetAmbientUIDead(BOOL& bUIDead);
 ### <a name="remarks"></a>備註  
  如果**TRUE**，不應回應控制項。 這個旗標適用於不論**DISPID_AMBIENT_USERMODE**旗標。 請參閱[CComControlBase::GetAmbientUserMode](#getambientusermode)。  
   
-##  <a name="getambientusermode"></a>CComControlBase::GetAmbientUserMode  
+##  <a name="getambientusermode"></a>  CComControlBase::GetAmbientUserMode  
  擷取**DISPID_AMBIENT_USERMODE**、 旗標，指出容器是否處於執行模式 ( **TRUE**) 或設計模式 ( **FALSE**)。  
   
 ```
@@ -684,7 +679,7 @@ HRESULT GetAmbientUserMode(BOOL& bUserMode);
 ### <a name="return-value"></a>傳回值  
  其中一個標準的 HRESULT 值。  
   
-##  <a name="getdirty"></a>CComControlBase::GetDirty  
+##  <a name="getdirty"></a>  CComControlBase::GetDirty  
  傳回的資料成員值`m_bRequiresSave`。  
   
 ```
@@ -697,7 +692,7 @@ BOOL GetDirty();
 ### <a name="remarks"></a>備註  
  這個值會設定使用[CComControlBase::SetDirty](#setdirty)。  
   
-##  <a name="getzoominfo"></a>CComControlBase::GetZoomInfo  
+##  <a name="getzoominfo"></a>  CComControlBase::GetZoomInfo  
  擷取的 x 和 y 分子和縮放因數的分母的值為控制項啟用就地編輯。  
   
 ```
@@ -711,7 +706,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 ### <a name="remarks"></a>備註  
  縮放因數是其目前的範圍內的控制項的原始大小的比例。  
   
-##  <a name="inplaceactivate"></a>CComControlBase::InPlaceActivate  
+##  <a name="inplaceactivate"></a>  CComControlBase::InPlaceActivate  
  導致控制項從任何狀態中的動詞命令的非作用中狀態轉換`iVerb`表示。  
   
 ```
@@ -733,7 +728,7 @@ HRESULT InPlaceActivate(LONG iVerb, const RECT* prcPosRect = NULL);
   
  這個方法也會擷取`IOleInPlaceSite`， **IOleInPlaceSiteEx**，或**IOleInPlaceSiteWindowless**控制項的介面指標並將它儲存在控制項類別的資料成員[CComControlBase::m_spInPlaceSite](#m_spinplacesite)。 控制項類別資料成員[CComControlBase::m_bInPlaceSiteEx](#m_binplacesiteex)， [CComControlBase::m_bWndLess](#m_bwndless)， [CComControlBase::m_bWasOnceWindowless](#m_bwasoncewindowless)，和[CComControlBase::m_bNegotiatedWnd](#m_bnegotiatedwnd)設為 true，則依適當情況。  
   
-##  <a name="internalgetsite"></a>CComControlBase::InternalGetSite  
+##  <a name="internalgetsite"></a>  CComControlBase::InternalGetSite  
  呼叫這個方法來查詢所識別的介面指標的控制站台。  
   
 ```
@@ -753,7 +748,7 @@ HRESULT InternalGetSite(REFIID riid, void** ppUnkSite);
 ### <a name="remarks"></a>備註  
  如果站台支援所要求的介面`riid`，藉由傳回的指標`ppUnkSite`。 否則，`ppUnkSite`設為 NULL。  
   
-##  <a name="m_bautosize"></a>CComControlBase::m_bAutoSize  
+##  <a name="m_bautosize"></a>  CComControlBase::m_bAutoSize  
  表示控制項的任何其他大小不能為旗標。  
   
 ```
@@ -768,7 +763,7 @@ unsigned m_bAutoSize:1;
   
  如果您將加入**自動調整大小的**選項[內建屬性](../../atl/reference/stock-properties-atl-control-wizard.md) 索引標籤的 ATL 控制項精靈，精靈會自動在您的控制項類別中建立此資料成員、 建立 put 並取得屬性的方法並支援[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)屬性變更時自動通知容器。  
   
-##  <a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
+##  <a name="m_bdrawfromnatural"></a>  CComControlBase::m_bDrawFromNatural  
  旗標指出`IDataObjectImpl::GetData`和`CComControlBase::GetZoomInfo`應該設定中的控制項大小`m_sizeNatural`而不是從`m_sizeExtent`。  
   
 ```
@@ -780,7 +775,7 @@ unsigned m_bDrawFromNatural:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_bdrawgetdatainhimetric"></a>CComControlBase::m_bDrawGetDataInHimetric  
+##  <a name="m_bdrawgetdatainhimetric"></a>  CComControlBase::m_bDrawGetDataInHimetric  
  旗標指出`IDataObjectImpl::GetData`應該使用 HIMETRIC 單位並不像素繪製時。  
   
 ```
@@ -793,7 +788,7 @@ unsigned m_bDrawGetDataInHimetric:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_binplaceactive"></a>CComControlBase::m_bInPlaceActive  
+##  <a name="m_binplaceactive"></a>  CComControlBase::m_bInPlaceActive  
  表示控制項就地啟用作用中的旗標。  
   
 ```
@@ -806,7 +801,7 @@ unsigned m_bInPlaceActive:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_binplacesiteex"></a>CComControlBase::m_bInPlaceSiteEx  
+##  <a name="m_binplacesiteex"></a>  CComControlBase::m_bInPlaceSiteEx  
  旗標，指出此容器支援**IOleInPlaceSiteEx**介面和 OCX96 控制功能，例如無視窗和閃爍的控制項。  
   
 ```
@@ -822,7 +817,7 @@ unsigned m_bInPlaceSiteEx:1;
   
  如果`m_bWndLess`是**FALSE**和`m_bInPlaceSiteEx`是**TRUE**，`m_spInPlaceSite`是**IOleInPlaceSiteEx**介面指標。 請參閱[m_spInPlaceSite](#m_spinplacesite)顯示這些三個資料成員之間的關聯性的資料表。  
   
-##  <a name="m_bnegotiatedwnd"></a>CComControlBase::m_bNegotiatedWnd  
+##  <a name="m_bnegotiatedwnd"></a>  CComControlBase::m_bNegotiatedWnd  
  表示控制項有交涉與容器相關功能的支援 OCX96 控制項 （例如閃爍的及無視窗控制項），和視窗化或是無視窗控制項的是否旗標。  
   
 ```
@@ -836,7 +831,7 @@ unsigned m_bNegotiatedWnd:1;
   
  `m_bNegotiatedWnd`旗標必須是**TRUE**如`m_spInPlaceSite`為有效的指標。  
   
-##  <a name="m_brecomposeonresize"></a>CComControlBase::m_bRecomposeOnResize  
+##  <a name="m_brecomposeonresize"></a>  CComControlBase::m_bRecomposeOnResize  
  表示控制項想要重新撰寫其簡報，容器會變更控制項的顯示大小時旗標。  
   
 ```
@@ -850,7 +845,7 @@ unsigned m_bRecomposeOnResize:1;
   
  這個旗標會檢查[IOleObjectImpl::SetExtent](../../atl/reference/ioleobjectimpl-class.md#setextent)而如果**TRUE**，`SetExtent`告知容器的檢視變更。 如果設定此旗標， **OLEMISC_RECOMPOSEONRESIZE**位元[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497)也應該設定列舉型別。  
   
-##  <a name="m_brequiressave"></a>CComControlBase::m_bRequiresSave  
+##  <a name="m_brequiressave"></a>  CComControlBase::m_bRequiresSave  
  表示控制項在自上次儲存後已變更的旗標。  
   
 ```
@@ -863,7 +858,7 @@ unsigned m_bRequiresSave:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_bresizenatural"></a>CComControlBase::m_bResizeNatural  
+##  <a name="m_bresizenatural"></a>  CComControlBase::m_bResizeNatural  
  旗標，指出控制項要調整大小的自然範圍 （其未縮放的實體大小） 當容器會變更控制項的顯示大小。  
   
 ```
@@ -878,7 +873,7 @@ unsigned m_bResizeNatural:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_buiactive"></a>CComControlBase::m_bUIActive  
+##  <a name="m_buiactive"></a>  CComControlBase::m_bUIActive  
  旗標，指出控制項的使用者介面，例如功能表和工具列，才有作用。  
   
 ```
@@ -891,7 +886,7 @@ unsigned m_bUIActive:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_busingwindowrgn"></a>CComControlBase::m_bUsingWindowRgn  
+##  <a name="m_busingwindowrgn"></a>  CComControlBase::m_bUsingWindowRgn  
  旗標，指出控制項使用容器提供的視窗區域。  
   
 ```
@@ -903,7 +898,7 @@ unsigned m_bUsingWindowRgn:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_bwasoncewindowless"></a>CComControlBase::m_bWasOnceWindowless  
+##  <a name="m_bwasoncewindowless"></a>  CComControlBase::m_bWasOnceWindowless  
  表示控制項已無視窗，但可能會或可能不是無視窗現在旗標。  
   
 ```
@@ -915,7 +910,7 @@ unsigned m_bWasOnceWindowless:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_bwindowonly"></a>CComControlBase::m_bWindowOnly  
+##  <a name="m_bwindowonly"></a>  CComControlBase::m_bWindowOnly  
  表示控制項應該視窗，即使容器支援無視窗控制項旗標。  
   
 ```
@@ -927,7 +922,7 @@ unsigned m_bWindowOnly:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_bwndless"></a>CComControlBase::m_bWndLess  
+##  <a name="m_bwndless"></a>  CComControlBase::m_bWndLess  
  表示控制項無視窗旗標。  
   
 ```
@@ -943,7 +938,7 @@ unsigned m_bWndLess:1;
   
  如果`m_bWndLess`是**TRUE**，`m_spInPlaceSite`是**IOleInPlaceSiteWindowless**介面指標。 請參閱[CComControlBase::m_spInPlaceSite](#m_spinplacesite)顯示這些資料成員之間的完整關聯性的資料表。  
   
-##  <a name="m_hwndcd"></a>CComControlBase::m_hWndCD  
+##  <a name="m_hwndcd"></a>  CComControlBase::m_hWndCD  
  包含與控制項關聯的視窗控制代碼的參考。  
   
 ```
@@ -955,7 +950,7 @@ HWND& m_hWndCD;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_nfreezeevents"></a>CComControlBase::m_nFreezeEvents  
+##  <a name="m_nfreezeevents"></a>  CComControlBase::m_nFreezeEvents  
  次數的計數容器有不含事件 （事件接受） 中介解除凍結凍結 （拒絕接受事件） 的事件。  
   
 ```
@@ -967,7 +962,7 @@ short m_nFreezeEvents;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_rcpos"></a>CComControlBase::m_rcPos  
+##  <a name="m_rcpos"></a>  CComControlBase::m_rcPos  
  表示在容器座標中控制項的像素的位置。  
   
 ```
@@ -979,7 +974,7 @@ RECT m_rcPos;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_sizeextent"></a>CComControlBase::m_sizeExtent  
+##  <a name="m_sizeextent"></a>  CComControlBase::m_sizeExtent  
  以 himetric 為單位 （每一單位為 0.01 公釐為單位） 的特定顯示控制項的範圍。  
   
 ```
@@ -995,7 +990,7 @@ SIZE m_sizeExtent;
   
  您可以將大小轉換成與全域函式的像素[AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel)。  
   
-##  <a name="m_sizenatural"></a>CComControlBase::m_sizeNatural  
+##  <a name="m_sizenatural"></a>  CComControlBase::m_sizeNatural  
  實體控制項以 himetric 為單位 （每一單位為 0.01 公釐為單位） 的大小。  
   
 ```
@@ -1011,7 +1006,7 @@ SIZE m_sizeNatural;
   
  您可以將大小轉換成與全域函式的像素[AtlHiMetricToPixel](pixel-himetric-conversion-global-functions.md#atlhimetrictopixel)。  
   
-##  <a name="m_spadvisesink"></a>CComControlBase::m_spAdviseSink  
+##  <a name="m_spadvisesink"></a>  CComControlBase::m_spAdviseSink  
  在容器上諮詢連接的直接指標 (在容器的[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513))。  
   
 ```
@@ -1024,7 +1019,7 @@ CComPtr<IAdviseSink>
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_spambientdispatch"></a>CComControlBase::m_spAmbientDispatch  
+##  <a name="m_spambientdispatch"></a>  CComControlBase::m_spAmbientDispatch  
  A`CComDispatchDriver`物件，可讓您擷取和設定物件的屬性，透過`IDispatch`指標。  
   
 ```
@@ -1036,7 +1031,7 @@ CComDispatchDriver m_spAmbientDispatch;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_spclientsite"></a>CComControlBase::m_spClientSite  
+##  <a name="m_spclientsite"></a>  CComControlBase::m_spClientSite  
  控制項的容器內的用戶端站台指標。  
   
 ```
@@ -1049,7 +1044,7 @@ CComPtr<IOleClientSite>
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
-##  <a name="m_spdataadviseholder"></a>CComControlBase::m_spDataAdviseHolder  
+##  <a name="m_spdataadviseholder"></a>  CComControlBase::m_spDataAdviseHolder  
  提供標準方式來保存資料物件之間的諮詢連接及接收的通知。  
   
 ```
@@ -1066,7 +1061,7 @@ CComPtr<IDataAdviseHolder>
   
  介面`m_spDataAdviseHolder`實作[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579)和[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448)方法來建立和刪除諮詢連接的容器。 控制項的容器必須實作通知接收支援[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)介面。  
   
-##  <a name="m_spinplacesite"></a>CComControlBase::m_spInPlaceSite  
+##  <a name="m_spinplacesite"></a>  CComControlBase::m_spInPlaceSite  
  容器的指標[IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)， [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)，或[IOleInPlaceSiteWindowless](http://msdn.microsoft.com/library/windows/desktop/ms682300)介面指標。  
   
 ```
@@ -1089,7 +1084,7 @@ CComPtr<IOleInPlaceSiteWindowless>
 |**IOleInPlaceSiteEx**|**FALSE**|**為 TRUE**|  
 |`IOleInPlaceSite`|**FALSE**|**FALSE**|  
   
-##  <a name="m_spoleadviseholder"></a>CComControlBase::m_spOleAdviseHolder  
+##  <a name="m_spoleadviseholder"></a>  CComControlBase::m_spOleAdviseHolder  
  提供方式保存諮詢連接的標準實作。  
   
 ```
@@ -1104,7 +1099,7 @@ CComPtr<IOleAdviseHolder>
   
  介面`m_spOleAdviseHolder`實作[IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573)和[IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749)方法來建立和刪除諮詢連接的容器。 控制項的容器必須實作通知接收支援[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)介面。  
   
-##  <a name="ondraw"></a>CComControlBase::OnDraw  
+##  <a name="ondraw"></a>  CComControlBase::OnDraw  
  覆寫這個方法，以繪製您的控制項。  
   
 ```
@@ -1126,7 +1121,7 @@ virtual HRESULT OnDraw(ATL_DRAWINFO& di);
 ### <a name="example"></a>範例  
  請參閱範例的[CComControlBase::GetAmbientAppearance](#getambientappearance)。  
   
-##  <a name="ondrawadvanced"></a>CComControlBase::OnDrawAdvanced  
+##  <a name="ondrawadvanced"></a>  CComControlBase::OnDrawAdvanced  
  預設值`OnDrawAdvanced`準備進行繪圖，標準化的裝置內容，則會呼叫您的控制項類別`OnDraw`方法。  
   
 ```
@@ -1145,7 +1140,7 @@ virtual HRESULT OnDrawAdvanced(ATL_DRAWINFO& di);
   
  請參閱[CComControlBase::OnDraw](#ondraw)如需詳細資訊。  
   
-##  <a name="onkillfocus"></a>CComControlBase::OnKillFocus  
+##  <a name="onkillfocus"></a>  CComControlBase::OnKillFocus  
  檢查控制項已就地啟用作用中且具有有效的控制站台，然後通知容器控制項已遺失焦點時。  
   
 ```
@@ -1171,7 +1166,7 @@ LRESULT OnKillFocus(UINT /* nMsg */,
 ### <a name="return-value"></a>傳回值  
  一定會傳回 1。  
   
-##  <a name="onmouseactivate"></a>CComControlBase::OnMouseActivate  
+##  <a name="onmouseactivate"></a>  CComControlBase::OnMouseActivate  
  檢查 UI 是以使用者模式，則啟動控制項。  
   
 ```
@@ -1197,7 +1192,7 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
 ### <a name="return-value"></a>傳回值  
  一定會傳回 1。  
   
-##  <a name="onpaint"></a>CComControlBase::OnPaint  
+##  <a name="onpaint"></a>  CComControlBase::OnPaint  
  準備容器以進行繪製，請取得控制項的工作區，然後會呼叫控制項類別`OnDrawAdvanced`方法。  
   
 ```
@@ -1226,7 +1221,7 @@ LRESULT OnPaint(UINT /* nMsg */,
 ### <a name="remarks"></a>備註  
  如果`wParam`不是 NULL，`OnPaint`假設它包含有效的 HDC，並使用它，而不要[CComControlBase::m_hWndCD](#m_hwndcd)。  
   
-##  <a name="onsetfocus"></a>CComControlBase::OnSetFocus  
+##  <a name="onsetfocus"></a>  CComControlBase::OnSetFocus  
  檢查控制項已就地啟用作用中且具有有效的控制站台，然後通知控制項的容器已取得焦點。  
   
 ```
@@ -1255,7 +1250,7 @@ LRESULT OnSetFocus(UINT /* nMsg */,
 ### <a name="remarks"></a>備註  
  傳送通知到容器控制項已收到焦點。  
   
-##  <a name="pretranslateaccelerator"></a>CComControlBase::PreTranslateAccelerator  
+##  <a name="pretranslateaccelerator"></a>  CComControlBase::PreTranslateAccelerator  
  覆寫這個方法以提供您自己的鍵盤快速鍵對應處理常式。  
   
 ```
@@ -1273,7 +1268,7 @@ BOOL PreTranslateAccelerator(LPMSG /* pMsg */,
 ### <a name="return-value"></a>傳回值  
  根據預設會傳回**FALSE**。  
   
-##  <a name="sendonclose"></a>CComControlBase::SendOnClose  
+##  <a name="sendonclose"></a>  CComControlBase::SendOnClose  
  通知控制項已關閉的通知持有者註冊的所有諮詢接收。  
   
 ```
@@ -1286,7 +1281,7 @@ HRESULT SendOnClose();
 ### <a name="remarks"></a>備註  
  傳送控制項已關閉其諮詢接收通知。  
   
-##  <a name="sendondatachange"></a>CComControlBase::SendOnDataChange  
+##  <a name="sendondatachange"></a>  CComControlBase::SendOnDataChange  
  通知控制項資料已變更的通知持有者註冊的所有諮詢接收。  
   
 ```
@@ -1300,7 +1295,7 @@ HRESULT SendOnDataChange(DWORD advf = 0);
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="sendonrename"></a>CComControlBase::SendOnRename  
+##  <a name="sendonrename"></a>  CComControlBase::SendOnRename  
  通知控制項有新的 moniker advise 持有者註冊的所有諮詢接收。  
   
 ```
@@ -1317,7 +1312,7 @@ HRESULT SendOnRename(IMoniker* pmk);
 ### <a name="remarks"></a>備註  
  傳送通知控制項 moniker 已變更。  
   
-##  <a name="sendonsave"></a>CComControlBase::SendOnSave  
+##  <a name="sendonsave"></a>  CComControlBase::SendOnSave  
  通知註冊在儲存控制項的通知持有者的所有諮詢接收。  
   
 ```
@@ -1330,7 +1325,7 @@ HRESULT SendOnSave();
 ### <a name="remarks"></a>備註  
  傳送通知控制項只具有儲存其資料。  
   
-##  <a name="sendonviewchange"></a>CComControlBase::SendOnViewChange  
+##  <a name="sendonviewchange"></a>  CComControlBase::SendOnViewChange  
  通知所有註冊的控制項的檢視已變更的諮詢接收。  
   
 ```
@@ -1348,9 +1343,9 @@ HRESULT SendOnViewChange(DWORD dwAspect, LONG lindex = -1);
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- `SendOnViewChange`呼叫[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)。 唯一值的*lindex*目前支援為-1，這表示感興趣的是整個檢視。  
+ `SendOnViewChange` 呼叫[IAdviseSink::OnViewChange](http://msdn.microsoft.com/library/windows/desktop/ms694337)。 唯一值的*lindex*目前支援為-1，這表示感興趣的是整個檢視。  
   
-##  <a name="setcontrolfocus"></a>CComControlBase::SetControlFocus  
+##  <a name="setcontrolfocus"></a>  CComControlBase::SetControlFocus  
  設定或移除鍵盤焦點的控制項。  
   
 ```
@@ -1367,7 +1362,7 @@ BOOL SetControlFocus(BOOL bGrab);
 ### <a name="remarks"></a>備註  
  針對視窗型控制項，而 Windows API 函式[SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms646312)呼叫。 無視窗控制項， [IOleInPlaceSiteWindowless::SetFocus](http://msdn.microsoft.com/library/windows/desktop/ms679745)呼叫。 透過此呼叫，將無視窗控制項取得鍵盤焦點，以及可以回應的視窗訊息。  
   
-##  <a name="setdirty"></a>CComControlBase::SetDirty  
+##  <a name="setdirty"></a>  CComControlBase::SetDirty  
  設定資料成員`m_bRequiresSave`值以`bDirty`。  
   
 ```
@@ -1379,8 +1374,8 @@ void SetDirty(BOOL bDirty);
  資料成員的值[CComControlBase::m_bRequiresSave](#m_brequiressave)。  
   
 ### <a name="remarks"></a>備註  
- **SetDirty(TRUE)**應該加上旗標已變更的控制項，自上次儲存後呼叫。 值`m_bRequiresSave`擷取與[CComControlBase::GetDirty](#getdirty)。  
+ **SetDirty(TRUE)** 應該加上旗標已變更的控制項，自上次儲存後呼叫。 值`m_bRequiresSave`擷取與[CComControlBase::GetDirty](#getdirty)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

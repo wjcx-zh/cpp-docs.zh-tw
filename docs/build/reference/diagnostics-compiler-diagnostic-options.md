@@ -1,13 +1,10 @@
 ---
-title: "為診斷 （編譯器診斷選項） |Microsoft 文件"
-ms.custom: 
+title: 為診斷 （編譯器診斷選項） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/11/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /diagnostics
 - VC.Project.VCCLCompilerTool.DiagnosticsFormat
@@ -18,21 +15,19 @@ helpviewer_keywords:
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a1c893b530bfa895e5ec127bd0aea2fb0df4ff3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d874e26a922a7f9cce7223b574d525d37733598
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics （編譯器診斷選項）  
   
-使用**/diagnostics**編譯器選項，來指定要顯示的錯誤和警告的位置資訊。  
+使用 **/diagnostics**編譯器選項，來指定要顯示的錯誤和警告的位置資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,10 +52,10 @@ ms.lasthandoff: 12/21/2017
   
 1. 開啟您的專案**屬性頁** 對話方塊。   
   
-2. 在下**組態屬性**，依序展開**C/c + +**資料夾，然後選擇 **一般**屬性頁。  
+2. 在下**組態屬性**，依序展開**C/c + +** 資料夾，然後選擇 **一般**屬性頁。  
   
 3. 使用中的下拉式清單控制項**診斷格式**欄位來選取診斷顯示選項。 選擇**確定**或**套用**以儲存變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

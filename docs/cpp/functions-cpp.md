@@ -2,11 +2,8 @@
 title: 函式 （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 01/25/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 720147992540b53c51e731db361cd9946a7a5313
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -209,7 +204,7 @@ void DoSomething(std::string& input){...}
 void DoSomething(const std::string& input){...}
 ```
 
- **C + + 11:**若要明確處理透過右值參考或左值參考傳遞的引數，雙連字號參數上使用以表示通用參考：
+ **C + + 11:** 若要明確處理透過右值參考或左值參考傳遞的引數，雙連字號參數上使用以表示通用參考：
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -277,7 +272,7 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 ##  <a name="type_deduction"></a> 傳回型別 (C + + 14) 中的類型推斷
 
-在 C + + 14 中，您可以使用**自動**指示編譯器從函式主體的傳回型別推斷而不需要提供尾端傳回型別。 請注意，**自動**一律會推斷為依值傳回。 使用**自動 （& s) （& s)**指示編譯器推斷參考。
+在 C + + 14 中，您可以使用**自動**指示編譯器從函式主體的傳回型別推斷而不需要提供尾端傳回型別。 請注意，**自動**一律會推斷為依值傳回。 使用**自動 （& s) （& s)** 指示編譯器推斷參考。
 
 在此範例中，**自動**會推斷為 lhs 與 rhs 總和的非常數值複本。
 
@@ -289,7 +284,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 }
 ```
 
-請注意，**自動**不會保留的推斷的類型的 const-ness。 轉送函式的傳回值需要保留 const-ness 或 ref-ness 的引數，您可以使用**decltype （auto)**關鍵字，它會使用**decltype**型別推斷規則和保留所有類型資訊。 **decltype （auto)**都可用為左邊的 ordinary 傳回值或尾端傳回值。
+請注意，**自動**不會保留的推斷的類型的 const-ness。 轉送函式的傳回值需要保留 const-ness 或 ref-ness 的引數，您可以使用**decltype （auto)** 關鍵字，它會使用**decltype**型別推斷規則和保留所有類型資訊。 **decltype （auto)** 都可用為左邊的 ordinary 傳回值或尾端傳回值。
 
 下列範例 (根據程式碼從[N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html))，顯示**decltype （auto)** ，並用來啟用完美轉送，直到範本不知道傳回型別中的函式引數具現化。
 
@@ -310,35 +305,6 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-<<<<<<< HEAD
-4. 除了使用本身的傳回值，您可以 「 傳回 」 值藉由定義任何數目的參數使用傳址方式傳遞，以便函式可以修改或初始化之物件的呼叫端提供的值。 如需詳細資訊，請參閱[參考類型函式引數](reference-type-function-arguments.md)。  
-  
-## <a name="function-pointers"></a>函式指標  
- C++ 支援函式指標的方式與 C 語言相同。 不過，較具類型安全的替代方案通常是使用函式物件。  
-  
- 如果要宣告傳回函式指標類型的函式，建議您使用 `typedef` 宣告函式指標類型的別名。  例如  
-  
-```  
-typedef int (*fp)(int);  
-fp myFunction(char* s); // function returning function pointer  
-```  
-  
- 如果沒有這樣做，函式宣告的適當語法可能會從函式指標的宣告子語法推算，方法是將識別項 (在上述範例中為 `fp`) 取代為函式名稱和引數清單，如下所示：  
-  
-```  
-int (*myFunction(char* s))(int);  
-```  
-  
- 上述宣告相當於上面使用 typedef 的宣告。  
-  
-## <a name="see-also"></a>另請參閱  
- [函式多載](../cpp/function-overloading.md)   
- [具有變數引數清單的函式](../cpp/functions-with-variable-argument-lists-cpp.md)   
- [明確預設和刪除函式](../cpp/explicitly-defaulted-and-deleted-functions.md)   
- [函式的引數相依名稱 (Koenig) 查閱](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
- [預設引數](../cpp/default-arguments.md)   
- [內嵌函式](../cpp/inline-functions-cpp.md)
-=======
 ## <a name="returning-multiple-values-from-a-function"></a>從函數傳回多個值
 
 有各種方式從函式傳回一個以上的值：
@@ -475,4 +441,3 @@ int (*myFunction(char* s))(int);
 - [函式上的引數相依名稱 (Koenig) 查閱](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [預設引數](../cpp/default-arguments.md)
 - [內嵌函式](../cpp/inline-functions-cpp.md)
->>>>>>> 主要

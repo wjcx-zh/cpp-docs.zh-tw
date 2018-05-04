@@ -2,11 +2,8 @@
 title: _ismbbkprint、_ismbbkprint_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbkprint
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1309b86415d58d4f6c0bc94ae2ec03ab515341c
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: a1a6a215bac14f81d29d83a856313133fb4e88a2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint、_ismbbkprint_l
 
@@ -75,7 +70,7 @@ int _ismbbkprint_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_ismbbkprint**傳回非零值，如果整數*c*為非 ASCII 文字或非 ASCII 標點符號或 0，如果它不是。 例如，在僅限字碼頁 932， **_ismbbkprint**測試片假名英數字元或片假名標點符號 (範圍： 0xA1-0xDF)。 **_ismbbkprint**使用目前的地區設定進行地區設定相關的字元設定。 **_ismbbkprint_l**是完全相同，不同之處在於它會使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbkprint**傳回非零值，如果整數*c*為非 ASCII 文字或非 ASCII 標點符號或 0，如果它不是。 例如，僅在字碼頁 932，**_ismbbkprint** 會測試片假名英數字元或片假名標點符號 (範圍：0xA1 - 0xDF)。 **_ismbbkprint**使用目前的地區設定進行地區設定相關的字元設定。 **_ismbbkprint_l**是完全相同，不同之處在於它會使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

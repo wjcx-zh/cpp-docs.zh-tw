@@ -2,11 +2,8 @@
 title: 檔案轉譯概觀 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - programs [C++], lexical conventions of
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa38b2ea9ea05fb9391ab8a69e11821d4422e392
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-file-translation"></a>檔案轉譯概觀
 C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按下列概念順序轉譯 (實際的順序會依循 "as if" 規則：如果已依照這些步驟進行，則必須進行轉譯)：  
@@ -56,9 +51,9 @@ C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按�
   
 -   支援單行註解。 請參閱[註解](../cpp/comments-cpp.md)如需詳細資訊。  
   
--   一個預先定義的巨集**__cplusplus**，僅針對 c + + 所定義。 請參閱[預先定義的巨集](../preprocessor/predefined-macros.md)中*前置處理器參考 》*如需詳細資訊。  
+-   一個預先定義的巨集 **__cplusplus**，僅針對 c + + 所定義。 請參閱[預先定義的巨集](../preprocessor/predefined-macros.md)中*前置處理器參考 》*如需詳細資訊。  
   
--   C 前置處理器無法辨識 c + + 運算子： **。\***，  **-> \*** ，和`::`。 請參閱[運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)和[運算式](../cpp/expressions-cpp.md)，如需運算子的詳細資訊。  
+-   C 前置處理器無法辨識 c + + 運算子： **。\***， **-> \***，和`::`。 請參閱[運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)和[運算式](../cpp/expressions-cpp.md)，如需運算子的詳細資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)

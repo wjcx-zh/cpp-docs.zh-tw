@@ -1,12 +1,9 @@
 ---
-title: "type_info 類別 |Microsoft 文件"
-ms.custom: 
+title: type_info 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - type_info
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd5a1844bfeec798ee25a3cb8e65efd019e65e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3e3138c9028f72327c9d4bf2c2f2e82c942dbde
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typeinfo-class"></a>type_info 類別
 **Type_info**類別描述編譯器所產生的程式中的型別資訊。 這個類別的物件會實際儲存類型的名稱指標。 **Type_info**類別也會儲存編碼的值，適用於比較是否相等的兩個型別或其排序順序。 類型的編碼規則和排序法則不會指定，而且在不同的程式之間也會有所差異。  
@@ -52,7 +47,7 @@ public:
   
  運算子`==`和`!=`可以用來與其他相等和不等比較**type_info**分別物件。  
   
- 類型的排序順序和繼承關係之間並無連結。 使用**type_info**成員函式來判斷定序順序的型別。 不保證， **type_info**都會產生不同的程式或甚至執行相同程式中相同的結果。 這種方式， **type_info**類似於位址的**(&)**運算子。  
+ 類型的排序順序和繼承關係之間並無連結。 使用**type_info**成員函式來判斷定序順序的型別。 不保證， **type_info**都會產生不同的程式或甚至執行相同程式中相同的結果。 這種方式， **type_info**類似於位址的 **(&)** 運算子。  
   
  **Type_info:: name**成員函式傳回**const char\*** 以 null 終止的字串代表人類看得懂的型別名稱。 所指向的記憶體會加以快取，且絕不可直接取消配置。  
   
@@ -60,5 +55,5 @@ public:
   
  多型類別才會產生型別資訊[/GR （啟用執行階段類型資訊）](../build/reference/gr-enable-run-time-type-information.md)編譯器選項已指定。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段類型資訊](../cpp/run-time-type-information.md)

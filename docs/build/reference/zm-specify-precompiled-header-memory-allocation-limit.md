@@ -2,12 +2,9 @@
 title: -Zm （指定先行編譯標頭的記憶體配置上限） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zm
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a45425215fcaf336c0b1630634d0adf37ba3984
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 379d3d6673e673522334d685a47220bcfa2523ec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (指定先行編譯標頭檔的記憶體配置上限)
 判斷編譯器配置來建構先行編譯標頭檔的記憶體量。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  在舊版的 Visual C++ 中，編譯器會使用數個離散堆積，而且每一個堆積都有限制。 因此，編譯器會視需要將堆積動態成長至總堆積大小的限制，且只有在建構先行編譯標頭檔時需要固定大小的緩衝區。 因此， **/Zm**編譯器選項會很少會需要。  
   
- 如果編譯器堆積空間不足，並發出[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)錯誤訊息，當您使用**/Zm**編譯器選項，您可能保留過多記憶體。 請考慮移除**/Zm**選項。 如果編譯器發出[C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)錯誤訊息，則伴隨[C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)訊息指定`factor`使用重新編譯時所要使用的引數**/Zm**編譯器選項。  
+ 如果編譯器堆積空間不足，並發出[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)錯誤訊息，當您使用 **/Zm**編譯器選項，您可能保留過多記憶體。 請考慮移除 **/Zm**選項。 如果編譯器發出[C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)錯誤訊息，則伴隨[C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)訊息指定`factor`使用重新編譯時所要使用的引數 **/Zm**編譯器選項。  
   
  下表顯示如果您假設預設的先行編譯標頭檔緩衝區大小為 75 MB 時，`factor` 引數會如何影響記憶體配置。  
   
@@ -73,12 +68,12 @@ ms.lasthandoff: 12/21/2017
   
 2.  瀏覽窗格中，選取**組態屬性**， **C/c + +**，**命令列**。  
   
-3.  輸入**/Zm**編譯器選項在**其他選項**方塊。  
+3.  輸入 **/Zm**編譯器選項在**其他選項**方塊。  
   
 #### <a name="to-set-the-zm-compiler-option-programmatically"></a>以程式設計方式設定 /Zm 編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

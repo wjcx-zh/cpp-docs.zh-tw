@@ -2,11 +2,8 @@
 title: 判斷提示和使用者提供的訊息 （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - '#error%2C assert%2C static_assert [C++]'
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3465202908cb0ca375ab5dcc77a085b208071f3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93798dadee3e4270d82eac84a794c6133c05c07
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>判斷提示和使用者提供的訊息 (C++)
 C + + 語言支援三種錯誤處理機制可協助您偵錯應用程式： [#error 指示詞](../preprocessor/hash-error-directive-c-cpp.md)、 [static_assert](../cpp/static-assert.md)關鍵字，而[assert 巨集、 _assert、 _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)巨集。 這三種機制都會發出錯誤訊息，其中兩種還會測試軟體判斷提示。 軟體判斷提示會指定您希望在程式中的某個特定點為 true 的條件。 如果編譯時期判斷提示失敗，編譯器會發出診斷訊息和編譯錯誤。 如果執行階段判斷提示失敗，作業系統會發出診斷訊息並關閉應用程式。  
@@ -42,7 +37,7 @@ C + + 語言支援三種錯誤處理機制可協助您偵錯應用程式： [#er
   
 -   [Assert 巨集、 _assert、 _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)巨集是在執行階段的作用中。 它會評估使用者指定的運算式，如果結果為零，系統會發出診斷訊息並關閉應用程式。 許多其他的巨集，例如[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)和`_ASSERTE`，類似這個巨集，但發出不同系統定義或使用者定義的診斷訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [#error 指示詞 （C/c + +）](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert 巨集、_assert、_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   
  [_ASSERT、_ASSERTE、_ASSERT_EXPR 巨集](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)   

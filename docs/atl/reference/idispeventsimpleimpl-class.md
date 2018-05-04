@@ -1,12 +1,9 @@
 ---
-title: "IDispEventSimpleImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IDispEventSimpleImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDispEventSimpleImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a5b3098961af4f3f9262cdc4c99dbe80b4ac7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89f565c1e32f1208fbb039321d26b9175596d57e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl 類別
 這個類別提供的實作`IDispatch`方法，而不從類型程式庫取得類型資訊。  
@@ -75,9 +70,9 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 |[IDispEventSimpleImpl::Unadvise](#unadvise)|中斷與的預設事件來源的連接。|  
   
 ## <a name="remarks"></a>備註  
- `IDispEventSimpleImpl`提供一種實作的事件分配程式介面，而不需要您提供每個方法/事件介面的實作程式碼。 `IDispEventSimpleImpl`提供的實作`IDispatch`方法。 您只需要提供您有興趣在處理事件的實作。  
+ `IDispEventSimpleImpl` 提供一種實作的事件分配程式介面，而不需要您提供每個方法/事件介面的實作程式碼。 `IDispEventSimpleImpl` 提供的實作`IDispatch`方法。 您只需要提供您有興趣在處理事件的實作。  
   
- `IDispEventSimpleImpl`一起運作的事件接收對應至適當的處理常式函式的路由事件類別中。 若要使用此類別：  
+ `IDispEventSimpleImpl` 一起運作的事件接收對應至適當的處理常式函式的路由事件類別中。 若要使用此類別：  
   
 -   新增[SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)巨集，以您想要處理每個物件上的每個事件的事件接收對應。  
   
@@ -92,7 +87,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
  **IDispEventSimplImpl**提供的相同功能與[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)，只不過它不會從類型程式庫取得介面的類型資訊。 精靈會產生程式碼只根據`IDispEventImpl`，但是您可以使用`IDispEventSimpleImpl`以手動方式加入的程式碼。 使用`IDispEventSimpleImpl`當您尚未描述事件介面的類型程式庫，或想要避免與使用類型程式庫相關聯的額外負荷。  
   
 > [!NOTE]
-> `IDispEventImpl`和`IDispEventSimpleImpl`提供自己的實作**iunknown:: Queryinterface**啟用每個`IDispEventImpl`或`IDispEventSimpleImpl`基底類別做為個別的 COM 識別，同時，仍允許對類別成員的直接存取在您主要的 COM 物件。  
+> `IDispEventImpl` 和`IDispEventSimpleImpl`提供自己的實作**iunknown:: Queryinterface**啟用每個`IDispEventImpl`或`IDispEventSimpleImpl`基底類別做為個別的 COM 識別，同時，仍允許對類別成員中的直接存取您主要的 COM 物件。  
   
  CE ATL 實作 ActiveX 事件接收唯一支援的傳回值類型的 HRESULT 或 void，從您的事件處理常式方法。任何其他傳回值是不支援，且其行為未定義。  
   
@@ -108,7 +103,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="advise"></a>IDispEventSimpleImpl::Advise  
+##  <a name="advise"></a>  IDispEventSimpleImpl::Advise  
  呼叫這個方法來建立與所代表的事件來源的連線*pUnk*。  
   
 ```
@@ -120,7 +115,7 @@ HRESULT Advise(IUnknown* pUnk);
  [in]指標**IUnknown**事件來源物件的介面。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK`任何失敗或`HRESULT`值。  
+ `S_OK` 任何失敗或`HRESULT`值。  
   
 ### <a name="remarks"></a>備註  
  從連線建立後，引發事件*pUnk*將會路由至您透過事件接收對應的類別中的處理常式。  
@@ -128,9 +123,9 @@ HRESULT Advise(IUnknown* pUnk);
 > [!NOTE]
 >  如果您的類別衍生自多個`IDispEventSimpleImpl`類別，您必須明確呼叫此方法執行藉由範圍您感興趣的特定的基底類別的呼叫。  
   
- `Advise`建立的連接與預設的事件來源，它會取得的預設事件的來源物件由 IID [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface)。  
+ `Advise` 建立的連接與預設的事件來源，它會取得的預設事件的來源物件由 IID [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface)。  
   
-##  <a name="dispeventadvise"></a>IDispEventSimpleImpl::DispEventAdvise  
+##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl::DispEventAdvise  
  呼叫這個方法來建立與所代表的事件來源的連線*pUnk*。  
   
 ```
@@ -145,7 +140,7 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
  指向 IID 的事件來源物件指標。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK`任何失敗或`HRESULT`值。  
+ `S_OK` 任何失敗或`HRESULT`值。  
   
 ### <a name="remarks"></a>備註  
  接著，從引發事件*pUnk*將會路由至您透過事件接收對應的類別中的處理常式。  
@@ -153,9 +148,9 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 > [!NOTE]
 >  如果您的類別衍生自多個`IDispEventSimpleImpl`類別，您必須明確呼叫此方法執行藉由範圍您感興趣的特定的基底類別的呼叫。  
   
- `DispEventAdvise`建立的連接中指定的事件來源與`pdiid`。  
+ `DispEventAdvise` 建立的連接中指定的事件來源與`pdiid`。  
   
-##  <a name="dispeventunadvise"></a>IDispEventSimpleImpl::DispEventUnadvise  
+##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl::DispEventUnadvise  
  與所代表的事件來源會中斷連接*pUnk*。  
   
 ```
@@ -170,7 +165,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
  指向 IID 的事件來源物件指標。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK`任何失敗或`HRESULT`值。  
+ `S_OK` 任何失敗或`HRESULT`值。  
   
 ### <a name="remarks"></a>備註  
  中斷連接之後，事件就不會再路由至事件接收器對應中列出的處理常式函式。  
@@ -178,9 +173,9 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 > [!NOTE]
 >  如果您的類別衍生自多個`IDispEventSimpleImpl`類別，您必須明確呼叫此方法執行藉由範圍您感興趣的特定的基底類別的呼叫。  
   
- `DispEventAdvise`使用指定的事件來源所建立的連接會中斷`pdiid`。  
+ `DispEventAdvise` 使用指定的事件來源所建立的連接會中斷`pdiid`。  
   
-##  <a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>  IDispEventSimpleImpl::GetIDsOfNames  
  這項實作**IDispatch::GetIDsOfNames**傳回**E_NOTIMPL**。  
   
 ```
@@ -195,7 +190,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>備註  
  請參閱[IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) Windows SDK 中。  
   
-##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo  
  這項實作**IDispatch::GetTypeInfo**傳回**E_NOTIMPL**。  
   
 ```
@@ -208,7 +203,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>備註  
  請參閱[IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) Windows SDK 中。  
   
-##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount  
  這項實作**IDispatch::GetTypeInfoCount**傳回**E_NOTIMPL**。  
   
 ```
@@ -218,7 +213,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ### <a name="remarks"></a>備註  
  請參閱[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) Windows SDK 中。  
   
-##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
+##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke  
  這項實作**idispatch:: Invoke**呼叫事件處理常式列出在事件接收器對應。  
   
 ```
@@ -236,7 +231,7 @@ STDMETHOD(Invoke)(
 ### <a name="remarks"></a>備註  
  請參閱[idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)。  
   
-##  <a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
+##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise  
  與所代表的事件來源會中斷連接*pUnk*。  
   
 ```
@@ -248,7 +243,7 @@ HRESULT Unadvise(IUnknown* pUnk);
  [in]指標**IUnknown**事件來源物件的介面。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK`任何失敗或`HRESULT`值。  
+ `S_OK` 任何失敗或`HRESULT`值。  
   
 ### <a name="remarks"></a>備註  
  中斷連接之後，事件就不會再路由至事件接收器對應中列出的處理常式函式。  
@@ -256,11 +251,11 @@ HRESULT Unadvise(IUnknown* pUnk);
 > [!NOTE]
 >  如果您的類別衍生自多個`IDispEventSimpleImpl`類別，您必須明確呼叫此方法執行藉由範圍您感興趣的特定的基底類別的呼叫。  
   
- `Unadvise`使用指定的預設事件來源所建立的連接會中斷`pdiid`。  
+ `Unadvise` 使用指定的預設事件來源所建立的連接會中斷`pdiid`。  
   
  **Unavise**與預設的事件來源的連線中斷，它會取得的預設事件的來源物件由 IID [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [_ATL_FUNC_INFO 結構](../../atl/reference/atl-func-info-structure.md)   
  [IDispatchImpl 類別](../../atl/reference/idispatchimpl-class.md)   
  [IDispEventImpl 類別](../../atl/reference/idispeventimpl-class.md)   

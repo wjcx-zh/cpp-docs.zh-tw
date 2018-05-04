@@ -2,11 +2,8 @@
 title: 巢狀類別宣告 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 247be4e212efbe2b8061deed200a8350b87fc7a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nested-class-declarations"></a>巢狀類別宣告
 可以在某個類別的範圍內宣告另一個類別。 這種類別稱為「巢狀類別」。 巢狀類別被視為在封入類別的範圍內，可在該範圍內使用。 若要在直接封入範圍以外參考巢狀類別，則必須使用完整名稱。  
@@ -216,5 +211,5 @@ int GetExtendedErrorStatus( char *message )
   
  前述介面可讓數個類別藉由傳遞要將錯誤訊息複製到其中的記憶體位置，使用這個函式的服務。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

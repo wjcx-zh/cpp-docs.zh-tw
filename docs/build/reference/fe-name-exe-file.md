@@ -1,13 +1,10 @@
 ---
-title: "-Fe （命名 EXE 檔案） |Microsoft 文件"
-ms.custom: 
+title: -Fe （命名 EXE 檔案） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /fe
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74892ef670ed53e68701730fdb71554989a495c
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 0afd8a863c9b8482e2b7f3868047845818bd2923
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fe-name-exe-file"></a>/Fe (命名 EXE 檔案)
 
@@ -42,14 +37,14 @@ ms.lasthandoff: 02/28/2018
 
 ### <a name="arguments"></a>引數
 
-*pathname*<br/>
+*路徑名稱*<br/>
 相對或絕對路徑和基底檔案名稱或相對或絕對路徑的目錄或要用於產生可執行檔的基底檔案名稱。
 
 ## <a name="remarks"></a>備註
 
-**/Fe**選項可讓您指定的輸出目錄中，輸出可執行檔的名稱，或兩者，產生的可執行檔。 如果*路徑名稱*路徑分隔符號結尾 (**&#92;**)，則會假設為指定輸出目錄。 否則，最後一個元件*pathname*當做輸出檔案基底名稱，而其餘的*pathname*指定的輸出目錄。 如果*pathname*並沒有任何路徑分隔符號，則會假設為目前的目錄中指定輸出檔名稱。 *Pathname*必須括在雙引號 (**"**) 如果它包含不可在短的路徑，例如空格，任何字元擴充字元或將路徑元件超過八個字元長。
+**/Fe**選項可讓您指定的輸出目錄中，輸出可執行檔的名稱，或兩者，產生的可執行檔。 如果*pathname*路徑分隔符號結尾 (**&#92;**)，則會假設為指定輸出目錄。 否則，最後一個元件*pathname*當做輸出檔案基底名稱，而其餘的*pathname*指定的輸出目錄。 如果*pathname*並沒有任何路徑分隔符號，則會假設為目前的目錄中指定輸出檔名稱。 *Pathname*必須括在雙引號 (**"**) 如果它包含不可在短的路徑，例如空格，任何字元擴充字元或將路徑元件超過八個字元長。
 
-當**/Fe**未指定選項，或當基底的檔案中未指定名稱*pathname*，該編譯器會產生輸出檔的預設名稱，使用指定的第一個來源或物件檔案的基底名稱在命令列和.exe 或.dll 副檔名。
+當 **/Fe**未指定選項，或當基底的檔案中未指定名稱*pathname*，該編譯器會產生輸出檔的預設名稱，使用指定的第一個來源或物件檔案的基底名稱在命令列和.exe 或.dll 副檔名。
 
 如果您指定[/c （編譯而不連結）](c-compile-without-linking.md)選項， **/Fe**沒有任何作用。
 

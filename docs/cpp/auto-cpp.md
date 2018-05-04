@@ -1,12 +1,9 @@
 ---
-title: "自動 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 自動 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 334006e8ad06bdc174922d57d97d2d0f0335cf34
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: 14ad8e7cb81df62156d35809853e1060107d7c90
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-c"></a>自動 （c + +）
 從所宣告變數的初始化運算式，來推斷其類型。  
@@ -136,7 +131,7 @@ int main()
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|`auto` 關鍵字無法與任何其他類型規範結合。|  
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|使用 `auto` 關鍵字所宣告的符號必須有初始設定式。|  
 |[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|您不正確地使用 `auto` 關鍵字來宣告類型。 例如，您已宣告方法傳回型別或陣列。|  
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md), [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|參數或樣板引數不可以使用 `auto` 關鍵字進行宣告。|  
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md)， [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|參數或樣板引數不可以使用 `auto` 關鍵字進行宣告。|  
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|方法或樣板參數不可以使用 `auto` 關鍵字進行宣告。|  
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符號無法在初始化之前使用。 實際上，這表示不能使用變數來初始化它自己。|  
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|您無法轉換成使用 `auto` 關鍵字所宣告的類型。|  
@@ -226,7 +221,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto 關鍵字](../cpp/auto-keyword.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [/Zc: auto （推算變數類型）](../build/reference/zc-auto-deduce-variable-type.md)   

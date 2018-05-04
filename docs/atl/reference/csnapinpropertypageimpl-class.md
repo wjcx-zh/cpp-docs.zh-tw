@@ -2,11 +2,8 @@
 title: CSnapInPropertyPageImpl 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInPropertyPageImpl
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13714553bdf926b00bd4dd76e039d89c7f78f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 類別
 這個類別會提供實作嵌入式管理單元屬性頁物件的方法。  
@@ -91,7 +86,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows **PROPSHEETPAGE**所使用的結構`CSnapInPropertyPageImpl`物件。|  
   
 ## <a name="remarks"></a>備註  
- `CSnapInPropertyPageImpl`提供基本實作嵌入式管理單元 屬性頁面物件。 嵌入式管理單元屬性頁的基本功能會使用數個不同的介面實作，並將對應型別。  
+ `CSnapInPropertyPageImpl` 提供基本實作嵌入式管理單元 屬性頁面物件。 嵌入式管理單元屬性頁的基本功能會使用數個不同的介面實作，並將對應型別。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CDialogImplBase`  
@@ -101,7 +96,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 ## <a name="requirements"></a>需求  
  **標頭：** atlsnap.h  
   
-##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
+##  <a name="canceltoclose"></a>  CSnapInPropertyPageImpl::CancelToClose  
  無法復原的變更建立強制回應屬性工作表頁面中的資料之後，請呼叫此函式。  
   
 ```
@@ -113,7 +108,7 @@ void CancelToClose();
   
  `CancelToClose`成員函式不做任何動作在非強制回應屬性工作表中，因為非強制回應屬性工作表並沒有**取消**預設按鈕。  
   
-##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
+##  <a name="csnapinpropertypageimpl"></a>  CSnapInPropertyPageImpl::CSnapInPropertyPageImpl  
  建構 `CSnapInPropertyPageImpl` 物件。  
   
 ```
@@ -127,7 +122,7 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 ### <a name="remarks"></a>備註  
  若要初始化的基礎結構，請呼叫[CSnapInPropertyPageImpl::Create](#create)。  
   
-##  <a name="create"></a>CSnapInPropertyPageImpl::Create  
+##  <a name="create"></a>  CSnapInPropertyPageImpl::Create  
  呼叫此函式來初始化屬性頁的基礎結構。  
   
 ```
@@ -140,8 +135,8 @@ HPROPSHEETPAGE Create();
 ### <a name="remarks"></a>備註  
  您應該先呼叫[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)之前呼叫這個函式。  
   
-##  <a name="m_psp"></a>CSnapInPropertyPageImpl::m_psp  
- `m_psp`是一種結構的成員儲存的特性**PROPSHEETPAGE**。  
+##  <a name="m_psp"></a>  CSnapInPropertyPageImpl::m_psp  
+ `m_psp` 是一種結構的成員儲存的特性**PROPSHEETPAGE**。  
   
 ```
 PROPSHEETPAGE m_psp;
@@ -152,7 +147,7 @@ PROPSHEETPAGE m_psp;
   
  如需有關此結構，包括其成員的清單，請參閱[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) Windows SDK 中。  
   
-##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
+##  <a name="onapply"></a>  CSnapInPropertyPageImpl::OnApply  
  此成員函式在使用者按一下時呼叫**確定**或**立即套用** 按鈕。  
   
 ```
@@ -169,7 +164,7 @@ BOOL OnApply();
   
  預設實作`OnApply`傳回**TRUE**。  
   
-##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp  
+##  <a name="onhelp"></a>  CSnapInPropertyPageImpl::OnHelp  
  此成員函式在使用者按一下時呼叫**協助**屬性頁 按鈕。  
   
 ```
@@ -179,7 +174,7 @@ void OnHelp();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，以顯示屬性頁的說明。  
   
-##  <a name="onkillactive"></a>CSnapInPropertyPageImpl::OnKillActive  
+##  <a name="onkillactive"></a>  CSnapInPropertyPageImpl::OnKillActive  
  當頁面不再使用中的頁面，會呼叫此成員函式。  
   
 ```
@@ -192,7 +187,7 @@ BOOL OnKillActive();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，以執行特殊的資料驗證工作。  
   
-##  <a name="onquerycancel"></a>CSnapInPropertyPageImpl::OnQueryCancel  
+##  <a name="onquerycancel"></a>  CSnapInPropertyPageImpl::OnQueryCancel  
  此成員函式在使用者按一下時呼叫**取消**按鈕，然後取消之前已採取動作的地方。  
   
 ```
@@ -207,7 +202,7 @@ BOOL OnQueryCancel();
   
  預設實作`OnQueryCancel`傳回**TRUE**。  
   
-##  <a name="onreset"></a>CSnapInPropertyPageImpl::OnReset  
+##  <a name="onreset"></a>  CSnapInPropertyPageImpl::OnReset  
  此成員函式在使用者按一下時呼叫**取消** 按鈕。  
   
 ```
@@ -219,7 +214,7 @@ void OnReset();
   
  覆寫此成員函式，來指定程式會在使用者按一下時的動作**取消** 按鈕。  
   
-##  <a name="onsetactive"></a>CSnapInPropertyPageImpl::OnSetActive  
+##  <a name="onsetactive"></a>  CSnapInPropertyPageImpl::OnSetActive  
  此成員函式稱為頁面由使用者選擇後會變成使用中的頁面。  
   
 ```
@@ -234,7 +229,7 @@ BOOL OnSetActive();
   
  預設實作會傳回**TRUE**。  
   
-##  <a name="onwizardback"></a>CSnapInPropertyPageImpl::OnWizardBack  
+##  <a name="onwizardback"></a>  CSnapInPropertyPageImpl::OnWizardBack  
  此成員函式在使用者按一下時呼叫**回**在精靈中的按鈕。  
   
 ```
@@ -252,7 +247,7 @@ BOOL OnWizardBack();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，來指定使用者必須時採取某些動作**回**按鈕。  
   
-##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl::OnWizardFinish  
+##  <a name="onwizardfinish"></a>  CSnapInPropertyPageImpl::OnWizardFinish  
  此成員函式在使用者按一下時呼叫**完成**在精靈中的按鈕。  
   
 ```
@@ -265,7 +260,7 @@ BOOL OnWizardFinish();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，來指定使用者必須時採取某些動作**完成**按鈕。  
   
-##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl::OnWizardNext  
+##  <a name="onwizardnext"></a>  CSnapInPropertyPageImpl::OnWizardNext  
  此成員函式在使用者按一下時呼叫`Next`在精靈中的按鈕。  
   
 ```
@@ -283,7 +278,7 @@ BOOL OnWizardNext();
 ### <a name="remarks"></a>備註  
  覆寫此成員函式，來指定使用者必須時採取某些動作`Next`按鈕。  
   
-##  <a name="querysiblings"></a>CSnapInPropertyPageImpl::QuerySiblings  
+##  <a name="querysiblings"></a>  CSnapInPropertyPageImpl::QuerySiblings  
  呼叫此成員函式轉送至屬性工作表中的每個頁面的訊息。  
   
 ```
@@ -303,7 +298,7 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="remarks"></a>備註  
  如果頁面傳回則為非零值，屬性工作表不會傳送訊息到後續的頁面。  
   
-##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
+##  <a name="setmodified"></a>  CSnapInPropertyPageImpl::SetModified  
  呼叫此成員函式，啟用或停用**立即套用**按鈕時，根據屬性頁中的設定是否應該套用到適當的外部物件。  
   
 ```
@@ -315,7 +310,7 @@ void SetModified(BOOL bChanged = TRUE);
  [in]**TRUE**表示屬性頁設定，已修改這些交易套用; 最後一次**FALSE** ，表示屬性頁設定已套用，或應予忽略。  
   
 ### <a name="remarks"></a>備註  
- 屬性工作表會持續的追蹤頁面的 「 有所變更 」，也就是，您所呼叫的屬性頁**SetModified (TRUE)**。 **立即套用**按鈕將一律會啟用，如果您呼叫**SetModified (TRUE)**的其中一個頁面。 **立即套用**將停用 按鈕，當您呼叫**SetModified (FALSE)**的其中一個頁面，但如果沒有任何其他網頁 「 有所變更 」。  
+ 屬性工作表會持續的追蹤頁面的 「 有所變更 」，也就是，您所呼叫的屬性頁**SetModified (TRUE)**。 **立即套用**按鈕將一律會啟用，如果您呼叫**SetModified (TRUE)** 的其中一個頁面。 **立即套用**將停用 按鈕，當您呼叫**SetModified (FALSE)** 的其中一個頁面，但如果沒有任何其他網頁 「 有所變更 」。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

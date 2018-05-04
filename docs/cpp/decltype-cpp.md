@@ -2,11 +2,8 @@
 title: decltype （C++） |Microsoft 文档
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype （C++）
 `decltype` 類型規範會產生指定之運算式的類型。 `decltype`搭配類型規範， [auto 關鍵字](../cpp/auto-cpp.md)，適合主要用於開發人員撰寫樣板程式庫。 使用 `auto` 和 `decltype` 來宣告其傳回類型視樣板引數而定的樣板函式。 或是使用 `auto` 和 `decltype` 來宣告包裝對其他函式的呼叫，再傳回所包裝函式之類型的樣板函式。  
@@ -187,7 +182,7 @@ x3.Dump() = 42
 ```
   
 ## <a name="example"></a>範例
-**2017 和更新版本的 visual Studio:**編譯器就會剖析 decltype 引數的範本會宣告，而具現化。 因此，如果在 decltype 引數中找到非相依特製化，則不會延遲到具現化期間，並且會立即處理，而且會在當下診斷出任何產生的錯誤。
+**2017 和更新版本的 visual Studio:** 編譯器就會剖析 decltype 引數的範本會宣告，而具現化。 因此，如果在 decltype 引數中找到非相依特製化，則不會延遲到具現化期間，並且會立即處理，而且會在當下診斷出任何產生的錯誤。
 
 下列範例顯示在宣告時引發的這類編譯器錯誤︰
 
@@ -213,5 +208,5 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>需求  
  Visual C++ 2010 (含) 以後版本。  
   
- `decltype(auto)`需要 Visual Studio 2015 或更新版本。  
+ `decltype(auto)` 需要 Visual Studio 2015 或更新版本。  
   

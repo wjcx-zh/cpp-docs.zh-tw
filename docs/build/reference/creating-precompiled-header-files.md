@@ -2,12 +2,9 @@
 title: 建立先行編譯標頭檔 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - pch
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09c436d55ad7087d407ba580be0b63286b056898
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 31d9708f203c3d79d4cf369583c75d348278d06a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-precompiled-header-files"></a>建立先行編譯標頭檔
   
@@ -83,9 +78,9 @@ Visual c + + 中，您可以先行編譯的任何 C 或 c + + 程式碼;您不�
   
 您知道原始程式檔使用的標頭檔的一般集，但不將它們包含在相同的順序，或當您想要包含在您先行編譯原始程式碼時，先行編譯程式碼。  
   
-先行編譯標頭選項[/Yc （建立先行編譯標頭檔）](../../build/reference/yc-create-precompiled-header-file.md)和[/Yu （使用先行編譯標頭檔）](../../build/reference/yu-use-precompiled-header-file.md)。 使用**/Yc**建立先行編譯標頭。 當搭配選擇性[hdrstop](../../preprocessor/hdrstop.md) pragma， **/Yc**可讓您先行編譯這兩個標頭檔及原始程式碼。 選取**/Yu**現有編譯中使用現有的先行編譯標頭。 您也可以使用**/Fp**與**/Yc**和**/Yu**選項，以提供先行編譯標頭的替代名稱。  
+先行編譯標頭選項[/Yc （建立先行編譯標頭檔）](../../build/reference/yc-create-precompiled-header-file.md)和[/Yu （使用先行編譯標頭檔）](../../build/reference/yu-use-precompiled-header-file.md)。 使用 **/Yc**建立先行編譯標頭。 當搭配選擇性[hdrstop](../../preprocessor/hdrstop.md) pragma， **/Yc**可讓您先行編譯這兩個標頭檔及原始程式碼。 選取 **/Yu**現有編譯中使用現有的先行編譯標頭。 您也可以使用 **/Fp**與 **/Yc**和 **/Yu**選項，以提供先行編譯標頭的替代名稱。  
   
-編譯器選項參考主題**/Yu**和**/Yc**討論如何存取這項功能在開發環境中的。  
+編譯器選項參考主題 **/Yu**和 **/Yc**討論如何存取這項功能在開發環境中的。  
   
 <a name="precompiled-header-consistency-rules"></a>  
   
@@ -355,6 +350,6 @@ int main( void )
 }  
 ```  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
 [編譯器選項](../../build/reference/compiler-options.md)

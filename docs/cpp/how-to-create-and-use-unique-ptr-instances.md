@@ -1,36 +1,31 @@
 ---
-title: "如何： 建立和使用 unique_ptr 執行個體 |Microsoft 文件"
-ms.custom: 
+title: 如何： 建立和使用 unique_ptr 執行個體 |Microsoft 文件
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82cf4fb475f9c89a4a088cac9d5ee0e1231d436e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>如何：建立和使用 unique_ptr 執行個體
 A [unique_ptr](../standard-library/unique-ptr-class.md)不共用其指標。 無法將它複製到另一個`unique_ptr`、 傳值方式傳遞至函式，或任何需要製作複本的 c + + 標準程式庫演算法中使用。 只能移動 `unique_ptr`。 這表示記憶體資源的擁有權轉移到另一個 `unique_ptr`，原始 `unique_ptr` 不再擁有它。 因為多重擁有權會增加程序邏輯的複雜度，建議您將物件限制為一個擁有者。 因此，當您需要的智慧型指標一般的 c + + 物件，使用`unique_ptr`，以及當您建構`unique_ptr`，使用[make_unique](../standard-library/memory-functions.md#make_unique) helper 函式。  
   
  下圖說明兩個 `unique_ptr` 執行個體之間的擁有權轉移。  
   
- ![移動唯一 &#95; 的擁有權 ptr](../cpp/media/unique_ptr.png "unique_ptr")  
+ ![移動的唯一擁有權&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")  
   
- `unique_ptr`定義於`<memory>`c + + 標準程式庫中的標頭。 它只是做為原始指標有效率，且可以用於 c + + 標準程式庫容器。 新增`unique_ptr`至 c + + 標準程式庫容器的執行個體是有效因為移動建構函式的`unique_ptr`就不需要複製作業。  
+ `unique_ptr` 定義於`<memory>`c + + 標準程式庫中的標頭。 它只是做為原始指標有效率，且可以用於 c + + 標準程式庫容器。 新增`unique_ptr`至 c + + 標準程式庫容器的執行個體是有效因為移動建構函式的`unique_ptr`就不需要複製作業。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何建立 `unique_ptr` 執行個體，並在函式之間傳遞這些執行個體。  
@@ -58,6 +53,6 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)不共用其指標。 無
   
  如需其他範例，請參閱[make_unique](../standard-library/memory-functions.md#make_unique)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [智慧型指標](../cpp/smart-pointers-modern-cpp.md)   
  [make_unique](../standard-library/memory-functions.md#make_unique)

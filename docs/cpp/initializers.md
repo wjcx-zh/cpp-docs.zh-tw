@@ -1,12 +1,9 @@
 ---
-title: "初始設定式 |Microsoft 文件"
-ms.custom: 
+title: 初始設定式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>初始設定式
 初始設定式指定變數的初始值。 您可以初始化下列內容中的變數：  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>預設值初始化  
+### <a name="default_initialization"></a> 預設值初始化  
  類別、結構和等位的預設初始化是使用預設建構函式的初始化。 可以呼叫沒有初始化運算式或具有 `new` 關鍵字的預設建構函式：  
   
 ```cpp  
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>彙總初始化  
+### <a name="agginit"></a> 彙總初始化  
  彙總初始化是陣列或類別類型 (通常是結構或等位) 的清單初始化表單，這些陣列或類別類型具有：  
   
 -   非 private 成員或 protected 成員  
@@ -531,7 +526,7 @@ int main()
  ![初始化參考類型決策圖形](../cpp/media/vc38s71.gif "vc38S71")  
 初始化參考類型決策圖  
   
- 參考`volatile`類型 (宣告為`volatile` *typename*  **&**  *識別碼*) 可以使用初始化`volatile`物件類型相同，或者使用尚未宣告為`volatile`。 不過，以初始化**const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename*  **&**  *識別碼*) 可以使用初始化**const**相同類型的物件 (或任何項目已轉換成該類型，或者使用尚未宣告為**const**)。 不過，不能以該類型的 `volatile` 物件初始化。  
+ 參考`volatile`類型 (宣告為`volatile` *typename * * * （& s)** *識別碼*) 可以使用初始化`volatile`或處理的相同類型的物件未宣告為物件`volatile`。 不過，以初始化**const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename * * * （& s)** *識別碼*) 可以是使用初始化**const**相同類型的物件 (或任何項目已轉換成該類型，或者使用尚未宣告為**const**)。 不過，不能以該類型的 `volatile` 物件初始化。  
   
  使用未限定參考**const**或`volatile`關鍵字可以初始化只能搭配物件宣告為**const**也`volatile`。  
   

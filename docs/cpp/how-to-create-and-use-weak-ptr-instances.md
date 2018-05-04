@@ -1,27 +1,22 @@
 ---
 title: 如何： 建立和使用 weak_ptr 執行個體 |Microsoft 文件
-ms.custom: ''
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e51e523540e14905bef17edd52205c4d2102afa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8fbbf9d3b427c2451fafe0fae93a531dfd45ad8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>如何：建立和使用 weak_ptr 執行個體
 有時物件必須儲存存取的基礎物件的方法`shared_ptr`而不會造成參考計數遞增。 一般而言，這種情況您有會發生之間有循環參考`shared_ptr`執行個體。  
@@ -39,5 +34,5 @@ Creating Controller0Creating Controller1Creating Controller2Creating Controller3
   
  做一個試驗，修改向量`others`是`vector<shared_ptr<Controller>>`，在輸出中，注意沒有解構函式會叫用時`TestRun`傳回。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [智慧型指標](../cpp/smart-pointers-modern-cpp.md)

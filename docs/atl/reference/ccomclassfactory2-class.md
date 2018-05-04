@@ -1,12 +1,9 @@
 ---
-title: "CComClassFactory2 類別 |Microsoft 文件"
-ms.custom: 
+title: CComClassFactory2 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory2
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2b47290d3d0be525ca65b16733c9f42835d24e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 類別
 這個類別會實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面。  
@@ -68,7 +63,7 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|建立並傳回授權金鑰。|  
   
 ## <a name="remarks"></a>備註  
- `CComClassFactory2`實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面的擴充功能的[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)。 **IClassFactory2**控制項物件透過授權建立。 類別處理站執行授權的電腦上，可以提供執行階段授權金鑰。 這個授權金鑰可讓應用程式的完整電腦授權不存在時，將物件具現化。  
+ `CComClassFactory2` 實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面的擴充功能的[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)。 **IClassFactory2**控制項物件透過授權建立。 類別處理站執行授權的電腦上，可以提供執行階段授權金鑰。 這個授權金鑰可讓應用程式的完整電腦授權不存在時，將物件具現化。  
   
  ATL 物件通常由衍生自取得 class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)做為預設 class factory。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)物件的類別定義中的巨集。 例如:   
   
@@ -78,7 +73,7 @@ class CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`衍生自兩者**CComClassFactory2Base**和*授權*。 **CComClassFactory2Base**，又，衍生自**IClassFactory2**和**CComObjectRootEx\< CComGlobalsThreadModel >**。  
+ `CComClassFactory2` 衍生自兩者**CComClassFactory2Base**和*授權*。 **CComClassFactory2Base**，又，衍生自**IClassFactory2**和**CComObjectRootEx\< CComGlobalsThreadModel >**。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CComObjectRootBase`  
@@ -94,7 +89,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
  建立指定的 CLSID 的物件，並擷取這個物件的介面指標。  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>備註  
  需要完整授權。 完整的電腦授權不存在，如果呼叫[CreateInstanceLic](#createinstancelic)。  
   
-##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic  
  類似於[CreateInstance](#createinstance)，不同之處在於`CreateInstanceLic`需要授權金鑰。  
   
 ```
@@ -152,7 +147,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>備註  
  您可以取得授權金鑰使用[RequestLicKey](#requestlickey)。 若要在未經授權的電腦上建立物件，您必須呼叫`CreateInstanceLic`。  
   
-##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
  填滿[LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)結構描述的 class factory 的資訊的授權功能。  
   
 ```
@@ -169,8 +164,8 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>備註  
  `fRuntimeKeyAvail`這個結構的成員表示是否提供授權金鑰，class factory 允許未經授權的電腦上建立的物件。 *FLicVerified*成員表示的完整電腦授權是否存在。  
   
-##  <a name="lockserver"></a>CComClassFactory2::LockServer  
- 遞增和遞減模組鎖定計數藉由呼叫**_Module::Lock**和**_Module::Unlock**分別。  
+##  <a name="lockserver"></a>  CComClassFactory2::LockServer  
+ 遞增和遞減模組鎖定計數藉由呼叫 **_Module::Lock**和 **_Module::Unlock**分別。  
   
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -188,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  呼叫`LockServer`允許用戶端保留 class factory，以便可以快速地建立多個物件。  
   
-##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
  建立並傳回授權金鑰，但前提是`fRuntimeKeyAvail`隸屬[LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590)結構是**TRUE**。  
   
 ```
@@ -210,7 +205,7 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
   
  呼叫[GetLicInfo](#getlicinfo)擷取的值`fRuntimeKeyAvail`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComClassFactorySingleton 類別](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   

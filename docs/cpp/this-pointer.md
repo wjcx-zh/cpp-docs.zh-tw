@@ -1,12 +1,9 @@
 ---
-title: "此指標 |Microsoft 文件"
-ms.custom: 
+title: 此指標 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - this_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e6a1df3bb262a814c641f5bfbcee070ec5de344
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="this-pointer"></a>this 指標
 **這**指標是只能在非靜態成員函式中存取指標**類別**， `struct`，或**union**型別。 它會指向針對其呼叫成員函式的物件。 靜態成員函式沒有**這**指標。  
@@ -183,7 +178,7 @@ int main()
   
  型別**這**在成員函式描述由下列語法，其中*cv 限定詞清單*取決於成員函式宣告子，而且可以是**const**或**volatile** （或兩者），和*類別類型*是類別的名稱：  
   
- *[cv 限定詞-清單] 類別型別* **\* const 這**   
+ *[cv 限定詞-清單] 類別型別***\* const 這**  
   
  換句話說，**這**永遠是 const 指標，而且無法重新指派。  **Const**或`volatile`限定詞用於成員函式宣告套用至類別執行個體所指**這**該函式的範圍內。  
   
@@ -203,6 +198,6 @@ int main()
 > [!NOTE]
 >  建構函式和解構函式不能宣告為**const**或`volatile`。 不過，它們可以是在叫用**const**或`volatile`物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  

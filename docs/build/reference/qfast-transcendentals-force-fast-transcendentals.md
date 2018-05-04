@@ -2,12 +2,9 @@
 title: -Qfast_transcendentals （強制快速超越函式） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Qfast_transcendentals
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - /Qfast_transcendentals
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8d7e8de17c096d061653b469207352be4b9b8bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4bb296c8a1fdfde46969ef601fde33c901c9306
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (Force Fast Transcendentals)
 產生超越函式的內嵌程式碼。  
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個編譯器選項會強制將超越函式轉換成內嵌程式碼，以改善執行速度。 此選項時沒有作用只能搭配**/fp： 除了**或**/fp： 精確**。 產生超越函式的內嵌程式碼已經是預設行為下的**/fp: fast**。  
+ 這個編譯器選項會強制將超越函式轉換成內嵌程式碼，以改善執行速度。 此選項時沒有作用只能搭配 **/fp： 除了**或 **/fp： 精確**。 產生超越函式的內嵌程式碼已經是預設行為下的 **/fp: fast**。  
   
- 這個選項不相容**/fp: strict**。 請參閱[/fp （指定浮點行為）](../../build/reference/fp-specify-floating-point-behavior.md)的浮動點編譯器選項的詳細資訊。  
+ 這個選項不相容 **/fp: strict**。 請參閱[/fp （指定浮點行為）](../../build/reference/fp-specify-floating-point-behavior.md)的浮動點編譯器選項的詳細資訊。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

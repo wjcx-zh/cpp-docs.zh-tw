@@ -1,13 +1,10 @@
 ---
-title: "環境變數巨集 |Microsoft 文件"
-ms.custom: 
+title: 環境變數巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - environment variables, macros in NMAKE
 - macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69fae15b7a12d990d2fb2c8e457bfdc0407f7702
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ebebb6e7d237746f96c7ac7e27c249244ff825b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variable-macros"></a>環境變數巨集
 NMAKE 繼承巨集定義的工作階段開始之前就存在的環境變數。 如果作業系統環境中設定變數，並使用 NMAKE 巨集。 繼承的名稱會轉換成大寫。 前置處理早繼承。 您可以使用 /E 選項，讓繼承自環境變數，以覆寫具有相同名稱 makefile 中的任何巨集的巨集。  
@@ -45,5 +40,5 @@ all:
   
  如果環境變數定義為字串，它會是 makefile 中語法不正確，會建立任何巨集，並不會產生警告。 如果變數的值包含錢幣符號 （$），NMAKE 會解譯為開頭的巨集引動過程。 使用巨集可能會導致非預期的行為。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [特殊的 NMAKE 巨集](../build/special-nmake-macros.md)

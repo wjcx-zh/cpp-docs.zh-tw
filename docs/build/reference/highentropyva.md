@@ -2,12 +2,9 @@
 title: -HIGHENTROPYVA |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /HIGHENTROPYVA
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -HIGHENTROPYVA editbin option
 - /HIGHENTROPYVA editbin option
 ms.assetid: ef4b7c63-440d-40ca-b39d-edefb3217505
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36ca3ea93f494587663d863b1dc4646750d38e82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 122f524db9af10449ce809e5a8de78148d04d431
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
 指定可執行映像是否支援高熵 64 位元位址空間配置隨機載入 (ASLR)。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  根據預設，連結器會為 64 位元可執行映像設定此選項。 若要設定這個選項， [/DYNAMICBASE](../../build/reference/dynamicbase.md)也必須設定選項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [EDITBIN 選項](../../build/reference/editbin-options.md)   
  [/DYNAMICBASE](../../build/reference/dynamicbase.md)   
  [Windows ISV 軟體安全性防禦措施](http://msdn.microsoft.com/library/bb430720.aspx)

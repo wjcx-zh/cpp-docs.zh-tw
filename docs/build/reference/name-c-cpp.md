@@ -1,13 +1,10 @@
 ---
-title: "名稱 （C/C + +） |Microsoft 文件"
-ms.custom: 
+title: 名稱 （C/C + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - name
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33e81f63e7647cbdbdc89b37ffdcb309b79e9340
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a94b82a65cf68d9802d7bf9620e4128ab6b35071
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-cc"></a>NAME (C/C++)
 指定主要輸出檔的名稱。  
@@ -39,5 +34,5 @@ NAME [application][BASE=address]
   
  如果您建立 DLL 時，名稱只會影響 DLL 名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)

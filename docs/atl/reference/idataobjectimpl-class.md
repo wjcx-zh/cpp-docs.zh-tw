@@ -1,12 +1,9 @@
 ---
-title: "IDataObjectImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IDataObjectImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 644f498a491605fb69b18ec53afee689f5f90a26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3ffcdd8cc8320b2534d928171fe75619062b300
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl 類別
 這個類別會提供方法以支援制式資料傳輸，並管理連接。  
@@ -76,9 +71,9 @@ class IDataObjectImpl
 |[IDataObjectImpl::SetData](#setdata)|將資料從用戶端傳輸至資料物件。 ATL 實作會傳回**E_NOTIMPL**。|  
   
 ## <a name="remarks"></a>備註  
- [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)介面提供方法來支援制式資料傳輸。 `IDataObject`使用標準格式結構[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)和[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)來擷取及儲存資料。  
+ [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)介面提供方法來支援制式資料傳輸。 `IDataObject` 使用標準格式結構[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)和[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)來擷取及儲存資料。  
   
- `IDataObject`也會管理連線到通知接收來處理資料變更通知。 為了讓用戶端收到的資料物件的資料變更通知，在用戶端必須實作[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)呼叫通知接收物件上的介面。 當用戶端再呼叫**IDataObject::DAdvise**，資料物件和通知接收之間建立連線。  
+ `IDataObject` 也會管理連線到通知接收來處理資料變更通知。 為了讓用戶端收到的資料物件的資料變更通知，在用戶端必須實作[IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513)呼叫通知接收物件上的介面。 當用戶端再呼叫**IDataObject::DAdvise**，資料物件和通知接收之間建立連線。  
   
  類別`IDataObjectImpl`提供的預設實作`IDataObject`並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
   
@@ -92,7 +87,7 @@ class IDataObjectImpl
 ## <a name="requirements"></a>需求  
  **標頭：** atlctl.h  
   
-##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
+##  <a name="dadvise"></a>  IDataObjectImpl::DAdvise  
  建立資料物件和通知接收之間的連接。  
   
 ```
@@ -110,7 +105,7 @@ HRESULT DAdvise(
   
  請參閱[IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) Windows SDK 中。  
   
-##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
+##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
  終止透過先前建立的連線[DAdvise](#dadvise)。  
   
 ```
@@ -120,7 +115,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) Windows SDK 中。  
   
-##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
+##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
  建立來逐一查看目前諮詢連接的列舉值。  
   
 ```
@@ -134,7 +129,7 @@ HRESULT DAdvise(
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) Windows SDK 中。  
   
-##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
+##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
  建立來逐一查看的列舉值**FORMATETC**資料物件支援的結構。  
   
 ```
@@ -149,7 +144,7 @@ HRESULT EnumFormatEtc(
 ### <a name="return-value"></a>傳回值  
  傳回**E_NOTIMPL**。  
   
-##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
+##  <a name="firedatachange"></a>  IDataObjectImpl::FireDataChange  
  將變更通知傳回給目前受管理的每個通知接收。  
   
 ```
@@ -159,7 +154,7 @@ HRESULT FireDataChange();
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
+##  <a name="getcanonicalformatetc"></a>  IDataObjectImpl::GetCanonicalFormatEtc  
  擷取邏輯對等**FORMATETC**為更複雜的結構。  
   
 ```
@@ -172,7 +167,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) Windows SDK 中。  
   
-##  <a name="getdata"></a>IDataObjectImpl::GetData  
+##  <a name="getdata"></a>  IDataObjectImpl::GetData  
  將資料從資料物件傳輸到用戶端。  
   
 ```
@@ -186,7 +181,7 @@ HRESULT GetData(
   
  請參閱[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
   
-##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
+##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
  類似於`GetData`，除了用戶端必須配置**STGMEDIUM**結構。  
   
 ```
@@ -201,7 +196,7 @@ HRESULT GetDataHere(
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) Windows SDK 中。  
   
-##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
+##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
  決定資料的物件是否支援特定**FORMATETC**傳送資料的結構。  
   
 ```
@@ -214,7 +209,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) Windows SDK 中。  
   
-##  <a name="setdata"></a>IDataObjectImpl::SetData  
+##  <a name="setdata"></a>  IDataObjectImpl::SetData  
  將資料從用戶端傳輸至資料物件。  
   
 ```
@@ -230,5 +225,5 @@ HRESULT SetData(
 ### <a name="remarks"></a>備註  
  請參閱[IDataObject::SetData](http://msdn.microsoft.com/library/windows/desktop/ms686626) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

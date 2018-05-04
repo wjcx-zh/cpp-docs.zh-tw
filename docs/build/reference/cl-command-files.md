@@ -1,13 +1,10 @@
 ---
-title: "CL 命令檔 |Microsoft 文件"
-ms.custom: 
+title: CL 命令檔 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a711b2f4a484a6370af828c5d0aad522686ca3f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 367ea6dc22777b473cad44f35b1f5e4c34528471
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-command-files"></a>CL 命令檔
 命令檔是文字檔，其中包含選項和檔名，否則輸入[命令列](../../build/reference/compiler-command-line-syntax.md)或指定使用[CL 環境變數](../../build/reference/cl-environment-variables.md)。 CL 可以接受做為引數在 CL 環境變數，或在命令列編譯器命令檔。 與命令列或 CL 環境變數不同的是，命令檔可讓您使用多行選項和檔名。  
@@ -58,6 +53,6 @@ CL /Ob2 /Og MYAPP.C /link LIBC.LIB
   
  請注意有效地合併 命令列和的命令檔命令。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)

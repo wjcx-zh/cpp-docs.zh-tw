@@ -1,10 +1,9 @@
 ---
-title: "/Tc、 /Tp、 /TC、 /TP （指定原始程式檔類型） |Microsoft 文件"
+title: /Tc、 /Tp、 /TC、 /TP （指定原始程式檔類型） |Microsoft 文件
 ms.date: 1/11/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.CompileAs
 - VC.Project.VCCLCompilerTool.CompileAs
@@ -22,25 +21,24 @@ helpviewer_keywords:
 - -Tp compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d51e4c6bbf6a77f86be5cabde9b65f8e4f8c9f
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 9cb612d5c26fd4db51222c480539867d5e506b70
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc、/Tp、/TC、/TP (指定原始程式檔類型)
 
 **/Tc**選項會指定其檔名引數是 C 原始程式檔，即使它並沒有副檔名為.c。 **/Tp**選項會指定其檔名引數是 c + + 原始程式檔，即使它沒有副檔名為.cpp 或.cxx。 選項與檔案名稱之間的空格是選擇性的。 每個選項會指定一個檔案。若要指定其他檔案，重複此選項。
 
-**/TC**和**/TP**全域變化的**/Tc**和**/Tp**。 指定編譯器在處理為 C 原始程式檔名為命令列上的所有檔案 (**/TC**) 或 c + + 原始程式檔 (**/TP**)，而不考慮此選項在命令列上的位置。 這些全域選項可根據單一檔案，藉由覆寫**/Tc**或**/Tp**。
+**/TC**和 **/TP**全域變化的 **/Tc**和 **/Tp**。 指定編譯器在處理為 C 原始程式檔名為命令列上的所有檔案 (**/TC**) 或 c + + 原始程式檔 (**/TP**)，而不考慮此選項在命令列上的位置。 這些全域選項可根據單一檔案，藉由覆寫 **/Tc**或 **/Tp**。
 
 ## <a name="syntax"></a>語法
 
 > **/Tc** _filename_  
-> **/Tp** _filename_  
+> **/Tp** _檔名_  
 > **/TC**  
 > **/TP**  
 

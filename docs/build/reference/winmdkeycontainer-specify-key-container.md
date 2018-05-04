@@ -1,29 +1,24 @@
 ---
-title: "-WINMDKEYCONTAINER （指定金鑰容器） |Microsoft 文件"
-ms.custom: 
+title: -WINMDKEYCONTAINER （指定金鑰容器） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.WINMDKEYCONTAINER
 dev_langs:
 - C++
 ms.assetid: c2fc44dc-7cb5-42b9-897f-1b124928f2f7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb71a932180a41784b9e0894220982a170e6bf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36e4f74eb249c2687716fedb43ccf0a37e35f7b7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="winmdkeycontainer-specify-key-container"></a>/WINMDKEYCONTAINER (指定金鑰容器)
 指定用於簽署 Windows 中繼資料 (.winmd) 檔案的金鑰容器。  
@@ -45,6 +40,6 @@ ms.lasthandoff: 12/21/2017
   
 4.  在**Windows 中繼資料金鑰容器**方塊中，輸入位置。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

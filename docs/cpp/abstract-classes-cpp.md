@@ -1,12 +1,9 @@
 ---
-title: "抽象類別 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 抽象類別 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23cdff4d0e2eb213a98b2e90d7df41af226edd86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60f46ccdae3b92f60708354078fafb244d29bbe3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="abstract-classes-c"></a>抽象類別 (C++)
 抽象類別用於表示可衍生更明確類別的一般概念。 您無法建立抽象類別類型的物件，但是可以使用抽象類別類型的指標和參考。  
@@ -66,7 +61,7 @@ private:
   
  您可以為抽象類別定義純虛擬函式，但是只能使用下列語法直接呼叫：  
   
- *抽象類別名稱* `::` *函式名稱***（)**  
+ *抽象類別名稱* `::` *函式的名稱 * * * （)**  
   
  這在設計基底類別包含純虛擬解構函式的類別階層架構時很有幫助，因為基底類別解構函式會一律在終結物件的處理序中呼叫。 參考下列範例：  
   
@@ -99,5 +94,5 @@ int main() {
 > [!NOTE]
 >  在上述範例中，純虛擬函式 `base::~base` 是從 `derived::~derived` 隱含呼叫。 另外也可以使用完整限定的成員函式名稱明確呼叫純虛擬函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [繼承](../cpp/inheritance-cpp.md)

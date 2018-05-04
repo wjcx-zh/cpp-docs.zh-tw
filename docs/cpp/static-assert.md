@@ -1,12 +1,9 @@
 ---
-title: "static_assert |Microsoft 文件"
-ms.custom: 
+title: static_assert |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_assert_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b91f4902e42d393509aa190172e53839b2621
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47046090da45d963cc0005f47e2bea680ad17795
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticassert"></a>static_assert
 在編譯時期測試軟體判斷提示。 如果指定的常數運算式是`false`，所提供，則編譯器會顯示指定的訊息，並編譯會失敗並產生錯誤 C2338，否則宣告沒有任何作用。  
@@ -115,7 +110,7 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [判斷提示和使用者提供的訊息 （c + +）](../cpp/assertion-and-user-supplied-messages-cpp.md)   
  [#error 指示詞 （C/c + +）](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert 巨集、_assert、_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   

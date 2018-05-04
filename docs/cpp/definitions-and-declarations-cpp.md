@@ -1,27 +1,22 @@
 ---
-title: "定義和宣告 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 定義和宣告 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 56b809c0-e602-4f18-9ca5-cd7a8fbaaf30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7391180ca83d40e6ec00688054223b2e9af48e4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 742270c77d47c178d0254ca9b9882f73fe3b8293
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definitions-and-declarations-c"></a>定義和宣告 (C++)
 ## <a name="microsoft-specific"></a>Microsoft 特定的
@@ -79,5 +74,5 @@ void func() {
 
 **結束 Microsoft 特定的**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
  [dllexport、dllimport](../cpp/dllexport-dllimport.md)

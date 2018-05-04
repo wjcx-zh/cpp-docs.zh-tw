@@ -1,27 +1,22 @@
 ---
-title: "樣板 Friend |Microsoft 文件"
-ms.custom: 
+title: 樣板 Friend |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eba3a938389c9110a1b0490dd9c274db453cdcda
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 8c5217b1860affd05f433c6a3bf944afeb6c13f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="template-friends"></a>樣板 Friend
 
@@ -264,6 +259,6 @@ A
 a  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 
 [預設引數](../cpp/default-arguments.md)

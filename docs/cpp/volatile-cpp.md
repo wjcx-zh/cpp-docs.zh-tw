@@ -2,11 +2,8 @@
 title: volatile （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - volatile_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-caps.latest.revision: 43
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02560da98c583281cc05921f2e924a12f41688c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 295654586a3fe251526a4764d54f80f3a70c7014
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="volatile-c"></a>volatile (C++)
 類型限定詞，可以用來宣告程式中的物件可以由硬體修改。  
@@ -43,7 +38,7 @@ volatile declarator ;
 ## <a name="remarks"></a>備註  
  您可以使用[/volatile](../build/reference/volatile-volatile-keyword-interpretation.md)編譯器參數，修改編譯器如何解譯這個關鍵字。  
   
- Visual Studio 會根據目標架構，對`volatile` 關鍵字做不一樣的解譯。 若是 ARM、 如果有任何**/volatile**指定編譯器選項時，編譯器會執行如同**/volatile:iso**所指定。 針對 ARM，如果沒有以外的架構**/volatile**指定編譯器選項時，編譯器會執行如同**/volatile: ms**指定; 因此，對於架構以外 ARM 我們強烈建議您指定**/volatile:iso**，並在處理跨執行緒共用的記憶體時使用明確的同步處理原始類型和編譯器內建函式。  
+ Visual Studio 會根據目標架構，對`volatile` 關鍵字做不一樣的解譯。 若是 ARM、 如果有任何 **/volatile**指定編譯器選項時，編譯器會執行如同 **/volatile:iso**所指定。 針對 ARM，如果沒有以外的架構 **/volatile**指定編譯器選項時，編譯器會執行如同 **/volatile: ms**指定; 因此，對於架構以外 ARM 我們強烈建議您指定 **/volatile:iso**，並在處理跨執行緒共用的記憶體時使用明確的同步處理原始類型和編譯器內建函式。  
   
  您可以使用 `volatile` 限定詞存取非同步處理序 (例如中斷處理常式) 所用的記憶體位置。  
   
@@ -67,7 +62,7 @@ volatile declarator ;
 ## <a name="end-of-iso-compliant"></a>符合 ISO 標準結尾  
   
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
- 時**/volatile: ms**編譯器選項使用 — ARM 以外的架構做為目標時，根據預設，編譯器會產生額外的程式碼維護除了維護暫時性物件參考的順序其他全域物件參考的順序。 特別之處在於：  
+ 時 **/volatile: ms**編譯器選項使用 — ARM 以外的架構做為目標時，根據預設，編譯器會產生額外的程式碼維護除了維護暫時性物件參考的順序其他全域物件參考的順序。 特別之處在於：  
   
 -   暫時性物件的寫入 (也稱為暫時性寫入) 有 Release 語義，也就是說，在指令序列中暫時性物件寫入之前的全域或靜態物件參考，會在已編譯二進位檔中的暫時性寫入之前發生。  
   
@@ -76,11 +71,11 @@ volatile declarator ;
  這可讓暫時性物件用於多執行緒應用程式的記憶體鎖定和記憶體釋放。  
   
 > [!NOTE]
->  當它是倚賴時具有所提供的增強型保證**/volatile: ms**編譯器選項時，程式碼是不可移植。  
+>  當它是倚賴時具有所提供的增強型保證 **/volatile: ms**編譯器選項時，程式碼是不可移植。  
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [const](../cpp/const-cpp.md)   
  [const 和 volatile 指標](../cpp/const-and-volatile-pointers.md)

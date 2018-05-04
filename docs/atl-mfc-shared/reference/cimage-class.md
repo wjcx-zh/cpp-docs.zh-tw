@@ -1,12 +1,9 @@
 ---
-title: "CImage 類別 |Microsoft 文件"
-ms.custom: 
+title: CImage 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/01/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImage
@@ -63,20 +60,18 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 762941834820edda09970750af752d4c8a9df61c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimage-class"></a>CImage 類別
-`CImage`提供增強的點陣圖支援，包括載入和儲存 JPEG、 GIF、 BMP、 及可攜式網路圖形 (PNG) 格式的映像的能力。  
+`CImage` 提供增強的點陣圖支援，包括載入和儲存 JPEG、 GIF、 BMP、 及可攜式網路圖形 (PNG) 格式的映像的能力。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -106,7 +101,7 @@ class CImage
 |[CImage::CreateEx](#createex)|建立 DIB 區段點陣圖 （具有額外的參數），並將其附加至先前建構`CImage`物件。|  
 |[CImage::Destroy](#destroy)|卸離從點陣圖`CImage`物件，並終結點陣圖。|  
 |[CImage::Detach](#detach)|卸離從點陣圖`CImage`物件。|  
-|[CImage::Draw](#draw)|從來源矩形的點陣圖複製到目的地矩形中。 **繪製**延伸或壓縮點陣圖以符合目的地矩形的尺寸，如有必要，並處理 alpha 混色和透明的色彩。|  
+|[Cimage](#draw)|從來源矩形的點陣圖複製到目的地矩形中。 **繪製**延伸或壓縮點陣圖以符合目的地矩形的尺寸，如有必要，並處理 alpha 混色和透明的色彩。|  
 |[CImage::GetBits](#getbits)|擷取點陣圖的實際像素值的指標。|  
 |[CImage::GetBPP](#getbpp)|擷取每個像素的位元。|  
 |[CImage::GetColorTable](#getcolortable)|從範圍的色彩表中的項目擷取紅色、 綠色、 藍色 (RGB) 色彩值。|  
@@ -143,10 +138,10 @@ class CImage
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CImage::operator HBITMAP](#operator_hbitmap)|傳回附加至的 Windows 控制代碼`CImage`物件。|  
+|[HBITMAP CImage::operator](#operator_hbitmap)|傳回附加至的 Windows 控制代碼`CImage`物件。|  
   
 ## <a name="remarks"></a>備註  
- `CImage`會採用點陣圖，可能是裝置獨立點陣圖 (DIB) 區段或不過，您可以使用[建立](#create)或[CImage::Load](#load)只 DIB 章節。 您可以將附加至非 DIB 區段點陣圖`CImage`物件使用[附加](#attach)，但您便無法使用下列`CImage`支援 DIB 區段點陣圖的方法：  
+ `CImage` 會採用點陣圖，可能是裝置獨立點陣圖 (DIB) 區段或不過，您可以使用[建立](#create)或[CImage::Load](#load)只 DIB 章節。 您可以將附加至非 DIB 區段點陣圖`CImage`物件使用[附加](#attach)，但您便無法使用下列`CImage`支援 DIB 區段點陣圖的方法：  
   
 - [GetBits](#getbits)  
   
@@ -170,7 +165,7 @@ class CImage
 > [!NOTE]
 >  使用全域`CImage`不建議在 DLL 中的物件。 如果您要使用全域`CImage`在 DLL 中，呼叫物件[CImage::ReleaseGDIPlus](#releasegdiplus)明確釋放 GDI + 所使用的資源。  
   
- `CImage`無法選取至新[CDC](../../mfc/reference/cdc-class.md)。 `CImage`建立自己**HDC**映像。 因為`HBITMAP`合而為一，才可以選取**HDC**一次`HBITMAP`聯`CImage`到另一個不能選取**HDC**。 如果您需要`CDC`，擷取**HDC**從`CImage`，並提供給 [CDC::FromHandle] (.../../mfc/reference/cdc-class.md#cdc__fromhandle。  
+ `CImage` 無法選取至新[CDC](../../mfc/reference/cdc-class.md)。 `CImage` 建立自己**HDC**映像。 因為`HBITMAP`合而為一，才可以選取**HDC**一次`HBITMAP`聯`CImage`到另一個不能選取**HDC**。 如果您需要`CDC`，擷取**HDC**從`CImage`，並提供給 [CDC::FromHandle] (.../../mfc/reference/cdc-class.md#cdc__fromhandle。  
   
 ## <a name="example"></a>範例  
 ```cpp  
@@ -512,7 +507,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>傳回值  
  卸離，點陣圖的控制代碼或**NULL**附加沒有點陣圖。  
   
-##  <a name="draw"></a>  CImage::Draw  
+##  <a name="draw"></a>  Cimage  
  將點陣圖從來源裝置內容複製到目前的裝置內容。  
   
 ```
@@ -732,13 +727,13 @@ CImage::GetExporterFilterString(
   
  參數*strExporter*格式：  
   
- 檔案 description0 &#124;\*.ext0 &#124; filedescription1 &#124;\*.ext1 &#124;...檔案描述 *n* &#124;\*。ext  *n* &#124; &#124;  
+ 檔案 description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file 描述*n*&#124;\*.ext *n*&#124;&#124;  
   
- 其中 ' &#124;' 由所指定的分隔字元`chSeparator`。 例如:   
+ 其中 '&#124;' 由所指定的分隔字元`chSeparator`。 例如:   
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 使用預設的分隔符號 ' &#124;' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞至通用的儲存檔案對話方塊中，請使用 '\0' 的 null 分隔符號。  
+ 使用預設的分隔符號 '&#124;' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞至通用的儲存檔案對話方塊中，請使用 '\0' 的 null 分隔符號。  
   
 ##  <a name="getheight"></a>  CImage::GetHeight  
  擷取的高度，單位為像素的影像。  
@@ -818,13 +813,13 @@ CImage::GetImporterFilterString(
   
  參數*strImporter*格式：  
   
- 檔案 description0 &#124;\*.ext0 &#124; filedescription1 &#124;\*.ext1 &#124;...檔案描述 *n* &#124;\*。ext  *n* &#124; &#124;  
+ 檔案 description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file 描述*n*&#124;\*.ext *n*&#124;&#124;  
   
- 其中 ' &#124;' 由所指定的分隔字元`chSeparator`。 例如:   
+ 其中 '&#124;' 由所指定的分隔字元`chSeparator`。 例如:   
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 使用預設的分隔符號 ' &#124;' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞給一般使用的 null 的分隔字元 '\0'**開啟舊檔** 對話方塊。  
+ 使用預設的分隔符號 '&#124;' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞給一般使用的 null 的分隔字元 '\0'**開啟舊檔** 對話方塊。  
   
 ##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  擷取色彩表中的項目的數目上限。  
@@ -1032,7 +1027,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>備註  
  資源必須是型別`BITMAP`。  
   
-##  <a name="maskblt"></a>  CImage::MaskBlt  
+##  <a name="maskblt"></a>  Maskblt  
  結合使用指定的遮罩和點陣作業的來源和目的地點陣圖的色彩資料。  
   
 ```
@@ -1123,7 +1118,7 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>備註  
  這個方法適用於 Windows NT 4.0 及更新版本的版本。  
   
-##  <a name="operator_hbitmap"></a>  CImage::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>  HBITMAP CImage::operator  
  使用此運算子，以取得附加的 Windows GDI 控制代碼的`CImage`物件。 這位操作員便轉型運算子，可支援直接使用`HBITMAP`物件。  
   
 ##  <a name="plgblt"></a>  CImage::PlgBlt  
@@ -1438,7 +1433,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows SDK 中。  
   
-##  <a name="transparentblt"></a>  CImage::TransparentBlt  
+##  <a name="transparentblt"></a>  Transparentblt  
  將點陣圖從來源裝置內容複製到這個目前的裝置內容。  
   
 ```
@@ -1515,7 +1510,7 @@ BOOL TransparentBlt(
  **TRUE**如果成功，否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
- `TransparentBlt`支援的 4 位元 / 像素和每像素 8 位元的來源點陣圖。 使用[CImage::AlphaBlend](#alphablend)透明度與指定 32 位元-每個像素點陣圖。  
+ `TransparentBlt` 支援的 4 位元 / 像素和每像素 8 位元的來源點陣圖。 使用[CImage::AlphaBlend](#alphablend)透明度與指定 32 位元-每個像素點陣圖。  
   
   
 ### <a name="example"></a>範例  
@@ -1549,7 +1544,7 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ```
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MMXSwarm 範例](../../visual-cpp-samples.md)   
  [SimpleImage 範例](../../visual-cpp-samples.md)   
  [裝置獨立點陣圖](http://msdn.microsoft.com/library/windows/desktop/dd183562)   

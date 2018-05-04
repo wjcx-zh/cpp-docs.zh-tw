@@ -1,12 +1,9 @@
 ---
-title: "類別成員概觀 |Microsoft 文件"
-ms.custom: 
+title: 類別成員概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd280255afe98aa5ca512c63bb00623891eafc4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="class-member-overview"></a>類別成員概觀
 類別或結構包含其成員。 類別所執行的工作是由其成員函式執行。 它所維護的狀態會儲存在其資料成員中。 初始化成員檢查方式是建構函式，並清除工作，例如釋放的記憶體和資源的釋放是解構函式。 在 C++11 和更新版本中，可以 (且通常應該) 在宣告時初始化資料成員。  
@@ -102,7 +97,7 @@ int TestRun::_instances{ 0 };
 ```  
   
 ## <a name="member-accessibility"></a>成員存取範圍  
- 成員清單中所宣告類別的成員。 類別的成員清單可以分成任意數目的`private`，`protected`和**公用**區段使用稱為存取規範的關鍵字。  冒號**:**必須遵循的存取規範。  這些區段不需要是連續的，也就是說，這些關鍵字中任何一個都可以在成員清單中出現多次。  關鍵字會指定到下一個存取指定名稱，或右大括號之前所有成員的存取權限。 如需詳細資訊，請參閱[成員存取控制 （c + +）](../cpp/member-access-control-cpp.md)。  
+ 成員清單中所宣告類別的成員。 類別的成員清單可以分成任意數目的`private`，`protected`和**公用**區段使用稱為存取規範的關鍵字。  冒號 **:** 必須遵循的存取規範。  這些區段不需要是連續的，也就是說，這些關鍵字中任何一個都可以在成員清單中出現多次。  關鍵字會指定到下一個存取指定名稱，或右大括號之前所有成員的存取權限。 如需詳細資訊，請參閱[成員存取控制 （c + +）](../cpp/member-access-control-cpp.md)。  
   
 ## <a name="static-members"></a>靜態成員  
  資料成員可以宣告為靜態，這表示類別的所有物件都可以存取其相同複本。 成員函式可能會宣告為靜態，在此情況下，它只能存取類別的靜態資料成員 (且沒有*這*指標)。 如需詳細資訊，請參閱[靜態資料成員](../cpp/static-members-cpp.md)。  
@@ -114,11 +109,11 @@ int TestRun::_instances{ 0 };
   
 2.  複製建構函式  
   
-3.  **(C + + 11)**移動建構函式  
+3.  **(C + + 11)** 移動建構函式  
   
 4.  複製指派運算子  
   
-5.  **(C + + 11)**移動指派運算子  
+5.  **(C + + 11)** 移動指派運算子  
   
 6.  解構函式  
   
@@ -178,5 +173,5 @@ int CanInit2::j = i;
 > [!NOTE]
 >  類別名稱 `CanInit2` 前面必須加上 `i`，才能將所要定義的 `i` 指定為 `CanInit2` 類別的成員。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

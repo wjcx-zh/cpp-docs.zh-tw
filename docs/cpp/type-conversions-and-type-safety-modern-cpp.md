@@ -2,26 +2,21 @@
 title: 類型轉換和型別安全 （現代 c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13dabba7b7cfc769d91471c2dfc6f92f1b414996
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>類型轉換和類型安全 (現代 C++)
 這份文件識別常見問題的型別轉換，並說明如何避免這些在 c + + 程式碼中。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 |從|以|  
 |----------|--------|  
-|任何帶正負號或不帶正負號整數類資料類型除外`long long`或`__int64`|`double`|  
+|任何帶正負號或不帶正負號整數類資料類型除外`long long`或 `__int64`|`double`|  
 |`bool` 或 `char`|任何其他內建型別|  
 |`short` 或 `wchar_t`|`int`, `long`, `long long`|  
 |`int`, `long`|`long long`|  
@@ -113,7 +108,7 @@ int(x); // old-style cast, functional syntax
   
  C-style 轉型運算子相當於呼叫運算子 （），因此程式碼中不起眼和容易被忽略。 兩者都是不正確的因為它們是難以辨識瀏覽或搜尋，而且它們是不同足夠叫用的任何組合`static`， `const`，和`reinterpret_cast`。 找出舊樣式轉型實際上並未可能會發生困難而且容易發生錯誤。 基於這些理由，需要，轉型時，我們會建議使用下列 c + + 轉型的運算子在某些情況下會大幅多型別安全，並更明確地快速程式設計的意圖的其中一個：  
   
--   `static_cast`只會在編譯檢查的轉換時間。 `static_cast`如果編譯器偵測到您嘗試不完全相容的類型之間轉型會傳回錯誤。 您也可以使用它來轉換之間指標至基底指標衍生，但編譯器永遠無法分辨這類轉換是否會在執行階段的安全。  
+-   `static_cast`只會在編譯檢查的轉換時間。 `static_cast` 如果編譯器偵測到您嘗試不完全相容的類型之間轉型會傳回錯誤。 您也可以使用它來轉換之間指標至基底指標衍生，但編譯器永遠無法分辨這類轉換是否會在執行階段的安全。  
   
     ```cpp  
     double d = 1.58947;  
@@ -190,7 +185,7 @@ int(x); // old-style cast, functional syntax
   
      如需詳細資訊，請參閱[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 類型系統](../cpp/cpp-type-system-modern-cpp.md)   
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   

@@ -1,13 +1,10 @@
 ---
-title: "-/Wp64 （偵測 64 位元可攜性問題） |Microsoft 文件"
-ms.custom: 
+title: -/Wp64 （偵測 64 位元可攜性問題） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.Detect64BitPortabilityProblems
 - VC.Project.VCCLCompilerTool.Detect64BitPortabilityProblems
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -Wp64 compiler option [C++]
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59784b713ce1c40cb9b946bc885827fb7141772f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 295f2f690cb3c9db17a410cea1f23d04e54b0054
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (偵測 64 位元可移植性問題)
 
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>備註  
 
-依預設，在 Visual Studio 2013 之前的 Visual Studio 版本**/Wp64**編譯器選項已關閉，建置 32 位元 x86 的 Visual c + + 編譯器中程式碼，並在 Visual c + + 編譯器中，建立 64 位元、 x64 程式碼。  
+依預設，在 Visual Studio 2013 之前的 Visual Studio 版本 **/Wp64**編譯器選項已關閉，建置 32 位元 x86 的 Visual c + + 編譯器中程式碼，並在 Visual c + + 編譯器中，建立 64 位元、 x64 程式碼。  
   
 > [!IMPORTANT]
 >  [/Wp64](../../build/reference/wp64-detect-64-bit-portability-issues.md) 編譯器選項和 [__w64](../../cpp/w64.md) 關鍵字在 Visual Studio 2010 和 Visual Studio 2012 中已被取代，並且從 Visual Studio 2013 開始將不提供支援。 如果您轉換使用這個參數的專案，則在轉換期間將不會移轉參數。 若要在 Visual Studio 2010 或 Visual Studio 2012 中使用這個選項，您必須在專案屬性的 [命令列]  區段中，於 [其他選項]  下輸入編譯器參數。 如果您在命令列上使用 **/Wp64** 編譯器選項，則編譯器會發出命令列警告 D9002。 請改用以 64 位元平台為目標的 Visual C++ 編譯器，並指定 [/W4](../../build/reference/compiler-option-warning-level.md) 選項，而非使用這個選項和關鍵字來偵測 64 位元可攜性問題。 如需詳細資訊，請參閱[設定 Visual c + + 64 位元、 x64 的目標](../../build/configuring-programs-for-64-bit-visual-cpp.md)。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 -   指標  
   
- 如果您經常使用的編譯器，建置 64 位元、 x64 編譯您的應用程式程式碼中，您可以只停用**/Wp64**在 32 位元編譯中因為 64 位元編譯器會偵測到所有的問題。 如需如何目標 Windows 64 位元作業系統的詳細資訊，請參閱[設定 Visual c + + 64 位元、 x64 的目標](../../build/configuring-programs-for-64-bit-visual-cpp.md)。  
+ 如果您經常使用的編譯器，建置 64 位元、 x64 編譯您的應用程式程式碼中，您可以只停用 **/Wp64**在 32 位元編譯中因為 64 位元編譯器會偵測到所有的問題。 如需如何目標 Windows 64 位元作業系統的詳細資訊，請參閱[設定 Visual c + + 64 位元、 x64 的目標](../../build/configuring-programs-for-64-bit-visual-cpp.md)。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Detect64BitPortabilityProblems%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 
 [編譯器選項](../../build/reference/compiler-options.md)   
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)   

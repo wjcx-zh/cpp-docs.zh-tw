@@ -1,12 +1,9 @@
 ---
-title: "if else 陳述式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: if else 陳述式 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-else-statement-c"></a>if-else 陳述式 (C++)
 控制條件分支。 中的陳述式*if 區塊*才會執行*if 運算式*評估為非零值 (或`true`)。 如果值*運算式*非零， *statement1*區塊中的任何其他陳述式執行和 else 區塊，如果有的話，會略過。 如果值*運算式*為零，則會略過 if 區塊和執行其他的區塊，如果有的話。 評估為非零的運算式
@@ -176,7 +171,7 @@ int main()
  **Else**子句`if...else`陳述式是相關聯的最接近先前**如果**陳述式沒有相對應位於相同範圍**else**陳述式。   
 
 ## <a name="constexpr-if-statements"></a>constexpr 如果陳述式
-**Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用**constexpr 如果**做出編譯時期分支的陳述式而不必訴諸於多個函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （需要沒有零參數多載）： 
+**Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用**constexpr 如果**做出編譯時期分支不含陳述式不必訴諸於多個函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （需要沒有零參數多載）： 
 
 ```cpp
 template <class T, class... Rest>
@@ -200,7 +195,7 @@ void f(T&& t, Rest&&... r)
 
   
  
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選擇陳述式](../cpp/selection-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)

@@ -1,13 +1,10 @@
 ---
 title: -SUBSYSTEM | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /subsystem
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 945e0d6da5ff1c5f24f8c0e10693f06334e0a25c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c12df1a2166c9ef5a1af8a33a5764a8899909edb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 指定可執行映像所需的執行環境。  
@@ -76,5 +71,5 @@ ms.lasthandoff: 02/14/2018
   
  如需詳細資訊，包括每個子系統的主要和次要版本號碼的最小值和預設值，請參閱[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)連結器選項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [EDITBIN 選項](../../build/reference/editbin-options.md)

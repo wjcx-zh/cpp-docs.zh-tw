@@ -2,12 +2,9 @@
 title: C/c + + 建置參考 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e2269be27dd039357c11d38a2be83b5fc9d6504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d26f729f660b3e51677303bb91b99e665a1a950
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cc-building-reference"></a>C/C++ 建置參考
 Visual c + + 提供兩種建置 C/c + + 程式。 最簡單的 （且最常見的） 方法是[Visual c + + 開發環境中建置](../../ide/building-cpp-projects-in-visual-studio.md)。 其他的方式是[命令提示字元使用命令列工具來建立](../../build/building-on-the-command-line.md)。 在任一情況下，您可以建立使用 Visual c + + 原始程式碼編輯器或您選擇的第三方編輯器的原始程式檔。  

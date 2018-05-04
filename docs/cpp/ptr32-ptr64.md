@@ -1,12 +1,9 @@
 ---
-title: "__ptr32、 __ptr64 |Microsoft 文件"
-ms.custom: 
+title: __ptr32、 __ptr64 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __ptr32_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e811999bacada521d77bc14b19eb86d660b5901
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53fafb1e7be45cd4b48ce51e787b6338dd0f7324
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ptr32-ptr64"></a>__ptr32、__ptr64
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -47,7 +42,7 @@ int * __ptr64 p64;
  在 32 位元系統上，使用 `__ptr64` 宣告的指標會截斷為 32 位元指標。 在 64 位元系統上，使用 `__ptr32` 宣告的指標會強制轉型為 64 位元指標。  
   
 > [!NOTE]
->  您無法使用`__ptr32`或`__ptr64`編譯時**/clr: pure**。 否則會產生 `Compiler Error C2472`。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
+>  您無法使用`__ptr32`或`__ptr64`編譯時 **/clr: pure**。 否則會產生 `Compiler Error C2472`。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
 ## <a name="example"></a>範例  
  下列範例將示範如何使用 `__ptr32` 和 `__ptr64` 關鍵字宣告和配置指標。  
@@ -80,5 +75,5 @@ int main()
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [基本類型](../cpp/fundamental-types-cpp.md)

@@ -2,12 +2,9 @@
 title: 搜尋 Windows 用來找出 DLL 的路徑。 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - finding DLLs
 - search paths [C++]
 ms.assetid: 84bfb380-ad7b-4962-b2d0-51b19a45f1bb
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53350ed473226c86dd4fefa93cff376a371dedf7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 166b5fccf6dd231029f79fede837909a49e7fc4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-path-used-by-windows-to-locate-a-dll"></a>Windows 用來找出 DLL 的搜尋路徑
 隱含和明確連結時，Windows 會先搜尋適用於 「 已知 Dll 」，例如 Kernel32.dll 和 User32.dll。 Windows 會搜尋下列順序中的 Dll:  
@@ -55,5 +50,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [決定要使用哪一個連結方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

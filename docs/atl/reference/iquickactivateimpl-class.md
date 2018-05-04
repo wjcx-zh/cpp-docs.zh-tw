@@ -2,11 +2,8 @@
 title: IQuickActivateImpl 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IQuickActivateImpl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6f5bc1798bc8ec40fb6f6d9d22f48c06b19745
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b87427408483a60cf33b46a1a670095d211b3d80
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 類別
 這個類別會結合至單一呼叫容器的控制項初始化。  
@@ -74,7 +69,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ## <a name="requirements"></a>需求  
  **標頭：** atlctl.h  
   
-##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
+##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent  
  擷取目前的顯示大小執行控制項。  
   
 ```
@@ -86,7 +81,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
   
  請參閱[IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) Windows SDK 中。  
   
-##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
+##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate  
  執行快速初始化的控制項正在載入。  
   
 ```
@@ -100,7 +95,7 @@ STDMETHOD(QuickActivate)(
   
  請參閱[IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) Windows SDK 中。  
   
-##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
+##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
  通知控制項的容器已指派給它的顯示空間。  
   
 ```
@@ -112,6 +107,6 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
   
  請參閱[IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

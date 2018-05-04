@@ -1,29 +1,24 @@
 ---
-title: "Makefile 中的命令 |Microsoft 文件"
-ms.custom: 
+title: Makefile 中的命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99e1eb5b4800ff1046ca60d4d4874d386809e2e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="commands-in-a-makefile"></a>Makefile 中的命令
 描述區塊或推斷規則指定一段命令執行的相依性已過時。 NMAKE 會顯示每個命令之前執行，除非 /S， **。無訊息**， **！CMDSWITCHES**，或使用 @。 如果描述區塊後面沒有接命令區塊，NMAKE 會尋找相符的推斷規則。  
@@ -45,5 +40,5 @@ project.obj : project.c project.h ; cl /c project.c
   
  [Makefile 中的內嵌檔](../build/inline-files-in-a-makefile.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [NMAKE 參考](../build/nmake-reference.md)

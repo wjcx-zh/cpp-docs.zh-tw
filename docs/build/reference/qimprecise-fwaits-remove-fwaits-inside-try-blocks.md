@@ -1,13 +1,10 @@
 ---
-title: "-Qimprecise_fwaits （移除內的 fwaits 再試一次） |Microsoft 文件"
-ms.custom: 
+title: -Qimprecise_fwaits （移除內的 fwaits 再試一次） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Qimprecise_fwaits
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c93e60530d870b05c601be4980308feb627b46
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a688f4b9f8f3c9302bb6a49e4b0a94a0e0931b33
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (移除 Try 區域內的 fwaits)
 移除`fwait`命令內部`try`，當您使用時封鎖[/fp： 除了](../../build/reference/fp-specify-floating-point-behavior.md)編譯器選項。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個選項沒有任何作用，如果**/fp： 除了**也未指定。 如果您指定**/fp： 除了**選項，編譯器會插入`fwait`周圍每一行程式碼中命令`try`區塊。 如此一來，編譯器能夠識別會產生例外狀況的程式碼的特定行。 **/Qimprecise_fwaits**移除內部`fwait`離開等候周圍的指示，`try`區塊。 這樣可改善效能，但編譯器只能說出的`try`區塊會導致例外狀況，而不是哪一行。  
+ 這個選項沒有任何作用，如果 **/fp： 除了**也未指定。 如果您指定 **/fp： 除了**選項，編譯器會插入`fwait`周圍每一行程式碼中命令`try`區塊。 如此一來，編譯器能夠識別會產生例外狀況的程式碼的特定行。 **/Qimprecise_fwaits**移除內部`fwait`離開等候周圍的指示，`try`區塊。 這樣可改善效能，但編譯器只能說出的`try`區塊會導致例外狀況，而不是哪一行。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

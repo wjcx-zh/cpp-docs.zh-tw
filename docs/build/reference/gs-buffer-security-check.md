@@ -2,12 +2,9 @@
 title: -GS （緩衝區安全性檢查） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
 - VC.Project.VCCLCompilerTool.BufferSecurityCheck
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-caps.latest.revision: 40
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 6aa1204a6959121b3f6280433c0414f81c038548
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gs-buffer-security-check"></a>/GS (緩衝區安全性檢查)  
   
@@ -47,7 +42,7 @@ ms.lasthandoff: 04/10/2018
   
 ## <a name="remarks"></a>備註  
   
-**/GS**預設為開啟。 如果您預期您的應用程式沒有安全性漏洞時，使用**/GS-**。 如需有關**/GS**，請參閱[編譯器安全性檢查在深度](http://go.microsoft.com/fwlink/p/?linkid=7260)。 如需隱藏緩衝區滿溢偵測的詳細資訊，請參閱[safebuffers](../../cpp/safebuffers.md)。  
+**/GS**預設為開啟。 如果您預期您的應用程式沒有安全性漏洞時，使用 **/GS-**。 如需有關 **/GS**，請參閱[編譯器安全性檢查在深度](http://go.microsoft.com/fwlink/p/?linkid=7260)。 如需隱藏緩衝區滿溢偵測的詳細資訊，請參閱[safebuffers](../../cpp/safebuffers.md)。  
   
 ## <a name="security-checks"></a>安全性檢查  
   
@@ -124,7 +119,7 @@ struct { int a; int b; };
   
 **/GS**編譯器選項不會保護所有的緩衝區滿溢安全性攻擊。 例如，如果您有緩衝區和 vtable 中的物件，緩衝區溢位可能會損毀 vtable。  
   
-即使您使用**/GS**，一定要撰寫安全程式碼有任何緩衝區滿溢嘗試。  
+即使您使用 **/GS**，一定要撰寫安全程式碼有任何緩衝區滿溢嘗試。  
   
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中設定這個編譯器選項  
   
@@ -132,7 +127,7 @@ struct { int a; int b; };
   
      如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  在**屬性頁**對話方塊中，按一下  **C/c + +**資料夾。  
+2.  在**屬性頁**對話方塊中，按一下  **C/c + +** 資料夾。  
   
 3.  按一下**程式碼產生**屬性頁。  
   

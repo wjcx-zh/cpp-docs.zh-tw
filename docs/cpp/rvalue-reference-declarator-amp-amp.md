@@ -1,12 +1,9 @@
 ---
-title: "右值參考宣告子： &amp; &amp; |Microsoft 文件"
-ms.custom: 
+title: 右值參考宣告子： &amp; &amp; |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '&&'
@@ -15,19 +12,17 @@ dev_langs:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35d0efc92e011cfb4d93746efd1b03ac94a0779
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c2f775573693f0897122502d7ca092cfe392ebd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子：&amp;&amp;
+# <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子： &amp;&amp;
 保留右值運算式的參考。  
   
 ## <a name="syntax"></a>語法  
@@ -414,7 +409,7 @@ print_type_and_value<string&>(string& t)
 ## <a name="summary"></a>總結  
  右值參考會區分左值與右值。 它們可以消除不必要的記憶體配置和複製作業，因此能協助您改善應用程式效能。 此外，也可以讓您撰寫接受任意引數並轉送至另一個函式的函式版本，就如同直接呼叫另一個函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)   
  [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)   

@@ -1,12 +1,9 @@
 ---
-title: "標記陳述式 |Microsoft 文件"
-ms.custom: 
+title: 標記陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 139b94ab0287de5449e0b03ca96f5443049cfb5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55d9456a62c97a2edf1523634268582a7f568b79
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="labeled-statements"></a>標記陳述式
 標籤可用來將程式控制權直接轉移給指定的陳述式。  
@@ -190,6 +185,6 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 陳述式概觀](../cpp/overview-of-cpp-statements.md)   
  [switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)

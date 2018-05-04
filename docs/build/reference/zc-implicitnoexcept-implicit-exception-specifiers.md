@@ -1,10 +1,10 @@
 ---
-title: "/Zc: implicitnoexcept （隱含的例外狀況規範） |Microsoft 文件"
-ms.custom: 
+title: '/Zc: implicitnoexcept （隱含的例外狀況規範） |Microsoft 文件'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:implicitNoexcept
 dev_langs:
@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77308d262022f0cddbbb7008fe8277f7768afd68
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 7e420017056d6857a2809ce6eb85fe99b6f3866f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (隱含的例外狀況規範)
 
-當**/zc: implicitnoexcept**指定選項時，編譯器會將隱含[noexcept](../../cpp/noexcept-cpp.md)編譯器定義的特殊成員函式和使用者定義解構函式的例外狀況規範和解除配置器。 根據預設， **/zc: implicitnoexcept**啟用以符合 ISO C + + 11 標準。 關閉此選項會在使用者定義的解構函式和解除配置器，以及編譯器定義的特殊成員函式上停用隱含的 `noexcept`。
+當 **/zc: implicitnoexcept**指定選項時，編譯器會將隱含[noexcept](../../cpp/noexcept-cpp.md)編譯器定義的特殊成員函式和使用者定義解構函式的例外狀況規範和解除配置器。 根據預設， **/zc: implicitnoexcept**啟用以符合 ISO C + + 11 標準。 關閉此選項會在使用者定義的解構函式和解除配置器，以及編譯器定義的特殊成員函式上停用隱含的 `noexcept`。
 
 ## <a name="syntax"></a>語法
 
@@ -39,11 +38,11 @@ ms.lasthandoff: 03/15/2018
 
 編譯器不會為使用明確的 `noexcept` 或 `throw` 規範或 `__declspec(nothrow)` 屬性所宣告的函式產生隱含的例外狀況規範。
 
-根據預設， **/zc: implicitnoexcept**已啟用。 [/ 寬鬆-](permissive-standards-conformance.md)選項不會影響**/zc: implicitnoexcept**。
+根據預設， **/zc: implicitnoexcept**已啟用。 [/ 寬鬆-](permissive-standards-conformance.md)選項不會影響 **/zc: implicitnoexcept**。
 
-如果選項已停用藉由指定**/zc: implicitnoexcept-**，編譯器會產生任何隱含的例外狀況規範。 這種行為與 Visual Studio 2013 相同，其中沒有例外狀況規範的解構函式和解除配置器可能具有 `throw` 陳述式。 根據預設，和當**/zc: implicitnoexcept**指定時，如果`throw`陳述式的執行階段具有隱含的函式中遇到`noexcept(true)`規範時，它會導致立即叫用的`std::terminate`，和不保證例外狀況處理常式的正常回溯行為。 為了協助識別這種情況下，編譯器會產生[編譯器警告 （層級 1） C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)。 如果`throw`是刻意的我們建議您變更函式宣告有明確的`noexcept(false)`規範，而不使用**/zc: implicitnoexcept-**。
+如果選項已停用藉由指定 **/zc: implicitnoexcept-**，編譯器會產生任何隱含的例外狀況規範。 這種行為與 Visual Studio 2013 相同，其中沒有例外狀況規範的解構函式和解除配置器可能具有 `throw` 陳述式。 根據預設，和當 **/zc: implicitnoexcept**指定時，如果`throw`陳述式的執行階段具有隱含的函式中遇到`noexcept(true)`規範時，它會導致立即叫用的`std::terminate`，和不保證例外狀況處理常式的正常回溯行為。 為了協助識別這種情況下，編譯器會產生[編譯器警告 （層級 1） C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)。 如果`throw`是刻意的我們建議您變更函式宣告有明確的`noexcept(false)`規範，而不使用 **/zc: implicitnoexcept-**。
 
-這個範例示範使用者定義解構函式沒有明確的例外狀況規範的行為方式時**/zc: implicitnoexcept**選項會設定或停用。 若要顯示的行為設定時，使用編譯`cl /EHsc /W4 implicitNoexcept.cpp`。 若要顯示停用時的行為，使用編譯`cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`。
+這個範例示範使用者定義解構函式沒有明確的例外狀況規範的行為方式時 **/zc: implicitnoexcept**選項會設定或停用。 若要顯示的行為設定時，使用編譯`cl /EHsc /W4 implicitNoexcept.cpp`。 若要顯示停用時的行為，使用編譯`cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`。
 
 ```cpp
 // implicitNoexcept.cpp
@@ -119,7 +118,7 @@ int main()
 }
 ```
 
-使用預設設定來編譯時**/zc: implicitnoexcept**，此範例會產生以下輸出：
+使用預設設定來編譯時 **/zc: implicitnoexcept**，此範例會產生以下輸出：
 
 ```Output
 ~B Exception caught
@@ -127,7 +126,7 @@ Unexpected throw caused std::terminate
 Exit returning EXIT_FAILURE
 ```
 
-編譯設定時**/zc: implicitnoexcept-**，此範例會產生以下輸出：
+編譯設定時 **/zc: implicitnoexcept-**，此範例會產生以下輸出：
 
 ```Output
 ~B Exception caught
@@ -143,7 +142,7 @@ Exit returning EXIT_SUCCESS
 
 1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
 
-1. 修改**其他選項**屬性，以包括**/zc: implicitnoexcept**或**/zc: implicitnoexcept-** ，然後選擇 **確定**。
+1. 修改**其他選項**屬性，以包括 **/zc: implicitnoexcept**或 **/zc: implicitnoexcept-** ，然後選擇 **確定**。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,9 @@
 title: -D （前置處理器定義） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="d-preprocessor-definitions"></a>/D (前置處理器定義)
 為原始程式檔定義前置處理符號。  
@@ -46,11 +41,11 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  您可以搭配 `#if` 或 `#ifdef` 使用此符號，條件式編譯原始程式碼。 在程式碼中重新定義符號定義或者以 `#undef` 指示詞取消定義之前，符號定義都會保持有效。  
   
- **/D**具有相同的效果`#define`指示詞的原始程式碼檔案中，不同處在於開頭**/D**去除命令列上的引號和`#define`會保留。  
+ **/D**具有相同的效果`#define`指示詞的原始程式碼檔案中，不同處在於開頭 **/D**去除命令列上的引號和`#define`會保留。  
   
- 與符號相關聯的值預設為 1。 例如， **/D** `name`相當於**/D**`name`**= 1**。 在本文中，定義的結尾處範例**測試**示範用來列印`1`。  
+ 與符號相關聯的值預設為 1。 例如， **/D** `name`相當於 **/D**`name`**= 1**。 在本文中，定義的結尾處範例**測試**示範用來列印`1`。  
   
- 編譯使用**/D** `name`  **=** 造成符號沒有相關聯的值。 雖然仍可使用該符號對程式碼進行條件式編譯，但除此以外，毫無意義。 在範例中，如果您使用編譯**/DTEST =**，就會發生錯誤。 這個行為與使用包含或不含某值的 `#define` 相似。  
+ 編譯使用 **/D** `name` **=** 造成符號沒有相關聯的值。 雖然仍可使用該符號對程式碼進行條件式編譯，但除此以外，毫無意義。 在範例中，如果您使用編譯 **/DTEST =**，就會發生錯誤。 這個行為與使用包含或不含某值的 `#define` 相似。  
   
  此命令會定義 TEST.c 中的符號 DEBUG：  
   
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  **CL /D__far = TEST。C**  
   
- **CL**環境變數不能設定為字串，包含等號。 若要使用**/D**搭配**CL**環境變數，您必須指定數字的符號，而不是等號：  
+ **CL**環境變數不能設定為字串，包含等號。 若要使用 **/D**搭配**CL**環境變數，您必須指定數字的符號，而不是等號：  
   
 ```  
 SET CL=/DTEST#0  
@@ -107,7 +102,7 @@ int main( )
 TEST defined 1  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [/U、 /u （取消定義符號）](../../build/reference/u-u-undefine-symbols.md)   

@@ -1,12 +1,9 @@
 ---
-title: "_variant_t 擷取器 |Microsoft 文件"
-ms.custom: 
+title: _variant_t 擷取器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _variant_t.operatordouble
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - operator BYTE
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65049a473f62e728fcb4d74b581a08c0f1723fc9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="variantt-extractors"></a>_variant_t 擷取器
 **Microsoft 特定的**  
@@ -101,29 +96,29 @@ operator unsigned __int64() const;
 ## <a name="remarks"></a>備註  
  從封裝中擷取未經處理資料**VARIANT**。 如果**VARIANT**還不適當的類型， **VariantChangeType**使用嘗試進行轉換，而且在失敗時產生的錯誤：  
   
--   **運算子 short （)**擷取**簡短**整數值。  
+-   **運算子 short （)** 擷取**簡短**整數值。  
   
--   **運算子 long （)**擷取**長**整數值。  
+-   **運算子 long （)** 擷取**長**整數值。  
   
--   **運算子 float （)**擷取**float**數值。  
+-   **運算子 float （)** 擷取**float**數值。  
   
--   **運算子 double （)**擷取**double**整數值。  
+-   **運算子 double （)** 擷取**double**整數值。  
   
 -   **運算子 CY （）**擷取**CY**物件。  
   
--   **運算子 bool （)**擷取`bool`值。  
+-   **運算子 bool （)** 擷取`bool`值。  
   
 -   **運算子 DECIMAL （）**擷取**十進位**值。  
   
 -   **運算子 BYTE （）**擷取**位元組**值。  
   
--   **運算子 _bstr_t （)**擷取封裝在字串`_bstr_t`物件。  
+-   **運算子 _bstr_t （)** 擷取封裝在字串`_bstr_t`物件。  
   
--   **運算子 IDispatch\*（)**從封裝擷取分配介面指標**VARIANT**。 `AddRef`呼叫產生的指標，所以您必須呼叫**發行**將它釋放。  
+-   **運算子 IDispatch\*（)** 從封裝擷取分配介面指標**VARIANT**。 `AddRef` 呼叫產生的指標，所以您必須呼叫**發行**將它釋放。  
   
--   **運算子 IUnknown\*（)**從封裝擷取 COM 介面指標**VARIANT**。 `AddRef`呼叫產生的指標，所以您必須呼叫**發行**將它釋放。  
+-   **運算子 IUnknown\*（)** 從封裝擷取 COM 介面指標**VARIANT**。 `AddRef` 呼叫產生的指標，所以您必須呼叫**發行**將它釋放。  
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [_variant_t 類別](../cpp/variant-t-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "dynamic_cast 運算子 |Microsoft 文件"
-ms.custom: 
+title: dynamic_cast 運算子 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - dynamic_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29add795c7adeca67fc85c7cf3b1b90d17f804fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a87105ad2d52ebbb7749deafadedcd510314038f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 運算子
 將運算元轉換`expression`物件的型別`type-id`。  
@@ -44,9 +39,9 @@ dynamic_cast < type-id > ( expression )
   
  行為中有兩個重大變更`dynamic_cast`在 managed 程式碼：  
   
--   `dynamic_cast`boxed 列舉的基礎類型的指標將會在執行階段，傳回 0 而不是轉換後的游標失敗。  
+-   `dynamic_cast` boxed 列舉的基礎類型的指標將會在執行階段，傳回 0 而不是轉換後的游標失敗。  
   
--   `dynamic_cast`將不會再擲回例外狀況時`type-id`是實值類型，以轉換在執行階段失敗的內部指標。  轉型現在會傳回 0 的指標值，而不是擲回。  
+-   `dynamic_cast` 將不會再擲回例外狀況時`type-id`是實值類型，以轉換在執行階段失敗的內部指標。  轉型現在會傳回 0 的指標值，而不是擲回。  
   
  如果`type-id`是模稜兩可存取直接或間接基底類別指標`expression`，唯一的子物件類型的指標`type-id`是結果。 例如:   
   
@@ -300,6 +295,6 @@ in GlobalTest
 Can't cast to C  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [轉型運算子](../cpp/casting-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)

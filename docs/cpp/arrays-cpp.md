@@ -1,12 +1,9 @@
 ---
-title: "陣列 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 陣列 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>陣列 (C++)
 陣列是同類物件的集合。 最簡單的陣列案例就是向量，可以依照下列順序宣告：  
@@ -51,13 +46,13 @@ decl-specifier identifier [ constant-expression ]
   
 -   識別碼。  
   
--   方括號括住的整數類資料類型常數運算式**[]。** 如果使用其他方括號宣告多個維度，常數運算式可以省略第一方括號組。  
+-   方括號括住的整數類資料類型常數運算式 **[]。** 如果使用其他方括號宣告多個維度，常數運算式可以省略第一方括號組。  
   
 -   括住常數運算式的選擇性額外括號。  
   
  3. 選擇性的初始設定式。  請參閱[初始設定式](../cpp/initializers.md)。  
   
- 陣列中元素的數目是由常數運算式提供。 陣列中的第一個項目是第 0 個元素，而最後一個項目 (*n*-1) 項目，其中 *n* 是陣列可以包含的元素數目。 *常數運算式*必須屬於整數型別，而且必須大於 0。 只有當陣列中的最後一個欄位的大小為零的陣列是合法`struct`或**union**而且已啟用 Microsoft 擴充功能 (/Ze) 時。  
+ 陣列中元素的數目是由常數運算式提供。 陣列中的第一個項目是第 0 個元素，而最後一個項目 (*n*-1) 項目，其中*n*是陣列可以包含的元素數目。 *常數運算式*必須屬於整數型別，而且必須大於 0。 只有當陣列中的最後一個欄位的大小為零的陣列是合法`struct`或**union**而且已啟用 Microsoft 擴充功能 (/Ze) 時。  
   
  下列範例將示範如何在執行階段定義陣列：  
   
@@ -92,7 +87,7 @@ int i2[5][7];
   
  它會指定類型為 `int`、在概念上以五列七行的二維矩陣排列的陣列，如下圖所示：  
   
- ![多重 &#45;的概念性配置; 二維陣列](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![多重的概念性配置&#45;二維陣列](../cpp/media/vc38rc1.gif "vc38RC1")  
 多維陣列的概念性配置  
   
  在宣告中的多維陣列初始設定式清單 (如所述[初始設定式](../cpp/initializers.md))，可以省略指定第一個維度界限的常數運算式。 例如:   
@@ -180,5 +175,5 @@ The minimum cost to Market 3 is: 17.29
 ## <a name="comments"></a>註解  
  若撰寫 `FindMinToMkt` 函式，加入新的工廠時就不需要變更任何程式碼，只需要重新編譯。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  

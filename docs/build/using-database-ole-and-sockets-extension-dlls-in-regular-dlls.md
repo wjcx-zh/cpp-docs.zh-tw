@@ -2,12 +2,9 @@
 title: 在 MFC 的標準 Dll 中使用資料庫、 OLE 和通訊端 MFC 擴充 Dll |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f902f3b512b5684cf185829fdf4346b8851ff8ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>在 MFC 的標準 Dll 中使用資料庫、 OLE 和通訊端 MFC 擴充 Dll
 當您使用 MFC 擴充 DLL 從標準的 MFC DLL，如果 MFC 擴充 DLL 不有線網路到**CDynLinkLibrary**物件鏈結的標準 MFC DLL，您可能會遇到一或多個一組相關的問題。 因為 MFC 資料庫、 OLE 和通訊端的偵錯版本支援的 Dll 會實作為 MFC 擴充 Dll，您可能會看到類似的問題，如果您使用這些 MFC 功能，即使您未明確使用任何您自己的 MFC 擴充 Dll。 某些徵兆如下：  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 -   `DllGetClassObject``DllCanUnloadNow`，而`UpdateRegistry`， `Revoke`， `RevokeAll`，和`RegisterAll`的成員函式`COleObjectFactory`找不到 MFC 擴充 DLL 中定義的類別處理站。  
   
--   `AfxDoForAllClasses`不適用於任何 MFC 擴充 DLL 中的類別。  
+-   `AfxDoForAllClasses` 不適用於任何 MFC 擴充 DLL 中的類別。  
   
 -   標準 MFC 資料庫、 通訊端或 / / OLE 資源無法載入。 例如， **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) 會傳回空字串，即使是標準的 MFC DLL 正確使用 MFC 資料庫類別。  
   
@@ -102,7 +97,7 @@ extern "C" void WINAPI InitYourExtDLL()
 }  
 ```  
   
- 請務必匯出**InitYourExtDLL**函式。 可使用**__declspec （dllexport)**或 DLL 的.def 檔案，如下所示：  
+ 請務必匯出**InitYourExtDLL**函式。 可使用 **__declspec （dllexport)** 或 DLL 的.def 檔案，如下所示：  
   
 ```  
 // YourExtDLL.Def:  
@@ -158,5 +153,5 @@ BOOL CYourRegularDLL::InitInstance()
   
 -   [MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 延伸模組 DLL](../build/extension-dlls.md)

@@ -2,11 +2,8 @@
 title: 建構函式 （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c6e99d76c7ff35e1d3be9db743f69b63e78490a
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: d34dff9c04491c25b2babfd4e7f0574bf7c6c609
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -88,7 +83,7 @@ int main()
 
 建構函式可以選擇性地有成員初始設定式清單，用來初始化建構函式主體執行前的類別成員。 (請注意，成員初始設定式清單不是相同的動作*初始設定式清單*型別的[std:: initializer_list\<T >](../standard-library/initializer-list-class.md)。)
 
-使用成員初始設定式清單，最好透過指派建構函式主體中的值，因為它直接初始化成員。 在下列範例將示範成員初始設定式清單會包含所有**identifier(argument)**冒號後面的運算式：
+使用成員初始設定式清單，最好透過指派建構函式主體中的值，因為它直接初始化成員。 在下列範例將示範成員初始設定式清單會包含所有**identifier(argument)** 冒號後面的運算式：
 
 ```cpp
   

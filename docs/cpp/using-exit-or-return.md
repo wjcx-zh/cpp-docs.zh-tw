@@ -1,12 +1,9 @@
 ---
-title: "使用結束或傳回 |Microsoft 文件"
-ms.custom: 
+title: 使用結束或傳回 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Exit
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - exit function
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f5c9fdb17811206732811db4e27006dc5e0ed84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-exit-or-return"></a>結束 exit 或 return
 當您呼叫**結束**或執行`return`陳述式從**主要**，靜態物件會初始化其反向順序終結。 下列範例將示範這類初始化和清除如何運作：  
@@ -82,5 +77,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [其他終止考量](../cpp/additional-termination-considerations.md)

@@ -1,12 +1,9 @@
 ---
-title: "bad_cast 例外狀況 |Microsoft 文件"
-ms.custom: 
+title: bad_cast 例外狀況 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bad_cast
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7880a01f247d5dc3cce5a6f247297ef65289367
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c09754e44b2cf1d7bda4bde35b8d76335d96711
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="badcast-exception"></a>bad_cast 例外狀況
 若轉型為參考類型失敗，則 `bad_cast` 運算子會擲回 `dynamic_cast` 例外狀況。  
@@ -95,7 +90,7 @@ Circle& ref_circle = circle_instance;
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [C++ 例外狀況處理](../cpp/cpp-exception-handling.md)

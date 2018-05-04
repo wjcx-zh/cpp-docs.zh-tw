@@ -1,13 +1,10 @@
 ---
-title: "-DELAYSIGN （部分簽署組件） |Microsoft 文件"
-ms.custom: 
+title: -DELAYSIGN （部分簽署組件） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /delaysign
 - VC.Project.VCLinkerTool.DelaySign
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DELAYSIGN linker option
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67e4da2d85d94854ec0802450b41333d6577175
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eda1f426f24dd63684fd6831e2efef6838c43a3d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (部分簽署組件)
 ```  
@@ -42,13 +37,13 @@ ms.lasthandoff: 12/21/2017
  指定組件不應該部分的簽署。  
   
 ## <a name="remarks"></a>備註  
- 使用**/DELAYSIGN**如果您只想要的公開金鑰置於組件。 預設值是**/delaysign: no**。  
+ 使用 **/DELAYSIGN**如果您只想要的公開金鑰置於組件。 預設值是 **/delaysign: no**。  
   
  **/DELAYSIGN**選項沒有任何作用，除非搭配[/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)或[/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)。  
   
  當您要求完整簽署的組件時，編譯器會雜湊包含資訊清單 (組件中繼資料) 的檔案，並使用私密金鑰簽署該雜湊。 所產生的數位簽章會儲存在包含資訊清單的檔案中。 延遲簽署組件時，連結器不會不會計算並簽章，但保留空間儲存在檔案中，以便稍後再加入簽章。  
   
- 例如，使用**/DELAYSIGN**可讓測試人員將組件放在全域快取中。 測試之後，您可以將私密金鑰放在組件的完整簽署組件。  
+ 例如，使用 **/DELAYSIGN**可讓測試人員將組件放在全域快取中。 測試之後，您可以將私密金鑰放在組件的完整簽署組件。  
   
  請參閱[強式名稱組件 （組件簽署） (C + + /CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)和[延遲簽署組件](/dotnet/framework/app-domains/delay-sign-assembly)如需有關簽署組件。  
   
@@ -78,6 +73,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

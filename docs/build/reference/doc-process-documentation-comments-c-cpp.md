@@ -1,13 +1,10 @@
 ---
-title: "-/doc （處理文件註解） （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: -/doc （處理文件註解） （C/c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - /doc
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8737c0e33d33fe062d9a07f18d9005e58463f5b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 899ff6b774c365ce9df3019ef5ba6d08d0d7b93d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (處理文件註解) (C/C++)
 在原始程式碼檔，並建立.xdc 檔的每個來源的程式碼檔案具有文件註解，請讓編譯器處理文件註解。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  展開**組態屬性**節點。  
   
-3.  展開**C/c + +**節點。  
+3.  展開**C/c + +** 節點。  
   
 4.  選取**輸出檔**屬性頁。  
   
@@ -68,6 +63,6 @@ ms.lasthandoff: 12/21/2017
   
 1.  請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

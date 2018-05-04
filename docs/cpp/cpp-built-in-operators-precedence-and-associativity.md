@@ -2,11 +2,8 @@
 title: C + + 內建運算子、 優先順序和關聯性 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4d2bb339d4147e6ea82c713d83a046e0e9780bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C + + 內建運算子、 優先順序和關聯性
 
@@ -70,7 +65,7 @@ C++ 語言包含所有 C 運算子，並且新增了數個新的運算子。 運
 |[終結物件](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[轉型](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**群組 4 優先順序，由左到右的順序關聯性**|
-|[-成員指標 （物件或指標）](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[。 &#42;或-> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|[-成員指標 （物件或指標）](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[.&#42;或->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**群組 5 優先順序，由左到右的順序關聯性**|
 |[乘法](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[除法](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
@@ -118,7 +113,7 @@ C++ 語言包含所有 C 運算子，並且新增了數個新的運算子。 運
 |**群組 18 優先順序，由左到右的順序關聯性**|
 |[逗號](../cpp/comma-operator.md)|[、](../cpp/comma-operator.md)|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [運算子多載](operator-overloading.md)
 

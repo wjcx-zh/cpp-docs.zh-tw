@@ -1,13 +1,10 @@
 ---
-title: "建置瀏覽資訊檔： 概觀 |Microsoft 文件"
-ms.custom: 
+title: 建置瀏覽資訊檔： 概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5b369d5a708e0ee56df635234c68ee88a31af48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-browse-information-files-overview"></a>建置瀏覽資訊檔：概觀
 若要建立的符號瀏覽資訊時，編譯器會建立每個來源檔案的.sbr 檔案在您的專案，然後 BSCMAKE。EXE 會串連成一個.bsc 檔案的.sbr 檔案。  
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
   
 2.  所有專案都建置後，請與所有.sbr 檔案都執行 BSCMAKE，做為輸入。 使用萬用字元。 比方說，如果您在專案目錄 C:\X、 C:\Y 和 C:\Z 以及您想要將它們合併成一個.bsc 檔所有.sbr 檔案，然後使用 BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*。sbr /o c:\whatever_directory\combined.bsc 建置結合的.bsc 檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   
  [BSCMAKE 參考](../../build/reference/bscmake-reference.md)

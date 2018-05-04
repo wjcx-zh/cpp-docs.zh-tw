@@ -1,28 +1,25 @@
 ---
-title: "逐步解說： 編譯 C 程式命令列上的 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 編譯 C 程式命令列上的 |Microsoft 文件
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.technology:
+- cpp-tools
+ms.topic: conceptual
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-caps.latest.revision: "46"
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7520e2d78c924ee21c489d2e8327c4bda9b973aa
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 033c29ff9871a427222b59fbf5c8350794a9bbe2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>逐步解說： 編譯 C 程式命令列上
 Visual c + + 包含 C 編譯器可讓您建立的所有項目從基本的主控台程式到完整 Windows 桌面應用程式、 行動應用程式，以及更多。  
@@ -166,7 +163,7 @@ Visual c + + 包含 C 編譯器可讓您建立的所有項目從基本的主控�
   
  Visual c + + C 編譯器會通常與 ISO C99 標準相容，但不是完全相容。 在大部分情況下，可移植的 C 程式碼會編譯，並如預期般執行。 Visual c + + 不支援 ISO C11 中大部分的變更。 Visual c + + 編譯器已被取代特定的程式庫函式和 POSIX 函式名稱。 支援的函式，但慣用的名稱已變更。 如需詳細資訊，請參閱[CRT 中安全性功能](../c-runtime-library/security-features-in-the-crt.md)和[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [逐步解說： 建立標準 c + + 程式 （c + +）](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)   
  [C 語言參考](../c-language/c-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)   

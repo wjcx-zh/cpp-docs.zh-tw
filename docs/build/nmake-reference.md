@@ -1,13 +1,10 @@
 ---
-title: "NMAKE 參考 |Microsoft 文件"
-ms.custom: 
+title: NMAKE 參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - program execution [C++]
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326f54db7f9edc30e924750143fdcdb78c02357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07ffd955400b1b27efc192a7fe0df4ef31164cda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nmake-reference"></a>NMAKE 參考
 Microsoft Program Maintenance Utility (NMAKE.EXE) 是隨附於 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 的命令列工具，會根據描述檔案包含的命令來建置專案。  
@@ -50,7 +45,7 @@ Microsoft Program Maintenance Utility (NMAKE.EXE) 是隨附於 [!INCLUDE[vsprvs]
   
  [Makefile 前置處理](../build/makefile-preprocessing.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在命令列上建置 C/c + + 程式碼](../build/building-on-the-command-line.md)   
  [C/c + + 建置工具](../build/reference/c-cpp-build-tools.md)   
  [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)   

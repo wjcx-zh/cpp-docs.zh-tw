@@ -1,12 +1,9 @@
 ---
-title: "執行緒之間傳輸例外狀況 |Microsoft 文件"
-ms.custom: 
+title: 執行緒之間傳輸例外狀況 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61847500e9e4fbcfc0912e51afe599ed31601ec2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transporting-exceptions-between-threads"></a>在執行緒之間傳輸例外狀況
 Visual c + + 支援*傳輸例外狀況*從另一個執行緒。 傳輸例外狀況可以讓您在某個執行緒攔截例外狀況，再使該例外狀況看似在另一個執行緒中擲回。 舉例來說，您可以使用此功能撰寫多執行緒應用程式，其中由主執行緒處理其次要執行緒所擲回的所有例外狀況。 傳輸例外狀況對於建立平行程式設計程式庫或系統的開發人員最有用。 若要實作傳輸例外狀況，Visual c + + 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型別和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函式。  
@@ -92,12 +87,12 @@ namespace std
   
 -   **/EHa**編譯器選項和`catch`陳述式可以傳輸 SEH 和 c + + 例外狀況。  
   
--   **/EHa**， **/EHs**，和**/EHsc**編譯器選項和`catch`陳述式可以傳輸 c + + 例外狀況。  
+-   **/EHa**， **/EHs**，和 **/EHsc**編譯器選項和`catch`陳述式可以傳輸 c + + 例外狀況。  
   
--   **/CLR**或**/CLR: pure**編譯器選項和`catch`陳述式可以傳輸 c + + 例外狀況。 **/CLR**編譯器選項代表的規格**/EHa**選項。 請注意，編譯器不支援傳輸 Managed 例外狀況， 這是因為 managed 例外狀況衍生自[System.Exception 類別](../standard-library/exception-class.md)，已經是您可以使用通用語言執行平台的功能在執行緒之間移動的物件。  
+-   **/CLR**或 **/CLR: pure**編譯器選項和`catch`陳述式可以傳輸 c + + 例外狀況。 **/CLR**編譯器選項代表的規格 **/EHa**選項。 請注意，編譯器不支援傳輸 Managed 例外狀況， 這是因為 managed 例外狀況衍生自[System.Exception 類別](../standard-library/exception-class.md)，已經是您可以使用通用語言執行平台的功能在執行緒之間移動的物件。  
   
     > [!IMPORTANT]
-    >  我們建議您指定**/EHsc**編譯器選項並只攔截 c + + 例外狀況。 您會在安全性威脅如果您使用**/EHa**或**/CLR**編譯器選項和**攔截**陳述式，以省略符號*例外狀況宣告*(`catch(...)`)。 也許您會使用 `catch` 陳述式擷取特定的例外狀況。 不過，`catch(...)` 陳述式會擷取所有 C++ 和 SEH 例外狀況，其中包括嚴重的非預期例外狀況。 如果您忽略非預期的例外狀況或處理不當，惡意程式碼可能會利用此機會破壞程式的安全性。  
+    >  我們建議您指定 **/EHsc**編譯器選項並只攔截 c + + 例外狀況。 您會在安全性威脅如果您使用 **/EHa**或 **/CLR**編譯器選項和**攔截**陳述式，以省略符號*例外狀況宣告*(`catch(...)`)。 也許您會使用 `catch` 陳述式擷取特定的例外狀況。 不過，`catch(...)` 陳述式會擷取所有 C++ 和 SEH 例外狀況，其中包括嚴重的非預期例外狀況。 如果您忽略非預期的例外狀況或處理不當，惡意程式碼可能會利用此機會破壞程式的安全性。  
   
 ## <a name="usage"></a>使用量  
  下列各節說明如何使用傳輸例外狀況`exception_ptr`型別，而`current_exception`， `rethrow_exception`，和`make_exception_ptr`函式。  
@@ -128,7 +123,7 @@ namespace std
   
  **SEH 例外狀況：**  
   
- 如果您使用**/EHa**編譯器選項，您可以在 c + + 攔截 SEH 例外狀況`catch`區塊。 `current_exception` 函式會傳回參考 SEH 例外狀況的 `exception_ptr` 物件。 和`rethrow_exception`函式擲回 SEH 例外狀況，如果您呼叫具有 thetransported`exception_ptr`物件做為其引數。  
+ 如果您使用 **/EHa**編譯器選項，您可以在 c + + 攔截 SEH 例外狀況`catch`區塊。 `current_exception` 函式會傳回參考 SEH 例外狀況的 `exception_ptr` 物件。 和`rethrow_exception`函式擲回 SEH 例外狀況，如果您呼叫具有 thetransported`exception_ptr`物件做為其引數。  
   
  如果您在 SEH `current_exception` 終止處理常式、`exception_ptr` 例外狀況處理常式或 `__finally` 篩選條件運算式中呼叫 `__except` 函式，該函式會傳回 Null `__except`。  
   
@@ -256,7 +251,7 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="requirements"></a>需求  
  **標頭：**\<exception>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH （例外狀況處理模型）](../build/reference/eh-exception-handling-model.md)   
- [/clr （common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (通用語言執行平台編譯)](../build/reference/clr-common-language-runtime-compilation.md)

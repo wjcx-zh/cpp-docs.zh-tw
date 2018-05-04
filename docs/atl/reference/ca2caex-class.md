@@ -2,11 +2,8 @@
 title: CA2CAEX 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2CAEX
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f579716cff70d0c9f20ea0fa0133dcb4d86c8db3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 類別
 這個類別由字串轉換巨集`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。  
@@ -91,7 +86,7 @@ class CA2CAEX
 ## <a name="requirements"></a>需求  
  **標頭：** atlconv.h  
   
-##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX  
  建構函式。  
   
 ```
@@ -109,7 +104,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>備註  
  建立做為轉換所需的緩衝區。  
   
-##  <a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX  
  解構函式。  
   
 ```
@@ -119,14 +114,14 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>備註  
  釋放已配置的緩衝區。  
   
-##  <a name="m_psz"></a>CA2CAEX::m_psz  
+##  <a name="m_psz"></a>  CA2CAEX::m_psz  
  儲存在來源字串的資料成員。  
   
 ```
 LPCSTR m_psz;
 ```  
   
-##  <a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
+##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR  
  轉換運算子。  
   
 ```  
@@ -136,7 +131,7 @@ operator LPCSTR() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回文字字串做為類型`LPCSTR`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CA2AEX 類別](../../atl/reference/ca2aex-class.md)   
  [CA2WEX 類別](../../atl/reference/ca2wex-class.md)   
  [CW2AEX 類別](../../atl/reference/cw2aex-class.md)   

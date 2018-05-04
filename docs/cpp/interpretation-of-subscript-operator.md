@@ -1,12 +1,9 @@
 ---
-title: "註標運算子的解譯 |Microsoft 文件"
-ms.custom: 
+title: 註標運算子的解譯 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - interpreting subscript operators [C++]
 - operators [C++], interpretation of subscript
 ms.assetid: 8852ca18-9d5b-43f7-b8bd-abc89364fbf2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 564ec6bf4fafe2116c41c0f817e2754e1de12abd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9bba312c6969acf95be8899f58f65e31c75386c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interpretation-of-subscript-operator"></a>註標運算子的解譯
 就如同其他運算子，註標運算子一樣 (**[]**) 可以由使用者重新加以定義。 註標運算子的預設行為 (如果未多載) 是使用下列方法結合陣列名稱和註標：  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  **((**   
  ***陣列名稱*) + （**   
- ***註標*1***max*2  *\* max*3*...max*n)  **+** *註標*2  *\* max*3*...max*n)。 。 。 *+**註標*n))  
+ ***註標*1***max*2  *\* max*3 *...max*n) **+** *註標*2  *\* max*3 *...max*n)。   。 。 *+* *註標*n))  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [陣列](../cpp/arrays-cpp.md)

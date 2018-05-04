@@ -1,13 +1,10 @@
 ---
-title: "-O 選項 （最佳化程式碼） |Microsoft 文件"
-ms.custom: 
+title: -O 選項 （最佳化程式碼） |Microsoft 文件
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.Optimization
 - /o
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - performance, cle.exe compiler
 - cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7da04384d0c4ea00c2eaaedbcf0ec770e216289
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83ddebec9db7a02db40ef31c89c7ff48a66cf665
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="o-options-optimize-code"></a>/O 選項 (最佳化程式碼)
 
@@ -50,15 +45,15 @@ ms.lasthandoff: 12/21/2017
 
 - [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) （預設值） 會指示編譯器針對速度最佳化優先於大小最佳化。
 
-- [/Ox](../../build/reference/ox-full-optimization.md)是選取數個特別強調速度最佳化的組合選項。 它是嚴格的子集**/O2**最佳化。
+- [/Ox](../../build/reference/ox-full-optimization.md)是選取數個特別強調速度最佳化的組合選項。 它是嚴格的子集 **/O2**最佳化。
 
 - [/Oy](../../build/reference/oy-frame-pointer-omission.md)隱藏快速函式呼叫的呼叫堆疊上框架指標的建立。
 
 ## <a name="remarks"></a>備註
 
-您可以結合多個**/O**成單一選項陳述式的選項。 例如， **/Odi**相同**/Od /Oi**。 某些選項互斥，如果一起使用，會造成編譯器錯誤。 請參閱個別**/O**選項的詳細資訊。
+您可以結合多個 **/O**成單一選項陳述式的選項。 例如， **/Odi**相同 **/Od /Oi**。 某些選項互斥，如果一起使用，會造成編譯器錯誤。 請參閱個別 **/O**選項的詳細資訊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [編譯器選項](../../build/reference/compiler-options.md)   
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

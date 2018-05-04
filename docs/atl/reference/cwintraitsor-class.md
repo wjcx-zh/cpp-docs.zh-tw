@@ -2,11 +2,8 @@
 title: CWinTraitsOR 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWinTraitsOR
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6cf07fcd6d3703ffb6b483ba19a2d12520cb0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3df5081d8584d821737350176740b6fd067ac78f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR 類別
 這個類別會提供建立視窗物件時所使用之樣式標準化的方法。  
@@ -72,7 +67,7 @@ class CWinTraitsOR
 ## <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
   
-##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle  
  呼叫此函式可擷取 （使用邏輯 OR 運算子） 的標準的樣式組合`CWinTraits`物件和所指定的預設樣式`t_dwStyle`。  
   
 ```
@@ -86,7 +81,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>傳回值  
  傳入的樣式的組合`dwStyle`和預設值是由`t_dwStyle`，使用邏輯 OR 運算子。  
   
-##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle  
  呼叫此函式可擷取 （使用邏輯 OR 運算子） 的擴充樣式的組合`CWinTraits`物件和所指定的預設樣式`t_dwStyle`。  
   
 ```
@@ -100,7 +95,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 ### <a name="return-value"></a>傳回值  
  傳入的延伸樣式的組合`dwExStyle`及所指定的預設`t_dwExStyle`，使用邏輯 OR 運算子  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [了解視窗特性](../../atl/understanding-window-traits.md)
 

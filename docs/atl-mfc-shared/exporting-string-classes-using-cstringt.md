@@ -1,29 +1,24 @@
 ---
-title: "匯出字串類別使用 CStringT |Microsoft 文件"
-ms.custom: 
+title: 匯出字串類別使用 CStringT |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd662b149f56cf0d6bd5e7a3c912e0ecd14f21b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7510b1f44f49d17211c71419f4dde5a6e6a78974
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>匯出使用 CStringT 的字串類別
 在過去，MFC 開發人員必須衍生自`CString`他們自己的字串類別特製化。 在 Microsoft Visual c + +.NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md)類別已被呼叫的樣板類別[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。 這會提供數個優點：  
@@ -32,7 +27,7 @@ ms.lasthandoff: 12/21/2017
   
 -   與新`CStringT`樣板類別，您可以自訂`CString`行為使用的範本參數所指定字元特性，類似於 c + + 標準程式庫中的範本。  
   
--   當您匯出您自己的字串類別使用`CStringT`，編譯器也會自動匯出`CString`基底類別。 因為`CString`本身是樣板類別，它可能會具現化編譯器使用時，除非編譯器可感知的`CString`從 DLL 匯入。 如果您已從 Visual c + + 6.0 移轉專案，Visual c + +.net，您可能會看到乘以定義的連結器的符號錯誤`CString`因為衝突而`CString`匯入從 DLL，並在本機上具現化的版本。 若要這樣做的正確方式如下所述。 如需有關此問題的詳細資訊，請參閱知識庫文件中，「 連結錯誤，當您匯入 CString 衍生類別 」 (Q309801) 在[http://support.microsoft.com/default.aspx](http://support.microsoft.com/default.aspx)。  
+-   當您匯出您自己的字串類別使用`CStringT`，編譯器也會自動匯出`CString`基底類別。 因為`CString`本身是樣板類別，它可能會具現化編譯器使用時，除非編譯器可感知的`CString`從 DLL 匯入。 如果您已從 Visual c + + 6.0 移轉專案，Visual c + +.net，您可能會看到乘以定義的連結器的符號錯誤`CString`因為衝突而`CString`匯入從 DLL，並在本機上具現化的版本。 若要這樣做的正確方式如下所述。 如需有關此問題的詳細資訊，請參閱知識庫文件中，「 連結錯誤，當您匯入 CString 衍生類別 」 (Q309801) 在[ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx)。  
   
  下列案例會導致連結器產生的符號錯誤多次定義的類別。 假設您要匯出`CString`-衍生的類別 (`CMyString`) 從 MFC 擴充 DLL:  
   
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="related-topics"></a>相關主題  
  [CStringT 類別](../atl-mfc-shared/reference/cstringt-class.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CStringT](../atl-mfc-shared/using-cstringt.md)   
  [使用 CString](../atl-mfc-shared/using-cstring.md)
 

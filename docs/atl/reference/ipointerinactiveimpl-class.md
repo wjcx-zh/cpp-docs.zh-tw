@@ -2,11 +2,8 @@
 title: IPointerInactiveImpl 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPointerInactiveImpl
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - inactive objects
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe45700a941a8a59439b816124728f43e5f54f44
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28eb8d6db520bd1c2d5de5642098263508c0f6b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl 類別
 這個類別會實作**IUnknown**和[IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)介面方法。  
@@ -77,7 +72,7 @@ class IPointerInactiveImpl
 ## <a name="requirements"></a>需求  
  **標頭：** atlctl.h  
   
-##  <a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>  IPointerInactiveImpl::GetActivationPolicy  
  擷取目前物件的啟用原則。  
   
 ```
@@ -90,7 +85,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) Windows SDK 中。  
   
-##  <a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove  
  通知物件，將滑鼠指標移過它，表示物件可以引發滑鼠事件。  
   
 ```
@@ -107,7 +102,7 @@ HRESULT OnInactiveMouseMove(
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) Windows SDK 中。  
   
-##  <a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor  
  將滑鼠指標設定為非作用中的物件。  
   
 ```
@@ -125,5 +120,5 @@ HRESULT OnInactiveSetCursor(
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

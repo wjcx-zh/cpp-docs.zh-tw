@@ -1,12 +1,9 @@
 ---
-title: "CTokenPrivileges 類別 |Microsoft 文件"
-ms.custom: 
+title: CTokenPrivileges 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenPrivileges
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 類別
 這個類別是包裝函式**TOKEN_PRIVILEGES**結構。  
@@ -58,7 +53,7 @@ class CTokenPrivileges
 |名稱|描述|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|建構函式。|  
-|[CTokenPrivileges::~CTokenPrivileges](#dtor)|解構函式。|  
+|[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -134,7 +129,7 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="remarks"></a>備註  
  `CTokenPrivileges`物件可以選擇性地建立使用**TOKEN_PRIVILEGES**結構或先前已定義`CTokenPrivileges`物件。  
   
-##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges  
+##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges  
  解構函式。  
   
 ```
@@ -294,7 +289,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>傳回值  
  傳回已更新`CTokenPrivileges`物件。  
   
-##  <a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
+##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
  將值轉換為指標**TOKEN_PRIVILEGES**結構。  
   
 ```  
@@ -304,7 +299,7 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 ### <a name="remarks"></a>備註  
  將值轉換為指標[TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
  [TOKEN_PRIVILEGES](http://msdn.microsoft.com/library/windows/desktop/aa379630)   
  [LUID](http://msdn.microsoft.com/library/windows/desktop/aa379261)   

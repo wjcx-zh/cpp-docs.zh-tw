@@ -2,11 +2,8 @@
 title: CWin32Heap 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWin32Heap
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67856242c63639101185eb6f6dcfd4902f0ef48c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b26d979ccb99d3d99bc91af03c4836603d31c01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 Win32 堆積配置函式。  
@@ -77,7 +72,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|堆積物件的控制代碼。|  
   
 ## <a name="remarks"></a>備註  
- `CWin32Heap`會實作使用 Win32 堆積配置函式，包括記憶體配置方法[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)和[HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701)。 不同於其他堆積類別，`CWin32Heap`需要配置記憶體之前，必須提供有效堆積控制代碼： 其他類別預設都會使用處理序堆積。 控制代碼可提供給建構函式或[cwin32heap:: Attach](#attach)方法。 請參閱[CWin32Heap::CWin32Heap](#cwin32heap)方法，如需詳細資訊。  
+ `CWin32Heap` 會實作使用 Win32 堆積配置函式，包括記憶體配置方法[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)和[HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701)。 不同於其他堆積類別，`CWin32Heap`需要配置記憶體之前，必須提供有效堆積控制代碼： 其他類別預設都會使用處理序堆積。 控制代碼可提供給建構函式或[cwin32heap:: Attach](#attach)方法。 請參閱[CWin32Heap::CWin32Heap](#cwin32heap)方法，如需詳細資訊。  
   
 ## <a name="example"></a>範例  
  請參閱範例的[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)。  
@@ -90,7 +85,7 @@ class CWin32Heap : public IAtlMemMgr
 ## <a name="requirements"></a>需求  
  **標頭：** atlmem.h  
   
-##  <a name="allocate"></a>Cwin32heap:: Allocate  
+##  <a name="allocate"></a>  Cwin32heap:: Allocate  
  從堆積物件配置記憶體區塊。  
   
 ```
@@ -109,7 +104,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用實作[HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)。  
   
-##  <a name="attach"></a>Cwin32heap:: Attach  
+##  <a name="attach"></a>  Cwin32heap:: Attach  
  將堆積物件附加至現有的堆積。  
   
 ```
@@ -126,7 +121,7 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ### <a name="remarks"></a>備註  
  如果`bTakeOwnership`為 TRUE，`CWin32Heap`物件負責刪除堆積控制代碼。  
   
-##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
+##  <a name="cwin32heap"></a>  CWin32Heap::CWin32Heap  
  建構函式。  
   
 ```
@@ -168,7 +163,7 @@ CWin32Heap(
   
  第三個參數預設為 0，如此可讓堆積隨需求擴大。 請參閱[HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx)取得的記憶體大小和旗標的說明。  
   
-##  <a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
+##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  解構函式。  
   
 ```
@@ -178,7 +173,7 @@ CWin32Heap(
 ### <a name="remarks"></a>備註  
  終結的堆積控制代碼，如果`CWin32Heap`物件都有堆積的擁有權。  
   
-##  <a name="detach"></a>CWin32Heap::Detach  
+##  <a name="detach"></a>  CWin32Heap::Detach  
  卸離堆積物件，從現有的堆積。  
   
 ```
@@ -188,7 +183,7 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>傳回值  
  先前已附加之物件的堆積中傳回的控制代碼。  
   
-##  <a name="free"></a>Cwin32heap:: Free  
+##  <a name="free"></a>  Cwin32heap:: Free  
  釋放先前配置的堆積中[cwin32heap:: Allocate](#allocate)或[cwin32heap:: Reallocate](#reallocate)。  
   
 ```
@@ -199,7 +194,7 @@ virtual void Free(void* p) throw();
  `p`  
  要釋放的記憶體區塊指標。 NULL 是有效的值，且不做任何動作。  
   
-##  <a name="getsize"></a>CWin32Heap::GetSize  
+##  <a name="getsize"></a>  CWin32Heap::GetSize  
  傳回從堆積物件配置的記憶體區塊的大小。  
   
 ```
@@ -213,14 +208,14 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>傳回值  
  傳回的大小，以位元組為單位配置的記憶體區塊。  
   
-##  <a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
+##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap  
  用來判斷目前的擁有權，儲存在堆積控制代碼的旗標[m_hHeap](#m_hheap)。  
   
 ```
 bool m_bOwnHeap;
 ```  
   
-##  <a name="m_hheap"></a>CWin32Heap::m_hHeap  
+##  <a name="m_hheap"></a>  CWin32Heap::m_hHeap  
  堆積物件的控制代碼。  
   
 ```
@@ -230,7 +225,7 @@ HANDLE m_hHeap;
 ### <a name="remarks"></a>備註  
  變數，用來儲存堆積物件的控制代碼。  
   
-##  <a name="reallocate"></a>Cwin32heap:: Reallocate  
+##  <a name="reallocate"></a>  Cwin32heap:: Reallocate  
  從堆積物件重新配置記憶體區塊。  
   
 ```
@@ -250,7 +245,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  如果`p`是 NULL，它會假設尚未配置記憶體區塊和[cwin32heap:: Allocate](#allocate)呼叫時，使用的引數`nBytes`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [IAtlMemMgr 類別](../../atl/reference/iatlmemmgr-class.md)   
  [CLocalHeap 類別](../../atl/reference/clocalheap-class.md)   

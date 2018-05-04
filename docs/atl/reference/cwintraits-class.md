@@ -1,12 +1,9 @@
 ---
-title: "CWinTraits 類別 |Microsoft 文件"
-ms.custom: 
+title: CWinTraits 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWinTraits
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5e71f969f86aee419a0ff9d3701f4d43be5c32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea1eafc6376c44a09d13fb513d41f222048708d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwintraits-class"></a>CWinTraits 類別
 這個類別會提供建立視窗物件時所使用之樣式標準化的方法。  
@@ -83,7 +78,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 ## <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
   
-##  <a name="getwndstyle"></a>CWinTraits::GetWndStyle  
+##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle  
  呼叫此函式可擷取的標準的樣式`CWinTraits`物件。  
   
 ```
@@ -97,7 +92,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>傳回值  
  物件的標準的視窗樣式。  
   
-##  <a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
+##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle  
  呼叫此函式可擷取的延伸的樣式`CWinTraits`物件。  
   
 ```
@@ -111,7 +106,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 ### <a name="return-value"></a>傳回值  
  物件的延伸的視窗樣式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別成員](http://msdn.microsoft.com/en-us/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [了解視窗特性](../../atl/understanding-window-traits.md)

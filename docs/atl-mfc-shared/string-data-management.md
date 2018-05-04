@@ -2,28 +2,23 @@
 title: 字串資料管理 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7a17b1b34375fcb45019bcaf8878757288a290
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: acf14ebec5417179a94d0a6ffefdb473966f0c2e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-data-management"></a>字串資料管理
 Visual c + + 提供數種方式管理字串資料：  
@@ -53,10 +48,10 @@ Visual c + + 提供數種方式管理字串資料：
  A`CString`物件都代表一連串字元的變數數目。 `CString` 物件可以視為的字元陣列。  
   
 ##  <a name="_core_unicode_and_mbcs_provide_portability"></a> Unicode 和 MBCS 提供可攜性  
- MFC 3.0 版和更新版本中，MFC，包括`CString`，已啟用 Unicode 和多位元組字元集 (MBCS)。 這個支援可讓您更輕鬆地撰寫可攜式應用程式，您可以建置為 ANSI 或 Unicode 字元。 若要啟用此可攜性，在每個字元`CString`物件屬於類型**TCHAR**，其定義為`wchar_t`如果定義符號**_UNICODE**當您建置應用程式，或做為`char`如果不是。 A`wchar_t`字元是 16 位元寬。 如果您使用符號來建置啟用 MBCS **_MBCS**定義。 其中一種建置 MFC **_MBCS**符號 （針對 NAFX 文件庫中） 或**_UNICODE** （適用於 UAFX 文件庫中） 的符號定義。  
+ MFC 3.0 版和更新版本中，MFC，包括`CString`，已啟用 Unicode 和多位元組字元集 (MBCS)。 這個支援可讓您更輕鬆地撰寫可攜式應用程式，您可以建置為 ANSI 或 Unicode 字元。 若要啟用此可攜性，在每個字元`CString`物件屬於類型**TCHAR**，其定義為`wchar_t`如果定義符號 **_UNICODE**當您建置應用程式，或做為`char`如果不是。 A`wchar_t`字元是 16 位元寬。 如果您使用符號來建置啟用 MBCS **_MBCS**定義。 其中一種建置 MFC **_MBCS**符號 （針對 NAFX 文件庫中） 或 **_UNICODE** （適用於 UAFX 文件庫中） 的符號定義。  
   
 > [!NOTE]
->  `CString`中的範例並隨附文件常值字串的格式正確的 Unicode 可攜性的字串顯示上，使用**_T**巨集，它會轉譯到表單的常值字串：  
+>  `CString`中的範例並隨附文件常值字串的格式正確的 Unicode 可攜性的字串顯示上，使用 **_T**巨集，它會轉譯到表單的常值字串：  
   
  `L"literal string"`  
   
@@ -66,12 +61,12 @@ Visual c + + 提供數種方式管理字串資料：
  [!code-cpp[NVC_ATLMFC_Utilities#187](../atl-mfc-shared/codesnippet/cpp/string-data-management_1.cpp)]  
   
 > [!NOTE]
->  如果轉換為 Unicode 字串**_UNICODE**定義，或為 ANSI 字串如果不是。 如需詳細資訊，請參閱文章[Unicode 和多位元組字元集 (MBCS) 支援](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。  
+>  如果轉換為 Unicode 字串 **_UNICODE**定義，或為 ANSI 字串如果不是。 如需詳細資訊，請參閱文章[Unicode 和多位元組字元集 (MBCS) 支援](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。  
   
  A`CString`物件最多可以儲存**INT_MAX** (2,147,483,647) 個字元。 **TCHAR**資料類型用來取得或設定內的個別字元`CString`物件。 與不同的字元陣列，是`CString`類別具有內建記憶體配置功能。 這可讓`CString`物件以視需要自動成長 (亦即，您不必擔心成長`CString`物件大小以容納較長的字串)。  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> CStrings 和 const char 指標  
- A`CString`物件也可以做為常值的 C 樣式字串 ( `PCXSTR`，這是與相同**const char\*** 如果是不在 Unicode)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)轉換運算子可讓`CString`來自由取代函式呼叫中的字元指標的物件。 **CString (LPCWSTR** `pszSrc` **)**建構函式可讓用來取代的字元指標`CString`物件。  
+ A`CString`物件也可以做為常值的 C 樣式字串 ( `PCXSTR`，這是與相同**const char\*** 如果是不在 Unicode)。 [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr)轉換運算子可讓`CString`來自由取代函式呼叫中的字元指標的物件。 **CString (LPCWSTR** `pszSrc` **)** 建構函式可讓用來取代的字元指標`CString`物件。  
   
  不會嘗試對摺疊`CString`物件。 如果您讓這兩個`CString`物件包含`Chicago`，例如，在字元`Chicago`會儲存在兩個地方。 （這可能不是 true 的未來版本的 MFC，因此您不應依賴它。）  
   

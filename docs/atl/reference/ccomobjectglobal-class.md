@@ -2,11 +2,8 @@
 title: CComObjectGlobal 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectGlobal
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d5264a2ab8e1bbc4c3f4eac4d83d096d91e8846
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3614962d3bebada0c63b7fe804b52efaa965c6a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal 類別
 這個類別會管理上包含的模組的參考計數程式`Base`物件。  
@@ -71,7 +66,7 @@ class CComObjectGlobal : public Base
 |[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|包含**HRESULT**在建構期間傳回`CComObjectGlobal`物件。|  
   
 ## <a name="remarks"></a>備註  
- `CComObjectGlobal`管理上包含的模組的參考計數程式`Base`物件。 `CComObjectGlobal`可確保只要模組並不會釋放，不會刪除您的物件。 整個模組上的參考計數歸零時，就只會移除您的物件。  
+ `CComObjectGlobal` 管理上包含的模組的參考計數程式`Base`物件。 `CComObjectGlobal` 可確保只要模組並不會釋放，不會刪除您的物件。 整個模組上的參考計數歸零時，就只會移除您的物件。  
   
  例如，使用`CComObjectGlobal`，class factory 可以保存通用的全域物件共用的所有用戶端。  
   
@@ -83,7 +78,7 @@ class CComObjectGlobal : public Base
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="addref"></a>CComObjectGlobal::AddRef  
+##  <a name="addref"></a>  CComObjectGlobal::AddRef  
  物件的參考計數遞增 1。  
   
 ```
@@ -94,9 +89,9 @@ STDMETHOD_(ULONG, AddRef)();
  值，可用於診斷和測試。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，`AddRef`呼叫**_Module::Lock**，其中**_Module**的全域執行個體[CComModule](../../atl/reference/ccommodule-class.md)或從其衍生的類別。  
+ 根據預設，`AddRef`呼叫 **_Module::Lock**，其中 **_Module**的全域執行個體[CComModule](../../atl/reference/ccommodule-class.md)或從其衍生的類別。  
   
-##  <a name="ccomobjectglobal"></a>CComObjectGlobal::CComObjectGlobal  
+##  <a name="ccomobjectglobal"></a>  CComObjectGlobal::CComObjectGlobal  
  建構函式。 呼叫`FinalConstruct`，然後設定[m_hResFinalConstruct](#m_hresfinalconstruct)至`HRESULT`傳回`FinalConstruct`。  
   
 ```
@@ -106,7 +101,7 @@ CComObjectGlobal(void* = NULL));
 ### <a name="remarks"></a>備註  
  如果您有不衍生基底類別從[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)，您必須提供自己`FinalConstruct`方法。 此解構函式會呼叫 `FinalRelease`。  
   
-##  <a name="dtor"></a>CComObjectGlobal:: ~ CComObjectGlobal  
+##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal  
  解構函式。  
   
 ```
@@ -116,14 +111,14 @@ CComObjectGlobal();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源並呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)。  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectGlobal::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectGlobal::m_hResFinalConstruct  
  包含`HRESULT`呼叫`FinalConstruct`在建構期間`CComObjectGlobal`物件。  
   
 ```
 HRESULT m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectGlobal::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectGlobal::QueryInterface  
  擷取要求的介面指標的指標。  
   
 ```
@@ -143,7 +138,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>備註  
  `QueryInterface` 只處理 COM 對應表格中的介面。  
   
-##  <a name="release"></a>CComObjectGlobal::Release  
+##  <a name="release"></a>  CComObjectGlobal::Release  
  遞減參考計數物件的以 1。  
   
 ```
@@ -154,9 +149,9 @@ STDMETHOD_(ULONG, Release)();
  在偵錯組建**發行**傳回值，這個值可用於診斷和測試。 在非偵錯組建**發行**一律傳回 0。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，**發行**呼叫**_Module::Unlock**，其中**_Module**的全域執行個體[CComModule](../../atl/reference/ccommodule-class.md)或從其衍生的類別。  
+ 根據預設，**發行**呼叫 **_Module::Unlock**，其中 **_Module**的全域執行個體[CComModule](../../atl/reference/ccommodule-class.md)或從其衍生的類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComObjectStack 類別](../../atl/reference/ccomobjectstack-class.md)   
  [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
  [Ccomobject< 類別](../../atl/reference/ccomobject-class.md)   

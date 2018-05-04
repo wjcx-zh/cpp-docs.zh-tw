@@ -1,12 +1,9 @@
 ---
-title: "IPersistStreamInitImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IPersistStreamInitImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistStreamInitImpl
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe1bcd8d8198304c92584f01522048c4d29b827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a51dd5e198a86b7bb17a6182c1edb098f23a8e47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl 類別
 這個類別會實作**IUnknown**和提供的預設實作[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID  
  擷取物件的 CLSID。  
   
 ```
@@ -90,7 +85,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>備註  
  請參閱[ipersist:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
-##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
+##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
  擷取儲存物件的資料所需的資料流的大小。  
   
 ```
@@ -103,7 +98,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ### <a name="remarks"></a>備註  
  請參閱[IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) Windows SDK 中。  
   
-##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
+##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew  
  初始化新建立的物件。  
   
 ```
@@ -113,7 +108,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>備註  
  請參閱[IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) Windows SDK 中。  
   
-##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
+##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
  檢查自上次儲存後，是否已變更物件的資料。  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(IsDirty)();
 ### <a name="remarks"></a>備註  
  請參閱[IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) Windows SDK 中。  
   
-##  <a name="load"></a>IPersistStreamInitImpl::Load  
+##  <a name="load"></a>  IPersistStreamInitImpl::Load  
  從指定的資料流載入物件的屬性。  
   
 ```
@@ -135,7 +130,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
   
  請參閱[IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) Windows SDK 中。  
   
-##  <a name="save"></a>IPersistStreamInitImpl::Save  
+##  <a name="save"></a>  IPersistStreamInitImpl::Save  
  將物件的屬性儲存至指定的資料流。  
   
 ```
@@ -147,6 +142,6 @@ STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
   
  請參閱[IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [儲存體和資料流](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
  [類別概觀](../../atl/atl-class-overview.md)

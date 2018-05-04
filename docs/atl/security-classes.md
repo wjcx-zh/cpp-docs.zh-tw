@@ -1,29 +1,24 @@
 ---
-title: "安全性類別 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 安全性類別 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - security classes [C++]
 ms.assetid: 0477f1a4-c1af-4c4f-bbca-08f7b844e028
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d0697ab069e1799ce53471367b40d3f772883d7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8c3ba3675196e0e6e3564beeca5bc76a57e8903a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-classes"></a>安全性類別
 這些類別是常見的 Win32 安全性類別和物件的包裝函式。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 02/14/2018
   
 -   [CTokenPrivileges](../atl/reference/ctokenprivileges-class.md)這個類別是包裝函式**TOKEN_PRIVILEGES**結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)   
  [安全性全域函式](../atl/reference/security-global-functions.md)
 

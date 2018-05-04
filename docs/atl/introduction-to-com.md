@@ -1,29 +1,24 @@
 ---
 title: COM 簡介 |Microsoft 文件
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - COM
 ms.assetid: 120735d9-db71-4ad3-a730-ce576ea2354e
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a8953949e722265afabc22410174b84c017276c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 938d0c45cae5ec9a2988f77f539af1a3d5513b83
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-com"></a>COM 簡介
 COM 是基本 「 物件模型 」 上的 ActiveX 控制項和 OLE 已內建。 COM，允許物件來公開其功能給其他元件和主控件應用程式。 它會定義如何物件會公開本身和跨處理序和跨網路，此公開資訊的運作方式。 COM 也會定義物件的生命週期。  
@@ -42,7 +37,7 @@ COM 是基本 「 物件模型 」 上的 ActiveX 控制項和 OLE 已內建。 
   
 -   [彙總](../atl/aggregation.md)— 可以在一個物件的方式使用另一個。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [COM 和 ATL 簡介](../atl/introduction-to-com-and-atl.md)   
  [元件物件模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)
 

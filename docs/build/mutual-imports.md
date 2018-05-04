@@ -1,13 +1,10 @@
 ---
-title: "交互匯入 |Microsoft 文件"
-ms.custom: 
+title: 交互匯入 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>交互匯入
 在匯入是雙向 （或循環），匯出或匯入到另一個可執行檔的檔案將呈現的複雜性。 例如，兩個 Dll 從匯入符號彼此相互遞迴函式類似。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="limitations-of-afxext"></a>_AFXEXT 的限制  
  您可以使用`_AFXEXT`您 MFC 擴充 Dll 只要您不需要多個圖層的 MFC 擴充 Dll 的前置處理器符號。 如果您有 MFC 擴充 Dll 呼叫，或衍生自類別，在您自己的 MFC 擴充 Dll，然後從 MFC 類別衍生，您必須使用您自己的前置處理器符號，以避免模稜兩可。  
   
- 問題是，在 Win32 中，您必須明確宣告為任何資料**__declspec （dllexport)**是否要從 DLL 匯出和**__declspec （dllimport)**是否要從 DLL 匯入。 當您定義`_AFXEXT`，MFC 標頭，確定**AFX_EXT_CLASS**定義正確。  
+ 問題是，在 Win32 中，您必須明確宣告為任何資料 **__declspec （dllexport)** 是否要從 DLL 匯出和 **__declspec （dllimport)** 是否要從 DLL 匯入。 當您定義`_AFXEXT`，MFC 標頭，確定**AFX_EXT_CLASS**定義正確。  
   
  當您有多個圖層，一個符號例如**AFX_EXT_CLASS**不足夠，因為 MFC 擴充 DLL 可能會匯出新的類別，以及從另一個 MFC 擴充 DLL 匯入其他類別。 若要解決此問題，請使用特殊的前置處理器符號，指出您要建置 DLL 本身而非使用 DLL。 例如，假設有兩個 MFC 擴充 Dll、 A.dll 和 B.dll。 每個分別匯出 A.h 和 B.h 中的某些類別。 B.dll 會使用 A.dll 類別。 標頭檔看起來可能像這樣：  
   
@@ -87,7 +82,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- A.dll 建置時，它內建與`/D A_IMPL`而且 B.dll 建置時，它會根據`/D B_IMPL`。 每個 dll，請使用不同的符號`CExampleB`匯出和`CExampleA`建置 B.dll 時匯入。 `CExampleA`建置 A.dll 時匯出並匯入由 B.dll （或其他用戶端） 時。  
+ A.dll 建置時，它內建與`/D A_IMPL`而且 B.dll 建置時，它會根據`/D B_IMPL`。 每個 dll，請使用不同的符號`CExampleB`匯出和`CExampleA`建置 B.dll 時匯入。 `CExampleA` 建置 A.dll 時匯出並匯入由 B.dll （或其他用戶端） 時。  
   
  使用內建時，無法執行這種類型的分層**AFX_EXT_CLASS**和`_AFXEXT`前置處理器符號。 上述的技巧來解決這個問題，方式沒有不同的是建置其 Active 技術、 資料庫和網路 MFC 擴充 Dll 時，會使用 MFC 的機制。  
   
@@ -138,5 +133,5 @@ class CExampleA : public CObject
   
 -   [LIB 公用程式和 /DEF 選項](../build/reference/lib-reference.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [匯入和匯出](../build/importing-and-exporting.md)

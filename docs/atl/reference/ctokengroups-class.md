@@ -1,12 +1,9 @@
 ---
-title: "CTokenGroups 類別 |Microsoft 文件"
-ms.custom: 
+title: CTokenGroups 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenGroups
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a5a958fcc1bd8c26599272774c86cd64fa2c720
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 8ccf73cdeac0e7522551c6ddb7bef6b0122297ca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 類別
 這個類別是包裝函式**TOKEN_GROUPS**結構。  
@@ -125,7 +120,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="remarks"></a>備註  
  `CTokenGroups`物件可以選擇性地建立使用**TOKEN_GROUPS**結構或先前已定義`CTokenGroups`物件。  
   
-##  <a name="dtor"></a>  CTokenGroups::~CTokenGroups  
+##  <a name="dtor"></a>  CTokenGroups:: ~ CTokenGroups  
  解構函式。  
   
 ```
@@ -242,7 +237,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="return-value"></a>傳回值  
  傳回已更新`CTokenGroups`物件。  
   
-##  <a name="operator_const_token_groups__star"></a>CTokenGroups::operator const TOKEN_GROUPS *  
+##  <a name="operator_const_token_groups__star"></a>  CTokenGroups::operator const TOKEN_GROUPS *  
  將值轉換為指標**TOKEN_GROUPS**結構。  
   
 ```  
@@ -252,7 +247,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 ### <a name="remarks"></a>備註  
  將值轉換為指標[TOKEN_GROUPS](http://msdn.microsoft.com/library/windows/desktop/aa379624)結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
  [CSid 類別](../../atl/reference/csid-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)   

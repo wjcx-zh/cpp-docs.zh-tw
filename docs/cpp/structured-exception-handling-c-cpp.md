@@ -2,11 +2,8 @@
 title: 結構化例外處理 （C/c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 雖然 Windows 和 Visual C++ 支援結構化例外狀況處理 (SEH)，但是建議您使用 ISO 標準 C++ 例外狀況處理，因為它可提升程式碼的可攜性和彈性。 儘管如此，在現有程式碼中或針對特定類型的程式，您仍然必須使用 SEH。  
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="grammar"></a>文法  
  *try 陳述式除了*:  
   
- `__try`*複合陳述式*  
+ `__try` *複合陳述式*  
   
- `__except`( `expression` )*複合陳述式*  
+ `__except` ( `expression` )*複合陳述式*  
   
 ## <a name="remarks"></a>備註  
  使用 SEH，您可以確定資源 (例如記憶體區塊和檔案) 在執行意外終止時正確。 使用不依賴 `goto` 陳述式的簡潔結構化程式碼，或使用傳回碼的複雜測試，也可以處理特定問題 (例如，記憶體不足)。  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
 -   [在 C++ 中使用結構化例外狀況處理](../cpp/using-structured-exception-handling-with-cpp.md)  
   
 ## <a name="example"></a>範例  
- 如同之前所述，解構函式會呼叫區域物件，如果您在 c + + 程式中使用 SEH，並使用編譯的**/EH**選項與特定修飾詞，例如**/EHsc**和**/EHa**. 不過，如果您同時使用 C++ 例外狀況，則在執行期間的行為可能會不如預期。 下列範例示範這些行為差異。  
+ 如同之前所述，解構函式會呼叫區域物件，如果您在 c + + 程式中使用 SEH，並使用編譯的 **/EH**選項與特定修飾詞，例如 **/EHsc**和 **/EHa**. 不過，如果您同時使用 C++ 例外狀況，則在執行期間的行為可能會不如預期。 下列範例示範這些行為差異。  
   
 ```cpp  
 #include <stdio.h>  
@@ -126,14 +121,14 @@ int main()
   
 ```  
   
- 如果您使用**/EHsc**來編譯此程式碼，但本機測試控制項`CPPEX`是未定義，還有不會執行`TestClass`解構函式，且輸出顯示如下：  
+ 如果您使用 **/EHsc**來編譯此程式碼，但本機測試控制項`CPPEX`是未定義，還有不會執行`TestClass`解構函式，且輸出顯示如下：  
   
 ```Output  
 Triggering SEH exception  
 Executing SEH __except block  
 ```  
   
- 如果您使用**/EHsc**編譯程式碼和`CPPEX`定義使用`/DCPPEX`（以便擲回 c + + 例外狀況），則`TestClass`解構函式執行並輸出看起來像這樣：  
+ 如果您使用 **/EHsc**編譯程式碼和`CPPEX`定義使用`/DCPPEX`（以便擲回 c + + 例外狀況），則`TestClass`解構函式執行並輸出看起來像這樣：  
   
 ```Output  
 Throwing C++ exception  
@@ -141,7 +136,7 @@ Destroying TestClass!
 Executing SEH __except block  
 ```  
   
- 如果您使用**/EHa**編譯程式碼，`TestClass`解構函式執行，不論是否擲回例外狀況使用`std::throw`或使用 SEH 來觸發例外狀況 (`CPPEX`未定義)。 輸出顯示如下：  
+ 如果您使用 **/EHa**編譯程式碼，`TestClass`解構函式執行，不論是否擲回例外狀況使用`std::throw`或使用 SEH 來觸發例外狀況 (`CPPEX`未定義)。 輸出顯示如下：  
   
 ```Output  
 Throwing C++ exception  
@@ -153,7 +148,7 @@ Executing SEH __except block
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [\<exception>](../standard-library/exception.md)   

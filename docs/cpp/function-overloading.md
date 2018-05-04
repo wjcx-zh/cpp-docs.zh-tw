@@ -1,12 +1,9 @@
 ---
-title: "函式多載 |Microsoft 文件"
-ms.custom: 
+title: 函式多載 |Microsoft 文件
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>函式多載
 C++ 允許在相同範圍內指定多個同名的函式。 這種讀取稱為*多載*函式。 多載函式可讓您提供不同的語意，根據，函式的型別和引數數目。 
   
- 例如，**列印**函式採用**std:: string**引數可能會執行完全不同工作使用的型別引數的其中一個**double**。 多載可讓您不必使用名稱，例如`print_string`或`print_double`。 在編譯時期，編譯器會選擇要使用哪一個多載根據引數由呼叫端傳遞的型別。  如果您呼叫**print(42.0)**則**void 列印 (雙 d)**函式會叫用。 如果您呼叫**列印 ("hello world")**則**void print(std::string)**將叫用多載。
+ 例如，**列印**函式採用**std:: string**引數可能會執行完全不同工作使用的型別引數的其中一個**double**。 多載可讓您不必使用名稱，例如`print_string`或`print_double`。 在編譯時期，編譯器會選擇要使用哪一個多載根據引數由呼叫端傳遞的型別。  如果您呼叫**print(42.0)** 則**void 列印 (雙 d)** 函式會叫用。 如果您呼叫**列印 ("hello world")** 則**void print(std::string)** 將叫用多載。
 
 您可以多載成員函式和非成員函式。 下表將說明 C++ 使用函式宣告的哪些部分區分在相同範圍內具有相同名稱的函式群組。  
   
@@ -261,26 +256,26 @@ volatile Over&
   
 |轉換來源類型|轉換目標類型|  
 |-----------------------|---------------------|  
-|*type-name*|*type-name* **&**|  
-|*type-name* **&**|*type-name*|  
+|*type-name*|*型別名稱* **&**|  
+|*型別名稱* **&**|*type-name*|  
 |*type-name* **[ ]**|*type-name\***|  
-|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
-|*type-name*|**const** *type-name*|  
-|*type-name*|`volatile` *type-name*|  
+|*type-name* **(** *argument-list* **)**|**(** *\*型別名稱* **) (** *引數清單* **)**|  
+|*type-name*|**const** *型別名稱*|  
+|*type-name*|`volatile` *型別名稱*|  
 |*type-name\***|**const** *type-name\***|  
-|*type-name\***|`volatile` *type-name\**|  
+|*type-name\***|`volatile` *型別名稱\**|  
   
  轉換嘗試執行的序列如下：  
   
 1.  完全相符。 呼叫函式所使用的類型與函式原型中所宣告的類型之間完全相符的項目，必定是最相符項目。 一般轉換的序列會分類為完全相符項目。 不過，不進行任何這類轉換的序列通常會比轉換的序列更理想：  
   
-    -   從指標指向**const** (`type`  **\*** 至**const** `type`  **\*** ).  
+    -   從指標指向**const** (`type` **\*** 至**const** `type` **\***).  
   
-    -   從指標指向`volatile`(`type`  **\*** 至`volatile` `type`  **\*** )。  
+    -   從指標指向`volatile`(`type` **\*** 至`volatile` `type` **\***)。  
   
-    -   從參考到**const** (`type`  **&** 至**const** `type`  **&** ).  
+    -   從參考到**const** (`type` **&** 至**const** `type` **&**).  
   
-    -   從參考到`volatile`(`type`  **&** 至`volatile` `type`  **&** )。  
+    -   從參考到`volatile`(`type` **&** 至`volatile` `type` **&**)。  
   
 2.  使用提升的相符項目。 未分類為完全相符，只包含整數提升，從轉換的任何序列**float**至**double**，以及一般轉換的分類為使用提升的相符項目。 雖然不如任何完全相符項目一般合適，但是使用提升的相符項目與使用標準轉換的相符項目相比之下仍較為理想。  
   
@@ -408,7 +403,7 @@ obj.name
  `->*` 和 `.*` (成員的指標) 運算子的左運算元處理方式，與具有相符引數的 `.` 和 `->` (成員選取) 運算子相同。  
 
 ## <a name="ref-qualifiers"></a> 成員函式的 ref 限定詞  
-Ref 限定詞會使其可多載成員函式，根據是否指向的物件由`this`是右值或左值。  這項功能可用來避免不必要的複製作業在案例中，您選擇不提供存取的資料指標。 例如，假設類別**C**初始化其建構函式中的部分資料，並在成員函式會傳回該資料的複本**get_data()**。 如果型別的物件**C**是右值，為即將終結，則編譯器會選擇**get_data() （& s) （& s)**多載，會將資料，而不是將它複製。 
+Ref 限定詞會使其可多載成員函式，根據是否指向的物件由`this`是右值或左值。  這項功能可用來避免不必要的複製作業在案例中，您選擇不提供存取的資料指標。 例如，假設類別**C**初始化其建構函式中的部分資料，並在成員函式會傳回該資料的複本**get_data()**。 如果型別的物件**C**是右值，為即將終結，則編譯器會選擇**get_data() （& s) （& s)** 多載，會將資料，而不是將它複製。 
 
 ```cpp
 #include <iostream>

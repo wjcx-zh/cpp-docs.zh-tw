@@ -1,12 +1,9 @@
 ---
-title: "複製建構函式和複製指派運算子 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 複製建構函式和複製指派運算子 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1292240e5343c461142e8c6029c277175f6a62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>複製建構函式和複製指派運算子 (C++)
 > [!NOTE]
@@ -66,7 +61,7 @@ b = a;
   
  如果您未宣告複製建構函式，則編譯器會產生一個成員複製建構函式。  如果您未宣告複製指派建構函式，則編譯器會產生一個成員複製指派運算子。 宣告複製建構函式不會隱藏編譯器產生的複製指派運算子，反之亦然。 如果您實作任一種，建議您一併實作另一種，如此程式碼的意義才會明確。  
    
- 複製建構函式接受類型引數*類別名稱***&**，其中*類別名稱*是為其定義建構函式的類別名稱。 例如:   
+ 複製建構函式接受類型引數 * 類別-name ***&**，其中*類別名稱*是為其定義建構函式的類別名稱。 例如:   
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -83,14 +78,14 @@ int main()
 ```  
   
 > [!NOTE]
->  請複製建構函式的引數的型別*常數的類別名稱* **&** 盡可能。 這樣可避免複製建構函式意外變更做為複製來源的物件。 它也可讓複製**const**物件。  
+>  讓複製建構函式的引數的型別*const 類別-名稱 * * * （& s)** 請盡可能。 這樣可避免複製建構函式意外變更做為複製來源的物件。 它也可讓複製**const**物件。  
   
 ## <a name="compiler-generated-copy-constructors"></a>編譯器產生的複製建構函式  
- 編譯器產生的複製建構函式，像是使用者定義的複製建構函式中，有類型的單一引數 」 參考*類別名稱*。 」 例外狀況是當所有的基底類別和成員類別將複製建構函式宣告為接受單一引數的型別**const** *類別名稱***&**。 在這種情況下，編譯器產生的複製建構函式的引數也是**const**。  
+ 編譯器產生的複製建構函式，像是使用者定義的複製建構函式中，有類型的單一引數 」 參考*類別名稱*。 」 例外狀況是當所有的基底類別和成員類別將複製建構函式宣告為接受單一引數的型別**const** * 類別-name ***&**。 在這種情況下，編譯器產生的複製建構函式的引數也是**const**。  
   
  當複製建構函式的引數類型不**const**，藉由複製初始化**const**物件會產生錯誤。 反向執行則不成立： 如果引數是**const**，您可以藉由複製不是物件初始化**const**。  
   
- 編譯器產生的指派運算子遵循相同的模式與**const。** 則會接受單一引數的型別*類別名稱* **&** 除非所有基底和成員類別中的指派運算子的型別引數**const** *類別名稱 （& s)。* 在此情況下，類別產生的指派運算子會接受**const**引數。  
+ 編譯器產生的指派運算子遵循相同的模式與**const。** 則會接受單一引數的型別*類別-名稱 * * * （& s)** 除非所有基底和成員類別中的指派運算子的型別引數**const** *類別名稱 （& s)。* 在此情況下，類別產生的指派運算子會接受**const**引數。  
   
 > [!NOTE]
 >  虛擬基底類別是由複製建構函式進行初始化、由編譯器所產生或使用者所定義時，只會在建構時初始化一次。  

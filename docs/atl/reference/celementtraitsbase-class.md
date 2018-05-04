@@ -1,12 +1,9 @@
 ---
-title: "CElementTraitsBase 類別 |Microsoft 文件"
-ms.custom: 
+title: CElementTraitsBase 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CElementTraitsBase
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9bbea69d2265563a0da4fda8b45cc09234a7789
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a0b9f3945d9bcfa0c77855c94ec7247cb9804cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 類別
 這個類別會提供預設複製並移動的集合類別的方法。  
@@ -70,7 +65,7 @@ class CElementTraitsBase
 ## <a name="requirements"></a>需求  
  **標頭：** atlcoll.h  
   
-##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
+##  <a name="copyelements"></a>  CElementTraitsBase::CopyElements  
  呼叫此方法以複製項目儲存在集合類別物件。  
   
 ```
@@ -93,21 +88,21 @@ static void CopyElements(
 ### <a name="remarks"></a>備註  
  來源和目的地的項目不應該重疊。  
   
-##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
+##  <a name="inargtype"></a>  CElementTraitsBase::INARGTYPE  
  要用來將項目加入至集合的資料類型。  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
-##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
+##  <a name="outargtype"></a>  CElementTraitsBase::OUTARGTYPE  
  用來從集合擷取項目的資料類型。  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
-##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
+##  <a name="relocateelements"></a>  CElementTraitsBase::RelocateElements  
  呼叫這個方法，即可重新定位項目儲存在集合類別物件。  
   
 ```
@@ -130,5 +125,5 @@ static void RelocateElements(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大多數的資料類型。 如果要移動的物件包含它們自己的成員的指標，必須覆寫這個方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

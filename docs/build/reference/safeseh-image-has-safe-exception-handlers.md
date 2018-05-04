@@ -1,13 +1,10 @@
 ---
-title: "-/SAFESEH （影像擁有安全例外狀況處理常式） |Microsoft 文件"
-ms.custom: 
+title: -/SAFESEH （影像擁有安全例外狀況處理常式） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /SAFESEH
 dev_langs:
@@ -17,30 +14,28 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57a882e3a421d03b2edf97c9fb4bf2f352e5d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54d13e6922650f0193d4bbc3469d4acf25904234
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (影像擁有安全例外狀況處理常式)
 ```  
 /SAFESEH[:NO]  
 ```  
   
- 當**/SAFESEH**指定，則連結器只會產生一個映像，是否它也可以產生映像的安全例外狀況處理常式的表格。 此資料表會指定哪些例外狀況處理常式都適用於映像的作業系統。  
+ 當 **/SAFESEH**指定，則連結器只會產生一個映像，是否它也可以產生映像的安全例外狀況處理常式的表格。 此資料表會指定哪些例外狀況處理常式都適用於映像的作業系統。  
   
  **/SAFESEH**適用於 x86 連結時才有效目標。 **/SAFESEH**已經有註明的例外狀況處理常式的平台不支援。 例如，在 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 和 ARM 上，所有例外狀況處理常式都已在 PDATA 中註明。 ML64.exe 可支援將發出 SEH 資訊 （XDATA 和 PDATA） 的註解為映像，可讓您透過 ml64 函式回溯。 請參閱[MASM (ml64.exe) x64](../../assembler/masm/masm-for-x64-ml64-exe.md)如需詳細資訊。  
   
- 如果**/SAFESEH**未指定，如果所有模組都都與安全例外狀況處理功能相容，連結器會產生安全例外狀況處理常式的表格的映像。 如果任何模組不相容於安全例外狀況處理功能，產生的映像不會包含安全例外狀況處理常式的表格。 如果[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE 或其中一個 EFI_ * 選項，指定連結器不會嘗試產生一個映像包含表格的安全例外狀況處理常式，兩者的那些子系統可以進行時使用的資訊。  
+ 如果 **/SAFESEH**未指定，如果所有模組都都與安全例外狀況處理功能相容，連結器會產生安全例外狀況處理常式的表格的映像。 如果任何模組不相容於安全例外狀況處理功能，產生的映像不會包含安全例外狀況處理常式的表格。 如果[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE 或其中一個 EFI_ * 選項，指定連結器不會嘗試產生一個映像包含表格的安全例外狀況處理常式，兩者的那些子系統可以進行時使用的資訊。  
   
- 如果**/SAFESEH:NO**指定，則連結器不會產生安全例外狀況處理常式的表格的映像，即使所有模組都都與安全例外狀況處理功能相容。  
+ 如果 **/SAFESEH:NO**指定，則連結器不會產生安全例外狀況處理常式的表格的映像，即使所有模組都都與安全例外狀況處理功能相容。  
   
  連結器無法產生影像的最常見原因是因為一或多個連結器輸入檔 （模組） 無法與安全例外狀況處理常式的功能相容。 模組不相容於安全例外狀況處理常式的一個常見原因是因為它以舊版的 Visual c + + 編譯器建立。  
   
@@ -123,6 +118,6 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

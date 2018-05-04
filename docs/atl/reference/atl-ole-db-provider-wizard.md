@@ -1,12 +1,9 @@
 ---
-title: "ATL OLE DB 提供者精靈 |Microsoft 文件"
-ms.custom: 
+title: ATL OLE DB 提供者精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.provider.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660f70be8ec4ac1efcec056c694d0e2fc3256071
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 827b46de299341f23d0b799a5ed44b8923bbc182
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供者精靈
 此精靈會建立撰寫 OLE DB 提供者的類別。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
  **簡短名稱**  
  輸入要建立的提供者的簡短名稱。 自動填入精靈中的其他編輯方塊，將會根據您在此處輸入。 如果您想要您可以編輯其他名稱方塊。  
   
- **Coclass**  
+ **coclass**  
  Coclass 的名稱。 ProgID 的名稱會變更為符合此名稱。  
   
  **使用屬性**  
@@ -80,6 +75,6 @@ ms.lasthandoff: 12/21/2017
  **.Cpp 檔案中資料列集**  
  提供者的實作檔。 您可以編輯此檔案的名稱，或選取現有的實作檔。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL OLE DB 提供者](../../atl/reference/adding-an-atl-ole-db-provider.md)
 

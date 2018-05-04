@@ -1,13 +1,10 @@
 ---
-title: "模組定義 (。Def) 檔案 |Microsoft 文件"
-ms.custom: 
+title: 模組定義 (。Def) 檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - module definition files
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49f5eb5b75bad22b59cb4fbb98554bbfd44d13b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57bad3a63e910918b6a22b6263f0df3faca0dcd1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="module-definition-def-files"></a>模組定義檔案 (.Def)
 模組定義 (.def) 檔會提供連結器匯出、 屬性和連結的程式的其他資訊的相關資訊。 建置 DLL 時，便最有用.def 檔。 因為有[連結器選項](../../build/reference/linker-options.md)可用而不是模組定義陳述式，.def 檔案通常不是必要。 您也可以使用[__declspec （dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md)做為指定的方式匯出的函式。  
@@ -58,6 +53,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [保留的字](../../build/reference/reserved-words.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
  [連結器選項](../../build/reference/linker-options.md)  

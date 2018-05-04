@@ -1,12 +1,9 @@
 ---
-title: "CRTThreadTraits 類別 |Microsoft 文件"
-ms.custom: 
+title: CRTThreadTraits 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRTThreadTraits
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6fbe71ff23db8dba431b9d46d71fc6c924fbc5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f08f0d6ea57aa5a153d190b357785911e64d6f09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 類別
 這個類別會提供 CRT 執行緒建立函式。 如果執行緒會使用 CRT 函式，請使用這個類別。  
@@ -65,7 +60,7 @@ class CRTThreadTraits
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="createthread"></a>CRTThreadTraits::CreateThread  
+##  <a name="createthread"></a>  CRTThreadTraits::CreateThread  
  呼叫此函式可建立的執行緒，可以使用 CRT 函式。  
   
 ```
@@ -105,5 +100,5 @@ static HANDLE CreateThread(
   
  此函數會呼叫[_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)建立執行緒。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

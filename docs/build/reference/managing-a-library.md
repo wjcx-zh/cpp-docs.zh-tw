@@ -2,12 +2,9 @@
 title: 管理程式庫 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97c6da9e12e9071b4792476d2e49739a55d7ea8e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-a-library"></a>管理程式庫
 LIB 的預設模式是建立或修改的 COFF 物件程式庫。 當您未指定 /EXTRACT （若要將物件複製到檔案） 或 /DEF （若要建置之匯入程式庫），在此模式會執行 LIB。  
@@ -76,7 +71,7 @@ LIB [options...] files...
   
  下列選項適用於建置和修改文件庫：  
   
- /LIBPATH:`dir`  
+ /LIBPATH: `dir`  
  覆寫環境程式庫路徑。 如需詳細資訊，請參閱連結描述[/LIBPATH](../../build/reference/libpath-additional-libpath.md)選項。  
   
  / 清單  
@@ -94,7 +89,7 @@ LIB [options...] files...
  / 移除：*物件*  
  省略指定*物件*從輸出程式庫。 LIB 會合併所有的物件 （不論位於目的檔或程式庫），並刪除以 /REMOVE 指定的任何物件的建立輸出程式庫。  
   
- /SUBSYSTEM: {主控台 &#124;EFI_APPLICATION &#124;時，EFI_BOOT_SERVICE_DRIVER &#124;EFI_ROM &#124;EFI_RUNTIME_DRIVER 才 &#124;原生 &#124;POSIX &#124;WINDOWS &#124;WINDOWSCE} [，#[。 # #]]  
+ /SUBSYSTEM: {主控台&AMP;#124;EFI_APPLICATION&AMP;#124;時，EFI_BOOT_SERVICE_DRIVER &AMP;#124; EFI_ROM &AMP;#124; EFI_RUNTIME_DRIVER 才&AMP;#124;原生&AMP;#124;POSIX &AMP;#124; WINDOWS &AMP;#124; WINDOWSCE} [，#[。 # #]]  
  告知作業系統如何執行程式，建立連結至輸出程式庫。 如需詳細資訊，請參閱連結描述[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)選項。  
   
  在命令列上指定的 LIB 選項不區分大小寫。  
@@ -112,5 +107,5 @@ LIB [options...] files...
 > [!NOTE]
 >  您無法同時刪除成員，並將它解壓縮至相同的步驟中的檔案。 您必須先擷取成員物件使用 /EXTRACT，然後執行一次使用 /REMOVE LIB。 此行為不同的 16 位元 LIB （適用於 OMF 程式庫），提供其他 Microsoft 產品。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LIB 參考](../../build/reference/lib-reference.md)

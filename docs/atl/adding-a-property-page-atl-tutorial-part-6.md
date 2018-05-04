@@ -1,27 +1,22 @@
 ---
 title: 加入屬性頁 (ATL 教學課程，第 6 部分) |Microsoft 文件
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>加入屬性頁 (ATL 教學課程，第 6 部分)
 屬性頁會實作為個別的 COM 物件，讓他們所需進行共用。 在此步驟中，您將進行下列工作，以加入至控制項的屬性頁：  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  ATL 屬性頁精靈出現時，請輸入`PolyProp`為**簡短**名稱。  
   
-5.  按一下**字串**開啟**字串**頁面上，輸入**& 多邊形**為**標題**。  
+5.  按一下**字串**開啟**字串**頁面上，輸入 **& 多邊形**為**標題**。  
   
      **標題**屬性的頁面會出現在該頁面的索引標籤的字串。 **文件字串**是暫停狀態列或工具提示中使用屬性框架的描述。 請注意，標準屬性畫面格目前不會使用這個字串，所以您可以將它與預設內容。 您將不會產生**說明檔**目前，所以刪除該文字方塊中的項目。  
   
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
  程式碼現在會檢查該設定`Sides`實際運作的屬性。 如果失敗，程式碼會顯示訊息方塊顯示錯誤詳細資料，從**IErrorInfo**介面。 通常，容器會要求的物件**ISupportErrorInfo**介面並呼叫`InterfaceSupportsErrorInfo`第一個，以判斷物件是否支援設定資訊時發生錯誤。 您可以略過這項工作。  
   
- [CComPtr](../atl/reference/ccomptr-class.md)可協助您藉由自動處理 參考計數，因此您不需要呼叫`Release`介面上。 `CComBSTR`可協助您與`BSTR`處理，因此您不需要執行最終`SysFreeString`呼叫。 也使用其中一種不同的字串轉換類別，讓您可以轉換`BSTR`視 (這就是為什麼`USES_CONVERSION`巨集是在函式的開頭)。  
+ [CComPtr](../atl/reference/ccomptr-class.md)可協助您藉由自動處理 參考計數，因此您不需要呼叫`Release`介面上。 `CComBSTR` 可協助您與`BSTR`處理，因此您不需要執行最終`SysFreeString`呼叫。 也使用其中一種不同的字串轉換類別，讓您可以轉換`BSTR`視 (這就是為什麼`USES_CONVERSION`巨集是在函式的開頭)。  
   
  您也需要設定屬性頁的記錄變更旗標，指出**套用**按鈕應會啟用。 使用者變更中的值時，發生這種的情況**邊**編輯方塊。  
   
@@ -126,7 +121,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`時將會呼叫**WM_COMMAND**訊息傳送時附有**EN_CHANGE**通知`IDC_SIDES`控制項。 `OnEnChangeSides`然後呼叫`SetDirty`並傳遞`TRUE`是表示此屬性現在已損毀頁面和**套用**按鈕應會啟用。  
+ `OnEnChangeSides` 時將會呼叫**WM_COMMAND**訊息傳送時附有**EN_CHANGE**通知`IDC_SIDES`控制項。 `OnEnChangeSides` 然後呼叫`SetDirty`並傳遞`TRUE`是表示此屬性現在已損毀頁面和**套用**按鈕應會啟用。  
   
 ## <a name="adding-the-property-page-to-the-control"></a>控制項中加入屬性頁  
  ATL 加入類別精靈和 ATL 屬性頁精靈不要將屬性頁到您的控制項為您自動執行，因為專案中可能有多個控制項。 您必須將項目加入至控制項的屬性對應。  
@@ -152,8 +147,8 @@ ms.lasthandoff: 12/21/2017
   
  接下來，您會將您在網頁上的控制項。  
   
- [步驟 5 至](../atl/adding-an-event-atl-tutorial-part-5.md)&#124;[至步驟 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [步驟 5 至](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [至步驟 7](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
 

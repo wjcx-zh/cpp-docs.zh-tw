@@ -1,12 +1,9 @@
 ---
-title: "CRBTree 類別 |Microsoft 文件"
-ms.custom: 
+title: CRBTree 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBTree
@@ -36,17 +33,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f436a3661f027ba1026a60982cb18b48a2c48cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b15ddf62545d5926faf75af760ed52219f1cb03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbtree-class"></a>CRBTree 類別
 這個類別會提供建立和使用紅黑樹狀結構的方法。  
@@ -128,7 +123,7 @@ class CRBTree
 ## <a name="requirements"></a>需求  
  **標頭：** atlcoll.h  
   
-##  <a name="cpair_class"></a>CRBTree::CPair 類別  
+##  <a name="cpair_class"></a>  CRBTree::CPair 類別  
  類別，其中包含索引鍵和值的項目。  
   
 ```
@@ -145,7 +140,7 @@ class CPair : public __POSITION
 |`m_key`|資料成員儲存索引鍵的項目。|  
 |`m_value`|資料成員，其儲存值的項目。|  
   
-##  <a name="dtor"></a>CRBTree:: ~ CRBTree  
+##  <a name="dtor"></a>  CRBTree:: ~ CRBTree  
  解構函式。  
   
 ```
@@ -155,7 +150,7 @@ class CPair : public __POSITION
 ### <a name="remarks"></a>備註  
  會釋放所有配置的資源。 呼叫[CRBTree::RemoveAll](#removeall)刪除所有項目。  
   
-##  <a name="findfirstkeyafter"></a>CRBTree::FindFirstKeyAfter  
+##  <a name="findfirstkeyafter"></a>  CRBTree::FindFirstKeyAfter  
  呼叫這個方法，以找出該位置會使用下一個可用的索引鍵的項目。  
   
 ```
@@ -172,7 +167,7 @@ POSITION FindFirstKeyAfter(KINARGTYPE key) const throw();
 ### <a name="remarks"></a>備註  
  此方法可讓您輕鬆地周遊樹狀目錄，而不需要事先計算位置的值。  
   
-##  <a name="getat"></a>CRBTree::GetAt  
+##  <a name="getat"></a>  CRBTree::GetAt  
  呼叫這個方法來取得在樹狀目錄中的指定位置的項目。  
   
 ```
@@ -199,7 +194,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
   
  在偵錯組建中，如果，就會發生判斷提示失敗`pos`等於 NULL。  
   
-##  <a name="getcount"></a>CRBTree::GetCount  
+##  <a name="getcount"></a>  CRBTree::GetCount  
  呼叫這個方法，在樹狀目錄中取得的項目數。  
   
 ```
@@ -209,7 +204,7 @@ size_t GetCount() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回的元素數目 （每個索引鍵/值組是一個項目） 儲存在樹狀目錄中。  
   
-##  <a name="getheadposition"></a>CRBTree::GetHeadPosition  
+##  <a name="getheadposition"></a>  CRBTree::GetHeadPosition  
  呼叫這個方法，在樹狀結構的開頭處的項目取得的位置值。  
   
 ```
@@ -222,7 +217,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="remarks"></a>備註  
  所傳回的值`GetHeadPosition`可以搭配方法例如[CRBTree::GetKeyAt](#getkeyat)或[CRBTree::GetNext](#getnext)周遊樹狀結構，和擷取值。  
   
-##  <a name="getkeyat"></a>CRBTree::GetKeyAt  
+##  <a name="getkeyat"></a>  CRBTree::GetKeyAt  
  呼叫這個方法來取得在樹狀目錄中的指定位置的機碼。  
   
 ```
@@ -239,7 +234,7 @@ const K& GetKeyAt(POSITION pos) const throw();
 ### <a name="remarks"></a>備註  
  如果`pos`不是有效的位置值，結果將無法預期。 在偵錯組建中，如果，就會發生判斷提示失敗`pos`等於 NULL。  
   
-##  <a name="getnext"></a>CRBTree::GetNext  
+##  <a name="getnext"></a>  CRBTree::GetNext  
  呼叫這個方法來取得指向中預存項目的`CRBTree`物件，並前移至下一個元素的位置。  
   
 ```
@@ -257,7 +252,7 @@ CPair* GetNext(POSITION& pos) throw();
 ### <a name="remarks"></a>備註  
  `pos`位置計數器會在每次呼叫之後更新。 擷取的項目是否在樹狀目錄中的最後一個`pos`設為 NULL。  
   
-##  <a name="getnextassoc"></a>CRBTree::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CRBTree::GetNextAssoc  
  呼叫此方法以取得索引鍵和值儲存在 map 中的項目，並前移至下一個元素的位置。  
   
 ```
@@ -280,7 +275,7 @@ void GetNextAssoc(
 ### <a name="remarks"></a>備註  
  `pos`位置計數器會在每次呼叫之後更新。 擷取的項目是否在樹狀目錄中的最後一個`pos`設為 NULL。  
   
-##  <a name="getnextkey"></a>CRBTree::GetNextKey  
+##  <a name="getnextkey"></a>  CRBTree::GetNextKey  
  呼叫此方法來取得儲存在樹狀目錄中之元素的索引鍵，並前移至下一個元素的位置。  
   
 ```
@@ -297,7 +292,7 @@ const K& GetNextKey(POSITION& pos) const throw();
 ### <a name="remarks"></a>備註  
  更新目前位置計數器， `pos`。 如果在樹狀目錄中有沒有更多的項目，則位置計數器是設為 NULL。  
   
-##  <a name="getnextvalue"></a>CRBTree::GetNextValue  
+##  <a name="getnextvalue"></a>  CRBTree::GetNextValue  
  呼叫這個方法來取得儲存在樹狀目錄中之元素的值，並前移至下一個元素的位置。  
   
 ```
@@ -315,7 +310,7 @@ V& GetNextValue(POSITION& pos) throw();
 ### <a name="remarks"></a>備註  
  更新目前位置計數器， `pos`。 如果在樹狀目錄中有沒有更多的項目，則位置計數器是設為 NULL。  
   
-##  <a name="getprev"></a>CRBTree::GetPrev  
+##  <a name="getprev"></a>  CRBTree::GetPrev  
  呼叫這個方法來取得指向中預存項目的`CRBTree`物件，然後再更新上一個項目位置。  
   
 ```
@@ -333,7 +328,7 @@ CPair* GetPrev(POSITION& pos) throw();
 ### <a name="remarks"></a>備註  
  更新目前位置計數器， `pos`。 如果在樹狀目錄中有沒有更多的項目，則位置計數器是設為 NULL。  
   
-##  <a name="gettailposition"></a>CRBTree::GetTailPosition  
+##  <a name="gettailposition"></a>  CRBTree::GetTailPosition  
  呼叫此方法以取得樹狀結構的結尾處的項目中的位置值。  
   
 ```
@@ -346,7 +341,7 @@ POSITION GetTailPosition() const throw();
 ### <a name="remarks"></a>備註  
  所傳回的值`GetTailPosition`可以搭配方法例如[CRBTree::GetKeyAt](#getkeyat)或[CRBTree::GetPrev](#getprev)周遊樹狀結構，和擷取值。  
   
-##  <a name="getvalueat"></a>CRBTree::GetValueAt  
+##  <a name="getvalueat"></a>  CRBTree::GetValueAt  
  呼叫此方法以擷取儲存在指定位置的值`CRBTree`物件。  
   
 ```
@@ -361,7 +356,7 @@ V& GetValueAt(POSITION pos) throw();
 ### <a name="return-value"></a>傳回值  
  傳回值中指定位置處儲存的參考`CRBTree`物件。  
   
-##  <a name="isempty"></a>CRBTree::IsEmpty  
+##  <a name="isempty"></a>  CRBTree::IsEmpty  
  呼叫此方法來測試空白樹狀物件。  
   
 ```
@@ -371,21 +366,21 @@ bool IsEmpty() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回**true**樹狀結構是空的如果**false**否則。  
   
-##  <a name="kinargtype"></a>CRBTree::KINARGTYPE  
+##  <a name="kinargtype"></a>  CRBTree::KINARGTYPE  
  機碼傳遞做為輸入的引數時所使用的類型。  
   
 ```
 typedef KTraits::INARGTYPE KINARGTYPE;
 ```  
   
-##  <a name="koutargtype"></a>CRBTree::KOUTARGTYPE  
+##  <a name="koutargtype"></a>  CRBTree::KOUTARGTYPE  
  當做輸出引數傳回一個機碼時所使用的類型。  
   
 ```
 typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 ```  
   
-##  <a name="removeall"></a>CRBTree::RemoveAll  
+##  <a name="removeall"></a>  CRBTree::RemoveAll  
  呼叫這個方法來移除所有項目從`CRBTree`物件。  
   
 ```
@@ -395,7 +390,7 @@ void RemoveAll() throw();
 ### <a name="remarks"></a>備註  
  清除`CRBTree`物件，即釋放記憶體用來儲存項目。  
   
-##  <a name="removeat"></a>CRBTree::RemoveAt  
+##  <a name="removeat"></a>  CRBTree::RemoveAt  
  呼叫這個方法來移除在指定位置處的項目**CRBTree**物件。  
   
 ```
@@ -409,7 +404,7 @@ void RemoveAt(POSITION pos) throw();
 ### <a name="remarks"></a>備註  
  移除指定位置處儲存的索引鍵/值組。 用來儲存之項目的的記憶體，會釋放。 所參考位置`pos`失效，且在樹狀結構中的任何其他項目位置仍有效，這樣做不一定保留相同的順序。  
   
-##  <a name="setvalueat"></a>CRBTree::SetValueAt  
+##  <a name="setvalueat"></a>  CRBTree::SetValueAt  
  呼叫此方法以變更中的指定位置處儲存的值`CRBTree`物件。  
   
 ```
@@ -426,19 +421,19 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 ### <a name="remarks"></a>備註  
  Value 元素中指定位置處儲存的變更`CRBTree`物件。  
   
-##  <a name="vinargtype"></a>CRBTree::VINARGTYPE  
+##  <a name="vinargtype"></a>  CRBTree::VINARGTYPE  
  將值傳遞做為輸入的引數時所使用的類型。  
   
 ```
 typedef VTraits::INARGTYPE VINARGTYPE;
 ```  
   
-##  <a name="voutargtype"></a>CRBTree::VOUTARGTYPE  
+##  <a name="voutargtype"></a>  CRBTree::VOUTARGTYPE  
  將值當做輸出引數傳遞時所使用的類型。  
   
 ```
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

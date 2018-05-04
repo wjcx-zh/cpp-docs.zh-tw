@@ -1,12 +1,9 @@
 ---
-title: "CComModule 類別 |Microsoft 文件"
-ms.custom: 
+title: CComModule 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComModule
@@ -40,17 +37,15 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05b4ec763f6ee719e96627be3dc81a1e9b56c2c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 為準，ATL 7.0`CComModule`已被取代： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
@@ -102,9 +97,9 @@ class CComModule : public _ATL_MODULE
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  這個類別已經過時，而且現在使用 ATL 程式碼產生精靈[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)和[CAtlModule](../../atl/reference/catlmodule-class.md)衍生的類別。 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。 遵循的資訊是用於建立以 ATL 的版本還舊的應用程式 `CComModule`仍然是 ATL 的一部分回溯功能。  
+>  這個類別已經過時，而且現在使用 ATL 程式碼產生精靈[CAtlAutoThreadModule](../../atl/reference/catlautothreadmodule-class.md)和[CAtlModule](../../atl/reference/catlmodule-class.md)衍生的類別。 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。 遵循的資訊是用於建立以 ATL 的版本還舊的應用程式 `CComModule` 仍然是 ATL 的一部分回溯功能。  
   
- `CComModule`實作 COM 伺服器模組，可讓用戶端存取模組的元件。 `CComModule`支援 （同處理序） 的 DLL 及 EXE (local) 的模組。  
+ `CComModule` 實作 COM 伺服器模組，可讓用戶端存取模組的元件。 `CComModule` 支援 （同處理序） 的 DLL 及 EXE (local) 的模組。  
   
  A`CComModule`執行個體會維護一組類別物件定義使用物件對應。 此物件的對應會實作為陣列`_ATL_OBJMAP_ENTRY`結構，和包含的資訊：  
   
@@ -132,7 +127,7 @@ class CComModule : public _ATL_MODULE
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="getclassobject"></a>CComModule::GetClassObject  
+##  <a name="getclassobject"></a>  CComModule::GetClassObject  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -158,9 +153,9 @@ HRESULT GetClassObject(
 ### <a name="remarks"></a>備註  
  建立指定的 CLSID 的物件，並擷取這個物件的介面指標。  
   
- `GetClassObject`只有使用 dll。  
+ `GetClassObject` 只有使用 dll。  
   
-##  <a name="getmoduleinstance"></a>CComModule::GetModuleInstance  
+##  <a name="getmoduleinstance"></a>  CComModule::GetModuleInstance  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -173,7 +168,7 @@ HINSTANCE GetModuleInstance() throw();
 ### <a name="remarks"></a>備註  
  傳回[m_hInst](#m_hinst)資料成員。  
   
-##  <a name="getresourceinstance"></a>CComModule::GetResourceInstance  
+##  <a name="getresourceinstance"></a>  CComModule::GetResourceInstance  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -186,7 +181,7 @@ HINSTANCE GetResourceInstance() throw();
 ### <a name="remarks"></a>備註  
  傳回[m_hInstResource](#m_hinstresource)資料成員。  
   
-##  <a name="gettypelibinstance"></a>CComModule::GetTypeLibInstance  
+##  <a name="gettypelibinstance"></a>  CComModule::GetTypeLibInstance  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -199,7 +194,7 @@ HINSTANCE GetTypeLibInstance() const throw();
 ### <a name="remarks"></a>備註  
  傳回[m_hInstTypeLib](#m_hinsttypelib)資料成員。  
   
-##  <a name="init"></a>Init  
+##  <a name="init"></a>  Init  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -225,7 +220,7 @@ HRESULT Init(
 ### <a name="remarks"></a>備註  
  初始化所有的資料成員。  
   
-##  <a name="m_csobjmap"></a>CComModule::m_csObjMap  
+##  <a name="m_csobjmap"></a>  CComModule::m_csObjMap  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -235,7 +230,7 @@ CRITICAL_SECTION m_csObjMap;
 ### <a name="remarks"></a>備註  
  可確保物件對應至同步的存取。  
   
-##  <a name="m_cstypeinfoholder"></a>CComModule::m_csTypeInfoHolder  
+##  <a name="m_cstypeinfoholder"></a>  CComModule::m_csTypeInfoHolder  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -245,7 +240,7 @@ CRITICAL_SECTION m_csTypeInfoHolder;
 ### <a name="remarks"></a>備註  
  可確保同步處理的類型程式庫的存取。  
   
-##  <a name="m_cswindowcreate"></a>CComModule::m_csWindowCreate  
+##  <a name="m_cswindowcreate"></a>  CComModule::m_csWindowCreate  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -255,7 +250,7 @@ CRITICAL_SECTION m_csWindowCreate;
 ### <a name="remarks"></a>備註  
  可確保視窗類別資訊，並在視窗建立期間使用的靜態資料的同步的存取。  
   
-##  <a name="m_hinst"></a>CComModule::m_hInst  
+##  <a name="m_hinst"></a>  CComModule::m_hInst  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -267,7 +262,7 @@ HINSTANCE m_hInst;
   
  [Init](#init)方法會設定`m_hInst`至控制代碼傳遞給**DLLMain**或`WinMain`。  
   
-##  <a name="m_hinstresource"></a>CComModule::m_hInstResource  
+##  <a name="m_hinstresource"></a>  CComModule::m_hInstResource  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -281,7 +276,7 @@ HINSTANCE m_hInstResource;
   
  [GetResourceInstance](#getresourceinstance)方法傳回的控制代碼儲存在`m_hInstResource`。  
   
-##  <a name="m_hinsttypelib"></a>CComModule::m_hInstTypeLib  
+##  <a name="m_hinsttypelib"></a>  CComModule::m_hInstTypeLib  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -295,7 +290,7 @@ HINSTANCE m_hInstTypeLib;
   
  [GetTypeLibInstance](#gettypelibinstance)方法傳回的控制代碼儲存在`m_hInstTypeLib`。  
   
-##  <a name="m_pobjmap"></a>CComModule::m_pObjMap  
+##  <a name="m_pobjmap"></a>  CComModule::m_pObjMap  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -305,7 +300,7 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 ### <a name="remarks"></a>備註  
  指向模組執行個體所維護的物件對應。  
   
-##  <a name="registerclasshelper"></a>CComModule::RegisterClassHelper  
+##  <a name="registerclasshelper"></a>  CComModule::RegisterClassHelper  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -341,7 +336,7 @@ ATL_DEPRECATED HRESULT RegisterClassHelper(
   
  [UpdateRegistryClass](#updateregistryclass)方法呼叫`RegisterClassHelper`。  
   
-##  <a name="registerclassobjects"></a>CComModule::RegisterClassObjects  
+##  <a name="registerclassobjects"></a>  CComModule::RegisterClassObjects  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -361,7 +356,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="remarks"></a>備註  
  讓其他應用程式可以連接到它，請向 OLE 註冊 EXE 類別物件。 這個方法僅用於 Exe。  
   
-##  <a name="registerserver"></a>CComModule::RegisterServer  
+##  <a name="registerserver"></a>  CComModule::RegisterServer  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -387,9 +382,9 @@ HRESULT RegisterServer(
   
  請參閱[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)如需有關如何將項目加入至物件對應資訊。  
   
- `RegisterServer`將會自動呼叫**DLLRegisterServer** DLL 或`WinMain`以執行 exe **/RegServer**命令列選項。  
+ `RegisterServer` 將會自動呼叫**DLLRegisterServer** DLL 或`WinMain`以執行 exe **/RegServer**命令列選項。  
   
-##  <a name="registertypelib"></a>CComModule::RegisterTypeLib  
+##  <a name="registertypelib"></a>  CComModule::RegisterTypeLib  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -409,7 +404,7 @@ HRESULT RegisterTypeLib(LPCTSTR lpszIndex) throw();
   
  如果模組執行個體包含多個類型程式庫，使用這個方法的第二個版本，以指定應該使用哪一個類型程式庫。  
   
-##  <a name="revokeclassobjects"></a>CComModule::RevokeClassObjects  
+##  <a name="revokeclassobjects"></a>  CComModule::RevokeClassObjects  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -422,7 +417,7 @@ HRESULT RevokeClassObjects() throw();
 ### <a name="remarks"></a>備註  
  移除類別的物件。 這個方法僅用於 Exe。  
   
-##  <a name="term"></a>Ccommodule:: Term  
+##  <a name="term"></a>  Ccommodule:: Term  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -432,7 +427,7 @@ void Term() throw();
 ### <a name="remarks"></a>備註  
  釋放所有的資料成員。  
   
-##  <a name="unregisterclasshelper"></a>CComModule::UnregisterClassHelper  
+##  <a name="unregisterclasshelper"></a>  CComModule::UnregisterClassHelper  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -460,7 +455,7 @@ ATL_DEPRECATED HRESULT UnregisterClassHelper(
   
  [UpdateRegistryClass](#updateregistryclass)方法呼叫`UnregisterClassHelper`。  
   
-##  <a name="unregisterserver"></a>CComModule::UnregisterServer  
+##  <a name="unregisterserver"></a>  CComModule::UnregisterServer  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -481,11 +476,11 @@ inline HRESULT UnregisterServer(BOOL bUnRegTypeLib, const CLSID* pCLSID = NULL) 
 ### <a name="remarks"></a>備註  
  取決於`pCLSID`參數，取消登錄單一類別物件或物件對應中的所有物件。  
   
- `UnregisterServer`將會自動呼叫**DLLUnregisterServer** DLL 或`WinMain`以執行 exe **/UnregServer**命令列選項。  
+ `UnregisterServer` 將會自動呼叫**DLLUnregisterServer** DLL 或`WinMain`以執行 exe **/UnregServer**命令列選項。  
   
  請參閱[OBJECT_ENTRY_AUTO](object-map-macros.md#object_entry_auto)如需有關如何將項目加入至物件對應資訊。  
   
-##  <a name="updateregistryclass"></a>CComModule::UpdateRegistryClass  
+##  <a name="updateregistryclass"></a>  CComModule::UpdateRegistryClass  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -540,7 +535,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
   
  藉由指定[DECLARE_REGISTRY](registry-macros.md#declare_registry)巨集，`UpdateRegistryClass`會時要叫用自動處理物件對應。  
   
-##  <a name="updateregistryfromresourced"></a>CComModule::UpdateRegistryFromResourceD  
+##  <a name="updateregistryfromresourced"></a>  CComModule::UpdateRegistryFromResourceD  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -579,14 +574,14 @@ virtual HRESULT UpdateRegistryFromResourceD(
  藉由指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)巨集，`UpdateRegistryFromResourceD`會時要叫用自動處理物件對應。  
   
 > [!NOTE]
->  在執行階段取代值，請勿指定`DECLARE_REGISTRY_RESOURCE`或`DECLARE_REGISTRY_RESOURCEID`巨集。 相反地，建立陣列**_ATL_REGMAP_ENTRIES**結構，其中每個項目都包含變數的預留位置搭配要在執行階段取代預留位置的值。 然後呼叫`UpdateRegistryFromResourceD`，並將陣列傳遞`pMapEntries`參數。 這樣會加入中的取代值**_ATL_REGMAP_ENTRIES**的註冊機構取代對應的結構。  
+>  在執行階段取代值，請勿指定`DECLARE_REGISTRY_RESOURCE`或`DECLARE_REGISTRY_RESOURCEID`巨集。 相反地，建立陣列 **_ATL_REGMAP_ENTRIES**結構，其中每個項目都包含變數的預留位置搭配要在執行階段取代預留位置的值。 然後呼叫`UpdateRegistryFromResourceD`，並將陣列傳遞`pMapEntries`參數。 這樣會加入中的取代值 **_ATL_REGMAP_ENTRIES**的註冊機構取代對應的結構。  
   
 > [!NOTE]
 >  若要以靜態方式連結至 ATL 登錄元件 （登錄器），請參閱[UpdateRegistryFromResourceS](#updateregistryfromresources)。  
   
  如需可置換的參數和指令碼的詳細資訊，請參閱文章[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。  
   
-##  <a name="updateregistryfromresources"></a>CComModule::UpdateRegistryFromResourceS  
+##  <a name="updateregistryfromresources"></a>  CComModule::UpdateRegistryFromResourceS  
  為準，ATL 7.0`CComModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
@@ -620,12 +615,12 @@ virtual HRESULT UpdateRegistryFromResourceS(
 ### <a name="remarks"></a>備註  
  類似於[UpdateRegistryFromResourceD](#updateregistryfromresourced)除了`UpdateRegistryFromResourceS`建立靜態連結 ATL 登錄元件 （登錄器）。  
   
- `UpdateRegistryFromResourceS`將會叫用自動處理物件對應時，提供您加入`#define _ATL_STATIC_REGISTRY`為您的 stdafx.h。  
+ `UpdateRegistryFromResourceS` 將會叫用自動處理物件對應時，提供您加入`#define _ATL_STATIC_REGISTRY`為您的 stdafx.h。  
   
 > [!NOTE]
->  在執行階段取代值，請勿指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)巨集。 相反地，建立陣列**_ATL_REGMAP_ENTRIES**結構，其中每個項目都包含變數的預留位置搭配要在執行階段取代預留位置的值。 然後呼叫`UpdateRegistryFromResourceS`，並將陣列傳遞`pMapEntries`參數。 這樣會加入中的取代值**_ATL_REGMAP_ENTRIES**的註冊機構取代對應的結構。  
+>  在執行階段取代值，請勿指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)巨集。 相反地，建立陣列 **_ATL_REGMAP_ENTRIES**結構，其中每個項目都包含變數的預留位置搭配要在執行階段取代預留位置的值。 然後呼叫`UpdateRegistryFromResourceS`，並將陣列傳遞`pMapEntries`參數。 這樣會加入中的取代值 **_ATL_REGMAP_ENTRIES**的註冊機構取代對應的結構。  
   
  如需可置換的參數和指令碼的詳細資訊，請參閱文章[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

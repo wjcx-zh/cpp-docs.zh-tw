@@ -1,12 +1,9 @@
 ---
-title: "CComAutoDeleteCriticalSection 類別 |Microsoft 文件"
-ms.custom: 
+title: CComAutoDeleteCriticalSection 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAutoDeleteCriticalSection
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComAutoDeleteCriticalSection class
 ms.assetid: 2396dbea-1c60-4841-b50e-c4e18af311a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0a0c5fdd45e819105a3f47e98c02bb5ad3d51be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5153520b5a5648f8352465031264c223ffd97c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection 類別
 這個類別會提供方法來取得及釋放重要區段物件的擁有權。  
@@ -38,7 +33,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ```  
   
 ## <a name="remarks"></a>備註  
- `CComAutoDeleteCriticalSection`衍生自類別[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)。 不過，`CComAutoDeleteCriticalSection`會覆寫[詞彙](ccomsafedeletecriticalsection-class.md#term)方法`private`存取，這會強制進行只有在這個類別的執行個體超出範圍或明確從記憶體中刪除的內部記憶體清除。  
+ `CComAutoDeleteCriticalSection` 衍生自類別[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)。 不過，`CComAutoDeleteCriticalSection`會覆寫[詞彙](ccomsafedeletecriticalsection-class.md#term)方法`private`存取，這會強制進行只有在這個類別的執行個體超出範圍或明確從記憶體中刪除的內部記憶體清除。  
 
   
  這個類別透過其基底類別引進任何額外的方法。 請參閱[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)和[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)如需有關關鍵區段的 helper 類別。  
@@ -53,7 +48,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ## <a name="requirements"></a>需求  
  **標頭：** atlcore.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComSafeDeleteCriticalSection 類別](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
  [CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

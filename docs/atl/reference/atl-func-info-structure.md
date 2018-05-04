@@ -1,12 +1,9 @@
 ---
-title: "_ATL_FUNC_INFO 結構 |Microsoft 文件"
-ms.custom: 
+title: _ATL_FUNC_INFO 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - _ATL_FUNC_INFO
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5e184f1c78264304b8e4424ea3f9659689f333b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d5f3b759591333a41c3bc9da083e8e724249d13d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 結構
 包含用來描述上的分配介面的方法或屬性的型別資訊。  
@@ -72,7 +67,7 @@ struct _ATL_FUNC_INFO {
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構](../../atl/reference/atl-structures.md)   
  [IDispEventSimpleImpl 類別](../../atl/reference/idispeventsimpleimpl-class.md)   
  [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)

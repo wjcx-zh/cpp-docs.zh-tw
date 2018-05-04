@@ -1,12 +1,9 @@
 ---
-title: "偵錯和錯誤報告巨集 |Microsoft 文件"
-ms.custom: 
+title: 偵錯和錯誤報告巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>偵錯和錯誤報告巨集
 這些巨集提供有用的偵錯和追蹤功能。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[ATLTRACE](#alttrace)|輸出裝置，例如偵錯工具視窗中，根據指定的旗標和層級的報告警告。 包含為了回溯相容性。|  
 |[ATLTRACE2](#atltrace2)|輸出裝置，例如偵錯工具視窗中，根據指定的旗標和層級的報告警告。|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  定義此巨集包含任何 ATL 標頭檔，以追蹤所有之前`AddRef`和**發行**呼叫您的元件介面，以 [輸出] 視窗上。  
   
 ```
@@ -72,9 +67,9 @@ ms.lasthandoff: 12/21/2017
  這裡的資訊提供，都會直接對應到上一個追蹤陳述式中提供的資訊，因此您可以檢查的參考計數的整個介面 thunk 的整個存留期。 此外，取得最大的參考計數的指示該介面 thunk。  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`可以在零售組建中使用。  
+> `_ATL_DEBUG_INTERFACES` 可以在零售組建中使用。  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  寫入的所有呼叫`QueryInterface`到輸出視窗。  
   
 ```
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  *介面名稱* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  `ATLASSERT`巨集執行相同的功能[_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) C 執行階段程式庫中找到的巨集。  
   
 ```
@@ -103,7 +98,7 @@ ATLASSERT(booleanExpression);
 ## <a name="requirements"></a>需求  
  **標頭：** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  這個巨集用來驗證傳遞至函式的參數。  
   
 ```
@@ -135,7 +130,7 @@ ATLENSURE_THROW(booleanExpression, hr);
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  在偵錯組建的 ATL，會將字串"`funcname`未實作 」 傾印裝置和傳回**E_NOTIMPL**。  
   
 ```
@@ -155,7 +150,7 @@ ATLTRACENOTIMPL(funcname);
 ## <a name="requirements"></a>需求  
  **標頭：** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  輸出裝置，例如偵錯工具視窗中，根據指定的旗標和層級的報告警告。 包含為了回溯相容性。  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>備註  
  請參閱[ATLTRACE2](#atltrace2)的說明**ATLTRACE**。 **ATLTRACE**和`ATLTRACE2`有相同的行為， **ATLTRACE**是為了與舊版相容。  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  輸出裝置，例如偵錯工具視窗中，根據指定的旗標和層級的報告警告。  
   
 ```
@@ -264,13 +259,13 @@ ATLTRACE2(
   
  在發行組建中`ATLTRACE2`會編譯成`(void) 0`。  
   
- `ATLTRACE2`限制的內容傳送至不超過 1023 個字元，傾印裝置完成格式化後的字串。  
+ `ATLTRACE2` 限制的內容傳送至不超過 1023 個字元，傾印裝置完成格式化後的字串。  
   
  **ATLTRACE**和`ATLTRACE2`有相同的行為， **ATLTRACE**是為了與舊版相容。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集](../../atl/reference/atl-macros.md)   
  [偵錯和錯誤報告全域函式](../../atl/reference/debugging-and-error-reporting-global-functions.md)

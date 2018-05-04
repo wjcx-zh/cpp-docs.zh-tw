@@ -1,12 +1,9 @@
 ---
-title: "位元互斥 OR 運算子: ^ |Microsoft 文件"
-ms.custom: 
+title: '位元互斥 OR 運算子: ^ |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OR operator [C++], bitwise exclusive
 - operators [C++], logical
 ms.assetid: f9185d85-65d5-4f64-a6d6-679758d52217
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6bd80c7144ea3f4a2288e07b7801612ed62efd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d080fa28e8f70cb6a4086709c4a5fc6215c4519
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>位元互斥 OR 運算子：^
 ## <a name="syntax"></a>語法  
@@ -44,7 +39,7 @@ expression ^ expression
 位元互斥 OR 運算子的兩個運算元都必須為整數類資料類型。 中涵蓋的一般算術轉換[標準轉換](standard-conversions.md)適用於這些運算元。  
   
 ## <a name="operator-keyword-for-"></a>^ 的運算子關鍵字  
-**Xor**運算子相當於文字的 **^** 。 有兩種方式來存取**xor**您程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
+**Xor**運算子相當於文字的**^**。 有兩種方式來存取**xor**您程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
   
 ## <a name="example"></a>範例  
   
@@ -62,7 +57,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
 
 

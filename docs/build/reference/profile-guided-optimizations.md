@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: 2225c307-d3ae-42c1-8345-a5a959d132dc
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca4c79fd46954d59a8fdd892fabbd53d4bc985f
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: c7d6de281097232b1b8abc10a103af9c186e3550
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profile-guided-optimizations"></a>特性指引最佳化
 
 特性指引最佳化可讓您最佳化輸出檔案，其中最佳化程式使用來自測試的資料以執行 .exe 或 .dll 檔。 資料表示程式如何在實際執行環境中執行。
 
-特性指引最佳化只適用於 x86 或 x64 原生目標。 特性指引最佳化不適用於在通用語言執行平台執行的輸出檔。 即使您產生具有混合的原生和 managed 程式碼的組件 (使用**/clr**編譯器選項)，您無法對單純原生程式碼使用特性指引最佳化。 如果您嘗試建置專案時使用這些選項在 IDE 中設定，則建置會產生錯誤。
+特性指引最佳化只適用於 x86 或 x64 原生目標。 特性指引最佳化不適用於在通用語言執行平台執行的輸出檔。 即使您產生具有混合的原生和 managed 程式碼的組件 (使用 **/clr**編譯器選項)，您無法對單純原生程式碼使用特性指引最佳化。 如果您嘗試建置專案時使用這些選項在 IDE 中設定，則建置會產生錯誤。
 
 > [!NOTE]
-> 從分析測試回合所收集的資訊會覆寫原本是實際上是如果您指定的最佳化**須遵循 /Ob**， **/Os**，或**/Ot**。 如需詳細資訊，請參閱[須遵循 /Ob （內嵌函式展開）](../../build/reference/ob-inline-function-expansion.md)和[/Os、 /Ot （偏好小的程式碼、 偏好快的程式碼）](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)。
+> 從分析測試回合所收集的資訊會覆寫原本是實際上是如果您指定的最佳化**須遵循 /Ob**， **/Os**，或 **/Ot**。 如需詳細資訊，請參閱[須遵循 /Ob （內嵌函式展開）](../../build/reference/ob-inline-function-expansion.md)和[/Os、 /Ot （偏好小的程式碼、 偏好快的程式碼）](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)。
 
 ## <a name="steps-to-optimize-your-app"></a>若要最佳化您的應用程式的步驟
 
@@ -37,11 +36,11 @@ ms.lasthandoff: 03/22/2018
 
 - 編譯一個或多個原始程式碼檔使用[/GL](../../build/reference/gl-whole-program-optimization.md)。
 
-   由建置的每個模組**/GL**擷取執行階段行為的特性指引最佳化測試回合期間進行檢查。 特性指引最佳化組建中的每個模組就不需要進行編譯**/GL**。 不過，只有那些模組編譯**/GL**會檢測，稍後可供特性指引最佳化。
+   由建置的每個模組 **/GL**擷取執行階段行為的特性指引最佳化測試回合期間進行檢查。 特性指引最佳化組建中的每個模組就不需要進行編譯 **/GL**。 不過，只有那些模組編譯 **/GL**會檢測，稍後可供特性指引最佳化。
 
 - 連結使用[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)和[/GENPROFILE 或 /FASTGENPROFILE](../../build/reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)。
 
-   使用這兩個**/LTCG**和**/GENPROFILE**或**/FASTGENPROFILE**已檢測的應用程式執行時建立的.pgd 檔。 測試回合資料加入至 .pgd 檔之後，它可以做為下一個連結步驟的輸入 (建立最佳化映像)。 當指定**/GENPROFILE**，您可以選擇性地加入**PGD =**_filename_引數來指定非預設名稱或位置為.pgd 檔。 組合**/LTCG**和**/GENPROFILE**或**/FASTGENPROFILE**連結器選項會取代已被取代**/ltcg: pginstrument**連結器選項。
+   使用這兩個 **/LTCG**和 **/GENPROFILE**或 **/FASTGENPROFILE**已檢測的應用程式執行時建立的.pgd 檔。 測試回合資料加入至 .pgd 檔之後，它可以做為下一個連結步驟的輸入 (建立最佳化映像)。 當指定 **/GENPROFILE**，您可以選擇性地加入**PGD =**_filename_引數來指定非預設名稱或位置為.pgd 檔。 組合 **/LTCG**和 **/GENPROFILE**或 **/FASTGENPROFILE**連結器選項會取代已被取代 **/ltcg: pginstrument**連結器選項。
 
 - 分析應用程式。
 
@@ -51,13 +50,13 @@ ms.lasthandoff: 03/22/2018
 
    您的應用程式也會直接叫用的 PGO 函式， [PgoAutoSweep](pgoautosweep.md)，以擷取分析資料，於呼叫的.pgc 檔案。 這麼做可以讓您更細微地控制.pgc 檔案中擷取的資料所涵蓋的程式碼。 如需如何使用這個函式的範例，請參閱[PgoAutoSweep](pgoautosweep.md)文件。
 
-   當您建立您檢測的建置中，依預設時，資料收集會進行非執行緒安全模式，會較快，但可能不完全正確。 使用**精確**引數**/GENPROFILE**或**/FASTGENPROFILE**，您可以指定資料收集在具備執行緒安全模式中，也就是更精確，但速度較慢。 這個選項也是當您設定已被取代[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode)環境變數，或已被取代**/POGOSAFEMODE**連結器選項，當您建立您的檢測的建置。
+   當您建立您檢測的建置中，依預設時，資料收集會進行非執行緒安全模式，會較快，但可能不完全正確。 使用**精確**引數 **/GENPROFILE**或 **/FASTGENPROFILE**，您可以指定資料收集在具備執行緒安全模式中，也就是更精確，但速度較慢。 這個選項也是當您設定已被取代[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md#pogosafemode)環境變數，或已被取代 **/POGOSAFEMODE**連結器選項，當您建立您的檢測的建置。
 
-- 連結使用**/LTCG**和**/USEPROFILE**。
+- 連結使用 **/LTCG**和 **/USEPROFILE**。
 
-   同時使用**/LTCG**和[/USEPROFILE](useprofile.md)連結器選項，以建立最佳化映像。 這個步驟會採用做為輸入 .pgd 檔案。 當您指定**/USEPROFILE**，您可以選擇性地加入**PGD =**_filename_引數來指定非預設的名稱或位置為.pgd 檔。 您也可以使用已被取代，指定這個名稱**/PGD**連結器選項。 組合**/LTCG**和**/USEPROFILE**取代已被取代**/ltcg: pgoptimize**和**除了**連結器選項。
+   同時使用 **/LTCG**和[/USEPROFILE](useprofile.md)連結器選項，以建立最佳化映像。 這個步驟會採用做為輸入 .pgd 檔案。 當您指定 **/USEPROFILE**，您可以選擇性地加入**PGD =**_filename_引數來指定非預設的名稱或位置為.pgd 檔。 您也可以使用已被取代，指定這個名稱 **/PGD**連結器選項。 組合 **/LTCG**和 **/USEPROFILE**取代已被取代 **/ltcg: pgoptimize**和**除了**連結器選項。
 
-甚至可以建立最佳化的輸出檔，並在稍後判斷其他分析可能有助於建立更完善的映像。 如果已檢測的映像和及其.pgd 檔案可用，您可以執行其他測試回合，並重建較新的.pgd 檔中，使用相同的最佳化的映像**/LTCG**和**/USEPROFILE**連結器選項.
+甚至可以建立最佳化的輸出檔，並在稍後判斷其他分析可能有助於建立更完善的映像。 如果已檢測的映像和及其.pgd 檔案可用，您可以執行其他測試回合，並重建較新的.pgd 檔中，使用相同的最佳化的映像 **/LTCG**和 **/USEPROFILE**連結器選項.
 
 ## <a name="optimizations-performed-by-pgo"></a>執行的 PGO 最佳化
 

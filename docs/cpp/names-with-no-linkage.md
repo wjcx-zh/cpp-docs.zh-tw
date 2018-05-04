@@ -1,12 +1,9 @@
 ---
-title: "沒有連結的名稱 |Microsoft 文件"
-ms.custom: 
+title: 沒有連結的名稱 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - names [C++], with no linkage
 - function parameters [C++]
 ms.assetid: 7174c500-12d2-4572-8c16-63c27c758fb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13acb94022caf7ad9ddbf2fe94ad2fa95a70dc80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfb37c8fd694c10707efed8bae7ca0e08afdcf41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="names-with-no-linkage"></a>沒有連結的名稱
 唯一沒有連結的名稱為：  
@@ -115,5 +110,5 @@ void GoodFuncDef( char ch )  // Define GoodFuncDef
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式和連結](../cpp/program-and-linkage-cpp.md)

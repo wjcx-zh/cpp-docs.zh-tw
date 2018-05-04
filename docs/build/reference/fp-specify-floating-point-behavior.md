@@ -1,13 +1,10 @@
 ---
-title: "-fp （指定浮點數行為） |Microsoft 文件"
-ms.custom: 
+title: -fp （指定浮點數行為） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
 - VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af796b7143b3600130e9405782d618a5960d22fc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (指定浮點數行為)
 在原始程式碼檔中指定浮點數行為。  
@@ -47,9 +42,9 @@ ms.lasthandoff: 12/21/2017
   
  藉由停用可以變更浮點計算精確度的最佳化運算，改善浮點測試相等和不等的一致性  (為了維持嚴格的 ANSI 一致性，必須保有特定精確度)。根據預設，在 x86 架構程式碼中，編譯器會使用處理器的 80 位元暫存器來存放浮點計算的中繼結果， 這樣可以加快程式的速度並且縮小程式的大小。 不過，由於計算會涉及在記憶體中以小於 80 位元表示的浮點數資料類型，因此帶著額外的精確度位元 (80 位元減去較小浮點類型中的位元數目) 歷經冗長的計算，可能會產生不一致的結果。  
   
- 與**/fp： 精確**x86 處理器，編譯器會執行類型的變數的進位`float`指派和轉換 （cast），以及當參數傳遞至函式的正確精確度。 這種捨入方式可保證該資料不保留任何大於其類型容量的數字精確度。 編譯程式**/fp： 精確**速度較慢且大於不可以是**/fp： 精確**。 **/fp： 精確**停用內建函式; 常式會改用標準執行階段程式庫。 如需詳細資訊，請參閱 [/Oi (產生內建函式)](../../build/reference/oi-generate-intrinsic-functions.md)。  
+ 與 **/fp： 精確**x86 處理器，編譯器會執行類型的變數的進位`float`指派和轉換 （cast），以及當參數傳遞至函式的正確精確度。 這種捨入方式可保證該資料不保留任何大於其類型容量的數字精確度。 編譯程式 **/fp： 精確**速度較慢且大於不可以是 **/fp： 精確**。 **/fp： 精確**停用內建函式; 常式會改用標準執行階段程式庫。 如需詳細資訊，請參閱 [/Oi (產生內建函式)](../../build/reference/oi-generate-intrinsic-functions.md)。  
   
- 以啟用下列浮點數行為**/fp： 精確**:  
+ 以啟用下列浮點數行為 **/fp： 精確**:  
   
 -   縮減：也就是使用結尾只有一次捨入的複合運算來取代多次運算。  
   
@@ -63,27 +58,27 @@ ms.lasthandoff: 12/21/2017
   
 -   剛好除以 1.0 的除法結果會轉換成使用被除數。 x * y/1.0 會轉換成 x\*y。 同樣地，x / 1.0\*y 會轉換成 x\*y。  
   
- 使用**/fp： 精確**時[fenv_access](../../preprocessor/fenv-access.md)所在停用最佳化，例如浮點運算式的編譯時期評估。 例如，如果您使用[_control87、 _controlfp、 \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)變更捨入模式，而編譯器會執行浮點計算，您所指定的捨入模式不是作用中除非`fenv_access`是 ON。  
+ 使用 **/fp： 精確**時[fenv_access](../../preprocessor/fenv-access.md)所在停用最佳化，例如浮點運算式的編譯時期評估。 例如，如果您使用[_control87、 _controlfp、 \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)變更捨入模式，而編譯器會執行浮點計算，您所指定的捨入模式不是作用中除非`fenv_access`是 ON。  
   
- **/fp： 精確**取代**/Op**編譯器選項。  
+ **/fp： 精確**取代 **/Op**編譯器選項。  
   
  **快速**  
- 藉由放寬最佳化浮點運算的規則，在大部分情況下建立最快速的程式碼。 這樣會讓編譯器犧牲準確度和正確性，以最佳化浮點程式碼的速度。 當**/fp: fast**指定，則編譯器可能會不正確捨入在指派陳述式、 類型轉換或函式呼叫，以及可能不會執行捨入中繼運算式。 編譯器可能會藉由像是遵循關聯和分散規則的方式重新排列運算或執行代數轉換，而不考慮對有限精確度結果的影響。 編譯器可能會將運算和運算元變更為單精確度，而不遵循 C++ 類型提升規則。 一定會啟用浮點點對點特定縮減最佳化 ([fp_contract](../../preprocessor/fp-contract.md)是 ON)。 浮點例外狀況和 FPU 環境存取已停用 (**/fp： 除了-**隱含和[fenv_access](../../preprocessor/fenv-access.md)是 OFF)。  
+ 藉由放寬最佳化浮點運算的規則，在大部分情況下建立最快速的程式碼。 這樣會讓編譯器犧牲準確度和正確性，以最佳化浮點程式碼的速度。 當 **/fp: fast**指定，則編譯器可能會不正確捨入在指派陳述式、 類型轉換或函式呼叫，以及可能不會執行捨入中繼運算式。 編譯器可能會藉由像是遵循關聯和分散規則的方式重新排列運算或執行代數轉換，而不考慮對有限精確度結果的影響。 編譯器可能會將運算和運算元變更為單精確度，而不遵循 C++ 類型提升規則。 一定會啟用浮點點對點特定縮減最佳化 ([fp_contract](../../preprocessor/fp-contract.md)是 ON)。 浮點例外狀況和 FPU 環境存取已停用 (**/fp： 除了-** 隱含和[fenv_access](../../preprocessor/fenv-access.md)是 OFF)。  
   
- **/fp: fast**不能與**/fp: strict**或**/fp： 精確**。 會使用命令列上指定的最後一個選項。 指定這兩者**/fp: fast**和**/fp： 除了**會產生編譯器錯誤。  
+ **/fp: fast**不能與 **/fp: strict**或 **/fp： 精確**。 會使用命令列上指定的最後一個選項。 指定這兩者 **/fp: fast**和 **/fp： 除了**會產生編譯器錯誤。  
   
- 指定[/Za，/Ze （停用語言擴充功能）](../../build/reference/za-ze-disable-language-extensions.md) （ANSI 相容性） 和**/fp: fast**可能會造成非預期的行為。 例如，單精確度浮點運算可能不會捨入為單精確度。  
+ 指定[/Za，/Ze （停用語言擴充功能）](../../build/reference/za-ze-disable-language-extensions.md) （ANSI 相容性） 和 **/fp: fast**可能會造成非預期的行為。 例如，單精確度浮點運算可能不會捨入為單精確度。  
   
  **除了 [-]**  
  可靠的浮點例外狀況模型。 觸發例外狀況之後會立即引發例外狀況。 根據預設，這個選項為關閉狀態。 附加減號至選項會明確將該選項停用。  
   
  **嚴格**  
- 最嚴謹的浮點模型。 **/fp: strict**導致[fp_contract](../../preprocessor/fp-contract.md)是 OFF 和[fenv_access](../../preprocessor/fenv-access.md)是 ON。 **/fp： 除了**隱含的可以藉由明確指定停用**/fp： 除了-**。 當搭配**/fp： 除了-**， **/fp: strict**強制執行嚴格浮點語意但不考慮例外事件。  
+ 最嚴謹的浮點模型。 **/fp: strict**導致[fp_contract](../../preprocessor/fp-contract.md)是 OFF 和[fenv_access](../../preprocessor/fenv-access.md)是 ON。 **/fp： 除了**隱含的可以藉由明確指定停用 **/fp： 除了-**。 當搭配 **/fp： 除了-**， **/fp: strict**強制執行嚴格浮點語意但不考慮例外事件。  
   
 ## <a name="remarks"></a>備註  
- 多個**/fp**相同編譯中，您可以指定選項。  
+ 多個 **/fp**相同編譯中，您可以指定選項。  
   
- 若要控制浮點數行為函式，請參閱[float_control](../../preprocessor/float-control.md) pragma。 這會覆寫**/fp**編譯器設定。 建議的理想設計做法是儲存並還原本機浮點行為：  
+ 若要控制浮點數行為函式，請參閱[float_control](../../preprocessor/float-control.md) pragma。 這會覆寫 **/fp**編譯器設定。 建議的理想設計做法是儲存並還原本機浮點行為：  
   
 ```cpp  
 #pragma float_control(precise, on, push)  
@@ -91,11 +86,11 @@ ms.lasthandoff: 12/21/2017
 #pragma float_control(pop)  
 ```  
   
- 大部分的浮點最佳化作業的相關**/fp: strict**， **/fp： 除了**（和及其對應 pragma） 和`fp_contract`pragma 會電腦相關。 **/fp: strict**和**/fp： 除了**與不相容**/clr**。  
+ 大部分的浮點最佳化作業的相關 **/fp: strict**， **/fp： 除了**（和及其對應 pragma） 和`fp_contract`pragma 會電腦相關。 **/fp: strict**和 **/fp： 除了**與不相容 **/clr**。  
   
- **/fp： 精確**應該可滿足大部分的應用程式的浮點需求。 您可以使用**/fp： 除了**和**/fp: strict**，但可能會使效能稍微降低。 如果效能是最重要的請考慮是否使用**/fp: fast**。  
+ **/fp： 精確**應該可滿足大部分的應用程式的浮點需求。 您可以使用 **/fp： 除了**和 **/fp: strict**，但可能會使效能稍微降低。 如果效能是最重要的請考慮是否使用 **/fp: fast**。  
   
- **/fp: strict**， **/fp: fast**，和**/fp： 精確**精確度 （正確性） 模式。 但一次只能有一個模式生效。 如果兩個**/fp: strict**和**/fp： 精確**指定，則編譯器會使用最後處理的那一個。 同時**/fp: strict**和**/fp: fast**不指定。  
+ **/fp: strict**， **/fp: fast**，和 **/fp： 精確**精確度 （正確性） 模式。 但一次只能有一個模式生效。 如果兩個 **/fp: strict**和 **/fp： 精確**指定，則編譯器會使用最後處理的那一個。 同時 **/fp: strict**和 **/fp: fast**不指定。  
   
  如需詳細資訊，請參閱[Microsoft Visual c + + 浮點最佳化](http://msdn.microsoft.com/library/aa289157.aspx)。  
   
@@ -105,7 +100,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  展開**組態屬性**節點。  
   
-3.  展開**C/c + +**節點。  
+3.  展開**C/c + +** 節點。  
   
 4.  選取**程式碼產生**屬性頁。  
   
@@ -115,7 +110,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.floatingPointModel%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [Microsoft Visual c + + 的浮動點最佳化](http://msdn.microsoft.com/library/aa289157.aspx)

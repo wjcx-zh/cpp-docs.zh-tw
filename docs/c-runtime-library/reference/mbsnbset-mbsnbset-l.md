@@ -2,11 +2,8 @@
 title: _mbsnbset、_mbsnbset_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbset
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 462e435c1b93561cf5ca21dd20ad2025ac6f9661
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 316580b0c5f1f46ffa9f4a49ef759b347032fc09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset、_mbsnbset_l
 
@@ -102,7 +97,7 @@ unsigned char *_mbsnbset_l(
 
 如果*str*是**NULL**或*計數*為零，此函式會產生無效參數例外狀況中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**NULL**。 此外，如果*c*不是有效的多位元組字元， **errno**設**EINVAL**並改用一個空格。
 
-輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale](setlocale-wsetlocale.md)如需詳細資訊。 **_Mbsnbset**此函式版本會使用目前的地區設定針對此與地區設定相關行為; **_mbsnbset_l**版本也一樣，不同之處在於它使用改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbset**此函式版本會使用目前的地區設定針對此與地區設定相關行為; **_mbsnbset_l**版本也一樣，不同之處在於它使用改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 **安全性提示**：此 API 可能會帶來因緩衝區溢位問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
 

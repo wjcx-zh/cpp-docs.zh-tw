@@ -2,26 +2,21 @@
 title: 堆疊配置 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 098e51f2-eda6-40d0-b149-0b618aa48b47
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514b20847f588dab7a5c205be36c1fbd725df17d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: caa6d435db98c7177cbf55b866bb8e5a4a110c1d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stack-allocation"></a>堆疊配置
 函式的初構會負責配置堆疊空間給區域變數，儲存的暫存器，堆疊參數和暫存器參數。  
@@ -38,5 +33,5 @@ ms.lasthandoff: 12/21/2017
   
  當函式 B 呼叫另一個函式時，傳回位址推入住家地址的正下方的 RCX。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [堆疊使用方式](../build/stack-usage.md)

@@ -1,13 +1,10 @@
 ---
-title: "測試 ATL DHTML 控制項 |Microsoft 文件"
-ms.custom: 
+title: 測試 ATL DHTML 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd92900ffbb8170e942053910d3faedd1f5ab2ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b523b981a58f577a3e98925899b32c0e9e69e98
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="testing-the-atl-dhtml-control"></a>測試 ATL DHTML 控制項
 當您建立專案之後時，您可以建置及測試範例控制項。 這麼做之前，請使用類別檢視 和 方案總管 中檢查專案。 您的專案項目中更詳細說明[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  
@@ -49,6 +44,6 @@ ms.lasthandoff: 12/21/2017
   
  接下來，再試一次[修改 DHTML 控制項](../atl/modifying-the-atl-dhtml-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
 

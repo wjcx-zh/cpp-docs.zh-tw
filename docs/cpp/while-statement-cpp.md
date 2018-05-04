@@ -1,12 +1,9 @@
 ---
-title: "while 陳述式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: while 陳述式 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - while_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93d31457beb3c1546b55d303fd71566176a9367
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f281007bea3f23bc8e7cebcdd68b9a306b500e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="while-statement-c"></a>while 陳述式 (C++)
 執行*陳述式*重複直到*運算式*判斷值為零。  
@@ -75,7 +70,7 @@ int main()
   
  終止條件在迴圈頂端進行評估。 如果沒有結尾底線，此迴圈絕不會執行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [反覆運算陳述式](../cpp/iteration-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [do-while 陳述式 (C++)](../cpp/do-while-statement-cpp.md)   

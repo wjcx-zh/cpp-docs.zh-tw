@@ -1,13 +1,10 @@
 ---
-title: "-ALLOWBIND （阻止 DLL 繫結） |Microsoft 文件"
-ms.custom: 
+title: -ALLOWBIND （阻止 DLL 繫結） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.PreventDLLBinding
 - /allowbind
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5d5827da555cc11a7fbc1417a9a0e26f953cea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 31968e27c46cb5ea220a4cfe19c36820c4cf8444
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (阻止 DLL 繫結)
 ```  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)   
  [BindImage 函式](http://msdn.microsoft.com/library/windows/desktop/ms679278.aspx)   

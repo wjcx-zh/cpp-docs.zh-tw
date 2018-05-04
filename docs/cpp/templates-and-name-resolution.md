@@ -1,27 +1,22 @@
 ---
-title: "樣板和名稱解析 |Microsoft 文件"
-ms.custom: 
+title: 樣板和名稱解析 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cb6708a8b7631551a6e245c0777bcc6c9fb1a92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b27f6f7f56604976bb1004594fc7c0ac6fdc923
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-and-name-resolution"></a>樣板和名稱解析
 
@@ -87,6 +82,6 @@ ms.lasthandoff: 12/21/2017
   
  類型相依和值相依運算式是一種包含類型相依或值相依變數的運算式。 根據範本所使用的參數，這些運算式可能會有不同的語意。  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
  [範本](../cpp/templates-cpp.md)

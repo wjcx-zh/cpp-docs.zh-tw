@@ -1,13 +1,10 @@
 ---
-title: "EDITBIN 選項 |Microsoft 文件"
-ms.custom: 
+title: EDITBIN 選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>EDITBIN 選項
 您可以使用 EDITBIN 來修改物件的檔案、 可執行檔，以及動態連結程式庫 (Dll)。 選項會指定 EDITBIN 所做的變更。  
@@ -50,13 +45,13 @@ ms.lasthandoff: 02/14/2018
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|指定可執行映像是否與 Windows 資料執行防止功能相容。|  
 |[/REBASE](../../build/reference/rebase.md)|設定指定之物件的基底位址。|  
 |[/RELEASE](../../build/reference/release.md)|在標頭中設定總和檢查碼。|  
-|[/SECTION](../../build/reference/section-editbin.md)|覆寫區段的屬性。|  
+|[/ 區段](../../build/reference/section-editbin.md)|覆寫區段的屬性。|  
 |[/STACK](../../build/reference/stack.md)|設定可執行映像的堆疊大小 (位元組)。|  
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|指定執行環境。|  
 |[/SWAPRUN](../../build/reference/swaprun.md)|指定可執行映像必須複製到分頁檔，再從分頁檔執行映像。|  
 |[/TSAWARE](../../build/reference/tsaware.md)|指定應用程式是設計成在多使用者環境中執行。|  
 |[/VERSION](../../build/reference/version.md)|在標頭中設定版本號碼。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   
  [EDITBIN 參考](../../build/reference/editbin-reference.md)

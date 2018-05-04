@@ -1,12 +1,9 @@
 ---
-title: "ATL Active Server Page 元件精靈 |Microsoft 文件"
-ms.custom: 
+title: ATL Active Server Page 元件精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d717eefe9c9ee353692d343b88c57469eeb6892
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 元件精靈
 此精靈會插入至專案的 Active Server Pages (ASP) 元件。 Microsoft 網際網路資訊服務 (IIS) 會使用 ASP 元件，其增強的網頁開發架構的一部分。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
  提供 c + + 類別建立物件的資訊。  
   
  **簡短名稱**  
- 設定物件的根名稱。 您所提供名稱判斷`Class`和**Coclass**名稱**.cpp 檔**和**.h 檔案**名稱，**介面**名稱**類型**名稱，而**ProgID**，除非您個別變更這些欄位。  
+ 設定物件的根名稱。 您所提供名稱判斷`Class`和**Coclass**名稱 **.cpp 檔**和 **.h 檔案**名稱，**介面**名稱**類型**名稱，而**ProgID**，除非您個別變更這些欄位。  
   
  **.h 檔案**  
  設定新的物件類別的標頭檔的名稱。 根據預設，這個名稱根據您在中提供的名稱**簡短名稱**。 按一下省略符號按鈕，將檔案名稱儲存到您選擇的位置，或將類別宣告附加至現有的檔案。 如果您選取現有的檔案，精靈會無法將其儲存到選取的位置直到您按一下**完成**精靈中。  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="com"></a>COM  
  提供物件的 COM 功能的相關資訊。  
   
- **Coclass**  
+ **coclass**  
  設定包含一份物件支援的介面的元件類別的名稱。 如果您的專案或此物件使用屬性，您就無法變更此選項，因為 ATL 不包含**coclass**屬性。  
   
  **Type**  
@@ -84,6 +79,6 @@ ms.lasthandoff: 12/21/2017
  **ProgID**  
  設定容器可以使用而不是物件的 CLSID 的名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL Active Server Page 元件](../../atl/reference/adding-an-atl-active-server-page-component.md)
 

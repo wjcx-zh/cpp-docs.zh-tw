@@ -2,11 +2,8 @@
 title: CDynamicChain 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDynamicChain
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 類別
 這個類別會提供支援動態鏈結的訊息對應的方法。  
@@ -64,13 +59,13 @@ class CDynamicChain
 |[CDynamicChain::SetChainEntry](#setchainentry)|將訊息對應項目加入至集合，或修改現有的項目。|  
   
 ## <a name="remarks"></a>備註  
- `CDynamicChain`管理訊息對應，啟用 Windows 訊息導向，在執行階段，加入另一個物件的訊息對應的集合。  
+ `CDynamicChain` 管理訊息對應，啟用 Windows 訊息導向，在執行階段，加入另一個物件的訊息對應的集合。  
   
  若要加入支援的訊息對應的動態鏈結，執行下列作業：  
   
 -   衍生您的類別從`CDynamicChain`。 在訊息對應中，指定[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)鏈結至另一個物件的預設訊息對應巨集。  
   
--   您想要從鏈結至每個的類別的衍生[CMessageMap](../../atl/reference/cmessagemap-class.md)。 `CMessageMap`讓物件公開至其他物件其訊息對應。  
+-   您想要從鏈結至每個的類別的衍生[CMessageMap](../../atl/reference/cmessagemap-class.md)。 `CMessageMap` 讓物件公開至其他物件其訊息對應。  
   
 -   呼叫`CDynamicChain::SetChainEntry`來識別物件和訊息對應您要鏈結。  
   
@@ -89,7 +84,7 @@ class CDynamicChain
 ## <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
   
-##  <a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>  CDynamicChain::CallChain  
  Windows 會將訊息導向至另一個物件的訊息對應。  
   
 ```
@@ -127,16 +122,16 @@ BOOL CallChain(
 ### <a name="remarks"></a>備註  
  視窗程序來叫用`CallChain`，您必須指定[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)中訊息對應巨集。 如需範例，請參閱[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概觀。  
   
- `CallChain`需要先前呼叫[SetChainEntry](#setchainentry)關聯`dwChainID`物件和其訊息對應的值。  
+ `CallChain` 需要先前呼叫[SetChainEntry](#setchainentry)關聯`dwChainID`物件和其訊息對應的值。  
   
-##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  建構函式。  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
  解構函式。  
   
 ```
@@ -146,7 +141,7 @@ CDynamicChain();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
  從集合中移除指定的訊息對應。  
   
 ```
@@ -160,7 +155,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>傳回值  
  **TRUE**如果從集合中成功移除的訊息對應。 否則， **FALSE**。  
   
-##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
  將指定的訊息對應新增至集合。  
   
 ```
@@ -186,6 +181,6 @@ BOOL SetChainEntry(
 ### <a name="remarks"></a>備註  
  如果`dwChainID`值已經存在集合中，其相關聯的物件和訊息對應會取代`pObject`和`dwMsgMapID`分別。 否則，會加入新項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

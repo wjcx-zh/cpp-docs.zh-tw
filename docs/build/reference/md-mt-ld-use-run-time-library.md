@@ -2,12 +2,9 @@
 title: -MD 中，-MT，-LD （使用執行階段程式庫） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ld
 - /mt
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b54a6aac55554cd7bd4698762779e540c4bc4c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b6fc814c1c2b0630a99cdaa19601be25c861580
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD (使用執行階段程式庫)
 指出多執行緒模組是否為 DLL，並指定執行階段程式庫的正式版本或偵錯版本。  
@@ -75,8 +70,8 @@ ms.lasthandoff: 12/21/2017
 |**/MDd**|定義 `_DEBUG`、`_MT` 和 `_DLL`，並讓應用程式使用偵錯多執行緒特定與 DLL 特定版本的執行階段程式庫。 它也會讓編譯器將程式庫名稱 MSVCRTD.lib 放入 .obj 檔中。|  
 |**/MT**|讓應用程式使用多執行緒、靜態版本的執行階段程式庫。 定義 `_MT`，並讓編譯器將程式庫名稱 LIBCMT.lib 置入 .obj 檔案中，讓連結器能夠使用 LIBCMT.lib 解析外部符號。|  
 |**/MTd**|定義 `_DEBUG` 和 `_MT`。 這個選項也會讓編譯器將程式庫名稱 LIBCMTD.lib 放入 .obj 檔中，使連結器可以使用 LIBCMTD.lib 解析外部符號。|  
-|**/LD**|建立 DLL。<br /><br /> 傳遞**/DLL**至連結器選項。 連結器會尋找 (並非必要) `DllMain` 函式。 如果您沒有撰寫 `DllMain` 函式，連結器將會插入一個會傳回 TRUE 的 `DllMain` 函式。<br /><br /> 連結 DLL 啟始程式碼。<br /><br /> 如果在命令列上未指定匯出 (.exp) 檔案，則會建立匯入程式庫 (.lib)。 您應將匯入程式庫連結至呼叫 DLL 的應用程式。<br /><br /> 解譯[/Fe （命名 EXE 檔案）](../../build/reference/fe-name-exe-file.md)做為命名 DLL，而不是.exe 檔案。 根據預設，程式名稱會成為*basename*.dll，而不是*basename*.exe。<br /><br /> 表示**/MT**除非您明確指定**/MD**。|  
-|**/Ldd**|建立偵錯 DLL。 定義 `_MT` 和 `_DEBUG`。|  
+|**/LD**|建立 DLL。<br /><br /> 傳遞 **/DLL**至連結器選項。 連結器會尋找 (並非必要) `DllMain` 函式。 如果您沒有撰寫 `DllMain` 函式，連結器將會插入一個會傳回 TRUE 的 `DllMain` 函式。<br /><br /> 連結 DLL 啟始程式碼。<br /><br /> 如果在命令列上未指定匯出 (.exp) 檔案，則會建立匯入程式庫 (.lib)。 您應將匯入程式庫連結至呼叫 DLL 的應用程式。<br /><br /> 解譯[/Fe （命名 EXE 檔案）](../../build/reference/fe-name-exe-file.md)做為命名 DLL，而不是.exe 檔案。 根據預設，程式名稱會成為*basename*.dll，而不是*basename*.exe。<br /><br /> 表示 **/MT**除非您明確指定 **/MD**。|  
+|**/LDd**|建立偵錯 DLL。 定義 `_MT` 和 `_DEBUG`。|  
   
  如需 C 執行階段程式庫，且您使用編譯時使用的程式庫[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)，請參閱[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
@@ -92,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  展開**C/c + +**資料夾。  
+2.  展開**C/c + +** 資料夾。  
   
 3.  選取**程式碼產生**屬性頁。  
   
@@ -102,6 +97,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.RuntimeLibrary%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

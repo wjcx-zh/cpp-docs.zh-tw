@@ -1,12 +1,9 @@
 ---
-title: "參考類型函式傳回 |Microsoft 文件"
-ms.custom: 
+title: 參考類型函式傳回 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3a5d0b299b2bc38c95420515ab49eabd1268305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-type-function-returns"></a>參考類型函式傳回
 函式可宣告為傳回參考類型。 進行此類宣告有兩個原因：  
@@ -121,5 +116,5 @@ Foo& GetFoo()
   
  編譯器會發出警告，以在此情況下： `warning C4172: returning address of local variable or temporary`。 在簡單程式中，如果呼叫端在覆寫記憶體位置之前存取參考，則可能偶爾不會發生存取違規。 這純粹只是幸運。 請留意警告。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考](../cpp/references-cpp.md)

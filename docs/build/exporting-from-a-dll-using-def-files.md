@@ -1,13 +1,10 @@
 ---
-title: "使用.DEF 檔從 DLL 匯出 |Microsoft 文件"
-ms.custom: 
+title: 使用.DEF 檔從 DLL 匯出 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15806c3e40d45588ec27f1351e583fc5e8e897e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a870df7ea803813a8403cd807c0f0612873d4576
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>使用 .DEF 檔從 DLL 匯出
-將模組定義 (.def) 檔是文字檔，其中包含描述各種屬性之 DLL 的一個或多個模組陳述式。 如果您不使用**__declspec （dllexport)**關鍵字匯出的 DLL 函式，DLL 需要.def 檔。  
+將模組定義 (.def) 檔是文字檔，其中包含描述各種屬性之 DLL 的一個或多個模組陳述式。 如果您不使用 **__declspec （dllexport)** 關鍵字匯出的 DLL 函式，DLL 需要.def 檔。  
   
  最小的.def 檔案必須包含下列模組定義陳述式：  
   
@@ -95,5 +90,5 @@ EXPORTS
   
 -   [交互匯入](../build/mutual-imports.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 DLL 匯出](../build/exporting-from-a-dll.md)

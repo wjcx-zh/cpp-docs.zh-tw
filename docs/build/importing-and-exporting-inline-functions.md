@@ -1,13 +1,10 @@
 ---
-title: "匯入和匯出內嵌函式 |Microsoft 文件"
-ms.custom: 
+title: 匯入和匯出內嵌函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f8d159a1537cdfee02d45805632ba9ad4afa7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b666d450766a5a285f02517d92d5eb4dc3f29c68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-and-exporting-inline-functions"></a>匯入和匯出內嵌函式
 匯入的函式可以定義為內嵌。 效果大致上是相同定義的標準函式內嵌。呼叫函式會展開到內嵌程式碼，很像巨集。 一種支援 c + + DLL 中某些其成員函式為了提高效率而內嵌類別，這是來說相當有用。  
@@ -57,5 +52,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [匯入應用程式使用 __declspec （dllimport）](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [匯入和匯出](../build/importing-and-exporting.md)

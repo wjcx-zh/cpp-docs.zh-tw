@@ -2,28 +2,23 @@
 title: constexpr （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - constexpr_cpp
 dev_langs:
 - C++
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
-caps.latest.revision: 3
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 1f95f6c98138ff1eb52750c1b8593795ca28c784
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -85,7 +80,7 @@ A **constexpr**函式或建構函式已隱含**內嵌**。
 
 - 它不能[虛擬](../cpp/virtual-cpp.md)。 建構函式不能定義為 constexpr 封入類別有任何虛擬基底類別。
 
-- 主體可以定義為**= 預設**或**= 刪除**。
+- 主體可以定義為 **= 預設**或 **= 刪除**。
 
 - 主體不可以包含**goto**陳述式或 try 區塊。
 
@@ -116,7 +111,7 @@ constexpr float exp(float x, int n)
 
 ## <a name="extern-constexpr"></a>extern constexpr
 
-[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)編譯器選項會使編譯器套用[外部連結]()變數宣告可透過**extern constexpr**。 在舊版的 Visual Studio，而且依預設或**/Zc:externConstexpr-**指定時，Visual Studio 會套用到內部連結**constexpr**變數，即使**extern**關鍵字使用。 **/Zc:externConstexpr**選項才可以使用 Visual Studio 2017 更新 15.6 中啟動。 和預設為關閉。 /Permissive-option 不會啟用 /Zc:externConstexpr。
+[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)編譯器選項會使編譯器套用[外部連結]()變數宣告可透過**extern constexpr**。 在舊版的 Visual Studio，而且依預設或 **/Zc:externConstexpr-** 指定時，Visual Studio 會套用到內部連結**constexpr**變數，即使**extern**關鍵字使用。 **/Zc:externConstexpr**選項才可以使用 Visual Studio 2017 更新 15.6 中啟動。 和預設為關閉。 /Permissive-option 不會啟用 /Zc:externConstexpr。
 
 ## <a name="example"></a>範例
 

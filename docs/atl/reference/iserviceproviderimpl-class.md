@@ -1,12 +1,9 @@
 ---
-title: "IServiceProviderImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IServiceProviderImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IServiceProviderImpl
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4946a88e6bf6767de0e3965670f94b91d1ddaf90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b1472fe5d952e93b45240128383db9fdec5b093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 類別
 這個類別提供的預設實作`IServiceProvider`介面。  
@@ -57,7 +52,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  **IServiceProviderImpl**指定其中一種方法： [QueryService](#queryservice)，建立或存取指定的服務，並將介面指標傳回指定服務的介面。  
   
- `IServiceProviderImpl`使用服務對應，開頭[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)結束[END_SERVICE_MAP](service-map-macros.md#end_service_map)。  
+ `IServiceProviderImpl` 使用服務對應，開頭[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)結束[END_SERVICE_MAP](service-map-macros.md#end_service_map)。  
   
  服務對應包含兩個項目： [SERVICE_ENTRY](service-map-macros.md#service_entry)，表示支援的物件，指定的服務識別碼 (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，而它會呼叫`QueryService`鏈結至另一個物件。  
   
@@ -69,7 +64,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  建立或存取指定的服務，並將介面指標傳回指定服務的介面。  
   
 ```
@@ -80,13 +75,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>參數  
- [IN]`guidService`  
+ [IN] `guidService`  
  服務識別碼 (SID) 的指標。  
   
- [IN]`riid`  
+ [IN] `riid`  
  呼叫者是能夠存取的介面識別項。  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  所要求介面的間接指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -101,7 +96,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|要求的介面不是這項服務的一部分或未知的服務。|  
   
 ### <a name="remarks"></a>備註  
- `QueryService`傳回所要求的介面中指定的服務的間接指標。 呼叫端會負責在發行時不再需要這個指標。  
+ `QueryService` 傳回所要求的介面中指定的服務的間接指標。 呼叫端會負責在發行時不再需要這個指標。  
   
  當您呼叫`QueryService`，您傳遞兩個服務識別元 ( `guidService`) 和介面識別項 ( `riid`)。 `guidService`指定您要存取的服務和`riid`識別為服務一部分的介面。 您會收到介面間接指標。  
   
@@ -115,5 +110,5 @@ STDMETHOD(QueryService)(
   
  兩個不同的服務，例如 SID_SMyService 和 SID_SYourService，可以同時指定要使用相同的介面，即使介面的實作可能會有兩個服務之間執行任何動作。 其運作，因為呼叫`QueryService`（SID_SMyService、 IID_IDispatch） 可能會傳回不同的物件，而非`QueryService`（SID_SYourService、 IID_IDispatch）。 當您指定不同的服務識別項，不會假設物件識別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

@@ -2,11 +2,8 @@
 title: 傳址運算子： &amp; |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcc5d08f75839f428b981136e4aed0402cd72868
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: df243cac3b48a120345760f814a97b77667c770f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="address-of-operator-amp"></a>傳址運算子： &amp;
 ## <a name="syntax"></a>語法  
@@ -41,7 +36,7 @@ ms.lasthandoff: 04/06/2018
   
  傳址運算子僅適用於基本、結構、類別或等位型別是在檔案範圍層級宣告的變數，或是註標的陣列參考。 在這些運算式中，未包含傳址運算子的常數運算式可以在傳址運算式中進行加法或減法運算。  
   
- 套用至函式或左值時，運算式的結果會是衍生自運算元類型的指標類型 (右值)。 例如，如果運算元為 `char` 類型，則運算式的結果為指向 `char` 的類型指標。 傳址運算子套用至**const**或`volatile`物件，會評估為**const** `type` **\***或`volatile` `type`**\***，其中`type`是原始物件的類型。  
+ 套用至函式或左值時，運算式的結果會是衍生自運算元類型的指標類型 (右值)。 例如，如果運算元為 `char` 類型，則運算式的結果為指向 `char` 的類型指標。 傳址運算子套用至**const**或`volatile`物件，會評估為**const** `type` **\*** 或`volatile` `type`**\***，其中`type`是原始物件的類型。  
   
  傳址運算子套用至時[限定的名稱](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df)，結果會取決於是否*限定名稱*指定靜態成員。 如果是，則結果為成員宣告中所指定類型的指標。 如果成員不是靜態的結果是成員的指標*名稱*類別所表示的*限定類別名稱*。 (請參閱[主要運算式](../cpp/primary-expressions.md)如需詳細資訊*限定類別名稱*。)下列程式碼片段將示範成員是否為靜態的結果差異：  
   

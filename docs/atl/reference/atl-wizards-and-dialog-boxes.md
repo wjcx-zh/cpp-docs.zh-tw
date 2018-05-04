@@ -1,29 +1,24 @@
 ---
-title: "ATL 精靈和對話方塊 |Microsoft 文件"
-ms.custom: 
+title: ATL 精靈和對話方塊 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2fd2a7295b702726e9be30e0f3009c627727cd6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bfdb246f5d331936993093fce068efdcdceee5c2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 精靈和對話方塊
 Active Template Library (ATL) 精靈產生的各種 COM 物件的未定案程式碼。 您可以藉由開啟的專案中的捷徑功能表執行精靈**方案總管 中**，然後選擇**新增**，**類別**。  

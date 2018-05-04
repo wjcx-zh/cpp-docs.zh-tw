@@ -2,11 +2,8 @@
 title: 使用 extern 指定連結 |Microsoft 文件
 ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - extern
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarations, external
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 319ee69d30ad49ff745df05172db10503b3b42e0
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 68bb5f35044a02b64c0475c7c94bc7a0b025cd3e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-extern-to-specify-linkage"></a>使用 extern 指定連結
 ## <a name="syntax"></a>語法  
@@ -63,7 +58,7 @@ void other() {
   
  在 C++ 中，透過字串使用時，`extern` 會將其他語言的連接慣例指定為供宣告子使用。 只有在先前宣告為具有 C 連結時，才可以存取 C 函式和資料。 不過，您必須在另行編譯的轉譯單位中定義它們。  
   
- Microsoft c + + 支援字串**"C"**和**"C + +"**中*字串常值*欄位。 所有使用 `extern` "C" 語法的標準 Include 檔都可在 C++ 程式中使用執行階段程式庫函式。  
+ Microsoft c + + 支援字串 **"C"** 和 **"C + +"** 中*字串常值*欄位。 所有使用 `extern` "C" 語法的標準 Include 檔都可在 C++ 程式中使用執行階段程式庫函式。  
   
 ## <a name="example"></a>範例  
  下列範例顯示宣告具有 C 連結之名稱的替代方式：  

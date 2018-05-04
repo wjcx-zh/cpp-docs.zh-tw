@@ -1,12 +1,9 @@
 ---
-title: "CSid 類別 |Microsoft 文件"
-ms.custom: 
+title: CSid 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>CSid 類別
 這個類別是包裝函式`SID`（安全性識別碼） 結構。  
@@ -98,11 +93,11 @@ class CSid
 |||  
 |-|-|  
 |[operator ==](#operator_eq_eq)|測試相等的兩個安全性描述元物件|  
-|[operator !=](#operator_neq)|測試兩個安全性描述元物件不相等|  
-|[運算子\<](#operator_lt_)|比較兩個安全性描述元物件的相對值。|  
-|[operator >](#operator_gt_)|比較兩個安全性描述元物件的相對值。|  
-|[operator \<=](#operator_lt__eq)|比較兩個安全性描述元物件的相對值。|  
-|[operator >=](#operator_gt__eq)|比較兩個安全性描述元物件的相對值。|  
+|[運算子 ！ =](#operator_neq)|測試兩個安全性描述元物件不相等|  
+|[運算子 \<](#operator_lt_)|比較兩個安全性描述元物件的相對值。|  
+|[運算子 >](#operator_gt_)|比較兩個安全性描述元物件的相對值。|  
+|[運算子 \<=](#operator_lt__eq)|比較兩個安全性描述元物件的相對值。|  
+|[運算子 > =](#operator_gt__eq)|比較兩個安全性描述元物件的相對值。|  
   
 ## <a name="remarks"></a>備註  
  `SID`結構是用來唯一識別使用者或群組的可變長度結構。  
@@ -342,7 +337,7 @@ bool LoadAccount(
  傳回**true**成功時， **false**失敗。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。  
   
 ### <a name="remarks"></a>備註  
- `LoadAccount`嘗試尋找指定之名稱的安全性識別碼。 請參閱[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)如需詳細資訊。  
+ `LoadAccount` 嘗試尋找指定之名稱的安全性識別碼。 請參閱[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)如需詳細資訊。  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  指派運算子。  
@@ -359,7 +354,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>傳回值  
  將參考傳回給更新`CSid`物件。  
   
-##  <a name="operator_eq_eq"></a>  CSid::operator ==  
+##  <a name="operator_eq_eq"></a>  CSid::operator = =  
  測試兩個安全性描述元物件相等。  
   
 ```
@@ -378,7 +373,7 @@ bool operator==(
 ### <a name="return-value"></a>傳回值  
  **true**如果安全性描述元相等，否則為**false**。  
   
-##  <a name="operator_neq"></a>  CSid::operator !=  
+##  <a name="operator_neq"></a>  CSid::operator ！ =  
  測試兩個安全性描述元物件不相等。  
   
 ```
@@ -473,7 +468,7 @@ bool operator>=(
 ### <a name="return-value"></a>傳回值  
  **true**如果`lhs`大於或等於`rhs`，否則為**false**。  
   
-##  <a name="operator_const_sid__star"></a>CSid::operator const SID *  
+##  <a name="operator_const_sid__star"></a>  CSid::operator const SID *  
  轉型`CSid`物件的指標`SID`（安全性識別碼） 結構。  
   
 ```  
@@ -516,9 +511,9 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|指出`SID`電腦。|  
   
 ### <a name="remarks"></a>備註  
- 呼叫[CSid::LoadAccount](#loadaccount)更新`CSid`物件之前先呼叫`SidNameUse`来傳回其狀態。 `SidNameUse`不會變更物件的狀態 (藉由呼叫至**LookupAccountName**或**LookupAccountSid**)，但只會傳回目前的狀態。  
+ 呼叫[CSid::LoadAccount](#loadaccount)更新`CSid`物件之前先呼叫`SidNameUse`来傳回其狀態。 `SidNameUse` 不會變更物件的狀態 (藉由呼叫至**LookupAccountName**或**LookupAccountSid**)，但只會傳回目前的狀態。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)   

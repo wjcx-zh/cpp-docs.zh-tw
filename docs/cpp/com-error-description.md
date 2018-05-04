@@ -1,12 +1,9 @@
 ---
-title: "_com_error::Description |Microsoft 文件"
-ms.custom: 
+title: _com_error::Description |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_error::Description
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Description method [C++]
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ed306a8eba4e76c2eefc738b617117188e85c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7df1fb3a8ca600b888e5d6f2c51fc44fda17dd27
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comerrordescription"></a>_com_error::Description
 **Microsoft 特定的**  
@@ -48,5 +43,5 @@ _bstr_t Description( ) const;
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [_com_error 類別](../cpp/com-error-class.md)

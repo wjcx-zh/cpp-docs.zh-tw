@@ -1,12 +1,9 @@
 ---
-title: "CComCompositeControl 類別 |Microsoft 文件"
-ms.custom: 
+title: CComCompositeControl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCompositeControl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CComCompositeControl class
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592eb6c897f47bede5aa0a09149aaf791e8cfbce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 類別
 這個類別會提供實作複合控制項所需的方法。  
@@ -83,7 +78,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="remarks"></a>備註  
  類別衍生自類別`CComCompositeControl`繼承 ActiveX 複合控制項的功能。 ActiveX 控制項衍生自`CComCompositeControl`所裝載的標準對話方塊。 這些類型的控制項稱為複合控制項，因為它們是能夠裝載其他控制項 （原生的 Windows 控制項和 ActiveX 控制項）。  
   
- `CComCompositeControl`識別用來尋找列舉中的資料成員的子類別建立複合控制項的對話方塊資源。 IDD 這個子類別的成員會設定為將做為控制項的視窗對話方塊資源的資源識別碼。 下列是範例資料成員的類別衍生自`CComCompositeControl`來識別要用於將控制項的視窗對話方塊資源應包含：  
+ `CComCompositeControl` 識別用來尋找列舉中的資料成員的子類別建立複合控制項的對話方塊資源。 IDD 這個子類別的成員會設定為將做為控制項的視窗對話方塊資源的資源識別碼。 下列是範例資料成員的類別衍生自`CComCompositeControl`來識別要用於將控制項的視窗對話方塊資源應包含：  
   
  [!code-cpp[NVC_ATL_COM#13](../../atl/codesnippet/cpp/ccomcompositecontrol-class_1.h)]  
   
@@ -110,7 +105,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 ## <a name="requirements"></a>需求  
  **標頭：** atlctl.h  
   
-##  <a name="advisesinkmap"></a>CComCompositeControl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CComCompositeControl::AdviseSinkMap  
  呼叫這個方法來通知或取消通知複合控制項所裝載的所有控制項。  
   
 ```
@@ -143,7 +138,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="remarks"></a>備註  
  這個方法的基底實作搜尋項目在事件接收器對應。 然後，它會建議或取消通知事件接收對應接收項目所描述的 COM 物件指向的連接。 這個成員的方法也會依賴在衍生的類別繼承自一個執行個體的事實`IDispEventImpl`為建議使用或 unadvised 接收對應中每一個控制項。  
   
-##  <a name="calcextent"></a>CComCompositeControl::CalcExtent  
+##  <a name="calcextent"></a>  CComCompositeControl::CalcExtent  
  呼叫這個方法來計算的大小以**HIMETRIC**用來裝載複合控制項的對話方塊資源的單位。  
   
 ```
@@ -160,7 +155,7 @@ BOOL CalcExtent(SIZE& size);
 ### <a name="remarks"></a>備註  
  中會傳回大小`size`參數。  
   
-##  <a name="create"></a>CComCompositeControl::Create  
+##  <a name="create"></a>  CComCompositeControl::Create  
  這個方法會呼叫建立複合控制項的控制項視窗。  
   
 ```
@@ -186,7 +181,7 @@ HWND Create(
 ### <a name="remarks"></a>備註  
  通常在控制項的就地啟用期間呼叫這個方法。  
   
-##  <a name="ccomcompositecontrol"></a>CComCompositeControl::CComCompositeControl  
+##  <a name="ccomcompositecontrol"></a>  CComCompositeControl::CComCompositeControl  
  建構函式。  
   
 ```
@@ -196,7 +191,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>備註  
  初始化[CComCompositeControl::m_hbrBackground](#m_hbrbackground)和[CComCompositeControl::m_hWndFocus](#m_hwndfocus)為 NULL 的資料成員。  
   
-##  <a name="dtor"></a>CComCompositeControl:: ~ CComCompositeControl  
+##  <a name="dtor"></a>  CComCompositeControl:: ~ CComCompositeControl  
  解構函式。  
   
 ```
@@ -206,7 +201,7 @@ CComCompositeControl();
 ### <a name="remarks"></a>備註  
  如果存在的話，請刪除背景物件。  
   
-##  <a name="createcontrolwindow"></a>CComCompositeControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComCompositeControl::CreateControlWindow  
  呼叫此方法以建立 [控制] 視窗，並建議任何裝載的控制項。  
   
 ```
@@ -228,21 +223,21 @@ virtual HWND CreateControlWindow(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[CComCompositeControl::Create](#create)和[CComCompositeControl::AdviseSinkMap](#advisesinkmap)。  
   
-##  <a name="m_hbrbackground"></a>CComCompositeControl::m_hbrBackground  
+##  <a name="m_hbrbackground"></a>  CComCompositeControl::m_hbrBackground  
  背景筆刷。  
   
 ```
 HBRUSH m_hbrBackground;
 ```  
   
-##  <a name="m_hwndfocus"></a>CComCompositeControl::m_hWndFocus  
+##  <a name="m_hwndfocus"></a>  CComCompositeControl::m_hWndFocus  
  目前擁有焦點的視窗控制代碼。  
   
 ```
 HWND m_hWndFocus;
 ```  
   
-##  <a name="setbackgroundcolorfromambient"></a>CComCompositeControl::SetBackgroundColorFromAmbient  
+##  <a name="setbackgroundcolorfromambient"></a>  CComCompositeControl::SetBackgroundColorFromAmbient  
  呼叫此方法以設定使用容器的背景色彩的複合控制項的背景色彩。  
   
 ```
@@ -252,7 +247,7 @@ HRESULT SetBackgroundColorFromAmbient();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
  [複合控制項基本概念](../../atl/atl-composite-control-fundamentals.md)   
  [類別概觀](../../atl/atl-class-overview.md)

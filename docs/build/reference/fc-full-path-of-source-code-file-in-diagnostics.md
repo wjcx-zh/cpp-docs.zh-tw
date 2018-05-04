@@ -2,12 +2,9 @@
 title: -FC （診斷中的原始程式碼檔的完整路徑） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UseFullPaths
 - /FC
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bddc92d8c013fd3b4e2425b7f85b084651cdafe
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 4a721b6887b6c5c07d96a79b06f05e6d7855250b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (診斷中的原始程式碼檔之完整路徑)
 
@@ -48,17 +43,17 @@ int main( ) {
 }
 ```
 
-不含**/FC**，診斷文字看起來會像下列診斷文字：
+不含 **/FC**，診斷文字看起來會像下列診斷文字：
 
 - compiler_option_FC.cpp(5)： 錯誤 C2143： 語法錯誤： 遺漏 ';' 才能 '}'
 
-與**/FC**，診斷文字看起來會像下列診斷文字：
+與 **/FC**，診斷文字看起來會像下列診斷文字：
 
 - c:\test\compiler_option_fc.cpp(5)： 錯誤 C2143： 語法錯誤： 遺漏 ';' 才能 '}'
 
  **/FC**如果您想要使用時，請參閱檔案名稱的完整路徑，也需要&#95;&#95;檔案&#95;&#95;巨集。 請參閱[預先定義的巨集](../../preprocessor/predefined-macros.md)如需有關&#95;&#95;檔案&#95;&#95;。
 
-**/FC**選項會隱含**/ZI**。 如需有關**/ZI**，請參閱[/Z7、 /Zi、 /ZI （偵錯資訊格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。
+**/FC**選項會隱含 **/ZI**。 如需有關 **/ZI**，請參閱[/Z7、 /Zi、 /ZI （偵錯資訊格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。
 
 **/FC**輸出以小寫的完整路徑。
 

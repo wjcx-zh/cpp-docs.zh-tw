@@ -2,12 +2,9 @@
 title: -J (預設 char 類型為 unsigned) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DefaultCharIsUnsigned
 - VC.Project.VCCLWCECompilerTool.DefaultCharIsUnsigned
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5195822908c13217244a344357a6140d67a9e7df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a93172296b0e2e6d54dc428ffc62812ad979b160
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (預設 char 類型為 unsigned)
 將預設 `char` 類型從 `signed char` 變更為 `unsigned char`，而且 `char` 類型在擴展為 `int` 類型時，是以零擴充的。  
@@ -59,13 +54,13 @@ ms.lasthandoff: 12/21/2017
   
 2.  在專案中**屬性頁**對話方塊中的，在左窗格中**組態屬性**，依序展開**C/c + +** ，然後選取 **命令列**.  
   
-3.  在**其他選項** 窗格中，指定**/J**編譯器選項。  
+3.  在**其他選項** 窗格中，指定 **/J**編譯器選項。  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [使用專案屬性](../../ide/working-with-project-properties.md)

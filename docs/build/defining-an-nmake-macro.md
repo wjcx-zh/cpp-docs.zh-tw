@@ -1,13 +1,10 @@
 ---
-title: "定義 NMAKE 巨集 |Microsoft 文件"
-ms.custom: 
+title: 定義 NMAKE 巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - defining NMAKE macros
 - NMAKE macros, defining
 ms.assetid: 45aae451-9d33-4a3d-8799-2e0cae17070d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96799bbd10d442c50d66ac4e84169864b9b989ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5997eee052ebba198e1fb52da35322c65a32627b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defining-an-nmake-macro"></a>定義 NMAKE 巨集
 ## <a name="syntax"></a>語法  
@@ -49,5 +44,5 @@ macroname=string
   
  [巨集定義的優先順序](../build/precedence-in-macro-definitions.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和 NMAKE](../build/macros-and-nmake.md)

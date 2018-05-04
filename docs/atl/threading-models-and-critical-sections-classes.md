@@ -1,13 +1,10 @@
 ---
-title: "執行緒模型和關鍵區段類別 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 執行緒模型和關鍵區段類別 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - vc.atl.threads.models
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - threading [ATL], models
 - critical sections
 ms.assetid: 759f05ef-6285-4be6-a2cc-78572dd75146
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1501fe4f761b9bc8775018d6566ceff5fb0aa477
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37172c0080664f496bdf5d5c7c0ebecbd8f77898
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>執行緒模型和關鍵區段類別
 下列類別定義的執行緒模型和關鍵區段：  
@@ -57,6 +52,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md)提供 Windows 執行緒建立函式。 如果執行緒不會使用 CRT 函式，請使用這個類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

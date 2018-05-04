@@ -1,12 +1,9 @@
 ---
-title: "__event |Microsoft 文件"
-ms.custom: 
+title: __event |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __event_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4750d156ef4f0f817e1eecec1f4a0842fc229046
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 921ab0d8a18e8bb50f7ca5ea02002aa16244abcd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event"></a>__event
 宣告事件。  
@@ -139,7 +134,7 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [事件處理](../cpp/event-handling.md)   
  [event_source](../windows/event-source.md)   

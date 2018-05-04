@@ -1,12 +1,9 @@
 ---
-title: "全域函式 COM 對應 |Microsoft 文件"
-ms.custom: 
+title: 全域函式 COM 對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlInternalQueryInterface
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a0a02e46906ae8d3b6c62b8cc1b9147d396966
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 509479a923203acd80eaac1ef90aa64125d208c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-map-global-functions"></a>COM 對應全域函式
 這些函式 COM 對應提供支援**IUnknown**實作。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
 
-##  <a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
+##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -56,7 +51,7 @@ HRESULT AtlInternalQueryInterface(
  [in]包含的介面公開至 COM 對應物件的指標`QueryInterface`。  
   
  `pEntries`  
- [in]陣列**_ATL_INTMAP_ENTRY**存取的可用的介面對應的結構。  
+ [in]陣列 **_ATL_INTMAP_ENTRY**存取的可用的介面對應的結構。  
   
  `iid`  
  [in]所要求介面的 GUID。  
@@ -73,7 +68,7 @@ HRESULT AtlInternalQueryInterface(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
-##  <a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
+##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown  
  呼叫此函式的特殊案例的測試**IUnknown**。  
   
 ```
@@ -84,6 +79,6 @@ BOOL InlineIsEqualUnknown(REFGUID rguid1);
  *rguid1*  
  [in]要比較 GUID **IID_IUnknown**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)   
  [COM 對應巨集](../../atl/reference/com-map-macros.md)

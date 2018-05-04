@@ -1,13 +1,10 @@
 ---
-title: "-GA （針對 Windows 應用程式最佳化） |Microsoft 文件"
-ms.custom: 
+title: -GA （針對 Windows 應用程式最佳化） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.OptimizeForWindowsApplication
 - /ga
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - -GA compiler option [C++]
 - Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611704120ec99280e0701e06e0e4bd45c95330d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 387732c5bde04970e3a467ca4f43f911afa7a9a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (針對 Windows 應用程式最佳化)
 在.exe 檔案的執行緒區域儲存區 (TLS) 變數存取更有效率的程式碼的結果。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  **/GA**速度資料的存取權以宣告[__declspec （thread)](../../cpp/declspec.md) Windows 為基礎的程式中。 當設定這個選項時， [__tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749)巨集假設為 0。  
   
- 使用**/GA** DLL 可能會導致錯誤的程式碼產生的。  
+ 使用 **/GA** DLL 可能會導致錯誤的程式碼產生的。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -59,6 +54,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

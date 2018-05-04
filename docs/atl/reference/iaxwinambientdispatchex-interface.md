@@ -1,12 +1,9 @@
 ---
-title: "IAxWinAmbientDispatchEx 介面 |Microsoft 文件"
-ms.custom: 
+title: IAxWinAmbientDispatchEx 介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IAxWinAmbientDispatchEx
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fd212417a00335bfc02699cf5e38eeacc6451ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22815ddf3131b9d262d68a3202f4f500b7edf807
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx 介面
 這個介面會實作裝載控制項的補充環境屬性。  
@@ -69,7 +64,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 |類型程式庫|ATL.dll|  
 |C++|atliface.h （也包含在 ATLBase.h）|  
   
-##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch  
+##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch  
  這個方法被呼叫來補充預設環境屬性的介面與使用者定義的介面。  
   
 ```
@@ -86,5 +81,5 @@ virtual HRESULT STDMETHODCALLTYPE SetAmbientDispatch(IDispatch* pDispatch) = 0;
 ### <a name="remarks"></a>備註  
  當`SetAmbientDispatch`呼叫與新介面的指標，這個新介面將用來叫用任何屬性或方法，如果系統要求您針對裝載的控制項，這些屬性所未提供的[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IAxWinAmbientDispatch 介面](../../atl/reference/iaxwinambientdispatch-interface.md)

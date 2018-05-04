@@ -1,12 +1,9 @@
 ---
-title: "CComObjectRoot 類別 |Microsoft 文件"
-ms.custom: 
+title: CComObjectRoot 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectRoot
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectRoot class
 ms.assetid: f8797c38-6e73-4f67-85c2-71654cffa8eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3acd4d91082d79cff0e945f841389fb2428396f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6a7d350f7bd50476c1c327d824089981d3e8321
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot 類別
 此 typedef 的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)執行緒模型的伺服器預設值根據。  
@@ -38,14 +33,14 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 ```  
   
 ## <a name="remarks"></a>備註  
- `CComObjectRoot`是`typedef`的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)根據 預設的執行緒模型的伺服器。 因此[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)參考任何[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。  
+ `CComObjectRoot` 是`typedef`的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)根據 預設的執行緒模型的伺服器。 因此[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)參考任何[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。  
   
- `CComObjectRootEx`處理非彙總與彙總物件的物件參考計數管理。 如果您的物件不會被彙總，而且存放的外部未知的指標，如果您的物件進行彙總，它會保留物件參考計數。 對於彙總物件，`CComObjectRootEx`方法可以用來處理失敗，內部物件的建構，並刪除保護以防止刪除內部介面發行時在外部物件或內部的物件。  
+ `CComObjectRootEx` 處理非彙總與彙總物件的物件參考計數管理。 如果您的物件不會被彙總，而且存放的外部未知的指標，如果您的物件進行彙總，它會保留物件參考計數。 對於彙總物件，`CComObjectRootEx`方法可以用來處理失敗，內部物件的建構，並刪除保護以防止刪除內部介面發行時在外部物件或內部的物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComObjectRootEx 類別成員](http://msdn.microsoft.com/en-us/e3ce9c3d-9c8e-4fe5-b682-8e56740a0164)   
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   

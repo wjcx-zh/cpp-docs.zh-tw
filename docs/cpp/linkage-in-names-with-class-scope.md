@@ -1,12 +1,9 @@
 ---
-title: "類別範圍的名稱連結 |Microsoft 文件"
-ms.custom: 
+title: 類別範圍的名稱連結 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - scope [C++], class names
 - class scope [C++], linkage in names with
 ms.assetid: 45275ff3-6e94-4967-82c8-ba540ef4da28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20e8204510f6f6e924e205b89dc9f95734b4b893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eb58f87e998fbe1eeeb9b26eb0da75046a9079d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linkage-in-names-with-class-scope"></a>類別範圍的名稱連結
 下列連結規則適用於具有類別範圍的名稱：  
@@ -48,5 +43,5 @@ ms.lasthandoff: 12/21/2017
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式和連結](../cpp/program-and-linkage-cpp.md)

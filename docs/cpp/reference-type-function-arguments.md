@@ -2,11 +2,8 @@
 title: 參考類型函式引數 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - function arguments [C++], reference-type
 - passing parameters [C++], reference-type arguments
 ms.assetid: 0a70e831-9e76-46c0-821d-aeba13d73cc0
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b94f6b89ec00cc044cbaa93a4f0f914860db71e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 83d78aad4285ad711581dbed1c88ef6b9a8a9b24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-type-function-arguments"></a>參考類型函式引數
 通常更有效率的方式是傳遞參考，而不是傳遞大型物件給函式。 這可讓編譯器傳遞物件位址，同時又可維護將用來存取物件的語法。 請考慮下列會使用 `Date` 結構的範例。  
@@ -81,7 +76,7 @@ long JulianFromGregorian( const Date& GDate );
   
  此原型可確保 `JulianFromGregorian` 函式不會變更其引數。  
   
- 任何函式原型採用參考類型都可以接受其所在位置相同類型的物件，因為沒有標準轉換轉換*typename*至*typename*  **&**.  
+ 任何函式原型採用參考類型都可以接受其所在位置相同類型的物件，因為沒有標準轉換轉換*typename*至 * typename ***&**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考](../cpp/references-cpp.md)

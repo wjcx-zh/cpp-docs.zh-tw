@@ -1,12 +1,9 @@
 ---
-title: "CAccessToken 類別 |Microsoft 文件"
-ms.custom: 
+title: CAccessToken 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAccessToken
@@ -61,17 +58,15 @@ dev_langs:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 407652cc5a5e300a2e5eb9d6a5a07dd29209ffef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 這個類別是存取權杖的包裝函式。  
@@ -222,7 +217,7 @@ bool CreateImpersonationToken(
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- `CreateImpersonationToken`呼叫[DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616)以建立新的模擬權杖。  
+ `CreateImpersonationToken` 呼叫[DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616)以建立新的模擬權杖。  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  呼叫此方法以建立新的主要權杖。  
@@ -248,7 +243,7 @@ bool CreatePrimaryToken(
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- `CreatePrimaryToken`呼叫[DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617)以建立新的主要權杖。  
+ `CreatePrimaryToken` 呼叫[DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617)以建立新的主要權杖。  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  呼叫此方法以建立新的處理程序所表示的使用者安全性內容中執行`CAccessToken`物件。  
@@ -334,7 +329,7 @@ bool CreateRestrictedToken(
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- `CreateRestrictedToken`使用[CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 函式，建立新`CAccessToken`物件，但有限制。  
+ `CreateRestrictedToken` 使用[CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 函式，建立新`CAccessToken`物件，但有限制。  
   
 > [!IMPORTANT]
 >  當使用`CreateRestrictedToken`，請先確定以下： 現有的語彙基元是有效的 （而不輸入使用者的） 和`SidsToDisable`和`PrivilegesToDelete`都有效 （而不由使用者輸入）。 方法會傳回 false，如果拒絕功能。  
@@ -942,7 +937,7 @@ bool OpenThreadToken(
  如果成功則傳回 true，失敗則傳回 false。  
   
 ### <a name="remarks"></a>備註  
- `OpenThreadToken`類似於[CAccessToken::GetThreadToken](#getthreadtoken)，但初始化之前設定的模擬等級`CAccessToken`從執行緒的存取權杖。  
+ `OpenThreadToken` 類似於[CAccessToken::GetThreadToken](#getthreadtoken)，但初始化之前設定的模擬等級`CAccessToken`從執行緒的存取權杖。  
   
  [CAutoRevertImpersonation 類別](../../atl/reference/cautorevertimpersonation-class.md)可用來自動還原模擬的存取權杖，藉由將建立`bImpersonate`旗標設為*true*。  
   
@@ -956,7 +951,7 @@ bool PrivilegeCheck(
 ```  
   
 ### <a name="parameters"></a>參數  
- *RequiredPrivileges*  
+ *[Requiredprivileges]*  
  指標[PRIVILEGE_SET](http://msdn.microsoft.com/library/windows/desktop/aa379307)結構。  
   
  *pbResult*  
@@ -1036,7 +1031,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ### <a name="remarks"></a>備註  
  主要群組是此存取權杖生效時所建立的新物件的預設群組。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATLSecurity 範例](../../visual-cpp-samples.md)   
  [存取權杖](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
  [類別概觀](../../atl/atl-class-overview.md)

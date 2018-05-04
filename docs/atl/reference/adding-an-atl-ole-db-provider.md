@@ -2,11 +2,8 @@
 title: 加入 ATL OLE DB 提供者 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7268d1996bbe64d364c2add478509983e7b863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7627323a947f9b2265845ec0ff3ce8cd24858a92
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>加入 ATL OLE DB 提供者
 使用此精靈將 ATL OLE DB 提供者加入至專案。 ATL OLE DB 提供者是由資料來源、 工作階段、 命令和資料列集類別所組成。 專案必須已建立為 ATL COM 應用程式。  
@@ -42,6 +37,6 @@ ms.lasthandoff: 12/21/2017
   
 4.  按一下**完成**關閉精靈，將在您的專案中插入新建立的 OLE DB 提供者程式碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

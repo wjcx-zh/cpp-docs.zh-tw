@@ -2,12 +2,9 @@
 title: ATL COM 屬性頁 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b1c31aeaba25f4eadad5225dd2f5607cf7053c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5d7904b9f31a1be858dadaa8a087c720c277465
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 屬性頁
 COM 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的一或多個 COM 物件。 屬性頁大量使用 ActiveX 控制項提供豐富的使用者介面可讓要在設計階段設定控制項屬性。  
@@ -53,6 +48,6 @@ COM 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的�
  [ATL](../atl/active-template-library-atl-concepts.md)  
  提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)
 

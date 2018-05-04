@@ -1,12 +1,9 @@
 ---
-title: "NotifyHandler |Microsoft 文件"
-ms.custom: 
+title: NotifyHandler |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - NotifyHandler
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2b7e1825e7192c6a9afa105aeb3a7436f120c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 74fbdd99c162b4362339d8c1b45ddc281d30eeee
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 函式的第三個參數所識別的名稱`NOTIFY_HANDLER`中訊息對應巨集。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="remarks"></a>備註  
  如需訊息對應中使用此訊息處理常式的範例，請參閱[NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler))。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [實作視窗](../atl/implementing-a-window.md)   
  [訊息對應](../atl/message-maps-atl.md)   
  [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)

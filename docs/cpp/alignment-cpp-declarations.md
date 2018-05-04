@@ -2,26 +2,21 @@
 title: 對齊方式 （c + + 宣告） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment-c-declarations"></a>對齊方式 (C++ 宣告)
 C++ 的其中一項低階功能可指定記憶體中物件的精確對齊方式，以充份利用特定的硬體架構。 根據預設，編譯器會根據大小值來對齊類別和結構成員：bool 和 char 對齊一個位元組的界限、short 對齊兩個位元組、int 對齊四個位元組，long long、double 和 long double 對齊八個位元組。 在大多數情況下，您永遠不必擔心對齊方式，因為預設已經為最佳對齊方式。 不過在某些情況下，您可以藉由指定資料結構的自訂對齊方式，達到顯著的效能改善或節省記憶體空間。 在 Visual Studio 2015 之前，可以使用 Microsoft 專有關鍵字 __alignof 和 declspec(alignas) 來指定大於預設值的對齊方式。 啟動 Visual Studio 2015 中應該使用 C + + 11 標準關鍵字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md)最大的程式碼可攜性。 實際上，新關鍵字的行為與 Microsoft 專有擴充功能相同，且針對這些擴充功能的文件也適用於新的關鍵字。 請參閱[__alignof 運算子](../cpp/alignof-operator.md)和[對齊](../cpp/align-cpp.md)如需詳細資訊。 C + + 標準未指定封裝行為對齊界限小於目標平台編譯器預設值，因此您仍需要使用 Microsoft #pragma[套件](../preprocessor/pack.md)在此情況下。  
@@ -106,5 +101,5 @@ adr offset   element
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料結構對齊](http://en.wikipedia.org/wiki/Data_structure_alignment)

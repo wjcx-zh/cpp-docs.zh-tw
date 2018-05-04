@@ -1,13 +1,10 @@
 ---
-title: "DCOMCNFG |Microsoft 文件"
-ms.custom: 
+title: DCOMCNFG |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - DCOMCNFG
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DCOMCNFG utility
 - DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40b372666ba2b623450eb0e58a6c0ff372559ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a165102294f9f39d25f0c3118251382ecab067b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG**是 Windows NT 4.0 公用程式，可讓您在登錄中設定特定的 DCOM 的各種設定。 **DCOMCNFG**視窗有三頁： 預設安全性、 預設的內容和應用程式。 在 Windows 2000 第四個頁面上，預設的通訊協定，會出現。  
@@ -53,6 +48,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [端點] 頁面會列出通訊協定和適用於所選的 DCOM 伺服器的用戶端端點的集合。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務](../atl/atl-services.md)
 

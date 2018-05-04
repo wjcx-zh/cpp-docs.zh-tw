@@ -1,12 +1,9 @@
 ---
-title: "_bstr_t 類別 |Microsoft 文件"
-ms.custom: 
+title: _bstr_t 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _bstr_t
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _bstr_t class
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6943a75f83bac517ce3c9677b0abd8ef560e9b77
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8bea9f863df08342f17419a16b14579fa6a257b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bstrt-class"></a>_bstr_t 類別
 **Microsoft 特定的**  
@@ -44,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
 |||  
 |-|-|  
-|[Assign](../cpp/bstr-t-assign.md)|將 `BSTR` 複製到 `BSTR` 所包裝的 `_bstr_t` 中。|  
+|[指派](../cpp/bstr-t-assign.md)|將 `BSTR` 複製到 `BSTR` 所包裝的 `_bstr_t` 中。|  
 |[Attach](../cpp/bstr-t-attach.md)|將 `_bstr_t` 包裝函式連結至 `BSTR`。|  
 |[copy](../cpp/bstr-t-copy.md)|建構已封裝 `BSTR` 的複本。|  
 |[Detach](../cpp/bstr-t-detach.md)|傳回 `BSTR` 所包裝的 `_bstr_t`，並將 `BSTR` 與 `_bstr_t` 中斷連結。|  
@@ -57,11 +52,11 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |[operator =](../cpp/bstr-t-operator-equal.md)|將新值指派給現有的 `_bstr_t` 物件。|  
-|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|將字元附加至 `_bstr_t` 物件的結尾。|  
+|[運算子 + =](../cpp/bstr-t-operator-add-equal-plus.md)|將字元附加至 `_bstr_t` 物件的結尾。|  
 |[運算子 +](../cpp/bstr-t-operator-add-equal-plus.md)|串連兩個字串。|  
 |[運算子 !](../cpp/bstr-t-operator-logical-not.md)|如果會檢查封裝`BSTR`是**NULL**字串。|  
 |[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/bstr-t-relational-operators.md)|比較兩個 `_bstr_t` 物件。|  
-|[運算子 wchar_t * &#124;char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|將指標擷取至封裝的 Unicode 或多位元組的 `BSTR` 物件。|  
+|[運算子 wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|將指標擷取至封裝的 Unicode 或多位元組的 `BSTR` 物件。|  
   
 **結束 Microsoft 特定的**  
   
@@ -70,5 +65,5 @@ ms.lasthandoff: 01/25/2018
   
  **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)

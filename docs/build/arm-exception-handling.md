@@ -1,27 +1,22 @@
 ---
-title: "ARM 例外狀況處理 |Microsoft 文件"
-ms.custom: 
+title: ARM 例外狀況處理 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdbb6ea3563fb82e90b2bc4ca19f76c43c703cf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb8990dacc9503d5f329db9e7ddd9b8208efd13a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arm-exception-handling"></a>ARM 例外狀況處理
 Windows on ARM 對非同步硬體產生的例外狀況和同步軟體產生的例外狀況，使用相同的結構化例外狀況處理機制。 語言專屬例外狀況處理常式使用語言協助程式函式，以 Windows 結構化例外狀況處理為基礎，進行建置。 本文件描述 Windows on ARM 中的例外狀況處理，以及由 MASM 和 Visual C++ 編譯器產生之程式碼所使用的語言協助程式。  
@@ -304,9 +299,9 @@ ULONG ComputeXdataSize(PULONG *Xdata)
   
  0xFD 程式碼是序列結束的特殊程式碼，表示結尾比序言長一個 16 位元的指令。 這可更好地共用回溯程式碼。  
   
- 在本範例中，如果序言和結尾之間的函式主體執行時發生例外狀況，則回溯會從結尾開始，即在結尾程式碼的位移 0 處開始。 這對應於範例中的位移 0x140。 回溯器會執行完整回溯序列，因為沒有發生任何清除。 如果是在結尾程式碼開頭之後的一個指令發生例外狀況，則回溯器可以跳過第一個回溯程式碼而成功回溯。 指定作業碼之間的一對一對應與回溯程式碼，如果從指令開始回溯 *n* 在結尾，則回溯器應該跳過前 *n* 回溯程式碼。  
+ 在本範例中，如果序言和結尾之間的函式主體執行時發生例外狀況，則回溯會從結尾開始，即在結尾程式碼的位移 0 處開始。 這對應於範例中的位移 0x140。 回溯器會執行完整回溯序列，因為沒有發生任何清除。 如果是在結尾程式碼開頭之後的一個指令發生例外狀況，則回溯器可以跳過第一個回溯程式碼而成功回溯。 指定作業碼之間的一對一對應與回溯程式碼，如果從指令開始回溯*n*在結尾，則回溯器應該跳過前*n*回溯程式碼。  
   
- 對於序言，會以相反的方式執行相似的邏輯。 如果從序言中的位移 0 開始回溯，則無需執行任何動作。 如果從序言中的一個指令開始回溯，則回溯序列應該從距離結尾一個回溯程式碼處開始，因為序言回溯程式碼以相反的順序儲存。 在一般情況下，如果從指令開始回溯 *n* 在序言回溯應該開始執行 *n* 回溯程式碼的程式碼清單結尾。  
+ 對於序言，會以相反的方式執行相似的邏輯。 如果從序言中的位移 0 開始回溯，則無需執行任何動作。 如果從序言中的一個指令開始回溯，則回溯序列應該從距離結尾一個回溯程式碼處開始，因為序言回溯程式碼以相反的順序儲存。 在一般情況下，如果從指令開始回溯*n*在序言回溯應該開始執行*n*回溯程式碼的程式碼清單結尾。  
   
  序言和結尾回溯程式碼不總是完全相符的。 在該情況下，回溯程式碼陣列可能需要包含數個程式碼序列。 若要判定開始處理程式碼的位移，請使用下列邏輯：  
   
@@ -738,6 +733,6 @@ Function:
   
     -   *堆疊調整*= 1，指出 1 × 4 位元組堆疊調整  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)   
  [Visual C++ ARM 移轉時常見的問題](../build/common-visual-cpp-arm-migration-issues.md)

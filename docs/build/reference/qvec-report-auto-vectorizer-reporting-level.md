@@ -2,26 +2,21 @@
 title: -/Qvec-report （自動向量化工具報告層級） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c9a182046ff148621151107a98932cc39835f2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 7ddbb68c20ade9f66215d3a60f2db7ea545409a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (自動向量化工具報告層級)
 可讓編譯器的報告功能[Auto-vectorizer](../../parallel/auto-parallelization-and-auto-vectorization.md) ，並在編譯期間指定的層級的資訊訊息輸出。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 01/03/2018
   
 -   請使用 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 中的範例程式碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   

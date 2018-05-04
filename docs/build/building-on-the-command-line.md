@@ -1,10 +1,10 @@
 ---
 title: 在命令列上建置 C/c + + 程式碼 |Microsoft 文件
-ms.custom: ''
+ms.custom: conceptual
 ms.date: 03/29/2018
 ms.technology:
 - cpp-tools
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc4ec1034d4d77542df4a4241ad3ba5c087602ae
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-cc-code-on-the-command-line"></a>在命令列上建置 C/c + + 程式碼
 
@@ -78,7 +77,7 @@ ms.lasthandoff: 04/03/2018
 |**vcvarsamd64_x86.bat**| 使用 64 位元 x64 原生跨工具來建置 32 位元 x86 程式碼。|
 |**vcvarsx86_arm.bat**| 您可以使用 32 位元 x86 原生跨工具來建立 ARM 程式碼。|
 |**vcvarsamd64_arm.bat**| 您可以使用 64 位元 x64 原生跨工具來建立 ARM 程式碼。|
-|**vcvarsall.bat**| 使用指定的主機和目標架構，以及 SDK 和平台選擇的參數。 如需支援選項的清單，使用呼叫**/help**參數。|
+|**vcvarsall.bat**| 使用指定的主機和目標架構，以及 SDK 和平台選擇的參數。 如需支援選項的清單，使用呼叫 **/help**參數。|
 
 > [!CAUTION]
 > Vcvarsall.bat 檔案和其他 Visual Studio 命令檔，可能會不同電腦。 請勿使用其他電腦上的檔案，來取代遺失或損毀的 vcvarsall.bat 檔案。 重新執行 Visual Studio 安裝程式來取代遺失的檔案。
@@ -93,10 +92,10 @@ ms.lasthandoff: 04/03/2018
 
 > **vcvarsall.bat** [*architecture*] [*platform_type*] [*winsdk_version*] [**-vcvars_ver=**_vcversion_]
 
-*architecture*<br/>
+*架構*<br/>
 此選擇性引數指定要使用的主機和目標架構。 如果*架構*未指定，會使用預設建置環境。 支援這些引數：
 
-|*architecture*|編譯器|主機電腦架構|組建輸出 （目標） 架構|
+|*架構*|編譯器|主機電腦架構|組建輸出 （目標） 架構|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 32 位元原生|x86、x64|x86|
 |**x86\_amd64**或**x86\_x64**|在 x86 x64 cross|x86、x64|X64|
@@ -114,7 +113,7 @@ ms.lasthandoff: 04/03/2018
 選擇性地指定要使用的 Windows sdk 版本。 根據預設，會使用最新已安裝的 Windows SDK。 若要指定的 Windows SDK 版本，您可以使用完整的 Windows 10 SDK 號碼例如**10.0.10240.0**，或指定**8.1**若要使用 Windows 8.1 SDK。
 
 *vcversion*<br/>
-（選擇性） 指定要使用 Visual Studio 編譯器工具組。 根據預設，環境設定為使用目前的 Visual Studio 2017 編譯器工具組。 使用**-vcvars_ver = 14.0**指定 Visual Studio 2015 編譯器工具組。
+（選擇性） 指定要使用 Visual Studio 編譯器工具組。 根據預設，環境設定為使用目前的 Visual Studio 2017 編譯器工具組。 使用 **-vcvars_ver = 14.0**指定 Visual Studio 2015 編譯器工具組。
 
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>若要設定現有的 [命令提示字元] 視窗中的建置環境
@@ -144,14 +143,14 @@ ms.lasthandoff: 04/03/2018
 [CL](../build/reference/compiling-a-c-cpp-program.md)<br/>
 使用編譯器 (cl.exe)，來編譯原始程式碼檔，並將其連結至應用程式、程式庫及 DLL。
 
-[Link](../build/reference/linking.md)<br/>
+[連結](../build/reference/linking.md)<br/>
 使用連結器 (link.exe)，將已編譯的物件檔及程式庫，連結至應用程式及 DLL。
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
 若要建置 Visual c + + 專案和 Visual Studio 方案中使用 MSBuild (msbuild.exe)。 這就相當於執行**建置**專案或**建置方案**Visual Studio IDE 中的命令。
 
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-與命令列參數結合使用 DEVENV (devenv.exe) — 比方說，**建置**或**/清除**— 若要執行特定建置而不會顯示在 Visual Studio IDE 命令。
+與命令列參數結合使用 DEVENV (devenv.exe) — 比方說，**建置**或 **/清除**— 若要執行特定建置而不會顯示在 Visual Studio IDE 命令。
 
 [NMAKE](../build/nmake-reference.md)<br/>
 使用 NMAKE (nmake.exe)，以自動化利用傳統 makefile，建置 Visual c + + 專案的工作。

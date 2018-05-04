@@ -1,12 +1,9 @@
 ---
-title: "應用程式設定，ATL 專案精靈 |Microsoft 文件"
-ms.custom: 
+title: 應用程式設定，ATL 專案精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.atl.com.appset
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12b7e383716d7cfa330bdfdebe21c33550669cc2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47fbf95451834e5f8c41e8b6d7e5af7a9746bb85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="application-settings-atl-project-wizard"></a>應用程式設定, ATL 專案精靈
 使用**應用程式設定**設計基本功能並將新的 ATL 專案在 ATL 專案精靈 頁面。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **支援元件登錄器**如果您的 ATL 專案包含 COM + 1.0 元件的支援，您可以設定這個選項。 元件的註冊機構可讓您取得的元件清單中，登錄元件，或取消登錄元件 （個別或全部） 的 COM + 1.0 物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
  [建立的 ATL 專案](../../atl/reference/creating-an-atl-project.md)   
  [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)

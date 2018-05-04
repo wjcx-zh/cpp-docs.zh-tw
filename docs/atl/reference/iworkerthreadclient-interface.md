@@ -1,12 +1,9 @@
 ---
-title: "IWorkerThreadClient 介面 |Microsoft 文件"
-ms.custom: 
+title: IWorkerThreadClient 介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IWorkerThreadClient
@@ -18,20 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b0578b3fbe16d21a12edf2ac5eb91528419e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient 介面
-`IWorkerThreadClient`是由用戶端的服務所實作的介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)類別。  
+`IWorkerThreadClient` 是由用戶端的服務所實作的介面[CWorkerThread](../../atl/reference/cworkerthread-class.md)類別。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -57,7 +52,7 @@ __interface IWorkerThreadClient
 ## <a name="requirements"></a>需求  
  **標頭：** atlutil.h  
   
-##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
  實作這個方法關閉此控制代碼，這個物件相關聯。  
   
 ```
@@ -79,7 +74,7 @@ HRESULT CloseHandle(HANDLE  hHandle);
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
-##  <a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>  IWorkerThreadClient::Execute  
  實作這個方法與這個物件相關聯的控制代碼會變成收到信號時執行程式碼。  
   
 ```
@@ -104,6 +99,6 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
   
  [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../atl/reference/atl-classes.md)   
  [CWorkerThread 類別](../../atl/reference/cworkerthread-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "設定 (MBCS) 支援的 Unicode 和多位元組字元 |Microsoft 文件"
-ms.custom: 
+title: 設定 (MBCS) 支援的 Unicode 和多位元組字元 |Microsoft 文件
+ms.custom: ''
 ms.date: 1/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -21,14 +18,13 @@ helpviewer_keywords:
 - strings [C++], character set support
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adbe6ca25afd31c0aba853fde8b503dc333f63f4
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: 8492e4a6777e4d609e3b457cfc77d1b8a691eed3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode 及多位元組字元集 (MBCS) 支援
 
@@ -48,15 +44,15 @@ Microsoft 建議所有新的開發的 MFC Unicode 程式庫，MBCS 程式庫已�
 
 |||||
 |-|-|-|-|
-|UAFXCW。LIB|UAFXCW。PDB|UAFXCWD。LIB|UAFXCWD。PDB|
+|UAFXCW。LIB|UAFXCW。PDB|UAFXCWD.LIB|UAFXCWD。PDB|
 |MFC*版本*U.LIB|MFC*版本*U.PDB|MFC*版本*U.DLL|MFC*版本*UD。LIB|
-|MFC*版本*UD。PDB|MFC*版本*UD。DLL|MFCS*版本*U.LIB|MFCS*版本*U.PDB|
+|MFC*版本*UD。PDB|MFC*version*UD.DLL|MFCS*版本*U.LIB|MFCS*版本*U.PDB|
 |MFCS*版本*UD。LIB|MFCS*版本*UD。PDB|MFCM*版本*U.LIB|MFCM*版本*U.PDB|
-|MFCM*版本*U.DLL|MFCM*版本*UD。LIB|MFCM*版本*UD。PDB|MFCM*版本*UD。DLL|
+|MFCM*版本*U.DLL|MFCM*版本*UD。LIB|MFCM*版本*UD。PDB|MFCM*version*UD.DLL|
 
 (*版本*代表版本號碼的檔案; 例如，'140' 表示版本 14.0。)
 
-`CString`根據`TCHAR`資料型別。 如果符號`_UNICODE`為您的程式的組建定義`TCHAR`定義為型別`wchar_t`、 16 位元的字元編碼類型。 否則，`TCHAR`定義為`char`，一般的 8 位元字元編碼方式。 因此，在 Unicode，`CString`是 16 位元的字元所組成。 而不是 Unicode，它以字元組成之型別的`char`。
+`CString` 根據`TCHAR`資料型別。 如果符號`_UNICODE`為您的程式的組建定義`TCHAR`定義為型別`wchar_t`、 16 位元的字元編碼類型。 否則，`TCHAR`定義為`char`，一般的 8 位元字元編碼方式。 因此，在 Unicode，`CString`是 16 位元的字元所組成。 而不是 Unicode，它以字元組成之型別的`char`。
 
 您的應用程式的完整 Unicode 程式設計，您也必須：
 
@@ -72,9 +68,9 @@ Microsoft 建議所有新的開發的 MFC Unicode 程式庫，MBCS 程式庫已�
 
    - 使用`LPTSTR`您會使用`char*`。
 
-   - 使用`LPCTSTR`您會使用`const char*`。 `CString`提供的運算子`LPCTSTR`之間進行轉換`CString`和`LPCTSTR`。
+   - 使用`LPCTSTR`您會使用`const char*`。 `CString` 提供的運算子`LPCTSTR`之間進行轉換`CString`和`LPCTSTR`。
 
-`CString`也提供 Unicode 感知的建構函式、 指派運算子和比較運算子。
+`CString` 也提供 Unicode 感知的建構函式、 指派運算子和比較運算子。
 
 [執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)定義的所有字串處理函式的可攜式版本。 如需詳細資訊，請參閱類別[國際化](../c-runtime-library/internationalization.md)。
 
@@ -91,12 +87,12 @@ Microsoft 建議所有新的開發的 MFC Unicode 程式庫，MBCS 程式庫已�
 > [!NOTE]
 > 在 MFC 中的 Unicode 字串序列化可以讀取 Unicode 和 MBCS 字串，不論您所執行的應用程式的版本。 您的資料檔案可移植的程式 Unicode 和 MBCS 版本之間。
 
-`CString`成員函式會使用特殊的 「 泛型文字 」 版本的 C 執行階段函式所呼叫，或者使用 Unicode 感知函式。 因此，例如，如果`CString`函式通常會呼叫`strcmp`，它會呼叫對應的一般文字函式`_tcscmp`改為。 如何根據符號`_MBCS`和`_UNICODE`所定義，`_tcscmp`對應，如下所示：
+`CString` 成員函式會使用特殊的 「 泛型文字 」 版本的 C 執行階段函式所呼叫，或者使用 Unicode 感知函式。 因此，例如，如果`CString`函式通常會呼叫`strcmp`，它會呼叫對應的一般文字函式`_tcscmp`改為。 如何根據符號`_MBCS`和`_UNICODE`所定義，`_tcscmp`對應，如下所示：
 
 |||
 |-|-|
-|`_MBCS`定義|`_mbscmp`|
-|`_UNICODE`定義|`wcscmp`|
+|`_MBCS` 定義|`_mbscmp`|
+|`_UNICODE` 定義|`wcscmp`|
 |沒有定義的符號|`strcmp`|
 
 > [!NOTE]
@@ -106,7 +102,7 @@ Microsoft 建議所有新的開發的 MFC Unicode 程式庫，MBCS 程式庫已�
 
 同樣地，`CString`方法使用一般的資料型別對應來實作。 若要啟用 MBCS 和 Unicode，MFC 會使用`TCHAR`如`char`或`wchar_t`，`LPTSTR`如`char*`或`wchar_t*`，和`LPCTSTR`如`const char*`或`const wchar_t*`。 這樣可確保正確的對應為 MBCS 或 Unicode。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
 [字串操作](../c-runtime-library/string-manipulation-crt.md)  

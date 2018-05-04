@@ -1,30 +1,25 @@
 ---
-title: "定義規則 |Microsoft 文件"
-ms.custom: 
+title: 定義規則 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NMAKE program, inference rules
 - defining inference rules
 ms.assetid: 071cd092-3f2e-4065-b0fb-36a9d393cfa8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d6ca616e3685db36d6d24b339a860eab4c6150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a8ff7c58033ac5f7e42764d185c45c206bf406f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="defining-a-rule"></a>定義規則
 *Fromext*代表相依的檔案，副檔名和*toext*代表目標檔案的副檔名。  
@@ -40,5 +35,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
  [在規則中的搜尋路徑](../build/search-paths-in-rules.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [推斷規則](../build/inference-rules.md)

@@ -1,30 +1,25 @@
 ---
-title: "DLL 中的 automation |Microsoft 文件"
-ms.custom: 
+title: DLL 中的 automation |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DLLs [C++], Automation
 - Automation [C++], DLLs
 ms.assetid: 2728ecd1-14e2-4ae0-a946-e749e11dbb74
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e3630aab764988ad86e6120301dfff548ad4368
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41c5f31a72cf734296ecb281e0785d415c8043a7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automation-in-a-dll"></a>DLL 中的 Automation
 當您選擇的 Automation 選項在 MFC DLL 精靈時，精靈會讓您獲得下列：  
@@ -43,5 +38,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [Automation 伺服程式](../mfc/automation-servers.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

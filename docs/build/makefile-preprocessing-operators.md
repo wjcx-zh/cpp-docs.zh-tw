@@ -1,13 +1,10 @@
 ---
-title: "Makefile 前置處理運算子 |Microsoft 文件"
-ms.custom: 
+title: Makefile 前置處理運算子 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59007bdabc81b5fe49aa4b5265dc0fc73ef4f0b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9a99bf6388a4aa15b2126aca8e09210b7202d46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-operators"></a>Makefile 前置處理運算子
 Makefile 預先處理運算式可以使用充當常數值、命令結束代碼、字串、巨集和檔案系統路徑的運算子。 若要評估運算式，預先處理器首先會展開巨集，然後執行命令，最後執行運算。 運算會先以括弧明確分組的順序，然後以運算子優先順序，來進行評估。 結果為常數值。  
@@ -45,8 +40,8 @@ Makefile 預先處理運算式可以使用充當常數值、命令結束代碼�
   
 |運算子|描述|  
 |--------------|-----------------|  
-|`DEFINED(`*巨集名稱*`)`|產生目前定義狀態的邏輯值*巨集名稱*。|  
-|`EXIST(`*路徑*`)`|產生的檔案是否存在的邏輯值*路徑*。|  
+|`DEFINED(` *巨集名稱* `)`|產生目前定義狀態的邏輯值*巨集名稱*。|  
+|`EXIST(` *路徑* `)`|產生的檔案是否存在的邏輯值*路徑*。|  
 |||  
 |`!`|一元邏輯 NOT。|  
 |`~`|一元一補數。|  
@@ -81,5 +76,5 @@ Makefile 預先處理運算式可以使用充當常數值、命令結束代碼�
 > [!NOTE]
 >  位元 XOR 運算子 (`^`) 與逸出字元相同，當在運算式中使用時，必須逸出 (`^^`)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Makefile 前置處理中的運算式](../build/expressions-in-makefile-preprocessing.md)

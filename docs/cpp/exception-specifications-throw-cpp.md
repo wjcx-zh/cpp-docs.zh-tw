@@ -1,12 +1,9 @@
 ---
-title: "例外狀況規格 （throw、 noexcept） （c + +） |Microsoft 文件"
-ms.custom: 
+title: 例外狀況規格 （throw、 noexcept） （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbd45c8afed11f613722ecc7586436ff707042d7
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 9ab09d5aadb489208b2e7591c2bf0f60ab836da4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外狀況規格 （throw、 noexcept） （c + +）
 
@@ -37,7 +33,7 @@ ms.lasthandoff: 02/03/2018
 ```cpp
 void MyFunction(int i) throw();
 ```
-通知編譯器，函式不會擲回任何例外狀況。 不過，在**/std:c + + 14**模式，這可能會導致未定義的行為如果函式並擲回例外狀況。 因此我們建議使用[noexcept](../cpp/noexcept-cpp.md)運算子，而不是上述其中一個：
+通知編譯器，函式不會擲回任何例外狀況。 不過，在 **/std:c + + 14**模式，這可能會導致未定義的行為如果函式並擲回例外狀況。 因此我們建議使用[noexcept](../cpp/noexcept-cpp.md)運算子，而不是上述其中一個：
 
 ```cpp
 void MyFunction(int i) noexcept;
@@ -46,11 +42,11 @@ void MyFunction(int i) noexcept;
 
 |例外狀況規格|意義|
 |-----------------------------|-------------|
-|`noexcept`<br>`noexcept(true)`<br>`throw()`|函式不會擲回例外狀況。 在[/std:c + + 14](../build/reference/std-specify-language-standard-version.md)模式 （這是預設值），`noexcept`和`noexcept(true)`相等。 當擲回例外狀況宣告的函式從`noexcept`或`noexcept(true)`， [std:: terminate](../standard-library/exception-functions.md#terminate)叫用。 當從函式擲回例外狀況宣告為`throw()`中**/std:c + + 14**模式中，結果是未定義的行為。 沒有特定的函式會叫用。 這是從 C + + 14 標準，其叫用編譯器時所需的歧異[std::unexpected](../standard-library/exception-functions.md#unexpected)。  <br> **Visual Studio 2017 15.5 和更新版本**： 在**/std:c + + 17**模式中， `noexcept`， `noexcept(true)`，和`throw()`都是相等的。 在**/std:c + + 17**模式中，`throw()`別名`noexcept(true)`。 在**/std:c + + 17**模式中，從這些規格中宣告的函式擲回例外狀況時[std:: terminate](../standard-library/exception-functions.md#terminate)叫用的要求以 C + + 17 標準。|
+|`noexcept`<br>`noexcept(true)`<br>`throw()`|函式不會擲回例外狀況。 在[/std:c + + 14](../build/reference/std-specify-language-standard-version.md)模式 （這是預設值），`noexcept`和`noexcept(true)`相等。 當擲回例外狀況宣告的函式從`noexcept`或`noexcept(true)`， [std:: terminate](../standard-library/exception-functions.md#terminate)叫用。 當從函式擲回例外狀況宣告為`throw()`中 **/std:c + + 14**模式中，結果是未定義的行為。 沒有特定的函式會叫用。 這是從 C + + 14 標準，其叫用編譯器時所需的歧異[std::unexpected](../standard-library/exception-functions.md#unexpected)。  <br> **Visual Studio 2017 15.5 和更新版本**： 在 **/std:c + + 17**模式中， `noexcept`， `noexcept(true)`，和`throw()`都是相等的。 在 **/std:c + + 17**模式中，`throw()`別名`noexcept(true)`。 在 **/std:c + + 17**模式中，從這些規格中宣告的函式擲回例外狀況時[std:: terminate](../standard-library/exception-functions.md#terminate)叫用的要求以 C + + 17 標準。|
 |`noexcept(false)`<br/>`throw(...)`<br/>無規格|此函式會擲回任何類型的例外狀況。|
-|`throw(type)`| (**C + + 14 和更早版本**) 函式可能擲回例外狀況型別的`type`。 編譯器會接受語法，但會將它做為解譯`noexcept(false)`。 在**/std:c + + 17**模式下，編譯器會發出警告 C5040。|
+|`throw(type)`| (**C + + 14 和更早版本**) 函式可能擲回例外狀況型別的`type`。 編譯器會接受語法，但會將它做為解譯`noexcept(false)`。 在 **/std:c + + 17**模式下，編譯器會發出警告 C5040。|
 
-如果應用程式中使用例外狀況處理，必須有函式擲回例外狀況之前離開函式的外部範圍的控點標示之呼叫堆疊中`noexcept`， `noexcept(true)`，或`throw()`。 如果任何函式呼叫之間會將所擲回例外狀況和處理例外狀況的一個指定為`noexcept`， `noexcept(true)` (或`throw()`中**/std:c + + 17**模式)，則會終止程式時noexcept 函式會傳播例外狀況。
+如果應用程式中使用例外狀況處理，必須有函式擲回例外狀況之前離開函式的外部範圍的控點標示之呼叫堆疊中`noexcept`， `noexcept(true)`，或`throw()`。 如果任何函式呼叫之間會將所擲回例外狀況和處理例外狀況的一個指定為`noexcept`， `noexcept(true)` (或`throw()`中 **/std:c + + 17**模式)，則會終止程式時noexcept 函式會傳播例外狀況。
 
 函式的例外狀況行為取決於下列因素：
 
@@ -61,7 +57,7 @@ void MyFunction(int i) noexcept;
 
 - 您是否明確指定例外狀況規格。
 
-C 函式不允許明確例外狀況規格。 C 函式會假設不擲回例外狀況下的**/EHsc**，可能會擲回下的結構化例外狀況和**/EHs**， **/EHa**，或**/EHac**。
+C 函式不允許明確例外狀況規格。 C 函式會假設不擲回例外狀況下的 **/EHsc**，可能會擲回下的結構化例外狀況和 **/EHs**， **/EHa**，或 **/EHac**。
 
 下表摘要說明是否可能會在各種編譯器例外狀況處理選項可能會擲回 c + + 函式：
 
@@ -140,6 +136,6 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
  [再試一次、 throw 和 catch 陳述式 （c + +）](../cpp/try-throw-and-catch-statements-cpp.md) [c + + 例外狀況處理](../cpp/cpp-exception-handling.md)

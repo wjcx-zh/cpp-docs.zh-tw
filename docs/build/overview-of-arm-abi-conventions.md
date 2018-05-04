@@ -1,27 +1,22 @@
 ---
-title: "ARM ABI 慣例概觀 |Microsoft 文件"
-ms.custom: 
+title: ARM ABI 慣例概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f78e5731e6c8d4125fb8afc184cd6e4f2a74cb7a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-arm-abi-conventions"></a>ARM ABI 慣例概觀
 此針對 Windows on ARM 處理器程式碼編譯的應用程式二進位介面 (ABI) 是以標準 ARM EABI 為基礎。 本文章重點說明 Windows on ARM 和標準之間的主要差異。 如需標準 ARM EABI 的詳細資訊，請參閱[應用程式二進位介面 (ABI)，ARM 架構的](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)。  
@@ -214,6 +209,6 @@ ms.lasthandoff: 12/21/2017
   
  計數器是真正的週期計數器，不是時鐘；因此，計數頻率隨處理器頻率而變化。 如果您要測量經歷的時鐘時間，請使用 `QueryPerformanceCounter`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [常見的 Visual c + + ARM 移轉問題](../build/common-visual-cpp-arm-migration-issues.md)   
  [ARM 例外狀況處理](../build/arm-exception-handling.md)

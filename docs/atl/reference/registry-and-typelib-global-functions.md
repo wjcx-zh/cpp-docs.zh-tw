@@ -1,12 +1,9 @@
 ---
-title: "登錄和 TypeLib 全域函式 |Microsoft 文件"
-ms.custom: 
+title: 登錄和 TypeLib 全域函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb0a89ecf8bb81e515703abe819bb1edfbf80d59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-and-typelib-global-functions"></a>登錄和 TypeLib 全域函式
 這些函式提供載入及註冊類型程式庫支援。  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
 使用此函數來判斷應用程式是否將登錄存取重新導向**HKEY_CURRENT_USER** (**HKCU**) 節點。  
   
 ### <a name="syntax"></a>語法  
@@ -79,10 +74,10 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
   
 ### <a name="parameters"></a>參數  
  [輸出] `pEnabled`  
- `TRUE`指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
+ `TRUE` 指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK`如果方法成功，否則`HRESULT`如果發生錯誤的錯誤碼。  
+ `S_OK` 如果方法成功，否則`HRESULT`如果發生錯誤的錯誤碼。  
   
 ### <a name="remarks"></a>備註  
  預設不啟用登錄重新導向。 如果您啟用此選項，重新導向至的登錄存取**HKEY_CURRENT_USER\Software\Classes**。  
@@ -92,7 +87,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
 
- ## <a name="afxregcreatekey"></a>AfxRegCreateKey
+ ## <a name="afxregcreatekey"></a> AfxRegCreateKey
  建立指定的登錄機碼。  
   
 ### <a name="syntax"></a>語法  
@@ -120,7 +115,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 刪除指定的登錄機碼。  
   
 ### <a name="syntax"></a>語法  
@@ -167,7 +162,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h   
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
+##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib  
  呼叫此函式可註冊類型程式庫。  
   
   
@@ -190,7 +185,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h
 
- ## <a name="afxregopenkey"></a>AfxRegOpenKey
+ ## <a name="afxregopenkey"></a> AfxRegOpenKey
  開啟指定的登錄機碼。  
   
 ### <a name="syntax"></a>語法  
@@ -218,7 +213,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 開啟指定的登錄機碼。 
 
 ### <a name="syntax"></a>語法  
@@ -252,7 +247,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
 
- ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+ ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
  用來取消註冊預覽處理常式的協助程式。  
   
 ### <a name="syntax"></a>語法  
@@ -268,7 +263,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 設定應用程式將登錄存取重新導向是否**HKEY_CURRENT_USER** (**HKCU**) 節點。  
   
 ### <a name="syntax"></a>語法  
@@ -279,10 +274,10 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
+ `TRUE` 指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK`如果方法成功，否則`HRESULT`如果發生錯誤的錯誤碼。  
+ `S_OK` 如果方法成功，否則`HRESULT`如果發生錯誤的錯誤碼。  
   
 ### <a name="remarks"></a>備註  
  預設不啟用登錄重新導向。 如果您啟用此選項，重新導向至的登錄存取**HKEY_CURRENT_USER\Software\Classes**。  
@@ -291,7 +286,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib  
  呼叫此函式可解除類型程式庫的註冊。  
   
 ### <a name="syntax"></a>語法  
@@ -316,7 +311,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
+##  <a name="atlloadtypelib"></a>  AtlLoadTypeLib  
  呼叫此函式可載入類型程式庫。  
   
 ### <a name="syntax"></a>語法  
@@ -347,7 +342,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="remarks"></a>備註  
  這個 helper 函式使用[AtlRegisterTypeLib](#atlregistertypelib)和[AtlUnRegisterTypeLib](#atlunregistertypelib)。  
   
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
+##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD  
  此函式在 Visual Studio 2013 中已被取代並在 Visual Studio 2015 中移除。  
   
 ```
@@ -356,7 +351,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
   
 
   
-##  <a name="registrydataexchange"></a>RegistryDataExchange  
+##  <a name="registrydataexchange"></a>  RegistryDataExchange  
  呼叫此函式可對系統登錄執行讀取或寫入。  
 
 ### <a name="syntax"></a>語法  
@@ -394,7 +389,7 @@ HRESULT RegistryDataExchange(
 ### <a name="requirements"></a>需求  
  **標頭：** atlbase.h
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](atl-functions.md)[登錄資料交換巨集](registry-data-exchange-macros.md)
 
 

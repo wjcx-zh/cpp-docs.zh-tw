@@ -1,29 +1,24 @@
 ---
-title: "如何： 建置免註冊 COM 元件 |Microsoft 文件"
-ms.custom: 
+title: 如何： 建置免註冊 COM 元件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018a3ba707f4c5cff73b5a5c54f82400a79a8d46
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e54327344d61cc70e68b528c5f88f3d30f5d185a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-build-registration-free-com-components"></a>如何：建置免註冊的 COM 元件
 免註冊 COM 元件是內建於 Dll 的資訊清單的 COM 元件。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 5.  建置方案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [隔離的應用程式](http://msdn.microsoft.com/library/aa375190)   
  [關於-並存組件](http://msdn.microsoft.com/library/ff951640)   
  [如何：建置隔離的應用程式以使用 COM 元件](../build/how-to-build-isolated-applications-to-consume-com-components.md)

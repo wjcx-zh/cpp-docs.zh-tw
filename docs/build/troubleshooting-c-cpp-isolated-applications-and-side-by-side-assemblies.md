@@ -1,13 +1,10 @@
 ---
-title: "疑難排解 C/c + + 隔離應用程式和-並存組件 |Microsoft 文件"
-ms.custom: 
+title: 疑難排解 C/c + + 隔離應用程式和-並存組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ea32a33a3194282657999712effbad0e334bea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f5645270cbc8fbb71dd841cb4f1affa6bef1295
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>疑難排解 C/C++ 隔離應用程式和並存組件
 如果找不到相依程式庫，則載入 C/C++ 應用程式可能會失敗。 本文將說明為什麼無法載入 C/++ 應用Ｃ程式的一些常見原因，並建議解決問題的步驟。  
@@ -112,6 +107,6 @@ ms.lasthandoff: 12/21/2017
   
  如需載入器如何搜尋相依組件的詳細資訊，請參閱[組件搜尋序列](http://msdn.microsoft.com/library/aa374224)。 如果載入器找不到做為私用組件的相依組件，載入會失敗並出現「系統無法執行指定的程式」訊息。 若要解決這個錯誤，請確定相依組件和屬於這些組件的 Dll，都做為私用或共用組件安裝在電腦上。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [隔離的應用程式和-並存組件的概念](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
  [建置 C/C++ 隔離應用程式和並存組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

@@ -1,13 +1,10 @@
 ---
-title: "如何： 將自訂工具整合至專案屬性 |Microsoft 文件"
-ms.custom: 
+title: 如何： 將自訂工具整合至專案屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 04/27/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.integratecustomtools
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
 ms.assetid: f32d91a4-44e9-4de3-aa9a-1c7f709ad2ee
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a762fc573953bcfb09180b9b830b761448d87a0d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 00482aa2b4b700d15e46d0741e76dd17afc28419
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>如何：將自訂工具整合至專案屬性中
 您可以加入 Visual Studio 中的自訂工具選項**屬性頁**視窗所建立的基礎 XML 結構描述檔案。  
@@ -50,5 +45,5 @@ ms.lasthandoff: 01/03/2018
   
 7.  在**方案總管 中**，以滑鼠右鍵按一下專案，然後按一下**屬性**。 在**屬性頁**視窗中的，在左窗格中，確認有新的節點，您的規則的名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

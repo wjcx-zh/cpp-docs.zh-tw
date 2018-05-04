@@ -1,30 +1,25 @@
 ---
-title: "卸載延遲載入 DLL |Microsoft 文件"
-ms.custom: 
+title: 卸載延遲載入 DLL |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __FUnloadDelayLoadedDLL2
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b47969da4c560f28c07ac09caef83873e362ddc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724ee2ac3987c855f5e2102dee35d12785726641
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>卸載延遲載入的 DLL
 預設提供的延遲載入 helper 會檢查以查看延遲載入描述元 pUnloadIAT 欄位中是否有一個指標，以及原始匯入位址表 (IAT)。 若是如此，它會將指標儲存至匯入的延遲描述項清單中。 這可讓 helper 函式，以尋找 DLL 支援明確卸載該 DLL 的名稱。  
@@ -72,5 +67,5 @@ __FUnloadDelayLoadedDLL2("user32.DLL");
 __FUnloadDelayLoadedDLL2("User32.DLL");.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解協助協助程式函式](understanding-the-helper-function.md)

@@ -1,12 +1,9 @@
 ---
-title: "ATL 控制項精靈 |Microsoft 文件"
-ms.custom: 
+title: ATL 控制項精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.overview
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controls [ATL], adding to projects
 - ATL Control Wizard
 ms.assetid: 991f8e72-ffbc-4382-a4ce-e255acfba5b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a9167153c2b827e1bc2597e830e9b3c82ee31b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1df64cd0661a7f905ebcc068efb698306ac9007e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-control-wizard"></a>ATL 控制項精靈
 ATL 專案 （或具有 ATL 支援的 MFC 專案） 插入 ATL 控制項。 您可以使用此精靈將控制項的三種：  
@@ -80,7 +75,7 @@ ATL 專案 （或具有 ATL 支援的 MFC 專案） 插入 ATL 控制項。 您�
 ### <a name="com"></a>COM  
  提供物件的 COM 功能的相關資訊。  
   
- **Coclass**  
+ **coclass**  
  設定包含一份物件支援的介面的元件類別的名稱。  
   
 > [!NOTE]
@@ -95,7 +90,7 @@ ATL 專案 （或具有 ATL 支援的 MFC 專案） 插入 ATL 控制項。 您�
  **ProgID**  
  設定容器可以使用而不是物件的 CLSID 的名稱。 不會自動填入此欄位。 如果您不會手動填入此欄位，控制項可能無法使用其他工具。 例如，ActiveX 控制項，而不會產生`ProgID`不適用於**插入 ActiveX 控制項** 對話方塊。 如需 對話方塊的詳細資訊，請參閱[插入 ActiveX 控制項對話方塊](../../windows/insert-activex-control-dialog-box.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 控制項](../../atl/reference/adding-an-atl-control.md)   
  [將功能加入至複合控制項](../../atl/adding-functionality-to-the-composite-control.md)   
  [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)

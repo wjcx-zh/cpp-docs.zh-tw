@@ -1,29 +1,24 @@
 ---
-title: "COM + 1.0，ATL COM + 1.0 元件精靈 |Microsoft 文件"
-ms.custom: 
+title: COM + 1.0，ATL COM + 1.0 元件精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 dev_langs:
 - C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102e6a0a9b7055000d051f5fb729dd45863a16cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a23f148fbdc611c8a11d8116b2e7dff34fc9d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0 元件精靈
 若要指定介面類型和其他介面必須支援使用 ATL COM + 1.0 元件精靈的這個頁面。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 |**不支援**|指定物件排除的交易。 將元件屬性的巨集 custom(TLBATTR_TRANS_NOTSUPP,0) 加入至.h 檔案 （屬性化專案） 或.idl 檔案 （非屬性化專案）。|  
 |**需要新增**|指定物件一律交易資料流的根目錄加元件屬性的巨集 custom(TLBATTR_TRANS_REQNEW,0).h 檔案 （屬性化專案） 或.idl 檔案 （非屬性化專案）。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL COM + 1.0 元件精靈](../../atl/reference/atl-com-plus-1-0-component-wizard.md)   
  [ATL COM + 1.0 元件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
 

@@ -1,29 +1,24 @@
 ---
-title: "記憶體管理類別 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 記憶體管理類別 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - memory, managing
 ms.assetid: be564a5e-577e-40a7-bfe3-25ad21e57270
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c1b35115464a734c0f242df2e7c015855ecebe
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6849327d796afd1f500102167b82b08b9c60be18
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="memory-management-classes"></a>記憶體管理類別
 這些類別提供堆積的指標、 智慧型指標和其他記憶體配置常式的支援。  
@@ -70,6 +65,6 @@ ms.lasthandoff: 02/14/2018
   
 -   [IAtlMemMgr](../atl/reference/iatlmemmgr-class.md)此類別代表記憶體管理員介面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

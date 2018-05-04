@@ -1,12 +1,9 @@
 ---
-title: "加入 ATL 簡單物件 |Microsoft 文件"
-ms.custom: 
+title: 加入 ATL 簡單物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.adding.atl
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - objects [ATL]
 - ATL, simple objects
 ms.assetid: 9c57d2ef-0447-4c84-8982-3304b8e49847
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e0251e33eb6b6ae2af920181077071c90c61192
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 229866620826581214d5fb0395fa2bdf4f0c8574
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-simple-object"></a>加入 ATL 簡單物件
 ATL (Active Template Library) 將物件加入至您的專案，您的專案必須已建立以 ATL 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[MFC 應用程式中加入 ATL 物件](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)實作 MFC 應用程式的 ATL 支援。  
@@ -46,7 +41,7 @@ ATL (Active Template Library) 將物件加入至您的專案，您的專案必�
   
 5.  按一下**完成**將物件加入至您的專案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   
  [ATL 專案中加入新的介面](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
  [將連接點加入物件](../../atl/adding-connection-points-to-an-object.md)   

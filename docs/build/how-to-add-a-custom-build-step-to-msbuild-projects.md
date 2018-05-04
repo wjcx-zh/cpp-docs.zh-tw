@@ -1,13 +1,10 @@
 ---
-title: "如何： 將自訂建置步驟加入至 MSBuild 專案 |Microsoft 文件"
-ms.custom: 
+title: 如何： 將自訂建置步驟加入至 MSBuild 專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildstep
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d664b9fad6a9ec67dc009a90171119036dc13cde
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aa8d433b782d8436f6211ab9efe55fcaad3492ea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>如何：將自訂建置步驟加入至 MSBuild 專案
 自訂建置步驟會在組建中使用者定義的步驟。 自訂建置步驟的行為如同任何其他*命令工具*步驟中，例如標準編譯或連結工具的步驟。  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
     </PropertyGroup>  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [逐步解說： 使用 MSBuild 來建立 Visual c + + 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)   
  [如何： 在 MSBuild 專案中使用建置事件](../build/how-to-use-build-events-in-msbuild-projects.md)   
  [如何：將自訂建置工具新增至 MSBuild 專案](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)

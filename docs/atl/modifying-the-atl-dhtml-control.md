@@ -1,13 +1,10 @@
 ---
-title: "ATL DHTML 控制項的修改 |Microsoft 文件"
-ms.custom: 
+title: ATL DHTML 控制項的修改 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3810236aca4661a6cdcd8399294cdb73e97948fd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控制項
 ATL 控制項精靈提供起始程式碼，並讓您可以建置並執行控制項，您可以看到專案檔中寫入方法的方式與 DHTML 方式呼叫控制項的 c + + 程式碼使用分派方法。 您可以新增任何分派方法的介面。 然後，您可以呼叫 HTML 資源中的方法。  
@@ -84,6 +79,6 @@ ATL 控制項精靈提供起始程式碼，並讓您可以建置並執行控制�
   
  您現在可以建置和[測試修改過的 DHTML 控制項](../atl/testing-the-modified-atl-dhtml-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
 

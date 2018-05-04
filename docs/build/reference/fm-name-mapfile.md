@@ -2,12 +2,9 @@
 title: -Fm （命名對應檔） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /fm
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a5111291ea92b8650896faf3117f0056510e5ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94a499b943fcd3213aa76876c65c3aac2dd79060
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fm-name-mapfile"></a>/Fm (命名對應檔)
 會告知連結器，以產生對應檔，其中包含對應的.exe 檔或 DLL 中的出現的順序中的區段清單。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  根據預設，對應檔會採用與對應 C 或 c + + 來源檔案的基底的名稱。副檔名對應。  
   
- 指定**/Fm**具有相同的效果就像您先前已指定[/MAP （產生對應檔）](../../build/reference/map-generate-mapfile.md)連結器選項。  
+ 指定 **/Fm**具有相同的效果就像您先前已指定[/MAP （產生對應檔）](../../build/reference/map-generate-mapfile.md)連結器選項。  
   
  如果您指定[/c （編譯而不連結）](../../build/reference/c-compile-without-linking.md)隱藏連結， **/Fm**沒有任何作用。  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   

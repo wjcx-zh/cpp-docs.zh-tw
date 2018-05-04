@@ -1,12 +1,9 @@
 ---
-title: "註標運算子: |Microsoft 文件"
-ms.custom: 
+title: '註標運算子: |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '[]'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b116b55dd951e3be32c23a73614e7082c4102db4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subscript-operator"></a>註標運算子：
 ## <a name="syntax"></a>語法  
@@ -39,7 +34,7 @@ postfix-expression [ expression ]
 ```  
   
 ## <a name="remarks"></a>備註  
- （這也是主要運算式） 後面接著註標運算子後, 置運算式**[]**，指定陣列索引。  
+ （這也是主要運算式） 後面接著註標運算子後, 置運算式 **[]**，指定陣列索引。  
   
  如需 managed 陣列的詳細資訊，請參閱[陣列](../windows/arrays-cpp-component-extensions.md)。  
   
@@ -51,7 +46,7 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- 在上述範例中，運算式 `nArray[2]` 與 `2[nArray]` 相同。 原因在於註標運算式的結果 *e1***[** *e2* **]**由所提供：  
+ 在上述範例中，運算式 `nArray[2]` 與 `2[nArray]` 相同。 原因在於註標運算式的結果 *e1***[** *e2* **]** 由所提供：  
   
  **\*( (** *e2* **)** *+* **(***e1***) )**  
   
@@ -67,7 +62,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- 註標運算式的關聯是由左至右。 最左邊的註標運算式 *expression1***[***expression2***]**，會先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 間接取值運算子 (**\***) 之後，會套用最後一個註標的運算式評估時，除非最後一個指標值定址為陣列類型。  
+ 註標運算式的關聯是由左至右。 最左邊的註標運算式 *expression1 ***[*** expression2***]**，會先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 間接取值運算子 (**\***) 之後，會套用最後一個註標的運算式評估時，除非最後一個指標值定址為陣列類型。  
   
  具有多個註標的運算式會參考多維陣列的元素。 所謂的多維陣列是指其中所包含的元素也是一種陣列。 例如，三維陣列的第一個元素是具有兩個維度的陣列。 下列範例會宣告和初始化一個簡單的二維字元陣列：  
   

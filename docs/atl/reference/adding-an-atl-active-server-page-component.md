@@ -1,12 +1,9 @@
 ---
-title: "加入 ATL Active Server Page 元件 |Microsoft 文件"
-ms.custom: 
+title: 加入 ATL Active Server Page 元件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL, ASP components
 - ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd79d4bc3370caf153e29a3305dc6dad1d8b97de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b49db13f4067ee595896ace808213a11256f7ff7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>加入 ATL Active Server Page 元件
 Active Template Library (ATL) 將物件加入至您的專案，您的專案必須已建立以 ATL COM 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，您可以選取**加入 ATL 支援加入至 MFC**從[加入類別對話方塊](../../ide/add-class-dialog-box.md)對話方塊中，或者您可以[MFC 應用程式中加入 ATL 物件](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)實作 MFC 應用程式的 ATL 支援。  
@@ -47,7 +42,7 @@ Active Template Library (ATL) 將物件加入至您的專案，您的專案必�
   
 3.  在[加入類別](../../ide/add-class-dialog-box.md)對話方塊，在 [範本] 窗格中，按一下**ATL Active Server Page 元件**，然後按一下 **開啟**顯示[ATL Active ServerPage 元件精靈](../../atl/reference/atl-active-server-page-component-wizard.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   
  [ATL 專案中加入新的介面](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
  [將連接點加入物件](../../atl/adding-connection-points-to-an-object.md)   

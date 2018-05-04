@@ -1,12 +1,9 @@
 ---
-title: "CComPtrBase 類別 |Microsoft 文件"
-ms.custom: 
+title: CComPtrBase 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComPtrBase
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0d9b4d49a7568df905a595e2cf6494b2b98706d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea90c1394da9b6a202b121a0e521f99acaba8264
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 這個類別會提供智慧型指標類別使用以 COM 為基礎的記憶體常式的基礎。  
@@ -98,7 +93,7 @@ class CComPtrBase
 ## <a name="requirements"></a>需求  
  **標頭：** atlcomcli.h  
   
-##  <a name="advise"></a>CComPtrBase::Advise  
+##  <a name="advise"></a>  CComPtrBase::Advise  
  呼叫此方法以之間建立連線`CComPtrBase`的連接點與用戶端的接收器。  
   
 ```
@@ -124,7 +119,7 @@ HRESULT Advise(
 ### <a name="remarks"></a>備註  
  請參閱[AtlAdvise](connection-point-global-functions.md#atladvise)如需詳細資訊。  
   
-##  <a name="attach"></a>CComPtrBase::Attach  
+##  <a name="attach"></a>  CComPtrBase::Attach  
  呼叫此方法以取得現有的指標的擁有權。  
   
 ```
@@ -138,7 +133,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>備註  
  **附加**呼叫[CComPtrBase::Release](#release)現有[CComPtrBase::p](#p)成員變數，然後指派`p2`至`CComPtrBase::p`。 當`CComPtrBase`物件會使用指標的擁有權，會自動呼叫`Release`這會刪除指標，任何在指標上配置資料物件上的參考計數變成 0。  
   
-##  <a name="dtor"></a>CComPtrBase:: ~ CComPtrBase  
+##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase  
  解構函式。  
   
 ```
@@ -148,7 +143,7 @@ void Attach(T* p2) throw();
 ### <a name="remarks"></a>備註  
  釋放所指介面`CComPtrBase`。  
   
-##  <a name="cocreateinstance"></a>CComPtrBase::CoCreateInstance  
+##  <a name="cocreateinstance"></a>  CComPtrBase::CoCreateInstance  
  呼叫這個方法來建立與指定的類別識別碼或程式識別碼。 關聯的類別的物件  
   
 ```
@@ -184,7 +179,7 @@ HRESULT CoCreateInstance(
   
  在偵錯組建，判斷提示就會發生錯誤，如果[CComPtrBase::p](#p)不等於 NULL。  
   
-##  <a name="copyto"></a>CComPtrBase::CopyTo  
+##  <a name="copyto"></a>  CComPtrBase::CopyTo  
  呼叫此方法以複製`CComPtrBase`給另一個指標變數的指標。  
   
 ```
@@ -203,7 +198,7 @@ HRESULT CopyTo(T** ppT) throw();
   
  會傳回 HRESULT，如果錯誤*ppT*等於 NULL。 在偵錯組建，判斷提示就會發生錯誤，如果*ppT*等於 NULL。  
   
-##  <a name="detach"></a>CComPtrBase::Detach  
+##  <a name="detach"></a>  CComPtrBase::Detach  
  呼叫此方法以釋放指標的擁有權。  
   
 ```
@@ -216,7 +211,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>備註  
  釋放指標的擁有權、 設定[CComPtrBase::p](#p)資料成員變數設為 NULL，並傳回指標的複本。  
   
-##  <a name="isequalobject"></a>CComPtrBase::IsEqualObject  
+##  <a name="isequalobject"></a>  CComPtrBase::IsEqualObject  
  呼叫這個方法來檢查是否指定**IUnknown**指向相同的物件相關聯`CComPtrBase`物件。  
   
 ```
@@ -230,7 +225,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 ### <a name="return-value"></a>傳回值  
  如果物件是完全相同，則為 false，則傳回 true。  
   
-##  <a name="operator_not"></a>CComPtrBase::operator ！  
+##  <a name="operator_not"></a>  CComPtrBase::operator ！  
  NOT 運算子。  
   
 ```
@@ -240,7 +235,7 @@ bool operator!() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回 true，否則`CComHeapPtr`指標等於 NULL，則為 false 否則。  
   
-##  <a name="operator_amp"></a>CComPtrBase::operator&amp;  
+##  <a name="operator_amp"></a>  CComPtrBase::operator &amp;  
  & 運算子。  
   
 ```
@@ -250,7 +245,7 @@ T** operator&() throw();
 ### <a name="return-value"></a>傳回值  
  傳回所指物件的位址`CComPtrBase`物件。  
   
-##  <a name="operator_star"></a>CComPtrBase::operator *  
+##  <a name="operator_star"></a>  CComPtrBase::operator *  
  * 運算子。  
   
 ```
@@ -262,7 +257,7 @@ T& operator*() const throw();
   
  如果偵錯組建效能，如果會發生判斷提示錯誤[CComPtrBase::p](#p)不等於 NULL。  
   
-##  <a name="operator_eq_eq"></a>CComPtrBase::operator = =  
+##  <a name="operator_eq_eq"></a>  CComPtrBase::operator = =  
  等號比較運算子。  
   
 ```
@@ -276,7 +271,7 @@ bool operator== (T* pT) const throw();
 ### <a name="return-value"></a>傳回值  
  傳回 true，否則`CComPtrBase`和*pT*指向相同物件，則為 false 否則。  
   
-##  <a name="operator_ptr"></a>CComPtrBase::operator-&gt;  
+##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;  
 
  成員指標運算子。  
   
@@ -290,7 +285,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 ### <a name="remarks"></a>備註  
  使用此運算子來呼叫所指向的類別中的方法`CComPtrBase`物件。 在偵錯組建中，如果，就會發生判斷提示失敗`CComPtrBase`點為 NULL 的資料成員。  
   
-##  <a name="operator_lt"></a>CComPtrBase::operator&lt;  
+##  <a name="operator_lt"></a>  CComPtrBase::operator &lt;  
  小於-than 運算子。  
   
 ```
@@ -304,7 +299,7 @@ bool operator<(T* pT) const throw();
 ### <a name="return-value"></a>傳回值  
  如果由目前物件的指標，則傳回 true 小於的指標，它會進行比較。  
   
-##  <a name="operator_t_star"></a>CComPtrBase::operator T *  
+##  <a name="operator_t_star"></a>  CComPtrBase::operator T *  
  轉型運算子。  
   
 ```  
@@ -314,7 +309,7 @@ operator T*() const throw();
 ### <a name="remarks"></a>備註  
  傳回在類別樣板中定義的物件資料類型的指標。  
   
-##  <a name="p"></a>CComPtrBase::p  
+##  <a name="p"></a>  CComPtrBase::p  
  指標的資料成員變數。  
   
 ```
@@ -324,7 +319,7 @@ T* p;
 ### <a name="remarks"></a>備註  
  這個成員變數會保留指標資訊。  
   
-##  <a name="queryinterface"></a>CComPtrBase::QueryInterface  
+##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface  
  呼叫此方法以傳回指定介面的指標。  
   
 ```
@@ -347,7 +342,7 @@ template <class Q> HRESULT QueryInterface(Q
   
  在偵錯組建，判斷提示就會發生錯誤，如果*pp*不等於 NULL。  
   
-##  <a name="release"></a>CComPtrBase::Release  
+##  <a name="release"></a>  CComPtrBase::Release  
  呼叫此方法以釋放介面。  
   
 ```
@@ -357,7 +352,7 @@ void Release() throw();
 ### <a name="remarks"></a>備註  
  已發行的介面，和[CComPtrBase::p](#p)設為 NULL。  
   
-##  <a name="setsite"></a>CComPtrBase::SetSite  
+##  <a name="setsite"></a>  CComPtrBase::SetSite  
  呼叫此方法以設定的站台`CComPtrBase`物件**IUnknown**父物件。  
   
 ```
@@ -374,5 +369,5 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

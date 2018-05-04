@@ -1,30 +1,25 @@
 ---
-title: "使用 NMAKE 巨集 |Microsoft 文件"
-ms.custom: 
+title: 使用 NMAKE 巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - macros, NMAKE
 - NMAKE macros, using
 ms.assetid: 95c87fbc-76e6-48c0-8536-9bfe179f328e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc5c6c8851654b1a767967ffc900886d75521130
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6bf098a3723aa7b067b8192bf503975998e4e98
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-an-nmake-macro"></a>使用 NMAKE 巨集
 若要使用巨集，請其名稱前面加上貨幣符號 （$），如下所示的括號括住。  
@@ -41,5 +36,5 @@ $(macroname)
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
  [巨集替換](../build/macro-substitution.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和 NMAKE](../build/macros-and-nmake.md)

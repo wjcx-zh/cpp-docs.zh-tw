@@ -1,13 +1,10 @@
 ---
-title: "參考計數 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 參考計數 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - reference counts
 - references, counting
 ms.assetid: b1fd4514-6de6-429f-9e60-2777c0d07a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be6aff46df500a55665f85f6f462514985885b9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1ba27f00bf25f88575101b1299daf50f94000ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-counting"></a>參考計數
 COM 本身不會自動嘗試從記憶體移除物件，其認定不再使用物件時。 相反地，物件的程式設計人員必須移除未使用的物件。 程式設計人員決定是否可以移除物件根據參考計數。  
@@ -45,7 +40,7 @@ COM 本身不會自動嘗試從記憶體移除物件，其認定不再使用物�
 > [!NOTE]
 >  當`CComObject`-衍生的物件建構使用**新**運算子，參考計數為 0。 因此，呼叫`AddRef`必須成功建立後進行`CComObject`-衍生物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [COM 簡介](../atl/introduction-to-com.md)   
  [管理透過參考計數的物件存留期](http://msdn.microsoft.com/library/windows/desktop/ms687260)
 

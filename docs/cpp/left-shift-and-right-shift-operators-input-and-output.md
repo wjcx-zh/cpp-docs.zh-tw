@@ -2,11 +2,8 @@
 title: 左的移和右移運算子 (&gt; &gt;和&lt; &lt;) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - <<
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dece9ac4045fa8b46e5edf8b266312242000229
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d8835d096575f3f7a9d50c7be26fa435e5d6bcd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移運算子 (&gt; &gt;和&lt; &lt;)
 位元移位運算子是右移位運算子 (>>)，會將位元的*shift 運算式*右到左移位運算子 (<<)，會將位元的*移位運算式*左邊。 <sup>1</sup>  
@@ -234,6 +229,6 @@ int main() {
   
  值**E1 >> E2**是**E1**向右移位**E2**位元位置。 如果**E1**具有不帶正負號的類型如果**E1**具有帶正負號的類型和非負數值，結果的值是不可或缺的一部分的商數**E1/2** <sup>**E2**</sup>。 如果**E1**具有帶正負號的類型，而且負值，產生的值是由實作定義。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

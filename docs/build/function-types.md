@@ -1,27 +1,22 @@
 ---
-title: "函式類型 |Microsoft 文件"
-ms.custom: 
+title: 函式類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 7e33d5f4-dabb-406d-afb3-13777b995028
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54f2b910062038901578389a9c0a7ab8a2647f3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 322bd45abbfe217671fd39f0617987fde21445db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-types"></a>函式類型
 基本上有兩種類型的函式。 畫面格函式呼叫需要堆疊框架的函式。 不需要堆疊框架的函式稱為分葉函式。  
@@ -32,5 +27,5 @@ ms.lasthandoff: 12/21/2017
   
  分葉函式是不需要函式表格項目。 它無法變更任何靜態暫存器，包括 RSP，這表示無法呼叫任何函數或配置堆疊空間。 允許它不會損壞堆疊未對齊時，它會執行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [堆疊使用方式](../build/stack-usage.md)

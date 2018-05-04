@@ -2,11 +2,8 @@
 title: 預設引數 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c341abab34595da58d435be28f50e86cb47403
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1113108f711eccbce9be96852f7f7f28e537c9d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="default-arguments"></a>預設引數
 在許多情況下，函式的引數不常使用，因此使用預設值即已足夠。 為解決此問題，預設引數機能只能用於指定在特定呼叫中具有意義之函式的這些引數。 為了說明這個概念，請考慮中的範例[函式多載](../cpp/function-overloading.md)。  
@@ -125,5 +120,5 @@ print( d, 0 ); // Override default argument to achieve other
     int (*pShowIntVal)( int i = 0 );  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  

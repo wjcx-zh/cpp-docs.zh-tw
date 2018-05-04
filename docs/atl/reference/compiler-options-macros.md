@@ -1,12 +1,9 @@
 ---
-title: "編譯器選項巨集 |Microsoft 文件"
-ms.custom: 
+title: 編譯器選項巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f48abc864133849353aeccf82ea3eb9aab1edb5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e84c92e8bbf65ff3b8b54111bcce2306628edb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-macros"></a>編譯器選項巨集
 這些巨集來控制特定的編譯器功能。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |[ATL_NOINLINE](#atl_noinline)|一個符號，指出函式不應內嵌。|  
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|如果所有物件都使用單一執行緒模型，定義。|  
   
-##  <a name="_atl_all_warnings"></a>_ATL_ALL_WARNINGS  
+##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS  
  從舊版的 ATL 轉換可讓專案發生錯誤的符號  
   
 ```
@@ -88,7 +83,7 @@ ms.lasthandoff: 12/21/2017
   
  新的專案具有這`#define`stdafx.h 中預設設定。  
   
-##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED  
+##  <a name="_atl_apartment_threaded"></a>  _ATL_APARTMENT_THREADED  
  如果一或多個物件使用 apartment 執行緒，定義。  
   
 ```
@@ -98,7 +93,7 @@ _ATL_APARTMENT_THREADED
 ### <a name="remarks"></a>備註  
  指定 apartment 執行緒。 請參閱[指定專案的執行緒模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)其他執行緒的選項，和[選項，ATL 簡單物件精靈](../../atl/reference/options-atl-simple-object-wizard.md)的描述就會忽略執行緒模型 ATL 物件可用的。  
   
-##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
+##  <a name="_atl_cstring_explicit_constructors"></a>  _ATL_CSTRING_EXPLICIT_CONSTRUCTORS  
  讓特定`CString`明確，防止任何意外的轉換建構函式。  
   
 ```
@@ -110,7 +105,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  藉由使用所有的建構函式的字串引數的 _T 巨集，您可以定義 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS，及避免編譯錯誤，不論是否 _UNICODE 已定義。  
   
-##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING  
+##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING  
  定義此巨集，以便強制將 ANSI c + + 符合標準的語法用於成員函式的指標。 使用這個巨集，將導致 C4867 編譯器錯誤，以初始化成員函式的指標使用非標準語法時產生。  
   
 ```
@@ -120,7 +115,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 ### <a name="remarks"></a>備註  
  要比對 Visual c + + 編譯器的改進標準 c + + 相容性已變更的 ATL 和 MFC 程式庫。 類別成員函式指標的語法應該是根據 ANSI c + + 標準， `&CMyClass::MyFunc`。  
   
- 當[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定義 （預設情況），ATL/MFC 會停用 C4867 中的錯誤 （值得注意的是訊息對應） 的巨集對應，讓較早版本中所建立的程式碼可以繼續如常建置。 如果您定義**_ATL_ENABLE_PTM_WARNING**，您的程式碼應該是 c + + 標準相容。  
+ 當[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定義 （預設情況），ATL/MFC 會停用 C4867 中的錯誤 （值得注意的是訊息對應） 的巨集對應，讓較早版本中所建立的程式碼可以繼續如常建置。 如果您定義 **_ATL_ENABLE_PTM_WARNING**，您的程式碼應該是 c + + 標準相容。  
   
  不過，非標準的表單已被取代，所以您要將現有的程式碼移至 c + + 標準相容的語法。 例如，下列步驟：  
   
@@ -132,7 +127,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
   
  請注意，加入 '&' 字元的對應巨集，您應該不將它加入一次程式碼中。  
   
-##  <a name="_atl_free_threaded"></a>_ATL_FREE_THREADED  
+##  <a name="_atl_free_threaded"></a>  _ATL_FREE_THREADED  
  如果一或多個物件會使用執行緒可用或中性，定義。  
   
 ```
@@ -142,7 +137,7 @@ _ATL_FREE_THREADED
 ### <a name="remarks"></a>備註  
  指定無限制執行緒。 無限制執行緒相當於多執行緒 apartment 模型。 請參閱[指定專案的執行緒模型](../../atl/specifying-the-threading-model-for-a-project-atl.md)其他執行緒的選項，和[選項，ATL 簡單物件精靈](../../atl/reference/options-atl-simple-object-wizard.md)的描述就會忽略執行緒模型 ATL 物件可用的。  
   
-##  <a name="_atl_multi_threaded"></a>_ATL_MULTI_THREADED  
+##  <a name="_atl_multi_threaded"></a>  _ATL_MULTI_THREADED  
  一個符號，指出專案將會有標示為兩者，免費或中性的物件。  
   
 ```
@@ -152,7 +147,7 @@ _ATL_MULTI_THREADED
 ### <a name="remarks"></a>備註  
  如果已定義這個符號，ATL 會提取將會正確地同步處理存取具備全域資料的程式碼中。 新的程式碼應該使用對等的巨集[_ATL_FREE_THREADED](#_atl_free_threaded)改為。  
   
-##  <a name="_atl_no_automatic_namespace"></a>_ATL_NO_AUTOMATIC_NAMESPACE  
+##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE  
  如此可防止預設使用的命名空間做 ATL 符號  
   
 ```
@@ -162,7 +157,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 ### <a name="remarks"></a>備註  
  如果未定義這個符號，將會執行包括 atlbase.h**使用命名空間 ATL**根據預設，這可能導致名稱衝突。 若要防止這個情況，定義這個符號。  
   
-##  <a name="_atl_no_com_support"></a>_ATL_NO_COM_SUPPORT  
+##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT  
  符號以防止 COM 相關的程式碼要編譯您的專案。  
   
 ```

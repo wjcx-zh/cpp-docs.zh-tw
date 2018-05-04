@@ -1,12 +1,9 @@
 ---
-title: "ISupportErrorInfoImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: ISupportErrorInfoImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ISupportErrorInfoImpl
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e8dc6b277f8eb59ade428d3ef8ea3dd5c083ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e226f66d6ddd20181f083f723568acb1cc647c7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 類別
 這個類別提供的預設實作[ISupportErrorInfo 介面](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32)和單一介面會產生錯誤的物件上時才能使用。  
@@ -72,7 +67,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
+##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
  指出介面是否由識別`riid`支援[IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)介面。  
   
 ```
@@ -82,7 +77,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ### <a name="remarks"></a>備註  
  請參閱[ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a) Windows SDK 中。  
   
-##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  呼叫這個方法來取得集區中的執行緒數目。  
   
 ```
@@ -99,7 +94,7 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
   
-##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
  呼叫這個方法，以毫秒為單位，執行緒集區將會等到關閉執行緒取得最大時間。  
   
 ```
@@ -116,7 +111,7 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="example"></a>範例  
  請參閱[IThreadPoolConfig::GetSize](#getsize)。  
   
-##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
  呼叫此方法以設定集區中的執行緒數目。  
   
 ```
@@ -137,7 +132,7 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="example"></a>範例  
  請參閱[IThreadPoolConfig::GetSize](#getsize)。  
   
-##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
  呼叫此方法以設定以毫秒為單位，執行緒集區關閉執行緒的等候時間上限。  
   
 ```
@@ -154,5 +149,5 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ### <a name="example"></a>範例  
  請參閱[IThreadPoolConfig::GetSize](#getsize)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

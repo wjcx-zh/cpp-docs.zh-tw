@@ -2,26 +2,21 @@
 title: 物件存留期和資源管理 （現代 c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2b48630fab9d27bf5db442617a5184bd26de5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 634bef1bf9d2d3128497a1321631ca8665fed144
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>物件存留期和資源管理 (現代 C++)
 不同於 Managed 語言，C++ 沒有記憶體回收 (GC)，其會在程式執行時自動釋出不再使用的記憶體資源。 在 C++ 中，資源管理與物件存留期有直接關係。 本文件說明影響 C++ 之物件存留期的因素，以及其管理方式。  
@@ -94,7 +89,7 @@ void functionUsingWidget () {
   
  謹慎使用靜態存留期 (全域靜態函式，區域靜態)，不然可能會出現問題。 當全域物件的建構函式擲回例外狀況時，會發生什麼事？ 一般而言，應用程式錯誤某方面來說很難進行偵錯。 建構順序對於靜態存留期物件而言反而會造成問題，且不是並行安全。 不僅物件建構有問題，解構函式順序可能會很複雜，尤其是涉及多型之處。 即使您的物件或變數不是多型，且沒有複雜的建構/解構定序，仍會有安全執行緒並行問題。 沒有靜態執行緒區域儲存區、資源鎖定和其他特殊預防措施，多執行緒的應用程式就無法安全地修改靜態物件的資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

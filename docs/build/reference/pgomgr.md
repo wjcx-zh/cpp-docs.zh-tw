@@ -1,5 +1,5 @@
 ---
-title: pgomgr | Microsoft Docs
+title: pgomgr |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 74589126-df18-42c9-8739-26d60e148d6a
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 743665bbe0ee9c3df08d197d203e95d08542f613
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7bf7567cfe9f21effda913606ca3af9a19464f9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgomgr"></a>pgomgr
 
@@ -35,15 +34,15 @@ ms.lasthandoff: 04/10/2018
 *options*<br/>
 下列選項可指定來**pgomgr**:
 
-- **/help**或**/？** 顯示可用**pgomgr**選項。
+- **/help**或 **/？** 顯示可用**pgomgr**選項。
 
-- **清除/**會使要清除所有的設定檔資訊的.pgd 檔。 您無法指定.pgc 檔**/清除**指定。
+- **清除/** 會使要清除所有的設定檔資訊的.pgd 檔。 您無法指定.pgc 檔 **/清除**指定。
 
 - **/detail**顯示詳細的統計資料，包括資料流程圖形涵蓋範圍資訊。
 
-- **摘要/**顯示每個函式的統計資料。
+- **摘要/** 顯示每個函式的統計資料。
 
-- **唯一 /**搭配使用時**/摘要**，原因裝飾函式名稱來顯示。 預設值，當**唯一 /**不是，是要顯示的未裝飾的函式名稱。
+- **唯一 /** 搭配使用時 **/摘要**，原因裝飾函式名稱來顯示。 預設值，當**唯一 /** 不是，是要顯示的未裝飾的函式名稱。
 
 - **/merge**[**: * * * n*] 會導致資料中要加入至.pgd 檔的.pgc 檔案。 選擇性參數， *n*，可讓您指定的資料應該加入*n*時間。 例如，如果狀況通常是完成六次以反映頻率完成客戶，可以一次測試回合中執行並將它加入至.pgd 檔六次**pgomgr /merge:6**。
 

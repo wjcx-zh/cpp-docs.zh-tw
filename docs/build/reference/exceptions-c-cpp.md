@@ -1,13 +1,10 @@
 ---
-title: "例外狀況 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: 例外狀況 （C/c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
 - vcppException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 635e2b1406e9919425a396b6f49fe8eb6efd81eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 819f9424b2439cc49517afe54d62a8ed4f06d22d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exceptions-cc"></a>例外狀況 (C/C++)
 發生失敗時，可能會引發兩個例外狀況代碼：  
@@ -56,5 +51,5 @@ ms.lasthandoff: 12/21/2017
   
  請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)如需詳細資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [錯誤處理和通知](../../build/reference/error-handling-and-notification.md)

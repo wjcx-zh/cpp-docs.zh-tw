@@ -1,12 +1,9 @@
 ---
-title: "字串 (MFC ATL) |Microsoft 文件"
-ms.custom: 
+title: 字串 (MFC ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - strings [C++], class CString
 - literal strings [C++], class CStringT
 ms.assetid: 3b33125b-1684-4542-a3a7-b00de7d0419e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a82f0d02cc8dc9b7c487c8cd9506a4c7d0360fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c5ebcd038c7526edca7de4756bf3f5562f361b1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strings-atlmfc"></a>字串 (ATL/MFC)
 幾乎所有的程式會使用字串資料。 Visual c + + 提供數種方式來管理此字串資料。  
@@ -59,6 +54,6 @@ ms.lasthandoff: 12/21/2017
  [MFC 概念](../mfc/mfc-concepts.md)  
  所提供的概念和以工作為基礎的主題可協助您使用 MFC 程式庫進行程式設計。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL/MFC 共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)
 

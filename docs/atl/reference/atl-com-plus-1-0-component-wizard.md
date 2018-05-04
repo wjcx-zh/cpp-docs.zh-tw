@@ -1,12 +1,9 @@
 ---
-title: "ATL COM + 1.0 元件精靈 |Microsoft 文件"
-ms.custom: 
+title: ATL COM + 1.0 元件精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c82cf91c61f047a80c513d1aead25fe73c77715
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19151ca659f7bc3235f84eefb39b640c4856fa43
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 元件精靈
 使用此精靈將物件新增至您的專案，支援 COM + 1.0 服務，包含交易。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
  指定之名稱的物件、 介面和類別新增至您的專案。 除了**簡短名稱**，其他方塊都可以各自編輯。 如果您變更的文字**簡短名稱**，變更會反映在此頁面中的所有其他方塊的名稱。 如果您變更**Coclass**名稱在 COM 區段中，變更會反映在**類型**和**ProgID**  方塊中，但**介面**名稱不會變更。 這項命名行為被為了讓您開發您的控制項時容易識別的所有名稱。  
   
  **簡短名稱**  
- 設定物件的縮寫的名稱。 您所提供名稱判斷`Class`和`Coclass`名稱**.cpp 檔**和**.h 檔案**名稱，**介面**名稱、 **類型**名稱，而**ProgID**，除非您個別變更這些欄位。  
+ 設定物件的縮寫的名稱。 您所提供名稱判斷`Class`和`Coclass`名稱 **.cpp 檔**和 **.h 檔案**名稱，**介面**名稱、 **類型**名稱，而**ProgID**，除非您個別變更這些欄位。  
   
  **.h 檔案**  
  設定新的物件類別的標頭檔的名稱。 根據預設，這個名稱根據您在中提供的名稱**簡短名稱**。 按一下省略符號按鈕，將檔案名稱儲存到您選擇的位置，或將類別宣告附加至現有的檔案。 如果您選擇現有的檔案，精靈會無法將其儲存到選取的位置直到您按一下**完成**精靈中。  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="com"></a>COM  
  提供物件的 COM 功能的相關資訊。  
   
- **Coclass**  
+ **coclass**  
  設定包含一份物件支援的介面的元件類別的名稱。  
   
 > [!NOTE]
@@ -82,6 +77,6 @@ ms.lasthandoff: 12/21/2017
  **ProgID**  
  設定容器可以使用而不是物件的 CLSID 的名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL COM + 1.0 元件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
 

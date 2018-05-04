@@ -1,13 +1,10 @@
 ---
-title: "ATL 類別概觀 |Microsoft 文件"
-ms.custom: 
+title: ATL 類別概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - vc.atl.classes
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fef95bb108f6d38f6196b324360b60635b1a9b64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-class-overview"></a>ATL 類別概觀
 Active Template Library (ATL) 的類別分類如下：  
@@ -53,12 +48,12 @@ Active Template Library (ATL) 的類別分類如下：
   
  可使用 ATL 專案中的其他類別，請參閱[共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../atl/reference/atl-classes.md)   
  [ATL COM 桌面元件](../atl/atl-com-desktop-components.md)   
  [函式](../atl/reference/atl-functions.md)   
  [全域變數](../atl/reference/atl-global-variables.md)   
  [巨集](../atl/reference/atl-macros.md)   
  [結構](../atl/reference/atl-structures.md)   
- [Typedef](../atl/reference/atl-typedefs.md)
+ [Typedefs](../atl/reference/atl-typedefs.md)
 

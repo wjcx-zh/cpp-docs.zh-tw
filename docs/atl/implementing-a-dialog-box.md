@@ -1,13 +1,10 @@
 ---
-title: "實作對話方塊 |Microsoft 文件"
-ms.custom: 
+title: 實作對話方塊 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CAxDialogImpl class, implementing dialog boxes in ATL
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 672696027a43cd5a50e2ad630824d305f7ca4b68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dialog-box"></a>實作對話方塊
 ATL 專案中加入對話方塊中的兩種方式： 使用 ATL 對話方塊精靈或手動將它加入。  
@@ -45,7 +40,7 @@ ATL 專案中加入對話方塊中的兩種方式： 使用 ATL 對話方塊精�
 > [!NOTE]
 >  當您建立使用 ATL 對話方塊精靈的對話方塊時，精靈會自動新增`IDD`成員`enum`型別。  
   
- `CDialogImpl`可讓您實作的強制回應或裝載 Windows 控制項的強制回應對話方塊。 `CAxDialogImpl`可讓您實作的強制回應或主控 ActiveX 和 Windows 控制項的強制回應對話方塊。  
+ `CDialogImpl` 可讓您實作的強制回應或裝載 Windows 控制項的強制回應對話方塊。 `CAxDialogImpl` 可讓您實作的強制回應或主控 ActiveX 和 Windows 控制項的強制回應對話方塊。  
   
  若要建立強制回應對話方塊中，建立的執行個體您`CDialogImpl`-衍生 (或`CAxDialogImpl`-衍生) 類別，然後呼叫[DoModal](../atl/reference/cdialogimpl-class.md#domodal)方法。 若要關閉強制回應對話方塊，請呼叫[EndDialog](../atl/reference/cdialogimpl-class.md#enddialog)從訊息處理常式方法。 若要建立非強制回應對話方塊，請呼叫[建立](../atl/reference/cdialogimpl-class.md#create)方法，而非`DoModal`。 若要損毀非強制回應對話方塊，請呼叫[DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow)。  
   
@@ -56,6 +51,6 @@ ATL 專案中加入對話方塊中的兩種方式： 使用 ATL 對話方塊精�
   
  [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [視窗類別](../atl/atl-window-classes.md)
 

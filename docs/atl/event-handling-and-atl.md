@@ -1,29 +1,24 @@
 ---
-title: "事件處理和 ATL |Microsoft 文件"
-ms.custom: 
+title: 事件處理和 ATL |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling, about event handling
 ms.assetid: e4812b0d-6fdd-4e8c-bdb8-378a25c7bde2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd1b955ae8ed3caf4f67dbcb9aa71419eb620c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6586c4fd54e9e968f3d7571bc61e866f07c8f2f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-and-atl"></a>事件處理和 ATL
 本節示範如何使用 ATL 接收事件 它涵蓋了 COM 事件處理中的原則以及接收使用 ATL 所提供的支援的事件的細節  
@@ -50,6 +45,6 @@ ms.lasthandoff: 12/21/2017
  [ATL](../atl/active-template-library-atl-concepts.md)  
  提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)
 

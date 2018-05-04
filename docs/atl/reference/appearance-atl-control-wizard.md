@@ -1,12 +1,9 @@
 ---
-title: "外觀，ATL 控制項精靈 |Microsoft 文件"
-ms.custom: 
+title: 外觀，ATL 控制項精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.control.misc
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Control Wizard, appearance
 ms.assetid: cc16d7ff-74d7-4c15-9ebd-4b19201ff457
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8869df577dfbc541b989beb4b4f3117d7d12feea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1d27b46f529d8423bdaf733928a9f3e46b3f185
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appearance-atl-control-wizard"></a>外觀, ATL 控制項精靈
 在這裡插入摘要的 「 搜尋結果 」。  
@@ -100,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **可插入**： 選取此選項可讓您的控制項出現在**插入物件**Word 和 Excel 之類的應用程式的對話方塊。 支援透過此對話方塊中的內嵌的物件的任何應用程式可以再插入您的控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)   
  [SUBEDIT 範例： Superclasses 標準 Windows 控制項](http://msdn.microsoft.com/en-us/30e46bdc-ed92-417c-b6b8-359017265a7b)
 

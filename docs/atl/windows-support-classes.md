@@ -1,12 +1,9 @@
 ---
-title: "Windows 支援類別 (ATL) |Microsoft 文件"
-ms.custom: 
+title: Windows 支援類別 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.windows
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL, windows
 - windows [C++], ATL
 ms.assetid: 750b14d5-d787-4d2b-9728-ac199ccad489
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64654f0f483ec401b379ec4c512489ce8cac823
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c2095e5141dfdd320bae0e7aa69ffd4b3c9fe9a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="windows-support-classes"></a>Windows 支援類別
 下列類別會提供適用於 windows 的支援：  
@@ -64,7 +59,7 @@ ms.lasthandoff: 02/14/2018
   
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)   
  [訊息對應巨集](../atl/reference/message-map-macros-atl.md)   
  [視窗類別巨集](../atl/reference/window-class-macros.md)

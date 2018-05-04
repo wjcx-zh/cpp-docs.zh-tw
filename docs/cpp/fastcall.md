@@ -1,12 +1,9 @@
 ---
-title: "__fastcall |Microsoft 文件"
-ms.custom: 
+title: __fastcall |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __fastcall_cpp
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2d7678738d7da4528b23551e56bf3766970cbfe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Microsoft 特定的**  
   
  `__fastcall` 呼叫慣例會指定函式的引數應該盡可能在暫存器中傳遞。 這個呼叫慣例僅適用於 x86 架構。 下列清單會顯示這個呼叫慣例的實作。  
   
-|元素|實作|  
+|項目|實作|  
 |-------------|--------------------|  
 |引數傳遞順序|引數清單中的前兩個 DWORD 引數或較小引數會由左至右傳入 ECX 和 EDX 暫存器，所有其他引數則由右至左傳遞至堆疊上。|  
 |堆疊維護責任|所呼叫的函式會從堆疊取出引數。|  
@@ -80,6 +75,6 @@ typedef BOOL (__fastcall *funcname_ptr)(void * arg1, const char * arg2, DWORD fl
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   
  [關鍵字](../cpp/keywords-cpp.md)

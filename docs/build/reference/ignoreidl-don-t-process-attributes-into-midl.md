@@ -1,13 +1,10 @@
 ---
-title: "-IGNOREIDL （Don &#39; t 至 MIDL 的處理序屬性） |Microsoft 文件"
-ms.custom: 
+title: -IGNOREIDL (Don&#39;t 至 MIDL 的處理序屬性) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.IgnoreEmbeddedIDL
 - /ignoreidl
@@ -18,19 +15,17 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe2f1d33f9269380bf0d914d5805cce3b0a92b90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14d32be32f019e55f8bad9cc01199d8dc6ae6301
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL （不要 &#39; t 至 MIDL 的處理序屬性）
+# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (不要&#39;t 至 MIDL 的處理序屬性)
 ```  
 /IGNOREIDL  
 ```  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreEmbeddedIDL%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)   
  [/IDLOUT （命名 MIDL 輸出檔）](../../build/reference/idlout-name-midl-output-files.md)   

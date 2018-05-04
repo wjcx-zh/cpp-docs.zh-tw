@@ -1,30 +1,25 @@
 ---
-title: "逐步解說： 建立和使用您自己動態連結程式庫 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建立和使用您自己動態連結程式庫 （c + +） |Microsoft 文件
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說： 建立和使用您自己動態連結程式庫 （c + +）
 
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
 
 1. 在功能表列上選擇 [**檔案**，**新增**，**專案**開啟**新專案**] 對話方塊。
 
-1. 在左窗格中**新專案**對話方塊方塊中，展開 **已安裝**和**Visual c + +**如果需要，然後選擇  **Windows 桌面**。 在中央窗格中，選取**Windows 桌面精靈**。 輸入`MathLibrary`中**名稱**方塊來指定專案的名稱。
+1. 在左窗格中**新專案**對話方塊方塊中，展開 **已安裝**和**Visual c + +** 如果需要，然後選擇  **Windows 桌面**。 在中央窗格中，選取**Windows 桌面精靈**。 輸入`MathLibrary`中**名稱**方塊來指定專案的名稱。
 
    ![MathLibrary 專案的名稱，](media/mathlibrary-new-project-name-153.png "MathLibrary 專案的名稱")
 
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 >
 >1. 在功能表列上，依序選擇 [專案] 和 [屬性]。
 >
->1. 在左窗格中**屬性頁**對話方塊中，選取**前置處理器**下**組態屬性**， **C/c + +**。 請檢查的內容**前置處理器定義**屬性。<br/><br/>![請檢查前置處理器定義屬性](media/mathlibrary-153bug-preprocessor-definitions-check.png "檢查前置處理器定義屬性")<br/><br/>如果您看到**MATHLIBRARY &#95;匯出**中**前置處理器定義**清單，則您不需要變更任何項目。 如果您看到**MathLibrary &#95;匯出**相反地，然後繼續遵循這些步驟。
+>1. 在左窗格中**屬性頁**對話方塊中，選取**前置處理器**下**組態屬性**， **C/c + +**。 請檢查的內容**前置處理器定義**屬性。<br/><br/>![請檢查前置處理器定義屬性](media/mathlibrary-153bug-preprocessor-definitions-check.png "檢查前置處理器定義屬性")<br/><br/>如果您看到**MATHLIBRARY&#95;匯出**中**前置處理器定義**清單，則您不需要變更任何項目。 如果您看到**MathLibrary&#95;匯出**相反地，然後繼續遵循這些步驟。
 >
 >1. 在頂端**屬性頁** 對話方塊中，變更**組態**下拉式清單可**所有組態**。
 >
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
 >
 >1. 在上方窗格**前置處理器定義** 對話方塊中，加入新的符號， `MATHLIBRARY_EXPORTS`。<br/><br/>![新增 MATHLIBRARY_EXPORTS 符號](media/mathlibrary-153bug-preprocessor-definitions-dialog.png "新增 MATHLIBRARY_EXPORTS 符號")
 >
->1. 選擇**[確定]**解除**前置處理器定義**] 對話方塊中，然後選擇 [ **[確定]**儲存在專案屬性的變更。
+>1. 選擇 **[確定]** 解除**前置處理器定義**] 對話方塊中，然後選擇 [ **[確定]** 儲存在專案屬性的變更。
 
 ### <a name="to-create-a-dll-project-in-older-versions-of-visual-studio"></a>在舊版的 Visual Studio 中建立 DLL 專案
 
@@ -176,9 +171,9 @@ ms.lasthandoff: 12/21/2017
 
 此標頭檔宣告以產生一般化費式數列順序，指定兩個的起始值的某些函式。 呼叫`fibonacci_init(1, 1)`產生熟悉 Fibonacci 數字序列。
 
-請注意，前置處理器陳述式，在檔案頂端。 根據預設，加入 DLL 的新專案範本 ***PROJECTNAME*&#95;匯出**DLL 專案定義的前置處理器巨集。 在此範例中，Visual Studio 會定義**MATHLIBRARY &#95;匯出**建置 MathLibrary DLL 專案的時。 （在 Visual Studio 2017 版本 15.3 精靈不會強制為大寫的這個符號定義。 如果您專案的名稱，您 「 MathLibrary"定義的符號則 MathLibrary &#95;匯出，而不是 MATHLIBRARY &#95;將匯出。 That's 為何有上述加入這個符號的額外步驟。)
+請注意，前置處理器陳述式，在檔案頂端。 根據預設，加入 DLL 的新專案範本 ***PROJECTNAME *&#95;匯出**DLL 專案定義的前置處理器巨集。 在此範例中，Visual Studio 會定義**MATHLIBRARY&#95;匯出**建置 MathLibrary DLL 專案的時。 （在 Visual Studio 2017 版本 15.3 精靈不會強制為大寫的這個符號定義。 如果您專案的名稱，您 「 MathLibrary"，則定義的符號是 MathLibrary&#95;匯出，而不是 MATHLIBRARY&#95;匯出。 That's 為何有上述加入這個符號的額外步驟。)
 
-當**MATHLIBRARY &#95;匯出**巨集定義， **MATHLIBRARY &#95;應用程式開發介面**巨集將`__declspec(dllexport)`函式宣告修飾詞。 此修飾詞會告訴編譯器和連結器函式或變數從 DLL 匯出，以便供其他應用程式。 當**MATHLIBRARY &#95;匯出**未定義，例如，當用戶端應用程式包含標頭檔時**MATHLIBRARY &#95;應用程式開發介面**適用於`__declspec(dllimport)`修飾詞來宣告。 此修飾詞會最佳化的函式或變數的應用程式中匯入。 如需詳細資訊，請參閱[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
+當**MATHLIBRARY&#95;匯出**巨集定義， **MATHLIBRARY&#95;API**巨集將`__declspec(dllexport)`函式宣告修飾詞。 此修飾詞會告訴編譯器和連結器函式或變數從 DLL 匯出，以便供其他應用程式。 當**MATHLIBRARY&#95;匯出**未定義，例如，當用戶端應用程式包含標頭檔時**MATHLIBRARY&#95;API**適用於`__declspec(dllimport)`修飾詞宣告。 此修飾詞會最佳化的函式或變數的應用程式中匯入。 如需詳細資訊，請參閱[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>若要將實作新增至 DLL
 
@@ -411,7 +406,7 @@ int main()
 
 當您部署您的應用程式時，您也必須部署的 Dll，它會使用。 最簡單的方式，可讓您建立或包含的 Dll 來自第三方使用您的應用程式也就是將它們放在與您的應用程式相同的目錄是*應用程式本機部署*。 如需有關部署的詳細資訊，請參閱[部署 Visual c + +](..\ide\deployment-in-visual-cpp.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)  
 [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)  

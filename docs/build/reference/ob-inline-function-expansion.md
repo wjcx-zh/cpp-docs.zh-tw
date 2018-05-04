@@ -1,13 +1,10 @@
 ---
-title: "-Ob （內嵌函式展開） |Microsoft 文件"
-ms.custom: 
+title: -Ob （內嵌函式展開） |Microsoft 文件
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b83d470eaf6a30698d8c2836620a0688daa35cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (內嵌函式展開)
 
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 
 **/Ob2**是生效時[/O1、 /O2 （最小化的大小、 最大化的速度）](../../build/reference/o1-o2-minimize-size-maximize-speed.md)或[/Ox （啟用最速度最佳化）](../../build/reference/ox-full-optimization.md)用。
 
-此選項需要您啟用最佳化使用**/O1**， **/O2**， **/Ox**，或**/Og**。  
+此選項需要您啟用最佳化使用 **/O1**， **/O2**， **/Ox**，或 **/Og**。  
 
 ## <a name="remarks"></a>備註
 
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 您可以使用`#pragma` [auto_inline](../../preprocessor/auto-inline.md)来排除考量為候選項目內嵌展開的函式指示詞。 另請參閱`#pragma`[內建](../../preprocessor/intrinsic.md)指示詞。
 
 > [!NOTE]
-> 從分析測試回合所收集的資訊會覆寫原本是實際上是如果您指定的最佳化**須遵循 /Ob**， **/Os**，或**/Ot**。 如需詳細資訊，請參閱[特性指引最佳化](../../build/reference/profile-guided-optimizations.md)。
+> 從分析測試回合所收集的資訊會覆寫原本是實際上是如果您指定的最佳化**須遵循 /Ob**， **/Os**，或 **/Ot**。 如需詳細資訊，請參閱[特性指引最佳化](../../build/reference/profile-guided-optimizations.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
@@ -89,8 +84,8 @@ ms.lasthandoff: 12/21/2017
 
 - 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.InlineFunctionExpansion%2A>。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[/O 選項 （最佳化程式碼）](../../build/reference/o-options-optimize-code.md)  
+[/O 選項 (最佳化程式碼)](../../build/reference/o-options-optimize-code.md)  
 [編譯器選項](../../build/reference/compiler-options.md)  
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

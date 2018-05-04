@@ -2,11 +2,8 @@
 title: bool （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bool_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5a8a86cfcc64b70e4910079461513c34fc7d0d
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 2af648b2b93d2d01eaf66f5b642b6514063577d6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -57,10 +52,10 @@ if (condexpr1) statement1;
   
 如果`condexpr1`是**true**，`statement1`一定會執行，如果`condexpr1`是**false**，`statement1`永遠不會執行。  
   
-後置或前置詞時**++**運算子會套用至類型的變數**bool**，此變數設為**true**。 
+後置或前置詞時**++** 運算子會套用至類型的變數**bool**，此變數設為**true**。 
 **Visual Studio 2017 15.3 和更新版本**: operator + + 的**bool**已移除的語言，因此已不再支援。
 
-後置或前置詞**--**無法將運算子套用至這個類型的變數。  
+後置或前置詞**--** 無法將運算子套用至這個類型的變數。  
   
  **Bool**類型會參與整數提升。 類型的右**bool**可以轉換成類型的右**int**，與**false**變成零和**true**變成一。 為不同的類型， **bool**參與多載解析。  
   

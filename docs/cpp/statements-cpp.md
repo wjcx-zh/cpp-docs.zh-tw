@@ -1,29 +1,24 @@
 ---
 title: 陳述式 （c + +） |Microsoft 文件
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d61dfb9e670e472ddaf7b46136e02a52ef3299e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab4b9d6a294e509a6a197866e9ef775063e3da7b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statements-c"></a>陳述式 (C++)
 C++ 陳述式是控制物件如何以及以什麼順序進行操作的程式項目。 本節包括：  
@@ -50,5 +45,5 @@ C++ 陳述式是控制物件如何以及以什麼順序進行操作的程式項�
   
  如需例外狀況處理陳述式的詳細資訊，請參閱[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

@@ -13,14 +13,13 @@ f1_keywords:
 - PogoAutoSweepW
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b26eb95552594733fa0849c0df114676dc7a222
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 988a73dd8c4ad6929ef04691ad1959df7ea7bdd7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
@@ -46,7 +45,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 所建立的.pgc 檔案`PgoAutoSweep`必須合併至.pgd 檔，以用來建立最佳化的可執行檔。 您可以使用[pgomgr](pgomgr.md)命令來進行合併。
 
-您可以合併的.pgd 檔的名稱給連結器最佳化建置期間使用傳遞**PGD =**_filename_引數[/USEPROFILE](useprofile.md)連結器選項，或由使用已被取代**/PGD**連結器選項。 如果您合併的.pgc 檔案到名為*base_name*.pgd，您不需要指定檔名，在命令列，因為連結器挑選預設此檔案名稱。
+您可以合併的.pgd 檔的名稱給連結器最佳化建置期間使用傳遞**PGD =**_filename_引數[/USEPROFILE](useprofile.md)連結器選項，或由使用已被取代 **/PGD**連結器選項。 如果您合併的.pgc 檔案到名為*base_name*.pgd，您不需要指定檔名，在命令列，因為連結器挑選預設此檔案名稱。
 
 `PgoAutoSweep`函式會維護的執行緒安全的設定建立時指定檢測的建置。 如果您使用預設設定，或指定**NOEXACT**引數[/GENPROFILE 或 /FASTGENPROFILE]()連結器選項，呼叫`PgoAutoSweep`不是安全執行緒。 **精確**引數建立具備執行緒安全，更精確，但速度較慢，已檢測的可執行檔。
 

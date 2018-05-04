@@ -1,29 +1,24 @@
 ---
-title: "彙總和等位 |Microsoft 文件"
-ms.custom: 
+title: 彙總和等位 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - aggregates [C++], and unions
 ms.assetid: 859fc211-b111-4f12-af98-de78e48f9b92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 5b1afd3be89e1d18da9889d88dbbbef3fb104e02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregates-and-unions"></a>彙總和等位
 其他類型，例如陣列、 結構和等位，有更嚴格的對齊需求可確保一致彙總和等位的儲存體和資料擷取。 以下是陣列、 結構和等位的定義：  
@@ -53,8 +48,8 @@ ms.lasthandoff: 03/08/2018
 |**FP32 （單一有效位數）**|**float**|Doubleword|  
 |**FP64 （雙精確度）**|**double**|Quadword|  
 |**指標**|**\***|Quadword|  
-|`__m64`|**struct __m64**|Quadword|  
-|`__m128`|**struct __m128**|Octaword|  
+|`__m64`|**結構 __m64**|Quadword|  
+|`__m128`|**結構 __m128**|Octaword|  
   
  適用下列彙總的對齊方式規則：  
   
@@ -68,5 +63,5 @@ ms.lasthandoff: 03/08/2018
   
 -   個別的編譯器可能會調整大小基於結構的封裝。 例如[/Zp （結構成員對齊）](../build/reference/zp-struct-member-alignment.md)允許調整結構的封裝。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型和儲存區](../build/types-and-storage.md)

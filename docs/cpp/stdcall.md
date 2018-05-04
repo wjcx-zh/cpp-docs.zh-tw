@@ -1,12 +1,9 @@
 ---
-title: "__stdcall |Microsoft 文件"
-ms.custom: 
+title: __stdcall |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __stdcall_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec45f93331178f62799fb826ff31dfb6e66c3337
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f018a87f7a73de6500294b0817263e6f847af8ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 特定的**  
@@ -42,7 +37,7 @@ return-type __stdcall function-name[(argument-list)]
 ## <a name="remarks"></a>備註  
  下列清單會顯示這個呼叫慣例的實作。  
   
-|元素|實作|  
+|項目|實作|  
 |-------------|--------------------|  
 |引數傳遞順序|由右至左。|  
 |引數傳遞慣例|以傳值方式，除非傳遞指標或參考類型。|  
@@ -86,6 +81,6 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   
  [關鍵字](../cpp/keywords-cpp.md)

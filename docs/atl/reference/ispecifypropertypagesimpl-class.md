@@ -1,12 +1,9 @@
 ---
-title: "ISpecifyPropertyPagesImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: ISpecifyPropertyPagesImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ISpecifyPropertyPagesImpl
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 716e3ba5d48d39cd189da8d92cca694f09508e42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74f10684c32cc5b1b4b07ac30406520c9ba41ddd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl 類別
 這個類別會實作**IUnknown**和提供的預設實作[ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217)介面。  
@@ -73,7 +68,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
+##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
  填入陣列[CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048)結構具有可以顯示物件的屬性工作表中的屬性頁的 Clsid。  
   
 ```
@@ -85,7 +80,7 @@ STDMETHOD(GetPages)(CAUUID* pPages);
   
  請參閱[ISpecifyPropertyPages::GetPages](http://msdn.microsoft.com/library/windows/desktop/ms687276) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IPropertyPageImpl 類別](../../atl/reference/ipropertypageimpl-class.md)   
  [IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

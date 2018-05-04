@@ -1,12 +1,9 @@
 ---
-title: "多個雙重介面 |Microsoft 文件"
-ms.custom: 
+title: 多個雙重介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IDispatchImpl class, multiple dual interfaces
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d87164439a4128ff6205ea6bc3ee3d9cc5573a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e23682bd0b7c923a1e377463405f84a6c6ee1221
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-dual-interfaces"></a>多個雙重介面
 您可能想要合併的雙重介面 （也就是彈性的 vtable 和晚期繫結，因此讓類別可以使用指令碼語言，以及 c + +） 的優點與技術在多重繼承。  
@@ -47,6 +42,6 @@ ms.lasthandoff: 02/14/2018
   
  這些方法會有命名空間衝突的可能性，以及程式碼複雜度和維護性問題。 不建議您建立多個雙重介面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [雙重介面和 ATL](../atl/dual-interfaces-and-atl.md)
 

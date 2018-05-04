@@ -1,12 +1,9 @@
 ---
-title: "永續性類別 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 永續性類別 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.persistence
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - persistence classes
 - persistence, classes
 ms.assetid: a6a2b6b2-52bc-471c-b78a-de58363128bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 702c43660c4c89a708870ec0505cfa2d3fddfb59
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 16490105f0ec2ded73f45e54d0f8a6700264893c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="persistence-classes"></a>永續性類別
 下列類別會實作物件的持續性：  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="related-articles"></a>相關文章  
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)   
  [屬性對應巨集](../atl/reference/property-map-macros.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "CComClassFactory 類別 |Microsoft 文件"
-ms.custom: 
+title: CComClassFactory 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af57c666cf2ee452d2707045d259ada695a2848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a144f4ff9902a633933ae556df872a9d55a5409
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 類別
 這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面。  
@@ -51,7 +46,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|鎖定在記憶體中的 class factory。|  
   
 ## <a name="remarks"></a>備註  
- `CComClassFactory`實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，其中包含用於建立特定的 CLSID 的物件，以及鎖定以允許更快速地建立新物件的記憶體中的 class factory 方法。 **IClassFactory**必須針對您在系統登錄中，並為您指派為 CLSID 註冊每個類別中實作。  
+ `CComClassFactory` 實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，其中包含用於建立特定的 CLSID 的物件，以及鎖定以允許更快速地建立新物件的記憶體中的 class factory 方法。 **IClassFactory**必須針對您在系統登錄中，並為您指派為 CLSID 註冊每個類別中實作。  
   
  ATL 物件通常由衍生自取得 class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告`CComClassFactory`做為預設 class factory。 若要覆寫此預設值，指定的其中一個`DECLARE_CLASSFACTORY` *XXX*類別定義中的巨集。 例如， [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)巨集的 class factory 中用於指定的類別：  
   
@@ -70,7 +65,7 @@ class CComClassFactory
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory::CreateInstance  
  建立指定的 CLSID 的物件，並擷取這個物件的介面指標。  
   
 ```
@@ -90,8 +85,8 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="lockserver"></a>CComClassFactory::LockServer  
- 遞增和遞減模組鎖定計數藉由呼叫**_Module::Lock**和**_Module::Unlock**分別。  
+##  <a name="lockserver"></a>  CComClassFactory::LockServer  
+ 遞增和遞減模組鎖定計數藉由呼叫 **_Module::Lock**和 **_Module::Unlock**分別。  
   
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -109,7 +104,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  呼叫`LockServer`允許用戶端保留 class factory，以便可以快速地建立多個物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [類別概觀](../../atl/atl-class-overview.md)

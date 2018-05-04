@@ -1,12 +1,9 @@
 ---
-title: "連接點全域函式 |Microsoft 文件"
-ms.custom: 
+title: 連接點全域函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlAdvise
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7f6fc3d2a0b51f88952dd720955367b1dfe9d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-point-global-functions"></a>連接點全域函式
 這些函式提供的連接點的支援，並接收對應。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
    
-##  <a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>  AtlAdvise  
  建立物件連接點與用戶端接收器之間的連接。  
   
 > [!IMPORTANT]
@@ -80,7 +75,7 @@ HRESULT    AtlAdvise(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>  AtlUnadvise  
  透過建立的連接會終止[AtlAdvise](#atladvise)。  
   
 > [!IMPORTANT]
@@ -109,7 +104,7 @@ HRESULT    AtlUnadvise(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>  AtlAdviseSinkMap  
  呼叫此函式可通知或取消通知在物件接收器事件對應中的所有項目。  
   
 > [!IMPORTANT]
@@ -132,6 +127,6 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)   
  [連接點巨集](../../atl/reference/connection-point-macros.md)

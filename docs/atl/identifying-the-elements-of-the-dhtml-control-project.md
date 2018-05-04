@@ -1,30 +1,25 @@
 ---
-title: "DHTML 控制項專案的項目用來識別 |Microsoft 文件"
-ms.custom: 
+title: DHTML 控制項專案的項目用來識別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 525ad4e073607064234641f6544a11901ded0096
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>識別 DHTML 控制項專案的項目
 大部分 DHTML 控制項的程式碼完全像那樣建立任何 ATL 的控制項。 泛型程式碼的基本了解，逐步[ATL 教學課程](../atl/active-template-library-atl-tutorial.md)，並參閱的章節[ATL 專案建立](../atl/reference/creating-an-atl-project.md)和[ATL COM 物件基礎觀念](../atl/fundamentals-of-atl-com-objects.md)。  
@@ -64,6 +59,6 @@ ms.lasthandoff: 12/21/2017
   
  請參閱[建立 ATL DHTML 控制項](../atl/creating-an-atl-dhtml-control.md)若要開始在建立 DHTML 控制項。 請參閱[使用測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)如何存取測試容器的資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
 

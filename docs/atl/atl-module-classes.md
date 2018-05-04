@@ -2,12 +2,9 @@
 title: ATL 模組類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b254edfe75cfcdaee7ab15351f7c05c3d163e301
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 777d81fbe1de48289863fda00591a5328b40cf4c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-module-classes"></a>ATL 模組類別
 本主題討論了新 ATL 7.0 中的模組類別。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
     -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md)提供建立 Windows NT 和 Windows 2000 服務的支援。  
   
- `CComModule`回溯相容性仍可使用。  
+ `CComModule` 回溯相容性仍可使用。  
   
 ## <a name="reasons-for-distributing-ccommodule-functionality"></a>散發 CComModule 功能的原因  
  功能`CComModule`已散發到數個新的類別，原因如下：  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
      Init 和詞彙方法都移到建構函式和解構函式的模組類別;此外已不再需要呼叫 Init 和詞彙。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [類別概觀](../atl/atl-class-overview.md)
 

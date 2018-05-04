@@ -1,13 +1,10 @@
 ---
-title: ".Lib 檔案做為連結器輸入 |Microsoft 文件"
-ms.custom: 
+title: .Lib 檔案做為連結器輸入 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.AdditionalDependencies
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8382e43398c4b6e5241542e6b41fdee8e2f70eff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lib-files-as-linker-input"></a>.Lib 檔做為連結器輸入
 連結接受 COFF 標準程式庫和 COFF 匯入程式庫，這兩種通常有副檔名。 lib。 標準程式庫包含的物件，並且會 LIB 工具來建立。 匯入程式庫包含匯出的其他程式的相關資訊，而且會建立每個連結的建置包含匯出的程式時，或由 LIB 工具。 如需使用 LIB 建立標準或匯入程式庫的資訊，請參閱[LIB 參考](../../build/reference/lib-reference.md)。 如需使用連結來建立匯入程式庫的詳細資訊，請參閱[/DLL](../../build/reference/dll-build-a-dll.md)選項。  
@@ -79,6 +74,6 @@ int main() {
 213  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LINK 輸入的檔](../../build/reference/link-input-files.md)   
  [連結器選項](../../build/reference/linker-options.md)

@@ -1,13 +1,10 @@
 ---
-title: "CL 環境變數 |Microsoft 文件"
-ms.custom: 
+title: CL 環境變數 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba01a980aa24a3ff695479edd08e88d9ea538dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f3986097bcb5028d9ad708c9a3132f5e417d502
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-environment-variables"></a>CL 環境變數
 
@@ -73,7 +68,7 @@ CL 工具使用下列環境變數：
 
 > CL FILE1。C FILE2。C FILE3。OBJ
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
 [編譯器選項](../../build/reference/compiler-options.md)

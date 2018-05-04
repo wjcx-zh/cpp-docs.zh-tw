@@ -1,29 +1,24 @@
 ---
-title: "建置 C/c + + 並存組件 |Microsoft 文件"
-ms.custom: 
+title: 建置 C/c + + 並存組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a45062af5648c7b3565d959fd1d2dce13aeca4b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>建置 C/C++ 並存組件
 A [-並存組件](http://msdn.microsoft.com/library/windows/desktop/ff951640)是資源集合 — 的 Dll、 windows 類別、 COM 伺服器、 類型程式庫或介面群組 — 適用於應用程式在執行階段使用。 將 Dll 重新封裝組件中的主要優點是在同一時間應用程式可以使用多個版本的組件，並可服務目前已安裝的組件的更新版本。  
@@ -42,7 +37,7 @@ A [-並存組件](http://msdn.microsoft.com/library/windows/desktop/ff951640)是
   
  這項變更可能會允許部署為相對應的 Dll[私用組件](http://msdn.microsoft.com/library/windows/desktop/aa370850)在應用程式的本機資料夾，或做為[共用組件](http://msdn.microsoft.com/library/windows/desktop/aa371839)WinSxS 組件快取。 遵循才能達到正確的執行階段行為的這個新的組件; 有幾個步驟將描述這些[指導方針建立為並存組件](http://msdn.microsoft.com/library/windows/desktop/aa375155)。 正確地撰寫組件之後可以為其中一個共用或私用組件相依於它的應用程式一起部署。 安裝時的並存組件做為共用組件，貴用戶中所述的指導方針是遵循[安裝在 Windows XP 上的並行所共用的 Win32 組](http://msdn.microsoft.com/library/windows/desktop/aa369532)或使用[合併模組](http://msdn.microsoft.com/library/windows/desktop/aa369820). 安裝時的並存組件做為私用組件，您可能只複製相對應的 DLL、 資源和組件資訊清單，做為安裝程序的一部分應用程式本機資料夾的目標電腦上，確定這個組件可以在執行階段載入器找到 (請參閱[組件搜尋序列](http://msdn.microsoft.com/library/windows/desktop/aa374224))。 另一種方式是使用[Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688)並遵循所述的指導方針[安裝在 Windows XP 上的應用程式私用用於 Win32 組件](http://msdn.microsoft.com/library/windows/desktop/aa369534)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署範例](../ide/deployment-examples.md)   
  [建置 C/c + + 隔離應用程式](../build/building-c-cpp-isolated-applications.md)   
  [建置 C/C++ 隔離應用程式和並存組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

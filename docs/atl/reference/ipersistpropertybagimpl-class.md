@@ -1,12 +1,9 @@
 ---
-title: "IPersistPropertyBagImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IPersistPropertyBagImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistPropertyBagImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3783d505c989b11205104cd70a9c440aa6f645f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41d26b84fd4c113120afefd572caed8ab27214c8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 類別
 這個類別會實作**IUnknown** ，並可讓用戶端提供的屬性包以儲存其屬性的物件。  
@@ -75,7 +70,7 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="getclassid"></a>IPersistPropertyBagImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistPropertyBagImpl::GetClassID  
  擷取物件的 CLSID。  
   
 ```
@@ -85,7 +80,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>備註  
  請參閱[ipersist:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
-##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
+##  <a name="initnew"></a>  IPersistPropertyBagImpl::InitNew  
  初始化新建立的物件。  
   
 ```
@@ -98,7 +93,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>備註  
  請參閱[IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) Windows SDK 中。  
   
-##  <a name="load"></a>IPersistPropertyBagImpl::Load  
+##  <a name="load"></a>  IPersistPropertyBagImpl::Load  
  從用戶端提供的屬性包中載入物件的屬性。  
   
 ```
@@ -110,7 +105,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
   
  請參閱[IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) Windows SDK 中。  
   
-##  <a name="save"></a>IPersistPropertyBagImpl::Save  
+##  <a name="save"></a>  IPersistPropertyBagImpl::Save  
  將物件的屬性儲存到用戶端提供的屬性包。  
   
 ```
@@ -125,6 +120,6 @@ STDMETHOD(Save)(
   
  請參閱[IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [類別概觀](../../atl/atl-class-overview.md)

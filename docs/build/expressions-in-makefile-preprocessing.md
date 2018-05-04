@@ -1,13 +1,10 @@
 ---
-title: "Makefile 前置處理中的運算式 |Microsoft 文件"
-ms.custom: 
+title: Makefile 前置處理中的運算式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - expressions [C++], makefile preprocessing
 - makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bea4f0c4fea2c2d04681674734bc989424c7951
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 04a53e5e6fe45c2c846cae3fb9e973fe1c712107
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Makefile 前置處理中的運算式
 **！如果**或**！ELSE IF** `constantexpression` （以十進位或 C 語言標記） 的整數常數、 字串常數或命令所組成。 使用括號群組運算式。 運算式中使用 c-style 帶正負號長整數算術。數字是範圍-2147483648 到 2147483647 的 32 位元二補數格式。  
@@ -37,5 +32,5 @@ ms.lasthandoff: 12/21/2017
   
  [前置處理中執行程式](../build/executing-a-program-in-preprocessing.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Makefile 前置處理](../build/makefile-preprocessing.md)

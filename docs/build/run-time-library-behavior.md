@@ -2,12 +2,9 @@
 title: Dll 和 Visual c + + 執行階段程式庫行為 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -24,21 +21,19 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bf84eeaf9277c5cf037c4fa59c28d109d95856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feee3d888fbf43bfd8675ccc83a04fd4e1f0b528
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 執行階段程式庫行為  
   
-當您建置動態連結程式庫 (DLL) 使用 Visual c + + 中，依預設時，連結器就會包含 Visual c + + 執行階段程式庫 (VCRuntime)。 VCRuntime 包含初始化及終止 C/c + + 可執行檔所需的程式碼。 當連結到 DLL，VCRuntime 程式碼會提供內部 DLL 進入點函式呼叫`_DllMainCRTStartup`可處理 Windows OS 訊息所要附加或中斷處理序或執行緒的 dll。 `_DllMainCRTStartup`函式會執行基本工作，例如堆疊緩衝區安全性設定，C 執行階段程式庫 (CRT) 初始化及終止，而且會呼叫建構函式和解構函式靜態和全域物件。 `_DllMainCRTStartup`也呼叫攔截函式來執行他們自己的初始化及終止的 WinRT、 MFC 和 ATL 之類的其他程式庫。 沒有這類初始化、 CRT 和其他文件庫，以及您的靜態變數，就會處於未初始化的狀態。 相同 VCRuntime 內部初始化及終止常式會呼叫您的 DLL 會使用靜態連結的 CRT 或動態連結的 CRT DLL。  
+當您建置動態連結程式庫 (DLL) 使用 Visual c + + 中，依預設時，連結器就會包含 Visual c + + 執行階段程式庫 (VCRuntime)。 VCRuntime 包含初始化及終止 C/c + + 可執行檔所需的程式碼。 當連結到 DLL，VCRuntime 程式碼會提供內部 DLL 進入點函式呼叫`_DllMainCRTStartup`可處理 Windows OS 訊息所要附加或中斷處理序或執行緒的 dll。 `_DllMainCRTStartup`函式會執行基本工作，例如堆疊緩衝區安全性設定，C 執行階段程式庫 (CRT) 初始化及終止，而且會呼叫建構函式和解構函式靜態和全域物件。 `_DllMainCRTStartup` 也呼叫攔截函式來執行他們自己的初始化及終止的 WinRT、 MFC 和 ATL 之類的其他程式庫。 沒有這類初始化、 CRT 和其他文件庫，以及您的靜態變數，就會處於未初始化的狀態。 相同 VCRuntime 內部初始化及終止常式會呼叫您的 DLL 會使用靜態連結的 CRT 或動態連結的 CRT DLL。  
   
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>預設 DLL 進入點 _DllMainCRTStartup  
   
@@ -192,7 +187,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
   
 多執行緒處理的控制代碼隨附於範例初始化函式[使用執行緒區域儲存區中之動態連結程式庫](http://msdn.microsoft.com/library/windows/desktop/ms686997)Windows SDK 中。 請注意，此範例包含呼叫的進入點函式`LibMain`，但您應該將此函式`DllMain`使其可與 MFC 與 C 執行階段程式庫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
   
 [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)  
 [DllMain 進入點](https://msdn.microsoft.com/library/windows/desktop/ms682583.aspx)  

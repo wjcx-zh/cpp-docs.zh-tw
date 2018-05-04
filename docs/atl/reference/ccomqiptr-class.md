@@ -1,12 +1,9 @@
 ---
-title: "CComQIPtr 類別 |Microsoft 文件"
-ms.custom: 
+title: CComQIPtr 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComQIPtr
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b63e584b7c4620be0e77da034a2a419b80cf741
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66c6cc1484ef84ce53ffaf5529575eea43431869
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr 類別
 用來管理 COM 介面指標的智慧型指標類別。  
@@ -73,7 +68,7 @@ class CComQIPtr: public CComPtr<T>
 ## <a name="requirements"></a>需求  
  **標頭：** atlcomcli.h  
   
-##  <a name="ccomqiptr"></a>CComQIPtr::CComQIPtr  
+##  <a name="ccomqiptr"></a>  CComQIPtr::CComQIPtr  
  建構函式。  
   
 ```
@@ -93,7 +88,7 @@ CComQIPtr(const CComQIPtr<T, piid>& lp) throw();
  `piid`  
  指向 IID 的`T`。  
   
-##  <a name="operator_eq"></a>CComQIPtr::operator =  
+##  <a name="operator_eq"></a>  CComQIPtr::operator =  
  指派運算子。  
   
 ```
@@ -115,7 +110,7 @@ T* operator= (IUnknown* lp) throw();
 ### <a name="return-value"></a>傳回值  
  讓指標回到更新`CComQIPtr`物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComPtr::CComPtr](../../atl/reference/ccomptr-class.md#ccomptr)   
  [CComQIPtr::CComQIPtr](#ccomqiptr)   
  [CComPtrBase 類別](../../atl/reference/ccomptrbase-class.md)   

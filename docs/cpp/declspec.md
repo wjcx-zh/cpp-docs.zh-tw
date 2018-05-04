@@ -1,12 +1,9 @@
 ---
-title: __declspec | Microsoft Docs
-ms.custom: 
+title: __declspec |Microsoft 文件
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,20 +13,19 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
 **Microsoft 特定的**
 
-指定儲存類別資訊使用的擴充的屬性語法**__declspec**關鍵字，指定要與下面所列的 Microsoft 專有儲存類別屬性儲存在給定類型的執行個體。 其他儲存類別修飾詞的範例包括**靜態**和**extern**關鍵字。 不過，這些關鍵字是 C 和 C++ 語言的 ANSI 規格的一部分，因此擴充屬性語法未涵蓋它們。 擴充屬性語法可簡化並標準化 Microsoft 專有的 C 和 C++ 語言擴充功能。
+指定儲存類別資訊使用的擴充的屬性語法 **__declspec**關鍵字，指定要與下面所列的 Microsoft 專有儲存類別屬性儲存在給定類型的執行個體。 其他儲存類別修飾詞的範例包括**靜態**和**extern**關鍵字。 不過，這些關鍵字是 C 和 C++ 語言的 ANSI 規格的一部分，因此擴充屬性語法未涵蓋它們。 擴充屬性語法可簡化並標準化 Microsoft 專有的 C 和 C++ 語言擴充功能。
 
 ## <a name="grammar"></a>文法
 
@@ -70,7 +66,7 @@ ms.lasthandoff: 01/25/2018
 
 **Code_seg**， **dllexport**， **dllimport**， **naked**， **noalias**， **nothrow**，**屬性**，**限制**， **selectany**，**執行緒**，和**uuid**儲存類別屬性是只的物件或他們要套用至函式的宣告屬性。 **執行緒**屬性會影響資料，而且僅限物件。 **Naked**和**spectre**屬性會影響只有函式。 **Dllimport**和**dllexport**屬性會影響函式、 資料和物件。 **屬性**， **selectany**，和**uuid**屬性會影響 COM 物件。
 
-**__Declspec**關鍵字應該放置在簡單宣告的開頭。 編譯器會忽略，而無任何警告**__declspec**關鍵字後面 * 或 & 和在宣告中變數的識別項前面。
+**__Declspec**關鍵字應該放置在簡單宣告的開頭。 編譯器會忽略，而無任何警告 **__declspec**關鍵字後面 * 或 & 和在宣告中變數的識別項前面。
 
 A **__declspec**中使用者定義型別宣告的開頭指定的屬性會套用至該類型的變數。 例如: 
 
@@ -86,11 +82,11 @@ class __declspec(dllimport) X {};
 
 在本案例中，屬性會套用至 `X`。
 
-一般使用方針**__declspec**簡單宣告的屬性如下所示：
+一般使用方針 **__declspec**簡單宣告的屬性如下所示：
 
-*decl-specifier-seq* *init-declarator-list*;
+*seq 規範 decl 功能* *init 宣告子清單*;
 
-*Decl-規範 seq*應該包含在其他方面，基底類型 (例如**int**， **float**、 **typedef**，或類別名稱)，儲存類別 (例如**靜態**， **extern**)，或**__declspec**延伸模組。 *Init 宣告子清單*應該包含在其他方面，宣告的指標部分。 例如: 
+*Decl-規範 seq*應該包含在其他方面，基底類型 (例如**int**， **float**、 **typedef**，或類別名稱)，儲存類別 (例如**靜態**， **extern**)，或 **__declspec**延伸模組。 *Init 宣告子清單*應該包含在其他方面，宣告的指標部分。 例如: 
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier

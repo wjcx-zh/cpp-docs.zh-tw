@@ -1,13 +1,10 @@
 ---
-title: "/SECTION （指定區段屬性） |Microsoft 文件"
-ms.custom: 
+title: /SECTION （指定區段屬性） |Microsoft 文件
+ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /section
 dev_langs:
@@ -19,14 +16,13 @@ helpviewer_keywords:
 - /SECTION linker option
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa214c7efeeee595300204df900a333258052772
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6d9b0a724f0e9156c81db20bf283e4418dd2f22d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (指定區段屬性)
 
@@ -84,7 +80,7 @@ A*區段*在可攜式執行檔 (PE) 檔案是包含程式碼或資料的記憶�
 |K|快取|標記為不可快取區段|
 |P|分頁|標記為不可分頁區段|
 
-對應到它們的區段旗標都使用負的意義上，K 和 P 並不常見。 如果您指定其中一個在.text 區段使用**/SECTION:.text、 K**選項，沒有任何差異 > 一節旗標中的執行時[DUMPBIN](../../build/reference/dumpbin-options.md)與[/HEADERS](../../build/reference/headers.md)選項。一節已隱含已快取。 若要移除預設值，指定**/SECTION:.text，！K**改為。 DUMPBIN 顯示區段特性，包括 「 無法快取 」。
+對應到它們的區段旗標都使用負的意義上，K 和 P 並不常見。 如果您指定其中一個在.text 區段使用 **/SECTION:.text、 K**選項，沒有任何差異 > 一節旗標中的執行時[DUMPBIN](../../build/reference/dumpbin-options.md)與[/HEADERS](../../build/reference/headers.md)選項。一節已隱含已快取。 若要移除預設值，指定 **/SECTION:.text，！K**改為。 DUMPBIN 顯示區段特性，包括 「 無法快取 」。
 
 沒有 E、 R、 設定或 W PE 檔中的區段可能會無效。
 

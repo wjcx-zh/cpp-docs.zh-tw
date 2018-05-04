@@ -2,12 +2,9 @@
 title: 使用包含的 Windows |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - windows [C++], ATL
 - contained windows in ATL
 ms.assetid: 7b3d79e5-b569-413f-9b98-df4f14efbe2b
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f812b99131d63b87df8dbfd8c9afd5493d0a0140
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6c3b439baf05c4e4287613e9b6b5a9b1c2546b6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-contained-windows"></a>使用包含的 Windows
 ATL 實作包含的 windows [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)。 包含的視窗表示可委派給容器物件，而不是在它自己的類別中處理這些訊息的視窗。  
@@ -46,6 +41,6 @@ ATL 實作包含的 windows [CContainedWindowT](../atl/reference/ccontainedwindo
   
  如需有關包含 windows 的詳細資訊，請參閱[SUBEDIT](../visual-cpp-samples.md)範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [視窗類別](../atl/atl-window-classes.md)
 

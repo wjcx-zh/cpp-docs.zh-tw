@@ -2,11 +2,8 @@
 title: CComPtr 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComPtr
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef8c49b04a769fd6202aa58324f20216948cf3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomptr-class"></a>CComPtr 類別
 用來管理 COM 介面指標的智慧型指標類別。  
@@ -76,7 +71,7 @@ class CComPtr
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="ccomptr"></a>CComPtr::CComPtr  
+##  <a name="ccomptr"></a>  CComPtr::CComPtr  
  建構函式。  
   
 ```
@@ -92,7 +87,7 @@ CComPtr (const CComPtr<T>& lp) throw ();
  `T`  
  COM 介面。  
   
-##  <a name="operator_eq"></a>CComPtr::operator =  
+##  <a name="operator_eq"></a>  CComPtr::operator =  
  指派運算子。  
   
 ```
@@ -106,7 +101,7 @@ T* operator= (const CComPtr<T>& lp) throw ();
 ### <a name="remarks"></a>備註  
  現有的物件，如果有一個存在此作業 AddRefs 新物件和版本。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComPtr::CComPtr](#ccomptr)   
  [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
  [類別概觀](../../atl/atl-class-overview.md)

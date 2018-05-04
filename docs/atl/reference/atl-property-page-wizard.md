@@ -1,12 +1,9 @@
 ---
-title: "ATL 屬性頁精靈 |Microsoft 文件"
-ms.custom: 
+title: ATL 屬性頁精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c5d863ef14aeddcd66f813449b514360f657a4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-property-page-wizard"></a>ATL 屬性頁精靈
 此精靈[加入 ATL 專案屬性頁](../../atl/reference/adding-an-atl-property-page.md)或具有 ATL 支援的 MFC 專案。 ATL 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的一或多個 COM 物件。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 |||  
 |-|-|  
 |詞彙|定義|  
-|**簡短名稱**|設定物件的縮寫的名稱。 您提供的名稱會決定類別和**Coclass**名稱、 檔案 (**.cpp**和**.h**) 名稱，**類型**名稱和**ProgID**，除非您個別變更這些欄位。|  
+|**簡短名稱**|設定物件的縮寫的名稱。 您提供的名稱會決定類別和**Coclass**名稱、 檔案 (**.cpp**和 **.h**) 名稱，**類型**名稱和**ProgID**，除非您個別變更這些欄位。|  
 |**.h 檔案**|設定新的物件類別的標頭檔的名稱。 根據預設，這個名稱根據您在中提供的名稱**簡短名稱**。 按一下省略符號按鈕，將檔案名稱儲存到您選擇的位置，或將類別宣告附加至現有的檔案。 如果您選取現有的檔案，精靈會無法將其儲存到選取的位置直到您按一下**完成**精靈中。<br /><br /> 精靈不會覆寫檔案。 如果當您按一下 選取現有的檔案名稱**完成**，精靈會提示您是否要在類別宣告附加至檔案的內容。 按一下**是**附加檔案，按一下 **否**返回精靈並指定另一個檔案名稱。|  
 |**類別**|設定之類別的實作物件的名稱。 這個名稱根據您在中提供的名稱**簡短名稱**，前面會加 'C'、 類別名稱的一般前置詞上。|  
 |**.cpp 檔案中**|設定新的物件類別的實作檔名稱。 根據預設，這個名稱根據您在中提供的名稱**簡短名稱**。 按一下省略符號按鈕，將檔案名稱儲存到您選擇的位置。 直到您按一下該檔案不儲存選取的位置**完成**精靈中。<br /><br /> 精靈不會覆寫檔案。 如果當您按一下 選取現有的檔案名稱**完成**，精靈會提示您是否要在類別實作附加至檔案的內容。 按一下**是**附加檔案，按一下 **否**返回精靈並指定另一個檔案名稱。|  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="com"></a>COM  
  提供物件的 COM 功能的相關資訊。  
   
- **Coclass**  
+ **coclass**  
  設定包含一份物件支援的介面的元件類別的名稱。  
   
 > [!NOTE]
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
  **ProgID**  
  設定容器可以使用而不是物件的 CLSID 的名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選項，ATL 屬性頁精靈](../../atl/reference/options-atl-property-page-wizard.md)   
  [字串，ATL 屬性頁精靈](../../atl/reference/strings-atl-property-page-wizard.md)   
  [範例︰實作屬性頁](../../atl/example-implementing-a-property-page.md)

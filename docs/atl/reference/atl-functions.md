@@ -1,12 +1,9 @@
 ---
-title: "ATL 函式 |Microsoft 文件"
-ms.custom: 
+title: ATL 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - functions [ATL]
 - ATL, global functions
 ms.assetid: 69db0cb2-de1d-445b-b692-020d6e8c2173
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 031d8896a99f9b02103216d0670d581c1ea4efaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d4a74b551ecc249db88293bfce091f3df14165d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-functions"></a>ATL 函式
 
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  [WinModule 全域函式](../../atl/reference/winmodule-global-functions.md)  
  提供的支援`_AtlCreateWndData`結構的作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
     
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
  [巨集](../../atl/reference/atl-macros.md)   

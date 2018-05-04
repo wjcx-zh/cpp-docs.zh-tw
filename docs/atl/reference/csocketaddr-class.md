@@ -1,12 +1,9 @@
 ---
-title: "CSocketAddr 類別 |Microsoft 文件"
-ms.custom: 
+title: CSocketAddr 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 830b1087d0a4792b449c516ed12ad7e8a84b2a51
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 類別
 這個類別會提供主機名稱轉換成主機位址，支援 IPv4 和 IPV6 格式的方法。  
@@ -71,7 +66,7 @@ class CSocketAddr
 ## <a name="requirements"></a>需求  
  **標頭：** atlsocket.h  
   
-##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>  CSocketAddr::CSocketAddr  
  建構函式。  
   
 ```
@@ -81,7 +76,7 @@ CSocketAddr();
 ### <a name="remarks"></a>備註  
  建立新`CSocketAddr`物件，並初始化包含主機的回應資訊的連結的清單。  
   
-##  <a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>  CSocketAddr::FindAddr  
  呼叫此方法以提供的主機名稱轉換成主機位址。  
   
 ```
@@ -130,7 +125,7 @@ int FindAddr(
 ### <a name="remarks"></a>備註  
  主機名稱參數可能是 IPv4 或 IPv6 格式。 這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)執行轉換。  
   
-##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  呼叫此方法，將 IPv4 主機名稱轉換為主機位址。  
   
 ```
@@ -160,7 +155,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)執行轉換。  
   
-##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  呼叫此方法，將 IPv6 主機名稱轉換為主機位址。  
   
 ```
@@ -190,7 +185,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫 Win32 API 函式[getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520)執行轉換。  
   
-##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  呼叫這個方法來傳回中特定元素的指標**addrinfo**清單。  
   
 ```
@@ -204,7 +199,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>傳回值  
  將指標傳回至**addrinfo**所參考的結構`nIndex`包含主機的回應資訊的連結清單中。  
   
-##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList  
  呼叫此方法以傳回的指標**addrinfo**清單。  
   
 ```
@@ -214,5 +209,5 @@ addrinfo* const GetAddrInfoList() const;
 ### <a name="return-value"></a>傳回值  
  連結清單的一或多個指標`addrinfo`結構，其中包含主機的回應資訊。 如需詳細資訊，請參閱[addrinfo 結構](https://msdn.microsoft.com/library/windows/desktop/ms737530)。
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

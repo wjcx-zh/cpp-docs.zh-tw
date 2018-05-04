@@ -2,11 +2,8 @@
 title: ATL OLE DB 消費者精靈 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.consumer.overview
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d12020b6adfca2c23dc610b5e596ff883bb9e7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 這個精靈設定 OLE DB 取用者類別與資料繫結到指定的 OLE DB 提供者存取指定的資料來源所需。  
   
 > [!NOTE]
->  此精靈會要求您按一下**資料來源**按鈕來選取資料來源中的名稱之前，請先`Class`和**.h 檔案**欄位。  
+>  此精靈會要求您按一下**資料來源**按鈕來選取資料來源中的名稱之前，請先`Class`和 **.h 檔案**欄位。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **資料來源**  
@@ -191,7 +186,7 @@ ms.lasthandoff: 12/21/2017
  **刪除**  
  指定取用者支援的資料列集資料列的刪除。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL OLE DB 消費者](../../atl/reference/adding-an-atl-ole-db-consumer.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [連接字串] 和 [資料連結 (OLE DB)](https://msdn.microsoft.com/library/ms718376.aspx)

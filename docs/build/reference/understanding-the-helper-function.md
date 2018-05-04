@@ -2,12 +2,9 @@
 title: 了解 Helper 函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54ed331022c29ecc47d61bbcccbfac82000cb235
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-helper-function"></a>了解 Helper 函式
 連結器支援延遲載入 helper 函式是什麼實際上會在執行階段載入 DLL。 您可以修改透過撰寫自己的函式，並將它連結至您的程式，而不是使用 Delayimp.lib 中提供的 helper 函式來自訂其行為的 helper 函式。 一個 helper 函式是所有的延遲載入 Dll。  
@@ -76,5 +71,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [卸載延遲載入的 DLL](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [延遲載入 DLL 的連結器支援](../../build/reference/linker-support-for-delay-loaded-dlls.md)

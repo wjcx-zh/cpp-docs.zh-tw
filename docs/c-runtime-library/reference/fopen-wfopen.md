@@ -2,11 +2,8 @@
 title: fopen、_wfopen | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfopen
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb44d99d635891561c4b73d87e737ea594b0b05f
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 3b606f168448f833a8e244ad35e52faf4f0afd75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 
@@ -153,7 +148,7 @@ FILE *_wfopen(
 
 在文字模式下，CTRL + Z 會解譯成 EOF 字元上輸入。 在開啟的檔案進行讀取/寫入使用 **"+"**， **fopen**會檢查是否有 CTRL + Z，檔案的結尾，最好是盡可能加以移除。 這是因為使用[fseek](fseek-fseeki64.md)和**ftell** CTRL + Z 結束可能會造成檔案內移動[fseek](fseek-fseeki64.md)檔案結尾附近產生不正確的行為。
 
-在文字模式下，歸位字元傳回換行字元組合會轉譯成單一換行字元上輸入，然後換行字元會轉譯為歸位字元傳回換行字元組合，在輸出上。 Unicode 資料流 I/O 函式在文字模式 (預設) 下運作時，會假設來源或目的資料流是多位元組字元的序列。 因此，Unicode 資料流輸入函式會將多位元組字元轉換為寬字元 (就像呼叫做為**mbtowc**函式)。 基於相同原因，Unicode 資料流輸出函式將寬字元轉換為多位元組字元 (就像呼叫做為**wctomb**函式)。
+在文字模式下，歸位字元傳回換行字元組合會轉譯成單一換行字元上輸入，然後換行字元會轉譯為歸位字元傳回換行字元組合，在輸出上。 Unicode 資料流 I/O 函式在文字模式 (預設) 下運作時，會假設來源或目的資料流是多位元組字元的序列。 因此，Unicode 資料流輸入函式會將多位元組字元轉換為寬字元 (就像呼叫 **mbtowc** 函式一樣)。 基於相同的原因，Unicode 資料流輸出函式會將寬字元轉換為多位元組字元 (就像呼叫 **wctomb** 函式一樣)。
 
 如果**t**或**b**中未指定*模式*，則預設轉譯模式由全域變數[_fmode](../../c-runtime-library/fmode.md)。 如果**t**或**b**前置引數，函式失敗並傳回**NULL**。
 

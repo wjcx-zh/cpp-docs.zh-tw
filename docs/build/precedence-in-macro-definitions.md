@@ -1,30 +1,25 @@
 ---
-title: "巨集定義的優先順序 |Microsoft 文件"
-ms.custom: 
+title: 巨集定義的優先順序 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NMAKE program, precedence in macro definitions
 - macros, precedence
 ms.assetid: 0c13182d-83cb-4cbd-af2d-f4c916b62aeb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7421ef51c37e3724bdb986321581e6736a62e18b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce6f0acc898dc719d2252d5cc59dff92bda4a98
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="precedence-in-macro-definitions"></a>巨集定義的優先順序
 如果巨集有多個定義，NMAKE 就會使用最高優先順序的定義。 下列清單顯示的優先順序，從最高到最低：  
@@ -41,5 +36,5 @@ ms.lasthandoff: 12/21/2017
   
  您可以使用 /E，讓繼承自環境變數，以覆寫具有相同名稱的 makefile 巨集的巨集。 使用**！UNDEF**覆寫命令列。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)

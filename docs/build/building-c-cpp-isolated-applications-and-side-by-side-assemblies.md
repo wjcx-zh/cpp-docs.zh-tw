@@ -2,12 +2,9 @@
 title: 建置 C/c + + 隔離應用程式和-並存組件 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5dec3b0db6d77cc11d0e2ccdc97fe54ab8e0624
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ca99de7403ad56ae82fdd25af8ff22167084b91
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>建置 C/C++ 隔離應用程式和並存組件
 Visual C++ 基於 [隔離的應用程式](http://msdn.microsoft.com/library/aa375190) 和 [並存組件](http://msdn.microsoft.com/library/ff951640)的想法，支援 Windows 用戶端應用程式的部署模型。 根據預設，Visual C++ 會將所有原生 C/C++ 應用程式，建置為隔離的應用程式，以使用 [資訊清單](http://msdn.microsoft.com/library/aa375365) ，來描述其在 Visual C++ 程式庫上的相依性。  

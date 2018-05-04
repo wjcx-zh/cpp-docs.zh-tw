@@ -1,27 +1,22 @@
 ---
-title: "範圍架構 for 陳述式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 範圍架構 for 陳述式 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43ded324227878b44f997e6539e060145ad0fb66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc60c1efc307f30c06accdd7404cb35c135dae5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="range-based-for-statement-c"></a>以範圍為基礎的 for 陳述式 (C++)
 對於 `statement` 中的每個項目，重複且循序地執行 `expression`。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  使用範圍架構`for`陳述式來建構迴圈時，必須在整個 「 範圍 」，定義為可以逐一查看的任何項目執行迴圈 — 比方說， `std::vector`，或其範圍由所定義的任何其他c++標準程式庫序列`begin()`和`end()`。 在 `for-range-declaration` 部分中宣告的名稱是 `for` 陳述式的區域變數，不可在 `expression` 或 `statement` 重複宣告。 請注意，[自動](../cpp/auto-cpp.md)關鍵字會偏好`for-range-declaration`陳述式部分。 
 
- **新功能 Visual Studio 2017:**範圍架構的 for 迴圈不再需要 begin （） 和 end （） 傳回相同類型的物件。 這可讓 end() 傳回 sentinel 物件，例如 Ranges-V3 提案中所定義範圍使用的物件。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (一般化範圍架構的 For 迴圈) 和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3) (GitHub 上的 range-v3 程式庫)。
+ **新功能 Visual Studio 2017:** 範圍架構的 for 迴圈不再需要 begin （） 和 end （） 傳回相同類型的物件。 這可讓 end() 傳回 sentinel 物件，例如 Ranges-V3 提案中所定義範圍使用的物件。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (一般化範圍架構的 For 迴圈) 和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3) (GitHub 上的 range-v3 程式庫)。
   
  此程式碼示範如何使用範圍架構`for`迴圈，逐一查看陣列和向量：  
   
@@ -123,7 +118,7 @@ int main()
   
 -   使用與引數相依的查閱 `begin()` 和 `end()` 以取得任何其他項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自動](../cpp/auto-cpp.md)   
  [反覆運算陳述式](../cpp/iteration-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   

@@ -1,12 +1,9 @@
 ---
-title: "Win32ThreadTraits 類別 |Microsoft 文件"
-ms.custom: 
+title: Win32ThreadTraits 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - Win32ThreadTraits
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf4fd3ffaf2fc4a035fdecf679ab507ebb557f38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b863808a2367cae8878728403dbf11265b9e819
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 類別
 這個類別提供 Windows 執行緒建立函式。 如果執行緒不會使用 CRT 函式，請使用這個類別。  
@@ -65,7 +60,7 @@ class Win32ThreadTraits
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="createthread"></a>Win32ThreadTraits::CreateThread  
+##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
  呼叫此函式可建立的執行緒，不應該使用 CRT 函式。  
   
 ```
@@ -105,5 +100,5 @@ static HANDLE CreateThread(
   
  此函數會呼叫`CreateThread`建立執行緒。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

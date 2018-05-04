@@ -1,12 +1,9 @@
 ---
-title: "CW2WEX 類別 |Microsoft 文件"
-ms.custom: 
+title: CW2WEX 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2WEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c35439b1309e75359177cf45ade4c6be9459f623
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e70ba1fdf42ea2f00b057d9b95105b34d9eff5a2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2wex-class"></a>CW2WEX 類別
 這個類別由字串轉換巨集`CW2TEX`和`CT2WEX`，和 typedef `CW2W`。  
@@ -97,7 +92,7 @@ class CW2WEX
 ## <a name="requirements"></a>需求  
  **標頭：** atlconv.h  
   
-##  <a name="cw2wex"></a>CW2WEX::CW2WEX  
+##  <a name="cw2wex"></a>  CW2WEX::CW2WEX  
  建構函式。  
   
 ```
@@ -115,7 +110,7 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ### <a name="remarks"></a>備註  
  建立做為轉換所需的緩衝區。  
   
-##  <a name="dtor"></a>CW2WEX:: ~ CW2WEX  
+##  <a name="dtor"></a>  CW2WEX:: ~ CW2WEX  
  解構函式...  
   
 ```
@@ -125,21 +120,21 @@ CW2WEX( LPCWSTR  psz) throw(...);
 ### <a name="remarks"></a>備註  
  釋放已配置的緩衝區。  
   
-##  <a name="m_psz"></a>CW2WEX::m_psz  
+##  <a name="m_psz"></a>  CW2WEX::m_psz  
  儲存在來源字串的資料成員。  
   
 ```
 LPWSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CW2WEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CW2WEX::m_szBuffer  
  靜態緩衝區，用來儲存已轉換的字串。  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpwstr"></a>CW2WEX::operator LPWSTR  
+##  <a name="operator_lpwstr"></a>  CW2WEX::operator LPWSTR  
  轉換運算子。  
   
 ```  
@@ -149,7 +144,7 @@ operator LPWSTR() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回文字字串做為類型`LPWSTR`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CA2AEX 類別](../../atl/reference/ca2aex-class.md)   
  [CA2CAEX 類別](../../atl/reference/ca2caex-class.md)   
  [CA2WEX 類別](../../atl/reference/ca2wex-class.md)   

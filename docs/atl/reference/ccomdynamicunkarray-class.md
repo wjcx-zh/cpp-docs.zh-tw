@@ -1,12 +1,9 @@
 ---
-title: "CComDynamicUnkArray 類別 |Microsoft 文件"
-ms.custom: 
+title: CComDynamicUnkArray 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComDynamicUnkArray
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray 類別
 這個類別會儲存陣列**IUnknown**指標。  
@@ -79,12 +74,12 @@ class CComDynamicUnkArray
  請參閱[加入至物件的連接點](../../atl/adding-connection-points-to-an-object.md)自動化建立連接的詳細資訊，請指向 proxy。  
   
 > [!NOTE]
-> **請注意**類別**CComDynamicUnkArray**正由**加入類別**精靈建立的連接點的控制項時。 如果您想要手動指定連接點數目，將變更從參考**CComDynamicUnkArray**至`CComUnkArray<`  *n*  `>`，其中*n* 是所需的連接點的數目。  
+> **請注意**類別**CComDynamicUnkArray**正由**加入類別**精靈建立的連接點的控制項時。 如果您想要手動指定連接點數目，將變更從參考**CComDynamicUnkArray**至`CComUnkArray<` *n* `>`，其中*n*是所需的連接點的數目。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="add"></a>CComDynamicUnkArray::Add  
+##  <a name="add"></a>  CComDynamicUnkArray::Add  
  呼叫此方法以新增**IUnknown**陣列的指標。  
   
 ```
@@ -98,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>傳回值  
  傳回新加入指標與相關聯的 cookie。  
   
-##  <a name="begin"></a>CComDynamicUnkArray::begin  
+##  <a name="begin"></a>  CComDynamicUnkArray::begin  
  傳回的集合開頭的指標**IUnknown**介面指標。  
   
 ```
@@ -114,14 +109,14 @@ IUnknown**
   
  使用之前**IUnknown**介面，您應該檢查不是**NULL**。  
   
-##  <a name="clear"></a>CComDynamicUnkArray::clear  
+##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  清空陣列。  
   
 ```
 void clear();
 ```  
   
-##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray  
+##  <a name="ccomdynamicunkarray"></a>  CComDynamicUnkArray::CComDynamicUnkArray  
  建構函式。  
   
 ```
@@ -131,7 +126,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>備註  
  設定集合大小為零並初始化的值**NULL**。 如有必要，解構函式會釋出集合。  
   
-##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
+##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  解構函式。  
   
 ```
@@ -141,7 +136,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>備註  
  釋出資源配置的類別建構函式。  
   
-##  <a name="end"></a>CComDynamicUnkArray::end  
+##  <a name="end"></a>  CComDynamicUnkArray::end  
  讓指標回到越過最後一個**IUnknown**指標集合中的。  
   
 ```
@@ -152,7 +147,7 @@ IUnknown**
 ### <a name="return-value"></a>傳回值  
  指標**IUnknown**介面指標。  
   
-##  <a name="getat"></a>CComDynamicUnkArray::GetAt  
+##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
  擷取指定之索引處的項目。  
   
 ```
@@ -166,7 +161,7 @@ IUnknown* GetAt(int nIndex);
 ### <a name="return-value"></a>傳回值  
  指標[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)介面。  
   
-##  <a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  呼叫此方法以取得相關聯的 cookie 給定**IUnknown**指標。  
   
 ```
@@ -183,7 +178,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>備註  
  是否有相同的多個執行個體**IUnknown**指標，此函數會傳回針對第一個 cookie。  
   
-##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
+##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  傳回陣列的長度。  
   
 ```
@@ -193,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>傳回值  
  陣列的長度。  
   
-##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
  呼叫此方法來取得**IUnknown**指定 cookie 相關聯的指標。  
   
 ```
@@ -207,7 +202,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>傳回值  
  傳回**IUnknown**指標或為 NULL，如果不找到任何比對的 cookie。  
   
-##  <a name="remove"></a>CComDynamicUnkArray::Remove  
+##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
  呼叫這個方法來移除**IUnknown**從陣列的指標。  
   
 ```
@@ -221,6 +216,6 @@ BOOL Remove(DWORD dwCookie);
 ### <a name="return-value"></a>傳回值  
  如果已移除的指標; 為 true，則傳回否則為 FALSE。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComUnkArray 類別](../../atl/reference/ccomunkarray-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

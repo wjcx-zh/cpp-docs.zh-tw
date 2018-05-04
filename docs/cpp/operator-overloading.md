@@ -1,12 +1,9 @@
 ---
-title: "運算子多載 |Microsoft 文件"
-ms.custom: 
+title: 運算子多載 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - operator_cpp
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C++], overloading
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617236d30f3c4473f6c7785db97789105d6cd565
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c7e80167c2022d5871d52879036dc9fef0d29f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operator-overloading"></a>運算子多載
 `operator` 關鍵字會宣告函式，指定在套用到類別的執行個體時，`operator-symbol` 代表什麼。 這讓運算子有多個意義，或稱為「多載」。 編譯器會檢查運算元的類型，以區別運算子的不同意義。  
@@ -116,7 +111,7 @@ type operator operator-symbol ( parameter-list )
   
 -   [遞增和遞減](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
   
--   [使用者定義型別轉換](../cpp/user-defined-type-conversions-cpp.md)  
+-   [使用者定義類型轉換](../cpp/user-defined-type-conversions-cpp.md)  
   
  下表中顯示的運算子無法多載。 表格包含前置處理器符號 `#` 和 `##`。  
   
@@ -193,6 +188,6 @@ int main() {
   
 7.  [成員存取](../cpp/member-access.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [關鍵字](../cpp/keywords-cpp.md)

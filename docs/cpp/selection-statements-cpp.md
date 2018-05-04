@@ -1,30 +1,25 @@
 ---
 title: 選擇陳述式 （c + +） |Microsoft 文件
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - selection statements [C++], syntax
 - selection statements
 ms.assetid: 2ce662fc-5e62-461b-ac31-2c159d8ef33b
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db73bb8c974cd8f65a1cb62058e9b2c6a4334dd3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f72e3c8145b2909495e53645af8ba500a102ebc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selection-statements-c"></a>選擇陳述式 (C++)
 C + + 選擇陳述式[如果](../cpp/if-else-statement-cpp.md)和[切換](../cpp/switch-statement-cpp.md)，提供了有條件執行的程式碼區段的方法。  
@@ -33,5 +28,5 @@ C + + 選擇陳述式[如果](../cpp/if-else-statement-cpp.md)和[切換](../cpp
   
  請參閱個別主題，了解每個陳述式的語法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)

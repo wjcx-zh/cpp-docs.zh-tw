@@ -1,12 +1,9 @@
 ---
-title: "CMessageMap 類別 |Microsoft 文件"
-ms.custom: 
+title: CMessageMap 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CMessageMap
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 類別
 這個類別可讓物件的訊息對應是由另一個物件的存取。  
@@ -52,7 +47,7 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|存取訊息對應中的`CMessageMap`-衍生的類別。|  
   
 ## <a name="remarks"></a>備註  
- `CMessageMap`是抽象的基底類別，可讓物件的訊息對應至另一個物件的存取。 為了讓公開其訊息對應的物件，其類別必須衍生自`CMessageMap`。  
+ `CMessageMap` 是抽象的基底類別，可讓物件的訊息對應至另一個物件的存取。 為了讓公開其訊息對應的物件，其類別必須衍生自`CMessageMap`。  
   
  使用 ATL`CMessageMap`支援包含 windows 和動態的訊息對應鏈結。 例如，任何類別包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)物件必須衍生自`CMessageMap`。 下列程式碼取自[SUBEDIT](../../visual-cpp-samples.md)範例。 透過[CComControl](../../atl/reference/ccomcontrol-class.md)、`CAtlEdit`類別自動衍生自`CMessageMap`。  
   
@@ -65,7 +60,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
   
-##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
+##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
  存取所識別的訊息對應`dwMsgMapID`中`CMessageMap`-衍生的類別。  
   
 ```
@@ -103,7 +98,7 @@ virtual BOOL ProcessWindowMessage(
 ### <a name="remarks"></a>備註  
  由視窗程序的呼叫[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)物件或物件的以動態方式鏈結至訊息對應。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDynamicChain 類別](../../atl/reference/cdynamicchain-class.md)   
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   

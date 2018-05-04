@@ -2,12 +2,9 @@
 title: 從 Visual Basic 應用程式呼叫 DLL 函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>從 Visual Basic 應用程式中呼叫 DLL 函式
 Visual Basic 應用程式 （或依照 pascal 命名法或 Fortran 等其他語言中的應用程式） C/c + + DLL 中呼叫函式，函式必須使用正確的呼叫慣例，而由編譯器所做的任何名稱裝飾不匯出。  
   
- `__stdcall`建立正確的呼叫慣例函式 （呼叫的函式會清除堆疊和由右至左傳遞參數），但不同裝飾函式名稱。 因此， **__declspec （dllexport)**用在 DLL 中匯出的函式，會匯出裝飾的名稱。  
+ `__stdcall` 建立正確的呼叫慣例函式 （呼叫的函式會清除堆疊和由右至左傳遞參數），但不同裝飾函式名稱。 因此， **__declspec （dllexport)** 用在 DLL 中匯出的函式，會匯出裝飾的名稱。  
   
  `__stdcall`名稱裝飾符號名稱以底線 (_)，並將附加的符號寬度 at 符號 (@) 字元，後面的引數清單 （所需的堆疊空間） 中的位元組數目。 如此一來，當宣告為函式：  
   
@@ -50,7 +45,7 @@ _func@12
   
  C 呼叫慣例 (`__cdecl`) 裝飾名稱與`_func`。  
   
- 若要取得裝飾的名稱，請使用[對應](../build/reference/map-generate-mapfile.md)。 使用**__declspec （dllexport)**會進行下列作業：  
+ 若要取得裝飾的名稱，請使用[對應](../build/reference/map-generate-mapfile.md)。 使用 **__declspec （dllexport)** 會進行下列作業：  
   
 -   如果匯出的函式是以 C 呼叫慣例 (**_cdecl**)，它會去除前置底線 (_)，會匯出名稱時。  
   
@@ -87,5 +82,5 @@ EXPORTS
   
 -   [裝飾的名稱](../build/reference/decorated-names.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

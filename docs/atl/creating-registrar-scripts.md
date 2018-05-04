@@ -1,13 +1,10 @@
 ---
-title: "建立指令碼的 ATL 登錄器 |Microsoft 文件"
-ms.custom: 
+title: 建立指令碼的 ATL 登錄器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3bda4043693d14451a2de14cbc71fbecdcdddba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e140e66ee24d8333d25c0c2942924c7a9db4965b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 登錄器指令碼會提供資料驅動，而不是驅動應用程式開發介面存取系統登錄。 由於指令碼新增至登錄機碼中只需要一個或兩個線條通常更有效率的資料驅動的存取。  
@@ -48,6 +43,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [叫用指令碼](../atl/invoking-scripts.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [登錄元件 （登錄器）](../atl/atl-registry-component-registrar.md)
 

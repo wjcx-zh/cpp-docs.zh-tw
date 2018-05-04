@@ -1,12 +1,9 @@
 ---
-title: "具有一元運算子的運算式 |Microsoft 文件"
-ms.custom: 
+title: 具有一元運算子的運算式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44485f0c5749db36ececd2061955f9956cb49ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-unary-operators"></a>具有一元運算子的運算式
 一元運算子只會在運算式中的一個運算元上作用。 一元運算子如下：  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [__alignof 運算子](../cpp/alignof-operator.md)  
   
--   [new 運算子](../cpp/new-operator-cpp.md)  
+-   [New 運算子](../cpp/new-operator-cpp.md)  
   
 -   [delete 運算子](../cpp/delete-operator-cpp.md)  
   
@@ -64,17 +59,17 @@ ms.lasthandoff: 12/21/2017
   
 -   *postfix-expression*  
   
--   `++`*一元運算式*  
+-   `++` *一元運算式*  
   
--   `--`*一元運算式*  
+-   `--` *一元運算式*  
   
 -   *一元運算子**轉型運算式*  
   
--   `sizeof`*一元運算式*  
+-   `sizeof` *一元運算式*  
   
--   `sizeof(`*型別名稱*`)`  
+-   `sizeof(` *型別名稱* `)`  
   
--   `decltype(`*運算式*`)`  
+-   `decltype(` *運算式* `)`  
   
 -   *配置運算式*  
   
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  任何*後置運算式*會被視為*一元運算式*，以及因為任何主要運算式被視為*後置運算式*，是任何主要運算式視為*一元運算式*也。 如需詳細資訊，請參閱[後置運算式](../cpp/postfix-expressions.md)和[主要運算式](../cpp/primary-expressions.md)。  
   
- A*一元運算子*組成一或多個下列符號：`* & + - ! ~`  
+ A*一元運算子*組成一或多個下列符號： `* & + - ! ~`  
   
  *轉型運算式*是一元運算式，但變更類型的選擇性轉換。 如需詳細資訊，請參閱[轉型運算子: （)](../cpp/cast-operator-parens.md)。  
   
@@ -90,5 +85,5 @@ ms.lasthandoff: 12/21/2017
   
  *配置運算式*指`new`運算子。 *解除配置運算式*指`delete`運算子。 如需詳細資訊，請參閱本主題稍早的連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式的類型](../cpp/types-of-expressions.md)

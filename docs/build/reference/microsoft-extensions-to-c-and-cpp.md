@@ -1,13 +1,10 @@
 ---
-title: "Microsoft 對 C 和 c + + 擴充功能 |Microsoft 文件"
-ms.custom: 
+title: Microsoft 對 C 和 c + + 擴充功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8453209a92b8f7485a9e7f575fb8810196d27fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>Microsoft 對 C 和 C++ 的擴充功能
 Visual C++ 擴充 ANSI C 和 ANSI C++ 標準如下。  
@@ -69,7 +64,7 @@ Visual C++ 擴充 ANSI C 和 ANSI C++ 標準如下。
 const int CMyClass::max;   // out of class definition  
 ```  
   
- 在下**/Ze**，層級定義是選擇性的靜態 const 整數，和 const 列舉資料成員。 只有靜態和常數的整數和列舉可以在類別之內有初始設定式；初始設定運算式必須是常數運算式。  
+ 在下 **/Ze**，層級定義是選擇性的靜態 const 整數，和 const 列舉資料成員。 只有靜態和常數的整數和列舉可以在類別之內有初始設定式；初始設定運算式必須是常數運算式。  
   
  若要避免發生錯誤，當提供在標頭檔和標頭檔會包含在多個原始程式檔時，層級定義，使用[selectany](../../cpp/selectany.md)。 例如:   
   
@@ -238,10 +233,10 @@ void myfunc( int x, char * c )
     ```  
   
 ## <a name="intrinsic-floating-point-functions"></a>內建函式的浮點函式  
- C + + 編譯器和 C 編譯器支援內嵌產生**x86 特定 >**的`atan`， `atan2`， `cos`， `exp`， `log`， `log10`， `sin`， `sqrt`，和`tan`函式**結束 x86 特定**時**/Oi**指定。 對於 C 編譯器，使用這些內建函式時會失去 ANSI 一致性，因為它們不會設定 `errno` 變數。  
+ C + + 編譯器和 C 編譯器支援內嵌產生**x86 特定 >** 的`atan`， `atan2`， `cos`， `exp`， `log`， `log10`， `sin`， `sqrt`，和`tan`函式**結束 x86 特定**時 **/Oi**指定。 對於 C 編譯器，使用這些內建函式時會失去 ANSI 一致性，因為它們不會設定 `errno` 變數。  
   
 ## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>將非 Const 指標參數傳遞至函式必須要有 Const 指標參數的參考  
- 這是 c + + 的擴充功能。 此程式碼將會以編譯**/Ze**:  
+ 這是 c + + 的擴充功能。 此程式碼將會以編譯 **/Ze**:  
   
 ```  
 typedef   int   T;  
@@ -264,7 +259,7 @@ void func ()
 ```  
   
 ## <a name="iso646h-not-enabled"></a>ISO646。H 未啟用  
- 在下**/Ze**，您必須包含 iso646.h，如果您想要使用下列運算子的文字形式：  
+ 在下 **/Ze**，您必須包含 iso646.h，如果您想要使用下列運算子的文字形式：  
   
 -   && (and)  
   
@@ -280,16 +275,16 @@ void func ()
   
 -   ！ = (not_eq)  
   
--   &#124; &#124;（或者）  
+-   &#124;&#124;（或者）  
   
--   &#124; = (or_eq)  
+-   &#124;= (or_eq)  
   
 -   ^ (xor)  
   
 -   ^ = (xor_eq)  
   
 ## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>字串常值的位址類型為 const char []，而非 const char (*) []  
- 下列範例會將輸出 char const (\*) [4] 下**/Za**，但 char const [4] 下的**/Ze**。  
+ 下列範例會將輸出 char const (\*) [4] 下 **/Za**，但 char const [4] 下的 **/Ze**。  
   
 ```  
 #include <stdio.h>  
@@ -301,7 +296,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [/Za、 /Ze （停用語言擴充功能）](../../build/reference/za-ze-disable-language-extensions.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

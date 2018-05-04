@@ -1,12 +1,9 @@
 ---
-title: "CAtlAutoThreadModuleT 類別 |Microsoft 文件"
-ms.custom: 
+title: CAtlAutoThreadModuleT 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlAutoThreadModuleT
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlAutoThreadModuleT class
 ms.assetid: ae1667c6-3fb8-47bc-b35d-9ea5e9896d7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 082214794b2caa66e8be1127c664e0ffec18a394
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a012494365745d40d98c0f65ee9eff6b5e9502da
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 類別
 這個類別會提供實作在集區執行緒的 apartment model COM 伺服器的方法。  
@@ -76,7 +71,7 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="getdefaultthreads"></a>CAtlAutoThreadModuleT::GetDefaultThreads  
+##  <a name="getdefaultthreads"></a>  CAtlAutoThreadModuleT::GetDefaultThreads  
  此靜態函式會動態計算，並傳回 EXE 模組，根據處理器數目的執行緒數目上限。  
   
 ```
@@ -89,7 +84,7 @@ static int GetDefaultThreads();
 ### <a name="remarks"></a>備註  
  如果您想要使用不同的方法來計算的執行緒數目，請覆寫這個方法。 根據預設，執行緒數目根據處理器數目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   

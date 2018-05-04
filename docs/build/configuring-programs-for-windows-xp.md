@@ -1,27 +1,22 @@
 ---
-title: "為 Windows XP 設定程式 |Microsoft 文件"
-ms.custom: 
+title: 為 Windows XP 設定程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
+ms.openlocfilehash: a846ea5508173ce0e383b1c4b8798b896ae5be0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>為 Windows XP 設定程式
 
@@ -38,7 +33,7 @@ ms.lasthandoff: 02/19/2018
 
 1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。
 
-1. 在**屬性頁**對話方塊中的專案，在**組態屬性** > **一般**，將**平台工具組**所需的 Windows XP 工具組的屬性。 例如，選擇**Visual Studio 2017-Windows XP (v141_xp)**建立程式碼[!INCLUDE[winxp](../build/includes/winxp_md.md)]和[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]所使用的 Microsoft Visual c + + 2017年編譯器。
+1. 在**屬性頁**對話方塊中的專案，在**組態屬性** > **一般**，將**平台工具組**所需的 Windows XP 工具組的屬性。 例如，選擇**Visual Studio 2017-Windows XP (v141_xp)** 建立程式碼[!INCLUDE[winxp](../build/includes/winxp_md.md)]和[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]所使用的 Microsoft Visual c + + 2017年編譯器。
 
 ### <a name="c-runtime-support"></a>C++ 執行階段支援
 
@@ -46,7 +41,7 @@ ms.lasthandoff: 02/19/2018
 
 安裝 Visual Studio 中，所根據的目標平台工具組支援這些程式庫：
 
-|程式庫|以 Windows 桌面應用程式為目標的預設平台工具組|預設平台工具組目標市集應用程式|Windows XP 平台工具組目標[!INCLUDE[winxp](../build/includes/winxp_md.md)]， [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|
+|程式庫|以 Windows 桌面應用程式為目標的預設平台工具組|預設平台工具組目標市集應用程式|以 [!INCLUDE[winxp](../build/includes/winxp_md.md)]、[!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)] 為目標的 Windows XP 平台工具組|
 |---|---|---|---|
 |CRT|X|X|X|
 |C++ 標準程式庫|X|X|X|

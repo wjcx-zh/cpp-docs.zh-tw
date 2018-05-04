@@ -1,29 +1,24 @@
 ---
-title: "C + + 程式碼呼叫 DHTML |Microsoft 文件"
-ms.custom: 
+title: C + + 程式碼呼叫 DHTML |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e2d0da431249ef886ceca1e2b7f6cbfc99418dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9e369396c68a041dc5fe027802859c6071e50e8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-c-code-from-dhtml"></a>從 DHTML 呼叫 c + + 程式碼
 DHTML 控制項可以裝載於容器，例如測試容器或 Internet Explorer。 請參閱[使用測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)如何存取測試容器的資訊。  
@@ -52,6 +47,6 @@ DHTML 控制項可以裝載於容器，例如測試容器或 Internet Explorer�
   
  請參閱[修改 ATL DHTML 控制項](../atl/modifying-the-atl-dhtml-control.md)如需有關提供您自己的方法。 請參閱[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)如需有關 HTML 檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
 

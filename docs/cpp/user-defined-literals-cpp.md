@@ -2,26 +2,21 @@
 title: 使用者定義常值 （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a461f4ca384585008ccf47fa2bfda91d36e724ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbe3819d2271db85696825d82ba26335e380163
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-literals--c"></a>使用者定義常值 （c + +）
 常值有六種主要分類：整數、字元、浮點、字串、布林值和指標。  從 C++ 11 開始，您可以根據這些分類來定義專屬常值，以提供常見慣用語的語法捷徑，並提升類型安全。 例如，假設您有一個 Distance 類別。 您可以針對公里定義一個常值，以及針對英哩定義另一個常值，並鼓勵使用者只要撰寫下列項目來明確指定度量單位：auto d = 42.0_km 或 auto d = 42.0_mi。 使用者定義常值沒有任何效能優勢或缺點；它們主要是為了方便起見，或針對編譯時間類型推斷。 標準程式庫中的時間和持續時間作業中有使用者定義常值的 std: string、 std:: complex，和單位\<chrono > 標頭：  

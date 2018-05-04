@@ -2,11 +2,8 @@
 title: 請勿-while 陳述式 （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - do_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e03a20ad2b49d5c9337e0c8250e5d7c321ee882
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81ed3628b75b98bdf7883de275ccd8f74a066abd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="do-while-statement-c"></a>do-while 陳述式 (C++)
 執行*陳述式*重複直到指定的終止條件 (*運算式*) 會評估為零。  
@@ -66,7 +61,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [反覆運算陳述式](../cpp/iteration-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [while 陳述式 (C++)](../cpp/while-statement-cpp.md)   

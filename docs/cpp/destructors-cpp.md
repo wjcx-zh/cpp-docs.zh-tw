@@ -1,12 +1,9 @@
 ---
-title: "解構函式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 解構函式 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae1ca6923bc7e67218e35c5a6c86b9f4ac112e59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="destructors-c"></a>解構函式 (C++)
 解構函式是會自動叫用當物件超出範圍或明確地被終結由呼叫成員函式`delete`。 解構函式具有相同的名稱為類別，加上波狀符號 (`~`)。 例如，`String` 類別的解構函式宣告為：`~String()`。 如果未定義解構函式，編譯器會提供一個; 預設值許多類別就足夠了。 您只需要定義自訂的解構函式，此類別會儲存需要釋放系統資源的控制代碼時，或擁有記憶體的指標指向。

@@ -1,12 +1,9 @@
 ---
-title: "CAxWindow 類別 |Microsoft 文件"
-ms.custom: 
+title: CAxWindow 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxWindow
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8848e8ecf85b073032561e2db52a0db1889911e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052e7ad2bfa8cc03c4eadd4926dbd84c4fd60223
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxwindow-class"></a>CAxWindow 類別
 這個類別會提供方法來操作裝載 ActiveX 控制項的視窗。  
@@ -69,7 +64,7 @@ class CAxWindow : public CWindow
   
 |||  
 |-|-|  
-|[運算子 =](#operator_eq)|指派**HWND**至現有**CAxWindow**物件。|  
+|[operator =](#operator_eq)|指派**HWND**至現有**CAxWindow**物件。|  
   
 ## <a name="remarks"></a>備註  
  這個類別會提供方法來操作視窗裝載 ActiveX 控制項。 裝載由" **AtlAxWin80"**，其中包裝`CAxWindow`。  
@@ -83,7 +78,7 @@ class CAxWindow : public CWindow
 ## <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
   
-##  <a name="attachcontrol"></a>CAxWindow::AttachControl  
+##  <a name="attachcontrol"></a>  CAxWindow::AttachControl  
  如果已經不存在，並將指定的控制項附加至主機，請建立新的主機物件。  
   
 ```
@@ -105,7 +100,7 @@ HRESULT AttachControl(
 ### <a name="remarks"></a>備註  
  要附加的控制項物件必須先呼叫正確地初始化`AttachControl`。  
   
-##  <a name="caxwindow"></a>CAxWindow::CAxWindow  
+##  <a name="caxwindow"></a>  CAxWindow::CAxWindow  
  建構`CAxWindow`物件使用現有的視窗物件控制代碼。  
   
 ```
@@ -116,7 +111,7 @@ CAxWindow(HWND hWnd = NULL);
  `hWnd`  
  現有的視窗物件的控制代碼。  
   
-##  <a name="createcontrol"></a>CAxWindow::CreateControl  
+##  <a name="createcontrol"></a>  CAxWindow::CreateControl  
  建立 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。  
   
 ```
@@ -139,7 +134,7 @@ HRESULT CreateControl(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID  
   
--   例如，"http://www.microsoft.com"的 URL  
+-   URL，例如"http://www.microsoft.com"  
   
 -   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
   
@@ -172,7 +167,7 @@ HRESULT CreateControl(
 ### <a name="example"></a>範例  
  請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如使用的範例`CreateControl`。  
   
-##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  CAxWindow::CreateControlEx  
  建立 ActiveX 控制項、將它初始化，然後將它裝載於指定的視窗中。  
   
 ```
@@ -201,7 +196,7 @@ HRESULT CreateControlEx(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID  
   
--   例如，"http://www.microsoft.com"的 URL  
+-   URL，例如"http://www.microsoft.com"  
   
 -   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
   
@@ -239,7 +234,7 @@ HRESULT CreateControlEx(
 ### <a name="example"></a>範例  
  請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如使用的範例`CreateControlEx`。  
   
-##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName  
+##  <a name="getwndclassname"></a>  CAxWindow::GetWndClassName  
  擷取視窗類別名稱。  
   
 ```
@@ -249,7 +244,7 @@ static LPCTSTR GetWndClassName();
 ### <a name="return-value"></a>傳回值  
  包含可以裝載要在未經授權的 ActiveX 控制項的視窗類別名稱的字串指標。  
   
-##  <a name="operator_eq"></a>CAxWindow::operator =  
+##  <a name="operator_eq"></a>  CAxWindow::operator =  
  指派`HWND`至現有`CAxWindow`物件。  
   
 ```
@@ -263,7 +258,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 ### <a name="return-value"></a>傳回值  
  傳回目前 `CAxWindow` 物件的參考。  
   
-##  <a name="querycontrol"></a>CAxWindow::QueryControl  
+##  <a name="querycontrol"></a>  CAxWindow::QueryControl  
  擷取指定裝載控制項的介面。  
   
 ```
@@ -285,7 +280,7 @@ HRESULT QueryControl(Q** ppUnk);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="queryhost"></a>CAxWindow::QueryHost  
+##  <a name="queryhost"></a>  CAxWindow::QueryHost  
  傳回指定的主機的介面。  
   
 ```
@@ -310,7 +305,7 @@ HRESULT QueryHost(Q** ppUnk);
 ### <a name="remarks"></a>備註  
  主機的介面可讓您存取視窗裝載程式碼，所實作的基礎功能**AxWin**。  
   
-##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  CAxWindow::SetExternalDispatch  
  設定外部分派介面`CAxWindow`物件。  
   
 ```
@@ -324,7 +319,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  CAxWindow::SetExternalUIHandler  
  設定外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)介面`CAxWindow`物件。  
   
 ```
@@ -341,7 +336,7 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ### <a name="remarks"></a>備註  
  外部`IDocHostUIHandlerDispatch`介面由查詢主機的站台的控制項`IDocHostUIHandlerDispatch`介面。 WebBrowser 控制項是一個這樣的控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATLCON 範例](../../visual-cpp-samples.md)   
  [CWindow 類別](../../atl/reference/cwindow-class.md)   
  [複合控制項基本概念](../../atl/atl-composite-control-fundamentals.md)   

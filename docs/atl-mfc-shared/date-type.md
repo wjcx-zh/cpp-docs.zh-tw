@@ -1,12 +1,9 @@
 ---
-title: "DATE 類型 |Microsoft 文件"
-ms.custom: 
+title: DATE 類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - DATE
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f1ed7eb2b467fd52545f65f98b87e8e34ad71f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5aafed046fa5724442e30014aa5634542de0f4aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-type"></a>DATE 類型
 **日期**類型會實作使用 8 位元組浮點數。 日期會以累進整數從 1899 年 12 月 30 日午夜時間為零。 小時值會表示為絕對值的數字的小數部分。 下表說明數個日期，連同其**日期**類型數值對等項目：  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  問題的詳細資訊與相關**日期**和`COleDateTime`類型可以在下找到[COleDateTime 類別](../atl-mfc-shared/reference/coledatetime-class.md)和[日期和時間： 自動化支援](../atl-mfc-shared/date-and-time-automation-support.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [日期和時間](../atl-mfc-shared/date-and-time.md)   
  [COleDateTime 類別](../atl-mfc-shared/reference/coledatetime-class.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "CW2AEX 類別 |Microsoft 文件"
-ms.custom: 
+title: CW2AEX 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2AEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d135797ff6902a9a63e89a692a25919b08b47f6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 62fd48a34b82e0671d417a882e040a87a7691c01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2aex-class"></a>CW2AEX 類別
 這個類別由字串轉換巨集`CT2AEX`， `CW2TEX`， `CW2CTEX`，和`CT2CAEX`，和 typedef **CW2A**。  
@@ -101,7 +96,7 @@ class CW2AEX
 ## <a name="requirements"></a>需求  
  **標頭：** atlconv.h  
   
-##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
+##  <a name="cw2aex"></a>  CW2AEX::CW2AEX  
  建構函式。  
   
 ```
@@ -119,7 +114,7 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>備註  
  配置轉譯程序中使用的緩衝區。  
   
-##  <a name="dtor"></a>CW2AEX:: ~ CW2AEX  
+##  <a name="dtor"></a>  CW2AEX:: ~ CW2AEX  
  解構函式。  
   
 ```
@@ -129,21 +124,21 @@ CW2AEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>備註  
  釋放已配置的緩衝區。  
   
-##  <a name="m_psz"></a>CW2AEX::m_psz  
+##  <a name="m_psz"></a>  CW2AEX::m_psz  
  儲存在來源字串的資料成員。  
   
 ```
 LPSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CW2AEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CW2AEX::m_szBuffer  
  靜態緩衝區，用來儲存已轉換的字串。  
   
 ```
 char m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpstr"></a>CW2AEX::operator LPSTR  
+##  <a name="operator_lpstr"></a>  CW2AEX::operator LPSTR  
  轉換運算子。  
   
 ```  
@@ -153,7 +148,7 @@ operator LPSTR() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回文字字串做為類型**LPSTR。**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CA2AEX 類別](../../atl/reference/ca2aex-class.md)   
  [CA2CAEX 類別](../../atl/reference/ca2caex-class.md)   
  [CA2WEX 類別](../../atl/reference/ca2wex-class.md)   

@@ -1,13 +1,10 @@
 ---
-title: "裝載 ActiveX 控制項使用 ATL AXHost |Microsoft 文件"
-ms.custom: 
+title: 裝載 ActiveX 控制項使用 ATL AXHost |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - hosting ActiveX controls
 - AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aac8a8b9cbf0b72378a286943faa6e36a8f3f74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5057a077e8e778fa3d943b736d51d19af8f60fc6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>裝載 ActiveX 控制項使用 ATL 類別
 本主題中的範例將示範如何建立 AXHost 以及如何裝載 ActiveX 控制項使用不同的 ATL 函式。 它也示範如何存取控制與接收事件 (使用[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) 從裝載的控制項。 此範例會裝載子視窗或主視窗中的日曆控制項。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項內含項目常見問題集](../atl/atl-control-containment-faq.md)   
  [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
  [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   

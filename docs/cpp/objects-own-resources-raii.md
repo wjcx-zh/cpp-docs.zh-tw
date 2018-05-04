@@ -1,27 +1,22 @@
 ---
-title: "物件擁有資源 (RAII) |Microsoft 文件"
-ms.custom: 
+title: 物件擁有資源 (RAII) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f86b484e-5a27-4c3b-a92a-dfaa5dd6d93a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e23cc81666086bc34352a351ead8006b6c859f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objects-own-resources-raii"></a>物件擁有資源 (RAII)
 請確定物件自己的資源。 此原則就是也稱為 「 資源擷取是初始化 」 或 「 RAII。 」  
@@ -48,7 +43,7 @@ void g() {
   // automatic exception safety, as if "finally { y.file.dispose(); }"  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

@@ -2,11 +2,8 @@
 title: 儲存類別 （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - thread_local_cpp
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10acbfc4835b59bcddefb722a9039cc5dbae5e21
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: a56d456564dc171292e8a58b6cb486ce2dfbaf31
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)  
   
@@ -182,7 +177,7 @@ var == value
 
 宣告`const`變數`extern`儲存類別會強制該變數具有外部連結。 初始`extern const`定義轉譯單位中不允許變數。 若在定義轉譯單位以外的轉譯單位中初始化，會產生未定義的結果。 如需詳細資訊，請參閱[使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)
 
-[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)編譯器選項會使編譯器套用[外部連結]()變數宣告可透過**extern constexpr**。 在舊版的 Visual Studio，而且依預設或**/Zc:externConstexpr-**指定時，Visual Studio 會套用到內部連結**constexpr**變數，即使**extern**關鍵字使用。 **/Zc:externConstexpr**選項才可以使用 Visual Studio 2017 更新 15.6 中啟動。 和預設為關閉。 /Permissive-option 不會啟用 /Zc:externConstexpr。
+[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md)編譯器選項會使編譯器套用[外部連結]()變數宣告可透過**extern constexpr**。 在舊版的 Visual Studio，而且依預設或 **/Zc:externConstexpr-** 指定時，Visual Studio 會套用到內部連結**constexpr**變數，即使**extern**關鍵字使用。 **/Zc:externConstexpr**選項才可以使用 Visual Studio 2017 更新 15.6 中啟動。 和預設為關閉。 /Permissive-option 不會啟用 /Zc:externConstexpr。
 
 下列程式碼顯示兩個 `extern` 宣告，即 `DefinedElsewhere` (參考不同轉譯單位中定義的名稱) 和 `DefinedHere` (參考封閉範圍中定義的名稱)：
 
@@ -234,7 +229,7 @@ void DoSomething()
 
 在 Windows 中，`thread_local`其作用相當於[__declspec （thread)](../cpp/thread.md)不同之處在於`__declspec(thread)`可以套用至類型定義並在 C 程式碼中有效。 只要可能，都請使用 `thread_local`，因為它是 C++ 標準的一部分，因此更具可攜性。
 
-##  <a name="register"></a>  register
+##  <a name="register"></a>  暫存器
 
 **Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):`register`關鍵字已不再支援的存放裝置類別。 關鍵字是仍保留供未來使用的標準。 
 

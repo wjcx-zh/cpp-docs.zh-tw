@@ -1,13 +1,10 @@
 ---
-title: "-await （啟用協同程式不支援） |Microsoft 文件"
-ms.custom: 
+title: -await （啟用協同程式不支援） |Microsoft 文件
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /await
 - -await
@@ -20,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47134532b16d1b5a907e4ed3170a0827316d7c65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78a62195ca28be49ed8c00dacacce003281699f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="await-enable-coroutine-support"></a>/await （啟用協同程式不支援）  
   
-使用**/await**編譯器選項，啟用協同程式的編譯器支援。  
+使用 **/await**編譯器選項，啟用協同程式的編譯器支援。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,15 +43,15 @@ ms.lasthandoff: 12/21/2017
   
 1. 開啟您的專案**屬性頁** 對話方塊。   
   
-2. 在下**組態屬性**，依序展開**C/c + +**資料夾，然後選擇 **命令列**屬性頁。  
+2. 在下**組態屬性**，依序展開**C/c + +** 資料夾，然後選擇 **命令列**屬性頁。  
   
-3. 輸入**/await**編譯器選項在**其他選項**方塊。 選擇**確定**或**套用**以儲存變更。  
+3. 輸入 **/await**編譯器選項在**其他選項**方塊。 選擇**確定**或**套用**以儲存變更。  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
   
 [編譯器選項](../../build/reference/compiler-options.md)   
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

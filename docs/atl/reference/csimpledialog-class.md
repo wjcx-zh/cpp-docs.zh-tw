@@ -1,12 +1,9 @@
 ---
-title: "CSimpleDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CSimpleDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 類別
 這個類別會實作基本的強制回應對話方塊。  
@@ -59,9 +54,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|建立強制回應對話方塊。|  
   
 ## <a name="remarks"></a>備註  
- 使用 「 基本 」 功能實作強制回應對話方塊。 `CSimpleDialog`提供 Windows 通用控制項僅支援。 若要建立並顯示強制回應對話方塊中，建立此類別，提供現有的資源範本名稱對話方塊中的執行個體。 當使用者按一下與預先定義的值 （例如 IDOK 或 IDCANCEL） 的任何控制項，則會關閉對話方塊物件。  
+ 使用 「 基本 」 功能實作強制回應對話方塊。 `CSimpleDialog` 提供 Windows 通用控制項僅支援。 若要建立並顯示強制回應對話方塊中，建立此類別，提供現有的資源範本名稱對話方塊中的執行個體。 當使用者按一下與預先定義的值 （例如 IDOK 或 IDCANCEL） 的任何控制項，則會關閉對話方塊物件。  
   
- `CSimpleDialog`可讓您建立只能強制回應對話方塊。 `CSimpleDialog`提供對話方塊程序，會使用預設的訊息對應訊息導向適當的處理常式。  
+ `CSimpleDialog` 可讓您建立只能強制回應對話方塊。 `CSimpleDialog` 提供對話方塊程序，會使用預設的訊息對應訊息導向適當的處理常式。  
   
  請參閱[實作對話方塊](../../atl/implementing-a-dialog-box.md)如需詳細資訊。  
   
@@ -73,7 +68,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
   
-##  <a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>  CSimpleDialog::DoModal  
  叫用強制回應對話方塊，並傳回完成的對話方塊結果。  
   
 ```
@@ -92,5 +87,5 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ### <a name="remarks"></a>備註  
  對話方塊中為使用中時，這個方法會處理所有使用者互動。 這是讓對話方塊強制回應。也就是說，使用者無法互動與其他 windows 中，直到關閉對話方塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

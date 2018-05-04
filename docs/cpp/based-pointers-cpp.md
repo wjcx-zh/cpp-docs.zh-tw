@@ -2,11 +2,8 @@
 title: 基底指標 （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __based
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629ff6c3f383973b758ddb4317e43a27de0b11d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6cc2e45574d30ae1a544da78a4f7a75321a1156
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="based-pointers-c"></a>Based 指標 (C++)
 **Microsoft 特定的**  
@@ -64,7 +59,7 @@ struct llist_t {
   
  對基底指標取值時，該基底必須透過宣告明確指定或以隱含方式得知。  
   
- 為了與舊版中，相容**_based**同義`__based`。  
+ 為了與舊版中，相容 **_based**同義`__based`。  
   
 ## <a name="example"></a>範例  
  下列程式碼示範如何變更其基底以變更基底指標。  
@@ -102,6 +97,6 @@ int main() {
 11  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [alloc_text](../preprocessor/alloc-text.md)

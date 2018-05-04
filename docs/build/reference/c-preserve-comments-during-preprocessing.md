@@ -1,13 +1,10 @@
 ---
-title: "-C （前置處理期間保留註解） |Microsoft 文件"
-ms.custom: 
+title: -C （前置處理期間保留註解） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.KeepComments
 - /c
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - c compiler option [C++]
 - /c compiler option [C++]
 ms.assetid: 944567ca-16bc-4728-befe-d414a7787f26
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d27e6ed0f6a2ff6e6f63bc1b87522fb598953c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 350addc63807a338eb451c14e52340ef67998f18
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C (前置處理時保留註解)
 在前置處理過程中保留註解。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>備註  
- 這個編譯器選項需要**/E**， **/P**，或**/EP**選項。  
+ 這個編譯器選項需要 **/E**， **/P**，或 **/EP**選項。  
   
  下列程式碼範例會顯示來源的程式碼註解。  
   
@@ -74,9 +69,9 @@ int i;   // a variable
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.KeepComments%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [/E （前置處理至 stdout）](../../build/reference/e-preprocess-to-stdout.md)   
  [/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)   
- [/EP （前置處理至 stdout 不 #line 指示詞）](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)
+ [/EP (前置處理至 stdout 不加 #line 指示詞)](../../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)

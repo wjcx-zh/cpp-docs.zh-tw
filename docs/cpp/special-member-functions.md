@@ -1,12 +1,9 @@
 ---
-title: "特殊成員函式 |Microsoft 文件"
-ms.custom: 
+title: 特殊成員函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/06/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff4fc72d2a40cc52ec614cbd5b470738ad1aa391
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76be131193508e4def79c6e178e27cd671c7ce11
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="special-member-functions"></a>特殊成員函式  
   
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 預設複製和移動建構和指派作業執行成員的位元模式複製或移動的非靜態資料成員。 移動作業只會產生當宣告時沒有解構函式或移動或複製作業。 宣告複製建構函式時，才會產生預設複製建構函式。 它是隱含地刪除宣告移動作業。 只有在沒有複製指派運算子已明確宣告時，會產生預設複製指派運算子。 它是隱含地刪除宣告移動作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [C++ 語言參考](cpp-language-reference.md)  
 
 

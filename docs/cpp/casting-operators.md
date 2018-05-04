@@ -1,30 +1,25 @@
 ---
 title: 轉型運算子 |Microsoft 文件
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C++], casting
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bc7f1b0c2df820c3dc9e76b76dfcc72794e1906
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf4204e55811cd33fa48e2b3a07d3058100729ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="casting-operators"></a>轉型運算子
 C++ 語言有幾個特有的轉型運算子。 這些運算子的目的在於移除舊式 C 語言轉型固有的模稜兩可和危險。 這些運算子如下所列：  
@@ -41,5 +36,5 @@ C++ 語言有幾個特有的轉型運算子。 這些運算子的目的在於移
   
  `const_cast` 和 `reinterpret_cast` 建議做為最後手段使用，因為這些運算子與舊類型轉換存在相同危險。 然而，為了完全取代舊類型轉換，這些運算子仍有其必要。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [轉型](../cpp/casting.md)

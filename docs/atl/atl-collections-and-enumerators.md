@@ -1,13 +1,10 @@
 ---
-title: "ATL 集合和列舉程式 |Microsoft 文件"
-ms.custom: 
+title: ATL 集合和列舉程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b74f51733947ca46c0ddb1039f92ce7f69e670
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 537d7e8b7264beddc68805ab8b8dec2ce7883859
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和列舉程式
 A`collection`是 COM 物件，提供的介面，可讓您存取資料項 （原始資料或其他物件） 的群組。 一種介面，依循標準提供一組物件的存取權就所謂的*集合介面*。  
@@ -54,6 +49,6 @@ A`collection`是 COM 物件，提供的介面，可讓您存取資料項 （原�
  [ATLCollections 範例](../visual-cpp-samples.md)  
  示範如何使用範例`ICollectionOnSTLImpl`和`CComEnumOnSTL`，以及自訂複製原則類別的實作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)
 

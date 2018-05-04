@@ -1,27 +1,22 @@
 ---
-title: "建立專案 (ATL 教學課程，第 1 部分) |Microsoft 文件"
-ms.custom: 
+title: 建立專案 (ATL 教學課程，第 1 部分) |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9a5fc9a0d2175a419bbc0fb1aacbc9ea25006c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1aedf7b4112d4c8d4bb5b2a174e93925f5a46ce5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 本教學課程會逐步引導您完成未使用屬性的 ATL 專案來建立顯示多邊形 ActiveX 物件。 物件包含的選項讓使用者變更邊的多邊形和程式碼以重新整理顯示的數目。  
@@ -76,6 +71,6 @@ ms.lasthandoff: 12/21/2017
   
  [至步驟 2](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
 

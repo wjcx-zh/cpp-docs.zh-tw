@@ -1,29 +1,24 @@
 ---
-title: "ATL 視窗特性 |Microsoft 文件"
-ms.custom: 
+title: ATL 視窗特性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - window traits
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fda95e4517d2717a89310a8e49a0c5b337feebcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71fbf5b3c4c3f1aa95070cbc0d30beb9e1321348
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-window-traits"></a>了解視窗特性
 視窗特性類別提供標準化的樣式，用於建立 ATL 視窗物件的簡單方法。 做為範本參數所接受視窗特性[CWindowImpl](../atl/reference/cwindowimpl-class.md)與其他 ATL 視窗類別，做為提供預設視窗樣式類別層級的方式。  
@@ -47,6 +42,6 @@ ms.lasthandoff: 12/21/2017
   
  所有這些函式會在執行階段，它可用來產生新的樣式值傳遞給某個樣式值。 如果您的視窗 traits 類別當作 ATL 視窗類別的樣板引數，傳遞給這些靜態函式的樣式值將會做為樣式引數傳遞[建立](../atl/reference/cwindowimpl-class.md#create)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [視窗類別](../atl/atl-window-classes.md)
 

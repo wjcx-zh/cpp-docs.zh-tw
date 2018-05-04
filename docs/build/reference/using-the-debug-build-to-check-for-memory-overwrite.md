@@ -1,29 +1,24 @@
 ---
-title: "使用偵錯版檢查記憶體覆寫 |Microsoft 文件"
-ms.custom: 
+title: 使用偵錯版檢查記憶體覆寫 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f18a13992e41cd88bc8edec44f16b02da38ad10c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c89242a63484eaccd0330eddac28c4e543ec61b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>使用偵錯版檢查記憶體覆寫
 若要使用偵錯版檢查記憶體覆寫，您必須先重建專案，以偵錯。 然後，移至您的應用程式的最前頭`InitInstance`函式，並加入下行：  
@@ -52,5 +47,5 @@ ASSERT(AfxCheckMemory());
   
  根據您的應用程式的本質，您可能會發現`afxMemDF`導致您的程式執行測試的速度太慢。 `afxMemDF`變數會造成`AfxCheckMemory`針對每次呼叫新的呼叫，並刪除。 在此情況下，您應該散佈到呼叫`AfxCheckMemory`（），如上所示，然後再次嘗試找出記憶體覆寫該方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [解決發行組建的問題](../../build/reference/fixing-release-build-problems.md)

@@ -1,12 +1,9 @@
 ---
-title: "ATL 類別 |Microsoft 文件"
-ms.custom: 
+title: ATL 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-classes"></a>ATL 類別
 Active Template Library (ATL) 包含下列類別。 若要依分類尋找特定的類別，請參閱[ATL 類別概觀](../../atl/atl-class-overview.md)。  
@@ -225,12 +220,12 @@ Active Template Library (ATL) 包含下列類別。 若要依分類尋找特定�
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|這個引數的介面卡類別可讓任一資源名稱 (`LPCTSTR`s) 或資源識別碼 (**UINT**s) 而不需要將 ID 為字串，使用呼叫端傳遞至函式**MAKEINTRESOURCE**巨集。|atlwin.h|  
 |[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)|這個類別提供 Windows 執行緒建立函式。 如果執行緒不會使用 CRT 函式，請使用這個類別。|atlbase.h|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
  [函式](../../atl/reference/atl-functions.md)   
  [全域變數](../../atl/reference/atl-global-variables.md)   
  [結構](../../atl/reference/atl-structures.md)   
- [Typedefs](../../atl/reference/atl-typedefs.md)   
+ [Typedef](../../atl/reference/atl-typedefs.md)   
  [類別概觀](../../atl/atl-class-overview.md)
 
 

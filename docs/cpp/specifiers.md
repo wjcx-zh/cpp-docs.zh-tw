@@ -2,11 +2,8 @@
 title: 規範 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - declarations, specifiers
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352ef898c9380c55e90205129ba6fe48bf352856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2888f8a75e9b7addd2b8f195ffbf875c2b7ae1a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifiers"></a>規範
 本主題描述*decl 規範*（宣告規範） 元件[宣告](declarations-and-definitions-cpp.md)。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [__declspec](../cpp/declspec.md) `(` *擴充-decl-修飾詞-seq*`)`  
+ [__declspec](../cpp/declspec.md) `(` *擴充-decl-修飾詞-seq* `)`  
   
 ## <a name="remarks"></a>備註  
  *Decl 規範*宣告的一部分是最長串*decl 規範*，就可以採取來表示類型名稱，不包括指標或參考修飾詞。 宣告的其餘部分是*宣告子*，包括導入之名稱。  
@@ -61,5 +56,5 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  由於名稱可以重新宣告，因此其解譯會受到目前範圍中最新的宣告所限制。 重新宣告可能會影響編譯器解譯名稱的方式，尤其是 `typedef` 名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告和定義](declarations-and-definitions-cpp.md)

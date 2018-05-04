@@ -1,12 +1,9 @@
 ---
-title: "像素 HIMETRIC 轉換全域函式 |Microsoft 文件"
-ms.custom: 
+title: 像素 HIMETRIC 轉換全域函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
@@ -14,17 +11,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d670d667345c233fc499cda42194dfafa185dfe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92d84204bdf02e75f1baf64bd52d96eab0b3d271
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 轉換全域函式
 這些函式提供支援來回轉換像素和 himetric 為單位。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[AtlHiMetricToPixel](#atlhimetrictopixel)|將 himetric 為單位 （每一單位為 0.01 公釐） 轉換為像素為單位。|  
 |[AtlPixelToHiMetric](#atlpixeltohimetric)|將像素轉換成 himetric 為單位 （每一單位為 0.01 公釐）。|  
   
-##  <a name="atlhimetrictopixel"></a>AtlHiMetricToPixel  
+##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel  
  將以 HIMETRIC 為單位 (每一單位為 0.01 公釐) 的物件大小轉換成以像素為單位的螢幕裝置大小。  
   
  
@@ -60,7 +55,7 @@ extern void AtlHiMetricToPixel(
 ### <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
   
-##  <a name="atlpixeltohimetric"></a>AtlPixelToHiMetric  
+##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric  
  將物件在螢幕裝置上以像素為單位的大小，轉換成以 HIMETRIC 為單位 (每一單位為 0.01 公釐) 的大小。  
   
 ```
@@ -82,5 +77,5 @@ extern void AtlPixelToHiMetric(
 ### <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)

@@ -1,12 +1,9 @@
 ---
-title: "數值、 布林值和指標常值 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 數值、 布林值和指標常值 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ce5f2c6703b18747dd4a2c51fe540d01370b38b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>數值、 布林值和指標常值 （c + +）
 常值是直接代表值的程式項目。 本文涵蓋整數、浮點、布林值和指標類型的常值。 字串和字元常值的相關資訊，請參閱[字串和字元常值 （c + +）](../cpp/string-and-character-literals-cpp.md)。 您也可以定義任何分類，根據您自己常值如需詳細資訊，請參閱[使用者定義常值 （c + +）](../cpp/user-defined-literals-cpp.md)  
@@ -149,7 +144,7 @@ if (num < 100)
   
  在先前的範例中，可能最好使用傳達清楚意義的具名常數 (例如 "MAXIMUM_ERROR_THRESHOLD")。 而且，如果使用者看到傳回值「成功」，則可能最好使用具名字串常數，而具名字串常數可以儲存於可將其當地語系化為其他語言之檔案的單一位置中。 使用具名常數，可協助他人和您自己了解程式碼的用途。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)   
  [C + + 字串常值](../cpp/string-and-character-literals-cpp.md)   
  [C + + 使用者定義常值](../cpp/user-defined-literals-cpp.md)

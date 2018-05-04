@@ -2,12 +2,9 @@
 title: C + + 位元欄位 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5ecac0263f1e8ebbfe41f654f2ef2e03b2395f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-bit-fields"></a>C++ 位元欄位
 類別和結構可包含比整數類型佔用較少儲存區的成員。 這些成員指定為位元欄位。 位元欄位的語法*成員宣告子*規格如下所示：  
@@ -85,7 +80,7 @@ struct Date {
   
  記憶體配置如下圖所示。  
   
- ![具有零 &#45;的 Date 物件配置; 長度位元欄位](../cpp/media/vc38uq2.png "vc38UQ2")  
+ ![具有零的 Date 物件配置&#45;長度位元欄位](../cpp/media/vc38uq2.png "vc38UQ2")  
 具有長度為零之位元欄位的 Date 物件配置  
   
  中所述，位元欄位的基礎類型必須是整數類型、[基本類型](../cpp/fundamental-types-cpp.md)。  
@@ -97,5 +92,5 @@ struct Date {
   
 2.  使用位元欄位初始化參考。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

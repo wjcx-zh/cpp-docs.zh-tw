@@ -1,12 +1,9 @@
 ---
-title: "CComCoClass 類別 |Microsoft 文件"
-ms.custom: 
+title: CComCoClass 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCoClass
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 969370294ed3d5d2ca2fdff5f4a106b72ed77a17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 738d7e937acf2d3299be97b4f091c698582911d5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 類別
 這個類別會提供方法來建立執行個體的類別，並取得其屬性。  
@@ -47,7 +42,7 @@ class CComCoClass
  `T`  
  您的類別，衍生自`CComCoClass`。  
   
- *createtable*  
+ *pclsid*  
  物件的 CLSID 指標。  
   
 ## <a name="members"></a>成員  
@@ -62,9 +57,9 @@ class CComCoClass
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|（靜態）覆寫以傳回物件的描述。|  
   
 ## <a name="remarks"></a>備註  
- `CComCoClass`提供方法來擷取物件的 CLSID、 設定資訊時發生錯誤，以及建立類別的執行個體。 在中註冊的任何類別[物件對應](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f)應該衍生自`CComCoClass`。  
+ `CComCoClass` 提供方法來擷取物件的 CLSID、 設定資訊時發生錯誤，以及建立類別的執行個體。 在中註冊的任何類別[物件對應](http://msdn.microsoft.com/en-us/b57619cc-534f-4b8f-bfd4-0c12f937202f)應該衍生自`CComCoClass`。  
   
- `CComCoClass`也會定義物件的預設類別處理站和彙總模型。 `CComCoClass`使用下列兩個巨集：  
+ `CComCoClass` 也會定義物件的預設類別處理站和彙總模型。 `CComCoClass` 使用下列兩個巨集：  
   
 - [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)宣告 class factory 是[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)。  
   
@@ -77,7 +72,7 @@ class CComCoClass
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="createinstance"></a>CComCoClass::CreateInstance  
+##  <a name="createinstance"></a>  CComCoClass::CreateInstance  
  使用這些`CreateInstance`函式來建立執行個體的 COM 物件，並擷取介面指標，而不需要使用 COM API。  
   
 ```
@@ -111,11 +106,11 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
  請注意，介面`Q`必須具有與其相關聯，可以使用擷取的 IID [__uuidof](../../cpp/uuidof-operator.md)運算子。  
   
 ### <a name="example"></a>範例  
- 在下列範例中，`CDocument`精靈產生的 ATL 類別衍生自`CComCoClass`實作**IDocument**介面。 類別會在與物件對應中註冊`OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO`巨集，因此用戶端無法建立文件使用的執行個體[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。 `CApplication`是提供一種方法其中一個自己的 COM 介面來建立文件類別的執行個體的 CoClass。 示範如何輕鬆將下列程式碼，以便建立文件類別使用的執行個體`CreateInstance`成員繼承自`CComCoClass`基底類別。  
+ 在下列範例中，`CDocument`精靈產生的 ATL 類別衍生自`CComCoClass`實作**IDocument**介面。 類別會在與物件對應中註冊`OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO`巨集，因此用戶端無法建立文件使用的執行個體[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。 `CApplication` 是提供一種方法其中一個自己的 COM 介面來建立文件類別的執行個體的 CoClass。 示範如何輕鬆將下列程式碼，以便建立文件類別使用的執行個體`CreateInstance`成員繼承自`CComCoClass`基底類別。  
   
  [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]  
   
-##  <a name="error"></a>CComCoClass::Error  
+##  <a name="error"></a>  CComCoClass::Error  
  此靜態函式中設定`IErrorInfo`介面，以提供給用戶端的資訊時發生錯誤。  
   
 ```
@@ -178,7 +173,7 @@ static HRESULT Error(
  [in]路徑和名稱，描述錯誤的說明檔。  
   
  `hInst`  
- [in]資源控制代碼。 根據預設，這個參數是**_AtlModule::GetResourceInstance**，其中**接在 _AtlModule**的全域執行個體[CAtlModule](../../atl/reference/catlmodule-class.md)。  
+ [in]資源控制代碼。 根據預設，這個參數是 **_AtlModule::GetResourceInstance**，其中**接在 _AtlModule**的全域執行個體[CAtlModule](../../atl/reference/catlmodule-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。 如需詳細資料，請參閱＜備註＞。  
@@ -188,7 +183,7 @@ static HRESULT Error(
   
  如果`hRes`參數不是零，然後`Error`傳回的值`hRes`。 如果`hRes`是零，則前四個新版`Error`傳回`DISP_E_EXCEPTION`。 最後兩個版本都會傳回巨集的結果**MAKE_HRESULT (1，FACILITY_ITF，** `nID` **)**。  
   
-##  <a name="getobjectclsid"></a>CComCoClass::GetObjectCLSID  
+##  <a name="getobjectclsid"></a>  CComCoClass::GetObjectCLSID  
  提供一致的方式來擷取物件的 CLSID。  
   
 ```
@@ -198,7 +193,7 @@ static const CLSID& WINAPI GetObjectCLSID();
 ### <a name="return-value"></a>傳回值  
  物件的類別識別項。  
   
-##  <a name="getobjectdescription"></a>CComCoClass::GetObjectDescription  
+##  <a name="getobjectdescription"></a>  CComCoClass::GetObjectDescription  
  此靜態函式會擷取您的類別物件的文字描述。  
   
 ```
@@ -213,9 +208,9 @@ static LPCTSTR WINAPI GetObjectDescription();
   
  [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]  
   
- `GetObjectDescription`會呼叫**IComponentRegistrar::GetComponents**。 **IComponentRegistrar**是一種自動化的介面，可讓您註冊及取消註冊 DLL 中的個別元件。 當您建立元件的註冊機構物件使用 ATL 專案精靈 」 時，精靈會自動實作**IComponentRegistrar**介面。 **IComponentRegistrar**通常由 Microsoft Transaction Server。  
+ `GetObjectDescription` 會呼叫**IComponentRegistrar::GetComponents**。 **IComponentRegistrar**是一種自動化的介面，可讓您註冊及取消註冊 DLL 中的個別元件。 當您建立元件的註冊機構物件使用 ATL 專案精靈 」 時，精靈會自動實作**IComponentRegistrar**介面。 **IComponentRegistrar**通常由 Microsoft Transaction Server。  
   
  如需 ATL 專案精靈的詳細資訊，請參閱文章[ATL 專案建立](../../atl/reference/creating-an-atl-project.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

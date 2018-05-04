@@ -2,11 +2,8 @@
 title: CComAllocator 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAllocator
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 370a52e87bcbb4849883ea03016cc462030ad028
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 類別
 這個類別會提供用來管理記憶體使用 COM 記憶體常式方法。  
@@ -56,7 +51,7 @@ class CComAllocator
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="allocate"></a>CComAllocator::Allocate  
+##  <a name="allocate"></a>  CComAllocator::Allocate  
  呼叫此靜態函式以配置記憶體。  
   
 ```
@@ -73,7 +68,7 @@ static void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  配置記憶體。 請參閱[CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)如需詳細資訊。  
   
-##  <a name="free"></a>CComAllocator::Free  
+##  <a name="free"></a>  CComAllocator::Free  
  呼叫此靜態函式，將可釋放已配置的記憶體。  
   
 ```
@@ -87,7 +82,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>備註  
  釋放配置的記憶體。 請參閱[CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)如需詳細資訊。  
   
-##  <a name="reallocate"></a>CComAllocator::Reallocate  
+##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  呼叫此靜態函式以重新配置記憶體。  
   
 ```
@@ -107,7 +102,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  調整配置的記憶體數量。 請參閱[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)如需詳細資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)   
  [CCRTAllocator 類別](../../atl/reference/ccrtallocator-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

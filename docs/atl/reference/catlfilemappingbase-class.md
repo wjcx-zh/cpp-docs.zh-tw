@@ -1,12 +1,9 @@
 ---
-title: "CAtlFileMappingBase 類別 |Microsoft 文件"
-ms.custom: 
+title: CAtlFileMappingBase 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlFileMappingBase
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b5e0dd90894e052d4b9bcff08e7e12234dde8f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e315a29f72c887b5bff2e8177e7a47aed18c3fd4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase 類別
 此類別代表的記憶體對應檔。  
@@ -85,7 +80,7 @@ class CAtlFileMappingBase
 ## <a name="requirements"></a>需求  
  **標頭：** atlfile.h  
   
-##  <a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase  
+##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase  
  建構函式。  
   
 ```
@@ -103,7 +98,7 @@ CAtlFileMappingBase() throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]  
   
-##  <a name="dtor"></a>CAtlFileMappingBase:: ~ CAtlFileMappingBase  
+##  <a name="dtor"></a>  CAtlFileMappingBase:: ~ CAtlFileMappingBase  
  解構函式。  
   
 ```
@@ -113,7 +108,7 @@ CAtlFileMappingBase() throw();
 ### <a name="remarks"></a>備註  
  會釋放所有資源配置的類別並呼叫[CAtlFileMappingBase::Unmap](#unmap)方法。  
   
-##  <a name="copyfrom"></a>CAtlFileMappingBase::CopyFrom  
+##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom  
  呼叫此方法以複製的檔案對應物件。  
   
 ```
@@ -127,7 +122,7 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 ### <a name="return-value"></a>傳回值  
  傳回`S_OK`上成功或錯誤`HRESULT`失敗。  
   
-##  <a name="getdata"></a>CAtlFileMappingBase::GetData  
+##  <a name="getdata"></a>  CAtlFileMappingBase::GetData  
  呼叫此方法以從檔案對應物件取得資料。  
   
 ```
@@ -137,7 +132,7 @@ void* GetData() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回資料的指標。  
   
-##  <a name="gethandle"></a>CAtlFileMappingBase::GetHandle  
+##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle  
  呼叫此方法以傳回檔案對應物件的控制代碼。  
   
 ```
@@ -147,7 +142,7 @@ HANDLE GetHandle() throw ();
 ### <a name="return-value"></a>傳回值  
  傳回檔案對應物件的控制代碼。  
   
-##  <a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize  
+##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize  
  呼叫這個方法，從檔案對應物件中取得對應大小。  
   
 ```
@@ -160,7 +155,7 @@ SIZE_T GetMappingSize() throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
   
-##  <a name="mapfile"></a>CAtlFileMappingBase::MapFile  
+##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile  
  呼叫這個方法來開啟或建立檔案對應物件，為指定的檔案。  
   
 ```
@@ -174,7 +169,7 @@ HRESULT MapFile(
   
 ### <a name="parameters"></a>參數  
  `hFile`  
- 要從中建立對應物件的檔案控制代碼。 `hFile`必須有效，而且不能設定為 INVALID_HANDLE_VALUE。  
+ 要從中建立對應物件的檔案控制代碼。 `hFile` 必須有效，而且不能設定為 INVALID_HANDLE_VALUE。  
   
  `nMappingSize`  
  對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案的目前大小*hFile。*  
@@ -197,7 +192,7 @@ HRESULT MapFile(
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)。  
   
-##  <a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem  
+##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem  
  呼叫這個方法來建立檔案對應物件，可讓您完整存取所有處理程序。  
   
 ```
@@ -212,7 +207,7 @@ HRESULT MapSharedMem(
   
 ### <a name="parameters"></a>參數  
  `nMappingSize`  
- 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小`szName.`  
+ 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小 `szName.`  
   
  `szName`  
  對應物件的名稱。  
@@ -235,7 +230,7 @@ HRESULT MapSharedMem(
 ### <a name="remarks"></a>備註  
  **MapShareMem**可讓現有的檔案對應物件，由[CreateFileMapping](http://msdn.microsoft.com/library/windows/desktop/aa366537)，以處理序之間共用。  
   
-##  <a name="openmapping"></a>CAtlFileMappingBase::OpenMapping  
+##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping  
  呼叫這個方法，以開啟具名的檔案對應物件，為指定的檔案。  
   
 ```
@@ -251,7 +246,7 @@ HRESULT OpenMapping(
  對應物件的名稱。 如果沒有這個名稱的檔案對應物件的開啟控制代碼，而且對應物件的安全性描述元未與衝突`dwViewDesiredAccess`參數，開啟作業成功。  
   
  `nMappingSize`  
- 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小`szName.`  
+ 對應的大小。 如果為 0，檔案對應物件的大小上限等於所識別的檔案對應物件的目前大小 `szName.`  
   
  `nOffset`  
  對應是要開始檔案位移。 位移的值必須是系統的記憶體配置資料粒度的倍數。  
@@ -265,7 +260,7 @@ HRESULT OpenMapping(
 ### <a name="remarks"></a>備註  
  在偵錯組建中，如果輸入的參數無效，會發生判斷提示錯誤。  
   
-##  <a name="operator_eq"></a>CAtlFileMappingBase::operator =  
+##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =  
  目前的檔案對應物件設定為另一個檔案對應物件。  
   
 ```
@@ -279,7 +274,7 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 ### <a name="return-value"></a>傳回值  
  傳回目前物件的參考。  
   
-##  <a name="unmap"></a>CAtlFileMappingBase::Unmap  
+##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap  
  呼叫這個方法來取消對應檔案對應物件。  
   
 ```
@@ -292,6 +287,6 @@ HRESULT Unmap() throw();
 ### <a name="remarks"></a>備註  
  請參閱[unmapviewoffile 在](http://msdn.microsoft.com/library/windows/desktop/aa366882)更多詳細資料的 Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CAtlFileMapping 類別](../../atl/reference/catlfilemapping-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

@@ -1,30 +1,25 @@
 ---
-title: "建立資源專用 DLL |Microsoft 文件"
-ms.custom: 
+title: 建立資源專用 DLL |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd65085c9a0ecc0479c7d22feb5587d1e94447de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5249f4528038771162bb96b714524ed751ff39a7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-a-resource-only-dll"></a>建立僅含資源的 DLL  
   
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
 應用程式應該呼叫`FreeLibrary`完成時使用的資源。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
   
 [使用資源檔](../windows/working-with-resource-files.md)  
 [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

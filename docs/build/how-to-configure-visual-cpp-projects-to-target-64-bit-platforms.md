@@ -1,13 +1,10 @@
 ---
-title: "如何： 設定 Visual c + + 專案為目標的 64 位元、 x64 平台 |Microsoft 文件"
-ms.custom: 
+title: 如何： 設定 Visual c + + 專案為目標的 64 位元、 x64 平台 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e651d28af3bd8635691d6a54d6c4cca8eb8c160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f1a4c9a27d4fdbbd57348c1fc2ce27301a1a95e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>如何： 設定 Visual c + + 專案為目標的 64 位元、 x64 平台
 
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  選擇 [組態管理員]  按鈕開啟 [組態管理員]  對話方塊。  
   
-4.  在**作用中的方案平台**下拉式清單中，選取**\<新增...>**選項來開啟**新增方案平台** 對話方塊。  
+4.  在**作用中的方案平台**下拉式清單中，選取**\<新增...>** 選項來開啟**新增方案平台** 對話方塊。  
   
 5.  在**輸入或選取新的平台**下拉式清單中選取 64 位元目標平台。  
   
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  如果它們在檔案層級上覆寫，這些專案屬性全都不會變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 
 [.NET framework 64 位元應用程式](/dotnet/framework/64-bit-apps)   
 [設定適用於 64 位元、 x64 Visual c + + 為目標](../build/configuring-programs-for-64-bit-visual-cpp.md)   

@@ -1,29 +1,24 @@
 ---
-title: "在 Visual Studio 產生資訊清單 |Microsoft 文件"
-ms.custom: 
+title: 在 Visual Studio 產生資訊清單 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73b5cbe631d078dd6ee27b4f7e0a97503c36638b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifest-generation-in-visual-studio"></a>在 Visual Studio 中產生資訊清單
 產生資訊清單檔案的特定專案可以在專案中控制**屬性頁**對話方塊。 在**組態屬性**索引標籤上，按一下 **連結器**，然後**資訊清單檔案**，然後**產生資訊清單**。 根據預設新專案的專案屬性會設定為產生資訊清單檔案。 不過它可能是停用產生資訊清單的專案使用**產生資訊清單**專案的屬性。 當這個屬性設定為**是**，在產生此專案的資訊清單。 否則，連結器時，會忽略組件資訊解決相依性的應用程式程式碼，並不會產生資訊清單。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  資訊清單內嵌於最終的二進位檔為文字資源，就可以檢視最終的二進位檔開啟為 Visual Studio 中的檔案。 若要確保資訊清單會指向正確的程式庫，請依照下列所述的步驟[了解 Visual c + + 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)或遵循所述的建議[疑難排解](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) > 一節。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何： 嵌入 C/c + + 應用程式資訊清單](../build/how-to-embed-a-manifest-inside-a-c-cpp-application.md)   
  [關於私用組件](http://msdn.microsoft.com/library/ff951638)   
  [資訊清單工具](http://msdn.microsoft.com/library/aa375649)   

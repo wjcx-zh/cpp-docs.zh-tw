@@ -1,29 +1,24 @@
 ---
-title: "函式樣板 （c + +） 的部分排序 |Microsoft 文件"
-ms.custom: 
+title: 函式樣板 （c + +） 的部分排序 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>函式樣板的部分排序 (C++)
 
@@ -49,9 +44,9 @@ ms.lasthandoff: 12/21/2017
 
      2. 只接受一個範本__T\*__ 更具特製化比一個將只__T__，因為假設輸入__X\*__ 是有效引數__T__樣板引數，但__X__不是有效的引數，如__T\*__ 樣板引數。
 
-     3. __const T__更具特製化比__T__，因為__const X__是有效的引數，如__T__樣板引數，但__X__不是有效的引數，如__const T__樣板引數。
+     3. __const T__更具特製化比__T__，因為__const X__是有效的引數，如__T__樣板引數，但__X__是不是有效引數的__const T__樣板引數。
 
-     4. __const T\*__ 更具特製化比__T\*__，因為__const X\*__ 是有效的引數，如__T\*__樣板引數，但__X\*__ 不是有效的引數，如__const T\*__ 樣板引數。
+     4. __const T\*__ 更具特製化比__T\*__，因為__const X\*__ 是有效的引數，如__T\*__ 樣板引數，但__X\*__ 不是有效的引數，如__const T\*__ 樣板引數。
 
 ## <a name="example"></a>範例
 
@@ -96,6 +91,6 @@ More specialized function called
 Even more specialized function for const T*  
 ```  
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [函式樣板](../cpp/function-templates.md)

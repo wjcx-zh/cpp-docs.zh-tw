@@ -2,26 +2,21 @@
 title: -arch (x86) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-caps.latest.revision: 33
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4905634af75f30c5428f8091d736adbe1b8490d8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87e1826e324f8e544a791520a3ac035f5ab07100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arch-x86"></a>/arch (x86)
 在 x86 上，為程式碼產生指定架構。 另請參閱[/arch (x64)](../../build/reference/arch-x64.md)和[/arch (ARM)](../../build/reference/arch-arm.md)。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
  啟用 SSE 指令的使用。  
   
  **/arch:SSE2**  
- 啟用 SSE2 指令的使用。 這是預設值指示，在 x86 平台，如果沒有**/arch**指定選項。  
+ 啟用 SSE2 指令的使用。 這是預設值指示，在 x86 平台，如果沒有 **/arch**指定選項。  
   
  **/arch: avx**  
  啟用 Intel Advanced Vector Extensions 指令的使用。  
@@ -53,11 +48,11 @@ ms.lasthandoff: 12/21/2017
   
  `_M_IX86_FP`，`__AVX__`和`__AVX2__`巨集指出，如果有的話， **/arch**編譯器選項使用。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch: avx2**選項和`__AVX2__`巨集已引入 Visual Studio 2013 Update 2 12.0.34567.1 版。  
   
- 最佳化工具選擇何時及如何使用 SSE 及 SSE2 指令時**/arch**指定。 當最佳化工具判定在計算某些純量浮點數時，使用 SSE/SSE2 指令及暫存器要比使用 x87 浮點數暫存器堆疊更快時，它會使用 SSE 及 SSE2 指令。 因此，在計算浮點數時，您的程式碼可能實際上是使用 x87 與 SSE/SSE2 的混合。 此外，在**/arch:SSE2**，SSE2 指令可用於部分 64 位元整數作業。  
+ 最佳化工具選擇何時及如何使用 SSE 及 SSE2 指令時 **/arch**指定。 當最佳化工具判定在計算某些純量浮點數時，使用 SSE/SSE2 指令及暫存器要比使用 x87 浮點數暫存器堆疊更快時，它會使用 SSE 及 SSE2 指令。 因此，在計算浮點數時，您的程式碼可能實際上是使用 x87 與 SSE/SSE2 的混合。 此外，在 **/arch:SSE2**，SSE2 指令可用於部分 64 位元整數作業。  
   
  除了使用 SSE 及 SSE2 指令之外，編譯器還會使用支援 SSE 及 SSE2 之處理器修訂上存在的其他指令。 例如，最先出現在 Intel 處理器 Pentium Pro 修訂上的 CMOV 指令。  
   
- 根據預設，的 x86 編譯器會產生程式碼，它使用 SSE2 指令，因為您必須指定**/arch:IA32**停用的 SSE 及 SSE2 指令的產生適用於 x86 處理器。  
+ 根據預設，的 x86 編譯器會產生程式碼，它使用 SSE2 指令，因為您必須指定 **/arch:IA32**停用的 SSE 及 SSE2 指令的產生適用於 x86 處理器。  
   
  **/arch**只會影響程式碼產生原生函式。 當您使用[/clr](../../build/reference/clr-common-language-runtime-compilation.md)進行編譯時， **/arch**不有對 managed 函式的程式碼產生任何影響。  
   
@@ -79,7 +74,7 @@ r = t + d;     // This should produce the same overall result
   
 1.  開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  選取**組態屬性**， **C/c + +**資料夾。  
+2.  選取**組態屬性**， **C/c + +** 資料夾。  
   
 3.  選取**程式碼產生**屬性頁。  
   
@@ -89,7 +84,7 @@ r = t + d;     // This should produce the same overall result
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [/arch （最小 CPU 架構）](../../build/reference/arch-minimum-cpu-architecture.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

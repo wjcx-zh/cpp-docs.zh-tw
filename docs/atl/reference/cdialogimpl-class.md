@@ -1,12 +1,9 @@
 ---
-title: "CDialogImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: CDialogImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDialogImpl
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d4119daf89820de0a835bfbc572cdfbf38c99e8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 類別
 這個類別會提供方法來建立強制回應或非強制回應對話方塊。  
@@ -88,11 +83,11 @@ template <class T,
 |[StartDialogProc](#startdialogproc)|當第一個訊息接收到處理訊息傳送至對話方塊時呼叫。|  
   
 ## <a name="remarks"></a>備註  
- 與`CDialogImpl`您可以建立強制回應或非強制回應對話方塊。 `CDialogImpl`提供對話方塊程序，會使用預設的訊息對應訊息導向適當的處理常式。  
+ 與`CDialogImpl`您可以建立強制回應或非強制回應對話方塊。 `CDialogImpl` 提供對話方塊程序，會使用預設的訊息對應訊息導向適當的處理常式。  
   
- 基底類別解構函式**~ CWindowImplRoot**可確保視窗已終結物件之前消失。  
+ 基底類別解構函式 **~ CWindowImplRoot**可確保視窗已終結物件之前消失。  
   
- `CDialogImpl`衍生自**CDialogImplBaseT**，而後者又衍生自**CWindowImplRoot**。  
+ `CDialogImpl` 衍生自**CDialogImplBaseT**，而後者又衍生自**CWindowImplRoot**。  
   
 > [!NOTE]
 >  您的類別必須定義**IDD**成員，可指定對話方塊範本資源識別碼。 比方說，ATL 專案精靈自動將下列行加入至您的類別：  
@@ -111,7 +106,7 @@ template <class T,
 ## <a name="requirements"></a>需求  
  **標頭：** atlwin.h  
   
-##  <a name="create"></a>CDialogImpl::Create  
+##  <a name="create"></a>  CDialogImpl::Create  
  建立非強制回應對話方塊。  
   
 ```  
@@ -129,7 +124,7 @@ HWND Create(
  `hWndParent`  
  [in]主控視窗控制代碼。  
   
- **RECT &**`rect`  
+ **RECT （&AMP; S)** `rect`  
  [in]A [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，指定對話方塊的大小和位置。  
   
  `dwInitParam`  
@@ -141,7 +136,7 @@ HWND Create(
 ### <a name="remarks"></a>備註  
  這個對話方塊會自動附加至`CDialogImpl`物件。 若要建立強制回應對話方塊，請呼叫[DoModal](#domodal)。 上述的第二個覆寫僅適用於[CComControl](../../atl/reference/ccomcontrol-class.md)。  
   
-##  <a name="destroywindow"></a>CDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow  
  終結強制回應對話方塊。  
   
 ```  
@@ -157,7 +152,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>備註  
  傳回**TRUE**如果對話方塊已成功終結; 否則為**FALSE**。  
   
-##  <a name="dialogproc"></a>CDialogImpl::DialogProc  
+##  <a name="dialogproc"></a>  CDialogImpl::DialogProc  
  此靜態函式實作對話方塊程序。  
   
 ```  
@@ -188,11 +183,11 @@ static LRESULT CALLBACK DialogProc(
  **TRUE**訊息是否已處理，否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
- `DialogProc`使用預設的訊息對應至訊息導向適當的處理常式。  
+ `DialogProc` 使用預設的訊息對應至訊息導向適當的處理常式。  
   
  您可以覆寫`DialogProc`提供不同的機制，來處理訊息。  
   
-##  <a name="domodal"></a>CDialogImpl::DoModal  
+##  <a name="domodal"></a>  CDialogImpl::DoModal  
  建立強制回應對話方塊。  
   
 ```   
@@ -216,7 +211,7 @@ INT_PTR DoModal(
   
  若要建立非強制回應對話方塊，請呼叫[建立](#create)。  
   
-##  <a name="enddialog"></a>CDialogImpl::EndDialog  
+##  <a name="enddialog"></a>  CDialogImpl::EndDialog  
  終結強制回應對話方塊。  
   
 ```   
@@ -231,12 +226,12 @@ BOOL EndDialog(int nRetCode);
  **TRUE**終結; 否則對話方塊是否**FALSE**。  
   
 ### <a name="remarks"></a>備註  
- `EndDialog`必須透過對話方塊程序呼叫。 對話方塊時終結後，Windows 會使用值`nRetCode`的傳回值為`DoModal`，建立所在的對話方塊。  
+ `EndDialog` 必須透過對話方塊程序呼叫。 對話方塊時終結後，Windows 會使用值`nRetCode`的傳回值為`DoModal`，建立所在的對話方塊。  
   
 > [!NOTE]
 >  請勿呼叫`EndDialog`終結強制回應對話方塊。 呼叫[CWindow::DestroyWindow](../../atl/reference/cwindow-class.md#destroywindow)改為。  
   
-##  <a name="getdialogproc"></a>CDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>  CDialogImpl::GetDialogProc  
  傳回`DialogProc`，目前對話方塊程序。  
   
 ```   
@@ -249,7 +244,7 @@ virtual WNDPROC GetDialogProc();
 ### <a name="remarks"></a>備註  
  覆寫這個方法，以取代您自己的對話方塊程序。  
   
-##  <a name="mapdialogrect"></a>CDialogImpl::MapDialogRect  
+##  <a name="mapdialogrect"></a>  CDialogImpl::MapDialogRect  
  將轉換 (maps) 對話方塊單位，指定矩形到畫面的單位 （像素為單位）。  
   
 ```   
@@ -266,7 +261,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="remarks"></a>備註  
  函數會取代位於指定座標`RECT`結構和已轉換的座標，可讓要用來建立對話方塊或調整控制項的位置 對話方塊內的結構。  
   
-##  <a name="onfinalmessage"></a>CDialogImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>  CDialogImpl::OnFinalMessage  
  收到的最後一個訊息後呼叫 (通常`WM_NCDESTROY`)。  
   
 ```   
@@ -280,7 +275,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>備註  
  請注意，是否您想要自動刪除您的物件，在視窗解構時，您可以呼叫`delete this;`這裡。  
   
-##  <a name="startdialogproc"></a>CDialogImpl::StartDialogProc  
+##  <a name="startdialogproc"></a>  CDialogImpl::StartDialogProc  
  只能呼叫一次，當收到第一個訊息時，處理訊息傳送至對話方塊。  
   
 ```   
@@ -310,6 +305,6 @@ static LRESULT CALLBACK StartDialogProc(
 ### <a name="remarks"></a>備註  
  一次呼叫之後`StartDialogProc`，`DialogProc`為設定的對話方塊程序，並進一步呼叫前往該處。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [類別概觀](../../atl/atl-class-overview.md)

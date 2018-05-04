@@ -1,27 +1,22 @@
 ---
-title: "加入事件 (ATL 教學課程，第 5 部分) |Microsoft 文件"
-ms.custom: 
+title: 加入事件 (ATL 教學課程，第 5 部分) |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a118cf29546ac8dae2e882d5658b07e3b5e085f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>加入事件 (ATL 教學課程，第 5 部分)
 在此步驟中，您將加入`ClickIn`和`ClickOut`ATL 控制項的事件。 您將會引發`ClickIn`如果使用者在多邊形和引發事件`ClickOut`外部使用者。 要加入事件的工作如下所示：  
@@ -134,8 +129,8 @@ ms.lasthandoff: 12/21/2017
   
  接下來，您會加入屬性頁。  
   
- [步驟 4 至](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)&#124;[至步驟 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
+ [步驟 4 至](../atl/changing-the-drawing-code-atl-tutorial-part-4.md) &#124; [至步驟 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
 

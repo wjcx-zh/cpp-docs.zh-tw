@@ -1,9 +1,9 @@
 ---
-title: "-寬鬆-（標準一致性） |Microsoft 文件"
+title: -寬鬆-（標準一致性） |Microsoft 文件
 ms.date: 11/11/2016
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -15,17 +15,15 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="permissive--standards-conformance"></a>寬鬆 /-（標準的一致性）
 
@@ -37,25 +35,25 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="remarks"></a>備註
 
-您可以使用**/ 寬鬆-**編譯器選項以指定符合標準的編譯器行為。 此選項會停用 寬鬆的行為，並設定[/Zc](../../build/reference/zc-conformance.md)嚴格一致性的編譯器選項。 在 IDE 中，此選項也讓 IntelliSense 引擎底線不合格的程式碼。
+您可以使用 **/ 寬鬆-** 編譯器選項以指定符合標準的編譯器行為。 此選項會停用 寬鬆的行為，並設定[/Zc](../../build/reference/zc-conformance.md)嚴格一致性的編譯器選項。 在 IDE 中，此選項也讓 IntelliSense 引擎底線不合格的程式碼。
 
-根據預設， **/ 寬鬆-**選項設定新建立的 Visual Studio 2017 版本 15.5 和更新版本的專案中。 根據預設，在舊版中未設定它。 當設定此選項、 編譯器會產生診斷錯誤或警告非標準的語言建構時偵測到您的程式碼中時，包括一些常見的錯誤在前置的 C + + 11 程式碼。
+根據預設， **/ 寬鬆-** 選項設定新建立的 Visual Studio 2017 版本 15.5 和更新版本的專案中。 根據預設，在舊版中未設定它。 當設定此選項、 編譯器會產生診斷錯誤或警告非標準的語言建構時偵測到您的程式碼中時，包括一些常見的錯誤在前置的 C + + 11 程式碼。
 
-**/ 寬鬆-**選項適用於幾乎所有的標頭檔，從最新的 Windows 套件，例如軟體開發套件 (SDK) 或 Windows Driver Kit (WDK)，啟動 Windows 改建立者 (10.0.16299.0) SDK 中。 較舊的 sdk 版本可能無法編譯下**/ 寬鬆-**各種來源的程式碼的一致性。 編譯器和 Sdk 的出貨上不同的版本時間軸，因此有一些其餘的問題。 如需特定的標頭檔問題，請參閱[Windows 標頭問題](#windows-header-issues)下方。
+**/ 寬鬆-** 選項適用於幾乎所有的標頭檔，從最新的 Windows 套件，例如軟體開發套件 (SDK) 或 Windows Driver Kit (WDK)，啟動 Windows 改建立者 (10.0.16299.0) SDK 中。 較舊的 sdk 版本可能無法編譯下 **/ 寬鬆-** 各種來源的程式碼的一致性。 編譯器和 Sdk 的出貨上不同的版本時間軸，因此有一些其餘的問題。 如需特定的標頭檔問題，請參閱[Windows 標頭問題](#windows-header-issues)下方。
 
-**/ 寬鬆-**選項集[/zc: strictstrings](../../build/reference/zc-conformance.md)和[/zc: rvaluecast](../../build/reference/zc-conformance.md)合格行為的選項。 它們會預設為不合格的行為。 您可以傳遞特定**/Zc**後選項**/ 寬鬆-**覆寫這個行為在命令列上。
+**/ 寬鬆-** 選項集[/zc: strictstrings](../../build/reference/zc-conformance.md)和[/zc: rvaluecast](../../build/reference/zc-conformance.md)合格行為的選項。 它們會預設為不合格的行為。 您可以傳遞特定 **/Zc**後選項 **/ 寬鬆-** 覆寫這個行為在命令列上。
 
-在 Visual Studio 2017 版本 15.3，一開始編譯器的版本中**/ 寬鬆-**選項集[/Zc:ternary](../../build/reference/zc-ternary.md)選項。 編譯器也會實作多個兩階段的名稱查閱的需求。 當**/ 寬鬆-**設定選項時，編譯器會剖析函式和類別識別相依及非相依名稱的範本中所使用的範本定義。 在此版本中，執行名稱相依性分析。
+在 Visual Studio 2017 版本 15.3，一開始編譯器的版本中 **/ 寬鬆-** 選項集[/Zc:ternary](../../build/reference/zc-ternary.md)選項。 編譯器也會實作多個兩階段的名稱查閱的需求。 當 **/ 寬鬆-** 設定選項時，編譯器會剖析函式和類別識別相依及非相依名稱的範本中所使用的範本定義。 在此版本中，執行名稱相依性分析。
 
-環境特定擴充功能和標準保留最多實作的語言區域不會受到**/ 寬鬆-**。 例如，Microsoft 專有`__declspec`，呼叫慣例和結構化例外狀況處理關鍵字，以及特定編譯器的 pragma 指示詞或屬性未標示在編譯器**/ 寬鬆-**模式。
+環境特定擴充功能和標準保留最多實作的語言區域不會受到 **/ 寬鬆-**。 例如，Microsoft 專有`__declspec`，呼叫慣例和結構化例外狀況處理關鍵字，以及特定編譯器的 pragma 指示詞或屬性未標示在編譯器 **/ 寬鬆-** 模式。
 
-**/ 寬鬆-**選項會使用一致性支援目前的編譯器版本以判斷哪些語言建構會不合格。 選項不會判斷是否您的程式碼是否符合特定版本的 c + + 標準。 若要啟用的最新草稿標準的所有實作的編譯器支援，請使用[/std:latest](../../build/reference/std-specify-language-standard-version.md)選項。 若要限制目前已實作 C + + 17 標準的編譯器支援，請使用[/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)選項。 若要限制為更符合 C + + 14 標準的編譯器支援，請使用[/std:c + + 14](../../build/reference/std-specify-language-standard-version.md)選項，預設值。
+**/ 寬鬆-** 選項會使用一致性支援目前的編譯器版本以判斷哪些語言建構會不合格。 選項不會判斷是否您的程式碼是否符合特定版本的 c + + 標準。 若要啟用的最新草稿標準的所有實作的編譯器支援，請使用[/std:latest](../../build/reference/std-specify-language-standard-version.md)選項。 若要限制目前已實作 C + + 17 標準的編譯器支援，請使用[/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)選項。 若要限制為更符合 C + + 14 標準的編譯器支援，請使用[/std:c + + 14](../../build/reference/std-specify-language-standard-version.md)選項，預設值。
 
-不所有 C + + 11、 C + + 14 中或 C + + 17 標準符合在 Visual Studio 2017 Visual c + + 編譯器支援的程式碼。 **/ 寬鬆-**選項可能無法偵測出問題有關兩階段的名稱查閱的某些層面，繫結到臨時非 const 的參考、 視為直接初始化中的複本初始化，允許在多個使用者定義轉換初始化或替代的語彙基元的邏輯運算子，以及其他不受支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
+不所有 C + + 11、 C + + 14 中或 C + + 17 標準符合在 Visual Studio 2017 Visual c + + 編譯器支援的程式碼。 **/ 寬鬆-** 選項可能無法偵測出問題有關兩階段的名稱查閱的某些層面，繫結到臨時非 const 的參考、 視為直接初始化中的複本初始化，允許在多個使用者定義轉換初始化或替代的語彙基元的邏輯運算子，以及其他不受支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
 
 ### <a name="how-to-fix-your-code"></a>如何修正您的程式碼
 
-以下是一些範例的程式碼偵測為不合格當您使用**/ 寬鬆-**，以及修正問題的建議方式。
+以下是一些範例的程式碼偵測為不合格當您使用 **/ 寬鬆-**，以及修正問題的建議方式。
 
 #### <a name="use-default-as-an-identifier-in-native-code"></a>使用預設值為原生程式碼中的識別項
 
@@ -243,7 +241,7 @@ class ATL_NO_VTABLE CFooImpl : public ICustom,
 
 #### <a name="ambiguous-conditional-operator-arguments"></a>模稜兩可的條件運算子的引數
 
-在 Visual Studio 2017 15.3 版本之前，編譯器的版本中，編譯器會接受引數的條件運算子 （或三元運算子） `?:` ，會被視為模稜兩可的標準。 在**/ 寬鬆-**模式中，編譯器現在會發出在不進行診斷，在舊版本所編譯的情況下的一或多個診斷。
+在 Visual Studio 2017 15.3 版本之前，編譯器的版本中，編譯器會接受引數的條件運算子 （或三元運算子） `?:` ，會被視為模稜兩可的標準。 在 **/ 寬鬆-** 模式中，編譯器現在會發出在不進行診斷，在舊版本所編譯的情況下的一或多個診斷。
 
 常見的情況錯誤可能會造成這項變更包括：
 
@@ -275,7 +273,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-T 代表其中一個 null 結束的字串類型時，有是常見的模式的重要例外狀況 (比方說， `const char *`， `const char16_t *`，依此類推) 的實際引數和`?:`是字串常值對應的型別。 C + + 17 已經從 C + + 14 語意。 如此一來，範例 2 中的程式碼會接受在**/std:c + + 14**和已拒絕下**/std:c + + 17**時**/Zc:ternary**或**/permissive-**用。
+T 代表其中一個 null 結束的字串類型時，有是常見的模式的重要例外狀況 (比方說， `const char *`， `const char16_t *`，依此類推) 的實際引數和`?:`是字串常值對應的型別。 C + + 17 已經從 C + + 14 語意。 如此一來，範例 2 中的程式碼會接受在 **/std:c + + 14**和已拒絕下 **/std:c + + 17**時 **/Zc:ternary**或 **/permissive-** 用。
 
 ```cpp
 // Example 2: exception from the above
@@ -307,7 +305,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-您可能也會看到的範本 metaprogramming，可能會在將變更條件運算子的結果型別中的錯誤**/Zc:ternary**和**/ 寬鬆-**。 若要解決此問題是使用單向[std::remove_reference](../../standard-library/remove-reference-class.md)上產生的型別。
+您可能也會看到的範本 metaprogramming，可能會在將變更條件運算子的結果型別中的錯誤 **/Zc:ternary**和 **/ 寬鬆-**。 若要解決此問題是使用單向[std::remove_reference](../../standard-library/remove-reference-class.md)上產生的型別。
 
 ```cpp
 // Example 4: different result types 
@@ -321,7 +319,7 @@ const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 
 #### <a name="two-phase-name-look-up-partial"></a>兩階段的名稱查閱 （部分）
 
-當**/ 寬鬆-**選項設在 Visual Studio 2017 15.3 版本中，編譯器會剖析函式和類別識別相依及非相依名稱兩階段的名稱，視需要的範本中所使用的樣板定義查閱。 在此版本中，執行名稱相依性分析。 特別是，樣板定義的內容中未宣告為非相依名稱會導致診斷訊息所需的 ISO c + + 標準。 不過，需要不是引數相依查閱定義內容中的非相依名稱的繫結。
+當 **/ 寬鬆-** 選項設在 Visual Studio 2017 15.3 版本中，編譯器會剖析函式和類別識別相依及非相依名稱兩階段的名稱，視需要的範本中所使用的樣板定義查閱。 在此版本中，執行名稱相依性分析。 特別是，樣板定義的內容中未宣告為非相依名稱會導致診斷訊息所需的 ISO c + + 標準。 不過，需要不是引數相依查閱定義內容中的非相依名稱的繫結。
 
 ```cpp
 // dependent base
@@ -349,13 +347,13 @@ int main()
 
 ### <a name="windows-header-issues"></a>Windows 標頭的問題
 
-**/ 寬鬆-**選項是 Windows 套件，Windows 改建立者更新 SDK (10.0.16299.0) 之前, 的版本或 Windows Driver Kit (WDK) 版本 1709年過於嚴格。 我們建議您更新至最新版本的 Windows 套件，才能使用**/ 寬鬆-** Windows 或裝置驅動程式碼中。
+**/ 寬鬆-** 選項是 Windows 套件，Windows 改建立者更新 SDK (10.0.16299.0) 之前, 的版本或 Windows Driver Kit (WDK) 版本 1709年過於嚴格。 我們建議您更新至最新版本的 Windows 套件，才能使用 **/ 寬鬆-** Windows 或裝置驅動程式碼中。
 
-Windows 改建立者更新 SDK (10.0.16299.0) 或 Windows Driver Kit (WDK) 1709年中的特定標頭檔仍會有問題，使它們與使用的不相容**/ 寬鬆-**。 若要解決這些問題，我們建議您限制只有那些原始程式碼檔需要它們，並將移除使用這些標頭**/ 寬鬆-**選項，當您編譯這些特定的原始程式碼檔。 下列問題專屬於 Windows 改建立者更新 SDK (10.0.16299.0):
+Windows 改建立者更新 SDK (10.0.16299.0) 或 Windows Driver Kit (WDK) 1709年中的特定標頭檔仍會有問題，使它們與使用的不相容 **/ 寬鬆-**。 若要解決這些問題，我們建議您限制只有那些原始程式碼檔需要它們，並將移除使用這些標頭 **/ 寬鬆-** 選項，當您編譯這些特定的原始程式碼檔。 下列問題專屬於 Windows 改建立者更新 SDK (10.0.16299.0):
 
 #### <a name="issue-in-umqueryh"></a>在 um\Query.h 中的問題
 
-當使用**/ 寬鬆-**編譯器參數，`tagRESTRICTION`結構不會編譯因為 case(RTOr) 成員 '。
+當使用 **/ 寬鬆-** 編譯器參數，`tagRESTRICTION`結構不會編譯因為 case(RTOr) 成員 '。
 
 ```cpp
 struct tagRESTRICTION
@@ -377,17 +375,17 @@ struct tagRESTRICTION
     };
 ```
 
-若要解決此問題，編譯包含不含 Query.h **/ 寬鬆-**選項。
+若要解決此問題，編譯包含不含 Query.h **/ 寬鬆-** 選項。
 
 #### <a name="issue-in-umcellularapioemh"></a>在 um\cellularapi_oem.h 中的問題
 
-當使用**/ 寬鬆-**編譯器參數、 的向前宣告`enum UICCDATASTOREACCESSMODE`會導致警告：
+當使用 **/ 寬鬆-** 編譯器參數、 的向前宣告`enum UICCDATASTOREACCESSMODE`會導致警告：
 
 ```cpp
 typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
 ```
 
-不限範圍列舉的向前宣告是 Microsoft 擴充功能。 若要解決此問題，編譯包含不含 cellularapi_oem.h **/ 寬鬆-**選項，或使用[/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 轉為無回應的選項。
+不限範圍列舉的向前宣告是 Microsoft 擴充功能。 若要解決此問題，編譯包含不含 cellularapi_oem.h **/ 寬鬆-** 選項，或使用[/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 轉為無回應的選項。
 
 #### <a name="issue-in-umomscripth"></a>在 um\omscript.h 中的問題
 
@@ -400,7 +398,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
     /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
 ```
 
-若要解決此問題，編譯包含不含 omscript.h **/ 寬鬆-**選項，或使用**/Zc:strictStrings-**改為。
+若要解決此問題，編譯包含不含 omscript.h **/ 寬鬆-** 選項，或使用 **/Zc:strictStrings-** 改為。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
@@ -408,7 +406,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-1. 在下**組態屬性**，依序展開**C/c + +**資料夾，然後選擇 **語言**屬性頁。
+1. 在下**組態屬性**，依序展開**C/c + +** 資料夾，然後選擇 **語言**屬性頁。
 
 1. 變更**一致性模式**屬性值設定為**是 (/ 寬鬆-)**。 選擇**確定**或**套用**以儲存變更。
 
@@ -418,7 +416,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
 
-1. 輸入**/ 寬鬆-**編譯器選項在**其他選項**方塊。 選擇**確定**或**套用**以儲存變更。
+1. 輸入 **/ 寬鬆-** 編譯器選項在**其他選項**方塊。 選擇**確定**或**套用**以儲存變更。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 

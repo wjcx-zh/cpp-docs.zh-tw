@@ -1,30 +1,25 @@
 ---
-title: "ATL 和 MFC 所選擇的建議 |Microsoft 文件"
-ms.custom: 
+title: ATL 和 MFC 所選擇的建議 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 079784f1fed84ae073767a4a0b622d3fdbf7384b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 116f2066b98951aa2a470021f5527542ac8cbe46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>ATL 和 MFC 所選擇的建議
 在開發元件和應用程式時，您可以選擇兩種方法，ATL 和 MFC （Microsoft Foundation 類別程式庫）。  
@@ -38,6 +33,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="using-atl-in-an-mfc-project"></a>MFC 專案中使用 ATL  
  您可以加入現有的 MFC 專案中使用 ATL，透過執行精靈的支援。 如需詳細資訊，請參閱[將 ATL 支援加入至 MFC 專案](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 簡介](../atl/introduction-to-atl.md)
 

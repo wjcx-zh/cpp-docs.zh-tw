@@ -1,12 +1,9 @@
 ---
-title: "後置運算式 |Microsoft 文件"
-ms.custom: 
+title: 後置運算式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b965027e67cc2b2581c2ab00e51d2be7a899302
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a116e4f1c937a1656f337396a8b10206e0776c0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-expressions"></a>後置運算式
 後置運算式包含主要運算式，或後置運算子後面接著主要運算式的運算式。 下表列出後置運算子。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[註標運算子](../cpp/subscript-operator.md)|**[ ]**|  
 |[函式呼叫運算子](../cpp/function-call-operator-parens.md)|**( )**|  
 |[明確類型轉換運算子](../cpp/explicit-type-conversion-operator-parens.md)|*型別名稱* **（)**|  
-|[成員存取運算子](../cpp/member-access-operators-dot-and.md)|**.** 或**->**|  
+|[成員存取運算子](../cpp/member-access-operators-dot-and.md)|**.** 或 **->**|  
 |[後置遞增運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|`++`|  
 |[後置遞減運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|  
   
@@ -203,5 +198,5 @@ world!
 good morning, sunshine.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式的類型](../cpp/types-of-expressions.md)

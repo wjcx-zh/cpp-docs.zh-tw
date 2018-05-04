@@ -1,12 +1,9 @@
 ---
-title: "CSimpleMap 類別 |Microsoft 文件"
-ms.custom: 
+title: CSimpleMap 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleMap
@@ -32,17 +29,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27e4fdad706ab9e586efe72663880646e6f50f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415ce3c0d6b060ffc71aa448656cf9ad45a3e7bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplemap-class"></a>CSimpleMap 類別
 這個類別會提供簡單對應陣列的支援。  
@@ -99,13 +94,13 @@ class CSimpleMap
 |[CSimpleMap::SetAtIndex](#setatindex)|設定特定索引鍵和值。|  
   
 ## <a name="remarks"></a>備註  
- `CSimpleMap`任何給定的類型為簡單對應陣列中提供支援`T`，管理未排序的索引鍵的項目和其關聯的值陣列。  
+ `CSimpleMap` 任何給定的類型為簡單對應陣列中提供支援`T`，管理未排序的索引鍵的項目和其關聯的值陣列。  
   
  參數`TEqual`提供一種定義兩個項目類型的等號比較函式`T`。 藉由建立類別類似於[CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)，便可變更任何指定之陣列的等號比較測試的行為。 例如，當處理指標的陣列，可能很有用來定義為相等，取決於指標所參考的值。 預設實作會利用**operator==()**。  
   
  同時`CSimpleMap`和[CSimpleArray](../../atl/reference/csimplearray-class.md)釋放先前的 ATL 與相容性，而更完整且有效的集合實作所提供的提供[CAtlArray](../../atl/reference/catlarray-class.md)和[CAtlMap](../../atl/reference/catlmap-class.md)。  
   
- 不同於 ATL 和 MFC 中的其他對應集合，這個類別實作簡單的陣列，並查閱搜尋需要線性搜尋。 `CAtlMap`此陣列包含大量項目時，應該使用。  
+ 不同於 ATL 和 MFC 中的其他對應集合，這個類別實作簡單的陣列，並查閱搜尋需要線性搜尋。 `CAtlMap` 此陣列包含大量項目時，應該使用。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlsimpcoll.h  
@@ -113,7 +108,7 @@ class CSimpleMap
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#91](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]  
   
-##  <a name="add"></a>CSimpleMap::Add  
+##  <a name="add"></a>  CSimpleMap::Add  
  將索引鍵和相關聯的值加入至對應陣列中。  
   
 ```
@@ -133,21 +128,21 @@ BOOL Add(const TKey& key, const TVal& val);
 ### <a name="remarks"></a>備註  
  每個索引鍵和值組加入對應陣列的記憶體來釋出，並重新配置，以確保每個資料一律由左至右連續儲存的原因。 也就是說，第二個索引鍵的項目一律直接會遵循在記憶體中的第一個索引鍵項目，依此類推。  
   
-##  <a name="_arrayelementtype"></a>CSimpleMap::_ArrayElementType  
+##  <a name="_arrayelementtype"></a>  CSimpleMap::_ArrayElementType  
  索引鍵類型的 typedef。  
   
 ```
 typedef TVal _ArrayElementType;
 ```  
   
-##  <a name="_arraykeytype"></a>CSimpleMap::_ArrayKeyType  
+##  <a name="_arraykeytype"></a>  CSimpleMap::_ArrayKeyType  
  實值類型的 typedef。  
   
 ```
 typedef TKey _ArrayKeyType;
 ```  
   
-##  <a name="csimplemap"></a>CSimpleMap::CSimpleMap  
+##  <a name="csimplemap"></a>  CSimpleMap::CSimpleMap  
  建構函式。  
   
 ```
@@ -157,7 +152,7 @@ CSimpleMap();
 ### <a name="remarks"></a>備註  
  初始化資料成員。  
   
-##  <a name="dtor"></a>CSimpleMap:: ~ CSimpleMap  
+##  <a name="dtor"></a>  CSimpleMap:: ~ CSimpleMap  
  解構函式。  
   
 ```
@@ -167,7 +162,7 @@ CSimpleMap();
 ### <a name="remarks"></a>備註  
  釋放所有配置的資源。  
   
-##  <a name="findkey"></a>CSimpleMap::FindKey  
+##  <a name="findkey"></a>  CSimpleMap::FindKey  
  尋找特定的索引鍵。  
   
 ```
@@ -181,7 +176,7 @@ int FindKey(const TKey& key) const;
 ### <a name="return-value"></a>傳回值  
  傳回的索引鍵，如果找到，否則會傳回-1。  
   
-##  <a name="findval"></a>CSimpleMap::FindVal  
+##  <a name="findval"></a>  CSimpleMap::FindVal  
  尋找特定的值。  
   
 ```
@@ -195,7 +190,7 @@ int FindVal(const TVal& val) const;
 ### <a name="return-value"></a>傳回值  
  傳回值的索引如果找到，否則會傳回-1。  
   
-##  <a name="getkeyat"></a>CSimpleMap::GetKeyAt  
+##  <a name="getkeyat"></a>  CSimpleMap::GetKeyAt  
  擷取指定之索引處的索引鍵。  
   
 ```
@@ -212,7 +207,7 @@ TKey& GetKeyAt(int nIndex) const;
 ### <a name="remarks"></a>備註  
  所傳遞的索引`nIndex`必須是有效的傳回值為有意義。  
   
-##  <a name="getsize"></a>CSimpleMap::GetSize  
+##  <a name="getsize"></a>  CSimpleMap::GetSize  
  傳回對應陣列中的項目數目。  
   
 ```
@@ -222,7 +217,7 @@ int GetSize() const;
 ### <a name="return-value"></a>傳回值  
  對應陣列中傳回的項目數 （索引鍵和值為一個項目）。  
   
-##  <a name="getvalueat"></a>CSimpleMap::GetValueAt  
+##  <a name="getvalueat"></a>  CSimpleMap::GetValueAt  
  擷取特定的索引處的值。  
   
 ```
@@ -239,7 +234,7 @@ TVal& GetValueAt(int nIndex) const;
 ### <a name="remarks"></a>備註  
  所傳遞的索引`nIndex`必須是有效的傳回值為有意義。  
   
-##  <a name="lookup"></a>CSimpleMap::Lookup  
+##  <a name="lookup"></a>  CSimpleMap::Lookup  
  傳回與指定的索引鍵相關聯的值。  
   
 ```
@@ -253,7 +248,7 @@ TVal Lookup(const TKey& key) const;
 ### <a name="return-value"></a>傳回值  
  傳回相關聯的值。 如果沒有相符的索引鍵找不到 NULL 會傳回。  
   
-##  <a name="remove"></a>CSimpleMap::Remove  
+##  <a name="remove"></a>  CSimpleMap::Remove  
  移除索引鍵和相符的值。  
   
 ```
@@ -267,7 +262,7 @@ BOOL Remove(const TKey& key);
 ### <a name="return-value"></a>傳回值  
  如果金鑰和相符的值，已成功移除，則為 FALSE 否則為 true，則傳回。  
   
-##  <a name="removeall"></a>CSimpleMap::RemoveAll  
+##  <a name="removeall"></a>  CSimpleMap::RemoveAll  
  移除所有索引鍵和值。  
   
 ```
@@ -277,7 +272,7 @@ void RemoveAll();
 ### <a name="remarks"></a>備註  
  從對應陣列物件中移除所有索引鍵和值。  
   
-##  <a name="removeat"></a>CSimpleMap::RemoveAt  
+##  <a name="removeat"></a>  CSimpleMap::RemoveAt  
  移除索引鍵和相關聯的值，指定索引處。  
   
 ```
@@ -291,7 +286,7 @@ BOOL RemoveAt(int nIndex);
 ### <a name="return-value"></a>傳回值  
  為 true，則傳回 FALSE 如果成功，如果指定的索引是無效的索引。  
   
-##  <a name="reverselookup"></a>CSimpleMap::ReverseLookup  
+##  <a name="reverselookup"></a>  CSimpleMap::ReverseLookup  
  傳回與指定的值相關聯的金鑰。  
   
 ```
@@ -305,7 +300,7 @@ TKey ReverseLookup(const TVal& val) const;
 ### <a name="return-value"></a>傳回值  
  傳回相關聯的索引鍵。 如果沒有相符的索引鍵找不到 NULL 會傳回。  
   
-##  <a name="setat"></a>CSimpleMap::SetAt  
+##  <a name="setat"></a>  CSimpleMap::SetAt  
  設定給定索引鍵相關聯的值。  
   
 ```
@@ -322,7 +317,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 ### <a name="return-value"></a>傳回值  
  如果找不到索引鍵，但值已成功變更，則為 FALSE 否則會傳回 TRUE。  
   
-##  <a name="setatindex"></a>CSimpleMap::SetAtIndex  
+##  <a name="setatindex"></a>  CSimpleMap::SetAtIndex  
  設定指定索引處的索引鍵和值。  
   
 ```
@@ -348,5 +343,5 @@ BOOL SetAtIndex(
 ### <a name="remarks"></a>備註  
  更新索引鍵和值所指向`nIndex`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

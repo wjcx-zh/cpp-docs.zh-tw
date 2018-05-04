@@ -1,13 +1,10 @@
 ---
-title: "-GH （啟用 _pexit 攔截函式） |Microsoft 文件"
-ms.custom: 
+title: -GH （啟用 _pexit 攔截函式） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _pexit
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cfdd783a698a3397e84fa62b7252399570dc84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57e11c27af36eb539b22f3833a73341ff3065e97
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (啟用 _pexit 攔截函式)
 呼叫`_pexit`函式的每個方法或函式結尾。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 void __declspec(naked) _cdecl _pexit( void );  
 ```  
   
- `_pexit`類似於`_penter`; 請參閱[/Gh (啟用 _penter 攔截函式)](../../build/reference/gh-enable-penter-hook-function.md)如需如何撰寫的範例`_pexit`函式。  
+ `_pexit` 類似於`_penter`; 請參閱[/Gh (啟用 _penter 攔截函式)](../../build/reference/gh-enable-penter-hook-function.md)如需如何撰寫的範例`_pexit`函式。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
@@ -64,6 +59,6 @@ void __declspec(naked) _cdecl _pexit( void );
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

@@ -1,13 +1,10 @@
 ---
-title: "C/c + + 建置工具 |Microsoft 文件"
-ms.custom: 
+title: C/c + + 建置工具 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - c.build
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b21ebd2adf20eb0812e9a0fb5b900e657f8eddc7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ce8054d4f58eae6ee11737397cf425733d6f486
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cc-build-tools"></a>C/C++ 建置工具
 Visual c + + 會提供下列的命令列工具來檢視或操作組建輸出：  
@@ -43,7 +38,7 @@ Visual c + + 會提供下列的命令列工具來檢視或操作組建輸出：
   
 -   [ERRLOOK](../../build/reference/value-edit-control.md)，錯誤查詢公用程式中，擷取系統錯誤訊息或輸入的值為基礎的模組錯誤訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
  [裝飾的名稱](../../build/reference/decorated-names.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   

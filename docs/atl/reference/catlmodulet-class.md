@@ -2,11 +2,8 @@
 title: CAtlModuleT 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlModuleT
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlModuleT class
 ms.assetid: 9b74d02f-9117-47b1-a05e-c5945f83dd2b
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4f1ba8d59e85a480af38e5b9778fee0c714a0db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29088c56d7020b38febb96be7512771a258e25fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlmodulet-class"></a>CAtlModuleT 類別
 這個類別會實作 ATL 模組。  
@@ -71,7 +66,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ## <a name="remarks"></a>備註  
  `CAtlModuleT`衍生自[CAtlModule](../../atl/reference/catlmodule-class.md)，實作可執行檔 (EXE) 或服務 (EXE) ATL 模組。 可執行模組為本機的跨處理序伺服器，而服務模組是 Windows 啟動時，會在背景中執行的 Windows 應用程式。  
   
- `CAtlModuleT`提供初始化、 註冊和取消註冊模組的支援。  
+ `CAtlModuleT` 提供初始化、 註冊和取消註冊模組的支援。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -84,7 +79,7 @@ class ATL_NO_VTABLE CAtlModuleT : public CAtlModule
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="catlmodulet"></a>CAtlModuleT::CAtlModuleT  
+##  <a name="catlmodulet"></a>  CAtlModuleT::CAtlModuleT  
  建構函式。  
   
 ```
@@ -94,7 +89,7 @@ CAtlModuleT() throw();
 ### <a name="remarks"></a>備註  
  呼叫[CAtlModuleT::InitLibId](#initlibid)。  
   
-##  <a name="initlibid"></a>CAtlModuleT::InitLibId  
+##  <a name="initlibid"></a>  CAtlModuleT::InitLibId  
  初始化資料成員包含目前模組的 GUID。  
   
 ```
@@ -104,7 +99,7 @@ static void InitLibId() throw();
 ### <a name="remarks"></a>備註  
  建構函式呼叫[CAtlModuleT::CAtlModuleT](#catlmodulet)。  
   
-##  <a name="registerappid"></a>CAtlModuleT::RegisterAppId  
+##  <a name="registerappid"></a>  CAtlModuleT::RegisterAppId  
  將 EXE 加入登錄。  
   
 ```
@@ -114,7 +109,7 @@ HRESULT RegisterAppId() throw();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="registerserver"></a>CAtlModuleT::RegisterServer  
+##  <a name="registerserver"></a>  CAtlModuleT::RegisterServer  
  將服務加入至登錄。  
   
 ```
@@ -133,7 +128,7 @@ HRESULT RegisterServer(
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="unregisterappid"></a>CAtlModuleT::UnregisterAppId  
+##  <a name="unregisterappid"></a>  CAtlModuleT::UnregisterAppId  
  從登錄中移除該 exe 檔。  
   
 ```
@@ -143,7 +138,7 @@ HRESULT UnregisterAppId() throw();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="unregisterserver"></a>CAtlModuleT::UnregisterServer  
+##  <a name="unregisterserver"></a>  CAtlModuleT::UnregisterServer  
  從登錄移除服務。  
   
 ```
@@ -162,7 +157,7 @@ HRESULT UnregisterServer(
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-##  <a name="updateregistryappid"></a>CAtlModuleT::UpdateRegistryAppId  
+##  <a name="updateregistryappid"></a>  CAtlModuleT::UpdateRegistryAppId  
  更新登錄中的 EXE 資訊。  
   
 ```
@@ -176,7 +171,7 @@ static HRESULT WINAPI UpdateRegistryAppId(BOOL /* bRegister*/) throw();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CAtlModule 類別](../../atl/reference/catlmodule-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [模組類別](../../atl/atl-module-classes.md)

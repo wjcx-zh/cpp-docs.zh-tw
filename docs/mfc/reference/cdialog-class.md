@@ -1,12 +1,12 @@
 ---
-title: "CDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CDialog
@@ -49,17 +49,17 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-caps.latest.revision: 
+caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c9670d19330e63a466c38a205a3122237e4f02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de2c308372758e96919fbaa9bf247fb424de945
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdialog-class"></a>CDialog 類別
 用於在螢幕上顯示對話方塊的基底類別。  
@@ -125,7 +125,7 @@ class CDialog : public CWnd
   
  程式設計人員與架構呼叫`DoDataExchange`間接透過呼叫[CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)。  
   
- 這個架構會呼叫`UpdateData`當使用者按一下 [確定] 按鈕以關閉強制回應對話方塊。 （不會擷取資料如果按下 [取消] 按鈕。）預設實作[OnInitDialog](#oninitdialog)也會呼叫`UpdateData`來設定控制項的初始值。 您通常會覆寫`OnInitDialog`進一步初始化控制項。 `OnInitDialog`已建立所有對話方塊控制項和對話方塊之前，只會顯示之後呼叫。  
+ 這個架構會呼叫`UpdateData`當使用者按一下 [確定] 按鈕以關閉強制回應對話方塊。 （不會擷取資料如果按下 [取消] 按鈕。）預設實作[OnInitDialog](#oninitdialog)也會呼叫`UpdateData`來設定控制項的初始值。 您通常會覆寫`OnInitDialog`進一步初始化控制項。 `OnInitDialog` 已建立所有對話方塊控制項和對話方塊之前，只會顯示之後呼叫。  
   
  您可以呼叫`CWnd::UpdateData`隨時強制或非強制回應對話方塊在執行期間。  
   
@@ -153,7 +153,7 @@ class CDialog : public CWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="cdialog"></a>CDialog::CDialog  
+##  <a name="cdialog"></a>  CDialog::CDialog  
  若要建構資源為基礎的強制回應對話方塊中，呼叫其中一個建構函式的公用格式。  
   
 ```  
@@ -180,7 +180,7 @@ CDialog();
  指向的父系或擁有者的視窗物件 (型別[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  
- 一種形式的建構函式提供範本名稱對話方塊資源的存取。 其他建構函式提供存取由範本的識別碼，通常使用**IDD_**前置詞 (例如 IDD_DIALOG1)。  
+ 一種形式的建構函式提供範本名稱對話方塊資源的存取。 其他建構函式提供存取由範本的識別碼，通常使用**IDD_** 前置詞 (例如 IDD_DIALOG1)。  
   
  若要建構強制回應對話方塊，從記憶體中的範本，第一次叫用的無參數、 受保護建構函式，然後呼叫`InitModalIndirect`。  
   
@@ -188,7 +188,7 @@ CDialog();
   
  若要建構非強制回應對話方塊，請使用 受保護的形式`CDialog`建構函式。 建構函式是受到保護，因為您必須衍生您自己的對話方塊類別來實作非強制回應對話方塊。 非強制回應對話方塊的建構是兩步驟程序。 第一次呼叫建構函式。然後呼叫**建立**成員函式來建立資源為基礎的對話方塊，或呼叫`CreateIndirect`從記憶體中的範本建立的對話方塊。  
   
-##  <a name="create"></a>CDialog::Create  
+##  <a name="create"></a>  CDialog::Create  
  呼叫**建立**建立使用對話方塊範本資源的非強制回應對話方塊。  
   
 ```  
@@ -231,7 +231,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
-##  <a name="createindirect"></a>CDialog::CreateIndirect  
+##  <a name="createindirect"></a>  CDialog::CreateIndirect  
  呼叫此成員函式可從記憶體中的對話方塊範本建立非強制回應對話方塊。  
   
 ```  
@@ -269,9 +269,9 @@ virtual BOOL CreateIndirect(
   
  使用`CWnd::DestroyWindow`終結對話方塊中所建立的函式`CreateIndirect`函式。  
   
- 包含 ActiveX 控制項的對話方塊需要額外的資訊中提供**DLGINIT**資源。 如需詳細資訊，請參閱知識庫文章 Q231591，"如何： 使用對話方塊範本來建立 ActiveX 控制項與 MFC 對話方塊。 」 知識庫文件位於[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 包含 ActiveX 控制項的對話方塊需要額外的資訊中提供**DLGINIT**資源。 如需詳細資訊，請參閱知識庫文章 Q231591，"如何： 使用對話方塊範本來建立 ActiveX 控制項與 MFC 對話方塊。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="domodal"></a>CDialog::DoModal  
+##  <a name="domodal"></a>  CDialog::DoModal  
  呼叫此成員函式，來叫用強制回應對話方塊，並傳回完成的對話方塊結果。  
   
 ```  
@@ -287,12 +287,12 @@ virtual INT_PTR DoModal();
  如果使用者按一下其中一個按鈕，在對話方塊中，例如 [確定] 或 [取消]，訊息處理常式成員函式，例如[OnOK](#onok)或[OnCancel](#oncancel)，呼叫以嘗試關閉對話方塊。 預設值`OnOK`成員函式會將驗證和更新對話方塊中的資料並關閉 [結果] 對話方塊**IDOK**，且預設`OnCancel`成員函式將會關閉 [結果] 對話方塊**IDCANCEL**而不需要驗證，或更新對話方塊中的資料。 您可以覆寫這些訊息處理常式函式，來改變其行為。  
   
 > [!NOTE]
-> `PreTranslateMessage`現在稱為強制回應對話方塊方塊中的訊息處理。  
+> `PreTranslateMessage` 現在稱為強制回應對話方塊方塊中的訊息處理。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
   
-##  <a name="enddialog"></a>CDialog::EndDialog  
+##  <a name="enddialog"></a>  CDialog::EndDialog  
  呼叫此成員函式終止強制回應對話方塊。  
   
 ```  
@@ -308,14 +308,14 @@ void EndDialog(int nResult);
   
  您可以呼叫`EndDialog`在任何時間，即使是在[OnInitDialog](#oninitdialog)、 在對話方塊中，才會顯示這種情況下，您應該關閉或設定輸入的焦點之前。  
   
- `EndDialog`不會立即關閉對話方塊。 相反地，它會設定旗標，指示目前的訊息處理常式傳回時，立即關閉對話方塊。  
+ `EndDialog` 不會立即關閉對話方塊。 相反地，它會設定旗標，指示目前的訊息處理常式傳回時，立即關閉對話方塊。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#64](../../mfc/codesnippet/cpp/cdialog-class_3.cpp)]  
   
  [!code-cpp[NVC_MFCControlLadenDialog#65](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
   
-##  <a name="getdefid"></a>CDialog::GetDefID  
+##  <a name="getdefid"></a>  CDialog::GetDefID  
  呼叫`GetDefID`成員函式來取得對話方塊中的預設按鈕控制項的識別碼。  
   
 ```  
@@ -328,7 +328,7 @@ DWORD GetDefID() const;
 ### <a name="remarks"></a>備註  
  這通常是 [確定] 按鈕。  
   
-##  <a name="gotodlgctrl"></a>CDialog::GotoDlgCtrl  
+##  <a name="gotodlgctrl"></a>  CDialog::GotoDlgCtrl  
  將焦點移至 對話方塊中指定的控制項。  
   
 ```  
@@ -345,7 +345,7 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ### <a name="example"></a>範例  
   請參閱範例的[CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem)。  
   
-##  <a name="initmodalindirect"></a>CDialog::InitModalIndirect  
+##  <a name="initmodalindirect"></a>  CDialog::InitModalIndirect  
  呼叫此成員函式，來初始化強制回應對話方塊物件，使用您建構在記憶體中的對話方塊範本。  
   
 ```  
@@ -379,9 +379,9 @@ BOOL InitModalIndirect(
 ### <a name="remarks"></a>備註  
  若要間接建立強制回應對話方塊中，第一次配置全域記憶體區塊，並填入對話方塊範本。 然後呼叫空`CDialog`建構對話方塊物件的建構函式。 接下來，呼叫`InitModalIndirect`儲存至記憶體中的對話方塊範本控制代碼。 建立並顯示 [Windows] 對話方塊之後，當[DoModal](#domodal)呼叫成員函式。  
   
- 包含 ActiveX 控制項的對話方塊需要額外的資訊中提供**DLGINIT**資源。 如需詳細資訊，請參閱知識庫文章 Q231591，"如何： 使用對話方塊範本來建立 ActiveX 控制項與 MFC 對話方塊。 」 知識庫文件位於[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 包含 ActiveX 控制項的對話方塊需要額外的資訊中提供**DLGINIT**資源。 如需詳細資訊，請參閱知識庫文章 Q231591，"如何： 使用對話方塊範本來建立 ActiveX 控制項與 MFC 對話方塊。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="mapdialogrect"></a>CDialog::MapDialogRect  
+##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect  
  呼叫以將矩形的對話方塊單位轉換成螢幕單位。  
   
 ```  
@@ -399,7 +399,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  `MapDialogRect`成員函式取代對話方塊單位`lpRect`與畫面單位 （像素為單位），使矩形可以用來建立對話方塊或調整控制項的方塊內的位置。  
   
-##  <a name="nextdlgctrl"></a>CDialog::NextDlgCtrl  
+##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  將焦點移至對話方塊中的下一個控制項。  
   
 ```  
@@ -409,7 +409,7 @@ void NextDlgCtrl() const;
 ### <a name="remarks"></a>備註  
  如果焦點在最後一個控制項在對話方塊中，它會移動的第一個控制項。  
   
-##  <a name="oncancel"></a>CDialog::OnCancel  
+##  <a name="oncancel"></a>  CDialog::OnCancel  
  架構會呼叫這個方法，當使用者按一下**取消**或按下的 ESC 鍵，在強制回應或非強制回應對話方塊。  
   
 ```  
@@ -427,7 +427,7 @@ virtual void OnCancel();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
-##  <a name="oninitdialog"></a>CDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CDialog::OnInitDialog  
  會呼叫這個方法，以回應`WM_INITDIALOG`訊息。  
   
 ```  
@@ -445,12 +445,12 @@ virtual BOOL OnInitDialog();
  Windows 呼叫`OnInitDialog`函式使用所有 Microsoft Foundation 類別庫對話方塊通用的標準通用對話方塊程序。 不會呼叫此函式透過訊息對應，並因此都不需要這個方法的訊息對應項目。  
   
 > [!NOTE]
->  當您使用時，您無法覆寫這個方法`CFileDialog`下編譯的程式中的物件[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]。 如需有關變更`CFileDialog`下[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]看到[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。  
+> 當您使用時，您無法覆寫這個方法`CFileDialog`Windows Vista 或更新版本的作業系統下編譯的程式中的物件。 如需有關變更`CFileDialog`在 Windows Vista 和更新版本，請參閱[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
-##  <a name="onok"></a>CDialog::OnOK  
+##  <a name="onok"></a>  CDialog::OnOK  
  當使用者按一下時呼叫**確定**按鈕 （與識別碼的 IDOK 按鈕）。  
   
 ```  
@@ -468,7 +468,7 @@ virtual void OnOK();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
-##  <a name="onsetfont"></a>CDialog::OnSetFont  
+##  <a name="onsetfont"></a>  CDialog::OnSetFont  
  指定繪製文字時，會使用對話方塊中控制項的字型。  
   
 ```  
@@ -485,9 +485,9 @@ Virtual void OnSetFont(CFont* pFont);
  對話方塊編輯器通常會將對話方塊字型設定的對話方塊範本資源的一部分。  
   
 > [!NOTE]
->  當您使用時，您無法覆寫這個方法`CFileDialog`下編譯的程式中的物件[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]。 如需有關變更`CFileDialog`下[!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]看到[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。  
+> 當您使用時，您無法覆寫這個方法`CFileDialog`Windows Vista 或更新版本的作業系統下編譯的程式中的物件。 如需有關變更`CFileDialog`在 Windows Vista 和更新版本，請參閱[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。  
   
-##  <a name="prevdlgctrl"></a>CDialog::PrevDlgCtrl  
+##  <a name="prevdlgctrl"></a>  CDialog::PrevDlgCtrl  
  將焦點設定到上一個控制項，在對話方塊中。  
   
 ```  
@@ -497,7 +497,7 @@ void PrevDlgCtrl() const;
 ### <a name="remarks"></a>備註  
  如果焦點是在第一個控制項在對話方塊中，它會移動到最後一個控制項在方塊中。  
   
-##  <a name="setdefid"></a>CDialog::SetDefID  
+##  <a name="setdefid"></a>  CDialog::SetDefID  
  變更對話方塊中的預設按鈕控制項。  
   
 ```  
@@ -508,7 +508,7 @@ void SetDefID(UINT nID);
  `nID`  
  指定將成為預設的按鈕控制項的識別碼。  
   
-##  <a name="sethelpid"></a>CDialog::SetHelpID  
+##  <a name="sethelpid"></a>  CDialog::SetHelpID  
  設定對話方塊的即時線上說明識別碼。  
   
 ```  
@@ -519,7 +519,7 @@ void SetHelpID(UINT nIDR);
  *nIDR*  
  指定即時線上說明識別碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 DLGCBR32](../../visual-cpp-samples.md)   
  [MFC 範例 DLGTEMPL](../../visual-cpp-samples.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

@@ -1,12 +1,9 @@
 ---
-title: "關係運算子： &lt;， &gt;， &lt;=、 和&gt;= |Microsoft 文件"
-ms.custom: 
+title: 關係運算子： &lt;， &gt;， &lt;=、 和&gt;= |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - <
@@ -24,19 +21,17 @@ helpviewer_keywords:
 - less than or equal to operator
 - <= operator
 ms.assetid: d346b53d-f14d-4962-984f-89d39a17ca0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d7cf77f9bea05a9220aea3d4006f64899b84ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea629afbe975e60e9fc4f25e51d757eb3f0f8728
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="relational-operators-lt-gt-lt-and-gt"></a>關係運算子： &lt;， &gt;， &lt;=，並&gt;=
+# <a name="relational-operators-lt-gt-lt-and-gt"></a>關係運算子： &lt;， &gt;， &lt;=，並 &gt;=
 ## <a name="syntax"></a>語法  
   
 ```  
@@ -103,7 +98,7 @@ int main() {
   
  如果兩個指標指向相同陣列的元素，或指向超出陣列結尾的元素一，則具有較高註標的物件指標比較結果會較高。 只有在指標參考相同陣列中的物件或超出陣列結尾的位置一時，才能保證指標比較有效。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 關係和等號比較運算子](../c-language/c-relational-and-equality-operators.md)

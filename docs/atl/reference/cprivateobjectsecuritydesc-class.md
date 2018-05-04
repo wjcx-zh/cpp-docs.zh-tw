@@ -1,12 +1,9 @@
 ---
-title: "CPrivateObjectSecurityDesc 類別 |Microsoft 文件"
-ms.custom: 
+title: CPrivateObjectSecurityDesc 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CPrivateObjectSecurityDesc
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 6f47adc413a0e6d3d9c820b824dec95f55924867
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
 此類別代表私用物件安全性描述元物件。  
@@ -262,7 +257,7 @@ bool Set(
 ### <a name="remarks"></a>備註  
  第二種方法允許指定物件的物件類型的 GUID 或控制如何繼承 Ace。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)   

@@ -1,29 +1,24 @@
 ---
-title: "依分類排列的編譯器選項 |Microsoft 文件"
-ms.custom: 
+title: 依分類排列的編譯器選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87eb79e7932d18ac5aae47a39ec207fec326d58e
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: fff661bf573ca30a5b0e7550c2e53b00a7ff3d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -76,7 +71,7 @@ ms.lasthandoff: 02/28/2018
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用於 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 編譯器 (原生和跨平台編譯)。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|建立可線上修補的影像。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|產生快速超越函式。|
-|[QIfist](qifist-suppress-ftol.md)|已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86)|
+|[/Qifist](qifist-suppress-ftol.md)|已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 區塊內的 `try` 命令。|
 |[/Qpar](qpar-auto-parallelizer.md)|啟用迴圈自動平行處理。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|啟用自動平行處理的報告層級。|
@@ -163,7 +158,7 @@ ms.lasthandoff: 02/28/2018
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[@](at-specify-a-compiler-response-file.md)|指定回應檔。|
-|[/analyze](analyze-code-analysis.md)|啟用程式碼分析。|
+|[分析 /](analyze-code-analysis.md)|啟用程式碼分析。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
 |[/c](c-compile-without-linking.md)|編譯而不連結。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 執行緒的數目，以用於最佳化及程式碼產生。|
@@ -185,7 +180,7 @@ ms.lasthandoff: 02/28/2018
 |[/V](v-version-number.md)|已取代。 設定版本字串。|
 |[/w](compiler-option-warning-level.md)|停用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|設定輸出警告層級。|
-|[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
+|[/w1、 /w2、 /w3、 /w4](compiler-option-warning-level.md)|為指定的警告設定警告層級。|
 |[/Wall](compiler-option-warning-level.md)|啟用所有警告，包括預設停用的警告。|
 |[/wd](compiler-option-warning-level.md)|停用指定的警告。|
 |[/we](compiler-option-warning-level.md)|將指定的警告視為錯誤。|
@@ -219,7 +214,7 @@ ms.lasthandoff: 02/28/2018
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 啟用快速檢查。 使用[/RTC1](rtc-run-time-error-checks.md)改為。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/Og](og-global-optimizations.md)|已取代。 使用全域最佳化。|
-|[QIfist](qifist-suppress-ftol.md)|已取代。 曾用以指定如何從浮點型別轉換為整數型別。|
+|[/Qifist](qifist-suppress-ftol.md)|已取代。 曾用以指定如何從浮點型別轉換為整數型別。|
 |[/V](v-version-number.md)|已取代。 設定 obj 檔案版本字串。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|已過時。 偵測 64 位元可移植性問題。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 使用[/Zi](z7-zi-zi-debug-information-format.md)改為。|

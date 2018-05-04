@@ -1,27 +1,22 @@
 ---
-title: "相依類型的名稱解析 |Microsoft 文件"
-ms.custom: 
+title: 相依類型的名稱解析 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8978e38745f088884bbf28ffb0ab98cfb87895
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-resolution-for-dependent-types"></a>相依類型的名稱解析
 使用**typename**在給定的限定的名稱識別的類型會告訴編譯器樣板定義中的限定名稱。 如需詳細資訊，請參閱[typename](../cpp/typename.md)。  
@@ -102,7 +97,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>樣板去除混淆  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 會強制執行 C++98/03/11 標準規則，以便釐清 "template" 關鍵字。 在下列範例中，Visual c + + 2010年會接受的不一致的程式行及合格的行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]接受只有合格的線條。  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 會強制執行 C++98/03/11 標準規則，以便釐清 "template" 關鍵字。 在下列範例中，Visual c + + 2010年會接受的不一致的程式行及合格的行。  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 接受只有合格的線條。  
   
 ```cpp  
 #include <iostream>  
@@ -133,5 +128,5 @@ int main() {
   
  遵循去除混淆規則是必要條件，因為根據預設，C++ 會假設 `AY::Rebind` 不是樣板，因此編譯器會將下列 "`<`" 解譯為小於。 編譯器必須知道 `Rebind` 是樣板，才能將 "`<`" 正確剖析為角括號。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [名稱解析](../cpp/templates-and-name-resolution.md)

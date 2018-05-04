@@ -2,26 +2,21 @@
 title: 逐步解說： 編譯 C + + /CLI 程式命令列上的 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d509bc9890f4fa5ccebbd6ae3d1e3bcb3dbb0d93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81e5b8119c8921da28c6ad93b257234e0998083a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C++/CLI 程式
 您可以建立以通用語言執行階段 (CLR) 為目標且使用 .NET Framework 的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 C++/CLI 程式設計語言，其具有其他類型及運算子，以將 .NET 程式設計模型設定為目標。 如需 C + + CLI 語言，請參閱[Pure c + +: Hello，C + + CLI](http://msdn.microsoft.com/magazine/cc163681.aspx)。 如需一般資訊，請參閱[.NET 程式設計使用 C + + /CLI （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
     This is a C++/CLI program.  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)   
  [編譯器選項](../build/reference/compiler-options.md)

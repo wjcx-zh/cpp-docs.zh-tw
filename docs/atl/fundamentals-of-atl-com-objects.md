@@ -2,12 +2,9 @@
 title: ATL COM 物件的基本概念 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 955f8f6be96feeaf0f22f02c125dcdeaceb8e7f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 物件的基本概念
 下圖顯示的類別和介面，可用來定義 ATL COM 物件之間的關聯性。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  這個圖表可顯示的`CComObject`衍生自`CYourClass`而`CComAggObject`和`CComPolyObject`包含`CYourClass`做為成員變數。  
   
- 有三種方式，來定義 ATL COM 物件。 標準的選項是使用`CComObject`類別衍生自`CYourClass`。 第二個選項是使用建立彙總的物件`CComAggObject`類別。 第三個選項是使用`CComPolyObject`類別。 `CComPolyObject`做為混合式： 可以當做`CComObject`類別或`CComAggObject`類別，根據第一次建立方式。 如需有關如何使用`CComPolyObject`類別，請參閱[CComPolyObject 類別](../atl/reference/ccompolyobject-class.md)。  
+ 有三種方式，來定義 ATL COM 物件。 標準的選項是使用`CComObject`類別衍生自`CYourClass`。 第二個選項是使用建立彙總的物件`CComAggObject`類別。 第三個選項是使用`CComPolyObject`類別。 `CComPolyObject` 做為混合式： 可以當做`CComObject`類別或`CComAggObject`類別，根據第一次建立方式。 如需有關如何使用`CComPolyObject`類別，請參閱[CComPolyObject 類別](../atl/reference/ccompolyobject-class.md)。  
   
  當您使用標準的 ATL COM 時，您會使用兩個物件： 外部的物件和內部物件。 外部用戶端透過包裝函式定義在外部物件的存取內部物件的功能。 外部物件屬於類型`CComObject`。  
   
@@ -84,6 +79,6 @@ ms.lasthandoff: 12/21/2017
  [ATL](../atl/active-template-library-atl-concepts.md)  
  提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)
 

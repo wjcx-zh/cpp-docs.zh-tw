@@ -2,11 +2,8 @@
 title: CPoint 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPoint
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7140e2db55db8a28c1af63f89517708f4dc0d835
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36dc82c03f13b4708d705d9fd66eff26870c8346
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 類似於 Windows `POINT` 結構。  
@@ -85,7 +80,7 @@ class CPoint : public tagPOINT
 ## <a name="requirements"></a>需求  
  **標頭：** atltypes.h  
   
-##  <a name="cpoint"></a>CPoint::CPoint
+##  <a name="cpoint"></a>  CPoint::CPoint
  建構 `CPoint` 物件。  
   
 ```  
@@ -142,7 +137,7 @@ CPoint ptFromDouble(dwSize);
 ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
-##  <a name="offset"></a>CPoint::Offset  
+##  <a name="offset"></a>  CPoint::Offset  
  將值加入到**x**和**y**成員`CPoint`。  
   
 ```  
@@ -167,7 +162,7 @@ void Offset(SIZE size) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
   
-##  <a name="operator_eq_eq"></a>CPoint::operator = =  
+##  <a name="operator_eq_eq"></a>  CPoint::operator = =  
  檢查兩個點之間相等。  
   
 ```  
@@ -184,7 +179,7 @@ BOOL operator==(POINT point) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]  
   
-##  <a name="operator_neq"></a>CPoint::operator ！ =  
+##  <a name="operator_neq"></a>  CPoint::operator ！ =  
  檢查兩個點之間不相等。  
   
 ```  
@@ -201,7 +196,7 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
-##  <a name="operator_add_eq"></a>CPoint::operator + =  
+##  <a name="operator_add_eq"></a>  CPoint::operator + =  
  第一個多載加入大小`CPoint`。  
   
 ```  
@@ -226,7 +221,7 @@ void operator+=(POINT point) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
   
-##  <a name="operator_-_eq"></a>CPoint::operator =  
+##  <a name="operator_-_eq"></a>  CPoint::operator =  
  第一個多載減去大小，以從`CPoint`。  
   
 ```  
@@ -251,7 +246,7 @@ void operator-=(POINT point) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
-##  <a name="operator_add"></a>CPoint::operator +  
+##  <a name="operator_add"></a>  CPoint::operator +  
  使用此運算子来位移`CPoint`由`CPoint`或`CSize`物件，或位移`CRect`由`CPoint`。  
   
 ```  
@@ -281,7 +276,7 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
-##  <a name="operator_-"></a>CPoint::operator-  
+##  <a name="operator_-"></a>  CPoint::operator-  
  使用其中一種前兩個多載減去`CPoint`或`CSize`物件從`CPoint`。  
   
 ```  
@@ -318,7 +313,7 @@ CPoint operator-() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 MDI](../../visual-cpp-samples.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [POINT 結構](../../mfc/reference/point-structure1.md)   

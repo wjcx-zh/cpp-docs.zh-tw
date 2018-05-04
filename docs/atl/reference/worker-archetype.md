@@ -1,29 +1,24 @@
 ---
-title: "背景工作原型 |Microsoft 文件"
-ms.custom: 
+title: 背景工作原型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="worker-archetype"></a>背景工作原型
 類別符合*工作者*原型提供程式碼以處理序的工作項目排入佇列的執行緒集區上。  
@@ -88,7 +83,7 @@ void Execute(
  `pOverlapped`  
  指標[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342)結構，用來建立的工作項目排入佇列的佇列。  
   
-## <a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a> WorkerArchetype::Initialize
 呼叫以初始化背景工作物件傳遞至任何要求之前`WorkerArchetype::Execute`。  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -101,7 +96,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>傳回值  
  傳回**TRUE**成功時， **FALSE**失敗。  
   
-## <a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a> WorkerArchetype::RequestType
 可處理的背景工作類別的工作項目類型的 typedef。  
   
 ```  
@@ -111,7 +106,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>備註  
  這個類型必須做的第一個參數`WorkerArchetype::Execute`和必須能夠與 ULONG_PTR 轉型。  
   
-## <a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a> WorkerArchetype::Terminate
 停止背景工作物件初始化之後的所有要求已都傳遞至呼叫`WorkerArchetype::Execute`)。  
     
 ``` 
@@ -122,7 +117,7 @@ void Terminate(void* pvParam) throw();
  `pvParam`  
  了解的背景工作類別的自訂參數。 也會傳遞至`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Archetypes](../../atl/reference/atl-archetypes.md)   
  [概念](../../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)

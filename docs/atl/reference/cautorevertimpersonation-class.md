@@ -2,11 +2,8 @@
 title: CAutoRevertImpersonation 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoRevertImpersonation
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b1982fc3c8b0d46dfd636cab63be82509fa07f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 942c446fc64bb7e4210bc82e21fc2511ae01503a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 類別
 這個類別會還原[CAccessToken](../../atl/reference/caccesstoken-class.md) nonimpersonating 狀態時離開範圍的物件。  
@@ -68,7 +63,7 @@ class CAutoRevertImpersonation
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
   
-##  <a name="attach"></a>CAutoRevertImpersonation::Attach  
+##  <a name="attach"></a>  CAutoRevertImpersonation::Attach  
  會自動模擬回復的存取權杖。  
   
 ```
@@ -82,7 +77,7 @@ void Attach(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>備註  
  這個方法應該只用於如果[CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md)物件已建立具有 NULL`CAccessToken`指標，或如果[卸離](#detach)已呼叫過。 簡單的情況下，不需要使用這個方法。  
   
-##  <a name="cautorevertimpersonation"></a>CAutoRevertImpersonation::CAutoRevertImpersonation  
+##  <a name="cautorevertimpersonation"></a>  CAutoRevertImpersonation::CAutoRevertImpersonation  
  建構 `CAutoRevertImpersonation` 物件。  
   
 ```
@@ -96,7 +91,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>備註  
  從，最好是先建立存取權杖的實際模擬也應該個別執行`CAutoRevertImpersonation`物件。 這種模擬將會自動還原當`CAutoRevertImpersonation`物件超出範圍。  
   
-##  <a name="dtor"></a>CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
+##  <a name="dtor"></a>  CAutoRevertImpersonation:: ~ CAutoRevertImpersonation  
  終結物件，並還原存取權杖模擬。  
   
 ```
@@ -106,7 +101,7 @@ CAutoRevertImpersonation(const CAccessToken* pAT) throw();
 ### <a name="remarks"></a>備註  
  還原作用中的任何目前的模擬[CAccessToken](../../atl/reference/caccesstoken-class.md)物件提供在建構或是透過[附加](#attach)方法。 如果沒有`CAccessToken`是相關聯，解構函式沒有任何作用。  
   
-##  <a name="detach"></a>CAutoRevertImpersonation::Detach  
+##  <a name="detach"></a>  CAutoRevertImpersonation::Detach  
  取消自動模擬回復。  
   
 ```
@@ -117,9 +112,9 @@ const CAccessToken* Detach() throw();
  先前關聯的位址[CAccessToken](../../atl/reference/caccesstoken-class.md)，或如果沒有關聯存在，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
- 呼叫**卸離**防止`CAutoRevertImpersonation`從還原的任何模擬目前作用中的物件[CAccessToken](../../atl/reference/caccesstoken-class.md)與此物件相關聯的物件。 `CAutoRevertImpersonation`然後可以終結時不會影響或將其重新關聯到相同或其他`CAccessToken`物件使用[附加](#attach)。  
+ 呼叫**卸離**防止`CAutoRevertImpersonation`從還原的任何模擬目前作用中的物件[CAccessToken](../../atl/reference/caccesstoken-class.md)與此物件相關聯的物件。 `CAutoRevertImpersonation` 然後可以終結時不會影響或將其重新關聯到相同或其他`CAccessToken`物件使用[附加](#attach)。  
   
-##  <a name="getaccesstoken"></a>CAutoRevertImpersonation::GetAccessToken  
+##  <a name="getaccesstoken"></a>  CAutoRevertImpersonation::GetAccessToken  
  擷取這個物件相關聯的存取語彙基元目前。  
   
 ```
@@ -132,7 +127,7 @@ const CAccessToken* GetAccessToken() throw();
 ### <a name="remarks"></a>備註  
  如果這個方法呼叫包含模擬的回復進行`CAccessToken`物件[卸離](#detach)方法應改為使用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATLSecurity 範例](../../visual-cpp-samples.md)   
  [存取權杖](http://msdn.microsoft.com/library/windows/desktop/aa374909)   
  [類別概觀](../../atl/atl-class-overview.md)

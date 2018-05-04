@@ -2,11 +2,8 @@
 title: IUnknown 實作類別 (ATL) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.Iunknown
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - IUnknown implementation classes
 ms.assetid: 47b69bb5-69d8-4a9c-84a8-329bdde2bb3f
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53d5363f6b11904e31ea0e9c6f452b2c8fa7e000
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3d67b2a7b9769acd7d6e596e4fcdf1aec30bbf74
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iunknown-implementation-classes"></a>IUnknown 實作類別
 下列類別會實作**IUnknown**和相關的方法：  
@@ -55,7 +50,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="related-articles"></a>相關文章  
  [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)   
  [彙總與類別的 Factory 巨集](../atl/reference/aggregation-and-class-factory-macros.md)   
  [COM 對應巨集](../atl/reference/com-map-macros.md)   

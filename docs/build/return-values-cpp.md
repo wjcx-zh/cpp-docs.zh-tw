@@ -1,27 +1,22 @@
 ---
-title: "傳回值 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 傳回值 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 53583524-b337-4228-a9c6-c9bf516babe8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdd02ab9c30e641ba7389923062f46dbbed534ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec5097ab22ff82883117b6d224bce9c282ac9c8a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-values-c"></a>傳回值 (C++)
 可納入 64 位元的純量傳回值將會透過 RAX 傳回，其中包括 __m64 類型。 非純量類型包括浮點數、 雙精度浮點數和向量類型，例如[__m128](../cpp/m128.md)， [__m128i](../cpp/m128i.md)， [__m128d](../cpp/m128d.md) XMM0 中傳回。 對於 RAX 或 XMM0 中傳回的值，其中未使用之位元的狀態尚未定義。  
@@ -69,5 +64,5 @@ Struct2 func4(int a, double b, int c, float d);
 // callee returns Struct2 result by value in RAX.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [呼叫慣例](../build/calling-convention.md)

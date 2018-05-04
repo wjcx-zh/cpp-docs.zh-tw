@@ -1,12 +1,9 @@
 ---
-title: "登錄巨集 |Microsoft 文件"
-ms.custom: 
+title: 登錄巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eada9ed75bd69122523350536d0757e98b31358d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9b172217f1ca7ada7d8752151126b53055df37
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-macros"></a>登錄巨集
 這些巨集會定義有用的型別程式庫和登錄設備。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **標頭：** atlcom.h  
   
     
-##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY  
  指出您要登錄程式碼中的物件，以避免 ATL 的相依性物件的符號DLL。  
   
 ```
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>  DECLARE_LIBID  
  提供方法讓取得 ATL *libid*類型程式庫。  
   
 ```
@@ -79,14 +74,14 @@ DECLARE_LIBID( libid )
 ### <a name="example"></a>範例  
  使用非屬性精靈產生的 ATL 專案必須使用這個巨集的範例。  
   
-##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>  DECLARE_NO_REGISTRY  
  使用`DECLARE_NO_REGISTRY`如果您想要避免這個巨集所在的類別的任何預設 ATL 登錄。  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>  DECLARE_REGISTRY  
  進入系統登錄中的標準類別註冊或移除系統登錄。  
   
 ```
@@ -117,9 +112,9 @@ DECLARE_REGISTRY(
 ### <a name="remarks"></a>備註  
  標準登錄包含 CLSID、 程式識別碼、 版本無關的程式識別碼、 描述字串和執行緒模型。  
   
- 當您建立的物件，或使用 ATL 加入類別精靈時，精靈會自動實作指令碼為基礎的登錄支援，並將[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)巨集，以您的檔案。 如果不想使用指令碼為基礎的登錄支援，您需要取代這個巨集與`DECLARE_REGISTRY`。 `DECLARE_REGISTRY`僅插入到登錄上面所述的五個基本按鍵。 您必須手動撰寫程式碼加入其他索引鍵插入登錄。  
+ 當您建立的物件，或使用 ATL 加入類別精靈時，精靈會自動實作指令碼為基礎的登錄支援，並將[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)巨集，以您的檔案。 如果不想使用指令碼為基礎的登錄支援，您需要取代這個巨集與`DECLARE_REGISTRY`。 `DECLARE_REGISTRY` 僅插入到登錄上面所述的五個基本按鍵。 您必須手動撰寫程式碼加入其他索引鍵插入登錄。  
   
-##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>  DECLARE_REGISTRY_APPID_RESOURCEID  
  指定自動註冊所需的資訊*appid*。  
   
 ```
@@ -141,7 +136,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="example"></a>範例  
  加入類別程式碼精靈加入 ATL 專案的類別必須使用這個巨集的範例。  
   
-##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE  
  取得包含登錄檔案的具名的資源並執行指令碼輸入到系統登錄中的物件或移除系統登錄。  
   
 ```
@@ -159,12 +154,12 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]  
   
- 如果您想要替代的取代值在執行階段的 ATL，請勿指定`DECLARE_REGISTRY_RESOURCE`或`DECLARE_REGISTRY_RESOURCEID`巨集。 相反地，建立陣列**_ATL_REGMAP_ENTRIES**結構，其中每個項目都包含變數的預留位置搭配要在執行階段取代預留位置的值。 然後呼叫[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，並將陣列傳遞。 這會將所有中的取代值**_ATL_REGMAP_ENTRIES**的註冊機構取代對應的結構。  
+ 如果您想要替代的取代值在執行階段的 ATL，請勿指定`DECLARE_REGISTRY_RESOURCE`或`DECLARE_REGISTRY_RESOURCEID`巨集。 相反地，建立陣列 **_ATL_REGMAP_ENTRIES**結構，其中每個項目都包含變數的預留位置搭配要在執行階段取代預留位置的值。 然後呼叫[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，並將陣列傳遞。 這會將所有中的取代值 **_ATL_REGMAP_ENTRIES**的註冊機構取代對應的結構。  
 
   
  如需可置換的參數和指令碼的詳細資訊，請參閱文章[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。  
   
-##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>  DECLARE_REGISTRY_RESOURCEID  
  與相同[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)不同之處在於它會使用精靈產生**UINT**來識別資源，而不是字串名稱。  
   
 ```
@@ -182,10 +177,10 @@ DECLARE_REGISTRY_RESOURCEID( x )
   
  [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]  
   
- 如果您想要替代的取代值在執行階段的 ATL，請勿指定`DECLARE_REGISTRY_RESOURCE`或`DECLARE_REGISTRY_RESOURCEID`巨集。 相反地，建立陣列**_ATL_REGMAP_ENTRIES**結構，其中每個項目都包含變數的預留位置搭配要在執行階段取代預留位置的值。 然後呼叫[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，並將陣列傳遞。 這會將所有中的取代值**_ATL_REGMAP_ENTRIES**的註冊機構取代對應的結構。  
+ 如果您想要替代的取代值在執行階段的 ATL，請勿指定`DECLARE_REGISTRY_RESOURCE`或`DECLARE_REGISTRY_RESOURCEID`巨集。 相反地，建立陣列 **_ATL_REGMAP_ENTRIES**結構，其中每個項目都包含變數的預留位置搭配要在執行階段取代預留位置的值。 然後呼叫[CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)或[CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources)，並將陣列傳遞。 這會將所有中的取代值 **_ATL_REGMAP_ENTRIES**的註冊機構取代對應的結構。  
 
   
  如需可置換的參數和指令碼的詳細資訊，請參閱文章[ATL 登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集](../../atl/reference/atl-macros.md)

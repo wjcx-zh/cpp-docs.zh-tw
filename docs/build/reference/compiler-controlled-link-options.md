@@ -1,13 +1,10 @@
 ---
-title: "編譯器控制的 LINK 選項 |Microsoft 文件"
-ms.custom: 
+title: 編譯器控制的 LINK 選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc899fc7f1fc8c1805648e72e14ef13853841c90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d99a05b5f9c4d97fd42328a41ad3fe054ab42cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 CL 編譯器會自動呼叫連結，除非您指定 /c 選項。 CL 提供某些控制連結器，透過命令列選項和引數。 下表摘要說明 CL 影響連結的功能。  
@@ -47,7 +42,7 @@ CL 編譯器會自動呼叫連結，除非您指定 /c 選項。 CL 提供某些
 |/LDd|傳遞 /DLL|  
 |/link|將命令列的其餘部分傳遞至連結|  
 |/MD 或 /MT|.Obj 檔中將預設程式庫名稱|  
-|/Mdd 或 /MTd|.Obj 檔中將預設程式庫名稱。 定義符號**_DEBUG**|  
+|/Mdd 或 /MTd|.Obj 檔中將預設程式庫名稱。 定義符號 **_DEBUG**|  
 |/nologo|傳遞 /NOLOGO|  
 |/Zd|傳遞 /DEBUG|  
 |/Zi 或 /Z7|傳遞 /DEBUG|  
@@ -55,6 +50,6 @@ CL 編譯器會自動呼叫連結，除非您指定 /c 選項。 CL 提供某些
   
  如需詳細資訊，請參閱[編譯器選項](../../build/reference/compiler-options.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

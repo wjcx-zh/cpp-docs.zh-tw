@@ -1,13 +1,10 @@
 ---
-title: "const 和 volatile 指標 |Microsoft 文件"
-ms.custom: 
+title: const 和 volatile 指標 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68089c80528265a4375767d9f0a744cb95cb970b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4e76348a4559d68c0c7dacd91d21c39c5b0d8a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="const-and-volatile-pointers"></a>const 和 volatile 指標
 [Const](../cpp/const-cpp.md)和[volatile](../cpp/volatile-cpp.md)關鍵字會改變指標的處理方式。 **Const**關鍵字會指定在初始化之後，無法修改指標; 指標受到保護以避免之後修改。  
@@ -100,7 +95,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  上述陳述式會宣告函式， [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中有兩的三個引數的類型指標`char`。 因為引數傳址方式傳遞而不依據值、 函式會是可用來修改這兩`strDestination`和`strSource`如果`strSource`未宣告為**const**。 宣告`strSource`為**const**確保呼叫端`strSource`式呼叫的函式不能變更。  
   
 > [!NOTE]
->  因為沒有標準轉換轉換*typename*  **\*** 至**const** *typename*  **\***，它是合法的類型引數傳遞**char \*** 至[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 不過，反向並不成立沒有隱含轉換存在移除**const**從物件或指標的屬性。  
+>  因為沒有標準轉換轉換*typename* **\*** 至**const** *typename*  **\***，它是合法的類型引數傳遞**char \*** 至[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 不過，反向並不成立沒有隱含轉換存在移除**const**從物件或指標的屬性。  
   
  A **const**給定類型的指標可以指派給相同類型的指標。 不過，指標的不是**const**無法指派給**const**指標。 下列程式碼顯示正確和不正確的指派：  
   
@@ -137,5 +132,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指標](../cpp/pointers-cpp.md)

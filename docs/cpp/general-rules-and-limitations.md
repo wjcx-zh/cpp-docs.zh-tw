@@ -2,26 +2,21 @@
 title: 一般規則和限制 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f92844e993671a3423c04523ccf4e03f7f7e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218bd2fb58ccc4d3a3c2e1d297be930350577d18
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="general-rules-and-limitations"></a>一般規則和限制
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果您套用`dllexport`未標示為基底類別的一般類別`dllexport`，編譯器會產生 C4275。  
   
-     如果基底類別是類別樣板的特製化，則編譯器會產生相同的警告。 若要解決這個問題，請為基底類別加上 `dllexport` 標記。 類別樣板的特製化的問題是放置**__declspec （dllexport)**; 不允許您標記類別樣板。 相反地，您可以明確的具現化類別樣板，以及明確地使用 `dllexport` 標記具現化。 例如:   
+     如果基底類別是類別樣板的特製化，則編譯器會產生相同的警告。 若要解決這個問題，請為基底類別加上 `dllexport` 標記。 類別樣板的特製化的問題是放置 **__declspec （dllexport)**; 不允許您標記類別樣板。 相反地，您可以明確的具現化類別樣板，以及明確地使用 `dllexport` 標記具現化。 例如:   
   
     ```  
     template class __declspec(dllexport) B<int>;  
@@ -98,5 +93,5 @@ ms.lasthandoff: 12/21/2017
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [dllexport、dllimport](../cpp/dllexport-dllimport.md)

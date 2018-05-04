@@ -2,11 +2,8 @@
 title: CLocalHeap 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CLocalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5307e0e6e8925bcbbfa7a03d0140c3a5a08baff9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 299c672d65d7568539473dfc284833c2583a2220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clocalheap-class"></a>CLocalHeap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) Win32 本機堆積函式的使用。  
@@ -56,7 +51,7 @@ class CLocalHeap : public IAtlMemMgr
 |[Clocalheap:: Reallocate](#reallocate)|呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。|  
   
 ## <a name="remarks"></a>備註  
- `CLocalHeap`會實作使用 Win32 本機堆積函式的記憶體配置函式。  
+ `CLocalHeap` 會實作使用 Win32 本機堆積函式的記憶體配置函式。  
   
 > [!NOTE]
 >  本機堆積函式會低於其他記憶體管理函式，但並未提供許多功能。 因此，新的應用程式應該使用[堆積函式](http://msdn.microsoft.com/library/windows/desktop/aa366711)。 在使用這些項目[CWin32Heap](../../atl/reference/cwin32heap-class.md)類別。  
@@ -72,7 +67,7 @@ class CLocalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>需求  
  **標頭：** atlmem.h  
   
-##  <a name="allocate"></a>Clocalheap:: Allocate  
+##  <a name="allocate"></a>  Clocalheap:: Allocate  
  呼叫這個方法來配置記憶體區塊。  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  使用實作[LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723)和旗標參數**LMEM_FIXED**。  
   
-##  <a name="free"></a>Clocalheap:: Free  
+##  <a name="free"></a>  Clocalheap:: Free  
  呼叫此方法以釋放此記憶體管理員所配置的記憶體區塊。  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>備註  
  使用實作[LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730)。  
   
-##  <a name="getsize"></a>CLocalHeap::GetSize  
+##  <a name="getsize"></a>  CLocalHeap::GetSize  
  呼叫這個方法，取得配置此記憶體管理員所配置的記憶體區塊的大小。  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>備註  
  使用實作[LocalSize](http://msdn.microsoft.com/library/windows/desktop/aa366745)。  
   
-##  <a name="reallocate"></a>Clocalheap:: Reallocate  
+##  <a name="reallocate"></a>  Clocalheap:: Reallocate  
  呼叫這個方法來重新配置此記憶體管理員所配置的記憶體。  
   
 ```
@@ -144,7 +139,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
   
  使用實作[LocalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [CComHeap 類別](../../atl/reference/ccomheap-class.md)   
  [CWin32Heap 類別](../../atl/reference/cwin32heap-class.md)   

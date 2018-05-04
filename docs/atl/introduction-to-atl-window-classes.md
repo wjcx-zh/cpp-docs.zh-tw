@@ -1,29 +1,24 @@
 ---
-title: "ATL 視窗類別簡介 |Microsoft 文件"
-ms.custom: 
+title: ATL 視窗類別簡介 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636fe8aa87b6880f5cda77fb46fc481d99d78a81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea9b275831aee3ea96da1036019db07f9e2dfc93
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-atl-window-classes"></a>ATL 視窗類別簡介
 下列的 ATL 類別的實作和管理 windows 設計的：  
@@ -50,6 +45,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [CWinTraits](../atl/reference/cwintraits-class.md)和[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)提供標準化的特性，ATL 視窗物件的簡單方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [視窗類別](../atl/atl-window-classes.md)
 

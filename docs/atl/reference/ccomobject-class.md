@@ -1,12 +1,9 @@
 ---
-title: "Ccomobject< 類別 |Microsoft 文件"
-ms.custom: 
+title: Ccomobject< 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObject
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobject-class"></a>Ccomobject< 類別
 這個類別會實作**IUnknown**非彙總的物件。  
@@ -116,7 +111,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- 此靜態函式可讓您建立新**Ccomobject< <** `Base`  **>** 物件，無需額外[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 此靜態函式可讓您建立新**Ccomobject< <** `Base` **>** 物件，無需額外[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -124,7 +119,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>參數  
  `pp`  
- [out]指標**Ccomobject< <** `Base`  **>** 指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
+ [out]指標**Ccomobject< <** `Base` **>** 指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  

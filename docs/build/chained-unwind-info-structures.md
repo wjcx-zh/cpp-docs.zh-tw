@@ -1,27 +1,22 @@
 ---
-title: "鏈結的回溯資訊結構 |Microsoft 文件"
-ms.custom: 
+title: 鏈結的回溯資訊結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 176835bf-f118-45d9-9128-9db4b7571864
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87469a381c038462549d20b105b791ddb17b1656
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chained-unwind-info-structures"></a>鏈結的回溯資訊結構
 如果設定 UNW_FLAG_CHAININFO 旗標，則回溯資訊結構是一個次要且共用的例外狀況處理常式/鏈結-資訊位址欄位會包含主要的回溯資訊。 下列程式碼擷取主要回溯的詳細資訊，但前提`unwindInfo`是具有 UNW_FLAG_CHAININFO 結構的旗標組。  
@@ -36,5 +31,5 @@ PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode
   
  已設定的 UNW_FLAG_CHAININFO UNWIND_INFO 項目可以包含其 UNWIND_INFO 項目也有設定 （多個壓縮） UNW_FLAG_CHAININFO RUNTIME_FUNCTION 項目。 最後，鏈結的回溯資訊指標將到達 UNWIND_INFO 項目有 UNW_FLAG_CHAININFO 清除。這是主要 UNWIND_INFO 項目，指向實際的程序進入點。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [回溯資料以進行例外狀況處理與偵錯工具支援](../build/unwind-data-for-exception-handling-debugger-support.md)

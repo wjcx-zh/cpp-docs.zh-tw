@@ -1,13 +1,10 @@
 ---
-title: "測試修改過的 ATL DHTML 控制項 |Microsoft 文件"
-ms.custom: 
+title: 測試修改過的 ATL DHTML 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5ecb8526ec82e0f2d18c5306a94dd7f0160803b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b140788cd409aa5a11f93689e96fa40c1a167dfe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>測試修改過的 ATL DHTML 控制項
 試試看您新的控制項，以查看它如何運作。  
@@ -54,6 +49,6 @@ ms.lasthandoff: 12/21/2017
   
  若要深入了解各種項目和 ATL DHTML 控制項所組成的檔案，請參閱[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
 

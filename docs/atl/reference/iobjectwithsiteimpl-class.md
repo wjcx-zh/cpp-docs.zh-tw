@@ -1,12 +1,9 @@
 ---
-title: "IObjectWithSiteImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IObjectWithSiteImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 類別
 這個類別會提供讓物件與其站台通訊的方法。  
@@ -66,7 +61,7 @@ template <class T>
 ## <a name="remarks"></a>備註  
  [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)介面讓物件與其站台通訊。 類別`IObjectWithSiteImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
   
- `IObjectWithSiteImpl`指定兩種方法。 用戶端會先呼叫`SetSite`，傳遞站台的**IUnknown**指標。 此指標會儲存在物件內，稍後可以透過呼叫擷取`GetSite`。  
+ `IObjectWithSiteImpl` 指定兩種方法。 用戶端會先呼叫`SetSite`，傳遞站台的**IUnknown**指標。 此指標會儲存在物件內，稍後可以透過呼叫擷取`GetSite`。  
   
  一般而言，衍生您的類別從`IObjectWithSiteImpl`當您建立的物件，不是控制項。 控制項，衍生您的類別從[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)，這樣也會提供站台的指標。 不是您的類別衍生自`IObjectWithSiteImpl`和`IOleObjectImpl`。  
   
@@ -78,7 +73,7 @@ template <class T>
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  查詢所識別的介面指標的站台`riid`。  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  請參閱[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) Windows SDK 中。  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  管理站台的**IUnknown**指標。  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_spUnkSite`一開始會接收這個指標透過呼叫[SetSite](#setsite)。  
+ `m_spUnkSite` 一開始會接收這個指標透過呼叫[SetSite](#setsite)。  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  提供的物件與站台的**IUnknown**指標。  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  提供的物件與站台的**IUnknown**指標。  
   
 ```
@@ -126,5 +121,5 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ### <a name="remarks"></a>備註  
  請參閱[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

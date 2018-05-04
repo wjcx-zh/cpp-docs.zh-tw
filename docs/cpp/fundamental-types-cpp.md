@@ -1,12 +1,9 @@
 ---
-title: "基本類型 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 基本類型 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>基本類型 (C++)
 C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料類型能夠處理整數。 浮點類型可以指定可能有小數部分的值。  
@@ -85,9 +80,9 @@ C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料�
 ||`bool`|`bool` 類型是可以具有 `true` 或 `false`兩個值之一的整數類資料類型。 它的大小並未指定。|  
 ||`short`|`short` `int` (或只是 `short`) 類型是大於或等於 `char`類型大小，但短於或等於 `int`類型大小的整數類資料類型。<br /><br /> `short` 類型的物件可以宣告為 `signed` `short` 或 `unsigned short`。 `Signed short` 與 `short`同義。|  
 ||`int`|`int` 類型是大於或等於 `short` `int`類型大小，但短於或等於 `long`類型大小的整數類資料類型。<br /><br /> `int` 類型的物件可以宣告為 `signed` `int` 或 `unsigned` `int`。 `Signed` `int` 與 `int`同義。|  
-||`__int8`、 `__int16`、 `__int32`、 `__int64`|可調整大小的整數 `__int n`，其中 `n` 是整數變數的大小 (以位元為單位)。 `__int8`、 `__int16`、 `__int32` 和 `__int64` 是 Microsoft 特定的關鍵字。 並非所有類型都都適用於所有架構。 `(__int128`不支援。）|  
+||`__int8`、 `__int16`、 `__int32`、 `__int64`|可調整大小的整數 `__int n`，其中 `n` 是整數變數的大小 (以位元為單位)。 `__int8`、 `__int16`、 `__int32` 和 `__int64` 是 Microsoft 特定的關鍵字。 並非所有類型都都適用於所有架構。 `(__int128` 不支援。）|  
 ||`long`|`long` (或 `long` `int`) 類型是大於或等於 `int`類型大小的整數類資料類型。<br /><br /> `long` 類型的物件可以宣告為 `signed` `long` 或 `unsigned` `long`。 `Signed` `long` 與 `long`同義。|  
-||`long` `long`|大於不帶正負號的 `long`。<br /><br /> `long long` 類型的物件可以宣告為 `signed` `long long` 或 `unsigned` `long long`。 `signed``long long`同義`long long`。|  
+||`long` `long`|大於不帶正負號的 `long`。<br /><br /> `long long` 類型的物件可以宣告為 `signed` `long long` 或 `unsigned` `long long`。 `signed` `long long` 是的同義字`long long`。|  
 ||`wchar_t`, `__wchar_t`|`wchar_t` 類型的變數指定寬字元或多位元組字元類型。 根據預設， `wchar_t` 是原生類型，但是您可以使用 [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ，將 `wchar_t` 設為 `unsigned short`的 typedef。 `__wchar_t` 是 Microsoft 特定的類型，與原生 `wchar_t` 類型同義。<br /><br /> 在字元或字串常數之前使用 L 前置詞，指定寬字元類型。|  
 |浮點|`float`|`float` 類型是最小的浮點類型。|  
 ||`double`|`double` 類型是大於或等於 `float`類型，但短於或等於 `long` `double`類型大小的浮點類型。<br /><br /> Microsoft 特定的： `long double` 和 `double` 的表示法相同。 不過， `long double` 和 `double` 是不同的類型。|  
@@ -112,5 +107,5 @@ C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料�
   
  如需類型轉換的詳細資訊，請參閱 [標準轉換](../cpp/standard-conversions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料類型範圍](../cpp/data-type-ranges.md)

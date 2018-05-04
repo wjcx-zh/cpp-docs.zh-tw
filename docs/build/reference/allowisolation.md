@@ -1,13 +1,10 @@
 ---
-title: "-ALLOWISOLATION |Microsoft 文件"
-ms.custom: 
+title: -ALLOWISOLATION |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ALLOWISOLATION
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ba0295d73e51e28fbdd953d7d9a3a2ae5131c27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cb92a7f31d48dad4a7fb608703c71ccc661e176
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 指定資訊清單查閱的行為。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  可執行檔停用隔離時，Windows 載入器並不會試圖尋找新建立處理序的應用程式資訊清單。 新的處理序沒有預設的啟用內容，，即使可執行檔本身中的資訊清單，或如果沒有資訊清單具有名稱*可執行檔名稱*.exe.manifest。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [EDITBIN 選項](../../build/reference/editbin-options.md)   
  [/ALLOWISOLATION （資訊清單查閱）](../../build/reference/allowisolation-manifest-lookup.md)   
  [資訊清單檔案參考](http://msdn.microsoft.com/library/aa375632.aspx)

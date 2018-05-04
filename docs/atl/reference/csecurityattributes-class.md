@@ -1,12 +1,9 @@
 ---
-title: "CSecurityAttributes 類別 |Microsoft 文件"
-ms.custom: 
+title: CSecurityAttributes 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSecurityAttributes
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 918f90c9f04736eb2328d989e21b7b9997edab86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03bda174fb85fa6857e22b851b93bcf1b3192716
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 類別
 這個類別是安全性屬性結構的精簡型包裝函式。  
@@ -69,7 +64,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h  
   
-##  <a name="csecurityattributes"></a>CSecurityAttributes::CSecurityAttributes  
+##  <a name="csecurityattributes"></a>  CSecurityAttributes::CSecurityAttributes  
  建構函式。  
   
 ```
@@ -84,7 +79,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
  `bInheritsHandle`  
  指定是否在建立新處理序時繼承傳回的控制代碼。 如果此成員為 true，新處理序會繼承控制代碼。  
   
-##  <a name="set"></a>Csecurityattributes:: Set  
+##  <a name="set"></a>  Csecurityattributes:: Set  
  呼叫此方法以設定的屬性`CSecurityAttributes`物件。  
   
 ```
@@ -101,7 +96,7 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 ### <a name="remarks"></a>備註  
  這個方法可由建構函式來初始化`CSecurityAttributes`物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
  [SECURITY ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)   
  [安全性描述元](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

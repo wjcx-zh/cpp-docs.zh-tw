@@ -1,12 +1,9 @@
 ---
-title: "CComCurrency 類別 |Microsoft 文件"
-ms.custom: 
+title: CComCurrency 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCurrency
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3ef0cdc45d4f3b84c738e5eec24d76a1f9b7fe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 847cbe230e14975e883c42f52538ba3863d505c4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency 類別
 `CComCurrency` 有方法和運算子可建立及管理 CURRENCY 物件。  
@@ -92,7 +87,7 @@ class CComCurrency
 |[CComCurrency::m_currency](#m_currency)|您的類別執行個體建立的 `CURRENCY` 變數。|  
   
 ## <a name="remarks"></a>備註  
- `CComCurrency`是包裝函式**貨幣**資料型別。 **貨幣**實作以 10,000 調整的 8 位元組二補數整數值。 這得出一個定點數字，小數點左邊 15 位數，小數點右邊 4 位數。 **貨幣**資料類型是非常有用，涉及金額的計算或的任何固定點計算正確性很重要。  
+ `CComCurrency` 是包裝函式**貨幣**資料型別。 **貨幣**實作以 10,000 調整的 8 位元組二補數整數值。 這得出一個定點數字，小數點左邊 15 位數，小數點右邊 4 位數。 **貨幣**資料類型是非常有用，涉及金額的計算或的任何固定點計算正確性很重要。  
   
  **CComCurrency**包裝函式實作此固定點類型的算術、 指派及比較作業。 已選取支援的應用程式來控制固定點計算期間可能發生的四捨五入錯誤。  
   
@@ -110,7 +105,7 @@ class CComCurrency
 ## <a name="requirements"></a>需求  
  **標頭：** atlcur.h  
   
-##  <a name="ccomcurrency"></a>CComCurrency::CComCurrency  
+##  <a name="ccomcurrency"></a>  CComCurrency::CComCurrency  
  建構函式。  
   
 ```
@@ -163,9 +158,9 @@ explicit CComCurrency(LPCSTR szSrc);
   
  發生錯誤時，例如溢位時，缺少空的例外狀況規格的建構函式 ( **throw （)**) 呼叫`AtlThrow`，描述錯誤的 HRESULT。  
   
- 使用浮點數或雙精度浮點值時指派的值，請注意， **ccomcurrency （10.50)**相當於**CComCurrency(10,5000)**而非**CComCurrency(10,50)**.  
+ 使用浮點數或雙精度浮點值時指派的值，請注意， **ccomcurrency （10.50)** 相當於**CComCurrency(10,5000)** 而非**CComCurrency(10,50)**.  
   
-##  <a name="getcurrencyptr"></a>CComCurrency::GetCurrencyPtr  
+##  <a name="getcurrencyptr"></a>  CComCurrency::GetCurrencyPtr  
  傳回 `m_currency` 資料成員的位址。  
   
 ```
@@ -175,7 +170,7 @@ CURRENCY* GetCurrencyPtr() throw();
 ### <a name="return-value"></a>傳回值  
  傳回的位址`m_currency`資料成員  
   
-##  <a name="getfraction"></a>Ccomcurrency:: Getfraction  
+##  <a name="getfraction"></a>  Ccomcurrency:: Getfraction  
  呼叫此方法以傳回的小數部分`CComCurrency`物件。  
   
 ```
@@ -186,12 +181,12 @@ SHORT GetFraction() const;
  傳回的小數部分`m_currency`資料成員。  
   
 ### <a name="remarks"></a>備註  
- 小數部分為 4 位數之間的整數值-9999 ( **CY_MIN_FRACTION**) 和 + 9999 ( **CY_MAX_FRACTION**)。 `GetFraction`傳回這個值以 10000 倍 ( **CY_SCALE**)。 值**CY_MIN_FRACTION**， **CY_MAX_FRACTION**，和**CY_SCALE** atlcur.h 中定義。  
+ 小數部分為 4 位數之間的整數值-9999 ( **CY_MIN_FRACTION**) 和 + 9999 ( **CY_MAX_FRACTION**)。 `GetFraction` 傳回這個值以 10000 倍 ( **CY_SCALE**)。 值**CY_MIN_FRACTION**， **CY_MAX_FRACTION**，和**CY_SCALE** atlcur.h 中定義。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#50](../../atl/codesnippet/cpp/ccomcurrency-class_1.cpp)]  
   
-##  <a name="getinteger"></a>CComCurrency::GetInteger  
+##  <a name="getinteger"></a>  CComCurrency::GetInteger  
  呼叫此方法來取得的整數部分`CComCurrency`物件。  
   
 ```
@@ -204,7 +199,7 @@ LONGLONG GetInteger() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#51](../../atl/codesnippet/cpp/ccomcurrency-class_2.cpp)]  
   
-##  <a name="m_currency"></a>CComCurrency::m_currency  
+##  <a name="m_currency"></a>  CComCurrency::m_currency  
  **貨幣**資料成員。  
   
 ```
@@ -214,7 +209,7 @@ CURRENCY m_currency;
 ### <a name="remarks"></a>備註  
  這個成員會保存存取，且此類別的方法來操作的貨幣。  
   
-##  <a name="operator_-"></a>CComCurrency::operator-  
+##  <a name="operator_-"></a>  CComCurrency::operator-  
  此運算子用在 `CComCurrency` 物件上執行減法。  
   
 ```
@@ -232,7 +227,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]  
   
-##  <a name="operator_neq"></a>CComCurrency::operator ！ =  
+##  <a name="operator_neq"></a>  CComCurrency::operator ！ =  
  此運算子比較兩個物件不相等。  
   
 ```
@@ -249,7 +244,7 @@ bool operator!= (const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#56](../../atl/codesnippet/cpp/ccomcurrency-class_4.cpp)]  
   
-##  <a name="operator_star"></a>CComCurrency::operator *  
+##  <a name="operator_star"></a>  CComCurrency::operator *  
  此運算子用在 `CComCurrency` 物件上執行乘法。  
   
 ```
@@ -270,7 +265,7 @@ CComCurrency operator*(const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#57](../../atl/codesnippet/cpp/ccomcurrency-class_5.cpp)]  
   
-##  <a name="operator_star_eq"></a>CComCurrency::operator * =  
+##  <a name="operator_star_eq"></a>  CComCurrency::operator * =  
  此運算子用在 `CComCurrency` 物件上執行乘法並指派結果。  
   
 ```
@@ -291,7 +286,7 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#58](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]  
   
-##  <a name="operator_div"></a>CComCurrency::operator /  
+##  <a name="operator_div"></a>  CComCurrency::operator /  
  此運算子用在 `CComCurrency` 物件上執行除法。  
   
 ```
@@ -308,7 +303,7 @@ CComCurrency operator/(long nOperand) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]  
   
-##  <a name="operator_div_eq"></a>CComCurrency::operator / =  
+##  <a name="operator_div_eq"></a>  CComCurrency::operator / =  
  此運算子用在 `CComCurrency` 物件上執行除法並指派結果。  
   
 ```
@@ -325,7 +320,7 @@ const CComCurrency& operator/= (long nOperand);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#60](../../atl/codesnippet/cpp/ccomcurrency-class_8.cpp)]  
   
-##  <a name="operator_add"></a>CComCurrency::operator +  
+##  <a name="operator_add"></a>  CComCurrency::operator +  
  此運算子用在 `CComCurrency` 物件上執行加法。  
   
 ```
@@ -342,7 +337,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#61](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]  
   
-##  <a name="operator_add_eq"></a>CComCurrency::operator + =  
+##  <a name="operator_add_eq"></a>  CComCurrency::operator + =  
  此運算子用在 `CComCurrency` 物件上執行加法並指派結果給目前物件。  
   
 ```
@@ -359,7 +354,7 @@ const CComCurrency& operator+= (const CComCurrency& cur);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#62](../../atl/codesnippet/cpp/ccomcurrency-class_10.cpp)]  
   
-##  <a name="operator_lt"></a>CComCurrency::operator&lt;  
+##  <a name="operator_lt"></a>  CComCurrency::operator &lt;  
  此運算子比較兩個 `CComCurrency` 物件來判斷何者較小。  
   
 ```
@@ -376,7 +371,7 @@ bool operator<(const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#63](../../atl/codesnippet/cpp/ccomcurrency-class_11.cpp)]  
   
-##  <a name="operator_lt_eq"></a>CComCurrency::operator&lt;=  
+##  <a name="operator_lt_eq"></a>  CComCurrency::operator &lt;=  
  此運算子比較兩個 `CComCurrency` 物件來判斷是否相等或何者較小。  
   
 ```
@@ -393,7 +388,7 @@ bool operator<= (const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#64](../../atl/codesnippet/cpp/ccomcurrency-class_12.cpp)]  
   
-##  <a name="operator_eq"></a>CComCurrency::operator =  
+##  <a name="operator_eq"></a>  CComCurrency::operator =  
  此運算子將 `CComCurrency` 物件指派給新的值。  
   
 ```
@@ -417,7 +412,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
  `cySrc`  
  類型的變數**貨幣**。  
   
- *sSrc*， `fSrc`， `lSrc`， *bSrc*， *usSrc*， `dSrc`， *cSrc*， *ulSrc*，`dSrc`  
+ *sSrc*， `fSrc`， `lSrc`， *bSrc*， *usSrc*， `dSrc`， *cSrc*， *ulSrc*， `dSrc`  
  若要指派給數值`CComCurrency`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -426,7 +421,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]  
   
-##  <a name="operator_-_eq"></a>CComCurrency::operator =  
+##  <a name="operator_-_eq"></a>  CComCurrency::operator =  
  此運算子用在 `CComCurrency` 物件上執行減法並指派結果。  
   
 ```
@@ -443,7 +438,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#66](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]  
   
-##  <a name="operator_eq_eq"></a>CComCurrency::operator = =  
+##  <a name="operator_eq_eq"></a>  CComCurrency::operator = =  
  此運算子比較兩個 `CComCurrency` 物件是否相等。  
   
 ```
@@ -460,7 +455,7 @@ bool operator== (const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#67](../../atl/codesnippet/cpp/ccomcurrency-class_15.cpp)]  
   
-##  <a name="operator_gt"></a>CComCurrency::operator&gt;  
+##  <a name="operator_gt"></a>  CComCurrency::operator &gt;  
  此運算子比較兩個 `CComCurrency` 物件來判斷何者較大。  
   
 ```
@@ -477,7 +472,7 @@ bool operator>(const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#68](../../atl/codesnippet/cpp/ccomcurrency-class_16.cpp)]  
   
-##  <a name="operator_gt_eq"></a>CComCurrency::operator&gt;=  
+##  <a name="operator_gt_eq"></a>  CComCurrency::operator &gt;=  
  此運算子比較兩個 `CComCurrency` 物件來判斷是否相等或何者較大。  
   
 ```
@@ -494,7 +489,7 @@ bool operator>= (const CComCurrency& cur) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#69](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]  
   
-##  <a name="operator_currency"></a>CComCurrency::operator 貨幣  
+##  <a name="operator_currency"></a>  CComCurrency::operator 貨幣  
  這些運算子可用來轉換`CComCurrency`物件**貨幣**資料型別。  
   
 ```  
@@ -508,7 +503,7 @@ operator const CURRENCY&() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#70](../../atl/codesnippet/cpp/ccomcurrency-class_18.cpp)]  
   
-##  <a name="round"></a>CComCurrency::Round  
+##  <a name="round"></a>  CComCurrency::Round  
  呼叫此方法以捨入至指定的小數位數的貨幣。  
   
 ```
@@ -525,7 +520,7 @@ HRESULT Roundint nDecimals);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#52](../../atl/codesnippet/cpp/ccomcurrency-class_19.cpp)]  
   
-##  <a name="setfraction"></a>CComCurrency::SetFraction  
+##  <a name="setfraction"></a>  CComCurrency::SetFraction  
  呼叫此方法以設定 `CComCurrency` 物件的小數部分。  
   
 ```
@@ -542,7 +537,7 @@ HRESULT SetFraction(SHORT nFraction);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#53](../../atl/codesnippet/cpp/ccomcurrency-class_20.cpp)]  
   
-##  <a name="setinteger"></a>CComCurrency::SetInteger  
+##  <a name="setinteger"></a>  CComCurrency::SetInteger  
  呼叫此方法以設定 `CComCurrency` 物件的整數部分。  
   
 ```
@@ -553,7 +548,7 @@ HRESULT SetInteger(LONGLONG nInteger);
  `nInteger`  
  要指派給整數部分值`m_currency`資料成員。 正負號的整數部分必須符合現有的小數部分的正負號。  
   
- `nInteger`必須在範圍內**CY_MIN_INTEGER**至**CY_MAX_INTEGER** （含)。 Atlcur.h 中定義這些值。  
+ `nInteger` 必須在範圍內**CY_MIN_INTEGER**至**CY_MAX_INTEGER** （含)。 Atlcur.h 中定義這些值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回`S_OK`上成功或錯誤`HRESULT`失敗。  
@@ -561,7 +556,7 @@ HRESULT SetInteger(LONGLONG nInteger);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#54](../../atl/codesnippet/cpp/ccomcurrency-class_21.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [COleCurrency 類別](../../mfc/reference/colecurrency-class.md)   
  [貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)   
  [類別概觀](../../atl/atl-class-overview.md)

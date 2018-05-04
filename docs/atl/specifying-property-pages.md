@@ -1,13 +1,10 @@
 ---
-title: "指定屬性頁 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 指定屬性頁 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - ISpecifyPropertyPages
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ISpecifyPropertyPages method
 - property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8985499c76a7dc65523a5c2904bcb774a4364d41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8d4cbeaa8ea9a57f9287f2d2fe78c61884ba4a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-property-pages"></a>指定屬性頁
 當您建立 ActiveX 控制項時，您通常要與屬性頁，可以用來設定控制項的屬性產生關聯。 控制容器使用**ISpecifyPropertyPages**介面，以找出哪些屬性頁面可以用來設定控制項的屬性。 您必須實作此介面上您的控制項。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性頁](../atl/atl-com-property-pages.md)   
  [ATLPages 範例](../visual-cpp-samples.md)
 

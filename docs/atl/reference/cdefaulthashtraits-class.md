@@ -1,12 +1,9 @@
 ---
-title: "CDefaultHashTraits 類別 |Microsoft 文件"
-ms.custom: 
+title: CDefaultHashTraits 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2407ffdd5d8ea327cd4669f2c33ccda5e0246d6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 類別
 這個類別提供靜態函式來計算雜湊值。  
@@ -59,7 +54,7 @@ class CDefaultHashTraits
 ## <a name="requirements"></a>需求  
  **標頭：** atlcoll.h  
   
-##  <a name="hash"></a>CDefaultHashTraits::Hash  
+##  <a name="hash"></a>  CDefaultHashTraits::Hash  
  呼叫此函式來計算雜湊值的指定項目。  
   
 ```
@@ -76,5 +71,5 @@ static ULONG Hash(const T& element) throw();
 ### <a name="remarks"></a>備註  
  預設雜湊演算法是非常簡單： 傳回的值是項目數目。 如果需要更複雜的演算法，則會覆寫這個函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

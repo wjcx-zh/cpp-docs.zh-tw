@@ -1,27 +1,22 @@
 ---
-title: "ATL 公用程式參考 |Microsoft 文件"
-ms.custom: 
+title: ATL 公用程式參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b802d8764dda321e2e313f793f4f2e4745dbcc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-utilities-reference"></a>ATL 公用程式參考
 ATL 提供程式碼操作的路徑和 Url 的形式[CPathT](../atl/reference/cpatht-class.md)和[CUrl](../atl/reference/curl-class.md)。 執行緒集區[CThreadPool](../atl/reference/cthreadpool-class.md)，可用於您的應用程式。 Atlpath.h 和 atlutil.h 中可以找到此程式碼。  
@@ -104,6 +99,6 @@ ATL 提供程式碼操作的路徑和 Url 的形式[CPathT](../atl/reference/cpa
 |[ATLPath::UnquoteSpaces](../atl/reference/atl-path-functions.md#unquotespaces)|此函式是多載包裝函式[PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)。 |  
   
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面元件](../atl/atl-com-desktop-components.md)

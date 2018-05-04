@@ -1,12 +1,9 @@
 ---
-title: "加入 ATL OLE DB 消費者 |Microsoft 文件"
-ms.custom: 
+title: 加入 ATL OLE DB 消費者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: defc933014bd287eb48f53635efba12a40960711
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b16c84c0dc2c921722c4c80a1e2bdf0e091d9c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>加入 ATL OLE DB 消費者
 使用此精靈將 ATL OLE DB 取用者加入至專案。 ATL OLE DB 取用者包含 OLE DB 存取子類別和資料繫結的必要存取資料來源。 專案必須建立當做 ATL COM 應用程式，或包含 ATL 支援 （這會自動新增 ATL OLE DB 消費者精靈） 的 MFC 或 Win32 應用程式。  
@@ -44,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
 4.  按一下**完成**關閉精靈。 新建立的 OLE DB 取用者程式碼會插入專案中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

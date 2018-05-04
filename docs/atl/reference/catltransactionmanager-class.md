@@ -2,11 +2,8 @@
 title: CAtlTransactionManager 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 02ab9cd6f8867f9e6bc9d81ff825e8fe8f7b57d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 類別
 CAtlTransactionManager 類別提供的核心交易管理員 (KTM) 的函式的包裝函式。  
@@ -92,7 +87,7 @@ class CAtlTransactionManager;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[m_bFallback](#m_bfallback)|`TRUE`如果支援此後援。`FALSE`否則。|  
+|[m_bFallback](#m_bfallback)|`TRUE` 如果支援此後援。`FALSE`否則。|  
 |[m_hTransaction](#m_htransaction)|交易控制代碼。|  
   
 ## <a name="remarks"></a>備註  
@@ -103,7 +98,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>需求  
  **標頭：** atltransactionmanager.h  
   
-##  <a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>  ~ CAtlTransactionManager  
  CAtlTransactionManager 解構函式。  
   
 ```
@@ -113,7 +108,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>備註  
  在正常處理中，會自動認可交易並關閉。 如果例外狀況回溯期間呼叫解構函式時，交易已回復，且關閉。  
   
-##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>  CAtlTransactionManager  
  CAtlTransactionManager 建構函式。  
   
 ```
@@ -122,14 +117,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>參數  
  `bFallback`  
- `TRUE`表示支援後援。 如果交易的函式失敗，，類別會自動呼叫 「 非交易式 」 函式。 `FALSE`表示沒有 「 遞補 」 呼叫。  
+ `TRUE` 表示支援後援。 如果交易的函式失敗，，類別會自動呼叫 「 非交易式 」 函式。 `FALSE` 表示沒有 「 遞補 」 呼叫。  
   
  `bAutoCreateTransaction`  
- `TRUE`指出交易處理常式會自動建立在建構函式。 `FALSE`表示它不是。  
+ `TRUE` 指出交易處理常式會自動建立在建構函式。 `FALSE` 表示它不是。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="close"></a>關閉  
+##  <a name="close"></a>  關閉  
  關閉交易控制代碼。  
   
 ```
@@ -142,7 +137,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`CloseHandle`函式。 方法會自動呼叫解構函式中。  
   
-##  <a name="commit"></a>認可  
+##  <a name="commit"></a>  認可  
  要求交易被認可。  
   
 ```
@@ -155,7 +150,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`CommitTransaction`函式。 方法會自動呼叫解構函式中。  
   
-##  <a name="create"></a>建立  
+##  <a name="create"></a>  建立  
  建立交易控制代碼。  
   
 ```
@@ -168,7 +163,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`CreateTransaction`函式。 檢查有  
   
-##  <a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>  CreateFile  
  建立或開啟檔案、 檔案資料流或與交易的作業目錄。  
   
 ```
@@ -187,7 +182,7 @@ inline HANDLE CreateFile(
  若要建立或開啟物件的名稱。  
   
  `dwDesiredAccess`  
- 存取的物件，可摘要如下讀取、 寫入、 兩者皆是或都沒有 （零）。 最常使用的值為 GENERIC_READ、 GENERIC_WRITE，或兩者： GENERIC_READ &#124;GENERIC_WRITE。  
+ 存取的物件，可摘要如下讀取、 寫入、 兩者皆是或都沒有 （零）。 最常使用的值為 GENERIC_READ、 GENERIC_WRITE，或兩者： GENERIC_READ &#124; GENERIC_WRITE。  
   
  `dwShareMode`  
  物件，該物件可讀取、 寫入、 兩者，刪除所有的這些項目，或沒有任何共用的模式： 0，FILE_SHARE_DELETE、 FILE_SHARE_READ、 FILE_SHARE_WRITE。  
@@ -210,7 +205,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`CreateFileTransacted`函式。  
   
-##  <a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>  DeleteFile  
  為交易的作業會刪除現有的檔案。  
   
 ```
@@ -224,7 +219,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`DeleteFileTransacted`函式。  
   
-##  <a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>  FindFirstFile  
  搜尋檔案或子目錄的目錄，以交易的作業。  
   
 ```
@@ -246,7 +241,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`FindFirstFileTransacted`函式。  
   
-##  <a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>  GetFileAttributes  
  擷取指定的檔案或目錄的檔案系統屬性成為交易的作業。  
   
 ```
@@ -260,7 +255,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`GetFileAttributesTransacted`函式。  
   
-##  <a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>  GetFileAttributesEx  
  擷取指定的檔案或目錄的檔案系統屬性成為交易的作業。  
   
 ```
@@ -283,7 +278,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`GetFileAttributesTransacted`函式。  
   
-##  <a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>  GetHandle  
  傳回交易控制代碼。  
   
 ```
@@ -295,7 +290,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>  IsFallback  
  判斷是否啟用後援的呼叫。  
   
 ```
@@ -307,8 +302,8 @@ BOOL IsFallback() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="m_bfallback"></a>m_bFallback  
- `TRUE`如果支援此後援。`FALSE`否則。  
+##  <a name="m_bfallback"></a>  m_bFallback  
+ `TRUE` 如果支援此後援。`FALSE`否則。  
   
 ```
 BOOL m_bFallback;
@@ -316,7 +311,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>  m_hTransaction  
  交易控制代碼。  
   
 ```
@@ -325,7 +320,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>  MoveFile  
  移動現有的檔案或目錄，包括子系，以交易的作業。  
   
 ```
@@ -342,7 +337,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`MoveFileTransacted`函式。  
   
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>  RegCreateKeyEx  
  建立指定的登錄機碼，並將它與交易產生關聯。 如果金鑰已存在，則此函式會開啟它。  
   
 ```
@@ -392,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`RegCreateKeyTransacted`函式。  
   
-##  <a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>  RegDeleteKey  
  從指定的平台特定的登錄檢視中刪除子機碼和其值以交易的作業。  
   
 ```
@@ -412,7 +407,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`RegDeleteKeyTransacted`函式。  
   
-##  <a name="regopenkeyex"></a>RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>  RegOpenKeyEx  
  開啟指定的登錄機碼，並將它與交易產生關聯。  
   
 ```
@@ -446,7 +441,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`RegOpenKeyTransacted`函式。  
   
-##  <a name="rollback"></a>復原  
+##  <a name="rollback"></a>  復原  
  交易回復的要求。  
   
 ```
@@ -459,7 +454,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`RollbackTransaction`函式。  
   
-##  <a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>  SetFileAttributes  
  將檔案或目錄的屬性設定為交易的作業。  
   
 ```
@@ -476,5 +471,5 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`SetFileAttributesTransacted`函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)

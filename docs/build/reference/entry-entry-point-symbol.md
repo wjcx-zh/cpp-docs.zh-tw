@@ -1,13 +1,10 @@
 ---
-title: "輸入 （進入點符號） |Microsoft 文件"
-ms.custom: 
+title: 輸入 （進入點符號） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /entry
 - VC.Project.VCLinkerTool.EntryPointSymbol
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (進入點符號)
 ```  
@@ -52,8 +47,8 @@ ms.lasthandoff: 12/21/2017
 |函式名稱|預設值|  
 |-------------------|-----------------|  
 |**mainCRTStartup** (或**wmainCRTStartup**)|使用 /subsystem: console; 的應用程式呼叫`main`(或`wmain`)|  
-|**WinMainCRTStartup** (或**wWinMainCRTStartup**)|應用程式使用 /SUBSYSTEM:**WINDOWS**; 呼叫`WinMain`(或`wWinMain`)，這必須定義為使用`__stdcall`|  
-|**_DllMainCRTStartup**|DLL;呼叫`DllMain`如果存在的話，它必須定義為使用`__stdcall`|  
+|**WinMainCRTStartup** (或**wWinMainCRTStartup**)|應用程式使用 /SUBSYSTEM:**WINDOWS**; 呼叫`WinMain`(或`wWinMain`)，這必須定義為使用 `__stdcall`|  
+|**_DllMainCRTStartup**|DLL;呼叫`DllMain`如果存在的話，它必須定義為使用 `__stdcall`|  
   
  如果[/DLL](../../build/reference/dll-build-a-dll.md)或[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)未指定選項，連結器將會取決於是否子系統和項目點`main`或`WinMain`定義。  
   
@@ -77,6 +72,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EntryPointSymbol%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

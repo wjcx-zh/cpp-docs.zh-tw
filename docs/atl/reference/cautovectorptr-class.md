@@ -2,11 +2,8 @@
 title: CAutoVectorPtr 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoVectorPtr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df21eabe70c1d9ed8684fa1409e24dcdc76ffec0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 類別
 這個類別表示智慧型指標物件使用向量 new 和 delete 運算子。  
@@ -83,7 +78,7 @@ class CAutoVectorPtr
 |[CAutoVectorPtr::m_p](#m_p)|指標的資料成員變數。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別會提供建立和管理智慧型指標，可協助您藉由自動釋放資源，將會超出範圍時防止記憶體流失的方法。 `CAutoVectorPtr`類似於`CAutoPtr`、 唯一的差異在於，`CAutoVectorPtr`使用[向量新 &#91; &#93;](../../standard-library/new-operators.md#op_new_arr)和[向量 delete &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr)地配置和釋放記憶體，而不是c + +**新**和**刪除**運算子。 請參閱[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合類別`CAutoVectorPtr`所需。  
+ 這個類別會提供建立和管理智慧型指標，可協助您藉由自動釋放資源，將會超出範圍時防止記憶體流失的方法。 `CAutoVectorPtr` 類似於`CAutoPtr`、 唯一的差異在於，`CAutoVectorPtr`使用[向量新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)和[向量刪除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)來配置和釋放記憶體而不是 c + +**新**和**刪除**運算子。 請參閱[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合類別`CAutoVectorPtr`所需。  
 
   
  請參閱[CAutoPtr](../../atl/reference/cautoptr-class.md)使用智慧型指標類別的範例。  
@@ -91,7 +86,7 @@ class CAutoVectorPtr
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
+##  <a name="allocate"></a>  CAutoVectorPtr::Allocate  
  呼叫這個方法來配置所指向的物件陣列所需的記憶體`CAutoVectorPtr`。  
   
 ```
@@ -108,7 +103,7 @@ bool Allocate(size_t nElements) throw();
 ### <a name="remarks"></a>備註  
  在偵錯組建中，如果，就會發生判斷提示失敗[CAutoVectorPtr::m_p](#m_p)成員變數目前會指向現有的值; 也就是說，不等於 NULL。  
   
-##  <a name="attach"></a>CAutoVectorPtr::Attach  
+##  <a name="attach"></a>  CAutoVectorPtr::Attach  
  呼叫此方法以取得現有的指標的擁有權。  
   
 ```
@@ -124,7 +119,7 @@ void Attach(T* p) throw();
   
  在偵錯組建中，如果，就會發生判斷提示失敗[CAutoVectorPtr::m_p](#m_p)成員變數目前會指向現有的值; 也就是說，不等於 NULL。  
   
-##  <a name="cautovectorptr"></a>CAutoVectorPtr::CAutoVectorPtr  
+##  <a name="cautovectorptr"></a>  CAutoVectorPtr::CAutoVectorPtr  
  建構函式。  
   
 ```
@@ -140,7 +135,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>備註  
  `CAutoVectorPtr`物件可以建立使用現有的指標，請在此情況下它會傳送指標的擁有權。  
   
-##  <a name="dtor"></a>CAutoVectorPtr:: ~ CAutoVectorPtr  
+##  <a name="dtor"></a>  CAutoVectorPtr:: ~ CAutoVectorPtr  
  解構函式。  
   
 ```
@@ -150,7 +145,7 @@ CAutoVectorPtr(CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>備註  
  會釋放所有配置的資源。 呼叫[CAutoVectorPtr::Free](#free)。  
   
-##  <a name="detach"></a>CAutoVectorPtr::Detach  
+##  <a name="detach"></a>  CAutoVectorPtr::Detach  
  呼叫此方法以釋放指標的擁有權。  
   
 ```
@@ -163,7 +158,7 @@ T* Detach() throw();
 ### <a name="remarks"></a>備註  
  釋放指標的擁有權、 設定[CAutoVectorPtr::m_p](#m_p)成員變數設為 NULL，並傳回指標的複本。 在呼叫**卸離**，它最多來釋放任何程式設計人員已配置的資源的`CAutoVectorPtr`物件可能先前假設責任。  
   
-##  <a name="free"></a>CAutoVectorPtr::Free  
+##  <a name="free"></a>  CAutoVectorPtr::Free  
  呼叫此方法以刪除所指向的物件`CAutoVectorPtr`。  
   
 ```
@@ -173,7 +168,7 @@ void Free() throw();
 ### <a name="remarks"></a>備註  
  指向的物件`CAutoVectorPtr`釋出，而[CAutoVectorPtr::m_p](#m_p)成員變數設為 NULL。  
   
-##  <a name="m_p"></a>CAutoVectorPtr::m_p  
+##  <a name="m_p"></a>  CAutoVectorPtr::m_p  
  指標的資料成員變數。  
   
 ```
@@ -183,7 +178,7 @@ T* m_p;
 ### <a name="remarks"></a>備註  
  這個成員變數會保留指標資訊。  
   
-##  <a name="operator_eq"></a>CAutoVectorPtr::operator =  
+##  <a name="operator_eq"></a>  CAutoVectorPtr::operator =  
  指派運算子。  
   
 ```
@@ -200,7 +195,7 @@ CAutoVectorPtr<T>& operator= (CAutoVectorPtr<T>& p) throw();
 ### <a name="remarks"></a>備註  
  指派運算子會卸離`CAutoVectorPtr`物件從目前的指標，並將新的指標，附加`p`，其所在位置。  
   
-##  <a name="operator_t__star"></a>CAutoVectorPtr::operator T *  
+##  <a name="operator_t__star"></a>  CAutoVectorPtr::operator T *  
  轉型運算子。  
   
 ```  
@@ -210,6 +205,6 @@ operator T*() const throw();
 ### <a name="remarks"></a>備註  
  傳回在類別樣板中定義的物件資料類型的指標。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CAutoPtr 類別](../../atl/reference/cautoptr-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

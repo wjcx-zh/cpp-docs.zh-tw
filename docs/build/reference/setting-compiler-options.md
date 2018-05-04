@@ -1,30 +1,25 @@
 ---
-title: "設定編譯器選項 |Microsoft 文件"
-ms.custom: 
+title: 設定編譯器選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, setting
 - cl.exe compiler, setting options
 ms.assetid: 4b079f5b-0017-4124-aad6-0d2b58e427e0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbc7111ceae2353e8bc9820ead319556ce0016b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 322d4add32aca1c57b45a601e4704b2ec5d99a02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-compiler-options"></a>設定編譯器選項
 C 和 C++ 編譯器選項可以在開發環境中設定，也可以在命令列上設定。  
@@ -51,6 +46,6 @@ C 和 C++ 編譯器選項可以在開發環境中設定，也可以在命令列�
   
 -   [CL 叫用連結器](../../build/reference/cl-invokes-the-linker.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
  [編譯器選項](../../build/reference/compiler-options.md)

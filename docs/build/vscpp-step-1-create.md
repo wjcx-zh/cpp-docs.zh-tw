@@ -1,9 +1,9 @@
 ---
-title: "建立 c + + 主控台應用程式專案 |Microsoft 文件"
-description: "在 Visual c + + 中建立 Hello World 主控台應用程式"
+title: 建立 c + + 主控台應用程式專案 |Microsoft 文件
+description: 在 Visual c + + 中建立 Hello World 主控台應用程式
 ms.custom: mvc
 ms.date: 12/12/2017
-ms.topic: get-started-article
+ms.topic: tutorial
 ms.technology:
 - devlang-C++
 ms.devlang: C++
@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76975054aad3173fef99a2e0f6c5ca1c642dea86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 35b7b896dfb2a4c9dd37a9f59476cbc7f23c3902
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-c-console-app-project"></a>建立 c + + 主控台應用程式專案
 
@@ -37,7 +36,7 @@ Visual Studio 會使用「專案」來組織應用程式的程式碼，並使用
 
    ![開啟 [新增專案] 對話方塊](../build/media/vscpp-file-new-project.gif "開啟 [新增專案] 對話方塊")
 
-1. 在**新專案**對話方塊中，選取**已安裝**， **Visual c + +**如果它尚未被選取，然後選擇 **空專案**範本。 在**名稱**欄位中，輸入*HelloWorld*。 選擇**確定**建立專案。
+1. 在**新專案**對話方塊中，選取**已安裝**， **Visual c + +** 如果它尚未被選取，然後選擇 **空專案**範本。 在**名稱**欄位中，輸入*HelloWorld*。 選擇**確定**建立專案。
 
    ![命名和建立新的專案](../build/media/vscpp-concierge-project-name-callouts.png "名稱，並建立新的專案")
 
@@ -63,7 +62,7 @@ Visual Studio 現在知道建置專案，以在主控台視窗中執行。 接�
 
 1. 在**方案總管 中**，選取 HelloWorld 專案。 在功能表列上選擇 **專案**，**加入新項目**開啟**加入新項目**對話方塊。
 
-1. 在**加入新項目**對話方塊中，選取**Visual c + +**下**已安裝**如果已選取。 在中央窗格中，選取**c + + 檔 (.cpp)**。 變更**名稱**至*HelloWorld.cpp*。 選擇**新增**關閉對話方塊並建立檔案。
+1. 在**加入新項目**對話方塊中，選取**Visual c + +** 下**已安裝**如果已選取。 在中央窗格中，選取**c + + 檔 (.cpp)**。 變更**名稱**至*HelloWorld.cpp*。 選擇**新增**關閉對話方塊並建立檔案。
 
    ![加入來源檔案的 HelloWorld.cpp](../build/media/vscpp-add-new-item.gif "HelloWorld.cpp 加入原始程式檔")
 
@@ -104,7 +103,7 @@ Visual studio 建立新的、 空的來源檔案，並開啟編輯器視窗中�
 
 ### <a name="create-your-app-project-issues"></a>建立您的應用程式專案的問題
 
-如果**新專案**對話方塊不會顯示**Visual c + +**下的項目**已安裝**，您的 Visual Studio 複本可能沒有**桌面使用 c + + 開發**安裝的工作負載。 您可以執行安裝程式，直接從**新專案**對話方塊。 選擇**開啟 Visual Studio 安裝程式**再次啟動安裝程式的連結。 如果**使用者帳戶控制**，對話會要求權限，請選擇**是**。 在安裝程式，請確定**的 c + + 桌面應用程式開發**工作負載已核取，然後選擇 **確定**以更新您的 Visual Studio 安裝。
+如果**新專案**對話方塊不會顯示**Visual c + +** 下的項目**已安裝**，您的 Visual Studio 複本可能沒有**桌面使用 c + + 開發**安裝的工作負載。 您可以執行安裝程式，直接從**新專案**對話方塊。 選擇**開啟 Visual Studio 安裝程式**再次啟動安裝程式的連結。 如果**使用者帳戶控制**，對話會要求權限，請選擇**是**。 在安裝程式，請確定**的 c + + 桌面應用程式開發**工作負載已核取，然後選擇 **確定**以更新您的 Visual Studio 安裝。
 
 如果已經存在具有相同名稱的另一個專案，為您的專案，選擇其他名稱或刪除現有專案並再試一次。 若要刪除現有的專案，請在檔案總管中刪除方案資料夾 （包含 helloworld.sln 檔案的資料夾）。
 

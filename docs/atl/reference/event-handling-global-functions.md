@@ -1,12 +1,9 @@
 ---
-title: "事件處理全域函式 |Microsoft 文件"
-ms.custom: 
+title: 事件處理全域函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlWaitWithMessageLoop
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - event handling, global functions
 - global functions, event handling
 ms.assetid: fd674470-3def-47c3-be1c-894fa85f13e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6670ef283d24f57b407ad70693421feae427855f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb2c7834e7d5475810973a42ef179ea4f5f0079f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-global-functions"></a>事件處理全域函式
 此函式提供的事件處理常式。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
 
-##  <a name="atlwaitwithmessageloop"></a>AtlWaitWithMessageLoop  
+##  <a name="atlwaitwithmessageloop"></a>  AtlWaitWithMessageLoop  
  等候發出物件通知，同時視需要分派視窗訊息。  
   
 > [!IMPORTANT]
@@ -61,5 +56,5 @@ BOOL AtlWaitWithMessageLoop(HANDLE hEvent);
 ### <a name="remarks"></a>備註  
  如果您想要等候的物件事件，就可能發生，且會通知發生，但允許在等待時分派視窗訊息，這非常有用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)

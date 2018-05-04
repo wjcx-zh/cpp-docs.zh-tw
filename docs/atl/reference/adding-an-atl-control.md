@@ -1,12 +1,9 @@
 ---
-title: "加入 ATL 控制項 |Microsoft 文件"
-ms.custom: 
+title: 加入 ATL 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - ATL projects, adding controls
 - controls [ATL], adding to projects
 ms.assetid: 10223e7e-fdb7-4163-80c6-44aeafa8e6ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3200ea0fc8241007c1c97c1ab296166eb7889734
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 136b0fe6fea5ef95bd1670457f472a1fcc292bf0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-control"></a>加入 ATL 控制項
 您可以使用此精靈，將使用者介面物件加入至所有可能容器支援介面的專案。 若要支援這些介面，專案必須已建立以 ATL 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[MFC 應用程式中加入 ATL 物件](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)實作 MFC 應用程式的 ATL 支援。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  此外，您可以減少控制項的大小，並移除不會使用大部分的容器所選取的介面**最小控制項**上**選項**精靈頁面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將功能加入至複合控制項](../../atl/adding-functionality-to-the-composite-control.md)   
  [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
  [ATLFire 範例](http://msdn.microsoft.com/en-us/5b2649f1-f45b-4cfb-9c4b-4d9459c26b09)

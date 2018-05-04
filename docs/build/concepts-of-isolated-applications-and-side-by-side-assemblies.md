@@ -1,30 +1,25 @@
 ---
-title: "隔離的應用程式和-並存組件的概念 |Microsoft 文件"
-ms.custom: 
+title: 隔離的應用程式和-並存組件的概念 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9166f62c51344cc9c620da34d9c6fcee4665f400
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 095737bf4684f4ba9ed58483bca664f734d1a534
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>隔離應用程式和並存組件的概念
 如果某個應用程式的所有元件都是 [並存組件](http://msdn.microsoft.com/library/aa375190) ，那麼就可以將這個應用程式視為 [隔離的應用程式](http://msdn.microsoft.com/library/ff951640)。 並存組件是資源的集合，是一組共同部署的 DLL、Windows 類別、COM 伺服器、類型程式庫或介面，可供應用程式在執行階段使用。 一般而言，並存組件是一至數個 DLL，  
@@ -43,5 +38,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="visual-c-libraries"></a>Visual C++ 程式庫  
  在 Visual Studio 2005 和 Visual Studio 2008 中，ATL、MFC、CRT、Standard C++、OpenMP 和 MSDIA 等可轉散發程式庫都是以共用並存組件的形式部署至原生組件快取。 在目前的版本，可轉散發程式庫使用的是集中部署。 根據預設，使用 Visual C++ 建置的所有應用程式都是以最終二進位檔中內嵌的資訊清單建置而成，而資訊清單會描述這個二進位檔對於 Visual C++ 程式庫的相依性。 若要了解 Visual C++ 應用程式資訊清單的產生方式，請參閱 [Understanding Manifest Generation for C/C++ Programs](../build/understanding-manifest-generation-for-c-cpp-programs.md)。 靜態連結至其使用之程式庫或是使用本機部署的應用程式，並不需要資訊清單。 如需部署的詳細資訊，請參閱 [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建置 C/C++ 隔離應用程式和並存組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

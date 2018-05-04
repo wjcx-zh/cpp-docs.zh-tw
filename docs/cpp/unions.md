@@ -1,12 +1,9 @@
 ---
-title: "等位 |Microsoft 文件"
-ms.custom: 
+title: 等位 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - union_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unions"></a>等位
 `union` 是所有成員都共用相同記憶體位置的使用者定義類型。 這表示等位的成員清單在任何指定時間都只能包含一個物件。 這也表示不論等位有多少成員，都一律會使用剛好的記憶體來儲存最大成員。  
@@ -645,7 +640,7 @@ int main()
  ![數值類型等位中資料的儲存體](../cpp/media/vc38ul1.png "vc38UL1")  
 在 NumericType 等位中儲存資料  
   
-## <a name="anonymous_unions"></a>匿名等位  
+## <a name="anonymous_unions"></a> 匿名等位  
  匿名等位是等位沒有宣告*類別名稱*或*宣告子清單*。  
   
 ```cpp  
@@ -662,7 +657,7 @@ union  {  member-list  }
   
 -   它們不能有成員函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [class](../cpp/class-cpp.md)   

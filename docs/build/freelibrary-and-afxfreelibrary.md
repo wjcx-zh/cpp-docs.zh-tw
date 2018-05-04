@@ -1,13 +1,10 @@
 ---
-title: "FreeLibrary 和 AfxFreeLibrary |Microsoft 文件"
-ms.custom: 
+title: FreeLibrary 和 AfxFreeLibrary |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - FreeLibrary
 - AfxFreeLibrary
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5f2c1cce980f97e7a99ff2347daceac05f984f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1e1bf5f1a05438ddf89af86c9b0d12e7885b901
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 和 AfxFreeLibrary
 明確連結的 DLL 呼叫的處理序[FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)函式時不再需要 DLL 模組。 這個函式會遞減模組的參考計數，並參考計數為零，如果取消對應從處理序的位址空間。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [GetProcAddress](../build/getprocaddress.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual c + + 中的 Dll](../build/dlls-in-visual-cpp.md)   
  [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
  [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

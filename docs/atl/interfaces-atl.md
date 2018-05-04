@@ -1,12 +1,9 @@
 ---
-title: "介面 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 介面 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95dce7d707cfb29c8f33f94504c26b5b24ef4c4f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0db5a79f187cb0fe320bf67aace751a5d4c537d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interfaces-atl"></a>介面 (ATL)
 介面是物件會公開其功能給外界的方式。 在 COM 中，介面是由物件所實作的函式的指標 （例如 c + + vtable) 的資料表。 資料表代表介面，以及它所指向的功能是該介面的方法。 物件可以公開其選擇的介面。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 02/14/2018
 > [!NOTE]
 >  預先定義的標準 COM 和 OLE 介面的 Iid。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [COM 簡介](../atl/introduction-to-com.md)   
  [COM 物件與介面](http://msdn.microsoft.com/library/windows/desktop/ms690343)
 

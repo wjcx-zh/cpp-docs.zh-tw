@@ -1,27 +1,22 @@
 ---
-title: "/APPCONTAINER （UWP/Microsoft 市集應用程式） |Microsoft 文件"
-ms.custom: 
+title: /APPCONTAINER （UWP/Microsoft 市集應用程式） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc6e1d4c6e18cd2118571e57f671f85a0a3fb55
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8ca1a3ed5adaada689d374eeb3e67bae6c989e0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER （Microsoft Store 應用程式）
 指定連結器是否會建立可執行映像必須在應用程式容器中執行。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 02/14/2018
   
 5.  在**其他選項**，輸入`/APPCONTAINER`或`/APPCONTAINER:NO`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

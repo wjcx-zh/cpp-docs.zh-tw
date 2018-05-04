@@ -2,12 +2,9 @@
 title: -I (其他 Include 目錄) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
 - VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfbf962a92af22d3e724c592fec6cf812b610dc7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 435714d72eeabe74f0cd85509d74dff5d541b019
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="i-additional-include-directories"></a>/I (其他 Include 目錄)
 將目錄加入至搜尋 include 檔的目錄清單。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  包含來源檔案的目錄。  
   
-2.  以指定的目錄**/I**選項，CL 碰到它們的順序。  
+2.  以指定的目錄 **/I**選項，CL 碰到它們的順序。  
   
 3.  中指定的目錄**INCLUDE**環境變數。  
   
@@ -82,6 +77,6 @@ ms.lasthandoff: 12/21/2017
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

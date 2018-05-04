@@ -1,12 +1,9 @@
 ---
-title: "選項，ATL Active Server Page 元件精靈 |Microsoft 文件"
-ms.custom: 
+title: 選項，ATL Active Server Page 元件精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 31549c812b4f523cb8026a0d0b15ae60e31cd1f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>選項, ATL Active Server Page 元件精靈
 您可以使用 ATL Active Server Page 元件精靈的這個頁面來設計以提升的效率及錯誤支援物件。  
@@ -63,7 +58,7 @@ ms.lasthandoff: 02/09/2018
 |**連接點**|藉由衍生自物件的類別可讓您物件的連接點[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)。|  
 |**無限制執行緒封送處理器**|建立無限制執行緒封送處理器物件，以有效率地在相同的處理序中執行緒之間的封送處理介面指標。 適用於指定的物件**兩者**或**免費**為執行緒模型。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL Active Server Page 元件精靈](../../atl/reference/atl-active-server-page-component-wizard.md)   
  [ATL Active Server Page 元件](../../atl/reference/adding-an-atl-active-server-page-component.md)
 

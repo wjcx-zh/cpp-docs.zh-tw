@@ -1,12 +1,9 @@
 ---
-title: "內嵌函式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 內嵌函式 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __forceinline_cpp
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de370d8dbff1f1340539adc825f7f5316c59a468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6661996669e454e655d0149f1dbb1df505116469
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inline-functions-c"></a>內嵌函式 (C++)
 在類別宣告的主體中定義的函式是內嵌函式。  
@@ -83,9 +78,9 @@ int main()
   
  使用內嵌函式可以讓程式更快速，因為它們不需要與函式呼叫相關聯的負荷。 內嵌展開的函式必須遵從不適用於一般函式的程式碼最佳化。  
   
- 編譯器會將內嵌展開選項和關鍵字視為建議， 並不保證函式一定會內嵌。 您無法強制編譯器內嵌特定的函式，即使是使用 `__forceinline` 關鍵字。 編譯時**/clr**，編譯器不會內嵌函式是否有安全性屬性套用至函式。  
+ 編譯器會將內嵌展開選項和關鍵字視為建議， 並不保證函式一定會內嵌。 您無法強制編譯器內嵌特定的函式，即使是使用 `__forceinline` 關鍵字。 編譯時 **/clr**，編譯器不會內嵌函式是否有安全性屬性套用至函式。  
   
- **內嵌**關鍵字是只能在 c + + 中使用。 `__inline` 與 `__forceinline` 關鍵字可在 C 和 C++ 中使用。 為了與舊版中，相容**_inline**同義`__inline`。  
+ **內嵌**關鍵字是只能在 c + + 中使用。 `__inline` 與 `__forceinline` 關鍵字可在 C 和 C++ 中使用。 為了與舊版中，相容 **_inline**同義`__inline`。  
   
  **內嵌**關鍵字會指示編譯器內嵌展開為慣用。 不過，編譯器可能會建立函式的個別執行個體 (具現化) 和建立標準呼叫連結，而不是將程式碼內嵌插入。 在兩種情況下，可能發生這種情況：  
   
@@ -144,7 +139,7 @@ private:
   
 -   函式使用內嵌組譯碼，除非使用 /Og、/Ox、/O1 或 /O2 編譯。  
   
--   此函式是遞迴的未伴隨**#pragma inline_recursion （on)**。 伴隨 pragma，遞迴函式內嵌至預設為 16 個呼叫的深度。 若要減少內嵌深度，使用[inline_depth](../preprocessor/inline-depth.md) pragma。  
+-   此函式是遞迴的未伴隨 **#pragma inline_recursion （on)**。 伴隨 pragma，遞迴函式內嵌至預設為 16 個呼叫的深度。 若要減少內嵌深度，使用[inline_depth](../preprocessor/inline-depth.md) pragma。  
   
 -   函式是虛擬的，也是以虛擬方式呼叫。 對虛擬函式的直接呼叫可以內嵌。  
   
@@ -269,6 +264,6 @@ Sample Input: a
 Sample Output: A  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [noinline](../cpp/noinline.md)   
  [auto_inline](../preprocessor/auto-inline.md)

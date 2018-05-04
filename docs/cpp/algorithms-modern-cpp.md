@@ -1,27 +1,22 @@
 ---
-title: "演算法 （現代 c + +） |Microsoft 文件"
-ms.custom: 
+title: 演算法 （現代 c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d89f6b5116459018cb50eb58b976f6f853ed088
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fdd5742bb86992ce20f5a52f587c8557d46a97eb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="algorithms-modern-c"></a>演算法 (現代 C++)
 對於現代的 c + + 程式設計中，我們建議您使用中的演算法[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。 以下是一些重要的範例：  
@@ -82,7 +77,7 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ## <a name="random-numbers"></a>隨機數字  
  它是任何密碼，舊的 CRT`rand()`函式有許多的缺點，旨在討論 c + + 社群。 在現代 c + + 中，您不必處理這些缺點，也不需要來自創自己統一分佈亂數產生器，因為中所示，快速且輕鬆地建立這些工具都可以提供c++標準程式庫，[\<隨機 >](../standard-library/random.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

@@ -2,26 +2,21 @@
 title: 堆疊使用方式 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e3aa8d01dcc85b6c37684ccccaf82c84d8dfb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6f711636089a6f2966002002220aac88cebe17a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stack-usage"></a>堆疊使用方式
 目前的 RSP 位址以外的所有記憶體會被都視為 volatile： 使用者偵錯工作階段或中斷處理常式期間作業系統或偵錯工具中，可能會覆寫這個記憶體。 因此，必須一律設定 RSP，再嘗試讀取或寫入至堆疊框架的值。  
@@ -38,5 +33,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [alloca](../build/alloca.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [x64 軟體慣例](../build/x64-software-conventions.md)

@@ -1,13 +1,10 @@
 ---
-title: "ATL 集合類別 |Microsoft 文件"
-ms.custom: 
+title: ATL 集合類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b0fbdc5ab68319704fb59746862384198f232b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4594b87f07cd4d89937ba640d9a04aeacf2ef866
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-collection-classes"></a>ATL 集合類別
 ATL 提供許多類別來儲存和存取資料。 您決定使用哪一個類別取決於許多因素，包括：  
@@ -129,7 +124,7 @@ ATL 提供許多類別來儲存和存取資料。 您決定使用哪一個類別
   
 -   [跑馬燈範例](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [集合類別](../atl/collection-classes.md)
 

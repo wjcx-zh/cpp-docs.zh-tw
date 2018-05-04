@@ -2,11 +2,8 @@
 title: _mbsnbcat、_mbsnbcat_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcat_l
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f7fb633d4e0c259403a5d48e1bb05618c75ddc
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
 
@@ -111,7 +106,7 @@ unsigned char *_mbsnbcat_l(
 
 **_Mbsnbcat**函式會將附加，最多第一個*計數*位元組*src*至*目的地*。 如果前置節點中的 null 字元的位元組*目的地*前導位元組的初始位元組*src*會覆寫此前導位元組。 否則的初始位元組*src*結束的 null 字元會覆寫*目的地*。 如果中出現 null 位元組*src*之前*計數*會附加位元組， **_mbsnbcat**附加所有位元組*src*，直到 null 字元。 如果*計數*大於的長度*src*，長度*src*用來取代*計數*。 此產生的字串會以 Null 字元結束。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
-輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale](setlocale-wsetlocale.md)如需詳細資訊。 **_Mbsnbcat**函式版本會使用目前的地區設定針對此與地區設定相關行為; **_mbsnbcat_l**版本也一樣，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 **_Mbsnbcat**函式版本會使用目前的地區設定針對此與地區設定相關行為; **_mbsnbcat_l**版本也一樣，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 **安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。
 

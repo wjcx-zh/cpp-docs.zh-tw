@@ -1,12 +1,9 @@
 ---
-title: "格式化的經過時間： Automation 類別 |Microsoft 文件"
-ms.custom: 
+title: 格式化的經過時間： Automation 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 155c5bef-b555-4bed-9545-29afc49715f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2000f3ec059c98150fbb82c71f0d810bdae53d06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 710faeef504e9d2963837f721200c51386540d64
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-time-automation-classes"></a>格式化的經過時間： Automation 類別
 #### <a name="to-format-a-time"></a>若要設定時間的格式  
@@ -44,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [使用 SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [日期和時間：Automation 支援](../atl-mfc-shared/date-and-time-automation-support.md)
 

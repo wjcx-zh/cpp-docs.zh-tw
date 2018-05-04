@@ -1,12 +1,9 @@
 ---
-title: "選項，ATL 簡單物件精靈 |Microsoft 文件"
-ms.custom: 
+title: 選項，ATL 簡單物件精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37341dc23f95e1863aeae4a1b57c01d24d6ad365
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ffc38f5359b68b90f91a2643e1fbaa743a94e559
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-simple-object-wizard"></a>選項, ATL 簡單物件精靈
 您可以使用 ATL 簡單物件精靈的這個頁面來設計以提升的效率及錯誤支援物件。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 02/09/2018
   
 |選項|描述|  
 |------------|-----------------|  
-|**Dual**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式加上晚期繫結`IDispatch`方法)。 可讓兩個 COM 用戶端和[Automation 控制器](../../mfc/automation-clients.md)來存取的物件。 預設值。|  
+|**雙重**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式加上晚期繫結`IDispatch`方法)。 可讓兩個 COM 用戶端和[Automation 控制器](../../mfc/automation-clients.md)來存取的物件。 預設值。|  
 |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以比雙重介面，更快，尤其是跨處理序界限。<br /><br /> -   **Automation 相容**可讓 Automation 控制器，來存取自訂介面支援的物件。|  
   
  **支援**  
@@ -72,7 +67,7 @@ ms.lasthandoff: 02/09/2018
 |**無限制執行緒封送處理器**|建立無限制執行緒封送處理器物件，以有效率地在相同的處理序中執行緒之間的封送處理介面指標。 可用物件指定**兩者**為執行緒模型。|  
 |**IObjectWithSite （IE 物件支援）**|實作[IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md)，這樣會提供簡單的方式來支援容器中的物件與其站台之間的通訊。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 簡單物件精靈](../../atl/reference/atl-simple-object-wizard.md)   
  [ATL 簡單物件](../../atl/reference/adding-an-atl-simple-object.md)   
  [同處理序執行緒問題](http://msdn.microsoft.com/library/windows/desktop/ms687205)

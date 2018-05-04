@@ -1,12 +1,9 @@
 ---
-title: "CommandHandler |Microsoft 文件"
-ms.custom: 
+title: CommandHandler |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CommandHandler
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CommandHandler function
 ms.assetid: 662bc7bf-4a10-42b3-986d-d8bae4f63551
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2750f1e089ce5b6b3ef34325276a508ea0b80ddb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="commandhandler"></a>CommandHandler
 `CommandHandler` 第三個參數所識別的功能是`COMMAND_HANDLER`中訊息對應巨集。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="remarks"></a>備註  
  如需訊息對應中使用此訊息處理常式的範例，請參閱[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [實作視窗](../atl/implementing-a-window.md)   
  [訊息對應](../atl/message-maps-atl.md)   
  [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)

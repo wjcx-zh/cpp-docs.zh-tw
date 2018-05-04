@@ -1,27 +1,22 @@
 ---
-title: "歡迎回到 c + + （現代 c + +） |Microsoft 文件"
-ms.custom: 
+title: 歡迎回到 c + + （現代 c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
 C++ 是世界上最廣泛使用的程式語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 這種語言較其他語言更具彈性，因為您可以用它來建立各種應用程式，從好玩刺激的遊戲到高效能科學軟體、裝置驅動程式、內嵌程式和 Windows 用戶端應用程式，一應俱全。 20 多年來，C++ 已經用來解決這類和許多其他的問題。 您可能不知道的是，有越來越多的 C++ 程式設計人員已經捲藏過時的 C-Style 程式設計舊衣，換上了現代 C++ 的新裝。  
@@ -36,7 +31,7 @@ C++ 是世界上最廣泛使用的程式語言之一。 編寫完善的 C++ 程�
   
 -   智慧型指標，而不是原始指標。  
   
--   `std::string`和`std::wstring`類型 (請參閱[\<字串 >](../standard-library/string.md)) 而非原始`char[]`陣列。  
+-   `std::string` 和`std::wstring`類型 (請參閱[\<字串 >](../standard-library/string.md)) 而非原始`char[]`陣列。  
   
 -   [C + + 標準程式庫](../standard-library/cpp-standard-library-header-files.md)容器喜歡`vector`， `list`，和`map`而不是原始陣列或自訂容器。 請參閱[\<向量 >](../standard-library/vector.md)， [\<清單 >](../standard-library/list.md)，和[\<對應 >](../standard-library/map.md)。  
   
@@ -142,7 +137,7 @@ void f()
   
  如需詳細資訊，請參閱 StackOverflow 文章[哪些 c + + 慣用語中 C + + 11 中已被取代](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)  

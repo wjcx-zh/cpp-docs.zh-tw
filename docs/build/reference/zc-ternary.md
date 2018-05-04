@@ -1,9 +1,9 @@
 ---
-title: "/Zc:ternary （強制執行條件式運算子規則） |Microsoft 文件"
+title: /Zc:ternary （強制執行條件式運算子規則） |Microsoft 文件
 ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:ternary
 dev_langs:
@@ -14,12 +14,11 @@ helpviewer_keywords:
 - -Zc:ternary
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.openlocfilehash: 198da679e9d0d7bd58e034ca9c04c3102748af20
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 613381795fb962e1f10ec01598748b617b7543aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary （強制執行條件式運算子規則）
 
@@ -31,13 +30,13 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="remarks"></a>備註
 
-Visual Studio 版本 15.3 可讓 c + + 標準的條件式 （或三元） 運算子的編譯器支援 (**？:**) 行為。 C + + 標準需要的任一個運算元是相同的型別和 cv 限定，或可以明確地轉換為相同的類型和 cv-限定性條件與其他，只有一個運算元或是一個或兩個運算元都是擲回運算式。 在 Visual Studio 版本 15.5 之前的版本，編譯器會允許轉換視為模稜兩可的標準。 當**/Zc:ternary**指定選項時，編譯器會符合標準，並拒絕不符合的規則相符的型別和 cv 限定的第二個和第三個運算元的程式碼。
+Visual Studio 版本 15.3 可讓 c + + 標準的條件式 （或三元） 運算子的編譯器支援 (**？:**) 行為。 C + + 標準需要的任一個運算元是相同的型別和 cv 限定，或可以明確地轉換為相同的類型和 cv-限定性條件與其他，只有一個運算元或是一個或兩個運算元都是擲回運算式。 在 Visual Studio 版本 15.5 之前的版本，編譯器會允許轉換視為模稜兩可的標準。 當 **/Zc:ternary**指定選項時，編譯器會符合標準，並拒絕不符合的規則相符的型別和 cv 限定的第二個和第三個運算元的程式碼。
 
-**/Zc:ternary**選項預設為關閉。 使用**/Zc:ternary**啟用合格的行為，或**/Zc:ternary-**明確指定先前的不合格編譯器行為。 [/ 寬鬆-](permissive-standards-conformance.md)選項會隱含地啟用此選項，但可以使用覆寫**/Zc:ternary-**。
+**/Zc:ternary**選項預設為關閉。 使用 **/Zc:ternary**啟用合格的行為，或 **/Zc:ternary-** 明確指定先前的不合格編譯器行為。 [/ 寬鬆-](permissive-standards-conformance.md)選項會隱含地啟用此選項，但可以使用覆寫 **/Zc:ternary-**。
 
 ### <a name="examples"></a>範例
 
-這個範例會示範如何從類型及類型轉換提供這兩個非明確初始化的類別可能會導致模稜兩可的轉換。 根據預設，編譯器會接受此程式碼，但拒絕時**/Zc:ternary**或**/ 寬鬆-**指定。
+這個範例會示範如何從類型及類型轉換提供這兩個非明確初始化的類別可能會導致模稜兩可的轉換。 根據預設，編譯器會接受此程式碼，但拒絕時 **/Zc:ternary**或 **/ 寬鬆-** 指定。
 
 ```cpp
 // zcternary1.cpp
@@ -63,7 +62,7 @@ int main()
 
 必要的修正，就是慣用的一般類型，請明確轉型，或藉由轉換明確防止參與編譯器搜尋的型別比對從轉換的一個方向。
 
-常見的模式的重要例外是當運算元的類型是一種 null 結束的字串類型，例如`const char*`， `const char16_t*`，依此類推。 您也可以重現這與陣列類型及它們 decay 以指標類型。 行為時的實際第二個或第三個運算元？: 就會根據所使用的語言標準的對應類型的字串常值。 C + + 17 已經針對此案例的語意從 C + + 14。 如此一來，在下列範例程式碼會接受在**/std:c + + 14** （編譯器預設值），且不被拒絕時**/std:c + + 17**指定。
+常見的模式的重要例外是當運算元的類型是一種 null 結束的字串類型，例如`const char*`， `const char16_t*`，依此類推。 您也可以重現這與陣列類型及它們 decay 以指標類型。 行為時的實際第二個或第三個運算元？: 就會根據所使用的語言標準的對應類型的字串常值。 C + + 17 已經針對此案例的語意從 C + + 14。 如此一來，在下列範例程式碼會接受在 **/std:c + + 14** （編譯器預設值），且不被拒絕時 **/std:c + + 17**指定。
 
 ```cpp
 // zcternary2.cpp
@@ -85,7 +84,7 @@ int main()
 
 若要修正此程式碼，明確轉型的其中一個運算元。
 
-在下**/Zc:ternary**、 編譯器拒絕條件式運算子其中一個引數為 void 類型，另一個則不擲回運算式。 這些的常見用法是類似的判斷提示巨集：
+在下 **/Zc:ternary**、 編譯器拒絕條件式運算子其中一個引數為 void 類型，另一個則不擲回運算式。 這些的常見用法是類似的判斷提示巨集：
 
 ```cpp
 // zcternary3.cpp
@@ -104,7 +103,7 @@ int main()
 
 只要將非 void 引數取代 void() 為一般的解決方案。
 
-此範例顯示程式碼會產生錯誤底下都**/Zc:ternary**和**/Zc:ternary-**:
+此範例顯示程式碼會產生錯誤底下都 **/Zc:ternary**和 **/Zc:ternary-**:
 
 ```cpp
 // zcternary4.cpp
@@ -126,7 +125,7 @@ error C2446: ':': no conversion from 'foo::<lambda_f6cd18702c42f6cd636bfee362b37
 note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
 ```
 
-與**/Zc:ternary**失敗的原因變得更清楚，則為在其中幾個實作定義的呼叫任何的慣例可用來產生每個 lambda 架構編譯器表示它們之間沒有喜好設定可以區分可能的 lambda 簽章。 新的輸出看起來像這樣：
+與 **/Zc:ternary**失敗的原因變得更清楚，則為在其中幾個實作定義的呼叫任何的慣例可用來產生每個 lambda 架構編譯器表示它們之間沒有喜好設定可以區分可能的 lambda 簽章。 新的輸出看起來像這樣：
 
 ```Output
 error C2593: 'operator ?' is ambiguous
@@ -137,7 +136,7 @@ note: or       'built-in C++ operator?(bool (__vectorcall *)(int,int), bool (__v
 note: while trying to match the argument list '(foo::<lambda_717fca3fc65510deea10bc47e2b06be4>, foo::<lambda_f6cd18702c42f6cd636bfee362b37033>)'
 ```
 
-採用相關問題的常見來源**/Zc:ternary**來自此交換器 下的部分結果型別變更範本中繼程式設計中, 條件運算子的使用。 下列範例會示範兩種情況下其中**/Zc:ternary**變更非中繼程式設計內容中的條件式運算式的結果型別：
+採用相關問題的常見來源 **/Zc:ternary**來自此交換器 下的部分結果型別變更範本中繼程式設計中, 條件運算子的使用。 下列範例會示範兩種情況下其中 **/Zc:ternary**變更非中繼程式設計內容中的條件式運算式的結果型別：
 
 ```cpp
 // zcternary5.cpp
@@ -162,7 +161,7 @@ int main(int argc, char**) {
 
 1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
 
-1. 修改**其他選項**屬性，以包括**/Zc:ternary**或**/Zc:ternary-** ，然後選擇 **確定**。
+1. 修改**其他選項**屬性，以包括 **/Zc:ternary**或 **/Zc:ternary-** ，然後選擇 **確定**。
 
 ## <a name="see-also"></a>另請參閱
 

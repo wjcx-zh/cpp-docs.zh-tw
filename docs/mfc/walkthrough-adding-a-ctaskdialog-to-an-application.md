@@ -1,12 +1,12 @@
 ---
-title: "逐步解說： 將 ctaskdialog 加入至應用程式 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 將 ctaskdialog 加入至應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>逐步解說：將 CTaskDialog 加入至應用程式
 本逐步解說介紹 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) ，並示範如何將其加入應用程式。  
   
- `CTaskDialog` 是一個工作對話方塊，它取代了 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]中的 Windows 訊息方塊。 `CTaskDialog` 改進原始訊息方塊並加入功能。 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]仍支援 Windows 訊息方塊。  
+ `CTaskDialog`是工作的對話方塊，它會取代 Windows 訊息方塊，在 Windows Vista 或更新版本。 `CTaskDialog` 改進原始訊息方塊並加入功能。 在 Visual Studio 中仍然支援 Windows 訊息方塊。  
   
 > [!NOTE]
->  [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 之前的 Windows 版本不支援 `CTaskDialog`。 如果您想要向在舊版 Windows 上執行您的應用程式的使用者顯示訊息，您必須編寫替代對話方塊選項。 您可以使用靜態方法 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) ，在執行階段判斷使用者的電腦是否可以顯示 `CTaskDialog`中的 Windows 訊息方塊。 此外，只有使用 Unicode 程式庫建置應用程式時，才能使用 `CTaskDialog` 。  
+> Windows 版本的 Windows vista 不支援`CTaskDialog`。 如果您想要向在舊版 Windows 上執行您的應用程式的使用者顯示訊息，您必須編寫替代對話方塊選項。 您可以使用靜態方法 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) ，在執行階段判斷使用者的電腦是否可以顯示 `CTaskDialog`中的 Windows 訊息方塊。 此外，只有使用 Unicode 程式庫建置應用程式時，才能使用 `CTaskDialog` 。  
   
  `CTaskDialog` 支援幾個可收集及顯示資訊的選擇性項目。 例如， `CTaskDialog` 可以顯示命令連結、自訂按鈕、自訂圖示和頁尾。 `CTaskDialog` 也包含幾種方法，可讓您查詢工作對話方塊的狀態，以判斷使用者選取了哪些選擇性項目。  
   
 ## <a name="prerequisites"></a>必要條件  
  您需要下列元件才能完成此逐步解說：  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 (含) 以後版本  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista 或更新版本  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>以 CTaskDialog 取代 Windows 訊息方塊  
  下列程序示範 `CTaskDialog`的最基本用法，也就是取代 Windows 訊息方塊。 此範例也會變更已與工作對話方塊建立關聯的圖示。 變更圖示可使 `CTaskDialog` 看起來與 Windows 訊息方塊完全相同。  
@@ -211,7 +211,7 @@ ms.lasthandoff: 12/21/2017
   
  這些範例不會示範 `CTaskDialog`的所有可用選項，但應該可以協助您開始使用。 如需此類別的完整說明，請參閱 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [CTaskDialog 類別](../mfc/reference/ctaskdialog-class.md)   
  [CTaskDialog::CTaskDialog](../mfc/reference/ctaskdialog-class.md#ctaskdialog)

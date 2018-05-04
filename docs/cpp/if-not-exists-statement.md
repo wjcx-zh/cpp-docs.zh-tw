@@ -1,12 +1,9 @@
 ---
-title: "__if_not_exists 陳述式 |Microsoft 文件"
-ms.custom: 
+title: __if_not_exists 陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __if_not_exists_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2342354528811f415a9c9aeb819e2c0e7cec6646
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd4e586a211d7c4e2ead1ce3f225e2d92d2bd5a7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists 陳述式
 `__if_not_exists` 陳述式會測試指定識別項是否存在。 如果識別項不存在，就會執行指定的陳述式區塊。  
@@ -63,7 +58,7 @@ statements
 ## <a name="example"></a>範例  
  如需如何使用`__if_not_exists`，請參閱[__if_exists 陳述式](../cpp/if-exists-statement.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [選擇陳述式](../cpp/selection-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [__if_exists 陳述式](../cpp/if-exists-statement.md)

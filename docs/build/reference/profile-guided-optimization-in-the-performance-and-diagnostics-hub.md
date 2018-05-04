@@ -4,20 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98933630a2cc8b5dfb5c4d1d7b24ceac3ec2937b
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: f8a586ef48f87f90dd5f191f9fcaea6f30af5c56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>特性指引最佳化 Visual Studio 2013 效能和診斷中樞中
 

@@ -2,12 +2,9 @@
 title: LIB 概觀 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>LIB 概觀
 LIB 建立標準程式庫、 匯入程式庫，和匯出的檔案，您可以使用[連結](../../build/reference/linker-options.md)時建置程式。 從命令提示字元執行 LIB。  
@@ -53,7 +48,7 @@ LIB 建立標準程式庫、 匯入程式庫，和匯出的檔案，您可以使
   
  如需詳細資訊，請參閱[執行 LIB](../../build/reference/running-lib.md)。  
   
- **/ 匯出**  
+ **/EXPORT**  
  匯出函式，從您的程式。  
   
  如需詳細資訊，請參閱[建置匯入程式庫和匯出檔案](../../build/reference/building-an-import-library-and-export-file.md)。  
@@ -113,7 +108,7 @@ LIB 建立標準程式庫、 匯入程式庫，和匯出的檔案，您可以使
   
  如需詳細資訊，請參閱[管理程式庫](../../build/reference/managing-a-library.md)。  
   
- **/ 子系統**  
+ **/SUBSYSTEM**  
  告知作業系統如何執行程式，建立連結至輸出程式庫。  
   
  如需詳細資訊，請參閱[管理程式庫](../../build/reference/managing-a-library.md)。  
@@ -128,7 +123,7 @@ LIB 建立標準程式庫、 匯入程式庫，和匯出的檔案，您可以使
   
  如需詳細資訊，請參閱[執行 LIB](../../build/reference/running-lib.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [LIB 參考](../../build/reference/lib-reference.md)   
  [LIB 輸入的檔](../../build/reference/lib-input-files.md)   
  [LIB 輸出檔案](../../build/reference/lib-output-files.md)   

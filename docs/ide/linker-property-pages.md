@@ -1,12 +1,12 @@
 ---
-title: "連結器屬性頁 |Microsoft 文件"
-ms.custom: 
+title: 連結器屬性頁 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.RegisterOutput
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - per-user redirection
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8a1d0d4775955ee55aa0f40ac10a75cda54379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 31b44b6711153d29ab6a9c542a6e5677e6279432
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-property-pages"></a>連結器屬性頁
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="per-user-redirection"></a>個別使用者重新導向
 
-傳統上尚未註冊 Visual Studio 中的執行的 HKEY_CLASSES_ROOT (HKCR)。 與[!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]，以存取 HKCR 您必須在提高權限模式中執行 Visual Studio。 開發人員不一定想要在提升權限模式下執行，但仍然必須使用註冊。 個別使用者重新導向，可讓您註冊不需要在此模式中執行。
+傳統上尚未註冊 Visual Studio 中的執行的 HKEY_CLASSES_ROOT (HKCR)。 使用 Windows Vista 和更新版本的作業系統，存取 HKCR 您必須執行 Visual Studio 中提高權限模式。 開發人員不一定想要在提升權限模式下執行，但仍然必須使用註冊。 個別使用者重新導向，可讓您註冊不需要在此模式中執行。
 
 個別使用者重新導向會強制重新導向至 HKEY hkcr 的任何寫入\_目前\_使用者 (HKCU)。 如果每次使用者重新導向已關閉，它可能會導致[專案建置錯誤 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)程式嘗試寫入 HKCR。
 

@@ -2,12 +2,9 @@
 title: -WL （啟用一行診斷） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /wl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48ba6ab05ac596c98c4fa5a95971735c62267a35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58a6b41e66f7ec37ad02747edb8331049b9baef5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (啟用一行診斷)
 將其他資訊附加至錯誤或警告訊息。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  錯誤和警告訊息，從 c + + 編譯器後面可以接著會出現，根據預設，在新行上的其他資訊。 當您從命令列編譯時，其他的一行資訊可以附加至錯誤或警告訊息。 如果您擷取您的組建輸出記錄檔，然後再處理該記錄來找出所有錯誤和警告，這可能不妥當。 分號會與其他列隔開的錯誤或警告訊息。  
   
- 並非所有錯誤和警告訊息都有其他行資訊。 下列程式碼會產生錯誤之其他行的資訊。它可讓您測試的效果，當您使用**/WL**。  
+ 並非所有錯誤和警告訊息都有其他行資訊。 下列程式碼會產生錯誤之其他行的資訊。它可讓您測試的效果，當您使用 **/WL**。  
   
 ```  
 // compiler_option_WL.cpp  
@@ -67,6 +62,6 @@ int main() {
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

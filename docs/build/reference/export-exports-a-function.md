@@ -2,12 +2,9 @@
 title: 匯出 （匯出函式） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (匯出函式)
 ```  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>備註  
  使用此選項，您可以從您的程式匯出函式，可讓其他程式可以呼叫此函式。 您也可以匯出資料。 匯出通常被定義在 DLL 中。  
   
- *Entryname*是函式或資料的項目名稱，因為它是可供呼叫端程式。 `ordinal`指定介於 1 到 65535 之間的匯出資料表的索引如果您未指定`ordinal`，連結會指派一個。 **NONAME**關鍵字匯出函式只能做為序數，而不*entryname*。  
+ *Entryname*是函式或資料的項目名稱，因為它是可供呼叫端程式。 `ordinal` 指定介於 1 到 65535 之間的匯出資料表的索引如果您未指定`ordinal`，連結會指派一個。 **NONAME**關鍵字匯出函式只能做為序數，而不*entryname*。  
   
  **資料**關鍵字會指定匯出的項目是資料的項目。 必須使用宣告中的用戶端程式的資料項目**extern __declspec （dllimport)**。  
   
@@ -71,6 +66,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

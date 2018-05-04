@@ -1,13 +1,10 @@
 ---
-title: "何時需要呼叫 AtlAxWinTerm？ | Microsoft Docs"
-ms.custom: 
+title: 何時需要呼叫 AtlAxWinTerm？ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - AtlAxWinTerm
 dev_langs:
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - AtlAxWinTerm method
 ms.assetid: 0088d494-2d8d-45b4-b582-2af726bd6cbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c52c5295108ef01dc23ea9f945850e91a9806d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61830023d3fb67d331784769f32cda4eee8355b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>何時需要呼叫 AtlAxWinTerm？
-[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)取消註冊**"AtlAxWin80"**視窗類別。 您應該呼叫此函式 （如果您不需要再建立主應用程式視窗） 終結所有現有的主控件 windows。 如果您未呼叫此函式，視窗類別會自動取消註冊處理序終止時。  
+[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)取消註冊 **"AtlAxWin80"** 視窗類別。 您應該呼叫此函式 （如果您不需要再建立主應用程式視窗） 終結所有現有的主控件 windows。 如果您未呼叫此函式，視窗類別會自動取消註冊處理序終止時。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  何時需要呼叫 AtlAxWinInit  
 [控制項內含項目常見問題集](../atl/atl-control-containment-faq.md)
 

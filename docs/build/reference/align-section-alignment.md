@@ -1,13 +1,10 @@
 ---
-title: "/ALIGN （區段對齊） |Microsoft 文件"
-ms.custom: 
+title: /ALIGN （區段對齊） |Microsoft 文件
+ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.Alignment
 - /align
@@ -22,14 +19,13 @@ helpviewer_keywords:
 - sections
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ca4572e84c7ad32be2d03a312f7bb7d8a3f3f29
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 543ea30b06f62939f378167d8598c73f66061f46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="align-section-alignment"></a>/ALIGN (區段對齊)
 

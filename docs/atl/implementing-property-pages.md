@@ -1,13 +1,10 @@
 ---
-title: "實作屬性頁 |Microsoft 文件"
-ms.custom: 
+title: 實作屬性頁 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac80bdd9e38d14b53aea7b691d480272cce66e7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1db6ca4ea374cd76d5b0e1df8e6c0cd03474fdf2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-property-pages"></a>實作屬性頁
 屬性頁可讓您為 COM 物件實作`IPropertyPage`或**IPropertyPage2**介面。 ATL 提供實作透過屬性頁支援[ATL 屬性頁精靈](../atl/reference/atl-property-page-wizard.md)中[加入類別對話方塊](../ide/add-class-dialog-box.md)。  
@@ -56,9 +51,9 @@ ms.lasthandoff: 12/21/2017
  屬性頁面上執行範例，請參閱[範例： 實作屬性頁](../atl/example-implementing-a-property-page.md)。  
   
 > [!NOTE]
->  如果您想要裝載 ActiveX 控制項屬性頁中，您必須變更您精靈產生的類別衍生。 取代**CDialogImpl\<CYourClass >**與**CAxDialogImpl\<CYourClass >**基底類別清單中。  
+>  如果您想要裝載 ActiveX 控制項屬性頁中，您必須變更您精靈產生的類別衍生。 取代**CDialogImpl\<CYourClass >** 與**CAxDialogImpl\<CYourClass >** 基底類別清單中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性頁](../atl/atl-com-property-pages.md)   
  [ATLPages 範例](../visual-cpp-samples.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "遞增和遞減運算子多載 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 遞增和遞減運算子多載 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - decrement operators [C++]
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10987b351ebc34b7b17963e17047e32ee0d9bc5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dee35098dbf78e04241f04687c74c40ded1a0010
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>遞增和遞減運算子多載 (C++)
 遞增和遞減運算子屬於特殊的分類，因為每個運算子都有兩種變數：  
@@ -139,5 +134,5 @@ int main()
   
  除了明確的引動過程之外，沒有其他語法會使用遞增或遞減運算子來傳遞這些值，如上述程式碼所示。 實作這項功能較簡單的方式是多載加法/指派運算子 (`+=`)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算子多載](../cpp/operator-overloading.md)

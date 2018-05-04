@@ -1,13 +1,10 @@
 ---
-title: "如何： 在 C/c + + 應用程式資訊清單內嵌 |Microsoft 文件"
-ms.custom: 
+title: 如何： 在 C/c + + 應用程式資訊清單內嵌 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：在 C/C++ 應用程式中嵌入資訊清單
 建議您使用 C/c + + 應用程式 （或程式庫） 有其資訊清單嵌入最終的二進位檔，因為這樣可保證在大部分情況下正確的執行階段行為。 根據預設，[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]嘗試建置專案，從原始程式檔時，內嵌資訊清單，請參閱[Visual Studio 中的資訊清單產生](../build/manifest-generation-in-visual-studio.md)如需詳細資訊。 但是如果使用 nmake 建置應用程式，會需要現有 makefile 的某些變更。 本節示範如何變更現有的 makefile，將會自動內嵌於最終二進位檔的資訊清單。  
@@ -263,5 +258,5 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解 C/C++ 程式的資訊清單產生過程](../build/understanding-manifest-generation-for-c-cpp-programs.md)

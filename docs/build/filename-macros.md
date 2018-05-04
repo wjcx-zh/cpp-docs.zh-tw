@@ -2,12 +2,9 @@
 title: 檔名巨集 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - filename macros in NMAKE
 - NMAKE program, filename macros
 ms.assetid: 20afd6b3-5b6c-4e33-9d01-309ce98ef9db
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2073e4fcb365b3beb10d4040c0f54d9f61a0431
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e49c65a642dcee3e0f04fb5000a390fccae98ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filename-macros"></a>檔名巨集
 檔名巨集是預先定義為相依性 （在磁碟上的不完整的檔名規格） 中指定的檔名。 這些巨集不需要括在括號時叫用。指定只是 $ 所示。  
@@ -48,5 +43,5 @@ ms.lasthandoff: 12/21/2017
 |**F**|基底名稱再加上副檔名|  
 |**R**|磁碟機加上目錄加上的基底名稱|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [特殊的 NMAKE 巨集](../build/special-nmake-macros.md)

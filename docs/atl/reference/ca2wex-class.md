@@ -1,12 +1,9 @@
 ---
-title: "CA2WEX 類別 |Microsoft 文件"
-ms.custom: 
+title: CA2WEX 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2WEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0114d2ce60eba1d92b4cfd52d003532bd9ced097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218e0d8f5e93a9e6c41ff855ff086cc7bfa6c766
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2wex-class"></a>CA2WEX 類別
 這個類別由字串轉換巨集`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。  
@@ -101,7 +96,7 @@ class CA2WEX
 ## <a name="requirements"></a>需求  
  **標頭：** atlconv.h  
   
-##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
+##  <a name="ca2wex"></a>  CA2WEX::CA2WEX  
  建構函式。  
   
 ```
@@ -119,7 +114,7 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>備註  
  配置轉譯程序中使用的緩衝區。  
   
-##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX  
+##  <a name="dtor"></a>  CA2WEX:: ~ CA2WEX  
  解構函式。  
   
 ```
@@ -129,21 +124,21 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>備註  
  釋放已配置的緩衝區。  
   
-##  <a name="m_psz"></a>CA2WEX::m_psz  
+##  <a name="m_psz"></a>  CA2WEX::m_psz  
  儲存在來源字串的資料成員。  
   
 ```
 LPWSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CA2WEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CA2WEX::m_szBuffer  
  靜態緩衝區，用來儲存已轉換的字串。  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpwstr"></a>CA2WEX::operator LPWSTR  
+##  <a name="operator_lpwstr"></a>  CA2WEX::operator LPWSTR  
  轉換運算子。  
   
 ```  
@@ -153,7 +148,7 @@ operator LPWSTR() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回文字字串做為類型**LPWSTR。**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CA2AEX 類別](../../atl/reference/ca2aex-class.md)   
  [CA2CAEX 類別](../../atl/reference/ca2caex-class.md)   
  [CW2AEX 類別](../../atl/reference/cw2aex-class.md)   

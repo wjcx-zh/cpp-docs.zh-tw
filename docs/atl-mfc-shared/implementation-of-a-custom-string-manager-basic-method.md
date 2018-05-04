@@ -1,32 +1,27 @@
 ---
-title: "實作的自訂字串管理員 （基本的方法） |Microsoft 文件"
-ms.custom: 
+title: 實作的自訂字串管理員 （基本的方法） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 259f9533747b266f0be0a782cdc94c98f167d2d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>實作的自訂字串管理員 （基本的方法）
-若要自訂的記憶體配置方案，字串資料是使用 ATL 提供最簡單的方式**CAtlStringMgr**類別，但提供您自己的記憶體配置常式。 建構函式**CAtlStringMgr**接受單一參數： 指標`IAtlMemMgr`物件。 `IAtlMemMgr`是提供到堆積的泛型介面的抽象基底類別。 使用`IAtlMemMgr`介面， **CAtlStringMgr**配置、 重新配置，然後釋放用來儲存字串資料的記憶體。 您可以實作`IAtlMemMgr`介面，或是使用其中一個五個 ATL 提供的記憶體管理員類別。 ATL 提供的記憶體管理員只會包裝現有的記憶體配置設備：  
+若要自訂的記憶體配置方案，字串資料是使用 ATL 提供最簡單的方式**CAtlStringMgr**類別，但提供您自己的記憶體配置常式。 建構函式**CAtlStringMgr**接受單一參數： 指標`IAtlMemMgr`物件。 `IAtlMemMgr` 是提供到堆積的泛型介面的抽象基底類別。 使用`IAtlMemMgr`介面， **CAtlStringMgr**配置、 重新配置，然後釋放用來儲存字串資料的記憶體。 您可以實作`IAtlMemMgr`介面，或是使用其中一個五個 ATL 提供的記憶體管理員類別。 ATL 提供的記憶體管理員只會包裝現有的記憶體配置設備：  
   
 -   [CCRTHeap](../atl/reference/ccrtheap-class.md)包裝標準 CRT 堆積函式 ([malloc](../c-runtime-library/reference/malloc.md)，[可用](../c-runtime-library/reference/free.md)，和[realloc](../c-runtime-library/reference/realloc.md))  
   
@@ -46,6 +41,6 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CStringT 管理記憶體](../atl-mfc-shared/memory-management-with-cstringt.md)
 

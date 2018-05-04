@@ -1,13 +1,10 @@
 ---
-title: "為什麼會失去精確度的浮點數 |Microsoft 文件"
-ms.custom: 
+title: 為什麼會失去精確度的浮點數 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 371aad5dc573a13ca834d8d6d9667a43bb40324e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb673f087d98f6c7acdd1e98b5649cc84a48d277
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>浮點數會失去精確度的原因
 浮點十進位值通常不需要實際的二進位表示法。 這是造成副作用的 CPU 如何代表浮動點資料。 基於這個理由，您可能會流失有效位數，以及一些浮點運算可能會產生非預期的結果。  
@@ -74,5 +69,5 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 ## <a name="comments"></a>註解  
  EPSILON，您可以使用常數 FLT_EPSILON，定義為 1.192092896e 浮點數的-07F，或 DBL_EPSILON，定義為 2.2204460492503131e 雙-016。 您需要包含 float.h 這些常數。 這些常數會定義為最小正數 x 數字，這類 x + 1.0 不等於 1.0。 因為這是很小的數目，您應該採用使用者定義計算非常大量的容錯。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化程式碼](../../build/reference/optimizing-your-code.md)

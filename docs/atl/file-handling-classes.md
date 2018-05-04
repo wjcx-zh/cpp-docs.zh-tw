@@ -1,29 +1,24 @@
 ---
-title: "檔案處理類別 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 檔案處理類別 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - file classes [C++]
 ms.assetid: 94355eb1-daa3-4825-b183-7392b3899561
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6196bd9e6e1ce07d65c44c1b9f0fed2d595af89d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 99430bc26754023bf7f23511546328e31b6be265
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-handling-classes"></a>檔案處理類別
 這些類別會提供方法來處理檔案、 暫存檔案，以及記憶體對應檔。  
@@ -36,6 +31,6 @@ ms.lasthandoff: 02/14/2018
   
 -   [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md)這個類別提供方法，建立和使用的暫存檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

@@ -1,29 +1,24 @@
 ---
-title: "宣告子概觀 |Microsoft 文件"
-ms.custom: 
+title: 宣告子概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a3f12ac87f0165c74aaa487913f679f1a9941e
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 81ba4ff8e50d646a6a3918c2104756c4378a1aea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarators"></a>宣告子概觀
 宣告子是用來指定物件或函式名稱的宣告元件。 宣告子也可將具名物件指定為物件、指標、參考或陣列。  當宣告子未指定基底類型時，會將基底類型中的類型資訊修改為指定的衍生類型，如指標、參考和陣列。  套用至函式時，宣告子會搭配類型規範，將函式的傳回類型完整指定為物件、指標或參考。 (在中討論的規範[宣告和定義](declarations-and-definitions-cpp.md)，可表示如類型和儲存類別屬性。 在這一節和討論的修飾詞[Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)，修改宣告子。)下圖顯示 `MyFunction` 的完整宣告，以及呼叫宣告的元件。  
@@ -57,7 +52,7 @@ const char *pch, ch;
   
  **指標、 參考和陣列宣告子**  
   
- 在名稱前面插入指標運算子會使物件變成指標或參考。  **\***運算子宣告為指標的名稱**&**運算子會將它宣告為參考。  
+ 在名稱前面插入指標運算子會使物件變成指標或參考。  **\*** 運算子宣告為指標的名稱**&** 運算子會將它宣告為參考。  
   
 ```  
 int *i; // declarator is *i  

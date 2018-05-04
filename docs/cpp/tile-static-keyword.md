@@ -1,12 +1,9 @@
 ---
-title: "tile_static 關鍵字 |Microsoft 文件"
-ms.custom: 
+title: tile_static 關鍵字 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - tile_static_CPP
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad47c85a8815d8a1a77f15788c3b312267cb055b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 092ba4a438378f12ae1ab332bce906df38b267e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tilestatic-keyword"></a>tile_static 關鍵字
 `tile_static` 關鍵字用於宣告可供執行緒磚中所有執行緒存取的變數。 變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。 如需有關如何使用圖格的詳細資訊，請參閱[使用磚](../parallel/amp/using-tiles.md)。  
@@ -157,7 +152,7 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)   
  [C + + AMP 概觀](../parallel/amp/cpp-amp-overview.md)   
  [parallel_for_each 函式 (c + + AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   

@@ -2,12 +2,9 @@
 title: -/vmb、 /vmg （表示方法） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vmb
 - /vmg
@@ -22,24 +19,22 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a9d64f8b1035f731adef79356d24eeb3e4f7ee3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5263b6c7ca227a10b34c32e0b0801eeddf07b9cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb、/vmg (表示方法)
 選取的方法，供編譯器用來表示類別成員的指標。  
   
- 使用**/vmb**如果您一定是之前定義類別成員的類別中宣告的指標。  
+ 使用 **/vmb**如果您一定是之前定義類別成員的類別中宣告的指標。  
   
- 使用**/vmg**至之前定義類別宣告類別成員的指標。 如果您在定義中互相參考的兩個不同類別的成員，可能會發生這項需求。 這類相互參考的類別定義之前必須參考一個類別。  
+ 使用 **/vmg**至之前定義類別宣告類別成員的指標。 如果您在定義中互相參考的兩個不同類別的成員，可能會發生這項需求。 這類相互參考的類別定義之前必須參考一個類別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,6 +60,6 @@ ms.lasthandoff: 12/21/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

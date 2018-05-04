@@ -1,13 +1,10 @@
 ---
-title: "實作視窗 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 實作視窗 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CWindowImpl class, using
 - windows [C++], implementing in ATL
 ms.assetid: eb1ce8d6-72f9-4894-aae7-e60a61665628
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46007b84d297689b77c3eda5418c4b91be120da5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f3e2663fa2e8c39bbd8b618d279a49b7eb29233
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-window"></a>實作視窗
 類別[CWindowImpl](../atl/reference/cwindowimpl-class.md)可讓您實作一個視窗，並處理它的訊息。 ATL 中處理訊息為基礎的訊息對應。 本章節將說明：  
@@ -38,6 +33,6 @@ ms.lasthandoff: 12/21/2017
   
 -   如何[實作 CWindowImpl 的視窗](../atl/implementing-a-window-with-cwindowimpl.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [視窗類別](../atl/atl-window-classes.md)
 

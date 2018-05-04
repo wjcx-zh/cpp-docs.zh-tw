@@ -1,12 +1,9 @@
 ---
-title: "間接取值運算子: * |Microsoft 文件"
-ms.custom: 
+title: '間接取值運算子: * |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d63fbe4042bb86f1ac7810302eeaa1b7978422b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indirection-operator-"></a>間接取值運算子：*
 ## <a name="syntax"></a>語法  
@@ -37,7 +32,7 @@ ms.lasthandoff: 03/16/2018
 ```  
   
 ## <a name="remarks"></a>備註  
- 一元間接運算子 (**\***) 會取值指標; 也就是說，它將指標值轉換為左值。 間接運算子的運算元必須是類型指標。 間接運算式的結果是類型，指標類型即衍生自此。 使用**\***運算子，在此內容中的是不同運算子為二元運算子，後者是乘法。  
+ 一元間接運算子 (**\***) 會取值指標; 也就是說，它將指標值轉換為左值。 間接運算子的運算元必須是類型指標。 間接運算式的結果是類型，指標類型即衍生自此。 使用**\*** 運算子，在此內容中的是不同運算子為二元運算子，後者是乘法。  
   
  如果運算元指向某個函式，則結果為函式指示項。 如果運算元指向某個儲存位置，則結果為指定儲存位置的左值。  
   

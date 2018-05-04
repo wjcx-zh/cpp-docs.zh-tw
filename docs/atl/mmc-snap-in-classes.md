@@ -1,12 +1,9 @@
 ---
-title: "MMC 嵌入式管理單元的類別 (ATL) |Microsoft 文件"
-ms.custom: 
+title: MMC 嵌入式管理單元的類別 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.MMC
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MMC Snap-In classes
 ms.assetid: 4af1d5af-687f-48b1-b2c5-fa252241b4d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94380314a5b24cfab0399aed5f5e001b7b7df9a4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f3b5c1786695c9bf48189c6ff350d721a5bdac74
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mmc-snap-in-classes"></a>MMC 嵌入式管理單元的類別
 下列類別會提供開發 Microsoft Management Console (MMC) 嵌入式管理單元元件的支援：  
@@ -34,7 +29,7 @@ ms.lasthandoff: 02/14/2018
   
 -   [CSnapInPropertyPageImpl](../atl/reference/csnapinpropertypageimpl-class.md)實作嵌入式管理單元 屬性頁面物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)   
  [嵌入式管理單元物件巨集](../atl/reference/snap-in-object-macros.md)
 

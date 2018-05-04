@@ -1,27 +1,22 @@
 ---
-title: "將在網頁上 (ATL 教學課程，第 7 部分) 控制項放入 |Microsoft 文件"
-ms.custom: 
+title: 將在網頁上 (ATL 教學課程，第 7 部分) 控制項放入 |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cd4076ac34af6ee4b19687f401376265bf0e872
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>將控制項放在網頁上 (ATL 教學課程，第 7 部分)
 現在已完成您的控制項。 若要查看您在真實世界的情況下運作的控制項，請將它放在網頁上。 定義您的控制項時，已建立包含控制項的 HTML 檔。 開啟 PolyCtl.htm 檔案從**方案總管 中**，您可以看到您在網頁上的控制項。  
@@ -81,6 +76,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-steps"></a>後續步驟  
  以上總結 ATL 教學課程。 如需連結 ATL 的詳細資訊，請參閱[ATL 起始頁](../atl/active-template-library-atl-concepts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
 

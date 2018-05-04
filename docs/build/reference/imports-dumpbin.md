@@ -1,13 +1,10 @@
 ---
-title: "-匯入 (DUMPBIN) |Microsoft 文件"
-ms.custom: 
+title: -匯入 (DUMPBIN) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /imports
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - /IMPORTS dumpbin option
 - -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1866c8d522e7482781aa65e58d93ccb09e6b265f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af3b9a1bbcf1769e87715e46566dee9c53a96747
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 ```  
@@ -47,5 +42,5 @@ dumpbin /IMPORTS:msvcrt.dll
   
  只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項僅適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DUMPBIN 選項](../../build/reference/dumpbin-options.md)

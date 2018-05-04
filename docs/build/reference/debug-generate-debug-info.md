@@ -1,13 +1,10 @@
 ---
-title: "-DEBUG （產生偵錯資訊） |Microsoft 文件"
-ms.custom: 
+title: -DEBUG （產生偵錯資訊） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateDebugInformation
 - /debug
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - debugging [C++], linker option
 - program databases [C++]
 ms.assetid: 1af389ae-3f8b-4d76-a087-1cdf861e9103
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f9f424a2e71a3094c9e633cbe5779ef5d75fbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f93c47a0f96cf0b75b453bcea97212d4ab2fd6d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debug-generate-debug-info"></a>/DEBUG (產生偵錯資訊)
 ```  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 **偵錯： 無**選項不會產生 PDB。  
   
-當您指定**偵錯**連結器預設為不搭配任何其他選項， **/debug: full**命令列和 makefile 建置，發行組建的 Visual Studio IDE 和偵錯和發行在 Visual Studio 2015 和較早版本中建置。 從 Visual Studio 2017，在 IDE 中的建置系統預設值為**/debug: fastlink**當您指定**偵錯**選項偵錯組建。 其他預設值是不變，為了維持回溯相容性。  
+當您指定**偵錯**連結器預設為不搭配任何其他選項， **/debug: full**命令列和 makefile 建置，發行組建的 Visual Studio IDE 和偵錯和發行在 Visual Studio 2015 和較早版本中建置。 從 Visual Studio 2017，在 IDE 中的建置系統預設值為 **/debug: fastlink**當您指定**偵錯**選項偵錯組建。 其他預設值是不變，為了維持回溯相容性。  
   
 編譯器的[C7 相容](../../build/reference/z7-zi-zi-debug-information-format.md)(/ Z7) 選項可讓編譯器在.obj 檔中保留偵錯資訊。 您也可以使用[程式資料庫](../../build/reference/z7-zi-zi-debug-information-format.md)(/Zi) 編譯器選項，來偵錯資訊儲存在.obj 檔案的 PDB。 連結器會尋找物件的 PDB 第一次在.obj 檔案，以撰寫的絕對路徑，然後再搜尋含有.obj 檔案的目錄。 您無法指定物件的 PDB 檔案名稱或位置來連結器。  
   
@@ -82,6 +77,6 @@ ms.lasthandoff: 12/21/2017
   
 1.  請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateDebugInformation%2A>。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

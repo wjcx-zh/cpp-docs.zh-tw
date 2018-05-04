@@ -1,30 +1,25 @@
 ---
-title: "ATL 登錄器和 Backus-naur Nauer 形成 (BNF) 語法 |Microsoft 文件"
-ms.custom: 
+title: ATL 登錄器和 Backus-naur Nauer 形成 (BNF) 語法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d364313420c0a950f8eba222e3ae020fbd86cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4137dd94886456d5813076f3cb328bac5ecf5c03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>了解 Nauer Backus-naur 格式 (BNF) 語法
 使用 ATL 登錄器指令碼會使用 BNF 語法，使用下表所示的標記法本主題中所述。  
@@ -108,8 +103,8 @@ val 'testmulti' = m 'String 1\0String 2\0'
 val 'testhex' = d '&H55'  
 ```  
   
- 指定的索引鍵名稱`testhex`是**DWORD**值設定為十六進位 55 (十進位 85)。 請注意，此格式符合**& H** Visual Basic 規格中找到的標記法為。  
+ 指定的索引鍵名稱`testhex`是**DWORD**值設定為十六進位 55 (十進位 85)。 請注意，此格式符合 **& H** Visual Basic 規格中找到的標記法為。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
 

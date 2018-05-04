@@ -2,28 +2,23 @@
 title: 使用無 （） 會不產生任何程式碼的函式名稱 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03706be0b9853cbbdebe79b58e410f7237692ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40aed3969ae0707b07f0912d7247b49886d0319d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-function-name-without--produces-no-code"></a>使用不帶 () 的函式名稱不會產生程式碼
 在您的程式中宣告的函式名稱使用時沒有括號，編譯器不會產生程式碼。 無論函式接受參數，因為編譯器會計算函式的位址。不過，函式呼叫運算子 」 （）"不存在，因為沒有進行呼叫。 這個結果會是如下所示：  
@@ -52,5 +47,5 @@ void funcn() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化程式碼](../../build/reference/optimizing-your-code.md)

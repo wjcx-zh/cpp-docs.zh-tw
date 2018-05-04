@@ -1,12 +1,9 @@
 ---
-title: "訊息對應 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 訊息對應 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12eeb74266e9c303817430958025d6536147356c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: eaef52363ebdd79a1efb1e2e26bce016500cb722
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="message-maps-atl"></a>訊息對應 (ATL)
 與特定訊息、 命令或通知的訊息對應產生關聯的處理常式函式。 使用 ATL 的[訊息對應巨集](../atl/reference/message-map-macros-atl.md)，您可以指定視窗的訊息對應。 中的視窗程序`CWindowImpl`， `CDialogImpl`，和`CContainedWindowT`導向至其訊息對應視窗的訊息。  
@@ -41,6 +36,6 @@ ms.lasthandoff: 02/14/2018
 ## <a name="alternate-message-maps"></a>替代的訊息對應  
  最後，ATL 支援替代的訊息對應，以宣告[ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map)巨集。 每個替代訊息對應由唯一數字，您將傳遞給`ALT_MSG_MAP`。 使用替代訊息對應，您可以處理之訊息的一個對應中的多個視窗。 請注意，根據預設，`CWindowImpl`不會使用替代的訊息對應。 若要新增此支援，請覆寫`WindowProc`方法在您`CWindowImpl`-衍生類別並呼叫`ProcessWindowMessage`訊息對應識別碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [實作視窗](../atl/implementing-a-window.md)
 

@@ -2,29 +2,24 @@
 title: -防護 （啟用控制流程防護） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 dev_langs:
 - C++
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7f87c101122b8f74e3bffefd42b1d9a9ddc55c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5c60ff444189e9e6b7919b43649b75722ee7249
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (啟用控制流程防護)
 啟用控制流程防護安全性檢查的編譯器產生。  
@@ -58,6 +53,6 @@ ms.lasthandoff: 12/21/2017
   
 4.  在下拉式清單控制項中，選擇 [是]  啟用控制流程防護，或選擇 [否]  將其停用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

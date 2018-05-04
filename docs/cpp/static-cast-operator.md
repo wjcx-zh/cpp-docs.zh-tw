@@ -1,12 +1,9 @@
 ---
-title: "static_cast 運算子 |Microsoft 文件"
-ms.custom: 
+title: static_cast 運算子 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3913937d9099304c478404c4c55a09fa54392785
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0cd6ea7e2268940febca9e1e564f30d29dcff0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticcast-operator"></a>static_cast 運算子
 將轉換*運算式*的型別*類型 id*只根據出現在運算式中的類型。  
@@ -117,6 +112,6 @@ void f() {
   
  由於在重新配置的記憶體回收行程之上執行未檢查的轉換並不安全，因此，除非您確定在效能嚴重不足的程式碼中可以正確執行，否則請勿使用 `static_cast`。 如果您必須使用`static_cast`在發行模式中取代[safe_cast](../windows/safe-cast-cpp-component-extensions.md)在偵錯組建中，以確保成功。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [轉型運算子](../cpp/casting-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)

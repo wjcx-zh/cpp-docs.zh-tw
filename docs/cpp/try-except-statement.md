@@ -1,12 +1,9 @@
 ---
-title: "再試一次-try-except 陳述式 |Microsoft 文件"
-ms.custom: 
+title: 再試一次-try-except 陳述式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _abnormal_termination_cpp
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-except-statement"></a>try-except 陳述式
 
@@ -57,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 > {  
 >    防護程式碼  
 > }  
-> **__except** ( *expression* )  
+> **__except** (*運算式*)  
 > {  
 >    例外狀況處理常式程式碼  
 > }  
@@ -81,11 +76,11 @@ ms.lasthandoff: 01/25/2018
 
 3. 如果執行保護區段期間發生例外狀況或的任何常式中的保護的區段呼叫， `__except` *運算式*(稱為*篩選*運算式) 會評估和值決定如何處理例外狀況。 共有三個值：
 
-   **EXCEPTION_CONTINUE_EXECUTION (-1)**例外狀況已解除。 在例外狀況發生的位置繼續執行。
+   **EXCEPTION_CONTINUE_EXECUTION (-1)** 例外狀況已解除。 在例外狀況發生的位置繼續執行。
 
-   **EXCEPTION_CONTINUE_SEARCH (0)**無法辨識例外狀況。 繼續搜尋堆疊中的處理常式，首先搜尋包含 **try-except** 陳述式，然後是具有次高優先順序的處理常式。
+   **EXCEPTION_CONTINUE_SEARCH (0)** 無法辨識例外狀況。 繼續搜尋堆疊中的處理常式，首先搜尋包含 **try-except** 陳述式，然後是具有次高優先順序的處理常式。
 
-   **EXCEPTION_EXECUTE_HANDLER (1)**辨識例外狀況。 執行 `__except` 複合陳述式將控制項傳送至例外狀況處理常式，然後在 `__except` 區塊之後繼續執行。
+   **EXCEPTION_EXECUTE_HANDLER (1)** 辨識例外狀況。 執行 `__except` 複合陳述式將控制項傳送至例外狀況處理常式，然後在 `__except` 區塊之後繼續執行。
 
 由於 `__except` 運算式會以 C 運算式求值，因此限於單一值、條件運算式運算子或逗號運算子。 如果需要更廣泛的處理，運算式可以呼叫常式，傳回上面所列三個值的其中一個。
 
@@ -105,7 +100,7 @@ A`goto`陳述式也可以跳出保護的區段，它不降低效能，因為它�
 
 結構化例外狀況處理提供兩個內建函式，皆可使用**再試一次-除了**陳述式：`GetExceptionCode`和`GetExceptionInformation`。
 
-`GetExceptionCode`傳回例外狀況代碼 （32 位元整數）。
+`GetExceptionCode` 傳回例外狀況代碼 （32 位元整數）。
 
 內建函式`GetExceptionInformation`傳回的指標，此結構包含其他例外狀況的相關資訊。 透過這個指標就可以存取發生硬體例外狀況當時的電腦狀態。 結構如下所示：
 
@@ -124,11 +119,11 @@ typedef struct _EXCEPTION_POINTERS {
 
 excpt.h 會定義一些替代名稱，這些內建函式：
 
-`GetExceptionCode`相當於`_exception_code`
+`GetExceptionCode` 相當於 `_exception_code`
 
- `GetExceptionInformation`相當於`_exception_info`
+ `GetExceptionInformation` 相當於 `_exception_info`
 
- `AbnormalTermination`相當於`_abnormal_termination`
+ `AbnormalTermination` 相當於 `_abnormal_termination`
   
 ## <a name="example"></a>範例
 
@@ -196,7 +191,7 @@ world
 
 **結束 Microsoft 特定的**  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
 [結構化的例外處理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   

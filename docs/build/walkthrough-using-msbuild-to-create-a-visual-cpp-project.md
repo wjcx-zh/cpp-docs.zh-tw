@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 使用 MSBuild 來建立 Visual c + + 專案 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 使用 MSBuild 來建立 Visual c + + 專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92b954f334517adc22ca17f8324ec1a78819d9f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88366f78556ebcab6dc7b796cdeeefd402b99721
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>逐步解說：使用 MSBuild 來建立 Visual C++ 專案
 本逐步解說示範如何使用[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]建置 Visual c + + 專案，在命令提示字元。 您將學習如何建立 c + + 原始程式檔和 Visual c + + 主控台應用程式以 XML 為基礎的專案檔案。 建置專案之後, 您將學習如何自訂建置程序。  
@@ -191,7 +186,7 @@ ms.lasthandoff: 12/21/2017
 msbuild myproject.vcxproj /p:configuration=debug  
 ```  
   
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]建立輸出檔目錄，然後編譯，並會連結您的專案以產生 Myproject.exe 程式。 建置程序完成之後，請執行應用程式中使用下列命令：  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 建立輸出檔目錄，然後編譯，並會連結您的專案以產生 Myproject.exe 程式。 建置程序完成之後，請執行應用程式中使用下列命令：  
   
 ```  
 myproject  
@@ -200,7 +195,7 @@ myproject
  應用程式應該會顯示"Hello，從 MSBuild ！" 。  
   
 ## <a name="customizing-your-project"></a>自訂您的專案  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]可讓您執行預先定義的建置目標、 套用使用者定義的屬性和使用自訂工具，事件，並建置步驟。 本章節將說明下列工作：  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 可讓您執行預先定義的建置目標、 套用使用者定義的屬性和使用自訂工具，事件，並建置步驟。 本章節將說明下列工作：  
   
 -   使用[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]建置目標。  
   
@@ -265,7 +260,7 @@ myproject
  `msbuild myproject.vcxproj /t:rebuild`  
   
 ### <a name="adding-msbuild-customizations"></a>將加入 MSBuild 自訂項目  
- [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]提供自訂建置流程的各種方式。 下列主題示範如何加入自訂建置步驟、 工具和事件，以您[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]專案：  
+ [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 提供自訂建置流程的各種方式。 下列主題示範如何加入自訂建置步驟、 工具和事件，以您[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]專案：  
   
 -   [如何：將自訂建置步驟新增至 MSBuild 專案](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)  
   

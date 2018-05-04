@@ -2,11 +2,8 @@
 title: CComCritSecLock 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCritSecLock
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb07c2cca9394c23c6c3db156e205749f62e3f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 類別
 這個類別會提供用以鎖定及解除鎖定的關鍵區段物件的方法。  
@@ -66,7 +61,7 @@ template<class TLock> class CComCritSecLock
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-##  <a name="ctor"></a>CComCritSecLock::CComCritSecLock  
+##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock  
  建構函式。  
   
 ```
@@ -83,7 +78,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>備註  
  初始化關鍵區段的物件。  
   
-##  <a name="dtor"></a>CComCritSecLock:: ~ CComCritSecLock  
+##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock  
  解構函式。  
   
 ```
@@ -93,7 +88,7 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ### <a name="remarks"></a>備註  
  解除鎖定的重要區段的物件。  
   
-##  <a name="lock"></a>CComCritSecLock::Lock  
+##  <a name="lock"></a>  CComCritSecLock::Lock  
  呼叫此方法以鎖定的重要區段的物件。  
   
 ```
@@ -106,7 +101,7 @@ HRESULT Lock() throw();
 ### <a name="remarks"></a>備註  
  如果物件已鎖定，會在偵錯組建中發生判斷提示錯誤。  
   
-##  <a name="unlock"></a>CComCritSecLock::Unlock  
+##  <a name="unlock"></a>  CComCritSecLock::Unlock  
  呼叫這個方法來解除鎖定的重要區段的物件。  
   
 ```
@@ -116,6 +111,6 @@ void Unlock() throw();
 ### <a name="remarks"></a>備註  
  如果物件已解除鎖定，會在偵錯組建中發生判斷提示錯誤。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)   
  [CComAutoCriticalSection 類別](../../atl/reference/ccomautocriticalsection-class.md)

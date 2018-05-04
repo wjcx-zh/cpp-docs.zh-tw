@@ -2,28 +2,23 @@
 title: BSCMAKE 如何建置。Bsc 檔案 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8e03bed85a5e466a3c41f0cffc51d35c4b4561
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cdc8a2840e3beb1272b33b2794f70a979684f46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE 如何建置 .Bsc 檔
 BSCMAKE 建立或重建.bsc 檔中可以最有效率的方式。 若要避免潛在的問題，請務必了解建置程序。  
@@ -36,5 +31,5 @@ BSCMAKE 建立或重建.bsc 檔中可以最有效率的方式。 若要避免潛
   
 -   累加建置成功，.bsc 檔必須存在。 所有參與的.sbr 檔，即使是空的檔案，必須存在而且必須指定 BSCMAKE 命令列上。 如果您省略的.sbr 檔案，從命令列，BSCMAKE 會從檔案移除該著作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建置 .Bsc 檔](../../build/reference/building-a-dot-bsc-file.md)

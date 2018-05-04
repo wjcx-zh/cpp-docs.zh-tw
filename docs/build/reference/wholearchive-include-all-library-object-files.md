@@ -1,25 +1,20 @@
 ---
-title: "-WHOLEARCHIVE （包含所有的程式庫物件檔案） |Microsoft 文件"
-ms.custom: 
+title: -WHOLEARCHIVE （包含所有的程式庫物件檔案） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3499d6583c7d9801aa4c3b12c66196c975b192ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6de1aa92938a1523b86a90c58cc2d27f1181bfc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE （包含所有的程式庫物件檔案）
 Force 連結器在連結的可執行檔中的靜態程式庫中包含物件的所有檔案。  
@@ -45,6 +40,6 @@ Visual Studio 2015 Update 2 中引進了 /WHOLEARCHIVE 選項。
 1.  新增 /WHOLEARCHIVE 選項，以**其他選項**文字方塊。  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

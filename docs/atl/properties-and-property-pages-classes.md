@@ -1,12 +1,9 @@
 ---
-title: "屬性和屬性頁類別 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 屬性和屬性頁類別 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.properties
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - properties [ATL], classes
 - properties [ATL]
 ms.assetid: 31616f98-69f8-48b2-8d58-b8e7d1c2b2d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883922ef828cdabffbf6014df0771476b4befd59
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a0bb0a23ca0d0c67be86db49c92b6782dd71eee1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-and-property-pages-classes"></a>屬性和屬性頁類別
 下列類別支援屬性和屬性頁：  
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/14/2018
   
  [ATL COM 屬性頁](../atl/atl-com-property-pages.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../atl/atl-class-overview.md)   
  [屬性對應巨集](../atl/reference/property-map-macros.md)
 

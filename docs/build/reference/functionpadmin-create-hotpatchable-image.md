@@ -1,10 +1,10 @@
 ---
-title: "/FUNCTIONPADMIN （建立可線上修補的映像） |Microsoft 文件"
-ms.custom: 
+title: /FUNCTIONPADMIN （建立可線上修補的映像） |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /functionpadmin
 dev_langs:
@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c941ec7f0e94ba03979c914ddd26b8bd21237369
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: d0a5ecfcc336e198de0adcc2393f740072d70cae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (建立可線上修補的影像)
 
@@ -41,7 +40,7 @@ ms.lasthandoff: 03/12/2018
 
 為了讓連結器產生的可線上修補的映像，.obj 檔中必須有已編譯[/hotpatch （建立可線上修補的影像）](../../build/reference/hotpatch-create-hotpatchable-image.md)。
 
-當您編譯和連結 cl.exe，一次引動的映像**/hotpatch**意味著**/functionpadmin**。
+當您編譯和連結 cl.exe，一次引動的映像 **/hotpatch**意味著 **/functionpadmin**。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
@@ -49,7 +48,7 @@ ms.lasthandoff: 03/12/2018
 
 1. 選取**組態屬性** > **連結器** > **命令列**屬性頁。
 
-1. 輸入**/FUNCTIONPADMIN**選項**其他選項**。 選擇**確定**以儲存變更。
+1. 輸入 **/FUNCTIONPADMIN**選項**其他選項**。 選擇**確定**以儲存變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

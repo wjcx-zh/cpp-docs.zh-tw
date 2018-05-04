@@ -1,29 +1,24 @@
 ---
-title: "ATL 事件處理摘要 |Microsoft 文件"
-ms.custom: 
+title: ATL 事件處理摘要 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a938bd072ea8df30e64cce28fbf0709f08547d28
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-event-handling-summary"></a>ATL 事件處理摘要
 一般情況下，處理 COM 事件是相當簡單的程序。 有三個主要步驟：  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|否|[是]|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|否|否|  
   
- \*當使用 ATL 支援類別，您永遠不會實作所需**IUnknown**或`IDispatch`方法以手動方式。  
+ \* 當使用 ATL 支援類別，您永遠不會實作所需**IUnknown**或`IDispatch`方法以手動方式。  
   
 ## <a name="advising-and-unadvising-the-event-source"></a>通知和取消通知的事件來源  
  有三個層面的通知和取消通知使用 ATL 的事件來源  
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/21/2017
 |通知函式|取消通知函式|最適合搭配使用|需要您追蹤的 cookie|註解|  
 |---------------------|-----------------------|--------------------------------|---------------------------------------------|--------------|  
 
-|[AtlAdvise](reference/connection-point-global-functions.md#atladvise)， [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable 或雙重介面 |[是] |`AtlAdvise`是全域的 ATL 函式。 `CComPtrBase::Advise`正由[CComPtr](../atl/reference/ccomptr-class.md)和[CComQIPtr](../atl/reference/ccomqiptr-class.md)。 |  
+|[AtlAdvise](reference/connection-point-global-functions.md#atladvise)， [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)|[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)|Vtable 或雙重介面 |[是] |`AtlAdvise`是全域的 ATL 函式。 `CComPtrBase::Advise` 正由[CComPtr](../atl/reference/ccomptr-class.md)和[CComQIPtr](../atl/reference/ccomqiptr-class.md)。 |  
 
 |[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)|[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)或[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|否 |較少的參數，比`AtlAdvise`因為基底類別會更多工作。 |  
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|複合控制項中的 ActiveX 控制項 |否 |`CComCompositeControl::AdviseSinkMap`建議的所有項目在事件接收對應。 相同的函式取消通知的項目。 這個方法就會呼叫自動`CComCompositeControl`類別。 |  
 |[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|在對話方塊中的 ActiveX 控制項 |否 |`CAxDialogImpl::AdviseSinkMap`建議和取消通知對話方塊資源中的所有 ActiveX 控制項。 這會為您自動完成。 |  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [事件處理](../atl/event-handling-and-atl.md)   
  [支援 IDispEventImpl](../atl/supporting-idispeventimpl.md)
 

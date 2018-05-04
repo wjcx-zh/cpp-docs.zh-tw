@@ -1,13 +1,10 @@
 ---
-title: "ATL 視窗類別 |Microsoft 文件"
-ms.custom: 
+title: ATL 視窗類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - superclassing
 - superclassing, ATL
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4cce6fd98d4ea476900d8b248442fdddbe3c2d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 907b6ef49287bfb521b953e42c8f900fc4b6dc10
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-window-classes"></a>ATL 視窗類別
 ATL 包含數個類別，可讓您使用及實作 windows。 這些類別，其他 ATL 類別一樣，提供有效率的實作，不會造成您的程式碼的負荷。  

@@ -2,12 +2,9 @@
 title: 建置系統變更 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.msbuild.changes
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-system-changes"></a>建置系統變更
 MSBuild 系統用於建置 Visual C++ 專案。 不過，在 Visual Studio 2008 和較早版本使用 VCBuild 系統。 某些檔案類型和依賴 VCBuild 的概念已不存在，或是目前系統的表示方式。 本文件討論了目前建置系統中的差異。  
@@ -55,11 +50,11 @@ MSBuild 系統用於建置 Visual C++ 專案。 不過，在 Visual Studio 2008 
 >  在目前版本中，[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] 不支援建立新規則。 因此，若要使用以舊版 Visual C++ 所建立之專案的規則檔，最簡單的方式就是將專案移轉為目前版本。  
   
 ## <a name="inheritance-macros"></a>繼承巨集  
- 在舊版中， **$ （inherit)**巨集由專案建置系統命令列上指定繼承的屬性出現的順序。 **$ （noinherit)**巨集 $ （inherit） 来忽略的任何項目會導致並造成繼承，不會繼承任何屬性。 例如，根據預設 $ （inherit） 巨集會利用指定的檔案[（其他 Include 目錄） /I](../build/reference/i-additional-include-directories.md)来附加至命令列編譯器選項。  
+ 在舊版中， **$ （inherit)** 巨集由專案建置系統命令列上指定繼承的屬性出現的順序。 **$ （noinherit)** 巨集 $ （inherit） 来忽略的任何項目會導致並造成繼承，不會繼承任何屬性。 例如，根據預設 $ （inherit） 巨集會利用指定的檔案[（其他 Include 目錄） /I](../build/reference/i-additional-include-directories.md)来附加至命令列編譯器選項。  
   
- 在目前版本中，藉由指定屬性的值串連的一個或多個常值和屬性的巨集以支援繼承。 **$ （inherit)**和**$ （noinherit)**巨集不支援。  
+ 在目前版本中，藉由指定屬性的值串連的一個或多個常值和屬性的巨集以支援繼承。 **$ （inherit)** 和 **$ （noinherit)** 巨集不支援。  
   
- 在下列範例中，以分號分隔的清單被指派給屬性頁上的屬性。 清單所組成的串連*\<值 >*常值和值`MyProperty`屬性，會使用巨集標記法來存取， **$(***MyProperty***)**.  
+ 在下列範例中，以分號分隔的清單被指派給屬性頁上的屬性。 清單所組成的串連*\<值 >* 常值和值`MyProperty`屬性，會使用巨集標記法來存取， **$(***MyProperty***)**.  
   
 ```  
 Property=<value>;$(MyProperty)  
@@ -68,7 +63,7 @@ Property=<value>;$(MyProperty)
 ## <a name="vcxprojuser-files"></a>.vcxproj.user 檔案  
  使用者檔案 (.vcxproj.user) 會儲存使用者特定的屬性，例如偵錯和部署設定。 .Vcxproj.user 檔案適用於所有專案特定的使用者。  
   
-## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
+## <a name="vcxprojfilters-file"></a>。 vcxproj.filters 檔案  
  當**方案總管中**用來將檔案加入專案時，篩選檔 (。 vcxproj.filters) 定義中的 where**方案總管中**樹狀的檢視新增檔案時，根據檔案的副檔名。  
   
 ## <a name="vc-directories-settings"></a>VC + + 目錄設定  

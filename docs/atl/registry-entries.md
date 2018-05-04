@@ -2,29 +2,24 @@
 title: 登錄項目 (ATL) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - registry, ATL services entries
 - registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faef0ca0c1c9c4c2986a039b8b1a26517641acd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac8e202fc2fc3d58e2d57a9fbfa15264d9fd310e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-entries"></a>登錄項目
 DCOM 導入的應用程式識別碼 (Appid)，群組的一或多個 DCOM 物件在登錄中的集中式位置的組態選項的概念。 您可以在名為物件的 CLSID 下值的 AppID 中其值，指出指定 AppID。  
@@ -37,6 +32,6 @@ DCOM 導入的應用程式識別碼 (Appid)，群組的一或多個 DCOM 物件�
   
  任何 DCOM 服務也需要建立另一個索引鍵下的`HKEY_CLASSES_ROOT\AppID`。 這個索引鍵是等於的可執行檔的名稱，做為交互參照，因為它包含 AppID 值，指出 AppID 項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務](../atl/atl-services.md)
 

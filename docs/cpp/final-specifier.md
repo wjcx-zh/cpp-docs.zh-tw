@@ -1,12 +1,9 @@
 ---
-title: "final 規範 |Microsoft 文件"
-ms.custom: 
+title: final 規範 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - final_CPP
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f7c5afd4010983ea943193b7abfb99f22eda38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="final-specifier"></a>final 規範
 您可以使用 `final` 關鍵字指定無法在衍生類別中覆寫的虛擬函式。 您也可以用它來指定無法被繼承的類別。  
@@ -78,6 +73,6 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [override 規範](../cpp/override-specifier.md)

@@ -1,12 +1,9 @@
 ---
-title: "將物件和控制項加入至 ATL 專案 |Microsoft 文件"
-ms.custom: 
+title: 將物件和控制項加入至 ATL 專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.controls
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 319d130b9d8f17875aaa8bac15f546401457b963
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a6f9102aeebd0cc60765c70cf74fb2329bc801f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項加入至 ATL 專案
 您可以使用其中一個 ATL 程式碼精靈加入 ATL 或 MFC 為基礎的專案中的物件或控制項。 針對每個 COM 物件或控制項您加入，亦即，精靈會產生的.cpp 和.h 檔案，以及指令碼為基礎的登錄支援.rgs 檔。 在 Visual Studio 中有下列的 ATL 程式碼精靈：  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
      或者，如果您嘗試以 ATL 物件加入不含先前將 ATL 支援加入 MFC 專案，Visual Studio 會提示您指定是否要讓 ATL 支援加入至專案。 按一下**是**將 ATL 支援加入至專案，並開啟所選的 ATL 精靈。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
  [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   

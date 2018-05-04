@@ -1,12 +1,9 @@
 ---
-title: "CComClassFactorySingleton 類別 |Microsoft 文件"
-ms.custom: 
+title: CComClassFactorySingleton 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactorySingleton
@@ -18,15 +15,13 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: 165bc85a0b00ac8186e5a145a75c4478335b5e0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 754a3abd02a4a09df3e36aa9aea75c400ef00761
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 類別
 此類別衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。  
@@ -45,7 +40,7 @@ class CComClassFactorySingleton : public CComClassFactory
  `T`  
  您的類別。  
   
- `CComClassFactorySingleton`衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。 每次呼叫`CreateInstance`方法只會查詢此物件的介面指標。  
+ `CComClassFactorySingleton` 衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。 每次呼叫`CreateInstance`方法只會查詢此物件的介面指標。  
   
 ## <a name="members"></a>成員  
   
@@ -80,7 +75,7 @@ class CComClassFactorySingleton : public CComClassFactory
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactorySingleton::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactorySingleton::CreateInstance  
  呼叫`QueryInterface`透過[m_spObj](#m_spobj)擷取介面指標。  
   
 ```
@@ -100,7 +95,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="m_spobj"></a>CComClassFactorySingleton::m_spObj  
+##  <a name="m_spobj"></a>  CComClassFactorySingleton::m_spObj  
  [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)所建構的物件`CComClassFactorySingleton`。  
   
 ```
@@ -112,7 +107,7 @@ CComPtr<IUnknown> m_spObj;
   
  請注意，目前的表單`m_spObj`呈現的方式是重大變更，`CComClassFactorySingleton`因此之前在舊版的 ATL 在舊版`CComClassFactorySingleton`做為 class factory，同時在伺服器初始化期間建立物件。 在 Visual c + +.NET 2003 中，建立物件延遲，第一次要求。 這項變更可能造成早期初始化所依賴的程式發生錯誤。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
  [CComClassFactory2 類別](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)   

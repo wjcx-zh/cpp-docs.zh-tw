@@ -1,12 +1,9 @@
 ---
-title: "CSimpleMapEqualHelperFalse 類別 |Microsoft 文件"
-ms.custom: 
+title: CSimpleMapEqualHelperFalse 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelperFalse
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1418114233b59112fcffb58ef4ae7c437af5ab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bebd9c6628924b5927fb48518925bdd665b0ee14
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse 類別
 這個類別是 helper [CSimpleMap](../../atl/reference/csimplemap-class.md)類別。  
@@ -57,7 +52,7 @@ class CSimpleMapEqualHelperFalse
 ## <a name="requirements"></a>需求  
  **標頭：** atlsimpcoll.h  
   
-##  <a name="isequalkey"></a>CSimpleMapEqualHelperFalse::IsEqualKey  
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelperFalse::IsEqualKey  
  測試兩個索引鍵相等。  
   
 ```
@@ -77,7 +72,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md)。  
   
-##  <a name="isequalvalue"></a>CSimpleMapEqualHelperFalse::IsEqualValue  
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelperFalse::IsEqualValue  
  傳回 false。  
   
 ```
@@ -90,6 +85,6 @@ static bool IsEqualValue(const TVal&, const TVal&);
 ### <a name="remarks"></a>備註  
  這個方法一律會傳回 false，並將呼叫`ATLASSERT`false 曾經正在參考它的引數。 目的`CSimpleMapEqualHelperFalse::IsEqualValue`是強制方法使用的比較時沒有充分定義等號比較測試，以妥善定義的方式失敗。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CSimpleMapEqualHelper 類別](../../atl/reference/csimplemapequalhelper-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

@@ -2,11 +2,8 @@
 title: _set_new_handler | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_new_handler
@@ -34,21 +31,19 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ffd955f18a58c8b3d767697b7f7146f2b8db5a
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 30cd0c2a991ec046b0b1f55100c58641833cb992
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
-將控制項傳送至您的錯誤處理機制，如果**新**運算子無法配置記憶體。
+若 **new** 運算子無法配置記憶體，則將控制項傳送至您的錯誤處理機制。
 
 ## <a name="syntax"></a>語法
 

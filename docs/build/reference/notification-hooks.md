@@ -1,29 +1,24 @@
 ---
-title: "告知攔截 |Microsoft 文件"
-ms.custom: 
+title: 告知攔截 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490e3bb591af6568ffecddf68219c89a25e055
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0210c4ee058694594893a029789442c89003da2e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="notification-hooks"></a>告知攔截
 告知攔截稱為之前在 helper 常式會執行下列動作：  
@@ -38,11 +33,11 @@ ms.lasthandoff: 12/21/2017
   
  告知攔截會啟用：  
   
--   藉由提供新定義的指標**__pfnDliNotifyHook2** ，初始化以指向自己收到通知的函式。  
+-   藉由提供新定義的指標 **__pfnDliNotifyHook2** ，初始化以指向自己收到通知的函式。  
   
      -或-  
   
--   藉由設定指標**__pfnDliNotifyHook2**來攔截函式之前呼叫任何程式的 DLL 延遲載入。  
+-   藉由設定指標 **__pfnDliNotifyHook2**來攔截函式之前呼叫任何程式的 DLL 延遲載入。  
   
  如果通知，則**dliStartProcessing**，攔截函式可以傳回：  
   
@@ -90,5 +85,5 @@ PfnDliHook   __pfnDliFailureHook2;
   
  通知傳入**DelayLoadInfo**攔截函式，以及通知值的結構。 此資料是相同的延遲載入 helper 常式所使用。 通知值將會是其中一個定義中的值[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [錯誤處理和通知](../../build/reference/error-handling-and-notification.md)

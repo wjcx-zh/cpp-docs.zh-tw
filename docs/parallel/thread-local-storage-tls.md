@@ -1,12 +1,12 @@
 ---
-title: "執行緒區域儲存區 (TLS) |Microsoft 文件"
-ms.custom: 
+title: 執行緒區域儲存區 (TLS) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e6be3645e03892d17e45256a5a003d982d973f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b01bd50fa50a449128842755898d703f7bafe76
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread-local-storage-tls"></a>執行緒區域儲存區
 執行緒區域儲存區 (Thread Local Storage，TLS) 是一種方法，讓指定之多執行緒處理序中的每個執行緒用來配置位置，以儲存執行緒特定資料。 動態繫結 （執行階段） 的執行緒特定資料透過 TLS API 支援 ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801)， [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812)， [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818)，和[TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). 如需有關如何在 Windows 上實作執行緒區域儲存區的詳細資訊，請參閱[執行緒區域儲存區 (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx)。  除了現有的 API 實作以外，Win32 和 Visual C++ 編譯器現在支援靜態繫結 (載入時間) 的個別執行緒資料。  
   
-##  <a name="_core_compiler_implementation_for_tls"></a>TLS 的編譯器實作  
+##  <a name="_core_compiler_implementation_for_tls"></a> TLS 的編譯器實作  
  **C + + 11:** `thread_local`儲存類別規範是建議用來指定物件的執行緒區域儲存區和類別成員。 如需詳細資訊，請參閱[儲存類別 （c + +）](../cpp/storage-classes-cpp.md)。  
   
  Visual c + + 也提供 Microsoft 特定的屬性，[執行緒](../cpp/thread.md)，以擴充的儲存類別修飾詞。 使用`__declspec`關鍵字來宣告**執行緒**變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：  
@@ -119,7 +119,7 @@ __declspec( thread ) int tls_i = 1;
   
      C++ 不允許執行緒資料的這類動態初始化，因為執行緒區域儲存區設備未來可能會增強。  
   
--   在 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 之前的 Windows 作業系統上，`__declspec`(thread) 有一些限制。 如果 DLL 將任何資料或物件宣告為 `__declspec`(thread)，可能會造成保護錯誤 (若以動態方式載入)。 載入 DLL 之後[LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)，它會導致系統失敗，每當程式碼參考`__declspec`(thread) 資料。 因為執行緒的全域變數空間是在執行階段進行配置，所以此空間的大小是以應用程式的需求，再加上以靜態方式連結之所有 DLL 的需求的計算為基礎。 當您使用 `LoadLibrary` 時，您無法擴充此空間以便使用 `__declspec`(thread) 宣告執行緒區域變數。 使用 TLS Api，例如[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)，來配置 TLS，如果使用可能會載入的 DLL 在 DLL 中`LoadLibrary`。  
+-   在 Windows Vista 之前的 Windows 作業系統上`__declspec`(thread) 有一些限制。 如果 DLL 將任何資料或物件宣告為 `__declspec`(thread)，可能會造成保護錯誤 (若以動態方式載入)。 載入 DLL 之後[LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)，它會導致系統失敗，每當程式碼參考`__declspec`(thread) 資料。 因為執行緒的全域變數空間是在執行階段進行配置，所以此空間的大小是以應用程式的需求，再加上以靜態方式連結之所有 DLL 的需求的計算為基礎。 當您使用 `LoadLibrary` 時，您無法擴充此空間以便使用 `__declspec`(thread) 宣告執行緒區域變數。 使用 TLS Api，例如[TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801)，來配置 TLS，如果使用可能會載入的 DLL 在 DLL 中`LoadLibrary`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)   

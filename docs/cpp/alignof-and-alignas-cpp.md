@@ -1,27 +1,22 @@
 ---
-title: "alignof 和 alignas （c + +） |Microsoft 文件"
-ms.custom: 
+title: alignof 和 alignas （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1d18aa8a-9621-4fb5-86e5-4cc86d5187f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a506a3c44c3304e786c41a2eb049939d317778e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e2988d1260cac91e2614765aba8ae1b9be9b922
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 和 alignas (C++)
 `alignas` 類型規範是可攜性的 C++ 標準方式，用來指定變數和使用者定義類型的自訂對齊方式。 `alignof` 運算子同樣是標準的可攜性方式，用來取得指定類型或變數的對齊方式。  
@@ -48,5 +43,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對齊](../cpp/alignment-cpp-declarations.md)

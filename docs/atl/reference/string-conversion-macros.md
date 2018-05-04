@@ -1,12 +1,9 @@
 ---
-title: "字串轉換巨集 |Microsoft 文件"
-ms.custom: 
+title: 字串轉換巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -20,27 +17,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a166fec6eceb84b1b22563849ff1b9462ef9a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-conversion-macros"></a>字串轉換巨集
 
 這些巨集提供轉換功能的字串。  
  
-##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL 和 MFC 字串轉換巨集
+##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL 和 MFC 字串轉換巨集
 
 這裡討論的字串轉換巨集對於 ATL 及 MFC 而言都有效。 如需 MFC 字串轉換的詳細資訊，請參閱[TN059： 使用的 MFC MBCS/Unicode 轉換巨集](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)和[MFC 巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)。
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE 和 TEXTMETRIC 字串轉換巨集
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE 和 TEXTMETRIC 字串轉換巨集
 
 這些巨集建立一份[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)或[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)結構，並將新的結構中的字串轉換成新的字串類型。 巨集在堆疊上的記憶體配置新的結構，並將指標傳回至新的結構。  
   
@@ -84,6 +79,6 @@ MACRONAME( address_of_structure )
 |`DEVMODET2OLE`|`TEXTMETRICT2OLE`|  
 |`DEVMODEW2A`|`TEXTMETRICW2A`|  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [巨集](../../atl/reference/atl-macros.md)

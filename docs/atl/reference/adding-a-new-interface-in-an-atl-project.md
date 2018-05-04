@@ -1,12 +1,9 @@
 ---
-title: "ATL 專案中加入新的介面，|Microsoft 文件"
-ms.custom: 
+title: ATL 專案中加入新的介面，|Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.interface
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c07306a660162b23ecaffa4dd239b2538be0295
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c2c9d0ef4c14760d596a4aa26fa2a929da26c67b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 專案中加入新的介面
 當您將介面加入物件或控制項時，您會建立介面的附加虛設常式的函式的每個方法。 在物件或控制項，您可以加入目前現有的類型程式庫中找到的介面。 此外，您可以在其中加入介面的類別必須實作[BEGIN_COM_MAP](com-map-macros.md#begin_com_map)巨集或，如果專案屬性，您必須先`coclass`屬性。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  實作的介面上的方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
  [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   

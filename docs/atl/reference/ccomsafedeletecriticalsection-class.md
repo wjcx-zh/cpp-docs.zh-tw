@@ -1,12 +1,9 @@
 ---
-title: "CComSafeDeleteCriticalSection 類別 |Microsoft 文件"
-ms.custom: 
+title: CComSafeDeleteCriticalSection 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df86d5219940ffc1dd3c34f47920675014eefd13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff637f9e307f2714cd351f3c6bcaf1e4b78342e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection 類別
 這個類別會提供方法來取得及釋放重要區段物件的擁有權。  
@@ -66,7 +61,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 |[m_bInitialized](#m_binitialized)|旗標是否內部**CRITICAL_SECTION**物件已初始化。|  
   
 ## <a name="remarks"></a>備註  
- `CComSafeDeleteCriticalSection`衍生自類別[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。 不過，`CComSafeDeleteCriticalSection`提供額外的安全機制，透過[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。  
+ `CComSafeDeleteCriticalSection` 衍生自類別[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。 不過，`CComSafeDeleteCriticalSection`提供額外的安全機制，透過[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。  
   
  執行個體時`CComSafeDeleteCriticalSection`超出範圍或明確從記憶體中刪除，基礎關鍵區段物件將會自動清除是否仍然有效。 此外， [CComSafeDeleteCriticalSection::Term](#term)方法將會依正常程序結束，如果基礎關鍵區段物件尚未配置或已從記憶體釋放。  
   
@@ -80,7 +75,7 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 ## <a name="requirements"></a>需求  
  **標頭：** atlcore.h  
   
-##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>  CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  建構函式。  
   
 ```
@@ -90,7 +85,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>備註  
  設定[m_bInitialized](#m_binitialized)資料成員，才能**false**。  
   
-##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>  CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  解構函式。  
   
 ```
@@ -100,7 +95,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>備註  
  釋出內部**CRITICAL_SECTION**物件從記憶體中，如果[m_bInitialized](#m_binitialized)資料成員設定為**true**。  
   
-##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>  CComSafeDeleteCriticalSection::Init  
  呼叫的基底類別實作[Init](/visualstudio/debugger/init)並設定[m_bInitialized](#m_binitialized)至**true**如果成功的話。  
   
 ```
@@ -110,7 +105,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>傳回值  
  傳回的結果[CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init)。  
   
-##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock  
 呼叫的基底類別實作[鎖定](ccomcriticalsection-class.md#lock)。  
 
   
@@ -126,7 +121,7 @@ HRESULT Lock();
   
  如需行為的函式的詳細資訊，請參閱[CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock)。  
   
-##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>  CComSafeDeleteCriticalSection::m_bInitialized  
  旗標是否內部**CRITICAL_SECTION**物件已初始化。  
   
 ```
@@ -136,7 +131,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>備註  
  **M_bInitialized**資料成員用來追蹤的基礎有效性**CRITICAL_SECTION**物件相關聯[CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md)類別。 基礎**CRITICAL_SECTION**物件不會嘗試釋放記憶體，如果這個旗標未設為**true**。  
   
-##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>  CComSafeDeleteCriticalSection::Term  
  呼叫的基底類別實作[CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term)如果內部**CRITICAL_SECTION**物件是否有效。  
   
 ```
@@ -149,6 +144,6 @@ HRESULT Term() throw();
 ### <a name="remarks"></a>備註  
  您可以放心呼叫此方法，即使內部**CRITICAL_SECTION**物件無效。 這個類別的解構函式會呼叫這個方法，如果[m_bInitialized](#m_binitialized)資料成員設定為**true**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

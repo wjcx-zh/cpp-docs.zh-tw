@@ -1,12 +1,9 @@
 ---
-title: "轉型 |Microsoft 文件"
-ms.custom: 
+title: 轉型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9974b86f99164257e854bffd07393b96998040ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07abd7c6a6a5c646dade15299fe6cfe78d9ff1d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="casting"></a>轉型
 C++ 語言會假設，如果類別是從包含虛擬函式的基底類別衍生，則該基底類別類型的指標可以用來呼叫衍生類別物件內虛擬函式的實作。 包含虛擬函式的類別有時稱為「多型類別」(Polymorphic Class)。  
@@ -41,7 +36,7 @@ C++ 語言會假設，如果類別是從包含虛擬函式的基底類別衍生�
   
  如下圖所示，`C` 類型的物件可以視覺化。  
   
- ![類別 C 子 &#45; 物件 B 和 A](../cpp/media/vc38zz2.gif "vc38ZZ2")  
+ ![類別 C 子&#45;B 和 A 物件](../cpp/media/vc38zz2.gif "vc38ZZ2")  
 具備 B 子物件和 A 子物件的類別 C  
   
  假設有 `C` 類別的執行個體，則會有 `B` 子物件和 `A` 子物件。 `C` 的執行個體 (包括 `A` 和 `B` 子物件) 就是「完整物件」。  
@@ -56,5 +51,5 @@ C++ 語言會假設，如果類別是從包含虛擬函式的基底類別衍生�
   
 -   [執行階段類型資訊](../cpp/run-time-type-information.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式](../cpp/expressions-cpp.md)

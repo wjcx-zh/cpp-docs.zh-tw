@@ -1,29 +1,24 @@
 ---
-title: "陳述式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 陳述式 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C++)
 重複執行陳述式，直到條件變成 false。 範圍架構 for 陳述式上的資訊，請參閱[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)。  
@@ -157,7 +152,7 @@ int main(){
   
  此範例更精確地模擬在 `for` 迴圈中所宣告之變數的標準行為，也就是要求在 `for` 迴圈中宣告的變數於迴圈結束後超出範圍。 若變數是在 `for` 迴圈中宣告的，編譯器會在內部將它升級至 `for` 迴圈封閉範圍中的區域變數，即使已經有相同名稱的區域變數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [反覆運算陳述式](../cpp/iteration-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [while 陳述式 (C++)](../cpp/while-statement-cpp.md)   

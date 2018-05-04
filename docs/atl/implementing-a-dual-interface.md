@@ -1,30 +1,25 @@
 ---
-title: "實作雙重介面 (ATL) |Microsoft 文件"
-ms.custom: 
+title: 實作雙重介面 (ATL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae16adcc6743c7e35aae2a4121819a6df50cf4f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34cc55e4466dba094bf70e734340b40237207f3c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-dual-interface"></a>實作雙重介面
 您可以實作雙重介面使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)類別，可提供的預設實作`IDispatch`雙重介面中的方法。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  ATL 提供[IDispEventImpl](../atl/reference/idispeventimpl-class.md)和[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)類別可以幫助您實作分配介面，而不需要類型程式庫包含相容的雙重介面的定義。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [雙重介面和 ATL](../atl/dual-interfaces-and-atl.md)
 

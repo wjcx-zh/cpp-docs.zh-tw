@@ -1,12 +1,9 @@
 ---
-title: "字串，ATL 屬性頁精靈 |Microsoft 文件"
-ms.custom: 
+title: 字串，ATL 屬性頁精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.strings
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a03d906fc28896b69023392fbb8de8a0035a2e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 101a81eb2adf7b1ee133c2e68a6a74d9369075c7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strings-atl-property-page-wizard"></a>字串, ATL 屬性頁精靈
 提供與屬性頁相關聯的文字。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
  **說明檔**  
  設定說明檔，描述如何使用屬性頁的名稱。 此名稱不應該包含路徑。 當使用者按**協助**，框架會在名為 HelpDir 機碼下 CLSID 的屬性頁面登錄項目中的值中的目錄開啟說明檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 屬性頁精靈](../../atl/reference/atl-property-page-wizard.md)   
  [選項，ATL 屬性頁精靈](../../atl/reference/options-atl-property-page-wizard.md)
 

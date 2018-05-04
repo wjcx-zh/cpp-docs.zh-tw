@@ -1,27 +1,22 @@
 ---
-title: "-防護 （啟用防護檢查） |Microsoft 文件"
-ms.custom: 
+title: -防護 （啟用防護檢查） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48abdc4f923ed01ecba482b82da897d06fd56dcd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d05dd4f9d213c3d2729459486a9d0cfdbd79110
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (啟用防護檢查)
 指定在可執行映像中進行控制流程防護檢查的支援。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  在**其他選項**，輸入`/GUARD:CF`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [/guard （啟用控制流程防護）](../../build/reference/guard-enable-control-flow-guard.md)   
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

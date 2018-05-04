@@ -1,12 +1,9 @@
 ---
-title: "CComAggObject 類別 |Microsoft 文件"
-ms.custom: 
+title: CComAggObject 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComAggObject
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd06518978b37705a98e4d8b7212b8dd03a2d7b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 426a01c1957b276174b8b36884605b69dd501de8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 類別
 這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總物件的介面。 根據定義，彙總的物件會包含在外部物件。 `CComAggObject`類別是類似於[Ccomobject< 類別](../../atl/reference/ccomobject-class.md)，只不過它會公開給外部用戶端直接存取的介面。  
@@ -67,7 +62,7 @@ class CComAggObject : public IUnknown,
 |名稱|描述|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|在彙總物件的參考計數遞增。|  
-|[CComAggObject::CreateInstance](#createinstance)|此靜態函式可讓您建立新**CComAggObject <** `contained`  **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
+|[CComAggObject::CreateInstance](#createinstance)|此靜態函式可讓您建立新**CComAggObject <** `contained` **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|會執行最後的初始化`m_contained`。|  
 |[CComAggObject::FinalRelease](#finalrelease)|執行最終解構`m_contained`。|  
 |[CComAggObject::QueryInterface](#queryinterface)|擷取所要求介面的指標。|  
@@ -80,7 +75,7 @@ class CComAggObject : public IUnknown,
 |[CComAggObject::m_contained](#m_contained)|委派`IUnknown`呼叫的外部未知。|  
   
 ## <a name="remarks"></a>備註  
- `CComAggObject`實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總的物件。 `CComAggObject`有它自己**IUnknown**介面，個別從外部物件**IUnknown**介面，並會維護其本身的參考計數。  
+ `CComAggObject` 實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總的物件。 `CComAggObject` 有它自己**IUnknown**介面，個別從外部物件**IUnknown**介面，並會維護其本身的參考計數。  
   
  如需彙總的詳細資訊，請參閱文章[ATL COM 物件基礎觀念](../../atl/fundamentals-of-atl-com-objects.md)。  
   
@@ -96,7 +91,7 @@ class CComAggObject : public IUnknown,
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-##  <a name="addref"></a>CComAggObject::AddRef  
+##  <a name="addref"></a>  CComAggObject::AddRef  
  在彙總物件的參考計數遞增。  
   
 ```
@@ -106,7 +101,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>傳回值  
  值，可用於診斷或測試。  
   
-##  <a name="ccomaggobject"></a>CComAggObject::CComAggObject  
+##  <a name="ccomaggobject"></a>  CComAggObject::CComAggObject  
  建構函式。  
   
 ```
@@ -122,7 +117,7 @@ CComAggObject(void* pv);
   
  解構函式遞減模組鎖定計數。  
   
-##  <a name="dtor"></a>CComAggObject:: ~ CComAggObject  
+##  <a name="dtor"></a>  CComAggObject:: ~ CComAggObject  
  解構函式。  
   
 ```
@@ -132,8 +127,8 @@ CComAggObject(void* pv);
 ### <a name="remarks"></a>備註  
  會釋放所有配置的資源，呼叫[FinalRelease](#finalrelease)，並遞減模組鎖定計數。  
   
-##  <a name="createinstance"></a>CComAggObject::CreateInstance  
- 此靜態函式可讓您建立新**CComAggObject <** `contained`  **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+##  <a name="createinstance"></a>  CComAggObject::CreateInstance  
+ 此靜態函式可讓您建立新**CComAggObject <** `contained` **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
 static HRESULT WINAPI CreateInstance(
@@ -143,7 +138,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>參數  
  `pp`  
- [out]指標**CComAggObject\<***包含*  **>** 指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
+ [out]指標 **CComAggObject\<* * * 包含* **>** 指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
@@ -153,7 +148,7 @@ static HRESULT WINAPI CreateInstance(
   
  如果您執行不需要直接存取物件，但仍想要建立新的物件沒有的額外負荷`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)改為。  
   
-##  <a name="finalconstruct"></a>CComAggObject::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComAggObject::FinalConstruct  
  在物件建構的最後階段期間呼叫，這個方法會執行任何最後的初始化上[m_contained](#m_contained)成員。  
   
 ```
@@ -163,14 +158,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-##  <a name="finalrelease"></a>CComAggObject::FinalRelease  
+##  <a name="finalrelease"></a>  CComAggObject::FinalRelease  
  在對物件解構期間呼叫，這個方法會釋放[m_contained](#m_contained)成員。  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="m_contained"></a>CComAggObject::m_contained  
+##  <a name="m_contained"></a>  CComAggObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)物件衍生自您的類別。  
   
 ```
@@ -184,7 +179,7 @@ CComContainedObject<contained> m_contained;
 ### <a name="remarks"></a>備註  
  所有**IUnknown**透過呼叫`m_contained`會委派給外部未知。  
   
-##  <a name="queryinterface"></a>CComAggObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComAggObject::QueryInterface  
  擷取所要求介面的指標。  
   
 ```
@@ -209,7 +204,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="remarks"></a>備註  
  如果要求的介面是**IUnknown**，`QueryInterface`讓指標回到彙總物件本身**IUnknown**並遞增參考計數。 否則，此方法會查詢介面透過`CComContainedObject`成員[m_contained](#m_contained)。  
   
-##  <a name="release"></a>CComAggObject::Release  
+##  <a name="release"></a>  CComAggObject::Release  
  彙總物件的參考計數遞減。  
   
 ```
@@ -219,7 +214,7 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>傳回值  
  在偵錯組建**發行**傳回值，可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Ccomobject< 類別](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   

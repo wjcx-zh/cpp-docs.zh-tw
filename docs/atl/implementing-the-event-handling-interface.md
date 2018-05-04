@@ -1,13 +1,10 @@
 ---
-title: "實作事件處理介面 |Microsoft 文件"
-ms.custom: 
+title: 實作事件處理介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event handling, ATL
 - interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9226cf2630ad18651f9bda2f154f49b5b739a433
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea37aa4c84cb0824d11f0081e38d9e8157b77ed1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-the-event-handling-interface"></a>實作事件處理介面
 ATL 可協助您處理事件所需的全部三個元素： 實作事件介面、 通知事件來源，並取消通知事件來源。 您必須採取的確切步驟取決於事件介面和應用程式的效能需求的型別。  
@@ -50,6 +45,6 @@ ATL 可協助您處理事件所需的全部三個元素： 實作事件介面、
   
  `IDispEventImpl`和`IDispEventSimpleImpl`類別為您管理 cookie。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [事件處理](../atl/event-handling-and-atl.md)
 

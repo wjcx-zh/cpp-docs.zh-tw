@@ -1,12 +1,9 @@
 ---
-title: "安全性識別碼的全域函式 |Microsoft 文件"
-ms.custom: 
+title: 安全性識別碼的全域函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::Sids::AccountOps
@@ -46,17 +43,15 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6975b6b73c6d81fc9347a2395cd36747ce235b2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-identifier-global-functions"></a>安全性識別碼的全域函式
 這些函式會傳回物件通用的已知 SID。  
@@ -102,98 +97,98 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="accountops"></a>Sids::AccountOps  
+##  <a name="accountops"></a>  Sids::AccountOps  
  傳回 DOMAIN_ALIAS_RID_ACCOUNT_OPS SID。    
   
 ```
 CSid AccountOps() throw(...);
 ```  
   
-##  <a name="admins"></a>Sids::Admins  
+##  <a name="admins"></a>  Sids::Admins  
  傳回 DOMAIN_ALIAS_RID_ADMINS SID。  
 ```
 CSid Admins() throw(...);
 ```  
   
-##  <a name="anonymouslogon"></a>Sids::AnonymousLogon  
+##  <a name="anonymouslogon"></a>  Sids::AnonymousLogon  
  傳回 SECURITY_ANONYMOUS_LOGON_RID SID。  
 ```
 CSid AnonymousLogon() throw(...);
 ```  
   
-##  <a name="authenticateduser"></a>Sids::AuthenticatedUser  
+##  <a name="authenticateduser"></a>  Sids::AuthenticatedUser  
  傳回 SECURITY_AUTHENTICATED_USER_RID SID。  
 ```
 CSid AuthenticatedUser() throw(...);
 ```  
   
-##  <a name="backupops"></a>Sids::BackupOps  
+##  <a name="backupops"></a>  Sids::BackupOps  
  傳回 DOMAIN_ALIAS_RID_BACKUP_OPS SID。  
 ```
 CSid BackupOps() throw(...);
 ```  
   
-##  <a name="batch"></a>Sids::Batch  
+##  <a name="batch"></a>  Sids::Batch  
  傳回 SECURITY_BATCH_RID SID。  
 ```
 CSid Batch() throw(...);
 ```  
   
-##  <a name="creatorgroup"></a>Sids::CreatorGroup  
+##  <a name="creatorgroup"></a>  Sids::CreatorGroup  
  傳回 SECURITY_CREATOR_GROUP_RID SID。  
 ```
 CSid CreatorGroup() throw(...);
 ```  
   
-##  <a name="creatorgroupserver"></a>Sids::CreatorGroupServer  
+##  <a name="creatorgroupserver"></a>  Sids::CreatorGroupServer  
  傳回 SECURITY_CREATOR_GROUP_SERVER_RID SID。  
 ```
 CSid CreatorGroupServer() throw(...);
 ```  
   
-##  <a name="creatorowner"></a>Sids::CreatorOwner  
+##  <a name="creatorowner"></a>  Sids::CreatorOwner  
  傳回 SECURITY_CREATOR_OWNER_RID SID。  
 ```
 CSid CreatorOwner() throw(...);
 ```  
   
-##  <a name="creatorownerserver"></a>Sids::CreatorOwnerServer  
+##  <a name="creatorownerserver"></a>  Sids::CreatorOwnerServer  
  傳回 SECURITY_CREATOR_OWNER_SERVER_RID SID。  
 ```
 CSid CreatorOwnerServer() throw(...);
 ```  
   
-##  <a name="dialup"></a>Sids::Dialup  
+##  <a name="dialup"></a>  Sids::Dialup  
  傳回 SECURITY_DIALUP_RID SID。  
 ```
 CSid Dialup() throw(...);
 ```  
   
-##  <a name="guests"></a>Sids::Guests  
+##  <a name="guests"></a>  Sids::Guests  
  傳回 DOMAIN_ALIAS_RID_GUESTS SID。  
 ```
 CSid Guests() throw(...);
 ```  
   
-##  <a name="interactive"></a>Sids::Interactive  
+##  <a name="interactive"></a>  Sids::Interactive  
  傳回 SECURITY_INTERACTIVE_RID SID。  
 ```
 CSid Interactive() throw(...);
 ```  
   
-##  <a name="local"></a>Sids::Local  
+##  <a name="local"></a>  Sids::Local  
  傳回 SECURITY_LOCAL_RID SID。  
 ```
 CSid Local() throw(...);
 ```  
   
-##  <a name="network"></a>Sids::Network  
+##  <a name="network"></a>  Sids::Network  
  傳回 SECURITY_NETWORK_RID SID。  
 ```
 CSid Network() throw(...);
 ```  
   
-##  <a name="networkservice"></a>Sids::NetworkService  
+##  <a name="networkservice"></a>  Sids::NetworkService  
  傳回 SECURITY_NETWORK_SERVICE_RID SID。  
 ```
 CSid NetworkService() throw(...);
@@ -204,101 +199,101 @@ CSid NetworkService() throw(...);
   
  自訂記錄檔的計數器會以建立時 ATLServer CPerfMon 類別 Perfmon MMC 中，雖然會正確出現在即時檢視，檢視記錄檔時，可能不會出現的計數器。 CPerfMon 自訂效能計數器沒有必要權限來執行 「 效能記錄檔及警示 」 服務 (smlogsvc.exe) [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] （或以上） 作業系統。 此服務帳戶之下執行"NT AUTHORITY\NetworkService"。  
   
-##  <a name="null"></a>Sids::Null  
+##  <a name="null"></a>  Sids::Null  
  傳回 SECURITY_NULL_RID SID。  
 ```
 CSid Null() throw(...);
 ```  
   
-##  <a name="prew2kaccess"></a>Sids::PreW2KAccess  
+##  <a name="prew2kaccess"></a>  Sids::PreW2KAccess  
  傳回 DOMAIN_ALIAS_RID_PREW2KCOMPACCESS SID。  
 ```
 CSid PreW2KAccess() throw(...);
 ```  
   
-##  <a name="powerusers"></a>Sids::PowerUsers  
+##  <a name="powerusers"></a>  Sids::PowerUsers  
  傳回 DOMAIN_ALIAS_RID_POWER_USERS SID。  
 ```
 CSid PowerUsers() throw(...);
 ```  
   
-##  <a name="printops"></a>Sids::PrintOps  
+##  <a name="printops"></a>  Sids::PrintOps  
  傳回 DOMAIN_ALIAS_RID_PRINT_OPS SID。  
 ```
 CSid PrintOps() throw(...);
 ```  
   
-##  <a name="proxy"></a>Sids::Proxy  
+##  <a name="proxy"></a>  Sids::Proxy  
  傳回 SECURITY_PROXY_RID SID。  
 ```
 CSid Proxy() throw(...);
 ```  
   
-##  <a name="rasservers"></a>Sids::RasServers  
+##  <a name="rasservers"></a>  Sids::RasServers  
  傳回 DOMAIN_ALIAS_RID_RAS_SERVERS SID。  
 ```
 CSid RasServers() throw(...);
 ```  
   
-##  <a name="replicator"></a>Sids::Replicator  
+##  <a name="replicator"></a>  Sids::Replicator  
  傳回 DOMAIN_ALIAS_RID_REPLICATOR SID。  
 ```
 CSid Replicator() throw(...);
 ```  
   
-##  <a name="restrictedcode"></a>Sids::RestrictedCode  
+##  <a name="restrictedcode"></a>  Sids::RestrictedCode  
  傳回 SECURITY_RESTRICTED_CODE_RID SID。  
 ```
 CSid RestrictedCode() throw(...);
 ```  
   
-##  <a name="self"></a>Sids::Self  
+##  <a name="self"></a>  Sids::Self  
  傳回 SECURITY_PRINCIPAL_SELF_RID SID。  
 ```
 CSid Self() throw(...);
 ```  
   
-##  <a name="serverlogon"></a>Sids::ServerLogon  
+##  <a name="serverlogon"></a>  Sids::ServerLogon  
  傳回 SECURITY_SERVER_LOGON_RID SID。  
 ```
 CSid ServerLogon() throw(...);
 ```  
   
-##  <a name="service"></a>Sids::Service  
+##  <a name="service"></a>  Sids::Service  
  傳回 SECURITY_SERVICE_RID SID。  
 ```
 CSid Service() throw(...);
 ```  
   
-##  <a name="system"></a>Sids::System  
+##  <a name="system"></a>  Sids::System  
  傳回 SECURITY_LOCAL_SYSTEM_RID SID。  
 ```
 CSid System() throw(...);
 ```  
   
-##  <a name="systemops"></a>Sids::SystemOps  
+##  <a name="systemops"></a>  Sids::SystemOps  
  傳回 DOMAIN_ALIAS_RID_SYSTEM_OPS SID。  
 ```
 CSid SystemOps() throw(...);
 ```  
   
-##  <a name="terminalserver"></a>Sids::TerminalServer  
+##  <a name="terminalserver"></a>  Sids::TerminalServer  
  傳回 SECURITY_TERMINAL_SERVER_RID SID。  
 ```
 CSid TerminalServer() throw(...);
 ```  
   
-##  <a name="users"></a>Sids::Users  
+##  <a name="users"></a>  Sids::Users  
  傳回 DOMAIN_ALIAS_RID_USERS SID。  
 ```
 CSid Users() throw(...);
 ```  
   
-##  <a name="world"></a>Sids::World  
+##  <a name="world"></a>  Sids::World  
  傳回 SECURITY_WORLD_RID SID。  
 ```
 CSid World() throw(...);
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)

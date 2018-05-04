@@ -1,12 +1,9 @@
 ---
-title: "日期和時間 |Microsoft 文件"
-ms.custom: 
+title: 日期和時間 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC, date and time
 - dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed221cfe695ef04a7759fb0385153029ef9a892d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79af7c468da642f44cc01229da304ab33e1ea1e6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time"></a>日期和時間
 MFC 支援的日期和時間使用數個不同的方式。 它們包括：  
@@ -47,7 +42,7 @@ MFC 支援的日期和時間使用數個不同的方式。 它們包括：
   
 -   [日期和時間：資料庫支援](../atl-mfc-shared/date-and-time-database-support.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../mfc/mfc-concepts.md)   
  [一般 MFC 主題](../mfc/general-mfc-topics.md)
 

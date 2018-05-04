@@ -1,12 +1,9 @@
 ---
-title: "編譯器 COM 支援 |Microsoft 文件"
-ms.custom: 
+title: 編譯器 COM 支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b05fdff690f8693e926011c3bc7d1738ee9be66c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d6e916cbd7cd8f5fbb259ff096159f9a49202ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-com-support"></a>編譯器 COM 支援
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -48,6 +43,6 @@ ms.lasthandoff: 12/21/2017
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)   
  [編譯器 COM 全域函式](../cpp/compiler-com-global-functions.md)

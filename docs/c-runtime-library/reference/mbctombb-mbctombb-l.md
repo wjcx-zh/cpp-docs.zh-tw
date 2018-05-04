@@ -2,11 +2,8 @@
 title: _mbctombb、_mbctombb_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctombb_l
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45567a2486a0783cd4b1f82e5a81046e529c49df
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb、_mbctombb_l
 
@@ -84,7 +79,7 @@ unsigned int _mbctombb_l(
 
 **_Mbctombb**和 **_mbctombb_l**函式會將指定的多位元組字元轉換成對應的單一位元組多位元組字元。 字元必須對應到 0x20-0x7E 或 0xA1-範圍內的單一位元組字元轉換 0xDF。
 
-輸出值會影響的設定**LC_CTYPE**之地區設定分類設定，請參閱 < [setlocale](setlocale-wsetlocale.md)如需詳細資訊。 這個函數，而不需要的版本 **_l**後置詞會針對地區設定相關行為; 使用目前的地區設定的版本與 **_l**尾碼是完全相同，不同之處在於它會使用傳入的地區設定參數中改用。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這個函數，而不需要的版本 **_l**後置詞會針對地區設定相關行為; 使用目前的地區設定的版本與 **_l**尾碼是完全相同，不同之處在於它會使用傳入的地區設定參數中改用。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 在舊版中， **_mbctombb**呼叫**zentohan**。 使用 **_mbctombb**改為。
 

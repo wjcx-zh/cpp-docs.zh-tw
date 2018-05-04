@@ -1,29 +1,24 @@
 ---
-title: "new 運算子 （c + +） |Microsoft 文件"
-ms.custom: 
+title: new 運算子 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 365beedce529e29be73c02caa57e5c6236565b9c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-operator-c"></a>new 運算子 (C++)
 為物件或物件的陣列配置記憶體*型別名稱*從可用存放區，並傳回具適當類型，則為非零的指標物件。  
@@ -73,7 +68,7 @@ delete *p;
   
  下列清單描述的文法項目**新**:  
   
- *placement*  
+ *放置*  
  提供一個方式來傳遞其他引數，如果您多載**新**。  
   
  *type-name*  
@@ -239,7 +234,7 @@ int main()
   
  **新**運算子會叫用函式`operator new`。 任何類型的陣列和物件不屬於**類別**， `struct`，或**union**類型、 全域函式， **:: 運算子 new**，呼叫以將存放裝置配置。 類別類型的物件可以根據類別定義各自的 `operator new` 靜態成員函式。  
   
- 當編譯器遇到**新**運算子配置類型的物件`type`，就會發出呼叫`type` **:: 運算子 new (sizeof (** `type` **))**或，如果不是使用者定義`operator new`定義， **:: 運算子 new (sizeof (** `type` **))**。 因此，**新**運算子可以配置給物件的正確的記憶體數量。  
+ 當編譯器遇到**新**運算子配置類型的物件`type`，就會發出呼叫`type` **:: 運算子 new (sizeof (** `type` **))** 或，如果不是使用者定義`operator new`定義， **:: 運算子 new (sizeof (** `type` **))**。 因此，**新**運算子可以配置給物件的正確的記憶體數量。  
   
 > [!NOTE]
 >  引數`operator new`的型別**size_t**。 此類型定義於\<direct.h >， \<malloc.h >， \<memory.h >， \<search.h >， \<stddef.h >， \<stdio.h >， \<stdlib.h >， \<h >，並\<h >。  
@@ -259,7 +254,7 @@ T *TObject =::new TObject;
   
  範圍解析運算子 (`::`) 會強制使用全域**新**運算子。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [新和 delete 運算子](../cpp/new-and-delete-operators.md)

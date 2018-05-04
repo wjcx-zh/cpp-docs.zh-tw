@@ -1,12 +1,9 @@
 ---
-title: "伺服器註冊全域函式 |Microsoft 文件"
-ms.custom: 
+title: 伺服器註冊全域函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>伺服器註冊全域函式
 這些函式可註冊及取消註冊物件對應中的伺服器物件的支援。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  呼叫此函式可在物件對應中註冊每個物件。  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- `AtlComModuleRegisterServer`將逐步引導 ATL 自動產生物件的對應，對應中註冊每個物件。 如果`pCLSID`不是 NULL，則只將所參考的物件`pCLSID`註冊; 否則會註冊的所有物件。  
+ `AtlComModuleRegisterServer` 將逐步引導 ATL 自動產生物件的對應，對應中註冊每個物件。 如果`pCLSID`不是 NULL，則只將所參考的物件`pCLSID`註冊; 否則會註冊的所有物件。  
   
  會呼叫此函式[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)。  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  呼叫此函式可在物件對應中移除每個物件的註冊。  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- `AtlComModuleUnregisterServer`將逐步引導 ATL 物件對應，並取消註冊對應中的每個物件。 如果`pCLSID`不是 NULL，則只將所參考的物件`pCLSID`已取消註冊，否則所有物件會取消註冊。  
+ `AtlComModuleUnregisterServer` 將逐步引導 ATL 物件對應，並取消註冊對應中的每個物件。 如果`pCLSID`不是 NULL，則只將所參考的物件`pCLSID`已取消註冊，否則所有物件會取消註冊。  
   
  會呼叫此函式[CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)。  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  呼叫此函式可註冊類別物件。  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>備註  
  這個 helper 函式使用[CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) （ATL 7.0 中已過時） 和[CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)。  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  呼叫此函式可從執行中的物件表格移除 Class Factory。  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>備註  
  這個 helper 函式使用[CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) （ATL 7.0 中已過時） 和[CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)。  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  呼叫此函式會傳回 Class Factory。  
   
 ```
@@ -175,5 +170,5 @@ ATLINLINE ATLAPI AtlComModuleGetClassObject(
 ### <a name="remarks"></a>備註  
  這個 helper 函式使用[CComModule::GetClassObject](ccommodule-class.md#getclassobject) （ATL 7.0 中已過時） 和[CAtlDllModuleT::GetClassObject](catldllmodulet-class.md#getclassobject)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)

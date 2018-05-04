@@ -1,12 +1,9 @@
 ---
-title: "加法類運算子: + 和-|Microsoft 文件"
-ms.custom: 
+title: '加法類運算子: + 和-|Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>加法類運算子：+ 和 -
 ## <a name="syntax"></a>語法  
@@ -58,19 +53,19 @@ expression - expression
   
 |類型|意義|  
 |----------|-------------|  
-|*arithmetic*|整數和浮點類型統稱為「算術」類型。|  
+|*算術運算*|整數和浮點類型統稱為「算術」類型。|  
 |*integral*|各種大小 (long、short) 的 char 和 int 及列舉是「整數」類型。|  
 |*scalar*|純量運算元是算術或指標類型的運算元。|  
   
  這些運算子的有效組合包括：  
   
- *arithmetic* + *arithmetic*  
+ *算術* + *算術*  
   
  *scalar* + *integral*  
   
  *integral* + *scalar*  
   
- *arithmetic* - *arithmetic*  
+ *算術* - *算術*  
   
  *scalar* - *scalar*  
   
@@ -121,9 +116,9 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>指標減法  
  如果兩個運算元都是指標，則減法運算的結果為兩個運算元之間的差數 (以陣列元素為單位)。 減法運算式會產生 ptrdiff_t 類型帶正負號的整數結果 (在標準 include 檔中定義\<stddef.h >)。  
   
- 兩個運算元中的第二個運算元可以是整數類資料類型。 減法運算的結果與原始指標的類型相同。 減法的值是指標 (*n* - *我*) 個陣列元素，其中 *n* 指向元素原始指標和*我*是第二個運算元的整數值。  
+ 兩個運算元中的第二個運算元可以是整數類資料類型。 減法運算的結果與原始指標的類型相同。 減法的值是指標 (*n* - *我*) 個陣列元素，其中*n*項目所指向的原始指標和*我*是第二個運算元的整數值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 加法類運算子](../c-language/c-additive-operators.md)

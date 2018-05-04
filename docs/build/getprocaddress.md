@@ -1,13 +1,10 @@
 ---
-title: "GetProcAddress |Microsoft 文件"
-ms.custom: 
+title: GetProcAddress |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-明確連結的 DLL 呼叫的處理序[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)取得 DLL 中匯出函式的位址。 您可以使用傳回的函式指標呼叫 DLL 函式。 **GetProcAddress**接受做為參數的 DLL 模組控制代碼 (由傳回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**) 會採用函式的名稱和您要呼叫或函式的匯出序數。  
+明確連結的 DLL 呼叫的處理序[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)取得 DLL 中匯出函式的位址。 您可以使用傳回的函式指標呼叫 DLL 函式。 **GetProcAddress**接受做為參數的 DLL 模組控制代碼 (由傳回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**)，並採用您想要的函式名稱若要呼叫或函式的匯出序數。  
   
  因為您要呼叫 DLL 函式透過指標而且沒有任何編譯時間類型檢查，請確定函式的參數是正確的如此不逾越在堆疊上配置的記憶體，但造成存取違規。 可協助您提供類型安全的方法之一是查看匯出的函式的函式原型，並建立相符的函式指標的 typedef。 例如:   
   
@@ -80,5 +75,5 @@ if (hDLL != NULL)
   
 -   [使用 DEF 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

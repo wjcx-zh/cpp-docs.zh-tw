@@ -1,13 +1,10 @@
 ---
-title: "變更預設 Class Factory 和彙總模型 |Microsoft 文件"
-ms.custom: 
+title: 變更預設 Class Factory 和彙總模型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,20 +18,18 @@ helpviewer_keywords:
 - default class factory, ATL
 - defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb88a4c7827fcd43c26819a6f546779e35863cc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce64f2162aa0d5cdf5bcf5e16b56b6989fcaf1ee
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>變更預設 Class Factory 和彙總模型
-使用 ATL [CComCoClass](../atl/reference/ccomcoclass-class.md)來定義物件的預設類別處理站和彙總模型。 `CComCoClass`指定下列兩個巨集：  
+使用 ATL [CComCoClass](../atl/reference/ccomcoclass-class.md)來定義物件的預設類別處理站和彙總模型。 `CComCoClass` 指定下列兩個巨集：  
   
 -   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory)宣告 class factory 是[CComClassFactory](../atl/reference/ccomclassfactory-class.md)。  
   
@@ -46,9 +41,9 @@ ms.lasthandoff: 12/21/2017
   
  兩個其他定義的類別處理站的巨集[DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)和[DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton)。  
   
- 也會使用 ATL`typedef`機制來實作預設行為。 例如，`DECLARE_AGGREGATABLE`巨集使用`typedef`定義類型，稱為**_CreatorClass**，然後參考整個 ATL 在衍生類別中，請注意，`typedef`使用相同名稱的基底類別`typedef`導致 ATL 使用您的定義，並覆寫預設行為。  
+ 也會使用 ATL`typedef`機制來實作預設行為。 例如，`DECLARE_AGGREGATABLE`巨集使用`typedef`定義類型，稱為 **_CreatorClass**，然後參考整個 ATL 在衍生類別中，請注意，`typedef`使用相同名稱的基底類別`typedef`導致 ATL 使用您的定義，並覆寫預設行為。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)   
  [彙總和 Class Factory 巨集](../atl/reference/aggregation-and-class-factory-macros.md)
 

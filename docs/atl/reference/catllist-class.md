@@ -1,12 +1,9 @@
 ---
-title: "CAtlList 類別 |Microsoft 文件"
-ms.custom: 
+title: CAtlList 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlList
@@ -46,17 +43,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13d26ba7107e21e64ad65ec53264b4f3740fd13a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bfe961ef3ac02a0ed068b8cc2b74f2a6cce22ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catllist-class"></a>CAtlList 類別
 這個類別會提供方法來建立和管理清單物件。  
@@ -124,16 +119,16 @@ class CAtlList
 |[CAtlList::SwapElements](#swapelements)|呼叫這個方法，以交換在清單中的項目。|  
   
 ## <a name="remarks"></a>備註  
- `CAtlList`類別支援循序或依值排序的非唯一可存取的物件清單。 `CAtlList`清單的行為與雙向連結清單。 每個清單具有一個頭部和尾部，新的項目 （或在某些情況下的清單） 可以加入至清單結尾或插入之前或之後的特定項目。  
+ `CAtlList`類別支援循序或依值排序的非唯一可存取的物件清單。 `CAtlList` 清單的行為與雙向連結清單。 每個清單具有一個頭部和尾部，新的項目 （或在某些情況下的清單） 可以加入至清單結尾或插入之前或之後的特定項目。  
   
- 大部分的`CAtlList`方法會使用的位置值。 這個值用來參考的實際記憶體位置，其中項目會儲存並不應該計算或直接預測方法。 如果需要存取 *n* th 項目在清單中，此方法[CAtlList::FindIndex](#findindex)會傳回給定索引的對應位置值。 方法[CAtlList::GetNext](#getnext)和[CAtlList::GetPrev](#getprev)可用來逐一查看清單中的物件。  
+ 大部分的`CAtlList`方法會使用的位置值。 這個值用來參考的實際記憶體位置，其中項目會儲存並不應該計算或直接預測方法。 如果需要存取*n*th 項目在清單中，此方法[CAtlList::FindIndex](#findindex)會傳回給定索引的對應位置值。 方法[CAtlList::GetNext](#getnext)和[CAtlList::GetPrev](#getprev)可用來逐一查看清單中的物件。  
   
  如需有關使用 ATL 集合類別的詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** atlcoll.h  
   
-##  <a name="addhead"></a>CAtlList::AddHead  
+##  <a name="addhead"></a>  CAtlList::AddHead  
  呼叫這個方法將項目加入清單的開頭。  
   
 ```
@@ -154,7 +149,7 @@ POSITION AddHead(INARGTYPE element);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]  
   
-##  <a name="addheadlist"></a>CAtlList::AddHeadList  
+##  <a name="addheadlist"></a>  CAtlList::AddHeadList  
  呼叫此方法以將現有的清單加入至清單的開頭。  
   
 ```
@@ -171,7 +166,7 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]  
   
-##  <a name="addtail"></a>CAtlList::AddTail  
+##  <a name="addtail"></a>  CAtlList::AddTail  
  呼叫此方法以新增元素至這份清單的結尾。  
   
 ```
@@ -192,7 +187,7 @@ POSITION AddTail(INARGTYPE element);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]  
   
-##  <a name="addtaillist"></a>CAtlList::AddTailList  
+##  <a name="addtaillist"></a>  CAtlList::AddTailList  
  呼叫此方法以將現有的清單加入至這份清單的結尾。  
   
 ```
@@ -209,7 +204,7 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]  
   
-##  <a name="assertvalid"></a>CAtlList::AssertValid  
+##  <a name="assertvalid"></a>  CAtlList::AssertValid  
  呼叫此方法以確認清單是有效。  
   
 ```
@@ -222,7 +217,7 @@ void AssertValid() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]  
   
-##  <a name="catllist"></a>CAtlList::CAtlList  
+##  <a name="catllist"></a>  CAtlList::CAtlList  
  建構函式。  
   
 ```
@@ -239,7 +234,7 @@ CAtlList(UINT nBlockSize = 10) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]  
   
-##  <a name="dtor"></a>CAtlList:: ~ CAtlList  
+##  <a name="dtor"></a>  CAtlList:: ~ CAtlList  
  解構函式。  
   
 ```
@@ -251,7 +246,7 @@ CAtlList(UINT nBlockSize = 10) throw();
   
  在偵錯組建中，如果清單仍然包含某些項目呼叫之後，就會發生判斷提示失敗`RemoveAll`。  
   
-##  <a name="find"></a>CAtlList::Find  
+##  <a name="find"></a>  CAtlList::Find  
  呼叫這個方法來搜尋指定項目的清單。  
   
 ```
@@ -274,7 +269,7 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]  
   
-##  <a name="findindex"></a>CAtlList::FindIndex  
+##  <a name="findindex"></a>  CAtlList::FindIndex  
  呼叫這個方法來取得項目的位置指定的索引值。  
   
 ```
@@ -289,14 +284,14 @@ POSITION FindIndex(size_t iElement) const throw();
  如果傳回的對應位置的值或為 NULL`iElement`超出範圍。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會傳回對應於指定的索引值，允許存取的位置 *n* th 項目在清單中的。  
+ 這個方法會傳回對應於指定的索引值，允許存取的位置*n*th 項目在清單中的。  
   
  在偵錯組建中，如果不是有效的清單物件，會發生判斷提示失敗。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#20](../../atl/codesnippet/cpp/catllist-class_8.cpp)]  
   
-##  <a name="getat"></a>CAtlList::GetAt  
+##  <a name="getat"></a>  CAtlList::GetAt  
  呼叫此方法以傳回清單中的指定位置處的項目。  
   
 ```
@@ -321,7 +316,7 @@ const E& GetAt(POSITION pos) const throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::FindIndex](#findindex)。  
   
-##  <a name="getcount"></a>CAtlList::GetCount  
+##  <a name="getcount"></a>  CAtlList::GetCount  
  呼叫此方法以傳回清單中的物件數目。  
   
 ```
@@ -334,7 +329,7 @@ size_t GetCount() const throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::Find](#find)。  
   
-##  <a name="gethead"></a>CAtlList::GetHead  
+##  <a name="gethead"></a>  CAtlList::GetHead  
  呼叫此方法以傳回清單的開頭處的項目。  
   
 ```
@@ -355,7 +350,7 @@ const E& GetHead() const throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::AddHead](#addhead)。  
   
-##  <a name="getheadposition"></a>CAtlList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CAtlList::GetHeadPosition  
  呼叫這個方法來取得清單的開頭的位置。  
   
 ```
@@ -371,7 +366,7 @@ POSITION GetHeadPosition() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#21](../../atl/codesnippet/cpp/catllist-class_9.cpp)]  
   
-##  <a name="getnext"></a>CAtlList::GetNext  
+##  <a name="getnext"></a>  CAtlList::GetNext  
  呼叫此方法以傳回下一個項目從清單中。  
   
 ```
@@ -394,7 +389,7 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::GetHeadPosition](#getheadposition)。  
   
-##  <a name="getprev"></a>CAtlList::GetPrev  
+##  <a name="getprev"></a>  CAtlList::GetPrev  
  呼叫此方法以傳回上一個項目從清單中。  
   
 ```
@@ -417,7 +412,7 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::GetTailPosition](#gettailposition)。  
   
-##  <a name="gettail"></a>CAtlList::GetTail  
+##  <a name="gettail"></a>  CAtlList::GetTail  
  呼叫此方法以傳回清單的結尾處的項目。  
   
 ```
@@ -438,7 +433,7 @@ const E& GetTail() const throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::AddTail](#addtail)。  
   
-##  <a name="gettailposition"></a>CAtlList::GetTailPosition  
+##  <a name="gettailposition"></a>  CAtlList::GetTailPosition  
  呼叫這個方法來取得清單的結尾位置。  
   
 ```
@@ -454,14 +449,14 @@ POSITION GetTailPosition() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]  
   
-##  <a name="inargtype"></a>CAtlList::INARGTYPE  
+##  <a name="inargtype"></a>  CAtlList::INARGTYPE  
  項目會當做輸入引數傳遞時所使用的類型。  
   
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```  
   
-##  <a name="insertafter"></a>CAtlList::InsertAfter  
+##  <a name="insertafter"></a>  CAtlList::InsertAfter  
  呼叫此方法以新的項目插入後的指定位置的清單。  
   
 ```
@@ -484,7 +479,7 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#23](../../atl/codesnippet/cpp/catllist-class_11.cpp)]  
   
-##  <a name="insertbefore"></a>CAtlList::InsertBefore  
+##  <a name="insertbefore"></a>  CAtlList::InsertBefore  
  呼叫此方法以指定的位置之前的清單中插入新項目。  
   
 ```
@@ -507,7 +502,7 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]  
   
-##  <a name="isempty"></a>CAtlList::IsEmpty  
+##  <a name="isempty"></a>  CAtlList::IsEmpty  
  呼叫這個方法，以決定清單是否為空白。  
   
 ```
@@ -520,7 +515,7 @@ bool IsEmpty() const throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]  
   
-##  <a name="movetohead"></a>CAtlList::MoveToHead  
+##  <a name="movetohead"></a>  CAtlList::MoveToHead  
  呼叫此方法，將指定的項目移至清單的開頭。  
   
 ```
@@ -537,7 +532,7 @@ void MoveToHead(POSITION pos) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]  
   
-##  <a name="movetotail"></a>CAtlList::MoveToTail  
+##  <a name="movetotail"></a>  CAtlList::MoveToTail  
  呼叫此方法，將指定的項目移至清單的結尾。  
   
 ```
@@ -554,7 +549,7 @@ void MoveToTail(POSITION pos) throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::MoveToHead](#movetohead)。  
   
-##  <a name="removeall"></a>CAtlList::RemoveAll  
+##  <a name="removeall"></a>  CAtlList::RemoveAll  
  呼叫此方法以從清單中移除所有項目。  
   
 ```
@@ -567,7 +562,7 @@ void RemoveAll() throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::IsEmpty](#isempty)。  
   
-##  <a name="removeat"></a>CAtlList::RemoveAt  
+##  <a name="removeat"></a>  CAtlList::RemoveAt  
  呼叫此方法以從清單中移除單一項目。  
   
 ```
@@ -586,7 +581,7 @@ void RemoveAt(POSITION pos) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]  
   
-##  <a name="removehead"></a>CAtlList::RemoveHead  
+##  <a name="removehead"></a>  CAtlList::RemoveHead  
  呼叫這個方法來移除清單的開頭處的項目。  
   
 ```
@@ -602,7 +597,7 @@ E RemoveHead();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#28](../../atl/codesnippet/cpp/catllist-class_16.cpp)]  
   
-##  <a name="removeheadnoreturn"></a>CAtlList::RemoveHeadNoReturn  
+##  <a name="removeheadnoreturn"></a>  CAtlList::RemoveHeadNoReturn  
  呼叫這個方法來移除清單的開頭處的項目，但不傳回值。  
   
 ```
@@ -615,7 +610,7 @@ void RemoveHeadNoReturn() throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::IsEmpty](#isempty)。  
   
-##  <a name="removetail"></a>CAtlList::RemoveTail  
+##  <a name="removetail"></a>  CAtlList::RemoveTail  
  呼叫這個方法來移除清單的結尾處的項目。  
   
 ```
@@ -631,7 +626,7 @@ E RemoveTail();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]  
   
-##  <a name="removetailnoreturn"></a>CAtlList::RemoveTailNoReturn  
+##  <a name="removetailnoreturn"></a>  CAtlList::RemoveTailNoReturn  
  呼叫這個方法來移除清單的結尾處的項目，但不傳回值。  
   
 ```
@@ -644,7 +639,7 @@ void RemoveTailNoReturn() throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CAtlList::IsEmpty](#isempty)。  
   
-##  <a name="setat"></a>CAtlList::SetAt  
+##  <a name="setat"></a>  CAtlList::SetAt  
  呼叫此方法以設定項目的值清單中指定的位置。  
   
 ```
@@ -664,7 +659,7 @@ void SetAt(POSITION pos, INARGTYPE element);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]  
   
-##  <a name="swapelements"></a>CAtlList::SwapElements  
+##  <a name="swapelements"></a>  CAtlList::SwapElements  
  呼叫這個方法，以交換在清單中的項目。  
   
 ```
@@ -684,6 +679,6 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#31](../../atl/codesnippet/cpp/catllist-class_19.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CList 類別](../../mfc/reference/clist-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

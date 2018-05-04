@@ -1,27 +1,22 @@
 ---
-title: "純量類型 |Microsoft 文件"
-ms.custom: 
+title: 純量類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 07c9195e-b6c7-4083-8ef0-8a93032e4d1e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15b0915637025e176ee98d01be3991b30b4e6544
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5490bb33cafd8d2942e434ab9c50e34441506463
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scalar-types"></a>純量類型
 雖然資料的存取權可以源自任何對齊，建議您使用資料對齊自然界限，以避免發生效能損失 （或多個類別） 上。 列舉常數的整數，而且會被視為 32 位元整數。 下表描述的型別定義和建議的儲存體，因為它適用於使用下列的對齊值：  
@@ -53,5 +48,5 @@ ms.lasthandoff: 12/21/2017
 |`__m64`|**結構 __m64**|8|Quadword|  
 |`__m128`|**結構 __m128**|16|Octaword|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型和儲存區](../build/types-and-storage.md)

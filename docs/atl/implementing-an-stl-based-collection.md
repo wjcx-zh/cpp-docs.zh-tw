@@ -1,29 +1,24 @@
 ---
-title: "實作與 c + + 標準程式庫為基礎的集合 |Microsoft 文件"
-ms.custom: 
+title: 實作與 c + + 標準程式庫為基礎的集合 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14a09f54598b525346a65b56a335711f114878cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>實作與 c + + 標準程式庫為基礎的集合
 ATL 提供`ICollectionOnSTLImpl`介面，讓您快速實作您的物件上的 c + + 標準程式庫為基礎的集合介面。 若要了解這個類別的運作方式，您會一起完成的簡單範例 （如下），使用這個類別來實作旨在 Automation 用戶端的唯讀集合。  
@@ -46,10 +41,10 @@ ATL 提供`ICollectionOnSTLImpl`介面，讓您快速實作您的物件上的 c 
   
 -   [加入程式碼以在集合中填入](#vcconpopulate_the_collection)。  
   
-##  <a name="vccongenerating_an_object"></a>產生新的簡單物件  
+##  <a name="vccongenerating_an_object"></a> 產生新的簡單物件  
  建立新的專案，並確保應用程式設定屬性方塊已清除。 使用 ATL 加入類別 對話方塊，並新增簡單物件精靈 來產生簡單的物件呼叫`Words`。 請確定雙重介面呼叫`IWords`產生。 物件產生的類別將用來代表文字 （也就是字串） 的集合。  
   
-##  <a name="vcconedit_the_idl"></a>編輯 IDL 檔案  
+##  <a name="vcconedit_the_idl"></a> 編輯 IDL 檔案  
  現在，開啟 IDL 檔案，並加入三個屬性，則不必開啟`IWords`至唯讀集合的介面，如下所示：  
   
  [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]  
@@ -68,7 +63,7 @@ ATL 提供`ICollectionOnSTLImpl`介面，讓您快速實作您的物件上的 c 
   
 6.  所使用的 DISPID 值**計數**是完全任意的屬性。 此屬性沒有標準 DISPID。  
   
-##  <a name="vcconstorage_and_exposure_typedefs"></a>儲存體與曝光建立 Typedef  
+##  <a name="vcconstorage_and_exposure_typedefs"></a> 儲存體與曝光建立 Typedef  
  集合介面定義之後，您需要決定如何將儲存資料，以及如何將資料公開透過列舉值。  
   
  數字的 typedef，您可以加入最上方的標頭檔，為您新建立的類別可以提供這些問題的答案：  
@@ -79,33 +74,33 @@ ATL 提供`ICollectionOnSTLImpl`介面，讓您快速實作您的物件上的 c 
   
  由於 Visual Basic 支援這個介面的成功很重要時，所傳回的列舉值`_NewEnum`屬性必須支援**IEnumVARIANT**介面。 這是 Visual Basic 所了解的唯一列舉程式介面。  
   
-##  <a name="vcconcopy_classes"></a>為複製原則類別建立 Typedef  
+##  <a name="vcconcopy_classes"></a> 為複製原則類別建立 Typedef  
  目前已建立 typedef 提供您需要進一步建立複製的類別將列舉值和集合所使用之 typedef 的所有資訊：  
   
  [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]  
   
  在此範例中，您可以使用自訂`GenericCopy`VCUE_Copy.h 和從 VCUE_CopyString.h 中定義的類別[ATLCollections](../visual-cpp-samples.md)範例。 您可以使用這個類別中的其他程式碼，但您可能需要進一步的特製化定義`GenericCopy`以支援您自己的集合中所使用的資料類型。 如需詳細資訊，請參閱[ATL 複製原則類別](../atl/atl-copy-policy-classes.md)。  
   
-##  <a name="vcconenumeration_and_collection"></a>列舉型別和集合建立 Typedef  
+##  <a name="vcconenumeration_and_collection"></a> 列舉型別和集合建立 Typedef  
  現在所有的範本參數特製化所需`CComEnumOnSTL`和`ICollectionOnSTLImpl`typedef 的表單已提供這種情況下的類別。 若要簡化使用特製化，建立兩個的多個 typedef 如下所示：  
   
  [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]  
   
  現在`CollectionType`同義的特製化`ICollectionOnSTLImpl`實作`IWords`先前定義介面，並提供支援的列舉值**IEnumVARIANT**。  
   
-##  <a name="vcconedit_the_generated_code"></a>編輯精靈產生的程式碼  
+##  <a name="vcconedit_the_generated_code"></a> 編輯精靈產生的程式碼  
  現在您必須衍生`CWords`所代表的介面實作`CollectionType`typedef 而不是`IWords`，如下所示：  
   
  [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]  
   
-##  <a name="vcconpopulate_the_collection"></a>加入程式碼以填入集合  
+##  <a name="vcconpopulate_the_collection"></a> 加入程式碼以填入集合  
  唯一會保持為填入之資料的向量。 在這個簡單的範例中，您可以加入幾個字至集合中之類別的建構函式：  
   
  [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]  
   
  現在，您可以使用您選擇的用戶端來測試程式碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [集合和列舉程式](../atl/atl-collections-and-enumerators.md)   
  [ATLCollections 範例](../visual-cpp-samples.md)   
  [ATL 複製原則類別](../atl/atl-copy-policy-classes.md)

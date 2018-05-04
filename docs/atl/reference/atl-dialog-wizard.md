@@ -1,12 +1,9 @@
 ---
-title: "ATL 對話方塊精靈 |Microsoft 文件"
-ms.custom: 
+title: ATL 對話方塊精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.dlg.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding dialog resources
 - ATL Dialog Wizard
 ms.assetid: b0b9ace5-83c9-40d3-82c3-eb6293f10583
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cdf16b3e82ce69fa06b3eacda8d7b48643fb3c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e2d78f0a41edca44f8841d701cc87975c551466
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-dialog-wizard"></a>ATL 對話方塊精靈
 此精靈將插入至專案 ATL 對話方塊物件，衍生自[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)。 對話方塊衍生自`CAxDialogImpl`可以裝載 ActiveX 控制項。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
   
  精靈不會覆寫檔案。 如果當您按一下 選取現有的檔案名稱**完成**，精靈會提示您是否要在類別實作附加至檔案的內容。 按一下**是**附加檔案，按一下 **否**返回精靈並指定另一個檔案名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 對話方塊](../../atl/reference/adding-an-atl-dialog-box.md)
 

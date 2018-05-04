@@ -1,12 +1,9 @@
 ---
-title: "CWorkerThread 類別 |Microsoft 文件"
-ms.custom: 
+title: CWorkerThread 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWorkerThread
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 類別
 這個類別建立背景工作執行緒或使用現有，等候一或多個核心物件控點，而且其中一個控點會收到信號時，執行指定的用戶端函式。  
@@ -103,7 +98,7 @@ class CWorkerThread
 ## <a name="requirements"></a>需求  
  **標頭：** atlutil.h  
   
-##  <a name="addhandle"></a>CWorkerThread::AddHandle  
+##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
  呼叫此方法，將可等候物件的控制代碼加入至背景工作執行緒所維護的清單。  
   
 ```
@@ -129,7 +124,7 @@ HRESULT AddHandle(
 ### <a name="remarks"></a>備註  
  [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)會透過呼叫`pClient`時控制代碼， `hObject`，收到信號。  
   
-##  <a name="addtimer"></a>CWorkerThread::AddTimer  
+##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
  呼叫此方法以將定期可等候計時器加入至背景工作執行緒所維護的清單。  
   
 ```
@@ -161,14 +156,14 @@ HRESULT AddTimer(
   
  將傳遞計時器控制代碼與`phTimer`至[CWorkerThread::RemoveHandle](#removehandle)關閉計時器。  
   
-##  <a name="cworkerthread"></a>CWorkerThread::CWorkerThread  
+##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  建構函式。  
   
 ```
 CWorkerThread() throw();
 ```  
   
-##  <a name="dtor"></a>CWorkerThread:: ~ CWorkerThread  
+##  <a name="dtor"></a>  CWorkerThread:: ~ CWorkerThread  
  解構函式。  
   
 ```
@@ -178,7 +173,7 @@ CWorkerThread() throw();
 ### <a name="remarks"></a>備註  
  呼叫[CWorkerThread::Shutdown](#shutdown)。  
   
-##  <a name="getthreadhandle"></a>CWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>  CWorkerThread::GetThreadHandle  
  呼叫這個方法，取得工作者執行緒的執行緒控制代碼。  
   
 ```
@@ -188,7 +183,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="return-value"></a>傳回值  
  傳回的執行緒控制代碼或為 NULL，如果背景工作執行緒尚未初始化。  
   
-##  <a name="getthreadid"></a>CWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId  
  呼叫這個方法，取得工作者執行緒的執行緒 ID。  
   
 ```
@@ -198,7 +193,7 @@ DWORD GetThreadId() throw();
 ### <a name="return-value"></a>傳回值  
  傳回的執行緒 ID 或為 NULL，如果背景工作執行緒尚未初始化。  
   
-##  <a name="initialize"></a>CWorkerThread::Initialize  
+##  <a name="initialize"></a>  CWorkerThread::Initialize  
  呼叫此方法以初始化背景工作執行緒。  
   
 ```
@@ -221,7 +216,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
   
  請參閱[CWorkerThread::Shutdown](#shutdown)上初始化使用現有物件的指標時，該方法的行為如何變更的資訊。  
   
-##  <a name="removehandle"></a>CWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
  呼叫這個方法來移除可等候物件的清單中的控制代碼。  
   
 ```
@@ -238,7 +233,7 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ### <a name="remarks"></a>備註  
  移除此控制代碼時[IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle)將與已傳遞至相關聯的物件上呼叫[AddHandle](#addhandle)。 如果這個呼叫失敗，`CWorkerThread`會呼叫 Windows [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211)控制代碼上的函式。  
   
-##  <a name="shutdown"></a>CWorkerThread::Shutdown  
+##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  呼叫這個方法關閉背景工作執行緒。  
   
 ```
@@ -257,7 +252,7 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
  請注意，呼叫**關機**物件的指標，另一個以初始化`CWorkerThread`物件沒有任何作用，而且一律會傳回 S_OK。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [類別](../../atl/reference/atl-classes.md)   
  [多執行緒： 建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)   

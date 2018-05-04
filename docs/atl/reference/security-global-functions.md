@@ -1,12 +1,9 @@
 ---
-title: "安全性全域函式 |Microsoft 文件"
-ms.custom: 
+title: 安全性全域函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::AtlGetDacl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad9ad170706b72c9d236e095db0e2b6df00031ff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-global-functions"></a>安全性全域函式
 這些函式提供修改 SID 和 ACL 物件的支援。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="atlgetdacl"></a>AtlGetDacl  
+##  <a name="atlgetdacl"></a>  AtlGetDacl  
  呼叫此函式可擷取所指定物件的判別存取控制清單 (DACL) 資訊。  
   
 > [!IMPORTANT]
@@ -87,7 +82,7 @@ inline bool AtlGetDacl(
 ### <a name="remarks"></a>備註  
  在偵錯組建中，如果有任一個，會發生判斷提示錯誤`hObject`或`pDacl`無效。  
   
-##  <a name="atlsetdacl"></a>AtlSetDacl  
+##  <a name="atlsetdacl"></a>  AtlSetDacl  
  呼叫此函式可設定所指定物件的判別存取控制清單 (DACL) 資訊。  
   
 > [!IMPORTANT]
@@ -122,7 +117,7 @@ inline bool AtlSetDacl(
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
+##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid  
  呼叫此函式可擷取物件的群組安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
@@ -151,7 +146,7 @@ inline bool AtlGetGroupSid(
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
+##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid  
  呼叫此函式可設定物件的群組安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
@@ -180,7 +175,7 @@ inline bool AtlSetGroupSid(
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
+##  <a name="atlgetownersid"></a>  AtlGetOwnerSid  
  呼叫此函式可擷取物件的擁有者安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
@@ -209,7 +204,7 @@ inline bool AtlGetOwnerSid(
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
+##  <a name="atlsetownersid"></a>  AtlSetOwnerSid  
  呼叫此函式可設定物件的擁有者安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
@@ -238,7 +233,7 @@ inline bool AtlSetOwnerSid(
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="atlgetsacl"></a>AtlGetSacl  
+##  <a name="atlgetsacl"></a>  AtlGetSacl  
  呼叫此函式可擷取所指定物件的系統存取控制清單 (SACL) 資訊。  
   
 > [!IMPORTANT]
@@ -274,7 +269,7 @@ inline bool AtlGetSacl(
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="atlsetsacl"></a>AtlSetSacl  
+##  <a name="atlsetsacl"></a>  AtlSetSacl  
  呼叫此函式可設定所指定物件的系統存取控制清單 (SACL) 資訊。  
   
 > [!IMPORTANT]
@@ -316,7 +311,7 @@ inline bool AtlSetSacl(
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
 
-##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
+##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor  
  呼叫此函式可擷取所指物件的安全性描述元。  
   
 > [!IMPORTANT]
@@ -358,5 +353,5 @@ inline bool AtlGetSecurityDescriptor(
 ### <a name="requirements"></a>需求  
  **標頭：** atlsecurity.h 
    
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)

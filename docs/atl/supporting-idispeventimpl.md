@@ -1,13 +1,10 @@
 ---
-title: "支援 IDispEventImpl |Microsoft 文件"
-ms.custom: 
+title: 支援 IDispEventImpl |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - IDispEventImpl
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - BEGIN_SINK_MAP macro
 - IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bf10a68ae15743a637df2dee52bee83c3dfcbe0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 680396ae912cca5f19e87697e7de0033213cc963
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supporting-idispeventimpl"></a>支援 IDispEventImpl
 此範本類別[IDispEventImpl](../atl/reference/idispeventimpl-class.md)可用來對 ATL 類別中的連接點接收提供支援。 連接點接收可讓您的類別來處理從外部 COM 物件引發的事件。 這些連接點接收對應的事件接收對應，您的類別所提供。  
@@ -91,6 +86,6 @@ ms.lasthandoff: 12/21/2017
   
  COM 物件的唯一特性，因為此程序各有不同，在詳細資料和執行，不同的實作。 已超出本主題的範圍和不解決這些詳細資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "日期和時間： SYSTEMTIME 支援 |Microsoft 文件"
-ms.custom: 
+title: 日期和時間： SYSTEMTIME 支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - SYSTEMTIME
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dates [C++], MFC
 - formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405c245cdab6426330915c945cd77f8336e68c9d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecbfd517a0fd535a23920ae21d03f1756babc113
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-and-time-systemtime-support"></a>日期和時間： SYSTEMTIME 支援
 [CTime](../atl-mfc-shared/reference/ctime-class.md)類別具有建構函式會接受從 Win32 系統及檔案時間。 如果您使用 `CTime` 物件來進行這些目的，則必須相應地修改其初始化，如本文章所述。  
@@ -59,6 +54,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [日期與時間程式設計的一般用途類別](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [日期和時間](../atl-mfc-shared/date-and-time.md)
 

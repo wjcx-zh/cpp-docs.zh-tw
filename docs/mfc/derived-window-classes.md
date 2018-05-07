@@ -1,13 +1,10 @@
 ---
-title: "衍生的視窗類別 |Microsoft 文件"
-ms.custom: 
+title: 衍生的視窗類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4601a04932f467be3b63527f12c46f797d9e11d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eddc6c59190856d09eae75c6f4314c902740092f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-window-classes"></a>衍生的視窗類別
 您可以建立直接從 windows [CWnd](../mfc/reference/cwnd-class.md)，或衍生新的視窗類別，從`CWnd`。 這是通常建立您自己的自訂 windows 的方式。 不過，大部分的 windows 架構程式中使用而建立從其中一個`CWnd`-衍生的 MFC 所提供的框架視窗類別。  
@@ -71,6 +66,6 @@ ms.lasthandoff: 12/21/2017
   
  [建立 Windows](../mfc/creating-windows.md)討論建立視窗物件和所管理的 windows。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [視窗物件](../mfc/window-objects.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 測試專案 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 測試專案 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a9455fa9bf3c9f903f5018a1263978913aa35b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-testing-a-project-c"></a>逐步解說：測試專案 (C++)
 當您在偵錯模式執行程式時，您可以使用中斷點暫停程式，以檢查變數和物件的狀態。  
@@ -69,8 +64,8 @@ ms.lasthandoff: 12/21/2017
 9. 若要停止程式，在功能表列上，選擇 **偵錯**，**停止偵錯**，或選擇 Shift + F5 鍵盤快速鍵。  
   
 ## <a name="next-steps"></a>後續步驟  
- **上一步：** [逐步解說： 建置專案 （c + +）](../ide/walkthrough-building-a-project-cpp.md) &#124;**下一步：**[逐步解說： 偵錯專案 （c + +）](../ide/walkthrough-debugging-a-project-cpp.md)  
+ **上一步：** [逐步解說： 建置專案 （c + +）](../ide/walkthrough-building-a-project-cpp.md) &#124; **下一步：**[逐步解說： 偵錯專案 （c + +）](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)

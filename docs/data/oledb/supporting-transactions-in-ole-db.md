@@ -1,12 +1,9 @@
 ---
-title: "支援 OLE DB 中的異動 |Microsoft 文件"
-ms.custom: 
+title: 支援 OLE DB 中的異動 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84849b2d9bfd899a0ffd8a5d8eafe12f91a4adce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-transactions-in-ole-db"></a>支援 OLE DB 中的異動
 A[交易](../../data/transactions-mfc-data-access.md)是群組，或批次，一系列的資料來源的更新，讓不是全部成功就無法認可一次就 （如果有任何一個將會失敗） 就無法認可任何的方法和回復整個交易。 此程序可確保資料來源上的結果的完整性。  
@@ -49,7 +44,7 @@ A[交易](../../data/transactions-mfc-data-access.md)是群組，或批次，一
   
  當工作階段進入交易時，完成該工作階段資料存放區上的所有工作是該交易的一部分並認可或中止當做單一單位。 （這有時候稱為手動認可模式。）  
   
- 提供者特定交易支援。 如果您使用的提供者支援交易，支援工作階段物件**itransaction::**和**ITransactionLocal**可以輸入簡單 (亦即，非巢狀) 交易。 OLE DB 樣板類別[CSession](../../data/oledb/csession-class.md)支援這些介面，而且在 Visual c + + 中實作交易支援的建議的方式。  
+ 提供者特定交易支援。 如果您使用的提供者支援交易，支援工作階段物件**itransaction::** 和**ITransactionLocal**可以輸入簡單 (亦即，非巢狀) 交易。 OLE DB 樣板類別[CSession](../../data/oledb/csession-class.md)支援這些介面，而且在 Visual c + + 中實作交易支援的建議的方式。  
   
 ## <a name="starting-and-ending-the-transaction"></a>開始和結束交易  
  您呼叫`StartTransaction`，**認可**，和**中止**消費者中的資料列集物件中的方法。  
@@ -64,5 +59,5 @@ A[交易](../../data/transactions-mfc-data-access.md)是群組，或批次，一
 ## <a name="distributed-transactions"></a>分散式異動  
  分散式的交易是更新分散式的資料; 交易也就是一個以上的網路的電腦系統上的資料。 如果您想要透過分散式系統支援交易，您應該使用.NET Framework，而不是 OLE DB 交易支援。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

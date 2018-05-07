@@ -1,12 +1,9 @@
 ---
-title: "Cbulkrowset:: Movelast |Microsoft 文件"
-ms.custom: 
+title: 'Cbulkrowset:: Movelast |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBulkRowset.MoveLast
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MoveLast method
 ms.assetid: c880f8b4-9ab6-49ee-8c2d-72d240782514
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c4b508d41f8e566c1355c3fc5d3d549116dea8c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2280fc6f0b53ede79d57bf7262da15e97b4b1bcc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbulkrowsetmovelast"></a>CBulkRowset::MoveLast
 移到最後一個資料列。  
@@ -52,5 +47,5 @@ HRESULT MoveLast() throw();
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CBulkRowset 類別](../../data/oledb/cbulkrowset-class.md)

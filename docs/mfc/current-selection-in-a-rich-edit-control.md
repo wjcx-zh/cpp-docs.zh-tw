@@ -2,12 +2,9 @@
 title: Rich Edit 控制項中的目前選取範圍 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5f0d9332d1118809ae3d62c187ec848ec95ffbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 782984bc53bc16f8dc89e4e705811fef24b8931e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Rich Edit 控制項中目前的選取範圍
 使用者可以選取 rich edit 控制項中的文字 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 使用滑鼠或鍵盤。 目前的選取範圍是選取的字元的範圍或選取的任何字元的插入點的位置。 應用程式可以取得目前的選取範圍的相關資訊，設定目前的選取項目，判斷當目前的選取範圍變更和顯示或隱藏選取項目反白顯示。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  您可以使用搜尋字串 rich edit 控制項中[FindText](../mfc/reference/cricheditctrl-class.md#findtext)成員函式[FINDTEXTEX](http://msdn.microsoft.com/library/windows/desktop/bb787909)結構搭配此函式指定要搜尋和要搜尋的字串的文字範圍。 您也可以指定這些選項做為搜尋是否區分大小寫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

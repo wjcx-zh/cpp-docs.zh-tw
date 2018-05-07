@@ -1,12 +1,9 @@
 ---
-title: "vector:: swap (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'vector:: swap (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::swap
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - swap member [STL/CLR]
 ms.assetid: 9ad083fe-f79b-4b97-8013-581fd00c059a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8036064fdcfa6563197128461a78401327f86fa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 085ecfa966cb852b44500cf72c16ad14f535f1a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorswap-stlclr"></a>vector::swap (STL/CLR)
 交換兩個容器的內容。  
@@ -95,7 +90,7 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector:: assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)   
  [vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)

@@ -1,12 +1,9 @@
 ---
-title: IErrorRecordsImpl::GetErrorGUID | Microsoft Docs
-ms.custom: 
+title: 'Ierrorrecordsimpl:: Geterrorguid |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetErrorGUID
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetErrorGUID method
 ms.assetid: 42c00755-50e5-401a-8246-adef9de5ced2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cc5d4f688e630279db9c3f4a8d8cddf2be04e186
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a17529b9132a322cf1610baa1463d921c313e118
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ierrorrecordsimplgeterrorguid"></a>IErrorRecordsImpl::GetErrorGUID
 從錯誤記錄中取得錯誤的 GUID。  
@@ -49,5 +44,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IErrorRecordsImpl 類別](../../data/oledb/ierrorrecordsimpl-class.md)

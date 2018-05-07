@@ -1,13 +1,10 @@
 ---
-title: "如何： 存取 system:: string 中的字元 |Microsoft 文件"
-ms.custom: 
+title: '如何： 存取 system:: string 中的字元 |Microsoft 文件'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9682492eedc915919758d42d5594560cb4a83a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>如何：存取 System::String 中的字元
 您可以存取的字元<xref:System.String>物件的未受管理的高效能呼叫函式採用`wchar_t*`字串。 這個方法會產生的第一個字元的內部指標<xref:System.String>物件。 此指標可以可直接操作或釘選並傳遞至函式必須要有一般`wchar_t`字串。  
   
 ## <a name="example"></a>範例  
- `PtrToStringChars`傳回<xref:System.Char>，這是內部指標 (也稱為`byref`)。 因此，它是受記憶體回收限制。 您不需要釘選此指標，除非您打算將它傳遞至原生函式。  
+ `PtrToStringChars` 傳回<xref:System.Char>，這是內部指標 (也稱為`byref`)。 因此，它是受記憶體回收限制。 您不需要釘選此指標，除非您打算將它傳遞至原生函式。  
   
  請考慮下列程式碼：  Pin 不需要因為`ppchar`內部指標，且如果記憶體回收行程會移動它所指向的字串，它也會更新`ppchar`。 不含[pin_ptr (C + + /CLI)](../windows/pin-ptr-cpp-cli.md)，程式碼將會運作，而且不具有可能造成的效能衝擊釘選。  
   
@@ -109,5 +104,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

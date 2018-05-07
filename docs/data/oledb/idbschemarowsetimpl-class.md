@@ -1,12 +1,9 @@
 ---
-title: "IDBSchemaRowsetImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IDBSchemaRowsetImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBSchemaRowsetImpl
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IDBSchemaRowsetImpl class
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2895aeebd49e38b157ab55912fcc4b7c52ba953e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dc9da29bcd49b227596325913d521347b6b0ca0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl 類別
 提供結構描述資料列集的實作。  
@@ -73,7 +68,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDBSchemaRowsetImpl 類別成員](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
  [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)   
  [支援結構描述資料列集](../../data/oledb/supporting-schema-rowsets.md)

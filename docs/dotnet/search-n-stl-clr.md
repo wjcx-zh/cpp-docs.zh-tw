@@ -1,12 +1,9 @@
 ---
-title: "search_n (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: search_n (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::search_n
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - search_n function [STL/CLR]
 ms.assetid: 34d9fd07-b160-4b1e-a632-303200740dfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5f7950a951a3d6821954e74ee91ea929b88a98b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ece98fe14ac9d94585ed24f846d676bfe8c2bd9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="searchn-stlclr"></a>search_n (STL/CLR)
 在範圍中搜尋包含指定項目數的第一個子序列，這些項目具有特定值或在二元述詞指定的意義上與該值關聯。  
@@ -50,5 +45,5 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

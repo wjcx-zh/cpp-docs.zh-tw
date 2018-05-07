@@ -1,12 +1,9 @@
 ---
-title: PROVIDER_COLUMN_ENTRY | Microsoft Docs
-ms.custom: 
+title: PROVIDER_COLUMN_ENTRY |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - PROVIDER_COLUMN_ENTRY
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - PROVIDER_COLUMN_ENTRY macro
 ms.assetid: 7921cfc1-aa9c-493e-8fc4-9d4294cafe72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 982f15ad5f04aead259adabb362d249354f3421f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 374e46d37e412c7b631e9f5d1361caeb77f2022c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providercolumnentry"></a>PROVIDER_COLUMN_ENTRY
 表示提供者支援的特定資料行。  
@@ -51,7 +46,7 @@ PROVIDER_COLUMN_ENTRY (name
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   

@@ -1,13 +1,10 @@
 ---
-title: "OLE 背景： 實作策略 |Microsoft 文件"
-ms.custom: 
+title: OLE 背景： 實作策略 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7325cb5cb7be4750507d8694ba8bc5efc3ce8606
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe15690b50c9398d660ca53effbec23cc35f49e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE 背景：實作策略
 視您的應用程式而定，實作新增 OLE 支援的可行策略有四種：  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  一旦您決定策略，您應該參閱[容器](../mfc/containers.md)或[伺服器](../mfc/servers.md)文章 （取決於您要撰寫的應用程式的類型），或檢查範例程式，或兩者。 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)和[HIERSVR](../visual-cpp-samples.md)示範如何分別實作容器和伺服器的各個層面。 在這些文件中的幾個部分中，將會請您參考這些範例中的某些函式，作為所討論的技術的範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE 背景](../mfc/ole-background.md)   
  [容器： 實作容器](../mfc/containers-implementing-a-container.md)   
  [伺服器： 實作伺服器](../mfc/servers-implementing-a-server.md)   

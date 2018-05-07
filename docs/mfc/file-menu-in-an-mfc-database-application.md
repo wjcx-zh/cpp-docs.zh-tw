@@ -1,30 +1,25 @@
 ---
-title: "MFC 資料庫應用程式檔案 功能表 |Microsoft 文件"
-ms.custom: 
+title: MFC 資料庫應用程式檔案 功能表 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f630f5a3fe1ee5833ac2796ff2acb1841af4c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71e669336e4a23f1a34e0bbd65bd8123e0df3335
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>MFC 資料庫應用程式中的檔案功能表
 如果您建立 MFC 資料庫應用程式，而不使用序列化，如何應該您解譯開啟、 關閉、 儲存，和將儲存為命令在 [檔案] 功能表上有此問題的樣式指南，這裡是一些建議：  
@@ -45,6 +40,6 @@ ms.lasthandoff: 12/21/2017
   
 -   由於資料庫應用程式通常不會儲存整份文件，您可能會想要移除 [儲存] 和 [另存新檔] 實作，除非您使用序列化文件來儲存設定檔資訊。 否則，您可能會實作 [儲存] 命令，例如「認可異動」。 請參閱[技術提示 22](../mfc/tn022-standard-commands-implementation.md)如需有關覆寫這些命令。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [序列化︰序列化和資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)
 

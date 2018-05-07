@@ -1,13 +1,10 @@
 ---
-title: "標準 Windows 訊息的處理常式 |Microsoft 文件"
-ms.custom: 
+title: 標準 Windows 訊息的處理常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - afx_msg
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91df3462297c2a45a8938d815cc3b6a3b8ca6edb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4ed4e022326d650b1012ad5244d8b18e9c789cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-standard-windows-messages"></a>標準 Windows 訊息的處理常式
 預設的標準 Windows 訊息處理常式 (**WM_**) 預先定義的類別中`CWnd`。 類別庫以訊息名稱作為這些處理常式的基礎。 例如，`WM_PAINT` 訊息的處理常式在 `CWnd` 宣告如下:  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- 依照慣例，這些處理常式名稱是以「On」前置詞開頭。 其中一些處理常式不接受引數，而其他則接受數個引數。 除了 `void`以外，有些也具有傳回類型。 所有的預設處理常式**WM_**訊息所述*MFC 參考*類別成員函式為`CWnd`名稱開頭為 「 On 」。 成員函式宣告中的`CWnd`前面會加上**afx_msg**。  
+ 依照慣例，這些處理常式名稱是以「On」前置詞開頭。 其中一些處理常式不接受引數，而其他則接受數個引數。 除了 `void`以外，有些也具有傳回類型。 所有的預設處理常式**WM_** 訊息所述*MFC 參考*類別成員函式為`CWnd`名稱開頭為 「 On 」。 成員函式宣告中的`CWnd`前面會加上**afx_msg**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告訊息處理函式](../mfc/declaring-message-handler-functions.md)

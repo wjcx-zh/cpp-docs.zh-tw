@@ -1,12 +1,9 @@
 ---
-title: "欄位狀態資料成員，在精靈產生的存取子中 |Microsoft 文件"
-ms.custom: 
+title: 欄位狀態資料成員，在精靈產生的存取子中 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 663b26d77138af60d13c3caf24960730a324131e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3f1017c3decacfee223f0e0f89267b192208fe7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
 當您使用 ATL OLE DB 消費者精靈 建立消費者時，精靈會在您指定資料行對應中每個欄位的使用者記錄類別中產生的資料成員。 每個資料成員的類型是`DWORD`並包含對應至其個別欄位的狀態值。  
@@ -129,5 +124,5 @@ while (product.MoveNext() == S_OK)
   
  當您使用`CDynamicAccessor`，長度和狀態會為您會自動繫結。 若要擷取的長度和狀態的值，請使用`GetLength`和**GetStatus**成員函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

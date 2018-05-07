@@ -1,12 +1,9 @@
 ---
-title: "CDataConnection 類別 |Microsoft 文件"
-ms.custom: 
+title: CDataConnection 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataConnection
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c8e405b95543d170a4e94e39626e9b9793791c7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 945fed5edd59da93aabb1d22e4830417fc4a2518
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdataconnection-class"></a>CDataConnection 類別
 管理與資料來源的連線。  
@@ -56,10 +51,10 @@ class CDataConnection
 |-|-|  
 |[運算子 BOOL](../../data/oledb/cdataconnection-operator-bool.md)|判斷目前的工作階段是否為開啟。|  
 |[operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|判斷目前的工作階段是否為開啟。|  
-|[operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|將參考傳回給包含`CDataSource`物件。|  
-|[operator CDataSource*](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|將指標傳回至包含的 `CDataSource` 物件。|  
-|[operator CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md)|將參考傳回給包含`CSession`物件。|  
-|[operator CSession*](../../data/oledb/cdataconnection-operator-csession-star.md)|將指標傳回至包含的 `CSession` 物件。|  
+|[CDataSource 運算子 （& s)](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|將參考傳回給包含`CDataSource`物件。|  
+|[運算子 CDataSource *](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|將指標傳回至包含的 `CDataSource` 物件。|  
+|[運算子 Csession& （& s)](../../data/oledb/cdataconnection-operator-csession-amp.md)|將參考傳回給包含`CSession`物件。|  
+|[運算子 CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|將指標傳回至包含的 `CSession` 物件。|  
   
 ## <a name="remarks"></a>備註  
  `CDataConnection` 是有用的類別來建立用戶端，因為它封裝所需的物件 （資料來源和工作階段） 和一些您需要連接到資料來源時執行  
@@ -74,6 +69,6 @@ class CDataConnection
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,13 +1,10 @@
 ---
-title: "文件檢視架構的簡介 |Microsoft 文件"
-ms.custom: 
+title: 文件檢視架構的簡介 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ceadc55945a31e4787287beb6943897784aeaad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文件/檢視架構的簡介
 在一般 MFC 應用程式中文件和檢視是成對的。 資料會儲存在文件中，不過檢視具有資料的存取權限。 將文件從檢視中分離，會將資料的儲存和維護從其顯示分隔開來。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [文件/檢視架構的替代方案](../mfc/alternatives-to-the-document-view-architecture.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文件/檢視架構](../mfc/document-view-architecture.md)
 

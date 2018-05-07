@@ -1,12 +1,9 @@
 ---
-title: "小於 (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 小於 (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::less
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - less function [STL/CLR]
 ms.assetid: fae56216-af66-4cb9-a688-be58a7c7edbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 77eb1c6f18d7e76d9483e9cff425dc60087ea393
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7f1aa80a8a4f05f398931c4c6f744ad43f824ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="less-stlclr"></a>less (STL/CLR)
 此範本類別描述函式，呼叫時，則傳回 true 只有當第一個引數小於第二個。 您可以使用它指定其引數類型方面的函式物件。  
@@ -132,5 +127,5 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [greater_equal (STL/CLR)](../dotnet/greater-equal-stl-clr.md)

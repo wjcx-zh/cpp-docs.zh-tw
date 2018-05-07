@@ -1,12 +1,9 @@
 ---
-title: "CBitmapButton 類別 |Microsoft 文件"
-ms.custom: 
+title: CBitmapButton 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 類別
 建立以點陣圖影像 (而非文字) 標記的按鈕控制項。  
@@ -61,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::SizeToContent](#sizetocontent)|調整大小以容納點陣圖按鈕。|  
   
 ## <a name="remarks"></a>備註  
- `CBitmapButton`物件包含最多四個點陣圖，其中包含影像代表不同狀態的按鈕可以假設： 最新 （或一般），向下 （或選取），已取得焦點，且停用。 只有第一個點陣圖是必要項;有些則是選擇性的。  
+ `CBitmapButton` 物件包含最多四個點陣圖，其中包含影像代表不同狀態的按鈕可以假設： 最新 （或一般），向下 （或選取），已取得焦點，且停用。 只有第一個點陣圖是必要項;有些則是選擇性的。  
   
  點陣圖按鈕映像包含映像，以及映像本身周圍的框線。 框線通常播放中顯示的按鈕狀態的組件。 例如，已取得焦點狀態的點陣圖通常就像是其中一個最新狀態，但從框線或邊界粗實線虛線的矩形內凹。 點陣圖的停用狀態通常類似於其中一個最新狀態，但有低對比 （例如呈現暗灰色或灰色功能表選取項目）。  
   
@@ -122,7 +117,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>需求  
  **標頭：** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
  關聯的物件 對話方塊中的按鈕`CBitmapButton`類別名稱，以載入 bitmap(s) 和調整大小以符合點陣圖按鈕。  
   
 ```  
@@ -147,7 +142,7 @@ BOOL AutoLoad(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  建立 `CBitmapButton` 物件。  
   
 ```  
@@ -160,7 +155,7 @@ CBitmapButton();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
  使用此函式，當您想要載入識別依資源名稱或身分證號碼，或您不能使用的點陣圖影像`AutoLoad`運作，因為比方說，您要建立不是對話方塊的一部分的點陣圖按鈕。  
   
 ```  
@@ -209,7 +204,7 @@ BOOL LoadBitmaps(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  呼叫此函式可調整大小的點陣圖的點陣圖按鈕。  
   
 ```  
@@ -219,7 +214,7 @@ void SizeToContent();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 CTRLTEST](../../visual-cpp-samples.md)   
  [CButton 類別](../../mfc/reference/cbutton-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

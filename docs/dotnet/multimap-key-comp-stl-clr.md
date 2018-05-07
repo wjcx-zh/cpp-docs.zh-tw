@@ -2,11 +2,8 @@
 title: 'multimap:: key_comp (STL/CLR) |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::key_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_comp member [STL/CLR]
 ms.assetid: 05250549-d589-4e1d-8ae9-321ff4ad384b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fc39cc3202c25fd0993831b46cc2961ef19f1826
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0118e17182c6d30d044177abee5d68af73bdd5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapkeycomp-stlclr"></a>multimap::key_comp (STL/CLR)
 將複製兩個索引鍵的順序委派。  
@@ -91,7 +86,7 @@ compare(L'b', L'a') = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)   
  [multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)

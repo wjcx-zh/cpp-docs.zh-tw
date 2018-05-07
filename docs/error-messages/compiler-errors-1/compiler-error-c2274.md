@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2274 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2274 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2274
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2274
 ms.assetid: 8e874903-f499-45ef-8291-f821eee4cc1c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5466e242591ba2f8f161af198ea3ec912933a857
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfd9bda3f3b0ab267ec008443dd865334e1b765e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2274"></a>編譯器錯誤 C2274
 'type': 當做的右邊不合法 '。 ' 運算子  

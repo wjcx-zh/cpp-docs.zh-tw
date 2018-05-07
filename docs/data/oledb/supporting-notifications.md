@@ -1,12 +1,9 @@
 ---
-title: "支援告知 |Microsoft 文件"
-ms.custom: 
+title: 支援告知 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7d22f7877e16946ba5cadf943f3ec4ffaf8fa800
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f750346b0fdd8821800b012b3cdff7acc12f7897
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-notifications"></a>支援告知
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>上的提供者和取用者實作連接點介面  
@@ -110,5 +105,5 @@ END_CONNECTION_POINT_MAP()
   
  大部分的通知的實作已內嵌於 OLE DB 提供者樣板。 如果您需要新增`IRowsetNotifyCP`至您的繼承鏈結，編譯器會移除所有的程式碼編譯資料流，而讓程式碼大小較小。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

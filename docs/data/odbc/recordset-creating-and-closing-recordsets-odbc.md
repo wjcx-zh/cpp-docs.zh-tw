@@ -1,13 +1,10 @@
 ---
-title: "資料錄集： 建立和關閉資料錄集 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 資料錄集： 建立和關閉資料錄集 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>資料錄集：建立和關閉資料錄集 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [何時以及如何關閉資料錄集物件](#_core_closing_a_recordset)。  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>在執行階段建立資料錄集  
+##  <a name="_core_creating_recordsets_at_run_time"></a> 在執行階段建立資料錄集  
  您可以在程式中建立資料錄集物件之前，您通常會撰寫應用程式特定資料錄集類別。 如需有關此開始步驟的詳細資訊，請參閱[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。  
   
  當您需要從資料來源選取記錄時，請開啟動態集或快照的物件。 要建立的物件類型取決於您需要在您的應用程式和 ODBC 驅動程式支援的資料。 如需詳細資訊，請參閱[動態](../../data/odbc/dynaset.md)和[快照](../../data/odbc/snapshot.md)。  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  您在開發期間使用的連接字串可能無法與最終使用者所需的連接字串相同。 如需在這方面將您的應用程式的一般化，請參閱[資料來源： 管理連接 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)。  
   
-##  <a name="_core_setting_recordset_options"></a>設定資料錄集選項  
+##  <a name="_core_setting_recordset_options"></a> 設定資料錄集選項  
  在建構資料錄集物件之後但在您呼叫之前**開啟**若要選取的記錄，您可能想要設定一些選項來控制資料錄集的行為。 所有的資料錄集，您可以：  
   
 -   指定[篩選](../../data/odbc/recordset-filtering-records-odbc.md)來限制資料錄選取。  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  若要影響資料錄選取，您必須設定這些選項之前您呼叫**開啟**成員函式。  
   
-##  <a name="_core_closing_a_recordset"></a>關閉資料錄集  
+##  <a name="_core_closing_a_recordset"></a> 關閉資料錄集  
  當您完成資料錄集時，您必須處置它，並取消配置其記憶體。  
   
 #### <a name="to-close-a-recordset"></a>若要關閉資料錄集  
@@ -118,7 +113,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
   
  **關閉**釋出資料錄集的**HSTMT**處理。 它不會終結 c + + 物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 捲動 (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)   
  [資料錄集：新增、更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

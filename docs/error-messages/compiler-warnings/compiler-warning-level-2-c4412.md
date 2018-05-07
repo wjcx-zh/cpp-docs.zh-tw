@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 （層級 2） C4412 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 （層級 2） C4412 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4412
@@ -15,26 +12,24 @@ dev_langs:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41ecffdd760374ce5b96039e81a467572f977bcd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3d186a237c7eb21cdcdc51a896d58d11bc19c5b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-2-c4412"></a>編譯器警告 (層級 2) C4412
 'function': 函式簽章含有類型 'type';C + + 物件是純程式碼之間傳遞的不安全與混合或原生。  
   
  **/Clr: pure** Visual Studio 2015 中的編譯器選項已被取代。 如果您必須是 「 單純的 」 的程式碼，我們建議您將其移植到 C#。  
   
- 編譯器偵測到可能不安全的情況，可能會導致執行階段錯誤： 從進行呼叫**/clr: pure**編譯模組匯入透過 dllimport 和函式簽章的函式包含不安全的類型. 如果它包含的成員函式，或具有不安全的類型或不安全的類型間接取值的資料成員，則不安全的類型。  
+ 編譯器偵測到可能不安全的情況，可能會導致執行階段錯誤： 從進行呼叫 **/clr: pure**編譯模組匯入透過 dllimport 和函式簽章的函式包含不安全的類型. 如果它包含的成員函式，或具有不安全的類型或不安全的類型間接取值的資料成員，則不安全的類型。  
   
- 這是不安全，因為在預設的呼叫慣例純粹的和原生程式碼之間的差異 （或混合的原生和 managed）。 當匯入 (透過`dllimport`) 函式匯入**/clr: pure**編譯時，請確定簽章中的每個型別的宣告都與匯出函式 （尤其要特別注意的編譯差異隱含呼叫慣例）。  
+ 這是不安全，因為在預設的呼叫慣例純粹的和原生程式碼之間的差異 （或混合的原生和 managed）。 當匯入 (透過`dllimport`) 函式匯入 **/clr: pure**編譯時，請確定簽章中的每個型別的宣告都與匯出函式 （尤其要特別注意的編譯差異隱含呼叫慣例）。  
   
  虛擬成員函式是特別容易產生非預期的結果。  不過，即使非虛擬函式應該測試，以確保您能取得正確的結果。 如果您不確定您要取得正確的結果，您可以忽略此警告。  
   
@@ -106,7 +101,7 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 ```  
   
 ## <a name="example"></a>範例  
- 預設呼叫慣例**/clr: pure**編譯為原生編譯而不同。  當 C4412.h 隨附`Test`預設為`__clrcall`。 如果您編譯並執行此程式 (請勿使用**/c**)，程式將會擲回例外狀況。  
+ 預設呼叫慣例 **/clr: pure**編譯為原生編譯而不同。  當 C4412.h 隨附`Test`預設為`__clrcall`。 如果您編譯並執行此程式 (請勿使用 **/c**)，程式將會擲回例外狀況。  
   
  下列範例會產生 C4412。  
   

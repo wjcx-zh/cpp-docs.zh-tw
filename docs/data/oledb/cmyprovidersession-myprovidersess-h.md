@@ -1,12 +1,9 @@
 ---
-title: "CMyProviderSession (MyProviderSess.H) |Microsoft 文件"
-ms.custom: 
+title: CMyProviderSession (MyProviderSess.H) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidersession
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - CMyProviderSession class in MyProviderSess.H
 - OLE DB providers, wizard-generated files
 ms.assetid: d37ad471-cf05-49c5-aa47-cd10824d777f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c244d77a0e299f4a09de985e11c7537a9fb7e5ff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5f5243edcbc6ad7781eb13caf6ec72021fd83506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H 包含宣告和實作的 OLE DB 工作階段物件。 資料來源物件建立的工作階段物件，並代表消費者和提供者之間的交談。 多個同時進行的工作階段可以有一個資料來源開啟。 繼承清單`CMyProviderSession`遵循：  
@@ -52,5 +47,5 @@ class ATL_NO_VTABLE CMyProviderSession :
   
  OLE DB 規格要求提供者實作**IDBSchemaRowset**介面支援三個結構描述資料列集類型： **DBSCHEMA_COLUMNS**， **DBSCHEMA_PROVIDER_TYPES**，和`DBSCHEMA_TABLES`。 精靈會產生每個結構描述資料列集的實作。 每個精靈所產生的類別包含`Execute`方法。 在這個`Execute`方法，您可以傳回資料給提供者所支援相關資料表、 資料行和資料類型。 這項資料通常是在編譯時期已知的。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [提供者精靈產生的檔案](../../data/oledb/provider-wizard-generated-files.md)

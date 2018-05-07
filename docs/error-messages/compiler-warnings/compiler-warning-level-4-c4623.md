@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 （層級 4） C4623 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 （層級 4） C4623 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4623
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4623
 ms.assetid: e630d8d0-f6ea-469c-a74f-07b027587225
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a47f0cc967011465286329461abc72eccb8c80
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61e776f38d1c17c52d06a58db3e90fdea73863c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4623"></a>編譯器警告 (層級 4) C4623
 '`derived class`'：預設建構函式已隱含定義為刪除，因為基底類別預設建構函式無法存取或已被刪除  

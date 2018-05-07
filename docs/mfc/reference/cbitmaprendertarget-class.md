@@ -1,12 +1,9 @@
 ---
-title: "CBitmapRenderTarget 類別 |Microsoft 文件"
-ms.custom: 
+title: CBitmapRenderTarget 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapRenderTarget
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f07e3783de7efe4e279a4f8d69563349cb72a362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd752ff649491ce23b537987ff9f4aebf7811255
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 類別
 ID2D1BitmapRenderTarget 包裝函式。  
@@ -87,7 +82,7 @@ class CBitmapRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>需求  
  **標頭：** afxrendertarget.h  
   
-##  <a name="attach"></a>CBitmapRenderTarget::Attach  
+##  <a name="attach"></a>  CBitmapRenderTarget::Attach  
  將現有的轉譯目標物件的介面  
   
 ```  
@@ -98,14 +93,14 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
  `pTarget`  
  現有的轉譯目標介面。 不能是 NULL  
   
-##  <a name="cbitmaprendertarget"></a>CBitmapRenderTarget::CBitmapRenderTarget  
+##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
  建構 CBitmapRenderTarget 物件。  
   
 ```  
 CBitmapRenderTarget();
 ```  
   
-##  <a name="detach"></a>CBitmapRenderTarget::Detach  
+##  <a name="detach"></a>  CBitmapRenderTarget::Detach  
  中斷連結物件中的呈現目標介面  
   
 ```  
@@ -115,7 +110,7 @@ ID2D1BitmapRenderTarget* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的指標會呈現目標的介面。  
   
-##  <a name="getbitmap"></a>CBitmapRenderTarget::GetBitmap  
+##  <a name="getbitmap"></a>  CBitmapRenderTarget::GetBitmap  
  擷取這個呈現目標的點陣圖。 傳回的點陣圖用於繪製作業。  
   
 ```  
@@ -129,7 +124,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
   
-##  <a name="getbitmaprendertarget"></a>CBitmapRenderTarget::GetBitmapRenderTarget  
+##  <a name="getbitmaprendertarget"></a>  CBitmapRenderTarget::GetBitmapRenderTarget  
  傳回 ID2D1BitmapRenderTarget 介面  
   
 ```  
@@ -139,14 +134,14 @@ ID2D1BitmapRenderTarget* GetBitmapRenderTarget();
 ### <a name="return-value"></a>傳回值  
  ID2D1BitmapRenderTarget 介面或如果尚未初始化物件為 NULL 指標。  
   
-##  <a name="m_pbitmaprendertarget"></a>CBitmapRenderTarget::m_pBitmapRenderTarget  
+##  <a name="m_pbitmaprendertarget"></a>  CBitmapRenderTarget::m_pBitmapRenderTarget  
  ID2D1BitmapRenderTarget 物件的指標。  
   
 ```  
 ID2D1BitmapRenderTarget* m_pBitmapRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1bitmaprendertarget_star"></a>CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
+##  <a name="operator_id2d1bitmaprendertarget_star"></a>  CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *  
  傳回 ID2D1BitmapRenderTarget 介面  
   
 ```  
@@ -156,5 +151,5 @@ operator ID2D1BitmapRenderTarget*();
 ### <a name="return-value"></a>傳回值  
  ID2D1BitmapRenderTarget 介面或如果尚未初始化物件為 NULL 指標。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

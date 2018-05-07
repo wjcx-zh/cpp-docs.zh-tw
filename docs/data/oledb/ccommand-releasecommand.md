@@ -1,12 +1,9 @@
 ---
-title: "Ccommand:: Releasecommand |Microsoft 文件"
-ms.custom: 
+title: 'Ccommand:: Releasecommand |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CCommand.ReleaseCommand
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - ReleaseCommand method
 ms.assetid: 3b58230c-13d5-45c5-b43e-bb013ecc3019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4fdfe9e901b81ee535522f42a54b91393df82af3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a12b3fc3d12e79e93bd77bf02b6f7bfa87dc0052
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandreleasecommand"></a>CCommand::ReleaseCommand
 釋放參數存取子，然後再釋放命令本身。  
@@ -46,6 +41,6 @@ void CCommandBase::ReleaseCommand() throw();
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CCommand 類別](../../data/oledb/ccommand-class.md)   
  [CCommand::Close](../../data/oledb/ccommand-close.md)

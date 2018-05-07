@@ -1,29 +1,24 @@
 ---
-title: "部署應用程式使用的可轉散發套件 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 部署應用程式使用的可轉散發套件 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3b048f896f0cfd532cb3000617756af2dca92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37bba00efdf0368973fa4ffbac1cbc6bb6298ce1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>逐步解說：使用 Visual C++ 可轉散發套件部署 Visual C++ 應用程式
 本文將逐步說明如何使用 Visual c + + 可轉散發套件部署 Visual c + + 應用程式。  
@@ -97,5 +92,5 @@ ms.lasthandoff: 12/21/2017
         > [!IMPORTANT]
         >  若要判斷所安裝的執行階段版本，安裝程式會檢查登錄金鑰 \HKLM\SOFTWARE\Microsoft\VisualStudio\11.0\VC\Runtimes\\[平台]。 如果目前已安裝的版本比安裝程式正在嘗試安裝的版本還要新，則安裝程式傳回成功，而不需要安裝較舊的版本，並且保留在已安裝的程式 頁面上，控制台中的其他項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署範例](../ide/deployment-examples.md)

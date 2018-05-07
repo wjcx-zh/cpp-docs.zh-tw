@@ -1,13 +1,10 @@
 ---
-title: "專案和方案檔 |Microsoft 文件"
-ms.custom: 
+title: 專案和方案檔 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.files.projectandsolution
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03797d266dc0f3104d6153b9d946d06ac963fafc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08cf1386ef177823c37bc285392309ec47f3c464
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-and-solution-files"></a>專案和方案檔
 當您在 Visual Studio 中建立專案時，會建立下列檔案。 它們可用來管理方案中的專案檔案。  
@@ -47,5 +42,5 @@ ms.lasthandoff: 12/21/2017
 |*Projname*.idl|*專案名稱*|原始程式檔|(特定專案) 包含控制項類型程式庫的介面描述語言 (IDL) 原始程式碼。 Visual C++ 會使用這個檔案來產生類型程式庫。 產生的程式庫會向其他自動化用戶端公開控制項的介面。 如需詳細資訊，請參閱[介面定義 (IDL) 檔](http://msdn.microsoft.com/library/windows/desktop/aa378712)Windows SDK 中。|  
 |Readme.txt|*專案名稱*|專案|*讀我檔案*檔案。 它是由應用程式精靈所產生，並說明專案中的檔案。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)

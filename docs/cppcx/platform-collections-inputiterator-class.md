@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::InputIterator 類別 |Microsoft 文件"
-ms.custom: 
+title: Platform::Collections::InputIterator 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: caf29e32fc4af5c6d1e3f65abbe250bb150679c0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7188cba0655e2ca89f82b60ffe9ee4b8ce94633a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator 類別
 衍生自 Windows 執行階段的集合提供標準樣板程式庫 InputIterator。  
@@ -92,7 +87,7 @@ explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
   
 
 
-## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator
+## <a name="operator-arrow"></a>  Inputiterator:: Operator-&gt;運算子
 擷取目前 InputIterator 指定的項目位址。  
   
 ### <a name="syntax"></a>語法  
@@ -106,7 +101,7 @@ pointer operator->() const;
   
 
 
-## <a name="operator-dereference"></a>  InputIterator::operator* Operator
+## <a name="operator-dereference"></a>  Inputiterator:: Operator * 運算子
 擷取目前 InputIterator 指定之項目的參考。  
   
 ### <a name="syntax"></a>語法  
@@ -120,7 +115,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  InputIterator::operator== Operator
+## <a name="operator-equality"></a>  Inputiterator:: Operator = = 運算子
 指出目前 InputIterator 是否等於指定的 InputIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -138,7 +133,7 @@ bool operator== (const InputIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>  InputIterator::operator++ Operator
+## <a name="operator-increment"></a>  Inputiterator:: Operator + + 運算子
 遞增目前 InputIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -158,7 +153,7 @@ InputIterator operator++(int);
   
 
 
-## <a name="operator-inequality"></a>  InputIterator::operator!= Operator
+## <a name="operator-inequality"></a>  Inputiterator:: Operator ！ = 運算子
 指出目前 InputIterator 是否不等於指定的 InputIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -175,5 +170,5 @@ bool operator!=(const InputIterator& other) const;
  如果目前 InputIterator 不等於 `true` 則為 `other`，否則為 `false`。   
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

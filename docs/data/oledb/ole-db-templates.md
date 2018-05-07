@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 樣板 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 樣板 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 037cb338db89e03b4e9457c5a0abc72c33c0ba57
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3133341b3dffa27cb5a6cec60ab58254fbe12dea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-templates"></a>OLE DB 樣板
 OLE DB 範本可讓 OLE DB 資料存取更為容易。 Visual c + + 提供的範本類別，其中實作許多常用的 OLE DB 介面。 您可以使用 Visual c + + 取用者範本撰寫 OLE DB 用戶端 （消費者） 應用程式，以及提供者範本撰寫應用程式伺服器 （提供者）。  

@@ -1,13 +1,10 @@
 ---
-title: "OLE 類別 |Microsoft 文件"
-ms.custom: 
+title: OLE 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927643d467433d1a88e9b38d6c050bcc758e64c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79fbf4ba0c176c495ca63a84bda04e0a4872c0c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-classes"></a>OLE 類別
 OLE 類別可與其他應用程式架構類別搭配使用，讓您輕鬆存取 ActiveX 應用程式開發介面，讓您的程式以最簡單的方法提供 ActiveX 功能給使用者。 您可以使用 ActiveX 來：  
@@ -63,6 +58,6 @@ OLE 類別可與其他應用程式架構類別搭配使用，讓您輕鬆存取 
   
  若要查看繼承的類別，請使用[類別階層架構圖表](../mfc/hierarchy-chart.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

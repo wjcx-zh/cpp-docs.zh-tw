@@ -1,12 +1,9 @@
 ---
-title: "BSCMAKE 錯誤 BK1513 |Microsoft 文件"
-ms.custom: 
+title: BSCMAKE 錯誤 BK1513 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - BK1513
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - BK1513
 ms.assetid: 9ba87c09-8d82-4c80-b0cf-a8de63dcf9da
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ec1e317dcd686a76efba8b8ea8e4782246a3a87
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93664a1224b85ec808805da0172aec408e875bc9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bscmake-error-bk1513"></a>BSCMAKE 錯誤 BK1513
 非累加式更新需要所有 .SBR 檔案  

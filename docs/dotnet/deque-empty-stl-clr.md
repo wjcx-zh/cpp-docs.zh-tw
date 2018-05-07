@@ -2,11 +2,8 @@
 title: 'deque:: empty (STL/CLR) |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::empty
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - empty member [STL/CLR]
 ms.assetid: 6ff3dd07-ebdf-47f9-b0d2-8a3229390d3b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3f9ceb0664ca8cd6081a3de6e1819c4ea4bf7e4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e951cbf8e6ba1599749bc5864a5e54bcd8ffccd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequeempty-stlclr"></a>deque::empty (STL/CLR)
 測試項目是否不存在。  
@@ -83,6 +78,6 @@ empty() = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)

@@ -1,13 +1,10 @@
 ---
-title: "剪貼簿： 何時使用每個剪貼簿機制 |Microsoft 文件"
-ms.custom: 
+title: 剪貼簿： 何時使用每個剪貼簿機制 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - formats [MFC], Clipboard for OLE
 - Clipboard [MFC], formats
 ms.assetid: fd071996-ef8c-488b-81bd-89057095a201
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e690f3467edd99584137642db8d9c24964ffeb06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2d7ab966eb0fcb5592f55a1b24f1558946dbd16
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>剪貼簿：何時使用每個剪貼簿機制
 請遵循這些指導方針中使用剪貼簿：  
@@ -45,6 +40,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [使用 Windows 剪貼簿機制](../mfc/clipboard-using-the-windows-clipboard.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [剪貼簿](../mfc/clipboard.md)
 

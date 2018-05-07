@@ -1,12 +1,9 @@
 ---
-title: "CCriticalSection 類別 |Microsoft 文件"
-ms.custom: 
+title: CCriticalSection 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16364843ca5d85181b84e56f56b43ca4856a1667
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d6e713f6d5238d99af8f9311eb05a4b2dd39f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection 類別
 代表 「 關鍵區段 」，讓一個執行緒存取資源或程式碼區段的一次同步處理物件。  
@@ -99,7 +94,7 @@ class CCriticalSection : public CSyncObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxmt.h  
   
-##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection  
  建構 `CCriticalSection` 物件。  
   
 ```  
@@ -114,7 +109,7 @@ CCriticalSection();
 ### <a name="example"></a>範例  
   請參閱範例的[CCriticalSection::Lock](#lock)。  
   
-##  <a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>  CCriticalSection::Lock  
  呼叫此成員函式，才能存取關鍵區段物件。  
   
 ```  
@@ -124,13 +119,13 @@ BOOL Lock(DWORD dwTimeout);
   
 ### <a name="parameters"></a>參數  
  `dwTimeout`  
- `Lock`會忽略此參數值。  
+ `Lock` 會忽略此參數值。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- `Lock`已封鎖的呼叫，直到收到信號關鍵區段物件將不會傳回 （可用）。  
+ `Lock` 已封鎖的呼叫，直到收到信號關鍵區段物件將不會傳回 （可用）。  
   
  如果已逾時的等待時間是必要的您可以使用[CMutex](../../mfc/reference/cmutex-class.md)物件而非`CCriticalSection`物件。  
   
@@ -141,14 +136,14 @@ BOOL Lock(DWORD dwTimeout);
   
  [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>  CCriticalSection::m_sect  
  包含可由所有的關鍵區段物件`CCriticalSection`方法。  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *  
  擷取**CRITICAL_SECTION**物件。  
   
 ```  
@@ -158,7 +153,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>備註  
  呼叫此函式可擷取到內部指標**CRITICAL_SECTION**物件。  
   
-##  <a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>  CCriticalSection::Unlock  
  版本`CCriticalSection`由另一個執行緒使用的物件。  
   
 ```  
@@ -174,7 +169,7 @@ BOOL Unlock();
 ### <a name="example"></a>範例  
   請參閱範例的[CCriticalSection::Lock](#lock)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CMutex 類別](../../mfc/reference/cmutex-class.md)

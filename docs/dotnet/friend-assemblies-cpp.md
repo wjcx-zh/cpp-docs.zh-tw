@@ -2,29 +2,24 @@
 title: Friend 組件 （c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6646306092844f11819b81ee076c54db840c618b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc39fa66a73f16f800f0c7f0e4bbc49730d4b9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="friend-assemblies-c"></a>Friend 組件 (C++)
 適用於執行階段，如*friend 組件*語言功能可讓位於命名空間範圍或全域範圍中的一個或多個用戶端組件或.netmodule 可以存取的組件元件的類型。  
@@ -102,7 +97,7 @@ Class1::Test_Public
   
  下一個程式碼範例會定義元件，但不指定具有元件中各類型之存取權的用戶端組件。  
   
- 請注意使用連結元件**/opt: noref**。 這可確保私用類型在元件的中繼資料中發出，當 `InternalsVisibleTo` 屬性存在時則不需要。 如需詳細資訊，請參閱[/editandcontinue （最佳化）](../build/reference/opt-optimizations.md)。  
+ 請注意使用連結元件 **/opt: noref**。 這可確保私用類型在元件的中繼資料中發出，當 `InternalsVisibleTo` 屬性存在時則不需要。 如需詳細資訊，請參閱[/editandcontinue （最佳化）](../build/reference/opt-optimizations.md)。  
   
 ```cpp  
 // friend_assemblies_3.cpp  
@@ -192,5 +187,5 @@ int main() {
 Class1::Test_Public  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

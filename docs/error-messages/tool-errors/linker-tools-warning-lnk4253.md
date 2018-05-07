@@ -1,12 +1,9 @@
 ---
-title: "連結器工具警告 LNK4253 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具警告 LNK4253 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4253
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d1142544852980b8bd1d543783a9ffdf3361879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae4e88e1fe1434cd638d5c31cc8fd4d5c02c4de
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4253"></a>連結器工具警告 LNK4253
 區段 'section1' 尚未合併到 'section2';已合併到 'section3'  
   
  連結器偵測到多個衝突的合併要求。 連結器將會忽略其中一個要求。  
   
- A **/合併**遇到選項或指示詞和`from`> 一節已合併入不同的區段，因為前一個**/合併**選項或指示詞 （或從隱含合併連結器）。  
+ A **/合併**遇到選項或指示詞和`from`> 一節已合併入不同的區段，因為前一個 **/合併**選項或指示詞 （或從隱含合併連結器）。  
   
  若要解決 LNK4253，移除其中一個合併要求。  
   
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱：  
   
--   [/MERGE （結合區段）](../../build/reference/merge-combine-sections.md)  
+-   [/MERGE (結合區段)](../../build/reference/merge-combine-sections.md)  
   
 -   [comment (C/C++)](../../preprocessor/comment-c-cpp.md)  
   

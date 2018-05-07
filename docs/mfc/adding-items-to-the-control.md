@@ -1,29 +1,24 @@
 ---
-title: "將項目加入至控制項 |Microsoft 文件"
-ms.custom: 
+title: 將項目加入至控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CListCtrl class [MFC], adding items
 ms.assetid: 715994bd-340d-4ad2-9882-411654137830
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d117aa06f82da1024d11af38cc4277916c6bca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eab0c7cb1aebf1675d078aa99941edfd9afdc5a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-items-to-the-control"></a>將項目加入至控制項
 若要將項目新增至清單控制項 ([CListCtrl](../mfc/reference/clistctrl-class.md))，呼叫的數個版本的其中一個[InsertItem](../mfc/reference/clistctrl-class.md#insertitem)成員函式，根據您擁有的資訊。 一個版本會採用[LV_ITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760)結構可讓您準備好。 因為 `LV_ITEM` 結構包含數個成員，所有您對於清單控制項項目的屬性擁有更大的控制權。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱[加入清單檢視項目和子項目的](http://msdn.microsoft.com/library/windows/desktop/bb774736)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

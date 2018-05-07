@@ -1,13 +1,10 @@
 ---
-title: "加入方法精靈 |Microsoft 文件"
-ms.custom: 
+title: 加入方法精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>加入方法精靈
 使用此精靈將方法加入至介面。 根據專案類型或介面類型，您會加入方法中，精靈會顯示不同的選項。  
   
 ## <a name="names"></a>名稱  
  **傳回類型**  
- 方法所傳回的資料型別。 `HRESULT`建議用於所有介面類型，因為它會提供標準的方式，來傳回錯誤。  
+ 方法所傳回的資料型別。 `HRESULT` 建議用於所有介面類型，因為它會提供標準的方式，來傳回錯誤。  
   
 |介面類型|描述|  
 |--------------------|-----------------|  
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
 |-------------------------|-----------------|--------------------------|  
 |**In**|指出參數呼叫程序從傳遞至呼叫的程序。|**在**只<br /><br /> **在**和**出**|  
 |**Out**|指出指標參數，會傳回從呼叫的程序呼叫的程序 （從伺服器到用戶端）。|**out**只<br /><br /> **在**和**出**<br /><br /> **out**和**retval**|  
-|**Retval**|指出參數接收成員的傳回值。|**retval**與出|  
+|**retval**|指出參數接收成員的傳回值。|**retval**與出|  
   
  **參數型別**  
  設定參數的資料類型。 從清單中選取類型。  
@@ -99,6 +94,6 @@ ms.lasthandoff: 12/21/2017
  **參數清單**  
  顯示所有參數及其修飾詞和目前方法中加入型別。 加入參數時，精靈會更新**參數清單**顯示每個參數的類型和修飾詞。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入方法](../ide/adding-a-method-visual-cpp.md)   
  [新增方法精靈、IDL 屬性](../ide/idl-attributes-add-method-wizard.md)

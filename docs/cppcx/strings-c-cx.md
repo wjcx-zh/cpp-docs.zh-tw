@@ -1,24 +1,19 @@
 ---
-title: "字串 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 字串 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e70f5fc5478d0950a7287da690822046621e517b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f5c5e4cfe13f72585a2566773c88724f3618784
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strings-ccx"></a>字串 (C++/CX)
 Windows 執行階段中的文字表示在 C + + /CX 的[platform:: string 類別](../cppcx/platform-string-class.md)。 使用`Platform::String Class`當您將字串傳遞來回 Windows 執行階段類別中的方法，或您與其他 Windows 執行階段元件互動跨應用程式二進位介面 (ABI) 界限時。 `Platform::String Class` 提供適用於幾個常見字串作業的方法，但它並不是針對完整功能的字串類別而設計的。 您可以在 C++ 模組中使用 Standard C++ 字串型别 (如 [wstring](../standard-library/basic-string-class.md) ) 進行任何重要的文字處理，然後將最終的結果轉換成 [Platform::String^](../cppcx/platform-string-class.md) ，再將其傳入或傳出公用介面。 `wstring` 或 `wchar_t*` 與 `Platform::String`之間可進行簡單而有效的轉換。  
@@ -79,5 +74,5 @@ void GetDecodedStrings(std::vector<std::wstring> strings)
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [內建型別](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f)

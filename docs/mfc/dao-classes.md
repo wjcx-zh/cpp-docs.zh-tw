@@ -1,13 +1,10 @@
 ---
-title: "DAO 類別 |Microsoft 文件"
-ms.custom: 
+title: DAO 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-classes"></a>DAO 類別
 這些類別會搭配其他應用程式架構類別讓您輕鬆存取資料存取物件 (DAO) 資料庫，使用相同的資料庫引擎與 Microsoft Visual Basic 和 Microsoft Access。 DAO 類別也可以存取各種不同的資料庫的開放式資料庫連接 (ODBC) 驅動程式可用。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="related-classes"></a>相關的類別  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- 封裝的控制代碼到儲存體二進位大型物件 (BLOB)，例如點陣圖。 `CLongBinary`物件可用來管理儲存在資料庫資料表的大型資料物件。  
+ 封裝的控制代碼到儲存體二進位大型物件 (BLOB)，例如點陣圖。 `CLongBinary` 物件可用來管理儲存在資料庫資料表的大型資料物件。  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
  OLE automation 類型包裝函式**貨幣**，定點算術類型，則有小數點前面的 15 位數之後, 有 4 位數。  
@@ -73,6 +68,6 @@ ms.lasthandoff: 12/21/2017
  [COleVariant](../mfc/reference/colevariant-class.md)  
  OLE automation 類型包裝函式**VARIANT**。 中的資料**VARIANT**s 可以許多種格式儲存。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

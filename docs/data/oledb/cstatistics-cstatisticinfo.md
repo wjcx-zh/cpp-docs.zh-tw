@@ -1,12 +1,9 @@
 ---
-title: "CStatistics、 CStatisticInfo |Microsoft 文件"
-ms.custom: 
+title: CStatistics、 CStatisticInfo |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CStatistics
@@ -28,18 +25,16 @@ helpviewer_keywords:
 - m_szTableName
 - CStatisticInfo parameter class
 ms.assetid: 5822231c-6963-44a6-ae2f-29aca76e1600
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d267bbedf1663f7dfc5f31cd102a45c121c77af8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9ad61624077eb1c02337fdd4737853522533a8a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatistics-cstatisticinfo"></a>CStatistics、CStatisticInfo
 呼叫 typedef 類別**CStatistics**來實作其參數類別**CStatisticInfo**。  
@@ -61,5 +56,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

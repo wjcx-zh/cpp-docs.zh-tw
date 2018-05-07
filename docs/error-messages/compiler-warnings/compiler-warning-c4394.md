@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 C4394 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 C4394 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4394
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4394
 ms.assetid: 5de94de0-17e3-4e7c-92f4-5c3c1b825120
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ab51a4f818e8eb8a94150424124a5c96ebaf241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05535621443770a2b414f1c4312efbc46e6be858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-c4394"></a>編譯器警告 C4394
 'function': per-appdomain 符號不可使用 __declspec （dllexport） 標示  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  您可以宣告 Managed 函式具有公用的存取範圍。 如需詳細資訊，請參閱[類型可視性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)和[成員可視性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility)。  
   
- C4394 永遠視為錯誤。  您可以關閉包含此警告`#pragma warning`或**/wd**; 請參閱[警告](../../preprocessor/warning.md)或[/w、 /W0、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd，/ /wo，我們 /Wv，/WX （警告等級）](../../build/reference/compiler-option-warning-level.md)如需詳細資訊。  
+ C4394 永遠視為錯誤。  您可以關閉包含此警告`#pragma warning`或 **/wd**; 請參閱[警告](../../preprocessor/warning.md)或[/w、 /W0、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd，/ /wo，我們 /Wv，/WX （警告等級）](../../build/reference/compiler-option-warning-level.md)如需詳細資訊。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C4394。  

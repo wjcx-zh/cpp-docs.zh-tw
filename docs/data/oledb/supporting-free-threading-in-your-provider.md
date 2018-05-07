@@ -1,12 +1,9 @@
 ---
-title: "支援在您的提供者中的無限制執行緒 |Microsoft 文件"
-ms.custom: 
+title: 支援在您的提供者中的無限制執行緒 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5cd5ce6b852b490334cbc8d49c6e967efffb3a6e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9c61aea0fec1f6d808a0a34ee74bd0ce2d399a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>在提供者內支援無限制執行緒
 所有 OLE DB 提供者類別是安全執行緒，並據以設定登錄項目。 它是效能的個不錯的主意支援無限制執行緒可協助您提供高層級，在多使用者情況下。 為了協助保持您的提供者具備執行緒安全，您必須確認您的程式碼會正確地封鎖。 每當您撰寫或儲存資料時，您必須封鎖與關鍵區段的存取權。  
@@ -55,5 +50,5 @@ HRESULT MyObject::MyMethod(void)
   
  您也必須檢查任何方法您覆寫 (例如`Execute`) 是安全執行緒。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

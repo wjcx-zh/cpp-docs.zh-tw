@@ -1,12 +1,9 @@
 ---
-title: "決定要使用之存取子類型 |Microsoft 文件"
-ms.custom: 
+title: 決定要使用之存取子類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 28173b18e1f2ab6e7c916679d5fa5a27c08caaeb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 89a55127b8f7e5e0e7d338a9e7ba4f85e8c568d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>決定使用哪一種存取子
 在編譯時期或執行階段，您可以判斷資料列集的資料類型。  
@@ -45,5 +40,5 @@ ms.lasthandoff: 02/23/2018
 |`CManualAccessor`|手動使用`AddBindEntry`。|使用手動`AddParameterEntry`。|速度非常快。參數和資料行繫結一次。 您決定要使用資料的類型。 (請參閱[DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)範例的範例。)需要更多的程式碼比`CDynamicAccessor`或`CAccessor`。 它則更像直接呼叫 OLE DB。|  
 |`CXMLAccessor`|自動的。|否。|擷取從資料存放區做為字串資料存取的資料，並將它格式化為 XML 標記的資料。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

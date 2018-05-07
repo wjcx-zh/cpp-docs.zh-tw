@@ -1,13 +1,10 @@
 ---
-title: "ActiveX 控制項容器： 使用非對話方塊容器中的控制項 |Microsoft 文件"
-ms.custom: 
+title: ActiveX 控制項容器： 使用非對話方塊容器中的控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c380d0a525c2f026054ebae1812450c4d4634c1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16264e9b072d27349d4375bd7c04d5bbac1be597
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 控制項容器：在非對話方塊容器中使用控制項
 在某些應用程式 (例如 SDI 或 MDI 應用程式) 中，您會想要在應用程式的視窗中內嵌控制項。 **建立**包裝函式類別，插入 Visual c + + 中，成員函式可以動態建立控制項的執行個體，而不需要對話方塊。  
@@ -74,6 +69,6 @@ ms.lasthandoff: 12/21/2017
   
 5.  重建專案。 每當應用程式檢視建立時，Circ 控制項就會動態建立。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ActiveX 控制項容器](../mfc/activex-control-containers.md)
 

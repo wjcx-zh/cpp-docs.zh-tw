@@ -2,12 +2,9 @@
 title: MFC 使用的回呼函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回呼函式
 三個回呼函式會出現在 Mfc 程式庫。 這些回呼函式會傳遞至[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，和[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 請注意，所有的回呼函式必須再傳回給 Windows，，因為無法跨回呼界限擲回例外狀況設陷 MFC 例外狀況。 如需例外狀況的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h 
 
-## <a name="enum_objects"></a>Cdc:: enumobjects 的回呼函式
+## <a name="enum_objects"></a> Cdc:: enumobjects 的回呼函式
 *ObjectFunc*名稱是應用程式提供的函式名稱的預留位置。  
   
 ### <a name="syntax"></a>語法  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>備註  
  必須輸出實際的名稱。  
   
-## <a name="graystring"></a>Cdc:: graystring 的回呼函式
+## <a name="graystring"></a>  Cdc:: graystring 的回呼函式
 *OutputFunc*是應用程式所提供的回呼函式名稱的預留位置。  
   
 ### <a name="syntax"></a>語法  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>備註  
  回呼函式 (*OutputFunc*) 必須繪製影像的相對座標為 (0，0) 而非 (*x*， *y*)。  
 
-## <a name="setabortproc"></a>Cdc:: setabortproc 的回呼函式
+## <a name="setabortproc"></a>  Cdc:: setabortproc 的回呼函式
 名稱*AbortFunc*是應用程式提供的函式名稱的預留位置。  
   
 ### <a name="syntax"></a>語法  
@@ -119,6 +114,6 @@ BOOL CALLBACK EXPORT AbortFunc(
  中的 < 備註 > 一節所述，必須匯出的實際名稱[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。  
  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](structures-styles-callbacks-and-message-maps.md) [cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects) [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc) [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)
 

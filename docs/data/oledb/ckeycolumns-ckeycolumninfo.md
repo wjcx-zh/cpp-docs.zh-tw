@@ -1,12 +1,9 @@
 ---
-title: CKeyColumns, CKeyColumnInfo | Microsoft Docs
-ms.custom: 
+title: CKeyColumns、 CKeyColumnInfo |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szTableSchema
@@ -53,18 +50,16 @@ helpviewer_keywords:
 - COLUMN_GUID
 - m_guidColumn
 ms.assetid: 40525a4f-a9cf-4e9f-886d-8a6ddd18a3d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab29aa12a38058611af3b593393e908cdc9a4ea5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 039af3414714b39b4ac1e26dbdb7557e4796a68f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ckeycolumns-ckeycolumninfo"></a>CKeyColumns、CKeyColumnInfo
 呼叫 typedef 類別**CKeyColumns**來實作其參數類別**CKeyColumnInfo**。  
@@ -92,5 +87,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

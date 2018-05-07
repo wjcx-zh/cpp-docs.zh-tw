@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3194 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3194 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3194
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3194
 ms.assetid: 49d3ffc6-eff6-4b46-865b-18811692a8bb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bb89c346d1e60d3575798c9cd7e35700328bea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd6fad304dc4e400d6ca25c7e835b2d0a6935117
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3194"></a>編譯器錯誤 C3194
 'member': 實值類型不能有指派運算子  

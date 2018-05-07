@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2951 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2951 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2951
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2951
 ms.assetid: c6f95aa2-c894-425b-a51c-d40d70c8daa1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6d5f3b7ab97b799a23c124505d8930774918aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0883b0942fdfbe3d55a540fbed35a0affc73be5b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2951"></a>編譯器錯誤 C2951
 型別宣告只允許在全域命名空間，或類別範圍  

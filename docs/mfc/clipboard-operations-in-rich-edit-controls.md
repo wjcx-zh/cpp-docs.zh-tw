@@ -1,13 +1,10 @@
 ---
-title: "剪貼簿流作業中 Rich Edit 控制項 |Microsoft 文件"
-ms.custom: 
+title: 剪貼簿流作業中 Rich Edit 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - Clipboard, operations in CRichEditCtrl
 - rich edit controls [MFC], Clipboard operations
 ms.assetid: 15ce66bc-2636-4a35-a2ae-d52285dc1af6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec468b1f763e2f855f25fd8808d83605fb10673a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e831a76a491d1025ae45117d40362a85523742da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Rich Edit 控制項中的剪貼簿流作業
 您的應用程式可以將剪貼簿內容貼至 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 使用最適合使用剪貼簿格式或特定的剪貼簿格式。 您也可以判斷 Rich Edit 控制項是否可以貼上剪貼簿格式。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  Rich Edit 控制項會註冊兩種剪貼簿格式：RTF 格式和所呼叫 RichEdit 文字和物件的格式。 應用程式可以使用註冊這些格式[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式並指定**CF_RTF**和**CF_RETEXTOBJ**值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

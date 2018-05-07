@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3662 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3662 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3662
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3662
 ms.assetid: 61bd3e41-a86b-42c0-be89-d992d3906ff1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c056d8ff06a44623f362c2f9542af7f7d389b65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f9e5f9c48b9884939c6236075b3cf2227163ab8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3662"></a>編譯器錯誤 C3662
 'member'：只允許在 Managed 或 WinRT 類別的成員函式上覆寫規範 'specifier'  

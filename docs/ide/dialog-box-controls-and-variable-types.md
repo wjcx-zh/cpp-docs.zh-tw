@@ -1,13 +1,10 @@
 ---
-title: "對話方塊控制項和變數類型 |Microsoft 文件"
-ms.custom: 
+title: 對話方塊控制項和變數類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: f9cd9cea-45a6-4349-8358-e5efbcdcff76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744b9da2db456a72ed386806d8a4aa34c5942f69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2fbae37072f50898181334a9059a7dc9c6a83a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-controls-and-variable-types"></a>對話方塊控制項和變數類型
 您可以使用[加入成員變數精靈](../ide/add-member-variable-wizard.md)將成員變數新增至使用 MFC 所建立的對話方塊控制項。 加入成員變數的控制項類型決定出現在對話方塊中的選項。  
@@ -53,5 +48,5 @@ ms.lasthandoff: 12/21/2017
 |索引標籤控制項|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|無。只有控制項|N/A|  
 |樹狀控制項|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|無。只有控制項|N/A|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)

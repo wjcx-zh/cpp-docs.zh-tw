@@ -1,13 +1,10 @@
 ---
-title: "指定自訂建置工具 |Microsoft 文件"
-ms.custom: 
+title: 指定自訂建置工具 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>指定自訂建置工具
 
@@ -65,7 +61,7 @@ A*自訂建置工具*提供建置系統必須建立特定的輸入的檔的資�
 
       可以使用 MSBuild 巨集以透過符號指定多個輸入和輸出檔案。 如需如何指定檔的位置或檔案集的名稱資訊，請參閱[建置命令和屬性的一般巨集](../ide/common-macros-for-build-commands-and-properties.md)。
 
-      因為 '%' 字元保留 MSBuild，如果您指定的環境變數取代每個 **%** 逸出字元與**%25**十六進位逸出序列。 例如，取代**%WINDIR%**與**%25WINDIR %25**。 MSBuild 會取代每個**%25**順序與 **%** 字元之前存取環境變數。
+      因為 '%' 字元保留 MSBuild，如果您指定的環境變數取代每個**%** 逸出字元與 **%25**十六進位逸出序列。 例如，取代 **%WINDIR%** 與 **%25WINDIR %25**。 MSBuild 會取代每個 **%25**順序與**%** 字元之前存取環境變數。
 
    - 在**描述**，輸入此自訂建置工具的描述性訊息。 若要列印訊息**輸出**視窗時，建置系統以處理這項工具。
 

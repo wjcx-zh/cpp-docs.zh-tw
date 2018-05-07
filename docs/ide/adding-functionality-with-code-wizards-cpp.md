@@ -1,13 +1,10 @@
 ---
-title: "使用程式碼精靈 （c + +） 加入功能 |Microsoft 文件"
-ms.custom: 
+title: 使用程式碼精靈 （c + +） 加入功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c27aeb10a58c828b6503ce96ddaadf138c258f27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>使用程式碼精靈 （c + +） 加入功能
 當您建立專案之後時，您會想要變更或加入至該專案的功能。 這類工作包含建立新的類別，加入新的成員函式和變數，並加入 Automation 方法與屬性。 程式碼精靈被為了讓您執行所有這些作業。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
     |底下提供說明，包括方案總管|可從 [方案總管] 中的程式碼精靈取決於您將游標焦點所在的項目上按一下滑鼠右鍵。 如果**新增**選項不會顯示，當您以滑鼠右鍵按一下項目，將游標向上一層開發樹狀結構，並再試一次。 程式碼精靈會一律將額外的程式碼中的適當位置中開發樹狀目錄中，不論游標所在位置。 從 [方案總管] 中可用的程式碼精靈包含：<br /><br /> 加入類別 (開啟**加入類別**對話方塊包含新的程式碼精靈)。<br />新增資源 (新增、 匯入或自訂)。<br />新增 Web 參考。|  
     |類別檢視|類別檢視中可用的程式碼精靈取決於您將游標焦點所在時您以滑鼠右鍵按一下項目。 如果**新增**選項不會顯示，當您以滑鼠右鍵按一下項目，然後將游標向上一層中類別樹狀目錄，然後再試一次。 程式碼精靈會一律將額外的程式碼中的適當位置中開發樹狀目錄中，不論游標所在位置。 從 類別檢視可用的程式碼精靈包含：<br /><br /> -   [加入成員函式](../ide/adding-a-member-function-visual-cpp.md)。<br />-   [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)。<br />-   [將類別加入](../ide/adding-a-class-visual-cpp.md)。<br />-   [實作介面](../ide/implement-interface-wizard.md)（從僅限控制項類別）<br />-   [加入連接點](../ide/implement-connection-point-wizard.md)（僅限 ATL 類別）<br />-   [將方法加入](../ide/add-method-wizard.md)（從僅限介面）<br />-   [將屬性加入](../ide/names-add-property-wizard.md)（從僅限介面）<br />-   [加入事件](../ide/add-event-wizard.md)（從僅限控制項類別）<br /><br /> 選取 加入類別開啟**加入類別**對話方塊中，所有新的加入類別程式碼精靈可讓您存取。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [巡覽類別結構](../ide/navigating-the-class-structure-visual-cpp.md)   
  [使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)   

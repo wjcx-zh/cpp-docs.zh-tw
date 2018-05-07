@@ -1,13 +1,10 @@
 ---
-title: "MFC 網際網路程式設計基本概念 |Microsoft 文件"
-ms.custom: 
+title: MFC 網際網路程式設計基本概念 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c03cdca832dcf0627ad033082085661c3b26847
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 網際網路程式設計基本概念
 Microsoft 提供許多應用程式開發介面撰寫用戶端和伺服器應用程式。 許多新的應用程式正在寫入的網際網路功能，並做為技術、 瀏覽器能力和安全性選項會變更，將寫入新類型的應用程式。 用戶端電腦，提供對 World Wide Web 存取，並顯示包含文字、 圖形、 ActiveX 控制項和文件的 HTML 網頁瀏覽器執行。 伺服器提供 FTP、 HTTP 和 gopher 服務，並執行使用 CGI 的伺服器延伸應用程式。 自訂應用程式可以擷取資訊，並提供在網際網路上的資料。  
@@ -82,17 +77,17 @@ Microsoft 提供許多應用程式開發介面撰寫用戶端和伺服器應用�
   
 -   [DHTML 控制項的 ATL 支援](../atl/atl-support-for-dhtml-controls.md)  
   
-##  <a name="_core_web_sites_for_more_information"></a>如需詳細資訊的網站  
+##  <a name="_core_web_sites_for_more_information"></a> 如需詳細資訊的網站  
  如需 Microsoft 網際網路技術的詳細資訊，請參閱[Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322)網站。 （連結可能會變更恕不另行通知。）  
   
  開發人員針對此網站包含有關使用 Microsoft 開發工具和技術，以及有關最近和即將發行所做的心得頭條新聞。 從這個頁面上，您可以跳到許多相關的開發人員網站，包括.NET 和 XML 開發人員中心。 您也可以下載 beta Sdk 和範例。  
   
  [World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125)發行 HTML、 HTTP、 CGI，和其他全球資訊網的技術規格。  
   
-##  <a name="_core_more_internet_help"></a>更多協助以網際網路  
+##  <a name="_core_more_internet_help"></a> 更多協助以網際網路  
  Windows sdk 的 OLE 部分包含 OLE 程式設計的其他資訊。 這項資訊提供直接管理，而不是透過 MFC 類別使用的 Win32 WinInet 函式詳細資料。 它也會包含網際網路技術的概觀資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 
 
 

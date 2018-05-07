@@ -1,12 +1,9 @@
 ---
-title: "ptr::Detach |Microsoft 文件"
-ms.custom: 
+title: ptr::Detach |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 放棄擁有權的 COM 物件，傳回物件的指標。  
@@ -49,7 +44,7 @@ _interface_type * Detach();
  就內部而言，`QueryInterface`上擁有的 COM 物件和任何錯誤呼叫`HRESULT`轉換成例外狀況由<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
   
 ## <a name="remarks"></a>備註  
- `Detach`第一次將參考加入 COM 物件，代表呼叫者，並釋放所擁有的所有參考`com::ptr`。  呼叫端必須最終發行終結它傳回的物件。  
+ `Detach` 第一次將參考加入 COM 物件，代表呼叫者，並釋放所擁有的所有參考`com::ptr`。  呼叫端必須最終發行終結它傳回的物件。  
   
 ## <a name="example"></a>範例  
  這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `DetachDocument`成員函式呼叫`Detach`來放棄 COM 物件的擁有權，並將指標傳回給呼叫者。  
@@ -138,7 +133,7 @@ int main() {
   
  **命名空間**msclr::com  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::Release](../dotnet/ptr-release.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)

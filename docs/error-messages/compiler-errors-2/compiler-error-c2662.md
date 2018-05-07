@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2662 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2662 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2662
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4370754983b71e842b172eade8da6058a8d1dbc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4e5f40fcc93739cabd2d5bd73bac6cce2332323
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2662"></a>編譯器錯誤 C2662
 'function': 無法將轉換 'this' 指標從 'type1' 到 'type2'  
@@ -54,7 +49,7 @@ int main() {
 }  
 ```  
   
- 編譯時**/clr**，您無法呼叫的函式上`const`或`volatile`限定 managed 型別。 您無法宣告 managed 類別的常數成員函式，因此您無法 const 受管理物件上呼叫方法。  
+ 編譯時 **/clr**，您無法呼叫的函式上`const`或`volatile`限定 managed 型別。 您無法宣告 managed 類別的常數成員函式，因此您無法 const 受管理物件上呼叫方法。  
   
 ```  
 // C2662_b.cpp  

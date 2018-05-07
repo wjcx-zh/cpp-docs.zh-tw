@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 使用內建屬性頁 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 使用內建屬性頁 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CLSID_CPicturePropPage
 - CLSID_CColorPropPage
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed2d8cd6c852a15c4190c16c049e29577b754ce7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控制項：使用內建屬性頁
 這篇文章討論可用的 ActiveX 控制項，以及如何使用這些內建屬性頁。  
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 > [!TIP]
 >  如果看不到內建屬性頁 （請參閱如上一個附註），從命令列的完整路徑名稱，執行 RegSvr32.exe，dll 註冊 DLL。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控制項：新增內建屬性](../mfc/mfc-activex-controls-adding-stock-properties.md)
 

@@ -1,12 +1,9 @@
 ---
-title: BEGIN_ACCESSOR_MAP | Microsoft Docs
-ms.custom: 
+title: BEGIN_ACCESSOR_MAP |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BEGIN_ACCESSOR_MAP
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BEGIN_ACCESSOR_MAP macro
 ms.assetid: e6d6e3a4-62fa-4e49-8c53-caf8c9d20091
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0fd9684d3ab428ffa2e874f781208812d1ad12fc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1e03e4aed105a488d646921fd458496d8d5a950f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginaccessormap"></a>BEGIN_ACCESSOR_MAP
 標記存取子對應項目的開頭。  
@@ -98,7 +93,7 @@ END_ACCESSOR_MAP()
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [END_ACCESSOR](../../data/oledb/end-accessor.md)   

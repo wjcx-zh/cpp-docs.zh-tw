@@ -1,13 +1,10 @@
 ---
-title: "記憶體管理： 範例 |Microsoft 文件"
-ms.custom: 
+title: 記憶體管理： 範例 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc937e64a09ecedb127524de384d48860da5764f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-examples"></a>記憶體管理：範例
 本文說明 MFC 如何執行框架配置和堆積配置每個記憶體配置一般的三種：  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [物件](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a>配置的位元組陣列  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> 配置的位元組陣列  
   
 #### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>配置框架上的位元組陣列  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a>一種資料結構的配置  
+##  <a name="_core_allocation_of_a_data_structure"></a> 一種資料結構的配置  
   
 #### <a name="to-allocate-a-data-structure-on-the-frame"></a>配置框架上的資料結構  
   
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a>物件的配置  
+##  <a name="_core_allocation_of_an_object"></a> 物件的配置  
   
 #### <a name="to-allocate-an-object-on-the-frame"></a>配置框架上的物件  
   
@@ -111,6 +106,6 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體管理：堆積配置](../mfc/memory-management-heap-allocation.md)
 

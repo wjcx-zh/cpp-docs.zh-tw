@@ -1,30 +1,25 @@
 ---
-title: "將類別加入來自 ActiveX 控制項 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 將類別加入來自 ActiveX 控制項 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX controls [C++], adding classes
 - classes [C++], creating
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f059396c91ddb51247347d10e6c8f79a6c95522f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 793adf38da33808371a0df71f671c3e29da75326
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>自 ActiveX 控制項加入類別 (Visual C++)
 使用此精靈建立的 MFC 類別與可用的 ActiveX 控制項的介面。 您可以加入至 MFC 類別[MFC 應用程式](../mfc/reference/creating-an-mfc-application.md)、 [MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)，或[MFC ActiveX 控制項](../mfc/reference/creating-an-mfc-activex-control.md)。  
@@ -48,6 +43,6 @@ ms.lasthandoff: 12/21/2017
   
  精靈會建立 MFC 類別，衍生自[CWnd](../mfc/reference/cwnd-class.md)或從[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)，為您從選取的 ActiveX 控制項加入每個介面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [COM 和 ATL 簡介](../atl/introduction-to-com-and-atl.md)

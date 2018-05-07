@@ -1,13 +1,10 @@
 ---
-title: "匯出 DLL 函式進入點 |Microsoft 文件"
-ms.custom: 
+title: 匯出 DLL 函式進入點 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28ded528d584e98b704b5f2d8e6e0a379a6a11a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exported-dll-function-entry-points"></a>匯出的 DLL 函式進入點
 DLL 的匯出函式，使用[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)巨集來維護適當的全域狀態時從 DLL 模組切換到呼叫應用程式的 DLL。  
@@ -44,6 +39,6 @@ DLL 的匯出函式，使用[AFX_MANAGE_STATE](reference/extension-dll-macros.md
   
  `AFX_MANAGE_STATE` 不需要將每個函式放在 DLL 中。 例如，`InitInstance` 可以由應用程式中的 MFC 程式碼呼叫，而不需使用 `AFX_MANAGE_STATE`，因為 MFC 會在 `InitInstance` 之前將模組狀態自動位移，然後在 `InitInstance` 傳回之後再將其切換回來。 相同的情況也適用於所有訊息對應處理常式。 MFC 的標準 Dll 實際上具有特殊的主視窗程序，會自動切換模組狀態，再傳送訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)
 

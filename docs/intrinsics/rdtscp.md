@@ -1,12 +1,9 @@
 ---
-title: __rdtscp | Microsoft Docs
-ms.custom: 
+title: __rdtscp |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __rdtscp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea7e8089f0678b89976a4c1e58ab6f3a364ac695
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0d890afe9e19782f19442e8d95709b91a8680278
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rdtscp"></a>__rdtscp
 **Microsoft 特定的**  
@@ -90,6 +85,6 @@ TSC_AUX was 0
 **結束 Microsoft 特定的**  
  進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [__rdtsc](../intrinsics/rdtsc.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

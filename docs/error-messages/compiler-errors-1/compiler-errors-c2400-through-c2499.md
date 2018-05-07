@@ -1,16 +1,12 @@
 ---
-title: "編譯器錯誤 C2400 到 C2499 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2400 到 C2499 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>編譯器錯誤 C2400 到 C2499
 
@@ -88,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 |[編譯器錯誤 C2426](compiler-error-c2426.md)|'*語彙基元*': 不合法的運算子'*內容*'|
 |[編譯器錯誤 C2427](compiler-error-c2427.md)|'*類別*': 無法在此範圍中定義類別|
 |[編譯器錯誤 C2428](compiler-error-c2428.md)|'*作業*': 不允許在類型 'bool' 的運算元上|
-|編譯器錯誤 C2429|*內容*'*內容*'需要編譯器旗標'*選項*'|
+|[編譯器錯誤 C2429](compiler-error-c2429.md)|'*語言功能*'需要編譯器旗標'*編譯器選項*'|
 |[編譯器錯誤 C2430](compiler-error-c2430.md)|中的多個索引暫存器 '*內容*'|
 |[編譯器錯誤 C2431](compiler-error-c2431.md)|中不合法的索引暫存器 '*內容*'|
 |[編譯器錯誤 C2432](compiler-error-c2432.md)|16 位元資料中的參考不合法的 '*內容*'|
@@ -149,7 +142,7 @@ ms.lasthandoff: 12/21/2017
 |[編譯器錯誤 C2491](compiler-error-c2491.md)|'*識別碼*': dllimport 定義*函式*不允許|
 |[編譯器錯誤 C2492](compiler-error-c2492.md)|'*變數*': 具有執行緒儲存期的資料可能不會有 dll 介面|
 |[編譯器錯誤 C2493](compiler-error-c2493.md)|不合法的 __based 形式|
-|[編譯器錯誤 C2494](compiler-error-c2494.md)|'*關鍵字*' 不能從篩選條件運算式內呼叫或 &#95; &#95; 最後/finally 區塊|
+|[編譯器錯誤 C2494](compiler-error-c2494.md)|'*關鍵字*' 不能從篩選條件運算式內呼叫或&#95;&#95;最後/finally 區塊|
 |[編譯器錯誤 C2495](compiler-error-c2495.md)|'*識別碼*': '__declspec(noexcept)' 只能套用至函式宣告或定義|
 |[編譯器錯誤 C2496](compiler-error-c2496.md)|'*識別碼*': 'selectany' 只能套用至具有外部連結的資料項目|
 |編譯器錯誤 C2497|'*識別碼*': 'implementation_key' 只能套用至函式宣告|

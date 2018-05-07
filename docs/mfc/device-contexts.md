@@ -1,13 +1,10 @@
 ---
-title: "裝置內容 |Microsoft 文件"
-ms.custom: 
+title: 裝置內容 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d4a0e32a8b24a72447cf4227be128659316c0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45a2f99001d45de71ca3ea8a525152d53d67ee64
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="device-contexts"></a>裝置內容
 裝置內容會包含顯示或印表機等裝置的繪圖屬性相關資訊的 Windows 資料結構。 所有的繪製呼叫是透過裝置內容物件，此物件會封裝 Windows Api 來繪製線條、 圖形和文字。 裝置內容允許 Windows 中的裝置獨立繪圖。 裝置內容可以用來繪製到螢幕、 印表機或中繼檔。  
@@ -85,6 +80,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [座標空間和轉換](http://msdn.microsoft.com/library/windows/desktop/dd183475)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [視窗物件](../mfc/window-objects.md)
 

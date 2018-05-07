@@ -1,12 +1,9 @@
 ---
-title: "IRowsetImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IRowsetImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetImpl
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetImpl class
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 524f796b3ba864fe4e1d63c04b1b90fada314965
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0ca6d35eeea1dbfae4f2a5bb1b2ee93553e53519
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 類別
 提供 `IRowset` 介面的實作。  
@@ -90,6 +85,6 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,12 +1,9 @@
 ---
-title: "ptr::operator bool |Microsoft 文件"
-ms.custom: 
+title: ptr::operator bool |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr::operator bool
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::operator bool
 ms.assetid: 31123377-6ecd-4cef-9b75-3db3996fbcd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5aaec44d5b8f2e8b43a94fa5d0e8b4250ac7bf49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 263810b4fbd369445c2ead55277381bc81b092d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptroperator-bool"></a>ptr::operator bool
 使用運算子`com::ptr`條件運算式中。  
@@ -42,7 +37,7 @@ operator bool();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果擁有的 COM 物件有效，`false`否則。  
+ `true` 如果擁有的 COM 物件有效，`false`否則。  
   
 ## <a name="remarks"></a>備註  
  自有的 COM 物件時如果不是有效`nullptr`。  
@@ -106,6 +101,6 @@ DOM Document created.
   
  **命名空間**msclr::com  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::operator!](../dotnet/ptr-operator-logical-not.md)

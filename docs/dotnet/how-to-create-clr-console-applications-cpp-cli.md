@@ -1,31 +1,26 @@
 ---
-title: "如何： 建立 CLR 主控台應用程式 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 如何： 建立 CLR 主控台應用程式 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ccb46ca7cd9cb7e1999a0be684eccf712006618e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3257d690ac949edff7958615656db052c3468c01
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>如何：建立 CLR 主控台應用程式 (C++/CLI)
 您可以使用主控台應用程式範本，建立已經有基本專案參考及檔案的主控台應用程式專案。  
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  選擇 [確定]  按鈕。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CLR 專案](../ide/files-created-for-clr-projects.md)   
 
 

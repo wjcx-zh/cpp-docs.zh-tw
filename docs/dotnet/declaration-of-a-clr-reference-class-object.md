@@ -1,31 +1,26 @@
 ---
-title: "CLR 參考類別物件的宣告 |Microsoft 文件"
-ms.custom: 
+title: CLR 參考類別物件的宣告 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - types [C++], reference types
 - reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 12cead3a142c69da56390ca6f5bf32cecc3b0075
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 參考類別物件的宣告
 語法來宣告和具現化參考類別類型的物件已從 Managed Extensions for c + + Visual c + +。  
@@ -269,7 +264,7 @@ f( 0 );
   
  因為`0`屬於整數型別。 已`f(int)`不存在，呼叫會明確地符合`f(char*)`透過標準轉換。 比對規則提供完全相符的優先順序高於標準轉換。 如果沒有完全相符，標準轉換會優先於隱含 boxing 實值類型。 這就是為什麼沒有任何模稜兩可。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
  [物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   

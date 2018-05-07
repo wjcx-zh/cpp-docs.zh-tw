@@ -1,12 +1,9 @@
 ---
-title: "CD2DGradientBrush 類別 |Microsoft 文件"
-ms.custom: 
+title: CD2DGradientBrush 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGradientBrush
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03d489b3059ddadf5783719f297371433a599e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 類別
 CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 類別的基底類別。  
@@ -84,14 +79,14 @@ class CD2DGradientBrush : public CD2DBrush;
 ## <a name="requirements"></a>需求  
  **標頭：** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
+##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush  
  解構函式。 D2D 漸層筆刷物件終結時呼叫。  
   
 ```  
 virtual ~CD2DGradientBrush();
 ```  
   
-##  <a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
+##  <a name="cd2dgradientbrush"></a>  CD2DGradientBrush::CD2DGradientBrush  
  建構 CD2DGradientBrush 物件。  
   
 ```  
@@ -127,40 +122,40 @@ CD2DGradientBrush(
  `bAutoDestroy`  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
-##  <a name="destroy"></a>CD2DGradientBrush::Destroy  
+##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  
  CD2DGradientBrush 物件已遭終結。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
+##  <a name="m_argradientstops"></a>  CD2DGradientBrush::m_arGradientStops  
  D2D1_GRADIENT_STOP 結構的陣列。  
   
 ```  
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;  
 ```  
   
-##  <a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
+##  <a name="m_colorinterpolationgamma"></a>  CD2DGradientBrush::m_colorInterpolationGamma  
  在哪種色彩漸層停駐點之間的插補執行空間。  
   
 ```  
 D2D1_GAMMA m_colorInterpolationGamma;  
 ```  
   
-##  <a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
+##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode  
  正規化 [0 1] 範圍以外的漸層的行為。  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  
 ```  
   
-##  <a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
+##  <a name="m_pgradientstops"></a>  CD2DGradientBrush::m_pGradientStops  
  D2D1_GRADIENT_STOP 結構陣列的指標。  
   
 ```  
 ID2D1GradientStopCollection* m_pGradientStops;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

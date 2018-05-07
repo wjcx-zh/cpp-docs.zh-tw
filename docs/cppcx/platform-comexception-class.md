@@ -1,11 +1,8 @@
 ---
-title: "Platform:: comexception 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: comexception 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 類別
 代表應用程式執行期間所發生的 COM 錯誤。 COMException 是一組預先定義的標準例外狀況所適用的基底類別。  
@@ -89,7 +84,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  **中繼資料：** platform.winmd  
 
-## <a name="ctor"></a> COMException::COMException Constructor
+## <a name="ctor"></a> Comexception:: Comexception 建構函式
 初始化 COMException 類別的新執行個體。  
   
 ### <a name="syntax"></a>語法  
@@ -104,7 +99,7 @@ COMException( int hresult )
   
 
 
-## <a name="hresult"></a> COMException::HResult Property
+## <a name="hresult"></a> Comexception:: Hresult 屬性
 對應於例外狀況的 HRESULT。  
   
 ### <a name="syntax"></a>語法  
@@ -119,7 +114,7 @@ public:property int HResult {    int get();}
 ### <a name="remarks"></a>備註  
  如需如何解譯 HRESULT 值的詳細資訊，請參閱[結構 COM 錯誤碼的](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
 
-## <a name="message"></a> COMException::Message Property
+## <a name="message"></a> Comexception:: Message 屬性
 說明例外狀況的訊息。  
   
 ### <a name="syntax"></a>語法  
@@ -132,5 +127,5 @@ public:property String^ Message {    String^ get();}
  例外狀況的描述。  
     
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

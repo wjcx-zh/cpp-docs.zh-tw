@@ -1,13 +1,10 @@
 ---
-title: "刪除 CObject 集合中的所有物件 |Microsoft 文件"
-ms.custom: 
+title: 刪除 CObject 集合中的所有物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>刪除 CObject 集合中的所有物件
 本文說明如何刪除集合中的所有物件 (不需刪除集合物件本身)。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [對應](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>若要刪除至 CObject 之指標清單中的所有物件  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  若要刪除至 CObject 之指標清單中的所有物件  
   
 1.  使用 `GetHeadPosition` 和 `GetNext` 逐一查看清單。  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  請留意刪除項目的物件和移除項目本身之間的差異。 從清單移除項目只會移除對物件的參考。 物件仍然存在於記憶體中。 當您刪除物件時，它就不會存在，且其記憶體會被回收。 因此，在項目物件已刪除後立即移除項目是很重要的，如此清單才不會嘗試存取不存在的物件。  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>刪除陣列中的所有項目  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  刪除陣列中的所有項目  
   
 1.  使用 `GetSize` 和整數索引值以逐一查看陣列。  
   
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  如上述清單範例，您可以呼叫 `RemoveAll` 移除陣列中所有項目，或呼叫 `RemoveAt` 移除個別項目。  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>若要刪除對應中的所有項目  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> 若要刪除對應中的所有項目  
   
 1.  使用 `GetStartPosition` 和 `GetNextAssoc` 逐一查看陣列。  
   
@@ -91,6 +86,6 @@ ms.lasthandoff: 12/21/2017
   
  您可以呼叫 `RemoveAll` 移除對應或 `RemoveKey` 的所有項目，以移除具有指定索引鍵的個別項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [存取集合的所有成員](../mfc/accessing-all-members-of-a-collection.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "設定 (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 設定 (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - set class [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6a7ebf4d15d85cb43a6f7101c70e444067a3f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`set`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。  
@@ -127,7 +122,7 @@ template<typename Key>
   
  這類委派的物件必須強制執行嚴格弱式排序索引鍵的型別[set:: key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)。 這表示任何兩個索引鍵`X`和`Y`:  
   
- `key_comp()(X, Y)`傳回的相同的布林值結果，在每次呼叫。  
+ `key_comp()(X, Y)` 傳回的相同的布林值結果，在每次呼叫。  
   
  如果`key_comp()(X, Y)`是 true，則`key_comp()(Y, X)`必須為 false。  
   
@@ -152,12 +147,12 @@ template<typename Key>
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
- [設定](../dotnet/set-stl-clr.md)   
- [設定](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
  [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

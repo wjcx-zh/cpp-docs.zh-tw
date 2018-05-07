@@ -1,13 +1,10 @@
 ---
-title: "容器： 用戶端項目通知 |Microsoft 文件"
-ms.custom: 
+title: 容器： 用戶端項目通知 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58f995893f580ef41c27653a30e94d1f106fceb1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-client-item-notifications"></a>容器：用戶端項目通知
 本文討論 MFC 架構在伺服器應用程式修改用戶端應用程式的文件中的項目時所呼叫的可覆寫函式。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
  如果 OLE 項目的位置或大小變更就地編輯時，必須更新容器的資訊項目的位置和裁剪方框，而且伺服器必須接收變更的相關資訊。 這個架構會呼叫`COleClientItem::OnChangeItemPosition`針對此目的。 MFC 應用程式精靈提供覆寫呼叫基底類別的函式。 您應該編輯應用程式精靈為撰寫的函式您`COleClientItem`-衍生類別，使函式會更新用戶端項目的物件所保留的任何資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [容器](../mfc/containers.md)   
  [容器： 用戶端項目狀態](../mfc/containers-client-item-states.md)   
  [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)

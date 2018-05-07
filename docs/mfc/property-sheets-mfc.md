@@ -1,13 +1,10 @@
 ---
-title: "屬性工作表 (MFC) |Microsoft 文件"
-ms.custom: 
+title: 屬性工作表 (MFC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], property sheets
 - tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44403cc22e061a5a492c4177d5ba385c17da0e12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08252ed31ddcfc6a5ba7b785dad9787349caee71
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-sheets-mfc"></a>屬性工作表 (MFC)
 本系列文件說明如何實作 MFC 應用程式中屬性工作表的支援。 屬性工作表亦稱為標籤對話方塊，可提供在對話方塊中管理大量控制項的方式。 屬性工作表包含屬性頁，每個屬性頁都以不同的對話方塊範本資源為基礎。 您可以將對話方塊的控制項分割為邏輯群組，並將每個群組個別放置於其屬性頁。  
@@ -53,5 +48,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [範例](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)

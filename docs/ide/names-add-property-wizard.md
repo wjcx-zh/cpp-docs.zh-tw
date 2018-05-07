@@ -1,29 +1,24 @@
 ---
-title: "名稱、 加入屬性精靈 |Microsoft 文件"
-ms.custom: 
+title: 名稱、 加入屬性精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.overview
 dev_langs:
 - C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-add-property-wizard"></a>名稱、加入屬性精靈
 您可以使用此精靈，將屬性加入至介面。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |MFC dispinterface，MFC ActiveX 控制項的分配介面|提供的屬性名稱，或從清單中選取的內建屬性。 如果您從清單中選取屬性，適當的值會出現在**屬性型別**方塊。 您可以變更這種類型，根據您選取項目底下**實作類型**。|  
   
  **傳回類型**  
- 只使用 ATL 介面。 設定屬性的傳回型別。 雙重介面，`HRESULT`一律傳回的型別，而且此方塊無法使用。 自訂介面，您可以從清單中選取的傳回型別。 `HRESULT`仍建議，因為它會提供標準的方式，來傳回錯誤。  
+ 只使用 ATL 介面。 設定屬性的傳回型別。 雙重介面，`HRESULT`一律傳回的型別，而且此方塊無法使用。 自訂介面，您可以從清單中選取的傳回型別。 `HRESULT` 仍建議，因為它會提供標準的方式，來傳回錯誤。  
   
  **變數名稱**  
  只使用 MFC dispinterface。 您指定時，才可以使用**成員變數**下**實作類型**。 設定與屬性相關聯的成員變數的名稱。 根據預設，變數的名稱設定為 m_*PropertyName*。 您可以編輯這個名稱。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  **Get 函式**  
  MFC 分配介面。 您指定時，才可以使用**Get/Set 方法**下**實作類型**。 設定要取得屬性的函式的名稱。 根據預設，Get 函式的名稱設定為 Get*PropertyName*。 您可以編輯這個名稱。 如果您刪除的名稱，此函式[GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)插入介面分派對應。 Get*PropertyName*函式指定為可讀取的屬性。  
   
- **Set 函式**  
+ **set 函式**  
  只使用 MFC dispinterface。 您指定時，才可以使用**Get/Set 方法**下**實作類型**。 設定要設定屬性的函式的名稱。 根據預設，設定 Set 函式名稱組*PropertyName*。 您可以編輯這個名稱。 如果您刪除的名稱，此函式[SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)插入介面分派對應。 集合*PropertyName*函式可讓您指定的屬性是可寫入。  
   
  **實作類型**  
@@ -100,7 +95,7 @@ ms.lasthandoff: 12/21/2017
  **預設屬性**  
  只使用 MFC dispinterface。 此屬性設定為預設的介面。 介面可以有只有一個預設屬性。一旦您指定的預設屬性，您將加入至介面，任何其他屬性，就無法使用此方塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入屬性](../ide/adding-a-property-visual-cpp.md)   
  [IDL 屬性、 加入屬性精靈](../ide/idl-attributes-add-property-wizard.md)   
  [實作介面](../ide/implementing-an-interface-visual-cpp.md)

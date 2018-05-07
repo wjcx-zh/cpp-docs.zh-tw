@@ -1,12 +1,9 @@
 ---
-title: "map:: key_compare (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'map:: key_compare (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::key_compare
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_compare member [STL/CLR]
 ms.assetid: 6cde0e22-f1cb-4b92-b76d-bab6cbd9c825
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5cac103eed495d6095e57bb57620c95e5b98be85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6195b9bf8ae399a9e3fdc65294fb2acb07ccdd48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapkeycompare-stlclr"></a>map::key_compare (STL/CLR)
 兩個索引鍵排序的委派。  
@@ -92,7 +87,7 @@ compare(L'b', L'a') = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map:: key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)   
  [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)   

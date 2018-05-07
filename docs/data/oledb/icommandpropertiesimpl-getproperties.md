@@ -1,12 +1,9 @@
 ---
-title: "Icommandpropertiesimpl:: Getproperties |Microsoft 文件"
-ms.custom: 
+title: 'Icommandpropertiesimpl:: Getproperties |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandPropertiesImpl::GetProperties
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetProperties method
 ms.assetid: 1bee5f1b-bd08-435a-956a-e4cebcdf5d5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cc935986c5b1ad83e7faaca9b4cb7e76645aac62
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a00cac292463251b89b314e7d4bd953480c505e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandpropertiesimplgetproperties"></a>ICommandPropertiesImpl::GetProperties
 傳回使用命令的屬性對應的所有要求的屬性集。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICommandPropertiesImpl 類別](../../data/oledb/icommandpropertiesimpl-class.md)   
  [ICommandPropertiesImpl::SetProperties](../../data/oledb/icommandpropertiesimpl-setproperties.md)

@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2309 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2309 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2309
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2309
 ms.assetid: 6303d5b5-72cf-42b8-92ce-b1eb48e80d48
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3db8ca4d3a5c3687bf1f99d73579976e221df936
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 52be559b2e5991e647425b99a1795866046d9050
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2309"></a>編譯器錯誤 C2309
 catch 處理常式必須括號括住例外狀況宣告  

@@ -1,13 +1,10 @@
 ---
-title: "ODBC 和 MFC |Microsoft 文件"
-ms.custom: 
+title: ODBC 和 MFC |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - MFC [C++], ODBC and
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 48dd657d4cf1b315b29fda881b949dea29204f24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9ab063bb44d9390442cbf5ad23a60f44f60b3c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-and-mfc"></a>ODBC 和 MFC
 > [!NOTE]
@@ -52,5 +47,5 @@ ms.lasthandoff: 12/21/2017
   
  ODBC 為基礎之 MFC 資料庫類別被設計來提供的 ODBC 驅動程式有可用的任何資料庫的存取權。 類別會使用 ODBC，因為您的應用程式可以存取許多不同的資料格式和不同的本機/遠端組態中的資料。 您不必撰寫特殊的程式碼來處理不同的資料庫管理系統 (Dbms)。 只要您的使用者有適當的 ODBC 驅動程式要存取的資料，它們可以使用您的程式來管理儲存於該處的資料表中的資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](open-database-connectivity-odbc.md)

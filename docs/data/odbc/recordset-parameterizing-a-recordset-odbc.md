@@ -1,13 +1,10 @@
 ---
-title: "資料錄集： 參數化資料錄集 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 資料錄集： 參數化資料錄集 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>資料錄集：參數化資料錄集 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [如何在執行階段傳遞給資料錄集物件的參數資訊](#_core_passing_parameter_values_at_run_time)。  
   
-##  <a name="_core_parameterized_recordsets"></a>參數化資料錄集  
+##  <a name="_core_parameterized_recordsets"></a> 參數化資料錄集  
  參數化資料錄集可讓您傳遞參數在執行階段的資訊。 這會有兩個重要的影響：  
   
 -   它可能會導致更好的執行速度。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  當您呼叫**開啟**來執行查詢時，資料錄集使用的參數資訊以完成其**SQL SELECT**陳述式。 您可以參數化的任何資料錄集。  
   
-##  <a name="_core_when_to_use_parameters"></a>使用參數的時機  
+##  <a name="_core_when_to_use_parameters"></a> 使用參數的時機  
  參數的一般用法包括：  
   
 -   執行階段引數傳遞給預先定義的查詢。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
  如需篩選器的詳細資訊，請參閱[資料錄集： 篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>參數化資料錄集類別  
+##  <a name="_core_parameterizing_your_recordset_class"></a> 參數化資料錄集類別  
   
 > [!NOTE]
 >  本節適用於衍生自物件`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，實作參數是類似的程序。 如需詳細資訊，請參閱[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
@@ -149,7 +144,7 @@ ms.lasthandoff: 12/21/2017
 
 >  若要使用最可能的字串是您指定的字串 （如果有的話） 的類別[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)資料成員，但有些 ODBC 驅動程式可以讓參數中的其他 SQL 子句。  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>在執行階段傳遞參數值  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> 在執行階段傳遞參數值  
  您必須指定參數值，才能呼叫**開啟**（適用於新的資料錄集物件） 或**Requery** （適用於現有的我的最愛）。  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>將參數值傳遞至資料錄集物件，在執行階段  
@@ -186,7 +181,7 @@ if( !rsStudents.Requery( ) )
 > [!NOTE]
 >  如有需要您可以設定參數的資料成員的值為 Null，使用[SetParamNull](../../mfc/reference/crecordset-class.md#setparamnull)。 您同樣可以檢查參數資料成員是否為 Null，使用[IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 加入、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
  [資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

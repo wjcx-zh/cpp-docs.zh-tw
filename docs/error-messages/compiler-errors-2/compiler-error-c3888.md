@@ -1,13 +1,10 @@
 ---
-title: "編譯器錯誤 C3888 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3888 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3888
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3888
 ms.assetid: 40820812-79c5-4dcd-a19d-b4164d25fc8a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6f0310324afcbde112623959c4dc3b11155fed1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c11c897f35a6c395c4bc6ee6a64be51fa810911b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3888"></a>編譯器錯誤 C3888
 'name' : C++/CLI 不支援與這個常值資料成員關聯的常數運算式  
@@ -36,5 +31,5 @@ ms.lasthandoff: 12/21/2017
   
 1.  請檢查宣告的常值資料成員是支援的類型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [名稱](../../windows/literal-cpp-component-extensions.md)

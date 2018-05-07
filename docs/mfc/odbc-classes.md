@@ -1,13 +1,10 @@
 ---
-title: "ODBC 類別 |Microsoft 文件"
-ms.custom: 
+title: ODBC 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], ODBC
 - ODBC classes [MFC]
 ms.assetid: 6c40fca8-3033-4873-9abe-7f51725de0e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fcc3453d36a2567330f60cec73383f842210c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98ef4509e7e7570d8c07013f0287fe01105e154a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-classes"></a>ODBC 類別
 這些類別會搭配其他應用程式架構類別以便讓您輕鬆存取各種不同的資料庫的開放式資料庫連接 (ODBC) 驅動程式可用。  
@@ -50,11 +45,11 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="related-classes"></a>相關的類別  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- 封裝的控制代碼到儲存體二進位大型物件 (BLOB)，例如點陣圖。 `CLongBinary`物件可用來管理儲存在資料庫資料表的大型資料物件。  
+ 封裝的控制代碼到儲存體二進位大型物件 (BLOB)，例如點陣圖。 `CLongBinary` 物件可用來管理儲存在資料庫資料表的大型資料物件。  
   
  [CDBVariant](../mfc/reference/cdbvariant-class.md)  
- 可讓您儲存的值，而不需擔心值的資料類型。 `CDBVariant`會追蹤目前的值等位中儲存的資料類型。  
+ 可讓您儲存的值，而不需擔心值的資料類型。 `CDBVariant` 會追蹤目前的值等位中儲存的資料類型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

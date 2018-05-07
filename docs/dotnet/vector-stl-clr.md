@@ -1,12 +1,9 @@
 ---
-title: "向量 (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 向量 (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/vector> header [STL/CLR]
 - <vector> header [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbbded2cb679d1f55949095cae3508d658e020c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de5d09d569933dc06666ed2008081703d59c1564
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有隨機存取的物件。 使用容器`vector`管理的項目序列，做為連續的區塊存放裝置。 區塊會實作為隨成長的陣列。  
@@ -141,7 +136,7 @@ template<typename Value>
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   

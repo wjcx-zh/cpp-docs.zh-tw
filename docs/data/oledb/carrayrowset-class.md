@@ -1,12 +1,9 @@
 ---
-title: "CArrayRowset 類別 |Microsoft 文件"
-ms.custom: 
+title: CArrayRowset 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CArrayRowset<TAccessor>
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CArrayRowset class
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 28d3a28f5c00cb0231738e8f02f07318bf156921
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 691776f39c54e843cec478c3c42871e7b7e81da1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 類別
 使用陣列語法的資料列集的存取項目。  
@@ -72,7 +67,7 @@ class CArrayRowset :
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CRowset 類別](../../data/oledb/crowset-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "輸出參數 |Microsoft 文件"
-ms.custom: 
+title: 輸出參數 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 663ff735eea34c53ea56c2cc4f24b4aedf2a3434
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8733b967ddab7e6f68fcbee1c80e78500a679f96
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="output-parameters"></a>輸出參數
 呼叫預存程序是類似於叫用 SQL 命令。 主要差異在於預存程序使用輸出參數 （或 「 outparameters"） 和傳回值。  
@@ -68,5 +63,5 @@ return 0
   
  @_rowcount具報告測試資料表實際上未傳回資料列數目。 不過，此預存程序最多 50 個資料列數目限制。 例如，如果測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 資料列）。 如果資料表中只是有 30 個資料列，資料列計數就是 30。 您必須呼叫**關閉**或**CloseAll**填入具之前擷取其值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用預存程序](../../data/oledb/using-stored-procedures.md)

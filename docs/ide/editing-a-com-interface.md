@@ -1,13 +1,10 @@
 ---
-title: "編輯 COM 介面 |Microsoft 文件"
-ms.custom: 
+title: 編輯 COM 介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.com.editing.interfaces
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 6c2909e0-af2d-4a37-bb39-ed372e6129cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8911f23ce8e28f2da13c3d8305f4f13a861bb60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd7a61593a1024c00c0fd0de6bd62ff3ee9323b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="editing-a-com-interface"></a>編輯 COM 介面
 使用類別檢視捷徑功能表的命令，您可以在 Visual c + + 專案中定義新方法和屬性的 COM 介面。 此外，從 [工具箱] 中，您可以定義 ActiveX 控制項的事件。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  此外，實作新介面 COM 控制項上按一下滑鼠右鍵在 類別檢視物件的控制項類別，[實作介面](../ide/implement-interface-wizard.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用資源檔](../windows/working-with-resource-files.md)   
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)

@@ -1,12 +1,9 @@
 ---
-title: CBookmark::GetSize | Microsoft Docs
-ms.custom: 
+title: 'Cbookmark:: Getsize |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBookmark::GetSize
@@ -26,18 +23,16 @@ dev_langs:
 helpviewer_keywords:
 - GetSize method
 ms.assetid: 78ea6021-2033-48f5-8ce8-040ae30f30c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eb6c78619c303e206ba5e2a3b85a2e0ee66724e5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 120557e53d2e6e868d905cbc35e3da51fdf17017
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbookmarkgetsize"></a>CBookmark::GetSize
 擷取書籤緩衝區的大小。  
@@ -55,5 +50,5 @@ virtual DBLENGTH GetSize() const throw();
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CBookmark 類別](../../data/oledb/cbookmark-class.md)

@@ -1,30 +1,25 @@
 ---
-title: "如何： 逐一查看陣列的每個 |Microsoft 文件"
-ms.custom: 
+title: 如何： 逐一查看陣列的每個 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - arrays [C++], iterating with for each
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 437e9134e489d9ca91f95979ad5165798d90cdef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e37ea551af0e985bd4c1b76ec1cd495a24c0c07
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>如何：使用 for each 反覆查看陣列
 本主題示範如何使用[針對每個，在](../dotnet/for-each-in.md)關鍵字上不同類型的陣列。  
@@ -153,5 +148,5 @@ IntArray[1] = 11
 11  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [for each, in](../dotnet/for-each-in.md)

@@ -1,12 +1,9 @@
 ---
-title: "配接器 (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 配接器 (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - <cliext/adapter>
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - adapter [STL/CLR]
 - <cliext/adapter> header [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 347fab2782f9ff19681dbaab25b7ec86ef8721ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6af58f1afff80a2f829e6726948279ef75b0cf5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 STL/CLR 標頭`<cliext/adapter>`指定兩個範本類別 (`collection_adapter`和`range_adapter`)，而該範本函式`make_collection`。  
@@ -55,5 +50,5 @@ STL/CLR 標頭`<cliext/adapter>`指定兩個範本類別 (`collection_adapter`�
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

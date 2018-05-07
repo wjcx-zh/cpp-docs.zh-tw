@@ -1,12 +1,9 @@
 ---
-title: "__vmx_vmread |Microsoft 文件"
-ms.custom: 
+title: __vmx_vmread |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __vmx_vmread
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 351ef951a57a4f100861dbd12b8a77d11fc41df8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 81feddd403c96d0b3f9402aaa744d0c79dbec21e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 **Microsoft 特定的**  
@@ -70,6 +65,6 @@ unsigned char __vmx_vmread(
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

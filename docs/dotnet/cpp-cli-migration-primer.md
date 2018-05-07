@@ -1,13 +1,10 @@
 ---
-title: "C + + /CLI 移轉入門 |Microsoft 文件"
-ms.custom: 
+title: C + + /CLI 移轉入門 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Managed Extensions for C++, upgrading syntax
 - C++/CLI Version 2, managed extensions
 ms.assetid: 8ec926b5-73f6-4f0c-bcdf-5203d293849a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 17474b347a6daf2d477a6ed731e13db86e068b05
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: add55156b23dd2f9eb746f032d8406bad3b9db56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccli-migration-primer"></a>C++/CLI 移轉入門
 這是前往 Visual c + + 程式從 Managed Extensions for c + + Visual c + + 的指引。 
@@ -54,6 +49,6 @@ ms.lasthandoff: 01/29/2018
  [一般的語言變更 (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)  
  詳細資料的語意變更支援轉型的表示法，例如字串常值的行為，以及變更在語意 ISO c + + 和 C + + /CLI。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)   
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

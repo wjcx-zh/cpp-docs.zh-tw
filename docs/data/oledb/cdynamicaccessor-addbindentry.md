@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicaccessor:: Addbindentry |Microsoft 文件"
-ms.custom: 
+title: 'Cdynamicaccessor:: Addbindentry |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDynamicAccessor::AddBindEntry
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - AddBindEntry method
 ms.assetid: 8f139376-7db3-4193-ba3b-63fe938ffa79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7234b06a32f53a24c5ccb9978ccc3910fa900807
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b49af256ea5f2f4fcc87474019c184e4c5babc58
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessoraddbindentry"></a>CDynamicAccessor::AddBindEntry
 將繫結項目加入至輸出資料行。  
@@ -54,5 +49,5 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "Cdataconnection:: Operator CSession&amp; |Microsoft 文件"
-ms.custom: 
+title: 'Cdataconnection:: Operator CSession&amp; |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CSession&
@@ -19,20 +16,18 @@ helpviewer_keywords:
 - operator CSession&
 - CSession& operator
 ms.assetid: fba1e498-e482-4dda-8e0f-2542163bf627
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 53355a04217451594eb9ce22c4233d1c70333ea4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7d46aeb352016c41dddaee972d438be8c28e22a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="cdataconnectionoperator-csessionamp"></a>CDataConnection::operator CSession&amp;
+# <a name="cdataconnectionoperator-csessionamp"></a>Cdataconnection:: Operator CSession&amp;
 將參考傳回給包含`CSession`物件。  
   
 ## <a name="syntax"></a>語法  
@@ -46,7 +41,7 @@ operator const CSession&();
  這個運算子會傳回至包含參照`CSession`物件，讓您傳遞`CDataConnection`物件其中`CSession`需要參考。  
   
 ## <a name="example"></a>範例  
- 如果您有函式 (例如`func`下方) 會採用`CSession`參考，您可以使用**CSession （& s)**傳遞`CDataConnection`改為物件。  
+ 如果您有函式 (例如`func`下方) 會採用`CSession`參考，您可以使用**CSession （& s)** 傳遞`CDataConnection`改為物件。  
   
  [!code-cpp[NVC_OLEDB_Consumer#5](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_1.cpp)]  
   
@@ -55,6 +50,6 @@ operator const CSession&();
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDataConnection 類別](../../data/oledb/cdataconnection-class.md)   
  [CDataConnection::operator CSession*](../../data/oledb/cdataconnection-operator-csession-star.md)

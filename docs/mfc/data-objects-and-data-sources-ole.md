@@ -1,13 +1,10 @@
 ---
-title: "資料物件和資料來源 (OLE) |Microsoft 文件"
-ms.custom: 
+title: 資料物件和資料來源 (OLE) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04619ee7851d2e2d6ad569583dfbb2e619d37026
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 766148494c6b8693f8d9e65f27e157b58d8e8689
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-ole"></a>資料物件和資料來源 (OLE)
 使用剪貼簿或拖放功能執行資料傳輸時，資料會有來源端和目的端。 某個應用程式會提供複製資料，而另一個應用程式會接受貼上文字。 每個傳輸端需要執行不同的作業來成功傳輸相同資料。 Microsoft Foundation Class (MFC) 程式庫提供代表各傳輸端的兩個類別：  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  [剪貼簿](../mfc/clipboard.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleDataObject 類別](../mfc/reference/coledataobject-class.md)   
  [COleDataSource 類別](../mfc/reference/coledatasource-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "資訊清單工具隔離的 COM 屬性 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 資訊清單工具隔離的 COM 屬性 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.RegistrarScriptFile
 - VC.Project.VCManifestTool.ComponentFileName
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe2098c4caead6ebc9ad4747354ae96f093f2c91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>隔離的 COM、 資訊清單工具、 組態屬性、 &lt;Projectname&gt;屬性頁對話方塊
 使用此對話方塊來指定**隔離的 COM**選項[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **取代檔案**  
  您可以使用 /replacements 選項來指定檔案，其中包含可取代.rgs 檔中的字串值的完整路徑。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [隔離的應用程式](http://msdn.microsoft.com/library/aa375190)   
  [ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)   
  [資訊清單工具屬性頁](../ide/manifest-tool-property-pages.md)   

@@ -1,13 +1,10 @@
 ---
-title: "衍生訊息對應 |Microsoft 文件"
-ms.custom: 
+title: 衍生訊息對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e5901602368e60a3873a1dba2fc681c6ac146f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e780d411e62d1347d8286f86b45df864b0fcdb3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-message-maps"></a>衍生訊息對應
 在處理訊息期間，檢查類別本身的訊息對應並不是訊息對應劇本的結束。 發生什麼情況類別`CMyView`(衍生自`CView`) 的訊息沒有相符的項目  
@@ -48,6 +43,6 @@ ms.lasthandoff: 12/21/2017
   
  為加速訊息對應的比對，架構會基於可能再次收到相同的訊息而快取近來最相符者。 這種處理方式的結果之一，是架構對於未處理訊息的處理會相當具有效率。 訊息對應的空間利用也比使用虛擬函式的實作更有效率。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [架構如何搜尋訊息對應](../mfc/how-the-framework-searches-message-maps.md)
 

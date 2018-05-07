@@ -1,13 +1,10 @@
 ---
-title: "編譯 c + + 程式為目標 CLR |Microsoft 文件"
-ms.custom: 
+title: 編譯 c + + 程式為目標 CLR |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2a7bcb0eead62730f0b70b0b1df64e5ed08f1f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：編譯針對 Visual Studio 中 CLR 的 C++ 程式
 您可以建立使用.NET 類別，並使用 Visual Studio 開發環境中進行編譯的 Visual c + + 程式。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     -   以滑鼠右鍵按一下**原始程式檔**資料夾在方案總管 中，指向**新增**按一下**新項目**。  
   
-    -   按一下**c + + 檔 (.cpp)**並輸入檔案名稱，然後按一下**新增**。  
+    -   按一下**c + + 檔 (.cpp)** 並輸入檔案名稱，然後按一下**新增**。  
   
      **.Cpp**檔案會出現在**原始程式檔**資料夾在方案總管] 和 [索引標籤式的視窗就會顯示將程式碼輸入您想在該檔案。  
   
@@ -81,11 +76,11 @@ ms.lasthandoff: 12/21/2017
      **Textfile.txt**文字檔現在位於專案目錄中。 您可以使用 [記事本] 開啟此檔案。  
   
     > [!NOTE]
-    >  選擇 空白的 CLR 專案範本會自動將設定**/clr**編譯器選項。 若要確認這種情況，請以滑鼠右鍵按一下中的專案**方案總管 中**，然後按一下**屬性**，然後核取**Common Language Runtime 支援**中選項**一般**節點**組態屬性**。  
+    >  選擇 空白的 CLR 專案範本會自動將設定 **/clr**編譯器選項。 若要確認這種情況，請以滑鼠右鍵按一下中的專案**方案總管 中**，然後按一下**屬性**，然後核取**Common Language Runtime 支援**中選項**一般**節點**組態屬性**。  
   
 ## <a name="whats-next"></a>後續步驟  
- **上一步：** [逐步解說： 編譯原生 c + + 程式命令列上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)&#124;**下一步：**[逐步解說： 編譯 C 程式命令列上](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
+ **上一步：** [逐步解說： 編譯原生 c + + 程式命令列上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **下一步：**[逐步解說： 編譯 C 程式命令列上](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)

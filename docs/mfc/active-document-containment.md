@@ -1,13 +1,10 @@
 ---
-title: "主動式文件內含項目 |Microsoft 文件"
-ms.custom: 
+title: 主動式文件內含項目 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containment"></a>主動式文件內含項目
 主動式文件內含項目是一種技術，提供要使用的文件，而不是強迫您建立及用於每個文件類型的多個應用程式框架中的單一框架。 它會與基本 OLE 技術的 OLE 適用於只有單一內容可以為作用中的複合文件中內嵌的物件。 使用中文件內含項目，您可以啟用整個文件 （也就是整個應用程式，包括相關聯的功能表、 工具列和等等） 單一框架的內容中。  
@@ -50,6 +45,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [MFCBIND](../visual-cpp-samples.md)範例說明實作主動式文件容器應用程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC COM](../mfc/mfc-com.md)
 

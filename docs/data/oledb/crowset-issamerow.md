@@ -1,12 +1,9 @@
 ---
-title: CRowset::IsSameRow | Microsoft Docs
-ms.custom: 
+title: 'Crowset:: Issamerow |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowset::IsSameRow
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - IsSameRow method
 ms.assetid: 53cba847-52f5-4dd9-973f-bbe7454c425c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b43788e1c64df3db223aa02df53014d3871b4c71
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cbe8179c04b8d7ab855942a4e6190341cc03128
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetissamerow"></a>CRowset::IsSameRow
 比較指定的資料列的目前資料列。  
@@ -55,5 +50,5 @@ HRESULT IsSameRow(HROW hRow) const throw();
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)

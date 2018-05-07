@@ -1,12 +1,9 @@
 ---
-title: "IDBPropertiesImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IDBPropertiesImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBPropertiesImpl
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - IDBPropertiesImpl class
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e1b1486d5eff73b4f868f5990ceb628cfb7dd20a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3685e6a77e4293ef65b5ee98a0aa326500cfdb2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl 類別
 提供的實作`IDBProperties`介面。  
@@ -63,6 +58,6 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

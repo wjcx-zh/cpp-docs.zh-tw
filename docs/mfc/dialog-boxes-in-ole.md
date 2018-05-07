@@ -1,13 +1,10 @@
 ---
-title: "在 OLE 中的對話方塊 |Microsoft 文件"
-ms.custom: 
+title: 在 OLE 中的對話方塊 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96dfe1828ae3451411adf3ab57c1ec67db24c34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的對話方塊
 當使用者執行 OLE 功能之應用程式時，但有些的時候應用程式時需要使用者的資訊才能執行作業。 MFC OLE 類別提供對話方塊，以收集必要的資訊的數的字。 本主題列出由 OLE 對話方塊處理的工作和顯示這些對話方塊所需的類別。 如需 OLE 對話方塊，以及用來自訂其行為的結構的詳細資訊，請參閱[MFC 參考](../mfc/mfc-desktop-applications.md)。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
  *伺服器忙碌或伺服器沒有回應*  
  當使用者嘗試啟動項，而且伺服器目前無法處理要求時，通常是因為伺服器正在使用另一位使用者或工作時，會顯示 [伺服器忙碌] 對話方塊。 如果伺服器不會完全回應啟動要求，會顯示 [伺服器沒有回應] 對話方塊。 這些對話方塊會顯示透過`COleMessageFilter`根據 OLE 介面的實作， **IMessageFilter**，而且使用者可以決定是否要再次嘗試啟動要求。 使用[COleBusyDialog](../mfc/reference/colebusydialog-class.md)類別來顯示此對話方塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)   
  [OLE](../mfc/ole-in-mfc.md)

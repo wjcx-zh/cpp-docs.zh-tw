@@ -1,24 +1,19 @@
 ---
-title: "類型系統 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 類型系統 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>類型系統 (C++/CX)
 使用 Windows 執行階段架構，您可以使用 C + + /CX、 Visual Basic、 Visual C# 和 JavaScript 來撰寫應用程式和元件，以直接存取 Windows API 並與其他 Windows 執行階段應用程式和元件相互操作。 在 c + + 撰寫的通用 Windows 平台應用程式編譯為直接在 CPU 中執行的原生程式碼。 以 C# 或 Visual Basic 撰寫的通用 Windows 平台應用程式編譯成 Microsoft intermediate language (MSIL)，並在 common language runtime (CLR) 中執行。 在執行階段環境中，執行以 JavaScript 撰寫的通用 Windows 平台應用程式。 Windows 執行階段作業系統元件本身以 c + + 撰寫，且以機器碼形式執行。 所有這些元件和通用 Windows 平台應用程式直接透過 Windows 執行階段應用程式二進位介面 (ABI) 進行通訊。  
@@ -27,15 +22,15 @@ ms.lasthandoff: 02/14/2018
   
  如需 C++/CX 語言投影和其運作方式的深入討論，請參閱部落格文章：  
   
-1.  [C + + /CX 第 0 部分\[ n \]： 簡介](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C + + /CX 第 0 部分\[n\]： 簡介](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C + + /CX 第 1 部分\[ n \]： 簡單的類別](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C + + /CX 第 1 部分\[n\]： 簡單的類別](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C + + /CX 第 2 部分的\[ n \]： 戴帽子的類別](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C + + /CX 第 2 部分的\[n\]： 戴帽子的類別](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C + + /CX 第 3 部分\[ n \]： 建構中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C + + /CX 第 3 部分\[n\]： 建構中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C + + /CX 第 4 部分\[ n \]： 靜態成員函式](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C + + /CX 第 4 部分\[n\]： 靜態成員函式](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Windows 中繼資料 (.winmd) 檔案  
  當您編譯以 c + + 撰寫的通用 Windows 平台應用程式時，編譯器會產生可執行檔，以原生機器碼，並也會產生包含公用的 Windows 執行階段類型，描述的個別 Windows 中繼資料 (.winmd) 檔案這包括類別、 結構、 列舉、 介面、 參數化的介面和委派。 中繼資料的格式類似 .NET Framework 組件中使用的格式。  在 C++ 元件中，.winmd 檔案只包含中繼資料，可執行程式碼位於另一個檔案中。 這是隨附於 Windows 的 Windows 執行階段元件的情況。 WinMD 檔案名稱必須符合原始程式碼中的根命名空間或為根命名空間的首碼。 (對於 .NET Framework 語言，.winmd 檔案包含程式碼和中繼資料，如同 .NET Framework 組件一樣)。  
@@ -168,5 +163,5 @@ ms.lasthandoff: 02/14/2018
   
  如需詳細資訊，請參閱[淘汰型別和成員](../cppcx/deprecating-types-and-members-c-cx.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)

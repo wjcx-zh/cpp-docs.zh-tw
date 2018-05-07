@@ -1,13 +1,10 @@
 ---
-title: "記憶體管理： 框架配置 |Microsoft 文件"
-ms.custom: 
+title: 記憶體管理： 框架配置 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03a8e5f81e55398ffba30479ecfafc42726e9519
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-frame-allocation"></a>記憶體管理：框架配置
 配置框架時會從呼叫函式時設定的「堆疊框架」取用框架名稱。 堆疊框架是一個記憶體區域，會暫時保留函式的引數以及任何為函式區域定義的變數。 框架變數通常稱為「自動」變數，因為編譯器會自動為其配置空間。  
@@ -52,6 +47,6 @@ ms.lasthandoff: 12/21/2017
   
  在框架上配置物件的主要優點是會自動刪除。 當您在框架上配置物件時，您不必擔心流失的物件會導致記憶體流失  (如需記憶體流失的詳細資訊，請參閱文章[在 MFC 偵測記憶體流失](http://msdn.microsoft.com/en-us/29ee8909-96e9-4246-9332-d3a8aa8d4658)。)框架配置的缺點是框架變數無法在其範圍之外使用。 在選擇框架配置或堆積配置時需要考量的另一個因素是，對於大型結構和物件而言，使用堆積通常比儲存體堆疊更為適合，因為堆疊空間通常是有限的。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體管理](../mfc/memory-management.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 部署程式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 部署程式 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce59dc7b767c8ff8e988ac7a765d3bb5f1cdfffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1753c63673b9dd083e2b690788801bd467938c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>逐步解說：部署程式 (C++)
 現在，您已建立您的應用程式所完成的稍早相關逐步解說，列出的[使用 c + + 桌面開發的 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)，最後一個步驟是建立安裝程式，如此當其他使用者安裝程式在其電腦上。 若要完成這項工作，您需要將新的專案加入至現有方案中。 這個新專案的輸出是 setup.exe 檔案，這個檔案會將您的應用程式安裝在另一部電腦上。  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
 14. 在**方案總管 中**下**Specify Application Data**節點，開啟**可轉散發套件**頁面。  
   
-15. 在**可轉散發套件 （遊戲安裝程式）**  索引標籤，在編輯器視窗中，選取**Visual c + + 11.0 CRT (x86)**核取方塊。  
+15. 在**可轉散發套件 （遊戲安裝程式）**  索引標籤，在編輯器視窗中，選取**Visual c + + 11.0 CRT (x86)** 核取方塊。  
   
 16. 在功能表列上選擇 **建置**，**建置方案**建置 遊戲 專案和遊戲安裝程式專案。  
   
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-steps"></a>後續步驟  
  **上一步：** [逐步解說： 偵錯專案 （c + +）](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)  
  [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

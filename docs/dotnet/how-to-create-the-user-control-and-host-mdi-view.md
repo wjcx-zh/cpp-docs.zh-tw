@@ -1,31 +1,26 @@
 ---
-title: "如何： 建立使用者控制項並裝載 MDI 檢視 |Microsoft 文件"
-ms.custom: 
+title: 如何： 建立使用者控制項並裝載 MDI 檢視 |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 449f0026cd2d7603ceb190cc747138189313974f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：建立使用者控制項並裝載 MDI 檢視
 下列步驟示範如何建立.NET Framework 使用者控制項，撰寫使用者控制項中的控制項類別程式庫 （特別是，Windows 控制項程式庫專案），然後將專案編譯成組件。 從 MFC 應用程式使用衍生自的類別可以使用控制項[CView 類別](../mfc/reference/cview-class.md)和[CWinFormsView 類別](../mfc/reference/cwinformsview-class.md)。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  建立 MFC 應用程式專案。  
   
-     在**檔案**功能表上，選取**新增**，然後按一下 **專案**。 在**Visual c + +**資料夾中，選取**MFC 應用程式**。  
+     在**檔案**功能表上，選取**新增**，然後按一下 **專案**。 在**Visual c + +** 資料夾中，選取**MFC 應用程式**。  
   
      在**名稱**方塊中，輸入`MFC02`並變更**方案**設**將加入至方案**。 按一下 [確定 **Deploying Office Solutions**]。  
   
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
      在下**組態屬性**，選取**一般**。 在下**專案預設值**區段中，將**Common Language Runtime 支援**至**Common Language Runtime 支援 (/ clr)**。  
   
-     在下**組態屬性**，依序展開**C/c + +**按一下**一般**節點。 設定**偵錯資訊格式**至**程式資料庫 (/Zi)**。  
+     在下**組態屬性**，依序展開**C/c + +** 按一下**一般**節點。 設定**偵錯資訊格式**至**程式資料庫 (/Zi)**。  
   
      按一下**程式碼產生**節點。 設定**啟用最少重建**至**否 (/ Gm-)**。 也設定**基本執行階段會檢查**至**預設**。  
   
@@ -114,5 +109,5 @@ ms.lasthandoff: 12/21/2017
   
      在**偵錯**功能表上，按一下 **啟動但不偵錯**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 Windows Form 使用者控制項裝載為 MFC 檢視](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

@@ -1,11 +1,8 @@
 ---
-title: "Platform:: accessdeniedexception 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: accessdeniedexception 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::AccessDeniedException
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::AccessDeniedException
 ms.assetid: 6ae2155b-7b16-4587-8d2d-da05eab4c7e9
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccbadf13e7a4f4d82bce9c402a4816d31b0fdce6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a4be26bfc87be55d36954429c64094cabd6a6cf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException 類別
 當存取資源或功能遭拒時擲回。  
@@ -48,5 +43,5 @@ public ref class AccessDeniedException : COMException,    IException,    IPrinta
   
  **中繼資料：** platform.winmd  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform::COMException 類別](../cppcx/platform-comexception-class.md)

@@ -1,29 +1,24 @@
 ---
-title: "在網際網路上的 active 技術 |Microsoft 文件"
-ms.custom: 
+title: 在網際網路上的 active 技術 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163456b044a50bbbbdf5f4ae229723c8730bc369
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a7062ae67c9fdfbe79efe20ce3251eba37cc926
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-technology-on-the-internet"></a>網際網路上的 Active 技術
 Active 技術是一種開放平台，可讓開發人員為全域網路或為公司的內部網路 (稱為內部網路) 建立令人興奮、動態內容和應用程式。 Microsoft 針對網際網路程式設計提供的主要技術如下。  
@@ -43,7 +38,7 @@ Active 技術是一種開放平台，可讓開發人員為全域網路或為公�
 ## <a name="html-extensions"></a>HTML 擴充方法  
  HTML 擴充方法 (例如物件標記) 已加入以支援控制項和指令碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)   
  [在網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)   
  [在網際網路上的主動式文件](../mfc/active-documents-on-the-internet.md)   

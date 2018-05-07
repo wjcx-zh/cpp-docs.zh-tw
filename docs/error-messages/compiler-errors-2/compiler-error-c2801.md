@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2801 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2801 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2801
@@ -15,30 +12,28 @@ dev_langs:
 helpviewer_keywords:
 - C2801
 ms.assetid: 35dfc7ea-9e37-4e30-baa1-944dc61302f5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbdbfdc1b7bb9445b1a709afb42944eea0d7f241
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f68b3f575fcb8b909f58ac2ffbcaca26580279da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2801"></a>編譯器錯誤 C2801
 'operator operator' 必須是非靜態成員  
   
  下列運算子可以多載只能以非靜態成員：  
   
--   指派`=`  
+-   指派 `=`  
   
--   類別成員存取`->`  
+-   類別成員存取 `->`  
   
--   Subscripting`[]`  
+-   Subscripting `[]`  
   
--   函式呼叫`()`  
+-   函式呼叫 `()`  
   
  可能的 C2801 原因：  
   

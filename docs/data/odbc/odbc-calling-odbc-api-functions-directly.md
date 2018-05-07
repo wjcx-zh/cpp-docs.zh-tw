@@ -1,13 +1,10 @@
 ---
-title: "ODBC： 直接呼叫 ODBC API 函數 |Microsoft 文件"
-ms.custom: 
+title: ODBC： 直接呼叫 ODBC API 函數 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55b95c5dd48631f9c724aebd163ce948c3469850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接呼叫 ODBC API 函式
 資料庫類別提供更簡單的介面，以[資料來源](../../data/odbc/data-source-odbc.md)比 ODBC。 如此一來，這些類別不會封裝所有 ODBC API。 類別的功能之外的任何功能，您必須直接呼叫 ODBC API 函式。 例如，您必須呼叫 ODBC 目錄函數 (**:: SQLColumns**， **:: SQLProcedures**， **:: SQLTables**，等等) 直接。  
@@ -57,5 +52,5 @@ ms.lasthandoff: 12/21/2017
  除了這些步驟中，您需要採取額外步驟以檢查函式傳回值，請確定您的程式不等候非同步呼叫完成，然後依此類推。 您可以使用，以簡化這些最後幾個步驟`AFX_SQL_ASYNC`和`AFX_SQL_SYNC`巨集。 如需詳細資訊，請參閱[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 參考*。  
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 基本概念](../../data/odbc/odbc-basics.md)

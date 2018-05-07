@@ -1,13 +1,10 @@
 ---
-title: "加入泛型 c + + 類別 |Microsoft 文件"
-ms.custom: 
+title: 加入泛型 c + + 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.adding.generic
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - generic classes, adding
 - generic classes
 ms.assetid: e95a5a14-dbed-4edc-8551-344fe48613cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5e20d1cf5664d7d2a46ef6afd82f610ebca8ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-generic-c-class"></a>加入泛型 C++ 類別
 您可以藉由加入泛型 c + + 類別**類別檢視**。 泛型 c + + 類別是衍生自您定義的類別或您定義的類別。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  若要關閉精靈並檢視新的泛型 c + + 類別專案中，按一下**完成**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入類別](../ide/adding-a-class-visual-cpp.md)   
  [MFC 類別](../mfc/reference/adding-an-mfc-class.md)   
  [ATL 簡單物件](../atl/reference/adding-an-atl-simple-object.md)

@@ -1,12 +1,9 @@
 ---
-title: "嚴重錯誤 C1905 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1905 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1905
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1905
 ms.assetid: fefc6769-477f-45a2-9878-6f0a5f42472c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5ad4a22e73650db98ef1bf1fbd3fff214f5f754
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d15bf00432cab6900c252d85cd642c414bdbbb22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1905"></a>嚴重錯誤 C1905
 前端和後端不相容 (必須以相同處理器為目標)  

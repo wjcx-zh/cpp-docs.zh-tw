@@ -1,29 +1,24 @@
 ---
-title: "ATL 程式或控制項原始檔和標頭檔 |Microsoft 文件"
-ms.custom: 
+title: ATL 程式或控制項原始檔和標頭檔 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a13a4c6ddb74a6f63b5da1171a3d4360199b508
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e8e5065cebab002e9c48aef560eb9f2feab67e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL 程式或控制項原始程式檔和標頭檔
 當您建立的 ATL 專案在 Visual Studio 中，根據您選取您建立專案的選項時，會建立下列檔案。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 |StdAfx.cpp|包含 StdAfx.h 和 Atlimpl.cpp 檔案。|  
 |StdAfx.h|包含 ATL 標頭檔。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)   
  [MFC 程式或控制項原始檔和標頭檔](../ide/mfc-program-or-control-source-and-header-files.md)   
  [CLR 專案](../ide/files-created-for-clr-projects.md)

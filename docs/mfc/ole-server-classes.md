@@ -1,13 +1,10 @@
 ---
-title: "OLE 伺服器類別 |Microsoft 文件"
-ms.custom: 
+title: OLE 伺服器類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -18,27 +15,25 @@ helpviewer_keywords:
 - COM components, classes [MFC]
 - component classes [MFC]
 ms.assetid: 8e9b67a2-c0ff-479c-a8d6-19b36c5e6fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23c7cb23d9221f8f2183c666a99c70ef149db3e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-server-classes"></a>OLE 伺服器類別
 伺服器應用程式會使用這些類別。 伺服器文件衍生自`COleServerDoc`而不是從**CDocument**。 請注意，因為`COleServerDoc`衍生自`COleLinkingDoc`，伺服器文件也可以支援連結的容器。  
   
  `COleServerItem`類別代表文件或其他文件中內嵌或連結至文件的一部分。  
   
- `COleIPFrameWnd`和`COleResizeBar`時，支援就地編輯的物件在容器中，和`COleTemplateServer`支援文件/檢視組的建立，因此可以編輯其他應用程式中的 OLE 物件。  
+ `COleIPFrameWnd` 和`COleResizeBar`時，支援就地編輯的物件在容器中，和`COleTemplateServer`支援文件/檢視組的建立，因此可以編輯其他應用程式中的 OLE 物件。  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- 做為伺服器應用程式文件類別的基底類別。 `COleServerDoc`物件提供的伺服器支援，透過與互動大量`COleServerItem`物件。 使用類別庫的文件/檢視架構來提供視覺化編輯的功能。  
+ 做為伺服器應用程式文件類別的基底類別。 `COleServerDoc` 物件提供的伺服器支援，透過與互動大量`COleServerItem`物件。 使用類別庫的文件/檢視架構來提供視覺化編輯的功能。  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  抽象基底類別的`COleClientItem`和`COleServerItem`。 物件的類別衍生自`CDocItem`代表文件的部分。  
@@ -58,6 +53,6 @@ ms.lasthandoff: 12/21/2017
  [COleException](../mfc/reference/coleexception-class.md)  
  因 OLE 處理失敗而產生的例外狀況。 容器和伺服器都使用這個類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

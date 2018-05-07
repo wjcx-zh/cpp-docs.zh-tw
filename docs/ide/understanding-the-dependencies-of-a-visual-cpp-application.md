@@ -1,13 +1,10 @@
 ---
-title: "了解 Visual c + + 應用程式的相依性 |Microsoft 文件"
-ms.custom: 
+title: 了解 Visual c + + 應用程式的相依性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>了解 Visual C++ 應用程式的相依性
 若要判斷應用程式依存的 Visual c + + 程式庫，您可以檢視專案屬性。 (在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [**屬性**開啟**屬性頁**] 對話方塊。)您也可以使用 Dependency Walker (depends.exe)，更全面性地了解相依性。  
   
- 在**屬性頁**對話方塊中，您可以檢查各種頁面下的**組態屬性**了解相依性。 例如，如果您的專案使用 MFC 程式庫，而您選擇**MFC**，**使用 MFC 的共用 dll**上**組態屬性**，**一般**  頁面上，您的應用程式在執行階段相依於 MFC Dll 例如 mfc\<版本 >.dll。 如果您的應用程式不會使用 MFC，它可能會相依於 CRT 程式庫如果您選擇**執行階段程式庫**值**多執行緒偵錯 DLL (/ /mdd)**或**多執行緒 DLL (/ MD)**上**組態屬性**， **C/c + +**，**程式碼產生**頁面。  
+ 在**屬性頁**對話方塊中，您可以檢查各種頁面下的**組態屬性**了解相依性。 例如，如果您的專案使用 MFC 程式庫，而您選擇**MFC**，**使用 MFC 的共用 dll**上**組態屬性**，**一般**  頁面上，您的應用程式在執行階段相依於 MFC Dll 例如 mfc\<版本 >.dll。 如果您的應用程式不會使用 MFC，它可能會相依於 CRT 程式庫如果您選擇**執行階段程式庫**值**多執行緒偵錯 DLL (/ /mdd)** 或**多執行緒 DLL (/ MD)** 上**組態屬性**， **C/c + +**，**程式碼產生**頁面。  
   
  判斷應用程式相依於哪些 DLL 的一個更簡單方法，就是使用 Dependency Walker (depends.exe) 開啟應用程式。 您可以下載此工具從[Dependency Walker](http://go.microsoft.com/fwlink/p/?LinkId=132640)網站。  
   
@@ -45,5 +40,5 @@ ms.lasthandoff: 12/21/2017
   
  當您知道應用程式所相依的 DLL，您可以判斷當部署到另一部電腦時，必須要與應用程式一起轉散發的 DLL。 在大部分情況下，您不需要轉散發系統 Dll，但您可能必須轉散發 Visual c + + 程式庫 Dll。 如需詳細資訊，請參閱[判斷要轉散發哪些 Dll](../ide/determining-which-dlls-to-redistribute.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

@@ -1,12 +1,9 @@
 ---
-title: "list:: size (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'list:: size (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::size
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - size member [STL/CLR]
 ms.assetid: 409e39fb-4468-44bb-b179-52c90e2fa293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5a6081faf7034c158c53e36f930a3057168808a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 518d95d625605c8700e3a13a0ec5d46389c58eae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listsize-stlclr"></a>list::size (STL/CLR)
 計算元素的數目。  
@@ -85,6 +80,6 @@ size() = 2 after adding 2
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)

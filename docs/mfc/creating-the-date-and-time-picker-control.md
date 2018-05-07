@@ -1,30 +1,25 @@
 ---
-title: "建立日期和時間選擇器控制項 |Microsoft 文件"
-ms.custom: 
+title: 建立日期和時間選擇器控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DateTimePicker control [MFC], creating
 - CDateTimeCtrl class [MFC], creating
 ms.assetid: 764ec2fb-98cd-478b-a5f2-d63f0bb12279
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9c0b99f42bef162ed3c571e19630f9227a8504e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce7c987bf1284d0287cd0206572209d7ae2d0b7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>建立日期時間選擇器控制項
 建立日期和時間選擇器控制項的方式取決於您是使用控制項在對話方塊中還是非對話方塊視窗中建立。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  呼叫控制項的[建立](../mfc/reference/ctabctrl-class.md#create)成員函式，可能在[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)，方式與父視窗[OnCreate](../mfc/reference/cwnd-class.md#oncreate) （如果您目前的處理常式函式子類別化控制項）。 設定控制項的樣式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "Csimplerow:: Releaserow |Microsoft 文件"
-ms.custom: 
+title: 'Csimplerow:: Releaserow |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CSimpleRow::ReleaseRow
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - ReleaseRow method
 ms.assetid: e0ffe844-b87f-4675-86ef-445ba50fa873
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ddc11dc0fbdbec917a706f6c1785bc220d4a0db9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5ca661be9f847bf952dd85c55c81532041b84cb8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimplerowreleaserow"></a>CSimpleRow::ReleaseRow
 釋放資料列以執行緒安全的方式。  
@@ -45,7 +40,7 @@ DWORD ReleaseRow();
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CSimpleRow 類別](../../data/oledb/csimplerow-class.md)   
- [CSimpleRow::AddRefRow](../../data/oledb/csimplerow-addrefrow.md)   
+ [Csimplerow:: Addrefrow](../../data/oledb/csimplerow-addrefrow.md)   
  [IRowsetImpl::RefRows](../../data/oledb/irowsetimpl-refrows.md)

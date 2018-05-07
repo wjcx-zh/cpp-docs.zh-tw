@@ -1,12 +1,9 @@
 ---
 title: CDBErrorInfo::GetAllErrorInfo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDBErrorInfo.GetAllErrorInfo
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetAllErrorInfo method
 ms.assetid: 630049fa-d296-497a-bbf6-f5d3d71d271d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2642694c8031980bc548839c760081bef570191a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 590215ddc5c62e5c717aebe196bc33ce7d514e7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdberrorinfogetallerrorinfo"></a>CDBErrorInfo::GetAllErrorInfo
 傳回錯誤記錄中所包含的所有錯誤資訊類型。  
@@ -81,5 +76,5 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
   
 2.  `lcid` 的值與 GetUserDefaultLCID 所傳回的值「不」相等。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDBErrorInfo 類別](../../data/oledb/cdberrorinfo-class.md)

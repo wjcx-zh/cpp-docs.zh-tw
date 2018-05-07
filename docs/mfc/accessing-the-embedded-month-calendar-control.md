@@ -1,13 +1,10 @@
 ---
-title: "存取內嵌月曆控制項 |Microsoft 文件"
-ms.custom: 
+title: 存取內嵌月曆控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - month calendar controls [MFC], changing the font
 - DateTimePicker control [MFC]
 ms.assetid: 355e97ed-cf81-4df3-a2f8-9ddbbde93227
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37d23a7d5d860d55e18f709c873a40d8f24f1c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfbc9ce7b99efc1f8d99f5735c16c252ff613c59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>存取內嵌月曆控制項
 您可以從存取內嵌的月曆控制項物件`CDateTimeCtrl`物件呼叫[GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)成員函式。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  一旦呼叫 `CDateTimeCtrl::SetMonthCalFont` 變更字型後，下一次月曆便會顯示已儲存並使用的新字型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

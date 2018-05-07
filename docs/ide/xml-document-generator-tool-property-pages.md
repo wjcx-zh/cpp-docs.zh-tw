@@ -1,13 +1,10 @@
 ---
-title: "XML 文件產生器工具屬性頁 |Microsoft 文件"
-ms.custom: 
+title: XML 文件產生器工具屬性頁 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCXDCMakeTool.ValidateIntelliSense
 - VC.Project.VCXDCMakeTool.SuppressStartupBanner
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc09dafc0f07bc16a11dd255419440b6464456c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 772e9dc6a296873ef27171676ebca0c185c1771c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>XML 文件產生器工具屬性頁
 XML 文件產生器工具屬性頁公開 xdcmake.exe 的功能。 xdcmake.exe.xdc 檔至.xml 檔案時合併您的原始程式碼包含文件註解和[/doc （處理文件註解） （C/c + +）](../build/reference/doc-process-documentation-comments-c-cpp.md)已指定。 請參閱[建議的文件註解標記](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)如需將文件註解加入至原始碼的資訊。  
@@ -48,6 +43,6 @@ XML 文件產生器工具屬性頁公開 xdcmake.exe 的功能。 xdcmake.exe.xd
  **文件程式庫相依性**  
  如果您的專案具有相依性.lib 方案的專案中，您可以處理.xdc 檔從.lib 專案到目前專案的.xml 檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)   
  [屬性頁](../ide/property-pages-visual-cpp.md)

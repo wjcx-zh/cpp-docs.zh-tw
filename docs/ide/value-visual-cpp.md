@@ -1,13 +1,10 @@
 ---
-title: "&lt;值&gt;（Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: '&lt;值&gt;（Visual c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - value
 - <value>
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1621a8251bddb1d4c7d1bf3f00c4ccf3ea5242
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;值&gt;（Visual c + +）
 \<值 > 標記可讓您描述的屬性和屬性存取子方法。 請注意，當您使用 Visual Studio 整合式的開發環境中的程式碼精靈加入屬性，它會新增[\<摘要 >](../ide/summary-visual-cpp.md)新屬性的標記。 您接著應該手動新增 \<value> 標記，來描述屬性所代表的值。  
@@ -69,5 +64,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

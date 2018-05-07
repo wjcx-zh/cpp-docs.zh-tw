@@ -1,24 +1,19 @@
 ---
-title: "Ref 類別與結構 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: Ref 類別與結構 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: be0a8adbb2bf20e4f92edf16fa2217a7d2b40eab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 類別與結構 (C++/CX)
 C + + /CX 支援使用者定義*ref 類別*和*ref 結構*，和使用者定義*值類別*和*值結構*。 這些資料結構是主要的容器的 C + /CX 支援 Windows 執行階段類型系統。 其內容會根據某些特定規則，中繼資料中發出，這樣可讓他們在 Windows 執行階段元件和以 c + + 或其他語言撰寫的通用 Windows 平台應用程式之間傳遞。  
@@ -130,7 +125,7 @@ C + + /CX 支援使用者定義*ref 類別*和*ref 結構*，和使用者定義*
   
  [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [實值類別與結構](../cppcx/value-classes-and-structs-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   

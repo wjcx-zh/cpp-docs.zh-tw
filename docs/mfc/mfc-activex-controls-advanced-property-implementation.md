@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 進階屬性實作 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 進階屬性實作 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ac8b2cb1a9c8de43ecfbd2f4712d19750bb143a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控制項：進階屬性實作
 本文說明實作進階屬性中的 ActiveX 控制項的相關主題：  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [從屬性傳回的錯誤碼](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a>唯讀和唯寫屬性  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> 唯讀和唯寫屬性  
  加入屬性精靈 提供快速且輕鬆的方法，以實作控制項的唯讀或唯寫屬性。  
   
 #### <a name="to-implement-a-read-only-or-write-only-property"></a>若要實作唯讀或唯寫屬性  
@@ -69,17 +64,17 @@ ms.lasthandoff: 12/21/2017
   
  此程式碼範例會呼叫`SetNotSupported`如果`m_bReadOnlyMode`資料成員是**TRUE**。 如果**FALSE**，則屬性會設定新的值。  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a>從屬性傳回的錯誤碼  
+##  <a name="_core_returning_error_codes_from_a_property"></a> 從屬性傳回的錯誤碼  
  若要指出錯誤發生時嘗試取得或設定屬性，使用`COleControl::ThrowError`函式，其採用`SCODE`（狀態碼） 做為參數。 您可以使用預先定義的 `SCODE` 或自行定義一個。 取得一份預先定義`SCODE`s 和定義自訂指示`SCODE`s，請參閱[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)中發行項的 ActiveX 控制項： 進階主題。  
   
  針對最常見預先定義的 helper 函式存在`SCODE`s，例如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted)。  
   
 > [!NOTE]
->  `ThrowError`適用於做為傳回從錯誤中屬性的 Get 或 Set 函式或自動化方法。 這些只適用於適當的例外狀況處理常式會出現在堆疊上的時候。  
+>  `ThrowError` 適用於做為傳回從錯誤中屬性的 Get 或 Set 函式或自動化方法。 這些只適用於適當的例外狀況處理常式會出現在堆疊上的時候。  
   
  如需回報程式碼的其他區域中的例外狀況的詳細資訊，請參閱[colecontrol:: Fireerror](../mfc/reference/colecontrol-class.md#fireerror)和區段[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)文章 ActiveX 控制項： 進階主題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控制項： 屬性](../mfc/mfc-activex-controls-properties.md)   
  [MFC ActiveX 控制項： 方法](../mfc/mfc-activex-controls-methods.md)   

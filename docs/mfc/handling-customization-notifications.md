@@ -2,12 +2,9 @@
 title: 處理自訂告知 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBN_CUSTHELP
 - TBN_QUERYINSERT
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-customization-notifications"></a>處理自訂告知
 Windows 工具列通用控制項內建自訂功能 (包括系統定義的自訂對話方塊)，可讓使用者插入、刪除或重新排列工具列按鈕。 應用程式會判斷是否可以使用自訂功能，並控制使用者可自訂工具列的範圍。  
@@ -169,7 +164,7 @@ Windows 工具列通用控制項內建自訂功能 (包括系統定義的自訂�
  與通知相關聯的按鈕索引。  
   
  **tbButton**  
- `TBBUTTON`結構，其中包含與通知相關聯的工具列按鈕的相關資訊。  
+ `TBBUTTON` 結構，其中包含與通知相關聯的工具列按鈕的相關資訊。  
   
  **cchText**  
  按鈕文字中的字元計數。  
@@ -199,7 +194,7 @@ Windows 工具列通用控制項內建自訂功能 (包括系統定義的自訂�
   
 -   **TBN_TOOLBARCHANGE** 在使用者已自訂工具列控制項之後傳送。 指向包含通知訊息資訊之 **NMHDR** 結構的指標。 此處理常式不需要傳回任何特定值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

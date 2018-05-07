@@ -1,13 +1,10 @@
 ---
-title: "命令和控制項告知處理常式 |Microsoft 文件"
-ms.custom: 
+title: 命令和控制項告知處理常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - notifications [MFC], handlers for control
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 748bdd1a2ce6b94a2c935df94de68767ee36875e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e6492c6ecc4c21c5c978ad031fed7182f2acee4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>命令和控制項告知的處理常式
 沒有命令或控制項通知訊息的預設處理常式。 因此，您只能依照慣例為這些類別的訊息命名您的處理常式。 當您將命令或控制項通知對應到處理常式時，[屬性] 視窗會根據命令 ID 或控制通知碼建議一個名稱。 您可以接受建議的名稱、加以變更或予以取代。  
@@ -48,5 +43,5 @@ ms.lasthandoff: 12/21/2017
   
  兩種類別的訊息都不接受引數並且不會傳回值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告訊息處理函式](../mfc/declaring-message-handler-functions.md)

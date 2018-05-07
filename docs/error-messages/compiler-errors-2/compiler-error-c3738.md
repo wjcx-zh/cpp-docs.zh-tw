@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3738 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3738 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3738
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8105ab081b939998d72d1bf470fe2b1e92addac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bf54ba4114c0184871f1c79ca8f1757ae7e78b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3738"></a>編譯器錯誤 C3738
 'calling_convention': 明確具現化的呼叫慣例，必須符合要具現化的範本  

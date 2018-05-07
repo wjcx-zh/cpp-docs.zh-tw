@@ -1,13 +1,10 @@
 ---
-title: "命令處理常式的資料錄捲動 （MFC 資料存取） |Microsoft 文件"
-ms.custom: 
+title: 命令處理常式的資料錄捲動 （MFC 資料存取） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d3164cfd8a7d78191f2076637b51d96bb45f2293
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03dec2e3eff0f61db5f4c8b7573400a589615b02
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>記錄捲動的命令處理常式 (MFC 資料存取)
 [CRecordView](../mfc/reference/crecordview-class.md)類別會提供預設命令處理下列標準命令：  
@@ -44,5 +39,5 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  請務必為與標準記錄巡覽命令相關聯的任何使用者介面物件，使用這些標準命令 ID。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [支援資料錄檢視的巡覽](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

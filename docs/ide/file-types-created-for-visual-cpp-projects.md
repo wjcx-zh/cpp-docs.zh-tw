@@ -1,13 +1,10 @@
 ---
-title: "檔案類型為 Visual c + + 專案建立 |Microsoft 文件"
-ms.custom: 
+title: 檔案類型為 Visual c + + 專案建立 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d7b1523c8a61405224fc21701b5203e2cfb006
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>為 Visual C++ 專案建立的檔案類型
 本主題描述所有類型的檔案，該檔案與適用於傳統桌面應用程式的 Visual C + + 專案相關聯。 您的專案中包含的實際檔案取決於專案類型以及您使用精靈時選取的選項。  
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
  當您將項目加入專案時，您會將該項目加入該專案的所有組態中，不論項目是否可建置。 例如，如果您有名稱為 MyProject 的專案，加入項目會將其加入偵錯和發行專案組態。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)   
  [Visual c + + 專案類型](../ide/visual-cpp-project-types.md)   
  [其他語言的精靈支援](../ide/wizard-support-for-other-languages.md)

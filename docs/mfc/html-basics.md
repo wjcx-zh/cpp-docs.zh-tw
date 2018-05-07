@@ -1,29 +1,24 @@
 ---
-title: "HTML 的基本概念 |Microsoft 文件"
-ms.custom: 
+title: HTML 的基本概念 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 852a4894478d139013d70813316976a20e99dd41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="html-basics"></a>HTML 的基本概念
 大部分的瀏覽器有檢查您所瀏覽網頁的 HTML 原始檔的功能。 當您檢視原始碼時，您會看到一些 HTML (超文字標記語言) 標記，周圍以角括弧 (<>) 包圍，其中為文字。  
@@ -122,6 +117,6 @@ Life is good.
   
  [http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

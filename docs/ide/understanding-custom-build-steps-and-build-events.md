@@ -1,13 +1,10 @@
 ---
-title: "了解自訂建置步驟和建置事件 |Microsoft 文件"
-ms.custom: 
+title: 了解自訂建置步驟和建置事件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9abb7ff0b9a39656999e7a53b476056f7a5b1558
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a50c0cf224104f720a73a4830405e7114cda74ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自訂建置步驟和建置事件
 從在 Visual c + + 開發環境中，有三種基本方式，以自訂建置程序：  
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
  `custom build step on the project`和`post-build event`執行所有其他組建之後，依序處理完成。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Visual Studio 中建置 c + + 專案](../ide/building-cpp-projects-in-visual-studio.md)   
  [建置命令和屬性的一般巨集](../ide/common-macros-for-build-commands-and-properties.md)   
  [工具建置順序 對話方塊](http://msdn.microsoft.com/en-us/6204c5b1-7ce9-4948-9ff6-0268642ee14c)

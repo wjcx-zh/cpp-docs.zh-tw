@@ -1,12 +1,9 @@
 ---
-title: "vector:: end (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'vector:: end (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::end
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - end member [STL/CLR]
 ms.assetid: 21fcaf1b-7f14-4dc4-a312-fa30e631ea0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 55d4aac9d4607361ff896d8b2e24109719bf68d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e833aeb2473f02e926261e49e3fc67a9def82cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorend-stlclr"></a>vector::end (STL/CLR)
 指定受控制序列的結尾。  
@@ -88,7 +83,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector:: back (STL/CLR)](../dotnet/vector-back-stl-clr.md)   
  [vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)   

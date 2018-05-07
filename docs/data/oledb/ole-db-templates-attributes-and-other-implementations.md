@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 樣板、 屬性和其他實作 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 樣板、 屬性和其他實作 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: abdf0565db00b13c932366985c315c88d8d29f9e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ef9baf43ded1533eb7f4962db7344f9dc1def0ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 樣板、屬性和其他實作
 ## <a name="atl-ole-db-templates"></a>ATL OLE DB 樣板  
@@ -61,6 +56,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK 介面  
  在 OLE DB 範本不支援 OLE DB 功能的情況下，您需要使用 OLE DB 介面本身。 如需詳細資訊，請參閱[OLE DB 程式設計人員參考](https://msdn.microsoft.com/en-us/library/ms713643.aspx)Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
  [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)

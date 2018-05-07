@@ -1,13 +1,10 @@
 ---
-title: "架構 (MFC) |Microsoft 文件"
-ms.custom: 
+title: 架構 (MFC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c021b11809b3e6598e694fdaa46b7f829358e24f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd75d29ce907b089d698c066e5a6cb41fcae3281
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="framework-mfc"></a>架構 (MFC)
 您會使用 MFC 程式庫架構進行的工作有很大部分是基於一些主要類別和數個 Visual C++ 工具。 某些類別會封裝大部分的 Win32 應用程式開發介面 (API)。 其他類別會封裝應用程式概念 (例如文件、檢視和應用程式本身)。 而其餘的類別則會封裝 OLE 功能、ODBC 和 DAO 資料存取功能。  
@@ -60,5 +55,5 @@ ms.lasthandoff: 12/21/2017
   
  [視窗物件](../mfc/window-objects.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)

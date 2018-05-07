@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 提供者樣板的巨集 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 提供者樣板的巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - Provider Template macros (OLE DB)
 - OLE DB Provider Template macros
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2d8b6153f746a835724f224f924a2c05ac450121
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ab7611c49f625a36023b4e31bf6aff47ab16f156
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供者樣板的巨集
 OLE DB 樣板提供者巨集提供下列分類中的功能：  
@@ -70,7 +65,7 @@ OLE DB 樣板提供者巨集提供下列分類中的功能：
 |[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)|關聯類別的 GUID。|  
 |[END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)|結束標記的結構描述對應。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)   

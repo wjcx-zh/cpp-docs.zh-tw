@@ -2,11 +2,8 @@
 title: 函式內嵌問題 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97ffa56fc748eea8f65f5fe79c7a9defa7238f82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 670136a61d5991655a5d99e8257c6bcc907f2dfb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="function-inlining-problems"></a>函式內嵌問題
 如果您使用內嵌函式，您必須：  
@@ -67,7 +62,7 @@ int main() {
 }  
 ```  
   
- 如果您使用`#pragma inline_depth`編譯器指示詞，請確定您已設定的值為 2 或更高。 零值將會關閉內嵌。 也請確定您使用**/Ob1**或**/Ob2**編譯器選項。  
+ 如果您使用`#pragma inline_depth`編譯器指示詞，請確定您已設定的值為 2 或更高。 零值將會關閉內嵌。 也請確定您使用 **/Ob1**或 **/Ob2**編譯器選項。  
   
  混用不同的模組上的內嵌和非內嵌編譯選項可能有時會造成問題。 C + + 程式庫會透過函式內嵌為開啟 ([/Ob1](../../build/reference/ob-inline-function-expansion.md)或[/Ob2](../../build/reference/ob-inline-function-expansion.md)) 但描述該函式對應的標頭檔案已關閉內嵌 （未選項），您會收到錯誤 LNK2001。 函式不會內嵌於程式碼的標頭檔，但因為它們不在程式庫檔案中沒有任何位址，解析參考。  
   
@@ -104,5 +99,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [連結器工具錯誤 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

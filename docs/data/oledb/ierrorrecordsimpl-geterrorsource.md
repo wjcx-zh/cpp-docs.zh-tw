@@ -1,12 +1,9 @@
 ---
-title: IErrorRecordsImpl::GetErrorSource | Microsoft Docs
-ms.custom: 
+title: 'Ierrorrecordsimpl:: Geterrorsource |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IErrorRecordsImpl.GetErrorSource
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetErrorSource method
 ms.assetid: 5436f1ce-c5a4-403b-a62b-c58e70e5c925
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a06b19a75a00be3b8a6befbf3f26218127022025
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f076bb7c7d436e65473aadb197a90eae51b07fd4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ierrorrecordsimplgeterrorsource"></a>IErrorRecordsImpl::GetErrorSource
 取得從錯誤記錄中造成錯誤的原始程式碼。  
@@ -49,5 +44,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IErrorRecordsImpl 類別](../../data/oledb/ierrorrecordsimpl-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "應用程式和執行緒支援類別 |Microsoft 文件"
-ms.custom: 
+title: 應用程式和執行緒支援類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>應用程式和執行緒支援類別
 每個應用程式有只有一個應用程式物件。此物件會協調執行的程式中的其他物件，並衍生自`CWinApp`。  
   
  Microsoft Foundation Class (MFC) 程式庫支援應用程式內執行多個的執行緒。 所有應用程式必須有至少一個執行緒。所使用的執行緒程式`CWinApp`物件是這個主要執行緒。  
   
- `CWinThread`封裝作業系統執行緒功能的一部分。 若要讓使用多執行緒更容易，MFC 也提供同步處理提供 c + + 物件的介面，Win32 同步處理的物件類別。  
+ `CWinThread` 封裝作業系統執行緒功能的一部分。 若要讓使用多執行緒更容易，MFC 也提供同步處理提供 c + + 物件的介面，Win32 同步處理的物件類別。  
   
 ## <a name="application-and-thread-classes"></a>應用程式和執行緒類別  
  [CWinApp](../mfc/reference/cwinapp-class.md)  
@@ -81,6 +76,6 @@ ms.lasthandoff: 12/21/2017
  [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
  會維護最近使用過的 (MRU) 檔案清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

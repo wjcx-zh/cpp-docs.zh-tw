@@ -1,12 +1,9 @@
 ---
-title: __ll_lshift | Microsoft Docs
-ms.custom: 
+title: __ll_lshift |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __ll_lshift_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - ll_lshift intrinsic
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8aed34d31fe1675dc13d0c040c1a9f0b1f208e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 94cf50287c28fe530df939488c4e707d17aede03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft 特定的**  
@@ -57,7 +52,7 @@ unsigned __int64 __ll_lshift(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__ll_lshift`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__ll_lshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **標頭檔** \<intrin.h >  
   
@@ -97,7 +92,7 @@ int main()
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [__ll_rshift](../intrinsics/ll-rshift.md)   
  [__ull_rshift](../intrinsics/ull-rshift.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

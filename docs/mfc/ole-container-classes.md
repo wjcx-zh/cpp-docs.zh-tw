@@ -1,13 +1,10 @@
 ---
-title: "OLE 容器類別 |Microsoft 文件"
-ms.custom: 
+title: OLE 容器類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df809971ecf8bdd8700217cf6a1965e2973de754
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfdff6023beeedfa14d37e5b404fa3c223691b85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-container-classes"></a>OLE 容器類別
 容器應用程式會使用這些類別。 同時`COleLinkingDoc`和`COleDocument`管理集合的`COleClientItem`物件。 而不是衍生您的文件類別，從**CDocument**，您會從它衍生`COleLinkingDoc`或`COleDocument`，視您是否要支援的連結文件中內嵌的物件。  
@@ -61,6 +56,6 @@ ms.lasthandoff: 12/21/2017
  [COleException](../mfc/reference/coleexception-class.md)  
  因 OLE 處理失敗而產生的例外狀況。 容器和伺服器都使用這個類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

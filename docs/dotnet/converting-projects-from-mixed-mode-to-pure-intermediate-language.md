@@ -1,13 +1,10 @@
 ---
-title: "轉換專案從混合模式為純中繼語言 |Microsoft 文件"
-ms.custom: 
+title: 轉換專案從混合模式為純中繼語言 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>將專案從混合模式轉換為純中繼語言
 根據預設，所有的 Visual c + + CLR 專案連結至 C 執行階段程式庫的。 因此，這些專案分類為混合模式應用程式，因為 common language runtime （managed 程式碼） 為目標的程式碼與原生程式碼結合。 在編譯時就會編譯成中繼語言 (IL)，也稱為 Microsoft intermediate language (MSIL)。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
     4.  主控台應用程式，在**系統**專案屬性頁**連結器**，選取**子系統**欄位，然後將這變更為**主控台 （/SUBSYSTEM:CONSOLE)**。  
   
         > [!NOTE]
-        >  您沒有設定這個屬性，Windows Forms 應用程式，因為**子系統**欄位設定為**Windows (/ 子系統： WINDOWS)**預設。  
+        >  您沒有設定這個屬性，Windows Forms 應用程式，因為**子系統**欄位設定為**Windows (/ 子系統： WINDOWS)** 預設。  
   
     5.  在 stdafx.h，標記為註解所有`#include`陳述式。 例如，在主控台應用程式：  
   
@@ -104,4 +99,4 @@ ms.lasthandoff: 12/21/2017
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|表示 32 位元不帶正負號的整數 (Unsigned Integer)。|  
         |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|表示 64 位元不帶正負號的整數 (Unsigned Integer)。|  
         |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|平台專用的類型，用以代表指標或控點。|  
-        |[Void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|表示方法不會傳回值。也就是方法具有 void 傳回型別。|
+        |[void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|表示方法不會傳回值。也就是方法具有 void 傳回型別。|

@@ -1,13 +1,10 @@
 ---
-title: "在網際網路上的 ActiveX 控制項 |Microsoft 文件"
-ms.custom: 
+title: 在網際網路上的 ActiveX 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>網際網路上的 ActiveX 控制項
 ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開發可程式化軟體元件的主要架構，可用於各種不同的容器，包括網際網路上 COM 感知的 Web 瀏覽器。 所有 ActiveX 控制項都可以是網際網路控制項，並可將其功能加入現用文件或成為網頁的一部分。 網頁上的控制項可以使用指令碼彼此通訊。  
@@ -165,7 +160,7 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
  您實作[非同步 moniker](../mfc/asynchronous-monikers-on-the-internet.md)使用`CAsyncMonikerFile`類別。 不過，ActiveX 控制項可以使用 `CDataPathProperty` 類別 (衍生自 `CAsyncMonikerFile`)，來協助實作非同步控制項屬性。  
   
- ASYNDOWN 範例示範如何使用計時器設定非同步迴圈以讀取資料。 可從 Microsoft 下載中心下載在知識庫文件「如何：AsyncDown 示範非同步資料下載」(Q177244) 中說明的 ASYNDOWN  (如需從 Microsoft 下載中心下載檔案的詳細資訊，請參閱 Microsoft 知識庫「如何從線上服務取得 Microsoft 支援檔案 (Q119591)」一文)。您可以找到知識庫文件在[http://support.microsoft.com/support](http://support.microsoft.com/support)。  
+ ASYNDOWN 範例示範如何使用計時器設定非同步迴圈以讀取資料。 可從 Microsoft 下載中心下載在知識庫文件「如何：AsyncDown 示範非同步資料下載」(Q177244) 中說明的 ASYNDOWN  (如需從 Microsoft 下載中心下載檔案的詳細資訊，請參閱 Microsoft 知識庫「如何從線上服務取得 Microsoft 支援檔案 (Q119591)」一文)。您可以找到知識庫文件在[ http://support.microsoft.com/support ](http://support.microsoft.com/support)。  
   
  ASYNDOWN 中所使用的基本技巧是將設定的計時器**cdatapathproperty:: Ondataavailable**表示資料時使用。 當計時器收到訊息時，應用程式會讀入 128 位元組區塊的資料，並填入編輯控制項中。 如果資料在處理計時器訊息時無法使用，計時器就會關閉。 如果有更多資料延遲抵達，則 `OnDataAvailable` 會開啟計時器。  
   
@@ -211,7 +206,7 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

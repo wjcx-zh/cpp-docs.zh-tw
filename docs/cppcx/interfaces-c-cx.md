@@ -1,24 +1,19 @@
 ---
-title: "介面 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 介面 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa87713b49fe41dbdb7eb8f9e6382c8f78b51d0c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-ccx"></a>介面 (C++/CX)
 雖然 ref 類別最多可以繼承自一個具象基底類別，但它可以實作任意數目的介面類別。 介面類別 (或介面結構) 本身可以繼承 (或要求) 多個介面類別、可以多載其成員函式，也可以具有類型參數。  
@@ -99,7 +94,7 @@ ms.lasthandoff: 02/14/2018
   
 -   樣板化 ref 類別必須是私用類別。 這些類別可以實作泛型介面，也可以傳遞樣板參數*T*至泛型引數*T*。樣板化 ref 類別的每個具現化本身都是 ref 類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2488 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2488 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2488
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2488
 ms.assetid: cd435909-43e4-43c6-a57c-5d02468ef75f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49365295e09f9e4f1d2bf3319c80e40a1e562091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cb64ea76ae38901b2db14ec4b68bba9db69f39c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2488"></a>編譯器錯誤 C2488
 'identifier': 'naked' 只能套用至非成員函式定義  

@@ -1,29 +1,24 @@
 ---
-title: "如何： 自訂快速存取工具列 |Microsoft 文件"
-ms.custom: 
+title: 如何： 自訂快速存取工具列 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f67d46640a1a4fadc6750ca34b05910902679440
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0faa3a0fb66c4379824a6be190175b10e0415474
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>如何：自訂快速存取工具列
 快速存取工具列 (QAT) 是包含一組命令的可自訂工具列，命令是顯示在 [應用程式] 按鈕旁或類別索引標籤下。 下圖將顯示一般的快速存取工具列。  
@@ -63,6 +58,6 @@ ms.lasthandoff: 12/21/2017
   
 -   在**Ribbon 編輯器工具列**，按一下 **測試 Ribbon**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
 

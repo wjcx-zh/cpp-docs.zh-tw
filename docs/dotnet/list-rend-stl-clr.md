@@ -1,12 +1,9 @@
 ---
-title: "list:: rend (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'list:: rend (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::rend
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - rend member [STL/CLR]
 ms.assetid: b51030ad-1bca-42b0-b890-db47111d2921
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c69549fe4524b15f1fcac53d8a418ff346f3afb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19b3a1f7b6483bcf8fa839c8b20d1f261f096c2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listrend-stlclr"></a>list::rend (STL/CLR)
 指定反向受控制序列的結尾。  
@@ -88,7 +83,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list:: begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)   
  [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)   

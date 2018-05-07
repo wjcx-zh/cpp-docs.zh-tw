@@ -1,12 +1,9 @@
 ---
-title: "_rotr8，_rotr16 |Microsoft 文件"
-ms.custom: 
+title: _rotr8，_rotr16 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _rotr16
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 726cee6f898af306b8d0743344228e7d11d344f1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ca8c9bddac3f9e1a34d9b1a430cb97da86c40865
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rotr8-rotr16"></a>_rotr8, _rotr16
 **Microsoft 特定的**  
@@ -61,8 +56,8 @@ unsigned short _rotr16(
   
 |內建|架構|  
 |---------------|------------------|  
-|`_rotr8`|x86、 ARM、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
-|`_rotr16`|x86、 ARM、 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotr8`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotr16`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **標頭檔** \<intrin.h >  
   
@@ -111,6 +106,6 @@ Rotating unsigned short 0x12 right by 10 bits gives 0x480
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [_rotl8 _rotl16](../intrinsics/rotl8-rotl16.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

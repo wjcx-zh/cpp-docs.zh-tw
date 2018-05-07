@@ -1,12 +1,9 @@
 ---
-title: "C 執行階段錯誤 R6035 |Microsoft 文件"
-ms.custom: 
+title: C 執行階段錯誤 R6035 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6035
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: ecadf1793475e1cf5f354796c71a1894884e24e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6035"></a>C 執行階段錯誤 R6035
 依賴該安全性 cookie 的函式作用中時，Microsoft Visual c + + 執行階段程式庫，錯誤 R6035-此應用程式中的模組正在初始化模組的全域安全性 cookie。  呼叫 __security_init_cookie 稍早所示。  
@@ -81,5 +76,5 @@ void DllEntryHelper() {
 > [!NOTE]
 >  R6035 是錯誤訊息僅限 x86 所產生偵錯 CRT 的資訊，並只對結構化例外狀況處理，但條件所有平台，而且可用於所有形式的例外狀況的錯誤處理，例如 c + + EH。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Compiler Security Checks In Depth](http://go.microsoft.com/fwlink/p/?linkid=7260) (深入了解編譯器安全性檢查)

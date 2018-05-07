@@ -1,13 +1,10 @@
 ---
-title: "編譯器錯誤 C3229 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3229 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3229
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3229
 ms.assetid: f2d90923-aa8b-444f-ab10-1f37dbb864e1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24911d0ccd78788e37379dd7757fe97785cdd5a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55cf49ba63a0156565b36d654343cd96d827a5b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3229"></a>編譯器錯誤 C3229
 'type' : 不允許在泛型類型參數上間接取值  

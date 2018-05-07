@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 提供者樣板參考 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 提供者樣板參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 040e8a5e244b7978a2b9ead394e243207939655c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供者樣板參考
 類別和介面的 OLE DB 提供者樣板可以分為下列類別。 參考資料也包含下列資訊[OLE DB 提供者樣板巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)。  
@@ -120,6 +115,6 @@ ms.lasthandoff: 02/23/2018
   
  實作 OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)介面，加入記錄和資料成員從擷取記錄。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [OLE DB 範本](../../data/oledb/ole-db-templates.md)

@@ -1,29 +1,24 @@
 ---
-title: "新的專案，從現有程式碼偵錯設定 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 新的專案，從現有程式碼偵錯設定 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 dev_langs:
 - C++
 ms.assetid: 607339a8-9d33-458b-8095-dc73f374e29d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec7d357d53cb93ad5ba81c02fc3ccf1931cdd1cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b40bafe817ebf1dd25cc40115635b895502e0df8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>從現有的程式碼檔建立新專案精靈、指定偵錯組態設定
 使用 從現有的程式碼檔建立新專案精靈的這個頁面來指定偵錯組態專案設定。  
@@ -59,5 +54,5 @@ ms.lasthandoff: 12/21/2017
  **強制使用.NET 組件 (/ FU)**  
  指定要處理時建置新專案的.NET 組件。 如需詳細資訊，請參閱 [/FU (指定強制的 #using 檔)](../build/reference/fu-name-forced-hash-using-file.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從現有的程式碼檔建立新專案精靈、指定專案設定](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)

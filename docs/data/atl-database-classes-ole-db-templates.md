@@ -2,12 +2,9 @@
 title: ATL 資料庫類別 （OLE DB 樣板） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - database classes [C++], OLE DB
 - database classes [C++], ATL
 ms.assetid: 219766aa-e18a-405f-9e36-d7a0fdb31b2b
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ca7607c037cdb1f6a42a2267d64ef274d1041cb2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: fabced79232d17807d252da9dac5b066ddf69f25
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 資料庫類別 (OLE DB 樣板)
 Microsoft 提供數種實作的 OLE DB，一組 COM 介面，可讓您統一存取各種資訊來源和格式的資料。  OLE DB 已正式被取代。這份文件是針對開發人員會維護舊版的程式碼。 新的應用程式應該使用 ODBC 連接到 SQL 資料來源。
@@ -45,7 +40,7 @@ Microsoft 提供數種實作的 OLE DB，一組 COM 介面，可讓您統一存�
   
  如需詳細資訊，請參閱[OLE DB 程式設計](../data/oledb/ole-db-programming.md)和[OLE DB 程式設計人員指南](http://go.microsoft.com/fwlink/p/?linkid=121548)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立 OLE DB 消費者](../data/oledb/creating-an-ole-db-consumer.md)   
  [建立 OLE DB 提供者](../data/oledb/creating-an-ole-db-provider.md)   
  [OLE DB 消費者樣板參考](../data/oledb/ole-db-consumer-templates-reference.md)   

@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2030 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2030 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2030
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2030
 ms.assetid: 5806cead-64df-4eff-92de-52c9a3f5ee62
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c025fe57d411ae4744a10fe9bc062b336e189e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ceccc1088e32382167e7e6400360b30de07fde1d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2030"></a>編譯器錯誤 C2030
 具有 'protected private' 可及性的解構函式不可以是宣告為 'sealed' 之類別的成員  

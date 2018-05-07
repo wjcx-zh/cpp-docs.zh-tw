@@ -1,29 +1,24 @@
 ---
-title: "IDL 屬性、 加入屬性精靈 |Microsoft 文件"
-ms.custom: 
+title: IDL 屬性、 加入屬性精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.idlattributes
 dev_langs:
 - C++
 ms.assetid: 356ed666-79d0-4bd9-a5e7-cda679cbadbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ec158c117161c5a5c2ffd23cef0d5c79c312ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77931296d8d33337c4e630b7327a1ec8fd0a458f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idl-attributes-add-property-wizard"></a>加入屬性精靈、IDL 屬性
 使用 [加入屬性精靈] 的這個頁面來指定任何介面定義語言 (IDL) 設定的屬性。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |**restricted**|指定的屬性無法任意呼叫。 請參閱[限制](http://msdn.microsoft.com/library/windows/desktop/aa367157)中*MIDL 參考*。|  
 |`local`|指定的屬性不是遠端 MIDL 編譯器。 請參閱[本機](http://msdn.microsoft.com/library/windows/desktop/aa367071)中*MIDL 參考*。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入屬性](../ide/adding-a-property-visual-cpp.md)   
  [名稱、 加入屬性精靈](../ide/names-add-property-wizard.md)   
  [實作介面](../ide/implementing-an-interface-visual-cpp.md)   

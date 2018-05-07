@@ -1,13 +1,10 @@
 ---
-title: "列印和預覽列印 |Microsoft 文件"
-ms.custom: 
+title: 列印和預覽列印 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bedcf1ecf851ed6d9dd396ee6a82d6d2c058930b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a26bac196dbddc6c05df5850225d05f432bc566
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printing-and-print-preview"></a>列印和預覽列印
 MFC 透過類別的程式的文件支援列印和預覽列印[CView](../mfc/reference/cview-class.md)。 基本列印和預覽列印，只是覆寫檢視類別的[OnDraw](../mfc/reference/cview-class.md#ondraw)成員函式，您必須這麼做。 該函式可以繪製畫面上，印表機裝置內容中，實際的印表機上的檢視，或裝置內容，用於模擬您在螢幕上的印表機。  
@@ -44,5 +39,5 @@ MFC 透過類別的程式的文件支援列印和預覽列印[CView](../mfc/refe
   
 -   [範例](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)

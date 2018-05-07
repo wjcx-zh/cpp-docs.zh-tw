@@ -1,12 +1,9 @@
 ---
-title: CRowset::SetData | Microsoft Docs
-ms.custom: 
+title: 'Crowset:: Setdata |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>.SetData
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - SetData method
 ms.assetid: 68125142-8510-4132-9393-e39efd39c784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2d9f42397ffaa186bfd96db454251c687b634d69
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b8885c6e64fa7e7e22f6858d916a8e1afa8738d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetsetdata"></a>CRowset::SetData
 設定資料列的一個或多個資料行中的資料值。  
@@ -65,6 +60,6 @@ HRESULT SetData(int nAccessor) const throw();
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

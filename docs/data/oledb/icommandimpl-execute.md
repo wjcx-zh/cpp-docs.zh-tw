@@ -1,12 +1,9 @@
 ---
-title: ICommandImpl::Execute | Microsoft Docs
-ms.custom: 
+title: 'Icommandimpl:: Execute |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ICommandImpl::Execute
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Execute method
 ms.assetid: 033e0d4e-256b-4eed-9215-70e0bebb768c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d4d24bbb7f7aad94210672ce9bbf0cc0c7d5414
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 369c60c1f6407856fb204654794c214fd9ee8b57
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandimplexecute"></a>ICommandImpl::Execute
 執行命令。  
@@ -53,6 +48,6 @@ HRESULT Execute(IUnknown* pUnkOuter,
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICommandImpl 類別](../../data/oledb/icommandimpl-class.md)   
  [ICommandImpl::CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)

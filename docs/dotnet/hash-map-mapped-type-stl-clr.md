@@ -2,11 +2,8 @@
 title: 'hash_map:: mapped_type (STL/CLR) |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::mapped_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - mapped_type member [STL/CLR]
 ms.assetid: 00c8738f-7dd9-418d-9566-a2e05fd7e7f6
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0d0c0c35b28f05e2ec60673c48f736f92473122d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96fe75ad5e3b3f45bbea40d4f3bdcf9175795f70
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapmappedtype-stlclr"></a>hash_map::mapped_type (STL/CLR)
 與每個索引鍵關聯的對應值類型。  
@@ -77,7 +72,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_map:: key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)   
  [hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)

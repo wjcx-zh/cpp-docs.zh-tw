@@ -1,13 +1,10 @@
 ---
-title: "Managed 資源屬性頁 |Microsoft 文件"
-ms.custom: 
+title: Managed 資源屬性頁 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManagedResourceCompilerTool.ResourceFileName
 - VC.Project.VCManagedResourceCompilerTool.OutputFileName
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8683c9212a25a5b278405c2d2c31d7fc607d0f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-resources-property-page"></a>Managed 資源屬性頁
 可讓資源編譯器設定。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  如需有關如何存取詳細**受管理的資源**屬性頁上，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 RC （RC 命令列）](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [屬性頁](../ide/property-pages-visual-cpp.md)   
- [/ASSEMBLYRESOURCE （內嵌 Managed 的資源）](../build/reference/assemblyresource-embed-a-managed-resource.md)
+ [/ASSEMBLYRESOURCE (內嵌 Managed 資源)](../build/reference/assemblyresource-embed-a-managed-resource.md)

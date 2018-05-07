@@ -1,12 +1,9 @@
 ---
-title: "hash_multiset:: key_comp (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'hash_multiset:: key_comp (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::key_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_comp member [STL/CLR]
 ms.assetid: b9653dd2-20f3-4ef3-875f-265749839ba6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f57c9f93990be4a78c3b67a706d89f908a68ec0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d568d2ae23ad580266e0b51bc91cb97d4c88b7f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetkeycomp-stlclr"></a>hash_multiset::key_comp (STL/CLR)
 將複製兩個索引鍵的順序委派。  
@@ -91,7 +86,7 @@ compare(L'b', L'a') = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_multiset:: key_compare (STL/CLR)](../dotnet/hash-multiset-key-compare-stl-clr.md)   
  [hash_multiset::key_type (STL/CLR)](../dotnet/hash-multiset-key-type-stl-clr.md)

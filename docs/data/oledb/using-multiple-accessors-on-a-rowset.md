@@ -1,12 +1,9 @@
 ---
-title: "資料列集上使用多重存取子 |Microsoft 文件"
-ms.custom: 
+title: 資料列集上使用多重存取子 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - rowsets [C++], multiple accessors
 - accessors [C++], rowsets
 ms.assetid: 80d4dc5d-4940-4a28-a4ee-d8602f71d2a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41f5ae4381dd2505b2136e796c1b8832eaa75246
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a30108ec344091631094cd55f6a3bd3f0f4a4a54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>在資料列集上使用多重存取子
 有三個您要使用多重存取子的基本案例：  
@@ -170,6 +165,6 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)   
  [使用者資料錄](../../data/oledb/user-records.md)

@@ -1,29 +1,24 @@
 ---
-title: "使用安裝專案部署 Visual c + + 應用程式 |Microsoft 文件"
-ms.custom: 
+title: 使用安裝專案部署 Visual c + + 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbe75f1fd3ceb037e44716156556882f3f6d1cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 454507a3a3f33b43af0e50c25dab6703aa75a56b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>逐步解說：使用安裝專案部署 Visual C++ 應用程式
 描述如何使用安裝專案部署 Visual c + + 應用程式。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-deploy-an-application-by-using-a-setup-project"></a>若要使用安裝專案部署應用程式  
   
-1.  使用**MFC ApplicationWizard**來建立新的 Visual Studio 方案。 若要尋找精靈，從**新專案**對話方塊方塊中，展開  **Visual c + +**節點中，選取**MFC**，選取**MFC 應用程式**，輸入為專案命名，然後按一下**確定**。  
+1.  使用**MFC ApplicationWizard**來建立新的 Visual Studio 方案。 若要尋找精靈，從**新專案**對話方塊方塊中，展開  **Visual c + +** 節點中，選取**MFC**，選取**MFC 應用程式**，輸入為專案命名，然後按一下**確定**。  
   
 2.  將使用中的方案組態變更為**發行**。 從**建置**功能表上，選取**Configuration Manger**。 從**Configuration Manager**對話方塊中，選取**發行**從**現用方案組態**下拉式清單方塊。  
   
@@ -55,5 +50,5 @@ ms.lasthandoff: 12/21/2017
   
 8.  在沒有 Visual c + + 程式庫第二部電腦上執行安裝程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署範例](../ide/deployment-examples.md)

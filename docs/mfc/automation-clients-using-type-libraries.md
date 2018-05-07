@@ -1,13 +1,10 @@
 ---
-title: "Automation 用戶端： 使用類型程式庫 |Microsoft 文件"
-ms.custom: 
+title: Automation 用戶端： 使用類型程式庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MkTypLib
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63f6d05415b163e523589756ba2eb67ab2c61a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67fa0f5d164ae325caff576fb41695fc8689fda0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients-using-type-libraries"></a>Automation 用戶端：使用類型程式庫
 Automation 用戶端必須具有伺服器物件的屬性和方法的相關資訊，如果用戶端管理伺服器的物件。 屬性有資料類型。方法通常會傳回值，而且接受參數。 用戶端需要所有這些資料類型的相關資訊，才能以靜態方式將繫結至該伺服器物件類型。  
@@ -71,6 +66,6 @@ Automation 用戶端必須具有伺服器物件的屬性和方法的相關資訊
   
      精靈接著將要撰寫的程式碼，為您的分派類別，使用指定的類別和檔案名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Automation 用戶端](../mfc/automation-clients.md)
 

@@ -1,31 +1,26 @@
 ---
-title: "在類別或介面中的成員宣告 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 在類別或介面中的成員宣告 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - members, declaration syntax
 - class members, declaration syntax
 ms.assetid: 95d312a4-198b-46f0-b8f5-15253807c55e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 96a12f544babbf188c3718bcd49233472ad0d002
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d42ef381d175512fc9e1173a2187d5f77b408cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>在類別或介面中的成員宣告 (C++/CLI)
 屬性和運算子的宣告具有已廣泛地進行修改從 Managed Extensions for c + + Visual c + +，隱藏暴露在 Managed Extensions 設計的基礎實作詳細資料。 也已修改事件宣告。  
@@ -60,5 +55,5 @@ ms.lasthandoff: 12/21/2017
  [靜態 Const 整數連結不再是常值](../dotnet/static-const-int-linkage-is-no-longer-literal.md)  
  討論變更的方式`static const`連結整數類資料成員，以及如何明確地將使用新的常數宣告`literal`關鍵字。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)

@@ -1,13 +1,10 @@
 ---
-title: "文件和檢視類別，MFC 應用程式精靈建立 |Microsoft 文件"
-ms.custom: 
+title: 文件和檢視類別，MFC 應用程式精靈建立 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - application wizards [MFC], document/view classes created
 - view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cddf8b72e9927a298cbd39d4f9790965e4b8f74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b83886784970492da0c5e2a335dbe08119ecaae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>MFC 應用程式精靈所建立的文件和檢視類別
 「MFC 應用程式精靈」藉由建立基本架構文件和檢視類別，讓您在程式開發上能夠捷足先登。 您可以接著[將命令和訊息對應至這些類別](../mfc/reference/mapping-messages-to-functions.md)並且 Visual c + + 原始程式碼編輯器來撰寫其成員函式。  
@@ -35,6 +30,6 @@ ms.lasthandoff: 12/21/2017
   
  部分應用程式可能需要多個文件類別、檢視類別或框架視窗類別。 如需詳細資訊，請參閱[多重文件類型、 檢視和框架視窗](../mfc/multiple-document-types-views-and-frame-windows.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文件/檢視架構](../mfc/document-view-architecture.md)
 

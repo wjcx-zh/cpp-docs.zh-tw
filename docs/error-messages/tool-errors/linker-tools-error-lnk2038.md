@@ -1,10 +1,9 @@
 ---
-title: "連結器工具錯誤 LNK2038 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具錯誤 LNK2038 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2038
@@ -14,14 +13,13 @@ helpviewer_keywords:
 - LNK2038
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13f65f403cac43551b787abab15713fb9ffab618
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: f97f65bbe31e51e5083b34949b47a6963696ee37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2038"></a>連結器工具錯誤 LNK2038
 
@@ -47,7 +45,7 @@ Visual Studio 會定義下列符號以防止連結不相容的程式碼，此程
    表示應用程式或程式庫所使用的 C++標準程式庫和 C 執行階段版本。 使用 C++ 標準程式庫或 C 執行階段某個版本的程式碼與使用不同版本的程式碼不相容。 如需詳細資訊，請參閱 [/MD、/MT、/LD (使用執行階段程式庫)](../../build/reference/md-mt-ld-use-run-time-library.md)。
 
 - `_PPLTASKS_WITH_WINRT`  
-   表示會使用該程式碼[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)連結至使用不同設定所編譯的物件[/ZW](../../build/reference/zw-windows-runtime-compilation.md)編譯器選項。 (**/ZW**支援 C + + /CX。)使用或依賴 PPL 的程式碼必須使用相同的編譯**/ZW**其餘的應用程式中使用的設定。
+   表示會使用該程式碼[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)連結至使用不同設定所編譯的物件[/ZW](../../build/reference/zw-windows-runtime-compilation.md)編譯器選項。 (**/ZW**支援 C + + /CX。)使用或依賴 PPL 的程式碼必須使用相同的編譯 **/ZW**其餘的應用程式中使用的設定。
 
 請確認這些符號值在您的 Visual Studio 方案的專案中一致，而且它們也與應用程式所連結的程式碼和程式庫一致。
 

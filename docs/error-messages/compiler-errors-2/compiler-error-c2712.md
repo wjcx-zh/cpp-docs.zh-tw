@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2712 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2712 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2712
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee098890bac40c0c376c7623578c4e95e551a75b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c26c5d7a24c022cacf4c20687b2d8c58f7e9e342
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2712"></a>編譯器錯誤 C2712
 無法在需要物件回溯 (Object Unwinding) 的函式中使用 __try  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  如果您呼叫方法，使用宣告，也可能發生錯誤 C2712 [__event](../../cpp/event.md)關鍵字。 由於事件可能會用在多執行緒環境中，編譯器會產生程式碼會防止基礎事件物件的操作，然後將產生的程式碼包含在 SEH [try-finally 陳述式](../../cpp/try-finally-statement.md)。 因此，如果您呼叫事件方法，並以類型具有解構函式的引數傳值，就會發生錯誤 C2712。 此情況下的解決方案之一，是傳遞引數做為常數參考。  
   
 ## <a name="example"></a>範例  
- 如果您使用編譯也會發生 C2712 **/clr: pure**並宣告指標-對函式中的靜態陣列`__try`區塊。 靜態成員需要有編譯器才能下使用動態初始化**/clr: pure**，這表示 c + + 例外狀況處理。 然而，在 `__try` 區塊中不允許執行 C++ 例外狀況處理。  
+ 如果您使用編譯也會發生 C2712 **/clr: pure**並宣告指標-對函式中的靜態陣列`__try`區塊。 靜態成員需要有編譯器才能下使用動態初始化 **/clr: pure**，這表示 c + + 例外狀況處理。 然而，在 `__try` 區塊中不允許執行 C++ 例外狀況處理。  
   
  **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   

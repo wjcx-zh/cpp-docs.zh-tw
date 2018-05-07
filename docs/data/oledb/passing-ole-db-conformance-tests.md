@@ -1,12 +1,9 @@
 ---
-title: "傳遞 OLE DB 一致性測試 |Microsoft 文件"
-ms.custom: 
+title: 傳遞 OLE DB 一致性測試 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38f822496bd5b257a782e9e04047e164ac9681d8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 11677e6295956de768c7ebc0c113d775b066bb0c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通過 OLE DB 一致性測試
 若要讓提供者更為一致，Data Access SDK 會提供一組 OLE DB 一致性測試。 測試檢查您的提供者的所有層面，並提供您合理做為您提供者函式預期的保證。 您可以在 Microsoft Data Access SDK 中找到 OLE DB 一致性測試。 本節著重於您應該將一致性測試執行。 如需執行 OLE DB 一致性測試的詳細資訊，請參閱 SDK。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  您需要加入您的提供者，才能通過 OLE DB 一致性測試的一些驗證函式。  
   
- 此提供者需要兩個驗證常式。 第一個常式`CRowsetImpl::ValidateCommandID`，是您的資料列集類別的一部分。 它會呼叫期間建立的資料列集提供者樣板。 這個範例會使用這個常式告訴取用者不支援索引。 第一個呼叫的是`CRowsetImpl::ValidateCommandID`(請注意，提供者使用**_RowsetBaseClass** typedef 的介面對應中新增`CMyProviderRowset`中[書籤的提供者支援](../../data/oledb/provider-support-for-bookmarks.md)，因此不需要輸入該樣板引數很長的一行）。 接下來，傳回**DB_E_NOINDEX**如果索引參數不是**NULL** （這表示取用者想要使用我們的索引）。 如需命令 Id 的詳細資訊，請參閱 OLE DB 規格，並尋找**iopenrowset:: Openrowset**。  
+ 此提供者需要兩個驗證常式。 第一個常式`CRowsetImpl::ValidateCommandID`，是您的資料列集類別的一部分。 它會呼叫期間建立的資料列集提供者樣板。 這個範例會使用這個常式告訴取用者不支援索引。 第一個呼叫的是`CRowsetImpl::ValidateCommandID`(請注意，提供者使用 **_RowsetBaseClass** typedef 的介面對應中新增`CMyProviderRowset`中[書籤的提供者支援](../../data/oledb/provider-support-for-bookmarks.md)，因此不需要輸入該樣板引數很長的一行）。 接下來，傳回**DB_E_NOINDEX**如果索引參數不是**NULL** （這表示取用者想要使用我們的索引）。 如需命令 Id 的詳細資訊，請參閱 OLE DB 規格，並尋找**iopenrowset:: Openrowset**。  
   
  下列程式碼是**ValidateCommandID**驗證常式：  
   
@@ -86,5 +81,5 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
   
 -   依照正確的程式設計規則免費執行緒的程式設計 （也就是寫入鎖定）。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

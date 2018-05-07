@@ -1,13 +1,10 @@
 ---
-title: "轉散發 Visual c + + 檔案 |Microsoft 文件"
-ms.custom: 
+title: 轉散發 Visual c + + 檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45035847befc08f667c95238ede0604651c7e9b6
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-files"></a>轉散發 Visual C++ 檔案
 
@@ -40,10 +35,9 @@ ms.lasthandoff: 02/03/2018
 
 Visual C++ 可轉散發套件會安裝並註冊所有 Visual C++ 程式庫。 如果使用可轉散發套件，您必須在目標系統上執行該套件並設定為安裝應用程式的必要條件。 建議您使用這些套件進行部署，以便自動更新 Visual C++ 程式庫。 如需如何使用這些封裝的範例，請參閱[逐步解說： 部署 Visual c + + 應用程式所使用 Visual c + + 可轉散發套件](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。
 
-每個「Visual C++ 可轉散發套件」都會檢查電腦上是否有較新的版本存在。 若發現較新的版本，則不會安裝該套件。 從 Visual Studio 2015 開始，可轉散發套件會顯示錯誤訊息，說明安裝程式失敗。 如果使用執行封裝**/quiet/**旗標，任何錯誤訊息會顯示。 不論是哪一種情況，Microsoft 安裝程式都會記錄錯誤，而且錯誤結果會被傳回給呼叫者。 從 Visual Studio 2015 套件開始，可以避免這個錯誤，藉由檢查登錄，以了解是否已安裝較新版本。 目前安裝的版本會儲存在 HKEY_LOCAL_MACHINE\SOFTWARE [\Wow6432Node] \Microsoft\VisualStudio\\_vs 版本_\VC\Runtimes\\{x86 | x64 |ARM} 索引鍵，其中_vs 版本_版本號碼為 Visual Studio (14.0 Visual Studio 2015 和 Visual Studio 2017，因為已更新的 2017 可轉散發套件 2015年版本相容的二進位檔)，以及金鑰的位置ARM、 x86 或 x64 視平台的已安裝的 vcredist 版本而定。 (您不需要檢查 Wow6432Node 子機碼下，除非您用來檢視已安裝 x86 版本 RegEdit 封裝在 x64 平台。)REG_SZ 字串值中儲存的版本號碼**版本**，也可以在一組**主要**，**次要**， **Bld**，和**Rbld** REG_DWORD 值。 若要避免在安裝時的錯誤，您必須略過的可轉散發套件的安裝目前已安裝的版本較新時。
+每個「Visual C++ 可轉散發套件」都會檢查電腦上是否有較新的版本存在。 若發現較新的版本，則不會安裝該套件。 從 Visual Studio 2015 開始，可轉散發套件會顯示錯誤訊息，說明安裝程式失敗。 如果使用執行封裝 **/quiet/** 旗標，任何錯誤訊息會顯示。 不論是哪一種情況，Microsoft 安裝程式都會記錄錯誤，而且錯誤結果會被傳回給呼叫者。 從 Visual Studio 2015 套件開始，可以避免這個錯誤，藉由檢查登錄，以了解是否已安裝較新版本。 目前安裝的版本會儲存在 HKEY_LOCAL_MACHINE\SOFTWARE [\Wow6432Node] \Microsoft\VisualStudio\\_vs 版本_\VC\Runtimes\\{x86 | x64 |ARM} 索引鍵，其中_vs 版本_版本號碼為 Visual Studio (14.0 Visual Studio 2015 和 Visual Studio 2017，因為已更新的 2017 可轉散發套件 2015年版本相容的二進位檔)，以及金鑰的位置ARM、 x86 或 x64 視平台的已安裝的 vcredist 版本而定。 (您不需要檢查 Wow6432Node 子機碼下，除非您用來檢視已安裝 x86 版本 RegEdit 封裝在 x64 平台。)REG_SZ 字串值中儲存的版本號碼**版本**，也可以在一組**主要**，**次要**， **Bld**，和**Rbld** REG_DWORD 值。 若要避免在安裝時的錯誤，您必須略過的可轉散發套件的安裝目前已安裝的版本較新時。
 
-如果您使用的合併模組包含 Visual C++ DLL
-，則必須將它包含在您用來部署應用程式的 Windows Installer 套件 (或類似的安裝套件) 中。 如需詳細資訊，請參閱[所使用合併模組轉散發](../ide/redistributing-components-by-using-merge-modules.md)。 如需範例，請參閱[逐步解說： 部署 Visual c + + 應用程式所使用之安裝專案](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)，其中也會說明如何使用 InstallShield Limited Edition 建立安裝套件。
+如果您使用的合併模組包含 Visual C++ DLL，則必須將它包含在您用來部署應用程式的 Windows Installer 套件 (或類似的安裝套件) 中。 如需詳細資訊，請參閱[所使用合併模組轉散發](../ide/redistributing-components-by-using-merge-modules.md)。 如需範例，請參閱[逐步解說： 部署 Visual c + + 應用程式所使用之安裝專案](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)，其中也會說明如何使用 InstallShield Limited Edition 建立安裝套件。
 
 ## <a name="potential-run-time-errors"></a>可能的執行階段錯誤
 

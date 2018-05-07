@@ -1,13 +1,10 @@
 ---
-title: "使用規則運算式驗證格式 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 使用規則運算式驗證格式 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 225775c3-3efc-4734-bde2-1fdf73e3d397
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6e67b6de0b7769322d0b7f1176245c8f68634afb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59a553ac2d58f9304fce3961aa8212c33b26643a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>如何：使用規則運算式驗證資料格式 (C++/CLI)
-下列程式碼範例示範如何使用規則運算式確認字串的格式。 在下列程式碼範例中，字串應該包含有效的電話號碼。 下列程式碼範例會使用字串"\d{3}-\d{3}-\d{4}"，指出每個欄位代表有效的電話號碼。 在字串"d"表示數字，和"d"後面的引數指出必須要有的數字的數目。 在此情況下，數字，才能以破折號分隔。  
+下列程式碼範例示範如何使用規則運算式確認字串的格式。 在下列程式碼範例中，字串應該包含有效的電話號碼。 下列程式碼範例會使用字串"\d{3}-\d{3}-\d{4}"來指出每個欄位代表有效的電話號碼。 在字串"d"表示數字，和"d"後面的引數指出必須要有的數字的數目。 在此情況下，數字，才能以破折號分隔。  
   
 ## <a name="example"></a>範例  
   
@@ -70,6 +65,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [.NET Framework 規則運算式](/dotnet/standard/base-types/regular-expressions)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

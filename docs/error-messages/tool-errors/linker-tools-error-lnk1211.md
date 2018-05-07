@@ -1,9 +1,8 @@
 ---
-title: "連結器工具錯誤 LNK1211 |Microsoft 文件"
+title: 連結器工具錯誤 LNK1211 |Microsoft 文件
 ms.date: 12/05/2017
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1211
@@ -14,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 607400eb-4180-4892-817f-eedfa628af61
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51150fb2a57f48f04cca97e5f16fe1a28ead2c50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57948556ae7b94b9a1788b7cb4453646b5b504f1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1211"></a>連結器工具錯誤 LNK1211
 
@@ -29,7 +27,7 @@ ms.lasthandoff: 12/21/2017
 
 *Filename*使用編譯的目的檔[/Yc](../../build/reference/yc-create-precompiled-header-file.md)、 LINK 命令中未指定，或已被覆寫。
 
-如果您要建立偵錯程式庫使用先行編譯標頭，並指定**/Yc**和[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)，Visual c + + 產生先行編譯的物件檔案包含偵錯資訊。 只有當您先行編譯的物件檔儲存在文件庫時，發生錯誤、 使用程式庫來建置可執行映像，和所參考的物件檔案具有不到任何函式的先行編譯的物件檔案會定義可轉移的參考。
+如果您要建立偵錯程式庫使用先行編譯標頭，並指定 **/Yc**和[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)，Visual c + + 產生先行編譯的物件檔案包含偵錯資訊。 只有當您先行編譯的物件檔儲存在文件庫時，發生錯誤、 使用程式庫來建置可執行映像，和所參考的物件檔案具有不到任何函式的先行編譯的物件檔案會定義可轉移的參考。
 
 有兩種方法可以解決此問題：
 
@@ -37,4 +35,4 @@ ms.lasthandoff: 12/21/2017
 
 - 指定[/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)和傳遞的任意字串，名稱，當您建立不包含任何函式定義的先行編譯標頭檔。 這會指示編譯器建立先行編譯的目的檔中的符號，並發出每個使用先行編譯標頭檔與先行編譯的物件檔案相關聯的物件檔案中該符號的參考。
 
-當您編譯同名的模組**/Yc**和**/Yl**，類似的編譯器建立符號`__@@_PchSym_@00@...@symbol_name`，其中的省略符號 （...） 代表編譯器產生的字元字串，並將其儲存在物件的模組。 指定的符號，這會導致連結器包含此物件模組和程式庫的偵錯資訊是指您此先行編譯標頭使用編譯任何原始程式檔。
+當您編譯同名的模組 **/Yc**和 **/Yl**，類似的編譯器建立符號`__@@_PchSym_@00@...@symbol_name`，其中的省略符號 （...） 代表編譯器產生的字元字串，並將其儲存在物件的模組。 指定的符號，這會導致連結器包含此物件模組和程式庫的偵錯資訊是指您此先行編譯標頭使用編譯任何原始程式檔。

@@ -1,13 +1,10 @@
 ---
-title: "變更清單控制項樣式 |Microsoft 文件"
-ms.custom: 
+title: 變更清單控制項樣式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CListCtrl class [MFC], styles
 - CListCtrl class [MFC], changing styles
 ms.assetid: be74a005-0795-417c-9056-f6342aa74b26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6758cce9ab42c0dea490dd8ac9803588edceac5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9d93511ad4f4ca835e09b6eaa3f612f0888e844
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changing-list-control-styles"></a>變更清單控制項樣式
 您可以變更清單控制項的視窗樣式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在任何時間之後建立它。 藉由變更視窗樣式，您可以變更的檢視控制項使用的類型。 比方說，若要模擬 [總管] 中，您可能會提供功能表項目或工具列按鈕控制項不同的檢視之間的切換： 圖示檢視、 清單檢視中，等等。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  工作的動態顯示選取項目，您必須擁有  **LVS_EX_ONECLICKACTIVATE**或**LVS_EX_TWOCLICKACTIVATE**開啟。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

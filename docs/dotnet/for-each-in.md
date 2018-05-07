@@ -1,12 +1,9 @@
 ---
-title: "針對每個，在 |Microsoft 文件"
-ms.custom: 
+title: 針對每個，在 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5dab51168b656422ddcf2c317a7f7fee1faf162e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ab5f7309da1a037f7066d44815cafc934b162cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="for-each-in"></a>for each, in
 逐一查看陣列或集合。 此非標準關鍵字在 C++/CLI 和原生 C++ 專案中皆可用。 但是，不建議使用。 請考慮使用標準[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)改為。  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  *陳述式*陣列或集合中每個元素會執行。 在完成集合中所有項目的反覆項目之後，程式控制權會轉移到 `for each` 區塊之後的下一個陳述式。  
   
- `for each`和`in`是[內容相關性關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ `for each` 和`in`是[內容相關性關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
  如需詳細資訊：  
   
@@ -127,7 +122,7 @@ Testing
  *運算式*  
  Managed 陣列運算式或集合。 集合項目必須如此，編譯器可以將它從轉換<xref:System.Object>至*識別碼*型別。  
   
- *運算式*評估實作的類型為<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定義的類型`GetEnumerator`其中一個傳回類型的方法實作<xref:System.Collections.IEnumerator>或宣告所有中所定義的方法`IEnumerator`.  
+ *運算式*評估實作的類型為<xref:System.Collections.IEnumerable>， <xref:System.Collections.Generic.IEnumerable%601>，或定義的類型`GetEnumerator`其中一個傳回類型的方法實作<xref:System.Collections.IEnumerator>宣告所有中所定義的方法或`IEnumerator`.  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
@@ -168,5 +163,5 @@ abcd
 Testing   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

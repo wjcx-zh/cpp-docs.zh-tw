@@ -1,12 +1,9 @@
 ---
-title: "logical_and (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: logical_and (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::logical_and
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - logical_and function [STL/CLR]
 ms.assetid: ae103802-11e0-4060-a4f3-4f6fdc209e7c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 62707fbcb0fd78c019fea886f4975973abbcc5aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 72f14aca5c4c2649475482cb8417e23ca2eae35c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
 此範本類別描述函式，呼叫時，則傳回 true 的第一個引數和第二個測試為 true 時，才。 您可以使用它指定其引數類型方面的函式物件。  
@@ -132,5 +127,5 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)

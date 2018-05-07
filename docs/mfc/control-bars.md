@@ -1,13 +1,10 @@
 ---
-title: "控制列 |Microsoft 文件"
-ms.custom: 
+title: 控制列 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3550043e5b85247d4188c830873099c6ea9831a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-bars"></a>控制列
 「控制列」是工具列、狀態列和對話方塊列的一般名稱。 MFC 類別`CToolBar`， `CStatusBar`， `CDialogBar`， `COleResizeBar`，和**CReBar**衍生自類別[CControlBar](../mfc/reference/ccontrolbar-class.md)，它會實作它們的一般功能。  
@@ -74,5 +69,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="rebars"></a>Rebar  
  A [rebar](../mfc/using-crebarctrl.md)是提供 rebar 控制項的停駐、 配置、 狀態和持續性資訊的控制列。 Rebar 物件可以包含各種子視窗 (通常是其他控制項)，包括編輯方塊、工具列和清單方塊。 Rebar 物件可以在指定的點陣圖上顯示其子視窗。 按一下或拖曳它的移駐夾列即可自動或手動調整其大小。 請參閱類別[CReBar](../mfc/reference/crebar-class.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)

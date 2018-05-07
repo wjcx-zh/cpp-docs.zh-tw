@@ -1,13 +1,10 @@
 ---
-title: "Automation 伺服程式： 物件存留期問題 |Microsoft 文件"
-ms.custom: 
+title: Automation 伺服程式： 物件存留期問題 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9fab7af74dee482c5e8dffb327da9c037796fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e27812c20a64f5472c29a66298bcdec30bf4ef2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Automation 伺服程式：物件存留期問題
 當 Automation 用戶端建立或啟用 OLE 項目時，伺服器會傳遞該物件的指標給用戶端。 在用戶端建立透過呼叫 OLE 函式物件的參考[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)。 這個參考是作用中直到用戶端呼叫[Iunknown](http://msdn.microsoft.com/library/windows/desktop/ms682317)。 (以 MFC 程式庫的 OLE 類別撰寫的用戶端應用程式不需要建立這些呼叫；架構也是如此)。這個 OLE 系統和伺服器本身可能會建立對物件的參考。 只要物件的外部參考仍然有效，伺服器就不應終結物件。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  在 Windows SDK 中，請參閱`IUnknown::AddRef`和`IUnknown::Release`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Automation 伺服程式](../mfc/automation-servers.md)   
  [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
 

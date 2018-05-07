@@ -1,30 +1,25 @@
 ---
-title: "OLE DB 架構設計問題 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 架構設計問題 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cfb6b8ff4941aff1271662c27dddd509b023c55
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 75d996416e92ded920f45d3352c6478dd8c67a86
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 架構設計問題
 啟動 OLE DB 應用程式之前，您應該考慮下列問題：  
@@ -53,6 +48,6 @@ ms.lasthandoff: 02/23/2018
   
  當您執行搜尋時，輸入關鍵字的組合最適合您的案例。例如： 如果您使用 ADO 物件具有 OLE DB 提供者，再試一次的布林值搜尋與**ADO 和 「 OLE DB 」**。 如果您想要將舊版的 DAO 程式碼移轉到 ODBC，選取 「 所有文字 」，並指定字串，例如**移轉 DAO**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
  [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)

@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 建置專案 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建置專案 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d7a4bf7e4b3fd519911a2a127ec0ac2723b630
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-building-a-project-c"></a>逐步解說：建置專案 (C++)
 在這個逐步解說中，您要刻意在程式碼中加入 Visual C++ 語法錯誤，以便了解編譯錯誤的樣貌及其修正方式。 當您編譯專案時，會有錯誤訊息指出發生了什麼問題以及發生問題的位置。  
@@ -66,8 +61,8 @@ ms.lasthandoff: 12/21/2017
     ```  
   
 ## <a name="next-steps"></a>後續步驟  
- **上一步：** [逐步解說： 使用專案和方案 （c + +）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124;**下一步：**[逐步解說： 測試專案 （c + +）](../ide/walkthrough-testing-a-project-cpp.md)  
+ **上一步：** [逐步解說： 使用專案和方案 （c + +）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **下一步：**[逐步解說： 測試專案 （c + +）](../ide/walkthrough-testing-a-project-cpp.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)

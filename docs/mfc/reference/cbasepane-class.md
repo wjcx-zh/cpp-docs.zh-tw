@@ -1,12 +1,9 @@
 ---
-title: "CBasePane 類別 |Microsoft 文件"
-ms.custom: 
+title: CBasePane 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBasePane
@@ -175,17 +172,15 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c077f18fb9536e615685455e7bfc6fd896c0cc81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cbd24042e7f309a28cea5e72b6a134f3205e541
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbasepane-class"></a>CBasePane 類別
 MFC 中的所有窗格的基底類別。  
@@ -211,7 +206,7 @@ class CBasePane : public CWnd
 |----------|-----------------|  
 |`CBasePane::accHitTest`|由架構呼叫以擷取畫面中給定點的子項目或子物件。 (覆寫[CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest)。)|  
 |`CBasePane::accLocation`|由架構呼叫以擷取目前畫面位置指定的物件。 (覆寫[CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation)。)|  
-|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane`不使用這個方法。|  
+|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` 不使用這個方法。|  
 |`CBasePane::accSelect`|由架構呼叫以修改選取或移動指定物件的鍵盤焦點。 (覆寫[CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect)。)|  
 |[CBasePane::AddPane](#addpane)|將窗格加入至停駐的管理員。|  
 |[Cbasepane:: Adjustdockinglayout](#adjustdockinglayout)|重新導向至呼叫停駐的管理員，以調整停駐的配置。|  
@@ -292,11 +287,11 @@ class CBasePane : public CWnd
 |[CBasePane::OnMovePaneDivider](#onmovepanedivider)|這個方法目前未使用。|  
 |[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|建置已窗格的清單功能表時由架構呼叫。|  
 |[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|從其父迷你框架視窗中移除一個窗格時，由架構呼叫。|  
-|[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane`不使用這個方法。|  
+|[Cbasepane:: Onsetaccdata](#onsetaccdata)|`CBasePane` 不使用這個方法。|  
 |`CBasePane::OnUpdateCmdUI`|在內部使用。|  
 |[CBasePane::PaneFromPoint](#panefrompoint)|傳回包含指定的點的窗格。|  
 |`CBasePane::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 和 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
-|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane`不使用這個方法。|  
+|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` 不使用這個方法。|  
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|取消登錄 窗格，並從停駐的管理員在清單中移除。|  
 |[CBasePane::SaveState](#savestate)|將窗格的狀態儲存至登錄。|  
 |[CBasePane::SelectDefaultFont](#selectdefaultfont)|選取指定的裝置內容的預設字型。|  
@@ -327,15 +322,15 @@ class CBasePane : public CWnd
   
 -   當您建立一個窗格時，您可以套用數個新的樣式：  
   
-    - `AFX_CBRS_FLOAT`讓窗格浮動。  
+    - `AFX_CBRS_FLOAT` 讓窗格浮動。  
   
-    - `AFX_CBRS_AUTOHIDE`啟用自動隱藏模式。  
+    - `AFX_CBRS_AUTOHIDE` 啟用自動隱藏模式。  
   
-    - `AFX_CBRS_CLOSE`可讓即將關閉 （隱藏） 窗格。  
+    - `AFX_CBRS_CLOSE` 可讓即將關閉 （隱藏） 窗格。  
   
      這些是您可以結合的位元 OR 運算的旗標。  
   
- `CBasePane`實作下列虛擬布林方法，以反映這些旗標： [cbasepane:: Canbeclosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 您可以在來自訂其行為的衍生類別中覆寫這些程式。  
+ `CBasePane` 實作下列虛擬布林方法，以反映這些旗標： [cbasepane:: Canbeclosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 您可以在來自訂其行為的衍生類別中覆寫這些程式。  
   
 -   您可以藉由覆寫自訂停駐行為[cbasepane:: Canacceptpane](#canacceptpane)。 傳回您窗格`FALSE`從這個方法，以防止停駐到另一個窗格。  
   
@@ -368,8 +363,8 @@ class CBasePane : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxbasepane.h  
   
-##  <a name="accnotifyobjectfocusevent"></a>CBasePane::AccNotifyObjectFocusEvent  
- `CBasePane`不使用這個方法。  
+##  <a name="accnotifyobjectfocusevent"></a>  CBasePane::AccNotifyObjectFocusEvent  
+ `CBasePane` 不使用這個方法。  
   
 ```  
 virtual void AccNotifyObjectFocusEvent(int);
@@ -379,7 +374,7 @@ virtual void AccNotifyObjectFocusEvent(int);
  [輸入] `int`  
  未使用。  
   
-##  <a name="addpane"></a>CBasePane::AddPane  
+##  <a name="addpane"></a>  CBasePane::AddPane  
  將窗格加入至停駐的管理員。  
   
 ```  
@@ -388,14 +383,14 @@ void AddPane(CBasePane* pBar);
   
 ### <a name="parameters"></a>參數  
  [輸入] `pBar`  
-  窗格來加入指標。  
+ 窗格來加入指標。  
   
 ### <a name="remarks"></a>備註  
  這是便利的方法，將窗格新增到停駐的管理員。 使用此方法，讓您不必撰寫程式碼，可用來分析父框架的類型。  
   
  如需詳細資訊，請參閱[CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md)和[CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane)。  
   
-##  <a name="adjustdockinglayout"></a>Cbasepane:: Adjustdockinglayout  
+##  <a name="adjustdockinglayout"></a>  Cbasepane:: Adjustdockinglayout  
  重新導向至呼叫停駐的管理員，以調整停駐的配置。  
   
 ```  
@@ -411,7 +406,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
   
  如需詳細資訊，請參閱[CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)  
   
-##  <a name="adjustlayout"></a>Cbasepane:: Adjustlayout  
+##  <a name="adjustlayout"></a>  Cbasepane:: Adjustlayout  
  由架構呼叫以調整顯示窗格的內部配置。  
   
 ```  
@@ -421,7 +416,7 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>備註  
  以調整其內部的版面配置 窗格時，架構會呼叫這個方法。 基底實作沒有任何作用。  
   
-##  <a name="calcfixedlayout"></a>Cbasepane:: Calcfixedlayout  
+##  <a name="calcfixedlayout"></a>  Cbasepane:: Calcfixedlayout  
  計算的控制列的水平大小。  
   
 ```  
@@ -443,7 +438,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>備註  
  請參閱 < 備註 > 一節中[CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)  
   
-##  <a name="canacceptpane"></a>Cbasepane:: Canacceptpane  
+##  <a name="canacceptpane"></a>  Cbasepane:: Canacceptpane  
  判斷另一個窗格是否可以固定到窗格。  
   
 ```  
@@ -455,7 +450,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
  若要停駐窗格的指標。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果可接受另一個窗格。否則`FALSE`。  
+ `TRUE` 如果可接受另一個窗格。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法之前所指定窗格停駐於`pBar`到目前的窗格。  
@@ -464,7 +459,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  預設實作會傳回 `FALSE`。  
   
-##  <a name="canautohide"></a>CBasePane::CanAutoHide  
+##  <a name="canautohide"></a>  CBasePane::CanAutoHide  
  判斷窗格是否支援自動隱藏模式。  
   
 ```  
@@ -472,7 +467,7 @@ virtual BOOL CanAutoHide() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果此窗格支援自動隱藏模式，否則`FALSE`。  
+ `TRUE` 如果此窗格支援自動隱藏模式，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫此函式可判斷窗格是否支援自動隱藏模式。  
@@ -481,7 +476,7 @@ virtual BOOL CanAutoHide() const;
   
  預設實作會檢查`AFX_CBRS_AUTOHIDE`旗標。 覆寫此方法以自訂此行為衍生類別中。  
   
-##  <a name="canbeattached"></a>CBasePane::CanBeAttached  
+##  <a name="canbeattached"></a>  CBasePane::CanBeAttached  
  決定是否窗格可以停駐於另一個窗格或框架視窗。  
   
 ```  
@@ -489,12 +484,12 @@ virtual BOOL CanBeAttached() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果另一個窗格或框架視窗，可以停駐窗格，否則`FALSE`。  
+ `TRUE` 如果另一個窗格或框架視窗，可以停駐窗格，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  預設實作會傳回 `FALSE`。 若要啟用或停用的功能，而不需呼叫停駐在衍生類別中置換此方法[CBasePane::EnableDocking](#enabledocking)。  
   
-##  <a name="canbeclosed"></a>Cbasepane:: Canbeclosed  
+##  <a name="canbeclosed"></a>  Cbasepane:: Canbeclosed  
  決定是否可以關閉窗格。  
   
 ```  
@@ -502,7 +497,7 @@ virtual BOOL CanBeClosed() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格可以關閉。否則`FALSE`。  
+ `TRUE` 如果窗格可以關閉。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法來判斷是否可以關閉窗格。 如果此方法會傳回`TRUE`、**關閉**按鈕會加入到窗格的標題列或窗格浮動窗格，窗格的迷你框架的標題列。  
@@ -511,7 +506,7 @@ virtual BOOL CanBeClosed() const;
   
  預設實作會檢查`AFX_CBRS_CLOSE`旗標。  
   
-##  <a name="canbedocked"></a>CBasePane::CanBeDocked  
+##  <a name="canbedocked"></a>  CBasePane::CanBeDocked  
  決定是否可以到另一個窗格停駐窗格。  
   
 ```  
@@ -523,7 +518,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
  指標，另一個窗格。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果此窗格可停駐到另一個窗格。，否則`FALSE`。  
+ `TRUE` 如果此窗格可停駐到另一個窗格。，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法之前所指定窗格停駐於`pDockBar`到目前的窗格。  
@@ -532,7 +527,7 @@ virtual BOOL CanBeDocked(CBasePane* pDockBar) const;
   
  預設實作會傳回 `FALSE`。  
   
-##  <a name="canberesized"></a>CBasePane::CanBeResized  
+##  <a name="canberesized"></a>  CBasePane::CanBeResized  
  決定是否可以調整窗格的大小。  
   
 ```  
@@ -540,12 +535,12 @@ virtual BOOL CanBeResized() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果可以調整窗格的大小;否則， `FALSE`。  
+ `TRUE` 如果可以調整窗格的大小;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會檢查`AFX_CBRS_RESIZE`旗標，指定預設會在`CBasePane::OnCreate`。 如果未指定這個旗標，停駐的管理員旗標，為內部不可而不是它的停駐窗格。  
   
-##  <a name="canbetabbeddocument"></a>CBasePane::CanBeTabbedDocument  
+##  <a name="canbetabbeddocument"></a>  CBasePane::CanBeTabbedDocument  
  指定窗格是否可以轉換成 MDI 索引標籤式文件。  
   
 ```  
@@ -553,12 +548,12 @@ virtual BOOL CanBeTabbedDocument() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格可以轉換成索引標籤式文件。否則， `FALSE`。 `CBasePane::CanBeTabbedDocument` 永遠傳回 `FALSE`。  
+ `TRUE` 如果窗格可以轉換成索引標籤式文件。否則， `FALSE`。 `CBasePane::CanBeTabbedDocument` 永遠傳回 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  只有物件的特定`CBasePane`-衍生型別，例如[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)，可以轉換成索引標籤式文件。  
   
-##  <a name="canfloat"></a>CBasePane::CanFloat  
+##  <a name="canfloat"></a>  CBasePane::CanFloat  
  決定是否可以浮動窗格。  
   
 ```  
@@ -566,7 +561,7 @@ virtual BOOL CanFloat() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果可以浮動窗格;，否則`FALSE`。  
+ `TRUE` 如果可以浮動窗格;，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法來判斷是否可以浮動窗格。  
@@ -578,7 +573,7 @@ virtual BOOL CanFloat() const;
   
  預設實作會檢查`AFX_CBRS_FLOAT`樣式。  
   
-##  <a name="canfocus"></a>CBasePane::CanFocus  
+##  <a name="canfocus"></a>  CBasePane::CanFocus  
  指定窗格是否能夠接收焦點。  
   
 ```  
@@ -586,14 +581,14 @@ virtual BOOL CanFocus() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格可以接收焦點。否則`FALSE`。  
+ `TRUE` 如果窗格可以接收焦點。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法來控制焦點在衍生類別中。 例如，因為工具列無法接收焦點，這個方法會傳回`FALSE`當工具列物件上呼叫它。  
   
  架構會嘗試將輸入的焦點設定停駐或浮動窗格時。  
   
-##  <a name="copystate"></a>CBasePane::CopyState  
+##  <a name="copystate"></a>  CBasePane::CopyState  
  將複製給定窗格的狀態。  
   
 ```  
@@ -607,7 +602,7 @@ virtual void CopyState(CBasePane* pOrgBar);
 ### <a name="remarks"></a>備註  
  這個方法會複製狀態從`pOrgBar`到這個窗格。  
   
-##  <a name="createdefaultminiframe"></a>CBasePane::CreateDefaultMiniframe  
+##  <a name="createdefaultminiframe"></a>  CBasePane::CreateDefaultMiniframe  
  如果可以浮動窗格，這個方法會為它建立迷你框架視窗。  
   
 ```  
@@ -626,7 +621,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
   
  預設實作會傳回 `NULL`。  
   
-##  <a name="createex"></a>Cbasepane:: Createex  
+##  <a name="createex"></a>  Cbasepane:: Createex  
  建立窗格控制項。  
   
 ```  
@@ -668,10 +663,10 @@ virtual BOOL CreateEx(
  窗格樣式旗標。  
   
  [輸入] `pContext`  
- 指標`CcreateContext`  
+ 指標 `CcreateContext`  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果成功; 建立窗格否則`FALSE`。  
+ `TRUE` 如果成功; 建立窗格否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  建立類別的視窗`lpszClassName`。 如果您指定`WS_CAPTION`，這個方法會清除`WS_CAPTION`樣式位元和集合`CBasePane::m_bHasCaption`至`TRUE`，因為程式庫不支援具有字幕的窗格。  
@@ -692,7 +687,7 @@ virtual BOOL CreateEx(
   
  若要使用新的樣式，來指定這些資源中`dwControlBarStyle`。  
   
-##  <a name="dockpane"></a>Cbasepane:: Dockpane  
+##  <a name="dockpane"></a>  Cbasepane:: Dockpane  
  另一個窗格或框架視窗停駐窗格。  
   
 ```  
@@ -713,14 +708,14 @@ virtual BOOL DockPane(
  指定的停駐的方法。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功; 停駐控制列，否則， `FALSE`。  
+ `TRUE` 如果已成功; 停駐控制列，否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  呼叫此函式窗格停駐於另一個窗格或 停駐列 ( [CDockSite 類別](../../mfc/reference/cdocksite-class.md)) 所指定`pDockBar`，或在主框架如果`pDockBar`是`NULL`。  
   
- `dockMethod`指定如何停駐窗格。 請參閱[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)取得一份可能的值。  
+ `dockMethod` 指定如何停駐窗格。 請參閱[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)取得一份可能的值。  
   
-##  <a name="dockpaneusingrtti"></a>CBasePane::DockPaneUsingRTTI  
+##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI  
  固定窗格使用執行階段類型資訊。  
   
 ```  
@@ -731,7 +726,7 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
  [輸入] `bUseDockSite`  
  如果`TRUE`，停駐於停駐的站台。 如果`FALSE`，停駐於父框架。  
   
-##  <a name="docktoframewindow"></a>CBasePane::DockToFrameWindow  
+##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
  可停駐窗格停駐於框架。  
   
 ```  
@@ -764,12 +759,12 @@ virtual BOOL DockToFrameWindow(
  如果`TRUE`而且沒有其他可停駐窗格位於所指定的側邊`dwAlignment`，窗格會停駐以外其他窗格，更接近的父框架邊緣。 如果`FALSE`，窗格停駐接近於用戶端區域的中央。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果該方法成功。否則`FALSE`。  
+ `TRUE` 如果該方法成功。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  如果窗格分割線 ( [CPaneDivider 類別](../../mfc/reference/cpanedivider-class.md)) 無法建立。 否則，它一律會傳回`TRUE`。  
   
-##  <a name="doesallowdyninsertbefore"></a>Cbasepane:: Doesallowdyninsertbefore  
+##  <a name="doesallowdyninsertbefore"></a>  Cbasepane:: Doesallowdyninsertbefore  
  決定是否可以此窗格與父框架之間以動態方式插入另一個窗格。  
   
 ```  
@@ -777,7 +772,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果使用者可以插入另一個窗格。否則`FALSE`。  
+ `TRUE` 如果使用者可以插入另一個窗格。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法來判斷使用者是否可以動態地插入之前此窗格的窗格。  
@@ -788,7 +783,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
  預設實作會傳回 `TRUE`。  
   
-##  <a name="dopaint"></a>CBasePane::DoPaint  
+##  <a name="dopaint"></a>  CBasePane::DoPaint  
  填滿 窗格的背景。  
   
 ```  
@@ -802,7 +797,7 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="remarks"></a>備註  
  預設實作會呼叫目前的視覺管理員，以背景填滿 ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground))。  
   
-##  <a name="enabledocking"></a>CBasePane::EnableDocking  
+##  <a name="enabledocking"></a>  CBasePane::EnableDocking  
  主框架窗格的停駐啟用。  
   
 ```  
@@ -816,11 +811,11 @@ virtual void EnableDocking(DWORD dwAlignment);
 ### <a name="remarks"></a>備註  
  呼叫此方法以啟用停駐於主框架的對齊方式。 您可以將傳遞的組合`CBRS_ALIGN_`旗標 (如需詳細資訊，請參閱[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking))。  
   
- `EnableDocking`設定內部旗標`CBasePane::m_dwEnabledAlignment`和停駐窗格時，架構會檢查此旗標。  
+ `EnableDocking` 設定內部旗標`CBasePane::m_dwEnabledAlignment`和停駐窗格時，架構會檢查此旗標。  
   
  呼叫[CBasePane::GetEnabledAlignment](#getenabledalignment)判斷窗格停駐的對齊方式。  
   
-##  <a name="enablegripper"></a>CBasePane::EnableGripper  
+##  <a name="enablegripper"></a>  CBasePane::EnableGripper  
  啟用或停用移駐夾。 如果已啟用移駐夾，使用者可以將它拖曳至重新置放窗格。  
   
 ```  
@@ -829,12 +824,12 @@ virtual void EnableGripper(BOOL bEnable);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要啟用移駐夾;`FALSE`停用此功能。  
+ `TRUE` 若要啟用移駐夾;`FALSE`停用此功能。  
   
 ### <a name="remarks"></a>備註  
  架構會使用這個方法來啟用而不是使用移駐夾`WS_CAPTION`樣式。  
   
-##  <a name="floatpane"></a>CBasePane::FloatPane  
+##  <a name="floatpane"></a>  CBasePane::FloatPane  
  浮動窗格。  
   
 ```  
@@ -855,12 +850,12 @@ virtual BOOL FloatPane(
  浮動窗格是否可見 ( `TRUE`) 或隱藏 ( `FALSE`)。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功; 浮動窗格否則`FALSE`。  
+ `TRUE` 如果已成功; 浮動窗格否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  呼叫此方法以浮動窗格，以在所指定的螢幕位置`rectFloat`。  
   
-##  <a name="get_acchelptopic"></a>CBasePane::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic  
  架構會呼叫這個方法，以擷取的完整路徑`WinHelp`與指定的物件和該檔案中適切主題的識別項相關聯的檔案。  
   
 ```  
@@ -881,12 +876,12 @@ virtual HRESULT get_accHelpTopic(
  識別`Help`檔主題與指定的物件相關聯。  
   
 ### <a name="return-value"></a>傳回值  
- `CBasePane`未實作這個方法。 因此，`CBasePane::get_accHelpTopic`一律會傳回`S_FALSE`。  
+ `CBasePane` 未實作這個方法。 因此，`CBasePane::get_accHelpTopic`一律會傳回`S_FALSE`。  
   
 ### <a name="remarks"></a>備註  
  此函式是在 MFC 中的 Active Accessibility 支援。 覆寫這個函式，以提供您的物件相關的說明資訊在衍生類別中。  
   
-##  <a name="get_accselection"></a>CBasePane::get_accSelection  
+##  <a name="get_accselection"></a>  CBasePane::get_accSelection  
  架構會呼叫這個方法來擷取這個物件的所選的子系。  
   
 ```  
@@ -898,12 +893,12 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
  接收識別選取的子系的資訊。  
   
 ### <a name="return-value"></a>傳回值  
- `CBasePane`未實作這個方法。 如果 `pvarChildren` 為 `NULL`，這個方法會傳回 `E_INVALIDARG`。 否則，這個方法會傳回`DISP_E_MEMBERNOTFOUND`。  
+ `CBasePane` 未實作這個方法。 如果 `pvarChildren` 為 `NULL`，這個方法會傳回 `E_INVALIDARG`。 否則，這個方法會傳回`DISP_E_MEMBERNOTFOUND`。  
   
 ### <a name="remarks"></a>備註  
  此函式是在 MFC 中的 Active Accessibility 支援。 如果您有無視窗的 ActiveX 控制項以外的非視窗型使用者介面項目，請覆寫這個函式在衍生類別中。  
   
-##  <a name="getcaptionheight"></a>Cbasepane:: Getcaptionheight  
+##  <a name="getcaptionheight"></a>  Cbasepane:: Getcaptionheight  
  傳回標題高度。  
   
 ```  
@@ -913,7 +908,7 @@ virtual int GetCaptionHeight() const;
 ### <a name="return-value"></a>傳回值  
  標題高度。  
   
-##  <a name="getcontrolbarstyle"></a>CBasePane::GetControlBarStyle  
+##  <a name="getcontrolbarstyle"></a>  CBasePane::GetControlBarStyle  
  傳回的控制列的樣式。  
   
 ```  
@@ -933,7 +928,7 @@ virtual DWORD GetControlBarStyle() const
 |`AFX_CBRS_RESIZE`|啟用調整大小的控制列。 當設定這個旗標時，控制列可以放在可停駐窗格。|  
 |`AFX_CBRS_CLOSE`|可讓隱藏的控制列。|  
   
-##  <a name="getcurrentalignment"></a>CBasePane::GetCurrentAlignment  
+##  <a name="getcurrentalignment"></a>  CBasePane::GetCurrentAlignment  
  傳回目前的窗格對齊方式。  
   
 ```  
@@ -950,7 +945,7 @@ virtual DWORD GetCurrentAlignment() const;
 |`CBRS_ALIGN_TOP`|靠上對齊。|  
 |`CBRS_ALIGN_BOTTOM`|靠下對齊。|  
   
-##  <a name="getdockingmode"></a>Cbasepane:: Getdockingmode  
+##  <a name="getdockingmode"></a>  Cbasepane:: Getdockingmode  
  傳回目前停駐窗格的模式。  
   
 ```  
@@ -967,7 +962,7 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
   
  藉由設定`m_dockMode`或覆寫`GetDockingMode`您可以控制每個窗格的停駐模式。  
   
-##  <a name="getdocksiteframewnd"></a>CBasePane::GetDockSiteFrameWnd  
+##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd  
  將指標傳回至[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)物件會在停駐窗格。  
   
 ```  
@@ -980,7 +975,7 @@ virtual CWnd* GetDockSiteFrameWnd() const;
 ### <a name="remarks"></a>備註  
  呼叫此方法以擷取窗格的停駐位置的指標。 如果窗格浮動窗格停駐於主框架中，如果主框架視窗或迷你框架視窗可以是停駐位置。  
   
-##  <a name="getenabledalignment"></a>CBasePane::GetEnabledAlignment  
+##  <a name="getenabledalignment"></a>  CBasePane::GetEnabledAlignment  
  傳回套用至 「 窗格 CBRS_ALIGN_ 樣式。  
   
 ```  
@@ -1003,7 +998,7 @@ virtual DWORD GetEnabledAlignment() const;
   
  使用啟用停駐對齊[CBasePane::EnableDocking](#enabledocking)。  
   
-##  <a name="getmfcstyle"></a>CBasePane::GetMFCStyle  
+##  <a name="getmfcstyle"></a>  CBasePane::GetMFCStyle  
  傳回專屬於 MFC 的窗格樣式。  
   
 ```  
@@ -1013,7 +1008,7 @@ virtual DWORD GetMFCStyle() const;
 ### <a name="return-value"></a>傳回值  
  程式庫的特定 (AFX_CBRS_) 窗格樣式的組合。  
   
-##  <a name="getpaneicon"></a>CBasePane::GetPaneIcon  
+##  <a name="getpaneicon"></a>  CBasePane::GetPaneIcon  
  傳回窗格圖示的控制代碼。  
   
 ```  
@@ -1030,7 +1025,7 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ### <a name="remarks"></a>備註  
  預設實作會呼叫[CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon)。  
   
-##  <a name="getpanerow"></a>CBasePane::GetPaneRow  
+##  <a name="getpanerow"></a>  CBasePane::GetPaneRow  
  將指標傳回至[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)物件會在停駐窗格。  
   
 ```  
@@ -1043,7 +1038,7 @@ CDockingPanesRow* GetPaneRow();
 ### <a name="remarks"></a>備註  
  呼叫此方法來存取在停駐窗格的資料列。 例如，若要排列的特定資料列中的窗格，請呼叫`GetPaneRow`，然後呼叫[CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes)。  
   
-##  <a name="getpanestyle"></a>CBasePane::GetPaneStyle  
+##  <a name="getpanestyle"></a>  CBasePane::GetPaneStyle  
  傳回的窗格樣式。  
   
 ```  
@@ -1053,7 +1048,7 @@ virtual DWORD GetPaneStyle() const;
 ### <a name="return-value"></a>傳回值  
  控制列的樣式 （包括 CBRS_ 樣式） 所設定的組合[CBasePane::SetPaneStyle](#setpanestyle)在建立時的方法。  
   
-##  <a name="getparentdocksite"></a>CBasePane::GetParentDockSite  
+##  <a name="getparentdocksite"></a>  CBasePane::GetParentDockSite  
  傳回父停駐位置的指標。  
   
 ```  
@@ -1063,7 +1058,7 @@ virtual CDockSite* GetParentDockSite() const;
 ### <a name="return-value"></a>傳回值  
  父停駐站台。  
   
-##  <a name="getparentminiframe"></a>CBasePane::GetParentMiniFrame  
+##  <a name="getparentminiframe"></a>  CBasePane::GetParentMiniFrame  
  傳回父迷你框架視窗的指標。  
   
 ```  
@@ -1082,7 +1077,7 @@ virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;
   
  使用`GetParentMiniFrame`來判斷是否 窗格浮動。  
   
-##  <a name="getparenttabbedpane"></a>CBasePane::GetParentTabbedPane  
+##  <a name="getparenttabbedpane"></a>  CBasePane::GetParentTabbedPane  
  傳回父索引標籤式窗格的指標。  
   
 ```  
@@ -1092,7 +1087,7 @@ CBaseTabbedPane* GetParentTabbedPane() const;
 ### <a name="return-value"></a>傳回值  
  如果它存在時，父索引標籤式窗格的指標否則`NULL`。  
   
-##  <a name="getparenttabwnd"></a>CBasePane::GetParentTabWnd  
+##  <a name="getparenttabwnd"></a>  CBasePane::GetParentTabWnd  
  傳回位於索引標籤中的父視窗的指標。  
   
 ```  
@@ -1109,7 +1104,7 @@ CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;
 ### <a name="remarks"></a>備註  
  您可以使用此函式來擷取父索引標籤式視窗的指標。 有時候並不足夠呼叫`GetParent`，因為窗格可能會在停駐的包裝函式內 ( [CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)) 或窗格配接器內 ( [CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md))。 使用`GetParentTabWnd`您將無法擷取有效的指標，在這些情況下 （假設父代索引標籤式的視窗）。  
   
-##  <a name="getrecentvisiblestate"></a>CBasePane::GetRecentVisibleState  
+##  <a name="getrecentvisiblestate"></a>  CBasePane::GetRecentVisibleState  
  當窗格從封存還原時，架構會呼叫這個方法。  
   
 ```  
@@ -1119,7 +1114,7 @@ virtual BOOL GetRecentVisibleState() const;
 ### <a name="return-value"></a>傳回值  
  A`BOOL`指定最近的可見狀態。 如果`TRUE`，窗格會是可見時，序列化，而且應該是可見時還原。 如果`FALSE`，當序列化和還原時，應該隱藏時，已隱藏窗格。  
   
-##  <a name="hideinprintpreviewmode"></a>CBasePane::HideInPrintPreviewMode  
+##  <a name="hideinprintpreviewmode"></a>  CBasePane::HideInPrintPreviewMode  
  指定是否在預覽列印中隱藏窗格。  
   
 ```  
@@ -1127,12 +1122,12 @@ virtual BOOL HideInPrintPreviewMode() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格不會顯示在預覽列印。否則， `FALSE`。  
+ `TRUE` 如果窗格不會顯示在預覽列印。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  基底窗格不會在預覽列印中顯示。 因此，這個方法一律會傳回`TRUE`。  
   
-##  <a name="insertpane"></a>CBasePane::InsertPane  
+##  <a name="insertpane"></a>  CBasePane::InsertPane  
  停駐的管理員以註冊指定的窗格。  
   
 ```  
@@ -1153,9 +1148,9 @@ BOOL InsertPane(
  如果`TRUE`，`pControlBar`後面插入`pTarget`。 如果`FALSE`，`pControlBar`插入之前`pTarget`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功，`FALSE`否則。  
+ `TRUE` 如果此方法成功，`FALSE`否則。  
   
-##  <a name="isaccessibilitycompatible"></a>CBasePane::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>  CBasePane::IsAccessibilityCompatible  
  指定是否在窗格支援 Active Accessibility。  
   
 ```  
@@ -1163,9 +1158,9 @@ virtual BOOL IsAccessibilityCompatible();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格支援 Active Accessibility。否則， `FALSE`。  
+ `TRUE` 如果窗格支援 Active Accessibility。否則， `FALSE`。  
   
-##  <a name="isautohidemode"></a>CBasePane::IsAutoHideMode  
+##  <a name="isautohidemode"></a>  CBasePane::IsAutoHideMode  
  決定是否自動隱藏模式中的窗格。  
   
 ```  
@@ -1173,12 +1168,12 @@ virtual BOOL IsAutoHideMode() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格是在 自動隱藏模式。否則， `FALSE`。  
+ `TRUE` 如果窗格是在 自動隱藏模式。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  基底窗格無法自動隱藏。 這個方法一律會傳回 `FALSE`。  
   
-##  <a name="isdialogcontrol"></a>CBasePane::IsDialogControl  
+##  <a name="isdialogcontrol"></a>  CBasePane::IsDialogControl  
  指定的窗格是否對話方塊控制項。  
   
 ```  
@@ -1186,12 +1181,12 @@ BOOL IsDialogControl() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格的對話方塊控制項。否則， `FALSE`。  
+ `TRUE` 如果窗格的對話方塊控制項。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  架構會使用這個方法，以確保所有窗格的配置一致性。  
   
-##  <a name="isdocked"></a>CBasePane::IsDocked  
+##  <a name="isdocked"></a>  CBasePane::IsDocked  
  決定是否要停駐窗格。  
   
 ```  
@@ -1199,9 +1194,9 @@ virtual BOOL IsDocked() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格的父系不是迷你框架，或具有; 的另一個窗格的迷你框架中 窗格浮動否則， `FALSE`。  
+ `TRUE` 如果窗格的父系不是迷你框架，或具有; 的另一個窗格的迷你框架中 窗格浮動否則， `FALSE`。  
   
-##  <a name="isfloating"></a>CBasePane::IsFloating  
+##  <a name="isfloating"></a>  CBasePane::IsFloating  
  決定是否 窗格浮動。  
   
 ```  
@@ -1209,12 +1204,12 @@ virtual BOOL IsFloating() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格浮動;，否則， `FALSE`。  
+ `TRUE` 如果窗格浮動;，否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  這個方法傳回的相反值[CBasePane::IsDocked](#isdocked)。  
   
-##  <a name="ishorizontal"></a>CBasePane::IsHorizontal  
+##  <a name="ishorizontal"></a>  CBasePane::IsHorizontal  
  決定是否水平固定窗格。  
   
 ```  
@@ -1222,12 +1217,12 @@ virtual BOOL IsHorizontal() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格停駐水平空間。，否則`FALSE`。  
+ `TRUE` 如果窗格停駐水平空間。，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  預設實作會檢查目前停駐的對齊方式，如`CBRS_ORIENT_HORZ`。  
   
-##  <a name="isinfloatingmultipaneframewnd"></a>CBasePane::IsInFloatingMultiPaneFrameWnd  
+##  <a name="isinfloatingmultipaneframewnd"></a>  CBasePane::IsInFloatingMultiPaneFrameWnd  
  指定是否在多窗格框架視窗窗格 ( [CMultiPaneFrameWnd 類別](../../mfc/reference/cmultipaneframewnd-class.md))。  
   
 ```  
@@ -1235,12 +1230,12 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格是多窗格框架視窗中。否則， `FALSE`。  
+ `TRUE` 如果窗格是多窗格框架視窗中。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  只可停駐窗格可以浮動多窗格框架視窗中。 因此，`CBasePane::IsInFloatingMultiPaneFrameWnd`一律會傳回`FALSE`。  
   
-##  <a name="ismditabbed"></a>CBasePane::IsMDITabbed  
+##  <a name="ismditabbed"></a>  CBasePane::IsMDITabbed  
  判斷是否已為索引標籤式文件的 MDI 子視窗加入窗格。  
   
 ```  
@@ -1248,9 +1243,9 @@ virtual BOOL IsMDITabbed() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格做為索引標籤式文件; 新增到 MDI 子視窗否則， `FALSE`。  
+ `TRUE` 如果窗格做為索引標籤式文件; 新增到 MDI 子視窗否則， `FALSE`。  
   
-##  <a name="ispanevisible"></a>CBasePane::IsPaneVisible  
+##  <a name="ispanevisible"></a>  CBasePane::IsPaneVisible  
  指定是否`WS_VISIBLE`窗格設定旗標。  
   
 ```  
@@ -1258,12 +1253,12 @@ BOOL IsPaneVisible() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果`WS_VISIBLE`是設定，否則`FALSE`。  
+ `TRUE` 如果`WS_VISIBLE`是設定，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  使用[CBasePane::IsVisible](#isvisible)以判斷窗格可見性。  
   
-##  <a name="ispointneardocksite"></a>CBasePane::IsPointNearDockSite  
+##  <a name="ispointneardocksite"></a>  CBasePane::IsPointNearDockSite  
  判斷指定的點是否停駐位置附近。  
   
 ```  
@@ -1278,18 +1273,18 @@ BOOL IsPointNearDockSite(
  指定的點。  
   
  [輸出] `dwBarAlignment`  
- 指定的點是附近的邊緣。 可能的值為`CBRS_ALIGN_LEFT`， `CBRS_ALIGN_RIGHT`， `CBRS_ALIGN_TOP`，和`CBRS_ALIGN_BOTTOM`  
+ 指定的點是附近的邊緣。 可能的值為`CBRS_ALIGN_LEFT`， `CBRS_ALIGN_RIGHT`， `CBRS_ALIGN_TOP`，和 `CBRS_ALIGN_BOTTOM`  
   
  [輸出] `bOuterEdge`  
- `TRUE`如果點附近外框的停駐位置。`FALSE`否則。  
+ `TRUE` 如果點附近外框的停駐位置。`FALSE`否則。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果點附近停駐位置。否則`FALSE`。  
+ `TRUE` 如果點附近停駐位置。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  重點是附近停駐在停駐的管理員中設定的敏感度內時。 預設區分大小為 15 像素。  
   
-##  <a name="isresizable"></a>Cbasepane:: Isresizable  
+##  <a name="isresizable"></a>  Cbasepane:: Isresizable  
  決定是否可以調整窗格的大小。  
   
 ```  
@@ -1297,14 +1292,14 @@ virtual BOOL IsResizable() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果使用者，可以調整窗格的大小否則， `FALSE`。  
+ `TRUE` 如果使用者，可以調整窗格的大小否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  窗格[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)可調整大小。  
   
  狀態列 ( [CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)) 和停駐列 ( [CDockSite 類別](../../mfc/reference/cdocksite-class.md)) 無法調整大小。  
   
-##  <a name="isrestoredfromregistry"></a>CBasePane::IsRestoredFromRegistry  
+##  <a name="isrestoredfromregistry"></a>  CBasePane::IsRestoredFromRegistry  
  決定是否從登錄還原窗格。  
   
 ```  
@@ -1312,9 +1307,9 @@ virtual BOOL IsRestoredFromRegistry() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格還原從登錄中。否則， `FALSE`。  
+ `TRUE` 如果窗格還原從登錄中。否則， `FALSE`。  
   
-##  <a name="istabbed"></a>CBasePane::IsTabbed  
+##  <a name="istabbed"></a>  CBasePane::IsTabbed  
  判斷是否已插入索引標籤控制項的索引標籤式視窗窗格。  
   
 ```  
@@ -1322,12 +1317,12 @@ virtual BOOL IsTabbed() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果索引標籤式視窗; 的索引標籤中插入控制列否則`FALSE`。  
+ `TRUE` 如果索引標籤式視窗; 的索引標籤中插入控制列否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會擷取直屬父指標，並判斷是否在父系的執行階段類別[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)。  
   
-##  <a name="isvisible"></a>CBasePane::IsVisible  
+##  <a name="isvisible"></a>  CBasePane::IsVisible  
  決定窗格是否可見。  
   
 ```  
@@ -1335,14 +1330,14 @@ virtual BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格是可見的。否則`FALSE`。  
+ `TRUE` 如果窗格是可見的。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  使用這個方法，以判斷窗格的可見性。 請勿使用`::IsWindowVisible`。  
   
  如果不索引標籤式窗格 (請參閱[CBasePane::IsTabbed](#istabbed))，這個方法會檢查`WS_VISIBLE`樣式。 如果索引標籤式窗格中，這個方法會檢查父索引標籤式視窗的可見性。 如果父視窗為可見，函式會檢查窗格 索引標籤使用的可見性[CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible)。  
   
-##  <a name="loadstate"></a>CBasePane::LoadState  
+##  <a name="loadstate"></a>  CBasePane::LoadState  
  從登錄載入窗格的狀態。  
   
 ```  
@@ -1363,12 +1358,12 @@ virtual BOOL LoadState(
  窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功; 載入窗格狀態否則`FALSE`。  
+ `TRUE` 如果已成功; 載入窗格狀態否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法，以從登錄載入窗格狀態。 載入儲存的其他資訊在衍生類別中覆寫它[CBasePane::SaveState](#savestate)。  
   
-##  <a name="movewindow"></a>CBasePane::MoveWindow  
+##  <a name="movewindow"></a>  CBasePane::MoveWindow  
  將窗格移。  
   
 ```  
@@ -1394,7 +1389,7 @@ virtual HDWP MoveWindow(
 ### <a name="remarks"></a>備註  
  如果您要傳入`NULL`為`hdwp`參數，這個方法通常移動的視窗。 如果您將控制代碼，這個方法會執行延後的視窗移動。 您可以藉由呼叫中取得控制代碼[BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672)或將儲存先前呼叫這個方法的傳回值。  
   
-##  <a name="onafterchangeparent"></a>CBasePane::OnAfterChangeParent  
+##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
  窗格的父代變更之後，由架構呼叫。  
   
 ```  
@@ -1410,7 +1405,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
   
  預設實作不做任何動作。  
   
-##  <a name="onbeforechangeparent"></a>CBasePane::OnBeforeChangeParent  
+##  <a name="onbeforechangeparent"></a>  CBasePane::OnBeforeChangeParent  
  窗格會變更其父視窗之前由架構呼叫。  
   
 ```  
@@ -1431,7 +1426,7 @@ virtual void OnBeforeChangeParent(
   
  預設實作不做任何動作。  
   
-##  <a name="ondrawcaption"></a>CBasePane::OnDrawCaption  
+##  <a name="ondrawcaption"></a>  CBasePane::OnDrawCaption  
  繪製標題時，架構會呼叫這個方法。  
   
 ```  
@@ -1441,7 +1436,7 @@ virtual void OnDrawCaption();
 ### <a name="remarks"></a>備註  
  這個方法沒有任何功能，如`CBasePane`類別。  
   
-##  <a name="onmovepanedivider"></a>CBasePane::OnMovePaneDivider  
+##  <a name="onmovepanedivider"></a>  CBasePane::OnMovePaneDivider  
  這個方法目前未使用。  
   
 ```  
@@ -1452,7 +1447,7 @@ virtual void OnMovePaneDivider(CPaneDivider*);
  [輸入] `CPaneDivider*`  
  未使用。  
   
-##  <a name="onpanecontextmenu"></a>CBasePane::OnPaneContextMenu  
+##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu  
  建置已窗格的清單功能表時由架構呼叫。  
   
 ```  
@@ -1469,11 +1464,11 @@ virtual void OnPaneContextMenu(
  指定的快顯功能表的位置。  
   
 ### <a name="remarks"></a>備註  
- `OnPaneContextMenu`呼叫停駐的管理員會維護屬於目前的框架視窗的窗格的清單。 這個方法將窗格的名稱加入快顯功能表，並顯示它。 功能表命令顯示或隱藏個別的窗格。  
+ `OnPaneContextMenu` 呼叫停駐的管理員會維護屬於目前的框架視窗的窗格的清單。 這個方法將窗格的名稱加入快顯功能表，並顯示它。 功能表命令顯示或隱藏個別的窗格。  
   
  覆寫這個方法以自訂此行為。  
   
-##  <a name="onremovefromminiframe"></a>CBasePane::OnRemoveFromMiniFrame  
+##  <a name="onremovefromminiframe"></a>  CBasePane::OnRemoveFromMiniFrame  
  從其父迷你框架視窗中移除一個窗格時，由架構呼叫。  
   
 ```  
@@ -1489,8 +1484,8 @@ virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
   
  預設實作不做任何動作。  
   
-##  <a name="onsetaccdata"></a>Cbasepane:: Onsetaccdata  
- `CBasePane`不使用這個方法。  
+##  <a name="onsetaccdata"></a>  Cbasepane:: Onsetaccdata  
+ `CBasePane` 不使用這個方法。  
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
@@ -1505,7 +1500,7 @@ virtual BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="panefrompoint"></a>CBasePane::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CBasePane::PaneFromPoint  
  傳回包含指定的點的窗格。  
   
 ```  
@@ -1524,7 +1519,7 @@ CBasePane* PaneFromPoint(
  搜尋區域增加此數量。 窗格會滿足搜尋條件，如果指定的點落在增加的區域。  
   
  [輸入] `bExactBar`  
- `TRUE`表示忽略`nSensitivity`參數，否則`FALSE`。  
+ `TRUE` 表示忽略`nSensitivity`參數，否則`FALSE`。  
   
  [輸入] `pRTCBarType`  
  如果沒有`NULL`，方法會搜尋窗格指定的型別。  
@@ -1532,14 +1527,14 @@ CBasePane* PaneFromPoint(
 ### <a name="return-value"></a>傳回值  
  `CBasePane`-衍生物件，其中包含指定的時間點，或`NULL`如果找不到任何窗格。  
   
-##  <a name="recalclayout"></a>CBasePane::RecalcLayout  
- `CBasePane`不使用這個方法。  
+##  <a name="recalclayout"></a>  CBasePane::RecalcLayout  
+ `CBasePane` 不使用這個方法。  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-##  <a name="removepanefromdockmanager"></a>CBasePane::RemovePaneFromDockManager  
+##  <a name="removepanefromdockmanager"></a>  CBasePane::RemovePaneFromDockManager  
  取消登錄 窗格，並從停駐的管理員在清單中移除。  
   
 ```  
@@ -1567,7 +1562,7 @@ void RemovePaneFromDockManager(
  [輸入] `pBarReplacement`  
  取代 [移除] 窗格之窗格的指標。  
   
-##  <a name="savestate"></a>CBasePane::SaveState  
+##  <a name="savestate"></a>  CBasePane::SaveState  
  將窗格的狀態儲存至登錄。  
   
 ```  
@@ -1588,12 +1583,12 @@ virtual BOOL SaveState(
  窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功; 儲存狀態否則`FALSE`。  
+ `TRUE` 如果已成功; 儲存狀態否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  它會將窗格的狀態儲存至登錄時，架構會呼叫這個方法。 覆寫`SaveState`儲存其他資訊在衍生類別中。  
   
-##  <a name="selectdefaultfont"></a>CBasePane::SelectDefaultFont  
+##  <a name="selectdefaultfont"></a>  CBasePane::SelectDefaultFont  
  選取指定的裝置內容的預設字型。  
   
 ```  
@@ -1607,7 +1602,7 @@ CFont* SelectDefaultFont(CDC* pDC);
 ### <a name="return-value"></a>傳回值  
  預設值的指標[CFont 類別](../../mfc/reference/cfont-class.md)物件。  
   
-##  <a name="setcontrolbarstyle"></a>CBasePane::SetControlBarStyle  
+##  <a name="setcontrolbarstyle"></a>  CBasePane::SetControlBarStyle  
  控制列樣式設定。  
   
 ```  
@@ -1625,7 +1620,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 |`AFX_CBRS_RESIZE`|啟用調整大小的控制列。 當設定這個旗標時，控制列可以放在可停駐窗格。|  
 |`AFX_CBRS_CLOSE`|可讓隱藏的控制列。|  
   
-##  <a name="setdockingmode"></a>CBasePane::SetDockingMode  
+##  <a name="setdockingmode"></a>  CBasePane::SetDockingMode  
  設定停駐窗格的模式。  
   
 ```  
@@ -1643,7 +1638,7 @@ void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
   
  一開始，停駐模式由全域定義[CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal)。 您可以設定個別使用每個窗格的停駐模式`SetDockingMode`方法。  
   
-##  <a name="setpanealignment"></a>CBasePane::SetPaneAlignment  
+##  <a name="setpanealignment"></a>  CBasePane::SetPaneAlignment  
  設定 [] 窗格中的對齊方式。  
   
 ```  
@@ -1666,7 +1661,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 |`CBRS_ALIGN_TOP`|靠上對齊。|  
 |`CBRS_ALIGN_BOTTOM`|靠下對齊。|  
   
-##  <a name="setpanestyle"></a>CBasePane::SetPaneStyle  
+##  <a name="setpanestyle"></a>  CBasePane::SetPaneStyle  
  將窗格的樣式設定。  
   
 ```  
@@ -1682,7 +1677,7 @@ virtual void SetPaneStyle(DWORD dwNewStyle);
   
  `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`  
   
-##  <a name="setwindowpos"></a>CBasePane::SetWindowPos  
+##  <a name="setwindowpos"></a>  CBasePane::SetWindowPos  
  變更大小、 位置及疊置順序的窗格。  
   
 ```  
@@ -1724,7 +1719,7 @@ virtual HDWP SetWindowPos(
 ### <a name="remarks"></a>備註  
  如果`pWndInsertAfter`是`NULL`，這個方法會呼叫[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)。 如果`pWndInsertAfter`是非`NULL`，這個方法會呼叫`DeferWindowPos`。  
   
-##  <a name="showpane"></a>CBasePane::ShowPane  
+##  <a name="showpane"></a>  CBasePane::ShowPane  
  顯示或隱藏窗格。  
   
 ```  
@@ -1749,7 +1744,7 @@ virtual void ShowPane(
   
  使用[CBasePane::IsVisible](#isvisible)以判斷目前的可見性 窗格。  
   
-##  <a name="stretchpane"></a>Cbasepane:: Stretchpane  
+##  <a name="stretchpane"></a>  Cbasepane:: Stretchpane  
  垂直或水平伸展窗格。  
   
 ```  
@@ -1768,7 +1763,7 @@ virtual CSize StretchPane(
 ### <a name="return-value"></a>傳回值  
  伸展窗格的大小。  
   
-##  <a name="undockpane"></a>CBasePane::UndockPane  
+##  <a name="undockpane"></a>  CBasePane::UndockPane  
  移除窗格從停駐、 預設滑桿或目前固定的迷你框架視窗。  
   
 ```  
@@ -1784,7 +1779,7 @@ virtual void UndockPane(BOOL bDelay=FALSE);
   
  如果您想要繼續使用此窗格中，呼叫[cbasepane:: Dockpane](#dockpane)或[CBasePane::FloatPane](#floatpane)之前呼叫這個方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CPane](../../mfc/reference/cbasepane-class.md)   

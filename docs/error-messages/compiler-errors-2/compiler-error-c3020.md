@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3020 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3020 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3020
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51275874ff28c41704d8a8daa8c2e0f1f6058c49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a9c942f6b1459cbdb88561b749290eb47d3cfb3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3020"></a>編譯器錯誤 C3020
 'var': OpenMP 'for' 迴圈索引變數不可修改迴圈主體中  

@@ -1,12 +1,9 @@
 ---
-title: "stack::get_container (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: stack::get_container (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::stack::get_container
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - get_container member [STL/CLR]
 ms.assetid: ba6fc541-fc18-4d1c-8e3f-6baaed427cbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 721cd51a268a487e9fe18f988e98bfcf5e9d714b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29dbc993f38a7cc0663f67487656a0330650537e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stackgetcontainer-stlclr"></a>stack::get_container (STL/CLR)
 存取基礎容器。  
@@ -74,6 +69,6 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)

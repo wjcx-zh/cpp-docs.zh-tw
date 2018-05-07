@@ -2,11 +2,8 @@
 title: auto_gcroot::release |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::auto_gcroot::release
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - release method
 ms.assetid: 40b253f0-154e-4d79-80a4-ff13199c3ff0
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ea93fa37ab895bd1b96c4955a3edc8fd773f4a86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63e3a934cd16c1a17a866df7186af7232eb1f152
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autogcrootrelease"></a>auto_gcroot::release
 釋放物件從`auto_gcroot`管理。  
@@ -99,6 +94,6 @@ done
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

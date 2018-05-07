@@ -1,13 +1,10 @@
 ---
-title: "已備妥要使用的清單類別 |Microsoft 文件"
-ms.custom: 
+title: 已備妥要使用的清單類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.list
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - list classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: aed8e9bd-edb7-4620-84a2-77c20322abd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8f99f3d0e2b9f2edc6b8a1c59819b97b1fa6ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 304b47918424a73e4feda9812c372cb28db0623e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ready-to-use-list-classes"></a>立即可用的清單類別
 下列類別是立即可用的清單類別。  
@@ -41,6 +36,6 @@ ms.lasthandoff: 12/21/2017
  [CStringList](../mfc/reference/cstringlist-class.md)  
  將 `CString` 物件儲存在連結清單中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

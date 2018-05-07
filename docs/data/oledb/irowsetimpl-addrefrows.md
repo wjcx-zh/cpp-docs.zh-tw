@@ -1,12 +1,9 @@
 ---
-title: "Irowsetimpl:: Addrefrows |Microsoft 文件"
-ms.custom: 
+title: 'Irowsetimpl:: Addrefrows |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetImpl::AddRefRows
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - AddRefRows method
 ms.assetid: adc0989b-7592-432e-82d9-df4445431531
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6df1067b8c63ce98fb0234178aaba59c6260557a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 687ee3630e5ba579f40ace30ca32ac0ed9fc16fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetimpladdrefrows"></a>IRowsetImpl::AddRefRows
 將參考計數加入至現有的資料列控制代碼。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetImpl 類別](../../data/oledb/irowsetimpl-class.md)   
  [IRowsetImpl::RefRows](../../data/oledb/irowsetimpl-refrows.md)   
  [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)   

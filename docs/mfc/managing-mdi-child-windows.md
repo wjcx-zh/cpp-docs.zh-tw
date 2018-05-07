@@ -1,13 +1,10 @@
 ---
-title: "管理 MDI 子視窗 |Microsoft 文件"
-ms.custom: 
+title: 管理 MDI 子視窗 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MDICLIENT
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ebcd6e484385ada3cd3d5ccfe450e7e25f539eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-mdi-child-windows"></a>管理 MDI 子視窗
 MDI 主框架視窗 （其中每個應用程式） 包含特殊子視窗呼叫**MDICLIENT**視窗。 **MDICLIENT**視窗會管理主框架視窗的工作區，而其本身具有子視窗： 文件視窗中，衍生自`CMDIChildWnd`。 由於文件視窗本身是框架視窗 (MDI 子視窗)，因此也可以有自己的子視窗。 在所有這些情況中，父視窗會管理其子視窗，並將一些命令轉送給它們。  
@@ -49,6 +44,6 @@ MDI 框架視窗和子視窗
   
 -   [框架視窗樣式](../mfc/frame-window-styles-cpp.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用框架視窗](../mfc/using-frame-windows.md)
 

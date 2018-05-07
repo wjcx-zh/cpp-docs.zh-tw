@@ -1,29 +1,24 @@
 ---
-title: "非現用時提供滑鼠互動 |Microsoft 文件"
-ms.custom: 
+title: 非現用時提供滑鼠互動 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], mouse interaction
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f8991b6cc827c35c94b0989ef82e32422fd5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faf1ea1958d6a6381bbe1c6e7d3db26f5f5b7c17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>非現用時提供滑鼠互動
 如果未立即啟動您的控制項，您可能仍然希望它處理`WM_SETCURSOR`和`WM_MOUSEMOVE`訊息，即使控制項有沒有自己的視窗。 這可藉由啟用`COleControl`的實作`IPointerInactive`介面，預設會停用。 (請參閱*ActiveX SDK*此介面的說明。)若要啟用它，包括`pointerInactive`旗標所傳回的集合中的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags):  
@@ -44,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)
 

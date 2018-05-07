@@ -1,12 +1,9 @@
 ---
-title: "存取子和資料列集 |Microsoft 文件"
-ms.custom: 
+title: 存取子和資料列集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7273b4ece8e697eb323c5b6bb6355796aeb72d63
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 49f5415f6c75984f968b25fb709c20d80dde554f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessors-and-rowsets"></a>存取子和資料列集
 若要設定及擷取資料，OLE DB 樣板會使用存取子和資料列集，透過[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)類別。 這個類別可以處理不同類型的多個存取子。  
@@ -80,5 +75,5 @@ ms.lasthandoff: 02/23/2018
   
  [結構描述資料列集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)執行不存取資料中的資料存放區，但改為存取資料存放區，稱為中繼資料的相關資訊。 通常資料庫結構不在編譯時期已知以及必須在執行階段取得的情況下會使用結構描述資料列。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,12 +1,9 @@
 ---
-title: "__halt |Microsoft 文件"
-ms.custom: 
+title: __halt |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __halt
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d2d3a530fe5e300c59cfd9ffa1d509b3b41b0f2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a36790eb1df098e6f663a30894c29a9ea14587b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="halt"></a>__halt
 **Microsoft 特定的**  
@@ -44,7 +39,7 @@ void __halt( void );
   
 |內建|架構|  
 |---------------|------------------|  
-|`__halt`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__halt`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **標頭檔** \<intrin.h >  
   
@@ -53,5 +48,5 @@ void __halt( void );
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

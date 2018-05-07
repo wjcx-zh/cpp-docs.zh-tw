@@ -1,30 +1,25 @@
 ---
-title: "MFC ActiveX 控制項： 加入自訂屬性 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 加入自訂屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 自訂屬性與不同的內建屬性的自訂屬性不已實作的`COleControl`類別。 自訂屬性用來公開某些狀態或 ActiveX 控制項，以程式設計人員使用控制項的外觀。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
      加入屬性精靈 支援參數化的實作。 （有時稱為屬性陣列） 的參數化的屬性可以用來透過控制項的單一屬性來存取一組值。 分派對應項目巨集，此實作是`DISP_PROPERTY_PARAM`。 如需實作此類型的詳細資訊，請參閱[實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)文章 ActiveX 控制項： 進階主題。  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>使用加入屬性精靈來加入自訂屬性  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用加入屬性精靈來加入自訂屬性  
  下列程序示範如何將自訂屬性，CircleOffset，使用 Get/Set 方法的實作。 CircleOffset 自訂屬性可讓控制項的使用者，來彌補中央的控制項的週框圓形。 將非 Get/Set 方法的實作的自訂屬性的程序是非常類似。  
   
  這個相同的程序也可用來新增其他您想要的自訂屬性。 替換成您的自訂屬性名稱 CircleOffset 屬性名稱和參數。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 9. 按一下 [ **完成**]。  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>加入屬性精靈變更自訂屬性  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> 加入屬性精靈變更自訂屬性  
  當您新增 CircleOffset 自訂屬性時，加入屬性精靈 會變更標頭檔 (。H） 和實作 (。控制項類別 CPP) 檔案。  
   
  加入下列幾行。若要宣告兩個函式呼叫 H 檔案`GetCircleOffset`和`SetCircleOffset`:  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
   
  請注意，[加入屬性精靈] 會自動將呼叫，為[SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag)，Set 函式的主體。 呼叫此函式會將控制項的標記，為已修改。 如果控制項已被修改，則在儲存容器時，將會儲存成新的狀態。 屬性，儲存為部分控制項的永續性狀態，變更值時，應該呼叫此函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控制項： 屬性](../mfc/mfc-activex-controls-properties.md)   
  [MFC ActiveX 控制項： 方法](../mfc/mfc-activex-controls-methods.md)   

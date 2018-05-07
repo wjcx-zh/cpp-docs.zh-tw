@@ -1,13 +1,10 @@
 ---
-title: "如何： 使用.NET Framework 繪製圖案 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用.NET Framework 繪製圖案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - shapes
 - shapes, drawing
 ms.assetid: ffad5ae7-6ef4-4550-8940-be3f209a101d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c5fc48eefb44049e4cff010b16c9567e443ba5db
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 877e78b1ce4f81af76aa20961ea05d18e64f58f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>如何：使用 .NET Framework 繪製圖案
 下列程式碼範例使用<xref:System.Drawing.Graphics>類別以修改<xref:System.Windows.Forms.Form.OnPaint%2A>事件處理常式來擷取指標<xref:System.Drawing.Graphics>主要表單的物件。 此指標然後用來設定表單的背景色彩和繪製一條線與弧線使用<xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName>和<xref:System.Drawing.Graphics.DrawArc%2A>方法。  
@@ -62,6 +57,6 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe ) override
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [.NET 程式設計使用 C + + /CLI （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [System::Drawing 命名空間](https://msdn.microsoft.com/en-us/library/system.drawing.aspx)

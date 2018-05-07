@@ -1,13 +1,10 @@
 ---
-title: "在 Visual c + + 專案中加入參考 |Microsoft 文件"
-ms.custom: 
+title: 在 Visual c + + 專案中加入參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 專案中加入參考
 程式通常會在 DLL、Windows 執行階段元件、擴充功能 SDK、COM 元件和 .NET 組件等其他二進位檔中，呼叫應用程式開發介面。 您的程式尋找這些二進位檔的方式，取決於您專案的類型和二進位檔類型。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  在原生 C++ 專案 (ATL) 中， *「參考」* (Reference) 的概念僅適用於方案中的其他專案 (包括共用專案)，因此您只會在 [參考管理員] 中看到這些專案：  
   
- ![Visual C# 43; &#43;參考管理員 &#40;ATL 專案 &#41;] (../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 參考管理員 （ATL 專案）")  
+ ![Visual C&#43; &#43;參考管理員&#40;ATL 專案&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 參考管理員 （ATL 專案）")  
   
  在 C++/CLI 或通用 Windows 平台專案中，參考的概念除了適用於方案中的其他專案之外，還適用於更多類型的二進位檔。  這些所有中公開**參考管理員**。
   
@@ -125,6 +120,6 @@ ms.lasthandoff: 12/21/2017
  **版本**  
  顯示參考組件的版本。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)   
  [使用專案屬性](../ide/working-with-project-properties.md)

@@ -1,13 +1,10 @@
 ---
-title: "提示檔案 |Microsoft 文件"
-ms.custom: 
+title: 提示檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>提示檔案
 A*提示檔案*可協助 Visual Studio 整合式的開發環境 (IDE) 解譯 Visual c + + 識別項，例如函式和巨集的名稱。 當您開啟的 Visual c + + 專案，在 IDE 的*剖析系統*會分析每個專案中的來源檔案中的程式碼，並收集每個識別項的相關資訊。 然後 IDE 使用該資訊來支援的功能，例如**類別檢視**瀏覽器和**導覽列**。  
@@ -107,12 +102,12 @@ STDMETHOD(myMethod)(int parameter1);
   
 |語法|意義|  
 |------------|-------------|  
-|`#define`*提示名稱**取代字串*<br /><br /> `#define`*提示名稱* `(` *參數*，...`)`*取代字串*|前置指示詞定義新的提示，或重新定義現有的提示。 指示詞後, 前置處理器會取代每個出現的*提示名稱*與原始程式碼中*取代字串*。<br /><br /> 第二種語法形式定義類似函式的提示。 如果在原始程式碼中，就會發生類似函式的提示，前置處理器先會取代每個出現的*參數*中*取代字串*使用原始碼，然後按一下 取代對應的引數*提示名稱*與*取代字串*。|  
+|`#define` *提示名稱**取代字串*<br /><br /> `#define` *提示名稱* `(` *參數*，...`)`*取代字串*|前置指示詞定義新的提示，或重新定義現有的提示。 指示詞後, 前置處理器會取代每個出現的*提示名稱*與原始程式碼中*取代字串*。<br /><br /> 第二種語法形式定義類似函式的提示。 如果在原始程式碼中，就會發生類似函式的提示，前置處理器先會取代每個出現的*參數*中*取代字串*使用原始碼，然後按一下 取代對應的引數*提示名稱*與*取代字串*。|  
 |`@<`|提示檔案特定*取代字串*，表示一組地圖元素的開頭。|  
 |`@=`|提示檔案特定*取代字串*，指出中繼對應項目。 一個地圖可以擁有多個地圖元素。|  
 |`@>`|提示檔案特定*取代字串*，表示一組地圖元素的結尾。|  
-|`#undef`*提示名稱*|前置處理器指示詞，以刪除現有的提示。 此提示的名稱由*提示名稱*識別項。|  
-|`//`*註解*|單行註解。|  
+|`#undef` *提示名稱*|前置處理器指示詞，以刪除現有的提示。 此提示的名稱由*提示名稱*識別項。|  
+|`//` *註解*|單行註解。|  
 |`/*` comment `*/`|多行註解。|  
   
 ## <a name="what-macros-require-a-hint"></a>項目巨集需要提示？  
@@ -162,7 +157,7 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 #define START_NAMESPACE namespace MyProject {  
 ```  
   
-### <a name="maps"></a>對應  
+### <a name="maps"></a>地圖  
  地圖是由巨集，以指定起始的項目、 結束項目和零個或多個中間項目所組成。 剖析系統 misinterprets 對應，因為每個對應巨集隱藏 C/c + + 語言項目，並完成的 C/c + + 陳述式的語法會分散到許多不同的巨集。  
   
  下列的原始程式碼定義`BEGIN_CATEGORY_MAP`， `IMPLEMENTED_CATEGORY`，和`END_CATEGORY_MAP`巨集。  
@@ -244,7 +239,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
  下圖說明一些在 Visual c + + 專案中的實體目錄。 提示檔案位於`vcpackages`， `Debug`， `A1`，和`A2`目錄。  
   
 ### <a name="hint-file-directories"></a>提示檔案目錄  
- ![一般和專案 &#45; 特定提示檔案目錄。] (../ide/media/hintfile.png "HintFile")  
+ ![一般和專案&#45;特定提示檔案目錄。] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>目錄和提示檔案內容  
  下列清單會顯示此專案包含提示檔案及這些提示檔案的內容中的目錄。 只有部分中的許多提示`vcpackages`列出目錄提示檔案。  
@@ -318,7 +313,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
   
 -   `#undef`提示中`A2`目錄中移除的提示`OBRACE`和`CBRACE`中`Debug`目錄提示檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)    
  [#define 指示詞 （C/c + +）](../preprocessor/hash-define-directive-c-cpp.md)   
  [#undef 指示詞 （C/c + +）](../preprocessor/hash-undef-directive-c-cpp.md)   

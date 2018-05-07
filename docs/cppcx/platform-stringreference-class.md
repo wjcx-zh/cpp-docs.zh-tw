@@ -1,11 +1,8 @@
 ---
-title: "Platform:: stringreference 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: stringreference 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23960e392f39c44a57176e4afb81999783bad6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 646a09dd46e123f0bc7eadc178e3741367e908ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 類別
 可以用來從 `Platform::String^` 輸入參數將字串資料傳遞給其他方法的最佳化類型，可將複製作業減至最少。  
@@ -157,7 +152,7 @@ StringReference& operator=(const ::default::char16* __strArg);
   
 
 
-## <a name="operator-call"></a>  StringReference::operator()  Operator
+## <a name="operator-call"></a>  Stringreference 運算子
 將 `StringReference` 物件轉換成 `Platform::String^` 物件。  
   
 ### <a name="syntax"></a>語法  
@@ -204,5 +199,5 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg)
 
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform::StringReference 類別](../cppcx/platform-stringreference-class.md)

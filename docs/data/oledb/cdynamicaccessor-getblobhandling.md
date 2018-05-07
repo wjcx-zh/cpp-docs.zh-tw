@@ -1,12 +1,9 @@
 ---
-title: "Cdynamicaccessor:: Getblobhandling |Microsoft 文件"
-ms.custom: 
+title: 'Cdynamicaccessor:: Getblobhandling |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor.GetBlobHandling
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetBlobHandling method
 ms.assetid: bbc6dda6-e132-42a3-980d-24e455cbe456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4fa1b30dce89b1e994e602b8a6f2c0e394e57034
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 51cc3dedb848058257861f901a46e0377115007d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorgetblobhandling"></a>CDynamicAccessor::GetBlobHandling
 擷取 BLOB 處理目前的資料列的值。  
@@ -48,5 +43,5 @@ const DBBLOBHANDLINGENUM GetBlobHandling() const;
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

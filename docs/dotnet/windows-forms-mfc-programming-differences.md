@@ -1,31 +1,26 @@
 ---
-title: "Windows Form MFC 程式設計的差異 |Microsoft 文件"
-ms.custom: 
+title: Windows Form MFC 程式設計的差異 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 696e7684eb91abbf41e3f7a2e1df20b6fa7e5c17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ad9e47ba2bb3d9a5e5b21620a4bf4b50177d63b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Form/MFC 程式設計的差異
 中的主題[在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)描述 Windows Form 的 MFC 支援。 如果您不熟悉.NET Framework 或 MFC 程式設計，本主題會提供程式設計的差異，兩者之間的背景資訊。  
@@ -68,6 +63,6 @@ ms.lasthandoff: 12/21/2017
   
      MFC 會具有更新機制的命令。 因此，使用中檢視或文件會負責的 UI 項目 （例如，啟用或停用功能表項目、 工具列按鈕和核取狀態等等） 的狀態。 Windows Form 有沒有對等的命令更新機制。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
  [Windows Forms 逐步解說](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)

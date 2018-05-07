@@ -1,24 +1,19 @@
 ---
-title: "命名空間和類型可視性 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 命名空間和類型可視性 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 07b48d0464dfc36f671f6566ce45894aca76cbc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空間和類型可視性 (C++/CX)
 命名空間是標準 C++ 建構，可將具有相關功能的類型組合在一起，並防止程式庫中發生名稱衝突。 Windows 執行階段類型系統會要求所有 Windows 執行階段的公用類型，包括您自己的程式碼中，必須都宣告在命名空間範圍的命名空間中。 在全域範圍中宣告或以巢狀方式存在於其他類別中的公用型別會造成編譯時期錯誤。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 02/14/2018
 |private|預設存取範圍。 等同於在 Standard C++ 中。|否|  
 |protected|等同於在 Standard C++ 中，同時在應用程式 (或元件) 和中繼資料內。|是|  
 |public|等同於在 Standard C++ 中。|[是]|  
-|`public protected` -or- `protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|[是]|  
+|`public protected` -或者- `protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|[是]|  
 |`protected private` 或 `private protected`|在中繼資料內是不可見的，在應用程式或元件內為受保護存取範圍。||  
 |`internal` 或 `private public`|此成員在應用程式或元件內是公用的，但是在中繼資料內是不可見的。|否|  
   
@@ -60,5 +55,5 @@ ms.lasthandoff: 02/14/2018
 |Platform::Collections|包含實作 Windows 執行階段集合介面的具象集合類別`IVector`， `IMap`，依此類推。 這些類型在標頭檔 collection.h 中定義，而不是在 platform.winmd 中。|  
 |Platform::Details|包含編譯器使用的類型，而不開放使用。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統 (C++/CX)](../cppcx/type-system-c-cx.md)

@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2803 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2803 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2803
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2803
 ms.assetid: 2cdbe374-8cc4-4c4e-ba15-062a7479e937
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2472c0e1182ad11f5ea95e3411649e6214b110ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51cf2a8b38a86fcd97ab693b3853fe25527a0bb3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2803"></a>編譯器錯誤 C2803
 'operator operator' 必須至少一個類別類型的型式參數  

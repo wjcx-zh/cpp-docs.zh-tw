@@ -2,12 +2,9 @@
 title: SQL： 自訂資料錄集的 SQL 陳述式 (ODBC) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f385127d1b61e1453eb7a079963da727f82f1874
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL：自訂資料錄集的 SQL 陳述式 (ODBC)
 本主題說明：  
@@ -69,7 +64,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  如果您的篩選條件 （或其他部分的 SQL 陳述式） 中使用常值字串，您可能必須"加上引號"（指定的分隔符號括住） 這類字串 DBMS 專屬常值前置詞和常值後置字元 （字元）。  
   
- 也可能發生特殊的語法需求，進行運算，例如外部聯結中，根據您的 DBMS。 使用 ODBC 函數來取得這項資訊從您的驅動程式 DBMS。 例如，呼叫**:: SQLGetTypeInfo**對於特定資料類型，例如**SQL_VARCHAR**，要求**LITERAL_PREFIX**和**LITERAL_SUFFIX**字元。 如果您正在撰寫資料庫無關的程式碼，請參閱在 < 附錄 C *ODBC SDK**程式設計人員參考*詳細的語法資訊在 MSDN Library CD 上。  
+ 也可能發生特殊的語法需求，進行運算，例如外部聯結中，根據您的 DBMS。 使用 ODBC 函數來取得這項資訊從您的驅動程式 DBMS。 例如，呼叫 **:: SQLGetTypeInfo**對於特定資料類型，例如**SQL_VARCHAR**，要求**LITERAL_PREFIX**和**LITERAL_SUFFIX**字元。 如果您正在撰寫資料庫無關的程式碼，請參閱在 < 附錄 C *ODBC SDK * * 程式設計人員參考*詳細的語法資訊在 MSDN Library CD 上。  
   
  資料錄集物件建構 SQL 陳述式，用來選取記錄，除非您傳遞自訂的 SQL 陳述式。 執行方式主要取決於您要傳入的值`lpszSQL`參數**開啟**成員函式。  
   
@@ -98,13 +93,13 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
 |案例|您傳遞 lpszSQL|結果的 SELECT 陳述式|  
 |----------|------------------------------|------------------------------------|  
-|1|**NULL**|**選取** *rfx 欄位清單* **FROM** *資料表名稱*<br /><br /> `CRecordset::Open`呼叫`GetDefaultSQL`取得資料表名稱。 產生的字串是其中一個案例 2 到 5，依據`GetDefaultSQL`傳回。|  
+|1|**NULL**|**選取** *rfx 欄位清單* **FROM** *資料表名稱*<br /><br /> `CRecordset::Open` 呼叫`GetDefaultSQL`取得資料表名稱。 產生的字串是其中一個案例 2 到 5，依據`GetDefaultSQL`傳回。|  
 |2|資料表名稱|**選取** *rfx 欄位清單* **FROM** *資料表名稱*<br /><br /> 欄位清單來自 RFX 陳述式中`DoFieldExchange`。 如果**m_strFilter**和`m_strSort`不是空白時，會新增**其中**及/或**ORDER BY**子句。|  
 |3 *|完整**選取**陳述式但不含**其中**或**ORDER BY**子句|為成功。 如果**m_strFilter**和`m_strSort`不是空白時，會新增**其中**及/或**ORDER BY**子句。|  
 |4 *|完整**選取**陳述式搭配**其中**及/或**ORDER BY**子句|為成功。 **m_strFilter**及/或`m_strSort`必須保持空白或兩個篩選器和 （或) 排序陳述式所產生。|  
 |5 *|預存程序呼叫|為成功。|  
   
- \*`m_nFields`必須小於或等於指定的資料行數目**選取**陳述式。 每個資料行中指定的資料型別**選取**陳述式必須對應 RFX 輸出資料行的資料類型相同。  
+ \* `m_nFields` 必須是小於或等於指定的資料行數目**選取**陳述式。 每個資料行中指定的資料型別**選取**陳述式必須對應 RFX 輸出資料行的資料類型相同。  
   
 ### <a name="case-1---lpszsql--null"></a>案例 1 lpszSQL = NULL  
  資料錄集選取範圍取決於什麼`GetDefaultSQL`時傳回`CRecordset::Open`呼叫它。 案例 2 到 5 說明可能出現的字串。  
@@ -149,7 +144,7 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
   
      資料行清單應該符合的資料行名稱和類型的相同順序中, 列出的`DoFieldExchange`。  
   
--   您有理由要手動擷取資料行值使用 ODBC 函數**:: SQLGetData**而不需依賴 RFX 繫結，並讓您擷取的資料行。  
+-   您有理由要手動擷取資料行值使用 ODBC 函數 **:: SQLGetData**而不需依賴 RFX 繫結，並讓您擷取的資料行。  
   
      例如，要容納新的資料行散發應用程式之後，資料庫資料表加入您的應用程式的客戶。 您必須加入這些額外的欄位資料成員，已在使用精靈宣告類別的時間未知。  
   
@@ -167,6 +162,6 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
   
  如果預先定義的查詢不會傳回記錄，您可以使用`CDatabase`成員函式`ExecuteSQL`直接。 預先定義的查詢會傳回記錄，您必須也可以手動撰寫呼叫 RFX`DoFieldExchange`程序會傳回任何資料行。 Rfx 必須位於相同的順序，並傳回相同的類型，做為預先定義的查詢。 如需詳細資訊，請參閱[資料錄集： 宣告的類別為預先定義的查詢 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL: SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)   
  [SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

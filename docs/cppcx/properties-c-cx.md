@@ -1,24 +1,19 @@
 ---
-title: "屬性 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 屬性 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446f2c4f18f68a4a52614397b697409d34b958de
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6393b5e5849ab2198fa8d084c2c1d15838c69bdd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="properties-ccx"></a>屬性 (C++/CX)
 Windows 執行階段類型將公用資料公開為屬性。 用戶端程式碼可將此屬性視為公用 Datamember 加以存取。 此屬性在內部可實作為包含 get 存取子方法和 (或) set 存取子方法的區塊。 使用存取子方法，可讓您在擷取值之前或之後執行其他動作，例如，您可以引發事件或執行驗證檢查。  
@@ -43,7 +38,7 @@ Windows 執行階段類型將公用資料公開為屬性。 用戶端程式碼�
   
  [!code-cpp[cx_properties#01](../cppcx/codesnippet/CPP/cx_properties/class1.h#01)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

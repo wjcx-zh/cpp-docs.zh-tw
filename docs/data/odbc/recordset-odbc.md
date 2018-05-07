@@ -1,13 +1,10 @@
 ---
-title: "資料錄集 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 資料錄集 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c5fc714b9c2ff0e1af679edbc3842b86d201fee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c59de3c5db2e1ec658a09279cb42e2833a4109e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-odbc"></a>資料錄集 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  有些 ODBC 驅動程式支援資料庫的檢視。 這方面的檢視是最初建立 SQL 查詢`CREATE VIEW`陳述式。 這些精靈目前不支援檢視，但可以自行撰寫程式碼這項支援。  
   
-##  <a name="_core_recordset_capabilities"></a>資料錄集的功能  
+##  <a name="_core_recordset_capabilities"></a> 資料錄集的功能  
  資料錄集的所有物件都共用的下列功能：  
   
 -   如果資料來源不是唯讀的您可以指定資料錄集是[可更新](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，[可附加](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，或唯讀狀態。 如果可以更新資料錄集，您可以選擇開放式或封閉式[鎖定](../../data/odbc/recordset-locking-records-odbc.md)方法，提供驅動程式提供適當的鎖定支援。 如果資料來源是唯讀，則資料錄集將處於唯讀模式。  
@@ -67,10 +62,10 @@ ms.lasthandoff: 12/21/2017
   
 -   您可以[參數化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)來限定資料錄集選取範圍，在執行階段資料錄集。  
   
-##  <a name="_core_snapshots_and_dynasets"></a>快照集和動態集  
+##  <a name="_core_snapshots_and_dynasets"></a> 快照集和動態集  
  有兩種主要資料錄集：[快照](../../data/odbc/snapshot.md)和[dynaset](../../data/odbc/dynaset.md)。 類別都受到`CRecordset`。 每個共用共同的特性的所有資料錄集，但每個也在自己特製化的方式延伸的通用功能。 快照集提供資料的靜態檢視，而且可用於報表和其他您想在其中的資料檢視，存在於特定的時間。 當您想要看到資料錄集中而不必重新查詢，或重新整理資料錄集的其他使用者所做的更新，動態集很有用。 快照集和動態集可以是可更新或唯讀狀態。 若要反映資料錄加入或刪除由其他使用者呼叫[CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery)。  
   
- `CRecordset`也可讓兩個其他類型的資料錄集： 動態資料錄集和順向資料錄集。 動態資料錄集是類似於動態集;不過，動態資料錄集反映加入或刪除而不會呼叫任何記錄`CRecordset::Requery`。 基於這個理由，動態資料錄集有關處理時間的 dbms，一般而言成本較高，而且許多 ODBC 驅動程式不支援它們。 相反地，順向資料錄集提供的不需要更新或向後捲動資料錄集的資料存取最有效率的方法。 例如，您可能使用順向資料錄集將資料從一個資料來源到另一個，您只需要以正向方向資料中移動。 若要使用的順向資料錄集，您必須執行下列兩個動作：  
+ `CRecordset` 也可讓兩個其他類型的資料錄集： 動態資料錄集和順向資料錄集。 動態資料錄集是類似於動態集;不過，動態資料錄集反映加入或刪除而不會呼叫任何記錄`CRecordset::Requery`。 基於這個理由，動態資料錄集有關處理時間的 dbms，一般而言成本較高，而且許多 ODBC 驅動程式不支援它們。 相反地，順向資料錄集提供的不需要更新或向後捲動資料錄集的資料存取最有效率的方法。 例如，您可能使用順向資料錄集將資料從一個資料來源到另一個，您只需要以正向方向資料中移動。 若要使用的順向資料錄集，您必須執行下列兩個動作：  
   
 -   傳遞選項**CRecordset::forwardOnly**為`nOpenType`參數[開啟](../../mfc/reference/crecordset-class.md#open)成員函式。  
   
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  動態集支援的 ODBC 驅動程式需求的詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)。 包含在這個版本的 Visual c + + 中的 ODBC 驅動程式清單以及取得其他驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。  
   
-##  <a name="_core_your_recordsets"></a>您的資料錄集  
+##  <a name="_core_your_recordsets"></a> 您的資料錄集  
  對於每個相異的資料表、 檢視表或您想要存取的預存程序，您通常定義類別，衍生自`CRecordset`。 （例外狀況是資料庫的連結，其中一個資料錄集代表資料行從兩個或多個資料表）。當您衍生的資料錄集類別時，您啟用資料錄欄位交換 (RFX) 機制或大量資料錄欄位交換 (Bulk RFX) 機制，類似於對話方塊資料交換 (DDX) 機制。 RFX 和 Bulk RFX 簡化從資料來源的資料傳輸至資料錄集;RFX 此外從資料錄集，資料傳輸的資料來源。 如需詳細資訊，請參閱[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)和[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
  資料錄集物件可讓您存取所有選取的記錄。 您可以捲動使用多個選取的記錄`CRecordset`成員函式，例如`MoveNext`和`MovePrev`。 同時，資料錄集物件，代表其中一個選取的資料錄，目前的記錄。 您可以藉由宣告類別成員變數對應到資料行的資料表或從資料庫查詢產生的記錄資料錄集來檢查目前資料錄的欄位。 資料錄集的資料成員的相關資訊，請參閱[資料錄集： 架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。  
@@ -132,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [資料錄集：資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [異動 (ODBC)](../../data/odbc/transaction-odbc.md)

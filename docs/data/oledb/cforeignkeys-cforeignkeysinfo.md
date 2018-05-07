@@ -1,12 +1,9 @@
 ---
-title: "CForeignKeys、 CForeignKeysInfo |Microsoft 文件"
-ms.custom: 
+title: CForeignKeys、 CForeignKeysInfo |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_nOrdinal
@@ -63,18 +60,16 @@ helpviewer_keywords:
 - m_guidPKColumn
 - FK_TABLE_NAME
 ms.assetid: 1c401a4a-0827-4255-9214-bc893e1cd79d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e31251156e84a6befec036f9e27c45f3aba1d895
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7e15b4a855375161f15ff9fa872a700f93b817a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cforeignkeys-cforeignkeysinfo"></a>CForeignKeys、CForeignKeysInfo
 呼叫 typedef 類別**CForeignKeys**來實作其參數類別**CForeignKeysInfo**。  
@@ -107,5 +102,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

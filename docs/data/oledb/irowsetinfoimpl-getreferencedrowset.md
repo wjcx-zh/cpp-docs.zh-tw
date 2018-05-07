@@ -1,12 +1,9 @@
 ---
-title: "Irowsetinfoimpl:: Getreferencedrowset |Microsoft 文件"
-ms.custom: 
+title: 'Irowsetinfoimpl:: Getreferencedrowset |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::IRowsetInfoImpl::GetReferencedRowset
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetReferencedRowset method
 ms.assetid: 94d2155c-9da0-4c19-a37c-bc35716359fd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e264d5a4deebba8538808074fc647a765333c393
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ca538822acdc9493e89639715588db35d5cee686
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetinfoimplgetreferencedrowset"></a>IRowsetInfoImpl::GetReferencedRowset
 傳回資料列集的書籤所套用的介面指標。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetInfoImpl 類別](../../data/oledb/irowsetinfoimpl-class.md)   
  [IRowsetInfoImpl::GetSpecification](../../data/oledb/irowsetinfoimpl-getspecification.md)   
  [IRowsetInfoImpl::GetProperties](../../data/oledb/irowsetinfoimpl-getproperties.md)

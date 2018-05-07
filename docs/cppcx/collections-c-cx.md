@@ -1,31 +1,26 @@
 ---
-title: "集合 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 集合 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0296422ce0f9ef49b096d5ea8512530871fc733b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-ccx"></a>集合 (C++/CX)
 在 C + + /CX 程式，您可以進行自由使用 Standard Template Library (STL) 容器或任何其他使用者定義的集合型別。 不過，當您集合來回傳遞 Windows 執行階段應用程式二進位介面 (ABI) 之間 — 比方說，至 XAML 控制項或 JavaScript 用戶端，您必須使用 Windows 執行階段集合型別。  
   
  Windows 執行階段定義介面，集合和相關的類型，以及 C + + /CX 提供 collection.h 標頭檔中的具象 c + + 實作。 下圖顯示集合型別之間的關聯性：  
   
- ![C &#43; &#43; &#47;/CX 集合類型的繼承樹](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
+ ![C&#43;&#43;&#47;/CX 集合類型的繼承樹](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
   
 -   [Platform::Collections::Vector 類別](../cppcx/platform-collections-vector-class.md) 與 [std::vector 類別](../standard-library/vector-class.md)類似。  
   
@@ -71,7 +66,7 @@ ms.lasthandoff: 02/14/2018
   
  下圖顯示針對 `range for` 執行的 `IVector<Person^>`迴圈。 請注意，程式會執行到第 64 行的中斷點停止。 [ **快速監看式** ] 視窗會顯示迭代器變數 `p` 就是擁有 `VectorProxy<Person^>` 和 `m_v` 成員變數的 `m_i` 。 但是，當您針對這個變數呼叫 `GetType` 時，它會將相同的類型傳回給 `Person` 執行個體 `p2`。 因此，雖然 `VectorProxy` 和 `ArrowProxy` 可能會出現在 [ **快速監看式**]、偵錯工具、某些編譯器錯誤或其他位置，但是一般而言，您仍然不必明確為它們撰寫程式碼。  
   
- ![範圍 &#45; VectorProxy 基礎之 for 迴圈](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
+ ![在範圍內的 VectorProxy&#45;基礎之 for 迴圈](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
   
  有一種情況下您必須為 Proxy 物件撰寫程式碼，就是必須針對元素執行 `dynamic_cast` 的時候 (例如，當您在 `UIElement` 項目集合中尋找特定類型的 XAML 物件時)。 在這種情況下，您必須先將這個項目轉換為 [Platform::Object](../cppcx/platform-object-class.md)^，然後再執行動態轉換：  
   
@@ -136,18 +131,18 @@ void FindButton(UIElementCollection^ col)
   
 |Iterators|函式|  
 |---------------|---------------|  
-|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (在內部儲存[collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)和 int)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (在內部儲存[collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx)和 int)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
 |[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (在內部儲存[IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ 和 int)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
 |[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IMap\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)。|  
-|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
+|[Platform::Collections::InputIterator < Inputiterator<ikeyvaluepair<k\<K，V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[開始](../cppcx/begin-function.md)/ [結束](../cppcx/end-function.md)([IMap\<K，V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)。|  
+|[Platform::Collections::InputIterator < Inputiterator<ikeyvaluepair<k\<K，V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (在內部儲存[IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 和 T)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>集合變更事件  
  `Vector` 和 `Map` 藉由實作變更或重設集合物件時，或者插入、移除或變更集合的任何元素時所發生的事件，來支援 XAML 集合中的資料繫結。 您可以撰寫自己的型別來支援資料繫結，但是您無法繼承自 `Map` 或 `Vector` ，因為這些型別是密封型別。  
   
  [Windows::Foundation::Collections::VectorChangedEventHandler](http://msdn.microsoft.com/library/windows/apps/br206656.aspx) 和 [Windows::Foundation::Collections::MapChangedEventHandler](http://msdn.microsoft.com/library/windows/apps/br206644.aspx) 委派會為集合變更事件的事件處理常式指定簽章。 [Windows::Foundation::Collections::CollectionChange](http://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) 公用列舉類別及 `Platform::Collection::Details::MapChangedEventArgs` 和 `Platform::Collections::Details::VectorChangedEventArgs` ref 類別會儲存事件引數，以判斷造成事件的原因。 *`EventArgs` 類型在 `Details` 命名空間中定義，因為當您使用 `Map` 或 `Vector`時，不需要明確建構或使用這些類型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [內建型別](http://msdn.microsoft.com/en-us/acc196fd-09da-4882-b554-6c94685ec75f)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   

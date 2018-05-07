@@ -1,13 +1,10 @@
 ---
-title: "指定專案設定，從現有程式碼檔案 精靈建立新專案 |Microsoft 文件"
-ms.custom: 
+title: 指定專案設定，從現有程式碼檔案 精靈建立新專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.appsettings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Create New Project From Existing Code Files Wizard, project settings
 ms.assetid: 9b8860c9-d35f-4f18-9565-2934d3d7f569
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cf1e8eba11063f7f2e46f836cd2ef84cc70dfe8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0f59b802b5a24c1b449f78cccee4744538a5a0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-project-settings-create-new-project-from-existing-code-files-wizard"></a>從現有的程式碼檔建立新專案精靈、指定專案設定
 您可以使用 [從現有的程式碼檔建立新專案精靈] 的此頁面來指定：  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
  **加入 Common Language Runtime 支援**  
  將 CLR 程式設計支援加入至新的專案。  
   
- **Common Language Runtime**  
+ **通用語言執行平台**  
  指定新的專案，使其符合 CLR 功能。  
   
  **通用語言執行平台 （舊語法）**  
@@ -77,6 +72,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  當**使用外部建置系統**選項已核取，IDE 不會建立新的專案，所以 /D，/ 我、 /FI、 /AI 或 /FU 選項並不需要編譯。 不過，必須正確設定這些選項讓 IntelliSense 正常運作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指定偵錯組態設定，從現有程式碼檔案 精靈建立新專案](../ide/specify-debug-configuration-settings.md)   
  [從現有的程式碼檔建立新專案精靈、指定發行組態設定](../ide/specify-release-configuration.md)

@@ -1,24 +1,19 @@
 ---
-title: "委派 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 委派 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aca49513c52c5eff9c10461281bb4235fa39349f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9936280d25933afb787d883139725b5a7044db6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="delegates-ccx"></a>委派 (C++/CX)
 `delegate`關鍵字用來宣告參考類型，這是 Windows 執行階段對等的標準 c + + 函式物件。 委派宣告類似於函式簽章，會指定其包裝函式必須有的傳回類型和參數類型。 這是使用者定義的委派宣告：  
@@ -134,7 +129,7 @@ event PrimeFoundHandler^ primeFoundEvent;
   
  如果您熟悉 .NET 的事件處理常式，就會知道建議的作法是在引發之前建立事件的本機複本。 這可避免在叫用事件之前可能移除事件處理常式的競爭情形。 在 C++/CX 中不需要這樣做，因為在加入或移除事件處理常式時會建立新的處理常式清單。 由於在叫用事件之前 C++ 物件會遞增事件處理常式清單上的參考計數，因此所有處理常式保證都是有效。 不過，這也表示，如果移除耗用端執行緒的事件處理常式，當發行物件在其現在已過時的清單複本上操作時，該處理常式可能仍然會被叫用。 直到下一次引發事件時，發行物件才會得到更新清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

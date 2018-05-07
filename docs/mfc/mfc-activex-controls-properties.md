@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 屬性 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea42401255f0aa99dd7a42b8e9b69e45dfe7b5b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9d9e4f5e7d777bd147ce36e970e7a30fd875b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控制項：屬性
 ActiveX 控制項就會引發事件，其控制項容器與通訊。 容器會使用方法和屬性與控制項進行通訊。 方法和屬性類似的用途及目的，分別為成員函式和 c + + 類別的成員變數。 屬性是 ActiveX 控制項的任何容器中公開的資料成員。 屬性會提供包含 ActiveX 控制項，例如 Automation 用戶端和 ActiveX 控制項容器應用程式的介面。  
@@ -48,6 +43,6 @@ ActiveX 控制項就會引發事件，其控制項容器與通訊。 容器會�
   
 -   [MFC ActiveX 控制項：存取環境屬性](../mfc/mfc-activex-controls-accessing-ambient-properties.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

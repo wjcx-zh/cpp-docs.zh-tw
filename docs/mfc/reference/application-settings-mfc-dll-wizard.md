@@ -1,13 +1,10 @@
 ---
-title: "MFC DLL 精靈、 應用程式設定 |Microsoft 文件"
-ms.custom: 
+title: MFC DLL 精靈、 應用程式設定 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.appset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC DLL Wizard, application settings
 ms.assetid: 0a96b94f-ae36-4975-951b-c9ffb3def21c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1851460d5cf9deb8a803b13ec75d92c45c03e607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a243b790881452a983c43fb92d8ebea18c26bcc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>MFC DLL 精靈、應用程式設定
 使用 MFC DLL 精靈的這個頁面來設計和加入新的 MFC DLL 專案的基本功能。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  當您的 MFC DLL，與 Windows 通訊端會建立支援， [Afxenablecontrolcontainer](../../mfc/reference/cwinapp-class.md#initinstance)初始化支援的通訊端且 MFC 標頭檔 StdAfx.h 包含 AfxSock.h。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC DLL 精靈](../../mfc/reference/mfc-dll-wizard.md)   
  [建立 MFC DLL 專案](../../mfc/reference/creating-an-mfc-dll-project.md)
 

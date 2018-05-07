@@ -1,13 +1,10 @@
 ---
-title: "預覽列印架構 |Microsoft 文件"
-ms.custom: 
+title: 預覽列印架構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - printing [MFC], print preview
 - print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffffa6c446487752974549f4a070cf8e86e91aea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26771ba3f5a79716a759327f485a92391fada8c7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="print-preview-architecture"></a>預覽列印架構
 本文說明 MFC 架構如何實作預覽列印功能。 涵蓋的主題包括：  
@@ -38,14 +33,14 @@ ms.lasthandoff: 12/21/2017
   
  預覽列印與螢幕顯示和列印稍有不同，因為應用程式必須使用螢幕模擬印表機，而不是直接在裝置上繪製影像。 若要做到這一點，Mfc 程式庫定義特殊的 （未記載） 類別，衍生自[CDC 類別](../mfc/reference/cdc-class.md)，稱為**CPreviewDC**。 所有 `CDC` 物件都包含兩種裝置內容，不過兩者通常相同。 在**CPreviewDC**物件不相同： 第一個代表模擬的印表機，而第二個代表實際顯示輸出的螢幕。  
   
-##  <a name="_core_the_print_preview_process"></a>預覽列印流程  
+##  <a name="_core_the_print_preview_process"></a> 預覽列印流程  
  當使用者選取 預覽列印 命令，從**檔案** 功能表中，架構會建立**CPreviewDC**物件。 當您的應用程式執行設定印表機裝置內容之特性的作業時，架構也會在螢幕裝置內容上執行類似的作業。 例如，如果您的應用程式選取了列印字型，則架構也會選取模擬印表機字型的螢幕顯示字型。 只要您的應用程式將輸出傳送至印表機，架構就會將輸出傳送至螢幕。  
   
  預覽列印與列印繪製文件頁面的順序也各不相同。 在列印期間，架構會繼續執行列印迴圈，直到完成呈現特定頁面範圍為止。 在預覽列印期間一次會顯示一頁或兩頁，然後應用程式便會等待；在使用者回應之前，不會再顯示其他頁面。 在預覽列印期間，應用程式也必須回應 `WM_PAINT` 訊息，就如同正常螢幕顯示的情況。  
   
  [CView::OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)呼叫函式會叫用預覽模式時，就像它是在列印工作的開頭。 [CPrintInfo 結構](../mfc/reference/cprintinfo-structure.md)傳遞至函數的結構包含數個成員來調整預覽列印作業的某些特性，您可以設定其值。 例如，您可以設定**m_nNumPreviewPages**成員來指定您是否想要預覽一頁或兩頁模式中的文件。  
   
-##  <a name="_core_modifying_print_preview"></a>修改預覽列印  
+##  <a name="_core_modifying_print_preview"></a> 修改預覽列印  
  您可以輕鬆透過數種不同的方式修改預覽列印的行為和外觀。 例如，這當中包括可以：  
   
 -   讓預覽列印視窗顯示捲軸，方便您存取文件的任何頁面。  
@@ -64,9 +59,9 @@ ms.lasthandoff: 12/21/2017
   
  有時您會希望 `OnPreparePrinting` 依據呼叫執行的工作為列印或是預覽列印，執行不同的初始化作業。 您可以檢查來判斷這**m_bPreview**中的成員變數`CPrintInfo`結構。 這個成員設定為**TRUE**叫用預覽列印時。  
   
- `CPrintInfo`結構也包含名為**m_strPageDesc**，用來格式化單頁和多頁模式中螢幕的底部顯示的字串。 這些字串是表單的預設 「 頁面 *n* "和"頁面 *n*   -  *m*，"，但您可以修改**m_strPageDesc**從`OnPreparePrinting`並將字串設定為更複雜的項目。 請參閱[CPrintInfo 結構](../mfc/reference/cprintinfo-structure.md)中*MFC 參考*如需詳細資訊。  
+ `CPrintInfo`結構也包含名為**m_strPageDesc**，用來格式化單頁和多頁模式中螢幕的底部顯示的字串。 這些字串是表單的預設 「 頁面*n*"和"頁面*n* - *m*，"，但您可以修改**m_strPageDesc**從內`OnPreparePrinting`並將字串設定為更複雜的項目。 請參閱[CPrintInfo 結構](../mfc/reference/cprintinfo-structure.md)中*MFC 參考*如需詳細資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [列印和預覽列印](../mfc/printing-and-print-preview.md)   
  [列印](../mfc/printing.md)   
  [CView 類別](../mfc/reference/cview-class.md)   

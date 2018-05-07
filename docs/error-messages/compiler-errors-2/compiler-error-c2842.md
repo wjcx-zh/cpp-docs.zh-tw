@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2842 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2842 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2842
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2842
 ms.assetid: 8674f08d-9f50-46ad-9229-abc6b74fa0e5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47130ec2bf73889130d64f3ca8411bbc38dabf93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe0a95edfa484eb8606b914424e52483c4c1c52d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2842"></a>編譯器錯誤 C2842
 'class'：Managed 或 WinRT 類型不可以定義其自身的 'operator new' 或 'operator delete'  

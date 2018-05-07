@@ -1,12 +1,9 @@
 ---
-title: "CRestrictions 類別 |Microsoft 文件"
-ms.custom: 
+title: CRestrictions 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CRestrictions
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CRestrictions class
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8e68234f3a93cacf22c3abb0c4181a938b3f1dd6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b0b174a8e53f72b0077d10fd1728c4e726e0f218
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crestrictions-class"></a>CRestrictions 類別
 泛型類別，可讓您指定的結構描述資料列限制。  
@@ -62,6 +57,6 @@ class CRestrictions :
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

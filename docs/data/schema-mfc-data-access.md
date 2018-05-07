@@ -1,13 +1,10 @@
 ---
-title: "結構描述 （MFC 資料存取） |Microsoft 文件"
-ms.custom: 
+title: 結構描述 （MFC 資料存取） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,25 +15,23 @@ helpviewer_keywords:
 - schemas [C++], database
 - structures [C++]
 ms.assetid: 7d17e35f-1ccf-4853-b915-5b8c7a45b9ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76a38525f7fdf451d40f555d76d3557cbc155936
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7ba3e7b64a8c65678830593098ef658b3495c75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema--mfc-data-access"></a>結構描述 (MFC 資料存取)
 資料庫結構描述說明資料庫中的資料表和資料庫檢視的目前結構。 一般情況下，精靈產生的程式碼會假設資料錄集所存取的資料表之結構描述將不會變更，但是資料庫類別可以處理某些結構描述變更，例如加入、重新排列或刪除未繫結的資料行。 如果某個資料表變更，您就必須以手動方式更新該資料表的資料錄集，然後重新編譯應用程式。  
   
  您也可以補充精靈產生的程式碼，以處理在編譯時期完全不知道其結構描述的資料庫。 如需詳細資訊，請參閱[資料錄集： 動態地繫結資料行 (ODBC)](../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)   
  [SQL](../data/odbc/sql.md)   
  [資料錄集 (ODBC)](../data/odbc/recordset-odbc.md)

@@ -1,13 +1,10 @@
 ---
-title: "對話方塊資料交換 |Microsoft 文件"
-ms.custom: 
+title: 對話方塊資料交換 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange"></a>對話方塊資料交換
 如果您使用 DDX 機制，通常您會在 `OnInitDialog` 處理常式或對話方塊建構函式中，設定對話方塊物件成員變數的初始值設定。 立即在對話方塊顯示之前，框架的 DDX 機制會將成員變數的值傳送至對話方塊中，出現的位置中的控制項時對話方塊本身顯示以回應`DoModal`或**建立**. `OnInitDialog` 的 `CDialog` 預設實作會呼叫類別 `UpdateData` 的 `CWnd` 成員函式，以初始化對話方塊中的控制項。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  ![對話方塊資料交換](../mfc/media/vc379d1.gif "vc379d1")  
 對話方塊資料交換  
   
- `UpdateData`適用於所指定的兩個方向**BOOL**參數傳遞給它。 若要執行交換，`UpdateData` 會設定 `CDataExchange` 物件並呼叫您對話方塊類別中 `CDialog` 的 `DoDataExchange` 成員函式的覆寫。 `DoDataExchange` 會採用 `CDataExchange` 類型的引數。 傳遞至 `CDataExchange` 的 `UpdateData` 物件表示交換的內容，定義如交換方向等此類資訊。  
+ `UpdateData` 適用於所指定的兩個方向**BOOL**參數傳遞給它。 若要執行交換，`UpdateData` 會設定 `CDataExchange` 物件並呼叫您對話方塊類別中 `CDialog` 的 `DoDataExchange` 成員函式的覆寫。 `DoDataExchange` 會採用 `CDataExchange` 類型的引數。 傳遞至 `CDataExchange` 的 `UpdateData` 物件表示交換的內容，定義如交換方向等此類資訊。  
   
  當您 (或程式碼精靈) 覆寫 `DoDataExchange` 時，請指定每個資料成員 (控制項) 的 DDX 函式的呼叫。 每個 DDX 函式會根據 `CDataExchange` 傳遞給 `DoDataExchange` 的 `UpdateData` 引數所提供之內容，得知如何進行雙向的資料交換。  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  如果使用者取消強制回應對話方塊`OnCancel`成員函式會結束此對話方塊和`DoModal`傳回的值**IDCANCEL**。 在這種情況下，對話方塊和對話方塊物件之間不會進行資料交換。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)   
  [對話方塊資料驗證](../mfc/dialog-data-validation.md)

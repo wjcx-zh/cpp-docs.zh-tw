@@ -1,38 +1,33 @@
 ---
-title: "如何： 新增命令傳送至 Windows Form 控制項 |Microsoft 文件"
-ms.custom: 
+title: 如何： 新增命令傳送至 Windows Form 控制項 |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcd082b22c61e2444d70d936c225e538c2429222
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c13b0bedf7c81431449aaed8d4fa8f067cdf3d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：新增命令傳送至 Windows Form 控制項
 [CWinFormsView](../mfc/reference/cwinformsview-class.md)將命令和更新命令 UI 訊息路由傳送至使用者控制項，允許它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。  
   
  使用者控制項使用[ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize)儲存中的命令來源物件的參考`m_CmdSrc`，如下列範例所示。 若要使用`ICommandTarget`您必須加入 mfcmifc80.dll 的參考。  
   
- `CWinFormsView`處理數個常見的 MFC 檢視通知轉寄給受管理的使用者控制項。 這些通知包含[OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)， [OnUpdate](../mfc/reference/iview-interface.md#onupdate)和[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)方法。  
+ `CWinFormsView` 處理數個常見的 MFC 檢視通知轉寄給受管理的使用者控制項。 這些通知包含[OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)， [OnUpdate](../mfc/reference/iview-interface.md#onupdate)和[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)方法。  
   
  本主題假設您之前已經完成[How to： 在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和[How to： 建立使用者控制項和主應用程式 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。  
   
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
      選取您加入的功能表選項。 請注意，會呼叫此.dll 檔中的方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Form 使用者控制項裝載為 MFC 檢視](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   
  [ICommandSource 介面](../mfc/reference/icommandsource-interface.md)   
  [ICommandTarget 介面](../mfc/reference/icommandtarget-interface.md)   

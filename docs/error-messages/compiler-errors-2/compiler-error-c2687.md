@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2687 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2687 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2687
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2687
 ms.assetid: 1d24b24a-cd0f-41cc-975c-b08dcfb7f402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd6879fafa12a9757e18256520e7bd75957ca52b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b54c3be7a3706dd5471b21c2a1779e9990eae678
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2687"></a>編譯器錯誤 C2687
 'type': 例外狀況宣告不能是 'void' 或代表不完整的類型或指標或參考不完整的類型  

@@ -1,13 +1,10 @@
 ---
-title: "編譯器錯誤 C2472 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2472 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2472
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2472
 ms.assetid: 3b36bcdc-2ba5-4357-ab88-7545ba0551cd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5267f20aaed4ebf1c320d3d960684376e29814ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d89a6d6b10fa76c7fbf1bf11c4ebe2ecff5f98ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2472"></a>編譯器錯誤 C2472
 'function' 無法在 Managed 程式碼中產生: 'message'，請以 /clr 編譯以便產生混合影像  
@@ -54,5 +49,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
- [/clr （common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)
+## <a name="see-also"></a>另請參閱  
+ [/clr (通用語言執行平台編譯)](../../build/reference/clr-common-language-runtime-compilation.md)

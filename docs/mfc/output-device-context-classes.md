@@ -1,13 +1,10 @@
 ---
-title: "輸出 （裝置內容） 類別 |Microsoft 文件"
-ms.custom: 
+title: 輸出 （裝置內容） 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.output
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - painting classes [MFC]
 - output classes [MFC]
 ms.assetid: 35fd6435-a38e-42c6-a3fa-cd6f39370fc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db7080c263ee6e98d458381d59446263490dfd7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85571e2173d9dc4e900d63e982a91571fafc103e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="output-device-context-classes"></a>輸出(裝置內容) 類別
 這些類別會封裝之不同類型的裝置在 Windows 中可用的內容。  
@@ -77,6 +72,6 @@ ms.lasthandoff: 12/21/2017
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
  列印檔案中提供的標準對話方塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "嚴重錯誤 C1076 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1076 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1076
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1076
 ms.assetid: 84ac1180-3e8a-48e8-9f77-7f18a778b964
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 617db809cfaeb4d0e0003a3dfc2e9568726b0c58
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38577e59ea874dda99d57297fc8c921f444648c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1076"></a>嚴重錯誤 C1076
 編譯器限制：已達到內部堆積限制；請使用 /Zm 以指定更高的限制  
@@ -50,4 +45,4 @@ ms.lasthandoff: 12/21/2017
   
 8.  將目前的檔案分割成較小的檔案。  
   
- 如果組建啟動之後，為指定的值馬上出現 c1076 **/Zm**可能是為您的程式太高。 減少**/Zm**值。
+ 如果組建啟動之後，為指定的值馬上出現 c1076 **/Zm**可能是為您的程式太高。 減少 **/Zm**值。

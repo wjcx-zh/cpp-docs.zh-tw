@@ -1,11 +1,8 @@
 ---
-title: "Platform 命名空間 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: Platform 命名空間 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Platform/Platform
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform Namespace (C++/CX)
 ms.assetid: b160e822-d424-43d2-ba60-57b0e81f259c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08045758313274a3be5626a7c4f2fa5bd54ae891
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 348bedcde953cbcd6084023d6f7117c7f7f001f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platform-namespace-ccx"></a>Platform 命名空間 (C++/CX)
 包含與 Windows 執行階段相容的內建類型。  
@@ -115,7 +110,7 @@ using namespace Platform;
 |[Platform::SizeT 實值類別](../cppcx/platform-sizet-value-class.md)|用來表示物件大小的不帶正負號的資料類型。|  
 |[Platform::UIntPtr 實值類別](../cppcx/platform-uintptr-value-class.md)|大小適用於平台的不帶正負號的指標 (32 位元或 64 位元)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform:: collections 命名空間](../cppcx/platform-collections-namespace.md)   
  [Platform::Runtime::CompilerServices 命名空間](../cppcx/platform-runtime-compilerservices-namespace.md)   
  [Platform::Runtime::InteropServices 命名空間](../cppcx/platform-runtime-interopservices-namespace.md)   

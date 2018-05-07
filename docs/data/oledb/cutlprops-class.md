@@ -1,12 +1,9 @@
 ---
-title: "CUtlProps 類別 |Microsoft 文件"
-ms.custom: 
+title: CUtlProps 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CUtlProps
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CUtlProps class
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c8aa99a4ad1642ea14b85e3e68f00a68c005bb4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6b39edb002c254f5d122d574ac389c2fd4df8b38
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cutlprops-class"></a>CUtlProps 類別
 會實作各種不同的 OLE DB 屬性的介面屬性 (例如， `IDBProperties`， `IDBProperties`，和`IRowsetInfo`)。  
@@ -64,6 +59,6 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,13 +1,10 @@
 ---
-title: "&lt;paramref&gt; （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: '&lt;paramref&gt; （Visual c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - paramref
 - <paramref>
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - paramref C++ XML tag
 - <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591aaaff84fa347e2753e2dc3899bb7f6900a5f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; （Visual c + +）
 \<Paramref > 標記可讓您能夠指出字參數。 可以處理的.xml 檔案，以醒目的方式格式化此參數。  
@@ -60,5 +55,5 @@ public ref class MyClass {
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

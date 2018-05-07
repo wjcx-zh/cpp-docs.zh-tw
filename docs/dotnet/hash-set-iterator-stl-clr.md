@@ -1,12 +1,9 @@
 ---
-title: "hash_set:: iterator (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'hash_set:: iterator (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - iterator member [STL/CLR]
 ms.assetid: b75fc54f-6a9e-4ce8-a168-988afe7fe7e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 481d47a69c28619498f956a8f6eb435ea3a7d421
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87d41645c0f854406ac7dac383f7e71c7f3ad162
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetiterator-stlclr"></a>hash_set::iterator (STL/CLR)
 受控制序列之迭代器的類型。  
@@ -74,6 +69,6 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set::const_iterator (STL/CLR)](../dotnet/hash-set-const-iterator-stl-clr.md)

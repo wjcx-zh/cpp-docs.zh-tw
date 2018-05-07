@@ -1,13 +1,10 @@
 ---
-title: "建立非強制回應屬性工作表 |Microsoft 文件"
-ms.custom: 
+title: 建立非強制回應屬性工作表 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4686caf6c414952cd86dfe0c69fcc3be8ee09af9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10dbef813d922bd01a5f9215b6d6e642349d2b75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-modeless-property-sheet"></a>建立非強制回應屬性工作表
 一般來說，您建立屬性工作表為強制回應。 當使用強制回應屬性工作表時，使用者必須先關閉屬性工作表之前使用的應用程式的任何其他部分。 本文描述您可用來建立可讓使用者使用應用程式的其他部分時，將屬性工作表保持開啟的非強制回應屬性工作表的方法。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  有許多使用者介面替代方案，以判斷當非強制回應屬性工作表設定應該套用至外部物件。 一種替代方法是套用目前屬性頁的設定，每當使用者變更任何值。 另一個替代方式是提供 [套用] 按鈕，可讓使用者累積之前認可這些外部物件的屬性頁中的變更。 方式處理 [套用] 按鈕上的資訊，請參閱文章[處理套用按鈕](../mfc/handling-the-apply-button.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性工作表](../mfc/property-sheets-mfc.md)   
  [交換資料](../mfc/exchanging-data.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)

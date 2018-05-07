@@ -1,29 +1,24 @@
 ---
-title: ".Xml 檔案處理 |Microsoft 文件"
-ms.custom: 
+title: .Xml 檔案處理 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-file-processing"></a>.XML 檔案處理
 編譯器會針對程式碼中，標記為要產生文件的每個建構產生識別碼字串。 如需詳細資訊，請參閱[建議的標記文件註解](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)。 識別碼字串可唯一識別此建構。 處理中的.xml 檔案的程式可用來識別對應.NET Framework 中繼資料或反映的項目文件適用於識別碼字串。  
@@ -190,5 +185,5 @@ namespace N {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

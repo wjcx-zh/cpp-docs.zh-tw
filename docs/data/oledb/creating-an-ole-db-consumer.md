@@ -1,30 +1,25 @@
 ---
-title: "建立 OLE DB 消費者 |Microsoft 文件"
-ms.custom: 
+title: 建立 OLE DB 消費者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: 652309d3-7736-4354-89ec-28ec80a83f9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 54739d1792b5695cf7af7a94025be793697f0d5d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4e68aacb013cb7f91d0225094cfd941eae5e2c30
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-ole-db-consumer"></a>建立 OLE DB 消費者
 您可以建立 OLE DB 樣板取用者，不論 ATL OLE DB 消費者精靈，但建議的方法是使用精靈。 取用者可以在任何支援 ATL 應用程式中運作  
@@ -35,5 +30,5 @@ ms.lasthandoff: 02/23/2018
   
 -   [不使用精靈建立 OLE DB 消費者](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

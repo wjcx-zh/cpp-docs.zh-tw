@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3487 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3487 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3487
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566f130e3d65826feecc02afae0cc1a7db335efe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb30b9a2cb0b77eff0888da6c387bd3b06182721
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3487"></a>編譯器錯誤 C3487
 'return type'：所有傳回運算式必須推算為相同類型：先前是 'return type'  
@@ -54,5 +49,5 @@ int* test(int* pi) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

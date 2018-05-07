@@ -1,13 +1,10 @@
 ---
-title: "從 CObject 衍生類別 |Microsoft 文件"
-ms.custom: 
+title: 從 CObject 衍生類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CObject
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97e151d8c3ec44286807baf5e68d4e4eac17e306
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d0b629617c1592387f3f959996fd3e9837242ea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-a-class-from-cobject"></a>從 CObject 衍生類別
 這篇文章描述最小的步驟，自[CObject](../mfc/reference/cobject-class.md)。 其他`CObject`類別文章說明利用特定的所需的步驟`CObject`功能，例如序列化和診斷的偵錯支援。  
@@ -76,6 +71,6 @@ ms.lasthandoff: 12/21/2017
   
  發行項[指定功能層級](../mfc/specifying-levels-of-functionality.md)描述如何指定其他層級的功能，包括執行階段類別資訊、 動態物件建立和序列化。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CObject](../mfc/using-cobject.md)
 

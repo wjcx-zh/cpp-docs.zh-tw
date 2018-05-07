@@ -2,12 +2,9 @@
 title: 混合的、 純粹的和可驗證的功能比較 (C + + /CLI) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - safe assemblies [C++]
 - mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4ac2356fbe12af53890e8159484b89150b60945
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 201f2eb0979857713848a8c381ef0a31ba179c41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>混合的、純粹的和可驗證的功能比較 (C++/CLI)
 本主題會比較不同的功能 **/clr**編譯模式。 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 04/20/2018
   
 |功能|混合 (/ clr)|純 (/ /clr: pure)|安全 (/: safe)|相關的資訊|  
 |-------------|---------------------|-------------------------|-------------------------|-------------------------|  
-|CRT 程式庫|支援|deprecated||[依類別目錄的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)|  
+|CRT 程式庫|支援|deprecated||[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)|  
 |MFC/ATL|支援|||[MFC 桌面應用程式](../mfc/mfc-desktop-applications.md) &#124; [類別概觀](../atl/atl-class-overview.md)|  
 |Unmanaged 函式|支援|||[混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)|  
 |未受管理的資料|支援|deprecated||[純粹的和可驗證的程式碼 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  

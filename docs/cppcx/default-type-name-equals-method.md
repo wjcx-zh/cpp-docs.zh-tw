@@ -1,28 +1,23 @@
 ---
-title: "預設:: (type_name):: Equals 方法 |Microsoft 文件"
-ms.custom: 
+title: '預設:: (type_name):: Equals 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Equals
 dev_langs:
 - C++
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8318e3dd7fe4702d83c0b16b19d67f156a9c2cd3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d2a8246597715ee2be2f55ba396a57f0ed014819
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals 方法
 判斷指定的物件是否等於目前的物件。  
@@ -52,5 +47,5 @@ bool Equals(
   
  **標頭：** vccorlib.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [預設命名空間](../cppcx/default-namespace.md)

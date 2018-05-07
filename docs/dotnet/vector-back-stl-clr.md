@@ -2,11 +2,8 @@
 title: 'vector:: back (STL/CLR) |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::back
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - back member [STL/CLR]
 ms.assetid: 5edb3fcc-74c5-4f04-b8dd-edab49ba45a0
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8cee3410bc914ca1187a6daf93002f13dcb7b094
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a42e44f0eb04390200529148eb6917a4cb56be0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorback-stlclr"></a>vector::back (STL/CLR)
 存取最後一個項目。  
@@ -83,7 +78,7 @@ back() = c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)   
  [vector:: front (STL/CLR)](../dotnet/vector-front-stl-clr.md)   

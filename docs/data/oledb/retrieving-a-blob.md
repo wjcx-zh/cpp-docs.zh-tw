@@ -1,12 +1,9 @@
 ---
-title: "擷取 BLOB |Microsoft 文件"
-ms.custom: 
+title: 擷取 BLOB |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - BLOB (binary large object), retrieving
 - OLE DB, BLOBs (binary large objects)
 ms.assetid: 2893eb0a-5c05-4016-8914-1e40ccbaf0b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e1ded4ce6ae479b555053a1a88290b3e6030c91
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 420e863fcd5d4c666bf8e9a25a2f0f53e726c871
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-a-blob"></a>擷取 BLOB
 您可以擷取各種二進位大型物件 (BLOB)。 您可以使用**DBTYPE_BYTES**擷取 BLOB 以位元組為單位的序列，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱[BLOB 與 OLE 物件](https://msdn.microsoft.com/en-us/library/ms711511.aspx)中*OLE DB 程式設計人員參考*。  
@@ -63,6 +58,6 @@ while (categories.MoveNext() == S_OK)
   
  處理 BLOB 資料的巨集的詳細資訊，請參閱"資料行對應巨集 」，在[巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)   
  [OLE DB 消費者範本的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

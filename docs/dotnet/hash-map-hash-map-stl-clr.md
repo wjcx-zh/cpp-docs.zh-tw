@@ -1,12 +1,9 @@
 ---
-title: "hash_map:: hash_map (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'hash_map:: hash_map (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::hash_map
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - hash_map member [STL/CLR]
 ms.assetid: d65eb3fa-4bf9-4186-95f8-5517c90ef1fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e53d52a2d057854bdaf4b5471b548ce39fc86f66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be0eedeea8aceabbb6726f27a5cd488beeee50f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmaphashmap-stlclr"></a>hash_map::hash_map (STL/CLR)
 建構容器物件。  
@@ -274,7 +269,7 @@ size() = 0
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_map::generic_container (STL/CLR)](../dotnet/hash-map-generic-container-stl-clr.md)   
  [hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)

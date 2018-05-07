@@ -1,12 +1,9 @@
 ---
-title: "連結器工具錯誤 LNK2033 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具錯誤 LNK2033 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2033
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2033
 ms.assetid: d61db467-9328-4788-bf54-e2a20537f13f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bac0d88d8e1ba06c358a6a1dd410b861dc582cdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d03e8d2e0502d6e3664bff05c75fffb4f4ebd5da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2033"></a>連結器工具錯誤 LNK2033
 'type' 的無法解析的 typeref 語彙基元 (token)  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  編譯時，可能會發生 LNK2033 **/clr: safe**以及有向前宣告 MSIL 模組中的型別中 MSIL 模組的參考位置類型。  
   
- 型別，必須定義在**/clr: safe**。  
+ 型別，必須定義在 **/clr: safe**。  
   
  如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。  
   

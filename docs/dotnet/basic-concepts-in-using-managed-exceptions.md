@@ -2,12 +2,9 @@
 title: Managed 例外狀況中使用的基本概念 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5e2faf56f050610e6c98ff82cdca10333a54fd93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 255a7d053228b73b2b0eb13f4732e9a7829549ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用 Managed 例外狀況中的基本概念
-本主題討論在 managed 應用程式中處理的例外狀況。 也就是使用編譯的應用程式**/clr**編譯器選項。  
+本主題討論在 managed 應用程式中處理的例外狀況。 也就是使用編譯的應用程式 **/clr**編譯器選項。  
   
 ## <a name="in-this-topic"></a>本主題內容  
   
@@ -42,13 +37,13 @@ ms.lasthandoff: 12/21/2017
 -   [Try/Catch 區塊 CLR 延伸模組](#vcconbasicconceptsinusingmanagedexceptionsanchor2)  
   
 ## <a name="remarks"></a>備註  
- 如果您使用編譯**/clr**選項，您可以處理 CLR 例外狀況，以及標準[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)和[結構化例外狀況處理](../cpp/structured-exception-handling-c-cpp.md)(SEH)。 CLR 例外狀況是 managed 型別所擲回任何例外狀況。 [System:: exception](https://msdn.microsoft.com/en-us/library/system.exception.aspx)類別提供許多有用的方法，以處理 CLR 例外狀況，並建議使用者定義的例外狀況類別的基底類別。  
+ 如果您使用編譯 **/clr**選項，您可以處理 CLR 例外狀況，以及標準[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)和[結構化例外狀況處理](../cpp/structured-exception-handling-c-cpp.md)(SEH)。 CLR 例外狀況是 managed 型別所擲回任何例外狀況。 [System:: exception](https://msdn.microsoft.com/en-us/library/system.exception.aspx)類別提供許多有用的方法，以處理 CLR 例外狀況，並建議使用者定義的例外狀況類別的基底類別。  
   
- 攔截例外狀況類型衍生自介面不支援**/clr**。 此外，common language runtime 不允許您攔截堆疊溢位例外狀況。堆疊溢位例外狀況會終止處理程序。  
+ 攔截例外狀況類型衍生自介面不支援 **/clr**。 此外，common language runtime 不允許您攔截堆疊溢位例外狀況。堆疊溢位例外狀況會終止處理程序。  
   
  如需在 managed 和 unmanaged 應用程式中的例外狀況處理差異的詳細資訊，請參閱[例外狀況處理行為在 Managed Extensions for c + + 中的差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)。  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>擲回的 /clr 之下例外狀況  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> 擲回的 /clr 之下例外狀況  
  C + + throw 運算式會延伸至 CLR 型別擲回的控制代碼。 下列範例會建立自訂例外狀況型別，然後擲回該類型的執行個體：  
   
 ```  
@@ -80,7 +75,7 @@ void GlobalFunction() {
 }  
 ```  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Try/Catch 區塊 CLR 延伸模組  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Try/Catch 區塊 CLR 延伸模組  
  相同**再試一次**/**攔截**區塊結構可用來擷取 CLR 和原生例外狀況：  
   
 ```  
@@ -171,9 +166,9 @@ catch(...)
   
  如果 catch(Object^) 被攔截的 unmanaged 的類型，它並不會終結擲回的物件。  
   
- 當擲回或攔截 unmanaged 例外狀況時，我們建議您使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項，而非**/EHs**或**/EHa**。  
+ 當擲回或攔截 unmanaged 例外狀況時，我們建議您使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項，而非 **/EHs**或 **/EHa**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)   
  [safe_cast](../windows/safe-cast-cpp-component-extensions.md)   
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)

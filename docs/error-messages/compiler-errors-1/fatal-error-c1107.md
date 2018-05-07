@@ -1,12 +1,9 @@
 ---
-title: "嚴重錯誤 C1107 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1107 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1107
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1107
 ms.assetid: 541a4d9f-10bc-4dd8-b68e-15e548f3dc0a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50a8524cdaddf3d160a2a718a1efbac2562f4127
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 949ee09244a106984522fb35dd13c0b3426fc820
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1107"></a>嚴重錯誤 C1107
 找不到組件 'file': 請指定組件搜尋路徑，請使用 /AI 或設定 LIBPATH 環境變數  

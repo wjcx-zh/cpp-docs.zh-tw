@@ -1,12 +1,9 @@
 ---
-title: "IRowsetLocateImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IRowsetLocateImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetLocateImpl
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IRowsetLocateImpl class
 - bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 27af767c9104159d6c398db226a5a45a36e01e2f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: db8d0b5d81a53a71413998b39947eb71a1bd508a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 類別
 實作 OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)介面，從資料列集擷取任意資料列。  
@@ -82,7 +77,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|比較兩個書籤。|  
 |[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|擷取從書籤中位移所指定的資料列開始的資料列。|  
 |[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|擷取符合指定的書籤的資料列。|  
-|[Hash](../../data/oledb/irowsetlocateimpl-hash.md)|傳回雜湊值，指定的書籤。|  
+|[雜湊](../../data/oledb/irowsetlocateimpl-hash.md)|傳回雜湊值，指定的書籤。|  
   
 ### <a name="data-members"></a>資料成員  
   
@@ -102,7 +97,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ## <a name="requirements"></a>需求  
  **標頭**： 為 atldb  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [IRowsetLocate:IRowset](https://msdn.microsoft.com/en-us/library/ms721190.aspx)   

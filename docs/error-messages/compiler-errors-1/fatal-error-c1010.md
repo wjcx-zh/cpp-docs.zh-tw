@@ -1,12 +1,9 @@
 ---
-title: "嚴重錯誤 C1010 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1010 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1010
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2123118be2a8a382f6b718499c5af16f88d111
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8af35b28cfa02bd2723ff3c78db04a27cc39ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1010"></a>嚴重錯誤 C1010
 尋找先行編譯的標頭時出現非預期的檔案結尾。 您忘記新增 '#include 名稱' 到您的來源？  
@@ -38,10 +33,10 @@ ms.lasthandoff: 12/21/2017
   
     1.  在專案的方案總管 窗格中，以滑鼠右鍵按一下專案名稱，然後**屬性**。  
   
-    2.  在左窗格中，按一下  **C/c + +**資料夾。  
+    2.  在左窗格中，按一下  **C/c + +** 資料夾。  
   
     3.  按一下**先行編譯標頭**節點。  
   
     4.  在右窗格中，按一下 **建立/使用先行編譯標頭**，然後按一下 **未使用先行編譯標頭**。  
   
--   請確定您有不小心刪除、 重新命名或移除標頭檔 (根據預設，stdafx.h) 從目前的專案。 這個檔案也必須包含使用原始程式檔中的任何其他程式碼之前**#include"stdafx.h"**。 (此標頭檔指定為**透過檔案建立/使用 PCH**專案屬性)
+-   請確定您有不小心刪除、 重新命名或移除標頭檔 (根據預設，stdafx.h) 從目前的專案。 這個檔案也必須包含使用原始程式檔中的任何其他程式碼之前 **#include"stdafx.h"**。 (此標頭檔指定為**透過檔案建立/使用 PCH**專案屬性)

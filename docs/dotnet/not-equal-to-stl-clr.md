@@ -1,12 +1,9 @@
 ---
-title: "not_equal_to (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: not_equal_to (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::not_equal_to
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - not_equal_to function [STL/CLR]
 ms.assetid: 1b66e0ca-eace-4672-8da9-ed16f8608bca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ae79c521f7edcc055ec6eee5907a6102ebf26134
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b8046b4723a6e4e725662db2cce9e3981155748b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
 此範本類別描述函式，呼叫時，則傳回 true 只有第一個引數不是等於第二個。 您可以使用它指定其引數類型方面的函式物件。  
@@ -132,5 +127,5 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)

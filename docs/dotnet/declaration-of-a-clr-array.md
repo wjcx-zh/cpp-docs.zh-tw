@@ -2,29 +2,24 @@
 title: CLR 陣列的宣告，|Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - array keyword [C++]
 ms.assetid: 36a8883c-2663-43f0-a90c-28f27035e036
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3f263227d437ddafb65ac3da0829414e4af05855
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d8b2a5d348887d56a1221a5a9125449e5356b9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-array"></a>CLR 陣列的宣告
 宣告的語法，具現化，並初始化 managed 的陣列已從 Managed Extensions for c + + Visual c + +。  
@@ -102,6 +97,6 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [陣列](../windows/arrays-cpp-component-extensions.md)

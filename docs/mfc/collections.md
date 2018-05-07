@@ -1,13 +1,10 @@
 ---
-title: "集合 |Microsoft 文件"
-ms.custom: 
+title: 集合 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e980f3f8fe86b621cb1494b08aec3fcdcb49f54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: beae5370c86bf0142b29f029778083f3042ae931
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections"></a>集合
 MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型：  
@@ -48,7 +43,7 @@ MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型
 > [!NOTE]
 >  如果您的程式碼已經使用非樣板集合類別，則可以繼續使用它們。 如果您為您的資料類型撰寫新的類型安全集合類別，建議您使用較新的樣板型類別。  
   
-##  <a name="_core_collection_shapes"></a>集合圖形  
+##  <a name="_core_collection_shapes"></a> 集合圖形  
  集合類別是依其圖形與其項目的類型來區別。 圖形是指依照集合來組織和儲存物件的方式。 MFC 提供三個基本集合圖形：清單、陣列和對應 (也稱為字典)。 您可以選擇最適合您的特定程式設計問題的集合圖形。  
   
  本主題稍後將簡短說明所提供三種集合圖形的各個圖形。 若要比較的圖形可協助您決定何者最適用於您的程式功能，請參閱[選擇集合類別的建議](../mfc/recommendations-for-choosing-a-collection-class.md)。  
@@ -65,24 +60,24 @@ MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型
   
      對應是將金鑰物件與值物件建立關聯的集合。  
   
-##  <a name="_core_the_template_based_collection_classes"></a>樣板型集合類別  
+##  <a name="_core_the_template_based_collection_classes"></a> 樣板型集合類別  
  實作包含任何類型物件的類型安全集合的最簡單方法，是使用其中一個 MFC 樣板型類別。 如需這些類別的範例，請參閱 MFC 範例[收集](../visual-cpp-samples.md)。  
   
  下表列出的是 MFC 樣板型集合類別。  
   
 ### <a name="collection-template-classes"></a>集合樣板類別  
   
-|集合內容|陣列|清單|對應|  
+|集合內容|陣列|清單|地圖|  
 |-------------------------|------------|-----------|----------|  
 |任何類型物件的集合|`CArray`|`CList`|`CMap`|  
 |指向任何類型物件的指標集合|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a>非根據樣板集合類別  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> 非根據樣板集合類別  
  如果您的應用程式已經使用 MFC 非樣板類別，可以繼續使用它們。 不過，對於新的集合，建議您使用樣板型類別。 下表列出的不是根據樣板的 MFC 集合類別。  
   
 ### <a name="nontemplate-collection-classes"></a>非樣板集合類別  
   
-|陣列|清單|對應|  
+|陣列|清單|地圖|  
 |------------|-----------|----------|  
 |`CObArray`|`CObList`|`CMapPtrToWord`|  
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|  
@@ -124,7 +119,7 @@ MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型
   
 -   [刪除 CObject 集合中的所有物件](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../mfc/mfc-concepts.md)   
  [一般 MFC 主題](../mfc/general-mfc-topics.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "建立擴充的下拉式方塊控制項 |Microsoft 文件"
-ms.custom: 
+title: 建立擴充的下拉式方塊控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CComboBoxEx class [MFC], creating extended combo box controls
 - extended combo boxes [MFC], creating
 ms.assetid: a964267e-97b6-4e77-9f89-55bb5c68913f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c3dc06ff391d1a90342f867813f60f9ce85bd2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c6a891aeadf2fa8366eec52a967e13776db6523
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-extended-combo-box-control"></a>建立擴充的下拉式方塊控制項
 建立擴充的下拉式方塊控制項的方式取決於您是使用控制項在對話方塊中還是非對話方塊視窗中建立。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  呼叫控制項的[建立](../mfc/reference/ctabctrl-class.md#create)成員函式，可能在[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)，方式與父視窗[OnCreate](../mfc/reference/cwnd-class.md#oncreate)處理常式函式。 設定控制項的樣式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CComboBoxEx](../mfc/using-ccomboboxex.md)   
  [控制項](../mfc/controls-mfc.md)
 

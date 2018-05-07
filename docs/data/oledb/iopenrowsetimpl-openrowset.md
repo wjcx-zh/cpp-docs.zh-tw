@@ -1,12 +1,9 @@
 ---
-title: IOpenRowsetImpl::OpenRowset | Microsoft Docs
-ms.custom: 
+title: 'Iopenrowsetimpl:: Openrowset |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - OpenRowset
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - OpenRowset method
 ms.assetid: 2ece8d6c-d165-4f1d-b155-8609bbb60eb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 430fd00093cbea8c294e97016d42553eea2e815d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84bd34786dd87e92d70ad28d0f0a961cb01c1e48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="iopenrowsetimplopenrowset"></a>IOpenRowsetImpl::OpenRowset
 開啟並傳回包含單一基底資料表或索引的所有資料列的資料列集。  
@@ -54,5 +49,5 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IOpenRowsetImpl 類別](../../data/oledb/iopenrowsetimpl-class.md)

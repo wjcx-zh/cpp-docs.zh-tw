@@ -1,12 +1,9 @@
 ---
-title: "CCreateContext 結構 |Microsoft 文件"
-ms.custom: 
+title: CCreateContext 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 結構
 架構會使用`CCreateContext`結構時，它會建立框架視窗和文件相關聯的檢視。  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>備註  
- `CCreateContext`是一種結構，而且沒有基底類別。  
+ `CCreateContext` 是一種結構，而且沒有基底類別。  
   
  當您建立一個視窗時，此結構中的值會提供用來連接到其資料的檢視的文件的元件的資訊。 您只需要使用`CCreateContext`如果您正在覆寫組件的建立程序。  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |成員|類型|是用於|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`若要建立新的檢視。|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` 若要建立新的檢視。|  
 |`m_pCurrentDoc`|`CDocument*`|要與新的檢視相關聯的現有文件。|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|建立新的 MDI 框架視窗相關聯的文件範本。|  
 |`m_pLastView`|`CView*`|原始檢視的其他檢視建立模型，如同建立分隔視窗中檢視或建立的文件上的第二個檢視。|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  所有在指標`CCreateContext`是選擇性的而且可以是`NULL`如果未指定或未知。  
   
- `CCreateContext`底下列出的成員函式由 「 另請參閱。 」 如果想要覆寫它們，請參閱這些函式描述的特定資訊。  
+ `CCreateContext` 底下列出的成員函式由 「 另請參閱。 」 如果想要覆寫它們，請參閱這些函式描述的特定資訊。  
   
  以下是一些一般指導方針：  
   
@@ -73,7 +68,7 @@ struct CCreateContext
 ## <a name="requirements"></a>需求  
  **標頭：** afxext.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)   
  [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)   

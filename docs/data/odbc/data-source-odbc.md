@@ -1,13 +1,10 @@
 ---
-title: "資料來源 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 資料來源 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - configuring ODBC data sources
 - ODBC data sources, represented by CDatabase
 ms.assetid: b246721f-b9e1-49bd-a6c7-f348b8c3d537
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e4276c997069e69d6e84dd4426af4b82c2a839b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 842a8bf3faadcf96b4f44441e45dc94d5679f9f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-odbc"></a>資料來源 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -43,5 +38,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [資料來源：決定資料來源的結構描述 (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

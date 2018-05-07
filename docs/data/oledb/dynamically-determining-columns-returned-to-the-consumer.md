@@ -1,12 +1,9 @@
 ---
-title: "動態決定資料行傳回給消費者 |Microsoft 文件"
-ms.custom: 
+title: 動態決定資料行傳回給消費者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da3d6e700ef69bda084a6bc5c010957c7fddd0c4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd84b6f9451e924fac9e3630df38719c83ff583a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>動態決定傳回給消費者的資料行
 PROVIDER_COLUMN_ENTRY 巨集通常處理**icolumnsinfo:: Getcolumnsinfo**呼叫。 不過，取用者可能會選擇使用書籤，因為提供者必須是能夠變更傳回根據取用者是否要求書籤的資料行。  
@@ -159,5 +154,5 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
   
  您現在可以編譯並執行增強型提供者。 若要測試提供者，請修改測試消費者中所述[實作簡單消費者](../../data/oledb/implementing-a-simple-consumer.md)。 提供者執行測試的取用者。 驗證，測試取用者正確的字串從提供者擷取當您按一下**執行**按鈕**測試消費者** 對話方塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)

@@ -1,30 +1,25 @@
 ---
-title: "容器： 實作容器 |Microsoft 文件"
-ms.custom: 
+title: 容器： 實作容器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e43e1fb1c52413eaae05dcbe8331b1d48dd7e2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3693cb7d52a048045f4745b69b45cacc4defc75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-implementing-a-container"></a>容器：實作容器
 本文摘要說明實作容器的程序，並指向提供詳細說明實作容器之其他文件。 它也會列出您可以實作的選擇性 OLE 功能，以及描述這些功能的文件。  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
      如需詳細資訊，請參閱[容器： 進階功能](../mfc/containers-advanced-features.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [容器](../mfc/containers.md)   
  [容器：用戶端項目](../mfc/containers-client-items.md)
 

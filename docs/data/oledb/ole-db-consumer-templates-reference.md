@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 消費者樣板參考 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 消費者樣板參考 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc-attr.db_param
@@ -21,18 +18,16 @@ dev_langs:
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29f833f6a598b9028506fb11d163be49212bd998
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b5b599a1c7a1b256cc9c56d772a15621beda286f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB 消費者樣板參考
 OLE DB 消費者樣板包含下列類別。 參考資料也包含在主題[OLE DB 消費者樣板的巨集](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
@@ -147,6 +142,6 @@ OLE DB 消費者樣板包含下列類別。 參考資料也包含在主題[OLE D
  [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)  
  用來擷取 OLE DB 錯誤資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)   
  [OLE DB 範本](../../data/oledb/ole-db-templates.md)

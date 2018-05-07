@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 中的資料存取 |Microsoft 文件"
-ms.custom: 
+title: Visual c + + 中的資料存取 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eaefb5f3ed8bd0c586e42527d47918dbb0dd5a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb74d27af485f765e1330bc83ab196e1d9ba6b5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的資料存取
 
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 
 [如何使用 Blob 儲存體從 c + +](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs) Azure Blob 儲存體是雲端中儲存非結構化的資料，做為物件/blob 服務。 Blob 儲存體可以儲存任何類型的文字或二進位資料，例如文件、媒體檔案或應用程式安裝程式。 Blob 儲存體也稱為物件儲存體。
 
-[ODBC 程式設計人員參考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)ODBC 介面設計用於與 C 程式設計語言。 ODBC 介面可用於下列三方面︰SQL 陳述式、ODBC 函式呼叫和 C 程式設計。
+[ ODBC 程式設計人員參考](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)ODBC 介面設計用於與 C 程式設計語言。 ODBC 介面可用於下列三方面︰SQL 陳述式、ODBC 函式呼叫和 C 程式設計。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [Visual C++](../visual-cpp-in-visual-studio.md)

@@ -1,12 +1,9 @@
 ---
-title: "連結器工具錯誤 LNK2028 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具錯誤 LNK2028 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2028
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7441dcd893e3e814d738f228d002a947e7f43c8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7347e8edda7ad8b317d4e6e02dfc9345ac76f269
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2028"></a>連結器工具錯誤 LNK2028
 「 exported_function 」 (decorated_name) 參考在函數 」 function_containing_function_call 」 (decorated_name)  
@@ -44,7 +39,7 @@ __declspec(dllexport) int func() {
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例會建立使用原生函式的純用戶端。 不過，下方的呼叫慣例**/clr: pure**是[__clrcall](../../cpp/clrcall.md)。 下列範例會產生 LNK2028。  
+ 下列範例會建立使用原生函式的純用戶端。 不過，下方的呼叫慣例 **/clr: pure**是[__clrcall](../../cpp/clrcall.md)。 下列範例會產生 LNK2028。  
   
 ```  
 // LNK2028_b.cpp  

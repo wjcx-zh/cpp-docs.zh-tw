@@ -1,12 +1,9 @@
 ---
-title: COLUMN_ENTRY_LENGTH | Microsoft Docs
-ms.custom: 
+title: COLUMN_ENTRY_LENGTH |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY_LENGTH
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - COLUMN_ENTRY_LENGTH macro
 ms.assetid: 1758babf-204c-4d1d-b82a-f9a607072e9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fccf6da8ada00197f6ce3dce51de1371cfbc6f08
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a923f4474f15ffbb2011611bc1f8de476fc399c7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="columnentrylength"></a>COLUMN_ENTRY_LENGTH
 表示從資料列集至資料庫的特定資料行的繫結。  
@@ -62,7 +57,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   

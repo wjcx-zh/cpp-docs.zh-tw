@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 消費者和提供者 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 消費者和提供者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB consumers
 - OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec0a8764ef8f5e906ad399d76a5a004c313f500b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 170f45a3581846dc588abf06aec170d66aa0d545
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB 消費者和提供者
 OLE DB 架構使用模型的消費者和提供者。 取用者可讓資料的要求。 提供者回應這些要求將資料放在以表格式格式，並將其傳回給取用者。 任何呼叫，可讓取用者必須實作提供者中。  
@@ -39,6 +34,6 @@ OLE DB 架構使用模型的消費者和提供者。 取用者可讓資料的要
   
  OLE DB 會避免條款用戶端和伺服器，因為這些角色不一定具意義，特別是在多層式架構的情況下。 取用者不能是另一個元件的層上的元件，因為它呼叫用戶端元件可能會造成混淆。 此外，提供者有時像是多資料庫驅動程式比伺服器。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
  [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)

@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 偵錯專案 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 偵錯專案 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>逐步解說：偵錯專案 (C++)
 在這個逐步解說中，您會修改程式以修正在測試專案時所發現的問題。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
      在**類別檢視**視窗中，展開 **遊戲**專案樹狀結構並選取**Cardgame**類別來顯示類別成員和方法。  
   
-     開啟快顯功能表**~Cardgame(void)**解構函式，然後選擇 **移至定義**。  
+     開啟快顯功能表 **~Cardgame(void)** 解構函式，然後選擇 **移至定義**。  
   
 2.  若要在 Cardgame 終止時減少 `totalParticipants`，請在 `Cardgame::~Cardgame` 解構函式的左邊和右邊大括號之間加入下列程式碼。  
   
@@ -65,8 +60,8 @@ ms.lasthandoff: 12/21/2017
 7.  繼續逐步執行程式直到程式結束，或讓它執行選擇**偵錯**，**執行**功能表列上，或是選擇 F5 鍵。  
   
 ## <a name="next-steps"></a>後續步驟  
- **上一步：** [逐步解說： 測試專案 （c + +）](../ide/walkthrough-testing-a-project-cpp.md) &#124;**下一步：**[逐步解說： 部署程式 （c + +）](../ide/walkthrough-deploying-your-program-cpp.md)  
+ **上一步：** [逐步解說： 測試專案 （c + +）](../ide/walkthrough-testing-a-project-cpp.md) &#124; **下一步：**[逐步解說： 部署程式 （c + +）](../ide/walkthrough-deploying-your-program-cpp.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)

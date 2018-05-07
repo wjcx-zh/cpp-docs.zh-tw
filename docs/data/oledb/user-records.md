@@ -1,12 +1,9 @@
 ---
-title: "使用者資料錄 |Microsoft 文件"
-ms.custom: 
+title: 使用者資料錄 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - COLUMN_ENTRY_MAP
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: faead3ec85fc799abd26613979f7611c9159cc9b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: aea6b4b2ebb1a02e4ef669b437fbe7eb30937f9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-records"></a>使用者資料錄
 若要使用靜態存取子 (也就是存取子，衍生自**CAccessor)**，您取用者都必須有使用者記錄。 使用者資料錄是 c + + 類別，包含要處理輸入或輸出的資料元素。 ATL OLE DB 消費者精靈產生使用者記錄您的消費者。 您可以將方法加入至選擇性工作，例如處理命令的使用者記錄中。  
@@ -97,5 +92,5 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

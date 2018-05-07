@@ -1,11 +1,8 @@
 ---
-title: "Platform:: nullreferenceexception 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: nullreferenceexception 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::NullReferenceException
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::NullReferenceException
 ms.assetid: be202577-d898-4716-83cd-e3556fe8a241
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e79b6e14408cc2a014e761c0030edb21cc942a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 27e74ea7753ddb66a7daa8403874e803dca91f10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformnullreferenceexception-class"></a>Platform::NullReferenceException 類別
 在嘗試解除 Null 物件的參考時擲回。  
@@ -48,5 +43,5 @@ public ref class NullReferenceException : COMException,    IException,    IPrint
   
  **中繼資料：** platform.winmd  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform::COMException 類別](../cppcx/platform-comexception-class.md)

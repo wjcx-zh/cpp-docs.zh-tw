@@ -1,24 +1,19 @@
 ---
-title: "Array 和 WriteOnlyArray (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: Array 和 WriteOnlyArray (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f06e63996024b3fade734a74acdfedf9ece5fba5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 47c26ef4058cc3116d964740a93f7395c300b92b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 您可以自由地使用標準 c-style 陣列或[std:: array](../standard-library/array-class-stl.md)在 C + + /CX 程式 (雖然[std:: vector](../standard-library/vector-class.md)通常是比較好的選擇)，但是在中繼資料中發行任何 API 中，您必須將轉換的 c-style 陣列或向量來[platform:: array](../cppcx/platform-array-class.md)或[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)如何它會依據所使用的型別。 [Platform::Array](../cppcx/platform-array-class.md) 類型的效率及功能都不如 [std::vector](../standard-library/vector-class.md)，因此一般來說，您應該避免在對陣列元素執行許多作業的內部程式碼中使用此類型。  
@@ -93,7 +88,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="avoid-exposing-an-array-as-a-property"></a>避免將陣列公開為屬性  
  一般而言，您應該避免將 `Platform::Array` 類型公開為 ref 類別中的屬性，因為即使用戶端程式碼只嘗試存取單一元素，也會傳回整個陣列。 當您必須將序列容器公開為公用 ref 類別中的屬性時， [Windows::Foundation::IVector](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) 會是較佳選擇。 在私用或內部應用程式開發介面中 (不會發行到中繼資料)，請考慮使用 Standard C++ 容器，例如 [std::vector](../standard-library/vector-class.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

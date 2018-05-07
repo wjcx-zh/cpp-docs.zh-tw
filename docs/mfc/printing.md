@@ -1,13 +1,10 @@
 ---
-title: "列印 |Microsoft 文件"
-ms.custom: 
+title: 列印 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - printing [MFC], from framework
 - printing [MFC]
 ms.assetid: be465e8d-b0c9-4fc5-9fa8-d10486064f76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ee396a7866179bd140f203192d1bdcbfb4681e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7df782e3c30b9120fe7eb6728f1b622750d160f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="printing"></a>列印
 Microsoft Windows 實作與裝置無關的顯示。 在 MFC 中，這表示相同的繪製呼叫，在`OnDraw`負責繪圖和其他裝置，例如印表機上顯示您的檢視類別成員函式。 預覽列印，目標裝置是模擬的印表機輸出到顯示器。  
   
-##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a>您在列印架構的角色與角色  
+##  <a name="_core_your_role_in_printing_vs.._the_framework.92.s_role"></a> 您在列印架構的角色與角色  
  您的檢視類別具有下列責任：  
   
 -   告知架構文件中有多少頁數。  
@@ -68,6 +63,6 @@ Microsoft Windows 實作與裝置無關的顯示。 在 MFC 中，這表示相�
   
 -   [預覽列印](../mfc/print-preview-architecture.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [列印和預覽列印](../mfc/printing-and-print-preview.md)
 

@@ -1,11 +1,8 @@
 ---
-title: "Platform:: agile 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: agile 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile 類別
 以 Agile 物件來表示具有 MashalingBehavior=Standard 的物件，可大幅降低發生執行階段執行緒例外狀況的機會。 `Agile<T>` 可讓非 Agile 物件呼叫相同或不同的執行緒，或者從中被呼叫。 如需詳細資訊，請參閱[執行緒和封送處理](../cppcx/threading-and-marshaling-c-cx.md)。  
@@ -217,7 +212,7 @@ const throw();
   
  這個運算子實際傳回保密的內部類型。 便利的方式來保留傳回值，將它指派給所宣告變數**自動**型别推斷關鍵字。  
 
-## <a name="operator-assign"></a>  Agile::operator= Operator
+## <a name="operator-assign"></a>  Agile:: operator = 運算子
 將指定的物件指派給目前 Agile 物件。  
   
 ## <a name="syntax"></a>語法  
@@ -258,5 +253,5 @@ const throw();
   
  指派作業會自動保存目前 Agile 物件的內容。 
        
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

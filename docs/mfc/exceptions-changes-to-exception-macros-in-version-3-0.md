@@ -1,13 +1,10 @@
 ---
-title: "例外狀況： 3.0 版例外狀況巨集變更 |Microsoft 文件"
-ms.custom: 
+title: 例外狀況： 3.0 版例外狀況巨集變更 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外狀況：3.0 版例外狀況巨集的變更
 這是進階的主題。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 03/16/2018
   
  為 true，第一個 catch 區塊攔截例外狀況。 3.0 版，實作許多例外狀況處理巨集使用 c + + 例外狀況，可擲回的第二個 catch 區塊符合`CException`。  
   
- 這很類似的程式碼。 它通常會顯示當例外狀況物件傳遞至另一個函式可接受泛型**CException\***執行 「 預先擲回 「 處理中，且最後會擲回例外狀況。  
+ 這很類似的程式碼。 它通常會顯示當例外狀況物件傳遞至另一個函式可接受泛型**CException\*** 執行 「 預先擲回 「 處理中，且最後會擲回例外狀況。  
   
  若要解決這個問題，將擲回運算式從函式呼叫的程式碼，編譯器會產生例外狀況時的已知型別的實際發生例外狀況。  
   

@@ -1,29 +1,24 @@
 ---
-title: "實作介面 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 實作介面 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - interfaces, implementing
 ms.assetid: 72f8731b-7e36-45db-8b10-7ef211a773cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 896ada2c46c68a794265e7344e9b7f7c7f91aebe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 309ae9dc576f93574836ab4916e87c5232b37a6c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-an-interface-visual-c"></a>實作介面 (Visual C++)
 若要實作介面，您必須已建立專案做為 ATL COM 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用[ATL 專案精靈](../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[MFC 應用程式中加入 ATL 物件](../mfc/reference/adding-atl-support-to-your-mfc-project.md)實作 MFC 應用程式的 ATL 支援。  
@@ -52,6 +47,6 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  您也可以使用[物件瀏覽器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)檢查介面的成員。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立 COM 介面](../ide/creating-a-com-interface-visual-cpp.md)   
  [編輯 COM 介面](../ide/editing-a-com-interface.md)

@@ -1,13 +1,10 @@
 ---
-title: "使用 c + + Interop (隱含 PInvoke) |Microsoft 文件"
-ms.custom: 
+title: 使用 c + + Interop (隱含 PInvoke) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -29,18 +26,16 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a91c9833358744730b9ad9c63f5a14729d9d0968
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ Interop (隱含 PInvoke)
 不同於其他.NET 語言中，Visual c + + 已經在同一個應用程式，甚至相同的檔案，可讓存在於 managed 和 unmanaged 程式碼的互通性支援 (使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma)。 這可讓 Visual c + + 開發人員整合至現有的 Visual c + + 應用程式的.NET 功能，也不會干擾其餘的應用程式。  
@@ -148,5 +143,5 @@ Done
   
  如需在 interop 案例中使用委派資訊，請參閱[委派 （c + + 元件擴充功能）](../windows/delegate-cpp-component-extensions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)

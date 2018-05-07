@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3508 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3508 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3508
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3508
 ms.assetid: 16d08f89-2f32-44eb-9421-68acecddf49b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63586ffd3157aa91ddf7ccb1ec47b6f1c45bc5d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5930bbc365a3fb9eeae720c8c5355444ac18d879
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3508"></a>編譯器錯誤 C3508
 'type': 不是有效的 Automation 類型  

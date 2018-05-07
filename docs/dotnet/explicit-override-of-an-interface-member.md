@@ -1,13 +1,10 @@
 ---
-title: "介面成員的明確覆寫 |Microsoft 文件"
-ms.custom: 
+title: 介面成員的明確覆寫 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - functions [C++], overriding
 - explicit override of virtual function
 ms.assetid: 46f1f536-bf43-4311-9a17-ff2282e528a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 85681b2e2aeeb6dbeb6ffdf511827fb1fc1cb029
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 811112d2721edccede6c7b4a278189fdec874523
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-override-of-an-interface-member"></a>介面成員的明確覆寫
 宣告明確介面成員的類別中覆寫的語法已從 Managed Extensions for c + + Visual c + +。  
@@ -62,6 +57,6 @@ public:
   
  這項修訂要求明確覆寫介面成員必須指定類別內的唯一名稱。 我在這裡，提供了造成不便名稱`InterfaceClone`。 行為方法仍然相同-的引動過程，透過`ICloneable`介面會叫用已重新命名`InterfaceClone`，而透過類型的物件呼叫`R`叫用第二個`Clone`執行個體。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在類別或介面中的成員宣告 (C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  [明確覆寫](../windows/explicit-overrides-cpp-component-extensions.md)

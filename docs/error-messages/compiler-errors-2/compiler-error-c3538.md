@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3538 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3538 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3538
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3538
 ms.assetid: ef3698a5-7356-4c62-b9af-5d3a4baed958
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 111e75b562020057596baf3f778d97cdab2ab528
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35f852e41ff86b9eed39da0aeb367d7049b8db4b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3538"></a>編譯器錯誤 C3538
 在宣告子清單中 'auto' 必須永遠推算為相同型別  
@@ -57,5 +52,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto 關鍵字](../../cpp/auto-keyword.md)

@@ -1,30 +1,25 @@
 ---
-title: "MDI 索引標籤式群組 |Microsoft 文件"
-ms.custom: 
+title: MDI 索引標籤式群組 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9606d28f6e2057072a0c9fc356e3bc7ca7cdc19b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a7cf6420a331d46f2a158c16a30d439f334a46b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdi-tabbed-groups"></a>MDI 索引標籤式群組
 多重文件介面 (MDI) 索引的群組功能可讓多個文件介面 (MDI) 應用程式，顯示一或多個索引的視窗 (或群組的索引標籤式視窗，又稱為*索引標籤式群組*) 在 MDI 工作區中。 索引視窗可以垂直或水平對齊。 如果應用程式裝載多個 MDI 索引群組，則群組會以分隔器分隔。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 -   若要儲存應用程式中 MDI 索引群組的配置，請呼叫 `CMDIFrameWndEx::SaveMDIState`。 若要載入先前儲存的 MDI 索引群組設定檔，請呼叫 `CMDIFrameWndEx::LoadMDIState`。 您可以呼叫這些方法以載入或儲存 MDI 應用程式中開啟的文件清單。 如需有關儲存和載入 MDI 狀態的詳細資訊，請參閱[cmdiframewndex:: Loadmdistate](../mfc/reference/cmdiframewndex-class.md#loadmdistate)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
  [CMDIFrameWndEx 類別](../mfc/reference/cmdiframewndex-class.md)   
  [CMDIChildWndEx 類別](../mfc/reference/cmdichildwndex-class.md)   

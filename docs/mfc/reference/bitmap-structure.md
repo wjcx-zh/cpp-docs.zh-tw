@@ -1,13 +1,10 @@
 ---
-title: "點陣圖結構 |Microsoft 文件"
-ms.custom: 
+title: 點陣圖結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BITMAP
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed782c3e67a55797bfb2d302265924393946962
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitmap-structure"></a>BITMAP 結構
 **點陣圖**結構會定義高度、 寬度、 色彩格式和位元值的邏輯點陣圖**。**  
@@ -69,7 +64,7 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="remarks"></a>備註  
  目前所使用的點陣圖格式為單色和彩色。 單色點陣圖使用 1 位元 1 平面格式。 每個掃描的位元組皆為 16 的倍數。  
   
- 掃描編排，如下所示的單色點陣圖的高度 *n* :  
+ 掃描編排，如下所示的單色點陣圖的高度*n*:  
   
  `Scan 0`  
   
@@ -94,6 +89,6 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="requirements"></a>需求  
  **標頭：** wingdi.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [Bitmap](../../mfc/reference/cbitmap-class.md#createbitmapindirect)

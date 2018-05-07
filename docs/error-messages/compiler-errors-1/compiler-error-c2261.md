@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2261 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2261 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2261
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3907a1d270de11af82462815ce87398e10c50513
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45050daf3149cd813fb23b5814be5fe49c375f03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2261"></a>編譯器錯誤 C2261
 'string': 組件參考無效，無法解析  
   
  值不是有效的。  
   
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>用來指定 friend 組件。 例如，如果 a.dll 想要指定 b.dll 做為 friend 組件，您會指定 （以 a.dll): InternalsVisibleTo("b")。 然後，執行階段可讓 b.dll 存取 a.dll （除了私用類型） 中的所有項目。  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 用來指定 friend 組件。 例如，如果 a.dll 想要指定 b.dll 做為 friend 組件，您會指定 （以 a.dll): InternalsVisibleTo("b")。 然後，執行階段可讓 b.dll 存取 a.dll （除了私用類型） 中的所有項目。  
   
  如需指定 friend 組件時的正確語法的詳細資訊，請參閱[Friend 組件 （c + +）](../../dotnet/friend-assemblies-cpp.md)。  
   

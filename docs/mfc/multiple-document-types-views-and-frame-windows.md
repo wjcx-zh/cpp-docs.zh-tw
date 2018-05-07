@@ -1,13 +1,10 @@
 ---
-title: "多個文件類型、 檢視和框架視窗 |Microsoft 文件"
-ms.custom: 
+title: 多個文件類型、 檢視和框架視窗 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多重文件類型、檢視和框架視窗
 [Document/View Creation](../mfc/document-view-creation.md)(文件/檢視建立) 中描述文件、其檢視及其框架視窗之間的標準關聯性。 許多應用程式支援單一文件類型 (但可能開啟該類型的多份文件)，該類型具有單一文件檢視，而且每份文件只有一個框架視窗。 但有些應用程式可能需要更改一或多個預設。  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  下圖分成 a、b 和 c 部分，並依上述順序顯示三種使用者介面模型。  
   
- ![多個 &#45; 檢視使用者介面](../mfc/media/vc37a71.gif "vc37a71")  
+ ![多個&#45;檢視使用者介面](../mfc/media/vc37a71.gif "vc37a71")  
 多個檢視使用者介面  
   
  此架構透過實作 [開新視窗] 命令及提供 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)類別，來提供這些模型 (如 [分隔視窗](#_core_splitter_windows)中所述)。 您可以使用這些模型作為起點，來實作其他模型。 如需說明檢視、框架視窗和分隔器之不同組態的範例程式，請參閱 [MFC 範例](../visual-cpp-samples.md)。  
@@ -94,6 +89,6 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱 *MFC 參考* 中的 [CSplitterWnd 類別](../mfc/reference/csplitterwnd-class.md) 和 [MFC 範例](../visual-cpp-samples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文件/檢視架構](../mfc/document-view-architecture.md)
 

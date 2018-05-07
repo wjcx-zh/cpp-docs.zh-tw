@@ -1,12 +1,9 @@
 ---
-title: "auto_handle::release |Microsoft 文件"
-ms.custom: 
+title: auto_handle::release |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::auto_handle::release
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - auto_handle::release
 ms.assetid: d4848150-859e-4c61-a946-09d24d3d6577
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99268be928fe7b5018a36520e517a2f1b7eca5af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6fd49ba3446e6c066479e07df59dc049abe4e2ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autohandlerelease"></a>auto_handle::release
 釋放物件從`auto_handle`管理。  
@@ -99,7 +94,7 @@ done
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto_handle 成員](../dotnet/auto-handle-members.md)   
  [auto_handle:: ~ auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)   
  [auto_handle::reset](../dotnet/auto-handle-reset.md)

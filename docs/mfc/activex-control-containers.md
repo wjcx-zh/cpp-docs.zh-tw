@@ -1,30 +1,25 @@
 ---
-title: "ActiveX 控制項容器 |Microsoft 文件"
-ms.custom: 
+title: ActiveX 控制項容器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee24d39c8769eaf2216ca4f64b9856b778a51ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73496f892cc55ef59b2d84228ae9ae0416d3e8a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers"></a>ActiveX 控制項容器
 ActiveX 控制項容器是一種完全支援 ActiveX 控制項的容器，可以將其合併至自己的視窗或對話方塊中。 ActiveX 控制項可讓您在許多開發專案中重複使用的軟體項目。 控制項可讓您應用程式的使用者存取資料庫、監視資料，以及在您的應用程式中做出各種選擇。 如需 ActiveX 控制項的詳細資訊，請參閱文章[MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)。  
@@ -61,6 +56,6 @@ ActiveX 控制項容器是一種完全支援 ActiveX 控制項的容器，可以
   
  如需文件說明開發使用 Visual c + + 和 MFC ActiveX 控制項類別的 ActiveX 控制項的詳細資訊，請參閱[MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)。 這些文章會依功能分類為不同群組。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

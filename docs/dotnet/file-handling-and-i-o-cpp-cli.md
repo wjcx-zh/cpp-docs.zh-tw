@@ -1,13 +1,10 @@
 ---
-title: "檔案處理和我-O (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 檔案處理和我-O (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - I/O [C++], .NET Framework applications
 - .NET Framework [C++], I/O
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 643888b4a2bca802a9314d3468f2f416ff8a77b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5af048d2686d3e435ff9f312c7acad8ca24ddeee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-handling-and-io-ccli"></a>檔案處理和 I/O (C++/CLI)
 示範如何使用.NET Framework 的各種檔案作業。  
@@ -51,5 +46,5 @@ ms.lasthandoff: 12/21/2017
 -   [如何：寫入文字檔 (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)  
   
  
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

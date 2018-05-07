@@ -1,12 +1,9 @@
 ---
-title: "CSQLLanguages、 CSQLLanguageInfo |Microsoft 文件"
-ms.custom: 
+title: CSQLLanguages、 CSQLLanguageInfo |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CSQLLanguageInfo
@@ -31,18 +28,16 @@ helpviewer_keywords:
 - CSQLLanguageInfo parameter class
 - m_szIntegrity
 ms.assetid: 9c36c5bb-6917-49c3-9ac3-942339893f19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: effac49070d5c3498f57ceade738b353c86c85c7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 214cd5b1a4554d90ac21a87aad0951a21126af4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csqllanguages-csqllanguageinfo"></a>CSQLLanguages、CSQLLanguageInfo
 呼叫 typedef 類別**CSQLLanguages**來實作其參數類別**CSQLLanguageInfo**。  
@@ -67,5 +62,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

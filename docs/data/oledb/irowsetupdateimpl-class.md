@@ -1,12 +1,9 @@
 ---
-title: "IRowsetUpdateImpl 類別 |Microsoft 文件"
-ms.custom: 
+title: IRowsetUpdateImpl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetUpdateImpl
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - IRowsetUpdateImpl class
 - updatable providers, deferred update
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c49782328ed51afe6a6501ed239d0800221864c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 34efd252f67a0e3da9827ef97cff8bcab0a45532
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl 類別
 OLE DB 樣板實作[IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx)介面。  
@@ -85,7 +80,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |[GetOriginalData](../../data/oledb/irowsetupdateimpl-getoriginaldata.md)|取得最近傳送到，或從資料來源，略過暫止的變更取得的資料。|  
 |[GetPendingRows](../../data/oledb/irowsetupdateimpl-getpendingrows.md)|傳回資料列有暫止的變更的清單。|  
 |[GetRowStatus](../../data/oledb/irowsetupdateimpl-getrowstatus.md)|傳回指定的資料列的狀態。|  
-|[Undo](../../data/oledb/irowsetupdateimpl-undo.md)|復原自上次擷取或更新的資料列的任何變更。|  
+|[復原](../../data/oledb/irowsetupdateimpl-undo.md)|復原自上次擷取或更新的資料列的任何變更。|  
 |[更新](../../data/oledb/irowsetupdateimpl-update.md)|會傳送自上次擷取或更新資料列所做的變更。|  
   
 ### <a name="implementation-methods-callback"></a>實作方法 （回呼）  
@@ -117,7 +112,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)

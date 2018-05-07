@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2065 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2065 |Microsoft 文件
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2065
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20fee308a8ed9d237f8fc76df60964704c9c69d
-ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
+ms.openlocfilehash: 5e67fcac9593dc4ad11dbff0cc479ac24d624110
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2065"></a>編譯器錯誤 C2065
 
@@ -87,7 +82,7 @@ int main() {
 
 ## <a name="example-precompiled-header-isnt-first"></a>範例： 先行編譯標頭不是第一次
 
-如果您將任何前置處理器指示詞，例如，會發生此錯誤 #include，#define，或 #pragma 之前, #include 的先行編譯標頭檔。 如果原始程式檔時使用先行編譯標頭檔 (亦即，如果它使用編譯**/Yu**編譯器選項) 然後之前先行編譯標頭檔的所有前置處理器指示詞會被忽略。
+如果您將任何前置處理器指示詞，例如，會發生此錯誤 #include，#define，或 #pragma 之前, #include 的先行編譯標頭檔。 如果原始程式檔時使用先行編譯標頭檔 (亦即，如果它使用編譯 **/Yu**編譯器選項) 然後之前先行編譯標頭檔的所有前置處理器指示詞會被忽略。
 
 此範例無法編譯，因為`cout`和`endl`中定義\<iostream > 標頭，因為它會包含先行編譯標頭檔會被忽略。 若要建置此範例中，建立所有的三個檔案，編譯 stdafx.cpp，然後編譯 C2065_pch.cpp。
 

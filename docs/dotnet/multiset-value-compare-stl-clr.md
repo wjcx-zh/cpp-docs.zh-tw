@@ -1,12 +1,9 @@
 ---
-title: "multiset:: value_compare (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'multiset:: value_compare (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::value_compare
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_compare member [STL/CLR]
 ms.assetid: 962e5a3b-5841-4b44-8801-5f5349e95c8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd4e4c07b60eabdb377ee4f687defea00aa9edc9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0dd3492a6f566fad4ac25861584130f5a2455053
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetvaluecompare-stlclr"></a>multiset::value_compare (STL/CLR)
 兩個項目值順序的委派。  
@@ -77,7 +72,7 @@ compare(L'b', L'a') = False
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)   
  [multiset:: value_comp (STL/CLR)](../dotnet/multiset-value-comp-stl-clr.md)   

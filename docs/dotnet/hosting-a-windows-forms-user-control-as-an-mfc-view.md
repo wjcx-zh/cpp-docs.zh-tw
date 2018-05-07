@@ -1,13 +1,10 @@
 ---
-title: "裝載 Windows Form 使用者控制項為 MFC 檢視 |Microsoft 文件"
-ms.custom: 
+title: 裝載 Windows Form 使用者控制項為 MFC 檢視 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7e4e0b7bc081d3b16b3f9aa55719d298f710cdab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf9e54b3e2808a232bc13052c885a341cb51297f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>將 Windows Form 使用者控制項裝載為 MFC 檢視
 MFC 使用 CWinFormsView 類別來裝載 Windows Form 使用者控制項在 MFC 檢視中。 MFC Windows Form 檢視是 ActiveX 控制項。 使用者控制項裝載為子系的原生的檢視，並佔用整個工作區的原生的檢視。  
@@ -44,6 +39,6 @@ MFC 使用 CWinFormsView 類別來裝載 Windows Form 使用者控制項在 MFC 
   
  [如何：呼叫 Windows Forms 控制項的屬性和方法](../dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
  [操作說明：撰寫複合控制項](/dotnet/framework/winforms/controls/how-to-author-composite-controls)

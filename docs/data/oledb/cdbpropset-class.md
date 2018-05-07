@@ -1,12 +1,9 @@
 ---
-title: "CDBPropSet 類別 |Microsoft 文件"
-ms.custom: 
+title: CDBPropSet 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDBPropSet
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDBPropSet class
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 716b0785ba4f785063709d989eb95c5c4f390f4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8d75715ed0dc65fbbf5b581bfea48816e5bd00ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
 繼承自**DBPROPSET**結構，並將建構函式會初始化索引鍵欄位，以及`AddProperty`存取方法。  
@@ -45,7 +40,7 @@ class CDBPropSet : public tagDBPROPSET
   
 |||  
 |-|-|  
-|[AddProperty](../../data/oledb/cdbpropset-addproperty.md)|新增屬性至屬性集。|  
+|[addProperty](../../data/oledb/cdbpropset-addproperty.md)|新增屬性至屬性集。|  
 |[CDBPropSet](../../data/oledb/cdbpropset-cdbpropset.md)|建構函式。|  
 |[SetGUID](../../data/oledb/cdbpropset-setguid.md)|設定**guidPropertySet**欄位**DBPROPSET**結構。|  
   
@@ -61,7 +56,7 @@ class CDBPropSet : public tagDBPROPSET
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CDBPropIDSet 類別](../../data/oledb/cdbpropidset-class.md)   

@@ -1,12 +1,9 @@
 ---
-title: "連結器工具錯誤 LNK2001 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具錯誤 LNK2001 |Microsoft 文件
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>連結器工具錯誤 LNK2001
 未解析外部符號"*符號*"  
@@ -70,13 +65,13 @@ ms.lasthandoff: 12/21/2017
   
 如果您使用，可能會發生這個錯誤[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)或[/Zl](../../build/reference/zl-omit-default-library-name.md)選項。 當您指定這些選項時，包含必要的程式碼的程式庫不會連結到專案除非您明確地包含它們。 若要修正此問題，明確地包含所有您在連結命令列使用的程式庫。 如果您使用這些選項時，您會看到許多遺漏 CRT 或標準程式庫函式名稱，明確包含 CRT 和標準程式庫 Dll 或程式庫檔案的連結。  
 
-如果您將編譯使用**/clr**選項，可以有遺漏參考.cctor。 若要修正這個問題，請參閱[初始化的混合的組件](../../dotnet/initialization-of-mixed-assemblies.md)如需詳細資訊。  
+如果您將編譯使用 **/clr**選項，可以有遺漏參考.cctor。 若要修正這個問題，請參閱[初始化的混合的組件](../../dotnet/initialization-of-mixed-assemblies.md)如需詳細資訊。  
   
-如果您連結到發行模式程式庫建置應用程式的偵錯版本時，會發生此錯誤。 同樣地，如果您使用選項**/MTd**或**/MDd**或定義`_DEBUG`然後連結到發行的程式庫，您應該預期許多可能無法解析外部符號，在其他問題。 連結偵錯程式庫的版本模式建置時，也會造成類似的問題。 若要修正此問題，請確定您在偵錯組建中，使用偵錯程式庫和零售程式庫，在您的零售組建。  
+如果您連結到發行模式程式庫建置應用程式的偵錯版本時，會發生此錯誤。 同樣地，如果您使用選項 **/MTd**或 **/MDd**或定義`_DEBUG`然後連結到發行的程式庫，您應該預期許多可能無法解析外部符號，在其他問題。 連結偵錯程式庫的版本模式建置時，也會造成類似的問題。 若要修正此問題，請確定您在偵錯組建中，使用偵錯程式庫和零售程式庫，在您的零售組建。  
   
 如果您的程式碼的符號是指從一個版本的程式庫，但是您提供給連結器程式庫的不同版本，就會發生此錯誤。 一般而言，您不能混用目的檔或程式庫，系統會針對不同版本的編譯器建立。 發行新版本中的程式庫可能包含找不到包含在舊版中，與相反的文件庫中的符號。 若要修正此問題，請建置所有目的檔和具有相同版本的編譯器程式庫之前連結在一起。  
   
--  工具 &#124;選項 &#124;專案 &#124;VC + + 目錄 對話方塊中的，在程式庫檔案選取項目，可讓您變更文件庫搜尋順序。 在專案屬性頁對話方塊中的連結器資料夾可能也包含可能是過期的路徑。  
+-  工具&#124;選項&#124;專案&#124;VC + + 目錄 對話方塊中的，在程式庫檔案選取項目，可讓您變更文件庫搜尋順序。 在專案屬性頁對話方塊中的連結器資料夾可能也包含可能是過期的路徑。  
   
 -  新的 SDK 會安裝 （或許是為了不同的位置），並搜尋順序不會更新以指向新位置時，可能會出現此問題。 一般來說，您應該將路徑放至新的 SDK 包括和 lib 目錄前面的預設 Visual c + + 的位置。 此外，含有內嵌的路徑的專案可能仍然指向舊的路徑有效，但過期會安裝到不同位置的新版本所加入的新功能。  
   
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
   
 目前沒有任何標準[c + + 命名](../../error-messages/tool-errors/name-decoration.md)編譯器廠商，或甚至是不同的編譯器版本之間。 因此，連結以其他編譯器編譯的目的檔不可能會產生相同的命名配置，因此會導致錯誤 LNK2001。  
   
-[混合的內嵌和非內嵌編譯選項](../../error-messages/tool-errors/function-inlining-problems.md)在不同模組會造成 LNK2001。 C + + 程式庫會透過函式內嵌為開啟 (**/Ob1**或**/Ob2**)，但對應的標頭檔描述該函式已關閉內嵌 (沒有`inline`關鍵字)，這個錯誤就會發生。 若要修正此問題，定義的函式`inline`您在其他原始程式檔中包含的標頭檔中。  
+[混合的內嵌和非內嵌編譯選項](../../error-messages/tool-errors/function-inlining-problems.md)在不同模組會造成 LNK2001。 C + + 程式庫會透過函式內嵌為開啟 (**/Ob1**或 **/Ob2**)，但對應的標頭檔描述該函式已關閉內嵌 (沒有`inline`關鍵字)，這個錯誤就會發生。 若要修正此問題，定義的函式`inline`您在其他原始程式檔中包含的標頭檔中。  
   
 如果您使用`#pragma inline_depth`編譯器指示詞，請確定您有[值為 2 或更大的集](../../error-messages/tool-errors/function-inlining-problems.md)，並確定您也使用[/Ob1](../../build/reference/ob-inline-function-expansion.md)或[/Ob2](../../build/reference/ob-inline-function-expansion.md)編譯器選項。  
   

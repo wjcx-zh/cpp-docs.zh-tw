@@ -2,30 +2,25 @@
 title: 使用 MFC ODBC 資料錄集 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - recordsets, MFC ODBC
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0644d1c08b73442f07585c359f29dfeeee886d84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3dda90592fe5bc874a3052fc472b77f8ce414a49
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-mfc-odbc-recordsets"></a>使用 MFC ODBC 資料錄集
 這些主題說明如何使用透過 MFC 的 ODBC 資料錄集。  
@@ -90,5 +85,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [動態繫結資料行中資料錄集在執行階段](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

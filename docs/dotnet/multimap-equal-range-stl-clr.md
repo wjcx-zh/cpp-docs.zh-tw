@@ -2,11 +2,8 @@
 title: 'multimap:: equal_range (STL/CLR) |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::equal_range
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - equal_range member [STL/CLR]
 ms.assetid: f1008d89-7442-429b-9eca-4ef7ee704766
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 64d190bf5cef7168c8b7b96197380789d1011023
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13dfde60504809b3f949119bfab27178411f1a76
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapequalrange-stlclr"></a>multimap::equal_range (STL/CLR)
 尋找符合指定之索引鍵的範圍。  
@@ -92,7 +87,7 @@ equal_range(L'x') empty = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap:: count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)   
  [multimap:: find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)   

@@ -2,11 +2,8 @@
 title: 編譯器錯誤 C2071 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2071
@@ -15,22 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - C2071
 ms.assetid: f8c09255-a5c4-47e3-8089-3d875ae43cc5
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cb7d80f016250d289a70456f6fbfe2011c9410b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faee56023d14e9b010d1c691af654ffcbc31dc78
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2071"></a>編譯器錯誤 C2071
 'identifier'：儲存類別不合法  
   
- `identifier`已宣告為無效[儲存類別](../../c-language/c-storage-classes.md)。 當指定了一個以上的儲存類別給識別項，或是定義與儲存類別宣告不相容時，可能會造成這個錯誤。  
+ `identifier` 已宣告為無效[儲存類別](../../c-language/c-storage-classes.md)。 當指定了一個以上的儲存類別給識別項，或是定義與儲存類別宣告不相容時，可能會造成這個錯誤。  
   
  若要修正這個問題，了解識別項的預定的儲存類別 — 比方說，`static`或`extern`— 並更正宣告以符合。  
   

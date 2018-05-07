@@ -1,13 +1,10 @@
 ---
-title: "資料錄欄位交換： 精靈程式碼的使用 |Microsoft 文件"
-ms.custom: 
+title: 資料錄欄位交換： 精靈程式碼的使用 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d4f817ebfc3e6bb72865b4fc71fd5c5ebe5f671
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>資料錄欄位交換：精靈程式碼的使用
 本主題說明的程式碼，MFC 應用程式精靈和**加入類別**(中所述[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 以支援 RFX 和您可能要變更程式碼的方式撰寫。  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   資料錄集類別中的資料錄集欄位資料成員的宣告  
   
--   覆寫`CRecordset::DoFieldExchange`  
+-   覆寫 `CRecordset::DoFieldExchange`  
   
 -   初始化資料錄集類別建構函式中的資料錄集欄位資料成員  
   
-##  <a name="_core_the_field_data_member_declarations"></a>欄位資料成員宣告  
+##  <a name="_core_the_field_data_member_declarations"></a> 欄位資料成員宣告  
  精靈會如下所示，類別的.h 檔案中寫入資料錄集類別宣告`CSections`:  
   
 ```  
@@ -88,9 +83,9 @@ public:
   
  此外，請注意，精靈會覆寫`DoFieldExchange`類別成員函式`CRecordset`。  
   
-##  <a name="_core_the_dofieldexchange_override"></a>DoFieldExchange 覆寫  
+##  <a name="_core_the_dofieldexchange_override"></a> DoFieldExchange 覆寫  
 
- [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) RFX 核心。 這個架構會呼叫`DoFieldExchange`次需要將資料從資料錄集的資料來源或從資料錄集移至資料來源。 `DoFieldExchange`也支援取得有關的資訊欄位資料成員透過[IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty)和[IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull)成員函式。  
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) RFX 核心。 這個架構會呼叫`DoFieldExchange`次需要將資料從資料錄集的資料來源或從資料錄集移至資料來源。 `DoFieldExchange` 也支援取得有關的資訊欄位資料成員透過[IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty)和[IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull)成員函式。  
   
  下列`DoFieldExchange`覆寫為`CSections`類別。 精靈會撰寫資料錄集類別的.cpp 檔案中的函式。  
   
@@ -119,7 +114,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
   
 -   `pFX`指標[CFieldExchange](../../mfc/reference/cfieldexchange-class.md)架構傳遞時，它會呼叫物件的`DoFieldExchange`。 `CFieldExchange`物件指定的作業，`DoFieldExchange`是執行，轉移，以及其他內容資訊的方向。  
   
-##  <a name="_core_the_recordset_constructor"></a>資料錄集建構函式  
+##  <a name="_core_the_recordset_constructor"></a> 資料錄集建構函式  
  資料錄集建構函式精靈寫入包含與 RFX 兩件事：  
   
 -   每個欄位資料成員初始設定  
@@ -151,5 +146,5 @@ m_nFields += 3;
  這是程式碼以新增三個新的欄位。 如果您新增任何參數的資料成員時，您必須初始化[m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)資料成員，其中包含參數資料成員的數目。 Put`m_nParams`外方括號初始化。  
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

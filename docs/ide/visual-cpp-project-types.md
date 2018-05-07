@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 專案類型 |Microsoft 文件"
-ms.custom: 
+title: Visual c + + 專案類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 10/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a837aa04b0e0c2b8d3d9f5cfd48181a9ea23b346
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-project-types"></a>Visual C++ 專案類型
 
@@ -106,6 +101,6 @@ Visual Studio 中包含的專案範本的產品版本及您已安裝的工作負
 
 專案範本產生的許多檔案都包含 TODO 註解，以協助您識別您可以提供自己原始程式碼的位置。 如需如何加入程式碼的詳細資訊，請參閱[使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)和[使用的資源檔](../windows/working-with-resource-files.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)   

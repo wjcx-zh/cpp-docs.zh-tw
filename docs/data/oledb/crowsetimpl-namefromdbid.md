@@ -1,12 +1,9 @@
 ---
-title: CRowsetImpl::NameFromDBID | Microsoft Docs
-ms.custom: 
+title: 'Crowsetimpl:: Namefromdbid |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowsetImpl.NameFromDBID
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - NameFromDBID method
 ms.assetid: 6aa5b074-90c7-4434-adfd-c64c13e76c78
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 623eeca73ceaf29e0cecbe80b2a4a8b447adefdc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 54ee345d4bf97c6f77398e62d1cb31614868a568
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetimplnamefromdbid"></a>CRowsetImpl::NameFromDBID
 擷取從字串**DBID**並將它複製到`bstr`傳入。  
@@ -59,5 +54,5 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRowsetImpl 類別](../../data/oledb/crowsetimpl-class.md)

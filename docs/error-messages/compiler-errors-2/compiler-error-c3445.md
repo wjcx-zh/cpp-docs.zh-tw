@@ -1,13 +1,10 @@
 ---
-title: "編譯器錯誤 C3445 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3445 |Microsoft 文件
+ms.custom: ''
 ms.date: 04/10/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3445
 dev_langs:
@@ -15,56 +12,55 @@ dev_langs:
 helpviewer_keywords:
 - C3445
 ms.assetid: 0d272bfc-136b-4025-a9ba-5e4eea5f8215
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf0ba819aa1e8f0a7651e7c42e457b5766c9eefd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c37f04b907183b883772fd144ae0179683f088f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3445"></a>編譯器錯誤 C3445
-複本集的清單初始化 '*類型*' 不能使用明確的建構函式  
-  
-根據 ISO C + + 17 標準，編譯器需要考慮複製清單初始化中的多載解析的明確建構函式，但如果實際上選擇該多載，則必須引發錯誤。  
-  
+
+> 複本集的清單初始化 '*類型*' 不能使用明確的建構函式
+
+根據 ISO C + + 17 標準，編譯器需要考慮複製清單初始化中的多載解析的明確建構函式，但如果實際上選擇該多載，則必須引發錯誤。
+
 從 Visual Studio 2017 開始，編譯器會尋找使用初始設定式清單的物件建立相關的錯誤，找不到 Visual Studio 2015。 這些錯誤可能會導致損毀或未定義的行為在執行階段。
 
-## <a name="example"></a>範例  
- 下列範例會產生 C3445。  
-  
-```cpp  
-// C3445.cpp  
+## <a name="example"></a>範例
+
+下列範例會產生 C3445。
+
+```cpp
+// C3445.cpp
 struct A
 {
-    explicit A(int) {} 
+    explicit A(int) {}
     A(double) {}
 };
 
 int main()
 {
-    A a1 = { 1 };     // error C3445: copy-list-initialization of 
+    A a1 = { 1 };     // error C3445: copy-list-initialization of
                       //     'A' cannot use an explicit constructor
 }
-```  
-  
-若要更正錯誤，請改用直接初始化：  
-  
-```cpp  
-// C3445b.cpp  
+```
+
+若要更正錯誤，請改用直接初始化：
+
+```cpp
+// C3445b.cpp
 struct A
 {
-    explicit A(int) {} 
+    explicit A(int) {}
     A(double) {}
 };
 
 int main()
 {
     A a1{ 1 };
-}  
-```  
-  
+}
+```

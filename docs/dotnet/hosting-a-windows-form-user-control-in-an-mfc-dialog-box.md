@@ -1,13 +1,10 @@
 ---
-title: "裝載 Windows 形成 MFC 對話方塊中的使用者控制 |Microsoft 文件"
-ms.custom: 
+title: 裝載 Windows 形成 MFC 對話方塊中的使用者控制 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da8e8a54947b329fe36eea5c80bdc13ba5cdfa74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 291c0856e9d305e0b2b31c6bc233005b111592a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載至 MFC 對話方塊中
 MFC ActiveX 控制項是特殊類型裝載 Windows Form 控制項和使用 ActiveX 介面及屬性和方法的控制項與通訊<xref:System.Windows.Forms.Control>類別。 我們建議您使用.NET Framework 的屬性和方法在控制項上運作。  
@@ -44,9 +39,9 @@ MFC ActiveX 控制項是特殊類型裝載 Windows Form 控制項和使用 Activ
  [如何：從原生 C++ 類別接收 Windows Forms 事件](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)  
   
 ## <a name="reference"></a>參考資料  
- [CWinFormsControl 類別](../mfc/reference/cwinformscontrol-class.md)&#124;[CDialog 類別](../mfc/reference/cdialog-class.md)&#124;[CWnd 類別](../mfc/reference/cwnd-class.md)&#124;<xref:System.Windows.Forms.Control>  
+ [CWinFormsControl 類別](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog 類別](../mfc/reference/cdialog-class.md) &#124; [CWnd 類別](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)   
  [Windows Form/MFC 程式設計的差異](../dotnet/windows-forms-mfc-programming-differences.md)   
  [Windows Form 使用者控制項裝載為 MFC 檢視](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)   

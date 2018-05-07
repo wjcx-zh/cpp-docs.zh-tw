@@ -2,11 +2,8 @@
 title: auto_gcroot::attach |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - auto_gcroot.attach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - auto_gcroot::attach
 ms.assetid: 996ede65-bcb5-41f2-bfbf-507f8a578241
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c244e9fde20498c5d688dbebbc2c35294164cf11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 242c83ce7a22d56d3c584b50ec93c941b45213ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autogcrootattach"></a>auto_gcroot::attach
 附加`auto_gcroot`物件。  
@@ -129,7 +124,7 @@ in ClassA destructor:fourth
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::operator =](../dotnet/auto-gcroot-operator-assign.md)   
  [auto_gcroot::release](../dotnet/auto-gcroot-release.md)

@@ -1,12 +1,9 @@
 ---
-title: "set:: key_compare (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'set:: key_compare (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::key_compare
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_compare member [STL/CLR]
 ms.assetid: 4ce14c96-24d7-48eb-ae78-4ab192f7422a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 983f65b01689d120703e3da586a1cf71927241aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bf7c812730d665cd47a3ff5d9626111e6bf2f5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setkeycompare-stlclr"></a>set::key_compare (STL/CLR)
 兩個索引鍵排序的委派。  
@@ -92,7 +87,7 @@ compare(L'b', L'a') = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
  [set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)   
  [set:: key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)   

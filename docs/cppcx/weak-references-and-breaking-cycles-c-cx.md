@@ -1,24 +1,19 @@
 ---
-title: "弱式參考與中斷循環 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 弱式參考與中斷循環 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a98dc4dd43b40f378a91713770c4c5500c790d0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 48b5d73d85383056b17c806e061b131b12d821a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>弱式參考與中斷循環 (C++/CX)
 以參考計數為基礎的類型系統有一個問題，就是對類型的參考會形成「 *循環*」(Cycles)，也就是說，一個物件參考第二個物件、第二個參考第三個物件，以此類推，直到某個最終物件再度參考第一個物件。 在循環中，當一個物件的參考計數變成零時，將無法正確刪除物件。 若要協助您解決這個問題，C + + /CX 提供[platform:: weakreference 類別](../cppcx/platform-weakreference-class.md)類別。 `WeakReference` 物件支援 [Resolve](../cppcx/platform-weakreference-class.md#resolve) 方法。如果物件不再存在，這個方法會傳回 null；如果物件存在但其類型不是 [，則會擲回](../cppcx/platform-invalidcastexception-class.md) Platform::InvalidCastException `T`。  
@@ -63,6 +58,6 @@ Class1::Class1()
   
  當事件處理常式擲回 `DisconnectedException`時，將會導致事件從訂閱者清單中移除此處理常式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 
 

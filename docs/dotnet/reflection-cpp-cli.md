@@ -1,13 +1,10 @@
 ---
-title: "反映 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 反映 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - data types [C++], reflection
 - reflection [C++}
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f5b6e9aa8614248bc0e1215067e495cb4dce702
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-ccli"></a>反映 (C++/CLI)
 反映可讓您在執行階段檢查已知的資料類型。 反映可讓資料類型的列舉中指定的組件，並可以探索到指定的類別或實值類型的成員。 這是不論是否型別是已知的參考在編譯時期，則為 true。 這可讓反映一個實用的功能，用於開發和程式碼管理工具。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  若要存取反映功能最常見的方式是透過<xref:System.Object.GetType%2A>方法。 這個方法由[system:: object](https://msdn.microsoft.com/en-us/library/system.object.aspx)，從衍生所有記憶體回收的類別。  
   
- 使用 Visual c + + 編譯器建置的.exe 的反射才允許使用.exe 所建置**/clr: pure**或**/clr: safe**編譯器選項。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。 請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊。  
+ 使用 Visual c + + 編譯器建置的.exe 的反射才允許使用.exe 所建置 **/clr: pure**或 **/clr: safe**編譯器選項。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。 請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊。  
   
  本節主題：  
   
@@ -237,5 +232,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

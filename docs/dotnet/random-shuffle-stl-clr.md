@@ -1,12 +1,9 @@
 ---
-title: "random_shuffle (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: random_shuffle (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::random_shuffle
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - random_shuffle function [STL/CLR]
 ms.assetid: 0f9d93e2-f50f-40e6-bbe4-2ca3231a895e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ed0a6e63fa11a531f090e367e9ae8cd82242608b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d549270f7dafe288d50958491cc4d25e4c68e2f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="randomshuffle-stlclr"></a>random_shuffle (STL/CLR)
 重新排列一系列`N`的其中一個範圍中的項目`N`！ 排列方式隨機選取的其中一個。  
@@ -48,5 +43,5 @@ template<class _RanIt, class _Fn1> inline
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

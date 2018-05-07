@@ -1,12 +1,9 @@
 ---
-title: "deque (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: deque (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <deque> header [STL/CLR]
 - <cliext/deque> header [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11436466dadf4b06e604af6e2b5150a22c4ed241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有隨機存取的物件。 使用容器`deque`管理序列的項目看起來像連續區塊存放裝置，但它可以擴張或縮小任一端而不需要複製任何剩餘的項目。 因此它可以有效實作`double-ended queue`。 (因此名稱。)  
@@ -144,7 +139,7 @@ template<typename Value>
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   

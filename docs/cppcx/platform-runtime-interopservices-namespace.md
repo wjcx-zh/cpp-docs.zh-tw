@@ -1,11 +1,8 @@
 ---
-title: "Platform::Runtime::InteropServices 命名空間 |Microsoft 文件"
-ms.custom: 
+title: Platform::Runtime::InteropServices 命名空間 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Runtime::InteropServices
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Runtime::InteropServices Namespace
 ms.assetid: 546b981a-a360-4a78-b89f-fdf0df848747
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d893784bef2999aa81f3e695488ae3a85127de30
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 90f28946355dccefc56600ac241c3ba3f9517822
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformruntimeinteropservices-namespace"></a>Platform::Runtime::InteropServices 命名空間
 這個命名空間僅供內部使用，不適用於開發用途。  
@@ -58,5 +53,5 @@ namespace Platform {
   
  **命名空間：** Platform::InteropServices  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

@@ -1,13 +1,10 @@
 ---
-title: "MFC 中的 OLE |Microsoft 文件"
-ms.custom: 
+title: MFC 中的 OLE |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13baf7960b329e56cfce24011f4c15599cdda8b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ef23f0b7e031c6866b7792bca61c5e4d5bd470da
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 這些文件說明使用 MFC 的 OLE 程式設計基本概念。 MFC 提供最簡易的方法撰寫使用 OLE 的程式：  
@@ -87,6 +82,6 @@ ms.lasthandoff: 02/14/2018
  [元件物件模型](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
  說明使用 OLE 而不使用 MFC。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../mfc/mfc-concepts.md)
 

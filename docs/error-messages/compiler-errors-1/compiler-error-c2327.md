@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2327 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2327 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2327
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aa5635f6e1185e68d3042009f677d797a11a78
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcfa48667b20082090fc85079ac5df184f2b10fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2327"></a>編譯器錯誤 C2327
 'symbol': 不是型別名稱、 靜態或列舉值  
   
  巢狀類別內的程式碼嘗試存取不是型別名稱、 靜態成員或列舉值的封入類別的成員。  
   
- 編譯時**/clr**，C2327 的常見原因是具有相同名稱的屬性類型的屬性。  
+ 編譯時 **/clr**，C2327 的常見原因是具有相同名稱的屬性類型的屬性。  
   
  下列範例會產生 C2327:  
   

@@ -1,13 +1,10 @@
 ---
-title: "衍生檢視類別 MFC 中的可用 |Microsoft 文件"
-ms.custom: 
+title: 衍生檢視類別 MFC 中的可用 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2426f3e547da6eaab6a4b38bb5199e87c93ef933
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b166e64c57482586e145cecc9e79317eea282b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC 中的可用衍生檢視類別
 下表顯示在 MFC 的檢視類別和其彼此的關聯性。 檢視類別的功能取決於從它衍生的 MFC 檢視類別。  
@@ -53,6 +48,6 @@ ms.lasthandoff: 12/21/2017
   
  若要在應用程式中使用這些類別，請從它們衍生的應用程式檢視類別。 如需相關資訊，請參閱[捲動和縮放檢視](../mfc/scrolling-and-scaling-views.md)。 如需有關資料庫類別的詳細資訊，請參閱[概觀： 資料庫程式設計](../data/data-access-programming-mfc-atl.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用檢視](../mfc/using-views.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "CArchiveException 類別 |Microsoft 文件"
-ms.custom: 
+title: CArchiveException 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArchiveException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2ca798bf3cac50e00627fc3986072af7b2ff94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 類別
 表示序列化例外狀況  
@@ -60,7 +55,7 @@ class CArchiveException : public CException
 ## <a name="remarks"></a>備註  
  `CArchiveException`類別包含公用資料成員，表示例外狀況的原因。  
   
- `CArchiveException`物件的建構及內擲回[CArchive](../../mfc/reference/carchive-class.md)成員函式。 您可以存取這些物件的範圍內**攔截**運算式。 原因碼與作業系統無關。 如需例外狀況處理的詳細資訊，請參閱[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ `CArchiveException` 物件的建構及內擲回[CArchive](../../mfc/reference/carchive-class.md)成員函式。 您可以存取這些物件的範圍內**攔截**運算式。 原因碼與作業系統無關。 如需例外狀況處理的詳細資訊，請參閱[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +67,7 @@ class CArchiveException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
  建構`CArchiveException`儲存的值物件`cause`物件中。  
   
 ```  
@@ -93,7 +88,7 @@ CArchiveException(
   
  請勿直接; 使用這個建構函式請改為呼叫全域函式`AfxThrowArchiveException`。  
   
-##  <a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>  CArchiveException::m_cause  
  指定例外狀況的原因。  
   
 ```  
@@ -125,14 +120,14 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic**已被取代。 使用**genericException**改為。 如果**泛型**應用程式中使用，並建立以 /clr，將會不容易解密的語法錯誤。  
   
-##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  指定此例外狀況的檔案名稱。  
   
 ```  
 CString m_strFileName;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CException 類別](../../mfc/reference/cexception-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CArchive 類別](../../mfc/reference/carchive-class.md)   

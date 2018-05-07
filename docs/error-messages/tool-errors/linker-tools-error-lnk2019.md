@@ -1,10 +1,9 @@
 ---
-title: "連結器工具錯誤 LNK2019 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具錯誤 LNK2019 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2019
@@ -16,14 +15,13 @@ helpviewer_keywords:
 - _check_commonlanguageruntime_version
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f6fdad0d26d04c6e8022f7b29dbdd7f13ac874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4323e5f8357da046db7a9403d7c575dfdde566b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2019"></a>連結器工具錯誤 LNK2019
 
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>您建立主控台應用程式所使用的 Windows 應用程式設定
 
-如果錯誤訊息類似於**WinMain 函式中所參考的未解析外部符號** *function_name*，使用連結**/subsystem: console**而不是**/Subsystem: windows**。 如需此設定的詳細資訊，以及如何在 Visual Studio 中設定此屬性的指示，請參閱 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)。
+如果錯誤訊息類似於**WinMain 函式中所參考的未解析外部符號** *function_name*，使用連結 **/subsystem: console**而不是 **/Subsystem: windows**。 如需此設定的詳細資訊，以及如何在 Visual Studio 中設定此屬性的指示，請參閱 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)。
 
 ### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>您嘗試將 64 位元程式庫連結至 32 位元程式碼或 64 位元程式碼的 32 位元程式庫
 
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>混合程式碼會使用原生 wchar\_t 不的程式碼
 
-根據預設，於 Visual C++ 2005 中完成的 C++ 語言一致性工作讓 `wchar_t` 成為原生類型。 您必須使用 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 編譯器選項，以產生與使用舊版 Visual C++ 所編譯程式庫檔及目的檔相容的程式碼。 如果不是所有檔案使用相同的已都編譯**/Zc:wchar\_t**類型參考可能不會解析成相容的類型的設定。 在編譯時，請更新所使用的類型，或使用一致的 `wchar_t` 設定，以確認所有程式庫檔或目的檔中的 **/Zc:wchar_t** 類型都相容。
+根據預設，於 Visual C++ 2005 中完成的 C++ 語言一致性工作讓 `wchar_t` 成為原生類型。 您必須使用 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 編譯器選項，以產生與使用舊版 Visual C++ 所編譯程式庫檔及目的檔相容的程式碼。 如果不是所有檔案使用相同的已都編譯 **/Zc:wchar\_t**類型參考可能不會解析成相容的類型的設定。 在編譯時，請更新所使用的類型，或使用一致的 `wchar_t` 設定，以確認所有程式庫檔或目的檔中的 **/Zc:wchar_t** 類型都相容。
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>第三方媒體櫃問題和 Vcpkg
 

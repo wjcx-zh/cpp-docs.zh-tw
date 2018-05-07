@@ -1,29 +1,24 @@
 ---
-title: "MFC ActiveX 控制項： 方法 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 方法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e3b343b13118930612e4adfed4c33a65a9e7be8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b09de5382117b4444eb1bfd90bc0f9d447e537e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX 控制項：方法
 ActiveX 控制項就會引發事件本身以及其控制項容器之間的通訊。 容器也可以透過方法和屬性溝通與控制項。 方法也會呼叫函式。  
@@ -53,6 +48,6 @@ ActiveX 控制項就會引發事件本身以及其控制項容器之間的通訊
   
 -   [MFC ActiveX 控制項：從方法傳回錯誤碼](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

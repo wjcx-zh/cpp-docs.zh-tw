@@ -1,13 +1,10 @@
 ---
-title: "文件樣板類別 |Microsoft 文件"
-ms.custom: 
+title: 文件樣板類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.document
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - document templates [MFC], classes
 ms.assetid: 901749e9-8048-44a0-b5e2-361554650a73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbaccd12daf156d4a15f5cd18c31b5b230fe86db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9958484633dd736426fc91321d0964abf0ad7e1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-template-classes"></a>文件樣板類別
 文件範本物件的文件、 檢視和框架視窗物件的新文件時建立或建立檢視。  
@@ -43,6 +38,6 @@ ms.lasthandoff: 12/21/2017
  [CCreateContext](../mfc/reference/ccreatecontext-structure.md)  
  結構傳視窗建立函式，來協調建立文件、 檢視和框架視窗物件的文件範本。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

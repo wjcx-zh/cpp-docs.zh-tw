@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 （層級 2） C4275 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 （層級 2） C4275 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4275
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434194a216ba233cec26a5700cf4864a0eca8c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5d2a3cd7c4b937f8bee1b8f8e37e0619cc224ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-2-c4275"></a>編譯器警告 (層級 2) C4275
 非 DLL 介面 classkey 'identifier' 做為基底 DLL 介面 classkey 'identifier'  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  您可以避免匯出定義的 DLL，定義虛擬函式，類別和函式您可以呼叫來具現化和刪除物件類型的類別。  然後，您就可以再呼叫虛擬函式類型上。  
   
- 如需有關匯出範本的詳細資訊，請參閱[http://support.microsoft.com/default.aspx?scid=KB;EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。  
+ 如需有關匯出範本的詳細資訊，請參閱[ http://support.microsoft.com/default.aspx?scid=KB;EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。  
   
  C4275 可以忽略 Visual c + + 中，如果您衍生自 c + + 標準程式庫、 編譯偵錯版本中的型別 (**/MTd**) 及編譯器錯誤訊息，其中 _Container_base 是指。  
   

@@ -1,12 +1,9 @@
 ---
-title: "lock::lock |Microsoft 文件"
-ms.custom: 
+title: lock::lock |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::lock
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locklock"></a>lock::lock
 建構`lock`物件，並選擇性地等候一段指定的時間，或完全不用，取得鎖定。  
@@ -67,7 +62,7 @@ template<class T> lock(
 ## <a name="remarks"></a>備註  
  前三個表單的建構函式嘗試取得的鎖定上`_object`在指定的逾時期限內 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。  
   
- 第四個表單的建構函式不會在取得鎖定`_object`。 `lock_later`成員的[lock_when 列舉](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)在此情況下取得的鎖定。  
+ 第四個表單的建構函式不會在取得鎖定`_object`。 `lock_later` 成員的[lock_when 列舉](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)在此情況下取得的鎖定。  
   
  解構函式呼叫時，會自動釋放鎖定。  
   
@@ -167,7 +162,7 @@ All threads completed.
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [lock 成員](../dotnet/lock-members.md)   
  [lock:: ~ 鎖定](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   

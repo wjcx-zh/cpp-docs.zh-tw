@@ -2,12 +2,9 @@
 title: 資料錄集： 捲動 (ODBC) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>資料錄集：捲動 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [內容捲動的情況下，並不支援在](#_core_when_scrolling_is_supported)。  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>從一個資料錄捲動到另一個  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> 從一個資料錄捲動到另一個  
  類別`CRecordset`提供**移動**捲動資料錄集內的成員函式。 這些函式移動目前的記錄資料列集。 如果您已實作大量資料列擷取**移動**作業會資料錄集重新定位的資料列集大小。 如果您未實作大量資料列擷取，呼叫**移動**函式重新定位資料錄集的一筆記錄的每一次。 如需大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`如果資料錄集位於過去的最後一筆記錄，則傳回非零值。 `IsBOF`如果資料錄集位於晚於第一筆記錄 （在之前的所有記錄），則傳回非零值。 在任一情況下，沒有要處理的目前記錄。 如果您呼叫`MovePrev`時`IsBOF`已經**TRUE**或呼叫`MoveNext`時`IsEOF`已經**TRUE**，架構就會擲回`CDBException`。 您也可以使用`IsBOF`和`IsEOF`檢查空的資料錄集。  
+ `IsEOF` 如果資料錄集位於過去的最後一筆記錄，則傳回非零值。 `IsBOF` 如果資料錄集位於晚於第一筆記錄 （在之前的所有記錄），則傳回非零值。 在任一情況下，沒有要處理的目前記錄。 如果您呼叫`MovePrev`時`IsBOF`已經**TRUE**或呼叫`MoveNext`時`IsEOF`已經**TRUE**，架構就會擲回`CDBException`。 您也可以使用`IsBOF`和`IsEOF`檢查空的資料錄集。  
   
  如需有關資料錄集瀏覽的詳細資訊，請參閱[資料錄集： 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。  
   
-##  <a name="_core_when_scrolling_is_supported"></a>當支援捲動  
+##  <a name="_core_when_scrolling_is_supported"></a> 當支援捲動  
  做為原始設計，SQL 提供僅向前捲動，但 ODBC 延伸捲動的功能。 可捲動的支援層級取決於您的應用程式的運作方式與驅動程式的 ODBC API 的一致性層級的 ODBC 驅動程式和 ODBC 資料指標程式庫會載入記憶體。 如需詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)和[ODBC: ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。  
   
 > [!TIP]
@@ -113,7 +108,7 @@ rsCustSet.MoveFirst( );
 > [!NOTE]
 >  與 MFC DAO 類別中，不同的是 MFC ODBC 類別不提供一組**尋找**尋找下一個 （或舊版） 記錄符合指定準則的函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [CRecordset::CanScroll](../../mfc/reference/crecordset-class.md#canscroll)   
  [CRecordset::CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)   

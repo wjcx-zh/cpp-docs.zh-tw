@@ -1,13 +1,10 @@
 ---
-title: "進階、 資訊清單工具、 組態屬性、 &lt;Projectname&gt;屬性頁對話方塊 |Microsoft 文件"
-ms.custom: 
+title: 進階、 資訊清單工具、 組態屬性、 &lt;Projectname&gt;屬性頁對話方塊 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.KeyFile
 - VC.Project.VCManifestTool.UpdateFileHashes
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c756da4ef7b89113ce26e7218011d708ff4c935c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d4dc3ab325a7346d0e787a15d69d646896827d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>進階、 資訊清單工具、 組態屬性、 &lt;Projectname&gt;屬性頁對話方塊
 使用此對話方塊即可指定進階的選項[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  **更新檔案雜湊搜尋路徑**  
  指定檔案中所參考的搜尋路徑`<file>`項目。 此選項也會使用 /hashupdate 選項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [\<檔案 > 項目](/visualstudio/deployment/file-element-clickonce-application)   
  [ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)   
  [資訊清單工具屬性頁](../ide/manifest-tool-property-pages.md)   

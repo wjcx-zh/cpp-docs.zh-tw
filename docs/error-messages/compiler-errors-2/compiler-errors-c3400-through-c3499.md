@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3400 C3499 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3400 C3499 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>編譯器錯誤 C3400 C3499
 
@@ -173,8 +168,8 @@ ms.lasthandoff: 12/21/2017
 |編譯器錯誤 C3441|'*宣告*':'*關鍵字*' 無法在定義類別之後套用。|
 |編譯器錯誤 C3442|初始化等位的多個成員: '*member1*'和'*member2*'|
 |編譯器錯誤 C3443|預設成員初始設定式 '*類別*' 是遞迴的|
-|編譯器錯誤 C3444|空的彙總類別*類別*' 必須以 '{}' 初始化|
-|編譯器錯誤 C3445|複本集的清單初始化 '*類型*' 不能使用明確的建構函式|
+|編譯器錯誤 C3444|空的彙總類別*類別*'必須以初始化'{}'|
+|[編譯器錯誤 C3445](compiler-error-c3445.md)|複本集的清單初始化 '*類型*' 不能使用明確的建構函式|
 |[編譯器錯誤 C3446](compiler-error-c3446.md)|'*類別*': 實值類別的成員不允許的預設成員初始設定式|
 |編譯器錯誤 C3447|已過時。|
 |編譯器錯誤 C3448|已過時。|

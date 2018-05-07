@@ -1,13 +1,10 @@
 ---
-title: "管理功能表、 控制列和快速鍵 |Microsoft 文件"
-ms.custom: 
+title: 管理功能表、 控制列和快速鍵 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b026f273eec0bc689cc6959890b07beb570893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1055fd9b1ef75b2090478d85e8251d1800b8b039
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>管理功能表、控制列和快速鍵
 框架視窗管理使用者介面物件的更新，包括功能表、工具列按鈕、狀態列和快速鍵。 也會管理在 MDI 應用程式中共用的功能表列。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="managing-accelerators"></a>管理快速鍵  
  每個框架視窗都會維護選用的快速鍵對應表，可用來自動完成您的鍵盤快速鍵轉譯。 這個機制可讓您輕鬆地定義叫用功能表命令的快速鍵 (也稱為捷徑按鍵)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用框架視窗](../mfc/using-frame-windows.md)
 

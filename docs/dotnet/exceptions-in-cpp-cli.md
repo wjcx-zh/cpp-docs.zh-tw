@@ -1,28 +1,23 @@
 ---
-title: "例外狀況，在 C + + CLI |Microsoft 文件"
-ms.custom: 
+title: 例外狀況，在 C + + CLI |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0010e205-4487-49a9-a8db-4a8ec63cfc83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 35469281b96b2989c2c511855b46c9eba76c58a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c51e5b85c4e9e30655704e2941a99a90e9888941
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-in-ccli"></a>C++/CLI 中的例外狀況
 文件的本節文章說明例外狀況處理 C + CLI，以及與標準例外狀況處理差異。  

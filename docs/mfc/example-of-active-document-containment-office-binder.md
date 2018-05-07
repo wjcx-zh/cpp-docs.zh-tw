@@ -1,13 +1,10 @@
 ---
-title: "主動式文件內含項目範例： Office 文件夾 |Microsoft 文件"
-ms.custom: 
+title: 主動式文件內含項目範例： Office 文件夾 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Office Binder [MFC]
 - MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00451b41b047f433929ad58e4b275eb413f4e22e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7e4f82840a4c5620762ad57b5b9fa8dd7e62d0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>主動式文件內含項目範例：Office 文件夾
 Microsoft Office Binder 是現用文件容器的範例。 Office Binder 如一般容器一樣包含兩個主要窗格。 左窗格包含對應至 Binder 中的現用文件的圖示。 每份文件稱為*區段*內繫結器。 例如，Binder 可以包含 Word 文件、PowerPoint 檔和 Excel 試算表等等。  
@@ -41,6 +36,6 @@ Microsoft Office Binder 是現用文件容器的範例。 Office Binder 如一�
   
  當然，其他類型的容器會在 Binder 旁邊。 [檔案總管] 使用一般的雙窗格介面，其左窗格使用樹狀目錄控制項來顯示磁碟機或網路中的目錄的階層式清單，而右窗格則顯示目前所選取目錄中包含的檔案。 網際網路瀏覽器類型的容器 （例如 Microsoft Internet Explorer)，而不是使用雙窗格介面，通常具有單一框架，並提供使用超連結的導覽。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [主動式文件內含項目](../mfc/active-document-containment.md)
 

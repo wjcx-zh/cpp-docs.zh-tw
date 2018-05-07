@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3653 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3653 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3653
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c061e0f8e21b4f0e9fcf8d924729490b325b8edf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a78dd5a9c52c9dfc845de43c62ae38180d0d079f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3653"></a>編譯器錯誤 C3653
 'function': 不能當做具名覆寫： 覆寫未找到; 函式您是否忘記指明此函式明確地使用:: 運算子？  

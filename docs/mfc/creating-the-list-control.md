@@ -1,30 +1,25 @@
 ---
-title: "建立清單控制項 |Microsoft 文件"
-ms.custom: 
+title: 建立清單控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85afbe49943e06a66cf2fa914cc87f07b0fa8c52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42457e223bb7e12da64be54d757e05d0bac3a028
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-list-control"></a>建立清單控制項
 如何控制清單 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 建立取決於您是直接使用控制項或是使用類別[CListView](../mfc/reference/clistview-class.md)改為。 如果您使用`CListView`，架構建構檢視其文件/檢視建立順序的一部分。 建立清單檢視中建立清單控制項 （這兩者是相同的動作）。 在檢視中建立控制項[OnCreate](../mfc/reference/cwnd-class.md#oncreate)處理常式函式。 在此情況下，此控制項是準備好要加入項目，透過呼叫[GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  呼叫控制項的[建立](../mfc/reference/clistctrl-class.md#create)成員函式，可能在[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)，方式與父視窗[OnCreate](../mfc/reference/cwnd-class.md#oncreate) （如果您目前的處理常式函式子類別化控制項）。 設定控制項的樣式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

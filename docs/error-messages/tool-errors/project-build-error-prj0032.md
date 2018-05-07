@@ -1,12 +1,9 @@
 ---
-title: "專案建置錯誤 PRJ0032 |Microsoft 文件"
-ms.custom: 
+title: 專案建置錯誤 PRJ0032 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - PRJ0032
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - PRJ0032
 ms.assetid: bc6acbea-4041-4237-8b5a-f0434705d89f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92497027db3a2449914696f03fc86a144a48b62e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6be9a343ae9d9ce1e3d862cc0a397f1d61ccdea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-error-prj0032"></a>專案建置錯誤 PRJ0032
 專案層級自訂建置步驟的 '輸出' 屬性包含 '巨集'，它評估成 'macro_expansion'。  

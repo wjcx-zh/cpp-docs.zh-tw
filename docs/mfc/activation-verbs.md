@@ -1,13 +1,10 @@
 ---
-title: "啟用： 動詞命令 |Microsoft 文件"
-ms.custom: 
+title: 啟用： 動詞命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2a443f4ce65dcc7e9460bd016638aa5069e7e6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c484231eb87144a6546ff2b8b7061a5339820ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activation-verbs"></a>啟用：動詞命令
 本文說明在 OLE 中的角色主要和次要動詞播放[啟用](../mfc/activation-cpp.md)。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  伺服器應用程式支援的動詞命令會列出在 Windows 系統註冊資料庫。 如果您的伺服器應用程式撰寫與 Mfc 程式庫，它將會在伺服器啟動時自動註冊所有動詞命令。 如果沒有，您應該在伺服器應用程式的初始設定階段期間進行註冊。 如需詳細資訊，請參閱文章[註冊](../mfc/registration.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟用](../mfc/activation-cpp.md)   
  [容器](../mfc/containers.md)   
  [伺服器](../mfc/servers.md)

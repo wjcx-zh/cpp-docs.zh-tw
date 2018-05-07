@@ -1,13 +1,10 @@
 ---
-title: "加入成員函式 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 加入成員函式 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.member.function
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - member functions, adding to classes
 - classes [C++], adding members
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6edc2e33eeba8d2d3c6bd0a3778c1863ac295caa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c79f6eaebae0065a631b8ac31a7254cdc96080e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-member-function-visual-c"></a>加入成員函式 (Visual C++)
 在**類別檢視**，您可以加入任何類別成員函式。 當您這樣做，宣告會加入至標頭檔，而 Stub 成員函式主體會加入至該類別的實作檔 (可以修改這個檔案)。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  選擇**完成**按鈕以產生成員函式程式碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../ide/adding-a-class-visual-cpp.md)   
  [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)   

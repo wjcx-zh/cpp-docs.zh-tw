@@ -1,11 +1,8 @@
 ---
-title: "Collections 類別 |Microsoft 文件"
-ms.custom: 
+title: Collections 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -108,7 +103,7 @@ Vector 物件中包含的元素型別。
 |||
 |-|-|
 |名稱|描述|
-|event [Windows::Foundation::Collection::VectorChangedEventHandler\<T>^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Vector 變更時發生。|
+|事件[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Vector 變更時發生。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -269,7 +264,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*  
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*item*  
+*項目*  
 要插入 Vector 所指定的項目之後的項目*索引*。 型別*項目*由定義*T*類型名稱。
 
 ## <a name="removeat"></a>  Vector:: removeat 方法
@@ -327,7 +322,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*  
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*item*  
+*項目*  
 要指派給指定項目的值。 型別*項目*由定義*T*類型名稱。
 
 ## <a name="size"></a>  Vector:: size 方法
@@ -399,10 +394,10 @@ Vector 中的項目數。
 *first*  
 用來初始化目前 Vector 之物件序列中的第一個項目。 型別*第一個*會藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*last*  
+*最後一個*  
 用來初始化目前 Vector 之物件序列中的最後一個項目。 型別*最後*會藉由傳遞*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Platform 命名空間](platform-namespace-c-cx.md)  
 [在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  

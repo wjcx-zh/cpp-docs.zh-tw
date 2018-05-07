@@ -1,30 +1,25 @@
 ---
-title: "如何： 定義和使用列舉，在 C + + CLI |Microsoft 文件"
-ms.custom: 
+title: 如何： 定義和使用列舉，在 C + + CLI |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 59d3619daecfad221bd9eac31c4950bae5ace4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5c30b679b24e574d359a1f838785f0196f290d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：在 C++/CLI 中定義和使用列舉
 本主題討論列舉，在 C + + /CLI。  
@@ -98,7 +93,7 @@ a and day2 are the same
 |++ --|  
 |sizeof|  
   
- 運算子 &#124;^ & ~ + +-僅適用於列舉型別定義的基礎類型，不包括 bool 的整數類資料類型。  這兩個運算元必須是列舉型別。  
+ 運算子&#124;^ & ~ + +-僅適用於列舉型別定義的基礎類型，不包括 bool 的整數類資料類型。  這兩個運算元必須是列舉型別。  
   
  編譯器會執行任何靜態或動態檢查結果的列舉作業;作業可能會導致不在列舉的有效列舉值的範圍內的值。  
   
@@ -146,5 +141,5 @@ int main() {
 True  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [列舉類別](../windows/enum-class-cpp-component-extensions.md)

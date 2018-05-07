@@ -1,12 +1,9 @@
 ---
-title: "CCmdTarget 類別 |Microsoft 文件"
-ms.custom: 
+title: CCmdTarget 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCmdTarget
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bdca1e4193be46a28739b01aed6e26e0e388b13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 Microsoft Foundation 類別庫訊息對應架構基底類別。  
@@ -115,7 +110,7 @@ class CCmdTarget : public CObject
   
  如需命令目標的概觀和`OnCmdMsg`路由，請參閱[命令目標](../../mfc/command-targets.md)，[命令路由](../../mfc/command-routing.md)，和[訊息對應](../../mfc/mapping-messages.md)。  
   
- `CCmdTarget`包含處理的沙漏游標顯示的成員函式。 當您希望產生的命令，以取得執行明顯的時間間隔顯示沙漏游標。  
+ `CCmdTarget` 包含處理的沙漏游標顯示的成員函式。 當您希望產生的命令，以取得執行明顯的時間間隔顯示沙漏游標。  
   
  分派對應，類似於訊息對應，用來公開 OLE automation`IDispatch`功能。 藉由公開這個介面，您的應用程式可以呼叫其他應用程式 （例如 Visual Basic)。  
   
@@ -127,7 +122,7 @@ class CCmdTarget : public CObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor  
+##  <a name="beginwaitcursor"></a>  CCmdTarget::BeginWaitCursor  
  呼叫此函式來顯示資料指標為以沙漏來表示，當您希望產生的命令，以取得執行明顯的時間間隔。  
   
 ```  
@@ -144,14 +139,14 @@ void BeginWaitCursor();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="ccmdtarget"></a>CCmdTarget::CCmdTarget  
+##  <a name="ccmdtarget"></a>  CCmdTarget::CCmdTarget  
  建構 `CCmdTarget` 物件。  
   
 ```  
 CCmdTarget();
 ```  
   
-##  <a name="dooleverb"></a>CCmdTarget::DoOleVerb  
+##  <a name="dooleverb"></a>  CCmdTarget::DoOleVerb  
  會用來執行 OLE 動詞命令所指定的動作。  
   
 ```  
@@ -181,7 +176,7 @@ BOOL DoOleVerb(
 ### <a name="remarks"></a>備註  
  此成員函式基本上是實作[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)。 列舉的可能動作的[CCmdTarget::EnumOleVerbs](#enumoleverbs)。  
   
-##  <a name="enableautomation"></a>CCmdTarget::EnableAutomation  
+##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  呼叫此函式可啟用 OLE automation 物件。  
   
 ```  
@@ -191,7 +186,7 @@ void EnableAutomation();
 ### <a name="remarks"></a>備註  
  此函數通常會從物件的建構函式呼叫，並應該只呼叫分派對應已宣告為類別。 如需自動化的詳細資訊，請參閱文章[Automation 用戶端](../../mfc/automation-clients.md)和[automation 伺服程式](../../mfc/automation-servers.md)。  
   
-##  <a name="enableconnections"></a>CCmdTarget::EnableConnections  
+##  <a name="enableconnections"></a>  CCmdTarget::EnableConnections  
  透過連接點，可讓事件引發。  
   
 ```  
@@ -201,7 +196,7 @@ void EnableConnections();
 ### <a name="remarks"></a>備註  
  若要啟用的連接點，請在衍生類別的建構函式中呼叫此成員函式。  
   
-##  <a name="enabletypelib"></a>CCmdTarget::EnableTypeLib  
+##  <a name="enabletypelib"></a>  CCmdTarget::EnableTypeLib  
  可讓物件的型別程式庫。  
   
 ```  
@@ -209,9 +204,9 @@ void EnableTypeLib();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此成員函式呼叫的建構函式中您`CCmdTarget`-衍生物件提供類型資訊。 如需詳細資訊，請參閱知識庫文章 Q185720，"如何： 從 MFC Automation 伺服程式提供型別資訊。 」 知識庫文件位於[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 此成員函式呼叫的建構函式中您`CCmdTarget`-衍生物件提供類型資訊。 如需詳細資訊，請參閱知識庫文章 Q185720，"如何： 從 MFC Automation 伺服程式提供型別資訊。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="endwaitcursor"></a>CCmdTarget::EndWaitCursor  
+##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor  
  已呼叫之後呼叫此函式`BeginWaitCursor`以沙漏游標返回先前的資料指標的成員函式。  
   
 ```  
@@ -224,7 +219,7 @@ void EndWaitCursor();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="enumoleverbs"></a>CCmdTarget::EnumOleVerbs  
+##  <a name="enumoleverbs"></a>  CCmdTarget::EnumOleVerbs  
  列舉物件的 OLE 動詞命令。  
   
 ```  
@@ -241,7 +236,7 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="remarks"></a>備註  
  此成員函式基本上是實作[IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)。  
   
-##  <a name="fromidispatch"></a>CCmdTarget::FromIDispatch  
+##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  呼叫此函式對應`IDispatch`指標，從自動化成員函式的類別，會接收到`CCmdTarget`可實作介面的物件，`IDispatch`物件。  
   
 ```  
@@ -258,7 +253,7 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ### <a name="remarks"></a>備註  
  此函式的結果是成員函式呼叫的反向`GetIDispatch`。  
   
-##  <a name="getdispatchiid"></a>CCmdTarget::GetDispatchIID  
+##  <a name="getdispatchiid"></a>  CCmdTarget::GetDispatchIID  
  取得主要分派介面識別碼。  
   
 ```  
@@ -275,9 +270,9 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="remarks"></a>備註  
  在衍生的類別應該覆寫此成員函式 (如果未覆寫，`GetDispatchIID`會傳回 FALSE)。 請參閱[COleControl](../../mfc/reference/colecontrol-class.md)。  
   
- 如需詳細資訊，請參閱知識庫文章 Q185720，"如何： 從 MFC Automation 伺服程式提供型別資訊。 」 知識庫文件位於[http://support.microsoft.com](http://support.microsoft.com/)。  
+ 如需詳細資訊，請參閱知識庫文章 Q185720，"如何： 從 MFC Automation 伺服程式提供型別資訊。 」 知識庫文件位於[ http://support.microsoft.com ](http://support.microsoft.com/)。  
   
-##  <a name="getidispatch"></a>CCmdTarget::GetIDispatch  
+##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch  
  呼叫此成員函式可擷取`IDispatch`指標從 automation 方法來傳回`IDispatch`指標或採用`IDispatch`指標所參考。  
   
 ```  
@@ -294,7 +289,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 ### <a name="remarks"></a>備註  
  針對物件呼叫`EnableAutomation`在其建構函式，使其自動化啟用，此函式傳回的指標的基礎類別實作`IDispatch`，會由用戶端通訊透過`IDispatch`介面。 呼叫此函式會自動將參考加入至指標，因此並不需要呼叫[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)。  
   
-##  <a name="gettypeinfocount"></a>CCmdTarget::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  擷取物件提供的類型資訊介面數目。  
   
 ```  
@@ -309,7 +304,7 @@ virtual UINT GetTypeInfoCount();
   
  在衍生的類別應該覆寫此函數來傳回所提供的 （0 或 1） 的類型資訊介面數目。 如果未覆寫， **GetTypeInfoCount**傳回 0。 若要覆寫，請使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeLib`和`GetTypeLibCache`。  
   
-##  <a name="gettypeinfoofguid"></a>CCmdTarget::GetTypeInfoOfGuid  
+##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  擷取對應於指定之 GUID 的類型描述。  
   
 ```  
@@ -332,7 +327,7 @@ HRESULT GetTypeInfoOfGuid(
 ### <a name="return-value"></a>傳回值  
  HRESULT，指出成功或失敗的呼叫。 如果成功的話，*`ppTypeInfo`指向類型資訊介面。  
   
-##  <a name="gettypelib"></a>CCmdTarget::GetTypeLib  
+##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  取得類型程式庫的指標。  
   
 ```  
@@ -354,7 +349,7 @@ virtual HRESULT GetTypeLib(
 ### <a name="remarks"></a>備註  
  在衍生的類別應該覆寫此成員函式 (如果未覆寫，`GetTypeLib`傳回 TYPE_E_CANTLOADLIBRARY)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeInfoCount`和`GetTypeLibCache`。  
   
-##  <a name="gettypelibcache"></a>CCmdTarget::GetTypeLibCache  
+##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache  
  取得類型程式庫快取。  
   
 ```  
@@ -367,7 +362,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 ### <a name="remarks"></a>備註  
  在衍生的類別應該覆寫此成員函式 (如果未覆寫， **GetTypeLibCache**傳回 NULL)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeInfoCount`和`GetTypeLib`。  
   
-##  <a name="isinvokeallowed"></a>CCmdTarget::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
  MFC 的實作會呼叫此函式**idispatch:: Invoke**判斷給定的自動化方法 (由`dispid`) 可以叫用。  
   
 ```  
@@ -386,7 +381,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
   
  在衍生的類別可以覆寫此函數來傳回適當的值 (如果未覆寫， `IsInvokeAllowed` ，則傳回 TRUE)。 請特別參閱[COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)。  
   
-##  <a name="isresultexpected"></a>CCmdTarget::IsResultExpected  
+##  <a name="isresultexpected"></a>  CCmdTarget::IsResultExpected  
  使用`IsResultExpected`來確定用戶端是否預期來自其呼叫 automation 函式的傳回值。  
   
 ```  
@@ -401,9 +396,9 @@ BOOL IsResultExpected();
   
  只有在用戶端，讓您取得有效的傳回值與其他自動化函式在呼叫 automation 函式，如果已呼叫後，此函數會傳回 0。  
   
- `IsResultExpected`如果呼叫 automation 函式呼叫不在進行中時，傳回非零值。  
+ `IsResultExpected` 如果呼叫 automation 函式呼叫不在進行中時，傳回非零值。  
   
-##  <a name="oncmdmsg"></a>CCmdTarget::OnCmdMsg  
+##  <a name="oncmdmsg"></a>  CCmdTarget::OnCmdMsg  
  由架構呼叫以傳送和分派命令訊息，並處理命令的使用者介面物件的更新。  
   
 ```  
@@ -452,7 +447,7 @@ virtual BOOL OnCmdMsg(
   
  [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]  
   
-##  <a name="onfinalrelease"></a>Ccmdtarget:: Onfinalrelease  
+##  <a name="onfinalrelease"></a>  Ccmdtarget:: Onfinalrelease  
  發行或從物件的最後一個 OLE 參考時，由架構呼叫。  
   
 ```  
@@ -462,7 +457,7 @@ virtual void OnFinalRelease();
 ### <a name="remarks"></a>備註  
  此函式可提供特殊處理，這種情況下會覆寫。 預設實作會刪除物件。  
   
-##  <a name="restorewaitcursor"></a>CCmdTarget::RestoreWaitCursor  
+##  <a name="restorewaitcursor"></a>  CCmdTarget::RestoreWaitCursor  
  呼叫此函式以還原適當的沙漏游標系統游標後已變更 （例如之後的訊息方塊已開啟和關閉執行長時間作業時）。  
   
 ```  
@@ -472,7 +467,7 @@ void RestoreWaitCursor();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 ACDUAL](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -2,12 +2,9 @@
 title: 將 ATL 支援加入至 MFC 專案 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.adding.atl.mfc
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a4e9096cf72f6556c8ceb36e12cdff97139712
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d7794d5c3777a208fef6371009771fc5b43c97
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>將 ATL 支援加入至 MFC 專案
 如果您已經建立以 MFC 為基礎的應用程式，然後您可以新增支援的 Active Template Library (ATL) 中輕鬆地執行將 ATL 支援加入至 MFC 專案精靈。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  如需有關如何將 ATL 支援加入 MFC 專案的程式碼的變更的詳細資訊，請參閱[詳細資料加入 ATL 支援的 ATL 精靈](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   

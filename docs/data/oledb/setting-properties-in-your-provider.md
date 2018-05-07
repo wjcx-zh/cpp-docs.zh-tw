@@ -1,12 +1,9 @@
 ---
-title: "在您的提供者中設定屬性 |Microsoft 文件"
-ms.custom: 
+title: 在您的提供者中設定屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 92c5128e3df1e2dfebfef338f3505201cfc40671
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5d43e452d0fffcb4dc6eddcae722f8056dbd39dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-properties-in-your-provider"></a>在提供者內設定屬性
 找到想要的內容屬性群組和屬性識別碼。 如需詳細資訊，請參閱[OLE DB 屬性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程式設計人員參考*。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 02/23/2018
   
 -   屬性對應至識別碼屬性。 您必須從屬性名稱的前面移除前七個字元 ("DBPROP_")。 例如，如果您想要新增**dbprop_maxrows 時**，傳遞`MAXROWS`做為第一個項目。 如果這是自訂的屬性，傳遞完整的 GUID 名稱 (例如， `DBMYPROP_MYPROPERTY`)。  
   
--   Variant 類型的屬性 (在[OLE DB 屬性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程式設計人員參考*)。 輸入**VT_**類型 (例如`VT_BOOL`或`VT_I2`) 對應到資料類型。  
+-   Variant 類型的屬性 (在[OLE DB 屬性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程式設計人員參考*)。 輸入**VT_** 類型 (例如`VT_BOOL`或`VT_I2`) 對應到資料類型。  
   
 -   旗標以指出屬性是否可讀取且可寫入以及它所屬的群組。 例如，下列程式碼表示屬於群組資料列集的讀/寫屬性：  
   
@@ -60,5 +55,5 @@ ms.lasthandoff: 02/23/2018
   
 -   **DBPROP_CANHOLDROWS**會被忽略; 提供者指定它自己的限制。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

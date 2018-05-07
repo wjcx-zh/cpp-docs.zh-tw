@@ -1,11 +1,8 @@
 ---
-title: "Platform:: guid 實值類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: guid 實值類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Guid
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5323c934efb7d9416d1016f355390288885cb0c9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c295138d6239ce516b4f322fb5fc479e2235a6be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
 代表 Windows 執行階段類型系統中的 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) 類型。  
@@ -128,7 +123,7 @@ public value struct Guid
  GUID 剩餘的 8 個位元組。  
   
 
-## <a name="operator-equality"></a> Guid::operator== Operator
+## <a name="operator-equality"></a> Guid::operator = = 運算子
 比較兩個 guid。  
   
 ### <a name="syntax"></a>語法  
@@ -154,7 +149,7 @@ Platform::Guid::operator!=
 
 
 
-## <a name="operator-call"></a> Guid::operator() Operator
+## <a name="operator-call"></a> Guid 運算子
 會隱含地轉換[GUID 結構](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)platform:: GUID。  
   
 ### <a name="syntax"></a>語法  
@@ -167,5 +162,5 @@ Platform::Guid operator()
  Guid 結構。  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

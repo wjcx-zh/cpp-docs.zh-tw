@@ -1,10 +1,10 @@
 ---
-title: "初始化混合的組件 |Microsoft 文件"
-ms.custom: 
+title: 初始化混合的組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
-- cpp-windows
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4d569987c20a962b0cecf22cd6888b22c920fb5
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: 389246b6b002204260170fb44680c2756cd7aa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合組件的初始化
 
@@ -125,7 +124,7 @@ CObject* op = new CObject(arg1, arg2);
 
 在 Visual Studio 2005 之前，連結器只會選擇這些語意相等的定義，以配合向前宣告，以及案例不同最佳化選項用於不同原始程式檔時的最大值。 這會產生混合的原生/.NET DLL 的問題。
 
-因為相同的標頭可能包含這兩者具有 c + + 檔案**/clr**啟用和停用，或 #include 可以包裝內 #pragma`unmanaged`區塊中，很可能有 MSIL 和原生版本提供的函式標頭中的實作。 MSIL 和原生實作針對在載入器鎖定下進行初始化有不同的語意，這實際上違反了「一個定義規則」。 因此，當連結器選擇最大的實作時，它可能會選擇 MSIL 版本的函式，即使在其他地方使用了 #pragma Unmanaged 指示詞明確編譯為機器碼亦然。 為了確保在載入器鎖定下絕不會呼叫 MSIL 版本的範本或內嵌函式，您必須使用 #pragma `unmanaged` 指示詞，來修改在載入器鎖定下呼叫之這類函式的所有定義。 如果標頭檔來自協力廠商，要達到這個目的，最簡單的方法就是在違規標頭檔的 #include 指示詞附近，推入和彈出 #pragma Unmanaged 指示詞 (請參閱[managed、 unmanaged](../preprocessor/managed-unmanaged.md)的範例。)不過，這項策略不適用於含有必須直接呼叫 .NET API 之其他程式碼的標頭。
+因為相同的標頭可能包含這兩者具有 c + + 檔案 **/clr**啟用和停用，或 #include 可以包裝內 #pragma`unmanaged`區塊中，很可能有 MSIL 和原生版本提供的函式標頭中的實作。 MSIL 和原生實作針對在載入器鎖定下進行初始化有不同的語意，這實際上違反了「一個定義規則」。 因此，當連結器選擇最大的實作時，它可能會選擇 MSIL 版本的函式，即使在其他地方使用了 #pragma Unmanaged 指示詞明確編譯為機器碼亦然。 為了確保在載入器鎖定下絕不會呼叫 MSIL 版本的範本或內嵌函式，您必須使用 #pragma `unmanaged` 指示詞，來修改在載入器鎖定下呼叫之這類函式的所有定義。 如果標頭檔來自協力廠商，要達到這個目的，最簡單的方法就是在違規標頭檔的 #include 指示詞附近，推入和彈出 #pragma Unmanaged 指示詞 (請參閱[managed、 unmanaged](../preprocessor/managed-unmanaged.md)的範例。)不過，這項策略不適用於含有必須直接呼叫 .NET API 之其他程式碼的標頭。
 
 為方便使用者處理載入器鎖定，若原生實作和 Managed 實作同時存在，連結器會優先選擇原生實作。 這可避免上述問題。 不過在這個版本中，因為編譯器有兩個尚未解決的問題，所以這項規則有兩個例外：
 
@@ -163,7 +162,7 @@ void DuringLoaderlock(C & c)
 
    有兩種方法可以達到這個目的： 首先，您可以將 mscoree.dll 和 mscorwks.dll 的 PDB 加入符號搜尋路徑。 若要這樣做，請開啟 [symbol search path options] (符號搜尋路徑選項) 對話方塊。 (從**工具**功能表上，選擇**選項**。 在左窗格中**選項**對話方塊中，開啟**偵錯**節點，然後選擇 **符號**。)將 mscoree.dll 和 mscorwks.dll PDB 檔案的路徑加入搜尋清單。 這些 PDB 會安裝到 %VSINSTALLDIR%\SDK\v2.0\symbols。 選擇 [確定] 。
 
-   其次，您可以從 Microsoft 符號伺服器下載 mscoree.dll 和 mscorwks.dll 的 PDB。 若要設定符號伺服器，請開啟 [symbol search path options] (符號搜尋路徑選項) 對話方塊。 (從**工具**功能表上，選擇**選項**。 在左窗格中**選項**對話方塊中，開啟**偵錯**節點，然後選擇 **符號**。)將下列搜尋路徑加入搜尋清單︰http://msdl.microsoft.com/download/symbols。 將符號快取目錄加入符號伺服器快取文字方塊。 選擇 [確定] 。
+   其次，您可以從 Microsoft 符號伺服器下載 mscoree.dll 和 mscorwks.dll 的 PDB。 若要設定符號伺服器，請開啟 [symbol search path options] (符號搜尋路徑選項) 對話方塊。 (從**工具**功能表上，選擇**選項**。 在左窗格中**選項**對話方塊中，開啟**偵錯**節點，然後選擇 **符號**。)將下列的搜尋路徑加入搜尋清單： http://msdl.microsoft.com/download/symbols。 將符號快取目錄加入符號伺服器快取文字方塊。 選擇 [確定] 。
 
 1. 將偵錯工具模式設定為僅限原生模式。
 
@@ -171,7 +170,7 @@ void DuringLoaderlock(C & c)
 
 1. 啟動偵錯 (F5)。
   
-1. 當**/clr**會產生診斷，請選擇**重試**，然後選擇 **中斷**。
+1. 當 **/clr**會產生診斷，請選擇**重試**，然後選擇 **中斷**。
   
 1. 開啟呼叫堆疊視窗 (在功能表列上選擇 **偵錯** > **Windows** > **呼叫堆疊**。)違反`DllMain`或靜態初始設定式以綠色箭頭識別。 如果有未識別的違規函式，則必須採取下列步驟找到此函式。
 
@@ -179,7 +178,7 @@ void DuringLoaderlock(C & c)
 
 1. 輸入.load sos.dll 到**即時運算**視窗以載入 SOS 偵錯服務。
   
-1. 型別 ！ dumpstack**即時運算**視窗來取得完整的清單內部的**/clr**堆疊。
+1. 型別 ！ dumpstack**即時運算**視窗來取得完整的清單內部的 **/clr**堆疊。
 
 1. 尋找第一個執行個體 （最接近堆疊底部） _CorDllMain (如果`DllMain`造成的問題)、 或 GetTargetForVTableEntry （如果是靜態初始設定式造成的問題）。 此呼叫正下方的堆疊項目，會是在載入器鎖定下嘗試執行之 MSIL 實作函式的引動過程。
 

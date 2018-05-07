@@ -1,12 +1,9 @@
 ---
-title: "堆疊 (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 堆疊 (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::stack
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/stack> header [STL/CLR]
 - stack class [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 290857b51fea6726ec7e4a836d4afe1b33a8e615
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 此範本類別描述控制不同長度序列的項目可存取後進先出的物件。 您可以使用容器配接器`stack`管理向下推送堆疊基礎容器。  
@@ -108,7 +103,7 @@ template<typename Value,
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   

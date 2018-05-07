@@ -1,13 +1,10 @@
 ---
-title: "&lt;請參閱&gt;（Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: '&lt;請參閱&gt;（Visual c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - <see>
 - see
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e1aedefe6d20c181ff208f76a61f49e15f5214
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltseegt-visual-c"></a>&lt;請參閱&gt;（Visual c + +）
 \<see> 標記可讓您在文字內指定連結。 使用[ \<seealso >](../ide/seealso-visual-cpp.md)表示您可能想要出現在另請參閱 > 一節中的文字。  
@@ -79,5 +74,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

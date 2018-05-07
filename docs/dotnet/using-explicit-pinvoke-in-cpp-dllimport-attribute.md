@@ -1,13 +1,10 @@
 ---
-title: "C + + （DllImport 屬性） 中使用明確的 PInvoke |Microsoft 文件"
-ms.custom: 
+title: C + + （DllImport 屬性） 中使用明確的 PInvoke |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - platform invoke [C++], marshaling in C++
 - data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 15c6d458af041479d14f41088f0038c519c6aa89
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 82215e4815d25dd116cf930be9cc0f40da761bf8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>在 C++ 中使用明確的 PInvoke (DllImport 屬性)
 .NET Framework 提供明確的平台叫用 （或 PInvoke） 功能與`Dllimport`屬性，以允許受管理的應用程式呼叫 Dll 內封裝的 unmanaged 函式。 Unmanaged 的 Api 會封裝為 Dll，以及不提供原始程式碼的情況下需要明確的 PInvoke。 呼叫 Win32 函式，例如，需要 PInvoke。 否則，請使用隱含 P {叫用，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)如需詳細資訊。  
@@ -53,5 +48,5 @@ ms.lasthandoff: 02/14/2018
   
 -   [如何：使用 PInvoke 封送處理內嵌指標](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)

@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2008 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2008 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2008
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2008
 ms.assetid: e748ccbe-ffd4-4008-aca7-e53c25225209
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3edf3320fb8a598e216e716ffdc5c2a1a01d1d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88dcbc88b50ee46b406d383ec36e1fed167eca05
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2008"></a>編譯器錯誤 C2008
 'character'：未預期會出現在巨集定義中  

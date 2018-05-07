@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3278 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3278 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3278
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d39812be8f2208acfdb93ba979fb20f93268decd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b7f05916be060b9712f6ba1b1955b37da538afe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3278"></a>編譯器錯誤 C3278
 直接呼叫介面或純方法 'method' 會在執行階段導致失敗  

@@ -1,11 +1,8 @@
 ---
-title: "Platform:: iboxarray 介面 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: iboxarray 介面 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52f8c95851ec80df41fe9f0838345cf46876227
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 572724dcebbdb3921b26d6c688ff5d68d1392437
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 介面
 `IBoxArray` 是實值類型陣列的包裝函式，這些實值類型會在不同的應用程式二進位介面 (ABI) 之間傳遞或是儲存在 `Platform::Object^` 元素的集合中，例如在 XAML 控制項中。  
@@ -71,5 +66,5 @@ property T Value {T get();}
  如需範例，請參閱[Boxing](../cppcx/boxing-c-cx.md)。  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

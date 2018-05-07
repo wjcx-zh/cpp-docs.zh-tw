@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2955 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2955 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2955
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccb8eabf42fdc47b58261633ceb61cf9bc0b15d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 686fb51d1e72f0835a673d00c05ade21a7580515
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2955"></a>編譯器錯誤 C2955
 'identifier': 使用類別樣板或別名泛型需要範本或泛型引數清單  
@@ -83,7 +78,7 @@ int main() {
 ```
 
 ## <a name="example"></a>範例
-**2017 和更新版本的 visual Studio:**編譯器正確診斷遺漏樣板引數清單時 （例如做為預設範本引數或非類型樣板參數的一部分） 的範本會出現在樣板參數清單。 下列程式碼是在 Visual Studio 2015 中編譯，但在 Visual Studio 2017 中產生錯誤。
+**2017 和更新版本的 visual Studio:** 編譯器正確診斷遺漏樣板引數清單時 （例如做為預設範本引數或非類型樣板參數的一部分） 的範本會出現在樣板參數清單。 下列程式碼是在 Visual Studio 2015 中編譯，但在 Visual Studio 2017 中產生錯誤。
 
 ```
 template <class T> class ListNode;

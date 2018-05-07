@@ -1,12 +1,9 @@
 ---
-title: "連結器工具錯誤 LNK1168 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具錯誤 LNK1168 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1168
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1168
 ms.assetid: 97ead151-fd99-46fe-9a1d-7e84dc0b8cc8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12dfce4243f0872735158df7ccd81b7c6e29efc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc3a7c06779cb409a39a930080199b3caf6891ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1168"></a>連結器工具錯誤 LNK1168
 無法開啟 filename 以寫入資料  
@@ -42,5 +37,5 @@ ms.lasthandoff: 12/21/2017
   
  如果您的可執行檔無法由建置流程覆寫，則可能是被 [檔案總管] 鎖定。 如果**應用程式體驗**服務已停用，檔案總管可能佔用的可執行檔的檔案控制代碼鎖定一段時間。 若要修正此問題，請執行**services.msc** ，然後開啟**屬性**對話方塊的 **應用程式體驗**服務。 變更**啟動類型**從**已停用**至**手動**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [您可能會收到 「 錯誤 PRJ0008 」 或 「 嚴重錯誤 LNK1168 」 錯誤訊息時您嘗試建置方案或 ActiveX 專案中 Visual c + +](http://support.microsoft.com/kb/308358)

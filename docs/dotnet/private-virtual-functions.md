@@ -1,13 +1,10 @@
 ---
-title: "私用虛擬函式 |Microsoft 文件"
-ms.custom: 
+title: 私用虛擬函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - access modifiers [C++], for class members
 - member access [C++], virtual members
 ms.assetid: 04448086-bf72-44be-9c1f-dfda1744949e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9b407bc469a345706f99cf5bad578f678e652a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97b4d7d9f47901fa69aa50bfc6f405355cf378b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="private-virtual-functions"></a>私用虛擬函式
 在衍生類別中處理私用虛擬函式的方式已從 Managed Extensions for c + + Visual c + +。  
@@ -64,6 +59,6 @@ public:
   
  請注意，如果沒有明確的`virtual`關鍵字在基底類別中，在新語法中，會產生一則警告訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在類別或介面中的成員宣告 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  

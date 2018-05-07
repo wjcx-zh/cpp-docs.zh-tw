@@ -1,12 +1,9 @@
 ---
-title: "auto_handle::auto_handle |Microsoft 文件"
-ms.custom: 
+title: auto_handle::auto_handle |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - auto_handle::auto_handle
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - auto_handle method
 ms.assetid: 0b68ab31-023c-4224-9601-9231412c4e13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bdb0d15ac53a217282655e84898c53b762b40aa8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af9ca3d472aa3c942b86d338a6b6f8f25a573ca8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autohandleautohandle"></a>auto_handle::auto_handle
 `auto_handle`建構函式。  
@@ -127,7 +122,7 @@ done
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto_handle 成員](../dotnet/auto-handle-members.md)   
  [auto_handle::operator =](../dotnet/auto-handle-operator-assign.md)   
  [auto_handle::~auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)

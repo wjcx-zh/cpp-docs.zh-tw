@@ -1,12 +1,9 @@
 ---
-title: "連結器工具警告 LNK4254 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具警告 LNK4254 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4254
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e17bcd03f92114c1b7cd21e63220cf6372c17bf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb57882ab4269c06a53ed73fed2a9d6caf2f2c85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4254"></a>連結器工具警告 LNK4254
 區段 'section1' （位移） 合併到 'section2' (offset) 有不同的屬性  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱：  
   
--   [/MERGE （結合區段）](../../build/reference/merge-combine-sections.md)  
+-   [/MERGE (結合區段)](../../build/reference/merge-combine-sections.md)  
   
 -   [comment (C/C++)](../../preprocessor/comment-c-cpp.md)  
   

@@ -1,37 +1,32 @@
 ---
-title: "剪貼簿： 複製和貼上資料 |Microsoft 文件"
-ms.custom: 
+title: 剪貼簿： 複製和貼上資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d76be3bd3863826391cc812f17dca88cb3a5457
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bdfd43933453e44c49d713a1565ac3f71e019de4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>剪貼簿：複製和貼上資料
 本主題說明實作複製和貼上從剪貼簿 OLE 應用程式所需的最小工作。 建議您閱讀[資料物件和資料來源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)主題後再繼續。  
   
  您可以實作複製或貼上之前，您必須先提供處理的複製、 剪下和貼上的選項，在 [編輯] 功能表上的函式。  
   
-##  <a name="_core_copying_or_cutting_data"></a>複製或剪下資料  
+##  <a name="_core_copying_or_cutting_data"></a> 複製或剪下資料  
   
 #### <a name="to-copy-data-to-the-clipboard"></a>將資料複製到剪貼簿  
   
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  若要查看此序列的範例，請參閱**OnEditCut**和**OnEditCopy**函式，在 MFC OLE 範例程式[OCLIENT](../visual-cpp-samples.md)和[HIERSVR](../visual-cpp-samples.md). 請注意，這些範例會維護目前選取的資料指標，所以已經完成步驟 1。  
   
-##  <a name="_core_pasting_data"></a>貼上資料  
+##  <a name="_core_pasting_data"></a> 貼上資料  
  貼上資料是複雜比複製它，因為您必須選擇要將資料貼入您的應用程式中使用的格式。  
   
 #### <a name="to-paste-data-from-the-clipboard"></a>從剪貼簿貼上資料  
@@ -79,6 +74,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [OLE](../mfc/ole-background.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [剪貼簿：使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 

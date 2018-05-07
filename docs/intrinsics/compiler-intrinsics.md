@@ -1,12 +1,9 @@
 ---
-title: "編譯器內建 |Microsoft 文件"
-ms.custom: 
+title: 編譯器內建 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20b1416eacc6fa31c5e41b4a0539ce9ccbd99f88
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c05a2843e5daff980d1c84d4d3f2185ac361144d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-intrinsics"></a>編譯器內建
 大部份的函式都包含在程式庫中，但有些函式是內建 (也就是內建) 到編譯器。 這些稱為內建函式或內建。  
@@ -38,9 +33,9 @@ ms.lasthandoff: 02/23/2018
   
  某些內建函式 (如 `__assume` 和 `__ReadWriteBarrier`) 會提供資訊給編譯器，這會影響最佳化工具的行為。  
   
- 某些內建函式僅以內建函式的形式提供使用，而有些內建函式則是在函式和內建實作中都提供使用。 您可以指示編譯器以兩種方式之一使用內建實作，取決於您是只要啟用特定的函式，還是想要啟用所有的內建函式。 第一種方式是使用`#pragma intrinsic(`*內建函式的名稱-清單*`)`。 Pragma 可以用來指定單一內建函式或以逗號分隔的多個內建函式。 第二個是使用[/Oi （產生內建函式）](../build/reference/oi-generate-intrinsic-functions.md)編譯器選項，讓指定平台的所有內建函式。 在下**/Oi**，使用`#pragma function(`*內建函式的名稱-清單*`)`強制執行用來取代內建函式呼叫。 如果特定內建的文件指明此常式僅可作為內建，則會使用內建函式的實作，不論是否**/Oi**或`#pragma intrinsic`指定。 在所有情況下， **/Oi**或`#pragma intrinsic`的限制，但是不會強制，最佳化工具使用內建函式。 最佳化工具仍然可以呼叫該函式。  
+ 某些內建函式僅以內建函式的形式提供使用，而有些內建函式則是在函式和內建實作中都提供使用。 您可以指示編譯器以兩種方式之一使用內建實作，取決於您是只要啟用特定的函式，還是想要啟用所有的內建函式。 第一種方式是使用`#pragma intrinsic(`*內建函式的名稱-清單*`)`。 Pragma 可以用來指定單一內建函式或以逗號分隔的多個內建函式。 第二個是使用[/Oi （產生內建函式）](../build/reference/oi-generate-intrinsic-functions.md)編譯器選項，讓指定平台的所有內建函式。 在下 **/Oi**，使用`#pragma function(`*內建函式的名稱-清單*`)`強制執行用來取代內建函式呼叫。 如果特定內建的文件指明此常式僅可作為內建，則會使用內建函式的實作，不論是否 **/Oi**或`#pragma intrinsic`指定。 在所有情況下， **/Oi**或`#pragma intrinsic`的限制，但是不會強制，最佳化工具使用內建函式。 最佳化工具仍然可以呼叫該函式。  
   
- 某些標準的 C/C++ 程式庫函式可作為某些架構上的內建實作使用。 如果在呼叫 CRT 函式時，使用內建實作**/Oi**命令列上指定。  
+ 某些標準的 C/C++ 程式庫函式可作為某些架構上的內建實作使用。 如果在呼叫 CRT 函式時，使用內建實作 **/Oi**命令列上指定。  
   
  標頭檔\<intrin.h >，是可宣告通用內建函式的原型。 製造商特定內建函式可用於\<immintrin.h > 和\<ammintrin.h > 標頭檔。 此外，某些 Windows 標頭宣告對應到編譯器內建函式上的函式。  
   
@@ -56,7 +51,7 @@ ms.lasthandoff: 02/23/2018
   
 -   [依字母順序列出的內建函式](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ARM 組合程式參考](../assembler/arm/arm-assembler-reference.md)   
  [Microsoft Macro Assembler 參考](../assembler/masm/microsoft-macro-assembler-reference.md)   
  [關鍵字](../cpp/keywords-cpp.md)   

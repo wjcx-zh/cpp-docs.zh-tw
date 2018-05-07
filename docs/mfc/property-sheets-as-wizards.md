@@ -1,29 +1,24 @@
 ---
-title: "屬性工作表做為精靈 |Microsoft 文件"
-ms.custom: 
+title: 屬性工作表做為精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65aedc5dbeb8a740d5713983f66eefe693864937
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 634359763f24e02987664fe3de1094e3e7fec64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-sheets-as-wizards"></a>屬性工作表做為精靈
 精靈屬性工作表的主要特性是所提供的巡覽隨附 [下一步]、[完成]、[上一步] 和 [取消] 按鈕，而非索引標籤。 您需要呼叫[cpropertysheet:: Domodal](../mfc/reference/cpropertysheet-class.md#setwizardmode)之前先呼叫[cpropertysheet:: Setwizardmode](../mfc/reference/cpropertysheet-class.md#domodal)屬性工作表物件，利用這項功能。  
@@ -35,6 +30,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性工作表](../mfc/property-sheets-mfc.md)
 

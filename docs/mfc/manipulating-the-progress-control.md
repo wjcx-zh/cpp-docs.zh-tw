@@ -1,13 +1,10 @@
 ---
-title: "管理進度控制項 |Microsoft 文件"
-ms.custom: 
+title: 管理進度控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c75866cdcf947745db741a6626f01215e58932e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415061306c5e743b9ed95ee5c7105133d2e4d340
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-the-progress-control"></a>管理進度控制項
 有三種方式來變更進度控制項的目前位置 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md))。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  通常，進度控制項只用於輸出。 若要取得目前的位置，而不指定新的值，使用[GetPos](../mfc/reference/cprogressctrl-class.md#getpos)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CProgressCtrl](../mfc/using-cprogressctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

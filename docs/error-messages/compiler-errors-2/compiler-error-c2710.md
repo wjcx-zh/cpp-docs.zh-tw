@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2710 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2710 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2710
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2710
 ms.assetid: a2a6bb5b-86ad-4a6c-acd0-e2bef8464e0e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 818573ae74f33d10b3a27e815771e3212135bdcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bfc182527aeb349fb91d098133c4545b95a93ac2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2710"></a>編譯器錯誤 C2710
 'construct': '__declspec(modifier)' 只能套用至傳回指標的函式  

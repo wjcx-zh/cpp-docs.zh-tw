@@ -1,30 +1,25 @@
 ---
-title: "建立標題控制項 |Microsoft 文件"
-ms.custom: 
+title: 建立標題控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f536a86a21e56eb36e546109f916ae5d6ca806
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 465c880c480f9ccd3a52f6319ee97ed203c3bd74
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-header-control"></a>建立標題控制項
 標題控制項不是直接使用對話方塊編輯器中 （雖然您可以新增清單控制項，包括標頭控制項）。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱[建立標題控制項](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "主動式文件 |Microsoft 文件"
-ms.custom: 
+title: 主動式文件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>主動式文件
 主動式文件擴充了 OLE 的複合文件技術。 這些擴充功能是做為管理檢視的額外介面提供，如此物件就可以在容器內運作，同時保持對其顯示和列印功能的控制能力。 這個處理序能夠同時以外部框架 (例如 Microsoft Office Binder 或 Microsoft Internet Explorer) 和原生框架 (例如產品本身的檢視區) 顯示文件。  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  主動式文件可以建立一或多個類型的[檢視](#requirements_for_view_objects)它的資料 （例如，一般大綱、 頁面配置等）。 檢視就像篩選，用於篩選可查看的資料。 即使文件只能有一個類型的檢視，您仍可能想要支援多個檢視，來支援新的視窗功能 (例如，**新視窗**項目上**視窗**office 功能表應用程式）。  
   
-##  <a name="requirements_for_active_documents"></a>主動式文件的需求  
+##  <a name="requirements_for_active_documents"></a> 主動式文件的需求  
  可在主動式文件容器中顯示的主動式文件必須：  
   
 -   藉由實作 `IPersistStorage`，使用 OLE 的複合檔案做為儲存機制。  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  這些需求中已隱含對使用容器端介面之時機和方式的知識。  
   
-##  <a name="requirements_for_view_objects"></a>檢視物件的需求  
+##  <a name="requirements_for_view_objects"></a> 檢視物件的需求  
  主動式文件可以建立一個或多個資料檢視。 功能上來說，這些檢視就像是顯示資料之特殊方法的連接埠。 如果主動式文件只支援單一檢視，則可以使用單一類別實作主動式文件及該單一檢視。 **Ioledocument:: Createview**傳回相同的物件`IOleDocumentView`介面指標。  
   
  若要表示主動式文件容器中，檢視元件必須支援**IOleInPlaceObject**和**IOleInPlaceActiveObject**除了`IOleDocumentView`:  
@@ -109,6 +104,6 @@ interface IOleDocumentView : IUnknown
   
  檢視物件也可以是命令目標。 藉由實作`IOleCommandTarget`檢視可以接收來自容器的使用者介面中的命令 (例如**新增**，**開啟**，**存**， **列印**上**檔案**功能表; 和**複製**，**貼上**，**復原**上**編輯**功能表)。 如需詳細資訊，請參閱[訊息處理和命令目標](../mfc/message-handling-and-command-targets.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [主動式文件內含項目](../mfc/active-document-containment.md)
 

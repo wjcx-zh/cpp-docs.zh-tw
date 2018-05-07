@@ -1,13 +1,10 @@
 ---
-title: "資料物件和資料來源： 操作 |Microsoft 文件"
-ms.custom: 
+title: 資料物件和資料來源： 操作 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40bd83b2e472ff1b1e5d277c27a801b0750fb160
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>資料物件和資料來源：管理
 建立資料物件或資料來源之後，您可以執行的數字的資料，例如插入和移除資料，列舉資料的格式，以及其他更多資訊的一般作業。 本文說明完成最常見的作業所需的技巧。 主題包括：  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [從資料物件擷取資料](#_core_retrieving_data_from_a_data_object)  
   
-##  <a name="_core_inserting_data_into_a_data_source"></a>將資料插入資料來源  
+##  <a name="_core_inserting_data_into_a_data_source"></a> 將資料插入資料來源  
  資料插入至資料來源的方式取決於資料是否立即提供或依需求，並以何種媒體提供它。 可能值如下所示。  
   
 ### <a name="supplying-data-immediately-immediate-rendering"></a>立即提供資料 （立即轉譯）  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果您使用`CFile`提供資料的物件呼叫`COleDataSource::DelayRenderFileData`而不是`COleDataSource::DelayRenderData`中前一個選項。 當要求資料時，架構會呼叫`COleDataSource::OnRenderFileData`，您必須覆寫。  
   
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>判斷資料物件中可用的格式  
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> 判斷資料物件中可用的格式  
  應用程式可讓使用者貼上資料之前，它必須知道它可以處理在剪貼簿上是否有格式。 若要這樣做，您的應用程式應該執行下列動作：  
   
 1.  建立`COleDataObject`物件和**FORMATETC**結構。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  如果您使用`ON_UPDATE_COMMAND_UI`，您現在可以啟用貼上和，可能是 [編輯] 功能表上的選擇性貼上項目。 若要這樣做，請呼叫`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 如需有關哪個容器應用程式應與功能表項目和，請參閱 <<c0> [ 功能表和資源： 容器新增](../mfc/menus-and-resources-container-additions.md)。  
   
-##  <a name="_core_retrieving_data_from_a_data_object"></a>從資料物件擷取資料  
+##  <a name="_core_retrieving_data_from_a_data_object"></a> 從資料物件擷取資料  
  一旦您決定的資料格式，所有剩下的都只有從資料物件擷取資料。 若要這樣做，使用者會決定要放置資料和應用程式會呼叫適當的函式。 資料會是其中一個可用的下列媒體：  
   
 |Medium|若要呼叫的函式|  
@@ -100,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [剪貼簿](../mfc/clipboard.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料物件和資料來源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)   
  [COleDataObject 類別](../mfc/reference/coledataobject-class.md)   
  [COleDataSource 類別](../mfc/reference/coledatasource-class.md)

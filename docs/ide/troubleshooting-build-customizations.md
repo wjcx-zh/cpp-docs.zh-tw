@@ -1,13 +1,10 @@
 ---
-title: "疑難排解組建自訂 |Microsoft 文件"
-ms.custom: 
+title: 疑難排解組建自訂 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - builds [C++], troubleshooting
 - custom build steps [C++], troubleshooting
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa3b2d3910a71d189f5177e13fbd91930e15ee8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48e9f7bdcbf422a25fb0bdb40411e6c662fadc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-build-customizations"></a>疑難排解組建自訂
 如果您的自訂建置步驟或事件行為如預期般，，有幾件事，您可以嘗試了解什麼錯誤。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   若要顯示實際進行什麼自訂建置步驟，新增`@echo on`做為第一個命令。 建置事件與建置步驟會放在暫存.bat 檔案，並執行建置專案時。 因此，您可以加入錯誤檢查，以建置事件，或建置步驟的命令。  
   
--   檢查組建記錄檔中的中繼檔案目錄，以查看實際執行的內容。 組建記錄檔的名稱與路徑由**MSBuild**巨集運算式**$ （intdir)\\$(MSBuildProjectName).log**。  
+-   檢查組建記錄檔中的中繼檔案目錄，以查看實際執行的內容。 組建記錄檔的名稱與路徑由**MSBuild**巨集運算式 **$ （intdir)\\$(MSBuildProjectName).log**。  
   
 -   修改您的專案設定來收集多個預設數量的組建記錄檔中的資訊。 在 [ **工具** ] 功能表上按一下 [ **選項**]。 在**選項**對話方塊中，按一下 **專案和方案**節點，然後按一下**建置並執行**節點。 然後，在**MSBuild 專案組建記錄檔詳細等級**方塊中，按一下**Detailed**。  
   
@@ -48,5 +43,5 @@ ms.lasthandoff: 12/21/2017
   
 -   執行自訂建置步驟，並建置分別可檢查其行為的事件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [了解自訂建置步驟和建置事件](../ide/understanding-custom-build-steps-and-build-events.md)

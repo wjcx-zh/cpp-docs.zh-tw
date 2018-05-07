@@ -1,12 +1,9 @@
 ---
-title: __shiftleft128 | Microsoft Docs
-ms.custom: 
+title: __shiftleft128 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __shiftleft128
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e66a1a4faf71649970181bd9d7b47d3da292f24
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cfc63cdd252e2acb23d8a6e842138d91e6c9b9c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Microsoft 特定的**  
@@ -106,6 +101,6 @@ int main()
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [__shiftright128](../intrinsics/shiftright128.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

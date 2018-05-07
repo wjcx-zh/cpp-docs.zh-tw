@@ -1,10 +1,10 @@
 ---
-title: "建立 Makefile 專案 |Microsoft 文件"
-ms.custom: 
+title: 建立 Makefile 專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
 - cpp-ide
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.makefile.project
 dev_langs:
@@ -13,17 +13,15 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f487126b58dddc0243646ebce7faa2754ffa7053
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: dc854f96f1c41baf28a5af4ca1f253e47d9a8914
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-makefile-project"></a>建立 Makefile 專案
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 03/05/2018
 
 您可以在屬性頁檢視和編輯專案的屬性。 請參閱[設定 Visual c + + 專案屬性](../ide/working-with-project-properties.md)如需有關顯示屬性頁資訊。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Makefile 專案精靈](../ide/makefile-project-wizard.md)<br/>
 [Makefile 中的特殊字元](../build/special-characters-in-a-makefile.md)<br/>

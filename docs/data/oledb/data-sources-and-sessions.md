@@ -1,12 +1,9 @@
 ---
-title: "資料來源和工作階段 |Microsoft 文件"
-ms.custom: 
+title: 資料來源和工作階段 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f294ab4fc8777dd6d9776958d9e6e16278efb02c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d93f6aba8e9fad27054c731d37e6df28b54eacda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-sources-and-sessions"></a>資料來源和工作階段
 下圖顯示連接和存取資料來源支援的類別。 每個類別為基礎的標準 OLE DB 元件實作。  
@@ -42,5 +37,5 @@ ms.lasthandoff: 02/23/2018
   
 -   [CSession](../../data/oledb/csession-class.md)這個類別具現化的工作階段物件，表示單一的存取工作階段資料來源。 不過，您可以在資料來源上建立多個工作階段。 每個工作階段，您可以建立資料來源存取資料的資料列集、 命令及其他物件。 工作階段會處理交易。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

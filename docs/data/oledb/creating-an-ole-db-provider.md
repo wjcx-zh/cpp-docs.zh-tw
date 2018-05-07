@@ -1,12 +1,9 @@
 ---
-title: "建立 OLE DB 提供者 |Microsoft 文件"
-ms.custom: 
+title: 建立 OLE DB 提供者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bd59e8e9456cac830e6e86faf404c76816e45349
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f649b5b4c79c4148d0aed026b044485ca2b1eaa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-ole-db-provider"></a>建立 OLE DB 提供者
 若要建立 OLE DB 提供者的建議的方式是使用精靈來建立 ATL COM 專案和提供者，然後修改使用 OLE DB 範本的檔案。 自訂您的提供者，您可以標記為註解的不必要的屬性，並加入選擇性的介面。  
@@ -47,6 +42,6 @@ ms.lasthandoff: 02/23/2018
     > [!NOTE]
     >  根據預設，精靈會產生 OLE DB 層級 0 相容的程式碼。 若要確保您的應用程式層級 0 相容，請勿從程式碼中移除任何精靈產生的介面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
  [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)

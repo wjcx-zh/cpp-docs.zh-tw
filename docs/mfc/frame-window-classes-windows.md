@@ -1,13 +1,10 @@
 ---
-title: "框架視窗類別 (Windows) |Microsoft 文件"
-ms.custom: 
+title: 框架視窗類別 (Windows) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.frame
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - frame window classes [MFC], reference
 ms.assetid: 6342ec5f-f922-4da8-a78e-2f5f994c7142
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2668a8334192d4de199f1c42a648b74add1ca5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43d6df0231f9d8d1d64d01bd12fa7209eb7b537d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-window-classes-windows"></a>框架視窗類別 (Windows)
 框架視窗是應用程式或應用程式一部分的框架的視窗。 框架視窗通常會包含其他視窗，例如檢視、 工具列和狀態列。 如果是`CMDIFrameWnd`，它們可能包含`CMDIChildWnd`間接物件。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
  [CMenu](../mfc/reference/cmenu-class.md)  
  封裝`HMENU`應用程式的功能表列和快顯功能表的控制代碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

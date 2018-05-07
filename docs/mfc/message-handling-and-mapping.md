@@ -1,13 +1,10 @@
 ---
-title: "訊息處理和對應 |Microsoft 文件"
-ms.custom: 
+title: 訊息處理和對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c13ed0bb19ef1ed2864378e151c6be8d98887
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handling-and-mapping"></a>訊息處理和對應
 此系列的文章描述 MFC 架構如何處理訊息和命令以及如何連接至其處理函式。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [如何：建立樣板類別的訊息對應](../mfc/how-to-create-a-message-map-for-a-template-class.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../mfc/mfc-concepts.md)   
  [一般 MFC 主題](../mfc/general-mfc-topics.md)   
  [CWnd 類別](../mfc/reference/cwnd-class.md)   

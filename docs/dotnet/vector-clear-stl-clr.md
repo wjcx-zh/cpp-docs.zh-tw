@@ -1,12 +1,9 @@
 ---
-title: "vector:: clear (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'vector:: clear (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::clear
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - clear member [STL/CLR]
 ms.assetid: 4ed20ec8-3089-4c36-b68f-1b51c639041f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 63bb863d6503fa66d3a8b19e002d9a912f953298
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63fa3ce9b045abaef1c789705c83734180ea7de8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorclear-stlclr"></a>vector::clear (STL/CLR)
 移除所有項目。  
@@ -89,6 +84,6 @@ size() = 0
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)

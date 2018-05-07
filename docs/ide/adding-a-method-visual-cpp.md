@@ -1,30 +1,25 @@
 ---
-title: "加入方法 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 加入方法 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding
 ms.assetid: 4ba4e45f-fa38-4d5e-af44-cbec0a7ab558
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4412c37ed0544c276a9ff1a16c367de06c7d1e9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b247b0e21112d6a2be2384fafbf43fc295b22c71
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-method--visual-c"></a>加入方法 (Visual C++)
 您可以使用[加入方法精靈](../ide/add-method-wizard.md)將方法加入至您的專案中的介面。 如果專案包含介面相關聯的類別，精靈也會修改類別。  
@@ -46,6 +41,6 @@ ms.lasthandoff: 12/21/2017
   
 6.  按一下**完成**將方法加入。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立 COM 介面](../ide/creating-a-com-interface-visual-cpp.md)   
  [編輯 COM 介面](../ide/editing-a-com-interface.md)

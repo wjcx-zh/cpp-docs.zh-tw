@@ -1,24 +1,19 @@
 ---
-title: "基本類型 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 基本類型 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 885b996e94c1c3a3d55e48e0f37c5690ba084cf6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-types-ccx"></a>基本類型 (C++/CX)
 除了標準 c + + 內建類型，C + + /CX 支援由 Windows 執行階段基本類型對應至標準 c + + 類型，提供 typedef 的 Windows 執行階段架構所定義的型別系統... C + + /CX 實作布林值、 字元和數值基本類型。 這些 Typedef 在 `default` 命名空間中已定義，永遠不需要明確指定。 此外，C + + /CX 提供包裝函式和具象實作特定 Windows 執行階段類型和介面。  
@@ -61,5 +56,5 @@ ms.lasthandoff: 02/14/2018
 |UIntPtr|(僅供內部使用。)作為指標的不帶正負號 64 位元值。|  
 |IntPtr|(僅供內部使用。)作為指標的帶正負號 64 位元值。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)

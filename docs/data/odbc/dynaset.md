@@ -1,13 +1,10 @@
 ---
-title: "動態集 |Microsoft 文件"
-ms.custom: 
+title: 動態集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0f2f7ddd4a1b4021dfff8d533bb81acd84129a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec71b5b00b26564f9c8dc3c2d98f53f8182b0ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynaset"></a>動態集
 本主題描述動態集，並討論其[可用性](#_core_availability_of_dynasets)。  
@@ -50,9 +45,9 @@ ms.lasthandoff: 12/21/2017
  若要指定資料錄集是動態集時，傳遞**CRecordset::dynaset**的第一個參數為**開啟**資料錄集物件的成員函式。  
   
 > [!NOTE]
->  可更新的動態集的 ODBC 驅動程式必須支援任一定位的 update 陳述式或**:: SQLSetPos** ODBC API 函式。 如果兩者都有支援，MFC 會使用**:: SQLSetPos**為了提高效率。  
+>  可更新的動態集的 ODBC 驅動程式必須支援任一定位的 update 陳述式或 **:: SQLSetPos** ODBC API 函式。 如果兩者都有支援，MFC 會使用 **:: SQLSetPos**為了提高效率。  
   
-##  <a name="_core_availability_of_dynasets"></a>動態集的可用性  
+##  <a name="_core_availability_of_dynasets"></a> 動態集的可用性  
  MFC 資料庫類別支援動態集，如果符合下列需求：  
   
 -   ODBC 資料指標程式庫 DLL 不能在使用此資料來源。  
@@ -63,17 +58,17 @@ ms.lasthandoff: 12/21/2017
   
 -   您的資料來源的 ODBC 驅動程式必須支援索引鍵集驅動資料指標。  
   
-     索引鍵集驅動資料指標管理資料的資料表中取得和儲存一組索引鍵。 這些金鑰會用來在使用者捲動至特定資料錄時，從資料表中取得目前的資料。 若要判斷您的驅動程式是否提供這項支援，請呼叫**:: SQLGetInfo** ODBC API 函式與**SQL_SCROLL_OPTIONS**參數。  
+     索引鍵集驅動資料指標管理資料的資料表中取得和儲存一組索引鍵。 這些金鑰會用來在使用者捲動至特定資料錄時，從資料表中取得目前的資料。 若要判斷您的驅動程式是否提供這項支援，請呼叫 **:: SQLGetInfo** ODBC API 函式與**SQL_SCROLL_OPTIONS**參數。  
   
      如果您嘗試開啟不含索引鍵集支援動態集，您會收到`CDBException`傳回碼值**AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED**。  
   
 -   您的資料來源的 ODBC 驅動程式必須支援擴充擷取。  
   
-     擴充擷取是向右捲動，以及透過您的 SQL 查詢的結果資料錄將轉送的能力。 若要判斷您的驅動程式是否支援這項功能，請呼叫**:: SQLGetFunctions** ODBC API 函式與**SQL_API_SQLEXTENDEDFETCH**參數。  
+     擴充擷取是向右捲動，以及透過您的 SQL 查詢的結果資料錄將轉送的能力。 若要判斷您的驅動程式是否支援這項功能，請呼叫 **:: SQLGetFunctions** ODBC API 函式與**SQL_API_SQLEXTENDEDFETCH**參數。  
   
- 如果您想更新的動態集 （或快照集，就此而言），ODBC 驅動程式必須也支援**:: SQLSetPos** ODBC API 函式或定位的更新。 **:: SQLSetPos**函式可讓 MFC 不會傳送的 SQL 陳述式更新資料來源。 如果使用這項支援，MFC 會使用它而非進行使用 SQL 更新。 若要判斷您的驅動程式是否支援**:: SQLSetPos**，呼叫**:: SQLGetInfo**與**SQL_POS_OPERATIONS**參數。  
+ 如果您想更新的動態集 （或快照集，就此而言），ODBC 驅動程式必須也支援 **:: SQLSetPos** ODBC API 函式或定位的更新。 **:: SQLSetPos**函式可讓 MFC 不會傳送的 SQL 陳述式更新資料來源。 如果使用這項支援，MFC 會使用它而非進行使用 SQL 更新。 若要判斷您的驅動程式是否支援 **:: SQLSetPos**，呼叫 **:: SQLGetInfo**與**SQL_POS_OPERATIONS**參數。  
   
- 定位的更新使用 SQL 語法 (表單的**WHERE CURRENT OF** \<current >) 來識別資料來源上的資料表中的特定資料列。 若要判斷您的驅動程式是否支援定位的更新，請呼叫**:: SQLGetInfo**與**SQL_POSITIONED_STATEMENTS**參數。  
+ 定位的更新使用 SQL 語法 (表單的**WHERE CURRENT OF** \<current >) 來識別資料來源上的資料表中的特定資料列。 若要判斷您的驅動程式是否支援定位的更新，請呼叫 **:: SQLGetInfo**與**SQL_POSITIONED_STATEMENTS**參數。  
   
  一般而言，MFC 動態集 （但不是順向資料錄集） 需要以層級 2 API 一致性的 ODBC 驅動程式。 如果您的資料來源驅動程式符合層級 1 API 集，您仍然可以使用可更新和唯讀快照集和順向資料錄集，但不是使用動態集。 不過，層級 1 驅動程式可支援動態集支援擴充擷取和索引鍵集驅動資料指標。 如需有關 ODBC 一致性層級的詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)。  
   
@@ -84,5 +79,5 @@ ms.lasthandoff: 12/21/2017
   
  包含在這個版本的 Visual c + + 中的 ODBC 驅動程式清單以及取得其他驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

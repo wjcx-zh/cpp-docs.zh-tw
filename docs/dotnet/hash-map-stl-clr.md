@@ -1,12 +1,9 @@
 ---
-title: "hash_map (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: hash_map (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <hash_map> header [STL/CLR]
 - hash_map class [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cff0a45360a74bcfd7612b4eabe60dcc1057507a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad09cf718e2e76cbed99c5628a3eafc5104ad03f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`hash_map`若要管理的項目序列的雜湊表，儲存雙向的每個資料表項目連結清單節點，以及儲存一個項目每個節點。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  其中：  
   
- `GKey`等同於`Key`後者是 ref 型別，除非在這種情況下很`Key^`  
+ `GKey` 等同於`Key`後者是 ref 型別，除非在這種情況下很 `Key^`  
   
- `GMapped`等同於`Mapped`後者是 ref 型別，除非在這種情況下很`Mapped^`  
+ `GMapped` 等同於`Mapped`後者是 ref 型別，除非在這種情況下很 `Mapped^`  
   
 ## <a name="syntax"></a>語法  
   
@@ -143,7 +138,7 @@ template<typename Key,
   
  您藉由呼叫成員函式存取的預存的委派物件[hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`。 這類委派的物件必須定義索引鍵的型別之間的對等順序[hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)。 這表示任何兩個索引鍵`X`和`Y`:  
   
- `key_comp()(X, Y)`傳回的相同的布林值結果，在每次呼叫。  
+ `key_comp()(X, Y)` 傳回的相同的布林值結果，在每次呼叫。  
   
  如果`key_comp()(X, Y) && key_comp()(Y, X)`是 true，則`X`和`Y`被視為具有對等順序。  
   
@@ -153,7 +148,7 @@ template<typename Key,
   
  物件可讓您判斷哪一個 bucket 應該藉由呼叫預存的委派類型的物件包含指定的排序索引鍵[hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)。 您藉由呼叫成員函式中存取這個預存的物件[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()`取得索引鍵的值而定的整數值。 當您建構 hash_set; 時，您可以指定預存的委派物件如果您指定沒有委派的物件時，預設值是函式`System::Object::hash_value(key_type)`。 這表示任何索引鍵`X`和`Y`:  
   
- `hash_delegate()(X)`在每次呼叫會傳回相同的整數結果。  
+ `hash_delegate()(X)` 在每次呼叫會傳回相同的整數結果。  
   
  如果`X`和`Y`具有對等順序，然後`hash_delegate()(X)`應該會傳回相同的整數結果`hash_delegate()(Y)`。  
   
@@ -174,7 +169,7 @@ template<typename Key,
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_map](../dotnet/hash-map-stl-clr.md)   
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   

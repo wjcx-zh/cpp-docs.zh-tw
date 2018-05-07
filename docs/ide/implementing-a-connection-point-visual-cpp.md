@@ -1,30 +1,25 @@
 ---
-title: "實作連接點 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 實作連接點 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Implement Connection Point Wizard [C++]
 - connection points [C++], implementing
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab065c78d8ea5d2de105abdc2fa651e05f9d1875
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b75bf145da401ad9889353a1e65448831c602c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-connection-point-visual-c"></a>實作連接點 (Visual C++)
 若要實作連接點使用實作連接點精靈，您必須已建立專案做為 ATL COM 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用[ATL 專案精靈](../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[MFC 應用程式中加入 ATL 物件](../mfc/reference/adding-atl-support-to-your-mfc-project.md)實作 MFC 應用程式的 ATL 支援。  
@@ -66,6 +61,6 @@ ms.lasthandoff: 12/21/2017
   
     -   如果您實作連接點的另一個介面，定義包含介面的方法，每一個前面加上`Fire_`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [將連接點新增至物件](../atl/adding-connection-points-to-an-object.md)

@@ -1,37 +1,32 @@
 ---
-title: "MFC ActiveX 控制項： 加入自訂方法 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 加入自訂方法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 控制項：加入自訂方法
 自訂的方法與不同的內建方法由不已經實作`COleControl`。 您必須提供每個加入至控制項的自訂方法的實作。  
   
  ActiveX 控制項使用者可以隨時執行特定控制項的動作呼叫的自訂方法。 自訂方法的分派對應項目是表單的`DISP_FUNCTION`。  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>加入自訂方法具有加入方法精靈  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> 加入自訂方法具有加入方法精靈  
  下列程序示範如何將 ActiveX 控制項的基本架構程式碼的 PtInCircle 自訂方法。 PtInCircle 決定是否在傳送至控制項的座標之內或之外圓形。 這個相同的程序也可用來加入其他自訂方法。 取代為您自訂的方法名稱和其參數 PtInCircle 方法名稱和參數。  
   
 > [!NOTE]
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 10. 按一下 [ **完成**]。  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>加入方法精靈變更自訂方法  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> 加入方法精靈變更自訂方法  
  當您新增的自訂方法時，加入方法精靈會進行某些變更控制項類別標頭檔 (。H） 和實作 (。CPP) 檔案。 下列這一行加入至控制項類別標頭中的分派對應宣告 (。H） 檔案：  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_4.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [類別檢視和物件瀏覽器圖示](/visualstudio/ide/class-view-and-object-browser-icons)
 

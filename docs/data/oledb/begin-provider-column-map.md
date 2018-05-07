@@ -1,12 +1,9 @@
 ---
-title: BEGIN_PROVIDER_COLUMN_MAP | Microsoft Docs
-ms.custom: 
+title: BEGIN_PROVIDER_COLUMN_MAP |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BEGIN_PROVIDER_COLUMN_MAP
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BEGIN_PROVIDER_COLUMN_MAP macro
 ms.assetid: 506b8c0f-6be9-4c97-ba81-c4b7f7d428fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe73f6888b80903f93dc8e4eece58ebf29144a6c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eff2aa003f81ed3fcf5ba9152bc17002be0a4db2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginprovidercolumnmap"></a>BEGIN_PROVIDER_COLUMN_MAP
 標記提供者的資料行對應項目的開頭。  
@@ -50,7 +45,7 @@ BEGIN_PROVIDER_COLUMN_MAP(theClass)
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   

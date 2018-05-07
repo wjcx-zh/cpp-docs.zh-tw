@@ -1,11 +1,8 @@
 ---
-title: "Platform:: type 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: type 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type 類別
 包含與類型 (特別是此項)、字串名稱和 typecode 相關的執行階段資訊。 藉由呼叫取得[object:: gettype](../cppcx/platform-object-class.md#gettype)任何物件或使用[typeid](../windows/typeid-cpp-component-extensions.md)操作員的類別或結構的名稱。  
@@ -114,7 +109,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>備註  
  Gettypecode （） 成員方法相當`typeid`屬性。
 
-## <a name="tostring">Type::ToString 方法</a>
+## <a name="tostring"></a> Type::ToString 方法
 擷取類型的名稱。  
   
 ### <a name="syntax"></a>語法  
@@ -126,5 +121,5 @@ Platform::String^ ToString();
 ### <a name="return-value"></a>傳回值  
  它的中繼資料中所指定類型的名稱。    
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

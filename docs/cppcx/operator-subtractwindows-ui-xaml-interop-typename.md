@@ -1,23 +1,19 @@
 ---
-title: "運算子 Windows::UI::Xaml::Interop::TypeName |Microsoft 文件"
-ms.custom: 
+title: 運算子 Windows::UI::Xaml::Interop::TypeName |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 0acc4540b76a6436aeacd19fd99b02997f291705
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: da70039ad4a40fcc29a8d474f56f8950f02ca428
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>運算子 Windows::UI::Xaml::Interop::TypeName
 可以從 `Platform::Type` 轉換為 [Windows::UI::Xaml::Interop::TypeName](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)。  
@@ -56,6 +52,6 @@ Type^ tx2 = (Type^)(tn);
   
 ### <a name="requirements"></a>需求  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算子 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)   
  [Platform::Type 類別](../cppcx/platform-type-class.md)

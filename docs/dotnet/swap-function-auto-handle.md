@@ -1,12 +1,9 @@
 ---
-title: "swap 函式 (auto_handle) |Microsoft 文件"
-ms.custom: 
+title: swap 函式 (auto_handle) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::swap
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c400579603ce3385e6b4114c8c9996cab2849619
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c616a391db07a9c6116c96c1b0242714a0ad958b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="swap-function-autohandle"></a>swap 函式 (auto_handle)
 交換物件之間一個`auto_handle`和另一個。  
@@ -81,6 +76,6 @@ s1 = 'string two', s2 = 'string one'
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto_handle](../dotnet/auto-handle.md)   
  [auto_handle::swap](../dotnet/auto-handle-swap.md)

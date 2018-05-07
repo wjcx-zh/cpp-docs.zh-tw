@@ -1,13 +1,10 @@
 ---
-title: "選擇部署方法 |Microsoft 文件"
-ms.custom: 
+title: 選擇部署方法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b30bea93163549373759ea8980650717d49bbac
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bdf024f75f03b55465ccd15670c47d3c761e56e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="choosing-a-deployment-method"></a>選擇部署方法
 除非您的 Visual c + + 應用程式是獨立的而且可以使用複製命令來部署，否則我們建議您部署使用 Windows Installer。 Windows Installer 支援安裝、修復或解除安裝，同時也支援不可部分完成更新應用程式檔案、相依性和登錄項目。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>動態連結比靜態連結適合  
  我們建議您避免轉散發 Visual c + + 程式庫時使用靜態連結。 靜態連結幾乎無法大幅改善應用程式效能，卻會提高服務代價。 例如，請考慮靜態連結至已更新安全性增強之程式庫的應用程式，除非重新編譯並重新部署，否則該應用程式不會因此受益。 相反地，我們建議您將應用程式動態連結至相依的程式庫，以便在部署時更新這些程式庫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
  [部署範例](../ide/deployment-examples.md)

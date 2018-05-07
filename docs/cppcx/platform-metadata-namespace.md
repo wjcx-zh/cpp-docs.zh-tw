@@ -1,11 +1,8 @@
 ---
-title: "Platform:: metadata 命名空間 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: metadata 命名空間 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Metadata
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61824ff4eb91fa7d62bb663e713bc269f50b4e01
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 11dc54463207efade9a8ebb7179654d0b1e18909
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata 命名空間
 這個命名空間包含修改類型宣告的屬性。  
@@ -56,5 +51,5 @@ namespace Platform {
   
  **命名空間：** Platform::Metadata  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

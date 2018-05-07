@@ -1,12 +1,9 @@
 ---
-title: "CColumnPrivileges、 CColumnPrivilegeInfo |Microsoft 文件"
-ms.custom: 
+title: CColumnPrivileges、 CColumnPrivilegeInfo |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_szTableSchema
@@ -53,18 +50,16 @@ helpviewer_keywords:
 - CColumnPrivilegeInfo parameter class
 - m_bIsGrantable
 ms.assetid: 245df365-421f-43c6-9fcd-fb2197c871c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7595d0f945744804b91a62ecfd41c5d2f3d9b165
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 57ccdea5fbafea147da6c866dc0cc67c2f30b0ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a>CColumnPrivileges、CColumnPrivilegeInfo
 呼叫 typedef 類別**CColumnPrivileges**來實作其參數類別**CColumnPrivilegeInfo**。  
@@ -92,5 +87,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

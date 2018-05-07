@@ -1,13 +1,10 @@
 ---
-title: "資料錄集： 執行聯結 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 資料錄集： 執行聯結 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], joins
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4091cd8e60eed569782021c811f12af227e79673
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0be740a57f5c455b971dd23575401c666bf0723c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-performing-a-join-odbc"></a>資料錄集：執行聯結 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  您也可以納入方程式多對資料行，每個配對會以 SQL 關鍵字相同的方式加入兩個以上資料表**AND**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 宣告預先定義的查詢 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
  [資料錄集： 宣告資料表 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   

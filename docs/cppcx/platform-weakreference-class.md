@@ -1,26 +1,21 @@
 ---
-title: "Platform:: weakreference 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: weakreference 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference 類別
 表示 ref 類別之執行個體的弱式參考。  
@@ -39,7 +34,7 @@ class WeakReference
   
 |成員|描述|  
 |------------|-----------------|  
-|[WeakReference::WeakReference](#ctor)|初始化 WeakReference 類別的新執行個體。|  
+|[Weakreference:: Weakreference](#ctor)|初始化 WeakReference 類別的新執行個體。|  
   
 ### <a name="methods"></a>方法  
   
@@ -57,7 +52,7 @@ class WeakReference
 ### <a name="remarks"></a>備註  
  WeakReference 類別本身不是 ref 類別，因此不會繼承 Platform::Object^，而且也不能在公用方法的簽章中使用。  
 
-## <a name="operator-assign"></a> WeakReference::operator=
+## <a name="operator-assign"></a> WeakReference::operator =
 指派值給 WeakReference。  
   
 ### <a name="syntax"></a>語法  
@@ -135,5 +130,5 @@ WeakReference wr(mc);
 MyClass^ copy2 = wr.Resolve<MyClass>();    
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

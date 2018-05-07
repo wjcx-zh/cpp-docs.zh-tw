@@ -1,12 +1,9 @@
 ---
-title: "list:: pop_front (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'list:: pop_front (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::pop_front
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - pop_front member [STL/CLR]
 ms.assetid: 6a0bad42-6796-41d9-a3e9-1488b3882574
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4122e485075ae5c6586fd92a4cae3a04fa08431a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68ceb6be19093fc99ed666e6c6e7f2a1c0cec0b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listpopfront-stlclr"></a>list::pop_front (STL/CLR)
 移除第一個項目。  
@@ -79,7 +74,7 @@ b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list:: pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)   
  [list:: push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)   

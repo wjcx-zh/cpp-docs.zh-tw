@@ -1,12 +1,9 @@
 ---
-title: CBulkRowset::MovePrev | Microsoft Docs
-ms.custom: 
+title: 'Cbulkrowset:: Moveprev |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBulkRowset::MovePrev
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - MovePrev method
 ms.assetid: ccf41334-d364-4f1d-87ba-9dcda8f8a08e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8245e7a7ca01f47f188a98717fbb2247ae01c54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 43ac4dd610ba888c9d90c7f511ffe543f532d6b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbulkrowsetmoveprev"></a>CBulkRowset::MovePrev
 移至前一個資料列。  
@@ -52,5 +47,5 @@ HRESULT MovePrev() throw();
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CBulkRowset 類別](../../data/oledb/cbulkrowset-class.md)

@@ -1,33 +1,28 @@
 ---
-title: "如何： 宣告覆寫規範 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 如何： 宣告覆寫規範 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0f50e500cf25a18e86e107e22d58e6446d03379d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8119ab62ee37320074df401c3986b56f3ea6cbfa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>如何：在原生編譯中宣告覆寫指定名稱 (C++/CLI)
-[密封](../windows/sealed-cpp-component-extensions.md)，[抽象](../windows/abstract-cpp-component-extensions.md)，和[覆寫](../windows/override-cpp-component-extensions.md)可用在不使用編譯中**/ZW**或[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
+[密封](../windows/sealed-cpp-component-extensions.md)，[抽象](../windows/abstract-cpp-component-extensions.md)，和[覆寫](../windows/override-cpp-component-extensions.md)可用在不使用編譯中 **/ZW**或[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
   
 > [!NOTE]
 >  ISO C + + 11 標準語言有[覆寫](../cpp/override-specifier.md)識別碼和[最終](../cpp/final-specifier.md)識別項，以及同時支援在 Visual Studio 使用`final`而不是`sealed`旨在的程式碼中編譯為僅限原生。  
@@ -97,5 +92,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [覆寫規範](../windows/override-specifiers-cpp-component-extensions.md)

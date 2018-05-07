@@ -1,29 +1,24 @@
 ---
-title: "說明檔 （HTML 說明） |Microsoft 文件"
-ms.custom: 
+title: 說明檔 （HTML 說明） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96cd6ad904439f556f2baa51602353ea00c5ac7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d180fe4f9cf1baf26b27423ffda975bfe0fe85ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-files-html-help"></a>說明檔 (HTML 說明)
 當選取 加入應用程式的說明支援的 HTML 說明類型會建立下列檔案**即時線上說明**核取方塊，然後選取  **HTML 說明格式**中[進階功能](../mfc/reference/advanced-features-mfc-application-wizard.md)MFC 應用程式精靈頁面。  

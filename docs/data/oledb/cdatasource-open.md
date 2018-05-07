@@ -1,12 +1,9 @@
 ---
-title: "Cdatasource:: Open |Microsoft 文件"
-ms.custom: 
+title: 'Cdatasource:: Open |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::Open
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - Open method
 ms.assetid: a6d28bd1-799a-48ed-8993-5f82d1705b77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6b21add1180343070fb85da113309e0a31f86aeb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3196aa89426e895dd6b73b28ce197e8f271a0262
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 開啟資料來源使用的連接**CLSID**， **ProgID**，或`CEnumerator`moniker 或以定位程式對話方塊提示使用者。  
@@ -114,7 +109,7 @@ HRESULT Open(LPCSTR szProgID,
  標準 `HRESULT`。  
   
 ## <a name="remarks"></a>備註  
- 如果方法多載使用 `hWnd` 參數，則會使用 oledb32.dll 中的服務元件開啟資料來源物件。此 DLL 包含服務元件功能的實作，例如資源共用、自動交易登記等。 如需詳細資訊，請參閱 < OLE DB 服務 > 中 OLE DB 程式設計人員參考[http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
+ 如果方法多載使用 `hWnd` 參數，則會使用 oledb32.dll 中的服務元件開啟資料來源物件。此 DLL 包含服務元件功能的實作，例如資源共用、自動交易登記等。 如需詳細資訊，請參閱 < OLE DB 服務 > 中 OLE DB 程式設計人員參考[ http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true ](http://msdn.microsoft.com/library/default.asp?url=/library/oledb/htm/oledbole_db_services.asp?frame=true)。  
   
  如果方法多載未使用 `hWnd` 參數，則會在不使用 oledb32.dll 中的服務元件的情況下開啟資料來源物件。 A [CDataSource](../../data/oledb/cdatasource-class.md)使用這些函式多載開啟的物件將無法利用任何服務元件的功能。  
   
@@ -126,5 +121,5 @@ HRESULT Open(LPCSTR szProgID,
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDataSource 類別](../../data/oledb/cdatasource-class.md)

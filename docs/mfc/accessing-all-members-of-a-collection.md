@@ -1,13 +1,10 @@
 ---
-title: "存取集合的所有成員 |Microsoft 文件"
-ms.custom: 
+title: 存取集合的所有成員 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ba2795c12695702b2e38034081e17d69c156d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-all-members-of-a-collection"></a>存取集合的所有成員
 MFC 陣列集合類別 (範本型和非範本型) 使用索引來存取其項目。 MFC 清單和對應集合類別 (範本型和非範本型) 使用 **POSITION** 類型的指標來描述集合中的指定位置。 若要存取這些集合的一或多個成員，請先將位置指標初始化，然後將該位置重複傳遞給集合，並要求它傳回下一個項目。 集合不負責維護反覆項目進度的相關狀態資訊。 該資訊會保留在位置指示器中。 但若指定特定位置，集合會負責傳回下一個元素。  
@@ -55,7 +50,7 @@ MFC 陣列集合類別 (範本型和非範本型) 使用索引來存取其項目
   
      此範例使用具類型的指標陣列，其中包含 `CPerson` 物件的指標。 此陣列衍生自類別 `CObArray`，這是其中一個預先定義的非範本類別。 `GetAt` 傳回 `CPerson` 物件的指標。 針對具類型的指標集合類別 (陣列或清單)，第一個參數會指定基底類別，第二個參數會指定要儲存的類型。  
   
-     `CTypedPtrArray`類別也會多載**[]**運算子，讓您可以使用慣用的陣列註標語法來存取元素的陣列。 上述 `for` 迴圈主體中的陳述式可替代成  
+     `CTypedPtrArray`類別也會多載 **[]** 運算子，讓您可以使用慣用的陣列註標語法來存取元素的陣列。 上述 `for` 迴圈主體中的陳述式可替代成  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   
@@ -86,6 +81,6 @@ MFC 陣列集合類別 (範本型和非範本型) 使用索引來存取其項目
   
  如需詳細資訊，請參閱 [刪除 CObject 集合中的所有物件](../mfc/deleting-all-objects-in-a-cobject-collection.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [集合](../mfc/collections.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "資料錄集： 資料錄集選取資料錄的方式 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 資料錄集： 資料錄集選取資料錄的方式 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>資料錄集：資料錄集選取資料錄的方式 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  資料錄集選取資料來源的 ODBC 驅動程式透過傳送到驅動程式的 SQL 陳述式的記錄。 傳送 SQL 取決於您如何設計及開啟資料錄集類別。  
   
-##  <a name="_core_your_options_in_selecting_records"></a>您的選項中選取資料錄  
+##  <a name="_core_your_options_in_selecting_records"></a> 您的選項中選取資料錄  
  下表顯示您的選項中選取資料錄。  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>如何及何時可能會影響資料錄集  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 
 |呼叫**Requery**重新查詢資料來源上的最新值資料錄集 |指定新的參數、 篩選或排序。 請參閱[資料錄集： 重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。 |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>資料錄集如何建構其 SQL 陳述式  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> 資料錄集如何建構其 SQL 陳述式  
  當您呼叫資料錄集物件的[開啟](../../mfc/reference/crecordset-class.md#open)成員函式，**開啟**建構 SQL 陳述式使用部分或全部的下列元素：  
   
 -   **LpszSQL**參數傳遞至**開啟**。 如果沒有**NULL**，此參數會指定自訂 SQL 字串的一部分。 將字串剖析架構。 如果字串是 SQL**選取**陳述式或 ODBC**呼叫**陳述式中，架構會做為資料錄集的 SQL 陳述式中使用的字串。 如果字串開頭不是 「 選取 」 或 「 {呼叫 」，架構會使用所提供來建構 SQL **FROM**子句。  
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
  您可以使用這些技術的組合，以開啟[資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)和來建構查詢是根據[聯結](../../data/odbc/recordset-performing-a-join-odbc.md)多個資料表。 與其他自訂，您可以呼叫[預先定義的查詢](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)（預存程序），選取資料表資料行不知道在設計階段和[繫結](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)資料錄集欄位，或是您可以執行大部分其他資料存取工作。 您無法藉由自訂資料錄集來完成的工作仍可藉由[呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)或直接執行 SQL 陳述式與[cdatabase:: Executesql](../../mfc/reference/cdatabase-class.md#executesql)。  
   
-##  <a name="_core_customizing_the_selection"></a>自訂選取  
+##  <a name="_core_customizing_the_selection"></a> 自訂選取  
  除了提供篩選、 排序順序或參數，您可以採取下列動作來自訂資料錄集的選取項目：  
   
 -   將自訂的 SQL 字串中傳遞**lpszSQL**當您呼叫[開啟](../../mfc/reference/crecordset-class.md#open)資料錄集。 您要傳入的任何項目**lpsqSQL**優先於什麼[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)成員函式傳回。  
@@ -108,7 +103,7 @@ ms.lasthandoff: 12/21/2017
   
  如果您想要根據複雜的 SQL 陳述式中的資料錄集時，您需要使用這些自訂技術的組合。 例如，也許您想要使用 SQL 子句和關鍵字不直接支援的資料錄集，或可能是您要加入多個資料表。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
  [ODBC 基本概念](../../data/odbc/odbc-basics.md)   

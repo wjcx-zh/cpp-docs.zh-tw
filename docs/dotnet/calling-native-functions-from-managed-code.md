@@ -1,13 +1,10 @@
 ---
-title: "呼叫原生函式，從 Managed 程式碼 |Microsoft 文件"
-ms.custom: 
+title: 呼叫原生函式，從 Managed 程式碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>從 Managed 程式碼呼叫原生函式
 Common language runtime 提供的平台叫用服務或 PInvoke，可讓 managed 程式碼能夠呼叫 C 樣式函式在原生動態連結程式庫 (Dll)。 相同的資料封送處理會用於執行階段和 「 它只著作 」 或 IJW、 機制的 COM 互通性。  
@@ -42,7 +37,7 @@ Common language runtime 提供的平台叫用服務或 PInvoke，可讓 managed 
   
 -   [詳述平台叫用](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- 本節中的範例只說明如何`PInvoke`可用。 `PInvoke`可簡化自訂的資料封送處理，因為您提供宣告式屬性，而不是寫入程序封送處理程式碼封送處理資訊。  
+ 本節中的範例只說明如何`PInvoke`可用。 `PInvoke` 可簡化自訂的資料封送處理，因為您提供宣告式屬性，而不是寫入程序封送處理程式碼封送處理資訊。  
   
 > [!NOTE]
 >  封送處理程式庫提供原生和 managed 環境，以最佳化方式之間的資料封送處理的替代方式。 請參閱[概觀的封送處理 c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)如需有關封送處理程式庫。 函式僅資料，而不使用封送處理程式庫。  
@@ -234,5 +229,5 @@ int main() {
   
  為提升效能，有較少越好，而不是封送處理較少的資料，每個呼叫的多個呼叫，最多資料封送處理的 PInvoke 呼叫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)

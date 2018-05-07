@@ -1,13 +1,10 @@
 ---
-title: "Automation 伺服程式 |Microsoft 文件"
-ms.custom: 
+title: Automation 伺服程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>Automation 伺服程式
 Automation 可讓您的應用程式操作另一個應用程式中實作的物件，或者公開物件，以便可以操作該物件。 Automation 伺服器是公開可程式化物件 （稱為 Automation 物件） 給其他應用程式的應用程式 (稱為[Automation 用戶端](../mfc/automation-clients.md))。 Automation 伺服器有時稱為 Automation 元件。  
@@ -40,7 +35,7 @@ Automation 可讓您的應用程式操作另一個應用程式中實作的物件
   
  透過共用、明確定義的介面來公開應用程式功能，使得 Automation 可以在如 Microsoft Visual Basic 的單一一般程式語言中建置應用程式，而不是在不同的應用程式專屬巨集語言中進行存取。  
   
-##  <a name="_core_support_for_automation_servers"></a>Automation 伺服程式的支援  
+##  <a name="_core_support_for_automation_servers"></a> Automation 伺服程式的支援  
  Visual C++ 和 MFC 架構為 Automation 伺服器提供廣泛的支援。 其中處理了許多建立 Automation 伺服器的額外工作，因此，您可以專注在應用程式的功能上。  
   
  架構支援 Automation 的主要機制是分派對應，一組展開成宣告及呼叫所需 OLE 公開方法和屬性的巨集。 典型的分派對應如下所示：  
@@ -63,7 +58,7 @@ Automation 可讓您的應用程式操作另一個應用程式中實作的物件
   
 -   [深入了解 COleDispatchDriver 類別](../mfc/reference/coledispatchdriver-class.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自動化](../mfc/automation.md)   
  [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)
 

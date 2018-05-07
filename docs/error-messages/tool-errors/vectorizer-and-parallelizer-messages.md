@@ -1,12 +1,9 @@
 ---
-title: "向量化工具和平行化工具訊息 |Microsoft 文件"
-ms.custom: 
+title: 向量化工具和平行化工具訊息 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C5011
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b5ae296c468ce132b4ddcebe8a8894c1ba53e751
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>向量化工具和平行化工具訊息
 您可以使用 Visual c + + 編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設定[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)輸出原因代碼和參考活動相關的訊息。 本文說明原因代碼和訊息。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [15xx](#BKMK_ReasonCode150x)  
   
-##  <a name="BKMK_InformationalMessages"></a>告知性訊息  
+##  <a name="BKMK_InformationalMessages"></a> 告知性訊息  
  視您指定的報告等級而定，每個迴圈皆會出現下列其中一則告知性訊息。  
   
  如需原因代碼的詳細資訊，請參閱本文的下一單元。  
@@ -64,7 +59,7 @@ ms.lasthandoff: 01/03/2018
 ## <a name="reason-codes"></a>原因代碼  
  以下各節會列出 auto-parallelizer 和 auto-vectorizer 的可能原因代碼。  
   
-###  <a name="BKMK_ReasonCode50x"></a>5xx  
+###  <a name="BKMK_ReasonCode50x"></a> 5xx  
  5*xx*原因代碼適用於 auto-parallelizer 和 auto-vectorizer。  
   
 |原因碼|說明|  
@@ -227,7 +222,7 @@ void code_504(int *A) {
   
 ```  
   
-###  <a name="BKMK_ReasonCode100x"></a>10xx  
+###  <a name="BKMK_ReasonCode100x"></a> 10xx  
  在 10*xx*原因代碼適用於 auto-parallelizer。  
   
 |原因碼|說明|  
@@ -436,7 +431,7 @@ void code_1010()
   
 ```  
   
-###  <a name="BKMK_ReasonCode110x"></a>11xx  
+###  <a name="BKMK_ReasonCode110x"></a> 11xx  
  11*xx*原因代碼適用於 auto-vectorizer。  
   
 |原因碼|說明|  
@@ -584,7 +579,7 @@ void code_1106(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode120x"></a>12xx  
+###  <a name="BKMK_ReasonCode120x"></a> 12xx  
  12*xx*原因代碼適用於 auto-vectorizer。  
   
 |原因碼|說明|  
@@ -659,7 +654,7 @@ void code_1203(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode130x"></a>13xx  
+###  <a name="BKMK_ReasonCode130x"></a> 13xx  
  13*xx*原因代碼適用於 auto-vectorizer。  
   
 |原因碼|說明|  
@@ -791,16 +786,16 @@ void code_1305( S_1305 *s, S_1305 x)
   
 ```  
   
-###  <a name="BKMK_ReasonCode140x"></a>14xx  
+###  <a name="BKMK_ReasonCode140x"></a> 14xx  
  14*xx*原因代碼發生時指定一些選項，與自動向量化不相容。  
   
 |原因碼|說明|  
 |-----------------|-----------------|  
-|1400|**#pragma loop （no_vector)**指定。|  
+|1400|**#pragma loop （no_vector)** 指定。|  
 |1401|**/kernel** x86 或 ARM 為目標時指定參數。|  
 |1402|**/arch:SSE2**或更高的參數未指定當以 x86 為目標。|  
 |1403|**/arch:ATOM**指定參數，而迴圈包含雙份的作業。|  
-|1404|**/O1**或**/Os**指定參數。|  
+|1404|**/O1**或 **/Os**指定參數。|  
 |1405|停用向量化可協助動態初始設定式對靜態初始設定式的最佳化。|  
   
 ```cpp  
@@ -863,7 +858,7 @@ void code_1404(int *A)
   
 ```  
   
-###  <a name="BKMK_ReasonCode150x"></a>15xx  
+###  <a name="BKMK_ReasonCode150x"></a> 15xx  
  15 個區塊*xx*原因代碼適用於別名。 記憶體的位置可以由兩個不同的名稱呼叫時，會發生存取別名的情形。  
   
 |原因碼|說明|  
@@ -991,10 +986,10 @@ void code_1505(int *A, int *B)
   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)   
  [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop （)](../../preprocessor/loop.md)   
  [/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)   
  [/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   
- [/Qvec-report （自動向量化工具報告層級）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+ [/Qvec-report (自動向量化工具報告層級)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

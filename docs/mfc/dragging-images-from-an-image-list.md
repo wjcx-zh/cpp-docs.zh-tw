@@ -1,13 +1,10 @@
 ---
-title: "從影像清單拖曳影像 |Microsoft 文件"
-ms.custom: 
+title: 從影像清單拖曳影像 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792f112952493fe1ee86d52a6a235604ebee9db5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d54984cdc1dc7897fb4f5d1d9680c6a2b95a787d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dragging-images-from-an-image-list"></a>從影像清單拖曳影像
 [CImageList](../mfc/reference/cimagelist-class.md)包含在螢幕上拖曳影像的函式。 拖曳函式平滑且沒有游標閃爍地移動彩色影像。 遮罩影像和未遮罩影像都可以拖曳。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  當應用程式呼叫 `BeginDrag`時，系統會建立暫存、內部影像清單，並將指定的影像拖曳複製到內部清單。 您可以使用，以擷取暫存拖曳影像清單的指標[GetDragImage](../mfc/reference/cimagelist-class.md#getdragimage)成員函式。 函式也會擷取目前拖曳位置以及拖曳影像相對於拖曳位置的位移。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CImageList](../mfc/using-cimagelist.md)   
  [控制項](../mfc/controls-mfc.md)
 

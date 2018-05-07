@@ -1,12 +1,9 @@
 ---
-title: "CMyProviderRowset (MyProviderRS.H) |Microsoft 文件"
-ms.custom: 
+title: CMyProviderRowset (MyProviderRS.H) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderrowset
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderRowset class in MyProviderRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6a4a786a5980763a0588456004efafc02978365e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7bfd7c927342790fee3be2b5a7d48bccba3ea168
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
 精靈會產生資料列集物件的項目。 在此種情況下，稱為 `CMyProviderRowset`。 `CMyProviderRowset`類別繼承自呼叫 OLE DB 提供者類別`CRowsetImpl`，它會實作所有必要的介面，如資料列集物件。 下列程式碼示範的繼承鏈結`CRowsetImpl`:  
@@ -49,5 +44,5 @@ class CMyRowsetImpl:
   
  **RowsetInterface**參數可讓您也使用`IRowsetLocate`或`IRowsetScroll`介面。 `IRowsetLocate`和`IRowsetScroll`兩者均繼承自介面`IRowset`。 因此，OLE DB 提供者範本必須針對這些介面提供特殊處理。 如果您想要使用這些介面，您需要使用這個參數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [提供者精靈產生的檔案](../../data/oledb/provider-wizard-generated-files.md)

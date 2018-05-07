@@ -1,13 +1,10 @@
 ---
-title: "一般類別設計原理 |Microsoft 文件"
-ms.custom: 
+title: 一般類別設計原理 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c174b06b27e78ca61d2608b8e04205068ac436e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b2d0915c4b2940e93b781e7a56e2640c64a7f20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-class-design-philosophy"></a>一般類別設計原理
 Microsoft Windows 的設計是 c + + 語言變得熱門之前。 由於數千個應用程式使用 C 語言的 Windows 應用程式開發介面 (API)，該介面會維護可預見的未來。 因此必須之上程序的 C 語言應用程式開發介面建置任何 c + + Windows 介面。 這可確保 c + + 應用程式能夠與 C 應用程式並存。  
@@ -60,6 +55,6 @@ Microsoft Windows 的設計是 c + + 語言變得熱門之前。 由於數千個
   
 -   [與 C 語言 API 的關聯性](../mfc/relationship-to-the-c-language-api.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

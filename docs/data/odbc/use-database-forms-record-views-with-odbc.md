@@ -1,31 +1,26 @@
 ---
-title: "使用 ODBC 的資料庫表單 （資料錄檢視） |Microsoft 文件"
-ms.custom: 
+title: 使用 ODBC 的資料庫表單 （資料錄檢視） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ODBC, record views
 - record views, ODBC
 ms.assetid: 6a2ce346-8104-4ccd-b06e-ca0859a132fe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 35d9cfeaf970c01f94094d1fb3cbf02703281298
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 024df18137e38f7aecf2420b85f8fc4d8b1c30cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>使用 ODBC 的資料庫表單 (資料錄檢視)
 某些應用程式，例如輸入資料或資料檢視需要表單時，對話方塊樣式控制項的檢視。  
@@ -44,5 +39,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

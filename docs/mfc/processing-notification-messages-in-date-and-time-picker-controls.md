@@ -1,13 +1,10 @@
 ---
-title: "處理控制項通知訊息的日期和時間選擇器 |Microsoft 文件"
-ms.custom: 
+title: 處理控制項通知訊息的日期和時間選擇器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DTN_CLOSEUP
 - DTN_DATETIMECHANGE
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 836714f7a7ca17d759d0d71a7cbb30d63fdfaf95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53c45f664dec2a553210187514b28f1ba3c2ed9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>處理日期時間選擇器控制項中的通知訊息
 當使用者互動有日期和時間選擇器控制項，控制項 (`CDateTimeCtrl`) 會傳送通知訊息至其父視窗，通常是檢視或對話方塊物件。 如果您想要執行動作以作為回應，請處理這些訊息。 例如，當使用者開啟以顯示內嵌的月曆控制項，日期和時間選擇器**DTN_DROPDOWN**會傳送通知。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **DTN_WMKEYDOWN**時使用者會在回呼欄位輸入通知父代。 處理這個通知可模擬支援日期和時間選擇器控制項中的非回呼欄位相同的鍵盤回應。 如需有關這項通知的詳細資訊，請參閱[DTP 控制項中支援回呼欄位](http://msdn.microsoft.com/library/windows/desktop/bb761726)Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

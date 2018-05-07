@@ -1,8 +1,8 @@
 ---
-title: "編譯器警告 C4400 透過 C4599 |Microsoft 文件"
+title: 編譯器警告 C4400 透過 C4599 |Microsoft 文件
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,14 +147,13 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>編譯器警告 C4400 透過 C4599
 
@@ -182,7 +181,7 @@ ms.lasthandoff: 03/16/2018
 |[編譯器警告 (層級 2) C4412](../../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)|'*函式*': 函式簽章含有類型'*類型*';C + + 物件是純程式碼之間傳遞的不安全與混合或原生。|
 |編譯器警告 C4413|'classname::member': 參考成員已初始化成建構函式結束之後，就不存在的暫存|
 |[編譯器警告 (層級 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*函式*': 函式的 short 跳躍指令被轉換為 near|
-|編譯器警告 （層級 1） C4415|duplicate __declspec(code_seg('*name*'))|
+|編譯器警告 （層級 1） C4415|重複的 __declspec (code_seg ('*名稱*'))|
 |編譯器警告 （層級 1） C4416|__declspec(code_seg(...)) 包含空字串： 忽略|
 |編譯器警告 （層級 1） C4417|明確樣板具現化不能有 __declspec(code_seg(...))： 忽略|
 |編譯器警告 （層級 1） C4418|__declspec(code_seg(...)) 忽略列舉|
@@ -227,7 +226,7 @@ ms.lasthandoff: 03/16/2018
 |[編譯器警告 (層級 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': 這個類別具有完成項' ！*完成項*'，但沒有解構函式 ' ~*dtor*'|
 |[編譯器警告 （層級 1，錯誤） C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*類型*': 無法判斷類型的 GUID。 程式可能在執行階段失敗。|
 |[編譯器警告 （層級 4） C4463](compiler-warning-level-4-c4463.md)|溢位。指派 '*值*'給只能保留值的位元欄位'*min_value*'to'*max_value*'|
-|[編譯器警告 （層級 4） C4464](../../error-messages/compiler-warnings/c4464.md)|相對 include 路徑包含 '..'|
+|[編譯器警告 (層級 4) C4464](../../error-messages/compiler-warnings/c4464.md)|相對 include 路徑包含 '..'|
 |[編譯器警告 (層級 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|浮點控制 pragma 在 /clr 下會忽略|
 |[編譯器警告 （層級 4） C4471](compiler-warning-level-4-c4471.md)|'*列舉*': 不限範圍列舉的向前宣告必須含有基礎類型 (假設為 int)|
 |編譯器警告 （層級 1） C4472|'*識別碼*' 是原生列舉： 新增存取規範 (private/public) 以便宣告 ' WinRT&#124;managed' 列舉|

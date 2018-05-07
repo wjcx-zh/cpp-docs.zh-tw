@@ -1,12 +1,9 @@
 ---
-title: "stack:: top (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'stack:: top (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::stack::top
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - top member [STL/CLR]
 ms.assetid: 5d8b7b69-336e-4d01-8b91-413a17aa2533
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4888bc63c40a76578788f3b1f90c897aed179c7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6380734e456db587c06bd273ecec0a5987eaed1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stacktop-stlclr"></a>stack::top (STL/CLR)
 存取最後一個項目。  
@@ -84,6 +79,6 @@ top() = c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)

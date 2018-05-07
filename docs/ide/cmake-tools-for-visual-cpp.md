@@ -1,13 +1,10 @@
 ---
-title: "CMake 專案中 Visual c + + |Microsoft 文件"
-ms.custom: 
+title: CMake 專案中 Visual c + + |Microsoft 文件
+ms.custom: ''
 ms.date: 08/08/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
-ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
+ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake 專案中 Visual c + +
 
@@ -43,7 +39,7 @@ ms.lasthandoff: 02/24/2018
 
 ![CMake c + + 桌面的工作負載中的元件](media/cmake-install.png)
  
-## <a name="ide-integration"></a>IDE Integration
+## <a name="ide-integration"></a>IDE 整合
 
 當您選擇**檔案 |開啟 |資料夾**會開啟包含 CMakeLists.txt 檔案的資料夾，發生下列情況：
 
@@ -194,23 +190,23 @@ JSON IntelliSense 可協助您編輯 CMakeSettings.json 檔案：
 ```
 
 1. **名稱**： 在 c + + 的組態下拉式清單中顯示的名稱。 這個屬性值也可用為巨集， `${name}`，指定其他屬性值。 如需範例，請參閱**buildRoot** CMakeSettings.json 中的定義。
-1. **產生器**： 對應至**-G**切換，並指定要使用產生器。 這個屬性也可用為巨集， `${generator}`，可協助您指定其他屬性值。 Visual Studio 目前支援下列 CMake 產生器：
+1. **產生器**： 對應至 **-G**切換，並指定要使用產生器。 這個屬性也可用為巨集， `${generator}`，可協助您指定其他屬性值。 Visual Studio 目前支援下列 CMake 產生器：
 
 
     - 「 忍者 」
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+    - [Visual Studio 14 2015]
+    - 「 Visual Studio 14 2015 部門 」
+    - 「 Visual Studio 14 2015 Win64"
+    - [Visual Studio 15 2017年]
+    - 「 Visual Studio 15 2017年部門 」
+    - 「 Visual Studio 15 2017 Win64"
 
 因為忍者可供快速建置速度，而不是大的彈性和函式，它會設定為預設值。 不過，有些 CMake 專案可能無法正確建置使用忍者一樣。 如果發生這種情況，您可以指示 CMake 改為產生的 Visual Studio 專案。
 
 若要指定 Visual Studio 產生器中，開啟 CMakeSettings.json 從主要功能表選擇**CMake |變更 CMake 設定**。 刪除"忍者 」，並輸入"V"。 這會啟用 IntelliSense，可讓您選擇您想要的產生器。
 
-1. **buildRoot**： 對應至**-DCMAKE_BINARY_DIR**切換，並指定將會建立 CMake 快取。 如果資料夾不存在，則會建立它。
-1. **變數**： 包含名稱 / 值組 CMake 變數，會取得當做傳遞給**-D**_名稱_**=**_值_至 CMake。 如果您 CMake 專案組建的指示指定加入的任何變數直接 CMake 快取檔案，則建議，您在此處加入改為。
+1. **buildRoot**： 對應至 **-DCMAKE_BINARY_DIR**切換，並指定將會建立 CMake 快取。 如果資料夾不存在，則會建立它。
+1. **變數**： 包含名稱 / 值組 CMake 變數，會取得當做傳遞給 **-D**_名稱_**=**_值_至 CMake。 如果您 CMake 專案組建的指示指定加入的任何變數直接 CMake 快取檔案，則建議，您在此處加入改為。
 1. **cmakeCommandArgs**： 指定您想要傳遞給 CMake.exe 任何其他參數。
 1. **組態類型**： 定義所選的產生器的組建組態類型。 目前支援的值為"Debug"、"MinSizeRel 」、 「 發行 」 和 「 RelWithDebInfo"。
 
@@ -239,7 +235,7 @@ usage: ninja [options] [targets...]
 
 |選項|描述|
 |--------------|------------|
-| --version  | 列印忍者版本 ("1.7.1")|
+| -版本  | 列印忍者版本 ("1.7.1")|
 |   -C DIR   | 將變更為 DIR 再進行其他動作|
 |   -f 檔案  | 指定輸入的組建檔案 (default=build.ninja)|
 |   -j N     | 以平行方式執行 N 作業 (預設 = 14 中，衍生自可用的 Cpu)|
@@ -258,7 +254,7 @@ CMakeSettings.json 現在支援繼承的環境。 這項功能可讓您 （1） 
   "inheritEnvironments": [ "msvc_x64_x64" ]
 ```
 
-上述範例會執行相同**VS 2017 的開發人員命令提示字元**與**-arch = amd64-host_arch = amd64**引數。
+上述範例會執行相同**VS 2017 的開發人員命令提示字元**與 **-arch = amd64-host_arch = amd64**引數。
 
 下表顯示預設值，其命令列的對等項目：
 

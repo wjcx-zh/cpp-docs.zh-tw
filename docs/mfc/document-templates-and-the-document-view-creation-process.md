@@ -1,13 +1,10 @@
 ---
-title: "文件範本和文件檢視建立程序 |Microsoft 文件"
-ms.custom: 
+title: 文件範本和文件檢視建立程序 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd47720009449d51abadd1e5f513149a83702ea3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2d8308e69cf53db4be51f6ce742df41edaa89ea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>文件範本和文件/檢視建立流程
 若要管理複雜的程序建立文件與其相關的檢視和框架視窗，架構會使用兩個文件範本類別： [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI 應用程式和[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) MDI 應用程式。 `CSingleDocTemplate` 一次可以建立和儲存一種類型的文件。 `CMultiDocTemplate` 可保留一種類型的多個開啟文件清單。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  例如，文件範本使用的是應用程式三個圖示中的第三個圖示。 如果應用程式中存在位於索引 3 的「圖示」資源，則文件範本會使用該圖示。 否則，會使用索引 0 的圖示做為預設值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [一般 MFC 主題](../mfc/general-mfc-topics.md)   
  [建立文件範本](../mfc/document-template-creation.md)   
  [文件/檢視建立](../mfc/document-view-creation.md)   

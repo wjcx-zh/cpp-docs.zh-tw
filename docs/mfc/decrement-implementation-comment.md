@@ -1,13 +1,10 @@
 ---
-title: "-實作註解 |Microsoft 文件"
-ms.custom: 
+title: -實作註解 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC source files, Implementation comment
 - comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437b091b2237c7219a0afeee46d78164751e6d3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1556c690478b242d929b8a5558264218ddf0b63e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-implementation-comment"></a>// 實作註解
 `// Implementation` 區段是所有 MFC 類別宣告最重要的部分。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  您可能會在 `// Implementation` 註解的上方或下方找到剩餘類型的註解。 不論在上方或下方，它們會均描述在其下宣告的成員類型。 如果它們發生在 `// Implementation` 註解下，您應該假設成員在 MFC 的未來版本中可能會變更。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 MFC 原始程式檔](../mfc/using-the-mfc-source-files.md)   
  [註解的範例](../mfc/an-example-of-the-comments.md)   
  [建構函式註解](../mfc/decrement-constructors-comment.md)   

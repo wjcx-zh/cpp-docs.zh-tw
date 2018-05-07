@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 提供者樣板 （c + +） |Microsoft 文件"
-ms.custom: 
+title: OLE DB 提供者樣板 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 255a61d7cff661406da327de79c6a726ffb60bab
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a331e72433ca25d280d35edfd33a56402675aea9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供者樣板 (C++)
 OLE DB 是 Microsoft 通用資料存取策略中很重要的一部分。 OLE DB 設計可讓您從任何資料來源的高效能資料存取。 可透過 OLE DB 不論它是否來自資料庫檢視任何表格式資料。 這種彈性提供極大的電源。  
@@ -78,7 +73,7 @@ OLE DB 是 Microsoft 通用資料存取策略中很重要的一部分。 OLE DB 
   
 -   [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料存取](../data-access-in-cpp.md)   
  [OLE DB SDK 文件](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
  [OLE DB 程式設計人員參考](https://msdn.microsoft.com/en-us/library/ms713643.aspx)

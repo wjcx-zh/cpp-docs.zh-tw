@@ -1,12 +1,9 @@
 ---
-title: "依字母順序排列的內建函式清單 |Microsoft 文件"
-ms.custom: 
+title: 依字母順序排列的內建函式清單 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad46e20a0182923593f20bd8a56269af18772876
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e4418835d29fed1f054888f16b188a8775307d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>依字母順序列出內建函式
 下列章節將說明在部分或所有架構上可用的 Microsoft 特定內建函式。 其他支援的內建函式會由處理器製造商記錄在標頭檔或他們的網站中。 請參閱[ARM 內建](../intrinsics/arm-intrinsics.md)， [x86 內建函式](../intrinsics/x86-intrinsics-list.md)，和[x64 內建函式](../intrinsics/x64-amd64-intrinsics-list.md)製造商文件連結的章節。 這裡; 不記錄針對它們實作的內建函式的 C 執行階段程式庫 (CRT) 函式這些函式會記載於[C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)。  
   
- [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)  
+ [__addfsbyte、 \__addfsword， \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)  
   
- [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)  
+ [__addgsbyte、 \__addgsword， \__addgsdword， \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)  
   
  [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)  
   
@@ -74,7 +69,7 @@ ms.lasthandoff: 02/23/2018
   
  [__incfsbyte、 \__incfsword， \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)  
   
- [__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)  
+ [__incgsbyte、 \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)  
   
  [__indword](../intrinsics/indword.md)  
   
@@ -124,7 +119,7 @@ ms.lasthandoff: 02/23/2018
   
  [__ll_rshift](../intrinsics/ll-rshift.md)  
   
- [__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)  
+ [__lzcnt16， \__lzcnt， \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)  
   
  [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)  
   
@@ -170,7 +165,7 @@ ms.lasthandoff: 02/23/2018
   
  [__outwordstring](../intrinsics/outwordstring.md)  
   
- [__popcnt16, \__popcnt, \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)  
+ [__popcnt16、 \__popcnt， \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)  
   
  [__rdtsc](../intrinsics/rdtsc.md)  
   
@@ -192,9 +187,9 @@ ms.lasthandoff: 02/23/2018
   
  [__readeflags](../intrinsics/readeflags.md)  
   
- [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)  
+ [__readfsbyte、 \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)  
   
- [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)  
+ [__readgsbyte、 \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)  
   
  [__readmsr](../intrinsics/readmsr.md)  
   
@@ -282,9 +277,9 @@ ms.lasthandoff: 02/23/2018
   
  [__writefsbyte、 \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)  
   
- [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)  
+ [__writegsbyte、 \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)  
   
  [__writemsr](../intrinsics/writemsr.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

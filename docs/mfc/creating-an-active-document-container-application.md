@@ -1,13 +1,10 @@
 ---
-title: "建立主動式文件容器應用程式 |Microsoft 文件"
-ms.custom: 
+title: 建立主動式文件容器應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 077d15837ed857ac983c3c9f9d4e7853b45aeee5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-active-document-container-application"></a>建立主動式文件容器應用程式
 建立主動式文件容器應用程式的最簡單及最推薦的方式是使用 [MFC 應用程式精靈] 建立 MFC EXE 容器應用程式，然後將應用程式修改為支援主動式文件內含項目。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  從**檔案**功能表上，按一下 **專案**從**新增**子功能表。  
   
-2.  從左窗格中，按一下  **Visual c + +**專案類型。  
+2.  從左窗格中，按一下  **Visual c + +** 專案類型。  
   
 3.  選取**MFC 應用程式**從右窗格。  
   
@@ -74,6 +69,6 @@ ms.lasthandoff: 12/21/2017
   
 11. 加入您自己的所有實作並建置應用程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [主動式文件內含項目](../mfc/active-document-containment.md)
 

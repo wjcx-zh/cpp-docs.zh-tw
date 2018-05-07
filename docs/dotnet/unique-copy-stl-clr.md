@@ -1,12 +1,9 @@
 ---
-title: "unique_copy (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: unique_copy (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::unique_copy
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - unique_copy function [STL/CLR]
 ms.assetid: 37aa5b06-42c5-420d-94c5-00f00ad26471
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ca88897a16a78dcb0f331f2ce56db29ab692a3c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab28fbf26151d1ffc1d1c6524b73f325fce94ff2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
 將來源範圍的項目複製到目的範圍，但是彼此相鄰的重複項目除外。  
@@ -49,5 +44,5 @@ template<class _InIt, class _OutIt, class _Pr> inline
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

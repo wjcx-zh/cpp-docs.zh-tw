@@ -1,12 +1,9 @@
 ---
-title: "vector::front_item (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: vector::front_item (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::front_item
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - front_item member [STL/CLR]
 ms.assetid: 7db87868-3e54-4c67-a06b-01bcfff3128d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fa6931e05c62674f094bb1e3870a0b8b627f6a0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 195d543e5bc4294eec42ed4789ab99f2d4520107
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorfrontitem-stlclr"></a>vector::front_item (STL/CLR)
 存取第一個項目。  
@@ -83,7 +78,7 @@ front_item = a
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector:: back (STL/CLR)](../dotnet/vector-back-stl-clr.md)   
  [vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)   

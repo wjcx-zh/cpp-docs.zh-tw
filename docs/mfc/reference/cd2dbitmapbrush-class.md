@@ -1,12 +1,9 @@
 ---
-title: "CD2DBitmapBrush 類別 |Microsoft 文件"
-ms.custom: 
+title: CD2DBitmapBrush 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DBitmapBrush
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dd588a26b73fb6e5f1b205b20f21aab8272c439
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 類別
 ID2D1BitmapBrush 包裝函式。  
@@ -131,14 +126,14 @@ class CD2DBitmapBrush : public CD2DBrush;
 ## <a name="requirements"></a>需求  
  **標頭：** afxrendertarget.h  
   
-##  <a name="dtor"></a>CD2DBitmapBrush:: ~ CD2DBitmapBrush  
+##  <a name="dtor"></a>  CD2DBitmapBrush:: ~ CD2DBitmapBrush  
  解構函式。 D2D 點陣圖筆刷物件終結時呼叫。  
   
 ```  
 virtual ~CD2DBitmapBrush();
 ```  
   
-##  <a name="attach"></a>CD2DBitmapBrush::Attach  
+##  <a name="attach"></a>  CD2DBitmapBrush::Attach  
  將現有的資源物件的介面  
   
 ```  
@@ -149,7 +144,7 @@ void Attach(ID2D1BitmapBrush* pResource);
  `pResource`  
  現有資源的介面。 不能是 NULL  
   
-##  <a name="cd2dbitmapbrush"></a>CD2DBitmapBrush::CD2DBitmapBrush  
+##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
  建構 CD2DBitmapBrush 物件。  
   
 ```  
@@ -204,7 +199,7 @@ CD2DBitmapBrush(
  `lpszImagePath`  
  以 null 終止的字串，其中包含檔案名稱的指標。  
   
-##  <a name="commoninit"></a>CD2DBitmapBrush::CommonInit  
+##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
  初始化物件  
   
 ```  
@@ -215,7 +210,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
  `pBitmapBrushProperties`  
  指向點陣圖筆刷屬性。  
   
-##  <a name="create"></a>CD2DBitmapBrush::Create  
+##  <a name="create"></a>  CD2DBitmapBrush::Create  
  建立 CD2DBitmapBrush。  
   
 ```  
@@ -229,14 +224,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
   
-##  <a name="destroy"></a>CD2DBitmapBrush::Destroy  
+##  <a name="destroy"></a>  CD2DBitmapBrush::Destroy  
  CD2DBitmapBrush 物件已遭終結。  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DBitmapBrush::Detach  
+##  <a name="detach"></a>  CD2DBitmapBrush::Detach  
  中斷連結物件中的資源介面  
   
 ```  
@@ -246,7 +241,7 @@ ID2D1BitmapBrush* Detach();
 ### <a name="return-value"></a>傳回值  
  中斷連結的資源的介面指標。  
   
-##  <a name="get"></a>CD2DBitmapBrush::Get  
+##  <a name="get"></a>  CD2DBitmapBrush::Get  
  傳回 ID2D1BitmapBrush 介面  
   
 ```  
@@ -256,7 +251,7 @@ ID2D1BitmapBrush* Get();
 ### <a name="return-value"></a>傳回值  
  ID2D1BitmapBrush 介面或如果尚未初始化物件為 NULL 指標。  
   
-##  <a name="getbitmap"></a>CD2DBitmapBrush::GetBitmap  
+##  <a name="getbitmap"></a>  CD2DBitmapBrush::GetBitmap  
  取得這個筆刷用來繪製點陣圖來源  
   
 ```  
@@ -266,7 +261,7 @@ CD2DBitmap* GetBitmap();
 ### <a name="return-value"></a>傳回值  
  CD2DBitmap 物件或如果尚未初始化物件為 NULL 指標。  
   
-##  <a name="getextendmodex"></a>CD2DBitmapBrush::GetExtendModeX  
+##  <a name="getextendmodex"></a>  CD2DBitmapBrush::GetExtendModeX  
  取得這筆刷水平並排延伸超過其點陣圖之區域的方法  
   
 ```  
@@ -276,7 +271,7 @@ D2D1_EXTEND_MODE GetExtendModeX() const;
 ### <a name="return-value"></a>傳回值  
  值，指定如何筆刷水平並排延伸超過其點陣圖的區域  
   
-##  <a name="getextendmodey"></a>CD2DBitmapBrush::GetExtendModeY  
+##  <a name="getextendmodey"></a>  CD2DBitmapBrush::GetExtendModeY  
  取得這筆刷垂直並排延伸超過其點陣圖之區域的方法  
   
 ```  
@@ -286,7 +281,7 @@ D2D1_EXTEND_MODE GetExtendModeY() const;
 ### <a name="return-value"></a>傳回值  
  值，指定如何筆刷垂直並排延伸超過其點陣圖的區域  
   
-##  <a name="getinterpolationmode"></a>CD2DBitmapBrush::GetInterpolationMode  
+##  <a name="getinterpolationmode"></a>  CD2DBitmapBrush::GetInterpolationMode  
  取得筆刷點陣圖是縮放或旋轉時使用的內插補點方法  
   
 ```  
@@ -296,28 +291,28 @@ D2D1_BITMAP_INTERPOLATION_MODE GetInterpolationMode() const;
 ### <a name="return-value"></a>傳回值  
  筆刷點陣圖是縮放或旋轉時使用的內插補點方法  
   
-##  <a name="m_pbitmap"></a>CD2DBitmapBrush::m_pBitmap  
+##  <a name="m_pbitmap"></a>  CD2DBitmapBrush::m_pBitmap  
  儲存 CD2DBitmap 物件的指標。  
   
 ```  
 CD2DBitmap* m_pBitmap;  
 ```  
   
-##  <a name="m_pbitmapbrush"></a>CD2DBitmapBrush::m_pBitmapBrush  
+##  <a name="m_pbitmapbrush"></a>  CD2DBitmapBrush::m_pBitmapBrush  
  儲存 ID2D1BitmapBrush 物件的指標。  
   
 ```  
 ID2D1BitmapBrush* m_pBitmapBrush;  
 ```  
   
-##  <a name="m_pbitmapbrushproperties"></a>CD2DBitmapBrush::m_pBitmapBrushProperties  
+##  <a name="m_pbitmapbrushproperties"></a>  CD2DBitmapBrush::m_pBitmapBrushProperties  
  點陣圖筆刷屬性。  
   
 ```  
 D2D1_BITMAP_BRUSH_PROPERTIES* m_pBitmapBrushProperties;  
 ```  
   
-##  <a name="operator_id2d1bitmapbrush_star"></a>CD2DBitmapBrush::operator ID2D1BitmapBrush *  
+##  <a name="operator_id2d1bitmapbrush_star"></a>  CD2DBitmapBrush::operator ID2D1BitmapBrush *  
  傳回 ID2D1BitmapBrush 介面  
   
 ```  
@@ -327,7 +322,7 @@ operator ID2D1BitmapBrush*();
 ### <a name="return-value"></a>傳回值  
  ID2D1BitmapBrush 介面或如果尚未初始化物件為 NULL 指標。  
   
-##  <a name="setbitmap"></a>CD2DBitmapBrush::SetBitmap  
+##  <a name="setbitmap"></a>  CD2DBitmapBrush::SetBitmap  
  指定這個筆刷用來繪製點陣圖來源  
   
 ```  
@@ -338,7 +333,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
  `pBitmap`  
  使用筆刷的點陣圖來源  
   
-##  <a name="setextendmodex"></a>CD2DBitmapBrush::SetExtendModeX  
+##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
  指定如何筆刷水平並排延伸超過其點陣圖的區域  
   
 ```  
@@ -349,7 +344,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
  `extendModeX`  
  值，指定如何筆刷水平並排延伸超過其點陣圖的區域  
   
-##  <a name="setextendmodey"></a>CD2DBitmapBrush::SetExtendModeY  
+##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
  指定如何筆刷垂直並排延伸超過其點陣圖的區域  
   
 ```  
@@ -360,7 +355,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
  `extendModeY`  
  值，指定如何筆刷垂直並排延伸超過其點陣圖的區域  
   
-##  <a name="setinterpolationmode"></a>CD2DBitmapBrush::SetInterpolationMode  
+##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
  指定使用筆刷點陣圖縮放或旋轉時的插補模式  
   
 ```  
@@ -371,5 +366,5 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
  `interpolationMode`  
  筆刷點陣圖是縮放或旋轉時使用的插補模式  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

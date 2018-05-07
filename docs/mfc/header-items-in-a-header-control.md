@@ -1,13 +1,10 @@
 ---
-title: "標題控制項中的標頭項目 |Microsoft 文件"
-ms.custom: 
+title: 標題控制項中的標頭項目 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], header items in
 - controls [MFC], header
 ms.assetid: ac79ef1f-a671-4ab2-93e9-b1aa016a48bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2143a89d9b91c9c6db53beedce0875ee76f34cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f43440cccda8afc437b213ae3356229c673358f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="header-items-in-a-header-control"></a>標題控制項中的標題項目
 您有相當大的控制權的外觀和行為的標題項目組成標題控制項 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md))。 每個標題項目可以有字串、點陣圖影像、來自相關聯影像清單的影像，或與其關聯之應用程式所定義的 32 位元值。 字串、點陣圖或影像會在標題項目中顯示。  
@@ -43,6 +38,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [使用影像清單與標題控制項](../mfc/using-image-lists-with-header-controls.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

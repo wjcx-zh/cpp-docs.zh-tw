@@ -1,24 +1,19 @@
 ---
-title: "編譯器和連結器選項 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 編譯器和連結器選項 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d8da922fd9f04bf7418094293f43b3fc501aff6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e43418555722090c325c85bd4e77204640791b32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-and-linker-options-ccx"></a>編譯器和連結器選項 (C++/CX)
 環境變數，C + + /CX 編譯器選項和連結器選項均支援的應用程式建置為 Windows 執行階段。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/14/2018
 |選項|描述|  
 |------------|-----------------|  
 |/APPCONTAINER[:NO]|將可執行檔標記為可在 appcontainer 中執行 (僅限)。|  
-|/WINMD[:{NO&#124;ONLY}]|發出 .winmd 檔案和相關聯的二進位檔。 這個選項必須傳遞至連結器，才能發出 .winmd。<br /><br /> **NO**- 不發出 .winmd 檔案，但發出二進位檔案。<br /><br /> **ONLY**- 發出 .winmd 檔案，但不發出二進位檔案。|  
+|/ WINMD [: {否&AMP;#124;只}]|發出 .winmd 檔案和相關聯的二進位檔。 這個選項必須傳遞至連結器，才能發出 .winmd。<br /><br /> **NO**- 不發出 .winmd 檔案，但發出二進位檔案。<br /><br /> **ONLY**- 發出 .winmd 檔案，但不發出二進位檔案。|  
 |/WINMDFILE:*檔案名稱*|要發出的 .winmd 檔案名稱，而不是預設 .winmd 檔案名稱。 如果命令列上指定多個檔案名稱，則會使用最後一個名稱。|  
 |/WINMDDELAYSIGN[:NO]|部分簽署 .winmd 檔案，並將公開金鑰放在二進位檔中。<br /><br /> **NO**- (預設值) 不簽署 .winmd 檔案。<br /><br /> 除非同時指定 /WINMDKEYFILE 或 /WINMDKEYCONTAINER，否則 /WINMDDELAYSIGN 沒有作用。|  
 |/WINMDKEYCONTAINER:*name*|指定用於簽署組件的金鑰容器。 *name* 參數對應至用於簽署中繼資料檔的金鑰容器。|  
@@ -49,5 +44,5 @@ ms.lasthandoff: 02/14/2018
 ### <a name="remarks"></a>備註  
  當您使用 **/ZW**時，編譯器會自動連結至 C 執行階段 (CRT) 的 DLL 版本。 不允許連結至靜態程式庫版本，並使用通用 Windows 平台應用程式中不允許的 CRT 函任何的式會造成編譯時期錯誤。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建置應用程式和程式庫](../cppcx/building-apps-and-libraries-c-cx.md)

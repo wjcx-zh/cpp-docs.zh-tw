@@ -1,28 +1,23 @@
 ---
-title: "Platform:: box 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: box 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 dev_langs:
 - C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c1d3090cd4f3fbe1c2c7a57ba6ebe671055fee
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 59fcdf177f942dd598348654b366e0c0f42e916b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformbox-class"></a>Platform::Box 類別
 允許將實值類型 (例如 `Windows::Foundation::DateTime` ) 或純量類型 (例如 `int` ) 儲存在 `Platform::Object` 類型中。 通常不需要明確使用 `Box` ，因為當您將實值類型轉換成 `Object^`時，將會隱含地進行 Boxing 作業。  
@@ -45,7 +40,7 @@ ref class Box abstract;
 |[運算子方塊&lt;常數 volatile T&gt;^](#box-const-volatile-t)|可以透過 Boxing 處理，從 `const volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。 |
 |[運算子方塊&lt;T&gt;^](#box-t)|可以透過 Boxing 處理，從 `T` 實值類別轉換為 `Box<T>`。|
 |[運算子方塊&lt;volatile T&gt;^](#box-volatile-t)|可以透過 Boxing 處理，從 `volatile` 實值類別 `T` 或 `enum` 類型 `T` 轉換為 `Box<T>`。|
-|[Box::operator T](#t)|可以透過 Boxing 處理，從 `T` 實值類別或 `enum` 類別 `T` 轉換為 `Box<T>`。| 
+|[Box:: operator T](#t)|可以透過 Boxing 處理，從 `T` 實值類別或 `enum` 類別 `T` 轉換為 `Box<T>`。| 
 ## <a name="ctor"></a> Box:: box 建構函式
 建立`Box`其可封裝指定類型的值。 | |[值屬性](#value)|傳回值，會封裝在`Box`物件。 |  
 ### <a name="syntax"></a>語法  
@@ -155,6 +150,6 @@ virtual property T Value{
  傳回 Boxed 值，與該值進行 Boxed 處理之前的原始類型相同。  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)   
  [Boxing](../cppcx/boxing-c-cx.md)

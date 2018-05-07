@@ -1,10 +1,8 @@
 ---
-title: "Platform:: writeonlyarray 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: writeonlyarray 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::begin
@@ -18,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 081dc6489b6cd16ef9065ce8ec332c7593105617
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 8f5c1f1f0260d4f1d1c4a6fb640b7cbf1e9d3f2f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 類別
 表示一維陣列。當呼叫端傳遞陣列讓方法填滿其中元素時，就會將這個陣列當做輸入參數來傳遞。  
@@ -193,6 +189,6 @@ T& set(
  如需如何解譯 HRESULT 值的詳細資訊，請參閱[結構 COM 錯誤碼的](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)   
  [在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

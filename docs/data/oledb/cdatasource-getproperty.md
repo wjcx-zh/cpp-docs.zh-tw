@@ -1,12 +1,9 @@
 ---
-title: "Cdatasource:: Getproperty |Microsoft 文件"
-ms.custom: 
+title: 'Cdatasource:: Getproperty |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDataSource::GetProperty
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - GetProperty method
 ms.assetid: 6531147c-b164-4ab5-a4a7-509634b85b4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d12c6bc45c7caac743d996924070dd0c8e5d350c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afe21f6f41491a4f62eda09e2df43aa470417e20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatasourcegetproperty"></a>CDataSource::GetProperty
 傳回連接的資料來源物件的指定屬性的值。  
@@ -61,5 +56,5 @@ HRESULT GetProperty(const GUID& guid,
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDataSource 類別](../../data/oledb/cdatasource-class.md)

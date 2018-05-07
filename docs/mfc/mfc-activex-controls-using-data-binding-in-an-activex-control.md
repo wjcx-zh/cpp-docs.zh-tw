@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 在 ActiveX 控制項中使用資料繫結 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 在 ActiveX 控制項中使用資料繫結 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結
 ActiveX 控制項的功能更強大的用途是資料繫結，可讓資料庫中的特定欄位繫結控制項的屬性。 當使用者修改此繫結屬性中的資料時，控制項告知的資料庫和要求更新資料錄欄位。 然後資料庫就會通知控制項的成功或失敗的要求。  
   
  本文涵蓋將您的工作的控制項部分。 實作與資料庫的資料繫結互動是控制項容器的責任。 如何在容器中管理的資料庫互動是超出範圍的這份文件。 本文的其餘部分說明如何準備資料繫結的控制項。  
   
- ![資料 &#45;概念圖; 繫結的控制項](../mfc/media/vc374v1.gif "vc374v1")  
+ ![資料的概念圖&#45;繫結控制項](../mfc/media/vc374v1.gif "vc374v1")  
 資料繫結控制項的概念圖  
   
  `COleControl`類別提供兩個成員函式可讓資料繫結簡單的程序來實作。 第一個函式， [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit)，用來要求權限才能變更屬性值。 [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged)，第二個函式，屬性值已成功變更之後呼叫。  
@@ -51,7 +46,7 @@ ActiveX 控制項的功能更強大的用途是資料繫結，可讓資料庫中
   
 -   [建立可繫結的 Get/Set 方法](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>建立可繫結的內建屬性  
+##  <a name="vchowcreatingbindablestockproperty"></a> 建立可繫結的內建屬性  
  它可建立資料繫結的內建屬性，雖然可能會想[可繫結的 get/set 方法](#vchowcreatingbindablegetsetmethod)。  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ ActiveX 控制項的功能更強大的用途是資料繫結，可讓資料庫中
   
  您現在可以建置專案，將會登錄此控制項。 當您在對話方塊中，插入控制項**資料欄位**和**資料來源**屬性將會被加入和您現在可以選取資料來源和控制項中顯示的欄位。  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>建立可繫結的 Get/Set 方法  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> 建立可繫結的 Get/Set 方法  
  除了資料繫結至的 get/set 方法，您也可以建立[可繫結的內建屬性](#vchowcreatingbindablestockproperty)。  
   
 > [!NOTE]
@@ -141,6 +136,6 @@ ActiveX 控制項的功能更強大的用途是資料繫結，可讓資料庫中
   
  您現在可以建置專案，將會登錄此控制項。 當您在對話方塊中，插入控制項**資料欄位**和**資料來源**屬性將會被加入和您現在可以選取資料來源和控制項中顯示的欄位。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
 

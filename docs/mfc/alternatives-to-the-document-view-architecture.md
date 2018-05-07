@@ -1,13 +1,10 @@
 ---
-title: "文件檢視架構的替代方案 |Microsoft 文件"
-ms.custom: 
+title: 文件檢視架構的替代方案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459383474c9ffed9a7ad6cefe01ea21626cb23b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文件/檢視架構的替代方案
 MFC 應用程式通常使用文件/檢視架構管理資訊、檔案格式以及對使用者的資料視覺呈現。 對於大部分的桌面應用程式，文件/檢視架構是適當且有效率的應用程式架構。 這種架構會將資料與檢視分開，而且在大部分情況下，可簡化您的應用程式並減少冗餘碼。  
@@ -77,6 +72,6 @@ MFC 應用程式通常使用文件/檢視架構管理資訊、檔案格式以及
   
  發行項[MFC： 使用資料庫類別不具文件和檢視表](../data/mfc-using-database-classes-without-documents-and-views.md)資料庫應用程式的內容中提供更具體的範例，文件/檢視的替代項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文件/檢視架構](../mfc/document-view-architecture.md)
 

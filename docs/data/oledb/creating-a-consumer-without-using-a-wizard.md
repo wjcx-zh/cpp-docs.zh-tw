@@ -1,30 +1,25 @@
 ---
-title: "不使用精靈建立消費者 |Microsoft 文件"
-ms.custom: 
+title: 不使用精靈建立消費者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ffc6a92f8fc4e4223e83c3270e28ae68ddc1829a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c9f6bbc1ba45ec0b510dac015688fd29801c8449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>未使用精靈建立消費者
 下列範例假設您要加入至現有的 ATL 專案 OLE DB 取用者支援。 如果您想要將 OLE DB 取用者支援加入至 MFC 應用程式，您應該執行 MFC 應用程式精靈，以建立所有支援的必要和 MFC 常式所需執行應用程式會叫用。  
@@ -90,5 +85,5 @@ ms.lasthandoff: 02/23/2018
     CoUninitialize();  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer.md)

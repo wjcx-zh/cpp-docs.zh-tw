@@ -1,29 +1,24 @@
 ---
-title: "已被取代的 ANSI 應用程式開發介面 |Microsoft 文件"
-ms.custom: 
+title: 已被取代的 ANSI 應用程式開發介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ba520f133ff020b6a1a51e8be7ae75b6fcdb969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d612cca5d0c95b411f5278fe92404166d26b53b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deprecated-ansi-apis"></a>已被取代的 ANSI 應用程式開發介面
 Microsoft Foundation Class (MFC) 程式庫移轉朝類別和方法，根據 Unicode 字元集。 因此，ANSI 版本的幾個 MFC 方法已被取代。 在未來的應用程式中使用這些方法的 Unicode 版本。  
@@ -181,6 +176,6 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Vista 通用控制項的組建需求](../mfc/build-requirements-for-windows-vista-common-controls.md)
 

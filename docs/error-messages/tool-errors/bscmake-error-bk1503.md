@@ -1,12 +1,9 @@
 ---
-title: "BSCMAKE 錯誤 BK1503 |Microsoft 文件"
-ms.custom: 
+title: BSCMAKE 錯誤 BK1503 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - BK1503
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - BK1503
 ms.assetid: e6582344-b91e-486f-baf3-4f9028d83c3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86f2b6d282857409cdb1e1d49e04775e9886cde4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06d4a05a8f2d04c3f8a991d4444b35295408a7b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bscmake-error-bk1503"></a>BSCMAKE 錯誤 BK1503
 無法寫入檔案 'filename' [: 原因]  
@@ -36,5 +31,5 @@ ms.lasthandoff: 12/21/2017
   
  如果問題因.bsc 檔案大於 64 MB，減少做為輸入的.sbr 檔案數目會減少產生的.bsc 檔的大小。 此外，瀏覽資訊的數量可能會降低/e m （排除巨集展開符號）、 /El （排除區域變數） 和 /Es （排除系統檔案）。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [BSCMAKE 選項](../../build/reference/bscmake-options.md)

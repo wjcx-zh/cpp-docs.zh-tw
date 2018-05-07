@@ -1,13 +1,10 @@
 ---
-title: "將拖放： 實作置放目標 |Microsoft 文件"
-ms.custom: 
+title: 將拖放： 實作置放目標 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc73eb6627e63b8013180b7608633a9ee424c92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>拖放：實作置放目標
 本文概述如何讓您的應用程式的置放目標。 實作置放目標需要稍微多一些工作會比實作置放來源，但是它仍然相當簡單。 這些技術也適用於非 OLE 應用程式。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  將成員變數加入至您想要的置放目標的應用程式中的每個檢視。 這個成員變數必須屬於型別`COleDropTarget`或從其衍生的類別。  
   
-2.  從您的檢視類別函式會處理`WM_CREATE`訊息 (通常`OnCreate`)，呼叫新的成員變數`Register`成員函式。 `Revoke`將會自動呼叫您在檢視時終結。  
+2.  從您的檢視類別函式會處理`WM_CREATE`訊息 (通常`OnCreate`)，呼叫新的成員變數`Register`成員函式。 `Revoke` 將會自動呼叫您在檢視時終結。  
   
 3.  覆寫下列函式。 如果您想在應用程式的相同的行為，會覆寫檢視類別中的這些函式。 如果您想要修改在隔離狀況中的行為，或想要啟用拖放上非`CView`windows 中，覆寫這些函式，在您`COleDropTarget`-衍生的類別。  
   
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [管理 OLE 資料物件和資料來源](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [拖放 (OLE)](../mfc/drag-and-drop-ole.md)   
  [COleDropTarget 類別](../mfc/reference/coledroptarget-class.md)

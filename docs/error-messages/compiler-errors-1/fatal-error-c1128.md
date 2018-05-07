@@ -1,12 +1,9 @@
 ---
-title: "嚴重錯誤 C1128 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1128 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1128
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1128
 ms.assetid: 6f9580fd-ecef-48be-9780-dcf666704279
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22b53914fba8ab5d5c31d8f7ed0a2e3db52aad5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1d2604b17b656efab3a3575469eff6a02df960c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1128"></a>嚴重錯誤 C1128
 區段數目超過目的檔格式的限制： 請以 /bigobj 編譯  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  有太多的內嵌函式時，也會造成 C1128。  
   
- 若要更正這個錯誤，分成多個原始程式碼檔中的原始程式檔、 編譯而不需要**/Gy**，或使用編譯[/bigobj （增加中的區段數目。Obj 檔）](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)。  如果您不會編譯與**/Gy**，您必須指定個別的最佳化因為**/O2**和**/O1**都隱含**/Gy**。  
+ 若要更正這個錯誤，分成多個原始程式碼檔中的原始程式檔、 編譯而不需要 **/Gy**，或使用編譯[/bigobj （增加中的區段數目。Obj 檔）](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md)。  如果您不會編譯與 **/Gy**，您必須指定個別的最佳化因為 **/O2**和 **/O1**都隱含 **/Gy**。  
   
  可能的話，請編譯但不偵錯資訊。  
   

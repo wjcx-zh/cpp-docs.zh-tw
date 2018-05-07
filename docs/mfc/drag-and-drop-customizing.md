@@ -1,13 +1,10 @@
 ---
-title: "將拖放： 自訂 |Microsoft 文件"
-ms.custom: 
+title: 將拖放： 自訂 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - drag and drop [MFC], calling DoDragDrop
 - OLE drag and drop [MFC], customizing behavior
 ms.assetid: 03369d3e-46bf-4140-b58c-d0c9657cf38a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387344160cf2009b19ad8de820eabc6063ae1f7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59ec5a5a493106750fa7bb8c7ec31b8dbb011070
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-customizing"></a>拖放：自訂
 拖放功能的預設實作對大部分應用程式而言已經足夠。 不過，不過應用程式可能需要變更這個標準行為。 本文說明變更這些預設值的必要步驟。 此外，您可以使用這項技術建立不支援將複合文件作為放置來源的應用程式。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |`GiveFeedback`|不同置放結果的視覺化回饋，例如游標外觀。|  
 |`QueryContinueDrag`|拖放作業的終止。 此函式可讓您在拖曳作業期間檢查輔助按鍵狀態。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [拖放 (OLE)](../mfc/drag-and-drop-ole.md)   
  [COleDropSource 類別](../mfc/reference/coledropsource-class.md)   
  [COleDataSource 類別](../mfc/reference/coledatasource-class.md)

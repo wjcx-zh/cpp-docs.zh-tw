@@ -1,13 +1,10 @@
 ---
-title: "陣列、 清單，並將類別對應 |Microsoft 文件"
-ms.custom: 
+title: 陣列、 清單，並將類別對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - map classes [MFC]
 - collection classes [MFC], lists
 ms.assetid: 81a13a7f-0c2c-4efd-b6bb-b4e624a0743d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7de6f3c72b31ea9094af032bc81e9f2506606cce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41dfe0b36548d87b5e0501c557e70f3cf11eea5d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="array-list-and-map-classes"></a>陣列、清單和對應類別
 對於處理資料彙總，類別庫會提供集合類別群組 (陣列、清單和對應)，其可保留各種物件而預先定義的類型。 集合的大小設定可動態調整。 這些類別可用於任何程式，不論是否是為 Windows 撰寫。 但是，對於實作定義應用程式架構中文件類別的資料結構卻是最有用。 您可以從這些類別快速取得特製化的集合類別，或者可以根據範本類別建立類別。 如需這些方法的詳細資訊，請參閱文章[集合](../mfc/collections.md)。 如需範本集合類別的清單，請參閱文章[陣列、 清單和對應的樣板類別](../mfc/template-classes-for-arrays-lists-and-maps.md)。  
@@ -40,6 +35,6 @@ ms.lasthandoff: 12/21/2017
   
  對應會將索引鍵值關聯到資料值。 例如，對應的索引鍵可以是字串和指入清單的資料。 您會要求對應提供與特定字串相關聯的指標。 因為對應使用索引鍵查閱所需的雜湊資料表，所以對應搜尋時間很快速。 加入和刪除項目也很快速。 對應通常與其他資料結構搭配為輔助索引。 MFC 會使用一種特殊的對應呼叫[訊息對應](../mfc/mapping-messages.md)將 Windows 訊息對應到該訊息的處理常式函式的指標。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

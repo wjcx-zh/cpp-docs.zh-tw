@@ -1,31 +1,26 @@
 ---
-title: "解構函式語意變更 |Microsoft 文件"
-ms.custom: 
+title: 解構函式語意變更 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - finalizers [C++]
 - destructors, C++
 ms.assetid: f1869944-a407-452f-b99a-04d8c209f0dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c85ac0b082e8ea1dfbff007a68061e6a286390cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a3d078300ca0e51ba8eb035d5428d300b0413a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-in-destructor-semantics"></a>解構函式語意的變更
 類別解構函式的語意已大幅變更從 Managed Extensions for c + + Visual c + +。  
@@ -200,6 +195,6 @@ public:
   
  在新語法，從 Managed Extensions 移動您的程式碼，您可能會遺失執行此轉換。 如果應用程式是以某種方式依存於相關聯的最終處理方法的執行，會以無訊息模式與您的預期的不同應用程式的行為。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [解構函式與完成項中如何： 定義和使用類別和結構 (C + + /CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)

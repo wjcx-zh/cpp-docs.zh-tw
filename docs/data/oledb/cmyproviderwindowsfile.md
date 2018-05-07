@@ -1,12 +1,9 @@
 ---
-title: CMyProviderWindowsFile | Microsoft Docs
-ms.custom: 
+title: CMyProviderWindowsFile |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyproviderwindowsfile
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - CMyProviderWindowsFile class
 - OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f9549dc81529f4c045a0f27a169516070a09900
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8f0ba90bdcbaa4255757ee31015d0f6986862916
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 精靈會建立類別可以包含一個資料列的資料;在此情況下，它會呼叫`CMyProviderWindowsFile`。 下列程式碼的`CMyProviderWindowsFile`是產生的精靈，並列出目錄中的所有檔案使用**WIN32_FIND_DATA**結構。 `CMyProviderWindowsFile` 繼承自**WIN32_FIND_DATA**結構：  
@@ -89,5 +84,5 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
   
  方法會建立一個項目 （對應至一個資料列） 的每個檔案，並將它放入**m_rgRowData**資料成員。 `CRowsetImpl`類別會定義**m_rgRowData**資料成員。 此陣列中的資料代表整個資料表，而且是所有範本。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [提供者精靈產生的檔案](../../data/oledb/provider-wizard-generated-files.md)

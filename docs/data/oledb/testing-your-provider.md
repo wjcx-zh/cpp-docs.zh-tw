@@ -1,12 +1,9 @@
 ---
-title: "測試您的提供者 |Microsoft 文件"
-ms.custom: 
+title: 測試您的提供者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d273c746a27c85dbcd58cb5e7fb544a0fc6a0bb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c35b1391e5b8cbfb073255b3680b0376d19ae040
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-your-provider"></a>測試提供者
 發行的提供者之前，您應該執行下列測試，依照所示的順序。 這些測試確認正確大部分潛在的使用者提供者的功能。  
@@ -37,5 +32,5 @@ ms.lasthandoff: 02/23/2018
   
 3.  執行 OLE DB 一致性測試 （包括 ADO 一致性測試），以確保您的提供者符合 OLE DB 提供者層級 0 的標準。 (如需層級 0 的說明，搜尋 「 OLE DB 層級 0 一致性測試 」 在[OLE DB 程式設計人員指南](http://go.microsoft.com/fwlink/p/?linkid=121548)。 這些測試和相關聯的文件隨附於 Visual c + + Data Access SDK 中。 這些測試也有助於確保您的提供者執行其他彙總時正常[服務提供者](../../data/oledb/ole-db-resource-pooling-and-services.md)，如果您修改或加入屬性時特別有用。 如需有關一致性測試的詳細資訊，請參閱 Data Access SDK，其中一個 Visual Studio Cd 上的讀我檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

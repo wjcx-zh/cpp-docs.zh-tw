@@ -1,12 +1,9 @@
 ---
-title: "修改 RMyProviderRowset 的繼承 |Microsoft 文件"
-ms.custom: 
+title: 修改 RMyProviderRowset 的繼承 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - RMyProviderRowset
 - inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f63e13b36f723decab9c5886b0523454d7c26fd7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 75acbc8370c1ea164c72aa6f0c61a95fe287e3d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>修改 RMyProviderRowset 的繼承
 若要加入`IRowsetLocate`介面的簡單唯讀提供者範例，請修改繼承的**RMyProviderRowset**。 一開始， **RMyProviderRowset**繼承自`CRowsetImpl`。 您需要修改它繼承自**CRowsetBaseImpl**。  
@@ -65,5 +60,5 @@ class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCo
   
  完成此動作後，您可以[動態決定傳回給消費者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)

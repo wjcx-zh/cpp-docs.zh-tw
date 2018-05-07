@@ -1,12 +1,9 @@
 ---
-title: "Irowsetcreatorimpl:: Setsite |Microsoft 文件"
-ms.custom: 
+title: 'Irowsetcreatorimpl:: Setsite |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetCreatorImpl.SetSite
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - SetSite method
 ms.assetid: e92e63d5-93e4-4ee0-9ef7-bb6583cc8091
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec7621972020d15068d53ccb3351983bc2b1b825
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: af2883b261b754cee04e2c5090d1ef9b9887c04f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetcreatorimplsetsite"></a>IRowsetCreatorImpl::SetSite
 設定站台，其中包含資料列集物件。 如需詳細資訊，請參閱[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。  
@@ -57,5 +52,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetCreatorImpl 類別](../../data/oledb/irowsetcreatorimpl-class.md)

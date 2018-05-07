@@ -1,13 +1,10 @@
 ---
-title: "建立 COM 介面 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 建立 COM 介面 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.com.creating.interfaces
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - COM interfaces, creating
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b5820686c3e6f01c37cbf527d0e631e5bcc25c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2844e9051c5e6adf14085bcd7bfcd8096c6f8f7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-com-interface-visual-c"></a>建立 COM 介面 (Visual C++)
 Visual c + + 提供精靈與範本建立的定義 COM 介面和分配介面使用 COM 物件與 automation 類別的專案。  
@@ -83,6 +78,6 @@ interface IMyInterface {
   
 -   來直接跳至的項目介面程式碼項目上按兩下。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)

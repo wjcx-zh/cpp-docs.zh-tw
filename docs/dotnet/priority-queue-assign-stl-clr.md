@@ -1,12 +1,9 @@
 ---
-title: "priority_queue::assign (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: priority_queue::assign (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue::assign
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - assign member [STL/CLR]
 ms.assetid: 00cd3623-ecd0-4dde-ba5c-777c1c0bc0b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf9eec9f8e8905cbc22d670d0ca33b1f89eaa4b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35ac71368877fc900ef19d01777652f3b80c9112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueueassign-stlclr"></a>priority_queue::assign (STL/CLR)
 取代所有項目。  
@@ -85,6 +80,6 @@ c a b
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

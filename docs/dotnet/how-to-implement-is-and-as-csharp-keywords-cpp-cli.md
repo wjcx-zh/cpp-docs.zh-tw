@@ -1,31 +1,26 @@
 ---
-title: "如何： 實作 is 和 as C# 關鍵字 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 如何： 實作 is 和 as C# 關鍵字 (C + + /CLI) |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - as C# keyword [C++]
 - is C# keyword [C++]
 ms.assetid: bc66c0d1-696b-480d-977c-5d9d1ad1ece6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d73cc06a79dd20743044803dd9c53b9e67e72995
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30396b803d295c978446707a87cc8bf098d701bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>如何：實作 is 和 as C# 關鍵字 (C++/CLI)
 本主題示範如何實作的功能`is`和`as`Visual c + + 在 C# 關鍵字。  
@@ -67,5 +62,5 @@ int main() {
 o is a string  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [與其他 .NET 語言間的互通性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

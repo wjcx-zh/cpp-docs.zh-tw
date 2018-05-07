@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 s C4200 透過 C4399 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 s C4200 透過 C4399 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>編譯器警告 s C4200 透過 C4399
 
@@ -175,7 +170,7 @@ ms.lasthandoff: 02/14/2018
 |[編譯器警告 (層級 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|匯入交互參考的類型程式庫 '*library1*' 匯入之前'*library2*'|
 |[編譯器警告 (層級 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|交互參考的類型程式庫 '*library1*'in'*library2*' 會自動匯入|
 |編譯器警告 （層級 4） C4338|#pragma*指示詞*： 標準區段 '*區段*' 使用|
-|[編譯器警告 (層級 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*類型*': 未定義的類型中偵測到使用' WinRT &#124;CLR' 中繼資料-使用這個型別可能會造成執行階段例外狀況|
+|[編譯器警告 (層級 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*類型*': 未定義的類型中偵測到使用' WinRT&#124;CLR' 中繼資料-使用這個型別可能會造成執行階段例外狀況|
 |[編譯器警告 (層級 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*值*': 值從正值包裝成負值|
 |[編譯器警告 (層級 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|行為變更: '*函式*' 呼叫，但在舊版中被呼叫的是成員運算子|
 |編譯器警告 （層級 4） C4343|#pragma optimize("g",off) 覆寫了 /Og 選項|
@@ -221,6 +216,6 @@ ms.lasthandoff: 02/14/2018
 |[編譯器警告 C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*函式*': per-appdomain 符號不可使用 __declspec('dllexport') 標示|
 |[編譯器警告 (層級 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'*函式*': initonly 資料成員的複本將會叫用成員函式'*成員*'|
 |編譯器警告 （層級 2） C4396|'*函式*': friend 宣告參考函式樣板的特製化時，不能使用內嵌規範|
-|[編譯器警告 (層級 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute is ignored|
+|[編譯器警告 (層級 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|會忽略 DefaultCharSetAttribute|
 |[編譯器警告 (層級 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*變數*': 處理序專屬全域物件可能無法使用多重 appdomain 正確運作，請考慮使用 __declspec(appdomain)|
 |[編譯器警告 (層級 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*符號*': __declspec('dllimport') 以 /clr 編譯時不會標示每個處理序專屬符號： pure|

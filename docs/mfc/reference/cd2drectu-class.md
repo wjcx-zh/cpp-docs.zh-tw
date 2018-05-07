@@ -1,12 +1,9 @@
 ---
-title: "CD2DRectU 類別 |Microsoft 文件"
-ms.custom: 
+title: CD2DRectU 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DRectU
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bf261f31f470862a506466a8815daef796743f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU 類別
 `D2D1_RECT_U`的包裝函式。  
@@ -68,7 +63,7 @@ class CD2DRectU : public D2D1_RECT_U;
 ## <a name="requirements"></a>需求  
  **標頭：** afxrendertarget.h  
   
-##  <a name="cd2drectu"></a>CD2DRectU::CD2DRectU  
+##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
  建構來自 CRect 物件 CD2DRectU 物件。  
   
 ```  
@@ -100,7 +95,7 @@ CD2DRectU(
  `uBottom`  
  來源下方座標  
   
-##  <a name="isnull"></a>CD2DRectU::IsNull  
+##  <a name="isnull"></a>  CD2DRectU::IsNull  
  傳回布林值，指出運算式是否包含任何有效的資料 (Null)。  
   
 ```  
@@ -110,7 +105,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>傳回值  
  矩形的頂端、 左邊、 下框線和右值所有等於 0; 如果為 TRUE否則為 FALSE。  
   
-##  <a name="operator_crect"></a>CD2DRectU::operator CRect  
+##  <a name="operator_crect"></a>  CD2DRectU::operator CRect  
  將 CD2DRectU 轉換 CRect 物件。  
   
 ```  
@@ -120,5 +115,5 @@ operator CRect();
 ### <a name="return-value"></a>傳回值  
  D2D 矩形的目前值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

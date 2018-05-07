@@ -1,13 +1,10 @@
 ---
-title: "類別庫概觀 |Microsoft 文件"
-ms.custom: 
+title: 類別庫概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5a658c86611c9fdd0663145ae3c09ef6544aa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f144ce4dd6ed9cd29adca27aaff51a79af0abec1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-library-overview"></a>類別庫概觀
 本概觀分類，並說明在 Microsoft Foundation 類別庫 (MFC) 9.0 版的類別。 在 MFC 中，同時採用兩者，類別會構成應用程式架構，適用於 Windows API 撰寫的應用程式的架構。 填入您的應用程式特有的程式碼為您的程式設計工作。  
@@ -130,6 +125,6 @@ ms.lasthandoff: 12/21/2017
   
  除了本概觀中所列出的類別，MFC 程式庫包含許多全域函式、 全域變數和巨集。 沒有概觀，以及詳細的清單，這些主題中的 < [MFC 巨集和全域](../mfc/reference/mfc-macros-and-globals.md)，其中依照依字母順序排列參考的 MFC 類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "SQL |Microsoft 文件"
-ms.custom: 
+title: SQL |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c4283e73b800ac0fd4d448d5137372807f893d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df1563d8bb3d53bb405fbb0d89b2b26cc964bd44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql"></a>SQL
 SQL （結構化查詢語言） 是定義、 查詢、 修改和控制的資料與關聯式資料庫，可讓進行通訊的方式。 您可以使用 SQL 語法，來建構會擷取記錄，根據您指定的準則的陳述式。  
@@ -47,10 +42,10 @@ SQL （結構化查詢語言） 是定義、 查詢、 修改和控制的資料�
   
 -   [資料庫類別如何使用 SQL](#_core_how_the_database_classes_use_sql)。  
   
-##  <a name="_core_open_database_connectivity_.28.odbc.29"></a>開放式資料庫連接 (ODBC)  
+##  <a name="_core_open_database_connectivity_.28.odbc.29"></a> 開放式資料庫連接 (ODBC)  
  資料庫類別會實作使用 ODBC 時，它會使用 SQL 呼叫層級介面，而非程式碼中嵌入 SQL 命令。 ODBC 用來與通訊的 SQL[資料來源](../../data/odbc/data-source-odbc.md)透過 ODBC 驅動程式。 這些驅動程式解譯 SQL，翻譯，如有必要，特定資料庫格式，例如 Microsoft Access 搭配使用。 如需 ODBC SQL 的使用方式的詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)和 ODBC SDK*程式設計人員參考*MSDN Library CD 上。  
   
-##  <a name="_core_the_database_classes"></a>資料庫類別  
+##  <a name="_core_the_database_classes"></a> 資料庫類別  
  資料庫類別的設計是可讓您管理和更新中的現有資料[資料來源](../../data/odbc/data-source-odbc.md)。 [MFC 應用程式精靈](../../mfc/reference/database-support-mfc-application-wizard.md)、 [MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md)(透過存取**加入類別**)，和資料庫類別為您建構大部分的 SQL 陳述式。  
   
  資料庫類別使用 SQL 資料操作語言 (DML) 的已知的一部分。 這些命令可讓您使用的全部或部分資料來源、 新增新的記錄、 編輯記錄，以及刪除記錄。 下表列出最常見的 SQL 關鍵字和資料庫類別使用它們的方法。  
@@ -79,7 +74,7 @@ SQL （結構化查詢語言） 是定義、 查詢、 修改和控制的資料�
   
  您可以找到 SQL，包括支援的 SQL 陳述式、 資料類型、 SQL 核心文法，以及有關 SQL，建議使用發行集的讀取清單的清單中的詳細資訊*ODBC SDK* *程式設計人員參考* MSDN Library CD 上。  
   
-##  <a name="_core_how_the_database_classes_use_sql"></a>資料庫類別如何使用 SQL  
+##  <a name="_core_how_the_database_classes_use_sql"></a> 資料庫類別如何使用 SQL  
  您從資料庫類別衍生的資料錄集來進行通訊與資料來源，使用 ODBC 和 ODBC 資料來源擷取記錄傳送 SQL 陳述式。 本主題說明資料庫類別與 SQL 之間的關聯性。  
   
  資料錄集來建置的 SQL 陳述式片段建構 SQL 陳述式`CString`。 字串建構為**選取**陳述式會傳回一組記錄。  
@@ -94,6 +89,6 @@ SQL （結構化查詢語言） 是定義、 查詢、 修改和控制的資料�
   
 -   [SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [ODBC 基本概念](../../data/odbc/odbc-basics.md)

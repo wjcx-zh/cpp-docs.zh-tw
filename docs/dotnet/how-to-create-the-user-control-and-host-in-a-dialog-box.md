@@ -1,31 +1,26 @@
 ---
-title: "如何： 在對話方塊中建立使用者控制項並裝載 |Microsoft 文件"
-ms.custom: 
+title: 如何： 在對話方塊中建立使用者控制項並裝載 |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 81a618c46f08366b9de2a02cbf84f73d42e7b108
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20472a80b35318fa4c6d34221a61345de9e40f9e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>如何：建立使用者控制項並裝載至對話方塊中
 這篇文章中的步驟假設您正在建立對話方塊架構 ([CDialog 類別](../mfc/reference/cdialog-class.md)) Microsoft Foundation Classes (MFC) 專案，但是您也可以將 Windows Form 控制項的支援加入現有的 MFC 對話方塊。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  建立名為 Visual C# Windows Form 控制項程式庫專案`WindowsFormsControlLibrary1`。  
   
-     在 [檔案]  功能表上，按一下 [新增]  及 [專案] 。 在**Visual C#**資料夾中，選取**Windows Form 控制項程式庫**。  
+     在 [檔案]  功能表上，按一下 [新增]  及 [專案] 。 在**Visual C#** 資料夾中，選取**Windows Form 控制項程式庫**。  
   
      接受`WindowsFormsControlLibrary1`專案名稱，請按一下**確定**。  
   
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  建立 MFC 應用程式專案。  
   
-     在 [檔案]  功能表上，按一下 [新增]  及 [專案] 。 在**Visual c + +**資料夾中，選取**MFC 應用程式**。  
+     在 [檔案]  功能表上，按一下 [新增]  及 [專案] 。 在**Visual c + +** 資料夾中，選取**MFC 應用程式**。  
   
      在 [名稱] 方塊中，輸入 `MFC01`。 將方案設定變更為**將加入至方案**。 按一下 [確定 **Deploying Office Solutions**]。  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
      在**屬性頁**對話方塊的 **組態屬性**，選取**一般**。 在**專案預設值**區段中，將**Common Language Runtime 支援**至**Common Language Runtime 支援 (/ clr)**。  
   
-     在下**組態屬性**，依序展開**C/c + +**選取**一般**節點。 設定**偵錯資訊格式**至**程式資料庫 (/Zi)**。  
+     在下**組態屬性**，依序展開**C/c + +** 選取**一般**節點。 設定**偵錯資訊格式**至**程式資料庫 (/Zi)**。  
   
      選取**程式碼產生**節點。 設定**啟用最少重建**至**否 (/ Gm-)**。 也設定**基本執行階段會檢查**至**預設**。  
   
@@ -128,5 +123,5 @@ ms.lasthandoff: 12/21/2017
   
      在**偵錯**功能表上，按一下 **啟動但不偵錯**。 MFC 對話方塊應該會顯示在 Windows Form 控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 Windows Forms 使用者控制項裝載至 MFC 對話方塊中](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)

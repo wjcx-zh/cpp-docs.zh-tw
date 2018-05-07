@@ -1,13 +1,10 @@
 ---
-title: "屬性索引宣告 |Microsoft 文件"
-ms.custom: 
+title: 屬性索引宣告 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - defaults, indexers
 - indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76473ce04cdf5860476b7612ddcbf00b40a0fae1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-index-declaration"></a>屬性索引宣告
 宣告的索引的屬性的語法已從 Managed Extensions for c + + Visual c + +。  
@@ -100,6 +95,6 @@ public:
   
  請注意，沒有簡單的索引語法類似於簡單的屬性語法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在類別或介面中的成員宣告 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  

@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2334 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2334 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2334
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2334
 ms.assetid: 36142855-e00b-4bbf-80f5-a301edeff46e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e19242dce79f89dc745627cb1ebe0e28fb87b7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff086a9074db3fca2c85427365b4b90d99b17d24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2334"></a>編譯器錯誤 C2334
 未預期的語彙基元，上述 ': 或 {'; 略過函式主體  

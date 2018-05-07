@@ -1,12 +1,9 @@
 ---
-title: "CProviderTypes、 CProviderInfo |Microsoft 文件"
-ms.custom: 
+title: CProviderTypes、 CProviderInfo |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - m_bIsLong
@@ -75,18 +72,16 @@ helpviewer_keywords:
 - COLUMN_SIZE
 - m_szLiteralSuffix
 ms.assetid: 6f1620ff-c2f0-4f5b-931c-27b0cd2a580d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a0218aa7774b08db2e8ee727fd1aa8343286d352
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5937d45a49cce84f8c9db55bd6a1b18a51b60ee6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprovidertypes-cproviderinfo"></a>CProviderTypes、CProviderInfo
 呼叫 typedef 類別**CProviderTypes**來實作其參數類別**CProviderInfo**。  
@@ -124,5 +119,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

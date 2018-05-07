@@ -1,31 +1,26 @@
 ---
-title: "您在使用資料錄檢視 （MFC 資料存取） 角色 |Microsoft 文件"
-ms.custom: 
+title: 您在使用資料錄檢視 （MFC 資料存取） 角色 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 03d64715f3bdfb6028fdb039451d4b4b004a059e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7a9d3fa7e828467e73c77736fb5643baf19660f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>您在使用記錄檢視上的角色 (MFC 資料存取)
 下表顯示您通常必須執行什麼操作才能使用資料錄檢視以及該架構為您執行什麼操作。  
@@ -45,6 +40,6 @@ ms.lasthandoff: 12/21/2017
   
  表單架構程式設計是唯一一個使用資料庫的方法。 使用一些其他使用者介面或沒有使用者介面的應用程式的相關資訊，請參閱[MFC： 使用具有文件和檢視的資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)和[MFC： 使用資料庫類別不具文件和檢視表](../data/mfc-using-database-classes-without-documents-and-views.md). 顯示資料庫記錄的替代方法，請參閱類別[CListView](../mfc/reference/clistview-class.md)和[CTreeView](../mfc/reference/ctreeview-class.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄檢視 （MFC 資料存取）](../data/record-views-mfc-data-access.md)   
  [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

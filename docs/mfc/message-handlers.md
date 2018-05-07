@@ -1,13 +1,10 @@
 ---
-title: "訊息處理常式 |Microsoft 文件"
-ms.custom: 
+title: 訊息處理常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b906a49d7da7ed8505252a1759d7ea00fcda1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be4ccf9ec33e5ddf497193c1942e9f300f8cae57
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handlers"></a>訊息處理常式
 在 MFC 中，專用*處理常式*函式會處理每個個別的訊息。 訊息處理函式是類別的成員函式。 本文件使用條款*訊息處理常式成員函式*，*訊息處理常式函式*，*訊息處理常式*，和*處理常式*交換使用。 有些類型的訊息處理常式也稱為「命令處理常式」。  
@@ -39,6 +34,6 @@ ms.lasthandoff: 12/21/2017
   
  您可以使用任何 Microsoft Visual C++ 和 MFC 的功能撰寫處理常式。 如需所有類別的清單，請參閱[類別庫概觀](../mfc/class-library-overview.md)中*MFC 參考*。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [架構中的訊息和命令](../mfc/messages-and-commands-in-the-framework.md)
 

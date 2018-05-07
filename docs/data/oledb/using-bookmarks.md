@@ -1,12 +1,9 @@
 ---
-title: "使用書籤 |Microsoft 文件"
-ms.custom: 
+title: 使用書籤 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - bookmarks, OLE DB
 - OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18c3f8cfb77e9bcd0719fd7130441f628df6eb58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5aa16d5f2a3a02d0e9fd6bb3dd5de71494e81d4a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-bookmarks"></a>使用書籤
 開啟資料列集之前，您必須告訴提供者想要使用書籤。 若要這樣做，請設定**DBPROP_BOOKMARKS**屬性**true**在您的屬性集。 提供者會擷取書籤做為資料行是零，因此您必須使用特殊的巨集`BOOKMARK_ENTRY`和`CBookmark`類別，如果您使用靜態存取子。 `CBookmark` 位置引數是以位元組為單位的書籤緩衝區的長度是範本類別。 所需的書籤緩衝區的長度，取決於提供者。 如果您使用的 ODBC OLE DB 提供者，如下列範例所示，緩衝區必須是 4 個位元組。  
@@ -71,5 +66,5 @@ product.GetBookmark(&bookmark);
   
  如需支援書籤的提供者資訊，請參閱[書籤的提供者支援](../../data/oledb/provider-support-for-bookmarks.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

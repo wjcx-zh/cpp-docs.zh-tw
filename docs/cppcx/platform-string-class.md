@@ -1,11 +1,8 @@
 ---
-title: "Platform:: string 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: string 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Platform::String 類別
 用來代表文字之 Unicode 字元的循序集合。 如需詳細資訊和範例，請參閱[字串](../cppcx/strings-c-cx.md)。  
@@ -82,7 +77,7 @@ public ref class String sealed : Object,
 |[String::Data](#data)|讓指標回到目前字串的開頭。|  
 |[String::Dispose](#dispose)|釋放或釋出資源。|  
 |[String::End](#end)|讓指標回到目前字串的結尾之後。|  
-|[String::Equals](#equals)|指出指定的物件是否等同於目前的物件。|  
+|[String:: equals](#equals)|指出指定的物件是否等同於目前的物件。|  
 |[String::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|  
 |[String::IsEmpty](#isempty)|指出目前 String 物件是否為空。|  
 |[String::IsFastPass](#isfastpass)|指出目前 String 物件是否參與「 *快速傳遞* 」(Fast Pass) 作業。 在快速傳遞作業時，參考計數會暫停。|  
@@ -249,7 +244,7 @@ bool String::Equals(String^ str);
   
 
 
-## <a name="gethashcode"></a>  String::GetHashCode Method
+## <a name="gethashcode"></a>  String:: gethashcode 方法
 傳回這個執行個體的雜湊碼。  
   
 ### <a name="syntax"></a>語法  
@@ -319,7 +314,7 @@ int len = str->Length(); //len = 5
   
 
 
-## <a name="operator-plus"></a>  String::operator+ Operator
+## <a name="operator-plus"></a>  String:: operator + 運算子
 串連兩個[字串](../cppcx/platform-string-class.md)物件至新[字串](../cppcx/platform-string-class.md)物件。
   
 ### <a name="syntax"></a>語法  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>備註  
  這個運算子會建立 `String^` 物件，其中包含這兩個運算元的資料。 當極端的效能不重要時，可基於方便的理由使用它。 在函式中呼叫 "`+`" 幾次可能不會被注意到，但是，如果您在緊密迴圈中操作大型物件或文字資料，請使用標準 C++ 機制和類型。  
   
-##  <a name="operator-equality"></a> String::operator== Operator
+##  <a name="operator-equality"></a> String:: operator = = 運算子
 指出兩個指定的 String 物件是否具有相同的文字值。  
   
 ### <a name="syntax"></a>語法  
@@ -411,7 +406,7 @@ bool String::operator>=( String^ str1, String^ str2)
   
 
 
-## <a name="operator-inequality"></a> String::operator!= 
+## <a name="operator-inequality"></a> String:: operator ！ = 
 指出兩個指定的 String 物件是否具有不同的值。  
   
 ### <a name="syntax"></a>語法  
@@ -431,7 +426,7 @@ bool String::operator!=( String^ str1, String^ str2)
  如果 `true` 不等於 `str1`，則為 `str2`，否則為 `false`。   
 
 
-## <a name="operator-less-than"></a> String::operator&lt; 
+## <a name="operator-less-than"></a> String::&lt; 
 指出其中一個 String 物件的值是否小於另一個 String 物件的值。  
   
 ### <a name="syntax"></a>語法  
@@ -488,5 +483,5 @@ String^ String::ToString()
 ### <a name="return-value"></a>傳回值  
  值與目前字串相同的 String 物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

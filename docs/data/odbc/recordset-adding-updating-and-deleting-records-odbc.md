@@ -1,13 +1,10 @@
 ---
-title: "資料錄集： 加入、 更新和刪除資料錄 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 資料錄集： 加入、 更新和刪除資料錄 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,18 +24,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cad50d25f6b9e2cc619fb19e21c2b6575ababa47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af3a3eb08ce5749c0cfe5ca2d1f59213826ff7ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>資料錄集：加入、更新和刪除資料錄 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -71,16 +66,16 @@ ms.lasthandoff: 12/21/2017
 |附加專用|Y|N|N|Y|  
 |可完全更新|Y|Y|Y|Y|  
   
-##  <a name="_core_determining_whether_your_recordset_is_updatable"></a>決定是否資料錄集是可更新  
+##  <a name="_core_determining_whether_your_recordset_is_updatable"></a> 決定是否資料錄集是可更新  
  如果資料來源是可更新，並開啟為可更新資料錄集，可更新資料錄集物件。 其可更新性也取決於 SQL 陳述式使用時，ODBC 驅動程式的功能，以及 ODBC 資料指標程式庫是否在記憶體中。 您無法更新唯讀資料錄集或資料來源。  
   
 #### <a name="to-determine-whether-your-recordset-is-updatable"></a>若要判斷是否可更新資料錄集  
   
 1.  呼叫資料錄集物件的[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)成員函式。  
   
-     `CanUpdate`可更新資料錄集時，傳回非零值。  
+     `CanUpdate` 可更新資料錄集時，傳回非零值。  
   
- 根據預設，會完全更新資料錄集 (您可以執行`AddNew`，**編輯**，和**刪除**作業)。 但您也可以使用[appendOnly](../../mfc/reference/crecordset-class.md#open)選項來開啟可更新資料錄集。 此方法來開啟資料錄集只允許使用新資料錄`AddNew`。 您無法編輯或刪除現有的記錄。 您可以測試是否開啟只能藉由呼叫附加資料錄集[CanAppend](../../mfc/reference/crecordset-class.md#canappend)成員函式。 `CanAppend`如果資料錄集是完全可更新或開啟附加的則傳回非零值。  
+ 根據預設，會完全更新資料錄集 (您可以執行`AddNew`，**編輯**，和**刪除**作業)。 但您也可以使用[appendOnly](../../mfc/reference/crecordset-class.md#open)選項來開啟可更新資料錄集。 此方法來開啟資料錄集只允許使用新資料錄`AddNew`。 您無法編輯或刪除現有的記錄。 您可以測試是否開啟只能藉由呼叫附加資料錄集[CanAppend](../../mfc/reference/crecordset-class.md#canappend)成員函式。 `CanAppend` 如果資料錄集是完全可更新或開啟附加的則傳回非零值。  
   
  下列程式碼將示範如何使用`CanUpdate`資料錄集物件呼叫`rsStudentSet`:  
   
@@ -97,7 +92,7 @@ if( !rsStudentSet.CanUpdate( ) )
 > [!CAUTION]
 >  當您準備好要呼叫來更新資料錄集**更新**，小心資料錄集包括所有資料行的主索引鍵的資料表 （或所有資料表上任何唯一索引的資料行） 所組成。 在某些情況下，此架構可以使用選取資料錄集中的資料行來識別您要更新的資料表中的記錄。 沒有所有必要的資料行，可能會在資料表中，可能損壞的參考完整性的資料表更新多筆記錄。 在此情況下，架構就會擲回例外狀況呼叫時**更新**。  
   
-##  <a name="_core_adding_a_record_to_a_recordset"></a>將記錄新增到資料錄集  
+##  <a name="_core_adding_a_record_to_a_recordset"></a> 將記錄新增到資料錄集  
  您可以新增記錄至資料錄集，如果其[CanAppend](../../mfc/reference/crecordset-class.md#canappend)成員函式會傳回非零值。  
   
 #### <a name="to-add-a-new-record-to-a-recordset"></a>將新記錄新增至資料錄集  
@@ -106,7 +101,7 @@ if( !rsStudentSet.CanUpdate( ) )
   
 2.  呼叫資料錄集物件的[AddNew](../../mfc/reference/crecordset-class.md#addnew)成員函式。  
   
-     `AddNew`準備做為編輯緩衝區的資料錄集。 所有的欄位資料成員會設定為特殊值 Null，並標示為不變，因此當您呼叫只變更 (dirty) 值會寫入至資料來源[更新](../../mfc/reference/crecordset-class.md#update)。  
+     `AddNew` 準備做為編輯緩衝區的資料錄集。 所有的欄位資料成員會設定為特殊值 Null，並標示為不變，因此當您呼叫只變更 (dirty) 值會寫入至資料來源[更新](../../mfc/reference/crecordset-class.md#update)。  
   
 3.  設定新的記錄欄位資料成員的值。  
   
@@ -139,7 +134,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  若要取消`AddNew`或**編輯**呼叫時，只要進行另一個呼叫`AddNew`或**編輯**或呼叫**移動**與**AFX_MOVE_REFRESH**參數。 資料成員會重設為其先前的值，而且仍在**編輯**或**新增**模式。  
   
-##  <a name="_core_editing_a_record_in_a_recordset"></a>編輯資料錄集中的資料錄集  
+##  <a name="_core_editing_a_record_in_a_recordset"></a> 編輯資料錄集中的資料錄集  
  您可以編輯現有的記錄，如果資料錄集的[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)成員函式會傳回非零值。  
   
 #### <a name="to-edit-an-existing-record-in-a-recordset"></a>若要編輯現有資料錄集中的資料錄  
@@ -180,7 +175,7 @@ if( !rsStudent.Update( ) )
 > [!TIP]
 >  若要取消`AddNew`或**編輯**呼叫時，只要進行另一個呼叫`AddNew`或**編輯**或呼叫**移動**與**AFX_MOVE_REFRESH**參數。 資料成員會重設為其先前的值，而且仍在**編輯**或**新增**模式。  
   
-##  <a name="_core_deleting_a_record_from_a_recordset"></a>刪除記錄，從資料錄集  
+##  <a name="_core_deleting_a_record_from_a_recordset"></a> 刪除記錄，從資料錄集  
  您可以刪除記錄，如果資料錄集的[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)成員函式會傳回非零值。  
   
 #### <a name="to-delete-a-record"></a>若要刪除記錄  
@@ -209,6 +204,6 @@ rsStudent.MoveNext( );
   
  如需有關的效果`AddNew`，**編輯**，和**刪除**成員函式，請參閱[資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

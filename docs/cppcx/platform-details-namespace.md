@@ -1,11 +1,8 @@
 ---
-title: "Platform:: details 命名空間 |Microsoft 文件"
-ms.custom: 
+title: 'Platform:: details 命名空間 |Microsoft 文件'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Details
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Details Namespace
 ms.assetid: e13c1f93-c823-4f0f-a3ee-2429bfd184db
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dd178e539da57d0df05440eeb896112d2ce3aa
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: aa3de0d0f21c1155e550528287c03ae707f44ea2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformdetails-namespace"></a>Platform::Details 命名空間
 這個命名空間僅供內部使用，不適用於開發用途。  
@@ -64,5 +59,5 @@ namespace Platform {
   
  **命名空間：** Platform::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

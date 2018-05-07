@@ -1,12 +1,9 @@
 ---
-title: "ARM 內建 |Microsoft 文件"
-ms.custom: 
+title: ARM 內建 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - arm_neon/vsetq_lane_p8
@@ -1940,17 +1937,15 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c34855fa3099fa9c91badba96d39b90f4c25792b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 305c4251808e7a9cbe152f3bbae043080dcb7d1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arm-intrinsics"></a>ARM 內建
 Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關 ARM 的詳細資訊，請參閱[ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?LinkId=522049)和[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 資訊中心網站上。  
@@ -1966,7 +1961,7 @@ Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關
   
 |函式名稱|指令|函式原型|  
 |-------------------|-----------------|------------------------|  
-|_arm_smlal|SMLAL|__int64 _arm_smlal(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlal|SMLAL|__int64 _arm_smlal (\__int64 _RdHiLo，int _Rn int _Rm)|  
 |_arm_umlal|UMLAL|unsigned __int64 _arm_umlal (不帶正負號\__int64 _RdHiLo、 不帶正負號的 int _Rn 不帶正負號 int _Rm)|  
 |_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|  
 |_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|  
@@ -1977,10 +1972,10 @@ Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|  
-|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb(\__int64 _RdHiLo, int _Rn, int _Rm)|  
-|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt(\__int64 _RdHiLo, int _Rn, int _Rm)|  
-|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb(\__int64 _RdHiLo, int _Rn, int _Rm)|  
-|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb (\__int64 _RdHiLo，int _Rn int _Rm)|  
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt (\__int64 _RdHiLo，int _Rn int _Rm)|  
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb (\__int64 _RdHiLo，int _Rn int _Rm)|  
+|_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt (\__int64 _RdHiLo，int _Rn int _Rm)|  
 |_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|  
 |_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|  
 |_arm_smulbb|SMULBB|int _arm_smulbb(int _Rn, int _Rm)|  
@@ -2058,10 +2053,10 @@ Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|  
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|  
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|  
-|_arm_smlald|SMLALD|__int64 _arm_smlald(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlald|SMLALD|__int64 _arm_smlald (\__int64 _RdHiLo，int _Rn int _Rm)|  
 |_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx (\__int64 _RdHiLo，int _Rn int _Rm)|  
-|_arm_smlsld|SMLSLD|__int64 _arm_smlsld(\__int64 _RdHiLo, int _Rn, int _Rm)|  
-|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx(\__int64 _RdHiLo, int _Rn, int _Rm)|  
+|_arm_smlsld|SMLSLD|__int64 _arm_smlsld (\__int64 _RdHiLo，int _Rn int _Rm)|  
+|_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx (\__int64 _RdHiLo，int _Rn int _Rm)|  
 |_arm_smuad|SMUAD|int _arm_smuad(int _Rn, int _Rm)|  
 |_arm_smuadx|SMUADX|int _arm_muadxs(int _Rn, int _Rm)|  
 |_arm_smusd|SMUSD|int _arm_smusd(int _Rn, int _Rm)|  
@@ -2086,10 +2081,10 @@ Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關
 |__iso_volatile_load32||__int32 \__iso_volatile_load32 (常數 volatile \__int32 *)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
 |__iso_volatile_load64||__int64 \__iso_volatile_load64 (常數 volatile \__int64 *)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
 |__iso_volatile_load8||__int8 \__iso_volatile_load8 (常數 volatile \__int8 *)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
-|__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 *, \__int16)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
-|__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 *, \__int32)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
-|__iso_volatile_store64||void __iso_volatile_store64(volatile \__int64 *, \__int64)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
-|__iso_volatile_store8||void __iso_volatile_store8(volatile \__int8 *, \__int8)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
+|__iso_volatile_store16||void __iso_volatile_store16 (volatile \__int16 *， \__int16)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
+|__iso_volatile_store32||void __iso_volatile_store32 (volatile \__int32 *， \__int32)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
+|__iso_volatile_store64||void __iso_volatile_store64 (volatile \__int64 *， \__int64)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
+|__iso_volatile_store8||void __iso_volatile_store8 (volatile \__int8 *， \__int8)<br /><br /> 如需詳細資訊，請參閱[__iso_volatile_load/store 內建函式](#IsoVolatileLoadStore)。|  
 |__ldrexd|LDREXD|__int64 \__ldrexd (常數 volatile \__int64 *)|  
 |__prefetch|PLD|void __cdecl \__prefetch(const void *)<br /><br /> 提供 `PLD` 記憶體提示給系統，通知可能很快就存取位於或接近指定位址的記憶體。 有些系統可能會選擇最佳化此記憶體存取模式，來增加執行階段效能。 不過，從 C++ 語言的觀點來看，函式沒有顯著的影響，而且可能根本不執行任何動作。|  
 |__rdpmccntr64||不帶正負號的 __int64 \__rdpmccntr64(void)|  
@@ -2100,8 +2095,8 @@ Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關
 |__wfe|WFE|void __wfe(void)|  
 |__wfi|WFI|void __wfi(void)|  
 |_AddSatInt|QADD|int _AddSatInt(int, int)|  
-|_CopyDoubleFromInt64||double _CopyDoubleFromInt64(\__int64)|  
-|_CopyFloatFromInt32||float _CopyFloatFromInt32(\__int32)|  
+|_CopyDoubleFromInt64||double _CopyDoubleFromInt64 (\__int64)|  
+|_CopyFloatFromInt32||float _CopyFloatFromInt32 (\__int32)|  
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|  
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|  
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|  
@@ -2178,7 +2173,7 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
   
  **備註**  
   
- 您可以使用 `__iso_volatile_load8/16/32/64` 和 `__iso_volatile_store8/16/32/64` 內建函式，明確地執行不受編譯器最佳化約束的記憶體存取。 編譯器無法移除、合成 (synthetize)，或變更這些作業的相對順序，但不會產生隱含硬體記憶體屏障。 因此，硬體可能仍然重新排列跨多個執行緒中可觀察到的記憶體存取。 更明確地說，這些內建函式相當於下列運算式下編譯時**/volatile:iso**。  
+ 您可以使用 `__iso_volatile_load8/16/32/64` 和 `__iso_volatile_store8/16/32/64` 內建函式，明確地執行不受編譯器最佳化約束的記憶體存取。 編譯器無法移除、合成 (synthetize)，或變更這些作業的相對順序，但不會產生隱含硬體記憶體屏障。 因此，硬體可能仍然重新排列跨多個執行緒中可觀察到的記憶體存取。 更明確地說，這些內建函式相當於下列運算式下編譯時 **/volatile:iso**。  
   
 ```  
   
@@ -2188,7 +2183,7 @@ __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a
   
  請注意，內建函式採取暫時性 (volatile) 指標以容納暫時性變數。 不過，沒有使用暫時性指標做為引數的需求或建議；如果使用一般的非暫時性類型，則這些作業的語意都完全相同。  
   
- 如需有關**/volatile:iso**命令列引數，請參閱[/volatile （volatile 關鍵字轉譯）](../build/reference/volatile-volatile-keyword-interpretation.md)。  
+ 如需有關 **/volatile:iso**命令列引數，請參閱[/volatile （volatile 關鍵字轉譯）](../build/reference/volatile-volatile-keyword-interpretation.md)。  
   
 ###  <a name="MoveFromCo"></a> _MoveFromCoprocessor _MoveFromCoprocessor2  
  這些內建函式會使用副處理器資料傳輸指令，從 ARM 副處理器讀取資料。  
@@ -2435,7 +2430,7 @@ void _MoveFromCoprocessor64(
 |-------------------|------------------------|  
 |_InterlockedAdd|long _InterlockedAdd(long _volatile *, long)|  
 |_InterlockedAdd64|__int64 _InterlockedAdd64 (\__int64 volatile *， \__int64)|  
-|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq(\__int64 volatile *, \__int64)|  
+|_InterlockedAdd64_acq|__int64 _InterlockedAdd64_acq (\__int64 volatile *， \__int64)|  
 |_InterlockedAdd64_nf|__int64 _InterlockedAdd64_nf (\__int64 volatile *， \__int64)|  
 |_InterlockedAdd64_rel|__int64 _InterlockedAdd64_rel (\__int64 volatile *， \__int64)|  
 |_InterlockedAdd_acq|long _InterlockedAdd_acq(long volatile *, long)|  
@@ -2447,7 +2442,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedAnd16_nf|short _InterlockedAnd16_nf(short volatile *, short)|  
 |_InterlockedAnd16_rel|short _InterlockedAnd16_rel(short volatile *, short)|  
 |_InterlockedAnd64|__int64 _InterlockedAnd64 (\__int64 volatile *， \__int64)|  
-|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq(\__int64 volatile *, \__int64)|  
+|_InterlockedAnd64_acq|__int64 _InterlockedAnd64_acq (\__int64 volatile *， \__int64)|  
 |_InterlockedAnd64_nf|__int64 _InterlockedAnd64_nf (\__int64 volatile *， \__int64)|  
 |_InterlockedAnd64_rel|__int64 _InterlockedAnd64_rel (\__int64 volatile *， \__int64)|  
 |_InterlockedAnd8|char _InterlockedAnd8(char volatile *, char)|  
@@ -2471,7 +2466,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedCompareExchange8_nf|char _InterlockedCompareExchange8_nf(char volatile *, char, char)|  
 |_InterlockedCompareExchange8_rel|char _InterlockedCompareExchange8_rel(char volatile *, char, char)|  
 |_InterlockedCompareExchangePointer|void * _InterlockedCompareExchangePointer (void \* volatile \*，void \*，void \*)|  
-|_InterlockedCompareExchangePointer_acq|void * _InterlockedCompareExchangePointer_acq(void \* volatile \*, void \*, void \*)|  
+|_InterlockedCompareExchangePointer_acq|void * _InterlockedCompareExchangePointer_acq (void \* volatile \*，void \*，void \*)|  
 |_InterlockedCompareExchangePointer_nf|void * _InterlockedCompareExchangePointer_nf (void \* volatile \*，void \*，void \*)|  
 |_InterlockedCompareExchangePointer_rel|void * _InterlockedCompareExchangePointer_rel (void \* volatile \*，void \*，void \*)|  
 |_InterlockedCompareExchange_acq|long _InterlockedCompareExchange_acq(long volatile *, long, long)|  
@@ -2483,8 +2478,8 @@ void _MoveFromCoprocessor64(
 |_InterlockedDecrement16_nf|short _InterlockedDecrement16_nf(short volatile *)|  
 |_InterlockedDecrement16_rel|short _InterlockedDecrement16_rel(short volatile *)|  
 |_InterlockedDecrement64|__int64 _InterlockedDecrement64 (\__int64 volatile *)|  
-|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq(\__int64 volatile *)|  
-|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf(\__int64 volatile *)|  
+|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq (\__int64 volatile *)|  
+|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf (\__int64 volatile *)|  
 |_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel (\__int64 volatile *)|  
 |_InterlockedDecrement_acq|long _InterlockedDecrement_acq(long volatile *)|  
 |_InterlockedDecrement_nf|long _InterlockedDecrement_nf(long volatile *)|  
@@ -2505,9 +2500,9 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchangeAdd16_nf|short _InterlockedExchangeAdd16_nf(short volatile *, short)|  
 |_InterlockedExchangeAdd16_rel|short _InterlockedExchangeAdd16_rel(short volatile *, short)|  
 |_InterlockedExchangeAdd64|__int64 _InterlockedExchangeAdd64 (\__int64 volatile *， \__int64)|  
-|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq(\__int64 volatile *, \__int64)|  
-|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf(\__int64 volatile *, \__int64)|  
-|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel(\__int64 volatile *, \__int64)|  
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq (\__int64 volatile *， \__int64)|  
+|_InterlockedExchangeAdd64_nf|__int64 _InterlockedExchangeAdd64_nf (\__int64 volatile *， \__int64)|  
+|_InterlockedExchangeAdd64_rel|__int64 _InterlockedExchangeAdd64_rel (\__int64 volatile *， \__int64)|  
 |_InterlockedExchangeAdd8|char _InterlockedExchangeAdd8(char volatile *, char)|  
 |_InterlockedExchangeAdd8_acq|char _InterlockedExchangeAdd8_acq(char volatile *, char)|  
 |_InterlockedExchangeAdd8_nf|char _InterlockedExchangeAdd8_nf(char volatile *, char)|  
@@ -2526,8 +2521,8 @@ void _MoveFromCoprocessor64(
 |_InterlockedIncrement16_nf|short _InterlockedIncrement16_nf(short volatile *)|  
 |_InterlockedIncrement16_rel|short _InterlockedIncrement16_rel(short volatile *)|  
 |_InterlockedIncrement64|__int64 _InterlockedIncrement64 (\__int64 volatile *)|  
-|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq(\__int64 volatile *)|  
-|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf(\__int64 volatile *)|  
+|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq (\__int64 volatile *)|  
+|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf (\__int64 volatile *)|  
 |_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel (\__int64 volatile *)|  
 |_InterlockedIncrement_acq|long _InterlockedIncrement_acq(long volatile *)|  
 |_InterlockedIncrement_nf|long _InterlockedIncrement_nf(long volatile *)|  
@@ -2538,8 +2533,8 @@ void _MoveFromCoprocessor64(
 |_InterlockedOr16_nf|short _InterlockedOr16_nf(short volatile *, short)|  
 |_InterlockedOr16_rel|short _InterlockedOr16_rel(short volatile *, short)|  
 |_InterlockedOr64|__int64 _InterlockedOr64 (\__int64 volatile *， \__int64)|  
-|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq(\__int64 volatile *, \__int64)|  
-|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf(\__int64 volatile *, \__int64)|  
+|_InterlockedOr64_acq|__int64 _InterlockedOr64_acq (\__int64 volatile *， \__int64)|  
+|_InterlockedOr64_nf|__int64 _InterlockedOr64_nf (\__int64 volatile *， \__int64)|  
 |_InterlockedOr64_rel|__int64 _InterlockedOr64_rel (\__int64 volatile *， \__int64)|  
 |_InterlockedOr8|char _InterlockedOr8(char volatile *, char)|  
 |_InterlockedOr8_acq|char _InterlockedOr8_acq(char volatile *, char)|  
@@ -2583,7 +2578,7 @@ void _MoveFromCoprocessor64(
   
  [[NEON](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [ARM 組合程式參考](../assembler/arm/arm-assembler-reference.md)   
  [C++ 語言參考](../cpp/cpp-language-reference.md)

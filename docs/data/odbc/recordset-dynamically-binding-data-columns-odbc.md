@@ -1,13 +1,10 @@
 ---
-title: "資料錄集： 動態地繫結資料行 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 資料錄集： 動態地繫結資料行 (ODBC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e834820266e83d2c07bbe46f07e2ac48b0d18e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fe71707de20ba02228039e5693cab9c9401d560
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>資料錄集：動態地繫結資料行 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  本主題適用於衍生自物件`CRecordset`的大量資料列中擷取尚未實作。 如果您使用大量資料列擷取，不建議您使用通常所述的技巧。 如需大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
-##  <a name="_core_when_you_might_bind_columns_dynamically"></a>當您可能會動態繫結資料行  
+##  <a name="_core_when_you_might_bind_columns_dynamically"></a> 當您可能會動態繫結資料行  
  在設計階段，MFC 應用程式精靈或[MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md)(從**加入類別**) 建立根據已知的資料表和資料來源上的資料行的資料錄集類別。 您設計並更新您的應用程式在執行階段使用這些資料表和資料行時，可以變更資料庫。 您或其他使用者可能會加入或卸除的資料表或加入或卸除資料行，從您的應用程式資料錄集所依賴的資料表。 這可能不是問題的所有資料存取應用程式，但如果它適用於您，如何可以您來處理資料庫結構描述，而不是重新設計，並重新編譯中的變更嗎？ 本主題的目的是為了回答這個問題。  
   
  本主題說明最常見的情況，您可能會動態繫結資料行，即開始與已知的資料庫結構描述為基礎的資料錄集，您想要在執行階段處理額外的資料行。 本主題進一步假設的額外資料行對應至`CString`欄位資料成員，最常見的情況下，雖然有提供建議來協助您管理其他資料型別。  
@@ -57,12 +52,12 @@ ms.lasthandoff: 12/21/2017
   
  本主題並未涵蓋其他動態繫結案例，例如卸除之資料表或資料行。 針對這些情況下，您需要更直接使用 ODBC API 呼叫。 如需資訊，請參閱 ODBC SDK*程式設計人員參考*MSDN Library CD 上。  
   
-##  <a name="_core_how_to_bind_columns_dynamically"></a>如何動態繫結資料行  
+##  <a name="_core_how_to_bind_columns_dynamically"></a> 如何動態繫結資料行  
  動態繫結資料行，您必須知道 （或能夠決定） 的其他資料行的名稱。 您也必須將存放裝置配置額外的欄位資料成員、 指定其名稱和其類型，並且指定您要加入的資料行數目。  
   
  下列討論提到兩個不同的資料錄集。 第一個是主要資料錄集的目標資料表中選取的記錄。 第二個是用來在目標資料表中取得欄位的相關資訊的特殊資料行資料錄集。  
   
-###  <a name="_core_the_general_process"></a>一般程序  
+###  <a name="_core_the_general_process"></a> 一般程序  
  最一般的層級，請遵循下列步驟：  
   
 1.  建構主要資料錄集物件。  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
      資料錄集選取記錄，並使用資料錄欄位交換 (RFX) 繫結的靜態資料行 （其對應至資料錄集欄位資料成員） 和動態資料行 （對應至您所配置的額外儲存空間）。  
   
-###  <a name="_core_adding_the_columns"></a>加入資料行  
+###  <a name="_core_adding_the_columns"></a> 加入資料行  
  動態地繫結加入資料行，在執行階段需要下列步驟：  
   
 1.  在執行階段決定的資料行是目標資料表中。 因為您的資料錄集類別的設計已加入至資料表的資料行的清單擷取該資訊。  
@@ -94,10 +89,10 @@ ms.lasthandoff: 12/21/2017
   
      其中一個方法是將迴圈加入至您主要資料錄集的`DoFieldExchange`執行迴圈，您的新資料行中每個資料行清單中呼叫適當的 RFX 函式清單的函式。 在每個 RFX 呼叫時，請從 [資料行名稱] 清單和儲存體中的位置相對應的結果值清單的成員傳遞的資料行名稱。  
   
-###  <a name="_core_lists_of_columns"></a>資料行的清單  
+###  <a name="_core_lists_of_columns"></a> 資料行的清單  
  您需要使用四個清單會顯示下表中。  
   
- **目前資料表的資料行 (清單 1 圖中)**目前在資料來源上的資料表中的資料行清單。 這份清單可能符合目前繫結資料錄集中的資料行的清單。  
+ **目前資料表的資料行 (清單 1 圖中)** 目前在資料來源上的資料表中的資料行清單。 這份清單可能符合目前繫結資料錄集中的資料行的清單。  
   
  **繫結資料錄集的資料行 (在圖例中的清單 2)**  
  資料錄集，繫結的資料行清單。 這些資料行已經有 RFX 陳述式您`DoFieldExchange`函式。  
@@ -108,7 +103,7 @@ ms.lasthandoff: 12/21/2017
  **動態資料行值 (在圖例中的清單 4)**  
  包含儲存之值的清單擷取自您動態繫結資料行。 此清單的項目對應於資料行至-動態繫結，一對一。  
   
-###  <a name="_core_building_your_lists"></a>建立您的清單  
+###  <a name="_core_building_your_lists"></a> 建立您的清單  
  了解一般策略，您可以開啟詳細資料。 本主題的其餘部分中的程序說明如何建立顯示在清單[列出的資料行](#_core_lists_of_columns)。 程序會引導您：  
   
 -   [決定不在資料錄集的資料行名稱](#_core_determining_which_table_columns_are_not_in_your_recordset)。  
@@ -117,7 +112,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [新的資料行以動態方式加入 RFX 呼叫](#_core_adding_rfx_calls_to_bind_the_columns)。  
   
-###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a>決定不在資料錄集的資料表資料行  
+###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> 決定不在資料錄集的資料表資料行  
  建立包含一份已繫結到您的主要資料錄集的資料行的清單 （繫結的資料錄集的資料行，如圖中的清單 2 所示）。 然後建立清單 （資料行至-動態繫結，衍生自目前資料表的資料行和繫結資料錄集資料行） 包含在資料來源的資料表中，但不在主要資料錄集的資料行名稱。  
   
 ##### <a name="to-determine-the-names-of-columns-not-in-the-recordset-columns-to-bind-dynamically"></a>若要判斷資料行不在資料錄集 （資料行至-動態繫結） 的名稱  
@@ -138,7 +133,7 @@ ms.lasthandoff: 12/21/2017
   
      這份清單的項目播放的欄位資料成員的新資料錄集的角色。 它們是動態的資料行所繫結的儲存位置。 如需描述的清單，請參閱[列出的資料行](#_core_lists_of_columns)。  
   
-###  <a name="_core_providing_storage_for_the_new_columns"></a>提供新的資料行的儲存體  
+###  <a name="_core_providing_storage_for_the_new_columns"></a> 提供新的資料行的儲存體  
  接下來，設定動態繫結的資料行的儲存位置。 這個概念是要提供用來儲存每個資料行值的清單項目。 這些儲存體位置平行儲存一般繫結的資料行的資料錄集成員變數。  
   
 ##### <a name="to-provide-dynamic-storage-for-new-columns-dynamic-column-values"></a>提供動態的儲存體給新的資料行 （動態資料行值）  
@@ -154,7 +149,7 @@ ms.lasthandoff: 12/21/2017
 > [!TIP]
 >  如果新的資料行不是所有相同的資料類型，您可能需要額外的平行清單包含的每個對應的項目類型定義的資料行清單中的項目。 (您可以使用值**AFX_RFX_BOOL**， **AFX_RFX_BYTE**，依此類推，如果您想。 這些常數 AFXDB 中定義。H.)選擇清單類型，根據您如何表示資料行資料類型。  
   
-###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a>繫結資料行加入 RFX 呼叫  
+###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 繫結資料行加入 RFX 呼叫  
  最後，安排發生放入 RFX 呼叫新的資料行中的動態繫結您`DoFieldExchange`函式。  
   
 ##### <a name="to-dynamically-add-rfx-calls-for-new-columns"></a>若要以動態方式加入 RFX 呼叫新的資料行  
@@ -176,6 +171,6 @@ RFX_Text( pFX,
   
  架構會呼叫時`DoFieldExchange`期間**開啟**靜態資料行繫結的資料行，將資料行繫結至資料錄集，RFX 呼叫的程序。 然後您迴圈重複呼叫 RFX 函式的動態資料行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集：使用大型的資料項目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

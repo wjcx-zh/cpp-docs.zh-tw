@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2802 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2802 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2802
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2802
 ms.assetid: 08b68c0e-9382-40ac-8949-39a7a2749e05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa5d59b7a301efea16589f4561d812545d531bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe069b93c8dc6bb098927925e93f10cec2dbc4c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2802"></a>編譯器錯誤 C2802
 靜態成員 'operator operator' 具有沒有型式參數  

@@ -1,12 +1,9 @@
 ---
-title: "支援結構描述資料列集 |Microsoft 文件"
-ms.custom: 
+title: 支援結構描述資料列集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b4dc655710c9c9cc4bb9a2549136f772b192f739
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95f1455fde75ec835486cbcc3d590822891d14f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
 結構描述資料列集可讓取用者取得的資料存放區的相關資訊，而不需要知道其基礎結構描述。 例如，資料存放區可能會不有組織成使用者定義階層，所以會有任何方式可以讀取它確保知識以外的結構描述的資料表。 （另一個範例，請注意，Visual c + + 精靈會產生取用者的存取子使用結構描述資料列）。若要讓取用者，若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作**IDBSchemaRowset**。  
@@ -105,7 +100,7 @@ class CUpdateSessionTRSchemaRowset :
   
 |結構描述資料列集限制|限制值|  
 |-------------------------------|-----------------------|  
-|**TABLE_CATALOG**|0x1 (二進位 1)|  
+|**TABLE_CATALOG 排列**|0x1 (二進位 1)|  
 |**TABLE_SCHEMA**|0x2 (二進位 10)|  
 |**TABLE_NAME**|0x4 (二進位 100)|  
 |**TABLE_TYPE**|0x8 (二進位 1000)|  
@@ -271,5 +266,5 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
   
  如需支援結構描述資料列集提供者的範例，請參閱[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

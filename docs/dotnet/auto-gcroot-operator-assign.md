@@ -1,12 +1,9 @@
 ---
-title: "auto_gcroot::operator = |Microsoft 文件"
-ms.custom: 
+title: auto_gcroot::operator = |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - auto_gcroot.operator=
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - operator=
 ms.assetid: 99eba5eb-5a2c-4edf-b3d5-c903f818233d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b924c3596d1f381d42c711e42e93fd9ae6d037e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4bc0f671ea0c156b05eabe092bc3cc85b5cd9fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="autogcrootoperator"></a>auto_gcroot::operator=
 指派運算子。  
@@ -127,6 +122,6 @@ in ClassA destructor: third
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
  [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

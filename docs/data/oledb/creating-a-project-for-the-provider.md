@@ -1,12 +1,9 @@
 ---
-title: "提供者建立專案 |Microsoft 文件"
-ms.custom: 
+title: 提供者建立專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - OLE DB providers, projects
 - projects [C++], creating
 ms.assetid: 076a75de-1d4b-486a-bcf8-9c0f6b049fa2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eaad715e2a7b5008d4623dd0a7b412d008f79e12
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 08ceb80842d8552e19b62ff2ac2252d3f291b4ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-project-for-the-provider"></a>為提供者建立專案
 #### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>若要建立的 OLE DB 提供者所在的專案  
@@ -41,9 +36,9 @@ ms.lasthandoff: 02/23/2018
   
      ATL 專案精靈 隨即出現。  
   
-4.  在 ATL 專案精靈中，選擇 **動態連結程式庫 (DLL)**如**伺服器類型**。  
+4.  在 ATL 專案精靈中，選擇 **動態連結程式庫 (DLL)** 如**伺服器類型**。  
   
 5.  按一下 [ **完成**]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)

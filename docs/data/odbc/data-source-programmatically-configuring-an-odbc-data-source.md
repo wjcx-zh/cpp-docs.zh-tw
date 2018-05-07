@@ -1,13 +1,10 @@
 ---
-title: "資料來源： 以程式設計方式設定 ODBC 資料來源 |Microsoft 文件"
-ms.custom: 
+title: 資料來源： 以程式設計方式設定 ODBC 資料來源 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SQLConfigDataSource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e1f46ad566874d80b45593e7aecfeee2d5d88841
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>資料來源：以程式設計方式設定 ODBC 資料來源
 本主題說明如何以程式設計方式設定開放式資料庫連接 (ODBC) 資料來源名稱。 這可讓您彈性來存取資料而不未強制使用者明確使用 ODBC 管理員或其他程式來指定資料來源的名稱。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 03/16/2018
  不過，有許多 Dbms 允許以程式設計方式的資料來源建立。 某些資料來源會維護資料庫的目錄規格。 也就是目錄的資料來源，而且每個資料來源中的資料表儲存在個別的檔案 （若為 dBASE，每個資料表就是.dbf 檔案）。 其他的 ODBC 資料庫，例如 Microsoft Access 和 SQL Server 驅動程式需要在建立資料來源之前，無法滿足某個特定準則。 例如，當 SQL Server ODBC 驅動程式，您需要建立 SQL Server 電腦。  
   
 ##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource 範例  
- 下列範例會使用**:: SQLConfigDataSource**呼叫新的 Excel 資料來源建立新的 Excel 資料來源的 ODBC API 函式：  
+ 下列範例會使用 **:: SQLConfigDataSource**呼叫新的 Excel 資料來源建立新的 Excel 資料來源的 ODBC API 函式：  
   
 ```  
 SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",   
@@ -56,16 +51,16 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  如需有關建立資料表的詳細資訊，請參閱[資料來源： 以程式設計方式建立 ODBC 資料來源中的資料表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。  
   
- 下列資訊將討論所要傳遞至所需的參數**:: SQLConfigDataSource** ODBC API 函式。 若要使用**:: SQLConfigDataSource**，您必須包含 Odbcinst.h 標頭檔，並使用 Odbcinst.lib 匯入程式庫。 此外，Odbccp32.dll 必須在執行的階段 （或 Odbcinst.dll 的 16 位元） 是在路徑中。  
+ 下列資訊將討論所要傳遞至所需的參數 **:: SQLConfigDataSource** ODBC API 函式。 若要使用 **:: SQLConfigDataSource**，您必須包含 Odbcinst.h 標頭檔，並使用 Odbcinst.lib 匯入程式庫。 此外，Odbccp32.dll 必須在執行的階段 （或 Odbcinst.dll 的 16 位元） 是在路徑中。  
   
  您可以建立使用 ODBC 管理員或類似的公用程式的 ODBC 資料來源名稱。 不過，有時候很想要直接從您的應用程式，以取得存取權，而不需要使用者執行不同的公用程式中建立資料來源名稱。  
   
- ODBC （通常安裝於控制台） 的系統管理員會建立新的資料來源，方法是將項目放置在 Windows 登錄中 （或的 Odbc.ini 檔案中的 16 位元）。 ODBC 驅動程式管理員會查詢此檔案以取得有關資料來源的必要的資訊。 請務必知道哪些資訊必須放在登錄中，因為您需要提供呼叫**:: SQLConfigDataSource**。  
+ ODBC （通常安裝於控制台） 的系統管理員會建立新的資料來源，方法是將項目放置在 Windows 登錄中 （或的 Odbc.ini 檔案中的 16 位元）。 ODBC 驅動程式管理員會查詢此檔案以取得有關資料來源的必要的資訊。 請務必知道哪些資訊必須放在登錄中，因為您需要提供呼叫 **:: SQLConfigDataSource**。  
   
- 雖然此資訊無法直接寫入登錄而不使用**:: SQLConfigDataSource**，這樣做的任何應用程式依賴驅動程式管理員會使用來維護其資料的目前技巧。 如果不同的方式保留資料來源的 ODBC 驅動程式管理員實作記錄有較新版本，任何使用這項技術的應用程式已中斷。 時，通常建議使用 API 函數時所提供。 比方說，您的程式碼時從 16 位元移植至 32 位元您使用**:: SQLConfigDataSource**函式，因為函式會正確地寫入至 Odbc.ini 檔案或登錄。  
+ 雖然此資訊無法直接寫入登錄而不使用 **:: SQLConfigDataSource**，這樣做的任何應用程式依賴驅動程式管理員會使用來維護其資料的目前技巧。 如果不同的方式保留資料來源的 ODBC 驅動程式管理員實作記錄有較新版本，任何使用這項技術的應用程式已中斷。 時，通常建議使用 API 函數時所提供。 比方說，您的程式碼時從 16 位元移植至 32 位元您使用 **:: SQLConfigDataSource**函式，因為函式會正確地寫入至 Odbc.ini 檔案或登錄。  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource Parameters  
- 以下說明的參數**:: SQLConfigDataSource**函式。 大部分的資訊取自 ODBC API*程式設計人員參考*提供 Visual c + + 1.5 版及更新版本。  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource 參數  
+ 以下說明的參數 **:: SQLConfigDataSource**函式。 大部分的資訊取自 ODBC API*程式設計人員參考*提供 Visual c + + 1.5 版及更新版本。  
   
 ###  <a name="_core_function_prototype"></a> 函式原型  
   
@@ -105,7 +100,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
     -   32 位元，找到此金鑰**HKEY_CURRENT_USER\Software\ODBC\ODBC。INI\ODBC 資料來源**的左窗格中。  
   
-         右窗格會列出的項目: 「 pub: REG_SZ:*<data source name>*"，其中 *<data source name>* 與您想要的驅動程式所需的設定已設定為資料來源若要使用。 選取您想，資料來源，例如 SQL Server。 下列字串的項目 」 pub:"都是，順序、 keyname 及值可以使用您`lpszAttributes`參數。  
+         右窗格會列出的項目: 「 pub: REG_SZ:*<data source name>*"，其中*<data source name>* 與您想要的驅動程式所需的設定已設定為資料來源若要使用。 選取您想，資料來源，例如 SQL Server。 下列字串的項目 」 pub:"都是，順序、 keyname 及值可以使用您`lpszAttributes`參數。  
   
     -   16 位元，找出區段，來標記的 Odbc.ini 檔案中 [*\<資料來源名稱 >*]。  
   

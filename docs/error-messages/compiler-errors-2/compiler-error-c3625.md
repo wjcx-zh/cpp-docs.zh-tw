@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3625 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3625 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3625
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3625
 ms.assetid: fdf49f21-d6b1-42f4-9eec-23b04ae8b4aa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f2e61dfee1edb2628e18699d7f7ea204ed716c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a3462c3600a59c453fbde818c11b602c2254343
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3625"></a>編譯器錯誤 C3625
 'native_type'：不可以從 Managed 或 WinRT 類型 'type' 衍生原生類型  

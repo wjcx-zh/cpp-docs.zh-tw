@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3200 透過 c3299: |Microsoft 文件"
-ms.custom: 
+title: '編譯器錯誤 C3200 透過 c3299: |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>編譯器錯誤 C3200 透過 c3299:
 
@@ -139,9 +134,9 @@ ms.lasthandoff: 12/21/2017
 |[編譯器錯誤 C3271](compiler-error-c3271.md)|'*欄位*': 無效的值'*數目*' FieldOffset 屬性|
 |[編譯器錯誤 C3272](compiler-error-c3272.md)|'*符號*': 符號必須有 FieldOffset，因為它是 struct/類別的成員*type_name* StructLayout(LayoutKind::Explicit) 與定義|
 |[編譯器錯誤 C3273](compiler-error-c3273.md)|'*關鍵字*': 不允許在 c + + try 區塊上|
-|[編譯器錯誤 C3274](compiler-error-c3274.md)|最後 / &#95; &#95; 最後沒有相符再試一次|
+|[編譯器錯誤 C3274](compiler-error-c3274.md)|最後 /&#95;&#95;最後沒有相符再試一次|
 |[編譯器錯誤 C3275](compiler-error-c3275.md)|'*識別碼*': 無法使用此符號不含限定詞|
-|[編譯器錯誤 C3276](compiler-error-c3276.md)|'*關鍵字*': 跳出 finally / &#95; &#95; 最後區塊有未定義的行為在終止處理期間|
+|[編譯器錯誤 C3276](compiler-error-c3276.md)|'*關鍵字*': 跳出 finally /&#95;&#95;finally 區塊有未定義的行為在終止處理期間|
 |[編譯器錯誤 C3277](compiler-error-c3277.md)|無法定義 unmanaged 的列舉 '*列舉*內部管理 」*類型*'|
 |[編譯器錯誤 C3278](compiler-error-c3278.md)|直接呼叫介面或純方法 '*函式*' 將會在執行階段失敗|
 |[編譯器錯誤 C3279](compiler-error-c3279.md)|cli 命名空間中宣告的類別樣板，不允許部分和明確特製化以及明確具現化|

@@ -1,12 +1,9 @@
 ---
-title: "地圖 (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 地圖 (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - map class [STL/CLR]
 - <cliext/map> header [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cda679ed01e5266f0605639df45940d8f17e506d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`map`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  其中：  
   
- `GKey`等同於`Key`後者是 ref 型別，除非在這種情況下很`Key^`  
+ `GKey` 等同於`Key`後者是 ref 型別，除非在這種情況下很 `Key^`  
   
- `GMapped`等同於`Mapped`後者是 ref 型別，除非在這種情況下很`Mapped^`  
+ `GMapped` 等同於`Mapped`後者是 ref 型別，除非在這種情況下很 `Mapped^`  
   
 ## <a name="syntax"></a>語法  
   
@@ -143,7 +138,7 @@ template<typename Key,
   
  這類委派的物件必須強制執行嚴格弱式排序索引鍵的型別[map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)。 這表示任何兩個索引鍵`X`和`Y`:  
   
- `key_comp()(X, Y)`傳回的相同的布林值結果，在每次呼叫。  
+ `key_comp()(X, Y)` 傳回的相同的布林值結果，在每次呼叫。  
   
  如果`key_comp()(X, Y)`是 true，則`key_comp()(Y, X)`必須為 false。  
   
@@ -168,7 +163,7 @@ template<typename Key,
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   

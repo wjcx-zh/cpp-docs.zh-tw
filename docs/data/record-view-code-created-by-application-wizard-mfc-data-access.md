@@ -1,13 +1,10 @@
 ---
-title: "記錄由應用程式精靈 （MFC 資料存取） 所建立的檢視程式碼 |Microsoft 文件"
-ms.custom: 
+title: 記錄由應用程式精靈 （MFC 資料存取） 所建立的檢視程式碼 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - record views, refreshing controls
 - record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 239ace3f23987bc4f704515e7f87d62ba2e26543
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15355d156b3c85c8f99ba638b30f831da96686af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>應用程式精靈所建立的記錄檢視程式碼 (MFC 資料存取)
 [MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)覆寫檢視`OnInitialUpdate`和`OnGetRecordset`成員函式。 在架構建立框架視窗、文件和檢視之後，它會呼叫 `OnInitialUpdate` 來初始化檢視。 `OnInitialUpdate` 從文件中取得指向資料錄集的指標。 基底類別呼叫[cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate)函式會開啟資料錄集。 下列程式碼將示範此程序`CRecordView`:  
@@ -44,5 +39,5 @@ void CSectionForm::OnInitialUpdate()
 > [!NOTE]
 >  您應該讓終端使用者可以從資料錄集重新整理資料錄檢視控制項。 沒有此功能時，如果使用者將控制項的值變更為不合法的值，該使用者可能會永久卡在目前的資料錄上。 若要重新整理控制項，您呼叫`CWnd`成員函式[UpdateData](../mfc/reference/cwnd-class.md#updatedata)和參數**FALSE**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用資料錄檢視](../data/using-a-record-view-mfc-data-access.md)

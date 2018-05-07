@@ -1,53 +1,51 @@
 ---
-title: "變更簽章 |Microsoft 文件"
-ms.custom: 
+title: 變更簽章 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5280b4940c2a52fc6e72b397300040ca4c1ac92e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="change-signature"></a>變更簽章
 **項目：**可讓您修改函式的參數。
 
 **當：**您想要重新排列、 新增、 移除或修改目前使用的各種不同的位置中的函式的參數。  
 
-**原因：**但您無法手動變更這些參數，然後尋找所有呼叫該函式並加以變更的其中一個，可能導致錯誤。  這項重構工具會自動執行的工作。
+**原因：**但您無法手動變更這些參數，然後尋找所有呼叫該函式並加以變更的其中一個，可能導致錯誤。  這個重構工具將可自動執行此工作。
 
-**如何：**
+**做法：**
 
 1. 將文字或滑鼠指標放置名稱的方法，若要修改，或其使用方式的其中一個：
 
-   ![反白顯示的程式碼](images/changesignature_highlight.png)
+   ![醒目標示的程式碼](images/changesignature_highlight.png)
 
-1. 接下來，執行下列其中一項：
+1. 接著，執行下列其中一項操作：
    * **鍵盤**
      * 按**Ctrl + R**，然後**Ctrl + O**。  (請注意，根據您所選取的設定檔，鍵盤快速鍵可能會不同)。
-     * 按**Ctrl +。** 觸發程序**快速控制項目及重構**功能表，然後選取**變更簽章**從內容功能表。
+     * 按 **Ctrl+.** 觸發程序**快速控制項目及重構**功能表，然後選取**變更簽章**從內容功能表。
    * **滑鼠**
-     * 選取**編輯 > 重構 > 重新排列參數**。
+     * 選取 [編輯] > [重構] > [重新排列參數]。
      * 以滑鼠右鍵按一下程式碼中，選取**快速控制項目及重構**功能表，然後選取**變更簽章**從內容功能表。
 
-1. 在**變更簽章**對話方塊出現，您也可以在右側使用按鈕，變更方法簽章：
+1. 在 [變更簽章] 快顯對話方塊中，您可以使用右邊的按鈕來變更方法簽章：
 
-   ![變更簽章對話方塊](images/changesignature_dialog.png)
+   ![[變更簽章] 對話方塊](images/changesignature_dialog.png)
 
    | 按鈕 | 描述
    | ------ | ---
-   | **向上/向下鍵**    | 將選取的參數在清單中上下移動
+   | **向上/向下**    | 將選取的參數在清單中向上和向下移動
    | **[新增]**        | 將新參數加入清單
-   | **移除**     | 從清單中移除選取的參數
+   | **移除**     | 將選取的參數從清單中移除
    | **修改**     | 藉由變更其類型，修改所選取的參數名稱，它是選擇性的和其插入的值會是
    | **還原**     | 還原選取的參數，其原始狀態
    | **還原所有** | 還原成原始狀態的所有參數
@@ -71,10 +69,10 @@ ms.lasthandoff: 12/21/2017
 
 1. 使用**搜尋範圍**下拉式清單選取 如果所做的變更會套用至整個方案或專案。
 
-1. 當您完成時，請按**確定**進行的變更 按鈕。  請確認您所要求的變更會適當地進行。  使用中視窗的上半部的核取方塊，啟用或停用的任何項目重新命名。
+1. 完成時，按 [確定] 按鈕以進行變更。  請確認您所要求的變更會適當地進行。  使用中視窗的上半部的核取方塊，啟用或停用的任何項目重新命名。
 
    ![變更簽章預覽](images/changesignature_preview.png)
 
 1. 當一切良好時，按一下 **套用**按鈕和函式將會變更您的原始程式碼中。
 
-   ![變更簽章結果](images/changesignature_result.png)
+   ![「變更簽章」結果](images/changesignature_result.png)

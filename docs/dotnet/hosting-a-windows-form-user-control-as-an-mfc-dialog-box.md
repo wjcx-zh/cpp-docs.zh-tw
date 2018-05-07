@@ -1,13 +1,10 @@
 ---
-title: "裝載 Windows 形成使用者控制項，MFC 對話方塊 |Microsoft 文件"
-ms.custom: 
+title: 裝載 Windows 形成使用者控制項，MFC 對話方塊 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b356bff4974b43445524d9bc07e1e37c62a6f8d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載成 MFC 對話方塊
-MFC 提供此範本類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) ，讓您可以裝載 Windows Form 使用者控制項 (<xref:System.Windows.Forms.UserControl>) 強制或非強制回應 MFC 對話方塊中。 `CWinFormsDialog`從 MFC 類別衍生[CDialog](../mfc/reference/cdialog-class.md)，因此可以啟動為強制回應或非強制回應對話方塊。  
+MFC 提供此範本類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) ，讓您可以裝載 Windows Form 使用者控制項 (<xref:System.Windows.Forms.UserControl>) 強制或非強制回應 MFC 對話方塊中。 `CWinFormsDialog` 從 MFC 類別衍生[CDialog](../mfc/reference/cdialog-class.md)，因此可以啟動為強制回應或非強制回應對話方塊。  
   
  處理程序，`CWinFormsDialog`用來將使用者控制項裝載很相似述[MFC 對話方塊中的 Windows Form 使用者控制項裝載](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)。 不過，`CWinFormsDialog`管理的初始化和裝載使用者控制項，讓它不需要以手動方式進行程式設計。  
   
@@ -39,7 +34,7 @@ MFC 提供此範本類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-clas
   
 1.  建立 MFC 應用程式專案。  
   
-     在**檔案**功能表上，選取**新增**，然後按一下 **專案**。 在**Visual c + +**資料夾中，選取**MFC 應用程式**。  
+     在**檔案**功能表上，選取**新增**，然後按一下 **專案**。 在**Visual c + +** 資料夾中，選取**MFC 應用程式**。  
   
      在**名稱**方塊中，輸入`MFC03`並將方案設定變更為**將加入至方案**。按一下**確定**。  
   
@@ -147,6 +142,6 @@ MFC 提供此範本類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-clas
   
 16. 建置並執行專案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Windows.Forms.UserControl?displayProperty=fullName>   
  [在 MFC 中使用 Windows Forms 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)

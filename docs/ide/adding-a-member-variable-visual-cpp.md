@@ -1,13 +1,10 @@
 ---
-title: "加入成員變數 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 加入成員變數 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.classes.member.variable
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - member variables, adding
 - member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3f5327568b1ad8380ce905987a570541e8f44f
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-member-variable--visual-c"></a>加入成員變數 (Visual C++)
 您可以使用 類別檢視的類別中加入成員變數。 成員變數可以是做為[資料交換和驗證資料](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈是特別設計的相關資訊並使用原始程式檔的適當位置中插入項目。 您可以加入成員變數從[對話方塊編輯器](../windows/dialog-editor.md)中[資源檢視](../windows/resource-view-window.md)，或從[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
@@ -63,7 +58,7 @@ ms.lasthandoff: 02/03/2018
   
 5.  按一下**完成**定義和實作程式碼加入專案，並關閉精靈。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../ide/adding-a-class-visual-cpp.md)   
  [加入成員函式](../ide/adding-a-member-function-visual-cpp.md)   

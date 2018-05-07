@@ -1,13 +1,10 @@
 ---
-title: "OLE 通用對話方塊類別 |Microsoft 文件"
-ms.custom: 
+title: OLE 通用對話方塊類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0617354337e75e2c2431df894c054722349e2306
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e3cedbe3cd08a425bd2bde2b4a6ca8c5a493c72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-common-dialog-classes"></a>OLE 通用對話方塊類別
 這些類別會透過實作幾個標準 OLE 對話方塊來處理一般 OLE 工作。 它們也針對 OLE 功能提供一致的使用者介面。  
@@ -63,6 +58,6 @@ ms.lasthandoff: 12/21/2017
  [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
  顯示 [伺服器忙碌中] 和 [伺服器沒有回應] 對話方塊，用於處理呼叫忙碌的應用程式的標準使用者介面。 通常會透過 `COleMessageFilter` 實作自動顯示。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

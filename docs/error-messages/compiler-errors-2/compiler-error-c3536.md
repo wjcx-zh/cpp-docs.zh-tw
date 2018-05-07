@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3536 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3536 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3536
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3536
 ms.assetid: 8d866075-866b-49eb-9979-ee27b308f7e3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf9e3baacf7028d37c08db095a16d136f99d361
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f88e656b0d63b6a7a4d60ace2f4cd5e2347d188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3536"></a>編譯器錯誤 C3536
 'symbol': 無法在初始化之前使用。  
@@ -53,5 +48,5 @@ int main()
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto 關鍵字](../../cpp/auto-keyword.md)

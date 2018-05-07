@@ -1,12 +1,9 @@
 ---
-title: "multimap:: reference (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'multimap:: reference (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::reference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - reference member [STL/CLR]
 ms.assetid: bc402641-8310-479f-b345-b9646e534c00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ae8e185723a9dea535fc420c5f8006ed7eee4c7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e41b689996f0f6004b1ae91e755311bd9295c7c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapreference-stlclr"></a>multimap::reference (STL/CLR)
 項目的參考類型。  
@@ -77,7 +72,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap:: const_reference (STL/CLR)](../dotnet/multimap-const-reference-stl-clr.md)   
  [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

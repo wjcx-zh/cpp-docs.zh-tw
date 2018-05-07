@@ -1,12 +1,9 @@
 ---
-title: "vector::generic_iterator (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: vector::generic_iterator (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::generic_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_iterator member [STL/CLR]
 ms.assetid: e396bce6-5b1e-46b6-afa5-6bb96cf5d5d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e276b9f0bc4e98ea42015562152b6e4b890b7f6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b133ca1cf3ef23b05d1b20697fbaadce74cf354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorgenericiterator-stlclr"></a>vector::generic_iterator (STL/CLR)
 迭代器使用容器的泛型介面型別。  
@@ -90,7 +85,7 @@ a a c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)   
  [vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)

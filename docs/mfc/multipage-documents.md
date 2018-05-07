@@ -1,13 +1,10 @@
 ---
-title: "多頁文件 |Microsoft 文件"
-ms.custom: 
+title: 多頁文件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bc9bbe4653e34c37ae46439baa1e649d6d8042
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24ad3e99399e4d5db45606accfd58512f3950f26
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multipage-documents"></a>多頁文件
 本文描述 Windows 列印通訊協定並說明如何列印包含多個頁面的文件。 本文包括下列主題：  
@@ -59,10 +54,10 @@ ms.lasthandoff: 12/21/2017
   
 -   [列印時分頁](#_core_print.2d.time_pagination)  
   
-##  <a name="_core_the_printing_protocol"></a>列印通訊協定  
+##  <a name="_core_the_printing_protocol"></a> 列印通訊協定  
  列印多頁文件時，架構會以下列方式與檢視互動。 架構會先顯示**列印**對話方塊中，建立裝置內容的印表機，然後呼叫[Cdc](../mfc/reference/cdc-class.md#startdoc)成員函式[CDC](../mfc/reference/cdc-class.md)物件。 然後，在文件的每一頁，架構會呼叫[StartPage](../mfc/reference/cdc-class.md#startpage)成員函式`CDC`物件，會指示要列印的頁面上和呼叫的檢視物件[EndPage](../mfc/reference/cdc-class.md#endpage)成員函式。 如果必須變更印表機模式啟動的特定頁面之前，檢視便會呼叫[ResetDC](../mfc/reference/cdc-class.md#resetdc)，哪些更新[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)結構，其中包含新的印表機模式資訊。 當列印整份文件架構會呼叫[EndDoc](../mfc/reference/cdc-class.md#enddoc)成員函式。  
   
-##  <a name="_core_overriding_view_class_functions"></a>覆寫檢視類別函式  
+##  <a name="_core_overriding_view_class_functions"></a> 覆寫檢視類別函式  
  [CView](../mfc/reference/cview-class.md)類別會定義幾個成員函式會在列印期間由架構呼叫。 藉由在檢視類別中覆寫這些函式，您可以提供架構的列印邏輯和檢視類別的列印邏輯之間的連接。 下表列出這些成員函式。  
   
 ### <a name="cviews-overridable-functions-for-printing"></a>列印的 CView 可覆寫函式  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
  ![列印迴圈處理序](../mfc/media/vc37c71.gif "vc37c71")  
 列印迴圈  
   
-##  <a name="_core_pagination"></a>分頁  
+##  <a name="_core_pagination"></a> 分頁  
  架構會儲存在列印工作的相關資訊的許多[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構。 `CPrintInfo` 中有多個值與分頁有關，這些值的存取方式如下表所示。  
   
 ### <a name="page-number-information-stored-in-cprintinfo"></a>在 CPrintInfo 中儲存頁碼資訊。  
@@ -111,12 +106,12 @@ ms.lasthandoff: 12/21/2017
   
  事實上，`OnDraw` 為螢幕顯示和列印進行轉譯表示您的應用程式是 WYSIWYG：「所見即所得 (WYSIWYG)」。 不過，假設您撰寫的不是 WYSIWYG 應用程式。 例如，考慮一個使用以粗體字型來列印，但是在螢幕上顯示表示粗體文字之控制碼的文字編輯器。 在這種情況下，您只會使用 `OnDraw` 進行螢幕顯示。 當您覆寫 `OnPrint` 時，會使用不同繪圖函式的呼叫取代 `OnDraw` 的呼叫。 該函式會使用您未顯示在螢幕上的屬性，以在紙張上顯示的方式繪製文件。  
   
-##  <a name="_core_printer_pages_vs.._document_pages"></a>印表機頁面 vs。文件頁面  
+##  <a name="_core_printer_pages_vs.._document_pages"></a> 印表機頁面 vs。文件頁面  
  當您參考頁碼時，區別頁面的印表機概念與頁面的文件概念有時候是必要的。 從印表機檢視的角度來說，一個頁面就是一張紙。 不過，一張紙不一定等於文件的一個頁面。 例如，如果您列印的是會摺疊紙張的報紙，則一張紙可能同時包含文件的第一頁和最後一頁。 同樣地，如果您列印的是試算表，則文件根本不是由頁面所組成。 相反地，一張紙可能包含第 1 列到第 20 列，第 6 行至第 10 行。  
   
  所有頁碼中[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構參考印表機頁面。 架構會在每張紙張通過印表機時呼叫 `OnPrepareDC` 和 `OnPrint`。 當您覆寫[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)函式指定文件長度，您必須使用印表機頁面。 如果其中具有一對一的對應關係 (也就是印表機頁面等於文件頁面)，則這是容易的。 另一方面，如果文件頁面和印表機頁面無法直接對應，您必須在兩者之間進行轉譯。 例如，請考慮列印試算表的情形。 當覆寫 `OnPreparePrinting` 時，您必須計算列印整份試算表需要多少紙張，並在呼叫 `SetMaxPage` 的 `CPrintInfo` 成員函式時使用該值。 同樣地，覆寫 `OnPrepareDC` 時，您必須將 `m_nCurPage` 轉譯為會顯示在特定工作表上的行列範圍，然後據其調整檢視區的原點。  
   
-##  <a name="_core_print.2d.time_pagination"></a>列印時分頁  
+##  <a name="_core_print.2d.time_pagination"></a> 列印時分頁  
  在某些狀況下，您的檢視類別在實際列印前無法事先知道文件的長度。 例如，假設您的應用程式不是 WYSIWYG，則螢幕上文件的長度與列印時的長度無法對應。  
   
  這會造成問題，當您覆寫[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)檢視類別： 您無法將值傳遞`SetMaxPage`函式的[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構，因為您不知道的長度文件。 如果使用者在使用 [列印] 對話方塊未指定停止的頁碼，架構就不知道應於何時停止列印迴圈。 唯一判斷何時停止列印迴圈的方式是印出文件然後看它何時結束。 您的檢視類別必須在列印時檢查文件的結尾，然後在到達尾端時告知架構。  
@@ -131,7 +126,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [配置 GDI 資源](../mfc/allocating-gdi-resources.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [列印](../mfc/printing.md)   
  [CView 類別](../mfc/reference/cview-class.md)   
  [CDC 類別](../mfc/reference/cdc-class.md)

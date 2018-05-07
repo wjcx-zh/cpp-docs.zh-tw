@@ -1,12 +1,9 @@
 ---
-title: "測試唯讀提供者 |Microsoft 文件"
-ms.custom: 
+title: 測試唯讀提供者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 49f86150afe9116909a137e97a0e04d5a7d54bac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 703d33f44fae534b206050e85086edb1ccc816f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-the-read-only-provider"></a>測試唯讀提供者
 若要測試的提供者，您需要取用者。 如果取用者可以比對與提供者，它可幫助。 OLE DB 消費者樣板是 OLE DB 的精簡型包裝函式，而且與提供者 COM 物件相符。 來源隨附的取用者範本，因為很容易進行偵錯與它們的提供者。 消費者樣板也是開發取用者應用程式非常小且更快速的方式。  
@@ -138,5 +133,5 @@ while (table.MoveNext() == S_OK)
   
  您現在應該能夠建置並測試的程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)

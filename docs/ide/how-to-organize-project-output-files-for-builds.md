@@ -1,30 +1,25 @@
 ---
-title: "如何： 組織組建的專案輸出檔案 |Microsoft 文件"
-ms.custom: 
+title: 如何： 組織組建的專案輸出檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 648321c41fe02541eeb746bae24236c40dc5325e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0d1e7f8ea67db0e87199e0c12128555fa039112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>如何：組織組建的專案輸出檔案
 本主題描述組織專案輸出檔的最佳作法。 建置不正確地設定專案輸出檔時，可能會發生錯誤。 本主題也概述每一種組織專案輸出檔的優缺點。  
@@ -37,17 +32,17 @@ ms.lasthandoff: 12/21/2017
   
      指定的檔案可以是.dll、.exe、.netmodule 或.obj，只要它會在 MSIL。 以任何語言，可以建立參考的元件。 使用此選項，您可以存取 intellisense 因為會從 MSIL 擷取中繼資料。 有問題的檔案必須位於專案的路徑否則，將不會編譯專案，並將無法使用 Intellisense。 判斷檔案是否在路徑中的簡單方法是以滑鼠右鍵按一下 #using 列，並選擇**開啟的文件**命令。 如果找不到檔案，系統會通知您。  
   
-     如果您不想要放置檔案的完整路徑，您可以使用**/AI**編譯器選項，若要編輯的搜尋路徑 #using 參考。 如需詳細資訊，請參閱 [/AI (指定中繼資料目錄)](../build/reference/ai-specify-metadata-directories.md)。  
+     如果您不想要放置檔案的完整路徑，您可以使用 **/AI**編譯器選項，若要編輯的搜尋路徑 #using 參考。 如需詳細資訊，請參閱 [/AI (指定中繼資料目錄)](../build/reference/ai-specify-metadata-directories.md)。  
   
 #### <a name="to-reference-assemblies-with-fu"></a>參考組件與 /FU  
   
-1.  而不是直接從程式碼檔參考組件，如上面所述，您可以使用**/FU**編譯器選項。 這個方法的優點是，您不需要另外加 #using 陳述式會參考指定組件的每個檔案。  
+1.  而不是直接從程式碼檔參考組件，如上面所述，您可以使用 **/FU**編譯器選項。 這個方法的優點是，您不需要另外加 #using 陳述式會參考指定組件的每個檔案。  
   
-     若要設定此選項，開啟**屬性頁**專案。 展開**組態屬性** 節點，然後展開**C/c + +**節點，然後選取**進階**。 加入所需的組件旁**強制 #using**。 如需詳細資訊，請參閱 [/FU (指定強制的 #using 檔)](../build/reference/fu-name-forced-hash-using-file.md)。  
+     若要設定此選項，開啟**屬性頁**專案。 展開**組態屬性** 節點，然後展開**C/c + +** 節點，然後選取**進階**。 加入所需的組件旁**強制 #using**。 如需詳細資訊，請參閱 [/FU (指定強制的 #using 檔)](../build/reference/fu-name-forced-hash-using-file.md)。  
   
 #### <a name="to-reference-assemblies-with-add-new-reference"></a>若要加入新參考與參考組件  
   
-1.  這是最簡單的方式來使用 CLR 組件。 首先，請確定專案會編譯與**/clr**編譯器選項。 然後，以滑鼠右鍵按一下專案，從**方案總管 中**選取**新增**，**參考**。 **屬性頁**對話方塊隨即出現。  
+1.  這是最簡單的方式來使用 CLR 組件。 首先，請確定專案會編譯與 **/clr**編譯器選項。 然後，以滑鼠右鍵按一下專案，從**方案總管 中**選取**新增**，**參考**。 **屬性頁**對話方塊隨即出現。  
   
 2.  從**屬性頁**對話方塊中，選取**加入新參考**。 會出現一個對話方塊，列出所有.NET、 COM 及目前的專案中可用的其他組件。 選取所需的組件，然後按一下**確定**。  
   
@@ -80,5 +75,5 @@ ms.lasthandoff: 12/21/2017
   
 1.  專案的位置輸出的專案中可以找到設定**屬性頁**。 展開節點旁**組態屬性**選取**一般**。 指定的輸出位置旁**輸出目錄**。 如需詳細資訊，請參閱[一般屬性頁 （專案）](../ide/general-property-page-project.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)

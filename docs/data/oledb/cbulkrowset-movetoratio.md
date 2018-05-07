@@ -1,12 +1,9 @@
 ---
-title: CBulkRowset::MoveToRatio | Microsoft Docs
-ms.custom: 
+title: 'Cbulkrowset:: Movetoratio |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBulkRowset.MoveToRatio
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - MoveToRatio method
 ms.assetid: 86be60f5-9341-44c1-8e1e-9174c082d0d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 675d2ec6c9a43e7f5b17acdb0c546e003fd5e986
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0ab702781ed47a4520b53e9698319b5c245e2dfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbulkrowsetmovetoratio"></a>CBulkRowset::MoveToRatio
 提取資料列從資料列集的小數位置開始。  
@@ -65,5 +60,5 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CBulkRowset 類別](../../data/oledb/cbulkrowset-class.md)

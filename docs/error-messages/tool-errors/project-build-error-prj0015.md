@@ -1,12 +1,9 @@
 ---
-title: "專案建置錯誤 PRJ0015 |Microsoft 文件"
-ms.custom: 
+title: 專案建置錯誤 PRJ0015 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - PRJ0015
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - PRJ0015
 ms.assetid: 2096c8f1-e96c-49a4-a690-1cb893a8bf6f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0ece0380628d0d87ea1599ad49f4116cb0239f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c2376ddd22490bf9ce61a8db9b857ce02551b15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-error-prj0015"></a>專案建置錯誤 PRJ0015
 從您的系統遺漏 NULL 裝置。 我們目前無法啟動組建。  

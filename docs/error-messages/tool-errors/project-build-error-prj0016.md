@@ -2,11 +2,8 @@
 title: 專案建置錯誤 PRJ0016 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - PRJ0016
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - PRJ0016
 ms.assetid: e9745336-883a-4c70-9c40-7753e02f0325
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 056a033ce95926ca8bbf59e6bbc7b11656fcd015
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6184e5bb251a2b74e8500cc195a38f2d814c1b5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-error-prj0016"></a>專案建置錯誤 PRJ0016
 使用者的安全性設定會防止建立處理程序。 這些設定所需的建置。  
@@ -42,6 +37,6 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱：  
   
--   知識庫文章 324153，可用於[http://support.microsoft.com/default.aspx?scid=kb;en-us;324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153)。  
+-   知識庫文章 324153，可用於[ http://support.microsoft.com/default.aspx?scid=kb; en-us-我們; 324153](http://support.microsoft.com/default.aspx?scid=kb;en-us;324153)。  
   
 -   [系統原則設定遵守](http://msdn.microsoft.com/library/aa372139)的 「 執行只允許 Windows 應用程式 」 一節。

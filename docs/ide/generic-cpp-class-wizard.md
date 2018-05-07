@@ -1,13 +1,10 @@
 ---
-title: "泛型 c + + 類別精靈 |Microsoft 文件"
-ms.custom: 
+title: 泛型 c + + 類別精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.generic
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Generic C++ Class Wizard [C++]
 ms.assetid: aa95be9e-fc1b-45db-a11d-0d32c4929077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82d706c30c729f490f6bfdec3344d5dab537a689
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43e86a4047ef025f49dd01eda90f324623a90752
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generic-c-class-wizard"></a>泛型 C++ 類別精靈
 專案中加入泛型 c + + 類別。 此類別無法繼承自 ATL 或 MFC。  
@@ -62,5 +57,5 @@ ms.lasthandoff: 12/21/2017
  **受管理**  
  選取時，將 managed 的類別和標頭檔中。 清除時，將原生類別和標頭檔中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [新增泛型 C++ 類別](../ide/adding-a-generic-cpp-class.md)

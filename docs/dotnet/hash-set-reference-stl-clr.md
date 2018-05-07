@@ -1,12 +1,9 @@
 ---
-title: "hash_set:: reference (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'hash_set:: reference (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::reference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - reference member [STL/CLR]
 ms.assetid: 98116382-be98-4b97-bf83-0e340603dd4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7f9fbbae5a80c9e30b1688480a890b7e1b284eda
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 311b19a474eeb33ef9a4e9872d5e35e4324cc2d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetreference-stlclr"></a>hash_set::reference (STL/CLR)
 項目的參考類型。  
@@ -77,7 +72,7 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set:: const_reference (STL/CLR)](../dotnet/hash-set-const-reference-stl-clr.md)   
  [hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)

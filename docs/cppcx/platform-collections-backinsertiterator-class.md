@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::BackInsertIterator 類別 |Microsoft 文件"
-ms.custom: 
+title: Platform::Collections::BackInsertIterator 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d0be32b550cd0e19facb127ca6a052b03ef1eaf5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 類別
 代表將元素插入 (而不是覆寫) 序列集合後端的迭代器。  
@@ -118,7 +113,7 @@ BackInsertIterator& operator*();
 ### <a name="remarks"></a>備註  
  這個運算子會傳回目前 BackInsertIterator 的參考，不是目前集合中任何項目的參考。  
  
-## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
+## <a name="operator-increment"></a>  Backinsertiterator:: Operator + + 運算子
 傳回目前 BackInsertIterator 的參考。 迭代器是未修改的。  
   
 ## <a name="syntax"></a>語法  
@@ -139,5 +134,5 @@ BackInsertIterator operator++(int);
  不過，這個運算子不會實際修改 BackInsertIterator。 而是傳回未修改之目前迭代器的參考。 這是相同的行為[運算子 *](#dereference-operator)。  
   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

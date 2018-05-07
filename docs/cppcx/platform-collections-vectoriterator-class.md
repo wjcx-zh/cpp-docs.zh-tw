@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::VectorIterator 類別 |Microsoft 文件"
-ms.custom: 
+title: Platform::Collections::VectorIterator 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 873c4c980bc815d0eebb29050a0e2fe2f49e6e6b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: deaab183a092a073c6681004654312485959e924
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator 類別
 衍生自 Windows Runtime IVector 介面的物件提供標準樣板程式庫迭代器。  
@@ -104,7 +99,7 @@ Detail::ArrowProxy<T> operator->() const;
   
 
 
-## <a name="operator-decrement"></a>  VectorIterator::operator-- Operator
+## <a name="operator-decrement"></a>  Vectoriterator:: Operator-運算子
 遞減目前 VectorIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -139,7 +134,7 @@ reference operator*() const;
   
 
 
-## <a name="operator-equality"></a>  VectorIterator::operator== Operator
+## <a name="operator-equality"></a>  Vectoriterator:: Operator = = 運算子
 指出目前 VectorIterator 是否等於指定的 VectorIterator。  
   
 ### <a name="syntax"></a>語法  
@@ -406,5 +401,5 @@ explicit VectorIterator(
 
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

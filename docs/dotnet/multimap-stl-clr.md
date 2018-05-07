@@ -1,12 +1,9 @@
 ---
-title: "multimap (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: multimap (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/map> header [STL/CLR]
 - multimap class [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 168c6afec0f8f195d1315a54eff2794f7e3fd07e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`multimap`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  其中：  
   
- `GKey`等同於`Key`後者是 ref 型別，除非在這種情況下很`Key^`  
+ `GKey` 等同於`Key`後者是 ref 型別，除非在這種情況下很 `Key^`  
   
- `GMapped`等同於`Mapped`後者是 ref 型別，除非在這種情況下很`Mapped^`  
+ `GMapped` 等同於`Mapped`後者是 ref 型別，除非在這種情況下很 `Mapped^`  
   
 ## <a name="syntax"></a>語法  
   
@@ -140,7 +135,7 @@ template<typename Key,
   
  這類委派的物件必須強制執行嚴格弱式排序索引鍵的型別[multimap:: key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)。 這表示任何兩個索引鍵`X`和`Y`:  
   
- `key_comp()(X, Y)`傳回的相同的布林值結果，在每次呼叫。  
+ `key_comp()(X, Y)` 傳回的相同的布林值結果，在每次呼叫。  
   
  如果`key_comp()(X, Y)`是 true，則`key_comp()(Y, X)`必須為 false。  
   
@@ -165,7 +160,7 @@ template<typename Key,
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   

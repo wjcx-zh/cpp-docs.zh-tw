@@ -1,30 +1,25 @@
 ---
-title: "如何： 使用事件，在 C + + CLI |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用事件，在 C + + CLI |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d55adef749f66038b16d0e327e687e64227a5e93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 079f5fccfbefea98b44f49fb06bee8199436a1b1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
 本文示範如何使用介面中宣告事件和函式來叫用事件，以及實作介面的類別以及事件處理常式。  
@@ -653,5 +648,5 @@ hello
 hello  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [event](../windows/event-cpp-component-extensions.md)

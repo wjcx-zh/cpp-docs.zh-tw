@@ -1,13 +1,10 @@
 ---
-title: "WinInet 如何讓您更輕鬆地建立網際網路用戶端應用程式 |Microsoft 文件"
-ms.custom: 
+title: WinInet 如何讓您更輕鬆地建立網際網路用戶端應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - WinInet classes [MFC], vs. WinSock
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c79404f296df09afb177930897064b8455217d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09a7427374de085de9bd2872c8b1368a6b961b35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet 如何讓您更輕鬆地建立網際網路用戶端應用程式
 Win32 網際網路擴充功能或 WinInet，提供一般的網際網路通訊協定，包括 gopher、 FTP 和 HTTP 存取。 使用 WinInet，您可以撰寫網際網路用戶端應用程式在更高的層級的程式設計，而不必處理 WinSock、 TCP/IP 或特定網際網路通訊協定的詳細資料。 WinInet 所有三種通訊協定，熟悉的 Win32 API 介面提供一組一致的函數。 這種一致性降到最低 （例如，從 FTP 變更為 HTTP) 會變更基礎通訊協定，進行您需要的程式碼變更。  
@@ -58,7 +53,7 @@ Win32 網際網路擴充功能或 WinInet，提供一般的網際網路通訊協
   
  您的電腦可以做為用戶端在網際網路上的其他電腦執行的許多作業可能需要很長的時間。 這些作業的速度通常只能使用您的網路連線速度，但它們可能也會受到其他網路流量和作業的複雜度。 例如，連接到遠端 FTP 伺服器，需要您的電腦先查閱該伺服器來尋找其位址的名稱。 您的應用程式會嘗試連接到該位址的伺服器。 一旦開啟連接時，您的電腦和遠端伺服器會起始與檔案傳輸通訊協定的交談才能實際擷取檔案使用的連接。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [MFC 如何讓您更輕鬆地建立網際網路用戶端應用程式](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
 

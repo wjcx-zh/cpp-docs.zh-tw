@@ -1,31 +1,26 @@
 ---
-title: "如何： 修改原生函式中的參考類別 |Microsoft 文件"
-ms.custom: 
+title: 如何： 修改原生函式中的參考類別 |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 23f254ad76a080c7dadfc03e354e29bce4a31070
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d08524974c3edee2239e1934685099dfddca6e73
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改原生函式中的參考類別
 您可以將參考類別與 CLR 陣列傳遞至原生函式，並修改類別中，使用 PInvoke 服務。  
@@ -100,5 +95,5 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,30 +1,25 @@
 ---
-title: "使用者定義的運算子 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 使用者定義的運算子 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cf5583b3ae896ea252d191fbeba86e202b56cef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-operators-ccli"></a>使用者定義的運算子 (C++/CLI)
 Managed 類型的使用者定義運算子允許為靜態成員或是執行個體成員，或位於全域範圍。 不過，不是以 Visual C++ 語言撰寫的程式中，只有靜態運算子可以透過用戶端的中繼資料可取得。  
@@ -150,7 +145,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例將示範運算子合成，但只有當您使用**/clr**編譯。 如果沒有定義任何一個二元運算子的工作表單，運算子合成會建立它，其中指派運算子左方會使用 CLR 類型。  
+ 下列範例將示範運算子合成，但只有當您使用 **/clr**編譯。 如果沒有定義任何一個二元運算子的工作表單，運算子合成會建立它，其中指派運算子左方會使用 CLR 類型。  
   
 ```cpp  
 // mcppv2_user-defined_operators_2.cpp  
@@ -176,5 +171,5 @@ int main() {
 30  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)

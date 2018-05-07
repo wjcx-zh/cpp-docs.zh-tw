@@ -2,11 +2,8 @@
 title: 'multiset:: lower_bound (STL/CLR) |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::lower_bound
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - lower_bound member [STL/CLR]
 ms.assetid: 5e3d1ba0-8b03-436e-b502-dbdb764f452b
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 79d7c0d73d311e6d5f56811655aab04009b1f33f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0142f9bce223808016787b7dc7d0212f28e79a1f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetlowerbound-stlclr"></a>multiset::lower_bound (STL/CLR)
 尋找符合指定之索引鍵的範圍開頭。  
@@ -88,7 +83,7 @@ lower_bound(L'x')==end() = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset:: count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)   
  [multiset:: equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)   

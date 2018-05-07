@@ -1,12 +1,9 @@
 ---
-title: "COleTemplateServer 類別 |Microsoft 文件"
-ms.custom: 
+title: COleTemplateServer 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4bf5f696eeff3e4e26a9d77714c0d5a6f093aaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 類別
 用於 OLE 視覺化編輯伺服程式、Automation 伺服程式和連結容器 (支援內嵌連結的應用程式)。  
@@ -61,9 +56,9 @@ class COleTemplateServer : public COleObjectFactory
 |[COleTemplateServer::UpdateRegistry](#updateregistry)|使用 OLE 系統登錄中註冊的文件類型。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別衍生自類別[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); 通常，您可以使用`COleTemplateServer`直接而不是衍生您自己的類別。 `COleTemplateServer`使用[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件來管理伺服器文件。 使用`COleTemplateServer`實作完整的伺服器，也就是可以當做獨立應用程式執行的伺服器時。 完整的伺服器通常是多個文件介面 (MDI) 應用程式，儘管支援單一文件介面 (SDI) 應用程式。 一個`COleTemplateServer`物件所需的每個應用程式支援的伺服器文件的類型; 也就是說，如果您的伺服器應用程式支援的工作表和圖表，您必須有兩個`COleTemplateServer`物件。  
+ 這個類別衍生自類別[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); 通常，您可以使用`COleTemplateServer`直接而不是衍生您自己的類別。 `COleTemplateServer` 使用[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件來管理伺服器文件。 使用`COleTemplateServer`實作完整的伺服器，也就是可以當做獨立應用程式執行的伺服器時。 完整的伺服器通常是多個文件介面 (MDI) 應用程式，儘管支援單一文件介面 (SDI) 應用程式。 一個`COleTemplateServer`物件所需的每個應用程式支援的伺服器文件的類型; 也就是說，如果您的伺服器應用程式支援的工作表和圖表，您必須有兩個`COleTemplateServer`物件。  
   
- `COleTemplateServer`覆寫`OnCreateInstance`所定義的成員函式`COleObjectFactory`。 此架構能夠建立適當類型的 c + + 物件會呼叫此成員函式。  
+ `COleTemplateServer` 覆寫`OnCreateInstance`所定義的成員函式`COleObjectFactory`。 此架構能夠建立適當類型的 c + + 物件會呼叫此成員函式。  
   
  如需伺服器的詳細資訊，請參閱文章[伺服器： 實作伺服器](../../mfc/servers-implementing-a-server.md)。  
   
@@ -79,7 +74,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
  建構 `COleTemplateServer` 物件。  
   
 ```  
@@ -89,7 +84,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>備註  
  如需簡短的使用說明`COleTemplateServer`類別，請參閱[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)類別概觀。  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
  連接所指向的文件範本`pDocTemplate`基礎[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)物件。  
   
 ```  
@@ -112,7 +107,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  取消註冊的相關聯的文件範本。  
   
 ```  
@@ -125,7 +120,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>備註  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
  載入文件範本字串中的檔案類型資訊，並將該資訊放在 OLE 系統登錄中。  
   
 ```  
@@ -140,13 +135,13 @@ void UpdateRegistry(
  `nAppType`  
  中的值**OLE_APPTYPE** AFXDISP 中定義的列舉。H. 它可以包含下列值之一：  
   
-- `OAT_INPLACE_SERVER`伺服器具有完整伺服器的使用者介面。  
+- `OAT_INPLACE_SERVER` 伺服器具有完整伺服器的使用者介面。  
   
-- `OAT_SERVER`只有內嵌伺服器支援。  
+- `OAT_SERVER` 只有內嵌伺服器支援。  
   
-- `OAT_CONTAINER`容器支援內嵌物件連結。  
+- `OAT_CONTAINER` 容器支援內嵌物件連結。  
   
-- `OAT_DISPATCH_OBJECT`物件是`IDispatch`的能力。  
+- `OAT_DISPATCH_OBJECT` 物件是`IDispatch`的能力。  
   
 - **OAT_DOC_OBJECT_SERVER**伺服器同時支援內嵌和文件物件元件模型。  
   
@@ -168,7 +163,7 @@ void UpdateRegistry(
   
  如需詳細資訊，請參閱 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [COleObjectFactory 類別](../../mfc/reference/coleobjectfactory-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

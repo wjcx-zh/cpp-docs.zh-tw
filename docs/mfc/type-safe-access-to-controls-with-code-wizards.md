@@ -1,13 +1,10 @@
 ---
-title: "使用程式碼精靈的控制項類型安全存取 |Microsoft 文件"
-ms.custom: 
+title: 使用程式碼精靈的控制項類型安全存取 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a431061704bf2affa8a343487ff20f8b55b9e6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 025fd280dc6bf0947dae59cf77abe141bc312df8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>使用程式碼精靈的控制項類型安全存取
 如果您熟悉 DDX 功能，您可以使用中的控制項屬性[加入成員變數精靈](../ide/add-member-variable-wizard.md)建立類型安全存取。 這個方法會比建立不使用程式碼精靈的控制項容易的。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  如需將控制項的詳細資訊，請參閱[控制項](../mfc/controls-mfc.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在對話方塊中的控制項類型安全存取](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)   
  [不使用程式碼精靈的控制項型別安全存取](../mfc/type-safe-access-to-controls-without-code-wizards.md)

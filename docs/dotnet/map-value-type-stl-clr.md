@@ -1,12 +1,9 @@
 ---
-title: "map:: value_type (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'map:: value_type (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::value_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 9f02ac42-c1e0-4671-bed3-72d6c06a1e66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3d4f1432e26415edd2ac6a3c70da4c51433ca89f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a87302d57b26f2e498974d16271bb3257dcf4031
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapvaluetype-stlclr"></a>map::value_type (STL/CLR)
 元素的類型。  
@@ -76,7 +71,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map:: const_reference (STL/CLR)](../dotnet/map-const-reference-stl-clr.md)   
  [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)   

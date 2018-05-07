@@ -1,12 +1,9 @@
 ---
-title: "CMFCPropertyGridColorProperty 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCPropertyGridColorProperty 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33c807343c29fca74168167ef5d784e056b350fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 類別
 `CMFCPropertyGridColorProperty` 類別支援開啟色彩選取對話方塊的屬性清單控制項項目。  
@@ -94,7 +89,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>需求  
  **標頭：** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  建構 `CMFCPropertyGridColorProperty` 物件。  
   
 ```  
@@ -122,7 +117,7 @@ CMFCPropertyGridColorProperty(
  [輸入] `dwData`  
  應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
   
-##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  可讓*自動*色彩選取對話方塊上的按鈕。 (標準自動按鈕的標籤為**自動**。)  
   
 ```  
@@ -140,11 +135,11 @@ void EnableAutomaticButton(
  自動 （預設） 色彩的 RGB 色彩值。  
   
  [輸入] `bEnable`  
- `TRUE`若要啟用 [自動] 按鈕。否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要啟用 [自動] 按鈕。否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton  
  可讓*其他*色彩選取對話方塊上的按鈕。 (標準其他按鈕的標籤為**更多色彩**。)  
   
 ```  
@@ -159,14 +154,14 @@ void EnableOtherButton(
  其他按鈕的標籤文字。  
   
  [輸入] `bAltColorDlg`  
- `TRUE`若要顯示`CMFCColorDialog` 對話方塊。`FALSE`顯示標準色彩選取對話方塊。 預設值是 `TRUE`。  
+ `TRUE` 若要顯示`CMFCColorDialog` 對話方塊。`FALSE`顯示標準色彩選取對話方塊。 預設值是 `TRUE`。  
   
  [輸入] `bEnable`  
- `TRUE`若要顯示 [其他] 按鈕。否則， `FALSE`。  預設值是 `TRUE`。  
+ `TRUE` 若要顯示 [其他] 按鈕。否則， `FALSE`。  預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor  
  取得屬性的目前色彩。  
   
 ```  
@@ -178,7 +173,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor  
  設定屬性的新色彩。  
   
 ```  
@@ -191,7 +186,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber  
  指定目前色彩屬性格線中的資料行數目。  
   
 ```  
@@ -205,7 +200,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ### <a name="remarks"></a>備註  
  這個方法會設定的值`m_nColumnsNumber`受保護的資料成員。  
   
-##  <a name="setoriginalvalue"></a>CMFCPropertyGridColorProperty::SetOriginalValue  
+##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue  
  設定可編輯屬性的原始值。  
   
 ```  
@@ -219,7 +214,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ### <a name="remarks"></a>備註  
  使用[cmfcpropertygridproperty:: Resetoriginalvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#resetoriginalvalue)方法來重設已編輯的屬性的原始值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCPropertyGridCtrl 類別](../../mfc/reference/cmfcpropertygridctrl-class.md)   

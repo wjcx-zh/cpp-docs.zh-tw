@@ -1,12 +1,9 @@
 ---
-title: "CDragListBox 類別 |Microsoft 文件"
-ms.custom: 
+title: CDragListBox 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDragListBox
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDragListBox [MFC], Dropped
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424d9db088aa171bdbca868326eb80144a10704b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 類別
 除了提供 Windows 清單方塊中，功能`CDragListBox`類別可讓使用者在清單方塊內移動清單方塊項目，例如檔案名稱。  
@@ -92,7 +87,7 @@ class CDragListBox : public CListBox
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="begindrag"></a>CDragListBox::BeginDrag  
+##  <a name="begindrag"></a>  CDragListBox::BeginDrag  
  由呼叫發生事件時，framework 就可以開始拖曳作業，例如按下滑鼠左的按鈕。  
   
 ```  
@@ -109,7 +104,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ### <a name="remarks"></a>備註  
  如果您想要控制在拖曳作業開始時，會發生什麼事，請覆寫這個函式。 預設實作會擷取滑鼠，並會保持在拖放到模式，直到使用者按下滑鼠左鍵或右鍵按鈕或按 esc 鍵，此時取消拖曳作業。  
   
-##  <a name="canceldrag"></a>CDragListBox::CancelDrag  
+##  <a name="canceldrag"></a>  CDragListBox::CancelDrag  
  在取消拖曳作業時，由架構呼叫。  
   
 ```  
@@ -123,14 +118,14 @@ virtual void CancelDrag(CPoint pt);
 ### <a name="remarks"></a>備註  
  覆寫這個函式，以處理您的清單方塊控制項的任何特殊處理。  
   
-##  <a name="cdraglistbox"></a>CDragListBox::CDragListBox  
+##  <a name="cdraglistbox"></a>  CDragListBox::CDragListBox  
  建構 `CDragListBox` 物件。  
   
 ```  
 CDragListBox();
 ```  
   
-##  <a name="dragging"></a>CDragListBox::Dragging  
+##  <a name="dragging"></a>  CDragListBox::Dragging  
  當被拖曳的清單方塊項目內，由架構呼叫`CDragListBox`物件。  
   
 ```  
@@ -144,16 +139,16 @@ virtual UINT Dragging(CPoint pt);
 ### <a name="return-value"></a>傳回值  
  要顯示的游標資源識別碼。 下列是可能值：  
   
-- `DL_COPYCURSOR`表示將複製的項目。  
+- `DL_COPYCURSOR` 表示將複製的項目。  
   
-- `DL_MOVECURSOR`表示將會移動項目。  
+- `DL_MOVECURSOR` 表示將會移動項目。  
   
-- `DL_STOPCURSOR`指出目前置放目標不是可接受。  
+- `DL_STOPCURSOR` 指出目前置放目標不是可接受。  
   
 ### <a name="remarks"></a>備註  
  傳回的預設行為`DL_MOVECURSOR`。 如果您想要提供額外的功能，請覆寫這個函式。  
   
-##  <a name="drawinsert"></a>CDragListBox::DrawInsert  
+##  <a name="drawinsert"></a>  CDragListBox::DrawInsert  
  由架構呼叫以繪製具有指定之索引的項目之前插入的導線。  
   
 ```  
@@ -167,7 +162,7 @@ virtual void DrawInsert(int nItem);
 ### <a name="remarks"></a>備註  
  值為-1 清除插入輔助線。 覆寫此函式可修改的外觀或行為插入輔助線。  
   
-##  <a name="dropped"></a>CDragListBox::Dropped  
+##  <a name="dropped"></a>  CDragListBox::Dropped  
  在卸除項目時由架構呼叫`CDragListBox`物件。  
   
 ```  
@@ -186,7 +181,7 @@ virtual void Dropped(
 ### <a name="remarks"></a>備註  
  預設行為會將清單方塊項目和其資料複製到新位置，然後再刪除原始的項目。 覆寫此函式可自訂的預設行為，例如啟用清單項目拖曳到清單內的其他位置的複本。  
   
-##  <a name="itemfrompt"></a>CDragListBox::ItemFromPt  
+##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
  呼叫此函式可擷取的清單方塊項目以零為起始的索引位於`pt`。  
   
 ```  
@@ -205,7 +200,7 @@ int ItemFromPt(
 ### <a name="return-value"></a>傳回值  
  拖放到清單方塊項目的以零為起始的索引。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 TSTCON](../../visual-cpp-samples.md)   
  [CListBox 類別](../../mfc/reference/clistbox-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

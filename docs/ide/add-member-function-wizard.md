@@ -1,13 +1,10 @@
 ---
-title: "加入成員函式精靈 |Microsoft 文件"
-ms.custom: 
+title: 加入成員函式精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.function.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Add Member Function Wizard [C++]
 ms.assetid: 13b6defc-faa6-4d57-83db-9dd854cbea3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 775b519b304549b474cd21980ef5a4cbe8f2d4d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 488c7ca455b267a79b0d2906849596346a191792
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-member-function-wizard"></a>加入成員函式精靈
 此精靈會將成員函式宣告加入至標頭檔與實作檔以取得所選類別的虛設常式成員函式實作。  
@@ -87,5 +82,5 @@ ms.lasthandoff: 12/21/2017
  **函式簽章**  
  顯示當您按一下出現在程式碼中的成員函式**完成**。 您無法編輯此方塊中的文字。 若要變更此成員函式，變更適當的方塊中的精靈。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入成員函式](../ide/adding-a-member-function-visual-cpp.md)

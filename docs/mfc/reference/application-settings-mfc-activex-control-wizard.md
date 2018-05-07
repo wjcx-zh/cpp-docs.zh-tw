@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項精靈、 應用程式設定 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項精靈、 應用程式設定 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.appset
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b63507ba50f5f9d7dfb0fe5487e2758ced02cdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ffa17d484d6f35d04547dca58a9b8753c15b272
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>應用程式設定，MFC ActiveX 控制項精靈
 您可使用 [MFC ActiveX 控制項精靈] 的這個頁面來設計基本功能並將其加入新的 MFC ActiveX 專案。 這些設定是套用至應用程式本身，而不是控制項的任何特定功能或項目。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   專案包含的 HLP 目錄內含專案說明點陣圖檔和說明主題檔 (*projname*.rtf)。 這個說明主題檔包含標準的說明主題，其適用於許多 ActiveX 控制項支援的通用屬性、事件及方法。 您可編輯 .rtf 檔來加入或移除特定說明主題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項精靈](../../mfc/reference/mfc-activex-control-wizard.md)   
  [MFC ActiveX 控制項精靈、 控制項名稱](../../mfc/reference/control-names-mfc-activex-control-wizard.md)   
  [MFC ActiveX 控制項精靈、控制項設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)

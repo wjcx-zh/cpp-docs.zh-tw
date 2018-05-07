@@ -1,24 +1,19 @@
 ---
-title: "Dll (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: Dll (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 02/06/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16b7ed16ec128f1fbf67d1b62e974ccd7ea5213b
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 39c334c659980dccdca670ab91501f0e30c4e6d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -26,7 +21,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a name="windows-runtime-component-dlls"></a>Windows 執行階段元件 Dll
 
-在大多數情況下，當您想要建立的 DLL 進行在 UWP 應用程式中使用，則在建立 Windows 執行階段元件使用該名稱的專案範本。 您可以建立 Windows 執行階段元件專案，適用於具有公用或私用的 Windows 執行階段類型的 Dll。 Windows 執行階段元件可以從任何 Windows 執行階段相容語言撰寫的應用程式存取。 根據預設，Windows 執行階段元件的編譯器設定專案使用**/ZW**切換。 .winmd 檔案必須具有根命名空間的相同名稱。 例如，名為 A.B.C.MyClass 的類別必須在名為 A.winmd、A.B.winmd 或 A.B.C.winmd 的中繼資料檔案中定義，才能執行個體化。 DLL 的名稱不需符合 .winmd 檔案名稱。
+在大多數情況下，當您想要建立的 DLL 進行在 UWP 應用程式中使用，則在建立 Windows 執行階段元件使用該名稱的專案範本。 您可以建立 Windows 執行階段元件專案，適用於具有公用或私用的 Windows 執行階段類型的 Dll。 Windows 執行階段元件可以從任何 Windows 執行階段相容語言撰寫的應用程式存取。 根據預設，Windows 執行階段元件的編譯器設定專案使用 **/ZW**切換。 .winmd 檔案必須具有根命名空間的相同名稱。 例如，名為 A.B.C.MyClass 的類別必須在名為 A.winmd、A.B.winmd 或 A.B.C.winmd 的中繼資料檔案中定義，才能執行個體化。 DLL 的名稱不需符合 .winmd 檔案名稱。
 
 如需詳細資訊，請參閱[c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
@@ -42,7 +37,7 @@ ms.lasthandoff: 02/21/2018
 
 ### <a name="to-create-a-standard-dll-in-visual-studio"></a>在 Visual Studio 中建立標準 DLL
 
-1. 在功能表列上選擇 **檔案**，**新增**，**專案**，然後選取**動態連結程式庫 (DLL)**範本。
+1. 在功能表列上選擇 **檔案**，**新增**，**專案**，然後選取**動態連結程式庫 (DLL)** 範本。
 
 1. 輸入專案的名稱，然後選擇 [ **確定** ] 按鈕。
 

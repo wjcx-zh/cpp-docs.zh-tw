@@ -1,12 +1,9 @@
 ---
-title: "CRectTracker 類別 |Microsoft 文件"
-ms.custom: 
+title: CRectTracker 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRectTracker
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f870ef92296636c8d27fc166d41cdefc54d1585
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecttracker-class"></a>CRectTracker 類別
 可讓項目以顯示、 移動和調整大小不同的方式。  
@@ -102,11 +97,11 @@ class CRectTracker
 |[CRectTracker::m_sizeMin](#m_sizemin)|決定最小的矩形寬度和高度。|  
   
 ## <a name="remarks"></a>備註  
- `CRectTracker`沒有基底類別。  
+ `CRectTracker` 沒有基底類別。  
   
  雖然`CRectTracker`類別設計來允許使用者使用圖形化介面的 OLE 項目互動，其使用不限於 OLE 功能的應用程式。 可以使用這類使用者介面的所需的任何位置。  
   
- `CRectTracker`框線可以是實線或虛線。 可以指定陰影的框線或覆蓋影線的模式，表示不同的狀態項目的項目。 您可以將八個調整大小控點放在外部或內部項目的框線。 (如需調整大小控點的說明，請參閱[GetHandleMask](#gethandlemask)。)最後，`CRectTracker`可讓您變更項目期間調整大小的方向。  
+ `CRectTracker` 框線可以是實線或虛線。 可以指定陰影的框線或覆蓋影線的模式，表示不同的狀態項目的項目。 您可以將八個調整大小控點放在外部或內部項目的框線。 (如需調整大小控點的說明，請參閱[GetHandleMask](#gethandlemask)。)最後，`CRectTracker`可讓您變更項目期間調整大小的方向。  
   
  若要使用`CRectTracker`，建構`CRectTracker`物件，並指定哪些顯示狀態初始化。 您接著可以使用此介面上 OLE 項目相關聯的目前狀態提供給使用者的視覺化回應`CRectTracker`物件。  
   
@@ -118,7 +113,7 @@ class CRectTracker
 ## <a name="requirements"></a>需求  
  **標頭：** afxext.h  
   
-##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
+##  <a name="adjustrect"></a>  CRectTracker::AdjustRect  
  追蹤矩形使用調整大小控點來調整大小時，由架構呼叫。  
   
 ```  
@@ -141,7 +136,7 @@ virtual void AdjustRect(
   
  並不直接支援的特殊功能`CRectTracker`，例如貼齊至格線或保留外觀比例，可以藉由覆寫這個函式實作。  
   
-##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
+##  <a name="crecttracker"></a>  CRectTracker::CRectTracker  
  建立並初始化`CRectTracker`物件。  
   
 ```  
@@ -175,7 +170,7 @@ CRectTracker(
 ### <a name="remarks"></a>備註  
  預設建構函式初始化`CRectTracker`物件的值填入`lpSrcRect`並初始化為系統預設值的其他大小。 如果使用任何參數，建立物件`m_rect`和`m_nStyle`資料成員都是未初始化。  
   
-##  <a name="draw"></a>CRectTracker::Draw  
+##  <a name="draw"></a>  CRectTracker::Draw  
  呼叫此函式可繪製的矩形外部線條和內部的區域。  
   
 ```  
@@ -189,7 +184,7 @@ void Draw(CDC* pDC) const;
 ### <a name="remarks"></a>備註  
  追蹤程式的樣式會判斷如何進行繪圖。 請參閱的建構函式`CRectTracker`如需有關可用樣式。  
   
-##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
+##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect  
  每當追蹤器的位置已變更時由架構呼叫時內`Track`或`TrackRubberBand`成員函式。  
   
 ```  
@@ -218,7 +213,7 @@ virtual void DrawTrackerRect(
   
  此函式可提供不同的意見反應追蹤作業期間會覆寫。  
   
-##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
+##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask  
  架構會呼叫此成員函式，來擷取遮罩矩形的調整大小控點。  
   
 ```  
@@ -231,7 +226,7 @@ virtual UINT GetHandleMask() const;
 ### <a name="remarks"></a>備註  
  調整大小控點出現在側邊和矩形的圓角，並允許使用者控制的形狀和大小的矩形。  
   
- 矩形有 8 編號 0-7 的調整大小控點。 每個調整大小控點被以的位元遮罩。該位元的值為 2 ^  *n* ，其中 *n* 是調整大小控點數目。 位元 0-3 對應到邊角調整大小控點開始左上方移動順時針旋轉。 對應至側邊的 4-7 位元調整大小控點朝順時針方向移動從頂端開始。 下圖顯示矩形的調整大小控點和其相對應調整大小控點的數字和值：  
+ 矩形有 8 編號 0-7 的調整大小控點。 每個調整大小控點被以的位元遮罩。該位元的值為 2 ^ *n*，其中*n*是調整大小控點數目。 位元 0-3 對應到邊角調整大小控點開始左上方移動順時針旋轉。 對應至側邊的 4-7 位元調整大小控點朝順時針方向移動從頂端開始。 下圖顯示矩形的調整大小控點和其相對應調整大小控點的數字和值：  
   
  ![調整大小控點數字](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
   
@@ -239,7 +234,7 @@ virtual UINT GetHandleMask() const;
   
  覆寫此成員函式，以隱藏或顯示指定的調整大小控點。  
   
-##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
+##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect  
  呼叫此函式可擷取的矩形座標。  
   
 ```  
@@ -253,7 +248,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="remarks"></a>備註  
  矩形的維度會包含任何調整大小控點位於 外框的寬度與高度。 時傳回，`lpTrueRect`永遠是標準化的裝置座標中矩形。  
   
-##  <a name="hittest"></a>CRectTracker::HitTest  
+##  <a name="hittest"></a>  CRectTracker::HitTest  
  呼叫此函式可了解使用者是否具有捕捉調整大小控點。  
   
 ```  
@@ -287,7 +282,7 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
+##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize  
  大小，單位為像素的`CRectTracker`調整大小控點。  
   
 ```  
@@ -297,14 +292,14 @@ int m_nHandleSize;
 ### <a name="remarks"></a>備註  
  初始化具有預設的系統值。  
   
-##  <a name="m_rect"></a>Crecttracker:: M_rect  
+##  <a name="m_rect"></a>  Crecttracker:: M_rect  
  矩形的工作區座標 （像素） 中的目前位置。  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
+##  <a name="m_sizemin"></a>  CRectTracker::m_sizeMin  
  矩形的大小下限。  
   
 ```  
@@ -314,7 +309,7 @@ CSize m_sizeMin;
 ### <a name="remarks"></a>備註  
  預設值 （literal） **cx**和**cy**，從預設系統的框線寬度的值計算所得。 此資料成員僅供`AdjustRect`成員函式。  
   
-##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
+##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle  
  目前的矩形樣式。  
   
 ```  
@@ -324,7 +319,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>備註  
  請參閱[CRectTracker::CRectTracker](#crecttracker)取得一份可能的樣式。  
   
-##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
+##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit  
  呼叫此函式可將轉換可能會有反向的控制代碼。  
   
 ```  
@@ -341,7 +336,7 @@ int NormalizeHit(int nHandle) const;
 ### <a name="remarks"></a>備註  
  當`CRectTracker::Track`或`CRectTracker::TrackRubberBand`稱為反轉允許，您也可以針對要在 x 軸、 y 軸，或兩者皆會反轉的矩形。 當發生這種情況時，`HitTest`會傳回相對於矩形也反轉的控制代碼。 因為意見反應取決於在矩形中，不會被修改的矩形資料結構一部分的螢幕位置，這並不適用於繪製游標意見反應。  
   
-##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
+##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect  
  由架構呼叫，每當呼叫期間變更 tracker 矩形`Track`。  
   
 ```  
@@ -357,7 +352,7 @@ virtual void OnChangedRect(const CRect& rectOld);
   
  當您想要執行任何動作矩形已調整大小之後，請覆寫這個函式。  
   
-##  <a name="setcursor"></a>CRectTracker::SetCursor  
+##  <a name="setcursor"></a>  CRectTracker::SetCursor  
  呼叫此函式可變更指標形狀時透過`CRectTracker`物件的區域。  
   
 ```  
@@ -379,7 +374,7 @@ BOOL SetCursor(
 ### <a name="remarks"></a>備註  
  呼叫此函式從您的視窗處理函式內`WM_SETCURSOR`訊息 (通常`OnSetCursor`)。  
   
-##  <a name="track"></a>CRectTracker::Track  
+##  <a name="track"></a>  CRectTracker::Track  
  呼叫此函式可顯示使用者介面的調整大小的矩形。  
   
 ```  
@@ -413,7 +408,7 @@ BOOL Track(
   
  如果`bAllowInvert`是**TRUE**，追蹤矩形可以反轉 x 軸或 y 軸上。  
   
-##  <a name="trackrubberband"></a>Crecttracker:: Trackrubberband  
+##  <a name="trackrubberband"></a>  Crecttracker:: Trackrubberband  
  呼叫此函式執行拖放矩形選取範圍。  
   
 ```  
@@ -443,7 +438,7 @@ BOOL TrackRubberBand(
   
  追蹤會使用從右下方的控制代碼的拖放頻外類型選取項目來執行。 如果允許反轉，矩形可以是向上和向左或往下及往右拖曳調整大小。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例追蹤器](../../visual-cpp-samples.md)   
  [MFC 範例 DRAWCLI](../../visual-cpp-samples.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

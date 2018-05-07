@@ -1,12 +1,9 @@
 ---
-title: "IRowsetNotifyCP 類別 |Microsoft 文件"
-ms.custom: 
+title: IRowsetNotifyCP 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetNotifyCP
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetNotifyCP class
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a43825ee3fa676ce07dcd3bc4e121abd400ef322
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 19147710ce8965222eed998e1a7ab4baa1e32caf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 類別
 實作連接點介面的提供者站台[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。  
@@ -51,7 +46,7 @@ class IRowsetNotifyCP :
  支援重新進入的 mutex 類別 (預設值是**CComSharedMutex**)。 Mutex 是允許執行緒互斥存取資源的同步處理物件。  
   
  `piid`  
- 介面識別碼指標 (**IID\***) 的**IRowsetNotify**連接點介面。 預設值是**& __uuidof(IRowsetNotify)**。  
+ 介面識別碼指標 (**IID\***) 的**IRowsetNotify**連接點介面。 預設值是 **& __uuidof(IRowsetNotify)**。  
   
  `DynamicUnkArray`  
  類型的陣列[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)，即為動態配置的陣列**IUnknown**指標給用戶端接收的介面。  
@@ -76,7 +71,7 @@ class IRowsetNotifyCP :
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [通知 (COM)](http://msdn.microsoft.com/library/windows/desktop/ms678433)   

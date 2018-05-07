@@ -1,13 +1,10 @@
 ---
-title: "快照集 |Microsoft 文件"
-ms.custom: 
+title: 快照集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c31e08fdda3cef526f46946e45ef956f9ad1adaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 309c81e8d370b61ba3a44d9253cda4fa9b84b6cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="snapshot"></a>快照
 快照集是資料錄集，以反映資料的靜態檢視表存在於快照集的建立的時間。 當您開啟了快照集，並移至的所有記錄時，它所包含的記錄集合，其值不會變更之前呼叫重建快照**Requery**。  
@@ -58,5 +53,5 @@ ms.lasthandoff: 12/21/2017
   
  所有的資料錄集的內容快照集共用的相關資訊，請參閱[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。 如需有關 ODBC 和快照集，包括 ODBC 資料指標程式庫，請參閱[ODBC](../../data/odbc/odbc-basics.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -1,13 +1,10 @@
 ---
-title: "如何： 宣告原生類型中的控制代碼 |Microsoft 文件"
-ms.custom: 
+title: 如何： 宣告原生類型中的控制代碼 |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 f1_keywords:
 - gcroot
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4573aac37eedecceab861eb41a70fc858b409fec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>如何：以原生類型宣告控制代碼
 您無法宣告原生類型中的控制代碼類型。 vcclr.h 提供類型安全包裝函式範本`gcroot`來參考 c + + 堆積的 CLR 物件。 此範本可讓您在原生類型中嵌入虛擬控制代碼，並將它視為基礎型別。 在大部分情況下，您可以使用`gcroot`物件做為內嵌類型，而不用任何轉型。 不過，在使用[針對每個，在](../dotnet/for-each-in.md)，您必須使用`static_cast`擷取基礎受管理的參考。  
@@ -123,5 +118,5 @@ int main() {
 String in V: Hello  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

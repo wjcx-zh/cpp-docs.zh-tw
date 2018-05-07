@@ -1,13 +1,10 @@
 ---
-title: "MSG 結構 1 |Microsoft 文件"
-ms.custom: 
+title: MSG 結構 1 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - MSG
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MSG structure [MFC]
 ms.assetid: dc166d27-9423-41f1-9599-5ba76d2f0138
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b504f116dcbff7fa45e741ff9715070ee0c74583
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="msg-structure1"></a>MSG 結構 1
 `MSG`結構包含從執行緒訊息佇列的訊息資訊。  
@@ -65,6 +60,6 @@ typedef struct tagMSG {     // msg
 ## <a name="requirements"></a>需求  
  **標頭：** winuser.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

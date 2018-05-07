@@ -1,12 +1,9 @@
 ---
-title: "C + + 中封送處理的概觀 |Microsoft 文件"
-ms.custom: 
+title: C + + 中封送處理的概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -18,21 +15,19 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9d910c7d6346d23f094e9359f0e5fe3536ee09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中封送處理的概觀
-在混合模式中，您有時必須封送處理您原生與 managed 型別之間的資料。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]導入了封送處理程式庫，可協助您封送處理，並將資料轉換的簡單方式。  
+在混合模式中，您有時必須封送處理您原生與 managed 型別之間的資料。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] 導入了封送處理程式庫，可協助您封送處理，並將資料轉換的簡單方式。  
   
  您可以使用封送處理，不論[marshal_context 類別](../dotnet/marshal-context-class.md)。 某些轉換需要的內容。 其他轉換可使用實作[marshal_as](../dotnet/marshal-as.md)函式。 下表列出支援的目前轉換、 是否需要內容，並封送處理的檔案必須包含：  
   
@@ -74,6 +69,6 @@ ms.lasthandoff: 12/21/2017
   
  在舊版中，您無法封送處理資料使用[平台叫用](/dotnet/framework/interop/consuming-unmanaged-dll-functions)。 如需有關`PInvoke`，請參閱[從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 支援程式庫](../dotnet/cpp-support-library.md)   
  [如何：擴充封送處理程式庫](../dotnet/how-to-extend-the-marshaling-library.md)

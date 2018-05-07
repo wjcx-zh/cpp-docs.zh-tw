@@ -1,11 +1,8 @@
 ---
-title: "Std:: map 類別 |Microsoft 文件"
-ms.custom: 
+title: 'Std:: map 類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54750d02386795e46675b31a06a082bd35402f1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6580ccb9ca19a575bac6a9fedbb4e8f16c7060ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map 類別
 
@@ -106,7 +101,7 @@ Map 基本上是 [std::map](../standard-library/map-class.md)的包裝函式。 
 |||
 |-|-|
 |名稱|描述|
-|[Map::MapChanged](#mapchanged-event.md) `event`|發生於 Map 變更時。|
+|[Map:: mapchanged](#mapchanged-event.md) `event`|發生於 Map 變更時。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -256,7 +251,7 @@ Map(
 *first*  
 用來初始化目前 Map 的項目範圍中，第一個項目的輸入迭代器。
 
-*last*  
+*最後一個*  
 用來初始化目前 Map 的項目範圍以外第一個項目的輸入迭代器。
 
 ## <a name="mapchanged"></a>  Map:: mapchanged 事件
@@ -306,7 +301,7 @@ virtual property unsigned int Size;
 
 Map 中的元素數目。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Platform 命名空間](platform-namespace-c-cx.md)  
 [在 c + + 中建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)  

@@ -1,13 +1,10 @@
 ---
-title: "加入成員變數精靈 |Microsoft 文件"
-ms.custom: 
+title: 加入成員變數精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.variable.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Add Member Variable Wizard [C++]
 ms.assetid: 73e8fa99-ac1a-42e2-8fc2-4684b9eb6d4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b909ec7ccd830e088df81ca0b2db8cda133c7a20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-member-variable-wizard"></a>加入成員變數精靈
 這個精靈將在成員變數宣告加入至標頭檔，並根據的選項，它可以將程式碼加入的.cpp 檔案。 一旦您加入成員變數使用精靈，您可以編輯在開發環境中的程式碼。  
@@ -96,5 +91,5 @@ ms.lasthandoff: 12/21/2017
  **註解**  
  提供成員變數的標頭檔中的註解。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)

@@ -1,13 +1,10 @@
 ---
-title: "網際網路用戶端類別必要條件 |Microsoft 文件"
-ms.custom: 
+title: 網際網路用戶端類別必要條件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d73ef71854753ffd561053cc71509c7654d33b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6c16c3658ee5d27def4892997c50115dc0b8831
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>網際網路用戶端類別的必要條件
 有些網際網路用戶端 （例如讀取檔案） 所採取的動作 （在此情況下，建立網際網路連線） 中有一些必要的動作。 下表列出一些用戶端動作的必要條件。  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
 |開啟 gopher 檔案。|建立 gopher 連線。 建立與 gopher 定位器[CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator)或找不到與定位器[CGopherFileFind::GetLocator](../mfc/reference/cgopherfilefind-class.md#getlocator)。 呼叫[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)。|  
 |讀取 gopher 檔案。|開啟 gopher 檔案。 使用[CGopherFile](../mfc/reference/cgopherfile-class.md)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [建立網際網路用戶端應用程式的 MFC 類別](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
  [使用 MFC WinInet 類別建立網際網路用戶端應用程式](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

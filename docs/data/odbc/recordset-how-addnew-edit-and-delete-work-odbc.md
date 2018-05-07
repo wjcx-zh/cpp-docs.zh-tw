@@ -2,12 +2,9 @@
 title: 資料錄集： AddNew、 Edit 和 Delete 的運作方式 (ODBC) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>資料錄集：AddNew、Edit 和 Delete 的運作方式 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  做為程式庫，您可能想要讀取[資料錄欄位交換： RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)，用來描述 RFX 在更新作業中的對應角色。  
   
-##  <a name="_core_adding_a_record"></a>加入資料錄  
+##  <a name="_core_adding_a_record"></a> 加入資料錄  
 
  將新的記錄加入至資料錄集需要呼叫資料錄集的[AddNew](../../mfc/reference/crecordset-class.md#addnew)成員函式，設定新的記錄欄位資料成員的值，然後呼叫[更新](../../mfc/reference/crecordset-class.md#update)来寫入的成員函式資料來源記錄。  
   
@@ -73,9 +68,9 @@ ms.lasthandoff: 12/21/2017
   
  若要認可您的變更，請呼叫**更新**。 當您呼叫**更新**新記錄：  
   
--   如果您的 ODBC 驅動程式支援**:: SQLSetPos** ODBC API 函式，MFC 會使用函式在資料來源上加入記錄。 與**:: SQLSetPos**，MFC 可以更有效率地將記錄，因為沒有建構及處理 SQL 陳述式。  
+-   如果您的 ODBC 驅動程式支援 **:: SQLSetPos** ODBC API 函式，MFC 會使用函式在資料來源上加入記錄。 與 **:: SQLSetPos**，MFC 可以更有效率地將記錄，因為沒有建構及處理 SQL 陳述式。  
   
--   如果**:: SQLSetPos**不能使用，MFC 會進行下列作業：  
+-   如果 **:: SQLSetPos**不能使用，MFC 會進行下列作業：  
   
     1.  如果偵測不到任何變更，**更新**不做任何動作，並傳回 0。  
   
@@ -95,16 +90,16 @@ ms.lasthandoff: 12/21/2017
     > [!TIP]
     >  若要偵測資料錄集的資料成員的值變更時，MFC 會使用**PSEUDO_NULL**適用於每個您可以儲存在資料錄集的資料類型值。 如果您必須明確將欄位設定為**PSEUDO_NULL**值和欄位發生的狀況已標記為 Null，您必須也呼叫`SetFieldNull`，第一個參數中的欄位的位址傳遞和**FALSE**第二個參數中。  
   
-##  <a name="_core_visibility_of_added_records"></a>加入資料錄的可見性  
+##  <a name="_core_visibility_of_added_records"></a> 加入資料錄的可見性  
  何時加入一筆記錄都可以看到資料錄集的？ 加入的資料錄有時顯示，有時也看不見，視兩件事而定：  
   
 -   驅動程式都可以。  
   
 -   架構可以利用。  
   
- 如果您的 ODBC 驅動程式支援**:: SQLSetPos** ODBC API 函式，MFC 會使用函式加入記錄。 與**:: SQLSetPos**，加入記錄會顯示任何可更新的 MFC 資料錄集。 不支援此函式，加入記錄不會顯示，您必須呼叫**Requery**看到它們。 使用**:: SQLSetPos**也會更有效率。  
+ 如果您的 ODBC 驅動程式支援 **:: SQLSetPos** ODBC API 函式，MFC 會使用函式加入記錄。 與 **:: SQLSetPos**，加入記錄會顯示任何可更新的 MFC 資料錄集。 不支援此函式，加入記錄不會顯示，您必須呼叫**Requery**看到它們。 使用 **:: SQLSetPos**也會更有效率。  
   
-##  <a name="_core_editing_an_existing_record"></a>編輯現有的記錄  
+##  <a name="_core_editing_an_existing_record"></a> 編輯現有的記錄  
  編輯資料錄集中的現有記錄包含捲動至資料錄，呼叫資料錄集的[編輯](../../mfc/reference/crecordset-class.md#edit)成員函式，設定新的記錄欄位資料成員的值，然後呼叫[更新](../../mfc/reference/crecordset-class.md#update)成員函式，將已變更的記錄寫入資料來源。  
   
  呼叫的前提**編輯**，資料錄集必須是可更新，以及上一筆記錄。 `CanUpdate`和`IsDeleted`成員函式可讓您判斷這些條件。 目前的記錄也必須已經有尚未刪除，而且必須有記錄中資料錄集 (兩者`IsBOF`和`IsEOF`傳回 0)。  
@@ -120,11 +115,11 @@ ms.lasthandoff: 12/21/2017
   
  當您呼叫**更新**已編輯的記錄：  
   
--   如果您的 ODBC 驅動程式支援**:: SQLSetPos** ODBC API 函式，MFC 會使用函式來更新資料來源上的記錄。 與**:: SQLSetPos**，驅動程式會比較您的編輯緩衝區，以更新伺服器上的記錄，如果兩個不同的伺服器上對應的記錄。 與**:: SQLSetPos**，MFC 可以更有效率地更新的記錄，因為沒有建構及處理 SQL 陳述式。  
+-   如果您的 ODBC 驅動程式支援 **:: SQLSetPos** ODBC API 函式，MFC 會使用函式來更新資料來源上的記錄。 與 **:: SQLSetPos**，驅動程式會比較您的編輯緩衝區，以更新伺服器上的記錄，如果兩個不同的伺服器上對應的記錄。 與 **:: SQLSetPos**，MFC 可以更有效率地更新的記錄，因為沒有建構及處理 SQL 陳述式。  
   
      -或-  
   
--   如果**:: SQLSetPos**不能使用，MFC 會進行下列作業：  
+-   如果 **:: SQLSetPos**不能使用，MFC 會進行下列作業：  
   
     1.  如果不已有任何變更，**更新**不做任何動作，並傳回 0。  
   
@@ -140,18 +135,18 @@ ms.lasthandoff: 12/21/2017
     > [!TIP]
     >  如果您呼叫`AddNew`或**編輯**之後之前，但您之前在呼叫其中一個函式呼叫**更新**，編輯緩衝區重新整理的預存的記錄，取代中的新增或編輯資料錄進度。 此行為可讓您進行中止`AddNew`或**編輯**並開始新的： 如果您判斷在進行記錄錯誤，只需呼叫**編輯**或`AddNew`一次。  
   
-##  <a name="_core_deleting_a_record"></a>刪除記錄  
+##  <a name="_core_deleting_a_record"></a> 刪除記錄  
  捲動至資料錄，然後呼叫資料錄集的資料錄集中刪除資料錄的牽涉到[刪除](../../mfc/reference/crecordset-class.md#delete)成員函式。 不同於`AddNew`和**編輯**，**刪除**不需要符合呼叫**更新**。  
   
  呼叫的前提**刪除**，必須是可更新的資料錄集，而且它必須是記錄上。 `CanUpdate`， `IsBOF`， `IsEOF`，和`IsDeleted`成員函式可讓您判斷這些條件。  
   
  當您呼叫**刪除**:  
   
--   如果您的 ODBC 驅動程式支援**:: SQLSetPos** ODBC API 函式，MFC 會使用函式刪除資料來源上的記錄。 使用**:: SQLSetPos**通常比使用 SQL 更有效率。  
+-   如果您的 ODBC 驅動程式支援 **:: SQLSetPos** ODBC API 函式，MFC 會使用函式刪除資料來源上的記錄。 使用 **:: SQLSetPos**通常比使用 SQL 更有效率。  
   
      -或-  
   
--   如果**:: SQLSetPos**不能使用，MFC 會進行下列作業：  
+-   如果 **:: SQLSetPos**不能使用，MFC 會進行下列作業：  
   
     1.  編輯緩衝區中目前的記錄不會備份在`AddNew`和**編輯**。  
   
@@ -168,7 +163,7 @@ ms.lasthandoff: 12/21/2017
   
  在更新作業中使用的 SQL 陳述式的相關資訊，請參閱[SQL](../../data/odbc/sql.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 更新的詳細資訊 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)   
  [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

@@ -1,12 +1,9 @@
 ---
-title: "set:: size_type (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'set:: size_type (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::size_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - size_type member [STL/CLR]
 ms.assetid: df478b73-b2e6-4add-b22a-39a216753037
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: df07b78644f277347e6fe612b676b841cd262afe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43403bce90c6e33da1d5b62f71066a23743002f7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setsizetype-stlclr"></a>set::size_type (STL/CLR)
 兩個項目之間的帶正負號距離的類型。  
@@ -80,6 +75,6 @@ end()-begin() = 3
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
  [set::empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)

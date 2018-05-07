@@ -1,12 +1,9 @@
 ---
-title: "CGdiObject 類別 |Microsoft 文件"
-ms.custom: 
+title: CGdiObject 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGdiObject
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 類別
 為各種 Windows 繪圖裝置介面 (GDI) 物件 (例如點陣圖、區域、筆刷、畫筆、調色盤和字型) 提供基底類別。  
@@ -110,7 +105,7 @@ class CGdiObject : public CObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="attach"></a>CGdiObject::Attach  
+##  <a name="attach"></a>  CGdiObject::Attach  
  將附加的 Windows GDI 物件`CGdiObject`物件。  
   
 ```  
@@ -124,7 +119,7 @@ BOOL Attach(HGDIOBJ hObject);
 ### <a name="return-value"></a>傳回值  
  如果附件是成功，則為非零否則便是 0。  
   
-##  <a name="cgdiobject"></a>CGdiObject::CGdiObject  
+##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject  
  建構 `CGdiObject` 物件。  
   
 ```  
@@ -134,7 +129,7 @@ CGdiObject();
 ### <a name="remarks"></a>備註  
  您絕對不要建立`CGdiObject`直接。 相反地，您建立物件從其衍生的類別，例如`CPen`或**Cbrush**。  
   
-##  <a name="createstockobject"></a>CGdiObject::CreateStockObject  
+##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  擷取控制代碼為其中一個預先定義的內建 Windows GDI 畫筆、 筆刷或字型，並將附加的 GDI 物件`CGdiObject`物件。  
   
 ```  
@@ -151,7 +146,7 @@ BOOL CreateStockObject(int nIndex);
 ### <a name="remarks"></a>備註  
  呼叫此函式，使用其中一個衍生的類別對應至 Windows GDI 物件類型，例如`CPen`的內建的畫筆。  
   
-##  <a name="deleteobject"></a>CGdiObject::DeleteObject  
+##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
  從記憶體刪除附加的 Windows GDI 物件，藉由釋放與 Windows GDI 物件相關聯的所有系統儲存體。  
   
 ```  
@@ -166,7 +161,7 @@ BOOL DeleteObject();
   
  刪除模式筆刷時，不會刪除與筆刷相關聯的點陣圖。 點陣圖必須個別刪除。  
   
-##  <a name="deletetempmap"></a>CGdiObject::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
  會自動呼叫`CWinApp`閒置時間處理常式，`DeleteTempMap`刪除任何暫存`CGdiObject`所建立的物件`FromHandle`。  
   
 ```  
@@ -174,12 +169,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>備註  
- `DeleteTempMap`卸離 Windows GDI 物件附加至暫存`CGdiObject`物件，然後再刪除`CGdiObject`物件。  
+ `DeleteTempMap` 卸離 Windows GDI 物件附加至暫存`CGdiObject`物件，然後再刪除`CGdiObject`物件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
-##  <a name="detach"></a>CGdiObject::Detach  
+##  <a name="detach"></a>  CGdiObject::Detach  
  卸離 Windows GDI 物件，從`CGdiObject`物件，並將控制代碼傳回至 Windows GDI 物件。  
   
 ```  
@@ -189,7 +184,7 @@ HGDIOBJ Detach();
 ### <a name="return-value"></a>傳回值  
  A`HANDLE`至 Windows GDI 物件中斷連結; 否則為**NULL**附加任何 GDI 物件。  
   
-##  <a name="fromhandle"></a>CGdiObject::FromHandle  
+##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
  將指標傳回至`CGdiObject`物件控制代碼提供給 Windows GDI 物件。  
   
 ```  
@@ -208,7 +203,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
   
  此暫存`CGdiObject`物件只適用於在下次應用程式在其事件迴圈中，此時就會刪除所有暫存的圖形物件有閒置時間。 另一種說法是，暫存物件的一個視窗訊息處理期間才有效。  
   
-##  <a name="getobject"></a>CGdiObject::GetObject  
+##  <a name="getobject"></a>  CGdiObject::GetObject  
  填滿定義指定的物件資料緩衝區。  
   
 ```  
@@ -243,7 +238,7 @@ int GetObject(
   
  如果物件是`CPalette`物件`GetObject`擷取**WORD**調色盤中指定的項目數目。 此函式不會擷取[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構，定義的調色盤。 應用程式可以藉由呼叫取得調色盤項目資訊[CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)。  
   
-##  <a name="getobjecttype"></a>CGdiObject::GetObjectType  
+##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  擷取的 GDI 物件的類型。  
   
 ```  
@@ -279,7 +274,7 @@ UINT GetObjectType() const;
   
 - **OBJ_ENHMETADC**增強型中繼檔裝置內容  
   
-##  <a name="getsafehandle"></a>CGdiObject::GetSafeHandle  
+##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
  傳回`m_hObject`除非**這**是**NULL**的情況下**NULL**傳回。  
   
 ```  
@@ -295,14 +290,14 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)。  
   
-##  <a name="m_hobject"></a>CGdiObject::m_hObject  
+##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
  A`HANDLE`包含`HBITMAP`， **HRGN**， `HBRUSH`， `HPEN`， `HPALETTE`，或**HFONT**附加至這個物件。  
   
 ```  
 HGDIOBJ m_hObject;  
 ```  
   
-##  <a name="operator_neq"></a>CGdiObject::operator ！ =  
+##  <a name="operator_neq"></a>  CGdiObject::operator ！ =  
  判斷兩個 GDI 物件是否以邏輯方式不相等。  
   
 ```  
@@ -316,7 +311,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ### <a name="remarks"></a>備註  
  決定在左邊的 GDI 物件是否不等於右邊的 GDI 物件。  
   
-##  <a name="operator_eq_eq"></a>CGdiObject::operator = =  
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =  
  判斷兩個 GDI 物件是否等於邏輯。  
   
 ```  
@@ -330,14 +325,14 @@ BOOL operator==(const CGdiObject& obj) const;
 ### <a name="remarks"></a>備註  
  決定在左邊的 GDI 物件是否等於右邊的 GDI 物件。  
   
-##  <a name="operator_hgdiobj"></a>CGdiObject::operator HGDIOBJ  
+##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
  擷取`HANDLE`附加之 Windows GDI 物件; 否則**NULL**如果附加的物件。  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
-##  <a name="unrealizeobject"></a>CGdiObject::UnrealizeObject  
+##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject  
  重設為筆刷的原點或重設邏輯色板。  
   
 ```  
@@ -354,7 +349,7 @@ BOOL UnrealizeObject();
   
  `UnrealizeObject`函式不應搭配內建物件。 `UnrealizeObject`每當設定新的筆刷來源時，必須先呼叫函式 (藉由[CDC::SetBrushOrg](../../mfc/reference/cdc-class.md#setbrushorg)函式)。 `UnrealizeObject`函式不可以呼叫目前選取的筆刷或的任何顯示的內容中目前選取的調色盤。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CBitmap 類別](../../mfc/reference/cbitmap-class.md)   
  [CBrush 類別](../../mfc/reference/cbrush-class.md)   

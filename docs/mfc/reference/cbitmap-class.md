@@ -1,12 +1,9 @@
 ---
-title: "CBitmap 類別 |Microsoft 文件"
-ms.custom: 
+title: CBitmap 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmap
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap 類別
 封裝 Windows 繪圖裝置介面 (GDI) 點陣圖，並提供操作點陣圖的成員函式。  
@@ -111,7 +106,7 @@ class CBitmap : public CGdiObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="cbitmap"></a>CBitmap::CBitmap  
+##  <a name="cbitmap"></a>  CBitmap::CBitmap  
  建構 `CBitmap` 物件。  
   
 ```  
@@ -121,7 +116,7 @@ CBitmap();
 ### <a name="remarks"></a>備註  
  產生的物件必須初始化以初始化成員函式的其中一個。  
   
-##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
+##  <a name="createbitmap"></a>  CBitmap::CreateBitmap  
  初始化具有指定寬度、高度和位元模式之因裝置而異的記憶體點陣圖。  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateBitmap(
   
  如需詳細資訊，請參閱 **BITMAP** 結構中 **bmBits** 欄位的說明。 [點陣圖](../../mfc/reference/bitmap-structure.md)結構中所述[Bitmap](#createbitmapindirect)成員函式。  
   
-##  <a name="createbitmapindirect"></a>Bitmap  
+##  <a name="createbitmapindirect"></a>  Bitmap  
  初始化具有寬度、 高度和位元模式 （如果已指定） 所指向的結構中指定的點陣圖`lpBitmap`。  
   
 ```  
@@ -182,7 +177,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
   
  當您完成使用`CBitmap`物件以建立`CreateBitmapIndirect`函式，請先選取點陣圖並移出裝置內容，然後刪除`CBitmap`物件。  
   
-##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
+##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
  初始化與所指定的裝置相容的點陣圖`pDC`。  
   
 ```  
@@ -216,7 +211,7 @@ BOOL CreateCompatibleBitmap(
   
  當您完成使用`CBitmap`物件以建立`CreateCompatibleBitmap`函式，請先選取點陣圖並移出裝置內容，然後刪除`CBitmap`物件。  
   
-##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
+##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
  初始化與所識別的裝置內容的可捨棄點陣圖`pDC`。  
   
 ```  
@@ -246,7 +241,7 @@ BOOL CreateDiscardableBitmap(
   
  當您完成使用`CBitmap`物件以建立`CreateDiscardableBitmap`函式，請先選取點陣圖並移出裝置內容，然後刪除`CBitmap`物件。  
   
-##  <a name="fromhandle"></a>CBitmap::FromHandle  
+##  <a name="fromhandle"></a>  CBitmap::FromHandle  
  將指標傳回至`CBitmap`物件時指定 Windows GDI 點陣圖的控制代碼。  
   
 ```  
@@ -263,7 +258,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="remarks"></a>備註  
  如果`CBitmap`物件未附加至控制代碼，暫存`CBitmap`物件會建立並附加。 此暫存`CBitmap`僅直到下一次應用程式有其事件迴圈中的閒置時間，在這次所有暫存圖形已刪除物件，物件才有效。 另一種說法是，暫存物件的一個視窗訊息處理期間才有效。  
   
-##  <a name="getbitmap"></a>CBitmap::GetBitmap  
+##  <a name="getbitmap"></a>  CBitmap::GetBitmap  
  擷取映像屬性為附加的點陣圖。  
   
 ```  
@@ -279,7 +274,7 @@ int GetBitmap(BITMAP* pBitMap);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
+##  <a name="getbitmapbits"></a>  CBitmap::GetBitmapBits  
  將附加的點陣圖的位元模式複製到指定的緩衝區。  
   
 ```  
@@ -301,7 +296,7 @@ DWORD GetBitmapBits(
 ### <a name="remarks"></a>備註  
  使用[CBitmap::GetBitmap](#getbitmap)來決定所需的緩衝區大小。  
   
-##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
+##  <a name="getbitmapdimension"></a>  CBitmap::GetBitmapDimension  
  傳回點陣圖的高度與寬度。  
   
 ```  
@@ -314,7 +309,7 @@ CSize GetBitmapDimension() const;
 ### <a name="remarks"></a>備註  
  高度和寬度會假設已使用先前設定[SetBitmapDimension](#setbitmapdimension)成員函式。  
   
-##  <a name="loadbitmap"></a>Cbitmap:: Loadbitmap  
+##  <a name="loadbitmap"></a>  Cbitmap:: Loadbitmap  
  載入所命名的點陣圖資源`lpszResourceName`或中的 ID 編號識別`nIDResource`從應用程式的可執行檔。  
   
 ```  
@@ -348,7 +343,7 @@ BOOL LoadBitmap(UINT nIDResource);
   
  這些點陣圖找不到的 Windows 版本的裝置驅動程式 3.0 版及更早版本。 點陣圖，以及其外觀的完整清單，請參閱 Windows SDK。  
   
-##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
+##  <a name="loadmappedbitmap"></a>  CBitmap::LoadMappedBitmap  
  呼叫此成員函式可載入點陣圖並對應至目前的系統色彩的色彩。  
   
 ```  
@@ -380,7 +375,7 @@ BOOL LoadMappedBitmap(
   
  如需建立對應的點陣圖的資訊，請參閱 Windows 函式[CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562)和[COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Windows SDK 中的結構。  
   
-##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
+##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  載入 Windows 所使用的預先定義的點陣圖。  
   
 ```  
@@ -417,9 +412,9 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ### <a name="remarks"></a>備註  
  點陣圖名稱開頭**OBM_OLD**代表 3.0 之前的 Windows 版本中所使用的點陣圖。  
   
- 請注意，常數**OEMRESOURCE**包含 WINDOWS 之前，必須定義。若要使用的任何 H **OBM_**常數。  
+ 請注意，常數**OEMRESOURCE**包含 WINDOWS 之前，必須定義。若要使用的任何 H **OBM_** 常數。  
   
-##  <a name="operator_hbitmap"></a>HBITMAP CBitmap::operator  
+##  <a name="operator_hbitmap"></a>  HBITMAP CBitmap::operator  
  使用此運算子，以取得附加的 Windows GDI 控制代碼的`CBitmap`物件。  
   
 ```  
@@ -434,7 +429,7 @@ operator HBITMAP() const;
   
  如需有關使用圖形物件的詳細資訊，請參閱[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
-##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
+##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  設定所指定的位元值的位元點陣圖`lpBits`。  
   
 ```  
@@ -453,7 +448,7 @@ DWORD SetBitmapBits(
 ### <a name="return-value"></a>傳回值  
  點陣圖位元; 設定中使用的位元組數目0，表示函式失敗。  
   
-##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
+##  <a name="setbitmapdimension"></a>  CBitmap::SetBitmapDimension  
  會指派寬度和高度，以 0.1 公釐為單位的點陣圖。  
   
 ```  
@@ -475,7 +470,7 @@ CSize SetBitmapDimension(
 ### <a name="remarks"></a>備註  
  GDI 不會使用這些值除了到它們時傳回應用程式呼叫[GetBitmapDimension](#getbitmapdimension)成員函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 MDI](../../visual-cpp-samples.md)   
  [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

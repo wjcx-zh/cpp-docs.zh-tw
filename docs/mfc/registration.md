@@ -1,13 +1,10 @@
 ---
-title: "註冊 |Microsoft 文件"
-ms.custom: 
+title: 註冊 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registration"></a>註冊
 當使用者要將 OLE 項目插入至應用程式時，OLE 會顯示物件類型清單以供選擇。 OLE 會從系統註冊資料庫中取得此清單，其中包含所有伺服器應用程式提供的資訊。 當伺服器註冊其本身時，其放入系統註冊資料庫的項目 (登錄) 會說明其所提供的每個物件類型、副檔名和通往的路徑，以及其他資訊。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 02/09/2018
   
  如需系統註冊資料庫和用來更新它的.reg 檔案格式的詳細資訊，請參閱*OLE 程式設計人員參考*。  
   
-##  <a name="_core_server_installation"></a>伺服器安裝  
+##  <a name="_core_server_installation"></a> 伺服器安裝  
  當您第一次安裝您的伺服器應用程式時，應用程式應該會註冊其支援的所有 OLE 項目類型。 您也可以讓伺服器在每次作為獨立應用程式執行時，更新系統註冊資料庫。 如果伺服器的可執行檔移動的話，如此可讓系統註冊資料庫保持最新。  
   
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/09/2018
   
  RegEdit 會合併 .reg 文字檔的內容至註冊資料庫。 若要驗證或修復資料庫，請使用登錄編輯程式。 請避免刪除必要的 OLE 項目   
   
-##  <a name="_core_server_initialization"></a>伺服器初始化  
+##  <a name="_core_server_initialization"></a> 伺服器初始化  
  當您使用應用程式精靈建立伺服器應用程式時，精靈自動為您完成所有初始化工作。 本節說明手動撰寫伺服器應用程式時必須做的事情。  
   
  當容器應用程式啟動伺服器應用程式時，OLE 系統 DLL 會將「/Embedding」選項加入至伺服器的命令列中。 伺服器應用程式的行為會視其由容器啟動與否而有所不同，因此，應用程式開始執行時應做的第一件事就是檢查命令列的「/Embedding」或「-Embedding」選項。 如果此參數存在，請載入一組將伺服器顯示為就地啟動或完全開啟的不同資源。 如需詳細資訊，請參閱[功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。  
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/09/2018
   
  如果您要撰寫 miniserver，根據定義將始終由容器啟動。 您仍應該剖析命令列以檢查「/Embedding」選項。 這個選項不在命令列上表示使用者已嘗試啟動 miniserver 做為獨立應用程式。 如果發生這種情況，請向系統註冊資料庫註冊伺服器，然後向使用者顯示訊息方塊通知使用者，從容器應用程式啟動 miniserver。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE](../mfc/ole-in-mfc.md)   
  [伺服器](../mfc/servers.md)   
  [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   

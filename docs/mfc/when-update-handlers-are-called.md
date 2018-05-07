@@ -1,13 +1,10 @@
 ---
-title: "呼叫更新處理常式的時機 |Microsoft 文件"
-ms.custom: 
+title: 呼叫更新處理常式的時機 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - command routing [MFC], update handlers
 - update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaf2773a2d9e393c783a39e01c75f8efa62796df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-update-handlers-are-called"></a>呼叫更新處理常式的時機
 假設使用者在 [檔案] 功能表上按一下滑鼠，即產生 `WM_INITMENUPOPUP` 訊息。 架構的更新機制會統一更新 [檔案] 功能表上的所有項目，之後使用者才能看到功能表下拉式清單。  
@@ -48,6 +43,6 @@ ms.lasthandoff: 12/21/2017
   
  功能表初始化在架構中為自動執行，當應用程式收到 `WM_INITMENUPOPUP` 訊息時便會發生。 在閒置迴圈期間，架構會搜尋按鈕更新處理常式的命令路由，方式就和搜尋功能表幾乎一樣。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：更新使用者介面物件](../mfc/how-to-update-user-interface-objects.md)
 

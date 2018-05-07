@@ -1,12 +1,9 @@
 ---
-title: "COleControlModule 類別 |Microsoft 文件"
-ms.custom: 
+title: COleControlModule 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - OleControlModule
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - COleControlModule class [MFC]
 - control modules [MFC]
 ms.assetid: 0721724d-d4af-4eda-ad34-5a2b27810dd4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 196b69a0d86c3809415e030adb567c8642051f40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 597639145385f4aabcba0e83fef855f7a0779f9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule 類別
 OLE 控制項模組物件所衍生自的基底類別。  
@@ -58,7 +53,7 @@ class COleControlModule : public CWinApp
 ## <a name="requirements"></a>需求  
  **標頭：** afxctl.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 TESTHELP](../../visual-cpp-samples.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "建立 MFC DLL 專案 |Microsoft 文件"
-ms.custom: 
+title: 建立 MFC DLL 專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcdll.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c040188db5caf46c0d58720320088967b59ea6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5c560fecdaed6ea74442596aab685a08300b3fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-mfc-dll-project"></a>建立 MFC DLL 專案
 MFC DLL 是二進位檔案，可做為多個應用程式可以同時使用的函式的共用程式庫。 若要建立 MFC DLL 專案的最簡單方式是使用 MFC DLL 精靈。  
@@ -51,7 +46,7 @@ MFC DLL 是二進位檔案，可做為多個應用程式可以同時使用的函
   
  您的專案建立之後，您可以檢視在 [方案總管] 中建立的檔案。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual c + + 專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [屬性頁](../../ide/property-pages-visual-cpp.md)   

@@ -1,13 +1,10 @@
 ---
-title: "TN002： 持續性物件資料格式 |Microsoft 文件"
-ms.custom: 
+title: TN002： 持續性物件資料格式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002：持續性物件資料格式
 此提示描述支援持續性的 c + + 物件和物件資料的格式，它會儲存在檔案中的 MFC 常式。 這只適用於具有類別[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)巨集。  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  如果物件尚未儲存之前，有兩種可能性，考慮： 物件和物件的確切類型 （也就是類別） 新增到此封存內容，或是物件屬於已經看過的確切類型。 若要判斷是否曾發生型別，程式碼查詢`m_pStoreMap`如[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)符合物件`CRuntimeClass`所儲存物件相關聯的物件。 如果沒有相符項目，`WriteObject`插入之標記的位元`OR`的`wOldClassTag`和此索引。 如果`CRuntimeClass`是此封存內容中，新`WriteObject`將指派給該類別的新 PID，並將它封存，前面加上插入`wNewClassTag`值。  
   
- 這個類別的描述元會插入封存使用`CRuntimeClass::Store`方法。 `CRuntimeClass::Store`插入結構描述編號 （請參閱下文） 的類別和類別的 ASCII 文字名稱。 請注意使用 ASCII 文字名稱並不保證唯一性的封存跨應用程式。 因此，您應該標記您的資料檔案，以避免損毀。 下列類別資訊插入，封存會將物件放入`m_pStoreMap`，然後呼叫`Serialize`方法插入類別的特定資料。 將物件插入`m_pStoreMap`之前先呼叫`Serialize`防止多個物件的複本儲存至存放區。  
+ 這個類別的描述元會插入封存使用`CRuntimeClass::Store`方法。 `CRuntimeClass::Store` 插入結構描述編號 （請參閱下文） 的類別和類別的 ASCII 文字名稱。 請注意使用 ASCII 文字名稱並不保證唯一性的封存跨應用程式。 因此，您應該標記您的資料檔案，以避免損毀。 下列類別資訊插入，封存會將物件放入`m_pStoreMap`，然後呼叫`Serialize`方法插入類別的特定資料。 將物件插入`m_pStoreMap`之前先呼叫`Serialize`防止多個物件的複本儲存至存放區。  
   
  傳回至初始呼叫者 （通常是根物件的網路） 時，您必須呼叫[CArchive::Close](../mfc/reference/carchive-class.md#close)。 如果您打算執行其他[CFile](../mfc/reference/cfile-class.md)作業，您必須呼叫`CArchive`方法[排清](../mfc/reference/carchive-class.md#flush)以避免保存檔損毀。  
   
@@ -115,7 +110,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  如前文所述，您應該編碼版本和類別資訊自行呼叫時`Serialize`直接管理，讓您可以稍後變更格式，同時仍維持回溯相容性的較舊的檔案。 `CArchive::SerializeClass`之前直接序列化物件或之前呼叫的基底類別函式也可以明確地呼叫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

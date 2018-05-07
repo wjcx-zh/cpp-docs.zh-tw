@@ -1,13 +1,10 @@
 ---
-title: "一般 MFC 主題 |Microsoft 文件"
-ms.custom: 
+title: 一般 MFC 主題 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97f3b609a68071f34e1841128a66b5518e1b17db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 244b3fa9ef50584bf8694d4356d799d35f868828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-mfc-topics"></a>一般 MFC 主題
 本系列文章包含 Microsoft Foundation Class (MFC) 程式庫的技術詳細資料，並提供 MFC 架構以及其主要元件和子系統的概觀。  
@@ -67,6 +62,6 @@ ms.lasthandoff: 12/21/2017
   
  如需 ATL 資訊，請參閱[Active Template Library 參考](../atl/atl-class-overview.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用視窗物件](../mfc/working-with-window-objects.md)
 

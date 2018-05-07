@@ -1,13 +1,10 @@
 ---
-title: "MFC 物件關聯性 |Microsoft 文件"
-ms.custom: 
+title: MFC 物件關聯性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - relationships, MFC objects
 - MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ea93e9e56b676e4dfef33ecbcabfd9754458024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 物件關聯性
 為了協助放置文件/檢視建立程序，請考慮一個執行中程式：一個文件、一個用來包含檢視的框架視窗，以及與文件關聯的檢視。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  主框架視窗的指標儲存在[m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)應用程式物件的成員變數。 在 `OnFileNew` 的 `InitInstance` 成員函式覆寫中呼叫 `CWinApp` 會為您設定 `m_pMainWnd`。 如果您未呼叫 `OnFileNew`，則必須自己在 `InitInstance` 中設定變數值 (如果命令列上存在 /Embedding，則 SDI COM 元件 (伺服器) 應用程式可能無法設定變數)。請注意，`m_pMainWnd` 現在是 `CWinThread` 類別的成員，而非 `CWinApp` 類別在的成員。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)   
  [建立文件範本](../mfc/document-template-creation.md)   
  [文件/檢視建立](../mfc/document-view-creation.md)   

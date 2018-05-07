@@ -1,12 +1,9 @@
 ---
-title: "CEditView 類別 |Microsoft 文件"
-ms.custom: 
+title: CEditView 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEditView
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78aa34f1790b2e86dae183b96c88b4ed35483927
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ceditview-class"></a>CEditView 類別
 檢視類別的類型，這個類型提供 Windows 編輯控制項功能，而且可用於實作簡單的文字編輯器功能。  
@@ -132,9 +127,9 @@ class CEditView : public CCtrlView
   
  類型的物件`CEditView`(或從衍生型別的`CEditView`) 具有下列限制：  
   
-- `CEditView`未實作 true 所見即所得 (WYSIWYG) 編輯。 在螢幕上的可讀性和比對的列印的輸出之間沒有選擇`CEditView`且螢幕閱讀。  
+- `CEditView` 未實作 true 所見即所得 (WYSIWYG) 編輯。 在螢幕上的可讀性和比對的列印的輸出之間沒有選擇`CEditView`且螢幕閱讀。  
   
-- `CEditView`可以在單一字型顯示文字。 未將特殊字元格式支援。 請參閱類別[CRichEditView](../../mfc/reference/cricheditview-class.md)更高的功能。  
+- `CEditView` 可以在單一字型顯示文字。 未將特殊字元格式支援。 請參閱類別[CRichEditView](../../mfc/reference/cricheditview-class.md)更高的功能。  
   
 -   文字數量`CEditView`可包含限制。 限制是一樣`CEdit`控制項。  
   
@@ -156,7 +151,7 @@ class CEditView : public CCtrlView
 ## <a name="requirements"></a>需求  
  **標頭：** afxext.h  
   
-##  <a name="ceditview"></a>CEditView::CEditView  
+##  <a name="ceditview"></a>  CEditView::CEditView  
  建構類型 `CEditView` 的物件。  
   
 ```  
@@ -166,7 +161,7 @@ CEditView();
 ### <a name="remarks"></a>備註  
  之後建構物件，您必須呼叫[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)函式使用編輯控制項之前。 如果您是衍生自`CEditView`並將它加入至範本使用`CWinApp::AddDocTemplate`，架構會呼叫這兩個建構函式和**建立**函式。  
   
-##  <a name="dwstyledefault"></a>CEditView::dwStyleDefault  
+##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  包含的預設樣式`CEditView`物件。  
   
 ```  
@@ -176,7 +171,7 @@ static const DWORD dwStyleDefault;
 ### <a name="remarks"></a>備註  
  傳遞做為這個靜態成員`dwStyle`參數**建立**函數來取得的預設樣式`CEditView`物件。  
   
-##  <a name="findtext"></a>CEditView::FindText  
+##  <a name="findtext"></a>  CEditView::FindText  
  呼叫`FindText`函式來搜尋`CEditView`物件的文字緩衝區。  
   
 ```  
@@ -204,7 +199,7 @@ BOOL FindText(
   
  您通常不需要呼叫`FindText`作用，除非您覆寫`OnFindNext`，而它會呼叫`FindText`。  
   
-##  <a name="getbufferlength"></a>CEditView::GetBufferLength  
+##  <a name="getbufferlength"></a>  CEditView::GetBufferLength  
  呼叫此成員函式可取得目前在編輯控制項的緩衝區，不包括 null 結束字元的字元數。  
   
 ```  
@@ -214,7 +209,7 @@ UINT GetBufferLength() const;
 ### <a name="return-value"></a>傳回值  
  在緩衝區中字串的長度。  
   
-##  <a name="geteditctrl"></a>CEditView::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CEditView::GetEditCtrl  
  呼叫`GetEditCtrl`取得編輯檢視所使用之編輯控制項的參考。  
   
 ```  
@@ -233,7 +228,7 @@ CEdit& GetEditCtrl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
-##  <a name="getprinterfont"></a>CEditView::GetPrinterFont  
+##  <a name="getprinterfont"></a>  CEditView::GetPrinterFont  
  呼叫`GetPrinterFont`取得指標[CFont](../../mfc/reference/cfont-class.md)物件，描述目前印表機字型。  
   
 ```  
@@ -248,7 +243,7 @@ CFont* GetPrinterFont() const;
   
  您可以使用此函式來判斷目前的印表機字型。 如果不想要的印表機字型，請使用[CEditView::SetPrinterFont](#setprinterfont)加以變更。  
   
-##  <a name="getselectedtext"></a>CEditView::GetSelectedText  
+##  <a name="getselectedtext"></a>  CEditView::GetSelectedText  
  呼叫`GetSelectedText`複製到選取的文字`CString`物件，最多的選取範圍或選取範圍中之前的第一個歸位字元的字元結尾。  
   
 ```  
@@ -259,7 +254,7 @@ void GetSelectedText(CString& strResult) const;
  `strResult`  
  若要參考`CString`要接收所選取的文字的物件。  
   
-##  <a name="lockbuffer"></a>CEditView::LockBuffer  
+##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
  呼叫此成員函式可取得緩衝區的指標。 不應該修改的緩衝區。  
   
 ```  
@@ -269,7 +264,7 @@ LPCTSTR LockBuffer() const;
 ### <a name="return-value"></a>傳回值  
  編輯控制項的緩衝區的指標。  
   
-##  <a name="onfindnext"></a>CEditView::OnFindNext  
+##  <a name="onfindnext"></a>  CEditView::OnFindNext  
  搜尋的文字搜尋中所指定的文字的緩衝區`lpszFind`，所指定的方向`bNext`，與所指定的區分大小寫`bCase`。  
   
 ```  
@@ -292,10 +287,10 @@ virtual void OnFindNext(
 ### <a name="remarks"></a>備註  
  搜尋會從目前的選取範圍的開頭，並透過呼叫來完成[FindText](#findtext)。 在預設實作中，`OnFindNext`呼叫[OnTextNotFound](#ontextnotfound)如果找不到文字。  
   
- 覆寫`OnFindNext`變更方式`CEditView`-衍生的物件搜尋的文字。 `CEditView`呼叫`OnFindNext`當使用者在標準的 [尋找] 對話方塊中選擇 [尋找下一個] 按鈕。  
+ 覆寫`OnFindNext`變更方式`CEditView`-衍生的物件搜尋的文字。 `CEditView` 呼叫`OnFindNext`當使用者在標準的 [尋找] 對話方塊中選擇 [尋找下一個] 按鈕。  
   
-##  <a name="onreplaceall"></a>CEditView::OnReplaceAll  
- `CEditView`呼叫`OnReplaceAll`當使用者在標準的 [取代] 對話方塊中選取 [全部取代] 按鈕。  
+##  <a name="onreplaceall"></a>  CEditView::OnReplaceAll  
+ `CEditView` 呼叫`OnReplaceAll`當使用者在標準的 [取代] 對話方塊中選取 [全部取代] 按鈕。  
   
 ```  
 virtual void OnReplaceAll(
@@ -315,14 +310,14 @@ virtual void OnReplaceAll(
  指定搜尋是否區分大小寫。 如果**TRUE**，搜尋不區分大小寫。 如果**FALSE**，搜尋不區分大小寫。  
   
 ### <a name="remarks"></a>備註  
- `OnReplaceAll`搜尋的文字搜尋中所指定的文字的緩衝區`lpszFind`，與所指定的區分大小寫`bCase`。 搜尋會從目前的選取範圍的開頭。 每次找到搜尋文字時，此函式取代該文字項目所指定的文字`lpszReplace`。 搜尋透過呼叫來完成[FindText](#findtext)。 在預設實作中， [OnTextNotFound](#ontextnotfound)如果找不到文字，則呼叫。  
+ `OnReplaceAll` 搜尋的文字搜尋中所指定的文字的緩衝區`lpszFind`，與所指定的區分大小寫`bCase`。 搜尋會從目前的選取範圍的開頭。 每次找到搜尋文字時，此函式取代該文字項目所指定的文字`lpszReplace`。 搜尋透過呼叫來完成[FindText](#findtext)。 在預設實作中， [OnTextNotFound](#ontextnotfound)如果找不到文字，則呼叫。  
   
  如果不符合目前的選取範圍`lpszFind`，選取項目已更新為所指定之文字的第一個出現`lpszFind`而且不會執行取代。 這可讓使用者確認這是他們想要執行選取項目不符合所要取代的文字時。  
   
  覆寫`OnReplaceAll`變更方式`CEditView`-衍生的物件取代文字。  
   
-##  <a name="onreplacesel"></a>CEditView::OnReplaceSel  
- `CEditView`呼叫`OnReplaceSel`當使用者在標準的 [取代] 對話方塊中選取 [取代] 按鈕。  
+##  <a name="onreplacesel"></a>  CEditView::OnReplaceSel  
+ `CEditView` 呼叫`OnReplaceSel`當使用者在標準的 [取代] 對話方塊中選取 [取代] 按鈕。  
   
 ```  
 virtual void OnReplaceSel(
@@ -350,7 +345,7 @@ virtual void OnReplaceSel(
   
  覆寫`OnReplaceSel`變更方式`CEditView`-衍生的物件取代選取的文字。  
   
-##  <a name="ontextnotfound"></a>CEditView::OnTextNotFound  
+##  <a name="ontextnotfound"></a>  CEditView::OnTextNotFound  
  若要變更預設實作中，Windows 函式會呼叫此函式會覆寫**MessageBeep**。  
   
 ```  
@@ -361,7 +356,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
  `lpszFind`  
  要找的文字。  
   
-##  <a name="printinsiderect"></a>CEditView::PrintInsideRect  
+##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
  呼叫`PrintInsideRect`列印文字中所指定的矩形*rectLayout*。  
   
 ```  
@@ -393,7 +388,7 @@ UINT PrintInsideRect(
   
  **Rect.bottom**元素*rectLayout*物件已變更，因此矩形的維度定義的部分原始文字所佔據的矩形。  
   
-##  <a name="serializeraw"></a>CEditView::SerializeRaw  
+##  <a name="serializeraw"></a>  CEditView::SerializeRaw  
  呼叫`SerializeRaw`有`CArchive`物件讀取或寫入文字`CEditView`物件至文字檔案。  
   
 ```  
@@ -405,9 +400,9 @@ void SerializeRaw(CArchive& ar);
  若要參考`CArchive`序列化將文字儲存到的物件。  
   
 ### <a name="remarks"></a>備註  
- `SerializeRaw`不同於`CEditView`的內部實作`Serialize`在於它讀取和寫入的文字，而不前置物件描述的資料。  
+ `SerializeRaw` 不同於`CEditView`的內部實作`Serialize`在於它讀取和寫入的文字，而不前置物件描述的資料。  
   
-##  <a name="setprinterfont"></a>CEditView::SetPrinterFont  
+##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
  呼叫`SetPrinterFont`設為所指定之字型的印表機字型`pFont`。  
   
 ```  
@@ -421,7 +416,7 @@ void SetPrinterFont(CFont* pFont);
 ### <a name="remarks"></a>備註  
  如果您想要一律使用特定字型列印檢視，包括呼叫`SetPrinterFont`在您的類別`OnPreparePrinting`函式。 此虛擬函式稱為在列印之前，讓字型變更之前，會列印檢視的內容。  
   
-##  <a name="settabstops"></a>CEditView::SetTabStops  
+##  <a name="settabstops"></a>  CEditView::SetTabStops  
  呼叫此函式可設定定位停駐點的顯示和列印使用。  
   
 ```  
@@ -442,7 +437,7 @@ void SetTabStops(int nTabStops);
   
  [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  
   
-##  <a name="unlockbuffer"></a>CEditView::UnlockBuffer  
+##  <a name="unlockbuffer"></a>  CEditView::UnlockBuffer  
  呼叫此成員函式可解除鎖定緩衝區。  
   
 ```  
@@ -452,7 +447,7 @@ void UnlockBuffer() const;
 ### <a name="remarks"></a>備註  
  呼叫`UnlockBuffer`完成使用所傳回的指標之後[LockBuffer](#lockbuffer)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 SUPERPAD](../../visual-cpp-samples.md)   
  [CCtrlView 類別](../../mfc/reference/cctrlview-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

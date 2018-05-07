@@ -1,12 +1,9 @@
 ---
-title: "連結器工具警告 LNK4210 |Microsoft 文件"
-ms.custom: 
+title: 連結器工具警告 LNK4210 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4210
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4e2d596527b60735b42fb4edfff6f36d0be808d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2bd34866264fdfea71ba7496ad9c94446fd5726
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4210"></a>連結器工具警告 LNK4210  
   
@@ -51,5 +46,5 @@ ms.lasthandoff: 12/21/2017
   
 -   如果使用 /ENTRY，建置專案之後，如果 /ENTRY 以外傳遞函式`_DllMainCRTStartup`，函式必須呼叫`_CRT_INIT`初始化 CRT。 如果您的 DLL 會使用 /GS、 需要靜態初始設定式，或呼叫 MFC 或 ATL 程式碼的內容中單獨這個呼叫是不夠的。 請參閱[Dll 和 Visual c + + 執行階段程式庫行為](../../build/run-time-library-behavior.md)如需詳細資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)

@@ -1,13 +1,10 @@
 ---
-title: "自訂標題項目 &#39; s 外觀 |Microsoft 文件"
-ms.custom: 
+title: 自訂標頭項目&#39;s 外觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,17 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dacb5cc7aa1c6d7c74a07ee911c5887efe1d877b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b58af1efc0558fe9195f56c31df11827d57f731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>自訂標題項目 &#39; s 外觀
+# <a name="customizing-the-header-item39s-appearance"></a>自訂標頭項目&#39;s 外觀
 藉由設定*dwStyle*參數，當您初次建立標題控制項 ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create))、 您可以定義的外觀和行為的標頭項目，或標頭控制本身。  
   
  以下是可設定之樣式的示範及其用途：  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  如需有關這些屬性的詳細資訊，請參閱[項目](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。 將項目加入至標題控制項的相關資訊，請參閱[將項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

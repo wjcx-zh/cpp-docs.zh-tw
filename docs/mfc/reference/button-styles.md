@@ -1,13 +1,10 @@
 ---
-title: "按鈕樣式 |Microsoft 文件"
-ms.custom: 
+title: 按鈕樣式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BS_DEFPUSHBUTTON
 - BS_NOTIFY
@@ -67,17 +64,15 @@ helpviewer_keywords:
 - BS_TOP constant [MFC]
 - BS_TEXT constant
 ms.assetid: 41206f72-2b92-4250-ae32-31184046402f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9ed2dcffbcd45215008b3d0caa802a5384367b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ec945c95b81570e52cca03ed4e52355350d8121
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="button-styles"></a>按鈕樣式
 本主題描述的按鈕類型和樣式。  
@@ -142,7 +137,7 @@ ms.lasthandoff: 12/21/2017
 |`BS_MULTILINE`|如果文字字串太長而無法容納在單一行中的按鈕矩形，包裝成好幾行，則按鈕文字。|  
 |`BS_NOTIFY`|可讓按鈕以傳送`BN_DBLCLK`， `BN_KILLFOCUS`，和`BN_SETFOCUS`通知訊息給其父視窗。 請注意，按鈕傳送`BN_CLICKED`不論是否指定此樣式的通知。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 使用的樣式](../../mfc/reference/styles-used-by-mfc.md)   
  [CButton::Create](../../mfc/reference/cbutton-class.md#create) [按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb775951)   
 

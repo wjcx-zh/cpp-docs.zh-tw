@@ -1,30 +1,25 @@
 ---
-title: "伺服器： 實作伺服器 |Microsoft 文件"
-ms.custom: 
+title: 伺服器： 實作伺服器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 148a3da3c904f5c314c75fb71deede3c92163cc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ea51d6cd811572d73b0de64072f3d335e2682fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-a-server"></a>伺服器：實作伺服器
 本文說明 MFC 應用程式精靈建立視覺化編輯伺服器應用程式的程式碼。 如果您不使用應用程式精靈，這篇文章會列出，您必須撰寫程式碼以實作伺服器應用程式的區域。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱[COleServerItem](../mfc/reference/coleserveritem-class.md)， [COleServerDoc](../mfc/reference/coleserverdoc-class.md)，和[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)中*類別庫參考*。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器](../mfc/servers.md)   
  [容器](../mfc/containers.md)   
  [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)   

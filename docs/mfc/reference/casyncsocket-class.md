@@ -1,12 +1,9 @@
 ---
-title: "CAsyncSocket 類別 |Microsoft 文件"
-ms.custom: 
+title: CAsyncSocket 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncSocket
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ef9c6e39d72e756b95472daee46b7d39503943
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eaefa40be2a6cf1d57326c2135d848fa08dbc87
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 類別
 表示 Windows Socket — 網路通訊的端點。  
@@ -187,7 +182,7 @@ class CAsyncSocket : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxsock.h  
   
-##  <a name="accept"></a>CAsyncSocket::Accept  
+##  <a name="accept"></a>  CAsyncSocket::Accept  
  呼叫此成員函式可接受通訊端上的連線。  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL Accept(
   
 - **WSAEMFILE**佇列是空的時接受的項目，而且沒有任何描述項可用。  
   
-- `WSAENOBUFS`使用沒有緩衝區空間。  
+- `WSAENOBUFS` 使用沒有緩衝區空間。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
@@ -231,11 +226,11 @@ virtual BOOL Accept(
 - **WSAEWOULDBLOCK**通訊端已標示為封鎖且所有連接都都會存在，才能被接受。  
   
 ### <a name="remarks"></a>備註  
- 這個常式會擷取第一個佇列中的擱置連線連接、 建立新的通訊端使用相同的屬性，為這個通訊端，和將其附加至`rConnectedSocket`。 如果沒有擱置中的連線會出現在佇列上**接受**傳回零和`GetLastError`會傳回錯誤。 接受通訊端 ( *rConnectedSocket)*無法用來接受更多的連線。 開啟並在接聽，則會保留原始通訊端。  
+ 這個常式會擷取第一個佇列中的擱置連線連接、 建立新的通訊端使用相同的屬性，為這個通訊端，和將其附加至`rConnectedSocket`。 如果沒有擱置中的連線會出現在佇列上**接受**傳回零和`GetLastError`會傳回錯誤。 接受通訊端 ( *rConnectedSocket)* 無法用來接受更多的連線。 開啟並在接聽，則會保留原始通訊端。  
   
  引數`lpSockAddr`已知通訊層時連接的通訊端，位址會填入結果參數。 **接受**這類的使用與連線為基礎的通訊端型別**SOCK_STREAM**。  
   
-##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
+##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
  呼叫此成員函式可要求通訊端的事件通知。  
   
 ```  
@@ -270,9 +265,9 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
 ### <a name="remarks"></a>備註  
- 此函式用來指定哪些 MFC 回呼通知函式會呼叫通訊端。 `AsyncSelect`自動將此通訊端設定為封鎖模式。 如需詳細資訊，請參閱文章[Windows Sockets： 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
+ 此函式用來指定哪些 MFC 回呼通知函式會呼叫通訊端。 `AsyncSelect` 自動將此通訊端設定為封鎖模式。 如需詳細資訊，請參閱文章[Windows Sockets： 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="attach"></a>CAsyncSocket::Attach  
+##  <a name="attach"></a>  CAsyncSocket::Attach  
  呼叫此成員函式附加`hSocket`的控制代碼`CAsyncSocket`物件。  
   
 ```  
@@ -305,7 +300,7 @@ BOOL Attach(
 ### <a name="remarks"></a>備註  
  **通訊端**控制代碼會儲存在物件的[m_hSocket](#m_hsocket)資料成員。  
   
-##  <a name="bind"></a>CAsyncSocket::Bind  
+##  <a name="bind"></a>  CAsyncSocket::Bind  
  呼叫此成員函式，使本機位址與通訊端。  
   
 ```  
@@ -349,14 +344,14 @@ BOOL Bind (
   
 - **WSAEINVAL**通訊端已經繫結至地址。  
   
-- `WSAENOBUFS`沒有足夠的緩衝區可用，連接過多。  
+- `WSAENOBUFS` 沒有足夠的緩衝區可用，連接過多。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 ### <a name="remarks"></a>備註  
  這個常式會先用在未連接的資料流或資料流通訊端，後續**連接**或`Listen`呼叫。 它可以接受連線要求之前，接聽伺服器通訊端必須選取一個連接埠號碼並設為已知 Windows 通訊端藉由呼叫**繫結**。 **繫結**建立通訊端的本機關聯 （主機位址/連接埠號碼），將本機名稱指派到未命名的通訊端。  
   
-##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
+##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket  
  建構空白通訊端物件。  
   
 ```  
@@ -366,7 +361,7 @@ CAsyncSocket();
 ### <a name="remarks"></a>備註  
  之後建構物件，您必須呼叫其**建立**成員函式來建立**通訊端**資料結構，並將其位址的繫結。 (在伺服器端的 Windows Sockets 通訊，接聽的通訊端建立要在中使用的通訊端時**接受**呼叫時，您不會呼叫**建立**該通訊端。)  
   
-##  <a name="close"></a>CAsyncSocket::Close  
+##  <a name="close"></a>  CAsyncSocket::Close  
  會關閉通訊端。  
   
 ```  
@@ -378,7 +373,7 @@ virtual void Close();
   
  如`CAsyncSocket`，但不適用於`CSocket`的語意**關閉**受到通訊端選項**SO_LINGER**和**SO_DONTLINGER**。 如需詳細資訊，請參閱成員函式`GetSockOpt`。  
   
-##  <a name="connect"></a>CAsyncSocket::Connect  
+##  <a name="connect"></a>  CAsyncSocket::Connect  
  呼叫此成員函式建立的未連接的資料流或資料包通訊端的連接。  
   
 ```  
@@ -434,7 +429,7 @@ BOOL Connect(
   
 - **WSAENETUNREACH**無法透過此主機連接網路，這一次。  
   
-- `WSAENOBUFS`使用沒有緩衝區空間。 無法連線通訊端。  
+- `WSAENOBUFS` 使用沒有緩衝區空間。 無法連線通訊端。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
@@ -449,7 +444,7 @@ BOOL Connect(
   
  資料包通訊端 (型別**SOCK_DGRAM**)，設定預設的目的地，這將用於後續**傳送**和**接收**呼叫。  
   
-##  <a name="create"></a>CAsyncSocket::Create  
+##  <a name="create"></a>  CAsyncSocket::Create  
  呼叫**建立**之後建構建立 Windows 通訊端，並將其連接的通訊端物件的成員函式。  
   
 ```  
@@ -498,7 +493,7 @@ BOOL Create(
   
 - **WSAEMFILE**沒有更多檔案描述項可用。  
   
-- `WSAENOBUFS`使用沒有緩衝區空間。 無法建立通訊端。  
+- `WSAENOBUFS` 使用沒有緩衝區空間。 無法建立通訊端。  
   
 - **WSAEPROTONOSUPPORT**不支援指定的連接埠。  
   
@@ -521,14 +516,14 @@ BOOL Create(
   
  如需有關資料流和資料包通訊端的詳細資訊，請參閱文章[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)和[Windows Sockets： 連接埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="detach"></a>CAsyncSocket::Detach  
+##  <a name="detach"></a>  CAsyncSocket::Detach  
  呼叫此成員函式，要卸離**通訊端**中處理`m_hSocket`資料成員從`CAsyncSocket`物件，並設定`m_hSocket`至**NULL**。  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
+##  <a name="fromhandle"></a>  CAsyncSocket::FromHandle  
  將指標傳回至`CAsyncSocket`物件。  
   
 ```  
@@ -545,7 +540,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="remarks"></a>備註  
  當指定時**通訊端**處理，如果`CAsyncSocket`物件沒有附加至控制代碼，則成員函式會傳回**NULL**。  
   
-##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
+##  <a name="getlasterror"></a>  CAsyncSocket::GetLastError  
  呼叫此成員函式可取得最後一個作業失敗的錯誤狀態。  
   
 ```  
@@ -560,7 +555,7 @@ static int PASCAL GetLastError();
   
  如需錯誤碼的詳細資訊，請參閱[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)。  
   
-##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
+##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  呼叫此成員函式可取得這個通訊端所連接之對等通訊端位址。  
   
 ```  
@@ -605,7 +600,7 @@ BOOL GetPeerName(
 ### <a name="remarks"></a>備註  
  若要處理的 IPv6 位址，使用[CAsyncSocket::GetPeerNameEx](#getpeernameex)。  
   
-##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
+##  <a name="getpeernameex"></a>  CAsyncSocket::GetPeerNameEx  
  呼叫此成員函式可取得這個通訊端是連接 （控點 IPv6 位址） 的對等通訊端位址。  
   
 ```  
@@ -639,7 +634,7 @@ BOOL GetPeerNameEx(
 ### <a name="remarks"></a>備註  
  此函式是相同[CAsyncSocket::GetPeerName](#getpeername)不同之處在於它會處理 IPv6 位址以及為舊的通訊協定。  
   
-##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName  
  呼叫此成員函式，以取得通訊端的本機名稱。  
   
 ```  
@@ -686,7 +681,7 @@ BOOL GetSockName(
   
  若要處理的 IPv6 位址，使用[CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
+##  <a name="getsocknameex"></a>  CAsyncSocket::GetSockNameEx  
  呼叫此成員函式，以取得通訊端 （控點 IPv6 位址） 的本機名稱。  
   
 ```  
@@ -722,7 +717,7 @@ BOOL GetSockNameEx(
   
  這個呼叫時特別有用**連接**已進行呼叫，而這樣做不**繫結**首先; 此呼叫會提供您可以判斷本機關聯的已設定的唯一方法系統。  
   
-##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
+##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt  
  呼叫此成員函式可擷取通訊端選項。  
   
 ```  
@@ -762,7 +757,7 @@ BOOL GetSockOpt(
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 ### <a name="remarks"></a>備註  
- `GetSockOpt`擷取相關聯的任何狀態中的任何型別，通訊端通訊端選項的目前值，並且儲存中的結果`lpOptionValue`。 選項會影響通訊端作業，例如路由傳送封包，超出訊號範圍的資料傳輸，以及等等。  
+ `GetSockOpt` 擷取相關聯的任何狀態中的任何型別，通訊端通訊端選項的目前值，並且儲存中的結果`lpOptionValue`。 選項會影響通訊端作業，例如路由傳送封包，超出訊號範圍的資料傳輸，以及等等。  
   
  支援下列選項`GetSockOpt`。 型別會識別所定址的資料型別`lpOptionValue`。 **TCP_NODELAY**選項會使用層級**IPPROTO_TCP**; 所有其他選項使用層級**SOL_SOCKET**。  
   
@@ -796,7 +791,7 @@ BOOL GetSockOpt(
   
  呼叫`GetSockOpt`與不支援的選項會導致錯誤碼**WSAENOPROTOOPT**傳回`GetLastError`。  
   
-##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
+##  <a name="ioctl"></a>  CAsyncSocket::IOCtl  
  呼叫此成員函式，來控制通訊端的模式。  
   
 ```  
@@ -834,9 +829,9 @@ BOOL IOCtl(
   
 - **SIOCATMARK**判斷是否已讀取的頻外的所有資料。 這只適用於類型的通訊端**SOCK_STREAM** ，已設定為任何超出訊號範圍的資料行中接收 ( **SO_OOBINLINE**)。 如果有任何不足的頻外資料正在不等待讀取，作業會傳回非零值。 否則它會傳回 0，並在下一個**接收**或`ReceiveFrom`對通訊端將會擷取部分或所有的資料前面 「 標記 」; 應用程式應該使用**SIOCATMARK**作業判斷是否有遺留的資料。 如果沒有任何一般資料前面 「 緊急 」 （超出頻外） 資料，它會接收訂單。 (請注意，**接收**或`ReceiveFrom`永遠不會混用相同的呼叫中的頻外和一般的資料。)`lpArgument`參數指向`DWORD`所在**IOCtl**儲存結果。  
   
- 此函式是子集**ioctl()**會用在 Berkeley 通訊端。 特別是，沒有任何命令，這相當於**FIOASYNC**，雖然**SIOCATMARK**是支援的只有通訊端層級命令。  
+ 此函式是子集**ioctl()** 會用在 Berkeley 通訊端。 特別是，沒有任何命令，這相當於**FIOASYNC**，雖然**SIOCATMARK**是支援的只有通訊端層級命令。  
   
-##  <a name="listen"></a>CAsyncSocket::Listen  
+##  <a name="listen"></a>  CAsyncSocket::Listen  
  呼叫此成員函式來接聽內送連接要求。  
   
 ```  
@@ -864,27 +859,27 @@ BOOL Listen(int nConnectionBacklog = 5);
   
 - **WSAEMFILE**沒有更多檔案描述項可用。  
   
-- `WSAENOBUFS`使用沒有緩衝區空間。  
+- `WSAENOBUFS` 使用沒有緩衝區空間。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 - **WSAEOPNOTSUPP**參考之通訊端不是支援的型別`Listen`作業。  
   
 ### <a name="remarks"></a>備註  
- 若要可接受連接，通訊端第一次建立與**建立**，連入連線的待處理項目指定`Listen`，然後以接受連接和**接受**。 `Listen`僅適用於支援連接，也就是通訊端類型**SOCK_STREAM**。 這個通訊端會放入 「 被動 」 模式的連入連線認可，而暫止接受由處理程序排入佇列。  
+ 若要可接受連接，通訊端第一次建立與**建立**，連入連線的待處理項目指定`Listen`，然後以接受連接和**接受**。 `Listen` 僅適用於支援連接，也就是通訊端類型**SOCK_STREAM**。 這個通訊端會放入 「 被動 」 模式的連入連線認可，而暫止接受由處理程序排入佇列。  
   
  此函式通常是由伺服器 （或任何想要接受連線的應用程式），可能會有一個以上的連線要求一次： 如果連線要求與抵達佇列已滿，用戶端會收到表示發生錯誤**WSAECONNREFUSED**。  
   
- `Listen`嘗試將繼續運作所在，進而時沒有可用的連接埠 （描述）。 它會接受連線，直到清空佇列。 如果連接埠供稍後呼叫`Listen`或**接受**將會重新填滿目前或最近 」 待辦項目，「 佇列可能的話，並繼續接聽連入連線。  
+ `Listen` 嘗試將繼續運作所在，進而時沒有可用的連接埠 （描述）。 它會接受連線，直到清空佇列。 如果連接埠供稍後呼叫`Listen`或**接受**將會重新填滿目前或最近 」 待辦項目，「 佇列可能的話，並繼續接聽連入連線。  
   
-##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
+##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket  
  包含**通訊端**處理通訊端由這個封裝的`CAsyncSocket`物件。  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
+##  <a name="onaccept"></a>  CAsyncSocket::OnAccept  
  由架構呼叫以通知它可以接受暫止的連接要求，藉由呼叫接聽通訊端[接受](#accept)成員函式。  
   
 ```  
@@ -902,7 +897,7 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[Windows Sockets： 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="onclose"></a>CAsyncSocket::OnClose  
+##  <a name="onclose"></a>  CAsyncSocket::OnClose  
  由架構呼叫以通知這個通訊端連線的通訊端已關閉其處理程序。  
   
 ```  
@@ -924,7 +919,7 @@ virtual void OnClose(int nErrorCode);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[Windows Sockets： 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
+##  <a name="onconnect"></a>  CAsyncSocket::OnConnect  
  由架構呼叫以通知此連線的通訊端完成其嘗試連線，不論成功或錯誤。  
   
 ```  
@@ -957,7 +952,7 @@ virtual void OnConnect(int nErrorCode);
   
 - **WSAENETUNREACH**無法透過此主機連接網路，這一次。  
   
-- `WSAENOBUFS`使用沒有緩衝區空間。 無法連線通訊端。  
+- `WSAENOBUFS` 使用沒有緩衝區空間。 無法連線通訊端。  
   
 - **WSAENOTCONN**通訊端未連線。  
   
@@ -975,7 +970,7 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
+##  <a name="onoutofbanddata"></a>  CAsyncSocket::OnOutOfBandData  
  由架構呼叫以通知傳送的封包有要傳送的頻外資料接收通訊端。  
   
 ```  
@@ -995,7 +990,7 @@ virtual void OnOutOfBandData(int nErrorCode);
   
  MFC 支援的頻外的資料，但類別的使用者`CAsyncSocket`不建議使用它。 更簡單的方法是建立第二個通訊端，用來傳遞這類資料。 更多的頻外資料的詳細資訊，請參閱[Windows Sockets： 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
-##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
+##  <a name="onreceive"></a>  CAsyncSocket::OnReceive  
  由架構呼叫以通知這個通訊端可以藉由呼叫擷取緩衝區中沒有資料**接收**成員函式。  
   
 ```  
@@ -1016,7 +1011,7 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="onsend"></a>CAsyncSocket::OnSend  
+##  <a name="onsend"></a>  CAsyncSocket::OnSend  
  由架構呼叫以告知通訊端，則它現在可以藉由呼叫傳送資料**傳送**成員函式。  
   
 ```  
@@ -1037,7 +1032,7 @@ virtual void OnSend(int nErrorCode);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="operator_eq"></a>CAsyncSocket::operator =  
+##  <a name="operator_eq"></a>  CAsyncSocket::operator =  
  指派新值`CAsyncSocket`物件。  
   
 ```  
@@ -1051,7 +1046,7 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="remarks"></a>備註  
  呼叫此函式可複製現有`CAsyncSocket`物件與其他`CAsyncSocket`物件。  
   
-##  <a name="operator_socket"></a>CAsyncSocket::operator 通訊端  
+##  <a name="operator_socket"></a>  CAsyncSocket::operator 通訊端  
  使用此運算子來擷取**通訊端**控點`CAsyncSocket`物件。  
   
 ```  
@@ -1064,7 +1059,7 @@ operator SOCKET() const;
 ### <a name="remarks"></a>備註  
  您可以直接呼叫 Windows Api 中使用控制代碼。  
   
-##  <a name="receive"></a>CAsyncSocket::Receive  
+##  <a name="receive"></a>  CAsyncSocket::Receive  
  呼叫此成員函式可從通訊端接收資料。  
   
 ```  
@@ -1129,7 +1124,7 @@ virtual int Receive(
 ### <a name="example"></a>範例  
   請參閱範例的[CAsyncSocket::OnReceive](#onreceive)。  
   
-##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
+##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom  
  呼叫此成員函式，來接收資料包 (datagram) 和儲存中的來源位址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構或`rSocketAddress`。  
   
 ```  
@@ -1217,7 +1212,7 @@ int ReceiveFrom(
   
  如果通訊端型別**SOCK_STREAM**和遠端已關閉連線正常，`ReceiveFrom`立即完成時會收到 0 個位元組。  
   
-##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
+##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx  
  呼叫此成員函式，來接收資料包 (datagram) 和儲存中的來源位址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構或`rSocketAddress`（處理 IPv6 位址）。  
   
 ```  
@@ -1291,7 +1286,7 @@ int ReceiveFromEx(
   
  如果通訊端型別**SOCK_STREAM**和遠端已關閉連線正常，`ReceiveFromEx`立即完成時會收到 0 個位元組。  
   
-##  <a name="send"></a>CAsyncSocket::Send  
+##  <a name="send"></a>  CAsyncSocket::Send  
  呼叫此成員函式連接的通訊端上傳送的資料。  
   
 ```  
@@ -1330,7 +1325,7 @@ virtual int Send(
   
 - **WSAENETRESET**必須重設連接，因為 Windows Sockets 實作卸除它。  
   
-- `WSAENOBUFS`Windows Sockets 實作報告緩衝區死結。  
+- `WSAENOBUFS` Windows Sockets 實作報告緩衝區死結。  
   
 - **WSAENOTCONN**通訊端未連線。  
   
@@ -1360,7 +1355,7 @@ virtual int Send(
 ### <a name="example"></a>範例  
   請參閱範例的[CAsyncSocket::OnSend](#onsend)。  
   
-##  <a name="sendto"></a>CAsyncSocket::SendTo  
+##  <a name="sendto"></a>  CAsyncSocket::SendTo  
  呼叫此成員函式，將資料傳送至特定目的地。  
   
 ```  
@@ -1423,7 +1418,7 @@ int SendTo(
   
 - **WSAENETRESET**必須重設連接，因為 Windows Sockets 實作卸除它。  
   
-- `WSAENOBUFS`Windows Sockets 實作報告緩衝區死結。  
+- `WSAENOBUFS` Windows Sockets 實作報告緩衝區死結。  
   
 - **WSAENOTCONN**未連接通訊端 ( **SOCK_STREAM**只)。  
   
@@ -1450,17 +1445,17 @@ int SendTo(
 - **WSAENETUNREACH**無法透過此主機連接網路，這一次。  
   
 ### <a name="remarks"></a>備註  
- `SendTo`使用資料流或資料流通訊端上，用來寫入輸出的資料，通訊端上。 資料包通訊端，必須小心不超過最大的 IP 封包大小基礎的子網路，這由提供**iMaxUdpDg**中的項目[WSADATA](../../mfc/reference/wsadata-structure.md)結構填寫[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)。 如果資料太長，無法以不可分割方式傳遞的基礎通訊協定錯誤**WSAEMSGSIZE**傳回，並在傳送任何資料。  
+ `SendTo` 使用資料流或資料流通訊端上，用來寫入輸出的資料，通訊端上。 資料包通訊端，必須小心不超過最大的 IP 封包大小基礎的子網路，這由提供**iMaxUdpDg**中的項目[WSADATA](../../mfc/reference/wsadata-structure.md)結構填寫[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)。 如果資料太長，無法以不可分割方式傳遞的基礎通訊協定錯誤**WSAEMSGSIZE**傳回，並在傳送任何資料。  
   
  請注意，成功完成`SendTo`並不表示已成功傳送資料。  
   
- `SendTo`只會用於**SOCK_DGRAM**資料包傳送到特定的通訊端所識別的通訊端`lpSockAddr`參數。  
+ `SendTo` 只會用於**SOCK_DGRAM**資料包傳送到特定的通訊端所識別的通訊端`lpSockAddr`參數。  
   
  若要傳送廣播 (上**SOCK_DGRAM**只)，在位址`lpSockAddr`參數應該使用特殊的 IP 位址建構**INADDR_BROADCAST** （定義於 Windows Sockets 標頭WINSOCK 的檔案。H） 並搭配預期的連接埠號碼。 或者，如果`lpszHostAddress`參數是**NULL**，通訊端設定為廣播。 通常不得為廣播資料包 (datagram) 超過大小的片段可能會發生，這表示資料包 （不含標頭） 的資料部分不可超過 512 個位元組。  
   
  若要處理的 IPv6 位址，使用[CAsyncSocket::SendToEx](#sendtoex)。  
   
-##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
+##  <a name="sendtoex"></a>  CAsyncSocket::SendToEx  
  呼叫此成員函式，將資料傳送到特定的目的地 （控點 IPv6 位址）。  
   
 ```  
@@ -1509,7 +1504,7 @@ int SendToEx(
   
 - **WSAENETRESET**必須重設連接，因為 Windows Sockets 實作卸除它。  
   
-- `WSAENOBUFS`Windows Sockets 實作報告緩衝區死結。  
+- `WSAENOBUFS` Windows Sockets 實作報告緩衝區死結。  
   
 - **WSAENOTCONN**未連接通訊端 ( **SOCK_STREAM**只)。  
   
@@ -1538,15 +1533,15 @@ int SendToEx(
 ### <a name="remarks"></a>備註  
  這個方法相當於[CAsyncSocket::SendTo](#sendto)不同之處在於它會處理 IPv6 位址以及為舊的通訊協定。  
   
- `SendToEx`使用資料流或資料流通訊端上，用來寫入輸出的資料，通訊端上。 資料包通訊端，必須小心不超過最大的 IP 封包大小基礎的子網路，這由提供**iMaxUdpDg**中的項目[WSADATA](../../mfc/reference/wsadata-structure.md)結構填寫[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)。 如果資料太長，無法以不可分割方式傳遞的基礎通訊協定錯誤**WSAEMSGSIZE**傳回，並在傳送任何資料。  
+ `SendToEx` 使用資料流或資料流通訊端上，用來寫入輸出的資料，通訊端上。 資料包通訊端，必須小心不超過最大的 IP 封包大小基礎的子網路，這由提供**iMaxUdpDg**中的項目[WSADATA](../../mfc/reference/wsadata-structure.md)結構填寫[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)。 如果資料太長，無法以不可分割方式傳遞的基礎通訊協定錯誤**WSAEMSGSIZE**傳回，並在傳送任何資料。  
   
  請注意，成功完成`SendToEx`並不表示已成功傳送資料。  
   
- `SendToEx`只會用於**SOCK_DGRAM**資料包傳送到特定的通訊端所識別的通訊端`lpSockAddr`參數。  
+ `SendToEx` 只會用於**SOCK_DGRAM**資料包傳送到特定的通訊端所識別的通訊端`lpSockAddr`參數。  
   
  若要傳送廣播 (上**SOCK_DGRAM**只)，在位址`lpSockAddr`參數應該使用特殊的 IP 位址建構**INADDR_BROADCAST** （定義於 Windows Sockets 標頭WINSOCK 的檔案。H） 並搭配預期的連接埠號碼。 或者，如果`lpszHostAddress`參數是**NULL**，通訊端設定為廣播。 通常不得為廣播資料包 (datagram) 超過大小的片段可能會發生，這表示資料包 （不含標頭） 的資料部分不可超過 512 個位元組。  
   
-##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
+##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt  
  呼叫此成員函式，設定通訊端選項。  
   
 ```  
@@ -1592,9 +1587,9 @@ BOOL SetSockOpt(
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 ### <a name="remarks"></a>備註  
- `SetSockOpt`設定通訊端選項相關聯的任何狀態中的任何型別，通訊端的目前值。 雖然選項可以有多個通訊協定層級，但是此規格只會定義存在於最上方的 「 通訊端 」 層級的選項。 選項會影響通訊端作業，例如是否加速的資料收到一般資料流中，是否可以在通訊端，傳送廣播的訊息等等。  
+ `SetSockOpt` 設定通訊端選項相關聯的任何狀態中的任何型別，通訊端的目前值。 雖然選項可以有多個通訊協定層級，但是此規格只會定義存在於最上方的 「 通訊端 」 層級的選項。 選項會影響通訊端作業，例如是否加速的資料收到一般資料流中，是否可以在通訊端，傳送廣播的訊息等等。  
   
- 有兩種類型的通訊端選項： 布林值的選項來啟用或停用的功能或行為和需要整數值或結構的選項。 若要啟用，則為 True 的選項，`lpOptionValue`點則為非零的整數。 若要停用此選項`lpOptionValue`指向等於零的整數。 `nOptionLen`應該會等於**sizeof(BOOL)**布林值的選項。 如需其他選項，`lpOptionValue`指向整數或結構，其中包含所需選項的值和`nOptionLen`是整數或結構的長度。  
+ 有兩種類型的通訊端選項： 布林值的選項來啟用或停用的功能或行為和需要整數值或結構的選項。 若要啟用，則為 True 的選項，`lpOptionValue`點則為非零的整數。 若要停用此選項`lpOptionValue`指向等於零的整數。 `nOptionLen` 應該會等於**sizeof(BOOL)** 布林值的選項。 如需其他選項，`lpOptionValue`指向整數或結構，其中包含所需選項的值和`nOptionLen`是整數或結構的長度。  
   
  **SO_LINGER**時採取的動作未傳送的資料會排入佇列的通訊端的控制項和**關閉**函式呼叫以關閉通訊端。  
   
@@ -1637,7 +1632,7 @@ BOOL SetSockOpt(
 |**SO_TYPE**|`int`|通訊端類型。|  
 |**IP_OPTIONS**||設定 IP 標頭中的選項欄位。|  
   
-##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
+##  <a name="shutdown"></a>  CAsyncSocket::ShutDown  
  呼叫此成員函式，若要停用傳送時，都會收到，或兩者都在通訊端。  
   
 ```  
@@ -1670,7 +1665,7 @@ BOOL ShutDown(int nHow = sends);
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 ### <a name="remarks"></a>備註  
- `ShutDown`適用於所有類型的通訊端若要停用接收、 傳輸，或兩者。 如果`nHow`是 0，則在後續接收通訊端將不允許。 這有不會影響的較低的通訊協定層。  
+ `ShutDown` 適用於所有類型的通訊端若要停用接收、 傳輸，或兩者。 如果`nHow`是 0，則在後續接收通訊端將不允許。 這有不會影響的較低的通訊協定層。  
   
  傳輸控制通訊協定 (TCP)、 TCP 視窗不會變更，而且會傳入資料之前的視窗已用完，接受 （但未認可）。 針對使用者資料包通訊協定 (UDP) 中，輸入資料包所接受和排入佇列。 在任何情況下將 ICMP 錯誤封包會產生。 如果`nHow`為 1，後續的將不被允許。 TCP 通訊端，將會傳送 FIN。 設定`nHow`2 來停用這兩個傳送和接收 （如上所述）。  
   
@@ -1679,7 +1674,7 @@ BOOL ShutDown(int nHow = sends);
 ### <a name="example"></a>範例  
   請參閱範例的[CAsyncSocket::OnReceive](#onreceive)。  
   
-##  <a name="socket"></a>CASyncSocket::Socket  
+##  <a name="socket"></a>  CASyncSocket::Socket  
  配置通訊端控制代碼。  
   
 ```  
@@ -1721,7 +1716,7 @@ BOOL Socket(
 ### <a name="remarks"></a>備註  
  這個方法配置的通訊端控制代碼。 它不會呼叫[CAsyncSocket::Bind](#bind)至指定的位址、 繫結通訊端，因此您必須呼叫`Bind`更新版本，才能繫結至指定之位址的通訊端。 您可以使用[CAsyncSocket::SetSockOpt](#setsockopt)之前它已繫結設定的通訊端選項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CSocket 類別](../../mfc/reference/csocket-class.md)   

@@ -1,31 +1,26 @@
 ---
-title: "Managed 類型 (c + + CL) |Microsoft 文件"
-ms.custom: 
+title: Managed 類型 (c + + CL) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - __gc types
 - types [C++], CLR
 ms.assetid: 1ddd114e-be02-4de7-a4dd-a2d72ad8ff81
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9e7bbd9687c3cc696b35e0284d55a18f59c898cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42426c45f4b8caf3cd4cb61ee867470dc9ea639f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-types-ccl"></a>Managed 類型 (C++/CL)
 針對 managed 型別和建立的宣告和使用這些型別的物件語法已經大幅改變，從 Managed Extensions for c + + Visual c + +。 這是要提升其 ISO c + + 類型系統中的整合。 這些變更會以下列小節將詳細說明。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  **注意：**委派的討論內容會延遲，直到[委派和事件](../dotnet/delegates-and-events.md)呈現其事件類別時，一般的主題內的成員具有[類別或介面中的成員宣告(C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + /CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)   
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
  [陣列](../windows/arrays-cpp-component-extensions.md)

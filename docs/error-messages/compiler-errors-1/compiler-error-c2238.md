@@ -1,13 +1,10 @@
 ---
-title: "編譯器錯誤 C2238 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2238 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2238
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2238
 ms.assetid: 3d53060c-d6b7-4603-b9cf-d7c65eb64cd2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7baf24ba564c8939fac0bfdf0e2c4f39f6d1e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8fd26a27d79860166b5a4268c330a0338a05a17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2238"></a>編譯器錯誤 C2238
 在 'token' 之前有未預期的語彙基元  

@@ -1,12 +1,9 @@
 ---
-title: "運算子&gt;= （清單） (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 運算子&gt;= （清單） (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::operator>=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: c6142241-8e85-4759-98fd-4f2b7d37b255
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e1d0f3c5cba12aa240acb5e98046e9bc702558ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1eff6977b5929fec58b4ec9ed3b9ffe20f2d584
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorgt-list-stlclr"></a>運算子&gt;= （清單） (STL/CLR)
 清單大於或等於比較。  
@@ -100,7 +95,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [運算子 = = （清單） (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)   
  [運算子 ！ = （清單） (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   

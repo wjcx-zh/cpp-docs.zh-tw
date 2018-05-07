@@ -1,12 +1,9 @@
 ---
-title: "CRowset 類別 |Microsoft 文件"
-ms.custom: 
+title: CRowset 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0774c82715ab2fd85098147ebe1697daf7d2d2fa
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5c9a23c2e879f0d2fe1add1a970c64f6fbcc27b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowset-class"></a>CRowset 類別
 封裝 OLE DB 資料列集物件，以及數個相關的介面，並提供操作的資料列集資料的方法。  
@@ -73,7 +68,7 @@ class CRowset
 |[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|提取資料列從資料列集的小數位置開始。|  
 |[ReleaseRows](../../data/oledb/crowset-releaserows.md)|呼叫[irowset:: Releaserows](https://msdn.microsoft.com/en-us/library/ms719771.aspx)釋放目前的資料列控制代碼。|  
 |[SetData](../../data/oledb/crowset-setdata.md)|設定資料值的資料列，使用的一或多個資料行中[IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx)。|  
-|[Undo](../../data/oledb/crowset-undo.md)|復原自上次擷取資料列所做的變更或[更新](../../data/oledb/crowset-update.md)。|  
+|[復原](../../data/oledb/crowset-undo.md)|復原自上次擷取資料列所做的變更或[更新](../../data/oledb/crowset-update.md)。|  
 |[更新](../../data/oledb/crowset-update.md)|傳輸任何暫止的變更與目前資料列自上次擷取或更新。|  
 |[UpdateAll](../../data/oledb/crowset-updateall.md)|將傳送所有擱置中的所有資料列自上次擷取或更新變更。|  
   
@@ -85,7 +80,7 @@ class CRowset
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [DBViewer 範例](../../visual-cpp-samples.md)   
  [MultiRead 的範例](../../visual-cpp-samples.md)   
  [MultiRead 的屬性範例](../../visual-cpp-samples.md)   

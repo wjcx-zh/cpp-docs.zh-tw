@@ -1,13 +1,10 @@
 ---
-title: "資料庫巨集和全域 |Microsoft 文件"
-ms.custom: 
+title: 資料庫巨集和全域 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/AFX_ODBC_CALL
 - AFXDB/AFX_SQL_ASYNC
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - global functions [MFC], database functions
 - macros [MFC], MFC database
 ms.assetid: 5b9b9e61-1cf9-4345-9f29-3807dd466488
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f43135678c54ed2f837934c19a8543c86a65fdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcafff20ad79f68f2bb5d4195c38603da63b9d17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-macros-and-globals"></a>資料庫巨集和全域
 以下所列的巨集和全域資料適用於採用 ODBC 的資料庫應用程式。 它們不適用於採用 DAO 的應用程式。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxGetHENV](#afxgethenv)|擷取目前正在由 MFC 使用的 ODBC 環境控制代碼。 您可以直接呼叫 ODBC 時使用這個控制代碼。|  
 
 
-## <a name="afxdbinitmodule"></a>AfxDbInitModule
+## <a name="afxdbinitmodule"></a> AfxDbInitModule
 MFC 資料庫 （或 DAO） 支援從動態連結至 MFC 之標準 MFC DLL，會呼叫這個函式增益程式標準的 MFC DLL **Afxenablecontrolcontainer**函式來初始化 MFC 資料庫 DLL。  
    
 ### <a name="syntax"></a>語法    
@@ -64,17 +59,17 @@ void AFXAPI AfxDbInitModule( );
 ```  
    
 ### <a name="remarks"></a>備註  
- 請確定這個呼叫發生之前的任何基底類別呼叫或任何加入的程式碼會存取 MFC 資料庫 DLL。 MFC 資料庫 DLL 是一個 MFC 擴充 DLL;為了讓 MFC 擴充 DLL 至**CDynLinkLibrary**鏈結，就必須建立**CDynLinkLibrary**將會使用每個模組的內容中的物件。 `AfxDbInitModule`建立**CDynLinkLibrary**您標準 MFC DLL 的內容中的物件，讓它取得**CDynLinkLibrary**物件鏈結的標準 MFC DLL。  
+ 請確定這個呼叫發生之前的任何基底類別呼叫或任何加入的程式碼會存取 MFC 資料庫 DLL。 MFC 資料庫 DLL 是一個 MFC 擴充 DLL;為了讓 MFC 擴充 DLL 至**CDynLinkLibrary**鏈結，就必須建立**CDynLinkLibrary**將會使用每個模組的內容中的物件。 `AfxDbInitModule` 建立**CDynLinkLibrary**您標準 MFC DLL 的內容中的物件，讓它取得**CDynLinkLibrary**物件鏈結的標準 MFC DLL。  
    
 ### <a name="requirements"></a>需求  
  **標頭：** < afxdll_.h >  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)
  
   
 
-##  <a name="afx_odbc_call"></a>AFX_ODBC_CALL  
+##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL  
  使用這個巨集呼叫可能會傳回任何 ODBC API 函式`SQL_STILL_EXECUTING`。  
   
 ```  
@@ -86,7 +81,7 @@ AFX_ODBC_CALL(SQLFunc)
  ODBC API 函式。 如需有關 ODBC API 函式的詳細資訊，請參閱 Windows SDK。  
   
 ### <a name="remarks"></a>備註  
- `AFX_ODBC_CALL`重複呼叫函式直到它不再傳回`SQL_STILL_EXECUTING`。  
+ `AFX_ODBC_CALL` 重複呼叫函式直到它不再傳回`SQL_STILL_EXECUTING`。  
   
  叫用之前`AFX_ODBC_CALL`，您必須宣告一個變數， `nRetCode`，型別**RETCODE**。  
   
@@ -101,7 +96,7 @@ AFX_ODBC_CALL(SQLFunc)
 ### <a name="requirements"></a>需求  
  **標頭：** afxdb.h  
 
-##  <a name="afx_sql_async"></a>AFX_SQL_ASYNC  
+##  <a name="afx_sql_async"></a>  AFX_SQL_ASYNC  
  在 MFC 4.2 變更這個巨集實作。  
   
 ```   
@@ -116,7 +111,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
  ODBC API 函式。 如需有關 ODBC API 函式的詳細資訊，請參閱 Windows SDK。  
   
 ### <a name="remarks"></a>備註  
- `AFX_SQL_ASYNC`只會呼叫巨集[AFX_ODBC_CALL](#afx_odbc_call)並忽略`prs`參數。 在 MFC 4.2 之前的版本中，`AFX_SQL_ASYNC` 是用來呼叫可能傳回 `SQL_STILL_EXECUTING` 的 ODBC API 函式。 如果 ODBC API 函式確實傳回 `SQL_STILL_EXECUTING`，則 `AFX_SQL_ASYNC` 會呼叫 `prs->OnWaitForDataSource`。  
+ `AFX_SQL_ASYNC` 只會呼叫巨集[AFX_ODBC_CALL](#afx_odbc_call)並忽略`prs`參數。 在 MFC 4.2 之前的版本中，`AFX_SQL_ASYNC` 是用來呼叫可能傳回 `SQL_STILL_EXECUTING` 的 ODBC API 函式。 如果 ODBC API 函式確實傳回 `SQL_STILL_EXECUTING`，則 `AFX_SQL_ASYNC` 會呼叫 `prs->OnWaitForDataSource`。  
   
 > [!NOTE]
 >  MFC ODBC 類別現在只會使用同步處理。 為了執行非同步作業，您必須呼叫 ODBC API 函式**SQLSetConnectOption**。 如需詳細資訊，請參閱 「 非同步執行函式 」 Windows SDK 中的主題。  
@@ -124,7 +119,7 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ### <a name="requirements"></a>需求  
   **標頭**afxdb.h  
   
-##  <a name="afx_sql_sync"></a>AFX_SQL_SYNC  
+##  <a name="afx_sql_sync"></a>  AFX_SQL_SYNC  
  `AFX_SQL_SYNC`巨集只會呼叫此函式`SQLFunc`。  
   
 ```   
@@ -151,7 +146,7 @@ AFX_SQL_SYNC(SQLFunc)
 ### <a name="requirements"></a>需求  
   **標頭**afxdb.h  
   
-##  <a name="afxgethenv"></a>AfxGetHENV  
+##  <a name="afxgethenv"></a>  AfxGetHENV  
  您可以直接呼叫 ODBC 使用傳回的控制代碼，但是必須不關閉此控制代碼或假設控制代碼仍然有效且可用之後任何現有`CDatabase`-或`CRecordset`-衍生的物件已被終結。  
   
 ```   
@@ -164,5 +159,5 @@ HENV AFXAPI AfxGetHENV();
 ### <a name="requirements"></a>需求  
   **標頭**afxdb.h  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

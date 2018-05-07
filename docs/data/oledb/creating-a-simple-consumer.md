@@ -1,30 +1,25 @@
 ---
-title: "建立簡單消費者 |Microsoft 文件"
-ms.custom: 
+title: 建立簡單消費者 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 553d4f8875812aa9453ec39e0e3223bd3463a31a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 711aaaff2bc4e012ba4c4ef78465f06c51b9d307
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-simple-consumer"></a>建立簡單消費者
 使用 ATL 專案精靈 和 ATL OLE DB 消費者精靈產生的 OLE DB 樣板取用者。  
@@ -86,7 +81,7 @@ ms.lasthandoff: 02/23/2018
   
 7.  按一下 [確定 **Deploying Office Solutions**]。 這會讓您回到 ATL OLE DB 消費者精靈。  
   
-8.  在精靈完成的名稱`Class`和**.h 檔案**依據的資料表、 檢視名稱或預存程序，您選取。 如果您想要您可以編輯這些名稱。  
+8.  在精靈完成的名稱`Class`和 **.h 檔案**依據的資料表、 檢視名稱或預存程序，您選取。 如果您想要您可以編輯這些名稱。  
   
 9. 清除**屬性化**核取方塊，讓取用者程式碼使用此精靈會建立[OLE DB 樣板類別](../../data/oledb/ole-db-consumer-templates-reference.md)而不使用預設[OLE DB 消費者屬性](../../windows/ole-db-consumer-attributes.md)。  
   
@@ -112,5 +107,5 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  這一行可防止消費者應用程式無法編譯，並提醒您若要檢查您的連接字串的硬式編碼的密碼。 檢查您的連接字串之後, 您可以移除這行程式碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

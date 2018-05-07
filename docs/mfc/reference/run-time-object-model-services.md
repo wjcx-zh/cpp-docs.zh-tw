@@ -1,13 +1,10 @@
 ---
-title: "執行階段物件模型服務 |Microsoft 文件"
-ms.custom: 
+title: 執行階段物件模型服務 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 986657681dabf1136b072f65b2df76b63f216504
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff506d559ab44ba4034e982bb909db763917594
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 類別[CObject](../../mfc/reference/cobject-class.md)和[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)封裝數個物件服務，包括執行階段類別資訊、 序列化和動態物件建立的存取。 從 `CObject` 衍生的所有類別都會繼承此功能。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 |[IMPLEMENT_OLECTLTYPE](#implement_olectltype)|實作**GetUserTypeNameID**和`GetMiscStatus`控制類別成員函式。|  
 |[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)|這個巨集或[IMPLEMENT_OLECREATE](#implement_olecreate)必須出現在使用任何類別實作檔`DECLARE_OLECREATE`。 |
 
-## <a name="afx_comctl32_if_exists"></a>AFX_COMCTL32_IF_EXISTS
+## <a name="afx_comctl32_if_exists"></a> AFX_COMCTL32_IF_EXISTS
 判斷通用控制項程式庫是否實作指定的 API。  
    
 ### <a name="syntax"></a>語法  
@@ -96,10 +91,10 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 ### <a name="requirements"></a>需求  
  afxcomctl32.h、afxcomctl32.inl  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [隔離的 MFC 通用控制項程式庫](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
  
-## <a name="afx_comctl32_if_exists2"></a>AFX_COMCTL32_IF_EXISTS2
+## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 判斷通用控制項程式庫是否實作指定的 API (這是 Unicode 版本[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists))。  
    
 ### <a name="syntax"></a>語法    
@@ -116,12 +111,12 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 ### <a name="requirements"></a>需求  
  afxcomctl32.h、afxcomctl32.inl  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [隔離的 MFC 通用控制項程式庫](../isolation-of-the-mfc-common-controls-library.md) [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 
 
-##  <a name="declare_dynamic"></a>DECLARE_DYNAMIC  
+##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC  
  加入衍生的類別時存取的物件類別的執行階段資訊的能力`CObject`。  
   
 ```
@@ -147,7 +142,7 @@ DECLARE_DYNAMIC(class_name)
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="declare_dyncreate"></a>DECLARE_DYNCREATE  
+##  <a name="declare_dyncreate"></a>  DECLARE_DYNCREATE  
  可讓物件的`CObject`-衍生類別，以在執行階段動態建立。  
   
 ```
@@ -194,7 +189,7 @@ DECLARE_OLECTLTYPE( class_name )
 ### <a name="requirements"></a>需求  
  **標頭：** afxctl.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
  
 
@@ -217,11 +212,11 @@ DECLARE_PROPPAGEIDS( class_name )
 ### <a name="requirements"></a>需求  
  **標頭：** afxctl.h  
    
-### <a name="see-also"></a>請參閱   
+### <a name="see-also"></a>另請參閱   
  [BEGIN_PROPPAGEIDS](#begin_proppageids)   
  [END_PROPPAGEIDS](#end_proppageids)
 
-##  <a name="declare_serial"></a>DECLARE_SERIAL  
+##  <a name="declare_serial"></a>  DECLARE_SERIAL  
  會產生所需的 c + + 標頭碼`CObject`-衍生可序列化的類別。  
   
 ```
@@ -253,7 +248,7 @@ DECLARE_SERIAL(class_name)
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="implement_dynamic"></a>您的類別  
+##  <a name="implement_dynamic"></a>  您的類別  
  產生的 c + + 程式碼所需的動態`CObject`-衍生的類別名稱與階層內的位置與執行階段存取的類別。  
   
 ```
@@ -280,7 +275,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="implement_dyncreate"></a>IMPLEMENT_DYNCREATE  
+##  <a name="implement_dyncreate"></a>  IMPLEMENT_DYNCREATE  
  可讓物件的`CObject`-衍生類別以動態方式建立在執行時間搭配使用時`DECLARE_DYNCREATE`巨集。  
   
 ```
@@ -311,7 +306,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-## <a name="implement_olecreate_flags"></a>IMPLEMENT_OLECREATE_FLAGS
+## <a name="implement_olecreate_flags"></a>  IMPLEMENT_OLECREATE_FLAGS
 這個巨集或[IMPLEMENT_OLECREATE](#implement_olecreate)必須出現在使用任何類別實作檔`DECLARE_OLECREATE`。  
    
 ### <a name="syntax"></a>語法    
@@ -330,12 +325,12 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
  `nFlags`  
  包含一或多個下列旗標：  
   
--   `afxRegInsertable`可讓控制項出現在插入物件對話方塊中的 OLE 物件。    
--   `afxRegApartmentThreading`在 ThreadingModel 登錄中設定執行緒模型 = Apartment。    
+-   `afxRegInsertable` 可讓控制項出現在插入物件對話方塊中的 OLE 物件。    
+-   `afxRegApartmentThreading` 在 ThreadingModel 登錄中設定執行緒模型 = Apartment。    
 -   **afxRegFreeThreading** ThreadingModel 登錄中設定執行緒模型 = 可用。  
   
      您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設定 ThreadingModel = Both。 請參閱[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)執行緒模型註冊的詳細資訊的 Windows SDK 中。    
- *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4*， *b5*， *b6*， *b7*， *b8*  
+ *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4**b5*， *b6*， *b7*， *b8*  
  此類別的元件**CLSID**。  
    
 ### <a name="remarks"></a>備註  
@@ -350,13 +345,13 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [DECLARE_OLECREATE](#declare_olecreate)   
  [CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)
 
 
-## <a name="implement_olecreate"></a>IMPLEMENT_OLECTLTYPE
+## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 實作**GetUserTypeNameID**和`GetMiscStatus`控制類別成員函式。  
    
 ### <a name="syntax"></a>語法    
@@ -376,7 +371,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ### <a name="remarks"></a>備註  
  除了`IMPLEMENT_OLECTLTYPE`，您必須新增**DECLARE_OLECTLTYPE**巨集，以您的控制項類別宣告中。  
   
- **GetUserTypeNameID**成員函式傳回的資源字串，識別您的控制項類別。 `GetMiscStatus`傳回**OLEMISC**位元為您的控制項。 此列舉會指定描述控制項的其他特性設定的集合。 如需完整的說明**OLEMISC**設定，請參閱[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
+ **GetUserTypeNameID**成員函式傳回的資源字串，識別您的控制項類別。 `GetMiscStatus` 傳回**OLEMISC**位元為您的控制項。 此列舉會指定描述控制項的其他特性設定的集合。 如需完整的說明**OLEMISC**設定，請參閱[OLEMISC](http://msdn.microsoft.com/library/windows/desktop/ms678497) Windows SDK 中。  
   
 > [!NOTE]
 >  ActiveX ControlWizard 所使用的預設值為： **OLEMISC_ACTIVATEWHENVISIBLE**， **OLEMISC_SETCLIENTSITEFIRST**， **OLEMISC_INSIDEOUT**， **OLEMISC_CANTLINKINSIDE**，和**OLEMISC_RECOMPOSEONRESIZE**。  
@@ -384,11 +379,11 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ### <a name="requirements"></a>需求  
  **標頭：** afxctl.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [DECLARE_OLECTLTYPE](#declare_olectltype)
 
-##  <a name="implement_serial"></a>IMPLEMENT_SERIAL  
+##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL  
  產生的 c + + 程式碼所需的動態`CObject`-衍生的類別名稱與階層內的位置與執行階段存取的類別。  
   
 ```
@@ -420,7 +415,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
 
-##  <a name="runtime_class"></a>RUNTIME_CLASS  
+##  <a name="runtime_class"></a>  RUNTIME_CLASS  
  從 c + + 類別的名稱取得執行階段類別結構。  
   
 ```
@@ -432,7 +427,7 @@ RUNTIME_CLASS(class_name)
  （不以引號括住） 類別的實際名稱。  
   
 ### <a name="remarks"></a>備註  
- `RUNTIME_CLASS`將指標傳回至[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)所指定的類別結構*class_name*。 只有`CObject`-衍生的類別宣告與`DECLARE_DYNAMIC`， `DECLARE_DYNCREATE`，或`DECLARE_SERIAL`會傳回指向`CRuntimeClass`結構。  
+ `RUNTIME_CLASS` 將指標傳回至[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)所指定的類別結構*class_name*。 只有`CObject`-衍生的類別宣告與`DECLARE_DYNAMIC`， `DECLARE_DYNCREATE`，或`DECLARE_SERIAL`會傳回指向`CRuntimeClass`結構。  
   
  如需詳細資訊，請參閱[CObject 類別主題](../../mfc/using-cobject.md)。  
   
@@ -442,7 +437,7 @@ RUNTIME_CLASS(class_name)
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h 
    
-##  <a name="declare_olecreate"></a>DECLARE_OLECREATE  
+##  <a name="declare_olecreate"></a>  DECLARE_OLECREATE  
  可讓物件的`CCmdTarget`-衍生類別，以透過 OLE automation 建立。  
   
 ```
@@ -463,7 +458,7 @@ DECLARE_OLECREATE(class_name)
 ### <a name="requirements"></a>需求  
  **標頭**: afxdisp.h  
 
-##  <a name="implement_olecreate"></a>IMPLEMENT_OLECREATE  
+##  <a name="implement_olecreate"></a>  IMPLEMENT_OLECREATE  
  這個巨集或[IMPLEMENT_OLECREATE_FLAGS](#implement_olecreate_flags)必須出現在使用任何類別實作檔`DECLARE_OLECREATE`。  
   
 ```
@@ -477,7 +472,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
  *external_name*  
  物件名稱公開給其他應用程式 （以引號括住）。  
   
- *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4*， *b5*， *b6*， *b7*， *b8*  
+ *l*， *w1*， *w2*， *b1*， *b2*， *b3*， *b4**b5*， *b6*， *b7*， *b8*  
  此類別的元件**CLSID**。  
   
 ### <a name="remarks"></a>備註  
@@ -492,6 +487,6 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 ### <a name="requirements"></a>需求  
  **標頭**: afxdisp.h 
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
 

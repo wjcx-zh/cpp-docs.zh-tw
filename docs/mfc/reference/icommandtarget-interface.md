@@ -1,12 +1,9 @@
 ---
-title: "ICommandTarget 介面 |Microsoft 文件"
-ms.custom: 
+title: ICommandTarget 介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - ICommandTarget
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8adb388bed39f91637dd1ef37ee1ee895f291d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b32112fbad516b2550da0cc48cb6c287583d396c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget 介面
 使用者控制項提供介面來接收命令來源物件的命令。  
@@ -56,7 +51,7 @@ interface class ICommandTarget
 ## <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
   
-##  <a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a> ICommandTarget::Initialize  
  初始化命令目標物件。  
   
 ```  
@@ -72,7 +67,7 @@ void Initialize(ICommandSource^ cmdSource);
   
  這個方法會初始化命令目標物件，並將它與指定的命令來源物件 cmdSource 關聯。 使用者控制項類別實作中，應該呼叫它。 在初始化時，您應該在初始化實作中呼叫 ICommandSource::AddCommandHandler 命令來源物件與註冊命令處理常式。 請參閱 < 如何： 新增命令傳送至 Windows Form 控制項，如需如何使用初始化執行此動作的範例。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何： 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [ICommandSource 介面](../../mfc/reference/icommandsource-interface.md)
 

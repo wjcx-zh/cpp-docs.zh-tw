@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 使用字型 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 使用字型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控制項：使用字型
 如果您的 ActiveX 控制項中顯示文字，您可以允許控制項使用者藉由變更 font 屬性變更的文字外觀。 會實作為字型物件字型屬性，而且可以是下列其中一種： 內建或自訂。 內建字型屬性是預先實作的字型屬性，您可以使用 [加入屬性精靈] 來新增。 自訂的字型屬性都未預先實作，讓控制項開發人員決定屬性的行為和使用方式。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [在控制項中使用自訂的字型屬性](#_core_implementing_a_custom_font_property)  
   
-##  <a name="_core_using_the_stock_font_property"></a>使用內建字型屬性  
+##  <a name="_core_using_the_stock_font_property"></a> 使用內建字型屬性  
  內建字型屬性會預先實作類別所[COleControl](../mfc/reference/colecontrol-class.md)。 此外，標準的字型屬性頁也是可用，允許使用者變更字型物件，例如其名稱、 大小和樣式的各種屬性。  
   
  存取字型物件透過[GetFont](../mfc/reference/colecontrol-class.md#getfont)， [SetFont](../mfc/reference/colecontrol-class.md#setfont)，和[InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont)函式的`COleControl`。 控制使用者的存取字型物件，透過`GetFont`和`SetFont`函式中任何其他的 Get/Set 屬性相同的方式。 在控制項中需要從字型物件的存取權時，請使用`InternalGetFont`函式。  
@@ -102,14 +97,14 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]  
   
-##  <a name="_core_modifying_the_ondraw_function"></a>修改 OnDraw 函式  
+##  <a name="_core_modifying_the_ondraw_function"></a> 修改 OnDraw 函式  
  預設實作`OnDraw`使用 Windows 系統字型的所有文字控制項中顯示。 這表示您必須修改`OnDraw`選取字型物件放入裝置內容的程式碼。 若要這樣做，請呼叫[COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont)並傳遞控制項的裝置內容，如下列範例所示：  
   
  [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]  
   
  之後`OnDraw`函式已修改成使用字型物件時，控制項內的任何文字會顯示從控制項的內建字型屬性的特性。  
   
-##  <a name="_core_using_custom_font_properties_in_your_control"></a>在控制項中使用自訂的字型屬性  
+##  <a name="_core_using_custom_font_properties_in_your_control"></a> 在控制項中使用自訂的字型屬性  
  除了內建字型屬性，ActiveX 控制項有自訂的字型屬性。 若要新增自訂的字型屬性，您必須：  
   
 -   使用 [加入屬性精靈] 來實作自訂的字型屬性。  
@@ -118,7 +113,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [實作新字型通知介面](#_core_implementing_a_new_font_notification_interface)。  
   
-###  <a name="_core_implementing_a_custom_font_property"></a>實作自訂的字型屬性  
+###  <a name="_core_implementing_a_custom_font_property"></a> 實作自訂的字型屬性  
  若要實作自訂的字型屬性，您可以使用 [加入屬性精靈] 來加入屬性，再進行一些修改，以程式碼。 下列章節說明如何將自訂`HeadingFont`範例控制項的屬性。  
   
 ##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>若要加入自訂的字型屬性使用 加入屬性精靈  
@@ -206,7 +201,7 @@ ms.lasthandoff: 12/21/2017
   
  在進行這些變更之後，重建整個專案以加入其他功能。  
   
-###  <a name="_core_processing_font_notifications"></a>處理字型通知  
+###  <a name="_core_processing_font_notifications"></a> 處理字型通知  
  在大部分情況下控制項需要知道何時已修改字型物件特性。 每個字型物件是能夠提供通知，當您藉由呼叫成員函式的監視變更**IFontNotification**所實作的介面`COleControl`。  
   
  如果控制項使用內建字型屬性，其通知由處理`OnFontChanged`成員函式`COleControl`。 當您新增自訂的字型屬性時，您可以讓它們使用相同的實作。 在上一節中範例中，這藉由傳遞完成 （& s)**m_xFontNotification**初始化時**m_fontHeading**成員變數。  
@@ -218,7 +213,7 @@ ms.lasthandoff: 12/21/2017
   
  控制項的字型物件通知之間區別的一個方法是建立的不同實作**IFontNotification**控制項中每個字型物件介面。 這項技術可讓您藉由更新只有字串或字串，使用最近修改的字型的最佳化您的繪圖程式碼。 下列各節將示範實作第二個的字型屬性的個別通知介面所需的步驟。 第二個字型屬性會被假設為`HeadingFont`是在上一節中新增的屬性。  
   
-###  <a name="_core_implementing_a_new_font_notification_interface"></a>實作新字型通知介面  
+###  <a name="_core_implementing_a_new_font_notification_interface"></a> 實作新字型通知介面  
  若要區別兩個或多個字型的通知，新的通知介面必須實作每個控制項中所使用的字型。 下列章節說明如何藉由修改控制標頭和實作檔案中實作新字型告知介面。  
   
 ### <a name="additions-to-the-header-file"></a>標頭檔新增的項目  
@@ -237,7 +232,7 @@ ms.lasthandoff: 12/21/2017
   
  這些變更已對您的專案之後，重建專案，並使用測試容器測試該介面。 如需測試容器存取方法的詳細資訊，請參閱 [以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md) 。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控制項： 在 ActiveX 控制項中使用圖片](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)   
  [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)

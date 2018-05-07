@@ -1,12 +1,9 @@
 ---
-title: "CSettingsStoreSP 類別 |Microsoft 文件"
-ms.custom: 
+title: CSettingsStoreSP 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStoreSP
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1852f4e280fa49a2436c421d4669e9d735d66c3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 類別
 `CSettingsStoreSP`類別是協助程式類別可讓您建立的執行個體[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
@@ -77,12 +72,12 @@ class CSettingsStoreSP
   
  每當架構通常會存取登錄，它會立即動態具現化您的自訂類別，並用來讀取或寫入資料。  
   
- `CSettingsStoreSP::SetRuntimeClass`使用全域靜態變數。 因此，只有一個自訂存放區可一次。  
+ `CSettingsStoreSP::SetRuntimeClass` 使用全域靜態變數。 因此，只有一個自訂存放區可一次。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxsettingsstore.h  
   
-##  <a name="create"></a>CSettingsStoreSP::Create  
+##  <a name="create"></a>  CSettingsStoreSP::Create  
  建立衍生自物件的新執行個體[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
   
 ```  
@@ -113,7 +108,7 @@ CSettingsStore& CSettingsStoreSP Create(
   
  [!code-cpp[NVC_MFC_RibbonApp#33](../../mfc/reference/codesnippet/cpp/csettingsstoresp-class_1.cpp)]  
   
-##  <a name="csettingsstoresp"></a>CSettingsStoreSP::CSettingsStoreSP  
+##  <a name="csettingsstoresp"></a>  CSettingsStoreSP::CSettingsStoreSP  
  建構[CSettingsStoreSP 類別](../../mfc/reference/csettingsstoresp-class.md)物件。  
   
 ```  
@@ -127,7 +122,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ### <a name="remarks"></a>備註  
  `CSettingsStoreSP`物件會儲存從資料`dwUserData`受保護的成員變數中`m_dwUserData`。  
   
-##  <a name="setruntimeclass"></a>CSettingsStoreSP::SetRuntimeClass  
+##  <a name="setruntimeclass"></a>  CSettingsStoreSP::SetRuntimeClass  
  設定執行階段類別。 此方法[CSettingsStoreSP::Create](#create)會使用執行階段類別，來判斷要建立的物件類型。  
   
 ```  
@@ -139,12 +134,12 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
  從衍生類別的執行階段類別資訊指標[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果登錄成功。，`FALSE`如果所識別的類別`pRTI`不衍生自`CSettingsStore`。  
+ `TRUE` 如果登錄成功。，`FALSE`如果所識別的類別`pRTI`不衍生自`CSettingsStore`。  
   
 ### <a name="remarks"></a>備註  
  您可以使用[CSettingsStoreSP 類別](../../mfc/reference/csettingsstoresp-class.md)衍生類別，從`CSettingsStore`。 使用方法`SetRuntimeClass`如果您想要建立的自訂類別，衍生自物件`CSettingsStore`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)

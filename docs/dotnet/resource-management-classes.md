@@ -1,12 +1,9 @@
 ---
-title: "資源管理類別 |Microsoft 文件"
-ms.custom: 
+title: 資源管理類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - resource management, C++ classes
 - resources [C++], management
 ms.assetid: 1040e813-f1cd-4b13-83b6-d329f8e75d2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 968dabe5854fb5dd9a3b35713f7063b4ef59db59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5457cf9062de233a4489f92cb2a1bf561a2e30d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-management-classes"></a>資源管理類別
 這些類別提供 Managed 類別的自動管理。  
@@ -40,5 +35,5 @@ ms.lasthandoff: 12/21/2017
 |[auto_gcroot](../dotnet/auto-gcroot.md)|在原生類型中嵌入虛擬控制代碼。|  
 |[auto_handle](../dotnet/auto-handle.md)|在 Managed 類型中嵌入虛擬控制代碼。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C++ 支援程式庫](../dotnet/cpp-support-library.md)

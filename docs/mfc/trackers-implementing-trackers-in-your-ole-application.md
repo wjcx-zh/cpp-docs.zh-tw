@@ -1,13 +1,10 @@
 ---
-title: "追蹤器： OLE 應用程式中實作追蹤器 |Microsoft 文件"
-ms.custom: 
+title: 追蹤器： OLE 應用程式中實作追蹤器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE containers [MFC], trackers
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: 5103a517-65bd-441a-8a53-02915ff3ef08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84972615ec5cac344731ee5a4aeaefacaa46ba5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0936c760c9528e5ed4220c2a4c46a170b84041a8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>追蹤器：在 OLE 應用程式中實作追蹤器
 追蹤器提供圖形介面，可讓使用者與 OLE 用戶端項目互動。 藉由使用不同的追蹤器樣式，OLE 用戶端項目的顯示可以包含陰影的框線，調整控點大小，或是各種其他視覺效果。 本文說明：  
@@ -39,6 +34,6 @@ ms.lasthandoff: 12/21/2017
   
  本文亦涵蓋追蹤器樣式的使用。 此外，它可讓數個 MFC OLE 範例參考[OCLIENT](../visual-cpp-samples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤器](../mfc/trackers.md)
 

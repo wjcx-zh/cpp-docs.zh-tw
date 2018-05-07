@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::MapView 類別 |Microsoft 文件"
-ms.custom: 
+title: Platform::Collections::MapView 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::MapView::MapView
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f55a980f0d4fcb6982adb4d40353a47ee2f4d120
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9b5000ad06e542aa4616a29150601b8d628fc097
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 類別
 表示 *對應 (Map)*(機碼值組的集合) 的唯讀檢視。  
@@ -63,16 +58,16 @@ ref class MapView sealed;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[MapView::MapView](#ctor)|初始化 MapView 類別的新執行個體。|  
+|[Mapview:: Mapview](#ctor)|初始化 MapView 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[MapView::First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|  
-|[MapView::HasKey](#haskey)|判斷目前 MapView 是否包含指定的機碼。|  
-|[MapView::Lookup](#lookup)|在目前 MapView 物件中擷取位於指定機碼的元素。|  
-|[MapView::Size](#size)|傳回目前 MapView 物件中的項目數。|  
+|[Mapview:: First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|  
+|[Mapview:: Haskey](#haskey)|判斷目前 MapView 是否包含指定的機碼。|  
+|[Mapview:: Lookup](#lookup)|在目前 MapView 物件中擷取位於指定機碼的元素。|  
+|[Mapview:: Size](#size)|傳回目前 MapView 物件中的項目數。|  
 |[MapView::Split](#split)|將原始 MapView 物件分割為兩個 MapView 物件。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -220,5 +215,5 @@ void Split(
 ### <a name="remarks"></a>備註  
  這個方法無法操作，不會執行任何動作。  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

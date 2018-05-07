@@ -1,30 +1,25 @@
 ---
-title: "建構函式初始設定順序變更 |Microsoft 文件"
-ms.custom: 
+title: 建構函式初始設定順序變更 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - constructors, C++
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 499855ec5052c039e007df8348db094aee356411
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32dad73e3d2026726e3042b0c619eeff11a5f57c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-in-constructor-initialization-order"></a>建構函式初始設定順序的變更
 類別建構函式的初始化順序已從 Managed Extensions for c + + Visual c + +。  
@@ -119,7 +114,7 @@ private:
 ## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>此意義從 Managed Extensions for c + + 移至 Visual c + + 2010年  
  在許多情況下類別建構函式的執行順序的變更應該是透明程式設計人員因為基底類別有沒有繼承的類別行為的概念。 不過，如下列程式碼範例所示，繼承類別的建構函式可能會大幅影響時的初始設定清單的值相依於基底類別成員。 當您移動您的程式碼從 Managed Extensions for c + + 的新語法時，請考慮將這類建構移至類別建構函式主體執行都一定時間。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [建構函式](../cpp/constructors-cpp.md)   
  

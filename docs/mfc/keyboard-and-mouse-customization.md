@@ -1,30 +1,25 @@
 ---
-title: "鍵盤和滑鼠自訂 |Microsoft 文件"
-ms.custom: 
+title: 鍵盤和滑鼠自訂 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b031c4af05df7ad2b8c0850cefb116d4ac249d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keyboard-and-mouse-customization"></a>鍵盤和滑鼠自訂
 MFC 可讓應用程式的使用者自訂處理鍵盤和滑鼠輸入的方式。 使用者可以藉由指派命令的鍵盤快速鍵自訂鍵盤輸入。 使用者也可以選取在特定應用程式視窗中按兩下時應執行的命令，藉此自訂滑鼠輸入。 本主題將說明如何自訂應用程式的輸入。  
@@ -76,7 +71,7 @@ MFC 可讓應用程式的使用者自訂處理鍵盤和滑鼠輸入的方式。 
   
  為了防範這種攻擊，在執行命令之前，請在應用程式命令處理常式中加入程式碼以驗證命令是否有效。 不要倚賴使用者介面阻止命令傳送至應用程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 自訂](../mfc/customization-for-mfc.md)   
  [CKeyboardManager 類別](../mfc/reference/ckeyboardmanager-class.md)   
  [CMouseManager 類別](../mfc/reference/cmousemanager-class.md)   

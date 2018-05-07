@@ -2,11 +2,8 @@
 title: CRecentFileList 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRecentFileList
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CRecentFileList [MFC], UpdateMenu
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 968c15b1382233dc166a174e4ef074033c76619c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 類別
 支援最近使用的 (MRU) 檔案清單控制項。  
@@ -91,7 +86,7 @@ class CRecentFileList
 ## <a name="requirements"></a>需求  
  **標頭：** afxadv.h  
   
-##  <a name="add"></a>CRecentFileList::Add  
+##  <a name="add"></a>  CRecentFileList::Add  
  將檔案加入至最近使用的 (MRU) 檔案清單。  
   
 ```  
@@ -137,7 +132,7 @@ void Add(
 ### <a name="remarks"></a>備註  
  檔案名稱會新增至 MRU 清單頂端。 如果檔案名稱已經存在 MRU 清單中，它將會移到頂端。  
   
-##  <a name="crecentfilelist"></a>CRecentFileList::CRecentFileList  
+##  <a name="crecentfilelist"></a>  CRecentFileList::CRecentFileList  
  建構 `CRecentFileList` 物件。  
   
 ```  
@@ -168,7 +163,7 @@ CRecentFileList(
 ### <a name="remarks"></a>備註  
  格式字串所指向`lpszEntryFormat`應該包含"%d"，用於取代每個最近使用之項目的索引。 例如，如果格式字串是`"file%d"`項目將會命名為`file0`， `file1`，依此類推。  
   
-##  <a name="getdisplayname"></a>CRecentFileList::GetDisplayName  
+##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  取得檔案的 MRU 檔案清單中，用於功能表顯示的 MRU 清單中的顯示名稱。  
   
 ```  
@@ -202,7 +197,7 @@ virtual BOOL GetDisplayName(
 ### <a name="remarks"></a>備註  
  如果檔案是在目前的目錄，函式會使關閉顯示器的目錄。 如果檔名太長，則會予以去除目錄和擴充功能。 除非如果仍然太長檔名，將顯示名稱會設定為空字串`bAtLeastName`為非零值。  
   
-##  <a name="getsize"></a>CRecentFileList::GetSize  
+##  <a name="getsize"></a>  CRecentFileList::GetSize  
  擷取最近使用的檔案清單中的檔案數目。  
   
 ```  
@@ -212,7 +207,7 @@ int GetSize() const;
 ### <a name="return-value"></a>傳回值  
  在目前的檔案數目最常使用 (的 MRU) 檔案清單。  
   
-##  <a name="operator_at"></a>CRecentFileList::operator]  
+##  <a name="operator_at"></a>  CRecentFileList::operator]  
  多載註標 ( `[]`) 運算子會傳回單一`CString`中以零為起始的索引所指定`nIndex`。  
   
 ```  
@@ -223,14 +218,14 @@ CString& operator[ ](int nindex);
  `nIndex`  
  以零為起始的索引`CString`中一組`CString`s。  
   
-##  <a name="readlist"></a>CRecentFileList::ReadList  
+##  <a name="readlist"></a>  CRecentFileList::ReadList  
  讀取最近使用過的 (MRU) 檔案清單，從登錄或應用程式。INI 檔案。  
   
 ```  
 virtual void ReadList();
 ```  
   
-##  <a name="remove"></a>CRecentFileList::Remove  
+##  <a name="remove"></a>  CRecentFileList::Remove  
  從 MRU 檔案清單移除檔案。  
   
 ```  
@@ -241,7 +236,7 @@ virtual void Remove(int nIndex);
  `nIndex`  
  要從最近使用的 (MRU) 檔案清單中移除的檔案以零為起始的索引。  
   
-##  <a name="updatemenu"></a>CRecentFileList::UpdateMenu  
+##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
  更新的功能表顯示的最近使用的檔案清單。  
   
 ```  
@@ -252,14 +247,14 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
  `pCmdUI`  
  指標[CCmdUI](../../mfc/reference/ccmdui-class.md)最近使用的 (MRU) 檔案清單功能表的物件。  
   
-##  <a name="writelist"></a>CRecentFileList::WriteList  
+##  <a name="writelist"></a>  CRecentFileList::WriteList  
  寫入到登錄或應用程式的最最近使用過的 (MRU) 檔案清單。INI 檔案。  
   
 ```  
 virtual void WriteList();
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 
 

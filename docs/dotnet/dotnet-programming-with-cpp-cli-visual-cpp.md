@@ -2,12 +2,9 @@
 title: .NET 程式設計使用 C + + /CLI （Visual c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - .NET applications [C++]
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f1c18ea36a4ebced809ea32e74dca9dcb00e3968
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a7e555fa5fb0348d1cd6ca589744148f2e04963
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>以 C++/CLI 進行 .NET 程式設計 (Visual C++)
 下列主題將說明 Visual C++ 如何將目標設為 .NET 平台。  
@@ -73,5 +68,5 @@ ms.lasthandoff: 12/21/2017
   
  [Boxing (C++/CLI)](../dotnet/boxing-cpp-cli.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)

@@ -2,11 +2,8 @@
 title: CDC 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC 類別
 定義裝置內容物件的類別。  
@@ -806,7 +801,7 @@ BOOL AlphaBlend(
  `nSrcHeight`  
  指定邏輯單元，來源矩形的高度。  
   
- *blend*  
+ *Blend*  
  指定[BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1370,7 +1365,7 @@ void Draw3dRect(
  *y*  
  指定邏輯三維矩形左上角的 y 座標。  
   
- cx  
+ /cx  
  指定三維矩形的寬度。  
   
  cy  
@@ -5198,7 +5193,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ### <a name="remarks"></a>備註  
  如果應用程式可讓多工緩衝處理期間取消列印工作時，它就必須設定中止函式，列印工作開始使用之前，先[Cdc](#startdoc)成員函式。 列印管理員允許應用程式取消列印工作，或處理不足的磁碟空間條件的多工緩衝處理期間呼叫的中止函式。 如果沒有中止函式設定，列印工作將會失敗，如果多工緩衝處理的磁碟空間不足。  
   
- 請注意 Microsoft Visual c + + 功能簡化傳遞至回呼函式建立`SetAbortProc`。 位址傳遞至`EnumObjects`成員函式是使用匯出的函式的指標**__declspec （dllexport)**與`__stdcall`呼叫慣例。  
+ 請注意 Microsoft Visual c + + 功能簡化傳遞至回呼函式建立`SetAbortProc`。 位址傳遞至`EnumObjects`成員函式是使用匯出的函式的指標 **__declspec （dllexport)** 與`__stdcall`呼叫慣例。  
   
  您也沒有要匯出函式名稱中的**匯出**應用程式的模組定義檔中的陳述式。 您可以改為使用**匯出**函式中的修飾詞，  
   
@@ -5235,7 +5230,7 @@ int SetArcDirection(int nArcDirection);
 |---------|---------|  
 |`ArcTo`|**矩形**|  
 |`Chord`|`RoundRect`|  
-|**Ellipse**||  
+|**橢圓形**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
  呼叫此函式來設定屬性的裝置內容， `m_hAttribDC`。  
@@ -5317,7 +5312,7 @@ UINT SetBoundsRect(
 - **DCB_ENABLE**開啟界限累積。 （界限累積的預設值是停用）。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，這個周框的目前狀態。 像`flags`，傳回值可以是組合的**DCB_**值：  
+ 如果函式成功，這個周框的目前狀態。 像`flags`，傳回值可以是組合的**DCB_** 值：  
   
 - **DCB_ACCUMULATE**不是空的這個周框。 這個值一定會設定。  
   
@@ -6364,7 +6359,7 @@ BOOL WidenPath();
 ### <a name="remarks"></a>備註  
  此函式是成功，只有當目前的畫筆的第二個版本所建立的幾何畫筆`CreatePen`成員函式，或如果第一個版本建立畫筆`CreatePen`和裝置單位，大於 1 的寬度。 裝置內容必須包含已關閉的路徑。 在路徑中的任何 Bzier 曲線轉換成直線將逼近擴大的曲線的序列。 因此，沒有 Bzier 曲線保留在後面的路徑`WidenPath`呼叫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CPaintDC 類別](../../mfc/reference/cpaintdc-class.md)   

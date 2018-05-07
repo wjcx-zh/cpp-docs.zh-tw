@@ -1,13 +1,10 @@
 ---
-title: "對話方塊資料交換和驗證 |Microsoft 文件"
-ms.custom: 
+title: 對話方塊資料交換和驗證 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af38919a65c7ecb16692f5833873a630e713951c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cc12a76f73e2d84a4cb5df66a6dd3d01249265a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-and-validation"></a>對話方塊資料交換和驗證
 對話資料交換 (Dialog Data Exchange，DDX) 是一種初始化對話方塊中的控制項和收集使用者所輸入資料的簡單方法。 對話資料驗證 (DDV) 則是驗證對話方塊中的資料項目的一種簡單方法。 若要充分運用 DDX 和 DDV，在對話方塊中，使用[加入成員變數精靈](../ide/add-member-variable-wizard.md)建立資料成員並設定其資料類型和指定驗證規則。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [對話方塊資料驗證](../mfc/dialog-data-validation.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
 

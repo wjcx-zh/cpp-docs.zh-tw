@@ -1,13 +1,10 @@
 ---
-title: "TN055： 將移轉至 MFC DAO 類別的 MFC ODBC 資料庫類別應用程式 |Microsoft 文件"
-ms.custom: 
+title: TN055： 將移轉至 MFC DAO 類別的 MFC ODBC 資料庫類別應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：將 MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
 > [!NOTE]
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-基礎)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-基礎)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*`RFX_Date`函式根據`CTime`和**TIMESTAMP_STRUCT**。  
+ \*    `RFX_Date`函式根據`CTime`和**TIMESTAMP_STRUCT**。  
   
  以下列出功能上的主要變更，這些變更可能會影響您的應用程式，並且需要進行較複雜的名稱變更。  
   
@@ -114,12 +109,12 @@ ms.lasthandoff: 12/21/2017
   
 -   例外狀況類別已變更。 **CDBExceptions** ODBC 類別中擲回和**CDaoExceptions**在 DAO 類別中。  
   
--   `RFX_Date`使用`CTime`和**TIMESTAMP_STRUCT**物件，而**DFX_Date**使用`COleDateTime`。 `COleDateTime`幾乎完全相同`CTime`，但是為依據的 8 位元 OLE**日期**而不是 4 位元組`time_t`讓它能容納更大範圍的資料。  
+-   `RFX_Date` 使用`CTime`和**TIMESTAMP_STRUCT**物件，而**DFX_Date**使用`COleDateTime`。 `COleDateTime`幾乎完全相同`CTime`，但是為依據的 8 位元 OLE**日期**而不是 4 位元組`time_t`讓它能容納更大範圍的資料。  
   
     > [!NOTE]
     >  DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的文件，如果快照集 (**STATIC_CURSORS**) 處於唯讀狀態。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

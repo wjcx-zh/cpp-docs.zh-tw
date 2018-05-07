@@ -1,29 +1,24 @@
 ---
-title: "OLE 背景 |Microsoft 文件"
-ms.custom: 
+title: OLE 背景 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40fb7d2e58fa672196853e1edb9d5577c2cb14a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 262eee08e1bea410fd8e6d12d9209d35877e4a5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background"></a>OLE 背景
 OLE 是一種機制，可讓使用者建立和編輯包含由多個應用程式所建立的項目或「物件」的文件。  
@@ -76,6 +71,6 @@ OLE 是一種機制，可讓使用者建立和編輯包含由多個應用程式�
   
  對於一般未出現在上述文章中的 OLE 資訊，請在 MSDN 中搜尋 OLE。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE](../mfc/ole-in-mfc.md)
 

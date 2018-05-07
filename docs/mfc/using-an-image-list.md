@@ -1,13 +1,10 @@
 ---
-title: "使用影像清單 |Microsoft 文件"
-ms.custom: 
+title: 使用影像清單 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CImageList class [MFC], using
 - image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4321649bf4e8fe0e34fef8fe37b8c96598bef2c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5722a2ef8c4e93e4996ee243b3c01b6dd6aeca78
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-an-image-list"></a>使用影像清單
 影像清單的一般使用方式會遵循下列模式：  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  如果使用影像清單建立**新**運算子，您必須終結`CImageList`物件與它完成時。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CImageList](../mfc/using-cimagelist.md)   
  [控制項](../mfc/controls-mfc.md)
 

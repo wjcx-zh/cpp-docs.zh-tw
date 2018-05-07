@@ -2,11 +2,8 @@
 title: CMFCLinkCtrl 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCLinkCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc83e5abf09102af8f27b1ee73fc78ed162b9335
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 類別
 `CMFCLinkCtrl`類別顯示按鈕為超連結，並在按下按鈕時叫用連結的目標。  
@@ -85,7 +80,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="requirements"></a>需求  
  **標頭：** afxlinkctrl.h  
   
-##  <a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
  繪製焦點矩形的按鈕前，由架構呼叫。  
   
 ```  
@@ -104,7 +99,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>備註  
  當您想要使用自己的程式碼繪製按鈕的焦點矩形，請覆寫這個方法。  
   
-##  <a name="seturl"></a>CMFCLinkCtrl::SetURL  
+##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
  顯示指定的 URL 做為按鈕文字。  
   
 ```  
@@ -117,7 +112,7 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix  
+##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
  設定隱含的通訊協定 (例如，"http:") 的 url。  
   
 ```  
@@ -131,7 +126,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="remarks"></a>備註  
  若要設定的 URL 前置詞使用此方法。 前置詞不會顯示在按鈕的圖示，但您可以使用它來協助瀏覽至的 URL 目標。  
   
-##  <a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
  調整大小，以包含按鈕文字或點陣圖按鈕。  
   
 ```  
@@ -142,17 +137,17 @@ virtual CSize SizeToContent(
   
 ### <a name="parameters"></a>參數  
  [輸入] `bVCenter`  
- `TRUE`若要按鈕文字和點陣圖頂端和底部的連結控制; 之間的垂直置中否則， `FALSE`。 預設值是 `FALSE`。  
+ `TRUE` 若要按鈕文字和點陣圖頂端和底部的連結控制; 之間的垂直置中否則， `FALSE`。 預設值是 `FALSE`。  
   
  [輸入] `bHCenter`  
- `TRUE`若要按鈕文字和點陣圖的左邊和右邊的連結控制; 之間的水平置中否則， `FALSE`。 預設值是 `FALSE`。  
+ `TRUE` 若要按鈕文字和點陣圖的左邊和右邊的連結控制; 之間的水平置中否則， `FALSE`。 預設值是 `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，其中包含連結控制項的新大小。  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CLinkCtrl 類別](../../mfc/reference/clinkctrl-class.md)   

@@ -1,24 +1,19 @@
 ---
-title: "事件 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 事件 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef32e8310454005fa01a3e23dcd8739dcdbaa647
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 Windows 執行階段類型可以宣告 （也就，發行） 事件，以及用戶端程式碼中的相同元件或其他元件可以訂閱這些事件產生關聯的方法呼叫*事件處理常式*與事件。 多個事件處理常式可以與單一事件相關聯。 當發行物件引發事件時，會導致所有事件處理常式被叫用。 如此一來，訂閱類別可以在發行者引發事件時，執行任何適當的自訂動作。 事件有委派類型，可指定所有事件處理常式必須具有的簽章，才能訂閱事件。  
@@ -62,7 +57,7 @@ Windows 執行階段類型可以宣告 （也就，發行） 事件，以及用�
   
  事件來源叫用事件接收器上之事件處理常式的順序並不一定，每個呼叫可能都不一樣。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [委派](../cppcx/delegates-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   

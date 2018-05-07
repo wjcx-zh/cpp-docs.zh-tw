@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3066 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3066 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3066
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3066
 ms.assetid: 226f6de5-c4c5-41e2-b31a-2e30a37fbbeb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2303ab6976ff47c73d15cbe68a6b0427d4ba8e6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 603b947e0f390de5dfb13a46bbe6c66db1d4e804
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3066"></a>編譯器錯誤 C3066
 有多種方法，就可以呼叫此類型的物件具備這些引數  

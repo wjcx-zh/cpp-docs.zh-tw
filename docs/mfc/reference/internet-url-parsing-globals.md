@@ -1,13 +1,10 @@
 ---
-title: "網際網路 URL 剖析全域和 Helper |Microsoft 文件"
-ms.custom: 
+title: 網際網路 URL 剖析全域和 Helper |Microsoft 文件
+ms.custom: ''
 ms.date: 04/03/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.isapi
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29ae754e7f5b078c23f0cdf27c0a280cd28b40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02b7ea1a6d22d3e16230acafa25c53f8748a825a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>網際網路 URL 剖析全域和 Helper
 當用戶端將查詢傳送至網際網路伺服器時，您可以使用其中一個 URL 剖析全域來擷取用戶端的相關資訊。 Helper 函式會提供其他的網際網路功能。
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxThrowInternetException](#afxthrowinternetexception)|擲回例外狀況相關的網際網路連線。|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|判斷網際網路控制代碼的類型。|
   
-##  <a name="afxparseurl"></a>AfxParseURL  
+##  <a name="afxparseurl"></a>  AfxParseURL  
  此全域用於[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
 ```   
@@ -110,13 +105,13 @@ BOOL AFXAPI AfxParseURL(
   
  例如，`AfxParseURL`剖析表單的 Url **service://server/dir/dir/object.ext:port**並傳回其元件儲存，如下所示：  
   
- `strServer`= ="server"  
+ `strServer` = ="server"  
   
- `strObject`= ="/ dir/dir/object/object.ext"  
+ `strObject` = ="/ dir/dir/object/object.ext"  
   
- `nPort`= = #port  
+ `nPort` = = #port  
   
- `dwServiceType`= = #service  
+ `dwServiceType` = = #service  
   
 > [!NOTE]
 >  若要呼叫此函式，您的專案必須包含 AFXINET。H.  
@@ -124,7 +119,7 @@ BOOL AFXAPI AfxParseURL(
 ### <a name="requirements"></a>需求  
   **標頭**afxinet.h  
   
-##  <a name="afxparseurlex"></a>AfxParseURLEx  
+##  <a name="afxparseurlex"></a>  AfxParseURLEx  
  此全域函式是擴充的版本[AfxParseURL](#afxparseurl)而且會用於[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
 ```   
@@ -216,10 +211,10 @@ BOOL AFXAPI AfxParseURLEx(
 ### <a name="requirements"></a>需求  
   **標頭**afxinet.h  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
  
-## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 您可以使用此全域函式來判斷網際網路控制代碼的類型。  
    
 ### <a name="syntax"></a>語法  
@@ -268,11 +263,11 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ### <a name="requirements"></a>需求  
  **標頭：** afxinet.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
  
-## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 網際網路例外狀況會擲回。  
    
 ### <a name="syntax"></a>語法    
@@ -295,7 +290,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ### <a name="requirements"></a>需求  
  **標頭：** afxinet.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [CInternetException 類別](cinternetexception-class.md)   
  [擲回](#throw)

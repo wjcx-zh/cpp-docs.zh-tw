@@ -1,13 +1,10 @@
 ---
-title: "使用影像清單與標題控制項 |Microsoft 文件"
-ms.custom: 
+title: 使用影像清單與標題控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7a51aadc10a7722875597813e24ceb5960ab459
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-with-header-controls"></a>搭配使用影像清單與標題控制項
 標頭項目可以顯示的標題項目內的影像。 此映像，在相關聯的影像清單中，儲存為 16 x 16 像素，並有相同的特性清單檢視控制項中所使用的圖示影像。 若要成功實作這種行為，必須先建立和初始化映像清單、 將清單與標題控制項中，關聯，然後修改的屬性，將會顯示映像的標頭項目。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  很可能有多個使用相同的影像清單的控制項。 比方說，在標準清單檢視控制項，可能有清單檢視控制項的兩個小圖示檢視和清單檢視控制項的標題項目所使用影像清單 （的 16 x 16 像素的影像）。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)
 

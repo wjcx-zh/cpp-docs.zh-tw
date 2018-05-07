@@ -1,13 +1,10 @@
 ---
-title: "使用 ADO.NET 資料存取 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 使用 ADO.NET 資料存取 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data access [C++], ADO.NET
 - data [C++], ADO.NET
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fb7d184ebdb537c02b79a412d69a4bdcaabde424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21d19955e19931a573836baa6e0e0fee841e3548
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-using-adonet-ccli"></a>使用 ADO.NET 進行資料存取 (C++/CLI)
 ADO.NET 是.NET Framework API 進行資料存取，並提供電源和易用性不符合先前資料的存取方案。 本章節描述與 ADO.NET 特有 Visual c + + 的使用者，例如原生類型封送處理的問題。  
@@ -52,6 +47,6 @@ ADO.NET 是.NET Framework API 進行資料存取，並提供電源和易用性�
 |-------------|-----------------|  
 |[ADO.NET](/dotnet/framework/data/adonet/index)|提供 ADO.NET 中，一組類別公開給.NET 程式設計人員的資料存取服務的概觀。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [.NET 程式設計使用 C + + /CLI （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)

@@ -1,30 +1,25 @@
 ---
-title: "MFC ActiveX 控制項： 繪製 ActiveX 控制項 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 繪製 ActiveX 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控制項：繪製 ActiveX 控制項
 本文將描述 ActiveX 控制項繪製程序，以及如何修改繪製程式碼以最佳化這個程序  (請參閱[最佳化控制項繪圖](../mfc/optimizing-control-drawing.md)的技術如何不讓控制項個別藉此最佳化繪製還原先前選取的 GDI 物件。 在繪製所有控制項之後，容器就可以自動還原原始物件)。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [如何繪製控制項使用中繼檔](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>ActiveX 控制項繪製程序  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX 控制項繪製程序  
  當 ActiveX 控制項最初顯示或重繪時，所採取的繪製程序類似使用 MFC 所開發的其他應用程式，但其中有一項重要的差異：ActiveX 控制項可以處於現用或非現用狀態。  
   
  現用控制項在 ActiveX 控制項容器中是以子視窗表示。 就像其他視窗一樣，它負責在收到 `WM_PAINT` 訊息時繪製自己本身。 控制項的基底類別， [COleControl](../mfc/reference/colecontrol-class.md)，會處理此訊息在其`OnPaint`函式。 這個預設實作會呼叫控制項的 `OnDraw` 函式。  
@@ -62,14 +57,14 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  當繪製控制項，您應該提出任何假設為會傳遞裝置內容的狀態*pdc*參數`OnDraw`函式。 有時候裝置內容是由容器應用程式提供，而且不一定會初始化為預設狀態。 具體來說，請明確選取您的繪圖程式碼所依據的畫筆、筆刷、色彩、字型和其他資源。  
   
-##  <a name="_core_optimizing_your_paint_code"></a>最佳化繪製程式碼  
+##  <a name="_core_optimizing_your_paint_code"></a> 最佳化繪製程式碼  
  控制項成功繪製本身之後，下一步是最佳化 `OnDraw` 函式。  
   
  ActiveX 控制項繪製的預設實作會繪製整個控制項範圍。 這對於簡單的控制項而言就已足夠，不過在大部分的情況下，如果只重繪需要更新的部分而不是整個控制項，重繪控制項的速度會比較快。  
   
  `OnDraw` 函式透過傳遞 `rcInvalid`，也就是需要重繪的控制項矩形區域，提供了簡單的最佳化方法。 使用這個區域可加快繪製程序的速度，因為這個區域通常比整個控制項區域小。  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>繪製控制項使用中繼檔  
+##  <a name="_core_painting_your_control_using_metafiles"></a> 繪製控制項使用中繼檔  
  在大多數情況下，`pdc` 函式的 `OnDraw` 參數會指向螢幕裝置內容 (DC)。 不過，在列印控制項的影像或預覽列印工作階段期間，所收到用於呈現的 DC 會是稱為「中繼檔 DC」的特殊類型。 螢幕 DC 會立即處理收到的要求，中繼檔 DC 則是儲存要求以便之後播放。 在設計模式中，有些容器應用程式也可能會選擇使用中繼檔 DC 呈現控制項影像。  
   
  中繼檔繪製要求可透過兩個介面函式的容器： **iviewobject:: Draw** （這個函式也可針對非中繼檔繪製） 和**idataobject:: Getdata**。 當中繼檔 DC 當做其中一個參數傳遞時，MFC 架構會呼叫[colecontrol:: Ondrawmetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)。 由於這是虛擬成員函式，因此請覆寫控制項類別中的這個函式，以便執行任何特殊處理。 預設行為會呼叫 `COleControl::OnDraw`。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 |Arc|BibBlt|Chord|  
 |---------|------------|-----------|  
-|**橢圓形**|**逸出**|`ExcludeClipRect`|  
+|**橢圓形**|**Escape**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
@@ -115,6 +110,6 @@ ms.lasthandoff: 12/21/2017
   
      另一個顯示中繼檔的視窗隨即出現。 您可以變更這個視窗的大小，查看縮放如何影響控制項的中繼檔。 您可以隨時關閉這個視窗。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

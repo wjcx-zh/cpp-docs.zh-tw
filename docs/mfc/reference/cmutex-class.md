@@ -1,12 +1,9 @@
 ---
-title: "CMutex 類別 |Microsoft 文件"
-ms.custom: 
+title: CMutex 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMutex
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d87d613356589ee192ef141a3e222fdc4d8f03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmutex-class"></a>CMutex 類別
 代表 「 mutex"— 允許執行緒互斥存取資源的同步處理物件。  
@@ -67,7 +62,7 @@ class CMutex : public CSyncObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxmt.h  
   
-##  <a name="cmutex"></a>CMutex::CMutex  
+##  <a name="cmutex"></a>  CMutex::CMutex  
  建構的具名或未命名`CMutex`物件。  
   
 ```  
@@ -93,7 +88,7 @@ CMutex(
 > [!IMPORTANT]
 >  在建立之後`CMutex`物件，請使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以確保，mutex 原本不存在。 如果未意外存在 mutex，可能表示 rogue 程序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序是關閉此控制代碼，並繼續如同在建立物件時發生失敗。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

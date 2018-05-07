@@ -1,29 +1,24 @@
 ---
-title: "快速參考 (C + + /CX) |Microsoft 文件"
-ms.custom: 
+title: 快速參考 (C + + /CX) |Microsoft 文件
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29c34d20f7098e7d8e09e0a9a874e64aacc6a620
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 830c27d89e427e2ea36a68d891aac0ebadcf3f21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="quick-reference-ccx"></a>快速參考 (C++/CX)
 Windows 執行階段支援只能在值得信任的作業系統環境中執行，使用授權的函式、 資料類型及裝置，而且會透過散發 Microsoft Store 的通用 Windows 平台 (UWP) 應用程式。 C + + /CX 可簡化應用程式撰寫為 Windows 執行階段。 本文是快速參考;如需更完整的文件，請參閱[型別系統](../cppcx/type-system-c-cx.md)和[執行階段平台的元件擴充功能](http://go.microsoft.com/fwlink/p/?linkid=228720)。  
   
- 當您建置命令列上時，使用**/ZW**編譯器選項來建置 UWP 應用程式或 Windows 執行階段元件。 若要存取 Windows 執行階段宣告 Windows 執行階段中繼資料 (.winmd) 檔案中定義的指定`#using`指示詞或**/FU**編譯器選項。 當您建立的 UWP 應用程式的專案時，Visual Studio 預設會設定這些選項，並將參考加入至所有 Windows 執行階段程式庫。  
+ 當您建置命令列上時，使用 **/ZW**編譯器選項來建置 UWP 應用程式或 Windows 執行階段元件。 若要存取 Windows 執行階段宣告 Windows 執行階段中繼資料 (.winmd) 檔案中定義的指定`#using`指示詞或 **/FU**編譯器選項。 當您建立的 UWP 應用程式的專案時，Visual Studio 預設會設定這些選項，並將參考加入至所有 Windows 執行階段程式庫。  
   
 ## <a name="quick-reference"></a>快速參考  
   
@@ -56,5 +51,5 @@ Windows 執行階段支援只能在值得信任的作業系統環境中執行，
 |參數化型別|範本|`generic <typename` *T* `> interface class` *識別項* `{}`<br /><br /> `generic <typename` *T* `> delegate` *[return-type]* *delegate-identifier* `() {}`|宣告參數化介面類別。<br /><br /> 宣告參數化委派。|  
 |可為 Null 的實值型別|`boost::optional<T>`|[Platform:: ibox \<T >](../cppcx/platform-ibox-interface.md)|讓具有純量類型和值結構的變數能有 `nullptr`這個值。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)

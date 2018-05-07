@@ -1,13 +1,10 @@
 ---
-title: "編輯訊息處理常式 |Microsoft 文件"
-ms.custom: 
+title: 編輯訊息處理常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.editing.msghandler
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - message handlers [MFC]
 - message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3343f1d9b9f302d43a5cfbfec55b48c2bfd1b799
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dafb80b7497d8ab9acbc01060b67e967d5f8244f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="editing-a-message-handler"></a>編輯訊息處理常式
 一旦您已經定義的訊息處理常式，您可以移至成員函式的定義，以加入或修改程式碼。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  若要跳至從成員函式定義[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，連按兩下 類別檢視中的函式名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   

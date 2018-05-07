@@ -1,12 +1,9 @@
 ---
-title: "CWinFormsDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CWinFormsDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c59faec7fc981cff31bea4ce6e846d89d0b8bf99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 類別
 裝載 Windows Form 使用者控制項的 MFC 對話方塊類別包裝函式。  
@@ -74,14 +69,14 @@ class CWinFormsDialog :
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|將類型轉換成 Windows Form 使用者控制項的參考。|  
   
 ## <a name="remarks"></a>備註  
- `CWinFormsDialog`是的 MFC 對話方塊類別包裝函式 ( [CDialog](../../mfc/reference/cdialog-class.md)) 裝載 Windows Form 使用者控制項。 這可讓.NET Framework 上的控制項獨佔式或非強制回應的 MFC 對話方塊中顯示。  
+ `CWinFormsDialog` 是的 MFC 對話方塊類別包裝函式 ( [CDialog](../../mfc/reference/cdialog-class.md)) 裝載 Windows Form 使用者控制項。 這可讓.NET Framework 上的控制項獨佔式或非強制回應的 MFC 對話方塊中顯示。  
   
  如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)和[裝載為 MFC 對話方塊的 Windows Form 使用者控制項](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h  
   
-##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  
  建構 `CWinFormsDialog` 物件。  
   
 ```  
@@ -92,7 +87,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  包含的對話方塊範本資源的識別碼。 使用對話方塊編輯器建立對話方塊範本，並將其儲存在應用程式的資源指令碼檔案。 如需有關對話方塊範本的詳細資訊，請參閱[CDialog 類別](../../mfc/reference/cdialog-class.md)。  
   
-##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  擷取 Windows Form 使用者控制項的參考。  
   
 ```  
@@ -102,7 +97,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>傳回值  
  傳回的參考加入 Windows Form 控制項 [MFC] 對話方塊中。  
   
-##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsDialog::GetControlHandle  
  擷取 Windows Form 使用者控制項的視窗控制代碼。  
   
 ```  
@@ -112,7 +107,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回 Windows Form 使用者控制項的視窗控制代碼。  
   
-##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CWinFormsDialog::OnInitDialog  
  初始化 MFC 對話方塊中建立和裝載在其上的 Windows Form 使用者控制項。  
   
 ```  
@@ -127,7 +122,7 @@ virtual BOOL OnInitDialog();
   
  如果您需要執行特殊處理對話方塊中初始化時，請覆寫此成員函式。 如需有關如何使用這個方法的詳細資訊，請參閱[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)。  
   
-##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  取代[CWinFormsDialog::GetControl](#getcontrol)運算式中。  
   
 ```  
@@ -139,7 +134,7 @@ inline TManagedControl^  operator->() const throw();
   
  如需使用 Windows Form 的資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
   
-##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
  將類型轉換成 Windows Form 使用者控制項的參考。  
   
 ```  
@@ -149,7 +144,7 @@ inline operator TManagedControl^() const throw();
 ### <a name="remarks"></a>備註  
  這個運算子會將類型轉換成 Windows Form 控制項的參考。 用來傳遞`CWinFormsDialog<TManagedControl>`對話方塊中，接受 Windows Form 使用者控制項物件的指標的函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)   
  [CDialog 類別](../../mfc/reference/cdialog-class.md)

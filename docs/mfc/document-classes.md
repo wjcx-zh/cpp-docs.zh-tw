@@ -1,13 +1,10 @@
 ---
-title: "文件類別 |Microsoft 文件"
-ms.custom: 
+title: 文件類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.document
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2436b46b7486bd30398dffc530d2adea3d2e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-classes"></a>文件類別
 建立的文件範本物件的文件類別物件來管理應用程式的資料。 您將會從這些類別的其中一個，您的文件衍生類別。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
  維護 rich edit 控制項中的 OLE 用戶端項目的清單。 搭配[CRichEditView](../mfc/reference/cricheditview-class.md)和[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)。  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- 做為伺服器應用程式文件類別的基底類別。 `COleServerDoc`物件提供的伺服器支援，透過與互動大量[COleServerItem](../mfc/reference/coleserveritem-class.md)物件。 使用類別庫的文件/檢視架構來提供視覺化編輯的功能。  
+ 做為伺服器應用程式文件類別的基底類別。 `COleServerDoc` 物件提供的伺服器支援，透過與互動大量[COleServerItem](../mfc/reference/coleserveritem-class.md)物件。 使用類別庫的文件/檢視架構來提供視覺化編輯的功能。  
   
  [CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)  
  提供與[CHtmlEditView](../mfc/reference/chtmleditview-class.md)，HTML WebBrowser 編輯平台的 MFC 文件檢視架構內容中的功能。  
@@ -56,11 +51,11 @@ ms.lasthandoff: 12/21/2017
  [CArchive](../mfc/reference/carchive-class.md)  
  與 cooperates [CFile](../mfc/reference/cfile-class.md)實作永續性儲存體透過序列化物件的物件 (請參閱[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize))。  
   
- 文件也可以包含 OLE 物件。 `CDocItem`是伺服器和用戶端項目的基底類別。  
+ 文件也可以包含 OLE 物件。 `CDocItem` 是伺服器和用戶端項目的基底類別。  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  抽象基底類別的[COleClientItem](../mfc/reference/coleclientitem-class.md)和[COleServerItem](../mfc/reference/coleserveritem-class.md)。 物件的類別衍生自`CDocItem`代表文件的部分。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

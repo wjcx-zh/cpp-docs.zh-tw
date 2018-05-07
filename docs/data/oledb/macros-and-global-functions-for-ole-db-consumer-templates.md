@@ -1,12 +1,9 @@
 ---
-title: "巨集和全域函式的 OLE DB 消費者樣板 |Microsoft 文件"
-ms.custom: 
+title: 巨集和全域函式的 OLE DB 消費者樣板 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB consumer templates, macros
 - macros, OLE DB consumer template
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 755762e8b77cee9603074fdc8050d227fbd2eeb1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 57f61dd54855a2cf0196c0e269eda92295c818b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 消費者樣板的巨集和全域函式
 OLE DB 消費者樣板可包括下列巨集和全域函式：  
@@ -102,7 +97,7 @@ OLE DB 消費者樣板可包括下列巨集和全域函式：
 |[END_PARAM_MAP](../../data/oledb/end-param-map.md)|參數對應項目結束標記。|  
 |[SET_PARAM_TYPE](../../data/oledb/set-param-type.md)|指定`COLUMN_ENTRY`巨集，請遵循`SET_PARAM_TYPE`巨集做為輸入、 輸出或輸入/輸出。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

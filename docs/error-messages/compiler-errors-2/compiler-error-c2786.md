@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2786 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2786 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2786
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7165e131f3594349471b50cdc81926a9bcf9d2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29fd0d8cf22be29757abd775e1bb844cb1a1bfbc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2786"></a>編譯器錯誤 C2786
 'type': __uuidof 的運算元無效  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  引數不是使用者定義型別。  
   
-2.  `__uuidof`無法擷取從引數的 GUID。  
+2.  `__uuidof` 無法擷取從引數的 GUID。  
   
  下列範例會產生 C2786:  
   

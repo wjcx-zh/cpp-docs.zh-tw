@@ -1,13 +1,10 @@
 ---
-title: "範例： 透過功能表命令 對話方塊中顯示 |Microsoft 文件"
-ms.custom: 
+title: 範例： 透過功能表命令 對話方塊中顯示 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2715e1b64c1565d122f6eec012a8a33c2525ac9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20d355215388861a7bc2586c2c253cd551124809
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：透過功能表命令顯示對話方塊
 本主題包含的程序：  
@@ -105,7 +100,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Q251059： 如何： 提供您自己的視窗類別名稱的 MFC 對話方塊  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [強制回應和非強制回應對話方塊](../mfc/modal-and-modeless-dialog-boxes.md)
 

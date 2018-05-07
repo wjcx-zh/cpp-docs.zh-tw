@@ -1,12 +1,9 @@
 ---
-title: "lock::is_locked |Microsoft 文件"
-ms.custom: 
+title: lock::is_locked |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - is_locked
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f561a56b5859f6e7d0eaedeb6e6410bd4fe64a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de4f7a3c92ccace542a4588b0278fd4f799459c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockislocked"></a>lock::is_locked
 指出是否要保留的鎖定。  
@@ -42,7 +37,7 @@ bool is_locked();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果鎖定，`false`否則。  
+ `true` 如果鎖定，`false`否則。  
   
 ## <a name="example"></a>範例  
  這個範例會跨多個執行緒使用單一類別的執行個體。  類別本身會使用鎖定，以確保其內部資料存取都是一致的每個執行緒。  主應用程式執行緒會定期檢查以查看是否仍然存在任何背景工作執行緒，並等候結束，直到所有的工作者執行緒完成其工作使用相同類別的執行個體上的鎖定。  
@@ -139,6 +134,6 @@ All threads completed.
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [lock 成員](../dotnet/lock-members.md)   
  [lock::operator bool](../dotnet/lock-operator-bool.md)

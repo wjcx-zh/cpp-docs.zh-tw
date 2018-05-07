@@ -1,12 +1,9 @@
 ---
-title: "CClientDC 類別 |Microsoft 文件"
-ms.custom: 
+title: CClientDC 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CClientDC
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CClientDC [MFC], CClientDC
 - CClientDC [MFC], m_hWnd
 ms.assetid: 8a871d6b-06f8-496e-9fa3-9a5780848369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a92fb471ee30e725cd97bff6cbda8d551c0bc859
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cclientdc-class"></a>CClientDC 類別
 呼叫 Windows 函式會負責[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在建構階段和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在解構階段。  
@@ -69,7 +64,7 @@ class CClientDC : public CDC
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="cclientdc"></a>CClientDC::CClientDC  
+##  <a name="cclientdc"></a>  CClientDC::CClientDC  
  建構`CClientDC`物件存取的工作區[CWnd](../../mfc/reference/cwnd-class.md)指向`pWnd`。  
   
 ```  
@@ -88,7 +83,7 @@ explicit CClientDC(CWnd* pWnd);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#42](../../mfc/codesnippet/cpp/cclientdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CClientDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CClientDC::m_hWnd  
  `HWND`的`CWnd`指標用來建構`CClientDC`物件。  
   
 ```  
@@ -96,12 +91,12 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_hWnd`這是受保護的變數。  
+ `m_hWnd` 這是受保護的變數。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CClientDC::CClientDC](#cclientdc)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 MDI](../../visual-cpp-samples.md)   
  [CDC 類別](../../mfc/reference/cdc-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

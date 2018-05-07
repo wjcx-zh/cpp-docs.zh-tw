@@ -2,11 +2,8 @@
 title: 'map:: value_comp (STL/CLR) |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::value_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_comp member [STL/CLR]
 ms.assetid: b0e53052-f3cc-48c8-8e29-1b151c23860a
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 91dd7e80c366cd023998f3bc96dcf69900382a69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b67bb629a9de069eb989ee2a1446c58ef5577ef9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapvaluecomp-stlclr"></a>map::value_comp (STL/CLR)
 將複製兩個項目值的順序委派。  
@@ -79,7 +74,7 @@ compare([L'b', 2], [L'a', 1]) = False
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)   
  [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

@@ -1,12 +1,9 @@
 ---
-title: "marshal_context:: ~ marshal_context |Microsoft 文件"
-ms.custom: 
+title: 'marshal_context:: ~ marshal_context |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshal_context::~marshal_context
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - marshal_context class [C++], operations
 ms.assetid: 34c41b38-4c33-4f61-b74e-831ac46b4ab5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 42af11d58804a000e630d916cd5887c5005aa955
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a6cb7ed3c7b1ee5b28c4943d83b6a8ca6166b6d0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::~marshal_context
 終結 `marshal_context` 物件。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  **命名空間：** msclr::interop  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 中封送處理概觀](../dotnet/overview-of-marshaling-in-cpp.md)   
  [marshal_as](../dotnet/marshal-as.md)   
  [marshal_context 類別](../dotnet/marshal-context-class.md)

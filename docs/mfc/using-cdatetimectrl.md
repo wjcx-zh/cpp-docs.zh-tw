@@ -1,13 +1,10 @@
 ---
-title: "使用 CDateTimeCtrl |Microsoft 文件"
-ms.custom: 
+title: 使用 CDateTimeCtrl |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CDateTimeCtrl
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab0f8c64b953a9ddaffa3382863762256b90c6c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cdatetimectrl"></a>使用 CDateTimeCtrl
 日期和時間選擇器控制項 ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) 實作直接易懂和辨識方法的輸入或選取特定的日期。 控制項的主要介面為下拉式方塊類似的功能。 不過，如果使用者在月曆控制項出現 （預設值），展開控制項，讓使用者指定特定的日期。 當選擇日期時，會自動消失月曆控制項。  
@@ -47,6 +42,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [處理日期時間選擇器控制項中的通知訊息](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項](../mfc/controls-mfc.md)
 

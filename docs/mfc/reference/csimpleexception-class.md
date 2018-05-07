@@ -1,12 +1,9 @@
 ---
-title: "CSimpleException 類別 |Microsoft 文件"
-ms.custom: 
+title: CSimpleException 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSimpleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimpleexception-class"></a>CSimpleException 類別
 這個類別是資源關鍵 MFC 例外狀況的基底類別。  
@@ -55,7 +50,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 |[CSimpleException::GetErrorMessage](#geterrormessage)|提供有關所發生之錯誤的文字。|  
   
 ## <a name="remarks"></a>備註  
- `CSimpleException`是資源關鍵 MFC 例外狀況的基底類別，而處理擁有權和初始化錯誤訊息。 下列類別會使用`CSimpleException`作為其基底類別：  
+ `CSimpleException` 是資源關鍵 MFC 例外狀況的基底類別，而處理擁有權和初始化錯誤訊息。 下列類別會使用`CSimpleException`作為其基底類別：  
   
 |||  
 |-|-|  
@@ -79,7 +74,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
  建構函式。  
   
 ```  
@@ -94,7 +89,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>備註  
  您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生類別，並呼叫其建構函式，或它應該使用其中一個 MFC 擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 擲回預先定義的類型。  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  呼叫此成員函式可提供有關所發生之錯誤的文字。  
   
 ```  
@@ -120,7 +115,7 @@ virtual BOOL GetErrorMessage(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CException 類別](../../mfc/reference/cexception-class.md)   
  [例外狀況處理](../../mfc/exception-handling-in-mfc.md)

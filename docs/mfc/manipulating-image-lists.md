@@ -1,13 +1,10 @@
 ---
-title: "管理影像清單 |Microsoft 文件"
-ms.custom: 
+title: 管理影像清單 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - lists [MFC], image
 - CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2670f3935e2f4c482728000a268cb46cc9dbdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 559cb87dbed412e706cc85b3db1120083b694991
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-image-lists"></a>管理影像清單
 [取代](../mfc/reference/cimagelist-class.md#replace)成員函式取代影像清單中的映像 ([CImageList](../mfc/reference/cimagelist-class.md)) 與新的映像。 如果需要動態增加影像清單物件中的影像數目，此函式也很有用。 [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount)函式會動態變更影像清單中所儲存的影像數目。 如果您增加影像清單的大小，請呼叫**取代**將影像加入至新的映像位置。 如果您縮小影像清單的大小，則會釋放超出新的大小之外的影像。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  [GetSafeHandle](../mfc/reference/cimagelist-class.md#getsafehandle)，[附加](../mfc/reference/cimagelist-class.md#attach)，和[卸離](../mfc/reference/cimagelist-class.md#detach)成員函式可讓您操作附加至影像清單控制代碼`CImageList`物件時[DeleteImageList](../mfc/reference/cimagelist-class.md#deleteimagelist)成員函式會刪除影像清單，而不會終結`CImageList`物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CImageList](../mfc/using-cimagelist.md)   
  [控制項](../mfc/controls-mfc.md)
 

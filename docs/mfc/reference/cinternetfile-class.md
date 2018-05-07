@@ -1,12 +1,9 @@
 ---
-title: "CInternetFile 類別 |Microsoft 文件"
-ms.custom: 
+title: CInternetFile 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1e4b05e2aceb8fb4c8a4abed0dd6038fff6cfee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 類別
 可讓您存取在使用網際網路通訊協定的遠端系統上的檔案。  
@@ -117,7 +112,7 @@ class CInternetFile : public CStdioFile
 ## <a name="requirements"></a>需求  
  **標頭：** afxinet.h  
   
-##  <a name="abort"></a>CInternetFile::Abort  
+##  <a name="abort"></a>  CInternetFile::Abort  
  關閉與此物件相關聯的檔案，並使檔案無法進行讀取或寫入。  
   
 ```  
@@ -129,7 +124,7 @@ virtual void Abort();
   
  當例外狀況處理、**中止**不同於[關閉](#close)兩個重要的層面。 首先，**中止**函式不會擲回例外狀況失敗因為它會忽略失敗。 第二個，**中止**不**ASSERT**如果檔案尚未開啟，或先前已關閉。  
   
-##  <a name="cinternetfile"></a>CInternetFile::CInternetFile  
+##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  此成員函式時，會呼叫`CInternetFile`建立物件。  
   
 ```  
@@ -174,7 +169,7 @@ CInternetFile(
 ### <a name="remarks"></a>備註  
  您絕對不要建立`CInternetFile`直接物件。 相反地，來建立物件的其中一個衍生類別呼叫[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)或[chttpconnection::](../../mfc/reference/chttpconnection-class.md#openrequest)。 您也可以建立`CInternetFile`藉由呼叫物件[CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)。  
   
-##  <a name="close"></a>CInternetFile::Close  
+##  <a name="close"></a>  CInternetFile::Close  
  關閉`CInternetFile`並釋放任何它的資源。  
   
 ```  
@@ -184,7 +179,7 @@ virtual void Close();
 ### <a name="remarks"></a>備註  
  如果開啟檔案進行寫入，則隱含呼叫[排清](#flush)以確保所有緩衝資料寫入至主機。 您應該呼叫**關閉**當您完成使用檔案。  
   
-##  <a name="flush"></a>CInternetFile::Flush  
+##  <a name="flush"></a>  CInternetFile::Flush  
  呼叫此成員函式可排清寫入緩衝區的內容。  
   
 ```  
@@ -192,30 +187,30 @@ virtual void Flush();
 ```  
   
 ### <a name="remarks"></a>備註  
- 使用`Flush`以確保記憶體中的所有資料到目標電腦確實已都寫入，以確保主機電腦與您交易已經完成。 `Flush`才有效上`CInternetFile`物件開啟以供寫入。  
+ 使用`Flush`以確保記憶體中的所有資料到目標電腦確實已都寫入，以確保主機電腦與您交易已經完成。 `Flush` 才有效上`CInternetFile`物件開啟以供寫入。  
   
-##  <a name="getlength"></a>CInternetFile::GetLength  
+##  <a name="getlength"></a>  CInternetFile::GetLength  
  傳回檔案的大小。  
   
 ```  
 virtual ULONGLONG GetLength() const;  
 ```  
   
-##  <a name="m_hfile"></a>CInternetFile::m_hFile  
+##  <a name="m_hfile"></a>  CInternetFile::m_hFile  
  與此物件相關聯的檔案控制代碼。  
   
 ```  
 HINTERNET m_hFile;  
 ```  
   
-##  <a name="operator_hinternet"></a>CInternetFile::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetFile::operator HINTERNET  
  您可以使用這個運算子來取得目前的網際網路工作階段的 Windows 控制代碼。  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="read"></a>Cinternetfile:: Read  
+##  <a name="read"></a>  Cinternetfile:: Read  
  呼叫此成員函式以讀取到指定的記憶體，從 `lpvBuf` 開始，指定的位元組數目為 `nCount`。  
   
 ```  
@@ -239,7 +234,7 @@ virtual UINT Read(
   
  若要確保擷取所有的資料，應用程式必須繼續呼叫**cinternetfile:: Read**方法，直到該方法會傳回零。  
   
-##  <a name="readstring"></a>CInternetFile::ReadString  
+##  <a name="readstring"></a>  CInternetFile::ReadString  
  呼叫此成員函式可讀取的字元資料流，直到找到新行字元。  
   
 ```  
@@ -271,7 +266,7 @@ virtual LPTSTR ReadString(
   
  如果您呼叫`ReadString`情況下先呼叫[SetReadBufferSize](#setreadbuffersize)，您會收到 4096 位元組的緩衝區。  
   
-##  <a name="seek"></a>CInternetFile::Seek  
+##  <a name="seek"></a>  CInternetFile::Seek  
  呼叫此成員函式，以重新整理指標先前開啟的檔案。  
   
 ```  
@@ -291,7 +286,7 @@ virtual ULONGLONG Seek(
   
 - **CFile::current**檔案指標移到`lOff`位元組從檔案中的目前位置。  
   
-- **CFile::end**檔案指標移到`lOff`從檔案結尾的位元組。 `lOff`必須為負數搜尋現有的檔案。正值會搜尋超出檔案結尾。  
+- **CFile::end**檔案指標移到`lOff`從檔案結尾的位元組。 `lOff` 必須為負數搜尋現有的檔案。正值會搜尋超出檔案結尾。  
   
 ### <a name="return-value"></a>傳回值  
  新要求的位置是合法的; 如果從檔案開頭位移的位元組否則，值就是未定義和[CInternetException](../../mfc/reference/cinternetexception-class.md)物件就會擲回。  
@@ -309,7 +304,7 @@ virtual ULONGLONG Seek(
 ### <a name="example"></a>範例  
   請參閱基底類別實作的範例 ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek))。  
   
-##  <a name="setreadbuffersize"></a>CInternetFile::SetReadBufferSize  
+##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
  呼叫此成員函式所使用的暫時讀取緩衝區的大小設定`CInternetFile`-衍生物件。  
   
 ```  
@@ -330,7 +325,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
   
  您可以在任何時間，增加的緩衝區大小，但是壓縮緩衝區會有任何作用。 如果您呼叫[ReadString](#readstring)情況下先呼叫`SetReadBufferSize`，您會收到 4096 位元組的緩衝區。  
   
-##  <a name="setwritebuffersize"></a>CInternetFile::SetWriteBufferSize  
+##  <a name="setwritebuffersize"></a>  CInternetFile::SetWriteBufferSize  
  呼叫此成員函式所使用的暫時寫入緩衝區的大小設定`CInternetFile`-衍生物件。  
   
 ```  
@@ -349,7 +344,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
   
  根據預設，`CInternetFile`物件不提供寫入任何緩衝。 如果您呼叫此成員函式，您必須確定已開啟檔案進行寫入存取權。 您可以在任何時間，變更寫入緩衝區的大小，但這樣做會導致的隱含呼叫[排清](#flush)。  
   
-##  <a name="write"></a>CInternetFile::Write  
+##  <a name="write"></a>  CInternetFile::Write  
  呼叫此成員函式，要寫入至指定的記憶體， `lpvBuf`、 指定的位元組數目， `nCount`。  
   
 ```  
@@ -368,7 +363,7 @@ virtual void Write(
 ### <a name="remarks"></a>備註  
  如果寫入資料時，就會發生任何錯誤，函式會擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)描述錯誤的物件。  
   
-##  <a name="writestring"></a>CInternetFile::WriteString  
+##  <a name="writestring"></a>  CInternetFile::WriteString  
  此函式會將以 null 結束的字串寫入相關聯的檔案。  
   
 ```  
@@ -382,7 +377,7 @@ virtual void WriteString(LPCTSTR pstr);
 ### <a name="remarks"></a>備註  
  如果寫入資料時，就會發生任何錯誤，函式會擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)描述錯誤的物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Cgopherfile 類別](../../mfc/reference/cstdiofile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)

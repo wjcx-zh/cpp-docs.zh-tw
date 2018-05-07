@@ -1,13 +1,10 @@
 ---
-title: "LOGBRUSH 結構 |Microsoft 文件"
-ms.custom: 
+title: LOGBRUSH 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGBRUSH
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGBRUSH structure [MFC]
 ms.assetid: 1bf96768-52c5-4444-9bb8-d41ba2e27e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec6cc9b61f837db4c9766c077fa60f4d9c2b95bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e02c156619e4ca36d268870c70ba783c41a352d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH 結構
 `LOGBRUSH`結構會定義樣式、 色彩和筆刷，實體的模式。 它由 Windows [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487)和[ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)函式。  
@@ -68,17 +63,17 @@ typedef struct tag LOGBRUSH { /* lb */
  *lbHatch*  
  指定影線樣式。 意義取決於所定義的筆刷樣式`lbStyle`。 如果`lbStyle`是**BS_DIBPATTERN**、 **lbHatch**成員包含壓縮的 DIB 的控制代碼。 如果`lbStyle`是**BS_DIBPATTERNPT**、 **lbHatch**成員包含壓縮的 DIB 的指標。 如果`lbStyle`是**BS_HATCHED**、 **lbHatch**成員指定用來建立影線線條的方向。 它可以是下列值之一：  
   
-- `HS_BDIAGONAL`45 度向上、 左到右規劃  
+- `HS_BDIAGONAL` 45 度向上、 左到右規劃  
   
-- `HS_CROSS`水平和垂直有斜紋  
+- `HS_CROSS` 水平和垂直有斜紋  
   
-- `HS_DIAGCROSS`45 度有斜紋  
+- `HS_DIAGCROSS` 45 度有斜紋  
   
-- `HS_FDIAGONAL`45 度的向下、 左到右規劃  
+- `HS_FDIAGONAL` 45 度的向下、 左到右規劃  
   
-- `HS_HORIZONTAL`水平影線  
+- `HS_HORIZONTAL` 水平影線  
   
-- `HS_VERTICAL`垂直影線  
+- `HS_VERTICAL` 垂直影線  
   
  如果`lbStyle`是**BS_PATTERN**， **lbHatch**是定義模式的點陣圖的控制代碼。 如果`lbStyle`是**BS_SOLID**或**BS_HOLLOW**， **lbHatch**會被忽略。  
   
@@ -88,7 +83,7 @@ typedef struct tag LOGBRUSH { /* lb */
 ## <a name="requirements"></a>需求  
  **標頭：** wingdi.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDC::GetCharABCWidths](../../mfc/reference/cdc-class.md#getcharabcwidths)
 

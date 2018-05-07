@@ -2,11 +2,8 @@
 title: Cinternetfile 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpFile
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e9af23bb74ba8e96f29a5b7cc4139d2932df8c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpfile-class"></a>Cinternetfile 類別
 提供在 HTTP 伺服器上要求和讀取檔案的功能。  
@@ -97,7 +92,7 @@ class CHttpFile : public CInternetFile
 ## <a name="requirements"></a>需求  
  **標頭：** afxinet.h  
   
-##  <a name="addrequestheaders"></a>CHttpFile::AddRequestHeaders  
+##  <a name="addrequestheaders"></a>  CHttpFile::AddRequestHeaders  
  呼叫此成員函式中加入一個或多個 HTTP 要求的 HTTP 要求標頭處理。  
   
 ```  
@@ -119,13 +114,13 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  修改新的標頭的語意。 可以是下列其中一項：  
   
-- `HTTP_ADDREQ_FLAG_COALESCE`合併相同的名稱，請使用旗標新增到後續的標頭中找到的第一個標頭的標頭。 比方說，「 接受： 文字 / *"後面接著"接受： 音訊 /\*"形成一個標頭會導致"接受： 文字 /\*音訊 /\*"。 這是由呼叫的應用程式，以確保凝聚力配置相對於與聯合或個別標頭傳送的要求所接收的資料。  
+- `HTTP_ADDREQ_FLAG_COALESCE` 合併相同的名稱，請使用旗標新增到後續的標頭中找到的第一個標頭的標頭。 比方說，「 接受： 文字 / *"後面接著"接受： 音訊 /\*"形成一個標頭會導致"接受： 文字 /\*音訊 /\*"。 這是由呼叫的應用程式，以確保凝聚力配置相對於與聯合或個別標頭傳送的要求所接收的資料。  
   
-- `HTTP_ADDREQ_FLAG_REPLACE`執行移除並新增至取代目前標頭。 標頭名稱會用來移除目前的標頭，以及完整的值會用來加入新的標頭。 如果標頭值是空白，而且標頭，則會將它移除。 如果不是空的標頭值取代。  
+- `HTTP_ADDREQ_FLAG_REPLACE` 執行移除並新增至取代目前標頭。 標頭名稱會用來移除目前的標頭，以及完整的值會用來加入新的標頭。 如果標頭值是空白，而且標頭，則會將它移除。 如果不是空的標頭值取代。  
   
-- `HTTP_ADDREQ_FLAG_ADD_IF_NEW`如果不存在，只會加入標頭。 如果有的話，則會傳回錯誤。  
+- `HTTP_ADDREQ_FLAG_ADD_IF_NEW` 如果不存在，只會加入標頭。 如果有的話，則會傳回錯誤。  
   
-- `HTTP_ADDREQ_FLAG_ADD`使用 with REPLACE。 如果不存在，請加入標頭。  
+- `HTTP_ADDREQ_FLAG_ADD` 使用 with REPLACE。 如果不存在，請加入標頭。  
   
  `dwHeadersLen`  
  長度，以字元為單位的`pstrHeaders`。 如果這是-1l; 此時則`pstrHeaders`假設為零結束，而且長度會計算。  
@@ -137,12 +132,12 @@ BOOL AddRequestHeaders(
  如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
 ### <a name="remarks"></a>備註  
- `AddRequestHeaders`將其他的自由格式的標頭附加至 HTTP 要求控制代碼。 它適用於複雜的用戶端，都需要詳細的確實要求傳送至 HTTP 伺服器控制。  
+ `AddRequestHeaders` 將其他的自由格式的標頭附加至 HTTP 要求控制代碼。 它適用於複雜的用戶端，都需要詳細的確實要求傳送至 HTTP 伺服器控制。  
   
 > [!NOTE]
 >  應用程式可以將多個標頭中的傳遞`pstrHeaders`或`str`如`AddRequestHeaders`使用呼叫`HTTP_ADDREQ_FLAG_ADD`或`HTTP_ADDREQ_FLAG_ADD_IF_NEW`。 如果應用程式會嘗試移除或取代標頭使用**HTTP_ADDREQ_FLAG_REMOVE**或`HTTP_ADDREQ_FLAG_REPLACE`，只有一個標頭可以提供在`lpszHeaders`。  
   
-##  <a name="chttpfile"></a>CHttpFile::CHttpFile  
+##  <a name="chttpfile"></a>  CHttpFile::CHttpFile  
  呼叫此成員函式會建構`CHttpFile`物件。  
   
 ```  
@@ -189,7 +184,7 @@ CHttpFile(
   
  預設值為`dwContext`MFC 所傳送的`CHttpFile`物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CHttpFile`物件。 當您呼叫`CInternetSession::OpenURL`或`CHttpConnection`建構`CHttpFile`物件，您可以覆寫預設值，您選擇的值來設定內容識別碼。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-##  <a name="endrequest"></a>CHttpFile::EndRequest  
+##  <a name="endrequest"></a>  CHttpFile::EndRequest  
  呼叫此成員函式，來結束傳送至與 HTTP 伺服器要求[SendRequestEx](#sendrequestex)成員函式。  
   
 ```  
@@ -215,7 +210,7 @@ BOOL EndRequest(
 ### <a name="remarks"></a>備註  
  預設值為`dwContext`MFC 所傳送的`CHttpFile`物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CHttpFile`物件。 當您呼叫[cinternetsession:: Openurl](../../mfc/reference/cinternetsession-class.md#openurl)或[CHttpConnection](../../mfc/reference/chttpconnection-class.md)建構`CHttpFile`物件，您可以覆寫預設值，您選擇的值來設定內容識別碼。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文件[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-##  <a name="getfileurl"></a>CHttpFile::GetFileURL  
+##  <a name="getfileurl"></a>  CHttpFile::GetFileURL  
  呼叫此成員函式可取得做為 URL 的 HTTP 檔案的名稱。  
   
 ```  
@@ -228,7 +223,7 @@ virtual CString GetFileURL() const;
 ### <a name="remarks"></a>備註  
  使用此成員函式只有在成功呼叫之後[SendRequest](#sendrequest)或在`CHttpFile`已成功建立的物件[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
-##  <a name="getobject"></a>CHttpFile::GetObject  
+##  <a name="getobject"></a>  CHttpFile::GetObject  
  呼叫此成員函式，取得與此相關聯的物件名稱`CHttpFile`。  
   
 ```  
@@ -241,7 +236,7 @@ CString GetObject() const;
 ### <a name="remarks"></a>備註  
  使用此成員函式只有在成功呼叫之後[SendRequest](#sendrequest)或在`CHttpFile`已成功建立的物件[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
-##  <a name="getverb"></a>CHttpFile::GetVerb  
+##  <a name="getverb"></a>  CHttpFile::GetVerb  
  呼叫此成員函式，取得 HTTP 動詞命令 （或方法） 與此相關聯`CHttpFile`。  
   
 ```  
@@ -254,7 +249,7 @@ CString GetVerb() const;
 ### <a name="remarks"></a>備註  
  使用此成員函式只有在成功呼叫之後[SendRequest](#sendrequest)或在`CHttpFile`已成功建立的物件[OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)。  
   
-##  <a name="queryinfo"></a>CHttpFile::QueryInfo  
+##  <a name="queryinfo"></a>  CHttpFile::QueryInfo  
  呼叫此成員函式，以傳回回應，或要求標頭從 HTTP 要求。  
   
 ```  
@@ -317,9 +312,9 @@ BOOL QueryInfo(
   
 -   字串 （預設值）  
   
-- `SYSTEMTIME`(如 「 資料:""的到期日:"等，標頭)  
+- `SYSTEMTIME` (如 「 資料:""的到期日:"等，標頭)  
   
-- `DWORD`(如**STATUS_CODE**， **CONTENT_LENGTH**等。)  
+- `DWORD` (如**STATUS_CODE**， **CONTENT_LENGTH**等。)  
   
  當字串會寫入至緩衝區，而成員函式成功，`lpdwBufferLength`包含減 1 結束的字元字串的長度**NULL**字元。  
   
@@ -371,7 +366,7 @@ BOOL QueryInfo(
   
 - **HTTP_QUERY_RAW_HEADERS_CRLF**  
   
-##  <a name="queryinfostatuscode"></a>CHttpFile::QueryInfoStatusCode  
+##  <a name="queryinfostatuscode"></a>  CHttpFile::QueryInfoStatusCode  
  呼叫此成員函式，取得 HTTP 要求相關聯的狀態碼，並將它放在提供`dwStatusCode`參數。  
   
 ```  
@@ -408,7 +403,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 |500|未知的伺服器錯誤|  
 |503|已到達伺服器容量|  
   
-##  <a name="sendrequest"></a>CHttpFile::SendRequest  
+##  <a name="sendrequest"></a>  CHttpFile::SendRequest  
  呼叫此成員函式可將要求傳送至 HTTP 伺服器。  
   
 ```  
@@ -444,7 +439,7 @@ BOOL SendRequest(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。 如果呼叫失敗，判斷失敗的原因擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。  
   
-##  <a name="sendrequestex"></a>CHttpFile::SendRequestEx  
+##  <a name="sendrequestex"></a>  CHttpFile::SendRequestEx  
  呼叫此成員函式可將要求傳送至 HTTP 伺服器。  
   
 ```  
@@ -492,7 +487,7 @@ BOOL SendRequestEx(
   
  [!code-cpp[NVC_MFCWinInet#9](../../mfc/codesnippet/cpp/chttpfile-class_1.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CInternetFile 類別](../../mfc/reference/cinternetfile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CInternetFile 類別](../../mfc/reference/cinternetfile-class.md)   

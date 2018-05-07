@@ -2,11 +2,8 @@
 title: CComboBoxEx 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CComboBoxEx
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aecbb168316b3d6416d3a41a6f6a56b04aeb990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 類別
 藉由提供影像清單的支援，擴充下拉式方塊控制項。  
@@ -100,7 +95,7 @@ class CComboBoxEx : public CComboBox
  在標準下拉式方塊中，下拉式方塊的擁有者負責建立下拉式方塊，為主控描繪控制項來繪製影像。 當您使用`CComboBoxEx`，您不需要設定的繪製樣式**CBS_OWNERDRAWFIXED**和**CBS_HASSTRINGS**因為它們隱含。 否則，您必須撰寫程式碼執行繪圖作業。 A`CComboBoxEx`控制項支援多達三個映像，每個項目： 針對選取的狀態、 一個用於未選取狀態，和另一個用於覆疊影像的其中一個。  
   
 ## <a name="styles"></a>樣式  
- `CComboBoxEx`支援的樣式**CBS_SIMPLE**， **CBS_DROPDOWN**， **CBS_DROPDOWNLIST**，和**WS_CHILD**。 控制要忽略所有其他傳遞時建立視窗的樣式。 建立視窗之後，您可以提供其他下拉式方塊樣式藉由呼叫`CComboBoxEx`成員函式[SetExtendedStyle](#setextendedstyle)。 使用這些樣式，您可以：  
+ `CComboBoxEx` 支援的樣式**CBS_SIMPLE**， **CBS_DROPDOWN**， **CBS_DROPDOWNLIST**，和**WS_CHILD**。 控制要忽略所有其他傳遞時建立視窗的樣式。 建立視窗之後，您可以提供其他下拉式方塊樣式藉由呼叫`CComboBoxEx`成員函式[SetExtendedStyle](#setextendedstyle)。 使用這些樣式，您可以：  
   
 -   設定字串搜尋是區分大小寫清單中。  
   
@@ -131,14 +126,14 @@ class CComboBoxEx : public CComboBox
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
+##  <a name="ccomboboxex"></a>  CComboBoxEx::CComboBoxEx  
  呼叫此成員函式建立`CComboBoxEx`物件。  
   
 ```  
 CComboBoxEx();
 ```  
   
-##  <a name="create"></a>CComboBoxEx::Create  
+##  <a name="create"></a>  CComboBoxEx::Create  
  建立下拉式方塊，並將它附加至`CComboBoxEx`物件。  
   
 ```  
@@ -190,7 +185,7 @@ virtual BOOL Create(
   
  如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是**建立**。  
   
-##  <a name="createex"></a>CComboBoxEx::CreateEx  
+##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  呼叫此函式可建立擴充的下拉式方塊控制項 （子視窗），並將它與相關聯`CComboBoxEx`物件。  
   
 ```  
@@ -224,9 +219,9 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是**建立**套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
- `CreateEx`建立具有所指定的延伸視窗樣式控制項， `dwExStyle`。 您必須設定延伸的樣式特定擴充的下拉式方塊控制項使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設定做為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設定做為這類樣式**CBES_EX_CASESENSITIVE**。 如需詳細資訊，請參閱本主題中所述的樣式[ComboBoxEx 控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb775742)Windows SDK 中。  
+ `CreateEx` 建立具有所指定的延伸視窗樣式控制項， `dwExStyle`。 您必須設定延伸的樣式特定擴充的下拉式方塊控制項使用[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設定做為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設定做為這類樣式**CBES_EX_CASESENSITIVE**。 如需詳細資訊，請參閱本主題中所述的樣式[ComboBoxEx 控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb775742)Windows SDK 中。  
   
-##  <a name="deleteitem"></a>CComboBoxEx::DeleteItem  
+##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  移除項目從**ComboBoxEx**控制項。  
   
 ```  
@@ -243,7 +238,7 @@ int DeleteItem(int iIndex);
 ### <a name="remarks"></a>備註  
  此成員函式實作訊息功能[CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768)、 Windows SDK 中所述。 當您呼叫 DeleteItem， [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)訊息**CBEN_DELETEITEM**會傳送通知給父視窗。  
   
-##  <a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
+##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl  
  呼叫此成員函式取得下拉式方塊控制項內的指標`CComboBoxEx`物件。  
   
 ```  
@@ -258,7 +253,7 @@ CComboBox* GetComboBoxCtrl();
   
  `CComboBox`所傳回的值指向的物件是暫存物件，並且在下一步的閒置處理時間被終結。  
   
-##  <a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CComboBoxEx::GetEditCtrl  
  呼叫此成員函式可取得下拉式方塊編輯控制項的指標。  
   
 ```  
@@ -273,7 +268,7 @@ CEdit* GetEditCtrl();
   
  `CEdit`所傳回的值指向的物件是暫存物件，並且在下一步的閒置處理時間被終結。  
   
-##  <a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CComboBoxEx::GetExtendedStyle  
  呼叫此成員函式，以取得用來擴充的樣式`CComboBoxEx`控制項。  
   
 ```  
@@ -286,7 +281,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>備註  
  請參閱[ComboBoxEx 控制項擴充樣式](http://msdn.microsoft.com/library/windows/desktop/bb775742)如需有關這些樣式的 Windows SDK 中。  
   
-##  <a name="getimagelist"></a>CComboBoxEx::GetImageList  
+##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList  
  呼叫此成員函式，以取得使用的影像清單的指標`CComboBoxEx`控制項。  
   
 ```  
@@ -299,7 +294,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>備註  
  `CImageList`所傳回的值指向的物件是暫存物件，並且在下一步的閒置處理時間被終結。  
   
-##  <a name="getitem"></a>CComboBoxEx::GetItem  
+##  <a name="getitem"></a>  CComboBoxEx::GetItem  
  擷取項目資訊指定**ComboBoxEx**項目。  
   
 ```  
@@ -316,7 +311,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>備註  
  此成員函式實作訊息功能[CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779)、 Windows SDK 中所述。  
   
-##  <a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
+##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged  
  決定使用者是否已變更的內容**ComboBoxEx** edit 控制項的輸入。  
   
 ```  
@@ -329,7 +324,7 @@ BOOL HasEditChanged();
 ### <a name="remarks"></a>備註  
  此成員函式實作訊息功能[CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782)、 Windows SDK 中所述。  
   
-##  <a name="insertitem"></a>CComboBoxEx::InsertItem  
+##  <a name="insertitem"></a>  CComboBoxEx::InsertItem  
  插入新項目中的**ComboBoxEx**控制項。  
   
 ```  
@@ -346,7 +341,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>備註  
  當您呼叫`InsertItem`、 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)訊息[CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764)會傳送通知給父視窗。  
   
-##  <a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle  
  呼叫此成員函式可設定用於擴充控制項的下拉式方塊的擴充的樣式。  
   
 ```  
@@ -370,7 +365,7 @@ DWORD SetExtendedStyle(
   
  若要建立下拉式方塊擴充具有延伸的視窗樣式控制項，請使用[CreateEx](#createex)。  
   
-##  <a name="setimagelist"></a>CComboBoxEx::SetImageList  
+##  <a name="setimagelist"></a>  CComboBoxEx::SetImageList  
  設定影像清單的**ComboBoxEx**控制項。  
   
 ```  
@@ -389,7 +384,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  `CImageList`所傳回的值指向的物件是暫存物件，並且在下一步的閒置處理時間被終結。  
   
-##  <a name="setitem"></a>CComboBoxEx::SetItem  
+##  <a name="setitem"></a>  CComboBoxEx::SetItem  
  設定的屬性中的項目**ComboBoxEx**控制項。  
   
 ```  
@@ -406,7 +401,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>備註  
  此成員函式實作訊息功能[CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788)、 Windows SDK 中所述。  
   
-##  <a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
+##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme  
  設定之視覺樣式的擴充的下拉式方塊控制項。  
   
 ```  
@@ -423,7 +418,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[CBEM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb775790)訊息、 Windows SDK 中所述。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 MFCIE](../../visual-cpp-samples.md)   
  [CComboBox 類別](../../mfc/reference/ccombobox-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -1,13 +1,10 @@
 ---
-title: "AFX_EXTENSION_MODULE 結構 |Microsoft 文件"
-ms.custom: 
+title: AFX_EXTENSION_MODULE 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFX_EXTENSION_MODULE
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - AFX_EXTENSION_MODULE structure [MFC]
 ms.assetid: b85a989c-d0c5-4b28-b53c-dad45b75704e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ac896fb16aa3c338cadd6273e226eebe986ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 結構
 `AFX_EXTENSION_MODULE` MFC 擴充 Dll 的初始化期間用來容納 MFC 擴充 DLL 模組的狀態。  
@@ -77,7 +72,7 @@ struct AFX_EXTENSION_MODULE
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)   
  [AfxTermExtensionModule](extension-dll-macros.md#afxtermextensionmodule)

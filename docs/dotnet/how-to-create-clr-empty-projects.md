@@ -2,30 +2,25 @@
 title: 如何： 建立 CLR 空專案 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 81d24698ccdc769f93882287dfa94dbb12d9d197
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6910d8ff234573a6cb05c68275f81641831e73b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-clr-empty-projects"></a>如何：建立 CLR 空專案
 若要建立 CLR 空專案，請使用**CLR 空專案**範本，可從**新專案** 對話方塊。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
      [ **新增專案** ] 對話方塊隨即出現。  
   
-2.  在下**已安裝的範本**，按一下  **Visual c + +**節點中，然後按一下  **CLR**節點。 選擇**CLR 空專案**圖示。  
+2.  在下**已安裝的範本**，按一下  **Visual c + +** 節點中，然後按一下  **CLR**節點。 選擇**CLR 空專案**圖示。  
   
 3.  在 [名稱]  方塊中輸入應用程式的唯一名稱。  
   
@@ -48,6 +43,6 @@ ms.lasthandoff: 12/21/2017
   
 4.  按一下 [確定 **Deploying Office Solutions**]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Visual c + + 專案類型](../ide/visual-cpp-project-types.md)   
  [Visual C++ 專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

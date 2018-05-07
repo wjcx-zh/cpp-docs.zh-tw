@@ -1,12 +1,9 @@
 ---
-title: "CMFCDesktopAlertWndButton 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCDesktopAlertWndButton 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndButton
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1153546851e6a34c14dacd33db04091de24557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efabaabdcc3f08a58cb7dc0a7845a56e5238548d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton 類別
 可讓要新增至桌面的警示對話方塊的按鈕。  
@@ -93,7 +88,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 ## <a name="requirements"></a>需求  
  **標頭：** afxdesktopalertwnd.h  
   
-##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  
  決定是否要將按鈕顯示 [警示] 對話方塊的標題區域中。  
   
 ```  
@@ -103,7 +98,7 @@ BOOL IsCaptionButton() const;
 ### <a name="return-value"></a>傳回值  
  如果按鈕會顯示在標題區域的 [警示] 對話方塊中，則為非零否則為 0。  
   
-##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton  
  決定按鈕是否要關閉警示 對話方塊。  
   
 ```  
@@ -113,7 +108,7 @@ BOOL IsCloseButton() const;
 ### <a name="return-value"></a>傳回值  
  如果按鈕關閉 [警示] 對話方塊中，則為非零否則為 0。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCDesktopAlertDialog 類別](../../mfc/reference/cmfcdesktopalertdialog-class.md)

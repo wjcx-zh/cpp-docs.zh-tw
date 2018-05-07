@@ -1,12 +1,9 @@
 ---
-title: "Idbinitializeimpl:: Uninitialize |Microsoft 文件"
-ms.custom: 
+title: 'Idbinitializeimpl:: Uninitialize |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IDBInitializeImpl.Uninitialize
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - Uninitialize method
 ms.assetid: ba37fc74-f84e-40b0-abb6-41bddd505269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8641fa149eb63a356969a581eef117f34ff05d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e8df7c178687959ba0f568650d3d6130f21fc2cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbinitializeimpluninitialize"></a>IDBInitializeImpl::Uninitialize
 數位資料來源物件未初始化的狀態，藉由釋放內部資源，例如屬性支援。  
@@ -45,6 +40,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDBInitializeImpl 類別](../../data/oledb/idbinitializeimpl-class.md)   
  [IDBInitializeImpl::Initialize](../../data/oledb/idbinitializeimpl-initialize.md)

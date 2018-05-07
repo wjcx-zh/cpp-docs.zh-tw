@@ -1,13 +1,10 @@
 ---
-title: "使用 CObject |Microsoft 文件"
-ms.custom: 
+title: 使用 CObject |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CObject
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - MFC, base class
 - CObject class [MFC]
 ms.assetid: d0cd19bb-2856-4b41-abbc-620fd64cb223
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17bffb412975cfc6a97eae8b30aff2514a2e1d93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 235bf1f4130f59a8af9548fcbf35e36d82255f14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cobject"></a>使用 CObject
 [CObject](../mfc/reference/cobject-class.md)適用於大部分 Microsoft Foundation 類別庫 (MFC) 是根基底類別。 `CObject`類別包含許多有用的功能，您可能想要併入您自己的程式物件，包括序列化支援、 執行階段類別資訊，以及物件的診斷輸出。 如果您衍生您的類別從`CObject`，您的類別可以利用這些弱點`CObject`功能。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   看到一份[CObject 常見問題集](../mfc/cobject-class-frequently-asked-questions.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../mfc/mfc-concepts.md)   
  [一般 MFC 主題](../mfc/general-mfc-topics.md)   
  [CRuntimeClass 結構](../mfc/reference/cruntimeclass-structure.md)   

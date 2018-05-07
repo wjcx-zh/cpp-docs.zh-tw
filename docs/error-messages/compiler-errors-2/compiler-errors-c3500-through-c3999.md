@@ -1,8 +1,8 @@
 ---
-title: "編譯器錯誤 C3500 c3999 |Microsoft 文件"
+title: 編譯器錯誤 C3500 c3999 |Microsoft 文件
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3502
@@ -253,14 +253,13 @@ dev_langs:
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a34b3f3fb635cc666b0e9cca079373bb7c5636e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbd62a4f7a8b488c74a2cad51e3f2efa296a7614
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>編譯器錯誤 C3500 c3999
 

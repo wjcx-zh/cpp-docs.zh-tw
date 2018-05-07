@@ -1,12 +1,9 @@
 ---
-title: "COleChangeIconDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: COleChangeIconDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeIconDialog
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e6f43ce49c5e5b51a6f69a3a8952608f5bfe49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 類別
 用於 OLE 的 [變更圖示] 對話方塊。  
@@ -93,7 +88,7 @@ class COleChangeIconDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxodlgs.h  
   
-##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog  
+##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog  
  此函式會建構只`COleChangeIconDialog`物件。  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleChangeIconDialog(
   
  如需詳細資訊，請參閱[OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的結構。  
   
-##  <a name="dochangeicon"></a>COleChangeIconDialog::DoChangeIcon  
+##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon  
  呼叫此函式來變更表示的項目之後的對話方塊中選取一個圖示[DoModal](#domodal)傳回**IDOK**。  
   
 ```  
@@ -142,7 +137,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="return-value"></a>傳回值  
  如果變更成功，則為非零否則便是 0。  
   
-##  <a name="domodal"></a>COleChangeIconDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeIconDialog::DoModal  
  呼叫此函式可顯示 OLE 的 [變更圖示] 對話方塊。  
   
 ```  
@@ -163,7 +158,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`傳回**IDOK**，您可以呼叫其他成員函式來擷取的設定或已由使用者輸入，在對話方塊中的資訊。  
   
-##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile  
  呼叫此函式可取得包含選取之項目的圖示的外觀的中繼檔的控制代碼。  
   
 ```  
@@ -171,9 +166,9 @@ HGLOBAL GetIconicMetafile() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 如果已關閉對話方塊，選擇包含 [新增] 圖示，圖示外觀的中繼檔的控制代碼**[確定]**; 否則，請在對話方塊顯示之前一樣的圖示。  
+ 如果已關閉對話方塊，選擇包含 [新增] 圖示，圖示外觀的中繼檔的控制代碼 **[確定]**; 否則，請在對話方塊顯示之前一樣的圖示。  
   
-##  <a name="m_ci"></a>COleChangeIconDialog::m_ci  
+##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci  
  型別的結構**OLEUICHANGEICON**用來控制行為的變更圖示 對話方塊。  
   
 ```  
@@ -185,7 +180,7 @@ OLEUICHANGEICON m_ci;
   
  如需詳細資訊，請參閱[OLEUICHANGEICON](http://msdn.microsoft.com/library/windows/desktop/ms680098) Windows SDK 中的結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)

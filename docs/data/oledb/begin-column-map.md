@@ -1,12 +1,9 @@
 ---
-title: BEGIN_COLUMN_MAP | Microsoft Docs
-ms.custom: 
+title: BEGIN_COLUMN_MAP |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BEGIN_COLUMN_MAP
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BEGIN_COLUMN_MAP macro
 ms.assetid: d6ffe633-e0da-4e33-8faa-f7f259d05420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 45d5438d1a4ba946aa3db36cc2b92eef1aa93ba3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b6a619e36e3457902ce6ced07389ca8461499682
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="begincolumnmap"></a>BEGIN_COLUMN_MAP
 標記資料行對應項目的開頭。  
@@ -56,7 +51,7 @@ BEGIN_COLUMN_MAP(x)
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   
  [COLUMN_ENTRY](../../data/oledb/column-entry.md)   

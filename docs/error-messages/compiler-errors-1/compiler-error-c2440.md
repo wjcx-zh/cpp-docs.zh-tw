@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2440 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2440 |Microsoft 文件
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2440
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a83da358738f7892fd5db06fbe775ff0b7d7da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6b03dfc413e3a63e5084dc265d5b7010fbcebd4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2440"></a>編譯器錯誤 C2440
 'conversion': 無法從 'type1' 轉換成 'type2'  
@@ -199,7 +194,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>範例  
- Visual c + + 編譯器不再允許[const_cast 運算子](../../cpp/const-cast-operator.md)向下轉型時來源使用的程式碼**/clr**程式設計進行編譯。  
+ Visual c + + 編譯器不再允許[const_cast 運算子](../../cpp/const-cast-operator.md)向下轉型時來源使用的程式碼 **/clr**程式設計進行編譯。  
   
  若要解決此 C2440，使用正確的轉型運算子。 如需詳細資訊，請參閱[轉型運算子](../../cpp/casting-operators.md)。  
   

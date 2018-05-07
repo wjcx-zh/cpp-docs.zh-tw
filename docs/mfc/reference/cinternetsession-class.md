@@ -1,12 +1,9 @@
 ---
-title: "CInternetSession 類別 |Microsoft 文件"
-ms.custom: 
+title: CInternetSession 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetSession
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7aad2f6ce26fd5ca9ed0ec323a8fcb05ac17f7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 建立和初始化單一或多個同時網際網路工作階段，並視需要描述您與 Proxy 伺服器的連接。  
@@ -96,7 +91,7 @@ class CInternetSession : public CObject
 ## <a name="remarks"></a>備註  
  如果您的網際網路連線必須維護期間的應用程式，您可以建立`CInternetSession`類別成員[CWinApp](../../mfc/reference/cwinapp-class.md)。  
   
- 一旦您已建立的網際網路工作階段，您可以呼叫[OpenURL](#openurl)。 `CInternetSession`然後會剖析 URL，讓您藉由呼叫全域函式[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)。 其通訊協定類型，不論`CInternetSession`解譯 URL，並會為您管理它。 它可以處理要求的 URL 資源"file:// 與識別的本機檔案。 `OpenURL`將傳回的指標[Cgopherfile](../../mfc/reference/cstdiofile-class.md)物件名稱您傳遞給它，如果是本機檔案。  
+ 一旦您已建立的網際網路工作階段，您可以呼叫[OpenURL](#openurl)。 `CInternetSession` 然後會剖析 URL，讓您藉由呼叫全域函式[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)。 其通訊協定類型，不論`CInternetSession`解譯 URL，並會為您管理它。 它可以處理要求的 URL 資源"file:// 與識別的本機檔案。 `OpenURL` 將傳回的指標[Cgopherfile](../../mfc/reference/cstdiofile-class.md)物件名稱您傳遞給它，如果是本機檔案。  
   
  如果您開啟上網際網路伺服器使用的 URL `OpenURL`，您可以從站台讀取資訊。 如果您想要在伺服器上的檔案上執行特定服務 （如 HTTP、 FTP 或 gopher） 動作，您必須建立與該伺服器的適當連線。 若要開啟特定種類的連接直接連接至特定的服務，請使用下列成員函式的其中一個：  
   
@@ -108,12 +103,12 @@ class CInternetSession : public CObject
   
  [SetOption](#setoption)可讓您設定您的工作階段，例如逾時值，重試，次數的查詢選項等等。  
   
- `CInternetSession`成員函式[SetCookie](#setcookie)， [GetCookie](#getcookie)，和[GetCookieLength](#getcookielength)提供管理透過此伺服器和指令碼維護的 Win32 cookie 資料庫的方法用戶端工作站的狀態資訊。  
+ `CInternetSession` 成員函式[SetCookie](#setcookie)， [GetCookie](#getcookie)，和[GetCookieLength](#getcookielength)提供管理透過此伺服器和指令碼維護的 Win32 cookie 資料庫的方法用戶端工作站的狀態資訊。  
   
  如需基本網際網路程式設計工作的詳細資訊，請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)。 如需使用 MFC WinInet 類別的一般資訊，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
   
 > [!NOTE]
-> `CInternetSession`將會擲回[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)不支援的服務類型。 目前支援下列服務類型： FTP、 HTTP、 gopher 和檔案。  
+> `CInternetSession` 將會擲回[AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)不支援的服務類型。 目前支援下列服務類型： FTP、 HTTP、 gopher 和檔案。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -123,7 +118,7 @@ class CInternetSession : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxinet.h  
   
-##  <a name="cinternetsession"></a>CInternetSession::CInternetSession  
+##  <a name="cinternetsession"></a>  CInternetSession::CInternetSession  
  此成員函式時，會呼叫`CInternetSession`建立物件。  
   
 ```  
@@ -141,16 +136,16 @@ CInternetSession(
  識別的實體呼叫網際網路函式 （例如，"Microsoft 網際網路瀏覽器 」） 的應用程式名稱的字串指標。 如果`pstrAgent`是**NULL** （預設值），架構會呼叫全域函式[AfxGetAppName](application-information-and-management.md#afxgetappname)，它會傳回 null 結束的字串，包含應用程式的名稱。 某些通訊協定會使用這個字串，識別您的應用程式伺服器。  
   
  `dwContext`  
- 作業的內容識別碼。 `dwContext`識別作業的狀態資訊傳回[CInternetSession::OnStatusCallback](#onstatuscallback)。 預設是設為 1。不過，您可以明確指派作業的特定內容識別碼。 物件，且任何工作，它會將相關聯的內容識別碼。  
+ 作業的內容識別碼。 `dwContext` 識別作業的狀態資訊傳回[CInternetSession::OnStatusCallback](#onstatuscallback)。 預設是設為 1。不過，您可以明確指派作業的特定內容識別碼。 物件，且任何工作，它會將相關聯的內容識別碼。  
   
  `dwAccessType`  
  所需的存取類型。 以下是有效的值，可能需要提供其中之一：  
   
 - **INTERNET_OPEN_TYPE_PRECONFIG**連接在登錄中使用預先設定的設定。 此存取類型會設為預設值。 若要透過 TIS proxy 連線，將`dwAccessType`為此值; 您再登錄適當地設定。  
   
-- `INTERNET_OPEN_TYPE_DIRECT`直接連線到網際網路。  
+- `INTERNET_OPEN_TYPE_DIRECT` 直接連線到網際網路。  
   
-- `INTERNET_OPEN_TYPE_PROXY`透過 CERN proxy 的連線。  
+- `INTERNET_OPEN_TYPE_PROXY` 透過 CERN proxy 的連線。  
   
  如需使用不同類型 proxy 的連接資訊，請參閱[一般 FTP 用戶端應用程式中的步驟](../../mfc/steps-in-a-typical-ftp-client-application.md)。  
   
@@ -163,9 +158,9 @@ CInternetSession(
  `dwFlags`  
  表示各種快取選項。 預設值是設為 0。 可能的值包括：  
   
-- `INTERNET_FLAG_DONT_CACHE`不會快取資料，在本機或任何閘道伺服器。  
+- `INTERNET_FLAG_DONT_CACHE` 不會快取資料，在本機或任何閘道伺服器。  
   
-- `INTERNET_FLAG_OFFLINE`下載作業透過持續性的快取沒有問題。 如果項目不存在於快取中，會傳回適當的錯誤程式碼。 這個旗標可能會合併使用位元`OR`( **&#124;**) 運算子。  
+- `INTERNET_FLAG_OFFLINE` 下載作業透過持續性的快取沒有問題。 如果項目不存在於快取中，會傳回適當的錯誤程式碼。 這個旗標可能會合併使用位元`OR`( **&#124;**) 運算子。  
   
 ### <a name="remarks"></a>備註  
  **CInternetSession**是在應用程式呼叫的第一個網際網路函式。 它會初始化內部資料結構，並準備進行後續的呼叫，從應用程式。  
@@ -175,7 +170,7 @@ CInternetSession(
 ### <a name="example"></a>範例  
   請參閱範例的[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="close"></a>CInternetSession::Close  
+##  <a name="close"></a>  CInternetSession::Close  
  呼叫此成員函式，當您的應用程式已經完成使用`CInternetSession`物件。  
   
 ```  
@@ -185,7 +180,7 @@ virtual void Close();
 ### <a name="example"></a>範例  
   請參閱範例的[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
+##  <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback  
  呼叫此成員函式可啟用狀態回呼。  
   
 ```  
@@ -208,7 +203,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
   
  若要以非同步方式處理任何作業，您必須建立自己的執行緒，或使用 MFC WinInet 函式。  
   
-##  <a name="getcontext"></a>CInternetSession::GetContext  
+##  <a name="getcontext"></a>  CInternetSession::GetContext  
  呼叫此成員函式可取得特定的應用程式工作階段內容值。  
   
 ```  
@@ -223,7 +218,7 @@ DWORD_PTR GetContext() const;
   
  如需有關非同步作業的詳細資訊，請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)。  
   
-##  <a name="getcookie"></a>CInternetSession::GetCookie  
+##  <a name="getcookie"></a>  CInternetSession::GetCookie  
  此成員函式實作的 Win32 函式的行為[InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)、 Windows SDK 中所述。  
   
 ```  
@@ -263,7 +258,7 @@ static BOOL GetCookie(
 ### <a name="remarks"></a>備註  
  在第二個多載中，MFC 將 cookie 資料擷取至提供`CString`物件。  
   
-##  <a name="getcookielength"></a>CInternetSession::GetCookieLength  
+##  <a name="getcookielength"></a>  CInternetSession::GetCookieLength  
  呼叫此成員函式可取得 cookie 儲存在緩衝區的長度。  
   
 ```  
@@ -285,7 +280,7 @@ static DWORD GetCookieLength(
 ### <a name="remarks"></a>備註  
  這個值由[GetCookie](#getcookie)。  
   
-##  <a name="getftpconnection"></a>Cinternetsession:: Getftpconnection  
+##  <a name="getftpconnection"></a>  Cinternetsession:: Getftpconnection  
  呼叫此成員函式，以建立 FTP 連線，並取得指標`CFtpConnection`物件。  
   
 ```  
@@ -324,12 +319,12 @@ CFtpConnection* GetFtpConnection(
  指標[CFtpConnection](../../mfc/reference/cftpconnection-class.md)物件。 如果呼叫失敗，判斷失敗的原因擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
- `GetFtpConnection`連接到 FTP 伺服器，而且建立，但將指標傳回至**CFTPConnection**物件。 它不會執行任何特定伺服器上的作業。 如果您想要讀取或寫入檔案，比方說，您就必須執行這些作業做為個別的步驟。 請參閱 < 類別[CFtpConnection](../../mfc/reference/cftpconnection-class.md)和[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)有關搜尋檔案，開啟檔案、 和讀取或寫入檔案。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)執行一般 FTP 連線的工作中的步驟。  
+ `GetFtpConnection` 連接到 FTP 伺服器，而且建立，但將指標傳回至**CFTPConnection**物件。 它不會執行任何特定伺服器上的作業。 如果您想要讀取或寫入檔案，比方說，您就必須執行這些作業做為個別的步驟。 請參閱 < 類別[CFtpConnection](../../mfc/reference/cftpconnection-class.md)和[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)有關搜尋檔案，開啟檔案、 和讀取或寫入檔案。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)執行一般 FTP 連線的工作中的步驟。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)。  
   
-##  <a name="getgopherconnection"></a>CInternetSession::GetGopherConnection  
+##  <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection  
  呼叫此成員函式，以建立新的 gopher 連線並取得指標`CGopherConnection`物件。  
   
 ```  
@@ -357,9 +352,9 @@ CGopherConnection* GetGopherConnection(
  指標[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)物件。 如果呼叫失敗，判斷失敗的原因擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
- `GetGopherConnection`連接至 gopher 伺服器，而且建立，但將指標傳回至`CGopherConnection`物件。 它不會執行任何特定伺服器上的作業。 如果您想要讀取或寫入資料，例如，您就必須執行這些作業做為個別的步驟。 請參閱 < 類別[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)， [CGopherFile](../../mfc/reference/cgopherfile-class.md)，和[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)有關搜尋檔案，開啟檔案、 和讀取或寫入檔案。 瀏覽 FTP 站台的相關資訊，請參閱此成員函式[OpenURL](#openurl)。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)中執行一般 gopher 連接工作的步驟。  
+ `GetGopherConnection` 連接至 gopher 伺服器，而且建立，但將指標傳回至`CGopherConnection`物件。 它不會執行任何特定伺服器上的作業。 如果您想要讀取或寫入資料，例如，您就必須執行這些作業做為個別的步驟。 請參閱 < 類別[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)， [CGopherFile](../../mfc/reference/cgopherfile-class.md)，和[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)有關搜尋檔案，開啟檔案、 和讀取或寫入檔案。 瀏覽 FTP 站台的相關資訊，請參閱此成員函式[OpenURL](#openurl)。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)中執行一般 gopher 連接工作的步驟。  
   
-##  <a name="gethttpconnection"></a>CInternetSession::GetHttpConnection  
+##  <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection  
  呼叫此成員函式，以建立 HTTP 連線，並取得指標`CHttpConnection`物件。  
   
 ```  
@@ -398,9 +393,9 @@ CHttpConnection* GetHttpConnection(
  指標[CHttpConnection](../../mfc/reference/chttpconnection-class.md)物件。 如果呼叫失敗，判斷失敗的原因擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
- `GetHttpConnection`連接到 HTTP 伺服器，而且建立，但將指標傳回至`CHttpConnection`物件。 它不會執行任何特定伺服器上的作業。 如果您想要查詢 HTTP 標頭，例如，您必須執行這項作業當做個別的步驟。 請參閱 < 類別[CHttpConnection](../../mfc/reference/chttpconnection-class.md)和[Cinternetfile](../../mfc/reference/chttpfile-class.md)您可以使用 HTTP 伺服器的連接執行作業的相關資訊。 瀏覽 HTTP 站台的相關資訊，請參閱此成員函式[OpenURL](#openurl)。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)中執行一般的 HTTP 連接工作的步驟。  
+ `GetHttpConnection` 連接到 HTTP 伺服器，而且建立，但將指標傳回至`CHttpConnection`物件。 它不會執行任何特定伺服器上的作業。 如果您想要查詢 HTTP 標頭，例如，您必須執行這項作業當做個別的步驟。 請參閱 < 類別[CHttpConnection](../../mfc/reference/chttpconnection-class.md)和[Cinternetfile](../../mfc/reference/chttpfile-class.md)您可以使用 HTTP 伺服器的連接執行作業的相關資訊。 瀏覽 HTTP 站台的相關資訊，請參閱此成員函式[OpenURL](#openurl)。 請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)中執行一般的 HTTP 連接工作的步驟。  
   
-##  <a name="onstatuscallback"></a>CInternetSession::OnStatusCallback  
+##  <a name="onstatuscallback"></a>  CInternetSession::OnStatusCallback  
  此成員函式會呼叫架構，以啟用狀態回呼和作業暫止時，更新的狀態。  
   
 ```  
@@ -427,7 +422,7 @@ virtual void OnStatusCallback(
 ### <a name="remarks"></a>備註  
  您必須先呼叫[EnableStatusCallback](#enablestatuscallback)利用狀態回呼。  
   
- `dwInternetStatus`參數指出正在執行的作業，並決定哪些內容的`lpvStatusInformation`會。 `dwStatusInformationLength`指出中包含的資料長度`lpvStatusInformation`。 下列狀態的值`dwInternetStatus`的定義方式如下：  
+ `dwInternetStatus`參數指出正在執行的作業，並決定哪些內容的`lpvStatusInformation`會。 `dwStatusInformationLength` 指出中包含的資料長度`lpvStatusInformation`。 下列狀態的值`dwInternetStatus`的定義方式如下：  
   
 |值|意義|  
 |-----------|-------------|  
@@ -453,7 +448,7 @@ virtual void OnStatusCallback(
   
  如需有關非同步作業的詳細資訊，請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)。  
   
-##  <a name="openurl"></a>Cinternetsession:: Openurl  
+##  <a name="openurl"></a>  Cinternetsession:: Openurl  
  呼叫此成員函式將指定的要求傳送至 HTTP 伺服器，並允許用戶端指定其他的 RFC822 MIME 或連同要求一起傳送的 HTTP 標頭。  
   
 ```  
@@ -479,11 +474,11 @@ CStdioFile* OpenURL(
   
 - **INTERNET_FLAG_TRANSFER_BINARY**成二進位檔案將檔案傳輸。  
   
-- `INTERNET_FLAG_RELOAD`即使在本機快取，請從網路取得的資料。  
+- `INTERNET_FLAG_RELOAD` 即使在本機快取，請從網路取得的資料。  
   
-- `INTERNET_FLAG_DONT_CACHE`不會快取資料，在本機或任何閘道。  
+- `INTERNET_FLAG_DONT_CACHE` 不會快取資料，在本機或任何閘道。  
   
-- `INTERNET_FLAG_SECURE`這個旗標適用於只使用 HTTP 要求。 它會要求使用安全通訊端層或 PCT 網路上的安全交易  
+- `INTERNET_FLAG_SECURE` 這個旗標適用於只使用 HTTP 要求。 它會要求使用安全通訊端層或 PCT 網路上的安全交易  
   
 - **INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT**的話，請重複使用現有的連接所產生的新要求的伺服器**OpenUrl**而不是建立新的工作階段，針對每個連接要求。  
   
@@ -510,18 +505,18 @@ CStdioFile* OpenURL(
 ### <a name="remarks"></a>備註  
  參數`dwFlags`必須包含**INTERNET_FLAG_TRANSFER_ASCII**或**INTERNET_FLAG_TRANSFER_BINARY**，但非兩者。 剩餘的旗標可以結合的位元`OR`運算子 ( **&#124;**)。  
   
- `OpenURL`其中包裝的 Win32 函式**InternetOpenURL**，允許只下載、 擷取和網際網路伺服器中讀取資料。 `OpenURL`可讓遠端位置，不在檔案操作，因此需要無[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)物件。  
+ `OpenURL`其中包裝的 Win32 函式**InternetOpenURL**，允許只下載、 擷取和網際網路伺服器中讀取資料。 `OpenURL` 可讓遠端位置，不在檔案操作，因此需要無[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)物件。  
   
  若要使用特定的連接 (也就是通訊協定特有) 函式，例如寫入檔案時，您必須開啟工作階段，然後開啟特定種類的連線，然後使用該連接所需模式中開啟檔案。 請參閱`CInternetConnection`如需有關連接特有的函式。  
   
-##  <a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetSession::operator HINTERNET  
  您可以使用這個運算子來取得目前的網際網路工作階段的 Windows 控制代碼。  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="setcookie"></a>CInternetSession::SetCookie  
+##  <a name="setcookie"></a>  CInternetSession::SetCookie  
  設定指定之 url 的 cookie。  
   
 ```  
@@ -547,7 +542,7 @@ static BOOL SetCookie(
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)、 Windows SDK 中所述。  
   
-##  <a name="setoption"></a>CInternetSession::SetOption  
+##  <a name="setoption"></a>  CInternetSession::SetOption  
  呼叫此成員函式可設定的網際網路工作階段選項。  
   
 ```  
@@ -580,14 +575,14 @@ BOOL SetOption(
  `dwFlags`  
  表示各種快取選項。 預設值是設為 0。 可能的值包括：  
   
-- `INTERNET_FLAG_DONT_CACHE`不會快取資料，在本機或任何閘道伺服器。  
+- `INTERNET_FLAG_DONT_CACHE` 不會快取資料，在本機或任何閘道伺服器。  
   
-- `INTERNET_FLAG_OFFLINE`下載作業透過持續性的快取沒有問題。 如果項目不存在於快取中，會傳回適當的錯誤程式碼。 這個旗標可能會合併使用位元`OR`( **&#124;**) 運算子。  
+- `INTERNET_FLAG_OFFLINE` 下載作業透過持續性的快取沒有問題。 如果項目不存在於快取中，會傳回適當的錯誤程式碼。 這個旗標可能會合併使用位元`OR`( **&#124;**) 運算子。  
   
 ### <a name="return-value"></a>傳回值  
  如果作業成功，值為**TRUE**傳回。 如果發生錯誤，值為**FALSE**傳回。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   

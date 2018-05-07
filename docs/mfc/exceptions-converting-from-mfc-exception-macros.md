@@ -1,13 +1,10 @@
 ---
-title: "例外狀況： 從 MFC 例外狀況巨集轉換 |Microsoft 文件"
-ms.custom: 
+title: 例外狀況： 從 MFC 例外狀況巨集轉換 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>例外狀況：從 MFC 例外狀況巨集轉換
 這是進階的主題。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [轉換程式碼以使用 c + + 例外狀況的例外狀況巨集](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a>轉換的優點  
+##  <a name="_core_advantages_of_converting"></a> 轉換的優點  
  您可能不需要轉換現有的程式碼，雖然您應該注意巨集實作 mfc 3.0 版和更早版本中的實作之間的差異。 在討論這些差異和程式碼行為的後續變更[例外狀況： 3.0 版中的例外狀況巨集變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)。  
   
  轉換的主要優點包括：  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
      例外狀況宣告**攔截**關鍵字會使用此語法：  
   
-     **catch (** *exception_type* *exception_name***)**  
+     **catch (** *exception_type* *exception_name * * *)**  
   
      這個例外狀況宣告陳述式表示的類型例外狀況的 catch 區塊的控制代碼。  
   
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
      巨集使用`THROW_LAST`重新擲回目前例外狀況。 `throw`關鍵字，但沒有引數，具有相同的效果。  
   
-##  <a name="_core_doing_the_conversion"></a>進行轉換  
+##  <a name="_core_doing_the_conversion"></a> 進行轉換  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>要轉換的程式碼使用的 c + + 例外狀況處理關鍵字使用巨集  
   
@@ -93,13 +88,13 @@ ms.lasthandoff: 12/21/2017
   
      **攔截**(將它取代為**攔截**)  
   
-     `AND_CATCH`(將它取代為**攔截**)  
+     `AND_CATCH` (將它取代為**攔截**)  
   
-     `END_CATCH`（刪除）  
+     `END_CATCH` （刪除）  
   
      **擲回**(將它取代為`throw`)  
   
-     `THROW_LAST`(將它取代為`throw`)  
+     `THROW_LAST` (將它取代為`throw`)  
   
 3.  修改巨集引數，讓它們形成有效的例外狀況宣告。  
   
@@ -123,6 +118,6 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱[例外狀況： 使用 MFC 巨集和 c + + 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [例外狀況處理](../mfc/exception-handling-in-mfc.md)
 

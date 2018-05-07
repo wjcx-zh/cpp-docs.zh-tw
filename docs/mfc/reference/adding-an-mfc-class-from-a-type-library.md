@@ -1,13 +1,10 @@
 ---
-title: "從類型程式庫加入 MFC 類別 |Microsoft 文件"
-ms.custom: 
+title: 從類型程式庫加入 MFC 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1efc61e097d7e1136fdb7b6ef740dc00342077e4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 349d06d7fecb82af64fbf2d3b2ebe54689b3b292
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>從類型程式庫加入 MFC 類別
 使用此精靈，從可用的型別程式庫中的介面建立的 MFC 類別。 您可以加入至 MFC 類別[MFC 應用程式](../../mfc/reference/creating-an-mfc-application.md)、 [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)，或[MFC ActiveX 控制項](../../mfc/reference/creating-an-mfc-activex-control.md)。  
@@ -45,9 +40,9 @@ ms.lasthandoff: 12/21/2017
   
  在精靈中，您可以加入多個類型程式庫中的類別。 同樣地，您可以在單一精靈工作階段中，從一個以上的類型程式庫加入類別。  
   
- 精靈會建立 MFC 類別，衍生自[COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)，為您從選取的類型程式庫加入每個介面。 `COleDispatchDriver`實作 OLE automation 的用戶端。  
+ 精靈會建立 MFC 類別，衍生自[COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md)，為您從選取的類型程式庫加入每個介面。 `COleDispatchDriver` 實作 OLE automation 的用戶端。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Automation 用戶端](../../mfc/automation-clients.md)   
  [Automation 用戶端：使用型別程式庫](../../mfc/automation-clients-using-type-libraries.md)
 

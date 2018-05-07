@@ -1,13 +1,10 @@
 ---
-title: "MFC ODBC 消費者精靈 |Microsoft 文件"
-ms.custom: 
+title: MFC ODBC 消費者精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.consumer.overview
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad9e4aeb15d2af04987883b6554d569e3cc16b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8a707df6878cd0031cb2ec9b06285e568503992
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 消費者精靈
 在這裡插入摘要的 「 搜尋結果 」。  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  **繫結的所有資料行**  
  指定選取之資料表中的所有資料行是否繫結。 如果您選取此方塊 （預設值），都繫結的所有資料行;如果您未選取此方塊，沒有資料行繫結，以及您必須將其繫結以手動方式在資料錄集類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

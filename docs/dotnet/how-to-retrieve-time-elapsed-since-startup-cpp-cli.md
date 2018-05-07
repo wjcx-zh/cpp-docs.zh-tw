@@ -1,13 +1,10 @@
 ---
-title: "如何： 擷取經過的時間啟動後 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 如何： 擷取經過的時間啟動後 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - tick counts
 - startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bebd086d24c741f0c5287e8a7fd0de6b535dfc6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>如何：擷取自啟動後經過的時間 (C++/CLI)
 下列程式碼範例示範如何判斷滴答計數，或啟動的 Windows 以來經過的毫秒數。 這個值會儲存在<xref:System.Environment.TickCount%2A?displayProperty=fullName>成員，因為它是 32 位元值，會重設為零大約每隔 24.9 天。  
@@ -58,6 +53,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 作業 (C + + /CLI)](../dotnet/windows-operations-cpp-cli.md)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

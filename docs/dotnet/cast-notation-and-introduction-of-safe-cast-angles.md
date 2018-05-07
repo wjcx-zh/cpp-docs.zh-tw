@@ -1,13 +1,10 @@
 ---
-title: "轉換通知和簡介的 safe_cast&lt; &gt; |Microsoft 文件"
-ms.custom: 
+title: 轉換通知和簡介的 safe_cast&lt; &gt; |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>轉換通知和 safe_cast 的簡介&lt;&gt;
 轉型的表示法已從 Managed Extensions for c + + Visual c + +。  
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  因此提案拍攝回做進一步的考量，已考量幾個替代的標記法，並帶回至委員會是表單的 (`?type`)，來表示其源自-也就是動態的本質。 這讓使用者能夠為靜態或動態的兩個形式之間切換但沒有人太滿意。 所以回到否定。 第三個和成功的表示法是非負數現在標準`dynamic_cast<type>`，這一組的四個新樣式轉換標記法一般化。  
   
- ISO-c + +`dynamic_cast`傳回`0`套用至不適當的指標類型，並擲回`std::bad_cast`時套用至參考類型的例外狀況。 在 Managed Extensions for c + +，套用`dynamic_cast`受管理的參考類型 （因為它的指標表示），一律傳回`0`。 `__try_cast<type>`擲回的例外狀況導入成類比`dynamic_cast`，只不過它會擲回`System::InvalidCastException`若轉換失敗。  
+ ISO-c + +`dynamic_cast`傳回`0`套用至不適當的指標類型，並擲回`std::bad_cast`時套用至參考類型的例外狀況。 在 Managed Extensions for c + +，套用`dynamic_cast`受管理的參考類型 （因為它的指標表示），一律傳回`0`。 `__try_cast<type>` 擲回的例外狀況導入成類比`dynamic_cast`，只不過它會擲回`System::InvalidCastException`若轉換失敗。  
   
 ```  
 public __gc class ItemVerb;  
@@ -136,7 +131,7 @@ Matrix m( 2000, 2000 ), n( 2000, 2000 );
 if ( ! mumble ) return;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [一般的語言變更 (C + + /CLI)](../dotnet/general-language-changes-cpp-cli.md)   
  [使用 /clr 進行 C-style 轉換 (C + + /CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)   
  [safe_cast](../windows/safe-cast-cpp-component-extensions.md)

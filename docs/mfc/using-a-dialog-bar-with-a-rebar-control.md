@@ -1,13 +1,10 @@
 ---
-title: "使用對話方塊列與 Rebar 控制項 |Microsoft 文件"
-ms.custom: 
+title: 使用對話方塊列與 Rebar 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - WM_EX_TRANSPARENT
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - rebar controls [MFC], dialog bars
 - dialog bars [MFC], using with rebar bands
 ms.assetid: e528cea0-6b81-4bdf-9643-7c03b6176590
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4eb47da7c3866e01ee563b9f6b42fa21ada109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47894c14e3b3d694847f94e7f981c9397383e598
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>搭配使用對話方塊列與 Rebar 控制項
 中所述[Rebar 控制項和群組列](../mfc/rebar-controls-and-bands.md)，每個群組列可以包含只有一個子視窗 （或控制項）。 如果您想要有一個以上的子視窗，每個群組列，這可能是一項限制。 方便的因應措施是使用多個控制項建立對話方塊列資源，然後將 rebar 群組列 （包含對話方塊列） 新增至 rebar 控制項。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  新的處理常式，以模擬對話方塊列的透明度的轉送`WM_ERASEBKGND`傳送訊息給父視窗，並強制重新繪製，每次移動對話方塊列物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

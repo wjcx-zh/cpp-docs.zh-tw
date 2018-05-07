@@ -1,13 +1,10 @@
 ---
-title: "TN020: ID 命名和編號慣例 |Microsoft 文件"
-ms.custom: 
+title: 'TN020: ID 命名和編號慣例 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.id
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a666c2183276b95a9405400de8acc0117c7134e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020：ID 命名和編號慣例
 此提示說明 ID 命名和編號慣例 MFC 2.0 使用的資源、 命令、 字串、 控制項和子視窗。  
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   0x8000 到字串 0xFFFF 的範圍被保留給命令的功能表提示。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

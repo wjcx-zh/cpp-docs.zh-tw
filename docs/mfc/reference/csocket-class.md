@@ -1,12 +1,9 @@
 ---
-title: "CSocket 類別 |Microsoft 文件"
-ms.custom: 
+title: CSocket 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocket
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocket-class"></a>CSocket 類別
 衍生自`CAsyncSocket`、 繼承其封裝的 Windows 通訊端應用程式開發介面，並代表比更高的抽象層級`CAsyncSocket`物件。  
@@ -75,7 +70,7 @@ class CSocket : public CAsyncSocket
 |[CSocket::OnMessagePending](#onmessagepending)|等待封鎖的呼叫完成時呼叫的擱置中訊息的處理序。|  
   
 ## <a name="remarks"></a>備註  
- `CSocket`類別會搭配`CSocketFile`和`CArchive`管理傳送和接收資料。  
+ `CSocket` 類別會搭配`CSocketFile`和`CArchive`管理傳送和接收資料。  
   
  A`CSocket`物件也會提供封鎖，這是同步的作業不可或缺`CArchive`。 封鎖函式，例如`Receive`， `Send`， `ReceiveFrom`， `SendTo`，和`Accept`(從所有繼承`CAsyncSocket`)，不會傳回`WSAEWOULDBLOCK`錯誤`CSocket`。 相反地，這些函式會等候直到作業完成為止。 此外，原始的呼叫將會終止錯誤`WSAEINTR`如果`CancelBlockingCall`封鎖了其中一個這些函式時，會呼叫。  
   
@@ -104,7 +99,7 @@ class CSocket : public CAsyncSocket
 ## <a name="requirements"></a>需求  
  **標頭：** afxsock.h  
   
-##  <a name="attach"></a>CSocket::Attach  
+##  <a name="attach"></a>  CSocket::Attach  
  呼叫此成員函式附加`hSocket`的控制代碼`CSocket`物件。  
   
 ```  
@@ -130,7 +125,7 @@ BOOL Attach(SOCKET hSocket);
   
  [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
  呼叫以取消目前正在進行封鎖呼叫此成員函式。  
   
 ```  
@@ -146,7 +141,7 @@ void CancelBlockingCall();
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="create"></a>CSocket::Create  
+##  <a name="create"></a>  CSocket::Create  
  呼叫**建立**之後建構建立 Windows 通訊端，並將其連接的通訊端物件的成員函式。  
   
 ```  
@@ -181,7 +176,7 @@ BOOL Create(
   
  如需有關資料流和資料包通訊端的詳細資訊，請參閱文章[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)， [Windows Sockets： 連接埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)，和[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>  CSocket::CSocket  
  建構 `CSocket` 物件。  
   
 ```  
@@ -193,7 +188,7 @@ CSocket();
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
  將指標傳回至`CSocket`物件。  
   
 ```  
@@ -212,7 +207,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
  呼叫此成員函式，來判斷是否封鎖的呼叫正在進行中。  
   
 ```  
@@ -225,7 +220,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
  覆寫此成員函式，從 Windows 中尋找特定的訊息，並在您的通訊端回應。  
   
 ```  
@@ -242,7 +237,7 @@ virtual BOOL OnMessagePending();
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CAsyncSocket 類別](../../mfc/reference/casyncsocket-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CAsyncSocket 類別](../../mfc/reference/casyncsocket-class.md)   

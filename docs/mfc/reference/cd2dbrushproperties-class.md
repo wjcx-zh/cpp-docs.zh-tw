@@ -1,12 +1,9 @@
 ---
-title: "CD2DBrushProperties 類別 |Microsoft 文件"
-ms.custom: 
+title: CD2DBrushProperties 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DBrushProperties
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CD2DBrushProperties [MFC], CD2DBrushProperties
 - CD2DBrushProperties [MFC], CommonInit
 ms.assetid: c77d717f-0a16-4d74-b2ce-0ae1766ed6f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 011ea92e24be73aa51e29bab327bfa1ccdf7ed9a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9b21777ba272819c9921aed90ede185b759ba45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dbrushproperties-class"></a>CD2DBrushProperties 類別
 `D2D1_BRUSH_PROPERTIES`的包裝函式。  
@@ -62,7 +57,7 @@ class CD2DBrushProperties : public D2D1_BRUSH_PROPERTIES;
 ## <a name="requirements"></a>需求  
  **標頭：** afxrendertarget.h  
   
-##  <a name="cd2dbrushproperties"></a>CD2DBrushProperties::CD2DBrushProperties  
+##  <a name="cd2dbrushproperties"></a>  CD2DBrushProperties::CD2DBrushProperties  
  建立 CD2D_BRUSH_PROPERTIES 結構  
   
 ```  
@@ -82,12 +77,12 @@ CD2DBrushProperties(
  `_transform`  
  要套用到筆刷的轉換  
   
-##  <a name="commoninit"></a>CD2DBrushProperties::CommonInit  
+##  <a name="commoninit"></a>  CD2DBrushProperties::CommonInit  
  初始化物件  
   
 ```  
 void CommonInit();
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

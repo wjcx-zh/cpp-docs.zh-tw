@@ -1,13 +1,10 @@
 ---
-title: "滑桿控制項樣式 |Microsoft 文件"
-ms.custom: 
+title: 滑桿控制項樣式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747f5d55821c6911e80087ebbad65b2169e6fc49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fa099e050bd460756ff9e2584d37f9e628293f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-control-styles"></a>滑桿控制項樣式
 滑桿控制項 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 可以具有垂直或水平方向。 它們可以在其中一側具有刻度標記，或兩側皆有或兩側皆沒有。 它們也可以用來指定連續值的範圍。 這些屬性是藉由使用滑桿控制樣式來控制，您在建立滑桿控制項時會指定該樣式。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  根據預設，滑桿控制項的滑桿長度會隨著選取範圍而變更。 如果滑桿控制項具有**TBS_FIXEDLENGTH**樣式，滑桿的長度會保持相同即使選取範圍已變更。 滑桿控制項具有**TBS_NOTHUMB**樣式不包含滑桿。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CSliderCtrl](../mfc/using-csliderctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項精靈 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.overview
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - MFC ActiveX Control Wizard
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82e562ceb73da2b103360ab9607cecbbe9f1da02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45af43a98244e90f52075817fc9e17a905cbf065
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈
 ActiveX 控制項是特定類型的[automation 伺服程式](../../mfc/automation-servers.md); 它是可重複使用的元件。 裝載 ActiveX 控制項的應用程式是[自動化用戶端](../../mfc/automation-clients.md)該控制項。 如果您的目標是建立可重複使用元件，然後使用這個精靈來建立您的控制項。 請參閱[MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)如需詳細資訊。  
@@ -69,9 +64,9 @@ ActiveX 控制項是特定類型的[automation 伺服程式](../../mfc/automatio
   
 -   專案會包含在控制項類別和屬性頁類別，根據專案的名稱。 您可以編輯您的專案和檔案名稱的名稱上[控制項名稱](../../mfc/reference/control-names-mfc-activex-control-wizard.md)頁面。  
   
--   控制項沒有現有的 Windows 控制項為基礎，啟動時，它會變成可見，具有使用者介面，並包含**有關**] 對話方塊。 您可以變更這些預設設定上[控制設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)頁面。  
+-   控制項沒有現有的 Windows 控制項為基礎，啟動時，它會變成可見，具有使用者介面，並包含**有關** 對話方塊。 您可以變更這些預設設定上[控制設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)頁面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立和管理 Visual C++ 專案](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [概念](../../atl/active-template-library-atl-concepts.md)

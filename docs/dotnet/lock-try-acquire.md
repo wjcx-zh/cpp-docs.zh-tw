@@ -2,11 +2,8 @@
 title: lock::try_acquire |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - try_acquire
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::try_acquire
 ms.assetid: ef0649a9-e611-4495-84bd-2784533221d9
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da2372f513d9799cfddbebeefa7e9160d1a6b135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25b5ec1ab7bb5c429538f312ee3b598d3d1d83ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 取得等待指定的時間量，且傳回物件的鎖定`bool`回報成功的擷取，而不是擲回例外狀況。  
@@ -51,7 +46,7 @@ bool try_acquire(
  逾時值以毫秒為單位，或做為<xref:System.TimeSpan>。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果已取得鎖定，`false`否則。  
+ `true` 如果已取得鎖定，`false`否則。  
   
 ## <a name="remarks"></a>備註  
  如果已取得鎖定，此函式沒有任何作用。  
@@ -150,6 +145,6 @@ All threads completed.
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [lock 成員](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

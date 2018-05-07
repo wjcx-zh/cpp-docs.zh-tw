@@ -2,12 +2,9 @@
 title: 使用文件和檢視 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - views [C++], MFC
 - documents [C++], MFC
 ms.assetid: 349b142d-1c5a-4b99-9de4-241e41d3d2f1
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5558e106ead5b56e982c6280fecc8a8418b3ebc6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71750507d6b3c6cf14a721971d809347f8adfd3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-documents-and-views"></a>使用文件和檢視
 Microsoft Foundation Classes (MFC) 程式庫會依賴許多其功能的文件/檢視架構。 一般來說，文件會儲存您的資料，並檢視顯示在框架視窗的工作區中，並管理使用者與資料互動。 檢視會與取得及更新資料的文件通訊。 您可以使用資料庫類別的架構，或未安裝。  
@@ -38,5 +33,5 @@ Microsoft Foundation Classes (MFC) 程式庫會依賴許多其功能的文件/�
   
  您也可以使用資料庫類別，而不需要使用完整的文件/檢視架構。 如需詳細資訊，請參閱[MFC： 使用資料庫類別不具文件和檢視表](../../data/mfc-using-database-classes-without-documents-and-views.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)

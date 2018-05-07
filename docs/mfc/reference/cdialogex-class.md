@@ -2,11 +2,8 @@
 title: CDialogEx 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogEx
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22e258c8306eab1f55fa94f875dde5b68256c71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogex-class"></a>CDialogEx 類別
 `CDialogEx` 類別會指定對話方塊的背景影像和背景色彩。  
@@ -79,7 +74,7 @@ class CDialogEx : public CDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
  建構 `CDialogEx` 物件。  
   
 ```  
@@ -110,7 +105,7 @@ CDialogEx(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
  設定對話方塊的背景色彩。  
   
 ```  
@@ -124,11 +119,11 @@ void SetBackgroundColor(
  RGB 色彩值。  
   
  [輸入] `bRepaint`  
- `TRUE`若要立即更新畫面。否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要立即更新畫面。否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
  設定對話方塊的背景影像。  
   
 ```  
@@ -156,10 +151,10 @@ BOOL SetBackgroundImage(
  其中一個`CDialogEx::BackgroundLocation`指定影像位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 預設值是 BACKGR_TILE。  
   
  [輸入] `bAutoDestroy`  
- `TRUE`若要自動損毀的背景影像。否則， `FALSE`。  
+ `TRUE` 若要自動損毀的背景影像。否則， `FALSE`。  
   
  [輸入] `bRepaint`  
- `TRUE`若要立即重繪對話方塊中。否則， `FALSE`。  
+ `TRUE` 若要立即重繪對話方塊中。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  在第二個方法多載的語法，`TRUE`方法是否成功，否則`FALSE`。  
@@ -167,7 +162,7 @@ BOOL SetBackgroundImage(
 ### <a name="remarks"></a>備註  
  您指定的映像不會延伸以納入對話方塊用戶端區域。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)   

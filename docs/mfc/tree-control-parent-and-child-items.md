@@ -1,13 +1,10 @@
 ---
-title: "樹狀目錄控制項的父和子項目 |Microsoft 文件"
-ms.custom: 
+title: 樹狀目錄控制項的父和子項目 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], parent and child items
 - tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feaf59932da66be2bf269316c7ee9587d4037b3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 260cbf640f6c57e4b145d01e8f883025a4dc6507
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-parent-and-child-items"></a>樹狀目錄控制項的父和子項目
 樹狀結構控制項中的任何項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 可以有子項目，稱為子項目，與它相關聯的清單。 有一個或多個子項目的項目稱為父項目。 子項目會在其父項目下方以縮排顯示，表示其附屬於父代。 沒有父代的項目會位於階層架構的頂端並稱為根項目。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  當子項目清單展開時，它會以相對於父項目的位置進行縮排。 您可以使用來設定縮排數量[SetIndent](../mfc/reference/ctreectrl-class.md#setindent)成員函式或擷取所使用的目前數量[GetIndent](../mfc/reference/ctreectrl-class.md#getindent)成員函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

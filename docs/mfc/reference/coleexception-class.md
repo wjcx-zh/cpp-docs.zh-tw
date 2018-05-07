@@ -1,12 +1,9 @@
 ---
-title: "COleException 類別 |Microsoft 文件"
-ms.custom: 
+title: COleException 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e895e893c6032a8f8d7db0549f872c82cd0d9b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46f554e375e8c0185e8c2b75c81eeae5ee615c51
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleexception-class"></a>COleException 類別
 表示與 OLE 作業相關的例外狀況。  
@@ -71,7 +66,7 @@ class COleException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="m_sc"></a>COleException::m_sc  
+##  <a name="m_sc"></a>  COleException::m_sc  
  此資料成員包含指出例外狀況的原因之 OLE 狀態碼。  
   
 ```  
@@ -86,7 +81,7 @@ SCODE m_sc;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#22](../../mfc/codesnippet/cpp/coleexception-class_1.cpp)]  
   
-##  <a name="process"></a>COleException::Process  
+##  <a name="process"></a>  COleException::Process  
  呼叫**程序**成員函式以轉譯 OLE 狀態碼到攔截的例外狀況。  
   
 ```  
@@ -110,7 +105,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
 ### <a name="example"></a>範例  
   請參閱範例的[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)   
  [CException 類別](../../mfc/reference/cexception-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

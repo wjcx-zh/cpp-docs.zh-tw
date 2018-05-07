@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>連結器選項
 
@@ -116,6 +116,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|使用替代位置儲存 PDB 檔。|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|建立沒有專用符號的程式資料庫 (PDB) 檔。|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|指定 .pgd 檔用於特性指引最佳化。|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**過時**建立具備執行緒安全 PGO 檢測建置。|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|產生可與效能工具分析工具搭配使用的輸出檔。|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|在 .exe 標頭中設定總和檢查。|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|指定映像檔將包含安全例外狀況處理常式的表格。|
@@ -127,6 +128,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|指定連結器產生類型程式庫的資源 ID。|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|指定 .tlb 檔案和其他 MIDL 輸出檔的名稱。|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|建立專門設計用來在終端伺服器下執行的應用程式。|
+|[/USEPROFILE](../../build/reference/useprofile.md)|使用特性指引最佳化定型資料來建立最佳化的映像。|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|列印連結器進度訊息。|
 |[/VERSION](../../build/reference/version-version-information.md)|指派版本號碼。|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|包含從指定的靜態程式庫的每個物件檔案。|

@@ -1,13 +1,10 @@
 ---
-title: "Interop （c + +） 的效能考量 |Microsoft 文件"
-ms.custom: 
+title: Interop （c + +） 的效能考量 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 25d098ebb52809a36735f71eecedcc4c2a186225
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9223c52e4ef831a9a1ff657db1a0d7859dd6ce6c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="performance-considerations-for-interop-c"></a>Interop 的效能考量 (C++)
 本主題提供指導方針，以減少對執行階段效能的 managed/unmanaged interop 轉換效果。  
@@ -65,5 +60,5 @@ ms.lasthandoff: 12/21/2017
   
  如需 c + + Interop 的詳細資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)

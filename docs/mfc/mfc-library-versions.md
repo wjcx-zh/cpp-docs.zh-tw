@@ -1,13 +1,10 @@
 ---
-title: "MFC 程式庫版本 |Microsoft 文件"
-ms.custom: 
+title: MFC 程式庫版本 |Microsoft 文件
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - libraries [MFC], versions
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-library-versions"></a>MFC 程式庫版本
 
@@ -98,7 +94,7 @@ MFC 專案使用的前置處理器符號 **\_UNICODE**表示 utf-16 寬字元 Un
 
 Mfc 靜態程式庫使用下列命名慣例。 程式庫名稱的格式如下
 
-> *u*AFX*c**d*.LIB
+> *u*AFX*c * * d*。LIB
 
 其中顯示為斜體小寫的字母是指定名稱的預留位置，其意義如下表所示：
 
@@ -114,7 +110,7 @@ Mfc 靜態程式庫使用下列命名慣例。 程式庫名稱的格式如下
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 靜態連結程式庫，發行版本|
 |NAFXCWD.LIB|MFC 靜態連結程式庫，偵錯版本|
-|UAFXCW.LIB|MFC 靜態連結程式庫 (支援 Unicode)，發行版本|
+|UAFXCW。LIB|MFC 靜態連結程式庫 (支援 Unicode)，發行版本|
 |UAFXCWD.LIB|MFC 靜態連結程式庫 (支援 Unicode)，偵錯版本|
 |AFXNMCD.LIB|不含 MFC 對話方塊控制項，發行版本的 MFC 靜態連結程式庫|
 |AFXNMCDD.LIB|不含 MFC 對話方塊控制項，偵錯版本的 MFC 靜態連結程式庫|
@@ -130,11 +126,11 @@ MFC Dll 具有*版本*數字，指出二進位碼相容性。 使用具有相同
 |DLL|描述|
 |---------|-----------------|
 |MFC*version*.DLL|MFC DLL、 ANSI 或 MBCS 發行版本|
-|MFC*version*U.DLL|MFC DLL，Unicode 發行版本|
+|MFC*版本*U.DLL|MFC DLL，Unicode 發行版本|
 |MFC*version*D.DLL|MFC DLL、 ANSI 或 MBCS 偵錯版本|
 |MFC*version*UD.DLL|MFC DLL，Unicode 偵錯版本|
 |MFCM*version*.DLL|使用 Windows Form 控制項的 MFC DLL ANSI 或 MBCS 發行版本|
-|MFCM*version*U.DLL|使用 Windows Form 控制項，Unicode 發行版本的 MFC DLL|
+|MFCM*版本*U.DLL|使用 Windows Form 控制項，Unicode 發行版本的 MFC DLL|
 |MFCM*version*D.DLL|使用 Windows Form 控制項的 MFC DLL ANSI 或 MBCS 偵錯版本|
 |MFCM*version*UD.DLL|使用 Windows Form 控制項，Unicode 偵錯版本的 MFC DLL|
 

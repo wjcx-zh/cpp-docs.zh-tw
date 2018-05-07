@@ -1,13 +1,10 @@
 ---
-title: "使用框架視窗 |Microsoft 文件"
-ms.custom: 
+title: 使用框架視窗 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54a232b246665a1ef82fb48166eed2aff0fd9db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 636762ae7e1b1d1a5dd109bb71b98c81b51fe50b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-frame-windows"></a>使用框架視窗
 MFC 架構會建立文件框架視窗，和其檢視與文件 — 實作的新功能和開啟檔案 功能表命令的一部分。 架構會為您執行大部分的框架視窗的工作，因為您播放的小型角色建立、 使用和終結這些視窗中。 您可以不過，明確地建立自己的框架視窗和子視窗的特殊用途。  
@@ -54,6 +49,6 @@ MFC 架構會建立文件框架視窗，和其檢視與文件 — 實作的新�
   
 -   [列印和預覽列印中框架視窗的角色](../mfc/orchestrating-other-window-actions.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [框架視窗](../mfc/frame-windows.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "說明功能表合併 |Microsoft 文件"
-ms.custom: 
+title: 說明功能表合併 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce8d5212f78546c08734aed6fd7e236fa4446007
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-menu-merging"></a>說明功能表合併
 物件在容器內作用時，功能表合併通訊協定 OLE 文件可讓物件完全控制**協助**功能表。 因此，除非使用者停用該物件，否則容器的說明主題無法使用。 現用文件內含項目結構會在就地功能表合併的規則展開，讓容器和作用中現用文件共用功能表。 新規則只是額外的慣例，內容是關於哪些元件擁有功能表的哪些部分，以及共用功能表如何建構。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  物件接著會執行其一般功能表插入程式碼，但插入之前其**協助**功能表上，它會檢查的第六個項目**OLEMENUGROUPWIDTHS**陣列。 如果值為 1，而最後一個功能表的名稱是**協助**（或適當的當地語系化字串），然後將物件插入其**協助**做為容器的子功能表的功能表**協助**功能表。  
   
- 然後將物件集的第六個項目**OLEMENUGROUPWIDTHS**為零和第五個項目遞增一。 這會讓 OLE 知道**協助**功能表屬於容器，而且對應至該功能表 （和及其子功能表） 的功能表訊息應路由至容器。 然後，它是容器的責任是轉送`WM_INITMENUPOPUP`， **WM_SELECT**， **WM_COMMAND**，和屬於物件的部分的其他功能表相關訊息**協助**功能表。 這會透過使用`WM_INITMENU`清除旗標，告知使用者是否巡覽至物件的容器**協助**功能表。 容器此時`WM_MENUSELECT`進入或在任何項目**協助**容器沒有自行新增的功能表。 項目，則表示使用者已巡覽至物件功能表，讓容器設定 「 在物件說明功能表中 」 旗標，並使用該旗標的狀態轉送任何`WM_MENUSELECT`， `WM_INITMENUPOPUP`，和**WM_COMMAND**訊息，至少為[物件] 視窗中。 (在結束時，容器清會除旗標，然後自行處理這些相同訊息)。容器應會使用從物件傳回的視窗**ioleinplaceactiveobejct::**函式做為這些訊息的目的地。  
+ 然後將物件集的第六個項目**OLEMENUGROUPWIDTHS**為零和第五個項目遞增一。 這會讓 OLE 知道**協助**功能表屬於容器，而且對應至該功能表 （和及其子功能表） 的功能表訊息應路由至容器。 然後，它是容器的責任是轉送`WM_INITMENUPOPUP`， **WM_SELECT**， **WM_COMMAND**，和屬於物件的部分的其他功能表相關訊息**協助**功能表。 這會透過使用`WM_INITMENU`清除旗標，告知使用者是否巡覽至物件的容器**協助**功能表。 容器此時`WM_MENUSELECT`進入或在任何項目**協助**容器沒有自行新增的功能表。 項目，則表示使用者已巡覽至物件功能表，讓容器設定 「 在物件說明功能表中 」 旗標，並使用該旗標的狀態轉送任何`WM_MENUSELECT`， `WM_INITMENUPOPUP`，和**WM_COMMAND**訊息，至少為[物件] 視窗中。 (在結束時，容器清會除旗標，然後自行處理這些相同訊息)。容器應會使用從物件傳回的視窗**ioleinplaceactiveobejct::** 函式做為這些訊息的目的地。  
   
  如果物件會偵測到的第六個項目中的零**OLEMENUGROUPWIDTHS**，它就會根據標準 OLE 文件規則繼續。 此程序處理參與容器**協助**以及未合併的功能表。  
   
@@ -62,6 +57,6 @@ ms.lasthandoff: 12/21/2017
   
  最後，需要反組譯功能表時，物件移除插入**協助**功能表除了移除其他插入的功能表。 當容器移除其功能表時，將會移除其**協助**除了其插入的其他功能表的功能表。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [主動式文件容器](../mfc/active-document-containers.md)
 

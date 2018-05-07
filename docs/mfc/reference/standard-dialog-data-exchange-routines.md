@@ -1,29 +1,24 @@
 ---
-title: "標準對話方塊資料交換常式 |Microsoft 文件"
-ms.custom: 
+title: 標準對話方塊資料交換常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6c79a96439605bcf9ab670c1f75dda2d50169f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>標準對話方塊資料交換常式
 本主題列出用於通用的 MFC 對話方塊控制項的標準對話方塊資料交換 (DDX) 常式。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 |[DDX_Slider](#ddx_slider)|初始化或擷取滑桿控制項的捲動方塊的目前位置。|  
 |[DDX_Text](#ddx_text)|初始化或擷取的編輯控制項的目前值。|  
   
-##  <a name="ddx_cbindex"></a>DDX_CBIndex  
+##  <a name="ddx_cbindex"></a>  DDX_CBIndex  
  `DDX_CBIndex`函式會管理的傳輸`int`在對話方塊中，下拉式方塊控制項之間的資料形成檢視或控制項檢視物件和`int`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -69,7 +64,7 @@ void AFXAPI DDX_CBIndex(
  `nIDC`  
  下拉式方塊控制項的控制項屬性相關聯的資源識別碼。  
   
- *索引*  
+ *index*  
  對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數參考。  
   
 ### <a name="remarks"></a>備註  
@@ -80,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_cbstring"></a>DDX_CBString  
+##  <a name="ddx_cbstring"></a>  DDX_CBString  
  `DDX_CBString`函式會管理的傳輸`CString`的下拉式方塊控制項在對話方塊中，編輯控制項之間的資料形成檢視或控制項檢視物件和`CString`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -111,7 +106,7 @@ void AFXAPI DDX_CBString(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact  
+##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact  
  `DDX_CBStringExact`函式會管理的傳輸`CString`的下拉式方塊控制項在對話方塊中，編輯控制項之間的資料形成檢視或控制項檢視物件和`CString`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -142,7 +137,7 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_check"></a>DDX_Check  
+##  <a name="ddx_check"></a>  DDX_Check  
  `DDX_Check`函式會管理的傳輸`int`在對話方塊中，核取方塊控制項之間的資料形成檢視或控制項檢視物件和`int`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -170,7 +165,7 @@ void AFXAPI DDX_Check(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_control"></a>DDX_Control  
+##  <a name="ddx_control"></a>  DDX_Control  
  `DDX_Control`函式的子類別所指定的控制項`nIDC`、 對話方塊、 表單檢視或控制項檢視物件。  
   
 ```  
@@ -198,7 +193,7 @@ void AFXAPI DDX_Control(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl  
+##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl  
  `DDX_DateTimeCtrl`函式會管理之間的日期和時間選擇器控制項的日期和/或時間資料傳輸 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) 對話方塊方塊或表單檢視物件，也可能[CTime](../../atl-mfc-shared/reference/ctime-class.md)或[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)對話方塊方塊或表單檢視物件的資料成員。  
   
 ```  
@@ -241,7 +236,7 @@ void AFXAPI DDX_DateTimeCtrl(
    
 
  
-## <a name="ddx_managedcontrol"></a>DDX_ManagedControl
+## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
 建立.NET 控制項比對控制項的資源 id。  
    
 ### <a name="syntax"></a>語法  
@@ -263,20 +258,20 @@ void DDX_ManagedControl(
  若要參考[CWinFormsControl 類別](cwinformscontrol-class.md)物件。  
    
 ### <a name="remarks"></a>備註  
- `DDX_ManagedControl`呼叫[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)若要建立的比對資源的控制項 id。 使用`DDX_ManagedControl`建立控制項中的資源識別碼從[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)。 資料交換，您不需要使用 Windows Form 控制項的 DDX/DDV 函式。  
+ `DDX_ManagedControl` 呼叫[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)若要建立的比對資源的控制項 id。 使用`DDX_ManagedControl`建立控制項中的資源識別碼從[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)。 資料交換，您不需要使用 Windows Form 控制項的 DDX/DDV 函式。  
   
  如需詳細資訊，請參閱[How to： 使用 Windows Form 執行 DDX/DDV 資料繫](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)。  
    
 ### <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)   
  [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
  
 
   
-##  <a name="ddx_ipaddress"></a>DDX_IPAddress  
+##  <a name="ddx_ipaddress"></a>  DDX_IPAddress  
  `DDX_IPAddress`函式會管理 IP 位址控制項和控制項檢視物件的資料成員之間的資料傳輸。  
   
 ```  
@@ -313,7 +308,7 @@ void AFXAPI DDX_IPAddress(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_lbindex"></a>DDX_LBIndex  
+##  <a name="ddx_lbindex"></a>  DDX_LBIndex  
  `DDX_LBIndex`函式會管理的傳輸`int`在對話方塊中，清單方塊控制項之間的資料形成檢視或控制項檢視物件和`int`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -330,7 +325,7 @@ void AFXAPI DDX_LBIndex(
  `nIDC`  
  清單方塊控制項的控制項屬性相關聯的資源識別碼。  
   
- *索引*  
+ *index*  
  對話方塊、 表單檢視中或用來交換資料的控制項檢視物件的成員變數參考。  
   
 ### <a name="remarks"></a>備註  
@@ -341,7 +336,7 @@ void AFXAPI DDX_LBIndex(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_lbstring"></a>DDX_LBString  
+##  <a name="ddx_lbstring"></a>  DDX_LBString  
  `DDX_LBString`函式會管理的傳輸`CString`在對話方塊中，清單方塊控制項之間的資料形成檢視或控制項檢視物件和`CString`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -374,7 +369,7 @@ void AFXAPI DDX_LBString(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact  
+##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact  
  `DDX_CBStringExact`函式會管理的傳輸`CString`在對話方塊中，清單方塊控制項的編輯控制項之間的資料形成檢視或控制項檢視物件和`CString`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -407,7 +402,7 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl  
+##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl  
  `DDX_MonthCalCtrl`函式會管理月曆控制項之間的日期資料傳輸 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) 對話方塊、 表單檢視或控制項檢視物件，也可能[CTime](../../atl-mfc-shared/reference/ctime-class.md)或[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -444,7 +439,7 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_radio"></a>DDX_Radio  
+##  <a name="ddx_radio"></a>  DDX_Radio  
  `DDX_Radio`函式會管理的傳輸`int`選項控制項在對話方塊中，群組之間的資料形成檢視或控制項檢視物件和`int`對話方塊、 表單檢視或控制項檢視物件的資料成員。 值`int`資料成員由決定根據哪一個選項按鈕群組中的已選取。  
   
 ```  
@@ -474,7 +469,7 @@ void AFXAPI DDX_Radio(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_scroll"></a>DDX_Scroll  
+##  <a name="ddx_scroll"></a>  DDX_Scroll  
  `DDX_Scroll`函式會管理的傳輸`int`之間捲軸控制項在對話方塊中，資料表單檢視或控制項檢視物件和`int`對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -502,7 +497,7 @@ void AFXAPI DDX_Scroll(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_slider"></a>DDX_Slider  
+##  <a name="ddx_slider"></a>  DDX_Slider  
  `DDX_Slider`函式會管理的傳輸`int`對話方塊或表單檢視中的滑桿控制項之間的資料和`int`對話方塊方塊或表單檢視物件的資料成員。  
   
 ```  
@@ -530,7 +525,7 @@ void AFXAPI DDX_Slider(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddx_text"></a>DDX_Text  
+##  <a name="ddx_text"></a>  DDX_Text  
  `DDX_Text`函式會管理的傳輸`int`， **UINT**，**長**， `DWORD`， `CString`， **float**，或**double**在對話方塊中，編輯控制項之間的資料表單檢視，或控制項檢視和[CString](../../atl-mfc-shared/reference/cstringt-class.md)對話方塊、 表單檢視或控制項檢視物件的資料成員。  
   
 ```  
@@ -606,6 +601,6 @@ void AFXAPI DDX_Text(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [標準對話方塊資料驗證常式](../../mfc/reference/standard-dialog-data-validation-routines.md)   
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

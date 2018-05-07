@@ -1,12 +1,9 @@
 ---
-title: "CStatusBarCtrl 類別 |Microsoft 文件"
-ms.custom: 
+title: CStatusBarCtrl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatusBarCtrl
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ee095257ddf3fd322a7e42e3f6fff6ac7cec76a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f34711389478997b3e2c43cb2d812b1b961df714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 類別
 提供 Windows 通用狀態列控制項的功能。  
@@ -124,7 +119,7 @@ class CStatusBarCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="create"></a>CStatusBarCtrl::Create  
+##  <a name="create"></a>  CStatusBarCtrl::Create  
  建立狀態列控制項，並將它附加至`CStatusBarCtrl`物件。  
   
 ```  
@@ -161,7 +156,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CStatusBarCtrl::CreateEx  
+##  <a name="createex"></a>  CStatusBarCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CStatusBarCtrl`物件。  
   
 ```  
@@ -195,14 +190,14 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
-##  <a name="cstatusbarctrl"></a>CStatusBarCtrl::CStatusBarCtrl  
+##  <a name="cstatusbarctrl"></a>  CStatusBarCtrl::CStatusBarCtrl  
  建構 `CStatusBarCtrl` 物件。  
   
 ```  
 CStatusBarCtrl();
 ```  
   
-##  <a name="drawitem"></a>CStatusBarCtrl::DrawItem  
+##  <a name="drawitem"></a>  CStatusBarCtrl::DrawItem  
  當主控描繪狀態列控制項會變更的視覺外觀時，架構呼叫。  
   
 ```  
@@ -220,7 +215,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前此成員函式會結束。  
   
-##  <a name="getborders"></a>CStatusBarCtrl::GetBorders  
+##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders  
  擷取目前狀態列控制項的寬度水平及垂直框線和矩形之間的間距。  
   
 ```  
@@ -254,7 +249,7 @@ BOOL GetBorders(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]  
   
-##  <a name="geticon"></a>CStatusBarCtrl::GetIcon  
+##  <a name="geticon"></a>  CStatusBarCtrl::GetIcon  
  擷取目前狀態列控制項中的組件 （也稱為窗格） 的圖示。  
   
 ```  
@@ -285,7 +280,7 @@ HICON GetIcon(int iPart) const;
   
  [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]  
   
-##  <a name="getparts"></a>CStatusBarCtrl::GetParts  
+##  <a name="getparts"></a>  CStatusBarCtrl::GetParts  
  擷取狀態列控制項中的組件的計數。  
   
 ```  
@@ -310,7 +305,7 @@ int GetParts(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]  
   
-##  <a name="getrect"></a>CStatusBarCtrl::GetRect  
+##  <a name="getrect"></a>  CStatusBarCtrl::GetRect  
  擷取狀態列控制項中的組件的週框矩形。  
   
 ```  
@@ -332,7 +327,7 @@ BOOL GetRect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]  
   
-##  <a name="gettext"></a>Cstatusbarctrl:: Gettext  
+##  <a name="gettext"></a>  Cstatusbarctrl:: Gettext  
  狀態列控制項的指定部分從擷取的文字。  
   
 ```  
@@ -358,11 +353,11 @@ int GetText(
   
 - **0**帶有框線，看來會低於狀態列的平面繪製文字。  
   
-- `SBT_NOBORDERS`沒有框線繪製文字。  
+- `SBT_NOBORDERS` 沒有框線繪製文字。  
   
-- `SBT_POPOUT`使用顯示高於狀態列面板框線繪製文字。  
+- `SBT_POPOUT` 使用顯示高於狀態列面板框線繪製文字。  
   
-- `SBT_OWNERDRAW`如果文字具有`SBT_OWNERDRAW`繪圖類型，`pType`接收此訊息，並傳回的文字，而不是長度和作業的類型與關聯的 32 位元值。  
+- `SBT_OWNERDRAW` 如果文字具有`SBT_OWNERDRAW`繪圖類型，`pType`接收此訊息，並傳回的文字，而不是長度和作業的類型與關聯的 32 位元值。  
   
 ### <a name="return-value"></a>傳回值  
  長度，以字元為單位的文字或[CString](../../atl-mfc-shared/reference/cstringt-class.md)包含目前的文字。  
@@ -370,7 +365,7 @@ int GetText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]  
   
-##  <a name="gettextlength"></a>Cstatusbarctrl:: Gettextlength  
+##  <a name="gettextlength"></a>  Cstatusbarctrl:: Gettextlength  
  擷取的長度，以字元為單位，從指定的組件的狀態列控制項的文字。  
   
 ```  
@@ -388,11 +383,11 @@ int GetTextLength(
   
 - **0**帶有框線，看來會低於狀態列的平面繪製文字。  
   
-- `SBT_NOBORDERS`沒有框線繪製文字。  
+- `SBT_NOBORDERS` 沒有框線繪製文字。  
   
-- `SBT_OWNERDRAW`繪製文字是由父視窗。  
+- `SBT_OWNERDRAW` 繪製文字是由父視窗。  
   
-- `SBT_POPOUT`使用顯示高於狀態列面板框線繪製文字。  
+- `SBT_POPOUT` 使用顯示高於狀態列面板框線繪製文字。  
   
 ### <a name="return-value"></a>傳回值  
  以字元為單位，文字的長度。  
@@ -400,7 +395,7 @@ int GetTextLength(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]  
   
-##  <a name="gettiptext"></a>Cstatusbarctrl:: Gettiptext  
+##  <a name="gettiptext"></a>  Cstatusbarctrl:: Gettiptext  
  擷取在狀態列中顯示窗格的工具提示文字。  
   
 ```  
@@ -420,7 +415,7 @@ CString GetTipText(int nPane) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
   
-##  <a name="issimple"></a>CStatusBarCtrl::IsSimple  
+##  <a name="issimple"></a>  CStatusBarCtrl::IsSimple  
  檢查以判斷它是否在簡單模式下狀態視窗控制項。  
   
 ```  
@@ -433,7 +428,7 @@ BOOL IsSimple() const;
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753)、 Windows SDK 中所述。  
   
-##  <a name="setbkcolor"></a>CStatusBarCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
  在狀態列中設定的背景色彩。  
   
 ```  
@@ -453,7 +448,7 @@ COLORREF SetBkColor(COLORREF cr);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
   
-##  <a name="seticon"></a>CStatusBarCtrl::SetIcon  
+##  <a name="seticon"></a>  CStatusBarCtrl::SetIcon  
  在狀態列中設定一個窗格的圖示。  
   
 ```  
@@ -464,7 +459,7 @@ BOOL SetIcon(
   
 ### <a name="parameters"></a>參數  
  `nPane`  
- 將會收到圖示] 窗格的以零為起始的索引。 如果這個參數是-1，[狀態] 列會假設是簡單的狀態列。  
+ 將會收到圖示 窗格的以零為起始的索引。 如果這個參數是-1，[狀態] 列會假設是簡單的狀態列。  
   
  `hIcon`  
  設定圖示的控制代碼。 如果此值為**NULL**，圖示會移除從組件。  
@@ -478,7 +473,7 @@ BOOL SetIcon(
 ### <a name="example"></a>範例  
   請參閱範例的[CStatusBarCtrl::SetBkColor](#setbkcolor)。  
   
-##  <a name="setminheight"></a>CStatusBarCtrl::SetMinHeight  
+##  <a name="setminheight"></a>  CStatusBarCtrl::SetMinHeight  
  設定狀態的最小高度軸控制項的繪圖區域。  
   
 ```  
@@ -495,7 +490,7 @@ void SetMinHeight(int nMin);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
   
-##  <a name="setparts"></a>CStatusBarCtrl::SetParts  
+##  <a name="setparts"></a>  CStatusBarCtrl::SetParts  
  在狀態列控制項與每個部分的右邊緣的座標中設定之部分的數目。  
   
 ```  
@@ -517,7 +512,7 @@ BOOL SetParts(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]  
   
-##  <a name="setsimple"></a>CStatusBarCtrl::SetSimple  
+##  <a name="setsimple"></a>  CStatusBarCtrl::SetSimple  
  指定狀態列控制項是否會顯示簡單的文字或顯示先前呼叫所設定的所有控制項組件[SetParts](#setparts)。  
   
 ```  
@@ -534,7 +529,7 @@ BOOL SetSimple(BOOL bSimple = TRUE);
 ### <a name="remarks"></a>備註  
  如果您的應用程式會從非簡單變更狀態列控制項為 simple 時，或反之亦然，系統會立即重新繪製控制項。  
   
-##  <a name="settext"></a>CStatusBarCtrl::SetText  
+##  <a name="settext"></a>  CStatusBarCtrl::SetText  
  在狀態列控制項的指定部分設定文字。  
   
 ```  
@@ -563,7 +558,7 @@ BOOL SetText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
   
-##  <a name="settiptext"></a>Cstatusbarctrl:: Settiptext  
+##  <a name="settiptext"></a>  Cstatusbarctrl:: Settiptext  
  設定狀態列窗格的工具提示文字。  
   
 ```  
@@ -585,7 +580,7 @@ void SetTipText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CToolBarCtrl 類別](../../mfc/reference/ctoolbarctrl-class.md)

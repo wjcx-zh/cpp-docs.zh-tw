@@ -1,12 +1,9 @@
 ---
-title: "CPrintDialogEx 類別 |Microsoft 文件"
-ms.custom: 
+title: CPrintDialogEx 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 類別
 封裝 Windows 列印屬性工作表提供的服務。  
@@ -214,7 +209,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>備註  
  建立印表機裝置內容 (DC) 從[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)結構。  
   
- `GetDefaults`不會顯示列印屬性工作表。 相反地，它會設定**hDevNames**和**hDevMode**成員[m_pdex](#m_pdex)的控制代碼[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)會初始化為系統預設的印表機的結構。 同時**hDevNames**和**hDevMode**必須是 NULL，或`GetDefaults`失敗。  
+ `GetDefaults` 不會顯示列印屬性工作表。 相反地，它會設定**hDevNames**和**hDevMode**成員[m_pdex](#m_pdex)的控制代碼[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)和[DEVNAMES](../../mfc/reference/devnames-structure.md)會初始化為系統預設的印表機的結構。 同時**hDevNames**和**hDevMode**必須是 NULL，或`GetDefaults`失敗。  
   
  如果**PD_RETURNDC**設定旗標，此函式不會只傳回**hDevNames**和**hDevMode** (位於**m_pdex.hDevNames**和**m_pdex.hDevMode**) 給呼叫者，但也會傳回的印表機 DC **m_pdex.hDC**。 刪除印表機 DC 並呼叫 Windows 呼叫端負責[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579)函式上的控制代碼，當您完成`CPrintDialogEx`物件。  
   
@@ -342,7 +337,7 @@ BOOL PrintSelection() const;
 ### <a name="return-value"></a>傳回值  
  **TRUE**如果只有選取的項目列印，否則**FALSE**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CPrintInfo 結構](../../mfc/reference/cprintinfo-structure.md)

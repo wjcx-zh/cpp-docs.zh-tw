@@ -1,12 +1,9 @@
 ---
-title: "CRichEditCtrl 類別 |Microsoft 文件"
-ms.custom: 
+title: CRichEditCtrl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRichEditCtrl
@@ -161,17 +158,15 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03ef5135130590d142e9725e1d064b932cc7ff4d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: 0d18e1352e0d8ba74709e2f1a5626678e81729a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
 提供 Windows Rich Edit 控制項的功能。  
@@ -297,7 +292,7 @@ class CRichEditCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="canpaste"></a>CRichEditCtrl::CanPaste  
+##  <a name="canpaste"></a>  CRichEditCtrl::CanPaste  
  判斷 rich edit 控制項可以貼上指定的剪貼簿格式。  
   
 ```  
@@ -319,7 +314,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#1](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_1.cpp)]  
   
-##  <a name="canredo"></a>CRichEditCtrl::CanRedo  
+##  <a name="canredo"></a>  CRichEditCtrl::CanRedo  
  判斷是否重做佇列包含的任何動作。  
   
 ```  
@@ -334,7 +329,7 @@ BOOL CanRedo() const;
   
  如需詳細資訊，請參閱[EM_CANREDO](http://msdn.microsoft.com/library/windows/desktop/bb787995) Windows SDK 中。  
   
-##  <a name="canundo"></a>CRichEditCtrl::CanUndo  
+##  <a name="canundo"></a>  CRichEditCtrl::CanUndo  
  決定是否可以復原上次的編輯作業。  
   
 ```  
@@ -350,7 +345,7 @@ BOOL CanUndo() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#2](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_2.cpp)]  
   
-##  <a name="charfrompos"></a>CRichEditCtrl::CharFromPos  
+##  <a name="charfrompos"></a>  CRichEditCtrl::CharFromPos  
  擷取參數所指定的點處的字元的相關資訊`pt`。  
   
 ```  
@@ -369,7 +364,7 @@ int CharFromPos(CPoint pt) const;
   
  如需詳細資訊，請參閱[EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) Windows SDK 中。  
   
-##  <a name="clear"></a>CRichEditCtrl::Clear  
+##  <a name="clear"></a>  CRichEditCtrl::Clear  
  （清除） 會刪除目前選取範圍 （如果有的話） 中的 rich edit 控制項。  
   
 ```  
@@ -386,7 +381,7 @@ void Clear();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#3](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_3.cpp)]  
   
-##  <a name="copy"></a>CRichEditCtrl::Copy  
+##  <a name="copy"></a>  CRichEditCtrl::Copy  
  目前的選取範圍 （如果有的話） 會在複製 rich edit 控制項到剪貼簿。  
   
 ```  
@@ -399,7 +394,7 @@ void Copy();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#4](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_4.cpp)]  
   
-##  <a name="create"></a>CRichEditCtrl::Create  
+##  <a name="create"></a>  CRichEditCtrl::Create  
  建立 Windows rich edit 控制項，並將它與此相關聯`CRichEditCtrl`物件。  
   
 ```  
@@ -452,7 +447,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#5](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_5.cpp)]  
   
-##  <a name="createex"></a>CRichEditCtrl::CreateEx  
+##  <a name="createex"></a>  CRichEditCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CRichEditCtrl`物件。  
   
 ```  
@@ -486,7 +481,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是**建立**套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
-##  <a name="cricheditctrl"></a>CRichEditCtrl::CRichEditCtrl  
+##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl  
  建構 `CRichEditCtrl` 物件。  
   
 ```  
@@ -499,7 +494,7 @@ CRichEditCtrl();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#6](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_6.cpp)]  
   
-##  <a name="cut"></a>CRichEditCtrl::Cut  
+##  <a name="cut"></a>  CRichEditCtrl::Cut  
  刪除 （剪下） 中目前選取範圍 （如果有的話） 的豐富編輯控制項，而且將已刪除的文字複製到剪貼簿。  
   
 ```  
@@ -516,7 +511,7 @@ void Cut();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#7](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_7.cpp)]  
   
-##  <a name="displayband"></a>CRichEditCtrl::DisplayBand  
+##  <a name="displayband"></a>  CRichEditCtrl::DisplayBand  
  會顯示部分內容的 rich edit 控制項 （文字和 OLE 項目），如先前所格式化[FormatRange](#formatrange)。  
   
 ```  
@@ -538,7 +533,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="example"></a>範例  
   請參閱範例的[CRichEditCtrl::FormatRange](#formatrange)。  
   
-##  <a name="emptyundobuffer"></a>CRichEditCtrl::EmptyUndoBuffer  
+##  <a name="emptyundobuffer"></a>  CRichEditCtrl::EmptyUndoBuffer  
  （清除） 會重設此 rich edit 控制項的復原旗標。  
   
 ```  
@@ -555,7 +550,7 @@ void EmptyUndoBuffer();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#8](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_8.cpp)]  
   
-##  <a name="findtext"></a>CRichEditCtrl::FindText  
+##  <a name="findtext"></a>  CRichEditCtrl::FindText  
  尋找 rich edit 控制項中的文字。  
   
 ```  
@@ -582,7 +577,7 @@ long FindText(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#9](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_9.cpp)]  
   
-##  <a name="findwordbreak"></a>CRichEditCtrl::FindWordBreak  
+##  <a name="findwordbreak"></a>  CRichEditCtrl::FindWordBreak  
  之前或之後所指定的位置尋找下一個斷`nStart`。  
   
 ```  
@@ -604,7 +599,7 @@ DWORD FindWordBreak(
 ### <a name="remarks"></a>備註  
  您可以使用此成員函式來擷取字元的指定位置的相關資訊。  
   
-##  <a name="formatrange"></a>CRichEditCtrl::FormatRange  
+##  <a name="formatrange"></a>  CRichEditCtrl::FormatRange  
  格式化某個範圍的特定裝置的 rich edit 控制項中的文字。  
   
 ```  
@@ -631,7 +626,7 @@ long FormatRange(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#10](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_10.cpp)]  
   
-##  <a name="getcharpos"></a>CRichEditCtrl::GetCharPos  
+##  <a name="getcharpos"></a>  CRichEditCtrl::GetCharPos  
  取得指定的字元在這個位置 （左上角）`CRichEditCtrl`物件。  
   
 ```  
@@ -650,7 +645,7 @@ CPoint GetCharPos(long lChar) const;
   
  如需詳細資訊，請參閱[EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) Windows SDK 中。  
   
-##  <a name="getdefaultcharformat"></a>CRichEditCtrl::GetDefaultCharFormat  
+##  <a name="getdefaultcharformat"></a>  CRichEditCtrl::GetDefaultCharFormat  
  取得格式設定這個屬性的預設字元`CRichEditCtrl`物件。  
   
 ```  
@@ -672,7 +667,7 @@ DWORD GetDefaultCharFormat(CHARFORMAT& cf) const;  DWORD GetDefaultCharFormat(CH
 ### <a name="example"></a>範例  
   請參閱範例的[SetDefaultCharFormat](#setdefaultcharformat)。  
   
-##  <a name="geteventmask"></a>CRichEditCtrl::GetEventMask  
+##  <a name="geteventmask"></a>  CRichEditCtrl::GetEventMask  
  取得這個事件遮罩`CRichEditCtrl`物件。  
   
 ```  
@@ -690,7 +685,7 @@ long GetEventMask() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CRichEditCtrl::SetEventMask](#seteventmask)。  
   
-##  <a name="getfirstvisibleline"></a>CRichEditCtrl::GetFirstVisibleLine  
+##  <a name="getfirstvisibleline"></a>  CRichEditCtrl::GetFirstVisibleLine  
  決定在這個最上層的可見行`CRichEditCtrl`物件。  
   
 ```  
@@ -706,7 +701,7 @@ int GetFirstVisibleLine() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#11](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_11.cpp)]  
   
-##  <a name="getiricheditole"></a>CRichEditCtrl::GetIRichEditOle  
+##  <a name="getiricheditole"></a>  CRichEditCtrl::GetIRichEditOle  
  存取**IRichEditOle**這個介面`CRichEditCtrl`物件。  
   
 ```  
@@ -721,7 +716,7 @@ IRichEditOle* GetIRichEditOle() const;
   
  如需詳細資訊，請參閱[EM_GETOLEINTERFACE](http://msdn.microsoft.com/library/windows/desktop/bb788041)訊息和[IRichEditOle](http://msdn.microsoft.com/library/windows/desktop/bb774306) Windows SDK 中的介面。  
   
-##  <a name="getlimittext"></a>CRichEditCtrl::GetLimitText  
+##  <a name="getlimittext"></a>  CRichEditCtrl::GetLimitText  
  取得這個文字限制`CRichEditCtrl`物件。  
   
 ```  
@@ -739,7 +734,7 @@ long GetLimitText() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#12](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_12.cpp)]  
   
-##  <a name="getline"></a>CRichEditCtrl::GetLine  
+##  <a name="getline"></a>  CRichEditCtrl::GetLine  
  從這個擷取的文字行`CRichEditCtrl`物件。  
   
 ```  
@@ -777,7 +772,7 @@ int GetLine(
 ### <a name="example"></a>範例  
   請參閱範例的[GetLineCount](#getlinecount)。  
   
-##  <a name="getlinecount"></a>CRichEditCtrl::GetLineCount  
+##  <a name="getlinecount"></a>  CRichEditCtrl::GetLineCount  
  擷取中的總行數`CRichEditCtrl`物件。  
   
 ```  
@@ -793,7 +788,7 @@ int GetLineCount() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#13](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_13.cpp)]  
   
-##  <a name="getmodify"></a>CRichEditCtrl::GetModify  
+##  <a name="getmodify"></a>  CRichEditCtrl::GetModify  
  判斷這個內容`CRichEditCtrl`物件已經過修改。  
   
 ```  
@@ -811,7 +806,7 @@ BOOL GetModify() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#14](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_14.cpp)]  
   
-##  <a name="getoptions"></a>CRichEditCtrl::GetOptions  
+##  <a name="getoptions"></a>  CRichEditCtrl::GetOptions  
  擷取目前設定的 rich edit 控制項的選項。  
   
 ```  
@@ -821,7 +816,7 @@ UINT GetOptions() const;
 ### <a name="return-value"></a>傳回值  
  目前的選項旗標值的組合。 如需這些值的清單，請參閱*fOptions*中的參數[EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254)訊息、 Windows SDK 中所述。  
   
-##  <a name="getparaformat"></a>CRichEditCtrl::GetParaFormat  
+##  <a name="getparaformat"></a>  CRichEditCtrl::GetParaFormat  
  取得段落格式化目前選取範圍的屬性。  
   
 ```  
@@ -845,7 +840,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 ### <a name="example"></a>範例  
   請參閱範例的[CRichEditCtrl::SetParaFormat](#setparaformat)。  
   
-##  <a name="getpunctuation"></a>CRichEditCtrl::GetPunctuation  
+##  <a name="getpunctuation"></a>  CRichEditCtrl::GetPunctuation  
  Rich edit 控制項中取得目前的標點符號字元。  
   
 ```  
@@ -867,7 +862,7 @@ BOOL GetPunctuation(
 ### <a name="remarks"></a>備註  
  此成員函式就只亞洲語言版本的作業系統。  
   
-##  <a name="getrect"></a>CRichEditCtrl::GetRect  
+##  <a name="getrect"></a>  CRichEditCtrl::GetRect  
  這會擷取格式化矩形`CRichEditCtrl`物件。  
   
 ```  
@@ -886,7 +881,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="example"></a>範例  
   請參閱範例的[LimitText](#limittext)。  
   
-##  <a name="getredoname"></a>CRichEditCtrl::GetRedoName  
+##  <a name="getredoname"></a>  CRichEditCtrl::GetRedoName  
  如果有的話，擷取重做佇列中的下一個可用的動作的類型。  
   
 ```  
@@ -899,7 +894,7 @@ UNDONAMEID GetRedoName() const;
 ### <a name="remarks"></a>備註  
  可以復原或重做的動作類型包括輸入、 刪除、 拖放、 剪下和貼上作業。 這項資訊可用於復原和取消復原作業，例如 redoable 動作的下拉式清單方塊中提供擴充的使用者介面的應用程式。  
   
-##  <a name="getsel"></a>CRichEditCtrl::GetSel  
+##  <a name="getsel"></a>  CRichEditCtrl::GetSel  
  擷取目前的選取範圍，在這個範圍`CRichEditCtrl`物件。  
   
 ```  
@@ -923,9 +918,9 @@ void GetSel(
 ### <a name="remarks"></a>備註  
  此函式的兩種形式提供替代的方式，為取得選取範圍的界限。 請遵循這些表單的簡短說明：  
   
-- **GetSel (** `cr` **)**這個表單用**CHARRANGE**結構和其**cpMin**和**cpMax**表示傳回界限的成員。  
+- **GetSel (** `cr` **)** 這個表單用**CHARRANGE**結構和其**cpMin**和**cpMax**成員傳回界限。  
   
-- **GetSel (** `nStartChar` **，** `nEndChar` **)**此表單參數中傳回界限`nStartChar`和`nEndChar`。  
+- **GetSel (** `nStartChar` **，** `nEndChar` **)** 此表單參數中傳回界限`nStartChar`和`nEndChar`。  
   
  如果選取範圍包含的所有項目開頭 ( **cpMin**或`nStartChar`) 是 0，而結尾 ( **cpMax**或`nEndChar`) 是-1。  
   
@@ -934,7 +929,7 @@ void GetSel(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#15](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_15.cpp)]  
   
-##  <a name="getselectioncharformat"></a>CRichEditCtrl::GetSelectionCharFormat  
+##  <a name="getselectioncharformat"></a>  CRichEditCtrl::GetSelectionCharFormat  
  取得字元，格式化目前選取範圍的屬性。  
   
 ```  
@@ -958,7 +953,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="example"></a>範例  
   請參閱範例的[SetSelectionCharFormat](#setselectioncharformat)。  
   
-##  <a name="getselectiontype"></a>CRichEditCtrl::GetSelectionType  
+##  <a name="getselectiontype"></a>  CRichEditCtrl::GetSelectionType  
  決定在此選取項目類型`CRichEditCtrl`物件。  
   
 ```  
@@ -968,15 +963,15 @@ WORD GetSelectionType() const;
 ### <a name="return-value"></a>傳回值  
  旗標，表示目前的選取範圍的內容。 下列旗標的組合：  
   
-- `SEL_EMPTY`表示沒有目前的選取項目。  
+- `SEL_EMPTY` 表示沒有目前的選取項目。  
   
-- `SEL_TEXT`指出目前的選取範圍包含文字。  
+- `SEL_TEXT` 指出目前的選取範圍包含文字。  
   
-- `SEL_OBJECT`指出目前的選取範圍包含至少一個 OLE 項目。  
+- `SEL_OBJECT` 指出目前的選取範圍包含至少一個 OLE 項目。  
   
-- `SEL_MULTICHAR`指出目前的選取範圍包含多個文字字元。  
+- `SEL_MULTICHAR` 指出目前的選取範圍包含多個文字字元。  
   
-- `SEL_MULTIOBJECT`指出目前的選取範圍包含一個以上的 OLE 物件。  
+- `SEL_MULTIOBJECT` 指出目前的選取範圍包含一個以上的 OLE 物件。  
   
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[EM_SELECTIONTYPE](http://msdn.microsoft.com/library/windows/desktop/bb774223) Windows SDK 中。  
@@ -984,7 +979,7 @@ WORD GetSelectionType() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#16](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_16.cpp)]  
   
-##  <a name="getseltext"></a>CRichEditCtrl::GetSelText  
+##  <a name="getseltext"></a>  CRichEditCtrl::GetSelText  
  在這個目前的選取範圍中擷取文字`CRichEditCtrl`物件。  
   
 ```  
@@ -998,9 +993,9 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ### <a name="return-value"></a>傳回值  
  取決於表單：  
   
-- **GetSelText (** `lpBuf` **)**複製的字元數`lpBuf`，但不包含 null 結束。  
+- **GetSelText (** `lpBuf` **)** 複製的字元數`lpBuf`，但不包含 null 結束。  
   
-- **GetSelText （)**字串，包含目前的選取範圍。  
+- **GetSelText （)** 字串，包含目前的選取範圍。  
   
 ### <a name="remarks"></a>備註  
  如果您使用第一種形式， **GetSelText (** `lpBuf` **)**，您必須確定緩衝區夠大，它將會收到的文字。 呼叫[GetSel](#getsel)來判斷目前的選取範圍的字元數目。  
@@ -1010,7 +1005,7 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CRichEditCtrl::GetSelectionType](#getselectiontype)。  
   
-##  <a name="gettextlength"></a>CRichEditCtrl::GetTextLength  
+##  <a name="gettextlength"></a>  CRichEditCtrl::GetTextLength  
  擷取的文字，以字元為單位，在這個長度`CRichEditCtrl`物件，不包括結束的 null 字元。  
   
 ```  
@@ -1026,7 +1021,7 @@ long GetTextLength() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#17](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_17.cpp)]  
   
-##  <a name="gettextlengthex"></a>CRichEditCtrl::GetTextLengthEx  
+##  <a name="gettextlengthex"></a>  CRichEditCtrl::GetTextLengthEx  
  計算 rich edit 控制項中文字的長度。  
   
 ```  
@@ -1046,9 +1041,9 @@ long GetTextLengthEx(
  字元或編輯控制項中的位元組數目。 如果在已設定不相容的旗標`dwFlags`，此成員函式會傳回`E_INVALIDARG`。  
   
 ### <a name="remarks"></a>備註  
- `GetTextLengthEx`提供其他方法，判斷文字的長度。 它支援的 Rich Edit 2.0 功能。 請參閱[有關 Rich Edit 控制項](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor 中的詳細資訊。  
+ `GetTextLengthEx` 提供其他方法，判斷文字的長度。 它支援的 Rich Edit 2.0 功能。 請參閱[有關 Rich Edit 控制項](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor 中的詳細資訊。  
   
-##  <a name="gettextmode"></a>CRichEditCtrl::GetTextMode  
+##  <a name="gettextmode"></a>  CRichEditCtrl::GetTextMode  
  擷取目前文字模式和復原層級的 rich edit 控制項。  
   
 ```  
@@ -1058,7 +1053,7 @@ UINT GetTextMode() const;
 ### <a name="return-value"></a>傳回值  
  位元旗標，從一組[TEXTMODE](http://msdn.microsoft.com/library/windows/desktop/bb774364)列舉類型，Windows SDK 中所述。 旗標會指出目前的文字模式，而且復原的控制層級。  
   
-##  <a name="gettextrange"></a>CRichEditCtrl::GetTextRange  
+##  <a name="gettextrange"></a>  CRichEditCtrl::GetTextRange  
  取得指定的字元範圍。  
   
 ```  
@@ -1084,9 +1079,9 @@ int GetTextRange(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[EM_GETTEXTRANGE](http://msdn.microsoft.com/library/windows/desktop/bb774199) Windows SDK 中。  
   
- `GetTextRange`支援的 Rich Edit 2.0 功能。 請參閱[有關 Rich Edit 控制項](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor 中的詳細資訊。  
+ `GetTextRange` 支援的 Rich Edit 2.0 功能。 請參閱[有關 Rich Edit 控制項](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDKfor 中的詳細資訊。  
   
-##  <a name="getundoname"></a>CRichEditCtrl::GetUndoName  
+##  <a name="getundoname"></a>  CRichEditCtrl::GetUndoName  
  如果有的話，擷取復原佇列中的下一個可用的動作的類型。  
   
 ```  
@@ -1099,7 +1094,7 @@ UNDONAMEID GetUndoName() const;
 ### <a name="remarks"></a>備註  
  可以復原或重做的動作類型包括輸入、 刪除、 拖放、 剪下和貼上作業。 這項資訊可用於復原和取消復原作業，例如可復原的動作的下拉式清單方塊中提供擴充的使用者介面的應用程式。  
   
-##  <a name="getwordwrapmode"></a>CRichEditCtrl::GetWordWrapMode  
+##  <a name="getwordwrapmode"></a>  CRichEditCtrl::GetWordWrapMode  
  擷取目前的自動換行和 rich edit 控制項的 word 重大選項。  
   
 ```  
@@ -1112,7 +1107,7 @@ UINT GetWordWrapMode() const;
 ### <a name="remarks"></a>備註  
  此成員函式是作業系統的僅適用於亞洲語言版本。  
   
-##  <a name="hideselection"></a>CRichEditCtrl::HideSelection  
+##  <a name="hideselection"></a>  CRichEditCtrl::HideSelection  
  變更選取項目的可見性。  
   
 ```  
@@ -1136,7 +1131,7 @@ void HideSelection(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#18](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_18.cpp)]  
   
-##  <a name="limittext"></a>CRichEditCtrl::LimitText  
+##  <a name="limittext"></a>  CRichEditCtrl::LimitText  
  限制使用者可以在編輯控制項中輸入文字的長度。  
   
 ```  
@@ -1158,7 +1153,7 @@ void LimitText(long nChars = 0);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#19](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_19.cpp)]  
   
-##  <a name="linefromchar"></a>CRichEditCtrl::LineFromChar  
+##  <a name="linefromchar"></a>  CRichEditCtrl::LineFromChar  
  擷取包含指定之字元索引的那一行的行號。  
   
 ```  
@@ -1180,7 +1175,7 @@ long LineFromChar(long nIndex) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#20](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_20.cpp)]  
   
-##  <a name="lineindex"></a>CRichEditCtrl::LineIndex  
+##  <a name="lineindex"></a>  CRichEditCtrl::LineIndex  
  擷取中這一行的字元索引`CRichEditCtrl`物件。  
   
 ```  
@@ -1202,7 +1197,7 @@ int LineIndex(int nLine = -1) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#21](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_21.cpp)]  
   
-##  <a name="linelength"></a>CRichEditCtrl::LineLength  
+##  <a name="linelength"></a>  CRichEditCtrl::LineLength  
  擷取 rich edit 控制項中的資料行的長度。  
   
 ```  
@@ -1224,7 +1219,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="example"></a>範例  
   請參閱範例的[LineIndex](#lineindex)。  
   
-##  <a name="linescroll"></a>CRichEditCtrl::LineScroll  
+##  <a name="linescroll"></a>  CRichEditCtrl::LineScroll  
  捲動的多行編輯控制項的文字。  
   
 ```  
@@ -1243,14 +1238,14 @@ void LineScroll(
 ### <a name="remarks"></a>備註  
  編輯控制項無法以垂直方式捲動過去的文字編輯控制項中的最後一行。 如果目前的行加上所指定的線條數目`nLines`超過的編輯控制項中的總行數，值會進行調整，以便編輯控制項的最後一行捲動至編輯控制項視窗的頂端。  
   
- `LineScroll`可以用於水平捲動，過去的任何一行的最後一個字元。  
+ `LineScroll` 可以用於水平捲動，過去的任何一行的最後一個字元。  
   
  如需詳細資訊，請參閱[EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[GetFirstVisibleLine](#getfirstvisibleline)。  
   
-##  <a name="paste"></a>CRichEditCtrl::Paste  
+##  <a name="paste"></a>  CRichEditCtrl::Paste  
  將資料從剪貼簿`CRichEditCtrl`的插入點，插入號位置。  
   
 ```  
@@ -1265,7 +1260,7 @@ void Paste();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#22](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_22.cpp)]  
   
-##  <a name="pastespecial"></a>CRichEditCtrl::PasteSpecial  
+##  <a name="pastespecial"></a>  CRichEditCtrl::PasteSpecial  
  將資料以特定的剪貼簿格式貼到這個`CRichEditCtrl`物件。  
   
 ```  
@@ -1293,7 +1288,7 @@ void PasteSpecial(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#23](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_23.cpp)]  
   
-##  <a name="posfromchar"></a>CRichEditCtrl::PosFromChar  
+##  <a name="posfromchar"></a>  CRichEditCtrl::PosFromChar  
  擷取指定的字元，在編輯控制項中的用戶端區域座標。  
   
 ```  
@@ -1310,7 +1305,7 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) Windows SDK 中。  
   
-##  <a name="redo"></a>CRichEditCtrl::Redo  
+##  <a name="redo"></a>  CRichEditCtrl::Redo  
  取消復原上控制項的重做佇列中的下一個動作。  
   
 ```  
@@ -1323,7 +1318,7 @@ BOOL Redo();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[EM_REDO](http://msdn.microsoft.com/library/windows/desktop/bb774218) Windows SDK 中。  
   
-##  <a name="replacesel"></a>CRichEditCtrl::ReplaceSel  
+##  <a name="replacesel"></a>  CRichEditCtrl::ReplaceSel  
  取代目前的選取範圍，在這個`CRichEditCtrl`具有指定之文字物件。  
   
 ```  
@@ -1351,7 +1346,7 @@ void ReplaceSel(
 ### <a name="example"></a>範例  
   請參閱範例的[LineIndex](#lineindex)。  
   
-##  <a name="requestresize"></a>CRichEditCtrl::RequestResize  
+##  <a name="requestresize"></a>  CRichEditCtrl::RequestResize  
  這會強制`CRichEditCtrl`物件傳送**EN_REQUESTRESIZE**通知訊息給其父視窗。  
   
 ```  
@@ -1363,7 +1358,7 @@ void RequestResize();
   
  如需詳細資訊，請參閱[EM_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb774220)訊息和**無底邊 Rich Edit 控制項**區段[有關 Rich Edit 控制項](http://msdn.microsoft.com/library/windows/desktop/bb787873)Windows SDK 中。  
   
-##  <a name="setautourldetect"></a>CRichEditCtrl::SetAutoURLDetect  
+##  <a name="setautourldetect"></a>  CRichEditCtrl::SetAutoURLDetect  
  設定自動偵測 URL 的 rich edit 控制項。  
   
 ```  
@@ -1381,9 +1376,9 @@ BOOL SetAutoURLDetect(BOOL bEnable = TRUE);
  如果啟用，rich edit 控制項就會掃描來判斷它是否符合標準的 URL 格式的文字。 如需這些 URL 格式的清單，請參閱[EM_AUTOURLDETECT](http://msdn.microsoft.com/library/windows/desktop/bb787991) Windows SDK 中。  
   
 > [!NOTE]
->  請勿設定`SetAutoURLDetect`至**TRUE**如果編輯控制項使用**CFE_LINK** Url 以外的文字的效果。 `SetAutoURLDetect`啟用這個效果 url 和停用它的所有其他文字。 請參閱[EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970)如需有關**CFE_LINK**效果。  
+>  請勿設定`SetAutoURLDetect`至**TRUE**如果編輯控制項使用**CFE_LINK** Url 以外的文字的效果。 `SetAutoURLDetect` 啟用這個效果 url 和停用它的所有其他文字。 請參閱[EN_LINK](http://msdn.microsoft.com/library/windows/desktop/bb787970)如需有關**CFE_LINK**效果。  
   
-##  <a name="setbackgroundcolor"></a>CRichEditCtrl::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CRichEditCtrl::SetBackgroundColor  
  這個設定的背景色彩`CRichEditCtrl`物件。  
   
 ```  
@@ -1410,7 +1405,7 @@ COLORREF SetBackgroundColor(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#24](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_24.cpp)]  
   
-##  <a name="setdefaultcharformat"></a>CRichEditCtrl::SetDefaultCharFormat  
+##  <a name="setdefaultcharformat"></a>  CRichEditCtrl::SetDefaultCharFormat  
  設定格式屬性在這個新文字的字元`CRichEditCtrl`物件。  
   
 ```  
@@ -1435,7 +1430,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#25](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_25.cpp)]  
   
-##  <a name="seteventmask"></a>CRichEditCtrl::SetEventMask  
+##  <a name="seteventmask"></a>  CRichEditCtrl::SetEventMask  
  設定事件遮罩這個`CRichEditCtrl`物件。  
   
 ```  
@@ -1457,7 +1452,7 @@ DWORD SetEventMask(DWORD dwEventMask);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#26](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_26.cpp)]  
   
-##  <a name="setmodify"></a>CRichEditCtrl::SetModify  
+##  <a name="setmodify"></a>  CRichEditCtrl::SetModify  
  設定或清除編輯控制項的已修改旗標。  
   
 ```  
@@ -1476,7 +1471,7 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="example"></a>範例  
   請參閱範例的[GetModify](#getmodify)。  
   
-##  <a name="setolecallback"></a>CRichEditCtrl::SetOLECallback  
+##  <a name="setolecallback"></a>  CRichEditCtrl::SetOLECallback  
  這可讓`CRichEditCtrl`物件**IRichEditOleCallback**物件用來存取 OLE 相關資源和資訊。  
   
 ```  
@@ -1495,7 +1490,7 @@ BOOL SetOLECallback(IRichEditOleCallback* pCallback);
   
  如需詳細資訊，請參閱[EM_SETOLECALLBACK](http://msdn.microsoft.com/library/windows/desktop/bb774252)訊息和[IRichEditOleCallback](http://msdn.microsoft.com/library/windows/desktop/bb774308) Windows SDK 中的介面。  
   
-##  <a name="setoptions"></a>CRichEditCtrl::SetOptions  
+##  <a name="setoptions"></a>  CRichEditCtrl::SetOptions  
  設定這個選項`CRichEditCtrl`物件。  
   
 ```  
@@ -1508,13 +1503,13 @@ void SetOptions(
  *wOp*  
  指出作業的類型。 下列其中一個值：  
   
-- `ECOOP_SET`將選項設定為所指定的`dwFlags`。  
+- `ECOOP_SET` 將選項設定為所指定的`dwFlags`。  
   
-- `ECOOP_OR`目前的選項結合所指定的`dwFlags`。  
+- `ECOOP_OR` 目前的選項結合所指定的`dwFlags`。  
   
-- `ECOOP_AND`保留只有目前的選項，也會指定由`dwFlags`。  
+- `ECOOP_AND` 保留只有目前的選項，也會指定由`dwFlags`。  
   
-- `ECOOP_XOR`邏輯互斥 OR 具有所指定的目前選項`dwFlags`。  
+- `ECOOP_XOR` 邏輯互斥 OR 具有所指定的目前選項`dwFlags`。  
   
  `dwFlags`  
  豐富的編輯選項。 旗標值會列在 < 備註 > 一節中。  
@@ -1522,28 +1517,28 @@ void SetOptions(
 ### <a name="remarks"></a>備註  
  選項可以是下列值的組合：  
   
-- `ECO_AUTOWORDSELECTION`自動文字選擇上的按兩下。  
+- `ECO_AUTOWORDSELECTION` 自動文字選擇上的按兩下。  
   
-- `ECO_AUTOVSCROLL`當使用者輸入的行結尾字元時，會自動捲動 10 個字元的文字靠右。 當使用者按下 ENTER 鍵時，控制項捲動至位置零的所有文字。  
+- `ECO_AUTOVSCROLL` 當使用者輸入的行結尾字元時，會自動捲動 10 個字元的文字靠右。 當使用者按下 ENTER 鍵時，控制項捲動至位置零的所有文字。  
   
-- `ECO_AUTOHSCROLL`使用者的最後一行按 ENTER 鍵時，會自動捲動向上移動一個頁面的文字。  
+- `ECO_AUTOHSCROLL` 使用者的最後一行按 ENTER 鍵時，會自動捲動向上移動一個頁面的文字。  
   
-- `ECO_NOHIDESEL`變換正負號的編輯控制項的預設行為。 當控制項失去輸入的焦點，並顯示選取項目，當控制項收到輸入的焦點時，預設行為會隱藏選取項目。 如果您指定`ECO_NOHIDESEL`，反轉選取的文字，即使控制項沒有焦點。  
+- `ECO_NOHIDESEL` 變換正負號的編輯控制項的預設行為。 當控制項失去輸入的焦點，並顯示選取項目，當控制項收到輸入的焦點時，預設行為會隱藏選取項目。 如果您指定`ECO_NOHIDESEL`，反轉選取的文字，即使控制項沒有焦點。  
   
-- `ECO_READONLY`可防止使用者輸入或編輯文字編輯控制項中。  
+- `ECO_READONLY` 可防止使用者輸入或編輯文字編輯控制項中。  
   
-- `ECO_WANTRETURN`指定當使用者按下 ENTER 鍵，同時將多行 rich edit 控制項在對話方塊中輸入文字時插入所傳回的歸位字元。 如果您未指定此樣式，按下 ENTER 鍵傳送命令至 rich edit 控制項的父視窗，模擬按一下父視窗的預設按鈕 （例如，在對話方塊中 [確定] 按鈕）。 此樣式會有對單行編輯控制項。  
+- `ECO_WANTRETURN` 指定當使用者按下 ENTER 鍵，同時將多行 rich edit 控制項在對話方塊中輸入文字時插入所傳回的歸位字元。 如果您未指定此樣式，按下 ENTER 鍵傳送命令至 rich edit 控制項的父視窗，模擬按一下父視窗的預設按鈕 （例如，在對話方塊中 [確定] 按鈕）。 此樣式會有對單行編輯控制項。  
   
-- `ECO_SAVESEL`當控制項遺失焦點時，會保留選取項目。 根據預設，當它重新取得焦點時，會選取控制項的整個內容。  
+- `ECO_SAVESEL` 當控制項遺失焦點時，會保留選取項目。 根據預設，當它重新取得焦點時，會選取控制項的整個內容。  
   
-- `ECO_VERTICAL`在垂直方向繪製的文字和物件。 適用於僅亞洲語言。  
+- `ECO_VERTICAL` 在垂直方向繪製的文字和物件。 適用於僅亞洲語言。  
   
  如需詳細資訊，請參閱[EM_SETOPTIONS](http://msdn.microsoft.com/library/windows/desktop/bb774254) Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#27](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_27.cpp)]  
   
-##  <a name="setparaformat"></a>CRichEditCtrl::SetParaFormat  
+##  <a name="setparaformat"></a>  CRichEditCtrl::SetParaFormat  
  設定段落格式屬性目前的選取範圍，在這個`CRichEditCtrl`物件。  
   
 ```  
@@ -1568,7 +1563,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#28](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_28.cpp)]  
   
-##  <a name="setpunctuation"></a>CRichEditCtrl::SetPunctuation  
+##  <a name="setpunctuation"></a>  CRichEditCtrl::SetPunctuation  
  Rich edit 控制項中設定的標點符號。  
   
 ```  
@@ -1590,7 +1585,7 @@ BOOL SetPunctuation(
 ### <a name="remarks"></a>備註  
  此成員函式是適用於僅亞洲語言版本的作業系統。  
   
-##  <a name="setreadonly"></a>CRichEditCtrl::SetReadOnly  
+##  <a name="setreadonly"></a>  CRichEditCtrl::SetReadOnly  
  變更`ECO_READONLY`這個選項`CRichEditCtrl`物件。  
   
 ```  
@@ -1612,7 +1607,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#29](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_29.cpp)]  
   
-##  <a name="setrect"></a>CRichEditCtrl::SetRect  
+##  <a name="setrect"></a>  CRichEditCtrl::SetRect  
  設定這個格式化矩形`CRichEditCtrl`物件。  
   
 ```  
@@ -1631,7 +1626,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#30](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_30.cpp)]  
   
-##  <a name="setsel"></a>CRichEditCtrl::SetSel  
+##  <a name="setsel"></a>  CRichEditCtrl::SetSel  
  設定在這個選取項目`CRichEditCtrl`物件。  
   
 ```  
@@ -1655,9 +1650,9 @@ void SetSel(CHARRANGE& cr);
 ### <a name="remarks"></a>備註  
  此函式的兩種形式提供替代方式可設定選取範圍的界限。 請遵循這些表單的簡短說明：  
   
-- **SetSel (** `cr` **)**這個表單用**CHARRANGE**結構和其**cpMin**和**cpMax**若要設定範圍的成員。  
+- **SetSel (** `cr` **)** 這個表單用**CHARRANGE**結構和其**cpMin**和**cpMax**成員設定界限。  
   
-- **SetSel (** `nStartChar` **，** `nEndChar` **)**這種形式可以使用的參數`nStartChar`和`nEndChar`設定界限。  
+- **SetSel (** `nStartChar` **，** `nEndChar` **)** 這種形式可以使用的參數`nStartChar`和`nEndChar`設定界限。  
   
  插入號會放在所啟動的較大表示選取範圍結尾 ( **cpMin**或`nStartChar`) 和 end ( **cpMax**或`nEndChar`) 索引。 此函式的內容捲動`CRichEditCtrl`使插入號是可見。  
   
@@ -1668,7 +1663,7 @@ void SetSel(CHARRANGE& cr);
 ### <a name="example"></a>範例  
   請參閱範例的[GetSel](#getsel)。  
   
-##  <a name="setselectioncharformat"></a>CRichEditCtrl::SetSelectionCharFormat  
+##  <a name="setselectioncharformat"></a>  CRichEditCtrl::SetSelectionCharFormat  
  設定字元，格式化目前選取範圍，在這個文字屬性`CRichEditCtrl`物件。  
   
 ```  
@@ -1693,7 +1688,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#31](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_31.cpp)]  
   
-##  <a name="settargetdevice"></a>CRichEditCtrl::SetTargetDevice  
+##  <a name="settargetdevice"></a>  CRichEditCtrl::SetTargetDevice  
  設定用於所見即所得的目標裝置與線條寬度 （您所看到的內容是您會取得） 中格式化`CRichEditCtrl`物件。  
   
 ```  
@@ -1728,7 +1723,7 @@ BOOL SetTargetDevice(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#32](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_32.cpp)]  
   
-##  <a name="settextmode"></a>CRichEditCtrl::SetTextMode  
+##  <a name="settextmode"></a>  CRichEditCtrl::SetTextMode  
  設定 rich edit 控制項的文字模式或復原和取消復原層級。  
   
 ```  
@@ -1747,7 +1742,7 @@ BOOL SetTextMode(UINT fMode);
   
  如果控制項包含文字，此成員函式將會失敗。 若要確定控制項是空白，請傳送[WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644)訊息以空字串。  
   
-##  <a name="setundolimit"></a>CRichEditCtrl::SetUndoLimit  
+##  <a name="setundolimit"></a>  CRichEditCtrl::SetUndoLimit  
  設定可以儲存在復原佇列的動作的數目上限。  
   
 ```  
@@ -1764,7 +1759,7 @@ UINT SetUndoLimit(UINT nLimit);
 ### <a name="remarks"></a>備註  
  根據預設，復原佇列中的動作的數目上限為 100。 如果您增加這個數字時，必須有足夠的記憶體來容納新的編號。 為提升效能，設定最小的可能值的限制。  
   
-##  <a name="setwordcharformat"></a>CRichEditCtrl::SetWordCharFormat  
+##  <a name="setwordcharformat"></a>  CRichEditCtrl::SetWordCharFormat  
  設定字元，格式化目前選取的字組，在這個屬性`CRichEditCtrl`物件。  
   
 ```  
@@ -1789,7 +1784,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CRichEditCtrl#33](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_33.cpp)]  
   
-##  <a name="setwordwrapmode"></a>CRichEditCtrl::SetWordWrapMode  
+##  <a name="setwordwrapmode"></a>  CRichEditCtrl::SetWordWrapMode  
  設定豐富的自動換行和斷詞選項編輯控制項。  
   
 ```  
@@ -1806,7 +1801,7 @@ UINT SetWordWrapMode(UINT uFlags) const;
 ### <a name="remarks"></a>備註  
  這個訊息是作業系統的僅適用於亞洲語言版本。  
   
-##  <a name="stopgrouptyping"></a>CRichEditCtrl::StopGroupTyping  
+##  <a name="stopgrouptyping"></a>  CRichEditCtrl::StopGroupTyping  
  停止控制項從收集其他輸入目前的復原動作的動作。  
   
 ```  
@@ -1818,7 +1813,7 @@ void StopGroupTyping();
   
  如需詳細資訊，請參閱[EM_STOPGROUPTYPING](http://msdn.microsoft.com/library/windows/desktop/bb774300) Windows SDK 中。  
   
-##  <a name="streamin"></a>CRichEditCtrl::StreamIn  
+##  <a name="streamin"></a>  CRichEditCtrl::StreamIn  
  取代此文字`CRichEditCtrl`物件指定的輸入資料流中的文字。  
   
 ```  
@@ -1840,9 +1835,9 @@ long StreamIn(
 ### <a name="remarks"></a>備註  
  值`nFormat`必須是下列其中之一：  
   
-- `SF_TEXT`表示僅限讀取文字。  
+- `SF_TEXT` 表示僅限讀取文字。  
   
-- `SF_RTF`表示讀取文字和格式。  
+- `SF_RTF` 表示讀取文字和格式。  
   
  其中一個值可以結合`SFF_SELECTION`。 如果`SFF_SELECTION`指定，則`StreamIn`取代目前選取範圍的輸入資料流的內容。 如果未指定，`StreamIn`取代這整個內容`CRichEditCtrl`物件。  
   
@@ -1855,7 +1850,7 @@ long StreamIn(
   
  [!code-cpp[NVC_MFC_CRichEditCtrl#35](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_35.cpp)]  
   
-##  <a name="streamout"></a>CRichEditCtrl::StreamOut  
+##  <a name="streamout"></a>  CRichEditCtrl::StreamOut  
  這個內容寫出`CRichEditCtrl`指定的輸出資料流的物件。  
   
 ```  
@@ -1877,13 +1872,13 @@ long StreamOut(
 ### <a name="remarks"></a>備註  
  值`nFormat`必須是下列其中之一：  
   
-- `SF_TEXT`表示僅限寫入文字。  
+- `SF_TEXT` 表示僅限寫入文字。  
   
-- `SF_RTF`表示寫入文字和格式。  
+- `SF_RTF` 表示寫入文字和格式。  
   
-- `SF_RTFNOOBJS`表示寫入文字和格式設定，以空格取代 OLE 項目。  
+- `SF_RTFNOOBJS` 表示寫入文字和格式設定，以空格取代 OLE 項目。  
   
-- `SF_TEXTIZED`表示寫入文字和格式設定，以文字表示方式的 OLE 項目。  
+- `SF_TEXTIZED` 表示寫入文字和格式設定，以文字表示方式的 OLE 項目。  
   
  這些值可以結合`SFF_SELECTION`。 如果`SFF_SELECTION`指定，則`StreamOut`寫出到輸出資料流目前的選取範圍。 如果未指定，`StreamOut`這個的整個內容寫出`CRichEditCtrl`物件。  
   
@@ -1896,7 +1891,7 @@ long StreamOut(
   
  [!code-cpp[NVC_MFC_CRichEditCtrl#37](../../mfc/reference/codesnippet/cpp/cricheditctrl-class_37.cpp)]  
   
-##  <a name="undo"></a>CRichEditCtrl::Undo  
+##  <a name="undo"></a>  CRichEditCtrl::Undo  
  Rich edit 控制項中的最後一個作業復原。  
   
 ```  
@@ -1914,7 +1909,7 @@ BOOL Undo();
 ### <a name="example"></a>範例  
   請參閱範例的[CanUndo](#canundo)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 WORDPAD](../../visual-cpp-samples.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

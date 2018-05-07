@@ -1,31 +1,26 @@
 ---
-title: "如何： 實作鎖定 C# 關鍵字 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 如何： 實作鎖定 C# 關鍵字 (C + + /CLI) |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - lock statement
 - lock C# keyword [C++]
 ms.assetid: 436fe544-ffb7-49b9-9798-90794e9974de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e016a0f481063711cb5daafe45110a1d53b16253
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dba651a7bcbfb1e8d7a0d107fe2400e222b06111
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-the-lock-c-keyword-ccli"></a>如何：實作鎖定 C# 關鍵字 (C++/CLI)
 本主題示範如何實作 C# `lock` Visual c + + 中的關鍵字。 
@@ -69,5 +64,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [與其他 .NET 語言間的互通性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

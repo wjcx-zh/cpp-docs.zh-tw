@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 （層級 1 和 3） C4793 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 （層級 1 和 3） C4793 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>編譯器警告 (層級 1 和 3) C4793
 'function': 函式會編譯為原生程式碼: 'reason'  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |原因的訊息|備註|  
 |--------------------|-------------|  
 |Managed 程式碼中不支援對齊的資料類型|CLR 必須要能夠配置資料，如有需要不可能進行這類的資料對齊與宣告[__m128](../../cpp/m128.md)或[對齊](../../cpp/align-cpp.md)。|  
-|Managed 程式碼中不支援使用 '含有 __ImageBase' 函式|`__ImageBase`是通常用來載入 DLL 只能由低階原生程式碼的特殊連結器符號。|  
+|Managed 程式碼中不支援使用 '含有 __ImageBase' 函式|`__ImageBase` 是通常用來載入 DLL 只能由低階原生程式碼的特殊連結器符號。|  
 |不支援 varargs ' / clr' 編譯器選項|原生函式不能呼叫 managed 函式具有[變數引數清單](../../cpp/functions-with-variable-argument-lists-cpp.md)(varargs) 因為函式具有不同的堆疊配置需求。 不過，如果您指定`/clr:pure`編譯器選項，因為組件可包含 managed 函式僅支援清單的變數引數。 如需詳細資訊，請參閱[純粹的和可驗證程式碼 (C + + /CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。|  
 |64 位元 CLR 不支援 __ptr32 修飾詞以宣告的資料|指標必須是目前的平台的原生指標相同的大小。 如需詳細資訊，請參閱[__ptr32、 \__ptr64](../../cpp/ptr32-ptr64.md)。|  
 |32 位元 CLR 不支援使用 __ptr64 修飾詞宣告的資料|指標必須是目前的平台的原生指標相同的大小。 如需詳細資訊，請參閱[__ptr32、 \__ptr64](../../cpp/ptr32-ptr64.md)。|  

@@ -1,29 +1,24 @@
 ---
-title: "通用控制項範例清單 |Microsoft 文件"
-ms.custom: 
+title: 通用控制項範例清單 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - sample applications [MFC], common controls
 ms.assetid: 8ae39e2d-12a8-4b17-909d-5bf155749123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 994db90723f60faf99a091ed31ec3355cb9d6370
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3175463de0539f56aba3f38f373e19f11cf2388f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-control-sample-list"></a>通用控制項範例清單
 請參閱下列說明通用控制項的範例程式：  
@@ -34,6 +29,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [CTRLTEST](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項](../mfc/controls-mfc.md)
 

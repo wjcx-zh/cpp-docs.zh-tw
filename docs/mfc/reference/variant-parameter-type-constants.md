@@ -1,13 +1,10 @@
 ---
-title: "變異參數類型常數 |Microsoft 文件"
-ms.custom: 
+title: 變異參數類型常數 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - VTS_YPOS_HIMETRIC
 - VTS_PICTURE
@@ -44,24 +41,22 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9bd9af96a51697d1800eea1ef2883835375210d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13820ff4fb07c3743f36ba3ebe33ee56a3a79c7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="variant-parameter-type-constants"></a>變異參數類型常數
 本主題會列出新的常數，以指出變異參數類型設計為使用 Microsoft Foundation 類別庫的 OLE 控制項類別。  
   
  下列是一份類別常數：  
   
-##  <a name="_mfc_variant_data_constants"></a>變異資料常數  
+##  <a name="_mfc_variant_data_constants"></a> 變異資料常數  
   
 -   **VTS_COLOR**用來代表 RGB 色彩值的 32 位元整數。  
   
@@ -97,5 +92,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,12 +1,9 @@
 ---
-title: "DEFINE_COMMAND_EX |Microsoft 文件"
-ms.custom: 
+title: DEFINE_COMMAND_EX |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - DEFINE_COMMAND_EX
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - DEFINE_COMMAND_EX macro
 ms.assetid: d3e2ef20-1455-46d2-8499-8ab84bbb90a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e3fb4ce434f578ed79f3ed086adf73a6a49da870
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b2a77fa0d6655edeee88df3c7c45e1936a766b40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="definecommandex"></a>DEFINE_COMMAND_EX
 指定將用來建立資料列集，使用時的命令[CCommand](../../data/oledb/ccommand-class.md)類別。 支援 Unicode 和 ANSI 應用程式。  
@@ -56,5 +51,5 @@ DEFINE_COMMAND_EX(x, wszCommand)
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者範本的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

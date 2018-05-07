@@ -1,13 +1,10 @@
 ---
-title: "值的類型語意 |Microsoft 文件"
-ms.custom: 
+title: 值的類型語意 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>實值類型語意
 實值類型語意已從 Managed Extensions for c + + Visual c + +。  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>叫用繼承虛擬方法  
- `Form (1)`不標準值物件，而且它是合理充分了解，除了當有人嘗試叫用的繼承虛擬方法時，例如`ToString()`。 例如:   
+ `Form (1)` 不標準值物件，而且它是合理充分了解，除了當有人嘗試叫用的繼承虛擬方法時，例如`ToString()`。 例如:   
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  我們想要包裝在實值類型，而非參考類型以避免重複堆積配置的小型原生類別： 原生堆積以保存原生型別，與 CLR 堆積來保存 managed 包裝函式。 包裝原生類別實值類型可讓您避免受管理的堆積，但不提供任何方法來自動執行的原生堆積記憶體回收。 參考型別是在其中包裝非一般的原生類別只使其受管理的類型。  
   
 ## <a name="interior-pointers"></a>內部指標  
- `Form (2)`和`Form (3)`上方可以解決幾乎這個世界或下一個 （也就是任何 managed 或原生） 中任何項目。 因此，比方說，下列所有條件中允許受管理的擴充功能：  
+ `Form (2)` 和`Form (3)`上方可以解決幾乎這個世界或下一個 （也就是任何 managed 或原生） 中任何項目。 因此，比方說，下列所有條件中允許受管理的擴充功能：  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`和`Form (3)`管理延伸模組的對應到`interior_ptr<V>`。 `Form (4)`是追蹤控制代碼。 針對整個 managed 堆積中具有已 box 的物件。 它就會轉譯成新的語法中`V^`，  
+ `Form (2)` 和`Form (3)`管理延伸模組的對應到`interior_ptr<V>`。 `Form (4)` 是追蹤控制代碼。 針對整個 managed 堆積中具有已 box 的物件。 它就會轉譯成新的語法中`V^`，  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    
@@ -219,7 +214,7 @@ void f( G^ g ) {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [實值類型和它們的行為 (C + + /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
  [interior_ptr (C + + /CLI)](../windows/interior-ptr-cpp-cli.md)   

@@ -1,29 +1,24 @@
 ---
-title: "Visual c + + 應用程式部署至應用程式本機資料夾 |Microsoft 文件"
-ms.custom: 
+title: Visual c + + 應用程式部署至應用程式本機資料夾 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - deploying Visual C++ applications
 ms.assetid: 47a81c47-9dbe-47c6-96cc-fbb2fda5e6ad
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d9a92a5fef96932f1d6a58503fe6355b5a410ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a02e585dc2b82c8b8ad675907e4205db6ad7279
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>逐步解說：將 Visual C++ 應用程式部署至應用程式本機資料夾
 描述如何部署 Visual c + + 應用程式檔案複製到其資料夾。  
@@ -48,5 +43,5 @@ ms.lasthandoff: 12/21/2017
   
      應用程式執行成功，因為 Visual c + + 程式庫中可用的應用程式的本機資料夾。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署範例](../ide/deployment-examples.md)

@@ -1,13 +1,10 @@
 ---
-title: "在對話方塊中使用通用控制項 |Microsoft 文件"
-ms.custom: 
+title: 在對話方塊中使用通用控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67a9c77e6a8e5721bca6e3741b4b337cfdb42393
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c848cfa74363d871720f9ca269b114687aad9ecf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>在對話方塊中使用通用控制項
 Windows 通用控制項可用於[對話方塊](../mfc/dialog-boxes.md)，表單檢視、 記錄檢視，以及根據對話方塊範本的其他任何視窗。 下列含次要變更的程序，也可處理表單。  
@@ -70,7 +65,7 @@ Windows 通用控制項可用於[對話方塊](../mfc/dialog-boxes.md)，表單�
   
 -   [使用對話方塊資料交換 (DDX)](../mfc/dialog-data-exchange-and-validation.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立及使用控制項](../mfc/making-and-using-controls.md)   
  [控制項](../mfc/controls-mfc.md)
 

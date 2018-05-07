@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 （層級 1） C4747 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 （層級 1） C4747 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4747
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4747
 ms.assetid: af37befd-ba1f-4bdc-96e1-a953f7a2ad9c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094576ec19582b640ba0d4c57dfa34593177a267
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 203943f3741d07e278652a7032a6dcdcb305a384
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4747"></a>編譯器警告 (層級 1) C4747
 呼叫 managed '進入點': Managed 程式碼不會執行載入器鎖定，包括 DLL 進入點和從 DLL 進入點到達的呼叫下  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  無法編譯的模組**/clr**。  
+1.  無法編譯的模組 **/clr**。  
   
 2.  將進入點函式，以標示`#pragma unmanaged`。  
   

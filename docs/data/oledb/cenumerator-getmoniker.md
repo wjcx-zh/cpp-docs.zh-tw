@@ -1,12 +1,9 @@
 ---
-title: CEnumerator::GetMoniker | Microsoft Docs
-ms.custom: 
+title: 'Cenumerator:: Getmoniker |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetMoniker
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetMoniker method
 ms.assetid: 69a5cf2d-4a94-41dc-812d-bc1661d516d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6049dfc14bb6ebe46f173ec07e536102acdebb3c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5fe2f440d7aad0fd3aca92d6e7de308345dd8f32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cenumeratorgetmoniker"></a>CEnumerator::GetMoniker
 剖析顯示名稱，以擷取元件可以轉換成 moniker 的字串。  
@@ -58,5 +53,5 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CEnumerator 類別](../../data/oledb/cenumerator-class.md)

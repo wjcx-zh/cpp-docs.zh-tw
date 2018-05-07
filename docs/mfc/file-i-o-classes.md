@@ -1,13 +1,10 @@
 ---
-title: "檔案我-O 類別 |Microsoft 文件"
-ms.custom: 
+title: 檔案我-O 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.file
 dev_langs:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - stream classes [MFC]
 - memory file classes [MFC]
 ms.assetid: 92821c3f-d9e1-47f6-98c9-3b632d86e811
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 454e64d67321282030126d2aab023e9f587c1cca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b11996aadd58b456aa919d4ff888c783b4ba486e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-io-classes"></a>檔案 I/O 類別
 這些類別會提供介面，以傳統的磁碟檔案、 記憶體中的檔案、 主動式資料流和 Windows 通訊端。 所有的類別衍生自`CFile`可以搭配`CArchive`執行序列化的物件。  
@@ -75,6 +70,6 @@ ms.lasthandoff: 12/21/2017
  [CRecentFileList](../mfc/reference/crecentfilelist-class.md)  
  會維護最近使用過的 (MRU) 檔案清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

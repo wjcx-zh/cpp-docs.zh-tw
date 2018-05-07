@@ -1,31 +1,26 @@
 ---
-title: "如何： 使用屬性在 C + + CLI |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用屬性在 C + + CLI |Microsoft 文件
+ms.custom: ''
 ms.date: 07/21/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9f1a25d91939119ddda10480ed3bbd4691d06af9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4873b7d37ef55c050ef074323c4644e4277f593d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-use-properties-in-ccli"></a>如何：在 C++/CLI 中使用屬性
 本文將說明如何使用屬性在 C + + /CLI。  
@@ -414,5 +409,5 @@ int main() {
 6.8  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性](../windows/property-cpp-component-extensions.md)

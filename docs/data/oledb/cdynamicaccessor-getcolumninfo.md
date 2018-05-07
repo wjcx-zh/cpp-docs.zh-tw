@@ -1,12 +1,9 @@
 ---
-title: CDynamicAccessor::GetColumnInfo | Microsoft Docs
-ms.custom: 
+title: 'Cdynamicaccessor:: Getcolumninfo |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - GetColumnInfo
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetColumnInfo method
 ms.assetid: 7f2102ea-b7cc-4714-812f-3ca2857f4b9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9f311e9fc5330a68edba4fd5029e97b75033406
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0c9fe862f08fc9ecfa280dcbb55f48e14427d6ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessorgetcolumninfo"></a>CDynamicAccessor::GetColumnInfo
 傳回所需的大部分取用者的資料行中繼資料。  
@@ -66,5 +61,5 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

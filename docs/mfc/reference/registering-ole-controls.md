@@ -1,13 +1,10 @@
 ---
-title: "註冊 OLE 控制項 |Microsoft 文件"
-ms.custom: 
+title: 註冊 OLE 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - registering OLE controls
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b11e943b8aa6427517ecb5b32ddf6f56442f5d0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e51e4c425d3d16b57a2b1ce0d4fc2f585dc505d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="registering-ole-controls"></a>註冊 OLE 控制項
 OLE 控制項就像其他 OLE 伺服器物件，可以由其他 OLE 感知應用程式存取。 只要註冊控制項的類型程式庫和類別即可。  
@@ -45,7 +40,7 @@ OLE 控制項就像其他 OLE 伺服器物件，可以由其他 OLE 感知應用
   
  通常在控制項 DLL 實作 `AfxOleRegisterTypeLib` 時呼叫 `DllRegisterServer`。 同樣地，`AfxOleUnregisterTypeLib` 是由 `DllUnregisterServer` 呼叫。 通常 `AfxOleRegisterControlClass`、`AfxOleRegisterPropertyPageClass` 和 `AfxOleUnregisterClass` 是由控制項的 Class Factory 或屬性頁的 `UpdateRegistry` 成員函式呼叫。  
   
-##  <a name="afxoleregistercontrolclass"></a>AfxOleRegisterControlClass  
+##  <a name="afxoleregistercontrolclass"></a>  AfxOleRegisterControlClass  
  向 Windows 註冊資料庫註冊的控制項類別。  
   
 ```   
@@ -81,11 +76,11 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  `nRegFlags`  
  包含一或多個下列旗標：  
   
-- `afxRegInsertable`可讓控制項出現在插入物件對話方塊中的 OLE 物件。  
+- `afxRegInsertable` 可讓控制項出現在插入物件對話方塊中的 OLE 物件。  
   
-- `afxRegApartmentThreading`在 ThreadingModel 登錄中設定執行緒模型 = Apartment。  
+- `afxRegApartmentThreading` 在 ThreadingModel 登錄中設定執行緒模型 = Apartment。  
   
-- `afxRegFreeThreading`在 ThreadingModel 登錄中設定執行緒模型 = 可用。  
+- `afxRegFreeThreading` 在 ThreadingModel 登錄中設定執行緒模型 = 可用。  
   
      您可以結合兩個旗標`afxRegApartmentThreading`和`afxRegFreeThreading`設定 ThreadingModel = Both。 請參閱[InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390)執行緒模型註冊的詳細資訊的 Windows SDK 中。  
   
@@ -146,7 +141,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
  為非零，如果已註冊的控制項類別。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 這可讓 OLE 控制項感知的容器使用的控制項。 `AfxOleRegisterControlClass`使用控制項的名稱和位置，在系統上的更新登錄，也會設定此控制項支援在登錄中的執行緒模型。 如需詳細資訊，請參閱[技術附註 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，「 Apartment Model 執行緒中 OLE 控制項，」 和[相關處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK 中。  
+ 這可讓 OLE 控制項感知的容器使用的控制項。 `AfxOleRegisterControlClass` 使用控制項的名稱和位置，在系統上的更新登錄，也會設定此控制項支援在登錄中的執行緒模型。 如需詳細資訊，請參閱[技術附註 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，「 Apartment Model 執行緒中 OLE 控制項，」 和[相關處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK 中。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAxCtl#11](../../mfc/reference/codesnippet/cpp/registering-ole-controls_1.cpp)]  
@@ -160,7 +155,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="afxoleregisterpropertypageclass"></a>AfxOleRegisterPropertyPageClass  
+##  <a name="afxoleregisterpropertypageclass"></a>  AfxOleRegisterPropertyPageClass  
  向 Windows 註冊資料庫註冊屬性頁類別。  
   
 ```  
@@ -184,7 +179,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  `nRegFlags`  
  可能包含旗標：  
   
-- `afxRegApartmentThreading`在 ThreadingModel 登錄中設定執行緒模型 = Apartment。  
+- `afxRegApartmentThreading` 在 ThreadingModel 登錄中設定執行緒模型 = Apartment。  
   
 > [!NOTE]
 >  在 MFC 4.2 之前的 MFC 版本`int``nRegFlags`參數無法使用。 也請注意，`afxRegInsertable`旗標不是有效的選項屬性頁面，如果它設定，將會造成判斷提示在 MFC 中  
@@ -193,12 +188,12 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
  為非零，如果已註冊的控制項類別。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 這可讓 OLE 控制項感知的容器所使用的屬性頁。 `AfxOleRegisterPropertyPageClass`屬性頁面名稱和其位置在系統上的更新登錄，也會設定此控制項支援在登錄中的執行緒模型。 如需詳細資訊，請參閱[技術附註 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，「 Apartment Model 執行緒中 OLE 控制項，」 和[相關處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK 中。  
+ 這可讓 OLE 控制項感知的容器所使用的屬性頁。 `AfxOleRegisterPropertyPageClass` 屬性頁面名稱和其位置在系統上的更新登錄，也會設定此控制項支援在登錄中的執行緒模型。 如需詳細資訊，請參閱[技術附註 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)，「 Apartment Model 執行緒中 OLE 控制項，」 和[相關處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917)Windows SDK 中。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="afxoleregistertypelib"></a>AfxOleRegisterTypeLib  
+##  <a name="afxoleregistertypelib"></a>  AfxOleRegisterTypeLib  
  向 Windows 註冊資料庫註冊類型程式庫，並且允許其他 OLE 控制項感知的容器使用類型程式庫。  
   
 ```   
@@ -236,7 +231,7 @@ BOOL AfxOleRegisterTypeLib(
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="afxoleunregisterclass"></a>AfxOleUnregisterClass  
+##  <a name="afxoleunregisterclass"></a>  AfxOleUnregisterClass  
  從 Windows 註冊資料庫移除控制項或屬性頁類別項目。  
   
 ```   
@@ -256,7 +251,7 @@ BOOL AFXAPI AfxOleUnregisterClass(REFCLSID clsID, LPCSTR pszProgID);
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="afxoleunregistertypelib"></a>AfxOleUnregisterTypeLib  
+##  <a name="afxoleunregistertypelib"></a>  AfxOleUnregisterTypeLib  
  呼叫此函式可從 Windows 系統註冊資料庫移除類型程式庫項目。  
   
 ```   
@@ -276,5 +271,5 @@ BOOL AFXAPI AfxOleUnregisterTypeLib(REFGUID tlID);
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

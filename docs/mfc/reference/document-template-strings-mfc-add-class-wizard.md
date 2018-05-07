@@ -1,13 +1,10 @@
 ---
-title: "文件樣板字串 MFC 加入類別精靈 |Microsoft 文件"
-ms.custom: 
+title: 文件樣板字串 MFC 加入類別精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.simple.doctemp
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Add Class Wizard, document control strings
 ms.assetid: 14e1c834-5e79-4dbd-811f-ec8f0a9cdcb2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d37b1a886c28d267cd7a387317edce6bf7f3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81b14e0c397ac9179142627bca04b647c1db96db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>MFC 加入類別精靈、文件範本字串
 精靈的這個頁面只是為了符合下列準則的類別有：  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
  **文件類別**  
  表示專案的文件類別。 根據預設，這個類別是主應用程式的文件類別，如下所示[檢視產生的類別](../../mfc/reference/generated-classes-mfc-application-wizard.md)MFC 應用程式精靈頁面。 如果您在專案中加入了其他文件類別，您可以從清單中，選取另一個文件類別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 加入類別精靈](../../mfc/reference/mfc-add-class-wizard.md)   
  [MFC 類別](../../mfc/reference/adding-an-mfc-class.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)

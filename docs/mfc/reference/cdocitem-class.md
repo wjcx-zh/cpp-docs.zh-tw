@@ -1,12 +1,9 @@
 ---
-title: "CDocItem 類別 |Microsoft 文件"
-ms.custom: 
+title: CDocItem 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a4987554965674612eaf8d9aa78c659f7f28b75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocitem-class"></a>CDocItem 類別
 文件項目的基底類別，這些項目是文件資料的元件。  
@@ -50,7 +45,7 @@ class CDocItem : public CCmdTarget
 |[CDocItem::IsBlank](#isblank)|判斷項目是否包含任何資訊。|  
   
 ## <a name="remarks"></a>備註  
- `CDocItem`物件可用來代表用戶端和伺服器文件中的 OLE 項目。  
+ `CDocItem` 物件可用來代表用戶端和伺服器文件中的 OLE 項目。  
   
  如需詳細資訊，請參閱文章[容器： 實作容器](../../mfc/containers-implementing-a-container.md)。  
   
@@ -64,7 +59,7 @@ class CDocItem : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭：** afxole.h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
  呼叫此函式可取得包含項目的文件。  
   
 ```  
@@ -77,7 +72,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>備註  
  此函式在衍生類別中覆寫[COleClientItem](../../mfc/reference/coleclientitem-class.md)和[COleServerItem](../../mfc/reference/coleserveritem-class.md)，傳回的指標為[COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)物件。  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
  預設的序列化發生時由架構呼叫。  
   
 ```  
@@ -92,7 +87,7 @@ virtual BOOL IsBlank() const;
   
  如果您想要在序列化期間實作其他動作，請覆寫這個函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleDocument 類別](../../mfc/reference/coledocument-class.md)   

@@ -1,13 +1,10 @@
 ---
-title: "SQL: SQL 和 c + + 資料類型 (ODBC) |Microsoft 文件"
-ms.custom: 
+title: 'SQL: SQL 和 c + + 資料類型 (ODBC) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 14afd27887368f07610fb1315d7b573c09382c49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a137c4f648f518420d06f5cbd98ea189a030aee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL：SQL 和 C++ 資料類型 (ODBC)
 > [!NOTE]
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |**數值**|`CString` 1|  
 |**VARCHAR**|`CString`|  
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|  
-|**位元**|**BOOL**|  
+|**BIT**|**BOOL**|  
 |**TINYINT**|**BYTE**|  
 |**BIGINT**|`CString` 1|  
 |**二進位**|`CByteArray`|  
@@ -68,6 +63,6 @@ ms.lasthandoff: 12/21/2017
   
  如果您使用 MFC ODBC 資料庫類別和 Microsoft SQL Server ODBC 驅動程式，使用 ODBC 資料指標程式庫**ASSERT**可能會發生連同`CDBException`如果呼叫`CRecordset::Update`呼叫之後`CRecordset::Requery`。 請改為呼叫`CRecordset::Close`和`CRecordset::Open`而不是`CRecordset::Requery`。 另一個解決方案就是不要使用 ODBC 資料指標程式庫，因為 SQL Server 和 SQL Server ODBC 驅動程式提供原生支援資料指標的原生而且不需要 ODBC 資料指標程式庫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SQL](../../data/odbc/sql.md)   
  [SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

@@ -1,12 +1,9 @@
 ---
-title: "CDaoWorkspace 類別 |Microsoft 文件"
-ms.custom: 
+title: CDaoWorkspace 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoWorkspace
@@ -71,17 +68,15 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96cc8325ce8084d62f05283b424ead222bc55dd8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b249f8069ba12772d21d170b67236a5f013290ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 類別
 從單一使用者的登入到登出，管理受密碼保護的具名資料庫工作階段。  
@@ -197,7 +192,7 @@ class CDaoWorkspace : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-##  <a name="append"></a>CDaoWorkspace::Append  
+##  <a name="append"></a>  CDaoWorkspace::Append  
  呼叫此成員函式之後您呼叫,[建立](#create)。  
   
 ```  
@@ -211,7 +206,7 @@ virtual void Append();
   
  如需相關資訊，請參閱主題 < 附加方法 >，DAO [說明] 中。  
   
-##  <a name="begintrans"></a>CDaoWorkspace::BeginTrans  
+##  <a name="begintrans"></a>  CDaoWorkspace::BeginTrans  
  呼叫此成員函式，為起始交易。  
   
 ```  
@@ -229,7 +224,7 @@ void BeginTrans();
   
  如果您需要找出與另一個 ODBC 資料來源上的一個 ODBC 資料來源上的交易，請參閱[SetIsolateODBCTrans](#setisolateodbctrans)成員函式。  
   
-##  <a name="cdaoworkspace"></a>CDaoWorkspace::CDaoWorkspace  
+##  <a name="cdaoworkspace"></a>  CDaoWorkspace::CDaoWorkspace  
  建構 `CDaoWorkspace` 物件。  
   
 ```  
@@ -247,7 +242,7 @@ CDaoWorkspace();
   
  若要釋放工作區和其所包含的物件，呼叫工作區中物件的[關閉](#close)成員函式。  
   
-##  <a name="close"></a>CDaoWorkspace::Close  
+##  <a name="close"></a>  CDaoWorkspace::Close  
  呼叫此成員函式，以關閉工作區物件。  
   
 ```  
@@ -264,7 +259,7 @@ virtual void Close();
   
  如需相關資訊，請參閱主題 < 關閉方法 >，DAO [說明] 中。  
   
-##  <a name="committrans"></a>CDaoWorkspace::CommitTrans  
+##  <a name="committrans"></a>  CDaoWorkspace::CommitTrans  
  呼叫此成員函式，認可的交易，儲存的編輯和更新的群組工作區中的一個或多個資料庫。  
   
 ```  
@@ -282,7 +277,7 @@ void CommitTrans();
 > [!NOTE]
 >  這不是兩階段認可機制。 如果一項更新無法認可，其他人仍會認可。  
   
-##  <a name="compactdatabase"></a>CDaoWorkspace::CompactDatabase  
+##  <a name="compactdatabase"></a>  CDaoWorkspace::CompactDatabase  
  呼叫此成員函式壓縮指定的 Microsoft Jet (。MDB) 資料庫。  
   
 ```  
@@ -375,7 +370,7 @@ static void PASCAL CompactDatabase(
   
  如需壓縮資料庫的詳細資訊，請參閱主題 < CompactDatabase 方法 >，DAO [說明] 中。  
   
-##  <a name="create"></a>CDaoWorkspace::Create  
+##  <a name="create"></a>  CDaoWorkspace::Create  
  呼叫此成員函式，建立新的 DAO 工作區物件並將它與 MFC 關聯`CDaoWorkspace`物件。  
   
 ```  
@@ -406,7 +401,7 @@ virtual void Create(
   
  之後**建立**呼叫時，工作區物件處於開啟狀態，可供使用。 您不會呼叫**開啟**之後**建立**。 您不會呼叫**建立**如果工作區已存在於工作區集合。 **建立**初始化 database engine，如果它不已經初始化應用程式。  
   
-##  <a name="getdatabasecount"></a>CDaoWorkspace::GetDatabaseCount  
+##  <a name="getdatabasecount"></a>  CDaoWorkspace::GetDatabaseCount  
  呼叫此成員函式擷取的工作區的資料庫集合中的 DAO 資料庫物件數目，在工作區中開啟的資料庫數目。  
   
 ```  
@@ -417,9 +412,9 @@ short GetDatabaseCount();
  開啟工作區中的資料庫數目。  
   
 ### <a name="remarks"></a>備註  
- `GetDatabaseCount`如果您要重複使用工作區的資料庫集合中的所有已定義資料庫，相當有用。 若要取得集合中指定資料庫的相關資訊，請參閱[GetDatabaseInfo](#getdatabaseinfo)。 通常是用來呼叫`GetDatabaseCount`開啟資料庫的數目，然後使用該數字當做迴圈索引來重複呼叫`GetDatabaseInfo`。  
+ `GetDatabaseCount` 如果您要重複使用工作區的資料庫集合中的所有已定義資料庫，相當有用。 若要取得集合中指定資料庫的相關資訊，請參閱[GetDatabaseInfo](#getdatabaseinfo)。 通常是用來呼叫`GetDatabaseCount`開啟資料庫的數目，然後使用該數字當做迴圈索引來重複呼叫`GetDatabaseInfo`。  
   
-##  <a name="getdatabaseinfo"></a>CDaoWorkspace::GetDatabaseInfo  
+##  <a name="getdatabaseinfo"></a>  CDaoWorkspace::GetDatabaseInfo  
  呼叫此成員函式，以取得各種資料庫中開啟工作區的相關資訊。  
   
 ```  
@@ -445,11 +440,11 @@ void GetDatabaseInfo(
  `dwInfoOptions`  
  指定要擷取的資料庫有關的資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回：  
   
-- `AFX_DAO_PRIMARY_INFO`（預設值）名稱，可更新交易  
+- `AFX_DAO_PRIMARY_INFO` （預設值）名稱，可更新交易  
   
-- `AFX_DAO_SECONDARY_INFO`加上的主要資訊： 版本中，定序順序，查詢逾時  
+- `AFX_DAO_SECONDARY_INFO` 加上的主要資訊： 版本中，定序順序，查詢逾時  
   
-- `AFX_DAO_ALL_INFO`主要和次要資訊加上： 連接  
+- `AFX_DAO_ALL_INFO` 主要和次要資訊加上： 連接  
   
  `lpszName`  
  依名稱查閱資料庫物件名稱。 名稱是唯一名稱的新工作區中的物件最多 14 個字元的字串。  
@@ -459,7 +454,7 @@ void GetDatabaseInfo(
   
  如需在傳回的資訊的說明`dbinfo`，請參閱[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員`dwInfoOptions`。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
   
-##  <a name="getinipath"></a>CDaoWorkspace::GetIniPath  
+##  <a name="getinipath"></a>  CDaoWorkspace::GetIniPath  
  呼叫此成員函式，以取得 Microsoft Jet 資料庫的位置引擎的起始設定 Windows 登錄中。  
   
 ```  
@@ -474,7 +469,7 @@ static CString PASCAL GetIniPath();
   
  如需相關資訊，請參閱 「 IniPath 屬性 」 和 「 自訂 Windows 登錄設定的資料存取 」 DAO [說明] 中的主題。  
   
-##  <a name="getisolateodbctrans"></a>CDaoWorkspace::GetIsolateODBCTrans  
+##  <a name="getisolateodbctrans"></a>  CDaoWorkspace::GetIsolateODBCTrans  
  呼叫此成員函式可取得工作區的 DAO IsolateODBCTrans 屬性的目前值。  
   
 ```  
@@ -491,7 +486,7 @@ BOOL GetIsolateODBCTrans();
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 < IsolateODBCTrans 屬性 >。  
   
-##  <a name="getlogintimeout"></a>CDaoWorkspace::GetLoginTimeout  
+##  <a name="getlogintimeout"></a>  CDaoWorkspace::GetLoginTimeout  
  呼叫此成員函式可取得工作區的 DAO LoginTimeout 屬性的目前值。  
   
 ```  
@@ -508,7 +503,7 @@ static short PASCAL GetLoginTimeout();
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 < LoginTimeout 屬性 >。  
   
-##  <a name="getname"></a>CDaoWorkspace::GetName  
+##  <a name="getname"></a>  CDaoWorkspace::GetName  
  呼叫此成員函式，以取得 DAO 工作區物件基礎的使用者定義名稱`CDaoWorkspace`物件。  
   
 ```  
@@ -523,7 +518,7 @@ CString GetName();
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
   
-##  <a name="getusername"></a>CDaoWorkspace::GetUserName  
+##  <a name="getusername"></a>  CDaoWorkspace::GetUserName  
  呼叫此成員函式可取得工作區的擁有者的名稱。  
   
 ```  
@@ -538,7 +533,7 @@ CString GetUserName();
   
  如需呼叫 DAO 直接管理，請參閱[技術提示 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 使用者名稱屬性 」。  
   
-##  <a name="getversion"></a>CDaoWorkspace::GetVersion  
+##  <a name="getversion"></a>  CDaoWorkspace::GetVersion  
  呼叫此成員函式可判斷在使用 Microsoft Jet 資料庫引擎的版本。  
   
 ```  
@@ -553,7 +548,7 @@ static CString PASCAL GetVersion();
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 「 版本屬性 」。  
   
-##  <a name="getworkspacecount"></a>CDaoWorkspace::GetWorkspaceCount  
+##  <a name="getworkspacecount"></a>  CDaoWorkspace::GetWorkspaceCount  
  呼叫此成員函式可擷取的 DAO 資料庫引擎的工作區集合中的工作區中物件數目。  
   
 ```  
@@ -564,9 +559,9 @@ short GetWorkspaceCount();
  工作區集合中的開啟工作區數目。  
   
 ### <a name="remarks"></a>備註  
- 這個計數不包含任何開啟的工作區，不會附加至集合。 `GetWorkspaceCount`如果您要重複使用工作區集合中所有已定義的工作區，相當實用。 若要取得集合中指定的工作區的相關資訊，請參閱[GetWorkspaceInfo](#getworkspaceinfo)。 通常是用來呼叫`GetWorkspaceCount`開啟的工作區的數目，然後使用該數字當做迴圈索引來重複呼叫`GetWorkspaceInfo`。  
+ 這個計數不包含任何開啟的工作區，不會附加至集合。 `GetWorkspaceCount` 如果您要重複使用工作區集合中所有已定義的工作區，相當實用。 若要取得集合中指定的工作區的相關資訊，請參閱[GetWorkspaceInfo](#getworkspaceinfo)。 通常是用來呼叫`GetWorkspaceCount`開啟的工作區的數目，然後使用該數字當做迴圈索引來重複呼叫`GetWorkspaceInfo`。  
   
-##  <a name="getworkspaceinfo"></a>CDaoWorkspace::GetWorkspaceInfo  
+##  <a name="getworkspaceinfo"></a>  CDaoWorkspace::GetWorkspaceInfo  
  呼叫此成員函式，以取得各種相關的工作區中開啟工作階段中的資訊。  
   
 ```  
@@ -592,11 +587,11 @@ void GetWorkspaceInfo(
  `dwInfoOptions`  
  指定要擷取的工作區的相關資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回：  
   
-- `AFX_DAO_PRIMARY_INFO`（預設值）名稱  
+- `AFX_DAO_PRIMARY_INFO` （預設值）名稱  
   
-- `AFX_DAO_SECONDARY_INFO`加上的主要資訊： 使用者名稱  
+- `AFX_DAO_SECONDARY_INFO` 加上的主要資訊： 使用者名稱  
   
-- `AFX_DAO_ALL_INFO`主要和次要資訊加上： 隔離 ODBCTrans  
+- `AFX_DAO_ALL_INFO` 主要和次要資訊加上： 隔離 ODBCTrans  
   
  `lpszName`  
  依名稱查閱工作區中物件的名稱。 名稱是唯一名稱的新工作區中的物件最多 14 個字元的字串。  
@@ -604,7 +599,7 @@ void GetWorkspaceInfo(
 ### <a name="remarks"></a>備註  
  如需在傳回的資訊的說明`wkspcinfo`，請參閱[CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員`dwInfoOptions`。 當您要求一個層級的資訊時，您會取得先前的層級的資訊。  
   
-##  <a name="idle"></a>CDaoWorkspace::Idle  
+##  <a name="idle"></a>  CDaoWorkspace::Idle  
  呼叫**閒置**提供資料庫引擎執行的背景工作，可能不是最新因為密集資料處理的機會。  
   
 ```  
@@ -627,7 +622,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
   
  如需相關資訊，請參閱主題 < 閒置方法 >，DAO [說明] 中。  
   
-##  <a name="isopen"></a>CDaoWorkspace::IsOpen  
+##  <a name="isopen"></a>  CDaoWorkspace::IsOpen  
  呼叫此成員函式，以判斷是否`CDaoWorkspace`物件是否開啟 — 也就是是否 MFC 物件已初始化呼叫[開啟](#open)或呼叫[建立](#create)。  
   
 ```  
@@ -640,7 +635,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>備註  
  您可以呼叫任何成員函式的工作區中處於開啟狀態。  
   
-##  <a name="m_pdaoworkspace"></a>CDaoWorkspace::m_pDAOWorkspace  
+##  <a name="m_pdaoworkspace"></a>  CDaoWorkspace::m_pDAOWorkspace  
  基礎的 DAO 工作區中物件的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -648,7 +643,7 @@ BOOL IsOpen() const;
   
  直接存取 DAO 物件的相關資訊，請參閱[技術提示 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)。  
   
-##  <a name="open"></a>CDaoWorkspace::Open  
+##  <a name="open"></a>  CDaoWorkspace::Open  
  明確地開啟 DAO 的預設工作區相關聯的工作區物件。  
   
 ```  
@@ -676,7 +671,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 |[GetIniPath](#getinipath)|[閒置](#idle)|[SetIniPath](#setinipath)|  
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|  
   
-##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase  
+##  <a name="repairdatabase"></a>  CDaoWorkspace::RepairDatabase  
  如果您要嘗試修復損毀的資料庫存取 Microsoft Jet 資料庫引擎，請呼叫此成員函式。  
   
 ```  
@@ -697,7 +692,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
   
  如需修復資料庫的詳細資訊，請參閱主題 < RepairDatabase 方法 >，DAO [說明] 中。  
   
-##  <a name="rollback"></a>CDaoWorkspace::Rollback  
+##  <a name="rollback"></a>  CDaoWorkspace::Rollback  
  呼叫此成員函式來結束目前的交易和工作區中的所有資料庫都還原至其條件，才能開始交易。  
   
 ```  
@@ -714,7 +709,7 @@ void Rollback();
 > [!NOTE]
 >  當您開始交易時，database engine 會記錄其作業中保留在工作站上 TEMP 環境變數所指定的目錄中的檔案。 如果交易記錄檔會耗盡您的暫存磁碟機上可用的存放裝置，database engine 將會導致擲回的 MFC `CDaoException` （DAO 錯誤 2004年）。 此時，如果您呼叫**CommitTrans**、 不定數目的作業就無法認可，但其餘未完成的作業都會遺失，且必須重新啟動作業。 呼叫**復原**釋出交易記錄檔，並回復在交易中的所有作業。  
   
-##  <a name="setdefaultpassword"></a>CDaoWorkspace::SetDefaultPassword  
+##  <a name="setdefaultpassword"></a>  CDaoWorkspace::SetDefaultPassword  
  呼叫此成員函式設定工作區中建立的物件是不需要特定密碼時，會使用 database engine 的預設密碼。  
   
 ```  
@@ -740,7 +735,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
   
  如需安全性相關資訊，請參閱主題 DAO [說明] 中的 < 權限屬性 >。 如需相關資訊，請參閱 「 DefaultPassword 屬性 」 和 「 DefaultUser 屬性 」 DAO [說明] 中的主題。  
   
-##  <a name="setdefaultuser"></a>CDaoWorkspace::SetDefaultUser  
+##  <a name="setdefaultuser"></a>  CDaoWorkspace::SetDefaultUser  
  呼叫此成員函式設定工作區會建立一個物件沒有特定的使用者名稱時，會使用 database engine 的預設使用者名稱。  
   
 ```  
@@ -749,7 +744,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
 ### <a name="parameters"></a>參數  
  `lpszDefaultUser`  
- 預設的使用者名稱。 使用者名稱可以是 1-20 個字元，並將包含字母字元、 重音的字元、 數字、 空格和符號，除了:"（引號） / （斜線），\ （反斜線） \[ \] （括號）: （冒號），&#124;（管線）， \< (較少-符號)，> (大於-符號)、 + （加號） = （等於符號），;（分號），（逗號），（問號） * （星號），前置空格和控制字元 (ASCII 00 到 ASCII 31)。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 使用者名稱屬性 」。  
+ 預設的使用者名稱。 使用者名稱可以是 1-20 個字元，並將包含字母字元、 重音的字元、 數字、 空格和符號，除了:"（引號） / （斜線），\ （反斜線） \[ \] （括號）: （冒號）， &#124; (管道） \< (較少-符號)，> (大於-符號)、 + （加號） = （等於符號），;（分號），（逗號），（問號） * （星號），前置空格和控制字元 (ASCII 00 到 ASCII 31)。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 使用者名稱屬性 」。  
   
 ### <a name="remarks"></a>備註  
  在呼叫之後，您建立新的工作區適用於您所設定的預設使用者名稱。 當您建立後續的工作區時，您不需要指定使用者名稱中的[建立](#create)呼叫。  
@@ -766,7 +761,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
  如需相關資訊，請參閱 「 DefaultUser 屬性 」 和 「 DefaultPassword 屬性 」 DAO [說明] 中的主題。  
   
-##  <a name="setinipath"></a>CDaoWorkspace::SetIniPath  
+##  <a name="setinipath"></a>  CDaoWorkspace::SetIniPath  
  呼叫此成員函式可指定 Microsoft Jet 資料庫引擎的 Windows 登錄設定的位置。  
   
 ```  
@@ -781,11 +776,11 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
  呼叫`SetIniPath`只有在必須指定特殊的設定。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < IniPath 屬性 >。  
   
 > [!NOTE]
->  呼叫`SetIniPath`應用程式在安裝期間，不應用程式執行時。 `SetIniPath`必須在呼叫之前您開啟任何工作區、 資料庫或資料錄集。否則，MFC 會擲回例外狀況。  
+>  呼叫`SetIniPath`應用程式在安裝期間，不應用程式執行時。 `SetIniPath` 必須在呼叫之前您開啟任何工作區、 資料庫或資料錄集。否則，MFC 會擲回例外狀況。  
   
  若要以使用者提供的登錄設定來設定 database engine，您可以使用這項機制。 這個屬性的範圍僅限於您的應用程式，而且無法變更不需要重新啟動您的應用程式。  
   
-##  <a name="setisolateodbctrans"></a>CDaoWorkspace::SetIsolateODBCTrans  
+##  <a name="setisolateodbctrans"></a>  CDaoWorkspace::SetIsolateODBCTrans  
  呼叫此成員函式可設定的工作區的 DAO IsolateODBCTrans 屬性值。  
   
 ```  
@@ -801,7 +796,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
   
  某些 ODBC 伺服器，例如 Microsoft SQL Server，不允許在單一連接上的交易同時。 如果您需要有一個以上一次擱置中對這類資料庫的交易，IsolateODBCTrans 屬性設定為**TRUE**上每個工作區，只要您將它開啟。 這會強制每個工作區的個別 ODBC 連接。  
   
-##  <a name="setlogintimeout"></a>CDaoWorkspace::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>  CDaoWorkspace::SetLoginTimeout  
  呼叫此成員函式可設定的工作區的 DAO LoginTimeout 屬性值。  
   
 ```  
@@ -819,7 +814,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 < LoginTimeout 屬性 >。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDaoDatabase 類別](../../mfc/reference/cdaodatabase-class.md)   

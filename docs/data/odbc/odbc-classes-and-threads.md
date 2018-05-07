@@ -1,13 +1,10 @@
 ---
-title: "ODBC 類別和執行緒 |Microsoft 文件"
-ms.custom: 
+title: ODBC 類別和執行緒 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d1d922dfc34fa3e5530eca77a6501ad3e331fc8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dedd1f03bf14e0513f9f76a1e292b9180e4d60db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC 類別和執行緒
 從 MFC 4.2 開始，沒有多執行緒 MFC ODBC 類別的支援。 不過請注意，MFC 不提供多執行緒支援適用於 DAO 類別。  
@@ -40,6 +35,6 @@ ms.lasthandoff: 12/21/2017
   
  如需有關建立多執行緒應用程式的詳細資訊，請參閱[多執行緒主題](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

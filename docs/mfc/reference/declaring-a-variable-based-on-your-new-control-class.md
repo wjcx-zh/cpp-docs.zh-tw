@@ -1,13 +1,10 @@
 ---
-title: "新的控制項類別宣告變數根據 |Microsoft 文件"
-ms.custom: 
+title: 新的控制項類別宣告變數根據 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.control.variable
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa98f815d9f9322c11d4256c13c0c7a42b4ab66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 677006d441c940f478b3d23744d1057667307e1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>根據新控制項類別來宣告變數
 當您建立 MFC 控制項類別之後時，您可以宣告變數，它為基礎。 若要提供新的變數的內容，您必須開啟對話方塊編輯器，並編輯您要重複使用控制項的對話方塊。 此外，對話方塊中，必須已有與其相關聯的類別。 如需使用對話方塊編輯器中的資訊，請參閱[對話方塊編輯器](../../windows/dialog-editor.md)。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 10. 按一下 [確定 **Deploying Office Solutions**]。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   

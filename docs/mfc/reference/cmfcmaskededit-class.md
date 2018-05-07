@@ -1,12 +1,9 @@
 ---
-title: "CMFCMaskedEdit 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCMaskedEdit 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMaskedEdit
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0ada987b3226d901c3bf01236c2a593c2e36f51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 類別
 `CMFCMaskedEdit`類別支援遮罩的編輯控制項，會驗證使用者輸入，根據遮罩，並顯示根據範本驗證的結果。  
@@ -118,7 +113,7 @@ class CMFCMaskedEdit : public CEdit
 ## <a name="requirements"></a>需求  
  **標頭：** afxmaskededit.h  
   
-##  <a name="disablemask"></a>CMFCMaskedEdit::DisableMask  
+##  <a name="disablemask"></a>  CMFCMaskedEdit::DisableMask  
  驗證使用者輸入停用。  
   
 ```  
@@ -128,7 +123,7 @@ void DisableMask();
 ### <a name="remarks"></a>備註  
  如果已停用使用者輸入的驗證，遮罩的編輯控制項的行為方式與標準編輯控制項。  
   
-##  <a name="enablegetmaskedcharsonly"></a>CMFCMaskedEdit::EnableGetMaskedCharsOnly  
+##  <a name="enablegetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableGetMaskedCharsOnly  
  指定是否`GetWindowText`方法會擷取不顯示字元的字元。  
   
 ```  
@@ -137,12 +132,12 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要指定[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法擷取只遮罩字元。`FALSE`指定方法擷取整個文字。 預設值是 `TRUE`。  
+ `TRUE` 若要指定[CMFCMaskedEdit::GetWindowText](#getwindowtext)方法擷取只遮罩字元。`FALSE`指定方法擷取整個文字。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
  您可以使用這個方法來啟用擷取不顯示字元的字元。 然後建立對應至電話號碼，例如 (425) 555-0187 遮罩的編輯控制項。 如果您呼叫`GetWindowText`方法，它會傳回"4255550187"。 如果您停用擷取不顯示字元的字元，`GetWindowText`方法會傳回編輯控制項，例如"(425) 555-0187 」 中所顯示的文字。  
   
-##  <a name="enablemask"></a>CMFCMaskedEdit::EnableMask  
+##  <a name="enablemask"></a>  CMFCMaskedEdit::EnableMask  
  初始化遮罩編輯控制項。  
   
 ```  
@@ -164,7 +159,7 @@ void EnableMask(
  架構可以代替使用者輸入中每個無效字元的預設字元。 這個參數的預設值為底線 ('_')。  
   
  [輸入] `lpszValid`  
- 字串，包含一組有效的字元。 `NULL`表示所有字元都都有效。 此參數的預設值為 `NULL`。  
+ 字串，包含一組有效的字元。 `NULL` 表示所有字元都都有效。 此參數的預設值為 `NULL`。  
   
 ### <a name="remarks"></a>備註  
  若要建立的遮罩遮罩的編輯控制項中使用這個方法。 自`CMFCMaskedEdit`類別並覆寫[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)方法，以自己的程式碼適用於自訂遮罩處理。  
@@ -182,7 +177,7 @@ void EnableMask(
 |一個|英數字元或空格。|  
 |*|可列印的字元。|  
   
-##  <a name="enableselectbygroup"></a>CMFCMaskedEdit::EnableSelectByGroup  
+##  <a name="enableselectbygroup"></a>  CMFCMaskedEdit::EnableSelectByGroup  
  指定遮罩的編輯控制項是否允許使用者選取的特定群組的輸入或所有的輸入。  
   
 ```  
@@ -191,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要選取群組。`FALSE`選取整個文字。 預設值是 `TRUE`。  
+ `TRUE` 若要選取群組。`FALSE`選取整個文字。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
  您可以使用此函式來指定遮罩的編輯控制項是否允許使用者選取的群組或整個文字。  
@@ -214,7 +209,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  如果選取項目依群組已啟用，使用者可以擷取只"425"、"555，"或"0187"字串群組。 如果群組選取項目已停用使用者可以擷取的電話號碼的全部文字: 「 (425) 555-0187"。  
   
-##  <a name="enablesetmaskedcharsonly"></a>CMFCMaskedEdit::EnableSetMaskedCharsOnly  
+##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
  指定針對只不顯示字元的字元，或整個遮罩，是否驗證文字。  
   
 ```  
@@ -223,9 +218,9 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要驗證使用者輸入只遮罩字元;`FALSE`整個遮罩對其進行驗證。 預設值是 `TRUE`。  
+ `TRUE` 若要驗證使用者輸入只遮罩字元;`FALSE`整個遮罩對其進行驗證。 預設值是 `TRUE`。  
   
-##  <a name="getwindowtext"></a>CMFCMaskedEdit::GetWindowText  
+##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  擷取驗證遮罩的編輯控制項中的文字。  
   
 ```  
@@ -254,7 +249,7 @@ void GetWindowText(CString& rstrString) const;
   
  這個方法會重新定義[CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext)。  
   
-##  <a name="ismaskedchar"></a>CMFCMaskedEdit::IsMaskedChar  
+##  <a name="ismaskedchar"></a>  CMFCMaskedEdit::IsMaskedChar  
  由架構呼叫以驗證指定的字元，針對對應的遮罩字元。  
   
 ```  
@@ -271,12 +266,12 @@ virtual BOOL IsMaskedChar(
  遮罩字串中的對應字元。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果`chChar`參數是所允許的字元類型`chMaskChar`參數，否則`FALSE`。  
+ `TRUE` 如果`chChar`參數是所允許的字元類型`chMaskChar`參數，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  覆寫此方法以驗證您自己的輸入的字元。 如需遮罩字元的詳細資訊，請參閱[CMFCMaskedEdit::EnableMask](#enablemask)方法。  
   
-##  <a name="setvalidchars"></a>CMFCMaskedEdit::SetValidChars  
+##  <a name="setvalidchars"></a>  CMFCMaskedEdit::SetValidChars  
  指定的使用者可以輸入的有效字元的字串。  
   
 ```  
@@ -285,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
 ### <a name="parameters"></a>參數  
  [輸入] `lpszValid`  
- 包含一組有效的輸入字元的字串。 `NULL`表示所有字元都都有效。 此參數的預設值為 `NULL`。  
+ 包含一組有效的輸入字元的字串。 `NULL` 表示所有字元都都有效。 此參數的預設值為 `NULL`。  
   
 ### <a name="remarks"></a>備註  
  使用這個方法來定義有效的字元清單。 輸入的字元不在此清單中，如果遮罩的編輯控制項不會接受它。  
@@ -294,7 +289,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
  `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
   
-##  <a name="setwindowtext"></a>CMFCMaskedEdit::SetWindowText  
+##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
  遮罩的編輯控制項中顯示提示。  
   
 ```  
@@ -310,7 +305,7 @@ void SetWindowText(LPCTSTR lpszString);
   
  這個方法會重新定義[CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CEdit 類別](../../mfc/reference/cedit-class.md)

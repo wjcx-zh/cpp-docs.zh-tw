@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 （層級 4） C4701 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 （層級 4） C4701 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4701
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d001827c1d3e73ee4724aa52543231a43d41af5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c48df2f4ac3d5aad4ae82abf76dab4d96e8af89a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4701"></a>編譯器警告 (層級 4) C4701
 可能未初始化的區域變數 'name' 使用  
@@ -83,6 +78,6 @@ void main()
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器警告 （層級 4） C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)   
  [警告、 /sdl 和改善未初始化的變數偵測](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)

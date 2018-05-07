@@ -1,13 +1,10 @@
 ---
-title: "在 MFC 的 MAPI 支援 |Microsoft 文件"
-ms.custom: 
+title: 在 MFC 的 MAPI 支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6cc1670559354628127729724300399d5f003ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5d6498d1ecb20b47070cb26bf1a9d732340e266
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支援
 MFC 提供支援的 Microsoft 訊息應用程式介面 (MAPI) 類別中的子集**CDocument**。 具體來說， **CDocument**了郵件支援是否存在於使用者的電腦上的成員函式，如果是，允許標準命令 ID 是一個傳送郵件命令**ID_FILE_SEND_MAIL**. MFC 處理常式函式，此命令可讓使用者透過電子郵件將文件傳送。  
@@ -73,6 +68,6 @@ MFC 提供支援的 Microsoft 訊息應用程式介面 (MAPI) 類別中的子集
   
 -   [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MAPI](../mfc/mapi.md)
 

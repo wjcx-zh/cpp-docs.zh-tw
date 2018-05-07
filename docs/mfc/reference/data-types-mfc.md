@@ -1,13 +1,10 @@
 ---
-title: "資料類型 (MFC) |Microsoft 文件"
-ms.custom: 
+title: 資料類型 (MFC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LPCRECT
 - POSITION
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - LPARAM data type [MFC]
 - LPCSTR [MFC]
 ms.assetid: 8954848b-2c01-4a4f-abf5-ee55f6a05eeb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dd12aabee7e7284e2f3d12f81403b9b499e8e68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6cdd84b9ac7547ac7c0ae0a664de0f672c10202
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-types-mfc"></a>資料類型 (MFC)
 本主題列出最常在 MFC 程式庫中使用的資料類型。 大部分的資料類型與 Platform Software Development Kit (SDK) 中的相同，其他的則是 MFC 獨有。  
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
   
 -   **LPCRECT**常數 （不可修改） 的 32 位元指標`RECT`結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../mfc/class-library-overview.md)   
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,13 +1,10 @@
 ---
-title: "CDaoWorkspaceInfo 結構 |Microsoft 文件"
-ms.custom: 
+title: CDaoWorkspaceInfo 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoWorkspaceInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoWorkspaceInfo structure [MFC]
 - DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e154e2672a9410af979c2e5aa0f6fb0aba7a50f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd6979124916e8a9cc1dc723008491bababc0322
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 結構
 `CDaoWorkspaceInfo`結構包含定義資料存取物件 (DAO) 資料庫存取的工作區的相關資訊。  
@@ -55,11 +50,11 @@ struct CDaoWorkspaceInfo
 ## <a name="remarks"></a>備註  
  工作區是類別的物件[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)。 參考主要、 次要資料庫，且所有上述表示所傳回的資訊是如何[GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)類別中的成員函式`CDaoWorkspace`。  
   
- 所擷取的資訊[CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)成員函式會儲存在`CDaoWorkspaceInfo`結構。 `CDaoWorkspaceInfo`也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoWorkspaceInfo`物件。  
+ 所擷取的資訊[CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)成員函式會儲存在`CDaoWorkspaceInfo`結構。 `CDaoWorkspaceInfo` 也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoWorkspaceInfo`物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoWorkspace 類別](../../mfc/reference/cdaoworkspace-class.md)

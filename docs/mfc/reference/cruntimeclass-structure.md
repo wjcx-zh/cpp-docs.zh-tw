@@ -1,12 +1,9 @@
 ---
-title: "CRuntimeClass 結構 |Microsoft 文件"
-ms.custom: 
+title: CRuntimeClass 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRuntimeClass
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 結構
 每個類別衍生自`CObject`聯`CRuntimeClass`可用來取得在執行階段物件或其基底類別的相關資訊的結構。  
@@ -61,11 +56,11 @@ struct CRuntimeClass
 |[CRuntimeClass::m_wSchema](#m_wschema)|類別的結構描述編號。|  
   
 ## <a name="remarks"></a>備註  
- `CRuntimeClass`是一種結構，因此不需要基底類別。  
+ `CRuntimeClass` 是一種結構，因此不需要基底類別。  
   
  當需要檢查函式引數的實際類型時，或當您必須撰寫特殊用途的物件類別為基礎的程式碼，則在執行階段判斷物件類別的功能會非常有用。 C++ 語言並不直接支援執行階段類別資訊。  
   
- `CRuntimeClass`提供相關的 c + + 物件，例如指標的相關資訊`CRuntimeClass`基底類別和相關類別的 ASCII 類別名稱。 此結構也會實作可用來動態建立物件，指定的物件類型，使用熟悉的名稱，並判斷是否相關聯的類別會衍生自特定類別的各種功能。  
+ `CRuntimeClass` 提供相關的 c + + 物件，例如指標的相關資訊`CRuntimeClass`基底類別和相關類別的 ASCII 類別名稱。 此結構也會實作可用來動態建立物件，指定的物件類型，使用熟悉的名稱，並判斷是否相關聯的類別會衍生自特定類別的各種功能。  
   
  如需有關使用`CRuntimeClass`，請參閱文章[存取執行階段類別資訊](../../mfc/accessing-run-time-class-information.md)。  
   
@@ -75,7 +70,7 @@ struct CRuntimeClass
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="createobject"></a>CRuntimeClass::CreateObject  
+##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
  呼叫此函式可動態執行階段期間建立指定的類別。  
   
 ```  
@@ -99,7 +94,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="example"></a>範例  
   請參閱範例的[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="fromname"></a>CRuntimeClass::FromName  
+##  <a name="fromname"></a>  CRuntimeClass::FromName  
  呼叫此函式可擷取`CRuntimeClass`熟悉的名稱相關聯的結構。  
   
 ```  
@@ -118,7 +113,7 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
-##  <a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
+##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom  
  呼叫此函式來判斷是否發出呼叫的類別會衍生自指定的類別*pBaseClass*參數。  
   
 ```  
@@ -145,7 +140,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
-##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
  以 null 結束的字串，包含 ASCII 的類別名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -154,7 +149,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>範例  
   請參閱範例的[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
+##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
  物件，以位元組為單位的大小。  
   
 ### <a name="remarks"></a>備註  
@@ -163,7 +158,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>範例  
   請參閱範例的[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
+##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
  如果您的應用程式以靜態方式連結至 MFC，此資料成員包含的指標`CRuntimeClass`結構的基底類別。  
   
 ### <a name="remarks"></a>備註  
@@ -172,13 +167,13 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>範例  
   請參閱範例的[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
+##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
  預設建構函式來建立您的類別物件的函式指標。  
   
 ### <a name="remarks"></a>備註  
  此指標才會有效類別支援動態建立。否則，函數會傳回**NULL**。  
   
-##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
+##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass  
  如果您的應用程式使用 MFC 程式庫共用的 dll，此資料成員指向函式傳回`CRuntimeClass`結構的基底類別。  
   
 ### <a name="remarks"></a>備註  
@@ -187,7 +182,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>範例  
   請參閱範例的[IsDerivedFrom](#isderivedfrom)。  
   
-##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
+##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
  結構描述編號 (不可序列化的類別-1)。  
   
 ### <a name="remarks"></a>備註  
@@ -196,7 +191,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="example"></a>範例  
   請參閱範例的[IsDerivedFrom](#isderivedfrom)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CObject::GetRuntimeClass](../../mfc/reference/cobject-class.md#getruntimeclass)   
  [Cobject:: Iskindof](../../mfc/reference/cobject-class.md#iskindof)   

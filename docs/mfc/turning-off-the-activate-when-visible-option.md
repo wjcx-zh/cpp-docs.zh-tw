@@ -1,30 +1,25 @@
 ---
-title: "關閉可見時啟動選項 |Microsoft 文件"
-ms.custom: 
+title: 關閉可見時啟動選項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - Activate When Visible option [MFC]
 ms.assetid: 8f7ddc5a-a7a6-4da8-bcb9-1b569f0ecb48
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25521d75921b377730a7f9afac71f2a60c055216
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5625e7d05ea09188aaa2ea50ca629204a4bacc07
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>關閉可見時啟動選項
 控制項有兩種基本狀態： 作用中和非使用中。 傳統上，這些狀態已由控制項是否具有視窗辨別。 作用中的控制項具有視窗;非現用控制項不提供支援。 無視窗啟用引入，這樣的區別不再通用的但仍適用於許多控制項。  
@@ -37,6 +32,6 @@ ms.lasthandoff: 12/21/2017
   
  **OLEMISC_ACTIVATEWHENVISIBLE**旗標則會自動省略，如果您關閉**可見時啟動**選項[控制設定](../mfc/reference/control-settings-mfc-activex-control-wizard.md)MFC ActiveX 頁面當您建立您的控制項時，就會控制精靈。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)
 

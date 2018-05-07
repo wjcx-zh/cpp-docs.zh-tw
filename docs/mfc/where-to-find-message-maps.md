@@ -1,13 +1,10 @@
 ---
-title: "哪裡可以找到訊息對應 |Microsoft 文件"
-ms.custom: 
+title: 哪裡可以找到訊息對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - message classes [MFC], finding
 - message-map macros
 ms.assetid: bf59fbc8-b222-42d3-b5d3-0a79aa3cb923
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fa0b0b31d76c55851d69f4c528f11e7d23ff0d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19dfaec7d97bed560665fce25c2ddf2cc816a483
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="where-to-find-message-maps"></a>哪裡可以找到訊息對應
 當您使用應用程式精靈建立新的基本架構應用程式時，應用程式精靈會為您撰寫訊息對應，它會建立每個命令目標類別。 這包括衍生的應用程式、 文件、 檢視和框架視窗類別。 這些訊息對應部分已經有為特定的訊息和預先定義的命令，應用程式精靈所提供的項目，而有些是您將加入的處理常式的只是預留位置。  
@@ -42,6 +37,6 @@ ms.lasthandoff: 12/21/2017
   
  當您使用 [加入類別精靈] 建立新的類別時，它會提供訊息對應的類別。 或者，您可以建立訊息對應，以手動方式使用原始程式碼編輯器。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [架構如何搜尋訊息對應](../mfc/how-the-framework-searches-message-maps.md)
 

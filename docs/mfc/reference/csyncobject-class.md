@@ -1,12 +1,9 @@
 ---
-title: "CSyncObject 類別 |Microsoft 文件"
-ms.custom: 
+title: CSyncObject 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSyncObject
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0c5f53c80bed1814295fd190cf73675a269b32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csyncobject-class"></a>CSyncObject 類別
 在 Win32 中提供同步處理物件常見功能的純虛擬類別。  
@@ -84,7 +79,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxmt.h  
   
-##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
  建構具有所提供名稱的同步處理物件。  
   
 ```  
@@ -96,7 +91,7 @@ virtual ~CSyncObject();
  `pstrName`  
  物件的名稱。 如果**NULL**， *pstrName*將會是 null。  
   
-##  <a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>  CSyncObject::Lock  
  呼叫此函式可存取由同步處理物件所控制的資源。  
   
 ```  
@@ -113,14 +108,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>備註  
  如果在同步處理物件收到信號，`Lock`會成功傳回，而執行緒現在擁有的物件。 如果同步處理的物件未收到信號 （無法使用）`Lock`會等候同步處理物件發出訊號的中指定的毫秒數最*dwTimeOut*參數。 如果同步處理物件未不會被通知指定一段時間內，`Lock`傳回失敗。  
   
-##  <a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
  基礎的同步處理物件的控制代碼。  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="operator_handle"></a>CSyncObject::operator 控制代碼  
+##  <a name="operator_handle"></a>  CSyncObject::operator 控制代碼  
  使用此運算子，來取得控制代碼`CSyncObject`物件。  
   
 ```  
@@ -133,7 +128,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>備註  
  您可以直接呼叫 Windows Api 中使用控制代碼。  
   
-##  <a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>  CSyncObject::Unlock  
  宣告`Unlock`不含任何參數是純虛擬函式，並且必須被覆寫的所有類別衍生自`CSyncObject`。  
   
 ```  
@@ -155,7 +150,7 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ### <a name="remarks"></a>備註  
  預設實作的兩個參數宣告一律會傳回**TRUE**。 您可以呼叫此函式釋放呼叫的執行緒所擁有的同步處理物件的存取權。 第二個宣告提供同步處理物件，例如號誌，可讓多個受控制資源的存取。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

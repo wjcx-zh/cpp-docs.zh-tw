@@ -1,13 +1,10 @@
 ---
-title: "其他語言的精靈支援 |Microsoft 文件"
-ms.custom: 
+title: 其他語言的精靈支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.EastAsianLanguages
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - language support for MFC projects
 - projects [C++], language support
 ms.assetid: b653c673-0687-455c-885f-15d7e2f4149d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ef95c252621aa7f725098dfcd08c7b5b3620826
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75aafd7177c3799c17b75419fd5ab9f54af91d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wizard-support-for-other-languages"></a>其他語言的精靈支援
 當您安裝 Visual Studio 時，安裝應用程式偵測到您的系統中所列的地區設定，並安裝適當的語言或多個樣板的地區設定。 例如，如西歐地區設定，安裝程式會安裝英文、 法文、 義大利文、 西班牙文和德文。 這些語言會出現在**資源語言**清單[應用程式類型](../mfc/reference/application-type-mfc-application-wizard.md)MFC 應用程式精靈頁面。  
@@ -61,6 +56,6 @@ ms.lasthandoff: 12/21/2017
   
  此行為不同於系統的系統地區設定是語言版本的 Visual Studio 相同設定。 在此情況下，專案檔將 ANSI 中建立，在系統字碼頁。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)   
  [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)

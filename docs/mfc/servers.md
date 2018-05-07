@@ -1,13 +1,10 @@
 ---
-title: "伺服器 |Microsoft 文件"
-ms.custom: 
+title: 伺服器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d153d73889520deaff12b64da36567a8b9a4087
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers"></a>伺服器
 伺服器應用程式 （或元件應用程式） 建立 OLE 項目 （或元件） 供容器應用程式。 視覺化編輯伺服應用程式也支援視覺化編輯或就地啟用。 OLE 伺服器的另一種是[automation 伺服程式](../mfc/automation-servers.md)。 某些伺服器應用程式支援只建立內嵌項目。其他支援內嵌和連結項目的建立。 部分支援的連結，雖然這個狀況非常罕見。 所有伺服器應用程式必須都支援啟動容器應用程式，當使用者想要編輯的項目。 應用程式可以同時為容器和伺服器。 換句話說，它可以同時將資料合併至其文件，並建立可以做為項目合併至其他應用程式的文件的資料。  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [伺服器：使用者介面問題](../mfc/servers-user-interface-issues.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE](../mfc/ole-in-mfc.md)   
  [容器](../mfc/containers.md)   
  [容器： 進階的功能](../mfc/containers-advanced-features.md)   

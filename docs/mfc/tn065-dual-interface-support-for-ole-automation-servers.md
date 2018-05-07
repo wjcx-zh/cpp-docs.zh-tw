@@ -1,13 +1,10 @@
 ---
-title: "TN065: OLE automation 伺服程式的雙重介面支援 |Microsoft 文件"
-ms.custom: 
+title: 'TN065: OLE automation 伺服程式的雙重介面支援 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 3b1c0d30938529d9eb432e6171b546a42f87905a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：OLE Automation 伺服程式的雙重介面支援
 > [!NOTE]
@@ -309,7 +304,7 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
     m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll();* / DUAL_SUPPORT_START * / / 請確定已註冊型別程式庫，或雙重介面將無法運作。  
-AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); *// DUAL_SUPPORT_END  
+AfxOleRegisterTypeLib(AfxGetInstanceHandle()，LIBID_ACDual，_T("AutoClik.TLB"));* / DUAL_SUPPORT_END  
  ```  
   
 ## Modifying Project Build Settings to Accommodate Type Library Changes  
@@ -365,7 +360,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e->m_wCode + 0x200));
+ (e]-> [m_wCode + 0x200));
 
  ```  
   
@@ -390,25 +385,25 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
-    return pThis->ExternalAddRef();
+    METHOD_PROLOGUE （CAutoClickDoc、 SupportErrorInfo）   
+    傳回 pThis]-> [ExternalAddRef();
 
 }   
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE （CAutoClickDoc、 SupportErrorInfo）   
     傳回 pThis]-> [ExternalRelease();
 
 }   
 STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface （REFIID iid，LPVOID * ppvObj）   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE （CAutoClickDoc、 SupportErrorInfo）   
     傳回 pThis]-> [ExternalQueryInterface & iid (ppvObj）;
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo( REFIID iid)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo (REFIID iid)   
 {   
-    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE （CAutoClickDoc、 SupportErrorInfo）   
     傳回 (iid = = IID_IDualAClick) S_OK: S_FALSE。   
 }  
 ```  

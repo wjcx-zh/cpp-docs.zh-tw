@@ -1,13 +1,10 @@
 ---
-title: "更新狀態列窗格的文字 |Microsoft 文件"
-ms.custom: 
+title: 更新狀態列窗格的文字 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - panes, status bar
 - status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb0f9bdaa032340256eee4781bfd775767f62ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbb2f14f274be3c7282a897c271049fe46434f3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>更新狀態列窗格的文字
 本文說明如何變更 MFC 狀態列窗格中顯示的文字。 狀態列，類別的視窗物件[CStatusBar](../mfc/reference/cstatusbar-class.md) — 包含多個 「 窗格 」。 每個窗格是您可用來顯示資訊的 [狀態] 列的一個矩形區域。 比方說，許多應用程式會顯示在最右邊的窗格中按下 CAPS LOCK、 NUM LOCK 和其他按鍵的狀態。 應用程式通常也會顯示資訊文字中最左邊的窗格 （窗格 0），有時也稱為 「 訊息窗格 」。 例如，預設 MFC 狀態列會使用 [訊息] 窗格來顯示字串，用以說明目前所選取的功能表項目或工具列按鈕。 在圖[狀態列](../mfc/status-bar-implementation-in-mfc.md)顯示從應用程式精靈建立 MFC 應用程式的狀態列。  
@@ -86,6 +81,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [更新使用者介面物件 （如何更新程式狀況變更工具列按鈕和功能表項目）](../mfc/how-to-update-user-interface-objects.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 MFC 中的狀態列實作](../mfc/status-bar-implementation-in-mfc.md)   
  [CStatusBar 類別](../mfc/reference/cstatusbar-class.md)

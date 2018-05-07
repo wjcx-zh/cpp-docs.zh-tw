@@ -2,11 +2,8 @@
 title: CMap 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMap
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmap-class"></a>CMap 類別
 字典集合類別，這個類別會將唯一索引鍵對應至值。  
@@ -127,7 +122,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
  全域 helper 函式，這個類別呼叫的特定成員函式必須是可自訂的大部分的使用`CMap`類別。 請參閱[集合類別 Helper](../../mfc/reference/collection-class-helpers.md)的巨集和全域節`MFC Reference`。  
   
- `CMap`覆寫[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)支援序列化和傾印的項目。 如果對應會儲存至封存使用`Serialize`，每個地圖元素會依次序列化。 預設實作`SerializeElements`helper 函式沒有位元的寫入。 如需序列化的指標集合的項目資訊衍生自`CObject`或其他使用者定義型別，請參閱[如何： 建立類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。  
+ `CMap` 覆寫[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)支援序列化和傾印的項目。 如果對應會儲存至封存使用`Serialize`，每個地圖元素會依次序列化。 預設實作`SerializeElements`helper 函式沒有位元的寫入。 如需序列化的指標集合的項目資訊衍生自`CObject`或其他使用者定義型別，請參閱[如何： 建立類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。  
   
  如果您需要個別的項目對應 （索引鍵和值） 中的診斷傾印，您必須設定為 1 或更大的傾印內容的深度。  
   
@@ -143,7 +138,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ## <a name="requirements"></a>需求  
  **Header:** afxtempl.h  
   
-##  <a name="cmap"></a>CMap::CMap  
+##  <a name="cmap"></a>  CMap::CMap  
  建構空的對應。  
   
 ```  
@@ -160,7 +155,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="cpair"></a>CMap::CPair  
+##  <a name="cpair"></a>  CMap::CPair  
  包含索引鍵的值和相關聯之物件的值。  
   
 ### <a name="remarks"></a>備註  
@@ -177,7 +172,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>範例  
  如需使用方式的範例，請參閱範例的[CMap::PLookup](#plookup)。  
   
-##  <a name="getcount"></a>CMap::GetCount  
+##  <a name="getcount"></a>  CMap::GetCount  
  擷取在對應中的項目數。  
   
 ```  
@@ -190,7 +185,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::Lookup](#lookup)。  
   
-##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
+##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
  決定在對應的雜湊資料表中的項目數。  
   
 ```  
@@ -203,7 +198,7 @@ UINT GetHashTableSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
  擷取位於的地圖元素`rNextPosition`，然後更新`rNextPosition`指向對應中的下一個項目。  
   
 ```  
@@ -237,7 +232,7 @@ void GetNextAssoc(
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::SetAt](#setat)。  
   
-##  <a name="getsize"></a>CMap::GetSize  
+##  <a name="getsize"></a>  CMap::GetSize  
  傳回地圖元素的數目。  
   
 ```  
@@ -253,7 +248,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CMap::GetStartPosition  
+##  <a name="getstartposition"></a>  CMap::GetStartPosition  
  啟動對應反覆項目，藉由傳回**位置**可以傳遞至值`GetNextAssoc`呼叫。  
   
 ```  
@@ -269,7 +264,7 @@ POSITION GetStartPosition() const;
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::SetAt](#setat)。  
   
-##  <a name="inithashtable"></a>CMap::InitHashTable  
+##  <a name="inithashtable"></a>  CMap::InitHashTable  
  初始化雜湊表。  
   
 ```  
@@ -289,7 +284,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::Lookup](#lookup)。  
   
-##  <a name="isempty"></a>CMap::IsEmpty  
+##  <a name="isempty"></a>  CMap::IsEmpty  
  決定地圖是否為空白。  
   
 ```  
@@ -302,7 +297,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::RemoveAll](#removeall)。  
   
-##  <a name="lookup"></a>CMap::Lookup  
+##  <a name="lookup"></a>  CMap::Lookup  
  查閱對應到指定的索引鍵的值。  
   
 ```  
@@ -326,12 +321,12 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
  為非零，如果找不到項目。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- `Lookup`若要快速尋找完全符合指定的索引鍵的索引鍵的地圖元素，會使用雜湊演算法。  
+ `Lookup` 若要快速尋找完全符合指定的索引鍵的索引鍵的地圖元素，會使用雜湊演算法。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>CMap::operator]  
+##  <a name="operator_at"></a>  CMap::operator]  
  能方便替代`SetAt`成員函式。  
   
 ```  
@@ -356,7 +351,7 @@ VALUE& operator[](arg_key key);
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::Lookup](#lookup)。  
   
-##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
  傳回對應物件的第一個項目。  
   
 ```  
@@ -373,7 +368,7 @@ CPair* PGetFirstAssoc();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
  擷取所指的地圖元素`pAssocRec`。  
   
 ```  
@@ -395,7 +390,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::PGetFirstAssoc](#pgetfirstassoc)。  
   
-##  <a name="plookup"></a>CMap::PLookup  
+##  <a name="plookup"></a>  CMap::PLookup  
  尋找對應到指定的索引鍵的值。  
   
 ```  
@@ -416,7 +411,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>CMap::RemoveAll  
+##  <a name="removeall"></a>  CMap::RemoveAll  
  移除此對應中的所有值，藉由呼叫全域 helper 函式**DestructElements**。  
   
 ```  
@@ -429,7 +424,7 @@ void RemoveAll();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>CMap::RemoveKey  
+##  <a name="removekey"></a>  CMap::RemoveKey  
  查閱對應項目對應到提供的索引鍵。然後，如果找到機碼，移除項目。  
   
 ```  
@@ -452,7 +447,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="example"></a>範例  
  請參閱範例的[CMap::SetAt](#setat)。  
   
-##  <a name="setat"></a>CMap::SetAt  
+##  <a name="setat"></a>  CMap::SetAt  
  主要的方法將項目插入對應中。  
   
 ```  
@@ -478,7 +473,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)  

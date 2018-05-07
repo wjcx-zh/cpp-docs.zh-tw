@@ -1,13 +1,10 @@
 ---
-title: "記錄欄位交換函式 |Microsoft 文件"
-ms.custom: 
+title: 記錄欄位交換函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>資料錄欄位交換函式
 本主題列出資料錄欄位交換 （RFX，Bulk RFX 和 DFX） 使用資料錄集物件與其資料來源之間的資料傳輸自動化，以及執行其他作業資料的函數。  
@@ -438,7 +433,7 @@ void RFX_Text(
  主要用於參數。 整數，指出參數的資料類型。 ODBC 資料類型是表單**SQL_XXX**。  
   
  `nScale`  
- 指定 ODBC 類型之值的小數位數**SQL_DECIMAL**或**SQL_NUMERIC**。 `nScale`有用時才設定參數值。 如需詳細資訊，請參閱 「 有效位數、 小數位數、 長度和顯示大小 」 主題中的 < 附錄 D *ODBC SDK 程式設計人員參考*。  
+ 指定 ODBC 類型之值的小數位數**SQL_DECIMAL**或**SQL_NUMERIC**。 `nScale` 有用時才設定參數值。 如需詳細資訊，請參閱 「 有效位數、 小數位數、 長度和顯示大小 」 主題中的 < 附錄 D *ODBC SDK 程式設計人員參考*。  
   
 ### <a name="remarks"></a>備註  
  所有這些類型的資料來源中的資料對應的`CString`資料錄集中。  
@@ -1046,7 +1041,7 @@ void AFXAPI DFX_DateTime(
  資料類型之間對應**DAO_DATE** DAO 以及類型[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)資料錄集中。  
   
 > [!NOTE]
->  `COleDateTime`取代[CTime](../../atl-mfc-shared/reference/ctime-class.md)和**TIMESTAMP_STRUCT**針對此用途在 DAO 類別中。 `CTime`和**TIMESTAMP_STRUCT**都仍用於 ODBC 為基礎的資料存取的類別。  
+>  `COleDateTime` 取代[CTime](../../atl-mfc-shared/reference/ctime-class.md)和**TIMESTAMP_STRUCT**針對此用途在 DAO 類別中。 `CTime` 和**TIMESTAMP_STRUCT**都仍用於 ODBC 為基礎的資料存取的類別。  
   
 ### <a name="example"></a>範例  
  請參閱[DFX_Text](#dfx_text)。  
@@ -1165,7 +1160,7 @@ void AFXAPI DFX_LongBinary(
 >  您可以控制是否資料為雙重緩衝的預設設定[M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>備註  
- `DFX_LongBinary`提供 MFC ODBC 類別與相容性。 `DFX_LongBinary`函式會傳輸使用類別的二進位大型物件 (BLOB) 資料`CLongBinary`之間的欄位資料成員[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。 資料類型之間對應**DAO_BYTES** DAO 以及類型[CLongBinary](clongbinary-class.md)資料錄集中。  
+ `DFX_LongBinary` 提供 MFC ODBC 類別與相容性。 `DFX_LongBinary`函式會傳輸使用類別的二進位大型物件 (BLOB) 資料`CLongBinary`之間的欄位資料成員[CDaoRecordset](cdaorecordset-class.md)物件和資料行的資料來源上的記錄。 資料類型之間對應**DAO_BYTES** DAO 以及類型[CLongBinary](clongbinary-class.md)資料錄集中。  
   
 ### <a name="example"></a>範例  
  請參閱[DFX_Text](#dfx_text)。  
@@ -1206,7 +1201,7 @@ void AFXAPI DFX_Short(
  資料類型之間對應**DAO_I2** DAO 以及類型**簡短**資料錄集中。  
   
 > [!NOTE]
->  `DFX_Short`相當於[RFX_Int](#rfx_int) ODBC 為基礎的類別。  
+>  `DFX_Short` 相當於[RFX_Int](#rfx_int) ODBC 為基礎的類別。  
   
 ### <a name="example"></a>範例  
  請參閱[DFX_Text](#dfx_text)。  
@@ -1287,7 +1282,7 @@ void AFXAPI DFX_Text(
 >  您可以控制是否資料為雙重緩衝的預設設定[M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)。  
   
 ### <a name="remarks"></a>備註  
- 資料類型之間對應**DAO_CHAR**在 DAO 中 (或者，如果符號**_UNICODE**定義， **DAO_WCHAR**) 和型別[CString](../../atl-mfc-shared/reference/cstringt-class.md)中資料錄集。  n
+ 資料類型之間對應**DAO_CHAR**在 DAO 中 (或者，如果符號 **_UNICODE**定義， **DAO_WCHAR**) 和型別[CString](../../atl-mfc-shared/reference/cstringt-class.md)中資料錄集。  n
   
 ### <a name="example"></a>範例  
  此範例示範數個呼叫`DFX_Text`。 請注意也要在兩次呼叫[CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype)。 您必須撰寫的第一個呼叫`SetFieldType`及其**DFX**呼叫。 第二個呼叫以及其相關聯**DFX**呼叫通常所撰寫的程式碼精靈產生的類別。  
@@ -1311,7 +1306,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 ### <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)   
  [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)   

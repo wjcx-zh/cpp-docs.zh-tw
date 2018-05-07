@@ -1,29 +1,24 @@
 ---
-title: "使用者定義工具 |Microsoft 文件"
-ms.custom: 
+title: 使用者定義工具 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f0751a2cb3f78730ec948d737dc99b85c2e735
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3b755fc35c98652ab87231e9d8f58cde748bfc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-tools"></a>使用者定義類型
 MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的使用者指定的程式的特殊命令。 您可以使用自訂程序來管理使用者定義的工具。 不過，您無法使用此程序如果應用程式物件不衍生自[CWinAppEx 類別](../mfc/reference/cwinappex-class.md)。 如需有關自訂的詳細資訊，請參閱[MFC 自訂](../mfc/customization-for-mfc.md)。  
@@ -63,7 +58,7 @@ MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的
   
 3.  對於每個工具，來設定其文字標籤設定`CUserTool::m_strLabel`並設定其命令藉由呼叫`CUserTool::SetCommand`。 預設實作[CUserTool 類別](../mfc/reference/cusertool-class.md)從指定的呼叫中的程式會自動擷取可用的圖示`SetCommand`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 自訂](../mfc/customization-for-mfc.md)   
  [CUserTool 類別](../mfc/reference/cusertool-class.md)   
  [CUserToolsManager 類別](../mfc/reference/cusertoolsmanager-class.md)   

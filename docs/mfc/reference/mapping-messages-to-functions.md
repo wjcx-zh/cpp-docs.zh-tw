@@ -1,13 +1,10 @@
 ---
-title: "將訊息對應到函式 |Microsoft 文件"
-ms.custom: 
+title: 將訊息對應到函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.mapping.msg.function
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad36b249e601e15e25f32ef1ef7e6d5a28874cf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3388cd8e9a52ef9aacb427d66b027d793b08ca75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-messages-to-functions"></a>將訊息對應到函式
 [屬性] 視窗可讓您將訊息處理常式 （MFC 使用者介面類別的成員函式） 的繫結至您的應用程式資源所產生的訊息。 他們使用[MFC 訊息對應](../../mfc/messages-and-commands-in-the-framework.md)建立繫結。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  若要移除的訊息處理常式，請按兩下右欄中的處理常式，並選取\<刪除 >*HandlerName*。 函式的程式碼標記為註解。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   

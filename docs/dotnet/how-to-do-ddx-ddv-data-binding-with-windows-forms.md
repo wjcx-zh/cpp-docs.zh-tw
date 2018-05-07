@@ -1,31 +1,26 @@
 ---
-title: "如何： 執行 DDX DDV 資料繫結使用 Windows Form |Microsoft 文件"
-ms.custom: 
+title: 如何： 執行 DDX DDV 資料繫結使用 Windows Form |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9996fd10bad8578bd70739aa10b863bcea7f3c18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f6992aa0c7238d2dc89a8084c7b870dae23067a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：使用 Windows Form 執行 DDX/DDV 資料繫結
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)呼叫[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)若要建立的比對資源的控制項 id。 如果您使用`DDX_ManagedControl`如`CWinFormsControl`控制項 （在精靈產生的程式碼），您不應該呼叫`CreateManagedControl`明確地為相同的控制項。  
@@ -91,7 +86,7 @@ m_MyControl.GetControl()->textBox1->Text = "hello";
   
  您現在可以建置並執行應用程式。 請注意，在文字方塊中的任何文字將顯示快顯訊息方塊中的應用程式關閉時。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CWinFormsControl 類別](../mfc/reference/cwinformscontrol-class.md)   
  [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)   
  [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

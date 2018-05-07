@@ -1,13 +1,10 @@
 ---
-title: "CDaoIndexInfo 結構 |Microsoft 文件"
-ms.custom: 
+title: CDaoIndexInfo 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoIndexInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2617f8cb0d56098c0fef774dc56d56fa182e2482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 結構
 `CDaoIndexInfo`結構包含的資料存取物件 (DAO) 定義的索引物件的相關資訊。  
@@ -110,14 +105,14 @@ struct CDaoIndexInfo {
   
  不會由 MFC 類別表示索引物件。 相反地，DAO 物件類別的基礎 MFC 物件[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)包含稱為索引集合的索引物件的集合。 這些類別提供成員函式來存取索引資訊的個別項目，或者您可以存取它們全部與`CDaoIndexInfo`藉由呼叫物件`GetIndexInfo`包含物件的成員函式。  
   
- `CDaoIndexInfo`有一個建構函式和解構函式，才能正確地配置和解除配置中的索引欄位資訊`m_pFieldInfos`。  
+ `CDaoIndexInfo` 有一個建構函式和解構函式，才能正確地配置和解除配置中的索引欄位資訊`m_pFieldInfos`。  
   
- 所擷取的資訊`GetIndexInfo`tabledef 物件成員函式會儲存在`CDaoIndexInfo`結構。 呼叫`GetIndexInfo`包含 tabledef 物件的索引集合中儲存的索引物件的成員函式。 `CDaoIndexInfo`也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoIndexInfo`物件。  
+ 所擷取的資訊`GetIndexInfo`tabledef 物件成員函式會儲存在`CDaoIndexInfo`結構。 呼叫`GetIndexInfo`包含 tabledef 物件的索引集合中儲存的索引物件的成員函式。 `CDaoIndexInfo` 也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoIndexInfo`物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoTableDef::GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)
 

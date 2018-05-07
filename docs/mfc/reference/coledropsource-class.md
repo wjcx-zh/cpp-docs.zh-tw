@@ -1,12 +1,9 @@
 ---
-title: "COleDropSource 類別 |Microsoft 文件"
-ms.custom: 
+title: COleDropSource 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropSource
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486a236075ff33093b9a734d7f368e05ed29588e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledropsource-class"></a>COleDropSource 類別
 允許將資料拖曳到置放目標。  
@@ -79,14 +74,14 @@ class COleDropSource : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭：** afxole.h  
   
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource  
+##  <a name="coledropsource"></a>  COleDropSource::COleDropSource  
  建構 `COleDropSource` 物件。  
   
 ```  
 COleDropSource();
 ```  
   
-##  <a name="givefeedback"></a>COleDropSource::GiveFeedback  
+##  <a name="givefeedback"></a>  COleDropSource::GiveFeedback  
  由架構呼叫之後呼叫[COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover)或[COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter)。  
   
 ```  
@@ -97,15 +92,15 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
  `dropEffect`  
  通常指出項目會發生您想要向使用者顯示的效果，則卸除發生了此點與所選取的資料。 一般而言，這是最新的呼叫所傳回的值[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)或[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)。 它可以是下列一或多個項目：  
   
-- `DROPEFFECT_NONE`不允許卸除。  
+- `DROPEFFECT_NONE` 不允許卸除。  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` 執行複製作業。  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` 會執行移動作業。  
   
-- `DROPEFFECT_LINK`會建立已卸除的資料從原始資料的連結。  
+- `DROPEFFECT_LINK` 會建立已卸除的資料從原始資料的連結。  
   
-- `DROPEFFECT_SCROLL`拖曳捲軸作業即將發生或正在進行中的目標。  
+- `DROPEFFECT_SCROLL` 拖曳捲軸作業即將發生或正在進行中的目標。  
   
 ### <a name="return-value"></a>傳回值  
  傳回**DRAGDROP_S_USEDEFAULTCURSORS**如果已在進行中，拖曳**NOERROR**如果不是。  
@@ -115,7 +110,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
   
  如需詳細資訊，請參閱[IDropSource::GiveFeedback](http://msdn.microsoft.com/library/windows/desktop/ms693723)， [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)，和[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK 中。  
   
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag  
+##  <a name="onbegindrag"></a>  COleDropSource::OnBeginDrag  
  由呼叫發生事件時，framework 就可以開始拖曳作業，例如按下滑鼠左的按鈕。  
   
 ```  
@@ -132,7 +127,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ### <a name="remarks"></a>備註  
  如果您想要修改拖曳的處理序啟動的方式，請覆寫這個函式。 預設實作會擷取滑鼠，並會保持在拖放到模式，直到使用者按下滑鼠左鍵或右鍵按鈕或按 esc 鍵，此時它會釋放滑鼠按鈕。  
   
-##  <a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag  
+##  <a name="querycontinuedrag"></a>  COleDropSource::QueryContinueDrag  
  拖曳開始之後，此函式會重複呼叫架構直到取消或完成拖曳作業為止。  
   
 ```  
@@ -158,7 +153,7 @@ virtual SCODE QueryContinueDrag(
   
  因為經常呼叫此函式，它應該最佳化盡量。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   

@@ -1,12 +1,9 @@
 ---
-title: "multiset:: reference (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'multiset:: reference (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::reference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - reference member [STL/CLR]
 ms.assetid: fb2bf992-d410-4b93-b087-cf2ac4b12e87
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aca753688bd4c9f7761702581c087b567a355daa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc9642a739724f1cbbdbb8f2482ecd782c6ecacf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetreference-stlclr"></a>multiset::reference (STL/CLR)
 項目的參考類型。  
@@ -77,7 +72,7 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset:: const_reference (STL/CLR)](../dotnet/multiset-const-reference-stl-clr.md)   
  [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

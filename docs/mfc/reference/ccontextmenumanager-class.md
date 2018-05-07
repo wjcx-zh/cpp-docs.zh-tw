@@ -1,12 +1,9 @@
 ---
-title: "CContextMenuManager 類別 |Microsoft 文件"
-ms.custom: 
+title: CContextMenuManager 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CContextMenuManager
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38bfaec077501173fade6fa15fba3516cde534b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1eb3bb0d96723f14f6dec56853d52860f0568c03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 類別
 `CContextMenuManager`物件管理捷徑功能表，也稱為內容功能表。  
@@ -83,11 +78,11 @@ class CContextMenuManager : public CObject
 |[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|顯示指定的快顯功能表。 傳回選取的功能表命令的索引。|  
   
 ## <a name="remarks"></a>備註  
- `CContextMenuManager`管理捷徑功能表，並確定它們有一致的外觀。  
+ `CContextMenuManager` 管理捷徑功能表，並確定它們有一致的外觀。  
   
  您不應建立`CContextMenuManager`手動物件。 您的應用程式的架構建立`CContextMenuManager`物件。 不過，您應該呼叫[CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager)初始化您的應用程式的時間。 初始化 「 內容管理員 」 之後, 使用的方法[CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)取得您的應用程式的內容管理員的指標。  
   
- 您可以在執行階段建立快顯功能表，藉由呼叫`AddMenu`。 如果您想要顯示的功能表第一個接收使用者輸入的情況下，呼叫`ShowPopupMenu`。 `TrackPopupMenu`您想要建立功能表，並等候使用者輸入時使用。 `TrackPopupMenu`如果使用者已結束，而不選取任何項目會傳回選取的命令則為 0 索引。  
+ 您可以在執行階段建立快顯功能表，藉由呼叫`AddMenu`。 如果您想要顯示的功能表第一個接收使用者輸入的情況下，呼叫`ShowPopupMenu`。 `TrackPopupMenu` 您想要建立功能表，並等候使用者輸入時使用。 `TrackPopupMenu` 如果使用者已結束，而不選取任何項目會傳回選取的命令則為 0 索引。  
   
  `CContextMenuManager`也可以儲存及載入至 Windows 登錄其狀態。  
   
@@ -104,7 +99,7 @@ class CContextMenuManager : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxcontextmenumanager.h  
   
-##  <a name="addmenu"></a>CContextMenuManager::AddMenu  
+##  <a name="addmenu"></a>  CContextMenuManager::AddMenu  
  加入新的快顯功能表來[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)。  
   
 ```  
@@ -134,7 +129,7 @@ BOOL AddMenu(
 ### <a name="remarks"></a>備註  
  如果這個方法會失敗`uiMenuResId`無效，或者如果具有相同名稱的另一個功能表已存在於中`CContextMenuManager`。  
   
-##  <a name="ccontextmenumanager"></a>CContextMenuManager::CContextMenuManager  
+##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager  
  建構[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)物件。  
   
 ```  
@@ -144,7 +139,7 @@ CContextMenuManager();
 ### <a name="remarks"></a>備註  
  在大部分情況下，您不應建立`CContextMenuManager`手動。 您的應用程式的架構建立`CContextMenuManager`物件。 您應該呼叫[CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager)您的應用程式初始化期間。 若要取得內容管理員的指標，呼叫[CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager)。  
   
-##  <a name="getmenubyid"></a>CContextMenuManager::GetMenuById  
+##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById  
  傳回與指定的資源識別碼相關聯的功能表的控制代碼  
   
 ```  
@@ -158,7 +153,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ### <a name="return-value"></a>傳回值  
  相關的功能表的控制代碼或`NULL`找不到功能表時。  
   
-##  <a name="getmenubyname"></a>CContextMenuManager::GetMenuByName  
+##  <a name="getmenubyname"></a>  CContextMenuManager::GetMenuByName  
  傳回特定的功能表的控制代碼。  
   
 ```  
@@ -175,12 +170,12 @@ HMENU GetMenuByName(
  `UINT` 的指標。 這個參數會包含指定的功能表中，資源識別碼，如果找到。  
   
 ### <a name="return-value"></a>傳回值  
- 所指定的名稱相符的功能表的控制代碼`lpszName`。 `NULL`如果沒有呼叫功能表`lpszName`。  
+ 所指定的名稱相符的功能表的控制代碼`lpszName`。 `NULL` 如果沒有呼叫功能表`lpszName`。  
   
 ### <a name="remarks"></a>備註  
  如果此方法找到符合的功能表`lpszName`，`GetMenuByName`參數中儲存功能表資源 ID `puiOrigResID`。  
   
-##  <a name="getmenunames"></a>CContextMenuManager::GetMenuNames  
+##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames  
  傳回的功能表名稱加入至清單[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)。  
   
 ```  
@@ -191,7 +186,7 @@ void GetMenuNames(CStringList& listOfNames) const;
  [輸出] `listOfNames`  
  若要參考[CStringList](../../mfc/reference/cstringlist-class.md)參數。 這個方法會寫入此參數中的功能表名稱的清單。  
   
-##  <a name="loadstate"></a>CContextMenuManager::LoadState  
+##  <a name="loadstate"></a>  CContextMenuManager::LoadState  
  載入與相關聯的資訊[CContextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)從 Windows 登錄。  
   
 ```  
@@ -210,7 +205,7 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  使用方法[CContextMenuManager::SaveState](#savestate)登錄中儲存的快顯功能表。  
   
-##  <a name="resetstate"></a>CContextMenuManager::ResetState  
+##  <a name="resetstate"></a>  CContextMenuManager::ResetState  
  清除所有項目相關聯的捷徑功能表[CContextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)。  
   
 ```  
@@ -218,12 +213,12 @@ virtual BOOL ResetState();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功。`FALSE`如果發生失敗。  
+ `TRUE` 如果方法成功。`FALSE`如果發生失敗。  
   
 ### <a name="remarks"></a>備註  
  這個方法會清除快顯功能表，並將其從移除`CContextMenuManager`。  
   
-##  <a name="savestate"></a>CContextMenuManager::SaveState  
+##  <a name="savestate"></a>  CContextMenuManager::SaveState  
  將相關聯的資訊儲存[CContextMenuManager 類別](../../mfc/reference/ccontextmenumanager-class.md)至 Windows 登錄。  
   
 ```  
@@ -242,7 +237,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  使用方法[CContextMenuManager::LoadState](#loadstate)從登錄載入的快顯功能表。  
   
-##  <a name="setdontcloseactivemenu"></a>CContextMenuManager::SetDontCloseActiveMenu  
+##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu  
  控制項是否[CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md)時它會顯示新的快顯功能表關閉使用中的快顯功能表。  
   
 ```  
@@ -251,12 +246,12 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bSet`  
- 布林值參數可控制是否要關閉使用中的快顯功能表。 值為`TRUE`指出未關閉使用中的快顯功能表。 `FALSE`表示已關閉使用中的快顯功能表。  
+ 布林值參數可控制是否要關閉使用中的快顯功能表。 值為`TRUE`指出未關閉使用中的快顯功能表。 `FALSE` 表示已關閉使用中的快顯功能表。  
   
 ### <a name="remarks"></a>備註  
  根據預設，`CContextMenuManager`關閉使用中的快顯功能表。  
   
-##  <a name="showpopupmenu"></a>CContextMenuManager::ShowPopupMenu  
+##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu  
  顯示指定的快顯功能表。  
   
 ```  
@@ -312,7 +307,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
   
  如果參數`bAutoDestroy`是`FALSE`，您必須以手動方式呼叫繼承`DestroyMenu`方法，以釋放記憶體資源。 預設實作`ShowPopupMenu`不使用參數`bAutoDestroy`。 軟體係以供日後使用，或自訂類別衍生自`CContextMenuManager`類別。  
   
-##  <a name="trackpopupmenu"></a>CContextMenuManager::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu  
  顯示指定的捷徑功能表，並傳回所選的捷徑功能表命令的索引。  
   
 ```  
@@ -346,7 +341,7 @@ virtual UINT TrackPopupMenu(
 ### <a name="remarks"></a>備註  
  此方法做為強制回應的呼叫，顯示快顯功能表。 在使用者關閉快顯功能表，或選取命令之前，應用程式將不會繼續為下列一行程式碼中。 您可以使用顯示快顯功能表的替代方法是[CContextMenuManager::ShowPopupMenu](#showpopupmenu)。 該方法不是強制回應的呼叫，而且不會傳回選取的命令識別碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "轉散發 ODBC 元件給您的客戶 |Microsoft 文件"
-ms.custom: 
+title: 轉散發 ODBC 元件給您的客戶 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - components [C++]
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aad9f1dbd4542ad763e7303d9a750f1856208025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0427228b8fb3e852cf1d9ee66a10c9290b860b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>轉散發 ODBC 元件給您的客戶
 如果您將 ODBC 管理員程式的功能併入您的應用程式時，必須也要散發給您的使用者執行這些程式的檔案。 這些 ODBC 檔案位於 \OS\System 的目錄中的 Visual c + + CD-ROM。 Redistrb.wri 檔案和相同的目錄中的授權合約包含一份您可以重新發佈的 ODBC 檔案。  
@@ -46,6 +41,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [ODBC：直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 基本概念](../../data/odbc/odbc-basics.md)   
  [ODBC 管理員](../../data/odbc/odbc-administrator.md)

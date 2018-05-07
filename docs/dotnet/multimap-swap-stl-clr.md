@@ -1,12 +1,9 @@
 ---
-title: "multimap:: swap (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 'multimap:: swap (STL/CLR) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::swap
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - swap member [STL/CLR]
 ms.assetid: 198018d2-7814-4237-8ec3-5f3ea950e8af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7b708ef2abf41595fe7d5012a5df23165ce6dcd8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dda88c2c10079b622e81c1505d22fc2b5f3d00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapswap-stlclr"></a>multimap::swap (STL/CLR)
 交換兩個容器的內容。  
@@ -99,6 +94,6 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)

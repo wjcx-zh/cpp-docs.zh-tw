@@ -1,31 +1,26 @@
 ---
-title: "如何： 定義和使用類別和結構 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 如何： 定義和使用類別和結構 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a0a276854c9f2e27439c2c16e9299d4eaa9243d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8356d96b0193566814c0d52173a03a3a79d08d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>如何：定義與使用類別和結構 (C++/CLI)
 本文將說明如何定義與使用使用者定義的參考類型和實值類型，在 C + + /CLI。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  [解構函式與完成項](#BKMK_Destructors_and_finalizers)  
   
-##  <a name="BKMK_Object_instantiation"></a>物件具現化  
+##  <a name="BKMK_Object_instantiation"></a> 物件具現化  
  參考 (ref) 類型和實值類型可以只具現化 managed 堆積上、 不是在堆疊或原生堆積上。  
   
 ```  
@@ -105,7 +100,7 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Implicitly_abstract_classes"></a>隱含抽象類別  
+##  <a name="BKMK_Implicitly_abstract_classes"></a> 隱含抽象類別  
  *隱含抽象類別*無法具現化。 如果類別的基底類型是介面，且該類別未實作所有介面的成員函式，是隱含抽象類別。  
   
  如果您無法建構衍生自介面類別的物件，原因可能是隱含抽象類別。 如需抽象類別的詳細資訊，請參閱[抽象](../windows/abstract-cpp-component-extensions.md)。  
@@ -132,10 +127,10 @@ int main() {
 }  
 ```  
   
-##  <a name="BKMK_Type_visibility"></a>類型可視性  
+##  <a name="BKMK_Type_visibility"></a> 類型可視性  
  您可以控制 common language runtime (CLR) 類型的可見性，如此在參考組件時，如果組件中的類型可以是可見或不在組件外部可見。  
   
- `public`指出類型可包含任何原始程式檔看見`#using`包含類型的組件指示詞。  `private`指出類型不是包含來源檔案顯示`#using`包含類型的組件指示詞。 不過，私用類型都在相同的組件內為可見的。 根據預設，類別的可見性是`private`。  
+ `public` 指出類型可包含任何原始程式檔看見`#using`包含類型的組件指示詞。  `private` 指出類型不是包含來源檔案顯示`#using`包含類型的組件指示詞。 不過，私用類型都在相同的組件內為可見的。 根據預設，類別的可見性是`private`。  
   
  根據預設，Visual c + + 2005年之前，原生型別必須在組件外部的公用存取範圍。 啟用[編譯器警告 （層級 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)可協助您查看私用原生型別會使用的位置不正確。 使用[make_public](../preprocessor/make-public.md) pragma 提供公用存取範圍不能修改原始程式碼檔案中的原生型別。  
   
@@ -228,8 +223,8 @@ int main() {
 in Public_Class  
 ```  
   
-##  <a name="BKMK_Member_visibility"></a>成員可視性  
- 您可以對存取相同組件中的公用類別的成員不同於存取從組件外部使用成對的存取規範`public`， `protected`，和`private`  
+##  <a name="BKMK_Member_visibility"></a> 成員可視性  
+ 您可以對存取相同組件中的公用類別的成員不同於存取從組件外部使用成對的存取規範`public`， `protected`，和 `private`  
   
  本表會摘要說明各種不同的存取規範的效果：  
   
@@ -418,7 +413,7 @@ exiting function of derived class
 =======================  
 ```  
   
-##  <a name="BKMK_Public_and_private_native_classes"></a>公用和私用原生類別  
+##  <a name="BKMK_Public_and_private_native_classes"></a> 公用和私用原生類別  
  您可以從 managed 型別參考原生類型。  比方說，managed 類型中的函式可以採用的參數，其類型是原生結構。  如果組件中的公用 managed 的類型和函式，然後原生型別也必須是公用。  
   
 ```  
@@ -505,7 +500,7 @@ in static constructor
 11  
 ```  
   
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>語意的 this 指標  
+##  <a name="BKMK_Semantics_of_the_this_pointer"></a> 語意的 this 指標  
  當您使用 Visual c + + 來定義型別，`this`在參考類型的指標為型別 」 控制代碼 」。 `this`在實值類型的指標為 「 內部指標 」 類型。  
   
  這些不同的語意`this`指標可能會導致非預期的行為，當呼叫時的預設索引子。 下一個範例顯示正確的方式來存取在 ref 類型和實值類型的預設索引子。  
@@ -560,10 +555,10 @@ int main() {
 10.89  
 ```  
   
-##  <a name="BKMK_Hide_by_signature_functions"></a>依簽章隱藏型函式  
+##  <a name="BKMK_Hide_by_signature_functions"></a> 依簽章隱藏型函式  
  標準 c + + 函式中的基底類別隱藏在衍生類別中，具有相同名稱的函式即使衍生類別函式沒有相同數目或類型的參數。 這指*隱藏依名稱*語意。 在參考類型，基底類別中的函式可以只會隱藏在衍生類別中的函式名稱和參數清單都相同。 這稱為*依簽章隱藏*語意。  
   
- 類別會被視為依簽章隱藏類別，其函式全都會標示為做為中繼資料中時`hidebysig`。 根據預設，會建立在之下的所有類別**/clr**有`hidebysig`函式。 當類別只有`hidebysig`函式，編譯器不會隱藏函式的任何直接基底類別中的名稱，但如果編譯器遇到隱藏依名稱中的類別繼承鏈結，它會繼續依名稱隱藏行為。  
+ 類別會被視為依簽章隱藏類別，其函式全都會標示為做為中繼資料中時`hidebysig`。 根據預設，會建立在之下的所有類別 **/clr**有`hidebysig`函式。 當類別只有`hidebysig`函式，編譯器不會隱藏函式的任何直接基底類別中的名稱，但如果編譯器遇到隱藏依名稱中的類別繼承鏈結，它會繼續依名稱隱藏行為。  
   
  下依簽章隱藏語意，當呼叫函式物件，編譯器會識別最多衍生的類別，其中包含符合函式呼叫的函式。 如果無法滿足呼叫類別中只有一個函式，編譯器會呼叫此函式。 如果無法滿足呼叫類別中有一個以上的函式，編譯器會使用多載解析規則來判斷要呼叫的函式。 如需多載規則的詳細資訊，請參閱[函式多載](../cpp/function-overloading.md)。  
   
@@ -670,10 +665,10 @@ Derived::Test4
 97  
 ```  
   
-##  <a name="BKMK_Copy_constructors"></a>複製建構函式  
+##  <a name="BKMK_Copy_constructors"></a> 複製建構函式  
  C + + 標準所規定的複製建構函式稱為當移動物件時，使得物件會建立並終結在相同的位址。  
   
- 不過，當**/clr**是用來編譯並編譯為原生函式在原生類別的 MSIL 呼叫的函式 — 或多個 — 以傳值和原生類別之複製建構函式及/或解構函式，沒有複本建構函式呼叫，而且在不同的位址，比建立所在終結物件。 如果類別的指標至本身，或如果程式碼追蹤物件的位址，這可能會造成問題。  
+ 不過，當 **/clr**是用來編譯並編譯為原生函式在原生類別的 MSIL 呼叫的函式 — 或多個 — 以傳值和原生類別之複製建構函式及/或解構函式，沒有複本建構函式呼叫，而且在不同的位址，比建立所在終結物件。 如果類別的指標至本身，或如果程式碼追蹤物件的位址，這可能會造成問題。  
   
  如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)。  
   
@@ -735,7 +730,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378  
 ```  
   
-##  <a name="BKMK_Destructors_and_finalizers"></a>解構函式與完成項  
+##  <a name="BKMK_Destructors_and_finalizers"></a> 解構函式與完成項  
  在參考類型的解構函式執行決定性清除的資源。 完成項清除 unmanaged 資源，而且在記憶體回收行程的解構函式或被非確定性地決定性地呼叫。 標準 c + + 解構函式的相關資訊，請參閱[解構函式](../cpp/destructors-cpp.md)。  
   
 ```  
@@ -805,7 +800,7 @@ ref struct A {
   
  決定性地清除物件的資源，藉由呼叫解構函式，可以改善效能與讓 CLR 被非確定性地完成物件相比較。  
   
- 以 Visual c + + 撰寫並使用編譯的程式碼**/clr**會執行類型的解構函式：  
+ 以 Visual c + + 撰寫並使用編譯的程式碼 **/clr**會執行類型的解構函式：  
   
 -   使用堆疊語意建立的物件會超出範圍。 如需詳細資訊，請參閱[參考類型的 c + + 堆疊語意](../dotnet/cpp-stack-semantics-for-reference-types.md)。  
   
@@ -930,6 +925,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)

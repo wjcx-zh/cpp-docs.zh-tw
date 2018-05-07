@@ -1,13 +1,10 @@
 ---
-title: "WM_ 訊息處理常式： D-E |Microsoft 文件"
-ms.custom: 
+title: WM_ 訊息處理常式： D-E |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - ON_WM_ERASEBKGND
 - ON_WM_DEVICECHANGE
@@ -40,17 +37,15 @@ helpviewer_keywords:
 - ON_WM_DEVICECHANGE [MFC]
 - WM_ messages [MFC]
 ms.assetid: 56fb89c8-68a8-4adf-883e-a9f63bf677e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a11d88c4b6cb0c5235d54ac9d0333126f39765
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 804bd7d9e0180dd3bf970339b382d0c8807e9b50
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wm-message-handlers-d---e"></a>WM_ 訊息處理常式：D - E
 左邊的下列對應項目對應於右邊的函式原型：  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
 |ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)（CDC *;）|  
 |ON_WM_EXITSIZEMOVE()|afx_msg void [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)（);|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [訊息對應](../../mfc/reference/message-maps-mfc.md)   
  [WM_ 訊息的處理常式](../../mfc/reference/handlers-for-wm-messages.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "RECT 結構 1 |Microsoft 文件"
-ms.custom: 
+title: RECT 結構 1 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LPRECT
 - RECT
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - RECT structure [MFC]
 - LPRECT structure [MFC]
 ms.assetid: 1b3160de-64e9-40d1-89eb-af3e0fd6acf0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4e56c78e717b24390a82e7cbb55670f36369044
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b61c794b8fa383eeea62459a5a83948ef2efe10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rect-structure1"></a>RECT 結構 1
 `RECT` 結構定義矩形的左上角和右下角的座標。  
@@ -62,6 +57,6 @@ typedef struct tagRECT {
 ## <a name="requirements"></a>需求  
  **標頭：** windef.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "__writegsbyte、 __writegsdword、 __writegsqword、 __writegsword |Microsoft 文件"
-ms.custom: 
+title: __writegsbyte、 __writegsdword、 __writegsqword、 __writegsword |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __writegsbyte
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 992134519015ba25b864f057d38caf39d3e45639
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8c9eec7bb0da65bfd327726078766ab1befacbde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte、__writegsdword、__writegsqword、__writegsword
 **Microsoft 特定的**  
@@ -82,6 +77,6 @@ void __writegsqword(
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
- [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
+## <a name="see-also"></a>另請參閱  
+ [__readgsbyte、 \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

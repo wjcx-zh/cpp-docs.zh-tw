@@ -1,13 +1,10 @@
 ---
-title: "命令路由 |Microsoft 文件"
-ms.custom: 
+title: 命令路由 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing"></a>命令傳送
 處理命令時，您只需負責在命令與其處理函式之間建立訊息對應連接，而這項工作可透過 [屬性] 視窗來完成。 您也必須撰寫大部分的命令處理常式。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 |當此類型的物件收到命令時。 。 。|它會依照下列順序，提供機會給自己及其他命令目標物件來處理命令︰|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|MDI 框架視窗 (`CMDIFrameWnd`)|1.使用中`CMDIChildWnd`<br />2.此框架視窗<br />3.應用程式 (`CWinApp`物件)|  
+|MDI 框架視窗 (`CMDIFrameWnd`)|1.使用中 `CMDIChildWnd`<br />2.此框架視窗<br />3.應用程式 (`CWinApp`物件)|  
 |文件框架視窗 (`CFrameWnd`、 `CMDIChildWnd`)|1.現用檢視表<br />2.此框架視窗<br />3.應用程式 (`CWinApp`物件)|  
 |檢視|1.此檢視<br />2.附加至檢視的文件|  
 |文件|1.此文件<br />2.附加至文件的文件範本|  
@@ -56,6 +51,6 @@ ms.lasthandoff: 12/21/2017
   
  在上表第二欄的編號項目提到其他物件 (例如文件) 的情況下，請參閱第一欄的對應項目。 例如，當您在第二欄中讀到「檢視將命令轉送至其文件」時，請參閱第一欄的「文件」項目以進一步路由傳送。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
 

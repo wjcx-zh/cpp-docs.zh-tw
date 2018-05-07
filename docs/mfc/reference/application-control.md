@@ -1,13 +1,10 @@
 ---
-title: "應用程式控制 |Microsoft 文件"
-ms.custom: 
+title: 應用程式控制 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c055f5489c7b85f5f974256709451426b614db47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-control"></a>應用程式控制
 OLE 會需要大幅控制應用程式，以及它們的物件。 OLE 系統 Dll 必須能夠啟動和應用程式自動發行、 協調其實際執行和修改物件，等等。 本主題中的函式符合這些需求。 除了由 OLE 系統 Dll，呼叫這些函式必須有時稱為以及應用程式。 
@@ -46,7 +41,7 @@ OLE 會需要大幅控制應用程式，以及它們的物件。 OLE 系統 Dll 
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|會實作使用者介面*typename*物件命令。|  
 
   
-##  <a name="afxolecanexitapp"></a>AfxOleCanExitApp  
+##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp  
  指示應用程式是否可以結束。  
   
 ```   
@@ -65,7 +60,7 @@ BOOL AFXAPI AfxOleCanExitApp();
 ## <a name="requirements"></a>需求  
  **標頭**: afxdisp.h 
 
-##  <a name="afxolegetmessagefilter"></a>AfxOleGetMessageFilter  
+##  <a name="afxolegetmessagefilter"></a>  AfxOleGetMessageFilter  
  擷取應用程式的目前訊息篩選器。  
   
 ```   
@@ -86,7 +81,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
 ### <a name="requirements"></a>需求  
  **標頭**: afxwin.h 
 
-##  <a name="afxolegetuserctrl"></a>AfxOleGetUserCtrl  
+##  <a name="afxolegetuserctrl"></a>  AfxOleGetUserCtrl  
  擷取目前使用者控制旗標。  
   
 ```   
@@ -102,7 +97,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 ### <a name="requirements"></a>需求  
  **標頭**: afxdisp.h
 
-##  <a name="afxolesetuserctrl"></a>AfxOleSetUserCtrl  
+##  <a name="afxolesetuserctrl"></a>  AfxOleSetUserCtrl  
  設定或清除使用者控制旗標，會說明中的參考`AfxOleGetUserCtrl`。  
   
 ```  
@@ -121,7 +116,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ### <a name="requirements"></a>需求  
  **標頭**: afxdisp.h
 
-##  <a name="afxolelockapp"></a>AfxOleLockApp  
+##  <a name="afxolelockapp"></a>  AfxOleLockApp  
  架構的應用程式中的作用中物件的數字的全域計數遞增。  
   
 ```   
@@ -141,7 +136,7 @@ void AFXAPI AfxOleLockApp();
 ### <a name="requirements"></a>需求  
  **標頭**: afxdisp.h
 
-##  <a name="afxoleunlockapp"></a>AfxOleUnlockApp  
+##  <a name="afxoleunlockapp"></a>  AfxOleUnlockApp  
  遞減架構的應用程式中的使用中物件計數。  
   
 ```   
@@ -192,11 +187,11 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 ### <a name="requirements"></a>需求  
  **標頭：** < afxwin.h >  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [AfxOleUnlockControl](#afxoleunlockcontrol)
  
-##  <a name="afxoleregisterserverclass"></a>AfxOleRegisterServerClass  
+##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass  
  此函式可讓您在 OLE 系統登錄中註冊您的伺服器。  
   
 ```   
@@ -226,13 +221,13 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  `nAppType`  
  值，取自**OLE_APPTYPE**列舉，指定 OLE 應用程式的類型。 可能的值如下所示：  
   
-- `OAT_INPLACE_SERVER`伺服器具有完整伺服器的使用者介面。  
+- `OAT_INPLACE_SERVER` 伺服器具有完整伺服器的使用者介面。  
   
-- `OAT_SERVER`只有內嵌伺服器支援。  
+- `OAT_SERVER` 只有內嵌伺服器支援。  
   
-- `OAT_CONTAINER`容器支援內嵌的連結。  
+- `OAT_CONTAINER` 容器支援內嵌的連結。  
   
-- `OAT_DISPATCH_OBJECT``IDispatch`-支援的物件。  
+- `OAT_DISPATCH_OBJECT` `IDispatch`-支援的物件。  
   
  `rglpszRegister`  
  代表索引鍵和值加入至 OLE 系統登錄，如果不找到索引鍵的任何現有值的字串指標的陣列。  
@@ -261,7 +256,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ### <a name="requirements"></a>需求  
  **標頭**: afxdisp.h
 
-##  <a name="afxoleseteditmenu"></a>AfxOleSetEditMenu  
+##  <a name="afxoleseteditmenu"></a>  AfxOleSetEditMenu  
  會實作使用者介面*typename*物件命令。  
   
 ```   
@@ -303,10 +298,10 @@ void AFXAPI AfxOleSetEditMenu(
 ### <a name="requirements"></a>需求  
  **標頭**: afxole.h 
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
 
-## <a name="afxoleunlockcontrol"></a>AfxOleUnlockControl
+## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 解除鎖定指定之控制項的 class factory。  
    
 ### <a name="syntax"></a>語法  
@@ -338,7 +333,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 ### <a name="requirements"></a>需求  
  **標頭：** < afxwin.h >  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)  
  [AfxOleLockControl](#afxolelockcontrol)
 

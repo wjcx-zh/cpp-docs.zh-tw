@@ -1,29 +1,24 @@
 ---
-title: ".vcxproj 和.props 檔案結構 |Microsoft 文件"
-ms.custom: 
+title: .vcxproj 和.props 檔案結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和.props 檔案結構
 
@@ -100,7 +95,7 @@ MSBuild 是預設的專案系統，在 Visual Studio;當您選擇**檔案 |新�
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`是根節點。 它會指定要使用的 MSBuild 版本以及要執行此檔案傳遞至 MSBuild.exe 時的預設目標。
+`Project` 是根節點。 它會指定要使用的 MSBuild 版本以及要執行此檔案傳遞至 MSBuild.exe 時的預設目標。
 
 ### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations ItemGroup 項目
 
@@ -108,7 +103,7 @@ MSBuild 是預設的專案系統，在 Visual Studio;當您選擇**檔案 |新�
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`包含專案組態描述。 範例包括偵錯 |Win32，版本 |Win32，偵錯 |ARM 和等等。 許多專案設定專屬於指定的設定。 例如，您可能想設定最佳化的發行組建，但不是偵錯組建的屬性。
+`ProjectConfigurations` 包含專案組態描述。 範例包括偵錯 |Win32，版本 |Win32，偵錯 |ARM 和等等。 許多專案設定專屬於指定的設定。 例如，您可能想設定最佳化的發行組建，但不是偵錯組建的屬性。
 
 `ProjectConfigurations`項目群組不是在建置階段。 Visual Studio IDE 會需要它才能載入專案。 此項目群組可以移至.props 檔案，並匯入.vcxproj 檔案。 不過，在此情況下，如果您需要加入或移除設定，您必須手動編輯.props 檔案中。您無法使用 IDE。
 
@@ -125,7 +120,7 @@ MSBuild 是預設的專案系統，在 Visual Studio;當您選擇**檔案 |新�
 
 IDE，預期應找到專案組態的專案組態的所有項目中使用的組態與平台任何的值組合。 這通常表示專案可能會有意義的專案組態以滿足此需求。 比方說，如果專案具有這些設定：
 
-- Debug|Win32
+- 偵錯 |Win32
 - 零售 |Win32
 - 特別的 32 位元最佳化 |Win32
 
@@ -143,7 +138,7 @@ IDE，預期應找到專案組態的專案組態的所有項目中使用的組�
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`包含專案層級設定，例如 ProjectGuid、 RootNamespace 和 ApplicationType / a。 最後兩個通常會定義目標作業系統。 因為的參考和專案項目不能有條件目前專案可以只為目標是單一的作業系統。 這些屬性通常不覆寫其他位置之專案檔中。 這個群組不是組態相關，因此通常只有一個全域群組存在於專案檔中。
+`Globals` 包含專案層級設定，例如 ProjectGuid、 RootNamespace 和 ApplicationType / a。 最後兩個通常會定義目標作業系統。 因為的參考和專案項目不能有條件目前專案可以只為目標是單一的作業系統。 這些屬性通常不覆寫其他位置之專案檔中。 這個群組不是組態相關，因此通常只有一個全域群組存在於專案檔中。
 
 ### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import 項目
 
@@ -191,7 +186,7 @@ A`Configuration`屬性群組都具有附加的設定條件 (例如`Condition=”
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`包含屬性建立用於自訂建置流程的變數。 例如，您可以定義使用者巨集將自訂輸出路徑定義為 $(CustomOutputPath) 並用它來定義其他變數。 此屬性群組裝載這類屬性。 請注意，在 Visual Studio 中，填入此群組是不在專案檔因為 Visual c + + 不支援設定的使用者巨集。 屬性工作表中支援使用者巨集。
+`UserMacros` 包含屬性建立用於自訂建置流程的變數。 例如，您可以定義使用者巨集將自訂輸出路徑定義為 $(CustomOutputPath) 並用它來定義其他變數。 此屬性群組裝載這類屬性。 請注意，在 Visual Studio 中，填入此群組是不在專案檔因為 Visual c + + 不支援設定的使用者巨集。 屬性工作表中支援使用者巨集。
 
 ### <a name="per-configuration-propertygroup-elements"></a>每個組態 PropertyGroup 項目
 

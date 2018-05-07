@@ -1,13 +1,10 @@
 ---
-title: "建立 Web 瀏覽器樣式的 MFC 應用程式 |Microsoft 文件"
-ms.custom: 
+title: 建立 Web 瀏覽器樣式的 MFC 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>建立 Web 瀏覽器樣式的 MFC 應用程式
 Web 瀏覽器樣式應用程式可以存取資訊 （例如 HTML 或主動式文件） 網際網路或內部網路，以及資料夾，在本機檔案系統和網路上。 藉由從應用程式的檢視類別的衍生[CHtmlView](../../mfc/reference/chtmlview-class.md)，有效地您藉由提供 WebBrowser 控制項的檢視進行應用程式的網頁瀏覽器。  
@@ -52,7 +47,7 @@ Web 瀏覽器樣式應用程式可以存取資訊 （例如 HTML 或主動式文
   
  因為`CHtmlView`只會列印不像其他 Microsoft Web 瀏覽器控制項，其支援實作[CView](../../mfc/reference/cview-class.md)-衍生的類別。 相反地，WebBrowser 控制項實作印表機使用者介面和列印。 如此一來，`CHtmlView`並不支援列印預覽，以及架構不會提供其他列印支援函式： 例如， [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)， [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)，和[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)，這是適用於其他 MFC 應用程式。  
   
- `CHtmlView`做為 Web 瀏覽器控制項，可讓您的應用程式到 Web 或 HTML 網頁檢視的包裝函式。 精靈會建立覆寫， [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)函式在檢視類別中，提供導覽連結至 Visual c + + 的 Microsoft 網站：  
+ `CHtmlView` 做為 Web 瀏覽器控制項，可讓您的應用程式到 Web 或 HTML 網頁檢視的包裝函式。 精靈會建立覆寫， [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)函式在檢視類別中，提供導覽連結至 Visual c + + 的 Microsoft 網站：  
   
 ```  
 void CWebView::OnInitialUpdate()  
@@ -80,7 +75,7 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 MFCIE](http://msdn.microsoft.com/en-us/7391aa0c-fca8-4994-a6c9-6c5c7470fba0)   
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)   
  [使用專案屬性](../../ide/working-with-project-properties.md)   

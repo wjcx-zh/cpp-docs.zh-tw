@@ -1,12 +1,9 @@
 ---
-title: "hash_multimap::hasher (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: hash_multimap::hasher (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::hasher
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - hasher member [STL/CLR]
 ms.assetid: f92bf084-d9d0-4eca-b23c-c88e6568d267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c04d5415db2da7f480f9dc4a1bb8411d2166cc5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb8fca2c99c76b8714a3022cf74eaa872f8df010
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimaphasher-stlclr"></a>hash_multimap::hasher (STL/CLR)
 索引鍵雜湊的委派。  
@@ -71,6 +66,6 @@ hash(L'b') = 570892832
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multimap::hash_delegate (STL/CLR)](../dotnet/hash-multimap-hash-delegate-stl-clr.md)

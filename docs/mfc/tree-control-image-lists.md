@@ -1,13 +1,10 @@
 ---
-title: "樹狀目錄控制項影像清單 |Microsoft 文件"
-ms.custom: 
+title: 樹狀目錄控制項影像清單 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5015a001bf2c15f3144303ba5e19b2a9ea8c34f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef74b656cc85fbdcc29c7965b9398a5cbd2f44e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-image-lists"></a>樹狀目錄控制項影像清單
 樹狀結構控制項中的每個項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 可以有一組與其相關聯的點陣圖影像。 項目的標籤左邊顯示的影像。 當選取的項目，並不選取項目顯示的其他時，會顯示一個影像。 例如，項目可能會顯示開啟的資料夾，選取時，關閉的資料夾時未選取。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist)成員函式會擷取樹狀目錄控制項影像清單控制代碼。 此函式是您需要將更多的影像加入至清單時相當實用。 如需影像清單的詳細資訊，請參閱[使用 CImageList](../mfc/using-cimagelist.md)， [CImageList](../mfc/reference/cimagelist-class.md)中*MFC 參考*，和[影像清單](http://msdn.microsoft.com/library/windows/desktop/bb761389)中Windows SDK。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

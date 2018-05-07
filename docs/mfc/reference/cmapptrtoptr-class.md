@@ -1,12 +1,9 @@
 ---
-title: "CMapPtrToPtr 類別 |Microsoft 文件"
-ms.custom: 
+title: CMapPtrToPtr 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapPtrToPtr
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7482e2824874cbe0e1126e49979f9dfd18ba57e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1b7140c9d6a175c6464fdaa41cf3cc022e8a6ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr 類別
 支援以 void 指標為索引鍵的 void 指標對應。  
@@ -103,7 +98,7 @@ class CMapPtrToPtr : public CObject
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將項目插入對應 — 運算子替代`SetAt`。|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|將項目插入對應 — 運算子替代`SetAt`。|  
   
 ## <a name="remarks"></a>備註  
  `CMapPtrToPtr` 結合 `IMPLEMENT_DYNAMIC` 巨集，支援 `CDumpContext` 物件的執行階段類型存取和傾印。 如果您需要個別地圖元素 （指標值） 的傾印，您必須設定為 1 或更大的傾印內容的深度。  
@@ -122,7 +117,7 @@ class CMapPtrToPtr : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxcoll.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

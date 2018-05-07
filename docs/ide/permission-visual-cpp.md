@@ -1,13 +1,10 @@
 ---
-title: "&lt;權限&gt;（Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: '&lt;權限&gt;（Visual c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - permission
 - <permission>
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 416467782be92760ac999301f9899be1260905aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltpermissiongt-visual-c"></a>&lt;權限&gt;（Visual c + +）
-\<permission> 標記可讓您記載成員存取權。 <xref:System.Security.PermissionSet>可讓您指定成員的存取權。  
+\<permission> 標記可讓您記載成員存取權。 <xref:System.Security.PermissionSet> 可讓您指定成員的存取權。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,5 +63,5 @@ public ref class TestClass {
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

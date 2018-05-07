@@ -1,12 +1,9 @@
 ---
-title: "COleIPFrameWnd 類別 |Microsoft 文件"
-ms.custom: 
+title: COleIPFrameWnd 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1833cbbbfb6706cffe73770bcd9b61ff755a645
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 類別
 應用程式就地編輯視窗的基底。  
@@ -76,7 +71,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxole.h  
   
-##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
  建構`COleIPFrameWnd`物件，並初始化其就地狀態資訊，儲存在結構中的型別**OLEINPLACEFRAMEINFO**。  
   
 ```  
@@ -86,7 +81,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) Windows SDK 中。  
   
-##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  這個架構會呼叫`OnCreateControlBars`函式時就地編輯的啟動項目。  
   
 ```  
@@ -113,7 +108,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>備註  
  預設實作不做任何動作。 覆寫這個函式來執行建立控制列時所需的任何特殊處理。  
   
-##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
  這個架構會呼叫`RepositionFrame`配置控制列，並調整就地編輯視窗的位置，所以全部都是可見的成員函式。  
   
 ```  
@@ -132,7 +127,7 @@ virtual void RepositionFrame(
 ### <a name="remarks"></a>備註  
  在容器視窗中的控制列的配置與 1-up 執行的非 OLE 框架視窗。 非 OLE 框架視窗計算控制列和從指定的框架視窗大小，如同要呼叫的其他物件的位置[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。 工作區是剩下之後減去的控制列和其他物件的空間。 A`COleIPFrameWnd`視窗中，相反地，根據給定的用戶端區域放置工具列。 換句話說，`CFrameWnd::RecalcLayout`運作 」 從，在外部"，而`COleIPFrameWnd::RepositionFrame`會 」 從內而外。 」  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

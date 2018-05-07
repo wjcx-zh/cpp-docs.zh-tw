@@ -1,29 +1,24 @@
 ---
-title: "逐步解說 (MFC) |Microsoft 文件"
-ms.custom: 
+title: 逐步解說 (MFC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC Feature Pack, walkthroughs
 ms.assetid: 20d5756f-ad58-46f4-8b6c-c7a1020b72eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb2fdb202c9f52b941fa20877c11a7f97e1b5c9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5310500eb03388e50a9c04b209ea7a839f8da141
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthroughs-mfc"></a>逐步解說 (MFC)
 本節包含逐步解說與新的 MFC 程式庫功能相關聯的各種工作的文件。  
@@ -41,6 +36,6 @@ ms.lasthandoff: 12/21/2017
  [逐步解說：將動畫新增至 MFC 專案](../mfc/walkthrough-adding-animation-to-an-mfc-project.md)  
  示範如何將圖形化的物件加入至專案，並介紹如何建立它的動畫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 傳統型應用程式](../mfc/mfc-desktop-applications.md)
 

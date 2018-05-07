@@ -1,13 +1,10 @@
 ---
-title: "加入來自 ActiveX 控制項精靈類別 |Microsoft 文件"
-ms.custom: 
+title: 加入來自 ActiveX 控制項精靈類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.class.axcontrol
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX Control Wizard
 - Add Class from ActiveX Control Wizard [C++]
 ms.assetid: 668d801c-5fb6-4176-9191-5c38995a4713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2b3b1d2b15db47eea8ebc10b2a73cafba5d6952
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ab96943e47287c9b54753c8d3a1edb868804274
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-activex-control-wizard"></a>加入來自 ActiveX 控制項的類別精靈
 您可以使用此精靈，從可用的 ActiveX 控制項加入 MFC 類別。 精靈會建立從選取的 ActiveX 控制項加入每個介面的類別。  
@@ -60,9 +55,9 @@ ms.lasthandoff: 12/21/2017
 |**<\<**|移除中的所有類別**產生的類別**清單。 如果無法使用**產生的類別**清單是空的。|  
   
  **產生的類別**  
- 指定要從使用新增的介面產生的類別名稱 **>** 或 **>>**   按鈕。 您可以按一下此方塊可選取一個類別，然後使用向上或向下鍵捲動清單，檢視中的每個類別名稱`Class`方塊及檔案名稱中的**.h 檔案** 方塊中，當您按一下時，精靈會產生**完成**。 在此方塊中，您可以一次選取一個類別。  
+ 指定要從使用新增的介面產生的類別名稱**>** 或**>>**  按鈕。 您可以按一下此方塊可選取一個類別，然後使用向上或向下鍵捲動清單，檢視中的每個類別名稱`Class`方塊及檔案名稱中的 **.h 檔案** 方塊中，當您按一下時，精靈會產生**完成**。 在此方塊中，您可以一次選取一個類別。  
   
- 您可以移除類別選取這份清單中，然後按一下 **<** 。 您不需要選取中的類別**產生的類別**方塊來移除所有的類別，藉由按一下 **<<** ，移除所有的類別中**產生的類別**方塊。  
+ 您可以移除類別選取這份清單中，然後按一下**<**。 您不需要選取中的類別**產生的類別**方塊來移除所有的類別，藉由按一下**<<**，移除所有的類別中**產生的類別**方塊。  
   
  `Class`  
  指定在選取的類別名稱**產生的類別**方塊，精靈會新增當您按一下**完成**。 您可以編輯該名稱在`Class`方塊。  
@@ -77,6 +72,6 @@ ms.lasthandoff: 12/21/2017
   
  精靈不會覆寫檔案。 如果當您按一下 選取現有的檔案名稱**完成**，精靈會提示您是否要在類別實作附加至檔案的內容。 按一下**是**附加檔案，按一下 **否**返回精靈並指定另一個檔案名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將類別加入來自 ActiveX 控制項](../ide/adding-a-class-from-an-activex-control-visual-cpp.md)   
  [Automation 用戶端：使用型別程式庫](../mfc/automation-clients-using-type-libraries.md)

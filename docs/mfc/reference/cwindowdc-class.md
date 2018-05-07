@@ -1,12 +1,9 @@
 ---
-title: "CWindowDC 類別 |Microsoft 文件"
-ms.custom: 
+title: CWindowDC 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWindowDC
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc3219ff6570fab18b19f350f7dca3171ab4832
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 類別
 衍生自 `CDC`。  
@@ -69,7 +64,7 @@ class CWindowDC : public CDC
 ## <a name="requirements"></a>需求  
  標頭： afxwin.h  
   
-##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
+##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
  建構`CWindowDC`物件存取整個螢幕區域 （用戶端和非工作） 的`CWnd`指向的物件`pWnd`。  
   
 ```  
@@ -88,7 +83,7 @@ explicit CWindowDC(CWnd* pWnd);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
  `HWND`的`CWnd`指標用來建構`CWindowDC`物件。  
   
 ```  
@@ -96,12 +91,12 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_hWnd`這是受保護的型別變數`HWND`。  
+ `m_hWnd` 這是受保護的型別變數`HWND`。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CWindowDC::CWindowDC](#cwindowdc)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDC 類別](../../mfc/reference/cdc-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDC 類別](../../mfc/reference/cdc-class.md)

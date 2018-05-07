@@ -1,12 +1,9 @@
 ---
-title: "CNetAddressCtrl 類別 |Microsoft 文件"
-ms.custom: 
+title: CNetAddressCtrl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CNetAddressCtrl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a433d723e15d910674c129b1e62ca82c1de4bb0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c579f452f26761abd7b52c849fa0117a98777355
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 `CNetAddressCtrl` 類別表示網路位址控制項，您可以用來輸入和驗證 IPv4、IPv6 和具名 DNS 位址的格式。  
@@ -106,7 +101,7 @@ class CNetAddressCtrl : public CEdit
   
  這個類別的其他需求詳述於[建置需求的 Windows Vista 通用控制項](../../mfc/build-requirements-for-windows-vista-common-controls.md)。  
   
-##  <a name="cnetaddressctrl"></a>CNetAddressCtrl::CNetAddressCtrl  
+##  <a name="cnetaddressctrl"></a>  CNetAddressCtrl::CNetAddressCtrl  
  建構 `CNetAddressCtrl` 物件。  
   
 ```  
@@ -116,7 +111,7 @@ CNetAddressCtrl();
 ### <a name="remarks"></a>備註  
  使用[CNetAddressCtrl::Create](#create)或[CNetAddressCtrl::CreateEx](#createex)方法來建立網路控制，並將其附加至`CNetAddressCtrl`物件。  
   
-##  <a name="create"></a>CNetAddressCtrl::Create  
+##  <a name="create"></a>  CNetAddressCtrl::Create  
  使用指定的樣式建立網路位址控制項，並將其附加至目前`CNetAddressCtrl`物件。  
   
 ```  
@@ -139,7 +134,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
-##  <a name="createex"></a>CNetAddressCtrl::CreateEx  
+##  <a name="createex"></a>  CNetAddressCtrl::CreateEx  
  使用指定的延伸樣式建立網路位址控制項，並將其附加至目前`CNetAddressCtrl`物件。  
   
 ```  
@@ -164,7 +159,7 @@ virtual BOOL CreateEx(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
-##  <a name="displayerrortip"></a>CNetAddressCtrl::DisplayErrorTip  
+##  <a name="displayerrortip"></a>  CNetAddressCtrl::DisplayErrorTip  
  在目前的網路位址控制項相關聯之氣球提示中顯示錯誤訊息。  
   
 ```  
@@ -179,7 +174,7 @@ HRESULT DisplayErrorTip();
   
  此訊息會叫用[NetAddr_DisplayErrorTip](http://msdn.microsoft.com/library/windows/desktop/bb774314)巨集，它 Windows SDK 中所述。 該巨集傳送`NCM_DISPLAYERRORTIP`訊息。  
   
-##  <a name="getaddress"></a>CNetAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress  
  擷取與目前的網路位址控制項相關聯的網路位址的已驗證和剖析表示法。  
   
 ```  
@@ -202,7 +197,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
  這個方法會叫用[NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316)巨集，它 Windows SDK 中所述。 該巨集傳送`NCM_GETADDRESS`訊息。  
   
-##  <a name="getallowtype"></a>CNetAddressCtrl::GetAllowType  
+##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType  
  擷取目前的網路位址控制項可支援的網路位址類型。  
   
 ```  
@@ -215,7 +210,7 @@ DWORD GetAllowType() const;
 ### <a name="remarks"></a>備註  
  此訊息會叫用[NetAddr_GetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774318)巨集，它 Windows SDK 中所述。 該巨集傳送`NCM_GETALLOWTYPE`訊息。  
   
-##  <a name="setallowtype"></a>CNetAddressCtrl::SetAllowType  
+##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType  
  設定目前的網路位址控制項可支援的網路位址的類型。  
   
 ```  
@@ -229,14 +224,14 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 |[輸入] `dwAddrMask`|網路位址控制項可以支援的位元組合 (OR) 旗標，指定類型的位址。 如需詳細資訊，請參閱[NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586)。|  
   
 ### <a name="return-value"></a>傳回值  
- `S_OK`如果此方法成功。否則，COM 錯誤碼。  
+ `S_OK` 如果此方法成功。否則，COM 錯誤碼。  
   
 ### <a name="remarks"></a>備註  
  使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定的位址可支援目前的網路位址控制項類型。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法來驗證和剖析使用者輸入的網路位址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法時所顯示的錯誤訊息資訊提示[CNetAddressCtrl::GetAddress](#getaddress)方法不成功。  
   
  此訊息會叫用[NetAddr_SetAllowType](http://msdn.microsoft.com/library/windows/desktop/bb774320)巨集，它 Windows SDK 中所述。 該巨集傳送`NCM_SETALLOWTYPE`訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CNetAddressCtrl 類別](../../mfc/reference/cnetaddressctrl-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CEdit 類別](../../mfc/reference/cedit-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "TN045: Long Varchar Varbinary 的 MFC 資料庫支援 |Microsoft 文件"
-ms.custom: 
+title: 'TN045: Long Varchar Varbinary 的 MFC 資料庫支援 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.data
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c9b64ef3b164c45a1633281bbaebd6525df659
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd5201661afcdf6f4ae9676323f3f644817bcf7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045：Long Varchar/Varbinary 的 MFC/資料庫支援
 > [!NOTE]
@@ -76,7 +71,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
  如果您擷取長的資料行到`CString`或`CByteArray`，最多傳回的資料量，預設為 255 個位元組。 除此之外的任何項目會被忽略。 在此情況下，架構將會擲回例外狀況**AFX_SQL_ERROR_DATA_TRUNCATED**。 幸運的是，您可以明確地增加 nMaxLength 為更高的值，最多**MAXINT**。  
   
 > [!NOTE]
->  MFC 用來設定的本機緩衝區 nMaxLength 的值是**SQLBindColumn**函式。 這是資料的儲存體的本機緩衝區，而且實際上不會影響的 ODBC 驅動程式所傳回的資料量。 `RFX_Text`和`RFX_Binary`只將其中一個呼叫使用**SQLFetch**從後端資料庫擷取資料。 每個 ODBC 驅動程式會有不同的限制，它們可以傳回單一擷取中的資料數量。 這項限制可能會遠小於中設定的值 nMaxLength，在此情況下，例外狀況**AFX_SQL_ERROR_DATA_TRUNCATED**就會擲回。 在這些情況下，切換為使用`RFX_LongBinary`而不是`RFX_Text`或`RFX_Binary`，以便擷取所有資料。  
+>  MFC 用來設定的本機緩衝區 nMaxLength 的值是**SQLBindColumn**函式。 這是資料的儲存體的本機緩衝區，而且實際上不會影響的 ODBC 驅動程式所傳回的資料量。 `RFX_Text` 和`RFX_Binary`只將其中一個呼叫使用**SQLFetch**從後端資料庫擷取資料。 每個 ODBC 驅動程式會有不同的限制，它們可以傳回單一擷取中的資料數量。 這項限制可能會遠小於中設定的值 nMaxLength，在此情況下，例外狀況**AFX_SQL_ERROR_DATA_TRUNCATED**就會擲回。 在這些情況下，切換為使用`RFX_LongBinary`而不是`RFX_Text`或`RFX_Binary`，以便擷取所有資料。  
   
  ClassWizard 會繫結**SQL_LONGVARCHAR**至`CString`，或**SQL_LONGVARBINARY**至`CByteArray`您。 如果您想配置超過 255 個位元組到其中您可以擷取長的資料行，然後您可以提供 nMaxLength 的外顯值。  
   
@@ -99,7 +94,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
   
  將繫結 ClassWizard **SQL_LONGVARCHAR**或**SQL_LONGVARBINARY**至`CLongBinary`您。 選取`CLongBinary`為變數的型別，在 [加入成員變數] 對話方塊。 接著會新增 ClassWizard`RFX_LongBinary`呼叫您`DoFieldExchange`呼叫且遞增量為繫結欄位的總數。  
   
- 若要更新長資料的資料行值，請先確定已配置`HGLOBAL`夠大，足以容納您的新資料，藉由呼叫**:: GlobalSize**上`m_hData`隸屬`CLongBinary`。 如果太小，釋放`HGLOBAL`並配置一個適當的大小。 然後設定`m_dwDataLength`以反映新的大小。  
+ 若要更新長資料的資料行值，請先確定已配置`HGLOBAL`夠大，足以容納您的新資料，藉由呼叫 **:: GlobalSize**上`m_hData`隸屬`CLongBinary`。 如果太小，釋放`HGLOBAL`並配置一個適當的大小。 然後設定`m_dwDataLength`以反映新的大小。  
   
  否則，如果`m_dwDataLength`大小大於您要取代的資料，您可以釋放，並重新配置`HGLOBAL`，或保持配置。 請確定表示實際使用中的位元組數目`m_dwDataLength`。  
   
@@ -127,7 +122,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
 > [!NOTE]
 >  Long 資料行未繫結架構，因為它的變更並不會處理與`CRecordset::Update`呼叫。 您必須建立並傳送所需的 SQL**插入**和**更新**陳述式自己。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

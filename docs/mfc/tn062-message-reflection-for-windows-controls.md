@@ -1,13 +1,10 @@
 ---
-title: "TN062： 訊息反映的 Windows 控制項 |Microsoft 文件"
-ms.custom: 
+title: TN062： 訊息反映的 Windows 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.messages
 dev_langs:
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - WM_NOTIFY message [MFC]
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9a0dd227cb54ba85c85901f706966326b1b66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062：Windows 控制項的訊息反映
 > [!NOTE]
@@ -70,11 +65,11 @@ ms.lasthandoff: 12/21/2017
   
  如果您提供為特定的訊息處理常式，或某個範圍的父視窗的類別中的訊息，則會覆寫反映相同訊息的訊息處理常式，提供您不要在您自己的處理常式中呼叫基底類別處理常式函式。 例如，如果您處理`WM_CTLCOLOR`對話方塊類別，在您的處理將覆寫任何反映的訊息處理常式。  
   
- 如果您要在父視窗類別中，提供特定的處理常式**WM_NOTIFY**訊息或一個範圍的**WM_NOTIFY**才傳送這些訊息的子控制項沒有，您的處理常式會呼叫的訊息，不需要透過反映的訊息處理常式**ON_NOTIFY_REFLECT()**。 如果您使用**ON_NOTIFY_REFLECT_EX()**在訊息對應中，您的訊息處理常式可能會或可能不允許的父視窗，以處理訊息。 如果處理常式傳回**FALSE**，父系，所傳回的呼叫時處理訊息**TRUE**不允許要處理它的父系。 請注意，處理反映的訊息是之前的通知訊息。  
+ 如果您要在父視窗類別中，提供特定的處理常式**WM_NOTIFY**訊息或一個範圍的**WM_NOTIFY**才傳送這些訊息的子控制項沒有，您的處理常式會呼叫的訊息，不需要透過反映的訊息處理常式**ON_NOTIFY_REFLECT()**。 如果您使用**ON_NOTIFY_REFLECT_EX()** 在訊息對應中，您的訊息處理常式可能會或可能不允許的父視窗，以處理訊息。 如果處理常式傳回**FALSE**，父系，所傳回的呼叫時處理訊息**TRUE**不允許要處理它的父系。 請注意，處理反映的訊息是之前的通知訊息。  
   
  當**WM_NOTIFY**訊息傳送、 控制項則提供給第一個有機會處理它。 如果其他反映的訊息傳送時，父視窗已處理的第一個機會，控制項將接收反映的訊息。 若要這樣做，它需要的處理常式函式和控制項的類別訊息對應中的適當項目。  
   
- 反映訊息的訊息對應巨集是比一般通知稍有不同： 它有**_REFLECT**附加至其一般名稱。 比方說，以處理**WM_NOTIFY**訊息中的父代，您可以使用巨集`ON_NOTIFY`父系的訊息對應中。 若要處理反映的訊息中的子控制項，使用**ON_NOTIFY_REFLECT**中子控制項的訊息對應巨集。 在某些情況下，參數是不同，以及。 請注意，ClassWizard 的通常是為您新增的訊息對應項目，提供基本架構函數實作，使用正確的參數。  
+ 反映訊息的訊息對應巨集是比一般通知稍有不同： 它有 **_REFLECT**附加至其一般名稱。 比方說，以處理**WM_NOTIFY**訊息中的父代，您可以使用巨集`ON_NOTIFY`父系的訊息對應中。 若要處理反映的訊息中的子控制項，使用**ON_NOTIFY_REFLECT**中子控制項的訊息對應巨集。 在某些情況下，參數是不同，以及。 請注意，ClassWizard 的通常是為您新增的訊息對應項目，提供基本架構函數實作，使用正確的參數。  
   
  請參閱[TN061: ON_NOTIFY 和 WM_NOTIFY 訊息](../mfc/tn061-on-notify-and-wm-notify-messages.md)有關新**WM_NOTIFY**訊息。  
   
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
   
  ClassWizard 通常可以讓您將這些訊息對應項目，並提供基本架構的函式實作。 請參閱[定義反映訊息的訊息處理常式](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)如需有關如何定義反映訊息的處理常式資訊。  
   
- 若要將訊息名稱轉換為反映的巨集名稱，前面加上**ON_**附加**_REFLECT**。 例如，`WM_CTLCOLOR`變成**ON_WM_CTLCOLOR_REFLECT**。 （若要查看可反映的訊息，執行相反的轉換，如下表中的巨集項目上）。  
+ 若要將訊息名稱轉換為反映的巨集名稱，前面加上**ON_** 附加 **_REFLECT**。 例如，`WM_CTLCOLOR`變成**ON_WM_CTLCOLOR_REFLECT**。 （若要查看可反映的訊息，執行相反的轉換，如下表中的巨集項目上）。  
   
  上述規則的三個例外狀況是，如下所示：  
   
@@ -181,7 +176,7 @@ ms.lasthandoff: 12/21/2017
   
 8.  建置並執行您的應用程式。 編輯控制項將會有黃色背景。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

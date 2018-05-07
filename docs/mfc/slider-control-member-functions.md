@@ -1,30 +1,25 @@
 ---
-title: "滑桿控制項成員函式 |Microsoft 文件"
-ms.custom: 
+title: 滑桿控制項成員函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CSliderCtrl class [MFC], methods
 - slider controls [MFC], member functions
 ms.assetid: dbde49ee-7306-4d14-a6ce-d09aa198178f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bd6c1d05ce7b137e6153ad2ea3fc5df99565a52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3793ca47aa0537d5ca8d6858c165fc2c5ac64943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-control-member-functions"></a>滑桿控制項成員函式
 應用程式可以呼叫滑桿控制項成員函式，來擷取滑桿控制項的相關資訊 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md))，並變更其特性。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  如果滑桿控制項具有`TBS_ENABLESELRANGE`樣式，使用者可以從中選取連續值的範圍。 成員函式的數字會允許進行動態調整選取範圍。 [SetSelection](../mfc/reference/csliderctrl-class.md#setselection)成員函式設定的開始和結束位置之選取範圍。 當使用者完成設定選取範圍時，應用程式可以擷取設定使用[GetSelection](../mfc/reference/csliderctrl-class.md#getselection)成員函式。 若要清除使用者的選取項目，使用[ClearSel](../mfc/reference/csliderctrl-class.md#clearsel)成員函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CSliderCtrl](../mfc/using-csliderctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "從對話方塊物件擷取資料 |Microsoft 文件"
-ms.custom: 
+title: 從對話方塊物件擷取資料 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - DDX (dialog data exchange) [MFC], retrieving data from Dialog object
 - GetWindowText method [MFC]
 ms.assetid: bdca2b61-6b53-4c2e-b426-8712c7a38ec0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b50ae3036a6f262312c7a05c2de093a977a588
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>從對話方塊物件擷取資料
 架構提供簡單的方法初始化控制項在對話方塊中的值，以及從控制項擷取值。 更耗費人力手動方法會呼叫函式，例如`SetDlgItemText`和`GetDlgItemText`類別成員函式`CWnd`，套用至控制項視窗。 這些函式，存取每個控制項，分別可設定或取得它的值，呼叫函式，例如`SetWindowText`和`GetWindowText`。 架構的方法會自動初始化和擷取。  
@@ -53,6 +48,6 @@ ms.lasthandoff: 12/21/2017
   
  對於強制回應對話方塊，您可以擷取使用者輸入時任何資料`DoModal`傳回**IDOK**但對話方塊之前就會終結物件。 對於非強制回應對話方塊，您可以擷取資料從對話方塊物件隨時藉由呼叫`UpdateData`與引數**TRUE** ，然後存取對話方塊類別成員變數。 此主題會更詳細地討論[對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
 

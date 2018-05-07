@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C2523 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C2523 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2523
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2523
 ms.assetid: 7951b700-8f37-45a0-beb4-a79ae0ced72e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fbfb9a2302f306401ad6c824fda17303e47f5bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4546e576ced8d57a35c4c4861f29824a8d91d910
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2523"></a>編譯器錯誤 C2523
 ' 類別:: ~ 識別項 ': 解構函式/完成項標記不相符  

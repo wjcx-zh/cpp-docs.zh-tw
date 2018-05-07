@@ -1,13 +1,10 @@
 ---
-title: "IDL 屬性、 加入方法精靈 |Microsoft 文件"
-ms.custom: 
+title: IDL 屬性、 加入方法精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.idlattrib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - IDL attributes, Add Method Wizard
 ms.assetid: f80c3bc1-b515-4d6c-83ee-98c2c21ba902
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9792f8b7758ff5a1e5742b6643d9f73931bce6f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a7a1e8fe89f64ad5909e7c1415545e3b3d80196
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idl-attributes-add-method-wizard"></a>IDL 屬性, 加入方法精靈
 使用加入方法精靈的這個頁面來指定方法的任何介面定義語言 (IDL) 設定。  
@@ -62,6 +57,6 @@ ms.lasthandoff: 12/21/2017
 |**restricted**|指定此方法無法被任意呼叫。 請參閱[限制](http://msdn.microsoft.com/library/windows/desktop/aa367157)中*MIDL 參考*。|  
 |**vararg**|指定此方法採用可變引數數目。 若要達成此目的，最後一個引數必須是安全陣列的**VARIANT**包含其餘的引數的型別。 請參閱[vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304)中*MIDL 參考*。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入方法](../ide/adding-a-method-visual-cpp.md)   
  [新增方法精靈](../ide/add-method-wizard.md)

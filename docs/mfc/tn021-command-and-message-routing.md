@@ -1,13 +1,10 @@
 ---
-title: "TN021： 命令和訊息路由 |Microsoft 文件"
-ms.custom: 
+title: TN021： 命令和訊息路由 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.routing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021：命令和訊息路由
 > [!NOTE]
@@ -200,11 +195,11 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  上附帶一提，有兩個**CWnd**衍生的類別，在指定的捲軸樣式建立時間是截取，不會傳送到 Windows。 當傳遞給建立常式**WS_HSCROLL**和**WS_VSCROLL**可以獨立設定，但無法變更建立之後。 當然，您應該不會直接測試，或設定 WS_SCROLL 樣式位元，他們所建立的視窗。  
   
- 如**CMDIFrameWnd**捲軸樣式您傳遞給**建立**或**LoadFrame**用來建立 MDICLIENT。 如果您想要擁有的是可捲動的 MDICLIENT 區域 （例如 Windows 程式經理） 務必設定兩者捲軸樣式 (**WS_HSCROLL** &#124;**WS_VSCROLL**) 用來建立樣式**CMDIFrameWnd**。  
+ 如**CMDIFrameWnd**捲軸樣式您傳遞給**建立**或**LoadFrame**用來建立 MDICLIENT。 如果您想要擁有的是可捲動的 MDICLIENT 區域 （例如 Windows 程式經理） 務必設定兩者捲軸樣式 (**WS_HSCROLL** &#124; **WS_VSCROLL**) 用來建立樣式**CMDIFrameWnd**。  
   
  如**CSplitterWnd**捲軸樣式套用至分割區的特殊共用的捲軸。 靜態分隔視窗，您通常不會設定任一捲軸列樣式。 動態分隔視窗，您通常會有捲軸的方向，您將分割，也就是樣式設定**WS_HSCROLL**是否可以將資料列， **WS_VSCROLL**是否可以將資料行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

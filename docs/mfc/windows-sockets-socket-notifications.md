@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets： 通訊端通知 |Microsoft 文件"
-ms.custom: 
+title: Windows Sockets： 通訊端通知 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets：通訊端告知
 本文說明通知中的函式的通訊端類別。 這些成員函式是在架構呼叫以通知您重要事件的通訊端物件的回呼函式。 通知函式會：  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  如果您是衍生自類別`CAsyncSocket`，那些網路應用程式的感興趣的事件，您必須覆寫通知函式。 如果您在衍生類別的類別`CSocket`，它是您選擇是否要覆寫感興趣的通知函式。 您也可以使用`CSocket`本身，在此情況下通知功能預設為不進行任何動作。  
   
- 這些函式是可覆寫的回呼函式。 `CAsyncSocket`和`CSocket`轉換訊息通知，但如果您想要使用這些通知運作回應的方式，您必須實作。 在您的通訊端會收到通知的事件感興趣，例如要讀取的資料存在的時間稱為通知函式。  
+ 這些函式是可覆寫的回呼函式。 `CAsyncSocket` 和`CSocket`轉換訊息通知，但如果您想要使用這些通知運作回應的方式，您必須實作。 在您的通訊端會收到通知的事件感興趣，例如要讀取的資料存在的時間稱為通知函式。  
   
  MFC 呼叫告知函式可讓您自訂您的通訊端行為時，會收到通知。 例如，您可能會呼叫**接收**從您`OnReceive`通知函式，也就是上正在執行通知可讀取的資料，您呼叫**接收**讀取它。 這種方法並非必要，但它是有效的案例。 或者，您可能會使用您的通知函式來追蹤進度，列印**追蹤**訊息，依此類推。  
   
@@ -72,6 +67,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows Sockets：轉換字串](../mfc/windows-sockets-converting-strings.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
 

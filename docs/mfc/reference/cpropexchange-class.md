@@ -1,12 +1,9 @@
 ---
-title: "CPropExchange 類別 |Microsoft 文件"
-ms.custom: 
+title: CPropExchange 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 類別
 支援 OLE 控制項的永續性實作。  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|指出屬性是否在已載入控制項，或從其儲存。|  
   
 ## <a name="remarks"></a>備註  
- `CPropExchange`沒有基底類別。  
+ `CPropExchange` 沒有基底類別。  
   
  建立內容和屬性交換的方向。  
   
@@ -78,7 +73,7 @@ class AFX_NOVTABLE CPropExchange
   
  架構會將指標傳遞至這個`CPropExchange`物件至控制項的`DoPropExchange`函式。 如果您使用精靈來建立控制項，您的控制項的初學者檔案`DoPropExchange`函式呼叫`COleControl::DoPropExchange`。 基底類別版本交換控制項的內建屬性。您修改您加入至您的控制項交換屬性的衍生的類別版本。  
   
- `CPropExchange`可用來序列化控制項的屬性，或初始化控制項的屬性，在載入或建立控制項時。 `ExchangeProp`和`ExchangeFontProp`的成員函式`CPropExchange`能夠儲存至屬性，並將它們載入從不同的媒體。  
+ `CPropExchange` 可用來序列化控制項的屬性，或初始化控制項的屬性，在載入或建立控制項時。 `ExchangeProp`和`ExchangeFontProp`的成員函式`CPropExchange`能夠儲存至屬性，並將它們載入從不同的媒體。  
   
  如需有關使用`CPropExchange`，請參閱文章[MFC ActiveX 控制項： 屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。  
   
@@ -88,7 +83,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>需求  
  **標頭：** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  將序列化儲存二進位大型物件 (BLOB) 資料的屬性。  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  函式**CArchivePropExchange::ExchangeBlobProp**， **CResetPropExchange::ExchangeBlobProp**，和**CPropsetPropExchange::ExchangeBlobProp**覆寫這個純虛擬函式。  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  交換儲存媒體和控制項之間的字型屬性。  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  函式**CArchivePropExchange::ExchangeFontProp**， **CResetPropExchange::ExchangeFontProp**，和**CPropsetPropExchange::ExchangeFontProp**覆寫這個純虛擬函式。  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  交換控制項的檔案之間的屬性。  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  函式**CArchivePropExchange::ExchangePersistentProp**， **CResetPropExchange::ExchangePersistentProp**，和**CPropsetPropExchange::ExchangePersistentProp**覆寫此純虛擬函式。  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  交換儲存媒體和控制項之間的屬性。  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  函式**CArchivePropExchange::ExchangeProp**， **CResetPropExchange::ExchangeProp**，和**CPropsetPropExchange::ExchangeProp**這純粹的覆寫虛擬函式。  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  由架構呼叫以處理持續性的版本號碼。  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零否則為 0。  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
  呼叫此函式可擷取控制項的版本號碼。  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>傳回值  
  控制項版本號碼。  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  決定屬性交換會以非同步方式進行。  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>傳回值  
  傳回 TRUE，如果屬性被交換以非同步的方式，否則為 FALSE。  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  呼叫此函式可判斷屬性是否在已載入至控制項或從其儲存。  
   
 ```  
@@ -275,7 +270,7 @@ BOOL IsLoading();
 ### <a name="return-value"></a>傳回值  
  正在載入內容; 如果為非零否則便是 0。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
 

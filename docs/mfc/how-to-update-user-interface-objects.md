@@ -1,13 +1,10 @@
 ---
-title: "如何： 更新使用者介面物件 |Microsoft 文件"
-ms.custom: 
+title: 如何： 更新使用者介面物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e6d13e840c29d3ea9600183fafd9260966a2f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 422be3d80614c526c7e634d22a0930458e4b4e26
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-update-user-interface-objects"></a>如何：更新使用者介面物件
 通常，功能表項目和工具列按鈕有一種以上的狀態。 例如，目前內容未提供的功能表項目會變成灰色 (表示停用)。 功能表項目也可以是已核取或未核取。 工具列按鈕若無法使用也可以關閉，也可以是已核取。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [CCmdUI 類別](../mfc/the-ccmdui-class.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [功能表](../mfc/menus-mfc.md)
 

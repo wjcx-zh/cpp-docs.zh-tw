@@ -1,13 +1,10 @@
 ---
-title: "啟用 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 啟用 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 34b6d6e9313092a8f9a0a11967c7c6a62ed15e15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activation-c"></a>啟用 (C++)
 本文說明的角色啟用視覺化編輯 OLE 項目。 使用者已在容器文件中內嵌 OLE 項目之後，它可能需要使用。 若要這樣做，使用者按兩下項目，該項目就會啟動。 編輯啟用最常見的活動。 許多目前 OLE 項目，當啟動進行編輯，會導致目前的框架視窗變更以反映這些屬於伺服器應用程式建立項目的功能表和工具列。 此行為，已知為就地啟用，可讓使用者編輯複合文件中的任何內嵌項目，而不需離開容器文件視窗。  

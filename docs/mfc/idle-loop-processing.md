@@ -1,13 +1,10 @@
 ---
-title: "閒置迴圈處理 |Microsoft 文件"
-ms.custom: 
+title: 閒置迴圈處理 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baabba60ffaf886b7a34acfbff5b923a4495fa1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idle-loop-processing"></a>閒置迴圈處理
 許多應用程式會「在背景」進行耗時的處理。 有時候會因為效能考量而使用多執行緒進行此類工作。 執行緒會涉及額外的開發負荷，因此不建議如 MFC 會閒置時間工作等簡單的工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函式。 本文會著重於閒置處理的部分。 如需多執行緒處理，請參閱[多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   將另一個**PeekMessage**迴圈應用程式中的其他地方。  
   
-##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a>MFC 訊息迴圈中的 PeekMessage  
+##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> MFC 訊息迴圈中的 PeekMessage  
  使用 MFC 開發的應用程式中，主要訊息迴圈中`CWinThread`類別包含呼叫的訊息迴圈[PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API。 這個迴圈也會在各個訊息之間呼叫 `OnIdle` 的 `CWinThread` 成員函式。 應用程式可以藉由覆寫 `OnIdle` 函式，在閒置時間處理這些訊息。  
   
 > [!NOTE]
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
  如需執行閒置處理的詳細資訊，請參閱[OnIdle](../mfc/reference/cwinthread-class.md#onidle)中*MFC 參考*。  
   
-##  <a name="_core_peekmessage_elsewhere_in_your_application"></a>您的應用程式中其他位置的 PeekMessage  
+##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> 您的應用程式中其他位置的 PeekMessage  
  在應用程式中執行閒置處理的另一種方法包含將訊息迴圈內嵌在您的某個函式中。 這個訊息迴圈是非常類似於 MFC 的主要訊息迴圈，位於[cwinthread:: Run](../mfc/reference/cwinthread-class.md#run)。 這表示在使用 MFC 開發的應用程式中，這類迴圈必須執行許多和主要訊息迴圈相同的函式。 下列程式碼片段說明如何撰寫與 MFC 相容的訊息迴圈：  
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
@@ -67,6 +62,6 @@ ms.lasthandoff: 12/21/2017
   
  如需執行閒置處理的詳細資訊，請參閱[OnIdle](../mfc/reference/cwinthread-class.md#onidle) MFC 程式庫參考中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [一般 MFC 主題](../mfc/general-mfc-topics.md)
 

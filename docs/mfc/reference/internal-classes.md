@@ -1,13 +1,10 @@
 ---
-title: "內部類別 |Microsoft 文件"
-ms.custom: 
+title: 內部類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CPreviewViewEx
 - m_bPreMultiplyCheck
@@ -316,17 +313,15 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8848bb9d8599fcff5ed24d3bccf82ef581a0eb0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f7d1ef39a80ce8a06cef14ad227c7de54163644
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internal-classes"></a>內部類別
 在 MFC 內部使用下列類別。 為求完整起見，本節會說明這些內部類別，但是它們並不適合直接在您的程式碼中使用。  
@@ -422,6 +417,6 @@ ms.lasthandoff: 12/21/2017
 |`CVSListBoxEditCtrl Class`|會擴充標準的清單方塊中編輯控制項所顯示的小按鈕會開啟一個對話方塊。|  
 |`CVSToolsListBox Class`|藉由提供其他按鈕來新增、 刪除和移動清單方塊中的項目會擴充標準的清單方塊控制項。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 傳統型應用程式](../../mfc/mfc-desktop-applications.md)
 

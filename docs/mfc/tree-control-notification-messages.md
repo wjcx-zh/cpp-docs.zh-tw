@@ -1,13 +1,10 @@
 ---
-title: "樹狀目錄控制項通知訊息 |Microsoft 文件"
-ms.custom: 
+title: 樹狀目錄控制項通知訊息 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - notifications [MFC], CTreeCtrl
 - tree controls [MFC], notification messages
 ms.assetid: ac7013b4-91dd-4668-bd75-439ca0680ef9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5044416ca38f6b3ead743c571ea7175022d51fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7c352da9f9283f53c926a8223984620ee7fa6ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-notification-messages"></a>樹狀目錄控制項通知訊息
 樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 會傳送下列通知訊息做為**WM_NOTIFY**訊息：  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |**TVN_SELCHANGING**|表示即將變更為另一項目選取|  
 |**TVN_SETDISPINFO**|若要更新的項目所維護的資訊通知|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

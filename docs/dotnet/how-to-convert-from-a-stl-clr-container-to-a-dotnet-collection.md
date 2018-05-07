@@ -1,12 +1,9 @@
 ---
-title: "如何： 從 STL/CLR 容器轉換為.NET 集合 |Microsoft 文件"
-ms.custom: 
+title: 如何： 從 STL/CLR 容器轉換為.NET 集合 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 - STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aa58c8db46d1443ca5b39449222cc22e31eafb5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fb4938121d1d2beed3133bee6013e17d37f1402
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>如何：從 STL/CLR 容器轉換為 .NET 集合
 本主題示範如何將 STL/CLR 容器轉換成其對等的.NET 集合。 例如，我們會示範如何將轉換 STL/CLR[向量](../dotnet/vector-stl-clr.md)的.net<xref:System.Collections.Generic.ICollection%601>以及如何轉換 STL/CLR[對應](../dotnet/map-stl-clr.md)的.net <xref:System.Collections.Generic.IDictionary%602>，但程序是類似的所有集合和容器。  
@@ -123,7 +118,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)   
  [如何： 從.NET 集合轉換為 STL/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
  [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

@@ -1,12 +1,9 @@
 ---
-title: "CSharedFile 類別 |Microsoft 文件"
-ms.custom: 
+title: CSharedFile 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSharedFile
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c749f86f9e3fbd310fd03b3a82768d58632087
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csharedfile-class"></a>CSharedFile 類別
 [CMemFile](../../mfc/reference/cmemfile-class.md)-衍生的類別可支援共用記憶體檔案。  
@@ -66,7 +61,7 @@ class CSharedFile : public CMemFile
   
  請注意，`CSharedFile`不使用記憶體對應檔，並在處理序之間無法直接共用的資料。  
   
- `CSharedFile`物件可以自動配置自己的記憶體，或者您可以將附加到您自己的記憶體區塊`CSharedFile`藉由呼叫物件[CSharedFile::SetHandle](#sethandle)。 在任一情況下，自動成長的記憶體檔案的記憶體配置中`nGrowBytes`-如果大小為增量單位`nGrowBytes`不是零。  
+ `CSharedFile` 物件可以自動配置自己的記憶體，或者您可以將附加到您自己的記憶體區塊`CSharedFile`藉由呼叫物件[CSharedFile::SetHandle](#sethandle)。 在任一情況下，自動成長的記憶體檔案的記憶體配置中`nGrowBytes`-如果大小為增量單位`nGrowBytes`不是零。  
   
  如需詳細資訊，請參閱文章[MFC 中的檔案](../../mfc/files-in-mfc.md)和[檔案處理](../../c-runtime-library/file-handling.md)中*執行階段程式庫參考*。  
   
@@ -82,7 +77,7 @@ class CSharedFile : public CMemFile
 ## <a name="requirements"></a>需求  
  **標頭：** afxadv.h  
   
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
  建構`CSharedFile`物件，並為它配置記憶體。  
   
 ```  
@@ -98,7 +93,7 @@ CSharedFile(
  `nGrowBytes`  
  以位元組為單位的記憶體配置遞增值。  
   
-##  <a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>  CSharedFile::Detach  
  呼叫此函式可關閉記憶體檔案，並中斷的記憶體區塊。  
   
 ```  
@@ -111,7 +106,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>備註  
  您可以藉由呼叫重新開啟它[sethandle，然後](#sethandle)，使用所傳回的控制代碼**卸離**。  
   
-##  <a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>  CSharedFile::SetHandle  
  呼叫此函式可附加的全域記憶體區塊`CSharedFile`物件。  
   
 ```  
@@ -130,7 +125,7 @@ void SetHandle(
 ### <a name="remarks"></a>備註  
  如果`bAllowGrow`是非零值，記憶體區塊的大小增加為有需要，例如，如果嘗試對多個位元組寫入檔案時要比配置記憶體區塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CMemFile 類別](../../mfc/reference/cmemfile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CMemFile 類別](../../mfc/reference/cmemfile-class.md)

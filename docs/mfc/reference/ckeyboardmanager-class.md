@@ -1,12 +1,9 @@
 ---
-title: "CKeyboardManager 類別 |Microsoft 文件"
-ms.custom: 
+title: CKeyboardManager 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CKeyboardManager
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7547887b4ad34ecbbea32516eaf76b6f4d1ab25d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 類別
 管理主框架視窗及子框架視窗的快速鍵資料表。  
@@ -104,7 +99,7 @@ class CKeyboardManager : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxkeyboardmanager.h  
   
-##  <a name="ckeyboardmanager"></a>CKeyboardManager::CKeyboardManager  
+##  <a name="ckeyboardmanager"></a>  CKeyboardManager::CKeyboardManager  
  建構 `CKeyboardManager` 物件。  
   
 ```  
@@ -114,7 +109,7 @@ CKeyboardManager();
 ### <a name="remarks"></a>備註  
  在大部分情況下，您不必建立`CKeyboardManager`直接。 根據預設，此架構為您建立一個。 若要取得的指標`CKeyboardManager`，呼叫[CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)。 如果您不要手動建立一個，您必須初始化執行個體與方法[CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)。  
   
-##  <a name="cleanup"></a>CKeyboardManager::CleanUp  
+##  <a name="cleanup"></a>  CKeyboardManager::CleanUp  
  釋出`CKeyboardManager`資源，並清除所有快顯的索引鍵對應。  
   
 ```  
@@ -126,7 +121,7 @@ static void CleanUp();
   
  您沒有應用程式結束，因為架構會呼叫它自動在應用程式結束時呼叫此函式。  
   
-##  <a name="finddefaultaccelerator"></a>CKeyboardManager::FindDefaultAccelerator  
+##  <a name="finddefaultaccelerator"></a>  CKeyboardManager::FindDefaultAccelerator  
  擷取指定的命令和視窗的預設快速鍵。  
   
 ```  
@@ -156,7 +151,7 @@ static BOOL FindDefaultAccelerator(
 ### <a name="remarks"></a>備註  
  這個方法會查詢所指定的命令`uiCmd`並擷取預設的快速鍵。 然後方法會採用這個快顯索引鍵相關聯的字串，並寫入至值`str`參數。  
   
-##  <a name="iskeyhandled"></a>CKeyboardManager::IsKeyHandled  
+##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  判斷指定的索引鍵由處理[CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)。  
   
 ```  
@@ -178,12 +173,12 @@ static BOOL __stdcall IsKeyHandled(
 |[輸入] `bIsDefaultFrame`|布林值，指出參數是否`pWndFrame`是預設框架視窗。|  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果處理的快速鍵。 `FALSE`如果索引鍵不處理或`pWndFrame`是`NULL`。  
+ `TRUE` 如果處理的快速鍵。 `FALSE` 如果索引鍵不處理或`pWndFrame`是`NULL`。  
   
 ### <a name="remarks"></a>備註  
  輸入的參數必須符合的項目快速鍵對應表中這兩個的`nKey`和`fVirt`來判斷是否進行處理攠摝坫`pWndFrame`。  
   
-##  <a name="iskeyprintable"></a>CKeyboardManager::IsKeyPrintable  
+##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  指出是否可列印字元。  
   
 ```  
@@ -203,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 ### <a name="remarks"></a>備註  
  如果呼叫這個方法會失敗[GetKeyboardState](http://msdn.microsoft.com/library/windows/desktop/ms646299)失敗。  
   
-##  <a name="isshowallaccelerators"></a>CKeyboardManager::IsShowAllAccelerators  
+##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators  
  表示功能表是否顯示與功能表命令相關聯的所有快速鍵或只有預設快顯索引鍵。  
   
 ```  
@@ -216,7 +211,7 @@ static BOOL IsShowAllAccelerators();
 ### <a name="remarks"></a>備註  
  應用程式列出功能表列中的功能表命令的快速鍵。 使用函數[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)來控制是否應用程式列出所有的快速鍵或只要預設的快速鍵。  
   
-##  <a name="loadstate"></a>CKeyboardManager::LoadState  
+##  <a name="loadstate"></a>  CKeyboardManager::LoadState  
  從 Windows 登錄載入的快速鍵資料表。  
   
 ```  
@@ -240,7 +235,7 @@ BOOL LoadState(
   
  如果您未指定預設的視窗，將會使用您的應用程式的主框架視窗。  
   
-##  <a name="resetall"></a>CKeyboardManager::ResetAll  
+##  <a name="resetall"></a>  CKeyboardManager::ResetAll  
  重新載入應用程式資源的快速鍵資料表。  
   
 ```  
@@ -250,7 +245,7 @@ void ResetAll();
 ### <a name="remarks"></a>備註  
  此函式會清除儲存在快速鍵`CKeyboardManager`執行個體。 然後，它會重新載入鍵盤管理員，從應用程式資源的狀態。  
   
-##  <a name="savestate"></a>CKeyboardManager::SaveState  
+##  <a name="savestate"></a>  CKeyboardManager::SaveState  
  儲存至 Windows 登錄的快顯索引鍵的資料表。  
   
 ```  
@@ -274,7 +269,7 @@ BOOL SaveState(
   
  如果您未指定預設的視窗，主框架視窗會當做預設的視窗。  
   
-##  <a name="showallaccelerators"></a>CKeyboardManager::ShowAllAccelerators  
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators  
  顯示與功能表命令相關聯的所有快速鍵。  
   
 ```  
@@ -295,7 +290,7 @@ static void ShowAllAccelerators(
   
  旁邊的功能表列中的命令會列出的鍵盤快速鍵。 如果顯示的快速鍵，所提供字串`lpszDelimiter`分隔個別的快速鍵。  
   
-##  <a name="translatechartoupper"></a>CKeyboardManager::TranslateCharToUpper  
+##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  將字元轉換成其上方的暫存器。  
   
 ```  
@@ -309,7 +304,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ### <a name="return-value"></a>傳回值  
  上方的暫存器的輸入參數的字元。  
   
-##  <a name="updateacceltable"></a>CKeyboardManager::UpdateAccelTable  
+##  <a name="updateacceltable"></a>  CKeyboardManager::UpdateAccelTable  
  更新快顯的索引鍵資料表與新的快速鍵資料表。  
   
 ```  
@@ -348,7 +343,7 @@ BOOL UpdateAccelTable(
 ### <a name="remarks"></a>備註  
  使用此函式來取代現有的快顯資料表具有數個框架視窗物件的新快速鍵。 在函數收到的文件範本做為參數，以取得連接至給定文件範本的所有框架視窗物件的存取權。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)   

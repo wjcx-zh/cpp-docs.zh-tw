@@ -1,12 +1,9 @@
 ---
-title: "CMFCDisableMenuAnimation 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCDisableMenuAnimation 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458a35e708db41ee393da70aedd653aca44cf802
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a7a2449fe65a0b17bf770ea2bfb8f3fe750cba0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 類別
 停用快顯功能表的動畫。  
@@ -80,7 +75,7 @@ class CMFCDisableMenuAnimation
 ## <a name="requirements"></a>需求  
  **標頭：** afxpopupmenu.h  
   
-##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
+##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore  
  還原前一個架構用來顯示快顯功能表的動畫。  
   
 ```  
@@ -90,7 +85,7 @@ void Restore ();
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`CMFCDisableMenuAnimation`還原架構用來顯示快顯功能表的前一個動畫的解構函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)

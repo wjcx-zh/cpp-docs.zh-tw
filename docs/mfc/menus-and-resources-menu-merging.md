@@ -1,13 +1,10 @@
 ---
-title: "功能表和資源： 功能表合併 |Microsoft 文件"
-ms.custom: 
+title: 功能表和資源： 功能表合併 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 252619872fc53e06629a4cbded7e3640131dc94a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-menu-merging"></a>功能表和資源：功能表合併
 這篇文章說明 OLE 文件的應用程式來處理視覺化編輯，並就地啟用正確的必要步驟。 就地啟用會帶來的挑戰容器和伺服器 （元件） 的應用程式。 使用者會保留在同一個框架視窗 （在容器文件的內容），但實際上正在執行另一個應用程式 （伺服器）。 這需要的資源的容器和伺服器應用程式之間進行協調。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 - [工具列和狀態列](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a>功能表配置  
+##  <a name="_core_menu_layouts"></a> 功能表配置  
  第一個步驟是協調功能表配置。 如需詳細資訊，請參閱**功能表建立**一節中[功能表程式設計考量](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK 中。  
   
  容器應用程式應該建立了新的功能表，以就地啟動內嵌的項目時，才使用。 最小值，這個功能表應該包含下列命令，列出的順序：  
@@ -113,12 +108,12 @@ END
   
  當內嵌項目就地啟動時，framework 就會載入在就地功能表。 它接著會要求其功能表的伺服器應用程式就地啟用，並將它分隔符號的插入。 這是功能表合併的方式。 從容器取得功能表來操作檔案和視窗的位置，並從伺服器取得功能表項目上運作。  
   
-##  <a name="_core_toolbars_and_status_bars"></a>工具列和狀態列  
+##  <a name="_core_toolbars_and_status_bars"></a> 工具列和狀態列  
  伺服器應用程式建立新的工具列中，儲存在個別檔案中的點陣圖。 應用程式精靈產生應用程式呼叫 ITOOLBAR 之檔案中儲存此點陣圖。BMP。 您的伺服器項目就地，啟動和應包含相同的項目，和一般工具列，但是移除圖示上的檔案和視窗的功能表項目時，新的工具列會取代容器應用程式的工具列。  
   
  這個工具列已載入您`COleIPFrameWnd`-衍生的類別，為您建立應用程式精靈。 狀態列是由容器應用程式處理。 更多的就地框架視窗實作的詳細資訊，請參閱[伺服器： 實作伺服器](../mfc/servers-implementing-a-server.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)   
  [啟用](../mfc/activation-cpp.md)   
  [伺服器](../mfc/servers.md)   

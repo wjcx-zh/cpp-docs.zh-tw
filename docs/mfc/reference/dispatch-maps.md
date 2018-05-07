@@ -1,13 +1,10 @@
 ---
-title: "分派對應 |Microsoft 文件"
-ms.custom: 
+title: 分派對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>分派對應
 OLE Automation 提供方式呼叫方法，並跨應用程式中存取屬性。 Microsoft Foundation 類別庫發送這些要求所提供的機制就是 「 分派對應 」 指定的物件函式和屬性，以及資料類型和屬性本身的內部和外部名稱函式引數。  
@@ -46,7 +41,7 @@ OLE Automation 提供方式呼叫方法，並跨應用程式中存取屬性。 M
 |[DISP_PROPERTY_PARAM](#disp_property_param)|定義 OLE automation 屬性的 Get 和 Set 函式接受參數和名稱。|  
 |[DISP_DEFVALUE](#disp_defvalue)|將現有的屬性設為物件的預設值。|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
  如果`CCmdTarget`-衍生的類別，在程式中支援 OLE Automation，類別必須提供公開其方法和屬性的分派對應。  
   
 ```   
@@ -67,7 +62,7 @@ DECLARE_DISPATCH_MAP()
 ### <a name="requirements"></a>需求  
  **標題:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
  宣告您的分派對應的定義。  
   
 ```  
@@ -87,7 +82,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
  結束您的分派對應的定義。  
   
 ```   
@@ -100,7 +95,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
  分派對應中定義的 OLE automation 函式。  
   
 ```   
@@ -147,13 +142,13 @@ DISP_FUNCTION(
 |**VT_Variant**|**VARIANT**|  
 |**VT_UNKNOWN**|`LPUNKNOWN`|  
   
- `vtsParams`引數是以空格分隔的清單中的值**VTS_**常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如，套用至物件的 
+ `vtsParams`引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如，套用至物件的 
   
  [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]  
   
  指定包含短整數，後面接著一個指標到短整數的清單。  
   
- **VTS_**常數和其意義如下：  
+ **VTS_** 常數和其意義如下：  
   
 |符號|參數型別|  
 |------------|--------------------|  
@@ -169,7 +164,7 @@ DISP_FUNCTION(
 |**VTS_BOOL**|**BOOL**|  
 |**VTS_VARIANT**|**const VARIANT\*** 或**變數 （& s)**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**短\***|  
+|**VTS_PI2**|**short\***|  
 |**VTS_PI4**|**長\***|  
 |**VTS_PR4**|**浮點數\***|  
 |**VTS_PR8**|**double\***|  
@@ -186,7 +181,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
  分派對應中定義的 OLE automation 屬性。  
   
 ```   
@@ -233,7 +228,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
  定義 OLE automation 屬性和名稱來取得和設定屬性的值，分派對應中使用的函式。  
   
 ```   
@@ -269,7 +264,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
  定義 OLE automation 屬性具有通知分派對應中。  
   
 ```   
@@ -320,7 +315,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
  定義與個別存取的屬性**取得**和`Set`成員函式。  
   
 ```   
@@ -350,7 +345,7 @@ DISP_PROPERTY_PARAM(
  值，指定屬性的型別。  
   
  `vtsParams`  
- 以空格分隔的字串**VTS_**變異參數類型，其中每個參數。  
+ 以空格分隔的字串**VTS_** 變異參數類型，其中每個參數。  
   
 ### <a name="remarks"></a>備註  
  不同於`DISP_PROPERTY_EX`巨集，此巨集可以可讓您指定之屬性的參數清單。 這可用於實作會編製索引或參數化的屬性。  
@@ -375,7 +370,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
  將現有的屬性設為物件的預設值。  
   
 ```   
@@ -397,5 +392,5 @@ DISP_DEFVALUE(theClass, pszName)
 ### <a name="requirements"></a>需求  
  **標頭：** afxdisp.h 
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

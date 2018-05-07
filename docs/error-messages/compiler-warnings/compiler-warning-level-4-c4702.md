@@ -1,12 +1,9 @@
 ---
-title: "編譯器警告 （層級 4） C4702 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告 （層級 4） C4702 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4702
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ef7420f3699363d33d195e2455ab9fddf88de40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29c2d6b0328fd8dd4cd6f9a226253036b62d03ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4702"></a>編譯器警告 (層級 4) C4702
 無法連線到程式碼  
@@ -49,7 +44,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>範例  
- 編譯時**/GX**， **/EHc**， **/EHsc**，或**/EHac**和使用 extern C 函式，程式碼可能會變得無法連線到因為 extern C函式假設不會擲回，所以不可以連線的 catch 區塊。  如果您認為這項警告不正確，因為函式可以擲回，以編譯**/EHa**或**/EHs**，取決於擲回的例外狀況。  
+ 編譯時 **/GX**， **/EHc**， **/EHsc**，或 **/EHac**和使用 extern C 函式，程式碼可能會變得無法連線到因為 extern C函式假設不會擲回，所以不可以連線的 catch 區塊。  如果您認為這項警告不正確，因為函式可以擲回，以編譯 **/EHa**或 **/EHs**，取決於擲回的例外狀況。  
   
  如需詳細資訊，請參閱[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md)如需詳細資訊。  
   

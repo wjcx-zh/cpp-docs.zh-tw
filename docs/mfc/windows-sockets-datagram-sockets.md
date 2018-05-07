@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets： 資料包通訊端 |Microsoft 文件"
-ms.custom: 
+title: Windows Sockets： 資料包通訊端 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], datagram
 - sockets [MFC], bi-directional data flow
 ms.assetid: bec16a1c-74c0-4ff9-8c18-c2d87897d264
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8c19280645edad0d449708434ebbc0ee646e981
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30ad7cab43301ae2cb7ebcb1fb4dfa850090955d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets：資料包通訊端
 本文說明兩種可用的 Windows Socket 類型之一資料包通訊端。 (另一種是[資料流通訊端](../mfc/windows-sockets-stream-sockets.md)。)  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  資料包通訊端會優於記錄導向資料流通訊端。 如需資料包通訊端的詳細資訊，請參閱 Windows Sockets 規格，可在 Windows SDK。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
  [Windows Sockets：背景](../mfc/windows-sockets-background.md)
 

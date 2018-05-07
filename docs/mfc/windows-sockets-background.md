@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets： 背景 |Microsoft 文件"
-ms.custom: 
+title: Windows Sockets： 背景 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets：背景
 本文說明的本質與用途的 Windows 通訊端。 發行項也：  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 > [!TIP]
 >  由於通訊端使用網際網路通訊協定組合，它們是支援 「 資訊高速公路。 」 上的網際網路通訊的應用程式的慣用的路由  
   
-##  <a name="_core_definition_of_a_socket"></a>通訊端的定義  
+##  <a name="_core_definition_of_a_socket"></a> 通訊端的定義  
  通訊端是通訊之端點，透過此 Windows 通訊端應用程式傳送或接收的資料封包在網路上的物件。 通訊端具有型別，而且與執行的處理序相關聯，它可能會有名稱。 目前，通訊端通常會交換資料只能搭配其他通訊端在相同 」 通訊網域中，「 使用網際網路通訊協定組合。  
   
  這兩種通訊端會雙向;它們是可以同時傳送兩個方向的資料流 （全雙工）。  
@@ -84,12 +79,12 @@ ms.lasthandoff: 12/21/2017
   
  如需有關這些類型資訊和哪一種通訊端在哪些情況下使用，請參閱[Windows Sockets： 資料流通訊端](../mfc/windows-sockets-stream-sockets.md)和[Windows Sockets： 資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)。  
   
-##  <a name="_core_the_socket_data_type"></a>通訊端的資料類型  
+##  <a name="_core_the_socket_data_type"></a> 通訊端的資料類型  
  每個 MFC 通訊端物件會封裝 Windows 通訊端物件的控制代碼。 這個控制代碼的資料類型是**通訊端**。 A**通訊端**控點是類似於`HWND`視窗。 MFC 通訊端類別會提供封裝的控制代碼上的作業。  
   
  **通訊端**資料類型中有詳細說明 Windows SDK 中。 Windows Sockets 下，請參閱 「 通訊端的資料類型和錯誤值 」。  
   
-##  <a name="_core_uses_for_sockets"></a>使用的通訊端  
+##  <a name="_core_uses_for_sockets"></a> 使用的通訊端  
  通訊端已至少三個通訊的內容中非常有用：  
   
 -   用戶端/伺服器模型。  
@@ -109,6 +104,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
 

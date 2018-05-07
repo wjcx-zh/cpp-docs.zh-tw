@@ -1,12 +1,9 @@
 ---
-title: "CMFCCustomColorsPropertyPage 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCCustomColorsPropertyPage 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCustomColorsPropertyPage
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dac4260c69e4d2bbf9c74965e73f6961dd6ad6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 類別
 表示可以在色彩對話方塊中選取自訂色彩 屬性頁面。  
@@ -80,7 +75,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>需求  
  **標頭：** afxcustomcolorspropertypage.h  
   
-##  <a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
+##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup  
  設定色彩元件的屬性頁。  
   
 ```  
@@ -102,7 +97,7 @@ void Setup(
 ### <a name="remarks"></a>備註  
  這個方法會更新目前的 RGB 和相關聯的 HLS （色調、 亮度及飽和度） 色彩值的屬性頁。 [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo)架構初始化色彩 對話方塊，或在使用者按下滑鼠左的按鈕時，方法會呼叫這個方法。 如需有關`CMFCColorDialog`，請參閱[CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)   

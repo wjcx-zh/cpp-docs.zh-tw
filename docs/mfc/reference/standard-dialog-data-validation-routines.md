@@ -1,29 +1,24 @@
 ---
-title: "標準對話方塊資料驗證常式 |Microsoft 文件"
-ms.custom: 
+title: 標準對話方塊資料驗證常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準對話方塊資料驗證常式
 本主題列出用於通用的 MFC 對話方塊控制項的標準對話方塊資料驗證 (DDV) 常式。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-##  <a name="ddv_maxchars"></a>DDV_MaxChars  
+##  <a name="ddv_maxchars"></a>  DDV_MaxChars  
  呼叫`DDV_MaxChars`驗證與關聯的控制項中的字元數*值*不超過*nChars*。  
   
 ```   
@@ -79,7 +74,7 @@ void AFXAPI DDV_MaxChars(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
+##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
  呼叫`DDV_MinMaxByte`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -109,7 +104,7 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
+##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
  呼叫`DDV_MinMaxDateTime`確認日期和時間選擇器中的日期/時間值，控制 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) 相關聯*refValue*介於`refMinRange`和`refMaxRange`。  
   
 ```   
@@ -145,7 +140,7 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
+##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
  呼叫`DDV_MinMaxDouble`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -175,7 +170,7 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
+##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
  呼叫`DDV_MinMaxDWord`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -205,7 +200,7 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
+##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
  呼叫`DDV_MinMaxFloat`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -235,7 +230,7 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>DDV_MinMaxInt  
+##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
  呼叫`DDV_MinMaxInt`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -265,7 +260,7 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
+##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
  呼叫`DDV_MinMaxLong`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -295,7 +290,7 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
  呼叫`DDV_MinMaxLongLong`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -325,7 +320,7 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
+##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
  呼叫`DDV_MinMaxMonth`以確認月份行事曆中的日期/時間值，控制 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) 相關聯*refValue*介於`refMinRange`和`refMaxRange`。  
   
 ```   
@@ -361,7 +356,7 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
  呼叫`DDV_MinMaxShort`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
+##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
  呼叫`DDV_MinMaxSlider`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -421,7 +416,7 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
  呼叫`DDV_MinMaxUInt`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -451,7 +446,7 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
  呼叫`DDV_MinMaxULongLong`驗證控制項中的值聯*值*介於`minVal`和`maxVal`。  
   
 ```   
@@ -481,7 +476,7 @@ void AFXAPI DDV_MinMaxULongLong(
 ### <a name="requirements"></a>需求  
   **標頭**afxdd_.h  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [標準對話方塊資料交換常式](../../mfc/reference/standard-dialog-data-exchange-routines.md)   
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
 
@@ -515,7 +510,7 @@ void AFXAPI DDV_MinMaxULongLong(
 ### <a name="requirements"></a>需求  
  **標頭：** afxdd_.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [DDX_Slider](#ddx_slider)   
  [DDX_FieldSlider](#ddx_fieldslider)

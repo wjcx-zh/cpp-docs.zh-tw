@@ -1,13 +1,10 @@
 ---
-title: "定義反映訊息的訊息處理常式 |Microsoft 文件"
-ms.custom: 
+title: 定義反映訊息的訊息處理常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.defining.msg.msghandler
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f5e1c472cdbca177b91851f9b8104094c41047
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ed941816824c77f14a3364b06af0b3da171ee8f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>定義反映訊息的訊息處理常式
 當您建立新的 MFC 控制項類別之後時，您可以為它定義訊息處理常式。 反映的訊息處理常式可讓您的控制項類別之前父系所收到的訊息處理自己的訊息。 您可以使用 MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)函式可從您的控制項傳送訊息至父視窗。  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
 9. 若要編輯或刪除的訊息處理常式，請重複步驟 4 到 7。 按一下包含要編輯或刪除，然後按一下適當的工作處理常式名稱的資料格。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   

@@ -1,13 +1,10 @@
 ---
-title: "什麼是 CArchive 物件 |Microsoft 文件"
-ms.custom: 
+title: 什麼是 CArchive 物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CArchive class [MFC], about CArchive class [MFC]
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb9b0c3e24094deb0d4fd4ac20d673d9ffafca6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55b97843a8aeb2599d2bdf34458b362fc5899368
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="what-is-a-carchive-object"></a>什麼是 CArchive 物件
 `CArchive` 物件針對將可序列化物件寫入 `CFile` 物件或從該物件讀取可序列化物件，提供一項類型安全緩衝機制。 通常 `CFile` 物件代表磁碟檔案，不過其可以是記憶體檔案 (`CSharedFile` 物件)，或許代表剪貼簿。  
@@ -40,6 +35,6 @@ ms.lasthandoff: 12/21/2017
   
  當資料序列化到封存時，封存會累積資料，直到緩衝區滿載。 然後，封存會將其緩衝區寫入 `CFile` 物件指向的 `CArchive` 物件。 同樣地，當您從封存讀取資料時，它會從檔案讀取資料到其緩衝區，然後從緩衝區讀取資料到您取消序列化的物件。 這個緩衝區會減少實體讀取硬碟的次數，進而提升應用程式的效能。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [序列化：序列化物件](../mfc/serialization-serializing-an-object.md)
 

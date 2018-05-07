@@ -1,12 +1,9 @@
 ---
-title: "運算子&lt;(set) (STL/CLR) |Microsoft 文件"
-ms.custom: 
+title: 運算子&lt;(set) (STL/CLR) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::operator<
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: bd6b351d-3f33-4f66-97fa-b7e8f36ce9fd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5ba01bbe0660286a54b0bc685a9dc85bdcd3e7b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc7180a0d0b38d1a99f24db01d1154c7e5df6259
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-set-stlclr"></a>運算子&lt;(set) (STL/CLR)
 清單小於比較。  
@@ -101,7 +96,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
  [運算子 = = (set) (STL/CLR)](../dotnet/operator-equality-set-stl-clr.md)   
  [運算子 ！ = (set) (STL/CLR)](../dotnet/operator-inequality-set-stl-clr.md)   

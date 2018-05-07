@@ -1,12 +1,9 @@
 ---
-title: "COleChangeSourceDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: COleChangeSourceDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeSourceDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eccd25a175479c18a83b5d6ab96753a946e386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 類別
 用於 OLE 的 [變更來源] 對話方塊。  
@@ -105,7 +100,7 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxodlgs.h  
   
-##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
+##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
  此函式會建構`COleChangeSourceDialog`物件。  
   
 ```  
@@ -126,7 +121,7 @@ explicit COleChangeSourceDialog(
   
  如需詳細資訊，請參閱[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)結構和[OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK 中的函式。  
   
-##  <a name="domodal"></a>COleChangeSourceDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  呼叫此函式可顯示 OLE 變更來源 對話方塊。  
   
 ```  
@@ -153,7 +148,7 @@ virtual INT_PTR DoModal();
   
 - [GetItemName](#getitemname)  
   
-##  <a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
+##  <a name="getdisplayname"></a>  COleChangeSourceDialog::GetDisplayName  
  呼叫此函式可擷取連結的用戶端項目的完整顯示名稱。  
   
 ```  
@@ -163,7 +158,7 @@ CString GetDisplayName();
 ### <a name="return-value"></a>傳回值  
  完整的來源顯示名稱 (moniker) [COleClientItem](../../mfc/reference/coleclientitem-class.md)建構函式中指定。  
   
-##  <a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
+##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
  呼叫此函式可擷取檔案 moniker 的部分連結的用戶端項目的顯示名稱。  
   
 ```  
@@ -176,7 +171,7 @@ CString GetFileName();
 ### <a name="remarks"></a>備註  
  項目 moniker 搭配檔案 moniker 提供完整顯示名稱。  
   
-##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
+##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
  呼叫此函式可取得先前的前置詞字串來源。  
   
 ```  
@@ -193,7 +188,7 @@ CString GetFromPrefix();
   
  如需詳細資訊，請參閱[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的結構。  
   
-##  <a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
+##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  呼叫此函式可擷取項目 moniker 的部分連結的用戶端項目的顯示名稱。  
   
 ```  
@@ -206,7 +201,7 @@ CString GetItemName();
 ### <a name="remarks"></a>備註  
  項目 moniker 搭配檔案 moniker 提供完整顯示名稱。  
   
-##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
+##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
  呼叫此函式可取得新的前置詞字串來源。  
   
 ```  
@@ -223,7 +218,7 @@ CString GetToPrefix();
   
  如需詳細資訊，請參閱[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的結構。  
   
-##  <a name="m_cs"></a>COleChangeSourceDialog::m_cs  
+##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
  此資料成員是類型的結構[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)。  
   
 ```  
@@ -231,11 +226,11 @@ OLEUICHANGESOURCE m_cs;
 ```  
   
 ### <a name="remarks"></a>備註  
- `OLEUICHANGESOURCE`用來控制 OLE 變更來源 對話方塊中的行為。 此結構的成員可以直接修改。  
+ `OLEUICHANGESOURCE` 用來控制 OLE 變更來源 對話方塊中的行為。 此結構的成員可以直接修改。  
   
  如需詳細資訊，請參閱[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的結構。  
   
-##  <a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
+##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  呼叫此函式可判斷新的來源是否有效。  
   
 ```  
@@ -250,7 +245,7 @@ BOOL IsValidSource();
   
  如需詳細資訊，請參閱[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)

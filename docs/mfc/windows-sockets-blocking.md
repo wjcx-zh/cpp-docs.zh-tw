@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets： 封鎖 |Microsoft 文件"
-ms.custom: 
+title: Windows Sockets： 封鎖 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4b54b78034037e9f3b015d7c1f67bb33771248c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 400114e557632c9a1dd11cc2f9ec5b3101eb8c37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets：封鎖
 本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文包含封鎖問題。 其他問題包含於下列文章中： [Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)和[Windows Sockets： 轉換字串](../mfc/windows-sockets-converting-strings.md)。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
  [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
 

@@ -1,12 +1,9 @@
 ---
-title: "嚴重錯誤 C1083 |Microsoft 文件"
-ms.custom: 
+title: 嚴重錯誤 C1083 |Microsoft 文件
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1083
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd929403afc86beabf185d099a79bfab5578482a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1083"></a>嚴重錯誤 C1083
 
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 
 `#include <stdio.h>`
 
-編譯器會依循由建置環境中，定義的搜尋路徑**/I**編譯器選項**/X**編譯器選項和**INCLUDE**環境變數。 如需詳細資訊，包括用來尋找檔案，搜尋順序有關的特定詳細資料請參閱[#include 指示詞 （C/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)。
+編譯器會依循由建置環境中，定義的搜尋路徑 **/I**編譯器選項 **/X**編譯器選項和**INCLUDE**環境變數。 如需詳細資訊，包括用來尋找檔案，搜尋順序有關的特定詳細資料請參閱[#include 指示詞 （C/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)和[#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)。
 
 如果包含的檔案是在您的來源目錄相對的另一個目錄，而且您使用相對路徑中的您 include 指示詞，您必須使用雙引號括住，而非角括號。 比方說，如果您的標頭檔 myheader.h 是您的專案來源名為標頭的子目錄中，然後此範例中找不到檔案並造成 C1083:
 
@@ -81,11 +76,11 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>此檔案會在您的專案，但不是包含搜尋路徑
 
-即使當標頭檔中所列**方案總管 中**專案的一部分，檔案時，才找由編譯器所參考到`#include`或`#import`來源中的指示詞檔案，其位於包含搜尋路徑。 不同類型的組建可能會使用不同的搜尋路徑。 **/X**編譯器選項可以用來將目錄從包含搜尋路徑中排除。 這樣可讓不同的組建使用同名但存放在不同目錄下的 Include 檔案。 這是除了使用前置處理器命令進行條件式編譯以外的另一種作法。 如需有關**/X**編譯器選項，請參閱[/X （忽略標準 Include 路徑）](../../build/reference/x-ignore-standard-include-paths.md)。
+即使當標頭檔中所列**方案總管 中**專案的一部分，檔案時，才找由編譯器所參考到`#include`或`#import`來源中的指示詞檔案，其位於包含搜尋路徑。 不同類型的組建可能會使用不同的搜尋路徑。 **/X**編譯器選項可以用來將目錄從包含搜尋路徑中排除。 這樣可讓不同的組建使用同名但存放在不同目錄下的 Include 檔案。 這是除了使用前置處理器命令進行條件式編譯以外的另一種作法。 如需有關 **/X**編譯器選項，請參閱[/X （忽略標準 Include 路徑）](../../build/reference/x-ignore-standard-include-paths.md)。
 
-若要修正此問題，請修正編譯器用來搜尋包含或匯入之檔案的路徑。 新的專案會使用預設值的包含搜尋路徑。 您可能必須修改包含搜尋路徑，以加入您專案的目錄。 如果您在命令列上編譯，請將路徑加入至**INCLUDE**環境變數或**/I**編譯器選項以指定檔案的路徑。
+若要修正此問題，請修正編譯器用來搜尋包含或匯入之檔案的路徑。 新的專案會使用預設值的包含搜尋路徑。 您可能必須修改包含搜尋路徑，以加入您專案的目錄。 如果您在命令列上編譯，請將路徑加入至**INCLUDE**環境變數或 **/I**編譯器選項以指定檔案的路徑。
 
-若要在 Visual Studio 中設定 include 目錄路徑，請開啟專案的**屬性頁** 對話方塊。 選取**VC + + 目錄**下**組態屬性**左的窗格中，然後編輯**Include 目錄**屬性。 如需透過 Visual Studio 中的編譯器搜尋的個別使用者和每個專案目錄的詳細資訊，請參閱[VC + + 目錄屬性頁](../../ide/vcpp-directories-property-page.md)。 如需有關**/I**編譯器選項，請參閱[（其他 Include 目錄） /I](../../build/reference/i-additional-include-directories.md)。
+若要在 Visual Studio 中設定 include 目錄路徑，請開啟專案的**屬性頁** 對話方塊。 選取**VC + + 目錄**下**組態屬性**左的窗格中，然後編輯**Include 目錄**屬性。 如需透過 Visual Studio 中的編譯器搜尋的個別使用者和每個專案目錄的詳細資訊，請參閱[VC + + 目錄屬性頁](../../ide/vcpp-directories-property-page.md)。 如需有關 **/I**編譯器選項，請參閱[（其他 Include 目錄） /I](../../build/reference/i-additional-include-directories.md)。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>命令列包含或 LIB 環境未設定
 
@@ -107,9 +102,9 @@ C1083 錯誤也可能表示包含了錯誤版本的檔案。 包含錯誤檔案�
 
 - 您已安裝的 SDK 或協力廠商程式庫，但沒有 SDK 後開啟新的開發人員命令提示字元視窗，或已安裝程式庫。 如果 SDK 或文件庫加入檔案以**INCLUDE**路徑，您可能需要開啟新的開發人員命令提示字元視窗以收取這些環境變數的變更。
 
-- 檔案使用 managed 程式碼，但編譯器選項**/clr**未指定。 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。
+- 檔案使用 managed 程式碼，但編譯器選項 **/clr**未指定。 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。
 
-- 檔案使用不同的編譯**/ 分析**編譯器選項設定與用來先行編譯標頭。 當專案的標頭中都會先行編譯時，全都應該使用相同**/ 分析**設定。 如需詳細資訊，請參閱 [/analyze (程式碼分析)](../../build/reference/analyze-code-analysis.md)。
+- 檔案使用不同的編譯 **/ 分析**編譯器選項設定與用來先行編譯標頭。 當專案的標頭中都會先行編譯時，全都應該使用相同 **/ 分析**設定。 如需詳細資訊，請參閱 [/analyze (程式碼分析)](../../build/reference/analyze-code-analysis.md)。
 
 - 檔案、目錄或磁碟為唯讀。
 

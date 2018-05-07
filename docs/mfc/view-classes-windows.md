@@ -1,13 +1,10 @@
 ---
-title: "檢視類別 (Windows) |Microsoft 文件"
-ms.custom: 
+title: 檢視類別 (Windows) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>檢視類別 (Windows)
-`CView`其衍生的類別是代表框架視窗的工作區的子視窗。 檢視可顯示資料，並接受輸入的文件。  
+`CView` 其衍生的類別是代表框架視窗的工作區的子視窗。 檢視可顯示資料，並接受輸入的文件。  
   
  檢視類別是與文件類別和使用文件範本物件的框架視窗類別相關聯。  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  包含 Windows 樹狀目錄控制項的檢視 (請參閱[CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 樹狀目錄控制項顯示圖示和標籤排列方式，類似於左窗格的 [檔案總管] 中的階層式清單。  
   
 ## <a name="related-classes"></a>相關的類別  
- `CSplitterWnd`可讓您有多個檢視單一框架視窗內。 `CPrintDialog`和`CPrintInfo`支援列印和預覽列印功能的檢視。 `CRichEditDoc`和`CRichEditCntrItem`搭配`CRichEditView`實作 OLE 容器功能。  
+ `CSplitterWnd` 可讓您有多個檢視單一框架視窗內。 `CPrintDialog` 和`CPrintInfo`支援列印和預覽列印功能的檢視。 `CRichEditDoc` 和`CRichEditCntrItem`搭配`CRichEditView`實作 OLE 容器功能。  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  使用者可以分割成多個窗格視窗。 這些窗格可以由使用者或固定的大小可調整大小。  
@@ -93,6 +88,6 @@ ms.lasthandoff: 12/21/2017
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
  提供 OLE 項目儲存在用戶端存取`CRichEditView`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

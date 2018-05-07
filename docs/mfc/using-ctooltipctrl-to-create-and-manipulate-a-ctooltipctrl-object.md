@@ -1,13 +1,10 @@
 ---
-title: "使用 CToolTipCtrl 建立及管理 CToolTipCtrl 物件 |Microsoft 文件"
-ms.custom: 
+title: 使用 CToolTipCtrl 建立及管理 CToolTipCtrl 物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolTipCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - tool tips [MFC], creating
 - CToolTipCtrl class [MFC], using
 ms.assetid: 0a34583f-f66d-46a1-a239-31b80ea395ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da4c98e327d2d78050410e75869c894d73324281
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f2143ea37cfe9448e43aacfa75622beab93d2fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>使用 CToolTipCtrl 建立及管理 CToolTipCtrl 物件
 以下是範例[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)使用量：  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 7.  呼叫[GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount)以擷取工具計數註冊工具提示控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CToolTipCtrl](../mfc/using-ctooltipctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

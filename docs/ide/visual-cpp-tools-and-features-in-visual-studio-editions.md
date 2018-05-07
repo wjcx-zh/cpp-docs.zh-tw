@@ -1,10 +1,10 @@
 ---
-title: "Visual Studio 版本中 visual c + + 工具和功能 |Microsoft 文件"
-ms.custom: 
+title: Visual Studio 版本中 visual c + + 工具和功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
 - cpp-ide
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -12,17 +12,15 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bab6eda1c5c0d2d852d3a678f588f0539495001
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual c + + 工具和 Visual Studio 版本中的功能
 
@@ -35,7 +33,7 @@ ms.lasthandoff: 03/05/2018
 |平台|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio 企業版|
 |Windows 桌面||X|X|X|
 |通用 Windows 平台 ((電話、平板電腦、電腦、Xbox、IoT 和 HoloLens))|X||X|X|
-|Microsoft Store 8.1|||X|X|
+|Microsoft 市集 8.1|||X|X|
 |Windows Phone 8.0|||X|X|
 |Android|||X|X|
 |iOS|||X|X|
@@ -183,7 +181,7 @@ ms.lasthandoff: 03/05/2018
 |程式碼對應和相依性圖形|||唯讀|X|
 |程式碼對應偵錯||||X|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [安裝 Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [在 Visual Studio 中最新消息](/visualstudio/ide/whats-new-in-visual-studio)<br/>

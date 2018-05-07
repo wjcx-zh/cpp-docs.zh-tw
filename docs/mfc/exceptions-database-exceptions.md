@@ -1,13 +1,10 @@
 ---
-title: "例外狀況： 資料庫例外狀況 |Microsoft 文件"
-ms.custom: 
+title: 例外狀況： 資料庫例外狀況 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>例外狀況：資料庫例外狀況
 本文說明如何處理資料庫例外狀況。 是否使用 MFC 類別開放式資料庫連接 (ODBC) 或 MFC 類別的資料存取物件 (DAO)，適用於大部分的這篇文章中的資料。 明確地標示為只適用於一個或其他模型。 主題包括：  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [資料庫例外狀況處理範例](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>例外狀況處理的方法  
+##  <a name="_core_approaches_to_exception_handling"></a> 例外狀況處理的方法  
  是否正在使用 DAO 或是 ODBC 方法都是相同的。  
   
  您應該撰寫例外狀況處理常式來處理例外狀況。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  DAO 錯誤、 DAO 錯誤物件類型和 DAO 錯誤集合的其他資訊時才可使用類別[CDaoException](../mfc/reference/cdaoexception-class.md)。  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>資料庫例外狀況處理範例  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> 資料庫例外狀況處理範例  
  下列範例嘗試建構[CRecordset](../mfc/reference/crecordset-class.md)-衍生的堆積上物件**新**運算子，然後再開啟資料錄集 （適用於 ODBC 資料來源）。 適用於 DAO 類別中的類似範例，請參閱以下的 < DAO 例外狀況範例 >。  
   
 ### <a name="odbc-exception-example"></a>ODBC 例外狀況範例  
@@ -81,6 +76,6 @@ ms.lasthandoff: 12/21/2017
   
  當您使用 Microsoft Jet (.mdb) 資料庫，且大部分情況下會使用 ODBC 時，會有一個物件時發生錯誤。 在極少數的情況下，當您使用 ODBC 資料來源，而且有多個錯誤，您可以逐一 DAO 的錯誤集合為基礎所傳回的錯誤數目[CDaoException::GetErrorCount](../mfc/reference/cdaoexception-class.md#geterrorcount)。 迴圈時，每次呼叫[CDaoException::GetErrorInfo](../mfc/reference/cdaoexception-class.md#geterrorinfo)以重新填滿`m_pErrorInfo`資料成員。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [例外狀況處理](../mfc/exception-handling-in-mfc.md)
 

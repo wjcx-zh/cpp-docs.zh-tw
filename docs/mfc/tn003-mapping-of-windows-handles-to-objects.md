@@ -1,13 +1,10 @@
 ---
-title: "TN003： 將 Windows 控制代碼到物件 |Microsoft 文件"
-ms.custom: 
+title: TN003： 將 Windows 控制代碼到物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mapping
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e53b2569b0da6bfa63c94adb7bb163e5bcd6b7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003：將 Windows 控制代碼對應到物件
 此提示描述 MFC 支援對應 Windows 的常式物件的 c + + 物件的控制代碼。  
@@ -92,7 +87,7 @@ myWnd.Detach();
   
  若要將這些物件從一個執行緒，一律傳送它們做為其原生`HANDLE`型別。 從一個執行緒的 c + + 包裝函式物件傳遞至另一個通常會導致非預期的結果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

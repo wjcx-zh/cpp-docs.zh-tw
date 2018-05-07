@@ -1,13 +1,10 @@
 ---
-title: "MFC 巨集和全域 |Microsoft 文件"
-ms.custom: 
+title: MFC 巨集和全域 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb53dea24ccd4d34ef90045e3254915135e70c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 189e3f272d679030c11fcd11ca4760f59944faeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 巨集和全域
 Mfc 程式庫可以分成兩個主要區段: （1） 的 MFC 類別和 （2） 巨集和全域變數。 如果函式或變數不是類別的成員，它是全域函式或變數。  
@@ -139,7 +134,7 @@ Mfc 程式庫可以分成兩個主要區段: （1） 的 MFC 類別和 （2） �
 > [!NOTE]
 >  許多全域函式開頭的前置詞 「 Afx 」，但部分，例如對話方塊資料交換 (DDX) 函式和許多資料庫函式不會遵循這個慣例。 做為前置詞，以 「 afx 」 開頭所有全域變數。 巨集不會啟動任何特殊的前置詞，但它們以大寫字母寫入。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../../mfc/class-library-overview.md)
 
 

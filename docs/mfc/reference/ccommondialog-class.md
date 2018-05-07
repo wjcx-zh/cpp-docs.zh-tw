@@ -1,12 +1,9 @@
 ---
-title: "CCommonDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CCommonDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCommonDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a42acf9c4655868bcc078b3e40d3966587aeaaad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19f8c0aa6aaa4980466918eac2649cc246b2e6ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 類別
 封裝 Windows 通用對話方塊功能之類別的基底類別。  
@@ -79,7 +74,7 @@ class CCommonDialog : public CDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxdlgs.h  
   
-##  <a name="ccommondialog"></a>CCommonDialog::CCommonDialog  
+##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog  
  建構 `CCommonDialog` 物件。  
   
 ```  
@@ -93,7 +88,7 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ### <a name="remarks"></a>備註  
  請參閱[CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog)如需完整資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDialog 類別](../../mfc/reference/cdialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)   

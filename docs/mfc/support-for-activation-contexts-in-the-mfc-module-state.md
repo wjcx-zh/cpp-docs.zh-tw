@@ -1,30 +1,25 @@
 ---
-title: "MFC 模組狀態的啟用內容支援 |Microsoft 文件"
-ms.custom: 
+title: MFC 模組狀態的啟用內容支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - activation contexts [MFC]
 - activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41aa0987a6fad48e57544ebbdd708d60c000382e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2713e0025c0587a4ab76813d4d07eed0825db447
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>MFC 模組狀態的啟用內容支援
 MFC 會使用由使用者模組所提供的資訊清單資源來建立啟用內容。 如需如何建立啟用內容的詳細資訊，請參閱下列主題：  
@@ -52,7 +47,7 @@ MFC 會使用由使用者模組所提供的資訊清單資源來建立啟用內�
   
  [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)巨集啟用和停用的啟用內容。 `AFX_MANAGE_STATE` 可針對 MFC 靜態程式庫及 MFC DLL 來啟用，如此便可讓 MFC 程式碼在使用者 DLL 選取的適當啟用內容中執行。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [啟用內容](http://msdn.microsoft.com/library/aa374153)   
  [應用程式資訊清單](http://msdn.microsoft.com/library/aa374191)   
  [組件資訊清單](http://msdn.microsoft.com/library/aa374219)   

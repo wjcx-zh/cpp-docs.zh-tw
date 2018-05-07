@@ -1,12 +1,9 @@
 ---
-title: "CMFCImagePaintArea 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCImagePaintArea 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCImagePaintArea
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f4af09ad1da91e3d59f82736ae9b240812069eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 類別
 提供您用來修改影像編輯器 對話方塊中的映像的圖片區域。  
@@ -90,7 +85,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="requirements"></a>需求  
  **標頭：** afximagepaintarea.h  
   
-##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea  
  建構 `CMFCImagePaintArea` 物件。  
   
 ```  
@@ -104,7 +99,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |參數|描述|  
 |[輸入] `pParentDlg`|影像編輯器的父系對話方塊指標。|  
   
-##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
+##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  擷取目前的繪圖模式。  
   
 ```  
@@ -114,7 +109,7 @@ IMAGE_EDIT_MODE GetMode() const;
 ### <a name="return-value"></a>傳回值  
  [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，指定目前的繪圖模式。  
   
-##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap  
  設定 [圖片] 區域的點陣圖影像。  
   
 ```  
@@ -131,7 +126,7 @@ void SetBitmap(CBitmap* pBitmap);
 ### <a name="remarks"></a>備註  
  如果`pBitmap`是`NULL`，這個方法會設定為零的可修改 [小畫家] 區域的大小。 否則，它提供的點陣圖影像的大小設定可修改 [小畫家] 區域的大小。  
   
-##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  設定目前繪圖的色彩。  
   
 ```  
@@ -150,7 +145,7 @@ void SetColor(COLORREF color);
   
  繪圖的色彩除外的所有繪圖模式使用影像編輯器對話方塊`IMAGE_EDIT_MODE_COLOR`。 如需繪圖模式的詳細資訊，請參閱[cmfcimagepaintarea:: Image_edit_mode 列舉](cmfcimagepaintarea-image-edit-mode-enumeration.md)。  
   
-##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
+##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
  設定目前的繪圖模式。  
   
 ```  
@@ -164,7 +159,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |參數|描述|  
 |[輸入] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，指定目前的繪圖模式。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCImageEditorDialog 類別](../../mfc/reference/cmfcimageeditordialog-class.md)

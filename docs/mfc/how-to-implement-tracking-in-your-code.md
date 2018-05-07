@@ -1,29 +1,24 @@
 ---
-title: "如何： 在您的程式碼中實作追蹤 |Microsoft 文件"
-ms.custom: 
+title: 如何： 在您的程式碼中實作追蹤 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad49c70113780e0c0570e88efab06efc347e83d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae9696be10ab00a076a73c14281a9baabe3d6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>如何：在您的程式碼中實作追蹤
 若要追蹤 OLE 項目，您必須處理特定項目，例如按一下項目或更新文件檢視相關的事件。 在所有情況下，這就足夠宣告暫存[CRectTracker](../mfc/reference/crecttracker-class.md)物件，並透過此物件來管理項目。  
@@ -66,6 +61,6 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [追蹤器：在 OLE 應用程式中實作追蹤器](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
 

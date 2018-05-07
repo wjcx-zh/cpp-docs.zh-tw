@@ -1,13 +1,10 @@
 ---
-title: "混合的組件的程式庫支援 |Microsoft 文件"
-ms.custom: 
+title: 混合的組件的程式庫支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - msvcmrt[d].lib
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6f999a75a8f818fccabada840a2a6e9fc70447cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9fbb660d3f62c255ab81c7e77fef6c5d042efb12
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="library-support-for-mixed-assemblies"></a>混合組件的程式庫支援
 Visual c + + 支援 c + + 標準程式庫，一般的執行階段程式庫 (CRT)，使用 ATL 和 MFC 應用程式，以編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。 這可讓使用.NET Framework 功能，以及使用這些程式庫的現有應用程式。  
@@ -54,5 +49,5 @@ Visual c + + 支援 c + + 標準程式庫，一般的執行階段程式庫 (CRT)
   
  因為它不會保證使用較早版本，您應該更新 commn language runtime (CLR) 至目前版本。 這些變更內建的程式碼將不會執行 CLR 版本 1.x。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)

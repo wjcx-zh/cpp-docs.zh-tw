@@ -1,30 +1,25 @@
 ---
-title: "使用樹狀目錄控制項 |Microsoft 文件"
-ms.custom: 
+title: 使用樹狀目錄控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CTreeCtrl class [MFC], using
 - tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3b7e0348cb21aa4338293f7cc1119e380f92dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-tree-controls"></a>使用樹狀目錄控制項
 樹狀目錄控制項的一般使用方式 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 遵循下列模式：  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
 -   如果您要使用影像樹狀目錄控制項，來設定影像清單呼叫[SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist)。 您也可以藉由呼叫來變更縮排[SetIndent](../mfc/reference/ctreectrl-class.md#setindent)。 若要這樣做的好時機處於[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) （適用於在對話方塊中的控制項） 或[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) （適用於檢視）。  
   
--   將資料放入控制項，藉由呼叫`CTreeCtrl`的[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)函式，針對每個資料項目執行一次。 `InsertItem`控制代碼傳回至項目，以便日後參考，例如當加入子項目。 初始化資料的好時機處於`OnInitDialog`（適用於在對話方塊中的控制項） 或`OnInitialUpdate`（適用於檢視）。  
+-   將資料放入控制項，藉由呼叫`CTreeCtrl`的[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)函式，針對每個資料項目執行一次。 `InsertItem` 控制代碼傳回至項目，以便日後參考，例如當加入子項目。 初始化資料的好時機處於`OnInitDialog`（適用於在對話方塊中的控制項） 或`OnInitialUpdate`（適用於檢視）。  
   
 -   當使用者與控制項互動時，它會傳送各種通知訊息。 您可以指定函式，以處理每個您想要加上處理的訊息**ON_NOTIFY_REFLECT**巨集在控制項視窗的訊息對應，或藉由新增`ON_NOTIFY`父視窗的訊息對應巨集。 請參閱[樹狀目錄控制項通知訊息](../mfc/tree-control-notification-messages.md)本主題稍後的一份可能的通知。  
   
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   當您完成控制項時，請確定已正確地終結。 如果樹狀目錄控制項位於對話方塊中，或者它是一個檢視，它和`CTreeCtrl`物件將會自動終結。 否則，您必須確保控制項和 `CTreeCtrl` 物件都已正確地終結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

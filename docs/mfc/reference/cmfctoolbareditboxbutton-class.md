@@ -1,12 +1,9 @@
 ---
-title: "CMFCToolBarEditBoxButton 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCToolBarEditBoxButton 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarEditBoxButton
@@ -61,17 +58,15 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f774282823d68a3b5f2107b7297714ce8aa918f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bddd7274feb9ecde268a94d7e9a6e857c906650
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 類別
 包含編輯控制項的工具列按鈕 ( [CEdit 類別](../../mfc/reference/cedit-class.md))。  
@@ -97,13 +92,13 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |----------|-----------------|  
 |[CMFCToolBarEditBoxButton::CanBeStretched](#canbestretched)|指定使用者是否可以在自訂期間延伸按鈕。 (覆寫[CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)。)|  
 |[CMFCToolBarEditBoxButton::CopyFrom](#copyfrom)|將另一個工具列按鈕的內容複製到目前的按鈕。 (覆寫[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)。)|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::CreateEdit](#createedit)|建立新的編輯控制項中的按鈕。|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::CreateEdit](#createedit)|建立新的編輯控制項中的按鈕。|  
 |`CMFCToolBarEditBoxButton::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
 |[CMFCToolBarEditBoxButton::GetByCmd](#getbycmd)|擷取第一個`CMFCToolBarEditBoxButton`中具有指定之命令識別碼的應用程式物件|  
 |[CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall)|擷取控制項文字的第一個編輯方塊工具列具有指定的命令識別碼。|  
 |[CMFCToolBarEditBoxButton::GetContextMenuID](#getcontextmenuid)|擷取與按鈕相關聯的捷徑功能表的資源識別碼。|  
 |[CMFCToolBarEditBoxButton::GetEditBorder](#geteditborder)|擷取週框的編輯方塊按鈕的編輯部分。|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::GetEditBox](#geteditbox)|傳回的指標按鈕中內嵌之編輯控制項。|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::GetEditBox](#geteditbox)|傳回的指標按鈕中內嵌之編輯控制項。|  
 |[CMFCToolBarEditBoxButton::GetHwnd](#gethwnd)|擷取工具列按鈕與相關聯的視窗控制代碼。 (覆寫[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)。)|  
 |[CMFCToolBarEditBoxButton::GetInvalidateRect](#getinvalidaterect)|擷取用戶端必須重繪按鈕區域的區域。 (覆寫[CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect)。)|  
 |`CMFCToolBarEditBoxButton::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
@@ -124,11 +119,11 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 |[CMFCToolBarEditBoxButton::OnUpdateToolTip](#onupdatetooltip)|為父工具列更新其工具提示文字時，由架構呼叫。 (覆寫[CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)。)|  
 |`CMFCToolBarEditBoxButton::Serialize`|從封存讀取此物件，或將它寫入至封存。 (覆寫[CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)。)|  
 |`CMFCToolBarEditBoxButton::SetACCData`|填入提供`CAccessibilityData`物件從工具列按鈕的協助工具資料。 (覆寫[CMFCToolBarButton::SetACCData](../../mfc/reference/cmfctoolbarbutton-class.md#setaccdata)。)|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::SetContents](#setcontents)|設定中的文字編輯控制項的按鈕。|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall)|尋找具有指定的命令 ID，並設定按鈕的編輯控制項中的文字編輯控制項按鈕。|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetContents](#setcontents)|設定中的文字編輯控制項的按鈕。|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall)|尋找具有指定的命令 ID，並設定按鈕的編輯控制項中的文字編輯控制項按鈕。|  
 |[CMFCToolBarEditBoxButton::SetContextMenuID](#setcontextmenuid)|指定的資源識別碼與按鈕相關聯的快顯功能表。|  
 |[CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)|應用程式中指定編輯方塊按鈕的平面樣式的外觀。|  
-|`CMFCToolBarEditBoxButton::`[CMFCToolBarEditBoxButton::SetStyle](#setstyle)|指定按鈕的樣式。 (覆寫[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。)|  
+|`CMFCToolBarEditBoxButton::` [CMFCToolBarEditBoxButton::SetStyle](#setstyle)|指定按鈕的樣式。 (覆寫[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。)|  
   
 ## <a name="remarks"></a>備註  
  若要編輯方塊按鈕加入工具列，請遵循下列步驟：  
@@ -156,7 +151,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 ## <a name="requirements"></a>需求  
  **標頭：** afxtoolbareditboxbutton.h  
   
-##  <a name="canbestretched"></a>CMFCToolBarEditBoxButton::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCToolBarEditBoxButton::CanBeStretched  
  指定使用者是否可以在自訂期間延伸按鈕。  
   
 ```  
@@ -169,7 +164,7 @@ virtual BOOL CanBeStretched() const;
 ### <a name="remarks"></a>備註  
  根據預設，架構不允許使用者在自訂期間 stretch 工具列按鈕。 此方法擴充的基底類別實作 ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) 允許使用者以進行自訂時延伸編輯方塊 工具列按鈕。  
   
-##  <a name="cmfctoolbareditboxbutton"></a>CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton  
+##  <a name="cmfctoolbareditboxbutton"></a>  CMFCToolBarEditBoxButton::CMFCToolBarEditBoxButton  
  建構[CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)物件。  
   
 ```  
@@ -200,7 +195,7 @@ CMFCToolBarEditBoxButton(
   
  控制項的預設寬度是 150 個像素。  
   
-##  <a name="copyfrom"></a>CMFCToolBarEditBoxButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCToolBarEditBoxButton::CopyFrom  
  將另一個工具列按鈕的內容複製到目前的按鈕。  
   
 ```  
@@ -212,9 +207,9 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  要從中複製來源 按鈕參考。  
   
 ### <a name="remarks"></a>備註  
- 呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 `src`必須是型別`CMFCToolBarEditBoxButton`。  
+ 呼叫這個方法，將另一個工具列按鈕複製到此工具列按鈕。 `src` 必須是型別`CMFCToolBarEditBoxButton`。  
   
-##  <a name="createedit"></a>CMFCToolBarEditBoxButton::CreateEdit  
+##  <a name="createedit"></a>  CMFCToolBarEditBoxButton::CreateEdit  
  建立新的編輯控制項中的按鈕。  
   
 ```  
@@ -236,7 +231,7 @@ virtual CEdit* CreateEdit(
 ### <a name="remarks"></a>備註  
  您建構`CMFCToolBarEditBoxButton`兩個步驟中的物件。 第一次呼叫建構函式，然後再呼叫`CreateEdit`，建立 Windows 編輯控制項，並將它附加至`CMFCToolBarEditBoxButton`物件。  
   
-##  <a name="getbycmd"></a>CMFCToolBarEditBoxButton::GetByCmd  
+##  <a name="getbycmd"></a>  CMFCToolBarEditBoxButton::GetByCmd  
  擷取第一個`CMFCToolBarEditBoxButton`中具有指定之命令識別碼的應用程式物件  
   
 ```  
@@ -253,7 +248,7 @@ static CMFCToolBarEditBoxButton* __stdcall GetByCmd(UINT uiCmd);
 ### <a name="remarks"></a>備註  
  這類的方法使用這個共用公用程式方法是[CMFCToolBarEditBoxButton::SetContentsAll](#setcontentsall)和[CMFCToolBarEditBoxButton::GetContentsAll](#getcontentsall)設定或取得第一個編輯方塊工具列的文字控制項具有指定的命令識別碼。  
   
-##  <a name="getcontentsall"></a>CMFCToolBarEditBoxButton::GetContentsAll  
+##  <a name="getcontentsall"></a>  CMFCToolBarEditBoxButton::GetContentsAll  
  擷取控制項文字的第一個編輯方塊工具列具有指定的命令識別碼。  
   
 ```  
@@ -270,7 +265,7 @@ static CString __stdcall GetContentsAll(UINT uiCmd);
 ### <a name="remarks"></a>備註  
  這個方法會傳回空字串，如果沒有`CMFCToolBarEditBoxButton`物件具有指定的命令識別碼。  
   
-##  <a name="getcontextmenuid"></a>CMFCToolBarEditBoxButton::GetContextMenuID  
+##  <a name="getcontextmenuid"></a>  CMFCToolBarEditBoxButton::GetContextMenuID  
  擷取與按鈕相關聯的捷徑功能表的資源識別碼。  
   
 ```  
@@ -283,7 +278,7 @@ UINT GetContextMenuID();
 ### <a name="remarks"></a>備註  
  架構會使用的資源 ID。 當使用者以滑鼠右鍵按一下按鈕建立快顯功能表。  
   
-##  <a name="geteditborder"></a>CMFCToolBarEditBoxButton::GetEditBorder  
+##  <a name="geteditborder"></a>  CMFCToolBarEditBoxButton::GetEditBorder  
  擷取週框的編輯方塊按鈕的編輯部分。  
   
 ```  
@@ -299,7 +294,7 @@ virtual void GetEditBorder(CRect& rectBorder);
   
  [CMFCVisualManager::OnDrawEditBorder](../../mfc/reference/cmfcvisualmanager-class.md#ondraweditborder)方法會呼叫這個方法，當它繪製周圍的框線時`CMFCToolBarEditBoxButton`物件。  
   
-##  <a name="geteditbox"></a>CMFCToolBarEditBoxButton::GetEditBox  
+##  <a name="geteditbox"></a>  CMFCToolBarEditBoxButton::GetEditBox  
  將指標傳回至[CEdit 類別](../../mfc/reference/cedit-class.md)按鈕中內嵌的控制項。  
   
 ```  
@@ -312,7 +307,7 @@ CEdit* GetEditBox() const;
 ### <a name="remarks"></a>備註  
  您建立`CEdit`藉由呼叫控制項[CMFCToolBarEditBoxButton::CreateEdit](#createedit)。  
   
-##  <a name="gethwnd"></a>CMFCToolBarEditBoxButton::GetHwnd  
+##  <a name="gethwnd"></a>  CMFCToolBarEditBoxButton::GetHwnd  
  擷取工具列按鈕與相關聯的視窗控制代碼。  
   
 ```  
@@ -325,7 +320,7 @@ virtual HWND GetHwnd();
 ### <a name="remarks"></a>備註  
  這個方法會覆寫[CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd)方法藉由傳回編輯控制項組件的編輯方塊按鈕的視窗控制代碼。  
   
-##  <a name="getinvalidaterect"></a>CMFCToolBarEditBoxButton::GetInvalidateRect  
+##  <a name="getinvalidaterect"></a>  CMFCToolBarEditBoxButton::GetInvalidateRect  
  擷取用戶端必須重繪按鈕區域的區域。  
   
 ```  
@@ -338,7 +333,7 @@ virtual const CRect GetInvalidateRect() const;
 ### <a name="remarks"></a>備註  
  此方法擴充的基底類別實作， [CMFCToolBarButton::GetInvalidateRect](../../mfc/reference/cmfctoolbarbutton-class.md#getinvalidaterect)，藉由在區域中的文字標籤的區域。  
   
-##  <a name="havehotborder"></a>CMFCToolBarEditBoxButton::HaveHotBorder  
+##  <a name="havehotborder"></a>  CMFCToolBarEditBoxButton::HaveHotBorder  
  決定是否要在使用者按一下按鈕時，顯示按鈕的框線。  
   
 ```  
@@ -351,7 +346,7 @@ virtual BOOL HaveHotBorder() const;
 ### <a name="remarks"></a>備註  
  此方法擴充的基底類別實作， [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder)，藉由傳回非零值，如果控制項為可見。  
   
-##  <a name="isflatmode"></a>CMFCToolBarEditBoxButton::IsFlatMode  
+##  <a name="isflatmode"></a>  CMFCToolBarEditBoxButton::IsFlatMode  
  判斷編輯方塊按鈕是否有平面的樣式。  
   
 ```  
@@ -364,7 +359,7 @@ static BOOL __stdcall IsFlatMode();
 ### <a name="remarks"></a>備註  
  根據預設，編輯方塊按鈕有平面的樣式。 使用[CMFCToolBarEditBoxButton::SetFlatMode](#setflatmode)方法，以變更您的應用程式的平面樣式外觀。  
   
-##  <a name="notifycommand"></a>CMFCToolBarEditBoxButton::NotifyCommand  
+##  <a name="notifycommand"></a>  CMFCToolBarEditBoxButton::NotifyCommand  
  指定是否要處理按鈕[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)訊息。  
   
 ```  
@@ -376,14 +371,14 @@ virtual BOOL NotifyCommand(int iNotifyCode);
  與命令相關聯的通知訊息。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果按鈕處理`WM_COMMAND`訊息，或`FALSE`表示為父工具列必須處理訊息。  
+ `TRUE` 如果按鈕處理`WM_COMMAND`訊息，或`FALSE`表示為父工具列必須處理訊息。  
   
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法，當它是傳送[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)父視窗的訊息。  
   
  此方法擴充的基底類別實作 ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) 藉由處理[EN_UPDATE](http://msdn.microsoft.com/library/windows/desktop/bb761687)通知。 每個具有相同的命令 ID，與此物件的 [編輯] 方塊中，它會設定其文字標籤到此物件的文字標籤。  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarEditBoxButton::OnAddToCustomizePage  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarEditBoxButton::OnAddToCustomizePage  
  加入按鈕時由架構呼叫**自訂** 對話方塊。  
   
 ```  
@@ -395,7 +390,7 @@ virtual void OnAddToCustomizePage();
   
  如需有關**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarEditBoxButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarEditBoxButton::OnChangeParentWnd  
  插入新的工具列按鈕時由架構呼叫。  
   
 ```  
@@ -409,7 +404,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>備註  
  這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 重新建立內部`CEdit`物件。  
   
-##  <a name="onclick"></a>CMFCToolBarEditBoxButton::OnClick  
+##  <a name="onclick"></a>  CMFCToolBarEditBoxButton::OnClick  
  當使用者按一下滑鼠按鈕時由架構呼叫。  
   
 ```  
@@ -431,7 +426,7 @@ virtual BOOL OnClick(
 ### <a name="remarks"></a>備註  
  這個方法會覆寫基底類別實作 ( [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)) 藉由傳回非零值，如果內部`CEdit`物件為可見。  
   
-##  <a name="onctlcolor"></a>CMFCToolBarEditBoxButton::OnCtlColor  
+##  <a name="onctlcolor"></a>  CMFCToolBarEditBoxButton::OnCtlColor  
  為父工具列處理時，由架構呼叫`WM_CTLCOLOR`訊息。  
   
 ```  
@@ -455,7 +450,7 @@ virtual HBRUSH OnCtlColor(
   
  如需全域選項，可用於您的應用程式的詳細資訊，請參閱[AFX_GLOBAL_DATA 結構](../../mfc/reference/afx-global-data-structure.md)。  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarEditBoxButton::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarEditBoxButton::OnGlobalFontsChanged  
  當全域字型變更時由架構呼叫。  
   
 ```  
@@ -467,7 +462,7 @@ virtual void OnGlobalFontsChanged();
   
  如需全域選項，可用於您的應用程式的詳細資訊，請參閱[AFX_GLOBAL_DATA 結構](../../mfc/reference/afx-global-data-structure.md)。  
   
-##  <a name="onmove"></a>CMFCToolBarEditBoxButton::OnMove  
+##  <a name="onmove"></a>  CMFCToolBarEditBoxButton::OnMove  
  為父工具列移動時由架構呼叫。  
   
 ```  
@@ -477,7 +472,7 @@ virtual void OnMove();
 ### <a name="remarks"></a>備註  
  這個方法會覆寫預設類別實作 ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) 藉由更新內部的位置`CEdit`物件  
   
-##  <a name="onshow"></a>CMFCToolBarEditBoxButton::OnShow  
+##  <a name="onshow"></a>  CMFCToolBarEditBoxButton::OnShow  
  由架構呼叫時，按鈕會變成可見或不可見。  
   
 ```  
@@ -491,7 +486,7 @@ virtual void OnShow(BOOL bShow);
 ### <a name="remarks"></a>備註  
  此方法擴充的基底類別實作 ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) 來顯示按鈕`bShow`是`TRUE`。 否則，這個方法會隱藏按鈕。  
   
-##  <a name="onsize"></a>CMFCToolBarEditBoxButton::OnSize  
+##  <a name="onsize"></a>  CMFCToolBarEditBoxButton::OnSize  
  為父工具列變更它的大小或位置，這項變更會使按鈕將大小變更時由架構呼叫。  
   
 ```  
@@ -505,7 +500,7 @@ virtual void OnSize(int iSize);
 ### <a name="remarks"></a>備註  
  這個方法會覆寫預設類別實作、 [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)，藉由更新的大小和位置的內部`CEdit`物件。  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarEditBoxButton::OnUpdateToolTip  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarEditBoxButton::OnUpdateToolTip  
  為父工具列更新其工具提示文字時，由架構呼叫。  
   
 ```  
@@ -535,7 +530,7 @@ virtual BOOL OnUpdateToolTip(
 ### <a name="remarks"></a>備註  
  此方法擴充的基底類別實作 ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) 藉由顯示按鈕的編輯部分相關聯的工具提示文字。 如果內部`CEdit`物件是`NULL`視窗控制代碼或`CEdit`物件無法識別現有的視窗，這個方法不做任何動作，並傳回`FALSE`。  
   
-##  <a name="setcontents"></a>CMFCToolBarEditBoxButton::SetContents  
+##  <a name="setcontents"></a>  CMFCToolBarEditBoxButton::SetContents  
  設定文字方塊控制項的文字。  
   
 ```  
@@ -546,7 +541,7 @@ virtual void SetContents(const CString& sContents);
  `[in] sContents`  
  指定要設定的新文字。  
   
-##  <a name="setcontentsall"></a>CMFCToolBarEditBoxButton::SetContentsAll  
+##  <a name="setcontentsall"></a>  CMFCToolBarEditBoxButton::SetContentsAll  
  尋找[CMFCToolBarEditBoxButton](../../mfc/reference/cmfctoolbareditboxbutton-class.md)有指定的命令 ID，而且指定的文字設定其文字方塊內的物件。  
   
 ```  
@@ -565,7 +560,7 @@ static BOOL SetContentsAll(
 ### <a name="return-value"></a>傳回值  
  設定文字; 如果為非零0 代表`CMFCToolBarEditBoxButton`與指定的命令 ID 的控制項不存在。  
   
-##  <a name="setcontextmenuid"></a>CMFCToolBarEditBoxButton::SetContextMenuID  
+##  <a name="setcontextmenuid"></a>  CMFCToolBarEditBoxButton::SetContextMenuID  
  指定的資源識別碼與按鈕相關聯的快顯功能表。  
   
 ```  
@@ -579,7 +574,7 @@ void SetContextMenuID(UINT uiResID);
 ### <a name="remarks"></a>備註  
  架構會使用的資源 ID。 當使用者以滑鼠右鍵按一下工具列按鈕建立快顯功能表。  
   
-##  <a name="setflatmode"></a>CMFCToolBarEditBoxButton::SetFlatMode  
+##  <a name="setflatmode"></a>  CMFCToolBarEditBoxButton::SetFlatMode  
  應用程式中指定編輯方塊按鈕的平面樣式的外觀。  
   
 ```  
@@ -593,7 +588,7 @@ static void __stdcall SetFlatMode(BOOL bFlat = TRUE);
 ### <a name="remarks"></a>備註  
  編輯方塊按鈕的預設一般樣式是`TRUE`。 使用[CMFCToolBarEditBoxButton::IsFlatMode](#isflatmode)方法來擷取您的應用程式的平面樣式外觀。  
   
-##  <a name="setstyle"></a>CMFCToolBarEditBoxButton::SetStyle  
+##  <a name="setstyle"></a>  CMFCToolBarEditBoxButton::SetStyle  
  指定編輯方塊控制項的工具列的樣式。  
   
 ```  
@@ -607,7 +602,7 @@ virtual void SetStyle(UINT nStyle);
 ### <a name="remarks"></a>備註  
  這個方法會設定[CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle)至`nStyle`它也會停用在文字方塊中，當應用程式為自訂模式，並讓它無法自訂模式應用程式時 (請參閱[CMFCToolBar:: SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)和[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode))。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)如需有效的樣式旗標的清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)   

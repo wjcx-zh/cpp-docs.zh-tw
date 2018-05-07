@@ -1,13 +1,10 @@
 ---
-title: "屬性頁 (MFC) |Microsoft 文件"
-ms.custom: 
+title: 屬性頁 (MFC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e53260457470ef75ac706779cea323aa5b73da2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0895cd22870b3a4a266e9be12f0000fae7f7101a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-pages-mfc"></a>屬性頁 (MFC)
 屬性頁來檢視及編輯支援對話方塊資料交換 (DDX) 為基礎的資料對應機制的可自訂的圖形化介面中顯示特定的 OLE 控制項屬性的目前值。  
   
- 此資料對應機制會將屬性頁面會控制對應至 OLE 控制項的個別屬性。 控制項屬性的值會反映狀態或屬性頁面控制項的內容。 屬性頁控制項和屬性之間的對應由指定**DDP_**屬性頁中的函式呼叫`DoDataExchange`成員函式。 下列是一份**DDP_**交換資料，使用您的控制項的屬性頁輸入的函式：  
+ 此資料對應機制會將屬性頁面會控制對應至 OLE 控制項的個別屬性。 控制項屬性的值會反映狀態或屬性頁面控制項的內容。 屬性頁控制項和屬性之間的對應由指定**DDP_** 屬性頁中的函式呼叫`DoDataExchange`成員函式。 下列是一份**DDP_** 交換資料，使用您的控制項的屬性頁輸入的函式：  
   
 ### <a name="property-page-data-transfer"></a>屬性頁資料傳輸  
   
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 |[END_PROPPAGEIDS](#end_proppageids)|結束屬性頁 Id 的清單。|  
 |[PROPPAGEID](#proppageid)|宣告屬性頁的控制項類別。|  
   
-##  <a name="ddp_cbindex"></a>DDP_CBIndex  
+##  <a name="ddp_cbindex"></a>  DDP_CBIndex  
  呼叫您屬性頁的 `DoDataExchange` 函式中的這個函式，來同步處理整數屬性的值與在屬性頁中下拉式方塊裡目前選取範圍的索引。  
   
 ```   
@@ -90,7 +85,7 @@ void AFXAPI DDP_CBIndex(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_cbstring"></a>DDP_CBString  
+##  <a name="ddp_cbstring"></a>  DDP_CBString  
  呼叫此函式在屬性頁的`DoDataExchange`同步處理之字串屬性值與屬性頁上的下拉式方塊中目前選取的函式。  
   
 ```  
@@ -120,7 +115,7 @@ void AFXAPI DDP_CBString(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
+##  <a name="ddp_cbstringexact"></a>  DDP_CBStringExact  
  呼叫此函式在屬性頁的`DoDataExchange`函式來同步處理完全符合目前的選取範圍，在 [屬性] 頁面上的下拉式方塊中為字串屬性的值。  
   
 ```  
@@ -150,7 +145,7 @@ void AFXAPI DDP_CBStringExact(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_check"></a>DDP_Check  
+##  <a name="ddp_check"></a>  DDP_Check  
  呼叫此函式在屬性頁的`DoDataExchange`與相關聯的屬性頁面 核取方塊控制項同步處理的屬性值的函式。  
   
 ```   
@@ -180,7 +175,7 @@ void AFXAPI DDP_Check(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_lbindex"></a>DDP_LBIndex  
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex  
  呼叫此函式在屬性頁的`DoDataExchange`函式來同步處理整數屬性的值與目前的選取範圍，在 [屬性] 頁面上的清單方塊中的索引。  
   
 ```   
@@ -210,7 +205,7 @@ void AFXAPI DDP_LBIndex(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_lbstring"></a>DDP_LBString  
+##  <a name="ddp_lbstring"></a>  DDP_LBString  
  呼叫此函式在屬性頁的`DoDataExchange`同步處理之字串屬性值與屬性頁上的清單方塊中目前選取的函式。  
   
 ```   
@@ -240,7 +235,7 @@ void AFXAPI DDP_LBString(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
+##  <a name="ddp_lbstringexact"></a>  DDP_LBStringExact  
  呼叫此函式在屬性頁的`DoDataExchange`函式來同步處理完全符合目前的選取範圍，在 [屬性] 頁面上的清單方塊中為字串屬性的值。  
   
 ```   
@@ -270,7 +265,7 @@ void AFXAPI DDP_LBStringExact(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
+##  <a name="ddp_postprocessing"></a>  DDP_PostProcessing  
  呼叫此函式在屬性頁的`DoDataExchange`函式，來完成屬性值可從 [屬性] 頁面傳輸至您的控制項，在儲存屬性值時。  
   
 ```   
@@ -289,7 +284,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_radio"></a>DDP_Radio  
+##  <a name="ddp_radio"></a>  DDP_Radio  
  呼叫此函式在控制項的`DoPropExchange`與相關聯的屬性頁面的選項按鈕控制項同步處理的屬性值的函式。  
   
 ```   
@@ -319,7 +314,7 @@ void AFXAPI DDP_Radio(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="ddp_text"></a>DDP_Text  
+##  <a name="ddp_text"></a>  DDP_Text  
  呼叫此函式在控制項的`DoDataExchange`與相關聯的屬性頁控制項同步處理的屬性值的函式。  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDP_Text(
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS  
  開始您的控制項屬性頁 Id 清單的定義。  
   
 ```   
@@ -413,7 +408,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS  
  結束屬性頁 ID 清單的定義。  
   
 ```   
@@ -427,7 +422,7 @@ END_PROPPAGEIDS(class_name)
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="proppageid"></a>PROPPAGEID  
+##  <a name="proppageid"></a>  PROPPAGEID  
  將 OLE 控制項使用的屬性頁。  
   
 ```   
@@ -444,5 +439,5 @@ PROPPAGEID(clsid)
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

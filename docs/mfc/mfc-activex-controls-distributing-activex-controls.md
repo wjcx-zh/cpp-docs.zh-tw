@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 散發 ActiveX 控制項 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 散發 ActiveX 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - GetWindowsDirectory
 - GetSystemDirectory
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - registering controls
 - OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4ce6602696f733ca3bac03441a58515c57e0dc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控制項：散發 ActiveX 控制項
 本文將討論與轉散發 ActiveX 控制項相關的幾個問題：  
@@ -55,12 +50,12 @@ ms.lasthandoff: 12/21/2017
   
 -   [註冊控制項](#_core_registering_controls)  
   
-##  <a name="_core_ansi_or_unicode_control_versions"></a>ANSI 或 Unicode 控制版本  
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI 或 Unicode 控制版本  
  您必須決定是否要出貨控制項，或兩者的 ANSI 或 Unicode 版本。 這項決策根據 ANSI 和 Unicode 字元集中固有的可攜性因素。  
   
  ANSI 控制項，可處理所有 Win32 作業系統，允許各種 Win32 作業系統之間的最大可攜性。 只有 Windows nt （版本 3.51 或更新版本），但不是能在 Windows 95 或 Windows 98，工作 Unicode 控制項。 如果是主要考量，出貨 ANSI 控制項的可攜性。 如果您的控制項將只能在 Windows NT 上執行，您可以送出 Unicode 控制項。 您也可以選擇要出貨兩者，而且已安裝最適合使用者的作業系統版本的應用程式。  
   
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a>安裝 ActiveX 控制項和可轉散發 Dll  
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> 安裝 ActiveX 控制項和可轉散發 Dll  
  安裝程式，您可以提供您的 ActiveX 控制項應該建立特殊的 Windows 目錄的子目錄，並安裝控制項。OCX 檔案。  
   
 > [!NOTE]
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  ActiveX 控制項只能用於 OLE 容器應用程式，因為沒有任何需要傳遞完整的 OLE Dll 集與您的控制項。 您可以假設包含的應用程式 （或作業系統本身） 都具有標準 OLE 安裝 Dll。  
   
-##  <a name="_core_registering_controls"></a>註冊控制項  
+##  <a name="_core_registering_controls"></a> 註冊控制項  
  控制項可以使用之前，必須建立適當的項目，在 Windows 系統註冊資料庫。 某些 ActiveX 控制項容器提供使用者註冊新的控制項的功能表項目，但這項功能可能無法使用所有容器中。 因此，您可能想安裝程式將會在安裝時，註冊控制項。  
   
  如果您想要的話，您可以撰寫安裝程式將改為直接登錄此控制項。  
@@ -86,6 +81,6 @@ ms.lasthandoff: 12/21/2017
   
  您應該註冊 MFCx0.DLL。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

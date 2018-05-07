@@ -1,13 +1,10 @@
 ---
-title: "MFC 應用程式精靈 |Microsoft 文件"
-ms.custom: 
+title: MFC 應用程式精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.overview
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4cbdc5e6db53fd4eacf9154bc356a1a64c77391
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-application-wizard"></a>MFC 應用程式精靈
 MFC 應用程式精靈產生應用程式，編譯時，實作 Windows 可執行檔 (.exe) 應用程式的基本功能。 MFC 起始應用程式包括 c + + 來源 (.cpp) 檔案、 資源 (.rc) 檔、 標頭 (.h) 檔案和專案 (.vcxproj) 檔案。 產生起始檔案中的程式碼是以 MFC 為基礎。  
@@ -91,7 +86,7 @@ MFC 應用程式精靈產生應用程式，編譯時，實作 Windows 可執行�
   
  建立 MFC 應用程式專案之後，您可以將物件或控制項加入您專案中使用 Visual c + +[程式碼精靈](../../ide/adding-functionality-with-code-wizards-cpp.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立 MFC 應用程式](../../mfc/reference/creating-an-mfc-application.md)   
  [MFC 桌面應用程式](../../mfc/mfc-desktop-applications.md)   
  [使用類別來編寫 Windows 應用程式](../../mfc/using-the-classes-to-write-applications-for-windows.md)

@@ -1,13 +1,10 @@
 ---
-title: "MFC 使用的結構 |Microsoft 文件"
-ms.custom: 
+title: MFC 使用的結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.structures
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc1f64a7e088d274e8dde2e2616edab64de7f8db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1aeda50abc56c00c2043ef22a0a4d517386a3b04
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures-used-by-mfc"></a>MFC 使用的結構
 下表列出從各種成員函式呼叫的結構。 如需個別結構使用量詳細資訊，請參閱類別和成員函式清單的每個結構中所述。  
@@ -59,6 +54,6 @@ ms.lasthandoff: 12/21/2017
 |**EXTENSION_CONTROL_BLOCK 結構**||  
 |[FILETIME 結構](../../mfc/reference/filetime-structure.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

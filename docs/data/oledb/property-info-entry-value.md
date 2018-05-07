@@ -1,12 +1,9 @@
 ---
 title: PROPERTY_INFO_ENTRY_VALUE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - PROPERTY_INFO_ENTRY_VALUE
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - PROPERTY_INFO_ENTRY_VALUE macro
 ms.assetid: 9690f7f3-fb20-4a7e-a75f-8a3a1cb1ce0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8adb8fb0c2978bdf5886d47fa0ee33cba8f8fbe4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cbd216a3358385a0a0c1c61e8e3f31a1fd3c8946
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertyinfoentryvalue"></a>PROPERTY_INFO_ENTRY_VALUE
 代表屬性集中的特定屬性。  
@@ -54,7 +49,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   

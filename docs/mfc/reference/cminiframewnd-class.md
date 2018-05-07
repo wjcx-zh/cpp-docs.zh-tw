@@ -1,12 +1,9 @@
 ---
-title: "CMiniFrameWnd 類別 |Microsoft 文件"
-ms.custom: 
+title: CMiniFrameWnd 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
 表示通常在浮動工具列周圍出現的半高度框架視窗。  
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  建構`CMiniFrameWnd`物件，但不會建立視窗。  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>備註  
  若要建立的視窗，呼叫[CMiniFrameWnd::Create](#create)。  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  建立 Windows 迷你框架視窗，並將它附加至`CMiniFrameWnd`物件。  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU**會停用存取 [系統] 功能表和 [控制] 功能表中，並將它們轉換成標題 （標題列） 的一部分。  
   
- 請參閱[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)如需可能的視窗樣式值的說明。 典型的迷你框架視窗使用，就是**WS_POPUP &#124;WS_CAPTION &#124;WS_SYSMENU**。  
+ 請參閱[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)如需可能的視窗樣式值的說明。 典型的迷你框架視窗使用，就是**WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**。  
   
  `rect`  
  A`RECT`結構，指定視窗的所需的維度。  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  **建立**初始化視窗的類別名稱和視窗名稱，並註冊其樣式和父代的預設值。  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  建立 `CMiniFrameWnd` 物件。  
   
 ```  
@@ -190,13 +185,13 @@ virtual BOOL CreateEx(
  如果成功，則傳回 TRUE 失敗，則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
- `CreateEx`參數會指定**WNDCLASS**，視窗樣式 （選擇性） 初始位置和視窗大小。 `CreateEx`也會指定視窗的父代 （如果有的話） 和識別碼。  
+ `CreateEx`參數會指定**WNDCLASS**，視窗樣式 （選擇性） 初始位置和視窗大小。 `CreateEx` 也會指定視窗的父代 （如果有的話） 和識別碼。  
   
  當`CreateEx`執行時，Windows 會傳送[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)， [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)視窗的訊息。  
   
  若要擴充的預設訊息處理，衍生自`CMiniFrameWnd`、 新增訊息對應到新的類別，並提供成員函式出現上述訊息。 覆寫`OnCreate`，例如，若要執行所需的初始化新的類別。  
   
- 覆寫進一步**上***訊息*訊息處理常式，以進一步將功能加入至您的衍生類別。  
+ 覆寫進一步 **上 * * * 訊息*訊息處理常式，以進一步將功能加入至您的衍生類別。  
   
  如果**WS_VISIBLE**樣式，Windows 會將視窗啟動並顯示視窗所需的所有訊息。 如果視窗樣式指定標題列，視窗標題所指`lpszWindowName`參數會顯示在標題列中。  
   
@@ -204,7 +199,7 @@ virtual BOOL CreateEx(
   
  不再支援的舊樣式的調色盤 [工具箱] 視窗。 支援舊版的 Windows 上執行 MFC 應用程式時的舊樣式，並沒有"X"按鈕，但已不再支援 Visual c + +.NET 中。 只有新`WS_EX_TOOLWINDOW`樣式現在支援; 如需此樣式的說明，請參閱[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)

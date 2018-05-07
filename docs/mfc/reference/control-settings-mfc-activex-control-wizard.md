@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項精靈、 控制項設定 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項精靈、 控制項設定 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.settings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2161cea739d918bc0f5772a6cb08c29082a6e670
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈、控制項設定
 使用精靈的這個頁面，指定控制項的行為方式。 比方說，您可以將基底控制項類型的標準 Windows 控制項、 最佳化其行為和外觀，或表示控制項可以做為其他控制項的容器。  
@@ -93,7 +88,7 @@ ms.lasthandoff: 01/03/2018
  **以非同步方式載入屬性**  
  可讓任何先前非同步資料的重設，並起始新載入控制項非同步屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項精靈](../../mfc/reference/mfc-activex-control-wizard.md)   
  [MFC ActiveX 控制項精靈、 應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
  [MFC ActiveX 控制項精靈、控制項名稱](../../mfc/reference/control-names-mfc-activex-control-wizard.md)

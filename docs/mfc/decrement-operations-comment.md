@@ -1,13 +1,10 @@
 ---
-title: "-作業的註解 |Microsoft 文件"
-ms.custom: 
+title: -作業的註解 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - comments, MFC
 - MFC source files, Operations comments
 ms.assetid: f3bff48d-26be-4db6-8435-9e4d079838c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53d2470e0be0ca314da8486d74d8fc618e134c35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ee6bf4a330a5fdf1ac294157e69dab39b5f2bdd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operations-comment"></a>// 作業註解
 `// Operations` MFC 類別宣告區段包含您可以在要讓它執行動作，或執行的動作 （執行作業） 的物件上呼叫成員函式。 這些函式是通常非**const**因為它們通常會有副作用。 它們可能是虛擬或虛擬根據類別的需求而定。 一般而言，這些成員是公用的。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  與屬性一樣作業可以進一步細分。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 MFC 原始程式檔](../mfc/using-the-mfc-source-files.md)   
  [註解的範例](../mfc/an-example-of-the-comments.md)   
  [實作註解](../mfc/decrement-implementation-comment.md)   

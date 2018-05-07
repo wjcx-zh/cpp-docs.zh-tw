@@ -1,13 +1,10 @@
 ---
-title: "MFC 使用的樣式 |Microsoft 文件"
-ms.custom: 
+title: MFC 使用的樣式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.styles
 dev_langs:
@@ -205,17 +202,15 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed12f793047aa4a97a31ca0f40c62896c46a358
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式  
   
@@ -539,7 +534,7 @@ MFC 中提供下列下拉式方塊樣式。 如需在 Windows 中的下拉式方
 |`WS_EX_TRANSPARENT`|指定以這個樣式建立的視窗為透明。 也就是說，在這個視窗下的任何視窗不會被遮蔽。 只有在所有同層級視窗更新之後，使用這個樣式建立的視窗才會收到 `WM_PAINT` 訊息。|  
 |`WS_EX_WINDOWEDGE`|指定視窗具有凸起邊緣的框線。|  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
   
 [MFC 類別概觀](../../mfc/class-library-overview.md)  
 [Cwnd:: Create](../../mfc/reference/cwnd-class.md#create)  

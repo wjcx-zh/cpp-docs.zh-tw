@@ -1,12 +1,9 @@
 ---
-title: "COleInsertDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: COleInsertDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleInsertDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4638471ed199d08bb21bcf16465fe933af3a584c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 類別
 用於 OLE 的 [插入物件] 對話方塊。  
@@ -108,7 +103,7 @@ class COleInsertDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxodlgs.h  
   
-##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
+##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
  此函式會建構只`COleInsertDialog`物件。  
   
 ```  
@@ -141,7 +136,7 @@ COleInsertDialog (
 ### <a name="remarks"></a>備註  
  若要顯示的對話方塊，請呼叫[DoModal](#domodal)函式。  
   
-##  <a name="createitem"></a>COleInsertDialog::CreateItem  
+##  <a name="createitem"></a>  COleInsertDialog::CreateItem  
  呼叫此函式來建立物件的型別[COleClientItem](../../mfc/reference/coleclientitem-class.md)才[DoModal](#domodal)傳回**IDOK**。  
   
 ```  
@@ -158,7 +153,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="remarks"></a>備註  
  您必須配置`COleClientItem`物件之前，您可以呼叫此函式。  
   
-##  <a name="domodal"></a>COleInsertDialog::DoModal  
+##  <a name="domodal"></a>  COleInsertDialog::DoModal  
  呼叫此函式可顯示 OLE 的 [插入物件] 對話方塊。  
   
 ```  
@@ -174,9 +169,9 @@ INT_PTR
  `dwFlags`  
  下列其中一個值：  
   
- `COleInsertDialog::DocObjectsOnly`插入只 DocObjects。  
+ `COleInsertDialog::DocObjectsOnly` 插入只 DocObjects。  
   
- `COleInsertDialog::ControlsOnly`插入只有 ActiveX 控制項。  
+ `COleInsertDialog::ControlsOnly` 插入只有 ActiveX 控制項。  
   
  零插入 DocObject 都 ActiveX 控制項。 這個值會產生相同的實作，做為第一個原型上面所列。  
   
@@ -194,7 +189,7 @@ INT_PTR
   
  如果`DoModal`傳回 IDOK，您可以呼叫其他成員函式來擷取設定或在對話方塊中，使用者的資訊輸入。  
   
-##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleInsertDialog::GetClassID  
  呼叫此函式可取得**CLSID**與選取的項目只有當相關聯[DoModal](#domodal)傳回**IDOK**和選取範圍型別是**COleInsertDialog::createNewItem**。  
   
 ```  
@@ -207,7 +202,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[CLSID 金鑰](http://msdn.microsoft.com/library/windows/desktop/ms691424)Windows SDK 中。  
   
-##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  呼叫此函式可判斷使用者是否選擇選取的項目顯示為圖示。  
   
 ```  
@@ -217,16 +212,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>傳回值  
  需要來呈現物件的方法。  
   
-- `DVASPECT_CONTENT`傳回以圖示顯示核取方塊未核取。  
+- `DVASPECT_CONTENT` 傳回以圖示顯示核取方塊未核取。  
   
-- `DVASPECT_ICON`傳回以圖示顯示核取方塊已核取。  
+- `DVASPECT_ICON` 傳回以圖示顯示核取方塊已核取。  
   
 ### <a name="remarks"></a>備註  
  呼叫此函式才[DoModal](#domodal)傳回**IDOK**。  
   
  如需有關繪圖外觀的詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的資料結構。  
   
-##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  呼叫此函式可取得包含選取之項目的圖示的外觀的中繼檔的控制代碼。  
   
 ```  
@@ -236,7 +231,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>傳回值  
  包含所選項目的圖示的外觀，如果是以圖示顯示核取方塊的中繼檔的控制代碼可讓您檢查時已選擇關閉對話方塊**確定**，否則為**NULL**。  
   
-##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
+##  <a name="getpathname"></a>  COleInsertDialog::GetPathName  
  呼叫此函式可取得的完整路徑的 選取的檔案才[DoModal](#domodal)傳回**IDOK**和選取項目類型不是**COleInsertDialog::createNewItem**。  
   
 ```  
@@ -246,7 +241,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>傳回值  
  在對話方塊中選取的檔案完整路徑。 如果選取項目類型是`createNewItem`，此函數會傳回無意義`CString`在發行模式中或在偵錯模式下引起判斷提示。  
   
-##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleInsertDialog::GetSelectionType  
  呼叫此函式可取得選取項目類型選擇 [插入物件] 對話方塊時選擇解除**確定**。  
   
 ```  
@@ -275,7 +270,7 @@ enum Selection {
   
 - **COleInsertDialog::linkToFile**已選取 從檔案建立選項按鈕和 連結 核取方塊已核取。  
   
-##  <a name="m_io"></a>COleInsertDialog::m_io  
+##  <a name="m_io"></a>  COleInsertDialog::m_io  
  型別的結構**OLEUIINSERTOBJECT**用來控制插入的物件 對話方塊的行為。  
   
 ```  
@@ -287,7 +282,7 @@ OLEUIINSERTOBJECT m_io;
   
  如需詳細資訊，請參閱[OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) Windows SDK 中的結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

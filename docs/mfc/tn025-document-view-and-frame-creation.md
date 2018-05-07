@@ -1,13 +1,10 @@
 ---
-title: "TN025： 文件、 檢視和框架建立 |Microsoft 文件"
-ms.custom: 
+title: TN025： 文件、 檢視和框架建立 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.creation
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025：文件、檢視和框架建立
 > [!NOTE]
@@ -52,7 +47,7 @@ AddDocTemplate(pTemplate);
 ## <a name="doctemplates"></a>DocTemplate  
  `CDocTemplate` 是文件的建立者與管理者。 它擁有本身所建立的文件。 如果您的應用程式使用下面所述的資源架構方法，就不需要衍生自 `CDocTemplate`。  
   
- 若是 SDI 應用程式，`CSingleDocTemplate` 類別會追蹤一份開啟的文件。 若是 MDI 應用程式，`CMultiDocTemplate` 類別會保留一份所有從該範本建立且目前開啟之文件的清單 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 會提供虛擬成員函式，用來在範本中加入或移除文件。 `CDocTemplate`是的 friend **CDocument**因此我們可以設定受保護**cdocument:: M_pdoctemplate**返回指標，指向建立文件的文件範本。  
+ 若是 SDI 應用程式，`CSingleDocTemplate` 類別會追蹤一份開啟的文件。 若是 MDI 應用程式，`CMultiDocTemplate` 類別會保留一份所有從該範本建立且目前開啟之文件的清單 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 會提供虛擬成員函式，用來在範本中加入或移除文件。 `CDocTemplate` 是的 friend **CDocument**因此我們可以設定受保護**cdocument:: M_pdoctemplate**返回指標，指向建立文件的文件範本。  
   
  `CWinApp` 會處理預設的 `OnFileOpen` 實作，接著該實作就會查詢所有文件範本。 實作中包含尋找已開啟的文件，以及決定採用何種格式開啟新文件。  
   
@@ -76,7 +71,7 @@ AddDocTemplate(pTemplate);
   
  若是 MDI 框架視窗，工作區中會填入 MDICLIENT 控制項，該控制項會是所有 MDI 子框架視窗的父項。 若是 SDI 框架視窗或 MDI 子框架視窗，工作區中通常會填入 `CView` 衍生的視窗物件。 若是使用 `CSplitterWnd`，檢視的工作區中會填入 `CSplitterWnd` 視窗物件，而 `CView` 衍生的視窗物件 (每分割窗格有一個物件) 會建立為 `CSplitterWnd` 的子視窗。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

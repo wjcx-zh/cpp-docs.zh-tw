@@ -1,13 +1,10 @@
 ---
-title: "使用者按鈕處理常式 |Microsoft 文件"
-ms.custom: 
+title: 使用者按鈕處理常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - ON_BN_HILITE
 - ON_BN_DOUBLECLICKED
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - ON_BN_HILITE [MFC]
 - ON_BN_CLICKED [MFC]
 ms.assetid: 410ea968-478f-4806-b7b8-5d7c8dc2bf42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 767dbbfc2ae11ebbbca3736467b1f76bb4138609
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81cf497e73987e2a7c8ef285a705bc6e7554f7ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-button-handlers"></a>使用者按鈕處理常式
 下列的對應項目對應至函式原型。  
@@ -50,6 +45,6 @@ ms.lasthandoff: 12/21/2017
 |ON_BN_PAINT (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
 |ON_BN_UNHILITE (\<識別碼 >， \<memberFxn >)|afx_msg void memberFxn （);|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [訊息對應](../../mfc/reference/message-maps-mfc.md)
 

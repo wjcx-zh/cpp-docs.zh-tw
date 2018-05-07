@@ -1,12 +1,9 @@
 ---
-title: "COleBusyDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: COleBusyDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleBusyDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleBusyDialog [MFC], GetSelectionType
 - COleBusyDialog [MFC], m_bz
 ms.assetid: c881a532-9672-4c41-b51b-5ce4a7246a6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e57881dad305a5a0d5cec25ddcc93f82eca5f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 類別
 用於 OLE 的 [伺服器沒有回應] 或 [伺服器忙碌] 對話方塊。  
@@ -93,7 +88,7 @@ class COleBusyDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxodlgs.h  
   
-##  <a name="colebusydialog"></a>COleBusyDialog::COleBusyDialog  
+##  <a name="colebusydialog"></a>  COleBusyDialog::COleBusyDialog  
  此函式只建構`COleBusyDialog`物件。  
   
 ```  
@@ -128,7 +123,7 @@ explicit COleBusyDialog(
   
  如需詳細資訊，請參閱[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK 中的結構。  
   
-##  <a name="domodal"></a>COleBusyDialog::DoModal  
+##  <a name="domodal"></a>  COleBusyDialog::DoModal  
  呼叫此函式可顯示 OLE 伺服器忙碌或伺服器沒有回應 對話方塊。  
   
 ```  
@@ -149,7 +144,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`傳回**IDOK**，您可以呼叫其他成員函式來擷取的設定或已由使用者輸入，在對話方塊中的資訊。  
   
-##  <a name="getselectiontype"></a>COleBusyDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleBusyDialog::GetSelectionType  
  呼叫此函式可取得使用者在 [伺服器忙碌] 對話方塊中選擇的選取項目類型。  
   
 ```  
@@ -178,7 +173,7 @@ enum Selection {
   
 - **COleBusyDialog::callUnblocked**呼叫來啟動伺服器已解除封鎖。  
   
-##  <a name="m_bz"></a>COleBusyDialog::m_bz  
+##  <a name="m_bz"></a>  COleBusyDialog::m_bz  
  型別的結構**OLEUIBUSY**用來控制 [伺服器忙碌] 對話方塊中的行為。  
   
 ```  
@@ -190,7 +185,7 @@ OLEUIBUSY m_bz;
   
  如需詳細資訊，請參閱[OLEUIBUSY](http://msdn.microsoft.com/library/windows/desktop/ms682493) Windows SDK 中的結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)

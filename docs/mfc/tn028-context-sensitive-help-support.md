@@ -1,13 +1,10 @@
 ---
-title: "TN028： 即時線上說明支援 |Microsoft 文件"
-ms.custom: 
+title: TN028： 即時線上說明支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.help
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8054fe4fae4aafa88c34833a5a2a92a6b9b44bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58caed14e6b7080405cceb30cfb90623d28dc83e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028：即時線上說明支援
 此提示描述在 MFC 中指派 [說明] 內容 ID 和其他說明議題的規則。 即時線上說明支援需要可用於 Visual C++ 的說明編譯器。  
@@ -183,7 +178,7 @@ int AFXAPI AfxMessageBox(UINT nIDPrompt,
   
  在第二個方塊，nIDHelp 的預設值為 -1，表示說明 ID 與 nIDPrompt 相同。 [說明] 當然只能在應用程式已啟用說明功能時運作。 如果您不希望訊息方塊有說明支援，則須為 nIDHelp 提供 0。 如果您希望訊息有啟用 [說明]，但想要一個 nIDPrompt 以外的不同說明 ID 時，只需為 nIDHelp 提供一個不同於 nIDPrompt 的正值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

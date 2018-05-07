@@ -1,13 +1,10 @@
 ---
-title: "WINDOWPOS 結構 1 |Microsoft 文件"
-ms.custom: 
+title: WINDOWPOS 結構 1 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS 結構 1
 `WINDOWPOS`結構包含之大小和視窗的位置相關資訊。  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW**隱藏視窗。  
   
-- `SWP_NOACTIVATE`不會啟動視窗。  
+- `SWP_NOACTIVATE` 不會啟動視窗。  
   
 - **SWP_NOCOPYBITS**捨棄工作區的整個內容。 如果未指定這個旗標，用戶端區域的有效內容所儲存且之後視窗大小或重新調整位置複製到工作區。  
   
-- `SWP_NOMOVE`保留目前的位置 (會忽略**x**和**y**成員)。  
+- `SWP_NOMOVE` 保留目前的位置 (會忽略**x**和**y**成員)。  
   
 - **SWP_NOOWNERZORDER**不會變更圖層順序中的主控視窗的位置。  
   
-- `SWP_NOSIZE`會保留目前的大小 (會忽略**cx**和**cy**成員)。  
+- `SWP_NOSIZE` 會保留目前的大小 (會忽略**cx**和**cy**成員)。  
   
 - **SWP_NOREDRAW**不會重新繪製的變更。  
   
@@ -88,14 +83,14 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING**防止接收視窗`WM_WINDOWPOSCHANGING`訊息。  
   
-- `SWP_NOZORDER`會保留目前的順序 (會忽略**hwndInsertAfter**成員)。  
+- `SWP_NOZORDER` 會保留目前的順序 (會忽略**hwndInsertAfter**成員)。  
   
 - **SWP_SHOWWINDOW**顯示視窗。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** winuser.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging)
 

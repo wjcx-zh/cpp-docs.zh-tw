@@ -1,13 +1,10 @@
 ---
-title: "TN035： 使用多個資源檔和標頭檔 Visual c + + |Microsoft 文件"
-ms.custom: 
+title: TN035： 使用多個資源檔和標頭檔 Visual c + + |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.resources
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多個資源檔和標頭檔
 > [!NOTE]
@@ -276,9 +271,9 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  建立新的 .RC 檔時，Visual C++ 一開始會使用比最低合法值稍微高的值。 AppWizard 也會將這些值初始化為一些較適合 MFC 應用程式的值。 如需 ID 值範圍的詳細資訊，請參閱[技術提示 20](../mfc/tn020-id-naming-and-numbering-conventions.md)。  
   
- 現在每當您建立新的資源檔，即使是在相同的專案，Visual c + + 定義相同**_APS_NEXT\_** 值。 這表示，如果您在兩個不同 .RC 檔中加入 (舉例說) 多個對話方塊，很有可能會將相同的 #define 值指派給不同的對話方塊。 例如，第一個 .RC 檔的 IDD_MY_DLG1 和第二個 .RC 檔的 IDD_MY_DLG2 可能都有相同的指派數字 101。  
+ 現在每當您建立新的資源檔，即使是在相同的專案，Visual c + + 定義相同 **_APS_NEXT\_** 值。 這表示，如果您在兩個不同 .RC 檔中加入 (舉例說) 多個對話方塊，很有可能會將相同的 #define 值指派給不同的對話方塊。 例如，第一個 .RC 檔的 IDD_MY_DLG1 和第二個 .RC 檔的 IDD_MY_DLG2 可能都有相同的指派數字 101。  
   
- 若要避免這種情況，您應該在不同 .RC 檔案中分別為每個 ID 定義域 (總共四個) 各自保留不同的數值範圍。 這樣做的手動更新**_APS_NEXT**中每個值。RC 檔`before`您開始加入的資源。 例如，如果第一個。RC 檔會使用預設**_APS_NEXT**值，那麼您可能想要指派下列**_APS_NEXT**第二個值。RC 檔：  
+ 若要避免這種情況，您應該在不同 .RC 檔案中分別為每個 ID 定義域 (總共四個) 各自保留不同的數值範圍。 這樣做的手動更新 **_APS_NEXT**中每個值。RC 檔`before`您開始加入的資源。 例如，如果第一個。RC 檔會使用預設 **_APS_NEXT**值，那麼您可能想要指派下列 **_APS_NEXT**第二個值。RC 檔：  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

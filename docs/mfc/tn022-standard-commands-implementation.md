@@ -1,13 +1,10 @@
 ---
-title: "TN022： 標準命令實作 |Microsoft 文件"
-ms.custom: 
+title: TN022： 標準命令實作 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.commands
 dev_langs:
@@ -68,17 +65,15 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022：標準命令實作
 > [!NOTE]
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  您必須連接為您`CWinApp`-衍生類別的訊息對應，若要啟用這項功能。  
   
-     `CWinApp::OnFileNew`應用程式中實作此命令，以不同的方式視文件範本數目而定。 如果只有一個`CDocTemplate`，`CWinApp::OnFileNew`會建立該型別，以及適當的框架和檢視類別的新文件。  
+     `CWinApp::OnFileNew` 應用程式中實作此命令，以不同的方式視文件範本數目而定。 如果只有一個`CDocTemplate`，`CWinApp::OnFileNew`會建立該型別，以及適當的框架和檢視類別的新文件。  
   
      如果有一個以上`CDocTemplate`，`CWinApp::OnFileNew`會提示使用者與對話方塊 (**AFX_IDD_NEWTYPEDLG**) 但是讓他們可以選取要使用的文件類型。 所選`CDocTemplate`用來建立文件。  
   
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  您必須連接為您`CWinApp`-衍生類別的訊息對應，若要啟用這項功能。  
   
-     `CWinApp::OnFileOpen`有非常簡單的實作，於呼叫**CWinApp::DoPromptFileName**後面`CWinApp::OpenDocumentFile`来開啟的檔案的檔案或路徑名稱。 `CWinApp`實作常式**DoPromptFileName**標準 FileOpen 對話方塊隨即開啟，並填入取自目前文件範本的副檔名。  
+     `CWinApp::OnFileOpen` 有非常簡單的實作，於呼叫**CWinApp::DoPromptFileName**後面`CWinApp::OpenDocumentFile`来開啟的檔案的檔案或路徑名稱。 `CWinApp`實作常式**DoPromptFileName**標準 FileOpen 對話方塊隨即開啟，並填入取自目前文件範本的副檔名。  
   
      一個常見的自訂的`ID_FILE_OPEN`是來自訂 [開啟舊檔] 對話方塊或新增其他檔案篩選器。 若要自訂此的建議的方式是將預設實作取代您自己的 FileOpen 對話方塊中，並呼叫`CWinApp::OpenDocumentFile`文件的檔案或路徑名稱。 沒有需要呼叫基底類別。  
   
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
   
      此命令會叫用標準列印設定對話方塊，可讓使用者自訂印表機及列印設定至少這份文件或最多的所有文件在此應用程式。 您必須使用控制台中，若要變更預設的印表機設定整個系統。  
   
-     `CWinApp::OnFilePrintSetup`有非常簡單的實作，建立`CPrintDialog`物件並呼叫**CWinApp::DoPrintDialog**實作函式。 這會設定應用程式的預設印表機設定。  
+     `CWinApp::OnFilePrintSetup` 有非常簡單的實作，建立`CPrintDialog`物件並呼叫**CWinApp::DoPrintDialog**實作函式。 這會設定應用程式的預設印表機設定。  
   
      一般需要自訂此命令可讓每個文件的印表機設定，應該儲存與文件儲存時。 若要這樣做，您應該加入中的訊息對應處理常式您**CDocument**類別會建立`CPrintDialog`物件，請使用適當的印表機屬性將它初始化 (通常**hDevMode**和**hDevNames**)，呼叫**CPrintDialog::DoModal，**並儲存變更的印表機的設定。 健全的實作，您應該查看的實作**CWinApp::DoPrintDialog**偵測錯誤和**CWinApp::UpdatePrinterSelection**合理的預設值處理和追蹤整個系統的印表機變更。  
   
@@ -221,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供的實作此命令使用`CEdit::Clear`。 如果沒有目前的選取範圍，則命令會停用。  
+     `CEditView` 提供的實作此命令使用`CEdit::Clear`。 如果沒有目前的選取範圍，則命令會停用。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -235,7 +230,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供的實作，此命令，將目前所選取的文字複製到剪貼簿 CF_TEXT 使用`CEdit::Copy`。 如果沒有目前的選取範圍，則命令會停用。  
+     `CEditView` 提供的實作，此命令，將目前所選取的文字複製到剪貼簿 CF_TEXT 使用`CEdit::Copy`。 如果沒有目前的選取範圍，則命令會停用。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供的實作，這個命令，將目前選取的文字剪下到剪貼簿 CF_TEXT 使用`CEdit::Cut`。 如果沒有目前的選取範圍，則命令會停用。  
+     `CEditView` 提供的實作，這個命令，將目前選取的文字剪下到剪貼簿 CF_TEXT 使用`CEdit::Cut`。 如果沒有目前的選取範圍，則命令會停用。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供此命令，就會呼叫實作 helper 函式的實作**OnEditFindReplace**使用，並將先前的尋找/取代設定儲存在私用實作變數。 `CFindReplaceDialog`類別用來管理非強制回應對話方塊，提示使用者。  
+     `CEditView` 提供此命令，就會呼叫實作 helper 函式的實作**OnEditFindReplace**使用，並將先前的尋找/取代設定儲存在私用實作變數。 `CFindReplaceDialog`類別用來管理非強制回應對話方塊，提示使用者。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -259,7 +254,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供的複製目前剪貼簿的資料取代所選取的文字使用這個命令實作`CEdit::Paste`。 如果沒有，命令會停用任何**CF_TEXT**剪貼簿中。  
+     `CEditView` 提供的複製目前剪貼簿的資料取代所選取的文字使用這個命令實作`CEdit::Paste`。 如果沒有，命令會停用任何**CF_TEXT**剪貼簿中。  
   
      **COleClientDoc**只是這個命令中提供的更新命令 UI 處理常式。 如果剪貼簿不包含內嵌 OLE 項目/物件，此命令將停用。 您必須負責撰寫實際執行的實際貼上命令處理常式。 如果您的 OLE 應用程式也可以貼上其他格式，您應該提供您自己更新命令 UI 處理常式在檢視或文件中的 (也就是某個位置之前**COleClientDoc**命令目標路由中)。  
   
@@ -271,7 +266,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `COleDocument`此命令，只是提供的更新命令 UI 處理常式。 如果剪貼簿不包含連結的 OLE 項目/物件，此命令將停用。 您必須負責撰寫實際執行的實際貼上命令處理常式。 如果您的 OLE 應用程式也可以貼上其他格式，您應該提供您自己更新命令 UI 處理常式在檢視或文件中的 (也就是某個位置之前`COleDocument`命令目標路由中)。  
+     `COleDocument` 此命令，只是提供的更新命令 UI 處理常式。 如果剪貼簿不包含連結的 OLE 項目/物件，此命令將停用。 您必須負責撰寫實際執行的實際貼上命令處理常式。 如果您的 OLE 應用程式也可以貼上其他格式，您應該提供您自己更新命令 UI 處理常式在檢視或文件中的 (也就是某個位置之前`COleDocument`命令目標路由中)。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供此命令重複最後一個的尋找作業的實作。 可用的最後一個尋找的私用實作變數。 如果無法嘗試尋找，命令會停用。  
+     `CEditView` 提供此命令重複最後一個的尋找作業的實作。 可用的最後一個尋找的私用實作變數。 如果無法嘗試尋找，命令會停用。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -295,7 +290,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供此命令，就會呼叫實作 helper 函式的實作**OnEditFindReplace**使用，並將先前的尋找/取代設定儲存在私用實作變數。 `CFindReplaceDialog`類別用來管理非強制回應對話方塊，提示使用者。  
+     `CEditView` 提供此命令，就會呼叫實作 helper 函式的實作**OnEditFindReplace**使用，並將先前的尋找/取代設定儲存在私用實作變數。 `CFindReplaceDialog`類別用來管理非強制回應對話方塊，提示使用者。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -303,7 +298,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供這個命令會選取所有文字文件中的實作。 如果沒有選取文字，則會停用命令。  
+     `CEditView` 提供這個命令會選取所有文字文件中的實作。 如果沒有選取文字，則會停用命令。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -311,7 +306,7 @@ ms.lasthandoff: 12/21/2017
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView`提供的實作，這個命令，使用`CEdit::Undo`。 如果此命令會停用`CEdit::CanUndo`會傳回 FALSE。  
+     `CEditView` 提供的實作，這個命令，使用`CEdit::Undo`。 如果此命令會停用`CEdit::CanUndo`會傳回 FALSE。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -331,7 +326,7 @@ ms.lasthandoff: 12/21/2017
   
 -   在 MDI 視窗底部的 ID_WINDOW_ARRANGE 排列圖示。  
   
-     `CMDIFrameWnd`實作 helper 函式以實作此標準的 MDI 命令**OnMDIWindowCmd**。 此協助程式將命令 Id 對應至 MDI 視窗訊息，因此會共用大量程式碼。  
+     `CMDIFrameWnd` 實作 helper 函式以實作此標準的 MDI 命令**OnMDIWindowCmd**。 此協助程式將命令 Id 對應至 MDI 視窗訊息，因此會共用大量程式碼。  
   
      大部份 MDI 視窗功能表命令，例如命令已停用，如果沒有任何作用中的 MDI 子視窗。  
   
@@ -339,7 +334,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_CASCADE 重疊顯示視窗重疊。  
   
-     `CMDIFrameWnd`實作 helper 函式以實作此標準的 MDI 命令**OnMDIWindowCmd**。 此協助程式將命令 Id 對應至 MDI 視窗訊息，因此會共用大量程式碼。  
+     `CMDIFrameWnd` 實作 helper 函式以實作此標準的 MDI 命令**OnMDIWindowCmd**。 此協助程式將命令 Id 對應至 MDI 視窗訊息，因此會共用大量程式碼。  
   
      大部份 MDI 視窗功能表命令，例如命令已停用，如果沒有任何作用中的 MDI 子視窗。  
   
@@ -359,7 +354,7 @@ ms.lasthandoff: 12/21/2017
   
 -   分隔器 ID_WINDOW_SPLIT 鍵盤介面。  
   
-     `CView`處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派`CSplitterWnd::DoKeyboardSplit`。 這可讓鍵盤使用者分割，或取消分隔視窗的分割模式中將用來分隔。  
+     `CView` 處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派`CSplitterWnd::DoKeyboardSplit`。 這可讓鍵盤使用者分割，或取消分隔視窗的分割模式中將用來分隔。  
   
      如果檢視不是分隔器，此命令會停用。  
   
@@ -384,7 +379,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  您必須連接為您`CWinApp`-衍生類別的訊息對應，若要啟用這項功能。  
   
-     `CWinApp::OnHelpIndex`處理這個命令藉由兩者呼叫`CWinApp::WinHelp`。  
+     `CWinApp::OnHelpIndex` 處理這個命令藉由兩者呼叫`CWinApp::WinHelp`。  
   
      不建議使用此命令處理常式的自訂。  
   
@@ -393,7 +388,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  您必須連接為您`CWinApp`-衍生類別的訊息對應，若要啟用這項功能。  
   
-     `CWinApp::OnHelpUsing`處理這個命令藉由兩者呼叫`CWinApp::WinHelp`。  
+     `CWinApp::OnHelpUsing` 處理這個命令藉由兩者呼叫`CWinApp::WinHelp`。  
   
      不建議使用此命令處理常式的自訂。  
   
@@ -402,7 +397,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  您必須連接為您`CWinApp`-衍生類別的訊息對應，若要啟用這項功能。  
   
-     `CWinApp::OnContextHelp`處理這個命令藉由設定 [說明] 模式游標、 輸入強制回應迴圈並等候使用者選取要取得說明的視窗。 請參閱[技術附註 28](../mfc/tn028-context-sensitive-help-support.md)詳細說明 MFC 實作。  
+     `CWinApp::OnContextHelp` 處理這個命令藉由設定 [說明] 模式游標、 輸入強制回應迴圈並等候使用者選取要取得說明的視窗。 請參閱[技術附註 28](../mfc/tn028-context-sensitive-help-support.md)詳細說明 MFC 實作。  
   
      不建議使用此命令處理常式的自訂。  
   
@@ -411,7 +406,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  您必須連接為您`CWinApp`-衍生類別的訊息對應，若要啟用這項功能。  
   
-     `CWinApp::OnHelp`處理此命令取得目前應用程式內容的權限的說明內容。 這個方法會處理簡單的 F1 說明、 訊息方塊的說明，依此類推。 請參閱[技術附註 28](../mfc/tn028-context-sensitive-help-support.md) MFC 的詳細說明實作。  
+     `CWinApp::OnHelp` 處理此命令取得目前應用程式內容的權限的說明內容。 這個方法會處理簡單的 F1 說明、 訊息方塊的說明，依此類推。 請參閱[技術附註 28](../mfc/tn028-context-sensitive-help-support.md) MFC 的詳細說明實作。  
   
      不建議使用此命令處理常式的自訂。  
   
@@ -426,7 +421,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_NEXT_PANE 會移至下一個窗格  
   
-     `CView`處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派**CSplitterWnd::OnNextPaneCmd**。 這會將現用檢視表移到分隔器的下一個窗格。  
+     `CView` 處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派**CSplitterWnd::OnNextPaneCmd**。 這會將現用檢視表移到分隔器的下一個窗格。  
   
      如果檢視不是分隔器或移至沒有下一個窗格，此命令會停用。  
   
@@ -434,7 +429,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_PREV_PANE 前往上一個窗格  
   
-     `CView`處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派**CSplitterWnd::OnNextPaneCmd**。 這會將上一個窗格中用來分隔移現用檢視表。  
+     `CView` 處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派**CSplitterWnd::OnNextPaneCmd**。 這會將上一個窗格中用來分隔移現用檢視表。  
   
      如果檢視不是分隔器或移至沒有上一個窗格，此命令會停用。  
   
@@ -450,13 +445,13 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_OLE_EDIT_LINKS 編輯 OLE 連結  
   
-     `COleDocument`使用 MFC 提供實作的標準 OLE 連結 對話方塊，以處理此命令。 透過存取此對話方塊實作`COleLinksDialog`類別。 如果目前文件不包含任何連結，此命令會停用。  
+     `COleDocument` 使用 MFC 提供實作的標準 OLE 連結 對話方塊，以處理此命令。 透過存取此對話方塊實作`COleLinksDialog`類別。 如果目前文件不包含任何連結，此命令會停用。  
   
      不建議使用此命令處理常式的自訂。  
   
 -   ID_OLE_VERB_FIRST...OLE 指令動詞的最後一個識別碼範圍  
   
-     `COleDocument`使用此命令 ID 範圍的目前選取的 OLE 項目/物件支援的動詞。 因為指定的 OLE 項目/物件型別可以支援零個或多個自訂動詞命令必須在範圍內。 在您的應用程式功能表中，您應該有一個功能表項目識別碼為**ID_OLE_VERB_FIRST**。 當程式執行時，功能表將會更新與適當的功能表動詞描述 （或有許多動詞命令的快顯功能表）。 OLE 功能表的管理由`AfxOleSetEditMenu`，此命令的更新命令 UI 處理常式中完成。  
+     `COleDocument` 使用此命令 ID 範圍的目前選取的 OLE 項目/物件支援的動詞。 因為指定的 OLE 項目/物件型別可以支援零個或多個自訂動詞命令必須在範圍內。 在您的應用程式功能表中，您應該有一個功能表項目識別碼為**ID_OLE_VERB_FIRST**。 當程式執行時，功能表將會更新與適當的功能表動詞描述 （或有許多動詞命令的快顯功能表）。 OLE 功能表的管理由`AfxOleSetEditMenu`，此命令的更新命令 UI 處理常式中完成。  
   
      沒有明確的命令處理常式處理每個範圍中的命令 ID。 **COleDocument::OnCmdMsg**會覆寫以攔截這個範圍內的所有命令識別碼、 變成以零為起始的動詞命令的數字，並啟動該動詞命令的伺服器 (使用`COleClientItem::DoVerb`)。  
   
@@ -464,7 +459,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_VIEW_TOOLBAR 切換工具列開啟 / 關閉  
   
-     `CFrameWnd`處理這個命令，並更新命令 UI 處理常式來切換工具列的可見狀態。 工具列必須是子視窗框架的子視窗識別碼與`AFX_IDW_TOOLBAR`。 命令處理常式實際切換工具列視窗的可見性。 `CFrameWnd::RecalcLayout`用來重新繪製其新的狀態與工具列的框架視窗。 更新命令 UI 處理常式會檢查功能表項目，則工具列會顯示。  
+     `CFrameWnd` 處理這個命令，並更新命令 UI 處理常式來切換工具列的可見狀態。 工具列必須是子視窗框架的子視窗識別碼與`AFX_IDW_TOOLBAR`。 命令處理常式實際切換工具列視窗的可見性。 `CFrameWnd::RecalcLayout` 用來重新繪製其新的狀態與工具列的框架視窗。 更新命令 UI 處理常式會檢查功能表項目，則工具列會顯示。  
   
      不建議使用此命令處理常式的自訂。 如果您想要新增其他工具列，您會想要複製和修改命令處理常式和更新命令 UI 處理常式，此命令。  
   
@@ -497,7 +492,7 @@ ms.lasthandoff: 12/21/2017
   
  如果您選擇實作這些指示器，我們建議您使用這些標記識別碼以及維護自己的狀態列的指示器的順序 (也就是依此順序： EXT、 CAP、 NUM、 SCRL、 OVR、 REC)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

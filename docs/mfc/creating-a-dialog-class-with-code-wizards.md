@@ -1,13 +1,10 @@
 ---
-title: "使用程式碼精靈建立對話方塊類別 |Microsoft 文件"
-ms.custom: 
+title: 使用程式碼精靈建立對話方塊類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - code wizards
 - dialog classes [MFC], creating
 ms.assetid: a7157b9d-f1a8-4381-a4cf-180cd2c7f1b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4df515940500fd81d1d85c793d77a35785832d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 945e07d2ca8b390a8fa38743919ea501a3cba9c7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>使用程式碼精靈建立對話方塊類別
 下表列出程式碼精靈會協助您管理的對話方塊相關工作。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
 

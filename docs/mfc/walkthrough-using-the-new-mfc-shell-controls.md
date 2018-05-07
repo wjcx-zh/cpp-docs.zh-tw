@@ -1,29 +1,24 @@
 ---
-title: "逐步解說： 使用新的 MFC Shell 控制項 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 使用新的 MFC Shell 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>逐步解說：使用新的 MFC Shell 控制項
 在此逐步解說中，您會建立類似檔案總管的應用程式。 您將建立包含兩個窗格的視窗。 左的窗格將包含[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)桌面上顯示階層式檢視中的物件。 在右窗格會包含[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)的左窗格中選取的資料夾中顯示的檔案。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  使用**MFC 應用程式精靈**建立新的 MFC 應用程式。 若要從執行精靈，**檔案**功能表中選取**新增**，然後選取**專案**。 **新專案**會顯示對話方塊。  
   
-2.  在**新專案**對話方塊方塊中，展開  **Visual c + +**節點**專案類型**窗格，然後選取**MFC**。 然後，在**範本**窗格中，選取**MFC 應用程式**。 輸入專案的名稱，例如`MFCShellControls`按一下**確定**。 **MFC 應用程式精靈**隨即出現。  
+2.  在**新專案**對話方塊方塊中，展開  **Visual c + +** 節點**專案類型**窗格，然後選取**MFC**。 然後，在**範本**窗格中，選取**MFC 應用程式**。 輸入專案的名稱，例如`MFCShellControls`按一下**確定**。 **MFC 應用程式精靈**隨即出現。  
   
 3.  在**MFC 應用程式精靈**對話方塊中，按一下 **下一步**。 **應用程式類型**窗格會顯示。  
   
@@ -200,6 +195,6 @@ ms.lasthandoff: 12/21/2017
   
 -   `CMFCShellListCtrl`支援在不同模式中，檢視檔案，例如**大圖示**，**小圖示**，**清單**，和**詳細資料**。 更新您的應用程式實作這項功能。 提示： 請參閱[Visual c + + 範例](../visual-cpp-samples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [逐步解說](../mfc/walkthroughs-mfc.md)
 

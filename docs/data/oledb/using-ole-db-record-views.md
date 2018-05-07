@@ -1,12 +1,9 @@
 ---
-title: "使用 OLE DB 資料錄檢視 |Microsoft 文件"
-ms.custom: 
+title: 使用 OLE DB 資料錄檢視 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - OLE DB, record views
 - MFC, record views
 ms.assetid: 1cd3e595-ce08-43d8-a0a9-d03b5d3e24ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fa7cfd6fba45c3d221d22fc7b8938addeef09d1a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6cebf8a1c1130a33ffd07e2d23d65c55a2a67b34
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-ole-db-record-views"></a>使用 OLE DB 資料錄檢視
 如果您想要在 MFC 應用程式中顯示 OLE DB 資料列集資料，您應該使用 MFC 類別[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)。 從資料錄檢視物件建立`COleDBRecordView`可讓您在 MFC 控制項中顯示資料庫記錄。 資料錄檢視是直接連接至所建立的 OLE DB 資料列集物件的對話方塊表單檢視`CRowset`範本類別。 取得資料列集物件的控制代碼很簡單：  
@@ -45,6 +40,6 @@ CRowset<CAccessor<CProductAccessor>> myRowSet = myRecordView.OnGetRowset();
   
  您可以使用 DDX 函式與**COleDbRecordView**可直接從資料庫資料錄集取得資料，並顯示在對話方塊的控制項。 您應該使用**DDX_\*** 方法 (例如`DDX_Text`)，而非**DDX_Field\*** 函式 (例如`DDX_FieldText`) 與**COleDbRecordView**.  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)   
  [COleDBRecordView 類別](../../mfc/reference/coledbrecordview-class.md)

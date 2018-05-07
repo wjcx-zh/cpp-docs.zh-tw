@@ -1,13 +1,10 @@
 ---
-title: "TN040: MFC OLE 就地調整大小和縮放 |Microsoft 文件"
-ms.custom: 
+title: 'TN040: MFC OLE 就地調整大小和縮放 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040：MFC/OLE 就地調整大小和縮放
 > [!NOTE]
@@ -91,7 +86,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  您可以實作自訂調整大小，同時仍然利用提供的使用者介面`COleResizeBar`藉由覆寫**WM_SIZECHILD**訊息中您`COleIPFrameWnd`類別。 如需有關的細節**WM_SIZECHILD**，請參閱[技術提示 24](../mfc/tn024-mfc-defined-messages-and-resources.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "記憶體管理： 堆積配置 |Microsoft 文件"
-ms.custom: 
+title: 記憶體管理： 堆積配置 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - heap allocation [MFC]
 - detecting memory leaks [MFC]
 ms.assetid: a5d949c6-1b79-476e-9c66-513a558203d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34fbb82a28c145ad2d376f0647fbd75faeb9401c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99df4a50f021e0981354a5d316606729bb824d94
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-heap-allocation"></a>記憶體管理：堆積配置
 堆積可為程式保留所需的記憶體配置。 這是屬於程式碼和堆疊以外的區域。 典型的 C 程式使用函式`malloc`和**可用**配置及取消配置堆積記憶體。 MFC 的偵錯版本提供修改的過的 c + + 內建運算子**新**和**刪除**配置及取消配置堆積記憶體中的物件。  
@@ -39,6 +34,6 @@ ms.lasthandoff: 12/21/2017
   
  請注意，堆積上配置物件的總大小受限於您系統上可用的虛擬記憶體大小。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體管理](../mfc/memory-management.md)
 

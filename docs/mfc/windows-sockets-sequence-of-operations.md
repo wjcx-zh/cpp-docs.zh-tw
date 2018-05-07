@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets： 作業順序 |Microsoft 文件"
-ms.custom: 
+title: Windows Sockets： 作業順序 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70765d94b0104cf905130ce043c2b0e35b26a41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93fe2221e25951a53340d5da97f7d5c48ce477cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets：作業順序
 這篇文章並存，說明一系列的伺服器通訊端和用戶端通訊端作業。 由於通訊端使用`CArchive`物件，它們一定是[串流處理通訊端](../mfc/windows-sockets-stream-sockets.md)。  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
  [CSocket 類別](../mfc/reference/csocket-class.md)   
  [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)   

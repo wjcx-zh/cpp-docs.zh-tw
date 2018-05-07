@@ -1,13 +1,10 @@
 ---
-title: "OLE 背景： 連結和內嵌 |Microsoft 文件"
-ms.custom: 
+title: OLE 背景： 連結和內嵌 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - embedded objects [MFC]
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9b7de075b3c32d130639c60c7fcc389ae37da54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5dc7a5770c98323187dbabcd8c2a7bb9eb652de
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE 背景：連結與內嵌
 在容器應用程式中使用 [貼上] 命令可以建立內嵌元件或內嵌項目。 內嵌項目的來源資料會儲存為包含該項目之 OLE 文件的一部分。 如此一來，文書處理器文件的文件檔案就可以包含文字，也可以包含點陣圖、圖表、公式，或任何其他類型的資料。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  每個 OLE 項目 (不管是內嵌或連結) 都具有與其相關聯的類型，該類型取決於建立該項目的應用程式。 例如，Microsoft Paintbrush 項目是一種項目的類型，而 Microsoft Excel 項目則是另一種類型。 不過，某些應用程式可以建立一種以上的項目類型。 例如，Microsoft Excel 可以建立工作表項目、圖表項目和巨集表項目。 每一個項目可以唯一識別由系統使用的類別識別項或**CLSID**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE 背景](../mfc/ole-background.md)   
  [OLE 背景： 容器和伺服器](../mfc/ole-background-containers-and-servers.md)   
  [容器： 用戶端項目](../mfc/containers-client-items.md)   

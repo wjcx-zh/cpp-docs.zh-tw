@@ -1,30 +1,25 @@
 ---
-title: "轉散發資料庫支援檔案 |Microsoft 文件"
-ms.custom: 
+title: 轉散發資料庫支援檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - redistributing database support files
 - database support files [C++], redistributing
 ms.assetid: d80cffe0-177c-4515-9de7-fbf0517eb8d6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7517222b1dc2e61f45c23a9fc91709672f304768
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a51697367480569e2d27a4cb67791f5fe4d39a8f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-database-support-files"></a>轉散發資料庫支援檔案
 資料存取物件 (DAO) 以及 Microsoft Data Access SDK 中的資料庫技術，可以轉散發的支援檔案。  
@@ -37,5 +32,5 @@ ms.lasthandoff: 01/03/2018
   
  如需詳細資訊，在[MSDN](http://go.microsoft.com/fwlink/p/?linkid=198016)網站中，搜尋 < 轉散發 MDAC 2.8 SP1 >。 如果您使用 Visual Studio 安裝程式專案來部署您的應用程式，請參閱[部署和相依性](http://msdn.microsoft.com/en-us/49e9b84d-bd6a-4388-b9ac-46ea79cf0733)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

@@ -1,12 +1,9 @@
 ---
-title: "CMFCCaptionBar 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCCaptionBar 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionBar
@@ -75,17 +72,15 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c23129c1ac857e812b0da837b19322741087934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c40f4d836d662bde1f49b9a0639b771d10db667
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 類別
 A`CMFCCaptionBar`物件是一種控制列，可以顯示三個項目： 按鈕、 文字標籤和點陣圖。 它一次只能每個類型各顯示一個項目。 您可以將每個項目對齊控制項的左緣或右緣，或對齊中央。 您也可以將平面或 3D 樣式套用至標題列的上框線和下框線。  
@@ -180,7 +175,7 @@ class CMFCCaptionBar : public CPane
 ## <a name="requirements"></a>需求  
  **標頭：** afxcaptionbar.h  
   
-##  <a name="create"></a>CMFCCaptionBar::Create  
+##  <a name="create"></a>  CMFCCaptionBar::Create  
  建立標題列控制項，並將它附加至`CMFCCaptionBar`物件。  
   
 ```  
@@ -206,15 +201,15 @@ BOOL Create(
  高度 （標題列控制項的像素為單位）。 如果是-1，則會根據圖示、 文字和標題列控制項顯示的按鈕的高度計算高度。  
   
  `bIsMessageBarMode`  
- `TRUE`如果標題列為訊息列模式;`FALSE`否則。  
+ `TRUE` 如果標題列為訊息列模式;`FALSE`否則。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果成功; 建立標題列控制項`FALSE`否則。  
+ `TRUE` 如果成功; 建立標題列控制項`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
  您建構`CMFCCaptionBar`兩個步驟中的物件。 您第一次呼叫建構函式，然後再呼叫`Create`方法，它會建立 Windows 控制項，並將它附加至`CMFCCaptionBar`物件。  
   
-##  <a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>  CMFCCaptionBar::DoesAllowDynInsertBefore  
  指出是否可以在標題列和其父框架之間以動態方式插入另一個窗格。  
   
 ```  
@@ -226,7 +221,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
+##  <a name="enablebutton"></a>  CMFCCaptionBar::EnableButton  
  啟用或停用的標題列上的按鈕。  
   
 ```  
@@ -235,9 +230,9 @@ void EnableButton(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要啟用按鈕，`FALSE`來停用按鈕。  
+ `TRUE` 若要啟用按鈕，`FALSE`來停用按鈕。  
   
-##  <a name="getalignment"></a>CMFCCaptionBar::GetAlignment  
+##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
  傳回指定項目的對齊方式。  
   
 ```  
@@ -262,7 +257,7 @@ BarElementAlignment GetAlignment(BarElement elem);
   
 -   ALIGN_CENTER  
   
-##  <a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize  
+##  <a name="getbordersize"></a>  CMFCCaptionBar::GetBorderSize  
  傳回標題列的框線大小。  
   
 ```  
@@ -272,7 +267,7 @@ int GetBorderSize() const;
 ### <a name="return-value"></a>傳回值  
  以像素框線的大小。  
   
-##  <a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect  
+##  <a name="getbuttonrect"></a>  CMFCCaptionBar::GetButtonRect  
  擷取週框的標題列上的按鈕。  
   
 ```  
@@ -282,7 +277,7 @@ CRect GetButtonRect() const;
 ### <a name="return-value"></a>傳回值  
  A`CRect`物件，其中包含標題列上的按鈕，這個周框的座標。  
   
-##  <a name="getmargin"></a>CMFCCaptionBar::GetMargin  
+##  <a name="getmargin"></a>  CMFCCaptionBar::GetMargin  
  傳回標題列項目邊緣和標題列控制項的邊緣之間的距離。  
   
 ```  
@@ -292,7 +287,7 @@ int GetMargin() const;
 ### <a name="return-value"></a>傳回值  
  距離，單位為像素的標題列項目邊緣之間的標題列控制項的邊緣。  
   
-##  <a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode  
+##  <a name="ismessagebarmode"></a>  CMFCCaptionBar::IsMessageBarMode  
  指定的標題列是否為訊息列模式。  
   
 ```  
@@ -300,33 +295,33 @@ BOOL IsMessageBarMode() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果標題列為訊息列模式;`FALSE`否則。  
+ `TRUE` 如果標題列為訊息列模式;`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
  在訊息列模式中，標題列會顯示工具提示、 訊息文字和按鈕的影像。  
   
-##  <a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
+##  <a name="m_clrbarbackground"></a>  CMFCCaptionBar::m_clrBarBackground  
  標題列的背景色彩。  
   
 ```  
 COLORREF m_clrBarBackground  
 ```  
   
-##  <a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder  
+##  <a name="m_clrbarborder"></a>  CMFCCaptionBar::m_clrBarBorder  
  標題列框線的色彩。  
   
 ```  
 COLORREF m_clrBarBorder  
 ```  
   
-##  <a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText  
+##  <a name="m_clrbartext"></a>  CMFCCaptionBar::m_clrBarText  
  標題列文字的色彩。  
   
 ```  
 COLORREF m_clrBarText  
 ```  
   
-##  <a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground  
+##  <a name="ondrawbackground"></a>  CMFCCaptionBar::OnDrawBackground  
  標題列的背景填滿架構呼叫。  
   
 ```  
@@ -347,7 +342,7 @@ virtual void OnDrawBackground(
   
  覆寫這個方法在`CMFCCaptionBar`衍生類別來自訂標題列的外觀。  
   
-##  <a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCCaptionBar::OnDrawBorder  
  由架構呼叫以繪製框線的標題列。  
   
 ```  
@@ -368,7 +363,7 @@ virtual void OnDrawBorder(
   
  覆寫這個方法在`CMFCCaptionBar`衍生類別來自訂標題列框線的外觀。  
   
-##  <a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton  
+##  <a name="ondrawbutton"></a>  CMFCCaptionBar::OnDrawButton  
  由架構呼叫以繪製標題列按鈕。  
   
 ```  
@@ -390,12 +385,12 @@ virtual void OnDrawButton(
  按鈕的文字標籤。  
   
  [輸入] `bEnabled`  
- `TRUE`如果已啟用 按鈕。`FALSE`否則。  
+ `TRUE` 如果已啟用 按鈕。`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法在`CMFCCaptionBar`衍生類別來自訂標題列按鈕的外觀。  
   
-##  <a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCCaptionBar::OnDrawImage  
  由架構呼叫以繪製標題列影像。  
   
 ```  
@@ -414,7 +409,7 @@ virtual void OnDrawImage(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在`CMFCCaptionBar`衍生以自訂影像外觀的類別。  
   
-##  <a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
+##  <a name="ondrawtext"></a>  CMFCCaptionBar::OnDrawText  
  由架構呼叫以繪製的標題列文字。  
   
 ```  
@@ -439,14 +434,14 @@ virtual void OnDrawText(
   
  覆寫這個方法在`CMFCCaptionBar`衍生類別來自訂標題列文字的外觀。  
   
-##  <a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap  
+##  <a name="removebitmap"></a>  CMFCCaptionBar::RemoveBitmap  
  移除的標題列中的點陣圖影像。  
   
 ```  
 void RemoveBitmap();
 ```  
   
-##  <a name="removebutton"></a>CMFCCaptionBar::RemoveButton  
+##  <a name="removebutton"></a>  CMFCCaptionBar::RemoveButton  
  移除的標題列按鈕。  
   
 ```  
@@ -456,21 +451,21 @@ void RemoveButton();
 ### <a name="remarks"></a>備註  
  會自動調整的標題列項目配置。  
   
-##  <a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
+##  <a name="removeicon"></a>  CMFCCaptionBar::RemoveIcon  
  移除的標題列中的圖示。  
   
 ```  
 void RemoveIcon();
 ```  
   
-##  <a name="removetext"></a>CMFCCaptionBar::RemoveText  
+##  <a name="removetext"></a>  CMFCCaptionBar::RemoveText  
  移除的標題列中的文字標籤。  
   
 ```  
 void RemoveText();
 ```  
   
-##  <a name="setbitmap"></a>CMFCCaptionBar::SetBitmap  
+##  <a name="setbitmap"></a>  CMFCCaptionBar::SetBitmap  
  設定標題列的點陣圖影像。  
   
 ```  
@@ -516,7 +511,7 @@ void SetBitmap(
   
 -   ALIGN_CENTER  
   
-##  <a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize  
+##  <a name="setbordersize"></a>  CMFCCaptionBar::SetBorderSize  
  設定標題列的框線大小。  
   
 ```  
@@ -527,7 +522,7 @@ void SetBorderSize(int nSize);
  [輸入] `nSize`  
  新的大小，單位為像素的標題列框線。  
   
-##  <a name="setbutton"></a>CMFCCaptionBar::SetButton  
+##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
  設定標題列按鈕。  
   
 ```  
@@ -549,9 +544,9 @@ void SetButton(
  按鈕的對齊方式。  
   
  `bHasDropDownArrow`  
- `TRUE`如果按鈕顯示的下拉箭號，`FALSE`否則。  
+ `TRUE` 如果按鈕顯示的下拉箭號，`FALSE`否則。  
   
-##  <a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed  
+##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
  指定是否要保留已按下按鈕。  
   
 ```  
@@ -560,9 +555,9 @@ void SetButtonPressed(BOOL bPresed=TRUE);
   
 ### <a name="parameters"></a>參數  
  `bPresed`  
- `TRUE`如果按鈕會保留其狀態為 pressed，`FALSE`否則。  
+ `TRUE` 如果按鈕會保留其狀態為 pressed，`FALSE`否則。  
   
-##  <a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip  
+##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
  設定按鈕的工具提示。  
   
 ```  
@@ -578,7 +573,7 @@ void SetButtonToolTip(
  [輸入] `lpszDescription`  
  工具提示描述。  
   
-##  <a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder  
+##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
  設定標題列的框線樣式。  
   
 ```  
@@ -587,9 +582,9 @@ void SetFlatBorder(BOOL bFlat=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bFlat`  
- `TRUE`如果是平面的標題列的框線。 `FALSE`如果框線為 3D。  
+ `TRUE` 如果是平面的標題列的框線。 `FALSE` 如果框線為 3D。  
   
-##  <a name="seticon"></a>CMFCCaptionBar::SetIcon  
+##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
  設定標題列的圖示。  
   
 ```  
@@ -618,7 +613,7 @@ void SetIcon(
   
 -   ALIGN_CENTER  
   
-##  <a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip  
+##  <a name="setimagetooltip"></a>  CMFCCaptionBar::SetImageToolTip  
  設定映像的工具提示的標題列中。  
   
 ```  
@@ -634,7 +629,7 @@ void SetImageToolTip(
  [輸入] `lpszDescription`  
  工具提示描述。  
   
-##  <a name="setmargin"></a>CMFCCaptionBar::SetMargin  
+##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
  設定標題列項目的邊緣和標題列控制項的邊緣之間的距離。  
   
 ```  
@@ -645,7 +640,7 @@ void SetMargin(int nMargin);
  [輸入] `nMargin`  
  距離，單位為像素的標題列項目邊緣之間的標題列控制項的邊緣。  
   
-##  <a name="settext"></a>CMFCCaptionBar::SetText  
+##  <a name="settext"></a>  CMFCCaptionBar::SetText  
  設定標題列的文字標籤。  
   
 ```  
@@ -672,6 +667,6 @@ void SetText(
   
 -   ALIGN_CENTER  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

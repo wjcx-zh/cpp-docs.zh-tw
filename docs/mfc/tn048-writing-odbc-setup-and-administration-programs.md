@@ -1,13 +1,10 @@
 ---
-title: "TN048： 撰寫 MFC 資料庫應用程式的 ODBC 安裝和管理程式 |Microsoft 文件"
-ms.custom: 
+title: TN048： 撰寫 MFC 資料庫應用程式的 ODBC 安裝和管理程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048：撰寫 MFC 資料庫應用程式的 ODBC 安裝和管理程式
 > [!NOTE]
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  使用 MFC 資料庫類別應用程式需要安裝 ODBC 元件的安裝程式。 它們也可能需要 ODBC 管理程式中，將會擷取可用的驅動程式，來指定預設驅動程式，以及設定資料來源的相關資訊。 此提示描述使用 ODBC 安裝程式 API，來撰寫這些程式。  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a>寫入的 ODBC 安裝程式  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> 寫入的 ODBC 安裝程式  
  MFC 資料庫應用程式需要的 ODBC 驅動程式管理員連接 (ODBC。DLL)，若要能夠取得資料來源的 ODBC 驅動程式。 許多 ODBC 驅動程式也需要額外的網路及通訊 Dll。 大部分的 ODBC 驅動程式隨附於安裝程式，將會安裝必要的 ODBC 元件。 使用 MFC 資料庫類別應用程式開發人員可以：  
   
 -   依賴 ODBC 元件安裝的特定驅動程式安裝程式。 這需要進行任何開發人員的組件上的工作，您就可以重新發佈的驅動程式安裝程式。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  如需有關 ODBC 的詳細資訊。INF，ODBCINST。INI 及使用安裝程式 API，請參閱 ODBC SDK*程式設計人員參考*第 19 章、 安裝 ODBC 軟體。  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a>撰寫 ODBC 管理員  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> 撰寫 ODBC 管理員  
  MFC 資料庫應用程式可以安裝及設定 ODBC 資料來源中有兩種，，，如下所示：  
   
 -   使用 ODBC 管理員 （使用程式為或控制台項目）。  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱 ODBC SDK*程式設計人員參考*章 23、 安裝 DLL 函式參考和第 24，安裝程式的 DLL 函式參考。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

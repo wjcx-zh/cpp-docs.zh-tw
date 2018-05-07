@@ -1,30 +1,25 @@
 ---
-title: "逐步解說： 使用 MFC 建立功能區應用程式 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 使用 MFC 建立功能區應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad78b64f72b9ee9a896832e008039aa241e2ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>逐步解說：使用 MFC 建立功能區應用程式
 本逐步解說示範如何使用**MFC 應用程式精靈**建立預設具有功能區的應用程式。 接著，您可以展開功能區加入**自訂**具有功能區分類**我的最愛**功能區面板，然後將加入一些常用命令至面板。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  使用**MFC 應用程式精靈**建立具有功能區的 MFC 應用程式。 若要在執行精靈時，**檔案**功能表上，指向**新增**，然後按一下 **專案**。  
   
-2.  在**新專案**對話方塊方塊中，展開  **Visual c + +**節點下的**已安裝的範本**，選取**MFC**，然後選取  **MFC 應用程式**。 例如，輸入專案的名稱`MFCRibbonApp`，然後按一下 **確定**。  
+2.  在**新專案**對話方塊方塊中，展開  **Visual c + +** 節點下的**已安裝的範本**，選取**MFC**，然後選取  **MFC 應用程式**。 例如，輸入專案的名稱`MFCRibbonApp`，然後按一下 **確定**。  
   
 3.  第一頁上**MFC 應用程式精靈**，按一下 **下一步**。  
   
@@ -100,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
  如需端對端範例，請參閱[範例 （MFC 功能套件）](../visual-cpp-samples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [逐步解說](../mfc/walkthroughs-mfc.md)   
  [範例 （MFC 功能套件）](../visual-cpp-samples.md)
 

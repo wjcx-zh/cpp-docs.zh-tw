@@ -1,13 +1,10 @@
 ---
-title: "TN057: MFC 元件的當地語系化 |Microsoft 文件"
-ms.custom: 
+title: 'TN057: MFC 元件的當地語系化 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.components
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DLLs [MFC], localizing MFC
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e27b737a76b30e7193a9afb7797a20951294032e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 935f85f55db8ed0d01bce309aa598100002c0f4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057：MFC 元件的當地語系化
 > [!NOTE]
@@ -67,7 +62,7 @@ CMyApp::InitInstance()
   
  從該時間點之後，MFC 將會從該 DLL 載入資源，而不是從 myapp.exe 載入資源。 不過，所有資源必須存在於該 DLL 中，MFC 不會在尋找特定資源時搜尋應用程式的執行個體。 這項技術會套用至同樣標準 MFC Dll 以及 OLE 控制項。 您的安裝程式會將根據使用者所需的資源地區設定來複製正確的 MYRES.DLL 版本。  
   
- 相較之下，建立僅含資源的 DLL 是相當容易的。 您會建立一個 DLL 專案，加入 .RC 檔至該專案，並加入所需的資源。 如果您擁有未使用這個技巧的現有專案，可以從該專案複製資源。 將資源檔加入專案之後，您幾乎已經準備好可以建立專案了。 唯一您必須執行的是設定連結器選項，以包含**/NOENTRY**。 這麼做會告訴連結器該 DLL 沒有進入點-因為沒有程式碼，它會有任何進入點。  
+ 相較之下，建立僅含資源的 DLL 是相當容易的。 您會建立一個 DLL 專案，加入 .RC 檔至該專案，並加入所需的資源。 如果您擁有未使用這個技巧的現有專案，可以從該專案複製資源。 將資源檔加入專案之後，您幾乎已經準備好可以建立專案了。 唯一您必須執行的是設定連結器選項，以包含 **/NOENTRY**。 這麼做會告訴連結器該 DLL 沒有進入點-因為沒有程式碼，它會有任何進入點。  
   
 > [!NOTE]
 >  在 Visual C++ 4.0 (含) 以上版本的資源編輯器支援多種語言的 .RC。 這使得您可以非常容易地在單一專案中管理當地語系化。 每種語言的資源是由資源編輯器所產生的前置處理器指示詞加以控制。  
@@ -83,7 +78,7 @@ CMyApp::InitInstance()
   
  最簡單且最安全的方法是將當地語系化的 MFC 資源放在應用程式或 DLL (或其附屬 DLL，如果您有使用的話) 中。 這麼做可避免安裝正確版本 MFC7xLOC.DLL 的問題。 若要這麼做，請按照上述與靜態連結狀況相同的指示執行 (正確地將 RC 命令列設定為指向當地語系化的資源)，不過，您還必須移除預設由 AppWizard 加入的 `/D_AFXDLL` 定義。 當定義了 `/D_AFXDLL` 時，AFXRES.H (和其他 MFC RC 檔案) 實際上不會定義任何資源 (因為改從 MFC DLL 提取它會)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

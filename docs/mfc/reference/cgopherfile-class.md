@@ -1,12 +1,9 @@
 ---
-title: "CGopherFile 類別 |Microsoft 文件"
-ms.custom: 
+title: CGopherFile 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherFile
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce90eb2baf4ce8f6ba0136a9efd503086b686aa6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherfile-class"></a>CGopherFile 類別
 提供在 Gopher 伺服器上尋找和讀取檔案的功能。  
@@ -68,7 +63,7 @@ class CGopherFile : public CInternetFile
 ## <a name="requirements"></a>需求  
  **標頭：** afxinet.h  
   
-##  <a name="cgopherfile"></a>CGopherFile::CGopherFile  
+##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile  
  呼叫此成員函式會建構`CGopherFile`物件。  
   
 ```  
@@ -113,7 +108,7 @@ CGopherFile(
   
  您絕對不要建立`CGopherFile`直接物件。 請改為呼叫[CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)開啟 gopher 伺服器上的檔案。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CInternetFile 類別](../../mfc/reference/cinternetfile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CInternetFile 類別](../../mfc/reference/cinternetfile-class.md)   

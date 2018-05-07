@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets： 搭配使用通訊端與封存 |Microsoft 文件"
-ms.custom: 
+title: Windows Sockets： 搭配使用通訊端與封存 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets：搭配使用通訊端與封存
-本文說明[CSocket 程式設計模型](#_core_the_csocket_programming_model)。 類別[CSocket](../mfc/reference/csocket-class.md)提供通訊端支援，在較高層級的抽象類別比[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket`使用 MFC 序列化通訊協定的版本來傳遞資料，經由 MFC 通訊端物件來回[CArchive](../mfc/reference/carchive-class.md)物件。 `CSocket` 會提供封鎖 (同時管理 Windows 訊息的背景處理)，並且可讓您存取 `CArchive`，它可管理有關通訊的多個層面，否則您必須使用原始 API 或 `CAsyncSocket` 類別才能自行管理這些層面。  
+本文說明[CSocket 程式設計模型](#_core_the_csocket_programming_model)。 類別[CSocket](../mfc/reference/csocket-class.md)提供通訊端支援，在較高層級的抽象類別比[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket` 使用 MFC 序列化通訊協定的版本來傳遞資料，經由 MFC 通訊端物件來回[CArchive](../mfc/reference/carchive-class.md)物件。 `CSocket` 會提供封鎖 (同時管理 Windows 訊息的背景處理)，並且可讓您存取 `CArchive`，它可管理有關通訊的多個層面，否則您必須使用原始 API 或 `CAsyncSocket` 類別才能自行管理這些層面。  
   
 > [!TIP]
 >  您可以單獨使用 `CSocket` 類別做為更方便的 `CAsyncSocket` 版本，不過，最簡單的程式設計模型是使用 `CSocket` 搭配 `CArchive` 物件。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  如果您要撰寫 MFC 用戶端程式與所建立的 (非 MFC) 伺服器進行通訊，請不要透過封存傳送 C++ 物件。 除非伺服器是 MFC 應用程式並且了解您想要傳送的物件種類，否則它將無法接收和還原序列化您的物件。 相關的主體和非 MFC 應用程式通訊的詳細資料，也請參閱文件[Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)。  
   
-##  <a name="_core_the_csocket_programming_model"></a>CSocket 程式設計模型  
+##  <a name="_core_the_csocket_programming_model"></a> CSocket 程式設計模型  
  使用 `CSocket` 物件包含了建立數個 MFC 類別物件，並讓這些物件彼此相關聯。 在下面的一般程序中，每一個步驟都是由伺服器通訊端與用戶端通訊端所進行，除了步驟 3，該步驟中的每種通訊端類型需要一個不同的動作。  
   
 > [!TIP]
@@ -90,7 +85,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
  [CSocket::Create](../mfc/reference/csocket-class.md#create)
 

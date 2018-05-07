@@ -1,27 +1,27 @@
 ---
-title: "圖形 (c + + AMP) |Microsoft 文件"
-ms.custom: 
+title: 圖形 (c + + AMP) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-caps.latest.revision: 
+caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: c187ebc4eeb3917ce01e63c6c0769ffa0a570368
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="graphics-c-amp"></a>圖形 (C++ AMP)
 C + + AMP 包含在多個 Api [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)命名空間可讓您存取 Gpu 的紋理支援。 以下是一些常見的情節：  
@@ -58,9 +58,9 @@ C + + AMP 包含在多個 Api [concurrency:: graphics](../../parallel/amp/refere
   
 |運算子類型|有效的類型|  
 |-------------------|-----------------|  
-|二元運算子|對所有類型都有效：+、-、*、/<br /><br /> 對整數類型有效: %，^，&#124;、 &、 <\<，>><br /><br /> 兩個向量的大小必須相同，而且結果為相同大小的向量。|  
+|二元運算子|對所有類型都有效：+、-、*、/<br /><br /> 對整數類型有效: %、 ^、 &#124;、 &、 <\<，>><br /><br /> 兩個向量的大小必須相同，而且結果為相同大小的向量。|  
 |關係運算子|對所有類型都有效：== 和 !=|  
-|複合指派運算子|對所有類型都有效：+=、-=、*=、/=<br /><br /> 對整數類型有效: %=、 ^ =、 &#124; =、 & =、 <\<=、 >> =|  
+|複合指派運算子|對所有類型都有效：+=、-=、*=、/=<br /><br /> 對整數類型有效: %=、 ^ =、 &#124;= 和 & =、 <\<=、 >> =|  
 |遞增和遞減運算子|對所有類型都有效：++、--<br /><br /> 前置和後置都有效。|  
 |位元 NOT 運算子 (~)|對整數類型有效。|  
 |一元 - 運算子|除了 `unorm` 和 `uint` 以外，對所有類型都有效。|  
@@ -129,12 +129,12 @@ texture<int_4, 2> aTexture(768, 1024, texels.begin(), texels.end());
  您也可以使用指標指向來源資料、以位元組為單位的來源資料大小及每個純量元素的位元之建構函式多載，宣告及初始化 `texture` 物件。  
   
 ```cpp  
-void createTextureWithBPC() { *// Create the source data.  
+void createTextureWithBPC() { // Create the source data.  
     float source[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
     source[i] = (float)i;  
  }  
- *// Initialize the texture by using the size of source in bytes *// and bits per scalar element.  
+ // Initialize the texture by using the size of source in bytes // and bits per scalar element.  
     texture<float_2, 1> floatTexture(1024, source, (unsigned int)sizeof(source), 32U);
 
 }  
@@ -144,7 +144,7 @@ void createTextureWithBPC() { *// Create the source data.
   
  `texture` 物件的每個維度大小都有其限制，如下表所示。 如果您超過這些限制，就會產生執行階段錯誤。  
   
-|紋理|大小限制|  
+|紋理|每個維度的大小限制|  
 |-------------|---------------------|  
 |紋理\<T 1 >|16384|  
 |紋理\<T 2 >|16384|  
@@ -172,10 +172,10 @@ void readTexture() {
  
     const texture<int_2, 2> tex9(16, 32, src.begin(), src.end());
 
-    parallel_for_each(tex9.extent, [=, &tex9] (index<2> idx) restrict(amp) { *// Use the subscript operator.        
-    arr[idx].x += tex9[idx].x; *// Use the function () operator.        
-    arr[idx].x += tex9(idx).x; *// Use the get method.  
-    arr[idx].y += tex9.get(idx).y; *// Use the function () operator.    
+    parallel_for_each(tex9.extent, [=, &tex9] (index<2> idx) restrict(amp) { // Use the subscript operator.        
+    arr[idx].x += tex9[idx].x; // Use the function () operator.        
+    arr[idx].x += tex9(idx).x; // Use the get method.  
+    arr[idx].y += tex9.get(idx).y; // Use the function () operator.    
     arr[idx].y += tex9(idx[0], idx[1]).y;   
  });
 
@@ -189,7 +189,7 @@ void readTexture() {
  下列程式碼範例將示範如何在短向量中儲存紋理通道，然後將個別純量元素做為短向量的屬性存取。  
   
 ```cpp  
-void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
+void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int (32-bit) represents four 8-bit scalar elements(r,g,b,a values).  
     const int image_height = 16;  
     const int image_width = 16;  
     std::vector<unsigned int> image(image_height* image_width);
@@ -197,13 +197,13 @@ void UseBitsPerScalarElement() { *// Create the image data. *// Each unsigned in
  
     extent<2> image_extent(image_height, image_width);
 
- *// By using uint_4 and 8 bits per channel, each 8-bit channel in the data source is *// stored in one 32-bit component of a uint_4.  
+ // By using uint_4 and 8 bits per channel, each 8-bit channel in the data source is // stored in one 32-bit component of a uint_4.  
     texture<uint_4, 2> image_texture(image_extent, image.data(), image_extent.size()* 4U,  8U);
 
- *// Use can access the RGBA values of the source data by using swizzling expressions of the uint_4.  
+ // Use can access the RGBA values of the source data by using swizzling expressions of the uint_4.  
     parallel_for_each(image_extent, 
  [&image_texture](index<2> idx) restrict(amp)   
- { *// 4 bytes are automatically extracted when reading.  
+ { // 4 bytes are automatically extracted when reading.  
     uint_4 color = image_texture[idx];   
     unsigned int r = color.r;   
     unsigned int g = color.g;   
@@ -258,7 +258,7 @@ void writeTexture() {
  您可以使用的紋理物件之間進行複製[複製](reference/concurrency-namespace-functions-amp.md#copy)函式或[copy_async](reference/concurrency-namespace-functions-amp.md#copy_async)函式，如下列程式碼範例所示。  
   
 ```cpp  
-void copyHostArrayToTexture() { *// Copy from source array to texture object by using the copy function.  
+void copyHostArrayToTexture() { // Copy from source array to texture object by using the copy function.  
     float floatSource[1024* 2];   
     for (int i = 0; i <1024* 2; i++) {  
     floatSource[i] = (float)i;  
@@ -267,7 +267,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
 
     copy(floatSource, (unsigned int)sizeof(floatSource), floatTexture);
 
- *// Copy from source array to texture object by using the copy function.  
+ // Copy from source array to texture object by using the copy function.  
     char charSource[16* 16];   
     for (int i = 0; i <16* 16; i++) {  
     charSource[i] = (char)i;  
@@ -275,7 +275,7 @@ void copyHostArrayToTexture() { *// Copy from source array to texture object by 
     texture<int, 2> charTexture(16, 16, 8U);
 
     copy(charSource, (unsigned int)sizeof(charSource), charTexture);
-*// Copy from texture object to source array by using the copy function.  
+// Copy from texture object to source array by using the copy function.  
     copy(charTexture, charSource, (unsigned int)sizeof(charSource));
 
 }  
@@ -435,7 +435,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
  C + + AMP 執行階段會支援之間的互通性`texture<T,1>`和[ID3D11Texture1D 介面](http://go.microsoft.com/fwlink/p/?linkId=248503)之間`texture<T,2>`和[ID3D11Texture2D 介面](http://go.microsoft.com/fwlink/p/?linkId=255317)，以及之間`texture<T,3>`和[ID3D11Texture3D 介面](http://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法會採用`texture`物件並傳回`IUnknown`介面。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法會採用`IUnknown`介面和`accelerator_view`物件並傳回`texture`物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [double_2 類別](../../parallel/amp/reference/double-2-class.md)   
  [double_3 類別](../../parallel/amp/reference/double-3-class.md)   
  [double_4 類別](../../parallel/amp/reference/double-4-class.md)   

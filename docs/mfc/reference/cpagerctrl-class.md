@@ -2,11 +2,8 @@
 title: CPagerCtrl 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPagerCtrl
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79fa877023c7a01c4814f61d75a54cb0dd64b51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 類別
 `CPagerCtrl` 類別會封裝 Windows 頁面巡覽區控制項，可以將不符合容器視窗大小的包含視窗捲動到檢視中。  
@@ -130,7 +125,7 @@ class CPagerCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
+##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl  
  建構 `CPagerCtrl` 物件。  
   
 ```  
@@ -140,7 +135,7 @@ CPagerCtrl();
 ### <a name="remarks"></a>備註  
  使用[CPagerCtrl::Create](#create)或[CPagerCtrl::CreateEx](#createex)方法來建立頁面巡覽區控制項，並將其附加至`CPagerCtrl`物件。  
   
-##  <a name="create"></a>CPagerCtrl::Create  
+##  <a name="create"></a>  CPagerCtrl::Create  
  使用指定的樣式建立頁面巡覽區控制項，並將其附加至目前`CPagerCtrl`物件。  
   
 ```  
@@ -171,7 +166,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CPagerCtrl::CreateEx  
+##  <a name="createex"></a>  CPagerCtrl::CreateEx  
  使用指定的延伸樣式建立頁面巡覽區控制項，並將其附加至目前`CPagerCtrl`物件。  
   
 ```  
@@ -199,7 +194,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  若要建立頁面巡覽區控制項，宣告`CPagerCtrl`變數，然後呼叫[CPagerCtrl::Create](#create)或[CPagerCtrl::CreateEx](#createex)上該變數的方法。  
   
-##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
+##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
  啟用或停用轉送[WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616)到包含在目前的頁面巡覽區控制項的視窗訊息。  
   
 ```  
@@ -210,12 +205,12 @@ void ForwardMouse(BOOL bForward);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `bForward`|`true`將滑鼠訊息轉送或`false`不將滑鼠訊息轉送。|  
+|[輸入] `bForward`|`true` 將滑鼠訊息轉送或`false`不將滑鼠訊息轉送。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) Windows SDK 中所述的訊息。  
   
-##  <a name="getborder"></a>CPagerCtrl::GetBorder  
+##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
  擷取目前的頁面巡覽區控制項的框線大小。  
   
 ```  
@@ -233,7 +228,7 @@ int GetBorder() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
  擷取目前的頁面巡覽區控制項的背景色彩。  
   
 ```  
@@ -251,7 +246,7 @@ COLORREF GetBkColor() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
  擷取目前的頁面巡覽區控制項的按鈕大小。  
   
 ```  
@@ -266,7 +261,7 @@ int GetButtonSize() const;
   
  如果頁面巡覽區控制項的`PGS_HORZ`樣式，按鈕的大小決定頁面巡覽區按鈕的寬度與頁面巡覽區控制項有`PGS_VERT`樣式，按鈕的大小會決定頁面巡覽區按鈕的高度。 如需詳細資訊，請參閱[呼叫器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。  
   
-##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
+##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
  擷取目前的頁面巡覽區控制項中指定的捲動按鈕的狀態。  
   
 ```  
@@ -285,7 +280,7 @@ DWORD GetButtonState(int iButton) const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK 中所述的訊息。  
   
-##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
  擷取[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)目前的頁面巡覽區控制項的介面。  
   
 ```  
@@ -296,11 +291,11 @@ IDropTarget* GetDropTarget() const;
  指標`IDropTarget`目前的頁面巡覽區控制項的介面。  
   
 ### <a name="remarks"></a>備註  
- `IDropTarget`是您所實作的介面的其中一個應用程式中支援拖放作業。  
+ `IDropTarget` 是您所實作的介面的其中一個應用程式中支援拖放作業。  
   
  這個方法會傳送[PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) Windows SDK 中所述的訊息。 這個方法的呼叫端會負責呼叫`Release`隸屬[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)介面時不再需要的介面。  
   
-##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
+##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
  擷取目前的頁面巡覽區控制項的捲動位置。  
   
 ```  
@@ -318,7 +313,7 @@ int GetScrollPos() const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
+##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
  指出目前的頁面巡覽區控制項的指定捲軸按鈕是否按下狀態。  
   
 ```  
@@ -332,12 +327,12 @@ BOOL IsButtonDepressed(int iButton) const;
 |[輸入] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左邊的按鈕和`PGB_BOTTOMORRIGHT`右邊的按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`底部的按鈕。 如需詳細資訊，請參閱[呼叫器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕是處於按下狀態;否則， `false`。  
+ `true` 如果指定的按鈕是處於按下狀態;否則， `false`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK 中所述的訊息。 然後它會測試是否會傳回的狀態為`PGF_DEPRESSED`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
   
-##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
+##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
  指出目前的頁面巡覽區控制項的指定捲軸按鈕是否呈現灰色的狀態。  
   
 ```  
@@ -351,12 +346,12 @@ BOOL IsButtonGrayed(int iButton) const;
 |[輸入] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左邊的按鈕和`PGB_BOTTOMORRIGHT`右邊的按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`底部的按鈕。 如需詳細資訊，請參閱[呼叫器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕在呈現灰色的狀態;否則， `false`。  
+ `true` 如果指定的按鈕在呈現灰色的狀態;否則， `false`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK 中所述的訊息。 然後它會測試是否會傳回的狀態為`PGF_GRAYED`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
   
-##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
+##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
  指出目前的頁面巡覽區控制項的指定捲軸按鈕處於作用中狀態。  
   
 ```  
@@ -370,12 +365,12 @@ BOOL IsButtonHot(int iButton) const;
 |[輸入] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左邊的按鈕和`PGB_BOTTOMORRIGHT`右邊的按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`底部的按鈕。 如需詳細資訊，請參閱[呼叫器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕處於作用中狀態。否則， `false`。  
+ `true` 如果指定的按鈕處於作用中狀態。否則， `false`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK 中所述的訊息。 然後它會測試是否會傳回的狀態為`PGF_HOT`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
   
-##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
+##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
  指出目前的頁面巡覽區控制項的指定捲軸按鈕是否可見狀態。  
   
 ```  
@@ -389,7 +384,7 @@ BOOL IsButtonInvisible(int iButton) const;
 |[輸入] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左邊的按鈕和`PGB_BOTTOMORRIGHT`右邊的按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`底部的按鈕。 如需詳細資訊，請參閱[呼叫器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕處於隱藏狀態。否則， `false`。  
+ `true` 如果指定的按鈕處於隱藏狀態。否則， `false`。  
   
 ### <a name="remarks"></a>備註  
  Windows 讓捲軸按鈕中的特定方向不可見時因為按一下按鈕進一步無法讓多個包含視窗檢視包含的視窗捲動到其最遠的範圍。  
@@ -401,7 +396,7 @@ BOOL IsButtonInvisible(int iButton) const;
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
+##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
  指出目前的頁面巡覽區控制項的指定捲軸按鈕處於正常狀態。  
   
 ```  
@@ -415,12 +410,12 @@ BOOL IsButtonNormal(int iButton) const;
 |[輸入] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左邊的按鈕和`PGB_BOTTOMORRIGHT`右邊的按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`底部的按鈕。 如需詳細資訊，請參閱[呼叫器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕處於正常狀態。否則， `false`。  
+ `true` 如果指定的按鈕處於正常狀態。否則， `false`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) Windows SDK 中所述的訊息。 然後它會測試是否會傳回的狀態為`PGF_NORMAL`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
   
-##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
+##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
  導致目前的頁面巡覽區控制項重新計算包含視窗的大小。  
   
 ```  
@@ -440,7 +435,7 @@ void RecalcSize();
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
  設定目前的頁面巡覽區控制項的背景色彩。  
   
 ```  
@@ -464,7 +459,7 @@ COLORREF SetBkColor(COLORREF clrBk);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="setborder"></a>CPagerCtrl::SetBorder  
+##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
  設定目前的頁面巡覽區控制項的框線大小。  
   
 ```  
@@ -488,7 +483,7 @@ int SetBorder(int iBorder);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
  設定目前的頁面巡覽區控制項的按鈕大小。  
   
 ```  
@@ -514,7 +509,7 @@ int SetButtonSize(int iButtonSize);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setchild"></a>CPagerCtrl::SetChild  
+##  <a name="setchild"></a>  CPagerCtrl::SetChild  
  設定目前的頁面巡覽區控制項的包含的視窗。  
   
 ```  
@@ -537,7 +532,7 @@ void SetChild(HWND hwndChild);
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
+##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
  設定目前的頁面巡覽區控制項的捲動位置。  
   
 ```  
@@ -553,7 +548,7 @@ void SetScrollPos(int iPos);
 ### <a name="remarks"></a>備註  
  這個方法會傳送[PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) Windows SDK 中所述的訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CPagerCtrl 類別](../../mfc/reference/cpagerctrl-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [頁面巡覽區控制項](http://msdn.microsoft.com/library/windows/desktop/bb760855)

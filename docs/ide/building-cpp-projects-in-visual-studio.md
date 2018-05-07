@@ -1,13 +1,10 @@
 ---
-title: "建置 Visual Studio 中的 c + + 專案 |Microsoft 文件"
-ms.custom: 
+title: 建置 Visual Studio 中的 c + + 專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - projects [C++], building
 - builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 074b43619d307d4d6ffeec1a057c9c27a4f9d05f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-c-projects-in-visual-studio"></a>在 Visual Studio 中建置 C++ 專案
 在 Visual Studio 整合式開發環境 (IDE) 中，有數種方法可以建置整個方案或僅在其中建置一個專案。 您還可以修改建置設定，並指定自訂建置步驟，以讓您的開發處理程序更加有效。  
@@ -90,5 +85,5 @@ ms.lasthandoff: 02/14/2018
 [Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)  
   有關如何升級在舊版的 Visual Studio 中，所建立的 c + + 應用程式以及如何使用 Visual Studio 以外工具所建立的應用程式移轉的詳細的資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [通用 Windows 應用程式 (C++)](../windows/universal-windows-apps-cpp.md)

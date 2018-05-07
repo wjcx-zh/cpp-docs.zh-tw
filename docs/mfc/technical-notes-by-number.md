@@ -1,29 +1,24 @@
 ---
-title: "依數字的技術提示 |Microsoft 文件"
-ms.custom: 
+title: 依數字的技術提示 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.tables.mfc.technotes
 dev_langs:
 - C++
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e0da32736f00a8ba1f01e6cf3ce2d0f38c8ee9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49e74ada4d7b3c94481b4c01546e0e997dec3d6f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="technical-notes-by-number"></a>依編號顯示的技術提示
 下面的技術附註會列出數值與最近寫入的技術提示第一次。 如需依類別目錄的清單，請參閱[依分類區分的技術提示](../mfc/technical-notes-by-category.md)。  

@@ -1,13 +1,10 @@
 ---
-title: "資料庫支援，MFC 應用程式精靈 |Microsoft 文件"
-ms.custom: 
+title: 資料庫支援，MFC 應用程式精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.database
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b7c9aaa6389f5e86a51348a8b5423260c4c76e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86c6cd679b69bf84504d6735ca39d572bd48ff07
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 應用程式精靈、資料庫支援
 此頁面提供選項，可讓您指定的資料庫層級支援 （再加上資料來源，如有必要） 為您的專案。  
@@ -80,5 +75,5 @@ ms.lasthandoff: 12/21/2017
 |**動態集**|指定資料錄集是動態集。 動態集是提供查詢的資料庫資料的索引檢視表查詢的結果。 動態集快取的整數索引原始資料，並因此提供了一效能中取得快照集。 索引會指向直接每一筆記錄找到為查詢的結果，並指出是否要清除記錄。 您也在查詢記錄的更新資訊的存取。|  
 |快照|指定資料錄集是快照集。 快照是查詢的結果，而且時間是在某個時間點的資料庫檢視。 快取查詢結果所發現的所有記錄，因此不會看到原始記錄的任何變更。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)

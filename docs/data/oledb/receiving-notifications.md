@@ -1,12 +1,9 @@
 ---
-title: "接收通知 |Microsoft 文件"
-ms.custom: 
+title: 接收通知 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 50911440acbc7514b091a439d42bf73ee60353f9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d9e1dee5c63281c729cdb798a190938c6433aac0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="receiving-notifications"></a>接收告知
 OLE DB 提供介面來接收通知事件發生時。 這些述[OLE DB 物件通知](https://msdn.microsoft.com/en-us/library/ms725406.aspx)中*OLE DB 程式設計人員參考*。 這些事件的安裝程式會使用標準的 COM 連接點機制。 例如，想要擷取事件通過 ATL 物件`IRowsetNotify`實作`IRowsetNotify`介面加入`IRowsetNotify`類別衍生的清單，而且已公開其傳遞至**COM_INTERFACE_ENTRY**巨集。  
@@ -53,5 +48,5 @@ product.Open(session, _T("Products"), &propset);
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

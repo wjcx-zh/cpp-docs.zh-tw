@@ -1,29 +1,24 @@
 ---
-title: "視覺化管理員 |Microsoft 文件"
-ms.custom: 
+title: 視覺化管理員 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654ffc0f3fb4c33f153f3389442486ffa86b74a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40d16e1373d347b4a715cd6f073211796913bd21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visualization-manager"></a>視覺化管理員
 視覺化管理員是控制整個應用程式的外觀的物件。 其會成為單一類別您可以在其中放置您的應用程式的所有繪圖程式碼。 MFC 程式庫包含數個視覺管理員。 如果您想要建立您的應用程式的自訂檢視，您也可以建立您自己的視覺管理員。 下列影像顯示相同的應用程式，啟用不同的視覺管理員時：  
@@ -86,6 +81,6 @@ break;
 } 
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
  [CMFCVisualManager 類別](../mfc/reference/cmfcvisualmanager-class.md)

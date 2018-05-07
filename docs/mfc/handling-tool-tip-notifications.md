@@ -1,13 +1,10 @@
 ---
-title: "處理工具提示告知 |Microsoft 文件"
-ms.custom: 
+title: 處理工具提示告知 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7668420b849dc08215a4fc309edf86e9171462
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-tool-tip-notifications"></a>處理工具提示告知
 當您指定`TBSTYLE_TOOLTIPS`樣式工具列建立和管理工具提示控制項。 工具提示是文字的小型的快顯視窗，其中包含描述工具列按鈕行。 隱藏工具提示，才會出現只有當使用者將游標放在工具列按鈕並等待約二分之一秒。 工具提示會顯示資料指標附近。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  範例處理常式函式及啟用工具提示的詳細資訊，請參閱[工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

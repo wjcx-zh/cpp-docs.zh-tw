@@ -1,13 +1,10 @@
 ---
-title: "TN023： 標準 MFC 資源 |Microsoft 文件"
-ms.custom: 
+title: TN023： 標準 MFC 資源 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.resources
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fded011fda52dfde46804b03699dc93469e5e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023：標準 MFC 資源
 這個附註說明 MFC 程式庫提供和需要的標準資源。  
@@ -110,7 +105,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  請勿直接在標準 .rc 檔中修改資源。 這麼做會修改每個應用程式中可用的資源，而不只是目前應用程式中可用的資源。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

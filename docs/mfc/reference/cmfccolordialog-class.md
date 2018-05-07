@@ -1,12 +1,9 @@
 ---
-title: "CMFCColorDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCColorDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8b547b72a7094bb6337e9e412f8548a48820f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
 `CMFCColorDialog`類別代表色彩選取對話方塊。  
@@ -78,8 +73,8 @@ class CMFCColorDialog : public CDialogEx
   
 |名稱|描述|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`如果色彩選取對話方塊使用自己的色彩調色盤，或`FALSE`如果對話方塊中，將會使用調色盤中指定`CMFCColorDialog`建構函式。|  
-|`m_bPickerMode`|`TRUE`當使用者從選取範圍 對話方塊中，選取一個色彩否則， `FALSE`。|  
+|`m_bIsMyPalette`|`TRUE` 如果色彩選取對話方塊使用自己的色彩調色盤，或`FALSE`如果對話方塊中，將會使用調色盤中指定`CMFCColorDialog`建構函式。|  
+|`m_bPickerMode`|`TRUE` 當使用者從選取範圍 對話方塊中，選取一個色彩否則， `FALSE`。|  
 |`m_btnColorSelect`|使用者選取的色彩按鈕。|  
 |`m_CurrentColor`|目前選取的色彩。|  
 |`m_hcurPicker`|資料指標用來選擇色彩。|  
@@ -117,7 +112,7 @@ class CMFCColorDialog : public CDialogEx
 ## <a name="requirements"></a>需求  
  **標頭：** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
  建構 `CMFCColorDialog` 物件。  
   
 ```  
@@ -145,7 +140,7 @@ CMFCColorDialog(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
  擷取使用者從 [色彩] 對話方塊中選取的色彩。  
   
 ```  
@@ -158,7 +153,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>備註  
  呼叫此函式之後您呼叫,`DoModal`方法。  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  擷取目前的色彩 對話方塊中可用的色彩調色盤。  
   
 ```  
@@ -171,14 +166,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>備註  
  色彩調色盤，指定使用者可以選擇的色彩。  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
  從系統調色盤來衍生調色盤。  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
  設定目前的色彩 對話方塊。  
   
 ```  
@@ -191,7 +186,7 @@ void SetCurrentColor(COLORREF rgb);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
  將目前的色彩設定為目前是最相似的調色盤的色彩。  
   
 ```  
@@ -204,7 +199,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
  色彩對話方塊的第一個屬性頁面上會明確指定所選色彩的紅色、 綠色和藍色元件。  
   
 ```  
@@ -226,7 +221,7 @@ void SetPageOne(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
  在色彩對話方塊的第二個屬性頁上會明確指定所選色彩的紅色、 綠色和藍色元件。  
   
 ```  
@@ -248,7 +243,7 @@ void SetPageTwo(
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCColorPickerCtrl 類別](../../mfc/reference/cmfccolorpickerctrl-class.md)

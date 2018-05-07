@@ -1,13 +1,10 @@
 ---
-title: "讀取和寫入檔案 |Microsoft 文件"
-ms.custom: 
+title: 讀取和寫入檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770dfe28b3f0278ba2682b37b71d1dd89d02ae2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 102f5f5de591f8a4475232ad8f0f5383c276e5d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reading-and-writing-files"></a>讀取和寫入檔案
 如果您使用 C 執行階段程式庫檔案處理函式，則會出現熟悉 MFC 讀取和寫入作業。 本文說明直接讀取和寫入直接`CFile`物件。 您可以也不要緩衝處理的檔案 I/O [CArchive](../mfc/reference/carchive-class.md)類別。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  您通常應該執行輸入/輸出作業內**再試一次**/**攔截**例外狀況處理區塊。 如需詳細資訊，請參閱[例外狀況處理 (MFC)](../mfc/exception-handling-in-mfc.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [檔案](../mfc/files-in-mfc.md)
 

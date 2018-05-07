@@ -1,29 +1,24 @@
 ---
-title: "CMFCStandardColorsPropertyPage 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCStandardColorsPropertyPage 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CMFCStandardColorsPropertyPage class [MFC]
 ms.assetid: b84b7cfb-bb24-4c65-804a-5b642cb64400
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60deb16628802e61ac411d576558a8659a638410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abaad4870354ba331e615e0739dc7526dd39607d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>CMFCStandardColorsPropertyPage 類別
 表示屬性頁使用者用來在色彩對話方塊中選取標準色彩。  
@@ -70,7 +65,7 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>需求  
  **標頭：** afxstandardcolorspropertypage.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)   

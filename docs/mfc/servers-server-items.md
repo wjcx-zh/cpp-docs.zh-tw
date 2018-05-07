@@ -1,13 +1,10 @@
 ---
-title: "伺服器： 伺服器項目 |Microsoft 文件"
-ms.custom: 
+title: 伺服器： 伺服器項目 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe196eb561c336e45402de6c390146a0d77bea4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e83b75183fe226b4ff384a00b0b5260caba01efa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-server-items"></a>伺服器：伺服器項目
 當容器啟動伺服器以便使用者可以編輯內嵌或連結的 OLE 項目時，伺服器應用程式會建立「伺服器項目」。 伺服器項目是其類別衍生自 `COleServerItem` 的物件，在伺服器文件和容器應用程式之間提供介面。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  在[HIERSVR](../visual-cpp-samples.md)範例，例如，伺服器項目類別， **CServerItem**，具有指向類別的物件的成員**CServerNode**。 **CServerNode**物件是 HIERSVR 應用程式的文件，也就是樹狀結構中的節點。 當**CServerNode**物件是根節點， **CServerItem**物件代表整份文件。 當**CServerNode**物件是一個子節點， **CServerItem**物件代表文件的一部分。 請參閱 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)如需這個互動的範例。  
   
-##  <a name="_core_implementing_server_items"></a>實作伺服器項目  
+##  <a name="_core_implementing_server_items"></a> 實作伺服器項目  
  如果您使用應用程式精靈產生應用程式的「起始」程式碼，則要在起始程式碼中包含伺服器項目的話，您只要從 [OLE 選項] 頁面選擇其中一個伺服器選項即可。 如果您將伺服器項目加入至現有的應用程式，請執行下列步驟：  
   
 #### <a name="to-implement-a-server-item"></a>實作伺服器項目  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  實作您的伺服器項目類別的 `OnGetExtent` 成員函式。 架構會呼叫這個函式以擷取項目的大小。 預設實作不做任何動作。  
   
-##  <a name="_core_a_tip_for_server.2d.item_architecture"></a>伺服器項目架構的提示  
+##  <a name="_core_a_tip_for_server.2d.item_architecture"></a> 伺服器項目架構的提示  
  如中所述[實作伺服器項目](#_core_implementing_server_items)，伺服器應用程式必須能夠呈現在伺服器的檢視和容器應用程式所使用的中繼檔中的項目。 在 Mfc 程式庫的應用程式架構中，檢視類別的`OnDraw`正在編輯時，成員函式會轉譯項目 (請參閱[cview:: Ondraw](../mfc/reference/cview-class.md#ondraw)中*類別庫參考*). 伺服器項目的`OnDraw`在所有其他情況下在中繼檔轉譯項目 (請參閱[coleserveritem:: Ondraw](../mfc/reference/coleserveritem-class.md#ondraw))。  
   
  您可以在您的伺服器文件類別中撰寫 Helper 函式並在您的檢視和伺服器項目類別中從 `OnDraw` 函式呼叫它們，以避免程式碼的重複。 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)使用這個策略： 函式**cserverview:: Ondraw**和**cserveritem:: Ondraw**這兩者都會呼叫**cserverdoc:: Drawtree**轉譯項目。  
@@ -60,6 +55,6 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱[cview:: Ondraw](../mfc/reference/cview-class.md#ondraw)， [COleServerItem](../mfc/reference/coleserveritem-class.md)， [coleserveritem:: Ondraw](../mfc/reference/coleserveritem-class.md#ondraw)，和[Coleserveritem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)中*類別程式庫參考*。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器](../mfc/servers.md)
 

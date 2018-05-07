@@ -1,13 +1,10 @@
 ---
-title: "TN058: MFC 模組狀態實作 |Microsoft 文件"
-ms.custom: 
+title: 'TN058: MFC 模組狀態實作 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.implementation
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - DLLs [MFC], module states
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed7bc195c771026ff3e58d53f9e3936791810e76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90e407299f67922aa855a51b9983af074cdbd4fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058：MFC 模組狀態實作
 > [!NOTE]
@@ -55,15 +50,15 @@ ms.lasthandoff: 12/21/2017
   
  很少您要將模組狀態設回未設定它。 大部分的情況下您想要在 「 推送 」 您自己的模組與目前狀態，然後完成之後，"pop"回原始的內容。 這是由巨集[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)和特殊類別**AFX_MAINTAIN_STATE**。  
   
- `CCmdTarget`具有特殊的功能，以支援模組狀態切換。 特別是，`CCmdTarget`是使用 OLE automation 和 OLE COM 的進入點的根類別。 像任何其他的進入點公開至系統，這些項目點必須設定正確的模組狀態。 如何未指定`CCmdTarget`知道 「 正確 」 的模組狀態應該是什麼辦法就是，它 「 記住 」 功能的 「 目前 」 的模組狀態時，它由建構，使它可以設定目前的模組狀態的 「 記住 」 呼叫更新時的值。 如此一來，模組狀態的給定`CCmdTarget`的物件是目前物件建構時將模組狀態。 需要載入 INPROC 伺服器、 建立物件，並呼叫其方法的簡單範例。  
+ `CCmdTarget` 具有特殊的功能，以支援模組狀態切換。 特別是，`CCmdTarget`是使用 OLE automation 和 OLE COM 的進入點的根類別。 像任何其他的進入點公開至系統，這些項目點必須設定正確的模組狀態。 如何未指定`CCmdTarget`知道 「 正確 」 的模組狀態應該是什麼辦法就是，它 「 記住 」 功能的 「 目前 」 的模組狀態時，它由建構，使它可以設定目前的模組狀態的 「 記住 」 呼叫更新時的值。 如此一來，模組狀態的給定`CCmdTarget`的物件是目前物件建構時將模組狀態。 需要載入 INPROC 伺服器、 建立物件，並呼叫其方法的簡單範例。  
   
 1.  載入 DLL ole 使用**LoadLibrary**。  
   
 2. **RawDllMain**稱為第一次。 它會將模組狀態設定為已知的靜態模組狀態的 dll。 基於這個理由**RawDllMain**以靜態方式連結至 DLL。  
   
-3.  我們物件相關聯的 class factory 的建構函式會呼叫。 `COleObjectFactory`衍生自`CCmdTarget`，如此一來，它會記住具現化中的模組狀態。 這一點非常重要，當要求的 class factory 來建立物件，它現在知道哪些讓目前的模組狀態。  
+3.  我們物件相關聯的 class factory 的建構函式會呼叫。 `COleObjectFactory` 衍生自`CCmdTarget`，如此一來，它會記住具現化中的模組狀態。 這一點非常重要，當要求的 class factory 來建立物件，它現在知道哪些讓目前的模組狀態。  
   
-4. `DllGetClassObject`呼叫以取得 class factory。 MFC 搜尋此模組相關聯的類別處理站清單，並傳回它。  
+4. `DllGetClassObject` 呼叫以取得 class factory。 MFC 搜尋此模組相關聯的類別處理站清單，並傳回它。  
   
 5. **COleObjectFactory::XClassFactory2::CreateInstance**呼叫。 之前建立的物件，並將其傳回，此函式的模組狀態設定為在步驟 3 中目前的模組狀態 (於目前時`COleObjectFactory`未具現化)。 這是內部[METHOD_PROLOGUE](com-interface-entry-points.md)。  
   
@@ -87,7 +82,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState())
   
  如果沒有使用 `AFX_MODULE_STATE` 巨集，就會發生在 DLL 中使用資源的問題。 根據預設，MFC 會使用主應用程式的資源控制代碼來載入資源範本。 這個範本實際上會儲存在 DLL 中。 其根本原因是 MFC 的模組狀態資訊並未由 `AFX_MODULE_STATE` 巨集交換。 資源控制代碼是從 MFC 的模組狀態復原。 由於未切換模組狀態而導致使用錯誤的資源控制代碼。  
   
- `AFX_MODULE_STATE`不需要放在 DLL 中的每個函式。 例如，`InitInstance` 可以由應用程式中的 MFC 程式碼呼叫，而不需使用 `AFX_MODULE_STATE`，因為 MFC 會在 `InitInstance` 之前將模組狀態自動位移，然後在 `InitInstance` 傳回之後再將其切換回來。 也適用於所有的訊息對應處理常式。 MFC 的標準 Dll 實際上具有特殊的主視窗程序，會自動切換模組狀態，再傳送訊息。  
+ `AFX_MODULE_STATE` 不需要放在 DLL 中的每個函式。 例如，`InitInstance` 可以由應用程式中的 MFC 程式碼呼叫，而不需使用 `AFX_MODULE_STATE`，因為 MFC 會在 `InitInstance` 之前將模組狀態自動位移，然後在 `InitInstance` 傳回之後再將其切換回來。 也適用於所有的訊息對應處理常式。 MFC 的標準 Dll 實際上具有特殊的主視窗程序，會自動切換模組狀態，再傳送訊息。  
   
 ## <a name="process-local-data"></a>處理本機資料  
  本機資料的程序就無法這類相當大的問題已使其不受的 win32 DLL 模型的困難度。 在 win32 中所有 Dll 都共用其全域資料，即使是由多個應用程式載入。 這是非常不同的 「 實際 」 的 Win32 DLL 資料模型，其中每個 DLL 中取得的資料空間的每個程序，將附加到 DLL 的個別複本。 若要加入的複雜度，配置在堆積的 win32 DLL 中的資料事實上是特定的處理序 （至少目前為止的擁有權會）。 請考慮下列的資料和程式碼：  
@@ -141,9 +136,9 @@ void GetGlobalString(LPCTSTR lpsz, size_t cb)
 }  
 ```  
   
- MFC 實作這兩個步驟。 首先是 Win32 之上的層級**Tls\*** 應用程式開發介面 (**TlsAlloc**， **TlsSetValue**， **TlsGetValue**等等) 的使用每個處理序，不論您有多少 Dll 只有兩個 TLS 索引。 第二個，`CProcessLocal`存取這項資料就會提供範本。 它會覆寫運算子-> 這是功能可讓您看到上述語法。 所有的物件會包裝`CProcessLocal`必須衍生自`CNoTrackObject`。 `CNoTrackObject`提供較低層級的配置器 (**LocalAlloc**/**LocalFree**) 和虛擬解構函式，MFC 也可以在程序時自動終結程序的本機物件終止。 如果需要額外的清除，則這類物件可以有自訂的解構函式。 上述範例中不需要其中一個，因為編譯器會產生預設解構函式終結內嵌`CString`物件。  
+ MFC 實作這兩個步驟。 首先是 Win32 之上的層級**Tls\*** 應用程式開發介面 (**TlsAlloc**， **TlsSetValue**， **TlsGetValue**等等) 的使用每個處理序，不論您有多少 Dll 只有兩個 TLS 索引。 第二個，`CProcessLocal`存取這項資料就會提供範本。 它會覆寫運算子-> 這是功能可讓您看到上述語法。 所有的物件會包裝`CProcessLocal`必須衍生自`CNoTrackObject`。 `CNoTrackObject` 提供較低層級的配置器 (**LocalAlloc**/**LocalFree**) 和虛擬解構函式，MFC 會自動損毀處理序的本機物件的處理序終止時。 如果需要額外的清除，則這類物件可以有自訂的解構函式。 上述範例中不需要其中一個，因為編譯器會產生預設解構函式終結內嵌`CString`物件。  
   
- 還有其他有趣的優點，這種方法。 不只是所有`CProcessLocal`終結自動物件不建構直到需要時才。 `CProcessLocal::operator->`相關聯的物件第一次呼叫，並立即，會具現化。 在上述範例中，這表示 '`strGlobal`' 字串不會等到第一次建構**SetGlobalString**或**GetGlobalString**呼叫。 在某些情況下，這可協助減少 DLL 啟動時間。  
+ 還有其他有趣的優點，這種方法。 不只是所有`CProcessLocal`終結自動物件不建構直到需要時才。 `CProcessLocal::operator->` 相關聯的物件第一次呼叫，並立即，會具現化。 在上述範例中，這表示 '`strGlobal`' 字串不會等到第一次建構**SetGlobalString**或**GetGlobalString**呼叫。 在某些情況下，這可協助減少 DLL 啟動時間。  
   
 ## <a name="thread-local-data"></a>執行緒區域資料  
  類似於處理本機資料，執行緒區域資料時使用的資料必須是本機給定的執行緒。 也就是說，您需要存取該資料的每個執行緒資料的個別執行個體。 這可以多次使用這個廣泛的同步處理機制。 如果資料不需要由多個執行緒共用，這類機制可以是高度耗費資源，而非必要。 假設我們`CString`（類似上述範例） 的物件。 我們可以將執行緒本機包裝它與`CThreadLocal`範本：  
@@ -181,7 +176,7 @@ while (str.GetLength() != 52)
   
  `CThreadLocal`類別樣板會使用相同的機制，`CProcessLocal`功能以及相同的實作技術。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

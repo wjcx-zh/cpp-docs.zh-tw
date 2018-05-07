@@ -1,12 +1,9 @@
 ---
-title: "COleClientItem 類別 |Microsoft 文件"
-ms.custom: 
+title: COleClientItem 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleClientItem
@@ -173,17 +170,15 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3732f23c2af429d0b5fc965b7f961af8400e2e42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89a277293cd4b192af0a8a069b82b1b1614490a7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 類別
 定義 OLE 項目的容器介面。  
@@ -295,9 +290,9 @@ class COleClientItem : public CDocItem
   
  OLE 項目可以內嵌或連結。 如果內嵌，其資料儲存複合文件的一部分。 如果連結，其資料會儲存為個別的檔案伺服器應用程式所建立的一部分，並只連結至該檔案會儲存在複合文件。 所有 OLE 項目都包含指定的伺服器應用程式應該呼叫來編輯這些資訊。  
   
- `COleClientItem`定義數個呼叫的可覆寫函式以回應要求，從伺服器應用程式。這些可覆寫通常做為通知。 這可讓伺服器應用程式通知編輯 OLE 項目時，可讓使用者變更的容器，或擷取在編輯期間所需的資訊。  
+ `COleClientItem` 定義數個呼叫的可覆寫函式以回應要求，從伺服器應用程式。這些可覆寫通常做為通知。 這可讓伺服器應用程式通知編輯 OLE 項目時，可讓使用者變更的容器，或擷取在編輯期間所需的資訊。  
   
- `COleClientItem`可以使用其中一種[COleDocument](../../mfc/reference/coledocument-class.md)， [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)類別。 若要使用`COleClientItem`、 衍生的類別和實作[OnChange](#onchange)成員函式，以定義容器的項目所做之變更的回應方式。 若要支援就地啟用，覆寫[OnGetItemPosition](#ongetitemposition)成員函式。 此函數會提供 OLE 項目顯示位置的相關資訊。  
+ `COleClientItem` 可以使用其中一種[COleDocument](../../mfc/reference/coledocument-class.md)， [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)，或[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)類別。 若要使用`COleClientItem`、 衍生的類別和實作[OnChange](#onchange)成員函式，以定義容器的項目所做之變更的回應方式。 若要支援就地啟用，覆寫[OnGetItemPosition](#ongetitemposition)成員函式。 此函數會提供 OLE 項目顯示位置的相關資訊。  
   
  如需使用容器介面的詳細資訊，請參閱文章[容器： 實作容器](../../mfc/containers-implementing-a-container.md)和[啟用](../../mfc/activation-cpp.md)。  
   
@@ -316,7 +311,7 @@ class COleClientItem : public CDocItem
 ## <a name="requirements"></a>需求  
  **標頭：** afxole.h  
   
-##  <a name="activate"></a>COleClientItem::Activate  
+##  <a name="activate"></a>  COleClientItem::Activate  
  呼叫此函式以執行指定的動詞，而不是[DoVerb](#doverb) ，讓您可以自己處理作業時擲回例外狀況。  
   
 ```  
@@ -353,7 +348,7 @@ void Activate(
   
  如需詳細資訊，請參閱[IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows SDK 中。  
   
-##  <a name="activateas"></a>COleClientItem::ActivateAs  
+##  <a name="activateas"></a>  COleClientItem::ActivateAs  
  啟動項目，就好像是所指定之類型的項目會使用 OLE 的物件轉換設備`clsidNew`。  
   
 ```  
@@ -379,7 +374,7 @@ virtual BOOL ActivateAs(
 ### <a name="remarks"></a>備註  
  這稱為自動[COleConvertDialog::DoConvert](../../mfc/reference/coleconvertdialog-class.md#doconvert)。 它不通常會直接呼叫。  
   
-##  <a name="attachdataobject"></a>COleClientItem::AttachDataObject  
+##  <a name="attachdataobject"></a>  COleClientItem::AttachDataObject  
  呼叫此函式來初始化[COleDataObject](../../mfc/reference/coledataobject-class.md)來存取 OLE 項目中的資料。  
   
 ```  
@@ -390,7 +385,7 @@ void AttachDataObject(COleDataObject& rDataObject) const;
  *rDataObject*  
  若要參考`COleDataObject`將會初始化為 OLE 項目中允許資料存取的物件。  
   
-##  <a name="canactivate"></a>COleClientItem::CanActivate  
+##  <a name="canactivate"></a>  COleClientItem::CanActivate  
  使用者要求的 OLE 項目; 就地啟動時由架構呼叫此函式的傳回值會決定是否允許就地啟用。  
   
 ```  
@@ -405,7 +400,7 @@ virtual BOOL CanActivate();
   
  如需詳細資訊，請參閱[IOleInPlaceSite::CanInPlaceActivate](http://msdn.microsoft.com/library/windows/desktop/ms691236) Windows SDK 中。  
   
-##  <a name="cancreatefromdata"></a>COleClientItem::CanCreateFromData  
+##  <a name="cancreatefromdata"></a>  COleClientItem::CanCreateFromData  
  容器應用程式是否可以建立從內嵌的物件會檢查給定`COleDataObject`物件。  
   
 ```  
@@ -426,7 +421,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
   
  如需詳細資訊，請參閱文章[資料物件和資料來源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)。  
   
-##  <a name="cancreatelinkfromdata"></a>COleClientItem::CanCreateLinkFromData  
+##  <a name="cancreatelinkfromdata"></a>  COleClientItem::CanCreateLinkFromData  
  檢查容器應用程式是否可以建立連結的物件，從給定`COleDataObject`物件。  
   
 ```  
@@ -447,7 +442,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
   
  如需詳細資訊，請參閱文章[資料物件和資料來源 (OLE)](../../mfc/data-objects-and-data-sources-ole.md)。  
   
-##  <a name="canpaste"></a>COleClientItem::CanPaste  
+##  <a name="canpaste"></a>  COleClientItem::CanPaste  
  呼叫此函式可看到內嵌的 OLE 項目是否可以從剪貼簿貼上。  
   
 ```  
@@ -460,7 +455,7 @@ static BOOL PASCAL CanPaste();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778)和[OleQueryCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms683739) Windows SDK 中。  
   
-##  <a name="canpastelink"></a>COleClientItem::CanPasteLink  
+##  <a name="canpastelink"></a>  COleClientItem::CanPasteLink  
  呼叫此函式，以查看連結的 OLE 項目是否可以從剪貼簿貼上。  
   
 ```  
@@ -473,7 +468,7 @@ static BOOL PASCAL CanPasteLink();
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[OleGetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms692778)和[OleQueryLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms690244) Windows SDK 中。  
   
-##  <a name="close"></a>COleClientItem::Close  
+##  <a name="close"></a>  COleClientItem::Close  
  呼叫此函式可載入其處理常式，在記憶體中使用，但伺服器未執行的執行狀態至載入的狀態，也就是從變更的 OLE 項目狀態。  
   
 ```  
@@ -484,18 +479,18 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
  `dwCloseOption`  
  旗標，指定當它傳回至載入的狀態，OLE 項目儲存在哪些情況之下。 它可以包含下列值之一：  
   
-- `OLECLOSE_SAVEIFDIRTY`儲存 OLE 項目。  
+- `OLECLOSE_SAVEIFDIRTY` 儲存 OLE 項目。  
   
-- `OLECLOSE_NOSAVE`不要儲存 OLE 項目。  
+- `OLECLOSE_NOSAVE` 不要儲存 OLE 項目。  
   
-- `OLECLOSE_PROMPTSAVE`提示使用者是否要儲存 OLE 項目。  
+- `OLECLOSE_PROMPTSAVE` 提示使用者是否要儲存 OLE 項目。  
   
 ### <a name="remarks"></a>備註  
  OLE 項目不在執行時，此函式沒有任何作用。  
   
  如需詳細資訊，請參閱[IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) Windows SDK 中。  
   
-##  <a name="coleclientitem"></a>COleClientItem::COleClientItem  
+##  <a name="coleclientitem"></a>  COleClientItem::COleClientItem  
  建構`COleClientItem`物件，並將它加入至容器文件的文件項目集合，其中建構 c + + 物件，並不會執行任何 OLE 初始化。  
   
 ```  
@@ -531,7 +526,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
   
 - [CreateCloneFrom](#createclonefrom)  
   
-##  <a name="convertto"></a>COleClientItem::ConvertTo  
+##  <a name="convertto"></a>  COleClientItem::ConvertTo  
  呼叫此成員函式，將項目所指定之類型為`clsidNew`。  
   
 ```  
@@ -548,7 +543,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 ### <a name="remarks"></a>備註  
  這稱為自動[COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md)。 您不需要直接呼叫它。  
   
-##  <a name="copytoclipboard"></a>COleClientItem::CopyToClipboard  
+##  <a name="copytoclipboard"></a>  COleClientItem::CopyToClipboard  
  呼叫此函式可將 OLE 項目複製到剪貼簿。  
   
 ```  
@@ -564,7 +559,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
   
  如需詳細資訊，請參閱[OleSetClipboard](http://msdn.microsoft.com/library/windows/desktop/ms686623) Windows SDK 中。  
   
-##  <a name="createclonefrom"></a>COleClientItem::CreateCloneFrom  
+##  <a name="createclonefrom"></a>  COleClientItem::CreateCloneFrom  
  呼叫此函式可建立指定之 OLE 項目的複本。  
   
 ```  
@@ -581,7 +576,7 @@ BOOL CreateCloneFrom(const COleClientItem* pSrcItem);
 ### <a name="remarks"></a>備註  
  是與來源項目相同的副本。 您可以使用此函式來支援復原作業。  
   
-##  <a name="createfromclipboard"></a>COleClientItem::CreateFromClipboard  
+##  <a name="createfromclipboard"></a>  COleClientItem::CreateFromClipboard  
  呼叫此函式可從剪貼簿的內容中建立內嵌項目。  
   
 ```  
@@ -609,7 +604,7 @@ BOOL CreateFromClipboard(
   
  如需詳細資訊，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="createfromdata"></a>COleClientItem::CreateFromData  
+##  <a name="createfromdata"></a>  COleClientItem::CreateFromData  
  呼叫此函式，建立內嵌項目從`COleDataObject`物件。  
   
 ```  
@@ -641,7 +636,7 @@ BOOL CreateFromData(
   
  如需詳細資訊，請參閱[OleCreateFromData](http://msdn.microsoft.com/library/windows/desktop/ms691211)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="createfromfile"></a>COleClientItem::CreateFromFile  
+##  <a name="createfromfile"></a>  COleClientItem::CreateFromFile  
  呼叫此函式可從檔案建立內嵌的 OLE 項目。  
   
 ```  
@@ -677,7 +672,7 @@ BOOL CreateFromFile(
   
  如需詳細資訊，請參閱[OleCreateFromFile](http://msdn.microsoft.com/library/windows/desktop/ms690116)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="createlinkfromclipboard"></a>COleClientItem::CreateLinkFromClipboard  
+##  <a name="createlinkfromclipboard"></a>  COleClientItem::CreateLinkFromClipboard  
  呼叫此函式可從剪貼簿的內容中建立連結的項目。  
   
 ```  
@@ -705,7 +700,7 @@ BOOL CreateLinkFromClipboard(
   
  如需詳細資訊，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="createlinkfromdata"></a>COleClientItem::CreateLinkFromData  
+##  <a name="createlinkfromdata"></a>  COleClientItem::CreateLinkFromData  
  呼叫此函式來建立連結的項目從`COleDataObject`物件。  
   
 ```  
@@ -737,7 +732,7 @@ BOOL CreateLinkFromData(
   
  如需詳細資訊，請參閱[OleCreateLinkFromData](http://msdn.microsoft.com/library/windows/desktop/ms680731)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="createlinkfromfile"></a>COleClientItem::CreateLinkFromFile  
+##  <a name="createlinkfromfile"></a>  COleClientItem::CreateLinkFromFile  
  呼叫此函式可從檔案建立連結的 OLE 項目。  
   
 ```  
@@ -769,7 +764,7 @@ BOOL CreateLinkFromFile(
   
  如需詳細資訊，請參閱[OleCreateLinkToFile](http://msdn.microsoft.com/library/windows/desktop/ms678434)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="createnewitem"></a>COleClientItem::CreateNewItem  
+##  <a name="createnewitem"></a>  COleClientItem::CreateNewItem  
  呼叫此函式，建立內嵌項目。此函式會啟動伺服器應用程式，可讓使用者建立 OLE 項目。  
   
 ```  
@@ -801,7 +796,7 @@ BOOL CreateNewItem(
   
  如需詳細資訊，請參閱[OleCreate](http://msdn.microsoft.com/library/windows/desktop/ms678409)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="createstaticfromclipboard"></a>COleClientItem::CreateStaticFromClipboard  
+##  <a name="createstaticfromclipboard"></a>  COleClientItem::CreateStaticFromClipboard  
  呼叫此函式可從剪貼簿的內容建立靜態項目。  
   
 ```  
@@ -829,7 +824,7 @@ BOOL CreateStaticFromClipboard(
   
  如需詳細資訊，請參閱[OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="createstaticfromdata"></a>COleClientItem::CreateStaticFromData  
+##  <a name="createstaticfromdata"></a>  COleClientItem::CreateStaticFromData  
  呼叫此函式，建立靜態項目從`COleDataObject`物件。  
   
 ```  
@@ -863,7 +858,7 @@ BOOL CreateStaticFromData(
   
  如需詳細資訊，請參閱[OleCreateStaticFromData](http://msdn.microsoft.com/library/windows/desktop/ms687290)， [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507)，和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中。  
   
-##  <a name="deactivate"></a>COleClientItem::Deactivate  
+##  <a name="deactivate"></a>  COleClientItem::Deactivate  
  呼叫此函式可停用 OLE 項目，並釋放任何相關聯的資源。  
   
 ```  
@@ -877,7 +872,7 @@ void Deactivate();
   
  如需詳細資訊，請參閱[IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) Windows SDK 中。  
   
-##  <a name="deactivateui"></a>COleClientItem::DeactivateUI  
+##  <a name="deactivateui"></a>  COleClientItem::DeactivateUI  
  當使用者停用就地啟動時的項目時，請呼叫此函式。  
   
 ```  
@@ -891,7 +886,7 @@ void DeactivateUI();
   
  如需詳細資訊，請參閱[IOleInPlaceObject::InPlaceDeactivate](http://msdn.microsoft.com/library/windows/desktop/ms679700) Windows SDK 中。  
   
-##  <a name="delete"></a>COleClientItem::Delete  
+##  <a name="delete"></a>  COleClientItem::Delete  
  呼叫此函式可從容器文件刪除 OLE 項目。  
   
 ```  
@@ -905,7 +900,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 ### <a name="remarks"></a>備註  
  此函數會呼叫[發行](#release)成員函式，依次刪除項目，永久移除 OLE 項目文件的 c + + 物件。 如果內嵌 OLE 項目，會刪除原生資料的項目。 它一律會關閉執行中的伺服器。因此，如果項目是開啟的連結，此函式會關閉它。  
   
-##  <a name="dodragdrop"></a>COleClientItem::DoDragDrop  
+##  <a name="dodragdrop"></a>  COleClientItem::DoDragDrop  
  呼叫`DoDragDrop`成員函式來執行拖放作業。  
   
 ```  
@@ -949,7 +944,7 @@ DROPEFFECT DoDragDrop(
   
  如需有關如何將延遲的資訊會儲存在登錄或。INI 檔案，請參閱[WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) Windows SDK 中。  
   
-##  <a name="doverb"></a>COleClientItem::DoVerb  
+##  <a name="doverb"></a>  COleClientItem::DoVerb  
  呼叫`DoVerb`執行指定的動詞命令。  
   
 ```  
@@ -987,7 +982,7 @@ virtual BOOL DoVerb(
   
  如果主要動作是編輯和中指定零`nVerb`啟動參數，伺服器應用程式以允許編輯 OLE 項目。 如果容器應用程式支援就地啟用，編輯即可備妥。 如果容器不支援就地啟用 （或如果未指定 Open 動詞），伺服器會在個別視窗中啟動，並編輯即可那里。 一般而言，當容器應用程式使用者按兩下 OLE 項目中的主要動詞命令的值時，才`nVerb`參數會決定使用者可以採取哪些動作。 不過，如果伺服器支援只有一個動作，會在該動作，不論其中該值會以指定`nVerb`參數。  
   
-##  <a name="draw"></a>COleClientItem::Draw  
+##  <a name="draw"></a>  COleClientItem::Draw  
  呼叫此函式可使用指定的裝置內容指定的週框矩形內繪製 OLE 項目。  
   
 ```  
@@ -1019,7 +1014,7 @@ BOOL Draw(
   
  如需詳細資訊，請參閱[iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) Windows SDK 中。  
   
-##  <a name="getactiveview"></a>COleClientItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleClientItem::GetActiveView  
  傳回在其的項目是就地啟用的檢視。  
   
 ```  
@@ -1029,7 +1024,7 @@ CView* GetActiveView() const;
 ### <a name="return-value"></a>傳回值  
  檢視; 指標否則**NULL**如果項目不是就地啟動。  
   
-##  <a name="getcachedextent"></a>COleClientItem::GetCachedExtent  
+##  <a name="getcachedextent"></a>  COleClientItem::GetCachedExtent  
  呼叫此函式可擷取 OLE 項目的大小。  
   
 ```  
@@ -1055,7 +1050,7 @@ BOOL GetCachedExtent(
   
  如需詳細資訊，請參閱[IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) Windows SDK 中。  
   
-##  <a name="getclassid"></a>COleClientItem::GetClassID  
+##  <a name="getclassid"></a>  COleClientItem::GetClassID  
  傳回的類別識別碼的項目至所指向的記憶體`pClassID`。  
   
 ```  
@@ -1071,7 +1066,7 @@ void GetClassID(CLSID* pClassID) const;
   
  如需詳細資訊，請參閱[ipersist:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
-##  <a name="getclipboarddata"></a>COleClientItem::GetClipboardData  
+##  <a name="getclipboarddata"></a>  COleClientItem::GetClipboardData  
  呼叫此函式可取得`COleDataSource`物件，其中包含會將呼叫放置在剪貼簿的所有資料[CopyToClipboard](#copytoclipboard)成員函式。  
   
 ```  
@@ -1096,9 +1091,9 @@ void GetClipboardData(
  物件，像素為單位的大小。  
   
 ### <a name="remarks"></a>備註  
- `GetClipboardData`預設實作稱為[ongetclipboarddata 而自動發生](#ongetclipboarddata)。 覆寫`OnGetClipboardData`只有當您想要提供除了所提供的資料格式`CopyToClipboard`。 將放在這些格式`COleDataSource`物件之前或之後呼叫`CopyToClipboard`，然後將傳遞`COleDataSource`物件[COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard)函式。 例如，如果您想隨附剪貼簿上其容器文件中的 OLE 項目的位置，您會定義您自己的格式來傳遞該資訊並將它放在`COleDataSource`之前先呼叫`CopyToClipboard`。  
+ `GetClipboardData` 預設實作稱為[ongetclipboarddata 而自動發生](#ongetclipboarddata)。 覆寫`OnGetClipboardData`只有當您想要提供除了所提供的資料格式`CopyToClipboard`。 將放在這些格式`COleDataSource`物件之前或之後呼叫`CopyToClipboard`，然後將傳遞`COleDataSource`物件[COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard)函式。 例如，如果您想隨附剪貼簿上其容器文件中的 OLE 項目的位置，您會定義您自己的格式來傳遞該資訊並將它放在`COleDataSource`之前先呼叫`CopyToClipboard`。  
   
-##  <a name="getdocument"></a>COleClientItem::GetDocument  
+##  <a name="getdocument"></a>  COleClientItem::GetDocument  
  呼叫此函式可取得包含 OLE 項目的文件的指標。  
   
 ```  
@@ -1111,7 +1106,7 @@ COleDocument* GetDocument() const;
 ### <a name="remarks"></a>備註  
  此指標可讓您存取`COleDocument`物件做為引數傳遞`COleClientItem`建構函式。  
   
-##  <a name="getdrawaspect"></a>COleClientItem::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleClientItem::GetDrawAspect  
  呼叫`GetDrawAspect`成員函式，以判斷目前 「 外觀 」 或項目的檢視。  
   
 ```  
@@ -1124,7 +1119,7 @@ DVASPECT GetDrawAspect() const;
 ### <a name="remarks"></a>備註  
  層面指定的項目是要轉譯的方式。  
   
-##  <a name="getextent"></a>COleClientItem::GetExtent  
+##  <a name="getextent"></a>  COleClientItem::GetExtent  
  呼叫此函式可擷取 OLE 項目的大小。  
   
 ```  
@@ -1151,7 +1146,7 @@ BOOL GetExtent(
   
  如需詳細資訊，請參閱[IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) Windows SDK 中。  
   
-##  <a name="geticonfromregistry"></a>COleClientItem::GetIconFromRegistry  
+##  <a name="geticonfromregistry"></a>  COleClientItem::GetIconFromRegistry  
  呼叫此成員函式可擷取特定的 CLSID 的伺服器相關聯的圖示資源的控制代碼。  
   
 ```  
@@ -1170,7 +1165,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 ### <a name="remarks"></a>備註  
  此成員函式不會啟動伺服器或取得圖示，以動態方式，即使伺服器已在執行。 相反地，此成員函式開啟伺服器的可執行映像，並擷取靜態與已註冊的伺服器相關的圖示。  
   
-##  <a name="geticonicmetafile"></a>COleClientItem::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleClientItem::GetIconicMetafile  
  擷取用來繪製的項目圖示的中繼檔。  
   
 ```  
@@ -1185,7 +1180,7 @@ HGLOBAL GetIconicMetafile();
   
  此函式也會呼叫[SetIconicMetafile](#seticonicmetafile)快取供稍後使用中繼檔。  
   
-##  <a name="getinplacewindow"></a>COleClientItem::GetInPlaceWindow  
+##  <a name="getinplacewindow"></a>  COleClientItem::GetInPlaceWindow  
  呼叫`GetInPlaceWindow`成員函式來進行就地編輯的視窗中開啟項目取得的指標。  
   
 ```  
@@ -1198,7 +1193,7 @@ CWnd* GetInPlaceWindow();
 ### <a name="remarks"></a>備註  
  只能針對就地啟用作用中的項目應該呼叫此函式。  
   
-##  <a name="getitemstate"></a>COleClientItem::GetItemState  
+##  <a name="getitemstate"></a>  COleClientItem::GetItemState  
  呼叫此函式可取得 OLE 項目的目前狀態。  
   
 ```  
@@ -1213,7 +1208,7 @@ UINT GetItemState() const;
   
  如需詳細資訊，請參閱文章[容器： 用戶端項目狀態](../../mfc/containers-client-item-states.md)。  
   
-##  <a name="getlaststatus"></a>COleClientItem::GetLastStatus  
+##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus  
  傳回最後一個 OLE 作業的狀態碼。  
   
 ```  
@@ -1228,7 +1223,7 @@ SCODE GetLastStatus() const;
   
  如需有關`SCODE`，請參閱[結構 COM 錯誤碼的](http://msdn.microsoft.com/library/windows/desktop/ms690088)Windows SDK 文件中。  
   
-##  <a name="getlinkupdateoptions"></a>COleClientItem::GetLinkUpdateOptions  
+##  <a name="getlinkupdateoptions"></a>  COleClientItem::GetLinkUpdateOptions  
  呼叫此函式可取得 OLE 項目連結更新選項的目前值。  
   
 ```  
@@ -1238,9 +1233,9 @@ OLEUPDATE GetLinkUpdateOptions();
 ### <a name="return-value"></a>傳回值  
  下列其中一個值：  
   
-- `OLEUPDATE_ALWAYS`更新連結的項目，請盡可能。 此選項會支援連結 對話方塊中的自動連結更新選項按鈕。  
+- `OLEUPDATE_ALWAYS` 更新連結的項目，請盡可能。 此選項會支援連結 對話方塊中的自動連結更新選項按鈕。  
   
-- `OLEUPDATE_ONCALL`更新連結的項目，只能從容器應用程式的要求上 (當[UpdateLink](#updatelink)成員函式呼叫)。 此選項會支援連結 對話方塊中手動連結更新選項按鈕。  
+- `OLEUPDATE_ONCALL` 更新連結的項目，只能從容器應用程式的要求上 (當[UpdateLink](#updatelink)成員函式呼叫)。 此選項會支援連結 對話方塊中手動連結更新選項按鈕。  
   
 ### <a name="remarks"></a>備註  
  這是進階的操作。  
@@ -1249,7 +1244,7 @@ OLEUPDATE GetLinkUpdateOptions();
   
  如需詳細資訊，請參閱[IOleLink::GetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680100) Windows SDK 中。  
   
-##  <a name="gettype"></a>COleClientItem::GetType  
+##  <a name="gettype"></a>  COleClientItem::GetType  
  呼叫此函式可判斷是否 OLE 項目是內嵌或連結，或靜態。  
   
 ```  
@@ -1259,13 +1254,13 @@ OLE_OBJTYPE GetType() const;
 ### <a name="return-value"></a>傳回值  
  不帶正負號的整數的下列值之一：  
   
-- `OT_LINK`OLE 項目是一個連結。  
+- `OT_LINK` OLE 項目是一個連結。  
   
-- `OT_EMBEDDED`內嵌 OLE 項目。  
+- `OT_EMBEDDED` 內嵌 OLE 項目。  
   
-- `OT_STATIC`OLE 項目是靜態的也就是說，它只包含呈現的資料，不原生資料，並因此無法編輯。  
+- `OT_STATIC` OLE 項目是靜態的也就是說，它只包含呈現的資料，不原生資料，並因此無法編輯。  
   
-##  <a name="getusertype"></a>COleClientItem::GetUserType  
+##  <a name="getusertype"></a>  COleClientItem::GetUserType  
  呼叫此函式可取得使用者可見的字串描述 OLE 項目類型，例如 「 Word 文件 」。  
   
 ```  
@@ -1278,11 +1273,11 @@ void GetUserType(
  *nUserClassType*  
  值，指出所需的 variant 描述 OLE 項目類型的字串。 這可以有下列值之一：  
   
-- `USERCLASSTYPE_FULL`完整的型別名稱顯示給使用者。  
+- `USERCLASSTYPE_FULL` 完整的型別名稱顯示給使用者。  
   
-- `USERCLASSTYPE_SHORT`使用快顯功能表和 [編輯連結] 對話方塊中指定簡短名稱 （最多 15 個字元）。  
+- `USERCLASSTYPE_SHORT` 使用快顯功能表和 [編輯連結] 對話方塊中指定簡短名稱 （最多 15 個字元）。  
   
-- `USERCLASSTYPE_APPNAME`服務類別的應用程式名稱。  
+- `USERCLASSTYPE_APPNAME` 服務類別的應用程式名稱。  
   
  `rString`  
  若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)所要傳回的字串描述 OLE 項目的型別物件。  
@@ -1294,7 +1289,7 @@ void GetUserType(
   
  如需詳細資訊，請參閱[IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) Windows SDK 中。  
   
-##  <a name="isinplaceactive"></a>COleClientItem::IsInPlaceActive  
+##  <a name="isinplaceactive"></a>  COleClientItem::IsInPlaceActive  
  呼叫此函式的 OLE 項目就地啟用作用中。  
   
 ```  
@@ -1307,7 +1302,7 @@ BOOL IsInPlaceActive() const;
 ### <a name="remarks"></a>備註  
  通常會執行不同的邏輯，根據是否正在就地編輯項目。 函式會檢查目前的項目狀態是否等於 `activeState`或`activeUIState`。  
   
-##  <a name="islinkuptodate"></a>COleClientItem::IsLinkUpToDate  
+##  <a name="islinkuptodate"></a>  COleClientItem::IsLinkUpToDate  
  呼叫此函式可查看 OLE 項目是否為最新狀態。  
   
 ```  
@@ -1324,7 +1319,7 @@ BOOL IsLinkUpToDate() const;
   
  如需詳細資訊，請參閱[IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) Windows SDK 中。  
   
-##  <a name="ismodified"></a>COleClientItem::IsModified  
+##  <a name="ismodified"></a>  COleClientItem::IsModified  
  呼叫此函式，以查看是否 OLE 項目是已損毀 （修改自上次儲存後）。  
   
 ```  
@@ -1337,7 +1332,7 @@ BOOL IsModified() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[IPersistStorage::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms683910) Windows SDK 中。  
   
-##  <a name="isopen"></a>COleClientItem::IsOpen  
+##  <a name="isopen"></a>  COleClientItem::IsOpen  
  呼叫此函式，以查看 OLE 項目是否為開啟。也就是說，在個別視窗中執行的伺服器應用程式的執行個體中開啟。  
   
 ```  
@@ -1350,7 +1345,7 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>備註  
  它用來判斷何時要繪製的物件與影線圖樣。 開啟的物件應該規劃圖樣，該物件之上繪製。 您可以使用[CRectTracker](../../mfc/reference/crecttracker-class.md)物件來完成這項作業。  
   
-##  <a name="isrunning"></a>COleClientItem::IsRunning  
+##  <a name="isrunning"></a>  COleClientItem::IsRunning  
  呼叫此函式，以查看是否正在執行的 OLE 項目。也就是項目是否已載入及執行伺服器應用程式中。  
   
 ```  
@@ -1363,7 +1358,7 @@ BOOL IsRunning() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[OleIsRunning](http://msdn.microsoft.com/library/windows/desktop/ms688705) Windows SDK 中。  
   
-##  <a name="onactivate"></a>COleClientItem::OnActivate  
+##  <a name="onactivate"></a>  COleClientItem::OnActivate  
  由架構呼叫以通知，只要啟用後就地項目。  
   
 ```  
@@ -1375,7 +1370,7 @@ virtual void OnActivate();
   
  預設實作會呼叫[OnChange](#onchange)成員函式**OLE_CHANGEDSTATE**做為參數。 覆寫這個函式來執行自訂處理項目時就地啟用作用中。  
   
-##  <a name="onactivateui"></a>COleClientItem::OnActivateUI  
+##  <a name="onactivateui"></a>  COleClientItem::OnActivateUI  
  這個架構會呼叫`OnActivateUI`當物件已進入作用中的 UI 狀態。  
   
 ```  
@@ -1387,7 +1382,7 @@ virtual void OnActivateUI();
   
  預設實作會記住伺服器`HWND`稍後**GetServerWindow**呼叫。  
   
-##  <a name="onchange"></a>COleClientItem::OnChange  
+##  <a name="onchange"></a>  COleClientItem::OnChange  
  在使用者修改、 儲存，或關閉 OLE 項目時由架構呼叫。  
   
 ```  
@@ -1400,13 +1395,13 @@ virtual void OnChange(
  `nCode`  
  伺服器的原因會變更此項目。 它可以包含下列值之一：  
   
-- `OLE_CHANGED`OLE 項目的外觀已變更。  
+- `OLE_CHANGED` OLE 項目的外觀已變更。  
   
-- `OLE_SAVED`已儲存 OLE 項目。  
+- `OLE_SAVED` 已儲存 OLE 項目。  
   
-- `OLE_CLOSED`OLE 項目已關閉。  
+- `OLE_CLOSED` OLE 項目已關閉。  
   
-- `OLE_CHANGED_STATE`OLE 項目已從某個狀態變更為另一個。  
+- `OLE_CHANGED_STATE` OLE 項目已從某個狀態變更為另一個。  
   
  `dwParam`  
  如果`nCode`是`OLE_SAVED`或`OLE_CLOSED`，未使用此參數。 如果`nCode`是`OLE_CHANGED`，此參數指定的 OLE 項目已變更外觀。 可能的值，請參閱`dwParam`參數[COleClientItem::Draw](#draw)。 如果`nCode`是`OLE_CHANGED_STATE`，這個參數是**COleClientItem::ItemState**列舉值，並說明所輸入的狀態。 它可以有下列值之一： `emptyState`， **loadedState**， `openState`， `activeState`，或`activeUIState`。  
@@ -1418,7 +1413,7 @@ virtual void OnChange(
   
  覆寫此函式以回應中的 OLE 項目狀態變更。 通常您會藉由讓失效的區域中顯示的項目更新項目的外觀。 呼叫基底類別實作您的覆寫的開頭。  
   
-##  <a name="onchangeitemposition"></a>COleClientItem::OnChangeItemPosition  
+##  <a name="onchangeitemposition"></a>  COleClientItem::OnChangeItemPosition  
  由架構呼叫以告知就地啟用期間變更 OLE 項目範圍的容器。  
   
 ```  
@@ -1437,7 +1432,7 @@ virtual BOOL OnChangeItemPosition(const CRect& rectPos);
   
  覆寫此函式可調整大小/移動作業套用特殊規則。 如果應用程式撰寫 MFC 中，此呼叫結果，因為伺服器呼叫[COleServerDoc::RequestPositionChange](../../mfc/reference/coleserverdoc-class.md#requestpositionchange)。  
   
-##  <a name="ondeactivate"></a>COleClientItem::OnDeactivate  
+##  <a name="ondeactivate"></a>  COleClientItem::OnDeactivate  
  當 OLE 項目轉換從就地使用中狀態時，由架構呼叫 ( `activeState`) 至載入的狀態，這表示它已停用就地啟動之後。  
   
 ```  
@@ -1449,7 +1444,7 @@ virtual void OnDeactivate();
   
  預設實作會呼叫[OnChange](#onchange)成員函式**OLE_CHANGEDSTATE**做為參數。 覆寫這個函式來執行自訂處理停用就地使用中的項目時。 例如，如果您在容器應用程式中支援復原命令，您可以覆寫此函式可捨棄復原狀態，表示上次執行的 OLE 項目上的作業無法復原，當停用項目。  
   
-##  <a name="ondeactivateandundo"></a>COleClientItem::OnDeactivateAndUndo  
+##  <a name="ondeactivateandundo"></a>  COleClientItem::OnDeactivateAndUndo  
  當使用者叫用復原命令啟動就地 OLE 項目之後，由架構呼叫。  
   
 ```  
@@ -1461,7 +1456,7 @@ virtual void OnDeactivateAndUndo();
   
  如需詳細資訊，請參閱[IOleInPlaceSite::DeactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms683743) Windows SDK 中。  
   
-##  <a name="ondeactivateui"></a>COleClientItem::OnDeactivateUI  
+##  <a name="ondeactivateui"></a>  COleClientItem::OnDeactivateUI  
  當使用者停用就地啟動時的項目時呼叫。  
   
 ```  
@@ -1477,7 +1472,7 @@ virtual void OnDeactivateUI(BOOL bUndoable);
   
  如果`bUndoable`是**FALSE**容器應該停用復原命令，實際上並捨棄復原狀態的容器，因為它會指出伺服器所執行最後一項作業是無法復原。  
   
-##  <a name="ondiscardundostate"></a>COleClientItem::OnDiscardUndoState  
+##  <a name="ondiscardundostate"></a>  COleClientItem::OnDiscardUndoState  
  當使用者執行動作可捨棄復原狀態編輯 OLE 項目時由架構呼叫。  
   
 ```  
@@ -1491,7 +1486,7 @@ virtual void OnDiscardUndoState();
   
  如需詳細資訊，請參閱[IOleInPlaceSite::DiscardUndoState](http://msdn.microsoft.com/library/windows/desktop/ms688642) Windows SDK 中。  
   
-##  <a name="ongetclipboarddata"></a>COleClientItem::OnGetClipboardData  
+##  <a name="ongetclipboarddata"></a>  COleClientItem::OnGetClipboardData  
  由架構呼叫以取得`COleDataSource`物件，其中包含會將呼叫放置在剪貼簿的所有資料[CopyToClipboard](#copytoclipboard)或[DoDragDrop](#dodragdrop)成員函式。  
   
 ```  
@@ -1517,7 +1512,7 @@ virtual COleDataSource* OnGetClipboardData(
 ### <a name="remarks"></a>備註  
  此函式的預設實作會呼叫[GetClipboardData](#getclipboarddata)。  
   
-##  <a name="ongetcliprect"></a>COleClientItem::OnGetClipRect  
+##  <a name="ongetcliprect"></a>  COleClientItem::OnGetClipRect  
  這個架構會呼叫`OnGetClipRect`成員函式來取得的裁剪方框座標正在編輯的項目中的位置。  
   
 ```  
@@ -1533,7 +1528,7 @@ virtual void OnGetClipRect(CRect& rClipRect);
   
  預設實作只會傳回在其的項目是就地啟用作用中的檢視之用戶端矩形。  
   
-##  <a name="ongetitemposition"></a>COleClientItem::OnGetItemPosition  
+##  <a name="ongetitemposition"></a>  COleClientItem::OnGetItemPosition  
  這個架構會呼叫`OnGetItemPosition`成員函式來取得就地正在編輯之項目的座標。  
   
 ```  
@@ -1549,7 +1544,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
   
  此函式的預設實作不做任何動作。 支援就地編輯的應用程式需要它的實作。  
   
-##  <a name="ongetwindowcontext"></a>COleClientItem::OnGetWindowContext  
+##  <a name="ongetwindowcontext"></a>  COleClientItem::OnGetWindowContext  
  項目就地啟動時由架構呼叫。  
   
 ```  
@@ -1581,7 +1576,7 @@ virtual BOOL OnGetWindowContext(
   
  如需詳細資訊，請參閱[IOleInPlaceSite::GetWindowContext](http://msdn.microsoft.com/library/windows/desktop/ms694366)和[OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) Windows SDK 中的結構。  
   
-##  <a name="oninsertmenus"></a>COleClientItem::OnInsertMenus  
+##  <a name="oninsertmenus"></a>  COleClientItem::OnInsertMenus  
  在就地啟用容器應用程式的功能表插入空的功能表時由架構呼叫。  
   
 ```  
@@ -1604,7 +1599,7 @@ virtual void OnInsertMenus(
   
  如需詳細資訊，請參閱[ioleinplaceframe:: Insertmenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) Windows SDK 中。  
   
-##  <a name="onremovemenus"></a>COleClientItem::OnRemoveMenus  
+##  <a name="onremovemenus"></a>  COleClientItem::OnRemoveMenus  
  由架構呼叫以就地啟用結束時，從指定的組合功能表移除容器的功能表。  
   
 ```  
@@ -1622,7 +1617,7 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
   
  如需詳細資訊，請參閱[IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) Windows SDK 中。  
   
-##  <a name="onscrollby"></a>COleClientItem::OnScrollBy  
+##  <a name="onscrollby"></a>  COleClientItem::OnScrollBy  
  由架構呼叫以捲動 OLE 項目，以從伺服器回應要求。  
   
 ```  
@@ -1641,7 +1636,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
   
  如需詳細資訊，請參閱[IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) Windows SDK 中。  
   
-##  <a name="onsetmenu"></a>COleClientItem::OnSetMenu  
+##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
  由架構呼叫兩次就地啟用開始和結束。安裝組合功能表和第二次第一次 (與`holemenu`等於**NULL**) 將它移除。  
   
 ```  
@@ -1666,7 +1661,7 @@ virtual void OnSetMenu(
   
  如需詳細資訊，請參閱[OleCreateMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms691415)， [OleSetMenuDescriptor](http://msdn.microsoft.com/library/windows/desktop/ms692831)，和[ioleinplaceframe:: Setmenu](http://msdn.microsoft.com/library/windows/desktop/ms693713) Windows SDK 中。  
   
-##  <a name="onshowcontrolbars"></a>COleClientItem::OnShowControlBars  
+##  <a name="onshowcontrolbars"></a>  COleClientItem::OnShowControlBars  
  由架構呼叫以顯示和隱藏容器應用程式的控制列。  
   
 ```  
@@ -1690,7 +1685,7 @@ virtual BOOL OnShowControlBars(
   
  預設實作會移除最上層框架視窗中的工具列。  
   
-##  <a name="onshowitem"></a>COleClientItem::OnShowItem  
+##  <a name="onshowitem"></a>  COleClientItem::OnShowItem  
  由架構呼叫以顯示 OLE 項目，以便完全看到它在編輯期間。  
   
 ```  
@@ -1700,7 +1695,7 @@ virtual void OnShowItem();
 ### <a name="remarks"></a>備註  
  當容器應用程式支援內嵌項目的連結時使用 (亦即，如果您有衍生您的文件類別，從[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md))。 就地啟動或 OLE 項目連結來源而且使用者想對其進行編輯期間，會呼叫此函式。 預設實作會啟動容器文件上的第一個檢視。 覆寫此函式可將文件捲動，如此才能看到 OLE 項目。  
   
-##  <a name="onupdateframetitle"></a>COleClientItem::OnUpdateFrameTitle  
+##  <a name="onupdateframetitle"></a>  COleClientItem::OnUpdateFrameTitle  
  由架構呼叫以更新框架視窗的標題列的就地啟用期間。  
   
 ```  
@@ -1713,7 +1708,7 @@ virtual BOOL OnUpdateFrameTitle();
 ### <a name="remarks"></a>備註  
  預設實作不會變更的框架視窗標題。 覆寫這個函式，如果您想要不同的畫面格標題您的應用程式，例如"*伺服器應用程式* - *項目*中*docname*」 （如所示，「 MicrosoftExcel-在報表中的試算表。文件 」）。 這是進階可覆寫。  
   
-##  <a name="reactivateandundo"></a>COleClientItem::ReactivateAndUndo  
+##  <a name="reactivateandundo"></a>  COleClientItem::ReactivateAndUndo  
  呼叫此函式以重新啟動 OLE 項目，並復原上次由使用者執行期間就地編輯作業。  
   
 ```  
@@ -1730,7 +1725,7 @@ BOOL ReactivateAndUndo();
   
  如需詳細資訊，請參閱[IOleInPlaceObject::ReactivateAndUndo](http://msdn.microsoft.com/library/windows/desktop/ms691372) Windows SDK 中。  
   
-##  <a name="release"></a>COleClientItem::Release  
+##  <a name="release"></a>  COleClientItem::Release  
  呼叫此函式來清除 OLE 項目所使用的資源。  
   
 ```  
@@ -1746,7 +1741,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
   
  如需詳細資訊，請參閱[Iunknown](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows SDK 中。  
   
-##  <a name="reload"></a>COleClientItem::Reload  
+##  <a name="reload"></a>  COleClientItem::Reload  
  關閉並重新載入項目。  
   
 ```  
@@ -1759,7 +1754,7 @@ BOOL Reload();
 ### <a name="remarks"></a>備註  
  呼叫`Reload`函式呼叫，為另一種類型的項目啟動項目之後[ActivateAs](#activateas)。  
   
-##  <a name="run"></a>COleClientItem::Run  
+##  <a name="run"></a>  COleClientItem::Run  
  執行此項目相關聯的應用程式。  
   
 ```  
@@ -1769,7 +1764,7 @@ void Run();
 ### <a name="remarks"></a>備註  
  呼叫**執行**成員函式來啟動伺服器應用程式，然後再啟動項目。 這是自動由[Activate](#activate)和[DoVerb](#doverb)，因此通常不需要呼叫此函式。 呼叫此函式，如果需要執行的伺服器，才能設定項目屬性，例如[SetExtent](#setextent)，然後再執行[DoVerb](#doverb)。  
   
-##  <a name="setdrawaspect"></a>COleClientItem::SetDrawAspect  
+##  <a name="setdrawaspect"></a>  COleClientItem::SetDrawAspect  
  呼叫`SetDrawAspect`成員函式來設定 「 外觀 」 或項目的檢視。  
   
 ```  
@@ -1780,20 +1775,20 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
  `nDrawAspect`  
  `DVASPECT` 列舉中的值。 這個參數的值可以是下列其中一個：  
   
-- `DVASPECT_CONTENT`項目表示的方式，它可以顯示為其容器內部內嵌物件。  
+- `DVASPECT_CONTENT` 項目表示的方式，它可以顯示為其容器內部內嵌物件。  
   
-- `DVASPECT_THUMBNAIL`「 縮圖 」 表示法中呈現項目，使它可以顯示在瀏覽工具。  
+- `DVASPECT_THUMBNAIL` 「 縮圖 」 表示法中呈現項目，使它可以顯示在瀏覽工具。  
   
-- `DVASPECT_ICON`項目會以圖示表示。  
+- `DVASPECT_ICON` 項目會以圖示表示。  
   
-- `DVASPECT_DOCPRINT`項目被表示，如同它已使用 [列印] 命令，從 [檔案] 功能表來列印。  
+- `DVASPECT_DOCPRINT` 項目被表示，如同它已使用 [列印] 命令，從 [檔案] 功能表來列印。  
   
 ### <a name="remarks"></a>備註  
  層面可讓您指定的項目所要呈現的是如何[繪製](#draw)時的預設值為該函式`nDrawAspect`使用引數。  
   
  變更圖示 （以及其他直接呼叫 [變更圖示] 對話方塊的對話） 會自動呼叫此函式以啟用由使用者要求時的圖示顯示外觀。  
   
-##  <a name="setextent"></a>COleClientItem::SetExtent  
+##  <a name="setextent"></a>  COleClientItem::SetExtent  
  呼叫此函式可指定多少空間可供 OLE 項目。  
   
 ```  
@@ -1814,7 +1809,7 @@ void SetExtent(
   
  如需詳細資訊，請參閱[IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) Windows SDK 中。  
   
-##  <a name="sethostnames"></a>COleClientItem::SetHostNames  
+##  <a name="sethostnames"></a>  COleClientItem::SetHostNames  
  呼叫此函式可指定容器應用程式的名稱和內嵌 OLE 項目容器的名稱。  
   
 ```  
@@ -1831,13 +1826,13 @@ void SetHostNames(
  識別字串，包含 OLE 項目之容器的指標。  
   
 ### <a name="remarks"></a>備註  
- 如果伺服器應用程式使用 Microsoft Foundation 類別庫所撰寫，此函數會呼叫[OnSetHostNames](../../mfc/reference/coleserverdoc-class.md#onsethostnames)成員函式`COleServerDoc`文件，其中包含 OLE 項目。 當正在編輯 OLE 項目，這項資訊用於視窗的標題。 每次載入容器文件時，架構會呼叫此函式的文件中的所有 OLE 項目。 `SetHostNames`只會套用於內嵌的項目。 您不需要在啟動內嵌的 OLE 項目每次呼叫此函式，進行編輯。  
+ 如果伺服器應用程式使用 Microsoft Foundation 類別庫所撰寫，此函數會呼叫[OnSetHostNames](../../mfc/reference/coleserverdoc-class.md#onsethostnames)成員函式`COleServerDoc`文件，其中包含 OLE 項目。 當正在編輯 OLE 項目，這項資訊用於視窗的標題。 每次載入容器文件時，架構會呼叫此函式的文件中的所有 OLE 項目。 `SetHostNames` 只會套用於內嵌的項目。 您不需要在啟動內嵌的 OLE 項目每次呼叫此函式，進行編輯。  
   
  這也稱為自動的應用程式名稱和文件名稱或不同的名稱儲存檔案時已載入物件。 因此，它通常不需要直接呼叫此函式。  
   
  如需詳細資訊，請參閱[IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) Windows SDK 中。  
   
-##  <a name="seticonicmetafile"></a>COleClientItem::SetIconicMetafile  
+##  <a name="seticonicmetafile"></a>  COleClientItem::SetIconicMetafile  
  會快取的中繼檔，用來繪製項目的圖示。  
   
 ```  
@@ -1856,7 +1851,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
   
  `hMetaPict`參數複製到項目; 因此，`hMetaPict`必須由呼叫者釋放。  
   
-##  <a name="setitemrects"></a>COleClientItem::SetItemRects  
+##  <a name="setitemrects"></a>  COleClientItem::SetItemRects  
  呼叫此函式可設定之周框或 OLE 項目顯示矩形。  
   
 ```  
@@ -1880,7 +1875,7 @@ BOOL SetItemRects(
   
  如需詳細資訊，請參閱[IOleInPlaceObject::SetObjectRects](http://msdn.microsoft.com/library/windows/desktop/ms683767) Windows SDK 中。  
   
-##  <a name="setlinkupdateoptions"></a>COleClientItem::SetLinkUpdateOptions  
+##  <a name="setlinkupdateoptions"></a>  COleClientItem::SetLinkUpdateOptions  
  呼叫此函式可設定指定的連結項目呈現的連結更新選項。  
   
 ```  
@@ -1891,16 +1886,16 @@ void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
  *dwUpdateOpt*  
  此項目的連結更新選項的值。 此值必須是下列其中一項：  
   
-- `OLEUPDATE_ALWAYS`更新連結的項目，請盡可能。 此選項會支援連結 對話方塊中的自動連結更新選項按鈕。  
+- `OLEUPDATE_ALWAYS` 更新連結的項目，請盡可能。 此選項會支援連結 對話方塊中的自動連結更新選項按鈕。  
   
-- `OLEUPDATE_ONCALL`更新連結的項目，只能從容器應用程式的要求上 (當[UpdateLink](#updatelink)成員函式呼叫)。 此選項會支援連結 對話方塊中手動連結更新選項按鈕。  
+- `OLEUPDATE_ONCALL` 更新連結的項目，只能從容器應用程式的要求上 (當[UpdateLink](#updatelink)成員函式呼叫)。 此選項會支援連結 對話方塊中手動連結更新選項按鈕。  
   
 ### <a name="remarks"></a>備註  
  一般而言，您不應該變更連結 對話方塊中的使用者所選擇的更新選項。  
   
  如需詳細資訊，請參閱[IOleLink::SetUpdateOptions](http://msdn.microsoft.com/library/windows/desktop/ms680120) Windows SDK 中。  
   
-##  <a name="setprintdevice"></a>COleClientItem::SetPrintDevice  
+##  <a name="setprintdevice"></a>  COleClientItem::SetPrintDevice  
  呼叫此函式來變更此項目的列印目標裝置。  
   
 ```  
@@ -1927,7 +1922,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
   
  如需詳細資訊，請參閱[DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Windows SDK 中。  
   
-##  <a name="updatelink"></a>COleClientItem::UpdateLink  
+##  <a name="updatelink"></a>  COleClientItem::UpdateLink  
  呼叫此函式可立即更新的 OLE 項目展示資料。  
   
 ```  
@@ -1942,7 +1937,7 @@ BOOL UpdateLink();
   
  如需詳細資訊，請參閱[IOleLink::Update](http://msdn.microsoft.com/library/windows/desktop/ms692660) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 MFCBIND](../../visual-cpp-samples.md)   
  [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
  [CDocItem 類別](../../mfc/reference/cdocitem-class.md)   

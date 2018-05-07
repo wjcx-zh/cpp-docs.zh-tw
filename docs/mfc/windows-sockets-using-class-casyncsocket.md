@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets： 使用類別 CAsyncSocket |Microsoft 文件"
-ms.custom: 
+title: Windows Sockets： 使用類別 CAsyncSocket |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CAsyncSocket
 dev_langs:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41a1bf9e7b162ecfe9724f22996f8883d95cce72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets：使用類別 CAsyncSocket
-這篇文章說明如何使用類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 請注意，這個類別會封裝 Windows Sockets API，在非常低的層級。 `CAsyncSocket`是以供程式設計人員清楚詳細資料中的網路通訊，但想回呼的方便性，不論網路事件的通知。 根據這項假設，本文章提供基本的指令。 您可能應該考慮使用`CAsyncSocket`如果您想要處理的 MFC 應用程式中的多個網路通訊協定的 Windows Sockets 簡易，但不是想要犠牲彈性。 您也可能會認為可以直接自行比您無法使用模型類別的程式設計詳細的通訊，以取得更好的效率`CSocket`。  
+這篇文章說明如何使用類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 請注意，這個類別會封裝 Windows Sockets API，在非常低的層級。 `CAsyncSocket` 是以供程式設計人員清楚詳細資料中的網路通訊，但想回呼的方便性，不論網路事件的通知。 根據這項假設，本文章提供基本的指令。 您可能應該考慮使用`CAsyncSocket`如果您想要處理的 MFC 應用程式中的多個網路通訊協定的 Windows Sockets 簡易，但不是想要犠牲彈性。 您也可能會認為可以直接自行比您無法使用模型類別的程式設計詳細的通訊，以取得更好的效率`CSocket`。  
   
- `CAsyncSocket`記載於*MFC 參考*。 Visual c + + 也提供 Windows Sockets 規格，位於 Windows SDK。 詳細資料會保留給您。 Visual c + + 不提供的範例應用程式`CAsyncSocket`。  
+ `CAsyncSocket` 記載於*MFC 參考*。 Visual c + + 也提供 Windows Sockets 規格，位於 Windows SDK。 詳細資料會保留給您。 Visual c + + 不提供的範例應用程式`CAsyncSocket`。  
   
  如果您不是高了解網路通訊，而且需要較簡單的解決方案，使用類別[CSocket](../mfc/reference/csocket-class.md)與`CArchive`物件。 請參閱[Windows Sockets： 使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)如需詳細資訊。  
   
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [您的責任與 CAsyncSocket](#_core_your_responsibilities_with_casyncsocket)。  
   
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a>建立和使用 CAsyncSocket 物件  
+##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> 建立和使用 CAsyncSocket 物件  
   
 #### <a name="to-use-casyncsocket"></a>若要使用 CAsyncSocket  
   
@@ -100,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
  如需程式碼在此順序中的範例 (實際的`CSocket`物件)，請參閱[Windows Sockets： 作業的順序](../mfc/windows-sockets-sequence-of-operations.md)。  
   
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a>您的責任與 CAsyncSocket  
+##  <a name="_core_your_responsibilities_with_casyncsocket"></a> 您的責任與 CAsyncSocket  
  當您建立類別的物件[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，物件會封裝 Windows**通訊端**控制代碼並提供該控制代碼上的作業。 當您使用`CAsyncSocket`，您必須處理則可能會面臨如果直接使用 API 的所有問題。 例如:   
   
 -   「 封鎖 」 的案例。  
@@ -111,7 +106,7 @@ ms.lasthandoff: 12/21/2017
   
  如需這些詞彙與其他資訊的定義，請參閱[Windows Sockets： 封鎖](../mfc/windows-sockets-blocking.md)， [Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)， [Windows Sockets： 轉換字串](../mfc/windows-sockets-converting-strings.md).  
   
- 儘管有這些問題，類別**CAsycnSocket**可能會為您是適當的選擇，如果您的應用程式需要所有的彈性和您可以取得的控制項。 如果沒有，您應該考慮使用類別`CSocket`改為。 `CSocket`隱藏許多從您的詳細資料： it 提取 Windows 訊息期間封鎖呼叫，並可讓您存取`CArchive`，它負責管理位元組順序的差異，並為您的字串轉換。  
+ 儘管有這些問題，類別**CAsycnSocket**可能會為您是適當的選擇，如果您的應用程式需要所有的彈性和您可以取得的控制項。 如果沒有，您應該考慮使用類別`CSocket`改為。 `CSocket` 隱藏許多從您的詳細資料： it 提取 Windows 訊息期間封鎖呼叫，並可讓您存取`CArchive`，它負責管理位元組順序的差異，並為您的字串轉換。  
   
  如需詳細資訊，請參閱:  
   
@@ -121,6 +116,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
 

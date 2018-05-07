@@ -1,29 +1,24 @@
 ---
-title: "工具列範例清單 |Microsoft 文件"
-ms.custom: 
+title: 工具列範例清單 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - sample applications [MFC], toolbars
 ms.assetid: 61310e4e-3df7-47c2-8b10-7c6cb45c5d1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46742f5d3ec54f28ca470cae04eda19ec9af650c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2c6cab9cd5d7a47689696d58afce780887770e0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-sample-list"></a>工具列範例清單
 請參閱下列說明使用 MFC 工具列之範例程式：  
@@ -34,6 +29,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [DOCKTOOL](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工具列](../mfc/toolbars.md)
 

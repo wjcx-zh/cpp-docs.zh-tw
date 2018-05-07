@@ -1,13 +1,10 @@
 ---
-title: "終結框架視窗 |Microsoft 文件"
-ms.custom: 
+title: 終結框架視窗 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - PostNcDestroy
 dev_langs:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1cbd96f5044626c7c3c07e8fca115c2b1dca8cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81182c0e5633e19126d3036b5793de7658ad3d2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="destroying-frame-windows"></a>終結框架視窗
 MFC 架構會管理視窗解構，以及建立這些 framework 文件和檢視相關聯的視窗。 如果您建立其他視窗，您必須負責終結它們。  
@@ -47,6 +42,6 @@ MFC 架構會管理視窗解構，以及建立這些 framework 文件和檢視�
   
 -   [建立文件框架視窗](../mfc/creating-document-frame-windows.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用框架視窗](../mfc/using-frame-windows.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "CDBException 類別 |Microsoft 文件"
-ms.custom: 
+title: CDBException 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbexception-class"></a>CDBException 類別
 表示資料庫類別引發的例外狀況。  
@@ -53,7 +48,7 @@ class CDBException : public CException
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|包含描述錯誤方面 ODBC 所傳回的錯誤碼的字串。|  
   
 ## <a name="remarks"></a>備註  
- 類別包含兩個公用資料成員，您可以使用以判斷造成例外狀況，或顯示描述例外狀況的文字訊息。 `CDBException`物件是建構，而且資料庫類別的成員函式所擲回。  
+ 類別包含兩個公用資料成員，您可以使用以判斷造成例外狀況，或顯示描述例外狀況的文字訊息。 `CDBException` 物件是建構，而且資料庫類別的成員函式所擲回。  
   
 > [!NOTE]
 >  這個類別是其中一個 MFC 的開放式資料庫連接 (ODBC) 類別。 如果您改為使用較新的資料存取物件 (DAO) 類別，使用[CDaoException](../../mfc/reference/cdaoexception-class.md)改為。 DAO 類別的所有名稱都有"CDao"做為前置詞。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。  
@@ -74,7 +69,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afxdb.h  
   
-##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
  包含型別的 ODBC 錯誤碼**RETCODE** ODBC 應用程式的程式設計介面 (API) 函數所傳回。  
   
 ### <a name="remarks"></a>備註  
@@ -124,13 +119,13 @@ class CDBException : public CException
   
  ODBC 所定義的 SQL 前置碼。 AFX 前置的碼 AFXDB 中定義。H、 MFC\INCLUDE 中找到。  
   
-##  <a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>  CDBException::m_strError  
  包含描述錯誤造成的例外狀況的字串。  
   
 ### <a name="remarks"></a>備註  
  字串在英數字元的詞彙，描述錯誤。 如需詳細資訊和範例，請參閱**m_strStateNativeOrigin**。  
   
-##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
  包含描述錯誤造成的例外狀況的字串。  
   
 ### <a name="remarks"></a>備註  
@@ -153,7 +148,7 @@ class CDBException : public CException
   
  在**m_strError**: 「 無效的資料行名稱 'ColName' 」  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CException 類別](../../mfc/reference/cexception-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDatabase 類別](../../mfc/reference/cdatabase-class.md)   

@@ -1,12 +1,9 @@
 ---
-title: "CDaoQueryDef 類別 |Microsoft 文件"
-ms.custom: 
+title: CDaoQueryDef 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoQueryDef
@@ -75,17 +72,15 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbade1dc41b0e195606b10598e92f86195662bba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81e7d3b093da8127887878b2ac5f2af652f549c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 類別
 表示查詢定義 (或 "querydef")，通常是儲存在資料庫中的定義。  
@@ -197,7 +192,7 @@ class CDaoQueryDef : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-##  <a name="append"></a>CDaoQueryDef::Append  
+##  <a name="append"></a>  CDaoQueryDef::Append  
  呼叫此成員函式之後您呼叫,[建立](#create)建立新的 recordset 物件。  
   
 ```  
@@ -209,7 +204,7 @@ virtual void Append();
   
  如果您嘗試新增暫存 recordset 物件，MFC 會擲回例外狀況型別的[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
   
-##  <a name="canupdate"></a>CDaoQueryDef::CanUpdate  
+##  <a name="canupdate"></a>  CDaoQueryDef::CanUpdate  
  呼叫此成員函式，以判斷您是否可以修改 querydef — 例如變更其名稱或 SQL 字串。  
   
 ```  
@@ -228,7 +223,7 @@ BOOL CanUpdate();
   
      這取決於您是否有實作安全性功能。 MFC 不提供支援的安全性;您必須實作它自己藉由呼叫 DAO 直接或使用 Microsoft Access。 請參閱主題 DAO [說明] 中的 < 權限屬性 >。  
   
-##  <a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef  
+##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef  
  建構**CDaoQueryDef**物件。  
   
 ```  
@@ -252,7 +247,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
  當您完成 recordset 物件時，呼叫其[關閉](#close)成員函式。 如果您有 querydef 的指標，使用**刪除**終結 c + + 物件的運算子。  
   
-##  <a name="close"></a>CDaoQueryDef::Close  
+##  <a name="close"></a>  CDaoQueryDef::Close  
  當您完成使用 recordset 物件時，請呼叫此成員函式。  
   
 ```  
@@ -262,7 +257,7 @@ virtual void Close();
 ### <a name="remarks"></a>備註  
  關閉 querydef 釋放基礎的 DAO 物件但不會終結儲存的 DAO recordset 物件或 c + +`CDaoQueryDef`物件。 這不是相同[CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef)，會刪除 querydef 資料庫 QueryDefs 集合中 DAO （如果沒有暫存 querydef）。  
   
-##  <a name="create"></a>CDaoQueryDef::Create  
+##  <a name="create"></a>  CDaoQueryDef::Create  
  呼叫此成員函式，以建立新儲存的查詢或新的暫時查詢。  
   
 ```  
@@ -283,7 +278,7 @@ virtual void Create(
   
  如果您未提供 SQL 陳述式中的`lpszSQL`，您無法執行與查詢**Execute**但您可以使用它來建立資料錄集。 在此情況下，MFC 會使用資料錄集的預設 SQL 陳述式。  
   
-##  <a name="execute"></a>CDaoQueryDef::Execute  
+##  <a name="execute"></a>  CDaoQueryDef::Execute  
  呼叫此成員函式，以執行查詢的 recordset 物件所定義。  
   
 ```  
@@ -316,7 +311,7 @@ virtual void Execute(int nOptions = dbFailOnError);
   
 -   SQL 傳遞查詢  
   
- **執行**不適用於傳回記錄，例如 select 查詢的查詢。 **執行**常用於大量作業的查詢，例如**更新**，**插入**，或**SELECT INTO**，或資料定義語言 (DDL)作業。  
+ **執行**不適用於傳回記錄，例如 select 查詢的查詢。 **執行**常用於大量作業的查詢，例如**更新**，**插入**，或**SELECT INTO**，或針對資料定義語言 (DDL) 作業。  
   
 > [!TIP]
 >  使用 ODBC 資料來源的慣用的方法是將資料表附加至 Microsoft Jet (。MDB) 資料庫。 如需詳細資訊，請參閱主題 < 存取外部資料庫使用 DAO"DAO [說明] 中。  
@@ -327,7 +322,7 @@ virtual void Execute(int nOptions = dbFailOnError);
   
  **執行**不會傳回一個資料錄集。 使用**Execute**選取記錄的查詢會使 MFC 擲回例外狀況型別的[CDaoException](../../mfc/reference/cdaoexception-class.md)。  
   
-##  <a name="getconnect"></a>CDaoQueryDef::GetConnect  
+##  <a name="getconnect"></a>  CDaoQueryDef::GetConnect  
  呼叫此成員函式可取得 querydef 的資料來源相關聯的連接字串。  
   
 ```  
@@ -345,7 +340,7 @@ CString GetConnect();
   
  如需連接字串資訊，請參閱主題 DAO [說明] 中的 < 連接屬性 >。  
   
-##  <a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoQueryDef::GetDateCreated  
  呼叫此成員函式可取得 querydef 物件的建立的日期。  
   
 ```  
@@ -358,7 +353,7 @@ COleDateTime GetDateCreated();
 ### <a name="remarks"></a>備註  
  如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
   
-##  <a name="getdatelastupdated"></a>CDaoQueryDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoQueryDef::GetDateLastUpdated  
  呼叫此成員函式，取得日期 querydef 物件上次更新 — 當其任何屬性已變更，例如其名稱、 其 SQL 字串或其連接字串。  
   
 ```  
@@ -371,7 +366,7 @@ COleDateTime GetDateLastUpdated();
 ### <a name="remarks"></a>備註  
  如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
   
-##  <a name="getfieldcount"></a>CDaoQueryDef::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoQueryDef::GetFieldCount  
  呼叫此成員函式可擷取查詢中的欄位數目。  
   
 ```  
@@ -382,9 +377,9 @@ short GetFieldCount();
  查詢中定義的欄位數目。  
   
 ### <a name="remarks"></a>備註  
- `GetFieldCount`適用於迴圈 querydef 中的所有欄位。 基於這個目的，使用`GetFieldCount`搭配[GetFieldInfo](#getfieldinfo)。  
+ `GetFieldCount` 適用於迴圈 querydef 中的所有欄位。 基於這個目的，使用`GetFieldCount`搭配[GetFieldInfo](#getfieldinfo)。  
   
-##  <a name="getfieldinfo"></a>CDaoQueryDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoQueryDef::GetFieldInfo  
  呼叫此成員函式，以取得各種 querydef 中定義欄位的相關資訊。  
   
 ```  
@@ -410,11 +405,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  指定要擷取的欄位有關的資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回：  
   
-- `AFX_DAO_PRIMARY_INFO`（預設值）名稱、 類型、 大小屬性  
+- `AFX_DAO_PRIMARY_INFO` （預設值）名稱、 類型、 大小屬性  
   
-- `AFX_DAO_SECONDARY_INFO`加上的主要資訊： 所需的序數位置，允許長度為零、 來源欄位、 外部索引名稱、 來源資料表、 定序順序  
+- `AFX_DAO_SECONDARY_INFO` 加上的主要資訊： 所需的序數位置，允許長度為零、 來源欄位、 外部索引名稱、 來源資料表、 定序順序  
   
-- `AFX_DAO_ALL_INFO`主要和次要資訊加上： 預設值，驗證文字驗證規則  
+- `AFX_DAO_ALL_INFO` 主要和次要資訊加上： 預設值，驗證文字驗證規則  
   
  `lpszName`  
  字串，包含依名稱查閱所需的欄位名稱。 您可以使用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
@@ -422,7 +417,7 @@ void GetFieldInfo(
 ### <a name="remarks"></a>備註  
  如需在傳回的資訊的說明`fieldinfo`，請參閱[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 此結構已對應至底下的描述性資訊的成員`dwInfoOptions`上方。 如果您要求的資訊的一個層級，您會取得任何先前的層級的資訊。  
   
-##  <a name="getname"></a>CDaoQueryDef::GetName  
+##  <a name="getname"></a>  CDaoQueryDef::GetName  
  呼叫此成員函式可擷取 querydef 所表示的查詢名稱。  
   
 ```  
@@ -435,7 +430,7 @@ CString GetName();
 ### <a name="remarks"></a>備註  
  Querydef 名稱是唯一的使用者定義名稱。 如需 querydef 名稱的詳細資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
   
-##  <a name="getodbctimeout"></a>CDaoQueryDef::GetODBCTimeout  
+##  <a name="getodbctimeout"></a>  CDaoQueryDef::GetODBCTimeout  
  呼叫此成員函式，ODBC 資料來源的查詢逾時之前，擷取目前的時間限制。  
   
 ```  
@@ -451,7 +446,7 @@ short GetODBCTimeout();
 > [!TIP]
 >  使用 ODBC 資料表的較佳的方式是將它們附加至 Microsoft Jet (。MDB) 資料庫。 如需詳細資訊，請參閱主題 < 存取外部資料庫使用 DAO"DAO [說明] 中。  
   
-##  <a name="getparametercount"></a>CDaoQueryDef::GetParameterCount  
+##  <a name="getparametercount"></a>  CDaoQueryDef::GetParameterCount  
  呼叫此成員函式可擷取已儲存的查詢中的參數數目。  
   
 ```  
@@ -462,11 +457,11 @@ short GetParameterCount();
  查詢中定義的參數數目。  
   
 ### <a name="remarks"></a>備註  
- `GetParameterCount`適用於迴圈 querydef 中的所有參數。 基於這個目的，使用`GetParameterCount`搭配[GetParameterInfo](#getparameterinfo)。  
+ `GetParameterCount` 適用於迴圈 querydef 中的所有參數。 基於這個目的，使用`GetParameterCount`搭配[GetParameterInfo](#getparameterinfo)。  
   
  如需相關資訊，請參閱 「 參數物件 」、 「 參數集合 」 和 「 參數宣告 (SQL)"DAO [說明] 中的主題。  
   
-##  <a name="getparameterinfo"></a>CDaoQueryDef::GetParameterInfo  
+##  <a name="getparameterinfo"></a>  CDaoQueryDef::GetParameterInfo  
  呼叫此成員函式可取得 querydef 中定義之參數的相關資訊。  
   
 ```  
@@ -492,7 +487,7 @@ void GetParameterInfo(
  `dwInfoOptions`  
  指定要擷取之參數的相關資訊的選項。 可用的選項為以及它會導致此函數傳回此處所列：  
   
-- `AFX_DAO_PRIMARY_INFO`（預設值）名稱、 類型  
+- `AFX_DAO_PRIMARY_INFO` （預設值）名稱、 類型  
   
  `lpszName`  
  字串，包含依名稱查閱所需的參數名稱。 您可以使用[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
@@ -502,7 +497,7 @@ void GetParameterInfo(
   
  如需相關資訊，請參閱"參數宣告 (SQL)"DAO [說明] 中的主題。  
   
-##  <a name="getparamvalue"></a>CDaoQueryDef::GetParamValue  
+##  <a name="getparamvalue"></a>  CDaoQueryDef::GetParamValue  
  呼叫此成員函式可擷取目前儲存在 querydef 參數集合中的指定參數的值。  
   
 ```  
@@ -525,7 +520,7 @@ virtual COleVariant GetParamValue(int nIndex);
   
  如需相關資訊，請參閱"參數宣告 (SQL)"DAO [說明] 中的主題。  
   
-##  <a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected  
+##  <a name="getrecordsaffected"></a>  CDaoQueryDef::GetRecordsAffected  
  呼叫此成員函式，來判斷的多少筆記錄不受影響的最後一次呼叫[Execute](#execute)。  
   
 ```  
@@ -540,7 +535,7 @@ long GetRecordsAffected();
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 < RecordsAffected 屬性 >。  
   
-##  <a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords  
+##  <a name="getreturnsrecords"></a>  CDaoQueryDef::GetReturnsRecords  
  呼叫此成員函式可判斷 querydef 為基礎的查詢，傳回記錄。  
   
 ```  
@@ -555,7 +550,7 @@ BOOL GetReturnsRecords();
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 「 傳回記錄屬性 」。  
   
-##  <a name="getsql"></a>CDaoQueryDef::GetSQL  
+##  <a name="getsql"></a>  CDaoQueryDef::GetSQL  
  呼叫此成員函式可擷取定義 querydef 為基礎的查詢的 SQL 陳述式。  
   
 ```  
@@ -570,7 +565,7 @@ CString GetSQL();
   
  如需相關資訊，請參閱 「 SQL 屬性 」、 「 比較 Microsoft Jet 資料庫引擎 SQL 和 ANSI SQL"和 「 查詢資料庫與 SQL 增益集程式碼 」 DAO 說明主題。  
   
-##  <a name="gettype"></a>CDaoQueryDef::GetType  
+##  <a name="gettype"></a>  CDaoQueryDef::GetType  
  呼叫此成員函式可判斷 querydef 的查詢類型。  
   
 ```  
@@ -610,7 +605,7 @@ short GetType();
   
  如需 SQL 字串的相關資訊，請參閱[GetSQL](#getsql)。 查詢類型的相關資訊，請參閱[Execute](#execute)。  
   
-##  <a name="isopen"></a>CDaoQueryDef::IsOpen  
+##  <a name="isopen"></a>  CDaoQueryDef::IsOpen  
  呼叫此成員函式，以判斷是否`CDaoQueryDef`物件目前是否開啟。  
   
 ```  
@@ -623,19 +618,19 @@ BOOL IsOpen() const;
 ### <a name="remarks"></a>備註  
  Querydef 必須是處於開啟狀態，才使用它來呼叫[Execute](#execute)或建立[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件。 可能是處於開啟狀態呼叫的 querydef[建立](#create)（適用於新的 querydef) 或[開啟](#open)（適用於現有的 querydef)。  
   
-##  <a name="m_pdatabase"></a>CDaoQueryDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoQueryDef::m_pDatabase  
  包含的指標[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) querydef 物件相關聯的物件。  
   
 ### <a name="remarks"></a>備註  
  如果您需要直接存取資料庫，請使用這個指標 — 比方說，若要取得其他 querydef 或資料錄集的指標物件的資料庫集合中。  
   
-##  <a name="m_pdaoquerydef"></a>CDaoQueryDef::m_pDAOQueryDef  
+##  <a name="m_pdaoquerydef"></a>  CDaoQueryDef::m_pDAOQueryDef  
  包含基礎 DAO recordset 物件的 OLE 介面的指標。  
   
 ### <a name="remarks"></a>備註  
  此指標提供完整性和一致性與其他類別。 不過，由於 MFC 而不是完整封裝 DAO querydefs，您不太可能需要它。 如果您使用它，這樣請多加留意，尤其是，除非您知道您所進行的作業再變更指標的值。  
   
-##  <a name="open"></a>CDaoQueryDef::Open  
+##  <a name="open"></a>  CDaoQueryDef::Open  
  呼叫此成員函式可開啟先前儲存在資料庫的 QueryDefs 集合 querydef。  
   
 ```  
@@ -649,7 +644,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ### <a name="remarks"></a>備註  
  Querydef 一旦開啟，您可以呼叫其[Execute](#execute)成員函式或使用建立 querydef [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件。  
   
-##  <a name="setconnect"></a>CDaoQueryDef::SetConnect  
+##  <a name="setconnect"></a>  CDaoQueryDef::SetConnect  
  呼叫此成員函式設定 recordset 物件的連接字串。  
   
 ```  
@@ -670,7 +665,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  如需有關連接字串的結構和範例連接字串元件的詳細資訊，請參閱 DAO [說明] 中的 < 連接屬性 > 主題。  
   
-##  <a name="setname"></a>CDaoQueryDef::SetName  
+##  <a name="setname"></a>  CDaoQueryDef::SetName  
  如果您想要變更不是暫時性 querydef 的名稱，請呼叫此成員函式。  
   
 ```  
@@ -684,7 +679,7 @@ void SetName(LPCTSTR lpszName);
 ### <a name="remarks"></a>備註  
  Querydef 名稱是唯一的使用者定義的名稱。 您可以呼叫`SetName`之前 recordset 物件會附加至 QueryDefs 集合。  
   
-##  <a name="setodbctimeout"></a>CDaoQueryDef::SetODBCTimeout  
+##  <a name="setodbctimeout"></a>  CDaoQueryDef::SetODBCTimeout  
  呼叫此成員函式來設定 ODBC 資料來源的查詢逾時之前的時間限制。  
   
 ```  
@@ -700,7 +695,7 @@ void SetODBCTimeout(short nODBCTimeout);
   
  查詢逾時的預設值為 60 秒。  
   
-##  <a name="setparamvalue"></a>CDaoQueryDef::SetParamValue  
+##  <a name="setparamvalue"></a>  CDaoQueryDef::SetParamValue  
  呼叫此成員函式在執行階段 querydef 中設定參數的值。  
   
 ```  
@@ -729,7 +724,7 @@ virtual void SetParamValue(
   
  指定要設定為值`COleVariant`物件。 如需設定的所需的值和類型資訊您`COleVariant`物件，請參閱類別[COleVariant](../../mfc/reference/colevariant-class.md)。  
   
-##  <a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords  
+##  <a name="setreturnsrecords"></a>  CDaoQueryDef::SetReturnsRecords  
  呼叫此成員函式，設定至外部資料庫的 SQL 傳遞查詢的程序的一部分。  
   
 ```  
@@ -743,7 +738,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 ### <a name="remarks"></a>備註  
  在這種情況下，您必須建立 querydef，並設定其屬性，使用其他`CDaoQueryDef`成員函式。 如需外部資料庫的說明，請參閱[SetConnect](#setconnect)。  
   
-##  <a name="setsql"></a>CDaoQueryDef::SetSQL  
+##  <a name="setsql"></a>  CDaoQueryDef::SetSQL  
  呼叫此成員函式設定 querydef 執行的 SQL 陳述式。  
   
 ```  
@@ -757,7 +752,7 @@ void SetSQL(LPCTSTR lpszSQL);
 ### <a name="remarks"></a>備註  
  典型用法`SetSQL`是 SQL 傳遞查詢中使用的 recordset 物件設定。 （如需針對目標 DBMS SQL 傳遞查詢的語法，請參閱 DBMS 的文件）。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDaoRecordset 類別](../../mfc/reference/cdaorecordset-class.md)   

@@ -1,12 +1,9 @@
 ---
-title: "CFile 類別 |Microsoft 文件"
-ms.custom: 
+title: CFile 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFile
@@ -69,17 +66,15 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7a2b0e1dd95b460d6b6007e79378bc69f1b4ce
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: ee4086b25fe675aaab1b484f21ec7e22e5603781
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfile-class"></a>CFile 類別
 MFC 檔案類別的基底類別。  
@@ -146,7 +141,7 @@ class CFile : public CObject
 |[CFile::m_pTM](#m_ptm)|指標`CAtlTransactionManager`物件。|  
   
 ## <a name="remarks"></a>備註  
- 它會直接提供未緩衝處理的二進位磁碟輸入/輸出服務，並間接支援文字檔和記憶體檔案，透過其衍生的類別。 `CFile`可搭配`CArchive`類別，以支援 Microsoft Foundation Class 物件的序列化。  
+ 它會直接提供未緩衝處理的二進位磁碟輸入/輸出服務，並間接支援文字檔和記憶體檔案，透過其衍生的類別。 `CFile` 可搭配`CArchive`類別，以支援 Microsoft Foundation Class 物件的序列化。  
   
  這個類別及其衍生的類別之間的階層式關聯性可讓您透過多型的所有檔案物件上運作的程式`CFile`介面。 記憶體檔案，比方說，如同磁碟檔案。  
   
@@ -164,7 +159,7 @@ class CFile : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="abort"></a>Cfile:: Abort  
+##  <a name="abort"></a>  Cfile:: Abort  
  關閉與此物件相關聯的檔案，並使檔案無法進行讀取或寫入。  
   
 ```  
@@ -181,7 +176,7 @@ virtual void Abort();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
   
-##  <a name="cfile"></a>CFile::CFile  
+##  <a name="cfile"></a>  CFile::CFile  
  建構並初始化 `CFile` 物件。  
   
 ```  
@@ -277,7 +272,7 @@ CAtlTransactionManager* pTM);
   
  [!code-cpp[NVC_MFCFiles#4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]  
   
-##  <a name="close"></a>CFile::Close  
+##  <a name="close"></a>  CFile::Close  
  關閉與此物件相關聯的檔案，並使檔案無法進行讀取或寫入。  
   
 ```  
@@ -292,7 +287,7 @@ virtual void Close();
 ### <a name="example"></a>範例  
  請參閱範例的[CFile::CFile](#cfile)。  
   
-##  <a name="duplicate"></a>CFile::Duplicate  
+##  <a name="duplicate"></a>  CFile::Duplicate  
  建構重複`CFile`物件指定的檔案。  
   
 ```  
@@ -305,7 +300,7 @@ virtual CFile* Duplicate() const;
 ### <a name="remarks"></a>備註  
  這相當於 C 執行階段函式`_dup`。  
   
-##  <a name="flush"></a>CFile::Flush  
+##  <a name="flush"></a>  CFile::Flush  
  強制寫入至檔案將檔案緩衝區中剩餘的任何資料。  
   
 ```  
@@ -318,7 +313,7 @@ virtual void Flush();
 ### <a name="example"></a>範例  
  請參閱範例的[CFile::SetFilePath](#setfilepath)。  
   
-##  <a name="getfilename"></a>CFile::GetFileName  
+##  <a name="getfilename"></a>  CFile::GetFileName  
  呼叫此成員函式，擷取指定檔案的名稱。  
   
 ```  
@@ -338,7 +333,7 @@ virtual CString GetFileName() const;
   
  [!code-cpp[NVC_MFCFiles#6](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]  
   
-##  <a name="getfilepath"></a>CFile::GetFilePath  
+##  <a name="getfilepath"></a>  CFile::GetFilePath  
  呼叫此成員函式，以擷取指定檔案的完整路徑。  
   
 ```  
@@ -356,7 +351,7 @@ virtual CString GetFilePath() const;
 ### <a name="example"></a>範例  
  請參閱範例的[GetFileName](#getfilename)。  
   
-##  <a name="getfiletitle"></a>CFile::GetFileTitle  
+##  <a name="getfiletitle"></a>  CFile::GetFileTitle  
  呼叫此成員函式可擷取檔案的標題 （顯示名稱） 檔案。  
   
 ```  
@@ -374,7 +369,7 @@ virtual CString GetFileTitle() const;
 ### <a name="example"></a>範例  
  請參閱範例的[GetFileName](#getfilename)。  
   
-##  <a name="getlength"></a>CFile::GetLength  
+##  <a name="getlength"></a>  CFile::GetLength  
  取得目前的邏輯長度以位元組為單位的檔案。  
   
 ```  
@@ -387,7 +382,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#7](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]  
   
-##  <a name="getposition"></a>CFile::GetPosition  
+##  <a name="getposition"></a>  CFile::GetPosition  
  取得目前的檔案指標，可在後續呼叫值`Seek`。  
   
 ```  
@@ -400,7 +395,7 @@ virtual ULONGLONG GetPosition() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]  
   
-##  <a name="getstatus"></a>Getstatus  
+##  <a name="getstatus"></a>  Getstatus  
  這個方法會擷取相關的狀態資訊指定`CFile`物件執行個體或指定的檔案路徑。  
   
 ```  
@@ -457,7 +452,7 @@ enum Attribute {
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#10](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]  
   
-##  <a name="hfilenull"></a>CFile::hFileNull  
+##  <a name="hfilenull"></a>  CFile::hFileNull  
  判斷是否存在有效的檔案控制代碼`CFile`物件。  
   
 ```  
@@ -471,7 +466,7 @@ static AFX_DATA const HANDLE hFileNull;
   
  [!code-cpp[NVC_MFCFiles#22](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_7.cpp)]  
   
-##  <a name="lockrange"></a>CFile::LockRange  
+##  <a name="lockrange"></a>  CFile::LockRange  
  鎖定範圍的位元組在開啟的檔案中，如果檔案已經鎖定，擲回例外狀況。  
   
 ```  
@@ -498,7 +493,7 @@ virtual void LockRange(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
-##  <a name="m_hfile"></a>CFile::m_hFile  
+##  <a name="m_hfile"></a>  CFile::m_hFile  
  包含已開啟的檔案之作業系統檔案控制代碼。  
   
 ```  
@@ -506,11 +501,11 @@ HANDLE m_hFile;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_hFile`這類型的公用變數**UINT**。 它包含`CFile::hFileNull`（operating system 獨立空的檔案指標） 如果尚未指派的控制代碼。  
+ `m_hFile` 這類型的公用變數**UINT**。 它包含`CFile::hFileNull`（operating system 獨立空的檔案指標） 如果尚未指派的控制代碼。  
   
- 使用`m_hFile`不建議，因為該成員的意義取決於衍生的類別。 `m_hFile`會使用類別的 public 成員為了方便起見，在支援非。  
+ 使用`m_hFile`不建議，因為該成員的意義取決於衍生的類別。 `m_hFile` 會使用類別的 public 成員為了方便起見，在支援非。  
   
-##  <a name="m_ptm"></a>CFile::m_pTM  
+##  <a name="m_ptm"></a>  CFile::m_pTM  
  指向 `CAtlTransactionManager` 物件的指標。  
   
 ```  
@@ -519,7 +514,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="open"></a>CFile::Open  
+##  <a name="open"></a>  CFile::Open  
  多載。 **開啟**設計用於與預設`CFile`建構函式。  
   
 ```  
@@ -562,23 +557,23 @@ virtual BOOL Open(
 |`pError`|發生錯誤|傳回值|CFileException 內容|  
 |--------------|------------------------|------------------|----------------------------|  
 |**NULL**|否|**為 TRUE**|N/A|  
-|若要 ptr`CFileException`|否|**為 TRUE**|未變更|  
+|若要 ptr `CFileException`|否|**為 TRUE**|未變更|  
 |**NULL**|[是]|**FALSE**|N/A|  
-|若要 ptr`CFileException`|[是]|**FALSE**|初始化為描述錯誤|  
+|若要 ptr `CFileException`|[是]|**FALSE**|初始化為描述錯誤|  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#13](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_9.cpp)]  
   
  [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
   
-##  <a name="operator_handle"></a>CFile::operator 控制代碼  
+##  <a name="operator_handle"></a>  CFile::operator 控制代碼  
  使用此運算子來傳遞的控制代碼`CFile`這類函式物件[ReadFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365468)和[GetFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724320) ，預期`HANDLE`。  
   
 ```  
 operator HANDLE() const;  
 ```  
   
-##  <a name="read"></a>CFile::Read  
+##  <a name="read"></a>  CFile::Read  
  會將資料讀入緩衝區中相關聯的檔案`CFile`物件。  
   
 ```  
@@ -602,7 +597,7 @@ virtual UINT Read(
   
  如需其他範例，請參閱[CFile::Open](#open)。  
   
-##  <a name="remove"></a>CFile::Remove  
+##  <a name="remove"></a>  CFile::Remove  
  此靜態函式刪除路徑所指定的檔案。  
   
 ```  
@@ -626,7 +621,7 @@ static void PASCAL Remove(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#17](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_12.cpp)]  
   
-##  <a name="rename"></a>CFile::Rename  
+##  <a name="rename"></a>  CFile::Rename  
  此靜態函式重新命名指定的檔案。  
   
 ```  
@@ -652,7 +647,7 @@ static void PASCAL Rename(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#18](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]  
   
-##  <a name="seek"></a>CFile::Seek  
+##  <a name="seek"></a>  CFile::Seek  
  在開啟的檔案中，重新放置檔案指標。  
   
 ```  
@@ -689,7 +684,7 @@ UINT nFrom);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#9](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]  
   
-##  <a name="seektobegin"></a>CFile::SeekToBegin  
+##  <a name="seektobegin"></a>  CFile::SeekToBegin  
  將檔案指標的值設定為檔案的開頭。  
   
 ```  
@@ -702,7 +697,7 @@ void SeekToBegin();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
-##  <a name="seektoend"></a>CFile::SeekToEnd  
+##  <a name="seektoend"></a>  CFile::SeekToEnd  
  將檔案指標的值設定為邏輯檔案的結尾。  
   
 ```  
@@ -718,7 +713,7 @@ ULONGLONG SeekToEnd();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
-##  <a name="setfilepath"></a>CFile::SetFilePath  
+##  <a name="setfilepath"></a>  CFile::SetFilePath  
  呼叫此函式來指定檔案的路徑例如，如果檔案的路徑無法使用時[CFile](../../mfc/reference/cfile-class.md)建構物件，請呼叫`SetFilePath`提供它。  
   
 ```  
@@ -732,12 +727,12 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ### <a name="remarks"></a>備註  
   
 > [!NOTE]
-> `SetFilePath`不會開啟檔案或建立檔案。只要將`CFile`路徑名稱，然後使用物件。  
+> `SetFilePath` 不會開啟檔案或建立檔案。只要將`CFile`路徑名稱，然後使用物件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#20](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]  
   
-##  <a name="setlength"></a>CFile::SetLength  
+##  <a name="setlength"></a>  CFile::SetLength  
  呼叫此函式可變更檔案的長度。  
   
 ```  
@@ -756,7 +751,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#11](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]  
   
-##  <a name="setstatus"></a>CFile::SetStatus  
+##  <a name="setstatus"></a>  CFile::SetStatus  
  設定此檔案的位置與相關聯檔案的狀態。  
   
 ```  
@@ -784,7 +779,7 @@ static void PASCAL SetStatus(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#21](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_18.cpp)]  
   
-##  <a name="unlockrange"></a>CFile::UnlockRange  
+##  <a name="unlockrange"></a>  CFile::UnlockRange  
  解除鎖定已開啟的檔案中的位元組範圍。  
   
 ```  
@@ -809,7 +804,7 @@ virtual void UnlockRange(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
-##  <a name="write"></a>CFile::Write  
+##  <a name="write"></a>  CFile::Write  
  緩衝區中的資料寫入至與相關聯的檔案`CFile`物件。  
   
 ```  
@@ -833,7 +828,7 @@ virtual void Write(
   
  此外，請參閱範例[CFile::CFile](#cfile)和[CFile::Open](#open)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 DRAWCLI](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

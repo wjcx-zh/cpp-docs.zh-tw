@@ -1,13 +1,10 @@
 ---
-title: "ON_UPDATE_COMMAND_UI 巨集 |Microsoft 文件"
-ms.custom: 
+title: ON_UPDATE_COMMAND_UI 巨集 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_UPDATE_COMMAND_UI
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3de873cf70bafa77d7c8f4b05c70ce211b2c2258
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 726eba2edbb857784a3a23ddcfb2d69fd8e30a72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI 巨集
 使用**屬性**視窗連接使用者介面物件的命令目標物件中的命令更新處理常式。 它會自動連接使用者介面物件的 ID 與 `ON_UPDATE_COMMAND_UI` 巨集，並在將處理更新的物件中建立處理常式。 請參閱[訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)如需詳細資訊。  
@@ -39,6 +34,6 @@ ms.lasthandoff: 12/21/2017
   
  像所有處理常式函式會顯示**afx_msg**關鍵字。 就像所有更新處理常式，它會採用一個引數，即指向 `CCmdUI` 物件的指標。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：更新使用者介面物件](../mfc/how-to-update-user-interface-objects.md)
 

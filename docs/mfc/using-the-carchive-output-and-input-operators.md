@@ -1,13 +1,10 @@
 ---
-title: "使用 CArchive &lt; &lt;和&gt;&gt;運算子 |Microsoft 文件"
-ms.custom: 
+title: 使用 CArchive &lt; &lt;和&gt;&gt;運算子 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - CArchive class [MFC], storing and loading objects
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab2da8cc885f94bf15164ff17fdef2b2af13a41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;和&gt;&gt;運算子
-`CArchive`提供 <\<和 >> 用於寫入和讀取簡單資料類型的運算子以及`CObject`s 和檔案。  
+`CArchive` 提供 <\<和 >> 用於寫入和讀取簡單資料類型的運算子以及`CObject`s 和檔案。  
   
 #### <a name="to-store-an-object-in-a-file-via-an-archive"></a>若要透過封存之檔案中儲存物件  
   
@@ -54,12 +49,12 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
- 程式庫會定義 **< \<** 和 **>>** 運算子`CArchive`做為第一個運算元的下列資料類型和類別做為第二個運算元的類型:  
+ 程式庫會定義**< \<** 和**>>** 運算子`CArchive`做為第一個運算元的下列資料類型和類別做為第二個運算元的類型:  
   
 ||||  
 |-|-|-|  
 |`CObject*`|**大小和 CSize**|**float**|  
-|**WORD**|`CString`|**點**和`CPoint`|  
+|**WORD**|`CString`|**點**和 `CPoint`|  
 |`DWORD`|**BYTE**|`RECT` 和 `CRect`|  
 |**Double**|**LONG**|`CTime` 和 `CTimeSpan`|  
 |`Int`|**COleCurrency**|`COleVariant`|  
@@ -68,10 +63,10 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  儲存及載入`CObject`透過封存 s 需要額外的考量。 如需詳細資訊，請參閱[儲存和載入 CObjects 透過封存](../mfc/storing-and-loading-cobjects-via-an-archive.md)。  
   
- **CArchive <\<** 和 **>>** 運算子一律會傳回參考`CArchive`物件，它是第一個運算元。 這可讓您將運算子鍊結，如下所示：  
+ **CArchive <\<** 和**>>** 運算子一律會傳回參考`CArchive`物件，它是第一個運算元。 這可讓您將運算子鍊結，如下所示：  
   
  [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [序列化：序列化物件](../mfc/serialization-serializing-an-object.md)
 

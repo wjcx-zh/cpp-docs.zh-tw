@@ -2,12 +2,9 @@
 title: CDaoFieldInfo 結構 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 結構
 `CDaoFieldInfo`結構包含的資料存取物件 (DAO) 定義的欄位物件的相關資訊。  
@@ -80,7 +75,7 @@ struct CDaoFieldInfo
   
 - **dbLongBinary**長二進位 （OLE 物件），您可能想要使用 MFC 類別[CByteArray](../../mfc/reference/cbytearray-class.md)而不是類別`CLongBinary`為`CByteArray`更豐富、 更容易使用。  
   
-- **dbMemo**備忘; 請參閱 MFC 類別`CString`  
+- **dbMemo**備忘; 請參閱 MFC 類別 `CString`  
   
 - **dbGUID**全域唯一識別項/通用唯一識別碼搭配遠端程序呼叫。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 型別屬性 >。  
   
@@ -159,12 +154,12 @@ struct CDaoFieldInfo
   
  除了它使用來檢查物件屬性中，您也可以使用`CDaoFieldInfo`建構之輸入的參數的 tabledef 中建立新的欄位。 更簡單的選項都適用於這項工作，但如果您想進行更細微的控制，您可以使用的版本[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)採用`CDaoFieldInfo`參數。  
   
- 所擷取的資訊`GetFieldInfo`類別成員函式 （包含該欄位） 會儲存在`CDaoFieldInfo`結構。 呼叫`GetFieldInfo`欄位物件會儲存其欄位集合中包含物件的成員函式。 `CDaoFieldInfo`也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoFieldInfo`物件。  
+ 所擷取的資訊`GetFieldInfo`類別成員函式 （包含該欄位） 會儲存在`CDaoFieldInfo`結構。 呼叫`GetFieldInfo`欄位物件會儲存其欄位集合中包含物件的成員函式。 `CDaoFieldInfo` 也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoFieldInfo`物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)   
  [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)   

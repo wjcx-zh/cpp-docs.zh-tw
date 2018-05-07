@@ -1,12 +1,9 @@
 ---
-title: "CMFCCaptionButton 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCCaptionButton 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCaptionButton
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 857054bd60e206cc3a563aa5f00b872f67c58d3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 類別
 `CMFCCaptionButton`類別實作停駐窗格或迷你框架視窗的標題列顯示的按鈕。 Framework 通常會自動建立標題按鈕。  
@@ -97,7 +92,7 @@ class CMFCCaptionButton : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxcaptionbutton.h  
   
-##  <a name="cmfccaptionbutton"></a>CMFCCaptionButton::CMFCCaptionButton  
+##  <a name="cmfccaptionbutton"></a>  CMFCCaptionButton::CMFCCaptionButton  
  建構 `CMFCCaptionButton` 物件。  
   
 ```  
@@ -133,7 +128,7 @@ CMFCCaptionButton(
   
  在右或向左對齊標題按鈕。  
   
-##  <a name="gethit"></a>CMFCCaptionButton::GetHit  
+##  <a name="gethit"></a>  CMFCCaptionButton::GetHit  
  傳回按鈕所代表的命令。  
   
 ```  
@@ -155,7 +150,7 @@ UINT GetHit() const;
 |`AFX_HTMENU`|向下箭號 功能表按鈕。|  
 |`HTNOWHERE`|預設值。表示沒有命令。|  
   
-##  <a name="geticonid"></a>CMFCCaptionButton::GetIconID  
+##  <a name="geticonid"></a>  CMFCCaptionButton::GetIconID  
  傳回與按鈕相關聯的映像識別碼。  
   
 ```  
@@ -166,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
   
 ### <a name="parameters"></a>參數  
  [輸入] `bHorz`  
- `TRUE`左或向右箭號映像識別碼;`FALSE`的向上或向下箭號影像 Id。  
+ `TRUE` 左或向右箭號映像識別碼;`FALSE`的向上或向下箭號影像 Id。  
   
  [輸入] `bMaximized`  
- `TRUE`最大化映像識別碼;`FALSE`最小化映像識別碼。  
+ `TRUE` 最大化映像識別碼;`FALSE`最小化映像識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  映像識別碼。  
@@ -177,7 +172,7 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ### <a name="remarks"></a>備註  
  參數會指定最小化的映像識別碼，或最大化標題按鈕。  
   
-##  <a name="getrect"></a>CMFCCaptionButton::GetRect  
+##  <a name="getrect"></a>  CMFCCaptionButton::GetRect  
  傳回按鈕所佔據的矩形。  
   
 ```  
@@ -190,7 +185,7 @@ virtual CRect GetRect() const;
 ### <a name="remarks"></a>備註  
  如果看不到按鈕，傳回的大小為 0。  
   
-##  <a name="getsize"></a>CMFCCaptionButton::GetSize  
+##  <a name="getsize"></a>  CMFCCaptionButton::GetSize  
  傳回按鈕的高度與寬度。  
   
 ```  
@@ -203,7 +198,7 @@ static CSize GetSize();
 ### <a name="remarks"></a>備註  
  傳回的大小包含按鈕邊界和邊框。  
   
-##  <a name="isminiframebutton"></a>CMFCCaptionButton::IsMiniFrameButton  
+##  <a name="isminiframebutton"></a>  CMFCCaptionButton::IsMiniFrameButton  
  指出是否要將標題列的高度設定為小型的大小。  
   
 ```  
@@ -211,11 +206,11 @@ BOOL IsMiniFrameButton() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果標題設定為迷你大小;否則`FALSE`。  
+ `TRUE` 如果標題設定為迷你大小;否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="move"></a>CMFCCaptionButton::Move  
+##  <a name="move"></a>  CMFCCaptionButton::Move  
  設定按鈕繪製位置和視窗顯示狀態。  
   
 ```  
@@ -231,7 +226,7 @@ void Move(
  [輸入] `bHide`  
  是否要顯示的按鈕。  
   
-##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
  繪製標題按鈕。  
   
 ```  
@@ -262,7 +257,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>備註  
  `bMaximized`參數會使用最大化 按鈕時，或最小化按鈕。  
   
-##  <a name="setminiframebutton"></a>CMFCCaptionButton::SetMiniFrameButton  
+##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  設定迷你標題列的大小。  
   
 ```  
@@ -271,9 +266,9 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bSet`  
- `TRUE`迷你標題列的高度;`FALSE`預設標題列的高度。  
+ `TRUE` 迷你標題列的高度;`FALSE`預設標題列的高度。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)   

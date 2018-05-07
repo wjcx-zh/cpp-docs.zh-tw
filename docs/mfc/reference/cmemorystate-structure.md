@@ -2,11 +2,8 @@
 title: CMemoryState 結構 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMemoryState
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f4c2d7d33d07a5eca5a980c376056c3fe68e2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 提供便利的方式，來偵測記憶體流失的問題在程式中。  
@@ -56,7 +51,7 @@ struct CMemoryState
 |[CMemoryState::DumpStatistics](#dumpstatistics)|列印記憶體配置的統計資料的`CMemoryState`物件。|  
   
 ## <a name="remarks"></a>備註  
- `CMemoryState`是一種結構，而且沒有基底類別。  
+ `CMemoryState` 是一種結構，而且沒有基底類別。  
   
  在堆積上配置但不再需要時取消配置物件記憶體時，就會發生 「 記憶體流失 」。 這類的記憶體流失最後可能會導致記憶體不足錯誤。 有數種方式來配置和解除配置程式的記憶體：  
   
@@ -66,13 +61,13 @@ struct CMemoryState
   
 -   使用 c + +**新**和**刪除**運算子。  
   
- `CMemoryState`診斷只幫助偵測記憶體流失的記憶體配置使用時，產生**新**運算子會取消配置使用**刪除**。 其他兩個群組的記憶體管理函式適用於非 c + + 程式，並混合它們與**新**和**刪除**相同程式中不在建議。 其他的巨集， `DEBUG_NEW`，可用來取代**新**運算子時，您需要的檔案和行號追蹤記憶體配置。 `DEBUG_NEW`您通常會使用時，都會使用**新**運算子。  
+ `CMemoryState`診斷只幫助偵測記憶體流失的記憶體配置使用時，產生**新**運算子會取消配置使用**刪除**。 其他兩個群組的記憶體管理函式適用於非 c + + 程式，並混合它們與**新**和**刪除**相同程式中不在建議。 其他的巨集， `DEBUG_NEW`，可用來取代**新**運算子時，您需要的檔案和行號追蹤記憶體配置。 `DEBUG_NEW` 您通常會使用時，都會使用**新**運算子。  
   
- 如同其他診斷，`CMemoryState`診斷中才有您的程式的偵錯版本。 偵錯版本必須有**_DEBUG**常數定義。  
+ 如同其他診斷，`CMemoryState`診斷中才有您的程式的偵錯版本。 偵錯版本必須有 **_DEBUG**常數定義。  
   
  如果您懷疑程式有記憶體流失，您可以使用`Checkpoint`，**差異**，和`DumpStatistics`記憶體狀態 （已配置的物件） 之間的差異探索在兩個不同的點在程式中的函式執行。 這項資訊可用於判斷函式會清除其所配置的所有物件。  
   
- 如果只了解，不平衡配置和解除配置中的發生未提供足夠的資訊，您可以使用`DumpAllObjectsSince`傾印所有配置自上次呼叫物件的函式`Checkpoint`。 這個傾印顯示順序配置、 原始程式檔和列物件配置的位置 (如果您使用`DEBUG_NEW`配置)，和衍生的物件，其位址以及其大小。 `DumpAllObjectsSince`也會呼叫每個物件的`Dump`函式可提供其目前狀態的相關資訊。  
+ 如果只了解，不平衡配置和解除配置中的發生未提供足夠的資訊，您可以使用`DumpAllObjectsSince`傾印所有配置自上次呼叫物件的函式`Checkpoint`。 這個傾印顯示順序配置、 原始程式檔和列物件配置的位置 (如果您使用`DEBUG_NEW`配置)，和衍生的物件，其位址以及其大小。 `DumpAllObjectsSince` 也會呼叫每個物件的`Dump`函式可提供其目前狀態的相關資訊。  
   
  如需有關如何使用`CMemoryState`和其他診斷，請參閱[偵錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。  
   
@@ -85,7 +80,7 @@ struct CMemoryState
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
   
-##  <a name="checkpoint"></a>CMemoryState::Checkpoint  
+##  <a name="checkpoint"></a>  CMemoryState::Checkpoint  
  快照摘要的記憶體，並將它儲存在這個`CMemoryState`物件。  
   
 ```  
@@ -98,7 +93,7 @@ void Checkpoint();
 ### <a name="example"></a>範例  
   請參閱範例的[CMemoryState](#cmemorystate)建構函式。  
   
-##  <a name="cmemorystate"></a>CMemoryState::CMemoryState  
+##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState  
  建構空`CMemoryState`必須要填入的物件[檢查點](#checkpoint)或[差異](#difference)成員函式。  
   
 ```  
@@ -108,7 +103,7 @@ CMemoryState();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
   
-##  <a name="difference"></a>CMemoryState::Difference  
+##  <a name="difference"></a>  CMemoryState::Difference  
  比較兩個`CMemoryState`物件，則會儲存到這個差異`CMemoryState`物件。  
   
 ```  
@@ -133,7 +128,7 @@ BOOL Difference(
 ### <a name="example"></a>範例  
   請參閱範例的[CMemoryState](#cmemorystate)建構函式。  
   
-##  <a name="dumpallobjectssince"></a>Cmemorystate:: Dumpallobjectssince  
+##  <a name="dumpallobjectssince"></a>  Cmemorystate:: Dumpallobjectssince  
  呼叫`Dump`函式之所有物件的型別衍生自類別`CObject`配置 （而且仍配置） 自上次[檢查點](#checkpoint)呼叫這個`CMemoryState`物件。  
   
 ```  
@@ -148,7 +143,7 @@ void DumpAllObjectsSince() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CMemoryState](#cmemorystate)建構函式。  
   
-##  <a name="dumpstatistics"></a>CMemoryState::DumpStatistics  
+##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics  
  列印精簡記憶體統計資料報告從`CMemoryState`物件，會填入[差異](#difference)成員函式。  
   
 ```  
@@ -193,7 +188,7 @@ void DumpStatistics() const;
   
  您現在可以看到的輸出偵錯模式執行程式`DumpStatistics`函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 
 

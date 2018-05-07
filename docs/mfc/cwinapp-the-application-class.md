@@ -2,12 +2,9 @@
 title: CWinApp： 應用程式類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CWinApp
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1f146df2dd4f97affdaf1c3107d1b00bfd86876
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c3641441554d73e0c7657dd220be86f0c0cab0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp：應用程式類別
 在 MFC 中的主要應用程式類別，會封裝 Windows 作業系統應用程式的初始化、執行和終止。 在架構上建置的應用程式必須有一個並只有一個物件的類別衍生自[CWinApp](../mfc/reference/cwinapp-class.md)。 在建立視窗之前，會先建構這個物件。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  中所顯示名稱**粗體**這份文件中指出的 Mfc 程式庫和 Visual c + + 所提供的項目。 以 `monospaced` 類型顯示的名稱，表示您建立或覆寫的項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [一般 MFC 主題](../mfc/general-mfc-topics.md)   
  [CWinApp 和 MFC 應用程式精靈](../mfc/cwinapp-and-the-mfc-application-wizard.md)   
  [可覆寫的 CWinApp 成員函式](../mfc/overridable-cwinapp-member-functions.md)   

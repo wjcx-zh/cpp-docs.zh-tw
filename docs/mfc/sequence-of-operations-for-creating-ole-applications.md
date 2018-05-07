@@ -1,13 +1,10 @@
 ---
-title: "建立 OLE 應用程式的作業順序 |Microsoft 文件"
-ms.custom: 
+title: 建立 OLE 應用程式的作業順序 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - applications [OLE], creating
 - applications [OLE]
 ms.assetid: 84b0f606-36c1-4253-9cea-44427f0074b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db3b5b9a5f4f62fa71cffa37b30a89aee41fe56f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 412fa5c104d6e85bcaa6ba3703cc8c7ba535f25f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-creating-ole-applications"></a>建立 OLE 應用程式的作業順序
 下表顯示您的角色和架構的角色建立 OLE 連結和內嵌的應用程式。 這些代表可用的選項而不是一連串的步驟執行。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |從頭開始建立容器應用程式。|執行 MFC 應用程式精靈。 選擇**容器**中**複合文件支援**] 索引標籤。使用 [類別檢視，請移至原始程式碼編輯器。 填入 COM 的處理常式函式的程式碼。|架構會產生可以插入由 COM 元件 （伺服器） 應用程式建立的 COM 物件的基本架構應用程式。|  
 |建立全新支援自動化的應用程式。|執行 MFC 應用程式精靈。 選擇**自動化**從**進階功能**] 索引標籤。您可以使用 [類別檢視來公開方法和自動化應用程式中的屬性。|架構會產生可以啟動並自動由其他應用程式的基本架構應用程式。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在架構上建置](../mfc/building-on-the-framework.md)   
  [建置 MFC 應用程式的作業順序](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
  [一系列的作業，用於建立 ActiveX 控制項](../mfc/sequence-of-operations-for-creating-activex-controls.md)   

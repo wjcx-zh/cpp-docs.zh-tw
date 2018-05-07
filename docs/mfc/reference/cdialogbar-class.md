@@ -1,12 +1,9 @@
 ---
-title: "CDialogBar 類別 |Microsoft 文件"
-ms.custom: 
+title: CDialogBar 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 類別
 在控制列中提供 Windows 非強制回應對話方塊的功能。  
@@ -78,14 +73,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>需求  
  **標頭：** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  建構 `CDialogBar` 物件。  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  載入所指定的對話方塊資源範本`lpszTemplateName`或`nIDTemplate`、 建立對話方塊列視窗中，設定其樣式，並將它與關聯`CDialogBar`物件。  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  工具列的樣式。 支援的其他工具列樣式如下：  
   
-- `CBRS_TOP`控制列是在框架視窗的頂端。  
+- `CBRS_TOP` 控制列是在框架視窗的頂端。  
   
-- `CBRS_BOTTOM`控制列是在框架視窗的底部。  
+- `CBRS_BOTTOM` 控制列是在框架視窗的底部。  
   
-- `CBRS_NOALIGN`父代重新調整大小時未重新置放控制列。  
+- `CBRS_NOALIGN` 父代重新調整大小時未重新置放控制列。  
   
-- `CBRS_TOOLTIPS`控制列會顯示工具提示。  
+- `CBRS_TOOLTIPS` 控制列會顯示工具提示。  
   
 - **CBRS_SIZE_DYNAMIC**控制列是動態的。  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING**浮動控制列。  
   
-- `CBRS_FLYBY`狀態列會顯示按鈕的相關資訊。  
+- `CBRS_FLYBY` 狀態列會顯示按鈕的相關資訊。  
   
 - **CBRS_HIDE_INPLACE**控制列不會顯示給使用者。  
   
@@ -146,7 +141,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 CTRLBARS](../../visual-cpp-samples.md)   
  [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

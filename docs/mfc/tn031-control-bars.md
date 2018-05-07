@@ -1,13 +1,10 @@
 ---
-title: "TN031： 控制列 |Microsoft 文件"
-ms.custom: 
+title: TN031： 控制列 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e4ea57f77c615ba439f2d07c3926cde5efa0c27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1d5cc113177a9653e709c14f66682959276e7ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn031-control-bars"></a>TN031：控制列
 > [!NOTE]
@@ -203,13 +198,13 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
 -   向上 = 0  
   
--   滑鼠向下 = TBBS_PRESSED (&#124; 任何其他樣式)  
+-   滑鼠向下 = TBBS_PRESSED (&#124;任何其他樣式)  
   
 -   停用 = TBBS_DISABLED  
   
 -   向下 = TBBS_CHECKED  
   
--   向下停用 = TBBS_CHECKED &#124;TBBS_DISABLED  
+-   向下停用 = TBBS_CHECKED &#124; TBBS_DISABLED  
   
 -   不定 = TBBS_INDETERMINATE  
   
@@ -233,7 +228,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  您可以透過標準視窗管理員 API 完成自訂。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

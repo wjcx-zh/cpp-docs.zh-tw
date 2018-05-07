@@ -1,13 +1,10 @@
 ---
-title: "例外狀況處理 |Microsoft 文件"
-ms.custom: 
+title: 例外狀況處理 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.exceptions
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad6183d15b378feb7ec96aedff6a0013a2dd24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a24d78089e468a2020e0ecdb1fba34783965325
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-processing"></a>例外狀況處理
 當程式執行時，可能會發生的異常狀況時，稱為 「 例外狀況 」 的錯誤數目。 這些可能包括用完記憶體、 資源配置錯誤，以及找不到檔案。  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[AfxAbort](#afxabort)|呼叫終止應用程式嚴重錯誤時，就會發生。|  
   
-##  <a name="try"></a>再試一次  
+##  <a name="try"></a>  再試一次  
  設定**再試一次**區塊。  
   
 ```   
@@ -119,7 +114,7 @@ TRY
 ### <a name="requirements"></a>需求
 標頭：afx.h
 
-##  <a name="catch"></a>CATCH  
+##  <a name="catch"></a>  CATCH  
  定義會攔截擲回在上述的第一個例外狀況類型的程式碼區塊**再試一次**區塊。  
   
 ```   
@@ -149,7 +144,7 @@ CATCH(exception_class, exception_object_pointer_name)
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL  
+##  <a name="catch_all"></a>  CATCH_ALL  
  定義會攔截所有前述擲回的例外狀況類型的程式碼區塊**再試一次**區塊。  
   
 ```   
@@ -174,7 +169,7 @@ CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
 
-##  <a name="and_catch"></a>AND_CATCH  
+##  <a name="and_catch"></a>  AND_CATCH  
  定義一段程式碼來攔截中前面擲回其他例外狀況類型**再試一次**區塊。  
   
 ```   
@@ -191,7 +186,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="remarks"></a>備註  
  使用**攔截**巨集，以攔截一個例外狀況類型，則`AND_CATCH`巨集，以找出每個後續的型別。 結束**再試一次**區塊`END_CATCH`巨集。  
   
- 處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 呼叫`THROW_LAST`巨集內`AND_CATCH`封鎖移位到下個外部例外狀況框架處理。 `AND_CATCH`先前的結束標記**攔截**或`AND_CATCH`區塊。  
+ 處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 呼叫`THROW_LAST`巨集內`AND_CATCH`封鎖移位到下個外部例外狀況框架處理。 `AND_CATCH` 先前的結束標記**攔截**或`AND_CATCH`區塊。  
   
 > [!NOTE]
 >  `AND_CATCH`區塊會定義為 c + + 範圍 （大括號括住分隔）。 如果您宣告這個範圍中的變數，請記得它們是只能在該範圍內存取。 這也適用於*exception_object_pointer_name*變數。  
@@ -201,7 +196,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
   
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
  定義一段程式碼來攔截中前面擲回其他例外狀況類型**再試一次**區塊。  
   
 ```   
@@ -215,7 +210,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="remarks"></a>備註  
  使用**攔截**巨集，以攔截一個例外狀況類型，則`AND_CATCH_ALL`巨集，以攔截所有其他後續的類型。 如果您使用`AND_CATCH_ALL`，結束**再試一次**區塊`END_CATCH_ALL`巨集。  
   
- 處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 呼叫`THROW_LAST`巨集內`AND_CATCH_ALL`封鎖移位到下個外部例外狀況框架處理。 `AND_CATCH_ALL`先前的結束標記**攔截**或`AND_CATCH_ALL`區塊。  
+ 處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 呼叫`THROW_LAST`巨集內`AND_CATCH_ALL`封鎖移位到下個外部例外狀況框架處理。 `AND_CATCH_ALL` 先前的結束標記**攔截**或`AND_CATCH_ALL`區塊。  
   
 > [!NOTE]
 >  `AND_CATCH_ALL`區塊會定義為 c + + 範圍 （大括號分隔）。 如果您宣告這個範圍中的變數，請記得它們是只能在該範圍內存取。  
@@ -223,7 +218,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="end_catch"></a>END_CATCH  
+##  <a name="end_catch"></a>  END_CATCH  
  上一次結束標記**攔截**或`AND_CATCH`區塊。  
   
 ```   
@@ -236,7 +231,7 @@ END_CATCH
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL  
  上一次結束標記`CATCH_ALL`或`AND_CATCH_ALL`區塊。  
   
 ```   
@@ -246,7 +241,7 @@ END_CATCH_ALL
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="throw"></a>擲回 (MFC)  
+##  <a name="throw"></a>  擲回 (MFC)  
  指定的例外狀況會擲回。  
   
 ```   
@@ -265,7 +260,7 @@ THROW(exception_object_pointer)
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="throw_last"></a>THROW_LAST  
+##  <a name="throw_last"></a>  THROW_LAST  
  就會擲回例外狀況傳回至下一個外部**攔截**區塊。  
   
 ```   
@@ -283,7 +278,7 @@ THROW_LAST()
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
+##  <a name="afxthrowarchiveexception"></a>  AfxThrowArchiveException  
  封存例外狀況會擲回。  
   
 ```   
@@ -300,7 +295,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="afxthrowfileexception"></a>AfxThrowFileException  
+##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
  檔案例外狀況會擲回。  
   
 ```   
@@ -326,7 +321,7 @@ void AfxThrowFileException(
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
 無效的引數例外狀況會擲回。  
    
 ### <a name="syntax"></a>語法    
@@ -340,13 +335,13 @@ void AfxThrowInvalidArgException( );
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [CInvalidArgException 類別](cinvalidargexception-class.md)   
  [擲回](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
+##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException  
  擲回記憶體例外狀況。  
   
 ```   
@@ -359,7 +354,7 @@ void AfxThrowMemoryException();
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
  擲回的例外狀況，不支援的功能要求的結果。  
   
 ```  
@@ -369,7 +364,7 @@ void AfxThrowNotSupportedException();
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException  
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
  擲回資源例外狀況。  
   
 ```   
@@ -382,7 +377,7 @@ void  AfxThrowResourceException();
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="afxthrowuserexception"></a>AfxThrowUserException  
+##  <a name="afxthrowuserexception"></a>  AfxThrowUserException  
  擲回例外狀況以停止使用者作業。  
   
 ```   
@@ -395,7 +390,7 @@ void AfxThrowUserException();
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
+##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
  使用此函式在 OLE Automation 函式內擲回例外狀況。  
   
 ```   
@@ -432,7 +427,7 @@ void AFXAPI AfxThrowOleDispatchException(
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="afxthrowoleexception"></a>AfxThrowOleException  
+##  <a name="afxthrowoleexception"></a>  AfxThrowOleException  
  建立類型的物件`COleException`並擲回例外狀況。  
   
 ``` 
@@ -453,7 +448,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 ### <a name="requirements"></a>需求  
   **標頭**afxdao.h  
   
-##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException  
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
  呼叫此函式，可擲回例外狀況型別的[CDaoException](../../mfc/reference/cdaoexception-class.md)從自己的程式碼。  
   
 ```   
@@ -477,7 +472,7 @@ void AFXAPI AfxThrowDaoException(
 ### <a name="requirements"></a>需求  
   **標頭**afxdb.h  
   
-##  <a name="afxthrowdbexception"></a>AfxThrowDBException  
+##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
  呼叫此函式，可擲回例外狀況型別的`CDBException`從自己的程式碼。  
   
 ```  
@@ -505,7 +500,7 @@ void AfxThrowDBException(
 ### <a name="requirements"></a>需求  
   **標頭**afx.h  
   
-##  <a name="afxabort"></a>AfxAbort  
+##  <a name="afxabort"></a>  AfxAbort  
  由 MFC 提供預設的中止函式。  
   
 ```   
@@ -513,7 +508,7 @@ void  AfxAbort();
 ```  
   
 ### <a name="remarks"></a>備註  
- `AfxAbort`會由內部呼叫 MFC 的成員函式發生嚴重錯誤，例如無法處理的遺漏例外狀況時。 您可以呼叫`AfxAbort`在極少數的情況下，如果遇到重大錯誤，因此您無法復原的。  
+ `AfxAbort` 會由內部呼叫 MFC 的成員函式發生嚴重錯誤，例如無法處理的遺漏例外狀況時。 您可以呼叫`AfxAbort`在極少數的情況下，如果遇到重大錯誤，因此您無法復原的。  
   
 ### <a name="example"></a>範例  
  請參閱範例的[攔截](#catch)。  
@@ -521,6 +516,6 @@ void  AfxAbort();
 ### <a name="requirements"></a>需求  
   **標頭**afx.h   
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)   
  [CException 類別](../../mfc/reference/cexception-class.md)

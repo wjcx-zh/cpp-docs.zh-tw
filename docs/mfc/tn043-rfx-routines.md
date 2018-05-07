@@ -1,13 +1,10 @@
 ---
-title: "TN043: RFX 常式 |Microsoft 文件"
-ms.custom: 
+title: 'TN043: RFX 常式 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RFX
 dev_langs:
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - TN043
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19bb44653c03505d954318a01a6e34c1a297dba7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn043-rfx-routines"></a>TN043：RFX 常式
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。  
   
- 此提示描述的資料錄欄位交換 (RFX) 架構。 它也會說明如何撰寫**RFX_**程序。  
+ 此提示描述的資料錄欄位交換 (RFX) 架構。 它也會說明如何撰寫**RFX_** 程序。  
   
 ## <a name="overview-of-record-field-exchange"></a>資料錄欄位交換的概觀  
  C + + 程式碼完成所有的資料錄集欄位函式。 沒有任何特殊的資源或 magic 巨集。 機制的核心是必須在每個衍生的資料錄集類別中覆寫虛擬函式。 它一律是找到這種形式：  
@@ -61,9 +56,9 @@ RFX_Custom(pFX, "Col2",
     m_Col2);
 ```  
   
- 大部分**RFX_**函式有三個引數，如上所示，但有部分 (例如`RFX_Text`和`RFX_Binary`) 有額外的選擇性引數。  
+ 大部分**RFX_** 函式有三個引數，如上所示，但有部分 (例如`RFX_Text`和`RFX_Binary`) 有額外的選擇性引數。  
   
- 多個**RFX_**可能會包含在每個`DoDataExchange`函式。  
+ 多個**RFX_** 可能會包含在每個`DoDataExchange`函式。  
   
  請參閱 'afxdb.h' 的所有資料錄欄位交換常式隨 MFC 提供的清單。  
   
@@ -74,7 +69,7 @@ RFX_Custom(pFX, "Col2",
   
  起始值的資料在標準 c + + 建構函式，通常是在含有的區塊中設定`//{{AFX_FIELD_INIT(CMylSet)`和`//}}AFX_FIELD_INIT`註解。  
   
- 每個**RFX_**函式必須支援各種作業，範圍從傳回的欄位已變更狀態到封存中準備編輯欄位的欄位。  
+ 每個**RFX_** 函式必須支援各種作業，範圍從傳回的欄位已變更狀態到封存中準備編輯欄位的欄位。  
   
  每個呼叫的函式`DoFieldExchange`(例如`SetFieldNull`， `IsFieldDirty`)，並呼叫周圍初始化`DoFieldExchange`。  
   
@@ -99,15 +94,15 @@ RFX_Custom(pFX, "Col2",
   
 - **值**— 附加""後面接著分隔符號，例如 '、' 或 ' '  
   
-- `SetFieldDirty`— 設定狀態位元的中途 （也就是已變更） 欄位  
+- `SetFieldDirty` — 設定狀態位元的中途 （也就是已變更） 欄位  
   
-- `SetFieldNull`— 設定狀態位元，指出欄位的 null 值  
+- `SetFieldNull` — 設定狀態位元，指出欄位的 null 值  
   
-- `IsFieldDirty`-傳回值已變更的狀態位元  
+- `IsFieldDirty` -傳回值已變更的狀態位元  
   
-- `IsFieldNull`-傳回 null 狀態位元值  
+- `IsFieldNull` -傳回 null 狀態位元值  
   
-- `IsFieldNullable`-傳回 TRUE，如果欄位可以保存 NULL 值  
+- `IsFieldNullable` -傳回 TRUE，如果欄位可以保存 NULL 值  
   
 - **StoreField** — 封存欄位值  
   
@@ -168,11 +163,11 @@ RFX_Custom(pFX, "Col2",
  `RFX_LongBinary`：  
  這是唯一的類別庫不使用來接收和傳送資料的資料行繫結的 RFX 函式。 此函式會忽略 BindFieldToColumn 作業並相反地，修復作業期間，會配置儲存空間來保存傳入 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 資料，然後執行配置的儲存體，擷取值的 SQLGetData 呼叫。 準備要將資料值送回資料來源 （例如名稱值和值的作業） 時，此函數會使用 ODBC 的 DATA_AT_EXEC 功能。 請參閱[技術附註 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)如需有關使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs。  
   
- 在撰寫您自己**RFX_**函式，您通常能夠使用**CFieldExchange::Default**實作指定的作業。 查看問題中的作業預設實作。 如果執行作業您會撰寫您**RFX_**函式，您可以委派給**CFieldExchange::Default。** 您可以看到的呼叫範例**CFieldExchange::Default** dbrfx.cpp 中  
+ 在撰寫您自己**RFX_** 函式，您通常能夠使用**CFieldExchange::Default**實作指定的作業。 查看問題中的作業預設實作。 如果執行作業您會撰寫您**RFX_** 函式，您可以委派給**CFieldExchange::Default。** 您可以看到的呼叫範例**CFieldExchange::Default** dbrfx.cpp 中  
   
  請務必呼叫`IsFieldType`在您的 RFX 函式，並將它傳回 FALSE 如果立即開始。 這項機制會保留參數上執行作業**outputColumns**，反之亦然 (例如呼叫**BindParam**上**outputColumn**)。 此外，`IsFieldType`自動追蹤的計數**outputColumns** (`m_nFields`) 以及參數之一 (`m_nParams`)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

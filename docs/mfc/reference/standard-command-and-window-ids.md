@@ -1,13 +1,10 @@
 ---
-title: "標準命令和視窗 Id |Microsoft 文件"
-ms.custom: 
+title: 標準命令和視窗 Id |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,20 +12,18 @@ dev_langs:
 helpviewer_keywords:
 - standard command and Window IDs
 ms.assetid: 0424805c-fff8-4531-8f0c-15cfb13aa612
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c8195b1ab967a0d6692e839b1db1e89ee6694d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 72b50108a9b880961f0dd8bcded1126a635fb9e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-command-and-window-ids"></a>標準命令和視窗 ID
-MFC 程式庫在 Afxres.h 中定義了數種標準命令和視窗 ID。 這些 ID 最常用在資源編輯器以及 [屬性] 視窗中，以將訊息對應至處理函式。 所有標準命令都有**ID_**前置詞。 例如，當您使用功能表編輯器時，您通常要繫結開啟檔案 功能表項目至標準`ID_FILE_OPEN`命令 id。  
+MFC 程式庫在 Afxres.h 中定義了數種標準命令和視窗 ID。 這些 ID 最常用在資源編輯器以及 [屬性] 視窗中，以將訊息對應至處理函式。 所有標準命令都有**ID_** 前置詞。 例如，當您使用功能表編輯器時，您通常要繫結開啟檔案 功能表項目至標準`ID_FILE_OPEN`命令 id。  
   
  對於大部分的標準命令，應用程式程式碼並不需要參照命令 ID，因為架構本身會處理透過其要主架構類別中的訊息對應的命令 ( `CWinThread`， `CWinApp`，< c4> `CView` ， **CDocument**等等)。  
   
@@ -43,5 +38,5 @@ MFC 程式庫在 Afxres.h 中定義了數種標準命令和視窗 ID。 這些 I
   
  [!code-cpp[NVC_MFC_Utilities#47](../../mfc/codesnippet/cpp/standard-command-and-window-ids_1.h)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

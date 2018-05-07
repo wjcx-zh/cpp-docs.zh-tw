@@ -1,13 +1,10 @@
 ---
-title: "伺服器： 實作就地編輯框架視窗 |Microsoft 文件"
-ms.custom: 
+title: 伺服器： 實作就地編輯框架視窗 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e26cbb0099f897c65ab3e39338f3c36e77112e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>伺服器：實作就地編輯框架視窗
 本文說明如果不使用應用程式精靈來建立您的伺服器應用程式，則必須實作自己的視覺化編輯伺服器應用程式的就地框架視窗。 除了遵循本文概述的程序，您可以使用現有的就地框架視窗類別從應用程式精靈產生應用程式或 Visual c + + 提供的範例。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)， [COleResizeBar](../mfc/reference/coleresizebar-class.md)，和[Coleresizebar](../mfc/reference/cdoctemplate-class.md#setserverinfo)中*類別庫參考*.  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [伺服器](../mfc/servers.md)   
  [伺服器： 實作伺服器](../mfc/servers-implementing-a-server.md)   
  [伺服器： 實作伺服器文件](../mfc/servers-implementing-server-documents.md)   

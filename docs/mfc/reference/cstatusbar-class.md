@@ -1,12 +1,9 @@
 ---
-title: "CStatusBar 類別 |Microsoft 文件"
-ms.custom: 
+title: CStatusBar 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatusBar
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c373f21762c1bf7f21d2a775453bab74c735891d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 類別
 具有一列文字輸出窗格或「指示器」的控制列。  
@@ -96,7 +91,7 @@ class CStatusBar : public CControlBar
 ## <a name="remarks"></a>備註  
  輸出窗格通常用來做為訊息列和狀態指示器。 範例包括簡要說明選取的功能表命令的功能表說明訊息行和顯示 SCROLL LOCK、 NUM LOCK 和其他按鍵的狀態指標。  
   
- [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)，成員函式新增到 MFC 4.0 可讓您利用狀態列自訂和其他功能的 Windows 通用控制項的支援。 `CStatusBar`成員函式可讓您大部分的 Windows 通用控制項; 功能不過，當您呼叫`GetStatusBarCtrl`，您就能給予您狀態列更多 Windows 95/98 狀態列的特性。 當您呼叫`GetStatusBarCtrl`，它會傳回參考`CStatusBarCtrl`物件。 請參閱[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)如需有關設計 Windows 通用控制項的工具列。 關於通用控制項的一般資訊，請參閱[通用控制項](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
+ [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl)，成員函式新增到 MFC 4.0 可讓您利用狀態列自訂和其他功能的 Windows 通用控制項的支援。 `CStatusBar` 成員函式可讓您大部分的 Windows 通用控制項; 功能不過，當您呼叫`GetStatusBarCtrl`，您就能給予您狀態列更多 Windows 95/98 狀態列的特性。 當您呼叫`GetStatusBarCtrl`，它會傳回參考`CStatusBarCtrl`物件。 請參閱[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)如需有關設計 Windows 通用控制項的工具列。 關於通用控制項的一般資訊，請參閱[通用控制項](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
   
  架構將標記資訊儲存至位置 0 的最左邊指標的陣列。 當您建立狀態列時，您可以使用字串 Id，架構會將以相對應的指標的陣列。 您接著可以使用字串識別碼或索引來存取指標。  
   
@@ -136,7 +131,7 @@ class CStatusBar : public CControlBar
 ## <a name="requirements"></a>需求  
  **標頭：** afxext.h  
   
-##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CStatusBar::CommandToIndex  
  標記索引取得指定的識別碼。  
   
 ```  
@@ -153,7 +148,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>備註  
  第一個指標的索引為 0。  
   
-##  <a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>  CStatusBar::Create  
  建立狀態列 （子視窗），並將它與相關聯`CStatusBar`物件。  
   
 ```  
@@ -170,11 +165,11 @@ virtual BOOL Create(
  `dwStyle`  
  狀態列樣式。 除了標準 Windows[樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)，支援這些樣式。  
   
-- `CBRS_TOP`控制列是在框架視窗的頂端。  
+- `CBRS_TOP` 控制列是在框架視窗的頂端。  
   
-- `CBRS_BOTTOM`控制列是在框架視窗的底部。  
+- `CBRS_BOTTOM` 控制列是在框架視窗的底部。  
   
-- `CBRS_NOALIGN`父代重新調整大小時未重新置放控制列。  
+- `CBRS_NOALIGN` 父代重新調整大小時未重新置放控制列。  
   
  `nID`  
  工具列的子視窗識別碼。  
@@ -185,7 +180,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  也設定初始的字型，並將狀態設定為預設值的長條的高度。  
   
-##  <a name="createex"></a>CStatusBar::CreateEx  
+##  <a name="createex"></a>  CStatusBar::CreateEx  
  呼叫此函式可建立狀態列 （子視窗），並將它與相關聯`CStatusBar`物件。  
   
 ```  
@@ -223,14 +218,14 @@ virtual BOOL CreateEx(
   
  使用`CreateEx`，而不是[建立](#create)，當特定樣式必須要有內嵌的狀態列控制項建立期間。 例如，設定`dwCtrlStyle`至**SBT_TOOLTIPS**顯示狀態 列物件中的工具提示。  
   
-##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  建構`CStatusBar`物件、 建立預設狀態列字型如有必要，，並設定為預設值的字型特性。  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>  CStatusBar::DrawItem  
  當主控描繪狀態列會變更的視覺外觀的架構會呼叫此成員函式。  
   
 ```  
@@ -244,7 +239,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>備註  
  **ItemAction**隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。 覆寫此成員函式，來實作主控描繪的繪圖`CStatusBar`物件。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前終止此成員函式。  
   
-##  <a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>  CStatusBar::GetItemID  
  傳回所指定的標記識別碼`nIndex`。  
   
 ```  
@@ -258,7 +253,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>傳回值  
  指標所指定的識別碼`nIndex`。  
   
-##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
  複製指標所指定的座標`nIndex`至所指向的結構`lpRect`。  
   
 ```  
@@ -277,7 +272,7 @@ void GetItemRect(
 ### <a name="remarks"></a>備註  
  座標是相對於狀態列的左上角像素為單位。  
   
-##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
  設定`nID`， `nStyle`，和`cxWidth`至 ID、 樣式和寬度所指定的位置指標窗格的`nIndex`。  
   
 ```  
@@ -301,7 +296,7 @@ void GetPaneInfo(
  `cxWidth`  
  參考設定為窗格的寬度的整數。  
   
-##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
  呼叫此成員函式可擷取的狀態列窗格的樣式。  
   
 ```  
@@ -320,7 +315,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  如需可用狀態列樣式的清單，請參閱[建立](#create)。  
   
-##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>  CStatusBar::GetPaneText  
  呼叫此成員函式可擷取狀態列窗格中顯示的文字。  
   
 ```  
@@ -340,7 +335,7 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ### <a name="remarks"></a>備註  
  這個成員的第二個表單函式的填滿`CString`具有字串文字物件。  
   
-##  <a name="getstatusbarctrl"></a>CStatusBar::GetStatusBarCtrl  
+##  <a name="getstatusbarctrl"></a>  CStatusBar::GetStatusBarCtrl  
  此成員函式可讓您直接存取基礎的通用控制項。  
   
 ```  
@@ -355,7 +350,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
   
  關於通用控制項的一般資訊，請參閱[通用控制項](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
   
-##  <a name="setindicators"></a>CStatusBar::SetIndicators  
+##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
  陣列的對應項目所指定的值來設定每一個指標 ID `lpIDArray`、 載入每個識別碼，由指定之字串資源，並將指標的文字設為字串。  
   
 ```  
@@ -374,7 +369,7 @@ BOOL SetIndicators(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="setpaneinfo"></a>CStatusBar::SetPaneInfo  
+##  <a name="setpaneinfo"></a>  CStatusBar::SetPaneInfo  
  將指定的指標窗格設定為新的 ID、 樣式和寬度。  
   
 ```  
@@ -411,7 +406,7 @@ void SetPaneInfo(
   
 - **SBPS_NORMAL**沒有 stretch、 框線或快顯。  
   
-##  <a name="setpanestyle"></a>CStatusBar::SetPaneStyle  
+##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  呼叫此成員函式，設定狀態列窗格的樣式。  
   
 ```  
@@ -432,7 +427,7 @@ void SetPaneStyle(
   
  如需可用狀態列樣式的清單，請參閱[SetPaneInfo](#setpaneinfo)。  
   
-##  <a name="setpanetext"></a>CStatusBar::SetPaneText  
+##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
  呼叫此成員函式，將窗格文字所指向的字串為`lpszNewText`。  
   
 ```  
@@ -465,7 +460,7 @@ BOOL SetPaneText(
   
  [!code-cpp[NVC_MFCDocView#178](../../mfc/codesnippet/cpp/cstatusbar-class_3.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 CTRLBARS](../../visual-cpp-samples.md)   
  [MFC 範例 DLGCBR32](../../visual-cpp-samples.md)   
  [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)   

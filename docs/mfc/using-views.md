@@ -1,13 +1,10 @@
 ---
-title: "使用 檢視 |Microsoft 文件"
-ms.custom: 
+title: 使用 檢視 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - user input [MFC], interpreting through view class [MFC]
 - view classes [MFC], role in displaying application data
 ms.assetid: dc3de6ad-5c64-4317-8f10-8bdcc38cdbd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99493657313d480559d232bf9033dfb7a7a585c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4094f41f00266b229c755232f534e9c35d29fe7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-views"></a>使用檢視
 檢視的責任是以圖形方式顯示給使用者的文件的資料，以及為接受和解譯使用者輸入為文件上的作業。 您在撰寫您的檢視類別的工作如下：  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [初始化和清除文件和檢視](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文件/檢視架構](../mfc/document-view-architecture.md)   
  [CFormView 類別](../mfc/reference/cformview-class.md)   
  [資料錄檢視 （MFC 資料存取）](../data/record-views-mfc-data-access.md)   

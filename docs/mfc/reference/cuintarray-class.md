@@ -1,12 +1,9 @@
 ---
-title: "CUIntArray 類別 |Microsoft 文件"
-ms.custom: 
+title: CUIntArray 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>CUIntArray 類別
 支援不帶正負號整數的陣列。  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>備註  
  不帶正負號的整數，或**UINT**，文字及雙字組中，從不同的實體大小**UINT**可以根據作業環境的目標變更。 A **UINT**是 doubleword 相同的大小。  
   
- `CUIntArray`結合[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)巨集，支援執行階段類型存取和傾印[CDumpContext](../../mfc/reference/cdumpcontext-class.md)物件。 如果您需要個別的不帶正負號的整數的項目的傾印，您必須設定為 1 或更大的傾印內容的深度。 無法序列化不帶正負號的整數陣列。  
+ `CUIntArray` 結合[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)巨集，支援執行階段類型存取和傾印[CDumpContext](../../mfc/reference/cdumpcontext-class.md)物件。 如果您需要個別的不帶正負號的整數的項目的傾印，您必須設定為 1 或更大的傾印內容的深度。 無法序列化不帶正負號的整數陣列。  
   
 > [!NOTE]
 >  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
@@ -133,7 +128,7 @@ class CUIntArray : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxcoll.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

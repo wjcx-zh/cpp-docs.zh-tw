@@ -1,12 +1,9 @@
 ---
-title: "CFindReplaceDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CFindReplaceDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFindReplaceDialog
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca1d0b5658da375c2202729e6888fa078063beb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 類別
 可讓您在您的應用程式中實作的標準字串尋找/取代對話方塊。  
@@ -105,7 +100,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  您可以判斷使用者是否已決定要終止與對話方塊`IsTerminating`成員函式。  
   
- `CFindReplaceDialog`依賴 COMMDLG。隨附於 Windows 版本 3.1 和更新版本的 DLL 檔案。  
+ `CFindReplaceDialog` 依賴 COMMDLG。隨附於 Windows 版本 3.1 和更新版本的 DLL 檔案。  
   
  若要自訂對話方塊中，衍生自`CFindReplaceDialog`，提供自訂對話方塊範本中，加入處理從擴充的控制項通知訊息的訊息對應。 任何未處理的訊息應該傳遞至基底類別。  
   
@@ -129,7 +124,7 @@ class CFindReplaceDialog : public CCommonDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxdlgs.h  
   
-##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
+##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog  
  建構 `CFindReplaceDialog` 物件。  
   
 ```  
@@ -146,7 +141,7 @@ CFindReplaceDialog();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
-##  <a name="create"></a>CFindReplaceDialog::Create  
+##  <a name="create"></a>  CFindReplaceDialog::Create  
  建立並顯示 尋找 或 尋找/取代對話方塊物件，根據的值`bFindDialogOnly`。  
   
 ```  
@@ -191,7 +186,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
   請參閱範例的[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)。  
   
-##  <a name="findnext"></a>CFindReplaceDialog::FindNext  
+##  <a name="findnext"></a>  CFindReplaceDialog::FindNext  
  從您的回呼函式，以判斷使用者是否想要搜尋字串的下一個呼叫此函式。  
   
 ```  
@@ -201,7 +196,7 @@ BOOL FindNext() const;
 ### <a name="return-value"></a>傳回值  
  如果使用者想要搜尋的字串; 的下一個非零，否則便是 0。  
   
-##  <a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
+##  <a name="getfindstring"></a>  CFindReplaceDialog::GetFindString  
  呼叫此函式，從您的回呼函式來擷取要尋找的預設字串。  
   
 ```  
@@ -214,7 +209,7 @@ CString GetFindString() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
+##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier  
  呼叫此函式可擷取目前的尋找取代對話方塊中的指標。  
   
 ```  
@@ -236,7 +231,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
   
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
+##  <a name="getreplacestring"></a>  CFindReplaceDialog::GetReplaceString  
  呼叫此函式可擷取目前的取代字串。  
   
 ```  
@@ -249,7 +244,7 @@ CString GetReplaceString() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CFindReplaceDialog::GetFindString](#getfindstring)。  
   
-##  <a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
+##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating  
  呼叫此函式回呼函式來判斷使用者是否已決定要終止的對話方塊內。  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsTerminating() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CFindReplaceDialog::GetFindString](#getfindstring)。  
   
-##  <a name="m_fr"></a>CFindReplaceDialog::m_fr  
+##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr  
  用來自訂`CFindReplaceDialog`物件。  
   
 ```  
@@ -273,14 +268,14 @@ FINDREPLACE m_fr;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_fr`是一種類型的結構[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 其成員儲存對話方塊物件的特性。 之後建構`CFindReplaceDialog`物件，您可以使用`m_fr`修改在對話方塊中的各種值。  
+ `m_fr` 是一種類型的結構[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 其成員儲存對話方塊物件的特性。 之後建構`CFindReplaceDialog`物件，您可以使用`m_fr`修改在對話方塊中的各種值。  
   
  如需有關此結構的詳細資訊，請參閱**FINDREPLACE** Windows SDK 中的結構。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)。  
   
-##  <a name="matchcase"></a>CFindReplaceDialog::MatchCase  
+##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase  
  呼叫此函式可判斷使用者是否想要完全符合尋找字串的大小寫。  
   
 ```  
@@ -290,7 +285,7 @@ BOOL MatchCase() const;
 ### <a name="return-value"></a>傳回值  
  如果使用者想要尋找完全相符的搜尋字串，大小寫的搜尋字串的出現非零，否則便是 0。  
   
-##  <a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
+##  <a name="matchwholeword"></a>  CFindReplaceDialog::MatchWholeWord  
  呼叫此函式可判斷使用者是否想要比對整個的文字。  
   
 ```  
@@ -300,7 +295,7 @@ BOOL MatchWholeWord() const;
 ### <a name="return-value"></a>傳回值  
  為非零，如果使用者想要比對整個文字的搜尋字串。否則便是 0。  
   
-##  <a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
+##  <a name="replaceall"></a>  CFindReplaceDialog::ReplaceAll  
  呼叫此函式可判斷使用者是否想要被取代字串的所有項目。  
   
 ```  
@@ -310,7 +305,7 @@ BOOL ReplaceAll() const;
 ### <a name="return-value"></a>傳回值  
  為非零，如果使用者已要求，會取代所有相符的取代字串的字串;否則便是 0。  
   
-##  <a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
+##  <a name="replacecurrent"></a>  CFindReplaceDialog::ReplaceCurrent  
  呼叫此函式可判斷使用者是否想要取代目前的文字。  
   
 ```  
@@ -320,7 +315,7 @@ BOOL ReplaceCurrent() const;
 ### <a name="return-value"></a>傳回值  
  為非零，如果使用者已要求來取代目前選取的字串取代字串。否則便是 0。  
   
-##  <a name="searchdown"></a>CFindReplaceDialog::SearchDown  
+##  <a name="searchdown"></a>  CFindReplaceDialog::SearchDown  
  呼叫此函式可判斷使用者是否要繼續往下方向搜尋。  
   
 ```  
@@ -330,6 +325,6 @@ BOOL SearchDown() const;
 ### <a name="return-value"></a>傳回值  
  為非零，如果使用者想要以向下的方向; 繼續進行搜尋0，如果使用者想要向上繼續搜尋。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)  

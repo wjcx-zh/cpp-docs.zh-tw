@@ -1,13 +1,10 @@
 ---
-title: "清單項目和影像清單 |Microsoft 文件"
-ms.custom: 
+title: 清單項目和影像清單 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CListCtrl class [MFC], image lists
 - list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 525d8353c308796d70f974fa56cde3aa76c12142
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6bd7a97330a8a646a880bf229562dbec9a70181
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="list-items-and-image-lists"></a>清單項目和影像清單
 清單控制項中的"item"([CListCtrl](../mfc/reference/clistctrl-class.md)) 圖示、 標籤和可能是其他資訊 （「 子項） 所組成。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  不過，如果您不打算在清單檢視或清單控制項中顯示圖示，則不需要影像清單。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

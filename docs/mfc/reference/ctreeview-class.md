@@ -1,12 +1,9 @@
 ---
-title: "CTreeView 類別 |Microsoft 文件"
-ms.custom: 
+title: CTreeView 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTreeView
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CTreeView [MFC], CTreeView
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7530569d5e5313ebfcbdaf92ebd245962b9e443c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d19d4958de2f7909f2072b2ae2f59c00e63d65a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctreeview-class"></a>CTreeView 類別
 可簡化使用樹狀目錄控制項及[CTreeCtrl](../../mfc/reference/ctreectrl-class.md)，封裝樹狀目錄控制項功能，透過 MFC 的文件檢視架構的類別。  
@@ -73,21 +68,21 @@ class CTreeView : public CCtrlView
 ## <a name="requirements"></a>需求  
  **標頭：** afxcview.h  
   
-##  <a name="ctreeview"></a>CTreeView::CTreeView  
+##  <a name="ctreeview"></a>  CTreeView::CTreeView  
  建構 `CTreeView` 物件。  
   
 ```  
 CTreeView();
 ```  
   
-##  <a name="gettreectrl"></a>Ctreeview::  
+##  <a name="gettreectrl"></a>  Ctreeview::  
  傳回與檢視相關聯的樹狀目錄控制項的參考。  
   
 ```  
 CTreeCtrl& GetTreeCtrl() const;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CCtrlView 類別](../../mfc/reference/cctrlview-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CView 類別](../../mfc/reference/cview-class.md)   

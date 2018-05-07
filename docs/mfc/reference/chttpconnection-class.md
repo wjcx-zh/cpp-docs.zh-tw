@@ -1,12 +1,9 @@
 ---
-title: "CHttpConnection 類別 |Microsoft 文件"
-ms.custom: 
+title: CHttpConnection 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpConnection
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a5236a4a957c742074a1305ba2d4359da3ed967
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 類別
 管理您與 HTTP 伺服器的連接。  
@@ -73,7 +68,7 @@ class CHttpConnection : public CInternetConnection
 ## <a name="requirements"></a>需求  
  **標頭：** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
  呼叫此成員函式會建構`CHttpConnection`物件。  
   
 ```  
@@ -138,7 +133,7 @@ CHttpConnection(
 ### <a name="remarks"></a>備註  
  您絕對不要建立`CHttpConnection`直接。 相反地，您藉由呼叫，會在建立物件時[CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。  
   
-##  <a name="openrequest"></a>Chttpconnection::  
+##  <a name="openrequest"></a>  Chttpconnection::  
  呼叫此成員函式，以開啟 HTTP 連接。  
   
 ```  
@@ -215,7 +210,7 @@ CHttpFile* OpenRequest(
   
  此函式可能會擲回例外狀況。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   

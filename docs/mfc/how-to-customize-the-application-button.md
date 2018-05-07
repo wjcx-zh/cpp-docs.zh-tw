@@ -1,29 +1,24 @@
 ---
-title: "如何： 自訂應用程式按鈕 |Microsoft 文件"
-ms.custom: 
+title: 如何： 自訂應用程式按鈕 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4a150985bd5c552b361620df87e34511ef8027
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 828886e6a5c4891e1fd7e1d820ee00542e052cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自訂應用程式按鈕
 當您按一下 [應用程式] 按鈕時，會顯示命令的功能表。 通常，功能表包含檔案的相關命令例如**開啟**，**儲存**，**列印**，和**結束**。  
@@ -66,6 +61,6 @@ ms.lasthandoff: 12/21/2017
   
 -   在**Ribbon 編輯器工具列**，按一下 **測試 Ribbon**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [功能區設計工具 (MFC)](../mfc/ribbon-designer-mfc.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "例外狀況： 使用 MFC 巨集和 c + + 例外狀況 |Microsoft 文件"
-ms.custom: 
+title: 例外狀況： 使用 MFC 巨集和 c + + 例外狀況 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6597f43deee73addff8e8f2045a38d7b1109fc0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外狀況：使用 MFC 巨集和 C++ 例外狀況
 這篇文章討論撰寫使用 MFC 例外狀況處理巨集和 c + + 例外狀況處理關鍵字的程式碼的考量。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [Try catch 區塊內的區塊](#_core_try_blocks_inside_catch_blocks)  
   
-##  <a name="_core_mixing_exception_keywords_and_macros"></a>混合例外狀況關鍵字和巨集  
+##  <a name="_core_mixing_exception_keywords_and_macros"></a> 混合例外狀況關鍵字和巨集  
  您可以混合 MFC 例外狀況巨集和 c + + 例外狀況關鍵字相同程式中。 但是您不能混合 MFC 巨集與 c + + 例外狀況關鍵字在相同的區塊，因為巨集時，刪除例外狀況物件會自動在超出範圍，而不使用例外狀況處理關鍵字的程式碼。 如需詳細資訊，請參閱文章[例外狀況： 攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
   
  巨集和關鍵字的主要差異是當超出範圍的例外狀況時，巨集 「 自動 」 刪除攔截的例外狀況。 使用關鍵字的程式碼則否。在 catch 區塊中攔截例外狀況必須明確刪除。 混合巨集和 c + + 例外狀況關鍵字可以不刪除例外狀況物件時，會導致記憶體遺漏或兩次刪除例外狀況時堆積損毀。  
@@ -59,13 +54,13 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   
-##  <a name="_core_try_blocks_inside_catch_blocks"></a>Try Catch 區塊內的區塊  
+##  <a name="_core_try_blocks_inside_catch_blocks"></a> Try Catch 區塊內的區塊  
  您無法從重新擲回目前例外狀況**再試一次**區塊內部**攔截**區塊。 下列範例無效：  
   
  [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]  
   
  如需詳細資訊，請參閱[例外狀況： 檢查例外狀況內容](../mfc/exceptions-examining-exception-contents.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [例外狀況處理](../mfc/exception-handling-in-mfc.md)
 

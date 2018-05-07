@@ -1,13 +1,10 @@
 ---
-title: "使用 CStatusBarCtrl |Microsoft 文件"
-ms.custom: 
+title: 使用 CStatusBarCtrl |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CStatusBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8960d7093fcc950eb3118115459a414bc0f0fda3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8dd62dc3083959a20387a684f41164c3647c2c22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cstatusbarctrl"></a>使用 CStatusBarCtrl
 您可以使用狀態列控制項 ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) 來建立反映各種應用程式的狀態資訊的控制項視窗。 狀態視窗可以分割為多個部分，以顯示多種類型的資訊。  
@@ -45,6 +40,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [在 CStatusBarCtrl 物件中使用工具提示](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項](../mfc/controls-mfc.md)
 

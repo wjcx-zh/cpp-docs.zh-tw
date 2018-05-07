@@ -1,30 +1,25 @@
 ---
-title: "使用熱鍵控制項 |Microsoft 文件"
-ms.custom: 
+title: 使用熱鍵控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a64de06d5bc499d5b566d6d40508d08e920264
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4442d45cffdae63600fa3a405e29a139b149175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-hot-key-control"></a>使用熱鍵控制項
 熱鍵控制項的一般使用方式會遵循下列模式：  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   熱鍵控制項是否在對話方塊中，它和`CHotKeyCtrl`物件將會自動終結。 否則，您必須確保控制項和 `CHotKeyCtrl` 物件都已正確地終結。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CHotKeyCtrl](../mfc/using-chotkeyctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

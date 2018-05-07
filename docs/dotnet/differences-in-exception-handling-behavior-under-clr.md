@@ -2,35 +2,30 @@
 title: 例外狀況處理 CLR 下的行為差異 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 56bacf88b2c633704b46c6d0de3bb313767b7b2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f54678de9f98f68f797cd247232a8e3786ff0112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>在 /CLR 之下例外狀況處理行為的差異
 [使用 Managed 例外狀況的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)討論在 managed 應用程式中處理的例外狀況。 在本主題中會詳細討論例外狀況處理之標準行為差異和一些限制。 如需詳細資訊，請參閱[_set_se_translator 函式](../c-runtime-library/reference/set-se-translator.md)。  
   
-##  <a name="vcconjumpingoutofafinallyblock"></a>跳出 Finally 區塊  
+##  <a name="vcconjumpingoutofafinallyblock"></a> 跳出 Finally 區塊  
  原生 C/c + + 程式碼，跳躍跳出 __**最後**雖然會產生警告，允許使用結構化例外狀況處理 (SEH) 的區塊。  在下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最後**區塊會產生錯誤：  
   
 ```  
@@ -44,7 +39,7 @@ int main() {
 }   // C3276  
 ```  
   
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>例外狀況篩選條件內引發例外狀況  
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> 例外狀況篩選條件內引發例外狀況  
  在處理期間引發例外狀況是當[例外狀況篩選條件](../cpp/writing-an-exception-filter.md)managed 程式碼內的例外狀況會遭到攔截，並視為篩選條件傳回 0。  
   
  這是的行為即會引發巢狀例外狀況，原生程式碼**Exception_record**欄位**EXCEPTIONRECORD**結構 (傳回[GetExceptionInformation](http://msdn.microsoft.com/library/windows/desktop/ms679357)) 設定，而**ExceptionFlags**欄位會設定 0x10 位元。 以下範例說明行為中的差異：  
@@ -107,7 +102,7 @@ Caught a nested exception
 We should execute this handler if compiled to native  
 ```  
   
-##  <a name="vccondisassociatedrethrows"></a>取消關聯重新擲回  
+##  <a name="vccondisassociatedrethrows"></a> 取消關聯重新擲回  
  **/clr**不支援外部 catch 處理常式 （又稱為取消關聯重新擲回） 例外狀況重新擲回。 這個類型的例外狀況會視為標準 C++ 重新擲回。 若在發生作用中 Managed 例外狀況時遇到取消關聯重新擲回，例外狀況會包裝為 C ++. 例外狀況，然後重新擲回。 此類型的例外狀況可能只會攔截例外狀況的類型為[system:: sehexception](https://msdn.microsoft.com/en-us/library/system.runtime.interopservices.sehexception.aspx)。  
   
  下列範例示範 Managed 例外狀況重新擲回為 C ++. 例外狀況：  
@@ -158,7 +153,7 @@ int main() {
 caught an SEH Exception  
 ```  
   
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>例外狀況篩選條件和 EXCEPTION_CONTINUE_EXECUTION  
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外狀況篩選條件和 EXCEPTION_CONTINUE_EXECUTION  
  如果篩選條件在 Managed 應用程式中傳回 `EXCEPTION_CONTINUE_EXECUTION`，則會視為篩選條件已傳回 `EXCEPTION_CONTINUE_SEARCH`。 如需有關這些常數的詳細資訊，請參閱[再試一次-try-except 陳述式](../cpp/try-except-statement.md)。  
   
  下列範例會示範這項差異：  
@@ -198,7 +193,7 @@ int main() {
 Counter=-3  
 ```  
   
-##  <a name="vcconthe_set_se_translatorfunction"></a>_Set_se_translator 函式  
+##  <a name="vcconthe_set_se_translatorfunction"></a> _Set_se_translator 函式  
  由呼叫 `_set_se_translator` 設定的翻譯工具函式，只影響 Unmanaged 程式碼中的攔截。 下列範例示範此限制：  
   
 ```  
@@ -284,7 +279,7 @@ In my_trans_func.
 Caught an SEH exception with exception code: e0000101  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)   
  [safe_cast](../windows/safe-cast-cpp-component-extensions.md)   
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)

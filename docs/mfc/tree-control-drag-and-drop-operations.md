@@ -1,13 +1,10 @@
 ---
-title: "樹狀目錄控制項拖放作業 |Microsoft 文件"
-ms.custom: 
+title: 樹狀目錄控制項拖放作業 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 978c577a01b2f574009c601ca594a235e0712d71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a620c2481b29b80f6d30dd6457716a652f51fd85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>樹狀目錄控制項拖放作業
 樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 會傳送通知，當使用者開始拖曳項目。 控制項傳送[TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504)通知訊息，當使用者開始拖曳項目具有滑鼠左鍵和[TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509)通知訊息，當使用者開始拖曳[右] 按鈕。 您可以防止樹狀控制項傳送這些通知樹狀目錄控制項**TVS_DISABLEDRAGDROP**樣式。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  您可以指定項目是拖放作業的目標，藉由呼叫[SetItem](../mfc/reference/ctreectrl-class.md#setitem)成員函式來將狀態設定為`TVIS_DROPHILITED`值。 具有這個狀態的項目會繪製為用來表示拖放目標的樣式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

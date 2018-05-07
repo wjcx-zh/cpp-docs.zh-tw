@@ -1,12 +1,9 @@
 ---
-title: "CSettingsStore 類別 |Microsoft 文件"
-ms.custom: 
+title: CSettingsStore 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 包裝 Windows 應用程式開發介面函式，提供用來存取登錄的物件導向介面。  
@@ -88,7 +83,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  關閉開啟登錄機碼。  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>備註  
  根據預設，這個方法從的解構函式呼叫[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  開啟登錄機碼或建立它，如果不存在。  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  0，如果登錄成功。否則則為非零值。  
   
 ### <a name="remarks"></a>備註  
- `CreateKey`使用`m_hKey`為登錄查詢等相關事宜的根目錄。 它會搜尋`pszPath`為的子機碼`m_hKey`。 如果索引鍵不存在，`CreateKey`會加以建立。 否則，它會開啟索引鍵。 `CreateKey`然後設定`m_hKey`建立或開啟索引鍵。  
+ `CreateKey` 使用`m_hKey`為登錄查詢等相關事宜的根目錄。 它會搜尋`pszPath`為的子機碼`m_hKey`。 如果索引鍵不存在，`CreateKey`會加以建立。 否則，它會開啟索引鍵。 `CreateKey` 然後設定`m_hKey`建立或開啟索引鍵。  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  建立 `CSettngsStore` 物件。  
   
 ```  
@@ -138,7 +133,7 @@ CSettingsStore(
   
  解構函式`CSettingsStore`釋放`m_hKey`自動。  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  刪除登錄機碼及其所有子系。  
   
 ```  
@@ -162,7 +157,7 @@ virtual BOOL DeleteKey(
   
  如果參數`bAdmin`為零，`DeleteKey`下刪除鍵搜尋`HKEY_CURRENT_USER`。 如果`bAdmin`非零，`DeleteKey`下刪除鍵搜尋`HKEY_LOCAL_MACHINE`。  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  刪除值，以從`m_hKey`。  
   
 ```  
@@ -176,7 +171,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  開啟登錄機碼。  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>備註  
  這個方法已成功開啟指定的索引鍵之後，它會設定`m_hKey`這個機碼的控制代碼。  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  從登錄機碼讀取值。  
   
 ```  
@@ -321,9 +316,9 @@ virtual BOOL Read(
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- `Read`檢查是否有`pszKey`為的子機碼`m_hKey`。  
+ `Read` 檢查是否有`pszKey`為的子機碼`m_hKey`。  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  將值寫入開啟機碼下登錄。  
   
 ```  
@@ -453,7 +448,7 @@ virtual BOOL Write(
 ### <a name="remarks"></a>備註  
  要寫入至登錄，您必須設定`bReadOnly`為非零值，當您建立[CSettingsStore](../../mfc/reference/csettingsstore-class.md)物件。 如需詳細資訊，請參閱[CSettingsStore::CSettingsStore](#csettingsstore)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)

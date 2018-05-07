@@ -1,12 +1,9 @@
 ---
-title: "CEvent 類別 |Microsoft 文件"
-ms.custom: 
+title: CEvent 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEvent
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cevent-class"></a>CEvent 類別
 表示事件，這是可讓一個執行緒通知發生事件的另一個執行緒的同步處理物件。  
@@ -66,7 +61,7 @@ class CEvent : public CSyncObject
 ## <a name="remarks"></a>備註  
  當執行緒必須知道何時要執行其工作時，事件相當實用。 例如，當新的資料可用時，必須告知執行緒將資料複製到資料封存。 使用`CEvent`物件新的資料可用時通知複製執行緒的執行緒可以儘快執行其工作。  
   
- `CEvent`物件有兩種類型： 手動和自動。  
+ `CEvent` 物件有兩種類型： 手動和自動。  
   
  自動`CEvent`物件會自動返回未收到訊號 （無法使用） 的狀態後發行至少一個執行緒。 根據預設，`CEvent`物件是自動的除非您傳遞`TRUE`如`bManualReset`在建構期間的參數。  
   
@@ -95,7 +90,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>  CEvent::CEvent  
  建構的具名或未命名`CEvent`物件。  
   
 ```  
@@ -127,7 +122,7 @@ CEvent(
 > [!IMPORTANT]
 >  在建立之後`CEvent`物件，請使用[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)以確保 mutex 不是已經存在。 如果未意外存在 mutex，可能表示 rogue 程序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序是關閉此控制代碼，並繼續如同在建立物件時發生失敗。  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  將狀態設定為收到信號的事件 （可用）、 釋放任何等候中執行緒，並且將它重設為未收到信號 （無法使用） 會自動。  
   
 ```  
@@ -142,9 +137,9 @@ BOOL PulseEvent();
   
  如果沒有執行緒等候，或沒有任何執行緒可以立即釋放`PulseEvent`設定事件的狀態未收到信號，並傳回。  
   
- `PulseEvent`會使用基礎 Win32`PulseEvent`函式，可以暫時移除從等候狀態的核心模式的非同步程序呼叫。 因此，`PulseEvent`不可靠，不應由新的應用程式。 如需詳細資訊，請參閱[PulseEvent 函式](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
+ `PulseEvent` 會使用基礎 Win32`PulseEvent`函式，可以暫時移除從等候狀態的核心模式的非同步程序呼叫。 因此，`PulseEvent`不可靠，不應由新的應用程式。 如需詳細資訊，請參閱[PulseEvent 函式](http://msdn.microsoft.com/library/windows/desktop/ms684914)。  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
  設定事件的狀態未收到信號，直到明確設定為收到信號的[SetEvent](#setevent)成員函式。  
   
 ```  
@@ -159,7 +154,7 @@ BOOL ResetEvent();
   
  此成員函式不是由自動事件。  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>  CEvent::SetEvent  
  設定為收到信號，事件的狀態，釋放任何等候中執行緒。  
   
 ```  
@@ -172,7 +167,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>備註  
  如果手動事件，事件仍可保持直到收到信號[ResetEvent](#resetevent)呼叫。 多個執行緒可以在此情況下發行。 如果事件是自動的事件會保持在收到信號，直到釋放單一執行緒。 為未收到信號，系統會將事件的狀態。 如果沒有執行緒正在等待，狀態會保留信號，一個執行緒釋放之前。  
   
-##  <a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>  CEvent::Unlock  
  釋放事件。  
   
 ```  
@@ -185,7 +180,7 @@ BOOL Unlock();
 ### <a name="remarks"></a>備註  
  目前擁有自動釋放之後完成，如果其鎖定的物件重複事件的執行緒會呼叫此成員函式。 如果鎖定物件不是可重複使用，此函式會被呼叫之鎖定物件的解構函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

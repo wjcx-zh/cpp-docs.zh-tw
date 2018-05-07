@@ -1,12 +1,9 @@
 ---
-title: "CFolderPickerDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CFolderPickerDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFolderPickerDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CFolderPickerDialog [MFC], CFolderPickerDialog
 ms.assetid: 8db01684-dd1d-4e9c-989e-07a2318a8156
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e93bb9c9ac6aa447e3df43d4612bd792df091e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1627d11c5c55c62e39092882177ec893cefb89a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 類別
 CFolderPickerDialog 類別實作資料夾選擇器模式的 CFileDialog。  
@@ -67,7 +62,7 @@ class CFolderPickerDialog : public CFileDialog;
 ## <a name="requirements"></a>需求  
  **標頭：** afxdlgs.h  
   
-##  <a name="cfolderpickerdialog"></a>CFolderPickerDialog::CFolderPickerDialog  
+##  <a name="cfolderpickerdialog"></a>  CFolderPickerDialog::CFolderPickerDialog  
  建構函式。  
   
 ```  
@@ -93,7 +88,7 @@ explicit CFolderPickerDialog(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="_dtorcfolderpickerdialog"></a>CFolderPickerDialog:: ~ CFolderPickerDialog  
+##  <a name="_dtorcfolderpickerdialog"></a>  CFolderPickerDialog:: ~ CFolderPickerDialog  
  解構函式。  
   
 ```  
@@ -102,5 +97,5 @@ virtual ~CFolderPickerDialog();
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

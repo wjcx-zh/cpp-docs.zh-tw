@@ -1,13 +1,10 @@
 ---
-title: "TN024: MFC 定義的訊息和資源 |Microsoft 文件"
-ms.custom: 
+title: 'TN024: MFC 定義的訊息和資源 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定義的訊息和資源
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- 這個訊息由傳送`COleResizeBar`至其擁有者視窗 (透過`GetOwner`) 當使用者調整的大小調整列，以調整大小控點。 `COleIPFrameWnd`藉由嘗試調整框架視窗的位置，因為使用者已要求，以回應這個訊息。  
+ 這個訊息由傳送`COleResizeBar`至其擁有者視窗 (透過`GetOwner`) 當使用者調整的大小調整列，以調整大小控點。 `COleIPFrameWnd` 藉由嘗試調整框架視窗的位置，因為使用者已要求，以回應這個訊息。  
   
  新的矩形中，指定用戶端座標中相對於框架視窗，其中包含 [調整] 列中，指向由 lParam。  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|是下列值之一：<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|不使用 (0)|  
   
- 傳回的值應為非零如果**FS_SYNCACTIVE**是組和視窗將其啟動與父框架。 `CMiniFrameWnd`傳回非零，當樣式設定為**MFS_SYNCACTIVE。**  
+ 傳回的值應為非零如果**FS_SYNCACTIVE**是組和視窗將其啟動與父框架。 `CMiniFrameWnd` 傳回非零，當樣式設定為**MFS_SYNCACTIVE。**  
   
  如需詳細資訊，請參閱的實作`CMiniFrameWnd`。  
   
@@ -207,7 +202,7 @@ SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
   
  這是非常廣泛的格式，可讓任何 Windows 訊息和資料內容。 Visual c + + 資源編輯器和 MFC 僅支援 Windows 訊息的有限的子集： CB_ADDSTRING 的初始清單的選項 （資料是文字字串） 的下拉式方塊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

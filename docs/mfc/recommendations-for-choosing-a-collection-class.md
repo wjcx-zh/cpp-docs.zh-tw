@@ -1,13 +1,10 @@
 ---
-title: "選擇集合類別的建議 |Microsoft 文件"
-ms.custom: 
+title: 選擇集合類別的建議 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f389a621991418c054b62be477a64f02c4afaae2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28527f9668b9ca6a9ef00cf399a04ce9bad65716
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>選擇集合類別的建議
 本文所包含的詳細資訊，旨在協助您選擇特定應用程式所需的集合類別。  
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
  3. 如果在此欄中標示為 [是]，則非範本集合類別為型別安全 (但前提是您必須如預期般使用它)。 例如，如果您將位元組儲存在 `CByteArray`中，則陣列為型別安全。 但是，如果您用來儲存字元，就不一定是型別安全。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [集合](../mfc/collections.md)   
  [樣板架構類別](../mfc/template-based-classes.md)   
  [如何： 建立類型安全集合](../mfc/how-to-make-a-type-safe-collection.md)   

@@ -2,11 +2,8 @@
 title: CMFCRibbonContextCaption 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonContextCaption
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc05d791ad1d9fc51d11947686e0d6b939ef982f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fa63de2a633b2c8a9fff975de6eaaae7cbb470c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption 類別
 實作出現在功能區類別或內容類別頂端的彩色標題。  
@@ -68,7 +63,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 ## <a name="requirements"></a>需求  
  **標頭：** afxRibbonBar.h  
   
-##  <a name="getcolor"></a>CMFCRibbonContextCaption::GetColor  
+##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor  
  傳回標題的背景色彩。  
   
 ```  
@@ -97,7 +92,7 @@ AFX_RibbonCategoryColor GetColor() const;
 ### <a name="remarks"></a>備註  
  可以藉由呼叫設定標題色彩[cmfcribboncategory:: Settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)或[cmfcribbonbar:: Addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)。  
   
-##  <a name="getrighttabx"></a>CMFCRibbonContextCaption::GetRightTabX  
+##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX  
  擷取的類別目錄的功能區索引標籤的右側邊緣的位置。  
   
 ```  
@@ -109,7 +104,7 @@ int GetRightTabX() const;
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton 類別](../../mfc/reference/cmfcribbonbutton-class.md)   

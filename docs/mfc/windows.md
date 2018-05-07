@@ -1,13 +1,10 @@
 ---
-title: "Windows |Microsoft 文件"
-ms.custom: 
+title: Windows |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC, windows
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e81be5ef0216f7d8a28ea7d5046c127f18670a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows"></a>Windows
 此系列文章涵蓋在 MFC 架構中的視窗物件。 所有的 MFC 視窗是衍生自類別[CWnd](../mfc/reference/cwnd-class.md)，包括框架視窗、 檢視、 對話方塊和控制項。  
@@ -116,7 +111,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [變更 MFC 所建立的視窗樣式](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
  [對話方塊](../mfc/dialog-boxes.md)   
  [工具列](../mfc/toolbars.md)   

@@ -1,12 +1,9 @@
 ---
-title: "CSocketFile 類別 |Microsoft 文件"
-ms.custom: 
+title: CSocketFile 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocketFile
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48ab1428d2c02e51b02977c8457d28e20597cbb7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e3bf8d9ee58143e7a96b85174e4533b3c2e50ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocketfile-class"></a>CSocketFile 類別
 `CFile` 物件，用於透過 Windows Sockets 在網路上傳送和接收資料。  
@@ -56,7 +51,7 @@ class CSocketFile : public CFile
   
  當您使用`CArchive`與`CSocketFile`和`CSocket`，您可能會遇到的情況其中**CSocket::Receive**進入迴圈 (由**PumpMessages(FD_READ)**) 等候要求的位元組數量。 這是因為 Windows 通訊端可以只有一個接收呼叫每個 FD_READ 告知但`CSocketFile`和`CSocket`允許每個 FD_READ 的多個接收呼叫。 如果可讀取的資料時，您會收到 FD_READ，應用程式停止回應。 如果您永遠不會收到另一個 FD_READ，就會停止應用程式透過通訊端進行通訊。  
   
- 您可以解決這個問題，如下所示。 在`OnReceive`通訊端類別，呼叫方法**CAsyncSocket::IOCtl (FIONREAD，...)**之前先呼叫`Serialize`訊息類別時要從通訊端讀取預期的資料超過一個 TCP 封包 （最大傳輸單位的網路中，通常至少 1096 個位元組） 的大小的方法。 如果可用的資料大小小於所需，等待接收和才能啟動讀取的作業的所有資料。  
+ 您可以解決這個問題，如下所示。 在`OnReceive`通訊端類別，呼叫方法**CAsyncSocket::IOCtl (FIONREAD，...)** 之前先呼叫`Serialize`訊息類別時要從通訊端讀取預期的資料超過一個 TCP 封包 （最大傳輸單位的網路中，通常至少 1096 個位元組） 的大小的方法。 如果可用的資料大小小於所需，等待接收和才能啟動讀取的作業的所有資料。  
   
  在下列範例中，`m_dwExpected`是大約使用者希望接收的位元組數目。 它會假設，您將它宣告其他位置中您的程式碼。  
   
@@ -74,7 +69,7 @@ class CSocketFile : public CFile
 ## <a name="requirements"></a>需求  
  **標頭：** afxsock.h  
   
-##  <a name="csocketfile"></a>CSocketFile::CSocketFile  
+##  <a name="csocketfile"></a>  CSocketFile::CSocketFile  
  建構 `CSocketFile` 物件。  
   
 ```  
@@ -102,7 +97,7 @@ explicit CSocketFile(
   
  如需有關使用`CSocketFile`，請參閱文章[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)和[Windows Sockets： 通訊端使用封存的範例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CFile 類別](../../mfc/reference/cfile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CAsyncSocket 類別](../../mfc/reference/casyncsocket-class.md)   

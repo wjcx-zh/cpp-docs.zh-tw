@@ -1,29 +1,24 @@
 ---
-title: "逐步解說： 更新 MFC Scribble 應用程式 （第 2 部分） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 更新 MFC Scribble 應用程式 （第 2 部分） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
 [第 1 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)本逐步解說示範如何將 Office Fluent 功能區加入至傳統的 Scribble 應用程式。 此部分顯示如何加入功能區面板和控制項，使用者可以使用而不是功能表和命令。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [初始化畫筆及儲存喜好設定](#initpensave)  
   
-##  <a name="addnewpanel"></a>在功能區中加入新的面板  
+##  <a name="addnewpanel"></a> 在功能區中加入新的面板  
  這些步驟顯示如何新增**檢視**面板包含兩個核取方塊，以控制可見性的工具列和狀態列，以及**視窗**包含垂直方向的分割面板控制建立和排列多重文件介面 (MDI) 視窗的按鈕。  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>若要將檢視面板和視窗面板加入至功能區列  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[區段](#top)]  
   
-##  <a name="addhelppanel"></a>在功能區加入說明面板  
+##  <a name="addhelppanel"></a> 在功能區加入說明面板  
  現在，您可以將名為功能區按鈕 Scribble 應用程式中所定義的兩個功能表項目指派**說明主題**和**有關 Scribble**。 加入了新的面板，名為按鈕**協助**。  
   
 #### <a name="to-add-a-help-panel"></a>若要加入說明面板  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[區段](#top)]  
   
-##  <a name="addpenpanel"></a>在功能區加入畫筆面板  
+##  <a name="addpenpanel"></a> 在功能區加入畫筆面板  
  現在，加入工作面板顯示按鈕，以控制粗細和畫筆的顏色。 此面板包含粗的精簡畫筆來切換核取方塊。 其功能類似**粗線**Scribble 應用程式中的功能表項目。  
   
  原始 Scribble 應用程式可讓使用者選取使用者按一下時，會出現在對話方塊中的畫筆寬度**畫筆寬度**功能表上。 功能區列有足夠空間可存放新的控制項，因為您可以使用功能區上的兩個下拉式方塊來取代對話方塊。 一個下拉式方塊會調整的精簡型的畫筆寬度和下拉式方塊調整粗的畫筆寬度。  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[區段](#top)]  
   
-##  <a name="addcolorbutton"></a>加入 [畫筆] 面板中的色彩按鈕  
+##  <a name="addcolorbutton"></a> 加入 [畫筆] 面板中的色彩按鈕  
  接下來，加入[CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md)物件，讓使用者手繪多邊形的色彩。  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要加入的色彩按鈕畫筆面板  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[區段](#top)]  
   
-##  <a name="addcolormember"></a>將 Color 成員加入至文件類別  
- 因為原始 Scribble 應用程式並沒有色彩畫筆，您必須為它們撰寫實作。 若要儲存文件的畫筆顏色，將新成員加入文件類別，`CscribbleDoc.`  
+##  <a name="addcolormember"></a> 將 Color 成員加入至文件類別  
+ 因為原始 Scribble 應用程式並沒有色彩畫筆，您必須為它們撰寫實作。 若要儲存文件的畫筆顏色，將新成員加入文件類別， `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>若要將 color 成員加入至文件類別  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[區段](#top)]  
   
-##  <a name="initpensave"></a>初始化畫筆及儲存喜好設定  
+##  <a name="initpensave"></a> 初始化畫筆及儲存喜好設定  
  接下來，初始化的畫筆寬度與色彩。 最後，儲存及載入色彩繪製從檔案。  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>初始化功能區列上的控制項  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      中，將下列程式碼加入至 scribdoc.cpp，`CScribbleDoc::InitDocument`方法，之後`m_sizeDoc = CSize(200,200)`陳述式。  
   
- ```*/ / 重設為其初始值 CMFCRibbonBar 的功能區 UI* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())]-> [GetRibbonBar();ASSERT_VALID(pRibbon);
+ ``` *重設為其初始值 CMFCRibbonBar 的功能區 UI* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())]-> [GetRibbonBar();ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton * pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton，pRibbon]-> [FindByID(ID_PEN_COLOR));* / 設定為黑色 ColorButton  
     pColorBtn]-> [SetColor (RGB （0，0，0）);

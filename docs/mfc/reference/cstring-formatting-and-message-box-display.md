@@ -1,13 +1,10 @@
 ---
-title: "CString 格式和訊息方塊顯示 |Microsoft 文件"
-ms.custom: 
+title: CString 格式和訊息方塊顯示 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bc86e066e57978bee0953e233edbb2aefbe61c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8074d84d739b59acfa0c6040bedf76f46b6ea9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 格式和訊息方塊顯示
 提供數個函數來格式化和剖析`CString`物件。 您可以使用這些函式，只要有操作`CString`物件，但它們會特別有用，會出現在訊息方塊文字的字串進行格式化。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>需求  
   **標頭**afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
  此全域函式可以用來從指定的來源字串擷取子字串。  
   
 ```   
@@ -82,7 +77,7 @@ BOOL AFXAPI AfxExtractSubString (
 ### <a name="requirements"></a>需求  
   **標頭**afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
  用 `lpsz1` 指向的字串，替代由 `nIDS`所識別之範本字串資源中字元「%1」的任何執行個體。  
   
 ```  
@@ -113,7 +108,7 @@ void  AfxFormatString1(
 ### <a name="requirements"></a>需求  
   **標頭**afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
  替代字串所指向`lpsz1`字元"%1"和字串所指向的任何執行個體`lpsz2`所識別的範本字串資源中的字元"%2"的任何執行個體`nIDS`。  
   
 ```   
@@ -148,7 +143,7 @@ void AfxFormatString2(
 ### <a name="requirements"></a>需求  
   **標頭**afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
  在畫面上顯示訊息方塊。  
   
 ```  
@@ -205,6 +200,6 @@ int AFXAPI AfxMessageBox(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)   
  [CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)

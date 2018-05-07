@@ -2,12 +2,9 @@
 title: 序列化 (C + + /CLI) |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6efd56655cb5b262eab7d7f14c197e11466fb8bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f4a410da74c37ee722c04f21e2cde906b9d061d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-ccli"></a>序列化 (C++/CLI)
 序列化 （儲存狀態的物件或成員到永久性媒體的程序） 的 managed 類別 （包括個別欄位或屬性） 會受到<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>類別。  
@@ -62,5 +57,5 @@ private:
 ### <a name="comments"></a>註解  
  請注意，可以使用其 [簡短名稱] 參考這兩個屬性 (**Serializable**和**因此**)。 這會進一步說明[套用屬性](/dotnet/standard/attributes/applying-attributes)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

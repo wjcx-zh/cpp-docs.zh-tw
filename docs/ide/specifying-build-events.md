@@ -2,12 +2,9 @@
 title: 指定建置事件 |Microsoft 文件
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCEventTool.CommandLine
 - VC.Project.IVCEventTool.ExcludedFromBuild
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - build events [C++]
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825eec000a2b08bd7a5a4d7769405df2f5570523
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-build-events"></a>指定建置事件
 
@@ -60,7 +55,7 @@ ms.lasthandoff: 01/03/2018
 
       可以使用 MSBuild 巨集以透過符號指定多個輸入和輸出檔案。 如需如何指定檔的位置或檔案集的名稱資訊，請參閱[建置命令和屬性的一般巨集](../ide/common-macros-for-build-commands-and-properties.md)。
 
-      因為 '%' 字元保留 MSBuild，如果您指定的環境變數取代每個 **%** 逸出字元與**%25**十六進位逸出序列。 例如，取代**%WINDIR%**與**%25WINDIR %25**。 MSBuild 會取代每個**%25**順序與 **%** 字元之前存取環境變數。
+      因為 '%' 字元保留 MSBuild，如果您指定的環境變數取代每個**%** 逸出字元與 **%25**十六進位逸出序列。 例如，取代 **%WINDIR%** 與 **%25WINDIR %25**。 MSBuild 會取代每個 **%25**順序與**%** 字元之前存取環境變數。
 
    - 在**描述**，輸入此事件的描述。 描述列印至**輸出**視窗時就會發生此事件。
 

@@ -1,13 +1,10 @@
 ---
-title: "TN033: MFC 的 DLL 版本 |Microsoft 文件"
-ms.custom: 
+title: 'TN033: MFC 的 DLL 版本 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033：MFC 的 DLL 版本
 此提示描述如何使用 MFCxx.DLL 和 mfcxxd.dll （其中 x 是 MFC 版本號碼） 指共用 MFC 應用程式與 MFC 擴充 Dll 的動態連結程式庫。 如需 MFC 的標準 Dll 的詳細資訊，請參閱[將 MFC 當成 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)。  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 -   傳送使用共用的程式庫的應用程式需要您在出貨 MFCxx.DLL （以及其他） 與您的程式庫。 MFCxx.DLL 可以自由轉像許多 Dll，但您仍然必須安裝此 DLL 安裝程式中。 此外，您必須提供 MSVCRTxx.DLL，其中包含您的程式和 MFC Dll 本身都能使用的 C 執行階段程式庫。  
   
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>如何撰寫 MFC 擴充 DLL  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> 如何撰寫 MFC 擴充 DLL  
  MFC 擴充 DLL 是包含類別和函式，最好的 MFC 類別的功能撰寫的 DLL。 MFC 擴充 DLL 使用共用的 MFC Dll 相同的方式，應用程式所使用的是，有幾個其他考量：  
   
 -   若要建置的應用程式使用共用的 MFC 程式庫與一些其他編譯器和連結器選項相似的建置程序。  
@@ -135,18 +130,18 @@ ms.lasthandoff: 12/21/2017
   
  如果您要將現有的專案轉換成 MFC 擴充 DLL，開始建立使用共用的版本的 MFC 應用程式的標準規則，然後執行下列動作：  
   
--   新增**/D_AFXEXT**編譯器旗標。 在 [專案屬性] 對話方塊中，選取 [C/c + +] 節點。 然後，選取前置處理器的類別。 新增`_AFXEXT`到定義的巨集 欄位中，每個項目以分號分隔。  
+-   新增 **/D_AFXEXT**編譯器旗標。 在 [專案屬性] 對話方塊中，選取 [C/c + +] 節點。 然後，選取前置處理器的類別。 新增`_AFXEXT`到定義的巨集 欄位中，每個項目以分號分隔。  
   
--   移除**/Gy**編譯器參數。 在 [專案屬性] 對話方塊中，選取 [C/c + +] 節點。 然後，選取程式碼產生類別。 請確定未啟用 「 啟用函式層級連結 」 的選項。 這會讓匯出的類別，因為連結器將不會移除未參考函式更加簡單。 如果原始的專案用來建置一般 MFC DLL 靜態連結至 MFC，變更**/MT [d]**編譯器選項以**/MD [d]**。  
+-   移除 **/Gy**編譯器參數。 在 [專案屬性] 對話方塊中，選取 [C/c + +] 節點。 然後，選取程式碼產生類別。 請確定未啟用 「 啟用函式層級連結 」 的選項。 這會讓匯出的類別，因為連結器將不會移除未參考函式更加簡單。 如果原始的專案用來建置一般 MFC DLL 靜態連結至 MFC，變更 **/MT [d]** 編譯器選項以 **/MD [d]**。  
   
--   建立與匯出程式庫**/DLL**連結選項。 這會設定當您建立新的目標，指定做為目標類型的 Win32 動態連結程式庫。  
+-   建立與匯出程式庫 **/DLL**連結選項。 這會設定當您建立新的目標，指定做為目標類型的 Win32 動態連結程式庫。  
   
 ### <a name="changing-your-header-files"></a>變更標頭檔  
  MFC 擴充 DLL 的目標通常是匯出一或多個可以使用該功能的應用程式的一些常見的功能。 這可簡化為匯出的類別和全域函式可供用戶端應用程式。  
   
- 若要這樣做，您必須確定每個成員函式會標記為匯入或匯出適當。 這需要特殊的宣告： **__declspec （dllexport)**和**__declspec （dllimport)**。 當用戶端應用程式使用您的類別時，要將它們宣告為**__declspec （dllimport)**。 建立 MFC 擴充 DLL 本身時，它們應該宣告為**__declspec （dllexport)**。 此外，函式必須實際匯出，以便用戶端程式繫結至其在載入時間。  
+ 若要這樣做，您必須確定每個成員函式會標記為匯入或匯出適當。 這需要特殊的宣告： **__declspec （dllexport)** 和 **__declspec （dllimport)**。 當用戶端應用程式使用您的類別時，要將它們宣告為 **__declspec （dllimport)**。 建立 MFC 擴充 DLL 本身時，它們應該宣告為 **__declspec （dllexport)**。 此外，函式必須實際匯出，以便用戶端程式繫結至其在載入時間。  
   
- 若要匯出整個類別，請使用**AFX_EXT_CLASS**類別定義中。 定義此巨集做為架構**__declspec （dllexport)**時**_AFXDLL**和`_AFXEXT`定義，但定義為**__declspec （dllimport)**時`_AFXEXT`未定義。 `_AFXEXT`建置您的 MFC 擴充 DLL 時，如上面所述，是只會定義。 例如:   
+ 若要匯出整個類別，請使用**AFX_EXT_CLASS**類別定義中。 定義此巨集做為架構 **__declspec （dllexport)** 時 **_AFXDLL**和`_AFXEXT`定義，但定義為 **__declspec （dllimport)** 時`_AFXEXT`未定義。 `_AFXEXT` 建置您的 MFC 擴充 DLL 時，如上面所述，是只會定義。 例如:   
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -188,7 +183,7 @@ protected: \
 \  
 ```  
   
- 開始行 「 靜態`AFX_DATA`"會宣告您的類別內的靜態物件。 若要正確匯出這個類別，並從用戶端存取執行階段資訊。EXE，您需要匯出這個靜態物件。 因為以修飾詞宣告靜態物件`AFX_DATA`，您只需要定義`AFX_DATA`是**__declspec （dllexport)**建置 DLL 時，它定義為**__declspec（dllimport)**建置您的用戶端可執行檔時。  
+ 開始行 「 靜態`AFX_DATA`"會宣告您的類別內的靜態物件。 若要正確匯出這個類別，並從用戶端存取執行階段資訊。EXE，您需要匯出這個靜態物件。 因為以修飾詞宣告靜態物件`AFX_DATA`，您只需要定義`AFX_DATA`是 **__declspec （dllexport)** 建置 DLL 時，它定義為 **__declspec（dllimport)** 建置您的用戶端可執行檔時。  
   
  如上所述， **AFX_EXT_CLASS**已經在這種方式定義。 您只需要重新定義`AFX_DATA`是相同**AFX_EXT_CLASS**周圍類別定義。  
   
@@ -225,7 +220,7 @@ class CExampleView : public CView
 ### <a name="limitations-of-afxext"></a>_AFXEXT 的限制  
  您可以使用 _**AFXEXT**您 MFC 擴充 Dll 只要您不需要多個圖層的 MFC 擴充 Dll 的前置處理器符號。 如果您有 MFC 擴充 Dll 呼叫，或衍生自類別，在您自己的 MFC 擴充 Dll，然後從 MFC 類別衍生，您必須使用您自己的前置處理器符號，以避免模稜兩可。  
   
- 問題是，在 Win32 中，您必須明確宣告為任何資料**__declspec （dllexport)**是否要從 DLL 匯出和**__declspec （dllimport)**是否要從 DLL 匯入。 當您定義`_AFXEXT`，MFC 標頭，確定**AFX_EXT_CLASS**定義正確。  
+ 問題是，在 Win32 中，您必須明確宣告為任何資料 **__declspec （dllexport)** 是否要從 DLL 匯出和 **__declspec （dllimport)** 是否要從 DLL 匯入。 當您定義`_AFXEXT`，MFC 標頭，確定**AFX_EXT_CLASS**定義正確。  
   
  當您有多個圖層，一個符號例如**AFX_EXT_CLASS**不足夠，因為 MFC 擴充 DLL 可能會匯出新的類別，以及從另一個 MFC 擴充 DLL 匯入其他類別。 若要處理這個問題，使用特殊的前置處理器符號，指出您要建置 DLL 本身而非使用 DLL。 例如，假設有兩個 MFC 擴充 Dll、 A.DLL 和 B.DLL。 每個分別匯出 A.H 和 B.H 中的某些類別。 B.DLL 會使用 A.DLL 類別。 標頭檔看起來可能像這樣：  
   
@@ -251,7 +246,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 { ... class definition .. };  
 ```  
   
- A.DLL 建置時，它內建與**/D A_IMPL**而且 B.DLL 建置時，它會根據**/D B_IMPL**。 每一個 dll 中使用不同的符號，匯出 CExampleB 和 CExampleA 建置 B.DLL 時匯入。 CExampleA，建置 A.DLL 時匯出並匯入由 B.DLL （或其他用戶端） 時。  
+ A.DLL 建置時，它內建與 **/D A_IMPL**而且 B.DLL 建置時，它會根據 **/D B_IMPL**。 每一個 dll 中使用不同的符號，匯出 CExampleB 和 CExampleA 建置 B.DLL 時匯入。 CExampleA，建置 A.DLL 時匯出並匯入由 B.DLL （或其他用戶端） 時。  
   
  使用內建時，無法執行這種類型的分層**AFX_EXT_CLASS**和`_AFXEXT`前置處理器符號。 上述的技巧來解決這個問題，方式沒有不同的是建置其 OLE、 資料庫和網路 MFC 擴充 Dll 時，會使用 MFC 的機制。  
   
@@ -371,7 +366,7 @@ extern "C" extern void WINAPI InitXxxDLL()
 >  如果您使用您從一般 MFC DLL 的 MFC 擴充 DLL，您必須匯出初始化函式。 使用任何 MFC 擴充 DLL 的類別或資源之前，必須與一般 MFC 的 DLL 呼叫此函數。  
   
 ### <a name="exporting-entries"></a>匯出的項目  
- 若要匯出您的類別的簡單方式是使用**__declspec （dllimport)**和**__declspec （dllexport)**上每個類別和您想要匯出的全域函式。 這可讓您更輕鬆，但效率比命名 （如下所述） 的每個進入點，因為您可以控制哪些函式會匯出較少，而且您無法依序數匯出的函式。 TESTDLL1 和 TESTDLL2 使用這個方法，若要匯出其項目。  
+ 若要匯出您的類別的簡單方式是使用 **__declspec （dllimport)** 和 **__declspec （dllexport)** 上每個類別和您想要匯出的全域函式。 這可讓您更輕鬆，但效率比命名 （如下所述） 的每個進入點，因為您可以控制哪些函式會匯出較少，而且您無法依序數匯出的函式。 TESTDLL1 和 TESTDLL2 使用這個方法，若要匯出其項目。  
   
  更有效率的方法 （和 MFCxx.DLL 所使用的方法） 不會匯出每個項目以手動方式來命名每個項目。DEF 檔案。 我們正在匯出選擇性匯出從我們的 DLL （也就是不所有項目），因為我們必須決定哪些我們想要匯出的特定介面。 這是很困難，因為您必須指定損害的名稱給連結器中的項目表單中。DEF 檔案。 不要匯出任何 c + + 類別，除非您真的需要的符號連結。  
   
@@ -387,9 +382,9 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  如果您想要只從特定位置中載入資源，使用 Api`AfxGetResourceHandle`和`AfxSetResourceHandle`儲存舊的控制代碼，並將新的控制代碼。 請務必還原舊的資源控制代碼傳回至用戶端應用程式之前。 TESTDLL2 這個範例會使用這種方法，明確載入功能表。  
   
- 查核清單有缺點，它會稍微慢一點，而且必須管理資源 ID 範圍。 它的優點是連結到數個 MFC 擴充 Dll 的用戶端應用程式可以使用任何提供 DLL 的資源，而不需要指定 DLL 的執行個體控制代碼。 `AfxFindResourceHandle`API 用查核資源清單來查詢給定的相符項目。 它會使用名稱和資源類型，並傳回其第一次找到的資源控制代碼 （或 NULL）。  
+ 查核清單有缺點，它會稍微慢一點，而且必須管理資源 ID 範圍。 它的優點是連結到數個 MFC 擴充 Dll 的用戶端應用程式可以使用任何提供 DLL 的資源，而不需要指定 DLL 的執行個體控制代碼。 `AfxFindResourceHandle` API 用查核資源清單來查詢給定的相符項目。 它會使用名稱和資源類型，並傳回其第一次找到的資源控制代碼 （或 NULL）。  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>撰寫的應用程式使用的 DLL 版本  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> 撰寫的應用程式使用的 DLL 版本  
   
 ### <a name="application-requirements"></a>應用程式的需求  
  使用 MFC 的共用的版本的應用程式必須遵循一些簡單的規則：  
@@ -426,7 +421,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  編輯程式庫的連結器清單。 變更 NAFXCWD。以 MFCxxD.LIB LIB，並將變更 NAFXCW。MFCxx.LIB LIB。 取代 LIBC。LIB MSVCRT 與。LIB。 與其他 MFC 程式庫，所以重要位於 MFCxxD.LIB**之前**任何 C 執行階段程式庫。  
   
- 選擇性地加入**/D_AFXDLL**為您的零售和偵錯資源編譯器選項 (實際上會編譯與資源的一個**/R**)。 這可讓您最終可執行檔小共用 MFC Dll 中的資源。  
+ 選擇性地加入 **/D_AFXDLL**為您的零售和偵錯資源編譯器選項 (實際上會編譯與資源的一個 **/R**)。 這可讓您最終可執行檔小共用 MFC Dll 中的資源。  
   
  進行這些變更之後，需要完整重建。  
   
@@ -446,7 +441,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  建議您不要重建 MFC Dll。  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>如何實作 MFCxx.DLL  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> 如何實作 MFCxx.DLL  
  下列章節描述如何實作 MFC DLL （MFCxx.DLL 和 mfcxxd.dll 指）。 了解的詳細資料也不很重要，如果您想要是使用您的應用程式的 MFC DLL。 詳細資料不是必要的以了解如何撰寫 MFC 擴充 DLL，但是了解這項實作可協助您撰寫您自己的 DLL。  
   
 ### <a name="implementation-overview"></a>實作概觀  
@@ -456,9 +451,9 @@ extern "C" extern void WINAPI InitXxxDLL()
  MFC 的 16 位元版本需要一些特殊的技術，包括每個應用程式資料上的堆疊區段中，某些 80x86 組譯程式碼、 處理序專屬例外狀況內容和其他技術所建立的特殊區段。 Win32 直接支援同處理序資料在 DLL 中，這是您想在大多數情況。 在大部分情況 MFCxx.DLL 是只 NAFXCW。封裝在 DLL 中的 LIB。 如果您看一下 MFC 原始程式碼，您會發現很少 #ifdef _AFXDLL，因為有很少需要進行的特殊情況。 會有特別處理 （亦稱為 win32） Windows 3.1 上 Win32 特殊案例。 Win32 並不支援同處理序 DLL 的資料，因此 MFC DLL 必須使用執行緒區域儲存區 (TLS) 來取得處理程序的本機資料的 Win32 Api 直接。  
   
 ### <a name="impact-on-library-sources-additional-files"></a>對程式庫來源、 其他檔案的影響  
- 所造成的影響**_AFXDLL**上標準的 MFC 類別程式庫來源和標頭版本是相當小。 沒有特殊版檔案 (AFXV_DLL。H），以及額外的標頭檔 (AFXDLL_。H） 包含主要 AFXWIN。H 標頭。 AFXDLL_。H 標頭包含**CDynLinkLibrary**類別和其他實作詳細資料，這兩者的**_AFXDLL**應用程式和 MFC 擴充 Dll。 AFXDLLX。用於建立 MFC 擴充 Dll （如需詳細資訊請參閱以上） 提供 H 標頭。  
+ 所造成的影響 **_AFXDLL**上標準的 MFC 類別程式庫來源和標頭版本是相當小。 沒有特殊版檔案 (AFXV_DLL。H），以及額外的標頭檔 (AFXDLL_。H） 包含主要 AFXWIN。H 標頭。 AFXDLL_。H 標頭包含**CDynLinkLibrary**類別和其他實作詳細資料，這兩者的 **_AFXDLL**應用程式和 MFC 擴充 Dll。 AFXDLLX。用於建立 MFC 擴充 Dll （如需詳細資訊請參閱以上） 提供 H 標頭。  
   
- MFC 程式庫在 MFC SRC 規則來源有一些額外的條件式程式碼底下**_AFXDLL** #ifdef。 其他的原始程式檔 (DLLINIT。CPP) 包含額外的初始化程式碼和其他黏附共用版本的 MFC。  
+ MFC 程式庫在 MFC SRC 規則來源有一些額外的條件式程式碼底下 **_AFXDLL** #ifdef。 其他的原始程式檔 (DLLINIT。CPP) 包含額外的初始化程式碼和其他黏附共用版本的 MFC。  
   
  若要建立 MFC 共用的版本，請提供其他檔案。 （請參閱下列如何建置 DLL 的詳細資料。）  
   
@@ -474,11 +469,11 @@ extern "C" extern void WINAPI InitXxxDLL()
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>序數和類別 __declspec （dllexport） 和 DLL 命名  
  我們不會將`class` **__declspec （dllexport)** c + + 編譯器的功能。 相反地，匯出清單會包含 （MFCxx.DEF 和 MFCxxD.DEF） 的類別程式庫來源。 匯出只這些選取的一組 （函式和資料） 的進入點。 其他符號，例如 MFC 私用實作函式或類別，不會匯出序數沒有內建或非內建名稱表格中的字串名稱來完成所有的匯出。  
   
- 使用`class` **__declspec （dllexport)**可能是可行的替代方案來建立較小的 Dll，但若為大型的 DLL，像是匯出機制的預設值，MFC 具有效率和容量限制。  
+ 使用`class` **__declspec （dllexport)** 可能是可行的替代方案來建立較小的 Dll，但若為大型的 DLL，像是匯出機制的預設值，MFC 具有效率和容量限制。  
   
  意思就是所有為何，我們可以將封裝大量 MFCxx.DLL 才約 800 KB，而不危害多執行或載入速度的版本中的功能。 MFCxx.DLL 已經 100k 較大這項技術尚未使用。 這也可讓以新增其他的進入點的結尾。允許簡單的版本控制，而不會危害速度和大小的效率依序數匯出.DEF 檔案。 MFC 類別庫中的主要版本修訂將會變更程式庫名稱。 也就是說，MFC30。DLL 是包含 MFC 類別程式庫 3.0 版可轉散發 DLL。 此 dll，升級說，假設 MFC 3.1 中，DLL 會名為 MFC31。DLL 改為。 同樣地，如果您修改 MFC 原始程式碼來產生自訂版本的 MFC DLL，請使用不同的名稱 （，最好是一個不是以名稱中的 「 MFC"）。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

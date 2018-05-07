@@ -1,13 +1,10 @@
 ---
-title: "MFC 中的 Windows Sockets |Microsoft 文件"
-ms.custom: 
+title: MFC 中的 Windows Sockets |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187a58e719ad320975deba7429d6ec04a70143ac
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 84fc25ab6515b22fa647b3cc32833c791b59f2b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC 中的 Windows Sockets
 > [!NOTE]
@@ -39,7 +34,7 @@ ms.lasthandoff: 02/09/2018
   
  如需有關 Windows 通訊端，包括通訊端概念的說明資訊，請參閱[Windows Sockets： 背景](../mfc/windows-sockets-background.md)。  
   
-##  <a name="_core_sockets_programming_models"></a>通訊端程式設計模型  
+##  <a name="_core_sockets_programming_models"></a> 通訊端程式設計模型  
  兩個 MFC Windows Sockets 程式設計模型支援下列類別：  
   
 -   `CAsyncSocket`  
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/09/2018
   
  建立和使用`CSocket`和`CAsyncSocket`物件述[Windows Sockets： 使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)和[Windows Sockets： 使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)。  
   
-##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>Windows Sockets Dll  
+##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows Sockets Dll  
  Microsoft Windows 作業系統提供的 Windows Sockets 動態連結程式庫 (DLL)。 Visual c + + 提供適當的標頭檔和程式庫和 Windows Sockets 規格。  
   
  如需 Windows 通訊端的詳細資訊，請參閱：  
@@ -83,6 +78,6 @@ ms.lasthandoff: 02/09/2018
   
 -   [Windows Sockets：連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows Sockets](../mfc/windows-sockets.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3860 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3860 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3860
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3860
 ms.assetid: 1fb5110d-594e-4f1c-8773-888233af1313
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7229392e763450e658fc26762751c732bf743bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138b3fbd3afe80e416cade54cb04da76b3ae4341
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3860"></a>編譯器錯誤 C3860
 下列類別類型名稱的型別引數清單必須列出參數的型別參數清單中使用的順序  

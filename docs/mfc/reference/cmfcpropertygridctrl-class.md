@@ -1,12 +1,9 @@
 ---
-title: "CMFCPropertyGridCtrl 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCPropertyGridCtrl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridCtrl
@@ -159,17 +156,15 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a07b8049f01d10556bded754ec2aae55581b7cb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79cba2981a6ae6a742ad2839499f2acff6f0a5f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 類別
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -326,7 +321,7 @@ class CMFCPropertyGridCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxpropertygridctrl.h  
   
-##  <a name="accselect"></a>CMFCPropertyGridCtrl::accSelect  
+##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect  
 
   
 ```  
@@ -343,7 +338,7 @@ virtual HRESULT accSelect(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="addproperty"></a>CMFCPropertyGridCtrl::AddProperty  
+##  <a name="addproperty"></a>  CMFCPropertyGridCtrl::AddProperty  
  將新屬性加入至屬性方格控制項。  
   
 ```  
@@ -358,10 +353,10 @@ int AddProperty(
  屬性的指標。  
   
  [輸入] `bRedraw`  
- `TRUE`若要立即; 重繪屬性否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要立即; 重繪屬性否則， `FALSE`。 預設值是 `TRUE`。  
   
  [輸入] `bAdjustLayout`  
- `TRUE`若要重新計算如何繪製的文字和屬性的值，然後繪製的屬性。`FALSE`用來繪製之屬性的現有的計算。 預設值是 `TRUE`。  
+ `TRUE` 若要重新計算如何繪製的文字和屬性的值，然後繪製的屬性。`FALSE`用來繪製之屬性的現有的計算。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，其中會加入此屬性; 在屬性方格控制項位置的以零起始的索引否則為-1。  
@@ -369,7 +364,7 @@ int AddProperty(
 ### <a name="remarks"></a>備註  
  這個方法會將指標加入至屬性方格控制項中的屬性清單的結尾指定的屬性。 請勿終結屬性，或允許這些方格控制項終結之前超出範圍。 當您完成屬性方格控制項時，呼叫[CMFCPropertyGridCtrl::RemoveAll](#removeall)刪除所有加入的屬性。 如果指定的屬性已加入至清單，AddProperty 方法將會失敗。  
   
-##  <a name="adjustlayout"></a>CMFCPropertyGridCtrl::AdjustLayout  
+##  <a name="adjustlayout"></a>  CMFCPropertyGridCtrl::AdjustLayout  
  屬性方格控制項和其屬性，便會重新繪製。  
   
 ```  
@@ -379,7 +374,7 @@ virtual void AdjustLayout();
 ### <a name="remarks"></a>備註  
  這個方法會重新計算如何繪製整個屬性方格控制項和其屬性，包括影像、 字型和控制項。  
   
-##  <a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
+##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip  
 
   
 ```  
@@ -391,7 +386,7 @@ void AlwaysShowUserToolTip(BOOL bShow = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="closecolorpopup"></a>CMFCPropertyGridCtrl::CloseColorPopup  
+##  <a name="closecolorpopup"></a>  CMFCPropertyGridCtrl::CloseColorPopup  
  關閉色彩選取對話方塊。  
   
 ```  
@@ -401,7 +396,7 @@ virtual void CloseColorPopup();
 ### <a name="remarks"></a>備註  
  如需有關色彩選取對話方塊的詳細資訊，請參閱[CMFCPropertyGridColorProperty 類別](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)。  
   
-##  <a name="cmfcpropertygridctrl"></a>CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
+##  <a name="cmfcpropertygridctrl"></a>  CMFCPropertyGridCtrl::CMFCPropertyGridCtrl  
  建構 `CMFCPropertyGridCtrl` 物件。  
   
 ```  
@@ -412,7 +407,7 @@ CMFCPropertyGridCtrl();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="compareprops"></a>CMFCPropertyGridCtrl::CompareProps  
+##  <a name="compareprops"></a>  CMFCPropertyGridCtrl::CompareProps  
  呼叫屬性方格控制項，來排序屬性。  
   
 ```  
@@ -439,7 +434,7 @@ virtual int CompareProps(
 ### <a name="remarks"></a>備註  
  根據預設，這個方法會使用[CString::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare)方法來比較`CMFCPropertyGridProperty::m_strName`指定參數的成員。  
   
-##  <a name="create"></a>CMFCPropertyGridCtrl::Create  
+##  <a name="create"></a>  CMFCPropertyGridCtrl::Create  
  建立屬性方格控制項，並將它附加至屬性方格控制項物件。  
   
 ```  
@@ -464,7 +459,7 @@ virtual BOOL Create(
  子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功; 建立視窗否則， `FALSE`。  
+ `TRUE` 如果已成功; 建立視窗否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  若要建立屬性方格控制項，請先呼叫[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)建構屬性格線物件。 然後呼叫`CMFCPropertyGridCtrl::Create`。  
@@ -474,7 +469,7 @@ virtual BOOL Create(
   
  [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]  
   
-##  <a name="deleteproperty"></a>CMFCPropertyGridCtrl::DeleteProperty  
+##  <a name="deleteproperty"></a>  CMFCPropertyGridCtrl::DeleteProperty  
  從屬性方格控制項中刪除指定的屬性。  
   
 ```  
@@ -489,10 +484,10 @@ BOOL DeleteProperty(
  屬性的指標。  
   
  [輸入] `bRedraw`  
- `TRUE`若要重繪屬性方格控制項。否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要重繪屬性方格控制項。否則， `FALSE`。 預設值是 `TRUE`。  
   
  [輸入] `bAdjustLayout`  
- `TRUE`若要重新計算如何繪製在屬性方格控制項中的所有文字、 影像和項目，然後都繪製的控制項;否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要重新計算如何繪製在屬性方格控制項中的所有文字、 影像和項目，然後都繪製的控制項;否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `TRUE`；否則為 `FALSE`。  
@@ -500,7 +495,7 @@ BOOL DeleteProperty(
 ### <a name="remarks"></a>備註  
  若要刪除屬性方格控制項的屬性，以及任何子的項目，使用這個方法。  
   
-##  <a name="drawcontrolbarcolors"></a>CMFCPropertyGridCtrl::DrawControlBarColors  
+##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors  
 
   
 ```  
@@ -511,7 +506,7 @@ BOOL DrawControlBarColors() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="edititem"></a>CMFCPropertyGridCtrl::EditItem  
+##  <a name="edititem"></a>  CMFCPropertyGridCtrl::EditItem  
  當使用者開始修改屬性時由架構呼叫。  
   
 ```  
@@ -528,11 +523,11 @@ virtual BOOL EditItem(
  使用者已開始編輯作業按一下屬性方格控制項上的點。 重點是在控制項的用戶端座標。 預設值是 `NULL`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功。否則， `FALSE`。  
+ `TRUE` 如果方法成功。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="enabledescriptionarea"></a>CMFCPropertyGridCtrl::EnableDescriptionArea  
+##  <a name="enabledescriptionarea"></a>  CMFCPropertyGridCtrl::EnableDescriptionArea  
  啟用或停用顯示的屬性在屬性方格控制項中清單下方的 [描述] 區域。  
   
 ```  
@@ -541,12 +536,12 @@ void EnableDescriptionArea(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要啟用 [描述] 區域中。`FALSE`停用 [描述] 區域。 預設值是 `TRUE`。  
+ `TRUE` 若要啟用 [描述] 區域中。`FALSE`停用 [描述] 區域。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
  描述區域會顯示在屬性方格控制項的底部。 根據預設，[描述] 區域會是已停用並隱藏。  
   
-##  <a name="enableheaderctrl"></a>CMFCPropertyGridCtrl::EnableHeaderCtrl  
+##  <a name="enableheaderctrl"></a>  CMFCPropertyGridCtrl::EnableHeaderCtrl  
  啟用或停用在屬性方格控制項的頂端的標題控制項。  
   
 ```  
@@ -558,7 +553,7 @@ void EnableHeaderCtrl(
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要啟用此標題控制項。`FALSE`停用此標題控制項。 預設值是 `TRUE`。  
+ `TRUE` 若要啟用此標題控制項。`FALSE`停用此標題控制項。 預設值是 `TRUE`。  
   
  [輸入] `lpszLeftColumn`  
  標頭控制項的左側資料行標題。 預設值是**屬性**。  
@@ -566,7 +561,7 @@ void EnableHeaderCtrl(
  [輸入] `lpszRightColumn`  
  標頭控制項的右邊資料行的標題。 預設值是**值**。  
   
-##  <a name="endedititem"></a>CMFCPropertyGridCtrl::EndEditItem  
+##  <a name="endedititem"></a>  CMFCPropertyGridCtrl::EndEditItem  
  當使用者完成修改屬性時由架構呼叫。  
   
 ```  
@@ -575,14 +570,14 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bUpdateData`  
- `TRUE`若要指定的編輯作業已完成; 當必須驗證的已修改的屬性資料否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要指定的編輯作業已完成; 當必須驗證的已修改的屬性資料否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果結束編輯作業，可順利啟動。，`FALSE`如果已修改的屬性資料無效，或編輯作業應該繼續。  
+ `TRUE` 如果結束編輯作業，可順利啟動。，`FALSE`如果已修改的屬性資料無效，或編輯作業應該繼續。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ensurevisible"></a>CMFCPropertyGridCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CMFCPropertyGridCtrl::EnsureVisible  
  捲動屬性方格控制項，然後展開屬性項目，直到看見指定的屬性。  
   
 ```  
@@ -596,11 +591,11 @@ void EnsureVisible(
  屬性的指標。  
   
  [輸入] `bExpandParents`  
- `TRUE`若要展開父項目，將指定的屬性設為可見的。否則， `FALSE`。 預設值為 `FALSE`。  
+ `TRUE` 若要展開父項目，將指定的屬性設為可見的。否則， `FALSE`。 預設值為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="expandall"></a>CMFCPropertyGridCtrl::ExpandAll  
+##  <a name="expandall"></a>  CMFCPropertyGridCtrl::ExpandAll  
  展開或摺疊所有屬性方格控制項節點。  
   
 ```  
@@ -609,11 +604,11 @@ void ExpandAll(BOOL bExpand=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bExpand`  
- `TRUE`若要展開所有節點。`FALSE`摺疊所有節點。 預設值是 `TRUE`。  
+ `TRUE` 若要展開所有節點。`FALSE`摺疊所有節點。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="finditembydata"></a>CMFCPropertyGridCtrl::FindItemByData  
+##  <a name="finditembydata"></a>  CMFCPropertyGridCtrl::FindItemByData  
  擷取與使用者定義相關聯的屬性`DWORD`值。  
   
 ```  
@@ -627,7 +622,7 @@ CMFCPropertyGridProperty* FindItemByData(
  `DWORD` 值。  
   
  [輸入] `bSearchSubItems`  
- `TRUE`若要搜尋屬性的子項目。否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要搜尋屬性的子項目。否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功。 相關聯的屬性物件的指標否則， `NULL`。  
@@ -635,7 +630,7 @@ CMFCPropertyGridProperty* FindItemByData(
 ### <a name="remarks"></a>備註  
  使用[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)建構函式或[CMFCPropertyGridProperty::SetData](../../mfc/reference/cmfcpropertygridproperty-class.md#setdata)方法產生關聯`DWORD`與屬性。  
   
-##  <a name="get_accchildcount"></a>CMFCPropertyGridCtrl::get_accChildCount  
+##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount  
 
   
 ```  
@@ -649,7 +644,7 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="get_accfocus"></a>CMFCPropertyGridCtrl::get_accFocus  
+##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus  
 
   
 ```  
@@ -663,7 +658,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="get_acchelp"></a>CMFCPropertyGridCtrl::get_accHelp  
+##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp  
 
   
 ```  
@@ -680,7 +675,7 @@ virtual HRESULT get_accHelp(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="get_acchelptopic"></a>CMFCPropertyGridCtrl::get_accHelpTopic  
+##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic  
 
   
 ```  
@@ -699,7 +694,7 @@ virtual HRESULT get_accHelpTopic(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="get_acckeyboardshortcut"></a>CMFCPropertyGridCtrl::get_accKeyboardShortcut  
+##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut  
 
   
 ```  
@@ -716,7 +711,7 @@ virtual HRESULT get_accKeyboardShortcut(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="get_accselection"></a>CMFCPropertyGridCtrl::get_accSelection  
+##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection  
 
   
 ```  
@@ -730,7 +725,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getbkcolor"></a>CMFCPropertyGridCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CMFCPropertyGridCtrl::GetBkColor  
  擷取目前的屬性方格控制項的背景色彩。  
   
 ```  
@@ -743,7 +738,7 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>備註  
  這個方法會擷取架構用來繪製目前的屬性方格控制項的背景色彩。 [CMFCPropertyGridCtrl::GetTextColor](#gettextcolor)方法會擷取的前景色彩。  
   
-##  <a name="getboldfont"></a>CMFCPropertyGridCtrl::GetBoldFont  
+##  <a name="getboldfont"></a>  CMFCPropertyGridCtrl::GetBoldFont  
  擷取 Windows 字型用來繪製目前的屬性方格控制項中粗體樣式的文字。  
   
 ```  
@@ -753,7 +748,7 @@ CFont& GetBoldFont();
 ### <a name="return-value"></a>傳回值  
  若要參考[CFont](../../mfc/reference/cfont-class.md)說明以粗體字特性的物件。  
   
-##  <a name="getcursel"></a>CMFCPropertyGridCtrl::GetCurSel  
+##  <a name="getcursel"></a>  CMFCPropertyGridCtrl::GetCurSel  
  擷取目前選取的屬性。  
   
 ```  
@@ -765,7 +760,7 @@ CMFCPropertyGridProperty* GetCurSel() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getcustomcolors"></a>CMFCPropertyGridCtrl::GetCustomColors  
+##  <a name="getcustomcolors"></a>  CMFCPropertyGridCtrl::GetCustomColors  
  擷取目前為屬性方格控制項項目定義自訂色彩。  
   
 ```  
@@ -804,7 +799,7 @@ void GetCustomColors(
 ### <a name="remarks"></a>備註  
  使用[CMFCPropertyGridCtrl::SetCustomColors](#setcustomcolors)方法來設定自訂色彩。  
   
-##  <a name="getdescriptionheight"></a>CMFCPropertyGridCtrl::GetDescriptionHeight  
+##  <a name="getdescriptionheight"></a>  CMFCPropertyGridCtrl::GetDescriptionHeight  
  會擷取位在屬性方格控制項底部的 [描述] 區域的高度。  
   
 ```  
@@ -819,7 +814,7 @@ int GetDescriptionHeight() const;
   
  使用[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)方法，以顯示或隱藏 [描述] 區域。 使用[CMFCPropertyGridCtrl::IsDescriptionArea](#isdescriptionarea)方法，以判斷是否顯示或隱藏 [描述] 區域。  
   
-##  <a name="getdescriptionrows"></a>CMFCPropertyGridCtrl::GetDescriptionRows  
+##  <a name="getdescriptionrows"></a>  CMFCPropertyGridCtrl::GetDescriptionRows  
  擷取目前的屬性方格控制項的描述區域中的資料列數目。  
   
 ```  
@@ -832,7 +827,7 @@ int GetDescriptionRows() const;
 ### <a name="remarks"></a>備註  
  [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)建構函式初始化至 3 個資料列的 [描述] 區域。  
   
-##  <a name="getheaderctrl"></a>CMFCPropertyGridCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>  CMFCPropertyGridCtrl::GetHeaderCtrl  
  擷取內部[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)物件架構會使用以顯示目前的屬性方格控制項。  
   
 ```  
@@ -842,7 +837,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="return-value"></a>傳回值  
  對 `CMFCHeaderCtrl` 物件的參考。  
   
-##  <a name="getheaderheight"></a>CMFCPropertyGridCtrl::GetHeaderHeight  
+##  <a name="getheaderheight"></a>  CMFCPropertyGridCtrl::GetHeaderHeight  
  擷取的屬性方格控制項標頭的高度。  
   
 ```  
@@ -854,7 +849,7 @@ int GetHeaderHeight() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getleftcolumnwidth"></a>CMFCPropertyGridCtrl::GetLeftColumnWidth  
+##  <a name="getleftcolumnwidth"></a>  CMFCPropertyGridCtrl::GetLeftColumnWidth  
  擷取目前的屬性方格控制項，其中包含每個屬性名稱的左邊資料行的寬度。  
   
 ```  
@@ -867,7 +862,7 @@ int GetLeftColumnWidth() const;
 ### <a name="remarks"></a>備註  
  屬性方格控制項的右邊資料行包含每個屬性的值。  
   
-##  <a name="getlistrect"></a>CMFCPropertyGridCtrl::GetListRect  
+##  <a name="getlistrect"></a>  CMFCPropertyGridCtrl::GetListRect  
  擷取屬性方格控制項週的框。  
   
 ```  
@@ -879,7 +874,7 @@ CRect GetListRect() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getproperty"></a>CMFCPropertyGridCtrl::GetProperty  
+##  <a name="getproperty"></a>  CMFCPropertyGridCtrl::GetProperty  
  擷取對應至指定的屬性方格控制項中的項目索引的屬性物件的指標。  
   
 ```  
@@ -897,7 +892,7 @@ CMFCPropertyGridProperty* GetProperty(int nIndex) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getpropertycolumnwidth"></a>CMFCPropertyGridCtrl::GetPropertyColumnWidth  
+##  <a name="getpropertycolumnwidth"></a>  CMFCPropertyGridCtrl::GetPropertyColumnWidth  
  擷取包含屬性值的資料行的目前寬度。  
   
 ```  
@@ -910,7 +905,7 @@ int GetPropertyColumnWidth() const;
 ### <a name="remarks"></a>備註  
  在屬性方格控制項的右邊資料行包含的屬性值。 客戶可以使用屬性方格控制項的 [分割] 方塊來變更值的資料行的寬度。  
   
-##  <a name="getpropertycount"></a>CMFCPropertyGridCtrl::GetPropertyCount  
+##  <a name="getpropertycount"></a>  CMFCPropertyGridCtrl::GetPropertyCount  
  擷取屬性方格控制項中的屬性數目。  
   
 ```  
@@ -922,7 +917,7 @@ int GetPropertyCount() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getrowheight"></a>CMFCPropertyGridCtrl::GetRowHeight  
+##  <a name="getrowheight"></a>  CMFCPropertyGridCtrl::GetRowHeight  
  擷取屬性方格控制項中的資料列的高度。  
   
 ```  
@@ -935,7 +930,7 @@ int GetRowHeight() const;
 ### <a name="remarks"></a>備註  
  資料列的高度等於目前的字型高度，再加上 4 個像素。  
   
-##  <a name="getscrollbarctrl"></a>CMFCPropertyGridCtrl::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>  CMFCPropertyGridCtrl::GetScrollBarCtrl  
  擷取捲軸控制項，在屬性方格控制項中的指標。  
   
 ```  
@@ -952,7 +947,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ### <a name="remarks"></a>備註  
  使用這個方法來直接存取垂直捲軸控制項。  
   
-##  <a name="gettextcolor"></a>CMFCPropertyGridCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>  CMFCPropertyGridCtrl::GetTextColor  
  擷取用來繪製目前的屬性方格控制項中的屬性項目文字的色彩。  
   
 ```  
@@ -965,7 +960,7 @@ COLORREF GetTextColor() const;
 ### <a name="remarks"></a>備註  
  這個方法會擷取架構用來繪製目前的屬性方格控制項的前景色彩。 [CMFCPropertyGridCtrl::GetBkColor](#getbkcolor)方法擷取的背景色彩。  
   
-##  <a name="hittest"></a>CMFCPropertyGridCtrl::HitTest  
+##  <a name="hittest"></a>  CMFCPropertyGridCtrl::HitTest  
  擷取對應到屬性方格控制項項目，如果指定的點項目中的屬性物件的指標。 這個方法也會指出包含點屬性方格控制項中的區域。  
   
 ```  
@@ -983,7 +978,7 @@ CMFCPropertyGridProperty* HitTest(
  指標`ClickArea`變數。 當這個方法傳回時，變數會指出*屬性區域*，其中包含指定的點。 如需屬性區域的詳細資訊，請參閱 < 備註 >。  
   
  [輸入] `bPropsOnly`  
- `TRUE`若要測試只能在內容區域。`FALSE`測試*描述區域*如果指定的點不在內容區域中。 預設值是 `FALSE`。 如需描述區域的詳細資訊，請參閱 < 備註 >。  
+ `TRUE` 若要測試只能在內容區域。`FALSE`測試*描述區域*如果指定的點不在內容區域中。 預設值是 `FALSE`。 如需描述區域的詳細資訊，請參閱 < 備註 >。  
   
 ### <a name="return-value"></a>傳回值  
  如果`bPropsOnly`參數是`TRUE`和指定的點是內容區域中，則傳回值是對應的屬性物件的指標。 此外，`pnArea`參數設定為包含指定的點的特定區域。 否則，傳回值是`NULL`和`pnArea`參數不會修改。  
@@ -1002,7 +997,7 @@ CMFCPropertyGridProperty* HitTest(
 |`ClickArea::ClickValue`|屬性值。|  
 |`CMFCPropertyGridProperty::ClickDescription`|屬性方格控制項描述區域。|  
   
-##  <a name="init"></a>CMFCPropertyGridCtrl::Init  
+##  <a name="init"></a>  CMFCPropertyGridCtrl::Init  
  由架構呼叫以初始化屬性方格控制項。  
   
 ```  
@@ -1011,14 +1006,14 @@ virtual void Init();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="initheader"></a>CMFCPropertyGridCtrl::InitHeader  
+##  <a name="initheader"></a>  CMFCPropertyGridCtrl::InitHeader  
  初始化內部[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)物件架構會使用以顯示目前的屬性方格控制項。  
   
 ```  
 virtual void InitHeader();
 ```  
   
-##  <a name="isalphabeticmode"></a>CMFCPropertyGridCtrl::IsAlphabeticMode  
+##  <a name="isalphabeticmode"></a>  CMFCPropertyGridCtrl::IsAlphabeticMode  
  表示屬性方格控制項是否為字母的模式。  
   
 ```  
@@ -1026,14 +1021,14 @@ BOOL IsAlphabeticMode() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果屬性方格控制項是字母的模式，否則`FALSE`。  
+ `TRUE` 如果屬性方格控制項是字母的模式，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  字母的模式在屬性方格控制項時，所有屬性會依其名稱依字母順序都排序。 否則，屬性會分組在其父節點之下。  
   
  使用[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)方法以啟用或停用字母的模式。  
   
-##  <a name="isalwaysshowusertooltip"></a>CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
+##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip  
 
   
 ```  
@@ -1044,7 +1039,7 @@ BOOL IsAlwaysShowUserToolTip() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="isdescriptionarea"></a>CMFCPropertyGridCtrl::IsDescriptionArea  
+##  <a name="isdescriptionarea"></a>  CMFCPropertyGridCtrl::IsDescriptionArea  
  指出是否要顯示的屬性方格控制項的 [描述] 區域。  
   
 ```  
@@ -1052,12 +1047,12 @@ BOOL IsDescriptionArea() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果描述區域會顯示。否則， `FALSE`。  
+ `TRUE` 如果描述區域會顯示。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  使用[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)方法，以隱藏或顯示 [描述] 區域。  
   
-##  <a name="isgroupnamefullwidth"></a>CMFCPropertyGridCtrl::IsGroupNameFullWidth  
+##  <a name="isgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::IsGroupNameFullWidth  
  指出目前的屬性方格控制項的寬度是否會顯示每個屬性群組名稱。  
   
 ```  
@@ -1065,12 +1060,12 @@ BOOL IsGroupNameFullWidth() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果群組名稱顯示的屬性方格控制項，寬度`FALSE`如果所控制的權限 （值） 資料行的群組名稱會被截斷。  
+ `TRUE` 如果群組名稱顯示的屬性方格控制項，寬度`FALSE`如果所控制的權限 （值） 資料行的群組名稱會被截斷。  
   
 ### <a name="remarks"></a>備註  
  A*群組*是在屬性方格控制項的相關屬性的集合。 如果控制項以階層方式，顯示*群組名稱*會顯示為群組的上方資料列中的類別目錄標題。  
   
-##  <a name="isheaderctrl"></a>CMFCPropertyGridCtrl::IsHeaderCtrl  
+##  <a name="isheaderctrl"></a>  CMFCPropertyGridCtrl::IsHeaderCtrl  
  指出是否要顯示此標題控制項。  
   
 ```  
@@ -1078,12 +1073,12 @@ BOOL IsHeaderCtrl() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果顯示此標題控制項。否則`FALSE`。  
+ `TRUE` 如果顯示此標題控制項。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  使用[CMFCPropertyGridCtrl::EnableHeaderCtrl](#enableheaderctrl)來隱藏或顯示此標題控制項的方法。  
   
-##  <a name="ismarkmodifiedproperties"></a>CMFCPropertyGridCtrl::IsMarkModifiedProperties  
+##  <a name="ismarkmodifiedproperties"></a>  CMFCPropertyGridCtrl::IsMarkModifiedProperties  
  表示屬性方格控制項顯示已修改之屬性的方式。  
   
 ```  
@@ -1091,11 +1086,11 @@ BOOL IsMarkModifiedProperties() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果粗體樣式用來顯示，修改屬性。`FALSE`如果規則的樣式用來顯示已修改的內容。  
+ `TRUE` 如果粗體樣式用來顯示，修改屬性。`FALSE`如果規則的樣式用來顯示已修改的內容。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="isshowdragcontext"></a>CMFCPropertyGridCtrl::IsShowDragContext  
+##  <a name="isshowdragcontext"></a>  CMFCPropertyGridCtrl::IsShowDragContext  
  指出當使用者調整資料行 framework 是否重新繪製目前的屬性方格控制項的名稱和值資料行。  
   
 ```  
@@ -1103,12 +1098,12 @@ BOOL IsShowDragContext() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果架構重新調整大小作業; 繪製的名稱和值的資料行，`FALSE`如果架構在拖曳作業執行完成之後，會重繪資料行。  
+ `TRUE` 如果架構重新調整大小作業; 繪製的名稱和值的資料行，`FALSE`如果架構在拖曳作業執行完成之後，會重繪資料行。  
   
 ### <a name="remarks"></a>備註  
  使用者可以拖曳分隔列是資料行之間的調整大小屬性方格控制項的名稱和值資料行。 如果顯示拖曳內容，只要使用者拖曳分隔列會調整大小的名稱和值的資料行。 否則，分割列移動，但是直到完成拖曳作業不重繪資料行。  
   
-##  <a name="isvsdotnetlook"></a>CMFCPropertyGridCtrl::IsVSDotNetLook  
+##  <a name="isvsdotnetlook"></a>  CMFCPropertyGridCtrl::IsVSDotNetLook  
  指出是否在 Visual Studio.NET 樣式中屬性方格控制項的外觀。  
   
 ```  
@@ -1116,12 +1111,12 @@ BOOL IsVSDotNetLook() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果是 Visual Studio.net; 的樣式屬性方格控制項否則， `FALSE`。  
+ `TRUE` 如果是 Visual Studio.net; 的樣式屬性方格控制項否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  使用[CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook)方法設為 Visual Studio.NET 的樣式屬性方格控制項。  
   
-##  <a name="markmodifiedproperties"></a>CMFCPropertyGridCtrl::MarkModifiedProperties  
+##  <a name="markmodifiedproperties"></a>  CMFCPropertyGridCtrl::MarkModifiedProperties  
  指定要顯示已修改之屬性的方式。  
   
 ```  
@@ -1132,14 +1127,14 @@ void MarkModifiedProperties(
   
 ### <a name="parameters"></a>參數  
  [輸入] `bMark`  
- `TRUE`顯示修改粗體樣式; 中的屬性`FALSE`樣式規則中顯示已修改的屬性。 預設值是 `TRUE`。  
+ `TRUE` 顯示修改粗體樣式; 中的屬性`FALSE`樣式規則中顯示已修改的屬性。 預設值是 `TRUE`。  
   
  [輸入] `bRedraw`  
- `TRUE`若要立即; 重繪屬性方格控制項否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要立即; 重繪屬性方格控制項否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onchangeselection"></a>CMFCPropertyGridCtrl::OnChangeSelection  
+##  <a name="onchangeselection"></a>  CMFCPropertyGridCtrl::OnChangeSelection  
  目前的選取範圍變更時由架構呼叫。  
   
 ```  
@@ -1158,7 +1153,7 @@ virtual void OnChangeSelection(
 ### <a name="remarks"></a>備註  
  這個方法的預設實作沒有任何作用。  
   
-##  <a name="onclickbutton"></a>CMFCPropertyGridCtrl::OnClickButton  
+##  <a name="onclickbutton"></a>  CMFCPropertyGridCtrl::OnClickButton  
  按一下屬性按鈕時由架構呼叫。  
   
 ```  
@@ -1172,7 +1167,7 @@ virtual void OnClickButton(CPoint point);
 ### <a name="remarks"></a>備註  
  根據預設，這個方法會更新目前的屬性值。  
   
-##  <a name="ondrawborder"></a>CMFCPropertyGridCtrl::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCPropertyGridCtrl::OnDrawBorder  
  由架構呼叫以繪製框線屬性方格控制項。  
   
 ```  
@@ -1185,7 +1180,7 @@ virtual void OnDrawBorder(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawdescription"></a>CMFCPropertyGridCtrl::OnDrawDescription  
+##  <a name="ondrawdescription"></a>  CMFCPropertyGridCtrl::OnDrawDescription  
  由架構呼叫以繪製說明區域並顯示的描述文字。  
   
 ```  
@@ -1204,7 +1199,7 @@ virtual void OnDrawDescription(
 ### <a name="remarks"></a>備註  
  使用[CMFCPropertyGridCtrl::EnableDescriptionArea](#enabledescriptionarea)方法，以顯示 [描述] 區域。  
   
-##  <a name="ondrawlist"></a>CMFCPropertyGridCtrl::OnDrawList  
+##  <a name="ondrawlist"></a>  CMFCPropertyGridCtrl::OnDrawList  
  由架構呼叫以在屬性方格控制項中顯示的屬性清單。  
   
 ```  
@@ -1217,7 +1212,7 @@ virtual void OnDrawList(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawproperty"></a>CMFCPropertyGridCtrl::OnDrawProperty  
+##  <a name="ondrawproperty"></a>  CMFCPropertyGridCtrl::OnDrawProperty  
  由架構呼叫以顯示屬性。  
   
 ```  
@@ -1238,7 +1233,7 @@ virtual int OnDrawProperty(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onpropertychanged"></a>CMFCPropertyGridCtrl::OnPropertyChanged  
+##  <a name="onpropertychanged"></a>  CMFCPropertyGridCtrl::OnPropertyChanged  
  屬性的值變更時由架構呼叫。  
   
 ```  
@@ -1252,7 +1247,7 @@ virtual void OnPropertyChanged(CMFCPropertyGridProperty* pProp) const;
 ### <a name="remarks"></a>備註  
  根據預設，這個方法會傳送[AFX_WM_PROPERTY_CHANGED](../../mfc/reference/afx-messages.md)屬性方格控制項的擁有者的訊息。  
   
-##  <a name="onselectcombo"></a>CMFCPropertyGridCtrl::OnSelectCombo  
+##  <a name="onselectcombo"></a>  CMFCPropertyGridCtrl::OnSelectCombo  
  選取包含下拉式方塊控制項的屬性時由架構呼叫。  
   
 ```  
@@ -1261,7 +1256,7 @@ void OnSelectCombo();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="removeall"></a>CMFCPropertyGridCtrl::RemoveAll  
+##  <a name="removeall"></a>  CMFCPropertyGridCtrl::RemoveAll  
  從屬性方格控制項中移除所有的屬性物件。  
   
 ```  
@@ -1270,7 +1265,7 @@ void RemoveAll();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="resetoriginalvalues"></a>CMFCPropertyGridCtrl::ResetOriginalValues  
+##  <a name="resetoriginalvalues"></a>  CMFCPropertyGridCtrl::ResetOriginalValues  
  還原所有屬性的原始的值。  
   
 ```  
@@ -1279,11 +1274,11 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bRedraw`  
- `TRUE`重繪內容清單。否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 重繪內容清單。否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setalphabeticmode"></a>CMFCPropertyGridCtrl::SetAlphabeticMode  
+##  <a name="setalphabeticmode"></a>  CMFCPropertyGridCtrl::SetAlphabeticMode  
  設定或重設字母的模式。  
   
 ```  
@@ -1292,12 +1287,12 @@ void SetAlphabeticMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bSet`  
- `TRUE`若要設定是英文字母的模式;`FALSE`重設字母的模式。 預設值是 `TRUE`。  
+ `TRUE` 若要設定是英文字母的模式;`FALSE`重設字母的模式。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
  字母的模式在屬性方格控制項時，控制項來排序其屬性名稱所包含的所有屬性。  
   
-##  <a name="setboollabels"></a>CMFCPropertyGridCtrl::SetBoolLabels  
+##  <a name="setboollabels"></a>  CMFCPropertyGridCtrl::SetBoolLabels  
  指定布林值的標籤的文字。  
   
 ```  
@@ -1315,7 +1310,7 @@ void SetBoolLabels(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setcursel"></a>CMFCPropertyGridCtrl::SetCurSel  
+##  <a name="setcursel"></a>  CMFCPropertyGridCtrl::SetCurSel  
  在屬性方格控制項中選取屬性。  
   
 ```  
@@ -1329,12 +1324,12 @@ void SetCurSel(
  屬性物件的指標。  
   
  [輸入] `bRedraw`  
- `TRUE`若要立即; 重繪屬性方格控制項否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要立即; 重繪屬性方格控制項否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
  您可以使用這個方法來取消目前的項目，在屬性方格控制項中選取，然後選取 對應至指定屬性的項目。  
   
-##  <a name="setcustomcolors"></a>CMFCPropertyGridCtrl::SetCustomColors  
+##  <a name="setcustomcolors"></a>  CMFCPropertyGridCtrl::SetCustomColors  
  指定的屬性方格控制項的各種項目自訂色彩。  
   
 ```  
@@ -1375,7 +1370,7 @@ void SetCustomColors(
   
  若要自訂的特定屬性的外觀，衍生自[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)類別，然後覆寫[CMFCPropertyGridProperty::OnDrawName](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawname)， [Cmfcpropertygridproperty:: Ondrawvalue](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawvalue)， [CMFCPropertyGridProperty::OnDrawExpandBox](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawexpandbox)，和[CMFCPropertyGridProperty::OnDrawButton](../../mfc/reference/cmfcpropertygridproperty-class.md#ondrawbutton)方法。  
   
-##  <a name="setdescriptionrows"></a>CMFCPropertyGridCtrl::SetDescriptionRows  
+##  <a name="setdescriptionrows"></a>  CMFCPropertyGridCtrl::SetDescriptionRows  
  指定要在目前的屬性方格控制項的 [描述] 部分中顯示資料列的數目。  
   
 ```  
@@ -1386,7 +1381,7 @@ void SetDescriptionRows(int nDescRows);
  [輸入] `nDescRows`  
  若要顯示的屬性描述中的資料列數目。  
   
-##  <a name="setgroupnamefullwidth"></a>CMFCPropertyGridCtrl::SetGroupNameFullWidth  
+##  <a name="setgroupnamefullwidth"></a>  CMFCPropertyGridCtrl::SetGroupNameFullWidth  
  指定是否在目前的屬性方格控制項中顯示的一組屬性的類別名稱的完整寬度。  
   
 ```  
@@ -1397,17 +1392,17 @@ void SetGroupNameFullWidth(
   
 ### <a name="parameters"></a>參數  
  [輸入] `bGroupNameFullWidth`  
- `TRUE`顯示完整的寬度，不論屬性名稱資料行的寬度，類別目錄名稱。 `FALSE`若要限制為屬性名稱資料行的寬度，類別目錄名稱的寬度。 預設值是 `TRUE`。  
+ `TRUE` 顯示完整的寬度，不論屬性名稱資料行的寬度，類別目錄名稱。 `FALSE` 若要限制為屬性名稱資料行的寬度，類別目錄名稱的寬度。 預設值是 `TRUE`。  
   
  [輸入] `bRedraw`  
- `TRUE`若要立即; 更新屬性方格控制項`FALSE`來更新控制，下一步 重繪事件時，就會發生。 預設值是 `TRUE`。  
+ `TRUE` 若要立即; 更新屬性方格控制項`FALSE`來更新控制，下一步 重繪事件時，就會發生。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
  屬性方格控制項包含可調整大小*屬性名稱*資料行和*屬性值*資料行。 名稱資料行的結尾也就是值資料行的開頭。 若要調整大小之資料行，拖曳資料行之間的框線。  
   
  條款*群組名稱*和*類別名稱*此方法中交換使用。 類別目錄名稱會顯示在團團一組相關的屬性和值的資料列。 這個方法會指定是否屬性名稱資料行的寬度也會指定的寬度，顯示類別目錄名稱。  
   
-##  <a name="setlistdelimiter"></a>CMFCPropertyGridCtrl::SetListDelimiter  
+##  <a name="setlistdelimiter"></a>  CMFCPropertyGridCtrl::SetListDelimiter  
  定義用來當做分隔符號的屬性值清單中的字元。  
   
 ```  
@@ -1423,7 +1418,7 @@ void SetListDelimiter(TCHAR c);
   
  根據預設， [CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)建構函式設定逗號分隔符號字元 （'，'）。  
   
-##  <a name="setshowdragcontext"></a>CMFCPropertyGridCtrl::SetShowDragContext  
+##  <a name="setshowdragcontext"></a>  CMFCPropertyGridCtrl::SetShowDragContext  
  指定當使用者調整資料行 framework 是否重新繪製目前的屬性方格控制項的名稱和值資料行。  
   
 ```  
@@ -1432,12 +1427,12 @@ void SetShowDragContext(BOOL bShowDragContext = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bShowDragContext`  
- `TRUE`若要調整大小作業; 在重繪的名稱和值的資料行`FALSE`拖曳作業執行完成之後，重繪資料行。 預設值是 `TRUE`。  
+ `TRUE` 若要調整大小作業; 在重繪的名稱和值的資料行`FALSE`拖曳作業執行完成之後，重繪資料行。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
  使用者可以拖曳分隔列是資料行之間的調整大小屬性方格控制項的名稱和值資料行。 如果顯示拖曳內容，只要使用者拖曳分隔列會調整大小的名稱和值的資料行。 否則，分割列移動，但是直到完成拖曳作業不重繪資料行。  
   
-##  <a name="setvsdotnetlook"></a>CMFCPropertyGridCtrl::SetVSDotNetLook  
+##  <a name="setvsdotnetlook"></a>  CMFCPropertyGridCtrl::SetVSDotNetLook  
  設定 Visual Studio.NET 中使用的樣式屬性方格控制項的外觀。  
   
 ```  
@@ -1446,11 +1441,11 @@ void SetVSDotNetLook(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bSet`  
- `TRUE`若要設定為使用 Visual Studio.NET; 中的樣式屬性方格控制項否則， `FALSE`。 預設值是 `TRUE`。  
+ `TRUE` 若要設定為使用 Visual Studio.NET; 中的樣式屬性方格控制項否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="updatecolor"></a>CMFCPropertyGridCtrl::UpdateColor  
+##  <a name="updatecolor"></a>  CMFCPropertyGridCtrl::UpdateColor  
  設定目前選取的色彩屬性的色彩值。  
   
 ```  
@@ -1464,7 +1459,7 @@ virtual void UpdateColor(COLORREF color);
 ### <a name="remarks"></a>備註  
  如果目前選取之屬性的屬性方格控制項不是色彩屬性，此方法判斷提示中偵錯模式。  
   
-##  <a name="validateitemdata"></a>CMFCPropertyGridCtrl::ValidateItemData  
+##  <a name="validateitemdata"></a>  CMFCPropertyGridCtrl::ValidateItemData  
  由架構呼叫以驗證屬性的資料。  
   
 ```  
@@ -1485,6 +1480,6 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
   
  如果您覆寫這個方法，傳回`TRUE`指定的屬性資料是否有效。 否則，傳回`FALSE`，在此情況下，架構不會更新屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

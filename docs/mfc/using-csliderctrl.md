@@ -1,13 +1,10 @@
 ---
-title: "使用 CSliderCtrl |Microsoft 文件"
-ms.custom: 
+title: 使用 CSliderCtrl |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CSliderCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CSliderCtrl class [MFC], using
 - slider controls [MFC], using
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e92358b3aa7d8cffb0c05112e9b8b3587ee6590
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3df9233a8b638dbf22d778d9a14fe513232ecdcf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-csliderctrl"></a>使用 CSliderCtrl
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md)類別代表滑桿控制項，這也稱為 trackbar。 「滑桿控制項」是包含一個滑桿和選擇性刻度標記的視窗。 當使用者使用滑鼠或方向鍵移動滑桿時，滑桿控制項會傳送通知訊息以指出變更。  
@@ -45,6 +40,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [滑桿通知訊息](../mfc/slider-notification-messages.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項](../mfc/controls-mfc.md)
 

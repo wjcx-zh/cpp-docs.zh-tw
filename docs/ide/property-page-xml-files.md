@@ -1,29 +1,24 @@
 ---
-title: "屬性頁 XML 規則檔 |Microsoft 文件"
-ms.custom: 
+title: 屬性頁 XML 規則檔 |Microsoft 文件
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81e8965773c64144059fa433b54484c786159a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcee2c416fba6a959785826781aefd96b0d06d75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-page-xml-rule-files"></a>屬性頁 XML 規則檔
 在 IDE 中的專案屬性頁會設定 VCTargets 資料夾中的 XML 檔案。 確切的路徑取決於 Visual Studio 的哪些 edition(s) 已安裝，並且產品語言。 適用於 Visual Studio 2017 Enterprise Edition，在英文中，路徑是`%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033`。 XML 檔案會描述規則、 類別和個別的屬性、 其資料類型、 預設值的名稱以及其所要顯示的方式。 當您在 IDE 中設定屬性時，新的值會儲存在專案檔中。
@@ -99,28 +94,28 @@ ms.lasthandoff: 12/21/2017
 
    a. **名稱：** Name 屬性是此規則的識別碼。 它需要所有的屬性頁面 xml 檔案的專案之間是唯一的。
 
-   b. **PageTemplate:**這個屬性的值可由 UI 來選擇 UI 範本集合。 [工具] 範本會呈現標準的方格格式中的屬性。 其他內建的值，這個屬性為"偵錯工具 」 和 「 泛型 」。 請參閱的偵錯 節點和 一般 節點，分別指定這些值所產生的 UI 格式。 「 偵錯工具 」 頁範本的 UI 使用下拉式方塊切換不同的偵錯工具的內容，而 「 泛型 」 的範本在一頁，而不需要多個分類規則底下的子節點中顯示不同的屬性類別節點。 這個屬性是只對 UI; 建議xml 檔案被設計為獨立的 UI。 針對不同目的，不同的 UI 可能會使用這個屬性。
+   b. **PageTemplate:** 這個屬性的值可由 UI 來選擇 UI 範本集合。 [工具] 範本會呈現標準的方格格式中的屬性。 其他內建的值，這個屬性為"偵錯工具 」 和 「 泛型 」。 請參閱的偵錯 節點和 一般 節點，分別指定這些值所產生的 UI 格式。 「 偵錯工具 」 頁範本的 UI 使用下拉式方塊切換不同的偵錯工具的內容，而 「 泛型 」 的範本在一頁，而不需要多個分類規則底下的子節點中顯示不同的屬性類別節點。 這個屬性是只對 UI; 建議xml 檔案被設計為獨立的 UI。 針對不同目的，不同的 UI 可能會使用這個屬性。
 
-  c.  **SwitchPrefix:**這是參數的命令列中使用的前置詞。 值為"/"會產生看起來像 /ZI、 /nologo、 /W3 等等的參數。
+  c.  **SwitchPrefix:** 這是參數的命令列中使用的前置詞。 值為"/"會產生看起來像 /ZI、 /nologo、 /W3 等等的參數。
 
   d. **順序：**這是建議的潛在的 UI 用戶端上的這項規則相較於所有其他規則，在系統中的相對位置。
 
-  e. **xmlns:**這是標準的 XAML 項目。 您可以看到所列的三個命名空間。 這些會對應至 XAML 還原序列化的命名空間的類別，XAML 結構描述和系統命名空間，分別。
+  e. **xmlns:** 這是標準的 XAML 項目。 您可以看到所列的三個命名空間。 這些會對應至 XAML 還原序列化的命名空間的類別，XAML 結構描述和系統命名空間，分別。
 
-  f. **DisplayName:**這是規則節點的屬性頁 UI 上所顯示的名稱。 這個值會進行當地語系化。 我們建立 DisplayName 為規則的子元素，而不是屬性 （例如名稱或 SwitchPrefix） 因為內部當地語系化工具的需求。 從 XAML 的觀點來看，兩者都是相等的。 因此，您可以只會使其屬性，以減少雜亂，或讓它保持原狀。
+  f. **DisplayName:** 這是規則節點的屬性頁 UI 上所顯示的名稱。 這個值會進行當地語系化。 我們建立 DisplayName 為規則的子元素，而不是屬性 （例如名稱或 SwitchPrefix） 因為內部當地語系化工具的需求。 從 XAML 的觀點來看，兩者都是相等的。 因此，您可以只會使其屬性，以減少雜亂，或讓它保持原狀。
 
   g. **資料來源：**這是非常重要的屬性，會告知專案系統的位置屬性值應該從中讀取和寫入，以及其分組 （如下所述）。 Cl.xml，這些值如下：
 
 ```xml  
        <DataSource Persistence="ProjectFile" ItemType="ClCompile" Label="" HasConfigurationCondition="true" />
 ```  
-   - `Persistence="ProjectFile`告訴專案系統規則的所有內容應該寫入至專案檔或屬性工作表檔 （依據節點用於繁衍 （spawn） 的屬性頁）。 其他可能的值為"UserFile"，這會將值寫入.user 檔案。
+   - `Persistence="ProjectFile` 告訴專案系統規則的所有內容應該寫入至專案檔或屬性工作表檔 （依據節點用於繁衍 （spawn） 的屬性頁）。 其他可能的值為"UserFile"，這會將值寫入.user 檔案。
 
-   - `ItemType="ClCompile"`指出屬性，將儲存為 ItemDefinition 中繼資料或項目中繼資料 （後者屬性頁已繁衍從方案總管 中的檔案節點時，才） 的這個項目類型。 如果未設定此欄位，做為一般屬性 PropertyGroup 中寫入屬性。
+   - `ItemType="ClCompile"` 指出屬性，將儲存為 ItemDefinition 中繼資料或項目中繼資料 （後者屬性頁已繁衍從方案總管 中的檔案節點時，才） 的這個項目類型。 如果未設定此欄位，做為一般屬性 PropertyGroup 中寫入屬性。
 
-   - `Label=""`指示當屬性都會寫入為`ItemDefinition`中繼資料的父 ItemDefinitionGroup 標籤將會是空白 （每個 MSBuild 項目可以有標籤）。 Visual Studio 2017 使用加上標籤的群組，以瀏覽.vcxproj 專案檔。 請注意，包含大部分的規則內容的群組是空字串做為標籤。
+   - `Label=""` 指示當屬性都會寫入為`ItemDefinition`中繼資料的父 ItemDefinitionGroup 標籤將會是空白 （每個 MSBuild 項目可以有標籤）。 Visual Studio 2017 使用加上標籤的群組，以瀏覽.vcxproj 專案檔。 請注意，包含大部分的規則內容的群組是空字串做為標籤。
 
-   - `HasConfigurationCondition="true"`告訴專案系統，使其接受目前的專案組態 （條件無法附加至父群組或值本身） 的效果附加設定條件和值。 例如，開啟關閉的專案節點的屬性頁，並設定屬性的值**警告與錯誤**下**組態屬性 > C/c + + 一般**為"Yes"。 下列的值會寫入至專案檔。 請注意，設定條件附加至父代 ItemDefinitionGroup。
+   - `HasConfigurationCondition="true"` 告訴專案系統，使其接受目前的專案組態 （條件無法附加至父群組或值本身） 的效果附加設定條件和值。 例如，開啟關閉的專案節點的屬性頁，並設定屬性的值**警告與錯誤**下**組態屬性 > C/c + + 一般**為"Yes"。 下列的值會寫入至專案檔。 請注意，設定條件附加至父代 ItemDefinitionGroup。
 
 ```xml  
      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
@@ -175,14 +170,14 @@ ms.lasthandoff: 12/21/2017
 
    b. **類別：**這宣告這個屬性就會在其下的類別目錄。 嘗試尋找此內容**輸出檔**UI 中的類別。
 
-   c.  **參數：**當規則表示工具 – 例如編譯器工具在此情況下 – 規則的大部分屬性期間不會傳遞為參數工具可執行檔建置時間。 這個屬性的值會指出要使用常值的參數。 上述的屬性會指定其參數應該是**Fo**。 結合**SwitchPrefix**父系規則，此屬性的屬性會被傳遞做為可執行檔**/Fo"偵錯\"** （會顯示在屬性頁 UI C/c + + 命令列中）。
+   c.  **參數：**當規則表示工具 – 例如編譯器工具在此情況下 – 規則的大部分屬性期間不會傳遞為參數工具可執行檔建置時間。 這個屬性的值會指出要使用常值的參數。 上述的屬性會指定其參數應該是**Fo**。 結合**SwitchPrefix**父系規則，此屬性的屬性會被傳遞做為可執行檔 **/Fo"偵錯\"** （會顯示在屬性頁 UI C/c + + 命令列中）。
 
    其他屬性的屬性包括：
 
-   d. **Visible:**如果基於某些原因，您不希望屬性若要顯示在 屬性頁 （但可能仍可在建置階段期間），請將這個屬性設定為 false。
+   d. **Visible:** 如果基於某些原因，您不希望屬性若要顯示在 屬性頁 （但可能仍可在建置階段期間），請將這個屬性設定為 false。
 
-   e. **ReadOnly:**如果您想要提供的屬性頁中的這個屬性的值的唯讀檢視，此屬性設定為 true。
+   e. **ReadOnly:** 如果您想要提供的屬性頁中的這個屬性的值的唯讀檢視，此屬性設定為 true。
 
-   f. **IncludeInCommandLine:**部分屬性可能不需要在建置階段期間傳遞至工具。 將此屬性設定為 false，會造成它無法傳遞。
+   f. **IncludeInCommandLine:** 部分屬性可能不需要在建置階段期間傳遞至工具。 將此屬性設定為 false，會造成它無法傳遞。
 
 

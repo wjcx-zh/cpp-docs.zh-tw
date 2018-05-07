@@ -1,13 +1,10 @@
 ---
-title: "事件對應 |Microsoft 文件"
-ms.custom: 
+title: 事件對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-maps"></a>事件對應
 每當控制項要通知其容器已發生一些動作 (例如按鍵動作、滑鼠點選或變更為控制項的狀態) 時 (由控制項開發人員決定)，會呼叫引發事件函式。 這個函式會透過引發相關事件，來通知控制項容器已發生一些重要動作。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 |[ON_OLEVERB](#on_oleverb)|指出由 OLE 控制項處理的自訂動詞。|  
 |[ON_STDOLEVERB](#on_stdoleverb)|覆寫 OLE 控制項的標準動詞對應。|  
   
-##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP  
  每個`COleControl`位在程式中的衍生的類別可以提供對應至指定的事件，控制項就會引發的事件。  
   
 ```   
@@ -77,7 +72,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
  開始事件對應的定義。  
   
 ```   
@@ -99,7 +94,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>  END_EVENT_MAP  
  使用`END_EVENT_MAP`巨集，以結束事件對應的定義。  
   
 ```   
@@ -109,7 +104,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>  EVENT_CUSTOM  
  定義自訂事件的事件對應項目。  
   
 ```   
@@ -127,13 +122,13 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
  以空格分隔清單指定函式的參數清單的一個或多個常數。  
   
 ### <a name="remarks"></a>備註  
- `vtsParams`參數是以空格分隔的清單中的值**VTS_**常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
+ `vtsParams`參數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如:   
   
  [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
  指定清單，其中包含 32 位元的整數，表示 RGB 色彩值，後面接著的指標**IFontDisp** OLE 字型物件介面。  
   
- **VTS_**常數和其意義如下：  
+ **VTS_** 常數和其意義如下：  
   
 |符號|參數型別|  
 |------------|--------------------|  
@@ -171,7 +166,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
  定義事件引發函式的自訂事件屬於所指定的分派識別碼`dispid`。  
   
 ```   
@@ -197,18 +192,18 @@ EVENT_CUSTOM_ID(
  在事件引發時，變數的參數清單會傳遞至控制項容器。  
   
 ### <a name="remarks"></a>備註  
- `vtsParams`引數是以空格分隔的清單中的值**VTS_**常數。 一或多個以空格分隔，不是逗號，這些值會指定函式的參數清單。 例如:   
+ `vtsParams`引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格分隔，不是逗號，這些值會指定函式的參數清單。 例如:   
   
  [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
  指定清單，其中包含 32 位元的整數，表示 RGB 色彩值，後面接著的指標**IFontDisp** OLE 字型物件介面。  
   
- 取得一份**VTS_**常數，請參閱[EVENT_CUSTOM](#event_custom)。  
+ 取得一份**VTS_** 常數，請參閱[EVENT_CUSTOM](#event_custom)。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxctl.h  
   
-##  <a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>  ON_OLEVERB  
  這個巨集會定義訊息對應項目對應至控制項的特定成員函式的自訂動詞命令。  
   
 ```   
@@ -237,7 +232,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>需求  
   **標頭**afxole.h  
   
-##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
  使用這個巨集覆寫標準動詞的預設行為。  
   
 ```   
@@ -260,5 +255,5 @@ ON_STDOLEVERB(iVerb,   memberFxn)
 ### <a name="requirements"></a>需求  
   **標頭**afxole.h  
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

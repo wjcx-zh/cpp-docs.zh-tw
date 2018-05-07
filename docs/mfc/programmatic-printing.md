@@ -1,13 +1,10 @@
 ---
-title: "以程式設計方式列印 |Microsoft 文件"
-ms.custom: 
+title: 以程式設計方式列印 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>以程式設計方式列印
 OLE 提供方法來唯一識別持續性文件 (**GetClassFile**) 並將它們載入至其相關聯的程式碼 (`CoCreateInstance`， **queryinterface （iid_ipersistfile)**， **Queryinterface （iid_ipersiststorage)**， **ipersistfile:: Load**，和**ipersiststorage:: Load**)。 為了要進一步啟用列印文件，使用中文件內含項目 (使用現有的 OLE 設計，一開始並未隨附於 OLE 2.0) 會引入基底標準列印介面 `IPrint`，通常可透過可以載入文件類型的持續性狀態的物件取得。 主動式文件的每個檢視可以選擇性地支援**IPrint**介面，以提供這些功能。  
@@ -82,6 +77,6 @@ interface IContinueCallback : IUnknown
   
  **FContinue**，不過，不是內容中**iprint:: Print**; 相反地，列印使用**Fcontinueprint**。 列印中的物件應該定期呼叫**FContinuePrinting**傳遞已列印的頁面數目、 正在列印的頁面數目和描述用戶端可能會列印狀態的其他字串選擇要顯示給使用者 （如 「 網頁 5/19 頁)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [主動式文件容器](../mfc/active-document-containers.md)
 

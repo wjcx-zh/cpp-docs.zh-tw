@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrList 類別 |Microsoft 文件"
-ms.custom: 
+title: CTypedPtrList 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318373755ff05667d94b051dabf42822b34894b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 類別
 為 `CPtrList`類別的物件提供類型安全「包裝函式」。  
@@ -111,7 +106,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>需求  
  **Header:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
  此成員函式呼叫`BASE_CLASS` **:: AddHead**。  
   
 ```  
@@ -138,7 +133,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>備註  
  第一版中新增新的項目清單的開頭之前。 第二個版本會加入另一個標頭之前的項目清單。  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
  此成員函式呼叫`BASE_CLASS` **:: AddTail**。  
   
 ```  
@@ -165,7 +160,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>備註  
  第一個版本之後清單的結尾新增新的項目。 第二個版本的清單結尾之後新增另一個項目清單。  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
  類型的變數**位置**是索引鍵的清單。  
   
 ```  
@@ -186,13 +181,13 @@ TYPE GetAt(POSITION position) const;
  如果清單直接或透過指標存取`CTypedPtrList`，然後`GetAt`傳回的範本參數所指定之類型的指標的參考*類型*。 這允許用在指派陳述式的任一邊函式，並因此可讓要修改之清單項目。  
   
 ### <a name="remarks"></a>備註  
- 它不是做為索引中，相同，而且無法用於**位置**自己的值。 `GetAt`擷取`CObject`相關聯的指定位置的指標。  
+ 它不是做為索引中，相同，而且無法用於**位置**自己的值。 `GetAt` 擷取`CObject`相關聯的指定位置的指標。  
   
  您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
  此內嵌函式呼叫`BASE_CLASS` **:: GetAt**。  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
  取得代表標頭項目，此清單的指標。  
   
 ```  
@@ -212,7 +207,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>備註  
  您必須確定清單不是空的再呼叫`GetHead`。 如果清單是空的偵錯版本的 Mfc 程式庫判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單包含項目。  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
  取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**清單中的下一個項目的值。  
   
 ```  
@@ -241,7 +236,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  很可能在反覆項目移除項目。 請參閱範例的[CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)。  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
  取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**先前的項目在清單中的值。  
   
 ```  
@@ -268,7 +263,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  如果擷取的項目是在清單中，第一則的新值`rPosition`設**NULL**。  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  取得代表標頭項目，此清單的指標。  
   
 ```  
@@ -288,7 +283,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>備註  
  您必須確定清單不是空的再呼叫`GetTail`。 如果清單是空的偵錯版本的 Mfc 程式庫判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單包含項目。  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
  從清單的開頭移除的項目，並傳回它。  
   
 ```  
@@ -305,7 +300,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>備註  
  您必須確定清單不是空的再呼叫`RemoveHead`。 如果清單是空的偵錯版本的 Mfc 程式庫判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單包含項目。  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
  從清單的結尾的項目，並傳回它。  
   
 ```  
@@ -322,7 +317,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>備註  
  您必須確定清單不是空的再呼叫`RemoveTail`。 如果清單是空的偵錯版本的 Mfc 程式庫判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單包含項目。  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
  此成員函式呼叫`BASE_CLASS` **:: SetAt**。  
   
 ```  
@@ -340,13 +335,13 @@ void SetAt(POSITION pos, TYPE newElement);
  要寫入至清單的物件指標。  
   
 ### <a name="remarks"></a>備註  
- 類型的變數**位置**是索引鍵的清單。 它不是做為索引中，相同，而且無法用於**位置**自己的值。 `SetAt`寫入指定的位置清單中的物件指標。  
+ 類型的變數**位置**是索引鍵的清單。 它不是做為索引中，相同，而且無法用於**位置**自己的值。 `SetAt` 寫入指定的位置清單中的物件指標。  
   
  您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
  如需詳細註解，請參閱[CObList::SetAt](../../mfc/reference/coblist-class.md#setat)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CPtrList 類別](../../mfc/reference/cptrlist-class.md)   

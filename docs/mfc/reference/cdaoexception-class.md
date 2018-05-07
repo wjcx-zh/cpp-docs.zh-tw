@@ -1,12 +1,9 @@
 ---
-title: "CDaoException 類別 |Microsoft 文件"
-ms.custom: 
+title: CDaoException 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoException
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5295a63a968162f5a891def06206eb50485ab1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoexception-class"></a>CDaoException 類別
 表示以資料存取物件 (DAO) 為基礎之 MFC 資料庫類別所引發的例外狀況。  
@@ -72,7 +67,7 @@ class CDaoException : public CException
 |[CDaoException::m_scode](#m_scode)|[SCODE](#m_scode)與錯誤相關聯的值。|  
   
 ## <a name="remarks"></a>備註  
- 類別包含您可用來判斷造成例外狀況的公用資料成員。 `CDaoException`物件是建構，而且 DAO 資料庫類別的成員函式所擲回。  
+ 類別包含您可用來判斷造成例外狀況的公用資料成員。 `CDaoException` 物件是建構，而且 DAO 資料庫類別的成員函式所擲回。  
   
 > [!NOTE]
 >  DAO 資料庫類別是不同的基礎上開放式資料庫連接 (ODBC) 之 MFC 資料庫類別。 所有的 DAO 資料庫類別名稱有"CDao"前置詞。 您仍然可以使用 DAO 類別存取 ODBC 資料來源。 一般情況下，根據 DAO MFC 類別會更能夠比 ODBC; 為基礎的 MFC 類別DAO 類別都可以存取資料，包括透過 ODBC 驅動程式，透過它們自己的資料庫引擎。 DAO 類別也支援資料定義語言 (DDL) 作業，例如新增而不需要直接呼叫 DAO 類別，透過資料表。 如需 ODBC 類別所擲回的例外狀況的資訊，請參閱[CDBException](../../mfc/reference/cdbexception-class.md)。  
@@ -95,7 +90,7 @@ class CDaoException : public CException
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-##  <a name="cdaoexception"></a>CDaoException::CDaoException  
+##  <a name="cdaoexception"></a>  CDaoException::CDaoException  
  建構 `CDaoException` 物件。  
   
 ```  
@@ -123,7 +118,7 @@ CDaoException();
   
  如需在 MFC DAO 類別中的錯誤處理的詳細資訊，請參閱文章[例外狀況： 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。  
   
-##  <a name="geterrorcount"></a>CDaoException::GetErrorCount  
+##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount  
  呼叫此成員函式可擷取的 DAO 資料庫引擎的錯誤集合中的錯誤物件數目。  
   
 ```  
@@ -139,7 +134,7 @@ short GetErrorCount();
 > [!NOTE]
 >  一般的錯誤集合中沒有只有一個物件時發生錯誤。 如果您正在使用的 ODBC 資料來源，不過，可能有多個。  
   
-##  <a name="geterrorinfo"></a>CDaoException::GetErrorInfo  
+##  <a name="geterrorinfo"></a>  CDaoException::GetErrorInfo  
  傳回有關特定錯誤物件資訊時發生錯誤至錯誤集合。  
   
 ```  
@@ -163,11 +158,11 @@ void GetErrorInfo(int nIndex);
   
 -   說明內容  
   
- `GetErrorInfo`例外狀況物件中儲存的資訊`m_pErrorInfo`資料成員。 傳回的資訊的簡短描述，請參閱[m_pErrorInfo](#m_perrorinfo)。 如果您攔截例外狀況型別的`CDaoException`MFC，所擲回`m_pErrorInfo`成員就會自動填入。 如果您選擇直接呼叫 DAO，您必須呼叫例外狀況物件的`GetErrorInfo`成員函式自行填滿`m_pErrorInfo`。 如需更詳細的說明，請參閱[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)結構。  
+ `GetErrorInfo` 例外狀況物件中儲存的資訊`m_pErrorInfo`資料成員。 傳回的資訊的簡短描述，請參閱[m_pErrorInfo](#m_perrorinfo)。 如果您攔截例外狀況型別的`CDaoException`MFC，所擲回`m_pErrorInfo`成員就會自動填入。 如果您選擇直接呼叫 DAO，您必須呼叫例外狀況物件的`GetErrorInfo`成員函式自行填滿`m_pErrorInfo`。 如需更詳細的說明，請參閱[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)結構。  
   
  如需 DAO 例外狀況和範例程式碼，請參閱文章[例外狀況： 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。  
   
-##  <a name="m_nafxdaoerror"></a>CDaoException::m_nAfxDaoError  
+##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError  
  包含 MFC 延伸錯誤碼。  
   
 ### <a name="remarks"></a>備註  
@@ -183,7 +178,7 @@ void GetErrorInfo(int nIndex);
   
 - **AFX_DAO_ERROR_OBJECT_NOT_OPEN**您嘗試開啟資料錄集根據 querydef 或 tabledef 物件未處於開啟狀態。  
   
-##  <a name="m_perrorinfo"></a>CDaoException::m_pErrorInfo  
+##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo  
  包含的指標`CDaoErrorInfo`提供藉由呼叫最後擷取的 DAO 錯誤物件的相關資訊的結構[GetErrorInfo](#geterrorinfo)。  
   
 ### <a name="remarks"></a>備註  
@@ -199,7 +194,7 @@ void GetErrorInfo(int nIndex);
   
  如需中所包含的資訊的完整詳細資料`CDaoErrorInfo`物件，請參閱[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)結構。  
   
-##  <a name="m_scode"></a>CDaoException::m_scode  
+##  <a name="m_scode"></a>  CDaoException::m_scode  
  包含型別的值`SCODE`描述錯誤。  
   
 ### <a name="remarks"></a>備註  
@@ -207,7 +202,7 @@ void GetErrorInfo(int nIndex);
   
  如需有關資訊`SCODE`，請參閱主題[錯誤碼的結構 OLE](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK 中。 `SCODE`資料類型會對應至`HRESULT`資料型別。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CException 類別](../../mfc/reference/cexception-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CException 類別](../../mfc/reference/cexception-class.md)

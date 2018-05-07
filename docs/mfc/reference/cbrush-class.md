@@ -1,12 +1,9 @@
 ---
-title: "CBrush 類別 |Microsoft 文件"
-ms.custom: 
+title: CBrush 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBrush
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbrush-class"></a>CBrush 類別
 封裝 Windows 繪圖裝置介面 (GDI) 筆刷。  
@@ -98,7 +93,7 @@ class CBrush : public CGdiObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
+##  <a name="cbrush"></a>  CBrush::CBrush  
  建構 `CBrush` 物件。  
   
 ```  
@@ -115,23 +110,23 @@ explicit CBrush(CBitmap* pBitmap);
  `nIndex`  
  指定的筆刷的影線類型。 它可以是下列值之一：  
   
-- `HS_BDIAGONAL`在 45 度向下串聯 （由左到右）  
+- `HS_BDIAGONAL` 在 45 度向下串聯 （由左到右）  
   
-- `HS_CROSS`水平和垂直有斜紋  
+- `HS_CROSS` 水平和垂直有斜紋  
   
-- `HS_DIAGCROSS`Crosshatch 45 度角  
+- `HS_DIAGCROSS` Crosshatch 45 度角  
   
-- `HS_FDIAGONAL`在 45 度向上串聯 （由左到右）  
+- `HS_FDIAGONAL` 在 45 度向上串聯 （由左到右）  
   
-- `HS_HORIZONTAL`水平影線  
+- `HS_HORIZONTAL` 水平影線  
   
-- `HS_VERTICAL`垂直影線  
+- `HS_VERTICAL` 垂直影線  
   
  `pBitmap`  
  指向`CBitmap`物件，指定與筆刷繪製的點陣圖。  
   
 ### <a name="remarks"></a>備註  
- `CBrush`有四個多載建構函式。不使用引數的建構函式會建構未初始化`CBrush`必須初始化，才能使用的物件。  
+ `CBrush` 有四個多載建構函式。不使用引數的建構函式會建構未初始化`CBrush`必須初始化，才能使用的物件。  
   
  如果您使用不含引數的建構函式，您必須初始化產生`CBrush`物件[CreateSolidBrush](#createsolidbrush)， [CreateHatchBrush](#createhatchbrush)， [CreateBrushIndirect](#createbrushindirect)， [CreatePatternBrush](#createpatternbrush)，或[CreateDIBPatternBrush](#createdibpatternbrush)。 如果您使用其中一個會採用引數的建構函式，則不進行任何初始化不需要。 如果發生錯誤，而不使用引數的建構函式一定會成功，則引數的建構函式會擲回例外狀況。  
   
@@ -144,7 +139,7 @@ explicit CBrush(CBitmap* pBitmap);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
  初始化與樣式、 色彩和模式中指定的筆刷[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)結構。  
   
 ```  
@@ -166,7 +161,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
  使用指定的裝置獨立點陣圖 (DIB) 的模式，初始化筆刷。  
   
 ```  
@@ -185,7 +180,7 @@ BOOL CreateDIBPatternBrush(
  識別包含壓縮的裝置獨立點陣圖 (DIB) 的全域記憶體物件。  
   
  *nUsage*  
- 指定是否**bmiColors []**欄位[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)資料結構 （屬於 「 封裝 DIB 」） 到目前實現邏輯色板包含明確的 RGB 值或索引。 參數必須是下列值之一：  
+ 指定是否**bmiColors []** 欄位[BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md)資料結構 （屬於 「 封裝 DIB 」） 到目前實現邏輯色板包含明確的 RGB 值或索引。 參數必須是下列值之一：  
   
 - **DIB_PAL_COLORS**色彩表包含 16 位元索引的陣列。  
   
@@ -221,7 +216,7 @@ BOOL CreateDIBPatternBrush(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
  初始化具有指定影線的模式和色彩的筆刷。  
   
 ```  
@@ -234,17 +229,17 @@ BOOL CreateHatchBrush(
  `nIndex`  
  指定的筆刷的影線類型。 它可以是下列值之一：  
   
-- `HS_BDIAGONAL`在 45 度向下串聯 （由左到右）  
+- `HS_BDIAGONAL` 在 45 度向下串聯 （由左到右）  
   
-- `HS_CROSS`水平和垂直有斜紋  
+- `HS_CROSS` 水平和垂直有斜紋  
   
-- `HS_DIAGCROSS`Crosshatch 45 度角  
+- `HS_DIAGCROSS` Crosshatch 45 度角  
   
-- `HS_FDIAGONAL`在 45 度向上串聯 （由左到右）  
+- `HS_FDIAGONAL` 在 45 度向上串聯 （由左到右）  
   
-- `HS_HORIZONTAL`水平影線  
+- `HS_HORIZONTAL` 水平影線  
   
-- `HS_VERTICAL`垂直影線  
+- `HS_VERTICAL` 垂直影線  
   
  `crColor`  
  指定前景色彩的筆刷做為 RGB 色彩 （影線色彩）。 請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)如需詳細資訊的 Windows SDK 中。  
@@ -258,7 +253,7 @@ BOOL CreateHatchBrush(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
  指定點陣圖的模式，初始化筆刷。  
   
 ```  
@@ -286,7 +281,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
  初始化具有指定的單色筆刷。  
   
 ```  
@@ -308,7 +303,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ### <a name="example"></a>範例  
   請參閱範例的[CBrush::CBrush](#cbrush)。  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
  初始化筆刷色彩。  
   
 ```  
@@ -330,7 +325,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
  將指標傳回至`CBrush`物件時指定的 windows 控制代碼[HBRUSH](#operator_hbrush)物件。  
   
 ```  
@@ -339,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
 ### <a name="parameters"></a>參數  
  `hBrush`  
- `HANDLE`為 Windows GDI 筆刷。  
+ `HANDLE` 為 Windows GDI 筆刷。  
   
 ### <a name="return-value"></a>傳回值  
  指標`CBrush`物件，如果成功，否則**NULL**。  
@@ -352,7 +347,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ### <a name="example"></a>範例  
   請參閱範例的[CBrush::CBrush](#cbrush)。  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
  呼叫此成員函式可擷取`LOGBRUSH`結構。  
   
 ```  
@@ -378,7 +373,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>HBRUSH CBrush::operator  
+##  <a name="operator_hbrush"></a>  HBRUSH CBrush::operator  
  使用此運算子，以取得附加的 Windows GDI 控制代碼的`CBrush`物件。  
   
 ```  
@@ -396,7 +391,7 @@ operator HBRUSH() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 PROPDLG](../../visual-cpp-samples.md)   
  [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

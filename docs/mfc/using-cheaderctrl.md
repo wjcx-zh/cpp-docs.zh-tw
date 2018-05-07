@@ -1,13 +1,10 @@
 ---
-title: "使用 CHeaderCtrl |Microsoft 文件"
-ms.custom: 
+title: 使用 CHeaderCtrl |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CHeaderCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88b4da42944c3c42e48fae4c0cf503f7f6ace1a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8825f4cb82d734cee8da410a318a46d57ca61b4b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cheaderctrl"></a>使用 CHeaderCtrl
 使用標題控制項，類別所代表[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)，以顯示資料行標頭，如需單欄式清單。 例如，標題控制項會是適用於實作試算表中的資料行控制。  
@@ -62,6 +57,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [處理標題控制項通知](../mfc/processing-header-control-notifications.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項](../mfc/controls-mfc.md)
 

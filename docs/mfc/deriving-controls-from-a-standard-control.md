@@ -1,13 +1,10 @@
 ---
-title: "從標準控制項衍生控制項 |Microsoft 文件"
-ms.custom: 
+title: 從標準控制項衍生控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>從標準控制項衍生控制項
 如同使用任何[CWnd](../mfc/reference/cwnd-class.md)-衍生的類別，您可以從現有的控制項類別衍生新類別，以修改控制項的行為。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  由於衍生的控制項是內嵌在對話方塊類別中，因此會在建構對話方塊時建構該控制項，所以也會在終結對話方塊時終結該控制項。 比較這個程式碼中的範例[手動加入控制項](../mfc/adding-controls-by-hand.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立及使用控制項](../mfc/making-and-using-controls.md)   
  [控制項](../mfc/controls-mfc.md)
 

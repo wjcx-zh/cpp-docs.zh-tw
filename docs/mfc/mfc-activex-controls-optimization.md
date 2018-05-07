@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 最佳化 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 最佳化 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46a17a6594db6c59148042f6e8c6cc72c7068dc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c91f147637b53250f8d373af9950d6205c82d3e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 控制項：最佳化
 本文說明可用來最佳化您的 ActiveX 控制項，以提升效能的技術。  
@@ -75,6 +70,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [最佳化控制項繪圖](../mfc/optimizing-control-drawing.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

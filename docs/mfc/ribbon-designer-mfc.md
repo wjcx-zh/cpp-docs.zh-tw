@@ -1,13 +1,10 @@
 ---
-title: "功能區設計工具 (MFC) |Microsoft 文件"
-ms.custom: 
+title: 功能區設計工具 (MFC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.ribbon.F1
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dde2c26855e8d8acd51b8c607867d9b92b3987f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ribbon-designer-mfc"></a>功能區設計工具 (MFC)
 功能區設計工具可讓您建立和自訂 MFC 應用程式中的功能區。 功能區是可將命令組織成邏輯群組的使用者介面 (UI) 項目。 這些群組可出現在跨視窗頂端區域中的個別索引標籤上。 功能區取代了功能表列和工具列。 功能區可大幅改善應用程式可用性。 如需詳細資訊，請參閱[功能區](http://go.microsoft.com/fwlink/p/?linkid=129233)。 下圖顯示功能區。  
@@ -83,7 +78,7 @@ ms.lasthandoff: 01/03/2018
   
  ![MFC 功能區設計工具](../mfc/media/ribbon_designer.png "ribbon_designer")  
   
-- **在 [工具箱]:**包含可以拖曳至設計工具介面的控制項。  
+- **在 [工具箱]:** 包含可以拖曳至設計工具介面的控制項。  
   
 - **設計工具介面：**包含功能區資源的視覺表示法。  
   
@@ -118,7 +113,7 @@ ms.lasthandoff: 01/03/2018
   
 - **功能區項目：**面板中的控制項，例如按鈕和下拉式方塊。 若要查看可以裝載各種控制項的功能區上，請參閱[RibbonGadgets 範例： 功能區小工具應用程式](../visual-cpp-samples.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
  [使用資源檔](../windows/working-with-resource-files.md)
 

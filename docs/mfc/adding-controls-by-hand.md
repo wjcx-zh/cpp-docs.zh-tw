@@ -1,13 +1,10 @@
 ---
-title: "加入控制項以手動方式 |Microsoft 文件"
-ms.custom: 
+title: 加入控制項以手動方式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - controls [MFC], adding to dialog boxes
 - common controls [MFC], adding
 ms.assetid: bc843e59-0c51-4b5b-8bf2-343f716469d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b13f6fdfb3c11819eb8d8838e5617e7a349d1023
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efe510c4376255c24470a799b5dde17021894bf0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-controls-by-hand"></a>以手動方式加入控制項
 您可以[將控制項加入對話方塊中，使用對話方塊編輯器](../mfc/using-the-dialog-editor-to-add-controls.md)或將它們加入您自己，以程式碼。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  在建立之後編輯物件，您也可以設定輸入的焦點至控制項藉由呼叫`SetFocus`成員函式。 最後，您會傳回從 0`OnInitDialog`以顯示您將焦點設定。 如果您傳回非零值時，對話方塊管理員會將焦點設定到對話方塊項目清單中的第一個控制項項目。 在大部分情況下，您會想要將控制項加入至您的對話方塊中，使用對話方塊編輯器。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立及使用控制項](../mfc/making-and-using-controls.md)   
  [控制項](../mfc/controls-mfc.md)   
  [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)

@@ -1,12 +1,9 @@
 ---
-title: "COleDataSource 類別 |Microsoft 文件"
-ms.custom: 
+title: COleDataSource 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDataSource
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce9abdccba549e0b0fd3c55bfb7fbaee6a11e27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledatasource-class"></a>COleDataSource 類別
 做為快取，應用程式在此放置資料，以便在資料傳輸作業 (例如剪貼簿或拖放作業) 期間提供。  
@@ -110,7 +105,7 @@ class COleDataSource : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭：** afxole.h  
   
-##  <a name="cachedata"></a>COleDataSource::CacheData  
+##  <a name="cachedata"></a>  COleDataSource::CacheData  
  呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
   
 ```  
@@ -143,7 +138,7 @@ void CacheData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="cacheglobaldata"></a>COleDataSource::CacheGlobalData  
+##  <a name="cacheglobaldata"></a>  COleDataSource::CacheGlobalData  
  呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
   
 ```  
@@ -172,14 +167,14 @@ void CacheGlobalData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="coledatasource"></a>COleDataSource::COleDataSource  
+##  <a name="coledatasource"></a>  COleDataSource::COleDataSource  
  建構 `COleDataSource` 物件。  
   
 ```  
 COleDataSource();
 ```  
   
-##  <a name="delayrenderdata"></a>COleDataSource::DelayRenderData  
+##  <a name="delayrenderdata"></a>  COleDataSource::DelayRenderData  
  呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
   
 ```  
@@ -206,7 +201,7 @@ void DelayRenderData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="delayrenderfiledata"></a>COleDataSource::DelayRenderFileData  
+##  <a name="delayrenderfiledata"></a>  COleDataSource::DelayRenderFileData  
  呼叫此函式以指定的格式，在其中的資料期間提供的資料傳輸作業。  
   
 ```  
@@ -233,7 +228,7 @@ void DelayRenderFileData(
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="delaysetdata"></a>COleDataSource::DelaySetData  
+##  <a name="delaysetdata"></a>  COleDataSource::DelaySetData  
  呼叫此函式來支援變更資料來源的內容。  
   
 ```  
@@ -250,13 +245,13 @@ void DelaySetData(
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述中的資料是要被取代的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值會用於中的其他欄位**FORMATETC**結構。  
   
 ### <a name="remarks"></a>備註  
- [OnSetData](#onsetdata)會在發生此情況時由架構呼叫。 這只用於架構傳回的資料來源時[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`未呼叫您`OnSetData`永遠不會呼叫函式。 `DelaySetData`應該針對每個剪貼簿呼叫或**FORMATETC**您支援的格式。  
+ [OnSetData](#onsetdata)會在發生此情況時由架構呼叫。 這只用於架構傳回的資料來源時[COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)。 如果`DelaySetData`未呼叫您`OnSetData`永遠不會呼叫函式。 `DelaySetData` 應該針對每個剪貼簿呼叫或**FORMATETC**您支援的格式。  
   
  如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的結構。  
   
  如需詳細資訊，請參閱[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows SDK 中。  
   
-##  <a name="dodragdrop"></a>Coledatasource:: Dodragdrop  
+##  <a name="dodragdrop"></a>  Coledatasource:: Dodragdrop  
  呼叫`DoDragDrop`成員函式來執行拖放作業，此資料來源，通常在[CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown)處理常式。  
   
 ```  
@@ -270,13 +265,13 @@ DROPEFFECT DoDragDrop(
  `dwEffects`  
  拖放作業所允許在此資料來源。 可以是下列一或多個項目：  
   
-- `DROPEFFECT_COPY`無法執行複製作業。  
+- `DROPEFFECT_COPY` 無法執行複製作業。  
   
-- `DROPEFFECT_MOVE`無法執行移動作業。  
+- `DROPEFFECT_MOVE` 無法執行移動作業。  
   
-- `DROPEFFECT_LINK`無法建立已卸除的資料從原始資料的連結。  
+- `DROPEFFECT_LINK` 無法建立已卸除的資料從原始資料的連結。  
   
-- `DROPEFFECT_SCROLL`表示可能發生拖曳捲軸作業。  
+- `DROPEFFECT_SCROLL` 表示可能發生拖曳捲軸作業。  
   
  `lpRectStartDrag`  
  實際開始拖曳所定義的矩形的指標。 如需詳細資訊，請參閱接下來的＜備註＞一節。  
@@ -302,7 +297,7 @@ DROPEFFECT DoDragDrop(
   
  如需詳細資訊，請參閱文章[將拖放： 實作置放來源](../../mfc/drag-and-drop-implementing-a-drop-source.md)。  
   
-##  <a name="empty"></a>COleDataSource::Empty  
+##  <a name="empty"></a>  COleDataSource::Empty  
  呼叫此函式可空白`COleDataSource`資料物件。  
   
 ```  
@@ -314,7 +309,7 @@ void Empty();
   
  如需詳細資訊，請參閱[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows SDK 中。  
   
-##  <a name="flushclipboard"></a>COleDataSource::FlushClipboard  
+##  <a name="flushclipboard"></a>  COleDataSource::FlushClipboard  
  將剪貼簿，並再貼上剪貼簿的資料，您的應用程式關閉後的資料呈現。  
   
 ```  
@@ -324,7 +319,7 @@ static void PASCAL FlushClipboard();
 ### <a name="remarks"></a>備註  
  使用[SetClipboard](#setclipboard)將資料放在剪貼簿。  
   
-##  <a name="getclipboardowner"></a>COleDataSource::GetClipboardOwner  
+##  <a name="getclipboardowner"></a>  COleDataSource::GetClipboardOwner  
  決定是否變更過資料到剪貼簿上的[SetClipboard](#setclipboard)上次呼叫，若是如此，識別目前的擁有者。  
   
 ```  
@@ -334,7 +329,7 @@ static COleDataSource* PASCAL GetClipboardOwner();
 ### <a name="return-value"></a>傳回值  
  資料來源目前在剪貼簿，或**NULL**如果沒有任何剪貼簿上，或呼叫應用程式不屬於剪貼簿。  
   
-##  <a name="onrenderdata"></a>COleDataSource::OnRenderData  
+##  <a name="onrenderdata"></a>  COleDataSource::OnRenderData  
  由架構呼叫以擷取指定格式的資料。  
   
 ```  
@@ -362,7 +357,7 @@ virtual BOOL OnRenderData(
   
  如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構[TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227)列舉型別和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)在 Windows SDK。  
   
-##  <a name="onrenderfiledata"></a>COleDataSource::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleDataSource::OnRenderFileData  
  由架構呼叫以指定的儲存體中為檔案時，擷取指定的格式中的資料。  
   
 ```  
@@ -388,7 +383,7 @@ virtual BOOL OnRenderFileData(
   
  如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
   
-##  <a name="onrenderglobaldata"></a>COleDataSource::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleDataSource::OnRenderGlobalData  
  由架構呼叫以時指定的儲存體中是全域記憶體擷取資料，以指定的格式。  
   
 ```  
@@ -416,7 +411,7 @@ virtual BOOL OnRenderGlobalData(
   
  如需詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) Windows SDK 中。  
   
-##  <a name="onsetdata"></a>COleDataSource::OnSetData  
+##  <a name="onsetdata"></a>  COleDataSource::OnSetData  
  由架構呼叫以設定或取代中的資料`COleDataSource`物件中指定的格式。  
   
 ```  
@@ -446,14 +441,14 @@ virtual BOOL OnSetData(
   
  如需詳細資訊，請參閱[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)和[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構和[ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491)和[idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431)Windows SDK 中的函式。  
   
-##  <a name="setclipboard"></a>COleDataSource::SetClipboard  
+##  <a name="setclipboard"></a>  COleDataSource::SetClipboard  
  將中所包含的資料放`COleDataSource`物件上呼叫下列函數的其中一個之後剪貼簿： [CacheData](#cachedata)， [CacheGlobalData](#cacheglobaldata)， [DelayRenderData](#delayrenderdata)，或[DelayRenderFileData](#delayrenderfiledata)。  
   
 ```  
 void SetClipboard();
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   

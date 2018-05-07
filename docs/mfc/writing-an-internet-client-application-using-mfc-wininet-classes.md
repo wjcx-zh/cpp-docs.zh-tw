@@ -1,13 +1,10 @@
 ---
-title: "使用 MFC WinInet 類別建立網際網路用戶端應用程式 |Microsoft 文件"
-ms.custom: 
+title: 使用 MFC WinInet 類別建立網際網路用戶端應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], client applications
 - MFC, Internet applications
 ms.assetid: a2c4a40c-a94e-4b3e-9dbf-f8a8dc8e5428
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b97d4af18ff560a48aadb3ba71b61609f82a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>使用 MFC WinInet 類別建立網際網路用戶端應用程式
 所有網際網路用戶端應用程式的基礎都是網際網路工作階段。 MFC 網際網路工作階段實作為類別的物件[CInternetSession](../mfc/reference/cinternetsession-class.md)。 使用這個類別，您就可以建立一個網際網路工作階段或多個同時執行的工作階段。  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [如何撰寫 HTTP 用戶端應用程式](../mfc/steps-in-a-typical-http-client-application.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [建立網際網路用戶端應用程式的 MFC 類別](../mfc/mfc-classes-for-creating-internet-client-applications.md)   
  [網際網路用戶端類別的必要條件](../mfc/prerequisites-for-internet-client-classes.md)

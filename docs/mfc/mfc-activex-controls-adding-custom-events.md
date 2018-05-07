@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 加入自訂事件 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 加入自訂事件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 控制項：加入自訂事件
 自訂事件與不同的內建事件的類別不會自動引發`COleControl`。 自訂的事件會辨識某些動作，由控制項開發人員，為事件。 自訂事件的事件對應項目都由`EVENT_CUSTOM`巨集。 下列章節實作 ActiveX 控制項專案使用 ActiveX 控制項精靈所建立的自訂事件。  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a>加入與自訂事件加入事件精靈  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a> 加入與自訂事件加入事件精靈  
  下列程序會加入特定的自訂事件，ClickIn。 您可以使用此程序新增其他自訂的事件。 取代為您自訂事件的名稱和參數與 ClickIn 事件名稱及其參數。  
   
 #### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>若要加入使用加入事件精靈 ClickIn 自訂事件  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 8.  按一下**完成**建立的事件。  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a>加入事件精靈變更的自訂事件  
+##  <a name="_core_classwizard_changes_for_custom_events"></a> 加入事件精靈變更的自訂事件  
  當您新增自訂的事件時，加入事件精靈會在控制項類別中進行變更。H。CPP、 和。IDL 檔案。 下列程式碼範例僅適用於 ClickIn 事件。  
   
  下列幾行加入至標頭 (。H） 檔案的控制項類別：  
@@ -83,7 +78,7 @@ ms.lasthandoff: 12/21/2017
   
  這一行會指派特定的 ID 編號，取自加入事件精靈的 [事件] 清單中的事件位置 ClickIn 事件。 [事件] 清單中的項目可讓容器以預測事件。 例如，它可能會提供事件引發時執行的處理常式程式碼。  
   
-##  <a name="_core_calling_fireclickin"></a>呼叫 FireClickIn  
+##  <a name="_core_calling_fireclickin"></a> 呼叫 FireClickIn  
  既然您已加入使用加入事件精靈 ClickIn 自訂事件，您必須決定要引發此事件時。 您可以呼叫`FireClickIn`適當的動作就會發生。 這個討論而言，此控制項會使用`InCircle`函式內`WM_LBUTTONDOWN`引發 ClickIn 事件，當使用者按一下圓形或橢圓形的區域內部的訊息處理常式。 下列程序加入`WM_LBUTTONDOWN`處理常式。  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>加入訊息處理常式加入事件精靈  
@@ -117,7 +112,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a>自訂事件具有內建名稱  
+##  <a name="_core_custom_events_with_stock_names"></a> 自訂事件具有內建名稱  
  您可以建立自訂事件與內建的事件名稱相同，不過您可以實作在相同的控制項。 例如，您可以建立自訂事件呼叫內建事件正常引發按一下時不會引發的按一下。 您再無法藉由呼叫其引發的函式，隨時引發 Click 事件。  
   
  下列程序會加入自訂的按一下事件。  
@@ -140,7 +135,7 @@ ms.lasthandoff: 12/21/2017
   
 7.  呼叫`FireClick`在程式碼中的適當位置。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控制項： 方法](../mfc/mfc-activex-controls-methods.md)   
  [COleControl 類別](../mfc/reference/colecontrol-class.md)

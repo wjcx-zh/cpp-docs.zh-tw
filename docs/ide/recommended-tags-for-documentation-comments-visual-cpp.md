@@ -1,27 +1,22 @@
 ---
-title: "建議使用的文件註解 （Visual c + +） 標籤 |Microsoft 文件"
-ms.custom: 
+title: 建議使用的文件註解 （Visual c + +） 標籤 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c1b0e762ec2167a988e8e18f3dce932214716c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b25ad029a59c4b23bcab093b3742f16f7ca9175
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>建議使用的文件註解標記 (Visual C++)
 Visual c + + 編譯器將會處理在程式碼中的文件註解，並建立.xdc 檔案以供每個編譯單位中，並 xdcmake.exe 會處理到.xml 檔.xdc 檔。 處理要建立文件的.xml 檔案是必須位於您網站實作詳細資料。  
@@ -48,5 +43,5 @@ Visual c + + 編譯器將會處理在程式碼中的文件註解，並建立.xdc
   
  在目前版本中，Visual c + + 編譯器不支援`<paramref>`，其他 Visual Studio 編譯器所支援的標記。 Visual c + + 可能支援`<paramref>`未來的版本。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

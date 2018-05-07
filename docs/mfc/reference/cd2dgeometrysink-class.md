@@ -1,12 +1,9 @@
 ---
-title: "CD2DGeometrySink 類別 |Microsoft 文件"
-ms.custom: 
+title: CD2DGeometrySink 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGeometrySink
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89286aaccd2c59efb2bac14978a2d8838af7a4e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 類別
 ID2D1GeometrySink 包裝函式。  
@@ -114,14 +109,14 @@ class CD2DGeometrySink;
 ## <a name="requirements"></a>需求  
  **標頭：** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: ~ CD2DGeometrySink  
+##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink  
  解構函式。 D2D 幾何接收物件終結時呼叫。  
   
 ```  
 virtual ~CD2DGeometrySink();
 ```  
   
-##  <a name="addarc"></a>CD2DGeometrySink::AddArc  
+##  <a name="addarc"></a>  CD2DGeometrySink::AddArc  
  將單一圓弧加入至之路徑幾何  
   
 ```  
@@ -132,7 +127,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
  `arc`  
  此圖中加入的圓弧線段  
   
-##  <a name="addbezier"></a>CD2DGeometrySink::AddBezier  
+##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
  在目前的點和指定的結束點之間建立三次方貝茲曲線。  
   
 ```  
@@ -143,7 +138,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
  `bezier`  
  結構描述的控點和結束點，若要加入的貝茲曲線。  
   
-##  <a name="addbeziers"></a>CD2DGeometrySink::AddBeziers  
+##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
  建立三次方貝茲曲線的序列，並將它們加入至這個幾何接收器。  
   
 ```  
@@ -156,7 +151,7 @@ void AddBeziers(
  `beziers`  
  描述建立貝茲曲線的貝茲區段陣列。 從 geometry 接收的目前位置 （結束點繪製的最後一個區段或 BeginFigure 所指定的位置） 繪製曲線到陣列中的第一個貝茲區段的結束點。 如果陣列包含額外的貝茲區段，每個後續的貝茲區段會使用上述的貝茲區段的結束點做為其起始點。  
   
-##  <a name="addline"></a>CD2DGeometrySink::AddLine  
+##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
  建立目前點和指定的結束點之間的線段，並將它加入至這個幾何接收器。  
   
 ```  
@@ -167,7 +162,7 @@ void AddLine(CD2DPointF point);
  `point`  
  若要繪製線條結束點。  
   
-##  <a name="addlines"></a>CD2DGeometrySink::AddLines  
+##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
  建立使用指定的點線的序列，並將它們加入至這個幾何接收器。  
   
 ```  
@@ -180,7 +175,7 @@ void AddLines(
  `points`  
  描述要繪製線條的一或多個點陣列。 線條會繪製幾何接收的目前點 （結束點繪製的最後一個區段或 BeginFigure 所指定的位置） 從陣列中的第一個點。 如果陣列包含額外的點，線條會繪製的第一個點從陣列中從第三個點，等第二個點的第二個點。 陣列的一連串的繪製線條的端點。  
   
-##  <a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier  
+##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
  在目前的點和指定的結束點之間建立二次方貝茲曲線。  
   
 ```  
@@ -191,7 +186,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
  `bezier`  
  描述控制項控點和結束點的二次方貝茲曲線，若要加入的結構。  
   
-##  <a name="addquadraticbeziers"></a>CD2DGeometrySink::AddQuadraticBeziers  
+##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
  將一連串的二次方貝茲區段，做為陣列的單一呼叫中。  
   
 ```  
@@ -204,7 +199,7 @@ void AddQuadraticBeziers(
  `beziers`  
  陣列的一連串的二次方貝茲區段。  
   
-##  <a name="beginfigure"></a>CD2DGeometrySink::BeginFigure  
+##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
  開始新的圖形，在指定的點。  
   
 ```  
@@ -220,7 +215,7 @@ void BeginFigure(
  `figureBegin`  
  新的圖是否應中空或填滿。  
   
-##  <a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink  
+##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
  建構來自 CD2DPathGeometry 物件 CD2DGeometrySink 物件。  
   
 ```  
@@ -231,7 +226,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
  `pathGeometry`  
  CD2DPathGeometry 現有的物件。  
   
-##  <a name="close"></a>CD2DGeometrySink::Close  
+##  <a name="close"></a>  CD2DGeometrySink::Close  
  關閉幾何接收  
   
 ```  
@@ -241,7 +236,7 @@ BOOL Close();
 ### <a name="return-value"></a>傳回值  
  如果成功，則為非零否則為 FALSE。  
   
-##  <a name="endfigure"></a>CD2DGeometrySink::EndFigure  
+##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure  
  結束目前的圖形。（選擇性） 就會關閉它。  
   
 ```  
@@ -252,7 +247,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
  `figureEnd`  
  值，指出是否已關閉目前的圖形。 如果已關閉此圖中，在目前點和 BeginFigure 所指定的開始點之間繪製線條。  
   
-##  <a name="get"></a>CD2DGeometrySink::Get  
+##  <a name="get"></a>  CD2DGeometrySink::Get  
  傳回 ID2D1GeometrySink 介面  
   
 ```  
@@ -262,7 +257,7 @@ ID2D1GeometrySink* Get();
 ### <a name="return-value"></a>傳回值  
  ID2D1GeometrySink 介面或如果尚未初始化物件為 NULL 指標。  
   
-##  <a name="isvalid"></a>CD2DGeometrySink::IsValid  
+##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid  
  檢查幾何接收有效性  
   
 ```  
@@ -272,14 +267,14 @@ BOOL IsValid() const;
 ### <a name="return-value"></a>傳回值  
  如果幾何接收有效，則為 TRUE否則為 FALSE。  
   
-##  <a name="m_psink"></a>CD2DGeometrySink::m_pSink  
+##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink  
  ID2D1GeometrySink 指標。  
   
 ```  
 ID2D1GeometrySink* m_pSink;  
 ```  
   
-##  <a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::operator ID2D1GeometrySink *  
+##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *  
  傳回 ID2D1GeometrySink 介面  
   
 ```  
@@ -289,7 +284,7 @@ operator ID2D1GeometrySink*();
 ### <a name="return-value"></a>傳回值  
  ID2D1GeometrySink 介面或如果尚未初始化物件為 NULL 指標。  
   
-##  <a name="setfillmode"></a>CD2DGeometrySink::SetFillMode  
+##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode  
  指定用來判斷哪些資料夾位於此幾何接收器所描述的幾何點以及哪些是外部的點的方法。  
   
 ```  
@@ -300,7 +295,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
  `fillMode`  
  用來判斷指定的點是否為幾何之一部分的方法。  
   
-##  <a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags  
+##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
  指定要套用至新的區段加入至這個幾何接收器筆劃和聯結選項。  
   
 ```  
@@ -311,5 +306,5 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
  `vertexFlags`  
  要套用至新的區段加入至這個幾何接收器筆劃和聯結選項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

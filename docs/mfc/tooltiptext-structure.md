@@ -1,13 +1,10 @@
 ---
-title: "TOOLTIPTEXT 結構 |Microsoft 文件"
-ms.custom: 
+title: TOOLTIPTEXT 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TOOLTIPTEXT
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: becbdcfcc6dbd26ae3095de098d12dbc078530cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f64a93529905e84fe043947772e55b9332b5106e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 結構
 撰寫您[工具提示通知處理常式](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)，您必須使用`TOOLTIPTEXT`結構。 成員`TOOLTIPTEXT`結構：  
@@ -69,6 +64,6 @@ ms.lasthandoff: 12/21/2017
   
 -   將字串資源的識別項複製到 `lpszText` 成員，並將包含資源的執行個體控制代碼複製到 `hinst` 成員。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [非衍生自 CFrameWnd 之視窗中的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

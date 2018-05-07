@@ -1,13 +1,10 @@
 ---
-title: "OLE 控制項類別 |Microsoft 文件"
-ms.custom: 
+title: OLE 控制項類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e61d0ca8ed269557efbd566da1aca160ef669e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dcbda85c33bab37babe5da861067d25cf31e32c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-control-classes"></a>OLE 控制項類別
 這些是您在撰寫 OLE 控制項時使用的主要類別。 `COleControlModule` OLE 控制項模組中的類別就像[CWinApp](../mfc/reference/cwinapp-class.md)應用程式中的類別。 每個模組會實作一個或多個 OLE 控制項；這些控制項是由 `COleControl` 物件表示。 這些控制項會使用 `CConnectionPoint` 物件與其容器通訊。  
@@ -77,6 +72,6 @@ ms.lasthandoff: 12/21/2017
  [COleSafeArray](../mfc/reference/colesafearray-class.md)  
  用來處理任意類型和維度的陣列。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

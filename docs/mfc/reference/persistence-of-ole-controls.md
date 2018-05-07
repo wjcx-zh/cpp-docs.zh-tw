@@ -1,13 +1,10 @@
 ---
-title: "OLE 控制項的持續性 |Microsoft 文件"
-ms.custom: 
+title: OLE 控制項的持續性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.ole
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3452bccd4bdf94c84e4549f99829aaa087e1803b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e84e26bae83bd131b53d10e4561ddb60854a8a5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控制項的持續性
 OLE 控制項的其中一個功能是屬性持續性 (或序列化)，其允許 OLE 控制項對檔案或資料流來回讀取或寫入屬性值。 即使在應用程式已終結控制項之後，容器應用程式仍可以使用序列化來儲存控制項的屬性值。 當控制項的新執行個體在稍後建立時，便可以從檔案或資料流讀取 OLE 控制項的屬性值。  
@@ -54,7 +49,7 @@ OLE 控制項的其中一個功能是屬性持續性 (或序列化)，其允許 
   
  此外，提供 `AfxOleTypeMatchGuid` 全域函式來測試 `TYPEDESC` 與指定 GUID 之間的相符項目。  
   
-##  <a name="px_blob"></a>PX_Blob  
+##  <a name="px_blob"></a>  PX_Blob  
  呼叫此函式內控制項的`DoPropExchange`来序列化或儲存二進位大型物件 (BLOB) 資料的屬性初始化的成員函式。  
   
 ```  
@@ -99,7 +94,7 @@ hBlobDefault
   
  請注意，`PX_Blob`會配置記憶體，使用 Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API，當載入 BLOB 類型的屬性。 您必須負責釋放這個記憶體。 因此，您的控制項的解構函式應該呼叫[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) BLOB 類型的任何屬性來釋放控制代碼上為您的控制項配置任何記憶體。  
   
-##  <a name="px_bool"></a>PX_Bool  
+##  <a name="px_bool"></a>  PX_Bool  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化**BOOL**。  
   
 ```  
@@ -142,7 +137,7 @@ bValue  ,
 ### <a name="remarks"></a>備註  
  要讀取或寫入變數所參考的屬性值`bValue`視情況。 如果`bDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_color"></a>PX_Color  
+##  <a name="px_color"></a>  PX_Color  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化**OLE_COLOR**。  
   
 ```  
@@ -184,7 +179,7 @@ clrDefault);
 ### <a name="remarks"></a>備註  
  要讀取或寫入變數所參考的屬性值`clrValue`視情況。 如果`clrDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_currency"></a>PX_Currency  
+##  <a name="px_currency"></a>  PX_Currency  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化**貨幣**。  
   
 ```  
@@ -227,7 +222,7 @@ cyValue  ,
 ### <a name="remarks"></a>備註  
  要讀取或寫入變數所參考的屬性值`cyValue`視情況。 如果`cyDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_datapath"></a>PX_DataPath  
+##  <a name="px_datapath"></a>  PX_DataPath  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的資料路徑屬性初始化[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)。  
   
 ```  
@@ -263,7 +258,7 @@ pPX,
 ### <a name="remarks"></a>備註  
  資料路徑屬性實作非同步控制項屬性。 要讀取或寫入變數所參考的屬性值`dataPathProperty`視情況。  
   
-##  <a name="px_double"></a>PX_Double  
+##  <a name="px_double"></a>  PX_Double  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化**double**。  
   
 ```  
@@ -306,7 +301,7 @@ doubleValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`doubleValue`視情況。 如果`doubleDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_font"></a>PX_Font  
+##  <a name="px_font"></a>  PX_Font  
  呼叫此函式內控制項的`DoPropExchange`来序列化或 type 字型的屬性初始化的成員函式。  
   
 ```  
@@ -352,7 +347,7 @@ pFontDispAmbient
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入`font`、`CFontHolder`參考，適當的時候。 如果`pFontDesc`和`pFontDispAmbient`指定，它們用來初始化屬性的預設值，在需要時。 如果由於任何原因，控制序列化程序會失敗，則會使用這些值。 一般而言，您將傳遞**NULL**如`pFontDesc`環境所傳回的值和`COleControl::AmbientFont`如`pFontDispAmbient`。 請注意，傳回字型物件`COleControl::AmbientFont`必須釋放呼叫**IFontDisp::Release**成員函式。  
   
-##  <a name="px_float"></a>PX_Float  
+##  <a name="px_float"></a>  PX_Float  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化**float**。  
   
 ```  
@@ -395,7 +390,7 @@ floatValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`floatValue`視情況。 如果`floatDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_iunknown"></a>PX_IUnknown  
+##  <a name="px_iunknown"></a>  PX_IUnknown  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或由物件具有屬性初始化**IUnknown**-衍生的介面。  
   
 ```  
@@ -437,7 +432,7 @@ pUnkDefault
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考*pUnk*視情況。 如果`pUnkDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_long"></a>PX_Long  
+##  <a name="px_long"></a>  PX_Long  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化**長**。  
   
 ```  
@@ -480,7 +475,7 @@ lValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`lValue`視情況。 如果`lDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_picture"></a>PX_Picture  
+##  <a name="px_picture"></a>  PX_Picture  
  呼叫此函式內控制項的`DoPropExchange`来序列化或初始化的控制項圖片屬性的成員函式。  
   
 ```  
@@ -523,7 +518,7 @@ pict  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`pict`視情況。 如果`pictDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_short"></a>PX_Short  
+##  <a name="px_short"></a>  PX_Short  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化**簡短**。  
   
 ```  
@@ -566,7 +561,7 @@ sValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`sValue`視情況。 如果`sDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_ulong"></a>PX_ULong  
+##  <a name="px_ulong"></a>  PX_ULong  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化**ULONG**。  
   
 ```  
@@ -609,7 +604,7 @@ ulValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`ulValue`視情況。 如果`ulDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_ushort"></a>PX_UShort  
+##  <a name="px_ushort"></a>  PX_UShort  
  呼叫此函式內控制項的`DoPropExchange`成員函式，以序列化或類型的屬性初始化`unsigned`**簡短**。  
   
 ```  
@@ -652,7 +647,7 @@ usValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考*usValue*視情況。 如果*usDefault*指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_string"></a>PXstring  
+##  <a name="px_string"></a>  PXstring  
  呼叫此函式內控制項的**DoPropExchange**来序列化或初始化的字元字串屬性的成員函式。  
   
 ```  
@@ -695,7 +690,7 @@ strValue  ,
 ### <a name="remarks"></a>備註  
  屬性的值從位址讀取或寫入變數所參考`strValue`視情況。 如果`strDefault`指定，它會當做該屬性的預設值。 如果由於任何原因，控制序列化程序會失敗，則會使用此值。  
   
-##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
+##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert  
  呼叫此函式內控制項的`DoPropExchange`成員函式來初始化轉換 VBX 控制項的字型相關屬性的字型屬性。  
   
 ```  
@@ -718,12 +713,12 @@ pPX  ,
  為非零，如果交換成功。0，如果不成功。  
   
 ### <a name="remarks"></a>備註  
- 此函式應僅供 OLE 控制項是設計用來直接 VBX 控制項取代。 當 Visual Basic 開發環境中，將轉換包含 VBX 控制項使用相對應的 OLE 控制項取代的表單時，它會呼叫控制項的**IDataObject::SetData**函式，在屬性中的傳遞設定，包含 VBX 控制項的屬性資料。 這項作業，又會導致控制項的`DoPropExchange`叫用的函式。 `DoPropExchange`可以呼叫`PX_VBXFontConvert`VBX 控制項的字型相關屬性轉換 (例如，"字型名稱，""FontSize，"，依此類推) 成 OLE 控制項的字型屬性的對應元件。  
+ 此函式應僅供 OLE 控制項是設計用來直接 VBX 控制項取代。 當 Visual Basic 開發環境中，將轉換包含 VBX 控制項使用相對應的 OLE 控制項取代的表單時，它會呼叫控制項的**IDataObject::SetData**函式，在屬性中的傳遞設定，包含 VBX 控制項的屬性資料。 這項作業，又會導致控制項的`DoPropExchange`叫用的函式。 `DoPropExchange` 可以呼叫`PX_VBXFontConvert`VBX 控制項的字型相關屬性轉換 (例如，"字型名稱，""FontSize，"，依此類推) 成 OLE 控制項的字型屬性的對應元件。  
   
- `PX_VBXFontConvert`只能呼叫控制項實際上當轉換從 VBX 表單應用程式時。 例如:   
+ `PX_VBXFontConvert` 只能呼叫控制項實際上當轉換從 VBX 表單應用程式時。 例如:   
   
  [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

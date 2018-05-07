@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 授權 ActiveX 控制項 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 授權 ActiveX 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - COleObjectFactory
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b90000279e00c9be8f43ecdb33f8e3dedf6b8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控制項：授權 ActiveX 控制項
 授權支援 ActiveX 控制項的選用功能可讓您控制哪些使用者能夠使用或散發控制項。 (如需額外的授權問題的詳細討論，請參閱中的授權問題[升級現有的 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)。)  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  實作授權的 ActiveX 控制項可讓您，做為控制項開發人員，以判斷其他人使用 ActiveX 控制項的方式。 您將控制購買提供控制項和。與採購者可能但未散發控制項，此協議的授權檔案。授權檔案，請使用控制項的應用程式。 這可防止撰寫新的應用程式，不需從您的控制項第一次授權使用控制項，該應用程式的使用者。  
   
-##  <a name="_core_overview_of_activex_control_licensing"></a>授權 ActiveX 控制項的概觀  
+##  <a name="_core_overview_of_activex_control_licensing"></a> 授權 ActiveX 控制項的概觀  
  若要提供 ActiveX 控制項授權支援[COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)類別提供幾個函式中的實作**IClassFactory2**介面： **IClassFactory2:: RequestLicKey**， **IClassFactory2::GetLicInfo**，和**IClassFactory2::CreateInstanceLic**。 當容器應用程式開發人員提出的要求建立控制項，呼叫的執行個體`GetLicInfo`進行驗證的控制項。授權的檔案存在。 如果控制項係授權使用，可建立及放置在容器中控制項的執行個體。 開發人員建構容器應用程式完成後，另一個函式呼叫，這次`RequestLicKey`，進行。 此函數會傳回該容器應用程式的授權金鑰 （簡單的字元字串）。 傳回的索引鍵則會內嵌在應用程式中。  
   
  下圖示範授權的 ActiveX 控制項容器應用程式開發期間將會使用驗證。 如先前所述，容器應用程式開發人員必須正確。若要建立控制項的執行個體的開發電腦上安裝的授權檔案。  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  控制項授權包含兩個基本元件： 在控制項 DLL 實作特定程式碼和授權檔案。 程式碼是由兩個 （或可能是三個） 的函式呼叫和字元字串，以下稱為 「 授權字串 」，其中包含的著作權注意事項所組成。 這些呼叫及授權字串位於控制項實作 (。CPP) 檔案。 ActiveX 控制項精靈所產生的授權檔案是著作權陳述式的文字檔案。 它會命名為使用與專案名稱。授權延伸模組，例如範例。授權。 授權的控制項需要設計階段使用時必須附帶授權檔案。  
   
-##  <a name="_core_creating_a_licensed_control"></a>建立授權的控制項  
+##  <a name="_core_creating_a_licensed_control"></a> 建立授權的控制項  
  當您使用 ActiveX 控制項精靈來建立控制架構時，很容易包含授權支援。 當您指定的控制項應該有執行階段授權時，ActiveX 控制項精靈會將程式碼加入至控制項類別，以支援授權。 程式碼使用的授權驗證的金鑰和授權檔案的函式所組成。 這些函式也可以修改以自訂控制項的授權。 如需有關自訂授權的詳細資訊，請參閱[自訂授權的 ActiveX 控制項](#_core_customizing_the_licensing_of_an_activex_control)本文稍後。  
   
 #### <a name="to-add-support-for-licensing-with-the-activex-control-wizard-when-you-create-your-control-project"></a>若要新增授權使用 ActiveX 控制項精靈，當您建立您的控制項專案的支援  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
  ActiveX 控制項精靈現在會產生 ActiveX 控制項架構，其中包含基本授權的支援。 如需授權的程式碼的詳細說明，請參閱下一個主題。  
   
-##  <a name="_core_licensing_support"></a>授權支援  
+##  <a name="_core_licensing_support"></a> 授權支援  
  當您加入至 ActiveX 控制項的授權支援使用 ActiveX 控制項精靈時，ActiveX 控制項精靈會新增宣告並實作授權的功能會加入程式碼控制標頭與實作檔。 此程式碼組成`VerifyUserLicense`成員函式和`GetLicenseKey`成員函式，以覆寫預設的實作中找到[COleObjectFactory](../mfc/reference/coleobjectfactory-class.md) 。 這些函式會擷取，並確認控制授權。  
   
 > [!NOTE]
@@ -93,12 +88,12 @@ ms.lasthandoff: 12/21/2017
   
      確認內嵌的金鑰和控制項的唯一索引鍵都相同。 這可讓容器建立其使用的控制項的執行個體。 由架構呼叫此函式處理期間**IClassFactory2::CreateInstanceLic** ，且可以提供自訂的驗證的授權金鑰。 預設實作會執行字串比較。 如需詳細資訊，請參閱[自訂授權的 ActiveX 控制項](#_core_customizing_the_licensing_of_an_activex_control)在本文稍後。  
   
-###  <a name="_core_header_file_modifications"></a>標頭檔案修改  
+###  <a name="_core_header_file_modifications"></a> 標頭檔案修改  
  ActiveX 控制項精靈會將下列程式碼置於控制項標頭檔。 在此範例中，兩個成員函式的`CSampleCtrl`的物件`factory`宣告，一個是驗證控制項的目前狀態。授權檔以及另一個擷取的授權金鑰，以用於包含控制項的應用程式：  
   
  [!code-cpp[NVC_MFC_AxUI#39](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_1.h)]  
   
-###  <a name="_core_implementation_file_modifications"></a>實作檔案修改  
+###  <a name="_core_implementation_file_modifications"></a> 實作檔案修改  
  ActiveX 控制項精靈會將下列兩個陳述式放在控制項實作檔，來宣告授權檔名和授權字串：  
   
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxUI#42](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_4.idl)]  
   
-##  <a name="_core_customizing_the_licensing_of_an_activex_control"></a>自訂授權的 ActiveX 控制項  
+##  <a name="_core_customizing_the_licensing_of_an_activex_control"></a> 自訂授權的 ActiveX 控制項  
  因為`VerifyUserLicense`， `GetLicenseKey`，和`VerifyLicenseKey`會宣告為虛擬成員函式的控制項 factory 類別中，您可以自訂控制項的授權行為。  
   
  例如，您可以提供數個層級授權控制項，藉由覆寫`VerifyUserLicense`或`VerifyLicenseKey`成員函式。 此函式內，您無法調整哪個屬性或方法會公開給使用者，根據您偵測到的授權層級。  
@@ -126,7 +121,7 @@ ms.lasthandoff: 12/21/2017
   
  如需額外的授權問題的詳細討論，請參閱中的授權問題[升級現有的 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [MFC ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)
 

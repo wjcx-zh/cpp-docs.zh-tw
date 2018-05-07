@@ -1,12 +1,9 @@
 ---
-title: "C 執行階段錯誤 R6030 |Microsoft 文件"
-ms.custom: 
+title: C 執行階段錯誤 R6030 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6030
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bc7c5db2b486ef051975c0e8d31d6c24ca5aa6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae8eb17fc9d074604586582be08c43289b680b4f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6030"></a>C 執行階段錯誤 R6030
 未初始化的 CRT  
@@ -42,6 +37,6 @@ ms.lasthandoff: 12/21/2017
   
  **程式設計人員的資訊**  
   
- 如果您使用 C 執行階段 (CRT)，但 CRT 啟始程式碼並未執行，就會發生此錯誤。 它是可能發生這個錯誤，如果連結器切換[/ENTRY](../../build/reference/entry-entry-point-symbol.md)用來覆寫預設的起始位址，通常**mainCRTStartup**， **wmainCRTStartup**的主控台 EXE 和**WinMainCRTStartup**或**wWinMainCRTStartup** Windows exe，或**_DllMainCRTStartup** dll。 除非在啟動時，會呼叫其中一個上述函式，C 執行階段將不會初始化。 啟動呼叫這些函數通常根據預設，當您連結到 C 執行階段程式庫，並使用標準**主要**， **wmain**， **WinMain**，或**DllMain**進入點。  
+ 如果您使用 C 執行階段 (CRT)，但 CRT 啟始程式碼並未執行，就會發生此錯誤。 它是可能發生這個錯誤，如果連結器切換[/ENTRY](../../build/reference/entry-entry-point-symbol.md)用來覆寫預設的起始位址，通常**mainCRTStartup**， **wmainCRTStartup**的主控台 EXE 和**WinMainCRTStartup**或**wWinMainCRTStartup** Windows exe，或 **_DllMainCRTStartup** dll。 除非在啟動時，會呼叫其中一個上述函式，C 執行階段將不會初始化。 啟動呼叫這些函數通常根據預設，當您連結到 C 執行階段程式庫，並使用標準**主要**， **wmain**， **WinMain**，或**DllMain**進入點。  
   
  它也可另一個程式使用程式碼資料隱碼的技巧來攔截特定 DLL 程式庫呼叫時，發生這個錯誤。 某些具侵入性的安全性程式會使用這項技術。 在 Visual Studio 2015 之前的 Visual c + + 版本中，便可使用以靜態方式連結的 CRT 程式庫，若要解決此問題，但不是建議使用的安全性及應用程式更新的原因。 更正這個問題可能會需要使用者動作。

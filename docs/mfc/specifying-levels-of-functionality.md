@@ -1,13 +1,10 @@
 ---
-title: "指定功能層級 |Microsoft 文件"
-ms.custom: 
+title: 指定功能層級 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a2897d5e442794198870e7f6bed36196744888
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-levels-of-functionality"></a>指定功能層級
 本文說明如何新增下列層級的功能以您[CObject](../mfc/reference/cobject-class.md)-衍生的類別：  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  如需一般的說明`CObject`功能，請參閱文章[從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)。  
   
 -   [執行階段類別資訊](#_core_to_add_run.2d.time_class_information)  
-#### <a name="_core_to_add_run.2d.time_class_information"></a>若要加入執行階段類別資訊  
+#### <a name="_core_to_add_run.2d.time_class_information"></a> 若要加入執行階段類別資訊  
   
 1.  衍生您的類別從`CObject`中所述，[從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)發行項。  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  一律將`IMPLEMENT_DYNAMIC`在實作檔 (。CPP) 為您的類別。 `IMPLEMENT_DYNAMIC`巨集應該只評估一次在編譯期間，因此不應在介面檔案 (。H），可能無法包含在多個檔案。  
   
-#### <a name="_core_to_add_dynamic_creation_support"></a>若要加入動態建立支援  
+#### <a name="_core_to_add_dynamic_creation_support"></a> 若要加入動態建立支援  
   
 1.  衍生您的類別從`CObject`。  
   
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  使用`IMPLEMENT_DYNCREATE`類別實作檔中的巨集。  
   
-#### <a name="_core_to_add_serialization_support"></a>若要加入序列化支援  
+#### <a name="_core_to_add_serialization_support"></a> 若要加入序列化支援  
   
 1.  衍生您的類別從`CObject`。  
   
@@ -88,5 +83,5 @@ ms.lasthandoff: 12/21/2017
   
  如需有關如何啟用序列化，當您衍生您的類別從`CObject`，請參閱文章[MFC 中的檔案](../mfc/files-in-mfc.md)和[序列化](../mfc/serialization-in-mfc.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md)

@@ -1,13 +1,10 @@
 ---
-title: "產生的類別，MFC 應用程式精靈 |Microsoft 文件"
-ms.custom: 
+title: 產生的類別，MFC 應用程式精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0a5962909c15d881214969c177cad234b2950a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 764a87459df719903f5653c59422ed492db9a077
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>MFC 應用程式精靈、產生的類別
 本主題列出基底類別和專案產生的檔案的名稱。 根據預設，名稱為基礎，您在中指定的專案名稱**新增專案對話方塊**。 您可以變更大部分的名稱，如下所示：  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
  **.cpp 檔案中**  
  選取的類別相關聯的來源檔案的名稱。 如果在使用中的文字方塊中，您可以變更實作檔案的名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 應用程式精靈、 進階的功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)   
  [為 Visual C++ 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)
 

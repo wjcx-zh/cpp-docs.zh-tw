@@ -1,13 +1,10 @@
 ---
-title: "建立堆疊和佇列集合 |Microsoft 文件"
-ms.custom: 
+title: 建立堆疊和佇列集合 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd3c4d587f64fc89bf25cfd127e6b7efc490df8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-stack-and-queue-collections"></a>建立堆疊和佇列集合
 這篇文章說明如何建立其他資料結構，例如[堆疊](#_core_stacks)和[佇列](#_core_queues)，從 MFC 清單類別。 這些範例會使用衍生自 `CList` 的類別，不過除非您需要新增其他功能，否則您可以直接使用 `CList`。  
   
-##  <a name="_core_stacks"></a>堆疊  
+##  <a name="_core_stacks"></a> 堆疊  
  因為標準的清單集合具有一個頭部和尾部，建立模擬後進先出的堆疊行為之衍生清單集合是很容易的。 堆疊就像自助餐廳的一疊盤子。 當餐盤加入堆疊時，它們會位於堆疊的上方。 最後加入的盤子是第一個被移除的盤子。 清單集合成員函式 `AddHead` 和 `RemoveHead` 可用來從清單的開頭明確地加入和移除項目；因此，最新加入的項目會最先被移除。  
   
 #### <a name="to-create-a-stack-collection"></a>建立堆疊集合  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  請注意，這種方法會公開基礎 `CObList` 類別。 使用者可以呼叫任何 `CObList` 成員函式，無論它是否對堆疊具有意義。  
   
-##  <a name="_core_queues"></a>佇列  
+##  <a name="_core_queues"></a> 佇列  
  因為標準清單集合具有一個頭部和尾部，建立模擬先進先出的佇列行為之衍生清單集合也是很容易的。 佇列就像是在自助餐廳排隊的人。 隊伍中的第一個人會是第一個被服務的人。 當更多人來的時候，他們會走到隊伍的尾端等待。 清單集合成員函式 `AddTail` 和 `RemoveHead` 可用來從清單的開頭或尾端明確地加入和移除項目；因此，最新加入的項目會最後被移除。  
   
 #### <a name="to-create-a-queue-collection"></a>建立佇列集合  
@@ -59,6 +54,6 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [集合](../mfc/collections.md)
 

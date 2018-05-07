@@ -1,12 +1,9 @@
 ---
-title: "COleDocObjectItem 類別 |Microsoft 文件"
-ms.custom: 
+title: COleDocObjectItem 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 類別
 實作主動式文件內含項目。  
@@ -104,7 +99,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>需求  
  **標頭：** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  呼叫此成員函式來初始化`COleDocObjectItem`物件。  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  指標`COleDocument`物件做為主動式文件容器。 這個參數必須是**NULL**啟用**IMPLEMENT_SERIALIZE**。 通常將 OLE 項目建構與非**NULL**文件指標。  
   
-##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
  由架構呼叫以使用預設設定在文件。  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  指標[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)物件，描述要列印工作。  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  呼叫此成員函式可執行使用者指定的命令。  
   
 ```  
@@ -159,8 +154,8 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|發生意外的錯誤。|  
 |**E_FAIL**|發生錯誤。|  
 |**E_NOTIMPL**|表示 MFC 本身應該嘗試轉譯和分派命令。|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`為非**NULL**但未指定可辨識的命令群組。|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`無法辨識為有效的命令群組 pGroup 中。|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 為非**NULL**但未指定可辨識的命令群組。|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` 無法辨識為有效的命令群組 pGroup 中。|  
 |**OLECMDERR_DISABLED**|所識別的命令`nCmdID`已停用，無法執行。|  
 |**OLECMDERR_NOHELP**|呼叫端所識別的命令要求協助`nCmdID`但沒有說明。|  
 |**OLECMDERR_CANCELLED**|使用者已取消執行。|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>備註  
  `pguidCmdGroup`和`nCmdID`參數會共同唯一識別叫用的命令。 `nCmdExecOpt`參數會指定要採取的確切動作。  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  呼叫此成員函式取得的指標`IOleDocumentView`介面目前使用的檢視。  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>備註  
  上傳回的參考計數`IOleDocumentView`指標這個函式傳回之前不會遞增。  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  呼叫此成員函式可擷取的文件中的頁數。  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting  
  若要準備文件列印架構會呼叫此成員函式。  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
-##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>  COleDocObjectItem::OnPrint  
  若要列印文件架構會呼叫此成員函式。  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  指定是否要列印整份文件。  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  查詢使用者介面事件所產生之一或多個命令的狀態。  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491)方法，如 Windows SDK 中所述。  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  釋放連接至 OLE 連結的項目並將它關閉，如果它已開啟。 不會終結的用戶端項目。  
   
 ```  
@@ -287,7 +282,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="remarks"></a>備註  
  不會終結的用戶端項目。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 MFCBIND](../../visual-cpp-samples.md)   
  [COleClientItem 類別](../../mfc/reference/coleclientitem-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

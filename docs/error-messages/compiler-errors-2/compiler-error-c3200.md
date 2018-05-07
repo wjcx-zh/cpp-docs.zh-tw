@@ -1,12 +1,9 @@
 ---
-title: "編譯器錯誤 C3200 |Microsoft 文件"
-ms.custom: 
+title: 編譯器錯誤 C3200 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3200
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3200
 ms.assetid: 44bb5e77-f0ec-421c-a732-b9ee7c0a3529
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 315567b6a50584bca413f5b381f23e28b6329928
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6aa34ea006b06138290417387bd393589b630aa4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3200"></a>編譯器錯誤 C3200
 'template': 樣板參數 'parameter' 的無效樣板引數必須是類別樣板  

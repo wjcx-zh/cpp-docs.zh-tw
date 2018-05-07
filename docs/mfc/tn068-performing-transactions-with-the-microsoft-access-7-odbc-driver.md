@@ -1,13 +1,10 @@
 ---
-title: "TN068： 使用 Microsoft Access 7 ODBC 驅動程式執行異動 |Microsoft 文件"
-ms.custom: 
+title: TN068： 使用 Microsoft Access 7 ODBC 驅動程式執行異動 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data.odbc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - transactions [MFC], calling BeginTrans
 - transactions [MFC], Microsoft Access
 ms.assetid: d3f8f5d9-b118-4194-be36-a1aefb630c45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6db31d6301f2f0937d7bb5b83e77bf59936efdfe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63cce7532d93b1bd44b6a44c526310bd894d5e07
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068：使用 Microsoft Access 7 ODBC 驅動程式執行異動
 > [!NOTE]
@@ -137,7 +132,7 @@ db.CommitTrans();
 > [!NOTE]
 >  如果您需要變更資料錄集成員變數，請勿使用這項技術**m_strFilter**或`m_strSort`交易之間。 在此情況下，您應該關閉資料錄集之後每個, **CommitTrans**或**復原**作業。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "虛擬清單控制項 |Microsoft 文件"
-ms.custom: 
+title: 虛擬清單控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>虛擬清單控制項
 虛擬清單控制項是具有清單檢視控制項**LVS_OWNERDATA**樣式。 這個樣式可讓控制項最多支援項目計數`DWORD`(預設項目計數只會延伸到`int`)。 不過，此樣式所提供的最大優點是能夠一次只能有在記憶體中的資料項目的子集。 這可讓虛擬清單檢視控制項本身的資訊，大型資料庫搭配使用特定的方法，存取資料的已備妥。  
@@ -43,15 +38,15 @@ ms.lasthandoff: 12/21/2017
   
  中的處理常式**LVN_GETDISPINFO**通知訊息時，您必須檢查所要求的資訊類型。 可能值為：  
   
--   `LVIF_TEXT``pszText`成員必須填入。  
+-   `LVIF_TEXT` `pszText`成員必須填入。  
   
--   `LVIF_IMAGE``iImage`成員必須填入。  
+-   `LVIF_IMAGE` `iImage`成員必須填入。  
   
 -   **LVIF_INDENT** *iIndent*成員必須填入。  
   
--   `LVIF_PARAM`*LParam*成員必須填入。 （不存在的子項目。）  
+-   `LVIF_PARAM` *LParam*成員必須填入。 （不存在的子項目。）  
   
--   `LVIF_STATE`*狀態*成員必須填入。  
+-   `LVIF_STATE` *狀態*成員必須填入。  
   
  然後，您應該提供給架構要求的資訊。  
   
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
  您應該備妥要搜尋的項目符合指定的清單檢視控制項的資訊。 如果找到相符的項目，您應該傳回的項目，如果成功，則為-1 的索引。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

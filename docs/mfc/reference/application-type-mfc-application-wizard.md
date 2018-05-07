@@ -1,13 +1,10 @@
 ---
-title: "MFC 應用程式精靈、 應用程式類型 |Microsoft 文件"
-ms.custom: 
+title: MFC 應用程式精靈、 應用程式類型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.apptype
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45253eed40e9a79dbcb372f63cc44aaeb99edbe0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5708e823c57ecdb8470a398c4192cba1a5b6e411
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-type-mfc-application-wizard"></a>MFC 應用程式精靈、應用程式類型
 使用此頁面的[MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)來設計並將新的 MFC 應用程式的基本功能。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **Windows 原生/預設值**  
   
--   **Office 2003**  
+-   **office 2003**  
   
 -   **Visual Studio 2005**  
   
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
 |**使用 MFC 共用 dll**|MFC 程式庫共用的 dll 的應用程式的連結。 應用程式會呼叫 MFC 程式庫，在執行階段。 這個選項可以減少使用的 MFC 程式庫的多個可執行檔所組成的應用程式的磁碟和記憶體需求。 Win32 和 MFC 應用程式可以呼叫您的 DLL （預設值） 中的函式|  
 |**使用 MFC 的靜態程式庫**|連結至 MFC 靜態程式庫應用程式在建置階段。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)   
  [為 Visual C++ 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)
 

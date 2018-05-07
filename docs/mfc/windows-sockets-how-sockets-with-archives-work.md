@@ -1,13 +1,10 @@
 ---
-title: "Windows Sockets： 通訊端與封存的運作方式 |Microsoft 文件"
-ms.custom: 
+title: Windows Sockets： 通訊端與封存的運作方式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets：如何搭配使用通訊端與封存
 這篇文章說明如何[CSocket](../mfc/reference/csocket-class.md)物件[CSocketFile](../mfc/reference/csocketfile-class.md)物件，和[CArchive](../mfc/reference/carchive-class.md)物件會結合，以便簡化傳送和接收資料透過 Windows通訊端。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  A`CArchive`物件管理的緩衝區。 儲存 （傳送） 的保存的緩衝區已滿時，相關聯`CFile`物件寫出緩衝區的內容。 排清的封存附加到通訊端緩衝區就相當於傳送訊息。 當載入 （接收） 封存的緩衝區已滿，`CFile`物件停止讀取，直到緩衝區恢復可用性為止。  
   
- 類別`CSocketFile`衍生自`CFile`，但不支援[CFile](../mfc/reference/cfile-class.md)成員函式，例如定位函式 (`Seek`， `GetLength`，`SetLength`等等)，鎖定函式 （`LockRange`， `UnlockRange`)，或`GetPosition`函式。 所有[CSocketFile](../mfc/reference/csocketfile-class.md)物件必須執行動作會寫入或讀取的位元組或從相關聯的序列`CSocket`物件。 因為未牽涉到檔案作業，例如`Seek`和`GetPosition`沒有意義。 `CSocketFile`衍生自`CFile`，因此它通常會繼承所有這些成員函式。 若要避免此情形，不支援`CFile`成員函式會覆寫中`CSocketFile`擲回[CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)。  
+ 類別`CSocketFile`衍生自`CFile`，但不支援[CFile](../mfc/reference/cfile-class.md)成員函式，例如定位函式 (`Seek`， `GetLength`，`SetLength`等等)，鎖定函式 （`LockRange`， `UnlockRange`)，或`GetPosition`函式。 所有[CSocketFile](../mfc/reference/csocketfile-class.md)物件必須執行動作會寫入或讀取的位元組或從相關聯的序列`CSocket`物件。 因為未牽涉到檔案作業，例如`Seek`和`GetPosition`沒有意義。 `CSocketFile` 衍生自`CFile`，因此它通常會繼承所有這些成員函式。 若要避免此情形，不支援`CFile`成員函式會覆寫中`CSocketFile`擲回[CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)。  
   
  `CSocketFile`物件，呼叫成員函式其`CSocket`傳送或接收資料的物件。  
   
@@ -61,7 +56,7 @@ CArchive、CSocketFile 和 CSocket
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
  [Cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)
 

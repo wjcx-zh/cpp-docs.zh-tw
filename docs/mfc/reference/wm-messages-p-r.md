@@ -1,13 +1,10 @@
 ---
-title: "WM_ 訊息： P-R |Microsoft 文件"
-ms.custom: 
+title: WM_ 訊息： P-R |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - ON_WM_RBUTTONUP
 - ON_WM_PALETTECHANGED
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - ON_WM_QUERYENDSESSION [MFC]
 - WM_ messages
 ms.assetid: f46962e5-8329-4f1f-9b4d-fdad2a5ce1f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e00b8ebe66fe08b620d43430dbee338d69a455f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d37189490a955b2837fa974dfaad3efba0c615bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wm-messages-p---r"></a>WM_ 訊息：P - R
 下列的對應項目對應至函式原型：  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 |ON_WM_RENDERALLFORMATS()|afx_msg void [OnRenderAllFormats](../../mfc/reference/cwnd-class.md#onrenderallformats)（);|  
 |ON_WM_RENDERFORMAT()|afx_msg void [OnRenderFormat](../../mfc/reference/cwnd-class.md#onrenderformat)(UINT);|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [訊息對應](../../mfc/reference/message-maps-mfc.md)   
  [WM_ 訊息的處理常式](../../mfc/reference/handlers-for-wm-messages.md)
 

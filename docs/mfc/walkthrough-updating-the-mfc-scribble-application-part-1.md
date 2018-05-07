@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分）
 本逐步解說示範如何修改現有的 MFC 應用程式使用功能區使用者介面。 Visual Studio 支援 Office 2007 功能區和 Windows 7 Scenic 功能區。 如需功能區使用者介面的詳細資訊，請參閱[功能區](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN 網站上。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 01/03/2018
   
 - [設定應用程式的外觀](#setlook)  
   
-##  <a name="replaceclass"></a>取代基底類別  
+##  <a name="replaceclass"></a> 取代基底類別  
  若要轉換支援功能表支援的功能區的應用程式的應用程式，必須從更新的基底類別衍生應用程式、 框架視窗和工具列類別。 （我們建議您不要不修改原始 Scribble 範例; 相反地，清除 Scribble 專案、 將它複製到另一個目錄，並再修改複本）。  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>若要取代 Scribble 應用程式中的基底類別  
@@ -101,11 +96,11 @@ ms.lasthandoff: 01/03/2018
   
 8.  中的 mainfrm.cpp 檔案：  
   
-    1.  取代`m_wndToolBar.SetBarStyle`與`m_wndToolBar.SetPaneStyle`  
+    1.  取代`m_wndToolBar.SetBarStyle`與 `m_wndToolBar.SetPaneStyle`  
   
-    2.  取代`m_wndToolBar.GetBarStyle`與`m_wndToolBar.GetPaneStyle`  
+    2.  取代`m_wndToolBar.GetBarStyle`與 `m_wndToolBar.GetPaneStyle`  
   
-    3.  取代`DockControlBar(&m_wndToolBar)`與`DockPane(&m_wndToolBar)`  
+    3.  取代`DockControlBar(&m_wndToolBar)`與 `DockPane(&m_wndToolBar)`  
   
 9. 在 ipframe.cpp 檔案中，註解下列三行程式碼。  
   
@@ -130,7 +125,7 @@ ms.lasthandoff: 01/03/2018
   
  [[區段](#top)]  
   
-##  <a name="addbitmap"></a>加入至專案的點陣圖  
+##  <a name="addbitmap"></a> 加入至專案的點陣圖  
  本逐步解說的下一個四個步驟需要點陣圖的資源。 您可以取得適當的點陣圖，以各種方式：  
   
 -   使用[資源編輯器](../windows/resource-editors.md)來自創您自己的點陣圖。 使用資源編輯器來組合點陣圖從隨附於可攜式網路圖形 (.png) 映像或[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]。 這些映像位於`VS2008ImageLibrary`目錄。  
@@ -175,7 +170,7 @@ ms.lasthandoff: 01/03/2018
   
  [[區段](#top)]  
   
-##  <a name="addribbon"></a>專案中加入功能區資源  
+##  <a name="addribbon"></a> 專案中加入功能區資源  
  當您轉換使用功能表以使用功能區的應用程式的應用程式時，您不必移除或停用現有的功能表。 您建立功能區資源、 加入功能區按鈕，然後將新按鈕與現有的功能表項目產生關聯。 雖然不再顯示功能表，從功能區列的訊息會路由傳送到功能表。 此外，功能表快速鍵繼續運作。  
   
  功能區是由應用程式按鈕，這是功能區的左上角的 [大型] 按鈕，以及一或多個類別索引標籤所組成。 每個類別目錄 索引標籤包含一或多個做為容器的功能區按鈕、 控制項的面板。 下列程序示範如何建立功能區資源，然後自訂應用程式按鈕。  
@@ -226,7 +221,7 @@ ms.lasthandoff: 01/03/2018
   
  [[區段](#top)]  
   
-##  <a name="createinstance"></a>建立功能區列的執行個體  
+##  <a name="createinstance"></a> 建立功能區列的執行個體  
  下列步驟示範如何建立功能區列的執行個體，您的應用程式啟動時。 若要將功能區列加入至應用程式中，宣告 mainfrm.h 檔案中的功能區列。 然後，在 mainfrm.cpp 檔案中，撰寫程式碼載入功能區資源。  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>若要建立功能區列的執行個體  
@@ -250,7 +245,7 @@ ms.lasthandoff: 01/03/2018
   
  [[區段](#top)]  
   
-##  <a name="addcategory"></a>自訂功能區資源  
+##  <a name="addcategory"></a> 自訂功能區資源  
  既然您已經建立的應用程式按鈕，您可以將項目加入功能區。  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ ms.lasthandoff: 01/03/2018
   
  [[區段](#top)]  
   
-##  <a name="setlook"></a>設定應用程式的外觀  
+##  <a name="setlook"></a> 設定應用程式的外觀  
  A*視覺管理員*控制應用程式的所有繪圖為全域物件。 由於原始 Scribble 應用程式使用 Office 2000 使用者介面 (UI) 樣式，應用程式可能看起來舊式。 您可以重設應用程式使用 Office 2007 視覺管理員，讓它類似 Office 2007 應用程式。  
   
 #### <a name="to-set-the-look-of-the-application"></a>若要設定應用程式的外觀  

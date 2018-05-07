@@ -1,12 +1,9 @@
 ---
-title: "CMFCTasksPane 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCTasksPane 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCTasksPane
@@ -203,17 +200,15 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbf35669ba71c900a67f98fb9ee303c723546f94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16c37fd1b9b9b61bed78811c3b6b57325041105b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -383,7 +378,7 @@ class CMFCTasksPane : public CDockablePane
 ## <a name="requirements"></a>需求  
  **標頭：** afxTasksPane.h  
   
-##  <a name="addgroup"></a>Cmfctaskspane:: Addgroup  
+##  <a name="addgroup"></a>  Cmfctaskspane:: Addgroup  
  將新的工作群組加入至工作窗格控制項。  
   
 ```  
@@ -410,10 +405,10 @@ int AddGroup(
  指定群組名稱。  
   
  [輸入] `bBottomLocation`  
- `TRUE`建立群組，底部的 工作窗格控制項。否則， `FALSE`。  
+ `TRUE` 建立群組，底部的 工作窗格控制項。否則， `FALSE`。  
   
  [輸入] `bSpecial`  
- `TRUE`將標示為此群組*特殊*群組; 否則`FALSE`。 如需特殊群組的詳細資訊，請參閱的 < 備註 > 一節`CMFCTasksPane`。  
+ `TRUE` 將標示為此群組*特殊*群組; 否則`FALSE`。 如需特殊群組的詳細資訊，請參閱的 < 備註 > 一節`CMFCTasksPane`。  
   
  [輸入] `hIcon`  
  指定要顯示群組標題中的圖示。  
@@ -426,7 +421,7 @@ int AddGroup(
   
  在工作窗格控制項的頂端或底部，架構就會顯示工作群組。 架構可以顯示只有一個群組下方。必須最後加入此群組。  
   
-##  <a name="addlabel"></a>Cmfctaskspane:: Addlabel  
+##  <a name="addlabel"></a>  Cmfctaskspane:: Addlabel  
  將標籤加入至指定的工作群組。  
   
 ```  
@@ -448,7 +443,7 @@ int AddLabel(
  指定要顯示標籤旁邊的圖示。 架構儲存圖示的影像清單中。 這個參數是該清單中的索引。  
   
  [輸入] `bIsBold`  
- `TRUE`若要以粗體文字; 顯示標籤否則， `FALSE`。  
+ `TRUE` 若要以粗體文字; 顯示標籤否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  起始的索引標籤已新增的群組，則為-1 所指定的群組`nGroup`不存在。  
@@ -456,7 +451,7 @@ int AddLabel(
 ### <a name="remarks"></a>備註  
  架構會以不同方式處理工作和標籤。 當使用者按一下工作時，framework 就會執行命令。 當使用者按下標籤時，會不執行任何命令。 如需詳細資訊，請參閱[cmfctaskspane:: Addtask](#addtask)。  
   
-##  <a name="addmrufileslist"></a>Cmfctaskspane:: Addmrufileslist  
+##  <a name="addmrufileslist"></a>  Cmfctaskspane:: Addmrufileslist  
  將每個檔案儲存在最近使用的 (MRU) 檔案清單中的群組工作。  
   
 ```  
@@ -475,7 +470,7 @@ int AddMRUFilesList(
 ### <a name="return-value"></a>傳回值  
  會加入 MRU 檔案清單，群組的以零為起始的索引則為-1 所指定的群組`nGroup`不存在。  
   
-##  <a name="addpage"></a>CMFCTasksPane::AddPage  
+##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
  將頁面加入工作窗格。  
   
 ```  
@@ -489,7 +484,7 @@ int AddPage(LPCTSTR lpszPageLabel);
 ### <a name="return-value"></a>傳回值  
  新的頁面以零為起始的索引。  
   
-##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
+##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator  
 
   
 ```  
@@ -503,7 +498,7 @@ int AddSeparator(int nGroup);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="addtask"></a>Cmfctaskspane:: Addtask  
+##  <a name="addtask"></a>  Cmfctaskspane:: Addtask  
  將工作加入至指定的工作群組。  
   
 ```  
@@ -534,7 +529,7 @@ int AddTask(
 ### <a name="return-value"></a>傳回值  
  工作已加入其中，群組的以零為起始的索引則為-1 所指定的群組`nGroup`不存在。  
   
-##  <a name="addwindow"></a>CMFCTasksPane::AddWindow  
+##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
  將子視窗加入工作窗格。  
   
 ```  
@@ -557,7 +552,7 @@ int AddWindow(
  指定視窗的高度。  
   
  [輸入] `bAutoDestroyWindow`  
- `TRUE`若要移除工作; 時終結視窗否則， `FALSE`。  
+ `TRUE` 若要移除工作; 時終結視窗否則， `FALSE`。  
   
  [輸入] `dwUserData`  
  指定與工作相關聯的使用者定義資料。  
@@ -568,14 +563,14 @@ int AddWindow(
 ### <a name="remarks"></a>備註  
  呼叫此方法以將控制項加入工作窗格。 比方說，您可以將編輯控制項的功能，例如搜尋列。  
   
-##  <a name="cmfctaskspane"></a>CMFCTasksPane::CMFCTasksPane  
+##  <a name="cmfctaskspane"></a>  CMFCTasksPane::CMFCTasksPane  
  建構[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)物件。  
   
 ```  
 CMFCTasksPane();
 ```  
   
-##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
+##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups  
 
   
 ```  
@@ -593,7 +588,7 @@ void CollapseAllGroups(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="collapsegroup"></a>CMFCTasksPane::CollapseGroup  
+##  <a name="collapsegroup"></a>  CMFCTasksPane::CollapseGroup  
  摺疊或展開群組。  
   
 ```  
@@ -612,18 +607,18 @@ BOOL CollapseGroup(
  指定要摺疊的群組。  
   
  [輸入] `bCollapse`  
- `TRUE`若要摺疊群組。`FALSE`展開群組。  
+ `TRUE` 若要摺疊群組。`FALSE`展開群組。  
   
  [輸入] `nGroup`  
  指定以零為起始的索引，要摺疊的群組內部的清單中的群組。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果群組摺疊或展開順利啟動。否則， `FALSE`。  
+ `TRUE` 如果群組摺疊或展開順利啟動。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  摺疊的群組顯示僅在群組標題。隱藏的工作清單。  
   
-##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
+##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe  
 
   
 ```  
@@ -637,7 +632,7 @@ virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="createmenu"></a>CMFCTasksPane::CreateMenu  
+##  <a name="createmenu"></a>  CMFCTasksPane::CreateMenu  
  會建立使用者按一下時，會出現一個功能表**其他工作窗格**功能表按鈕。  
   
 ```  
@@ -652,7 +647,7 @@ HMENU CreateMenu() const;
   
  這個方法會建立快顯功能表包含 [工作] 窗格中的頁面清單。 功能表會顯示使用中的頁面旁邊的核取記號。  
   
-##  <a name="enableanimation"></a>CMFCTasksPane::EnableAnimation  
+##  <a name="enableanimation"></a>  CMFCTasksPane::EnableAnimation  
  啟用或停用工作群組展開或摺疊時所發生的動畫。  
   
 ```  
@@ -661,12 +656,12 @@ void EnableAnimation(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要啟用工作群組會展開或摺疊; 時所發生的動畫否則， `FALSE`。  
+ `TRUE` 若要啟用工作群組會展開或摺疊; 時所發生的動畫否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  根據預設，會啟用工作群組展開或摺疊時所發生的動畫。  
   
-##  <a name="enablegroupcollapse"></a>CMFCTasksPane::EnableGroupCollapse  
+##  <a name="enablegroupcollapse"></a>  CMFCTasksPane::EnableGroupCollapse  
  指定使用者是否可以摺疊工作群組。  
   
 ```  
@@ -675,12 +670,12 @@ void EnableGroupCollapse(BOOL bEnable);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`如果使用者可以摺疊工作群組;否則， `FALSE`。  
+ `TRUE` 如果使用者可以摺疊工作群組;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  已摺疊工作群組會顯示僅在群組標題。隱藏的工作清單。  
   
-##  <a name="enablehistorymenubuttons"></a>CMFCTasksPane::EnableHistoryMenuButtons  
+##  <a name="enablehistorymenubuttons"></a>  CMFCTasksPane::EnableHistoryMenuButtons  
  啟用下拉式功能表上**下一步**和**上一步**瀏覽按鈕。  
   
 ```  
@@ -689,14 +684,14 @@ void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要啟用下拉式功能表上**下一步**和**上一步**瀏覽按鈕，否則`FALSE`。  
+ `TRUE` 若要啟用下拉式功能表上**下一步**和**上一步**瀏覽按鈕，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
  根據預設，在下拉式功能表**下一步**和**上一步**按鈕已停用。  
   
  功能表包含使用者所用的工作頁面的歷程記錄。  
   
-##  <a name="enablenavigationtoolbar"></a>CMFCTasksPane::EnableNavigationToolbar  
+##  <a name="enablenavigationtoolbar"></a>  CMFCTasksPane::EnableNavigationToolbar  
  啟用或停用導覽工具列。  
   
 ```  
@@ -711,7 +706,7 @@ void EnableNavigationToolbar(
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要啟用導覽工具列。否則， `FALSE`。  
+ `TRUE` 若要啟用導覽工具列。否則， `FALSE`。  
   
  [輸入] `uiToolbarBmpRes`  
  指定包含要在工具列上顯示的影像之點陣圖的資源識別碼。  
@@ -727,7 +722,7 @@ void EnableNavigationToolbar(
   
  根據預設，此架構不會顯示導覽工具列。 如果未顯示 [導覽] 工具列，瀏覽按鈕位於標題的停駐列。  
   
-##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
+##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls  
 
   
 ```  
@@ -739,7 +734,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="enablescrollbuttons"></a>CMFCTasksPane::EnableScrollButtons  
+##  <a name="enablescrollbuttons"></a>  CMFCTasksPane::EnableScrollButtons  
  啟用捲動按鈕而非捲軸。  
   
 ```  
@@ -748,12 +743,12 @@ void EnableScrollButtons(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要在工作窗格中，而非捲軸; 顯示捲軸按鈕否則， `FALSE`。  
+ `TRUE` 若要在工作窗格中，而非捲軸; 顯示捲軸按鈕否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  根據預設，架構會顯示在 [工作] 窗格中捲動按鈕。  
   
-##  <a name="enablewraplabels"></a>CMFCTasksPane::EnableWrapLabels  
+##  <a name="enablewraplabels"></a>  CMFCTasksPane::EnableWrapLabels  
  啟用或停用標籤中文字的自動換行。  
   
 ```  
@@ -762,12 +757,12 @@ void EnableWrapLabels(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要將文字換行中會出現在 [工作] 窗格中; 的標籤否則， `FALSE`。  
+ `TRUE` 若要將文字換行中會出現在 [工作] 窗格中; 的標籤否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  根據預設，此架構不將文字換行標籤中。 啟用自動換行時，標籤中的文字可以出現在多行。 標籤可以包含分行標記例如`\n`和底線標記`&`。  
   
-##  <a name="enablewraptasks"></a>CMFCTasksPane::EnableWrapTasks  
+##  <a name="enablewraptasks"></a>  CMFCTasksPane::EnableWrapTasks  
  啟用或停用的工作中的文字自動換行。  
   
 ```  
@@ -776,12 +771,12 @@ void EnableWrapTasks(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要將工作包裝在工作窗格。否則， `FALSE`。  
+ `TRUE` 若要將工作包裝在工作窗格。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  根據預設，會停用工作的自動換行。  
   
-##  <a name="getactivepage"></a>CMFCTasksPane::GetActivePage  
+##  <a name="getactivepage"></a>  CMFCTasksPane::GetActivePage  
  傳回使用中頁面以零為基底的索引。  
   
 ```  
@@ -791,7 +786,7 @@ int GetActivePage() const;
 ### <a name="return-value"></a>傳回值  
  使用中的頁面以零為起始的索引。  
   
-##  <a name="getgroupcaptionheight"></a>CMFCTasksPane::GetGroupCaptionHeight  
+##  <a name="getgroupcaptionheight"></a>  CMFCTasksPane::GetGroupCaptionHeight  
  傳回群組標題的高度。  
   
 ```  
@@ -801,7 +796,7 @@ int GetGroupCaptionHeight() const;
 ### <a name="return-value"></a>傳回值  
  群組標題的 像素為單位的高度。  
   
-##  <a name="getgroupcaptionhorzoffset"></a>CMFCTasksPane::GetGroupCaptionHorzOffset  
+##  <a name="getgroupcaptionhorzoffset"></a>  CMFCTasksPane::GetGroupCaptionHorzOffset  
  傳回群組標題的水平位移。  
   
 ```  
@@ -811,7 +806,7 @@ int GetGroupCaptionHorzOffset() const;
 ### <a name="return-value"></a>傳回值  
  群組標題的水平位移。 水平位移是像素為單位，從 [工作] 窗格的左或向右邊緣的距離。  
   
-##  <a name="getgroupcaptionvertoffset"></a>CMFCTasksPane::GetGroupCaptionVertOffset  
+##  <a name="getgroupcaptionvertoffset"></a>  CMFCTasksPane::GetGroupCaptionVertOffset  
  傳回群組標題的垂直位移。  
   
 ```  
@@ -824,7 +819,7 @@ int GetGroupCaptionVertOffset() const;
 ### <a name="remarks"></a>備註  
  垂直位移的預設值是 7 個像素。  
   
-##  <a name="getgroupcount"></a>CMFCTasksPane::GetGroupCount  
+##  <a name="getgroupcount"></a>  CMFCTasksPane::GetGroupCount  
  傳回群組總數。  
   
 ```  
@@ -834,7 +829,7 @@ int GetGroupCount() const;
 ### <a name="return-value"></a>傳回值  
  在 [工作] 窗格中的群組數總計。  
   
-##  <a name="getgrouplocation"></a>CMFCTasksPane::GetGroupLocation  
+##  <a name="getgrouplocation"></a>  CMFCTasksPane::GetGroupLocation  
  傳回指定群組的內部群組索引。  
   
 ```  
@@ -851,9 +846,9 @@ BOOL GetGroupLocation(
  包含工作群組的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果找不到工作群組。否則， `FALSE`。  
+ `TRUE` 如果找不到工作群組。否則， `FALSE`。  
   
-##  <a name="getgroupvertoffset"></a>CMFCTasksPane::GetGroupVertOffset  
+##  <a name="getgroupvertoffset"></a>  CMFCTasksPane::GetGroupVertOffset  
  傳回群組的垂直位移。  
   
 ```  
@@ -863,7 +858,7 @@ int GetGroupVertOffset() const;
 ### <a name="return-value"></a>傳回值  
  之垂直位移的像素為單位的群組。  
   
-##  <a name="gethorzmargin"></a>CMFCTasksPane::GetHorzMargin  
+##  <a name="gethorzmargin"></a>  CMFCTasksPane::GetHorzMargin  
  傳回工作窗格與用戶端區域邊緣之間的水平間距。  
   
 ```  
@@ -876,7 +871,7 @@ int GetHorzMargin() const;
 ### <a name="remarks"></a>備註  
  工作窗格與用戶端區域邊緣之間的預設間距是 12 個像素。  
   
-##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
+##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages  
 
   
 ```  
@@ -888,7 +883,7 @@ void GetNextPages(CStringList& lstNextPages) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getpagebygroup"></a>CMFCTasksPane::GetPageByGroup  
+##  <a name="getpagebygroup"></a>  CMFCTasksPane::GetPageByGroup  
  擷取指定之群組的頁面索引。  
   
 ```  
@@ -905,9 +900,9 @@ BOOL GetPageByGroup(
  包含指定群組的頁面索引。 如果工作群組僅包含預設網頁，則傳回的值為 0。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果群組`nGroup`存在，否則`FALSE`。  
+ `TRUE` 如果群組`nGroup`存在，否則`FALSE`。  
   
-##  <a name="getpagescount"></a>CMFCTasksPane::GetPagesCount  
+##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
  傳回頁數。  
   
 ```  
@@ -917,7 +912,7 @@ int GetPagesCount() const;
 ### <a name="return-value"></a>傳回值  
  在 [工作] 窗格中的頁面數目。  
   
-##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
+##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages  
 
   
 ```  
@@ -929,7 +924,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl  
 
   
 ```  
@@ -943,7 +938,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="gettask"></a>CMFCTasksPane::GetTask  
+##  <a name="gettask"></a>  CMFCTasksPane::GetTask  
  擷取工作。  
   
 ```  
@@ -962,7 +957,7 @@ CMFCTasksPaneTask* GetTask(
 ### <a name="return-value"></a>傳回值  
  指定索引處的工作。  
   
-##  <a name="gettaskcount"></a>CMFCTasksPane::GetTaskCount  
+##  <a name="gettaskcount"></a>  CMFCTasksPane::GetTaskCount  
  傳回指定的群組中的工作數目。  
   
 ```  
@@ -976,7 +971,7 @@ int GetTaskCount(int nGroup) const;
 ### <a name="return-value"></a>傳回值  
  指定的群組或 0 中的工作數目`nGroup`無效。  
   
-##  <a name="gettaskgroup"></a>CMFCTasksPane::GetTaskGroup  
+##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
  傳回指定之群組索引的工作群組。  
   
 ```  
@@ -990,7 +985,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 ### <a name="return-value"></a>傳回值  
  工作群組中指定索引處。  
   
-##  <a name="gettasklocation"></a>CMFCTasksPane::GetTaskLocation  
+##  <a name="gettasklocation"></a>  CMFCTasksPane::GetTaskLocation  
  傳回的群組與指定工作的索引。  
   
 ```  
@@ -1027,12 +1022,12 @@ BOOL GetTaskLocation(
  指定要尋找工作。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果找不到工作位置。`FALSE`如果指定的工作不存在。  
+ `TRUE` 如果找不到工作位置。`FALSE`如果指定的工作不存在。  
   
 ### <a name="remarks"></a>備註  
  這個方法會擷取的群組索引和工作指定工作的索引。 如果此方法會傳回`FALSE`，`nGroup`和`nTask`設定為-1。  
   
-##  <a name="gettaskshorzoffset"></a>CMFCTasksPane::GetTasksHorzOffset  
+##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
  傳回工作的水平位移。  
   
 ```  
@@ -1045,7 +1040,7 @@ int GetTasksHorzOffset() const;
 ### <a name="remarks"></a>備註  
  工作的預設水平位移為 12 個像素。  
   
-##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
+##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset  
 
   
 ```  
@@ -1056,7 +1051,7 @@ int GetTasksIconHorzOffset() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
+##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset  
 
   
 ```  
@@ -1067,7 +1062,7 @@ int GetTasksIconVertOffset() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getvertmargin"></a>CMFCTasksPane::GetVertMargin  
+##  <a name="getvertmargin"></a>  CMFCTasksPane::GetVertMargin  
  傳回工作窗格與用戶端區域邊緣之間的垂直邊界。  
   
 ```  
@@ -1080,7 +1075,7 @@ int GetVertMargin() const;
 ### <a name="remarks"></a>備註  
  垂直邊界是工作窗格與用戶端區域邊緣之間的空間。 垂直邊界的預設值為 12 個像素。  
   
-##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible  
 
   
 ```  
@@ -1091,7 +1086,7 @@ virtual BOOL IsAccessibilityCompatible();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="isanimationenabled"></a>CMFCTasksPane::IsAnimationEnabled  
+##  <a name="isanimationenabled"></a>  CMFCTasksPane::IsAnimationEnabled  
  指出是否啟用動畫。  
   
 ```  
@@ -1099,12 +1094,12 @@ BOOL IsAnimationEnabled() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用在使用者展開或摺疊群組時，就會發生的動畫。否則， `FALSE`。  
+ `TRUE` 如果已啟用在使用者展開或摺疊群組時，就會發生的動畫。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  呼叫[CMFCTasksPane::EnableAnimation](#enableanimation)啟用或停用動畫。  
   
-##  <a name="isbackbuttonenabled"></a>CMFCTasksPane::IsBackButtonEnabled  
+##  <a name="isbackbuttonenabled"></a>  CMFCTasksPane::IsBackButtonEnabled  
  指出是否啟用上一頁按鈕。  
   
 ```  
@@ -1112,12 +1107,12 @@ BOOL IsBackButtonEnabled() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用 [上一頁] 按鈕。否則， `FALSE`。  
+ `TRUE` 如果已啟用 [上一頁] 按鈕。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  當使用者按一下 [上一頁] 按鈕時，架構會顯示先前的 [工作] 頁面。  
   
-##  <a name="isforwardbuttonenabled"></a>CMFCTasksPane::IsForwardButtonEnabled  
+##  <a name="isforwardbuttonenabled"></a>  CMFCTasksPane::IsForwardButtonEnabled  
  指出是否啟用下一頁按鈕。  
   
 ```  
@@ -1125,12 +1120,12 @@ BOOL IsForwardButtonEnabled() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用 [下一頁] 按鈕。否則， `FALSE`。  
+ `TRUE` 如果已啟用 [下一頁] 按鈕。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  [轉寄] 按鈕可讓向前巡覽記錄中的工作頁面。  
   
-##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
+##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled  
 
   
 ```  
@@ -1141,7 +1136,7 @@ BOOL IsGroupCollapseEnabled() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ishistorymenubuttonsenabled"></a>CMFCTasksPane::IsHistoryMenuButtonsEnabled  
+##  <a name="ishistorymenubuttonsenabled"></a>  CMFCTasksPane::IsHistoryMenuButtonsEnabled  
  指出是否**下一步**和**上一步**瀏覽按鈕有下拉式功能表。  
   
 ```  
@@ -1149,9 +1144,9 @@ BOOL IsHistoryMenuButtonsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果**下一步**和**上一步**瀏覽按鈕有下拉式功能表，否則`FALSE`。  
+ `TRUE` 如果**下一步**和**上一步**瀏覽按鈕有下拉式功能表，否則`FALSE`。  
   
-##  <a name="isnavigationtoolbarenabled"></a>CMFCTasksPane::IsNavigationToolbarEnabled  
+##  <a name="isnavigationtoolbarenabled"></a>  CMFCTasksPane::IsNavigationToolbarEnabled  
  指出是否啟用導覽工具列。  
   
 ```  
@@ -1159,9 +1154,9 @@ BOOL IsNavigationToolbarEnabled() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用導覽工具列。否則， `FALSE`。  
+ `TRUE` 如果已啟用導覽工具列。否則， `FALSE`。  
   
-##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
+##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox  
 
   
 ```  
@@ -1172,7 +1167,7 @@ virtual BOOL IsToolBox() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="iswraplabelsenabled"></a>CMFCTasksPane::IsWrapLabelsEnabled  
+##  <a name="iswraplabelsenabled"></a>  CMFCTasksPane::IsWrapLabelsEnabled  
  指出工作窗格的標籤中是否自動換行。  
   
 ```  
@@ -1180,9 +1175,9 @@ BOOL IsWrapLabelsEnabled() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果在標籤文字換行;，否則， `FALSE`。  
+ `TRUE` 如果在標籤文字換行;，否則， `FALSE`。  
   
-##  <a name="iswraptasksenabled"></a>CMFCTasksPane::IsWrapTasksEnabled  
+##  <a name="iswraptasksenabled"></a>  CMFCTasksPane::IsWrapTasksEnabled  
  指定是否在 framework 包裝工作字串。  
   
 ```  
@@ -1190,9 +1185,9 @@ BOOL IsWrapTasksEnabled() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果工作字串會包裝;，否則， `FALSE`。  
+ `TRUE` 如果工作字串會包裝;，否則， `FALSE`。  
   
-##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
+##  <a name="loadstate"></a>  CMFCTasksPane::LoadState  
 
   
 ```  
@@ -1211,7 +1206,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onactivatetaskspanepage"></a>CMFCTasksPane::OnActivateTasksPanePage  
+##  <a name="onactivatetaskspanepage"></a>  CMFCTasksPane::OnActivateTasksPanePage  
  建立工作窗格頁面作用中時，由架構呼叫。  
   
 ```  
@@ -1221,7 +1216,7 @@ virtual void OnActivateTasksPanePage();
 ### <a name="remarks"></a>備註  
  覆寫此方法以自訂工作窗格頁面外觀的衍生類別中。  
   
-##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
+##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel  
 
   
 ```  
@@ -1230,7 +1225,7 @@ virtual void OnCancel();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onclicktask"></a>CMFCTasksPane::OnClickTask  
+##  <a name="onclicktask"></a>  CMFCTasksPane::OnClickTask  
  使用者按一下工作窗格中的項目時由架構呼叫。  
   
 ```  
@@ -1259,7 +1254,7 @@ virtual void OnClickTask(
   
  若要在按下工作時，執行自訂程式碼在衍生類別中的，這個方法會覆寫。  
   
-##  <a name="onok"></a>CMFCTasksPane::OnOK  
+##  <a name="onok"></a>  CMFCTasksPane::OnOK  
 
   
 ```  
@@ -1268,7 +1263,7 @@ virtual void OnOK();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onpressbackbutton"></a>CMFCTasksPane::OnPressBackButton  
+##  <a name="onpressbackbutton"></a>  CMFCTasksPane::OnPressBackButton  
  使用者按一下上一頁按鈕時由架構呼叫。  
   
 ```  
@@ -1280,7 +1275,7 @@ virtual void OnPressBackButton();
   
  覆寫這個方法來執行自訂程式碼，當使用者按一下 [上一頁] 按鈕在衍生類別中。  
   
-##  <a name="onpressforwardbutton"></a>CMFCTasksPane::OnPressForwardButton  
+##  <a name="onpressforwardbutton"></a>  CMFCTasksPane::OnPressForwardButton  
  使用者按一下上一步瀏覽按鈕時由架構呼叫。  
   
 ```  
@@ -1292,7 +1287,7 @@ virtual void OnPressForwardButton();
   
  覆寫這個方法來執行自訂程式碼，當使用者按一下 [轉寄] 按鈕在衍生類別中。  
   
-##  <a name="onpresshomebutton"></a>CMFCTasksPane::OnPressHomeButton  
+##  <a name="onpresshomebutton"></a>  CMFCTasksPane::OnPressHomeButton  
  當使用者按一下首頁瀏覽按鈕時由架構呼叫。  
   
 ```  
@@ -1304,7 +1299,7 @@ virtual void OnPressHomeButton();
   
  覆寫這個方法在衍生類別來執行自訂程式碼，當使用者按一下首頁瀏覽按鈕中。  
   
-##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
+##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton  
 
   
 ```  
@@ -1319,7 +1314,7 @@ virtual void OnPressOtherButton(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData  
 
   
 ```  
@@ -1333,7 +1328,7 @@ virtual BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI  
 
   
 ```  
@@ -1348,7 +1343,7 @@ virtual void OnUpdateCmdUI(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage  
 
   
 ```  
@@ -1362,7 +1357,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout  
 
   
 ```  
@@ -1374,7 +1369,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="removeallgroups"></a>CMFCTasksPane::RemoveAllGroups  
+##  <a name="removeallgroups"></a>  CMFCTasksPane::RemoveAllGroups  
  移除指定之頁面上的所有群組。  
   
 ```  
@@ -1388,14 +1383,14 @@ void RemoveAllGroups(int nPageIdx = 0);
 ### <a name="remarks"></a>備註  
  移除指定的頁面上的所有群組`nPageIdx`，或如果沒有預設網頁的所有群組。  
   
-##  <a name="removeallpages"></a>CMFCTasksPane::RemoveAllPages  
+##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
  從工作窗格中移除所有頁面，預設 (第一頁) 頁面除外。  
   
 ```  
 void RemoveAllPages();
 ```  
   
-##  <a name="removealltasks"></a>CMFCTasksPane::RemoveAllTasks  
+##  <a name="removealltasks"></a>  CMFCTasksPane::RemoveAllTasks  
  從指定的群組中移除所有的工作。  
   
 ```  
@@ -1406,7 +1401,7 @@ void RemoveAllTasks(int nGroup);
  [輸入] `nGroup`  
  指定群組的以零為起始的索引。  
   
-##  <a name="removegroup"></a>CMFCTasksPane::RemoveGroup  
+##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
  移除群組。  
   
 ```  
@@ -1422,7 +1417,7 @@ void RemoveGroup(int nGroup);
   
  當架構移除群組時，所有的工作及與它相關聯的使用者 windows 將被終結。  
   
-##  <a name="removepage"></a>CMFCTasksPane::RemovePage  
+##  <a name="removepage"></a>  CMFCTasksPane::RemovePage  
  從工作窗格移除指定的頁面。  
   
 ```  
@@ -1433,7 +1428,7 @@ void RemovePage(int nPageIdx);
  [輸入] `nPageIdx`  
  指定要移除之頁面的以零為起始的索引。  
   
-##  <a name="removetask"></a>CMFCTasksPane::RemoveTask  
+##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
  從工作群組中移除工作。  
   
 ```  
@@ -1451,12 +1446,12 @@ BOOL RemoveTask(
  指定要移除工作的以零為起始的索引。  
   
  [輸入] `bRedraw`  
- `TRUE`若要重繪其工作窗格。否則， `FALSE`。  
+ `TRUE` 若要重繪其工作窗格。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果函式成功則`FALSE`如果`nGroup`或`nTask`無效。  
+ `TRUE` 如果函式成功則`FALSE`如果`nGroup`或`nTask`無效。  
   
-##  <a name="savestate"></a>CMFCTasksPane::SaveState  
+##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
   
 ```  
@@ -1475,7 +1470,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="serialize"></a>CMFCTasksPane::Serialize  
+##  <a name="serialize"></a>  CMFCTasksPane::Serialize  
 
   
 ```  
@@ -1487,7 +1482,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setactivepage"></a>CMFCTasksPane::SetActivePage  
+##  <a name="setactivepage"></a>  CMFCTasksPane::SetActivePage  
  讓指定的頁面中的工作窗格使用中。  
   
 ```  
@@ -1501,7 +1496,7 @@ void SetActivePage(int nPageIdx);
 ### <a name="remarks"></a>備註  
  如果此方法會判斷提示`nPageIdx`無效。  
   
-##  <a name="setcaption"></a>CMFCTasksPane::SetCaption  
+##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
  設定工作窗格的標題名稱。  
   
 ```  
@@ -1515,7 +1510,7 @@ void SetCaption(LPCTSTR lpszName);
 ### <a name="remarks"></a>備註  
  如果工作窗格有多個頁面，預設頁面具有已設定使用此函式的標題。  
   
-##  <a name="setgroupcaptionheight"></a>CMFCTasksPane::SetGroupCaptionHeight  
+##  <a name="setgroupcaptionheight"></a>  CMFCTasksPane::SetGroupCaptionHeight  
  設定群組標題的高度。  
   
 ```  
@@ -1531,7 +1526,7 @@ void SetGroupCaptionHeight(int n = -1);
   
  如果`n`為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 預設的標題高度為 25 像素。  
   
-##  <a name="setgroupcaptionhorzoffset"></a>CMFCTasksPane::SetGroupCaptionHorzOffset  
+##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
  設定群組標題的水平位移。  
   
 ```  
@@ -1542,7 +1537,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
  [輸入] `n`  
  指定群組標題的水平位移。  
   
-##  <a name="setgroupcaptionvertoffset"></a>CMFCTasksPane::SetGroupCaptionVertOffset  
+##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
  設定群組標題的垂直位移。  
   
 ```  
@@ -1553,7 +1548,7 @@ void SetGroupCaptionVertOffset(int n = -1);
  [輸入] `n`  
  指定垂直位移，以像素的群組標題。  
   
-##  <a name="setgroupname"></a>CMFCTasksPane::SetGroupName  
+##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
  設定群組名稱。  
   
 ```  
@@ -1570,9 +1565,9 @@ BOOL SetGroupName(
  指定群組的名稱。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功設定群組名稱;否則， `FALSE`。  
+ `TRUE` 如果已成功設定群組名稱;否則， `FALSE`。  
   
-##  <a name="setgrouptextcolor"></a>CMFCTasksPane::SetGroupTextColor  
+##  <a name="setgrouptextcolor"></a>  CMFCTasksPane::SetGroupTextColor  
  設定群組標題的文字色彩。  
   
 ```  
@@ -1593,9 +1588,9 @@ BOOL SetGroupTextColor(
  指定的文字色彩反白顯示的群組。 如果-1，則會使用預設的反白顯示色彩。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功變更群組的文字色彩。否則， `FALSE`。  
+ `TRUE` 如果已成功變更群組的文字色彩。否則， `FALSE`。  
   
-##  <a name="setgroupvertoffset"></a>CMFCTasksPane::SetGroupVertOffset  
+##  <a name="setgroupvertoffset"></a>  CMFCTasksPane::SetGroupVertOffset  
  設定群組的垂直位移。  
   
 ```  
@@ -1611,7 +1606,7 @@ void SetGroupVertOffset(int n = -1);
   
  呼叫此方法以自訂工作窗格元素的邊界。 如果`n`為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 預設位移為 15 像素。  
   
-##  <a name="sethorzmargin"></a>CMFCTasksPane::SetHorzMargin  
+##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
  設定水平的邊界。  
   
 ```  
@@ -1627,7 +1622,7 @@ void SetHorzMargin(int n = -1);
   
  如果 n 為-1，而且架構使用視覺化管理員決定的邊界值 ( `CMFCVisualManager::GetTasksPaneHorzMargin`)。 預設的水平邊界為 12 個像素。  
   
-##  <a name="seticonslist"></a>CMFCTasksPane::SetIconsList  
+##  <a name="seticonslist"></a>  CMFCTasksPane::SetIconsList  
  設定影像清單。  
   
 ```  
@@ -1657,7 +1652,7 @@ void SetIconsList(HIMAGELIST hIcons);
   
  這個方法會將影像清單與工作窗格控制項產生關聯。 若要設定工作的圖示，當您呼叫[cmfctaskspane:: Addtask](#addtask)，將`nTaskIcon`此映像清單中適當的以零為起始索引。  
   
-##  <a name="setpagecaption"></a>CMFCTasksPane::SetPageCaption  
+##  <a name="setpagecaption"></a>  CMFCTasksPane::SetPageCaption  
  設定工作窗格頁面的標題文字。  
   
 ```  
@@ -1676,7 +1671,7 @@ void SetPageCaption(
 ### <a name="remarks"></a>備註  
  如果工作窗格有多個頁面，預設頁面具有已設定使用此方法的標題。  
   
-##  <a name="settaskname"></a>CMFCTasksPane::SetTaskName  
+##  <a name="settaskname"></a>  CMFCTasksPane::SetTaskName  
  設定工作的名稱。  
   
 ```  
@@ -1697,9 +1692,9 @@ BOOL SetTaskName(
  指定工作名稱。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功設定工作名稱。否則， `FALSE`。  
+ `TRUE` 如果已成功設定工作名稱。否則， `FALSE`。  
   
-##  <a name="settaskshorzoffset"></a>CMFCTasksPane::SetTasksHorzOffset  
+##  <a name="settaskshorzoffset"></a>  CMFCTasksPane::SetTasksHorzOffset  
  設定工作的水平位移。  
   
 ```  
@@ -1717,7 +1712,7 @@ void SetTasksHorzOffset(int n = -1);
   
  預設的水平位移為 12 個像素。  
   
-##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
+##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset  
 
   
 ```  
@@ -1729,7 +1724,7 @@ void SetTasksIconHorzOffset(int n = -1);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
+##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset  
 
   
 ```  
@@ -1741,7 +1736,7 @@ void SetTasksIconVertOffset(int n = -1);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="settasktextcolor"></a>CMFCTasksPane::SetTaskTextColor  
+##  <a name="settasktextcolor"></a>  CMFCTasksPane::SetTaskTextColor  
  設定工作的文字色彩。  
   
 ```  
@@ -1766,9 +1761,9 @@ BOOL SetTaskTextColor(
  指定的文字色彩反白顯示的群組。 -1，如果此方法會使用預設的反白顯示色彩。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功設定工作的文字色彩。否則， `FALSE`。  
+ `TRUE` 如果已成功設定工作的文字色彩。否則， `FALSE`。  
   
-##  <a name="setvertmargin"></a>CMFCTasksPane::SetVertMargin  
+##  <a name="setvertmargin"></a>  CMFCTasksPane::SetVertMargin  
  設定垂直邊界。  
   
 ```  
@@ -1784,7 +1779,7 @@ void SetVertMargin(int n = -1);
   
  如果`n`為-1，架構決定使用視覺化管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneVertMargin`)。 預設邊界為 12 個像素。  
   
-##  <a name="setwindowheight"></a>CMFCTasksPane::SetWindowHeight  
+##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
  設定視窗控制項的高度。  
   
 ```  
@@ -1810,12 +1805,12 @@ BOOL SetWindowHeight(
  指定設定的高度。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功設定視窗控制項的高度。`FALSE`如果`nGroup`無效或者`hwndTask`不存在。  
+ `TRUE` 如果已成功設定視窗控制項的高度。`FALSE`如果`nGroup`無效或者`hwndTask`不存在。  
   
 ### <a name="remarks"></a>備註  
  呼叫[CMFCTasksPane::AddWindow](#addwindow)加入與視窗控制項的工作。  
   
-##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString  
 
   
 ```  
@@ -1827,7 +1822,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="showtask"></a>CMFCTasksPane::ShowTask  
+##  <a name="showtask"></a>  CMFCTasksPane::ShowTask  
  顯示或隱藏工作。  
   
 ```  
@@ -1846,18 +1841,18 @@ BOOL ShowTask(
  指定要顯示或隱藏工作的以零為起始的索引。  
   
  [輸入] `bShow`  
- `TRUE`若要顯示工作。`FALSE`隱藏工作。  
+ `TRUE` 若要顯示工作。`FALSE`隱藏工作。  
   
  [輸入] `bRedraw`  
- `TRUE`若要重繪其工作窗格。否則， `FALSE`。  
+ `TRUE` 若要重繪其工作窗格。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果工作已成功顯示或隱藏。，`FALSE`如果指定的群組或工作不存在。  
+ `TRUE` 如果工作已成功顯示或隱藏。，`FALSE`如果指定的群組或工作不存在。  
   
 ### <a name="remarks"></a>備註  
  使用[CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid)顯示或隱藏工作，根據其命令識別碼。  
   
-##  <a name="showtaskbycmdid"></a>CMFCTasksPane::ShowTaskByCmdId  
+##  <a name="showtaskbycmdid"></a>  CMFCTasksPane::ShowTaskByCmdId  
  根據其命令識別碼顯示或隱藏工作。  
   
 ```  
@@ -1872,18 +1867,18 @@ BOOL ShowTaskByCmdId(
  指定要顯示或隱藏工作的命令識別碼。  
   
  [輸入] `bShow`  
- `TRUE`若要顯示工作。`FALSE`隱藏工作。  
+ `TRUE` 若要顯示工作。`FALSE`隱藏工作。  
   
  [輸入] `bRedraw`  
- `TRUE`若要重繪其工作窗格。否則， `FALSE`。  
+ `TRUE` 若要重繪其工作窗格。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果工作已成功顯示或隱藏。，`FALSE`如果指定的命令 ID 的工作不存在。  
+ `TRUE` 如果工作已成功顯示或隱藏。，`FALSE`如果指定的命令 ID 的工作不存在。  
   
 ### <a name="remarks"></a>備註  
  使用[CMFCTasksPane::ShowTask](#showtask)顯示或隱藏工作，根據其命令識別碼。  
   
-##  <a name="update"></a>CMFCTasksPane::Update  
+##  <a name="update"></a>  CMFCTasksPane::Update  
  重新整理所有的工作窗格中的控制項。  
   
 ```  
@@ -1895,7 +1890,7 @@ virtual void Update();
   
  在衍生類別時所要執行自訂程式碼架構會重新整理 [工作] 窗格中的，這個方法會覆寫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCTasksPaneTaskGroup 類別](../../mfc/reference/cmfctaskspanetaskgroup-class.md)   

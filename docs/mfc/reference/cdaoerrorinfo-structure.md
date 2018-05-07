@@ -1,13 +1,10 @@
 ---
-title: "CDaoErrorInfo 結構 |Microsoft 文件"
-ms.custom: 
+title: CDaoErrorInfo 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoErrorInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoErrorInfo structure [MFC]
 - DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da47b4b68a9fd73b3962254121006eff47282336
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c11ebaa7d315d09cea40b4ddc94d5afff498bf7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo 結構
 `CDaoErrorInfo`結構包含的資料存取物件 (DAO) 定義的物件時發生錯誤的相關資訊。  
@@ -65,11 +60,11 @@ struct CDaoErrorInfo
   
  如需處理 DAO 錯誤的詳細資訊，請參閱文章[例外狀況： 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 錯誤物件 」。  
   
- 所擷取的資訊[CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo)成員函式會儲存在`CDaoErrorInfo`結構。 檢查[m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo)資料成員從`CDaoException`您攔截例外狀況處理常式或呼叫中的物件`GetErrorInfo`從`CDaoException`以檢查錯誤，可能需要明確建立的物件直接呼叫 DAO 介面期間發生。 `CDaoErrorInfo`也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoErrorInfo`物件。  
+ 所擷取的資訊[CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo)成員函式會儲存在`CDaoErrorInfo`結構。 檢查[m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo)資料成員從`CDaoException`您攔截例外狀況處理常式或呼叫中的物件`GetErrorInfo`從`CDaoException`以檢查錯誤，可能需要明確建立的物件直接呼叫 DAO 介面期間發生。 `CDaoErrorInfo` 也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoErrorInfo`物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoException 類別](../../mfc/reference/cdaoexception-class.md)

@@ -1,30 +1,25 @@
 ---
-title: "使用 ODBC 和驅動程式 |Microsoft 文件"
-ms.custom: 
+title: 使用 ODBC 和驅動程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ODBC drivers, using
 ms.assetid: ae1bf357-4ca4-4748-9336-8fc317f294ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 842a09224a9ea61e6c53a6d700435f05176cee55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d49fa24c6cb27bc54e8cc3dc6bba674cb12ae57
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-odbc-and-drivers"></a>使用 ODBC 和驅動程式
 ODBC，可讓您撰寫不依賴只有一個資料庫管理系統 (DBMS) 的應用程式。 您可以撰寫一個應用程式可操作您的使用者具有正確的 DBMS 專屬的 ODBC 驅動程式的多個 dbms。  
@@ -41,5 +36,5 @@ ODBC，可讓您撰寫不依賴只有一個資料庫管理系統 (DBMS) 的應�
   
 -   [MFC 中的直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

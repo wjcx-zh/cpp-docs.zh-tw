@@ -1,12 +1,9 @@
 ---
-title: "CMetaFileDC 類別 |Microsoft 文件"
-ms.custom: 
+title: CMetaFileDC 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMetaFileDC
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb903bb38194be5b6a72f27ed683e965d7605b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 類別
 實作 Windows 中繼檔，這個檔案包含一連串可重新執行來建立所需影像或文字的繪圖裝置介面 (GDI) 命令。  
@@ -90,7 +85,7 @@ class CMetaFileDC : public CDC
 ## <a name="requirements"></a>需求  
  **標頭：** afxext.h  
   
-##  <a name="close"></a>CMetaFileDC::Close  
+##  <a name="close"></a>  CMetaFileDC::Close  
  關閉中繼檔裝置內容，並建立可用來播放中繼檔使用的 Windows 中繼檔控制代碼[CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile)成員函式。  
   
 ```  
@@ -105,7 +100,7 @@ HMETAFILE Close();
   
  在使用後刪除中繼檔，藉由呼叫 Windows [DeleteMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183537)函式。  
   
-##  <a name="closeenhanced"></a>CMetaFileDC::CloseEnhanced  
+##  <a name="closeenhanced"></a>  CMetaFileDC::CloseEnhanced  
  關閉增強型中繼檔裝置內容，並傳回識別格式增強型中繼檔的控制代碼。  
   
 ```  
@@ -136,7 +131,7 @@ HENHMETAFILE CloseEnhanced();
   
  當應用程式不再需要的增強型中繼檔的控制代碼時，它應該釋放控制代碼藉由呼叫 Win32 **DeleteEnhMetaFile**函式。  
   
-##  <a name="cmetafiledc"></a>CMetaFileDC::CMetaFileDC  
+##  <a name="cmetafiledc"></a>  CMetaFileDC::CMetaFileDC  
  建構`CMetaFileDC`兩個步驟中的物件。  
   
 ```  
@@ -146,7 +141,7 @@ CMetaFileDC();
 ### <a name="remarks"></a>備註  
  首先，呼叫`CMetaFileDC`，然後呼叫**建立**，建立 Windows 中繼檔裝置內容，並將它附加至`CMetaFileDC`物件。  
   
-##  <a name="create"></a>CMetaFileDC::Create  
+##  <a name="create"></a>  CMetaFileDC::Create  
  建構`CMetaFileDC`兩個步驟中的物件。  
   
 ```  
@@ -163,7 +158,7 @@ BOOL Create(LPCTSTR lpszFilename = NULL);
 ### <a name="remarks"></a>備註  
  首先，呼叫建構函式`CMetaFileDC`，然後呼叫**建立**，建立 Windows 中繼檔裝置內容，並將它附加至`CMetaFileDC`物件。  
   
-##  <a name="createenhanced"></a>CMetaFileDC::CreateEnhanced  
+##  <a name="createenhanced"></a>  CMetaFileDC::CreateEnhanced  
  建立裝置內容的格式增強型中繼檔。  
   
 ```  
@@ -207,7 +202,7 @@ BOOL CreateEnhanced(
   
  應該使用增強型中繼檔的檔名。EMF 延伸模組。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDC 類別](../../mfc/reference/cdc-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

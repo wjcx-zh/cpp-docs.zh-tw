@@ -1,13 +1,10 @@
 ---
-title: "通知來自 Rich Edit 控制項 |Microsoft 文件"
-ms.custom: 
+title: 通知來自 Rich Edit 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfcb2e4fe333db1ed629489b405255d4ab050b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c678af3444ef408a0a9c50e972942d67e2d3cf1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>來自 Rich Edit 控制項的告知
 通知訊息報告事件影響 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 它們可以處理由父視窗，或使用訊息反映由 rich edit 控制項本身。 Rich edit 控制項支援的所有編輯控制項以及數個其他項目搭配使用的通知訊息。 您可以判斷哪些通知訊息 rich edit 控制項傳送其父視窗藉由設定它的 「 事件遮罩 」。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **EN_SELCHANGE**應用程式可以偵測到目前的選取範圍變更處理**EN_SELCHANGE**通知訊息。 指定通知訊息[SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952)結構，其中包含新的選取範圍的相關資訊。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

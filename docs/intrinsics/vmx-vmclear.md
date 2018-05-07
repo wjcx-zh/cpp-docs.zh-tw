@@ -1,12 +1,9 @@
 ---
-title: __vmx_vmclear | Microsoft Docs
-ms.custom: 
+title: __vmx_vmclear |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __vmx_vmclear
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323fcf37ee9ecc9e62abe5d6fdc30944e58862f8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8da1e3d2c5b1a2018df0e46f085fede9b923fff8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vmxvmclear"></a>__vmx_vmclear
 **Microsoft 特定的**  
@@ -70,7 +65,7 @@ unsigned char __vmx_vmclear(
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)   
  [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

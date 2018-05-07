@@ -1,13 +1,10 @@
 ---
-title: "精靈和資源編輯器 |Microsoft 文件"
-ms.custom: 
+title: 精靈和資源編輯器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,25 +18,23 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd81a8548dbb746da4afa5b89bc49ee801cbaeb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="wizards-and-the-resource-editors"></a>精靈和資源編輯器
 Visual c + + MFC 程式設計，以及許多整合式的資源編輯器中包含數個精靈，供使用。 對 ActiveX 控制項的程式設計， [ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)用途很像，MFC 應用程式精靈。 雖然您可以撰寫 MFC 應用程式，這些工具大部分都沒有，工具將可大幅簡化和加速您的工作。  
   
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a>使用 MFC 應用程式精靈建立 MFC 應用程式  
+##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> 使用 MFC 應用程式精靈建立 MFC 應用程式  
  使用[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)建立 Visual c + + 中，其中可以包括 OLE 以及資料庫支援的 MFC 專案。 專案中的檔案包含您的應用程式、 文件、 檢視和框架視窗類別。標準資源，包括功能表和選擇性的工具列。其他所需的 Windows 檔案。並選擇性.rtf 檔案包含標準 Windows 說明主題，您可以修訂和強化來建立您的程式說明檔。  
   
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a>使用類別檢視管理類別和 Windows 訊息  
+##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> 使用類別檢視管理類別和 Windows 訊息  
  類別檢視可協助您建立的 Windows 訊息和命令處理函式，建立並管理類別，建立類別的成員變數、 建立 Automation 方法和屬性、 建立資料庫類別等等。  
   
 > [!NOTE]
@@ -53,12 +48,12 @@ Visual c + + MFC 程式設計，以及許多整合式的資源編輯器中包含
   
  [屬性] 視窗將會建立空的訊息處理常式成員函式，以及您使用原始碼程式碼編輯器來實作的處理常式的本文。 您也可以建立或編輯類別 （包括不從 MFC 類別衍生您自己的類別） 和使用類別檢視其成員。 如需使用類別檢視 和精靈加入程式碼加入專案的相關資訊，請參閱[使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)。  
   
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a>使用資源編輯器來建立和編輯資源  
+##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> 使用資源編輯器來建立和編輯資源  
  使用 Visual c + +[資源編輯器](../windows/resource-editors.md)建立和編輯功能表、 對話方塊、 自訂控制項、 快速鍵、 點陣圖、 圖示、 游標、 字串和版本資源。 自 Visual c + + 4.0 版，工具列編輯器使建立工具列更為容易。  
   
  為了協助您更多，Mfc 程式庫會提供一個稱為一般檔案。RES，包含 「 美工圖案 」 資源，您可以從一般複製。RES 並貼上到您自己的資源檔。 常見的。RES 包括工具列按鈕、 常見的資料指標、 圖示和多個。 您可以使用、 修改和重新發佈應用程式中的這些資源。 如需常見的詳細資訊。RES，請參閱[美工圖案範例](../visual-cpp-samples.md)。  
   
  MFC 應用程式精靈、 Visual c + + 精靈、 資源編輯器和 MFC 架構為您執行許多工作，以管理您的程式碼更容易。 大部分的應用程式專屬的程式碼是在您的文件和檢視類別中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)

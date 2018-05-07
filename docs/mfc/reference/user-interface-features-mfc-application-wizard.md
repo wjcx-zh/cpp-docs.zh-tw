@@ -1,13 +1,10 @@
 ---
-title: "MFC 應用程式精靈、 使用者介面功能 |Microsoft 文件"
-ms.custom: 
+title: MFC 應用程式精靈、 使用者介面功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.ui
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42196e437c8ff2ee43f733e1826b2a19c5dbb0a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>MFC 應用程式精靈、使用者介面功能
 本主題說明您可用來指定您的應用程式的外觀的選項。 可供您專案的使用者介面功能取決於您在中指定的應用程式類型[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)MFC 應用程式精靈頁面。 例如，如果您建立單一文件介面應用程式，您無法加入子框架樣式。  
@@ -70,6 +65,6 @@ ms.lasthandoff: 12/21/2017
  **對話方塊標題**  
  如[CDialog 類別](../../mfc/reference/cdialog-class.md)-架構應用程式，這個標題會出現在對話方塊的標題列。 若要編輯這個欄位，您必須先選取**對話方塊架構**選項在**應用程式類型**。 如需詳細資訊，請參閱[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
 

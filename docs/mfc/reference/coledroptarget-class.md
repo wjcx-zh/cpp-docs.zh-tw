@@ -1,12 +1,9 @@
 ---
-title: "COleDropTarget 類別 |Microsoft 文件"
-ms.custom: 
+title: COleDropTarget 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fecdedc84f4fd93cbd9efe5e525c1771c5eb1c7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 類別
 提供視窗與 OLE 程式庫之間的溝通機制。  
@@ -92,7 +87,7 @@ class COleDropTarget : public CCmdTarget
 ## <a name="requirements"></a>需求  
  **標頭：** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
  會建構一個物件類別的`COleDropTarget`。  
   
 ```  
@@ -102,7 +97,7 @@ COleDropTarget();
 ### <a name="remarks"></a>備註  
  呼叫[註冊](#register)將此物件與視窗產生關聯。  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
  當游標第一次拖曳到視窗時，由架構呼叫。  
   
 ```  
@@ -129,22 +124,22 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>傳回值  
  卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多個項目：  
   
-- `DROPEFFECT_NONE`不允許卸除。  
+- `DROPEFFECT_NONE` 不允許卸除。  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` 執行複製作業。  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` 會執行移動作業。  
   
-- `DROPEFFECT_LINK`會建立已卸除的資料從原始資料的連結。  
+- `DROPEFFECT_LINK` 會建立已卸除的資料從原始資料的連結。  
   
-- `DROPEFFECT_SCROLL`拖曳捲軸作業即將發生或正在進行中的目標。  
+- `DROPEFFECT_SCROLL` 拖曳捲軸作業即將發生或正在進行中的目標。  
   
 ### <a name="remarks"></a>備註  
  覆寫此函式可允許拖放作業，才會發生在視窗中。 預設實作會呼叫[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)，它只會傳回`DROPEFFECT_NONE`預設。  
   
  如需詳細資訊，請參閱[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows SDK 中。  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  當游標離開視窗拖曳作業時作用中時，由架構呼叫。  
   
 ```  
@@ -160,7 +155,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  如需詳細資訊，請參閱[IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) Windows SDK 中。  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  當游標拖曳到視窗時，由架構呼叫。  
   
 ```  
@@ -187,15 +182,15 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>傳回值  
  卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多個項目：  
   
-- `DROPEFFECT_NONE`不允許卸除。  
+- `DROPEFFECT_NONE` 不允許卸除。  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` 執行複製作業。  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` 會執行移動作業。  
   
-- `DROPEFFECT_LINK`會建立已卸除的資料從原始資料的連結。  
+- `DROPEFFECT_LINK` 會建立已卸除的資料從原始資料的連結。  
   
-- `DROPEFFECT_SCROLL`表示即將發生拖曳捲軸作業，或目標中發生的狀況。  
+- `DROPEFFECT_SCROLL` 表示即將發生拖曳捲軸作業，或目標中發生的狀況。  
   
 ### <a name="remarks"></a>備註  
  應該覆寫這個函式，以允許拖放作業，才會發生在視窗中。 此函式的預設實作會呼叫[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)，它會傳回`DROPEFFECT_NONE`預設。 因為經常在拖放作業期間會呼叫此函數，它應該最佳化盡量。  
@@ -205,7 +200,7 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
  由架構呼叫之前呼叫[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)來判斷是否`point`捲軸的區域中。  
   
 ```  
@@ -228,20 +223,20 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>傳回值  
  卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多個項目：  
   
-- `DROPEFFECT_NONE`不允許卸除。  
+- `DROPEFFECT_NONE` 不允許卸除。  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` 執行複製作業。  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` 會執行移動作業。  
   
-- `DROPEFFECT_LINK`會建立已卸除的資料從原始資料的連結。  
+- `DROPEFFECT_LINK` 會建立已卸除的資料從原始資料的連結。  
   
-- `DROPEFFECT_SCROLL`表示即將發生拖曳捲軸作業，或目標中發生的狀況。  
+- `DROPEFFECT_SCROLL` 表示即將發生拖曳捲軸作業，或目標中發生的狀況。  
   
 ### <a name="remarks"></a>備註  
  當您想要提供特殊的行為，這個事件時，覆寫這個函式。 此函式的預設實作會呼叫[CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)，它會傳回`DROPEFFECT_NONE`和捲動資料指標拖曳至視窗的框線的預設捲軸區域時的視窗。  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
  進行拖放作業時，由架構呼叫。  
   
 ```  
@@ -262,11 +257,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  使用者選擇拖放作業的效果。 它可以是下列一或多個項目：  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` 執行複製作業。  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` 會執行移動作業。  
   
-- `DROPEFFECT_LINK`會建立已卸除的資料從原始資料的連結。  
+- `DROPEFFECT_LINK` 會建立已卸除的資料從原始資料的連結。  
   
  `point`  
  包含資料指標，以像素與相對螢幕的位置。  
@@ -281,7 +276,7 @@ virtual BOOL OnDrop(
   
  如需詳細資訊，請參閱[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK 中。  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  進行拖放作業時，由架構呼叫。  
   
 ```  
@@ -319,19 +314,19 @@ virtual DROPEFFECT OnDropEx(
   
  拖放效果描述與拖放作業相關聯的動作。 請參閱下列置放效果的清單：  
   
-- `DROPEFFECT_NONE`不允許卸除。  
+- `DROPEFFECT_NONE` 不允許卸除。  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` 執行複製作業。  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` 會執行移動作業。  
   
-- `DROPEFFECT_LINK`會建立已卸除的資料從原始資料的連結。  
+- `DROPEFFECT_LINK` 會建立已卸除的資料從原始資料的連結。  
   
-- `DROPEFFECT_SCROLL`表示即將發生拖曳捲軸作業，或目標中發生的狀況。  
+- `DROPEFFECT_SCROLL` 表示即將發生拖曳捲軸作業，或目標中發生的狀況。  
   
  如需詳細資訊，請參閱[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows SDK 中。  
   
-##  <a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>  COleDropTarget::Register  
  呼叫此函式可註冊您的視窗與 OLE Dll 做為有效的置放目標。  
   
 ```  
@@ -350,7 +345,7 @@ BOOL Register(CWnd* pWnd);
   
  如需詳細資訊，請參閱[RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) Windows SDK 中。  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
  呼叫此函式之前終結登錄為置放目標，透過呼叫任何視窗[註冊](#register)移除從置放目標的清單。  
   
 ```  
@@ -362,7 +357,7 @@ virtual void Revoke();
   
  如需詳細資訊，請參閱[RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) Windows SDK 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   

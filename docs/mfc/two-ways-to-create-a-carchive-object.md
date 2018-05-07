@@ -1,13 +1,10 @@
 ---
-title: "建立 CArchive 物件的兩種方式 |Microsoft 文件"
-ms.custom: 
+title: 建立 CArchive 物件的兩種方式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>建立 CArchive 物件的兩種方式
 建立 `CArchive` 物件的方法有兩種：  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [明確建立 CArchive 物件](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>隱含建立 CArchive 物件透過架構  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> 隱含建立 CArchive 物件透過架構  
  最常見且簡單的方法，方法是讓架構建立`CArchive`代表儲存、 另存新檔，和開啟檔案 功能表命令的文件的物件。  
   
  以下是架構的功能當應用程式的使用者發出 Save As 命令，從 [檔案] 功能表：  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  因此，如果您讓架構建立`CArchive`物件文件時，您只需要為實作的文件`Serialize`寫入和讀取與封存的函式。 您也必須實作`Serialize`任何`CObject`-衍生物件的文件的`Serialize`直接或間接，接著將序列化函式。  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>明確建立 CArchive 物件  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> 明確建立 CArchive 物件  
  除了序列化架構透過文件，有其他情況下，您可能需要`CArchive`物件。 例如，您可能要序列化資料以及從剪貼簿，並由`CSharedFile`物件。 或者，您可以用來儲存的檔案，不同於架構所提供的使用者介面。 在此情況下，您可以明確地建立`CArchive`物件。 這麼做的相同方式，架構會做，請使用下列程序。  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>若要明確地建立 CArchive 物件  
@@ -79,6 +74,6 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [序列化：序列化物件](../mfc/serialization-serializing-an-object.md)
 

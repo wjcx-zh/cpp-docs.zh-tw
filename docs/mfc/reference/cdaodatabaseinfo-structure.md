@@ -2,12 +2,9 @@
 title: CDaoDatabaseInfo 結構 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoDatabaseInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 085d0e525cb00c9fffb3698080194da92a6dbb8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 結構
 `CDaoDatabaseInfo`結構包含的資料存取物件 (DAO) 定義的資料庫物件的相關資訊。  
@@ -109,12 +104,12 @@ struct CDaoDatabaseInfo
 ## <a name="remarks"></a>備註  
  資料庫是基礎類別的 MFC 物件的 DAO 物件[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)。 參考主要、 次要資料庫，且所有上述表示所傳回的資訊是如何[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式。  
   
- 所擷取的資訊[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式會儲存在`CDaoDatabaseInfo`結構。 呼叫`GetDatabaseInfo`如`CDaoWorkspace`資料庫物件會儲存其資料庫集合中的物件。 `CDaoDatabaseInfo`也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoDatabaseInfo`物件。  
+ 所擷取的資訊[CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式會儲存在`CDaoDatabaseInfo`結構。 呼叫`GetDatabaseInfo`如`CDaoWorkspace`資料庫物件會儲存其資料庫集合中的物件。 `CDaoDatabaseInfo` 也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoDatabaseInfo`物件。  
   
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoWorkspace 類別](../../mfc/reference/cdaoworkspace-class.md)   
  [CDaoDatabase 類別](../../mfc/reference/cdaodatabase-class.md)

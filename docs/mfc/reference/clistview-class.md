@@ -1,12 +1,9 @@
 ---
-title: "CListView 類別 |Microsoft 文件"
-ms.custom: 
+title: CListView 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CListView
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9d90df0ac3d91f58c1e9592e65ce84ac900f6e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clistview-class"></a>CListView 類別
 可簡化使用清單控制項和[CListCtrl](../../mfc/reference/clistctrl-class.md)，封裝清單控制項功能，透過 MFC 的文件檢視架構的類別。  
@@ -81,14 +76,14 @@ class CListView : public CCtrlView
 ## <a name="requirements"></a>需求  
  **標頭：** afxcview.h  
   
-##  <a name="clistview"></a>CListView::CListView  
+##  <a name="clistview"></a>  CListView::CListView  
  建構 `CListView` 物件。  
   
 ```  
 CListView();
 ```  
   
-##  <a name="getlistctrl"></a>CListView::GetListCtrl  
+##  <a name="getlistctrl"></a>  CListView::GetListCtrl  
  呼叫此成員函式可取得清單控制項與檢視相關聯的參考。  
   
 ```  
@@ -101,7 +96,7 @@ CListCtrl& GetListCtrl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
-##  <a name="removeimagelist"></a>CListView::RemoveImageList  
+##  <a name="removeimagelist"></a>  CListView::RemoveImageList  
  從清單檢視中移除指定的映像清單。  
   
 ```  
@@ -112,7 +107,7 @@ void RemoveImageList(int nImageList);
  `nImageList`  
  映像以移除以零為起始的索引。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 ROWLIST](../../visual-cpp-samples.md)   
  [CCtrlView 類別](../../mfc/reference/cctrlview-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

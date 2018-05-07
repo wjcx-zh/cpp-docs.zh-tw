@@ -1,12 +1,9 @@
 ---
-title: "MFC 類別 |Microsoft 文件"
-ms.custom: 
+title: MFC 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3775ad9c67e2ab4be4f36d0de257cd075b77ce86
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-classes"></a>MFC 類別
 下列清單中的類別包含在 Microsoft Foundation Class (MFC) 程式庫中。  
@@ -826,7 +821,7 @@ ms.lasthandoff: 02/09/2018
  管理從應用程式資源或檔案載入的工具列影像。  
   
  [CMFCToolBarInfo 類別](../../mfc/reference/cmfctoolbarinfo-class.md)  
- 包含在各種狀態下工具列影像的資源 ID。 `CMFCToolBarInfo`是 helper 類別，做為參數的[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  
+ 包含在各種狀態下工具列影像的資源 ID。 `CMFCToolBarInfo` 是 helper 類別，做為參數的[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  
   
  [CMFCToolBarMenuButton 類別](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  包含快顯功能表的工具列按鈕。  

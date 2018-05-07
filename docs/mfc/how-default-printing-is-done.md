@@ -1,13 +1,10 @@
 ---
-title: "如何完成預設列印 |Microsoft 文件"
-ms.custom: 
+title: 如何完成預設列印 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - printing [MFC], default
 - defaults, printing
 ms.assetid: 0f698459-0fc9-4d43-97da-29cf0f65daa2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5001026f1e5fe9e1fed86a49b0565b09ddd6b555
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2cf5b4a9bda3506a9558d5b723020dfe6d43396
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-default-printing-is-done"></a>如何完成預設列印
 本文說明 MFC 架構的 Windows 預設列印處理序。  
   
- 在 MFC 應用程式中，檢視類別具有一個名為 `OnDraw` 的成員函式，其中包含所有繪圖程式碼。 `OnDraw`接受的指標[CDC](../mfc/reference/cdc-class.md)物件做為參數。 `CDC` 物件表示用於接收由 `OnDraw` 所產生影像的裝置內容。 當顯示文件視窗收到[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)訊息，這個架構會呼叫`OnDraw`並將其傳遞螢幕裝置內容 ( [CPaintDC](../mfc/reference/cpaintdc-class.md)要特定的物件)。 因此，`OnDraw` 會輸出至螢幕。  
+ 在 MFC 應用程式中，檢視類別具有一個名為 `OnDraw` 的成員函式，其中包含所有繪圖程式碼。 `OnDraw` 接受的指標[CDC](../mfc/reference/cdc-class.md)物件做為參數。 `CDC` 物件表示用於接收由 `OnDraw` 所產生影像的裝置內容。 當顯示文件視窗收到[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)訊息，這個架構會呼叫`OnDraw`並將其傳遞螢幕裝置內容 ( [CPaintDC](../mfc/reference/cpaintdc-class.md)要特定的物件)。 因此，`OnDraw` 會輸出至螢幕。  
   
  在 Windows 程式設計中，將輸出傳送至印表機與將輸出傳送至螢幕非常類似。 這是因為 Windows 繪圖裝置介面 (Graphics Device，GDI) 不受到硬體影響。 您只需使用適當的裝置內容，即可使用相同的 GDI 函式在螢幕上顯示或進行列印。 如果 `CDC` 所接收的 `OnDraw` 物件表示印表機，`OnDraw` 便會輸出到印表機。  
   
@@ -40,6 +35,6 @@ ms.lasthandoff: 12/21/2017
   
  通訊協定發行項中所述[多重頁面文件](../mfc/multipage-documents.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [列印](../mfc/printing.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "COleCurrency 類別 |Microsoft 文件"
-ms.custom: 
+title: COleCurrency 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleCurrency
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8d20b0f61fc7773899e671bec5b252ef2af1abf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b8139047f47a1984dca9faba3ebff6b0426bb444
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecurrency-class"></a>COleCurrency 類別
 封裝 OLE Automation 的 `CURRENCY` 資料類型。  
@@ -74,7 +69,7 @@ class COleCurrency
   
 |名稱|描述|  
 |----------|-----------------|  
-|[運算子 =](#operator_eq)|複製`COleCurrency`值。|  
+|[operator =](#operator_eq)|複製`COleCurrency`值。|  
 |[運算子 +、-](#operator_plus_minus)|新增、 相減，並變更的正負號`COleCurrency`值。|  
 |[運算子 + =、-= 左邊](#operator_plus_minus_eq)|加入和減去`COleCurrency`值從此`COleCurrency`物件。|  
 |[運算子 * /](#operator_star)|標尺`COleCurrency`值的整數值。|  
@@ -104,7 +99,7 @@ class COleCurrency
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-##  <a name="colecurrency"></a>COleCurrency::COleCurrency  
+##  <a name="colecurrency"></a>  COleCurrency::COleCurrency  
  建構**COleCurrency**物件。  
   
 ```  
@@ -152,7 +147,7 @@ COleCurrency(
   
  [!code-cpp[NVC_MFCOleContainer#10](../../mfc/codesnippet/cpp/colecurrency-class_1.cpp)]  
   
-##  <a name="format"></a>COleCurrency::Format  
+##  <a name="format"></a>  COleCurrency::Format  
  呼叫此成員函式來建立格式化的貨幣值的表示法。  
   
 ```  
@@ -177,7 +172,7 @@ CString Format(DWORD  dwFlags = 0, LCID  lcid = LANG_USER_DEFAULT) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#11](../../mfc/codesnippet/cpp/colecurrency-class_2.cpp)]  
   
-##  <a name="getstatus"></a>COleCurrency::GetStatus  
+##  <a name="getstatus"></a>  COleCurrency::GetStatus  
  呼叫此成員函式取得的狀態 （有效性） 指定**COleCurrency**物件。  
   
 ```  
@@ -210,7 +205,7 @@ enum CurrencyStatus {
   
 -   如果其值設定從**VARIANT**或`COleVariant`無法轉換為貨幣值的值。  
   
--   如果此物件發生溢位或反向溢位算術指派作業期間，例如`+=`或 **\* =** 。  
+-   如果此物件發生溢位或反向溢位算術指派作業期間，例如`+=`或**\* =**。  
   
 -   如果無效的值已指派給這個物件。  
   
@@ -220,7 +215,7 @@ enum CurrencyStatus {
   
 - [COleCurrency](#colecurrency)  
   
-- [運算子 =](#operator_eq)  
+- [operator =](#operator_eq)  
   
 - [運算子 +-](#operator_plus_minus)  
   
@@ -233,7 +228,7 @@ enum CurrencyStatus {
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#12](../../mfc/codesnippet/cpp/colecurrency-class_3.cpp)]  
   
-##  <a name="m_cur"></a>COleCurrency::m_cur  
+##  <a name="m_cur"></a>  COleCurrency::m_cur  
  基礎[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)這個結構**COleCurrency**物件。  
   
 ### <a name="remarks"></a>備註  
@@ -243,7 +238,7 @@ enum CurrencyStatus {
   
  如需詳細資訊，請參閱[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)Windows SDK 中的項目。  
   
-##  <a name="m_status"></a>COleCurrency::m_status  
+##  <a name="m_status"></a>  COleCurrency::m_status  
  此資料成員的類型是列舉型別`CurrencyStatus`，定義內**COleCurrency**類別。  
   
 ```  
@@ -267,7 +262,7 @@ enum CurrencyStatus{
   
 -   如果其值設定從**VARIANT**或`COleVariant`無法轉換為貨幣值的值。  
   
--   如果此物件發生溢位或反向溢位算術指派作業期間，例如`+=`或 **\* =** 。  
+-   如果此物件發生溢位或反向溢位算術指派作業期間，例如`+=`或**\* =**。  
   
 -   如果無效的值已指派給這個物件。  
   
@@ -277,7 +272,7 @@ enum CurrencyStatus{
   
 - [COleCurrency](#colecurrency)  
   
-- [運算子 =](#operator_eq)  
+- [operator =](#operator_eq)  
   
 - [運算子 +、-](#operator_plus_minus)  
   
@@ -290,7 +285,7 @@ enum CurrencyStatus{
     > [!CAUTION]
     >  此資料成員是針對進階程式的情況。 您應該使用內嵌成員函式[GetStatus](#getstatus)和[SetStatus](#setstatus)。 請參閱`SetStatus`的其他注意事項，關於明確設定此資料成員。  
   
-##  <a name="operator_eq"></a>COleCurrency::operator =  
+##  <a name="operator_eq"></a>  COleCurrency::operator =  
  這些多載的指派運算子會將來源貨幣值複製到這個**COleCurrency**物件。  
   
 ```  
@@ -304,16 +299,16 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
   
 - **運算子 = (** `cySrc` **)** `CURRENCY`值複製到**COleCurrency**物件，且其狀態會設定為有效。  
   
-- **運算子 = (** `curSrc` **)**的值和運算元的現有狀態**COleCurrency**物件會複製到這個**COleCurrency**物件。  
+- **運算子 = (** `curSrc` **)** 的值和運算元的現有狀態**COleCurrency**物件會複製到這個**COleCurrency**物件.  
   
-- **運算子 = (** *varSrc* **)**如果轉換`VARIANT`值 (或[COleVariant](../../mfc/reference/colevariant-class.md)物件) 為貨幣 ( `VT_CY`) 是成功，已轉換的值會複製到這個**COleCurrency**物件，且其狀態會設定為有效。 如果轉換不成功，值**COleCurrency**物件設定為 0，其狀態變更為無效。  
+- **運算子 = (** *varSrc* **)** 如果轉換`VARIANT`值 (或[COleVariant](../../mfc/reference/colevariant-class.md)物件) 為貨幣 ( `VT_CY`) 是成功，已轉換的值會複製到這個**COleCurrency**物件，且其狀態會設定為有效。 如果轉換不成功，值**COleCurrency**物件設定為 0，其狀態變更為無效。  
   
  如需詳細資訊，請參閱[貨幣](http://msdn.microsoft.com/en-us/5e81273c-7289-45c7-93c0-32c1553f708e)和[VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) Windows SDK 中的項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#15](../../mfc/codesnippet/cpp/colecurrency-class_4.cpp)]  
   
-##  <a name="operator_plus_minus"></a>COleCurrency::operator +、-  
+##  <a name="operator_plus_minus"></a>  COleCurrency::operator +、-  
  這些運算子可讓您加入和減去兩個**COleCurrency**值和彼此，並將變更的正負號**COleCurrency**值。  
   
 ```  
@@ -334,7 +329,7 @@ COleCurrency operator-() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#16](../../mfc/codesnippet/cpp/colecurrency-class_5.cpp)]  
   
-##  <a name="operator_plus_minus_eq"></a>COleCurrency::operator + =、-= 左邊  
+##  <a name="operator_plus_minus_eq"></a>  COleCurrency::operator + =、-= 左邊  
  可讓您加入和減去**COleCurrency**值與這個**COleCurrency**物件。  
   
 ```  
@@ -354,7 +349,7 @@ const COleCurrency& operator-=(const COleCurrency& cur);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#17](../../mfc/codesnippet/cpp/colecurrency-class_6.cpp)]  
   
-##  <a name="operator_star"></a>COleCurrency::operator * 和 /  
+##  <a name="operator_star"></a>  COleCurrency::operator * 和 /  
  可讓您調整**COleCurrency**整數的值。  
   
 ```  
@@ -374,7 +369,7 @@ COleCurrency operator/(long nOperand) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#18](../../mfc/codesnippet/cpp/colecurrency-class_7.cpp)]  
   
-##  <a name="operator_star_div_eq"></a>COleCurrency::operator * =、 / =  
+##  <a name="operator_star_div_eq"></a>  COleCurrency::operator * =、 / =  
  可讓您調整這**COleCurrency**整數的值。  
   
 ```  
@@ -394,7 +389,7 @@ const COleCurrency& operator/=(long nOperand);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#19](../../mfc/codesnippet/cpp/colecurrency-class_8.cpp)]  
   
-##  <a name="operator_stream"></a>COleCurrency::operator &lt; &lt;，&gt;&gt;  
+##  <a name="operator_stream"></a>  COleCurrency::operator &lt; &lt;， &gt;&gt;  
  支援診斷傾印和儲存至封存。  
   
 ```  
@@ -412,9 +407,9 @@ friend CArchive& operator>>(
 ```  
   
 ### <a name="remarks"></a>備註  
- 擷取 (  **>>** ) 運算子支援從封存的載入。  
+ 擷取 ( **>>**) 運算子支援從封存的載入。  
   
-##  <a name="operator_currency"></a>COleCurrency::operator 貨幣  
+##  <a name="operator_currency"></a>  COleCurrency::operator 貨幣  
  傳回`CURRENCY`結構，其值會複製從這個**COleCurrency**物件。  
   
 ```  
@@ -423,7 +418,7 @@ operator CURRENCY() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="parsecurrency"></a>COleCurrency::ParseCurrency  
+##  <a name="parsecurrency"></a>  COleCurrency::ParseCurrency  
  呼叫此成員函式可剖析字串以讀取貨幣值。  
   
 ```  
@@ -465,7 +460,7 @@ throw(COleException*);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#13](../../mfc/codesnippet/cpp/colecurrency-class_9.cpp)]  
   
-##  <a name="colecurrency_relational_operators"></a>COleCurrency 關係運算子  
+##  <a name="colecurrency_relational_operators"></a>  COleCurrency 關係運算子  
  比較兩個貨幣值，並傳回非零，如果條件為 true;否則便是 0。  
   
 ```  
@@ -480,12 +475,12 @@ BOOL operator>=(const COleCurrency& cur) const;
 ### <a name="remarks"></a>備註  
   
 > [!NOTE]
->  排序作業的傳回值 (  **<** ，  **\< =** ，  **>** ，  **>=** ) 是未定義的如果任一個運算元的狀態是 null 或無效。 等號比較運算子 ( `==`， `!=`) 請考慮運算元的狀態。  
+>  排序作業的傳回值 ( **<**， **\< =**， **>**， **>=**) 是未定義的如果任一個運算元的狀態是 null 或無效。 等號比較運算子 ( `==`， `!=`) 請考慮運算元的狀態。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#20](../../mfc/codesnippet/cpp/colecurrency-class_10.cpp)]  
   
-##  <a name="setcurrency"></a>COleCurrency::SetCurrency  
+##  <a name="setcurrency"></a>  COleCurrency::SetCurrency  
  呼叫此成員函式設定單位與小數部分，這個**COleCurrency**物件。  
   
 ```  
@@ -506,7 +501,7 @@ void SetCurrency(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCOleContainer#14](../../mfc/codesnippet/cpp/colecurrency-class_11.cpp)]  
   
-##  <a name="setstatus"></a>COleCurrency::SetStatus  
+##  <a name="setstatus"></a>  COleCurrency::SetStatus  
  呼叫此成員函式，以設定這個狀態 （有效性） **COleCurrency**物件。  
   
 ```  
@@ -539,6 +534,6 @@ enum CurrencyStatus {
     > [!CAUTION]
     >  此函式是針對進階程式的情況。 此函式不會改變此物件中的資料。 它通常會用來設定為 null 或無效的狀態。 請注意，指派運算子 ([運算子 =](#operator_eq)) 和[SetCurrency](#setcurrency)不要將狀態設為根據的來源值的物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleVariant 類別](../../mfc/reference/colevariant-class.md)

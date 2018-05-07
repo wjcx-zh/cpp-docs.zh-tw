@@ -1,13 +1,10 @@
 ---
-title: "CDaoQueryDefInfo 結構 |Microsoft 文件"
-ms.custom: 
+title: CDaoQueryDefInfo 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoQueryDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e476fd8e95b48b59bbb3bae41d9ad84829ca8fa9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 結構
 `CDaoQueryDefInfo`結構包含 recordset 物件定義的資料存取物件 (DAO) 的相關資訊。  
@@ -106,7 +101,7 @@ struct CDaoQueryDefInfo
 ## <a name="remarks"></a>備註  
  Querydef 是類別的物件[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)。 參考主要、 次要資料庫，且所有上述表示所傳回的資訊是如何[GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)類別中的成員函式`CDaoDatabase`。  
   
- 所擷取的資訊[CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)成員函式會儲存在`CDaoQueryDefInfo`結構。 呼叫`GetQueryDefInfo`recordset 物件會儲存其 QueryDefs 集合中的資料庫物件。 `CDaoQueryDefInfo`也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoQueryDefInfo`物件。 類別`CDaoDatabase`也提供直接存取的所有屬性中傳回的成員函式`CDaoQueryDefInfo`物件，因此您可能很少需要呼叫`GetQueryDefInfo`。  
+ 所擷取的資訊[CDaoDatabase::GetQueryDefInfo](../../mfc/reference/cdaodatabase-class.md#getquerydefinfo)成員函式會儲存在`CDaoQueryDefInfo`結構。 呼叫`GetQueryDefInfo`recordset 物件會儲存其 QueryDefs 集合中的資料庫物件。 `CDaoQueryDefInfo` 也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoQueryDefInfo`物件。 類別`CDaoDatabase`也提供直接存取的所有屬性中傳回的成員函式`CDaoQueryDefInfo`物件，因此您可能很少需要呼叫`GetQueryDefInfo`。  
   
  當您將新的欄位或參數物件附加至欄位或參數的 recordset 物件的集合時，如果基礎資料庫不支援指定為新物件的資料類型，會擲回例外狀況。  
   
@@ -115,7 +110,7 @@ struct CDaoQueryDefInfo
 ## <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CDaoQueryDef 類別](../../mfc/reference/cdaoquerydef-class.md)   
  [CDaoDatabase 類別](../../mfc/reference/cdaodatabase-class.md)

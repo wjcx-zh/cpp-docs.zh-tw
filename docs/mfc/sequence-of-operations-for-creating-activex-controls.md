@@ -1,13 +1,10 @@
 ---
-title: "建立 ActiveX 控制項的作業順序 |Microsoft 文件"
-ms.custom: 
+title: 建立 ActiveX 控制項的作業順序 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - OLE controls [MFC], MFC
 - sequence [MFC]
 ms.assetid: 7d868c53-a0af-4ef6-a89c-e1c03c583a53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e16254d7be929596d1205fa22cb5d62323d077d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: caf4c74f2263505ad5d7112021003f92c85a4b84
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-creating-activex-controls"></a>建立 ActiveX 控制項的作業順序
 下表顯示您的角色和架構的角色建立 ActiveX 控制項 （先前稱為 OLE 控制項）。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 |建構控制項的屬性頁面。|使用 Visual c + + 資源編輯器，以視覺化方式編輯控制項的屬性頁介面：<br /><br /> -建立其他的屬性頁。<br />-建立和編輯點陣圖、 圖示和游標。<br /><br /> 您也可以在對話方塊編輯器中測試的屬性頁面。|MFC 應用程式精靈建立的預設資源檔提供您所需的許多資源。 Visual C++ 可讓您透過輕鬆且視覺化的方式編輯現有的資源並加入新的資源。|  
 |測試控制項的事件、 方法和屬性。|重建控制項，並使用測試容器來測試您的處理常式正常運作。|您可以叫用控制項的方法，並使用其透過屬性頁介面或測試容器的屬性。 此外，使用測試容器來追蹤事件引發從控制項和控制項的容器所接收的通知。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在架構上建置](../mfc/building-on-the-framework.md)   
  [建置 MFC 應用程式的作業順序](../mfc/sequence-of-operations-for-building-mfc-applications.md)   
  [建立 OLE 應用程式的作業順序](../mfc/sequence-of-operations-for-creating-ole-applications.md)   

@@ -1,13 +1,10 @@
 ---
-title: "使用通用控制項做為子視窗 |Microsoft 文件"
-ms.custom: 
+title: 使用通用控制項做為子視窗 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - common controls [MFC], child windows
 - Windows common controls [MFC], child windows
 ms.assetid: 608f7d47-7854-4fce-bde9-856c51e76753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475c769bf09c0693c04780712b85884ae7c48862
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50d21675d913211026a2077a0830b7d8ed1225c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-a-common-control-as-a-child-window"></a>將通用控制項做為子視窗使用
 所有 Windows 通用控制項都可以做為其他視窗中的子視窗。 下列程序描述如何動態建立通用控制項並使用該控制項。  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  當您使用控制項時，請使用[cwnd:: Destroywindow](../mfc/reference/cwnd-class.md#destroywindow)終結控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立及使用控制項](../mfc/making-and-using-controls.md)   
  [控制項](../mfc/controls-mfc.md)
 

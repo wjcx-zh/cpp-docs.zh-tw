@@ -1,12 +1,9 @@
 ---
-title: "CFont 類別 |Microsoft 文件"
-ms.custom: 
+title: CFont 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFont
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfont-class"></a>CFont 類別
 封裝 Windows 繪圖裝置介面 (GDI) 字型並提供操作字型的成員函式。  
@@ -92,7 +87,7 @@ class CFont : public CGdiObject
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="cfont"></a>CFont::CFont  
+##  <a name="cfont"></a>  CFont::CFont  
  建構 `CFont` 物件。  
   
 ```  
@@ -105,7 +100,7 @@ CFont();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
-##  <a name="createfont"></a>CFont::CreateFont  
+##  <a name="createfont"></a>  CFont::CreateFont  
  初始化`CFont`具有指定特性的物件。  
   
 ```  
@@ -194,7 +189,7 @@ BOOL CreateFont(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
-##  <a name="createfontindirect"></a>Cfont:: Createfontindirect  
+##  <a name="createfontindirect"></a>  Cfont:: Createfontindirect  
  初始化`CFont`物件中指定的特性[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
 ```  
@@ -218,7 +213,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
-##  <a name="createpointfont"></a>CFont::CreatePointFont  
+##  <a name="createpointfont"></a>  CFont::CreatePointFont  
  此函式提供簡單的方法來建立指定字型的字型，以及點大小。  
   
 ```  
@@ -249,7 +244,7 @@ BOOL CreatePointFont(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
-##  <a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
+##  <a name="createpointfontindirect"></a>  CFont::CreatePointFontIndirect  
  此函式是相同[CreateFontIndirect](#createfontindirect)不同之處在於**lfHeight**隸屬`LOGFONT`解譯中的點，而不是裝置單位的十分之一。  
   
 ```  
@@ -276,7 +271,7 @@ BOOL CreatePointFontIndirect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CFont::FromHandle  
+##  <a name="fromhandle"></a>  CFont::FromHandle  
  將指標傳回至`CFont`物件時指定**HFONT** Windows GDI 字型物件控制代碼。  
   
 ```  
@@ -296,7 +291,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
-##  <a name="getlogfont"></a>CFont::GetLogFont  
+##  <a name="getlogfont"></a>  CFont::GetLogFont  
  呼叫此函式可擷取一份`LOGFONT`結構`CFont`。  
   
 ```  
@@ -313,7 +308,7 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
-##  <a name="operator_hfont"></a>HFONT CFont::operator  
+##  <a name="operator_hfont"></a>  HFONT CFont::operator  
  使用此運算子來取得 Windows GDI 控制代碼附加至的字型`CFont`物件。  
   
 ```  
@@ -331,7 +326,7 @@ operator HFONT() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

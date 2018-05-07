@@ -1,12 +1,9 @@
 ---
-title: "CPtrArray 類別 |Microsoft 文件"
-ms.custom: 
+title: CPtrArray 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPtrArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: c23b87a3-bf84-49d6-a66b-61e999d0938a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f04b55a06ef5f24fe4c0b9906d8364a22051dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a8749e54cc42a6ae98748e8a5906cf5a5009d51
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cptrarray-class"></a>CPtrArray 類別
 支援 void 指標的陣列。  
@@ -135,7 +130,7 @@ class CPtrArray : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxcoll.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CObArray 類別](../../mfc/reference/cobarray-class.md)

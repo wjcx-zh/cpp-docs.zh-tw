@@ -1,12 +1,9 @@
 ---
-title: "CSinusoidalTransitionFromVelocity 類別 |Microsoft 文件"
-ms.custom: 
+title: CSinusoidalTransitionFromVelocity 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSinusoidalTransitionFromVelocity
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromVelocity [MFC], m_duration
 - CSinusoidalTransitionFromVelocity [MFC], m_period
 ms.assetid: cc885f17-b84b-45ee-8f1f-36a8bbb7adad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9189a7ea43591509767346737566a40f5961ec3b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9833607065407e66473a9fab1907bf2262816296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity 類別
 封裝由動畫變數的初始速度決定其幅度的正弦曲線速度轉換。  
@@ -78,7 +73,7 @@ class CSinusoidalTransitionFromVelocity : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="create"></a>CSinusoidalTransitionFromVelocity::Create  
+##  <a name="create"></a>  CSinusoidalTransitionFromVelocity::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -94,7 +89,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="csinusoidaltransitionfromvelocity"></a>CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
+##  <a name="csinusoidaltransitionfromvelocity"></a>  CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity  
  建構轉換物件。  
   
 ```  
@@ -110,19 +105,19 @@ CSinusoidalTransitionFromVelocity(
  `period`  
  以秒為單位的正弦曲線 wave 振動期間。  
   
-##  <a name="m_duration"></a>CSinusoidalTransitionFromVelocity::m_duration  
+##  <a name="m_duration"></a>  CSinusoidalTransitionFromVelocity::m_duration  
  轉換的持續時間。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="m_period"></a>CSinusoidalTransitionFromVelocity::m_period  
+##  <a name="m_period"></a>  CSinusoidalTransitionFromVelocity::m_period  
  以秒為單位的正弦曲線 wave 振動期間。  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

@@ -1,13 +1,10 @@
 ---
-title: "常見的巨集，用於建置命令和屬性 |Microsoft 文件"
-ms.custom: 
+title: 常見的巨集，用於建置命令和屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -101,24 +98,22 @@ helpviewer_keywords:
 - $(PlatformName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b94347e48a7b8b134915456c92aea3397f97a1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>建置命令和屬性的一般巨集
 根據您的安裝選項，Visual Studio 可以提供數百個巨集給您。 這些對應 MSBuild 屬性依預設，或.props 或.targets 檔案，或您的專案設定所設定。 您可以在接受字串的專案 [屬性頁]  對話方塊的任何位置使用這些巨集。 這些巨集不區分大小寫。  
   
  若要顯示目前可用的巨集，請在屬性名稱右邊的資料行中，按一下下拉箭號。 如果 [編輯]  可以使用，請按一下它，再按一下 [編輯] 對話方塊中的 [巨集] 。 如需詳細資訊，請參閱**Specifying User-Defined 值**區段[屬性頁](../ide/property-pages-visual-cpp.md)。  
   
- 標記為「已取代」的巨集無法再使用，或者已由同等 [項目中繼資料巨集](/visualstudio/msbuild/itemmetadata-element-msbuild) (**%(***名稱***)**) 取代。 標示為「已取代；已移轉」的巨集也已經被取代。 另外，如果包含巨集的專案從 Visual Studio 2008 移轉，Visual Studio 會將巨集轉換成對等的目前巨集。  
+ 標示為 「 取代 」 的巨集便不再使用，或對等項目皆已被取代[項目中繼資料巨集](/visualstudio/msbuild/itemmetadata-element-msbuild)(**%(***名稱***)**)。 標示為「已取代；已移轉」的巨集也已經被取代。 另外，如果包含巨集的專案從 Visual Studio 2008 移轉，Visual Studio 會將巨集轉換成對等的目前巨集。  
   
  下表描述可用的巨集常用的子集。 此清單未全部列出。 如需如何建立和使用為.props、.targets 和.vcxproj 檔案中的巨集 MSBuild 屬性定義的詳細資訊，請參閱[MSBuild 屬性](/visualstudio/msbuild/msbuild-properties)。  
   
@@ -153,7 +148,7 @@ ms.lasthandoff: 12/21/2017
 |**$ （targetfilename)**|建置的主要輸出檔檔案名稱 (定義為主檔名 + 副檔名)。|  
 |**$ （targetext)**|建置的主要輸出檔副檔名。 副檔名前面有 '.'。|  
 |**$(VSInstallDir)**|Visual Studio 安裝所在目錄。<br /><br /> 這個屬性包含的目標 Visual Studio 版本，可能和主機 Visual Studio 不一樣。 例如，使用 `$(PlatformToolset) = v110`建置時， **$(VSInstallDir)** 會包含 Visual Studio 2012 安裝的路徑。|  
-|**$(VCInstallDir)**|Visual C++ 安裝所在目錄。<br /><br /> 這個屬性包含的目標 Visual C++ 版本，可能和主機 Visual Studio 不一樣。 例如，當使用建置`$(PlatformToolset) = v140`， **$ （vcinstalldir)**包含 Visual c + + 2015年的安裝路徑。|  
+|**$(VCInstallDir)**|Visual C++ 安裝所在目錄。<br /><br /> 這個屬性包含的目標 Visual C++ 版本，可能和主機 Visual Studio 不一樣。 例如，當使用建置`$(PlatformToolset) = v140`， **$ （vcinstalldir)** 包含 Visual c + + 2015年的安裝路徑。|  
 |**$(FrameworkDir)**|.NET Framework 安裝所在目錄。|  
 |**$ （frameworkversion)**|Visual Studio 使用的 .NET framework 版本。 結合了 **$(FrameworkDir)**，Visual Studio 使用的 .NET Framework 版本完整路徑。|  
 |**$ （frameworksdkdir)**|.NET Framework 安裝所在目錄。 .NET Framework 可能已安裝為 Visual Studio 的一部分或另行安裝。|  
@@ -164,5 +159,5 @@ ms.lasthandoff: 12/21/2017
 |**$ （saferootnamespace)**|(已取代。)專案精靈會加入程式碼的命名空間名稱。 這個命名空間名稱只會包含有效 C++ 識別項允許的字元。|  
 |**$ （fxcopdir)**|fxcop.cmd 檔案的路徑。 不是所有 Visual C++ 版本都安裝 fxcop.cmd 檔案。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [在 Visual Studio 中建置 C++ 專案](../ide/building-cpp-projects-in-visual-studio.md)

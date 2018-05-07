@@ -1,12 +1,9 @@
 ---
-title: "ICommandUI 介面 |Microsoft 文件"
-ms.custom: 
+title: ICommandUI 介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - ICommandUI
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4971ceaea57b91ff708315a2c32c7bac2801798f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70e6f1eb8848c5ee93063877ae036f66584b69c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandui-interface"></a>ICommandUI 介面
 管理使用者介面的命令。  
@@ -59,9 +54,9 @@ interface class ICommandUI
 |[ICommandUI::Text](#text)|設定使用者介面項目，此命令的文字。|  
   
 ## <a name="remarks"></a>備註  
- 這個介面會提供方法和屬性，以管理使用者介面的命令。 `ICommandUI`類似於[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)，不同之處在於`ICommandUI`用於與.NET 元件相互操作的 MFC 應用程式。  
+ 這個介面會提供方法和屬性，以管理使用者介面的命令。 `ICommandUI` 類似於[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)，不同之處在於`ICommandUI`用於與.NET 元件相互操作的 MFC 應用程式。  
   
- `ICommandUI`用於`ON_UPDATE_COMMAND_UI`中的處理常式[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-衍生的類別。 功能表上，而每個功能表項目時 （選取或按下），就會啟動應用程式的使用者會顯示為已啟用或停用。 每個功能表命令的目標是提供這項資訊藉由實作`ON_UPDATE_COMMAND_UI`處理常式。 針對每個命令的使用者介面物件，在您的應用程式中，使用 [屬性] 視窗來建立訊息對應項目和每個處理常式的函式原型。  
+ `ICommandUI` 用於`ON_UPDATE_COMMAND_UI`中的處理常式[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-衍生的類別。 功能表上，而每個功能表項目時 （選取或按下），就會啟動應用程式的使用者會顯示為已啟用或停用。 每個功能表命令的目標是提供這項資訊藉由實作`ON_UPDATE_COMMAND_UI`處理常式。 針對每個命令的使用者介面物件，在您的應用程式中，使用 [屬性] 視窗來建立訊息對應項目和每個處理常式的函式原型。  
   
  如需有關如何`ICommandUI`介面則用於命令路由，請參閱[如何： 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。  
   
@@ -69,7 +64,7 @@ interface class ICommandUI
   
  如需有關使用者介面的命令在 MFC 中的管理方式的詳細資訊，請參閱[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)。  
   
-## <a name="check"></a>ICommandUI::Check  
+## <a name="check"></a> ICommandUI::Check  
 此命令的使用者介面項目設為適當的核取狀態。
 ```
 property UICheckState Check;
@@ -80,7 +75,7 @@ property UICheckState Check;
 - 1 檢查  
 - 設定不定 2  
 
-## <a name="continuerouting"></a>ICommandUI::ContinueRouting   
+## <a name="continuerouting"></a> ICommandUI::ContinueRouting   
 會告知命令路由機制，繼續傳送處理常式的鏈結中向下目前的訊息。
 ```
 void ContinueRouting();
@@ -88,7 +83,7 @@ void ContinueRouting();
 ## <a name="remarks"></a>備註
 這是進階的成員函式，應該用於搭配 ON_COMMAND_EX 處理常式會傳回 FALSE。 如需詳細資訊，請參閱技術附註 TN006： 訊息對應。
 
-## <a name="enabled"></a>ICommandUI::Enabled 
+## <a name="enabled"></a> ICommandUI::Enabled 
 啟用或停用此命令的使用者介面項目。
 ```
 property bool Enabled;
@@ -96,7 +91,7 @@ property bool Enabled;
 ## <a name="remarks"></a>備註
 這個屬性會啟用或停用此命令的使用者介面項目。 設定以啟用 true 以啟用項目，為 FALSE，則將它停用。
 
-## <a name="id"></a>ICommandUI::ID  
+## <a name="id"></a> ICommandUI::ID  
 取得 ICommandUI 物件所代表的使用者介面物件的識別碼。
 ```
 property unsigned int ID;
@@ -104,7 +99,7 @@ property unsigned int ID;
 ## <a name="remarks"></a>備註
 此屬性可取得功能表項目、 工具列按鈕或其他使用者介面物件 ICommandUI 物件所代表的識別碼 （處理）。
 
-## <a name="index"></a>ICommandUI::Index   
+## <a name="index"></a> ICommandUI::Index   
 取得 ICommandUI 物件所代表的使用者介面物件的索引。
 ```
 property unsigned int Index;
@@ -112,7 +107,7 @@ property unsigned int Index;
 ## <a name="remarks"></a>備註
 此屬性可取得功能表項目、 工具列按鈕或其他 ICommandUI 物件所代表的使用者介面物件的索引 （處理）。
 
-## <a name="radio"></a>ICommandUI::Radio 
+## <a name="radio"></a> ICommandUI::Radio 
 此命令的使用者介面項目設為適當的核取狀態。
 ```
 property bool Radio;
@@ -120,7 +115,7 @@ property bool Radio;
 ## <a name="remarks"></a>備註
 這個屬性設定為適當的核取狀態的使用者介面項目，此命令。 True 以啟用項目則設定電台否則為 FALSE。
 
-## <a name="text"></a>ICommandUI::Text 
+## <a name="text"></a> ICommandUI::Text 
 設定使用者介面項目，此命令的文字。
 ```
 property String^ Text;
@@ -131,5 +126,5 @@ property String^ Text;
 ## <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "CObArray 類別 |Microsoft 文件"
-ms.custom: 
+title: CObArray 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CObArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cobarray-class"></a>CObArray 類別
 支援 `CObject` 指標的陣列。  
@@ -139,7 +134,7 @@ class CObArray : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxcoll.h  
   
-##  <a name="add"></a>CObArray::Add  
+##  <a name="add"></a>  CObArray::Add  
  將新的項目加入至陣列，1 成長陣列的結尾。  
   
 ```  
@@ -180,7 +175,7 @@ INT_PTR Add(CObject* newElement);
   
  `[1] = a CAge at $4468 40`  
   
-##  <a name="append"></a>CObArray::Append  
+##  <a name="append"></a>  CObArray::Append  
  呼叫此成員函式，將另一個陣列的內容新增至所指陣列的結尾。  
   
 ```  
@@ -215,7 +210,7 @@ INT_PTR Append(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
   
-##  <a name="copy"></a>CObArray::Copy  
+##  <a name="copy"></a>  CObArray::Copy  
  呼叫此成員函式，以覆寫另一個相同類型的陣列的項目與指定的陣列項目。  
   
 ```  
@@ -245,7 +240,7 @@ void Copy(const CObArray& src);
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
   
-##  <a name="cobarray"></a>CObArray::CObArray  
+##  <a name="cobarray"></a>  CObArray::CObArray  
  建構空`CObject`指標陣列。  
   
 ```  
@@ -269,7 +264,7 @@ CObArray();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CObArray::ElementAt  
+##  <a name="elementat"></a>  CObArray::ElementAt  
  傳回陣列中項目指標的臨時參考。  
   
 ```  
@@ -300,7 +295,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ### <a name="example"></a>範例  
   請參閱範例的[CObArray::GetSize](#getsize)。  
   
-##  <a name="freeextra"></a>CObArray::FreeExtra  
+##  <a name="freeextra"></a>  CObArray::FreeExtra  
  釋出時已成長陣列配置任何額外的記憶體。  
   
 ```  
@@ -324,7 +319,7 @@ void FreeExtra();
 ### <a name="example"></a>範例  
   請參閱範例的[CObArray::GetData](#getdata)。  
   
-##  <a name="getat"></a>CObArray::GetAt  
+##  <a name="getat"></a>  CObArray::GetAt  
  傳回指定索引處的陣列元素。  
   
 ```  
@@ -359,7 +354,7 @@ CObject* GetAt(INT_PTR nIndex) const;
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CObArray::GetCount  
+##  <a name="getcount"></a>  CObArray::GetCount  
  傳回陣列元素的數目。  
   
 ```  
@@ -388,7 +383,7 @@ INT_PTR GetCount() const;
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CObArray::GetData  
+##  <a name="getdata"></a>  CObArray::GetData  
  您可以使用此成員函式來直接存取陣列中的項目。  
   
 ```  
@@ -421,7 +416,7 @@ CObject** GetData();
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CObArray::GetSize  
+##  <a name="getsize"></a>  CObArray::GetSize  
  傳回陣列的大小。  
   
 ```  
@@ -447,7 +442,7 @@ INT_PTR GetSize() const;
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CObArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CObArray::GetUpperBound  
  傳回目前的上限，此陣列。  
   
 ```  
@@ -478,7 +473,7 @@ INT_PTR GetUpperBound() const;
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
   
-##  <a name="insertat"></a>CObArray::InsertAt  
+##  <a name="insertat"></a>  CObArray::InsertAt  
  在指定索引處插入項目 (或其他陣列中的所有項目)。  
   
 ```  
@@ -542,7 +537,7 @@ void InsertAt(
   
  `[2] = a CAge at $4606 40`  
   
-##  <a name="isempty"></a>CObArray::IsEmpty  
+##  <a name="isempty"></a>  CObArray::IsEmpty  
  判定陣列是否是空的。  
   
 ```  
@@ -552,7 +547,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>傳回值  
  如果陣列是空的則為非零否則便是 0。  
   
-##  <a name="operator_at"></a>CObArray::operator]  
+##  <a name="operator_at"></a>  CObArray::operator]  
  這些註標運算子是方便的替代`SetAt`和`GetAt`函式。  
   
 ```  
@@ -581,7 +576,7 @@ CObject* operator[](int_ptr nindex) const;
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
   
-##  <a name="removeall"></a>CObArray::RemoveAll  
+##  <a name="removeall"></a>  CObArray::RemoveAll  
  從此陣列移除所有的指標，但不會實際刪除`CObject`物件。  
   
 ```  
@@ -609,7 +604,7 @@ void RemoveAll();
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
   
-##  <a name="removeat"></a>CObArray::RemoveAt  
+##  <a name="removeat"></a>  CObArray::RemoveAt  
  移除陣列中的指定索引處開始的一或多個項目。  
   
 ```  
@@ -654,7 +649,7 @@ void RemoveAt(
   
  `[0] = a CAge at $4606 40`  
   
-##  <a name="setat"></a>CObArray::SetAt  
+##  <a name="setat"></a>  CObArray::SetAt  
  設定指定索引處的陣列項目。  
   
 ```  
@@ -671,7 +666,7 @@ void SetAt(
  要插入此陣列中的物件指標。 A **NULL**允許值。  
   
 ### <a name="remarks"></a>備註  
- `SetAt`不會導致要成長的陣列。 使用`SetAtGrow`如果您想要自動成長的陣列。  
+ `SetAt` 不會導致要成長的陣列。 使用`SetAtGrow`如果您想要自動成長的陣列。  
   
  您必須確定您的索引值，代表陣列中的有效位置。 如果它超出範圍時，偵錯版本的程式庫判斷提示。  
   
@@ -699,7 +694,7 @@ void SetAt(
   
  `[1] = a CAge at $47A0 40`  
   
-##  <a name="setatgrow"></a>CObArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CObArray::SetAtGrow  
  設定指定索引處的陣列項目。  
   
 ```  
@@ -746,7 +741,7 @@ void SetAtGrow(
   
  `[3] = a CAge at $4840 65`  
   
-##  <a name="setsize"></a>CObArray::SetSize  
+##  <a name="setsize"></a>  CObArray::SetSize  
  建立空的或現有陣列; 的大小如有必要，請配置記憶體。  
   
 ```  
@@ -783,7 +778,7 @@ void SetSize(
 ### <a name="example"></a>範例  
   請參閱範例的[CObArray::GetData](#getdata)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CStringArray 類別](../../mfc/reference/cstringarray-class.md)   

@@ -1,13 +1,10 @@
 ---
-title: "訊息對應 (MFC) |Microsoft 文件"
-ms.custom: 
+title: 訊息對應 (MFC) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 958f308a089f2f503159b2ce56c2096595fc7613
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d1479ac7cb119ef206f8c20b6fa53bf7017b8ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-maps-mfc"></a>訊息對應 (MFC)
 參考的此區段會列出所有[訊息對應巨集](../../mfc/reference/message-map-macros-mfc.md)」 和 「 全部[CWnd](../../mfc/reference/cwnd-class.md)訊息對應項目，以及相對應的成員函式原型：  
@@ -77,6 +72,6 @@ ms.lasthandoff: 12/21/2017
   
  不過，訊息對應是 Mfc 程式庫中很重要的一部分。 您應該了解它們的功用，並為其提供文件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

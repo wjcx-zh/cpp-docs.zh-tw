@@ -1,13 +1,10 @@
 ---
-title: "從通用控制項接收告知 |Microsoft 文件"
-ms.custom: 
+title: 從通用控制項接收告知 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58131874ed039378a312acaaa238388f335f8e71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30e89c8d25d78477ed98bae0fd06a704e32d3906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="receiving-notification-from-common-controls"></a>從通用控制項接收告知
 通用控制項是當控制項中發生事件時 (例如來自使用者的輸入) 傳送通知訊息給父視窗的子視窗。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
  此時，滑鼠游標位置是儲存在 `cursorPos` 物件中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立及使用控制項](../mfc/making-and-using-controls.md)   
  [控制項](../mfc/controls-mfc.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "CParabolicTransitionFromAcceleration 類別 |Microsoft 文件"
-ms.custom: 
+title: CParabolicTransitionFromAcceleration 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CParabolicTransitionFromAcceleration
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 219d8e153501334a3de02aa12153e05a4345b215
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02cf84f2774a10ec0ca2751dbeffd4eb3c52e8a2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 類別
 封裝拋物線加速轉換。  
@@ -81,7 +76,7 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
+##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration  
  建構拋物線加速轉換，並將它初始化以指定的參數。  
   
 ```  
@@ -101,7 +96,7 @@ CParabolicTransitionFromAcceleration(
  `dblAcceleration`  
  在轉換期間動畫變數的加速。  
   
-##  <a name="create"></a>CParabolicTransitionFromAcceleration::Create  
+##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -117,26 +112,26 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="m_dblacceleration"></a>CParabolicTransitionFromAcceleration::m_dblAcceleration  
+##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration  
  在轉換期間動畫變數的加速。  
   
 ```  
 DOUBLE m_dblAcceleration;  
 ```  
   
-##  <a name="m_dblfinalvalue"></a>CParabolicTransitionFromAcceleration::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue  
  結尾的轉換動畫變數的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblfinalvelocity"></a>CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity  
  結尾的轉換動畫變數的速度。  
   
 ```  
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

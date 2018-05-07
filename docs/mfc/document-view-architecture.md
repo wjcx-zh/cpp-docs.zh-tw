@@ -1,13 +1,10 @@
 ---
-title: "文件檢視架構 |Microsoft 文件"
-ms.custom: 
+title: 文件檢視架構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c595b78b17ed00691533369ec4837345fcce03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9554af9443bbd6a6394789343294630104c96f1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documentview-architecture"></a>文件/檢視架構
 依預設，MFC 應用程式精靈建立的應用程式的基本架構文件類別和檢視類別。 MFC 將資料管理分成這兩個類別。 文件會將資料儲存和管理列印資料，並協調更新多個檢視的資料。 檢視會顯示資料，並管理它，包括選取和編輯使用者互動。  
@@ -95,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [範例](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
  [Windows](../mfc/windows.md)   
  [框架視窗](../mfc/frame-windows.md)   

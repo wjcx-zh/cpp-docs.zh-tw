@@ -2,11 +2,8 @@
 title: CWnd 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWnd
@@ -827,17 +824,15 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e920b9bed8cb46ad960270dc1addda5605cdb302
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 提供 MFC 程式庫中所有視窗類別的基本功能。  
@@ -883,7 +878,7 @@ class CWnd : public CCmdTarget
 |[CWnd::ClientToScreen](#clienttoscreen)|將畫面上指定的點或矩形的用戶端座標，轉換為螢幕座標。|  
 |[CWnd::CloseWindow](#closewindow)|將視窗最小化。|  
 |[CWnd::ContinueModal](#continuemodal)|繼續視窗的強制回應狀態。|  
-|[CWnd::Create](#create)|建立並初始化 `CWnd` 物件相關聯的子視窗。|  
+|[Cwnd:: Create](#create)|建立並初始化 `CWnd` 物件相關聯的子視窗。|  
 |[CWnd::CreateAccessibleProxy](#createaccessibleproxy)|建立指定物件的 Active Accessibility Proxy。|  
 |[CWnd::CreateCaret](#createcaret)|建立系統游標的新形狀，並取得插入號的擁有權。|  
 |[CWnd::CreateControl](#createcontrol)|建立將由 `CWnd` 物件在 MFC 程式中表示的 ActiveX 控制項。|  
@@ -1274,9 +1269,9 @@ class CWnd : public CCmdTarget
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CWnd::operator HWND](#operator_hwnd)|呼叫以取得視窗的控制代碼。|  
-|[CWnd::operator !=](#operator_neq)|判斷視窗是否不是控制代碼的視窗相同[m_hWnd](#m_hwnd)。|  
-|[CWnd::operator ==](#operator_eq_eq)|判斷視窗是否與視窗控制代碼是相同[m_hWnd](#m_hwnd)。|  
+|[HWND cwnd:: Operator](#operator_hwnd)|呼叫以取得視窗的控制代碼。|  
+|[Cwnd:: Operator ！ =](#operator_neq)|判斷視窗是否不是控制代碼的視窗相同[m_hWnd](#m_hwnd)。|  
+|[Cwnd:: Operator = =](#operator_eq_eq)|判斷視窗是否與視窗控制代碼是相同[m_hWnd](#m_hwnd)。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
@@ -1823,7 +1818,7 @@ virtual BOOL ContinueModal();
 ### <a name="remarks"></a>備註  
  根據預設，它會傳回非零直到`EndModalLoop`呼叫。  
   
-##  <a name="create"></a>  CWnd::Create  
+##  <a name="create"></a>  Cwnd:: Create  
  建立指定的子視窗，並將它附加至[CWnd](../../mfc/reference/cwnd-class.md)物件。  
   
 ```  
@@ -2332,7 +2327,7 @@ int DlgDirList(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- 在此範例中，`drive`磁碟機代號，`directory`是有效的目錄名稱，和*filename*是有效的檔案名稱必須包含至少一個萬用字元。 萬用字元是問號 （*），這表示比對任何字元，以及使用星號 (  **\*** )，這表示比對任何數目的字元。  
+ 在此範例中，`drive`磁碟機代號，`directory`是有效的目錄名稱，和*filename*是有效的檔案名稱必須包含至少一個萬用字元。 萬用字元是問號 （*），這表示比對任何字元，以及使用星號 ( **\***)，這表示比對任何數目的字元。  
   
  如果您指定的 0 長度字串`lpPathSpec`，或如果您只有指定的目錄名稱，但不是包含任何檔案規格時，將字串變更為"*。\*"。  
   
@@ -2395,7 +2390,7 @@ int DlgDirListComboBox(
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- 在此範例中，`drive`磁碟機代號，`directory`是有效的目錄名稱，和*filename*是有效的檔案名稱必須包含至少一個萬用字元。 萬用字元是問號 （*），這表示比對任何字元，以及使用星號 (  **\*** )，這表示比對任何數目的字元。  
+ 在此範例中，`drive`磁碟機代號，`directory`是有效的目錄名稱，和*filename*是有效的檔案名稱必須包含至少一個萬用字元。 萬用字元是問號 （*），這表示比對任何字元，以及使用星號 ( **\***)，這表示比對任何數目的字元。  
   
  如果您指定零長度字串`lpPathSpec`，將會使用目前的目錄和`lpPathSpec`將不會修改。 如果您只有指定的目錄名稱，但不是包含任何檔案規格時，將字串變更為"*"。  
   
@@ -4832,7 +4827,7 @@ void AFX_CDECL InvokeHelper(
  在指定的型別參數的變數清單`pbParamInfo`。  
   
 ### <a name="remarks"></a>備註  
- `pbParamInfo` 參數會指定傳遞給方法或屬性的參數類型。 引數的變數清單由*...*語法宣告。  
+ `pbParamInfo` 參數會指定傳遞給方法或屬性的參數類型。 引數的變數清單由 *...* 語法宣告。  
   
  此函式會將轉換的參數**VARIANTARG**值，然後再叫用**idispatch:: Invoke** ActiveX 控制項的方法。 如果呼叫**idispatch:: Invoke**失敗，此函式將會擲回例外狀況。 如果`SCODE`（狀態碼） 所傳回**idispatch:: Invoke**是`DISP_E_EXCEPTION`，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)物件，否則會擲回[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。  
   
@@ -5107,10 +5102,10 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![停止 &#40; x &#41;圖示](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**， **MB_ICONSTOP**，和**MB_ICONERROR**|  
-|![說明 &#40; &#41;圖示](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
-|![重要 &#40; &#33; &#41;圖示](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION**和**MB_ICONWARNING**|  
-|![資訊 &#40; &#41;圖示](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK**和**MB_ICONINFORMATION**|  
+|![停止&#40;x&#41;圖示](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**， **MB_ICONSTOP**，和**MB_ICONERROR**|  
+|![協助&#40;&#41;圖示](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
+|![重要&#40; &#33; &#41;圖示](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION**和**MB_ICONWARNING**|  
+|![資訊&#40;我&#41;圖示](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK**和**MB_ICONINFORMATION**|  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
@@ -5139,7 +5134,7 @@ BOOL ModifyStyle(
  如果已成功修改樣式; 非零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 加入或移除樣式可以結合使用位元 OR (&#124;) 運算子。 請參閱主題[視窗樣式](http://msdn.microsoft.com/library/windows/desktop/ms632600)和[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中針對可用的視窗樣式的相關資訊。  
+ 加入或移除的樣式可以藉由使用位元 OR 結合 (&#124;) 運算子。 請參閱主題[視窗樣式](http://msdn.microsoft.com/library/windows/desktop/ms632600)和[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中針對可用的視窗樣式的相關資訊。  
   
  如果`nFlags`非零，`ModifyStyle`呼叫 Windows API 函式[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)並結合重新繪製視窗`nFlags`與下列四個預設旗標：  
   
@@ -5183,7 +5178,7 @@ BOOL ModifyStyleEx(
  如果已成功修改樣式; 非零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 加入或移除樣式可以結合使用位元 OR (&#124;) 運算子。 請參閱主題[延伸的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)這個活頁簿中和[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)可用的相關資訊的 Windows SDK 中的延伸樣式  
+ 加入或移除的樣式可以藉由使用位元 OR 結合 (&#124;) 運算子。 請參閱主題[延伸的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)這個活頁簿中和[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)可用的相關資訊的 Windows SDK 中的延伸樣式  
   
  如果`nFlags`非零，`ModifyStyleEx`呼叫 Windows API 函式[SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545)並結合重新繪製視窗`nFlags`與下列四個預設旗標：  
   
@@ -5477,7 +5472,7 @@ afx_msg void OnChangeUIState(
   
 - **UISF_HIDEFOCUS**專注指標。  
   
-- **UISF_ACTIVE Windows XP:**控制項應該繪製在使用中控制項所使用的樣式。  
+- **UISF_ACTIVE Windows XP:** 控制項應該繪製在使用中控制項所使用的樣式。  
   
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342)訊息、 Windows SDK 中所述。  
@@ -7372,9 +7367,9 @@ afx_msg void OnNcCalcSize(
 ### <a name="remarks"></a>備註  
  藉由處理這個訊息，應用程式可以控制視窗的工作區的內容大小或視窗位置變更時。  
   
- 值為何`bCalcValidRects`，所指定之陣列的第一個矩形**rgrc**結構成員的`NCCALCSIZE_PARAMS`結構包含視窗的座標。 子視窗，座標是相對於父視窗工作區。 為最上層的視窗的螢幕座標。 應用程式應該修改**rgrc [0]**矩形以反映用戶端區域的位置與大小。  
+ 值為何`bCalcValidRects`，所指定之陣列的第一個矩形**rgrc**結構成員的`NCCALCSIZE_PARAMS`結構包含視窗的座標。 子視窗，座標是相對於父視窗工作區。 為最上層的視窗的螢幕座標。 應用程式應該修改**rgrc [0]** 矩形以反映用戶端區域的位置與大小。  
   
- **Rgrc [1]**和**rgrc [2]**矩形有效值才`bCalcValidRects`是**TRUE**。 在此情況下， **rgrc [1]**移動或調整大小之前，矩形會包含視窗的座標。 **Rgrc [2]**矩形包含視窗的工作區的座標之前已移動的視窗。 所有座標都是相對於父視窗或畫面。  
+ **Rgrc [1]** 和**rgrc [2]** 矩形有效值才`bCalcValidRects`是**TRUE**。 在此情況下， **rgrc [1]** 移動或調整大小之前，矩形會包含視窗的座標。 **Rgrc [2]** 矩形包含視窗的工作區的座標之前已移動的視窗。 所有座標都是相對於父視窗或畫面。  
   
  預設實作會計算視窗特性 （顯示捲軸、 功能表等），為基礎的用戶端區域的大小，並會在將結果放`lpncsp`。  
   
@@ -8074,7 +8069,7 @@ afx_msg UINT OnQueryUIState();
   
 - **UISF_HIDEACCEL**隱藏鍵盤快速鍵。  
   
-- **UISF_ACTIVE Windows XP:**控制項應該繪製在使用中控制項所使用的樣式。  
+- **UISF_ACTIVE Windows XP:** 控制項應該繪製在使用中控制項所使用的樣式。  
   
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[WM_QUERYUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646355)訊息、 Windows SDK 中所述。  
@@ -8874,7 +8869,7 @@ virtual INT_PTR OnToolHitTest(
   
 - `uId` = **(UINT) hWndChild**子視窗的控點  
   
-- `uFlags` &#124; = **TTF_IDISHWND**工具的控制代碼  
+- `uFlags` &#124;= **TTF_IDISHWND**工具的控制代碼  
   
 - `lpszText` = **LPSTR_TEXTCALLBACK**是要在指定的視窗中顯示的字串指標，  
   
@@ -8956,7 +8951,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|  
 |[輸入] `nChar`|指定的按鍵的字元碼。|  
 |[輸入] `nRepCnt`|指定目前的訊息的重複計數。 值為的按鍵是因為使用者按住鍵 autorepeated 的次數。 如果按鍵會保留時間夠長，傳送多則訊息。 不過，不是累計的重複計數。|  
-|[輸入] `nFlags`|下表所示，指定掃描程式碼、 擴充的索引鍵、 內容程式碼，先前狀態和轉換狀態的旗標：<br /><br /> **0-7:**指定掃描程式碼。 值取決於原始設備製造商 (OEM)。<br /><br /> **8:**指定擴充的金鑰，例如增強的 101 或 102 鍵鍵盤會出現右 ALT 和 CTRL 鍵。 旗標為 1，如果索引鍵是擴充的索引鍵;否則，它可以是 0。<br /><br /> **9-12:**內部使用的 Windows。<br /><br /> **13:**指定內容的程式碼。 旗標為 1，如果按下按鍵; 時，按住 ALT 鍵否則，值為 0。<br /><br /> **14:**指定前一個索引鍵的狀態。 旗標是如果金鑰已關閉，傳送訊息之前, 的 1 或 0，如果是往上的索引鍵。<br /><br /> **15:**指定轉換狀態。 旗標是放開按鍵時，1 或 0，如果按下索引鍵。|  
+|[輸入] `nFlags`|下表所示，指定掃描程式碼、 擴充的索引鍵、 內容程式碼，先前狀態和轉換狀態的旗標：<br /><br /> **0-7:** 指定掃描程式碼。 值取決於原始設備製造商 (OEM)。<br /><br /> **8:** 指定擴充的金鑰，例如增強的 101 或 102 鍵鍵盤會出現右 ALT 和 CTRL 鍵。 旗標為 1，如果索引鍵是擴充的索引鍵;否則，它可以是 0。<br /><br /> **9-12:** 內部使用的 Windows。<br /><br /> **13:** 指定內容的程式碼。 旗標為 1，如果按下按鍵; 時，按住 ALT 鍵否則，值為 0。<br /><br /> **14:** 指定前一個索引鍵的狀態。 旗標是如果金鑰已關閉，傳送訊息之前, 的 1 或 0，如果是往上的索引鍵。<br /><br /> **15:** 指定轉換狀態。 旗標是放開按鍵時，1 或 0，如果按下索引鍵。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會接收[WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)通知 Windows SDK 中所述。 [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288)訊息為了傳送或 ANSI windows 張貼 Unicode 字元。 它相當於[WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)訊息，但使用 Unicode 轉換格式-32 編碼方式 (utf-32)，而[WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276)訊息會使用 utf-16。  
@@ -9012,7 +9007,7 @@ afx_msg void OnUpdateUIState(
   
 - **UISF_HIDEFOCUS**專注指標。  
   
-- **UISF_ACTIVE Windows XP:**控制項應該繪製在使用中控制項所使用的樣式。  
+- **UISF_ACTIVE Windows XP:** 控制項應該繪製在使用中控制項所使用的樣式。  
   
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[WM_UPDATEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361)訊息、 Windows SDK 中所述。  
@@ -9383,14 +9378,14 @@ BOOL OpenClipboard();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#111](../../mfc/reference/codesnippet/cpp/cwnd-class_52.cpp)]  
   
-##  <a name="operator_hwnd"></a>  CWnd::operator HWND  
+##  <a name="operator_hwnd"></a>  HWND cwnd:: Operator  
  使用此運算子，以取得控制代碼`CWnd`物件。  
   
 ```  
 operator HWND() const;  
 ```  
   
-##  <a name="operator_neq"></a>  CWnd::operator !=  
+##  <a name="operator_neq"></a>  Cwnd:: Operator ！ =  
  比較兩個`CWnd`物件來判斷是否它們不需要相同[m_hWnd](#m_hwnd)。  
   
 ```  
@@ -9404,7 +9399,7 @@ BOOL operator!=(const CWnd& wnd) const;
 ### <a name="return-value"></a>傳回值  
  為非零，如果相等。否則便是 0。  
   
-##  <a name="operator_eq_eq"></a>  CWnd::operator ==  
+##  <a name="operator_eq_eq"></a>  Cwnd:: Operator = =  
  比較兩個`CWnd`物件來判斷它們是否相同[m_hWnd](#m_hwnd)。  
   
 ```  
@@ -10674,7 +10669,7 @@ BOOL SetWindowPos(
   
  如果沒有`SWP_NOACTIVATE`也`SWP_NOZORDER`（也就是應用程式要求視窗可同時啟動，並放在指定的疊置順序） 時指定中, 指定的值`pWndInsertAfter`只適用於下列情況：  
   
--   既不**& wndTopMost**也**（& s) wndNoTopMost**中指定`pWndInsertAfter`參數。  
+-   既不 **& wndTopMost**也**（& s) wndNoTopMost**中指定`pWndInsertAfter`參數。  
   
 -   這個視窗不是作用中視窗。  
   
@@ -10684,9 +10679,9 @@ BOOL SetWindowPos(
   
  使用 Windows 3.1 和更新版本的版本，windows 可以是移到疊置順序的頂端，鎖定那里藉由設定其**WS_EX_TOPMOST**樣式。 這類最上層的視窗會維護其最上層的位置，即使停用。 比方說，選取 WinHelp 最上層命令可讓 [說明] 視窗最上方，且它，然後當您回到您的應用程式仍會顯示。  
   
- 若要建立最上層視窗，呼叫`SetWindowPos`與`pWndInsertAfter`參數等於**& wndTopMost**，或設定**WS_EX_TOPMOST**樣式時建立視窗。  
+ 若要建立最上層視窗，呼叫`SetWindowPos`與`pWndInsertAfter`參數等於 **& wndTopMost**，或設定**WS_EX_TOPMOST**樣式時建立視窗。  
   
- 如果圖層順序包含與任何 windows **WS_EX_TOPMOST**樣式，以移動視窗**& wndTopMost**值會放在最上方的所有非最上層視窗，但低於任何最上層視窗。 當應用程式會啟動非作用中的視窗，而不用**WS_EX_TOPMOST**位元，視窗移上述所有非最上層視窗，但低於任何最上層視窗。  
+ 如果圖層順序包含與任何 windows **WS_EX_TOPMOST**樣式，以移動視窗 **& wndTopMost**值會放在最上方的所有非最上層視窗，但低於任何最上層視窗。 當應用程式會啟動非作用中的視窗，而不用**WS_EX_TOPMOST**位元，視窗移上述所有非最上層視窗，但低於任何最上層視窗。  
   
  如果`SetWindowPos`時，會呼叫`pWndInsertAfter`參數是**（& s) wndBottom**和`CWnd`是最上層視窗，視窗會失去其最上層的狀態 ( **WS_EX_TOPMOST**清除)，以及系統會將視窗底部的疊置順序。  
   
@@ -11136,7 +11131,7 @@ virtual void ResizeDynamicLayout();
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)   

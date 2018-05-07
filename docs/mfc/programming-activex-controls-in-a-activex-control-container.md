@@ -1,13 +1,10 @@
 ---
-title: "ActiveX 控制項容器： 程式設計 ActiveX 控制項容器中的 ActiveX 控制項 |Microsoft 文件"
-ms.custom: 
+title: ActiveX 控制項容器： 程式設計 ActiveX 控制項容器中的 ActiveX 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a608d98b43e6daf340ab09c7adb275849f347a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX 控制項容器：在 ActiveX 控制項容器中程式設計 ActiveX 控制項
 本文說明的程序存取公開[方法](../mfc/mfc-activex-controls-methods.md)和[屬性](../mfc/mfc-activex-controls-properties.md)內嵌 ActiveX 控制項。 基本上，您會執行下列步驟：  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a>包裝函式類別標頭 (。H） 檔案  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> 包裝函式類別標頭 (。H） 檔案  
  若要取得和設定屬性 （叫用方法） Circ 控制項，`CCirc`包裝函式提供的所有公開的方法和屬性的宣告。 在範例中，這些宣告位於變動圓形H. 下列範例是類別的部分`CCirc`定義公開的介面的 ActiveX 控制項：  
   
  [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  然後可以從其他應用程式的程序使用標準 c + + 語法呼叫這些函式。 如需有關如何使用這個成員函式，以存取控制項的方法和屬性的詳細資訊，請參閱下節[程式設計 ActiveX 控制項](#_core_programming_the_activex_control)。  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a>成員變數修改專案  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> 成員變數修改專案  
  當 ActiveX 控制項已加入至專案，而且內嵌在對話方塊容器中時，它可以存取專案的其他組件。 最簡單的方式來存取控制項是[建立成員變數](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)對話方塊類別的`CContainerDlg`（步驟 2），也就是包裝函式類別加入至專案，Visual c + + 類型相同。 成員變數，然後可用來存取內嵌的控制項，在任何時間。  
   
  當**加入成員變數**對話方塊新增`m_circctl`成員變數加入專案時，它也會加入下列幾行至標頭檔 (。H） 的`CContainerDlg`類別：  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a>程式設計 ActiveX 控制項  
+##  <a name="_core_programming_the_activex_control"></a> 程式設計 ActiveX 控制項  
  此時，您有對話方塊範本中插入 ActiveX 控制項，並為它建立成員變數。 您現在可以使用通用的 c + + 語法來存取的屬性和內嵌控制項的方法。  
   
  如所述 (在[包裝函式類別標頭 (。H） 檔](#_core_the_wrapper_class_header_28h29_file))，標頭檔 (。H） 如`CCirc`包裝函式類別，在此案例的變動圓形H、 包含您可用來取得和設定任何公開的屬性值的成員函式的清單。 成員函式公開的方法也會提供。  
@@ -100,6 +95,6 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ActiveX 控制項容器](../mfc/activex-control-containers.md)
 

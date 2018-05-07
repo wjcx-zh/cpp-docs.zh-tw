@@ -1,13 +1,10 @@
 ---
-title: "LOGPEN 結構 |Microsoft 文件"
-ms.custom: 
+title: LOGPEN 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - LOGPEN
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LOGPEN structure [MFC]
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7bfa598a59f62c11dbda13356559816b5bd47ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c0e07ce3a38eaca54e860ebe821924c0f564c69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logpen-structure"></a>LOGPEN 結構
 `LOGPEN`結構會定義樣式、 寬度和色彩的畫筆、 繪圖物件，用來繪製線條和框線。 [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)函式使用`LOGPEN`結構。  
@@ -74,7 +69,7 @@ typedef struct tagLOGPEN {  /* lgpn */
 ## <a name="requirements"></a>需求  
  **標頭：** wingdi.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)
 

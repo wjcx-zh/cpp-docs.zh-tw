@@ -1,13 +1,10 @@
 ---
-title: "連接對應 |Microsoft 文件"
-ms.custom: 
+title: 連接對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>連接對應
 OLE 控制項都能將介面公開給其他應用程式。 這些介面只允許從容器的存取，至該控制項。 如果 OLE 控制項想要存取外部的其他 OLE 物件的介面，必須先建立的連接點。 此連接點可讓連出外部的分派對應，例如事件對應或通知函式的存取控制。  
@@ -55,7 +50,7 @@ OLE 控制項都能將介面公開給其他應用程式。 這些介面只允許
 |[AfxConnectionAdvise](#afxconnectionadvise)|建立來源與接收器之間的連接。|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|在來源與接收器之間的連接會中斷。|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
  使用`BEGIN_CONNECTION_PART`巨集，以開始事件和屬性通知連接點以外的其他連接點的定義。  
   
 ```   
@@ -75,7 +70,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
  結束連接點的宣告。  
   
 ```   
@@ -89,7 +84,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
  在 `BEGIN_CONNECTION_PART` 和 `END_CONNECTION_PART` 巨集間使用，為 OLE Automation 控制項支授的連接點定義介面 ID。  
   
 ```   
@@ -110,7 +105,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
  程式中的每個 `COleControl` 衍生類別都可以提供一個連接對應，用於指定您的控制項所支援的其他連接點。  
   
 ```   
@@ -123,7 +118,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
  程式中每個 `COleControl` 衍生類別可以提供連接對應，以指定控制項支援的連接點。  
   
 ```   
@@ -143,7 +138,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
  結束連接對應的定義。  
   
 ```   
@@ -153,7 +148,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>  CONNECTION_PART  
  OLE 控制項的連接點會對應至特定的介面識別碼。  
   
 ```   
@@ -180,7 +175,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>需求  
   **標頭**afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
  呼叫此函式可指定來源之間建立連線`pUnkSrc`，與所指定的接收`pUnkSink`。  
   
 ```   
@@ -217,7 +212,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="requirements"></a>需求  
  **標頭：** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
  呼叫此函式來中斷連線之間指定的來源`pUnkSrc`，與所指定的接收`pUnkSink`。  
   
 ```   
@@ -254,5 +249,5 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ### <a name="requirements"></a>需求  
  **標頭：** afxctl.h 
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

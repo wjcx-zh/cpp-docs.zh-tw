@@ -1,13 +1,10 @@
 ---
-title: "樹狀目錄控制項樣式 |Microsoft 文件"
-ms.custom: 
+title: 樹狀目錄控制項樣式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TVS_SINGLEEXPAND
 - TVS_LINESATROOT
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141a2b0db673f8d3c5f2c116de5b5d2ec81a8ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-styles"></a>樹狀目錄控制項樣式
 樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 樣式管理樹狀目錄控制項的外觀。 當您建立的樹狀結構控制項時，您可以設定初始的樣式。 您可以擷取和變更之後建立的樹狀目錄控制項使用的樣式[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)和[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函式，指定**GWL_STYLE**的`nIndex`參數。 如需完整的樣式清單，請參閱[樹狀檢視控制項的視窗樣式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  **TVS_NOTOOLTIPS**樣式會停用的樹狀檢視控制項的自動工具提示功能。 這項功能會自動顯示工具提示，如果目前看不到完整的標題，其中包含滑鼠游標，底下項目的標題。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

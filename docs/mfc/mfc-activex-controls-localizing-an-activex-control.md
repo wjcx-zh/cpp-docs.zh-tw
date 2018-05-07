@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 當地語系化 ActiveX 控制項 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 當地語系化 ActiveX 控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控制項：當地語系化 ActiveX 控制項
 本文將討論當地語系化 ActiveX 控制項介面的程序。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  本文的其他部分將說明兩種當地語系化的策略。 第一項策略[當地語系化控制項的可程式性介面](#_core_localizing_your_control.92.s_programmability_interface)（屬性、 方法和事件的名稱）。 第二個策略[當地語系化控制項的使用者介面](#_core_localizing_the_control.92.s_user_interface)，使用容器的環境 LocaleID 屬性。 如需控制項當地語系化的示範，請參閱 MFC ActiveX 控制項範例[LOCALIZE](../visual-cpp-samples.md)。  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>當地語系化控制項的可程式性介面  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> 當地語系化控制項的可程式性介面  
  在當地語系化控制項的可程式性介面 (由使用您的控制項撰寫應用程式之程式設計人員所使用的介面) 的應用程式時，您必須為每種要支援的語言建立控制項 .IDL 檔案 (一種用於建立控制項類型程式庫的指令碼) 的修改版本。 這是唯一您需要當地語系化控制項屬性名稱的地方。  
   
  當您在開發當地語系化的控制項時，請在類型程式庫層級包含地區設定 ID 做為屬性。 例如，如果您要提供法文當地語系化屬性名稱的類型程式庫，請為您的 SAMPLE.IDL 檔案建立副本，並其命名為 SAMPLEFR.IDL。 加入地區設定 ID 屬性至檔案 (法文的地區設定 ID 是 0x040c)，如下所示：  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  當控制項已註冊時，`AfxOleRegisterTypeLib` 函式會自動在與控制項相同的目錄中尋找指定的 .TLB 檔，並在 Windows 系統登錄資料庫中註冊該檔案。 如果找不到 .TLB 檔案，函式不會有任何作用。  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>當地語系化控制項的使用者介面  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> 當地語系化控制項的使用者介面  
  若要當地語系化控制項的使用者介面，請將所有控制項的使用者可見資源 (例如屬性頁和錯誤訊息) 放置於語言專屬的資源 DLL 中。 然後您可以使用容器的環境 LocaleID 屬性為使用者的地區設定選取適當的 DLL。  
   
  下列程式碼範例將示範一種方法來尋找和載入特定地區設定的資源 DLL。 這個成員函式 (此例中為 `GetLocalizedResourceHandle`) 可以是您的 ActiveX 控制項類別的成員函式：  
@@ -108,6 +103,6 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxLoc#5](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_5.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

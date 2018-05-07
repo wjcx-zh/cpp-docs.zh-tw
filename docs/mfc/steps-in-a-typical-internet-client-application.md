@@ -1,13 +1,10 @@
 ---
-title: "一般網際網路用戶端應用程式中的步驟 |Microsoft 文件"
-ms.custom: 
+title: 一般網際網路用戶端應用程式中的步驟 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - WinInet classes [MFC], programming
 - Internet applications [MFC], client applications
 ms.assetid: 7aba135c-7c15-4e2f-8c34-bbaf792c89a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce4f5b91ebd68f13510f887c65927dbe5f84133
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1c7a7053b8378ea62dc0291dba1b79b794dd099
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="steps-in-a-typical-internet-client-application"></a>一般網際網路用戶端應用程式中的步驟
 下表顯示的步驟，您可能會執行一般網際網路用戶端應用程式中。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |處理例外狀況。|使用[CInternetException](../mfc/reference/cinternetexception-class.md)類別。|處理所有通用網際網路例外狀況類型。|  
 |結束網際網路工作階段。|處置[CInternetSession](../mfc/reference/cinternetsession-class.md)物件。|自動清除開啟檔案控制代碼和連接。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [網際網路用戶端類別的必要條件](../mfc/prerequisites-for-internet-client-classes.md)   
  [使用 MFC WinInet 類別建立網際網路用戶端應用程式](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

@@ -1,13 +1,10 @@
 ---
-title: "ActiveX 控制項容器： 檢視和修改控制項屬性 |Microsoft 文件"
-ms.custom: 
+title: ActiveX 控制項容器： 檢視和修改控制項屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3a12f9d591cb94c8c16e7b9f22a4db0872e78f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef443442cb19b9aaca82b74a0a5d8c72098d5cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 控制項容器：檢視和修改控制項屬性
 當您將 ActiveX 控制項插入至專案時，檢視和變更 ActiveX 控制項支援的屬性會很有幫助。 本文將討論如何使用 Visual C++ 資源編輯器來進行此動作。  
@@ -52,6 +47,6 @@ ms.lasthandoff: 12/21/2017
   
  使用**屬性**對話方塊來修改並立即測試新的屬性。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ActiveX 控制項容器](../mfc/activex-control-containers.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "ICommandSource 介面 |Microsoft 文件"
-ms.custom: 
+title: ICommandSource 介面 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - ICommandSource
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc8ad34ccce059caca8e86a014622e29c14022ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ff57ec9deea4ff8b39e572d720ad7e0fdaa15dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 介面
 管理從命令來源物件傳送至使用者控制項的命令。  
@@ -74,7 +69,7 @@ interface class ICommandSource
 ### <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
   
-## <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
+## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
 命令處理常式加入命令來源物件。
 ```
 void AddCommandHandler(
@@ -92,7 +87,7 @@ void AddCommandHandler(
 這個方法會將命令處理常式 cmdHandler 加入命令來源物件，並將此處理常式對應至 cmdID。
 請參閱[如何： 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用 AddCommandHandler 的範例。
 
-## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
+## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
 將一組命令處理常式加入至命令來源物件。
 ```
@@ -111,7 +106,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>備註
 這個方法會將連續的命令 Id 對應至單一訊息處理常式，並將它加入命令來源物件。 這用於一種方法處理一組相關的按鈕。
 
-## <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
+## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
 將一群使用者介面的命令訊息處理常式加入至命令來源物件。
 ```
 void AddCommandRangeUIHandler(
@@ -130,7 +125,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>備註
 這個方法會將連續的命令 Id 對應至單一使用者介面命令訊息處理常式，並將它加入命令來源物件。 這用於一種方法處理一組相關的按鈕。
 
-## <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
+## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
 將使用者介面命令訊息處理常式加入至命令來源物件。
 ```
 void AddCommandUIHandler(
@@ -146,7 +141,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>備註
 這個方法會將使用者介面命令訊息處理常式 cmdHandler 加入命令來源物件，並將此處理常式對應至 cmdID。
 
-## <a name="postcommand"></a>ICommandSource::PostCommand
+## <a name="postcommand"></a> ICommandSource::PostCommand
 公佈訊息，而不需等待處理。
 ```
 void PostCommand(unsigned int command);
@@ -158,7 +153,7 @@ void PostCommand(unsigned int command);
 這個方法以非同步方式將張貼訊息對應至命令所指定的識別碼。 該呼叫 CWnd::PostMessage 將訊息放在視窗的訊息佇列，然後傳回而不需等待處理的訊息對應的視窗。
 
 
-## <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
+## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 命令來源物件中移除的命令處理常式。
 ```
 void RemoveCommandHandler(unsigned int cmdID);
@@ -170,7 +165,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 這個方法會移除對應至 cmdID 命令來源物件的命令處理常式。
 
 
-## <a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
+## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler 
 命令來源物件中移除群組的命令處理常式。
 ```
 void RemoveCommandRangeUIHandler(
@@ -185,7 +180,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>備註
 這個方法會移除的訊息處理常式，來對應至識別碼指定的命令 cmdIDMin 和 cmdIDMax，從命令來源物件的群組。
 
-## <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
+## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler 
 命令來源物件中移除一群使用者介面的命令訊息處理常式。
 ```
 void RemoveCommandRangeUIHandler(
@@ -200,7 +195,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>備註
 這個方法會移除的使用者介面命令訊息處理常式，來對應至識別碼指定的命令 cmdIDMin 和 cmdIDMax，從命令來源物件的群組。
 
-## <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
+## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler 
 命令來源物件中移除的使用者介面命令訊息處理常式。
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
@@ -211,7 +206,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>備註
 這個方法會移除的使用者介面命令訊息處理常式對應至 cmdID 命令來源物件。
 
-## <a name="sendcommand"></a>ICommandSource::SendCommand 
+## <a name="sendcommand"></a> ICommandSource::SendCommand 
 傳送訊息並等待其處理後再傳回。
 ```
 void SendCommand(unsigned int command);
@@ -221,6 +216,6 @@ void SendCommand(unsigned int command);
 命令傳送訊息的識別碼。
 ### <a name="remarks"></a>備註
 這個方法會以同步方式傳送訊息對應至命令所指定的識別碼。 它會呼叫 CWnd::SendMessage 將訊息放在視窗的訊息佇列，並等待，直到該視窗程序處理過訊息後再傳回。
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何： 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [ICommandTarget 介面](../../mfc/reference/icommandtarget-interface.md)

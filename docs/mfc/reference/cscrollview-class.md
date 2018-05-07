@@ -1,12 +1,9 @@
 ---
-title: "CScrollView 類別 |Microsoft 文件"
-ms.custom: 
+title: CScrollView 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CScrollView
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cscrollview-class"></a>CScrollView 類別
 A [CView](../../mfc/reference/cview-class.md)具有捲動功能。  
@@ -130,7 +125,7 @@ class CScrollView : public CView
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
  呼叫此成員函式可判斷捲動檢視是否具有水平及垂直軸。  
   
 ```  
@@ -146,7 +141,7 @@ void CheckScrollBars(
  *bHasVertBar*  
  指出應用程式有垂直捲軸。  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
  建構 `CScrollView` 物件。  
   
 ```  
@@ -156,7 +151,7 @@ CScrollView();
 ### <a name="remarks"></a>備註  
  您必須呼叫`SetScrollSizes`或`SetScaleToFitSize`之前捲軸檢視可供使用。  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
  呼叫`FillOutsideRect`填滿區域的捲動區域外部顯示的檢視。  
   
 ```  
@@ -178,7 +173,7 @@ void FillOutsideRect(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
  呼叫`GetDeviceScrollPosition`何時該添目前水平和垂直位置的捲軸方塊中的捲軸。  
   
 ```  
@@ -191,10 +186,10 @@ CPoint GetDeviceScrollPosition() const;
 ### <a name="remarks"></a>備註  
  此座標組對應的捲動檢視的左上角的文件中的位置。 這是適用於移轉至捲動檢視裝置位置的滑鼠裝置位置。  
   
- `GetDeviceScrollPosition`以裝置為單位傳回值。 如果您想邏輯單元，請使用`GetScrollPosition`改為。  
+ `GetDeviceScrollPosition` 以裝置為單位傳回值。 如果您想邏輯單元，請使用`GetScrollPosition`改為。  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`取得目前的對應模式、 的總大小，以及可捲動檢視的列和頁面大小。  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` 取得目前的對應模式、 的總大小，以及可捲動檢視的列和頁面大小。  
   
 ```  
 void GetDeviceScrollSizes(
@@ -220,7 +215,7 @@ void GetDeviceScrollSizes(
 ### <a name="remarks"></a>備註  
  大小是以裝置為單位。 很少呼叫此成員函式。  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
  呼叫`GetScrollPosition`何時該添目前水平和垂直位置的捲軸方塊中的捲軸。  
   
 ```  
@@ -233,9 +228,9 @@ CPoint GetScrollPosition() const;
 ### <a name="remarks"></a>備註  
  此座標組對應的捲動檢視的左上角的文件中的位置。  
   
- `GetScrollPosition`傳回值以邏輯單位表示。 如果您想裝置單位時，使用`GetDeviceScrollPosition`改為。  
+ `GetScrollPosition` 傳回值以邏輯單位表示。 如果您想裝置單位時，使用`GetDeviceScrollPosition`改為。  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
  呼叫`GetTotalSize`擷取目前的水平和垂直大小的捲動檢視。  
   
 ```  
@@ -245,7 +240,7 @@ CSize GetTotalSize() const;
 ### <a name="return-value"></a>傳回值  
  捲動檢視，以邏輯單位的大小總計。 水平大小**cx**隸屬`CSize`傳回值。 垂直大小**cy**成員。  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
  呼叫`ResizeParentToFit`，讓您檢視的大小指示其框架視窗的大小。  
   
 ```  
@@ -259,11 +254,11 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ### <a name="remarks"></a>備註  
  這被建議只針對 MDI 子框架視窗中的檢視。 使用`ResizeParentToFit`中`OnInitialUpdate`處理常式函式的衍生`CScrollView`類別。 如需這個成員函式的範例，請參閱[CScrollView::SetScrollSizes](#setscrollsizes)。  
   
- `ResizeParentToFit`假設已設定的 [檢視] 視窗的大小。 如果檢視視窗大小尚未設定時`ResizeParentToFit`是呼叫，就會判斷提示。 為了確保，這不會發生，請進行下列呼叫之前先呼叫`ResizeParentToFit`:  
+ `ResizeParentToFit` 假設已設定的 [檢視] 視窗的大小。 如果檢視視窗大小尚未設定時`ResizeParentToFit`是呼叫，就會判斷提示。 為了確保，這不會發生，請進行下列呼叫之前先呼叫`ResizeParentToFit`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
  呼叫`ScrollToPosition`捲動至檢視中的指定點。  
   
 ```  
@@ -277,7 +272,7 @@ void ScrollToPosition(POINT pt);
 ### <a name="remarks"></a>備註  
  檢視將會使此點是在視窗的左上角捲動。 此成員函式必須不呼叫檢視縮放成最適大小。  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
  呼叫`SetScaleToFitSize`當您想要自動調整檢視區大小為目前的視窗大小。  
   
 ```  
@@ -293,13 +288,13 @@ void SetScaleToFitSize(SIZE sizeTotal);
   
  您通常放置呼叫`SetScaleToFitSize`中檢視的覆寫`OnInitialUpdate`成員函式。 如果您不想自動縮放比例，呼叫`SetScrollSizes`成員函式。  
   
- `SetScaleToFitSize`可用來實作 「 縮放最適大小 」 的作業。 使用`SetScrollSizes`捲動重新初始化。  
+ `SetScaleToFitSize` 可用來實作 「 縮放最適大小 」 的作業。 使用`SetScrollSizes`捲動重新初始化。  
   
- `SetScaleToFitSize`假設已設定的 [檢視] 視窗的大小。 如果檢視視窗大小尚未設定時`SetScaleToFitSize`是呼叫，就會判斷提示。 為了確保，這不會發生，請進行下列呼叫之前先呼叫`SetScaleToFitSize`:  
+ `SetScaleToFitSize` 假設已設定的 [檢視] 視窗的大小。 如果檢視視窗大小尚未設定時`SetScaleToFitSize`是呼叫，就會判斷提示。 為了確保，這不會發生，請進行下列呼叫之前先呼叫`SetScaleToFitSize`:  
   
  [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
  呼叫`SetScrollSizes`檢視即將更新。  
   
 ```  
@@ -352,7 +347,7 @@ void SetScrollSizes(
   
  [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 DIBLOOK](../../visual-cpp-samples.md)   
  [CView 類別](../../mfc/reference/cview-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

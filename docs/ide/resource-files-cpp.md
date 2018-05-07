@@ -1,13 +1,10 @@
 ---
-title: "資源檔 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 資源檔 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 097ae6d1486292d7dcc62dd4191e16f57e6f0a3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c295b9a3aa4996cdcd2afb17b5a4ff4c90c1159
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="resource-files-c"></a>資源檔 (C++)
 資源是提供資訊給使用者介面項目。 點陣圖、 圖示、 工具列和資料指標是所有資源。 某些資源都可以執行的動作，例如從功能表中選取或輸入 對話方塊中的資料操作。  
@@ -43,5 +38,5 @@ ms.lasthandoff: 12/21/2017
 |Toolbar.bmp|*Projname*\res|資源檔|代表應用程式或工具列或調色盤中的控制項的點陣圖檔案。 此點陣圖會包含在專案的資源檔案。 初始的工具列和狀態列中建構**CMainFrame**類別。|  
 |ribbon.mfcribbon ms|*Projname*\res|資源檔|資源檔，其中包含定義功能區按鈕、 控制項和屬性的 XML 程式碼。 如需詳細資訊，請參閱 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)

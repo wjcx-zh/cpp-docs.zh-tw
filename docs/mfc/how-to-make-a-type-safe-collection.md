@@ -1,13 +1,10 @@
 ---
-title: "如何： 建立類型安全集合 |Microsoft 文件"
-ms.custom: 
+title: 如何： 建立類型安全集合 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74cb81ecc6b935c87384a8a0a315e35b4adbc465
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：建立類型安全集合
 本文說明如何進行資料類型的類型安全集合。 主題包括：  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  MFC 程式庫提供以 C++ 範本為基礎的預先定義類型安全集合。 因為它們是範本，所以這些類別可在針對此目的使用非範本類別時，無需轉換類型以及額外的工作，提供類型安全和易用性。 MFC 範例[收集](../visual-cpp-samples.md)示範如何使用 MFC 應用程式中範本型集合類別。 一般而言，撰寫新的集合程式碼時都可使用這些類別。  
   
-##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a>使用類型安全的範本型類別  
+##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> 使用類型安全的範本型類別  
   
 #### <a name="to-use-template-based-classes"></a>使用範本型類別  
   
@@ -58,10 +53,10 @@ ms.lasthandoff: 12/21/2017
   
  這個範例顯示整數清單的宣告。 步驟 1 中的第一個參數是儲存為清單項目的資料類型。 第二個參數指定之資料的方式傳遞和傳回與成員函式的集合類別，例如**新增**和`GetAt`。  
   
-##  <a name="_core_implementing_helper_functions"></a>實作 Helper 函式  
+##  <a name="_core_implementing_helper_functions"></a> 實作 Helper 函式  
  範本型集合類別 `CArray`、`CList` 和 `CMap` 使用五個您可以視需要為衍生的集合類別自訂的全域 helper 函式。 如需這些 helper 函式的詳細資訊，請參閱[集合類別 Helper](../mfc/reference/collection-class-helpers.md)中*MFC 參考*。 對於大部分範本型集合類別的使用，需要實作序列化函式。  
   
-###  <a name="_core_serializing_elements"></a>序列化項目  
+###  <a name="_core_serializing_elements"></a> 序列化項目  
  `CArray`、`CList` 和 `CMap` 類別會呼叫 `SerializeElements` 將集合項目儲存至封存或從封存讀取集合項目。  
   
  `SerializeElements` helper 函式的預設實作，會根據是將物件儲存至封存還是從封存擷取物件，進行物件到封存的位元寫入，或從封存到物件的位元讀取。 如果此動作不適合，則覆寫 `SerializeElements`。  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
   
  多載的插入運算子`CArchive`呼叫`CObject::Serialize`（或覆寫該函式） 每個**CPerson**物件。  
   
-##  <a name="_core_using_nontemplate_collection_classes"></a>使用非範本集合類別  
+##  <a name="_core_using_nontemplate_collection_classes"></a> 使用非範本集合類別  
  MFC 也支援使用 MFC 1.0 版導入的集合類別。 這些類別不是以範本為基礎。 它們可以用來包含資料的支援的型別`CObject*`， **UINT**， `DWORD`，和`CString`。 您可以使用這些預先定義的集合 (例如 `CObList`) 保有從 `CObject` 衍生的任何物件的集合。 MFC 也提供其他預先定義的集合來保有基本類型，例如**UINT**和讓指標 (`void`*)。 不過，一般而言，定義自己的類型安全集合來保有更特定類別的物件及其系出物件，通常蠻實用的。 請注意，使用不以範本為基礎的集合類別，比使用範本型類別的工作更多。  
   
  有兩種方式可使用非範本集合建立類型安全集合：  
@@ -107,6 +102,6 @@ ms.lasthandoff: 12/21/2017
   
      您也可以定義擴充集合的功能而不是只包裝在類型安全包裝函式中的現有功能的新函式，來加入新的功能。 例如，文件[刪除 CObject 集合中的所有物件](../mfc/deleting-all-objects-in-a-cobject-collection.md)說明可刪除清單中的所有物件的函式。 可以將這個函式加入到衍生類別做為成員函式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [集合](../mfc/collections.md)
 

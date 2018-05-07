@@ -1,13 +1,10 @@
 ---
-title: "委派和介面對應巨集 (MFC) |Microsoft 文件"
-ms.custom: 
+title: 委派和介面對應巨集 (MFC) |Microsoft 文件
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 |||  
 |-|-|  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[MAKE_DELEGATE](#make_delegate)|將事件處理常式附加至 managed 控制項。|
 
 
-## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
+## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 開始委派對應。  
    
 ### <a name="syntax"></a>語法    
@@ -56,7 +51,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="requirements"></a>需求  
  **標頭：** msclr\event.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
  
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
@@ -102,7 +97,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 ### <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [如何：新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
  
 ##  <a name="commanduihandler"></a>CommandUIHandler
@@ -120,14 +115,14 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
  命令訊息識別碼。  
    
 ### <a name="remarks"></a>備註  
- 此委派註冊回呼方法與使用者介面更新命令訊息。 `CommandUIHandler`類似於[CommandHandler](#commandhandler)不同之處在於此委派會搭配使用者介面物件更新命令。 使用者介面更新命令應對應一對一與訊息處理常式方法。  
+ 此委派註冊回呼方法與使用者介面更新命令訊息。 `CommandUIHandler` 類似於[CommandHandler](#commandhandler)不同之處在於此委派會搭配使用者介面物件更新命令。 使用者介面更新命令應對應一對一與訊息處理常式方法。  
   
  如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
    
 ### <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [如何： 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [CommandHandler](#commandhandler)
 
@@ -145,7 +140,7 @@ END_DELEGATE_MAP();
 ### <a name="requirements"></a>需求  
  **標頭：** msclr\event.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
 
  [如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
@@ -164,7 +159,7 @@ END_INTERFACE_MAP( )
 ### <a name="requirements"></a>需求  
  **標題:** afxwin.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [BEGIN_INTERFACE_MAP](#begin_interface_map)
  
@@ -202,7 +197,7 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>需求  
  **標頭：** msclr\event.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [MAKE_DELEGATE](#make_delegate)   
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)
@@ -265,7 +260,7 @@ void CMyView::OnInitialUpdate()
 ### <a name="requirements"></a>需求  
  **標頭：** msclr\event.h  
    
-### <a name="see-also"></a>請參閱  
+### <a name="see-also"></a>另請參閱  
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)   
  [EVENT_DELEGATE_ENTRY](#event_delegate_entry)

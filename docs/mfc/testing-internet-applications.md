@@ -1,13 +1,10 @@
 ---
-title: "測試網際網路應用程式 |Microsoft 文件"
-ms.custom: 
+title: 測試網際網路應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - debugging [MFC], Web applications
 - Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cc214eb98b8aa9e927fd471ba313e4cade426a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61ffc5b11783806555b210b8561cbe6cdd2878ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-internet-applications"></a>測試網際網路應用程式
 在網際網路上有一些獨一無二的測試挑戰，特別是在 Web 伺服器上執行的應用程式。 您的初始測試可能會使用單一使用者的用戶端連接到測試伺服器來進行。 這對於偵錯您的程式碼將會非常有用。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  網際網路程式設計的其中一個挑戰就在於其可視性。 對網站的許多存取可能會降低伺服器的速度。 您會希望伺服器緩慢地降低效能。 如果您的應用程式失敗 (例如，寫入登錄或是在用戶端寫入 Cookie 時資料損毀)，您要避免發生可能會對使用者的電腦造成破壞性的任何事情。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

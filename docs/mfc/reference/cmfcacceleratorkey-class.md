@@ -1,12 +1,9 @@
 ---
-title: "CMFCAcceleratorKey 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCAcceleratorKey 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCAcceleratorKey
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ca49fd2696a8fc5a488962f1f13ead1d861c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 類別
 實作虛擬按鍵對應和格式化的協助程式類別。  
@@ -75,7 +70,7 @@ class CMFCAcceleratorKey : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxacceleratorkey.h  
   
-##  <a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey  
+##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey  
  建構[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件。  
   
 ```  
@@ -90,7 +85,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="remarks"></a>備註  
  當您建立時如果您未提供攠摝坫`CMFCAccleratorKey`，使用[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)方法相關聯的快速鍵與您`CMFCAcceleratorKey`物件。  
   
-##  <a name="format"></a>CMFCAcceleratorKey::Format  
+##  <a name="format"></a>  CMFCAcceleratorKey::Format  
  將轉譯為其相關聯的字串值的快速鍵結構。  
   
 ```  
@@ -104,7 +99,7 @@ void Format(CString& str) const;
 ### <a name="remarks"></a>備註  
  這個方法會擷取相關聯的快速鍵的字串格式。 您可以設定的字串格式[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件使用建構函式或方法[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)。  
   
-##  <a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator  
+##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator  
  設定的快速鍵[CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)物件。  
   
 ```  
@@ -118,7 +113,7 @@ void SetAccelerator(LPACCEL lpAccel);
 ### <a name="remarks"></a>備註  
  使用此方法來設定的快速鍵`CMFCAcceleratorKey`如果您未提供攠摝坫您在建立時`CMFCAcceleratorKey`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)

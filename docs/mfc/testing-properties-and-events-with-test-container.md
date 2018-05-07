@@ -1,13 +1,10 @@
 ---
-title: "使用測試容器測試屬性和事件 |Microsoft 文件"
-ms.custom: 
+title: 使用測試容器測試屬性和事件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 381f4e421b63b2ba48fe649a30e5bf7648b50d27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fbf2b7c26b7fc44a526381f4fb3e4dee5c94ba8d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>使用測試容器測試屬性和事件
 隨附於 Visual C++ 的 Test Container 應用程式是一個 ActiveX 控制項容器，用於測試和偵錯 ActiveX 控制項。 Test Container 可讓控制項開發人員藉由變更其屬性、叫用其方法和引發其事件來測試控制項的功能。 Test Container 可以顯示資料繫結通知的記錄，並提供測試 ActiveX 控制項永續性的功能：您可以將屬性儲存至資料流或到子儲存區、重新載入它們以及檢查已儲存的資料流資料。 本節說明如何使用 Test Container 的基本功能。 如需詳細資訊，請選取**協助**功能表執行 Test Container 時。  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  指定事件資訊的目的地。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
  [如何：偵錯 ActiveX 控制項](/visualstudio/debugger/how-to-debug-an-activex-control)
 

@@ -1,12 +1,9 @@
 ---
-title: "CDataExchange 類別 |Microsoft 文件"
-ms.custom: 
+title: CDataExchange 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDataExchange
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e56df3ec4604a02ba9cf1075152a11eefe7e28f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdataexchange-class"></a>CDataExchange 類別
 支援 Microsoft Foundation 類別使用的對話方塊資料交換 (DDX) 和對話方塊資料驗證 (DDV) 常式。  
@@ -75,7 +70,7 @@ class CDataExchange
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|其中的資料交換的對話方塊或視窗會發生。|  
   
 ## <a name="remarks"></a>備註  
- `CDataExchange`沒有基底類別。  
+ `CDataExchange` 沒有基底類別。  
   
  使用這個類別，如果您要撰寫資料交換常式的自訂資料類型或控制項，或如果您要撰寫您自己的資料驗證常式。 如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊](../../mfc/dialog-boxes.md)。  
   
@@ -87,7 +82,7 @@ class CDataExchange
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="cdataexchange"></a>CDataExchange::CDataExchange  
+##  <a name="cdataexchange"></a>  CDataExchange::CDataExchange  
  呼叫此成員函式來建構`CDataExchange`物件。  
   
 ```  
@@ -109,7 +104,7 @@ CDataExchange(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
-##  <a name="fail"></a>CDataExchange::Fail  
+##  <a name="fail"></a>  CDataExchange::Fail  
  對話方塊資料驗證 (DDV) 作業失敗時，架構會呼叫此成員函式。  
   
 ```  
@@ -123,7 +118,7 @@ void Fail();
   
  如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊主題](../../mfc/dialog-boxes.md)。  
   
-##  <a name="m_bsaveandvalidate"></a>CDataExchange::m_bSaveAndValidate  
+##  <a name="m_bsaveandvalidate"></a>  CDataExchange::m_bSaveAndValidate  
  這個旗標表示對話方塊資料交換 (DDX) 作業的方向。  
   
 ```  
@@ -137,7 +132,7 @@ BOOL m_bSaveAndValidate;
   
  如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊主題](../../mfc/dialog-boxes.md)。  
   
-##  <a name="m_pdlgwnd"></a>CDataExchange::m_pDlgWnd  
+##  <a name="m_pdlgwnd"></a>  CDataExchange::m_pDlgWnd  
  包含的指標[CWnd](../../mfc/reference/cwnd-class.md)的對話方塊資料交換 (DDX) 或驗證 (DDV) 正在進行中的物件。  
   
 ```  
@@ -149,7 +144,7 @@ CWnd* m_pDlgWnd;
   
  如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊主題](../../mfc/dialog-boxes.md)。  
   
-##  <a name="preparectrl"></a>CDataExchange::PrepareCtrl  
+##  <a name="preparectrl"></a>  CDataExchange::PrepareCtrl  
  架構會呼叫此成員函式，準備指定之控制項的對話方塊資料交換 (DDX) 和驗證 (DDV)。  
   
 ```  
@@ -172,7 +167,7 @@ HWND PrepareCtrl(int nIDC);
   
  如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊主題](../../mfc/dialog-boxes.md)。  
   
-##  <a name="prepareeditctrl"></a>CDataExchange::PrepareEditCtrl  
+##  <a name="prepareeditctrl"></a>  CDataExchange::PrepareEditCtrl  
  架構會呼叫此成員函式，以準備指定的編輯控制項的對話方塊資料交換 (DDX) 和驗證 (DDV)。  
   
 ```  
@@ -195,7 +190,7 @@ HWND PrepareEditCtrl(int nIDC);
   
  如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊主題](../../mfc/dialog-boxes.md)。  
   
-##  <a name="prepareolectrl"></a>CDataExchange::PrepareOleCtrl  
+##  <a name="prepareolectrl"></a>  CDataExchange::PrepareOleCtrl  
  架構會呼叫此成員函式，準備指定之 OLE 控制項的對話方塊資料交換 (DDX) 和驗證 (DDV)。  
   
 ```  
@@ -216,7 +211,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
   
  如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊主題](../../mfc/dialog-boxes.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 VIEWEX](../../visual-cpp-samples.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)   

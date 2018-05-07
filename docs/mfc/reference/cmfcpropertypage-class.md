@@ -1,12 +1,9 @@
 ---
-title: "CMFCPropertyPage 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCPropertyPage 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyPage
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11f9e4849a0c632e6a63d794dc294fa504d196a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 類別
 `CMFCPropertyPage`類別支援在屬性頁上顯示快顯功能表。  
@@ -77,7 +72,7 @@ class CMFCPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>需求  
  **標頭：** afxpropertypage.h  
   
-##  <a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage  
+##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage  
  建構 `CMFCPropertyPage` 物件。  
   
 ```  
@@ -106,7 +101,7 @@ CMFCPropertyPage(
 ### <a name="remarks"></a>備註  
  如需建構函式參數的詳細資訊，請參閱[CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCPropertySheet 類別](../../mfc/reference/cmfcpropertysheet-class.md)

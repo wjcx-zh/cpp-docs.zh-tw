@@ -1,13 +1,10 @@
 ---
-title: "TN053: DAO 的自訂 DFX 常式資料庫類別 |Microsoft 文件"
-ms.custom: 
+title: 'TN053: DAO 的自訂 DFX 常式資料庫類別 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dfx
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6935e4b3f2c8159677d1d322f6f875246160da2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 資料庫類別的自訂 DFX 常式
 > [!NOTE]
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  DFX 和動態繫結不會互斥，所以可以使用靜態和動態繫結的混合式用法。  
   
-## <a name="_mfcnotes_tn053_examples"></a>使用的 DAO 資料錄欄位交換只範例 1:  
+## <a name="_mfcnotes_tn053_examples"></a> 使用的 DAO 資料錄欄位交換只範例 1:  
   
  (假設`CDaoRecordset`-衍生的類別`CMySet`尚未開啟)  
   
@@ -122,7 +117,7 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```  
   
-## <a name="_mfcnotes_tn053_how_dfx_works"></a>DFX 的運作方式  
+## <a name="_mfcnotes_tn053_how_dfx_works"></a> DFX 的運作方式  
   
  DFX 機制的運作方式類似使用 MFC ODBC 類別的資料錄欄位交換 (RFX) 機制。 DFX 和 RFX 的原則是相同的但有許多內部的差異。 DFX 函式的設計是的因此幾乎所有的程式碼由個別的 DFX 常式共用。 在最高等級 DFX 只會幾件事。  
   
@@ -164,12 +159,12 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 -   DAO 會也 「 回呼 」 至可變長度資料行呼叫端才能讓呼叫端配置的記憶體。 此第二個功能具有的最小化的資料複本數目，以及允許直接儲存的資料成員中類別的優點 (`CDaoRecordset`衍生的類別)。 此第二種機制是用來繫結至資料成員中的 MFC 的方法`CDaoRecordset`衍生的類別。  
   
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>自訂 DFX 常式的功能  
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> 自訂 DFX 常式的功能  
  很明顯來自必須能夠成功呼叫設定必要的資料結構中任何 DFX 函式實作的最重要的作業。 這個討論`GetRows`。 DFX 函式，也必須支援其他作業，但不為重要或複雜到像正確準備的許多`GetRows`呼叫。  
   
  使用 DFX 是線上文件中所述。 基本上，有兩項需求。 首先，必須新增成員至`CDaoRecordset`衍生的類別，針對每個繫結的欄位和參數。 接下來`CDaoRecordset::DoFieldExchange`應該覆寫。 請注意，成員的資料型別是很重要。 它應該符合資料庫中欄位的資料，或至少可轉換為該類型。 例如在資料庫中，例如長整數的數值欄位可以永遠轉換成文字和繫結至`CString`成員，但資料庫中的文字欄位不一定可以轉換成數值表示法，例如長整數和繫結至長 integer 成員。 DAO 和 Microsoft Jet 資料庫引擎負責轉換 （而非 MFC）。  
   
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>DFX_Text 的詳細資料  
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text 的詳細資料  
  如先前所述，說明 DFX 的運作方式的最佳方式是利用範例。 針對此用途的內部資訊透過`DFX_Text`應該運作相當可協助您提供的 DFX 至少有基本了解。  
   
  **AddToParameterList**  
@@ -216,7 +211,7 @@ PopUpEmployeeData(emp.m_strFirstName,
 > [!TIP]
 >  模型標準的資料類型的現有 DFX 常式的自訂 DFX 常式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

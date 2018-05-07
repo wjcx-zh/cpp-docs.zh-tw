@@ -1,29 +1,24 @@
 ---
-title: "建置 MFC 應用程式的作業順序 |Microsoft 文件"
-ms.custom: 
+title: 建置 MFC 應用程式的作業順序 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>建置 MFC 應用程式的作業順序
 下表說明當您開發 MFC 應用程式時，通常會遵循的一般順序。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 |加入分隔視窗。|如果您想要支援視窗分割，加入[CSplitterWnd](../mfc/reference/csplitterwnd-class.md)物件至您的 SDI 框架視窗或 MDI 子視窗，並將它連結的視窗中[OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient)成員函式。|架構會在捲軸旁邊提供分隔器方塊控制項，並將您的檢視分割為多個窗格。 如果使用者分割了某個視窗，架構會建立並附加其他檢視物件至文件。|  
 |建置、測試，以及偵錯應用程式。|使用 Visual C++ 的功能來建置、測試和偵錯應用程式。|Visual C++ 可讓您調整編譯、連結和其他選項。 它也可讓您瀏覽原始程式碼和類別結構。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立 OLE 應用程式的作業順序](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
  [一系列的作業，用於建立 ActiveX 控制項](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
  [建立資料庫應用程式的作業順序](../mfc/sequence-of-operations-for-creating-database-applications.md)   

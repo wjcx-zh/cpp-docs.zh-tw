@@ -2,11 +2,8 @@
 title: CHotKeyCtrl 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 982d4dec9c00490248da0b0e0dec7fd44376c218
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 類別
 提供 Windows 通用快速鍵控制項的功能。  
@@ -95,14 +90,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl  
  建構 `CHotKeyCtrl` 物件。  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>  CHotKeyCtrl::Create  
  建立熱鍵控制項，並將它附加至`CHotKeyCtrl`物件。  
   
 ```  
@@ -134,7 +129,7 @@ virtual BOOL Create(
   
  如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是**建立**。  
   
-##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  呼叫此函式來建立控制項 （子視窗），並將它與相關聯`CHotKeyCtrl`物件。  
   
 ```  
@@ -168,7 +163,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
-##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
  從熱鍵控制項擷取的虛擬索引鍵的程式碼和修飾詞旗標的鍵盤快速鍵。  
   
 ```  
@@ -201,7 +196,7 @@ void GetHotKey(
 ### <a name="remarks"></a>備註  
  虛擬按鍵碼和輔助按鍵一起定義的鍵盤快速鍵。  
   
-##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
  呼叫此成員函式可取得熱鍵的當地語系化的名稱。  
   
 ```  
@@ -214,7 +209,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>備註  
  此成員函式傳回的名稱來自於鍵盤驅動程式。 您可以安裝非當地語系化鍵盤驅動程式中的當地語系化版本的 Windows，反之亦然。  
   
-##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
  呼叫此成員函式，以取得指派給指定的虛擬按鍵碼的索引鍵的當地語系化的名稱。  
   
 ```  
@@ -239,7 +234,7 @@ static CString GetKeyName(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
  設定熱鍵控制項的鍵盤快速鍵。  
   
 ```  
@@ -267,7 +262,7 @@ void SetHotKey(
 ### <a name="remarks"></a>備註  
  虛擬按鍵碼和輔助按鍵一起定義的鍵盤快速鍵。  
   
-##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
  呼叫此函式可定義不正確的組合和熱鍵控制項的預設修飾詞組合。  
   
 ```  
@@ -280,21 +275,21 @@ void SetRules(
  `wInvalidComb`  
  指定無效的索引鍵組合旗標的陣列。 它可以是下列值的組合：  
   
-- `HKCOMB_A`ALT 鍵  
+- `HKCOMB_A` ALT 鍵  
   
-- `HKCOMB_C`CTRL  
+- `HKCOMB_C` CTRL  
   
-- `HKCOMB_CA`CTRL + ALT  
+- `HKCOMB_CA` CTRL + ALT  
   
-- `HKCOMB_NONE`未修改的機碼  
+- `HKCOMB_NONE` 未修改的機碼  
   
-- `HKCOMB_S`SHIFT 鍵  
+- `HKCOMB_S` SHIFT 鍵  
   
-- `HKCOMB_SA`SHIFT + ALT  
+- `HKCOMB_SA` SHIFT + ALT  
   
-- `HKCOMB_SC`SHIFT + CTRL  
+- `HKCOMB_SC` SHIFT + CTRL  
   
-- `HKCOMB_SCA`SHIFT + CTRL + ALT  
+- `HKCOMB_SCA` SHIFT + CTRL + ALT  
   
  `wModifiers`  
  指定使用者輸入無效的組合時所要使用的按鍵組合旗標的陣列。 如需有關修飾詞旗標的詳細資訊，請參閱[GetHotKey](#gethotkey)。  
@@ -302,7 +297,7 @@ void SetRules(
 ### <a name="remarks"></a>備註  
  當使用者輸入無效的索引鍵組合中指定的旗標所定義`wInvalidComb`，系統會使用 OR 運算子結合使用者輸入中指定的旗標的索引鍵`wModifiers`。 產生的按鍵組合是轉換成字串，並接著會顯示在熱鍵控制項。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

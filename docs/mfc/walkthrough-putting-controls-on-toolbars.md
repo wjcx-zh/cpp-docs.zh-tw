@@ -1,30 +1,25 @@
 ---
-title: "逐步解說： 將放在工具列上的控制項 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 將放在工具列上的控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f991f8ebf87535de09dc7c3dce5e0f4ca2ee457b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c134431500ed3e7b2b2229ea5b4b3da7cac6fa48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>逐步解說：將控制項放在工具列上
 本主題說明如何將包含 Windows 控制項的工具列按鈕加入至工具列。 在 MFC 中，必須是工具列按鈕[CMFCToolBarButton 類別](../mfc/reference/cmfctoolbarbutton-class.md)-衍生類別，例如[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)， [CMFCToolBarEditBoxButton 類別](../mfc/reference/cmfctoolbareditboxbutton-class.md)，[CMFCDropDownToolbarButton 類別](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)，或[CMFCToolBarMenuButton 類別](../mfc/reference/cmfctoolbarmenubutton-class.md)。  
@@ -105,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>將尋找控制項加入至自訂對話方塊  
  在自訂處理常式`OnViewCustomize`，呼叫[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)取代`Find`按鈕 (也就是命令 ID 的按鈕`ID_EDIT_FIND)`與`CFindComboButton`物件。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../mfc/hierarchy-chart.md)   
  [類別](../mfc/reference/mfc-classes.md)   
  [CMFCToolBar 類別](../mfc/reference/cmfctoolbar-class.md)   

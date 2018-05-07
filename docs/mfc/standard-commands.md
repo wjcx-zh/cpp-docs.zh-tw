@@ -1,13 +1,10 @@
 ---
-title: "標準命令 |Microsoft 文件"
-ms.custom: 
+title: 標準命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - Help [MFC], menus
 - programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbdb763b2d7da04267a195e5d534da9528f2b74d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abe1b1676c5d1944adf61f6ae4234a7e3478c3b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-commands"></a>標準命令
 架構定義許多標準命令訊息。 這些命令的 ID 通常會採用下列格式：  
@@ -67,6 +62,6 @@ ms.lasthandoff: 12/21/2017
   
  支援的命令的詳細資訊及提供實作的層級，請參閱[技術提示 22](../mfc/tn022-standard-commands-implementation.md)。 標準命令定義於檔案 AFXRES.H 中。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者介面物件和命令識別碼](../mfc/user-interface-objects-and-command-ids.md)
 

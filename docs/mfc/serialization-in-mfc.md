@@ -1,13 +1,10 @@
 ---
-title: "MFC 中的序列化 |Microsoft 文件"
-ms.custom: 
+title: MFC 中的序列化 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - serialization [MFC], MFC
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c648e32865f73bda5f896f26c495184f964c41d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd5cf36722dd1ed6ea96dd839bd0935d78df0b32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 本文說明提供在 Microsoft Foundation Class 程式庫 (MFC) 以允許之間保存物件的序列化機制執行您的程式。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  發行項[序列化： 序列化 vs。資料庫輸入/輸出](../mfc/serialization-serialization-vs-database-input-output.md)描述序列化時適當的輸入/輸出技術，在資料庫應用程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../mfc/mfc-concepts.md)   
  [一般 MFC 主題](../mfc/general-mfc-topics.md)   
  [CArchive 類別](../mfc/reference/carchive-class.md)   

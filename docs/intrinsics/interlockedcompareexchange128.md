@@ -1,12 +1,9 @@
 ---
-title: _InterlockedCompareExchange128 | Microsoft Docs
-ms.custom: 
+title: _InterlockedCompareExchange128 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2850be4b93738c61e22c5ca841e07f1901ec01e2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f491f59289a2e3b951e1bad60f260a801ea68bea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 **Microsoft 特定的**  
@@ -135,7 +130,7 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 **結束 Microsoft 特定的**  
  進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [_InterlockedCompareExchange 內建函式](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

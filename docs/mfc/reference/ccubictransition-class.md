@@ -1,12 +1,9 @@
 ---
-title: "CCubicTransition 類別 |Microsoft 文件"
-ms.custom: 
+title: CCubicTransition 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCubicTransition
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 806a8b92867d120a9ae099b96ecaf6fecfca4ea6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 001a1e66707544f6446a5bc54e70269f94108654
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition 類別
 封裝立方轉換。  
@@ -81,7 +76,7 @@ class CCubicTransition : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="ccubictransition"></a>CCubicTransition::CCubicTransition  
+##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition  
  建構轉換物件並初始化其參數。  
   
 ```  
@@ -101,7 +96,7 @@ CCubicTransition(
  `finalVelocity`  
  在轉換結束變數的速度。  
   
-##  <a name="create"></a>CCubicTransition::Create  
+##  <a name="create"></a>  CCubicTransition::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -117,26 +112,26 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="m_dblfinalvalue"></a>CCubicTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue  
  結尾的轉換動畫變數的值。  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblfinalvelocity"></a>CCubicTransition::m_dblFinalVelocity  
+##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity  
  在轉換結束變數的速度。  
   
 ```  
 DOUBLE m_dblFinalVelocity;  
 ```  
   
-##  <a name="m_duration"></a>CCubicTransition::m_duration  
+##  <a name="m_duration"></a>  CCubicTransition::m_duration  
  轉換的持續時間。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

@@ -1,13 +1,10 @@
 ---
-title: "使用文件 |Microsoft 文件"
-ms.custom: 
+title: 使用文件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - printing [MFC], documents
 - writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691d8d00b9c4671ea4b9c318313851a7fab73f7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-documents"></a>使用文件
 文件和檢視一起運作：  
@@ -66,6 +61,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [DeleteContents 成員函式](../mfc/reference/cdocument-class.md#deletecontents)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文件/檢視架構](../mfc/document-view-architecture.md)
 

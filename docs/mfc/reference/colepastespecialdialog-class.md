@@ -1,12 +1,9 @@
 ---
-title: "COlePasteSpecialDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: COlePasteSpecialDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COlePasteSpecialDialog
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8680842f0aeeebf98eabc0f278089781290ad902
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 類別
 用於 OLE 的 [選擇性貼上] 對話方塊。  
@@ -111,7 +106,7 @@ class COlePasteSpecialDialog : public COleDialog
 ## <a name="requirements"></a>需求  
  **標頭：** afxodlgs.h  
   
-##  <a name="addformat"></a>COlePasteSpecialDialog::AddFormat  
+##  <a name="addformat"></a>  COlePasteSpecialDialog::AddFormat  
  呼叫此函式的格式在 選擇性貼上作業可支援您的應用程式清單中加入新的格式。  
   
 ```  
@@ -165,7 +160,7 @@ void AddFormat(
   
  如需詳細資訊，請參閱[OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)列舉 Windows SDK 中的型別。  
   
-##  <a name="addlinkentry"></a>COlePasteSpecialDialog::AddLinkEntry  
+##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry  
  將新的項目加入至支援的剪貼簿格式的清單。  
   
 ```  
@@ -179,7 +174,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ### <a name="return-value"></a>傳回值  
  [OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)結構，其中包含新的連結項目的資訊。  
   
-##  <a name="addstandardformats"></a>COlePasteSpecialDialog::AddStandardFormats  
+##  <a name="addstandardformats"></a>  COlePasteSpecialDialog::AddStandardFormats  
  呼叫此函式可將下列的剪貼簿格式加入至的應用程式可支援選擇性貼上作業中的格式清單：  
   
 ```  
@@ -204,7 +199,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
  這些格式用來支援內嵌和連結。  
   
-##  <a name="colepastespecialdialog"></a>COlePasteSpecialDialog::COlePasteSpecialDialog  
+##  <a name="colepastespecialdialog"></a>  COlePasteSpecialDialog::COlePasteSpecialDialog  
  建構 `COlePasteSpecialDialog` 物件。  
   
 ```  
@@ -218,13 +213,13 @@ COlePasteSpecialDialog(
  `dwFlags`  
  建立旗標，會包含任何數目的下列旗標使用位元 OR 運算子結合在一起：  
   
-- `PSF_SELECTPASTE`指定呼叫對話方塊時，一開始檢查貼上選項按鈕。 不能搭配`PSF_SELECTPASTELINK`。 這是預設值。  
+- `PSF_SELECTPASTE` 指定呼叫對話方塊時，一開始檢查貼上選項按鈕。 不能搭配`PSF_SELECTPASTELINK`。 這是預設值。  
   
-- `PSF_SELECTPASTELINK`指定在貼上連結 選項按鈕將會檢查一開始呼叫對話方塊時。 不能搭配`PSF_SELECTPASTE`。  
+- `PSF_SELECTPASTELINK` 指定在貼上連結 選項按鈕將會檢查一開始呼叫對話方塊時。 不能搭配`PSF_SELECTPASTE`。  
   
-- `PSF_CHECKDISPLAYASICON`指定呼叫對話方塊時，一開始檢查以圖示顯示核取方塊。  
+- `PSF_CHECKDISPLAYASICON` 指定呼叫對話方塊時，一開始檢查以圖示顯示核取方塊。  
   
-- `PSF_SHOWHELP`指定呼叫對話方塊時，會顯示 [說明] 按鈕。  
+- `PSF_SHOWHELP` 指定呼叫對話方塊時，會顯示 [說明] 按鈕。  
   
  `pDataObject`  
  指向[COleDataObject](../../mfc/reference/coledataobject-class.md)貼上。 如果此值為**NULL**，它會取得`COleDataObject`從剪貼簿。  
@@ -237,7 +232,7 @@ COlePasteSpecialDialog(
   
  如需詳細資訊，請參閱[OLEUIPASTEFLAG](http://msdn.microsoft.com/library/windows/desktop/ms682172)列舉 Windows SDK 中的型別。  
   
-##  <a name="createitem"></a>COlePasteSpecialDialog::CreateItem  
+##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem  
  建立 [選擇性貼上] 對話方塊中選擇新項目。  
   
 ```  
@@ -254,7 +249,7 @@ BOOL CreateItem(COleClientItem* pNewItem);
 ### <a name="remarks"></a>備註  
  只會呼叫此函式之後[DoModal](#domodal)傳回**IDOK**。  
   
-##  <a name="domodal"></a>COlePasteSpecialDialog::DoModal  
+##  <a name="domodal"></a>  COlePasteSpecialDialog::DoModal  
  顯示 OLE 選擇性貼上 對話方塊。  
   
 ```  
@@ -275,7 +270,7 @@ virtual INT_PTR DoModal();
   
  如果`DoModal`傳回**IDOK**，您可以呼叫其他成員函式來擷取在對話方塊中的 設定 或 使用者資訊輸入。  
   
-##  <a name="getdrawaspect"></a>COlePasteSpecialDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COlePasteSpecialDialog::GetDrawAspect  
  決定使用者選擇選取的項目顯示為圖示。  
   
 ```  
@@ -285,16 +280,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>傳回值  
  需要來呈現物件的方法。  
   
-- `DVASPECT_CONTENT`傳回已關閉對話方塊時，如果已不檢查以圖示顯示核取方塊。  
+- `DVASPECT_CONTENT` 傳回已關閉對話方塊時，如果已不檢查以圖示顯示核取方塊。  
   
-- `DVASPECT_ICON`傳回已關閉對話方塊時，如果選取以圖示顯示核取方塊。  
+- `DVASPECT_ICON` 傳回已關閉對話方塊時，如果選取以圖示顯示核取方塊。  
   
 ### <a name="remarks"></a>備註  
  此函式之後，只能呼叫[DoModal](#domodal)傳回**IDOK**。  
   
  如需有關繪圖外觀的詳細資訊，請參閱[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK 中的結構。  
   
-##  <a name="geticonicmetafile"></a>COlePasteSpecialDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COlePasteSpecialDialog::GetIconicMetafile  
  取得與使用者所選取的項目相關聯的中繼檔。  
   
 ```  
@@ -304,7 +299,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>傳回值  
  如果以圖示顯示核取方塊已選取時已選擇關閉對話方塊，其中包含所選項目的圖示的外觀的中繼檔的控制代碼**確定**，否則為**NULL**。  
   
-##  <a name="getpasteindex"></a>COlePasteSpecialDialog::GetPasteIndex  
+##  <a name="getpasteindex"></a>  COlePasteSpecialDialog::GetPasteIndex  
  取得索引值相關聯的項目選取的使用者。  
   
 ```  
@@ -317,7 +312,7 @@ int GetPasteIndex() const;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[OLEUIPASTEENTRY](http://msdn.microsoft.com/library/windows/desktop/ms690165) Windows SDK 中的結構。  
   
-##  <a name="getselectiontype"></a>COlePasteSpecialDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COlePasteSpecialDialog::GetSelectionType  
  判斷使用者所做的選取項目的類型。  
   
 ```  
@@ -349,7 +344,7 @@ enum Selection {
   
 - **COlePasteSpecialDialog::pasteStatic**所選的格式的中繼檔。  
   
-##  <a name="m_ps"></a>COlePasteSpecialDialog::m_ps  
+##  <a name="m_ps"></a>  COlePasteSpecialDialog::m_ps  
  型別的結構**OLEUIPASTESPECIAL**用來控制 [選擇性貼上] 對話方塊中的行為。  
   
 ```  
@@ -361,7 +356,7 @@ OLEUIPASTESPECIAL m_ps;
   
  如需詳細資訊，請參閱[OLEUIPASTESPECIAL](http://msdn.microsoft.com/library/windows/desktop/ms692434) Windows SDK 中的結構。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

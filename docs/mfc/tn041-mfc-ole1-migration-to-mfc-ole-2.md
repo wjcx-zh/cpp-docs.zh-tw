@@ -1,13 +1,10 @@
 ---
-title: "TN041: MFC OLE1 移轉到 MFC OLE 2 |Microsoft 文件"
-ms.custom: 
+title: 'TN041: MFC OLE1 移轉到 MFC OLE 2 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041：MFC/OLE1 移轉到 MFC/OLE 2
 > [!NOTE]
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>新增 「 視覺化編輯"  
  OLE 的最有趣的功能之一是就地啟用 （或 「 視覺化編輯"）。 這項功能可讓伺服器應用程式，以便透過容器的使用者介面的部分使用者提供更順暢的編輯介面。 若要實作以 OCLIENT 就地啟用，某些特殊的資源需要新增，以及某些其他程式碼。 這些資源和程式碼通常提供 appwizard — 事實上，大部分的程式碼取自直接與 「 容器 」 支援的全新 AppWizard 應用程式。  
   
- 首先，就必須加入功能表資源，也就是就地啟用作用中的項目時使用。 您可以建立 Visual c + + 中的這項額外的功能表資源複製 IDR_OCLITYPE 資源，並移除檔案和視窗的快顯視窗以外的所有節點。 指出群組的分隔的檔案和視窗快顯之間會插入兩個分隔線 (看起來應該像： 檔案 &#124; &#124;視窗）。 如需這些分隔符號所代表的意義和伺服器和容器的功能表要如何合併的詳細資訊請參閱 「 功能表和資源:: 功能表合併 」，在*OLE 2 類別*。  
+ 首先，就必須加入功能表資源，也就是就地啟用作用中的項目時使用。 您可以建立 Visual c + + 中的這項額外的功能表資源複製 IDR_OCLITYPE 資源，並移除檔案和視窗的快顯視窗以外的所有節點。 指出群組的分隔的檔案和視窗快顯之間會插入兩個分隔線 (看起來應該像： 檔案&#124;&#124;視窗)。 如需這些分隔符號所代表的意義和伺服器和容器的功能表要如何合併的詳細資訊請參閱 「 功能表和資源:: 功能表合併 」，在*OLE 2 類別*。  
   
  建立這些功能表之後，您需要讓架構知道它們。 這是藉由呼叫`CDocTemplate::SetContainerInfo`才能將它加入文件範本清單： updateregistryall 的文件範本。 新的程式碼，以註冊文件範本看起來像這樣：  
   
@@ -672,7 +667,7 @@ CSize CServerItem::CalcNodeSize()
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters  
 ```  
   
- `COleServerItem::CopyToClipboard`不再支援 'bIncludeNative' 旗標。 永遠複製原生資料 （資料寫出的伺服器項目的序列化函式），讓您移除第一個參數。 此外，`CopyToClipboard`而不是傳回 FALSE 就會發生錯誤時將會擲回例外狀況。 變更程式碼的 CServerView::OnEditCopy，如下所示：  
+ `COleServerItem::CopyToClipboard` 不再支援 'bIncludeNative' 旗標。 永遠複製原生資料 （資料寫出的伺服器項目的序列化函式），讓您移除第一個參數。 此外，`CopyToClipboard`而不是傳回 FALSE 就會發生錯誤時將會擲回例外狀況。 變更程式碼的 CServerView::OnEditCopy，如下所示：  
   
 ```  
 void CServerView::OnEditCopy()  
@@ -710,7 +705,7 @@ void CServerView::OnEditCopy()
   
 -   您必須向架構指出有關這些特殊的資源和類別。  
   
- 功能表資源很容易建立。 執行 Visual c + +，複製功能表資源 IDR_HIERSVRTYPE 呼叫 IDR_HIERSVRTYPE_SRVR_IP 功能表資源。 修改  功能表，讓只有 編輯後說明功能表快顯會保留。 編輯 與 說明功能表之間的功能表中加入兩個分隔符號 (看起來應該像： 編輯 &#124; &#124;說明）。 如需有關這些分隔符號所代表的意義和伺服器和容器的功能表要如何合併的詳細資訊，請參閱 「 功能表和資源:: 功能表合併 」 *OLE 2 類別*。  
+ 功能表資源很容易建立。 執行 Visual c + +，複製功能表資源 IDR_HIERSVRTYPE 呼叫 IDR_HIERSVRTYPE_SRVR_IP 功能表資源。 修改  功能表，讓只有 編輯後說明功能表快顯會保留。 編輯 與 說明功能表之間的功能表中加入兩個分隔符號 (看起來應該像： 編輯&#124;&#124;協助)。 如需有關這些分隔符號所代表的意義和伺服器和容器的功能表要如何合併的詳細資訊，請參閱 「 功能表和資源:: 功能表合併 」 *OLE 2 類別*。  
   
  藉由使用 「 伺服器 」 選項，檢查複製從全新的 AppWizard 產生應用程式的一個可以輕鬆地建立子集工具列的點陣圖。 此點陣圖然後匯入到 Visual c + +。 請務必提供點陣圖 IDR_HIERSVRTYPE_SRVR_IP 識別碼。  
   
@@ -750,9 +745,9 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   已變更為選取範圍容器視窗捲動。  
   
- MFC 3.0 HIERSVR 範例也會使用其伺服器項目稍有不同的設計。 這有助於節省記憶體，並使您的連結更有彈性。 HIERSVR 2.0 版與每個節點在樹狀目錄中*是 a* `COleServerItem`。 `COleServerItem`會更多的負擔，而不是絕對必要，每個這些節點，但`COleServerItem`需要為每個作用中的連結。 但大部分的情況下，有極少數的作用中連結在任何指定時間。 若要進行更有效率，在這個版本的 MFC HIERSVR 分隔節點從`COleServerItem`。 它有兩個 CServerNode 和**CServerItem**類別。 **CServerItem** (衍生自`COleServerItem`)，才會建立在必要時。 一旦容器 （或） 容器停止使用該特定連結至該特定節點，會刪除相關聯 CServerNode CServerItem 物件。 這項設計會更有效率且更有彈性。 當處理多個選取項目連結的成為它的彈性。 HIERSVR 下列兩個版本都不支援多重選取，但它會更輕鬆地新增 （並以支援這類的選取項目連結） 與 HIERSVR，MFC 3.0 版因為`COleServerItem`分開原生資料。  
+ MFC 3.0 HIERSVR 範例也會使用其伺服器項目稍有不同的設計。 這有助於節省記憶體，並使您的連結更有彈性。 HIERSVR 2.0 版與每個節點在樹狀目錄中*是 a* `COleServerItem`。 `COleServerItem` 會更多的負擔，而不是絕對必要，每個這些節點，但`COleServerItem`需要為每個作用中的連結。 但大部分的情況下，有極少數的作用中連結在任何指定時間。 若要進行更有效率，在這個版本的 MFC HIERSVR 分隔節點從`COleServerItem`。 它有兩個 CServerNode 和**CServerItem**類別。 **CServerItem** (衍生自`COleServerItem`)，才會建立在必要時。 一旦容器 （或） 容器停止使用該特定連結至該特定節點，會刪除相關聯 CServerNode CServerItem 物件。 這項設計會更有效率且更有彈性。 當處理多個選取項目連結的成為它的彈性。 HIERSVR 下列兩個版本都不支援多重選取，但它會更輕鬆地新增 （並以支援這類的選取項目連結） 與 HIERSVR，MFC 3.0 版因為`COleServerItem`分開原生資料。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

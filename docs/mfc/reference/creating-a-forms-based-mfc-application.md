@@ -1,13 +1,10 @@
 ---
-title: "建立表單架構的 MFC 應用程式 |Microsoft 文件"
-ms.custom: 
+title: 建立表單架構的 MFC 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcforms.project
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5ee588d7fe90e5bfc39aa8e4ab7a7499b62ad98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>建立表單架構的 MFC 應用程式
 表單是讓使用者存取，並盡可能地變更資料的控制項的對話方塊。 若要開發應用程式中使用者選取 從選取的表單。 一般而言，表單架構應用程式可以讓使用者存取表單按一下**新增**從**檔案**功能表。 對話方塊架構應用程式，這並不提供使用者存取**新增**選項**檔案**功能表上，也會被視為表單架構應用程式。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [應用程式設計選擇](../../mfc/application-design-choices.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)   
  [表單檢視](../../mfc/form-views-mfc.md)   
  [建立檔案總管樣式的 MFC 應用程式](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   

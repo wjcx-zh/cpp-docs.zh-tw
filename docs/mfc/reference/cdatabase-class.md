@@ -1,12 +1,9 @@
 ---
-title: "CDatabase 類別 |Microsoft 文件"
-ms.custom: 
+title: CDatabase 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDatabase
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6aeaa64b0b665449ee9216070cdebbc2632948b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb71b31fa3133b4e1b93564ef0b530cb20bb3dfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdatabase-class"></a>CDatabase 類別
 表示資料來源的連接，您可以透過這個連接來操作資料來源。  
@@ -137,7 +132,7 @@ class CDatabase : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxdb.h  
   
-##  <a name="begintrans"></a>CDatabase::BeginTrans  
+##  <a name="begintrans"></a>  CDatabase::BeginTrans  
  呼叫此成員函式，進而開始交易與連接的資料來源。  
   
 ```  
@@ -169,7 +164,7 @@ BOOL BeginTrans();
 ### <a name="example"></a>範例  
   請參閱文章[交易： 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
-##  <a name="bindparameters"></a>CDatabase::BindParameters  
+##  <a name="bindparameters"></a>  CDatabase::BindParameters  
  覆寫`BindParameters`當您需要繫結參數，然後再呼叫[cdatabase:: Executesql](#executesql)。  
   
 ```  
@@ -185,7 +180,7 @@ virtual void BindParameters(HSTMT hstmt);
   
  在您的覆寫呼叫**SQLBindParameters**和相關的繫結參數的 ODBC 函數。 MFC 呼叫之前呼叫覆寫`ExecuteSQL`。 您不需要呼叫**SQLPrepare**;`ExecuteSQL`呼叫**SQLExecDirect**並終結**hstmt**，其中只有使用一次。  
   
-##  <a name="cancel"></a>CDatabase::Cancel  
+##  <a name="cancel"></a>  CDatabase::Cancel  
  呼叫此成員函式，來要求資料來源取消非同步作業進行中的或從第二個執行緒的程序。  
   
 ```  
@@ -195,7 +190,7 @@ void Cancel();
 ### <a name="remarks"></a>備註  
  請注意，MFC ODBC 類別不會再使用非同步處理。若要執行的非同步作業，您必須直接呼叫 ODBC API 函式[SQLSetConnectOption](https://msdn.microsoft.com/library/ms713564.aspx)。 如需詳細資訊，請參閱[非同步執行](https://msdn.microsoft.com/library/ms713563.aspx)Windows SDK 中。  
   
-##  <a name="cantransact"></a>CDatabase::CanTransact  
+##  <a name="cantransact"></a>  CDatabase::CanTransact  
  呼叫此成員函式，以判斷資料庫是否允許交易。  
   
 ```  
@@ -208,7 +203,7 @@ BOOL CanTransact() const;
 ### <a name="remarks"></a>備註  
  交易的相關資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
   
-##  <a name="canupdate"></a>CDatabase::CanUpdate  
+##  <a name="canupdate"></a>  CDatabase::CanUpdate  
  呼叫此成員函式，以判斷是否`CDatabase`物件可用來更新。  
   
 ```  
@@ -221,7 +216,7 @@ BOOL CanUpdate() const;
 ### <a name="remarks"></a>備註  
  並非所有的驅動程式支援的更新。  
   
-##  <a name="cdatabase"></a>CDatabase::CDatabase  
+##  <a name="cdatabase"></a>  CDatabase::CDatabase  
  建構 `CDatabase` 物件。  
   
 ```  
@@ -240,7 +235,7 @@ CDatabase();
   
  [!code-cpp[NVC_MFCDatabase#10](../../mfc/codesnippet/cpp/cdatabase-class_2.cpp)]  
   
-##  <a name="close"></a>CDatabase::Close  
+##  <a name="close"></a>  CDatabase::Close  
  如果您想要從資料來源中斷連線，請呼叫此成員函式。  
   
 ```  
@@ -255,7 +250,7 @@ virtual void Close();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase#12](../../mfc/codesnippet/cpp/cdatabase-class_3.cpp)]  
   
-##  <a name="committrans"></a>CDatabase::CommitTrans  
+##  <a name="committrans"></a>  CDatabase::CommitTrans  
  呼叫完成的交易之後此成員函式。  
   
 ```  
@@ -275,7 +270,7 @@ BOOL CommitTrans();
 ### <a name="example"></a>範例  
   請參閱文章[交易： 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
-##  <a name="executesql"></a>Cdatabase:: Executesql  
+##  <a name="executesql"></a>  Cdatabase:: Executesql  
  當您需要直接執行 SQL 命令時，請呼叫此成員函式。  
   
 ```  
@@ -287,14 +282,14 @@ void ExecuteSQL(LPCTSTR lpszSQL);
  以 null 終止的字串包含有效的 SQL 命令執行的指標。 您可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)。  
   
 ### <a name="remarks"></a>備註  
- 以 null 終止字串建立的命令。 `ExecuteSQL`不會傳回資料記錄。 如果您想要處理的記錄，請改為使用資料錄集物件。  
+ 以 null 終止字串建立的命令。 `ExecuteSQL` 不會傳回資料記錄。 如果您想要處理的記錄，請改為使用資料錄集物件。  
   
  大部分的資料來源的命令會發出透過資料錄集物件，以便選取資料、 插入新的記錄、 刪除資料錄，以及編輯記錄支援的命令。 不過，並非所有 ODBC 直接支援功能的資料庫類別中，因此有時候您可能需要進行直接 SQL 呼叫與`ExecuteSQL`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase#13](../../mfc/codesnippet/cpp/cdatabase-class_4.cpp)]  
   
-##  <a name="getbookmarkpersistence"></a>CDatabase::GetBookmarkPersistence  
+##  <a name="getbookmarkpersistence"></a>  CDatabase::GetBookmarkPersistence  
  呼叫此成員函式，以判定在特定作業之後，記錄集物件上書籤的永續性。  
   
 ```  
@@ -321,7 +316,7 @@ DWORD GetBookmarkPersistence() const;
   
  如需有關這個傳回值的詳細資訊，請參閱 ODBC API 函式**SQLGetInfo** Windows SDK 中。 如需書籤的詳細資訊，請參閱文章[資料錄集： 書籤和絕對位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)。  
   
-##  <a name="getconnect"></a>CDatabase::GetConnect  
+##  <a name="getconnect"></a>  CDatabase::GetConnect  
  呼叫此成員函式擷取的呼叫期間所使用的連接字串`OpenEx`或`Open`連接`CDatabase`到資料來源的物件。  
   
 ```  
@@ -334,7 +329,7 @@ const CString GetConnect() const;
 ### <a name="remarks"></a>備註  
  請參閱[CDatabase::Open](#open)如需如何建立連接字串的說明。  
   
-##  <a name="getcursorcommitbehavior"></a>CDatabase::GetCursorCommitBehavior  
+##  <a name="getcursorcommitbehavior"></a>  CDatabase::GetCursorCommitBehavior  
  呼叫此成員函式，以判斷如何[CommitTrans](#committrans)作業會影響資料指標在開啟資料錄集物件上的。  
   
 ```  
@@ -355,7 +350,7 @@ int GetCursorCommitBehavior() const;
   
  如需有關這個傳回值的詳細資訊，請參閱 ODBC API 函式**SQLGetInfo** Windows SDK 中。 如需有關交易的詳細資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
   
-##  <a name="getcursorrollbackbehavior"></a>CDatabase::GetCursorRollbackBehavior  
+##  <a name="getcursorrollbackbehavior"></a>  CDatabase::GetCursorRollbackBehavior  
  呼叫此成員函式，以判斷如何[復原](#rollback)作業會影響資料指標在開啟資料錄集物件上的。  
   
 ```  
@@ -376,7 +371,7 @@ int GetCursorRollbackBehavior() const;
   
  如需有關這個傳回值的詳細資訊，請參閱 ODBC API 函式**SQLGetInfo** Windows SDK 中。 如需有關交易的詳細資訊，請參閱文章[異動 (ODBC)](../../data/odbc/transaction-odbc.md)。  
   
-##  <a name="getdatabasename"></a>CDatabase::GetDatabaseName  
+##  <a name="getdatabasename"></a>  CDatabase::GetDatabaseName  
  呼叫此成員函式 （前提是資料來源會定義具名的物件，稱為 「 資料庫 」） 擷取目前連接之資料庫的名稱。  
   
 ```  
@@ -391,7 +386,7 @@ CString GetDatabaseName() const;
   
  您，例如，可以在標題中顯示此名稱。 如果發生錯誤時擷取的名稱，從 ODBC，`GetDatabaseName`傳回空**Cstring**。  
   
-##  <a name="isopen"></a>CDatabase::IsOpen  
+##  <a name="isopen"></a>  CDatabase::IsOpen  
  呼叫此成員函式，以判斷是否`CDatabase`物件目前連線至資料來源。  
   
 ```  
@@ -401,7 +396,7 @@ BOOL IsOpen() const;
 ### <a name="return-value"></a>傳回值  
  為非零，如果`CDatabase`目前連接物件; 否則為 0。  
   
-##  <a name="m_hdbc"></a>CDatabase::m_hdbc  
+##  <a name="m_hdbc"></a>  CDatabase::m_hdbc  
  包含公用的 ODBC 資料來源連接控制代碼，「 連接控制代碼 」。  
   
 ### <a name="remarks"></a>備註  
@@ -412,7 +407,7 @@ BOOL IsOpen() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase#15](../../mfc/codesnippet/cpp/cdatabase-class_5.cpp)]  
   
-##  <a name="onsetoptions"></a>CDatabase::OnSetOptions  
+##  <a name="onsetoptions"></a>  CDatabase::OnSetOptions  
  直接執行的 SQL 陳述式時，架構會呼叫此成員函式`ExecuteSQL`成員函式。  
   
 ```  
@@ -424,9 +419,9 @@ virtual void OnSetOptions(HSTMT hstmt);
  ODBC 陳述式控制代碼，設定選項。  
   
 ### <a name="remarks"></a>備註  
- `CRecordset::OnSetOptions`也會呼叫此成員函式。  
+ `CRecordset::OnSetOptions` 也會呼叫此成員函式。  
   
- `OnSetOptions`設定登入逾時值。 如果已有先前呼叫`SetQueryTimeout`成員函式，`OnSetOptions`會反映目前的值; 否則它會將預設值。  
+ `OnSetOptions` 設定登入逾時值。 如果已有先前呼叫`SetQueryTimeout`成員函式，`OnSetOptions`會反映目前的值; 否則它會將預設值。  
   
 > [!NOTE]
 >  在 MFC 4.2 之前`OnSetOptions`也設定處理模式為任一 snychronous 或非同步。 從 MFC 4.2 開始，所有作業都都會同步。 若要執行非同步作業，您必須進行直接呼叫 ODBC API 函式**SQLSetPos**。  
@@ -435,7 +430,7 @@ virtual void OnSetOptions(HSTMT hstmt);
   
  覆寫`OnSetOptions`如果您想要設定其他選項。 您的覆寫應該呼叫基底類別`OnSetOptions`之前或之後呼叫 ODBC API 函式**SQLSetStmtOption**。 請依照下列架構的預設實作中所述的方法`OnSetOptions`。  
   
-##  <a name="open"></a>CDatabase::Open  
+##  <a name="open"></a>  CDatabase::Open  
  呼叫此成員函式，來初始化新建構`CDatabase`物件。  
   
 ```  
@@ -483,7 +478,7 @@ virtual BOOL Open(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase#14](../../mfc/codesnippet/cpp/cdatabase-class_6.cpp)]  
   
-##  <a name="openex"></a>CDatabase::OpenEx  
+##  <a name="openex"></a>  CDatabase::OpenEx  
  呼叫此成員函式，來初始化新建構`CDatabase`物件。  
   
 ```  
@@ -526,7 +521,7 @@ virtual BOOL OpenEx(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDatabase#11](../../mfc/codesnippet/cpp/cdatabase-class_7.cpp)]  
   
-##  <a name="rollback"></a>CDatabase::Rollback  
+##  <a name="rollback"></a>  CDatabase::Rollback  
  呼叫此成員函式可反轉交易期間所做的變更。  
   
 ```  
@@ -546,7 +541,7 @@ BOOL Rollback();
 ### <a name="example"></a>範例  
   請參閱文章[交易： 資料錄集 (ODBC) 中執行異動](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)。  
   
-##  <a name="setlogintimeout"></a>CDatabase::SetLoginTimeout  
+##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout  
  呼叫此成員函式 — 之前先呼叫`OpenEx`或**開啟**— 若要覆寫預設允許的秒數之前嘗試的資料來源連接逾時。  
   
 ```  
@@ -562,7 +557,7 @@ void SetLoginTimeout(DWORD dwSeconds);
   
  登入逾時的預設值是 15 秒。 並非所有的資料來源都支援指定的登入逾時值的能力。 如果資料來源不支援逾時，您會收到追蹤輸出，但未發生例外狀況。 值為 0 表示 「 無限 」。  
   
-##  <a name="setquerytimeout"></a>CDatabase::SetQueryTimeout  
+##  <a name="setquerytimeout"></a>  CDatabase::SetQueryTimeout  
  呼叫此成員函式，來覆寫預設允許後續作業連接的資料來源逾時之前的秒數。  
   
 ```  
@@ -578,7 +573,7 @@ void SetQueryTimeout(DWORD dwSeconds);
   
  查詢逾時的預設值是 15 秒。 並非所有的資料來源都支援可設定查詢逾時值的功能。 如果您設定的查詢逾時值為 0 時，不會逾時，就會發生。與資料來源之間的通訊可能會停止回應。 在開發期間，此行為可能很有用的。 如果資料來源不支援逾時，您會收到追蹤輸出，但未發生例外狀況。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CRecordset 類別](../../mfc/reference/crecordset-class.md)

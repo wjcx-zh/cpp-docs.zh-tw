@@ -1,13 +1,10 @@
 ---
-title: "使用 CHotKeyCtrl |Microsoft 文件"
-ms.custom: 
+title: 使用 CHotKeyCtrl |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CHotKeyCtrl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: 9b207117-d848-4224-8888-c3d197bb0c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d577369dea4f5fe2fffa9801bbd8ae8501f71a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3678d95ff0748c1854e509d898dfa89778c9a5f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-chotkeyctrl"></a>使用 CHotKeyCtrl
 熱鍵控制項，類別所代表[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)，是一個視窗，顯示使用者輸入此功能，例如 CTRL + SHIFT + Q 的按鍵組合的文字表示。 它也會以虛擬按鍵碼和表示移位狀態的一組旗標的形式，來保持此按鍵的內部表示。 熱鍵控制項不會實際設定熱鍵，是否設定取決於您的程式  (如需標準虛擬按鍵碼的清單，請參閱 Winuser.h.)。  
@@ -44,6 +39,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [執行緒特定的熱鍵](../mfc/thread-specific-hot-keys.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項](../mfc/controls-mfc.md)
 

@@ -1,12 +1,9 @@
 ---
-title: "CMFCImageEditorPaletteBar 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCImageEditorPaletteBar 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCImageEditorPaletteBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], GetRowHeight
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 539c24acb9b58c96324bc89cdeca6c0d03c6dfdf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e377a465dd55d8940e74617130216220d03f1218
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar 類別
 提供影像編輯器對話方塊調色盤列功能。  
@@ -75,7 +70,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 ## <a name="requirements"></a>需求  
  **標頭：** afximageeditordialog.h  
   
-##  <a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
+##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight  
  傳回工具列按鈕的高度。  
   
 ```  
@@ -85,7 +80,7 @@ virtual int GetRowHeight() const;
 ### <a name="return-value"></a>傳回值  
  在工具列上的每個按鈕的高度。  
   
-##  <a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
  決定工具列是否顯示已延伸框線的按鈕。  
   
 ```  
@@ -95,7 +90,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 ### <a name="return-value"></a>傳回值  
  此方法會傳回 `FALSE`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCImageEditorDialog 類別](../../mfc/reference/cmfcimageeditordialog-class.md)

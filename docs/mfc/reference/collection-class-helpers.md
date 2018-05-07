@@ -1,13 +1,10 @@
 ---
-title: "集合類別 Helper |Microsoft 文件"
-ms.custom: 
+title: 集合類別 Helper |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-class-helpers"></a>集合類別 Helper
 集合類別`CMap`， `CList`，和`CArray`樣板化的全域 helper 函式用於等目的的比較、 複製和序列化項目。 為您的基礎類別實作的一部分`CMap`， `CList`，和`CArray`，您必須使用符合您地圖、 清單或陣列中儲存的資料類型的版本覆寫視需要這些函式。 如需覆寫 helper 函式時，例如`SerializeElements`，請參閱文章[集合： 如何製作類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意， **ConstructElements**和**DestructElements**已被取代。  
@@ -46,8 +41,8 @@ ms.lasthandoff: 12/21/2017
 |[HashKey](#hashkey)|計算的雜湊索引鍵。|  
 |[SerializeElements](#serializeelements)|儲存或擷取項目，或從封存。|  
   
-##  <a name="compareelements"></a>CompareElements  
- 直接呼叫 [CList::Find] (clist class.md #not_found.md #clist__find 和間接[cmap__lookup](cmap-class.md#lookup)和[cmap__operator &#91; &#93;](cmap-class.md#operator_at)。  
+##  <a name="compareelements"></a>  CompareElements  
+ 直接呼叫 [CList::Find] (clist class.md #not_found.md #clist__find 和間接[cmap__lookup](cmap-class.md#lookup)和[cmap__operator &#91; &#93; ](cmap-class.md#operator_at)。  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -83,7 +78,7 @@ CompareElements(
 ### <a name="requirements"></a>需求  
    **Header:** afxtempl.h   
   
-##  <a name="copyelements"></a>CopyElements  
+##  <a name="copyelements"></a>  CopyElements  
  呼叫此函式是直接以[carray:: Append](carray-class.md#append)和[carray:: Copy](carray-class.md#copy)。  
   
 ```   
@@ -108,14 +103,14 @@ void AFXAPI CopyElements(
  要複製項目的數目。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會使用簡單指派運算子 (  **=**  ) 來執行複製作業。 如果要複製的類型沒有多載的 operator=，則預設實作會執行位元複製。  
+ 預設實作會使用簡單指派運算子 ( **=** ) 來執行複製作業。 如果要複製的類型沒有多載的 operator=，則預設實作會執行位元複製。  
   
  如需實作此函式和其他 helper 函式的資訊，請參閱文章[集合： 如何製作類型安全集合](../how-to-make-a-type-safe-collection.md)。  
   
 ### <a name="requirements"></a>需求  
   **標頭**afxtempl.h  
   
-##  <a name="dumpelements"></a>DumpElements  
+##  <a name="dumpelements"></a>  DumpElements  
  覆寫時，將集合的項目提供文字格式的資料流導向診斷的輸出。  
   
 ```   
@@ -148,7 +143,7 @@ void  AFXAPI DumpElements(
 ### <a name="requirements"></a>需求  
   **標頭**afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey  
+##  <a name="hashkey"></a>  HashKey  
  計算指定的索引鍵的雜湊值。  
   
 ```  
@@ -167,7 +162,7 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
  索引鍵的雜湊值。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此函式是直接以[CMap::RemoveKey](cmap-class.md#removekey)和間接[CMap::Lookup](cmap-class.md#lookup)和[CMap::Operator &#91; &#93;](cmap-class.md#operator_at)。
+ 呼叫此函式是直接以[CMap::RemoveKey](cmap-class.md#removekey)和間接[CMap::Lookup](cmap-class.md#lookup)和[CMap::Operator &#91; &#93; ](cmap-class.md#operator_at)。
   
  預設實作會建立雜湊值的移位`key`的四個位置。 覆寫這個函式，使它傳回雜湊值適用於您的應用程式。  
   
@@ -184,7 +179,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 ### <a name="requirements"></a>需求  
   **標頭**afxtempl.h 
   
-##  <a name="serializeelements"></a>SerializeElements  
+##  <a name="serializeelements"></a>  SerializeElements  
  [CArray](carray-class.md)， [CList](clist-class.md)，和[CMap](cmap-class.md)呼叫此函式可序列化的項目。  
   
 ```   
@@ -216,7 +211,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ### <a name="requirements"></a>需求  
   **標頭**afxtempl.h 
     
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [CMap 類別](cmap-class.md)   
  [CList 類別](clist-class.md)   

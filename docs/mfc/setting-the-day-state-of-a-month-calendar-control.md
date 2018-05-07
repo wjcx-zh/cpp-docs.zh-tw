@@ -1,13 +1,10 @@
 ---
-title: "設定月份日期狀態月曆控制項 |Microsoft 文件"
-ms.custom: 
+title: 設定月份日期狀態月曆控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MCN_GETDAYSTATE
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c634815065c68cceb3c528222c0fd60e19b6827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 611397a329e177689a7bd8386963ea1c29ce9e5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>設定月曆控制項的日期狀態
 月曆控制項的其中一個屬性是針對該月份的每一天儲存資訊的能力，稱為控制項的日期狀態。 這項資訊可用來強調目前顯示的月份中某些特別的日期。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
      這個範例會將 `pNMHDR` 指標轉換為適當的類型，然後判斷所要的是多少個月份的資訊 (`pDayState->cDayState`)。 對於每個月份，目前的位元欄位 (`pDayState->prgDayState[i]`) 會初始化為零，同時會設定需要的日期 (在這個情況中為每個月的第 15 天)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

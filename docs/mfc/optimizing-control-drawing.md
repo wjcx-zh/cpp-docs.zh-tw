@@ -1,29 +1,24 @@
 ---
-title: "最佳化控制項繪圖 |Microsoft 文件"
-ms.custom: 
+title: 最佳化控制項繪圖 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e79a7b8e539198844c106a9c41408f04d69186
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8103e1e342756f9b715c1a0959ed256403e130bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-control-drawing"></a>最佳化控制項繪圖
 當指示控制項將其本身拉入到容器提供的裝置內容中時，它通常會選取 GDI 物件 (例如畫筆、筆刷和字型) 到裝置內容中，執行其繪製作業，然後還原先前的 GDI 物件。 如果容器具有要引入的多個控制項相同的裝置內容，因此它需要的每個控制項選取 GDI 物件則可以儲存如果控制項不會個別還原先前選取的物件。 在拉入所有的控制項之後，容器就可以自動還原原始物件。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/cpp/optimizing-control-drawing_6.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項： 最佳化](../mfc/mfc-activex-controls-optimization.md)   
  [COleControl 類別](../mfc/reference/colecontrol-class.md)   
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   

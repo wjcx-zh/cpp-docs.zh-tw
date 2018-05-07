@@ -1,12 +1,9 @@
 ---
-title: "CMFCVisualManagerOffice2003 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCVisualManagerOffice2003 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerOffice2003
@@ -101,20 +98,18 @@ dev_langs:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2e3e4bc37bc62d061571d1b52b0f92ac59a949c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55f0c28a5698dfd1d974a48f891615d8c7e77cf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 類別
-`CMFCVisualManagerOffice2003`為應用程式提供 Microsoft Office 2003 的外觀。  
+`CMFCVisualManagerOffice2003` 為應用程式提供 Microsoft Office 2003 的外觀。  
   
 ## <a name="syntax"></a>語法  
   
@@ -236,7 +231,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 ## <a name="requirements"></a>需求  
  **標頭：** afxvisualmanageroffice2003.h  
   
-##  <a name="drawcomboborderwinxp"></a>CMFCVisualManagerOffice2003::DrawComboBorderWinXP  
+##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboBorderWinXP  
  繪製使用目前的 Windows XP 主題的下拉式方塊框線。  
   
 ```  
@@ -269,7 +264,7 @@ virtual BOOL DrawComboBorderWinXP(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP  
+##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP  
  繪製使用目前的 Windows XP 主題的下拉式方塊下拉式按鈕。  
   
 ```  
@@ -302,7 +297,7 @@ virtual BOOL DrawComboDropButtonWinXP(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="drawcustomizebutton"></a>CMFCVisualManagerOffice2003::DrawCustomizeButton  
+##  <a name="drawcustomizebutton"></a>  CMFCVisualManagerOffice2003::DrawCustomizeButton  
  繪製自訂按鈕。  
   
 ```  
@@ -323,20 +318,20 @@ virtual void DrawCustomizeButton(
  週框的按鈕  
   
  [輸入] `bIsHorz`  
- `TRUE`如果按鈕是水平的或`FALSE`如果它是垂直。  
+ `TRUE` 如果按鈕是水平的或`FALSE`如果它是垂直。  
   
  [輸入] `state`  
  要繪製 （一般、 按下的按鍵或反白顯示） 是它做為按鈕的狀態。  
   
  [輸入] `bIsCustomize`  
- `TRUE`如果自訂箭號向下或箭號左邊影像應該繪製按鈕在矩形中，或`FALSE`如果不是。  
+ `TRUE` 如果自訂箭號向下或箭號左邊影像應該繪製按鈕在矩形中，或`FALSE`如果不是。  
   
  [輸入] `bIsMoreButtons`  
- `TRUE`如果水平或垂直自訂多按鈕 按鈕在矩形中，應繪製影像或`FALSE`如果不是。  
+ `TRUE` 如果水平或垂直自訂多按鈕 按鈕在矩形中，應繪製影像或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManagerOffice2003::DrawPushButtonWinXP  
+##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawPushButtonWinXP  
  繪製使用目前的 Windows XP 主題的按鈕。  
   
 ```  
@@ -361,11 +356,11 @@ virtual BOOL DrawPushButtonWinXP(
  忽略。 狀態取自`pButton`。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用佈景主題 API。否則`FALSE`。  
+ `TRUE` 如果已啟用佈景主題 API。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getbasethemecolor"></a>CMFCVisualManagerOffice2003::GetBaseThemeColor  
+##  <a name="getbasethemecolor"></a>  CMFCVisualManagerOffice2003::GetBaseThemeColor  
  取得基底佈景主題色彩。  
   
 ```  
@@ -377,7 +372,7 @@ virtual COLORREF GetBaseThemeColor();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="gethighlightmenuitemcolor"></a>CMFCVisualManagerOffice2003::GetHighlightMenuItemColor  
+##  <a name="gethighlightmenuitemcolor"></a>  CMFCVisualManagerOffice2003::GetHighlightMenuItemColor  
  取得醒目提示的功能表項目所使用的色彩。  
   
 ```  
@@ -389,7 +384,7 @@ virtual COLORREF GetHighlightMenuItemColor() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getpropertygridgroupcolor"></a>CMFCVisualManagerOffice2003::GetPropertyGridGroupColor  
+##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupColor  
  架構會呼叫這個方法，取得屬性清單的背景色彩。  
   
 ```  
@@ -406,7 +401,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="remarks"></a>備註  
  覆寫這個函式來自訂您的應用程式中的屬性清單的背景色彩。  
   
-##  <a name="getpropertygridgrouptextcolor"></a>CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor  
+##  <a name="getpropertygridgrouptextcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor  
  架構會呼叫這個方法來擷取屬性清單的文字色彩。  
   
 ```  
@@ -423,7 +418,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="remarks"></a>備註  
  覆寫這個函式來自訂您的應用程式中的屬性清單的文字色彩。  
   
-##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight  
+##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight  
  傳回所有功能表項目的高度。  
   
 ```  
@@ -444,7 +439,7 @@ virtual int GetShowAllMenuItemsHeight(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors  
+##  <a name="getsmartdockingbaseguidecolors"></a>  CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors  
  設定指定的基底群組背景色彩和框線色彩。  
   
 ```  
@@ -462,7 +457,7 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor  
+##  <a name="getsmartdockinghighlighttonecolor"></a>  CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor  
  傳回反白顯示的色調色彩。  
   
 ```  
@@ -474,7 +469,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="gettabframecolors"></a>CMFCVisualManagerOffice2003::GetTabFrameColors  
+##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2003::GetTabFrameColors  
  擷取的色彩來繪製索引標籤視窗時，架構會呼叫此函式。  
   
 ```  
@@ -520,7 +515,7 @@ virtual void GetTabFrameColors(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin  
+##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin  
  取得邊界工具列自訂按鈕。  
   
 ```  
@@ -532,7 +527,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManagerOffice2003::GetToolbarDisabledColor  
+##  <a name="gettoolbardisabledcolor"></a>  CMFCVisualManagerOffice2003::GetToolbarDisabledColor  
  取得已停用的色彩的工具列。  
   
 ```  
@@ -544,7 +539,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="gettooltipinfo"></a>CMFCVisualManagerOffice2003::GetToolTipInfo  
+##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2003::GetToolTipInfo  
  由架構呼叫以取得工具提示資訊。  
   
 ```  
@@ -565,7 +560,7 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="isdefaultwinxpcolorsenabled"></a>CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled  
+##  <a name="isdefaultwinxpcolorsenabled"></a>  CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled  
  表示視覺管理員是否使用原為 Windows XP 的佈景主題色彩。  
   
 ```  
@@ -573,12 +568,12 @@ static BOOL IsDefaultWinXPColorsEnabled();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果視覺管理員會使用原生的顏色。否則， `FALSE`。  
+ `TRUE` 如果視覺管理員會使用原生的顏色。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  如需原生色彩的詳細資訊，請參閱[CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)。  
   
-##  <a name="isdockingtabhasborder"></a>CMFCVisualManagerOffice2003::IsDockingTabHasBorder  
+##  <a name="isdockingtabhasborder"></a>  CMFCVisualManagerOffice2003::IsDockingTabHasBorder  
  傳回目前的視覺管理員是否繪製停駐和索引標籤式窗格周圍的框線。  
   
 ```  
@@ -586,11 +581,11 @@ virtual BOOL IsDockingTabHasBorder();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果視覺化管理員繪製窗格停駐和索引標籤式; 周圍的框線`FALSE`否則。  
+ `TRUE` 如果視覺化管理員繪製窗格停駐和索引標籤式; 周圍的框線`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ishighlightonenotetabs"></a>CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs  
+##  <a name="ishighlightonenotetabs"></a>  CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs  
  指出 OneNote 索引標籤是否應反白顯示。  
   
 ```  
@@ -602,7 +597,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="isoffsetpressedbutton"></a>CMFCVisualManagerOffice2003::IsOffsetPressedButton  
+##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManagerOffice2003::IsOffsetPressedButton  
  繪製工具列按鈕時由架構呼叫。  
   
 ```  
@@ -614,7 +609,7 @@ virtual BOOL IsOffsetPressedButton() const;
 ### <a name="remarks"></a>備註  
  預設實作會傳回 `FALSE`。  
   
-##  <a name="isstatusbarofficexplook"></a>CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook  
+##  <a name="isstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook  
  指出是否以 Office XP 外觀的狀態列。  
   
 ```  
@@ -626,7 +621,7 @@ static BOOL __stdcall IsStatusBarOfficeXPLook();
 ### <a name="remarks"></a>備註  
  傳回`TRUE`如果狀態列，以 Office XP 的外觀，或`FALSE`如果不是。  
   
-##  <a name="istoolbarroundshape"></a>CMFCVisualManagerOffice2003::IsToolbarRoundShape  
+##  <a name="istoolbarroundshape"></a>  CMFCVisualManagerOffice2003::IsToolbarRoundShape  
  指出指定的工具列是否為圓形。  
   
 ```  
@@ -642,7 +637,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="isuseglobaltheme"></a>CMFCVisualManagerOffice2003::IsUseGlobalTheme  
+##  <a name="isuseglobaltheme"></a>  CMFCVisualManagerOffice2003::IsUseGlobalTheme  
  表示您的應用程式是否使用 Windows XP 主題。  
   
 ```  
@@ -650,12 +645,12 @@ static BOOL IsUseGlobalTheme();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果視覺化管理員使用 Windows XP 主題。否則， `FALSE`。  
+ `TRUE` 如果視覺化管理員使用 Windows XP 主題。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  使用方法[CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme)若要變更您的視覺管理員會使用 Windows XP 主題。  
   
-##  <a name="iswindowsthemingsupported"></a>CMFCVisualManagerOffice2003::IsWindowsThemingSupported  
+##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManagerOffice2003::IsWindowsThemingSupported  
  指出是否支援 Windows 佈景主題。  
   
 ```  
@@ -667,7 +662,7 @@ virtual BOOL IsWindowsThemingSupported() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawautohidebuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder  
+##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder  
  當它繪製自動隱藏按鈕的邊框時，架構會呼叫這個方法。  
   
 ```  
@@ -696,7 +691,7 @@ virtual void OnDrawAutoHideButtonBorder(
   
  `rectBorderSize`參數不包含外框的座標。 它包含的框線大小`top`， `bottom`， `left`，和`right`資料成員。 值小於或等於 0 表示沒有自動隱藏按鈕的那一端上的框線。  
   
-##  <a name="ondrawbargripper"></a>CMFCVisualManagerOffice2003::OnDrawBarGripper  
+##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2003::OnDrawBarGripper  
  當它繪製的控制列的移駐夾時由架構呼叫。  
   
 ```  
@@ -723,7 +718,7 @@ virtual void OnDrawBarGripper(
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會顯示標準的移駐夾。 若要自訂的移駐夾的外觀，覆寫這個方法中的自訂類別衍生自[CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)類別。  
   
-##  <a name="ondrawbrowsebutton"></a>CMFCVisualManagerOffice2003::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -746,7 +741,7 @@ virtual BOOL OnDrawBrowseButton(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawButtonBorder  
+##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawButtonBorder  
  當它繪製工具列按鈕的框線時，架構會呼叫這個方法。  
   
 ```  
@@ -775,7 +770,7 @@ virtual void OnDrawButtonBorder(
   
  可能的工具列按鈕的狀態為`ButtonsIsRegular`， `ButtonsIsPressed`，或`ButtonsIsHighlighted`。  
   
-##  <a name="ondrawcaptionbarborder"></a>CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder  
+##  <a name="ondrawcaptionbarborder"></a>  CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder  
  當它繪製的框線時，架構會呼叫這個方法[CMFCCaptionBar 類別](../../mfc/reference/cmfccaptionbar-class.md)物件。  
   
 ```  
@@ -801,12 +796,12 @@ virtual void OnDrawCaptionBarBorder(
  框線的色彩。  
   
  [輸入] `bFlatBorder`  
- `TRUE`如果框線應該具有一般、 2D 的外觀，或`FALSE`如果不是。  
+ `TRUE` 如果框線應該具有一般、 2D 的外觀，或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
  覆寫這個方法來自訂標題列的框線外觀的衍生類別中。  
   
-##  <a name="ondrawcheckboxex"></a>CMFCVisualManagerOffice2003::OnDrawCheckBoxEx  
+##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2003::OnDrawCheckBoxEx  
  繪製核取方塊時由架構呼叫。  
   
 ```  
@@ -830,17 +825,17 @@ virtual void OnDrawCheckBoxEx(
  核取方塊的狀態： 0，如果未選取，1，若選取此選項，2 如果已核取 混合。  
   
  [輸入] `bHighlighted`  
- `TRUE`如果核取方塊會反白顯示，或`FALSE`如果不是。  
+ `TRUE` 如果核取方塊會反白顯示，或`FALSE`如果不是。  
   
  [輸入] `bPressed`  
- `TRUE`如果按下核取方塊時，或`FALSE`如果不是。  
+ `TRUE` 如果按下核取方塊時，或`FALSE`如果不是。  
   
  [輸入] `bEnabled`  
- `TRUE`如果已啟用此核取方塊，或`FALSE`如果不是。  
+ `TRUE` 如果已啟用此核取方塊，或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawcomboborder"></a>CMFCVisualManagerOffice2003::OnDrawComboBorder  
+##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2003::OnDrawComboBorder  
  當它繪製框線周圍的執行個體時，架構會呼叫這個方法[CMFCToolBarComboBoxButton 類別](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。  
   
 ```  
@@ -875,7 +870,7 @@ virtual void OnDrawComboBorder(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在您衍生的視覺管理員，以自訂下拉式方塊的框線外觀。  
   
-##  <a name="ondrawcombodropbutton"></a>CMFCVisualManagerOffice2003::OnDrawComboDropButton  
+##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2003::OnDrawComboDropButton  
  當它繪製的下拉式按鈕時，架構會呼叫這個方法[CMFCToolBarComboBoxButton 類別](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。  
   
 ```  
@@ -910,7 +905,7 @@ virtual void OnDrawComboDropButton(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在您衍生的視覺管理員，以自訂下拉式方塊按鈕的下拉式按鈕的外觀。  
   
-##  <a name="ondrawcontrolborder"></a>CMFCVisualManagerOffice2003::OnDrawControlBorder  
+##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerOffice2003::OnDrawControlBorder  
  當它繪製控制項的框線時，架構會呼叫這個方法。  
   
 ```  
@@ -923,7 +918,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawexpandingbox"></a>CMFCVisualManagerOffice2003::OnDrawExpandingBox  
+##  <a name="ondrawexpandingbox"></a>  CMFCVisualManagerOffice2003::OnDrawExpandingBox  
  繪製展開的方塊時由架構呼叫。  
   
 ```  
@@ -942,14 +937,14 @@ virtual void OnDrawExpandingBox(
  展開要繪製的方塊周框。  
   
  [輸入] `bIsOpened`  
- `TRUE`如果要繪製的方塊會開啟，或`FALSE`如果不是。  
+ `TRUE` 如果要繪製的方塊會開啟，或`FALSE`如果不是。  
   
  [輸入] `colorBox`  
  要繪製的方塊的外框色彩。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder  
+##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder  
  當它繪製框線周圍的執行個體時，架構會呼叫這個方法[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)。  
   
 ```  
@@ -978,7 +973,7 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂標頭控制項的框線。  
   
-##  <a name="ondrawmenuborder"></a>CMFCVisualManagerOffice2003::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2003::OnDrawMenuBorder  
  當它繪製的框線時，架構會呼叫這個方法[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)。  
   
 ```  
@@ -1001,7 +996,7 @@ virtual void OnDrawMenuBorder(
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會顯示標準功能表框線。 覆寫這個方法在衍生的視覺管理員，以自訂功能表框線的外觀。  
   
-##  <a name="ondrawoutlookbarsplitter"></a>CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter  
+##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter  
  當它繪製 outlook 功能區的分隔器時，架構會呼叫這個方法。  
   
 ```  
@@ -1020,7 +1015,7 @@ virtual void OnDrawOutlookBarSplitter(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂 outlook 功能區上的分隔器的外觀。  
   
-##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder  
+##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder  
  當它繪製 Outlook 頁按鈕的框線時由架構呼叫。  
   
 ```  
@@ -1047,7 +1042,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="remarks"></a>備註  
  若要變更 Outlook 頁按鈕的外觀的自訂視覺化管理員中，這個方法會覆寫。  
   
-##  <a name="ondrawpaneborder"></a>CMFCVisualManagerOffice2003::OnDrawPaneBorder  
+##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawPaneBorder  
  當它繪製的框線時，架構會呼叫這個方法[CPane 類別](../../mfc/reference/cpane-class.md)物件。  
   
 ```  
@@ -1070,7 +1065,7 @@ virtual void OnDrawPaneBorder(
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會顯示標準的框線。 覆寫此方法以自訂的框線外觀的衍生類別中。  
   
-##  <a name="ondrawpanecaption"></a>CMFCVisualManagerOffice2003::OnDrawPaneCaption  
+##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2003::OnDrawPaneCaption  
  當它繪製的標題時，架構會呼叫這個方法[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)物件。  
   
 ```  
@@ -1103,7 +1098,7 @@ virtual COLORREF OnDrawPaneCaption(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawpopupwindowborder"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder  
+##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder  
  當它繪製框線的快顯視窗時，架構會呼叫這個方法。  
   
 ```  
@@ -1121,7 +1116,7 @@ virtual void OnDrawPopupWindowBorder(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder  
+##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder  
  當它繪製按鈕的框線快顯視窗中時，架構會呼叫這個方法。  
   
 ```  
@@ -1143,7 +1138,7 @@ virtual void OnDrawPopupWindowButtonBorder(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption  
+##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption  
  當它繪製標題的快顯視窗時，架構會呼叫這個方法。  
   
 ```  
@@ -1169,7 +1164,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，來自訂快顯視窗標題的外觀。  
   
-##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup  
+##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup  
  當它繪製功能區上的按鈕群組時，架構會呼叫這個方法。  
   
 ```  
@@ -1195,7 +1190,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂的一組功能區上的按鈕外觀。  
   
-##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption  
+##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption  
  當它繪製功能區分類的標題列時，架構會呼叫這個方法。  
   
 ```  
@@ -1217,7 +1212,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ### <a name="remarks"></a>備註  
  覆寫這個方法來自訂功能區分類的標題列的外觀的衍生類別中。  
   
-##  <a name="ondrawribboncategorytab"></a>CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab  
+##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab  
  當它繪製功能區分類的索引標籤時，架構會呼叫這個方法。  
   
 ```  
@@ -1235,7 +1230,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
  功能區索引標籤物件指標。 架構會繪製此索引標籤。  
   
  [輸入] `bIsActive`  
- `TRUE`如果索引標籤作用中，或`FALSE`如果不是。  
+ `TRUE` 如果索引標籤作用中，或`FALSE`如果不是。  
   
 ### <a name="return-value"></a>傳回值  
  用於在功能區類別 索引標籤上的文字色彩。  
@@ -1243,7 +1238,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂功能區類別 索引標籤的外觀。  
   
-##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar  
+##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar  
  當它繪製時，架構會呼叫這個方法[CMFCRibbonProgressBar 類別](../../mfc/reference/cmfcribbonprogressbar-class.md)物件。  
   
 ```  
@@ -1269,12 +1264,12 @@ virtual void OnDrawRibbonProgressBar(
  指定的周圍進度列區域界限的矩形。  
   
  [輸入] `bInfiniteMode`  
- `TRUE`如果列在無限模式中，或`FALSE`如果不是。 預設實作不使用這個參數。  
+ `TRUE` 如果列在無限模式中，或`FALSE`如果不是。 預設實作不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
  自訂外觀的進度列在衍生類別中置換此方法  
   
-##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator  
+##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator  
  當它在快速存取工具列的功能區上繪製分隔符號時，架構會呼叫這個方法。  
   
 ```  
@@ -1297,7 +1292,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ### <a name="remarks"></a>備註  
  覆寫這個方法來自訂功能區快速存取工具列上的分隔符號外觀的衍生類別中。  
   
-##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel  
+##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel  
  當它繪製的色板時，架構會呼叫這個方法[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)。  
   
 ```  
@@ -1320,7 +1315,7 @@ virtual void OnDrawRibbonSliderChannel(
 ### <a name="remarks"></a>備註  
  覆寫這個方法來自訂功能區滑桿的通道外觀的衍生類別中。  
   
-##  <a name="ondrawribbonsliderthumb"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb  
+##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb  
  當它繪製的軸之捲動方塊時，架構會呼叫這個方法[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)物件  
   
 ```  
@@ -1355,7 +1350,7 @@ virtual void OnDrawRibbonSliderThumb(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂功能區滑桿軸的外觀。  
   
-##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton  
+##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton  
  當它繪製 [縮放] 按鈕時，架構會呼叫這個方法[CMFCRibbonSlider 類別](../../mfc/reference/cmfcribbonslider-class.md)物件。  
   
 ```  
@@ -1380,7 +1375,7 @@ virtual void OnDrawRibbonSliderZoomButton(
  在功能區滑桿指定的顯示比例按鈕界限的矩形。  
   
  [輸入] `bIsZoomOut`  
- `TRUE`如果架構應該繪製的左的按鈕"  **-** 」 的縮小、 或`FALSE`如果架構應該繪製的右按鈕"  **+** "zoom 中。  
+ `TRUE` 如果架構應該繪製的左的按鈕" **-**」 的縮小、 或`FALSE`如果架構應該繪製的右按鈕" **+**"zoom 中。  
   
  [輸入] `bIsHighlighted`  
  布林值參數，指出按鈕會反白顯示。  
@@ -1392,9 +1387,9 @@ virtual void OnDrawRibbonSliderZoomButton(
  布林值參數，指出按鈕是否為無法使用。  
   
 ### <a name="remarks"></a>備註  
- 根據預設，在功能區滑桿上的縮放按鈕都將使用圓形 **+** 或 **-** 登入的中心。 若要自訂顯示比例按鈕的外觀，覆寫這個方法在衍生的視覺管理員。  
+ 根據預設，在功能區滑桿上的縮放按鈕都將使用圓形**+** 或**-** 登入的中心。 若要自訂顯示比例按鈕的外觀，覆寫這個方法在衍生的視覺管理員。  
   
-##  <a name="ondrawribbonstatusbarpane"></a>CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane  
+##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane  
  當它在狀態列上繪製一個窗格時，架構會呼叫這個方法。  
   
 ```  
@@ -1420,7 +1415,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂狀態列窗格的外觀。  
   
-##  <a name="ondrawscrollbuttons"></a>CMFCVisualManagerOffice2003::OnDrawScrollButtons  
+##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2003::OnDrawScrollButtons  
  當它繪製捲軸按鈕時，架構會呼叫這個方法。  
   
 ```  
@@ -1446,11 +1441,11 @@ virtual void OnDrawScrollButtons(
  要繪製捲軸按鈕中之影像的識別項。  
   
  [輸入] `bHilited`  
- `TRUE`如果捲動按鈕會反白顯示，或`FALSE`如果不是。  
+ `TRUE` 如果捲動按鈕會反白顯示，或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawseparator"></a>CMFCVisualManagerOffice2003::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2003::OnDrawSeparator  
  當它繪製分隔符號時，架構會呼叫這個方法。  
   
 ```  
@@ -1472,12 +1467,12 @@ virtual void OnDrawSeparator(
  指定的分隔符號界限的矩形。  
   
  [輸入] `bIsHoriz`  
- `TRUE`如果水平停駐窗格或`FALSE`若垂直停駐窗格。  
+ `TRUE` 如果水平停駐窗格或`FALSE`若垂直停駐窗格。  
   
 ### <a name="remarks"></a>備註  
  控制列上使用分隔符號隔開群組的相關圖示。 這個方法的預設實作會顯示標準的分隔符號。 覆寫這個方法在衍生的視覺管理員，以自訂分隔符號的外觀。  
   
-##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems  
+##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems  
  當它繪製功能表中的所有項目時，架構會呼叫這個方法  
   
 ```  
@@ -1499,7 +1494,7 @@ virtual void OnDrawShowAllMenuItems(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder  
+##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder  
  當它繪製的框線時，架構會呼叫這個方法[CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)物件。  
   
 ```  
@@ -1530,7 +1525,7 @@ virtual void OnDrawStatusBarPaneBorder(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂的框線外觀`CMFCStatusBar`物件。  
   
-##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarProgress  
+##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarProgress  
  當它繪製進度列指示器時，架構會呼叫這個方法[CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)物件  
   
 ```  
@@ -1572,7 +1567,7 @@ virtual void OnDrawStatusBarProgress(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂狀態列上的進度列的外觀。  
   
-##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox  
+##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox  
  當它繪製的大小方塊時，架構會呼叫這個方法[CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)。  
   
 ```  
@@ -1595,7 +1590,7 @@ virtual void OnDrawStatusBarSizeBox(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂狀態列大小方塊的外觀。  
   
-##  <a name="ondrawtab"></a>CMFCVisualManagerOffice2003::OnDrawTab  
+##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2003::OnDrawTab  
  當它繪製索引標籤時，架構會呼叫這個方法[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件。  
   
 ```  
@@ -1626,7 +1621,7 @@ virtual void OnDrawTab(
 ### <a name="remarks"></a>備註  
  A`CMFCBaseTabCtrl`物件呼叫這個方法，當它處理`WM_PAINT`訊息。在衍生類別來自訂尋找 索引標籤中的，這個方法會覆寫。  
   
-##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder  
+##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder  
  當它繪製的框線索引標籤 按鈕時，架構會呼叫這個方法。  
   
 ```  
@@ -1657,7 +1652,7 @@ virtual void OnDrawTabsButtonBorder(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂索引標籤 按鈕的框線外觀。  
   
-##  <a name="ondrawtask"></a>CMFCVisualManagerOffice2003::OnDrawTask  
+##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2003::OnDrawTask  
  當它繪製時，架構會呼叫這個方法[CMFCTasksPaneTask 類別](../../mfc/reference/cmfctaskspanetask-class.md)物件。  
   
 ```  
@@ -1688,7 +1683,7 @@ virtual void OnDrawTask(
 ### <a name="remarks"></a>備註  
  架構會顯示為圖示和文字工作列上的工作。 `pIcons`參數包含所指定的工作圖示`pTask`。 覆寫這個方法來自訂外觀的工具列上的工作在衍生類別中。  
   
-##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder  
+##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder  
  當它繪製框線群組時，架構會呼叫這個方法[CMFCTasksPane 類別](../../mfc/reference/cmfctaskspane-class.md)物件。  
   
 ```  
@@ -1715,7 +1710,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 ### <a name="remarks"></a>備註  
  若要自訂工作窗格上的群組區域周圍的框線在衍生類別中的這個函式會覆寫。  
   
-##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption  
+##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption  
  當它繪製的標題時，架構會呼叫這個方法[CMFCTasksPaneTaskGroup 類別](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件。  
   
 ```  
@@ -1746,7 +1741,7 @@ virtual void OnDrawTasksGroupCaption(
 ### <a name="remarks"></a>備註  
  若要自訂的標題在衍生類別中置換此方法`CMFCTasksPaneTaskGroup`。  
   
-##  <a name="ondrawtearoffcaption"></a>CMFCVisualManagerOffice2003::OnDrawTearOffCaption  
+##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTearOffCaption  
  當它繪製的標題時，架構會呼叫這個方法[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件。  
   
 ```  
@@ -1764,14 +1759,14 @@ virtual void OnDrawTearOffCaption(
  指定標題的界限的矩形。  
   
  [輸入] `bIsActive`  
- `TRUE`如果標題為作用中。`FALSE`否則。  
+ `TRUE` 如果標題為作用中。`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
  由架構呼叫此函式時[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件處理程序`WM_PAINT`訊息，並在必須繪製撕標題。  
   
  覆寫這個方法來自訂外觀的標題分割列在衍生類別中。  
   
-##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManagerOffice2003::OnErasePopupWindowButton  
+##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerOffice2003::OnErasePopupWindowButton  
  它會清除的快顯視窗中的按鈕時，架構會呼叫這個方法。  
   
 ```  
@@ -1793,7 +1788,7 @@ virtual void OnErasePopupWindowButton(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onerasetabsarea"></a>CMFCVisualManagerOffice2003::OnEraseTabsArea  
+##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2003::OnEraseTabsArea  
  它會清除 索引標籤視窗的索引標籤區域時，架構會呼叫這個方法。  
   
 ```  
@@ -1818,7 +1813,7 @@ virtual void OnEraseTabsArea(
   
  覆寫這個方法在衍生的視覺管理員，以自訂索引標籤的外觀。  
   
-##  <a name="onerasetabsbutton"></a>CMFCVisualManagerOffice2003::OnEraseTabsButton  
+##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2003::OnEraseTabsButton  
  它會清除文字和圖示的索引標籤 按鈕時，架構會呼叫這個方法。  
   
 ```  
@@ -1847,7 +1842,7 @@ virtual void OnEraseTabsButton(
   
  覆寫這個方法在衍生的視覺管理員，以自訂索引標籤按鈕的外觀。  
   
-##  <a name="onerasetabsframe"></a>CMFCVisualManagerOffice2003::OnEraseTabsFrame  
+##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2003::OnEraseTabsFrame  
  架構會呼叫這個方法時，它會清除框架上[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)物件。  
   
 ```  
@@ -1868,12 +1863,12 @@ virtual BOOL OnEraseTabsFrame(
  索引標籤視窗的指標。 這個架構會清除的框架[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功或`FALSE`如果不是。  
+ `TRUE` 如果方法成功或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
  這個方法會填入所指定的區域`rect`與作用中的索引標籤的背景色彩。它時，會呼叫`CMFCBaseTabCtrl`物件處理程序`WM_PAINT`訊息，並清除 [框架] 索引標籤。  
   
-##  <a name="onfillautohidebuttonbackground"></a>CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground  
+##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground  
  當它填入自動隱藏按鈕的背景時，架構會呼叫這個方法。  
   
 ```  
@@ -1896,7 +1891,7 @@ virtual void OnFillAutoHideButtonBackground(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂自動隱藏按鈕的外觀。  
   
-##  <a name="onfillbarbackground"></a>CMFCVisualManagerOffice2003::OnFillBarBackground  
+##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2003::OnFillBarBackground  
  架構會呼叫這個方法時的背景填滿[CBasePane 類別](../../mfc/reference/cbasepane-class.md)物件。  
   
 ```  
@@ -1929,7 +1924,7 @@ virtual void OnFillBarBackground(
   
  覆寫這個方法在衍生的視覺管理員，以自訂窗格的背景。  
   
-##  <a name="onfillbuttoninterior"></a>CMFCVisualManagerOffice2003::OnFillButtonInterior  
+##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2003::OnFillButtonInterior  
  工具列按鈕的背景填滿時，架構會呼叫這個方法。  
   
 ```  
@@ -1956,7 +1951,7 @@ virtual void OnFillButtonInterior(
 ### <a name="remarks"></a>備註  
  這個方法的預設實作會使用預設色彩背景填滿。 覆寫這個方法在衍生的視覺管理員，以自訂工具列按鈕的背景。  
   
-##  <a name="onfillcommandslistbackground"></a>CMFCVisualManagerOffice2003::OnFillCommandsListBackground  
+##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerOffice2003::OnFillCommandsListBackground  
  屬於命令清單工具列按鈕的背景填滿時，架構會呼叫這個方法。 此命令清單是自訂對話方塊的一部分。  
   
 ```  
@@ -1982,7 +1977,7 @@ virtual COLORREF OnFillCommandsListBackground(
 ### <a name="remarks"></a>備註  
  如需自訂清單的詳細資訊，請參閱[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)。 這個方法的預設實作會填滿背景根據目前選取的面板的色彩配置。  
   
-##  <a name="onfillheaderctrlbackground"></a>CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground  
+##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground  
  標頭控制項的背景填滿時，架構會呼叫這個方法。  
   
 ```  
@@ -2005,7 +2000,7 @@ virtual void OnFillHeaderCtrlBackground(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂標頭控制項的外觀。  
   
-##  <a name="onfillhighlightedarea"></a>CMFCVisualManagerOffice2003::OnFillHighlightedArea  
+##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2003::OnFillHighlightedArea  
  工具列按鈕的反白顯示的區域填滿時，架構會呼叫這個方法。  
   
 ```  
@@ -2031,7 +2026,7 @@ virtual void OnFillHighlightedArea(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManagerOffice2003::OnFillOutlookBarCaption  
+##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2003::OnFillOutlookBarCaption  
  當 Outlook 標題列的背景填滿時，架構會呼叫這個方法。  
   
 ```  
@@ -2056,7 +2051,7 @@ virtual void OnFillOutlookBarCaption(
   
  覆寫這個方法在衍生的視覺管理員，以自訂 Outlook 的標題列的色彩。  
   
-##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManagerOffice2003::OnFillOutlookPageButton  
+##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2003::OnFillOutlookPageButton  
  填滿內部的 Outlook 下一頁按鈕時，架構會呼叫這個方法。  
   
 ```  
@@ -2087,7 +2082,7 @@ virtual void OnFillOutlookPageButton(
 ### <a name="remarks"></a>備註  
  覆寫這個函式在衍生的視覺管理員，以自訂 Outlook 頁按鈕的外觀。  
   
-##  <a name="onfillpopupwindowbackground"></a>CMFCVisualManagerOffice2003::OnFillPopupWindowBackground  
+##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2003::OnFillPopupWindowBackground  
  當快顯視窗的背景填滿時，架構會呼叫這個方法。  
   
 ```  
@@ -2106,7 +2101,7 @@ virtual void OnFillPopupWindowBackground(
 ### <a name="remarks"></a>備註  
  衍生的視覺管理員，以自訂外觀的快顯視窗中，這個方法會覆寫。  
   
-##  <a name="onfilltab"></a>CMFCVisualManagerOffice2003::OnFillTab  
+##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2003::OnFillTab  
  填滿 索引標籤視窗的背景時，架構會呼叫這個方法。  
   
 ```  
@@ -2133,7 +2128,7 @@ virtual void OnFillTab(
  以零為起始的索引標籤索引標籤的架構，填滿背景。  
   
  [輸入] `bIsActive`  
- `TRUE`[] 索引標籤是否在作用中或`FALSE`如果不是。  
+ `TRUE` [] 索引標籤是否在作用中或`FALSE`如果不是。  
   
  [輸入] `pTabWnd`  
  在父索引標籤控制項的指標。  
@@ -2141,7 +2136,7 @@ virtual void OnFillTab(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂索引標籤的外觀。  
   
-##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManagerOffice2003::OnFillTasksGroupInterior  
+##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerOffice2003::OnFillTasksGroupInterior  
  架構會呼叫這個方法時它填滿內部[CMFCTasksPaneTaskGroup 類別](../../mfc/reference/cmfctaskspanetaskgroup-class.md)物件。  
   
 ```  
@@ -2164,7 +2159,7 @@ virtual void OnFillTasksGroupInterior(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂工作群組的外觀。  
   
-##  <a name="onfilltaskspanebackground"></a>CMFCVisualManagerOffice2003::OnFillTasksPaneBackground  
+##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerOffice2003::OnFillTasksPaneBackground  
  架構會呼叫這個方法時的背景填滿[CMFCTasksPane 類別](../../mfc/reference/cmfctaskspane-class.md)控制項。  
   
 ```  
@@ -2183,7 +2178,7 @@ virtual void OnFillTasksPaneBackground(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂的外觀[CMFCTasksPane 類別](../../mfc/reference/cmfctaskspane-class.md)物件。  
   
-##  <a name="onhighlightquickcustomizemenubutton"></a>CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton  
+##  <a name="onhighlightquickcustomizemenubutton"></a>  CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton  
  這個架構會呼叫這個方法，當它繪製反白顯示時快速自訂功能表按鈕。  
   
 ```  
@@ -2205,7 +2200,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems  
+##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems  
  當它繪製反白顯示的功能表命令時，架構會呼叫這個方法。  
   
 ```  
@@ -2224,7 +2219,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ### <a name="remarks"></a>備註  
  覆寫這個方法在衍生的視覺管理員，以自訂的反白顯示的功能表命令的外觀。  
   
-##  <a name="onupdatesystemcolors"></a>CMFCVisualManagerOffice2003::OnUpdateSystemColors  
+##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2003::OnUpdateSystemColors  
  當系統色彩變更時，架構會呼叫此函式。  
   
 ```  
@@ -2234,7 +2229,7 @@ virtual void OnUpdateSystemColors();
 ### <a name="remarks"></a>備註  
  架構會呼叫這個方法的一部分處理`WM_SYSCOLORCHANGE`訊息。 如果您想要在應用程式中的色彩變更時執行自訂程式碼，請覆寫中衍生的視覺管理員，這個方法。  
   
-##  <a name="setdefaultwinxpcolors"></a>CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
+##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
  指定視覺管理員應該使用原生的 Windows XP 佈景主題色彩或色彩取自[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)。  
   
 ```  
@@ -2250,7 +2245,7 @@ static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
   
  根據預設，`CMFCVisualManagerOffice2003`物件會使用原生的 Windows XP 佈景主題色彩。  
   
-##  <a name="setstatusbarofficexplook"></a>CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook  
+##  <a name="setstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook  
  指定應該使用 Windows XP 全域主題。  
   
 ```  
@@ -2259,11 +2254,11 @@ static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRU
   
 ### <a name="parameters"></a>參數  
  [輸入] `bStatusBarOfficeXPLook`  
- `TRUE`如果 Windows XP 全域主題應該使用 （預設值），或`FALSE`如果不是。  
+ `TRUE` 如果 Windows XP 全域主題應該使用 （預設值），或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setuseglobaltheme"></a>CMFCVisualManagerOffice2003::SetUseGlobalTheme  
+##  <a name="setuseglobaltheme"></a>  CMFCVisualManagerOffice2003::SetUseGlobalTheme  
  指定視覺管理員是否使用通用的佈景主題。  
   
 ```  
@@ -2272,14 +2267,14 @@ static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bUseGlobalTheme`  
- `TRUE`如果您想要使用全域主題; 視覺化管理員`FALSE`否則。  
+ `TRUE` 如果您想要使用全域主題; 視覺化管理員`FALSE`否則。  
   
 ### <a name="remarks"></a>備註  
  如果`CMFCVisualManagerOffice2003`物件會使用全域主題，它繪製的 GUI 項目使用[CMFCVisualManagerWindows 類別](../../mfc/reference/cmfcvisualmanagerwindows-class.md)。  
   
  如果`CMFCVisualManagerOffice2003`物件不會使用全域主題，它繪製的 GUI 項目使用[CMFCVisualManagerOfficeXP 類別](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)   

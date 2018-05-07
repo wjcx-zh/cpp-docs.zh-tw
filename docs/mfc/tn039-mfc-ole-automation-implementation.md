@@ -1,13 +1,10 @@
 ---
-title: "TN039: MFC OLE Automation 實作 |Microsoft 文件"
-ms.custom: 
+title: 'TN039: MFC OLE Automation 實作 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE Automation 實作
 > [!NOTE]
@@ -113,7 +108,7 @@ property Y    (DISPID)0x00010002
  Z 屬性指定**DISPID**具有零**HIWORD**因為它定義在所公開的屬性，CDisp3DPoint 類別。 因為基底類別中定義的 X 及 Y 屬性**HIWORD**的**DISPID**為 1，因為這些屬性定義的類別是在最常衍生的類別衍生一個距離。  
   
 > [!NOTE]
->  **取代 LOWORD**一律取決於的位置，在對應中，即使有明確的對應中的項目**DISPID** (請參閱下一節的資訊**_ID**新版`DISP_PROPERTY`和`DISP_FUNCTION`巨集)。  
+>  **取代 LOWORD**一律取決於的位置，在對應中，即使有明確的對應中的項目**DISPID** (請參閱下一節的資訊 **_ID**新版`DISP_PROPERTY`和`DISP_FUNCTION`巨集)。  
   
 ## <a name="advanced-mfc-dispatch-map-features"></a>進階 MFC 分派對應功能  
  有這一版的 Visual c + + 類別精靈不支援的額外功能的數字。 ClassWizard 支援`DISP_FUNCTION`， `DISP_PROPERTY`，和`DISP_PROPERTY_EX`來定義方法，成員變數的屬性，並取得/設定成員函式屬性，分別。 這些功能通常只需要建立大部分的 automation 伺服程式。  
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  空間的字串以 VTS_ 分隔每個參數。  
   
 ## <a name="remarks"></a>備註  
- 這些巨集可讓您指定**DISPID**而非讓 MFC 自動指派。 這些進階巨集具有相同的名稱，但該識別碼會附加至巨集名稱 (例如**DISP_PROPERTY_ID**) 和識別碼由參數之後指定`pszName`參數。 請參閱 AFXDISP。如需有關這些巨集 H。 **_ID**項目必須放在分派對應的結尾。 它們會影響自動**DISPID**中與非相同的方式產生**_ID**巨集版本會 ( **DISPID**s 取決於位置)。 例如:   
+ 這些巨集可讓您指定**DISPID**而非讓 MFC 自動指派。 這些進階巨集具有相同的名稱，但該識別碼會附加至巨集名稱 (例如**DISP_PROPERTY_ID**) 和識別碼由參數之後指定`pszName`參數。 請參閱 AFXDISP。如需有關這些巨集 H。 **_ID**項目必須放在分派對應的結尾。 它們會影響自動**DISPID**中與非相同的方式產生 **_ID**巨集版本會 ( **DISPID**s 取決於位置)。 例如:   
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,
@@ -352,7 +347,7 @@ return NULL;
   
  分派介面傳回的這個函式無法再直接使用或附加至`COleDispatchDriver`型別安全存取。 如果您直接使用它，請確定您呼叫其**發行**成員時透過指標 (`COleDispatchDriver`解構函式會依預設)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

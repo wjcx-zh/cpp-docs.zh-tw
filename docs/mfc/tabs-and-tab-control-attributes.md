@@ -1,13 +1,10 @@
 ---
-title: "索引標籤和索引標籤控制項屬性 |Microsoft 文件"
-ms.custom: 
+title: 索引標籤和索引標籤控制項屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d10db5f1282c726b30536be35b348d50c8bb4a14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f925f8b6a5c522e22890ee2c1082ae8d709d2220
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabs-and-tab-control-attributes"></a>索引標籤和索引標籤控制項屬性
 您有相當大的控制權的外觀和行為的索引標籤控制項所組成的索引標籤 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 每個索引標籤可以有標籤、 圖示、 項目狀態和與其相關聯的應用程式定義的 32 位元值。 對於每個索引標籤上，您可以顯示圖示、 標籤，或兩者。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  如需索引標籤上屬性的詳細資訊，請參閱[索引標籤和索引標籤屬性](http://msdn.microsoft.com/library/windows/desktop/bb760550)Windows SDK 中。 如需將索引標籤加入索引標籤控制項的詳細資訊，請參閱[加入索引標籤，以索引標籤控制項](../mfc/adding-tabs-to-a-tab-control.md)本主題稍後。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

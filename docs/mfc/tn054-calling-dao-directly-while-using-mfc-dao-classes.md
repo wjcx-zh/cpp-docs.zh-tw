@@ -1,13 +1,10 @@
 ---
-title: "TN054： 使用 MFC DAO 類別時直接呼叫 DAO |Microsoft 文件"
-ms.custom: 
+title: TN054： 使用 MFC DAO 類別時直接呼叫 DAO |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dao
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - TN054
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de49cec931878cbfe06939269721b17a37a66202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b2acc0d6df4495ed38e7c5a6a34dcfd70108f34b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054：在使用 MFC DAO 類別時直接呼叫 DAO
 > [!NOTE]
@@ -302,7 +297,7 @@ void SetDBPassword(LPCTSTR pDB,
 } 
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

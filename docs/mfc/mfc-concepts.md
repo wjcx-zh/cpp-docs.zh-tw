@@ -1,27 +1,23 @@
 ---
-title: "MFC 概念 |Microsoft 文件"
-ms.custom: 
+title: MFC 概念 |Microsoft 文件
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - Concepts
 dev_langs:
 - C++
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe9431f1641ff658e1000b4bf4399024138438d
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: d0e7d0208e901e453a0ee7566d998a4cb4461980
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-concepts"></a>MFC 概念
 

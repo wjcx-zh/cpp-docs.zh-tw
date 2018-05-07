@@ -1,12 +1,9 @@
 ---
-title: "CEdit 類別 |Microsoft 文件"
-ms.custom: 
+title: CEdit 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 編輯控制項的功能。  
@@ -193,13 +188,13 @@ class CEdit : public CWnd
   
  每個訊息對應項目有下列形式：  
   
- **ON_**通知**(** *識別碼、 memberFxn * * *)**  
+ **ON_** 通知 **(** *識別碼、 memberFxn * * *)**  
   
  其中`id`指定傳送通知的編輯控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。  
   
  在父系的函式原型如下所示：  
   
- **afx_msg** void memberFxn **( );**  
+ **afx_msg** void memberFxn **（);**  
   
  以下是一份潛在的訊息對應項目和描述，它們就會傳送到父代的案例：  
   
@@ -366,7 +361,7 @@ virtual BOOL Create(
   
 - **WS_CHILD**一律  
   
-- **WS_VISIBLE** Usually  
+- **WS_VISIBLE**通常  
   
 - **WS_DISABLED**很少  
   
@@ -1077,7 +1072,7 @@ void SetPasswordChar(TCHAR ch);
   
  當`SetPasswordChar`呼叫成員函式時，`CEdit`將會重新繪製所有可見的字元，使用指定的字元*ch*。  
   
- 如果編輯控制項以建立[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)樣式，預設的密碼字元設為星號 (  **\*** )。 如果已移除，此樣式`SetPasswordChar`呼叫*ch*設為 0。  
+ 如果編輯控制項以建立[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)樣式，預設的密碼字元設為星號 ( **\***)。 如果已移除，此樣式`SetPasswordChar`呼叫*ch*設為 0。  
   
  如需詳細資訊，請參閱[EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) Windows SDK 中。  
   
@@ -1288,7 +1283,7 @@ BOOL Undo();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)   
  [MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

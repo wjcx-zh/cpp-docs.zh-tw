@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 控制項： 建立 Automation 伺服程式 |Microsoft 文件"
-ms.custom: 
+title: MFC ActiveX 控制項： 建立 Automation 伺服程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3de04fbbfa9f2d0b55b7e31ca02faeddfa5c12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 617d84b8603467da74b21be8c2bfb2e6cb418f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控制項：建立 Automation 伺服程式
 您可以為 Automation 伺服程式為了以程式設計方式將該控制項內嵌在另一個應用程式和控制項中呼叫方法，從應用程式開發 MFC ActiveX 控制項。 這類控制項仍可裝載 ActiveX 控制項容器中。  
@@ -60,6 +55,6 @@ ms.lasthandoff: 12/21/2017
   
  如果應用程式中使用後，您可以加入 ActiveX 控制項的方法，您可以開始在應用程式中使用控制項的最新版本，刪除您匯入類型程式庫時所建立的檔案。 然後再次匯入類型程式庫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

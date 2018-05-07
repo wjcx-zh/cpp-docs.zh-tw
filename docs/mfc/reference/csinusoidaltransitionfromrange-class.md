@@ -1,12 +1,9 @@
 ---
-title: "CSinusoidalTransitionFromRange 類別 |Microsoft 文件"
-ms.custom: 
+title: CSinusoidalTransitionFromRange 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSinusoidalTransitionFromRange
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d53e89f1fa73926976896743ab5293d85e5d81c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09c302ec414e26c71d8989bb6d624314c8eb6db4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange 類別
 封裝已指定振動範圍的正弦曲線範圍轉換。  
@@ -87,7 +82,7 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 ## <a name="requirements"></a>需求  
  **標頭：** afxanimationcontroller.h  
   
-##  <a name="create"></a>CSinusoidalTransitionFromRange::Create  
+##  <a name="create"></a>  CSinusoidalTransitionFromRange::Create  
  呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
   
 ```  
@@ -103,7 +98,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
   
-##  <a name="csinusoidaltransitionfromrange"></a>CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
+##  <a name="csinusoidaltransitionfromrange"></a>  CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange  
  建構轉換物件。  
   
 ```  
@@ -131,40 +126,40 @@ CSinusoidalTransitionFromRange(
  `slope`  
  在開始轉換的斜率。  
   
-##  <a name="m_dblmaximumvalue"></a>CSinusoidalTransitionFromRange::m_dblMaximumValue  
+##  <a name="m_dblmaximumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMaximumValue  
  在尖峰的正弦曲線 wave 動畫變數的值。  
   
 ```  
 DOUBLE m_dblMaximumValue;  
 ```  
   
-##  <a name="m_dblminimumvalue"></a>CSinusoidalTransitionFromRange::m_dblMinimumValue  
+##  <a name="m_dblminimumvalue"></a>  CSinusoidalTransitionFromRange::m_dblMinimumValue  
  在的正弦曲線 wave 透過動畫變數的值。  
   
 ```  
 DOUBLE m_dblMinimumValue;  
 ```  
   
-##  <a name="m_duration"></a>CSinusoidalTransitionFromRange::m_duration  
+##  <a name="m_duration"></a>  CSinusoidalTransitionFromRange::m_duration  
  轉換的持續時間。  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-##  <a name="m_period"></a>CSinusoidalTransitionFromRange::m_period  
+##  <a name="m_period"></a>  CSinusoidalTransitionFromRange::m_period  
  以秒為單位的正弦曲線 wave 振動期間。  
   
 ```  
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-##  <a name="m_slope"></a>CSinusoidalTransitionFromRange::m_slope  
+##  <a name="m_slope"></a>  CSinusoidalTransitionFromRange::m_slope  
  在開始轉換的斜率。  
   
 ```  
 UI_ANIMATION_SLOPE m_slope;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

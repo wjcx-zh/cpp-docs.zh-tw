@@ -1,12 +1,9 @@
 ---
-title: "CUserTool 類別 |Microsoft 文件"
-ms.custom: 
+title: CUserTool 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUserTool
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38600b2e6eac6ad181baf1263d9e4d10295732b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cusertool-class"></a>CUserTool 類別
 使用者工具是執行外部應用程式的功能表項目。 **工具** 索引標籤**自訂**對話方塊 ( [CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 可讓使用者加入使用者工具，並指定名稱、 命令、 引數，並每個使用者工具的初始目錄。  
@@ -105,7 +100,7 @@ class CUserTool : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxusertool.h  
   
-##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard  
+##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CopyIconToClipboard();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="drawtoolicon"></a>CUserTool::DrawToolIcon  
+##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon  
  在指定的矩形的中央繪製使用者工具圖示。  
   
 ```  
@@ -132,7 +127,7 @@ void DrawToolIcon(
  [輸入] `rectImage`  
  指定要顯示圖示的區域的座標。  
   
-##  <a name="getcommand"></a>CUserTool::GetCommand  
+##  <a name="getcommand"></a>  CUserTool::GetCommand  
  傳回包含與使用者工具相關聯的命令文字的字串。  
   
 ```  
@@ -142,7 +137,7 @@ const CString& GetCommand() const;
 ### <a name="return-value"></a>傳回值  
  若要參考`CString`物件，其中包含與使用者工具相關聯的命令文字。  
   
-##  <a name="getcommandid"></a>CUserTool::GetCommandId  
+##  <a name="getcommandid"></a>  CUserTool::GetCommandId  
  傳回使用者工具的命令識別碼。  
   
 ```  
@@ -152,7 +147,7 @@ UINT GetCommandId() const;
 ### <a name="return-value"></a>傳回值  
  此使用者工具的命令識別碼。  
   
-##  <a name="invoke"></a>CUserTool::Invoke  
+##  <a name="invoke"></a>  CUserTool::Invoke  
  執行與使用者工具相關聯的命令。  
   
 ```  
@@ -165,7 +160,7 @@ virtual BOOL Invoke();
 ### <a name="remarks"></a>備註  
  呼叫[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)執行命令，與使用者工具相關聯。 此函式失敗，如果命令是空的或[ShellExecute](http://msdn.microsoft.com/library/windows/desktop/bb762153)失敗。  
   
-##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon  
+##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon  
  載入使用者工具的預設圖示。  
   
 ```  
@@ -180,7 +175,7 @@ virtual HICON LoadDefaultIcon();
   
  覆寫此方法以提供您自己的預設工具圖示。  
   
-##  <a name="m_strarguments"></a>CUserTool::m_strArguments  
+##  <a name="m_strarguments"></a>  CUserTool::m_strArguments  
  使用者工具的命令列引數。  
   
 ```  
@@ -190,7 +185,7 @@ CString m_strArguments;
 ### <a name="remarks"></a>備註  
  當您呼叫時，這個字串會傳遞至工具[CUserTool::Invoke](#invoke)或當使用者按一下此工具相關聯的命令。  
   
-##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory  
+##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory  
  指定使用者工具的初始目錄。  
   
 ```  
@@ -200,14 +195,14 @@ CString m_strInitialDirectory;
 ### <a name="remarks"></a>備註  
  此變數會指定當您呼叫中執行此工具的初始目錄[CUserTool::Invoke](#invoke)或當使用者按一下此工具相關聯的命令。  
   
-##  <a name="m_strlabel"></a>CUserTool::m_strLabel  
+##  <a name="m_strlabel"></a>  CUserTool::m_strLabel  
  顯示工具的功能表項目中的標籤。  
   
 ```  
 CString m_strLabel;  
 ```  
   
-##  <a name="serialize"></a>CUserTool::Serialize  
+##  <a name="serialize"></a>  CUserTool::Serialize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -219,7 +214,7 @@ virtual void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setcommand"></a>CUserTool::SetCommand  
+##  <a name="setcommand"></a>  CUserTool::SetCommand  
  設定使用者工具執行的應用程式。  
   
 ```  
@@ -233,7 +228,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="remarks"></a>備註  
  呼叫此方法以設定使用者工具執行的新應用程式。 方法會終結舊的圖示，並從指定的應用程式載入新的圖示。 如果它無法從應用程式中載入圖示，則會藉由呼叫載入使用者工具的預設圖示[CUserTool::LoadDefaultIcon](#loaddefaulticon)。  
   
-##  <a name="settoolicon"></a>CUserTool::SetToolIcon  
+##  <a name="settoolicon"></a>  CUserTool::SetToolIcon  
  從工具使用的應用程式中載入使用者工具的圖示。  
   
 ```  
@@ -246,7 +241,7 @@ virtual HICON SetToolIcon();
 ### <a name="remarks"></a>備註  
  呼叫這個方法來載入功能表項目上顯示的圖示。 這個方法會搜尋工具使用的可執行檔中的圖示。 它沒有預設的圖示，圖示所提供的[CUserTool::LoadDefaultIcon](#loaddefaulticon)改為使用。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)   

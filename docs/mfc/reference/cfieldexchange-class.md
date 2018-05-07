@@ -2,11 +2,8 @@
 title: CFieldExchange 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a89e48475a0226d76ac719459b1b99cc4e355
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 類別
 支援資料庫類別使用的資料錄欄位交換 (RFX) 和大量資料錄欄位交換 (Bulk RFX) 常式。  
@@ -50,14 +45,14 @@ class CFieldExchange
 |[CFieldExchange::SetFieldType](#setfieldtype)|指定類型的資料錄集資料成員 — 資料行或參數-由所有下列呼叫 RFX 函式，直到下次呼叫`SetFieldType`。|  
   
 ## <a name="remarks"></a>備註  
- `CFieldExchange`沒有基底類別。  
+ `CFieldExchange` 沒有基底類別。  
   
  如果您要撰寫資料交換常式的自訂資料類型，或當您實作大量資料列擷取;，使用這個類別否則，您不會直接使用這個類別。 RFX 和 Bulk RFX 之間交換資料的資料錄集物件的欄位資料成員和資料來源上目前的記錄之對應欄位。  
   
 > [!NOTE]
 >  如果您正在使用的資料存取物件 (DAO) 類別，而不是開放式資料庫連接 (ODBC) 類別，使用類別[CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md)改為。 如需詳細資訊，請參閱文章[概觀： 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。  
   
- A`CFieldExchange`物件提供內容資訊所需的資料錄欄位交換或要採取的大量資料錄欄位交換放置。 `CFieldExchange`物件支援數個作業，包括繫結參數和欄位資料成員，並在目前資料錄的欄位上設定各種旗標。 RFX 和 Bulk RFX 作業所定義之類型的資料錄集類別資料成員上`enum` **FieldType**中`CFieldExchange`。 可能**FieldType**的值為：  
+ A`CFieldExchange`物件提供內容資訊所需的資料錄欄位交換或要採取的大量資料錄欄位交換放置。 `CFieldExchange` 物件支援數個作業，包括繫結參數和欄位資料成員，並在目前資料錄的欄位上設定各種旗標。 RFX 和 Bulk RFX 作業所定義之類型的資料錄集類別資料成員上`enum` **FieldType**中`CFieldExchange`。 可能**FieldType**的值為：  
   
 - **CFieldExchange::outputColumn**欄位資料成員。  
   
@@ -75,7 +70,7 @@ class CFieldExchange
 ## <a name="requirements"></a>需求  
  **標頭：** afxdb.h  
   
-##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
  如果您撰寫您自己 RFX 函式，呼叫`IsFieldType`您若要判斷目前的作業是否可對特定欄位或參數資料成員類型的函式的開頭 ( **CFieldExchange::outputColumn**， **CFieldExchange::inputParam**， **CFieldExchange::param**， **CFieldExchange::outputParam**，或**CFieldExchange::inoutParam**).  
   
 ```  
@@ -92,7 +87,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>備註  
  請遵循現有 RFX 函式的模型。  
   
-##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType  
  您必須呼叫`SetFieldType`在您的資料錄集類別[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)覆寫。  
   
 ```  
@@ -134,6 +129,6 @@ void SetFieldType(UINT nFieldType);
   
  [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CRecordset 類別](../../mfc/reference/crecordset-class.md)

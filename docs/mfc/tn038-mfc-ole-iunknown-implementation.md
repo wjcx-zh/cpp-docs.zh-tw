@@ -1,13 +1,10 @@
 ---
-title: "TN038: MFC OLE IUnknown 實作 |Microsoft 文件"
-ms.custom: 
+title: 'TN038: MFC OLE IUnknown 實作 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 實作
 > [!NOTE]
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  如需有關彙總的詳細資訊，請參閱[彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx)主題。  
   
- MFC 的介面對應支援以 `CCmdTarget` 類別為基礎。 `CCmdTarget`"*具有的*"參考計數以及所有成員函式相關聯[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)實作 (例如是都參考計數`CCmdTarget`)。 若要建立支援 OLE COM 的類別，您要從 `CCmdTarget` 衍生類別，並使用不同的巨集和 `CCmdTarget` 的成員函式實作所需的介面。 MFC 的實作使用巢狀類別定義如同上述範例中的每個介面實作。 利用 IUnknown 的標準實作以及許多會排除部分重複程式碼的巨集，可以更方便進行。  
+ MFC 的介面對應支援以 `CCmdTarget` 類別為基礎。 `CCmdTarget` "*具有的*"參考計數以及所有成員函式相關聯[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)實作 (例如是都參考計數`CCmdTarget`)。 若要建立支援 OLE COM 的類別，您要從 `CCmdTarget` 衍生類別，並使用不同的巨集和 `CCmdTarget` 的成員函式實作所需的介面。 MFC 的實作使用巢狀類別定義如同上述範例中的每個介面實作。 利用 IUnknown 的標準實作以及許多會排除部分重複程式碼的巨集，可以更方便進行。  
   
 ## <a name="interface-map-basics"></a>介面對應基本知識  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  使用 `METHOD_PROLOGUE` 巨集來存取父代的 `CCmdTarget` 衍生物件。  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)可以委派給`CCmdTarget`這些函式的實作 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)可以委派給`CCmdTarget`這些函式的實作 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`)。  
   
  上述的 CPrintEditObj 範例可以下列方式實作：  
   
@@ -714,7 +709,7 @@ END_INTERFACE_MAP
 ## <a name="remarks"></a>備註  
  這個巨集可用來告知架構類別正在使用彙總物件。 它必須出現在 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 巨集之間。 彙總物件是不同的物件，衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 藉由使用彙總和 `INTERFACE_AGGREGATE` 巨集，您可以讓彙總支援的所有介面直接受物件支援。 `theAggr`引數就是衍生自類別的成員變數名稱[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) （直接或間接）。 所有 `INTERFACE_AGGREGATE` 巨集在位於介面對應中時必須遵循 `INTERFACE_PART` 巨集。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

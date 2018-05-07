@@ -1,12 +1,9 @@
 ---
-title: "CIPAddressCtrl 類別 |Microsoft 文件"
-ms.custom: 
+title: CIPAddressCtrl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c775f314cc70da1b662ca9b9c5f0a2e68eb2bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 類別
 提供 Windows 通用 IP 位址控制項的功能。  
@@ -94,14 +89,14 @@ class CIPAddressCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
+##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
  建立 `CIPAddressCtrl` 物件。  
   
 ```  
 CIPAddressCtrl();
 ```  
   
-##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
+##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress  
  清除 IP 位址控制項的內容。  
   
 ```  
@@ -111,7 +106,7 @@ void ClearAddress();
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)、 Windows SDK 中所述。  
   
-##  <a name="create"></a>CIPAddressCtrl::Create  
+##  <a name="create"></a>  CIPAddressCtrl::Create  
  建立 IP 位址控制項，並將它附加至`CIPAddressCtrl`物件。  
   
 ```  
@@ -147,7 +142,7 @@ virtual BOOL Create(
   
  如果您想要搭配控制項使用延伸的視窗樣式，呼叫[CreateEx](#createex)而不是**建立**。  
   
-##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
+##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  呼叫此函式來建立控制項 （子視窗），並將它與相關聯`CIPAddressCtrl`物件。  
   
 ```  
@@ -181,7 +176,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
-##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
  擷取 IP 位址控制項中的所有四個欄位的位址值。  
   
 ```  
@@ -223,7 +218,7 @@ int GetAddress(DWORD& dwAddress);
 |2|8 到 15|  
 |3|0 到 7|  
   
-##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
+##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
  決定是否 IP 位址控制項中的所有欄位都會空白。  
   
 ```  
@@ -236,7 +231,7 @@ BOOL IsBlank() const;
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)、 Windows SDK 中所述。  
   
-##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
+##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  設定 IP 位址控制項中的所有四個欄位的位址值。  
   
 ```  
@@ -275,7 +270,7 @@ void SetAddress(DWORD dwAddress);
 |2|8 到 15|  
 |3|0 到 7|  
   
-##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
+##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus  
  將鍵盤焦點設定到 IP 位址控制項中的指定欄位。  
   
 ```  
@@ -289,7 +284,7 @@ void SetFieldFocus(WORD nField);
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)、 Windows SDK 中所述。  
   
-##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
+##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  IP 位址控制項中指定之欄位中設定的範圍。  
   
 ```  
@@ -312,7 +307,7 @@ void SetFieldRange(
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)、 Windows SDK 中所述。 您可以使用兩個參數，`nLower`和`nUpper`，以表示的下限和上限的限制和欄位，而不是*wRange*參數搭配的 Win32 訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

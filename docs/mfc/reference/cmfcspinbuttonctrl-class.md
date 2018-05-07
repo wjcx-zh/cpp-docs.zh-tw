@@ -1,12 +1,9 @@
 ---
-title: "CMFCSpinButtonCtrl 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCSpinButtonCtrl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCSpinButtonCtrl
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd6ef1957b1f4994bafa9546581e2588e33d11a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b8c602882036d77105bb619069a6e43d73ceeb6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl 類別
 `CMFCSpinButtonCtrl`類別支援繪製微調按鈕控制項的視覺管理員。  
@@ -75,7 +70,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 ## <a name="requirements"></a>需求  
  **標頭：** afxspinbuttonctrl.h  
   
-##  <a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
+##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw  
  會重新繪製目前的微調按鈕控制項。  
   
 ```  
@@ -89,7 +84,7 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="remarks"></a>備註  
  這個架構會呼叫`CMFCSpinButtonCtrl::OnPaint`方法以處理[CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint)訊息，以及該方法會呼叫這`CMFCSpinButtonCtrl::OnDraw`方法。 覆寫這個方法，以自訂架構繪製微調按鈕控制項的方式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)

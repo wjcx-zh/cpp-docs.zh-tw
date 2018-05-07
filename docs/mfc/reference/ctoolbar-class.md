@@ -1,12 +1,9 @@
 ---
-title: "CToolBar 類別 |Microsoft 文件"
-ms.custom: 
+title: CToolBar 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CToolBar
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec2dac93dae9860dfadd347584fbdf465d15838
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a80ea4cb188d879b9af0a7901ffbe89b8673df6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctoolbar-class"></a>CToolBar 類別
 有一列點陣圖按鈕和選擇性分隔線的控制列。  
@@ -106,9 +101,9 @@ class CToolBar : public CControlBar
 |[CToolBar::SetSizes](#setsizes)|設定按鈕和其點陣圖的大小。|  
   
 ## <a name="remarks"></a>備註  
- 按鈕可以像是按鈕、 核取方塊按鈕、 或選項按鈕。 `CToolBar`物件是衍生自類別的框架視窗物件通常是內嵌的成員[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)。  
+ 按鈕可以像是按鈕、 核取方塊按鈕、 或選項按鈕。 `CToolBar` 物件是衍生自類別的框架視窗物件通常是內嵌的成員[CFrameWnd](../../mfc/reference/cframewnd-class.md)或[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)。  
   
- [CToolBar::GetToolBarCtrl](#gettoolbarctrl)，成員函式新增到 MFC 4.0 可讓您利用 Windows 通用控制項的工具列和其他功能的支援。 `CToolBar`成員函式可讓您大部分的 Windows 通用控制項; 功能不過，當您呼叫`GetToolBarCtrl`，您就能給予您工具列更多 Windows 95/98 工具列的特性。 當您呼叫`GetToolBarCtrl`，它會傳回參考`CToolBarCtrl`物件。 請參閱[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)如需有關設計 Windows 通用控制項的工具列。 關於通用控制項的一般資訊，請參閱[通用控制項](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
+ [CToolBar::GetToolBarCtrl](#gettoolbarctrl)，成員函式新增到 MFC 4.0 可讓您利用 Windows 通用控制項的工具列和其他功能的支援。 `CToolBar` 成員函式可讓您大部分的 Windows 通用控制項; 功能不過，當您呼叫`GetToolBarCtrl`，您就能給予您工具列更多 Windows 95/98 工具列的特性。 當您呼叫`GetToolBarCtrl`，它會傳回參考`CToolBarCtrl`物件。 請參閱[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)如需有關設計 Windows 通用控制項的工具列。 關於通用控制項的一般資訊，請參閱[通用控制項](http://msdn.microsoft.com/library/windows/desktop/bb775493)Windows SDK 中。  
   
  Visual c + + 為您提供兩種方法可以建立工具列。 若要建立工具列資源使用資源編輯器，請遵循下列步驟：  
   
@@ -141,11 +136,11 @@ class CToolBar : public CControlBar
  每個按鈕具有一個映像。 各種按鈕狀態，並從該一個映像會產生樣式 （已按下向上、 向下，已停用、 下、 停用和不定）。 雖然點陣圖可以是任何色彩，您就可以達到最佳的結果中黑白灰階映像。  
   
 > [!WARNING]
-> `CToolBar`支援最多 16 個色彩的點陣圖。 當您將映像載入工具列編輯器時，Visual Studio 會自動將影像轉換為 16 色點陣圖，如有必要，並顯示一則警告訊息，如果映像已轉換。 如果您使用的影像超過 16 個色彩 （使用外部編輯器編輯映像） 時，應用程式可能會如預期般運作。  
+> `CToolBar` 支援最多 16 個色彩的點陣圖。 當您將映像載入工具列編輯器時，Visual Studio 會自動將影像轉換為 16 色點陣圖，如有必要，並顯示一則警告訊息，如果映像已轉換。 如果您使用的影像超過 16 個色彩 （使用外部編輯器編輯映像） 時，應用程式可能會如預期般運作。  
   
  工具列按鈕會模擬預設按鈕。 不過，工具列按鈕也可以模擬核取方塊按鈕或選項按鈕。 核取方塊按鈕狀態有三種： 核取、 已清除，及不定。 選項按鈕有兩個狀態： 選取和清除。  
   
- 若要設定個別的按鈕或分隔符號的樣式不指向陣列，呼叫[GetButtonStyle](#getbuttonstyle) ，擷取樣式，然後再呼叫[SetButtonStyle](#setbuttonstyle)而不是`SetButtons`。 `SetButtonStyle`當您想要在執行階段變更按鈕的樣式，則是最有用。  
+ 若要設定個別的按鈕或分隔符號的樣式不指向陣列，呼叫[GetButtonStyle](#getbuttonstyle) ，擷取樣式，然後再呼叫[SetButtonStyle](#setbuttonstyle)而不是`SetButtons`。 `SetButtonStyle` 當您想要在執行階段變更按鈕的樣式，則是最有用。  
   
  若要指派要顯示在按鈕上的文字，請呼叫[GetButtonText](#getbuttontext)來擷取文字，會出現在 [] 按鈕，然後再呼叫[SetButtonText](#setbuttontext)設定文字。  
   
@@ -169,7 +164,7 @@ class CToolBar : public CControlBar
 ## <a name="requirements"></a>需求  
  **標頭：** afxext.h  
   
-##  <a name="commandtoindex"></a>CToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CToolBar::CommandToIndex  
  此成員函式傳回的第一個工具列按鈕，開始位置 0，其命令 ID 符合索引`nIDFind`。  
   
 ```  
@@ -183,7 +178,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="return-value"></a>傳回值  
  的索引按鈕，則為-1 沒有按鈕具有所指定的命令識別碼。  
   
-##  <a name="create"></a>CToolBar::Create  
+##  <a name="create"></a>  CToolBar::Create  
  此成員函式會建立 Windows 工具列 （子視窗），並將它與`CToolBar`物件。  
   
 ```  
@@ -200,13 +195,13 @@ virtual BOOL Create(
  `dwStyle`  
  工具列的樣式。 支援的其他工具列樣式如下：  
   
-- `CBRS_TOP`控制列是在框架視窗的頂端。  
+- `CBRS_TOP` 控制列是在框架視窗的頂端。  
   
-- `CBRS_BOTTOM`控制列是在框架視窗的底部。  
+- `CBRS_BOTTOM` 控制列是在框架視窗的底部。  
   
-- `CBRS_NOALIGN`父代重新調整大小時未重新置放控制列。  
+- `CBRS_NOALIGN` 父代重新調整大小時未重新置放控制列。  
   
-- `CBRS_TOOLTIPS`控制列會顯示工具提示。  
+- `CBRS_TOOLTIPS` 控制列會顯示工具提示。  
   
 - **CBRS_SIZE_DYNAMIC**控制列是動態的。  
   
@@ -214,7 +209,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING**浮動控制列。  
   
-- `CBRS_FLYBY`狀態列會顯示按鈕的相關資訊。  
+- `CBRS_FLYBY` 狀態列會顯示按鈕的相關資訊。  
   
 - **CBRS_HIDE_INPLACE**控制列不會顯示給使用者。  
   
@@ -230,7 +225,7 @@ virtual BOOL Create(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
-##  <a name="createex"></a>CToolBar::CreateEx  
+##  <a name="createex"></a>  CToolBar::CreateEx  
  呼叫此函式可建立 Windows 工具列 （子視窗） 並與`CToolBar`物件。  
   
 ```  
@@ -268,12 +263,12 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  它也可以設定工具列高度設為預設值。  
   
- 使用`CreateEx`，而不是[建立](#create)，當特定樣式必須要建立內嵌的工具列控制項時出現。 例如，設定`dwCtrlStyle`至**TBSTYLE_FLAT &#124;TBSTYLE_TRANSPARENT**來建立類似 Internet Explorer 4 工具列的工具列。  
+ 使用`CreateEx`，而不是[建立](#create)，當特定樣式必須要建立內嵌的工具列控制項時出現。 例如，設定`dwCtrlStyle`至**TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT**來建立類似 Internet Explorer 4 工具列的工具列。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
-##  <a name="ctoolbar"></a>CToolBar::CToolBar  
+##  <a name="ctoolbar"></a>  CToolBar::CToolBar  
  此成員函式會建構`CToolBar`物件，並設定預設大小。  
   
 ```  
@@ -283,7 +278,7 @@ CToolBar();
 ### <a name="remarks"></a>備註  
  呼叫[建立](#create)成員函式來建立 [工具列] 視窗。  
   
-##  <a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo  
  此成員函式會擷取控制項 ID、 樣式和工具列按鈕或分隔符號所指定的位置的映像索引*nIndex。*  
   
 ```  
@@ -312,7 +307,7 @@ void GetButtonInfo(
   
  如果`nIndex`指定分隔符號，`iImage`設分隔符號寬度的像素。  
   
-##  <a name="getbuttonstyle"></a>CToolBar::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
  呼叫此成員函式可擷取按鈕或工具列上的分隔符號的樣式。  
   
 ```  
@@ -329,7 +324,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>備註  
  按鈕的樣式會判斷按鈕的顯示方式，以及它如何回應使用者輸入。 請參閱[SetButtonStyle](#setbuttonstyle)按鈕樣式的範例。  
   
-##  <a name="getbuttontext"></a>CToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>  CToolBar::GetButtonText  
  呼叫此成員函式可擷取按鈕顯示的文字。  
   
 ```  
@@ -353,7 +348,7 @@ void GetButtonText(
 ### <a name="remarks"></a>備註  
  這個成員的第二個表單函式的填滿`CString`具有字串文字物件。  
   
-##  <a name="getitemid"></a>CToolBar::GetItemID  
+##  <a name="getitemid"></a>  CToolBar::GetItemID  
  此成員函式傳回的命令識別碼會以按鈕或所指定的分隔符號`nIndex`。  
   
 ```  
@@ -370,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>備註  
  分隔符號傳回**ID_SEPARATOR**。  
   
-##  <a name="getitemrect"></a>CToolBar::GetItemRect  
+##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
  此成員函式會填滿`RECT`其位址包含在結構`lpRect`按鈕或分隔符號所指定的座標`nIndex`。  
   
 ```  
@@ -394,7 +389,7 @@ virtual void GetItemRect(
 ### <a name="example"></a>範例  
   請參閱範例的[CToolBar::SetSizes](#setsizes)。  
   
-##  <a name="gettoolbarctrl"></a>CToolBar::GetToolBarCtrl  
+##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl  
  此成員函式可讓您直接存取基礎的通用控制項。  
   
 ```  
@@ -412,7 +407,7 @@ CToolBarCtrl& GetToolBarCtrl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
-##  <a name="loadbitmap"></a>CToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap  
  呼叫此成員函式，以載入所指定的點陣圖`lpszResourceName`或`nIDResource`。  
   
 ```  
@@ -434,9 +429,9 @@ BOOL LoadBitmap(UINT nIDResource);
  點陣圖應包含一個影像的每個工具列按鈕。 如果映像不標準大小 （16 個像素寬和高 15 像素） 的呼叫[SetSizes](#setsizes)設定按鈕大小和其映像。  
   
 > [!WARNING]
-> `CToolBar`支援最多 16 個色彩的點陣圖。 當您將映像載入工具列編輯器時，Visual Studio 會自動將影像轉換為 16 色點陣圖，如有必要，並顯示一則警告訊息，如果映像已轉換。 如果您使用的影像超過 16 個色彩 （使用外部編輯器編輯映像） 時，應用程式可能會如預期般運作。  
+> `CToolBar` 支援最多 16 個色彩的點陣圖。 當您將映像載入工具列編輯器時，Visual Studio 會自動將影像轉換為 16 色點陣圖，如有必要，並顯示一則警告訊息，如果映像已轉換。 如果您使用的影像超過 16 個色彩 （使用外部編輯器編輯映像） 時，應用程式可能會如預期般運作。  
   
-##  <a name="loadtoolbar"></a>CToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
  呼叫此成員函式，以載入所指定的工具列`lpszResourceName`或`nIDResource`。  
   
 ```  
@@ -460,7 +455,7 @@ BOOL LoadToolBar(UINT nIDResource);
 ### <a name="example"></a>範例  
   請參閱範例的[CToolBar::CreateEx](#createex)。  
   
-##  <a name="setbitmap"></a>CToolBar::SetBitmap  
+##  <a name="setbitmap"></a>  CToolBar::SetBitmap  
  呼叫此成員函式，可以設定工具列的點陣圖影像。  
   
 ```  
@@ -477,7 +472,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 ### <a name="remarks"></a>備註  
  例如，呼叫`SetBitmap`變更點陣圖影像之後使用者採取動作的文件，以變更按鈕的動作。  
   
-##  <a name="setbuttoninfo"></a>CToolBar::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo  
  呼叫此成員函式設定按鈕的命令 ID、 樣式和映像數目。  
   
 ```  
@@ -525,7 +520,7 @@ void SetButtonInfo(
   
  點陣圖影像和按鈕上的資訊，請參閱[CToolBar](../../mfc/reference/ctoolbar-class.md)概觀和[CToolBar::LoadBitmap](#loadbitmap)。  
   
-##  <a name="setbuttons"></a>CToolBar::SetButtons  
+##  <a name="setbuttons"></a>  CToolBar::SetButtons  
  此成員函式會將每個工具列按鈕的命令 ID 設定為陣列的對應項目所指定的值`lpIDArray`。  
   
 ```  
@@ -551,7 +546,7 @@ BOOL SetButtons(
   
  如果`lpIDArray`是**NULL**，此函式所指定項目數的配置空間`nIDCount`。 使用[SetButtonInfo](#setbuttoninfo)來設定每個項目的屬性。  
   
-##  <a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
  呼叫此成員函式設定樣式的按鈕或分隔符號，或將按鈕分組。  
   
 ```  
@@ -591,7 +586,7 @@ void SetButtonStyle(
 > [!NOTE]
 >  您也可以設定使用的按鈕狀態`nStyle`參數; 不過，因為按鈕狀態受到[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)任何處理常式中，狀態使用設定`SetButtonStyle`將會遺失在下次閒置處理程序。 請參閱[如何更新使用者介面物件](../../mfc/how-to-update-user-interface-objects.md)和[TN031： 控制列](../../mfc/tn031-control-bars.md)如需詳細資訊。  
   
-##  <a name="setbuttontext"></a>CToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
  呼叫此函式可設定 5d; 按鈕的文字。  
   
 ```  
@@ -613,7 +608,7 @@ BOOL SetButtonText(
 ### <a name="example"></a>範例  
   請參閱範例的[CToolBar::GetToolBarCtrl](#gettoolbarctrl)。  
   
-##  <a name="setheight"></a>CToolBar::SetHeight  
+##  <a name="setheight"></a>  CToolBar::SetHeight  
  此成員函式的值，以像素中指定設定工具列的高度`cyHeight`。  
   
 ```  
@@ -629,7 +624,7 @@ void SetHeight(int cyHeight);
   
  如果未呼叫此函式，架構會使用按鈕的大小來判斷工具列的高度。  
   
-##  <a name="setsizes"></a>CToolBar::SetSizes  
+##  <a name="setsizes"></a>  CToolBar::SetSizes  
  呼叫此成員函式設定工具列的按鈕的大小，單位為像素中指定*sizeButton*。  
   
 ```  
@@ -653,7 +648,7 @@ void SetSizes(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 CTRLBARS](../../visual-cpp-samples.md)   
  [MFC 範例 DLGCBR32](../../visual-cpp-samples.md)   
  [MFC 範例 DOCKTOOL](../../visual-cpp-samples.md)   

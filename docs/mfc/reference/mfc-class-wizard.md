@@ -1,13 +1,10 @@
 ---
-title: "MFC 類別精靈 |Microsoft 文件"
-ms.custom: 
+title: MFC 類別精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.wizards.classwizard
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - wizards (MFC)
 - MFC Class Wizard
 ms.assetid: 8b0dd867-5d07-4214-99be-2a1c1995e6d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66ef4c3595e25fecf4930cf62275847d8c264044
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 409fd7f0cde2090b84ed2a997fedc43b2ffd5db7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-class-wizard"></a>MFC 類別精靈
 可讓您將訊息和訊息處理常式加入至專案中的類別。 您也可以啟動其他精靈，或將類別加入您的專案。  
@@ -104,5 +99,5 @@ ms.lasthandoff: 12/21/2017
   
  若要顯示的定義，請連按兩下中的項目**方法**清單。 或者，選取中的項目**方法**清單，然後按一下**移至定義** 按鈕。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入類別](../../ide/adding-a-class-visual-cpp.md)

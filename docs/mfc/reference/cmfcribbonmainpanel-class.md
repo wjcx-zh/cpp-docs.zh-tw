@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonMainPanel 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCRibbonMainPanel 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMainPanel
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b5508abdc90c4c566d078f2f75c30822c7a18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 類別
 實作功能區面板，其中顯示當您按一下[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)。  
@@ -86,7 +81,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 ## <a name="requirements"></a>需求  
  **標頭：** afxRibbonMainPanel.h  
   
-##  <a name="add"></a>CMFCRibbonMainPanel::Add  
+##  <a name="add"></a>  CMFCRibbonMainPanel::Add  
  將功能區項目加入至應用程式按鈕面板的左窗格中。  
   
 ```  
@@ -94,13 +89,13 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out]`pElem`  
+ [in][out] `pElem`  
  將新增到 [主面板] 功能區項目的指標。  
   
 ### <a name="remarks"></a>備註  
  將功能區項目的加入面板。 使用此方法加入的項目將會位於畫面左側的 [主面板]。  
   
-##  <a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
+##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList  
  將文字字串加入至新的檔案清單功能表。  
   
 ```  
@@ -118,7 +113,7 @@ void AddRecentFilesList(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
+##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom  
  將功能區項目加入至應用程式功能區面板的下方窗格中。  
   
 ```  
@@ -126,12 +121,12 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out]`pElem`  
+ [in][out] `pElem`  
  將新增到底部的 [主面板] 功能區項目的指標。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
+##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight  
  將功能區項目加入至應用程式按鈕面板的右窗格中。  
   
 ```  
@@ -150,7 +145,7 @@ void AddToRight(
 ### <a name="remarks"></a>備註  
  使用此函式右面板中加入功能區項目。 右側面板通常會顯示最近使用的檔案清單，但您可以加入其他任何功能區項目這裡。  
   
-##  <a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
+##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame  
  傳回代表 [功能區的 main] 面板的區域的矩形。  
   
 ```  
@@ -160,7 +155,7 @@ CRect GetCommandsFrame() const;
 ### <a name="return-value"></a>傳回值  
  代表功能區主面板的區域的矩形。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonPanel 類別](../../mfc/reference/cmfcribbonpanel-class.md)

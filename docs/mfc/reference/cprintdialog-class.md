@@ -1,12 +1,9 @@
 ---
-title: "CPrintDialog 類別 |Microsoft 文件"
-ms.custom: 
+title: CPrintDialog 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 類別
 封裝 Windows 通用列印對話方塊提供的服務。  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  如果您未提供您自己的控制代碼中`m_pd`如**hDevMode**和**hDevNames**成員，請務必呼叫 Windows 函式**GlobalFree**適用於這些控制代碼當您完成對話方塊。 當使用所提供的架構的列印設定實作`CWinApp::OnFilePrintSetup`，您沒有釋放這些控制代碼。 控點由維護`CWinApp`會釋出和`CWinApp`的解構函式。 時才需要使用時釋放這些控制代碼`CPrintDialog`獨立。  
   
- 初始化對話方塊控制項之後呼叫`DoModal`成員函式，以顯示對話方塊，並允許使用者選取列印選項。 `DoModal`傳回使用者是否選取 [確定] ( **IDOK**) 或 [取消] ( **IDCANCEL**) 按鈕。  
+ 初始化對話方塊控制項之後呼叫`DoModal`成員函式，以顯示對話方塊，並允許使用者選取列印選項。 `DoModal` 傳回使用者是否選取 [確定] \( **IDOK**) 或 [取消] \( **IDCANCEL**) 按鈕。  
   
  如果`DoModal`傳回**IDOK**，您可以使用其中一個`CPrintDialog`的成員函式來擷取使用者輸入的資訊。  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  您可以使用 Windows **CommDlgExtendedError**函式判斷是否在對話方塊的初始化期間發生錯誤，並深入了解錯誤。 如需有關此函式的詳細資訊，請參閱 Windows SDK。  
   
- `CPrintDialog`依賴 COMMDLG。隨附於 Windows 版本 3.1 和更新版本的 DLL 檔案。  
+ `CPrintDialog` 依賴 COMMDLG。隨附於 Windows 版本 3.1 和更新版本的 DLL 檔案。  
   
  若要自訂對話方塊中，衍生自`CPrintDialog`，提供自訂對話方塊範本中，加入處理從擴充的控制項通知訊息的訊息對應。 任何未處理的訊息應該傳遞給基底類別。 自訂攔截函式不需要。  
   
@@ -449,7 +444,7 @@ BOOL PrintSelection() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CPrintDialog::m_pd](#m_pd)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 DIBLOOK](../../visual-cpp-samples.md)   
  [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

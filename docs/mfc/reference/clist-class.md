@@ -1,12 +1,9 @@
 ---
-title: "CList 類別 |Microsoft 文件"
-ms.custom: 
+title: CList 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CList
@@ -59,17 +56,15 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d96a9c1a1b91d7738f768387bf0c24abd01ba22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clist-class"></a>CList 類別
 支援可循序或依值存取之非唯一物件的排序清單。  
@@ -123,7 +118,7 @@ class CList : public CObject
  用來參考儲存在清單中的物件類型。 可以是參考。  
   
 ## <a name="remarks"></a>備註  
- `CList`清單的行為與雙向連結清單。  
+ `CList` 清單的行為與雙向連結清單。  
   
  類型的變數**位置**是索引鍵的清單。 您可以使用**位置**變數作為迭代器周遊循序清單，以及可保存位置的書籤。 位置不是相同的索引，不過。  
   
@@ -146,7 +141,7 @@ class CList : public CObject
 ## <a name="requirements"></a>需求  
  **Header:** afxtempl.h  
   
-##  <a name="addhead"></a>CList::AddHead  
+##  <a name="addhead"></a>  CList::AddHead  
  將新項目或清單的項目加入至這份清單的開頭。  
   
 ```  
@@ -173,7 +168,7 @@ void AddHead(CList* pNewList);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
-##  <a name="addtail"></a>CList::AddTail  
+##  <a name="addtail"></a>  CList::AddTail  
  此清單的結尾，加入新項目或項目清單。  
   
 ```  
@@ -200,7 +195,7 @@ void AddTail(CList* pNewList);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
-##  <a name="clist"></a>CList::CList  
+##  <a name="clist"></a>  CList::CList  
  建構空的已排序的清單。  
   
 ```  
@@ -217,7 +212,7 @@ CList(INT_PTR nBlockSize = 10);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
-##  <a name="find"></a>CList::Find  
+##  <a name="find"></a>  CList::Find  
  會以循序方式來尋找符合指定的第一個項目清單中搜尋`searchValue`。  
   
 ```  
@@ -242,7 +237,7 @@ POSITION Find(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CList::FindIndex  
+##  <a name="findindex"></a>  CList::FindIndex  
  會使用值`nIndex`為清單中的索引。  
   
 ```  
@@ -257,12 +252,12 @@ POSITION FindIndex(INT_PTR nIndex) const;
  A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果`nIndex`是負數或太大。  
   
 ### <a name="remarks"></a>備註  
- 從清單中，停止上的開頭啟動循序掃描 *n* th 項目。  
+ 從清單中，停止上的開頭啟動循序掃描*n*th 項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
-##  <a name="getat"></a>CList::GetAt  
+##  <a name="getat"></a>  CList::GetAt  
  取得位於指定位置的清單項目。  
   
 ```  
@@ -281,14 +276,14 @@ const TYPE& GetAt(POSITION position) const;
  請參閱的傳回值描述`GetHead`。  
   
 ### <a name="remarks"></a>備註  
- `GetAt`傳回項目 （或元素的參考） 相關聯的指定位置。 它不是做為索引中，相同，而且無法用於**位置**自己的值。 類型的變數**位置**是索引鍵的清單。  
+ `GetAt` 傳回項目 （或元素的參考） 相關聯的指定位置。 它不是做為索引中，相同，而且無法用於**位置**自己的值。 類型的變數**位置**是索引鍵的清單。  
   
  您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CList::GetHeadPosition](#getheadposition)。  
   
-##  <a name="getcount"></a>CList::GetCount  
+##  <a name="getcount"></a>  CList::GetCount  
  這份清單中取得的項目數。  
   
 ```  
@@ -304,7 +299,7 @@ INT_PTR GetCount() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CList::RemoveHead](#removehead)。  
   
-##  <a name="gethead"></a>CList::GetHead  
+##  <a name="gethead"></a>  CList::GetHead  
  取得此清單的標頭項目 （或標頭元素的參考）。  
   
 ```  
@@ -328,7 +323,7 @@ TYPE& GetHead();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
-##  <a name="getheadposition"></a>CList::GetHeadPosition  
+##  <a name="getheadposition"></a>  CList::GetHeadPosition  
  取得標頭項目，此清單的位置。  
   
 ```  
@@ -341,7 +336,7 @@ POSITION GetHeadPosition() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
-##  <a name="getnext"></a>CList::GetNext  
+##  <a name="getnext"></a>  CList::GetNext  
  取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**清單中的下一個項目的值。  
   
 ```  
@@ -371,7 +366,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
-##  <a name="getprev"></a>CList::GetPrev  
+##  <a name="getprev"></a>  CList::GetPrev  
  取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**先前的項目在清單中的值。  
   
 ```  
@@ -401,7 +396,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
-##  <a name="getsize"></a>CList::GetSize  
+##  <a name="getsize"></a>  CList::GetSize  
  傳回清單項目數目。  
   
 ```  
@@ -417,7 +412,7 @@ INT_PTR GetSize() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
-##  <a name="gettail"></a>CList::GetTail  
+##  <a name="gettail"></a>  CList::GetTail  
  取得`CObject`指標，表示這份清單的結尾項目。  
   
 ```  
@@ -438,7 +433,7 @@ const TYPE& GetTail() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
-##  <a name="gettailposition"></a>CList::GetTailPosition  
+##  <a name="gettailposition"></a>  CList::GetTailPosition  
  取得此清單的結尾項目位置**NULL**如果清單是空的。  
   
 ```  
@@ -451,7 +446,7 @@ POSITION GetTailPosition() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
-##  <a name="insertafter"></a>CList::InsertAfter  
+##  <a name="insertafter"></a>  CList::InsertAfter  
  將項目加入到此清單之後的指定位置處的項目。  
   
 ```  
@@ -474,7 +469,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
   
-##  <a name="insertbefore"></a>CList::InsertBefore  
+##  <a name="insertbefore"></a>  CList::InsertBefore  
  將項目加入這份清單中相同項目之前的指定位置。  
   
 ```  
@@ -500,7 +495,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
-##  <a name="isempty"></a>CList::IsEmpty  
+##  <a name="isempty"></a>  CList::IsEmpty  
  指出此清單是否包含任何項目。  
   
 ```  
@@ -513,7 +508,7 @@ BOOL IsEmpty() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
-##  <a name="removeall"></a>CList::RemoveAll  
+##  <a name="removeall"></a>  CList::RemoveAll  
  從這個清單中移除所有項目，並釋放相關聯的記憶體。  
   
 ```  
@@ -526,7 +521,7 @@ void RemoveAll();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CList::RemoveAt  
+##  <a name="removeat"></a>  CList::RemoveAt  
  從這個清單中移除指定的項目。  
   
 ```  
@@ -543,7 +538,7 @@ void RemoveAt(POSITION position);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
-##  <a name="removehead"></a>CList::RemoveHead  
+##  <a name="removehead"></a>  CList::RemoveHead  
  從清單的開頭移除的項目，傳回的指標。  
   
 ```  
@@ -563,7 +558,7 @@ TYPE RemoveHead();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CList::RemoveTail  
+##  <a name="removetail"></a>  CList::RemoveTail  
  從清單的結尾的項目，傳回的指標。  
   
 ```  
@@ -583,7 +578,7 @@ TYPE RemoveTail();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
-##  <a name="setat"></a>CList::SetAt  
+##  <a name="setat"></a>  CList::SetAt  
  類型的變數**位置**是索引鍵的清單。  
   
 ```  
@@ -601,14 +596,14 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
  要加入至清單的項目。  
   
 ### <a name="remarks"></a>備註  
- 它不是做為索引中，相同，而且無法用於**位置**自己的值。 `SetAt`項目寫入至清單中指定的位置。  
+ 它不是做為索引中，相同，而且無法用於**位置**自己的值。 `SetAt` 項目寫入至清單中指定的位置。  
   
  您必須確定您**位置**值代表在清單中的有效位置。 如果無效，偵錯版本的 Mfc 程式庫判斷提示。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

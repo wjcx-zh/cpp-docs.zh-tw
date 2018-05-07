@@ -1,12 +1,9 @@
 ---
-title: "CMultiDocTemplate 類別 |Microsoft 文件"
-ms.custom: 
+title: CMultiDocTemplate 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiDocTemplate
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d5862a547b41ec8d359b09795f7b9985530fc97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 類別
 定義實作多重文件介面 (MDI) 的文件範本。  
@@ -77,7 +72,7 @@ class CMultiDocTemplate : public CDocTemplate
 ## <a name="requirements"></a>需求  
  **標題:** afxwin.h  
   
-##  <a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate  
+##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate  
  建構 `CMultiDocTemplate` 物件。  
   
 ```  
@@ -127,7 +122,7 @@ CMultiDocTemplate(
   
  [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDocTemplate 類別](../../mfc/reference/cdoctemplate-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDocTemplate 類別](../../mfc/reference/cdoctemplate-class.md)   

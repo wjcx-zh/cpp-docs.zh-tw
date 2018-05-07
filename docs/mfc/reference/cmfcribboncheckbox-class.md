@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonCheckBox 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCRibbonCheckBox 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc46d934c99e24b63ef314ef1f63402893c6bb18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 類別
 `CMFCRibbonCheckBox` 類別實作可以加入至功能區面板、快速存取工具列或快顯功能表的核取方塊。  
@@ -97,7 +92,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ## <a name="requirements"></a>需求  
  **標頭：** afxribboncheckbox.h  
   
-##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  功能區核取方塊，物件建構函式  
   
 ```  
@@ -121,7 +116,7 @@ CMFCRibbonCheckBox(
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
  覆寫時，取得核取方塊的壓縮大小。  
   
 ```  
@@ -138,7 +133,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
  如果未覆寫，會傳回中繼核取方塊的大小。  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
  取得中繼核取方塊的大小。  
   
 ```  
@@ -155,7 +150,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
  如果未覆寫，會計算為預設核取方塊大小的中繼大小 ( `AFX_CHECK_BOX_DEFAULT_SIZE`) 再加上文字的大小，再加上邊界。  
   
-##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
  取得規則的核取方塊大小。  
   
 ```  
@@ -172,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>備註  
  如果未覆寫，會傳回中繼核取方塊的大小。  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
  指出是否核取方塊相關聯的工具提示映像。  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
  由架構呼叫以繪製使用指定的裝置內容的核取方塊。  
   
 ```  
@@ -197,7 +192,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
  由架構呼叫以繪製功能表影像核取方塊。  
   
 ```  
@@ -217,7 +212,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>備註  
  如果未覆寫，就會傳回`FALSE`。  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
  由架構呼叫以繪製命令清單方塊中的核取方塊。  
   
 ```  
@@ -244,14 +239,14 @@ virtual void OnDrawOnList(
  核取方塊的顯示矩形。  
   
  [輸入] `bIsSelected`  
- `TRUE`如果選取此核取方塊，或`FALSE`如果不是。  
+ `TRUE` 如果選取此核取方塊，或`FALSE`如果不是。  
   
  [輸入] `bHighlighted`  
- `TRUE`如果核取方塊會反白顯示，或`FALSE`如果不是。  
+ `TRUE` 如果核取方塊會反白顯示，或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
  設定核取方塊的協助工具資料。  
   
 ```  
@@ -273,7 +268,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>備註  
  依預設這個方法會設定協助工具資料的核取方塊，一律會傳回`TRUE`。 覆寫此方法以設定協助工具資料並傳回值，以指出成功或失敗。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonPanel 類別](../../mfc/reference/cmfcribbonpanel-class.md)

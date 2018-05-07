@@ -1,12 +1,9 @@
 ---
-title: "CListCtrl 類別 |Microsoft 文件"
-ms.custom: 
+title: CListCtrl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CListCtrl
@@ -273,17 +270,15 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4d11da722ee9c933e6fbded6d8724db3da47ff4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b44878f5b860a05029f31492a7ca8ae06d83b607
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 封裝「清單檢視控制項」的功能，顯示項目集合，其中每個項目是由圖示 (來自影像清單) 和標籤所組成的。  
@@ -528,7 +523,7 @@ class CListCtrl : public CWnd
 ## <a name="requirements"></a>需求  
  **標頭：** afxcmn.h  
   
-##  <a name="approximateviewrect"></a>CListCtrl::ApproximateViewRect  
+##  <a name="approximateviewrect"></a>  CListCtrl::ApproximateViewRect  
  決定顯示清單檢視控制項的項目所需的高度與寬度。  
   
 ```  
@@ -551,7 +546,7 @@ CSize ApproximateViewRect(
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 巨集行為[ListView_ApproximateViewRect](http://msdn.microsoft.com/library/windows/desktop/bb761231)、 Windows SDK 中所述。  
   
-##  <a name="arrange"></a>CListCtrl::Arrange  
+##  <a name="arrange"></a>  CListCtrl::Arrange  
  重新調整位置圖示檢視中的項目，以便在方格上對齊。  
   
 ```  
@@ -562,13 +557,13 @@ BOOL Arrange(UINT nCode);
  `nCode`  
  指定對齊樣式項目。 它可以是下列值之一：  
   
-- `LVA_ALIGNLEFT`對齊視窗的左邊緣處的項目。  
+- `LVA_ALIGNLEFT` 對齊視窗的左邊緣處的項目。  
   
-- `LVA_ALIGNTOP`對齊視窗的上邊緣處的項目。  
+- `LVA_ALIGNTOP` 對齊視窗的上邊緣處的項目。  
   
-- `LVA_DEFAULT`對齊項目，根據目前對齊樣式清單檢視 （預設值）。  
+- `LVA_DEFAULT` 對齊項目，根據目前對齊樣式清單檢視 （預設值）。  
   
-- `LVA_SNAPTOGRID`最接近的方格位置貼齊所有圖示。  
+- `LVA_SNAPTOGRID` 最接近的方格位置貼齊所有圖示。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -585,7 +580,7 @@ BOOL Arrange(UINT nCode);
 ```
 
   
-##  <a name="canceleditlabel"></a>CListCtrl::CancelEditLabel  
+##  <a name="canceleditlabel"></a>  CListCtrl::CancelEditLabel  
  取消編輯作業的項目文字。  
   
 ```  
@@ -595,14 +590,14 @@ void CancelEditLabel();
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_CANCELEDITLABEL](http://msdn.microsoft.com/library/windows/desktop/bb774886)訊息、 Windows SDK 中所述。  
   
-##  <a name="clistctrl"></a>CListCtrl::CListCtrl  
+##  <a name="clistctrl"></a>  CListCtrl::CListCtrl  
  建構 `CListCtrl` 物件。  
   
 ```  
 CListCtrl();
 ```  
   
-##  <a name="create"></a>CListCtrl::Create  
+##  <a name="create"></a>  CListCtrl::Create  
  建立清單控制項，並將它附加至`CListCtrl`物件。  
   
 ```  
@@ -643,7 +638,7 @@ virtual BOOL Create(
 ```
 
   
-##  <a name="createex"></a>CListCtrl::CreateEx  
+##  <a name="createex"></a>  CListCtrl::CreateEx  
  建立控制項 （子視窗），並將它與相關聯`CListCtrl`物件。  
   
 ```  
@@ -677,9 +672,9 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
   
- `CreateEx`建立具有所指定的延伸視窗樣式控制項， `dwExStyle`。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設定做為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設定做為這類樣式**LVS_EX_FULLROWSELECT**。 如需詳細資訊，請參閱本主題中所述的樣式[擴充清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中。  
+ `CreateEx` 建立具有所指定的延伸視窗樣式控制項， `dwExStyle`。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`設定做為這類樣式**WS_EX_CONTEXTHELP**，但使用`SetExtendedStyle`設定做為這類樣式**LVS_EX_FULLROWSELECT**。 如需詳細資訊，請參閱本主題中所述的樣式[擴充清單檢視樣式](http://msdn.microsoft.com/library/windows/desktop/bb774732)Windows SDK 中。  
   
-##  <a name="createdragimage"></a>CListCtrl::CreateDragImage  
+##  <a name="createdragimage"></a>  CListCtrl::CreateDragImage  
  建立所指定的項目拖曳影像清單`nItem`。  
   
 ```  
@@ -711,7 +706,7 @@ CImageList* CreateDragImage(
 ```
 
   
-##  <a name="deleteallitems"></a>CListCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>  CListCtrl::DeleteAllItems  
  刪除清單檢視控制項中的所有項目。  
   
 ```  
@@ -730,7 +725,7 @@ BOOL DeleteAllItems();
 ```
 
   
-##  <a name="deletecolumn"></a>CListCtrl::DeleteColumn  
+##  <a name="deletecolumn"></a>  CListCtrl::DeleteColumn  
  刪除清單檢視控制項中的資料行。  
   
 ```  
@@ -757,7 +752,7 @@ BOOL DeleteColumn(int nCol);
 ```
 
   
-##  <a name="deleteitem"></a>CListCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CListCtrl::DeleteItem  
  刪除清單檢視控制項中的項目。  
   
 ```  
@@ -783,7 +778,7 @@ BOOL DeleteItem(int nItem);
 ```
 
   
-##  <a name="drawitem"></a>CListCtrl::DrawItem  
+##  <a name="drawitem"></a>  CListCtrl::DrawItem  
  當主控描繪清單檢視控制項變更的視覺外觀時，架構呼叫。  
   
 ```  
@@ -801,7 +796,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前此成員函式會結束。  
   
-##  <a name="editlabel"></a>CListCtrl::EditLabel  
+##  <a name="editlabel"></a>  CListCtrl::EditLabel  
  開始在就地編輯項目的文字。  
   
 ```  
@@ -832,7 +827,7 @@ CEdit* EditLabel(int nItem);
 ```
 
   
-##  <a name="enablegroupview"></a>CListCtrl::EnableGroupView  
+##  <a name="enablegroupview"></a>  CListCtrl::EnableGroupView  
  啟用或停用是否在清單檢視控制項中的項目顯示為群組。  
   
 ```  
@@ -855,7 +850,7 @@ LRESULT EnableGroupView(BOOL fEnable);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_ENABLEGROUPVIEW](http://msdn.microsoft.com/library/windows/desktop/bb774900)訊息、 Windows SDK 中所述。  
   
-##  <a name="ensurevisible"></a>CListCtrl::EnsureVisible  
+##  <a name="ensurevisible"></a>  CListCtrl::EnsureVisible  
  可確保至少部分顯示清單檢視項目是。  
   
 ```  
@@ -886,7 +881,7 @@ BOOL EnsureVisible(
 ```
 
   
-##  <a name="finditem"></a>CListCtrl::FindItem  
+##  <a name="finditem"></a>  CListCtrl::FindItem  
  搜尋具有指定特性的清單檢視項目。  
   
 ```  
@@ -925,7 +920,7 @@ int FindItem(
 ```
 
   
-##  <a name="getbkcolor"></a>CListCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CListCtrl::GetBkColor  
  擷取清單檢視控制項的背景色彩。  
   
 ```  
@@ -938,7 +933,7 @@ COLORREF GetBkColor() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::SetBkColor](#setbkcolor)。  
   
-##  <a name="getbkimage"></a>CListCtrl::GetBkImage  
+##  <a name="getbkimage"></a>  CListCtrl::GetBkImage  
  擷取目前的清單檢視控制項的背景影像。  
   
 ```  
@@ -971,7 +966,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
 ```
 
   
-##  <a name="getcallbackmask"></a>Clistctrl:: Getcallbackmask  
+##  <a name="getcallbackmask"></a>  Clistctrl:: Getcallbackmask  
  擷取清單檢視控制項的回呼遮罩。  
   
 ```  
@@ -987,7 +982,7 @@ UINT GetCallbackMask() const;
 ### <a name="example"></a>範例  
   請參閱範例的[clistctrl:: Setcallbackmask](#setcallbackmask)。  
   
-##  <a name="getcheck"></a>CListCtrl::GetCheck  
+##  <a name="getcheck"></a>  CListCtrl::GetCheck  
  擷取目前的顯示狀態項目相關聯之狀態影像。  
   
 ```  
@@ -1007,7 +1002,7 @@ BOOL GetCheck(int nItem) const;
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::SetCheck](#setcheck)。  
   
-##  <a name="getcolumn"></a>CListCtrl::GetColumn  
+##  <a name="getcolumn"></a>  CListCtrl::GetColumn  
  擷取清單檢視控制項的資料行的屬性。  
   
 ```  
@@ -1045,7 +1040,7 @@ BOOL GetColumn(
 ```
 
   
-##  <a name="getcolumnorderarray"></a>CListCtrl::GetColumnOrderArray  
+##  <a name="getcolumnorderarray"></a>  CListCtrl::GetColumnOrderArray  
  擷取清單檢視控制項的資料行順序 （由左到右）。  
   
 ```  
@@ -1096,7 +1091,7 @@ m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 ```
 
   
-##  <a name="getcolumnwidth"></a>CListCtrl::GetColumnWidth  
+##  <a name="getcolumnwidth"></a>  CListCtrl::GetColumnWidth  
  擷取報表檢視] 或 [清單檢視中的資料行的寬度。  
   
 ```  
@@ -1119,7 +1114,7 @@ int GetColumnWidth(int nCol) const;
 ```
 
   
-##  <a name="getcountperpage"></a>CListCtrl::GetCountPerPage  
+##  <a name="getcountperpage"></a>  CListCtrl::GetCountPerPage  
  計算所能容納垂直清單檢視控制項的可見區域在清單檢視或報表檢視中的項目數目。  
   
 ```  
@@ -1132,7 +1127,7 @@ int GetCountPerPage() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetTopIndex](#gettopindex)。  
   
-##  <a name="geteditcontrol"></a>CListCtrl::GetEditControl  
+##  <a name="geteditcontrol"></a>  CListCtrl::GetEditControl  
  擷取用來編輯清單檢視項目的文字編輯控制項的控制代碼。  
   
 ```  
@@ -1158,7 +1153,7 @@ CEdit* GetEditControl() const;
 ```
 
   
-##  <a name="getemptytext"></a>CListCtrl::GetEmptyText  
+##  <a name="getemptytext"></a>  CListCtrl::GetEmptyText  
  擷取要顯示目前的清單檢視控制項是空的字串。  
   
 ```  
@@ -1171,7 +1166,7 @@ CString GetEmptyText() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[LVM_GETEMPTYTEXT](http://msdn.microsoft.com/library/windows/desktop/bb774921) Windows SDK 中所述的訊息。  
   
-##  <a name="getextendedstyle"></a>CListCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CListCtrl::GetExtendedStyle  
  擷取目前的延伸的樣式的清單檢視控制項。  
   
 ```  
@@ -1187,7 +1182,7 @@ DWORD GetExtendedStyle();
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::SetExtendedStyle](#setextendedstyle)。  
   
-##  <a name="getfirstselecteditemposition"></a>CListCtrl::GetFirstSelectedItemPosition  
+##  <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition  
  取得清單檢視控制項中的第一個選取的項目位置。  
   
 ```  
@@ -1219,7 +1214,7 @@ POSITION GetFirstSelectedItemPosition() const;
 ```
 
   
-##  <a name="getfocusedgroup"></a>CListCtrl::GetFocusedGroup  
+##  <a name="getfocusedgroup"></a>  CListCtrl::GetFocusedGroup  
  擷取具有鍵盤焦點，在目前的清單檢視控制項中的群組。  
   
 ```  
@@ -1232,7 +1227,7 @@ int GetFocusedGroup() const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[LVM_GETFOCUSEDGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774925) Windows SDK 中所述的訊息。 如需詳細資訊，請參閱`LVGS_FOCUSED`值`state`隸屬[LVGROUP](http://msdn.microsoft.com/library/windows/desktop/bb774769)結構。  
   
-##  <a name="getgroupcount"></a>CListCtrl::GetGroupCount  
+##  <a name="getgroupcount"></a>  CListCtrl::GetGroupCount  
  擷取目前的清單檢視控制項中的群組數目。  
   
 ```  
@@ -1245,7 +1240,7 @@ int GetGroupCount()const;
 ### <a name="remarks"></a>備註  
  這個方法會傳送[LVM_GETGROUPCOUNT](http://msdn.microsoft.com/library/windows/desktop/bb774931) --> Windows SDK 中所述的訊息。  
   
-##  <a name="getgroupinfo"></a>CListCtrl::GetGroupInfo  
+##  <a name="getgroupinfo"></a>  CListCtrl::GetGroupInfo  
  取得一組指定的清單檢視控制項中的資訊。  
   
 ```  
@@ -1267,7 +1262,7 @@ int GetGroupInfo(
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb774932)訊息、 Windows SDK 中所述。  
   
-##  <a name="getgroupinfobyindex"></a>CListCtrl::GetGroupInfoByIndex  
+##  <a name="getgroupinfobyindex"></a>  CListCtrl::GetGroupInfoByIndex  
  擷取目前的清單檢視控制項中的指定群組的相關資訊。  
   
 ```  
@@ -1329,7 +1324,7 @@ public:
 ```
 
   
-##  <a name="getgroupmetrics"></a>CListCtrl::GetGroupMetrics  
+##  <a name="getgroupmetrics"></a>  CListCtrl::GetGroupMetrics  
  擷取群組的度量。  
   
 ```  
@@ -1343,7 +1338,7 @@ void GetGroupMetrics(PLVGROUPMETRICS pGroupMetrics) const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb774934)訊息、 Windows SDK 中所述。  
   
-##  <a name="getgrouprect"></a>CListCtrl::GetGroupRect  
+##  <a name="getgrouprect"></a>  CListCtrl::GetGroupRect  
  擷取目前的清單檢視控制項中的指定群組之周框。  
   
 ```  
@@ -1359,7 +1354,7 @@ BOOL GetGroupRect(
 |---------------|-----------------|  
 |[輸入] `iGroupId`|指定的群組。|  
 |[in、out] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 如果此方法成功，結構將會收到群組所指定的矩形座標`iGroupId`。|  
-|[輸入] `iCoords`|指定要擷取的矩形座標。 使用下列值之一：<br /><br /> - `LVGGR_GROUP`-整個展開群組的 （預設值） 座標。<br />- `LVGGR_HEADER`座標只標頭 （摺疊的群組）。<br />- `LVGGR_SUBSETLINK`座標只有子集連結 （標記子集）。|  
+|[輸入] `iCoords`|指定要擷取的矩形座標。 使用下列值之一：<br /><br /> - `LVGGR_GROUP` -整個展開群組的 （預設值） 座標。<br />- `LVGGR_HEADER` 座標只標頭 （摺疊的群組）。<br />- `LVGGR_SUBSETLINK` 座標只有子集連結 （標記子集）。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1397,7 +1392,7 @@ public:
 ```
 
   
-##  <a name="getgroupstate"></a>CListCtrl::GetGroupState  
+##  <a name="getgroupstate"></a>  CListCtrl::GetGroupState  
  擷取目前的清單檢視控制項中指定之群組的狀態。  
   
 ```  
@@ -1421,7 +1416,7 @@ UINT GetGroupState(
   
  這個方法會傳送[LVM_GETGROUPSTATE](http://msdn.microsoft.com/library/windows/desktop/bb774936) Windows SDK 中所述的訊息。 如需詳細資訊，請參閱[ListView_GetGroupState](http://msdn.microsoft.com/library/windows/desktop/bb761288)巨集。  
   
-##  <a name="getheaderctrl"></a>CListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>  CListCtrl::GetHeaderCtrl  
  擷取清單檢視控制項的標題控制項。  
   
 ```  
@@ -1437,7 +1432,7 @@ CHeaderCtrl* GetHeaderCtrl();
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。  
   
-##  <a name="gethotcursor"></a>CListCtrl::GetHotCursor  
+##  <a name="gethotcursor"></a>  CListCtrl::GetHotCursor  
  擷取資料指標已啟用熱追蹤的清單檢視控制項時使用。  
   
 ```  
@@ -1460,7 +1455,7 @@ HCURSOR GetHotCursor();
 ```
 
   
-##  <a name="gethotitem"></a>CListCtrl::GetHotItem  
+##  <a name="gethotitem"></a>  CListCtrl::GetHotItem  
  擷取目前游標下的清單檢視項目。  
   
 ```  
@@ -1485,7 +1480,7 @@ int GetHotItem();
 ```
 
   
-##  <a name="gethovertime"></a>CListCtrl::GetHoverTime  
+##  <a name="gethovertime"></a>  CListCtrl::GetHoverTime  
  擷取目前暫留時間的清單檢視控制項。  
   
 ```  
@@ -1508,7 +1503,7 @@ DWORD GetHoverTime() const;
 ```
 
   
-##  <a name="getimagelist"></a>CListCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CListCtrl::GetImageList  
  擷取用於繪圖的清單檢視項目影像清單控制代碼。  
   
 ```  
@@ -1519,11 +1514,11 @@ CImageList* GetImageList(int nImageList) const;
  `nImageList`  
  值，指定要擷取的映像清單。 它可以是下列值之一：  
   
-- `LVSIL_NORMAL`使用大圖示的影像清單。  
+- `LVSIL_NORMAL` 使用大圖示的影像清單。  
   
-- `LVSIL_SMALL`使用小圖示的影像清單。  
+- `LVSIL_SMALL` 使用小圖示的影像清單。  
   
-- `LVSIL_STATE`狀態影像的影像清單。  
+- `LVSIL_STATE` 狀態影像的影像清單。  
   
 ### <a name="return-value"></a>傳回值  
  用於繪製清單檢視項目影像清單的指標。  
@@ -1537,7 +1532,7 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
 ```
 
   
-##  <a name="getinsertmark"></a>CListCtrl::GetInsertMark  
+##  <a name="getinsertmark"></a>  CListCtrl::GetInsertMark  
  擷取目前的插入標記的位置。  
   
 ```  
@@ -1554,7 +1549,7 @@ BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb774945)訊息、 Windows SDK 中所述。  
   
-##  <a name="getinsertmarkcolor"></a>CListCtrl::GetInsertMarkColor  
+##  <a name="getinsertmarkcolor"></a>  CListCtrl::GetInsertMarkColor  
  擷取目前的插入標記色彩。  
   
 ```  
@@ -1567,7 +1562,7 @@ COLORREF GetInsertMarkColor() const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb774947)訊息、 Windows SDK 中所述。  
   
-##  <a name="getinsertmarkrect"></a>CListCtrl::GetInsertMarkRect  
+##  <a name="getinsertmarkrect"></a>  CListCtrl::GetInsertMarkRect  
  擷取範圍插入點的矩形。  
   
 ```  
@@ -1588,7 +1583,7 @@ int GetInsertMarkRect(LPRECT pRect) const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETINSERTMARKRECT](http://msdn.microsoft.com/library/windows/desktop/bb774949)訊息、 Windows SDK 中所述。  
   
-##  <a name="getitem"></a>Clistctrl:: Getitem  
+##  <a name="getitem"></a>  Clistctrl:: Getitem  
  擷取部分或所有的清單檢視項目的屬性。  
   
 ```  
@@ -1605,7 +1600,7 @@ BOOL GetItem(LVITEM* pItem) const;
 ### <a name="remarks"></a>備註  
  **LVITEM**結構指定或接收的清單檢視項目屬性。  
   
-##  <a name="getitemcount"></a>CListCtrl::GetItemCount  
+##  <a name="getitemcount"></a>  CListCtrl::GetItemCount  
  擷取清單檢視控制項中的項目數目。  
   
 ```  
@@ -1618,7 +1613,7 @@ int GetItemCount() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::DeleteItem](#deleteitem)。  
   
-##  <a name="getitemdata"></a>CListCtrl::GetItemData  
+##  <a name="getitemdata"></a>  CListCtrl::GetItemData  
  擷取所指定的項目相關聯的 32 位元應用程式專屬值`nItem`。  
   
 ```  
@@ -1649,7 +1644,7 @@ DWORD_PTR GetItemData(int nItem) const;
 ```
 
   
-##  <a name="getitemindexrect"></a>CListCtrl::GetItemIndexRect  
+##  <a name="getitemindexrect"></a>  CListCtrl::GetItemIndexRect  
  擷取所有或部分的目前清單檢視控制項中的子項目，這個周框。  
   
 ```  
@@ -1666,7 +1661,7 @@ BOOL GetItemIndexRect(
 |---------------|-----------------|  
 |[輸入] `pItemIndex`|指標[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)子項目的父項的結構。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 此參數不得為`NULL`。|  
 |[輸入] `iColumn`|控制項中的資料行以零為起始的索引。|  
-|[輸入] `rectType`|這擷取週框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> `LVIR_BOUNDS`-傳回整個子項目，包括圖示與標籤的周框矩形。<br /><br /> `LVIR_ICON`-傳回圖示或小圖示的子項目的週的框。<br /><br /> `LVIR_LABEL`-傳回子項目文字的週框矩形。|  
+|[輸入] `rectType`|這擷取週框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> `LVIR_BOUNDS` -傳回整個子項目，包括圖示與標籤的周框矩形。<br /><br /> `LVIR_ICON` -傳回圖示或小圖示的子項目的週的框。<br /><br /> `LVIR_LABEL` -傳回子項目文字的週框矩形。|  
 |[輸出] `pRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收子項目的周框的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。 此參數不得為`NULL`。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -1703,7 +1698,7 @@ public:
 ```
 
   
-##  <a name="getitemposition"></a>CListCtrl::GetItemPosition  
+##  <a name="getitemposition"></a>  CListCtrl::GetItemPosition  
  擷取清單檢視項目的位置。  
   
 ```  
@@ -1739,7 +1734,7 @@ BOOL GetItemPosition(
 ```
 
   
-##  <a name="getitemrect"></a>CListCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CListCtrl::GetItemRect  
  擷取所有或部分在目前檢視中的項目，這個周框。  
   
 ```  
@@ -1759,11 +1754,11 @@ BOOL GetItemRect(
  `nCode`  
  清單檢視項目，要擷取之周框的部分。 它可以是下列值之一：  
   
-- `LVIR_BOUNDS`傳回整個項目，包括圖示與標籤的周框矩形。  
+- `LVIR_BOUNDS` 傳回整個項目，包括圖示與標籤的周框矩形。  
   
-- `LVIR_ICON`傳回圖示或小圖示的週框矩形。  
+- `LVIR_ICON` 傳回圖示或小圖示的週框矩形。  
   
-- `LVIR_LABEL`傳回項目文字的週框的矩形。  
+- `LVIR_LABEL` 傳回項目文字的週框的矩形。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
@@ -1811,7 +1806,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 ```
 
   
-##  <a name="getitemspacing"></a>CListCtrl::GetItemSpacing  
+##  <a name="getitemspacing"></a>  CListCtrl::GetItemSpacing  
  計算目前的清單檢視控制項中的項目之間的間距。  
   
 ```  
@@ -1835,7 +1830,7 @@ BOOL GetItemSpacing(
 ### <a name="remarks"></a>備註  
  這個方法會傳送[LVM_GETITEMSPACING](http://msdn.microsoft.com/library/windows/desktop/bb761051) Windows SDK 中所述的訊息。  
   
-##  <a name="getitemstate"></a>CListCtrl::GetItemState  
+##  <a name="getitemstate"></a>  CListCtrl::GetItemState  
  擷取清單檢視項目的狀態。  
   
 ```  
@@ -1860,7 +1855,7 @@ UINT GetItemState(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetTopIndex](#gettopindex)。  
   
-##  <a name="getitemtext"></a>CListCtrl::GetItemText  
+##  <a name="getitemtext"></a>  CListCtrl::GetItemText  
  擷取清單檢視項目或子項目文字。  
   
 ```  
@@ -1896,7 +1891,7 @@ CString GetItemText(
 ### <a name="remarks"></a>備註  
  如果`nSubItem`為零，此函式會擷取項目標籤; 如果`nSubItem`為非零，它會擷取子項目的文字。 如需子項目的引數的詳細資訊，請參閱的討論[LVITEM](http://msdn.microsoft.com/library/windows/desktop/bb774760) Windows SDK 中的結構。  
   
-##  <a name="getnextitem"></a>CListCtrl::GetNextItem  
+##  <a name="getnextitem"></a>  CListCtrl::GetNextItem  
  搜尋清單檢視項目具有指定的屬性，且，具有給定的項目之指定關聯性。  
   
 ```  
@@ -1912,30 +1907,30 @@ int GetNextItem(
  `nFlags`  
  幾何要求的項目指定的項目，並要求的項目狀態的關聯。 幾何關聯可以是下列值之一：  
   
-- `LVNI_ABOVE`搜尋指定的項目上方的項目。  
+- `LVNI_ABOVE` 搜尋指定的項目上方的項目。  
   
-- `LVNI_ALL`搜尋後續的項目，依索引 （預設值）。  
+- `LVNI_ALL` 搜尋後續的項目，依索引 （預設值）。  
   
-- `LVNI_BELOW`搜尋指定的項目底下的項目。  
+- `LVNI_BELOW` 搜尋指定的項目底下的項目。  
   
-- `LVNI_TOLEFT`搜尋指定的項目左邊的項目。  
+- `LVNI_TOLEFT` 搜尋指定的項目左邊的項目。  
   
-- `LVNI_TORIGHT`搜尋指定的項目右邊項目。  
+- `LVNI_TORIGHT` 搜尋指定的項目右邊項目。  
   
  這個狀態可以是零，或它可以是下列其中一個或多個這些值：  
   
-- `LVNI_DROPHILITED`項目有`LVIS_DROPHILITED`狀態旗標集。  
+- `LVNI_DROPHILITED` 項目有`LVIS_DROPHILITED`狀態旗標集。  
   
-- `LVNI_FOCUSED`項目有`LVIS_FOCUSED`狀態旗標集。  
+- `LVNI_FOCUSED` 項目有`LVIS_FOCUSED`狀態旗標集。  
   
-- `LVNI_SELECTED`項目有`LVIS_SELECTED`狀態旗標集。  
+- `LVNI_SELECTED` 項目有`LVIS_SELECTED`狀態旗標集。  
   
  如果項目未包含所有指定的狀態旗標設定，搜尋會繼續進行下一個項目中。  
   
 ### <a name="return-value"></a>傳回值  
  下一個項目，如果成功，否則為-1 的索引。  
   
-##  <a name="getnextitemindex"></a>CListCtrl::GetNextItemIndex  
+##  <a name="getnextitemindex"></a>  CListCtrl::GetNextItemIndex  
  擷取具有指定的屬性集的目前清單檢視控制項中項目的索引。  
   
 ```  
@@ -1959,7 +1954,7 @@ BOOL GetNextItemIndex(
   
  這個方法會傳送[LVM_GETNEXTITEMINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761059) Windows SDK 中所述的訊息。  
   
-##  <a name="getnextselecteditem"></a>CListCtrl::GetNextSelectedItem  
+##  <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem  
  取得索引所識別之清單項目的`pos`，然後設定*pos*至**位置**值。  
   
 ```  
@@ -1999,7 +1994,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 ```
 
   
-##  <a name="getnumberofworkareas"></a>CListCtrl::GetNumberOfWorkAreas  
+##  <a name="getnumberofworkareas"></a>  CListCtrl::GetNumberOfWorkAreas  
  擷取目前的工作區清單檢視控制項的數目。  
   
 ```  
@@ -2041,7 +2036,7 @@ UINT GetNumberOfWorkAreas() const;
 ```
 
   
-##  <a name="getoutlinecolor"></a>CListCtrl::GetOutlineColor  
+##  <a name="getoutlinecolor"></a>  CListCtrl::GetOutlineColor  
  擷取清單檢視控制項的框線的色彩。  
   
 ```  
@@ -2054,7 +2049,7 @@ COLORREF GetOutlineColor() const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761065)訊息、 Windows SDK 中所述。  
   
-##  <a name="getorigin"></a>CListCtrl::GetOrigin  
+##  <a name="getorigin"></a>  CListCtrl::GetOrigin  
  擷取清單檢視控制項的目前檢視原點。  
   
 ```  
@@ -2068,7 +2063,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。 不過，如果控制項是在報表檢視中，傳回值永遠是零。  
   
-##  <a name="getselectedcolumn"></a>CListCtrl::GetSelectedColumn  
+##  <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn  
  擷取清單控制項中目前選取的資料行的索引。  
   
 ```  
@@ -2081,7 +2076,7 @@ UINT GetSelectedColumn() const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761067)訊息、 Windows SDK 中所述。  
   
-##  <a name="getselectedcount"></a>CListCtrl::GetSelectedCount  
+##  <a name="getselectedcount"></a>  CListCtrl::GetSelectedCount  
  擷取清單檢視控制項中選取的項目數目。  
   
 ```  
@@ -2110,7 +2105,7 @@ UINT GetSelectedCount() const;
 ```
 
   
-##  <a name="getselectionmark"></a>CListCtrl::GetSelectionMark  
+##  <a name="getselectionmark"></a>  CListCtrl::GetSelectionMark  
  擷取清單檢視控制項的選取項目符號。  
   
 ```  
@@ -2133,7 +2128,7 @@ int GetSelectionMark();
 ```
 
   
-##  <a name="getstringwidth"></a>CListCtrl::GetStringWidth  
+##  <a name="getstringwidth"></a>  CListCtrl::GetStringWidth  
  決定要顯示所有指定的字串所需的最小的資料行寬度。  
   
 ```  
@@ -2167,7 +2162,7 @@ int GetStringWidth(LPCTSTR lpsz) const;
 ```
 
   
-##  <a name="getsubitemrect"></a>CListCtrl::GetSubItemRect  
+##  <a name="getsubitemrect"></a>  CListCtrl::GetSubItemRect  
  擷取清單檢視控制項中項目的週框。  
   
 ```  
@@ -2188,11 +2183,11 @@ BOOL GetSubItemRect(
  *nArea*  
  決定要擷取的周框 （清單檢視子項目） 的一部分。 將位元 OR 運算子套用至一或多個下列值所指定的周框的部分 （圖示、 標籤，或兩者）：  
   
-- `LVIR_BOUNDS`傳回整個項目，包括圖示與標籤的周框矩形。  
+- `LVIR_BOUNDS` 傳回整個項目，包括圖示與標籤的周框矩形。  
   
-- `LVIR_ICON`傳回圖示或小圖示的週框矩形。  
+- `LVIR_ICON` 傳回圖示或小圖示的週框矩形。  
   
-- `LVIR_LABEL`傳回整個項目，包括圖示與標籤的周框矩形。 這等同於`LVIR_BOUNDS`。  
+- `LVIR_LABEL` 傳回整個項目，包括圖示與標籤的周框矩形。 這等同於`LVIR_BOUNDS`。  
   
  `ref`  
  若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含的子項目的座標之周框。  
@@ -2203,7 +2198,7 @@ BOOL GetSubItemRect(
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 巨集行為[ListView_GetSubItemRect](http://msdn.microsoft.com/library/windows/desktop/bb775004)、 Windows SDK 中所述。  
   
-##  <a name="gettextbkcolor"></a>CListCtrl::GetTextBkColor  
+##  <a name="gettextbkcolor"></a>  CListCtrl::GetTextBkColor  
  擷取清單檢視控制項的文字背景色彩。  
   
 ```  
@@ -2216,7 +2211,7 @@ COLORREF GetTextBkColor() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::SetTextBkColor](#settextbkcolor)。  
   
-##  <a name="gettextcolor"></a>CListCtrl::GetTextColor  
+##  <a name="gettextcolor"></a>  CListCtrl::GetTextColor  
  擷取清單檢視控制項的文字色彩。  
   
 ```  
@@ -2229,7 +2224,7 @@ COLORREF GetTextColor() const;
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::SetTextColor](#settextcolor)。  
   
-##  <a name="gettileinfo"></a>CListCtrl::GetTileInfo  
+##  <a name="gettileinfo"></a>  CListCtrl::GetTileInfo  
  擷取清單檢視控制項中的磚相關資訊。  
   
 ```  
@@ -2246,7 +2241,7 @@ BOOL GetTileInfo(PLVTILEINFO pti) const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761081)訊息、 Windows SDK 中所述。  
   
-##  <a name="gettileviewinfo"></a>CListCtrl::GetTileViewInfo  
+##  <a name="gettileviewinfo"></a>  CListCtrl::GetTileViewInfo  
  擷取清單檢視控制項中並排顯示檢視相關資訊。  
   
 ```  
@@ -2263,7 +2258,7 @@ BOOL GetTileViewInfo(PLVTILEVIEWINFO ptvi) const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761083)訊息、 Windows SDK 中所述。  
   
-##  <a name="gettooltips"></a>CListCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CListCtrl::GetToolTips  
  擷取清單檢視控制項顯示工具提示所使用的工具提示控制項。  
   
 ```  
@@ -2288,7 +2283,7 @@ CToolTipCtrl* GetToolTips() const;
 ```
 
   
-##  <a name="gettopindex"></a>CListCtrl::GetTopIndex  
+##  <a name="gettopindex"></a>  CListCtrl::GetTopIndex  
  在清單檢視或檢視報表時擷取最上層的可見項目的索引。  
   
 ```  
@@ -2317,7 +2312,7 @@ int GetTopIndex() const;
 ```
 
   
-##  <a name="getview"></a>CListCtrl::GetView  
+##  <a name="getview"></a>  CListCtrl::GetView  
  取得清單檢視控制項的檢視。  
   
 ```  
@@ -2330,7 +2325,7 @@ DWORD GetView() const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_GETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761091)訊息、 Windows SDK 中所述。  
   
-##  <a name="getviewrect"></a>CListCtrl::GetViewRect  
+##  <a name="getviewrect"></a>  CListCtrl::GetViewRect  
  擷取清單檢視控制項中的所有項目的週框。  
   
 ```  
@@ -2347,7 +2342,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="remarks"></a>備註  
  清單檢視中必須是圖示檢視或小圖示檢視中。  
   
-##  <a name="getworkareas"></a>CListCtrl::GetWorkAreas  
+##  <a name="getworkareas"></a>  CListCtrl::GetWorkAreas  
  擷取目前的工作區的清單檢視控制項。  
   
 ```  
@@ -2369,7 +2364,7 @@ void GetWorkAreas(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)。  
   
-##  <a name="hasgroup"></a>CListCtrl::HasGroup  
+##  <a name="hasgroup"></a>  CListCtrl::HasGroup  
  決定清單檢視控制項是否有指定的群組。  
   
 ```  
@@ -2386,7 +2381,7 @@ BOOL HasGroup(int iGroupId) const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_HASGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761097)訊息、 Windows SDK 中所述。  
   
-##  <a name="hittest"></a>CListCtrl::HitTest  
+##  <a name="hittest"></a>  CListCtrl::HitTest  
  判斷哪一個清單檢視項目中，任何，位於指定位置。  
   
 ```  
@@ -2438,7 +2433,7 @@ void CListCtrlDlg::OnRClick(NMHDR* pNMHDR, LRESULT* pResult)
 ```
 
   
-##  <a name="insertcolumn"></a>CListCtrl::InsertColumn  
+##  <a name="insertcolumn"></a>  CListCtrl::InsertColumn  
  清單檢視控制項中插入新的資料行。  
   
 ```  
@@ -2482,7 +2477,7 @@ int InsertColumn(
   
  [LVCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb774743)結構包含在報表檢視中的資料行的屬性。 它也用來接收資料行的相關資訊。 這個結構是 Windows SDK 中所述。  
   
-##  <a name="insertgroup"></a>CListCtrl::InsertGroup  
+##  <a name="insertgroup"></a>  CListCtrl::InsertGroup  
  插入清單檢視控制項中的群組。  
   
 ```  
@@ -2492,7 +2487,7 @@ LRESULT InsertGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- *索引*  
+ *index*  
  群組是要插入之項目的索引。  
   
  `pgrp`  
@@ -2504,7 +2499,7 @@ LRESULT InsertGroup(
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_INSERTGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761103)訊息、 Windows SDK 中所述。  
   
-##  <a name="insertgroupsorted"></a>CListCtrl::InsertGroupSorted  
+##  <a name="insertgroupsorted"></a>  CListCtrl::InsertGroupSorted  
  將指定的群組插入至群組的已排序清單。  
   
 ```  
@@ -2521,7 +2516,7 @@ LRESULT InsertGroupSorted(PLVINSERTGROUPSORTED pStructInsert);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_INSERTGROUPSORTED](http://msdn.microsoft.com/library/windows/desktop/bb761105)訊息、 Windows SDK 中所述。  
   
-##  <a name="insertitem"></a>CListCtrl::InsertItem  
+##  <a name="insertitem"></a>  CListCtrl::InsertItem  
  清單檢視控制項中插入項目。  
   
 ```  
@@ -2605,7 +2600,7 @@ int InsertItem(
 ```
 
   
-##  <a name="insertmarkhittest"></a>CListCtrl::InsertMarkHitTest  
+##  <a name="insertmarkhittest"></a>  CListCtrl::InsertMarkHitTest  
  擷取最接近的指定點的插入點。  
   
 ```  
@@ -2627,7 +2622,7 @@ int InsertMarkHitTest(
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_INSERTMARKHITTEST](http://msdn.microsoft.com/library/windows/desktop/bb761131)訊息、 Windows SDK 中所述。  
   
-##  <a name="isgroupviewenabled"></a>CListCtrl::IsGroupViewEnabled  
+##  <a name="isgroupviewenabled"></a>  CListCtrl::IsGroupViewEnabled  
  判斷是否啟用清單檢視控制項的群組檢視。  
   
 ```  
@@ -2640,7 +2635,7 @@ BOOL IsGroupViewEnabled() const;
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_ISGROUPVIEWENABLED](http://msdn.microsoft.com/library/windows/desktop/bb761133)訊息、 Windows SDK 中所述。  
   
-##  <a name="isitemvisible"></a>CListCtrl::IsItemVisible  
+##  <a name="isitemvisible"></a>  CListCtrl::IsItemVisible  
  指出目前的清單檢視控制項中指定的項目是否可見。  
   
 ```  
@@ -2654,12 +2649,12 @@ BOOL IsItemVisible(int index) const;
 |[輸入] `index`|目前的清單檢視控制項中的項目以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果指定的項目為可見，否則`false`。  
+ `true` 如果指定的項目為可見，否則`false`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[LVM_ISITEMVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb761135) Windows SDK 中所述的訊息。  
   
-##  <a name="mapidtoindex"></a>CListCtrl::MapIDToIndex  
+##  <a name="mapidtoindex"></a>  CListCtrl::MapIDToIndex  
  將目前的清單檢視控制項中項目的唯一識別碼對應至索引。  
   
 ```  
@@ -2682,7 +2677,7 @@ UINT MapIDToIndex(UINT id) const;
   
  這個方法會傳送[LVM_MAPIDTOINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761137) Windows SDK 中所述的訊息。  
   
-##  <a name="mapindextoid"></a>CListCtrl::MapIndexToID  
+##  <a name="mapindextoid"></a>  CListCtrl::MapIndexToID  
  將目前的清單檢視控制項中項目的索引對應到唯一的識別碼。  
   
 ```  
@@ -2745,7 +2740,7 @@ public:
 ```
 
   
-##  <a name="movegroup"></a>CListCtrl::MoveGroup  
+##  <a name="movegroup"></a>  CListCtrl::MoveGroup  
  移動指定群組於指定的清單檢視控制項的零起始的索引。  
   
 ```  
@@ -2767,7 +2762,7 @@ LRESULT MoveGroup(
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_MOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761141)訊息、 Windows SDK 中所述。  
   
-##  <a name="moveitemtogroup"></a>CListCtrl::MoveItemToGroup  
+##  <a name="moveitemtogroup"></a>  CListCtrl::MoveItemToGroup  
  將指定的項目移至指定的群組。  
   
 ```  
@@ -2790,7 +2785,7 @@ void MoveItemToGroup(
   
  這個方法會模擬的功能[LVM_MOVEITEMTOGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761143)訊息、 Windows SDK 中所述。  
   
-##  <a name="redrawitems"></a>CListCtrl::RedrawItems  
+##  <a name="redrawitems"></a>  CListCtrl::RedrawItems  
  會強制重新繪製的項目範圍的清單檢視控制項。  
   
 ```  
@@ -2812,7 +2807,7 @@ BOOL RedrawItems(
 ### <a name="remarks"></a>備註  
  指定的項目都會不實際重新繪製直到接收到 [清單] 檢視視窗`WM_PAINT`訊息。 若要立即重繪，呼叫 Windows [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167)之後使用這個函式的函式。  
   
-##  <a name="removeallgroups"></a>CListCtrl::RemoveAllGroups  
+##  <a name="removeallgroups"></a>  CListCtrl::RemoveAllGroups  
  從清單檢視控制項中移除所有群組。  
   
 ```  
@@ -2822,7 +2817,7 @@ void RemoveAllGroups();
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_REMOVEALLGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761147)訊息、 Windows SDK 中所述。  
   
-##  <a name="removegroup"></a>CListCtrl::RemoveGroup  
+##  <a name="removegroup"></a>  CListCtrl::RemoveGroup  
  從清單檢視控制項中移除指定的群組。  
   
 ```  
@@ -2839,7 +2834,7 @@ LRESULT RemoveGroup(int iGroupId);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_REMOVEGROUP](http://msdn.microsoft.com/library/windows/desktop/bb761149)訊息、 Windows SDK 中所述。  
   
-##  <a name="scroll"></a>CListCtrl::Scroll  
+##  <a name="scroll"></a>  CListCtrl::Scroll  
  捲動清單檢視控制項的內容。  
   
 ```  
@@ -2853,7 +2848,7 @@ BOOL Scroll(CSize size);
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
   
-##  <a name="setbkcolor"></a>CListCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CListCtrl::SetBkColor  
  設定清單檢視控制項的背景的色彩。  
   
 ```  
@@ -2878,7 +2873,7 @@ BOOL SetBkColor(COLORREF cr);
 ```
 
   
-##  <a name="setbkimage"></a>CListCtrl::SetBkImage  
+##  <a name="setbkimage"></a>  CListCtrl::SetBkImage  
  設定清單檢視控制項的背景的影像。  
   
 ```  
@@ -2927,7 +2922,7 @@ BOOL SetBkImage(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetBkImage](#getbkimage)。  
   
-##  <a name="setcallbackmask"></a>Clistctrl:: Setcallbackmask  
+##  <a name="setcallbackmask"></a>  Clistctrl:: Setcallbackmask  
  設定清單檢視控制項的回呼遮罩。  
   
 ```  
@@ -2953,7 +2948,7 @@ BOOL SetCallbackMask(UINT nMask);
 ```
 
 
-##  <a name="setcheck"></a>CListCtrl::SetCheck  
+##  <a name="setcheck"></a>  CListCtrl::SetCheck  
  決定狀態的影像清單控制項項目是否可見。  
   
 ```  
@@ -2991,7 +2986,7 @@ BOOL SetCheck(
 ```
 
   
-##  <a name="setcolumn"></a>CListCtrl::SetColumn  
+##  <a name="setcolumn"></a>  CListCtrl::SetColumn  
  設定的清單檢視資料行的屬性。  
   
 ```  
@@ -3013,7 +3008,7 @@ BOOL SetColumn(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetColumn](#getcolumn)。  
   
-##  <a name="setcolumnorderarray"></a>CListCtrl::SetColumnOrderArray  
+##  <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray  
  設定清單檢視控制項的資料行順序 （由左到右）。  
   
 ```  
@@ -3038,7 +3033,7 @@ BOOL SetColumnOrderArray(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。  
   
-##  <a name="setcolumnwidth"></a>CListCtrl::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth  
  報表檢視] 或 [清單檢視中的資料行的寬度變更。  
   
 ```  
@@ -3057,7 +3052,7 @@ BOOL SetColumnWidth(
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
   
-##  <a name="setextendedstyle"></a>CListCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CListCtrl::SetExtendedStyle  
  設定目前延伸的清單檢視控制項的樣式。  
   
 ```  
@@ -3084,7 +3079,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle);
 ```
 
   
-##  <a name="setgroupinfo"></a>CListCtrl::SetGroupInfo  
+##  <a name="setgroupinfo"></a>  CListCtrl::SetGroupInfo  
  設定描述指定的群組的目前清單檢視控制項的資訊。  
   
 ```  
@@ -3106,7 +3101,7 @@ int SetGroupInfo(
 ### <a name="remarks"></a>備註  
  這個方法會傳送[LVM_SETGROUPINFO](http://msdn.microsoft.com/library/windows/desktop/bb761167) Windows SDK 中所述的訊息。  
   
-##  <a name="setgroupmetrics"></a>CListCtrl::SetGroupMetrics  
+##  <a name="setgroupmetrics"></a>  CListCtrl::SetGroupMetrics  
  設定群組度量的清單檢視控制項。  
   
 ```  
@@ -3120,7 +3115,7 @@ void SetGroupMetrics(PLVGROUPMETRICS pGroupMetrics);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETGROUPMETRICS](http://msdn.microsoft.com/library/windows/desktop/bb761168)訊息、 Windows SDK 中所述。  
   
-##  <a name="sethotcursor"></a>CListCtrl::SetHotCursor  
+##  <a name="sethotcursor"></a>  CListCtrl::SetHotCursor  
  設定資料指標已啟用熱追蹤的清單檢視控制項時使用。  
   
 ```  
@@ -3142,7 +3137,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetHotCursor](#gethotcursor)。  
   
-##  <a name="sethotitem"></a>CListCtrl::SetHotItem  
+##  <a name="sethotitem"></a>  CListCtrl::SetHotItem  
  設定清單檢視控制項的目前作用的項目。  
   
 ```  
@@ -3162,7 +3157,7 @@ int SetHotItem(int iIndex);
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetHotItem](#gethotitem)。  
   
-##  <a name="sethovertime"></a>CListCtrl::SetHoverTime  
+##  <a name="sethovertime"></a>  CListCtrl::SetHoverTime  
  設定目前的暫留時間的清單檢視控制項。  
   
 ```  
@@ -3182,7 +3177,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetHoverTime](#gethovertime)。  
   
-##  <a name="seticonspacing"></a>CListCtrl::SetIconSpacing  
+##  <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing  
  設定清單檢視控制項中的圖示之間的間距。  
   
 ```  
@@ -3218,7 +3213,7 @@ CSize SetIconSpacing(CSize size);
 ```
 
   
-##  <a name="setimagelist"></a>CListCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CListCtrl::SetImageList  
  影像清單給清單檢視控制項。  
   
 ```  
@@ -3234,11 +3229,11 @@ CImageList* SetImageList(
  `nImageListType`  
  影像清單的類型。 它可以是下列值之一：  
   
-- `LVSIL_NORMAL`使用大圖示的影像清單。  
+- `LVSIL_NORMAL` 使用大圖示的影像清單。  
   
-- `LVSIL_SMALL`使用小圖示的影像清單。  
+- `LVSIL_SMALL` 使用小圖示的影像清單。  
   
-- `LVSIL_STATE`狀態影像的影像清單。  
+- `LVSIL_STATE` 狀態影像的影像清單。  
   
 ### <a name="return-value"></a>傳回值  
  先前的影像清單的指標。  
@@ -3246,7 +3241,7 @@ CImageList* SetImageList(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetImageList](#getimagelist)。  
   
-##  <a name="setinfotip"></a>CListCtrl::SetInfoTip  
+##  <a name="setinfotip"></a>  CListCtrl::SetInfoTip  
  設定工具提示文字。  
   
 ```  
@@ -3263,7 +3258,7 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETINFOTIP](http://msdn.microsoft.com/library/windows/desktop/bb761180)訊息、 Windows SDK 中所述。  
   
-##  <a name="setinsertmark"></a>CListCtrl::SetInsertMark  
+##  <a name="setinsertmark"></a>  CListCtrl::SetInsertMark  
  將插入點設定為已定義的位置。  
   
 ```  
@@ -3280,7 +3275,7 @@ BOOL SetInsertMark(LPLVINSERTMARK lvim);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETINSERTMARK](http://msdn.microsoft.com/library/windows/desktop/bb761182)訊息、 Windows SDK 中所述。  
   
-##  <a name="setinsertmarkcolor"></a>CListCtrl::SetInsertMarkColor  
+##  <a name="setinsertmarkcolor"></a>  CListCtrl::SetInsertMarkColor  
  設定插入點的色彩。  
   
 ```  
@@ -3297,7 +3292,7 @@ COLORREF SetInsertMarkColor(COLORREF color);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETINSERTMARKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761184)訊息、 Windows SDK 中所述。  
   
-##  <a name="setitem"></a>Clistctrl:: Setitem  
+##  <a name="setitem"></a>  Clistctrl:: Setitem  
  設定部分或所有清單檢視項目的屬性。  
   
 ```  
@@ -3366,14 +3361,14 @@ BOOL SetItem(
   
  **遮罩**隸屬**LVITEM**結構和`nMask`參數會指定哪一個項目要設定屬性：  
   
-- `LVIF_TEXT`**PszText**成員或`lpszItem`參數是以 null 結束的字串位址; **cchTextMax**成員會被忽略。  
+- `LVIF_TEXT` **PszText**成員或`lpszItem`參數是以 null 結束的字串位址; **cchTextMax**成員會被忽略。  
   
-- `LVIF_STATE`**StateMask**成員或`nStateMask`參數會指定哪一個項目狀態變更和**狀態**成員或`nState`參數會包含這些狀態的值。  
+- `LVIF_STATE` **StateMask**成員或`nStateMask`參數會指定哪一個項目狀態變更和**狀態**成員或`nState`參數會包含這些狀態的值。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::HitTest](#hittest)。  
   
-##  <a name="setitemcount"></a>CListCtrl::SetItemCount  
+##  <a name="setitemcount"></a>  CListCtrl::SetItemCount  
  準備新增大量項目清單檢視控制項。  
   
 ```  
@@ -3407,7 +3402,7 @@ void SetItemCount(int nItems);
 ```
 
   
-##  <a name="setitemcountex"></a>CListCtrl::SetItemCountEx  
+##  <a name="setitemcountex"></a>  CListCtrl::SetItemCountEx  
  設定虛擬清單檢視控制項的項目計數。  
   
 ```  
@@ -3454,7 +3449,7 @@ BOOL SetItemCountEx(
 ```
 
   
-##  <a name="setitemdata"></a>CListCtrl::SetItemData  
+##  <a name="setitemdata"></a>  CListCtrl::SetItemData  
  設定所指定的項目相關聯的 32 位元應用程式專屬值`nItem`。  
   
 ```  
@@ -3486,7 +3481,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 ```
 
   
-##  <a name="setitemindexstate"></a>CListCtrl::SetItemIndexState  
+##  <a name="setitemindexstate"></a>  CListCtrl::SetItemIndexState  
  目前的清單檢視控制項中設定項目的狀態。  
   
 ```  
@@ -3514,7 +3509,7 @@ BOOL SetItemIndexState(
   
  這個方法會傳送[LVM_SETITEMINDEXSTATE](http://msdn.microsoft.com/library/windows/desktop/bb761190) Windows SDK 中所述的訊息。  
   
-##  <a name="setitemposition"></a>CListCtrl::SetItemPosition  
+##  <a name="setitemposition"></a>  CListCtrl::SetItemPosition  
  將項目移至清單檢視控制項中指定的位置。  
   
 ```  
@@ -3541,7 +3536,7 @@ BOOL SetItemPosition(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetItemPosition](#getitemposition)。  
   
-##  <a name="setitemstate"></a>CListCtrl::SetItemState  
+##  <a name="setitemstate"></a>  CListCtrl::SetItemState  
  變更清單檢視控制項中的項目狀態。  
   
 ```  
@@ -3578,7 +3573,7 @@ BOOL SetItemState(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetTopIndex](#gettopindex)。  
   
-##  <a name="setitemtext"></a>CListCtrl::SetItemText  
+##  <a name="setitemtext"></a>  CListCtrl::SetItemText  
  將文字變更清單檢視項目或子項目。  
   
 ```  
@@ -3607,7 +3602,7 @@ BOOL SetItemText(
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::InsertItem](#insertitem)。  
   
-##  <a name="setoutlinecolor"></a>CListCtrl::SetOutlineColor  
+##  <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor  
  如果設定的清單檢視控制項的框線色彩[LVS_EX_BORDERSELECT](http://msdn.microsoft.com/library/windows/desktop/bb774739)延伸的視窗樣式設定。  
   
 ```  
@@ -3624,7 +3619,7 @@ COLORREF SetOutlineColor(COLORREF color);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETOUTLINECOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761200)訊息、 Windows SDK 中所述。  
   
-##  <a name="setselectedcolumn"></a>CListCtrl::SetSelectedColumn  
+##  <a name="setselectedcolumn"></a>  CListCtrl::SetSelectedColumn  
  設定所選資料行的清單檢視控制項。  
   
 ```  
@@ -3641,7 +3636,7 @@ LRESULT SetSelectedColumn(int iCol);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETSELECTEDCOLUMN](http://msdn.microsoft.com/library/windows/desktop/bb761202)訊息、 Windows SDK 中所述。  
   
-##  <a name="setselectionmark"></a>CListCtrl::SetSelectionMark  
+##  <a name="setselectionmark"></a>  CListCtrl::SetSelectionMark  
  設定清單檢視控制項的選取範圍標記。  
   
 ```  
@@ -3661,7 +3656,7 @@ int SetSelectionMark(int iIndex);
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetSelectionMark](#getselectionmark)。  
   
-##  <a name="settextbkcolor"></a>CListCtrl::SetTextBkColor  
+##  <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor  
  清單檢視控制項中設定文字的背景色彩。  
   
 ```  
@@ -3686,7 +3681,7 @@ BOOL SetTextBkColor(COLORREF cr);
 ```
 
   
-##  <a name="settextcolor"></a>CListCtrl::SetTextColor  
+##  <a name="settextcolor"></a>  CListCtrl::SetTextColor  
  設定清單檢視控制項的文字色彩。  
   
 ```  
@@ -3712,7 +3707,7 @@ BOOL SetTextColor(COLORREF cr);
 ```
 
   
-##  <a name="settileinfo"></a>CListCtrl::SetTileInfo  
+##  <a name="settileinfo"></a>  CListCtrl::SetTileInfo  
  設定清單檢視控制項的並排顯示的資訊。  
   
 ```  
@@ -3729,7 +3724,7 @@ BOOL SetTileInfo(PLVTILEINFO pti);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETTILEINFO](http://msdn.microsoft.com/library/windows/desktop/bb761210)訊息、 Windows SDK 中所述。  
   
-##  <a name="settileviewinfo"></a>CListCtrl::SetTileViewInfo  
+##  <a name="settileviewinfo"></a>  CListCtrl::SetTileViewInfo  
  設定中並排顯示檢視清單檢視控制項使用的資訊。  
   
 ```  
@@ -3746,7 +3741,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETTILEVIEWINFO](http://msdn.microsoft.com/library/windows/desktop/bb761212)訊息、 Windows SDK 中所述。  
   
-##  <a name="settooltips"></a>CListCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CListCtrl::SetToolTips  
  設定工具提示控制項的清單檢視控制項將用以顯示工具提示。  
   
 ```  
@@ -3765,7 +3760,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
   
  若要不使用工具提示，指出`LVS_NOTOOLTIPS`樣式，當您建立`CListCtrl`物件。  
   
-##  <a name="setview"></a>CListCtrl::SetView  
+##  <a name="setview"></a>  CListCtrl::SetView  
  設定清單檢視控制項的檢視。  
   
 ```  
@@ -3782,7 +3777,7 @@ DWORD SetView(int iView);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SETVIEW](http://msdn.microsoft.com/library/windows/desktop/bb761220)訊息、 Windows SDK 中所述。  
   
-##  <a name="setworkareas"></a>CListCtrl::SetWorkAreas  
+##  <a name="setworkareas"></a>  CListCtrl::SetWorkAreas  
  設定位置顯示圖示，在清單檢視控制項中的區域。  
   
 ```  
@@ -3810,7 +3805,7 @@ void SetWorkAreas(
 ```
 
   
-##  <a name="sortgroups"></a>CListCtrl::SortGroups  
+##  <a name="sortgroups"></a>  CListCtrl::SortGroups  
  使用應用程式定義的比較函式，以便排序群組識別碼的清單檢視控制項中。  
   
 ```  
@@ -3832,7 +3827,7 @@ BOOL SortGroups(
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[LVM_SORTGROUPS](http://msdn.microsoft.com/library/windows/desktop/bb761225)訊息、 Windows SDK 中所述。  
   
-##  <a name="sortitems"></a>CListCtrl::SortItems  
+##  <a name="sortitems"></a>  CListCtrl::SortItems  
  使用應用程式定義的比較函式，以排序清單檢視項目。  
   
 ```  
@@ -3851,7 +3846,7 @@ BOOL SortItems(
  應用程式定義的值傳遞給比較函式。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果方法成功。否則`false`。  
+ `true` 如果方法成功。否則`false`。  
   
 ### <a name="remarks"></a>備註  
  這個方法會變更以反映新的順序的每個項目的索引。  
@@ -3890,7 +3885,7 @@ void CListCtrlDlg::Sort()
 }
 ```
   
-##  <a name="sortitemsex"></a>CListCtrl::SortItemsEx  
+##  <a name="sortitemsex"></a>  CListCtrl::SortItemsEx  
  依目前的清單檢視控制項的項目使用的應用程式定義的比較函式。  
   
 ```  
@@ -3973,7 +3968,7 @@ void CCListCtrl_s2Dlg::OnBnClickedButton1()
 ```
 
   
-##  <a name="subitemhittest"></a>CListCtrl::SubItemHitTest  
+##  <a name="subitemhittest"></a>  CListCtrl::SubItemHitTest  
  判斷哪一個清單檢視項目中，任何，位於指定位置。  
   
 ```  
@@ -4011,7 +4006,7 @@ LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 ```
 
   
-##  <a name="update"></a>CListCtrl::Update  
+##  <a name="update"></a>  CListCtrl::Update  
  強制重新繪製指定的項目清單檢視控制項`nItem`。  
   
 ```  
@@ -4031,7 +4026,7 @@ BOOL Update(int nItem);
 ### <a name="example"></a>範例  
   請參閱範例的[CListCtrl::GetSelectedCount](#getselectedcount)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例 ROWLIST](../../visual-cpp-samples.md)   
  [CWnd 類別](cwnd-class.md)   
  [階層架構圖表](../hierarchy-chart.md)   

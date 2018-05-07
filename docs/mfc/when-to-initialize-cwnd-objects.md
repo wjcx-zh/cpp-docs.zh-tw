@@ -2,12 +2,9 @@
 title: 初始化 CWnd 物件的時機 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - HWND, when attached to CWnd object
 - CWnd objects [MFC], when to initialize
 ms.assetid: 4d31bcb1-73db-4f2f-b71c-89b087569a10
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d1efceb4fa826d5cd2bf8dc900180eb36cea4de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee10a4632809a224028bfa482f80ed9e8a9334a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>初始化 CWnd 物件的時機
 您無法建立您自己的子視窗或任何 Windows API 函式呼叫的建構函式中`CWnd`-衍生物件。 這是因為`HWND`如`CWnd`物件尚未建立。 必須以進行最特定的 Windows 初始設定，例如新增子視窗[OnCreate](../mfc/reference/cwnd-class.md#oncreate)訊息處理常式。  
@@ -39,6 +34,6 @@ ms.lasthandoff: 12/21/2017
   
 -   [文件/檢視建立](../mfc/document-view-creation.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用框架視窗](../mfc/using-frame-windows.md)
 

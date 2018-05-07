@@ -1,13 +1,10 @@
 ---
-title: "TN026: DDX 和 DDV 常式 |Microsoft 文件"
-ms.custom: 
+title: 'TN026: DDX 和 DDV 常式 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 常式
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  起始值的資料在標準 c + + 建構函式，通常是在含有的區塊中設定`//{{AFX_DATA_INIT`和`//}}AFX_DATA_INIT`註解。  
   
- `CWnd::UpdateData`操作會進行初始化和錯誤處理的呼叫周圍`DoDataExchange`。  
+ `CWnd::UpdateData` 操作會進行初始化和錯誤處理的呼叫周圍`DoDataExchange`。  
   
  您可以呼叫`CWnd::UpdateData`隨時執行資料交換和驗證。 根據預設`UpdateData`(TRUE) 會呼叫預設`CDialog::OnOK`處理常式和`UpdateData`(FALSE) 會呼叫預設`CDialog::OnInitDialog`。  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: 包含的控制項 [] 視窗 （通常的對話方塊）。 這是為了避免 DDX_ 和 DDV_ 全域函式的呼叫端傳遞 'this' 的每個 DDX/DDV 常式時。  
   
-- `PrepareCtrl`與`PrepareEditCtrl`： 準備對話方塊控制項的資料交換。 儲存設定焦點，在驗證失敗時該控制項的控制代碼。 `PrepareCtrl`用於 nonedit 控制項和`PrepareEditCtrl`來編輯控制項。  
+- `PrepareCtrl`與`PrepareEditCtrl`： 準備對話方塊控制項的資料交換。 儲存設定焦點，在驗證失敗時該控制項的控制代碼。 `PrepareCtrl` 用於 nonedit 控制項和`PrepareEditCtrl`來編輯控制項。  
   
 - **失敗**： 警示使用者輸入錯誤的訊息方塊顯示之後呼叫。 這個常式會將焦點還原到最後一個控制項 (在上次呼叫`PrepareCtrl` / `PrepareEditCtrl`)，則擲回例外狀況。 此成員函式可從 DDX_ 和 DDV_ 常式呼叫。  
   
@@ -266,7 +261,7 @@ ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>
   
  s = 字串  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

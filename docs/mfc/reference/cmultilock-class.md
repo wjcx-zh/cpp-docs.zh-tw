@@ -1,12 +1,9 @@
 ---
-title: "CMultiLock 類別 |Microsoft 文件"
-ms.custom: 
+title: CMultiLock 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiLock
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc3c391c624351b2835e1ec497d78bc191eb1fe7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5c5424018c3863ce64435bcc09d2d539560285e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultilock-class"></a>CMultiLock 類別
 代表多執行緒程式用來控制多個資源存取的存取控制機制。  
@@ -61,7 +56,7 @@ class CMultiLock
 |[CMultiLock::Unlock](#unlock)|釋放任何擁有同步處理物件。|  
   
 ## <a name="remarks"></a>備註  
- `CMultiLock`沒有基底類別。  
+ `CMultiLock` 沒有基底類別。  
   
  若要使用同步處理類別[CSemaphore](../../mfc/reference/csemaphore-class.md)， [CMutex](../../mfc/reference/cmutex-class.md)，和[CEvent](../../mfc/reference/cevent-class.md)，您可以建立**CMultiLock**或[CSingleLock](../../mfc/reference/csinglelock-class.md)等候，並釋出同步處理物件的物件。 使用**CMultiLock**時您可以使用在特定時間的多個物件。 使用`CSingleLock`您可能只需要一次等候上一個物件。  
   
@@ -77,7 +72,7 @@ class CMultiLock
 ## <a name="requirements"></a>需求  
  **標頭：** afxmt.h  
   
-##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>  CMultiLock::CMultiLock  
  建構**CMultiLock**物件。  
   
 ```  
@@ -100,7 +95,7 @@ CMultiLock(
 ### <a name="remarks"></a>備註  
  建立同步處理至等候中的物件陣列之後，會呼叫此函數。 它通常稱為從內必須等候其中一個同步處理物件變成可用的執行緒。  
   
-##  <a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>  CMultiLock::IsLocked  
  判斷指定的物件是否為未收到信號 （無法使用）。  
   
 ```  
@@ -114,7 +109,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>傳回值  
  為非零，如果指定的物件已鎖定。否則便是 0。  
   
-##  <a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>  CMultiLock::Lock  
  呼叫此函式來存取一或多個資源提供給同步處理物件所控制的**CMultiLock**建構函式。  
   
 ```  
@@ -158,7 +153,7 @@ DWORD Lock(
   
  如果`Lock`無法立即傳回，它將會等候中指定的毫秒數個以內*dwTimeOut*傳回之前的參數。 如果*dwTimeOut*是**無限**，`Lock`取得物件的存取權時，或在指定的條件之前，不會傳回`dwWakeMask`符合。 否則，如果`Lock`已能夠取得同步處理物件，它會傳回成功; 如果沒有，它會傳回失敗。  
   
-##  <a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>  CMultiLock::Unlock  
  釋放所擁有之同步處理物件`CMultiLock`。  
   
 ```  
@@ -183,9 +178,9 @@ BOOL Unlock(
 ### <a name="remarks"></a>備註  
  會呼叫此函式`CMultiLock`的解構函式。  
   
- 第一種形式的`Unlock`嘗試解除鎖定受同步處理物件`CMultiLock`。 第二種`Unlock`嘗試解除鎖定`CSemaphore`擁有的物件`CMultiLock`。 如果`CMultiLock`未擁有任何鎖定`CSemaphore`物件，此函數會傳回**FALSE**; 否則它會傳回**TRUE**。 `lCount`和`lpPrevCount`並完全相同的參數[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)。 第二種`Unlock`很少用於 multilock 的情況。  
+ 第一種形式的`Unlock`嘗試解除鎖定受同步處理物件`CMultiLock`。 第二種`Unlock`嘗試解除鎖定`CSemaphore`擁有的物件`CMultiLock`。 如果`CMultiLock`未擁有任何鎖定`CSemaphore`物件，此函數會傳回**FALSE**; 否則它會傳回**TRUE**。 `lCount` 和`lpPrevCount`並完全相同的參數[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)。 第二種`Unlock`很少用於 multilock 的情況。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 
 

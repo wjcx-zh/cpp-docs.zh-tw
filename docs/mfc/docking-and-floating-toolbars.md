@@ -1,13 +1,10 @@
 ---
-title: "停駐和浮動工具列 |Microsoft 文件"
-ms.custom: 
+title: 停駐和浮動工具列 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CBRS_SIZE_DYNAMIC
 - CBRS_SIZE_FIXED
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6646fa33c0a78e8194faa5d511e107febca6d6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="docking-and-floating-toolbars"></a>停駐和浮動工具列
 Mfc 程式庫支援可停駐工具列。 可以連接，或停駐任一側的父視窗，可停駐工具列或卸離或浮動，在自己的迷你框架視窗中。 本文說明如何在您的應用程式中使用可停駐工具列。  
@@ -65,27 +60,27 @@ Mfc 程式庫支援可停駐工具列。 可以連接，或停駐任一側的父
   
  請參閱 MFC 一般範例[DOCKTOOL](../visual-cpp-samples.md)範例。  
   
-##  <a name="_core_enabling_docking_in_a_frame_window"></a>啟用停駐在框架視窗  
+##  <a name="_core_enabling_docking_in_a_frame_window"></a> 啟用停駐在框架視窗  
  若要將工具列停駐在框架視窗，框架視窗 （或目的地） 必須啟用允許停駐。 這是使用[CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)函式，以採用一個`DWORD`樣式的一組參數的位元會指出框架視窗的哪一端接受停駐。 如果工具列即將停駐，且有多個可能要停駐的側邊，指示中的側邊參數傳遞至`EnableDocking`會以下列順序： 頂端、 底端、 左、 右。 如果您想要停駐控制項列隨處、 傳遞`CBRS_ALIGN_ANY`至`EnableDocking`。  
   
-##  <a name="_core_enabling_docking_for_a_toolbar"></a>啟用工具列停駐  
+##  <a name="_core_enabling_docking_for_a_toolbar"></a> 啟用工具列停駐  
  您已經備妥目的地停駐之後，您必須以類似的方式準備工具列 （或來源）。 呼叫[CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking)的每個您想要停駐工具列上，指定目的地邊工具列應該停駐。 如果所有的呼叫中指定的側邊`CControlBar::EnableDocking`符合停駐在框架視窗中已啟用的邊，無法在停駐工具列，它會浮動。 一旦浮動的話，它會維持浮動工具列，無法停駐在框架視窗。  
   
  如果您想要的效果是永久浮動工具列，呼叫`EnableDocking`且參數為 0。 然後呼叫[CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar)。 工具列會維持浮動狀態，永遠無法停駐任何位置。  
   
-##  <a name="_core_docking_the_toolbar"></a>停駐工具列  
+##  <a name="_core_docking_the_toolbar"></a> 停駐工具列  
  這個架構會呼叫[CFrameWnd::DockControlBar](../mfc/reference/cframewnd-class.md#dockcontrolbar)使用者嘗試卸除一邊的可停駐在框架視窗的工具列。  
   
  此外，您可以隨時將框架視窗停駐控制列呼叫此函式。 這通常是在初始化期間完成。 一個以上的工具列可以固定到特定的側邊的框架視窗。  
   
-##  <a name="_core_floating_the_toolbar"></a>浮動工具列  
+##  <a name="_core_floating_the_toolbar"></a> 浮動工具列  
  卸離從框架視窗可停駐工具列稱為浮動工具列。 呼叫[CFrameWnd::FloatControlBar](../mfc/reference/cframewnd-class.md#floatcontrolbar)若要這樣做。 指定要浮動工具列、 點它應該放在哪裡，以及判斷浮動工具列是否為水平或垂直對齊的樣式。  
   
  當使用者拖曳工具列停駐位置，並將它放置在其中停駐未啟用的位置，架構會呼叫此函式。 內部或外部框架視窗，這可以是任何位置。 如同`DockControlBar`，您也可以在初始化期間呼叫這個函式。  
   
  可停駐工具列的 MFC 實作不提供某些支援可停駐工具列某些應用程式中的擴充功能。 不會提供可自訂工具列等功能。  
   
-##  <a name="_core_dynamically_resizing_the_toolbar"></a>動態調整大小的工具列  
+##  <a name="_core_dynamically_resizing_the_toolbar"></a> 動態調整大小的工具列  
  自 Visual c + + 4.0 版，您可以讓您的應用程式動態調整大小的浮動工具列上的使用者。 一般而言，工具列上有很長的線性的圖形，以水平方式顯示。 但是，您可以變更工具列的方向和形狀。 例如，當使用者的框架視窗的垂直一邊，將工具列停駐，圖形會變更為垂直配置。 它也可將工具列按鈕的多個資料列的矩形到的形狀。  
   
  您可以：  
@@ -106,7 +101,7 @@ Mfc 程式庫支援可停駐工具列。 可以連接，或停駐任一側的父
   
  您也可以使用[CToolBar::GetButtonStyle](../mfc/reference/ctoolbar-class.md#getbuttonstyle)工具列上傳回的狀態和按鈕的樣式。 按鈕的樣式會判斷按鈕的顯示方式，以及它如何回應使用者輸入，狀態會告知按鈕是否換行的狀態。  
   
-##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a>設定固定樣式工具列的換行位置  
+##  <a name="_core_setting_wrap_positions_for_a_fixed_style_toolbar"></a> 設定固定樣式工具列的換行位置  
  為大小固定樣式工具列上，指定工具列按鈕的工具列會自動換行的索引。 下列程式碼示範如何在主框架視窗的`OnCreate`覆寫：  
   
  [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]  
@@ -121,6 +116,6 @@ Mfc 程式庫支援可停駐工具列。 可以連接，或停駐任一側的父
   
 -   [使用舊的工具列](../mfc/using-your-old-toolbars.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 工具列實作](../mfc/mfc-toolbar-implementation.md)
 

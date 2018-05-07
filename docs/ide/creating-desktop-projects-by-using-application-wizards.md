@@ -1,13 +1,10 @@
 ---
-title: "使用應用程式精靈建立桌面專案 |Microsoft 文件"
-ms.custom: 
+title: 使用應用程式精靈建立桌面專案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.mfcexe.project
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - programs [C++], beginning with wizards
 - applications [C++], using wizards
 ms.assetid: 090c6423-deb8-4a00-817d-337eb5644544
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919573139ee8bd37c210d91f223a1c41d28d7b3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f4328747a594d18dd61631ddb930d8c59964452
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-desktop-projects-by-using-application-wizards"></a>使用應用程式精靈建立桌面專案
 各類型的 Visual C++ 專案都有由專案範本模式化而來的應用程式精靈，用以協助快速和輕易地產生新專案。  若要開啟 [應用程式精靈]，請使用**新專案**專案所在的對話方塊中指定專案屬性，例如專案，或目錄和方案的名稱。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  專案建立之後，不但可以建立新方案，也可以新增專案至現有方案中。 如需詳細資訊，請參閱[如何：從現有程式碼建立 C++ 專案](../ide/how-to-create-a-cpp-project-from-existing-code.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)   
  [MFC 精靈和對話方塊](../mfc/reference/mfc-wizards-and-dialog-boxes.md)   
  [ATL 精靈和對話方塊](../atl/reference/atl-wizards-and-dialog-boxes.md)

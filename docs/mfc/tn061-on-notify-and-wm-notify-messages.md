@@ -1,13 +1,10 @@
 ---
-title: "TN061: ON_NOTIFY 和 WM_NOTIFY 訊息 |Microsoft 文件"
-ms.custom: 
+title: 'TN061: ON_NOTIFY 和 WM_NOTIFY 訊息 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061：ON_NOTIFY 和 WM_NOTIFY 訊息
 > [!NOTE]
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS**|控制項已遺失輸入的焦點|  
 |**NM_OUTOFMEMORY**|控制項無法完成作業，因為沒有足夠的記憶體|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY： 處理 WM_NOTIFY 訊息在 MFC 應用程式  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY： 處理 WM_NOTIFY 訊息在 MFC 應用程式  
  此函式`CWnd::OnNotify`處理通知訊息。 其預設實作會檢查通知處理常式，呼叫的訊息對應。 一般情況下，您不會覆寫`OnNotify`。 相反地，您提供的處理常式函式，並將該處理常式的訊息對應項目加入至主控視窗的類別的訊息對應。  
   
  ClassWizard，透過 ClassWizard 屬性工作表，可以建立`ON_NOTIFY`訊息對應項目，並提供基本架構的處理常式函式。 多個要進行簡化使用 ClassWizard 的詳細資訊，請參閱[訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)。  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  請注意 ClassWizard 會自動提供的適當類型的指標。 您可以透過存取通知的結構`pNMHDR`或`pLVKeyDow`。  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
  如果您需要處理相同**WM_NOTIFY**訊息的一組控制項，您可以使用**ON_NOTIFY_RANGE**而不是`ON_NOTIFY`。 比方說，您可能會有一組要執行的特定通知訊息的相同動作的按鈕。  
   
  當您使用**ON_NOTIFY_RANGE**，指定要由指定開始和結束範圍的子識別碼處理通知訊息的子識別碼的連續範圍。  
@@ -223,7 +218,7 @@ pNotifyStruct  ,
  *結果*  
  您設定指標的結果碼傳回之前。  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX ON_NOTIFY_EX_RANGE  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX ON_NOTIFY_EX_RANGE  
  如果您想要在通知中的多個物件至路由處理的訊息，您可以使用**ON_NOTIFY_EX** (或**ON_NOTIFY_EX_RANGE**) 而非`ON_NOTIFY`(或**ON_NOTIFY_RANGE**). 唯一的差別**EX**版本和規則的版本是成員函式呼叫的**EX**版本會傳回**BOOL** ，指出是否訊息處理應該繼續執行。 傳回**FALSE**從此函式可讓您處理在多個物件相同的訊息。  
   
  不會處理 ClassWizard **ON_NOTIFY_EX**或**ON_NOTIFY_EX_RANGE**; 如果您想要使用其中一個項目，您需要自行編輯訊息對應。  
@@ -263,7 +258,7 @@ pNotifyStruct  ,
   
  您的函式必須傳回**TRUE**如果尚未完全處理通知訊息或**FALSE**其他物件中的命令路由，如果應該有機會處理訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

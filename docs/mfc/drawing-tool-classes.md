@@ -1,13 +1,10 @@
 ---
-title: "繪圖工具類別 |Microsoft 文件"
-ms.custom: 
+title: 繪圖工具類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.drawing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - screen output classes [MFC]
 - output classes [MFC]
 ms.assetid: e907bd89-38b5-47c9-b76a-95e0bf3bb41d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee227be42bca984361aa04342b6b477143ab4e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45f1898addfff37744301c0d3cdac71b9909ec02
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-tool-classes"></a>繪圖工具類別
 這些類別會封裝繪圖工具，可用來在裝置內容上繪製。  
@@ -53,6 +48,6 @@ ms.lasthandoff: 12/21/2017
  [CRectTracker](../mfc/reference/crecttracker-class.md)  
  會顯示，並處理調整大小和移動矩形物件的使用者介面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

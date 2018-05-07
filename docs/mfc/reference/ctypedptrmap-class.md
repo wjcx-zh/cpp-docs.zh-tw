@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrMap 類別 |Microsoft 文件"
-ms.custom: 
+title: CTypedPtrMap 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9056fc73e2718b2a21936c39e630f4d4fddf1eed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap 類別
 為指標對應類別 `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`和 `CMapStringToPtr`的物件提供類型安全「包裝函式」。  
@@ -87,7 +82,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>需求  
  **Header:** afxtempl.h  
   
-##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
  擷取位於的地圖元素`rNextPosition`，然後更新`rNextPosition`指向對應中的下一個項目。  
   
 ```  
@@ -120,8 +115,8 @@ void GetNextAssoc(
   
  此內嵌函式呼叫`BASE_CLASS` **:: GetNextAssoc**。  
   
-##  <a name="lookup"></a>CTypedPtrMap::Lookup  
- `Lookup`快速尋找地圖元素具有完全符合索引鍵使用雜湊演算法。  
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
+ `Lookup` 快速尋找地圖元素具有完全符合索引鍵使用雜湊演算法。  
   
 ```  
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
@@ -146,7 +141,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>備註  
  此內嵌函式呼叫`BASE_CLASS` **:: 查閱**。  
   
-##  <a name="operator_at"></a>CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>  CTypedPtrMap::operator]  
  此運算子只用於指派陳述式 （左值） 的左半部。  
   
 ```  
@@ -166,7 +161,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>備註  
  如果沒有具有指定之索引鍵的對應項目，則會建立新的項目。 沒有任何 「 右邊 」 （右值） 相當於這個運算子因為索引鍵找到對應中可能發生。 使用`Lookup`項目擷取的成員函式。  
   
-##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
  此成員函式呼叫`BASE_CLASS` **:: RemoveKey**。  
   
 ```  
@@ -186,7 +181,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>備註  
  如需詳細註解，請參閱[CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)。  
   
-##  <a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>  CTypedPtrMap::SetAt  
  此成員函式呼叫`BASE_CLASS` **:: SetAt**。  
   
 ```  
@@ -206,7 +201,7 @@ void SetAt(KEY key, VALUE newValue);
 ### <a name="remarks"></a>備註  
  如需詳細註解，請參閱[CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CMapPtrToPtr 類別](../../mfc/reference/cmapptrtoptr-class.md)   

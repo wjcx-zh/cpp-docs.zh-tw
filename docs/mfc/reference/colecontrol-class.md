@@ -1,12 +1,9 @@
 ---
-title: "COleControl 類別 |Microsoft 文件"
-ms.custom: 
+title: COleControl 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 開發 OLE 控制項的強大基底類別。  
@@ -898,7 +893,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
  指標`CPropExchange`物件。 架構會提供此物件來建立交換的內容屬性，包括其方向。  
   
 ### <a name="remarks"></a>備註  
- 此函式通常會呼叫**PX_**系列的函式來載入或儲存 OLE 控制項的特定使用者定義的屬性。  
+ 此函式通常會呼叫**PX_** 系列的函式來載入或儲存 OLE 控制項的特定使用者定義的屬性。  
   
  如果控制項精靈已經用來建立 OLE 控制項的專案，此函式的覆寫的版本會序列化所支援的內建屬性`COleControl`基底類別函式呼叫`COleControl::DoPropExchange`。 當您新增到您的 OLE 控制項的使用者定義的屬性，您必須修改此函式可序列化新的屬性。 如需序列化的詳細資訊，請參閱文章[ActiveX 控制項： 序列化](../../mfc/mfc-activex-controls-serializing.md)。  
   
@@ -1413,8 +1408,8 @@ BOOL GetAmbientProperty(
 |`VT_BOOL`|**BOOL\***|  
 |`VT_BSTR`|**CString\***|  
 |`VT_I2`|**short\***|  
-|`VT_I4`|**long\***|  
-|`VT_R4`|**float\***|  
+|`VT_I4`|**長\***|  
+|`VT_R4`|**浮點數\***|  
 |`VT_R8`|**double\***|  
 |`VT_CY`|**CY\***|  
 |**VT_COLOR**|**OLE_COLOR\***|  
@@ -1993,7 +1988,7 @@ BOOL IsModified();
 ### <a name="remarks"></a>備註  
  屬性值變更時，會修改控制項的狀態。  
   
-##  <a name="isoptimizeddraw"></a>  COleControl::IsOptimizedDraw  
+##  <a name="isoptimizeddraw"></a>  Colecontrol:: Isoptimizeddraw  
  判斷容器是否支援目前的繪圖作業最佳化的繪圖。  
   
 ```  
@@ -2030,7 +2025,7 @@ void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
  *strNewPath*  
  含有參考非同步控制項屬性的絕對位置路徑的字串指標。  
   
- *prop*  
+ *p o p*  
  A [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)實作非同步控制項屬性的物件。  
   
 ##  <a name="lockinplaceactive"></a>  COleControl::LockInPlaceActive  
@@ -3643,7 +3638,7 @@ void SetText(LPCTSTR pszText);
 ### <a name="remarks"></a>備註  
  請注意，內建的標題和文字屬性會對應到相同的值。 這表示可能是屬性所做的變更將會自動變更這兩個屬性。 一般情況下，控制項應該支援股票標題或文字屬性，但非兩者。  
   
-##  <a name="throwerror"></a>  COleControl::ThrowError  
+##  <a name="throwerror"></a>  Colecontrol:: Throwerror  
  表示控制項中的錯誤次數。  
   
 ```  

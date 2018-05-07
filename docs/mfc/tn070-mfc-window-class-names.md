@@ -1,13 +1,10 @@
 ---
-title: "TN070: MFC 視窗類別名稱 |Microsoft 文件"
-ms.custom: 
+title: 'TN070: MFC 視窗類別名稱 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.classes
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 183fd4c76fc8df092c5b7740ff5de2e35b64d682
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c66c434503bbd2c6d7ee1b0557fa73d843e0caaa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn070-mfc-window-class-names"></a>TN070：MFC 視窗類別名稱
 > [!NOTE]
@@ -55,7 +50,7 @@ Afx:%x:%x:%x:%x:%x
   
  第一種形式 (`Afx:%x:%x`) 時會使用**hCursor**， **hbrBackground**，和**hIcon**全部**NULL**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)   
  [TN020：識別碼命名和編號慣例](../mfc/tn020-id-naming-and-numbering-conventions.md)

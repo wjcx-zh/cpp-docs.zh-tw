@@ -1,12 +1,9 @@
 ---
-title: "__outbytestring |Microsoft 文件"
-ms.custom: 
+title: __outbytestring |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __outbytestring
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731d31e8b06b999cede64d550ad52382bc432bb8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b61fcd7875fd98e73c2d4cbd6502a98624daed5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="outbytestring"></a>__outbytestring
 **Microsoft 特定的**  
@@ -58,7 +53,7 @@ void __outbytestring(
   
 |內建|架構|  
 |---------------|------------------|  
-|`__outbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__outbytestring`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
  **標頭檔** \<intrin.h >  
   
@@ -67,5 +62,5 @@ void __outbytestring(
   
 **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

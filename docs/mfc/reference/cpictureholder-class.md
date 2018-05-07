@@ -1,12 +1,9 @@
 ---
-title: "CPictureHolder 類別 |Microsoft 文件"
-ms.custom: 
+title: CPictureHolder 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPictureHolder
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90bc58ce3d56852b983a673968df97b55f4bdeab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 類別
 實作圖片屬性，這可讓使用者在控制項中顯示的圖片。  
@@ -87,7 +82,7 @@ class CPictureHolder
 |[CPictureHolder::m_pPict](#m_ppict)|以圖片物件指標。|  
   
 ## <a name="remarks"></a>備註  
- `CPictureHolder`沒有基底類別。  
+ `CPictureHolder` 沒有基底類別。  
   
  使用內建圖片屬性中，開發人員可以指定點陣圖、 圖示或顯示中繼檔。  
   
@@ -99,14 +94,14 @@ class CPictureHolder
 ## <a name="requirements"></a>需求  
  **標頭：** afxctl.h  
   
-##  <a name="cpictureholder"></a>CPictureHolder::CPictureHolder  
+##  <a name="cpictureholder"></a>  CPictureHolder::CPictureHolder  
  建構 `CPictureHolder` 物件。  
   
 ```  
 CPictureHolder();
 ```  
   
-##  <a name="createempty"></a>CPictureHolder::CreateEmpty  
+##  <a name="createempty"></a>  CPictureHolder::CreateEmpty  
  建立空`CPictureHolder`物件，並連接到其`IPicture`介面。  
   
 ```  
@@ -116,7 +111,7 @@ BOOL CreateEmpty();
 ### <a name="return-value"></a>傳回值  
  為非零，如果已成功建立物件。否則便是 0。  
   
-##  <a name="createfrombitmap"></a>CPictureHolder::CreateFromBitmap  
+##  <a name="createfrombitmap"></a>  CPictureHolder::CreateFromBitmap  
  利用點陣圖來初始化中的圖片物件`CPictureHolder`。  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateFromBitmap(
 ### <a name="remarks"></a>備註  
  如果`bTransferOwnership`是**TRUE**、 呼叫端不應該使用點陣圖或以任何方式在這個呼叫之後的調色盤物件傳回。 如果`bTransferOwnership`是**FALSE**，呼叫端會負責確保圖片物件的存留期間點陣圖和調色盤物件維持有效。  
   
-##  <a name="createfromicon"></a>CPictureHolder::CreateFromIcon  
+##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  使用圖示來初始化中的圖片物件`CPictureHolder`。  
   
 ```  
@@ -190,7 +185,7 @@ BOOL CreateFromIcon(
 ### <a name="remarks"></a>備註  
  如果`bTransferOwnership`是**TRUE**，呼叫端不應該使用 icon 物件以任何方式之後，這個呼叫會傳回。 如果`bTransferOwnership`是**FALSE**，呼叫端會負責確保圖示物件圖片物件的存留期間就持續有效。  
   
-##  <a name="createfrommetafile"></a>CPictureHolder::CreateFromMetafile  
+##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  使用中繼檔初始化中的圖片物件`CPictureHolder`。  
   
 ```  
@@ -220,7 +215,7 @@ BOOL CreateFromMetafile(
 ### <a name="remarks"></a>備註  
  如果`bTransferOwnership`是**TRUE**，呼叫端不應該使用中繼檔物件以任何方式之後，這個呼叫會傳回。 如果`bTransferOwnership`是**FALSE**，呼叫端會負責確保中繼檔物件的存留期圖片物件就持續有效。  
   
-##  <a name="getdisplaystring"></a>CPictureHolder::GetDisplayString  
+##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  擷取容器的屬性瀏覽器中顯示的字串。  
   
 ```  
@@ -234,7 +229,7 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="return-value"></a>傳回值  
  為非零，如果成功擷取字串。否則便是 0。  
   
-##  <a name="getpicturedispatch"></a>CPictureHolder::GetPictureDispatch  
+##  <a name="getpicturedispatch"></a>  CPictureHolder::GetPictureDispatch  
  此函式傳回的指標`CPictureHolder`物件的`IPictureDisp`介面。  
   
 ```  
@@ -247,7 +242,7 @@ LPPICTUREDISP GetPictureDispatch();
 ### <a name="remarks"></a>備註  
  呼叫端必須呼叫**發行**當它完成時，此指標上。  
   
-##  <a name="gettype"></a>CPictureHolder::GetType  
+##  <a name="gettype"></a>  CPictureHolder::GetType  
  指出圖片是點陣圖，中繼檔或圖示。  
   
 ```  
@@ -259,20 +254,20 @@ short GetType();
   
 |值|意義|  
 |-----------|-------------|  
-|**PICTYPE_UNINITIALIZED**|`CPictureHolder`物件被 unititialized。|  
-|**PICTYPE_NONE**|`CPictureHolder`物件是空的。|  
+|**PICTYPE_UNINITIALIZED**|`CPictureHolder` 物件被 unititialized。|  
+|**PICTYPE_NONE**|`CPictureHolder` 物件是空的。|  
 |**PICTYPE_BITMAP**|圖片是點陣圖。|  
 |**PICTYPE_METAFILE**|圖片會在中繼檔。|  
 |**PICTYPE_ICON**|圖片顯示為圖示。|  
   
-##  <a name="m_ppict"></a>CPictureHolder::m_pPict  
+##  <a name="m_ppict"></a>  CPictureHolder::m_pPict  
  指標`CPictureHolder`物件的`IPicture`介面。  
   
 ```  
 LPPICTURE m_pPict;  
 ```  
   
-##  <a name="render"></a>Cpictureholder:: Render  
+##  <a name="render"></a>  Cpictureholder:: Render  
  呈現所參考的矩形中的圖片`rcRender`。  
   
 ```  
@@ -292,7 +287,7 @@ void Render(
  *rcWBounds*  
  表示轉譯圖片物件的週框的矩形。 控制項，這個矩形是`rcBounds`參數傳遞給的覆寫[COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)。  
   
-##  <a name="setpicturedispatch"></a>CPictureHolder::SetPictureDispatch  
+##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  連接`CPictureHolder`物件`IPictureDisp`介面。  
   
 ```  
@@ -303,6 +298,6 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
  `pDisp`  
  新的指標`IPictureDisp`介面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFontHolder 類別](../../mfc/reference/cfontholder-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "OLE 背景： MFC 實作 |Microsoft 文件"
-ms.custom: 
+title: OLE 背景： MFC 實作 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IMarshall
 - IMoniker
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 背景：MFC 實作
 由於原始 OLE API 的大小和複雜度的關係，直接呼叫它來寫入 OLE 應用程式可能會非常耗時。 OLE 的 MFC 程式庫實作的目標是要減少寫入功能完整、具 OLE 功能之應用程式的工作量。  
   
  本文說明未在 MFC 內部實作的 OLE API 部分。 討論內容也會說明如何實作什麼對應至 Windows sdk 的 OLE 部分。  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a>未實作的類別庫的 OLE 的部分  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> 未實作的類別庫的 OLE 的部分  
  MFC 不會直接提供一些 OLE 介面和功能。 如果您要使用這些功能，您可以直接呼叫 OLE API。  
   
  IMoniker 介面  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  如需有關 Microsoft Foundation OLE 類別如何實作 OLE 介面的詳細資訊，請參閱 MFC 技術提示[38](../mfc/tn038-mfc-ole-iunknown-implementation.md)， [39](../mfc/tn039-mfc-ole-automation-implementation.md)，和[40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE 背景](../mfc/ole-background.md)   
  [OLE 背景：實作策略](../mfc/ole-background-implementation-strategies.md)
 

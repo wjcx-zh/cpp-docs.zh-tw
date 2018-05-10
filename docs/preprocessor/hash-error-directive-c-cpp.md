@@ -1,12 +1,9 @@
 ---
-title: "#錯誤指示詞 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: '#錯誤指示詞 （C/c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#error'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - preprocessor, directives
 - error directive (#error directive)
 ms.assetid: d550a802-ff19-4347-9597-688935d23b2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e449da64b5221ccddee34dd850a987b28a2f39df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ba4f0e06798bc6419f8db0471f19588039eb679a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="error-directive-cc"></a>#error 指示詞 (C/C++)
 `#error` 指示詞會在編譯時期發出使用者指定的錯誤訊息並終止編譯。  
@@ -47,5 +42,5 @@ ms.lasthandoff: 02/23/2018
 #endif  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [前置處理器指示詞](../preprocessor/preprocessor-directives.md)

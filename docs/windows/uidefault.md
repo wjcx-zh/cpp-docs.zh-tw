@@ -1,13 +1,10 @@
 ---
-title: "uidefault |Microsoft 文件"
-ms.custom: 
+title: uidefault |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.uidefault
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5da21808cf18fd866113e1a0272fdddba7473486
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad24d6e874b1c2efd9b57118e20fe78bfa037bd3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="uidefault"></a>uidefault
 表示型別資訊成員的使用者介面中顯示的預設成員。  
@@ -75,6 +70,6 @@ __interface ICustom{
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [方法屬性](../windows/method-attributes.md)   

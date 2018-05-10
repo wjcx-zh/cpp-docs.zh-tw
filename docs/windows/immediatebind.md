@@ -1,13 +1,10 @@
 ---
-title: "immediatebind |Microsoft 文件"
-ms.custom: 
+title: immediatebind |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.immediatebind
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - immediatebind attribute
 ms.assetid: 186d40e6-9166-4d0c-9853-4e7e4d25226f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31dddbbb205715e46de5d3382923ef4d73261b53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ee885c138bec9c7fea9adcc3d48b5b23e33a2ca
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="immediatebind"></a>immediatebind
 指示資料庫將會立即被告知資料繫結物件的屬性的所有變更。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [方法屬性](../windows/method-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   

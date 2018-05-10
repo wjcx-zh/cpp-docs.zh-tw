@@ -1,13 +1,10 @@
 ---
-title: "如何： 在複製時變更語言或資源條件 |Microsoft 文件"
-ms.custom: 
+title: 如何： 在複製時變更語言或資源條件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.changing
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Language property
 - condition property of resource
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3655366e8851494482e628b9c260c796df3f64bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>如何：在複製資源時變更其語言或條件
 在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。  
@@ -60,7 +55,7 @@ IDD_AboutBox (Finnish - XX33)
   
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何： 複製資源](../windows/how-to-copy-resources.md)   
  [資源檔](../windows/resource-files-visual-studio.md)   
  [資源編輯器](../windows/resource-editors.md)

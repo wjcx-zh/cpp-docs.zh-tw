@@ -1,13 +1,10 @@
 ---
-title: "使用繪圖工具 （圖示影像編輯器） |Microsoft 文件"
-ms.custom: 
+title: 使用繪圖工具 （圖示影像編輯器） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.drawing
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Image editor [C++], toolbar
 - drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a2f6d310bedd3a2a523112d57ece2dcc54fb3fd1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17211518789113c11194314b57b741ab2b274ddc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>使用繪圖工具 (圖示影像編輯器)
 影像編輯器的徒手繪製和清除的工具的運作方式相同： 您選取的工具，如有必要，[選取前景和背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)和大小和形狀的選項。 然後將指標移至映像和按一下或拖曳來繪製及清除。  
@@ -71,13 +66,13 @@ ms.lasthandoff: 12/21/2017
   
 2.  在階層式子功能表中，選擇您想要使用的工具。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
  [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [圖示影像編輯器](../windows/image-editor-for-icons.md)   

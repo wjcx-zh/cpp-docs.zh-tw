@@ -1,13 +1,10 @@
 ---
-title: "SafeMultiply |Microsoft 文件"
-ms.custom: 
+title: SafeMultiply |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeMultiply
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeMultiply function
 ms.assetid: 81d988a5-fac7-4930-8c37-c24fa8e2c853
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37ea091136521fc83fc63a8fb752e0f4f72cb49f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89581544e203249a548b49f0695b28662407229b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safemultiply"></a>SafeMultiply
 兩個數目相乘在一起的方式，防止溢位。  
@@ -53,7 +48,7 @@ inline bool SafeMultiply (
  參數所在`SafeMultiply`儲存結果。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果沒有發生錯誤。`false`如果發生錯誤。  
+ `true` 如果沒有發生錯誤。`false`如果發生錯誤。  
   
 ## <a name="remarks"></a>備註  
  這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，而不需要建立的執行個體適用於單一乘法運算[SafeInt 類別](../windows/safeint-class.md)。  
@@ -68,7 +63,7 @@ inline bool SafeMultiply (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

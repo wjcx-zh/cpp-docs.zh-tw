@@ -1,13 +1,10 @@
 ---
-title: "nonextensible |Microsoft 文件"
-ms.custom: 
+title: nonextensible |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.nonextensible
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 31aa2bf8572a1a0e8ed785d55bb6960cfe6cf75e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87cdbf66676ed2a3e6054006270b39ad80325857
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="nonextensible"></a>nonextensible
 指定`IDispatch`實作只會包含屬性和方法的介面描述中所列，並且無法在執行階段擴充與其他成員。  
@@ -75,6 +70,6 @@ __interface IFireTabCtrl
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [介面屬性](../windows/interface-attributes.md)   

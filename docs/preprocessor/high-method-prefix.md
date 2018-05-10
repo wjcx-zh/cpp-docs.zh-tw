@@ -1,12 +1,9 @@
 ---
-title: "high_method_prefix |Microsoft 文件"
-ms.custom: 
+title: high_method_prefix |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - high_method_prefix
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e1326f2cd5d1984fefc360ea35f1a333e794407
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b2f8e085f414134a11572063e5bd27ed830e1d95
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
 **C + + 特定的**  
@@ -47,6 +42,6 @@ high_method_prefix("Prefix")
   
  **END c + + 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
  [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

@@ -1,12 +1,10 @@
 ---
-title: "逐步解說： 建立傳統 Windows 桌面應用程式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建立傳統 Windows 桌面應用程式 （c + +） |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
@@ -74,7 +71,7 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
 現在已建立專案，並在編輯器中開啟原始程式檔。 若要繼續，請直接前往[建立程式碼](#create-the-code)。
 
-### <a id="create-in-vs2017-rtm"></a>若要在 Visual Studio 2017 RTM 中建立 Windows 桌面專案
+### <a id="create-in-vs2017-rtm"></a> 若要在 Visual Studio 2017 RTM 中建立 Windows 桌面專案
 
 1. 在 [檔案] 功能表上，選擇 [新增] 然後選擇 [專案]。
 
@@ -122,7 +119,7 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
    參數和傳回值，這個函式的相關資訊，請參閱[WinMain 進入點](https://msdn.microsoft.com/library/windows/desktop/ms633559)。
 
    > [!NOTE]
-   > 什麼是所有這些額外字，例如**回呼**，或**HINSTANCE**，或**\_中\_**？ 傳統的 Windows API 所使用的 typedef 和廣泛地提取出前置處理器巨集的某些細節的型別和特定平台程式碼，呼叫慣例，例如**__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 滑鼠停留的感興趣，word 或選取它，然後按下 ctrl-K、 ctrl-我的小型的快顯視窗，其中包含定義。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱[使用 SAL 註釋減少 C/c + + 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
+   > 什麼是所有這些額外字，例如**回呼**，或**HINSTANCE**，或**\_中\_**？ 傳統的 Windows API 所使用的 typedef 和廣泛地提取出前置處理器巨集的某些細節的型別和特定平台程式碼，呼叫慣例，例如 **__declspec**宣告和編譯器的 pragma。 在 Visual Studio 中，您可以使用 IntelliSense[快速諮詢](/visualstudio/ide/using-intellisense#quick-info)功能，請參閱什麼這些 typedef 和巨集定義。 滑鼠停留的感興趣，word 或選取它，然後按下 ctrl-K、 ctrl-我的小型的快顯視窗，其中包含定義。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回型別通常會使用*SAL 註釋*可協助您捕捉程式設計錯誤。 如需詳細資訊，請參閱[使用 SAL 註釋減少 C/c + + 程式碼缺失](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)。
 
 1. Windows 桌面程式需要&lt;windows.h >。 &lt;tchar.h > 定義`TCHAR`巨集，它最終會解析至`wchar_t`如果您的專案中定義 UNICODE symbol，否則它會解析為`char`。  如果是一律以啟用 UNICODE，您不需要 TCHAR，並只可以直接使用 wchar_t。
 
@@ -369,7 +366,7 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
    }
    ```
 
-   `HDC`在這段程式碼是裝置內容，也就是 Windows 用來啟用與圖形子系統進行通訊的應用程式的資料結構的控制代碼。 `BeginPaint`和`EndPaint`函式會確保您的應用程式行為都像是一個優良，而且不會使用超出它所需要的裝置內容。 這有助於確保圖形子系統是可供其他應用程式。
+   `HDC` 在這段程式碼是裝置內容，也就是 Windows 用來啟用與圖形子系統進行通訊的應用程式的資料結構的控制代碼。 `BeginPaint`和`EndPaint`函式會確保您的應用程式行為都像是一個優良，而且不會使用超出它所需要的裝置內容。 這有助於確保圖形子系統是可供其他應用程式。
 
 1. 應用程式通常會處理許多其他訊息，例如[WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619)時第一次建立一個視窗，和[WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620)視窗關閉時。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
 
@@ -571,6 +568,6 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
 恭喜您！ 當您完成此逐步解說中，並建置傳統 Windows 桌面應用程式。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)

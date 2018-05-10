@@ -1,12 +1,9 @@
 ---
-title: "#include 指示詞 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: '#include 指示詞 （C/c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#include'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee268b68d9be823c6919780f8f4f25e78e1eb74
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 64cd6098f7a539fd883a9c8e0e0c116590a2f38f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="include-directive-cc"></a>#include 指示詞 (C/C++)
 指示前置處理器，將指定之檔案的內容當做已在指示詞出現之處出現於原始程式中一般來處理。  
@@ -107,5 +102,5 @@ CL MYPROG.C
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [前置處理器指示詞](../preprocessor/preprocessor-directives.md)

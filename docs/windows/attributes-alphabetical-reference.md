@@ -1,13 +1,10 @@
 ---
-title: "屬性依字母順序排列參考 |Microsoft 文件"
-ms.custom: 
+title: 屬性依字母順序排列參考 |Microsoft 文件
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - vc.attributes
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b8e0f40e0633d0ebabbbe2f5f226e0311b1c977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-alphabetical-reference"></a>依字母順序排列的屬性參考
 使用 Visual c + + 中的下列屬性。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|將介面項目加入至 COM 對應。|  
 |[control](../windows/control.md)|指定使用者定義型別是控制項。|  
 |[cpp_quote](../windows/cpp-quote.md)|指定的字串，不能包含引號字元，發出至產生的標頭檔。|  
-|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
 |[db_accessor](../windows/db-accessor.md)|將資料行中資料列集繫結和繫結至對應的存取子對應。|  
 |[db_column](../windows/db-column.md)|將指定之資料行繫結至資料列集。|  
 |[db_command](../windows/db-command.md)|執行 OLE DB 命令。|  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[length_is](../windows/length-is.md)|指定要傳送的陣列元素數目。|  
 |[library_block](../windows/library-block.md)|將.idl 檔案的程式庫區塊內的建構。|  
 |[licensed](../windows/licensed.md)|表示要套用的 coclass 係授權使用，而且必須使用具現化**IClassFactory2**。|  
-|[本機](../windows/local-cpp.md)|可讓您使用 MIDL 編譯器為標頭產生器時用於介面標頭。 個別的函式中使用時，會指定產生的任何虛設常式區域的程序。|  
+|[local](../windows/local-cpp.md)|可讓您使用 MIDL 編譯器為標頭產生器時用於介面標頭。 個別的函式中使用時，會指定產生的任何虛設常式區域的程序。|  
 |[max_is](../windows/max-is.md)|指定有效的陣列索引的最大值。|  
 |[模組](../windows/module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|  
 |[ms_union](../windows/ms-union.md)|控制 nonencapsulated 等位的網路資料表示對齊方式。|  
@@ -139,7 +134,7 @@ ms.lasthandoff: 12/21/2017
 |[vi_progid](../windows/vi-progid.md)|指定版本無關的 ProgID 的表單。|  
 |[wire_marshal](../windows/wire-marshal.md)|指定用於傳輸，而不是應用程式特定資料類型的資料類型。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 屬性參考](../windows/cpp-attributes-reference.md)   
  [概念](../windows/attributed-programming-concepts.md)   
  [依群組分類的屬性](../windows/attributes-by-group.md)   

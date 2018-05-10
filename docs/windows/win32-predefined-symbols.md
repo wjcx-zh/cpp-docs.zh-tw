@@ -1,13 +1,10 @@
 ---
-title: "Win32 預先定義的符號 |Microsoft 文件"
-ms.custom: 
+title: Win32 預先定義的符號 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - symbols, Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1ce2ed589d27cd1c0065692a2254bf334f9aa1b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="win32-predefined-symbols"></a>Win32 預先定義的符號
 這些符號定義在 Win32 標頭檔，並支援標準的 Windows 應用程式函式和動作。 常見的 UI 項目主要用於這些符號。 當您正在使用資源編輯器中的控制項時，這些符號會出現在[屬性 視窗](/visualstudio/ide/reference/properties-window)通用控制項相關聯。 比方說，如果您的工具列應該會顯示應用程式圖示，其圖示可以是與符號 IDI_SMALL 中 [屬性] 視窗相關聯。  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [預先定義的符號 Id](../windows/predefined-symbol-ids.md)   
  [符號：資源識別項](../windows/symbols-resource-identifiers.md)

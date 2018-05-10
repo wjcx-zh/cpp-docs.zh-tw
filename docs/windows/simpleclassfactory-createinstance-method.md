@@ -1,12 +1,9 @@
 ---
-title: "Simpleclassfactory:: Createinstance 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Simpleclassfactory:: Createinstance 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory::CreateInstance
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateInstance method
 ms.assetid: 17b7947a-2608-49d9-b730-fef76501c9bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68778eb1b5421cfcf22261d8b1c1efd99bc32c50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance 方法
 
@@ -61,7 +56,7 @@ SimpleClassFactory 不支援彙總。 如果支援彙總，而且所建立的物
 
 ## <a name="remarks"></a>備註
 
-如果 &#95; &#95;WRL_STRICT #95; &#95;已定義，判斷提示會發出錯誤如果類別樣板參數中指定的基底類別不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或未設定為使用 ClassicCom 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
+如果&#95; &#95;WRL_STRICT&#95; &#95;是定義，判斷提示會發出錯誤如果類別樣板參數中指定的基底類別不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或未設定與 ClassicCom 或WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
 ## <a name="requirements"></a>需求
 
@@ -69,6 +64,6 @@ SimpleClassFactory 不支援彙總。 如果支援彙總，而且所建立的物
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [SimpleClassFactory 類別](../windows/simpleclassfactory-class.md)

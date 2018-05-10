@@ -1,12 +1,9 @@
 ---
-title: "double_2 類別 |Microsoft 文件"
-ms.custom: 
+title: double_2 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::set_x
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c447587fcefbd922cbe6c1ba5f63ef1d3a2efce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d049ef7207871382fa343dd3e2034a7e7abef0ac
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="double2-class"></a>double_2 類別
 代表 2 雙短向量。  
@@ -198,5 +193,5 @@ explicit inline double_2(
 static const int size = 2;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

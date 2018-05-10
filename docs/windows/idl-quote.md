@@ -1,13 +1,10 @@
 ---
-title: "idl_quote |Microsoft 文件"
-ms.custom: 
+title: idl_quote |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.idl_quote
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idlquote"></a>idl_quote
 可讓您使用目前版本的 Visual c + + 中不支援的 IDL 建構函式，並將它們傳遞至產生的.idl 檔案。  
@@ -98,6 +93,6 @@ __interface IStatic{
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [獨立屬性](../windows/stand-alone-attributes.md)   

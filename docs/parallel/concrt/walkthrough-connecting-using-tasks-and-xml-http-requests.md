@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 使用工作和 XML HTTP 要求連線 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 使用工作和 XML HTTP 要求連線 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e778c03368a634c349ec7c3ef241a29314cac4ea
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 411d52201aad69a94267615cd0a2acbe6376f64d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>逐步解說：使用工作和 XML HTTP 要求連線
 這個範例示範如何使用[IXMLHTTPRequest2](http://msdn.microsoft.com/en-us/bbc11c4a-aecf-4d6d-8275-3e852e309908)和[IXMLHTTPRequest2Callback](http://msdn.microsoft.com/en-us/aa4b3f4c-6e28-458b-be25-6cce8865fc71)介面，以及將 HTTP GET 和 POST 要求傳送至 web 服務在通用 Windows 平台 (UWP 工作) 應用程式。 將 `IXMLHTTPRequest2` 與工作結合之後，您就可以撰寫程式碼來撰寫其他工作。 例如，您可以使用下載工作做為工作鏈結的一部分。 當工作取消時，下載工作也可以回應。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 02/14/2018
   
 #### <a name="to-define-the-httprequest-class"></a>若要定義 HttpRequest 類別  
   
-1.  使用 Visual c + +**空白應用程式 (XAML)**範本來建立空白 XAML 應用程式專案。 這個範例會將專案命名為 `UsingIXMLHTTPRequest2`。  
+1.  使用 Visual c + +**空白應用程式 (XAML)** 範本來建立空白 XAML 應用程式專案。 這個範例會將專案命名為 `UsingIXMLHTTPRequest2`。  
   
 2.  在專案中加入名為 HttpRequest.h 的標頭檔和名為 HttpRequest.cpp 的原始程式檔。  
   
@@ -120,7 +115,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="next-steps"></a>後續步驟  
  [並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [PPL 中的取消](cancellation-in-the-ppl.md)   
  [C + + 中的非同步程式設計](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)   

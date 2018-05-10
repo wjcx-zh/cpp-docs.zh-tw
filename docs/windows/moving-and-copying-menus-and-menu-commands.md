@@ -1,13 +1,10 @@
 ---
-title: "移動和複製功能表和功能表命令 |Microsoft 文件"
-ms.custom: 
+title: 移動和複製功能表和功能表命令 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - commands, moving on menus
 - menu items, copying
 ms.assetid: 1d8df535-9922-4579-a9c2-37aeac1856eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6042647d0eff213dae82440b9733cff64e94631
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0da935ebdce7de61d5ed6b1a816f87b7cef7ce98
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>移動和複製功能表和功能表命令
 您可以移動或複製功能表和功能表命令，方法是使用拖放方法或使用捷徑功能表的命令 (在功能表上按一下滑鼠右鍵)。  
@@ -57,11 +52,11 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  您也可以拖曳、複製和貼上到其他功能表視窗中的其他功能表。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱 [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6)。  
   
  **需求**  
   
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [功能表編輯器](../windows/menu-editor.md)

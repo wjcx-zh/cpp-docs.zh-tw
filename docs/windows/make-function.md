@@ -1,12 +1,9 @@
 ---
-title: "Make 函式 |Microsoft 文件"
-ms.custom: 
+title: Make 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Make
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aac2a50e3c50941d607dea32c9f7c9eecde8e589
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f381a00b5ac1f105080355f1d3e3cd15efa5abf8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="make-function"></a>Make 函式
 初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同模組中定義的元件。  
@@ -244,5 +239,5 @@ ComPtr<T> Make();
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

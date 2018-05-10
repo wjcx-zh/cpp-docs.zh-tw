@@ -1,12 +1,9 @@
 ---
-title: "#匯入指示詞 （c + +） |Microsoft 文件"
-ms.custom: 
+title: '#匯入指示詞 （c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#import'
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4e649e458a6275ea369031416c379721c3f9af0e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="import-directive-c"></a>#import 指示詞 (C++)
 **C + + 特定的**  
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/23/2018
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")  
     ```  
   
-     如果您未指定版本或 lcid，[規則](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)，它會套用到**progid:**也會套用至**libid:**。  
+     如果您未指定版本或 lcid，[規則](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)，它會套用到**progid:** 也會套用至**libid:**。  
   
 -   可執行檔 (.exe)。  
   
@@ -139,7 +134,7 @@ ms.lasthandoff: 02/23/2018
   
 -   向前參考和 typedef：包含結構宣告，例如 `struct IMyInterface` 和 Typedef。  
   
--   智慧型指標宣告： 樣板類別`_com_ptr_t`是封裝介面指標的智慧型指標實作不需要呼叫`AddRef`，**發行**，`QueryInterface`函式。 此外，還會在建立新的 COM 物件時隱藏 `CoCreateInstance` 呼叫。 本節使用巨集陳述式**_COM_SMARTPTR_TYPEDEF**建立為的樣板特製化的 COM 介面的 typedef [_com_ptr_t](../cpp/com-ptr-t-class.md)範本類別。 例如，對於介面**Mytype**、。TLH 檔案將包含：  
+-   智慧型指標宣告： 樣板類別`_com_ptr_t`是封裝介面指標的智慧型指標實作不需要呼叫`AddRef`，**發行**，`QueryInterface`函式。 此外，還會在建立新的 COM 物件時隱藏 `CoCreateInstance` 呼叫。 本節使用巨集陳述式 **_COM_SMARTPTR_TYPEDEF**建立為的樣板特製化的 COM 介面的 typedef [_com_ptr_t](../cpp/com-ptr-t-class.md)範本類別。 例如，對於介面**Mytype**、。TLH 檔案將包含：  
   
     ```  
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  
@@ -201,6 +196,6 @@ using namespace MyLib;
   
  **END c + + 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [前置處理器指示詞](../preprocessor/preprocessor-directives.md)   
  [編譯器 COM 支援](../cpp/compiler-com-support.md)

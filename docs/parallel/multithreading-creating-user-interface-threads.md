@@ -1,13 +1,10 @@
 ---
-title: "多執行緒： 建立使用者介面執行緒 |Microsoft 文件"
-ms.custom: 
+title: 多執行緒： 建立使用者介面執行緒 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 - SECURITY_ATTRIBUTES
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 480839316cc8d47b2af4be1cd81c0d02f09fad25
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>多執行緒：建立使用者介面執行緒
 使用者介面執行緒通常用於處理使用者輸入，並回應個別執行緒執行的應用程式其他部分的使用者事件。 主應用程式執行緒 (中提供您`CWinApp`-衍生的類別) 已經建立並啟動。 本主題說明建立其他的使用者介面執行緒所需的步驟。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 -   （選擇性）所需的安全性屬性。 預設為在父執行緒與相同的存取。 此安全性資訊的格式的相關資訊，請參閱[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
   
- `AfxBeginThread`會為您執行大部分的工作。 它會建立您的類別的新物件，使用您提供的資訊並呼叫它初始化[CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread)來開始執行執行緒。 整個程序進行檢查以確定所有物件都都會解除配置建立的任何部分失敗。  
+ `AfxBeginThread` 會為您執行大部分的工作。 它會建立您的類別的新物件，使用您提供的資訊並呼叫它初始化[CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread)來開始執行執行緒。 整個程序進行檢查以確定所有物件都都會解除配置建立的任何部分失敗。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
@@ -72,5 +67,5 @@ ms.lasthandoff: 12/21/2017
   
 -   [處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)

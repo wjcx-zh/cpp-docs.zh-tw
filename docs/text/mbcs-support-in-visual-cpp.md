@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 中的 MBCS 支援 |Microsoft 文件"
-ms.custom: 
+title: Visual c + + 中的 MBCS 支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 41d075edb01fc139660d8e72a7fe53f03ee9e80b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支援
 Mbcs 的新版 Windows 上執行時，Visual c + + 開發系統 （包括整合式原始檔的程式碼編輯器]、 [偵錯工具和命令列工具） 已 MBCS 啟用，除了 [記憶體] 視窗。  
@@ -50,7 +45,7 @@ Mbcs 的新版 Windows 上執行時，Visual c + + 開發系統 （包括整合�
   
  Visual c + + 可接受雙位元組字元，若要這樣做適當的位置。 此對話方塊和 Visual c + + 資源編輯器 （例如，在對話方塊編輯器中靜態文字） 和靜態文字項目在圖示編輯器中的文字項目中包含路徑名稱和檔案名稱。 此外，前置處理器會辨識某些雙位元組指示詞 — 例如，檔案名稱中的`#include`陳述式，並做為引數**code_seg**和**data_seg** pragma。 在原始碼程式碼編輯器中，會接受在註解和字串常值的雙位元組字元，雖然不是在 C/c + + 語言的項目 （例如變數名稱）。  
   
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>支援的輸入法 (IME)  
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> 支援的輸入法 (IME)  
  通常使用 MBCS （例如，日本） 的東亞洲市場支援 Windows IME 輸入這兩個單一位元組和雙位元組字元所撰寫的應用程式。 Visual c + + 開發環境包含完整 IME 支援。 如需詳細資訊，請參閱[輸入法範例： 示範如何控制 IME 模式和實作 IME 層級 3](http://msdn.microsoft.com/en-us/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
   
  日文鍵盤不直接支援漢字字元。 IME 轉換發音字串，其中一種其他日文字母 （羅馬字母、 片假名或平假名） 輸入可能的漢字表示。 如果有模稜兩可，您可以選取從多個替代方案。 當您選取了預定的漢字字元時，輸入法會傳遞兩個`WM_CHAR`控制的應用程式的訊息。  
@@ -70,6 +65,6 @@ Mbcs 的新版 Windows 上執行時，Visual c + + 開發系統 （包括整合�
 ## <a name="graphical-tools"></a>圖形化工具  
  Visual c + + windows 工具，例如 Spy + + 和資源的編輯工具，完全支援輸入法的字串。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [針對多位元組字元集 (Mbcs) 支援](../text/support-for-multibyte-character-sets-mbcss.md)   
  [MBCS 程式設計提示](../text/mbcs-programming-tips.md)

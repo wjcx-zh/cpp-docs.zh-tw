@@ -1,31 +1,26 @@
 ---
-title: "逐步解說： 建立和使用靜態程式庫 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建立和使用靜態程式庫 （c + +） |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>逐步解說：建立和使用靜態程式庫 (C++)
 本逐步解說示範如何建立搭配 C++ 應用程式使用的靜態程式庫 (.lib 檔案)。 使用靜態程式庫是重複使用程式碼的好方法。 您只要在靜態程式庫中撰寫這些常式一次，然後從需要其功能的應用程式中加以參考，就不需在每個應用程式中都重新實作相同的常式。 從靜態程式庫連結的程式碼會變成應用程式的一部分，您不必安裝另一個檔案即可使用程式碼。  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 5.  從功能表列中選取 [建置] 、[建置方案]  ，以編譯靜態程式庫。 這會建立可供其他程式使用的靜態程式庫。  
   
     > [!NOTE]
-    >  從 Visual Studio 命令列建置時，您必須以兩個步驟建置程式。 首先，執行 **cl /c /EHsc MathFuncsLib.cpp** ，以編譯程式碼並建立名為 **MathFuncsLib.obj**的目的檔( **Cl**命令會叫用編譯器 Cl.exe，而**/c**選項則指定編譯而不連結。 如需詳細資訊，請參閱[/c （編譯而不連結）](../build/reference/c-compile-without-linking.md)。)其次，執行**lib MathFuncsLib.obj**以連結程式碼並建立靜態程式庫**MathFuncsLib.lib**。 ( **lib** 命令會叫用程式庫管理員 Lib.exe。 (如需詳細資訊，請參閱 [LIB Reference](../build/reference/lib-reference.md))。  
+    >  從 Visual Studio 命令列建置時，您必須以兩個步驟建置程式。 首先，執行 **cl /c /EHsc MathFuncsLib.cpp** ，以編譯程式碼並建立名為 **MathFuncsLib.obj**的目的檔( **Cl**命令會叫用編譯器 Cl.exe，而 **/c**選項則指定編譯而不連結。 如需詳細資訊，請參閱[/c （編譯而不連結）](../build/reference/c-compile-without-linking.md)。)其次，執行**lib MathFuncsLib.obj**以連結程式碼並建立靜態程式庫**MathFuncsLib.lib**。 ( **lib** 命令會叫用程式庫管理員 Lib.exe。 (如需詳細資訊，請參閱 [LIB Reference](../build/reference/lib-reference.md))。  
   
 ##  <a name="BKMK_CreateAppToRefTheLib"></a> 建立參考靜態程式庫的 C++ 主控台應用程式  
   
@@ -141,6 +136,6 @@ ms.lasthandoff: 12/21/2017
     a / b = 0.0747475  
     ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [逐步解說：建立和使用動態連結程式庫 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)   
  [傳統型應用程式 (Visual C++)](../windows/desktop-applications-visual-cpp.md)

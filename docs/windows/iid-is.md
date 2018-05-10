@@ -1,13 +1,10 @@
 ---
-title: "iid_is |Microsoft 文件"
-ms.custom: 
+title: iid_is |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.iid_is
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2caa675f222ad1e2940117c60eb5a83d6a4f976f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9ef3a14211e223b9902dc9843639d217ceaf1b3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="iidis"></a>iid_is
 指定的介面指標所指向的 COM 介面的 IID。  
@@ -78,6 +73,6 @@ __interface IFireTabCtrl : IDispatch
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [參數屬性](../windows/parameter-attributes.md)   

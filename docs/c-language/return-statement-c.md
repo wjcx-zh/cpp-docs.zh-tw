@@ -1,36 +1,31 @@
 ---
-title: "return 陳述式 (C) | Microsoft Docs"
-ms.custom: 
+title: return 陳述式 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-statement-c"></a>return 陳述式 (C)
 `return` 陳述式可終止函式的執行，並且將控制權還給呼叫函式。 執行作業會在進行呼叫的函式中緊接著呼叫之後繼續進行。 `return` 陳述式也可將值傳回至呼叫函式。 如需詳細資訊，請參閱[傳回型別](../c-language/return-type.md)。  
   
 ## <a name="syntax"></a>語法  
  *jump-statement*：  
- **return**  *expression* opt**;**  
+ **return**  *expression* opt **;**  
   
  *expression* 的值 (如果有) 會傳回至呼叫函式。 如果省略 *expression*，則函式的傳回值會是未定義。 此運算式 (如果有) 會先評估，再轉換為函式所傳回的類型。 如果函式是使用傳回型別 `void` 宣告，則包含運算式的 `return` 陳述式會產生警告，而且不會評估運算式。  
   

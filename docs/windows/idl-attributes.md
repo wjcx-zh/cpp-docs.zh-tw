@@ -1,13 +1,10 @@
 ---
-title: "IDL 屬性 |Microsoft 文件"
-ms.custom: 
+title: IDL 屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IDL files, attributes
 - .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c522c039a0471240ba319561485e8cc7f348aaa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idl-attributes"></a>IDL 屬性
 傳統上，維持.idl 檔案，表示您必須以：  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 |[lcid](../windows/lcid.md)|可讓您將地區設定識別碼傳遞給函式。|  
 |[length_is](../windows/length-is.md)|指定要傳送的陣列元素數目。|  
 |[licensed](../windows/licensed.md)|表示要套用的 coclass 係授權使用，而且必須使用具現化**IClassFactory2**。|  
-|[本機](../windows/local-cpp.md)|可讓您使用 MIDL 編譯器為標頭產生器時用於介面標頭。 個別的函式中使用時，會指定產生的任何虛設常式區域的程序。|  
+|[local](../windows/local-cpp.md)|可讓您使用 MIDL 編譯器為標頭產生器時用於介面標頭。 個別的函式中使用時，會指定產生的任何虛設常式區域的程序。|  
 |[max_is](../windows/max-is.md)|指定有效的陣列索引的最大值。|  
 |[模組](../windows/module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|  
 |[ms_union](../windows/ms-union.md)|控制 nonencapsulated 等位的網路資料表示對齊方式。|  
@@ -126,6 +121,6 @@ ms.lasthandoff: 12/21/2017
 |[vi_progid](../windows/vi-progid.md)|指定版本無關的 ProgID 的表單。|  
 |[wire_marshal](../windows/wire-marshal.md)|指定用於傳輸，而不是應用程式特定資料類型的資料類型。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依群組分類的屬性](../windows/attributes-by-group.md)   
  [屬性的限制](http://msdn.microsoft.com/en-us/6e6c4329-f667-4869-b991-cbe9cb7a8f61)

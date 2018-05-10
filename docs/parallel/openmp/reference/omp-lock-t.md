@@ -1,12 +1,9 @@
 ---
-title: omp_lock_t | Microsoft Docs
-ms.custom: 
+title: omp_lock_t |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - omp_lock_t
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - omp_lock_t OpenMP data type
 ms.assetid: 51b80629-4ffc-4b8a-95c7-1af048f1f286
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae6720a0b30c4991f32776e1c7327b2746edcac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5f07ff7c9a0590bee90783c2f06dcb6ffdbcb42e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="omplockt"></a>omp_lock_t
 保存的狀態、 是否可供使用鎖定或鎖定如果執行緒擁有鎖定的類型。  
@@ -47,5 +42,5 @@ ms.lasthandoff: 02/23/2018
 ## <a name="example"></a>範例  
  請參閱[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)的使用範例**omp_lock_t**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料類型](../../../parallel/openmp/reference/openmp-data-types.md)

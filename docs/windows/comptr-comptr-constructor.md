@@ -2,11 +2,8 @@
 title: 'Comptr:: Comptr 建構函式 |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::ComPtr::ComPtr
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ComPtr, constructor
 ms.assetid: eaf70907-beac-458f-a503-2e5e27b0c196
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59a7e67eb27ef72a414e7e8129aa7bf781604426
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: e3a632c96c39ccd40f008556287af95944530cdc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrcomptr-constructor"></a>ComPtr::ComPtr 建構函式
 初始化 ComPtr 類別的新執行個體。 多載提供預設、複製、移動和轉換建構函式。  

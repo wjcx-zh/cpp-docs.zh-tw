@@ -1,12 +1,9 @@
 ---
-title: once | Microsoft Docs
-ms.custom: 
+title: 一旦 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.once
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0aea1700feaad1c286386f17a5008514282d52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="once"></a>once
 指定編譯原始程式碼檔案時，編譯器只能包含 (開啟) 檔案一次。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 02/23/2018
 ```  
   
 ## <a name="remarks"></a>備註  
- 因為編譯器不會在轉譯單元中檔案的第一個 #include 之後開啟及讀取檔案，所以使用 `#pragma once` 可以縮短建置時間。 這指*多個 include 最佳化*。 它有的效果類似於*#include 防護*慣用語，使用前置處理器巨集定義來防止多次包含檔案的內容。 這也有助於避免違反*一個定義規則*-要求的所有範本、 類型、 函式和物件只能有一個定義您的程式碼中。  
+ 因為編譯器不會在轉譯單元中檔案的第一個 #include 之後開啟及讀取檔案，所以使用 `#pragma once` 可以縮短建置時間。 這指*多個 include 最佳化*。 它有的效果類似於 *#include 防護*慣用語，使用前置處理器巨集定義來防止多次包含檔案的內容。 這也有助於避免違反*一個定義規則*-要求的所有範本、 類型、 函式和物件只能有一個定義您的程式碼中。  
   
  例如:   
   
@@ -71,5 +66,5 @@ ms.lasthandoff: 02/23/2018
   
  請注意，不要在設計目的是要併入多次的標頭檔中使用 `#pragma once` 或 #include 防護慣用語，使用前置處理器符號來控制其效果。 如需這項設計的範例，請參閱\<assert.h > 標頭檔。 也請小心管理 include 路徑，以避免建立多個 include 檔案的路徑，如此可以同時戰勝 #include 防護和 `#pragma once` 的多個 include 最佳化。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

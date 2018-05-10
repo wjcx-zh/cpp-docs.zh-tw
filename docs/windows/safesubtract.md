@@ -1,13 +1,10 @@
 ---
-title: "SafeSubtract |Microsoft 文件"
-ms.custom: 
+title: SafeSubtract |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeSubtract
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeSubtract function
 ms.assetid: c2712ddc-173f-46a1-b09c-e7ebbd9e68b2
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b94d84e6a348b68258fc1b57c2e0ad9ad30e36d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 300959fe64d280ff3e2c19fd579e8f447a2402eb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safesubtract"></a>SafeSubtract
 兩個數字的方式防止溢位。  
@@ -53,7 +48,7 @@ inline bool SafeSubtract (
  參數所在`SafeSubtract`儲存結果。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果沒有發生錯誤。`false`如果發生錯誤。  
+ `true` 如果沒有發生錯誤。`false`如果發生錯誤。  
   
 ## <a name="remarks"></a>備註  
  這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，而不需要建立的執行個體適用於單一減法運算[SafeInt 類別](../windows/safeint-class.md)。  
@@ -68,7 +63,7 @@ inline bool SafeSubtract (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

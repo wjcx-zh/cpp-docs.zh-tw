@@ -1,12 +1,9 @@
 ---
-title: "號誌類別 |Microsoft 文件"
-ms.custom: 
+title: 號誌類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Semaphore
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Semaphore class
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60373c12220fce57672389b98455a123990f3c93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="semaphore-class"></a>Semaphore 類別
 表示控制項可支援有限的數目的使用者共用的資源的同步處理物件。  
@@ -78,5 +73,5 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

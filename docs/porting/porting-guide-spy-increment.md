@@ -1,27 +1,22 @@
 ---
-title: "移植指南：Spy++ | Microsoft Docs"
-ms.custom: 
+title: 移植指南：Spy++ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 本移植案例研究的設計，是為了讓您了解什麼是典型移植專案、您可能遇到的問題類型，並提供一些可用於解決移植問題的一般秘訣和訣竅。 這不是最終移植指南，因為移植專案的體驗主要取決於程式碼的細節。  

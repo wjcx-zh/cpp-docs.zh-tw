@@ -1,12 +1,9 @@
 ---
-title: pack | Microsoft Docs
-ms.custom: 
+title: 組件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - pack_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15625977ab5dd0c20238f52e84f4ecea443d01ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6c29c31cae2b7de59d4db5ed6546ad4eda6baecf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pack"></a>pack
 指定結構、等位及類別成員的封裝對齊。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 ```  
   
 ## <a name="remarks"></a>備註  
- 封裝類別是指將類別的成員交錯放入記憶體中，這可能表示部分或所有的成員能夠在比目標架構的預設對齊還小的界限上對齊。 `pack` 在資料宣告層級提供控制項。 這不同於編譯器選項[/Zp](../build/reference/zp-struct-member-alignment.md)，後者只會提供模組層級的控制項。 `pack` 函式會在第一個 `struct`、`union` 或在出現 pragma 之後的 `class` 宣告中生效。 `pack` 對定義無作用。 呼叫`pack`沒有引數集`n`編譯器選項所設定的值**/Zp**。 如果未設定編譯器選項，則預設值為 8。  
+ 封裝類別是指將類別的成員交錯放入記憶體中，這可能表示部分或所有的成員能夠在比目標架構的預設對齊還小的界限上對齊。 `pack` 在資料宣告層級提供控制項。 這不同於編譯器選項[/Zp](../build/reference/zp-struct-member-alignment.md)，後者只會提供模組層級的控制項。 `pack` 函式會在第一個 `struct`、`union` 或在出現 pragma 之後的 `class` 宣告中生效。 `pack` 對定義無作用。 呼叫`pack`沒有引數集`n`編譯器選項所設定的值 **/Zp**。 如果未設定編譯器選項，則預設值為 8。  
   
  如果您變更結構的對齊，結構在記憶體中可能不會佔用太多空間，但效能可能會降低，甚至可能會出現硬體所產生的未對齊存取例外狀況。  您可以使用，以修改此例外狀況行為[SetErrorMode](http://msdn.microsoft.com/library/windows/desktop/ms680621)。  
   
@@ -127,5 +122,5 @@ int main() {
 #pragma pack(show)   // C4810  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

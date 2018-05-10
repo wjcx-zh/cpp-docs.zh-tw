@@ -1,12 +1,9 @@
 ---
-title: "訊息 |Microsoft 文件"
-ms.custom: 
+title: 訊息 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - message_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - message pragma
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb998ef084f259601478ea9614a2bd8dc3da0d68
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 47b9fd580d1ebabf4352104fe49f1d3c982a49e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message"></a>訊息
 傳送字串常值至標準輸出，而不終止編譯。  
@@ -71,5 +66,5 @@ ms.lasthandoff: 02/23/2018
 #pragma message("")  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

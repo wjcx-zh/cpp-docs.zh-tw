@@ -1,12 +1,9 @@
 ---
-title: "Module:: genericreleasenotifier:: Invoke 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Module:: genericreleasenotifier:: Invoke 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GenericReleaseNotifier::Invoke
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Invoke method
 ms.assetid: 83dd5678-2514-454a-b2a0-6097ce7d4140
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c7700299251d427b1e23d05c53381082394508c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cb6ce12105d9e752a85b1252739ef37b5664780
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulegenericreleasenotifierinvoke-method"></a>Module::GenericReleaseNotifier::Invoke 方法
 呼叫目前 module:: genericreleasenotifier 物件相關聯的事件處理常式。  
@@ -42,5 +37,5 @@ void Invoke();
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Module::GenericReleaseNotifier 類別](../windows/module-genericreleasenotifier-class.md)

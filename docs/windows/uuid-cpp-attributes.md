@@ -1,13 +1,10 @@
 ---
-title: "uuid （c + + 屬性） |Microsoft 文件"
-ms.custom: 
+title: uuid （c + + 屬性） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.uuid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba35dc89ae2567a499d4623f0c74293d2dbdcca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 屬性)
 指定類別或介面的唯一識別碼。  
@@ -62,14 +57,14 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**適用於**|**類別**， `struct`， `interface`， **union**，`enum`|  
+|**適用於**|**類別**， `struct`， `interface`， **union**， `enum`|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [介面屬性](../windows/interface-attributes.md)   
  [類別屬性](../windows/class-attributes.md)   

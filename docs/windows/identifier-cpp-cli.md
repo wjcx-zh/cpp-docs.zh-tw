@@ -1,13 +1,10 @@
 ---
-title: "__identifier (c + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: __identifier (c + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - __identifier
 - __identifier_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4d68d21fc9436bff0e39fa474b97ec54138e15b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a96363fcfbc753e727c6cbb6a5efbbb5606b6c40
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 可讓您使用 Visual c + + 關鍵字當做識別項。  
@@ -77,7 +72,7 @@ int main() {
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **備註**  
   
- `__identifier`關鍵字是與有效**/clr**編譯器選項。  
+ `__identifier`關鍵字是與有效 **/clr**編譯器選項。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
@@ -106,6 +101,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

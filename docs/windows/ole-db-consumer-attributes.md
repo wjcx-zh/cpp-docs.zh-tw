@@ -1,13 +1,10 @@
 ---
-title: "OLE DB 消費者屬性 |Microsoft 文件"
-ms.custom: 
+title: OLE DB 消費者屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - database attributes [C++]
 - attributes [C++], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a42ce4f1d8f3a9f61840433ef83470882e42e647
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e9afcf3850d047452b201d9d1d84f1e0cf6cb4b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB 消費者屬性
 OLE DB 消費者屬性插入程式碼，根據[OLE DB 消費者樣板](../data/oledb/ole-db-consumer-templates-reference.md)，以建立使用 OLE DB 取用者會執行工作，例如開啟資料表，執行命令，以及存取資料。  
@@ -43,5 +38,5 @@ OLE DB 消費者屬性插入程式碼，根據[OLE DB 消費者樣板](../data/o
 |[db_source](../windows/db-source.md)|建立和封裝的連接，透過提供者，資料來源。|  
 |[db_table](../windows/db-table.md)|開啟 OLE DB 資料表。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依群組分類的屬性](../windows/attributes-by-group.md)

@@ -1,13 +1,10 @@
 ---
-title: "結構宣告 | Microsoft Docs"
-ms.custom: 
+title: 結構宣告 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7d305b2bc74455abd6fdbcfb29ed7ef4103bf19
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-declarations"></a>結構宣告
 「結構宣告」會命名一個類型，並指定可能具有不同類型之變數值的序列 (稱為結構的「成員」或「欄位」)。 選擇性識別項 (稱為「標記」) 會為結構類型提供名稱，並且可以在後續參考結構類型時使用。 該結構類型的變數會保留由該類型定義的整個序列。 C 中的結構類似於其他語言中稱為「記錄」的類型。  
   
 ## <a name="syntax"></a>語法  
  *struct-or-union-specifier*：  
- *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
+ *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
   
  *struct-or-union identifier*  
   
@@ -140,7 +135,7 @@ struct sample   /* Defines a structure named x */
   
  結構的前兩個成員為 `char` 變數和 **float** 值的指標。 第三個成員 `next` 宣告為所定義結構類型 (`sample`) 的指標。  
   
- 不需要標記名稱時，匿名結構會很有用。 當某個宣告會定義所有結構執行個體時，就會發生這種情況。 例如:   
+ 不需要標記名稱時，匿名結構會很有用。 當某個宣告會定義所有結構執行個體時，就會發生這種情況。 例如:  
   
 ```  
 struct  
@@ -163,7 +158,7 @@ struct somestruct
 } w;  
 ```  
   
- **Microsoft 特定的**  
+ **Microsoft 專屬**  
   
  編譯器允許使用一個可變大小或大小為零的陣列，做為結構的最後一個成員。 在各種情況下使用時，如果常數陣列的大小不同，這會非常有幫助。 此類結構的宣告如下所示：  
   
@@ -191,7 +186,7 @@ p_s->b = 100;  /* A reference to a field in the s structure */
   
  如需結構參考的資訊，請參閱[結構和等位成員](../c-language/structure-and-union-members.md)。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專屬**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

@@ -1,13 +1,10 @@
 ---
-title: "函式原型 | Microsoft Docs"
-ms.custom: 
+title: 函式原型 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,26 +14,24 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>函式原型
 函式宣告在函式定義之前，並且會指定函式的名稱、傳回型別、儲存類別和其他屬性。 函式宣告也必須建立函式引數的類型和識別項，才能成為原型。  
   
 ## <a name="syntax"></a>語法  
  `declaration`：  
- *declaration-specifiers attribute-seq* opt*init-declarator-list* opt**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list* opt **;**  
   
- /\* *attribute-seq* opt 是 Microsoft 特定的 \*/  
+ /\* *attribute-seq* opt 是 Microsoft 特定的 */  
   
  *declaration-specifiers*：  
  *storage-class-specifier declaration-specifiers* opt  
@@ -61,7 +56,7 @@ ms.lasthandoff: 03/16/2018
  *direct-declarator*: /\* 函式宣告子 \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)**  /* 新樣式的宣告子 \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* 過時樣式宣告子 \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* 過時樣式宣告子 \*/  
   
  原型的形式與函式定義的相同，但右括號後面加上分號即可終止原型，因此沒有主體。 在任何情況下，傳回類型必須與在函式定義中指定的傳回類型一致。  
   
@@ -102,5 +97,5 @@ void func1( struct S * );
   
  在 /Ze 下，仍然會在全域範圍輸入該標記。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式](../c-language/functions-c.md)

@@ -1,12 +1,9 @@
 ---
-title: "Makeallocator:: Makeallocator 建構函式 |Microsoft 文件"
-ms.custom: 
+title: 'Makeallocator:: Makeallocator 建構函式 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAllocator::MakeAllocator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - MakeAllocator, constructor
 ms.assetid: fc03978b-2c5f-4e92-ab6d-f71bb49895cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d3122377277fc5870f95c24e946377500882179
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b9095daa4ff1dca77c78c11ac41d8747d889d32
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="makeallocatormakeallocator-constructor"></a>MakeAllocator::MakeAllocator 建構函式
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -45,6 +40,6 @@ MakeAllocator();
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MakeAllocator 類別](../windows/makeallocator-class.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

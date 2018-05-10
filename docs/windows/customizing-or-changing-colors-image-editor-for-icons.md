@@ -1,13 +1,10 @@
 ---
-title: "自訂或變更色彩 （圖示影像編輯器） |Microsoft 文件"
-ms.custom: 
+title: 自訂或變更色彩 （圖示影像編輯器） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - Adjust Colors command
 - Image editor [C++], dithered color
 ms.assetid: e58f6b32-f435-4d9a-a570-7569433661ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 762c2a9d9814f9780aeae2d8d61d7006bdc9728c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67d84840bb981eab05d923a3f430c9b3972cd1e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自訂或變更色彩 (圖示影像編輯器)
 影像編輯器[色彩調色盤](../windows/colors-window-image-editor-for-icons.md)一開始會顯示 16 個標準色彩。 除了顯示的色彩以外，您還可以自行建立自訂色彩。 您可以接著[儲存和載入自訂的調色盤](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
@@ -60,6 +55,6 @@ ms.lasthandoff: 12/21/2017
   
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
  [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

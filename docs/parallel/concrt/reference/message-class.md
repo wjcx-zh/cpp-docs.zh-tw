@@ -1,12 +1,9 @@
 ---
-title: "message 類別 |Microsoft 文件"
-ms.custom: 
+title: message 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - message
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 030b3d376b26afb077edd765d338b4c5d1b0841f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 14fe0fa284a56c45404d8b568acf3b0d360fa27a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-class"></a>message 類別
 基本訊息封套，其中包含在傳訊區塊之間傳遞的資料承載。  
@@ -74,7 +69,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[payload](#payload)|承載`message`物件。|  
+|[裝載](#payload)|承載`message`物件。|  
   
 ## <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。  
@@ -168,5 +163,5 @@ long remove_ref();
 ### <a name="return-value"></a>傳回值  
  參考計數的新值。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

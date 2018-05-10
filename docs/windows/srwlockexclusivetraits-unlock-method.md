@@ -1,12 +1,9 @@
 ---
-title: "Srwlockexclusivetraits:: Unlock 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Srwlockexclusivetraits:: Unlock 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits::Unlock
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Unlock method
 ms.assetid: 7fd6b0fb-8b88-4a43-aa74-0d7fe47a0da6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b6c9fab4863c1d77e61a3cc5f48806a1d2ea8a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0babd7efcae7bbd91fd81362e7b0f612f177477f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="srwlockexclusivetraitsunlock-method"></a>SRWLockExclusiveTraits::Unlock 方法
 釋放指定之 SRWLock 物件的獨佔控制。  
@@ -48,5 +43,5 @@ inline static void Unlock(
   
  **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SRWLockExclusiveTraits 結構](../windows/srwlockexclusivetraits-structure.md)

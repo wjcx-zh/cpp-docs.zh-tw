@@ -1,31 +1,26 @@
 ---
-title: "方法屬性 |Microsoft 文件"
-ms.custom: 
+title: 方法屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>方法屬性
 下列屬性套用至類別、 coclass 或介面中的方法。  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|表示屬性支援資料繫結。|  
 |[call_as](../windows/call-as.md)|讓分為函式對應至遠端函式。|  
-|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
 |[db_column](../windows/db-column.md)|將指定之資料行繫結至資料列集。|  
 |[db_command](../windows/db-command.md)|建立 OLE DB 命令。|  
 |[db_param](../windows/db-param.md)|關聯的輸入或輸出參數中指定的成員變數，分隔的變數。|  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 |[id](../windows/id.md)|指定 DISPID 成員函式 （屬性或方法，在介面或 dispinterface）。|  
 |[immediatebind](../windows/immediatebind.md)|指示資料庫將會立即被告知資料繫結物件的屬性的所有變更。|  
 |[in](../windows/in-cpp.md)|指出參數是要呼叫的程序從傳遞給呼叫的程序。|  
-|[本機](../windows/local-cpp.md)|可讓您使用 MIDL 編譯器為標頭產生器時用於介面標頭。 個別的函式中使用時，會指定產生的任何虛設常式區域的程序。|  
+|[local](../windows/local-cpp.md)|可讓您使用 MIDL 編譯器為標頭產生器時用於介面標頭。 個別的函式中使用時，會指定產生的任何虛設常式區域的程序。|  
 |[nonbrowsable](../windows/nonbrowsable.md)|表示某個介面成員不會顯示在屬性瀏覽器。|  
 |[propget](../windows/propget.md)|指定屬性存取子函式。|  
 |[propput](../windows/propput.md)|指定的屬性設定函式。|  
@@ -66,5 +61,5 @@ ms.lasthandoff: 12/21/2017
 |[synchronize](../windows/synchronize.md)|同步處理至目標方法的存取。|  
 |[vararg](../windows/vararg.md)|指定的函式接受可變數目的引數。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依使用方式分類的屬性](../windows/attributes-by-usage.md)

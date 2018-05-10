@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 建立標準 c + + 程式 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建立標準 c + + 程式 （c + +） |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - vcfirstapp
 - vccreatefirst
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說： 建立標準 c + + 程式 （c + +）
 您可以使用 Visual Studio 整合式的開發環境 (IDE) 中的 Visual c + + 來建立標準 c + + 程式。 依照本逐步解說中的步驟，建立專案、 將新檔案加入專案、 修改檔案以加入 c + + 程式碼，然後編譯及執行程式，使用[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
  Visual c + + 符合 2003 c + + 標準，主要例外狀況： 兩個階段的名稱查閱、 例外狀況規格和匯出。 此外，Visual c + + 也支援數個 C + + 0x 功能，例如，lambda、 auto、 static_assert、 右值參考和 extern 範本。  
   
 > [!NOTE]
->  如果需要與標準相容性，使用**/Za**編譯器選項，來停用標準的 Microsoft 擴充功能。 如需詳細資訊，請參閱[/Za，/Ze （停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)。  
+>  如果需要與標準相容性，使用 **/Za**編譯器選項，來停用標準的 Microsoft 擴充功能。 如需詳細資訊，請參閱[/Za，/Ze （停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)。  
   
 ## <a name="prerequisites"></a>必要條件  
  若要完成此逐步解說，您必須了解 C++ 語言的基礎。  
@@ -47,13 +42,13 @@ ms.lasthandoff: 12/21/2017
   
 1.  建立專案，指向**新增**上**檔案**] 功能表，然後按一下 [**專案**。  
   
-2.  在**Visual c + +**專案類型 窗格中，按一下  **Win32**，然後按一下  **Win32 主控台應用程式**。  
+2.  在**Visual c + +** 專案類型 窗格中，按一下  **Win32**，然後按一下  **Win32 主控台應用程式**。  
   
 3.  輸入專案的名稱。  
   
      根據預設，包含專案的方案具有相同名稱做為專案中，但您可以輸入不同的名稱。 您也可以輸入不同的專案位置。  
   
-     按一下**確定**建立專案。  
+     按一下 [確定] 建立專案。  
   
 4.  在**Win32 應用程式精靈**，按一下**下一步**，選取**空專案**，然後按一下 **完成**。  
   
@@ -82,6 +77,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="next-steps"></a>後續步驟  
  **上一步：** [主控台應用程式中 Visual c + +](../windows/console-applications-in-visual-cpp.md)。 **下一步:**[逐步解說： 編譯原生 c + + 程式命令列上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

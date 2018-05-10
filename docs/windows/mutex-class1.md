@@ -1,12 +1,9 @@
 ---
-title: "Mutex Class1 |Microsoft 文件"
-ms.custom: 
+title: Mutex Class1 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Mutex
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Mutex class
 ms.assetid: 682a0963-721c-46a2-8871-000e9997505b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c0e849d1fee7eca67f3b5765d31b54e0660eaa25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a9e9674dd8ac5aa7d444a77df66c1aff4a70299
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mutex-class1"></a>Mutex Class1
 表示以獨佔方式控制共用的資源的同步處理物件。  
@@ -71,5 +66,5 @@ class Mutex : public HandleT<HandleTraits::MutexTraits>
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

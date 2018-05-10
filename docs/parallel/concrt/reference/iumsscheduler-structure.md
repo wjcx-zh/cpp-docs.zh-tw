@@ -1,12 +1,9 @@
 ---
-title: "IUMSScheduler 結構 |Microsoft 文件"
-ms.custom: 
+title: IUMSScheduler 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSScheduler
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da35fe5ae8d00ee537674fd689fd7f27074b0355
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 489978a97d42439e5560a75e429c38be10c18c29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 結構
 工作排程器抽象概念的介面，需要並行執行階段的資源管理員將可使用者模式排程的 (UMS) 執行緒傳遞給它。 資源管理員會使用這個介面與 UMS 執行緒排程器進行通訊。 `IUMSScheduler` 介面繼承自 `IScheduler` 介面。  
@@ -77,7 +72,7 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ### <a name="remarks"></a>備註  
  資源管理員會叫用指定的排程器已要求資源的初始配置之後，它會想 UMS 執行緒排程器上的這個方法。 排程器可以使用`IUMSCompletionList`介面，以判斷當 UMS 執行緒 proxy 已解除封鎖。 它只適用於從指派給 UMS 排程器的虛擬處理器根上執行的執行緒 proxy 存取這個介面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [IScheduler 結構](ischeduler-structure.md)   

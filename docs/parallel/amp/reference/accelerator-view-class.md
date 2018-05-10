@@ -1,12 +1,9 @@
 ---
-title: "accelerator_view 類別 |Microsoft 文件"
-ms.custom: 
+title: accelerator_view 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - accelerator_view
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1aa0e365ac531a5e1bb7b87a38fc86fb20032d20
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 類別
 代表在 c + + AMP 資料平行加速器上的虛擬裝置抽象概念。  
@@ -71,7 +66,7 @@ class accelerator_view;
 |[get_is_debug](#get_is_debug)|傳回布林值，指出是否`accelerator_view`物件已啟用 DEBUG 層以更詳盡的錯誤報告。|  
 |[get_queuing_mode](#get_queuing_mode)|傳回的佇列模式`accelerator_view`物件。|  
 |[get_version](#get_version)|傳回的版本`accelerator_view`。|  
-|[wait](#wait)|等候所有命令送出至`accelerator_view`完成的物件。|  
+|[等候](#wait)|等候所有命令送出至`accelerator_view`完成的物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -272,7 +267,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ### <a name="return-value"></a>傳回值  
  已修改的參考`accelerator_view`物件。  
   
-## <a name="accelerator_view__operator_eq_eq"></a> operator== 
+## <a name="accelerator_view__operator_eq_eq"></a> 運算子 = = 
 
 比較這個 accelerator_view 物件與另一個，並傳回`true`如果它們是相同的; 否則會傳回`false`。  
   
@@ -325,7 +320,7 @@ void wait();
 #### <a name="remarks"></a>備註  
  如果[queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)是`immediate`，這個方法會立即傳回而不會封鎖。  
   
-##  <a name="dtor"></a> ~accelerator_view 
+##  <a name="dtor"></a> ~ accelerator_view 
 
  Accelerator_view 物件已遭終結。  
   
@@ -338,5 +333,5 @@ void wait();
 ### <a name="return-value"></a>傳回值  
   
  
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

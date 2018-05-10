@@ -1,34 +1,29 @@
 ---
-title: "Lambda 運算式的範例 |Microsoft 文件"
-ms.custom: 
+title: Lambda 運算式的範例 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c83802dcc7382040d3b9f40bd0bbc2fe13d076f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 運算式的範例
 本文說明如何在您的程式中使用 Lambda 運算式。 如需 lambda 運算式的概觀，請參閱[Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。 如需 lambda 運算式結構的詳細資訊，請參閱[Lambda 運算式語法](../cpp/lambda-expression-syntax.md)。  
   
-##  <a name="declaringLambdaExpressions"></a>宣告 Lambda 運算式  
+##  <a name="declaringLambdaExpressions"></a> 宣告 Lambda 運算式  
   
 ### <a name="example-1"></a>範例 1  
  因為 lambda 運算式的型別，您可以將它指派給`auto`變數或[函式](../standard-library/function-class.md)物件，如下所示：  
@@ -109,7 +104,7 @@ int main()
   
  [[本文內容](#top)]  
   
-##  <a name="callingLambdaExpressions"></a>呼叫 Lambda 運算式  
+##  <a name="callingLambdaExpressions"></a> 呼叫 Lambda 運算式  
  如下程式碼片段所示，您可以立即呼叫 Lambda 運算式。 第二個程式碼片段示範如何將 lambda 當做引數傳遞至 c + + 標準程式庫演算法，例如`find_if`。  
   
 ### <a name="example-1"></a>範例 1  
@@ -185,7 +180,7 @@ The first even number in the list is 42.
   
  [[本文內容](#top)]  
   
-##  <a name="nestingLambdaExpressions"></a>Lambda 運算式巢狀結構  
+##  <a name="nestingLambdaExpressions"></a> Lambda 運算式巢狀結構  
   
 ### <a name="example"></a>範例  
  如本範例所示，您可以在 Lambda 運算式中與另一個 Lambda 運算式形成巢狀。 內部的 Lambda 運算式會將其引數乘以 2 並傳回結果。 外部的 Lambda 運算式會以內部 Lambda 運算式的引數呼叫該運算式並將結果加上 3。  
@@ -222,7 +217,7 @@ int main()
   
  [[本文內容](#top)]  
   
-##  <a name="higherOrderLambdaExpressions"></a>高階 Lambda 函式  
+##  <a name="higherOrderLambdaExpressions"></a> 高階 Lambda 函式  
   
 ### <a name="example"></a>範例  
  許多程式語言支援的概念*較高順序函式。* 高階函式是以另一個 Lambda 運算式為其引數或傳回 Lambda 運算式的 Lambda 運算式。 您可以使用[函式](../standard-library/function-class.md)類別，讓 c + + lambda 運算式的行為類似較高順序函式。 下列範例說明傳回 `function` 物件的 Lambd 運算式，以及使用 `function` 物件做為其引數的 Lambda 運算式。  
@@ -271,7 +266,7 @@ int main()
   
  [[本文內容](#top)]  
   
-##  <a name="methodLambdaExpressions"></a>函式中使用 Lambda 運算式  
+##  <a name="methodLambdaExpressions"></a> 函式中使用 Lambda 運算式  
   
 ### <a name="example"></a>範例  
  您可以在函式的主體中使用 Lambda 運算式。 Lambda 運算式可以存取封入函式能夠存取的任何函式或資料成員。 您可以明確或隱含地擷取 `this` 指標，以便提供封入類別的函式和資料成員的存取權。  
@@ -366,7 +361,7 @@ int main()
   
  [[本文內容](#top)]  
   
-##  <a name="templateLambdaExpressions"></a>搭配範本使用 Lambda 運算式  
+##  <a name="templateLambdaExpressions"></a> 搭配範本使用 Lambda 運算式  
   
 ### <a name="example"></a>範例  
  因為 Lambda 運算式具有類型，因此您可以搭配 C++ 範本使用。 下列範例顯示 `negate_all` 和 `print_all` 函式。 `negate_all` 函式會將一元 `operator-` 套用至 `vector` 物件中的每個元素。 `print_all` 函式會將 `vector` 物件中的每個元素印出至主控台。  
@@ -430,7 +425,7 @@ After negate_all():
   
  [[本文內容](#top)]  
   
-##  <a name="ehLambdaExpressions"></a>例外狀況處理  
+##  <a name="ehLambdaExpressions"></a> 例外狀況處理  
   
 ### <a name="example"></a>範例  
  Lambda 運算式的主體遵循結構化例外狀況處理（SEH）和 C++ 例外狀況處理這兩種規則。 您可以處理在 Lambda 運算式主體中引發的例外狀況，也可以延後至封閉範圍再處理例外狀況。 下列範例會使用 `for_each` 函式和 Lambda 運算式，以另一個物件的值填入 `vector` 物件。 它會使用`try` / `catch`區塊來處理無效的存取權的第一個向量。  
@@ -484,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
   
  [[本文內容](#top)]  
   
-##  <a name="managedLambdaExpressions"></a>使用 Lambda 運算式與 Managed 類型 (C + + /CLI)  
+##  <a name="managedLambdaExpressions"></a> 使用 Lambda 運算式與 Managed 類型 (C + + /CLI)  
   
 ### <a name="example"></a>範例  
  Lambda 運算式的擷取子句不能包含屬於 Managed 類型的變數。 不過，您可以將屬於 Managed 類型的引數傳遞至 Lambda 運算式的參數清單。 下列範例包含以傳值方式擷取區域 Unmanaged 變數 `ch` 並以 <xref:System.String?displayProperty=fullName> 物件做為其參數的 Lambda 運算式：  
@@ -523,7 +518,7 @@ Hello!
   
  [[本文內容](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)   
  [Lambda 運算式語法](../cpp/lambda-expression-syntax.md)   
  [自動](../cpp/auto-cpp.md)   

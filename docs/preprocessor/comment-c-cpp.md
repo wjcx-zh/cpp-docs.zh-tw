@@ -1,12 +1,9 @@
 ---
-title: "註解 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: 註解 （C/c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 30683bb76ce674becb81321607bc95fefdb78ac1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 將註解記錄放入目的檔或可執行檔中。  
@@ -74,9 +69,9 @@ ms.lasthandoff: 02/23/2018
   
 -   [/MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)  
   
--   [/MERGE](../build/reference/merge-combine-sections.md)  
+-   [/ 合併](../build/reference/merge-combine-sections.md)  
   
--   [/SECTION](../build/reference/section-specify-section-attributes.md)  
+-   [/ 區段](../build/reference/section-specify-section-attributes.md)  
   
  **user**  
  將一般註解放入目的檔中。 `commentstring` 參數包含註解的文字。 連結器會忽略這個註解記錄。  
@@ -100,5 +95,5 @@ ms.lasthandoff: 02/23/2018
 #pragma comment( user, "Compiled on " __DATE__ " at " __TIME__ )   
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

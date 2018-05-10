@@ -1,13 +1,10 @@
 ---
-title: "格式規格欄位：scanf 和 wscanf 函式 | Microsoft Docs"
-ms.custom: 
+title: 格式規格欄位：scanf 和 wscanf 函式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110.dll
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2286d7a6b82cf917c264cc43b82dec3939af6d94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c99b951e0cbbb5d2a295eb336a856bdb6c4cc0e1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>格式規格欄位：scanf 和 wscanf 函式
 這裡的資訊適用於整個 `scanf` 系列函式，包括安全的版本，並會說明所用符號，通知 `scanf` 函式如何將輸入資料流 (例如 `scanf` 的輸入資料流 `stdin`) 剖析為插入至程式變數中的值。  

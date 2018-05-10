@@ -1,29 +1,24 @@
 ---
-title: "#匯入屬性 （c + +） |Microsoft 文件"
-ms.custom: 
+title: '#匯入屬性 （c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76507ef9d840b9d3544442af2881810d715bd4ca
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d1e69f977ffaacdfd2bb8bb0f53d3fe197af3fad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="import-attributes-c"></a>#import 屬性 (C++)
 提供搭配 #import 指示詞使用之屬性的連結。  
@@ -63,5 +58,5 @@ ms.lasthandoff: 02/23/2018
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

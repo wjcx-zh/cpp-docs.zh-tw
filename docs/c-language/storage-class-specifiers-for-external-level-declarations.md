@@ -1,13 +1,10 @@
 ---
-title: "外部層級宣告的儲存類別指定名稱 | Microsoft Docs"
-ms.custom: 
+title: 外部層級宣告的儲存類別指定名稱 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfdae4791b89ffd78661a983fdc8c1beec77edea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部層級宣告的儲存類別指定名稱
 外部變數是指在檔案範圍的變數。 這些變數是在任何函式之外定義，因此可能可供許多函式使用。 由於函式只能在外部層級定義，因此不可為巢狀。 根據預設，對相同名稱之外部變數和函式的所有參考都是相同物件的參考，這表示它們具有「外部連結」 (您可以使用 **static** 關鍵字覆寫此項。 如需有關 **static** 的詳細資訊，請參閱本節稍後的資訊)。  

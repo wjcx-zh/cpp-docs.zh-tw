@@ -1,39 +1,34 @@
 ---
-title: "宣告概觀 | Microsoft Docs"
-ms.custom: 
+title: 宣告概觀 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: cd8670815b908f66a6e2ed400bc87ca07c369ee4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-declarations"></a>宣告概觀
 「宣告」會指定一組識別項的解譯和屬性。 如果宣告也為以識別項命名的物件或函式保留儲存區，則稱為「定義」。 變數、函式和類型的 C 宣告具有下列語法：  
   
 ## <a name="syntax"></a>語法  
  `declaration`：  
- *declaration-specifiers* *attribute-seq* opt*init-declarator-list* opt**;**  
+ *declaration-specifiers* *attribute-seq* opt*init-declarator-list* opt **;**  
   
- /\**attribute-seq* opt 是 Microsoft 特定的 \*/  
+ /\**attribute-seq* opt 是 Microsoft 特定的 */  
   
  *declaration-specifiers*：  
  *storage-class-specifier declaration-specifiers*opt  
@@ -81,7 +76,7 @@ int const *fp;
   
  有兩個 *type-qualifier* 終端項：**const** 和 `volatile`。 這些限定詞可指定只有透過左值來存取該類型的物件時，才會相關聯的其他類型屬性。 如需 **const** 和 `volatile` 的詳細資訊，請參閱[類型限定詞](../c-language/type-qualifiers.md)。 如需左值定義的詳細資訊，請參閱[左值和右值運算式](../c-language/l-value-and-r-value-expressions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 語言語法摘要](../c-language/c-language-syntax-summary.md)   
  [宣告和類型](../c-language/declarations-and-types.md)   
  [宣告摘要](../c-language/summary-of-declarations.md)

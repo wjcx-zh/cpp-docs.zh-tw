@@ -1,10 +1,7 @@
 ---
-title: "concurrency 命名空間列舉 |Microsoft 文件"
-ms.custom: 
+title: concurrency 命名空間列舉 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>concurrency 命名空間列舉
 ||||  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 |[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
 |[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="agent_status"></a>  agent_status Enumeration  
+##  <a name="agent_status"></a>  agent_status 列舉  
  `agent` 的有效狀態。  
   
 ```
@@ -62,7 +57,7 @@ enum agent_status;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h
 
-##  <a name="agents_eventtype"></a>  Agents_EventType Enumeration  
+##  <a name="agents_eventtype"></a>  Agents_EventType 列舉  
  可以使用代理程式程式庫所提供之追蹤功能追蹤的事件類型。  
   
 ```
@@ -108,7 +103,7 @@ enum ConcRT_EventType;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h**命名空間：**並行
 
-##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags Enumeration  
+##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags 列舉  
  事件類型的追蹤旗標。  
   
 ```
@@ -129,7 +124,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h
 
-##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
+##  <a name="criticalregiontype"></a>  CriticalRegionType 列舉  
  內含內容之關鍵區域的類型。  
   
 ```
@@ -174,7 +169,7 @@ enum join_type;
 ### <a name="requirements"></a>需求  
  **標頭：** agents.h  
 
-##  <a name="message_status"></a>  message_status Enumeration  
+##  <a name="message_status"></a>  message_status 列舉  
  `message` 物件對區塊提供項目的有效回應。  
   
 ```
@@ -192,7 +187,7 @@ enum message_status;
 ### <a name="requirements"></a>需求  
  **標頭：** agents.h  
 
-##  <a name="policyelementkey"></a>  PolicyElementKey Enumeration  
+##  <a name="policyelementkey"></a>  PolicyElementKey 列舉  
  描述排程器行為方面的原則機碼。 每個原則項目由一個機碼值組描述。 排程器上排程器原則和其影響的相關資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
 ```
@@ -217,7 +212,7 @@ enum PolicyElementKey;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h  
 
-##  <a name="schedulertype"></a>  SchedulerType Enumeration  
+##  <a name="schedulertype"></a>  SchedulerType 列舉  
  `SchedulerKind` 原則用來描述排程器應用於基礎執行內容的執行緒類型。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -234,7 +229,7 @@ enum SchedulerType;
 ### <a name="requirements"></a>需求  
  **標頭：** concrt.h  
   
-##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType Enumeration  
+##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType 列舉  
  `SchedulingProtocol` 原則用於描述排程器將使用的排程演算法。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -269,7 +264,7 @@ enum SwitchingProxyState;
   
  如需有關如何使用這種類型的詳細資訊，請參閱[ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)。  
   
-##  <a name="task_group_status"></a>  task_group_status Enumeration  
+##  <a name="task_group_status"></a>  task_group_status 列舉  
  描述 `task_group` 或 `structured_task_group` 物件的執行狀態。 等待預定工作群組完成工作的許多方法，會傳回這個類型的值。  
   
 ```
@@ -286,7 +281,7 @@ enum task_group_status;
 ### <a name="requirements"></a>需求  
  **標頭：** pplinterface.h  
 
-##  <a name="winrtinitializationtype"></a>  WinRTInitializationType Enumeration  
+##  <a name="winrtinitializationtype"></a>  WinRTInitializationType 列舉  
  由 `WinRTInitialization` 原則用來描述 Windows 執行階段是否會在執行 Windows 8 (含) 以後版本作業系統之應用程式的排程器執行緒上初始化，以及如何進行初始化。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。  
   
 ```
@@ -302,5 +297,5 @@ enum WinRTInitializationType;
 ## <a name="requirements"></a>需求  
  **標頭：** concrt.h  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

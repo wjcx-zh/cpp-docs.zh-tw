@@ -1,12 +1,9 @@
 ---
-title: bss_seg | Microsoft Docs
-ms.custom: 
+title: bss_seg |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.bss_seg
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c253cd24bd8246469532cd283e97be4b21f46d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bssseg"></a>bss_seg
 指定儲存在 .obj 檔案中未初始化之變數的區段。  
@@ -55,7 +50,7 @@ ms.lasthandoff: 02/23/2018
   
  *識別項*可讓多筆記錄即可推出以單一**pop**命令。  
   
- *"segment-name"*(optional)  
+ *「 區段名稱 」*（選擇性）  
  區段的名稱。 當搭配**pop**，時會推出堆疊和*區段名稱*會成為作用中區段名稱。  
   
  *「 區段類別 」* （選擇性）  
@@ -85,5 +80,5 @@ int main() {
   
  請參閱[/section](../build/reference/section-specify-section-attributes.md)如需建立區段時，不應該使用的名稱。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

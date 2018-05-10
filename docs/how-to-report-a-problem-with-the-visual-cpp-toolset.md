@@ -1,22 +1,20 @@
 ---
-title: "如何回報 Visual C++ 工具組問題 | Microsoft Docs"
+title: 如何回報 Visual C++ 工具組問題 | Microsoft Docs
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>如何回報 Visual C++ 工具組問題
 
@@ -108,7 +106,7 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 良好的重現為：
 
-- **最少**。 重現應該越小越好，但仍然確切地示範您所遇到的問題。 重現不需要複雜或實際；它們只需要顯示符合 Standard 或所記載編譯器實作的程式碼；或者，如果診斷遺失，則會顯示不一致的程式碼。 包含剛好足夠的程式碼來示範問題的簡單該點重現最適合。 如果您可以排除或簡化程式碼並保持一致，同時將問題保持不變，則請這麼做。 您不需要包含適用的相反範例程式碼。 
+- **最少**。 重現應該越小越好，但仍然確切地示範您所遇到的問題。 重現不需要複雜或實際；它們只需要顯示符合 Standard 或所記載編譯器實作的程式碼；或者，如果診斷遺失，則會顯示不一致的程式碼。 包含剛好足夠的程式碼來示範問題的簡單該點重現最適合。 如果您可以排除或簡化程式碼並保持一致，同時將問題保持不變，則請這麼做。 您不需要包含適用的相反範例程式碼。
 
 - **獨立。** 重現應該避免不必要的相依性。 如果您可以重現問題，而不需要協力廠商程式庫，則請這樣做。 如果您除了簡單輸出陳述式 (例如，`puts("this shouldn't compile");`、`std::cout << value;` 和 `printf("%d\n", value);`) 之外，不需要任何程式庫程式碼即可重現問題，則請這麼做。 如果範例可以壓縮成單一原始程式碼檔，而未參考任何使用者標頭，則它十分適合。 減少視為可能造成問題的程式碼數量十分有幫助。
 
@@ -116,13 +114,13 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 - **針對其他編譯器檢查** (如果相關)。 涉及可攜式 C++ 程式碼的報表應該確認其他編譯器行為 (可能的話)。 Standard 最終會判斷程式正確性，並且沒有編譯器是完美的，但 Clang 和 GCC 接受沒有診斷的程式碼而 MSVC 不接受時，您可能會在我們的編譯器中看到 Bug  (其他可能性包含 Unix 和 Windows 行為的差異，或不同層級的 C++ Standard 實作等等)。相反地，如果所有編譯器都拒絕您的程式碼，則您的程式碼可能不正確。 查看不同的錯誤訊息可以協助您自行診斷問題。
 
-   您可以在 ISO C++ 網站的[線上 C++ 編譯器](https://isocpp.org/blog/2013/01/online-c-compilers)中，或 GitHub 上這個策劃的[線上 C++ 編譯器清單](https://arnemertz.github.io/online-compilers/)，尋找線上編譯器清單來測試您的程式碼。 某些特定範例包含 [Wandbox](https://wandbox.org/)、[編譯器總管](https://godbolt.org/)和 [Coliru](http://coliru.stacked-crooked.com/)。 
+   您可以在 ISO C++ 網站的[線上 C++ 編譯器](https://isocpp.org/blog/2013/01/online-c-compilers)中，或 GitHub 上這個策劃的[線上 C++ 編譯器清單](https://arnemertz.github.io/online-compilers/)，尋找線上編譯器清單來測試您的程式碼。 某些特定範例包含 [Wandbox](https://wandbox.org/)、[編譯器總管](https://godbolt.org/)和 [Coliru](http://coliru.stacked-crooked.com/)。
 
    > [!NOTE]
    > 線上編譯器網站未與 Microsoft 建立關聯。 許多線上編譯器網站都會執行為個人專案；而且，在您閱讀這篇文章時，其中一些網站可能無法使用，但搜尋應該會發現其他您可使用的網站。
 
 編譯器、連結器和程式庫中的問題，傾向於以特定方式予以顯示。 您所遇到問題的類型將決定應該包含在報表中的重現類型。 如果沒有適當的重現，我們就無法進行調查。 以下是您可能會看到的數種問題，以及產生您應該用來回報每種問題之重現類型的指示。
- 
+
 #### <a name="frontend-parser-crash"></a>前端 (剖析器) 損毀
 
 前端損毀是在編譯器的剖析階段期間發生。 編譯器通常會發出[嚴重錯誤 C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)，並參考發生錯誤的原始程式碼檔和行號；它通常會提及 msc1.cpp 檔案，但您可以忽略此詳細資料。

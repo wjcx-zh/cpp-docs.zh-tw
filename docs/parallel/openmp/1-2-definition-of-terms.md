@@ -1,27 +1,22 @@
 ---
-title: "1.2 詞彙定義 |Microsoft 文件"
-ms.custom: 
+title: 1.2 詞彙定義 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab188c32c633092efc562d0432ebb7c5662b5ff8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8563bb757ad8d30f1639f017769bfd6c4084efa0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="12-definition-of-terms"></a>1.2 詞彙定義
 本文件中使用下列詞彙：  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
  共用的變數名稱儲存體的單一的區塊。 在小組中存取這個變數的所有執行緒會都存取這個儲存體的單一的區塊。  
   
  結構化的區塊  
- 結構化的區塊是具有單一項目和單一結束陳述式 （單一或複合）。 沒有陳述式是結構化的區塊，如果沒有跳入或移出該陳述式 (包括呼叫**longjmp**(3 C) 或使用**擲回**，但呼叫**結束**允許)。 複合陳述式是結構化的區塊，如果在開啟開始其執行一律**{**一律結束結尾**}**。 運算陳述式、 選取陳述式、 反覆項目陳述式，或**再試一次**區塊是結構化的區塊，如果對應的複合陳述式會取得藉由在封閉**{**和**}**會結構化的區塊。 跳躍陳述式，加上標籤的陳述式或宣告陳述式不是結構化的區塊。  
+ 結構化的區塊是具有單一項目和單一結束陳述式 （單一或複合）。 沒有陳述式是結構化的區塊，如果沒有跳入或移出該陳述式 (包括呼叫**longjmp**(3 C) 或使用**擲回**，但呼叫**結束**允許)。 複合陳述式是結構化的區塊，如果在開啟開始其執行一律 **{** 一律結束結尾 **}**。 運算陳述式、 選取陳述式、 反覆項目陳述式，或**再試一次**區塊是結構化的區塊，如果對應的複合陳述式會取得藉由在封閉 **{** 和 **}** 會結構化的區塊。 跳躍陳述式，加上標籤的陳述式或宣告陳述式不是結構化的區塊。  
   
  小組  
  一個或多個執行緒合作建構的執行中。  

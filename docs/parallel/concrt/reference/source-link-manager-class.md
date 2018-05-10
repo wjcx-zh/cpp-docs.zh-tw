@@ -1,12 +1,9 @@
 ---
-title: "source_link_manager 類別 |Microsoft 文件"
-ms.custom: 
+title: source_link_manager 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - source_link_manager
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f8e17626fc870242c97a9ad66a77e5e3b77b1ed1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 類別
 `source_link_manager` 物件會管理 `ISource` 區塊與傳訊區塊網路的連結。  
@@ -68,7 +63,7 @@ class source_link_manager;
 |名稱|描述|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|建構 `source_link_manager` 物件。|  
-|[~source_link_manager Destructor](#dtor)|終結`source_link_manager`物件。|  
+|[~ source_link_manager 解構函式](#dtor)|終結`source_link_manager`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -76,7 +71,7 @@ class source_link_manager;
 |----------|-----------------|  
 |[add](#add)|將加入的來源連結`source_link_manager`物件。|  
 |[begin](#begin)|傳回迭代器中的第一個項目`source_link_manager`物件。|  
-|[contains](#contains)|搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。|  
+|[包含](#contains)|搜尋`network_link_registry`在這個`source_link_manager`物件指定的區塊。|  
 |[count](#count)|計算中連結的區塊數目`source_link_manager`物件。|  
 |[reference](#reference)|取得參考上`source_link_manager`物件。|  
 |[register_target_block](#register_target_block)|註冊保存此目標區塊`source_link_manager`物件。|  
@@ -218,7 +213,7 @@ source_link_manager();
 ~source_link_manager();
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [single_link_registry 類別](single-link-registry-class.md)   
  [multi_link_registry 類別](multi-link-registry-class.md)

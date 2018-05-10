@@ -1,30 +1,25 @@
 ---
-title: "如何： 使用過度訂閱位移延遲 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用過度訂閱位移延遲 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a8f059abffd261de2002ed5d18067c48d74876
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c27864d040d0b6ce7b36087cff85ed750aa7ed2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>如何：使用過度訂閱使延遲產生位移
 過度訂閱可以改善整體效率的某些應用程式會包含具有大量的延遲的工作。 本主題說明如何使用過度訂閱位移的延遲所造成的網路連線讀取資料。  
@@ -88,7 +83,7 @@ Downloaded 1801040 bytes in 3276 ms.
   
  [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [內容](../../parallel/concrt/contexts.md)   
  [Context:: oversubscribe 方法](reference/context-class.md#oversubscribe)
 

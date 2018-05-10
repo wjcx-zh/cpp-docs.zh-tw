@@ -1,12 +1,9 @@
 ---
-title: "文法摘要的定義 |Microsoft 文件"
-ms.custom: 
+title: 文法摘要的定義 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 755533d59b9b893da4a657db6da2ea80f13138b5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6d6c84354332b4d01ca07f672024fe9b488cd0a2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="definitions-for-the-grammar-summary"></a>文法摘要的定義
 終端是語法定義的端點。 沒有其他解決方式。 終端包括一組保留字和使用者定義的識別項。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 02/23/2018
   
 選擇性的元件會以下標的 opt 表示。 例如，以下表示以大括號括住的選擇性運算式：  
   
-**{** *expression*opt **}**  
+**{** *運算式*選擇 **}**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [文法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

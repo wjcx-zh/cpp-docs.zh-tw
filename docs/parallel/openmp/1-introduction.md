@@ -1,27 +1,22 @@
 ---
-title: "1. 簡介 |Microsoft 文件"
-ms.custom: 
+title: 1. 簡介 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f850e236ebfd056da93700df06ec830e5a573284
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 883af9cb48a0fb13dbb9a758d6f8174096d4c0c3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="1-introduction"></a>1.簡介
 這份文件指定編譯器指示詞、 程式庫函式，可用來指定 C 和 c + + 程式中的共用記憶體平行處理原則的環境變數的集合。 這份文件中所述的功能統稱為*OpenMP C/c + + 應用程式介面 (API)*。 此規格的目標是提供進行平行程式設計模型可讓程式能夠移植到不同廠商的共用記憶體架構不同。 OpenMP C/c + + 應用程式開發介面會從許多廠商編譯器支援。 OpenMP 以及詳細的資訊包括*OpenMP Fortran 應用程式開發介面*，可以在下列網站找到：  

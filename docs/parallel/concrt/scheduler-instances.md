@@ -1,29 +1,24 @@
 ---
-title: "排程器執行個體 |Microsoft 文件"
-ms.custom: 
+title: 排程器執行個體 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>排程器執行個體
 本文件說明並行執行階段，以及如何使用排程器執行個體的角色[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)和[concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別來建立和管理排程器執行個體。 當您想要建立明確排程原則關聯與特定類型的工作負載，排程器執行個體很有用。 例如，您可以建立一個排程器執行個體，在高權限的執行緒優先順序上執行一些工作，並使用預設排程器在正常的執行緒優先順序上執行其他工作。  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [範例](#example)  
   
-##  <a name="classes"></a>排程器和 CurrentScheduler 類別  
+##  <a name="classes"></a> 排程器和 CurrentScheduler 類別  
  工作排程器可讓應用程式使用一或多個*排程器執行個體*排程工作。 [Concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)類別代表排程器執行個體，並且會封裝與排程工作相關的功能。  
   
  附加至排程器執行緒稱為*執行內容*，或簡稱*內容*。 隨時都可以使用在目前內容中某個排程器。 作用中排程器就是所謂*目前排程器*。 並行執行階段會使用[concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別，以提供目前排程器的存取。 一個內容的目前排程器可能不同於另一個內容的目前排程器。 執行階段不提供目前排程器的處理序層級表示法。  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="creating"></a>建立排程器執行個體  
+##  <a name="creating"></a> 建立排程器執行個體  
  若要建立這些三種方式`Scheduler`物件：  
   
 -   如果沒有排程器，執行階段會建立預設排程器，為您當您使用執行階段功能，例如平行演算法，來執行工作。 預設排程器會變成目前的排程器適用於起始平行工作的內容。  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="managing"></a>管理排程器執行個體的存留期  
+##  <a name="managing"></a> 管理排程器執行個體的存留期  
  執行階段會使用參考計數機制來控制的存留期`Scheduler`物件。  
   
 
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="features"></a>方法與功能  
+##  <a name="features"></a> 方法與功能  
  本章節摘要說明的重要方法`CurrentScheduler`和`Scheduler`類別。  
   
  想像`CurrentScheduler`所建立的排程器，用於在目前內容的 helper 類別。 `Scheduler`類別可讓您控制的排程器，屬於另一個內容。  
@@ -136,7 +131,7 @@ ms.lasthandoff: 12/21/2017
 ##  <a name="example"></a> 範例  
  如需如何建立及管理排程器執行個體的基本範例，請參閱[如何： 管理排程器執行個體](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [如何： 管理排程器執行個體](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)   
  [排程器原則](../../parallel/concrt/scheduler-policies.md)   

@@ -1,12 +1,9 @@
 ---
-title: "inline_depth |Microsoft 文件"
-ms.custom: 
+title: inline_depth |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - inline_depth_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, inline_depth
 - inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3738e1e2217de7e8617f91a36218718cf756ca3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e40b9382abc8ee0fa0c003964eebe75bc075e473
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="inlinedepth"></a>inline_depth
 指定內嵌啟發式搜尋深度，這樣一來，如果函式的深度 (在呼叫圖形中) 大於 `n`，就不會將該函式內嵌。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  遞迴函式可透過內嵌於最大 16 個呼叫深度的方式替代。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
  [inline_recursion](../preprocessor/inline-recursion.md)

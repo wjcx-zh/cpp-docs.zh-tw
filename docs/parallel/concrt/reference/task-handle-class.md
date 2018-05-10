@@ -1,12 +1,9 @@
 ---
-title: "task_handle 類別 |Microsoft 文件"
-ms.custom: 
+title: task_handle 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task_handle
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42fcc201007a26a111f50036b273cab2850b28a3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3fa72ed19a691015214fe263033e07f8d6a74c34
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="taskhandle-class"></a>task_handle 類別
 `task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。  
@@ -102,7 +97,7 @@ task_handle(const _Function& _Func);
 ### <a name="remarks"></a>備註  
  執行階段建立一份您傳遞給建構函式的工作函式。 因此，任何狀態變更發生在函數中的物件將傳遞至`task_handle`物件不會出現在您的函式物件的複本。  
   
-##  <a name="dtor"></a> ~task_handle 
+##  <a name="dtor"></a> ~ task_handle 
 
  終結`task_handle`物件。  
   
@@ -110,7 +105,7 @@ task_handle(const _Function& _Func);
 ~task_handle();
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [task_group 類別](task-group-class.md)   
  [structured_task_group 類別](structured-task-group-class.md)

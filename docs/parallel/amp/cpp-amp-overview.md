@@ -1,13 +1,10 @@
 ---
-title: "C + + AMP 概觀 |Microsoft 文件"
-ms.custom: 
+title: C + + AMP 概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f8de31ab9009a84c04e594837a0c4fbf30758fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 C + + Accelerated Massive Parallelism (c + + AMP) 藉由運用在獨立圖形顯示卡的圖形處理單元 (GPU) 之類的資料平行硬體加速執行 c + + 程式碼。 藉由使用 c + + AMP，您可以撰寫多維度資料的演算法，因此可加快執行異質硬體上使用平行處理原則。 C++ AMP 程式設計模型包含多維陣列、索引、記憶體傳輸、並排顯示和數學函式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何將 cpu 移到 GPU 上, 一步，這樣可以改善效能。  
   
 ## <a name="system-requirements"></a>系統需求  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)][!INCLUDE[win8](../../build/reference/includes/win8_md.md)]， [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)]，或 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)]、[!INCLUDE[win8](../../build/reference/includes/win8_md.md)]、[!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] 或 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   DirectX 11 功能層級 11.0 或更新版本的硬體  
   
@@ -471,7 +466,7 @@ void MathExample() {
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 應用程式  
  類似其他 c + + 程式庫中，您可以使用 c + + AMP UWP 應用程式中。 這些文章說明如何在應用程式包含 c + + AMP 程式碼所建立的 c + +、 C#、 Visual Basic 或 JavaScript 使用：  
   
-- [在 UWP 應用程式中使用 c + + AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
+- [在 UWP 應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
 - [逐步解說： 以 c + + 建立基本 Windows 執行階段元件，然後從 JavaScript 呼叫該](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   
@@ -501,7 +496,7 @@ void MathExample() {
 ## <a name="performance-recommendations"></a>效能建議  
  模數和不帶正負號整數的除法有效能明顯優於模數和帶正負號整數的除法。 我們建議您使用盡可能不帶正負號的整數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)   
  [參考 (c + + AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   

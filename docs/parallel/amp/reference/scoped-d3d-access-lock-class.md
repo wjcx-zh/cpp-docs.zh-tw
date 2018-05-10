@@ -1,12 +1,9 @@
 ---
-title: "scoped_d3d_access_lock 類別 |Microsoft 文件"
-ms.custom: 
+title: scoped_d3d_access_lock 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
@@ -15,17 +12,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0053fa89139ac806a3d8ae0572cd053dd6bec72c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock 類別
 Accelerator_view 物件上的 D3D 存取鎖定 RAII 包裝函式。  
@@ -42,8 +37,8 @@ class scoped_d3d_access_lock;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[scoped_d3d_access_lock Constructor](#ctor)|多載。 建構 `scoped_d3d_access_lock` 物件。 當此物件超出範圍時，會釋放鎖定。|  
-|[~scoped_d3d_access_lock Destructor](#dtor)|釋出相關聯的 D3D 存取鎖定`accelerator_view`物件。|  
+|[scoped_d3d_access_lock 建構函式](#ctor)|多載。 建構 `scoped_d3d_access_lock` 物件。 當此物件超出範圍時，會釋放鎖定。|  
+|[~ scoped_d3d_access_lock 解構函式](#dtor)|釋出相關聯的 D3D 存取鎖定`accelerator_view`物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -120,5 +115,5 @@ scoped_d3d_access_lock& operator= (scoped_d3d_access_lock&& _Other);
 ### <a name="return-value"></a>傳回值  
  此參考`scoped_accelerator_view_lock`。  
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency::direct3d 命名空間](concurrency-direct3d-namespace.md)

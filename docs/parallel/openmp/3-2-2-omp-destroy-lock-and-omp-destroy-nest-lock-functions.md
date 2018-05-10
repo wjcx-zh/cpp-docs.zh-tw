@@ -1,27 +1,22 @@
 ---
-title: "3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函式 |Microsoft 文件"
-ms.custom: 
+title: 3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: d334907d-94f7-4bbf-b20e-41d53484cbff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d0b91fd311581235a893a0b3f4f383e724f9aa6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33c21ec9ca07651480748ac705ea6b9e4dcf8e94
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 omp_destroy_lock 和 omp_destroy_nest_lock 函式
 這些函式確定指向鎖定變數*鎖定*未初始化。 格式如下：  

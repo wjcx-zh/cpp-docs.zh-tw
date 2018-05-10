@@ -1,12 +1,9 @@
 ---
-title: "IExecutionResource 結構 |Microsoft 文件"
-ms.custom: 
+title: IExecutionResource 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IExecutionResource
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dc69c30f30d25179427ee8e59c536bb7cb5b483d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 結構
 硬體執行緒的抽象概念。  
@@ -132,6 +127,6 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  `invalid_operation` 如果擲回參數`pScheduler`是排程器，或與獨立執行資源，建立這個執行資源的不同，如果目前的執行緒與建立執行緒的訂用帳戶的執行緒不同。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [IVirtualProcessorRoot 結構](ivirtualprocessorroot-structure.md)

@@ -1,13 +1,10 @@
 ---
-title: "平行容器和物件 |Microsoft 文件"
-ms.custom: 
+title: 平行容器和物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9159b9c8170ee73afd8bee5305506a842368a231
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 168705c5d7497a0bcbede505760d49cdb63a3762
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-containers-and-objects"></a>平行容器和物件
 平行模式程式庫 (PPL) 包含數個容器和物件，提供安全執行緒存取其項目。  
@@ -75,10 +70,10 @@ ms.lasthandoff: 12/21/2017
   
     -   [範例](#combinable-examples)  
   
-##  <a name="vector"></a>concurrent_vector 類別  
+##  <a name="vector"></a> concurrent_vector 類別  
  [Concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)類別是序列容器類別，就像[std:: vector](../../standard-library/vector-class.md)類別，可讓您隨機存取其項目。 `concurrent_vector`類別啟用並行安全附加和項目存取作業。 附加作業不會使無效現有指標或迭代器。 迭代器存取和周遊作業也是並行安全。  
   
-###  <a name="vector-differences"></a>Concurrent_vector 之間的差異和向量  
+###  <a name="vector-differences"></a> Concurrent_vector 之間的差異和向量  
  `concurrent_vector`類別非常類似`vector`類別。 附加、 項目存取及迭代器存取作業的複雜度`concurrent_vector`物件會一樣`vector`物件。 下列各點說明 where`concurrent_vector`不同於`vector`:  
   
 -   附加、 項目存取、 迭代器存取及迭代器周遊作業上`concurrent_vector`物件是並行安全。  
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
 -   執行階段不會定義的特定的版本`concurrent_vector`類型`bool`。  
   
-###  <a name="vector-safety"></a>並行安全作業  
+###  <a name="vector-safety"></a> 並行安全作業  
  所有方法，將附加至或增加的大小`concurrent_vector`物件，或存取中的項目`concurrent_vector`物件，都是並行安全。 此規則的例外狀況是`resize`方法。  
   
  下表顯示一般`concurrent_vector`方法和運算子會並行安全。  
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
 ||||  
 |-|-|-|  
 
-|[在](reference/concurrent-vector-class.md#at)|[結束](reference/concurrent-vector-class.md#end)|[運算子 &#91; &#93;](reference/concurrent-vector-class.md#operator_at)|  
+|[在](reference/concurrent-vector-class.md#at)|[結束](reference/concurrent-vector-class.md#end)|[運算子&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|  
 |[開始](reference/concurrent-vector-class.md#begin)|[前端](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|  
 |[回](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|  
 |[容量](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|  
@@ -131,7 +126,7 @@ ms.lasthandoff: 12/21/2017
 
  雖然`end`方法是並行安全並行呼叫[push_back](reference/concurrent-vector-class.md#push_back)方法會使所傳回的值`end`變更。 迭代器周遊的項目數不明確。 因此，此程式可以執行它的每次產生不同的結果。  
   
-###  <a name="vector-exceptions"></a>例外狀況安全性  
+###  <a name="vector-exceptions"></a> 例外狀況安全性  
  如果在成長或指派作業會擲回的例外狀況的狀態`concurrent_vector`物件就會變成無效。 行為`concurrent_vector`處於無效狀態的物件未定義，除非另有說明，否則為。 不過，解構函式一律會釋出記憶體物件配置，即使物件是處於無效狀態。  
   
  項目的資料類型的向量， `T`，必須符合下列需求。 否則，行為`concurrent_vector`類別尚未定義。  
@@ -142,10 +137,10 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="queue"></a>concurrent_queue 類別  
+##  <a name="queue"></a> concurrent_queue 類別  
  [Concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md)類別，就像是[std::queue](../../standard-library/queue-class.md)類別，可讓您存取其前方，並傳回項目。 `concurrent_queue`類別啟用並行安全加入佇列，並清除佇列作業。 `concurrent_queue`類別也會提供不是並行安全的迭代器支援。  
   
-###  <a name="queue-differences"></a>Concurrent_queue 之間的差異和佇列  
+###  <a name="queue-differences"></a> Concurrent_queue 之間的差異和佇列  
  `concurrent_queue`類別非常類似`queue`類別。 下列各點說明 where`concurrent_queue`不同於`queue`:  
   
 -   在佇列中清除佇列作業上和`concurrent_queue`物件是並行安全。  
@@ -160,7 +155,7 @@ ms.lasthandoff: 12/21/2017
 -   `concurrent_queue`類別提供[unsafe_size](reference/concurrent-queue-class.md#unsafe_size)方法，而非`size`方法。 `unsafe_size`方法不是並行安全。  
 
   
-###  <a name="queue-safety"></a>並行安全作業  
+###  <a name="queue-safety"></a> 並行安全作業  
  所有方法來加入佇列或清除佇列從`concurrent_queue`物件是並行安全。  
   
  下表顯示一般`concurrent_queue`方法和運算子會並行安全。  
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
 
 
   
-###  <a name="queue-iterators"></a>迭代器支援  
+###  <a name="queue-iterators"></a> 迭代器支援  
  `concurrent_queue`提供不是並行安全的迭代器。 我們建議您只用於偵錯，使用這些迭代器。  
   
  A`concurrent_queue`迭代器周遊正向方向中的項目。 下表將顯示每個迭代器支援的運算子。  
@@ -196,7 +191,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="unordered_map"></a>concurrent_unordered_map 類別  
+##  <a name="unordered_map"></a> concurrent_unordered_map 類別  
  [超連結"file:///C:\\\Users\\\thompet\\\AppData\\\Local\\\Temp\\\DxEditor\\\DduePreview\\\Default\\\798d7037-df37-4310-858b-6f590bbf6ebf\\\HTM\\\html\\\a217b4ac-af2b-4d41-94eb-09a75ee28622"concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)類別是關聯容器類別，就像[std:: unordered_map](../../standard-library/unordered-map-class.md)類別，可控制不同長度序列的項目類型的[std:: pair\<const 金鑰、 Ty >](../../standard-library/pair-structure.md)。 將字典，其中您可以新增的索引鍵和值組，或依索引鍵查閱值視為未排序的對應。 當您有多個執行緒或同時存取共用的容器，將插入它，或更新它的工作時，這個類別是很有用。  
   
  下列範例顯示使用的基本結構`concurrent_unordered_map`。 本範例中 ['a'、 ' i'] 的範圍插入字元按鍵。 因為不明的作業順序，每個索引鍵的最終值也是不明。 不過，它是安全地以平行方式執行插入。  
@@ -205,20 +200,20 @@ ms.lasthandoff: 12/21/2017
   
  如需範例，會使用`concurrent_unordered_map`若要執行對應和縮減作業以平行方式，請參閱[如何： 執行對應和縮減作業平行](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。  
   
-###  <a name="map-differences"></a>Concurrent_unordered_map 之間的差異和 unordered_map  
+###  <a name="map-differences"></a> Concurrent_unordered_map 之間的差異和 unordered_map  
  `concurrent_unordered_map`類別非常類似`unordered_map`類別。 下列各點說明 where`concurrent_unordered_map`不同於`unordered_map`:  
   
 -   `erase`， `bucket`， `bucket_count`，和`bucket_size`方法的命名`unsafe_erase`， `unsafe_bucket`， `unsafe_bucket_count`，和`unsafe_bucket_size`分別。 `unsafe_`命名慣例指出這些方法不是並行安全。 如需並行安全的詳細資訊，請參閱[並行安全作業](#map-safety)。  
   
 -   插入作業不會使無效現有指標或迭代器，也不能進行變更已經存在於對應中項目的順序。 插入和周遊作業可以同時出現。  
   
--   `concurrent_unordered_map`支援轉送只反覆項目。  
+-   `concurrent_unordered_map` 支援轉送只反覆項目。  
   
 -   插入不會使或更新所傳回的迭代器`equal_range`。 插入可以在不相等的項目附加至範圍的結尾。 開始迭代器指向的相等項目。  
   
  為避免發生死結時，沒有方法`concurrent_unordered_map`記憶體配置器、 雜湊函式或其他使用者定義程式碼呼叫時，會保留的鎖定。 此外，您必須確定雜湊函式一律會評估為相同的值等於索引鍵。 最佳的雜湊函式將索引鍵平均分散在雜湊程式碼空間。  
   
-###  <a name="map-safety"></a>並行安全作業  
+###  <a name="map-safety"></a> 並行安全作業  
  `concurrent_unordered_map`類別可讓並行安全 insert 和項目存取作業。 插入作業不會使無效現有指標或迭代器。 迭代器存取和周遊作業也是並行安全。 下表顯示常用`concurrent_unordered_map`方法和運算子會並行安全。  
   
 |||||  
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="unordered_multimap"></a>concurrent_unordered_multimap 類別  
+##  <a name="unordered_multimap"></a> concurrent_unordered_multimap 類別  
  [Concurrency::concurrent_unordered_multimap](../../parallel/concrt/reference/concurrent-unordered-multimap-class.md)類別非常類似`concurrent_unordered_map`類別不同處在於它可讓多個值對應至相同的索引鍵。 它也會不同於`concurrent_unordered_map`如下：  
   
 -   [Concurrent_unordered_multimap:: insert](reference/concurrent-unordered-multimap-class.md#insert)方法會傳回迭代器而不是`std::pair<iterator, bool>`。  
@@ -251,13 +246,13 @@ ms.lasthandoff: 12/21/2017
   
 -   `concurrent_unordered_multimap`類別並未提供`operator[]`和`at`方法。  
   
- 下列範例顯示使用的基本結構`concurrent_unordered_multimap`。 本範例中 ['a'、 ' i'] 的範圍插入字元按鍵。 `concurrent_unordered_multimap`可讓具有多個值的索引鍵。  
+ 下列範例顯示使用的基本結構`concurrent_unordered_multimap`。 本範例中 ['a'、 ' i'] 的範圍插入字元按鍵。 `concurrent_unordered_multimap` 可讓具有多個值的索引鍵。  
   
  [!code-cpp[concrt-unordered-multimap-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_3.cpp)]  
   
  [[靠上](#top)]  
   
-##  <a name="unordered_set"></a>concurrent_unordered_set 類別  
+##  <a name="unordered_set"></a> concurrent_unordered_set 類別  
  [Concurrency::concurrent_unordered_set](../../parallel/concrt/reference/concurrent-unordered-set-class.md)類別非常類似`concurrent_unordered_map`類別不同處在於它會管理而不是索引鍵 / 值組的值。 `concurrent_unordered_set`類別並未提供`operator[]`和`at`方法。  
   
  下列範例顯示使用的基本結構`concurrent_unordered_set`。 此範例中插入字元的值在範圍 ['a'、 ' i']。 它可以安全地以平行方式執行插入。  
@@ -266,7 +261,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="unordered_multiset"></a>concurrent_unordered_multiset 類別  
+##  <a name="unordered_multiset"></a> concurrent_unordered_multiset 類別  
  [Concurrency::concurrent_unordered_multiset](../../parallel/concrt/reference/concurrent-unordered-multiset-class.md)類別非常類似`concurrent_unordered_set`類別不同處在於它可讓您重複的值。 它也會不同於`concurrent_unordered_set`如下：  
   
 
@@ -275,23 +270,23 @@ ms.lasthandoff: 12/21/2017
   
 -   `concurrent_unordered_multiset`類別並未提供`operator[]`和`at`方法。  
   
- 下列範例顯示使用的基本結構`concurrent_unordered_multiset`。 此範例中插入字元的值在範圍 ['a'、 ' i']。 `concurrent_unordered_multiset`可讓要出現許多次的值。  
+ 下列範例顯示使用的基本結構`concurrent_unordered_multiset`。 此範例中插入字元的值在範圍 ['a'、 ' i']。 `concurrent_unordered_multiset` 可讓要出現許多次的值。  
   
  [!code-cpp[concrt-unordered-multiset#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_5.cpp)]  
   
  [[靠上](#top)]  
   
-##  <a name="combinable"></a>combinable 類別  
+##  <a name="combinable"></a> combinable 類別  
  [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別提供可重複使用、 執行緒區域儲存區，可讓您執行細部運算，然後將這些運算合併成最終的結果。 您可以將 `combinable` 物件視為削減變數。  
   
  `combinable`類別就很有用，當您有數個執行緒或工作之間共用的資源。 `combinable`類別可協助您排除共用的狀態，藉由提供無鎖定的方式共用資源的存取權。 因此，這個類別會提供使用同步處理機制，例如，mutex，以同步存取共用資料，從多個執行緒的替代方案。  
   
-###  <a name="combinable-features"></a>方法與功能  
+###  <a name="combinable-features"></a> 方法與功能  
  下表顯示的一些重要的方法`combinable`類別。 如需所有詳細資訊`combinable`類別方法，請參閱[combinable 類別](../../parallel/concrt/reference/combinable-class.md)。  
   
 |方法|描述|  
 |------------|-----------------|  
-|[本機](reference/combinable-class.md#local)|擷取與目前的執行緒內容相關聯的本機變數的參考。|  
+|[local](reference/combinable-class.md#local)|擷取與目前的執行緒內容相關聯的本機變數的參考。|  
 |[clear](reference/combinable-class.md#clear)|移除所有執行緒區域變數從`combinable`物件。|  
 |[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|使用提供的合併函式所有執行緒區域計算一組從產生的最後一個值。|  
   

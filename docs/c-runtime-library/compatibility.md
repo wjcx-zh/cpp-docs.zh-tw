@@ -1,13 +1,10 @@
 ---
-title: "相容性 | Microsoft Docs"
-ms.custom: 
+title: 相容性 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.programs
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b3933f6b4a40250ea099f4de4ce640a9505b2072
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility"></a>相容性
 通用 C 執行階段程式庫 (UCRT) 支援與 C++ 相容所需的大部分 C 標準程式庫。 除了 \<tgmath.h> 中所定義的泛型巨集及 \<complex.h> 中的 Strict 類型相容性之外，其會實作 C99 (ISO/IEC 9899:1999) 程式庫。 UCRT 也會實作 POSIX.1 的大型子集 (ISO/IEC 9945-1:1996，POSIX 系統應用程式開發介面) C 程式庫，但不全然符合任何特定的 POSIX 標準。  此外，UCRT 會實作數個 Microsoft 特有但不包含在標準之中的函式與巨集。  

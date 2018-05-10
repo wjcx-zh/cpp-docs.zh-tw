@@ -1,30 +1,25 @@
 ---
-title: "如何： 使用取消來中斷平行迴圈 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用取消來中斷平行迴圈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - writing a parallel search algorithm [Concurrency Runtime]
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c6b4a216609c788978e4b857b5996587f899f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1b5153c225c3bb3a67be4265cf8303da2121c2b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>如何：使用取消來中斷平行迴圈
 這個範例將示範如何使用取消來實作基本的平行搜尋演算法。  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  **cl.exe /EHsc 平行陣列 search.cpp**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [PPL 中的取消](cancellation-in-the-ppl.md)   
  [平行演算法](../../parallel/concrt/parallel-algorithms.md)   
  [parallel_for 函式](reference/concurrency-namespace-functions.md#parallel_for)   

@@ -1,27 +1,22 @@
 ---
-title: "2.7.2 資料共用屬性子句 |Microsoft 文件"
-ms.custom: 
+title: 2.7.2 資料共用屬性子句 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 47347d3c-18bd-441f-99cf-7737564c417f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecc6efac6e3d7356e51dc0ec57009ca9e5a71890
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 資料共用屬性子句
 數個指示詞會接受子句可讓使用者控制共用的變數屬性區域的持續時間。 共用屬性子句僅適用於中的指示詞子句會出現語彙範圍的變數。 並非所有的下列子句允許所有指示詞。 指示詞將詳述的特定指示詞為有效的子句清單。  

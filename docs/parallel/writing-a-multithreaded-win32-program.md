@@ -1,13 +1,10 @@
 ---
-title: "撰寫多執行緒的 Win32 程式 |Microsoft 文件"
-ms.custom: 
+title: 撰寫多執行緒的 Win32 程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>撰寫多執行緒 Win32 程式
 當您撰寫多執行緒程式時，您必須協調其行為和[程式的資源的運用](#_core_sharing_common_resources_between_threads)。 您也必須確定每個執行緒會收到[自己的堆疊](#_core_thread_stacks)。  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>一般執行緒之間共用資源  
+##  <a name="_core_sharing_common_resources_between_threads"></a> 一般執行緒之間共用資源  
   
 > [!NOTE]
 >  從 MFC 的觀點的類似討論，請參閱[多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)和[多執行緒： 何時使用同步類別](../parallel/multithreading-when-to-use-the-synchronization-classes.md)。  
@@ -62,7 +57,7 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>執行緒堆疊  
+##  <a name="_core_thread_stacks"></a> 執行緒堆疊  
  所有的應用程式的預設堆疊空間配置給第一個執行的執行緒，也就是執行緒 1。 如此一來，您必須指定需要的記憶體數量，無法個別針對每個額外執行緒堆疊配置您的程式。 作業系統會配置額外的堆疊空間的執行緒，如有必要，但您必須指定預設值。  
   
  中的第一個引數`_beginthread`呼叫是指向**BounceProc**函式，以執行執行緒。 第二個引數會指定執行緒的預設堆疊大小。 最後一個引數會傳遞至一個識別碼**BounceProc**。 **BounceProc**使用識別碼來植入之隨機號碼產生器，並選取執行緒的色彩屬性和顯示的字元。  
@@ -73,5 +68,5 @@ ReleaseMutex( hIOMutex);
   
  Win32 也提供執行緒區域儲存區 (TLS) 來儲存每個執行緒資料。 如需詳細資訊，請參閱[執行緒區域儲存區 (TLS)](../parallel/thread-local-storage-tls.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)

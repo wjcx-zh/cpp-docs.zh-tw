@@ -1,27 +1,22 @@
 ---
-title: "逐步解說： 矩陣乘法 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 矩陣乘法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-matrix-multiplication"></a>逐步解說：矩陣乘法
 此逐步解說示範如何使用 c + + AMP 加速矩陣乘法的執行。 會呈現兩種演算法，另一個則沒有可並排顯示，另一個並排顯示。  
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="multiplication-without-tiling"></a>乘法，而不並排顯示  
  在本節中，請考慮乘法運算的兩個矩陣 A 和 B 的定義方式如下：  
   
- ![3 &#45; 由 &#45; 2 矩陣](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+ ![3&#45;由&#45;2 矩陣](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2 &#45; 由 &#45; 3 矩陣](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+ ![2&#45;由&#45;3 的矩陣](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
  A 是 3-2 矩陣，而 B 是 2-3 的矩陣。 由 B 相乘的乘積是下列 3-3 的矩陣。 產品的計算方式乘以 A 是 B 項的資料行的資料列。  
   
- ![3 &#45; 由 &#45; 3 矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+ ![3&#45;由&#45;3 的矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>要相乘，而不使用 c + + AMP  
   
@@ -172,21 +167,21 @@ void main() {
   
  若要在矩陣乘法利用並排顯示，演算法必須分割成磚的 矩陣，並再複製到圖格資料`tile_static`更快速存取的變數。 在此範例中，矩陣會分割成相同大小的 submatrices。 乘以 submatrices 找到的產品。 兩個矩陣和他們的產品，在此範例如下：  
   
- ![4 &#45; 由 &#45; 4 矩陣](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+ ![4&#45;由&#45;4 矩陣](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4 &#45; 由 &#45; 4 矩陣](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+ ![4&#45;由&#45;4 矩陣](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4 &#45; 由 &#45; 4 矩陣](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+ ![4&#45;由&#45;4 矩陣](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
  矩陣會分割成四個 2 x 2 矩陣的定義方式如下：  
   
- ![4 &#45; 由 &#45;4 矩陣，資料分割成 2 &#45; &#45;2 sub &#45; 矩陣](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+ ![4&#45;由&#45;分割成 2 的 4 矩陣&#45;由&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4 &#45; 由 &#45;4 矩陣，資料分割成 2 &#45; &#45;2 sub &#45; 矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+ ![4&#45;由&#45;分割成 2 的 4 矩陣&#45;由&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
  產品的 A 和 B 可以立即寫入和計算，如下所示：  
   
- ![4 &#45; 由 &#45;4 矩陣，資料分割成 2 &#45; &#45;2 sub &#45; 矩陣](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+ ![4&#45;由&#45;分割成 2 的 4 矩陣&#45;由&#45;2 sub&#45;矩陣](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
  因為矩陣`a`透過`h`2x2 矩陣的所有產品，而這些總和也 2x2 矩陣。 它也會遵循 A * B 是 4x4 矩陣中，如預期般。 若要快速檢查演算法，計算值的第一個資料列中的項目，產品中的第一個資料行。 在範例中，這可能會項目的值的第一個資料列和第一個資料行在`ae + bg`。 您只需要第一個資料行，第一個資料列計算`ae`和`bg`每個詞彙。 值`ae`是`1*1 + 2*5 = 11`。 值`bg`是`3*1 + 4*5 = 23`。 最終的值會是`11 + 23 = 34`，這是正確。  
   
@@ -306,7 +301,7 @@ void main() {
   
 4.  選擇空格鍵以結束應用程式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [逐步解說：偵錯 C++ AMP 應用程式](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
 

@@ -1,13 +1,10 @@
 ---
-title: "類型 float | Microsoft Docs"
-ms.custom: 
+title: 類型 float | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - IEEE floating-point representation
 - lengths, exponent
 ms.assetid: 706e332b-17a0-4a30-b7d8-5d6cd372524b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e218f7b5025de10dc06bf20fc759aed93189ec53
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-float"></a>類型 float
 浮點數使用的是 IEEE (電子電機工程師協會) 格式。 浮點類型的單精確度值有 4 個位元組，包括正負號位元、8 位元的超 127 二進位指數和 23 位元的尾數。 尾數表示介於 1.0 和 2.0 之間的數字。 因為尾數的高序位位元永遠為 1，因此不會儲存在數字中。 若是 float 類型，此表示的範圍大約從 3.4E-38 到 3.4E+38。  

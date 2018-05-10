@@ -1,13 +1,10 @@
 ---
-title: "工作平行處理原則 （並行執行階段） |Microsoft 文件"
-ms.custom: 
+title: 工作平行處理原則 （並行執行階段） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e4b96228ac867781b00be7ca92a9debcad3f9eb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d4f2a1f1a5bd0b4a8ca68f3aa47f6890a11efa11
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>工作平行處理原則 (並行執行階段)
 並行執行階段，*工作*是執行特定作業，且通常會與其他工作平行執行的工作單位。 工作可以分解成其他更細部的工作，並組織成*工作群組*。  
@@ -316,7 +311,7 @@ Message from task: 42
   
  如需完整範例，示範如何使用`parallel_invoke`演算法，請參閱[How to： 使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[How to： 使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). 如需完整的範例使用`task_group`類別來實作非同步未來，請參閱[逐步解說： 實作未來](../../parallel/concrt/walkthrough-implementing-futures.md)。  
   
-##  <a name="robust">穩固程式設計</a>  
+##  <a name="robust"></a> 穩固程式設計  
  請確定當您使用工作、工作群組和平行演算法時，了解取消和例外狀況處理的角色。 例如，在平行工作的樹狀中，已取消的工作會導致子工作無法執行。 如果其中一項子工作所執行的作業對應用程式很重要 (例如釋放資源)，這可能會造成問題。 此外，如果子工作擲回例外狀況，該例外狀況可能會透過物件解構函式散佈，並在應用程式中導致未定義的行為。 如需說明這些點的範例，請參閱[了解如何取消和例外狀況處理物件解構的影響](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)平行模式程式庫文件中的最佳作法 > 一節。 如需取消作業和 PPL 中的例外狀況處理模型的詳細資訊，請參閱[取消](../../parallel/concrt/cancellation-in-the-ppl.md)和[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。  
   
 ## <a name="related-topics"></a>相關主題  

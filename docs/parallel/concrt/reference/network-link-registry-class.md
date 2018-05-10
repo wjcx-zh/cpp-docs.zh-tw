@@ -1,12 +1,9 @@
 ---
-title: "network_link_registry 類別 |Microsoft 文件"
-ms.custom: 
+title: network_link_registry 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - network_link_registry
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a029d02e5c40ff38a837ab8096a8b4713007ed5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dab0ad6aff391eb89ac59198fb8c173ecb362bbd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 類別
 `network_link_registry` 抽象基底類別會管理來源和目標區塊之間的連結。  
@@ -64,7 +59,7 @@ class network_link_registry;
 |----------|-----------------|  
 |[add](#add)|當在衍生類別中覆寫時，將加入的連結`network_link_registry`物件。|  
 |[begin](#begin)|當在衍生類別中覆寫時，會傳回迭代器中的第一個項目`network_link_registry`物件。|  
-|[contains](#contains)|當在衍生類別中覆寫時，會搜尋`network_link_registry`物件指定的區塊。|  
+|[包含](#contains)|當在衍生類別中覆寫時，會搜尋`network_link_registry`物件指定的區塊。|  
 |[count](#count)|當在衍生類別中覆寫時，會傳回中的項目數`network_link_registry`物件。|  
 |[remove](#remove)|當在衍生類別中覆寫時，會移除從指定的區塊`network_link_registry`物件。|  
   
@@ -146,7 +141,7 @@ virtual bool remove(_EType _Link) = 0;
 ### <a name="return-value"></a>傳回值  
  `true` 如果找到並移除，連結`false`否則。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [single_link_registry 類別](single-link-registry-class.md)   
  [multi_link_registry 類別](multi-link-registry-class.md)

@@ -1,13 +1,10 @@
 ---
-title: "如何： 使用 parallel_invoke 撰寫平行排序常式 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用 parallel_invoke 撰寫平行排序常式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>如何：使用 parallel_invoke 撰寫平行排序常式
 本文件說明如何使用[parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke)演算法，以改善 bitonic 排序演算法的效能。 雙調排序演算法以遞迴方式會輸入的序列分成較小排序的資料分割。 Bitonic 排序演算法可以平行執行，因為每個分割區作業無關的所有其他作業。  
@@ -44,14 +39,14 @@ ms.lasthandoff: 12/21/2017
   
 - [使用 parallel_invoke 執行雙調排序，以平行方式](#parallel)  
   
-##  <a name="serial"></a>循序執行雙調排序  
+##  <a name="serial"></a> 循序執行雙調排序  
  下列範例顯示 bitonic 排序演算法的序列版本。 `bitonic_sort`函式序列分成兩個資料分割排序方向相反，這些資料分割，然後合併結果。 此函式呼叫其本身兩次以遞迴方式來排序每個資料分割。  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[靠上](#top)]  
   
-##  <a name="parallel"></a>使用 parallel_invoke 執行雙調排序，以平行方式  
+##  <a name="parallel"></a> 使用 parallel_invoke 執行雙調排序，以平行方式  
  本章節描述如何使用`parallel_invoke`演算法以平行方式執行 bitonic 排序演算法。  
   
 ### <a name="procedures"></a>程序  
@@ -109,7 +104,7 @@ parallel time: 1248
   
  如同任何平行處理演算法，我們建議您設定檔，並調整為適當的程式碼。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [parallel_invoke 函式](reference/concurrency-namespace-functions.md#parallel_invoke)
 

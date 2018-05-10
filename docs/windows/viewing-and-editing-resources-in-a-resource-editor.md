@@ -1,13 +1,10 @@
 ---
-title: "檢視和編輯資源在資源編輯器 |Microsoft 文件"
-ms.custom: 
+title: 檢視和編輯資源在資源編輯器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resourceview
 dev_langs:
@@ -22,18 +19,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resources [Visual Studio], editing
 ms.assetid: ba8bdc07-3f60-43c7-aa5c-d5dd11f0966e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 980264ab1857af214dcd24703980b8efa9a4d2dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1afa1377b222789243706cf3c5e61f45b4fcd1a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>在資源編輯器內檢視和編輯資源
 每個資源類型都有該資源類型特有的資源編輯器。 您可以重新排列、 調整大小、 加入控制項和功能，或修改使用編輯器相關聯的資源的外觀。 您也可以編輯中的資源[文字格式](../windows/how-to-open-a-resource-script-file-in-text-format.md)和[二進位格式](../windows/opening-a-resource-for-binary-editing.md)。  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="resources-in-managed-projects"></a>在 Managed 專案的資源  
  因為 managed 的專案不使用資源指令碼檔，您必須開啟從資源**方案總管 中**。 您可以使用 [影像編輯器](../windows/image-editor-for-icons.md) 和 [二進位編輯器](binary-editor.md) 處理 Managed 專案中的資源檔。 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 #### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>若要在資源編輯器中檢視受管理的資源  
   
@@ -90,6 +85,6 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源編輯器](../windows/resource-editors.md)
 

@@ -1,29 +1,24 @@
 ---
-title: "排程器原則 |Microsoft 文件"
-ms.custom: 
+title: 排程器原則 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>排程器原則
 本文件說明並行執行階段中的排程器原則的角色。 A*排程器原則*控制排程器在管理工作時使用的策略。 例如，請考慮要求某些工作執行 `THREAD_PRIORITY_NORMAL` 以及要求其他工作執行 `THREAD_PRIORITY_HIGHEST` 的應用程式。  您可以建立兩個排程器執行個體：一個將 `ContextPriority` 原則指定為 `THREAD_PRIORITY_NORMAL`，另一個將同一個原則指定為 `THREAD_PRIORITY_HIGHEST`。  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |`MinConcurrency`|`unsigned int`值，指定排程器使用的並行存取資源的最小數目。|`1`|  
 |`TargetOversubscriptionFactor`|`unsigned int`值，指定要配置給每個處理序的資源多少執行緒。|`1`|  
 |`LocalContextCacheSize`|`unsigned int`值，指定可快取內容的最大數目本機佇列中的每個虛擬處理器。|`8`|  
-|`ContextStackSize`|`unsigned int`值，指定堆疊的大小，以 kb 為單位，以便保留給每個內容。|`0`（使用預設堆疊大小）|  
+|`ContextStackSize`|`unsigned int`值，指定堆疊的大小，以 kb 為單位，以便保留給每個內容。|`0` （使用預設堆疊大小）|  
 |`ContextPriority`|`int`值，指定每個內容的執行緒優先權。 這可以是任何值，您可以傳遞給[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277)或`INHERIT_THREAD_PRIORITY`。|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`|A [concurrency:: schedulingprotocoltype](reference/concurrency-namespace-enums.md#schedulingprotocoltype)值，指定要使用的排程演算法。 |`EnhanceScheduleGroupLocality`|  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>範例  
  若要檢查使用特定排程器原則來控制的排程器行為的範例，請參閱[How to： 指定特定排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)和[How to： 建立代理程式，使用特定排程器原則](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [如何： 指定特定排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)   
  [如何：建立使用特定排程器原則的代理程式](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

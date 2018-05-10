@@ -1,12 +1,9 @@
 ---
-title: "SchedulerPolicy 類別 |Microsoft 文件"
-ms.custom: 
+title: SchedulerPolicy 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - SchedulerPolicy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fc8873fc4516b3c79685eacc91d3d4426b80901
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f23e95bafa9920c520fa7c01518873769945770
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 類別
 `SchedulerPolicy` 類別包含一組索引鍵/值組，每個原則項目一個，可控制排程器執行個體的行為。  
@@ -140,7 +135,7 @@ SchedulerPolicy(
   
  第三個建構函式是複製建構函式。 通常，定義新的排程器原則最方便的方法是複製現有的原則，並使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法修改。  
   
-##  <a name="dtor"></a> ~SchedulerPolicy 
+##  <a name="dtor"></a> ~ SchedulerPolicy 
 
  終結的排程器原則。  
   
@@ -197,7 +192,7 @@ unsigned int SetPolicyValue(
   
  請注意，這個方法不允許設定`MinConcurrency`或`MaxConcurrency`原則。 若要設定這些值，請使用[SetConcurrencyLimits](#setconcurrencylimits)方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [CurrentScheduler 類別](currentscheduler-class.md)   

@@ -1,13 +1,10 @@
 ---
-title: "C + + 的安全性最佳作法 |Microsoft 文件"
-ms.custom: 
+title: C + + 的安全性最佳作法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
-ms.translationtype: MT
+ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳作法
 本文包含安全性工具和作法的相關資訊。 使用它們不會讓應用程式免受攻擊，但是可能可以減少成功的攻擊。  
@@ -35,22 +30,22 @@ ms.lasthandoff: 01/03/2018
 ## <a name="visual-c-security-features"></a>Visual C++ 安全性功能  
  這些安全性功能內建於 Visual C++ 編譯器和連結器：  
   
- [/guard （啟用控制流程防護）](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard (啟用控制流程防護)](../build/reference/guard-enable-control-flow-guard.md)  
  讓編譯器在編譯階段分析間接呼叫目標的控制流程，然後插入程式碼以在執行階段確認目標。  
   
- [/GS （緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)  
+ [/GS (緩衝區安全性檢查)](../build/reference/gs-buffer-security-check.md)  
  指示編譯器將滿溢偵測程式碼插入可能有遭利用風險的函式。 偵測到滿溢時，就會停止執行。 預設會開啟這個選項。  
   
- [/SAFESEH （影像擁有安全例外狀況處理常式）](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH (映像擁有安全例外狀況處理常式)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  指示連結器將包含每個例外狀況處理常式位址的資料表併入輸出映像中。 在執行階段，作業系統會使用此資料表，確定只會執行合法的例外狀況處理常式。 這有助於防止惡意攻擊在執行階段所引入的執行例外狀況處理常式。 根據預設，這個選項為關閉狀態。  
   
  [/NXCOMPAT](../build/reference/nxcompat.md)， [/NXCOMPAT （與資料執行防止相容）](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
  這些編譯器和連結器選項會啟用資料執行防止 (DEP) 相容性。 DEP 會保護 CPU 使其不執行非程式碼頁面。  
   
- [/analyze （程式碼分析）](../build/reference/analyze-code-analysis.md)  
+ [/analyze (程式碼分析)](../build/reference/analyze-code-analysis.md)  
  此編譯器選項會啟動報告潛在安全性問題 (例如緩衝區滿溢、未初始化的記憶體、Null 指標取值以及記憶體流失) 的程式碼分析。 根據預設，這個選項為關閉狀態。 如需詳細資訊，請參閱[程式碼分析 C/c + + 概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。  
   
- [/DYNAMICBASE （使用位址空間配置隨機載入）](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE (使用位址空間配置隨機載入)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  此連結器選項會建置可執行檔映像，以在開始執行時於記憶體不同位置載入。 此選項也會讓記憶體中的堆疊位置更難預測。  
   
 ## <a name="security-enhanced-crt"></a>安全性增強 CRT  
@@ -98,7 +93,7 @@ ms.lasthandoff: 01/03/2018
 ## <a name="windows-user-accounts"></a>Windows 使用者帳戶  
  使用屬於 Administrators 群組的 Windows 使用者帳戶，讓開發人員和客戶暴露在安全性風險下。 如需詳細資訊，請參閱[Users 群組的成員身分執行](running-as-a-member-of-the-users-group.md)和[使用者帳戶控制的方式 (UAC) 會影響您的應用程式](how-user-account-control-uac-affects-your-application.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Security>   
  [安全性](/dotnet/standard/security/index)   
  [使用者帳戶控制 (UAC) 如何影響應用程式](how-user-account-control-uac-affects-your-application.md)

@@ -1,12 +1,9 @@
 ---
-title: "nowait |Microsoft 文件"
-ms.custom: 
+title: nowait |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - nowait
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - nowait OpenMP clause
 ms.assetid: 8a74265d-879c-46cf-8071-a1084f24f16e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 968045d24fb4add0af95f0136160092a7d68fe54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8eeaed1295d411239925ece0c21980e8beb0fd13
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="nowait"></a>nowait
 指示詞中隱含屏障會覆寫。  
@@ -41,7 +36,7 @@ nowait
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
@@ -94,5 +89,5 @@ int main( )
 4, 16, 2  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

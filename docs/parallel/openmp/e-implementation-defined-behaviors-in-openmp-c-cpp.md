@@ -1,27 +1,22 @@
 ---
-title: "E. 實作定義行為在 OpenMP C/c + + |Microsoft 文件"
-ms.custom: 
+title: E. 實作定義行為在 OpenMP C/c + + |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe890248ad2eb3bcee024bf12ccf4039484e7b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 598964ec6a12ac4c357efc04df78bfbe3af798a5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. 實作定義的行為在 OpenMP C/c + +
 本附錄摘要描述為 「 實作定義 」 此 api 的行為。  每個行為是交互參考它的主要規格的說明。  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
      在 Visual c + + 中，這是由作業系統決定。  
   
--   **schedule （runtime):**有關排程延後到執行階段決定。 可以在執行階段選擇排程類型和區塊大小，藉由設定`OMP_SCHEDULE`環境變數。 如果未設定這個環境變數，產生的排程會實作定義 （請參閱分頁 13）。  
+-   **schedule （runtime):** 有關排程延後到執行階段決定。 可以在執行階段選擇排程類型和區塊大小，藉由設定`OMP_SCHEDULE`環境變數。 如果未設定這個環境變數，產生的排程會實作定義 （請參閱分頁 13）。  
   
      在 Visual c + + 中，排程的類型是`static`沒有區塊大小。  
   
@@ -53,26 +48,26 @@ ms.lasthandoff: 12/21/2017
   
      Visual c + + 中，如果資料修改[不可部分完成](../../parallel/openmp/reference/atomic.md)不在自然對齊或如果是 1 或 2 個位元組長的所有不可部分完成作業，滿足該屬性會使用一個關鍵區段。 否則，不會使用關鍵區段。  
   
--   **omp_get_num_threads:**如果使用者有沒有已明確設定的執行緒數目，預設值是由實作定義 (請參閱 9 頁和[區段 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) 37 頁面上)。  
+-   **omp_get_num_threads:** 如果使用者有沒有已明確設定的執行緒數目，預設值是由實作定義 (請參閱 9 頁和[區段 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) 37 頁面上)。  
   
      在 Visual c + +，執行緒的預設數目等於處理器數目。  
   
--   **omp_set_dynamic:**動態執行緒調整的預設值是由實作定義 (請參閱[區段 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)在頁面上 39)。  
+-   **omp_set_dynamic:** 動態執行緒調整的預設值是由實作定義 (請參閱[區段 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)在頁面上 39)。  
   
      Visual c + + 中，預設值是`FALSE`。  
   
--   **omp_set_nested:**啟用巢狀平行處理原則時，用來執行巢狀平行區域的執行緒數目是由實作定義 (請參閱[區段 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md)在 40 頁面上)。  
+-   **omp_set_nested:** 啟用巢狀平行處理原則時，用來執行巢狀平行區域的執行緒數目是由實作定義 (請參閱[區段 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md)在 40 頁面上)。  
   
      Visual c + + 的執行緒數目是由作業系統決定。  
   
--   `OMP_SCHEDULE`環境變數： 這個環境變數的預設值是由實作定義 (請參閱[第 4.1 節](../../parallel/openmp/4-1-omp-schedule.md)在頁面上 48)。  
+-   `OMP_SCHEDULE` 環境變數： 這個環境變數的預設值是由實作定義 (請參閱[第 4.1 節](../../parallel/openmp/4-1-omp-schedule.md)在頁面上 48)。  
   
      在 Visual c + + 中，排程的類型是`static`沒有區塊大小。  
   
--   `OMP_NUM_THREADS`環境變數： 如果未不指定任何值，如`OMP_NUM_THREADS`環境變數，或如果指定的值不是正整數，或如果值大於系統所支援的執行緒數目上限，要使用的執行緒數目實作定義 (請參閱[區段 4.2](../../parallel/openmp/4-2-omp-num-threads.md)在頁面上 48)。  
+-   `OMP_NUM_THREADS` 環境變數： 如果未不指定任何值，如`OMP_NUM_THREADS`環境變數，或如果指定的值不是正整數，或如果值大於系統所支援的執行緒數目上限，要使用的執行緒數目實作定義 (請參閱[區段 4.2](../../parallel/openmp/4-2-omp-num-threads.md)在頁面上 48)。  
   
      Visual c + + 中，如果未指定值為零或更少，執行緒的數目等於處理器數目。  如果值大於 64，執行緒數目是 64。  
   
--   `OMP_DYNAMIC`環境變數： 預設值是由實作定義 (請參閱[4.3 節](../../parallel/openmp/4-3-omp-dynamic.md)49 頁面上)。  
+-   `OMP_DYNAMIC` 環境變數： 預設值是由實作定義 (請參閱[4.3 節](../../parallel/openmp/4-3-omp-dynamic.md)49 頁面上)。  
   
      Visual c + + 中，預設值是`FALSE`。

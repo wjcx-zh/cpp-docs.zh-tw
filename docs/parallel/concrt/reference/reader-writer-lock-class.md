@@ -1,12 +1,9 @@
 ---
-title: "reader_writer_lock 類別 |Microsoft 文件"
-ms.custom: 
+title: reader_writer_lock 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - reader_writer_lock
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bea63c6e2f73ebd58434874758c4f20444958a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4a2f48a80efca0ec6e85a315b355a6482fb2096b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock 類別
 以寫入器偏好設定佇列為基礎且只能本機微調的讀取器-寫入器鎖定。 鎖定會授與寫入器先進先出 (FIFO) 存取權，並在連續載入寫入器的情況下影響讀取器。  
@@ -120,7 +115,7 @@ void lock_read();
 reader_writer_lock();
 ```  
   
-##  <a name="dtor"></a> ~reader_writer_lock 
+##  <a name="dtor"></a> ~ reader_writer_lock 
 
  終結`reader_writer_lock`物件。  
   
@@ -131,7 +126,7 @@ reader_writer_lock();
 ### <a name="remarks"></a>備註  
  預期解構函式執行時，不會再保留鎖定。 允許讀取器的寫入器鎖定與鎖定解構仍保留未定義的行為結果。  
   
-##  <a name="scoped_lock_class">reader_writer_lock:: scoped_lock 類別</a>  
+##  <a name="scoped_lock_class"></a>  reader_writer_lock:: scoped_lock 類別  
  例外狀況安全 RAII 包裝函式，可以用來取得`reader_writer_lock`成為寫入器鎖定的物件。  
   
 ```
@@ -150,7 +145,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
  `_Reader_writer_lock`  
  `reader_writer_lock`成為寫入器取得的物件。  
   
-## <a name="scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+## <a name="scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
 終結`reader_writer_lock`物件，並釋放其建構函式中所提供的鎖定。   
 
@@ -158,7 +153,7 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ~scoped_lock();
 ```  
   
-##  <a name="scoped_lock_read_class">reader_writer_lock:: scoped_lock_read 類別</a>  
+##  <a name="scoped_lock_read_class"></a>  reader_writer_lock:: scoped_lock_read 類別  
  例外狀況安全 RAII 包裝函式，可以用來取得`reader_writer_lock`為讀取器鎖定的物件。  
   
 ```
@@ -219,6 +214,6 @@ void unlock();
 ### <a name="remarks"></a>備註  
  如果寫入器正在等候鎖定，鎖定的版本會一律前往 FIFO 順序的下一個寫入器。 這個鎖定變成優先寫入器，而導致在連續載入寫入器下的讀取器。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [critical_section 類別](critical-section-class.md)

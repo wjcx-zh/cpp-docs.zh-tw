@@ -1,12 +1,9 @@
 ---
-title: "agent 類別 |Microsoft 文件"
-ms.custom: 
+title: agent 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>agent 類別
 適合做為所有獨立代理程式之基底類別的類別。 它用來對其他代理程式隱藏狀態，並使用訊息傳遞互動。  
@@ -60,11 +55,11 @@ class agent;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[cancel](#cancel)|將代理程式從`agent_created`或`agent_runnable`狀態至`agent_canceled`狀態。|  
+|[[取消]](#cancel)|將代理程式從`agent_created`或`agent_runnable`狀態至`agent_canceled`狀態。|  
 |[start](#start)|將代理程式`agent_created`狀態`agent_runnable`狀態，以及排程執行。|  
 |[status](#status)|從代理程式的狀態資訊的來源同步。|  
 |[status_port](#status_port)|從代理程式的狀態資訊的非同步來源。|  
-|[wait](#wait)|等候代理程式，以完成其工作。|  
+|[等候](#wait)|等候代理程式，以完成其工作。|  
 |[wait_for_all](#wait_for_all)|等候所有指定的代理程式，以完成其工作。|  
 |[wait_for_one](#wait_for_one)|等候其中一個指定的代理程式，以完成其工作。|  
   
@@ -72,7 +67,7 @@ class agent;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[done](#done)|移至代理程式`agent_done`狀態，表示代理程式已完成。|  
+|[完成](#done)|移至代理程式`agent_done`狀態，表示代理程式已完成。|  
 |[run](#run)|表示代理程式的主要工作。 `run` 應該在衍生類別中覆寫，並指定應該執行的代理程式已經啟動。|  
   
 ## <a name="remarks"></a>備註  
@@ -144,7 +139,7 @@ bool done();
 ### <a name="remarks"></a>備註  
  這個方法應該呼叫的結尾`run`方法，當您知道您的代理程式的執行已完成。  
   
-##  <a name="run"></a> run 
+##  <a name="run"></a> 執行 
 
  表示代理程式的主要工作。 `run` 應該在衍生類別中覆寫，並指定應該執行的代理程式已經啟動。  
   
@@ -277,5 +272,5 @@ static void __cdecl wait_for_one(
   
  如果參數`_Timeout`常數以外的值`COOPERATIVE_TIMEOUT_INFINITE`，例外狀況[operation_timed_out](operation-timed-out-class.md)如果代理程式已經完成其工作之前，已經超過指定的時間量，會擲回。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

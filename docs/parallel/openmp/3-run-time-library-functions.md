@@ -1,30 +1,25 @@
 ---
-title: "3. 執行階段程式庫函式 |Microsoft 文件"
-ms.custom: 
+title: 3. 執行階段程式庫函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1cbedf8782c9c5ccb25bda3f8b43df8a526f268
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d747f775509c6b3b2b95be51d95ea937816d3cd1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="3-run-time-library-functions"></a>3.執行階段程式庫函式
-本章節描述 OpenMP C 和 c + + 執行階段程式庫函式。 標頭 **\<omp.h >**會宣告兩種類型，可用來控制和查詢的平行執行環境，並鎖定函式，可用來同步處理資料的存取權的幾個函式。  
+本章節描述 OpenMP C 和 c + + 執行階段程式庫函式。 標頭 **\<omp.h >** 會宣告兩種類型，可用來控制和查詢的平行執行環境，並鎖定函式，可用來同步處理資料的存取權的幾個函式。  
   
  型別**omp_lock_t**是可以代表的鎖定都可用的物件類型，或執行緒擁有鎖定。 這些鎖定會參照為*簡單鎖定*。  
   

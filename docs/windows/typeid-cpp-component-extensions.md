@@ -1,30 +1,25 @@
 ---
-title: "typeid （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: typeid （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 20a3b1153bbb8a8502a54aa74998817abf191860
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db1efac0a38aaa11238452e418277f78dbcd6d9d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typeid--c-component-extensions"></a>typeid (C++ 元件擴充功能)
 取得值，指出物件類型。  
@@ -77,15 +72,15 @@ type::typeid
   
  **備註**  
   
- `typeid`用來取得<xref:System.Type>在編譯時期的類型。  
+ `typeid` 用來取得<xref:System.Type>在編譯時期的類型。  
   
- `typeid`類似於在執行的階段使用的型別取得 system:: type<xref:System.Type.GetType%2A>或<xref:System.Object.GetType%2A>。 不過，typeid 只會接受型別名稱做為參數。  如果您想要取得其 system:: type 名稱中使用類型的執行個體，使用 GetType。  
+ `typeid` 類似於在執行的階段使用的型別取得 system:: type<xref:System.Type.GetType%2A>或<xref:System.Object.GetType%2A>。 不過，typeid 只會接受型別名稱做為參數。  如果您想要取得其 system:: type 名稱中使用類型的執行個體，使用 GetType。  
   
- `typeid`必須是能夠在編譯時期評估型別名稱 （類型），而 GetType 評估在執行階段傳回的型別。  
+ `typeid` 必須是能夠在編譯時期評估型別名稱 （類型），而 GetType 評估在執行階段傳回的型別。  
   
- `typeid`可以採用原生型別名稱或通用語言執行階段別名的原生型別名稱。請參閱[c + + 原生類型的.NET Framework 對等用法 (C + + /CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)如需詳細資訊。  
+ `typeid` 可以採用原生型別名稱或通用語言執行階段別名的原生型別名稱。請參閱[c + + 原生類型的.NET Framework 對等用法 (C + + /CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)如需詳細資訊。  
   
- `typeid`雖然它仍會傳回 system:: type，也可以搭配原生類型。  若要取得 type_info 結構，請使用[typeid 運算子](../cpp/typeid-operator.md)。  
+ `typeid` 雖然它仍會傳回 system:: type，也可以搭配原生類型。  若要取得 type_info 結構，請使用[typeid 運算子](../cpp/typeid-operator.md)。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
@@ -204,5 +199,5 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,37 +1,32 @@
 ---
-title: "複合陳述式 (C) | Microsoft Docs"
-ms.custom: 
+title: 複合陳述式 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9422e3229aa5e800859f50e1ca058e32a4120074
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e25bef33e374d7e0dbf97a337cb58146b05bd093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compound-statement-c"></a>複合陳述式 (C)
 複合陳述式 (也稱為「區塊」) 通常會以另一個陳述式主體的形式出現，例如 **if** 陳述式。 [宣告和類型](../c-language/declarations-and-types.md)會描述可能出現在複合陳述式開頭的宣告形式和意義。  
   
 ## <a name="syntax"></a>語法  
  *compound-statement*:  
- **{**  *declaration-list* opt*statement-list*opt**}**  
+ **{**  *declaration-list* opt*statement-list*opt **}**  
   
  *declaration-list*:  
  *declaration*  

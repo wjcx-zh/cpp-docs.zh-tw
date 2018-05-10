@@ -1,12 +1,9 @@
 ---
-title: "float_4 類別 |Microsoft 文件"
-ms.custom: 
+title: float_4 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f5420cbaf6710f12852575926fc6280e1a33ce66
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="float4-class"></a>float_4 類別
 表示短向量的四個浮點數。  
@@ -382,11 +377,11 @@ class float_4;
 |float_4::get_zyxw||  
 |float_4::ref_a||  
 |float_4::ref_b||  
-|float_4::ref_g||  
-|float_4::ref_r||  
-|float_4::ref_w||  
+|float_4:: ref_g||  
+|float_4:: ref_r||  
+|float_4:: ref_w||  
 |float_4::ref_x||  
-|float_4::ref_y||  
+|float_4:: ref_y||  
 |float_4::ref_z||  
 |float_4::set_w||  
 |float_4::set_wx||  
@@ -690,5 +685,5 @@ explicit inline float_4(
 static const int size = 4;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

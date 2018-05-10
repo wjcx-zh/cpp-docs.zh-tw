@@ -1,13 +1,10 @@
 ---
-title: "即時線上關鍵字 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 即時線上關鍵字 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - internal_CPP
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>視內容而有所區別的關鍵字 (C++ 元件擴充功能)
 *即時線上關鍵字*是只在特定內容中才能辨識的語言項目。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where`(屬於[泛型](../windows/generics-cpp-component-extensions.md))  
+-   `where` (屬於[泛型](../windows/generics-cpp-component-extensions.md))  
   
  基於可讀性目的，您可能想要限制內容相關性關鍵字做為使用者定義符號的使用。  
   
@@ -110,5 +105,5 @@ int main() {
 100  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

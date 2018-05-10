@@ -1,13 +1,10 @@
 ---
-title: "並行執行階段的例外狀況處理 |Microsoft 文件"
-ms.custom: 
+title: 並行執行階段的例外狀況處理 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f30c98a8800c3aeaaf5ff1dab5bee9bdba971a6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>並行執行階段的例外狀況處理
 並行執行階段使用 c + + 例外狀況處理來進行通訊的許多類型的錯誤。 這些錯誤包括在您提供給工作和工作群組的工作函式的使用無效的執行階段失敗，無法取得資源，例如執行階段錯誤，所發生的錯誤。 當工作或工作群組擲回例外狀況時，執行階段會保存該例外狀況，並將封送處理至等候工作或工作群組完成的內容。 例如輕量型工作和代理程式的元件，執行階段不會管理您的例外狀況。 在這些情況下，您必須實作自己的例外狀況處理機制。 本主題說明執行階段如何處理工作、 工作群組、 輕量型工作和非同步代理程式，所擲回的例外狀況，以及如何回應您的應用程式中的例外狀況。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   執行階段不會管理輕量型工作和代理程式例外的狀況。  
   
-##  <a name="top"></a>本文件中  
+##  <a name="top"></a> 本文件中  
   
 - [工作和接續](#tasks)  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 - [非同步代理程式](#agents)  
   
-##  <a name="tasks"></a>工作和接續  
+##  <a name="tasks"></a> 工作和接續  
  本章節描述執行階段如何處理所擲回的例外狀況[concurrency:: task](../../parallel/concrt/reference/task-class.md)物件和其接續工作。 如需工作和接續模型的詳細資訊，請參閱[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
  當您擲回例外狀況傳遞至的工作函式主體中`task`物件，儲存該例外狀況，執行階段，並將其封送處理至呼叫的內容[concurrency](reference/task-class.md#get)或[concurrency::task:: wait](reference/task-class.md#wait)。 文件[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)描述與值為基礎的接續，但若要彙總，工作基礎值為基礎的接續會採用型別參數`T`和以工作為基礎的接續會採用一個參數類型`task<T>`. 如果工作擲回有一或多個值為基礎的接續，為了接續不會排程執行。 下列範例可說明此行為：  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="task_groups"></a>工作群組和平行演算法  
+##  <a name="task_groups"></a> 工作群組和平行演算法  
 
  本章節描述執行階段如何處理工作群組所擲回的例外狀況。 本章節也適用於平行演算法例如[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)，因為這些演算法建置在工作群組上。  
   
@@ -123,7 +118,7 @@ X = 15, Y = 30Caught exception: point is NULL.
   
  [[靠上](#top)]  
   
-##  <a name="runtime"></a>執行階段擲回例外狀況  
+##  <a name="runtime"></a> 執行階段擲回例外狀況  
  例外狀況可能起因於執行階段呼叫。 大部分的例外狀況類型，除了[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)和[concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md)，會指出程式設計錯誤。 這些錯誤通常是無法復原，並因此不應該攔截或處理應用程式碼。 我們建議您只攔截或無法復原的錯誤處理應用程式程式碼中，如果您要診斷的程式設計錯誤。 不過，了解例外狀況類型所定義的執行階段可協助您診斷的程式設計錯誤。  
   
  例外狀況處理機制是相同的執行階段為工作函式所擲回的例外狀況擲回的例外狀況。 例如， [concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函式會擲回`operation_timed_out`當它未收到一則訊息中指定的時間週期。 如果`receive`工作函式中擲回例外狀況，您傳遞給工作群組，執行階段會儲存該例外狀況，並將封送處理至呼叫的內容`task_group::wait`， `structured_task_group::wait`， `task_group::run_and_wait`，或`structured_task_group::run_and_wait`。  
@@ -142,7 +137,7 @@ The operation timed out.
   
  [[靠上](#top)]  
   
-##  <a name="multiple"></a>多個例外狀況  
+##  <a name="multiple"></a> 多個例外狀況  
  如果工作或平行演算法收到多個例外狀況，執行階段封送處理這些例外狀況至呼叫的內容的其中之一。 執行階段不保證它將封送處理的例外狀況。  
   
  下列範例會使用`parallel_for`列印到主控台的數字的演算法。 它會擲回例外狀況，如果輸入的值小於某些最小值或大於某些最大值。 在此範例中，多個工作函式會擲回例外狀況。  
@@ -157,17 +152,17 @@ The operation timed out.
   
  [[靠上](#top)]  
   
-##  <a name="cancellation"></a>取消  
+##  <a name="cancellation"></a> 取消  
  並非所有的例外狀況表示發生錯誤。 比方說，搜尋演算法可能會停止其相關聯的工作，在找到結果時使用例外狀況處理。 如需如何在您的程式碼中使用取消機制的詳細資訊，請參閱[PPL 中的取消](../../parallel/concrt/cancellation-in-the-ppl.md)。  
   
  [[靠上](#top)]  
   
-##  <a name="lwts"></a>輕量型工作  
+##  <a name="lwts"></a> 輕量型工作  
  輕量型工作是直接從排程的工作[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)物件。 輕量型工作會執行較少的額外負荷比一般工作。 不過，執行階段不會攔截輕量型工作所擲回的例外狀況。 相反地，未處理例外狀況處理常式，其預設值終止處理序會攔截到例外狀況。 因此，應用程式中使用適當的錯誤處理機制。 如需輕量型工作的詳細資訊，請參閱[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  
   
  [[靠上](#top)]  
   
-##  <a name="agents"></a>非同步代理程式  
+##  <a name="agents"></a> 非同步代理程式  
  輕量型工作，例如執行階段不會管理非同步代理程式所擲回的例外狀況。  
   
  下列範例示範衍生自的類別中處理例外狀況的一種方法[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)。 這個範例會定義`points_agent`類別。 `points_agent::run`方法會讀取`point`物件自訊息緩衝區，並將其列印至主控台。 `run`方法擲回例外狀況，如果收到`NULL`指標。  
@@ -196,7 +191,7 @@ the status of the agent is: done
 ##  <a name="summary"></a> 總結  
  [[靠上](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段](../../parallel/concrt/concurrency-runtime.md)   
  [工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [平行演算法](../../parallel/concrt/parallel-algorithms.md)   

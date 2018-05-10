@@ -1,12 +1,9 @@
 ---
-title: "IResourceManager 結構 |Microsoft 文件"
-ms.custom: 
+title: IResourceManager 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IResourceManager
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 結構
 並行執行階段資源管理員的介面。 這是排程器用來與資源管理員通訊的介面。  
@@ -123,7 +118,7 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>傳回值  
  資源管理員所定義的列舉順序中的第一個節點。  
   
-##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration  
+##  <a name="iresourcemanager__osversion"></a>  Iresourcemanager:: Osversion 列舉  
  代表作業系統版本的列舉類型。  
   
 ```
@@ -174,7 +169,7 @@ virtual unsigned int Release() = 0;
 ### <a name="return-value"></a>傳回值  
  產生的參考計數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [ISchedulerProxy 結構](ischedulerproxy-structure.md)   
  [IScheduler 結構](ischeduler-structure.md)

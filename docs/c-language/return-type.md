@@ -1,13 +1,10 @@
 ---
-title: "傳回型別 | Microsoft Docs"
-ms.custom: 
+title: 傳回型別 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9768baa53e39f1b3243aba24385d592010c3d81a
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 18d90604ccaebab2d3ed7812835c711d4d56995a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-type"></a>傳回型別
 函式的傳回型別會建立函式傳回值的大小和類型，並且對應於下列語法中的類型規範：  
@@ -38,7 +33,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* 是 Microsoft 專有 \*/  
+ /\* *attribute-seq* 是 Microsoft 專有 */  
   
  *declaration-specifiers*：  
  *storage-class-specifier declaration-specifiers* opt  
@@ -118,5 +113,5 @@ char *smallstr( char s1[], char s2[] )
   
  您不需要在呼叫函式之前使用 `int` 傳回類型宣告函式，不過建議您使用原型，如此才能夠檢查引數和傳回值的類型是否正確。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 函式定義](../c-language/c-function-definitions.md)

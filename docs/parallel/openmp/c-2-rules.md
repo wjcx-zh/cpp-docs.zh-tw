@@ -1,32 +1,27 @@
 ---
-title: "C.2 規則 |Microsoft 文件"
-ms.custom: 
+title: C.2 規則 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 規則
 標記法節將說明 6.1 C 標準。 此文法附錄顯示 OpenMP C 和 c + + 的指示詞的基本語言文法的延伸模組。  
   
- **/\*在 c + + (ISO/IEC 14882:1998)\*/**  
+ **/\* 在 c + + (ISO/IEC 14882:1998) \*/**  
   
  *陳述式 seq*:  
   
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  *陳述式 seq openmp 指示詞*  
   
- **/\*在 C90 (ISO/IEC 9899: 1990)\*/**  
+ **/\* 在 C90 (ISO/IEC 9899: 1990) \*/**  
   
  *statement-list*:  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  *陳述式清單 openmp 指示詞*  
   
- **/\*在 C99 (ISO/IEC 9899: 1999)\*/**  
+ **/\* 在 C99 (ISO/IEC 9899: 1999) \*/**  
   
  *區塊項目*:  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  *statement*:  
   
- **/\*標準陳述式\*/**  
+ **/\* 標準陳述式 \*/**  
   
  *openmp 建構*  
   
@@ -274,7 +269,7 @@ ms.lasthandoff: 12/21/2017
   
  *宣告*:  
   
- **/\*標準的宣告\*/**  
+ **/\* 標準的宣告 \*/**  
   
  *threadprivate 指示詞*  
   
@@ -304,9 +299,9 @@ ms.lasthandoff: 12/21/2017
   
  *削減運算子*:  
   
- *其中一個*:  **+  \* -（& s) ^ （& s) #124; （& s) （& s) （& s) #124; &#124;**  
+ *其中一個*:  **+  \* -& ^ &#124; （& s) （& s)&#124;&#124;**  
   
- **/\*在 C 中\*/**  
+ **/\* 在 C 中 \*/**  
   
  *變數清單*:  
   
@@ -314,7 +309,7 @@ ms.lasthandoff: 12/21/2017
   
  *變數清單* **，** *識別碼*  
   
- **/\*在 c + +\*/**  
+ **/\* 在 c + + \*/**  
   
  *變數清單*:  
   

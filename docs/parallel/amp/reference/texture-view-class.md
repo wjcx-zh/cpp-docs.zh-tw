@@ -1,12 +1,9 @@
 ---
-title: "texture_view 類別 |Microsoft 文件"
-ms.custom: 
+title: texture_view 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - texture_view
@@ -23,17 +20,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f88cc10da623cbda4f3426596fe07650bf4b46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3db02d9cafb87c0f173546687ad01390e09b9f68
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="textureview-class"></a>texture_view 類別
 提供對紋理的寫入權限和讀取權限。 `texture_view` 只可以用來讀取其值類型的紋理`int`， `unsigned int`，或`float`具有預設值 32 位元 bpse。 若要閱讀其他紋理的格式，使用`texture_view<const value_type, _Rank>`。  
@@ -86,7 +81,7 @@ class texture_view<const value_type, _Rank>
 |[gather_green](#gather_green)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的綠色 (y) 元件。|  
 |[gather_red](#gather_red)|多載。 使用指定的取樣的組態範例指定座標上的紋理，並傳回四個取樣材質的紅色 (x) 元件。|  
 |[get](#get)|多載。 依索引取得的項目值。|  
-|[sample](#sample)|多載。 使用指定的取樣設定取樣的紋理指定的座標和層級的詳細資料。|  
+|[範例](#sample)|多載。 使用指定的取樣設定取樣的紋理指定的座標和層級的詳細資料。|  
 |[set](#set)|依索引設定項目的值。|  
   
 ### <a name="public-operators"></a>公用運算子  
@@ -113,7 +108,7 @@ class texture_view<const value_type, _Rank>
   
  **命名空間：** concurrency:: graphics  
   
-##  <a name="dtor"></a> ~texture_view 
+##  <a name="dtor"></a> ~ texture_view 
 
  終結`texture_view`執行個體。  
   
@@ -504,5 +499,5 @@ void set(
 typedef typename const value_type value_type;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

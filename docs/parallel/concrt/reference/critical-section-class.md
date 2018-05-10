@@ -1,12 +1,9 @@
 ---
-title: "critical_section 類別 |Microsoft 文件"
-ms.custom: 
+title: critical_section 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - critical_section
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="criticalsection-class"></a>critical_section 類別
 其為並行執行階段明確察覺且不可重新進入的 Mutex。  
@@ -63,7 +58,7 @@ class critical_section;
 |名稱|描述|  
 |----------|-----------------|  
 |[critical_section](#ctor)|建構新的重要區段。|  
-|[~critical_section Destructor](#dtor)|終結的重要區段。|  
+|[~ critical_section 解構函式](#dtor)|終結的重要區段。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -132,7 +127,7 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>備註  
  A`critical_section`物件不是 Windows 作業系統的平台特定原生控制代碼相關聯。 方法只會傳回物件本身的參考。  
   
-##  <a name="critical_section__scoped_lock_class">critical_section:: scoped_lock 類別</a>  
+##  <a name="critical_section__scoped_lock_class"></a>  critical_section:: scoped_lock 類別  
  例外狀況安全 RAII 包裝函式`critical_section`物件。  
   
 ```
@@ -151,7 +146,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  要鎖定的重要區段。  
   
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock 
 
  終結`scoped_lock`物件，並釋放其建構函式中所提供的重要區段。  
   
@@ -193,6 +188,6 @@ bool try_lock_for(unsigned int _Timeout);
 void unlock();
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [reader_writer_lock 類別](reader-writer-lock-class.md)

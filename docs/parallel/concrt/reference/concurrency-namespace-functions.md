@@ -2,9 +2,6 @@
 title: concurrency 命名空間函式 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::Alloc
@@ -40,22 +37,20 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66cf776e02d286b04c4fe9338d74d6a9db196a68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 9e1eed6fdbf5f676e5a7177affb7c38cd016fa4c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 命名空間函式
 ||||  
 |-|-|-|  
-|[Alloc](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
+|[配置](#alloc)|[CreateResourceManager](#createresourcemanager)|[DisableTracing](#disabletracing)|  
 |[EnableTracing](#enabletracing)|[可用](#free)|[GetExecutionContextId](#getexecutioncontextid)|  
 |[GetOSVersion](#getosversion)|[GetProcessorCount](#getprocessorcount)|[GetProcessorNodeCount](#getprocessornodecount)|  
 |[GetSchedulerId](#getschedulerid)|[Trace_agents_register_name](#trace_agents_register_name)|[asend](#asend)|  
@@ -68,10 +63,10 @@ ms.lasthandoff: 04/10/2018
 |[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|  
 |[run_with_cancellation_token](#run_with_cancellation_token)|[傳送](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|  
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|  
-|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|  
+|[task_from_result](#task_from_result)|[try_receive](#try_receive)|[等候](#wait)|  
 |[when_all](#when_all)|[when_any](#when_any)|  
   
-##  <a name="alloc"></a>  Alloc  
+##  <a name="alloc"></a>  配置  
  會透過並行執行階段的快取子配置器指定的大小，來配置記憶體區塊。  
   
 ```
@@ -128,7 +123,7 @@ bool asend(
 inline __declspec(noreturn) void __cdecl cancel_current_task();
 ```  
   
-##  <a name="clear"></a>  clear  
+##  <a name="clear"></a>  清除  
  清除並行佇列，破壞任何目前項目加入佇列。 這個方法不是並行安全。  
   
 ```
@@ -242,7 +237,7 @@ __declspec(deprecated("Concurrency::EnableTracing is a deprecated function.")) _
 ### <a name="return-value"></a>傳回值  
  如果追蹤已正確初始化，請`S_OK`會傳回，否則`E_NOT_STARTED`傳回。  
   
-##  <a name="free"></a>  Free  
+##  <a name="free"></a>  可用  
  釋放先前由 `Alloc` 方法配置的記憶體區塊至並行執行階段的快取子配置器。  
   
 ```
@@ -1259,7 +1254,7 @@ _Output_iterator parallel_transform(
   
  如需詳細資訊，請參閱[平行演算法](../../../parallel/concrt/parallel-algorithms.md)。  
   
-##  <a name="receive"></a>  receive  
+##  <a name="receive"></a>  接收  
  一般接收實作，可讓內容等候來自一個來源的資料，並且篩選所接受的值。  
   
 ```
@@ -1330,7 +1325,7 @@ void run_with_cancellation_token(
 ### <a name="remarks"></a>備註  
  函式物件中的所有中斷點都會在 `cancellation_token` 取消時觸發。 如果父項擁有不同的語彙基元或沒有語彙基元，則明確的語彙基元 `_Ct` 會將這個 `_Func` 與父取消隔離。  
   
-##  <a name="send"></a>  send  
+##  <a name="send"></a>  傳送  
  同步傳送作業，其會等候直到目標接受或拒絕訊息。  
   
 ```
@@ -1369,8 +1364,7 @@ inline void set_ambient_scheduler(std::shared_ptr<::Concurrency::scheduler_inter
 ##  <a name="set_task_execution_resources"></a>  set_task_execution_resources  
  依據指定的同質性集，限制並行執行階段之內部背景工作執行緒使用的執行資源。  
   
- 只有在資源管理員建立之前，或在兩個資源管理員存留期之間，才能有效地呼叫這個方法。 只要資源管理員不在引動過程期間，即可多次叫用此函式。 在同質性限制設定之後，直到下次有效呼叫 `set_task_execution_resources` 方法之前，該限制會持續有效。
-  
+ 只有在資源管理員建立之前，或在兩個資源管理員存留期之間，才能有效地呼叫這個方法。 只要資源管理員不在引動過程期間，即可多次叫用此函式。 在同質性限制設定之後，直到下次有效呼叫 `set_task_execution_resources` 方法之前，該限制會持續有效。  
   
  提供的同質性遮罩不需為處理序同質性遮罩的子集。 您可視需要更新處理序的同質性遮罩。  
   

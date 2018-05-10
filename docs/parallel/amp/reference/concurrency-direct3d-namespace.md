@@ -1,12 +1,9 @@
 ---
-title: "Concurrency:: direct3d 命名空間 |Microsoft 文件"
-ms.custom: 
+title: 'Concurrency:: direct3d 命名空間 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空間
 `direct3d`命名空間提供支援 D3D 互通性函式。 它可讓您順暢使用 D3D 資源 AMP 程式碼中的計算，以及允許在 AMP 建立 D3D 程式碼中，而不需要建立重複的中繼複本的資源使用。 您可以逐步進行加速使用 c + + AMP 計算密集區段 DirectX 應用程式，並從 AMP 計算所產生的資料上使用 D3D API。  
@@ -73,12 +68,12 @@ namespace direct3d;
 |[is_timeout_disabled](concurrency-direct3d-namespace-functions-amp.md#is_timeout_disabled)|傳回布林值旗標，指出是否停用的指定 accelerator_view 的逾時。|  
 |[mad](concurrency-direct3d-namespace-functions-amp.md#mad)|多載。 執行三個引數的算術的乘/加入運算： _X * 平均數 + _Z|  
 |[make_array](concurrency-direct3d-namespace-functions-amp.md#make_array)|建立從 D3D 緩衝區介面指標的陣列。|  
-|[noise](concurrency-direct3d-namespace-functions-amp.md#noise)|藉由使用 Perlin 雜訊演算法產生隨機的值|  
+|[雜訊](concurrency-direct3d-namespace-functions-amp.md#noise)|藉由使用 Perlin 雜訊演算法產生隨機的值|  
 |[弧度為單位](concurrency-direct3d-namespace-functions-amp.md#radians)|將 _X 從角度轉換成弧度|  
 |[rcp](concurrency-direct3d-namespace-functions-amp.md#rcp)|計算引數的快速、 近似倒數|  
 |[reversebits](concurrency-direct3d-namespace-functions-amp.md#reversebits)|反轉 _X 的位元的順序|  
 |[saturate](concurrency-direct3d-namespace-functions-amp.md#saturate)|強加 _X 0 到 1 的範圍內|  
-|[sign](concurrency-direct3d-namespace-functions-amp.md#sign)|多載。 傳回引數的符號|  
+|[簽署](concurrency-direct3d-namespace-functions-amp.md#sign)|多載。 傳回引數的符號|  
 |[smoothstep](concurrency-direct3d-namespace-functions-amp.md#smoothstep)|介於 0 和 1，傳回的 smooth Hermite 插補，_X 是否在範圍 [_Min，（_m）]。|  
 |[step](concurrency-direct3d-namespace-functions-amp.md#step)|比較兩個值，傳回 0 或 1 為基礎的值大於|  
 |[umax](concurrency-direct3d-namespace-functions-amp.md#umax)|比較兩個不帶正負號的數值，傳回較大的值。|  
@@ -89,5 +84,5 @@ namespace direct3d;
   
  **命名空間：** 並行  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

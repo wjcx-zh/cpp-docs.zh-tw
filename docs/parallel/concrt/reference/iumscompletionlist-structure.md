@@ -1,12 +1,9 @@
 ---
-title: "IUMSCompletionList 結構 |Microsoft 文件"
-ms.custom: 
+title: IUMSCompletionList 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSCompletionList
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSCompletionList structure
 ms.assetid: 81b5250e-3065-492c-b20d-2cdabf12271a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378eccbc0e29a9356ffd89699039b9877c76c751
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6ee957355510a2f62f5317d330403dc246ee8f2e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumscompletionlist-structure"></a>IUMSCompletionList 結構
 代表 UMS 完成清單。 當 UMS 執行緒封鎖時，會分派排程器的指定排程內容，以決定封鎖原始執行緒時要在基礎虛擬處理器根排程的內容。 原始執行緒解除封鎖時，作業系統會將它佇列到可透過此介面存取的完成清單中。 排程器可以在指派的排程內容或其搜尋工作的其他任何位置查詢完成清單。  
@@ -70,7 +65,7 @@ virtual IUMSUnblockNotification *GetUnblockNotifications() = 0;
 ### <a name="remarks"></a>備註  
  傳回的通知之後重新排定執行內容是無效的。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [IUMSScheduler 結構](iumsscheduler-structure.md)   
  [IUMSUnblockNotification 結構](iumsunblocknotification-structure.md)

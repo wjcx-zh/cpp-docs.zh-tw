@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio 中的 Visual C++ | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 中的 Visual C++ | Microsoft Docs
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,14 +15,13 @@ helpviewer_keywords:
 - Visual C++, reference
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6e62c477ee6332515ac32de6a9ada6f7c7a99d6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7d4f09ebe0cfaca9bb742baa902a256ac0f92996
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 
@@ -33,69 +29,69 @@ Microsoft Visual C++ 通常簡稱為 Visual C++ 或 MSVC，是 C++、C 及組合
 
 ## <a name="general-information-about-visual-c"></a>Visual C++ 的一般資訊
 
-[Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)  
+[Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 了解 Visual C++ 的新功能。
 
-[Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)  
+[Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)<br/>
 了解 Visual Studio 2017 中的 C++ 一致性改善。
 
-[Visual C++ 語言一致性](visual-cpp-language-conformance.md)  
+[Visual C++ 語言一致性](visual-cpp-language-conformance.md)<br/>
 MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 
-[Visual C++ 變更歷程記錄 2003 - 2015](porting/visual-cpp-change-history-2003-2015.md)  
+[Visual C++ 變更歷程記錄 2003 - 2015](porting/visual-cpp-change-history-2003-2015.md)<br/>
 了解舊版的重大變更。
 
-[歡迎回到 C++](cpp/welcome-back-to-cpp-modern-cpp.md)  
+[歡迎回到 C++](cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 深入了解奠基於 C++11 及 C++14 的新式 C++ 程式設計技術，這項技術讓您能夠撰寫快速、安全的程式碼，並避免許多 C 語言程式設計的常見錯誤。
 
-[如何回報 Visual C++ 工具組問題](how-to-report-a-problem-with-the-visual-cpp-toolset.md)  
- 了解如何針對 Visual C++ 工具組 (編譯器、連結器及其他工具) 建立有效的錯誤報表，以及提交報表的方式。
+[如何回報 Visual C++ 工具組問題](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
+了解如何針對 Visual C++ 工具組 (編譯器、連結器及其他工具) 建立有效的錯誤報表，以及提交報表的方式。
 
-[Visual C++ 移植和升級指南](porting/visual-cpp-porting-and-upgrading-guide.md)  
+[Visual C++ 移植和升級指南](porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
 將程式碼移植到 Visual Studio 2017 及將專案升級至 Visual Studio 2017 的指引，包括將 C++ 程式碼移植到 Windows 10 及通用 Windows 平台。
 
-[Visual C++ Team 部落格](http://blogs.msdn.com/b/vcblog/)  
- 進一步了解新功能以及 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]開發人員提供的最新資訊。
+[Visual C++ Team 部落格](http://blogs.msdn.com/b/vcblog/)<br/>
+進一步了解新功能以及 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]開發人員提供的最新資訊。
 
-[Visual Studio 下載](http://go.microsoft.com/fwlink/p/?linkid=235233)  
+[Visual Studio 下載](http://go.microsoft.com/fwlink/p/?linkid=235233)<br/>
 下載 Visual Studio。
 
-[Visual Studio 版本中的 Visual C++ 工具和功能](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)  
+[Visual Studio 版本中的 Visual C++ 工具和功能](ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 了解不同的 Visual Studio 版本。
 
-[支援的平台](supported-platforms-visual-cpp.md)  
+[支援的平台](supported-platforms-visual-cpp.md)<br/>
 了解支援的平台。
 
-[Visual C++ 範例](visual-cpp-samples.md)  
+[Visual C++ 範例](visual-cpp-samples.md)<br/>
 有關範例的資訊。
 
-[Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)  
+[Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)<br/>
 了解如何取得協助、提報 Bug，以及提供有關 Visual Studio 的建議。
 
 ## <a name="writing-applications-in-c"></a>使用 C++ 撰寫應用程式
 
-[通用 Windows 應用程式](windows/universal-windows-apps-cpp.md)  
+[通用 Windows 應用程式](windows/universal-windows-apps-cpp.md)<br/>
 尋找 Windows 開發人員中心網站上的指南和參考內容。 如需開發 UWP 應用程式的相關資訊，請參閱[通用 Windows 平台簡介](/windows/uwp/get-started/universal-application-platform-guide)和[使用 C++ 建立您的第一個 UWP 應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)。
 
-[傳統型應用程式 (C++)](windows/desktop-applications-visual-cpp.md)  
+[傳統型應用程式 (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 學習如何建立含有訊息迴圈和回呼的桌面應用程式。
 
-[Visual C++ 中的 DLL](build/dlls-in-visual-cpp.md)  
+[Visual C++ 中的 DLL](build/dlls-in-visual-cpp.md)<br/>
 了解如何使用 Win32、ATL 和 MFC 建立 Windows 桌面 DLL，並且提供如何編譯和註冊 DLL 的資訊。
 
-[平行程式設計](parallel/parallel-programming-in-visual-cpp.md)  
+[平行程式設計](parallel/parallel-programming-in-visual-cpp.md)<br/>
 學習如何使用平行模式程式庫 (PPL)、C++ AMP、OpenMP 以及和 Windows 多執行緒相關的其他功能。
 
-[安全性最佳做法](security/security-best-practices-for-cpp.md)  
+[安全性最佳做法](security/security-best-practices-for-cpp.md)<br/>
 學習如何保護應用程式以防止惡意程式碼並免於未經授權的使用。
 
-[雲端和 Web 程式設計](cloud/cloud-and-web-programming-in-visual-cpp.md)  
+[雲端和 Web 程式設計](cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 在 C++ 中，您有數個選項可以連接到 Web 和雲端。
 
-[資料存取](http://msdn.microsoft.com/Library/a9455752-39c4-4457-b14e-197772d3df0b)  
+[資料存取](data/data-access-in-cpp.md)<br/>
 使用 ODBC 和其他資料庫存取技術連接到資料庫。
 
-[文字和字串](text/text-and-strings-in-visual-cpp.md)  
+[文字和字串](text/text-and-strings-in-visual-cpp.md)<br/>
 了解如何使用不同的文字及字串格式化與編碼，進行本機和國際開發。
 
 ## <a name="c-development-tools"></a>C++ 開發工具
@@ -112,28 +108,28 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 
 下列各節提供 Visual Studio 所包含之不同 C 與 C++ 程式庫的相關資訊。
 
-[C 執行階段程式庫參考](c-runtime-library/c-run-time-library-reference.md)  
+[C 執行階段程式庫參考](c-runtime-library/c-run-time-library-reference.md)<br/>
 包含已知會造成安全性問題的函式的安全性增強替代項目。
 
-[C++ 標準程式庫](standard-library/cpp-standard-library-reference.md)  
+[C++ 標準程式庫](standard-library/cpp-standard-library-reference.md)<br/>
 C++ 標準程式庫。
 
-[Active Template Library (ATL)](atl/atl-com-desktop-components.md)  
+[Active Template Library (ATL)](atl/atl-com-desktop-components.md)<br/>
 對 COM 元件和應用程式的支援。
 
-[Microsoft Foundation Class (MFC) 程式庫](mfc/mfc-desktop-applications.md)  
+[Microsoft Foundation Class (MFC) 程式庫](mfc/mfc-desktop-applications.md)<br/>
 對建立具有傳統或 Office 樣式使用者介面的桌面應用程式的支援。
 
-[平行模式程式庫 (PPL)](parallel/concrt/parallel-patterns-library-ppl.md)  
+[平行模式程式庫 (PPL)](parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 CPU 上執行的非同步和平行演算法。
 
-[C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)  
+[C++ AMP (C++ Accelerated Massive Parallelism)](parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 GPU 上執行的大量平行演算法。
 
-[Windows 執行階段範本庫 (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
+[Windows 執行階段範本庫 (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)<br/>
 通用 Windows 平台 (UWP) 應用程式與元件。
 
-[以 C++/CLI 進行 .NET 程式設計](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
+[以 C++/CLI 進行 .NET 程式設計](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 通用語言執行平台 (CLR) 的程式設計。
 
 另請參閱 [STL/CLR](dotnet/stl-clr-library-reference.md) 與 [C++ Support Library](dotnet/cpp-support-library.md)的說明文件。
@@ -144,14 +140,14 @@ GPU 上執行的大量平行演算法。
 
 ## <a name="more-resources"></a>更多資源
 
-[標準 C++](http://isocpp.org/)  
+[標準 C++](http://isocpp.org/)<br/>
 深入了解 C++、取得 Modern C++ 的概觀，以及找到相關書籍、文件、討論和活動的連結
 
-[了解 Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
+[了解 Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)<br/>
 開始學習 C++。
 
 ## <a name="see-also"></a>另請參閱
 
-[C 語言參考](c-language/c-language-reference.md)   
-[C 執行階段程式庫參考](c-runtime-library/c-run-time-library-reference.md)   
-[編譯器內建和組件語言](intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [C 語言參考](c-language/c-language-reference.md)
+- [C 執行階段程式庫參考](c-runtime-library/c-run-time-library-reference.md)
+- [編譯器內建和組件語言](intrinsics/compiler-intrinsics-and-assembly-language.md)

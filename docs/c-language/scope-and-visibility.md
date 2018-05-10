@@ -1,13 +1,10 @@
 ---
-title: "範圍和可視性 | Microsoft Docs"
-ms.custom: 
+title: 範圍和可視性 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b85f0ca180fc60b1281440845289d2f2a39d71af
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-and-visibility"></a>範圍和可視性
 識別項的「可視性」會判斷程式中可以參考的部分 (其「範圍」)。 識別項只有位在程式中其「範圍」所涵蓋的部分才顯示 (也就是可以使用)，該範圍可能限於該識別項出現的檔案、函式、區塊或函式原型 (依照由低到高增加的限制性)。 識別項的範圍是可以使用名稱的程式部分。 這個範圍有時稱為「語彙範圍」。 範圍可分為四種：函式、檔案、區塊和函式原型。  

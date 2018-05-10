@@ -1,12 +1,9 @@
 ---
-title: "overwrite_buffer 類別 |Microsoft 文件"
-ms.custom: 
+title: overwrite_buffer 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - overwrite_buffer
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59eeadecdcf5d1a6333f08b68f98976ce9e6ea78
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dccde651898bf5ff0986dc2e577a1d2ee5765e3f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 類別
 `overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。  
@@ -166,7 +161,7 @@ virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
  `_PTarget`  
  新連結的目標指標。  
   
-##  <a name="dtor"></a> ~overwrite_buffer 
+##  <a name="dtor"></a> ~ overwrite_buffer 
 
  終結`overwrite_buffer`傳訊區塊。  
   
@@ -332,7 +327,7 @@ T value();
 ### <a name="remarks"></a>備註  
  中儲存的值`overwrite_buffer`無法在這個方法會傳回之後，立即變更。 這個方法會等候訊息到達時，如果目前沒有任何訊息儲存在`overwrite_buffer`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [unbounded_buffer 類別](unbounded-buffer-class.md)   
  [single_assignment 類別](single-assignment-class.md)

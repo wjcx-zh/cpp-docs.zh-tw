@@ -1,13 +1,10 @@
 ---
-title: "類型限定詞 | Microsoft Docs"
-ms.custom: 
+title: 類型限定詞 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc671e624b16299db3366885f7bcd38b8518ee5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74f51dfe3b0b45fb08bc30f9b0d158275112bcf9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-qualifiers"></a>類型限定詞
 類型限定詞會提供兩個屬性的其中一個給識別項。 **const** 類型限定詞會將物件宣告為不可修改。 `volatile` 類型限定詞會宣告一個項目，其值可由超出項目所在程式之控制範圍的項目 (例如同時執行的執行緒) 合法變更。  

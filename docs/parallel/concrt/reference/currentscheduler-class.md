@@ -1,12 +1,9 @@
 ---
-title: "CurrentScheduler 類別 |Microsoft 文件"
-ms.custom: 
+title: CurrentScheduler 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - CurrentScheduler
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d973b9ad7c5c7f81b5db85b3f8c5ccc49b5049b0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 71ca69f645e548b1913904f692eb1c5fae167a9a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 類別
 代表與呼叫內容相關之目前排程器的抽象概念。  
@@ -120,7 +115,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
   
  請注意，是否您明確建立此排程器，您必須釋放排程群組中，在發行您的排程器上的參考從其目前的內容，中斷連結前的所有參考。  
   
-##  <a name="detach"></a> Detach 
+##  <a name="detach"></a> 卸離 
 
  卸離目前的排程器，從呼叫的內容，並還原先前附加的排程器視為目前排程器，如果有的話。 這個方法傳回之後，呼叫的內容再受先前已附加至內容使用的排程器`CurrentScheduler::Create`或`Scheduler::Attach`方法。  
   
@@ -135,7 +130,7 @@ static void __cdecl Detach();
   
  從內容呼叫這個方法是內部且由排程器或已附加以外使用方法的內容管理[scheduler:: attach](scheduler-class.md#attach)或[currentscheduler:: Create](#create)方法將會導致[improper_scheduler_detach](improper-scheduler-detach-class.md)擲回例外狀況。  
   
-##  <a name="get"></a> Get 
+##  <a name="get"></a> 取得 
 
  讓指標回到呼叫的內容，也稱為目前排程器相關聯的排程器。  
   
@@ -256,7 +251,7 @@ static void __cdecl ScheduleTask(
 ### <a name="remarks"></a>備註  
  如果呼叫的內容目前沒有任何相關聯的排程器，則這個方法會將處理序的預設排程器建立及/或附加至呼叫的內容。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   

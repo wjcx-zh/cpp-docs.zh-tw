@@ -1,12 +1,9 @@
 ---
-title: "event 類別 |Microsoft 文件"
-ms.custom: 
+title: event 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - event
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fb02865b20d1603be38192e770eb26627e6900e7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="event-class"></a>event 類別
 其為並行執行階段明確察覺的手動重設事件。  
@@ -56,7 +51,7 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|事件重設為未收到信號狀態。|  
 |[set](#set)|通知事件。|  
-|[wait](#wait)|等待事件發出訊號。|  
+|[等候](#wait)|等待事件發出訊號。|  
 |[wait_for_multiple](#wait_for_multiple)|等候發出訊號的多個事件。|  
   
 ### <a name="public-constants"></a>公用常數  
@@ -176,5 +171,5 @@ static size_t __cdecl wait_for_multiple(
 > [!IMPORTANT]
 >  在通用 Windows 平台 (UWP) 應用程式中，請勿呼叫`wait_for_multiple`在 ASTA 執行緒上因為這個呼叫可能會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

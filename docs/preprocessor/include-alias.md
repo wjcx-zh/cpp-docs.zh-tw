@@ -1,12 +1,9 @@
 ---
-title: "include_alias |Microsoft 文件"
-ms.custom: 
+title: include_alias |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2e3b6f6b8bbbc17073b5bf43b54fff3a619793
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="includealias"></a>include_alias
 
@@ -35,7 +30,7 @@ ms.lasthandoff: 02/23/2018
 
 ## <a name="syntax"></a>語法
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (「*long_filename*"，"*short_filename*")  
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias (*long_filename*， *short_filename*)
 
 ## <a name="remarks"></a>備註
@@ -81,7 +76,7 @@ ms.lasthandoff: 02/23/2018
 #include <stdio.h>
 ```
 
-請勿將使用雙引號含括的檔案名稱與使用角括號含括的檔案名稱混用。 例如，假設上述兩個**#pragma include_alias**指示詞，編譯器會在下列執行替代`#include`指示詞：
+請勿將使用雙引號含括的檔案名稱與使用角括號含括的檔案名稱混用。 例如，假設上述兩個 **#pragma include_alias**指示詞，編譯器會在下列執行替代`#include`指示詞：
 
 ```cpp
 #include <api.h>
@@ -94,7 +89,7 @@ ms.lasthandoff: 02/23/2018
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-請注意，filename 報告中的錯誤訊息，或做為預先定義的值**&#95; &#95;檔案 #95; &#95;**巨集，在執行替代之後是檔案的名稱。 例如，下列指示詞之後看到輸出：
+請注意，filename 報告中的錯誤訊息，或做為預先定義的值 **&#95;&#95;檔案&#95;&#95;** 巨集，在執行替代之後是檔案的名稱。 例如，下列指示詞之後看到輸出：
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )
@@ -117,6 +112,6 @@ myfile.h(15) : error C2059 : syntax error
 
 編譯器會搜尋 TWO.H 這個檔案，而不是 THREE.H。  
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

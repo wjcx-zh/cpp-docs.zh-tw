@@ -1,12 +1,9 @@
 ---
-title: "no_implementation |Microsoft 文件"
-ms.custom: 
+title: no_implementation |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - no_implementation
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - no_implementation attribute
 ms.assetid: bdc67785-e131-409c-87bc-f4d2f4abb07b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46d8aec1b04bca446dfacdabec272630cb20f0a6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bf756a411404d2ebb821d5b226818844acfca75b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="noimplementation"></a>no_implementation
 **C + + 特定的**  
@@ -45,6 +40,6 @@ no_implementation
   
  **END c + + 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
  [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

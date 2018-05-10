@@ -1,13 +1,10 @@
 ---
-title: "地區設定名稱、語言和國家/地區字串 | Microsoft Docs"
-ms.custom: 
+title: 地區設定名稱、語言和國家/地區字串 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - setlocale function
 - language strings
 ms.assetid: a0e5a0c5-5602-4da0-b65f-de3d6c8530a2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f98014ae0a610c1618e971cd833523ff9535b6ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aeaeb21dfabac173b639fe4b3e1518b276c629a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>地區設定名稱、語言和國家/地區字串
 針對 `setlocale` 和 `_create_locale` 函式的 *locale* 引數，可使用 Windows NLS API 支援的地區設定名稱、語言、國家/地區碼和字碼頁來設定。 *locale* 引數有下列形式：  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 &nbsp;&nbsp;&nbsp;&nbsp;| ""  
 &nbsp;&nbsp;&nbsp;&nbsp;| NULL  
   
- 建議使用地區設定名稱格式，例如使用 `en-US` 來表示英文 (美國)，或使用 `bs-Cyrl-BA` 來表示波士尼亞文 (斯拉夫，波士尼亞與赫塞哥維納)。 [地區設定名稱](http://msdn.microsoft.com/library/windows/desktop/dd373814.aspx)中描述的一組地區設定名稱。 如需 Windows 作業系統版本所支援的地區設定清單，請參閱 **National Language Support (NLS) API Reference (國家語言支援 (NLS) API 參考)** 的 [Culture Name(文化特性名稱) ](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)一欄。 這項資源列出所支援的語言、指令碼和地區部分的地區設定名稱。 如需有關具有非預設排序次序之受支援地區設定名稱的詳細資訊，請參閱 **Sort Order Identifiers (排序次序識別項)** 中 [Locale name(地區設定名稱) ](http://msdn.microsoft.com/library/windows/desktop/dd374060.aspx)一欄。 如需依 Windows 作業系統版本分類的語言和地區支援詳細資訊，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](http://msdn.microsoft.com/goglobal/bb896001.aspx) \(英文\)。 Windows 10 或更新版本會允許對應至有效 BCP-47 語言標記的地區設定名稱。 例如，`jp-US` 為有效的 BCP-47 標記，但就地區設定功能性而言，它基本上等同於 `US`。  
+ 建議使用地區設定名稱格式，例如使用 `en-US` 來表示英文 (美國)，或使用 `bs-Cyrl-BA` 來表示波士尼亞文 (斯拉夫，波士尼亞赫塞哥維納)。 [地區設定名稱](http://msdn.microsoft.com/library/windows/desktop/dd373814.aspx)中描述的一組地區設定名稱。 如需 Windows 作業系統版本所支援的地區設定清單，請參閱 **National Language Support (NLS) API Reference (國家語言支援 (NLS) API 參考)** 的 [Culture Name (文化特性名稱)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)一欄。 這項資源列出所支援的語言、指令碼和地區部分的地區設定名稱。 如需有關具有非預設排序次序之受支援地區設定名稱的詳細資訊，請參閱 **Sort Order Identifiers (排序次序識別項)** 中 [Locale name(地區設定名稱) ](http://msdn.microsoft.com/library/windows/desktop/dd374060.aspx)一欄。 如需依 Windows 作業系統版本分類的語言和地區支援詳細資訊，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](http://msdn.microsoft.com/goglobal/bb896001.aspx) \(英文\)。 Windows 10 或更新版本會允許對應至有效 BCP-47 語言標記的地區設定名稱。 例如，`jp-US` 為有效的 BCP-47 標記，但就地區設定功能性而言，它基本上等同於 `US`。  
   
  當使用語言字串或語言字串和國家/地區字串建立地區設定時， *語言*[*_國家/地區*[.*字碼頁*]] form is stored in the locale setting for a category when a 語言 string, or 語言 string and country/region string, is used to create the locale. [Language Strings](../c-runtime-library/language-strings.md)中描述的一組受支援語言字串，以及 [Country/Region Strings](../c-runtime-library/country-region-strings.md)所列的受支援國家/地區字串清單。 如果指定的語言和指定的國家/地區沒有關聯，則指定的國家/地區的預設語言會儲存在地區設定中。 我們不建議內嵌於程式碼或對儲存體序列化的地區設定字串使用此格式，因為這些字串比地區設定名稱格式更容易被作業系統更新變更。  
   

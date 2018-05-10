@@ -1,12 +1,9 @@
 ---
-title: "減少 |Microsoft 文件"
-ms.custom: 
+title: 減少 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - reduction
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f43ae9afac7bdbabe12b7532e2bbc7005fe59a0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reduction"></a>reduction
 指定每個執行緒私用的一個或多個變數是減少作業在平行區域結尾處的主題。  
@@ -52,7 +47,7 @@ reduction(operation:var)
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
  如需詳細資訊，請參閱[2.7.2.6 減少](../../../parallel/openmp/2-7-2-6-reduction.md)。  
   
@@ -169,5 +164,5 @@ The sum of the consecutive integers from 1 to 10, is 55
 All of the the functions, func1 through func5 succeeded!  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -1,12 +1,9 @@
 ---
-title: "accelerator_view_removed 類別 |Microsoft 文件"
-ms.custom: 
+title: accelerator_view_removed 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - accelerator_view_removed
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1bc6784dd4f5ce9ee6b887b16a27f3a0126a9f5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0426dd44cfcb8f655f3981802dfe23adcd436a0d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed 類別
 由於 Windows 逾時偵測與復原機制的基礎的 DirectX 呼叫失敗時擲回例外狀況。  
@@ -101,5 +96,5 @@ HRESULT get_view_removed_reason() const throw();
 ```  
   
  
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

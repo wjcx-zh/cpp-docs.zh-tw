@@ -1,12 +1,9 @@
 ---
-title: "呼叫類別 |Microsoft 文件"
-ms.custom: 
+title: 呼叫類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - call
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a63873b7666e4f75ddd39fbf684ebb80c1f85e8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 47f72948621e9311f05af74f75d80cd35c1deddc
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="call-class"></a>call 類別
 `call` 傳訊區塊是一個多來源的排序 `target_block`，它在接收訊息時會叫用指定的函式。  
@@ -57,7 +52,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[call](#ctor)|多載。 建構`call`傳訊區塊。|  
+|[呼叫](#ctor)|多載。 建構`call`傳訊區塊。|  
 |[~ 呼叫解構函式](#dtor)|終結`call`傳訊區塊。|  
   
 ### <a name="protected-methods"></a>保護方法  
@@ -136,7 +131,7 @@ call(
   
  型別`filter_method`是函式簽章`bool (T const &)`由此叫用`call`傳訊區塊，以判斷它是否應該接受提供的訊息。  
   
-##  <a name="dtor"></a> ~call 
+##  <a name="dtor"></a> ~ 呼叫 
 
  終結`call`傳訊區塊。  
   
@@ -218,6 +213,6 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>傳回值  
  `true`，因為區塊不會延後提供的訊息。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [transformer 類別](transformer-class.md)

@@ -1,30 +1,25 @@
 ---
-title: "文字和二進位資料流 | Microsoft Docs"
-ms.custom: 
+title: 文字和二進位資料流 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - binary streams
 - text streams
 ms.assetid: 57035e4a-955d-4e04-a560-fcf67ce68b4e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e91881f738c1b6411179c4f8e10e30f69e7b8667
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="text-and-binary-streams"></a>文字和二進位資料流
 文字資料流是由一或多行可寫入到文字導向顯示器以便供讀取的文字所組成。 從文字資料流讀取時，程式會讀取每一行結尾的 `NL` (新行)。 寫入到文字資料流時，程式會寫入 `NL` 以表示行尾。 為符合目標環境中表示檔案中之文字的不同慣例，程式庫函式可以修改在程式與文字資料流之間傳輸的字元數目與表示數目。  

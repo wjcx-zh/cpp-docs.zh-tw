@@ -1,12 +1,9 @@
 ---
-title: omp_get_wtime | Microsoft Docs
-ms.custom: 
+title: omp_get_wtime |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - omp_get_wtime
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - omp_get_wtime OpenMP function
 ms.assetid: c8dee105-ec1b-42e5-a6e3-edeedcf9854c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57307df6a2e13c6bd3dbd90892669119f8526d70
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0ff7942a694bda3c28133aa0536fcacf9b341087
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ompgetwtime"></a>omp_get_wtime
 傳回從某個時間點所經過時間的秒鐘值。  
@@ -75,5 +70,5 @@ wtick = 2.793651148400146e-007
 1/wtick = 3579545  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../../parallel/openmp/reference/openmp-functions.md)

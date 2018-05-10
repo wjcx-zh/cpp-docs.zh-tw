@@ -1,30 +1,25 @@
 ---
-title: "如何： 管理排程器執行個體 |Microsoft 文件"
-ms.custom: 
+title: 如何： 管理排程器執行個體 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2e4916e0f563c4034dc27be1e3d911f42a65319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 699abcbc75dc4f0df40d07d26c0e6987d4711fe3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>如何：管理排程器執行個體
 排程器執行個體，可讓您將特定的排程原則與各種類型的工作負載產生關聯。 本主題包含兩個基本範例示範如何建立及管理排程器執行個體。  
@@ -87,7 +82,7 @@ Current scheduler id: 0
   
  **cl.exe /EHsc 排程器 instance.cpp**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [排程器執行個體](../../parallel/concrt/scheduler-instances.md)   
  [如何：指定特定排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
 

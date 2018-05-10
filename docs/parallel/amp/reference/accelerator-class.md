@@ -1,12 +1,9 @@
 ---
-title: "accelerator 類別 |Microsoft 文件"
-ms.custom: 
+title: accelerator 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMPRT/accelerator
@@ -49,17 +46,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc98e31a9f5ae1f1ac347bfe312c0fddd9ddf7a8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b40177af3796a17d32e78e628c41ea694f69ed9f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="accelerator-class"></a>accelerator 類別
 快速鍵會是最適合用於資料平行運算的硬體功能。 快速鍵可能連接到 （例如 GPU) PCIe 匯流排的裝置，或可能是主要的 CPU 上設定的延伸的指令。  
@@ -495,7 +490,7 @@ accelerator& operator= (const accelerator& _Other);
 ### <a name="return-value"></a>傳回值  
  此參考`accelerator`物件。  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 運算子 = = 
 
  比較這個`accelerator`與另一個物件，然後傳回`true`如果它們是相同的; 否則會傳回`false`。  
   
@@ -574,7 +569,7 @@ __declspec(property(get= get_supports_limited_double_precision)) bool supports_l
 __declspec(property(get= get_version)) unsigned int version;  
 ```  
   
-##  <a name="dtor"></a> </a> ~accelerator_view 
+##  <a name="dtor"></a> </a> ~ accelerator_view 
 
  終結[accelerator_view](accelerator-view-class.md)物件。  
   
@@ -739,7 +734,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
 ### <a name="return-value"></a>傳回值  
  已修改的參考`accelerator_view`物件。  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 運算子 = = 
 
  比較這個[accelerator_view](accelerator-view-class.md)與另一個物件，然後傳回`true`如果它們是相同的; 否則會傳回`false`。  
   
@@ -783,5 +778,5 @@ void wait();
 ### <a name="return-value"></a>傳回值  
  傳回 `void`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

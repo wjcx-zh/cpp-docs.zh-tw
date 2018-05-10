@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 偵錯 c + + AMP 應用程式 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 偵錯 c + + AMP 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯 C++ AMP 應用程式
 本主題示範如何使用 c + + Accelerated Massive Parallelism (c + + AMP) 若要善用圖形處理單元 (GPU) 的應用程式進行偵錯。 它會使用平行縮減程式，有個加總整數的大型陣列。 這個逐步解說將說明下列工作：  
@@ -305,7 +300,7 @@ GPU 執行緒資料提示方塊
   
      您可以選取其對應的資料行標頭來排序所指定的運算式。  
   
-     選取**localA [localIdx [0]]**欄標題來排序資料行。 下圖顯示依排序的結果**localA [localIdx [0]]**。  
+     選取**localA [localIdx [0]]** 欄標題來排序資料行。 下圖顯示依排序的結果**localA [localIdx [0]]**。  
   
      ![已排序的結果與平行監看式視窗](../../parallel/amp/media/campf.png "campf")  
  排序結果  
@@ -321,7 +316,7 @@ GPU 執行緒資料提示方塊
   
 ### <a name="to-flag-gpu-threads"></a>GPU 執行緒加上旗標  
   
-1.  選取**[執行緒]**資料行標頭來排序的磚索引和執行緒索引的 [平行監看式 1] 視窗中。  
+1.  選取 **[執行緒]** 資料行標頭來排序的磚索引和執行緒索引的 [平行監看式 1] 視窗中。  
   
 2.  在功能表列上選擇 **偵錯**，**繼續**，因而導致四個執行緒，皆為作用中下一個屏障 （定義在一行 32 AMPMapReduce.cpp） 的進度。  
   
@@ -392,7 +387,7 @@ GPU 執行緒資料提示方塊
   
      24 先前已封鎖在第 21 行在屏障的執行緒已進入列 32。 這會顯示在**GPU 執行緒**視窗。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + AMP 概觀](../../parallel/amp/cpp-amp-overview.md)   
  [偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)   
  [如何： 使用 GPU 執行緒視窗](/visualstudio/debugger/how-to-use-the-gpu-threads-window)   

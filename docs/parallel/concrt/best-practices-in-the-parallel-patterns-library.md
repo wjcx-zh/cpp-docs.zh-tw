@@ -1,13 +1,10 @@
 ---
-title: "最佳作法，在平行模式程式庫 |Microsoft 文件"
-ms.custom: 
+title: 最佳作法，在平行模式程式庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>平行模式程式庫中的最佳作法
 本文件說明平行模式程式庫 (PPL) 最有效的用法。 PPL 提供一般用途的容器、物件和演算法來執行細部平行處理原則。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 - [請確定變數是有效的整個工作的存留期](#lifetime)  
   
-##  <a name="small-loops"></a>不要平行處理小型迴圈主體  
+##  <a name="small-loops"></a> 不要平行處理小型迴圈主體  
  平行處理相對小型迴圈主體時，所造成的相關排程額外負荷可能會超過平行處理的好處。 請參考下列範例，其會在兩個矩陣中各加入一組項目。  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="highest"></a>表示在最高層級的平行處理原則  
+##  <a name="highest"></a> 表示在最高層級的平行處理原則  
  只平行處理低階程式碼時，您可以引入不會隨處理器數目增加而延展的分岔/聯結建構。 A*分岔 / 聯結*建構是其中一個工作分割為較小的平行子任務並等候這些子任務完成的建構。 每個子任務可以遞迴分割為更多的子任務。  
   
  儘管分岔/聯結模型適合用來解決各種問題，在某些情況下，同步處理的額外負荷可能會降低延展性。 例如，請參考下列處理影像資料的循序程式碼。  
@@ -92,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="divide-and-conquer"></a>使用 parallel_invoke 解決分而-擊之問題  
+##  <a name="divide-and-conquer"></a> 使用 parallel_invoke 解決分而-擊之問題  
 
  A*和擊*問題是一種使用遞迴來中斷工作分為子任務的分岔 / 聯結建構形式。 除了[concurrency:: task_group](reference/task-group-class.md)和[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)類別，您也可以使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法解決和擊問題。 `parallel_invoke` 演算法的語法比工作群組物件的語法更簡潔，如果您有固定的平行工作數時，此演算法很實用。  
   
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="breaking-loops"></a>使用取消或例外狀況處理來中斷平行迴圈  
+##  <a name="breaking-loops"></a> 使用取消或例外狀況處理來中斷平行迴圈  
  PPL 提供兩種方式來取消工作群組或平行演算法所執行的平行工作。 一種方式是使用所提供的取消機制[concurrency:: task_group](reference/task-group-class.md)和[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)類別。 另一種方式是在工作的工作函式主體中擲回例外狀況。 在取消平行工作樹狀時，取消機制比例外狀況處理更有效率。 A*平行工作樹狀結構*是一群相關的工作群組，有些工作群組包含其他工作群組。 取消機制會以由上而下的方式取消工作群組及其子工作群組。 相反地，例外狀況處理則使用由下而上的方式執行，且必須在例外狀況往上傳播時個別取消每一個子工作群組。  
   
 
@@ -132,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="object-destruction"></a>了解取消和例外狀況處理如何影響對物件解構的  
+##  <a name="object-destruction"></a> 了解取消和例外狀況處理如何影響對物件解構的  
  在平行工作的樹狀中，已取消的工作會導致子工作無法執行。 如果其中一項子工作執行的作業，對您的應用程式很重要，例如釋放資源，這可能會造成問題。 此外，工作取消可能會導致例外狀況透過物件解構函式傳播，而在應用程式中造成未定義的行為。  
   
  在下列範例中，`Resource` 類別描述資源，而 `Container` 類別描述保存資源的容器。 在其解構函式中，`Container` 類別會在其中兩個 `Resource` 成員上平行呼叫 `cleanup` 方法，然後在其第三個 `Resource` 成員上呼叫 `cleanup` 方法。  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[靠上](#top)]  
   
-##  <a name="repeated-blocking"></a>不在平行迴圈中重複封鎖  
+##  <a name="repeated-blocking"></a> 不在平行迴圈中重複封鎖  
 
  平行迴圈，例如[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)或[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)所支配封鎖作業可能會造成執行階段在短時間內建立的執行緒數目。  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[靠上](#top)]  
   
-##  <a name="blocking"></a>不會執行取消平行工作時封鎖作業  
+##  <a name="blocking"></a> 不會執行取消平行工作時封鎖作業  
 
  如果可能的話，不會執行封鎖作業才能呼叫[concurrency::task_group::cancel](reference/task-group-class.md#cancel)或[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)方法來取消平行工作。  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[靠上](#top)]  
   
-##  <a name="shared-writes"></a>不要在平行迴圈中的共用資料寫入  
+##  <a name="shared-writes"></a> 不要在平行迴圈中的共用資料寫入  
  並行執行階段提供許多資料結構，例如[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)，可同步處理對共用資料的並行存取。 這些資料結構適合用於許多案例，例如當多個工作不常需要資源共用存取時。  
   
  請考慮下列範例使用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法和`critical_section`物件計算中質數的計數[std:: array](../../standard-library/array-class-stl.md)物件。 這個範例不會延展，因為每個執行緒都必須等候存取共用變數 `prime_sum`。  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[靠上](#top)]  
   
-##  <a name="false-sharing"></a>盡可能避免偽共用  
+##  <a name="false-sharing"></a> 盡可能避免偽共用  
  *偽共用*發生於執行於個別處理器的多個並行工作寫入位於變數相同的快取行。 當一個工作寫入其中一個變數時，兩個變數的快取行皆會失效。 每當快取行失效時，每個處理器必須重新載入此快取行。 因此，偽共用可能會導致應用程式的效能降低。  
   
  下列基本範例示範兩個並行工作，每一個都會遞增一個共用計數器變數。  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[靠上](#top)]  
   
-##  <a name="lifetime"></a>請確定變數是有效的整個工作的存留期  
+##  <a name="lifetime"></a> 請確定變數是有效的整個工作的存留期  
  當您將 Lambda 運算式提供給工作群組或平行演算法時，擷取子句指定 Lambda 運算式主體以傳值方式或傳址方式存取封閉範圍中的變數。 當您以傳址方式將變數傳遞給 Lambda 運算式時，必須保證該變數的存留期會保存直到工作完成為止。  
   
  請參閱下列會定義 `object` 類別和 `perform_action` 函式的範例。 `perform_action` 函式會建立 `object` 變數，然後以非同步方式在該變數上執行某項動作。 因為工作不保證會在 `perform_action` 函式傳回前完成，所以在工作執行的同時，如果 `object` 變數終結，程式會損毀或表現未指定的行為。  
@@ -278,7 +273,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段最佳作法](../../parallel/concrt/concurrency-runtime-best-practices.md)   
  [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)   

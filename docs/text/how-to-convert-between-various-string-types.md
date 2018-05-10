@@ -1,13 +1,10 @@
 ---
-title: "如何： 各種字串類型之間轉換 |Microsoft 文件"
-ms.custom: 
+title: 如何： 各種字串類型之間轉換 |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>如何：在各種字串類型之間轉換
 本主題示範如何將各種 Visual c + + 字串型別轉換成其他字串。 涵蓋的字串類型包括`char *`， `wchar_t*`， [_bstr_t](../cpp/bstr-t-class.md)， [CComBSTR](../atl/reference/ccombstr-class.md)， [CString](../atl-mfc-shared/using-cstring.md)， [basic_string](../standard-library/basic-string-class.md)，和<xref:System.String?displayProperty=fullName>。 在所有情況下，轉換為新類型時，是由字串的複本。 新的字串所做的變更將不會影響原始的字串，反之亦然。  
@@ -474,9 +469,9 @@ Hello, World! (System::String)
 ## <a name="example"></a>範例  
   
 ### <a name="description"></a>描述  
- 此範例示範如何從轉換`CString`上面所列的其他字串類型。 `CString`根據 TCHAR 資料型別，相依於是否符號`_UNICODE`定義。 如果`_UNICODE`未定義`TCHAR`定義成 char 和`CString`包含多位元組字元字串; 如果`_UNICODE`定義，`TCHAR`定義為`wchar_t`和`CString`包含寬字元字串。  
+ 此範例示範如何從轉換`CString`上面所列的其他字串類型。 `CString` 根據 TCHAR 資料型別，相依於是否符號`_UNICODE`定義。 如果`_UNICODE`未定義`TCHAR`定義成 char 和`CString`包含多位元組字元字串; 如果`_UNICODE`定義，`TCHAR`定義為`wchar_t`和`CString`包含寬字元字串。  
   
- `CStringA`多位元組字串一律版本`CString`，`CStringW`是寬字元字串的唯一版本。 既不`CStringA`也`CStringW`使用`_UNICODE`來判斷如何編譯。 `CStringA`和`CStringW`釐清微小差異之處緩衝區大小配置和輸出處理在這個範例中使用。  
+ `CStringA` 多位元組字串一律版本`CString`，`CStringW`是寬字元字串的唯一版本。 既不`CStringA`也`CStringW`使用`_UNICODE`來判斷如何編譯。 `CStringA` 和`CStringW`釐清微小差異之處緩衝區大小配置和輸出處理在這個範例中使用。  
   
 ### <a name="code"></a>程式碼  
   
@@ -823,7 +818,7 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 和 MFC 字串轉換巨集](../atl/reference/string-conversion-macros.md)   
  [為 C 樣式字串相關的 Cstring](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)   
  [如何： 將標準字串轉換為 system:: string](../dotnet/how-to-convert-standard-string-to-system-string.md)   

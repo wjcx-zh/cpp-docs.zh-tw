@@ -1,12 +1,9 @@
 ---
-title: "ITopologyNode 結構 |Microsoft 文件"
-ms.custom: 
+title: ITopologyNode 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITopologyNode
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcab5f66af46989e0487657e018531423fd5f48
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1c4168fbfbd2bf17ad8b8b752d2843c8f57b0f3f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 結構
 資源管理員所定義的拓撲節點介面。 節點可包含一個或多個執行資源。  
@@ -65,7 +60,7 @@ struct ITopologyNode;
   
  **命名空間：** concurrency  
   
-##  <a name="getexecutionresourcecount"></a>  ITopologyNode::GetExecutionResourceCount Method  
+##  <a name="getexecutionresourcecount"></a>  Itopologynode:: Getexecutionresourcecount 方法  
  傳回結合在這個節點下的執行資源數目。  
   
 ```
@@ -123,5 +118,5 @@ virtual unsigned long GetNumaNode() const = 0;
 ### <a name="remarks"></a>備註  
  屬於此節點虛擬處理器根上執行的執行緒 proxy 必須至少為親和性的 NUMA 節點，這個方法所傳回的 NUMA 節點層級。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

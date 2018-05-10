@@ -1,27 +1,22 @@
 ---
-title: "3.1.2 omp_get_num_threads 函式 |Microsoft 文件"
-ms.custom: 
+title: 3.1.2 omp_get_num_threads 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bcdd76e2-d96b-4884-ac8f-e55fc0c42801
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d595fd47b87bbc3fd7701fc847821c73169a23e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df01d571b67ff6d252d85128fcc8c1d26a6e94a9
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads 函式
 **Omp_get_num_threads**函式傳回的執行緒數目目前小組執行平行從中呼叫它的區域中。 格式如下：  

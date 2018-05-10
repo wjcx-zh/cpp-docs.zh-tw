@@ -1,30 +1,25 @@
 ---
-title: "如何： 建立在延遲之後完成的工作 |Microsoft 文件"
-ms.custom: 
+title: 如何： 建立在延遲之後完成的工作 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9547bb5e586c20a22ce79d1227fa5f15b3ea305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fca1ba3874f02b44f96fd795b531536a23c8d462
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>如何：建立在延遲之後才會完成的工作
 這個範例示範如何使用[concurrency:: task](../../parallel/concrt/reference/task-class.md)， [concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)， [concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)， [concurrency:: timer](../../parallel/concrt/reference/timer-class.md)，和[concurrency:: call](../../parallel/concrt/reference/call-class.md)類別來建立在延遲之後完成的工作。 您可以使用這個方法建立執行下列動作的迴圈：偶爾輪詢資料，引入逾時，延遲使用者輸入處理長達一段預先定義的時間等等。  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
  **cl.exe /EHsc task-delay.cpp**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [task 類別 （並行執行階段）](../../parallel/concrt/reference/task-class.md)   
  [cancellation_token_source 類別](../../parallel/concrt/reference/cancellation-token-source-class.md)   

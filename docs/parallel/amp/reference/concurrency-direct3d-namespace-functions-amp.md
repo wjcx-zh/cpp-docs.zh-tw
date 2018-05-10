@@ -2,9 +2,6 @@
 title: 'Concurrency:: direct3d 命名空間函式 (AMP) |Microsoft 文件'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
@@ -27,17 +24,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 57015cc84053216e76f3459170c3dde9a26bb43c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: direct3d 命名空間函式 (AMP)
 ||||  
@@ -47,8 +42,8 @@ ms.lasthandoff: 04/10/2018
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
-|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[mad](#mad)|[make_array](#make_array)|[雜訊](#noise)|  
+|[弧度為單位](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
 |[saturate](#saturate)|[簽署](#sign)|[smoothstep](#smoothstep)|  
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
@@ -69,7 +64,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的絕對值。  
   
-##  <a name="clamp"></a>  clamp  
+##  <a name="clamp"></a>  有縮短時間差  
  計算壓制為範圍的第二個和第三個指定的引數所定義的第一個指定引數的值。  
   
 ```  
@@ -367,7 +362,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>傳回值  
  建立使用所提供的 Direct3D 緩衝區的陣列。  
   
-##  <a name="noise"></a>  noise  
+##  <a name="noise"></a>  雜訊  
  產生使用 Perlin 雜訊演算法的隨機值  
   
 ```  
@@ -381,7 +376,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回介於-1 和 1 之間的 Perlin 雜訊值的範圍內  
   
-##  <a name="radians"></a>  radians  
+##  <a name="radians"></a>  弧度為單位  
  將 _X 從角度轉換成弧度  
   
 ```  
@@ -440,7 +435,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回在 0 到 1 的範圍內壓制 _X  
   
-##  <a name="sign"></a>  sign  
+##  <a name="sign"></a>  符號  
  判斷指定的引數的符號。  
   
 ```  
@@ -477,7 +472,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>傳回值  
  傳回 0，如果 _X 小於 _Min;如果 _X 大於 （_m）;，1否則，值介於 0 和 1 _X 是否在範圍 [_Min，（_m）]  
   
-##  <a name="step"></a>  step  
+##  <a name="step"></a>  步驟  
  比較兩個值，傳回 0 或 1 為基礎的值大於  
   
 ```  

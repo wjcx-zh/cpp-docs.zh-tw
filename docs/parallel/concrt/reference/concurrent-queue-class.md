@@ -1,12 +1,9 @@
 ---
-title: "concurrent_queue 類別 |Microsoft 文件"
-ms.custom: 
+title: concurrent_queue 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_queue
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9a3ee82b8b81532b4e63f080ad321a93725ce41
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 類別
 `concurrent_queue` 類別是一種序列容器類別，允許以先進先出的方式存取其項目。 它會啟用一組有限的並行安全作業，例如 `push` 和 `try_pop` 等。  
@@ -74,7 +69,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |名稱|描述|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|多載。 建構並行佇列。|  
-|[~concurrent_queue Destructor](#dtor)|終結並行佇列。|  
+|[~ concurrent_queue 解構函式](#dtor)|終結並行佇列。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -272,5 +267,5 @@ size_type unsafe_size() const;
 ### <a name="remarks"></a>備註  
  `unsafe_size` 不是並行安全和可產生不正確的結果，如果呼叫方法的呼叫與`push`， `try_pop`，和`empty`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

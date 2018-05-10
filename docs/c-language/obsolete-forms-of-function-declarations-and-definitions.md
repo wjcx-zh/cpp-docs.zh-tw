@@ -1,29 +1,24 @@
 ---
-title: "函式宣告和定義的過時形式 | Microsoft Docs"
-ms.custom: 
+title: 函式宣告和定義的過時形式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7de356abb7078b7dd50f0d90bf4ecb0a046945b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d7bb117ff75ae96c8cfa7041534ed0696ad03e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>函式宣告和定義的過時形式
 舊式函式宣告和定義會使用與 ANSI C 標準建議的語法稍微不同的規則來宣告參數。 首先，舊式宣告沒有參數清單。 其次，在函式定義中會列出參數，不過未在參數清單中宣告它們的類型。 類型宣告會位於建構函式主體的複合陳述式之前。 舊式語法已經過時，不應該在新的程式碼中使用。 不過，仍然支援使用舊式語法程式碼。 下列範例說明宣告和定義的過時形式：  

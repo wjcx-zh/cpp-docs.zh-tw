@@ -1,13 +1,10 @@
 ---
-title: "PPL 中的取消 |Microsoft 文件"
-ms.custom: 
+title: PPL 中的取消 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0c74ad5877a5b490414d96bf0f13b32309a21a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消
 本文件說明取消在平行模式程式庫 (PPL) 中的角色、如何取消平行工作，以及如何判斷平行工作取消的時間。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
 
 
   
-##  <a name="top"></a>本文件中  
+##  <a name="top"></a> 本文件中  
   
 - [平行工作樹狀結構](#trees)  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
 - [不要使用取消的時機](#when)  
   
-##  <a name="trees"></a>平行工作樹狀結構  
+##  <a name="trees"></a> 平行工作樹狀結構  
  PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢狀工作群組，以形成*樹*平行工作。 下圖顯示平行工作樹狀。 在此圖中，`tg1` 和 `tg2` 代表工作群組；`t1`、`t2`、`t3`、`t4` 和 `t5` 代表工作群組執行的工作。  
   
  ![平行工作樹狀](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")  
@@ -82,14 +77,14 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="tasks"></a>取消平行工作  
+##  <a name="tasks"></a> 取消平行工作  
 
  有多種方式可取消平行工作。 慣用的方法是使用取消語彙基元。 工作群組也支援[concurrency::task_group::cancel](reference/task-group-class.md#cancel)方法和[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)方法。 最後一種方式是在工作的工作函式主體中擲回例外狀況。 無論您選擇哪一個方法，請了解取消不會立即發生。 雖然，如果已取消工作或工作群組便不會啟動新的工作，但作用中的工作必須檢查並回應取消。  
 
   
  如需取消平行工作的範例，請參閱[逐步解說： 使用工作和 XML HTTP 要求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)， [How to： 使用取消來中斷平行迴圈](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)，和[How to： 使用例外狀況處理來中斷平行迴圈](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。  
   
-###  <a name="tokens"></a>使用取消語彙基元來取消平行工作  
+###  <a name="tokens"></a> 使用取消語彙基元來取消平行工作  
  `task`、`task_group` 和 `structured_task_group` 類別可透過使用取消語彙基元來支援取消。 PPL 會定義[concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)和[concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)針對此用途的類別。 當您使用取消語彙基元取消工作時，執行階段就不會啟動訂閱這個語彙基元的新工作。 已在使用中的工作可以使用[is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)成員函式，來監視取消語彙基元和它可以停止時停止。  
   
 
@@ -154,7 +149,7 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="cancellation-tokens-and-task-composition"></a>取消語彙基元和工作組合  
 
- [Concurrency:: 超連結"http://msdn.microsoft.com/library/system.threading.tasks.task.whenall (v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)和[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函式可協助您撰寫多個工作來實作常見的模式。 本章節描述這些函式如何使用取消語彙基元。  
+ [Concurrency:: 超連結"http://msdn.microsoft.com/library/system.threading.tasks.task.whenall(v=VS.110).aspx"when_all](reference/concurrency-namespace-functions.md#when_all)和[concurrency:: when_any](reference/concurrency-namespace-functions.md#when_all)函式可協助您組合多個工作來實作常見的模式。 本章節描述這些函式如何使用取消語彙基元。  
   
  當您提供取消語彙基元給 `when_all` 和 `when_any` 函式時，只有在該取消語彙基元被取消，或是其中一個參與者工作在已取消的狀態下結束或擲回例外狀況時，該函式才會取消。  
   
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-###  <a name="cancel"></a>使用 cancel 方法來取消平行工作  
+###  <a name="cancel"></a> 使用 cancel 方法來取消平行工作  
 
  [Concurrency::task_group::cancel](reference/task-group-class.md#cancel)和[concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)方法設定為已取消狀態的工作群組。 在您呼叫 `cancel` 之後，工作群組不會啟動未來工作。 有多個子工作可以呼叫 `cancel` 方法。 已取消的工作將導致[task_group](reference/task-group-class.md#wait)和[concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)方法，以傳回[concurrency:: canceled](reference/concurrency-namespace-enums.md#task_group_status)。  
 
@@ -200,7 +195,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-###  <a name="exceptions"></a>使用例外狀況來取消平行工作  
+###  <a name="exceptions"></a> 使用例外狀況來取消平行工作  
  在取消平行工作樹狀結構時，使用取消語彙基元和 `cancel` 方法會比例外狀況處理更有效率。 取消語彙基元和 `cancel` 方法使用由上而下的方式取消工作以及任何子工作。 相反地，例外狀況處理則使用由下而上的方式執行，且必須在例外狀況往上傳播時個別取消每一個子工作群組。 本主題[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)說明並行執行階段如何使用例外狀況來傳達錯誤。 不過，並非所有例外狀況都表示發生錯誤。 比方說，搜尋演算法在找到結果時，可能會取消其相關聯的工作。 不過，如先前所述，例外狀況處理的效率會比使用 `cancel` 方法來取消平行工作來得低。  
   
 > [!CAUTION]
@@ -220,7 +215,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="algorithms"></a>取消平行演算法  
+##  <a name="algorithms"></a> 取消平行演算法  
  PPL 中的平行演算法 (例如 `parallel_for`) 是建置在工作群組上。 因此，您可以使用許多相同的技巧來取消平行演算法。  
   
  下列範例說明幾種取消平行演算法的方法。  
@@ -258,7 +253,7 @@ Caught 50
   
  [[靠上](#top)]  
   
-##  <a name="when"></a>不要使用取消的時機  
+##  <a name="when"></a> 不要使用取消的時機  
  當一群相關工作的每個成員都能及時結束時，使用取消是適當的。 不過，在某些情節中，取消可能不適合您的應用程式。 例如，因為工作取消是合作式的，所以如果任何個別的工作受阻，整體工作集便不會取消。 例如，如果一項工作尚未開始，但它會解除封鎖另一個使用中的工作，當工作群組取消時，它便不會開始。 這可能會導致應用程式中發生死結。 第二個可能不適合使用取消的範例是，當工作已取消，但其子工作會執行很重要的作業 (例如釋放資源) 時。 由於取消父工作時會取消整體的工作集，因此將不會執行該作業。 如需說明這點的範例，請參閱[了解如何取消和例外狀況處理物件解構的影響](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)平行模式程式庫 > 主題中的最佳作法 > 一節。  
   
  [[靠上](#top)]  

@@ -1,13 +1,10 @@
 ---
-title: "vprintf 函式 | Microsoft Docs"
-ms.custom: 
+title: vprintf 函式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110.dll
 - msvcr120.dll
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vprintf-functions"></a>vprintf 函式
 每個 `vprintf` 函式都會接受引數清單的指標，然後設定指定資料的格式，並將其寫入到特定目的地。 函式在執行參數驗證方面有所不同，取決於函式接受寬字元字串或單一位元組字元字串、輸出目的地，以及是否支援在參數所在格式字串中指定順序。  

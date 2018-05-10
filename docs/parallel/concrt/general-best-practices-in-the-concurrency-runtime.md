@@ -1,29 +1,24 @@
 ---
-title: "並行執行階段中的一般最佳作法 |Microsoft 文件"
-ms.custom: 
+title: 並行執行階段中的一般最佳作法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5c2c626ceb0243e91e56d70f0d8ae71208b157f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2cd9cffa76ce179f478422af9c8efce380a2465
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>並行執行階段中的一般最佳作法
 本文件說明套用到多個並行執行階段區域的最佳作法。  
@@ -45,12 +40,12 @@ ms.lasthandoff: 12/21/2017
   
 - [請勿使用共用的資料區段中的並行存取物件](#shared-data)  
   
-##  <a name="synchronization"></a>使用合作式同步處理建構盡可能  
+##  <a name="synchronization"></a> 使用合作式同步處理建構盡可能  
  並行執行階段提供許多並行安全建構不需要外部的同步處理物件。 例如， [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)類別會提供並行安全附加和項目存取作業。 不過，您需要獨佔存取資源的情況下，執行階段提供[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)， [concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)，和[並行:: 事件](../../parallel/concrt/reference/event-class.md)類別。 這些類型的行為以合作方式;因此，工作排程器可以重新配置到另一個內容的處理資源，因為第一個工作等候資料。 可能的話，請使用這些同步處理類型而不是其他同步處理機制，例如所提供的 Windows API 中，未以合作方式運作。 如需有關這些同步處理類型和程式碼範例的詳細資訊，請參閱[同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)和[比較同步處理資料結構與 Windows API](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)。  
   
  [[靠上](#top)]  
   
-##  <a name="yield"></a>避免長時間不會產生的工作  
+##  <a name="yield"></a> 避免長時間不會產生的工作  
  工作排程器的行為以合作方式，因為它不會提供在工作之間的公平性。 因此，工作可以防止其他工作啟動。 雖然這是可接受在某些情況下，在其他情況下，這會造成死結或耗盡。  
   
  下列範例會執行更多的工作已配置的處理資源的數目。 第一項工作不會產生工作排程器，因此第二個工作不會開始第一項工作完成為止。  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="oversubscription"></a>使用過度訂閱位移封鎖或有高延遲的作業  
+##  <a name="oversubscription"></a> 使用過度訂閱位移封鎖或有高延遲的作業  
  並行執行階段提供同步處理原始物件，例如[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)，可讓工作以合作方式封鎖和相讓彼此。 一項工作以合作方式封鎖或時，工作排程器可以重新配置到另一個內容的處理資源為第一個工作等候資料。  
   
  一些您無法使用並行執行階段所提供的合作式封鎖機制的情況。 例如，您所使用之外部程式庫可能會使用不同的同步處理機制。 另一個範例是當您執行的作業，可能會有大量的延遲時間，例如，當您使用 Windows API`ReadFile`函式可從網路連線讀取資料。 在這些情況下，過度訂閱可啟用另一項工作處於閒置狀態時執行其他工作。 過度訂閱可讓您建立比可用硬體執行緒數目更多的執行緒。  
@@ -99,7 +94,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="memory"></a>使用並行的記憶體管理函式時可能  
+##  <a name="memory"></a> 使用並行的記憶體管理函式時可能  
 
  使用記憶體管理函式， [concurrency:: alloc](reference/concurrency-namespace-functions.md#alloc)和[concurrency:: free](reference/concurrency-namespace-functions.md#free)，當您的精細工作經常配置存留期相當短的小型物件。 並行執行階段會保存不同的記憶體快取的每個執行中的執行緒。 `Alloc`和`Free`函式配置和釋放記憶體，從這些快取，而不使用鎖定或記憶體屏障。  
   
@@ -107,7 +102,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="raii"></a>使用 RAII 管理並行存取物件的存留期  
+##  <a name="raii"></a> 使用 RAII 管理並行存取物件的存留期  
  並行執行階段會使用例外狀況處理來實作功能，例如取消。 當您呼叫執行階段，或呼叫另一個執行階段所呼叫的程式庫，因此，撰寫例外狀況安全程式碼。  
   
  *資源擷取即初始化*(RAII) 模式是一種安全地管理在給定範圍內的並行存取物件的存留期的方式。 下 RAII 模式，是在堆疊上配置的資料結構。 該資料結構初始化或建立和終結或終結的資料結構時，釋放該資源時，取得資源。 RAII 模式可確保解構函式稱為封入範圍結束之前。 此模式時，函式包含多個`return`陳述式。 此模式也可協助您撰寫例外狀況安全程式碼。 當`throw`陳述式會導致堆疊回溯，解構函式就稱為 RAII 物件; 因此，一定會正確地刪除或釋放資源。  
@@ -138,7 +133,7 @@ Error details:
   
  [[靠上](#top)]  
   
-##  <a name="global-scope"></a>不在全域範圍建立並行物件  
+##  <a name="global-scope"></a> 不在全域範圍建立並行物件  
  當您在全域範圍建立並行物件時，可能會造成應用程式中發生像是死結或記憶體存取違規這類問題。  
   
  例如，當您建立並行執行階段物件時，執行階段會自動建立預設排程器 (如果尚未建立)。 於是在建構全域物件期間建立的執行階段物件會導致執行階段建立這種預設排程器。 不過，這個處理序會採用內部鎖定，而這可能會妨礙支援並行執行階段基礎結構的其他物件初始化。 另一個尚未初始化的基礎結構物件可能需要這個內部鎖定，所以可能造成應用程式中發生死結。  
@@ -151,12 +146,12 @@ Error details:
   
  [[靠上](#top)]  
   
-##  <a name="shared-data"></a>請勿使用共用的資料區段中的並行存取物件  
+##  <a name="shared-data"></a> 請勿使用共用的資料區段中的並行存取物件  
  並行執行階段不支援在共用的資料區段中，例如，資料的區段所建立的並行存取物件的使用[data_seg](../../preprocessor/data-seg.md) `#pragma`指示詞。 共用跨處理序界限的並行存取物件無法使執行階段處於不一致或不正確的狀態。  
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段最佳作法](../../parallel/concrt/concurrency-runtime-best-practices.md)   
  [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   

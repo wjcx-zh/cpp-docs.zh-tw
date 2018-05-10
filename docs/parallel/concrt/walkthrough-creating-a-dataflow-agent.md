@@ -1,30 +1,25 @@
 ---
-title: "逐步解說： 建立資料流程代理程式 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建立資料流程代理程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>逐步解說：建立資料流程代理程式
 本文件將示範如何建立資料流程，而不是控制流程為基礎的代理程式型應用程式。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 - [建立訊息記錄的代理程式](#logging)  
   
-##  <a name="control-flow"></a>建立基本的控制流程的代理程式  
+##  <a name="control-flow"></a> 建立基本的控制流程的代理程式  
  請考慮下列範例會定義`control_flow_agent`類別。 `control_flow_agent`類別會在三個訊息的緩衝區上： 其中一個輸入緩衝區和兩個輸出緩衝區。 `run`方法在迴圈中的來源訊息緩衝區所讀取，並使用條件式的陳述式來直接控制程式執行流程。 代理程式遞增一個為非零，負值的計數器，而遞增的非零的正整數值的另一個計數器。 代理程式會收到零 sentinel 值之後，它會傳送至輸出訊息緩衝區之計數器的值。 `negatives`和`positives`方法可讓應用程式從代理程式讀取及負數值的計數。  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="dataflow"></a>建立基本的資料流程代理程式  
+##  <a name="dataflow"></a> 建立基本的資料流程代理程式  
  本節示範如何將轉換`control_flow_agent`類別來使用此資料流程模型以執行相同的工作。  
   
  資料流程代理程式的運作方式是建立的網路訊息的緩衝區，其中每一個都有特定的用途。 特定訊息區塊接受或拒絕訊息，以根據其裝載使用篩選函數。 篩選函數可確保該訊息區塊只接收特定值。  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[靠上](#top)]  
   
-##  <a name="logging"></a>建立訊息記錄的代理程式  
+##  <a name="logging"></a> 建立訊息記錄的代理程式  
  下列範例所示`log_agent`類別，類似於`dataflow_agent`類別。 `log_agent`類別會實作寫入記錄訊息，到檔案，在主控台的非同步記錄代理程式。 `log_agent`類別可讓應用程式分類為告知性訊息、 警告或錯誤。 它也可讓應用程式指定每個記錄檔類別目錄是否寫入至檔案、 主控台中，或兩者。 這個範例會將所有檔案的記錄訊息和只有錯誤訊息寫入主控台。  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  
@@ -157,6 +152,6 @@ info: ===Logging finished.===
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
 

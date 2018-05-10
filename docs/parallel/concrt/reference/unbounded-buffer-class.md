@@ -1,12 +1,9 @@
 ---
-title: "unbounded_buffer 類別 |Microsoft 文件"
-ms.custom: 
+title: unbounded_buffer 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - unbounded_buffer
@@ -28,17 +25,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de5b268ca3f962461ecc7e64159efeeb56414ebe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 `unbounded_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠存放無限個訊息。  
   
@@ -348,7 +343,7 @@ unbounded_buffer(
   
  型別`filter_method`是函式簽章`bool (_Type const &)`由此叫用`unbounded_buffer`傳訊區塊，以判斷它是否應該接受提供的訊息。  
   
-##  <a name="dtor"></a> ~unbounded_buffer 
+##  <a name="dtor"></a> ~ unbounded_buffer 
 
  終結`unbounded_buffer`傳訊區塊。  
   
@@ -356,7 +351,7 @@ unbounded_buffer(
 ~unbounded_buffer();  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [overwrite_buffer 類別](overwrite-buffer-class.md)   
  [single_assignment 類別](single-assignment-class.md)

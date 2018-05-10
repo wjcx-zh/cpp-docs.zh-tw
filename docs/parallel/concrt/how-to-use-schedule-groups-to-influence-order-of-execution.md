@@ -1,30 +1,25 @@
 ---
-title: "如何： 使用排程群組來影響執行順序 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用排程群組來影響執行順序 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb37c1c14a9d09230bfa5d4fdce1da5eddfb4f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c41617f562a0abefdecf74d52e7a886ad6326f9e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>如何：使用排程群組來影響執行順序
 並行執行階段，工作都會排定的順序不具決定性。 不過，您可以使用排程的原則來影響執行工作順序。 本主題示範如何使用排程群組，並搭配[concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey)排程器原則來影響執行工作順序。  
@@ -120,7 +115,7 @@ group 1,
   
  **cl.exe /EHsc 排程-protocol.cpp**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [排程群組](../../parallel/concrt/schedule-groups.md)   
  [非同步代理程式](../../parallel/concrt/asynchronous-agents.md)
 

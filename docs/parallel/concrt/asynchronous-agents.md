@@ -1,36 +1,31 @@
 ---
-title: "非同步代理程式 |Microsoft 文件"
-ms.custom: 
+title: 非同步代理程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4ce3240041987a79657c7e8bf296f9e89acb7a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8649ebe0451e4352b27989563a1a0918afcb5a01
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents"></a>非同步代理程式
 *非同步代理程式*(或簡稱*代理程式*) 是以非同步方式運作，以檢視可解決較大型的運算工作的其他代理程式的應用程式元件。 代理程式視為已設定的生命週期的工作。 例如，一個代理程式可能會讀取輸入/輸出裝置 （例如鍵盤、 在磁碟上，檔案或網路連線） 和另一個代理程式的資料可能會執行動作在該資料上成為可用。 第一個代理程式通知的第二個代理程式詳細資料可用於訊息傳遞。 並行執行階段工作排程器提供有效率的機制，若要啟用代理程式，以封鎖和相讓合作方式而不需要比較沒有效率的先佔。  
   
 
- 代理程式程式庫定義[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)類別來代表非同步代理程式。 `agent`是一種抽象類別，宣告虛擬方法[concurrency::agent::run](reference/agent-class.md#run)。 `run`方法執行代理程式所執行的工作。 因為`run`是抽象的您必須實作這個方法中的每個類別衍生自`agent`。  
+ 代理程式程式庫定義[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)類別來代表非同步代理程式。 `agent` 是一種抽象類別，宣告虛擬方法[concurrency::agent::run](reference/agent-class.md#run)。 `run`方法執行代理程式所執行的工作。 因為`run`是抽象的您必須實作這個方法中的每個類別衍生自`agent`。  
   
 ## <a name="agent-life-cycle"></a>代理程式的生命週期  
  代理程式已設定的生命週期。 [Concurrency:: agent_status](reference/concurrency-namespace-enums.md#agent_status)列舉會定義代理程式的各個狀態。 下圖是顯示說明代理程式的進度從某個狀態到另一個狀態圖表。 在此圖中，實線代表您應用程式; 從呼叫的方法虛線代表從執行階段呼叫的方法。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 |`agent_done`|代理程式已完成。|  
 |`agent_canceled`|代理程式已取消之前進入`started`狀態。|  
   
- `agent_created`是代理程式的初始狀態`agent_runnable`和`agent_started`是作用中狀態，和`agent_done`和`agent_canceled`是終端機的狀態。  
+ `agent_created` 是代理程式的初始狀態`agent_runnable`和`agent_started`是作用中狀態，和`agent_done`和`agent_canceled`是終端機的狀態。  
   
  使用[concurrency::agent::status](reference/agent-class.md#status)方法來擷取目前的狀態`agent`物件。 雖然`status`方法是並行安全，因此代理程式的狀態可以變更的時間`status`方法會傳回。 例如，代理程式可能在`agent_started`狀態，當您呼叫`status`方法，但會移至`agent_done`後方狀態`status`方法會傳回。  
 
@@ -73,6 +68,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example"></a>範例  
  如需示範如何建立基本的代理程式型應用程式的範例，請參閱[逐步解說： 建立代理程式為基礎的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)
 

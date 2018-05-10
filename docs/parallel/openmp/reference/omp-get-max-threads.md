@@ -1,12 +1,9 @@
 ---
-title: "omp_get_max_threads |Microsoft 文件"
-ms.custom: 
+title: omp_get_max_threads |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - omp_get_max_threads
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - omp_get_max_threads OpenMP function
 ms.assetid: f47c3725-3e40-469f-8bc8-a1e47f264cc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3caf2054cee2092ab55a4a65160b4621c3b597d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 303e037d3fbeaf1958918c2ac78346bdcf01cf2a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ompgetmaxthreads"></a>omp_get_max_threads
 傳回一個整數，等於或大於此數目，就可以使用，如果沒有在平行區域的執行緒數目[num_threads](../../../parallel/openmp/reference/num-threads.md)在該點定義在程式碼中。  
@@ -77,5 +72,5 @@ int main( )
 8  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式](../../../parallel/openmp/reference/openmp-functions.md)

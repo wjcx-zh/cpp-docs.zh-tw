@@ -1,12 +1,9 @@
 ---
-title: "inline_recursion |Microsoft 文件"
-ms.custom: 
+title: inline_recursion |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - inline_recursion_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, inline_recursion
 - inline_recursion pragma
 ms.assetid: cfef5791-63b7-45ac-9574-623747b9b9c9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f3e4ef784d2fcb9ec076d9f8a7c87ffee1d5800
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f81347c8286dfa1f0651af43bd3134565a22aade
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="inlinerecursion"></a>inline_recursion
 控制直接或相互遞迴函式呼叫的內嵌展開。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/23/2018
   
  `inline_recursion` pragma 控制遞迴函式的展開方式。 如果 `inline_recursion` 已關閉，且內嵌函式呼叫其本身 (直接或間接)，則該函式只會展開一次。 如果`inline_recursion`函式會展開多次，直到達到設定的值為 on， [inline_depth](../preprocessor/inline-depth.md) pragma，遞迴函式所定義的預設值`inline_depth`pragma 或容量限制.  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
  [inline_depth](../preprocessor/inline-depth.md)   
  [/Ob (內嵌函式展開)](../build/reference/ob-inline-function-expansion.md)

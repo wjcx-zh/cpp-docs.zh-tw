@@ -1,29 +1,24 @@
 ---
-title: "Concurrency:: graphics 命名空間 |Microsoft 文件"
-ms.custom: 
+title: 'Concurrency:: graphics 命名空間 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 dev_langs:
 - C++
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0469406d4a4efa4b7241c5561bbfb20e1d08a710
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2da450ca30ee780f0e493f0b120de33a939a4cd7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空間
 圖形命名空間提供型別和函式針對圖形程式設計所設計。  
@@ -53,7 +48,7 @@ namespace graphics;
 |名稱|描述|  
 |----------|-----------------|  
 |[address_mode 列舉](concurrency-graphics-namespace-enums.md#address_mode)。|指定位址模式支援紋理取樣。|  
-|[filter_mode Enumeration](concurrency-graphics-namespace-enums.md#filter_mode)|指定支援紋理取樣的篩選模式。|  
+|[filter_mode 列舉](concurrency-graphics-namespace-enums.md#filter_mode)|指定支援紋理取樣的篩選模式。|  
   
 ### <a name="classes"></a>類別  
   
@@ -96,5 +91,5 @@ namespace graphics;
   
  **命名空間：** 並行  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

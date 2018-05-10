@@ -1,12 +1,9 @@
 ---
-title: "threadprivate |Microsoft 文件"
-ms.custom: 
+title: threadprivate |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - threadprivate
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 3515aaed-6f9d-4d59-85eb-342378bea2d3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55a50d2387662fe42c04d61a8e98153aad95c835
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e7e7edaa36f929750087e3c81f42204ff20e9f62
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="threadprivate"></a>threadprivate
 指定在執行緒私用變數。  
@@ -47,13 +42,13 @@ ms.lasthandoff: 02/23/2018
   
  如需詳細資訊，請參閱[2.7.1 threadprivate 指示詞](../../../parallel/openmp/2-7-1-threadprivate-directive.md)。  
   
- `threadprivate`指示詞根據[執行緒](../../../cpp/thread.md)`__declspec`屬性; 限制**__declspec （thread)**套用至`threadprivate`。  
+ `threadprivate`指示詞根據[執行緒](../../../cpp/thread.md)`__declspec`屬性; 限制 **__declspec （thread)** 套用至`threadprivate`。  
   
  您無法使用`threadprivate`中任何會透過載入的 DLL [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)。  這包括已用載入的 Dll [/DELAYLOAD （延遲載入匯入）](../../../build/reference/delayload-delay-load-import.md)，這也會使用**LoadLibrary**。  
   
  您可以使用`threadprivate`在處理序啟動時以靜態方式載入的 DLL 中。  
   
- 因為`threadprivate`根據**__declspec （thread)**、`threadprivate`變數會存在於任何啟動程序，不只是由在平行區域產生的執行緒小組的一部分的執行緒的執行緒。  這是要留意，因為您可能會注意到，例如，建構函式的實作詳細資料`threadprivate`呼叫通常則預期更多的使用者定義型別。  
+ 因為`threadprivate`根據 **__declspec （thread)**、`threadprivate`變數會存在於任何啟動程序，不只是由在平行區域產生的執行緒小組的一部分的執行緒的執行緒。  這是要留意，因為您可能會注意到，例如，建構函式的實作詳細資料`threadprivate`呼叫通常則預期更多的使用者定義型別。  
   
  A `threadprivate` destructable 類型的變數不能保證具有呼叫其解構函式。  例如:   
   
@@ -77,5 +72,5 @@ int main()
 ## <a name="example"></a>範例  
  如需使用範例`threadprivate`，請參閱[私人](../../../parallel/openmp/reference/private-openmp.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

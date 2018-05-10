@@ -1,12 +1,9 @@
 ---
-title: "tiled_index 類別 |Microsoft 文件"
-ms.custom: 
+title: tiled_index 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index 類別
 提供的索引[tiled_extent](tiled-extent-class.md)物件。 此類別具有存取項目相對於本機的並排顯示來源和相對於來源通用的屬性。 如需並排顯示空間的詳細資訊，請參閱[使用磚](../../../parallel/amp/using-tiles.md)。  
@@ -99,13 +94,13 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |[barrier 常數](#tiled_index__barrier)|存放區[tile_barrier](tile-barrier-class.md)物件，代表目前執行緒的磚中的一條界線。|  
 |||  
 |[全域常數](#tiled_index__global)|存放區[索引](index-class.md)陣序規範 1、 2 或 3 表示全域索引中的物件[方格](http://msdn.microsoft.com/en-us/f7d1b6a6-586c-4345-b09a-bfc26c492cb0)物件。|  
-|[local Constant](#tiled_index__local)|存放區`index`物件中目前的圖格的陣序規範 1、 2 或 3，表示相對於索引[tiled_extent](tiled-extent-class.md)物件。|  
+|[local 常數](#tiled_index__local)|存放區`index`物件中目前的圖格的陣序規範 1、 2 或 3，表示相對於索引[tiled_extent](tiled-extent-class.md)物件。|  
 |[rank 常數](#tiled_index__rank)|儲存的陣序`tiled_index`物件。|  
 |[tile 常數](#tiled_index__tile)|存放區`index`陣序規範 1、 2 或 3，表示目前的圖格的座標的物件`tiled_extent`物件。|  
-|[tile_dim0 Constant](#tiled_index__tile_dim0)|會儲存最重要的維度的長度。|  
-|[tile_dim1 Constant](#tiled_index__tile_dim1)|儲存下一步 以最重要維度的長度。|  
-|[tile_dim2 Constant](#tiled_index__tile_dim2)|會儲存最小顯著性維度的長度。|  
-|[tile_origin Constant](#tiled_index__tile_origin)|存放區`index`物件中目前的圖格原點的陣序規範 1、 2 或 3 表示全域座標`tiled_extent`物件。|  
+|[tile_dim0 常數](#tiled_index__tile_dim0)|會儲存最重要的維度的長度。|  
+|[tile_dim1 常數](#tiled_index__tile_dim1)|儲存下一步 以最重要維度的長度。|  
+|[tile_dim2 常數](#tiled_index__tile_dim2)|會儲存最小顯著性維度的長度。|  
+|[tile_origin 常數](#tiled_index__tile_origin)|存放區`index`物件中目前的圖格原點的陣序規範 1、 2 或 3 表示全域座標`tiled_extent`物件。|  
 
   
 ### <a name="public-data-members"></a>公用資料成員  
@@ -270,5 +265,5 @@ const index<rank> tile_origin
 __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

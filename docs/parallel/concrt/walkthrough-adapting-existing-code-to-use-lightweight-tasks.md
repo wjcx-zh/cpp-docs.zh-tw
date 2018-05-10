@@ -1,30 +1,25 @@
 ---
-title: "逐步解說： 改寫現有程式碼以使用輕量型工作 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 改寫現有程式碼以使用輕量型工作 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a50ad04421d7b4bcdc4a2c98de8f5a57b255c75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4fe3bb4b576bd1f9160b4a3cdc3142be5cdff05
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>逐步解說：改寫現有程式碼以使用輕量型工作
 本主題說明如何調整現有程式碼使用 Windows API 來建立和執行使用輕量型工作的執行緒。  
@@ -101,6 +96,6 @@ Parameters = 50, 100
   
 ### <a name="comments"></a>註解  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [Scheduler 類別](../../parallel/concrt/reference/scheduler-class.md)

@@ -1,12 +1,9 @@
 ---
-title: "no_registry |Microsoft 文件"
-ms.custom: 
+title: no_registry |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - no_registry
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - no_registry attribute
 ms.assetid: d30de4e2-551c-428c-98fd-951330d578d3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccf747db26f6d34a34b9118c9de9a74203787adb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 416663592f4362c110637fb4d4b4b418d9776cde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="noregistry"></a>no_registry
 `no_registry` 會告知編譯器不要搜尋以 `#import` 匯入之類型程式庫的登錄。  
@@ -50,6 +45,6 @@ ms.lasthandoff: 02/23/2018
   
  `no_registry` 如果您想要匯入交互參考的類型程式庫，而不會在登錄中尋找檔案的較舊版本的編譯器，相當實用。  `no_registry` 也很有用，如果尚未註冊類型程式庫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
  [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

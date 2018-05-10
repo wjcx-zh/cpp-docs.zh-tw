@@ -1,12 +1,9 @@
 ---
-title: "主要 |Microsoft 文件"
-ms.custom: 
+title: 主要 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - master
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - master OpenMP directive
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 726848412dbfc1fde515af64edf1db9f85b8d988
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: df1cb8daf83f456c551f5b47646dce640e21c804
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="master"></a>主要
 指定只有主要 threadshould 執行的程式 > 一節。  
@@ -89,5 +84,5 @@ a[3] = 9
 a[4] = 16  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

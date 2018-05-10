@@ -1,30 +1,25 @@
 ---
-title: "如何： 使用 Alloc 和 Free 改善記憶體效能 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用 Alloc 和 Free 改善記憶體效能 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 984e39cbec3016a3baa747cfa382220a04db1bbb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0be6fa309975663126331a7e38be0f2bea7dcf17
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>如何：使用 Alloc 和 Free 改善記憶體效能
 
@@ -68,7 +63,7 @@ Took 656 ms with Alloc/Free.
   
  **cl.exe /EHsc allocators.cpp**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [記憶體管理函式](../../parallel/concrt/memory-management-functions.md)   
  [Alloc 函式](reference/concurrency-namespace-functions.md#alloc)   
  [Free 函式](reference/concurrency-namespace-functions.md#free)

@@ -1,12 +1,9 @@
 ---
-title: "check_stack |Microsoft 文件"
-ms.custom: 
+title: check_stack |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.check_stack
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70f88d1eabb58f384d754803674b35f0bd9dbeda
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b393030961aa4695a16a9b50d49d0cae64cc4e0c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="checkstack"></a>check_stack
-指示編譯器關閉堆疊探查，如果**關閉**(或 **-** ) 指定，或開啟堆疊探查，如果**上**(或 **+** ) 指定。  
+指示編譯器關閉堆疊探查，如果**關閉**(或**-**) 指定，或開啟堆疊探查，如果**上**(或**+**) 指定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,16 +39,16 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>備註  
  如果未指定引數，根據預設值處理堆疊探查。 這個 pragma 會在顯示該 pragma 後在定義的第一個函式生效。 堆疊探查不是巨集，也不是產生內嵌的函式。  
   
- 如果您不指定的引數**check_stack** pragma，堆疊檢查會還原成在命令列上指定的行為。 如需詳細資訊，請參閱[編譯器參考](../build/reference/compiler-options.md)。 之間的互動**#pragma check_stack**和[/Gs](../build/reference/gs-control-stack-checking-calls.md)下表摘要說明選項。  
+ 如果您不指定的引數**check_stack** pragma，堆疊檢查會還原成在命令列上指定的行為。 如需詳細資訊，請參閱[編譯器參考](../build/reference/compiler-options.md)。 之間的互動 **#pragma check_stack**和[/Gs](../build/reference/gs-control-stack-checking-calls.md)下表摘要說明選項。  
   
 ### <a name="using-the-checkstack-pragma"></a>使用 check_stack pragma  
   
 |語法|使用<br /><br /> /Gs 選項編譯？|動作|  
 |------------|------------------------------------|------------|  
-|**#pragma check_stack( )** or<br /><br /> **#pragma check_stack**|[是]|關閉後續函式的堆疊檢查|  
-|**#pragma check_stack( )** or<br /><br /> **#pragma check_stack**|否|開啟後續函式的堆疊檢查|  
-|**#pragma check_stack(on)**<br /><br /> 或**#pragma check_stack +**|是或否|開啟後續函式的堆疊檢查|  
-|**#pragma check_stack(off)**<br /><br /> 或**#pragma check_stack-**|是或否|關閉後續函式的堆疊檢查|  
+|**#pragma check_stack （)** 或<br /><br /> **#pragma check_stack**|[是]|關閉後續函式的堆疊檢查|  
+|**#pragma check_stack （)** 或<br /><br /> **#pragma check_stack**|否|開啟後續函式的堆疊檢查|  
+|**#pragma check_stack(on)**<br /><br /> 或 **#pragma check_stack +**|是或否|開啟後續函式的堆疊檢查|  
+|**#pragma check_stack(off)**<br /><br /> 或 **#pragma check_stack-**|是或否|關閉後續函式的堆疊檢查|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

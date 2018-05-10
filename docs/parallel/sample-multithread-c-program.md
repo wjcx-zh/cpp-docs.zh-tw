@@ -1,27 +1,22 @@
 ---
-title: "範例 多執行緒 C 程式 |Microsoft 文件"
-ms.custom: 
+title: 範例 多執行緒 C 程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sample-multithread-c-program"></a>多執行緒 C 程式範例
 Bounce.c 是一個多執行緒程式範例，建立新執行緒的每個時間字母或**A**型別。 每個執行緒退笑臉，在螢幕的不同色彩。 最多 32 個執行緒可以建立。 程式的正常終止，就會發生時`q`或**Q**型別。 編譯和連結 Bounce.c 的相關資訊，請參閱[編譯和連結多執行緒程式](../parallel/compiling-and-linking-multithread-programs.md)。  
@@ -222,5 +217,5 @@ a
 q  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)

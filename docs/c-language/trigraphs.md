@@ -1,13 +1,10 @@
 ---
-title: "三併詞 | Microsoft Docs"
-ms.custom: 
+title: 三併詞 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d96088102cafe1b3bbdb7222cec33fc313774f41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3c83fc3feecc1b79f28c1b00b94469d30b93d8b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trigraphs"></a>三併詞
 來源字元集 C 原始程式內含在 7 位元的 ASCII 字元集中，但是它是 ISO 646-1983 Invariant Code Set 的超集。 三併詞序列允許 C 程式只使用 ISO (國際標準組織) Invariant Code Set 撰寫。 三併詞是三個字元的序列 (由兩個連續的問號引入)，編譯器會以其對應的標點符號字元取代該序列。 如果 C 原始程式檔所用的字元集不含某些標點符號字元的方便圖形表示，您可改為使用三併詞。  

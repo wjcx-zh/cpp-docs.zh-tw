@@ -1,10 +1,7 @@
 ---
-title: "Concurrency:: precise_math 命名空間函式 |Microsoft 文件"
-ms.custom: 
+title: 'Concurrency:: precise_math 命名空間函式 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 命名空間函式
 ||||  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>參數  
  `exponent`  
- 指數詞彙 *n* 的數學運算式`e` <sup> n </sup>，其中`e`是自然對數的基底。  
+ 指數詞彙*n*的數學運算式`e` <sup>n</sup>，其中`e`是自然對數的基底。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數以 e 為底數的指數，減 1。  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>參數  
  `exponent`  
- 指數詞彙 *n* 的數學運算式`e` <sup> n </sup>，其中`e`是自然對數的基底。  
+ 指數詞彙*n*的數學運算式`e` <sup>n</sup>，其中`e`是自然對數的基底。  
   
 ### <a name="return-value"></a>傳回值  
  傳回引數以 e 為底數的指數，減 1。  
@@ -1076,7 +1071,7 @@ inline double fmod(
  第二個浮點引數。  
   
 ### <a name="return-value"></a>傳回值  
- 其餘部分`_X`除以`_Y`; 也就是值`_X`  -  `_Y`  *n* ，其中 *n* 是整數，範圍`_X`  -  `_Y`  *n* 小於幅度`_Y`。  
+ 其餘部分`_X`除以`_Y`; 也就是值`_X`  -  `_Y` *n*，其中*n*是一個整數，範圍`_X`  -  `_Y` *n*小於幅度`_Y`。  
   
 ##  <a name="fmodf"></a>  fmodf  
  計算第一個指定的引數除以第二個指定的引數的其餘部分。  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  第二個浮點引數。  
   
 ### <a name="return-value"></a>傳回值  
- 其餘部分`_X`除以`_Y`; 也就是值`_X`  -  `_Y`  *n* ，其中 *n* 是整數，範圍`_X`  -  `_Y`  *n* 小於幅度`_Y`。  
+ 其餘部分`_X`除以`_Y`; 也就是值`_X`  -  `_Y` *n*，其中*n*是一個整數，範圍`_X`  -  `_Y` *n*小於幅度`_Y`。  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  將分類的引數值，為 NaN、 無限，normal subnormal，零  
@@ -1914,7 +1909,7 @@ inline float remquof(
 ### <a name="return-value"></a>傳回值  
  傳回的其餘部分`_X`除以`_Y`。  
   
-##  <a name="round"></a>  round  
+##  <a name="round"></a>  圓形  
  四捨五入為最接近整數 _X  
   
 ```  
@@ -2418,5 +2413,5 @@ inline float truncf(float _X) restrict(amp);
 ### <a name="return-value"></a>傳回值  
  傳回引數的整數部分  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency::precise_math 命名空間](concurrency-precise-math-namespace.md)

@@ -1,30 +1,25 @@
 ---
-title: "如何： 指定特定排程器原則 |Microsoft 文件"
-ms.custom: 
+title: 如何： 指定特定排程器原則 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af30b38a89eb7e4b50c7d31be2d3ba6572843b1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 988540c19ab94e841e274637b581f0ce8031df13
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>如何：指定特定排程器原則
 排程器原則可讓您控制的排程器在管理工作時使用的策略。 本主題示範如何使用排程器原則，來增加列印進度指示器，以在主控台工作的執行緒優先權。  
@@ -60,7 +55,7 @@ Scheduler that has a custom policy:
   
  **cl.exe /EHsc 排程器 policy.cpp**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [排程器原則](../../parallel/concrt/scheduler-policies.md)   
  [如何： 管理排程器執行個體](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)   
  [如何：建立使用特定排程器原則的代理程式](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)

@@ -1,25 +1,20 @@
 ---
-title: "Concurrency 命名空間運算子 (AMP) |Microsoft 文件"
-ms.custom: 
+title: Concurrency 命名空間運算子 (AMP) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 308c09af9989aa998a7e1f7d748f52a2d8dca391
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8d3bb77599fc81fa29f2c8155a6fd491ed2d639c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 命名空間運算子 (AMP)
 ||||  
@@ -278,5 +273,5 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="return-value"></a>傳回值  
  第一個指定的引數模數第二個指定的引數的結果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間 ](concurrency-namespace-cpp-amp.md)

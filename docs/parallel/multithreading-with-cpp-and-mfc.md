@@ -1,13 +1,10 @@
 ---
-title: "多執行緒 c + + 和 MFC |Microsoft 文件"
-ms.custom: 
+title: 多執行緒 c + + 和 MFC |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d076865cd83837e2de218ad0189c037c78cd83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 778602a0e9236ad8cc788d8a2306e8f2d143ec49
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-with-c-and-mfc"></a>使用 C++ 和 MFC 進行多執行緒處理
 Microsoft Foundation Class (MFC) 程式庫提供支援多執行緒應用程式。 本主題描述處理程序和執行緒，以及 MFC 方法多執行緒。  
@@ -43,7 +38,7 @@ Microsoft Foundation Class (MFC) 程式庫提供支援多執行緒應用程式�
   
  如果您想要您可以在應用程式中建立額外的執行緒。 您可能想要這樣做時不想讓使用者等候它們完成處理背景或維護工作。 MFC 應用程式中的所有執行緒都都由[CWinThread](../mfc/reference/cwinthread-class.md)物件。 在大部分情況下，您甚至不必明確建立這些物件。請改呼叫 framework helper 函式[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)，它會建立`CWinThread`為您的物件。  
   
- MFC 可區別兩種執行緒： 使用者介面執行緒和背景工作執行緒。 使用者介面執行緒通常用來處理使用者輸入，並回應事件和使用者所產生的訊息。 背景工作執行緒通常用來完成工作，重新計算，例如，不需要使用者輸入。 Win32 應用程式開發介面不會區分的執行緒; 類型您只需要知道在執行緒的起始位址，讓它可以開始執行執行緒。 MFC 處理使用者介面執行緒，特別是藉由提供使用者介面中的事件訊息幫浦。 `CWinApp`是使用者介面執行緒物件的範例，因為其衍生自`CWinThread`以及處理事件和使用者所產生的訊息。  
+ MFC 可區別兩種執行緒： 使用者介面執行緒和背景工作執行緒。 使用者介面執行緒通常用來處理使用者輸入，並回應事件和使用者所產生的訊息。 背景工作執行緒通常用來完成工作，重新計算，例如，不需要使用者輸入。 Win32 應用程式開發介面不會區分的執行緒; 類型您只需要知道在執行緒的起始位址，讓它可以開始執行執行緒。 MFC 處理使用者介面執行緒，特別是藉由提供使用者介面中的事件訊息幫浦。 `CWinApp` 是使用者介面執行緒物件的範例，因為其衍生自`CWinThread`以及處理事件和使用者所產生的訊息。  
   
  其中一個以上的執行緒可能會需要存取相同物件的情況下應該授予特別注意。 [多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)說明技巧，您可以使用來避開在這些情況下可能發生的問題。 [多執行緒： 如何使用同步類別](../parallel/multithreading-how-to-use-the-synchronization-classes.md)描述如何使用類別，可用來同步處理多個執行緒的單一物件的存取。  
   
@@ -65,5 +60,5 @@ Microsoft Foundation Class (MFC) 程式庫提供支援多執行緒應用程式�
   
 -   [多執行緒：何時使用同步類別](../parallel/multithreading-when-to-use-the-synchronization-classes.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [舊版程式碼的多執行緒支援 (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

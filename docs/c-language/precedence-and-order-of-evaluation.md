@@ -1,13 +1,10 @@
 ---
-title: "優先順序和評估順序 | Microsoft Docs"
-ms.custom: 
+title: 優先順序和評估順序 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 84c3ec69c936605729f6813f28450ee1194951c7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>優先順序和評估順序
 C 運算子的優先順序和順序關聯性會影響運算式中運算元的群組和求值。 有其他優先順序更高或更低的運算子存在時，運算子的優先順序才有意義。 具有較高優先順序運算子的運算式會先進行求值。 優先順序也可以用「繫結」(Binding) 這個詞描述。 具有較高優先順序的運算子可視為具有更緊密的繫結。  
@@ -58,7 +53,7 @@ C 運算子的優先順序和順序關聯性會影響運算式中運算元的群
   
  2. 所有簡單和複合指派運算子都具有相同的優先順序。  
   
- 運算式可以包含數個具有相同優先順序的運算子。 若有數個這類運算子出現在運算式中的相同層級上，則會根據運算子的順序關聯性由右至左或由左至右求值。 求值的方向不會影響相同層級上包含多個乘法 (**\***)、加法 (**+**) 或二進位位元 (**& &#124; ^***) 運算子的運算式結果。 運算的順序不是由語言所定義。 如果編譯器能夠保證結果一致，則可以依任意順序求出這類運算式的值。  
+ 運算式可以包含數個具有相同優先順序的運算子。 若有數個這類運算子出現在運算式中的相同層級上，則會根據運算子的順序關聯性由右至左或由左至右求值。 求值的方向不會影響相同層級上包含多個乘法 (**\***)、加法 (**+**) 或二進位位元 (**& &#124; ^**) 運算子的運算式結果。 運算的順序不是由語言所定義。 如果編譯器能夠保證結果一致，則可以依任意順序求出這類運算式的值。  
   
  只有循序求值 (**,**), logical-AND (**&&**), logical-OR (`||`), conditional-expression (**? :**) 和函式呼叫運算子才會構成序列點，因此可確保其運算元依照特定的循序求值。 函式呼叫運算子是接在函式識別項後面的一組括號。 循序求值運算子 (**,**) 一定會由左至右求出運算元的值。 (請注意，函式呼叫中的逗號運算子與循序求值運算子並不相同，也不會提供這類保證)。如需詳細資訊，請參閱[序列點](../c-language/c-sequence-points.md)。  
   
@@ -94,5 +89,5 @@ C 運算子的優先順序和順序關聯性會影響運算式中運算元的群
   
 `( p == 0 ) ? ( p += 1 ) : ( p += 2 )`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 運算子](../c-language/c-operators.md)

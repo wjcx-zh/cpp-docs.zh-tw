@@ -1,30 +1,25 @@
 ---
-title: "非同步代理程式程式庫 |Microsoft 文件"
-ms.custom: 
+title: 非同步代理程式程式庫 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be12f47a6fb33350137a8f9b1c78ff75519c8af7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8bb1ce7a0c449d5c09e49ad16435e7732ddfcc1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-agents-library"></a>非同步代理程式程式庫
 非同步代理程式程式庫 (或簡稱*代理程式程式庫*) 提供可讓您增加啟用並行的應用程式開發之穩定性的程式設計模型。 代理程式程式庫是 c + + 樣板程式庫可提升行動為基礎的程式設計模型和同處理序訊息傳遞，以進行粗略的資料流程和管線工作。 代理程式程式庫為基礎的並行執行階段的排程及資源管理元件。  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  代理程式程式庫由三個元件所組成：*非同步代理程式*，*非同步訊息區*，和*訊息傳遞函式*。 代理程式維護狀態，並使用訊息區和訊息傳遞函式來與另一個及外部元件進行通訊。 訊息傳遞函式可讓代理程式，以傳送和接收訊息的外部元件。 非同步訊息區保留訊息，並啟用代理程式通訊以同步方式。  
   
- 下圖顯示如何在兩個代理程式使用訊息區和訊息傳遞函式來進行通訊。 在此圖中，`agent1`傳送訊息給`agent2`使用[concurrency:: send](reference/concurrency-namespace-functions.md#send)函式和[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)物件。 `agent2`使用[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函式來讀取訊息。 `agent2`會使用相同的方法來傳送訊息至`agent1`。 虛線的箭頭表示代理程式之間的資料流程。 實心箭號，而且寫入或讀取的訊息區塊連接代理程式。  
+ 下圖顯示如何在兩個代理程式使用訊息區和訊息傳遞函式來進行通訊。 在此圖中，`agent1`傳送訊息給`agent2`使用[concurrency:: send](reference/concurrency-namespace-functions.md#send)函式和[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)物件。 `agent2` 使用[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函式來讀取訊息。 `agent2` 會使用相同的方法來傳送訊息至`agent1`。 虛線的箭頭表示代理程式之間的資料流程。 實心箭號，而且寫入或讀取的訊息區塊連接代理程式。  
   
  ![代理程式程式庫的元件](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")  
   

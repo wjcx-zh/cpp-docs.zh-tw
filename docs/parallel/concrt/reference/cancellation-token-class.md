@@ -1,12 +1,9 @@
 ---
-title: "cancellation_token 類別 |Microsoft 文件"
-ms.custom: 
+title: cancellation_token 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5d8741763295e96f3d0c221b687c8ef62fbfc55c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 類別
 `cancellation_token` 類別表示可判斷某個作業是否已要求取消的能力。 特定語彙基元可以與 `task_group`、`structured_task_group` 或 `task` 產生關聯，來提供隱含取消作業。 如果與相關聯的 `cancellation_token_source` 已取消，也可以向它輪詢取消，或為它註冊回呼。  
@@ -50,7 +45,7 @@ class cancellation_token;
 |名稱|描述|  
 |----------|-----------------|  
 |[cancellation_token](#ctor)||  
-|[~cancellation_token Destructor](#dtor)||  
+|[~ cancellation_token 解構函式](#dtor)||  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -78,7 +73,7 @@ class cancellation_token;
   
  **命名空間：** concurrency  
   
-##  <a name="dtor"></a> ~cancellation_token 
+##  <a name="dtor"></a> ~ cancellation_token 
 
 ```
 ~cancellation_token();
@@ -164,7 +159,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 運算子 = = 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -194,5 +189,5 @@ template<typename _Function>
 ### <a name="return-value"></a>傳回值  
  `cancellation_token_registration` 物件，可在 `deregister` 方法中用來取消註冊先前註冊的回呼，並防止進行此回呼。 方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況，如果在上呼叫`cancellation_token`使用建立的物件[cancellation_token:: none](#none)方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

@@ -2,11 +2,8 @@
 title: tiled_extent 類別 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +19,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 59ac4e878ee67e03498d4d29efe7c91d34c1b4c7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent 類別
 A`tiled_extent`物件是`extent`細分成一段、 兩段或 3d 圖格的範圍空間一到三個維度的物件。  
@@ -153,7 +148,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  `extent`擷取這個維度物件`tiled_extent`執行個體。  
   
 
-## <a name="pad"> </a>  pad   
+## <a name="pad"> </a>  填補   
 傳回新`tiled_extent`向上調整為整除磚維度的範圍的物件。  
   
 ### <a name="syntax"></a>語法  
@@ -176,7 +171,7 @@ tiled_extent truncate() const;
 ### <a name="return-value"></a>傳回值  
  傳回新`tiled_extent`與範圍的物件向下調整為整除圖格維度。  
 
-## <a name="operator_eq"> </a>  operator=   
+## <a name="operator_eq"> </a>  運算子 =   
 將指定的內容複製`tiled_index`成這一個物件。  
   
 ### <a name="syntax"></a>語法  

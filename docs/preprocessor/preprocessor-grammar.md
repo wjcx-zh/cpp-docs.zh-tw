@@ -1,12 +1,9 @@
 ---
-title: "前置處理器文法 |Microsoft 文件"
-ms.custom: 
+title: 前置處理器文法 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,38 +12,36 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>前置處理器文法
-**#define**  *identifier* *token-string*opt  
+**#define***識別碼**語彙基元字串*選擇加入    
   
- *#* **define**  *identifier*[**(** *identifier*opt**,** *...* **,** *identifier*opt **)**] *token-string*opt  
+ *#* **定義***識別碼*[**(** *識別碼*選擇**，** *...* **，** *識別碼*選擇 **)**]*語彙基元字串*選擇加入    
   
  **defined(**  *identifier* **)**  
   
- **defined**  *identifier*  
+ **定義***識別碼*   
   
- `#include` **"***path-spec***"**  
+ `#include` **「***路徑規格***"**  
   
- `#include` **\<***path-spec***>**  
+ `#include` **\<***路徑規格***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"**opt  
+ **#line**  *digit-sequence*  **"** *filename* **"** opt  
   
- *#* **undef**  *identifier*  
+ *#* **undef***識別碼*   
   
- **#error**  *token-string*  
+ **#error***語彙基元字串*   
   
- **#pragma**  *token-string*  
+ **#pragma***語彙基元字串*   
   
  *條件式*:  
  *如果部分 elif 部分*選擇*else 部分*選擇*endif 列*  
@@ -57,9 +52,9 @@ ms.lasthandoff: 02/23/2018
  *如果行*:  
  **#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+ **#ifdef***識別碼*   
   
- **#ifndef**  *identifier*  
+ **#ifndef***識別碼*   
   
  *elif 部分*:  
  *elif 行文字*  
@@ -112,5 +107,5 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  下列非終端項中擴充[語彙慣例](../cpp/lexical-conventions.md)區段*c + + 語言參考*: `constant`， `constant` -*運算式*，*識別碼*，*關鍵字*， `operator`，和`punctuator`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

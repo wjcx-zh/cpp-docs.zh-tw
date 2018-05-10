@@ -1,30 +1,25 @@
 ---
-title: "多執行緒程式 |Microsoft 文件"
-ms.custom: 
+title: 多執行緒程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - threading [C++], about threading
 - multithreading [C++], about threads
 ms.assetid: 02443596-f7e1-48d0-b3a4-39ee0e54e444
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff73b4d3a1c8ee6971fbd3f88f491c2a5c76311
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ece834bd6bf85daacbbaf50110e6e278da1ae099
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithread-programs"></a>多執行緒程式
 執行緒基本上是透過程式執行的路徑。 它也是 Win32 排程執行的最小單位。 執行緒堆疊時，狀態 CPU 暫存器，以及系統排程器之執行清單中的項目所組成。 每個執行緒共用處理序的所有資源。  
@@ -33,5 +28,5 @@ ms.lasthandoff: 12/21/2017
   
  每個執行緒的程序中獨立運作。 除非您顯示它們彼此，個別執行和執行緒不知道處理程序中的其他執行緒。 不過，執行緒共用通用資源，必須協調工作使用號誌或另一個處理序間通訊的方法。 如需同步處理執行緒的詳細資訊，請參閱[撰寫多執行緒 Win32 程式](../parallel/writing-a-multithreaded-win32-program.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C 和 Win32 進行多執行緒處理](../parallel/multithreading-with-c-and-win32.md)

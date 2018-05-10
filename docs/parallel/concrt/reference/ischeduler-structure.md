@@ -1,12 +1,9 @@
 ---
-title: "IScheduler 結構 |Microsoft 文件"
-ms.custom: 
+title: IScheduler 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IScheduler
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c78d02ccd5639369ad8b4d0183458da2ba85269
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler 結構
 工作排程器抽象概念的介面。 並行執行階段的資源管理員會使用這個介面與工作排程器通訊。  
@@ -50,13 +45,13 @@ struct IScheduler;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|提供一組的虛擬處理器根排程器，其用途。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行工作，代表排程器的權限。|  
+|[Ischeduler:: Addvirtualprocessors](#addvirtualprocessors)|提供一組的虛擬處理器根排程器，其用途。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行工作，代表排程器的權限。|  
 |[IScheduler::GetId](#getid)|排程器傳回的唯一識別碼。|  
 |[IScheduler::GetPolicy](#getpolicy)|傳回排程器原則的複本。 如需排程器原則的詳細資訊，請參閱[SchedulerPolicy](schedulerpolicy-class.md)。|  
 |[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`現在正由其他排程器。|  
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`不正由其他排程器。|  
 |[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|起始移除先前配置給這個排程器的虛擬處理器根。|  
-|[IScheduler::Statistics](#statistics)|提供工作從抵達到完成率和排程器佇列長度的變更相關資訊。|  
+|[Ischeduler:: Statistics](#statistics)|提供工作從抵達到完成率和排程器佇列長度的變更相關資訊。|  
   
 ## <a name="remarks"></a>備註  
  如果您實作自訂的排程器進行通訊與資源管理員，您應該提供的實作`IScheduler`介面。 這個介面是通訊的雙向的排程器與資源管理員之間通道的一端。 另一端由`IResourceManager`和`ISchedulerProxy`介面會實作資源管理員。  
@@ -211,7 +206,7 @@ virtual void Statistics(
   
  不存在的統計資訊，資源管理員要用來進行資源配置和移轉決策的硬體執行緒訂用帳戶層級。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [SchedulerPolicy 類別](schedulerpolicy-class.md)   

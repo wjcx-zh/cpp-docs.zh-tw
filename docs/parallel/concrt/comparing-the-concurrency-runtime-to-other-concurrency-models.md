@@ -1,29 +1,24 @@
 ---
-title: "比較並行執行階段與其他並行模型 |Microsoft 文件"
-ms.custom: 
+title: 比較並行執行階段與其他並行模型 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>比較並行執行階段和其他並行模型
 本文件說明並行執行階段和其他技術在功能和程式設計模型方面的差異。 藉由了解並行執行階段優點與其他程式設計模型優點的比較結果，您可以選取最符合應用程式需求的技術。  
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段](../../parallel/concrt/concurrency-runtime.md)     
  [概觀](../../parallel/concrt/asynchronous-message-blocks.md)   
  [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   

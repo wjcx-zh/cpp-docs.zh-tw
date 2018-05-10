@@ -1,12 +1,9 @@
 ---
-title: OMP_DYNAMIC | Microsoft Docs
-ms.custom: 
+title: OMP_DYNAMIC |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - OMP_DYNAMIC
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OMP_DYNAMIC OpenMP environment variable
 ms.assetid: e306049d-b644-4b73-8b63-46c835bff98b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcff25541921ccac9dc2e205480dc6277f620b1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de4a81d861bf72943a67356577da37c36df63f69
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ompdynamic"></a>OMP_DYNAMIC
 指定執行階段 OpenMP 是否可調整的平行區域中的執行緒數目。  
@@ -56,5 +51,5 @@ set OMP_DYNAMIC=TRUE
 set OMP_DYNAMIC  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [環境變數](../../../parallel/openmp/reference/openmp-environment-variables.md)

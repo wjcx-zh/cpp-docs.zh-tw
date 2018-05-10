@@ -1,12 +1,9 @@
 ---
-title: "unsupported_feature 類別 |Microsoft 文件"
-ms.custom: 
+title: unsupported_feature 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - unsupported_feature
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4be595382436f26ed43215c86d3f350532c52af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7ccc811e3459fe668b6a8dbd255007cb60bf0cf1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="unsupportedfeature-class"></a>unsupported_feature 類別
 使用不支援的功能時，會擲回例外狀況。  
@@ -79,5 +74,5 @@ unsupported_feature() throw();
   
  **命名空間：** 並行  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

@@ -1,30 +1,25 @@
 ---
-title: "逐步解說： 建立影像處理網路 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建立影像處理網路 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>逐步解說：建立影像處理網路
 本文件將示範如何建立執行映像處理的非同步訊息區的網路。  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [完整範例](#complete)  
   
-##  <a name="functionality"></a>定義處理功能的影像  
+##  <a name="functionality"></a> 定義處理功能的影像  
  此區段會顯示用來處理從磁碟讀取的映像的映像處理網路的支援函數。  
   
  下列函數，`GetRGB`和`MakeColor`、 擷取和分別結合指定的色彩，個別元件。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="network"></a>建立影像處理網路  
+##  <a name="network"></a> 建立影像處理網路  
  本章節描述如何建立網路執行映像處理的非同步訊息區的每個[!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)](.jpg) 映像中指定的目錄。 網路會執行下列的映像處理作業：  
   
 1.  用於撰寫的 Tom 任何映像，將轉換成灰階。  
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
 |`colormask`|A`transformer`有主控項的色彩為紅色的映像中移除的綠色和藍色色彩元件的物件。|  
 |`darken`|A`transformer`具有主控項的色彩為紅色的影像會變暗的物件。|  
 |`sepiatone`|A`transformer`適用於深褐色 toning 映像不由 Tom 編寫，並不是主要紅色的物件。|  
-|`save_bitmap`|A`transformer`儲存已處理的物件`image`以磁碟為點陣圖。 `save_bitmap`擷取原始的檔案名稱，從`map`物件，並變更.bmp 檔案的副檔名。|  
+|`save_bitmap`|A`transformer`儲存已處理的物件`image`以磁碟為點陣圖。 `save_bitmap` 擷取原始的檔案名稱，從`map`物件，並變更.bmp 檔案的副檔名。|  
 |`delete_bitmap`|A`transformer`釋放的記憶體供映像的物件。|  
 |`decrement`|A [concurrency:: call](../../parallel/concrt/reference/call-class.md)做為網路中的終端節點物件。 它遞減`countdown_event`通知主應用程式映像已處理的物件。|  
   
@@ -155,7 +150,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="complete"></a>完整範例  
+##  <a name="complete"></a> 完整範例  
  下列程式碼顯示完整範例。 `wmain`函式會管理[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)]程式庫並呼叫`ProcessImages`函式程序以[!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)]檔案`Sample Pictures`目錄。  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  ![範例輸出，例如](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`Tom Alphin 所撰寫，因此會轉換成灰階。 `Chrysanthemum``Desert`， `Koala`，和`Tulips`有主控項的色彩為紅色因此已移除的藍色與綠色色彩元件，而且調暗。 `Hydrangeas``Jellyfish`，和`Penguins`符合預設準則，因此 深褐色 toned。  
+ `Lighthouse` Tom Alphin 所撰寫，因此會轉換成灰階。 `Chrysanthemum``Desert`， `Koala`，和`Tulips`有主控項的色彩為紅色因此已移除的藍色與綠色色彩元件，而且調暗。 `Hydrangeas``Jellyfish`，和`Penguins`符合預設準則，因此 深褐色 toned。  
   
  [[靠上](#top)]  
   
@@ -173,5 +168,5 @@ ms.lasthandoff: 12/21/2017
   
  **cl.exe /DUNICODE /EHsc 映像-處理-network.cpp /link gdiplus.lib**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

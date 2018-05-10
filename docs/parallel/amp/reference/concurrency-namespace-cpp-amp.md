@@ -1,12 +1,9 @@
 ---
-title: "Concurrency 命名空間 (c + + AMP) |Microsoft 文件"
-ms.custom: 
+title: Concurrency 命名空間 (c + + AMP) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 命名空間 (C++ AMP)
 提供類別和資料平行硬體加速的 c + + 程式碼執行的函式。 如需詳細資訊，請參閱[c + + AMP 概觀](../cpp-amp-overview.md)  
@@ -72,7 +67,7 @@ namespace Concurrency;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[access_type Enumeration](concurrency-namespace-enums-amp.md#access_type)|指定資料的存取類型。|  
+|[access_type 列舉](concurrency-namespace-enums-amp.md#access_type)|指定資料的存取類型。|  
 |[queuing_mode 列舉](concurrency-namespace-enums-amp.md#queuing_mode)|指定的佇列模式所支援的快速鍵。|  
   
 ### <a name="operators"></a>運算子  
@@ -123,7 +118,7 @@ namespace Concurrency;
 ## <a name="requirements"></a>需求  
  **標頭︰** amp.h  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考 (C++ AMP)](reference-cpp-amp.md)
 
 

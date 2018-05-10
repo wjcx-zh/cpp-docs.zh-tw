@@ -1,12 +1,9 @@
 ---
-title: "cancellation_token_source 類別 |Microsoft 文件"
-ms.custom: 
+title: cancellation_token_source 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - cancellation_token_source
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8512ee42a86ec706626dac765a725dfb994eb3d0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 122a60496a92b3844f4e439e40650c429035dc33
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 類別
 `cancellation_token_source` 類別代表取消某個可取消作業的能力。  
@@ -48,13 +43,13 @@ class cancellation_token_source;
 |名稱|描述|  
 |----------|-----------------|  
 |[cancellation_token_source](#ctor)|多載。 建構新的 `cancellation_token_source`。 來源可用於將某個可取消作業的取消加上標幟。|  
-|[~cancellation_token_source Destructor](#dtor)||  
+|[~ cancellation_token_source 解構函式](#dtor)||  
   
 ### <a name="public-methods"></a>公用方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[cancel](#cancel)|取消語彙基元。 任何使用語彙基元的 `task_group`、`structured_task_group` 或 `task` 都會在進行這個呼叫時取消，並在下一個中斷點擲回例外狀況。|  
+|[[取消]](#cancel)|取消語彙基元。 任何使用語彙基元的 `task_group`、`structured_task_group` 或 `task` 都會在進行這個呼叫時取消，並在下一個中斷點擲回例外狀況。|  
 |[create_linked_source](#create_linked_source)|多載。 建立 `cancellation_token_source`，其會在提供的語彙基元已取消時取消。|  
 |[get_token](#get_token)|傳回與此來源相關聯的取消語彙基元。 傳回的語彙基元可用於輪詢取消或在發生取消時提供回呼。|  
   
@@ -164,7 +159,7 @@ cancellation_token_source& operator= (cancellation_token_source&& _Src);
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 運算子 = = 
 
 ```
 bool operator== (const cancellation_token_source& _Src) const;
@@ -175,5 +170,5 @@ bool operator== (const cancellation_token_source& _Src) const;
   
 ### <a name="return-value"></a>傳回值  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

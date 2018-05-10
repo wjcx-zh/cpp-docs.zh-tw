@@ -1,13 +1,10 @@
 ---
-title: "多執行緒： 建立背景工作執行緒 |Microsoft 文件"
-ms.custom: 
+title: 多執行緒： 建立背景工作執行緒 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a047de82bebb03f681e1bfdf6f68d56554fe8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 175fc018ddba436f9a331f861a492dcd43e1ec1e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-creating-worker-threads"></a>多執行緒：建立背景工作執行緒
 背景工作執行緒通常用來處理使用者應該不需要等待要繼續使用您的應用程式的背景工作。 重新計算和幕後列印等工作是背景工作執行緒的良好範例。 本主題詳細說明建立工作者執行緒的必要步驟。 主題包括：  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  建立背景工作執行緒是相當簡單的工作。 只有兩個步驟，才能執行您的執行緒： 實作控制函式，以及啟動執行緒。 不需要自[CWinThread](../mfc/reference/cwinthread-class.md)。 如果您需要特殊版本的衍生類別`CWinThread`，但它不是必要的最簡單的背景工作執行緒。 您可以使用`CWinThread`而不需修改。  
   
-##  <a name="_core_starting_the_thread"></a>啟動執行緒  
+##  <a name="_core_starting_the_thread"></a> 啟動執行緒  
  有兩個多載的版本`AfxBeginThread`： 只能建立背景工作執行緒的其中一個，另一個則可以建立使用者介面執行緒和背景工作執行緒。 若要開始使用第一個多載在背景工作執行緒執行，請呼叫[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)，提供下列資訊：  
   
 -   控制函式的位址。  
@@ -57,9 +52,9 @@ ms.lasthandoff: 12/21/2017
   
 -   （選擇性）所需的安全性屬性。 預設為在父執行緒與相同的存取。 此安全性資訊的格式的相關資訊，請參閱[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
   
- `AfxBeginThread`建立並初始化`CWinThread`，物件開始，並傳回其位址，以便日後參考。 整個程序進行檢查以確定所有物件都都會解除配置建立的任何部分失敗。  
+ `AfxBeginThread` 建立並初始化`CWinThread`，物件開始，並傳回其位址，以便日後參考。 整個程序進行檢查以確定所有物件都都會解除配置建立的任何部分失敗。  
   
-##  <a name="_core_implementing_the_controlling_function"></a>實作控制函式  
+##  <a name="_core_implementing_the_controlling_function"></a> 實作控制函式  
  控制函式定義的執行緒。 此函式輸入時，執行緒正常啟動，且當其存在時，執行緒終止。 此函式應該具有下列原型：  
   
 ```  
@@ -72,7 +67,7 @@ UINT MyControllingFunction( LPVOID pParam );
   
  有一些限制您可以在使用 MFC 程式庫撰寫多執行緒程式中執行。 如需說明這些限制和其他使用執行緒的秘訣，請參閱[多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)。  
   
-##  <a name="_core_controlling_function_example"></a>控制函式範例  
+##  <a name="_core_controlling_function_example"></a> 控制函式範例  
  下列範例會示範如何定義控制函式，並從另一個部分的程式使用它。  
   
 ```  
@@ -104,5 +99,5 @@ AfxBeginThread(MyThreadProc, pNewObject);
   
 -   [多執行緒：建立使用者介面執行緒](../parallel/multithreading-creating-user-interface-threads.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)

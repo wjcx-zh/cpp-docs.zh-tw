@@ -1,27 +1,22 @@
 ---
-title: "使用 accelerator 和 accelerator_view 物件 |Microsoft 文件"
-ms.custom: 
+title: 使用 accelerator 和 accelerator_view 物件 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>使用 accelerator 和 accelerator_view 物件
 您可以使用[accelerator](../../parallel/amp/reference/accelerator-class.md)和[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)類別來指定裝置或模擬器上執行您的 c + + AMP 程式碼。 系統可能會有數個裝置或不同的記憶體數量、 共用的記憶體支援，偵錯支援或雙精確度支援模擬器。 C + + Accelerated Massive Parallelism (c + + AMP) 提供 Api，可用來檢查可用的快速鍵、 設定另一個做為預設值，指定多個位於 accelerator_views 的多個呼叫 parallel_for_each，並執行特殊的偵錯工作。  
@@ -184,7 +179,7 @@ bool pick_accelerator()
 ## <a name="interoperability"></a>互通性  
  C + + AMP 執行階段會支援之間的互通性`accelerator_view`類別和 Direct3D [ID3D11Device 介面](http://go.microsoft.com/fwlink/p/?linkId=248488)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法會採用`IUnknown`介面，並傳回`accelerator_view`物件。 [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439)方法會採用`accelerator_view`物件並傳回`IUknown`介面。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)   
  [accelerator_view 類別](../../parallel/amp/reference/accelerator-view-class.md)

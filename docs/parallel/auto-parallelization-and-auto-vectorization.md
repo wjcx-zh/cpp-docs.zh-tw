@@ -1,27 +1,22 @@
 ---
-title: "自動平行處理和自動向量化 |Microsoft 文件"
-ms.custom: 
+title: 自動平行處理和自動向量化 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b458dbe06bd69817c659c3bfec1d1ab7a216d1f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0b1ec19065647f78b4d9b2665003c0aa3a2795ba
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動平行處理和自訂向量化
 Auto-Parallelizer 和 Auto-Vectorizer 的設計目的是為您程式碼中的迴圈提供自動效能提升。  
@@ -99,7 +94,7 @@ void test() {
 ## <a name="auto-vectorizer"></a>自動向量化工具  
  自動向量化工具會分析您程式碼中的迴圈，並嘗試在目標電腦上使用向量暫存器和指令，以執行這些迴圈。 這可以改善您程式碼的效能。 SSE2、 AVX 和 AVX2 指令在 Intel 或 AMD 處理器或 ARM 處理器上的 NEON 指令為目標的編譯器根據[/arch](../build/reference/arch-minimum-cpu-architecture.md)切換。  
   
- 自動向量化工具可能會產生不同的指示，與所指定**/arch**切換。 這些指令受執行階段檢查保護，以確定該程式碼仍然能夠正確執行。 例如，當您編譯**/arch:SSE2**，可能會發出 SSE4.2 指令。 執行階段檢查會驗證目標處理器是否適用 SSE4.2，若該處理器不支援這些指令的話，便會跳到非 SSE4.2 版本的迴圈。  
+ 自動向量化工具可能會產生不同的指示，與所指定 **/arch**切換。 這些指令受執行階段檢查保護，以確定該程式碼仍然能夠正確執行。 例如，當您編譯 **/arch:SSE2**，可能會發出 SSE4.2 指令。 執行階段檢查會驗證目標處理器是否適用 SSE4.2，若該處理器不支援這些指令的話，便會跳到非 SSE4.2 版本的迴圈。  
   
  根據預設，會啟用自動向量化工具。 如果您想要比較您的程式碼在向量化之後的效能，您可以使用[#pragma loop （no_vector)](../preprocessor/loop.md)來針對任何特定迴圈停用。  
   
@@ -119,7 +114,7 @@ for (int i = 0; i < 1000; ++i)
   
  如需顯示向量化工具實際上的運作方式的範例，請參閱[Project Austin 的第 2 部分 6： 頁面捲曲](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [迴圈](../preprocessor/loop.md)   
  [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [/Qpar （自動平行化工具）](../build/reference/qpar-auto-parallelizer.md)   

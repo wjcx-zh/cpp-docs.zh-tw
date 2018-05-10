@@ -1,10 +1,7 @@
 ---
-title: "concurrency 命名空間運算子 |Microsoft 文件"
-ms.custom: 
+title: concurrency 命名空間運算子 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - concrt/concurrency::operator!=
@@ -12,17 +9,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad453a764a87d0d7e54b914b935fd46f56cd4cac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 90c8fbbdd0e5d2baf0ba82998a6951242b73203a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 命名空間運算子
 ||||  
@@ -31,7 +26,7 @@ ms.lasthandoff: 02/23/2018
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>  operator&#124;&#124; Operator  
+##  <a name="operator_lor"></a>  運算子&#124;&#124;運算子  
  建立工作，這個工作將會在兩個當做引數提供的任一工作已順利完成時成功完成。  
   
 ```  
@@ -74,7 +69,7 @@ inline task<void> operator||(
 ### <a name="remarks"></a>備註  
  如果兩個工作都取消或擲回例外狀況，則傳回的工作會以已取消狀態完成，而且其中一個例外狀況 (如果有發生) 會在您呼叫該工作上的 `get()` 或 `wait()` 時擲回。  
   
-##  <a name="operator_amp_amp"></a>  operator&amp;&amp; Operator  
+##  <a name="operator_amp_amp"></a>  運算子&amp;&amp;運算子  
  建立工作，這個工作將會在兩個當做引數提供的工作都已順利完成時成功完成。  
   
 ```  
@@ -123,7 +118,7 @@ inline task<void>  operator&&(
 ### <a name="remarks"></a>備註  
  如果其中一個工作取消或擲回例外狀況，則傳回的工作會在已取消狀態中提早完成，而且例外狀況 (如果有發生) 會在您呼叫該工作上的 `get()` 或 `wait()` 時擲回。  
   
-##  <a name="operator_eq_eq"></a>  operator== Operator  
+##  <a name="operator_eq_eq"></a>  運算子 = = 運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否等於右邊的 `concurrent_vector` 物件。  
   
 ```  
@@ -327,5 +322,5 @@ inline bool operator>= (
   
  這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

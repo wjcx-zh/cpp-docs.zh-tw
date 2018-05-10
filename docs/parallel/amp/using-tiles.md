@@ -1,32 +1,27 @@
 ---
-title: "使用磚 |Microsoft 文件"
-ms.custom: 
+title: 使用磚 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>使用磚
 若要最大化的加速應用程式，您可以使用並排顯示。 並排顯示執行緒分成相等矩形的子集或*磚*。 如果您使用適當的並排顯示大小和並排顯示的演算法，您可以從 c + + AMP 程式碼來取得更多的加速。 並排顯示的基本元件如下：  
   
-- `tile_static`變數。 並排顯示的主要優點是獲得的效能`tile_static`存取。 中的資料存取`tile_static`記憶體可能比在全域空間資料的存取權快很多 (`array`或`array_view`物件)。 執行個體`tile_static`變數會建立每個圖格，並在磚中的所有執行緒都有變數的存取權。 典型的並排顯示演算法在資料複製到`tile_static`一次從全域記憶體的記憶體，然後從存取多次`tile_static`記憶體。  
+- `tile_static` 變數。 並排顯示的主要優點是獲得的效能`tile_static`存取。 中的資料存取`tile_static`記憶體可能比在全域空間資料的存取權快很多 (`array`或`array_view`物件)。 執行個體`tile_static`變數會建立每個圖格，並在磚中的所有執行緒都有變數的存取權。 典型的並排顯示演算法在資料複製到`tile_static`一次從全域記憶體的記憶體，然後從存取多次`tile_static`記憶體。  
   
 - [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)。 呼叫`tile_barrier::wait`暫停執行目前執行緒，直到所有相同的磚中的執行緒到達的呼叫`tile_barrier::wait`。 您無法保證在中執行的執行緒，只有該磚中的沒有任何執行緒會執行過的呼叫順序`tile_barrier::wait`之前的所有執行緒已達到呼叫。 這表示，使用`tile_barrier::wait`方法，您可以並排顯示的圖格為基礎而非執行緒的執行緒上執行工作。 典型的並排顯示演算法具有程式碼以初始化`tile_static`整個磚記憶體後面呼叫`tile_barrer::wait`。 下列程式碼`tile_barrier::wait`包含需要存取所有的計算`tile_static`值。  
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example-of-global-tile-and-local-indices"></a>範例中的全域、 磚和本機索引  
  下圖表示 8 x 9 矩陣的排列 2 x 3 磚中的資料。  
   
- ![8 &#45; 由 &#45; 9 矩陣分割成 2 &#45; &#45; 3 磚](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;由&#45;9 矩陣分成 2&#45;由&#45;3 磚](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  下列範例會顯示 [全域] 磚，並本機索引這個並排矩陣。 `array_view`物件由使用類型的項目建立`Description`。 `Description`保存全域磚，並在矩陣中項目的本機索引。 呼叫中的程式碼`parallel_for_each`設定的全域值、 圖格及本機索引的每個項目。 輸出會顯示在值`Description`結構。  
   
@@ -339,7 +334,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [tile_static 關鍵字](../../cpp/tile-static-keyword.md)
 

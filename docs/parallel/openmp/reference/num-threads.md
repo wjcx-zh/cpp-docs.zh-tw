@@ -1,12 +1,9 @@
 ---
-title: "num_threads |Microsoft 文件"
-ms.custom: 
+title: num_threads |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - num_threads
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - num_threads OpenMP clause
 ms.assetid: 09a56fc8-25c7-43e4-bbb5-71cb955d0b93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9d12b8216033b5ffe6499290f1c2b5742152b2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e7dd57950d083c4f89ee2aa5962ad1e07a55a9a8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="numthreads"></a>num_threads
 在執行緒小組設定執行緒的數目。  
@@ -51,12 +46,12 @@ num_threads(num)
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
  如需詳細資訊，請參閱[2.3 parallel 建構](../../../parallel/openmp/2-3-parallel-construct.md)。  
   
 ## <a name="example"></a>範例  
  請參閱[平行](../../../parallel/openmp/reference/parallel.md)的使用範例`num_threads`子句。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

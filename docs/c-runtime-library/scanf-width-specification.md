@@ -1,13 +1,10 @@
 ---
-title: "scanf 寬度規格 | Microsoft Docs"
-ms.custom: 
+title: scanf 寬度規格 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>scanf 寬度規格
 下列資訊適用於任何 `scanf` 函式系列中的格式字串解譯，包含安全版本，例如 `scanf_s`。 這些函式通常會假設輸入資料流分割成一連串的語彙基元。 語彙基元會以空白字元 (空格、定位字元或新行字元) 分隔，若為數字型別，根據第一個字元無法轉換成數字文字的指示，則以數字資料類型的自然結束分隔。 不過，寬度規格可能會用來造成輸入剖析在語彙基元自然結束之前停止。  

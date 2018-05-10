@@ -1,30 +1,25 @@
 ---
-title: "逐步解說： 建立自訂訊息區 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建立自訂訊息區 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>逐步解說：建立自訂訊息區
 本文件說明如何建立依優先順序排序內送訊息的自訂訊息區塊類型。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 - [完整範例](#complete)  
   
-##  <a name="design"></a>設計自訂訊息區  
+##  <a name="design"></a> 設計自訂訊息區  
  訊息區塊參與傳送和接收訊息的動作。 將訊息傳送的訊息區塊稱為*來源區塊*。 接收訊息的訊息區塊稱為*目標區塊*。 同時傳送和接收訊息的訊息區塊稱為*傳播程式區塊*。 代理程式程式庫會使用抽象類別[concurrency:: isource](../../parallel/concrt/reference/isource-class.md)來代表來源區塊和抽象類別[concurrency:: itarget](../../parallel/concrt/reference/itarget-class.md)來代表目標區塊。 訊息區塊類型可做為來源衍生自`ISource`; 訊息區塊類型可做為目標衍生自`ITarget`。  
   
  雖然您可以衍生您的訊息區塊類型，直接從`ISource`和`ITarget`，代理程式程式庫會定義三個基底類別來執行許多適用於所有的訊息區塊類型，例如，處理錯誤的功能和連接在一起以並行安全的方式訊息區塊。 [Concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md)類別衍生自`ISource`，並將訊息傳送至其他區塊。 [Concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md)類別衍生自`ITarget`，從其他區塊接收訊息。 [Concurrency:: propagator_block](../../parallel/concrt/reference/propagator-block-class.md)類別衍生自`ISource`和`ITarget`，將訊息傳送至其他區塊並從其他區塊接收訊息。 我們建議您使用這三個基底類別，來處理基礎結構詳細資料，您可以專注於訊息區塊的行為。  
@@ -73,10 +68,10 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="class"></a>定義 priority_buffer 類別  
+##  <a name="class"></a> 定義 priority_buffer 類別  
  `priority_buffer`類別是依優先順序，再依接收訊息的順序，先排序內送訊息的自訂訊息區塊類型。 `priority_buffer`類別類似於[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)類別，因為它包含佇列的訊息，以及因為它可做為來源和目標訊息區塊，而且可以有多個來源和多個目標。 不過，`unbounded_buffer`基底訊息傳播只在它接收訊息與其來源的順序。  
   
- `priority_buffer`類別類型的訊息會接收 std::[tuple](../../standard-library/tuple-class.md)包含`PriorityType`和`Type`項目。 `PriorityType`參考型別所在的每個訊息; 優先順序`Type`指的是訊息的資料部分。 `priority_buffer`類別將傳送訊息型別的`Type`。 `priority_buffer`類別也會管理兩個訊息佇列： [std::priority_queue](../../standard-library/priority-queue-class.md)物件內送訊息和 std::[佇列](../../standard-library/queue-class.md)外寄訊息的物件。 依優先順序排序訊息時，有用`priority_buffer`物件同時接收多個訊息，或當它收到多個訊息之前的任何訊息會被取用者讀取。  
+ `priority_buffer`類別類型的訊息會接收 std::[tuple](../../standard-library/tuple-class.md)包含`PriorityType`和`Type`項目。 `PriorityType` 參考型別所在的每個訊息; 優先順序`Type`指的是訊息的資料部分。 `priority_buffer`類別將傳送訊息型別的`Type`。 `priority_buffer`類別也會管理兩個訊息佇列： [std::priority_queue](../../standard-library/priority-queue-class.md)物件內送訊息和 std::[佇列](../../standard-library/queue-class.md)外寄訊息的物件。 依優先順序排序訊息時，有用`priority_buffer`物件同時接收多個訊息，或當它收到多個訊息之前的任何訊息會被取用者讀取。  
   
  除了七種方法的類別，衍生自`propagator_block`必須實作`priority_buffer`類別也會覆寫`link_target_notification`和`send_message`方法。 `priority_buffer`類別也會定義兩個公用的 helper 方法，`enqueue`和`dequeue`，和私用 helper 方法， `propagate_priority_order`。  
   
@@ -193,7 +188,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="complete"></a>完整範例  
+##  <a name="complete"></a> 完整範例  
  下列範例顯示的完整定義`priority_buffer`類別。  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  
@@ -220,7 +215,7 @@ ms.lasthandoff: 12/21/2017
   
  **cl.exe /EHsc priority_buffer.cpp**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)   
  [訊息傳遞函式](../../parallel/concrt/message-passing-functions.md)

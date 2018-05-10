@@ -1,13 +1,10 @@
 ---
-title: "printf_p 位置參數 | Microsoft Docs"
-ms.custom: 
+title: printf_p 位置參數 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110.dll
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - _printf_p function, positional parameters
 - printf_p function, positional parameters
 ms.assetid: beb4fd85-a7aa-4665-9085-2c907a5b9ab0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d48a899b2d2e6ad644c385c2b2116353c20f8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe36bbc00615f4f78bf20cdef3f1c8dc1fb0db4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="printfp-positional-parameters"></a>printf_p 位置參數
 位置參數會提供根據數字指定的功能，其中引數會取代至格式字串中的欄位。 您可以使用下列位置參數 `printf` 函式：  

@@ -1,12 +1,9 @@
 ---
-title: "single_link_registry 類別 |Microsoft 文件"
-ms.custom: 
+title: single_link_registry 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - single_link_registry
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74167dcc03754c7f25d83058ec814798d40931a2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3220156d201a4dcb7edb6281298d3f248f38fc83
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 類別
 `single_link_registry` 物件是只管理單一來源或目標區塊的 `network_link_registry`。  
@@ -63,7 +58,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|新增連結`single_link_registry`物件。 (覆寫[network_link_registry:: add](network-link-registry-class.md#add)。)|  
 |[begin](#begin)|傳回迭代器中的第一個項目`single_link_registry`物件。 (覆寫[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
-|[contains](#contains)|搜尋`single_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
+|[包含](#contains)|搜尋`single_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|  
 |[count](#count)|計算中的項目數目`single_link_registry`物件。 (覆寫[network_link_registry:: count](network-link-registry-class.md#count)。)|  
 |[remove](#remove)|移除連結，以從`single_link_registry`物件。 (覆寫[network_link_registry:: remove](network-link-registry-class.md#remove)。)|  
   
@@ -155,7 +150,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```  
   
-##  <a name="dtor"></a> ~single_link_registry 
+##  <a name="dtor"></a> ~ single_link_registry 
 
  終結`single_link_registry`物件。  
   
@@ -166,6 +161,6 @@ virtual ~single_link_registry();
 ### <a name="remarks"></a>備註  
  方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況，如果它在移除的連結之前呼叫。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [multi_link_registry 類別](multi-link-registry-class.md)

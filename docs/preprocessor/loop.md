@@ -1,12 +1,9 @@
 ---
-title: loop | Microsoft Docs
-ms.custom: 
+title: 迴圈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - loop_CPP
@@ -14,17 +11,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e076c48b512c6059a2f574a07f6e77acfaca22
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9af0e01cd29d6fe89e0cd0d6c5ff4a7030909799
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="loop"></a>迴圈
 控制 auto-parallelizer 考量迴圈程式碼的方式，及/或從 auto-vectorizer 排除迴圈的考量。  
@@ -61,6 +56,6 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>備註  
  若要使用 `loop` pragma，請將它放在迴圈定義的前方 (而不是內部)。 pragma 生效範圍為其後方迴圈的範圍。 您可以任何順序對迴圈套用多個 pragma，不過，您必須在個別的 pragma 陳述式中加以說明。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [自動平行處理和自動向量化](../parallel/auto-parallelization-and-auto-vectorization.md)   
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

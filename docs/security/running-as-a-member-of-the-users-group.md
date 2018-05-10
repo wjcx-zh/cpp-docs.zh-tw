@@ -1,13 +1,10 @@
 ---
-title: "Users 群組的成員身分執行 |Microsoft 文件"
-ms.custom: 
+title: Users 群組的成員身分執行 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - PRJ0050
 - VCD0047
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2a33cd113b631ab6c17cdb02fb29e27d663c1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>以使用者群組的成員身分執行
 本主題說明如何將 Windows 使用者帳戶設定為「使用者群組」的成員 (不同於「系統管理員」群組)，藉由降低受到惡意程式碼感染的機會，以提升安全性。  
@@ -59,5 +54,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="debugging"></a>偵錯  
  您可以藉由成為「偵錯群組」的成員，以非系統管理員的身分偵錯在 Visual Studio (原生和 Unmanaged) 內啟動的任何應用程式。 這包括使用「附加至處理序」命令，以附加至執行中應用程式的能力。 然而，為了偵錯由不同使用者所啟動的原生或 Managed 應用程式，您必須成為「系統管理員群組」的成員。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [安全性最佳做法](security-best-practices-for-cpp.md)

@@ -1,27 +1,22 @@
 ---
-title: "決定使用的執行緒數目 A.15 |Microsoft 文件"
-ms.custom: 
+title: 決定使用的執行緒數目 A.15 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 026bb59a-f668-40db-a7cb-69a1bae83d2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8b7fb8cf6218863287d582a097cb43b399cff07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b50858a3384fa5f8d867f13a699e1fc271c101ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a15---determining-the-number-of-threads-used"></a>A.15 判斷使用的執行緒數目
 請考慮下列不正確的範例 (如[區段 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) 37 頁面上):  

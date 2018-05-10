@@ -1,30 +1,25 @@
 ---
-title: "逐步解說： 從使用者介面執行緒中移除工作 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 從使用者介面執行緒中移除工作 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>逐步解說：從使用者介面執行緒中移除工作
 本文件將示範如何使用並行執行階段移到背景工作執行緒在 Microsoft Foundation Classes (MFC) 應用程式中的使用者介面 (UI) 執行緒所執行的工作。 本文件也會示範如何改善長時間的繪圖作業的效能。  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [新增支援取消作業](#cancellation)  
   
-##  <a name="application"></a>建立 MFC 應用程式  
+##  <a name="application"></a> 建立 MFC 應用程式  
  本章節描述如何建立基本的 MFC 應用程式。  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>若要建立 Visual c + + MFC 應用程式  
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
      請確認應用程式已成功建立，方式是建立並執行它。 在建置應用程式，**建置**功能表上，按一下 **建置方案**。 如果應用程式建置成功，則執行應用程式，即可**開始偵錯**上**偵錯**功能表。  
   
-##  <a name="serial"></a>實作序列 Mandelbrot 應用程式的版本  
+##  <a name="serial"></a> 實作序列 Mandelbrot 應用程式的版本  
  本章節描述如何繪製 Mandelbrot 不規則。 這個版本會繪製到 Mandelbrot 不規則[!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)][點陣圖](https://msdn.microsoft.com/library/ms534420.aspx)物件，然後將該點陣圖的內容複製到用戶端視窗。  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>若要實作序列 Mandelbrot 應用程式的版本  
@@ -123,7 +118,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="removing-work"></a>從 UI 執行緒中移除工作  
+##  <a name="removing-work"></a> 從 UI 執行緒中移除工作  
  本節說明如何從 Mandelbrot 應用程式中的 UI 執行緒中移除繪圖的工作。 將繪圖工作從 UI 執行緒移至背景工作執行緒，UI 執行緒可以處理訊息，因為背景工作執行緒在背景中產生的映像。  
   
  並行執行階段提供執行工作的三種方式：[工作群組](../../parallel/concrt/task-parallelism-concurrency-runtime.md)，[非同步代理程式](../../parallel/concrt/asynchronous-agents.md)，和[輕量型工作](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。 雖然您可以使用其中一種機制從 UI 執行緒中移除工作，這個範例會使用[concurrency:: task_group](reference/task-group-class.md)物件，因為工作群組支援取消作業。 本逐步解說稍後會使用取消來減少用戶端視窗調整大小時，會執行的工作量，以及執行清除作業，當視窗終結時。  
@@ -162,7 +157,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="performance"></a>改善效能的繪圖  
+##  <a name="performance"></a> 改善效能的繪圖  
 
  Mandelbrot 不規則的產生是適合平行化作業，因為每個像素計算無關的其他所有的計算。 若要平行處理繪製程序，將轉換外部`for`迴圈中`CChildView::DrawMandelbrot`方法來呼叫[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法，如下所示。  
 
@@ -173,7 +168,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="cancellation"></a>新增支援取消作業  
+##  <a name="cancellation"></a> 新增支援取消作業  
  本章節描述如何處理視窗大小調整，以及如何取消任何作用中的繪圖工作，當視窗終結時。  
   
  文件[PPL 中的取消](cancellation-in-the-ppl.md)說明執行階段中的取消作業如何運作。 取消是合作式;因此，它不會立即執行。 若要停止已取消的工作，執行階段會擲回執行階段期間的後續呼叫，從工作內部例外狀況。 上一節顯示如何使用`parallel_for`演算法，以改善效能的繪製工作。 若要呼叫`parallel_for`啟用執行階段以停止工作，並因此可讓工作的取消作業。  
@@ -230,7 +225,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)   
  [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)   

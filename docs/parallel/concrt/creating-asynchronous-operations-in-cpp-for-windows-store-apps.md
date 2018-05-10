@@ -1,30 +1,25 @@
 ---
-title: "C + + 中建立非同步作業，用於 UWP 應用程式 |Microsoft 文件"
-ms.custom: 
+title: C + + 中建立非同步作業，用於 UWP 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>在 c + + UWP 應用程式建立非同步作業
 本文件說明一些重要觀念，當您使用 task 類別產生以 Windows 執行緒集區為基礎的通用 Windows 執行階段 (UWP) 應用程式中的非同步作業，請記住。  
@@ -74,7 +69,7 @@ ms.lasthandoff: 02/14/2018
  [Windows::Foundation::IAsyncOperation\<TResult>](http://msdn.microsoft.com/library/windows/apps/br206598.aspx)  
  表示傳回結果的非同步作業。  
   
- [Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
+ [Windows::Foundation::IAsyncOperationWithProgress\<Iasyncoperationwithprogress<tresult，TProgress >](http://msdn.microsoft.com/library/windows/apps/br206594.aspx)  
  表示傳回結果和報告進度的非同步作業。  
   
  「 *動作* 」(Action) 的概念表示，非同步工作沒有產生值 (想像傳回 `void`的函式)。 「 *作業* 」(Operation) 的概念表示，非同步工作會產生值。 「 *進度* 」(Progress) 的概念表示，工作可以向呼叫端報告進度訊息。 JavaScript、.NET Framework 和 Visual C++ 各提供了自己建立這些介面執行個體的方式，以供跨 ABI 界限使用。 針對 Visual C++，PPL 提供了 [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 函式。 此函式會建立 Windows 執行階段非同步動作或作業，用以表示工作完成。 `create_async`函式會採用工作函式 （通常是 lambda 運算式） 在內部建立`task`物件，並將包裝在四個非同步 Windows 執行階段介面的其中一個工作。  
@@ -119,7 +114,7 @@ ms.lasthandoff: 02/14/2018
   
  每個方法會先執行驗證，確保輸入參數並非負數。 如果輸入的值為負數，方法會擲回 [Platform::InvalidArgumentException](http://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx)。 本結稍後將說明錯誤處理。  
   
- 若要使用這些方法從 UWP 應用程式，使用 Visual C#**空白應用程式 (XAML)**加入 Visual Studio 方案中的第二個專案範本。 這個範例會將專案命名為 `Primes`。 然後從 `Primes` 專案中，新增 `PrimesLibrary` 專案的參考。  
+ 若要使用這些方法從 UWP 應用程式，使用 Visual C#**空白應用程式 (XAML)** 加入 Visual Studio 方案中的第二個專案範本。 這個範例會將專案命名為 `Primes`。 然後從 `Primes` 專案中，新增 `PrimesLibrary` 專案的參考。  
   
  將下列程式碼加入至 MainPage.xaml。 這個程式碼會定義 UI，讓您能夠呼叫 C++ 元件並顯示結果。  
   
@@ -168,8 +163,8 @@ ms.lasthandoff: 02/14/2018
 
 >  不要在 STA 上執行的接續主體中呼叫 [concurrency::task::wait](reference/task-class.md#wait) 。 否則，因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式沒有回應，所以執行階段會擲回 [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) 。 不過，您可以呼叫 [concurrency::task::get](reference/task-class.md#get) 方法來以工作為基礎連續的形式接收前項工作的結果。  
   
-##  <a name="example-app">範例： 控制在 Windows 執行階段應用程式中使用 c + + 和 XAML 的執行</a>  
- 假設有一個 C++ XAML 應用程式，它會從硬碟讀取檔案、尋找該檔案中最常見的字詞，然後在 UI 中顯示結果。 若要建立此應用程式，開始，在 Visual Studio 中，藉由建立**空白應用程式 (通用 Windows)**專案並將它命名`CommonWords`。 在您的應用程式資訊清單中指定 [ **文件庫** ] 功能，讓應用程式能夠存取 [我的文件] 資料夾。 另外在應用程式資訊清單的宣告區段中加入 [文字 (.txt)] 檔案類型。 如需應用程式功能和宣告的詳細資訊，請參閱 [應用程式套件與部署 (Windows 執行階段應用程式)](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。  
+##  <a name="example-app"></a> 範例： 控制在 Windows 執行階段應用程式中使用 c + + 和 XAML 的執行  
+ 假設有一個 C++ XAML 應用程式，它會從硬碟讀取檔案、尋找該檔案中最常見的字詞，然後在 UI 中顯示結果。 若要建立此應用程式，開始，在 Visual Studio 中，藉由建立**空白應用程式 (通用 Windows)** 專案並將它命名`CommonWords`。 在您的應用程式資訊清單中指定 [ **文件庫** ] 功能，讓應用程式能夠存取 [我的文件] 資料夾。 另外在應用程式資訊清單的宣告區段中加入 [文字 (.txt)] 檔案類型。 如需應用程式功能和宣告的詳細資訊，請參閱 [應用程式套件與部署 (Windows 執行階段應用程式)](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx)。  
   
  將 MainPage.xaml 中的 `Grid` 項目更新，以包含 `ProgressRing` 項目和 `TextBlock` 項目。 `ProgressRing` 會指出作業正在進行，而 `TextBlock` 會顯示計算的結果。  
   
@@ -204,5 +199,5 @@ ms.lasthandoff: 02/14/2018
   
  在這個範例中可以支援取消，因為支援 `task` 的 `create_async` 物件使用隱含取消語彙基元。 如果您的工作需要以合作方式回應取消，請定義您的工作函式使其接受 `cancellation_token` 物件。 如需在 PPL 中取消的詳細資訊，請參閱 [Cancellation in the PPL](cancellation-in-the-ppl.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段](../../parallel/concrt/concurrency-runtime.md)

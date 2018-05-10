@@ -1,13 +1,10 @@
 ---
-title: "strcoll 函式 | Microsoft Docs"
-ms.custom: 
+title: strcoll 函式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcoll-functions"></a>strcoll 函式
 每個 `strcoll` 與 `wcscoll` 函式皆會根據目前所用地區設定字碼頁的 `LC_COLLATE` 類別設定來比較兩個字串。 每個 `_mbscoll` 函式皆會根據目前所用的多位元組字碼頁來比較兩個字串。 因此，只有在目前字碼頁中字元集順序與字母字元順序 (亦即字母在字典中的順序) 不同，且想要比較這項差異時，才應該使用 `coll` 函式來比較字串。 使用對應的 `cmp` 函式，以便僅測試字串的相等程度。  

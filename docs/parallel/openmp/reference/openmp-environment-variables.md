@@ -1,27 +1,22 @@
 ---
-title: "OpenMP 環境變數 |Microsoft 文件"
-ms.custom: 
+title: OpenMP 環境變數 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7e0089399cd1a6d91a1324d8c986ea22c1fae63
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 02248b7725f2a4312f26984c798e7248463d2615
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-environment-variables"></a>OpenMP 環境變數
 提供連結 OpenMP API 中使用的環境變數。  
@@ -35,5 +30,5 @@ ms.lasthandoff: 02/23/2018
 |[OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)|在平行區域中，設定執行緒的數目上限，除非被[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或[num_threads](../../../parallel/openmp/reference/num-threads.md)。|  
 |[OMP_SCHEDULE](../../../parallel/openmp/reference/omp-schedule.md)|可修改[排程](../../../parallel/openmp/reference/schedule.md)子句時`schedule(runtime)`中指定`for`或`parallel for`指示詞。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式庫參考](../../../parallel/openmp/reference/openmp-library-reference.md)

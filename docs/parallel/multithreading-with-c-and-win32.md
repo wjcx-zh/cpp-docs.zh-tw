@@ -1,13 +1,10 @@
 ---
-title: "使用 C 和 Win32 進行多執行緒處理 |Microsoft 文件"
-ms.custom: 
+title: 使用 C 和 Win32 進行多執行緒處理 |Microsoft 文件
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - Win32 [C++], multithreading
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16353937046384f9dc130048c510197697fb678f
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 993bee92c9dacc831a8bbc8fc000ec982025a399
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 進行多執行緒處理
 Microsoft Visual c + + 建立多執行緒應用程式提供支援。 您應該考慮使用多個執行緒，如果您的應用程式需要執行耗費資源的作業，可能導致使用者介面沒有回應。  
@@ -58,5 +53,5 @@ Microsoft Visual c + + 建立多執行緒應用程式提供支援。 您應該�
   
 -   [執行緒區域儲存區 (TLS)](../parallel/thread-local-storage-tls.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [舊版程式碼的多執行緒支援 (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

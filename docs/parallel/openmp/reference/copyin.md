@@ -1,12 +1,9 @@
 ---
-title: copyin | Microsoft Docs
-ms.custom: 
+title: copyin |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - copyin
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - copyin OpenMP clause
 ms.assetid: 369efa88-613c-4cb1-9e11-7b9ee08a4b25
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae680b2af468b9b11a7d2de44966ad554eec0150
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 32137534a43eeb0b038eae547f9bc19283412159
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="copyin"></a>copyin
 可讓執行緒存取主執行緒的值，如[threadprivate](../../../parallel/openmp/reference/threadprivate.md)變數。  
@@ -49,12 +44,12 @@ copyin(var)
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
  如需詳細資訊，請參閱[2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)。  
   
 ## <a name="example"></a>範例  
  請參閱[threadprivate](../../../parallel/openmp/reference/threadprivate.md)的使用範例`copyin`。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

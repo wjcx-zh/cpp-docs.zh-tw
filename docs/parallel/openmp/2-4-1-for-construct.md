@@ -1,27 +1,22 @@
 ---
-title: "2.4.1 for 建構 |Microsoft 文件"
-ms.custom: 
+title: 2.4.1 for 建構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 for 建構
 **如**指示詞會識別反覆性工作共用建構，可指定相關聯的迴圈的反覆項目，則會以平行方式執行。 反覆項目**如**迴圈分散於存在於小組執行的平行建構，它會繫結的執行緒。 語法**如**建構如下所示：  
@@ -32,13 +27,13 @@ ms.lasthandoff: 12/21/2017
   
  子句可以是下列其中一項：  
   
- **私用 (** *變數清單* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *變數清單* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **lastprivate (** *變數清單* **)**  
+ **lastprivate(** *variable-list* **)**  
   
- **減少 (** *運算子* **:** *變數清單***)**  
+ **減少 (** *運算子* **:** *變數-清單 * * *)**  
   
  **排序**  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  **如**指示詞置於對應的結構限制**如**迴圈。 具體而言，對應**如**迴圈必須標準圖形：  
   
- **針對 (** *init expr* **;***var 邏輯 op b*;*incr expr***)**  
+ **針對 (** *init expr* **;***var 邏輯 op b*;*incr-e x p * * *)**  
   
  *init expr*  
  下列其中一項：  
@@ -60,11 +55,11 @@ ms.lasthandoff: 12/21/2017
  *incr expr*  
  下列其中一項：  
   
- ++*var*  
+ ++*Var*  
   
  *var* ++  
   
- -- *var*  
+ -- *Var*  
   
  *var* --  
   
@@ -103,10 +98,10 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|靜態|當**排程 (靜態、** *chunk_size***)**指定反覆項目可分為區塊大小所指定的*chunk_size*。 區塊會以靜態方式指派執行緒編號順序循環配置資源方式小組中的執行緒。 若未*chunk_size*指定反覆項目空間分割成具有一個指派給每個執行緒的區塊大小，大約相同的區塊。|  
-|動態|當**排程 (動態的** *chunk_size***)**指定，則在反覆項目可分為區塊，每個都包含一系列*chunk_size*反覆項目。 每個區塊會指派給正在等候指派的執行緒。 執行緒執行反覆項目的區塊，然後等待其下一個作業，直到沒有區塊維持指派。 請注意，可指派的最後一個區塊可能會有較少的反覆項目。 若未*chunk_size*指定，則會預設為 1。|  
-|指引|當**排程 (引導式，** *chunk_size***)**指定，以減少大小的區塊中的執行緒指派反覆項目。 當執行緒完成其指派的區塊的反覆項目時，它會動態指定另一個區塊，直到沒有任何存在。 如*chunk_size*為 1，每個區塊的大小會大約未指派除以執行緒數目的反覆項目數目。 這些大小以指數方式減少大約為 1 中。 如*chunk_size*值*k*大於 1，大小減少大約以指數方式為*k*，除了最後一個區塊可能會少於*k*反覆項目。 若未*chunk_size*指定，則會預設為 1。|  
-|執行階段|當**schedule （runtime)**指定時，有關排程延後到執行階段決定。 排程*種類*和區塊大小可以選擇在執行階段，設定環境變數**OMP_SCHEDULE**。 如果未設定這個環境變數，產生的排程是由實作定義。 當**schedule （runtime)**指定，則*chunk_size*不可指定。|  
+|靜態|當**排程 (靜態、** *chunk_size * * *)** 指定反覆項目可分為區塊大小所指定的*chunk_size*。 區塊會以靜態方式指派執行緒編號順序循環配置資源方式小組中的執行緒。 若未*chunk_size*指定反覆項目空間分割成具有一個指派給每個執行緒的區塊大小，大約相同的區塊。|  
+|動態|當**排程 (動態的** *chunk_size * * *)** 指定，則在反覆項目可分為區塊，每個都包含一系列*chunk_size*反覆項目。 每個區塊會指派給正在等候指派的執行緒。 執行緒執行反覆項目的區塊，然後等待其下一個作業，直到沒有區塊維持指派。 請注意，可指派的最後一個區塊可能會有較少的反覆項目。 若未*chunk_size*指定，則會預設為 1。|  
+|指引|當**排程 (引導式，** *chunk_size * * *)** 指定，以減少大小的區塊中的執行緒指派反覆項目。 當執行緒完成其指派的區塊的反覆項目時，它會動態指定另一個區塊，直到沒有任何存在。 如*chunk_size*為 1，每個區塊的大小會大約未指派除以執行緒數目的反覆項目數目。 這些大小以指數方式減少大約為 1 中。 如*chunk_size*值*k*大於 1，大小減少大約以指數方式為*k*，除了最後一個區塊可能會少於*k*反覆項目。 若未*chunk_size*指定，則會預設為 1。|  
+|執行階段|當**schedule （runtime)** 指定時，有關排程延後到執行階段決定。 排程*種類*和區塊大小可以選擇在執行階段，設定環境變數**OMP_SCHEDULE**。 如果未設定這個環境變數，產生的排程是由實作定義。 當**schedule （runtime)** 指定，則*chunk_size*不可指定。|  
   
  沒有明確定義**排程**子句，則預設**排程**是由實作定義。  
   

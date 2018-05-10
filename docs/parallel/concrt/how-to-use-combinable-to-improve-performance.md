@@ -1,30 +1,25 @@
 ---
-title: "如何： 使用可組合的類別改善效能 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用可組合的類別改善效能 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - combinable class, example
 - improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea28bd31812449e34bb481d316070f8f21aaede
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3185ee9f7546e6927197d2e3452ea4cf86f9ab5c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>如何：使用可組合的類別改善效能
 這個範例示範如何使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別來計算中的數字的總和[std:: array](../../standard-library/array-class-stl.md)是質數的物件。 `combinable`類別藉由排除共用的狀態可改善效能。  
@@ -74,7 +69,7 @@ parallel time: 1638 ms
 ## <a name="robust-programming"></a>穩固程式設計  
  如需範例，使用對應並減少作業以產生相同的結果，請參閱[平行演算法](../../parallel/concrt/parallel-algorithms.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)   
  [combinable 類別](../../parallel/concrt/reference/combinable-class.md)   
  [critical_section 類別](../../parallel/concrt/reference/critical-section-class.md)

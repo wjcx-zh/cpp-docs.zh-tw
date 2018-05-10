@@ -1,12 +1,9 @@
 ---
-title: "Scheduler 類別 |Microsoft 文件"
-ms.custom: 
+title: Scheduler 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - Scheduler
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7431776a27668fc1f1c465377f1e947eb36ab99
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 97abec33d5fa4b372bc26874fd37397a2b78bb29
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-class"></a>Scheduler 類別
 代表並行執行階段排程器的抽象概念。  
@@ -57,7 +52,7 @@ class Scheduler;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[Scheduler](#ctor)|物件的`Scheduler`類別可以僅使用 factory 方法，建立或隱含的方式。|  
+|[排程器](#ctor)|物件的`Scheduler`類別可以僅使用 factory 方法，建立或隱含的方式。|  
 |[~ Scheduler 解構函式](#dtor)|物件的`Scheduler`隱含終結類別之前就不再存在於所有外部參考時。|  
   
 ### <a name="public-methods"></a>公用方法  
@@ -91,7 +86,7 @@ class Scheduler;
   
  **命名空間：** concurrency  
   
-##  <a name="attach"></a> Attach 
+##  <a name="attach"></a> 附加 
 
  將排程器附加至呼叫的內容。 這個方法傳回之後，呼叫的內容是由管理排程器並排程器會變成目前的排程器。  
   
@@ -317,7 +312,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ### <a name="remarks"></a>備註  
  如果`SetDefaultSchedulerPolicy`呼叫方法時，預設排程器已經存在於處理程序，將會擲回執行階段[default_scheduler_exists](default-scheduler-exists-class.md)例外狀況。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   

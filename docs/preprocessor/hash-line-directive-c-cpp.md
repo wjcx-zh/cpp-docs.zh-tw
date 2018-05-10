@@ -1,12 +1,9 @@
 ---
-title: "#行指示詞 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: '#行指示詞 （C/c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 10/18/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#line'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - line directive (#line)
 - '#line directive'
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13760aa7c503339c16ed6418badc295170d2c938
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ebbcea7432b27e9269b5041d90d14534a77b812
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="line-directive-cc"></a>#line 指示詞 (C/C++)
 
@@ -43,13 +38,13 @@ ms.lasthandoff: 02/23/2018
 
 *數字順序*值可以是任何整數常數。 在前置處理語彙基元上可以執行巨集取代，不過結果必須評估為正確的語法。 *Filename*可以是任何字元的組合和必須括在雙引號內 (**""**)。 如果*filename*已省略，則為前一個檔名維持不變。
 
-您可以撰寫 `#line` 指示詞，修改原始程式碼行號和檔名。 轉譯器使用的行號和檔名來決定值的預先定義的巨集**&#95; &#95;檔案 #95; &#95;**和**&#95; &#95;資料行 &#95; #95;**. 您可以使用這些巨集，將自述性的錯誤訊息插入程式文字中。 如需有關這些預先定義的巨集的詳細資訊，請參閱[預先定義巨集](../preprocessor/predefined-macros.md)。
+您可以撰寫 `#line` 指示詞，修改原始程式碼行號和檔名。 轉譯器使用的行號和檔名來決定值的預先定義的巨集 **&#95;&#95;檔案&#95;&#95;** 和 **&#95;&#95;列&#95;&#95;**. 您可以使用這些巨集，將自述性的錯誤訊息插入程式文字中。 如需有關這些預先定義的巨集的詳細資訊，請參閱[預先定義巨集](../preprocessor/predefined-macros.md)。
 
-**&#95; &#95;檔案 #95; &#95;**巨集會展開為字串，其內容是檔名，以雙引號括住 (**""**)。
+**&#95;&#95;檔案&#95;&#95;** 巨集會展開為字串，其內容是檔名，以雙引號括住 (**""**)。
 
 如果您變更行號和檔名，編譯器會忽略先前的值並以新的值繼續處理。 程式產生器通常使用 `#line` 指示詞產生錯誤訊息，以參考原始程式檔，而非產生的程式。
 
-下列範例說明`#line`和**&#95; &#95;資料行 &#95; #95;**和**&#95; &#95;檔案 #95; &#95;**巨集。
+下列範例說明`#line`和 **&#95;&#95;列&#95;&#95;** 和 **&#95;&#95;檔案&#95;&#95;** 巨集。
 
 在此陳述式，在內部儲存的行號被設為 151，檔名變更為 copy.c。
 
@@ -57,7 +52,7 @@ ms.lasthandoff: 02/23/2018
 #line 151 "copy.c"
 ```
 
- 在此範例中，巨集`ASSERT`使用預先定義的巨集**&#95; &#95;資料行 &#95; #95;**和**&#95; &#95;檔案 #95; &#95;**列印有關原始程式檔的錯誤訊息，如果給定的判斷提示不是 true。
+ 在此範例中，巨集`ASSERT`使用預先定義的巨集 **&#95;&#95;列&#95;&#95;** 和 **&#95;&#95;檔案&#95;&#95;** 列印如果給定的判斷提示不是 true 來源檔案的相關錯誤訊息。
 
 ```cpp
 #define ASSERT(cond) if( !(cond) )\
@@ -65,6 +60,6 @@ ms.lasthandoff: 02/23/2018
 __LINE__, __FILE__ );}
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [前置處理器指示詞](../preprocessor/preprocessor-directives.md)

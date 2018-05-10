@@ -1,12 +1,9 @@
 ---
-title: "uninitialized_object 類別 |Microsoft 文件"
-ms.custom: 
+title: uninitialized_object 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - uninitialized_object
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6c602ffa6cb444ce2245a655d47ffc9b548276
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9b9b10af535b0739d480326d616ee7587318bb5a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 類別
 使用未初始化的物件時就會擲回例外狀況。  
@@ -78,5 +73,5 @@ unsupported_feature() throw();
 ### <a name="return-value"></a>傳回值  
  `unsupported_feature` 物件。 
 
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

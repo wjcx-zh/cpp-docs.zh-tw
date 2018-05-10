@@ -2,11 +2,8 @@
 title: task 類別 （並行執行階段） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 5887350d9ccdf6fc4a41d72ae8a70fa38d939390
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
 平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 也可以撰寫工作與其他工作，使用接續 ( `then`)，和聯結 ( `when_all`) 和 choice ( `when_any`) 模式。  
@@ -80,7 +75,7 @@ class task;
 |[is_done](#is_done)|判定工作是否完成。|  
 |[scheduler](#scheduler)|傳回此工作的排程器|  
 |[then](#then)|多載。 將接續工作加入至此工作。|  
-|[wait](#wait)|等候這個工作到達終止狀態。 如果符合所有的工作相依性，而且未經選取供背景工作執行，則 `wait` 可以執行內嵌工作。|  
+|[等候](#wait)|等候這個工作到達終止狀態。 如果符合所有的工作相依性，而且未經選取供背景工作執行，則 `wait` 可以執行內嵌工作。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -144,7 +139,7 @@ bool is_done() const;
 ### <a name="remarks"></a>備註  
  如果工作已完成或取消 （不論有無使用者例外狀況），則函數會傳回 true。  
   
-##  <a name="operator_neq"></a> operator!= 
+##  <a name="operator_neq"></a> 運算子 ！ = 
 
  判斷兩個 `task` 物件是否表示不同的內部工作。  
   
@@ -160,7 +155,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>傳回值  
  如果這些物件參考不同的基礎工作則為 `true`，否則為 `false`。  
   
-##  <a name="operator_eq"></a> operator= 
+##  <a name="operator_eq"></a> 運算子 = 
 
  將某個 `task` 物件的內容取代為另一個物件的內容。  
   

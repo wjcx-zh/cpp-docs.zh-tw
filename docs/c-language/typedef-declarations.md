@@ -1,13 +1,10 @@
 ---
-title: "Typedef 宣告 | Microsoft Docs"
-ms.custom: 
+title: Typedef 宣告 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 851776be55ce485d660aa46f4338235c3a1a413a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 192f7ab037362219261852cfdb0a5eac53e5df9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typedef-declarations"></a>Typedef 宣告
 typedef 宣告是將 typedef 宣告為儲存類別的宣告。 宣告子會變成新的類型。 您可以使用 typedef 宣告，針對 C 已經定義或您已經宣告的類型建構較短或更有意義的名稱。 Typedef 名稱可讓您封裝可能變更的實作詳細資料。  
@@ -34,7 +29,7 @@ typedef 宣告是將 typedef 宣告為儲存類別的宣告。 宣告子會變�
   
 ## <a name="syntax"></a>語法  
  `declaration`：  
- *declaration-specifiers init-declarator-list* opt**;**  
+ *declaration-specifiers init-declarator-list* opt **;**  
   
  *declaration-specifiers*：  
  *storage-class-specifier declaration-specifiers* opt  

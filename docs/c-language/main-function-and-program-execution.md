@@ -1,13 +1,10 @@
 ---
-title: "main 函式和程式執行 | Microsoft Docs"
-ms.custom: 
+title: main 函式和程式執行 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-function-and-program-execution"></a>main 函式和程式執行
 每個 C 程式都必須有一個命名為 **main** 的主要 (main) 函式。 如果您的程式碼遵守 Unicode 程式設計模型，則可以使用寬字元版本的 **main**，即 **wmain**。 **main** 函式為程式執行的起點。 它通常會透過直接呼叫程式中的其他函式，以控制程式的執行。 程式通常會在 **main** 的結尾處停止執行，不過，它可能會因為各種理由而在程式的其他位置終止。 通常，在偵測到某個錯誤時，您可能會想要強制終止程式。 若要這麼做，請使用 **exit** 函式。 如需詳細資訊及使用 [exit](../c-runtime-library/reference/exit-exit-exit.md) 函式的範例，請參閱《執行階段程式庫參考》。  

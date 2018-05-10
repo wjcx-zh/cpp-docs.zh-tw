@@ -1,12 +1,9 @@
 ---
-title: "重大 |Microsoft 文件"
-ms.custom: 
+title: 重大 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - Critical
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2ce946fed85fbedce2a1ad0401ad0a36aab783
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5cb5747530f4c3aaa7bcfddc7a44c0c8d91e1270
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="critical"></a>critical
 指定程式碼只會執行一個執行緒上一次。  
@@ -108,5 +103,5 @@ int main()
 max = 29358  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

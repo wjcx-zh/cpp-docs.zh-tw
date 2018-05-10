@@ -1,13 +1,10 @@
 ---
-title: "逐步解說： 使用聯結以避免死結 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 使用聯結以避免死結 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>逐步解說：使用聯結以避免死結
-本主題使用哲學家用餐問題，說明如何使用[concurrency:: join](../../parallel/concrt/reference/join-class.md)類別避免應用程式中的死結。 在軟體應用程式中，*死結*兩個或多個處理序每個保留的資源，且會互相等候另一個處理序釋放其他一些資源時發生。  
+本主題使用哲學家用餐問題，說明如何使用[concurrency:: join](../../parallel/concrt/reference/join-class.md)類別避免應用程式中的死結。 在軟體應用程式中，當兩個或多個處理序都保留資源，且互相等候另一個處理序釋放某些其他資源時，就會發生「死結」。  
   
  哲學家用餐問題是一組一般的多個並行的處理序之間共用的一組資源時可能發生問題的特定範例。  
   
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 - [使用聯結以避免死結](#solution)  
   
-##  <a name="problem"></a>哲學家用餐問題  
+##  <a name="problem"></a> 哲學家用餐問題  
  哲學家用餐問題，說明如何在應用程式中發生死結。 這個問題，請在五個用餐坐在往返資料表。 每個哲學家交替使用思考和吃。 每個哲學家必須分享到左側，而另一個像素的 chopstick chopstick 與向右像素。 下圖顯示這個版面配置。  
   
  ![菜單用餐問題](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="deadlock"></a>貝氏實作  
+##  <a name="deadlock"></a> 貝氏實作  
  下列範例顯示哲學家用餐問題貝氏實作。 `philosopher`類別，衍生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)，可讓每個哲學家獨立執行動作。 此範例會使用的共用的陣列[concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)物件，讓每個`philosopher`物件獨佔存取一雙筷子。  
   
  要關聯至圖例中，實作`philosopher`類別代表一個哲學家。 `int`變數代表每個 chopstick。 `critical_section`物件做為所在 rest 筷子的持有者。 `run`方法模擬哲學家生命週期。 `think`方法模擬考慮動作和`eat`方法模擬吃的動作。  
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="solution"></a>使用聯結以避免死結  
+##  <a name="solution"></a> 使用聯結以避免死結  
  本節說明如何使用訊息緩衝區和訊息傳遞函式，以排除死結的機會。  
   
  要關聯到較早的一個本例`philosopher`類別會取代每個`critical_section`物件使用[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)物件和`join`物件。 `join`物件做為提供哲學家筷子仲裁。  
@@ -154,7 +149,7 @@ plato ate 50 times.
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同步代理程式](../../parallel/concrt/asynchronous-agents.md)   

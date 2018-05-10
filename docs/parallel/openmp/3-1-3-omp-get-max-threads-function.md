@@ -1,27 +1,22 @@
 ---
-title: "3.1.3 omp_get_max_threads 函式 |Microsoft 文件"
-ms.custom: 
+title: 3.1.3 omp_get_max_threads 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 5548897c-546e-4d19-b37b-a76f6b30a0a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13aee27dc04afb8414a89bb8f30a98c8e73fb694
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2afa797cc74a50041f2ea24f76fa07ffe109072b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads 函式
 **Omp_get_max_threads**函式傳回一個整數，保證至少會用來組成一個小組，如果沒有在平行區域的執行緒數目一樣大**num_threads**子句即將此時所發現的程式碼中。 格式如下：  

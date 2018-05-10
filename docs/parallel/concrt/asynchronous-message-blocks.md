@@ -1,13 +1,10 @@
 ---
-title: "非同步訊息區 |Microsoft 文件"
-ms.custom: 
+title: 非同步訊息區 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5de4a9ed20e20c03f44f8b8d421a628f220099f7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-message-blocks"></a>非同步訊息區
 
@@ -60,14 +55,14 @@ ms.lasthandoff: 12/21/2017
   
 - [訊息保留項目](#reservation)  
   
-##  <a name="sources_and_targets"></a>來源和目標  
+##  <a name="sources_and_targets"></a> 來源和目標  
  來源和目標都是訊息傳遞兩個重要的參與者。 A*來源*指的是傳送訊息的通訊的端點。 A*目標*指的是接收訊息的通訊的端點。 您可以將做為您從讀取端點的來源和目標做為您撰寫至端點。 應用程式連接至表單的來源和目標一起*傳訊網路*。  
   
  代理程式程式庫會使用兩個抽象類別來代表來源和目標： [concurrency:: isource](../../parallel/concrt/reference/isource-class.md)和[concurrency:: itarget](../../parallel/concrt/reference/itarget-class.md)。 訊息區塊類型可做為來源衍生自`ISource`; 訊息區塊類型可做為目標衍生自`ITarget`。 訊息區塊類型可做為來源和目標是衍生自兩者`ISource`和`ITarget`。  
   
  [[靠上](#top)]  
   
-##  <a name="propagation"></a>訊息傳播  
+##  <a name="propagation"></a> 訊息傳播  
  *訊息傳播*就是一個元件之間傳送訊息的操作。 當訊息區塊提供訊息時，它可以接受、 拒絕或延後該訊息。 每個訊息區塊類型會儲存，並以不同的方式傳輸訊息。 例如，`unbounded_buffer`類別會儲存不限的數目的訊息，`overwrite_buffer`類別會儲存一次的單一訊息和轉換程式類別會儲存每個訊息的修改的版本。 在本文件稍後將詳細說明這些訊息區塊類型。  
   
  當訊息區塊接受訊息時，它可以選擇性地執行工作並，如果訊息區塊是來源，將產生的訊息傳遞至網路的另一個成員。 訊息區塊可以使用篩選函數，以拒絕不想接收的訊息。 一節中的這個主題稍後的更詳細地說明篩選[訊息篩選](#filtering)。 延後訊息的訊息區塊可以保留該訊息，然後稍後再使用它。 一節中的這個主題稍後的更詳細地描述訊息保留[訊息保留](#reservation)。  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="overview"></a>訊息區塊類型的概觀  
+##  <a name="overview"></a> 訊息區塊類型的概觀  
  下表簡短描述重要的訊息區塊類型的角色。  
   
  [unbounded_buffer](#unbounded_buffer)  
@@ -94,16 +89,16 @@ ms.lasthandoff: 12/21/2017
  [呼叫](#call)  
  收到訊息時，會執行工作。  
   
- [轉換程式](#transformer)  
+ [transformer](#transformer)  
  當它接收資料，並將該工作的結果傳送至另一個目標區塊，會執行工作。 `transformer`類別可以處理不同的輸入和輸出類型。  
   
- [選擇](#choice)  
+ [choice](#choice)  
  選取第一個可用的訊息從一組的來源。  
   
  [聯結和多類型的聯結](#join)  
  等候所有訊息從一組的來源接收，然後將訊息結合成一個訊息的其他訊息區塊。  
   
- [計時器](#timer)  
+ [timer](#timer)  
  傳送訊息至目標區塊，以定期間隔。  
   
  這些訊息區塊類型具有不同的特性，使它們適用於不同的情況。 以下是一些的特性：  
@@ -134,7 +129,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="unbounded_buffer"></a>unbounded_buffer 類別  
+##  <a name="unbounded_buffer"></a> unbounded_buffer 類別  
  [Concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)類別代表一般用途的非同步傳訊結構。 這個類別會儲存可由多個來源寫入或由多個目標讀取之訊息的先進先出 (FIFO) 佇列。 當目標會接收來自訊息`unbounded_buffer`物件，從訊息佇列中移除該訊息。 因此，雖然`unbounded_buffer`物件可以具有多個目標，只有一個目標會接收每則訊息。 當您想要將多則訊息傳遞給其他元件，而且該元件必須接收每則訊息時，`unbounded_buffer` 類別就很有用。  
   
 ### <a name="example"></a>範例  
@@ -152,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="overwrite_buffer"></a>overwrite_buffer 類別  
+##  <a name="overwrite_buffer"></a> overwrite_buffer 類別  
  [Concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)類別類似於`unbounded_buffer`類別，但是`overwrite_buffer`物件會儲存一個訊息。 此外，當目標收到來自郵件`overwrite_buffer`物件，該訊息不會從緩衝區移除。 因此，多個目標會接收此訊息的複本。  
   
  `overwrite_buffer`類別就很有用，當您想要將多個訊息傳遞給另一個元件，但是該元件只需要最新的值。 當您想要將訊息廣播至多個元件時，這個類別也很有用。  
@@ -172,7 +167,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="single_assignment"></a>single_assignment 類別  
+##  <a name="single_assignment"></a> single_assignment 類別  
  [Concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md)類別類似於`overwrite_buffer`類別，但是`single_assignment`物件只能被寫入一次。 與 `overwrite_buffer` 類別相同的是，當目標從 `single_assignment` 物件收到訊息時，並不會從此物件中移除該訊息。 因此，多個目標會接收此訊息的複本。 `single_assignment`類別就很有用，當您想要廣播一則訊息到多個元件。  
   
 ### <a name="example"></a>範例  
@@ -190,7 +185,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="call"></a>呼叫類別  
+##  <a name="call"></a> 呼叫類別  
  [Concurrency:: call](../../parallel/concrt/reference/call-class.md)類別是做為訊息接收者收到資料時執行工作函式。 此工作函式可以是 lambda 運算式、 函式物件或函式指標。 A`call`物件的行為方式會比一般函式呼叫因為其會以平行方式將訊息傳送至其他元件。 如果`call`物件收到訊息時執行工作，它會將該訊息加入佇列。 每個`call`排入佇列的訊息已接收的順序物件的處理程序。  
   
 ### <a name="example"></a>範例  
@@ -208,7 +203,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="transformer"></a>transformer 類別  
+##  <a name="transformer"></a> transformer 類別  
  [Concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)類別是做為訊息接收者和做為訊息傳送者。 `transformer`類別類似於`call`類別，因為它會接收資料時執行使用者定義的工作函式。 不過，`transformer`類別也會將工作函式的結果傳送至接收者物件。 像`call`物件`transformer`物件會以平行方式將訊息傳送至其他元件。 如果`transformer`物件收到訊息時執行工作，它會將該訊息加入佇列。 每個`transformer`物件處理其佇列的訊息已接收的順序。  
   
  `transformer`類別將訊息傳送至一個目標。 如果您設定`_PTarget`參數的建構函式中`NULL`，您稍後可以藉由呼叫指定的目標[concurrency::link_target](reference/source-block-class.md#link_target)方法。  
@@ -230,7 +225,7 @@ ms.lasthandoff: 12/21/2017
   
  [[靠上](#top)]  
   
-##  <a name="choice"></a>choice 類別  
+##  <a name="choice"></a> choice 類別  
  [Concurrency:: choice](../../parallel/concrt/reference/choice-class.md)類別選取第一個可用的訊息從一組的來源。 `choice`類別表示的控制流程機制，而不是資料流程機制 (主題[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)描述資料流程與控制流程之間的差異)。  
   
  從 選擇物件讀取類似於呼叫 Windows API 函式`WaitForMultipleObjects`時有`bWaitAll`參數設定為`FALSE`。 不過，`choice`類別將資料繫結至事件本身而不是外部的同步處理物件。  
@@ -263,7 +258,7 @@ fib35 received its value first. Result = 9227465
   
  [[靠上](#top)]  
   
-##  <a name="join"></a>聯結和 multitype_join 類別  
+##  <a name="join"></a> 聯結和 multitype_join 類別  
  [Concurrency:: join](../../parallel/concrt/reference/join-class.md)和[concurrency::multitype_join](../../parallel/concrt/reference/multitype-join-class.md)類別可讓您等候的一組的來源接收訊息的每個成員。 `join`類別會有一個一般訊息類型的來源物件上。 `multitype_join`類別可以有不同的訊息類型的來源物件上的作用是。  
   
  從讀取`join`或`multitype_join`物件類似於呼叫 Windows API 函式`WaitForMultipleObjects`時有`bWaitAll`參數設定為`TRUE`。 不過，就像`choice`物件`join`和`multitype_join`物件會使用資料繫結至事件本身而不是外部的同步處理物件事件的機制。  
@@ -293,7 +288,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   
  [[靠上](#top)]  
   
-##  <a name="timer"></a>timer 類別  
+##  <a name="timer"></a> timer 類別  
  Concurrency::[timer 類別](../../parallel/concrt/reference/timer-class.md)做為訊息來源。 A`timer`物件將訊息傳送到目標經過一段指定的時間之後。 `timer`類別就很有用，您必須延遲傳送訊息，或您想要定期傳送訊息時。  
   
 
@@ -319,7 +314,7 @@ Computing fib(42)..................................................result is 267
   
  [[靠上](#top)]  
   
-##  <a name="filtering"></a>訊息篩選  
+##  <a name="filtering"></a> 訊息篩選  
  當您建立訊息區塊物件時，您可以提供*filter 函數*，判斷訊息區塊接受或拒絕訊息。 篩選函數是有用的方式，若要保證的訊息區塊只接收特定值。  
   
  下列範例示範如何建立`unbounded_buffer`接受雙數只使用篩選函數的物件。 `unbounded_buffer`物件拒絕奇數，並因此不會傳播至目標區塊的奇數。  
@@ -345,7 +340,7 @@ bool (T const &)
   
  [[靠上](#top)]  
   
-##  <a name="reservation"></a>訊息保留項目  
+##  <a name="reservation"></a> 訊息保留項目  
  *訊息保留*可讓訊息區塊保留供日後使用的訊息。 一般而言，訊息保留項目不會直接使用。 但是，了解訊息保留項目可協助您更佳了解一些預先定義的訊息區塊類型的行為。  
   
  請考慮非窮盡和窮盡聯結。 這兩種使用訊息保留項目以保留供日後使用的訊息。 描述更早版本，非窮盡聯結會接收訊息在兩個階段。 在第一個階段中，非窮盡`join`物件會等待每一個來源接收訊息。 非窮盡聯結會接著嘗試保留每個訊息。 如果它可以保留每個訊息，它會取用所有的訊息，並將它們傳播到其目標。 否則，它會釋放，或取消，訊息保留項目，一次等候每個來源接收訊息。  
@@ -356,6 +351,6 @@ bool (T const &)
   
  [[靠上](#top)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)
 

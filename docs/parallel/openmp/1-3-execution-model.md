@@ -1,27 +1,22 @@
 ---
-title: "1.3 執行模式 |Microsoft 文件"
-ms.custom: 
+title: 1.3 執行模式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0acdd7a5d9f2dcb58850254281b5c18fd0d1123c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="13-execution-model"></a>1.3 執行模式
 OpenMP 使用分岔 / 聯結模型的平行執行。 雖然這個分岔 / 聯結模型適合用來解決各種問題是，它是稍微適合大型陣列為基礎的應用程式。 OpenMP 的目的，將會正確執行兩者都為平行程式 （執行多個執行緒和完整的 OpenMP 支援程式庫） 的支援程式並為 （忽略指示詞和簡單的 OpenMP 虛設常式程式庫） 的循序程式。 不過，有可能，允許開發不會無法正確運作時循序執行的程式。 此外，不同程度的平行處理原則可能會導致不同的數值結果因為關聯的數字的操作中的變更。 例如，序列加法減少可能有不同的模式比平行減少加法關聯。 這些不同的關聯可能會變更浮點加法的結果。  

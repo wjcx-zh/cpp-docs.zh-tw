@@ -1,12 +1,9 @@
 ---
-title: "extent 類別 (c + + AMP) |Microsoft 文件"
-ms.custom: 
+title: extent 類別 (c + + AMP) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>extent 類別 (C++ AMP)
 代表向量*N*整數值，指定的界限*N*-維度具有 0 的原點的空間。 在向量中的值為從最大顯著性到最小顯著性排序。  
@@ -64,7 +59,7 @@ class extent;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[contains](#contains)|確認指定`extent`物件具有指定的陣序規範。|  
+|[包含](#contains)|確認指定`extent`物件具有指定的陣序規範。|  
 |[size](#size)|傳回線性的大小總計 （以元素為單位） 的範圍。|  
 |[tile](#tile)|會產生`tiled_extent`指定維度與所指定的圖格範圍的物件。|  
   
@@ -151,7 +146,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  如果陣列用來建構`extent`物件陣列的長度必須符合的陣序`extent`物件。  
   
-##  <a name="operator_mod_eq"></a> operator%= 
+##  <a name="operator_mod_eq"></a> operator %= 
 
 數字除以該元素時，計算每個項目的 '範圍' 中的模數 （餘數）。  
   
@@ -168,7 +163,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>傳回值  
  `extent` 物件。  
   
-##  <a name="operator_star_eq"></a> operator*= 
+##  <a name="operator_star_eq"></a> 運算子 * = 
 
 乘上每個項目中指定數目的 '範圍' 物件。  
   
@@ -216,7 +211,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>傳回值  
  前置運算子，如`extent`物件 (`*this`)。 若為後置運算子，新`extent`物件。  
   
-##  <a name="operator_add_eq"></a> operator+= 
+##  <a name="operator_add_eq"></a> 運算子 + = 
 
 將指定的數字加入至 '範圍' 物件的每個項目。  
   
@@ -377,5 +372,5 @@ tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 
 
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

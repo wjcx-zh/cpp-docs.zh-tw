@@ -1,33 +1,28 @@
 ---
-title: "宣告摘要 | Microsoft Docs"
-ms.custom: 
+title: 宣告摘要 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 53a5e9e5-1a33-40b5-9dea-7f669b479329
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61dae4cf26f881014f0d98bbf30ebd10a360b10f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: a9e5fe380d41b5d1e58a63b1aa0b99a239dee515
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="summary-of-declarations"></a>宣告摘要
 `declaration`:  
  *declaration-specifiers attribute-seq* <sub>opt</sub> *init-declarator-list*<sub>opt</sub>**;**  
   
- /\* *attribute-seq* 是 Microsoft 專有 \*/  
+ /\* *attribute-seq* 是 Microsoft 專有 */  
   
  *declaration-specifiers*：  
  *storage-class-specifier declaration-specifiers*<sub>opt</sub>  
@@ -242,7 +237,7 @@ ms.lasthandoff: 03/16/2018
   
  `dllexport`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [呼叫慣例](../cpp/calling-conventions.md)   
  [階段結構文法](../c-language/phrase-structure-grammar.md)   
  [過時呼叫慣例](../cpp/obsolete-calling-conventions.md)

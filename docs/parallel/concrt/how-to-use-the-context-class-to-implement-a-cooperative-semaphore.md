@@ -1,30 +1,25 @@
 ---
-title: "如何： 使用內容類別實作合作式信號 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用內容類別實作合作式信號 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03884d69877053976fdaf04e507c4c1c4214026e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 481c5f092becee7f455294437bdc695a6e1e4057
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>如何：使用內容類別實作合作式信號
 本主題示範如何使用 concurrency:: context 類別實作合作式信號類別。  
@@ -96,7 +91,7 @@ In loop iteration 4...
   
  [!code-cpp[concrt-cooperative-semaphore#8](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_8.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [內容](../../parallel/concrt/contexts.md)   
  [平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)
 

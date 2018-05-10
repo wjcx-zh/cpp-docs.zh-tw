@@ -1,30 +1,25 @@
 ---
-title: "運算子 = = 運算子 (microsoft:: wrl) |Microsoft 文件"
-ms.custom: 
+title: '運算子 = = 運算子 (microsoft:: wrl) |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator==
 dev_langs:
 - C++
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92f87671b5efa9d4013ffd1d5d622ec225d65940
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27d3ab799f9a71e6386d63106d72b72b7eec24ed
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator== 運算子 (Microsoft::WRL)
 等號比較運算子，如[ComPtr](../windows/comptr-class.md)和[ComPtrRef](../windows/comptrref-class.md)物件。  
@@ -81,5 +76,5 @@ WRL_NOTHROW bool operator==(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

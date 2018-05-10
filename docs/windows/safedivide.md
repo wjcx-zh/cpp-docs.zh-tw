@@ -1,13 +1,10 @@
 ---
-title: "SafeDivide |Microsoft 文件"
-ms.custom: 
+title: SafeDivide |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeDivide
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeDivide function
 ms.assetid: b5b27484-ad6e-46b1-ba9f-1c7120dd103b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d6d3b774cb014b8257cf412bf2dec2827abeda2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0264fbd8df7f1dec5d20b40a67299cb4502b72aa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safedivide"></a>SafeDivide
 兩數相除防止除以零的方式。  
@@ -53,7 +48,7 @@ inline bool SafeDivide (
  參數所在`SafeDivide`儲存結果。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果沒有發生錯誤。`false`如果發生錯誤。  
+ `true` 如果沒有發生錯誤。`false`如果發生錯誤。  
   
 ## <a name="remarks"></a>備註  
  這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，而不需要建立的執行個體適用於單一除法運算[SafeInt 類別](../windows/safeint-class.md)。  
@@ -68,7 +63,7 @@ inline bool SafeDivide (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

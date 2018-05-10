@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 中的泛型概觀 |Microsoft 文件"
-ms.custom: 
+title: Visual c + + 中的泛型概觀 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++ 中的泛型概觀
 泛型是通用語言執行平台 (CLR) 所支援的參數化類型。 參數化類型是以使用泛型時指定的未知型別參數定義的類型。  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
  條件約束是對可做為類型參數之類型的限制。 例如，某一特定泛型類別只能接受繼承自指定類別的類別，或者實作指定的介面。 如需詳細資訊，請參閱[泛型型別參數的條件約束 (C + + /CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
   
 ## <a name="reference-types-and-value-types"></a>參考類型和值類型  
- 控制代碼類型和實值類型可做為類型引數使用。 在使用任一類型的泛型定義中，語法會是參考類型的語法。 例如，  **->** 運算子用來存取成員的型別參數的型別，無論最終使用的類型是否為參考類型或實值類型。 當實值類型做為型別引數使用時，執行階段會產生直接使用實值類型的程式碼，而不會對實值類型進行 Boxing 處理。  
+ 控制代碼類型和實值類型可做為類型引數使用。 在使用任一類型的泛型定義中，語法會是參考類型的語法。 例如， **->** 運算子用來存取成員的型別參數的型別，無論最終使用的類型是否為參考類型或實值類型。 當實值類型做為型別引數使用時，執行階段會產生直接使用實值類型的程式碼，而不會對實值類型進行 Boxing 處理。  
   
  當使用參考類型做為泛型類型引數時，請使用控制代碼語法。 當使用實值類型做為泛型型別引數時，請直接使用類型的名稱。  
   
@@ -141,5 +136,5 @@ int main() {
   
  其中 `T` 是泛型類別或方法定義中的類型參數，會將變數初始化為其預設值。 如果 `T` 是 ref 類別，它會是 null 指標；如果 `T` 是實值類別，則物件會初始化為零。 這稱為*預設初始設定式*。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

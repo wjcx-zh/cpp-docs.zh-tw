@@ -1,13 +1,10 @@
 ---
-title: "db_command |Microsoft 文件"
-ms.custom: 
+title: db_command |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_command
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87209d673da47827723198697a26300d4056d3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0fe3f712566345bb069b798207cfdb10a0aa636
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbcommand"></a>db_command
 建立 OLE DB 命令。  
@@ -76,7 +71,7 @@ binding parameter block 3
   
 -   **[db_column]** 會將每個成員變數繫結至資料列集中的資料行。  
   
--   **[bindto]** (與 **[db_column]**相同)。  
+-   **[bindto]** (與 **[db_column]** 相同)。  
   
 -   **[in]** 會將成員變數繫結為輸入參數。  
   
@@ -272,6 +267,6 @@ int main() {
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者屬性](../windows/ole-db-consumer-attributes.md)   
  [獨立屬性](../windows/stand-alone-attributes.md)   

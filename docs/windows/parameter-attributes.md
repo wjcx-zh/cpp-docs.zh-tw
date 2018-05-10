@@ -1,38 +1,33 @@
 ---
-title: "參數屬性 |Microsoft 文件"
-ms.custom: 
+title: 參數屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9856cec61b48c8cdfaf6b4e9acfe8137d8edae0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2bd1f0d395375b09a192a68c8a60ea3a367115c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="parameter-attributes"></a>參數屬性
 下列屬性套用至類別或介面中方法的參數。  
   
 |屬性|描述|  
 |---------------|-----------------|  
-|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
 |[defaultvalue](../windows/defaultvalue.md)|允許指定具類型的選擇性參數的預設值。|  
 |[first_is](../windows/first-is.md)|指定要傳送的第一個陣列元素的索引。|  
 |[iid_is](../windows/iid-is.md)|指定要傳送的第一個陣列元素的索引。|  
@@ -51,5 +46,5 @@ ms.lasthandoff: 12/21/2017
 |[size_is](../windows/size-is.md)|指定的記憶體大小配置大小的指標，調整大小的指標和單一或多維度陣列的指標。|  
 |[unique](../windows/unique-cpp.md)|指定唯一的指標。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依使用方式分類的屬性](../windows/attributes-by-usage.md)

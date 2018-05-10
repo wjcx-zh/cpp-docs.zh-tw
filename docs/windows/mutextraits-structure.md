@@ -1,12 +1,9 @@
 ---
-title: "MutexTraits 結構 |Microsoft 文件"
-ms.custom: 
+title: MutexTraits 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::MutexTraits
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - MutexTraits structure
 ms.assetid: 6582df80-b9ba-4892-948f-d572a3b23d54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd8dac513b5eec049fbb739ab79628d9f41c96b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0406ec7938a623be7b16e0535e9d2c0c769f8392
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mutextraits-structure"></a>MutexTraits 結構
 定義的一般特性[Mutex](../windows/mutex-class1.md)類別。  
@@ -55,5 +50,5 @@ struct MutexTraits : HANDLENullTraits;
   
  **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

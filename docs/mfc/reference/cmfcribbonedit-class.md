@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonEdit 類別 |Microsoft 文件"
-ms.custom: 
+title: CMFCRibbonEdit 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonEdit
@@ -82,17 +79,15 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43a497b3eeec48c22d688f4974efcb3d2f511446
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 類別
 實作編輯控制項放在功能區列上。  
@@ -159,7 +154,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 ## <a name="requirements"></a>需求  
  **標頭：** afxRibbonEdit.h  
   
-##  <a name="canbestretched"></a>CMFCRibbonEdit::CanBeStretched  
+##  <a name="canbestretched"></a>  CMFCRibbonEdit::CanBeStretched  
  指出是否的高度[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項可以以垂直方式增加至功能區列的高度。  
   
 ```  
@@ -171,7 +166,7 @@ virtual BOOL CanBeStretched();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="cmfcribbonedit"></a>CMFCRibbonEdit::CMFCRibbonEdit  
+##  <a name="cmfcribbonedit"></a>  CMFCRibbonEdit::CMFCRibbonEdit  
  建構[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
   
 ```  
@@ -200,7 +195,7 @@ CMFCRibbonEdit();
 ### <a name="remarks"></a>備註  
  `CMFCRibbonEdit`控制項不會使用大型影像。  
   
-##  <a name="copyfrom"></a>CMFCRibbonEdit::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonEdit::CopyFrom  
  複製指定的狀態[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件與目前[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
   
 ```  
@@ -214,7 +209,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ### <a name="remarks"></a>備註  
  `src`參數必須是型別`CMFCRibbonEdit`。  
   
-##  <a name="createedit"></a>CMFCRibbonEdit::CreateEdit  
+##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  建立新的文字方塊，用於[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
   
 ```  
@@ -248,7 +243,7 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
   
 - **WS_TABSTOP**  
   
-##  <a name="destroyctrl"></a>CMFCRibbonEdit::DestroyCtrl  
+##  <a name="destroyctrl"></a>  CMFCRibbonEdit::DestroyCtrl  
  終結[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
   
 ```  
@@ -257,7 +252,7 @@ virtual void DestroyCtrl();
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="dropdownlist"></a>CMFCRibbonEdit::DropDownList  
+##  <a name="dropdownlist"></a>  CMFCRibbonEdit::DropDownList  
  下拉清單方塊。  
   
 ```  
@@ -267,7 +262,7 @@ virtual void DropDownList();
 ### <a name="remarks"></a>備註  
  依預設這個方法沒有任何作用。 覆寫此方法下拉式清單方塊。  
   
-##  <a name="enablespinbuttons"></a>CMFCRibbonEdit::EnableSpinButtons  
+##  <a name="enablespinbuttons"></a>  CMFCRibbonEdit::EnableSpinButtons  
  啟用並設定微調按鈕的文字方塊中的範圍。  
   
 ```  
@@ -286,7 +281,7 @@ void EnableSpinButtons(
 ### <a name="remarks"></a>備註  
  微調按鈕顯示向上和向下箭號，並讓使用者移動一組固定的值。  
   
-##  <a name="getcompactsize"></a>CMFCRibbonEdit::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonEdit::GetCompactSize  
  擷取的壓縮大小[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
   
 ```  
@@ -302,7 +297,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getedittext"></a>CMFCRibbonEdit::GetEditText  
+##  <a name="getedittext"></a>  CMFCRibbonEdit::GetEditText  
  擷取在文字方塊中的文字。  
   
 ```  
@@ -314,7 +309,7 @@ CString GetEditText() const;
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonEdit::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonEdit::GetIntermediateSize  
  擷取的中繼大小[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
   
 ```  
@@ -330,7 +325,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="gettextalign"></a>CMFCRibbonEdit::GetTextAlign  
+##  <a name="gettextalign"></a>  CMFCRibbonEdit::GetTextAlign  
  擷取在文字方塊中文字的對齊方式。  
   
 ```  
@@ -351,7 +346,7 @@ int GetTextAlign() const;
   
  如需有關這些樣式的詳細資訊，請參閱[編輯控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
   
-##  <a name="getwidth"></a>CMFCRibbonEdit::GetWidth  
+##  <a name="getwidth"></a>  CMFCRibbonEdit::GetWidth  
  擷取的寬度，以像素的[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
   
 ```  
@@ -360,14 +355,14 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
   
 ### <a name="parameters"></a>參數  
  [輸入] `bInFloatyMode`  
- `TRUE`如果`CMFCRibbonEdit`控制項為浮動的模式; 否則`FALSE`。  
+ `TRUE` 如果`CMFCRibbonEdit`控制項為浮動的模式; 否則`FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  寬度，以像素的`CMFCRibbonEdit`控制項。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="hascompactmode"></a>CMFCRibbonEdit::HasCompactMode  
+##  <a name="hascompactmode"></a>  CMFCRibbonEdit::HasCompactMode  
  指出是否顯示大小[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項可以壓縮。  
   
 ```  
@@ -380,7 +375,7 @@ virtual BOOL HasCompactMode() const;
 ### <a name="remarks"></a>備註  
  依預設這個方法一律會傳回`TRUE`。 覆寫此方法，指出是否可壓縮的顯示大小。  
   
-##  <a name="hasfocus"></a>CMFCRibbonEdit::HasFocus  
+##  <a name="hasfocus"></a>  CMFCRibbonEdit::HasFocus  
  指出是否[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項有焦點。  
   
 ```  
@@ -388,11 +383,11 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果`CMFCRibbonEdit`控制項有焦點; 否則為`FALSE`。  
+ `TRUE` 如果`CMFCRibbonEdit`控制項有焦點; 否則為`FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="haslargemode"></a>CMFCRibbonEdit::HasLargeMode  
+##  <a name="haslargemode"></a>  CMFCRibbonEdit::HasLargeMode  
  指出是否顯示大小[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項都可以是大型。  
   
 ```  
@@ -405,7 +400,7 @@ virtual BOOL HasLargeMode() const;
 ### <a name="remarks"></a>備註  
  依預設這個方法一律會傳回`FALSE`。 覆寫此方法，指出是否顯示大小可能會大。  
   
-##  <a name="hasspinbuttons"></a>CMFCRibbonEdit::HasSpinButtons  
+##  <a name="hasspinbuttons"></a>  CMFCRibbonEdit::HasSpinButtons  
  指出文字方塊是否有微調按鈕。  
   
 ```  
@@ -413,11 +408,11 @@ virtual BOOL HasSpinButtons() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果文字方塊具有微調按鈕。否則`FALSE`。  
+ `TRUE` 如果文字方塊具有微調按鈕。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ishighlighted"></a>CMFCRibbonEdit::IsHighlighted  
+##  <a name="ishighlighted"></a>  CMFCRibbonEdit::IsHighlighted  
  指出是否[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)反白顯示控制項。  
   
 ```  
@@ -425,11 +420,11 @@ virtual BOOL IsHighlighted() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`如果`CMFCRibbonEdit`控制項已反白顯示，否則`FALSE`。  
+ `TRUE` 如果`CMFCRibbonEdit`控制項已反白顯示，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonEdit::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>  CMFCRibbonEdit::OnAfterChangeRect  
  由架構呼叫時的顯示矩形的尺寸[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制變更。  
   
 ```  
@@ -442,7 +437,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondraw"></a>CMFCRibbonEdit::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonEdit::OnDraw  
  由架構呼叫以繪製[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
   
 ```  
@@ -455,7 +450,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawlabelandimage"></a>CMFCRibbonEdit::OnDrawLabelAndImage  
+##  <a name="ondrawlabelandimage"></a>  CMFCRibbonEdit::OnDrawLabelAndImage  
  由架構呼叫以繪製在標籤和影像的[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
   
 ```  
@@ -468,7 +463,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonEdit::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonEdit::OnDrawOnList  
  由架構呼叫以繪製[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)命令清單方塊中的控制項。  
   
 ```  
@@ -486,7 +481,7 @@ virtual void OnDrawOnList(
  裝置內容的指標`CMFCRibbonEdit`控制項。  
   
  [輸入] `strText`  
- 顯示文字[](../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 類別")。  
+ 顯示文字[ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 類別")。  
   
  [輸入] `nTextOffset`  
  像素為單位，從清單方塊來顯示文字的左邊算起的距離。  
@@ -503,7 +498,7 @@ virtual void OnDrawOnList(
 ### <a name="remarks"></a>備註  
  命令清單方塊會顯示功能區控制項，讓使用者可以自訂快速存取工具列。  
   
-##  <a name="onenable"></a>CMFCRibbonEdit::OnEnable  
+##  <a name="onenable"></a>  CMFCRibbonEdit::OnEnable  
  由架構呼叫以啟用或停用[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
   
 ```  
@@ -512,11 +507,11 @@ virtual void OnEnable(BOOL bEnable);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bEnable`  
- `TRUE`若要啟用控制項。`FALSE`停用控制項。  
+ `TRUE` 若要啟用控制項。`FALSE`停用控制項。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onhighlight"></a>CMFCRibbonEdit::OnHighlight  
+##  <a name="onhighlight"></a>  CMFCRibbonEdit::OnHighlight  
  當滑鼠指標進入或離開範圍時，由架構呼叫[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
   
 ```  
@@ -525,11 +520,11 @@ virtual void OnHighlight(BOOL bHighlight);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bHighlight`  
- `TRUE`如果在指標位於界限`CMFCRibbonEdit`控制項等控制項，否則`FALSE`。  
+ `TRUE` 如果在指標位於界限`CMFCRibbonEdit`控制項等控制項，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onkey"></a>CMFCRibbonEdit::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonEdit::OnKey  
  當使用者按下 keytip 時由架構呼叫和[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項有焦點。  
   
 ```  
@@ -538,14 +533,14 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bIsMenuKey`  
- `TRUE`如果 keytip 顯示快顯功能表。否則， `FALSE`。  
+ `TRUE` 如果 keytip 顯示快顯功能表。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  如果事件已處理，則為 `TRUE`；否則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onlbuttondown"></a>CMFCRibbonEdit::OnLButtonDown  
+##  <a name="onlbuttondown"></a>  CMFCRibbonEdit::OnLButtonDown  
  由架構呼叫以更新[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制當使用者按下滑鼠左的按鈕控制項上。  
   
 ```  
@@ -558,7 +553,7 @@ virtual void OnLButtonDown(CPoint point);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onlbuttonup"></a>CMFCRibbonEdit::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CMFCRibbonEdit::OnLButtonUp  
  當使用者放開滑鼠左的按鈕時由架構呼叫。  
   
 ```  
@@ -571,7 +566,7 @@ virtual void OnLButtonUp(CPoint point);
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonEdit::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonEdit::OnRTLChanged  
  由架構呼叫以更新[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制當版面配置變更方向。  
   
 ```  
@@ -580,11 +575,11 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bIsRTL`  
- `TRUE`如果配置為從右至左。`FALSE`如果版面配置是由左到右。  
+ `TRUE` 如果配置為從右至左。`FALSE`如果版面配置是由左到右。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="onshow"></a>CMFCRibbonEdit::OnShow  
+##  <a name="onshow"></a>  CMFCRibbonEdit::OnShow  
  由架構呼叫以顯示或隱藏[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
   
 ```  
@@ -593,11 +588,11 @@ virtual void OnShow(BOOL bShow);
   
 ### <a name="parameters"></a>參數  
  [輸入] `bShow`  
- `TRUE`若要顯示的控制項。`FALSE`隱藏控制項。  
+ `TRUE` 若要顯示的控制項。`FALSE`隱藏控制項。  
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="redraw"></a>CMFCRibbonEdit::Redraw  
+##  <a name="redraw"></a>  CMFCRibbonEdit::Redraw  
  更新的顯示[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
   
 ```  
@@ -607,7 +602,7 @@ virtual void Redraw();
 ### <a name="remarks"></a>備註  
  這個方法會重新繪製的顯示矩形`CMFCRibbonEdit`透過間接呼叫[CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911)與`RDW_INVALIDATE`， `RDW_ERASE`，和`RDW_UPDATENOW`旗標集。  
   
-##  <a name="setaccdata"></a>CMFCRibbonEdit::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonEdit::SetACCData  
  設定的協助工具資料[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
   
 ```  
@@ -628,7 +623,7 @@ virtual BOOL SetACCData(
   
 ### <a name="remarks"></a>備註  
   
-##  <a name="setedittext"></a>CMFCRibbonEdit::SetEditText  
+##  <a name="setedittext"></a>  CMFCRibbonEdit::SetEditText  
  在文字方塊中設定的文字。  
   
 ```  
@@ -639,7 +634,7 @@ void SetEditText(CString strText);
  [輸入] `strText`  
  文字方塊的文字。  
   
-##  <a name="settextalign"></a>CMFCRibbonEdit::SetTextAlign  
+##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
  設定文字方塊的文字對齊方式。  
   
 ```  
@@ -661,7 +656,7 @@ void SetTextAlign(int nAlign);
   
  如需有關這些樣式的詳細資訊，請參閱[編輯控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775464)。  
   
-##  <a name="setwidth"></a>CMFCRibbonEdit::SetWidth  
+##  <a name="setwidth"></a>  CMFCRibbonEdit::SetWidth  
  設定文字方塊的寬度[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)控制項。  
   
 ```  
@@ -675,12 +670,12 @@ void SetWidth(
  寬度 （以像素的文字方塊）。  
   
  `bInFloatyMode`  
- `TRUE`設定浮點模式; 寬度`FALSE`設定的一般模式的寬度。  
+ `TRUE` 設定浮點模式; 寬度`FALSE`設定的一般模式的寬度。  
   
 ### <a name="remarks"></a>備註  
  `CMFCRibbonEdit`控制項有兩種寬度根據它的顯示模式： 浮點模式和標準模式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton 類別](../../mfc/reference/cmfcribbonbutton-class.md)   

@@ -1,29 +1,24 @@
 ---
-title: "跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤 | Microsoft Docs"
-ms.custom: 
+title: 跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0355b1c6a2731c9ca82e7ced37ad28f30a881eca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5fc211f47ca7d5c64ee068707f49620cd5e646f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤
 當您將 C 執行階段 (CRT) 物件 (例如檔案控制代碼、地區設定和環境變數) 傳遞進出 DLL (跨 DLL 界限的函式呼叫) 時，如果 DLL 以及呼叫 DLL 的檔案使用不同複本的 CRT 程式庫，可能會發生未預期的行為。  

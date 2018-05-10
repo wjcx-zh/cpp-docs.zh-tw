@@ -1,13 +1,10 @@
 ---
-title: "地區設定和字碼頁 |Microsoft 文件"
-ms.custom: 
+title: 地區設定和字碼頁 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - code pages [C++], locales
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ab2f67a382da831ff4c1038f0269d0044f751f
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: b1c7dd3c5356df7b80f21605e325158e87cc5a71
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="locales-and-code-pages"></a>地區設定和字碼頁
 地區設定識別碼反映當地慣例和語言特定地理區域。 一種指定語言可以在一個以上的國家/地區使用，例如巴西和葡萄牙都說葡萄牙語。 反過來說，一個國家/地區可能有一種以上的官方語言。 例如，加拿大有兩種語言： 英文和法文。 因此，加拿大有兩個不同的地區設定： 加拿大英文和加拿大法文。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 02/09/2018
   
  C 執行階段函式`setlocale`設定、 變更，或查詢部分或所有目前程式的地區設定資訊。 [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)常式是寬字元版本的`setlocale`; 引數和傳回值`_wsetlocale`是寬字元字串。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   
  [字元集可移植性的優點](../text/benefits-of-character-set-portability.md)

@@ -1,13 +1,10 @@
 ---
-title: "格線設定對話方塊 （圖示影像編輯器） |Microsoft 文件"
-ms.custom: 
+title: 格線設定對話方塊 （圖示影像編輯器） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Grid Settings dialog box
 ms.assetid: 59ce033a-ff10-48cd-b414-f9cb74da6789
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1b3df26fc7612c236197903ecb9ce0e1d9de6b14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f8e3a1aba4040ce4e9f36cf15438cfd1c44492e4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>格線設定對話方塊 (圖示影像編輯器)
 可讓您指定格線設定您的映像，並顯示格線透過編輯映像。 格線可用於編輯映像，但不是會儲存為影像本身的一部分。  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [調整影像大小](../windows/resizing-an-image-image-editor-for-icons.md)   
  [圖示影像編輯器](../windows/image-editor-for-icons.md)
 

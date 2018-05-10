@@ -1,31 +1,26 @@
 ---
-title: "快速鍵類型屬性 |Microsoft 文件"
-ms.custom: 
+title: 快速鍵類型屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property
 - VIRTKEY
 ms.assetid: 8c349bc4-e6ad-43fa-959e-f29168af35b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 214d8ca9c45a3657215833764268794b152bd337
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb1ba8f117fadab7cccb835ba8889d57bcc9f184
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="accelerator-type-property"></a>快速鍵類型屬性
 快速鍵**類型**屬性決定快速鍵 ID 相關聯的快速鍵組合是虛擬的按鍵組合或 ASCII/ANSI 機碼值：  
@@ -40,6 +35,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定快速鍵屬性](../windows/setting-accelerator-properties.md)   
  [快速鍵編輯器](../windows/accelerator-editor.md)

@@ -1,13 +1,10 @@
 ---
-title: "建置屬性化的程式 |Microsoft 文件"
-ms.custom: 
+title: 建置屬性化的程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - .idl files, building
 - type libraries, linker options for building
 ms.assetid: 04997b5f-bf2c-46ec-b868-c4adebbef5f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3e39bbd2b630d35942c1c5107041b2fbadf7549
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d87f95b456e3f99598f48e6ffa8ad29806aa168
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="building-an-attributed-program"></a>建置屬性化程式
 Visual c + + 屬性放入您的程式碼之後，您可能想 Visual c + + 編譯器，來為您產生類型程式庫和.idl 檔案。 下列連結器選項可協助您組建.tlb 和.idl 檔案：  
@@ -51,5 +46,5 @@ Visual c + + 屬性放入您的程式碼之後，您可能想 Visual c + + 編�
   
  此外，Visual c + + 連結器會輸出所有單一 MIDL 檔的 IDL 相關的屬性資訊。 會從單一專案中產生兩個型別程式庫沒有方法。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../windows/attributed-programming-concepts.md)

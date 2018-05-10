@@ -1,13 +1,10 @@
 ---
-title: "Tchar.h 中的泛用文字對應 |Microsoft 文件"
-ms.custom: 
+title: Tchar.h 中的泛用文字對應 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7ed29b03a37c9b911a954192152115b1458fd94
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的泛型文字對應
 若要簡化國際用於程式碼的傳輸[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]執行階段程式庫提供[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-許多資料類型、 常式與其他物件的特定泛用文字對應。 您可以使用這些對應，Tchar.h，撰寫可針對單一位元組，多位元組，來編譯的泛型程式碼中所定義或[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字元集，根據您定義使用資訊清單常數`#define`陳述式。 泛用文字對應[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]所沒有的擴充功能[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]相容。  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 |# 定義|編譯的版本|範例|  
 |---------------|----------------------|-------------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]（寬字元）|`_tcsrev` 對應到 `_wcsrev`|  
+|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] （寬字元）|`_tcsrev` 對應到 `_wcsrev`|  
 |`_MBCS`|多位元組字元|`_tcsrev` 對應到 `_mbsrev`|  
 |無 (預設值沒有`_UNICODE`也`_MBCS`定義)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` 對應到 `strrev`|  
   
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` 或 `_TEXT`|無效果 (已由前置處理器移除)|無效果 (已由前置處理器移除)|`L`(將下列字元或字串轉換其[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]對應項目)|  
+|`_T` 或 `_TEXT`|無效果 (已由前置處理器移除)|無效果 (已由前置處理器移除)|`L` (將下列字元或字串轉換其[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]對應項目)|  
   
  如需泛型文字對應的常式、 變數和其他物件的清單，請參閱[泛用文字對應](../c-runtime-library/generic-text-mappings.md)在執行階段程式庫參考。  
   
@@ -104,6 +99,6 @@ RetVal = strrev(szString);
   
  因此，您可以撰寫、 維護及編譯單一原始程式碼檔案，以執行與所特有的三種字元集的常式。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [文字和字串](../text/text-and-strings-in-visual-cpp.md)   
  [使用含有 _MBCS 程式碼的 TCHAR.H 資料類型](../text/using-tchar-h-data-types-with-mbcs-code.md)

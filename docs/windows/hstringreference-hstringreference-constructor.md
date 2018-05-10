@@ -1,30 +1,25 @@
 ---
-title: "Hstringreference:: Hstringreference 建構函式 |Microsoft 文件"
-ms.custom: 
+title: 'Hstringreference:: Hstringreference 建構函式 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
 dev_langs:
 - C++
 ms.assetid: 29f5fe11-3928-4f60-9861-f0894247bfcb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 398ea9403f784c30f8e015101c25b071f1d6fb29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc88ea32d4384b36559a4a10da0a5975345bf0d7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference 建構函式
 初始化 HStringReference 類別的新執行個體。  
@@ -67,5 +62,5 @@ HStringReference(HStringReference&& other) throw();
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [HStringReference 類別](../windows/hstringreference-class.md)

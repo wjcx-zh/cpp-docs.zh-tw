@@ -1,13 +1,10 @@
 ---
-title: "如何： 建立資源 |Microsoft 文件"
-ms.custom: 
+title: 如何： 建立資源 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - resource toolbars
 - resources [Visual Studio], creating
 ms.assetid: aad44914-9145-45a3-a7d8-9de89b366716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbf538940bab76559e7cec5a5737ab7661dac1f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3a5c8ee47203f24c1995cfde9dda40912f21467
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-resource"></a>如何：建立資源
 > [!NOTE]
@@ -62,13 +57,13 @@ ms.lasthandoff: 12/21/2017
   
  您可以將資源建立為新的預設資源 (不以範本為基礎的資源)，或建立為模仿 [範本](../windows/how-to-use-resource-templates.md)的資源。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
   
  **需求**  
   
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源檔](../windows/resource-files-visual-studio.md)   
  [資源編輯器](../windows/resource-editors.md)   
  [新增資源對話方塊](../windows/add-resource-dialog-box.md)

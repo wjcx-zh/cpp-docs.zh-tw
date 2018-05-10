@@ -1,13 +1,10 @@
 ---
-title: "泛型類別 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 泛型類別 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07a5cb6abaca56901af26895b1304a9b7079ced9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-classes-ccli"></a>泛型類別 (C++/CLI)
 泛型類別宣告使用下列格式：  
@@ -53,7 +48,7 @@ class-body
  其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。  
   
  *類別索引鍵*  
- 可能是`class`或`typename`  
+ 可能是`class`或 `typename`  
   
  *類型為參數的識別項*，  
  以逗號分隔清單的指定名稱的型別參數的識別項。  
@@ -84,7 +79,7 @@ class-body
  *宣告子*  
  此類型的任何變數的宣告。 例如： `^`*識別碼*[`,` ...]  
   
- 您可以宣告泛型類別，這類 (請注意，關鍵字**類別**可能而不是使用**typename**)。 在此範例中， `ItemType`，`KeyType`和`ValueType`是未知的型別指定點的位置類型。 `HashTable<int, int>`為建構的類型的泛型型別`HashTable<KeyType, ValueType>`。 可以從單一泛型類型建構不同結構類型的數目。 建構自泛型類別的建構的類型會視為任何其他 ref 類別類型。  
+ 您可以宣告泛型類別，這類 (請注意，關鍵字**類別**可能而不是使用**typename**)。 在此範例中， `ItemType`，`KeyType`和`ValueType`是未知的型別指定點的位置類型。 `HashTable<int, int>` 為建構的類型的泛型型別`HashTable<KeyType, ValueType>`。 可以從單一泛型類型建構不同結構類型的數目。 建構自泛型類別的建構的類型會視為任何其他 ref 類別類型。  
   
 ```  
 // generic_classes_1.cpp  
@@ -108,7 +103,7 @@ int main() {
 }  
 ```  
   
- 同時實值類型 (其中一個內建類型，例如`int`或`double`，或使用者定義的實值類型) 和參考型別可能會用做為泛型型別引數。 泛型定義中的語法是相同而定。 在語法上，如同它是參考型別，被視為未知的類型。 不過，執行階段就能判斷實際使用的型別是否為實值類型，並以取代適當產生的程式碼直接成員的存取權。 實值類型做為泛型型別引數不會進行 boxed 處理，因此不會發生 boxing 相關聯的效能負面影響。 泛型主體內使用的語法應該是**T ^**和 '**->**' 而不是 '**。**'。 使用的任何[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)類型參數會適當地解譯由執行階段為實值類型的簡單建立如果型別引數是實值類型。  
+ 同時實值類型 (其中一個內建類型，例如`int`或`double`，或使用者定義的實值類型) 和參考型別可能會用做為泛型型別引數。 泛型定義中的語法是相同而定。 在語法上，如同它是參考型別，被視為未知的類型。 不過，執行階段就能判斷實際使用的型別是否為實值類型，並以取代適當產生的程式碼直接成員的存取權。 實值類型做為泛型型別引數不會進行 boxed 處理，因此不會發生 boxing 相關聯的效能負面影響。 泛型主體內使用的語法應該是**T ^** 和 '**->**' 而不是 '**。**'。 使用的任何[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)類型參數會適當地解譯由執行階段為實值類型的簡單建立如果型別引數是實值類型。  
   
  您也可以宣告泛型類別與[泛型型別參數的條件約束 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)上可以使用的型別參數的型別。 在下列範例中任何類型用於`ItemType`必須實作`IItem`介面。 嘗試使用`int`，比方說，這不會實作`IItem`，會產生編譯時間錯誤，因為型別引數未滿足的條件約束。  
   
@@ -708,5 +703,5 @@ The field is assigned the double value: 0.123
 The field is assigned the string: Hello Generics!  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

@@ -1,30 +1,25 @@
 ---
-title: "函式 (C) | Microsoft Docs"
-ms.custom: 
+title: 函式 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - functions [C]
 - Visual C, functions
 ms.assetid: 31839f65-49f4-43e1-85ec-8769924ffa96
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7935b355042ed7221684fe60a69b5286cd39f00d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 166cf6e133b3e824669c583bef8952bc12e59182
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-c"></a>函式 (C)
 函式是 C 中的基本模組化單位。函式通常設計用來執行特定工作，且其名稱通常會反映該工作。 函式包含宣告和陳述式。 本節將描述如何宣告、定義及呼叫 C 函式。 其他討論的主題包括：  

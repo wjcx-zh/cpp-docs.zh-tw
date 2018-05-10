@@ -1,13 +1,10 @@
 ---
-title: "屬性 |Microsoft 文件"
-ms.custom: 
+title: 屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.attribute
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42ea9049fdd97691bd139599705856baa8acfee1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute"></a>屬性
 可讓您建立的自訂屬性。  
@@ -149,7 +144,7 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute`是的別名<xref:System.AttributeUsageAttribute?displayProperty=fullName>(不 AttributeAttribute; 這是屬性的命名規則的例外狀況)。  
+ `attribute` 是的別名<xref:System.AttributeUsageAttribute?displayProperty=fullName>(不 AttributeAttribute; 這是屬性的命名規則的例外狀況)。  
   
 ## <a name="requirements"></a>需求  
   
@@ -157,7 +152,7 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
 |||  
 |-|-|  
-|**適用於**|`ref`**類別**， **ref 結構**|  
+|**適用於**|`ref` **類別**， **ref 結構**|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
@@ -220,6 +215,6 @@ int main() {
 2  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依字母順序排列的屬性參考](../windows/attributes-alphabetical-reference.md)   
  [自訂屬性](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

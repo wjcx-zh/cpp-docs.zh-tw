@@ -1,30 +1,25 @@
 ---
-title: "物件控制代碼運算子 (^) （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 物件控制代碼運算子 (^) （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e760181f48e4bfd197514b152701e94ac6e94a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb322f83163a9faf3314990baabbd0a34f1a67ae
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>物件控制代碼運算子 (^) (C++ 元件擴充功能)
 *控制代碼宣告子*(`^`，唸成"hat")，修改型別[規範](../cpp/overview-of-declarators.md)來表示，在宣告的物件應該自動刪除當系統決定此物件是無法存取。  
@@ -248,6 +243,6 @@ int main() {
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)

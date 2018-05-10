@@ -1,13 +1,10 @@
 ---
-title: "緩衝區溢位 |Microsoft 文件"
-ms.custom: 
+title: 緩衝區溢位 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="buffer-overflow"></a>緩衝區溢位
 變動字元大小會造成問題，當您將字元放到緩衝區。 請考慮下列程式碼中的字串字元複製到， `sz`，緩衝區`rgch`:  
@@ -66,5 +61,5 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MBCS 程式設計提示](../text/mbcs-programming-tips.md)

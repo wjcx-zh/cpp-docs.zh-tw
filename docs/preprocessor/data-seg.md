@@ -1,12 +1,9 @@
 ---
-title: data_seg | Microsoft Docs
-ms.custom: 
+title: data_seg |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - data_seg_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - data_seg pragma
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c23598ba98d35e2a32832437111ebf9f852e1259
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7a463d966c681557525bb9512762731c01a7ce30
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="dataseg"></a>data_seg
 指定儲存在 .obj 檔案中已初始化之變數的資料區段。  
@@ -57,7 +52,7 @@ ms.lasthandoff: 02/23/2018
   
  *識別項*可讓多筆記錄即可推出以單一**pop**命令。  
   
- *"segment-name"*(optional)  
+ *「 區段名稱 」*（選擇性）  
  區段的名稱。 當搭配**pop**，時會推出堆疊和*區段名稱*會成為作用中區段名稱。  
   
  *「 區段類別 」* （選擇性）  
@@ -88,5 +83,5 @@ int main() {
   
  您也可以指定為 const 變數的區段 ([const_seg](../preprocessor/const-seg.md))，未初始化的資料 ([bss_seg](../preprocessor/bss-seg.md))，和函式 ([code_seg](../preprocessor/code-seg.md))。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

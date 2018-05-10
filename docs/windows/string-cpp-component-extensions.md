@@ -1,31 +1,26 @@
 ---
-title: "字串 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 字串 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="string--c-component-extensions"></a>字串 (C++ 元件擴充功能)
 Visual c + + 編譯器支援*字串*，這是物件，表示為一連串字元的文字。 Visual c + + 支援字串變數，其值是隱含的和常值，其值為明確加上引號的字串。  
@@ -55,9 +50,9 @@ using namespace default;
  編譯器選項： **/ZW**  
   
 ## <a name="common-language-runtime"></a>Common Language Runtime  
- 本主題將討論當您執行使用 Visual c + + 編譯器如何處理字串常值**/clr**編譯器選項。 若要使用**/clr**，您也必須使用 common language runtime (CLR)，C + + /CLI 語法和受管理物件。 如需有關**/clr**，請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。  
+ 本主題將討論當您執行使用 Visual c + + 編譯器如何處理字串常值 **/clr**編譯器選項。 若要使用 **/clr**，您也必須使用 common language runtime (CLR)，C + + /CLI 語法和受管理物件。 如需有關 **/clr**，請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
- 編譯時**/clr**，編譯器會將字串常值轉換成字串類型的<xref:System.String>。 若要保留與現有程式碼的回溯相容性是兩個例外狀況：  
+ 編譯時 **/clr**，編譯器會將字串常值轉換成字串類型的<xref:System.String>。 若要保留與現有程式碼的回溯相容性是兩個例外狀況：  
   
 -   例外狀況處理。 擲回的字串常值時，編譯器會攔截它做為字串常值。  
   
@@ -288,7 +283,7 @@ System.SByte*
 System.String  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [字串和字元常值](../cpp/string-and-character-literals-cpp.md)   
  [/clr (通用語言執行平台編譯)](../build/reference/clr-common-language-runtime-compilation.md)

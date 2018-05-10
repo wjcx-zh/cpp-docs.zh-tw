@@ -1,12 +1,9 @@
 ---
-title: "#define 指示詞 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: '#define 指示詞 （C/c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#define'
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8875c2b2c744a16f936fd2220826f23413a0e6c9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="define-directive-cc"></a>#define 指示詞 (C/C++)
 `#define`建立*巨集*，這是識別項或參數化識別項與語彙基元字串的關聯。 定義巨集之後，編譯器就可以使用語彙基元字串替代原始程式檔中出現的每個識別項。  
@@ -37,7 +32,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="syntax"></a>語法  
  `#define` *識別項**語彙基元字串*選擇加入  
   
- `#define` *identifier* `(` *identifier*opt`,`*...*`,`*identifier*opt`)`*token-string*opt  
+ `#define` *識別項* `(` *識別碼*選擇`,`*...* `,`*識別碼*選擇`)`*語彙基元字串*選擇加入  
   
 ## <a name="remarks"></a>備註  
  `#define`指示詞會造成編譯器替代*語彙基元字串*每次發生*識別碼*原始程式檔中。 *識別碼*只有當組件可構成語彙基元會被取代。 也就是說，*識別碼*如果它顯示在註解，在字串中，或為較長的識別項部分未被取代。 如需詳細資訊，請參閱[語彙基元](../cpp/tokens-cpp.md)。  
@@ -126,5 +121,5 @@ var = 80 + 10 * 20;
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [前置處理器指示詞](../preprocessor/preprocessor-directives.md)

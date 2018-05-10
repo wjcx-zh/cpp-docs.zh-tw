@@ -1,12 +1,9 @@
 ---
-title: "ISource 類別 |Microsoft 文件"
-ms.custom: 
+title: ISource 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISource
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147623329d71da704529c12e27ce3c768c1b8145
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27b1aa57a8c90c2f996aab3b8ee47797f15edd5b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="isource-class"></a>ISource 類別
 `ISource` 類別是所有來源區塊的介面。 來源區塊會將訊息傳播至 `ITarget` 區塊。  
@@ -151,7 +146,7 @@ virtual message<T>* consume(
 ### <a name="remarks"></a>備註  
  `consume`方法很類似`accept`，但必須一律加上呼叫`reserve`傳回`true`。  
   
-##  <a name="dtor"></a> ~ISource 
+##  <a name="dtor"></a> ~ ISource 
 
  終結`ISource`物件。  
   
@@ -246,6 +241,6 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 virtual void unlink_targets() = 0;
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [ITarget 類別](itarget-class.md)

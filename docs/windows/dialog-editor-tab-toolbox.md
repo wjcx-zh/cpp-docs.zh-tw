@@ -1,13 +1,10 @@
 ---
-title: "工具箱、 對話方塊編輯器索引標籤 |Microsoft 文件"
-ms.custom: 
+title: 工具箱、 對話方塊編輯器索引標籤 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - Dialog editor, creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9db31d6e152be10f2c4934b7b1f239d1e08387f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor-tab-toolbox"></a>工具箱、對話方塊編輯器索引標籤
 對話方塊編輯器索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您正在對話方塊編輯器中。 若要將控制項加入新的對話方塊中，將控制項從 [工具箱] 拖曳至您所建立的對話方塊 (如需詳細資訊，請參閱[將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md))。 然後移動控制項，或變更其大小和形狀。  
@@ -95,12 +90,12 @@ ms.lasthandoff: 12/21/2017
 
  如需有關使用 RichEdit 1.0 控制項與 MFC 的詳細資訊，請參閱[使用 RichEdit 1.0 控制項與 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項](../mfc/controls-mfc.md)   
  [控制項類別](../mfc/control-classes.md)   
  [對話方塊類別](../mfc/dialog-box-classes.md)   

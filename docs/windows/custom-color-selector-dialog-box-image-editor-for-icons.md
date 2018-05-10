@@ -1,13 +1,10 @@
 ---
-title: "自訂色彩選取器對話方塊 （圖示影像編輯器） |Microsoft 文件"
-ms.custom: 
+title: 自訂色彩選取器對話方塊 （圖示影像編輯器） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.customcolorselector
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Custom Color Selector dialog box
 - colors, image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b85b6b650fcff46371e86e61ab96e9d864c4c53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76a278ad0a1ba67c7c8f9fb86d20ca842b92b1e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>自訂色彩選取器對話方塊 (圖示影像編輯器)
 此對話方塊可讓您自訂您的映像您使用的色彩。 如需詳細資訊，請參閱[自訂或變更色彩](../windows/customizing-or-changing-colors-image-editor-for-icons.md)。  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [影像功能表](../windows/image-menu-image-editor-for-icons.md)   
  [自訂或變更色彩](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
  [色彩視窗](../windows/colors-window-image-editor-for-icons.md)

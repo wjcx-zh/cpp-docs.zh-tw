@@ -1,13 +1,10 @@
 ---
-title: "移動或複製快速鍵對應表項目到另一個資源指令碼檔案 |Microsoft 文件"
-ms.custom: 
+title: 移動或複製快速鍵對應表項目到另一個資源指令碼檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - .rc files, moving accelerator table entries
 - accelerator tables [C++], moving entries
 ms.assetid: 7b4dc149-c972-4ab2-8477-76c52b6feb5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3ae2d0decbb822de88a9c3021cf73f7e4f56e10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b14e20770b89bb6863eb5fa8d7743bd3cf2efa9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moving-or-copying-an-accelerator-table-entry-to-another-resource-script-file"></a>移動或複製快速鍵對應表項目至另一個資源指令碼檔案
 ### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>將快速鍵對應表項目移動或複製到另一個資源指令碼檔案  
@@ -54,6 +49,6 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編輯快速鍵對應表](../windows/editing-accelerator-tables.md)   
  [快速鍵編輯器](../windows/accelerator-editor.md)

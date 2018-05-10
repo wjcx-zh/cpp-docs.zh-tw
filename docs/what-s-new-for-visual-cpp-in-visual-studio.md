@@ -1,24 +1,23 @@
 ---
-title: "Visual Studio 中 Visual C++ 的新功能 | Microsoft Docs"
+title: Visual Studio 中 Visual C++ 的新功能 | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
-- vs-ide-general
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新功能
 
-[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 帶來 Visual C++ 環境的多項更新與修正。 我們已修正超過 250 錯誤，並回報的問題，編譯器和工具，許多提交客戶透過[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://visualstudio.uservoice.com/)選項底下**傳送意見反應**. 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的新功能](https://go.microsoft.com/fwlink/p/?linkid=834481)。
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 帶來 Visual C++ 環境的多個更新與修正。 我們已修正超過 250 錯誤，並回報的問題，編譯器和工具，許多提交客戶透過[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://visualstudio.uservoice.com/)選項底下**傳送意見反應**. 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 的新功能](https://go.microsoft.com/fwlink/p/?linkid=834481)。
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 

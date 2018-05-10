@@ -1,30 +1,25 @@
 ---
-title: "功能表命令屬性 |Microsoft 文件"
-ms.custom: 
+title: 功能表命令屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - menu items, properties
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 186790db57c20abf9f67f693ff60029257ebd4f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 343c1ce255a26753c2b125d2a0a53e04808a0233
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="menu-command-properties"></a>功能表命令屬性
 下列資訊的組織方式是根據您選取功能表命令時出現在 [屬性視窗](/visualstudio/ide/reference/properties-window) 的 [功能表] 屬性。 雖然 [屬性] 視窗也可讓您依類別檢視這些屬性，但這些是依字母順序列出  
@@ -49,5 +44,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [功能表編輯器](../windows/menu-editor.md)

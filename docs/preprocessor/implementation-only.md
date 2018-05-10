@@ -1,12 +1,9 @@
 ---
-title: "implementation_only |Microsoft 文件"
-ms.custom: 
+title: implementation_only |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implementation_only
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa9fe0e8bf3cdecbdf118219cfe91be03a85a51f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0a3a2cbf0b39dc1c5f5462ae105e2206d70a38f4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="implementationonly"></a>implementation_only
 **C + + 特定的**  
@@ -50,6 +45,6 @@ implementation_only
   
  **END c + + 特定的**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
  [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

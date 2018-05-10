@@ -1,28 +1,23 @@
 ---
-title: "如何： 建立傳統 COM 元件，使用 WRL |Microsoft 文件"
-ms.custom: 
+title: 如何： 建立傳統 COM 元件，使用 WRL |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00f00b265128ca388a3e9d4eb77631a320fbda81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>如何：使用 WRL 建立傳統 COM 元件
 您可以使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 來建立基本的傳統 COM 元件，用於桌面應用程式，除了使用通用 Windows 平台 (UWP) 應用程式。 若是建立 COM 元件時，Windows 執行階段 c + + 樣板程式庫可能需要比 ATL 少程式碼 Windows 執行階段 c + + 樣板程式庫支援的 COM 子集詳細資訊，請參閱[Windows 執行階段 c + + 樣板程式庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 02/14/2018
   
 2.  新增**Win32 專案**至方案。 為專案命名，例如`CalculatorComponent`。 在**應用程式設定**索引標籤上，選取**DLL**。  
   
-3.  新增**Midl 檔 (.idl)**檔案加入專案中。 為檔案命名，例如`CalculatorComponent.idl`。  
+3.  新增**Midl 檔 (.idl)** 檔案加入專案中。 為檔案命名，例如`CalculatorComponent.idl`。  
   
 4.  將此程式碼加入至 CalculatorComponent.idl：  
   
@@ -49,7 +44,7 @@ ms.lasthandoff: 02/14/2018
   
      [!code-cpp[wrl-classic-com-component#3](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_3.cpp)]  
   
-7.  新增**模組定義檔 (.def)**檔案加入專案中。 為檔案命名，例如`CalculatorComponent.def`。 此檔案可將連結器命名為要匯出的函式名稱。  
+7.  新增**模組定義檔 (.def)** 檔案加入專案中。 為檔案命名，例如`CalculatorComponent.def`。 此檔案可將連結器命名為要匯出的函式名稱。  
   
 8.  將此程式碼加入至 CalculatorComponent.def：  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 02/14/2018
   
 ### <a name="to-consume-the-com-component-from-a-desktop-app"></a>使用桌面應用程式的 COM 元件  
   
-1.  使用 Windows 登錄註冊 COM 元件。 若要這樣做，請建立登錄項目檔案，其命名`RegScript.reg`，並加入下列文字。 取代 *\<dll 的路徑 >*之 DLL 的路徑，例如`C:\\temp\\WRLClassicCOM\\Debug\\CalculatorComponent.dll`。  
+1.  使用 Windows 登錄註冊 COM 元件。 若要這樣做，請建立登錄項目檔案，其命名`RegScript.reg`，並加入下列文字。 取代 *\<dll 的路徑 >* 之 DLL 的路徑，例如`C:\\temp\\WRLClassicCOM\\Debug\\CalculatorComponent.dll`。  
   
     ```
     Windows Registry Editor Version 5.00
@@ -100,5 +95,5 @@ ms.lasthandoff: 02/14/2018
   
  [!code-cpp[wrl-classic-com-component#7](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

@@ -1,30 +1,25 @@
 ---
-title: "後置運算子 | Microsoft Docs"
-ms.custom: 
+title: 後置運算子 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C], postfix
 - postfix operators
 ms.assetid: 76260011-1624-484e-8bef-72ae7ab556cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa82ded9bf53a00efe33f589c832550da967c96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14a23da2e8ed41954bd6faa2803d6e6c7dfb37a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-operators"></a>後置運算子
 後置運算子在運算式評估時具有最高優先順序 (具有更緊密的繫結)。  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  *postfix-expression*  **[**  *expression*  **]**  
   
- *postfix-expression*  **(**  *argument-expression-list* opt**)**  
+ *postfix-expression*  **(**  *argument-expression-list* opt **)**  
   
  *postfix-expression*  **.**  *identifier*  
   

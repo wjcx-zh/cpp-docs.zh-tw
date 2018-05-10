@@ -1,31 +1,26 @@
 ---
-title: "覆寫規範 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 覆寫規範 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - override specifiers, Visual C++
 - override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7937e0eec53a800c7bcef2842310af368949bcca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb610157d1d56c00b48e98086137351e9fd43a8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="override-specifiers--c-component-extensions"></a>覆寫規範 (C++ 元件擴充功能)
 *覆寫規範*修改如何繼承的型別和繼承型別的成員在衍生類型中的行為。  
@@ -61,5 +56,5 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

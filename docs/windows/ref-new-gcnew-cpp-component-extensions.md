@@ -1,13 +1,10 @@
 ---
-title: "ref 新 gcnew （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: ref 新 gcnew （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - gcnew
 - ref new
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ref new keyword (C++)
 - gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 616117f7274d6f68456aa23614fb354a71982fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9533675d2894b3c3d99e3fb57abded8ea4e99d7a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new 和 gcnew (C++ 元件擴充功能)
 `ref new`彙總關鍵字，其配置的記憶體回收該物件會變成無法存取，並傳回控制代碼時所收集的類型執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 到配置的物件。  
@@ -100,5 +95,5 @@ int main()
 32  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

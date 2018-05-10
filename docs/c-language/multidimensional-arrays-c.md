@@ -1,13 +1,10 @@
 ---
-title: "多維陣列 (C) | Microsoft Docs"
-ms.custom: 
+title: 多維陣列 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays
 - subscript expressions
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3b067db3812fbe7e5db1d367635eedc5362527
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 25ca58d9818782b51e6c07bb6bb758948adab3ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-arrays-c"></a>多維陣列 (C)
 註標運算式也可以擁有多個註標，如下所示：  
@@ -40,7 +35,7 @@ expression3
 ]...  
 ```  
   
- 註標運算式的關聯是由左至右。 最左邊的註標運算式 *expression1***[***expression2***]**，會先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 除非最後一個指標值會定址陣列類型 (請參閱以下範例)，否則間接取值運算子 (**\***) 會在評估最後一個註標運算式之後套用。  
+ 註標運算式的關聯是由左至右。 最左邊的下標運算式 *expression1 ***[*** expression2***]** 會最先評估。 *expression1* 和 *expression2* 相加所產生的位址會形成指標運算式，然後 *expression3* 會加入這個指標運算式形成新的指標運算式，依此類推，直到加入最後一個註標運算式為止。 除非最後一個指標值會定址陣列類型 (請參閱以下範例)，否則間接取值運算子 (**\***) 會在評估最後一個註標運算式之後套用。  
   
  具有多個註標的運算式會參考「多維陣列」的元素。 所謂的多維陣列是指其中所包含的元素也是一種陣列。 例如，三維陣列的第一個元素是具有兩個維度的陣列。  
   
@@ -86,5 +81,5 @@ ipp = prop[2];
   
  同樣地，第二個陳述式 `prop[2]` 中 `ipp = prop[2];` 運算式的結果是定址二維陣列的指標值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [註標運算子：](../cpp/subscript-operator.md)

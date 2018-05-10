@@ -1,13 +1,10 @@
 ---
-title: "資料成員屬性 |Microsoft 文件"
-ms.custom: 
+title: 資料成員屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 954a0448f160ba6d19eb4f48d44b0b7e0a718f17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 490f8f20a6e1fcee476a6bbeb18ec6f6164389fc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="data-member-attributes"></a>資料成員屬性
 下列屬性套用至類別、 coclass 或介面中的資料成員。  
@@ -47,5 +42,5 @@ ms.lasthandoff: 12/21/2017
 |[readonly](../windows/readonly-cpp.md)|禁止指派給資料成員。|  
 |[requestedit](../windows/requestedit.md)|表示屬性支援**OnRequestEdit**通知。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依使用方式分類的屬性](../windows/attributes-by-usage.md)

@@ -1,30 +1,25 @@
 ---
-title: "明確覆寫 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 明確覆寫 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4eb418a6ded829e4eeeef3bf108894f9faf3d77e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>明確覆寫 (C++ 元件擴充功能)
 本主題討論如何明確覆寫基底類別或介面的成員。 具名 （明確） 覆寫只應該用於覆寫具有名稱不同之衍生方法的方法。  
@@ -66,7 +61,7 @@ overriding-function-declarator = function { overriding-function-definition }
 ## <a name="common-language-runtime"></a>Common Language Runtime 
  **備註**  
   
- 明確的相關資訊會覆寫原生程式碼或程式碼使用編譯**/clr:oldSyntax**，請參閱[明確覆寫](../cpp/explicit-overrides-cpp.md)。  
+ 明確的相關資訊會覆寫原生程式碼或程式碼使用編譯 **/clr:oldSyntax**，請參閱[明確覆寫](../cpp/explicit-overrides-cpp.md)。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
@@ -196,5 +191,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

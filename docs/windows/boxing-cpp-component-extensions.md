@@ -1,30 +1,25 @@
 ---
-title: "Boxing （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: Boxing （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - boxing, Visual C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 15fa5471280935c54cdb936af378634e2b60cacd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f689255af653e5dfdf69250e4988aa809393461
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="boxing--c-component-extensions"></a>Boxing (C++ 元件擴充功能)
 Visual c + + 編譯器可以將實值類型轉換為呼叫處理序中的物件*boxing*，並將物件轉換為呼叫處理序中的實值型別*unboxing*。  
@@ -202,5 +197,5 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

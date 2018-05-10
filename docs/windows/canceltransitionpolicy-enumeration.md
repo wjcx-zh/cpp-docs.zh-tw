@@ -1,12 +1,9 @@
 ---
-title: "CancelTransitionPolicy 列舉 |Microsoft 文件"
-ms.custom: 
+title: CancelTransitionPolicy 列舉 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::CancelTransitionPolicy::TransitionFromCanceled
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14c3016d767e38e032a745a5957fa93d51f2dae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64f588e67066fed690271aa7d78fcbe726c67177
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 列舉
 表示非同步作業如何嘗試轉換為終止狀態的完成，或錯誤應該行為相對於用戶端要求已取消的狀態。  
@@ -53,5 +48,5 @@ enum CancelTransitionPolicy;
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

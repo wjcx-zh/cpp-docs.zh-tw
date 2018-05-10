@@ -1,13 +1,10 @@
 ---
-title: "一般算術轉換 | Microsoft Docs"
-ms.custom: 
+title: 一般算術轉換 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73da6d96b0dc03fa3f4c4807d6a2dff4fef2879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e17540d8d1e45ace69e45c3eac3444f70c6f343
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usual-arithmetic-conversions"></a>一般算術轉換
 大部分的 C 運算子會執行類型轉換，將運算式的運算元轉換為一般類型，或是將短值擴充為電腦作業中使用的整數大小。 C 運算子執行的轉換取決於特定運算子與運算元的類型。 不過，許多運算子會對整數和浮動類型的運算元執行類似轉換。 這些轉換稱為「算術轉換」。 將運算元的值轉換成相容的類型並不會變更其值。  

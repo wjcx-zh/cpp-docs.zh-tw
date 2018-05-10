@@ -1,30 +1,25 @@
 ---
-title: "RemoveIUnknown 類別 |Microsoft 文件"
-ms.custom: 
+title: RemoveIUnknown 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
 dev_langs:
 - C++
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b62362004f0528b16ef3dac7cbe601b8b85ce3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb005bc3cbf411a7d5b5ddbfa44cd6aecf802105
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown 類別
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -50,7 +45,7 @@ class RemoveIUnknown : public T;
 ## <a name="remarks"></a>備註  
  建立類型，相當於`IUnknown`為基礎的類型，但有非虛擬`QueryInterface`， `AddRef`，和`Release`成員函式。  
   
- 根據預設，COM 方法提供虛擬`QueryInterface`， `AddRef`，並釋放方法。 不過，`ComPtr`不需要虛擬方法的額外負荷。 `RemoveIUnknown`藉由提供私用、 非虛擬消除額外的負荷`QueryInterface`， `AddRef`，和`Release`方法。  
+ 根據預設，COM 方法提供虛擬`QueryInterface`， `AddRef`，並釋放方法。 不過，`ComPtr`不需要虛擬方法的額外負荷。 `RemoveIUnknown` 藉由提供私用、 非虛擬消除額外的負荷`QueryInterface`， `AddRef`，和`Release`方法。  
   
 ## <a name="members"></a>成員  
   
@@ -70,5 +65,5 @@ class RemoveIUnknown : public T;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

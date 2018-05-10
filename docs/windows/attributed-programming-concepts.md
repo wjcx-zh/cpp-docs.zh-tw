@@ -1,13 +1,10 @@
 ---
-title: "屬性化程式設計概念 |Microsoft 文件"
-ms.custom: 
+title: 屬性化程式設計概念 |Microsoft 文件
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++]
 - programming [C++], attributed programming
 ms.assetid: 563e7e7c-65e1-44f4-b0b2-da04a6c1bc9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6498659865ae3cad536cdc8e446c04cdd731a67e
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 8ba7084ea10cc502eea0e0e0f62709467750a99d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributed-programming-concepts"></a>屬性化程式設計概念
 Visual c + + 包含各種不同的內容，以協助您在程式中使用屬性。 屬性，Visual c + + 的新功能被設計來簡化 COM 程式設計和.NET Framework 通用語言執行階段開發。 當您將屬性納入原始程式檔時，編譯器會搭配提供者動態連結程式庫 (DLL)，以插入程式碼或修改產生的目的檔中的程式碼。 有幫助的.idl 檔案、 介面、 類型程式庫與其他 COM 元件建立的屬性。 在整合式的開發環境 (IDE) 中，由精靈和 [屬性] 視窗所支援屬性。  
@@ -56,6 +51,6 @@ Visual c + + 包含各種不同的內容，以協助您在程式中使用屬性�
  [偵錯插入程式碼](/visualstudio/debugger/how-to-debug-injected-code)  
  描述偵錯屬性化的程式。  
   
- [__super](../cpp/super.md)and [__interface](../cpp/interface.md)  
+ [__super](../cpp/super.md)和[__interface](../cpp/interface.md)  
  連結至新的 c + + 關鍵字相關的屬性化程式設計。  
   

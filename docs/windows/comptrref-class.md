@@ -1,12 +1,9 @@
 ---
-title: "ComPtrRef 類別 |Microsoft 文件"
-ms.custom: 
+title: ComPtrRef 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ComPtrRef class
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b1bbe134f15fdba6863f1725cbcc7effcb6d94f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d961ed0a675927846788c013e61767f99b408c6b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrref-class"></a>ComPtrRef 類別
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -83,5 +78,5 @@ class ComPtrRef : public ComPtrRefBase<T>;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

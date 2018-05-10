@@ -1,12 +1,9 @@
 ---
-title: "RuntimeClass 類別 |Microsoft 文件"
-ms.custom: 
+title: RuntimeClass 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 類別
 表示繼承指定的介面，並提供指定的 Windows 執行階段、 傳統 COM 和弱式參考支援 WinRT 或 COM 類別。  
@@ -48,7 +43,7 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 超過 IUnknown、 IInspectable 或由其他介面的介面清單物件實作[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)。 它也可能會列出從值得注意的是 Microsoft::WRL::FtmBase 以讓 agile 物件，並導致它實作 IMarshal 衍生其他類別。
   
 ## <a name="members"></a>成員  
-`RuntimeClassInitialize`函式初始化物件，如果 MakeAndInitialize 樣板函式用來建構物件。 如果初始化失敗，，傳回 S_OK，如果物件已成功初始化或 COM 錯誤碼。 COM 錯誤程式碼會傳播做 MakeAndInitialize 的傳回值。 請注意，是否讓樣板函式用來建構物件不會呼叫 RuntimeClassInitialize 方法。
+`RuntimeClassInitialize` 函式初始化物件，如果 MakeAndInitialize 樣板函式用來建構物件。 如果初始化失敗，，傳回 S_OK，如果物件已成功初始化或 COM 錯誤碼。 COM 錯誤程式碼會傳播做 MakeAndInitialize 的傳回值。 請注意，是否讓樣板函式用來建構物件不會呼叫 RuntimeClassInitialize 方法。
 
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -65,5 +60,5 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
   
 **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
 [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

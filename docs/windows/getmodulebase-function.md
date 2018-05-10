@@ -1,30 +1,25 @@
 ---
-title: "GetModuleBase 函式 |Microsoft 文件"
-ms.custom: 
+title: GetModuleBase 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 dev_langs:
 - C++
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19f575705b1f8680a68e9100f20be66ca22ec87a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25e4bb6db6114f7d64522dfe145d51ffaabd476a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase 函式
 擷取[ModuleBase](../windows/modulebase-class.md)允許遞增和遞減參考計數的指標[RuntimeClass](../windows/runtimeclass-class.md)物件。  
@@ -48,5 +43,5 @@ inline Details::ModuleBase* GetModuleBase() throw()
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

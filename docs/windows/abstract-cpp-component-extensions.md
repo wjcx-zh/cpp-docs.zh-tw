@@ -1,13 +1,10 @@
 ---
-title: "抽象 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 抽象 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - abstract
 - abstract_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b935aabeb048d955941a41f6a50735897a53009
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dcaef98df96b54025cd44a52a2e27a7bc5a83545
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="abstract--c-component-extensions"></a>abstract (C++ 元件擴充功能)
 `abstract` 關鍵字會宣告以下其中一項：  
@@ -50,11 +45,11 @@ virtualreturn-typemember-function-identifier() abstract ;
   
  **備註**  
   
- 第一個範例語法會將類別宣告為抽象。 *類別宣告*元件可以是原生 c + + 宣告 (`class`或`struct`)，或 c + + 擴充功能宣告 (`ref class`或`ref struct`) 如果**/ZW**或**/clr**編譯器選項已指定。  
+ 第一個範例語法會將類別宣告為抽象。 *類別宣告*元件可以是原生 c + + 宣告 (`class`或`struct`)，或 c + + 擴充功能宣告 (`ref class`或`ref struct`) 如果 **/ZW**或 **/clr**編譯器選項已指定。  
   
  第二個範例語法會將虛擬成員函式宣告為抽象。 將函式宣告為抽象等同於將它宣告為純虛擬函式。 將成員宣告為抽象也會造成含括類別被宣告為抽象。  
   
- `abstract`關鍵字支援原生與平台特定程式碼; 也就是說，它可以編譯，不論**/ZW**或**/clr**編譯器選項。  
+ `abstract`關鍵字支援原生與平台特定程式碼; 也就是說，它可以編譯，不論 **/ZW**或 **/clr**編譯器選項。  
   
  您可以在編譯時期偵測如果類型為抽象與`__is_abstract(type)`類型特性。 如需詳細資訊，請參閱[類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
@@ -91,7 +86,7 @@ int main() {
   
  **範例**  
   
- 下列程式碼範例會產生錯誤，因為它會具現化標示為原生類別的 `abstract`。 使用或不會發生這個錯誤**/clr**編譯器選項。  
+ 下列程式碼範例會產生錯誤，因為它會具現化標示為原生類別的 `abstract`。 使用或不會發生這個錯誤 **/clr**編譯器選項。  
   
 ```  
 // abstract_keyword_2.cpp  
@@ -120,5 +115,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,12 +1,9 @@
 ---
-title: "#如果 #elif、 #else 和 #endif 指示詞 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: '#如果 #elif、 #else 和 #endif 指示詞 （C/c + +） |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指示詞 (C/C++)
 `#if` 指示詞搭配 `#elif`、`#else` 和 `#endif` 指示詞可控制原始程式檔的部分編譯。 如果您撰寫的運算式 (在 `#if` 之後) 包含非零值，緊接在 `#if` 指示詞之後的折線圖組會保留在轉譯單位中。  
@@ -55,9 +50,9 @@ ms.lasthandoff: 02/23/2018
  *如果行*:  
  **#if**  *constant-expression*  
   
- **#ifdef**  *identifier*  
+ **#ifdef***識別碼*   
   
- **#ifndef**  *identifier*  
+ **#ifndef***識別碼*   
   
  *elif 部分*:  
  *elif 行文字*  
@@ -80,7 +75,7 @@ ms.lasthandoff: 02/23/2018
   
  `#if`、`#elif`、`#else` 和 `#endif` 指示詞可以在其他 `#if` 指示詞的文字部分中形成巢狀結構。 每個巢狀 `#else`、`#elif` 或 `#endif` 指示詞都屬於前一個最接近的 `#if` 指示詞。  
   
- 所有的條件式編譯指示詞，例如`#if`和**#ifdef**，必須符合與右`#endif`指示詞之前的檔案結尾; 否則會產生錯誤訊息。 當 Include 檔包含條件式編譯指示詞時，這些指示詞必須滿足相同的條件：include 檔結尾不可以有不相符的條件式編譯指示詞。  
+ 所有的條件式編譯指示詞，例如`#if`和 **#ifdef**，必須符合與右`#endif`指示詞之前的檔案結尾; 否則會產生錯誤訊息。 當 Include 檔包含條件式編譯指示詞時，這些指示詞必須滿足相同的條件：include 檔結尾不可以有不相符的條件式編譯指示詞。  
   
  命令列所示的組件內執行的巨集取代`#elif`命令，因此可用於巨集呼叫*常數運算式*。  
   
@@ -88,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
  前置處理器會處理選取*文字*並將其傳遞給編譯器。 如果*文字*包含前置處理器指示詞，前置處理器會執行這些指示詞。 只會編譯前置處理器選取的文字區塊。  
   
- 前置處理器會選取單一*文字*藉由評估每個常數運算式的項目`#if`或`#elif`指示詞，直到找到，則為 true （非零） 的常數運算式。 它會選取所有文字 (包括其他開頭的前置處理器指示詞 **#** ) 至其相關聯`#elif`， `#else`，或`#endif`。  
+ 前置處理器會選取單一*文字*藉由評估每個常數運算式的項目`#if`或`#elif`指示詞，直到找到，則為 true （非零） 的常數運算式。 它會選取所有文字 (包括其他開頭的前置處理器指示詞**#**) 至其相關聯`#elif`， `#else`，或`#endif`。  
   
  如果所有發生次數*常數運算式*都是 false，或者如果沒有任何`#elif`指示詞，前置處理器會選取之後的文字區塊`#else`子句。 如果`#else`省略子句的所有執行個體和*常數運算式*中`#if`區塊，則為 false，會選取任何文字區塊。  
   
@@ -204,5 +199,5 @@ class Example
 #endif
 ```
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [前置處理器指示詞](../preprocessor/preprocessor-directives.md)

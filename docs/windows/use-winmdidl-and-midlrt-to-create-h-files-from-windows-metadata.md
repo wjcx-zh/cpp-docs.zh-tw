@@ -1,28 +1,23 @@
 ---
-title: "如何： 使用 winmdidl.exe 和 midlrt.exe 從 windows 中繼資料建立.h 檔案 |Microsoft 文件"
-ms.custom: 
+title: 如何： 使用 winmdidl.exe 和 midlrt.exe 從 windows 中繼資料建立.h 檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
 Winmdidl.exe 和 midlrt.exe 啟用原生 C++ 程式碼與 Windows 執行階段元件之間的 COM 層級互動。 Winmdidl.exe 會輸入包含 Windows 執行階段元件之中繼資料的 .winmd 檔案，並輸出 IDL 檔案。 Midlrt.exe 會將該 IDL 檔案轉換成 C++ 程式碼可以取用的標頭檔。 這兩個工具都是在命令列上執行。  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  在主控台輸出中顯示總執行時間。  
   
  /outdir:\<dir >  
- 指定輸出目錄。 如果路徑包含空格，請使用引號。 預設的輸出目錄*\<磁碟機 >*: \Users\\*\<使用者名稱 >*\AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\。  
+ 指定輸出目錄。 如果路徑包含空格，請使用引號。 預設的輸出目錄*\<磁碟機 >*: \Users\\*\<使用者名稱 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\。  
   
  `/banner:<file>`  
  指定包含要在預設著作權訊息前面加上自訂文字，以及在產生的 .idl 檔案頂端加上 winmdidl 版本號碼的檔案。 如果路徑包含空格，請使用引號。  

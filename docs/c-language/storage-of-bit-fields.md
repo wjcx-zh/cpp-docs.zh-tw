@@ -1,27 +1,22 @@
 ---
-title: "位元欄位的儲存 | Microsoft Docs"
-ms.custom: 
+title: 位元欄位的儲存 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 4816a241-1580-4d1c-82ed-13d359733959
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be04ba4c68b2629a5e765788af95a203ae06b34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f223ff90517b6365645a861420ebe1985f994d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-of-bit-fields"></a>位元欄位的儲存
 **ANSI 3.5.2.1**：在 int 內位元欄位的配置順序  

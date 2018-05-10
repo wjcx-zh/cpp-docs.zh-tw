@@ -1,13 +1,10 @@
 ---
-title: "陣列 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 陣列 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>陣列 (C++ 元件擴充功能)
 `Platform::Array<T>`類型在 C + + /CX 中，或`array`關鍵字在 C + + CLI，會宣告陣列的指定型別和初始值。  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  `array-type`  
  陣列變數的型別。 有效的類型為 Windows 執行階段類別和基本類型、 ref 類別和結構、 實值類別、 結構和原生指標 (`type*`)。  
   
- `rank`[選用]  
+ `rank` [選用]  
  陣列維度的數目。 必須是 1。  
   
  `identifier`  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
  `initialization-type`  
  值，初始化陣列型別。 一般而言，`array-type`和`initialization-type`類型相同。 不過，類型可以不同，如果沒有從轉換`initialization-type`至`array-type`— 例如，如果`initialization-type`衍生自`array-type`。  
   
- `initialization-list`[選用]  
+ `initialization-list` [選用]  
  初始化陣列元素的大括號中值的逗號分隔清單。 例如，如果`rank-size-list`已`(3)`，其中宣告的 3 個元素，一維陣列`initialization list`可能`{1,2,3}`。  
   
 ### <a name="remarks"></a>備註  
@@ -124,7 +119,7 @@ int main() {
  `array-type`  
  陣列變數的型別。 有效的類型為 Windows 執行階段類別和基本類型、 ref 類別和結構、 實值類別與結構，原生指標 (`type*`)，以及原生的 POD （一般舊資料） 型別。  
   
- `rank`[選用]  
+ `rank` [選用]  
  陣列維度的數目。 預設值為 1。最大值為 32。 陣列的每個維度是本身的陣列。  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  陣列中每個維度的大小以逗號分隔清單。 或者，如果`initialization-list`參數指定，則編譯器可以減少每個維度大小和`rank-size-list`可以省略。 
   
- `initialization-list`[選用]  
+ `initialization-list` [選用]  
  初始化陣列元素的大括號中值的逗號分隔清單。 或以逗號分隔清單的巢狀*初始設定清單*初始化多維陣列中的元素的項目。  
   
  例如，如果`rank-size-list`已`(3)`，其中宣告的 3 個元素，一維陣列`initialization list`可能`{1,2,3}`。 如果`rank-size-list`已`(3,2,4)`，其中會宣告一個三維陣列的第一個維度、 第二、 2 個元素和第三個，在 4 個元素中的 3 個元素的`initialization-list`可能`{{1,2,3},{0,0},{-5,10,-21,99}}`。)  
   
 ### <a name="remarks"></a>備註  
   
- `array`處於[平台、 default 和 cli 命名空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)命名空間。  
+ `array` 處於[平台、 default 和 cli 命名空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)命名空間。  
   
  類似標準 c + + 中，陣列的索引是以零起始，並加上使用方括號 ([]) 註標的陣列。 不同於標準 c + + 中，針對每個維度，而不是一組方括弧 ([]) 運算子，針對每個維度的索引的清單中指定多維陣列的索引。 例如，*識別碼*[*index1*， *index2*] 而不是*識別碼*[*index1*] [ *index2*]。  
   
@@ -176,5 +171,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

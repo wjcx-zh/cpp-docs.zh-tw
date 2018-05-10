@@ -1,13 +1,10 @@
 ---
-title: "大小寫 （c + +） |Microsoft 文件"
-ms.custom: 
+title: 大小寫 （c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.case
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adacffa4dbce4cc908c393cb5019375234e9ff85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30d665861688054a4f6b7491f449014afe646c71
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="case-c"></a>case (C++)
 搭配[switch_type](../windows/switch-type.md)屬性**union**。  
@@ -83,14 +78,14 @@ struct SizedValue2 {
   
 |||  
 |-|-|  
-|**適用於**|成員的**類別**或`struct`|  
+|**適用於**|成員的**類別**或 `struct`|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
  [類別屬性](../windows/class-attributes.md)   

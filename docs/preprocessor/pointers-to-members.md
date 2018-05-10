@@ -1,12 +1,9 @@
 ---
-title: "pointers_to_members |Microsoft 文件"
-ms.custom: 
+title: pointers_to_members |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - pointers_to_members_CPP
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4313aaa38d410b8e6f46594cd9ce11269b523073
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 499649e94dbe549deb091291b197c80ff404bc33
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 **C + + 特定的**  
@@ -59,7 +54,7 @@ ms.lasthandoff: 03/16/2018
 |--------------|--------------|  
 |**single_inheritance**|最常見的表示是單一繼承的成員函式指標。 如果宣告其成員指標類別定義的繼承模型為多重或虛擬，則會產生錯誤。|  
 |**multiple_inheritance**|最常見的表示是多重繼承的成員函式指標。 如果宣告其成員指標類別定義的繼承模型為虛擬，則會產生錯誤。|  
-|**virtual_inheritance**|最常見的表示是虛擬繼承的成員函式指標。 永遠不會產生錯誤。 這是預設引數時**#pragma pointers_to_members**用。|  
+|**virtual_inheritance**|最常見的表示是虛擬繼承的成員函式指標。 永遠不會產生錯誤。 這是預設引數時 **#pragma pointers_to_members**用。|  
   
 > [!CAUTION]
 >  建議您只將 `pointers_to_members` pragma 放置在您要影響的原始程式碼檔案中，而且只放置在任何 `#include` 指示詞之後。 這種作法可使 pragma 影響到其他檔案的風險降低，否則，您會意外地為相同的變數、函式或類別名稱指定多個定義。  

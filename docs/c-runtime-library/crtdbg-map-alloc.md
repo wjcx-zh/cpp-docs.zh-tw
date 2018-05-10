@@ -1,13 +1,10 @@
 ---
 title: _CRTDBG_MAP_ALLOC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CRTDBG_MAP_ALLOC
 - _CRTDBG_MAP_ALLOC
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - memory allocation, in debug builds
 - CRTDBG_MAP_ALLOC macro
 ms.assetid: 435242b8-caea-4063-b765-4a608200312b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f50dff4acd216521c8ad67e13f42ecca4f783e37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 855b057223d7bdd69d7275e8c2acc0dd72bc256c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtdbgmapalloc"></a>_CRTDBG_MAP_ALLOC
 當應用程式的偵錯版本中定義了 **_CRTDBG_MAP_ALLOC** 旗標，堆積函式的基底版本就會直接對應至其偵錯版本。 旗標用在 Crtdbg.h 中以進行對應。 只有當應用程式中已定義 [_DEBUG](../c-runtime-library/debug.md) 旗標時，才能使用此旗標。  

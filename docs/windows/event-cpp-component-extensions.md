@@ -1,13 +1,10 @@
 ---
-title: "事件 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 事件 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>event (C++ 元件擴充功能)
 `event`關鍵字會宣告*事件*，這是已註冊訂閱者的通知 (*事件處理常式*) 感興趣的項目已發生。  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  您可以使用 `operators+=` 和 `operator-=` 來加入和移除事件處理常式，或明確呼叫 `add()` 和 `remove()` 方法。  
   
- `event`是即時線上關鍵字。請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)如需詳細資訊。  
+ `event` 是即時線上關鍵字。請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)如需詳細資訊。  
   
 ## <a name="windows-runtime"></a>Windows 執行階段  
   
@@ -287,5 +282,5 @@ int main() {
 688  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

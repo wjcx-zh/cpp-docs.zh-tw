@@ -1,12 +1,9 @@
 ---
-title: "Eventsource:: Targets_ 資料成員 |Microsoft 文件"
-ms.custom: 
+title: 'Eventsource:: Targets_ 資料成員 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::EventSource::targets_
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - targets_ data member
 ms.assetid: 5d5cee05-3315-4514-bce2-19173c923c7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fb14e7cfa25cd34d6bbaf6d0b48870f1d93f991
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a35992a5579bf852323f4c01396fab56542f40cd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventsourcetargets-data-member"></a>EventSource::targets_ 資料成員
 陣列的一個或多個事件處理常式。  
@@ -45,5 +40,5 @@ ComPtr<Details::EventTargetArray> targets_;
   
  **命名空間：** Microsoft::WRL
  
- ## <a name="see-also"></a>請參閱
+ ## <a name="see-also"></a>另請參閱
  [EventSource 類別](../windows/eventsource-class.md)

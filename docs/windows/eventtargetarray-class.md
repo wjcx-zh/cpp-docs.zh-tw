@@ -1,12 +1,9 @@
 ---
-title: "EventTargetArray 類別 |Microsoft 文件"
-ms.custom: 
+title: EventTargetArray 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::EventTargetArray
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - EventTargetArray class
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac591a1d27792d3b825336ed46e38fa5d002fa73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4461004a1681d9095449c51fb9cb3973d5017693
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray 類別
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -68,5 +63,5 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

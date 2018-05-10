@@ -1,31 +1,26 @@
 ---
-title: "類別屬性 |Microsoft 文件"
-ms.custom: 
+title: 類別屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], class attributes
 - class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc3f277170dbbdf92f280d341bffb042ab70af2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a932fdb1ef1d9e2af2acace901feaa95b6216d1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="class-attributes"></a>類別屬性
 下列屬性套用至[類別](../cpp/class-cpp.md)c + + 關鍵字。  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[coclass](../windows/coclass.md)|建立 ActiveX 控制項。|  
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|將介面項目加入至 COM 對應。|  
 |[control](../windows/control.md)|指定使用者定義型別是控制項。|  
-|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
 |[db_command](../windows/db-command.md)|建立 OLE DB 命令。|  
 |[db_param](../windows/db-param.md)|關聯的輸入或輸出參數中指定的成員變數，分隔的變數。|  
 |[db_source](../windows/db-source.md)|建立資料來源的連接。|  
@@ -67,5 +62,5 @@ ms.lasthandoff: 12/21/2017
 |[version](../windows/version-cpp.md)|識別類別的多個版本之間的特定版本。|  
 |[vi_progid](../windows/vi-progid.md)|指定版本無關的 ProgID 的表單。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依使用方式分類的屬性](../windows/attributes-by-usage.md)

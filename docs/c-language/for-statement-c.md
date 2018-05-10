@@ -1,29 +1,24 @@
 ---
-title: "for 陳述式 (C) | Microsoft Docs"
-ms.custom: 
+title: for 陳述式 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c2b89e8c09ca7ddb6ba7f2cc02c9b400265a35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21640d998a2df31a8429e9451bc674c200383f5f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C)
 **for** 陳述式可讓您依指定的次數重複執行陳述式或複合陳述式。 **for** 陳述式的主體會執行零或多次，直到的選擇性條件變成 false 為止。 您可以在 **for** 陳述式內使用選擇性的運算式，在 **for** 陳述式的執行期間進行初始化和變更值。  

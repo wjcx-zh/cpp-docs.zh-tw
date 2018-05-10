@@ -1,13 +1,10 @@
 ---
-title: "載入調色盤色彩對話方塊 （圖示影像編輯器） |Microsoft 文件"
-ms.custom: 
+title: 載入調色盤色彩對話方塊 （圖示影像編輯器） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.loadcolorpalette
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - color palettes
 - Load Palette Colors dialog box
 ms.assetid: a1b17203-3e02-4498-91de-4ed089156df1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c137277d3e7825c069d1c910b3ea2da2d1d63b74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 95e5235a792301f3742bc576da607d7433f2e4b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>載入調色盤色彩對話方塊 (圖示影像編輯器)
 您可以使用此對話方塊來載入特殊色彩調色盤，在您的專案中使用。 如需詳細資訊，請參閱[儲存及載入不同的色彩調色盤](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  
@@ -46,5 +41,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [圖示影像編輯器](../windows/image-editor-for-icons.md)

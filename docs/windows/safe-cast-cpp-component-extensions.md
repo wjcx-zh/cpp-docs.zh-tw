@@ -1,13 +1,10 @@
 ---
-title: "safe_cast （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: safe_cast （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (C++ 元件擴充功能)
 如果成功，`safe_cast` 作業會傳回指定的運算式做為指定的類型，否則會擲回 `InvalidCastException`。  
@@ -73,7 +68,7 @@ expression
  一個運算式，可針對用來參考或值類型、值類型，或參考或值類型的追蹤參考之控制代碼進行評估。  
   
 ### <a name="remarks"></a>備註  
- `safe_cast`擲回`InvalidCastException`如果它無法轉換*運算式*所指定的型別*類型識別碼*。若要攔截`InvalidCastException`，指定[/EH （例外狀況處理模型）](../build/reference/eh-exception-handling-model.md)編譯器選項，並使用 try/catch 陳述式。  
+ `safe_cast` 擲回`InvalidCastException`如果它無法轉換*運算式*所指定的型別*類型識別碼*。若要攔截`InvalidCastException`，指定[/EH （例外狀況處理模型）](../build/reference/eh-exception-handling-model.md)編譯器選項，並使用 try/catch 陳述式。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/ZW**  
@@ -145,7 +140,7 @@ expression
   
  如需有關轉換的詳細資訊，請參閱[轉型運算子](../cpp/casting-operators.md)。  
   
- `safe_cast`不會套用**const_cast** (沒有**const**)。  
+ `safe_cast` 不會套用**const_cast** (沒有**const**)。  
   
  `safe_cast` 位於 cli 命名空間。  請參閱[平台、 default 和 cli 命名空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)如需詳細資訊。  
   
@@ -193,5 +188,5 @@ int main() {
 Caught expected exception  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

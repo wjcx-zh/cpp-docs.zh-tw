@@ -1,13 +1,10 @@
 ---
-title: "匯出 |Microsoft 文件"
-ms.custom: 
+title: 匯出 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.export
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 24619e3a0e707b40590b0ffb37b415629a18b1cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67b71639fc0b7d0039f5665d2cc187191ac14baf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="export"></a>匯出
 會導致資料結構，以便放入.idl 檔案。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  您不能套用**匯出**屬性的類別，即使此類別只具有公用成員 (相當於`struct`)。  
   
- 如果您匯出未命名`enum`s 或`struct`s，將其指定名稱開頭為**__unnamed***x*，其中*x*是連續的數字。  
+ 如果您匯出未命名`enum`s 或`struct`s，將其指定名稱開頭為 **__unnamed * * * x*，其中*x*是連續的數字。  
   
  適用於匯出 typedef 為基底類型、 結構、 等位、 列舉，或輸入識別項。  請參閱[typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287)如需詳細資訊。  
   
@@ -68,13 +63,13 @@ struct MyStruct {
   
 |||  
 |-|-|  
-|**適用於**|**等位**， `typedef`， `enum`， `struct`，或`interface`|  
+|**適用於**|**等位**， `typedef`， `enum`， `struct`，或 `interface`|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器屬性](../windows/compiler-attributes.md)   
  [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   

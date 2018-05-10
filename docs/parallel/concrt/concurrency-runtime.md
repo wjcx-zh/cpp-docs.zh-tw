@@ -1,13 +1,10 @@
 ---
-title: "並行執行階段 |Microsoft 文件"
-ms.custom: 
+title: 並行執行階段 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的平行應用程式。 它會引發抽象的層級，讓您不需要管理並行存取相關的基礎結構詳細資料。 您也可以使用它來指定符合您應用程式服務需求品質的排程原則。 使用這些資源以協助您開始使用並行執行階段。  
@@ -74,7 +69,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
   
 |||  
 |-|-|  
-|[在 c + + UWP 應用程式建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述一些重要觀念，當您使用並行執行階段產生非同步作業的 UWP 應用程式時，請記住。|  
+|[在 C++ for UWP 應用程式中建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述一些重要觀念，當您使用並行執行階段產生非同步作業的 UWP 應用程式時，請記住。|  
 |[逐步解說：使用工作和 XML HTTP 要求連接](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|示範如何將 ppl 與結合`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的介面。|  
 |[Windows 執行階段應用程式範例](http://code.msdn.microsoft.com/windowsapps)|包含可下載程式碼範例和示範應用程式適用於 Windows 8.x。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|  
   
@@ -117,7 +112,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 |[C + + 和機器碼論壇中的平行運算](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|  
 |[平行程式設計](/dotnet/standard/parallel-programming/index)|教導您有關可用於 [!INCLUDE[dnprdnshort](../../error-messages/tool-errors/includes/dnprdnshort_md.md)]的平行程式設計模型。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考資料](../../parallel/concrt/reference/reference-concurrency-runtime.md)
 
 

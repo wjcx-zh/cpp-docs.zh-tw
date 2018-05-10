@@ -1,13 +1,10 @@
 ---
-title: "Win32 應用程式精靈 |Microsoft 文件"
-ms.custom: 
+title: Win32 應用程式精靈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.overview
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Win32 Application Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c97caee74e1ae918924632802c155b23fffe0527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="win32-application-wizard"></a>Win32 應用程式精靈
 Visual C++ Win32 應用程式精靈可讓您建立四種類型的專案 (請見下表標題列)。 在每個案例中，您都可以為開啟的專案類型指定適合的其他選項。 下表指出每種應用程式類型可使用的選項。  
@@ -62,6 +57,6 @@ Visual C++ Win32 應用程式精靈可讓您建立四種類型的專案 (請見�
   
  您可以在 **方案總管**中檢視精靈為專案建立的檔案。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱 [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立空的 Windows 桌面應用程式](../windows/creating-an-empty-windows-desktop-application.md)   
  [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)

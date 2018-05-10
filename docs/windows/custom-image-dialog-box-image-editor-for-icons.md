@@ -1,13 +1,10 @@
 ---
-title: "自訂影像對話方塊 （圖示影像編輯器） |Microsoft 文件"
-ms.custom: 
+title: 自訂影像對話方塊 （圖示影像編輯器） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.customimage
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Custom Image dialog box
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fe8a0087c6f1d1d1ac90f2d379dd812d6dcdf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a0f8f4506d21c530f5131363cea9a9d142d5957
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>自訂影像對話方塊 (圖示影像編輯器)
 可讓您建立新的映像的自訂大小與色彩數目。
@@ -42,6 +37,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [新\<裝置 > 影像類型對話方塊](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)   
  [圖示影像編輯器](../windows/image-editor-for-icons.md)

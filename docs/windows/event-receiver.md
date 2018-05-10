@@ -1,13 +1,10 @@
 ---
-title: "event_receiver |Microsoft 文件"
-ms.custom: 
+title: event_receiver |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.event_receiver
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - event sinks, creating
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50ea26172e2f5112e760aa02d9247d07afbead2b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 01ab5aeee7d706da7016cb1ea1f01ff7367de888
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="eventreceiver"></a>event_receiver
 建立事件接收器 (接收)。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  `type`  
  下列其中一個值的列舉：  
   
--   `native`用於 unmanaged C/c + + 程式碼 （如原生類別的預設值）。  
+-   `native` 用於 unmanaged C/c + + 程式碼 （如原生類別的預設值）。  
   
 -   COM 程式碼的`com` 。 此值需要您包含下列標頭檔︰  
   
@@ -91,7 +86,7 @@ ms.lasthandoff: 12/21/2017
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器屬性](../windows/compiler-attributes.md)   
  [event_source](../windows/event-source.md)   
  [__event](../cpp/event.md)   

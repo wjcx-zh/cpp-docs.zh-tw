@@ -1,30 +1,25 @@
 ---
-title: "如何： 撰寫 parallel_for_each 迴圈 |Microsoft 文件"
-ms.custom: 
+title: 如何： 撰寫 parallel_for_each 迴圈 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179fa4b055b4743303f5d72ebec851a1d10def93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68ba40b7d9ea93e73d9d18d3548b0c0f34c6411f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>如何：撰寫 parallel_for_each 迴圈
 這個範例示範如何使用[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法來計算中質數的計數[std:: array](../../standard-library/array-class-stl.md)平行的物件。  
@@ -54,7 +49,7 @@ took 1653 ms
 ## <a name="robust-programming"></a>穩固程式設計  
  此範例將傳遞至 lambda 運算式`parallel_for_each`演算法會使用`InterlockedIncrement`函式可啟用同時遞增計數器迴圈的平行反覆項目。 如果您使用函式，例如`InterlockedIncrement`來同步處理對共用資源的存取，您可以在程式碼中呈現效能瓶頸。 您可以使用無鎖定的同步處理機制，例如， [concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別，以消除同時存取共用資源。 如需範例，會使用`combinable`類別以這種方式，請參閱[How to： 使用可組合的類別改善效能](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [平行演算法](../../parallel/concrt/parallel-algorithms.md)   
  [parallel_for_each 函式](reference/concurrency-namespace-functions.md#parallel_for_each)
 

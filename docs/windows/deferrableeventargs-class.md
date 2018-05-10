@@ -1,28 +1,23 @@
 ---
-title: "DeferrableEventArgs 類別 |Microsoft 文件"
-ms.custom: 
+title: DeferrableEventArgs 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ce2c554ac6d959df868b80c1959a286fb0ef307
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 15be5c26e5d4e976eaba7b6b24e1bf4f62c53aca
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 類別
 範本類別，用於延期的事件引數類型。  
@@ -64,5 +59,5 @@ class DeferrableEventArgs : public TEventArgsInterface
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

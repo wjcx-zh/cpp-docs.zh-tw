@@ -1,12 +1,9 @@
 ---
-title: "Activationfactory:: Addref 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Activationfactory:: Addref 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ActivationFactory::AddRef
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - AddRef method
 ms.assetid: dfe96189-ddbe-410a-9f8d-5d8ecc8cc7e6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88fb0a09565f50f352679bb07efad094db592e05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4800f8d6e4c361cf44918bc790c0d8edb7591f08
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activationfactoryaddref-method"></a>ActivationFactory::AddRef 方法
 遞增目前 ActivationFactory 物件的參考計數。  
@@ -48,5 +43,5 @@ STDMETHOD_(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ActivationFactory 類別](../windows/activationfactory-class.md)

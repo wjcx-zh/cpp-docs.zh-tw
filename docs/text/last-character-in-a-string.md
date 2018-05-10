@@ -1,30 +1,25 @@
 ---
-title: "最後一個字元在字串中的 |Microsoft 文件"
-ms.custom: 
+title: 最後一個字元在字串中的 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - last character in string
 - MBCS [C++], last character in string
 ms.assetid: 0a180376-4e55-41e8-9c64-539c7b6d8047
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b766bec977f35f9f346723cbaf3f62e48c8c878
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88cde1d2eb30103462f7ae8f8c06274a2977fc36
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="last-character-in-a-string"></a>字串中的最後一個字元
 使用下列秘訣：  
@@ -51,6 +46,6 @@ ms.lasthandoff: 12/21/2017
   
      此程式碼使用 MBCS 函式`_mbsrchr`和`_mbsinc`。 因為這些函數是 MBCS 感知，他們可以區別 '\\'字元和後隨位元組'\\'。 如果字串中的最後一個字元是 null ('\0')，該程式碼會執行某些動作。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MBCS 程式設計提示](../text/mbcs-programming-tips.md)   
  [字元指派](../text/character-assignment.md)

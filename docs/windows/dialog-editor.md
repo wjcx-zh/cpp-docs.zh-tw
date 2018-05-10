@@ -1,13 +1,10 @@
 ---
-title: "對話方塊編輯器 |Microsoft 文件"
-ms.custom: 
+title: 對話方塊編輯器 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - Dialog editor
 - dialog boxes, editing
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a18ed3aad1d3a9ea697ac815658b5eba8d99bff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b8cb99b2002dab3fb04ffa8c5b117a49d23adc1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor"></a>對話方塊編輯器
-對話方塊編輯器可讓您建立或編輯對話方塊資源。 在 [資源檢視] 視窗中對話方塊的.rc 檔上按兩下，即可開啟對話方塊編輯器 (**檢視 &#124;資源檢視**)。 請注意，[資源檢視] 在 Express 版中無法使用。  
+對話方塊編輯器可讓您建立或編輯對話方塊資源。 在 [資源檢視] 視窗中對話方塊的.rc 檔上按兩下，即可開啟對話方塊編輯器 (**檢視&#124;資源檢視**)。 請注意，[資源檢視] 在 Express 版中無法使用。  
   
  建立新對話方塊 (或對話方塊範本) 的前幾個步驟之一，是在對話方塊中加入控制項。 在對話方塊編輯器中，您可以安排控制項配合特定的大小、圖形或對齊方式，或者在對話方塊內隨意移動它們以便工作。 刪除控制項也很容易。  
   
@@ -66,12 +61,12 @@ ms.lasthandoff: 12/21/2017
     > [!TIP]
     >  使用對話方塊編輯器時，在許多情況下，按一下滑鼠右鍵可以顯示常用命令的捷徑功能表。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源編輯器](../windows/resource-editors.md)   
  [控制項](../mfc/controls-mfc.md)   
  [控制項類別](../mfc/control-classes.md)   

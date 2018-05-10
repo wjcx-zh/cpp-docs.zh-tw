@@ -1,13 +1,10 @@
 ---
-title: "等位宣告 | Microsoft Docs"
-ms.custom: 
+title: 等位宣告 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4088aea4025e7c51aba75efe28978d05c0e48730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d8c52752c1e05cb3c9f2b18a827fb493ba503ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union-declarations"></a>等位宣告
 「等位宣告」會指定一組變數值，以及選擇性地指定命名等位的標記。 變數值稱為等位的「成員」，而且可以具有不同的類型。 等位類似其他語言中的「變異記錄」。  
   
 ## <a name="syntax"></a>語法  
  *struct-or-union-specifier*：  
- *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
+ *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
   
  *struct-or-union identifier*  
   

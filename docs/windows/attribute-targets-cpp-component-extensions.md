@@ -1,30 +1,25 @@
 ---
-title: "屬性目標 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 屬性目標 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de383c6d97f12a1caecbc8fbc7063513a898f50
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-targets-c-component-extensions"></a>屬性目標 (C++ 元件擴充功能)
 屬性使用規範可讓您指定屬性目標。  每個屬性的用途都是套用至特定語言項目。 例如，屬性可能會定義為只套用至類別和結構。  下列清單中顯示可以使用自訂屬性的語法項目。 您也可以將這些值結合起來使用 (使用邏輯 OR)。  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
  以下是有效的屬性目標清單：  
   
--   `All`（適用於所有建構）  
+-   `All` （適用於所有建構）  
   
     ```  
   
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
--   `Assembly`（適用於整個組件）  
+-   `Assembly` （適用於整個組件）  
   
     ```  
   
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
     ```  
   
--   `Module`（整體方式套用至模組）  
+-   `Module` （整體方式套用至模組）  
   
     ```  
   
@@ -315,5 +310,5 @@ ref class MyClass {};
 value struct MyStruct {};  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用者定義的屬性](../windows/user-defined-attributes-cpp-component-extensions.md)

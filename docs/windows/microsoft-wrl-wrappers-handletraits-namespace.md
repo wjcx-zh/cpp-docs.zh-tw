@@ -1,12 +1,9 @@
 ---
-title: "Microsoft::WRL::Wrappers::HandleTraits 命名空間 |Microsoft 文件"
-ms.custom: 
+title: Microsoft::WRL::Wrappers::HandleTraits 命名空間 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aec9ff1b4294257f692d76a96960820379116b0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b114d067249e78d7fb935e473cc3cc952c76fe02
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits Namespace
 說明常用的控制代碼為基礎的資源類型的特性。  
@@ -58,5 +53,5 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

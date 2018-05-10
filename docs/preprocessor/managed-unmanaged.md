@@ -1,12 +1,9 @@
 ---
-title: "managed、 unmanaged |Microsoft 文件"
-ms.custom: 
+title: managed、 unmanaged |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.unmanaged
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7e86e053cec68a3a25c753b7c3b7fb8ab50363
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="managed-unmanaged"></a>managed、unmanaged
 啟用函式層級控制項，用於編譯 Managed 或 Unmanaged 的函式。  
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/23/2018
   
  編譯 Unmanaged 函式用於原生平台，Common Language Runtime 會將該部分的程式執行傳遞至該原生平台。  
   
- 函式會編譯為 managed 預設時**/clr**用。  
+ 函式會編譯為 managed 預設時 **/clr**用。  
   
  套用這些 pragma 時：  
   
@@ -59,7 +54,7 @@ ms.lasthandoff: 02/23/2018
   
 -   將 pragma 新增到 `#include` 陳述式之後。 請勿在 `#include` 陳述式之前使用這些 pragma。  
   
- 編譯器會忽略`managed`和`unmanaged`pragma 如果**/clr**不是在編譯中。  
+ 編譯器會忽略`managed`和`unmanaged`pragma 如果 **/clr**不是在編譯中。  
   
  具現化樣板函式時，定義樣板時的 pragma 狀態決定函式為 Managed 或 Unmanaged 函式。  
   
@@ -101,5 +96,5 @@ In managed function.
 In unmanaged function.  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

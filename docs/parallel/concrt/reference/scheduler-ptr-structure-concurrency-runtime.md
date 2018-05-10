@@ -1,12 +1,9 @@
 ---
-title: "scheduler_ptr 結構 |Microsoft 文件"
-ms.custom: 
+title: scheduler_ptr 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - scheduler_ptr
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 257dcae6df4deb0a52f7dee4db98adba2b2b4f29
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 672e4a0dd5f66ab613dde8877915c799d6c4b2f4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 結構
 代表排程器的指標。 這個類別是為了允許使用 shared_ptr 共用存留期的規格，或只是使用原始指標的簡單參考。  
@@ -56,7 +51,7 @@ struct scheduler_ptr;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[scheduler_ptr::operator bool](#operator_bool)|測試排程器指標是否為非 null|  
+|[scheduler_ptr:: operator bool](#operator_bool)|測試排程器指標是否為非 null|  
 |[scheduler_ptr::operator-&gt;](#operator_ptr)|作用如同指標|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -95,7 +90,7 @@ scheduler_interface * operator-> const; （)
  Creates a scheduler pointer from shared_ptr to scheduler  
   
 ```
-explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
+明確 scheduler_ptr （std:: shared_ptr < scheduler_interface > 排程器）。
 
 明確 scheduler_ptr (_In_opt_ scheduler_interface * pScheduler);
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "ImplementsHelper 結構 |Microsoft 文件"
-ms.custom: 
+title: ImplementsHelper 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ImplementsHelper
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ImplementsHelper structure
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1a51de59278e476be1e99b60ef1b0ab8a6e3f3cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58f27e418946987633f771bc8d2c3224bc2cd7fd
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 結構
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -67,6 +62,6 @@ friend struct Details::ImplementsHelper;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [參考 （Windows 執行階段程式庫）](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

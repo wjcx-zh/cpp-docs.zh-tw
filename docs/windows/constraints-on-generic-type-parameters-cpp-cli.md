@@ -1,13 +1,10 @@
 ---
-title: "泛型條件約束的型別參數 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 泛型條件約束的型別參數 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - where
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型型別參數的條件約束 (C++/CLI)
 在泛型類型或方法宣告中，您可以使用條件約束限定型別參數。 條件約束是做為型別引數使用的類型必須符合的需求。 例如，條件約束可能是指，類型引數必須實作特定介面或從特定類別繼承。  
@@ -61,7 +56,7 @@ where type-parameter: constraint list
   
  類別和介面條件約束會指定，引數類型必須是或繼承自指定的類別，或是實作指定的介面。  
   
- 將條件約束應用至泛型類型或方法，可讓該類型或方法中的程式碼利用條件約束類型的已知功能。 比方說，您可以宣告泛型類別的型別參數實作**IComparable\<T >**介面：  
+ 將條件約束應用至泛型類型或方法，可讓該類型或方法中的程式碼利用條件約束類型的已知功能。 比方說，您可以宣告泛型類別的型別參數實作**IComparable\<T >** 介面：  
   
 ```  
 // generics_constraints_1.cpp  
@@ -208,5 +203,5 @@ where A : C
 ref struct SampleClass {};  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

@@ -1,31 +1,26 @@
 ---
-title: "泛型和樣板 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 泛型和樣板 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d6dc0a64c5d225f6e80a21dc008e5a2486ad3d9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generics-and-templates-visual-c"></a>泛型和樣板 (Visual C++)
 泛型和範本都是參數化類型中提供支援這兩種語言功能。 不過，它們不相同，且有不同用途。 本主題提供許多差異的概觀。  
@@ -105,5 +100,5 @@ int main() {
 F  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

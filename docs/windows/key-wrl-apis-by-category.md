@@ -1,28 +1,23 @@
 ---
-title: "索引鍵 WRL 應用程式開發介面的類別目錄 |Microsoft 文件"
-ms.custom: 
+title: 索引鍵 WRL 應用程式開發介面的類別目錄 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936c85443f893111b3c2b9de17ca80e6fb382b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="key-wrl-apis-by-category"></a>依分類區分的重要 WRL 應用程式開發介面
 下表列出主 Windows 執行階段 c + + 樣板程式庫類別、 結構、 函數和巨集。 會省略 helper 命名空間和類別中的建構。 這些清單會擴大，命名空間所排列的 API 文件。  
@@ -79,5 +74,5 @@ ms.lasthandoff: 12/21/2017
 |[ActivatableClass 巨集](../windows/activatableclass-macros.md)|擴展內部快取，其中包含可以建立指定類別的執行個體的 factory。|  
 |[InspectableClass 巨集](../windows/inspectableclass-macro.md)|設定執行階段類別名稱和信任層級。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

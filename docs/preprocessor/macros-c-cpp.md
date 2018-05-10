@@ -1,12 +1,9 @@
 ---
-title: "巨集 （C/c + +） |Microsoft 文件"
-ms.custom: 
+title: 巨集 （C/c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="macros-cc"></a>巨集 (C/C++)
-前置處理會展開巨集不是前置處理器指示詞的所有行的 (不需要的線條 **#** 作為第一個非空格字元) 和中的某些指示詞不會略過一部分的組件條件式編譯。 「條件式編譯」指示詞可讓您隱藏原始程式檔某些部分的編譯，方法是透過測試常數運算式或識別項，判斷在前置處理期間，哪些文字區塊會傳遞到編譯器上，以及哪些文字區塊會從原始程式檔中移除。  
+前置處理會展開巨集不是前置處理器指示詞的所有行的 (不需要的線條**#** 作為第一個非空格字元) 和中的某些指示詞不會略過一部分的組件條件式編譯。 「條件式編譯」指示詞可讓您隱藏原始程式檔某些部分的編譯，方法是透過測試常數運算式或識別項，判斷在前置處理期間，哪些文字區塊會傳遞到編譯器上，以及哪些文字區塊會從原始程式檔中移除。  
   
  `#define` 指示詞通常用於讓有意義的識別項與常數、關鍵字和常用的陳述式或運算式產生關聯。 表示常數的識別項有時稱為「符號常數」或「資訊清單常數」。 表示陳述式或運算式的識別項稱為「巨集」。 這份前置處理器文件中只會使用「巨集」這個詞彙。  
   
@@ -48,5 +43,5 @@ ms.lasthandoff: 02/23/2018
   
 -   [預先定義的巨集](../preprocessor/predefined-macros.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C/C++ 前置處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)

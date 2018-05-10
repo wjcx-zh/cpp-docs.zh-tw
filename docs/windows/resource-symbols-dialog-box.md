@@ -1,13 +1,10 @@
 ---
-title: "資源符號對話方塊 |Microsoft 文件"
-ms.custom: 
+title: 資源符號對話方塊 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourcesymbols
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Resource Symbols dialog box
 - Change Symbol dialog box
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e21f60fb2ca90e9e4825e93103fa74be3563780
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 486d4c6c89a43c9d91c655911fa7fee8a31ebd32
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-symbols-dialog-box"></a>資源符號對話方塊
 **資源符號**對話方塊可讓您加入新的資源符號、 變更符號會顯示，或跳到原始程式碼中正在使用中的位置。  
@@ -62,5 +57,5 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [檢視資源符號](../windows/viewing-resource-symbols.md)

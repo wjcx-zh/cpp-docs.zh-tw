@@ -1,13 +1,10 @@
 ---
-title: "將控制項加入至對話方塊會造成對話方塊無法再函式 |Microsoft 文件"
-ms.custom: 
+title: 將控制項加入至對話方塊會造成對話方塊無法再函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - dialog box controls, troubleshooting
 - InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0ec4825419c7a9d3c9bc35151b84c327a03325b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b10c24955e74d08ab570b5b694628f42bb394268
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>將控制項加入至對話方塊會造成對話方塊無法使用
 之後，將通用控制項或 rich edit 控制項加入對話方塊中，它不會出現測試對話方塊中，或將不會出現對話方塊本身時。  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [對話方塊編輯器的疑難排解](../windows/troubleshooting-the-dialog-editor.md)   
  [對話方塊編輯器](../windows/dialog-editor.md)
 

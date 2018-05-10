@@ -1,12 +1,9 @@
 ---
-title: "Module:: getmodule 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Module:: getmodule 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::GetModule
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - GetModule method
 ms.assetid: 78b5fd68-8131-4ef9-8b6c-20f8c7b36992
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8081e11ff25eec698bb988bb369d5d3a83a5cdc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 014a2aeca7876e8fac7a8428388b4d3ead2860a5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulegetmodule-method"></a>Module::GetModule 方法
 建立模組的執行個體。  
@@ -46,6 +41,6 @@ WRL_NOTHROW static Module& GetModule();
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  
 [Module 類別](../windows/module-class.md)

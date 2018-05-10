@@ -1,13 +1,10 @@
 ---
-title: "平台、 default 和 cli 命名空間 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 平台、 default 和 cli 命名空間 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - lang
 - cli
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5fa26b46a110fd59f7568a9101270766928f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b466a94aba9f19907a5438a8b8e623d65aa0ac2d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform、default 和 cli 命名空間 (C++ 元件擴充功能)
 命名空間會限定語言項目的名稱，因此名稱不會與原始程式碼中其他位置的相同名稱發生衝突。 例如，名稱衝突可能會阻止編譯器可辨識的[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。 編譯器會使用命名空間，但是命名空間不會保留在編譯的組件中。  
@@ -51,7 +46,7 @@ using namespace cli;
   
  **備註**  
   
- C + + CLI 支援`cli`命名空間。 編譯時**/clr**、`using`隱含語法區段中的陳述式。  
+ C + + CLI 支援`cli`命名空間。 編譯時 **/clr**、`using`隱含語法區段中的陳述式。  
   
  `cli` 命名空間中具有下列語言功能：  
   
@@ -87,5 +82,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

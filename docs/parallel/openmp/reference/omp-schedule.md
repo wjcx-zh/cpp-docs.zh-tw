@@ -1,12 +1,9 @@
 ---
-title: OMP_SCHEDULE | Microsoft Docs
-ms.custom: 
+title: OMP_SCHEDULE |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - OMP_SCHEDULE
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2295a801-e584-4d2f-826f-7ca4c88846a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ff09bf142fd1c8bbbd61d1e1d3bd76102f7d86b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5052aaadc673e38a844ea5b0d1e11ff3a96f3fbe
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 可修改[排程](../../../parallel/openmp/reference/schedule.md)子句時`schedule(runtime)`中指定`for`或`parallel for`指示詞。  
@@ -71,5 +66,5 @@ set OMP_SCHEDULE="guided,2"
 set OMP_SCHEDULE  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [環境變數](../../../parallel/openmp/reference/openmp-environment-variables.md)

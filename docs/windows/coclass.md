@@ -1,13 +1,10 @@
 ---
-title: "coclass |Microsoft 文件"
-ms.custom: 
+title: coclass |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.coclass
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - coclass attribute
 ms.assetid: 42da6a10-3af9-4b43-9a1d-689d00b61eb3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6bcae762c603f05ce11eae5d14eb2e182c666797
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eb9c7e632151c039b76a0f389cd18c68c0740ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="coclass"></a>coclass
 建立 COM 物件，可以實作 COM 介面。  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
  **Coclass**屬性也可讓下列函式提供透過插入程式碼，或是在的情況下`GetObjectCLSID`，做為基底類別中的靜態方法`CComCoClass`:  
   
--   `UpdateRegistry`註冊目標類別的類別處理的站。  
+-   `UpdateRegistry` 註冊目標類別的類別處理的站。  
   
 -   `GetObjectCLSID`相關的註冊，也可用來取得目標類別的 CLSID。  
   
@@ -154,7 +149,7 @@ public:
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [COM 屬性](../windows/com-attributes.md)   
  [類別屬性](../windows/class-attributes.md)   

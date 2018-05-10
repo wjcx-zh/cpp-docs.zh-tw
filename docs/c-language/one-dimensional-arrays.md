@@ -1,13 +1,10 @@
 ---
-title: "一維陣列 | Microsoft Docs"
-ms.custom: 
+title: 一維陣列 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 033d772a40ddf55474ca845c9c5708423bcf5e90
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="one-dimensional-arrays"></a>一維陣列
 後置運算式 (postfix expression) 後面跟著以方括號 (**[ ]**) 括住的運算式，是以註標方式來表示的陣列物件元素。 當註標運算式如下表示時，代表 *expression* 於 *postfix-expression* 之外的所在位置位址值：  
@@ -56,7 +51,7 @@ int main() {
   
  註標運算式通常用來參考陣列元素，但是您可以將註標套用到任何指標。 無論值的順序為何，*expression* 都必須以方括號 (**[ ]**) 括住。  
   
- 評估註標運算式的方式是在指標值中加入整數值，然後將間接運算子 (**\****) 套用到結果。 (如需間接運算子的相關討論，請參閱[間接和傳址運算子](../c-language/indirection-and-address-of-operators.md))。實際上，假設 `a` 是指標而 `b` 是整數，下列四個運算式對一維陣列而言是相等的：  
+ 評估註標運算式的方式是在指標值中加入整數值，然後將間接運算子 (**\***) 套用到結果。 (如需間接運算子的相關討論，請參閱[間接和傳址運算子](../c-language/indirection-and-address-of-operators.md))。實際上，假設 `a` 是指標而 `b` 是整數，下列四個運算式對一維陣列而言是相等的：  
   
 ```  
 a[b]  
@@ -77,5 +72,5 @@ b[a]
   
  註標運算式 `line[0]` 代表該行第一個元素的值，因為從 `line` 代表的位址位移是 0。 同樣地，運算式 (如 `line[5]`) 會參考從程式行位移五個位置的元素，或是陣列的第六個元素。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [註標運算子：](../cpp/subscript-operator.md)

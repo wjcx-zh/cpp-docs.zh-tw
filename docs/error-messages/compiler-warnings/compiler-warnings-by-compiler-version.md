@@ -1,13 +1,10 @@
 ---
-title: "編譯器警告的編譯器版本 |Microsoft 文件"
-ms.custom: 
+title: 編譯器警告的編譯器版本 |Microsoft 文件
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,46 +12,45 @@ helpviewer_keywords:
 - cl.exe compiler, setting warning options
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>編譯器警告的編譯器版本
 
-編譯器可以隱藏導入後的版本，您可以使用指定的警告[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項。 這是適合用來管理您的建置程序，當您引入新的工具組版本，並想要暫時隱藏新的警告。 這個選項不會隱藏新的錯誤訊息。 我們不建議您隱藏所有的新警告永久 ！ 我們建議您一律在最高規則的警告層級編譯__/W4__，並移除__/Wv__儘速在您的組建選項。 
+編譯器可以隱藏導入後的版本，您可以使用指定的警告[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項。 這是適合用來管理您的建置程序，當您引入新的工具組版本，並想要暫時隱藏新的警告。 這個選項不會隱藏新的錯誤訊息。 我們不建議您隱藏所有的新警告永久 ！ 我們建議您一律在最高規則的警告層級編譯 __/W4__，並移除 __/Wv__儘速在您的組建選項。 
 
 這些版本的編譯器導入新的警告：
 
 | 產品 | 編譯器版本號碼 |
 |-|-|
-| Visual C++ 2002 | 13.00.9466 |
-| Visual C++ 2003 | 13.10.3077 |
+| Visual c + + 2002 | 13.00.9466 |
+| Visual c + + 2003 | 13.10.3077 |
 | Visual C++ 2005 | 14.00.50727.762 |
 | Visual C++ 2008 | 15.00.21022.08 |
 | Visual C++ 2010 | 16.00.40219.01 |
 | Visual c + + 2012 | 17.00.51106.1 |
-| Visual C++ 2013 | 18.00.21005.1 |
+| Visual c + + 2013 | 18.00.21005.1 |
 | Visual c + + 2015 RTM | 19.00.23026.0 |
-| Visual C++ 2015 Update 1 | 19.00.23506.0 |
-| Visual C++ 2015 Update 2 | 19.00.23918.0 |
-| Visual C++ 2015 Update 3 | 19.00.24215.1 |
-| Visual C++ 2017 RTM | 19.10.24903.0 |
+| Visual c + + 2015 Update 1 | 19.00.23506.0 |
+| Visual c + + 2015 Update 2 | 19.00.23918.0 |
+| Visual c + + 2015 Update 3 | 19.00.24215.1 |
+| Visual c + + 2017 RTM | 19.10.24903.0 |
 | Visual c + + 2017 版本 15.1 | 19.10.25017.0 |
 | Visual c + + 2017 版本 15.3 | 19.11.25506.0 |
 | Visual c + + 2017 版本 15.5 | 19.12.25827.0 |
 
-您可以指定只有主要版本號碼、 主要和次要的數字或主要、 次要、 和組建編號__/Wv__選項。 編譯器會報告所有警告符合指定的數目，以開始的版本，且會抑制版本大於指定的數字的所有警告。 例如， __/Wv:17__報告導入，或任何版本的 Visual Studio 2012 之前的所有警告，且會抑制任何編譯器，從 Visual Studio 2013 （18 版） 或更新版本所導入的所有警告。 隱藏警告導入在 Visual Studio 2015 update 2 和更新版本中，您可以使用__/Wv:19.00.23506__。 使用__/Wv:19.11__報告所有警告導入了在任何版本 Visual Studio 2017 版本 15.5 之前, 的 Visual Studio 中，但是會隱藏在 Visual Studio 2017 15.5 和更新版本中導入的警告。
+您可以指定只有主要版本號碼、 主要和次要的數字或主要、 次要、 和組建編號 __/Wv__選項。 編譯器會報告所有警告符合指定的數目，以開始的版本，且會抑制版本大於指定的數字的所有警告。 例如， __/Wv:17__報告導入，或任何版本的 Visual Studio 2012 之前的所有警告，且會抑制任何編譯器，從 Visual Studio 2013 （18 版） 或更新版本所導入的所有警告。 隱藏警告導入在 Visual Studio 2015 update 2 和更新版本中，您可以使用 __/Wv:19.00.23506__。 使用 __/Wv:19.11__報告所有警告導入了在任何版本 Visual Studio 2017 版本 15.5 之前, 的 Visual Studio 中，但是會隱藏在 Visual Studio 2017 15.5 和更新版本中導入的警告。
 
-下列章節會列出您可以藉由使用隱藏的 Visual c + + 的每個版本所導入的警告__/Wv__編譯器選項。 __/Wv__選項無法隱藏警告不會列出，自封指定的版本的編譯器。
+下列章節會列出您可以藉由使用隱藏的 Visual c + + 的每個版本所導入的警告 __/Wv__編譯器選項。 __/Wv__選項無法隱藏警告不會列出，自封指定的版本的編譯器。
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Visual c + + 2017 15.5 （編譯器版本 19.12.25827.0） 版本中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:19.11__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.11__。
 
 |||
 |-|-|
@@ -62,7 +58,7 @@ C5044|命令列選項的引數*選項*指向的路徑 '*路徑*' 不存在
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Visual c + + 2017 15.3 （編譯器版本 19.11.25506.0） 版本中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:19.10__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.10__。
 
 |||
 |-|-|
@@ -76,7 +72,7 @@ C5043|'*規格*': 例外狀況規格與上一個宣告不符
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Visual c + + 2017 15.1 （編譯器版本 19.10.25017.0） 版本中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:19.10.24903__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.10.24903__。
 
 |||
 |-|-|
@@ -97,7 +93,7 @@ C5038|資料成員 '*member1*'將初始化資料成員之後'*member2*'
 
 ## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>在 Visual c + + 2017 RTM （編譯器版本 19.10.24903） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:19.00__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.00__。
 
 |||
 |-|-|
@@ -108,7 +104,7 @@ C4840|類別不可移植使用*類別*' 當做 variadic 函式的引數
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Visual c + + 2015 Update 3 （編譯器版本 19.00.24215.1） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:19.00.23918__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.00.23918__。
 
 |||
 |-|-|
@@ -119,7 +115,7 @@ C4599|'*引數*':*來源*引數數目*數目*不符*來源*
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>Visual c + + 2015 Update 2 （編譯器版本 19.00.23918.0） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:19.00.23506__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.00.23506__。
 
 |||
 |-|-|
@@ -130,7 +126,7 @@ C4868|編譯器不會強制執行括號初始設定式清單中的左到右評�
 
 ## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>Visual c + + 2015 Update 1 （編譯器版本 19.00.23506.0） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:19.00.23026__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.00.23026__。
 
 |||
 |-|-|
@@ -141,7 +137,7 @@ C5032|偵測到任何對應 「 #pragma warning （pop 的) #pragma warning
 
 ## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>在 Visual c + + 2015 RTM （編譯器版本 19.00.23026.0） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:18__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:18__。
 
 |||
 |-|-|
@@ -200,7 +196,7 @@ C5030|屬性 '*屬性*' 無法辨識
 
 ## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>在 Visual c + + 2013 （編譯器版本 18.00.21005.1） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:17__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:17__。
 
 |||
 |-|-|
@@ -229,12 +225,12 @@ C4992|Warbird： 函式 '*宣告*' 標記為 __forceinline 無法內嵌，因為
 
 ## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>在 Visual c + + 2012 （編譯器版本 17.00.51106.1） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:16__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:16__。
 
 |||
 |-|-|
 C4330|屬性 '*屬性*'針對 section'*區段*' 忽略
-C4415|duplicate __declspec(code_seg('*name*'))
+C4415|重複的 __declspec (code_seg ('*名稱*'))
 C4416|__declspec(code_seg(...)) 包含空字串： 忽略
 C4417|明確樣板具現化不能有 __declspec(code_seg(...))： 忽略
 C4418|__declspec(code_seg(...)) 忽略列舉
@@ -272,7 +268,7 @@ C4989|'*描述*': 類型含有衝突的定義。
 
 ## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>在 Visual c + + 2010 （編譯器版本 16.00.40219.01） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:15__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:15__。
 
 |||
 |-|-|
@@ -288,7 +284,7 @@ C4987|使用非標準的擴充：'throw (...)'
 
 ## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Visual c + + 2008 （編譯器版本 15.00.21022.08） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:14__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:14__。
 
 |||
 |-|-|
@@ -303,7 +299,7 @@ C4985|'*宣告*': 屬性不存在先前的宣告。
 
 ## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Visual c + + 2005 （編譯器版本 14.00.50727.762） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:13__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:13__。
 
 |||
 |-|-|
@@ -337,7 +333,7 @@ C4384|#pragma '*指示詞*' 應該只用在全域範圍
 C4393|'*類型*': const 對*描述*資料成員; 忽略
 C4394|'*類型*': per-appdomain 符號不可標示以 __declspec (*值*)
 C4395|'*類型*': initonly 資料成員的複本將會叫用成員函式'*類型*'
-C4397|DefaultCharSetAttribute is ignored
+C4397|會忽略 DefaultCharSetAttribute
 C4398|'*類型*': 處理序專屬全域物件可能無法使用多重 appdomain 正確運作，請考慮使用 __declspec(appdomain)
 C4399|'*類型*': 處理序專屬符號不會標示 __declspec (*值*) 時以 /clr 編譯： pure
 C4400|'*類型*': 不支援此類型的 const/volatile 限定詞
@@ -446,7 +442,7 @@ C4972|直接修改或將 Unbox 作業的結果視為左值，將無法驗證
 
 ## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>在 Visual c + + 2003 中 （編譯器版本 13.10.3077） 導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:13.00.9466__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:13.00.9466__。
 
 |||
 |-|-|
@@ -482,7 +478,7 @@ C4954|'*描述*': 未分析 （包含 __int64 switch 運算式）
 
 ## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>Visual c + + 2002 （編譯器版本 13.00.9466） 中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告__/Wv:12__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:12__。
 
 |||
 |-|-|
@@ -629,7 +625,7 @@ C4996|'*問題*':*描述*
 C4997|'*類型*': coclass 未實作 COM 介面或虛擬介面
 C4998|預期失敗：*描述*(*數目*)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [/Wv 編譯器選項](../../build/reference/compiler-option-warning-level.md)
 [都預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
 [警告](../../preprocessor/warning.md)

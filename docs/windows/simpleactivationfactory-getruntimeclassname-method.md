@@ -1,30 +1,25 @@
 ---
-title: "Simpleactivationfactory:: Getruntimeclassname 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Simpleactivationfactory:: Getruntimeclassname 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
 dev_langs:
 - C++
 ms.assetid: 3aa07487-9a42-46f8-8893-37ba6315e50b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73431c7a0f719579caf3df146b69dd8d7248d0a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e001d0269c21026bdd00abcdd4d257f11d601cf6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName 方法
 
@@ -49,7 +44,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>備註
 
-如果 &#95; &#95;WRL_STRICT #95; &#95;已定義，判斷提示會發出錯誤如果所指定的類別`Base`類別樣板參數不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或未設定為使用 WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
+如果&#95; &#95;WRL_STRICT&#95; &#95;是定義，判斷提示會發出錯誤如果所指定的類別`Base`類別樣板參數不衍生自[RuntimeClass](../windows/runtimeclass-class.md)，或不使用 proxy 設定WinRt 或 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。
 
 ## <a name="requirements"></a>需求
 
@@ -57,6 +52,6 @@ STDMETHOD( GetRuntimeClassName )(
 
 **命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [SimpleActivationFactory 類別](../windows/simpleactivationfactory-class.md)

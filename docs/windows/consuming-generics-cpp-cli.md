@@ -1,30 +1,25 @@
 ---
-title: "使用泛型 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 使用泛型 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f5a767995ce0484552d96429573e0b355820207
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 286d032a3ae01bf146d25583bff18ef94e6cccd6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="consuming-generics-ccli"></a>使用泛型 (C++/CLI)
 以某一種 .NET 語言撰寫的泛型可以在其他 .NET 語言中使用。 與範本不同的是，泛型在編譯的組件中仍然保持為泛型。 因此，您可以在不同組件中，甚至以與定義泛型類型的組件不同的語言，將泛型類型具現化。  
@@ -131,5 +126,5 @@ int main() {
 10  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

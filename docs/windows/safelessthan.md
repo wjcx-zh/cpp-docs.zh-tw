@@ -1,13 +1,10 @@
 ---
-title: "SafeLessThan |Microsoft 文件"
-ms.custom: 
+title: SafeLessThan |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeLessThan
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeLessThan function
 ms.assetid: 9d85bc0d-8d94-4d59-9b72-ef3c63a120a0
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c490f02f6c27d517095ab3f75a31bb03fe14f63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed6f114d13b006425cd3e94e898b2fe924ec732d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safelessthan"></a>SafeLessThan
 判斷兩個數字是否小於另一個。  
@@ -49,7 +44,7 @@ inline bool SafeLessThan (
  第二個 numer 中。 這必須為類型 U。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果`t`是小於`u`，否則為`false`。  
+ `true` 如果`t`是小於`u`，否則為`false`。  
   
 ## <a name="remarks"></a>備註  
  這個方法會增強一般比較運算子，因為`SafeLessThan`可讓您比較兩個不同的數字。  
@@ -66,7 +61,7 @@ inline bool SafeLessThan (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

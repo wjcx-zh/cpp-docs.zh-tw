@@ -1,12 +1,9 @@
 ---
-title: "IUMSThreadProxy 結構 |Microsoft 文件"
-ms.custom: 
+title: IUMSThreadProxy 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSThreadProxy
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484c5a8fe7f730bf772fb65dee087ccbe1ff6425
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bbba2955adc14ef73a0ba9932756ace57c4136e6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 結構
 執行緒的抽象概念。 如果您想要將可使用者模式排程 (UMS) 的執行緒授與給排程器，請將排程器原則項目 `SchedulerKind` 的值設為 `UmsThreadDefault`，並實作 `IUMSScheduler` 介面。 只有安裝 Windows 7 (含以上) 版本的 64 位元作業系統支援 UMS 執行緒。  
@@ -107,7 +102,7 @@ virtual int ExitHyperCriticalRegion() = 0;
 ### <a name="return-value"></a>傳回值  
  新 hyper-v 關鍵區域的深度。 Hyper-v 關鍵區域是可重新進入。  
   
-##  <a name="getcriticalregiontype"></a>  IUMSThreadProxy::GetCriticalRegionType Method  
+##  <a name="getcriticalregiontype"></a>  Iumsthreadproxy:: Getcriticalregiontype 方法  
  傳回何種執行緒 proxy 是中的關鍵區域。 因為 hyper-v 關鍵區域是關鍵的區域的超集，如果程式碼已進入關鍵區域，然後 hyper-v 關鍵區域，`InsideHyperCriticalRegion`會傳回。  
   
 ```
@@ -117,6 +112,6 @@ virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ### <a name="return-value"></a>傳回值  
  執行緒 proxy 是中的重要區域的類型。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [IUMSScheduler 結構](iumsscheduler-structure.md)

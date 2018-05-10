@@ -1,13 +1,10 @@
 ---
-title: "ptr |Microsoft 文件"
-ms.custom: 
+title: ptr |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.ptr
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 183671fd4a2a0cb783a5f4644411f5d3ac5faf5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ptr"></a>ptr
 將指標指定為完整的指標。  
@@ -51,14 +46,14 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**適用於**|介面參數，在介面方法`typedef`|  
+|**適用於**|介面參數，在介面方法 `typedef`|  
 |**可重複**|否|  
 |**必要屬性**|無|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [介面屬性](../windows/interface-attributes.md)   
  [方法屬性](../windows/method-attributes.md)   

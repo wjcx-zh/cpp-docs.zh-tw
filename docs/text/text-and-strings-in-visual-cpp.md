@@ -1,13 +1,10 @@
 ---
-title: "文字和 Visual c + + 字串 |Microsoft 文件"
-ms.custom: 
+title: 文字和 Visual c + + 字串 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a911b3a4547be409047004969043943b54bb2480
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e16c44993f3cd9598bc42f9151264e09ac3b7a53
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文字和字串
 開發國際市場的應用程式的重要層面是本機的字元集足夠表示法。 ASCII 字元集定義字元 0x00 到 0x7F 範圍內。 有其他的字元集，主要歐洲的會定義哪些字元 0x00 到 0x7F 範圍內具有相同 ASCII 字元集，及也定義 0x80 設 0xFF 的擴充的字元。 因此，8 位元、 單一位元組字元組 (SBCS) 就足以代表 ASCII 字元集，以及用於許多歐洲語言的字集。 不過，某些非歐洲，日文如漢字等字元集，包括更多的字元比單一位元組的編碼配置可以代表，因此需要多位元組字元集 (MBCS) 的編碼方式。  

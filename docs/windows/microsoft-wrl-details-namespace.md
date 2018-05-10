@@ -1,28 +1,23 @@
 ---
-title: "Microsoft::WRL::Details 命名空間 |Microsoft 文件"
-ms.custom: 
+title: Microsoft::WRL::Details 命名空間 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f005969908252602cb2fb4bdd73d3b55ae342a99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a038509912c659cc820b73f16210ce874427112
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 命名空間
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -95,6 +90,6 @@ namespace Microsoft::WRL::Details;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft:: wrl 命名空間](../windows/microsoft-wrl-namespace.md)   
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

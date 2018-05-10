@@ -1,13 +1,10 @@
 ---
-title: "類型特性 （c + + 元件擴充功能） 編譯器支援 |Microsoft 文件"
-ms.custom: 
+title: 類型特性 （c + + 元件擴充功能） 編譯器支援 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - __is_simple_value_class
 - __has_trivial_destructor
@@ -69,18 +66,16 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c68e354e70f3976bffba12020ff1175142715fbc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>類型特性的編譯器支援 (C++ 元件擴充功能)
 編譯器支援*類型特性*，表示在編譯時間類型的各種特性。  
@@ -605,7 +600,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="examples"></a>範例  
  **範例**  
   
- 下列程式碼範例示範如何使用類別範本來公開的編譯器類型特性**/clr**編譯。 如需詳細資訊，請參閱[Windows 執行階段和 Managed 樣板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
+ 下列程式碼範例示範如何使用類別範本來公開的編譯器類型特性 **/clr**編譯。 如需詳細資訊，請參閱[Windows 執行階段和 Managed 樣板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
   
 ```  
 // compiler_type_traits.cpp  
@@ -633,5 +628,5 @@ int main () {
 R is a ref class  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

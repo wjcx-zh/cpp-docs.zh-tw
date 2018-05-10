@@ -1,13 +1,10 @@
 ---
-title: "設定快速鍵屬性 |Microsoft 文件"
-ms.custom: 
+title: 設定快速鍵屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Key property
 - Modifier property
 ms.assetid: 0fce9156-3025-4e18-b034-e219a4c65812
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83eea84c89a9f9873b687333b7454d9f3c9c41b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5198fc1958863d3b5ad560ffeb8c5576506e9e46
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-accelerator-properties"></a>設定快速鍵屬性
 您可以在設定快速鍵屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)在任何時間。 您也可以使用快速鍵編輯器來修改快速鍵對應表中的快速鍵屬性。 使用 [屬性] 視窗或快速鍵編輯器所做的變更會有相同的結果：編輯會立即反映在快速鍵對應表中。  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [預先定義的快速鍵](../windows/predefined-accelerator-keys.md)   
  [資源編輯器](../windows/resource-editors.md)   
  [快速鍵編輯器](../windows/accelerator-editor.md)

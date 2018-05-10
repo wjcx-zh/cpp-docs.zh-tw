@@ -1,13 +1,10 @@
 ---
-title: "國際化策略 |Microsoft 文件"
-ms.custom: 
+title: 國際化策略 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ead6470bbbeacd43326f4373877eb991e5899116
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 20e4d7b067daedcbc5ce065c096e561dbf932ac1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="internationalization-strategies"></a>國際化策略
 根據您的目標作業系統和市場，您有數個國際化策略：  
@@ -43,12 +38,12 @@ ms.lasthandoff: 02/09/2018
   
      您使用 MBCS 特有的功能。 字串可以包含單一位元字元，雙位元組字元或兩者。 C 執行階段程式庫提供僅限 MBCS 程式設計函式、 巨集和資料類型。 MFC 會完全啟用 MBCS。  
   
--   您的應用程式的原始程式碼會寫入完整的可攜性，重新編譯使用的符號**_UNICODE**或符號**_MBCS**定義，您可以產生使用的版本。 如需詳細資訊，請參閱[Tchar.h 中的泛用文字對應](../text/generic-text-mappings-in-tchar-h.md)。  
+-   您的應用程式的原始程式碼會寫入完整的可攜性，重新編譯使用的符號 **_UNICODE**或符號 **_MBCS**定義，您可以產生使用的版本。 如需詳細資訊，請參閱[Tchar.h 中的泛用文字對應](../text/generic-text-mappings-in-tchar-h.md)。  
   
      您可以使用完全可攜 C 執行階段函式、 巨集和資料類型。 MFC 的彈性支援任何這些策略。  
   
  這些主題的其餘部分著重於撰寫完全可攜式程式碼，您可以建置為 Unicode 或 MBCS。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   
  [地區設定和字碼頁](../text/locales-and-code-pages.md)

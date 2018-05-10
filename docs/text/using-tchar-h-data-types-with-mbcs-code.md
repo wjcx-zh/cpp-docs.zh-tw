@@ -1,13 +1,10 @@
 ---
-title: "使用 TCHAR。H 含有 _MBCS 程式碼的資料型別 |Microsoft 文件"
-ms.custom: 
+title: 使用 TCHAR。H 含有 _MBCS 程式碼的資料型別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - tchar.h
 - TCHAR
@@ -21,24 +18,22 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28255b2e47c48b89b0bd6aea044fe0c15c1f2a08
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e80ecd123e3fc47705563156e33f46ecd99a0321
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>使用含有 _MBCS 程式碼的 TCHAR.H 資料類型
-當資訊清單常數**_MBCS**是定義，在指定的一般文字常式對應至下列幾種常式的其中一個：  
+當資訊清單常數 **_MBCS**是定義，在指定的一般文字常式對應至下列幾種常式的其中一個：  
   
--   適當地處理多位元組位元組、字元與字串的 SBCS 常式。 在此情況下，字串引數都必須是型別**char\***。 例如，`_tprintf`對應至`printf`; 字串引數以`printf`類型**char\***。 如果您使用**_TCHAR**泛用文字資料類型，為您的字串類型，型式和實質參數類型`printf`相符，因為**_TCHAR** \*對應至**char\***.  
+-   適當地處理多位元組位元組、字元與字串的 SBCS 常式。 在此情況下，字串引數都必須是型別**char\***。 例如，`_tprintf`對應至`printf`; 字串引數以`printf`類型**char\***。 如果您使用 **_TCHAR**泛用文字資料類型，為您的字串類型，型式和實質參數類型`printf`相符，因為 **_TCHAR** \*對應至**char\***.  
   
--   MBCS 特定常式。 在此情況下，字串引數都必須是型別`unsigned` **char\***。 例如，`_tcsrev`對應至`_mbsrev`，會預期，並傳回類型的字串`unsigned` **char\***。 如果您使用**_TCHAR**泛用文字資料類型為您的字串類型，會產生的類型衝突，因為**_TCHAR**對應至輸入`char`。  
+-   MBCS 特定常式。 在此情況下，字串引數都必須是型別`unsigned` **char\***。 例如，`_tcsrev`對應至`_mbsrev`，會預期，並傳回類型的字串`unsigned` **char\***。 如果您使用 **_TCHAR**泛用文字資料類型為您的字串類型，會產生的類型衝突，因為 **_TCHAR**對應至輸入`char`。  
   
  下面是防止此類型衝突 (以及可能會產生的 C 編譯器警告或 C++ 編譯器錯誤) 的三種解決方式：  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 03/16/2018
     char * _tcsrev(char *);  
     ```  
   
-     在預設情況下的原型`_tcsrev`對應至`_mbsrev`透過 Libc.lib 中的 thunk。 這會變更的類型`_mbsrev`傳入參數和外寄的傳回值**_TCHAR \***  (也就是`char`  **\*** ) 至`unsigned``char` **\***. 這個方法可確保當您使用比對的型別**_TCHAR**，但由於函式呼叫的額外負荷相對比較慢。  
+     在預設情況下的原型`_tcsrev`對應至`_mbsrev`透過 Libc.lib 中的 thunk。 這會變更的類型`_mbsrev`傳入參數和外寄的傳回值 **_TCHAR \***  (也就是`char` **\***) 至`unsigned``char` **\***. 這個方法可確保當您使用比對的型別 **_TCHAR**，但由於函式呼叫的額外負荷相對比較慢。  
   
 -   透過在您的程式碼中併入下列前置處理器陳述式，以內嵌方式使用函式。  
   
@@ -77,7 +72,7 @@ ms.lasthandoff: 03/16/2018
     #define _tcschr _mbschr  
     ```  
   
-     當您採用這個方法時，您必須小心確保使用適當的資料類型的字串引數和傳回值的字串。 您可以使用型別轉型來確保符合適當的型別，或者您可以使用**_TXCHAR**泛用文字資料類型。 **_TXCHAR**對應至輸入`char`SBCS 程式碼，但對應至輸入中`unsigned` `char` MBCS 程式碼中。 如需一般文字巨集的詳細資訊，請參閱[泛用文字對應](../c-runtime-library/generic-text-mappings.md)中*執行階段程式庫參考*。  
+     當您採用這個方法時，您必須小心確保使用適當的資料類型的字串引數和傳回值的字串。 您可以使用類型轉換來確保適當的類型相符，或者可以使用 **_TXCHAR** 泛型文字資料類型。 **_TXCHAR**對應至輸入`char`SBCS 程式碼，但對應至輸入中`unsigned` `char` MBCS 程式碼中。 如需一般文字巨集的詳細資訊，請參閱[泛用文字對應](../c-runtime-library/generic-text-mappings.md)中*執行階段程式庫參考*。  
   
 ## <a name="see-also"></a>另請參閱  
  [Tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)

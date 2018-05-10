@@ -1,30 +1,25 @@
 ---
-title: "字串常值串連 | Microsoft Docs"
-ms.custom: 
+title: 字串常值串連 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de245a061ed7d269aaafc856df0a422e31fd6d77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5975e47585f3b5a995d8eb839c21d419756edd42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-literal-concatenation"></a>字串常值串連
 若要形成佔用一行以上的字串常值，您可以串連兩個字串。 若要這麼做，請輸入一個反斜線，然後按下 RETURN 鍵。 反斜線會使編譯器忽略後方的新行字元。 例如，字串常值  
@@ -42,7 +37,7 @@ ken into two or more pieces."
   
  您之前可能會使用反斜線加上新行字元的方式來輸入一行以上的字串，現在您可以在這些位置上使用字串串連來取代。  
   
- 若要在字串常值中強制增加新行，請如下所示在字串中想要中斷該行的位置輸入新行逸出序列 (**\n**)：  
+ 若要在字串常值中強制加入新行，請在字串中您想要中斷該行的位置，輸入新行的逸出序列 (**\n**)，如下所示：  
   
 ```  
 "Enter a number between 1 and 100\nOr press Return"  

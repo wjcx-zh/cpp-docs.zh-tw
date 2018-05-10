@@ -1,13 +1,10 @@
 ---
-title: "Typedef、 Enum、 Union 和 Struct 屬性 |Microsoft 文件"
-ms.custom: 
+title: Typedef、 Enum、 Union 和 Struct 屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - typedef attributes
 - enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union 和 Struct 屬性
 下列屬性套用至[typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)，[結構](../cpp/struct-cpp.md)，和[列舉](../cpp/enumerations-cpp.md)c + + 關鍵字。  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 |屬性|描述|  
 |---------------|-----------------|  
 |[case](../windows/case-cpp.md)|搭配[switch_type](../windows/switch-type.md)屬性**union**。|  
-|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
 |[export](../windows/export.md)|會導致資料結構，以便放入.idl 檔案。|  
 |[first_is](../windows/first-is.md)|指定要傳送的第一個陣列元素的索引。|  
 |[helpcontext](../windows/helpcontext.md)|指定的內容識別碼，可讓使用者檢視的說明檔中此項目有關的資訊。|  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 |屬性|描述|  
 |---------------|-----------------|  
-|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
 |[export](../windows/export.md)|會導致資料結構，以便放入.idl 檔案。|  
 |[uuid](../windows/uuid-cpp-attributes.md)|指定類別或介面的唯一識別碼。|  
 |[v1_enum](../windows/v1-enum.md)|指示指定的列舉的類型傳輸為 32 位元的實體，而不是 16 位元的預設值。|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |屬性|描述|  
 |---------------|-----------------|  
-|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
 |[export](../windows/export.md)|會導致資料結構，以便放入.idl 檔案。|  
 |[first_is](../windows/first-is.md)|指定要傳送的第一個陣列元素的索引。|  
 |[last_is](../windows/last-is.md)|指定要傳送的最後一個陣列元素的索引。|  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 |[coclass](../windows/coclass.md)|建立 ActiveX 控制項。|  
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|將介面項目加入至 COM 對應。|  
 |[control](../windows/control.md)|指定使用者定義型別是控制項。|  
-|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[custom](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
 |[db_column](../windows/db-column.md)|將指定之資料行繫結至資料列集。|  
 |[db_command](../windows/db-command.md)|建立 OLE DB 命令。|  
 |[db_param](../windows/db-param.md)|關聯的輸入或輸出參數中指定的成員變數，分隔的變數。|  
@@ -119,5 +114,5 @@ ms.lasthandoff: 12/21/2017
 |[version](../windows/version-cpp.md)|識別類別的多個版本之間的特定版本。|  
 |[vi_progid](../windows/vi-progid.md)|指定版本無關的 ProgID 的表單。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依使用方式分類的屬性](../windows/attributes-by-usage.md)

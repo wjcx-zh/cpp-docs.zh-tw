@@ -1,12 +1,9 @@
 ---
-title: "Module:: releasenotifier:: Invoke 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Module:: releasenotifier:: Invoke 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::ReleaseNotifier::Invoke
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Invoke method
 ms.assetid: f62686fe-74bf-482b-a46b-6a3c09b80e7e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2eff342264bf7866a4eb95147bca7ce41acb997
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6eb51d59d2f7f1adc934332cbfa5fead56bbef0a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke 方法
 實作時，會發行在模組中的最後一個物件時呼叫的事件處理常式。  
@@ -42,5 +37,5 @@ virtual void Invoke() = 0;
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Module::ReleaseNotifier 類別](../windows/module-releasenotifier-class.md)

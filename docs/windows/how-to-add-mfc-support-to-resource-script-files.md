@@ -1,13 +1,10 @@
 ---
-title: "如何： 將 MFC 支援加入至資源指令碼檔 |Microsoft 文件"
-ms.custom: 
+title: 如何： 將 MFC 支援加入至資源指令碼檔 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.add.MFC
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - MFC, adding support to resource scripts files
 - resource script files, adding MFC support
 ms.assetid: 599dfe9d-ad26-4e34-899c-49b56599e37f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 259b9d0799e46bba6ea2290ba6b02fe3f35e6e74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50c0493e630c2b141da1fced6964ffc514c761d4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-add-mfc-support-to-resource-script-files"></a>如何：將 MFC 支援加入至資源指令碼檔
 一般來說，當您建置 MFC 應用程式以使用 Windows [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)，精靈會產生一組基本的檔案 （包括資源指令碼 (.rc) 檔），其中包含 Microsoft Foundation 的核心功能類別 (MFC)。 不過，如果您要為不以 MFC 為基礎的 Windows 應用程式編輯 .rc 檔，則無法使用 MFC 架構的下列特定功能：  
@@ -64,6 +59,6 @@ ms.lasthandoff: 12/21/2017
   
  MFC  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源檔](../windows/resource-files-visual-studio.md)   
  [資源編輯器](../windows/resource-editors.md)

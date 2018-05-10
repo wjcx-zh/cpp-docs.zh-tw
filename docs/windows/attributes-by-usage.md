@@ -1,30 +1,25 @@
 ---
-title: "屬性的用法 |Microsoft 文件"
-ms.custom: 
+title: 屬性的用法 |Microsoft 文件
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 682412beda59552edf7fb7929213ef1e6b8e500e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94ac32d1eac8a22603d31e23695540fe23cdd26b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-by-usage"></a>依使用方式分類的屬性
 本主題列出根據它們所套用的 c + + 語言項目屬性。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[獨立屬性](../windows/stand-alone-attributes.md)|可運作比較像是程式碼行，但不是能進行 c + + 關鍵字。 獨立屬性陳述式需要在行尾的分號。|  
 |[自訂屬性](../windows/custom-attributes-cpp.md)|可讓使用者擴充中繼資料。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 屬性參考](../windows/cpp-attributes-reference.md)   
  [概念](../windows/attributed-programming-concepts.md)   
  [依群組分類的屬性](../windows/attributes-by-group.md)   

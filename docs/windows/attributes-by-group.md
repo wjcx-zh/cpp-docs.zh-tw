@@ -1,30 +1,25 @@
 ---
-title: "依群組分類的屬性 |Microsoft 文件"
-ms.custom: 
+title: 依群組分類的屬性 |Microsoft 文件
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 32de68754f5d305f15894e5144a1c56ae4e1c981
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b9f883bbedff75446659e53da98751f77401a38f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-by-group"></a>依群組分類的屬性
 C + + 屬性會組織成下列功能群組。  
@@ -38,7 +33,7 @@ C + + 屬性會組織成下列功能群組。
   
  如需如何定義自訂屬性的.NET Framework 應用程式資訊，請參閱[使用者定義的屬性](../windows/user-defined-attributes-cpp-component-extensions.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 屬性參考](../windows/cpp-attributes-reference.md)   
  [概念](../windows/attributed-programming-concepts.md)   
  [屬性的用法](../windows/attributes-by-usage.md)   

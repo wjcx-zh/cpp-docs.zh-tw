@@ -1,28 +1,23 @@
 ---
-title: "如何： 完成非同步作業，使用 WRL |Microsoft 文件"
-ms.custom: 
+title: 如何： 完成非同步作業，使用 WRL |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fff0a6e98dd6fdd28b1fbc2e9146d5b68975e0f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>如何：使用 WRL 完成非同步作業
 本文件說明如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 若要啟動非同步作業和作業完成時執行工作。  
@@ -80,7 +75,7 @@ ms.lasthandoff: 02/14/2018
 ### <a name="compiling-the-code"></a>編譯程式碼  
  若要編譯程式碼，將它複製然後將它貼入 Visual Studio 專案中，或將它貼入名為的檔案中`wrl-consume-async.cpp`，然後在 Visual Studio 命令提示字元視窗中執行下列命令。  
   
- **cl.exe wrl-consume-async.cpp runtimeobject.lib**  
+ **cl.exe wrl 取用 async.cpp runtimeobject.lib**  
   
 ## <a name="example-working-with-a-background-thread"></a>範例： 使用背景執行緒  
  下列步驟啟動背景工作執行緒，並定義該執行緒所執行的動作。 完整的範例如下。  
@@ -130,5 +125,5 @@ ms.lasthandoff: 02/14/2018
   
  **cl.exe wrl 取用 asyncOp.cpp runtimeobject.lib**  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

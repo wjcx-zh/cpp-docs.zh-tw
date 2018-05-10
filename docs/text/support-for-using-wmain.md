@@ -1,13 +1,10 @@
 ---
-title: "支援使用 wmain |Microsoft 文件"
-ms.custom: 
+title: 支援使用 wmain |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - wWinMain
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721915ca5ebbc75b17771dae0804e94aa360177c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c8b82b9f13da1b7c4884001fed5afce832147714
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="support-for-using-wmain"></a>wmain 使用的支援
 Visual c + + 支援定義**wmain**函式和傳遞 Unicode 應用程式的寬字元引數。 宣告型式參數**wmain**，使用格式類似於**主要**。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如:   
@@ -43,7 +38,7 @@ wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
   
  同樣的，如果您的程式使用 **wmain** 函式，寬字元環境在程式啟動時建立，並且由 `_wenviron` 全域變數指著。 在第一個呼叫建立 MBCS (ASCII) 環境`_putenv`或`getenv`和所指`_environ`全域變數。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [支援 Unicode](../text/support-for-unicode.md)   
  [Unicode 程式設計摘要](../text/unicode-programming-summary.md)   
  [WinMain 函式](http://msdn.microsoft.com/library/windows/desktop/ms633559)

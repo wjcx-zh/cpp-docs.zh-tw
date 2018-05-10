@@ -1,13 +1,10 @@
 ---
-title: "將檔案加入空的 Win32 應用程式 |Microsoft 文件"
-ms.custom: 
+title: 將檔案加入空的 Win32 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - blank projects
 - files [C++], adding to projects
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b3c5df80b9344b4a37d8296dc57b96cfb4f35c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 625b75a81773b45483c8b70c12530acfc9f75994
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>將檔案加入空的 Win32 應用程式
 ### <a name="to-add-your-files-to-an-empty-windows-desktop-application"></a>將檔案加入空的 Windows 桌面應用程式  
@@ -45,6 +40,6 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  建置專案之前，您必須指定這些檔案的組建選項，讓您已完成的應用程式能夠正確地包含它們。 如需詳細資訊，請參閱 [使用屬性頁指定專案設定](../ide/property-pages-visual-cpp.md) 和 [建置 C/C++ 程式](../build/building-c-cpp-programs.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立空的 Windows 桌面應用程式](../windows/creating-an-empty-windows-desktop-application.md)   
  [部署應用程式](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)

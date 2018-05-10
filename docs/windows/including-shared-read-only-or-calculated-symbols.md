@@ -1,13 +1,10 @@
 ---
-title: "包含共用 （唯讀） 或計算符號 |Microsoft 文件"
-ms.custom: 
+title: 包含共用 （唯讀） 或計算符號 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.shared.calculated
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf0beeb90e2d4c4d22f45322f881bb7a247acf12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c56e8af65d27bda8ef04655f40bdd2e335067d3c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共用 (唯讀) 或計算符號
 當開發環境第一次讀取另一個應用程式所建立的資源檔時，會將所有包含的標頭檔標示為唯讀。 接著，您可以使用[資源包含對話方塊](../windows/resource-includes-dialog-box.md)新增額外的唯讀符號標頭檔。  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在**唯讀符號指示詞**方塊中，使用**#include**編譯器指示詞來指定您想要保存唯讀符號的檔案。  
+2.  在**唯讀符號指示詞**方塊中，使用 **#include**編譯器指示詞來指定您想要保存唯讀符號的檔案。  
   
      請勿呼叫 Resource.h 檔案，因為這是主要的符號標頭檔通常所使用的檔名。  
   
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [符號名稱限制](../windows/symbol-name-restrictions.md)   
  [符號值限制](../windows/symbol-value-restrictions.md)   
  [預先定義的符號 Id](../windows/predefined-symbol-ids.md)   

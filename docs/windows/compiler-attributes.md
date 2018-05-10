@@ -1,31 +1,26 @@
 ---
-title: "編譯器屬性 |Microsoft 文件"
-ms.custom: 
+title: 編譯器屬性 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e83743859d4c4bdfb515df6008969a9cc7b56e2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4366b5d804275f78ef1c3b4f1dd8e8e51b01b8c2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="compiler-attributes"></a>編譯器屬性
 編譯器屬性會提供各種功能。  
@@ -45,5 +40,5 @@ ms.lasthandoff: 12/21/2017
 |[satype](../windows/satype.md)|指定的資料型別**SAFEARRAY**。|  
 |[version](../windows/version-cpp.md)|識別多個版本之間的介面或類別的特定版本。|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [依群組分類的屬性](../windows/attributes-by-group.md)

@@ -1,13 +1,10 @@
 ---
-title: "一般屬性頁 （專案） |Microsoft 文件"
-ms.custom: 
+title: 一般屬性頁 （專案） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -36,14 +33,13 @@ helpviewer_keywords:
 - Unicode, creating C++ build configuration
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-property-page-project"></a>一般屬性頁 (專案)
 
@@ -65,7 +61,7 @@ ms.lasthandoff: 02/14/2018
 **Windows SDK 版本**  
 對於 Windows 目標平台，這會指定您的專案需要的 Windows sdk 版本。 當您使用 Visual Studio 安裝程式安裝 c + + 工作負載時，也會安裝 Windows SDK 的必要的部分。 如果您有其他的 Windows SDK 版本在電腦上，您已安裝的 SDK 工具的每個版本會出現在下拉式清單中。
 
-若要以 Windows 7 或 Windows Vista 為目標，使用值**8.1**，因為 Windows SDK 8.1 這些平台的回溯相容性。 此外，您應該在其中定義的適當值**_WIN32_WINNT**在 targetver.h。 對於 Windows 7，這是 0x0601。 請參閱[修改 WINVER 和 _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md)。
+若要以 Windows 7 或 Windows Vista 為目標，使用值**8.1**，因為 Windows SDK 8.1 這些平台的回溯相容性。 此外，您應該在其中定義的適當值 **_WIN32_WINNT**在 targetver.h。 對於 Windows 7，這是 0x0601。 請參閱[修改 WINVER 和 _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md)。
 
 您可以安裝 Visual Studio 用來建置 Windows XP 和 Windows 2003 Server 專案的目前版本的程式庫中包含 Windows XP 平台工具組。 如需如何取得及使用此平台工具組資訊，請參閱[為 Windows XP 設定程式](../build/configuring-programs-for-windows-xp.md)。 如需變更平台工具組的其他資訊，請參閱[如何：修改目標 Framework 和平台工具組](../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
 

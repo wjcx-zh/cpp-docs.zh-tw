@@ -1,30 +1,25 @@
 ---
-title: "SafeInt 函式 |Microsoft 文件"
-ms.custom: 
+title: SafeInt 函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - functions, SafeInt
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ae482b7f58d64a46b82b32c6c6d62d7f69f0dce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97edd25abca3c9e80a35745165eedc93cc13a9b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeint-functions"></a>SafeInt 函式
 SafeInt 程式庫提供幾個函式，您可以使用而建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。 如果您想要保護單一數學作業從整數的溢位時，您可以使用這些函式。 如果您想要保護多個數學作業時，您應該建立`SafeInt`物件。 若要建立更有效率`SafeInt`比使用這些函式數次的物件。  
@@ -40,7 +35,7 @@ SafeInt 程式庫提供幾個函式，您可以使用而建立的執行個體[Sa
 |[SafeAdd](../windows/safeadd.md)|兩個數字相加，並防止溢位。|  
 |[SafeCast](../windows/safecast.md)|會轉換成另一個類型參數的一種。|  
 |[SafeDivide](../windows/safedivide.md)|兩數相除並防止除以零。|  
-|[SafeEquals](../windows/safeequals.md)， [SafeGreaterThan](../windows/safegreaterthan.md)， [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)， [SafeLessThan](../windows/safelessthan.md)， [SafeLessThanEquals](../windows/safelessthanequals.md)，[SafeNotEquals](../windows/safenotequals.md)|比較兩個數字。 這些功能可讓您比較兩個不同類型的數字，而不需要變更其類型。|  
+|[SafeEquals](../windows/safeequals.md)， [SafeGreaterThan](../windows/safegreaterthan.md)， [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)， [SafeLessThan](../windows/safelessthan.md)， [SafeLessThanEquals](../windows/safelessthanequals.md)， [SafeNotEquals](../windows/safenotequals.md)|比較兩個數字。 這些功能可讓您比較兩個不同類型的數字，而不需要變更其類型。|  
 |[SafeModulus](../windows/safemodulus.md)|執行兩個數字的模數作業。|  
 |[SafeMultiply](../windows/safemultiply.md)|在一起的兩個數目相乘，並防止溢位。|  
 |[SafeSubtract](../windows/safesubtract.md)|兩個數字相減，可防止溢位。|  

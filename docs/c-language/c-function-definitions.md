@@ -1,13 +1,10 @@
 ---
-title: "C 函式定義 | Microsoft Docs"
-ms.custom: 
+title: C 函式定義 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>C 函式定義
 函式定義會指定函式的名稱、預期收到的參數類型及數目，以及其傳回型別。 函式定義也包括函式主體與其區域變數的宣告，以及決定該函式之行為的陳述式。  
@@ -50,7 +45,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*: /\* 這裡的宣告子是函式宣告子 \*/  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq* 是 Microsoft 專有 \*/  
+ /\* *attribute-seq* 是 Microsoft 專有 */  
   
  原型參數為：  
   
@@ -72,7 +67,7 @@ ms.lasthandoff: 03/16/2018
  *direct-declarator*: /\* 函式宣告子 \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* 新樣式的宣告子 \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* 過時樣式宣告子 \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* 過時樣式宣告子 \*/  
   
  定義中的參數清單會使用此語法：  
   
@@ -101,7 +96,7 @@ ms.lasthandoff: 03/16/2018
  函式主體的語法為：  
   
  *compound-statement*: /\* 函式主體 \*/  
- **{**  `declaration`-*list* opt*statement-list* opt**}**  
+ **{**  `declaration`-*list* opt*statement-list* opt **}**  
   
  唯一可以修改函式宣告的儲存類別指定名稱是 `extern` 與 **static**。 `extern` 指定名稱表示可從其他檔案參考該函式；也就是說，會將該函式名稱匯出至連結器。 **static** 指定名稱表示不可從其他檔案參考該函式；亦即，連結器不會匯出名稱。 如果函式定義中不會出現儲存類別，就會假設 `extern`。 在任何情況下，從定義點到檔案結尾都會顯示該函式。  
   
@@ -115,5 +110,5 @@ ms.lasthandoff: 03/16/2018
   
  [函式屬性](../c-language/function-attributes.md)、[儲存類別](../c-language/storage-class.md)、[傳回類型](../c-language/return-type.md)、[參數](../c-language/parameters.md)和[函式主體](../c-language/function-body.md)等節會詳細說明函式定義的元件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式](../c-language/functions-c.md)

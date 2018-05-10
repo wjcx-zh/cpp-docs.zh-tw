@@ -1,30 +1,25 @@
 ---
-title: "Comptrref:: Operator = = 運算子 |Microsoft 文件"
-ms.custom: 
+title: 'Comptrref:: Operator = = 運算子 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::ComPtrRef::operator==
 dev_langs:
 - C++
 ms.assetid: 95fcf781-b473-4317-88cd-e938778d3c3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea2fd557c9ae7da6c696ab8f8174ad8610a9174b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b7cc1d89a0e113164530245467afd94becdc1e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 運算子
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -80,6 +75,6 @@ bool operator==(
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtrRef 類別](../windows/comptrref-class.md)

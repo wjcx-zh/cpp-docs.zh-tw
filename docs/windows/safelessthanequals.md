@@ -1,13 +1,10 @@
 ---
-title: "SafeLessThanEquals |Microsoft 文件"
-ms.custom: 
+title: SafeLessThanEquals |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeLessThanEquals
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeLessThanEquals function
 ms.assetid: cbd70526-faf2-4fbc-96a0-b61e8cf5f04a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cb5765d9ea353558d7a297fb7867c6889be928ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd783f5d611b6055c542f56d04e2249b71b31218
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safelessthanequals"></a>SafeLessThanEquals
 比較兩個數字。  
@@ -49,10 +44,10 @@ inline bool SafeLessThanEquals (
  要比較的第二個數字。 這必須為類型 U。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果`t`小於或等於`u`，否則為`false`。  
+ `true` 如果`t`小於或等於`u`，否則為`false`。  
   
 ## <a name="remarks"></a>備註  
- `SafeLessThanEquals`延伸一般比較運算子，讓您比較兩個不同類型的數字。  
+ `SafeLessThanEquals` 延伸一般比較運算子，讓您比較兩個不同類型的數字。  
   
  這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，適用於單一比對作業不需要建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。  
   
@@ -66,7 +61,7 @@ inline bool SafeLessThanEquals (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

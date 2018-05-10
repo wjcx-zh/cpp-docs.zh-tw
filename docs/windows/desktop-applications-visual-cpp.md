@@ -2,32 +2,27 @@
 title: 桌面應用程式 （Visual c + +） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
-ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
+ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式 （Visual c + +）
 A*桌面應用程式*c + + 中是可以存取一組完整的 Windows 應用程式開發介面，並在視窗或系統主控台中任一個執行的原生應用程式。 在 c + + 桌面應用程式可以執行 Windows XP 到 Windows 10 （但是不再正式支援 Windows XP 和有許多 Windows 應用程式開發介面已引進從那時起）。   桌面應用程式是從通用 Windows 平台 (UWP) 應用程式，可以在執行 Windows 10 的電腦上以及 XBox、 Windows Phone、 Surface Hub 和其他裝置上執行的不同。 如需桌面 vs 的詳細資訊。UWP 應用程式，請參閱[選擇您的技術](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)。  
   
- **Terminology**  
+ **術語**  
   
 -   A *Win32*應用程式是一種 Windows 桌面應用程式，可讓 c + + 中的使用的原生[Windows C 應用程式開發介面和/或 COM Api](https://msdn.microsoft.com/en-us/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 和標準程式庫應用程式開發介面，以及第 3 個合作對象文件庫。 在視窗中執行的 Win32 應用程式需要開發人員明確地搭配 Windows 程序函式內的 Windows 訊息。 雖然名稱的 Win32 應用程式可以編譯為 32 位元 (x86) 或 64 位元 (x64) 二進位。 在 Visual Studio IDE 中的條款 x86 和 Win32 的意義相同。  
   

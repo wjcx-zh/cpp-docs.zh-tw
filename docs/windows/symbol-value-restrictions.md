@@ -1,13 +1,10 @@
 ---
-title: "符號值限制 |Microsoft 文件"
-ms.custom: 
+title: 符號值限制 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.value
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - symbols, value restrictions
 - restrictions, symbol values
 ms.assetid: 32467ec3-690b-4cd0-a4d0-7d189a3296cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f2188d6904274fabce0f8626fa2f440ac324ff5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="symbol-value-restrictions"></a>符號值限制
 符號值可以是針對 #define 前置處理器指示詞以正常方式表示的任何整數。 以下是符號值的一些範例：  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [變更符號的數值](../windows/changing-a-symbol-s-numeric-value.md)   
  [符號名稱限制](../windows/symbol-name-restrictions.md)   
  [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

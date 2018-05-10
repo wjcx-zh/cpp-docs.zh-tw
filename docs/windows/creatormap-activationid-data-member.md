@@ -1,12 +1,9 @@
 ---
-title: "Creatormap:: Activationid 資料成員 |Microsoft 文件"
-ms.custom: 
+title: 'Creatormap:: Activationid 資料成員 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::CreatorMap::activationId
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - activationId data member
 ms.assetid: 77518b76-6e6a-4b48-8e2e-a4c7c67769e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 912b18ff3e1be04913cb9345e4ac5bde25d2e039
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c4ff889f808eda00e5b2ce426cd800678b4829f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creatormapactivationid-data-member"></a>CreatorMap::activationId 資料成員
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -55,6 +50,6 @@ union {
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [CreatorMap 結構](../windows/creatormap-structure.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

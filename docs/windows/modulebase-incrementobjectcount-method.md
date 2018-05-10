@@ -1,12 +1,9 @@
 ---
-title: "Modulebase:: Incrementobjectcount 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Modulebase:: Incrementobjectcount 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ModuleBase::IncrementObjectCount
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IncrementObjectCount method
 ms.assetid: 2d70b472-684c-4bb7-8bab-09505cfcaf28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 773f909e6dad4aae1933db355510443846646df0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b0e0fd6ecfd4d30dd4921c99d873c23b533ee24
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulebaseincrementobjectcount-method"></a>ModuleBase::IncrementObjectCount 方法
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -48,6 +43,6 @@ virtual long IncrementObjectCount() = 0;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [ModuleBase 類別](../windows/modulebase-class.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

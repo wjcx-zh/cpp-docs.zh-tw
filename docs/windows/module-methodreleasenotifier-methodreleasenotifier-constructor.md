@@ -1,12 +1,9 @@
 ---
-title: "Module::MethodReleaseNotifier::MethodReleaseNotifier 建構函式 |Microsoft 文件"
-ms.custom: 
+title: Module::MethodReleaseNotifier::MethodReleaseNotifier 建構函式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - MethodReleaseNotifier, constructor
 ms.assetid: 762e2ca4-0a92-49de-9ff5-d3efa0f067c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 045dd8dd0dbee58c0feea33bc7ce4f6cea30e591
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91540ca3fff03f1f0a449413c2d1ca72781c70f1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modulemethodreleasenotifiermethodreleasenotifier-constructor"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier 建構函式
 初始化 module:: methodreleasenotifier 類別的新執行個體。  
@@ -58,5 +53,5 @@ MethodReleaseNotifier(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Module::MethodReleaseNotifier 類別](../windows/module-methodreleasenotifier-class.md)

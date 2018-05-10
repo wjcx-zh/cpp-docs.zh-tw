@@ -1,13 +1,10 @@
 ---
-title: "建立圖示或其他影像 （圖示影像編輯器） |Microsoft 文件"
-ms.custom: 
+title: 建立圖示或其他影像 （圖示影像編輯器） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - graphics [C++], creating
 - Image editor [C++], creating images
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae1cc8525b0c93cff5564c2185d80480a632718b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2138e32b18f2e15de027e3cc04fb1bd7ee46ecd5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>建立圖示或其他影像 (圖示影像編輯器)
 您可以建立新的影像 （點陣圖、 圖示、 游標或工具列），然後使用影像編輯器，以自訂其外觀。 您也可以建立新的點陣圖，模仿[範本](../windows/how-to-use-resource-templates.md)。  
@@ -61,15 +56,15 @@ ms.lasthandoff: 12/21/2017
      資源加入至方案總管 中專案，並在中開啟資源[影像編輯器](../windows/image-editor-for-icons.md)。 您現在可以使用影像編輯器中可用的所有工具來修改您的映像。 如需有關將影像加入至 managed 專案的詳細資訊，請參閱[在設計階段載入圖片](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms)。  
   
     > [!NOTE]
-    >  您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。 如需詳細資訊，請參閱[建立資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)中*.NET Framework 開發人員指南*。  
+    >  您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。 如需詳細資訊，請參閱[建立資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)中 *.NET Framework 開發人員指南*。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
  [轉換點陣圖為工具列](../windows/converting-bitmaps-to-toolbars.md)   
  [建立新的工具列](../windows/creating-new-toolbars.md)   

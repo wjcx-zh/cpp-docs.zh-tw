@@ -1,31 +1,26 @@
 ---
-title: "MFC 預先定義的符號 |Microsoft 文件"
-ms.custom: 
+title: MFC 預先定義的符號 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC symbols
 - symbols, MFC
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1fcee2cff1867fc57cc15914c304cd121954d9b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd65b4294443de9f367ecc5a4ea64b524aabb4a2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 預先定義的符號
 MFC 專案一定會包含數個支援 windows 的標頭檔。 新增這些透過 #include 陳述式在 StdAfx.h 檔案中：  
@@ -224,6 +219,6 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 新增這些透過
 ## <a name="requirements"></a>需求  
  MFC  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [預先定義的符號 Id](../windows/predefined-symbol-ids.md)   
  [符號：資源識別項](../windows/symbols-resource-identifiers.md)

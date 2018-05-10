@@ -1,13 +1,10 @@
 ---
-title: "泛型函式 (C + + /CLI) |Microsoft 文件"
-ms.custom: 
+title: 泛型函式 (C + + /CLI) |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>泛型函式 (C++/CLI)
 泛型函式會宣告具有型別參數的函式。 呼叫時，會使用實際的類型，而不是型別參數。  
@@ -66,7 +61,7 @@ return-type identifier<type-parameter identifier(s)>
  其他宣告資訊。 如需有關屬性和屬性類別的詳細資訊，請參閱屬性。  
   
  *修飾詞*（選擇性）  
- 對於函式，例如靜態修飾詞。  `virtual`不允許因為虛擬方法不是泛型。  
+ 對於函式，例如靜態修飾詞。  `virtual` 不允許因為虛擬方法不是泛型。  
   
  *傳回型別*  
  此方法傳回的型別。 如果傳回型別為 void，沒有傳回值需要。  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **範例**  
   
- 下列範例會使用泛型函式，來尋找陣列中的第一個項目。 它會宣告`MyClass`，後者繼承自基底類別`MyBaseClass`。 `MyClass`包含泛型函式， `MyFunction`，另一個泛型函式，呼叫`MyBaseClassFunction`，基底類別內。 在**主要**，泛型函式， `MyFunction`，使用不同的型別引數來呼叫。  
+ 下列範例會使用泛型函式，來尋找陣列中的第一個項目。 它會宣告`MyClass`，後者繼承自基底類別`MyBaseClass`。 `MyClass` 包含泛型函式， `MyFunction`，另一個泛型函式，呼叫`MyBaseClassFunction`，基底類別內。 在**主要**，泛型函式， `MyFunction`，使用不同的型別引數來呼叫。  
   
 ```  
 // generics_generic_function_3.cpp  
@@ -196,6 +191,6 @@ My function returned an int: 2003
 My function returned a string: Hello generic functions!  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [泛型](../windows/generics-cpp-component-extensions.md)

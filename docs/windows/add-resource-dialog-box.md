@@ -1,13 +1,10 @@
 ---
-title: "加入資源對話方塊 |Microsoft 文件"
-ms.custom: 
+title: 加入資源對話方塊 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.insertresource
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - resources [Visual Studio], adding
 - Add Resource dialog box
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aab285109b34b1de2187e02956cfff2e5a0ba724
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c420a1d72aa4ceca7d71840fcccb451b6e0aba0f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="add-resource-dialog-box"></a>加入資源對話方塊
 使用這個對話方塊將資源加入至 C++ Windows 桌面應用程式專案。  
@@ -54,5 +49,5 @@ ms.lasthandoff: 02/14/2018
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [如何：建立資源](../windows/how-to-create-a-resource.md)

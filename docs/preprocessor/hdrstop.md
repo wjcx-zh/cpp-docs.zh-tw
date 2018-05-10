@@ -1,12 +1,9 @@
 ---
-title: hdrstop | Microsoft Docs
-ms.custom: 
+title: hdrstop |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - hdrstop_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - hdrstop pragma
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18216663524c48e4ec4ee327ff096c8b3dbd391c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f1c628efaf45be87dcfc046cf1774c762c157f4f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hdrstop"></a>hdrstop
 讓您對先行編譯檔案名稱，以及儲存編譯狀態之位置進行其他控制。  
@@ -92,5 +87,5 @@ __inline Disp( char *szToDisplay )   // Define an inline function
   
  在此範例中， **hdrstop** pragma 出現後兩個檔案已包含及已定義內嵌函式。 一開始可能無法理解為什麼要在這個位置放置 pragma。 不過，考量該使用手動先行編譯選項 /Yc 和 /Yu， **hdrstop** pragma 可讓您先行編譯整個原始程式檔，包括內嵌程式碼。 Microsoft 編譯器並不會限制您只先行編譯資料宣告。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

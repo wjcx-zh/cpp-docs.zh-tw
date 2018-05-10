@@ -2,27 +2,22 @@
 title: 如何： 直接執行個體化 WRL 元件 |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8069ac8d079a879cb078d9e3e4b759b02817b5f
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: 127a8430e79e7963ea94646f70179df2f30450ff
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接執行個體化 WRL 元件
 了解如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL)[Microsoft::WRL::Make](../windows/make-function.md)和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函式來具現化元件，以從模組，定義它。  
@@ -40,7 +35,7 @@ ms.lasthandoff: 03/22/2018
   
 1.  在 Visual Studio 中建立**Win32 主控台應用程式**專案。 為專案命名，例如`WRLLogger`。  
   
-2.  新增**Midl 檔 (.idl)**檔案加入專案中，將檔案命名`ILogger.idl`，然後新增此程式碼：  
+2.  新增**Midl 檔 (.idl)** 檔案加入專案中，將檔案命名`ILogger.idl`，然後新增此程式碼：  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   

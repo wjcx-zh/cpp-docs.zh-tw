@@ -2,12 +2,9 @@
 title: 追蹤參考運算子 （c + + 元件擴充功能） |Microsoft 文件
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - '%'
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0cbf1483c66bd8472149539af84b83755cae43cf
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: c460174fad6a287acfd434b1589e73153aa0b121
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>追蹤參考運算子 (C++ 元件擴充功能)
 A*追蹤參考*(`%`) 的行為類似一般的 c + + 參考 (`&`) 之處在於當物件指派給追蹤參考，此物件的參考計數會遞增。  

@@ -1,31 +1,26 @@
 ---
-title: "nullptr （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: nullptr （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33a276c383618531103a76b1f20c6ad478d57c10
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr (C++ 元件擴充功能)
 `nullptr`關鍵字表示*null 指標值*。 使用 null 指標值表示的物件控制代碼、 內部指標或原生指標類型不是指向物件。  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr`(雖然`throw (Object^)nullptr;`運作)  
+-   `throw nullptr` (雖然`throw (Object^)nullptr;`運作)  
   
  `nullptr`關鍵字可用於下列指標類型的初始設定：  
   
@@ -231,7 +226,7 @@ NULL
 ## <a name="example"></a>範例  
  **範例**  
   
- 下列程式碼範例顯示`nullptr`可以指派給原生指標中，當您使用編譯**/clr**。  
+ 下列程式碼範例顯示`nullptr`可以指派給原生指標中，當您使用編譯 **/clr**。  
   
 ```  
 // mcpp_nullptr_6.cpp  
@@ -243,8 +238,8 @@ int main() {
 ```  
   
 ## <a name="requirements"></a>需求  
- 編譯器選項: (不需要，則所有的程式碼產生選項，包括支援**/ZW**和**/clr**)  
+ 編譯器選項: (不需要，則所有的程式碼產生選項，包括支援 **/ZW**和 **/clr**)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [nullptr](../cpp/nullptr.md)

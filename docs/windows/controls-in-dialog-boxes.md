@@ -1,13 +1,10 @@
 ---
-title: "在對話方塊中的控制項 |Microsoft 文件"
-ms.custom: 
+title: 在對話方塊中的控制項 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dialog box controls, about dialog box controls
 - dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 02ca3523de9341c14d2e2a9837ba84f5625a3379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a837766bbbe57186f8355895c98ff04d8048bdc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="controls-in-dialog-boxes"></a>對話方塊中的控制項
 您可以將控制項加入對話方塊方塊中，使用[對話方塊編輯器索引標籤](../windows/dialog-editor-tab-toolbox.md)中[工具箱視窗](/visualstudio/ide/reference/toolbox)，可讓您選擇您想要並將它拖曳至 對話方塊的控制項。 根據預設，[工具箱] 視窗設定為自動隱藏。 對話方塊編輯器開啟時，它會為方案的左邊界的索引標籤出現。 不過，您可以釘選 [工具箱] 視窗進入位置，即可**自動隱藏**視窗右上角的按鈕。 如需有關如何控制這個視窗行為的詳細資訊，請參閱[視窗管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  
@@ -59,12 +54,12 @@ ms.lasthandoff: 12/21/2017
   
 -   [指定對話方塊的位置和大小](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)   
  [對話方塊編輯器](../windows/dialog-editor.md)

@@ -1,13 +1,10 @@
 ---
-title: "SafeNotEquals |Microsoft 文件"
-ms.custom: 
+title: SafeNotEquals |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeNotEquals
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeNotEquals function
 ms.assetid: 032e45a8-4159-4b55-b7cc-ecd27f4e4788
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c1d4449d66f82db73b39c7b3be3ce85ba92ab88d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61104cd55ed349131fc884951da77455aa9ca978
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safenotequals"></a>SafeNotEquals
 判斷兩個數字是否不相等。  
@@ -49,7 +44,7 @@ inline bool SafeNotEquals (
  要比較的第二個數字。 這必須為類型 U。  
   
 ## <a name="return-value"></a>傳回值  
- `true`如果`t`和`u`不相等，否則`false`。  
+ `true` 如果`t`和`u`不相等，否則`false`。  
   
 ## <a name="remarks"></a>備註  
  因為 `!=` 可讓您比較兩種不同類型的數字，所以此方法會增強 `SafeNotEquals`。  
@@ -66,7 +61,7 @@ inline bool SafeNotEquals (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

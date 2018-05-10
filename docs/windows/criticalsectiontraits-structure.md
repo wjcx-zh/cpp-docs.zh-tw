@@ -1,12 +1,9 @@
 ---
-title: "CriticalSectionTraits 結構 |Microsoft 文件"
-ms.custom: 
+title: CriticalSectionTraits 結構 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CriticalSectionTraits structure
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c24d8dea31a87094329276af3ebfaf9f06136adc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 結構
 特製化 CriticalSection 物件，以支援無效的重要區段或釋放重要區段的函式。  
@@ -43,7 +38,7 @@ struct CriticalSectionTraits;
   
 |名稱|描述|  
 |----------|-----------------|  
-|`Type`|A`typedef`關鍵區段來定義的指標。 `Type`定義為`typedef CRITICAL_SECTION* Type;`。|  
+|`Type`|A`typedef`關鍵區段來定義的指標。 `Type` 定義為`typedef CRITICAL_SECTION* Type;`。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -60,5 +55,5 @@ struct CriticalSectionTraits;
   
  **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

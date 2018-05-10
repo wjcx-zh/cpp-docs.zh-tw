@@ -1,12 +1,9 @@
 ---
-title: "Mutex:: lock 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Mutex:: lock 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Mutex::Lock
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Lock method
 ms.assetid: 61d95072-b690-441e-a080-0bf94a733141
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e915dee2dbc7f3cc483df2e8135398a12d0fc369
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37044dbd884c4e38c70677bf9a8fa0a51fda0a88
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock 方法
 等待目前的物件或指定的控制代碼相關聯的 Mutex 物件釋放 mutex，或超過指定的逾時間隔。  
@@ -58,5 +53,5 @@ static SyncLock Lock(
   
  **命名空間：** Microsoft::WRL::Wrappers
  
- ## <a name="see-also"></a>請參閱
+ ## <a name="see-also"></a>另請參閱
  [Mutex 類別](../windows/mutex-class1.md)

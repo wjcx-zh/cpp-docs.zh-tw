@@ -1,13 +1,10 @@
 ---
-title: "建立快顯功能表 |Microsoft 文件"
-ms.custom: 
+title: 建立快顯功能表 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - shortcut menus, creating
 - pop-up menus, displaying
 ms.assetid: dff4dddf-2e8d-4c34-b755-90baae426b58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6185f52eeaf56ac0d31cb8e9f22715db36514725
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-pop-up-menus"></a>建立快顯功能表
 [快顯功能表](../mfc/menus-mfc.md) 會顯示常用命令。 它們可隨著指標位置顯示相關內容。 要在您的應用程式中使用快顯功能表，必須建置功能表本身，然後將它連接到應用程式程式碼。  
@@ -55,6 +50,6 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快顯功能表連接至您的應用程式](../windows/connecting-a-pop-up-menu-to-your-application.md)   
  [功能表編輯器](../windows/menu-editor.md)

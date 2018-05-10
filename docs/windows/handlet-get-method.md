@@ -1,12 +1,9 @@
 ---
-title: "Handlet:: Get 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Handlet:: Get 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleT::Get
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Get method
 ms.assetid: fbb81fb2-a6f9-4459-9fa2-98da566909d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 63902b5c911766163163ea3b2f8ee2d53ed77a8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb1f4432b112daf6a0f00a4568302a75b6b40f3d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="handletget-method"></a>HandleT::Get 方法
 取得基礎控制代碼的值。  
@@ -45,5 +40,5 @@ typename HandleTraits::Type Get() const;
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [HandleT 類別](../windows/handlet-class.md)

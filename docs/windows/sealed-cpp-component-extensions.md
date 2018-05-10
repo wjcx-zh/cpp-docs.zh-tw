@@ -1,13 +1,10 @@
 ---
-title: "密封 （c + + 元件擴充功能） |Microsoft 文件"
-ms.custom: 
+title: 密封 （c + + 元件擴充功能） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sealed_cpp
 - sealed
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb8a8b7ea695d878235898a8741adf04ba91748c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05c75aef047e914086aaf4ae2c0d0d3bdd04e8c7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="sealed--c-component-extensions"></a>sealed (C++ 元件擴充功能)
 `sealed` 是表示不能覆寫虛擬成員、或類型不能用做基底類型的 ref 類別內容相關性關鍵字。  
@@ -146,5 +141,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

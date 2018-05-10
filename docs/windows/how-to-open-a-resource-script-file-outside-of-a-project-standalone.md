@@ -1,13 +1,10 @@
 ---
-title: "如何： 開啟專案 （獨立） 外的資源指令碼檔案 |Microsoft 文件"
-ms.custom: 
+title: 如何： 開啟專案 （獨立） 外的資源指令碼檔案 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resource script files, viewing resources
 ms.assetid: bc350c60-178d-4c5d-9a7e-6576b0c936e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dd3bb3996fca1fd2c73ff98e7f391d27911ad15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87dd0cb1e54b6e74c9c4f4fd7d9baff6461ad470
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>如何：在專案外開啟資源指令碼檔 (獨立式)
 您可以檢視 .rc 檔中的資源，而不需要開啟一個專案。 .Rc 檔會在相對於在文件視窗中開啟[資源檢視](../windows/resource-view-window.md)視窗 （如同在專案內開啟檔案時）。  
@@ -76,6 +71,6 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源檔](../windows/resource-files-visual-studio.md)   
  [資源編輯器](../windows/resource-editors.md)

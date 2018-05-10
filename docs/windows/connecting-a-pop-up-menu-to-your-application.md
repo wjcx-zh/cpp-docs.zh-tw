@@ -1,13 +1,10 @@
 ---
-title: "快顯功能表連接至您的應用程式 |Microsoft 文件"
-ms.custom: 
+title: 快顯功能表連接至您的應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - menus, pop-up
 - shortcut menus, connecting to applications
 ms.assetid: 295cbf0e-6416-478e-bc3d-472fb98e0e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2e04a2d042c3bfa9fc10bb1a5e79bd2b22134ea4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 533fc4eea9299d51183a91febb371ff8142e0a7b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="connecting-a-pop-up-menu-to-your-application"></a>將快顯功能表連接至您的應用程式
 ### <a name="to-connect-a-pop-up-menu-to-your-application"></a>將快顯功能表連接至您的應用程式  
@@ -53,6 +48,6 @@ ms.lasthandoff: 12/21/2017
   
  MFC  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立快顯功能表](../windows/creating-pop-up-menus.md)   
  [功能表編輯器](../windows/menu-editor.md)   

@@ -1,27 +1,22 @@
 ---
-title: "範例程式 | Microsoft Docs"
-ms.custom: 
+title: 範例程式 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b148e14dad4df43dfe55d89172c557d6d2cc4c0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-program"></a>範例程式
 下列 C 原始程式包含兩個原始程式檔。 它提供 C 程式中各種宣告和定義的概觀。 本書的其餘章節說明如何撰寫這些宣告、定義和初始化，以及如何使用 **static** 和 `extern` 之類的 C 關鍵字。 `printf` 函式會在 C 標頭檔 STDIO.H 中宣告。  

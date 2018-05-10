@@ -1,28 +1,23 @@
 ---
-title: "逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式 |Microsoft 文件"
-ms.custom: 
+title: 逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1c9e3f678a65b3dacfc5bba012656118b6fe2fa1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說： 建立使用 WRL 和媒體基礎的 UWP 應用程式
 了解如何建立通用 Windows 平台 (UWP) 應用程式會使用 Windows 執行階段 c + + 樣板程式庫 (WRL) [Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)。  
@@ -67,9 +62,9 @@ ms.lasthandoff: 02/14/2018
   
 1.  在 Visual Studio 中建立**空白方案**專案。 為專案命名，例如`MediaCapture`。  
   
-2.  新增**DLL (通用 Windows)**專案加入方案。 為專案命名，例如`GrayscaleTransform`。  
+2.  新增**DLL (通用 Windows)** 專案加入方案。 為專案命名，例如`GrayscaleTransform`。  
   
-3.  新增**Midl 檔 (.idl)**檔案加入專案中。 為檔案命名，例如`GrayscaleTransform.idl`。  
+3.  新增**Midl 檔 (.idl)** 檔案加入專案中。 為檔案命名，例如`GrayscaleTransform.idl`。  
   
 4.  將此程式碼新增至 GrayscaleTransform.idl。  
   
@@ -112,7 +107,7 @@ ms.lasthandoff: 02/14/2018
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>若要使用 WRL 的自訂媒體基礎元件從 C# 應用程式  
   
-1.  加入新**C# 空白應用程式 (XAML)**專案加入`MediaCapture`方案。 為專案命名，例如`MediaCapture`。  
+1.  加入新**C# 空白應用程式 (XAML)** 專案加入`MediaCapture`方案。 為專案命名，例如`MediaCapture`。  
   
 2.  在**MediaCapture**專案中，將參考加入`GrayscaleTransform`專案。 若要了解作法，請參閱[如何： 加入或移除參考使用參考管理員](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)。  
   
@@ -133,7 +128,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="next-steps"></a>後續步驟  
  此範例示範如何一次從預設網路攝影機擷取相片。 [媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)更多。 它會示範如何列舉網路攝影機裝置，並使用本機配置處理常式，以及示範在個別相片和視訊資料流上運作的其他媒體效果。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [Windows 執行階段 c + + 樣板程式庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [Microsoft 媒體基礎](http://msdn.microsoft.com/library/windows/apps/ms694197)   
  [媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

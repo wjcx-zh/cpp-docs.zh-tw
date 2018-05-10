@@ -1,31 +1,26 @@
 ---
-title: "屬性的基本機制 |Microsoft 文件"
-ms.custom: 
+title: 屬性的基本機制 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], inserting in code
 - attributes [C++], about attributes
 ms.assetid: dc2069c3-b9f3-4a72-965c-4e5208ce8e34
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6db2994a2606f6c4d0cb4cd581ec46d87ca3d2c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="basic-mechanics-of-attributes"></a>屬性的基本機制
 有三種方式，將屬性插入您的專案。 首先，您可以將其插入手動插入原始程式碼。 第二，您可以將其插入在專案中使用屬性方格的物件。 最後，您可以將其插入使用不同的精靈。 如需有關如何使用 [屬性] 視窗和各種精靈的詳細資訊，請參閱[建立和管理 Visual c + + 專案](../ide/creating-and-managing-visual-cpp-projects.md)。  
@@ -41,5 +36,5 @@ ms.lasthandoff: 12/21/2017
   
  大部分的 c + + 建構，例如屬性有一組特性，定義其適當用法。 這指屬性的內容，並解決屬性內容資料表中的每個屬性參考主題。 例如， [coclass](../windows/coclass.md)屬性只會套用至現有類別或結構，與[cpp_quote](../windows/cpp-quote.md)屬性，可以插入 c + + 原始程式檔內的任何位置。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../windows/attributed-programming-concepts.md)

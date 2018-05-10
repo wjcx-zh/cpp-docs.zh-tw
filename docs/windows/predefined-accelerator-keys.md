@@ -1,13 +1,10 @@
 ---
-title: "預先定義的快速鍵 |Microsoft 文件"
-ms.custom: 
+title: 預先定義的快速鍵 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - keyboard shortcuts, predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b04ab7fafba9f17aeba4f15f937972389467593c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa5b42fc846f3b4f21dc8045e67d8ebc347601ea
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="predefined-accelerator-keys"></a>預先定義的快速鍵
 Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其中有部分是用於 Windows 環境的虛擬按鍵。 其他則支援瀏覽器或 Unicode 應用程式。 您可以在任何加速器中使用任何此類按鍵。  
@@ -87,11 +82,11 @@ Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其�
 |VK_XBUTTON1|Windows：X1 滑鼠按鈕|  
 |VK_XBUTTON2|Windows：X2 滑鼠按鈕|  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。*  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中 *.NET Framework 開發人員手冊 》。*  
   
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [快速鍵編輯器](../windows/accelerator-editor.md)   
  [資源編輯器](../windows/resource-editors.md)

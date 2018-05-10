@@ -1,13 +1,10 @@
 ---
-title: "執行階段平台的元件擴充功能 |Microsoft 文件"
-ms.custom: 
+title: 執行階段平台的元件擴充功能 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,25 +14,23 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>執行階段平台的元件擴充功能
 Visual C++ 提供語言擴充功能，協助您針對執行階段平台進行程式設計。 使用 C + + /CX 中，您可以程式設計通用 Windows 平台應用程式和元件，編譯成原生程式碼。 雖然您可以透過 Windows 執行階段 COM 介面，直接對程式設計的方式建立通用 Windows 平台應用程式使用 C + + /CX 中，您可以使用建構函式、 例外狀況和其他現代 c + + 程式設計語言。 若要啟用 c + + 程式設計.NET 平台上 managed 的執行環境中，您可以使用 C + + /CLI。  
   
  **兩個執行階段，一組擴充功能**  
   
- C + + /CX 是子集 C + + /CLI。 擴充功能的通用的 C + + /CX 和 C + + CLI，語意取決於您的目標 common language runtime (CLR) 或 Windows 執行階段。 若要編譯您的應用程式在 Windows 執行階段上執行，請指定**/ZW**編譯器選項。 若要編譯它在 CLR 上執行，請指定**/clr**編譯器選項。 當您使用 Visual Studio 以建立專案時，會自動設定這些參數。  
+ C + + /CX 是子集 C + + /CLI。 擴充功能的通用的 C + + /CX 和 C + + CLI，語意取決於您的目標 common language runtime (CLR) 或 Windows 執行階段。 若要編譯您的應用程式在 Windows 執行階段上執行，請指定 **/ZW**編譯器選項。 若要編譯它在 CLR 上執行，請指定 **/clr**編譯器選項。 當您使用 Visual Studio 以建立專案時，會自動設定這些參數。  
   
  如需如何在 c + + 中建立通用 Windows 平台應用程式的詳細資訊，請參閱[藍圖的 Windows 執行階段應用程式使用 c + +](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)。  
   
@@ -84,13 +79,13 @@ Visual C++ 提供語言擴充功能，協助您針對執行階段平台進行程
 |`finally`|[是]|表示預設例外狀況處理行為。|[例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)|  
 |`for each, in`|否|列舉集合的項目。|[for each, in](../dotnet/for-each-in.md)|  
 |`gcnew`|否|在記憶體回收堆積上配置類型。 改用 `new` 和 `delete`。|[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
-|`ref new`|[是]|配置 [Windows 執行階段類型。 改用 `new` 和 `delete`。|[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
+|`ref new`|[是]|配置 Windows 執行階段類型。 改用 `new` 和 `delete`。|[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|  
 |`initonly`|[是]|表示成員只能在宣告或靜態建構函式中初始化。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|  
 |`literal`|[是]|建立常值變數。|[常值](../windows/literal-cpp-component-extensions.md)|  
 |`nullptr`|否|指出控制代碼或指標未指向物件。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|  
   
 ## <a name="template-constructs"></a>範本建構  
- 下列語言建構會實作為範本，而不是關鍵字。 如果您指定**/ZW**編譯器選項，其定義位於`lang`命名空間。 如果您指定**/clr**編譯器選項，其定義位於`cli`命名空間。  
+ 下列語言建構會實作為範本，而不是關鍵字。 如果您指定 **/ZW**編譯器選項，其定義位於`lang`命名空間。 如果您指定 **/clr**編譯器選項，其定義位於`cli`命名空間。  
   
 |關鍵字|用途|參考資料|  
 |-------------|-------------|---------------|  
@@ -135,6 +130,6 @@ Visual C++ 提供語言擴充功能，協助您針對執行階段平台進行程
 |[#using 指示詞](../preprocessor/hash-using-directive-cpp.md)|匯入外部組件。|  
 |[XML 文件](../ide/xml-documentation-visual-cpp.md)|說明以 XML 為基礎的程式碼文件使用[/doc （處理文件註解） （C/c + +）](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [.NET 程式設計使用 C + + /CLI （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)

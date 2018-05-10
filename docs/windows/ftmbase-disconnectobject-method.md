@@ -1,12 +1,9 @@
 ---
-title: "Ftmbase:: Disconnectobject 方法 |Microsoft 文件"
-ms.custom: 
+title: 'Ftmbase:: Disconnectobject 方法 |Microsoft 文件'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ftm/Microsoft::WRL::FtmBase::DisconnectObject
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - DisconnectObject method
 ms.assetid: 33253eec-3a65-4e72-8525-0249245a4790
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0dc57bb342f6a9625c968e918b67a7b5e1bbb668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2501413196e1fd6b8b7a1a4f9985304863e02549
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject 方法
 強制釋放物件的所有外部連接。 物件的伺服器會呼叫這個方法之前關閉物件的實作。  
@@ -51,5 +46,5 @@ STDMETHODIMP DisconnectObject(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [FtmBase 類別](../windows/ftmbase-class.md)

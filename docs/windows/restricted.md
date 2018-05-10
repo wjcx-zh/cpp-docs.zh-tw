@@ -1,13 +1,10 @@
 ---
-title: "限制 |Microsoft 文件"
-ms.custom: 
+title: 限制 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.restricted
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 569d57da691f40857f54dcae1c383ff7758564f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="restricted"></a>restricted
 指定的模組、 介面或 dispinterface 成員無法任意呼叫。  
@@ -79,14 +74,14 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**適用於**|介面方法， `interface`，**類別**，`struct`|  
+|**適用於**|介面方法， `interface`，**類別**， `struct`|  
 |**可重複**|否|  
 |**必要屬性**|**coclass** (套用至 **class** 或 `struct`時)|  
 |**無效屬性**|無|  
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [介面屬性](../windows/interface-attributes.md)   
  [方法屬性](../windows/method-attributes.md)   

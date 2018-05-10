@@ -1,8 +1,8 @@
 ---
-title: "編譯器警告 C4600 到 C4799 |Microsoft 文件"
+title: 編譯器警告 C4600 到 C4799 |Microsoft 文件
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>編譯器警告 C4600 到 C4799
 
@@ -164,7 +163,7 @@ ms.lasthandoff: 12/21/2017
 |[編譯器警告 （錯誤） C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': 密封抽象類別不能實作介面 'interface'|
 |編譯器警告 （層級 1） C4688|'constraint': 條件約束清單含有組件私用類型 'type'，將無法由組件外部存取|
 |編譯器警告 （層級 1） C4689|'%c'： 不支援 #pragma detect_mismatch; 中的字元忽略 #pragma|
-|編譯器警告 （層級 4） C4690|[ emitidl( pop ) ]: pop|
+|編譯器警告 （層級 4） C4690|[ emitidl ( pop ) ]: pop|
 |[編譯器警告 (層級 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': 未參考組件 'file'，而是會使用目前的轉譯單位中定義的型別中，必須有參考類型|
 |[編譯器警告 (層級 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'function': 非私用成員的簽章含有組件私用原生類型 'native_type'|
 |[編譯器警告 （層級 1，錯誤） C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'class': 密封抽象類別不能有任何執行個體成員 '執行個體 member'|
@@ -204,7 +203,7 @@ ms.lasthandoff: 12/21/2017
 |[編譯器警告 (層級 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var' 有 'file1' 和 'file2' 在不同的對齊： 和號碼|
 |[編譯器警告 (層級 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' 具有 'file1' 和 'file2' 的不同大小： 數字和位元組數|
 |[編譯器警告 (層級 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' 具有 'file1' 和 'file2' 中的不同類型: 'type1' 和 'type2'|
-|[編譯器警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|暫時性存取 '*運算式*' 受限於 /volatile:\<iso &#124; ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式|
+|[編譯器警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|暫時性存取 '*運算式*' 受限於 /volatile:\<iso&#124;ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式|
 |[編譯器警告 (層級 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|呼叫 managed '進入點': Managed 程式碼不會執行載入器鎖定，包括 DLL 進入點和從 DLL 進入點到達的呼叫下|
 |編譯器警告 （層級 4） C4749|有條件地支援： 套用至 non standard 配置類型的 offsetof '*類型*'|
 |編譯器警告 （層級 1） C4750|'identifier': 函式中有 _alloca() 內嵌成迴圈|

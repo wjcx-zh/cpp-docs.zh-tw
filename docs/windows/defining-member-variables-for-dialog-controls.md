@@ -1,13 +1,10 @@
 ---
-title: "定義對話方塊控制項的成員變數 |Microsoft 文件"
-ms.custom: 
+title: 定義對話方塊控制項的成員變數 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - controls [C++], member variables
 - Dialog editor, defining member variables for controls
 ms.assetid: 84347c63-c33c-4b04-91f5-6d008c45ba58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb966459695eb048943a12e33c8e909f99fdc92b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ba8fc95290ecb90557203be2b6ab4cce18b91e3
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>定義對話方塊控制項的成員變數
 若要定義任何對話方塊控制項 (按鈕除外) 的成員變數，您可以使用下列方法。  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  MFC  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [將訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)   
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [MFC 類別精靈](../mfc/reference/mfc-class-wizard.md)   

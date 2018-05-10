@@ -1,13 +1,10 @@
 ---
-title: "建立主控台應用程式 |Microsoft 文件"
-ms.custom: 
+title: 建立主控台應用程式 |Microsoft 文件
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Win32, console applications
 - console applications, Win32
 ms.assetid: aedfb6b3-ca1f-4e8e-8439-1b680810ee47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: efa74cde4843dacc60a6c399479e633aad005288
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a65373cdc04235f067a8cd20cf2c7c6c9b9f13c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-console-application"></a>建立主控台應用程式
 建立 Win32 主控台應用程式的最簡單方式是使用 Win32 應用程式精靈。  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  按一下**完成**在關閉精靈，且您新建立的專案開啟**方案總管 中**。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [主控台專案](/visualstudio/debugger/debugging-preparation-console-projects)   
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [屬性頁](../ide/property-pages-visual-cpp.md)   

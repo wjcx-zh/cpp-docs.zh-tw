@@ -1,13 +1,10 @@
 ---
-title: "認可到磁碟常數 | Microsoft Docs"
-ms.custom: 
+title: 認可到磁碟常數 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.constants
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - commit-to-disk constants
 ms.assetid: 0b903b23-b4fa-431e-a937-51d95f695ecf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dd4873d8f9b3a658996bfd057372e8fb29e3478
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c3a815948c127c5dec0fe6412ab3c358aa409e2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="commit-to-disk-constants"></a>認可到磁碟常數
 **Microsoft 特定的**  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
  將指定緩衝區的未撰寫內容寫入作業系統的緩衝區。 作業系統可以快取資料，然後判斷寫入磁碟的最佳時間。 在許多情況下，此行為將會是很有效率的程式行為。 不過，如果資料的保留非常重要 (例如銀行交易或機票資訊)，請考慮使用 **c** 選項。 預設是 **n** 模式。  
   
 > [!NOTE]
->  **c** 和 **n** 選項不是針對 `fopen` 之 ANSI 標準的一部分，不過它們是 Microsoft 擴充功能，不應在需要 ANSI 可攜性的情況中使用。  
+>  **c** 與 **n** 選項並非 `fopen` 的 ANSI 標準之一部分，而是 Microsoft 延伸模組，但在需要 ANSI 可攜性時不應使用。  
   
 ## <a name="using-the-commit-to-disk-feature-with-existing-code"></a>搭配現有程式碼使用認可到磁碟功能  
  根據預設，針對 [fflush](../c-runtime-library/reference/fflush.md) 或 [_flushall](../c-runtime-library/reference/flushall.md) 程式庫函式的呼叫，會將資料寫入由作業系統維護的緩衝區。 作業系統會判斷實際將資料寫入磁碟的最佳時間。 執行階段程式庫的認可到磁碟功能可讓您確保重要資料會直接寫入至磁碟，而不是寫入作業系統的緩衝區。 您可以透過將現有程式的物件檔案與 COMMODE.OBJ 連結，在不用重新撰寫該程式的情況下將此功能提供給它。  

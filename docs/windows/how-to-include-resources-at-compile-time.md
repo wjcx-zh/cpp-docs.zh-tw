@@ -1,13 +1,10 @@
 ---
-title: "如何： 在編譯時期包含資源 |Microsoft 文件"
-ms.custom: 
+title: 如何： 在編譯時期包含資源 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.including
 - vc.resvw.resource.including
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 201985a10d0f5a58fc7d617e307d2715bf29be32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>如何：在編譯時期包含資源
 通常可簡單且容易使用一個資源指令碼 (.rc) 檔中所有資源的預設排列方式。 不過，您可以將資源新增其他檔案中加入目前專案在編譯時期列出它們在**編譯時期指示詞**方塊中[資源包含對話方塊](../windows/resource-includes-dialog-box.md)。  
@@ -67,6 +62,6 @@ ms.lasthandoff: 12/21/2017
   
  Win32  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [資源檔](../windows/resource-files-visual-studio.md)   
  [資源編輯器](../windows/resource-editors.md)

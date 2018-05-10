@@ -1,12 +1,9 @@
 ---
-title: "字串化運算子 （#） |Microsoft 文件"
-ms.custom: 
+title: 字串化運算子 （#） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#'
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61a50b9522c6631ca0b5f32d5c438369632d01
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7891b03fe80b5ad91ad52cf4577d237350d4584c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="stringizing-operator-"></a>字串化運算子 (#)
 數字符號或 「 字串化 」 的運算子 (**#**) 將巨集參數轉換為字串常值中，而不會擴充參數定義。 只會搭配接受引數的巨集使用。 如果出現在巨集定義的型式參數之前，巨集引動過程傳入的實質引數會以引號括住並且將視為字串常值。 然後字串常值會取代巨集定義中每個字串化運算子和型式參數的組合。  
@@ -89,5 +84,5 @@ FB(F B)
 FB1(F B)  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [前置處理器運算子](../preprocessor/preprocessor-operators.md)

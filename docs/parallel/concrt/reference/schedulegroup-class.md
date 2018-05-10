@@ -1,12 +1,9 @@
 ---
-title: "ScheduleGroup 類別 |Microsoft 文件"
-ms.custom: 
+title: ScheduleGroup 類別 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ScheduleGroup
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cf679abbeb1134332d98ef0bd2ba8f2b845d30a4
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 類別
 代表排程群組的抽象概念。 排程群組會將一組相關的工作組織在一起，以讓這些工作獲得暫時緊密排程在一起的優勢，其方法如下：透過在同一個群組中執行另一個工作再移至另一個群組；透過再同一個 NUMA 節點或實體通訊端的同一個群組內執行多個項目。  
@@ -126,7 +121,7 @@ virtual unsigned int Release() = 0;
   
  排程群組是與特定的排程器執行個體相關聯。 您必須先確定已釋放排程群組的所有參考，才能釋放排程器的所有參考，因為後者可能會使排程器遭到終結。 正在進行其他方式導致未定義的行為。  
   
-##  <a name="dtor"></a> ~ScheduleGroup 
+##  <a name="dtor"></a> ~ ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
@@ -152,7 +147,7 @@ virtual void ScheduleTask(
 ### <a name="remarks"></a>備註  
  呼叫`ScheduleTask`方法隱含會參考計數放在適當的時間執行工作後執行階段所移除的排程群組上。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [CurrentScheduler 類別](currentscheduler-class.md)   
  [Scheduler 類別](scheduler-class.md)   

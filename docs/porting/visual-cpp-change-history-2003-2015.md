@@ -1,29 +1,24 @@
 ---
-title: "Visual C++ 變更歷程記錄 2003 - 2015 | Microsoft Docs"
-ms.custom: 
+title: Visual C++ 變更歷程記錄 2003 - 2015 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1541029a8164e1c70e5599f20512dbecde543dc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -1408,7 +1403,7 @@ struct S2 : public S1 {
 ```
 若要修正錯誤，請在 S2 中，從建構函式中移除對 S1() 的呼叫，接著視需要將其放在另一個函式中。
 
--   **{} 會防止指標轉換**  
+-   **{} 會避免轉換為指標**  
 
 下列程式碼現在會產生 C2439：'S::p': 無法將成員初始化   
 ```cpp

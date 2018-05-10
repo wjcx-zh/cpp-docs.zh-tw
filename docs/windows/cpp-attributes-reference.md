@@ -1,30 +1,25 @@
 ---
 title: C + + 屬性參考 |Microsoft 文件
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e371a89a42481f72d3523d8f21852f3f79d19fc7
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 307f2e8e99e469face090acd19e7c5f28c5d9140
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="c-attributes-reference"></a>C++ 屬性參考
 Microsoft 定義了一組簡化 COM 程式設計與.NET Framework 通用語言執行階段開發的屬性。 當您將屬性納入原始程式檔時，編譯器會搭配提供者來插入程式碼，或修改產生的目的檔中的程式碼的 Dll。  

@@ -1,13 +1,10 @@
 ---
-title: "結構的儲存和對齊 | Microsoft Docs"
-ms.custom: 
+title: 結構的儲存和對齊 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb5ec55ed3125ac86b0042812ba7fc25388a155
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4a70ab5fbeb4a1672279e7e9b617e3b4de1c1b5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-and-alignment-of-structures"></a>結構的儲存和對齊
 **Microsoft 特定的**  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  如果整數類資料類型的大小相同，而且下一個位元欄位符合目前配置單位，不需因為位元欄位的一般對齊需求而加上跨越界限，則相鄰的位元欄位會封裝為相同的 1 個、2 個或 4 個位元組配置單位。  
   
- 若要保留空間或符合現有的資料結構，您可能想要或多或少精簡地儲存結構。 [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] 編譯器選項和 [#pragma pack](../preprocessor/pack.md) 可控制將結構資料「封裝」至記憶體的方式。 當您使用 /Zp[*n*] 選項 (其中 *n* 為 1、2、4、8 或 16) 時，第一個結構成員之後的每個結構成員會儲存在位元組界限上。這些界限可能是欄位或封裝大小 (*n*) 的對齊需求，取兩者中較小者。 表示為公式，位元組界限為  
+ 若要保留空間或符合現有的資料結構，您可能想要或多或少精簡地儲存結構。 [/Zp](../build/reference/zp-struct-member-alignment.md)[*n*] 編譯器選項和 [#pragma pack](../preprocessor/pack.md) 可控制將結構資料「封裝」至記憶體的方式。 當您使用 /Zp /Zp[*n*] 選項 (其中 *n* 為 1、2、4、8 或 16) 時，第一個結構成員之後的每個結構成員，都會儲存在位元組界限上，可能是欄位或封裝大小 (*n*) 的對齊需求，取兩者中較小者。 表示為公式，位元組界限為  
   
 ```  
 min( n, sizeof( item ) )  
@@ -49,7 +44,7 @@ min( n, sizeof( item ) )
   
  若要使用 `pack` pragma 來指定封裝 (在命令列上為特定結構指定的封裝除了)，請在結構的前方使用 `pack` pragma，其中封裝大小為 1、2、4、8 或 16。 若要重新啟用在命令列上指定的封裝，請指定沒有引數的 `pack` pragma。  
   
- Microsoft C 編譯器的位元欄位預設大小為 **long**。 結構成員會依類型的大小或 /Zp[*n*] 的大小 (取兩者中較小者) 來對齊。 預設大小為 4。  
+ Microsoft C 編譯器的位元欄位預設大小為 **long**。 結構成員會對齊於類型的大小或 /Zp[*n*] 的大小，取兩者中較小者。 預設大小為 4。  
   
  **結束 Microsoft 特定的**  
   

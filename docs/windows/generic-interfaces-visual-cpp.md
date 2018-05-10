@@ -1,31 +1,26 @@
 ---
-title: "泛型介面 （Visual c + +） |Microsoft 文件"
-ms.custom: 
+title: 泛型介面 （Visual c + +） |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ab6585cd4d8c7a4da93273f99d47c0265608c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型介面 (Visual C++)
 套用至類別型別參數的限制會套用至型別參數在介面上的相同 (請參閱[泛型類別 (C + + /CLI)](../windows/generic-classes-cpp-cli.md))。  
@@ -323,5 +318,5 @@ The integer field contains: 1234
 The String field contains: My string  
 ```  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

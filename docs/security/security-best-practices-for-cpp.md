@@ -1,7 +1,7 @@
 ---
 title: C + + 的安全性最佳作法 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -14,20 +14,22 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
-ms.translationtype: HT
+ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳作法
+
 本文包含安全性工具和作法的相關資訊。 使用它們不會讓應用程式免受攻擊，但是可能可以減少成功的攻擊。  
   
-## <a name="visual-c-security-features"></a>Visual C++ 安全性功能  
+## <a name="visual-c-security-features"></a>Visual C++ 安全性功能
+
  這些安全性功能內建於 Visual C++ 編譯器和連結器：  
   
  [/guard (啟用控制流程防護)](../build/reference/guard-enable-control-flow-guard.md)  
@@ -84,14 +86,19 @@ ms.lasthandoff: 05/07/2018
 -   測試常見程式設計錯誤所造成的潛在應用程式相容性錯誤。  
   
 -   檢查應用程式是否有記憶體相關問題。  
-  秒
+
 -   找出應用程式中的潛在安全性問題。  
   
  AppVerifier 的應用程式相容性工具組，可從屬於[應用程式相容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 網站上。  
   
 
 ## <a name="windows-user-accounts"></a>Windows 使用者帳戶  
- 使用屬於 Administrators 群組的 Windows 使用者帳戶，讓開發人員和客戶暴露在安全性風險下。 如需詳細資訊，請參閱[Users 群組的成員身分執行](running-as-a-member-of-the-users-group.md)和[使用者帳戶控制的方式 (UAC) 會影響您的應用程式](how-user-account-control-uac-affects-your-application.md)。  
+ 使用屬於 Administrators 群組的 Windows 使用者帳戶，讓開發人員和客戶暴露在安全性風險下。 如需詳細資訊，請參閱[Users 群組的成員身分執行](running-as-a-member-of-the-users-group.md)和[使用者帳戶控制的方式 (UAC) 會影響您的應用程式](how-user-account-control-uac-affects-your-application.md)。
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>理論式執行側邊通道指引
+
+如需如何識別及緩和推測執行側邊通道硬體的弱點可能會在 c + + 軟體資訊，請參閱[理論式執行側邊通道的 c + + 開發人員指引](developer-guidance-speculative-execution.md)。
+
   
 ## <a name="see-also"></a>另請參閱  
  <xref:System.Security>   

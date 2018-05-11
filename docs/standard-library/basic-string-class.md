@@ -126,11 +126,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202dd5334e2eb0f133b40198840287af83acee8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32cd9dc76954b7b4dc5d38081ed39bc42511ab0e
+ms.sourcegitcommit: 2998488d63f2dd9cbfa1f5cb9a403883b2246949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="basicstring-class"></a>basic_string 類別
 
@@ -469,7 +469,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 `ptr` C 字串指派給目標字串的字元指標。
 
-`count` 要附加，最多會從來源字串的字元數。
+`count` 要指派，從來源字串的字元數。
 
 `str` 字元要指派給目標字串的來源字串。
 

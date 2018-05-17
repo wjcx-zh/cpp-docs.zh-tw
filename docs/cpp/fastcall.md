@@ -16,14 +16,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
-**Microsoft 特定的**  
+**Microsoft 專屬**  
   
  `__fastcall` 呼叫慣例會指定函式的引數應該盡可能在暫存器中傳遞。 這個呼叫慣例僅適用於 x86 架構。 下列清單會顯示這個呼叫慣例的實作。  
   
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |引數傳遞順序|引數清單中的前兩個 DWORD 引數或較小引數會由左至右傳入 ECX 和 EDX 暫存器，所有其他引數則由右至左傳遞至堆疊上。|  
 |堆疊維護責任|所呼叫的函式會從堆疊取出引數。|  
-|名稱裝飾慣例|名稱前面會加上 @ 符號，而參數清單中後面接著位元組數 (十進位) 的 @ 符號會加在名稱後面。|  
+|名稱裝飾慣例|@ 記號 (\@) 加在名稱後面接著位元組數 （十進位） 參數中的符號清單後置字元的名稱。|  
 |大小寫轉譯慣例|未執行大小寫轉譯。|  
   
 > [!NOTE]
@@ -73,7 +73,7 @@ void FASTCALL DeleteAggrWrapper(void* pWrapper);
 typedef BOOL (__fastcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-**結束 Microsoft 特定的**  
+**結束 Microsoft 專屬**  
   
 ## <a name="see-also"></a>另請參閱  
  [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   

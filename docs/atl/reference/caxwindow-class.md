@@ -134,7 +134,7 @@ HRESULT CreateControl(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID  
   
--   URL，例如"http://www.microsoft.com"  
+-   URL，例如 "http://www.microsoft.com"  
   
 -   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
   
@@ -196,7 +196,7 @@ HRESULT CreateControlEx(
   
 -   例如"{8E27C92B-1264-101C-8A2F-040224009C02}"的 CLSID  
   
--   URL，例如"http://www.microsoft.com"  
+-   URL，例如 "http://www.microsoft.com"  
   
 -   例如主動式文件的參考 「 file://\\\Documents\MyDoc.doc"  
   

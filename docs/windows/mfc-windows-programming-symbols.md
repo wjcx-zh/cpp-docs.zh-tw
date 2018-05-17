@@ -1,13 +1,10 @@
 ---
-title: "MFC Windows 程式開發符號 |Microsoft 文件"
-ms.custom: 
+title: MFC Windows 程式開發符號 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - symbols, MFC
 - Windows programming MFC symbols [C++]
 ms.assetid: fcc2194d-b639-4e0c-be2c-75f5579f2780
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7d2d69cfdfd12f0a8dbdcf3a771e01db19da2c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows 程式開發符號
 這些符號也是 MFC 支援檔案的一部分，但是它們可以支援標準的 Windows 應用程式函式和動作。 這些符號主要用於功能表。 當您使用功能表功能表編輯器中時，這些符號會出現在 [屬性] 視窗功能表的常見命令與相關聯。 比方說，如果您的應用程式檔案功能表與 [結束] 命令，該命令會與相關聯的符號 ID_APP_EXIT 中[屬性視窗](/visualstudio/ide/reference/properties-window)。  
@@ -72,6 +67,6 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>需求  
  MFC  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [MFC 預先定義的符號](../windows/mfc-predefined-symbols.md)   
  [符號：資源識別項](../windows/symbols-resource-identifiers.md)

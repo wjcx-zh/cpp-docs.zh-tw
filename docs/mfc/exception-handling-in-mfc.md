@@ -1,13 +1,10 @@
 ---
-title: "在 MFC 中處理的例外狀況 |Microsoft 文件"
-ms.custom: 
+title: 在 MFC 中處理的例外狀況 |Microsoft 文件
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的例外狀況處理
 本文說明在 MFC 中的例外狀況處理機制。 有兩種機制：  
@@ -68,7 +63,7 @@ ms.lasthandoff: 01/03/2018
  如果您已開發使用 MFC 例外狀況巨集的應用程式，您可以繼續在新的程式碼中使用 c + + 例外狀況時，在現有程式碼中使用這些巨集。 發行項[例外狀況： 3.0 版中的例外狀況巨集變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)這麼做會提供指導方針。  
   
 > [!NOTE]
->  若要啟用 c + + 例外狀況處理程式碼中，選取 C/c + + 專案的資料夾中的 [程式碼產生] 頁面上的啟用 c + + 例外狀況[屬性頁](../ide/property-pages-visual-cpp.md)對話方塊中或使用 /GX 編譯器選項。 預設為 /GX-，它會停用例外狀況處理。  
+>  若要啟用 c + + 例外狀況處理程式碼中，選取 C/c + + 專案的資料夾中的 [程式碼產生] 頁面上的 啟用 c + + 例外狀況[屬性頁](../ide/property-pages-visual-cpp.md)對話方塊中或使用 /GX 編譯器選項。 預設為 /GX-，它會停用例外狀況處理。  
   
  本文涵蓋下列主題：  
   
@@ -78,7 +73,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [深入了解例外狀況](#_core_further_reading_about_exceptions)  
   
-##  <a name="_core_when_to_use_exceptions"></a>使用例外狀況的時機  
+##  <a name="_core_when_to_use_exceptions"></a> 使用例外狀況的時機  
  在程式執行期間呼叫的函數時，可能會發生下列三種結果： 正常執行，錯誤執行或不正常執行。 下面會描述每個類別目錄。  
   
 -   正常執行  
@@ -95,7 +90,7 @@ ms.lasthandoff: 01/03/2018
   
  使用例外狀況是特別適用於不正常執行。  
   
-##  <a name="_core_mfc_exception_support"></a>MFC 例外狀況支援  
+##  <a name="_core_mfc_exception_support"></a> MFC 例外狀況支援  
  當您直接使用 c + + 例外狀況，或使用 MFC 例外狀況巨集，您將使用[CException 類別](../mfc/reference/cexception-class.md)或`CException`-衍生物件的架構，或您的應用程式可能會擲回。  
   
  下表顯示 MFC 提供的預先定義的例外狀況。  
@@ -116,7 +111,7 @@ ms.lasthandoff: 01/03/2018
 > [!NOTE]
 >  MFC 支援 c + + 例外狀況和 MFC 例外狀況巨集。 MFC 不直接支援 Windows NT 結構化例外狀況處理常式 (SEH)，如所述[結構化例外狀況處理](http://msdn.microsoft.com/library/windows/desktop/ms680657)。  
   
-##  <a name="_core_further_reading_about_exceptions"></a>深入了解例外狀況  
+##  <a name="_core_further_reading_about_exceptions"></a> 深入了解例外狀況  
  下列文件說明使用 MFC 程式庫例外狀況處理：  
   
 -   [例外狀況：攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)  
@@ -139,7 +134,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [例外狀況：使用 MFC 巨集和 C++ 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
  [C + + 例外狀況處理](../cpp/cpp-exception-handling.md)   
  [如何： 建立我自己的自訂例外狀況類別](http://go.microsoft.com/fwlink/p/?linkid=128045)
 

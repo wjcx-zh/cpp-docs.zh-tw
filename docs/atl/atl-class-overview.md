@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eaa712ba8954b8b9b755f8045a81296bb345685
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-class-overview"></a>ATL 類別概觀
 Active Template Library (ATL) 的類別分類如下：  
@@ -49,11 +49,10 @@ Active Template Library (ATL) 的類別分類如下：
  可使用 ATL 專案中的其他類別，請參閱[共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [類別](../atl/reference/atl-classes.md)   
- [ATL COM 桌面元件](../atl/atl-com-desktop-components.md)   
+ [類別和結構](../atl/reference/atl-classes.md)   
+ [ATL COM 桌面元件](../atl/atl-com-desktop-components.md)  
  [函式](../atl/reference/atl-functions.md)   
  [全域變數](../atl/reference/atl-global-variables.md)   
  [巨集](../atl/reference/atl-macros.md)   
- [結構](../atl/reference/atl-structures.md)   
  [Typedefs](../atl/reference/atl-typedefs.md)
 

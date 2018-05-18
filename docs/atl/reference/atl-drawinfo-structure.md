@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e04f5efae261a151489309e876298b56ec696db
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c8ba7be259a10ee1bf47bbdc401a2389adac2be
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 結構
 包含用於轉譯為各種目標，例如印表機、 中繼檔或 ActiveX 控制項的資訊。  
@@ -96,8 +96,7 @@ struct ATL_DRAWINFO {
  **標頭：** atlctl.h  
   
 ## <a name="see-also"></a>另請參閱  
- [結構](../../atl/reference/atl-structures.md)   
- [Iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
+  [類別和結構](../../atl/reference/atl-classes.md) [iviewobject:: Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655)   
  [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)
 
 

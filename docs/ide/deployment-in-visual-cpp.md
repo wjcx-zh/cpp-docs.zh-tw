@@ -1,7 +1,7 @@
 ---
 title: 部署 Visual c + + |Microsoft 文件
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
 您的開發電腦以外的電腦上的應用程式的安裝稱為*部署*。 當您部署至另一部電腦的 Visual c + + 應用程式時，您必須安裝應用程式與它相依於任何程式庫檔案。 Visual Studio 可讓部署應用程式一起 Visual c + + 程式庫的三種方式：*集中部署*，*本機部署*，和*靜態連結*。 集中部署會將 Windows 目錄下的程式庫檔案所在的 Windows Update 服務可以自動更新。 本機部署會將程式庫檔案放在與您的應用程式相同的目錄中。 您必須重新部署任何本機部署程式庫自行加以更新。 靜態連結會繫結到您的應用程式程式庫程式碼。 您必須重新編譯和重新部署您的應用程式的任何更新程式庫時利用您使用靜態連結。
+
+在 Visual Studio 2015 中，Microsoft C 執行階段程式庫重構為特定版本的本機程式庫元件，以及新的通用 C 執行階段程式庫現在是 Windows 的一部分。 如需通用 CRT 的部署的詳細資訊，請參閱[： 通用 CRT 部署](universal-crt-deployment.md)。
 
 ## <a name="central-deployment"></a>集中部署
 
@@ -59,4 +61,5 @@ Visual c + + 程式庫的載入順序是系統而定。 若要診斷載入器問
 
 ## <a name="see-also"></a>另請參閱
 
-[部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [Universal CRT 的部署](universal-crt-deployment.md)

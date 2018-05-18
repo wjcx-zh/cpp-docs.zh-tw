@@ -828,11 +828,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 提供 MFC 程式庫中所有視窗類別的基本功能。  
@@ -1113,7 +1113,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|通知正在從鏈結中移除指定的視窗。|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|應變更使用者介面 (UI) 狀態時呼叫。|  
 |[CWnd::OnChar](#onchar)|按鍵轉譯為非系統字元時呼叫。|  
-|[CWnd::OnCharToItem](#onchartoitem)|由具有的子清單方塊呼叫[LBS_WANTKEYBOARDINPUT](list-box-styles.md)回應樣式[WM_CHAR](#onchar)訊息。|  
+|[CWnd::OnCharToItem](#onchartoitem)|由具有的子清單方塊呼叫[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)回應樣式[WM_CHAR](#onchar)訊息。|  
 |[CWnd::OnChildActivate](#onchildactivate)|每當 `CWnd` 的大小或位置變更，或 `CWnd` 已啟動時，針對多重文件介面 (MDI) 子視窗呼叫。|  
 |[CWnd::OnChildNotify](#onchildnotify)|由父視窗呼叫，讓通知控制項有機會回應控制項通知。|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|於剪貼簿內容已變更時呼叫。|  
@@ -3563,7 +3563,7 @@ CWnd* GetDescendantWindow(
  指定要擷取控制項或子視窗的識別項。  
   
  `bOnlyPerm`  
- 指定是否要傳回視窗可能是暫時性。 如果**TRUE**，永久視窗可以傳回; 如果**為 FALSE，**函式會傳回暫時的視窗。 如需有關暫存的 windows，請參閱[技術附註 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)。  
+ 指定是否要傳回視窗可能是暫時性。 如果**TRUE**，永久視窗可以傳回; 如果**為 FALSE，** 函式會傳回暫時的視窗。 如需有關暫存的 windows，請參閱[技術附註 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)。  
   
 ### <a name="return-value"></a>傳回值  
  指標`CWnd`物件，或**NULL**如果不找到任何子視窗。  
@@ -9493,7 +9493,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
   
  此函式的預設實作會檢查**NULL**視窗類別名稱並換成適當的預設值。 若要修改此成員函式會覆寫`CREATESTRUCT`結構建立視窗之前。  
   
- 每個類別衍生自`CWnd`將自己的功能加入至其覆寫`PreCreateWindow`。 根據設計，這些衍生的`PreCreateWindow`未記載。 若要判斷用於每個類別和樣式之間的相依性的樣式，您可以檢查您的應用程式基底類別的 MFC 原始程式碼。 如果您選擇覆寫**PreCreateWindow，**您可以判斷您的應用程式基底類別中使用的樣式是否提供您需要藉由從 MFC 原始程式碼所收集資訊的功能。  
+ 每個類別衍生自`CWnd`將自己的功能加入至其覆寫`PreCreateWindow`。 根據設計，這些衍生的`PreCreateWindow`未記載。 若要判斷用於每個類別和樣式之間的相依性的樣式，您可以檢查您的應用程式基底類別的 MFC 原始程式碼。 如果您選擇覆寫**PreCreateWindow，** 您可以判斷您的應用程式基底類別中使用的樣式是否提供您需要藉由從 MFC 原始程式碼所收集資訊的功能。  
   
  如需有關如何變更視窗樣式的詳細資訊，請參閱[變更 MFC 所建立的視窗樣式](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
   
@@ -10663,13 +10663,13 @@ BOOL SetWindowPos(
   
  子視窗的所有座標都是工作區座標 （相對於父視窗工作區的左上角）。  
   
- 視窗可以移到疊置順序的頂端設定`pWndInsertAfter`參數**（& s) wndTopMost**並確保`SWP_NOZORDER`旗標是不設定，或藉由設定視窗的疊置順序，所以其值高於任何現有的最上層視窗。 當非最上層的視窗由最上層時，其擁有的 windows 也會有最上層。 不會變更其擁有者。  
+ 視窗可以移到疊置順序的頂端設定`pWndInsertAfter`參數 **（& s) wndTopMost**並確保`SWP_NOZORDER`旗標是不設定，或藉由設定視窗的疊置順序，所以其值高於任何現有的最上層視窗。 當非最上層的視窗由最上層時，其擁有的 windows 也會有最上層。 不會變更其擁有者。  
   
  最上層的視窗不會再為最上層，如果它重新定位到下 ( **& wndBottom**) 或後任何非最上層視窗的疊置順序。 當最上層的視窗由非最上層時，所有其擁有者和其擁有的 windows 也會有非最上層視窗。  
   
  如果沒有`SWP_NOACTIVATE`也`SWP_NOZORDER`（也就是應用程式要求視窗可同時啟動，並放在指定的疊置順序） 時指定中, 指定的值`pWndInsertAfter`只適用於下列情況：  
   
--   既不 **& wndTopMost**也**（& s) wndNoTopMost**中指定`pWndInsertAfter`參數。  
+-   既不 **& wndTopMost**也 **（& s) wndNoTopMost**中指定`pWndInsertAfter`參數。  
   
 -   這個視窗不是作用中視窗。  
   
@@ -10683,7 +10683,7 @@ BOOL SetWindowPos(
   
  如果圖層順序包含與任何 windows **WS_EX_TOPMOST**樣式，以移動視窗 **& wndTopMost**值會放在最上方的所有非最上層視窗，但低於任何最上層視窗。 當應用程式會啟動非作用中的視窗，而不用**WS_EX_TOPMOST**位元，視窗移上述所有非最上層視窗，但低於任何最上層視窗。  
   
- 如果`SetWindowPos`時，會呼叫`pWndInsertAfter`參數是**（& s) wndBottom**和`CWnd`是最上層視窗，視窗會失去其最上層的狀態 ( **WS_EX_TOPMOST**清除)，以及系統會將視窗底部的疊置順序。  
+ 如果`SetWindowPos`時，會呼叫`pWndInsertAfter`參數是 **（& s) wndBottom**和`CWnd`是最上層視窗，視窗會失去其最上層的狀態 ( **WS_EX_TOPMOST**清除)，以及系統會將視窗底部的疊置順序。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#120](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  

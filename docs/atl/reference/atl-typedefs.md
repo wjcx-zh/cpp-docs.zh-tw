@@ -33,11 +33,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb730faae0b70b840b637dc54a9f7b636f1d7a6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 811dbda4360bcb3a618a4ceaa5228e57dab312ae
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-typedefs"></a>ATL Typedef
 Active Template Library 包含下列的 typedef。  
@@ -308,6 +308,4 @@ typedef CUrl* LPURL;
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
  [函式](../../atl/reference/atl-functions.md)   
  [全域變數](../../atl/reference/atl-global-variables.md)   
- [結構](../../atl/reference/atl-structures.md)   
- [巨集](../../atl/reference/atl-macros.md)   
- [類別](../../atl/reference/atl-classes.md)
+ [類別和結構](../../atl/reference/atl-classes.md)[巨集](../../atl/reference/atl-macros.md)   

@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d50ca37b90251a797f70129e4b8ce1778b4d73
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fb459c10f7ead6960760c8d02b9a471a7b8f6c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面元件
 ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別，可簡化程式設計的元件物件模型 (COM) 物件。 若要充分利用 ATL，強烈建議 COM 工作熟悉。  
@@ -28,8 +28,8 @@ ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別
  [ATL 類別概觀](../atl/atl-class-overview.md)  
  提供的連結和依類別目錄組織，ATL 類別的簡短描述。  
   
- [ATL 類別](../atl/reference/atl-classes.md)  
- 依照字母順序排列的類別上提供的參考資料。  
+ [類別與結構](../atl/reference/atl-classes.md)  
+ 提供參考資料的類別和結構依照字母順序排列。  
   
  [ATL 函式](../atl/reference/atl-functions.md)  
  提供參考資料上依照字母順序排列的全域函式。 包含主題組織成類別目錄的函式。  
@@ -40,14 +40,11 @@ ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別
  [ATL 巨集](../atl/reference/atl-macros.md)  
  提供參考資料上依照字母順序排列的巨集。 包含組成各種分類組織巨集的主題。  
   
- [ATL 結構](../atl/reference/atl-structures.md)  
- 提供參考資料上依照字母順序排列的結構。  
-  
  [ATL Typedef](../atl/reference/atl-typedefs.md)  
  依照字母順序排列的 typedef 上提供的參考資料  
   
- [Archetypes](../atl/reference/atl-archetypes.md)  
- 提供 ATL archetypes，也就是理論上提供的方法、 資料成員、 靜態函式、 typedef 或其他功能，依字母順序列出集合的類別連結。  
+ [背景工作原型](../atl/reference/worker-archetype.md)  
+ 提供 ATL 工作者原型的連結。  
   
  [過時的 ATL 主題](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
  提供類別、 巨集，以及為過時或已被取代的函式的參考資料。  

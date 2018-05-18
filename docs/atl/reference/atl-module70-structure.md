@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f189ef58ab83a6e77852c109e6da3ae86dc5555d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a374ee01387c576a5d1a727857badc7ef7139ad
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 結構
 包含每個 ATL 模組所使用的資料。  
@@ -59,7 +59,7 @@ struct _ATL_MODULE70 {
  **標頭：** atlbase.h  
   
 ## <a name="see-also"></a>另請參閱  
- [結構](../../atl/reference/atl-structures.md)
+  [類別和結構](../../atl/reference/atl-classes.md)
 
 
 

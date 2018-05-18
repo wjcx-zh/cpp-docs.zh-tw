@@ -26,11 +26,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 網際網路程式設計基本概念
 Microsoft 提供許多應用程式開發介面撰寫用戶端和伺服器應用程式。 許多新的應用程式正在寫入的網際網路功能，並做為技術、 瀏覽器能力和安全性選項會變更，將寫入新類型的應用程式。 用戶端電腦，提供對 World Wide Web 存取，並顯示包含文字、 圖形、 ActiveX 控制項和文件的 HTML 網頁瀏覽器執行。 伺服器提供 FTP、 HTTP 和 gopher 服務，並執行使用 CGI 的伺服器延伸應用程式。 自訂應用程式可以擷取資訊，並提供在網際網路上的資料。  
@@ -52,8 +52,6 @@ Microsoft 提供許多應用程式開發介面撰寫用戶端和伺服器應用�
 -   [WinInet 基本概念](../mfc/wininet-basics.md)  
   
 -   [HTML 的基本概念](../mfc/html-basics.md)  
-  
--   [HTTP 的基本概念](../mfc/http-basics.md)  
   
 ## <a name="related-sections"></a>相關章節  
   

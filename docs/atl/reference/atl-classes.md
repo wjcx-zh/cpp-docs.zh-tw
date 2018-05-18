@@ -1,7 +1,7 @@
 ---
-title: ATL 類別 |Microsoft 文件
+title: ATL 類別和結構 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -15,17 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e887f0adb7812664047fd30c3d9bb48368b9b564
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="atl-classes"></a>ATL 類別
-Active Template Library (ATL) 包含下列類別。 若要依分類尋找特定的類別，請參閱[ATL 類別概觀](../../atl/atl-class-overview.md)。  
+# <a name="atl-classes-and-structs"></a>ATL 類別和結構
+Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋找特定的類別，請參閱[ATL 類別概觀](../../atl/atl-class-overview.md)。  
   
-|類別|描述|標頭檔|  
+|類別 / 結構|描述|標頭檔|  
 |-----------|-----------------|-----------------|  
+|[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|包含用於轉譯為各種目標，例如印表機、 中繼檔或 ActiveX 控制項的資訊。|atlctl.h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|包含在 ATL 中的視窗化程式碼中的類別執行個體資料|atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|使用 ATL 任何專案使用的|atlbase.h|  
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|使用 COM 相關 ATL 中的程式碼| atlbase.h|  
+|[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|包含用來描述上的分配介面的方法或屬性的型別資訊。|atlcom.h|  
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|包含每個 ATL 模組所使用的資料。|atlbase.h|  
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|ATL 中的視窗化程式碼使用|atlbase.h|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|這個類別由字串轉換巨集`CA2TEX`和`CT2AEX`，和 typedef **CA2A**。|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|這個類別由字串轉換巨集`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。|atlconv.h|  
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|這個類別由字串轉換巨集`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。|atlconv.h|  
@@ -224,7 +231,6 @@ Active Template Library (ATL) 包含下列類別。 若要依分類尋找特定�
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
  [函式](../../atl/reference/atl-functions.md)   
  [全域變數](../../atl/reference/atl-global-variables.md)   
- [結構](../../atl/reference/atl-structures.md)   
  [Typedef](../../atl/reference/atl-typedefs.md)   
  [類別概觀](../../atl/atl-class-overview.md)
 

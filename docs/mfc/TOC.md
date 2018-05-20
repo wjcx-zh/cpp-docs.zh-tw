@@ -136,7 +136,6 @@
 ### [網際網路上的 Active 技術](active-technology-on-the-internet.md)
 ### [WinInet 基本概念](wininet-basics.md)
 ### [HTML 的基本概念](html-basics.md)
-### [HTTP 的基本概念](http-basics.md)
 ## [MFC 網際網路程式設計工作](mfc-internet-programming-tasks.md)
 ### [應用程式設計選擇](application-design-choices.md)
 ### [撰寫 MFC 應用程式](writing-mfc-applications.md)

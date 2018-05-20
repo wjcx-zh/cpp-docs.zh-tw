@@ -37,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  當呼叫端傳遞陣列供方法填入時使用。 C + + 輸入的參數類型為[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >。  
   
  ReceiveArray  
- 當呼叫端接收方法所配置的陣列時使用。 在 C++/CX 中，您可以傳回值 Array^ 傳回陣列，也可以傳回做為 Array^ 類型的 out 參數。  
+ 當呼叫端接收方法所配置的陣列時使用。 在 C++/CX 中，您可以傳回值 Array^ 傳回陣列，也可以傳回做為 Array^* 類型的 out 參數。  
   
 ## <a name="passarray-pattern"></a>PassArray 模式  
  當用戶端程式碼將陣列傳遞至 C++ 方法，且這個方法不會修改陣列時，這個方法會以 const Array^ 形式接受陣列。 在 Windows 執行階段應用程式二進位介面 (ABI) 層級，這稱為 PassArray。 下一個範例顯示如何將 JavaScript 中配置的陣列傳遞至讀取此陣列的 C++ 函式。  

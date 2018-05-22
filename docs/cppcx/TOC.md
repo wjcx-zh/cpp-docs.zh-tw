@@ -75,6 +75,7 @@
 #### [Platform::String 類別](platform-string-class.md)
 #### [Platform::StringReference 類別](platform-stringreference-class.md)
 #### [Platform::Type 類別](platform-type-class.md)
+#### [Platform::Type^ 運算子](operator-type-hat.md)
 #### [Platform:: typecode 列舉](platform-typecode-enumeration.md)
 #### [Platform::UIntPtr 實值類別](platform-uintptr-value-class.md)
 #### [Platform::ValueType 類別](platform-valuetype-class.md)
@@ -113,4 +114,5 @@
 #### [begin 函式](begin-function.md)
 #### [end 函式](end-function.md)
 #### [to_vector 函式](to-vector-function.md)
+### [Windows::UI::Xaml::Interop::TypeName 運算子](operator-windows-ui-xaml-interop-typename.md)
 ## [通用 Windows 平台應用程式不支援 CRT 函式](crt-functions-not-supported-in-universal-windows-platform-apps.md)

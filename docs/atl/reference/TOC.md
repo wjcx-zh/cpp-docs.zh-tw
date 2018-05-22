@@ -1,3 +1,4 @@
+
 # [類別與結構](atl-classes.md)
 ## [_ATL_BASE_MODULE70 結構](atl-base-module70-structure.md)
 ## [_ATL_COM_MODULE70 結構](atl-com-module70-structure.md)
@@ -204,6 +205,7 @@
 ## [IWorkerThreadClient 介面](iworkerthreadclient-interface.md)
 ## [Win32ThreadTraits 類別](win32threadtraits-class.md)
 ## [背景工作原型](worker-archetype.md)
+# [ATL_URL_SCHEME](atl-url-scheme-enum.md)
 # [ATL 函式](atl-functions.md)
 ## [ATL HTTP 公用程式函式](atl-http-utility-functions.md)
 ## [ATL 文字編碼函式](atl-text-encoding-functions.md)
@@ -242,7 +244,9 @@
 ## [字串轉換巨集](string-conversion-macros.md)
 ## [視窗類別巨集](window-class-macros.md)
 ## [Windows 訊息巨集](windows-messages-macros.md)
+# [ATL 運算子](atl-operators.md)
 # [ATL 全域變數](atl-global-variables.md)
+# [ATL Typedef](atl-typedefs.md)
 # [ATL 精靈和對話方塊](atl-wizards-and-dialog-boxes.md)
 ## [ATL 專案精靈、應用程式設定](application-settings-atl-project-wizard.md)
 ## [ATL Active Server Page 元件精靈、ASP](asp-atl-active-server-page-component-wizard.md)

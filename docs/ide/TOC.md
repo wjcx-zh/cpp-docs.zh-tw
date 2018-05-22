@@ -71,6 +71,7 @@
 ## [了解 Visual C++ 應用程式的相依性](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [決定要轉散發哪些 DLL](determining-which-dlls-to-redistribute.md)
 ## [選擇部署方法](choosing-a-deployment-method.md)
+## [通用 CRT 部署](universal-crt-deployment.md)
 ## [轉散發 Visual C++ 檔案](redistributing-visual-cpp-files.md)
 ### [使用合併模組來轉散發元件](redistributing-components-by-using-merge-modules.md)
 ### [轉散發 Visual C++ ActiveX 控制項](redistributing-visual-cpp-activex-controls.md)

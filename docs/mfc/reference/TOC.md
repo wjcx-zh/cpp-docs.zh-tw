@@ -419,6 +419,7 @@
 ## [CSpinButtonCtrl 類別](cspinbuttonctrl-class.md)
 ## [CSplitButton 類別](csplitbutton-class.md)
 ## [CSplitterWnd 類別](csplitterwnd-class.md)
+## [CSplitterWndEx 類別](csplitterwndex-class.md)
 ## [CStatic 類別](cstatic-class.md)
 ## [CStatusBar 類別](cstatusbar-class.md)
 ## [CStatusBarCtrl 類別](cstatusbarctrl-class.md)

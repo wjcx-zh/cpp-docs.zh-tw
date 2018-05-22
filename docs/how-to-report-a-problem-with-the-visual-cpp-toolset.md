@@ -1,6 +1,6 @@
 ---
 title: 如何回報 Visual C++ 工具組問題 | Microsoft Docs
-ms.date: 1/11/2018
+ms.date: 5/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,27 +10,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
+ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>如何回報 Visual C++ 工具組問題
+# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何回報 Visual C++ 工具組或文件的問題
 
-如果您發生 Microsoft Visual C++ 編譯器、連結器或其他工具和程式庫的問題，請告知我們。
+如果您發生 Microsoft Visual C++ 編譯器、連結器或其他工具和程式庫的問題，請告知我們。 如果問題是出自文件，也請告知我們。
+
+## <a name="how-to-report-a-c-documentation-issue"></a>如何回報 C++ 文件問題
+
+我們使用 GitHub 問題來追蹤文件中所回報的問題。 您現在可以直接從內容頁建立 GitHub 問題，這可讓您以更豐富的方式與作者和產品小組互動。 如果您發現文件問題、錯誤的程式碼範例、造成混淆的說明、嚴重遺漏，或甚至只是錯字，，都可以輕鬆地通知我們。 請捲動至頁面底部，並選取 [登入以提供文件應見反應]。 如果您還沒有 GitHub 帳戶，則必須建立一個 GitHub 帳戶，但是一旦完成，您就可以查看所有文件問題及其狀態，並在您所回報的問題有所變更時收到通知。 如需詳細資訊，請參閱[即將在 docs.microsoft.com 推出新的意見反應系統](/teamblog/a-new-feedback-system-is-coming-to-docs)。
+
+當您使用 [文件意見反應] 按鈕在 GitHub 上建立文件問題時，該問題會自動填入有關建立問題來源頁面的一些資訊，以便讓我們知道問題所在位置。 請不要編輯此資訊。 只需要附加有關錯誤的詳細資料，如有必要，還可以提供建議的修正程式。 [我們的文件是開放原始碼](https://github.com/MicrosoftDocs/cpp-docs/)，因此如果您想要實際進行修正並自行提出建議，就可以這樣做。 如需您可以如何參與文件的詳細資訊，請參閱我們在 GitHub 上的[參與指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) (英文)。
+
+## <a name="how-to-report-a-c-product-issue"></a>如何回報 C++ 產品問題
 
 讓我們知道問題的最佳方式是將一份內含下列資訊的報表傳送給我們：所遇到問題的描述、如何建置程式的詳細資料、「重現」，以及可用來在我們自己的電腦上重現問題的完整測試案例。 這項資訊可讓我們快速驗證問題存在於程式碼中而且不在環境本機、判斷是否影響其他版本的編譯器，以及診斷其原因。
 
-您在本文件中將了解：
-
-- [如何準備報表](#how-to-prepare-your-report)，以及什麼構成良好報表。
-
-- [如何產生重現](#how-to-generate-a-repro)，以及不同類型的重現。
-
-- [報表傳送方式](#ways-to-send-your-report)，以及什麼讓它們不同。
-
-您的報表對我們和您這類其他開發人員而言十分重要。 感謝您協助我們改善 Visual C++！
+在下節中，您將了解如何建立良好的報表、如何針對您所發現的問題類型產生報表，以及如何將報表傳送給產品小組。 您的報表對我們和您這類其他開發人員而言十分重要。 感謝您協助我們改善 Visual C++！
 
 ## <a name="how-to-prepare-your-report"></a>如何準備報表
 
@@ -291,7 +291,7 @@ CONTEXT:
 
 ## <a name="ways-to-send-your-report"></a>報表的傳送方式
 
-有幾種方式可以將您的報表送給我們。 您可以使用 Visual Studio 的內建[回報問題工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)頁面。 您也可以透過電子郵件傳送報告，但建議您採取前兩種方式。 方法的選擇取決於您想要如何與調查報告的工程師互動，及是否要追蹤其進度或是否要與社群分享您的報告。
+有幾種方式可以將您的報表送給我們。 您可以使用 Visual Studio 的內建[回報問題工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)頁面。 您也可以選擇此頁面底部的 [產品意見反應] 按鈕，直接前往我們的開發人員社群頁面。 您也可以透過電子郵件傳送報告，但建議您採取前兩種方式。 方法的選擇取決於您想要如何與調查報告的工程師互動，及是否要追蹤其進度或是否要與社群分享您的報告。
 
 > [!NOTE]
 > 不論您如何提交報表，Microsoft 都會尊重您的隱私權。 如需我們如何處理您所傳送之資料的相關資訊，請參閱 [Microsoft Visual Studio 產品系列隱私權聲明](https://www.visualstudio.com/dn948229)。
@@ -334,4 +334,4 @@ Source code and repro steps:
 ```
 
 > [!TIP]
-> 針對您可能會在 Visual Studio 中遇到與工具組無關的其他問題類型 (例如，UI 問題、中斷的 IDE 功能或一般當機)，回報問題工具可能是特別不錯的選擇，原因是其螢幕擷取畫面功能以及記錄導致您所遇到問題之 UI 動作的能力。 您應該永遠不透過寄送電子郵件至 compilercrash@microsoft.com 來回報這些其他類型的錯誤。
+> 針對您可能會在 Visual Studio 中遇到與工具組無關的其他問題類型 (例如，UI 問題、中斷的 IDE 功能或一般當機)，**回報問題工具**可能是特別不錯的選擇，原因是其螢幕擷取畫面功能以及記錄導致您所遇到問題之 UI 動作的能力。 您也可以在[開發人員社群](https://developercommunity.visualstudio.com/)網站上回報這類錯誤。 您應該永遠不透過寄送電子郵件至 compilercrash@microsoft.com 來回報這些其他類型的錯誤。

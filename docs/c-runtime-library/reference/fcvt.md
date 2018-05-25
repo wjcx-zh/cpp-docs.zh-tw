@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fefe9bbfc1904847af5594a4d663b1eb8299fc9b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -72,7 +72,7 @@ char *_fcvt(
 
 ## <a name="return-value"></a>傳回值
 
-**_fcvt**傳回數字的字串，發生錯誤的 NULL 指標。
+**_fcvt**傳回的數字、 字串的指標**NULL**發生錯誤。
 
 ## <a name="remarks"></a>備註
 
@@ -86,7 +86,7 @@ char *_fcvt(
 
 **_ecvt**和 **_fcvt**使用單一靜態配置的緩衝區來進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。
 
-這個函式會驗證它的參數。 如果*dec*或*登*是 NULL，或*計數*為 0、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL** ，而且會傳回 NULL。
+這個函式會驗證它的參數。 如果*dec*或*登*是**NULL**，或*計數*為 0、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**和**NULL**傳回。
 
 ## <a name="requirements"></a>需求
 

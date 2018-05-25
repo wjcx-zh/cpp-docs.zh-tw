@@ -37,11 +37,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f60ea8dd05f9dffd6778c001e3f150f95744ae2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lfind"></a>_lfind
 
@@ -84,7 +84,7 @@ void *_lfind(
 
 **_Lfind**函式會執行值的線性搜尋*金鑰*陣列中的*數目*項目，每個*寬度*位元組。 不同於**bsearch**， **_lfind**不需要排序的陣列。 *基底*引數是要搜尋之陣列的基底指標。 *比較*引數是指標，以使用者提供的常式會比較兩個陣列項目，並會傳回值，指定其關聯性。 **_lfind**呼叫*比較*在搜尋期間，將指標傳遞至兩個陣列項目，每次呼叫常式的一或多次。 *比較*常式必須比較項目，並再傳回則為非零 （表示元素為不同） 或 0 （表示項目完全相同）。
 
-這個函式會驗證它的參數。 如果*比較*，*金鑰*或*數目*是**NULL**，或如果*基底*unll 和 **數目*非零，或如果*寬度*小於零，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**NULL**。
+這個函式會驗證它的參數。 如果*比較*，*金鑰*或*數目*是**NULL**，或如果*基底*是**NULL**和*數目*非零，或如果*寬度*小於零，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**NULL**。
 
 ## <a name="requirements"></a>需求
 

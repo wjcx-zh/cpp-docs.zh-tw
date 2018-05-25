@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
@@ -110,7 +110,7 @@ int _cwscanf_l(
 
 **_Cscanf**函式會將資料直接從主控台讀入指定的位置*引數*。 [_getche](getch-getwch.md)函式可用來讀取字元。 每個選擇性參數必須是對應於型別規範中的型別變數指標*格式*。 格式控制項的輸入解譯欄位，並具有相同的形式和功能*格式*參數[scanf](scanf-scanf-l-wscanf-wscanf-l.md)函式。 雖然 **_cscanf**通常會回應輸入的字元，它不會這樣如果在上次呼叫 **_ungetch**。
 
-這個函式會驗證它的參數。 如果格式為 NULL，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**EOF**。
+這個函式會驗證它的參數。 如果格式為**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**EOF**。
 
 這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
 

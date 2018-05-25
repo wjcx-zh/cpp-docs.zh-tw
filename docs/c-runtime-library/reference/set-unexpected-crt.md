@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c97f46a66a26f107061676dba313b068e9aebf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7af5cce0b17747beb8c136f75489025d741f864a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -55,7 +55,7 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ## <a name="return-value"></a>傳回值
 
-傳回指向先前的中止函式的註冊 **_set_unexpected**以便日後還原先前的函數。 如果尚未設定先前函式，傳回值可能用於還原預設行為；這個值可以是 NULL。
+傳回指向先前的中止函式的註冊 **_set_unexpected**以便日後還原先前的函數。 如果尚未設定任何先前的函數，傳回的值可能用來還原預設行為。這個值可能是**NULL**。
 
 ## <a name="remarks"></a>備註
 

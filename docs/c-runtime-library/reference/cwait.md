@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a765a6a51a050b96dfd110c21810248b3bb58e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cwait"></a>_cwait
 
@@ -58,7 +58,7 @@ intptr_t _cwait(
 ### <a name="parameters"></a>參數
 
 *termstat*<br/>
-緩衝區 (其中要儲存指定處理序的結果碼) 的指標，或為 NULL。
+其中會儲存指定處理序的結果碼，緩衝區的指標或**NULL**。
 
 *procHandle*<br/>
 等候處理序控制代碼 (也就是說，必須先終止處理序 **_cwait**可以傳回)。
@@ -81,7 +81,7 @@ NULL： 會忽略由 Windows 作業系統應用程式。對於其他應用程式
 
 **_Cwait**函式會等候所提供的程序識別碼指定之處理序終止*procHandle*。 值*procHandle*傳遞至 **_cwait**應該呼叫所傳回的值[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)函式，建立指定的處理序。 如果處理序識別碼終止之前 **_cwait**呼叫時， **_cwait**會立即傳回。 **_cwait**可供所有處理序等待其他所有已知處理序，其有效的控制代碼 (*procHandle*) 存在。
 
-*termstat*指向要儲存指定處理序的傳回碼的緩衝區。 值*termstat*指出指定的處理序正常終止經由呼叫 Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx)應用程式開發介面。 **ExitProcess**如果指定的處理序呼叫在內部呼叫**結束**或 **_exit**，從傳回**主要**，或達到結尾**主要**. 如需有關的值，就會傳遞回*termstat*，請參閱[GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)。 如果 **_cwait**呼叫使用 NULL 值的*termstat*，不會儲存指定處理序的傳回碼。
+*termstat*指向要儲存指定處理序的傳回碼的緩衝區。 值*termstat*指出指定的處理序正常終止經由呼叫 Windows [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx)應用程式開發介面。 **ExitProcess**如果指定的處理序呼叫在內部呼叫**結束**或 **_exit**，從傳回**主要**，或達到結尾**主要**. 如需有關的值，就會傳遞回*termstat*，請參閱[GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)。 如果 **_cwait**呼叫使用**NULL**值*termstat*，不會儲存指定處理序的傳回碼。
 
 *動作*參數已忽略由 Windows 作業系統，因為這些環境中不會實作父子式關聯性。
 

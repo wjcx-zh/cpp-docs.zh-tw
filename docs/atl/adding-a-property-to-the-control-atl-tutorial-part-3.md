@@ -12,11 +12,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda9359da6ddc48248874227d58f0c184af45c54
+ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>將屬性加入至控制項 (ATL 教學課程，第 3 部分)
 `IPolyCtl` 是包含控制項的自訂方法和屬性的介面，您會將屬性加入它。  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
      [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- `get_Sides`方法會傳回目前的值`Sides`透過屬性`pVal`指標。 在`put_Sides`方法，該程式碼可確保使用者會設定`Sides`屬性設為可接受的值。 最小值必須是 2，而且因為將使用的點陣列，為每個邊，100 限制為最大值。  
+ `get_Sides`方法會傳回目前的值`Sides`透過屬性`pVal`指標。 在`put_Sides`方法，該程式碼可確保使用者會設定`Sides`屬性設為可接受的值。 最小值必須是 3，且將使用的點陣列，為每個邊，因為 100 限制為最大值。  
   
  您現在有一個屬性呼叫`Sides`。 在下一個步驟中，您會變更繪圖程式碼使用它。  
   

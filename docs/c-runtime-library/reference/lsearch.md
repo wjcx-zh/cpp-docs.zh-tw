@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cfcb5b3182b4d8a30c6bee65bc6efd3199fd3c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -87,7 +87,7 @@ void *_lsearch(
 
 *比較*引數是在使用者提供的常式會比較兩個陣列項目並傳回值，指定其關聯性的指標。 **_lsearch**呼叫*比較*在搜尋期間，將指標傳遞至兩個陣列項目，每次呼叫常式的一或多次。 *比較*必須比較項目，並傳回非零 （表示元素為不同） 或 0 （表示項目完全相同）。
 
-這個函式會驗證它的參數。 如果*比較*，*金鑰*或*數目*是**NULL**，或如果*基底*unll 和 **數目*非零，或如果*寬度*小於零，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**NULL**。
+這個函式會驗證它的參數。 如果*比較*，*金鑰*或*數目*是**NULL**，或如果*基底*是**NULL**和*數目*非零，或如果*寬度*小於零，無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，允許執行**errno**設**EINVAL**並傳回函式**NULL**。
 
 ## <a name="requirements"></a>需求
 

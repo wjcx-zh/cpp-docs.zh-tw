@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db4a762689907330b671e2720cf743ee957526a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9be41a2d156a522c74349c3457295502ae6d4f43
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale、_wcreate_locale
 
@@ -94,7 +94,7 @@ _locale_t _wcreate_locale(
 
 *地區設定*引數是指定的地區設定字串的指標。 如需有關的格式資訊*地區設定*引數，請參閱[地區設定名稱、 語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。
 
-*地區設定*引數可以讀取地區設定名稱、 語言字串、 語言字串和國家/地區碼、 字碼頁或語言字串、 國家/地區碼和字碼頁。 可用的地區設定名稱、語言、國家/區域碼和字碼頁的集合，包含 Windows NLS API 支援的所有項目，但不包含每個字元需要超過兩個位元組 (例如 UTF-7 及 UTF-8) 的字碼頁。 如果您提供 utf-7 或 utf-8 的字碼頁 **_create_locale**會失敗並傳回 NULL。 支援的地區設定名稱設定 **_create_locale**詳述於[地區設定名稱、 語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 支援的語言和國家/地區字串組 **_create_locale**會列在[語言字串](../../c-runtime-library/language-strings.md)和[國家/地區字串](../../c-runtime-library/country-region-strings.md)。
+*地區設定*引數可以讀取地區設定名稱、 語言字串、 語言字串和國家/地區碼、 字碼頁或語言字串、 國家/地區碼和字碼頁。 可用的地區設定名稱、語言、國家/區域碼和字碼頁的集合，包含 Windows NLS API 支援的所有項目，但不包含每個字元需要超過兩個位元組 (例如 UTF-7 及 UTF-8) 的字碼頁。 如果您提供 utf-7 或 utf-8 的字碼頁 **_create_locale**失敗，並傳回**NULL**。 支援的地區設定名稱設定 **_create_locale**詳述於[地區設定名稱、 語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 支援的語言和國家/地區字串組 **_create_locale**會列在[語言字串](../../c-runtime-library/language-strings.md)和[國家/地區字串](../../c-runtime-library/country-region-strings.md)。
 
 如需地區設定的詳細資訊，請參閱 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。
 

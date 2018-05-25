@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ void *_malloc_dbg(
 要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
 
 *filename*<br/>
-要求配置作業之原始程式檔的名稱的指標，或為 NULL。
+要求配置作業之原始程式檔名稱的指標或**NULL**。
 
 *linenumber*<br/>
-原始程式檔中的行號，其中要求配置作業，或為 NULL。
+其中要求配置作業，原始程式檔中的行號或**NULL**。
 
 *Filename*和*linenumber*參數時，就只能使用 **_malloc_dbg**明確呼叫或[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)已定義前置處理器常數。
 
 ## <a name="return-value"></a>傳回值
 
-成功完成時，此函式會傳回重新配置記憶體區塊後的使用者部分的指標，呼叫新的處理常式函式，或是傳回 NULL。 如需傳回行為的完整說明，請參閱下列＜備註＞一節。 如需如何使用新的處理函式的詳細資訊，請參閱 [malloc](malloc.md) 函式。
+成功完成時，此函式傳回配置的記憶體區塊的使用者部分的指標，呼叫新的處理常式函式，或傳回**NULL**。 如需傳回行為的完整說明，請參閱下列＜備註＞一節。 如需如何使用新的處理函式的詳細資訊，請參閱 [malloc](malloc.md) 函式。
 
 ## <a name="remarks"></a>備註
 

@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
 
@@ -96,7 +96,7 @@ errno_t _wstrtime_s(
 
 ## <a name="security-issues"></a>安全性問題
 
-傳入無效的非 NULL 值，如果緩衝區將會造成存取違規的*numberOfElements*參數大於 9。
+傳遞無效的非**NULL**當緩衝區就會發生存取違規的值*numberOfElements*參數大於 9。
 
 傳遞的值*numberOfElements*大於緩衝區的實際大小會導致緩衝區滿溢。
 

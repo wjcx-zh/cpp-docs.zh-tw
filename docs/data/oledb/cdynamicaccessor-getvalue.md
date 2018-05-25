@@ -54,7 +54,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
   
 #### <a name="parameters"></a>參數  
  `ctype`  
- [in]處理字串類型之外任何資料類型的樣板參數 (**CHAR\***， **WCHAR\***)，而這需要特殊處理。 `GetValue` 會根據您指定這裡的適當資料類型。  
+ if the column is not found[in]處理字串類型之外任何資料類型的樣板參數 (**CHAR\***， **WCHAR\***)，而這需要特殊處理。 `GetValue` 會根據您指定這裡的適當資料類型。  
   
  `nColumn`  
  [in] 資料行編號。 資料行數字開頭為 1。 值為 0 參考的書籤資料行中，如果有的話。  

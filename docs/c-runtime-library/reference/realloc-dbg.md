@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91d04e78c6f3521c56cd74968a761a2d436e36bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c4bb3eab58807805ec3c4fbc35611d268bbeee9
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -69,16 +69,16 @@ void *_realloc_dbg(
 要求的重新配置區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
 
 *filename*<br/>
-要求的原始程式檔的名稱指標**realloc**作業或 NULL。
+要求的原始程式檔的名稱指標**realloc**作業或**NULL**。
 
 *linenumber*<br/>
-原始程式檔中的行號其中**realloc**作業所要求的或 NULL。
+原始程式檔中的行號其中**realloc**要求作業，或**NULL**。
 
 *Filename*和*linenumber*參數時，就只能使用 **_realloc_dbg**明確呼叫或[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)已定義前置處理器常數。
 
 ## <a name="return-value"></a>傳回值
 
-成功完成時，此函式會傳回重新配置記憶體區塊後的使用者部分的指標，呼叫新的處理常式函式，或是傳回 NULL。 如需傳回行為的完整說明，請參閱下列＜備註＞一節。 如需如何使用新處理常式函式的詳細資訊，請參閱 [realloc](realloc.md) 函式。
+成功完成時，此函式傳回重新配置的記憶體區塊的使用者部分的指標，呼叫新的處理常式函式，或是傳回**NULL**。 如需傳回行為的完整說明，請參閱下列＜備註＞一節。 如需如何使用新處理常式函式的詳細資訊，請參閱 [realloc](realloc.md) 函式。
 
 ## <a name="remarks"></a>備註
 

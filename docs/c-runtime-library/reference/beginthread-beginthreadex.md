@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -89,22 +89,22 @@ uintptr_t _beginthreadex( // MANAGED CODE
 新執行緒堆疊大小或 0。
 
 *引數清單*<br/>
-要傳遞給新執行緒的引數清單或 NULL。
+要傳遞給新執行緒的引數清單或**NULL**。
 
 *安全性*<br/>
-[SECURITY ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 結構的指標，這個結構會判斷子處理序是否可以繼承傳回的控制代碼。 如果*安全性*為 NULL，就無法繼承控制代碼。 對於 Windows 95 應用程式必須是 NULL。
+[SECURITY ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 結構的指標，這個結構會判斷子處理序是否可以繼承傳回的控制代碼。 如果*安全性*是**NULL**，無法繼承控制代碼。 必須是**NULL** Windows 95 應用程式。
 
 *initflag*<br/>
 控制新執行緒之初始狀態的旗標。 設定*initflag*為 0 即可立即執行、 或**CREATE_SUSPENDED**建立執行緒處於暫停狀態; 使用[ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx)執行執行緒。 設定*initflag*至**STACK_SIZE_PARAM_IS_A_RESERVATION**旗標以使用*stack_size*初始保留大小，以位元組為單位的堆疊; 如果這個旗標是未指定，因此， *stack_size*指定基本配置大小。
 
 *thrdaddr*<br/>
-指向接收執行緒識別項的 32 位元變數。 如果為 NULL，則不使用它。
+指向接收執行緒識別項的 32 位元變數。 如果是**NULL**，不會使用它。
 
 ## <a name="return-value"></a>傳回值
 
 所有這些函式如果成功，傳回的控制代碼，新建立的執行緒，不過，如果新建立的執行緒太快結束， **_beginthread**可能不會傳回有效的控制代碼。 (請參閱＜備註＞一節中的討論)。發生錯誤時， **_beginthread**傳回-1l; 此時和**errno**設**EAGAIN**有太多執行緒時，為**EINVAL**如果引數無效或堆疊大小不正確，或**EACCES**是否有資源不足 （例如記憶體）。 發生錯誤時， **_beginthreadex**傳回 0，和**errno**和 **_doserrno**設定。
 
-如果*start_address*是 NULL、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回-1。
+如果*start_address*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回-1。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -137,7 +137,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 作業系統會處理堆疊的配置時任一 **_beginthread**或 **_beginthreadex**呼叫; 您不必將執行緒堆疊的位址傳遞給其中一個函數。 此外， *stack_size*引數可以是的 0，在其中此時作業系統會使用相同的值會指定堆疊主執行緒。
 
-*引數清單*是要傳遞給新建立執行緒的參數。 這通常是資料項目的位址，例如字元字串。 *引數清單*如果不需要可以是 NULL，但 **_beginthread**和 **_beginthreadex**必須指定要傳遞給新執行緒的某些值。 如果有任何執行緒呼叫，則會結束所有的執行緒[中止](abort.md)，**結束**， **_exit**，或**ExitProcess**。
+*引數清單*是要傳遞給新建立執行緒的參數。 這通常是資料項目的位址，例如字元字串。 *引數清單*可以**NULL**如果不需要但是 **_beginthread**和 **_beginthreadex**必須指定要傳遞給新執行緒的某些值。 如果有任何執行緒呼叫，則會結束所有的執行緒[中止](abort.md)，**結束**， **_exit**，或**ExitProcess**。
 
 初始化新執行緒的地區設定使用的處理序專屬全域目前地區設定資訊。 每個執行緒的地區設定是否已啟用呼叫[_configthreadlocale](configthreadlocale.md) （以全域方式或新執行緒的僅限），執行緒可以變更其地區設定獨立來自其他執行緒呼叫**setlocale**或 **_wsetlocale**。 不需要設定每個執行緒的地區設定旗標的執行緒可能會影響所有其他的執行緒，也不需要在個別執行緒地區設定旗標設定，以及所有新建立執行緒的地區設定資訊。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 

@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ int _CrtIsMemoryBlock(
 
 ## <a name="remarks"></a>備註
 
-**_CrtIsMemoryBlock**函式會驗證指定的記憶體區塊會位於應用程式的本機堆積內，而且它有無效的區塊類型識別項。 此函式也可用來取得物件配置順序編號，以及原始要求記憶體區塊配置的原始程式檔名/行號。 傳遞非 NULL 值，以進行*requestNumber*， *filename*，或*linenumber*參數原因 **_CrtIsMemoryBlock**設定這些參數，以記憶體區塊中的值來進行偵錯標頭，在本機堆積中找到的區塊。 當[_DEBUG](../../c-runtime-library/debug.md)未定義時，呼叫 **_CrtIsMemoryBlock**會在前置處理期間移除。
+**_CrtIsMemoryBlock**函式會驗證指定的記憶體區塊會位於應用程式的本機堆積內，而且它有無效的區塊類型識別項。 此函式也可用來取得物件配置順序編號，以及原始要求記憶體區塊配置的原始程式檔名/行號。 傳遞非**NULL**值*requestNumber*， *filename*，或*linenumber*參數原因 **_CrtIsMemoryBlock**設定這些參數中的記憶體區塊的偵錯標頭的值，如果在本機堆積中找到的區塊。 當[_DEBUG](../../c-runtime-library/debug.md)未定義時，呼叫 **_CrtIsMemoryBlock**會在前置處理期間移除。
 
 如果 **_CrtIsMemoryBlock**失敗，它會傳回**FALSE**和輸出參數會初始化為預設值： *requestNumber*和**lineNumber**設為 0 和*filename*設**NULL**。
 

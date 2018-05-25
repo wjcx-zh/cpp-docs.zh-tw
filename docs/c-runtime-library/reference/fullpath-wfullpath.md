@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>參數
 
 *absPath*<br/>
-包含絕對路徑名稱或完整路徑名稱之緩衝區的指標，或為 NULL。
+包含絕對路徑或完整路徑名稱之緩衝區的指標或**NULL**。
 
 *relPath*<br/>
 相對路徑名稱。
@@ -82,7 +82,7 @@ wchar_t *_wfullpath(
 
 ## <a name="remarks"></a>備註
 
-**_Fullpath**函式會擴展中的相對路徑名稱*relPath*為完整或絕對路徑和儲存區中的這個名稱*absPath*。 如果*absPath*是 NULL， **malloc**用來配置儲存路徑名稱的長度足夠的緩衝區。 釋放這個緩衝區是呼叫端的責任。 相對路徑名稱指定從目前的位置到另一個位置的路徑 (例如目前的工作目錄：「.」)。 絕對路徑名稱是相對路徑名稱的擴充狀態，其表示從檔案系統根目錄到達所需位置的完整路徑。 不同於 **_makepath**， **_fullpath**可用來取得相對路徑的絕對路徑名稱 (*relPath*)，包括 「。 / 「 或 」.../"中的名稱。
+**_Fullpath**函式會擴展中的相對路徑名稱*relPath*為完整或絕對路徑和儲存區中的這個名稱*absPath*。 如果*absPath*是**NULL**， **malloc**用來配置儲存路徑名稱的長度足夠的緩衝區。 釋放這個緩衝區是呼叫端的責任。 相對路徑名稱指定從目前的位置到另一個位置的路徑 (例如目前的工作目錄：「.」)。 絕對路徑名稱是相對路徑名稱的擴充狀態，其表示從檔案系統根目錄到達所需位置的完整路徑。 不同於 **_makepath**， **_fullpath**可用來取得相對路徑的絕對路徑名稱 (*relPath*)，包括 「。 / 「 或 」.../"中的名稱。
 
 例如，若要使用 C 執行階段常式，應用程式必須包含具有常式宣告的標頭檔。 每個標頭檔以相對的方式包含檔案位置的陳述式參考 (從應用程式的工作目錄)︰
 

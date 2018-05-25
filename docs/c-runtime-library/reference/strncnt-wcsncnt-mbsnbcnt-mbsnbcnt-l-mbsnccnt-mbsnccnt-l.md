@@ -60,11 +60,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
@@ -118,7 +118,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_mbsnbcnt**和 **_mbsnbcnt_l**傳回找到的位元組數目在第一個*計數*的多位元組字元的*str*。 **_mbsnccnt**和 **_mbsnccnt_l**傳回找到的字元數中第一個*計數*個位元組的*str*。 NULL 字元的檢查就碰到*str*已完成，傳回的 NULL 字元之前找到的字元或位元組數。 如果*str*組成少於*計數*字元或位元組，它們在字串中傳回的字元或位元組數。 如果*計數*小於零，它們會傳回 0。 在舊版中，這些函式必須傳回值的型別**int**而**size_t**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**傳回找到的位元組數目在第一個*計數*的多位元組字元的*str*。 **_mbsnccnt**和 **_mbsnccnt_l**傳回找到的字元數中第一個*計數*個位元組的*str*。 Null 字元的檢查就碰到*str*已完成，傳回的 null 字元之前找到的字元或位元組數。 如果*str*組成少於*計數*字元或位元組，它們在字串中傳回的字元或位元組數。 如果*計數*小於零，它們會傳回 0。 在舊版中，這些函式必須傳回值的型別**int**而**size_t**。
 
 **_strncnt**傳回第一個範圍中的字元數*計數*單一位元組字串位元組*str*。 **_wcsncnt**傳回第一個範圍中的字元數*計數*寬字元字串的寬字元*str*。
 
@@ -126,9 +126,9 @@ size_t _mbsnccnt_l(
 
 **_mbsnbcnt**和 **_mbsnbcnt_l**計算找到的位元組數目在第一個*計數*的多位元組字元的*str*。 **_mbsnbcnt**和 **_mbsnbcnt_l**取代**mtob** ，應該用於取代**mtob**。
 
-**_mbsnccnt**和 **_mbsnccnt_l**找到字元的次數中第一個*計數*個位元組的*str*。 如果 **_mbsnccnt**和 **_mbsnccnt_l**遇到雙位元組字元的第二個位元組中的 NULL，則也會被視為 null 的第一個位元組，並不包含在傳回的計數值。 **_mbsnccnt**和 **_mbsnccnt_l**取代**btom** ，應該用於取代**btom**。
+**_mbsnccnt**和 **_mbsnccnt_l**找到字元的次數中第一個*計數*個位元組的*str*。 如果 **_mbsnccnt**和 **_mbsnccnt_l**遇到雙位元組字元的第二個位元組中的 null 字元，則也會被視為是 null 的第一個位元組，並不包含在傳回的計數值。 **_mbsnccnt**和 **_mbsnccnt_l**取代**btom** ，應該用於取代**btom**。
 
-如果*str*為 null 指標，或為*計數*是 0，則這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)， **errno**設**EINVAL**，而且函數會傳回 0。
+如果*str*是**NULL**指標或*計數*是 0，則這些函式叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)， **errno**設**EINVAL**，而且函數會傳回 0。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 

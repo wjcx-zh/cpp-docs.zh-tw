@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 794db055ad433b6f3407c056dcf182e40e24c8f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02b920832d462c88c13d68525a1a4038cf6720f1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -74,10 +74,10 @@ void * _aligned_offset_recalloc_dbg(
 記憶體配置中要強制對齊的位移。
 
 *filename*<br/>
-要求的 realloc 作業或為 NULL 的原始程式檔名稱的指標。
+要求 realloc 作業之原始程式檔名稱的指標或**NULL**。
 
 *linenumber*<br/>
-其中要求 realloc 作業，原始程式檔中的行號或為 NULL。
+其中要求 realloc 作業，原始程式檔中的行號或**NULL**。
 
 ## <a name="return-value"></a>傳回值
 

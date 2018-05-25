@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d227d329a426a2008044d47d126d063db4a15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -62,10 +62,10 @@ void * _aligned_malloc_dbg(
 對齊值，必須是 2 的整數冪。
 
 *filename*<br/>
-要求配置作業之原始程式檔的名稱的指標，或為 NULL。
+要求配置作業之原始程式檔名稱的指標或**NULL**。
 
 *linenumber*<br/>
-原始程式檔中的行號，其中要求配置作業，或為 NULL。
+其中要求配置作業，原始程式檔中的行號或**NULL**。
 
 ## <a name="return-value"></a>傳回值
 

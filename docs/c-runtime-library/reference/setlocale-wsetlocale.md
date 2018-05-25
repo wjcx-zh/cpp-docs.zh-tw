@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
 
@@ -120,7 +120,7 @@ en-US
 
 `setlocale( LC_ALL, "C" );`
 
-*地區設定*引數可以讀取地區設定名稱、 語言字串、 語言字串和國家/地區碼、 字碼頁或語言字串、 國家/地區碼和字碼頁。 可用的地區設定名稱、語言、國家/地區碼和字碼頁的集合，包含所有 Windows NLS 應用程式開發介面 (API) 支援的所有項目，但不包含每個字元需要超過兩個位元組 (例如 UTF-7 及 UTF-8) 的字碼頁。 如果您提供 utf-7 或 utf-8 的字碼頁值**setlocale**將會失敗，傳回 NULL。 支援的地區設定名稱設定**setlocale**詳述於[地區設定名稱、 語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 支援的語言和國家/地區字串組**setlocale**會列在[語言字串](../../c-runtime-library/language-strings.md)和[國家/地區字串](../../c-runtime-library/country-region-strings.md)。 我們建議使用內嵌於程式碼或針對儲存體序列化之地區設定字串的效能與維護所適用的地區設定名稱格式。 地區設定名稱字串比語言和國家/地區名稱格式更不容易被作業系統更新變更。
+*地區設定*引數可以讀取地區設定名稱、 語言字串、 語言字串和國家/地區碼、 字碼頁或語言字串、 國家/地區碼和字碼頁。 可用的地區設定名稱、語言、國家/地區碼和字碼頁的集合，包含所有 Windows NLS 應用程式開發介面 (API) 支援的所有項目，但不包含每個字元需要超過兩個位元組 (例如 UTF-7 及 UTF-8) 的字碼頁。 如果您提供 utf-7 或 utf-8 的字碼頁值**setlocale**將會失敗，傳回**NULL**。 支援的地區設定名稱設定**setlocale**詳述於[地區設定名稱、 語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 支援的語言和國家/地區字串組**setlocale**會列在[語言字串](../../c-runtime-library/language-strings.md)和[國家/地區字串](../../c-runtime-library/country-region-strings.md)。 我們建議使用內嵌於程式碼或針對儲存體序列化之地區設定字串的效能與維護所適用的地區設定名稱格式。 地區設定名稱字串比語言和國家/地區名稱格式更不容易被作業系統更新變更。
 
 Null 指標做為傳遞*地區設定*引數會指示**setlocale**查詢而非設定國際環境。 如果*地區設定*引數為 null 指標，則不會變更程式的目前地區設定。 相反地， **setlocale**傳回相關聯的字串指標*類別*執行緒的目前地區設定。 如果*類別*引數是**LC_ALL**，此函數會傳回字串，表示每個類別目錄，並以分號分隔的目前設定。 例如，呼叫的順序
 

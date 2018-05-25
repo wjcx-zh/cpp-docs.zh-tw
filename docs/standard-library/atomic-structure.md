@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic 結構
 
@@ -63,7 +63,7 @@ struct atomic;
 
 型別*Ty*必須*可完整複製*。 也就使用[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)複製其位元組必須產生有效*Ty*比較為等於原始物件的物件。 [Compare_exchange_weak](#compare_exchange_weak)和[compare_exchange_strong](#compare_exchange_strong)成員函式使用[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)來判斷兩個*Ty*值相等。 這些函式不會使用*Ty*-定義**運算子 = =**。 成員函式**不可部分完成**使用**memcpy**複製值的型別*Ty*。
 
-部分特製化，* * 不可部分完成\<Ty * > * *，存在於所有指標類型。 特製化可以將位移加入 Managed 指標值，或從中減去位移。 型別引數的算術運算**ptrdiff_t**並調整該引數的大小根據*Ty*與一般位址算術一致。
+部分特製化，**不可部分完成\<Ty \* >** ，存在於所有指標類型。 特製化可以將位移加入 Managed 指標值，或從中減去位移。 型別引數的算術運算**ptrdiff_t**並調整該引數的大小根據*Ty*與一般位址算術一致。
 
 除了每個整數類資料類型有特製化**bool**。 每個特製化都會提供一組豐富的方法來進行不可部分完成算術和邏輯作業。
 

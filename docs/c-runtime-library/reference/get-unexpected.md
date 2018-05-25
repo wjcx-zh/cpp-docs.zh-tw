@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d300ae9d0b03f5d6b8549026afe106aef32d62d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
@@ -52,7 +52,7 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>傳回值
 
-將指標傳回由 [set_unexpected](set-unexpected-crt.md) 註冊的函式。 如果尚未設定任何函式，傳回的值可能會用於還原預設行為；這個值可以是 NULL。
+將指標傳回由 [set_unexpected](set-unexpected-crt.md) 註冊的函式。 如果尚未設定任何函式，傳回的值可能用來還原預設行為。這個值可能是**NULL**。
 
 ## <a name="requirements"></a>需求
 

@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546ad1b4bb745274894754a185c57bacb82b0061
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fd5854bc18cecda1fd3ffee4f28ec2fa5d2a68a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -66,10 +66,10 @@ void * _aligned_realloc_dbg(
 對齊值，必須是 2 的整數冪。
 
 *filename*<br/>
-要求的原始程式檔的名稱指標**realloc**作業或 NULL。
+要求的原始程式檔的名稱指標**realloc**作業或**NULL**。
 
 *linenumber*<br/>
-原始程式檔中的行號其中**realloc**作業所要求的或 NULL。
+原始程式檔中的行號其中**realloc**要求作業，或**NULL**。
 
 ## <a name="return-value"></a>傳回值
 

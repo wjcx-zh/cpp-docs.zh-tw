@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ errno_t clearerr_s(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則為零**EINVAL**如果*資料流*是 NULL。
+如果成功，則為零**EINVAL**如果*資料流*是**NULL**。
 
 ## <a name="remarks"></a>備註
 
 **Clearerr_s**函式會重設錯誤指標和檔案結尾指標*資料流*。 不會自動清除錯誤指標。指定的資料流的錯誤指標設定之後，該資料流的作業繼續傳回的錯誤值，直到**clearerr_s**， **clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[倒轉](rewind.md)呼叫。
 
-如果*資料流*是 NULL、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
+如果*資料流*是**NULL**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**至**EINVAL**並傳回**EINVAL**。
 
 ## <a name="requirements"></a>需求
 

@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
 
@@ -94,11 +94,11 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果**wcstombs**成功轉換的多位元組字串，它會傳回多位元組輸出字串，但不包括結束寫入的位元組數目**NULL** （如果有的話）。 如果*mbstr*引數是**NULL**， **wcstombs**傳回目的地字串位元組中的所需的大小。 如果**wcstombs**遇到寬字元不能轉換的多位元組字元，則傳回-1 轉換為類型**size_t**並設定**errno**至**EILSEQ**.
+如果**wcstombs**成功轉換的多位元組字串，它會傳回多位元組輸出字串中，不包括結束的 null （如果有的話） 所寫入的位元組數目。 如果*mbstr*引數是**NULL**， **wcstombs**傳回目的地字串位元組中的所需的大小。 如果**wcstombs**遇到寬字元不能轉換的多位元組字元，則傳回-1 轉換為類型**size_t**並設定**errno**至**EILSEQ**.
 
 ## <a name="remarks"></a>備註
 
-**Wcstombs**函式轉換所指向的寬字元字串*wcstr*到對應的多位元組字元，並儲存結果*mbstr*陣列。 *計數*參數表示的多位元組輸出字串中可儲存的位元組數目上限 (亦即，大小*mbstr*)。 轉換寬字元字串時通常不知道需要多少個位元組。 某些寬字元只需要輸出字串的一個位元組，有些則需要兩個。 如果輸入字串中的每一個寬字元的多位元組輸出字串中有兩個位元組 (包括的寬字元**NULL**)，以符合此方法保證結果。
+**Wcstombs**函式轉換所指向的寬字元字串*wcstr*到對應的多位元組字元，並儲存結果*mbstr*陣列。 *計數*參數表示的多位元組輸出字串中可儲存的位元組數目上限 (亦即，大小*mbstr*)。 轉換寬字元字串時通常不知道需要多少個位元組。 某些寬字元只需要輸出字串的一個位元組，有些則需要兩個。 如果每一個寬字元 （包括 null 寬字元） 的輸入字串中的多位元組輸出字串中有兩個位元組，以符合保證結果。
 
 如果**wcstombs**之前或期間遇到寬字元的 null 字元 (L '\0')*計數*發生時，會將它轉換成 8 位元 0 而停止。 因此，在多位元組字元字串*mbstr*是以 null 終止才**wcstombs**在轉換期間所遇到的寬字元 null 字元。 如果指向的序列*wcstr*和*mbstr*重疊，行為**wcstombs**是未定義。
 

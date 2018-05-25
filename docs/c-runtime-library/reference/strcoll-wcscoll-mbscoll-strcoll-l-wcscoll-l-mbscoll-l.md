@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 
@@ -116,7 +116,7 @@ int _mbscoll_l(
 |0|*string1*等於*string2*|
 |> 0|*string1*大於*string2*|
 
-所有這些函式傳回 **_NLSCMPERROR**在發生錯誤。 若要使用 **_NLSCMPERROR**，包括其中一個字串。H 或 MBSTRING。H. **wcscoll**就會失敗可能是*string1*或*string2*為 NULL 或包含的定序順序之網域外部的寬字元碼。 發生錯誤時， **wcscoll**可能設定**errno**至**EINVAL**。 若要檢查是否有錯誤的呼叫上**wcscoll**，將**errno**設為 0，然後檢查**errno**之後呼叫**wcscoll**。
+所有這些函式傳回 **_NLSCMPERROR**在發生錯誤。 若要使用 **_NLSCMPERROR**，包括其中一個字串。H 或 MBSTRING。H. **wcscoll**就會失敗可能是*string1*或*string2*是**NULL**或包含的定序順序之網域外部的寬字元碼。 發生錯誤時， **wcscoll**可能設定**errno**至**EINVAL**。 若要檢查是否有錯誤的呼叫上**wcscoll**，將**errno**設為 0，然後檢查**errno**之後呼叫**wcscoll**。
 
 ## <a name="remarks"></a>備註
 

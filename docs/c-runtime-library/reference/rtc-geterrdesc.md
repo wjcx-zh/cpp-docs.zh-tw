@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a176aa258f805a516bf36c982ba63e531a74478
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7154f6de192ee6b681ed0419126f3d4b682abb8c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 
@@ -58,7 +58,7 @@ const char * _RTC_GetErrDesc(
 
 ## <a name="return-value"></a>傳回值
 
-字元字串，包含一個執行階段錯誤檢查系統偵測到之錯誤類型之一的簡短描述。 若錯誤小於零或大於或等於所傳回的值[_RTC_NumErrors](rtc-numerrors.md)， **_RTC_GetErrDesc**傳回 NULL。
+字元字串，包含一個執行階段錯誤檢查系統偵測到之錯誤類型之一的簡短描述。 若錯誤小於零或大於或等於所傳回的值[_RTC_NumErrors](rtc-numerrors.md)， **_RTC_GetErrDesc**傳回**NULL**。
 
 ## <a name="requirements"></a>需求
 

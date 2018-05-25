@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 
@@ -118,11 +118,11 @@ int _swprintf_p_l(
 
 ## <a name="remarks"></a>備註
 
-**_Sprintf_p**函式格式化並儲存一連串字元和值*緩衝區*。 在每個引數*argument_list* （如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 *格式*引數會使用[格式規格語法 printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 A **NULL**字元會附加後寫入的最後一個字元。 如果在重疊的字串之間進行複製，則行為是未定義的。 之間的差異 **_sprintf_p**和**sprintf_s**在於 **_sprintf_p**支援位置參數，可讓您指定的引數順序格式字串中使用。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_Sprintf_p**函式格式化並儲存一連串字元和值*緩衝區*。 在每個引數*argument_list* （如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 *格式*引數會使用[格式規格語法 printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。 之間的差異 **_sprintf_p**和**sprintf_s**在於 **_sprintf_p**支援位置參數，可讓您指定的引數順序格式字串中使用。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
 **_swprintf_p**是寬字元版本的 **_sprintf_p**; 指標引數 **_swprintf_p**是寬字元字串。 編碼錯誤偵測 **_swprintf_p**可能不同於 **_sprintf_p**。 **_swprintf_p**和**fwprintf_p**行為相同，除了 **_swprintf_p**字串，而非類型的目的地會將輸出寫入**檔案**，和 **_swprintf_p**需要*計數*參數來指定要寫入的字元數目上限。 這些函式版本 **_l**尾碼是一樣的不同之處在於會使用傳遞而不是目前的執行緒地區設定的地區設定參數。
 
-**_sprintf_p**傳回儲存在位元組數目*緩衝區*，不計結束**NULL**字元。 **_swprintf_p**傳回儲存在寬字元數目*緩衝區*，不計結束**NULL**寬字元。 如果*緩衝區*或*格式*為 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
+**_sprintf_p**傳回儲存在位元組數目*緩衝區*，不計結束的 null 字元。 **_swprintf_p**傳回儲存在寬字元數目*緩衝區*，不計結束的 null 寬字元。 如果*緩衝區*或*格式*為 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，這些函式會傳回-1，並設定**errno**至**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

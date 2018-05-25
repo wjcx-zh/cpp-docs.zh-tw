@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387d8165ad157f5d4b8936b79590d8e3ebbc2810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -103,7 +103,7 @@ unsigned char *_mbstok(
 
 ## <a name="return-value"></a>傳回值
 
-傳回下一步中找到的語彙基元的指標*strToken*。 它們會傳回**NULL**找到沒有 token 時。 每個呼叫會修改*strToken*所得到**NULL**之後傳回的權杖，就會發生的第一個分隔符號字元。
+傳回下一步中找到的語彙基元的指標*strToken*。 它們會傳回**NULL**找到沒有 token 時。 每個呼叫會修改*strToken*所得到的 null 字元的第一個傳回的語彙基元後，就會發生的分隔符號。
 
 ## <a name="remarks"></a>備註
 

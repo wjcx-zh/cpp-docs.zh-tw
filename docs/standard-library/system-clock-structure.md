@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ea0dd92eda9aad0cb85bbd1385cdec5af349df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>system_clock 結構
 
@@ -42,8 +42,6 @@ struct system_clock;
 如果第一次呼叫 `now()` 傳回的值一律小於或等於後續呼叫 `now()` 所傳回的值，則時鐘具「單一性」。
 
 如果時鐘具「單一性」且時鐘刻度之間的時間固定，則時鐘具「穩定性」。
-
-在此實作中，`system_clock` 與 `high_resolution_clock` 同義。
 
 ## <a name="members"></a>成員
 
@@ -119,7 +117,7 @@ static const bool is_steady = false;
 
 ### <a name="remarks"></a>備註
 
-如果時鐘具[「單一性」](#is_monotonic_constant)且時鐘刻度之間的時間固定，則時鐘具*「穩定性」*。
+如果時鐘具[「單一性」](#is_monotonic_constant)且時鐘刻度之間的時間固定，則時鐘具 *「穩定性」*。
 
 ## <a name="now"></a>  system_clock::now
 

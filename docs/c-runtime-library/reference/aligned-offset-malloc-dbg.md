@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0b0838f75e8fa95d19ed3abfe13b014157a217
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -66,10 +66,10 @@ void * _aligned_offset_malloc_dbg(
 記憶體配置中要強制對齊的位移。
 
 *filename*<br/>
-要求配置作業之原始程式檔的名稱的指標，或為 NULL。
+要求配置作業之原始程式檔名稱的指標或**NULL**。
 
 *linenumber*<br/>
-原始程式檔中的行號，其中要求配置作業，或為 NULL。
+其中要求配置作業，原始程式檔中的行號或**NULL**。
 
 ## <a name="return-value"></a>傳回值
 

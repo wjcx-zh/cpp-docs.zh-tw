@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime、_wstrtime
 
@@ -85,7 +85,7 @@ wchar_t *_wstrtime(
 
 **_Strtime**函式會將目前的當地時間複製到所指向的緩衝區*timestr*。 時間格式為**hh: mm:** 其中**hh**是兩位數，表示 24 小時制的小時**公釐**是兩位數表示的小時和分鐘**ss**是兩位數表示秒數。 例如，字串**18:23:44**代表 23 分 44 秒過去的下午 6 緩衝區長度至少必須是 9 個位元組。
 
-**_wstrtime**是寬字元版本的 **_strtime**; 的引數和傳回值 **_wstrtime**是寬字元字串。 這些函式的行為相同即會相同。如果*timestr*是**NULL**指標或*timestr*的格式不正確、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函數會傳回 NULL 和 set 例外狀況**errno**至**EINVAL**如果*timestr*是 null，或設定**errno**至**為 ERANGE**如果*timestr*格式不正確。
+**_wstrtime**是寬字元版本的 **_strtime**; 的引數和傳回值 **_wstrtime**是寬字元字串。 除此之外，這些函式的行為相同。 如果*timestr*是**NULL**指標或*timestr*的格式不正確、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果例外狀況允許繼續執行，這些函數會傳回**NULL**並設定**errno**至**EINVAL**如果*timestr*已**NULL**或設定**errno**至**為 ERANGE**如果*timestr*格式不正確。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

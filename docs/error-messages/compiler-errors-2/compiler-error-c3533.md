@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f184f0459e7ec2251d6ff34e2ee76559fe0dea42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: faaf53d08512559b86c95148bc93e7b3367d2b01
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiler-error-c3533"></a>編譯器錯誤 C3533
 'type': 參數不能有包含 'auto' 類型  
@@ -32,21 +32,21 @@ ms.lasthandoff: 05/04/2018
 1.  移除`auto`從參數宣告的關鍵字。  
   
 ## <a name="example"></a>範例  
- 下列範例會產生 C3535，因為它會宣告函式參數與`auto`關鍵字，它會使用編譯 **/zc: auto**。  
+ 下列範例會產生 C3533，因為它會宣告函式參數與`auto`關鍵字，它會使用編譯 **/zc: auto**。  
   
 ```  
 // C3533a.cpp  
 // Compile with /Zc:auto  
-void f(auto j){} // C3533  
+void f(auto j) {} // C3533  
 ```  
   
 ## <a name="example"></a>範例  
- 下列範例會產生 C3535，因為它會宣告與樣板參數`auto`關鍵字，它會使用編譯 **/zc: auto**。  
+ 下列範例會產生以 C + + 14 模式 C3533 因為它會宣告與樣板參數`auto`關鍵字，它會使用編譯 **/zc: auto**。（在 C + + 17，這是類別樣板會推算其類型的單一非類型樣板參數的有效的定義。）
   
 ```  
 // C3533b.cpp  
 // Compile with /Zc:auto  
-template<auto T> class C{}; // C3533  
+template<auto T> class C {}; // C3533  
 ```  
   
 ## <a name="see-also"></a>另請參閱  

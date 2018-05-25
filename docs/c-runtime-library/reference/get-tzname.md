@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 182bad39b461efc18b120875432d6ce07be2a884
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -58,7 +58,7 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>參數
 
 *pReturnValue*<br/>
-字串長度*timeZoneName*包括 NULL 結束字元。
+字串長度*timeZoneName*包括 null 結束字元。
 
 *timeZoneName*<br/>
 字元字串來表示時區名稱或日光節約標準時間區域名稱 (DST)，取決於位址*索引*。

@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 
@@ -108,7 +108,7 @@ size_t wcsxfrm_l(
 
 **wcsxfrm**是寬字元版本的**strxfrm**; 的字串引數**wcsxfrm**是寬字元的指標。 如**wcsxfrm**，之後字串轉換的呼叫**wcscmp**與兩個已轉換的字串會產生相同的呼叫結果**wcscoll**套用至原始的兩個字串。 **wcsxfrm**和**strxfrm**除此之外的行為相同。 **wcsxfrm**使用目前的地區設定，地區設定相關的行為。**_wcsxfrm_l**使用而不是目前的地區設定傳入的地區設定。
 
-這些函式會驗證它們的參數。 如果*strSource*為 null 指標，或*strDest* （除非計數為零），則為 NULL 指標，或如果*計數*大於**INT_MAX**，無效的參數叫用處理常式，如所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回**INT_MAX**。
+這些函式會驗證它們的參數。 如果*strSource*為 null 指標，或*strDest*是**NULL**指標 （除非計數為零），或如果*計數*大於**INT_MAX**、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**至**EINVAL**並傳回**INT_MAX**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

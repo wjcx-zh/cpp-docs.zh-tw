@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87、_controlfp、__control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-在 ARM 平台， **_control87**和 **_controlfp**函式套用到在 FPSCR 暫存器。 X64 架構，只 SSE2 控制字組儲存在 MXCSR 暫存器會受到影響。 在 x86 平台， **_control87**和 **_controlfp**影響控制項的文字將 x87 和 SSE2，如果有的話。 此函式 **__control87_2**啟用將 x87 和 SSE2 一起或分開控制浮點數的單位。 如果您想要影響這兩個單位，在以兩個整數的位址中傳遞**x86_cw**和**sse2_cw**。 如果您只想要影響一個單位，請傳入該參數的位址，但傳入 0 (NULL) 表示影響其他單位。 如果針對其中一個參數傳遞 0，則此函式不會影響該浮點單位。 如果程式碼的一部分使用 x87 浮點單位，而程式碼的另一個部分使用 SSE2 浮點單位，則此函式可能十分有用。 如果您使用 **__control87_2**一部分的其中一個程式和設定浮點控制字的不同值，然後使用 **_control87**或 **_controlfp**來進一步然後操作控制字組 **_control87**和 **_controlfp**可能無法傳回單一的控制字組，以代表兩個浮點數的單位的狀態。 在這種情況下，這些函式會將**EM_AMBIGUOUS**中傳回的整數值，表示兩個字與字之間不一致的旗標。 這警告所傳回的控制字組可能無法精確地呈現這兩個浮點控制字組的狀態。
+在 ARM 平台， **_control87**和 **_controlfp**函式套用到在 FPSCR 暫存器。 X64 架構，只 SSE2 控制字組儲存在 MXCSR 暫存器會受到影響。 在 x86 平台， **_control87**和 **_controlfp**影響控制項的文字將 x87 和 SSE2，如果有的話。 此函式 **__control87_2**啟用將 x87 和 SSE2 一起或分開控制浮點數的單位。 如果您想要影響這兩個單位，在以兩個整數的位址中傳遞**x86_cw**和**sse2_cw**。 如果您只想要影響的一個單位，地址中傳遞該參數，但傳遞 0 (**NULL**) 其他。 如果針對其中一個參數傳遞 0，則此函式不會影響該浮點單位。 如果程式碼的一部分使用 x87 浮點單位，而程式碼的另一個部分使用 SSE2 浮點單位，則此函式可能十分有用。 如果您使用 **__control87_2**一部分的其中一個程式和設定浮點控制字的不同值，然後使用 **_control87**或 **_controlfp**來進一步然後操作控制字組 **_control87**和 **_controlfp**可能無法傳回單一的控制字組，以代表兩個浮點數的單位的狀態。 在這種情況下，這些函式會將**EM_AMBIGUOUS**中傳回的整數值，表示兩個字與字之間不一致的旗標。 這警告所傳回的控制字組可能無法精確地呈現這兩個浮點控制字組的狀態。
 
 在 ARM 和 x64 架構，變更無限大模式或浮點精確度不支援。 如果精確度控制遮罩適用於 x64 平台，此函數會引發判斷提示和無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。
 

@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54b82eae4826bd6a359f2cf0d4e74bccd32f81b0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype、_mbsbtype_l
 
@@ -85,7 +85,7 @@ int _mbsbtype_l(
 |**_MBC_SINGLE** (0)|單一位元組字元。 例如，在字碼頁 932， **_mbsbtype**傳回 0，如果指定的位元組範圍之內 0x20-0x7E 或 0xA1-0xDF。|
 |**_MBC_LEAD** (1)|多位元組字元的前導位元組。 例如，在字碼頁 932， **_mbsbtype**如果指定的位元組範圍 0x81-0x9F 或 0xE0-內 0xFC 時則傳回 1。|
 |**_MBC_TRAIL** (2)|多位元組字元的後隨位元組。 例如，在字碼頁 932， **_mbsbtype**傳回 2，如果指定的位元組範圍之內 0x40-0x7E 或 0x80-0xFC。|
-|**_MBC_ILLEGAL** (-1)|**NULL**字串、 無效的字元，或**NULL**位元組位移的位元組之前，找到*計數*中*mbstr*。|
+|**_MBC_ILLEGAL** (-1)|**NULL**字串、 無效的字元或之前的位元組位移處找到 null 位元組*計數*中*mbstr*。|
 
 ## <a name="remarks"></a>備註
 

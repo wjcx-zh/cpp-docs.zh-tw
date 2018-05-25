@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
 
@@ -102,7 +102,7 @@ errno_t _wctomb_s_l(
 
 **Wctomb_s**函式將其*wchar*對應的多位元組字元的引數，並將儲存在結果*mbchar*。 您可以在任何程式的任何點呼叫函式。
 
-如果**wctomb_s**將轉換的寬字元的多位元組字元，它會將放置的位元組數 (不大於**MB_CUR_MAX**) 中成為整數所指向的寬字元*pRetValue*。 如果*wchar*是寬字元的 null 字元 (L '\0')， **wctomb_s**填滿*pRetValue* 1。 如果目標指標*mbchar*是 NULL， **wctomb_s**置於 0 *pRetValue*。 如果轉換不可能在目前的地區設定， **wctomb_s** -1 會置於*pRetValue*。
+如果**wctomb_s**將轉換的寬字元的多位元組字元，它會將放置的位元組數 (不大於**MB_CUR_MAX**) 中成為整數所指向的寬字元*pRetValue*。 如果*wchar*是寬字元的 null 字元 (L '\0')， **wctomb_s**填滿*pRetValue* 1。 如果目標指標*mbchar*是**NULL**， **wctomb_s**置於 0 *pRetValue*。 如果轉換不可能在目前的地區設定， **wctomb_s** -1 會置於*pRetValue*。
 
 **wctomb_s**使用目前的地區設定進行地區設定相關資訊。**_wctomb_s_l**是完全相同，不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 

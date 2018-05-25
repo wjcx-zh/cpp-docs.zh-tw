@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
 
@@ -96,7 +96,7 @@ wchar_t *_wfullpath_dbg(
 
 ## <a name="remarks"></a>備註
 
-**_Fullpath_dbg**和 **_wfullpath_dbg**函式完全相同 **_fullpath**和 **_wfullpath**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本**malloc**， **_malloc_dbg**來配置記憶體，如果 NULL 當做第一個參數傳遞。 如需有關偵錯功能的詳細 **_malloc_dbg**，請參閱[_malloc_dbg](malloc-dbg.md)。
+**_Fullpath_dbg**和 **_wfullpath_dbg**函式完全相同 **_fullpath**和 **_wfullpath**不同之處在於，當 **_DEBUG**是定義，這些函式使用的偵錯版本**malloc**， **_malloc_dbg**來配置記憶體，如果**NULL**傳遞做為第一個參數。 如需有關偵錯功能的詳細 **_malloc_dbg**，請參閱[_malloc_dbg](malloc-dbg.md)。
 
 在大多數情況中，您不需要明確地呼叫這些函式。 相反地，您可以定義 **_CRTDBG_MAP_ALLOC**旗標。 當 **_CRTDBG_MAP_ALLOC**定義，但呼叫 **_fullpath**和 **_wfullpath**重新對應至 **_fullpath_dbg**和 **_wfullpath_dbg**，分別與*blockType*設 **_NORMAL_BLOCK**。 因此，您不需要明確地呼叫這些函式，除非您想要將做為堆積區塊標示 **_CLIENT_BLOCK**。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 

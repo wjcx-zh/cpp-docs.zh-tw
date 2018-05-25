@@ -150,7 +150,7 @@ ms.lasthandoff: 05/04/2018
 |[編譯器錯誤 C2570](compiler-error-C2570.md)|'*識別碼*': 等位不能有基底類別|
 |[編譯器錯誤 C2571](compiler-error-C2571.md)|'*識別碼*': 虛擬函式不能在等位中'*union*'|
 |[編譯器錯誤 C2572](compiler-error-C2572.md)|'*函式*': 重複定義的預設引數： 參數*數目*|
-|[編譯器錯誤 C2573](compiler-error-C2573.md)|'*類別*': 無法刪除指向此類型物件的指標類別具有 'operator delete' 沒有任何未定位多載。 使用:: 刪除或加入類別中的 '運算子 delete'|
+|[編譯器錯誤 C2573](compiler-error-C2573.md)|'*類別*': 無法刪除指向此類型物件的指標類別具有 'operator delete' 沒有任何未定位多載。 使用:: 刪除或加入類別中的 '運算子(void\*) delete'|
 |[編譯器錯誤 C2574](compiler-error-C2574.md)|'*解構函式*': 無法宣告為 static|
 |[編譯器錯誤 C2575](compiler-error-C2575.md)|'*識別碼*': 只有成員函式和基底可以是虛擬|
 |編譯器錯誤 C2576|'*識別碼*': 不能引入新的虛擬方法，以 'public'。 請考慮將方法非虛擬的或變更的範圍為 'internal' protected private'|

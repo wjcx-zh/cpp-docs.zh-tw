@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
@@ -106,7 +106,7 @@ size_t _mbstrlen_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式傳回的字元數*str*，排除終端機**NULL**。 沒有傳回值，保留表示錯誤，除了 **_mbstrlen**和 **_mbstrlen_l**，哪些傳回`((size_t)(-1))`如果字串包含無效的多位元組字元。
+所有這些函式傳回的字元數*str*，排除終端機的 null。 沒有傳回值，保留表示錯誤，除了 **_mbstrlen**和 **_mbstrlen_l**，哪些傳回`((size_t)(-1))`如果字串包含無效的多位元組字元。
 
 ## <a name="remarks"></a>備註
 

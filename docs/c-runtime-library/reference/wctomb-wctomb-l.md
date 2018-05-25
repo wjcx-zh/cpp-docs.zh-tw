@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e756ea23e32ffc9b164ccbe1a68b9fc987fe7b59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 972d8e3f1798a7498173c3d8b0677bb57231b990
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
 
@@ -72,7 +72,7 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果**wctomb**將轉換的寬字元的多位元組字元，它會傳回的位元組數 (不大於**MB_CUR_MAX**) 中的寬字元。 如果*wchar*是寬字元的 null 字元 (L '\0')， **wctomb**傳回 1。 如果目標指標*mbchar*是 NULL， **wctomb**傳回 0。 如果轉換不可能在目前的地區設定， **wctomb**傳回-1 和**errno**設**EILSEQ**。
+如果**wctomb**將轉換的寬字元的多位元組字元，它會傳回的位元組數 (不大於**MB_CUR_MAX**) 中的寬字元。 如果*wchar*是寬字元的 null 字元 (L '\0')， **wctomb**傳回 1。 如果目標指標*mbchar*是**NULL**， **wctomb**傳回 0。 如果轉換不可能在目前的地區設定， **wctomb**傳回-1 和**errno**設**EILSEQ**。
 
 ## <a name="remarks"></a>備註
 

@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e162c6b16e9ce9d0ea6763f5fb4c75d7975dc7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs、__wgetmainargs
 叫用命令列剖析，並將 `main()` 的引數複製回傳入的指標。  
@@ -63,10 +63,10 @@ _startupinfo * _StartInfo);
  包含 `argv` 之後引數數目的整數。 `argc` 參數永遠會大於或等於 1。  
   
  `_Argv`  
- 以 null 終止之字串的陣列，表示由程式的使用者所輸入的命令列引數。 依照慣例，`argv[0]` 是對程式叫用的命令，argv[1] 是第一個命令列引數，依此類推，直到 argv[argc]，其永遠為 NULL。 第一個命令列引數一定是 `argv[1]`，而最後一個是 `argv[argc - 1]`。  
+ 以 null 終止之字串的陣列，表示由程式的使用者所輸入的命令列引數。 依照慣例，`argv[0]` 是對程式叫用的命令，argv[1] 是第一個命令列引數，依此類推，直到 argv[argc]，其永遠為 **NULL**。 第一個命令列引數一定是 `argv[1]`，而最後一個是 `argv[argc - 1]`。  
   
  `_Env`  
- 字串陣列，表示在使用者環境中設定的變數。 這個陣列由 NULL 項目終止。  
+ 字串陣列，表示在使用者環境中設定的變數。 這個陣列由 **NULL** 項目終止。  
   
  `_DoWildCard`  
  整數，如果設定為 1 會在命令列引數中展開萬用字元，或設為 0 不執行任何動作。  

@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12bdb89a038ccd420748c1b855f21e1b9e4d93a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b25f94b1127d1212ed5f44235ce48b363c6124dc
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 將一個字元字串對應至另一個字元字串，並執行指定的地區設定相關轉換。 此函式也可用來產生輸入字串的排序鍵。  
@@ -59,7 +59,7 @@ int __crtLCMapStringW(
  函式對應或用於排序鍵產生的來源字串指標。 此參數會假設為 Unicode 字串。  
   
  `cchSrc`  
- `lpSrcStr` 參數所指向之字串的大小 (以字元為單位)。 此計數可選擇性地包含 NULL 結束字元。  
+ `lpSrcStr` 參數所指向之字串的大小 (以字元為單位)。 此計數可選擇性地包含 Null 結束字元。  
   
  `cchSrc` 值 -1 指定 `lpSrcStr` 所指向的字串是以 null 終止的。 如果是這種情況，而且此函式是在其字串對應模式下使用，則該函式會計算字串本身長度，並以 null 終止儲存在 `*lpDestStr`中的對應字串。  
   
@@ -70,9 +70,9 @@ int __crtLCMapStringW(
  `lpDestStr`所指向之緩衝區的大小 (以字元為單位)。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `cchDest` 的值非零，寫入緩衝區的字元數或位元組 (指定 `LCMAP_SORTKEY` 時) 會表示成功。 此計數包含留給 NULL 結束字元的空間。  
+ 如果 `cchDest` 的值非零，寫入緩衝區的字元數或位元組 (指定 `LCMAP_SORTKEY` 時) 會表示成功。 此計數包含留給 Null 結束字元的空間。  
   
- 如果 `cchDest` 的值為零，接收翻譯字串或排序鍵所需的緩衝區大小 (以字元為單位) 或位元組 (指定 `LCMAP_SORTKEY` 時) 會表示成功。 此大小包含留給 NULL 結束字元的空間。  
+ 如果 `cchDest` 的值為零，接收翻譯字串或排序鍵所需的緩衝區大小 (以字元為單位) 或位元組 (指定 `LCMAP_SORTKEY` 時) 會表示成功。 此大小包含留給 Null 結束字元的空間。  
   
  零表示失敗。 若要取得延伸錯誤資訊，請呼叫 `GetLastError` 函式。  
   

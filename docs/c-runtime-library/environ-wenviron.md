@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 `_environ` 變數是指標，指向多位元組字元字串之指標的陣列，而該字串構成此處理序環境。 這個全域變數已由更安全的版本 [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 和 [_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md) 所取代，這些應該用來取代全域變數。 `_environ` 在 Stdlib.h 中宣告。  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  這是 `_environ` 的寬字元版本。 在使用 `wmain` 函式的程式中，根據作業系統環境上擷取的設定，會在程式啟動時初始化 `_wenviron`。  
   
- 在使用 `main` 的程式中，`_wenviron` 一開始是 `NULL`，因為此環境由多位元組字元字串所組成。 在對於 `_wgetenv` 或 `_wputenv` 的第一次呼叫時，會由 `_wenviron` 建立對應的寬字元字串環境並指向此環境。  
+ 在使用 `main` 的程式中，`_wenviron` 一開始是 **NULL**，因為此環境由多位元組字元字串所組成。 在對於 `_wgetenv` 或 `_wputenv` 的第一次呼叫時，會由 `_wenviron` 建立對應的寬字元字串環境並指向此環境。  
   
- 同樣地，在使用 `wmain` 的程式中，`_environ` 一開始是 `NULL`，因為此環境由寬字元字串所組成。 在對於 `_getenv` 或 `_putenv` 的第一次呼叫時，會由 `_environ` 建立對應的多位元組字元字串環境並指向此環境。  
+ 同樣地，在使用 `wmain` 的程式中，`_environ` 一開始是 **NULL**，因為此環境由寬字元字串所組成。 在對於 `_getenv` 或 `_putenv` 的第一次呼叫時，會由 `_environ` 建立對應的多位元組字元字串環境並指向此環境。  
   
  當此環境的兩個複本 (MBCS 和 Unicode) 在此程式中同時存在時，這個執行階段系統必須同時維護兩份複本，造成執行時間較慢。 例如，每當您呼叫 `_putenv` 時，也會自動執行對 `_wputenv` 的呼叫，使得這兩個環境字串對應。  
   

@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c915001716745422299241d3dad469707bf03dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets、_cgetws
 從主控台取得字元字串。 您現在已有這些函式更安全的版本可以使用，請參閱 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
@@ -74,7 +74,7 @@ wchar_t *_cgetws(
  資料的儲存位置。  
   
 ## <a name="return-value"></a>傳回值  
- `_cgets` 和 `_cgetws` 會傳回位在 `buffer[2]` 的字串開頭指標。 若 `buffer` 為 `NULL`，這些函式將會叫用無效參數處理常式，如 [Parameter Validation](../c-runtime-library/parameter-validation.md)。 若允許繼續執行，這些函式將會傳回 `NULL` ，並將 `errno` 設為 `EINVAL`。  
+ `_cgets` 及 `_cgetws` 會在 `buffer[2]`傳回字串開頭的指標。 如果 `buffer` 為 **NULL**，則這些函式會叫用無效的參數處理常式，如[參數驗證](../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，這些函式將會傳回 **NULL**，並將 `errno` 設為 `EINVAL`。  
   
 ## <a name="remarks"></a>備註  
  這些函式會從主控台讀取字元字串，並將字串及其長度儲存在 `buffer`指向的位置。 `buffer` 參數必須是指向字元陣列的指標。 陣列的第一個項目 `buffer[0]`必須包含要讀取之字串的長度上限 (字元)。 陣列必須包含足夠的項目，以容納字串、終止的 null 字元 ('\0') 及 2 個額外的位元組。 此函式會讀取歸位/換行字元 (CR-LF) 組合之前的所有字元，或讀取指定數量的字元。 字串會從 `buffer[2]`開始儲存。 若函式讀取了 CR LF，將會儲存 null 字元 ('\0')。 此函式會將該字串的實際長度儲存在第二個陣列項目 `buffer[1]`中。  

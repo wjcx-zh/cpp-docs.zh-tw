@@ -10,23 +10,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
-ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
+ms.openlocfilehash: f0044a0da7b1ac4ad052eb120ccfb1f7425d2c0e
+ms.sourcegitcommit: 06b1f7bde6b3f8bed0f3db91d14e2d974444c1e3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/20/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何回報 Visual C++ 工具組或文件的問題
 
 如果您發生 Microsoft Visual C++ 編譯器、連結器或其他工具和程式庫的問題，請告知我們。 如果問題是出自文件，也請告知我們。
 
-## <a name="how-to-report-a-c-documentation-issue"></a>如何回報 C++ 文件問題
-
-我們使用 GitHub 問題來追蹤文件中所回報的問題。 您現在可以直接從內容頁建立 GitHub 問題，這可讓您以更豐富的方式與作者和產品小組互動。 如果您發現文件問題、錯誤的程式碼範例、造成混淆的說明、嚴重遺漏，或甚至只是錯字，，都可以輕鬆地通知我們。 請捲動至頁面底部，並選取 [登入以提供文件應見反應]。 如果您還沒有 GitHub 帳戶，則必須建立一個 GitHub 帳戶，但是一旦完成，您就可以查看所有文件問題及其狀態，並在您所回報的問題有所變更時收到通知。 如需詳細資訊，請參閱[即將在 docs.microsoft.com 推出新的意見反應系統](/teamblog/a-new-feedback-system-is-coming-to-docs)。
-
-當您使用 [文件意見反應] 按鈕在 GitHub 上建立文件問題時，該問題會自動填入有關建立問題來源頁面的一些資訊，以便讓我們知道問題所在位置。 請不要編輯此資訊。 只需要附加有關錯誤的詳細資料，如有必要，還可以提供建議的修正程式。 [我們的文件是開放原始碼](https://github.com/MicrosoftDocs/cpp-docs/)，因此如果您想要實際進行修正並自行提出建議，就可以這樣做。 如需您可以如何參與文件的詳細資訊，請參閱我們在 GitHub 上的[參與指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) (英文)。
-
-## <a name="how-to-report-a-c-product-issue"></a>如何回報 C++ 產品問題
+## <a name="how-to-report-a-c-toolset-issue"></a>如何回報 C++ 工具組問題
 
 讓我們知道問題的最佳方式是將一份內含下列資訊的報表傳送給我們：所遇到問題的描述、如何建置程式的詳細資料、「重現」，以及可用來在我們自己的電腦上重現問題的完整測試案例。 這項資訊可讓我們快速驗證問題存在於程式碼中而且不在環境本機、判斷是否影響其他版本的編譯器，以及診斷其原因。
 
@@ -56,16 +50,25 @@ ms.lasthandoff: 05/11/2018
 
 1. 開啟**開發人員命令提示字元**，以符合用來建置專案的 Visual Studio 版本和組態架構。 例如，如果您是針對 x64 目標使用 Visual Studio 2017 on x64 進行建置，則請選擇 [x64 Native Tools Command Prompt for VS 2017] (適用於 VS 2017 的 x64 Native Tools 命令提示字元)。 如需詳細資訊，請參閱[開發人員命令提示字元捷徑](build/building-on-the-command-line.md#developer-command-prompt-shortcuts)。
 
-1. 在開發人員命令提示字元主控台視窗中，輸入 **cl** 命令。
+1. 在開發人員命令提示字元主控台視窗中，輸入 **cl /Bv** 命令。
 
 輸出應該如下：
 
 ```Output
-C:\Users\username\Source>cl
-Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x64
+C:\Users\username\Source>cl /Bv
+Microsoft (R) C/C++ Optimizing Compiler Version 19.14.26428.1 for x86
 Copyright (C) Microsoft Corporation.  All rights reserved.
 
-usage: cl [ option... ] filename... [ /link linkoption... ]
+Compiler Passes:
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\cl.exe:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c1.dll:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c1xx.dll:      Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\c2.dll:        Version 19.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\link.exe:      Version 14.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\mspdb140.dll:  Version 14.14.26428.1
+ C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.14.26428\bin\HostX86\x86\1033\clui.dll: Version 19.14.26428.1
+
+cl : Command line error D8003 : missing source filename
 ```
 
 複製整個輸出，並將其貼入您的報表。
@@ -90,11 +93,11 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 我們需要您所遇到問題的詳細描述，以確認看到您電腦上的相同效果；它有時也可讓我們知道您嘗試完成的作業以及預期發生的情況。
 
-請提供工具組所提供的確切錯誤訊息或您看到的確切執行階段行為。 我們需要這項資訊來驗證我們已正確地重現問題。 請包含所有編譯器輸出，而不只是最後一個錯誤訊息。 我們需要查看導致您所回報問題的所有項目。 如果您可以使用命令列編譯器來複製問題，則會偏好使用該編譯器輸出；IDE 和其他組建系統可以篩選您看到的錯誤訊息，或只擷取錯誤訊息的第一行。
+請提供工具組所提供的**確切錯誤訊息**，或您看到的確切執行階段行為。 我們需要這項資訊來驗證我們已正確地重現問題。 請包含**所有**編譯器輸出，而不只是最後一個錯誤訊息。 我們需要查看導致您所回報問題的所有項目。 如果您可以使用命令列編譯器來複製問題，則會偏好使用該編譯器輸出；IDE 和其他組建系統可以篩選您看到的錯誤訊息，或只擷取錯誤訊息的第一行。
 
 如果問題是編譯器接受無效的程式碼，而且未產生診斷，則請在報表中注意這一點。
 
-若要報告執行階段行為問題，請包含程式所印出的確切複本，以及您預期看到的確切複本。 在理想情況下，這會內嵌在輸出陳述式本身中，例如，`printf("This should be 5: %d\n", actual_result);`。 如果您的程式當機或停止回應，則也會提及該問題。
+若要報告執行階段行為問題，請包含程式所印出的**確切複本**，以及您預期看到的確切複本。 在理想情況下，這會內嵌在輸出陳述式本身中，例如，`printf("This should be 5: %d\n", actual_result);`。 如果您的程式當機或停止回應，則也會提及該問題。
 
 新增可能有助於診斷所發生問題的任何其他詳細資料，例如您可能已找到的任何因應措施。 請避免在報表的其他位置出現找到的重複資訊。
 
@@ -247,15 +250,75 @@ CONTEXT:
 
 1. 在開發人員命令提示字元主控台視窗中，輸入命令 **cl /P** *arguments* *filename.cpp*，其中 *arguments* 是上面所擷取的引數清單，而 *filename.cpp* 是重現原始程式檔的名稱。 此命令會複寫用於重現的命令列，但在前置處理器通過時停止編譯，並將前置處理過的原始程式碼輸出至 *filename*.i。
 
+如果您要前置處理 C++/CX 原始程式碼檔案，或者要使用 C++ 模組功能，則需要執行一些其他步驟。 如需詳細資訊，請參閱以下節。
+
 產生前置處理過的檔案之後，最好確定仍然可以使用前置處理過的檔案重現問題。
 
 #### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>確認仍然可以使用前置處理過的檔案重現錯誤
 
-1. 在開發人員命令提示字元主控台視窗中，輸入命令 **cl** *arguments* **/TP** *filename***.i**，以告訴 cl.exe 將前置處理過的檔案編譯為 C++ 原始程式檔，其中 *arguments* 是上面所擷取的引數清單，但移除任何 **/D** 和 **/I** 引數 (因為它們已包含在前置處理過的檔案中)；其中 *filename***.i** 是前置處理過的檔案的名稱。
+1. 在開發人員命令提示字元主控台視窗中，輸入 **cl** *arguments* **/TP** *filename*.i 命令，以告訴 cl.exe 將前置處理過的檔案編譯為 C++ 原始程式檔，其中 *arguments* 是上面所擷取的引數清單，但移除任何 **/D** 和 **/I** 引數 (因為它們已包含在前置處理過的檔案中)；而 *filename*.i 是前置處理過的檔案的名稱。
 
 1. 請確認已重現問題。
 
 最後，將前置處理過的重現 *filename*.i 附加到報表中。
+
+### <a name="preprocessed-ccx-winrtuwp-code-repros"></a>前置處理過的 C++/CX WinRT/UWP 程式碼重現
+
+如果您要使用 C++/CX 來建置可執行檔，必須執行一些額外步驟，才能建立和驗證前置處理過的重現。
+
+#### <a name="to-preprocess-ccx-source-code"></a>前置處理 C++/CX 原始程式碼
+
+1. 建立前置處理過的原始程式檔，如[前置處理原始程式碼檔案](#to-preprocess-a-source-code-file)中所述。
+
+1. 搜尋產生的 _filename_.i 檔案中是否有 **#using** 指示詞。
+
+1. 製作所有參考檔案的清單。 請排除任何 Windows\*.winmd 檔案、platform.winmd 檔案和 mscorlib.dll。
+
+若要準備驗證前置處理過的檔案仍會重現問題，請：
+
+1. 為前置處理過的檔案建立新目錄，並將它複製到新目錄。
+
+1. 將 **#using** 清單中的.winmd 檔案複製到新目錄。
+
+1. 在新目錄中建立空白的 vccorlib.h 檔案。
+
+1. 編輯前置處理過的檔案，以移除 mscorlib.dll 的任何 **#using** 指示詞。
+
+1. 編輯前置處理過的檔案，將所有絕對路徑變更為複製之 .winmd 檔案的純檔名。
+
+確認前置處理過的檔案仍會重現問題，如上所述。
+
+### <a name="preprocessed-c-modules-repros"></a>前置處理過的 C++ 模組重現
+
+如果您要使用 C++ 編譯器的模組功能，必須執行一些不同的步驟，才能建立和驗證前置處理過的重現。
+
+#### <a name="to-preprocess-a-source-code-file-that-uses-a-module"></a>前置處理使用模組的原始程式碼檔案
+
+1. 擷取用來建置重現的命令列引數，如[回報命令列內容](#to-report-the-contents-of-the-command-line)所述。
+
+1. 開啟**開發人員命令提示字元**，以符合用來建置專案的 Visual Studio 版本和組態架構。
+
+1. 切換至包含重現專案的目錄。
+
+1. 在開發人員命令提示字元主控台視窗中，輸入 **cl /P** *arguments* *filename.cpp* 命令，其中 *arguments* 是上面所擷取的引數清單，而 *filename.cpp* 是取用模組之原始程式檔的名稱。
+
+1. 切換至包含建置模組介面 ( .ifc 輸出) 所使用之重現專案的目錄。
+
+1. 擷取用來建置模組介面的命令列引數。
+
+1. 在開發人員命令提示字元主控台視窗中，輸入 **cl /P** *arguments* *modulename.ixx* 命令，其中 *arguments* 是上面所擷取的引數清單，而 *modulename.ixx* 是建立模組介面之檔案的名稱。
+
+產生前置處理過的檔案之後，最好確定仍然可以使用前置處理過的檔案重現問題。
+
+#### <a name="to-confirm-that-the-error-still-repros-with-the-preprocessed-file"></a>確認仍然可以使用前置處理過的檔案重現錯誤
+
+1. 在開發人員主控台視窗中，切換回包含您重現專案的目錄。
+
+1. 如上所述輸入 **cl** *arguments* **/TP** *filename*.i 命令，以編譯前置處理過的檔案，就像它是 C++ 原始程式檔一樣。
+
+1. 確認前置處理過的檔案仍會重現該問題。
+
+最後，將前置處理過的重現檔案 (*filename*.i 和 *modulename*.i) 以及 .ifc 輸出附加到您的報表。
 
 ### <a name="link-repros"></a>連結重現
 
@@ -291,10 +354,10 @@ CONTEXT:
 
 ## <a name="ways-to-send-your-report"></a>報表的傳送方式
 
-有幾種方式可以將您的報表送給我們。 您可以使用 Visual Studio 的內建[回報問題工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)頁面。 您也可以選擇此頁面底部的 [產品意見反應] 按鈕，直接前往我們的開發人員社群頁面。 您也可以透過電子郵件傳送報告，但建議您採取前兩種方式。 方法的選擇取決於您想要如何與調查報告的工程師互動，及是否要追蹤其進度或是否要與社群分享您的報告。
+有幾種不錯的方法可將您的報表送給我們。 您可以使用 Visual Studio 的內建[回報問題工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)頁面。 您也可以選擇此頁面底部的 [產品意見反應] 按鈕，直接前往我們的開發人員社群頁面。 此選擇取決於您是否想要在開發人員社群頁面中使用 IDE 內建工具來擷取螢幕擷取畫面和組織要張貼的報表，或者您是否想要直接使用此網站。
 
 > [!NOTE]
-> 不論您如何提交報表，Microsoft 都會尊重您的隱私權。 如需我們如何處理您所傳送之資料的相關資訊，請參閱 [Microsoft Visual Studio 產品系列隱私權聲明](https://www.visualstudio.com/dn948229)。
+> 不論您如何提交報表，Microsoft 都會尊重您的隱私權。 Microsoft 致力於遵循所有資料的隱私權法律和規定。 如需我們如何處理您所傳送之資料的相關資訊，請參閱 [Microsoft Visual Studio 產品系列隱私權聲明](https://www.visualstudio.com/dn948229)。
 
 ### <a name="use-the-report-a-problem-tool"></a>使用回報問題工具
 
@@ -312,26 +375,34 @@ Visual Studio 開發人員社群頁面提供另一種方便的途徑，讓您回
 
 如果其他人未回報過該問題，請選擇開發人員社群頁面上搜尋方塊旁的 [回報問題] 按鈕。 系統可能會要求您登入 Visual Studio 帳戶，及同意將您設定檔的存取權授予開發人員社群應用程式。 登入後，您會直接前往可回報問題的頁面。 您可以包含您重新產生的程式碼和命令列、螢幕擷取畫面、相關討論的連結，及其他您認為相關且有用的任何資訊。
 
-### <a name="send-an-email"></a>傳送電子郵件
-
-電子郵件是將報告直接傳送給 Visual C++ 小組的另一種方式。 寄信到 [compilercrash@microsoft.com](mailto:compilercrash@microsoft.com) 即可與我們連絡。因為透過 [回報問題] 工具或網頁回報至開發人員社群的問題較能密切追蹤，而且透過電子郵件回報無法讓留言和解決方案供其他 Visual Studio 使用者參考，所以請只在無法使用其他兩種方式時，再使用此方式。
-
-如果您選擇透過電子郵件傳送報表，則可以使用下列範本作為電子郵件訊息的本文。 如果您未在電子郵件本文中加入這項資訊，請不要忘了附加原始程式碼或其他檔案。
-
-```Example
-To: compilercrash@microsoft.com
-Subject: Visual C++ Error Report
------
-
-Compiler version:
-
-CL.EXE command line:
-
-Problem description:
-
-Source code and repro steps:
-
-```
-
 > [!TIP]
-> 針對您可能會在 Visual Studio 中遇到與工具組無關的其他問題類型 (例如，UI 問題、中斷的 IDE 功能或一般當機)，**回報問題工具**可能是特別不錯的選擇，原因是其螢幕擷取畫面功能以及記錄導致您所遇到問題之 UI 動作的能力。 您也可以在[開發人員社群](https://developercommunity.visualstudio.com/)網站上回報這類錯誤。 您應該永遠不透過寄送電子郵件至 compilercrash@microsoft.com 來回報這些其他類型的錯誤。
+> 針對您可能會在 Visual Studio 中遇到與工具組無關的其他問題類型 (例如，UI 問題、中斷的 IDE 功能或一般當機)，**回報問題工具**可能是特別不錯的選擇，原因是其螢幕擷取畫面功能以及記錄導致您所遇到問題之 UI 動作的能力。 您也可以在[開發人員社群](https://developercommunity.visualstudio.com/)網站上回報這類錯誤。
+
+### <a name="reports-and-privacy"></a>報表和隱私權
+
+根據預設，**報表中的所有資訊以及任何留言和回覆都是公開顯示**。 一般來說，這是一項優點，因為它可讓整個社群查看問題、解決方案和其他使用者找到的因應措施。 不過，如果您基於隱私權或智慧財產權理由擔心會讓您的資料或身分公開，則可使用其他選項。
+
+如果您擔心揭露您的身分，請[建立新的 Microsoft 帳戶](https://signup.live.com/)，這不會揭露關於您的任何詳細資料。 使用此帳戶來建立您的報表。 
+
+**請不要在公開的初始報表標題或內容中放置您想要保持私用的任何項目。** 相反地，請注意您會在個別的留言中私下傳送詳細資料。 為了確定您的報表會導向至適當的人員，請在問題報表的主題清單中包含 **cppcompiler**。 建立問題報表後，現在就能夠指定誰可以查看您的回覆和附件。
+
+#### <a name="to-create-a-problem-report-for-private-information"></a>建立私人資訊的問題報表
+
+1. 在建立的報表中，選擇 [新增留言] 來建立您對問題的私人描述。
+
+1. 在回覆編輯器中，使用 [送出] 和 [取消] 按鈕下方的下拉式控制項來指定回覆的對象。 只有您指定的人員才能看到這些私人回覆以及其中包含的任何影像、連結或程式碼。 選擇 [可供仲裁者和原始貼文者檢視] 來限制 Microsoft 員工和您自己的可見性。
+
+1. 新增描述，以及重現所需的任何其他資訊、影像和檔案附件。 選擇 [送出] 按鈕以私下傳送這些資訊。
+
+   請注意，附加的檔案有 2GB 的限制，最多 10 個檔案。 對於任何較大的上傳項目，請在您的私用留言中要求一個上傳 URL。
+
+這個留言底下的所有回覆都具有您指定的相同受限可見性。 即使回覆的下拉式控制項未正確顯示受限可見性狀態也是如此。
+
+若要維護您的隱私權，並讓機密資訊不要公開檢視，請小心地將所有與 Microsoft 的互動保持在這個受限留言下回覆。 對其他留言的回覆可能會導致您不小心公開機密資訊。
+
+## <a name="how-to-report-a-c-documentation-issue"></a>如何回報 C++ 文件問題
+
+我們使用 GitHub 問題來追蹤文件中所回報的問題。 您現在可以直接從內容頁建立 GitHub 問題，這可讓您以更豐富的方式與作者和產品小組互動。 如果您發現文件問題、錯誤的程式碼範例、造成混淆的說明、嚴重遺漏，或甚至只是錯字，，都可以輕鬆地通知我們。 請捲動至頁面底部，並選取 [登入以提供文件應見反應]。 如果您還沒有 GitHub 帳戶，則必須建立一個 GitHub 帳戶，但是一旦完成，您就可以查看所有文件問題及其狀態，並在您所回報的問題有所變更時收到通知。 如需詳細資訊，請參閱[即將在 docs.microsoft.com 推出新的意見反應系統](/teamblog/a-new-feedback-system-is-coming-to-docs)。
+
+當您使用 [文件意見反應] 按鈕在 GitHub 上建立文件問題時，該問題會自動填入有關建立問題來源頁面的一些資訊，以便讓我們知道問題所在位置。 請不要編輯此資訊。 只需要附加有關錯誤的詳細資料，如有必要，還可以提供建議的修正程式。 [我們的文件是開放原始碼](https://github.com/MicrosoftDocs/cpp-docs/)，因此如果您想要實際進行修正並自行提出建議，就可以這樣做。 如需您可以如何參與文件的詳細資訊，請參閱我們在 GitHub 上的[參與指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) (英文)。
+

@@ -37,11 +37,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3309aee316c3b067c9bd0ade4e1064289cb4ddaf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a597ad1a72f903d08e848727045e05bf014879b1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="gets-getws"></a>gets、_getws
 從 `stdin` 資料流取得行。 這些函式已有更安全的版本，請參閱 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
@@ -76,7 +76,7 @@ wchar_t *_getws(
  輸入字串的儲存體位置。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，即傳回其引數。 `NULL` 指標表示錯誤或檔案結尾條件。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 判斷發生的是哪一個事件。 若 `buffer` 為 `NULL`，則這些函式將會叫用無效的參數處理常式，如 [Parameter Validation](../c-runtime-library/parameter-validation.md)。 若允許繼續執行，這些函式會傳回 `NULL` ，並將 errno 設為 `EINVAL`。  
+ 若成功，即傳回其引數。 **NULL** 指標表示錯誤或檔案結尾條件。 使用 [ferror](../c-runtime-library/reference/ferror.md) 或 [feof](../c-runtime-library/reference/feof.md) 判斷發生的是哪一個事件。 如果 `buffer` 為 **NULL**，則這些函式會叫用無效的參數處理常式，如[參數驗證](../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，這些函式會傳回 **NULL**，並將 errno 設為 `EINVAL`。  
   
 ## <a name="remarks"></a>備註  
  `gets` 函式會從標準輸入資料流 `stdin` 讀取一行，並將其儲存在 `buffer`中。 此行包括到第一個新行字元 ('\n') (含) 的所有字元。 `gets` 接著會取代以 null 字元 ('\0') 取代新行字元，然後再傳回該行。 相反地， `fgets` 函式則會保留新行字元。 `_getws` 是寬字元版的 `gets`，其引數與傳回值均為寬字元字串。  

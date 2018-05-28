@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298e2a1abddc477e406bca17bce04999c6e09415
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0abf64c95e4293710226b2f4f38bc1fcf481b287
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函式
 所有 `_spawn` 函式都會建立並執行新的處理序：  
@@ -137,12 +137,12 @@ ms.lasthandoff: 05/03/2018
   
  您可以將引數指標當做個別的參數 (在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中) 或指標陣列 (在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中) 傳遞。 您必須至少將一個引數，`arg0` 或 `argv`[0]，傳遞至繁衍的處理序。 依照慣例，此引數是您會在命令列上輸入的程式名稱。 不同的值不會產生錯誤。  
   
- `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 呼叫通常是在預知引數數目時使用。 `arg0` 引數通常是 `cmdname`的指標。 `arg1` 到 `argn` 的引數是形成新引數清單之字元字串的指標。 `argn`之後必須有一個 `NULL` 指標，以標記引數清單的結尾。  
+ `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 呼叫通常是在預知引數數目時使用。 `arg0` 引數通常是 `cmdname`的指標。 `arg1` 到 `argn` 的引數是形成新引數清單之字元字串的指標。 `argn` 之後必須有一個 **NULL** 指標，以標記引數清單的結尾。  
   
- 當新處理序的引數數目可變時，`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 呼叫就很實用。 引數的指標會當做陣列 `argv` 傳遞。 引數 `argv`[0] 通常是真實模式中的路徑或受保護模式中程序名稱的指標，而 `argv`[1] 至 `argv`[`n`] 是形成新引數清單之字元字串的指標。 引數 `argv`[`n` +1] 必須是 `NULL` 指標，以標記引數清單的結尾。  
+ 當新處理序的引數數目可變時，`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 呼叫就很實用。 引數的指標會當做陣列 `argv` 傳遞。 引數 `argv`[0] 通常是真實模式中的路徑或受保護模式中程序名稱的指標，而 `argv`[1] 至 `argv`[`n`] 是形成新引數清單之字元字串的指標。 引數 `argv`[`n` +1] 必須是 **NULL** 指標，以標記引數清單的結尾。  
   
 ## <a name="environment-of-the-spawned-process"></a>繁衍處理序的環境  
- 執行 `_spawn` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 呼叫透過 `envp` 引數傳遞環境設定的清單，來改變新處理序的環境。 引數 `envp` 是字元指標的陣列，其每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 (請注意，`value` 沒有以雙引號括住)。`envp` 陣列的最後一個項目應為 `NULL`。 當 `envp` 本身是 `NULL` 時，繁衍處理序會繼承父代處理序的環境設定。  
+ 執行 `_spawn` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 呼叫透過 `envp` 引數傳遞環境設定的清單，來改變新處理序的環境。 引數 `envp` 是字元指標的陣列，其每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 (請注意，`value` 沒有以雙引號括住)。`envp` 陣列的最後一個項目應為 **NULL**。 當 `envp` 本身是 **NULL** 時，繁衍的處理序會繼承父代處理序的環境設定。  
   
  `_spawn` 函式可以將開啟的檔案的所有資訊，包括轉譯模式在內，傳遞至新的處理序。 這項資訊會透過環境中的 `C_FILE_INFO` 項目以真實模式傳遞。 啟始程式碼通常會處理此項目，再從環境中刪除它。 不過，如果 `_spawn` 函式產生非 C 程序，此項目會保留在環境中。 列印環境會在此項目的定義字串中顯示圖形字元，因為環境資訊以真實模式的二進位格式傳遞。 它對正常作業應該沒有任何其他影響。 在受保護的模式中，環境資訊會以文字格式傳遞，因此不包含任何圖形字元。  
   

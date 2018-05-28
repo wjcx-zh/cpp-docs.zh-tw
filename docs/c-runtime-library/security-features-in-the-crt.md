@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全性功能
 許多舊的 CRT 函式都有較新且更安全的版本。 如果存在較安全的函式，則較舊且較不安全的版本會被標示為已取代，而且新的版本會有 `_s` (「安全」) 後置詞。  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`. 在安全函式和許多現有的函式版本中，傳遞至 CRT 函式的參數會受到驗證。 這些驗證包括：  
   
-    -   檢查傳遞至函式的 `NULL` 值。  
+    -   檢查傳遞至函式的 **NULL** 值。  
   
     -   檢查列舉值的有效性。  
   
@@ -82,7 +82,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Sized Buffers`. 安全函式要求將緩衝區大小傳遞給任何寫入緩衝區的函式。 安全版本會在寫入緩衝區之前驗證緩衝區是否夠大，以協助避免發生可能會允許惡意程式碼執行的危險緩衝區溢位錯誤。 這些函式通常傳回 `errno` 類型的錯誤碼，並在緩衝區大小太小的情況下叫用無效的參數處理常式。 讀取輸入緩衝區的函式 (例如 `gets`) 具有會要求您指定大小上限的安全版本。  
   
--   `Null termination`. 某些會留下潛在非終止字串的函式具有安全版本，可確保字串適當地以 null 結束。  
+-   `Null termination`. 某些會留下潛在非終止字串的函式具有安全版本，可確保字串適當地以 Null 結束。  
   
 -   `Enhanced error reporting`. 安全函式所傳回的錯誤碼，將會包含比現有函式所提供的還要多的資訊。 安全函式和許多現有函式現在會設定 `errno`，且經常傳回 `errno` 程式碼類型，以提供更好的錯誤報告。  
   

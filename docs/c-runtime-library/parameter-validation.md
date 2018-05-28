@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>參數驗證
-大部分的安全性增強 CRT 函式和許多預先存在的函式都會驗證其參數。 這可能包括檢查 NULL 指標、檢查落在有效範圍的整數，或檢查列舉值是否有效。 找到無效的參數時，就會執行無效的參數處理常式。  
+大部分的安全性增強 CRT 函式和許多預先存在的函式都會驗證其參數。 這可能包括檢查 **NULL** 的指標、檢查落在有效範圍的整數，或檢查列舉值是否有效。 找到無效的參數時，就會執行無效的參數處理常式。  
   
 ## <a name="invalid-parameter-handler-routine"></a>無效的參數處理常式  
  當 C 執行階段程式庫函式偵測到無效的參數時，它會擷取有關此錯誤的某些資訊，然後呼叫包裝無效參數處理常式分派函式的巨集，是 [_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md)、[_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md) 或 [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md) 的其中之一。 呼叫的分派函式隨您的程式碼為偵錯版、零售版，或錯誤不視為可復原而定。 

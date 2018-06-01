@@ -16,33 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3634ecf3eb1417095cce144706838113b5ad2a0e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704954"
 ---
 # <a name="compiler-error-c3768"></a>編譯器錯誤 C3768
-無法取得純 managed 程式碼中的虛擬 vararg 函式的位址  
-  
- **/Clr: pure** Visual Studio 2015 中的編譯器選項已被取代。  
-  
- 編譯時`/clr:pure`，您無法取得虛擬機器的位址`vararg`函式。  
-  
-## <a name="example"></a>範例  
 
- 下列範例會產生 C3768:  
-  
-```  
-// C3768.cpp  
-// compile with: /clr:pure  
-struct A  
-{  
-   virtual void f(...);  
-};  
-  
-int main()  
-{  
-   &(A::f);   // C3768  
-}  
+> 無法取得純 managed 程式碼中的虛擬 vararg 函式的位址
+
+## <a name="remarks"></a>備註
+
+**/Clr: pure**編譯器選項已被取代 Visual Studio 2015 中，在 Visual Studio 2017 中支援。
+
+編譯時 **/clr: pure**，您無法取得虛擬機器的位址`vararg`函式。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3768:
+
+```cpp
+// C3768.cpp
+// compile with: /clr:pure
+struct A
+{
+   virtual void f(...);
+};
+
+int main()
+{
+   &(A::f);   // C3768
+}
 ```

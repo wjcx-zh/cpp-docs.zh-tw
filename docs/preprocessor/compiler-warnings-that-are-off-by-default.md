@@ -1,6 +1,6 @@
 ---
 title: 預設為關閉的編譯器警告 |Microsoft 文件
-ms.date: 11/04/2016
+ms.date: 05/30/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,31 +14,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705562"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
-編譯器包含預設關閉的警告，因為大部分的開發人員不想要看到它們。 在某些情況下，它們代表樣式的選擇，或常見慣用語位於較舊的程式碼，或利用語言的 Microsoft 擴充功能。 在其他情況下，它們可以表示的區域的程式設計人員通常都會正確運作，可能會導致非預期或未定義的行為。 有些警告可能非常累贅程式庫標頭中。
+編譯器包含預設關閉的警告，因為大部分的開發人員不想要看到它們。 在某些情況下，它們代表樣式的選擇，或常見慣用語位於較舊的程式碼，或利用語言的 Microsoft 擴充功能。 在其他情況下，它們可以表示的區域的程式設計人員通常都會正確運作，可能會導致非預期或未定義的行為。 有些警告可能非常累贅程式庫標頭中。 C 執行階段程式庫和 c + + 標準程式庫適用於不發出警告層級只會出現任何警告[/W4](../build/reference/compiler-option-warning-level.md)。
 
-您可以使用下列選項之一，以啟用這些警告：
+## <a name="enable-warnings-that-are-off-by-default"></a>啟用都預設為關閉的警告
 
-- **#pragma 警告 (預設：** *warning_number* **)**  
+您可以啟用的警告通常預設為關閉的使用下列選項的其中一個：
+
+- **#pragma 警告 (預設：** *warning_number* **)**
+
    指定的警告 (*warning_number*) 會在其預設層級啟用。 警告的文件包含警告的預設層級。
 
-- **#pragma 警告 (** *warning_level* **:** *warning_number* **)**  
+- **#pragma 警告 (** *warning_level* **:** *warning_number* **)**
+
    指定的警告 (*warning_number*) 指定的層級啟用 (*warning_level*)。
 
-- [/Wall](../build/reference/compiler-option-warning-level.md)  
+- [/Wall](../build/reference/compiler-option-warning-level.md)
+
    **/ 牆**啟用都預設為關閉的所有警告。 如果您使用此選項時，您可以關閉個別的警告使用[/wd](../build/reference/compiler-option-warning-level.md)選項。
 
-- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   這可讓警告*nnnn*層級*l*。
+- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-根據預設，下列警告會關閉。
+   這可讓警告*nnnn*層級*L*。
+
+## <a name="warnings-that-are-off-by-default"></a>預設為關閉的警告
+
+Visual Studio 2015 和更新版本中，預設會關閉下列警告：
 
 |||
 |-|-|
@@ -64,11 +73,12 @@ ms.lasthandoff: 05/07/2018
 |[C4371](../error-messages/compiler-warnings/c4371.md) （層級 3）|'*classname*': 類別配置可能已從舊版編譯器因為的成員有更好的封裝'*成員*'|
 |C4388 （層級 4）|帶正負號/不帶正負號不相符|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （層級 2）|'*函式*': 函式簽章含有類型'*類型*';C + + 物件是純程式碼之間傳遞的不安全與混合或原生|
-|C4426 （層級 1）|包含標頭，可能是因為 #pragma optimize （） 之後變更的最佳化旗標|
+|C4426 （層級 1）|最佳化旗標之後包含標頭，變更可能是因為 #pragma optimize （） <sup>14.1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （層級 4）|'*class1*': /vd2 底下的物件配置將因虛擬基底而變更'*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （層級 4）|從虛擬基底 dynamic_cast '*class1*'to'*class2*' 某些內容中可能會失敗|
 |C4444 （層級 3）|此內容未實作最上層的 '__unaligned'|
 |[C4464](../error-messages/compiler-warnings/c4464.md) （層級 4）|相對 include 路徑包含 '..'|
+|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) （層級 4）|不限範圍列舉的向前宣告必須含有基礎類型 (假設為 int)<sup>權限</sup>|
 |C4472 （層級 1）|'*識別碼*' 是原生列舉： 新增存取規範 (private/public) 以便宣告 managed 的列舉|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) （層級 4）|'*函式*': 已移除未參考的內嵌函式|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) （層級 4）|'type name': 類型名稱超出中繼資料的限制 '*限制*' 字元|
@@ -81,13 +91,16 @@ ms.lasthandoff: 05/07/2018
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) （層級 3）|'__assume' 包含作用 '*效果*'|
 |[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （層級 4）|Visual c + + 7.1; 以來變更的告知性： catch 語意不再攔截結構化例外狀況 (SEH)|
 |C4574 （層級 4）|'*識別碼*'定義為' 0': 您是否想要使用 ' #if*識別碼*'？|
+|C4577 （層級 1）|任何例外狀況處理模式指定; 使用 ' noexcept'不保證終止的例外狀況。 指定 /EHsc|
 |C4582 （層級 4）|'*類型*': 未隱含呼叫建構函式|
 |C4583 （層級 4）|'*類型*': 未隱含呼叫解構函式|
 |C4587 （層級 1）|'*anonymous_structure*': 行為變更： 不再隱含呼叫建構函式|
 |C4588 （層級 1）|'*anonymous_structure*': 行為變更： 不再隱含呼叫解構函式|
-|C4598 （層級 1 和層級 3）|' #include"*標頭*"': 標頭數目*數目*先行編譯標頭中不符合目前在該位置的編譯|
-|C4599 （層級 3）|'*選項**路徑*': 命令列引數數目*數目*不符先行編譯標頭|
+|C4596 （層級 4）|'*識別碼*': 成員宣告中不合法的限定的名稱<sup>14.3</sup> <sup>權限</sup>|
+|C4598 （層級 1 和層級 3）|' #include"*標頭*"': 標頭數目*數目*先行編譯標頭中不符合該位置的目前編譯<sup>14.3</sup>|
+|C4599 （層級 3）|'*選項**路徑*': 命令列引數數目*數目*不符先行編譯標頭<sup>14.3</sup>|
 |C4605 （層級 1）|'/D*巨集*' 目前的命令列上指定，但未指定建置先行編譯標頭時|
+|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) （層級 3）|'*union_member*'已經初始化的另一個等位的成員，在初始設定式清單中，'*union_member*'<sup>權限</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) （層級 3）|#pragma 警告： 沒有警告編號 '*數目*'|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) （層級 4）|'derived class': 因為無法存取基底類別預設建構函式，所以無法產生預設建構函式|
 |[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) （層級 4）|'derived class': 因為無法存取基底類別複製建構函式，所以無法產生複製建構函式|
@@ -95,7 +108,7 @@ ms.lasthandoff: 05/07/2018
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) （層級 1）|不支援使用 -Ze 的雙拼詞。 字元順序 '*了雙拼詞*'沒有解譯為替代語彙基元'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) （層級 3）|'*執行個體*': 區域靜態物件的建構不是安全執行緒|
 |C4647 （層級 3）|行為變更： __is_pod (*類型*) 在舊版中有不同的值|
-|C4654 （層級 4）|先行編譯標頭包含放在之前的程式碼行都會被忽略。 程式碼加入先行編譯標頭。|
+|C4654 （層級 4）|先行編譯標頭包含放在之前的程式碼行都會被忽略。 程式碼加入先行編譯標頭。 <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) （層級 4）|'*符號*'未定義成前置處理器巨集，以 '0' 取代'*指示詞*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) （層級 4）|'*符號*': 沒有方向參數屬性指定，預設為 [in]|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) （層級 3）|'*使用者定義型別*': 行為可能變更，在 UDT 傳回呼叫慣例|
@@ -107,6 +120,7 @@ ms.lasthandoff: 05/07/2018
 |C4767 （層級 4）|區段名稱 '*符號*' 超過 8 個字元，將由連結器截斷|
 |C4768 （層級 3）|就會忽略 __declspec 屬性之前連結規格|
 |C4774 （層級 4）|'*字串*': 格式字串引數中必須要有*數目*不是字串常值|
+|C4777 （層級 4）|'*函式*': 格式字串'*字串*'需要類型的引數'*type1*'，但 variadic 引數*數目*具有類型 '*type2*'|
 |C4786 （層級 3）|'*符號*': 物件名稱被截斷成'*數目*' 的偵錯資訊中的字元|
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) （層級 4）|'*位元組*'位元組填補已加建構後'*member_name*'|
 |C4826 （層級 2）|從轉換 '*type1*'to'*type2*' 是帶正負號擴充。 這可能導致意外發生執行階段行為。|
@@ -131,18 +145,22 @@ ms.lasthandoff: 05/07/2018
 |C5026 （層級 1 和層級 4）|'*類型*': move 建構函式已隱含定義為已刪除|
 |C5027 （層級 1 和層級 4）|'*類型*': move 指派運算子已隱含定義為已刪除|
 |C5029 （層級 4）|使用非標準擴充： c + + 中的對齊屬性的變數、 資料成員及標記類型只適用於|
-|C5031 （層級 4）|#pragma warning （pop): 可能不相符，快顯警告狀態推入不同的檔案|
-|C5032 （層級 4）|偵測到任何對應 「 #pragma warning （pop 的) #pragma warning|
-|C5035|使用功能 '*功能*' 函式會導致*函式*編譯為客體程式碼|
-|C5036 （層級 1）|varargs 函式的指標轉換時使用 /hybrid:x86arm64 編譯 '*type1*'to'*type2*'|
-|[C5038](../error-messages/compiler-warnings/c5038.md)|資料成員 '*member1*'將初始化資料成員之後'*member2*'|
+|C5031 （層級 4）|#pragma warning （pop): 可能不相符，快顯警告狀態推入不同的檔案<sup>14.1</sup>|
+|C5032 （層級 4）|偵測到任何對應 「 #pragma warning （pop 的) #pragma warning <sup>14.1</sup>|
+|C5034|使用內建函式 '*內建*' 函式會導致*函式*客體程式碼要編譯<sup>15.3</sup>|
+|C5035|使用功能 '*功能*' 函式會導致*函式*客體程式碼要編譯<sup>15.3</sup>|
+|C5036 （層級 1）|varargs 函式的指標轉換時使用 /hybrid:x86arm64 編譯 '*type1*'to'*type2*' <sup>15.3</sup>|
+|[C5038](../error-messages/compiler-warnings/c5038.md) （層級 4）|資料成員 '*member1*'將初始化資料成員之後'*member2*' <sup>15.3</sup>|
+|C5039 （層級 4）|'*函式*': 指標或參考可能會擲回函式傳遞至下-/ehc extern C 函式。 如果此函式會擲回的例外狀況，可能會發生未定義的行為。 <sup>15.5</sup>|
+|C5042 （層級 3）|'*函式*': 在區塊範圍函式宣告不能指定 'inline' 標準 c + + 中，移除 'inline' 規範<sup>15.5</sup>|
 
-除非已關閉這些警告[/ 寬鬆-](../build/reference/permissive-standards-conformance.md)編譯器選項設定：
+<sup>14.1</sup>這項警告是可用以啟動 Visual Studio 2015 Update 1。<br>
+<sup>14.3</sup>這項警告是可用以啟動 Visual Studio 2015 Update 3。<br>
+<sup>15.3</sup>這項警告是可用以啟動 Visual Studio 2017 15.3 版本。<br>
+<sup>15.5</sup>這項警告是可用以啟動 Visual Studio 2017 15.5 版本。<br>
+<sup>權限</sup>此警告為關閉，除非[/ 寬鬆-](../build/reference/permissive-standards-conformance.md)編譯器選項設定。
 
-|||
-|-|-|
-|[C4471 （層級 4）](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md)|不限範圍的列舉之向前宣告必須含有基礎類型 (假設是 int)|
-|[C4608 （層級 3）](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)|'*union_member*'已經初始化的另一個等位的成員，在初始設定式清單中，'*union_member*'|
+## <a name="warnings-off-by-default-in-earlier-versions"></a>在舊版中預設關閉警告
 
 根據預設，在 Visual Studio 2015 之前的編譯器版本，這些警告已關閉：
 
@@ -153,7 +171,7 @@ ms.lasthandoff: 05/07/2018
 |[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) （層級 1）|'*作業*': 從'*type1*'to'*type2*' 更大的|
 |[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) （層級 1）|'*運算子*': 零擴充'*type1*'to'*type2*' 更大的|
 
-根據預設，在 Visual Studio 2012 之前的編譯器版本，這些警告已關閉：
+根據預設，在 Visual Studio 2012 之前版本，這項警告是編譯器的關閉的：
 
 |||
 |-|-|

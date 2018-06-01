@@ -17,11 +17,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704668"
 ---
 # <a name="platformarray-class"></a>Platform::Array 類別
 表示可修改的一維陣列，可在不同的應用程式二進位介面 (ABI) 之間接收和傳遞。  
@@ -62,7 +63,7 @@ private ref class Array<TArg, 1> :
   
  Windows 執行階段類型系統不支援不規則陣列的概念，因此您不能傳遞 Ivector<platform < platform:: array\<T >> 做為傳回值或方法參數。 若要跨 ABI 傳遞不規則陣列或一組序列中的某個序列，請使用 `IVector<IVector<T>^>`。  
   
- 此類別定義於編譯器會自動納入的 vccorlib.h 標頭中。 它可在 Intellisense 中看到，但是在物件瀏覽器中看不到，因為它不是 platform.winmd 中所定義的公用類型。  
+ 此類別定義於編譯器會自動納入的 vccorlib.h 標頭中。 因為它不是 platform.winmd 中所定義的公用型別，它是顯示在 IntelliSense，但不是能在物件瀏覽器。  
   
 ### <a name="requirements"></a>需求  
  編譯器選項： **/ZW**  

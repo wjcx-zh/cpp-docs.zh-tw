@@ -16,23 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496ff73822dcc1c886fbd2020f8ec6b8a5a9a2f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704941"
 ---
 # <a name="compiler-error-c3641"></a>編譯器錯誤 C3641
-'function': 無效的呼叫慣例 'calling_convention' 以 /clr 編譯的函式： pure 或 /clr: safe  
-  
- **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
-  
- 只有[__clrcall](../../cpp/clrcall.md)呼叫慣例則允許使用[/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)。  
-  
- 下列範例會產生 C3641:  
-  
-```  
-// C3641.cpp  
-// compile with: /clr:pure /c  
-void __cdecl f() {}   // C3641  
+
+> '*函式*': 無效的呼叫慣例 'calling_convention' 以 /clr 編譯的函式： pure 或 /clr: safe
+
+## <a name="remarks"></a>備註
+
+**/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。
+
+只有[__clrcall](../../cpp/clrcall.md)呼叫慣例則允許使用[/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)。
+
+## <a name="example"></a>範例
+
+下列範例會產生 C3641:
+
+```cpp
+// C3641.cpp
+// compile with: /clr:pure /c
+void __cdecl f() {}   // C3641
 ```

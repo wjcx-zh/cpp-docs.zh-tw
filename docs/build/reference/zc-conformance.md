@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704837"
 ---
 # <a name="zc-conformance"></a>/Zc (一致性)
 
@@ -43,6 +44,7 @@ ms.lasthandoff: 05/03/2018
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|啟用 C + + 17 過度對齊動態配置 （預設在 C + + 17）。|
 |[自動\[-\]](zc-auto-deduce-variable-type.md)|強制執行針對新的標準 c + + 意義`auto`(在預設情況下)。|
+|[__cplusplus\[-\]](zc-cplusplus.md)|啟用 **__cplusplus**巨集，以報告所支援的標準 （預設為關閉）。|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|啟用外部連結的`constexpr`變數 （預設為關閉）。|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|強制執行標準 c + +`for`設定規則的範圍 (在預設情況下)。|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|啟用隱含`noexcept`對必要函式 (在預設情況下)。|

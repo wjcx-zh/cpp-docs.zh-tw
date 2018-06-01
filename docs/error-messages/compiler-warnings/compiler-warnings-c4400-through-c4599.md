@@ -1,6 +1,6 @@
 ---
 title: 編譯器警告 C4400 透過 C4599 |Microsoft 文件
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704681"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>編譯器警告 C4400 透過 C4599
 
@@ -319,7 +320,8 @@ ms.lasthandoff: 05/04/2018
 |編譯器警告 （層級 4） C4574|'*識別碼*'定義為' 0': 您是否想要使用 '#if identifier'？|
 |編譯器警告 （層級 1） C4575|'__vectorcall' 不以 '/ /clr' 選項： 將轉換為 '__stdcall'|
 |編譯器警告 （層級 1，錯誤） C4576|後面接著以初始設定式清單是括號括住類型為非標準的明確類型轉換語法|
-|編譯器警告 （層級 1，錯誤） C4578|'abs': 從 '*type1*'to'*type2*'，可能導致資料遺失 (您是否想要呼叫'*函式*' 或 #include <cmath>？)|
+|編譯器警告 （層級 1，設為 Off） C4577|任何例外狀況處理模式指定; 使用 ' noexcept'不保證終止的例外狀況。 指定 /EHsc|
+|編譯器警告 （層級 1，錯誤） C4578|'abs': 從轉換 '*type1*'to'*type2*'，可能導致資料遺失 (您是否想要呼叫'*函式*' 或 #include \<h >？)|
 |[編譯器警告 (層級 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] 已被取代；請改為指定 System::Attribute 或 Platform::Metadata 作為基底類別|
 |[編譯器警告 (層級 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|已被取代的行為: '"*字串*"' 取代 '*字串*' 處理序屬性|
 |編譯器警告 （層級 4） C4582|'*類型*': 未隱含呼叫建構函式|

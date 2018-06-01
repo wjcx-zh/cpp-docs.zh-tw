@@ -1,6 +1,6 @@
 ---
 title: 編譯器警告 C4800 透過 C5999 |Microsoft 文件
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704746"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>編譯器警告 C4800 透過 C5999
 
@@ -242,10 +243,10 @@ ms.lasthandoff: 05/04/2018
 |編譯器警告 C5035|使用功能 '*功能*' 函式會導致*函式*編譯為客體程式碼|
 |編譯器警告 （層級 1） C5036|varargs 函式的指標轉換時使用 /hybrid:x86arm64 編譯 '*type1*'to'*type2*'|
 |編譯器警告 （錯誤） C5037|'*成員函式*': 類別樣板的成員的行外定義不能有預設引數|
-|[編譯器警告 C5038](c5038.md)|資料成員 '*member1*'將初始化資料成員之後'*member2*'|
-|編譯器警告 C5039|'*函式*': 指標或參考可能會擲回函式傳遞至下-/ehc extern C 函式。 如果此函式會擲回的例外狀況，可能會發生未定義的行為。|
-|編譯器警告 C5040|動態例外狀況規格是有效的只有在 C + + 14 和舊版中;視為 noexcept|
-|編譯器警告 C5041|'*定義*': 不需要 constexpr 靜態資料成員的行外定義，而且已被取代的 C + + 17|
-|編譯器警告 C5042|'*宣告*': 在區塊範圍函式宣告不能指定 'inline' 標準 c + + 中，移除 'inline' 規範|
-|編譯器警告 C5043|'*規格*': 例外狀況規格與上一個宣告不符|
-|編譯器警告 C5044|命令列選項的引數*選項*指向的路徑 '*路徑*' 不存在|
+|[編譯器警告 （層級 4） C5038](c5038.md)|資料成員 '*member1*'將初始化資料成員之後'*member2*'|
+|編譯器警告 （層級 4） C5039|'*函式*': 指標或參考可能會擲回函式傳遞至下-/ehc extern C 函式。 如果此函式會擲回的例外狀況，可能會發生未定義的行為。|
+|編譯器警告 （層級 3） C5040|動態例外狀況規格是有效的只有在 C + + 14 和舊版中;視為 noexcept|
+|編譯器警告 （層級 1） C5041|'*定義*': 不需要 constexpr 靜態資料成員的行外定義，而且已被取代的 C + + 17|
+|編譯器警告 （層級 3） C5042|'*宣告*': 在區塊範圍函式宣告不能指定 'inline' 標準 c + + 中，移除 'inline' 規範|
+|編譯器警告 （層級 2） C5043|'*規格*': 例外狀況規格與上一個宣告不符|
+|編譯器警告 （層級 4） C5044|命令列選項的引數*選項*指向的路徑 '*路徑*' 不存在|

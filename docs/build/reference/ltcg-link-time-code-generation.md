@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703729"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (連結時間產生程式碼)
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/03/2018
 
 以 [/GL](../../build/reference/gl-whole-program-optimization.md) 和 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 編譯的模組可以在指定 **/LTCG** 時用做連結器的輸入。
 
-- **/LTCG**可接受原生物件的檔案和混合原生 /managed 物件檔案 (使用編譯的 **/clr**)。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。
+- **/LTCG**可接受原生物件的檔案和混合原生 /managed 物件檔案 (使用編譯的 **/clr**)。 **/Clr: pure**和 **/clr: safe**編譯器選項都是 Visual Studio 2015 中已被取代，並不支援的 Visual Studio 2017 中。
 
 - **/Ltcg: pgi**不接受使用所編譯的原生模組 **/GL**和 **/clr**
 
@@ -161,5 +162,5 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>另請參閱
 
-[設定連結器選項](../../build/reference/setting-linker-options.md)<br/>
-[連結器選項](../../build/reference/linker-options.md)<br/>
+- [設定連結器選項](../../build/reference/setting-linker-options.md)
+- [連結器選項](../../build/reference/linker-options.md)

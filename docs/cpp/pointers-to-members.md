@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: 3c1930dc1e7e69fdbb431029cd3e9b9b00a140cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34686847"
 ---
 # <a name="pointers-to-members"></a>成員的指標
 成員指標宣告是特殊的指標宣告。  函式是使用下列序列宣告：  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- 在上述範例中，`pwCaption`類別的任何成員的指標`Window`用具有型別的**char\***。 `pwCaption` 的類型是 `char * Window::*`。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。  
+ 在上述範例中，`pwCaption`類別的任何成員的指標`Window`用具有型別的**char\***。 `pwCaption` 的類型是 `char * Window::* `。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -112,7 +113,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 之間的差異**。\*** 和**-> \*** 運算子 （成員指標運算子） 是**。\*** 運算子會選取指定物件或物件參考，而**-> \*** 運算子會選取透過指標的成員。 (如需有關這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
+ 之間的差異 **。\*** 和**-> \*** 運算子 （成員指標運算子） 是 **。\*** 運算子會選取指定物件或物件參考，而**-> \*** 運算子會選取透過指標的成員。 (如需有關這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)  
   
  成員指標運算子的結果是成員的型別，在此情況下， **char \*** 。  
   

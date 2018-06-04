@@ -1,7 +1,7 @@
 ---
 title: 編譯器警告的編譯器版本 |Microsoft 文件
 ms.custom: ''
-ms.date: 01/31/2018
+ms.date: 05/30/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e40de8aa08ae12bb0389a113be4d6cbd51196f12
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704733"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>編譯器警告的編譯器版本
 
-編譯器可以隱藏導入後的版本，您可以使用指定的警告[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項。 這是適合用來管理您的建置程序，當您引入新的工具組版本，並想要暫時隱藏新的警告。 這個選項不會隱藏新的錯誤訊息。 我們不建議您隱藏所有的新警告永久 ！ 我們建議您一律在最高規則的警告層級編譯 __/W4__，並移除 __/Wv__儘速在您的組建選項。 
+編譯器可以隱藏導入後的版本，您可以使用指定的警告[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項。 這是適合用來管理您的建置程序，當您引入新的工具組版本，並想要暫時隱藏新的警告。 這個選項不會隱藏新的錯誤訊息。 我們不建議您隱藏所有的新警告永久 ！ 我們建議您一律在最高規則的警告層級編譯 __/W4__，並移除 __/Wv__儘速在您的組建選項。
 
 這些版本的編譯器導入新的警告：
 
@@ -39,26 +40,36 @@ ms.lasthandoff: 05/04/2018
 | Visual c + + 2015 Update 1 | 19.00.23506.0 |
 | Visual c + + 2015 Update 2 | 19.00.23918.0 |
 | Visual c + + 2015 Update 3 | 19.00.24215.1 |
-| Visual c + + 2017 RTM | 19.10.24903.0 |
-| Visual c + + 2017 版本 15.1 | 19.10.25017.0 |
+| Visual c + + 2017 RTM | 19.10.25017.0 |
 | Visual c + + 2017 版本 15.3 | 19.11.25506.0 |
-| Visual c + + 2017 版本 15.5 | 19.12.25827.0 |
+| Visual c + + 2017 版本 15.5 | 19.12.25830.0 |
+| Visual c + + 2017 版本 15.6 | 19.13.26128.0 |
+| Visual c + + 2017 版本 15.7 | 19.14.26428.0 |
 
 您可以指定只有主要版本號碼、 主要和次要的數字或主要、 次要、 和組建編號 __/Wv__選項。 編譯器會報告所有警告符合指定的數目，以開始的版本，且會抑制版本大於指定的數字的所有警告。 例如， __/Wv:17__報告導入，或任何版本的 Visual Studio 2012 之前的所有警告，且會抑制任何編譯器，從 Visual Studio 2013 （18 版） 或更新版本所導入的所有警告。 隱藏警告導入在 Visual Studio 2015 update 2 和更新版本中，您可以使用 __/Wv:19.00.23506__。 使用 __/Wv:19.11__報告所有警告導入了在任何版本 Visual Studio 2017 版本 15.5 之前, 的 Visual Studio 中，但是會隱藏在 Visual Studio 2017 15.5 和更新版本中導入的警告。
 
 下列章節會列出您可以藉由使用隱藏的 Visual c + + 的每個版本所導入的警告 __/Wv__編譯器選項。 __/Wv__選項無法隱藏警告不會列出，自封指定的版本的編譯器。
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Visual c + + 2017 15.5 （編譯器版本 19.12.25827.0） 版本中導入的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Visual c + + 2017 15.7 （編譯器版本 19.14.26428.0） 版本中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.11__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.13__。
+
+|||
+|-|-|
+C4642|'*問題*': 無法匯入的條件約束對泛型參數'*參數*'
+C5045|編譯器會插入 Spectre 緩和記憶體負載，如果 /Qspectre 切換指定
+
+## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>Visual c + + 2017 15.6 （編譯器版本 19.13.26128.0） 版本中導入的警告
+
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.12__。
 
 |||
 |-|-|
 C5044|命令列選項的引數*選項*指向的路徑 '*路徑*' 不存在
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Visual c + + 2017 15.3 （編譯器版本 19.11.25506.0） 版本中導入的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>Visual c + + 2017 15.5 （編譯器版本 19.12.25830.0） 版本中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.10__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.11__。
 
 |||
 |-|-|
@@ -70,9 +81,9 @@ C5041|'*定義*': 不需要 constexpr 靜態資料成員的行外定義，而且
 C5042|'*宣告*': 在區塊範圍函式宣告不能指定 'inline' 標準 c + + 中，移除 'inline' 規範
 C5043|'*規格*': 例外狀況規格與上一個宣告不符
 
-## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Visual c + + 2017 15.1 （編譯器版本 19.10.25017.0） 版本中導入的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Visual c + + 2017 15.3 （編譯器版本 19.11.25506.0） 版本中導入的警告
 
-使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.10.24903__。
+使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.10__。
 
 |||
 |-|-|
@@ -91,7 +102,7 @@ C5036|varargs 函式的指標轉換時使用 /hybrid:x86arm64 編譯 '*type1*'to
 C5037|'*成員函式*': 類別樣板的成員的行外定義不能有預設引數
 C5038|資料成員 '*member1*'將初始化資料成員之後'*member2*'
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>在 Visual c + + 2017 RTM （編譯器版本 19.10.24903） 中導入的警告
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>在 Visual c + + 2017 RTM （編譯器版本 19.10.25017.0） 中導入的警告
 
 使用編譯器選項會抑制這些警告和更新版本中的所有警告 __/Wv:19.00__。
 
@@ -164,15 +175,15 @@ C4498|使用非標準擴充: '*延伸*'
 C4499|'*特製化*': 明確特製化不能有儲存類別 （忽略）
 C4576|後面接著以初始設定式清單是括號括住類型為非標準的明確類型轉換語法
 C4577|任何例外狀況處理模式指定; 使用 ' noexcept'不保證終止的例外狀況。 指定 /EHsc
-C4578|'abs': 從 '*類型*'to'*類型*'，可能導致資料遺失 (您是否想要呼叫'*名稱*' 或 #include <cmath>？)
+C4578|'abs': 從轉換 '*類型*'to'*類型*'，可能導致資料遺失 (您是否想要呼叫'*名稱*' 或 #include \<h >？)
 C4582|'*類型*': 未隱含呼叫建構函式
 C4583|'*類型*': 未隱含呼叫解構函式
 C4587|'*類型*': 行為變更： 不再隱含呼叫建構函式
 C4588|'*類型*': 行為變更： 不再隱含呼叫解構函式
 C4589|抽象類別的建構函式*類型*'會忽略虛擬基底類別初始設定式'*類型*'
-C4591|'constexpr' 呼叫深度限制*數目*超過 (/: depth<n><NUMBER>)
+C4591|'constexpr' 呼叫深度限制*數目*超過 (/: depth<n>\<數字 >)
 C4592|'*類型*': 符號將會動態初始化 （實作限制）
-C4593|'*類型*': 'constexpr' 呼叫評估步驟限制*值*超過; 使用 /constexpr:<NUMBER>以提高的限制
+C4593|'*類型*': 'constexpr' 呼叫評估步驟限制*值*超過; 使用 /constexpr:\<數字 > 以提高的限制
 C4647|行為變更： __is_pod (*類型*) 在舊版中有不同的值
 C4648|忽略標準的屬性 '未以 carries_dependency'
 C4649|在此內容中就會忽略屬性
@@ -377,10 +388,10 @@ C4633|XML 文件註解*描述*： 錯誤：*描述*
 C4634|XML 文件註解*描述*： 無法套用：*描述*
 C4635|XML 文件註解*描述*: XML 格式錯誤：*描述*
 C4636|XML 文件註解*描述*： 標記必須是非空白 '*描述*' 屬性。
-C4637|XML 文件註解*描述*:<include>標記已捨棄。 *description*
+C4637|XML 文件註解*描述*:\<包括 > 標記已捨棄。 *description*
 C4638|XML 文件註解*描述*： 未知的符號參考 '*描述*'。
 C4639|MSXML 錯誤，將不會處理註解的 XML 文件。 *description*
-C4641|XML 文件註解有模稜兩可的交互參考： 
+C4641|XML 文件註解有模稜兩可的交互參考：
 C4678|基底類別*宣告*'是比存取'*名稱*'
 C4679|'*描述*': 無法匯入成員
 C4687|'*類型*': 密封抽象類別不能實作介面'*類型*'
@@ -626,6 +637,7 @@ C4997|'*類型*': coclass 未實作 COM 介面或虛擬介面
 C4998|預期失敗：*描述*(*數目*)
 
 ## <a name="see-also"></a>另請參閱
-[/Wv 編譯器選項](../../build/reference/compiler-option-warning-level.md)
-[都預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
-[警告](../../preprocessor/warning.md)
+
+- [/Wv 編譯器選項](../../build/reference/compiler-option-warning-level.md)
+- [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+- [warning](../../preprocessor/warning.md)

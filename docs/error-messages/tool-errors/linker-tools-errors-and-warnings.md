@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c38adaab248127f9810d53304ca1ad9593f78667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f279c4e59f8eb7f655ae10f8ea99ec6ed31115ec
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569952"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>連結器工具錯誤和警告
 
@@ -132,6 +133,8 @@ ms.lasthandoff: 05/04/2018
 
 [連結器工具錯誤 LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
+[連結器工具錯誤 LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+
 [連結器工具錯誤 LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 
 [連結器工具錯誤 LNK1561](../../error-messages/tool-errors/linker-tools-error-lnk1561.md)
@@ -181,6 +184,8 @@ ms.lasthandoff: 05/04/2018
 [連結器工具警告 LNK4010](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md)
 
 [連結器工具警告 LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
+
+[連結器工具警告 LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [連結器工具警告 LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 

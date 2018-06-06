@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94a9e75770e822c89ea65a745a2fca491f175d95
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569858"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>錯誤和例外狀況處理 (現代 C++)
 在現代 c + +，在大部分情況下，報告和處理邏輯錯誤和執行階段錯誤的慣用的方法是使用例外狀況。 堆疊可能包含有要知道如何處理它的內容的函式偵測到錯誤的函式之間的數個函式呼叫時，這是特別有用。 例外狀況所偵測的錯誤，以傳遞到呼叫堆疊資訊的程式碼提供正式的妥善定義的方式。  
@@ -46,7 +47,7 @@ class MyClass
 public:  
    void MyFunc(char c)  
    {  
-      if(c < numeric_limits<char>::max())  
+      if(c > numeric_limits<char>::max())  
          throw invalid_argument("MyFunc argument too large.");  
       //...  
    }  

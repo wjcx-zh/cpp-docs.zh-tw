@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569790"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式 （Visual c + +）
-A*桌面應用程式*c + + 中是可以存取一組完整的 Windows 應用程式開發介面，並在視窗或系統主控台中任一個執行的原生應用程式。 在 c + + 桌面應用程式可以執行 Windows XP 到 Windows 10 （但是不再正式支援 Windows XP 和有許多 Windows 應用程式開發介面已引進從那時起）。   桌面應用程式是從通用 Windows 平台 (UWP) 應用程式，可以在執行 Windows 10 的電腦上以及 XBox、 Windows Phone、 Surface Hub 和其他裝置上執行的不同。 如需桌面 vs 的詳細資訊。UWP 應用程式，請參閱[選擇您的技術](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)。  
+A*桌面應用程式*c + + 中是可以存取一組完整的 Windows 應用程式開發介面，並在視窗或系統主控台中任一個執行的原生應用程式。 在 c + + 桌面應用程式可以執行 Windows XP 到 Windows 10 （但是不再正式支援 Windows XP 和有許多 Windows 應用程式開發介面已引進從那時起）。
+
+桌面應用程式是從通用 Windows 平台 (UWP) 應用程式，可以在執行 Windows 10 的電腦上以及 XBox、 Windows Phone、 Surface Hub 和其他裝置上執行的不同。 如需桌面 vs 的詳細資訊。UWP 應用程式，請參閱[選擇您的技術](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)。  
+
+
+**桌面橋接器**中 Windows 10 您可以封裝您現有的桌面應用程式或為 UWP 應用程式的 COM 物件，並將 UWP 之類觸控，或從呼叫 Api 現代化的功能 Windows API 設定。 您也可以加入至桌面的方案在 Visual Studio 中，與封裝一起在單一封裝，並使用它們之間進行通訊的 Windows Api 的 UWP 應用程式。  
+   
+在 Visual Studio 2017 15.4 和更新版本，您可以建立 Windows 應用程式封裝專案大幅簡化封裝您現有的桌面應用程式的工作。 相對於呼叫哪些登錄套用一些限制或應用程式開發介面桌面應用程式使用，但在許多情況下，您可以建立替代的程式碼路徑來達成類似的功能，應用程式封裝中執行時。 如需詳細資訊，請參閱[桌面橋接器](/windows-uwp/porting/desktop-to-uwp-root)。  
   
  **術語**  
   

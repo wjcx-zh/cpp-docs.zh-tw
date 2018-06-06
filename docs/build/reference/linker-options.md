@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753626"
 ---
 # <a name="linker-options"></a>連結器選項
 
@@ -67,6 +68,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|控制 DLL 的延遲載入。|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|引起指定之 DLL 的延遲載入。|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|部分簽署組件。|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|設定相依的 DLL 載入預設旗標。|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|建置 DLL。|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|建立核心模式驅動程式。|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|指定是否產生可執行映像檔，其可使用位址空間配置隨機載入 (ASLR) 功能，於載入時隨機重定基底。|

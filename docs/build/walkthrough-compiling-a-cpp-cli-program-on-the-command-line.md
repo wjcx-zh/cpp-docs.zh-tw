@@ -16,7 +16,7 @@ ms.openlocfilehash: 46e4b8d6341ad659596f7e83ab3cdcb89b18df2d
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34705302"
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C++/CLI 程式

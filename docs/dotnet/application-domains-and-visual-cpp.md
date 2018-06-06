@@ -23,7 +23,7 @@ ms.openlocfilehash: b935b9a5d1561fa1c8b961ee48b92f59b98e2bd2
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704330"
 ---
 # <a name="application-domains-and-visual-c"></a>應用程式定義域和 Visual c + +

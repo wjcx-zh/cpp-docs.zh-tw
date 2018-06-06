@@ -22,7 +22,7 @@ ms.openlocfilehash: d72be19eb893a74a17a988e8c14c6bdaba766cbc
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704510"
 ---
 # <a name="how-to-migrate-to-clrsafe-ccli"></a>如何：移轉至 /clr:safe (C++/CLI)

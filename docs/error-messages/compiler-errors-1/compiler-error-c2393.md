@@ -20,7 +20,7 @@ ms.openlocfilehash: 057537c8efcf6e827d9ac9aaf36c0eace6d24156
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704026"
 ---
 # <a name="compiler-error-c2393"></a>編譯器錯誤 C2393

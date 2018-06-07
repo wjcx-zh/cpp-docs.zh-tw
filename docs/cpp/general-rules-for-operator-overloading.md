@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705422"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814335"
 ---
 # <a name="general-rules-for-operator-overloading"></a>運算子多載的一般規則
 下列規則限制多載運算子的實作方式。 不過，它們不會套用到[新](../cpp/new-operator-cpp.md)和[刪除](../cpp/delete-operator-cpp.md)個別說明的運算子。  
@@ -55,7 +55,7 @@ ms.locfileid: "34705422"
   
 -   宣告為成員函式的二元運算子接受一個引數；如果宣告為全域函式，則會接受兩個引數。  
   
--   如果運算子可用來當做一元或二元運算子 (**&**， **\***， **+**，和**-**)，您可以個別多載每次使用。  
+-   如果運算子可用來當做一元或二元運算子 (__&__， __*__， __+__，和__-__)，您可以個別多載每次使用。  
   
 -   多載運算子不可以有預設引數。  
   

@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843071"
 ---
 # <a name="building-browse-information-files-overview"></a>建置瀏覽資訊檔：概觀
 若要建立的符號瀏覽資訊時，編譯器會建立每個來源檔案的.sbr 檔案在您的專案，然後 BSCMAKE。EXE 會串連成一個.bsc 檔案的.sbr 檔案。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  請不要建置.bsc 檔，在專案層級，或使用 /n 參數來防止.sbr 檔被截斷。  
   
-2.  所有專案都建置後，請與所有.sbr 檔案都執行 BSCMAKE，做為輸入。 使用萬用字元。 比方說，如果您在專案目錄 C:\X、 C:\Y 和 C:\Z 以及您想要將它們合併成一個.bsc 檔所有.sbr 檔案，然後使用 BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*。sbr /o c:\whatever_directory\combined.bsc 建置結合的.bsc 檔案。  
+2.  所有專案都建置後，請與所有.sbr 檔案都執行 BSCMAKE，做為輸入。 使用萬用字元。 比方說，如果您在專案目錄 C:\X、 C:\Y 和 C:\Z 以及您想要將它們合併成一個.bsc 檔所有.sbr 檔案，然後使用 BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\\*.sbr /o c:\whatever_directory\combined.bsc 建置結合的.bsc 檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   

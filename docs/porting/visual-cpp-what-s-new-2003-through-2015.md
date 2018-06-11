@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705601"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1936,7 +1937,7 @@ __sptr、__uptr
 - `64 位元原生和跨編譯器。
 - 已新增 /analyze (企業程式碼分析) 編譯器選項。
 - 已新增 /bigobj 編譯器選項。
-- 已新增 /clr:pure、/clr:safe 和 /clr:oldSyntax。 (之後於 Visual Studio 2015 中淘汰。)
+- 已新增 /clr:pure、/clr:safe 和 /clr:oldSyntax。 (之後在 Visual Studio 2015 中被取代，並在 Visual Studio 2017 被移除。)
 - 已取代的編譯器選項：在此版本中，已取代許多編譯器選項；如需詳細資訊，請參閱＜已被取代的編譯器選項＞。
 - 已減少 /clr 程式碼中的 Double Thunking；如需詳細資訊，請參閱 Double Thunking (C++)。
 - /EH (例外狀況處理模型) 或 /EHs 不再用來攔截因擲回以外的事件而引發的例外狀況；請使用 /EHa。

@@ -14,11 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
-ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
+ms.openlocfilehash: af51ee7c6fa4e1243b400be58ac22ba833cfae80
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705435"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
 
@@ -120,7 +121,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 現在您只要鍵入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 會將其標頭放在 **/installed** 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 **/was** 子資料夾中的 Include 檔清單：
 
-![vcpkg Intellisense 整合](media/vcpkg-intellisense.png "vcpkg 與 Intellisense")
+![vcpkg IntelliSense 整合](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
 
 ### <a name="per-project"></a>每個專案
 

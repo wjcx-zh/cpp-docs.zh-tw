@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705695"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Makefile 專案屬性 (Linux C++)
 
@@ -92,7 +93,7 @@ Include 搜尋路徑 | 指定 Include 搜尋路徑以解析包含的檔案。
 強制內含 | 指定要強制內含的檔案。
 前置處理器定義 | 指定來源檔案所使用的前置處理器定義。
 取消前置處理器的定義 | 指定取消一或多個前置處理器的定義。     (/U[巨集])
-其他選項 | 指定在剖析 C++ 檔案時，Intellisense 要使用的其他編譯器參數。
+其他選項 | 指定在剖析 C++ 檔案時，IntelliSense 所要使用的額外編譯器參數。
 
 ### <a name="build"></a>組建
 

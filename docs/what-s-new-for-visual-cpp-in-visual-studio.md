@@ -9,11 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569692"
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] 中 Visual C++ 的新功能
 
@@ -394,12 +395,10 @@ Visual Studio Build Tools (先前以獨立產品形式提供) 現在以工作負
 C++ 以通用 Windows app 工作負載的選用元件形式提供。  升級 C++ 專案目前必須以手動方式完成。 如果您在 Visual Studio 2017 中開啟以 v140 為目標的 UWP 專案且未安裝 Visual Studio 2015，則需要在專案屬性頁中選取 v141 平台工具組。
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP) 上 C++ 的新選項
+您現在可使用新選項，為通用 Windows 平台及 Microsoft Store 撰寫和封裝 C++ 應用程式：您可以使用傳統型橋接器基礎結構來封裝現有的傳統型應用程式或 COM 物件，以透過 Microsoft Store 部署，或透過現有通道以側載的方式部署。 Windows 10 中的新功能可讓您以各種方式將 UWP 功能新增至傳統型應用程式。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
-您現在可使用新選項撰寫和封裝適用於通用 Windows 平台及 Microsoft Store 的 C++ 應用程式。 您可以使用傳統型應用程式轉換器封裝您現有的傳統型應用程式，以透過 Microsoft Store 部署。 如需詳細資訊，請參閱 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/) (在 Centennial 專案中使用 Visual C++ 執行階段) 和[使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP)](/windows/uwp/porting/desktop-to-uwp-root)。
-
-**Visual Studio 2017 15.5 版**：
-
-新增 **Windows 應用程式封裝專案**的專案範本，以支援使用傳統型橋接器來封裝傳統型應用程式。 通用 Windows app 工作負載安裝完成後，會位於 [檔案] > [新增] > [專案] 的 [已安裝] > [Visual C++] > [通用 Windows 平台]。
+**Visual Studio 2017 15.5 版**  
+新增了 [Windows 應用程式封裝專案] 專案範本，可大幅簡化使用傳統型橋接器來封裝傳統型應用程式的工作。 該範本位於 [檔案] | [開新檔案] | [專案] | [已安裝] | [Visual C++] | [通用 Windows 平台] 中。 如需詳細資訊，請參閱[使用 Visual Studio 封裝應用程式 (傳統型橋接器)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
 撰寫新的程式碼時，您現在可以使用 C++/WinRT，它是一種標準 C++ 語言推演，適用於僅在標頭檔中實作的 Windows 執行階段。 它可讓您使用任何符合標準規範的 C++ 編譯器來編寫和使用 Windows 執行階段 API。 C++/WinRT 設計成將現代 Windows API 的第一級存取提供給 C++ 開發人員。 如需詳細資訊，請參閱 [C++/WinRT Available on GitHub](https://moderncpp.com/) (GitHub 上可用的 C++/WinRT)。
 

@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee55abe1107e578729fe8d5a301a067afdb6c551
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f39fe3743c023bb0c4cb3130400e9bcb7b97db1b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704843"
 ---
 # <a name="error-handling-crt"></a>錯誤處理 (CRT)
 
@@ -43,6 +44,6 @@ ms.lasthandoff: 05/03/2018
 |[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|修改 **__error_mode** 來判斷非預設位置，其中 C 執行階段寫入可能會結束程式之錯誤的錯誤訊息。|
 |[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|設定純虛擬函式呼叫的處理常式。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
+- [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

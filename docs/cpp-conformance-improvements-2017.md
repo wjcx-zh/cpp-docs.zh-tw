@@ -10,11 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762058"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156) 和 [15.7](#improvements_157) 版中的 C++ 一致性改善
 
@@ -1532,7 +1533,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 15.7 版在 **/std:c++17** 模式中，於 D 內的 `using` 陳述式需要 `typename` 索引鍵。若缺少 `typename`，則編譯器會引發警告 C4346: *'B<T>::type': 相依性名稱不是類型\** ，以及錯誤 C2061: 語法錯誤: 識別碼 'type' :
+Visual Studio 2017 15.7 版在 **/std:c++17** 模式中，於 D 內的 `using` 陳述式需要 `typename` 索引鍵。若缺少 `typename`，則編譯器會引發警告 C4346: *'B<T>::type': 相依性名稱不是類型\**，以及錯誤 C2061: 語法錯誤: 識別碼 'type':
 
 ```cpp
 template<typename T>
@@ -1581,6 +1582,46 @@ D<int> d;
 ```
 
 若要修正錯誤，請將 B() 運算式變更為 B\<T>()。
+
+### <a name="constexpr-aggregate-initialization"></a>constexpr 彙總初始化
+
+C++ 編譯器的先前版本未能正確地處理 constexpr 彙總初始化，它會接受無效的程式碼 (其中的彙總初始化清單包含了太多元素)，並產生不良的 Codegen。 以下程式碼為此類程式碼的範例： 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+在 Visual Studio 2017 15.7 版 Update 3 和更新版本中，上述的範例將會引發「C2078 太多初始設定式」。 以下範例顯示如何修正該程式碼。 當使用巢狀大括弧初始化清單將 `std::array` 初始化時，讓內部陣列使用自己的大括弧清單：
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
 
 ## <a name="see-also"></a>另請參閱
 

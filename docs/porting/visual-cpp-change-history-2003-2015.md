@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1447bcd0cb0a9bfff1d527f6a53eccf25e008f90
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0d4c4aeeaf79172950aae6d06c5e8a1246064246
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705682"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/07/2018
   
 -   **new 和 delete** In previous versions of the library, the implementation-defined operator new 和 delete functions were exported from the runtime library DLL (for example, msvcr120.dll). 這些 operator 函式現在一律以靜態方式連結到您的二進位檔，即使是使用執行階段程式庫 DLL 亦同。  
   
-     對於原生或混合程式碼 (/clr) 而言，這不是重大變更，但對於編譯成 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的程式碼，可能會造成您的程式碼無法編譯。 若將程式碼編譯成 /clr:pure，可能必須加入 #include \<new> 或 #include \<new.h> 來暫時解決此變更所造成的建置錯誤。 請注意，/clr:pure 在 Visual Studio 2015 中已淘汰，並可能在後續版本中移除。 必須是「純」程式碼才能移植到 C#。  
+     對於原生或混合程式碼 (/clr) 而言，這不是重大變更，但對於編譯成 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md) 的程式碼，可能會造成您的程式碼無法編譯。 若將程式碼編譯成 /clr:pure，可能必須加入 #include \<new> 或 #include \<new.h> 來暫時解決此變更所造成的建置錯誤。 請注意，/clr:pure 在 Visual Studio 2015 中已被取代，而在 Visual Studio 2017 中已不受支援。 必須是「純」程式碼才能移植到 C#。  
   
 #### <a name="processh"></a>\<process.h>  
   

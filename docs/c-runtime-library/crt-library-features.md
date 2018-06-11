@@ -28,11 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b20fa6862a835ca913a2865a651112584966af3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f8ba56f0b4fa6d7d6ac56f3f118edeaad03643b5
+ms.sourcegitcommit: 0ce270566769cba76d763dd69b304a55eb375d01
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799190"
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
 
@@ -85,7 +86,7 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 
 因為藉由連結到靜態 CRT 所建置的 DLL，會具備自己的 CRT 狀態，因此除非您已確實了解此結果並有此需要，否則不建議在 DLL 中以靜態方式連結到 CRT。 例如，如果您在載入連結到其自身靜態 CRT 之 DLL 的可執行檔中呼叫 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) ，轉譯器將攔截不到 DLL 中的程式碼所產生的任何硬體例外狀況，而只會攔截到主要可執行檔中的程式碼所產生的硬體例外狀況。
 
-如果您使用 **/clr** 編譯器參數，您的程式碼將會連結到靜態程式庫 msvcurt.lib。 靜態程式庫會提供 Managed 程式碼與原生 CRT 之間的 Proxy。 請勿將靜態連結的 CRT ( **/MT** 或 **/MTd** 選項) 與 **/clr**並用。 請改用動態連結程式庫 (**/MD** 或 **/MDd**)。
+如果您使用 **/clr** 編譯器參數，您的程式碼將會連結到靜態程式庫 msvcurt.lib。 靜態程式庫會提供 Managed 程式碼與原生 CRT 之間的 Proxy。 請勿將靜態連結的 CRT ( **/MT** 或 **/MTd** 選項) 與 **/clr**並用。 請改用動態連結程式庫 (**/MD** 或 **/MDd**)。 純粹受控 CRT 程式庫在 Visual Studio 2015 中已被取代，而在 Visual Studio 2017 中已不受支援。
 
 如需使用 CRT 與 **/clr** 的詳細資訊，請參閱[混合 (機器與受控) 組件](../dotnet/mixed-native-and-managed-assemblies.md)。
 
@@ -112,10 +113,15 @@ C 執行階段程式庫 (CRT) 是納入 ISO C99 標準程式庫之 C++ 標準程
 
 ## <a name="what-problems-exist-if-an-application-uses-more-than-one-crt-version"></a>如果應用程式使用多種 CRT 版本，將會發生什麼問題？
 
-無論您是否使用不同版本的 Visual C++，只要有多個 DLL 或 EXE，就可能會有多個 CRT。 例如，以靜態方式將 CRT 連結到多個 DLL 就可能會出現相同的問題。 已指示遇到此靜態 CRT 問題的開發人員使用 **/MD** 編譯，如此就能使用 CRT DLL。 如果您的 DLL 跨 DLL 界限傳遞 CRT 資源，您可能會遇到 CRT 不相符的問題，而且必須使用 Visual C++ 重新編譯專案。
+每個可執行映像 (EXE 或 DLL) 都可擁有自己的靜態連結 CRT，或者也可以動態連結至 CRT。 靜態包含或由特定映像動態載入的 CRT 版本，取決於建置所用工具和資料庫的版本。 單一處理序可能會載入多個 EXE 和 DLL 映像，而每個都有自己的 CRT。 這些 CRT 可能使用不同的配置器、可能具有不同的內部結構配置，且可能使用不同的存放安排。 這表示跨 DLL 界限的配置記憶體、CRT 資源或類別，可能會造成記憶體管理、內部靜態變數使用或配置解譯上的錯誤。 例如，如果有一個類別配置在某個 DLL 中，但是被傳遞到另一個 DLL 並且被刪除，則會使用哪一個 CRT 釋放器？ 這種情況可能會造成從輕微至嚴重的錯誤，因此強烈不建議移轉這類資源。
 
-如果您的程式使用多種版本的 CRT，在跨 DLL 界限傳遞特定 CRT 物件 (例如檔案控制代碼、地區設定及環境變數) 時，必須特別留意。 如需涉及問題及解決方法的相關資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
+若要避免許多這類問題，可以改用應用程式二進位介面 (ABI) 技術，因為這些技術較為穩定且可設定版本。 將您的 DLL 匯出介面設計成以值傳遞資訊，或是使用呼叫者傳入的記憶體，而不是在區域中配置後再傳回給呼叫者。 使用封送處理技術，在可執行映像之間複製結構化資料。 在區域中封裝資源，並且只允許透過您公開給用戶端的控制代碼或函式來進行操作。
+
+如果處理序中的所有映像都使用 CRT 的相同動態載入版本，則也可能避開部分這類問題。 若要確保所有元件都使用 CRT 的相同 DLL 版本，請使用 **/MD** 選項來建置，並使用相同的編譯器工具組和屬性設定。
+
+即便使用相同版本的 CRT，當程式會跨 DLL 界限傳遞某些 CRT 資源時 (例如檔案控制代碼、地區設定和環境變數)，還是需要留意。 如需涉及問題及解決方法的相關資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
+
 
 ## <a name="see-also"></a>另請參閱
 
-[C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)
+- [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

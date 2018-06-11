@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 426dfab56d5b966622c5164198d7c0b629ab24a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ad9fb198dd5c0f816d05e4b9a87cff969331d8c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705643"
 ---
 # <a name="vc-directories-linux-c"></a>VC++ 目錄 (Linux C++)
 
@@ -24,5 +25,5 @@ ms.lasthandoff: 05/04/2018
 --- | ---
 Include 目錄 | 建置 VC++ 專案期間，搜尋內含檔案時要使用的路徑。  相當於環境變數 INCLUDE。
 程式庫目錄 | 建置 VC++ 專案期間，搜尋程式庫檔案時要使用的路徑。  相當於環境變數 LIB。
-來源目錄 | 搜尋用於 Intellisense 的來源檔案時要使用的路徑。
+來源目錄 | 搜尋用於 IntelliSense 的來源檔案時要所使用的路徑。
 排除目錄 | 搜尋掃描相依性時要略過的路徑。

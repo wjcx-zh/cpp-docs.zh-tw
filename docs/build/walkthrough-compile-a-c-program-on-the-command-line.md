@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 編譯 C 程式命令列上的 |Microsoft 文件
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -15,28 +15,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 033c29ff9871a427222b59fbf5c8350794a9bbe2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27e303a9e1618c73d173e9d23c614cfc506ec68a
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253785"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>逐步解說： 編譯 C 程式命令列上
 Visual c + + 包含 C 編譯器可讓您建立的所有項目從基本的主控台程式到完整 Windows 桌面應用程式、 行動應用程式，以及更多。  
   
  本逐步解說示範如何建立基本，"Hello，World"為樣式 C 程式中，使用文字編輯器 中，，然後在命令列進行編譯。 如果您就不必在 c + + 命令列上，請參閱[逐步解說： 編譯原生 c + + 程式命令列上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)。 如果您想要再試一次 Visual Studio IDE，而不是使用命令列，請參閱[逐步解說： 使用專案和方案 （c + +）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用 c + + 桌面開發的 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
   
-## <a name="prerequisites"></a>必要條件  
- 若要完成此逐步解說，您必須已安裝 Visual Studio 和選擇性的 Visual c + + 元件或 Microsoft Visual c + + 建置工具。  
+## <a name="prerequisites"></a>必要條件
+
+若要完成此逐步解說，您必須已安裝 Visual Studio 和選擇性的 Visual c + + 元件或建置工具的 Visual Studio。  
   
- Visual Studio 為許多語言和平台支援全功能的編輯器，資源管理員，、 偵錯工具和編譯器的功能強大的整合式的開發環境。 如需這些功能，以及如何下載並安裝 Visual Studio，包括免費的 Visual Studio Community 版本，請參閱[VisualStudio.com](https://www.visualstudio.com/)。  
+Visual Studio 為許多語言和平台支援全功能的編輯器，資源管理員，、 偵錯工具和編譯器的功能強大的整合式的開發環境。 如需這些功能，以及如何下載並安裝 Visual Studio，包括免費的 Visual Studio Community 版本，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。  
   
- 只有命令列編譯器、 工具和您要建立 C 和 c + + 程式庫，則會安裝 Visual Studio 建置工具。 它非常適合組建實驗室或教室會執行，並會安裝相當快速。 若要只安裝命令列工具，下載[Visual Studio 建置工具](https://go.microsoft.com/fwlink/p/?linkid=840931)並執行安裝程式。 如需詳細資訊，請參閱[Visual c + + 建置工具](http://landinghub.visualstudio.com/visual-cpp-build-tools)。  
+Visual Studio 版本的 Visual Studio 建置工具只會安裝命令列工具組、 編譯器、 工具和您要建立 C 和 c + + 程式庫。 它非常適合組建實驗室或教室會執行，並會安裝相當快速。 若要安裝的命令列工具組，請下載[Build Tools for Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=840931)並執行安裝程式。  
   
- 您可以在命令列上建置 C 或 c + + 程式之前，您必須確認確認已安裝的工具，以及您可以從命令列存取它們。 Visual c + + 為了尋找工具、 標頭和程式庫，它會使用具有複雜的命令列環境的需求。 **您無法使用 Visual c + + 中的純文字的命令提示字元視窗**。 您需要*開發人員命令提示字元*視窗中，這可能會擁有所有必要的環境變數設定的一般的命令提示字元視窗。 幸運的是，Visual c + + 會安裝為您啟動已設定為命令列組建環境的開發人員命令提示字元捷徑。 不幸的是，開發人員命令提示字元 捷徑，和它們的所在位置的名稱是幾乎每個版本的 Visual c + +，並在不同版本的 Windows 中。 您的第一個逐步解說工作是尋找正確的捷徑使用。  
+您可以在命令列上建置 C 或 c + + 程式之前，您必須確認確認已安裝的工具，以及您可以從命令列存取它們。 Visual c + + 為了尋找工具、 標頭和程式庫，它會使用具有複雜的命令列環境的需求。 **您無法使用 Visual c + + 中的純文字的命令提示字元視窗**。 您需要*開發人員命令提示字元*視窗中，這可能會擁有所有必要的環境變數設定的一般的命令提示字元視窗。 幸運的是，Visual c + + 會安裝為您啟動已設定為命令列組建環境的開發人員命令提示字元捷徑。 不幸的是，開發人員命令提示字元 捷徑，和它們的所在位置的名稱是幾乎每個版本的 Visual c + +，並在不同版本的 Windows 中。 您的第一個逐步解說工作是尋找正確的捷徑使用。  
   
 > [!NOTE]
->  開發人員命令提示字元捷徑會自動設定編譯器和工具，以及任何必要的標頭和程式庫的正確路徑。 這些值有些不同，每個組建組態。 您必須設定這些環境值自行如果您不使用其中一個捷徑。 如需詳細資訊，請參閱[設定命令列建置的路徑和環境變數](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。 因為在建置環境很複雜，我們強烈建議您使用而不是建立您自己的開發人員命令提示字元捷徑。  
+> 開發人員命令提示字元捷徑會自動設定編譯器和工具，以及任何必要的標頭和程式庫的正確路徑。 這些值有些不同，每個組建組態。 您必須設定這些環境值自行如果您不使用其中一個捷徑。 如需詳細資訊，請參閱[設定命令列建置的路徑和環境變數](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。 因為在建置環境很複雜，我們強烈建議您使用而不是建立您自己的開發人員命令提示字元捷徑。  
   
 ## <a name="open-a-developer-command-prompt"></a>開啟開發人員命令提示字元  
   
@@ -63,7 +65,7 @@ Visual c + + 包含 C 編譯器可讓您建立的所有項目從基本的主控�
     > [!NOTE]
     >  如果您收到錯誤，例如 「 'cl' 無法辨識為內部或外部命令、 可執行程式或批次檔 」 錯誤、 錯誤 C1034 或錯誤 LNK1104，當您執行**cl**命令時，則可能您不使用開發人員命令提示字元，或有問題的 Visual c + + 安裝。 您必須先修正此問題，然後才能繼續。  
   
-     如果您找不到開發人員命令提示字元 捷徑，或如果您收到錯誤訊息，當您輸入`cl`，Visual c + + 安裝可能會有問題。 請嘗試重新安裝 Visual c + + 元件，在 Visual Studio 中，或重新安裝 Visual Studio 建置工具。 不要繼續進行下一節之前可以這麼做。 如需安裝和 Visual c + + 疑難排解的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。  
+     如果您找不到開發人員命令提示字元 捷徑，或如果您收到錯誤訊息，當您輸入`cl`，Visual c + + 安裝可能會有問題。 請嘗試重新安裝 Visual c + + 元件，在 Visual Studio 中，或重新安裝 Visual studio 的建置工具。 不要繼續進行下一節之前可以這麼做。 如需有關安裝和疑難排解 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。  
   
     > [!NOTE]
     >  根據電腦等系統安全性設定的 Windows 版本，您可能必須按一下滑鼠右鍵以開啟 開發人員命令提示字元捷徑的捷徑功能表，然後選擇**系統管理員身分執行**至已成功建置並執行您依照本逐步解說建立的程式。  

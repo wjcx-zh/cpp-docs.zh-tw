@@ -1,7 +1,7 @@
 ---
 title: 逐步解說： 編譯原生 c + + 程式命令列上 |Microsoft 文件
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd65dff0a354ebbed4435b8867271091211279d
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253827"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：在命令列上編譯原生 C++ 程式
 Visual c + + 包含命令列的 c + + 編譯器可讓您建立的所有項目從基本的主控台應用程式通用 Windows 平台應用程式、 傳統型應用程式、 裝置驅動程式和.NET 元件。  
@@ -31,13 +32,13 @@ Visual c + + 包含命令列的 c + + 編譯器可讓您建立的所有項目從
  在此逐步解說中，您可以使用自己的 Visual C++ 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 Visual C++ 程式碼範例。  
   
 ## <a name="prerequisites"></a>必要條件  
- 若要完成此逐步解說，您必須已安裝 Visual Studio 和選擇性的 Visual c + + 元件或 Microsoft Visual c + + 建置工具。  
+ 若要完成此逐步解說，您必須已安裝 Visual Studio 和 c + + 工作負載時，選擇性的桌面開發或命令列建置工具的 Visual Studio。  
   
- Visual Studio 為許多語言和平台支援全功能的編輯器，資源管理員，、 偵錯工具和編譯器的功能強大的整合式的開發環境。 如需這些功能，以及如何下載並安裝 Visual Studio，包括免費的 Visual Studio Community 版本，請參閱[VisualStudio.com](https://www.visualstudio.com/)。  
+ Visual Studio 為許多語言和平台支援全功能的編輯器，資源管理員，、 偵錯工具和編譯器的功能強大的整合式的開發環境 (IDE)。 如需如何下載並安裝 Visual Studio，包括免費的 Visual Studio Community 版本，以及包含對 C/c + + 開發的支援資訊，請參閱[安裝 c + + 支援 Visual Studio 中的](../build/vscpp-step-0-installation.md)。  
   
- 只有命令列編譯器、 工具和您要建立 C 和 c + + 程式庫，則會安裝 Visual Studio 建置工具。 它非常適合組建實驗室或教室會執行，並會安裝相當快速。 若要只安裝命令列工具，下載[Visual Studio 建置工具](https://go.microsoft.com/fwlink/p/?linkid=840931)並執行安裝程式。 如需詳細資訊，請參閱[Visual c + + 建置工具](http://landinghub.visualstudio.com/visual-cpp-build-tools)。  
+ Build Tools for Visual Studio 只會安裝命令列編譯器、 工具和您要建立 C 和 c + + 程式庫。 它非常適合組建實驗室或教室會執行，並會安裝相當快速。 若要只安裝命令列工具，下載[建置工具的 Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931)。  
   
- 您可以在命令列上建置 C 或 c + + 程式之前，您必須確認確認已安裝的工具，以及您可以從命令列存取它們。 Visual c + + 為了尋找工具、 標頭和程式庫，它會使用具有複雜的命令列環境的需求。 **您無法使用 Visual c + + 中的純文字的命令提示字元視窗**。 幸運的是，Visual c + + 會安裝為您啟動已設定為命令列組建環境開發人員命令提示字元捷徑。 不幸的是，開發人員命令提示字元 捷徑，和它們的所在位置的名稱是幾乎每個版本的 Visual c + +，並在不同版本的 Windows 中。 您的第一個逐步解說工作發現正確的其中一個使用。  
+ 您可以在命令列上建置 C 或 c + + 程式之前，您必須確認確認已安裝的工具，以及您可以從命令列存取它們。 Visual c + + 為了尋找工具、 標頭和程式庫，它會使用具有複雜的命令列環境的需求。 **您無法使用 Visual c + + 中的純文字的命令提示字元視窗**而不會進行一些準備工作。 幸運的是，Visual c + + 會安裝為您啟動已設定為命令列組建環境開發人員命令提示字元捷徑。 不幸的是，開發人員命令提示字元 捷徑，和它們的所在位置的名稱是幾乎每個版本的 Visual c + +，並在不同版本的 Windows 中。 您的第一個逐步解說工作發現正確的其中一個使用。  
   
 > [!NOTE]
 >  開發人員命令提示字元捷徑會自動設定編譯器和工具，以及任何必要的標頭和程式庫的正確路徑。 您必須設定這些環境值自行如果您使用一般的命令提示字元視窗。 如需詳細資訊，請參閱[設定命令列建置的路徑和環境變數](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)。 我們建議您使用而非建立您自己的開發人員命令提示字元捷徑。  

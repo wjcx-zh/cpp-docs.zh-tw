@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340342"
 ---
 # <a name="add-method-wizard"></a>加入方法精靈
@@ -90,7 +90,7 @@ ms.locfileid: "33340342"
  將您在 [參數名稱] 中指定的參數以及其類型和參數屬性，新增至 [參數清單]。 您必須按一下 [新增]，才能將參數新增至清單。  
   
  **移除**  
- 移除您在 [參數清單] 中選取的參數。  
+ 將您在 [參數清單] 中選取的參數從清單移除。  
   
  **參數清單**  
  顯示目前針對方法新增的所有參數及其修飾詞和類型。 新增參數時，精靈會更新 [參數清單] 以顯示每個參數及其修飾詞和類型。  

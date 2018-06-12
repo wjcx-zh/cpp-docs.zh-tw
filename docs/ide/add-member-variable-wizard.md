@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336322"
 ---
 # <a name="add-member-variable-wizard"></a>加入成員變數精靈
@@ -40,7 +40,7 @@ ms.locfileid: "33336322"
   
 -   如果您想要新增非對話方塊控制項的成員變數，請從可用類型清單中選取。  
   
-     如需這些類型的資訊，請參閱[基本類型](../cpp/fundamental-types-cpp.md)。  
+     如需這些型別的資訊，請參閱[基本型別](../cpp/fundamental-types-cpp.md)。  
   
     |||  
     |-|-|  

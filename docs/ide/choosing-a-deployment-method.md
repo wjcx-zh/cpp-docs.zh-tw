@@ -23,10 +23,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bdf024f75f03b55465ccd15670c47d3c761e56e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33338662"
 ---
 # <a name="choosing-a-deployment-method"></a>選擇部署方法
@@ -55,6 +55,6 @@ ms.locfileid: "33338662"
  建議您避免轉散發 Visual C++ 程式庫時使用靜態連結。 靜態連結幾乎無法大幅改善應用程式效能，卻會提高服務代價。 例如，請考慮靜態連結至已更新安全性增強之程式庫的應用程式，除非重新編譯並重新部署，否則該應用程式不會因此受益。 相反地，我們建議您將應用程式動態連結至相依的程式庫，以便在部署時更新這些程式庫。  
   
 ## <a name="see-also"></a>請參閱  
- [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)   
+ [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)   
  [部署範例](../ide/deployment-examples.md)

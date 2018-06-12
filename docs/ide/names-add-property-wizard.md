@@ -15,10 +15,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33339562"
 ---
 # <a name="names-add-property-wizard"></a>名稱、加入屬性精靈
@@ -79,7 +79,7 @@ ms.locfileid: "33339562"
 |**out**|表示指標參數會從被呼叫程序傳回至呼叫程序 (從伺服器至用戶端)。|  
   
  **參數類型**  
- 設定參數的資料類型。 從清單中選取類型。  
+ 設定參數的資料類型。 請從清單中選取類型。  
   
  **參數名稱**  
  如果屬性具有參數，請設定您要為屬性新增之參數的名稱。 按一下 [新增] 之後，參數名稱會出現在 [參數清單] 中。  

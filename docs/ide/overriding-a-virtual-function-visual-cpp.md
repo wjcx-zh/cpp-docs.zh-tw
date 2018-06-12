@@ -19,10 +19,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d8580d27442b0cae7e343a568beaa9aeae500461
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337739"
 ---
 # <a name="overriding-a-virtual-function-visual-c"></a>覆寫 Virtual 函式 (Visual C++)
@@ -49,7 +49,7 @@ ms.locfileid: "33337739"
   
 ## <a name="see-also"></a>請參閱  
  [使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [類別](../ide/adding-a-class-visual-cpp.md)   
+ [新增類別](../ide/adding-a-class-visual-cpp.md)   
  [成員函式](../ide/adding-a-member-function-visual-cpp.md)   
  [成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
  [MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)   

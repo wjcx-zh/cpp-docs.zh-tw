@@ -19,10 +19,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e67ad87f1dce47f3d02dcbe907285cf0513a8ce9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337544"
 ---
 # <a name="redistributing-visual-c-files"></a>轉散發 Visual C++ 檔案
@@ -56,4 +56,4 @@ Visual C++ 可轉散發套件會安裝並註冊所有 Visual C++ 程式庫。 �
 |[轉散發 MFC 程式庫](../ide/redistributing-the-mfc-library.md)|描述如何轉散發使用了 MFC 的應用程式。|
 |[轉散發 ATL 應用程式](../ide/redistributing-an-atl-application.md)|描述如何轉散發使用 ATL 的應用程式。 從 Visual Studio 2012 開始，就不需要適用於 aLT 的轉散發程式庫。|
 |[部署範例](../ide/deployment-examples.md)|示範如何部署 Visual C++ 應用程式的範例連結。|
-|[部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)|介紹 Visual C++ 部署概念和技術。|
+|[部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)|介紹 Visual C++ 部署概念和技術。|

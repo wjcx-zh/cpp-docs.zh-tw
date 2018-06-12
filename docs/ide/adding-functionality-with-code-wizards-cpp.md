@@ -21,10 +21,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337037"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>使用程式碼精靈新增功能 (C++)
@@ -59,7 +59,7 @@ ms.locfileid: "33337037"
 -   從 [[類別檢視] 視窗](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，以滑鼠右鍵按一下適當的節點，然後從捷徑功能表按一下 [新增]，即可讓您將函式、變數、類別、屬性、方法、事件、介面、連接點或其他程式碼新增至專案。  
   
     > [!NOTE]
-    >  Visual Studio 不提供將介面新增至專案的精靈。 您可以藉由使用 [[ATL 簡單物件精靈]](../atl/reference/atl-simple-object-wizard.md) 新增簡單物件，將介面新增至 ATL 專案或[將 ATL 支援新增至 MFC 專案](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。 或者，開啟專案的 .idl 檔案，然後鍵入下列程式碼建立介面：  
+    >  Visual Studio 不提供將介面新增至專案的精靈。 您可以藉由使用 [ATL 簡單物件精靈](../atl/reference/atl-simple-object-wizard.md)來新增簡單物件，將介面新增至 ATL 專案或[將 ATL 支援新增至 MFC 專案](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。 或者，開啟專案的 .idl 檔案，然後鍵入下列程式碼建立介面：  
   
     ```  
     interface IMyInterface {  

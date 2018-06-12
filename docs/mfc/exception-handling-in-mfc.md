@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239433"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的例外狀況處理
 本文說明在 MFC 中的例外狀況處理機制。 有兩種機制：  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
  如果您已開發使用 MFC 例外狀況巨集的應用程式，您可以繼續在新的程式碼中使用 c + + 例外狀況時，在現有程式碼中使用這些巨集。 發行項[例外狀況： 3.0 版中的例外狀況巨集變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)這麼做會提供指導方針。  
   
 > [!NOTE]
->  若要啟用 c + + 例外狀況處理程式碼中，選取 C/c + + 專案的資料夾中的 [程式碼產生] 頁面上的 啟用 c + + 例外狀況[屬性頁](../ide/property-pages-visual-cpp.md)對話方塊中或使用 /GX 編譯器選項。 預設為 /GX-，它會停用例外狀況處理。  
+>  若要啟用 c + + 例外狀況處理程式碼中，選取 C/c + + 專案的資料夾中的 [程式碼產生] 頁面上的 啟用 c + + 例外狀況[屬性頁](../ide/property-pages-visual-cpp.md)對話方塊中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項。  
   
  本文涵蓋下列主題：  
   

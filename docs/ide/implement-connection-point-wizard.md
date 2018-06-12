@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33323754"
 ---
 # <a name="implement-connection-point-wizard"></a>實作連接點精靈
@@ -35,7 +35,7 @@ ms.locfileid: "33323754"
  顯示 [可用的型別程式庫] 清單中目前選取之型別程式庫的位置。  
   
  **介面**  
- 顯示定義包含在 [可用的型別程式庫] 方塊中目前選取之型別程式庫中的介面。  
+ 顯示其定義包含在 [可用的型別程式庫] 方塊中目前選取之型別程式庫中的介面。  
   
 |傳輸按鈕|描述|  
 |---------------------|-----------------|  

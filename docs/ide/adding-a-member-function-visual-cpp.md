@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c79f6eaebae0065a631b8ac31a7254cdc96080e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33324183"
 ---
 # <a name="adding-a-member-function-visual-c"></a>加入成員函式 (Visual C++)
@@ -29,7 +29,7 @@ ms.locfileid: "33324183"
   
 ### <a name="to-add-a-member-function-to-a-class"></a>若要將成員函式加入至類別  
   
-1.  在 [類別檢視] 中，展開專案節點，顯示專案中的類別。 (若要開啟 [類別檢視]，請在功能表列上，選擇 [檢視]、[類別檢視])。  
+1.  在**類別檢視**中，展開專案節點，顯示專案中的類別。 (若要開啟 [類別檢視]，請在功能表列上，選擇 [檢視]、[類別檢視])。  
   
 2.  開啟要新增成員函式之類別的捷徑功能表，然後選取 [新增]、[新增函式]。  
   

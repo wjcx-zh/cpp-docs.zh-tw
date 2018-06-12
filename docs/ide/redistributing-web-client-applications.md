@@ -18,10 +18,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 92bd843b24ee13b3d606ba8bb4f4f1cc265e8e5d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33323192"
 ---
 # <a name="redistributing-web-client-applications"></a>轉散發 Web 用戶端應用程式
@@ -36,4 +36,4 @@ ms.locfileid: "33323192"
  您可以在 MSDN Library 或是在 [http://support.microsoft.com](http://support.microsoft.com) 找到知識庫文章。  
   
 ## <a name="see-also"></a>請參閱  
- [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

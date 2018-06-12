@@ -20,10 +20,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33327456"
 ---
 # <a name="nmake-property-page"></a>NMake 屬性頁
@@ -44,7 +44,7 @@ ms.locfileid: "33327456"
  指定在 [建置] 功能表上按一下 [Clean] 時要執行的命令。  
   
  **輸出**  
- 指定將包含命令列輸出的檔案名稱。 根據預設，這個檔案名稱是根據專案名稱。  
+ 指定將包含命令列輸出之檔案的名稱。 根據預設，這個檔案名稱是根據專案名稱。  
   
  **前置處理器定義**  
  指定原始程式檔使用的任何前置處理器定義。 預設值取決於目前的平台和組態。  

@@ -19,10 +19,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33326468"
 ---
 # <a name="adding-a-generic-c-class"></a>加入泛型 C++ 類別
@@ -39,6 +39,6 @@ ms.locfileid: "33326468"
 4.  若要關閉精靈並在專案中檢視新的泛型 C++ 類別，請按一下 [完成]。  
   
 ## <a name="see-also"></a>請參閱  
- [類別](../ide/adding-a-class-visual-cpp.md)   
+ [新增類別](../ide/adding-a-class-visual-cpp.md)   
  [MFC 類別](../mfc/reference/adding-an-mfc-class.md)   
  [ATL 簡單物件](../atl/reference/adding-an-atl-simple-object.md)

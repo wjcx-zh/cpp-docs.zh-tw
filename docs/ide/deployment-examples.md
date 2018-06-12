@@ -17,10 +17,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33327407"
 ---
 # <a name="deployment-examples"></a>部署範例
@@ -37,4 +37,4 @@ ms.locfileid: "33327407"
   
 ## <a name="see-also"></a>請參閱  
  [逐步解說：手動部署 ClickOnce 應用程式](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
- [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

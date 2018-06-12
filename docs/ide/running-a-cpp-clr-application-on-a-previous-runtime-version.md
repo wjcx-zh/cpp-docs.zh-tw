@@ -22,10 +22,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33323611"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>在舊版執行階段版本上執行 C++ /clr 應用程式
@@ -42,4 +42,4 @@ ms.locfileid: "33323611"
  若要在 1.0 版或 1.1 版的 CLR 上執行，由 Visual C++ 編譯器所建置的應用程式，必須使用 [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md) 編譯。  
   
 ## <a name="see-also"></a>請參閱  
- [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)
+ [部署傳統型應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

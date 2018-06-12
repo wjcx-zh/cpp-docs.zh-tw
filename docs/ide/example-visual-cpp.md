@@ -1,5 +1,5 @@
 ---
-title: '&lt;範例&gt;（Visual c + +） |Microsoft 文件'
+title: '&lt;範例&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321427"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;範例&gt;（Visual c + +）
-\<example> 標記可讓您指定如何使用方法或其他程式庫成員的範例。 通常，這也會涉及使用[\<程式碼 >](../ide/code-visual-cpp.md)標記。  
+# <a name="ltexamplegt-visual-c"></a>&lt;範例&gt; (Visual C++)
+\<example> 標記可讓您指定如何使用方法或其他程式庫成員的範例。 通常，這也會涉及使用 [\<程式碼>](../ide/code-visual-cpp.md) 標記。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,5 +68,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

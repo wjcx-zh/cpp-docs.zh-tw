@@ -1,5 +1,5 @@
 ---
-title: 檔案類型為 Visual c + + 專案建立 |Microsoft 文件
+title: 為 Visual C++ 專案建立的檔案類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,9 +26,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336013"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>為 Visual C++ 專案建立的檔案類型
 本主題描述所有類型的檔案，該檔案與適用於傳統桌面應用程式的 Visual C + + 專案相關聯。 您的專案中包含的實際檔案取決於專案類型以及您使用精靈時選取的選項。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/04/2018
 |.HxC|專案|說明專案檔。|  
 |.ico|資源|圖示點陣圖形檔。|  
 |.idb|編譯|狀態檔，其中包含原始程式檔與類別定義之間的相依性資訊，編譯器可以在最少重建和累加編譯期間使用該資訊。 使用 [/Fd](../build/reference/fd-program-database-file-name.md) 編譯器選項以指定 .idb 檔的名稱。 如需詳細資訊，請參閱 [/Gm (啟用最少重建)](../build/reference/gm-enable-minimal-rebuild.md) 。|  
-|.idl|編譯|介面定義語言檔。 請參閱[介面定義 (IDL) 檔](http://msdn.microsoft.com/library/windows/desktop/aa378712)如需詳細資訊的 Windows SDK 中。|  
+|.idl|編譯|介面定義語言檔。 如需詳細資訊，請參閱 Windows SDK 中的 [Interface Definition (IDL) File](http://msdn.microsoft.com/library/windows/desktop/aa378712) (介面定義 (IDL) 檔)。|  
 |.ilk|連結|累加連結檔案。 如需詳細資訊，請參閱 [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) 。|  
 |.map|連結|包含連結器資訊的文字檔。 使用 [/Fm](../build/reference/fm-name-mapfile.md) 編譯器選項來命名對應檔。 如需詳細資訊，請參閱 [/MAP](../build/reference/map-generate-mapfile.md) 。|  
 |.mfcribbon-ms|資源|資源檔，其中包含定義功能區按鈕、控制項和屬性的 XML 程式碼。 如需詳細資訊，請參閱 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)。|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/04/2018
 |.vap|專案|Visual Studio Analyzer 專案檔。|  
 |.vbg|方案|相容專案群組檔。|  
 |.vbp、.vip、.vbproj|專案|Visual Basic 專案檔。|  
-|.vcxitems|專案|共用項目共用程式碼檔案之間的多個 c + + 專案的專案。 如需詳細資訊，請參閱 [專案檔和 Makefile](../ide/project-and-solution-files.md) 。|
+|.vcxitems|專案|用於在多個 C++ 專案之間共用程式碼檔的共用項目專案。 如需詳細資訊，請參閱 [專案檔和 Makefile](../ide/project-and-solution-files.md) 。|
 |.vcxproj|專案|Visual C++ 專案檔。 如需詳細資訊，請參閱 [專案檔和 Makefile](../ide/project-and-solution-files.md) 。|  
 |.vcxproj.filters|專案|使用方案總管將檔案加入專案時，篩選檔會根據檔案的副檔名，定義要在方案總管樹狀檢視中的哪個位置加入檔案。|  
 |.vdproj|專案|Visual Studio 部署專案檔。|  
@@ -99,7 +100,7 @@ ms.lasthandoff: 05/04/2018
   
  當您將項目加入專案時，您會將該項目加入該專案的所有組態中，不論項目是否可建置。 例如，如果您有名稱為 MyProject 的專案，加入項目會將其加入偵錯和發行專案組態。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual c + + 專案類型](../ide/visual-cpp-project-types.md)   
+ [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)   
  [其他語言的精靈支援](../ide/wizard-support-for-other-languages.md)

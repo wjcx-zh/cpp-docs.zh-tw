@@ -1,5 +1,5 @@
 ---
-title: '&lt;程式碼&gt;（Visual c + +） |Microsoft 文件'
+title: '&lt;code&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 331828f5c2cd3001cef50a29388a10c0a6a26f1d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330115"
 ---
-# <a name="ltcodegt-visual-c"></a>&lt;程式碼&gt;（Visual c + +）
-\<程式碼 > 標記可讓您指定為程式碼的一或多行的方式。  
+# <a name="ltcodegt-visual-c"></a>&lt;code&gt; (Visual C++)
+\<code> 標記可讓您將一或多行指定為程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,12 +39,12 @@ ms.lasthandoff: 05/04/2018
  您要標記為程式碼的文字。  
   
 ## <a name="remarks"></a>備註  
- 使用[ \<c >](../ide/c-visual-cpp.md)指出文字的一部分應該標記為程式碼。  
+ 使用 [\<c>](../ide/c-visual-cpp.md) 指出文字的一部分應該標記為程式碼。  
   
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
 ## <a name="example"></a>範例  
  如需如何使用 \<code> 標記的範例，請參閱 [\<example>>](../ide/example-visual-cpp.md) 主題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

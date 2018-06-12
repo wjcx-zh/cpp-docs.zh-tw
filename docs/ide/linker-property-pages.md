@@ -1,5 +1,5 @@
 ---
-title: 連結器屬性頁 |Microsoft 文件
+title: 連結器屬性頁 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/21/2017
 ms.technology:
@@ -22,45 +22,46 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2cec232bb4e4f2f6ac1ab9af703b368eec0ba5dd
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331515"
 ---
 # <a name="linker-property-pages"></a>連結器屬性頁
 
-本主題會討論下列屬性對**一般**連結器屬性頁。 此頁面的 Linux 版本，請參閱[連結器屬性 （Linux c + +）](../linux/prop-pages/linker-linux.md)。
+本主題會討論 [一般] 連結器屬性頁上的下列屬性。 如需此頁面的 Linux 版本，請參閱[連結器屬性 (Linux C++)](../linux/prop-pages/linker-linux.md)。
 
-## <a name="general-page-properties"></a>屬性 [一般] 頁面
+## <a name="general-page-properties"></a>一般頁面屬性
 
 ### <a name="ignore-import-library"></a>忽略匯入程式庫
 
-這個屬性會告知連結器未連結到任何相依專案的這個組建所產生的任何.lib 輸出。 這可讓專案系統來處理不會產生的.lib 檔建置時的.dll 檔案。 如果專案相依於另一個會產生 DLL 的專案，專案系統會自動連結的子專案所產生的.lib 檔案。 這可能不需要由 COM Dll 或資源專用 Dll; 要產生的專案這些 Dll 並沒有任何有意義的匯出。 如果 DLL 中不有任何匯出，連結器不會產生的.lib 檔案。 如果沒有匯出.lib 檔存在於磁碟上專案系統會告知連結器連結此 （遺漏） dll，連結就會失敗。 使用**忽略匯入程式庫**屬性若要解決此問題。 當設定為**是**，專案系統會忽略該.lib 檔案是否存在，並會導致相依於此專案不使用不存在的.lib 檔案連結至任何專案。
+這個屬性會告知連結器不要將這個組建所產生的任何 .lib 輸出連結到任何相依專案。 這可讓專案系統處理在建置時不會產生 .lib 檔的 .dll 檔。 如果專案相依於另一個會產生 DLL 的專案，則專案系統會自動連結該個子專案所產生的 .lib 檔。 產生 COM Dll 或資源專用 DLL 的專案可能不需要這點；這些 DLL 沒有任何有意義的匯出。 如果 DLL 沒有任何匯出，連結器便不會產生 .lib 檔。 如果磁碟上沒有任何匯出的 .lib 檔，專案系統會告知連結器連結此 (遺漏的) DLL，連結就會失敗。 請使用 [忽略匯入程式庫] 屬性來解決此問題。 當設定為 [是] 時，專案系統會忽略該 .lib 檔是否存在，並且會導致相依於此專案的任何專案都不要與不存在的 .lib 檔連結。
 
 若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreImportLibrary%2A>。
 
 ### <a name="register-output"></a>登錄輸出
 
-執行`regsvr32.exe /s $(TargetPath)`組建輸出時，這是.dll 專案上才有效。 .Exe 專案，則會忽略這個屬性。 若要註冊.exe 輸出，請執行所需的已註冊的.exe 檔案的自訂登錄組態上設定建置後事件。
+對組建輸出執行 `regsvr32.exe /s $(TargetPath)`，這只有在 .dll 專案上才有效。 對於 .exe 專案，則會忽略這個屬性。 若要註冊 .exe 輸出，請在組態上設定建置後事件，以執行已註冊之 .exe 檔一律需要的自訂登錄。
 
 若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.RegisterOutput%2A>。
 
 ### <a name="per-user-redirection"></a>個別使用者重新導向
 
-傳統上尚未註冊 Visual Studio 中的執行的 HKEY_CLASSES_ROOT (HKCR)。 使用 Windows Vista 和更新版本的作業系統，存取 HKCR 您必須執行 Visual Studio 中提高權限模式。 開發人員不一定想要在提升權限模式下執行，但仍然必須使用註冊。 個別使用者重新導向，可讓您註冊不需要在此模式中執行。
+Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使用 Windows Vista 和更新版本的作業系統，若要存取 HKCR 您必須以提升權限模式執行 Visual Studio。 開發人員不一定想要在提升權限的模式中執行，但仍然必須使用註冊。 個別使用者重新導向，可讓您不需要以此模式執行即可註冊。
 
-個別使用者重新導向會強制重新導向至 HKEY hkcr 的任何寫入\_目前\_使用者 (HKCU)。 如果每次使用者重新導向已關閉，它可能會導致[專案建置錯誤 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)程式嘗試寫入 HKCR。
+個別使用者重新導向會強制將 HKCR 的任何寫入重新導向至 HKEY\_CURRENT\_USER (HKCU)。 如果關閉每個使用者重新導向，它可能會在程式嘗試寫入 HKCR 時導致[專案建置錯誤 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md)。
 
 ### <a name="link-library-dependencies"></a>連結程式庫相依性
 
-指定是否要連結的相依專案所產生的.lib 檔案。 一般而言，您要連結的.lib 檔案，但這可能不是特定 Dll 的情況。
+指定是否要連結由相依專案所產生的 .lib 檔。 一般而言，您會想連結 .lib 檔，但這可能不適用於特定 DLL 的情況。
 
-您也可以指定.obj 檔案，藉由提供的檔名和相對路徑，例如 「...\\..\MyLibProject\MyObjFile.obj"。 如果.obj 檔案的原始程式碼 #includes 先行編譯標頭檔，例如 pch.h，pch.obj 檔案位於 MyObjFile.obj，相同的資料夾，而且您也必須加入 pch.obj 做為其他相依性。
+您也可以提供檔案名稱和相對路徑以指定 .obj 檔案，例如 "..\\..\MyLibProject\MyObjFile.obj"。 如果 .obj 檔案的原始程式碼 #includes 先行編譯標頭檔；例如 pch.h，pch.obj 檔案位於和 MyObjFile.obj 相同的資料夾，而且您也必須新增 pch.obj 作為其他相依性。
 
 ### <a name="use-library-dependency-inputs"></a>使用程式庫相依性輸入
 
-在大型專案中，當相依專案產生的.lib 檔時，累加連結已停用。 如果有許多相依專案產生的.lib 檔，請建置應用程式可能會花很長的時間。 當這個屬性設定為**是**，進而啟用累加連結的相依專案所產生的.lib 檔進行的.obj 檔中的專案系統連結。
+在大型專案中，當相依專案產生 .lib 檔時，會停用累加連結。 如果有許多相依專案產生 .lib 檔，建置應用程式可能會花很長的時間。 當這個屬性設定為 [是]，專案系統會針對相依專案所產生的 .lib 連結 .obj 檔，進而啟用累加連結。
 
-如需有關如何存取資訊**一般**連結器屬性頁上，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
+如需如何存取 [一般] 連結器屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
 
 ## <a name="see-also"></a>另請參閱
 

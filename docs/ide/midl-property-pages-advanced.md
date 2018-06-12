@@ -1,5 +1,5 @@
 ---
-title: MIDL 屬性頁： 進階 |Microsoft 文件
+title: MIDL 屬性頁：進階 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -28,36 +28,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330800"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL 屬性頁：進階
-**進階**中的 屬性頁**MIDL**資料夾指定下列的 MIDL 編譯器選項：  
+**MIDL** 資料夾中的 [進階] 屬性頁指定下列 MIDL 編譯器選項：  
   
 -   啟用錯誤檢查 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
 -   檢查配置 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   檢查界限 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   檢查限制 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
 -   檢查列舉範圍 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   請檢查參考指標 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   檢查參考指標 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
 -   檢查 Stub 資料 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   驗證參數 ([/ 強固](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   驗證參數 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
   
 -   結構成員對齊 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   將輸出重新導向 ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   重新導向輸出 ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   C 前置處理選項 ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   C 前置處理器選項 ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   取消前置處理器定義 ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   取消前置處理器的定義 ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
- \* / 穩定時，只用於建置適用於 Windows 2000 或更新版本的電腦。 如果您建置 ATL 專案，而且想要使用 / 強固、 變更 dlldatax.c 檔中的這一行：  
+ \* /robust 只用於針對 Windows 2000 或更新版本的電腦建置時。 如果您建置 ATL 專案，而且想要使用 /robust，請變更 dlldatax.c 檔中的這一行：  
   
 ```  
 #define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  
@@ -65,9 +66,9 @@ to
 #define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM  
 ```  
   
- 如需有關如何存取詳細**進階**中的 屬性頁**MIDL**資料夾，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
+ 如需如何存取 **MIDL** 資料夾中 [進階] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
- 如需如何以程式設計方式存取 c + + 專案的 MIDL 選項的資訊，請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。  
+ 如需如何以程式設計方式存取 C++ 專案的 MIDL 選項的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MIDL 屬性頁](../ide/midl-property-pages.md)

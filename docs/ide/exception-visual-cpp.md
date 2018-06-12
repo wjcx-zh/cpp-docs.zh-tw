@@ -1,5 +1,5 @@
 ---
-title: '&lt;例外狀況&gt;（Visual c + +） |Microsoft 文件'
+title: '&lt;exception&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323936"
 ---
-# <a name="ltexceptiongt-visual-c"></a>&lt;例外狀況&gt;（Visual c + +）
+# <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
 \<exception> 標記可讓您指定可以擲回的例外狀況。 此標記會套用到方法定義。  
   
 ## <a name="syntax"></a>語法  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="parameters"></a>參數  
  `member`  
- 可從目前編譯環境取得之例外狀況的參考。 使用名稱查閱規則，編譯器會檢查指定的例外狀況存在，而且會將轉譯`member`在輸出 XML 中的標準的項目名稱。  如果編譯器找不到 `member`，它會發出警告。  
+ 可從目前編譯環境取得之例外狀況的參考。 使用名稱查閱規則，編譯器會檢查指定的例外狀況是否存在，並將 `member` 轉譯為輸出 XML 中的標準項目名稱。  如果編譯器找不到 `member`，它會發出警告。  
   
  以單引號或雙引號將名稱括起來。  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>備註  
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
- Visual C++ 編譯器會透過文件註解嘗試一次解決 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 請參閱[ \<seealso >](../ide/seealso-visual-cpp.md)如需詳細資訊。  
+ Visual C++ 編譯器會透過文件註解嘗試一次解決 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](../ide/seealso-visual-cpp.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -73,5 +74,5 @@ public ref class TestClass {
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

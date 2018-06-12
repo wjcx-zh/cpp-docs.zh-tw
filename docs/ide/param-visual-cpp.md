@@ -1,5 +1,5 @@
 ---
-title: '&lt;param&gt; （Visual c + +） |Microsoft 文件'
+title: '&lt;param&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325379"
 ---
-# <a name="ltparamgt-visual-c"></a>&lt;param&gt; （Visual c + +）
+# <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual C++)
 \<param> 標記應該在方法宣告的註解中用來描述參數的其中一個方法。  
   
 ## <a name="syntax"></a>語法  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
  參數的描述。  
   
 ## <a name="remarks"></a>備註  
- 文字\<param > 標記會顯示在 IntelliSense、[物件瀏覽器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)，也會在程式碼註解 Web 報表。  
+ \<param> 標記的文字將會顯示於 IntelliSense、[物件瀏覽器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)以及程式碼結構 Web 報告中。  
   
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
@@ -59,5 +60,5 @@ public ref class MyClass {
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

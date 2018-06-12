@@ -1,5 +1,5 @@
 ---
-title: 原始字串常值轉換成 |Microsoft 文件
+title: 轉換為原始字串常值 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.technology:
@@ -12,30 +12,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328405"
 ---
 # <a name="convert-to-raw-string-literal"></a>轉換為原始字串常值
-**項目：**可讓您將任何字串轉換成 c + + 原始字串常值。
+**功能：** 可讓您將任何字串轉換成 C++ 原始字串常值。
 
-**當：**有不應該處理為逸出字元逸出字元的字串。
+**時機：** 您的字串裡有不應該處理為逸出字元的逸出字元。
 
-**原因：**無法雙逸出字元，但這通常會造成混淆且無法讀取的字串將導致。  使用原始字串常值，可讓字串更容易讀取。
+**原因：** 您可以雙重逸出字元，但這通常會造成混淆且無法閱讀的字串。  使用原始字串常值，可讓字串更容易閱讀。
 
 **做法：**
 
-1. 您可以將文字或滑鼠游標放要轉換的逸出字串。
+1. 將文字或滑鼠游標放在要轉換的逸出字串上。
 
    ![醒目標示的程式碼](images/stringliteral_highlight.png)
 
 1. 接著，執行下列其中一項操作：
    * **鍵盤**
-     * 按 **Ctrl+.** 觸發程序**快速控制項目及重構**功能表，然後選取**原始字串常值轉換成**從內容功能表。
+     * 按 **Ctrl+.** 以觸發 [快速動作與重構] 功能表，然後從操作功能表選取 [轉換為原始字串常值]。
    * **滑鼠**
-     * 以滑鼠右鍵按一下程式碼中，選取**快速控制項目及重構**功能表，然後選取**原始字串常值轉換成**從內容功能表。
-     * 按一下![Lightbulb](images/bulb.png)圖示出現在左邊的界，然後選取**原始字串常值轉換成**從內容功能表。
+     * 以滑鼠右鍵按一下程式碼，選取 [快速動作與重構] 功能表，然後從操作功能表選取 [轉換為原始字串常值]。
+     * 按一下出現在左邊界的![燈泡](images/bulb.png)圖示，然後從操作功能表選取 [轉換為原始字串常值]。
 
 1. 字串將會立即轉換為原始字串常值。  
 
-   ![原始字串常值的結果](images/stringliteral_result.png)
+   ![原始字串常值結果](images/stringliteral_result.png)

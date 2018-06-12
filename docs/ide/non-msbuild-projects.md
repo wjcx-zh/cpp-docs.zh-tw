@@ -1,5 +1,5 @@
 ---
-title: 在 Visual c + + 中開啟資料夾專案 |Microsoft 文件
+title: Visual C++ 中的開啟資料夾專案 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2017
 ms.technology:
@@ -16,34 +16,35 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337281"
 ---
-# <a name="open-folder-projects-in-visual-c"></a>在 Visual c + + 中開啟專案資料夾
-Visual Studio 2017 導入了 「 開啟資料夾 」 功能，可讓您開啟來源檔案的資料夾並立即開始撰寫程式碼以支援 IntelliSense、 瀏覽、 重構、 偵錯等等。 會不載入任何.sln 或.vcxproj 檔案;如有需要您可以指定自訂工作，以及建置並啟動參數，透過簡單的.json 檔案。 由開啟的資料夾，Visual c + + 現在可以支援不僅鬆散集合的檔案，而且也幾乎任何建置系統，包括 CMake、 忍者一樣，QMake （適用於 Qt 專案），又試過 gyp、 SCons、 Gradle、 Buck、 請等等。 
+# <a name="open-folder-projects-in-visual-c"></a>Visual C++ 中的開啟資料夾專案
+Visual Studio 2017 引進了「開啟資料夾」功能，可讓您開啟原始程式檔的資料夾，並立即開始撰寫程式碼，同時還支援 IntelliSense、瀏覽、重構、偵錯等。 不會載入 .sln 或 .vcxproj 檔案；如有需要，您可以指定自訂工作，以及透過簡單的.JSON 檔案建置並啟動參數。 有了「開啟資料夾」，Visual C++ 現在不僅可以支援鬆散的檔案集合，也幾乎支援任何建置系統，包括 CMake、Ninja、QMake (適用於 Qt 專案)、gyp、SCons、Gradle、Buck、make 等。 
 
-若要使用開啟的資料夾，請從主功能表選取*檔案 |開啟 |資料夾*或按*Ctrl + Shift + Alt + O*。方案總管 中立即顯示所有檔案的資料夾中。 您可以按一下任何檔案以開始編輯它。 Visual Studio 會在背景開始編制檔案的索引，以啟用 IntelliSense、瀏覽及重構功能。 當您編輯、建立、移動或刪除檔案時，Visual Studio 會自動追蹤變更並持續更新其 IntelliSense 索引。 
+若要使用「開啟資料夾」，請從主功能表選取 [檔案] | [開啟] | [資料夾]，或按 *Ctrl + Shift + Alt + O*。[方案總管] 會立即顯示資料夾中的所有檔案。 您可以按一下任何檔案以開始編輯它。 Visual Studio 會在背景開始編制檔案的索引，以啟用 IntelliSense、瀏覽及重構功能。 當您編輯、建立、移動或刪除檔案時，Visual Studio 會自動追蹤變更並持續更新其 IntelliSense 索引。 
   
 ## <a name="cmake-projects"></a>CMake 專案
-CMake 已 Visual c + +、 c + + 桌面工作負載的元件，Visual Studio IDE 中整合 CMake 的工具。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](cmake-tools-for-visual-cpp.md)。
+CMake 已整合到 Visual Studio IDE 作為 Visual C++ CMake 工具，這是 C++ 桌面工作負載的一個元件。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](cmake-tools-for-visual-cpp.md)。
  
-## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake Qt framework 為目標的專案
-您可以使用 CMake 工具 Visual c + + 為目標 Qt 建置 Qt 專案，或您可以使用 Qt Visual Studio 擴充功能。 附註： 自年 8 月 2017年[Qt Visual Studio 擴充功能支援 Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/)可做為測試版。
+## <a name="qmake-projects-that-target-the-qt-framework"></a>以 Qt 架構為目標的 QMake 專案
+您可以使用 Visual C++ CMake 工具針對 Qt 建置 Qt 專案，也可以使用 Qt Visual Studio 延伸模組。 注意：自 2017 年 8 月起，[適用於 Visual Studio 2017 的 Qt Visual Studio 延伸模組支援](https://download.qt.io/development_releases/vsaddin/)會以搶鮮版 (Beta) 提供使用。
 
-## <a name="gyp-cons-scons-buck-etc"></a>又試過 gyp，Cons、 SCons、 Buck 等等
-您可以在 Visual c + + 中使用任何建置系統，且仍有 Visual c + + 的 IDE 和偵錯工具的優點。 當您開啟專案的根資料夾時，Visual c + + 會使用啟發式來索引為 IntelliSense 和瀏覽的來源檔案。 您可以藉由編輯 CppProperties.json 檔案提供有關您的程式碼結構的提示。 類似的方式，您可以藉由編輯 launch.vs.json 檔案設定建置程式。 
+## <a name="gyp-cons-scons-buck-etc"></a>gyp、Cons、SCons、Buck 等
+您可以在 Visual C++ 中使用任何建置系統，並仍享有 Visual C++ IDE 和偵錯工具的優點。 當您開啟專案的根資料夾時，Visual C++ 會使用啟發學習法來編製原始程式檔的索引供 IntelliSense 和瀏覽之用。 您可以藉由編輯 CppProperties.json 檔案，提供您程式碼結構的相關提示。 同樣地，您也可以藉由編輯 launch.vs.json 檔案，設定您的建置程式。 
 
-## <a name="configuring-open-folder-projects"></a>設定專案開啟資料夾
-您可以透過三個 JSON 檔案中自訂開啟資料夾專案：
+## <a name="configuring-open-folder-projects"></a>設定「開啟資料夾」專案
+您可以透過三個 JSON 檔案自訂「開啟資料夾」專案：
 |||
 |-|-|
-|CppProperties.json|指定瀏覽的自訂組態的資訊。 如有需要根專案資料夾中建立此檔案中。|
+|CppProperties.json|指定自訂組態資訊以供瀏覽。 如有需要，請在您的根專案資料夾中建立此檔案。|
 |launch.vs.json|指定命令列引數。 存取方式為透過 [方案總管] 的操作功能表項目 [偵錯並啟動設定]。|
 |tasks.vs.json|指定自訂建置命令和編譯器參數。 存取方式為透過 [方案總管] 的操作功能表項目 [設定工作]。|
 
-### <a name="configure-intellisense-with-cpppropertiesjson"></a>設定 IntelliSense 與 CppProperties.json
-IntelliSense 和瀏覽的行為部分取決於作用中的組建組態，它會定義 #include 路徑、 編譯器參數和其他參數。 根據預設，Visual Studio 會提供偵錯和發行組態。 針對某些專案，您可能需要讓 IntelliSense 和瀏覽功能，可完全了解您的程式碼建立自訂組態。 若要定義新的組態，建立稱為 CppProperties.json 根資料夾中的檔案。 請看以下範例：
+### <a name="configure-intellisense-with-cpppropertiesjson"></a>使用 CppProperties.json 設定 IntelliSense
+IntelliSense 和瀏覽行為部分取決於使用中組建組態，這會定義 #include 路徑、編譯器參數和其他參數。 根據預設，Visual Studio 會提供偵錯和發行組態。 針對某些專案，您可能需要建立自訂組態，讓 IntelliSense 和瀏覽功能可以完全理解您的程式碼。 若要定義新的組態，請在根資料夾中建立稱為 CppProperties.json 的檔案。 請看以下範例：
 
 ```json
 {
@@ -60,18 +61,18 @@ IntelliSense 和瀏覽的行為部分取決於作用中的組建組態，它會�
   ]
 }
 ```
-組態可能會有任何下列屬性：
+組態可以有下列任何屬性：
 
 |||  
 |-|-| 
-|`name`|c + + 的組態下拉式清單中顯示的組態名稱|
-|`includePath`|應指定 include 路徑 （對應至 /I 大多數的編譯器） 中的資料夾清單|
-|`defines`|定義 （適用於大多數的編譯器有對應到 /D） 的巨集，應該是清單。|
-|`compilerSwitches`|一或多個會影響 IntelliSense 行為的其他參數|
-|`forcedInclude`|會自動加到每個編譯單位中的標頭 （對應到 /FI MSVC 或-包括 clang）|
-|`undefines`|是未定義 （對應至如 MSVC /U） 巨集清單|
-|`intelliSenseMode`|使用 IntelliSense 引擎。 您可以指定架構特定變體 MSVC、 gcc 或 Clang:
-- msvc x86 （預設值）
+|`name`|出現在 C++ 組態下拉式清單中的組態名稱|
+|`includePath`|應該在 Include 路徑中指定的資料夾清單 (大多數編譯器會對應至 /I)|
+|`defines`|應該定義的巨集清單 (大多數編譯器會對應至 /D)|
+|`compilerSwitches`|可能會影響 IntelliSense 行為的一或多個其他參數|
+|`forcedInclude`|要自動包含在每個編譯單位中的標頭 (MSVC 會對應至 /FI，clang 會對應至 -include)|
+|`undefines`|要取消定義的巨集清單 (MSVC 會對應至 /U)|
+|`intelliSenseMode`|要使用的 IntelliSense 引擎。 您可以指定適用於 MSVC、gcc 或 Clang 的架構特定變化：
+- msvc-x86 (預設值)
 - msvc-x64
 - msvc-arm
 - windows-clang-x86
@@ -79,32 +80,32 @@ IntelliSense 和瀏覽的行為部分取決於作用中的組建組態，它會�
 - windows-clang-arm
 - Linux-x64
 - Linux-x86
-- Linux arm
+- Linux-arm
 - gccarm
 
 #### <a name="environment-variables"></a>環境變數
-CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性值。 語法是`${env.FOODIR}`展開環境變數`%FOODIR%`。 也支援下列系統定義的變數：
+CppProperties.json 支援 Include 路徑和其他屬性值的系統環境變數擴充。 語法是 `${env.FOODIR}`，可擴充環境變數 `%FOODIR%`。 此外，也支援下列系統定義的變數：
 
 |變數名稱|描述|  
 |-----------|-----------------|
-|vsdev|預設的 Visual Studio 環境|
-|msvc_x86|適用於 x86 使用 x86 編譯工具|
-|msvc_arm|使用 x86 arm 編譯工具|
-|msvc_arm64|使用 x86 ARM64 針對編譯工具|
-|msvc_x86_x64|使用 x86 AMD64 針對編譯工具|
-|msvc_x64_x64|使用 64 位元工具針對 AMD64 編譯|
-|msvc_arm_x64|為 ARM 使用 64 位元工具進行編譯|
-|msvc_arm64_x64|使用 64 位元工具針對 ARM64 編譯|
+|vsdev|預設 Visual Studio 環境|
+|msvc_x86|使用 x86 工具對 x86 進行編譯|
+|msvc_arm|使用 x86 工具對 ARM 進行編譯|
+|msvc_arm64|使用 x86 工具對 ARM64 進行編譯|
+|msvc_x86_x64|使用 x86 工具對 AMD64 進行編譯|
+|msvc_x64_x64|使用 64 位元工具對 AMD64 進行編譯|
+|msvc_arm_x64|使用 64 位元工具對 ARM 進行編譯|
+|msvc_arm64_x64|使用 64 位元工具對 ARM64 進行編譯|
 
-安裝 Linux 工作負載時，就有一個下列環境可供從遠端目標 Linux 和 WSL:
+安裝 Linux 工作負載之後，即可使用下列環境從遠端鎖定 Linux 和 WSL：
 
 |變數名稱|描述|  
 |-----------|-----------------|
-|linux_x86|目標 x86 Linux 遠端|
-|linux_x64|目標 x64 Linux 遠端|
-|linux_arm|從遠端目標 ARM Linux|
+|linux_x86|從遠端鎖定 x86 Linux|
+|linux_x64|從遠端鎖定 x64 Linux|
+|linux_arm|從遠端鎖定 ARM Linux|
 
-您可以定義自訂的環境變數中 CppProperties.json 是全域或每個組態。 下列範例會示範如何預設和自訂的環境變數可宣告及使用。 全域**環境**屬性會宣告名為的變數**INCLUDE** ，可以由任何設定：
+在 CppProperties.json 中，您可以全域或根據組態定義自訂環境變數。 下列範例示範如何宣告及使用預設和自訂環境變數。 全域 **environments** 屬性會宣告名為 **INCLUDE** 的變數，可供任何組態使用：
 
 ```json
 {
@@ -146,7 +147,7 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
   ]
 }
 ```
-您也可以定義**環境**屬性設定，讓它只適用於該組態，並覆寫相同名稱的任何全域變數內。 在下列範例中，x64 組態會定義本機**INCLUDE**會覆寫全域值的變數：
+您也可以在組態中定義 **environments** 屬性，讓它只會套用至該組態，並覆寫相同名稱的任何全域變數。 在下列範例中，x64 組態會定義區域 **INCLUDE** 變數來覆寫全域值：
 
 ```json
 {
@@ -192,17 +193,17 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
 }
 ```
 
-所有自訂和預設環境變數也可以在 tasks.vs.json 和 launch.vs.json。
+所有自訂和預設環境變數也會位於 tasks.vs.json 和 launch.vs.json 中。
 
 #### <a name="macros"></a>巨集
-您可以存取內 CppProperties.json 下列內建的巨集：
+您可以存取 CppProperties.json 的下列內建巨集：
 |||
 |-|-|
 |`${workspaceRoot}`| 工作區資料夾的完整路徑|
 |`${projectRoot}`| CppProperties.json 所在資料夾的完整路徑|
-|`${vsInstallDir}`| VS 2017 執行個體安裝所在的資料夾完整路徑|
+|`${vsInstallDir}`| 執行中 VS 2017 執行個體安裝所在資料夾的完整路徑|
 
-例如，如果您的專案已加入資料夾，而且也包含 windows.h 和 Windows SDK 中的其他常見標頭，您可能想要更新這些組態檔包含您 CppProperties.json:
+例如，如果您的專案具有 Include 資料夾，也包含 windows.h 及 Windows SDK 中的其他常見標頭，您可能需要使用下列 Include 檔更新您的 CppProperties.json 組態檔：
 
 ```json
 {
@@ -224,11 +225,11 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
 }
 ```
 
-**注意：** `%WindowsSdkDir%`和`%VCToolsInstallDir%`未設定全域環境變數，請確定啟動 devenv.exe 的 「 開發人員命令提示字元之下 VS 2017 」 定義這些變數。
+**注意：**`%WindowsSdkDir%` 和 `%VCToolsInstallDir%` 未設定為全域環境變數，因此請務必從定義這些變數的「VS 2017 開發人員命令提示字元」啟動 devenv.exe。
 
-若要疑難排解 IntelliSense 遺失所造成的錯誤 include 路徑，開啟**錯誤清單**並篩選輸出，以 「 僅 IntelliSense 」，以及錯誤碼 E1696 「 無法開啟原始程式檔 … 」。 
+若要針對遺失 Include 路徑所造成的 IntelliSense 錯誤進行疑難排解，請開啟 [錯誤清單]，並將其輸出篩選至「僅限 IntelliSense」和錯誤碼 E1696：「無法開啟原始程式檔…」。 
 
-您可以在 CppProperties.json 建立任意數目的設定。 每個會出現在下拉式清單中：
+您可以在 CppProperties.json 中建立任意數目的組態。 每個組態都會出現在組態下拉式清單中：
 
 ```json
 {
@@ -249,7 +250,7 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
 
 ![開啟資料夾設定工作](media/open-folder-config-tasks.png)
 
-這會建立 （或開啟） `tasks.vs.json` .vs 資料夾會在根專案資料夾中建立 Visual Studio 中的檔案。 您可以定義此檔案中的任何任意的工作，然後再叫用它從**方案總管 中**操作功能表。 下列範例會示範 tasks.vs.json 檔案，以定義單一工作。 `taskName` 在內容功能表中會定義顯示的名稱。 `appliesTo` 定義哪些檔案可執行命令。 `command`屬性參考到 COMSPEC 環境變數，可用來識別主控台 (在 Windows 上的 cmd.exe) 的路徑。 您也可以參考環境變數中 CppProperties.json 或 CMakeSettings.json 宣告。 `args`屬性會指定要叫用的命令列。 `${file}` 巨集會在 [方案總管] 中擷取選取的檔案。 下列範例會顯示目前選取的.cpp 檔案的檔案名稱。
+這會在 Visual Studio 於您的根專案資料夾建立的 .vs 資料夾中，建立 (或開啟) `tasks.vs.json` 檔案。 您可以在此檔案中定義任意工作，然後從 [方案總管] 操作功能表叫用它。 下列範例會顯示定義單一工作的 tasks.vs.json 檔案。 `taskName` 定義出現在操作功能表中的名稱。 `appliesTo` 定義可執行該命令的檔案。 `command` 屬性參考 COMSPEC 環境變數，以識別主控台的路徑 (在 Windows 上為 cmd.exe)。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管] 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
 
 ```json
 {
@@ -265,7 +266,7 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
   ]
 }
 ```
-您可以在儲存之後 tasks.vs.json，以滑鼠右鍵按一下資料夾中的任何.cpp 檔案、 選擇**回應檔名**從內容功能表中，並請參閱 [輸出] 視窗中顯示的檔案名稱。
+您可以在儲存 tasks.vs.json 之後，以滑鼠右鍵按一下資料夾中的任何 .cpp 檔案，從操作功能表選擇 [Echo filename]，然後查看 [輸出] 視窗中顯示的檔案名稱。
 
 
 
@@ -275,14 +276,14 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
 |-|-|
 |`"*"`| 工作可供工作區中的所有檔案及資料夾使用|
 |`"*/"`| 工作可供工作區中的所有資料夾使用|
-|`"*.cpp"`| 工作可以使用與副檔名.cpp 工作區中的所有檔案|
-|`"/*.cpp"`| 工作可以使用與副檔名.cpp 工作區的根目錄中的所有檔案|
+|`"*.cpp"`| 工作可供工作區中所有具有 .cpp 副檔名的檔案使用|
+|`"/*.cpp"`| 工作可供工作區根目錄中所有具有 .cpp 副檔名的檔案使用|
 |`"src/*/"`| 工作可供 "src" 資料夾的所有子資料夾使用|
 |`"makefile"`| 工作可供工作區中的所有 Makefile 檔案使用|
 |`"/makefile"`| 工作僅可供工作區根目錄中的 Makefile 使用|
 
 #### <a name="output"></a>output
-使用`output`屬性來指定當您按下將會啟動可執行檔**F5**。 例如: 
+使用 `output` 屬性，指定當您按下 **F5** 鍵時會啟動的可執行檔。 例如: 
 
 ```json
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
@@ -292,16 +293,16 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
 
 |||
 |-|-|
-|`${env.<VARIABLE>}`| 指定任何環境變數 （例如，${env。PATH} ${env.COMSPEC} 等等)，設定為開發人員命令提示字元。 如需詳細資訊，請參閱[適用於 Visual Studio 的開發人員命令提示字元](/dotnet/framework/tools/developer-command-prompt-for-vs)。|
-|`${workspaceRoot}`| 工作區資料夾 (例如，"C:\sources\hello") 的完整路徑|
-|`${file}`| 檔案或資料夾，選取要執行這項工作 (例如，"C:\sources\hello\src\hello.cpp 」) 針對完整的路徑|
-|`${relativeFile}`| 相對路徑的檔案或資料夾 (例如，"src\hello.cpp")|
-|`${fileBasename}`| 不含路徑或副檔名 (例如，"hello") 檔案的名稱|
-|`${fileDirname}`| 完整檔案路徑，但不包括檔名 (例如，"C:\sources\hello\src")|
-|`${fileExtname}`| 選取的檔案 (例如，".cpp") 的延伸模組|
+|`${env.<VARIABLE>}`| 指定針對開發人員命令提示字元所設定的任何環境變數 (例如 ${env.PATH}、${env.COMSPEC} 等)。 如需詳細資訊，請參閱[適用於 Visual Studio 的開發人員命令提示字元](/dotnet/framework/tools/developer-command-prompt-for-vs)。|
+|`${workspaceRoot}`| 工作區資料夾的完整路徑 (例如 "C:\sources\hello")|
+|`${file}`| 選取用於執行此工作之檔案或資料夾的完整路徑 (例如 "C:\sources\hello\src\hello.cpp")|
+|`${relativeFile}`| 檔案或資料夾的相對路徑 (例如 "src\hello.cpp")|
+|`${fileBasename}`| 沒有路徑或副檔名的檔案名稱 (例如 "hello")|
+|`${fileDirname}`| 不包括檔名的檔案完整路徑 (例如 "C:\sources\hello\src")|
+|`${fileExtname}`| 所選取檔案的副檔名 (例如 ".cpp")|
 
 #### <a name="custom-macros"></a>自訂巨集
-若要定義自訂的巨集 tasks.vs.json 中，新增的名稱： 值配對工作區塊之前。 下列範例會定義名為巨集`outDir`的消耗了多少`args`屬性：
+若要在 tasks.vs.json 中定義自訂巨集，請在工作區塊前面新增名稱:值對。 下列範例會定義名為 `outDir` 並在 `args` 屬性中取用的巨集：
 
 ```json
 {
@@ -321,9 +322,9 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
 ```
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>使用 launch.vs.json 設定偵錯參數
-若要自訂您的程式命令列引數，以滑鼠右鍵按一下中的可執行檔**方案總管 中**選取**偵錯和啟動設定**。 這會開啟一個現有`launch.vs.json`檔案，或如果沒有，就會建立新的檔案，預先填入您所選取的計畫的相關資訊。 
+若要自訂您程式的命令列引數，請在 [方案總管] 中以滑鼠右鍵按一下該可執行檔，然後選取 [偵錯並啟動設定]。 這會開啟現有的 `launch.vs.json` 檔案；如果不存在任何檔案，則會建立新的檔案，並預先填入您已選取之程式的相關資訊。 
 
-若要指定其他引數，只將其加入`args`JSON 陣列，如下列範例所示：
+若要指定其他引數，只要在 `args` JSON 陣列中新增這些引數即可，如下列範例所示：
 
 ```json
 {
@@ -340,8 +341,8 @@ CppProperties.json 支援系統環境變數擴充為包含路徑和其他屬性�
 }
 ```
 
-當您儲存此檔案時，新的組態會顯示在偵錯目標下拉式清單中，您可以選取它，以便開始偵錯工具。 您可以建立許多偵錯組態，各代表任何數目的可執行檔。 如果您按下**F5**現在，偵錯工具會啟動，來叫用已設定任何中斷點。 熟悉的偵錯工具的所有視窗和其功能現在會是可用項目。
+當您儲存此檔案時，新的組態會出現在 [偵錯目標] 下拉式清單中，且您可以選取它以啟動偵錯工具。 您可以視需要為任何數目的可執行檔建立許多偵錯組態。 如果您現在按下 **F5** 鍵，偵錯工具會啟動並叫用任何您可能已設定的中斷點。 現在可以使用所有熟悉的偵錯工具視窗及其功能。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [開發 Visual C++ 的 IDE 和工具](ide-and-tools-for-visual-cpp-development.md)
 

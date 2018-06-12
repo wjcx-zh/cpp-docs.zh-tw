@@ -1,5 +1,5 @@
 ---
-title: 建置 Visual Studio 中的 c + + 專案 |Microsoft 文件
+title: 在 Visual Studio 中建置 C++ 專案 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,38 +18,39 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340498"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>在 Visual Studio 中建置 C++ 專案
 在 Visual Studio 整合式開發環境 (IDE) 中，有數種方法可以建置整個方案或僅在其中建置一個專案。 您還可以修改建置設定，並指定自訂建置步驟，以讓您的開發處理程序更加有效。  
   
- 若要建置的解決方案，可以在 Visual Studio 中開啟並在已選取**方案總管 中**，您可以：  
+ 若要建置在 Visual Studio 中開啟且在 [方案總管] 中選取的方案，您可以：  
   
 -   在功能表列上，選擇 [建置] 、[建置方案] 。  
   
--   或者，在**方案總管 中**，開啟方案的捷徑功能表，然後選擇**建置方案**。  
+-   或者，在 [方案總管] 中，開啟方案的捷徑功能表，然後選擇 [建置方案]。  
   
 -   或者，按 F7  (這是 C/C++ 開發設定的預設鍵盤捷徑)。  
   
--   或者，在[命令視窗](/visualstudio/ide/reference/command-window)(在功能表列上選擇 **檢視**，**其他視窗**，**命令視窗**)，輸入`Build.BuildSolution`。  
+-   或者，在[命令視窗](/visualstudio/ide/reference/command-window) (在功能表列上，選擇 [檢視]、[其他視窗]、[命令視窗]) 中，輸入 `Build.BuildSolution`。  
   
--   或者，在[快速啟動](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box)方塊中，輸入`build build solution`。  
+-   或者，在[快速啟動](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box)方塊中，輸入 `build build solution`。  
   
- 若要建置的專案中所選取**方案總管 中**，您可以：  
+ 若要建置在 [方案總管] 中選取的專案，您可以：  
   
--   在功能表列上選擇 **建置**，**建置\<專案名稱 >**。  
+-   在功能表列上，選擇 [建置]、[建置 \<專案名稱>]。  
   
--   或者，在**方案總管 中**，開啟專案的捷徑功能表，然後選擇**建置**。  
+-   或者，在 [方案總管] 中，開啟專案的捷徑功能表，然後選擇 [建置]。  
   
--   或者，在命令視窗 (在功能表列上選擇 **檢視**，**其他視窗**，**命令視窗**)，輸入`Build.BuildOnlyProject`。  
+-   或者，在 [命令視窗] (在功能表列上，選擇 [檢視]、[其他視窗]、[命令視窗]) 中，輸入 `Build.BuildOnlyProject`。  
   
--   或者，您也可以在 [快速啟動] 方塊中，輸入`build project only build only <project name>`。  
+-   或者，在 [快速啟動] 方塊中，輸入 `build project only build only <project name>`。  
   
  當您在 Visual Studio 中建置 Visual C++ 應用程式時，您可以在專案的 [屬性頁] 對話方塊中，修改許多建置設定。 如需如何設定專案屬性的資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
- 如需如何使用 IDE，來建立、 建置及偵錯 c + + 專案的範例，請參閱[逐步解說： 探索 Visual Studio IDE 與 c + +](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)。 如需如何使用 IDE 建置 C + + CLR 專案，請參閱[逐步解說： 編譯 c + + 程式為目標的 Visual Studio 中的 CLR](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。 如需如何使用 IDE 來建立 Windows 執行階段應用程式的範例，請參閱[建立第一個 Windows 執行階段應用程式使用 c + +](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)。  
+ 如需如何使用 IDE 來建立、建置及偵錯 C++ 專案的範例，請參閱[逐步解說：使用 C++ 探索 Visual Studio IDE](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)。 如需如何使用 IDE 建置 C++/CLR 專案，請參閱[逐步解說：編譯針對 Visual Studio 中 CLR 的 C++ 程式](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)。 如需如何使用 IDE 來建立 Windows 執行階段應用程式的範例，請參閱[使用 C++ 建立您的第一個 Windows 執行階段應用程式](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)。  
   
  若要閱讀如何建置、修改建置設定及指定自訂建置步驟的更多資訊，請參閱下列文章。  
   
@@ -67,8 +68,8 @@ ms.lasthandoff: 05/04/2018
  呈現 .vcxproj 檔案的 XML 結構。  
   
 ## <a name="related-sections"></a>相關章節  
- [VC + + 目錄、 專案、 選項對話方塊](vcpp-directories-property-page.md)  
- （MSBuild 專案）討論如何修改可執行檔的搜尋路徑、 包含檔、 程式庫檔及原始程式碼檔在建置期間。  
+ [選項對話方塊、專案、VC++ 目錄](vcpp-directories-property-page.md)  
+ (僅限 MSBuild 專案) 討論在建置期間，如何修改可執行檔、Include檔、程式庫檔及原始程式碼檔案的搜尋路徑。  
   
  [編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  提供 Visual Studio 中建置的相關資訊。  
@@ -80,10 +81,10 @@ ms.lasthandoff: 05/04/2018
  提供以 C++ 建置程式之概觀、編譯器及連結器選項，以及其他建置工具的連結。  
   
  [從舊版的 Visual C++ 升級專案](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- 提供主題涵蓋將您的 c + + 專案升級至較新版本的編譯器工具組的問題連結。  
+ 提供涵蓋將 C++ 專案升級至較新版本的編譯器工具組等問題的主題連結。  
   
 [Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)  
-  有關如何升級在舊版的 Visual Studio 中，所建立的 c + + 應用程式以及如何使用 Visual Studio 以外工具所建立的應用程式移轉的詳細的資訊。  
+  如何升級使用舊版 Visual Studio 所建立之 C++ 應用程式，以及如何移轉使用 Visual Studio 以外工具所建立之應用程式的詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [通用 Windows 應用程式 (C++)](../windows/universal-windows-apps-cpp.md)

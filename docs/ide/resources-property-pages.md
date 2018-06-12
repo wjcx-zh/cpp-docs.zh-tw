@@ -1,5 +1,5 @@
 ---
-title: 資源屬性頁 |Microsoft 文件
+title: 資源屬性頁 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -23,16 +23,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322870"
 ---
 # <a name="resources-property-pages"></a>資源屬性頁面
-如需有關如何使用資源編譯器的詳細資訊，請參閱[使用 RC （RC 命令列）](http://msdn.microsoft.com/library/windows/desktop/aa381055)。  
+如需使用資源編譯器的詳細資訊，請參閱[使用 RC (RC 命令列)](http://msdn.microsoft.com/library/windows/desktop/aa381055)。  
   
- 如需有關如何存取詳細**資源**屬性頁中，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
+ 如需如何存取 [資源] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
- 若要以程式設計方式存取這些屬性，請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>。  
+ 若要以程式設計方式存取這些屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)

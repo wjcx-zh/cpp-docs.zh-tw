@@ -1,5 +1,5 @@
 ---
-title: '&lt;c&gt; （Visual c + +） |Microsoft 文件'
+title: '&lt;c&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329254"
 ---
-# <a name="ltcgt-visual-c"></a>&lt;c&gt; （Visual c + +）
-\<c > 標記代表描述內的文字應該標記為程式碼。 請使用 [\<code>](../ide/code-visual-cpp.md) 將多行指定為程式碼。  
+# <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual C++)
+\<c> 標記指出在一段描述中應該標記為程式碼的文字。 請使用 [\<code>](../ide/code-visual-cpp.md) 將多行指定為程式碼。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,5 +61,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

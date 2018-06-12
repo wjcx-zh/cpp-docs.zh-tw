@@ -1,5 +1,5 @@
 ---
-title: 加入成員變數精靈 |Microsoft 文件
+title: 新增成員變數精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,15 +18,16 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336322"
 ---
 # <a name="add-member-variable-wizard"></a>加入成員變數精靈
-這個精靈將在成員變數宣告加入至標頭檔，並根據的選項，它可以將程式碼加入的.cpp 檔案。 一旦您加入成員變數使用精靈，您可以編輯在開發環境中的程式碼。  
+此精靈會將成員變數宣告新增至標頭檔，而且視選項而定，還可以將程式碼新增至 .cpp 檔案。 一旦您使用精靈新增成員變數，就可以在開發環境中編輯程式碼。  
   
  **存取權**  
- 您可以設定的存取權的成員變數。 存取修飾詞是指定的成員變數對其他類別的存取權的關鍵字。 請參閱[成員存取控制](../cpp/member-access-control-cpp.md)如需有關指定存取權。 成員變數的存取層級設為**公用**預設。  
+ 設定成員變數的存取權。 存取修飾詞是指定其他類別對成員變數所具有之存取權的關鍵字。 如需指定存取權的詳細資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。 成員變數存取層級預設為 **public**。  
   
 -   [public](../cpp/public-cpp.md)  
   
@@ -35,11 +36,11 @@ ms.lasthandoff: 05/04/2018
 -   [private](../cpp/private-cpp.md)  
   
  **變數類型**  
- 設定您要加入成員變數的傳回型別。  
+ 設定您要新增之成員變數的傳回型別。  
   
--   如果您要加入成員變數不是對話方塊的控制項，從可用類型清單中選取。  
+-   如果您想要新增非對話方塊控制項的成員變數，請從可用類型清單中選取。  
   
-     類型的相關資訊，請參閱[基本類型](../cpp/fundamental-types-cpp.md)。  
+     如需這些類型的資訊，請參閱[基本類型](../cpp/fundamental-types-cpp.md)。  
   
     |||  
     |-|-|  
@@ -49,47 +50,47 @@ ms.lasthandoff: 05/04/2018
     |`int`|`unsigned long`|  
     |**long**||  
   
--   如果您要加入對話方塊控制項的成員變數，此方塊會填入控制項或值傳回的物件類型。 如果您選取**控制項**，然後**變數型別**指定您在選取的控制項的基底類別**控制項 ID**方塊。 對話方塊控制項可以包含值，且您選取**值**，然後**變數型別**指定適當的控制項可以包含的值類型。 請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)如需詳細資訊。  
+-   如果您想要新增對話方塊控制項的成員變數，此方塊會填入針對控制項或值傳回的物件類型。 如果您選取 [控制項]，則 [變數類型] 會指定您在 [控制項識別碼] 方塊中選取之控制項的基底類別。 如果對話方塊控制項可以包含值，且您選取 [值]，則 [變數類型] 會指定該控制項可包含之值的適當類型。 如需詳細資訊，請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)。  
   
-     這個值取決於在**控制項 ID**且無法變更。  
+     此值取決於 [控制項識別碼] 中的選擇，而且無法變更。  
   
  **變數名稱**  
- 設定您要加入成員變數的名稱。 成員變數通常開頭為"m_"的預設會為您提供的識別字串。  
+ 設定您要新增之成員變數的名稱。 成員變數通常是以預設為您提供的識別字串 "m_" 開頭。  
   
  **控制變數**  
- 表示成員變數管理內包含的對話方塊控制項[資料交換和驗證資料](../mfc/dialog-data-exchange-and-validation.md)支援。 請參閱[DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)如需詳細資訊。 這個選項是僅適用於成員變數加入至類別，衍生自[CDialog](../mfc/reference/cdialog-class.md)。 選取此方塊以啟用**控制項 ID**和**控制項類型**選項。  
+ 表示成員變數會管理具有[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)支援之對話方塊中的控制項。 如需詳細資訊，請參閱 [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)。 此選項僅適用於新增至衍生自 [CDialog](../mfc/reference/cdialog-class.md) 之類別的成員變數。 選取此方塊可啟用 [控制項識別碼] 和 [控制項類型] 選項。  
   
- **控制項 ID**  
- 設定您要加入此控制項變數的識別碼。 從清單中選取的控制項，您要加入成員變數類型的識別碼。 清單是作用中時，才**控制變數**選取方塊，且它僅限於已經加入至對話方塊控制項 Id。 例如，對於標準**確定** 按鈕，控制項 ID 是**IDOK**。  
+ **控制項識別碼**  
+ 設定您要新增之控制變數的識別碼。 從您要新增成員變數之控制項類型的識別碼清單中選取。 此清單只有在選取 [控制變數] 方塊時才能使用，而且它僅限於已新增至對話方塊的控制項識別碼。 例如，標準 [確定] 按鈕的控制項識別碼為 **IDOK**。  
   
 |選項|描述|  
 |------------|-----------------|  
-|**控制項**|控制項類型的預設會設定這個選項。 （如您可能想要與清單方塊、 下拉式方塊中或編輯方塊），它會管理本身，而非從狀態或內容控制項的控制項。|  
-|**值**|此選項可只可包含的值 （例如編輯方塊），或反映工作狀態 （例如核取方塊），控制項類型及可能用來管理範圍、 內容或狀態。 請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)如需詳細資訊。|  
+|**控制項**|控制項類型預設會設定此選項。 它會管理控制項本身，而不是控制項的狀態或內容 (您可能會想要對清單方塊、下拉式方塊或編輯方塊執行此動作)。|  
+|**值**|此選項僅適用於包含值 (例如編輯方塊) 或反映狀態 (例如核取方塊) 的控制項類型；針對這些類型，您可能會管理其範圍、內容或狀態。 如需詳細資訊，請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)。|  
   
  **分類**  
- 指定變數根據控制項類型或控制項的值。  
+ 指定變數是根據控制項類型或控制項的值。  
   
  **控制項類型**  
- 設定要加入的控制項類型。 無法變更使用此方塊。 例如，在按鈕的控制項類型**按鈕**，下拉式方塊擁有的控制項類型和**COMBOBOX**。 請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)如需詳細資訊。  
+ 設定要新增之控制項的類型。 您無法變更此方塊。 例如，按鈕的控制項類型為 **BUTTON**，而下拉式方塊的控制項類型為 **COMBOBOX**。 如需詳細資訊，請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)。  
   
  **最大字元數**  
- 時才可使用**變數型別**設[CString](../atl-mfc-shared/reference/cstringt-class.md)。 表示控制項可以容納字元的數目上限。  
+ 僅適用於 [變數類型] 設定為 [CString](../atl-mfc-shared/reference/cstringt-class.md) 時。 表示控制項可容納的最大字元數。  
   
  **最小值**  
- 變數的類型時，才能使用**BOOL**， `int`， **UINT**，**長**， `DWORD`， **float**， **double**，**位元組**，**簡短**， [COLECurrency](../mfc/reference/colecurrency-class.md)或[CTime](../atl-mfc-shared/reference/ctime-class.md)。 表示可接受的小數位數或日期範圍的最小值。  
+ 僅適用於變數類型為 **BOOL**、`int`、**UINT**、**long**、`DWORD`、**float**、**double**、**BYTE**、**short**、[COLECurrency](../mfc/reference/colecurrency-class.md) 或 [CTime](../atl-mfc-shared/reference/ctime-class.md) 時。 表示刻度或日期範圍可接受的最小值。  
   
  **最大值**  
- 變數的類型時，才能使用**BOOL**， `int`， **UINT**，**長**， `DWORD`， **float**， **double**，**位元組**，**簡短**，`COLECurrency`或`CTime`。 表示可接受的小數位數或日期範圍的最大值。  
+ 僅適用於變數類型為 **BOOL**、`int`、**UINT**、**long**、`DWORD`、**float**、**double**、**BYTE**、**short**、 `COLECurrency` 或 `CTime` 時。 表示刻度或日期範圍可接受的最大值。  
   
  **.h 檔案**  
- ActiveX 控制項，其成員變數需要包裝函式的類別。 設定要加入類別宣告的標頭檔的名稱。  
+ 適用於其成員變數需要包裝函式類別的 ActiveX 控制項。 設定要新增類別宣告之標頭檔的名稱。  
   
- **.cpp 檔案中**  
- ActiveX 控制項，其成員變數需要包裝函式的類別。 設定要加入類別定義的實作檔案的名稱。  
+ **.cpp 檔案**  
+ 適用於其成員變數需要包裝函式類別的 ActiveX 控制項。 設定要新增類別定義之實作檔的名稱。  
   
  **註解**  
- 提供成員變數的標頭檔中的註解。  
+ 提供成員變數之標頭檔中的註解。  
   
-## <a name="see-also"></a>另請參閱  
- [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [新增成員變數](../ide/adding-a-member-variable-visual-cpp.md)

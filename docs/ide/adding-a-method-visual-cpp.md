@@ -1,5 +1,5 @@
 ---
-title: 加入方法 （Visual c + +） |Microsoft 文件
+title: 新增方法 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,30 +17,31 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b247b0e21112d6a2be2384fafbf43fc295b22c71
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324430"
 ---
 # <a name="adding-a-method--visual-c"></a>加入方法 (Visual C++)
-您可以使用[加入方法精靈](../ide/add-method-wizard.md)將方法加入至您的專案中的介面。 如果專案包含介面相關聯的類別，精靈也會修改類別。  
+您可以使用[新增方法精靈](../ide/add-method-wizard.md)將方法新增至專案中的介面。 如果專案包含與介面建立關聯的類別，精靈也會修改類別。  
   
-### <a name="to-add-a-method-to-your-object"></a>將方法加入至您的物件  
+### <a name="to-add-a-method-to-your-object"></a>將方法新增至您的物件  
   
-1.  在 類別檢視中，展開專案節點，以顯示您要將方法的介面。  
+1.  在 [類別檢視] 中，展開專案節點，以顯示您要新增方法的介面。  
   
     > [!NOTE]
-    >  您也可以將方法加入的分配介面，除非專案屬性，位於程式庫節點下。  
+    >  您也可以將方法新增至分配介面，除非專案有屬性，否則它位於程式庫節點內。  
   
 2.  以滑鼠右鍵按一下介面的名稱。  
   
-3.  在捷徑功能表，按一下 **新增**，然後按一下 **加入方法**。  
+3.  在捷徑功能表上，按一下 [新增]，然後按一下 [新增方法]。  
   
-4.  在 加入方法精靈，提供的資訊建立方法。  
+4.  在 [新增方法精靈] 中，提供建立方法用的資訊。  
   
-5.  指定此方法中的任何介面定義語言設定[IDL 屬性](../ide/idl-attributes-add-method-wizard.md)精靈頁面。  
+5.  在精靈的 [IDL 屬性](../ide/idl-attributes-add-method-wizard.md)頁面，指定此方法的任何介面定義語言設定。  
   
-6.  按一下**完成**將方法加入。  
+6.  按一下 [完成] 以新增方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立 COM 介面](../ide/creating-a-com-interface-visual-cpp.md)   
  [編輯 COM 介面](../ide/editing-a-com-interface.md)

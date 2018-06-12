@@ -1,5 +1,5 @@
 ---
-title: 專案檔 |Microsoft 文件
+title: 專案檔 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,15 +19,16 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e66d6e94e4938c72adc5aea1a478ce6c0658e56e
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327225"
 ---
 # <a name="project-files"></a>專案檔
-Visual c + + 專案檔是以 XML 為基礎的檔案，副檔名為.vcxproj 檔案名稱並包含建置 Visual c + + 專案所需的資訊。  
+Visual C++ 專案檔是以 XML 為基礎的檔案，副檔名為 .vcxproj，並包含建置 Visual C++ 專案所需的資訊。  
   
 ## <a name="example"></a>範例  
- 下列範例.vcxproj 檔案由指定**Win32 主控台應用程式**中**新專案** 對話方塊。 若要處理專案檔案，請使用在命令列的 msbuild.exe 工具或**建置**命令[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]。 （此範例無法處理，因為未提供必要的原始檔和標頭檔。）如需專案檔中的 XML 元素的詳細資訊，請參閱[專案檔案結構描述參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。  
+ 下列範例 .vcxproj 檔案的產生方式，是在 [新專案] 對話方塊中指定 [Win32 主控台應用程式]。 若要處理專案檔，請在命令列使用 msbuild.exe 工具，或 [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] 中的 [建置] 命令。 (此範例無法處理，因為未提供必要的原始檔和標頭檔。)如需專案檔中的 XML 項目的詳細資訊，請參閱[專案檔案結構描述參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -127,6 +128,6 @@ Visual c + + 專案檔是以 XML 為基礎的檔案，副檔名為.vcxproj 檔�
 </Project>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [在 Visual Studio 中建置 c + + 專案](../ide/building-cpp-projects-in-visual-studio.md)   
+## <a name="see-also"></a>請參閱  
+ [在 Visual Studio 中建置 C++ 專案](../ide/building-cpp-projects-in-visual-studio.md)   
  [使用專案屬性](../ide/working-with-project-properties.md)

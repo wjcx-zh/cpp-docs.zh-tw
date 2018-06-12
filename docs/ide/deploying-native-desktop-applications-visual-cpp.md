@@ -1,5 +1,5 @@
 ---
-title: 部署原生桌面應用程式 （Visual c + +） |Microsoft 文件
+title: 部署原生傳統型應用程式 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2018
 ms.technology:
@@ -21,17 +21,18 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
 ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259240"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>部署原生桌面應用程式 (Visual C++)
 
 部署是指用來散發已完成的應用程式或元件，以便在其他電腦上進行安裝的程序。 當應用程式在開發人員的電腦上完成建立時，即開始部署規劃。 當應用程式已安裝並準備在使用者的電腦上執行時，即結束部署。
 
-Visual Studio 提供各種不同的技術來部署 Windows 應用程式。 這些包括 ClickOnce 部署和 Windows Installer 部署。
+Visual Studio 提供各種不同的技術來部署 Windows 應用程式。 這些技術包括 ClickOnce 部署和 Windows Installer 部署。
 
-- ClickOnce 可以用來部署以 common language runtime (CLR) 為目標的 c + + 應用程式 — 混合的、 純粹的和可驗證的組件。 雖然您可以使用 Windows Installer 來部署 managed 應用程式，我們建議您使用 ClickOnce，因為它會利用.NET Framework 安全性功能，例如資訊清單簽署。 ClickOnce 不支援原生 c + + 應用程式的部署。 如需詳細資訊，請參閱 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。
+- ClickOnce 可用來部署以 Common Language Runtime (CLR) 為目標的 C++ 應用程式，CLR 是混合、純粹且和可驗證的組件。 雖然您可以使用 Windows Installer 來部署受控應用程式，但建議您使用 ClickOnce 以利用 .NET Framework 安全性功能，例如資訊清單簽署。 ClickOnce 不支援原生 C++ 應用程式的部署。 如需詳細資訊，請參閱 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)。
 
 - Windows Installer 技術可用來部署原生 C++ 應用程式或以 CLR 為目標的 C++ 應用程式。
 
@@ -49,7 +50,7 @@ Visual Studio 提供各種不同的技術來部署 Windows 應用程式。 這�
 
 - [選擇部署方法](../ide/choosing-a-deployment-method.md)
 
-- [Universal CRT 部署](universal-crt-deployment.md)。
+- [通用 CRT 部署](universal-crt-deployment.md)。
 
 - [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)
 
@@ -59,7 +60,7 @@ Visual Studio 提供各種不同的技術來部署 Windows 應用程式。 這�
 
 - [Visual C++ 應用程式的 ClickOnce 部署](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [在舊版的執行階段版本上執行 c + + /clr 應用程式](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [在舊版執行階段版本上執行 C++ /clr 應用程式](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>相關章節
 

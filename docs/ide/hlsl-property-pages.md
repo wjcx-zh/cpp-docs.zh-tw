@@ -1,5 +1,5 @@
 ---
-title: HLSL 屬性頁 |Microsoft 文件
+title: HLSL 屬性頁 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,12 +16,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 86bbd23f1c9fcfcc0a19d7a2c1b66f3500d84361
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323127"
 ---
 # <a name="hlsl-property-pages"></a>HLSL 屬性頁
-您可以使用 HLSL 編譯器 (fxc.exe) 屬性頁，設定檔則建置方式個別的 HLSL 著色器。 屬性分為三個類別：  
+您可以使用 HLSL 編譯器 (fxc.exe) 屬性頁，設定個別 HLSL 著色器檔案的建置方式。 屬性分為三個類別：  
   
 -   [HLSL 屬性頁：一般](../ide/hlsl-property-pages-general.md)  
   
@@ -29,15 +30,15 @@ ms.lasthandoff: 05/04/2018
   
 -   [HLSL 屬性頁：進階](../ide/hlsl-property-pages-advanced.md)  
   
-     提供屬性，以指定其他 HLSL 編譯器選項。  
+     提供屬性，以指定 HLSL 編譯器的其他選項。  
   
 -   [HLSL 屬性頁：輸出檔](../ide/hlsl-property-pages-output-files.md)  
   
-     提供屬性，以指定檔案的 HLSL 編譯器輸出的方式。  
+     提供屬性，以指定 HLSL 編譯器的檔案輸出方式。  
   
- 您可以指定給 HLSL 編譯器命令列引數使用**其他選項**屬性**命令列**屬性頁，這包含無法使用其他設定的引數HLSL 屬性頁的屬性。 HLSL 編譯器的相關資訊，請參閱[效果編譯器工具](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
+ 您可以使用 [命令列] 屬性頁的 [其他選項] 屬性指定命令列引數給 HLSL 編譯器，這包含無法使用 HLSL 屬性頁其他屬性設定的引數。 如需 HLSL 編譯器的資訊，請參閱 [Effect-Compiler Tool](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409) (效果編譯器工具)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)   
  [命令列屬性頁](../ide/command-line-property-pages.md)   
  [編譯著色器](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

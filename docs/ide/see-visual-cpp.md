@@ -1,5 +1,5 @@
 ---
-title: '&lt;請參閱&gt;（Visual c + +） |Microsoft 文件'
+title: '&lt;see&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335495"
 ---
-# <a name="ltseegt-visual-c"></a>&lt;請參閱&gt;（Visual c + +）
-\<see> 標記可讓您在文字內指定連結。 使用[ \<seealso >](../ide/seealso-visual-cpp.md)表示您可能想要出現在另請參閱 > 一節中的文字。  
+# <a name="ltseegt-visual-c"></a>&lt;see&gt; (Visual C++)
+\<see> 標記可讓您在文字內指定連結。 使用 [\<seealso>](../ide/seealso-visual-cpp.md) 表示要顯示在＜另請參閱＞一節中的文字。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,17 +38,17 @@ ms.lasthandoff: 05/04/2018
  `member`  
  可從目前編譯環境呼叫的成員或欄位參考。  以單引號或雙引號將名稱括起來。  
   
- 編譯器會檢查指定的程式碼項目存在，並解析`member`在輸出 XML 中的項目名稱。  如果編譯器找不到 `member`，它會發出警告。  
+ 編譯器會檢查指定的程式碼項目是否存在，並將 `member` 解析為輸出 XML 中的項目名稱。  如果編譯器找不到 `member`，它會發出警告。  
   
 ## <a name="remarks"></a>備註  
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
- 請參閱[\<摘要 >](../ide/summary-visual-cpp.md)的使用範例\<看到 >。  
+ 如需使用 \<see> 的範例，請參閱 [\<summary>](../ide/summary-visual-cpp.md)。  
   
- Visual C++ 編譯器會透過文件註解嘗試一次解決 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 請參閱[ \<seealso >](../ide/seealso-visual-cpp.md)如需詳細資訊。  
+ Visual C++ 編譯器會透過文件註解嘗試一次解決 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](../ide/seealso-visual-cpp.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例說明如何進行 cref 參考泛型型別，這樣就表示編譯器將會解析參考。  
+ 下列範例示範如何建立泛型型別的 cref 參考，如此一來，編譯器就會解析參考。  
   
 ```  
 // xml_see_cref_example.cpp  
@@ -74,5 +75,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

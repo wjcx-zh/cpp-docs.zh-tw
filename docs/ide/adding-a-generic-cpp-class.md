@@ -1,5 +1,5 @@
 ---
-title: 加入泛型 c + + 類別 |Microsoft 文件
+title: 新增泛型 C++ 類別 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,24 +20,25 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2773c38561a36ab72dfe33dccc5d98ea9d09ebce
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326468"
 ---
 # <a name="adding-a-generic-c-class"></a>加入泛型 C++ 類別
-您可以藉由加入泛型 c + + 類別**類別檢視**。 泛型 c + + 類別是衍生自您定義的類別或您定義的類別。  
+您可以藉由使用 [類別檢視] 新增泛型 C++ 類別。 泛型 C++ 類別是您定義的類別，或是衍生自您定義類別的類別。  
   
-### <a name="to-add-a-generic-c-class-to-a-project"></a>將一般的 c + + 類別加入至專案  
+### <a name="to-add-a-generic-c-class-to-a-project"></a>將泛型 C++ 類別新增至專案  
   
-1.  在**類別檢視**，以滑鼠右鍵按一下您要加入新的類別，請按一下 的專案**新增**，然後按一下 **類別**。  
+1.  在 [類別檢視] 中，以滑鼠右鍵按一下您要新增類別的專案，然後依序按一下 [新增]、[類別]。  
   
-2.  在[加入類別](../ide/add-class-dialog-box.md)對話方塊，在 [範本] 窗格中，按一下**c + + 類別**。 按一下**新增**顯示[泛型 c + + 類別精靈](../ide/generic-cpp-class-wizard.md)。  
+2.  在[新增專案](../ide/add-class-dialog-box.md)對話方塊的 [範本] 窗格中，按一下 [C++ 類別]。 按一下 [新增]，顯示 [[泛型 C++ 類別精靈]](../ide/generic-cpp-class-wizard.md)。  
   
-3.  在精靈中提供的類別名稱，然後定義設定，或接受預設值。  
+3.  在精靈中提供類別名稱，然後定義設定，或接受預設值。  
   
-4.  若要關閉精靈並檢視新的泛型 c + + 類別專案中，按一下**完成**。  
+4.  若要關閉精靈並在專案中檢視新的泛型 C++ 類別，請按一下 [完成]。  
   
-## <a name="see-also"></a>另請參閱  
- [加入類別](../ide/adding-a-class-visual-cpp.md)   
+## <a name="see-also"></a>請參閱  
+ [類別](../ide/adding-a-class-visual-cpp.md)   
  [MFC 類別](../mfc/reference/adding-an-mfc-class.md)   
  [ATL 簡單物件](../atl/reference/adding-an-atl-simple-object.md)

@@ -1,5 +1,5 @@
 ---
-title: MIDL 屬性頁： 一般 |Microsoft 文件
+title: MIDL 屬性頁：一般 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -27,14 +27,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 6e1709c878a0b5f5325798b874e5549c5c8cb83f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329978"
 ---
 # <a name="midl-property-pages-general"></a>MIDL 屬性頁：一般
-**一般**中的 屬性頁**MIDL**資料夾指定下列的 MIDL 編譯器選項：  
+**MIDL** 資料夾中的 [一般] 屬性頁指定下列 MIDL 編譯器選項：  
   
--   前置處理器定義[(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
+-   前置處理器定義 [(/D](http://msdn.microsoft.com/library/windows/desktop/aa367321))  
   
 -   其他 Include 目錄 ([/I](http://msdn.microsoft.com/library/windows/desktop/aa367328))  
   
@@ -48,15 +49,15 @@ ms.lasthandoff: 05/04/2018
   
 -   隱藏程式啟始資訊 ([/nologo](http://msdn.microsoft.com/library/windows/desktop/aa367341))  
   
--   MIDL Char 類型 ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
+-   MIDL Char 型別 ([/char](http://msdn.microsoft.com/library/windows/desktop/aa367314))  
   
 -   目標環境 ([/env](http://msdn.microsoft.com/library/windows/desktop/aa367323))  
   
--   產生 Stubless Proxies ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
+-   產生 Stubless Proxy ([/Oicf](http://msdn.microsoft.com/library/windows/desktop/aa367352))  
   
- 如需有關如何存取詳細**一般**中的 屬性頁**MIDL**資料夾，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
+ 如需如何存取 **MIDL** 資料夾中 [一般] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
- 如需如何以程式設計方式存取 c + + 專案的 MIDL 選項的資訊，請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>物件。  
+ 如需如何以程式設計方式存取 C++ 專案的 MIDL 選項的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MIDL 屬性頁](../ide/midl-property-pages.md)

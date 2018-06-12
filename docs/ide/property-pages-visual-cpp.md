@@ -1,5 +1,5 @@
 ---
-title: 屬性頁 （Visual c + +） |Microsoft 文件
+title: 屬性頁 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -26,47 +26,48 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339705"
 ---
 # <a name="property-pages-visual-c"></a>屬性頁 (Visual C++)
 
-藉由使用屬性頁，您可以指定 Visual Studio 專案的設定。 若要開啟**屬性頁**對話方塊 for Visual Studio 專案中，在**專案**功能表上，選擇**屬性**。
+藉由使用屬性頁，您可以指定 Visual Studio 專案的設定。 若要開啟 Visual Studio 專案的 [屬性頁] 對話方塊，請在 [專案] 功能表上，選擇 [屬性]。
 
 您可以指定專案設定，使其套用所有組建組態，或是您可以為每個組建組態指定不同的專案屬性。 例如，您可以指定發行組態的特定設定和偵錯組態的其他設定。
 
-並非所有可用的頁面都一定會顯示在**屬性頁** 對話方塊。 要顯示的網頁取決於專案中的檔案類型。
+並非所有可用的頁面都一定會顯示在 [屬性頁] 對話方塊中。 要顯示的網頁取決於專案中的檔案類型。
 
 如需詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
 
-對於非 Windows 的專案，請參閱[Linux c + + 屬性頁面參考](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->。
+若為非 Windows 專案，請參閱 [Linux C++ 屬性頁參考](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->。
 
 ## <a name="default-properties-vs-modified-properties"></a>預設屬性與修改的屬性的比較
 
-當您使用**新專案**對話方塊來建立專案時，Visual Studio 會使用指定的專案範本初始化專案屬性。 因此，在此範本中的屬性值可以視為該專案類型的預設值。 在其他專案類型中，屬性可能會有不同的預設值。
+當您使用 [新增專案] 對話方塊來建立專案時，Visual Studio 會使用指定的專案範本初始化專案屬性。 因此，在此範本中的屬性值可以視為該專案類型的預設值。 在其他專案類型中，屬性可能會有不同的預設值。
 
 如果專案屬性值已修改，會顯示為粗體。 專案屬性可能會因為下列原因修改：
 
 - 應用程式精靈變更了屬性，因為它需要的屬性值和專案範本中指定的不同。
 
-- 您指定不同的屬性值中**新專案** 對話方塊。
+- 您在 [新增專案] 對話方塊中指定不同的屬性值。
 
 - 您在專案屬性頁上指定不同的屬性值。
 
 > [!TIP]
-> 若要查看 MSBuild 用來建置您的專案的屬性值的最終集合，檢查您可藉由使用此命令列產生的前置處理器輸出檔案： **MSBuild / 前置處理：** *preprocessor_output_檔名*<sub>選擇</sub> *project_filename*<sub>選擇加入</sub>
+> 若要查看 MSBuild 用來建置您專案的最後一組屬性值，請檢查前置處理器輸出檔，您可藉由使用下列命令列產生該檔案：**MSBuild /preprocess:** *preprocessor_output_filename*<sub>opt</sub> *project_filename*<sub>opt</sub>
 
 ## <a name="resetting-properties"></a>重設屬性
 
-當您檢視**屬性頁**專案和專案節點的對話方塊中選取**方案總管 中**，對於許多屬性，您可以選取**繼承自父代或專案預設值**修改的值或另一種方式。
+當您檢視專案的 [屬性頁] 對話方塊並在 [方案總管] 中選取專案節點時，您可以針對許多屬性選取 [從父代或專案預設值繼承] 或以另一種方式修改值。
 
-當您檢視**屬性頁**專案和檔案 對話方塊中選取**方案總管 中**，對於許多屬性，您可以選取**繼承自父代或專案預設值**修改的值或另一種方式。 不過，如果專案包含的許多檔案都具有和專案預設值不同的屬性值，建置專案需要較長的時間。
+當您檢視專案的 [屬性頁] 對話方塊並在 [方案總管] 中選取檔案時，您可以針對許多屬性選取 [從父代或專案預設值繼承] 或以另一種方式修改值。 不過，如果專案包含的許多檔案都具有和專案預設值不同的屬性值，建置專案需要較長的時間。
 
 > [!TIP]
-> 若要重新整理**屬性頁**對話方塊中，使其顯示最新的選取項目，選擇**套用**。
+> 若要重新整理 [屬性頁] 對話方塊以顯示最新的選取內容，請選擇 [套用]。
 
-大部分的專案預設值為系統 (平台) 預設值。 有些專案預設值是衍生自更新中的屬性時，所套用的樣式表**專案預設**區段**一般**專案的組態屬性頁。 如需詳細資訊，請參閱[一般屬性頁 （專案）](../ide/general-property-page-project.md)。
+大部分的專案預設值為系統 (平台) 預設值。 有些專案預設值衍生自樣式表，當您在專案的 [一般] 組態屬性頁的 [專案預設值] 區段中更新屬性時可套用這些樣式表。 如需詳細資訊，請參閱[一般屬性頁 (專案)](../ide/general-property-page-project.md)。
 
 ## <a name="specifying-user-defined-values"></a>指定使用者定義值
 
@@ -76,31 +77,31 @@ ms.lasthandoff: 05/04/2018
 
 - 輸入值或值的清單。
 
-- 選擇下拉式箭號。 如果**編輯**可用，選擇該連結，然後在文字方塊中，輸入值的清單。 指定清單的替代方式是在文字方塊中的個別行上輸入每個值。 在屬性頁上，這些值將顯示為以分號分隔的清單。
+- 選擇下拉式箭頭。 如果可以使用 [編輯]，請選擇它，然後在文字方塊中鍵入值或值的清單。 指定清單的替代方式是在文字方塊中的個別行上輸入每個值。 在屬性頁上，這些值將顯示為以分號分隔的清單。
 
-   若要插入專案檔巨集做為值，請選擇**巨集**，然後按兩下巨集名稱。
+   若要插入專案檔巨集作為值，請選擇 [巨集]，然後按兩下巨集名稱。
 
-- 選擇下拉式箭號。 如果**瀏覽**可用，選擇它，然後選取一個或多個值。
+- 選擇下拉式箭頭。 如果可以使用 [瀏覽]，請選擇它，然後選取一或多個值。
 
-對於多重值屬性，**繼承自父代或專案預設值**選項時，使用您選擇要在屬性名稱右邊資料行中的下拉箭號，然後選擇**編輯**。 根據預設，這個選項已選取。
+對於多重值屬性，當您選擇屬性名稱右欄中的下拉式箭頭，然後選擇 [編輯] 時，即可使用 [從父代或專案預設值繼承] 選項。 根據預設，這個選項已選取。
 
-請注意，屬性頁只會為繼承自另一個層級之多重值屬性顯示目前層級的設定。 比方說，如果在 [選取檔案**方案總管] 中**，而且您選取 C/c + +**前置處理器定義**屬性，會顯示檔案層級定義，但是繼承專案層級定義不會顯示。 若要檢視目前層級和繼承的值，選擇要在屬性名稱右邊資料行中的下拉箭號，然後選擇**編輯**。 如果您使用[Visual c + + 專案模型](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine)，這個行為也會影響物件的檔案和專案。 也就是說，當您在檔案層級查詢屬性上的值，您不會在專案層級收到相同屬性的值。 您必須在專案層級明確取得屬性的值。 此外，屬性的某些繼承值可能來自無法以程式設計方式存取的樣式表。
+請注意，屬性頁只會為繼承自另一個層級之多重值屬性顯示目前層級的設定。 例如，如果在 [方案總管] 中選取檔案，而且您選取 C/C++ [前置處理器定義] 屬性，則會顯示檔案層級定義，但不會顯示繼承的專案層級定義。 若要檢視目前層級和繼承的值，請選擇屬性名稱右欄中的下拉式箭頭，然後選擇 [編輯]。 如果您使用 [Visual C++ 專案模型](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine)，這個行為也會影響檔案和專案上的物件。 也就是說，當您在檔案層級查詢屬性上的值，您不會在專案層級收到相同屬性的值。 您必須在專案層級明確取得屬性的值。 此外，屬性的某些繼承值可能來自無法以程式設計方式存取的樣式表。
 
 ## <a name="in-this-section"></a>本節內容
 
-[進階、 資訊清單工具、 組態屬性、\<專案名稱 > 屬性頁對話方塊](../ide/advanced-manifest-tool.md)
+[進階、資訊清單工具、組態屬性、\<Projectname> 屬性頁對話方塊](../ide/advanced-manifest-tool.md)
 
 [命令列屬性頁](../ide/command-line-property-pages.md)
 
 [自訂建置步驟屬性頁：一般](../ide/custom-build-step-property-page-general.md)
 
-[加入參考](../ide/adding-references-in-visual-cpp-projects.md)
+[新增參考](../ide/adding-references-in-visual-cpp-projects.md)
 
 [一般屬性頁 (檔案)](../ide/general-property-page-file.md)
 
 [一般屬性頁面 (專案)](../ide/general-property-page-project.md)
 
-[一般、 資訊清單工具、 組態屬性、\<專案名稱 > 屬性頁對話方塊](../ide/general-manifest-tool-configuration-properties.md)
+[一般、資訊清單工具、組態屬性、\<Projectname> 屬性頁對話方塊](../ide/general-manifest-tool-configuration-properties.md)
 
 [HLSL 屬性頁](../ide/hlsl-property-pages.md)
 
@@ -110,9 +111,9 @@ ms.lasthandoff: 05/04/2018
 
 [HLSL 屬性頁：輸出檔](../ide/hlsl-property-pages-output-files.md)
 
-[輸入和輸出、 資訊清單工具、 組態屬性、\<專案名稱 > 屬性頁對話方塊](../ide/input-and-output-manifest-tool.md)
+[輸入和輸出、資訊清單工具、組態屬性、\<Projectname> 屬性頁對話方塊](../ide/input-and-output-manifest-tool.md)
 
-[隔離的 COM、 資訊清單工具、 組態屬性、\<專案名稱 > 屬性頁對話方塊](../ide/isolated-com-manifest-tool.md)
+[隔離的 COM、資訊清單工具、組態屬性、\<Projectname> 屬性頁對話方塊](../ide/isolated-com-manifest-tool.md)
 
 [連結器屬性頁](../ide/linker-property-pages.md)
 

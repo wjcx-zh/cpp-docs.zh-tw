@@ -1,5 +1,5 @@
 ---
-title: 覆寫虛擬函式 （Visual c + +） |Microsoft 文件
+title: 覆寫虛擬函式 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,36 +20,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: d8580d27442b0cae7e343a568beaa9aeae500461
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337739"
 ---
 # <a name="overriding-a-virtual-function-visual-c"></a>覆寫 Virtual 函式 (Visual C++)
-您可以覆寫虛擬函式定義在基底類別，從 Visual Studio[屬性 視窗](/visualstudio/ide/reference/properties-window)。  
+您可以從 Visual Studio [屬性視窗](/visualstudio/ide/reference/properties-window)覆寫基底類別中定義的虛擬函式。  
   
-### <a name="to-override-a-virtual-function-in-the-properties-window"></a>若要覆寫虛擬函式，在 [屬性] 視窗  
+### <a name="to-override-a-virtual-function-in-the-properties-window"></a>在 [屬性] 視窗中覆寫虛擬函式  
   
-1.  在 類別檢視中，按一下 類別。  
+1.  在 [類別檢視] 中，按一下類別。  
   
-2.  在 屬性 視窗中，按一下**會覆寫** 按鈕。  
+2.  在 [屬性] 視窗中，按一下 [覆寫] 按鈕。  
   
     > [!NOTE]
-    >  **會覆寫**按鈕時，使用您在 類別檢視 或 當您按一下來源視窗內選取的類別名稱。  
+    >  當您在 [類別檢視] 中選取類別名稱或按一下原始檔視窗時，即可使用 [覆寫] 按鈕。  
   
-     左欄列出虛擬函式。 如果虛擬函式的名稱也會出現在右邊的資料行，然後覆寫已實作。  
+     左欄會列出虛擬函式。 如果某個虛擬函式的名稱也出現在右欄，則已實作覆寫。  
   
-3.  如果函式沒有覆寫，然後按一下 顯示建議的名稱，函式的 屬性 視窗右欄中的資料格會覆寫\<新增 >*FuncName*。  
+3.  如果函式沒有覆寫，則按一下 [屬性] 視窗右欄中的儲存格，將函式覆寫的建議名稱顯示為 \<add>*FuncName*。  
   
-4.  按一下以加入函式的虛設常式程式碼的建議的名稱。  
+4.  按一下建議名稱，新增函式的 Stub 程式碼。  
   
-5.  若要編輯覆寫的函式，按兩下類別檢視中的函式名稱，然後編輯在來源視窗中的程式碼。  
+5.  若要編輯覆寫函式，請按兩下 [類別檢視] 中的函式名稱，然後在原始檔視窗中編輯程式碼。  
   
- 若要移除覆寫，請按一下右欄中的覆寫函式名稱，然後選取\<刪除 >*FuncName*。 函式的程式碼標記為註解。  
+ 若要移除覆寫，請按一下右欄中的覆寫函式名稱，然後選取 \<delete>*FuncName*。 這會將函式的程式碼標記為註解。  
   
-## <a name="see-also"></a>另請參閱  
- [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入類別](../ide/adding-a-class-visual-cpp.md)   
- [加入成員函式](../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
+## <a name="see-also"></a>請參閱  
+ [使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [類別](../ide/adding-a-class-visual-cpp.md)   
+ [成員函式](../ide/adding-a-member-function-visual-cpp.md)   
+ [成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
  [MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)   
  [巡覽類別結構](../ide/navigating-the-class-structure-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: 在 Visual c + + 專案中加入參考 |Microsoft 文件
+title: 在 Visual C++ 專案中新增參考 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336104"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 專案中加入參考
 程式通常會在 DLL、Windows 執行階段元件、擴充功能 SDK、COM 元件和 .NET 組件等其他二進位檔中，呼叫應用程式開發介面。 您的程式尋找這些二進位檔的方式，取決於您專案的類型和二進位檔類型。  
   
  在原生 C++ 專案中，如果您想要使用不是由方案中的另一個專案所產生的原生 DLL 或 COM 元件，您可以使用 LoadLibrary 或 CoCreateInstance 來指定該二進位檔的路徑，或是讓系統在妥善定義的特定位置中查詢並找出該路徑。  
   
- 在 UWP 專案或 C++/CLI 專案等其他專案類型中，或是當二進位檔是由方案中的另一個專案所產生時，您可以在組件、元件或專案中加入 *「參考」* (Reference)。   參考基本上是可讓您的程式找到二進位檔並與其通訊的一組資料。       當您加入參考時，Visual Studio 會處理低階詳細資料 若要將來自 c + + 專案的參考設定至.NET Frameworkassemblies (C + + CLI 只)、 COM 元件，包括您方案中的其他專案共用的專案，或已連接服務，以滑鼠右鍵按一下**參考**節點**方案總管 中**啟動**參考管理員**。 您在 [參考管理員] 中看到的內容會視專案類型而有所不同。  
+ 在 UWP 專案或 C++/CLI 專案等其他專案類型中，或是當二進位檔是由方案中的另一個專案所產生時，您可以在組件、元件或專案中加入 *「參考」* (Reference)。   參考基本上是可讓您的程式找到二進位檔並與其通訊的一組資料。       當您加入參考時，Visual Studio 會處理低階詳細資料 若要將來自 C++ 專案的參考設定為 .NET Framework 組件 (僅限 C++/CLI)、COM 元件、方案中的其他專案 (包括共用專案) 或連線服務，請以滑鼠右鍵按一下 [方案總管] 中的 [參考] 節點，以顯示 [參考管理員]。 您在 [參考管理員] 中看到的內容會視專案類型而有所不同。  
   
  在原生 C++ 專案 (ATL) 中， *「參考」* (Reference) 的概念僅適用於方案中的其他專案 (包括共用專案)，因此您只會在 [參考管理員] 中看到這些專案：  
   
- ![Visual C&#43; &#43;參考管理員&#40;ATL 專案&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 參考管理員 （ATL 專案）")  
+ ![Visual C&#43;&#43; 參考管理員 &#40;ATL 專案&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual C++ 參考管理員 (ATL 專案)")  
   
- 在 C++/CLI 或通用 Windows 平台專案中，參考的概念除了適用於方案中的其他專案之外，還適用於更多類型的二進位檔。  這些所有中公開**參考管理員**。
+ 在 C++/CLI 或通用 Windows 平台專案中，參考的概念除了適用於方案中的其他專案之外，還適用於更多類型的二進位檔。  這些類型全部都會在 [參考管理員] 中公開。
   
 ## <a name="reference-properties"></a>參考屬性  
  每種參考類型都包含屬性。 您可以在方案總管中選取參考，然後按 **Alt + Enter**，或按一下滑鼠右鍵並選擇 [屬性] ，來檢視屬性。 部分屬性是唯讀的，而部分屬性則可以修改。 不過，您通常不需要手動修改這些屬性。  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/04/2018
  顯示用來從參考 COM 程式庫或 ActiveX 控制項建置 Interop 組件的工具。  
   
 ### <a name="assembly-reference-properties"></a>組件參考屬性  
- 組件參考屬性是僅適用於參考.NET Frameworkassemblies 在 C + + /CLI 專案。 這些屬性會顯示在選取.NET Frameworkassembly 時才**參考**窗格。 屬性不能修改。  
+ 組件參考屬性僅適用於 C++/CLI 專案中 .NET Framework 組件的參考。 這些屬性僅在 [參考] 窗格中選取 .NET Framework 組件時才會顯示。 屬性不能修改。  
   
  **相對路徑**  
  顯示從專案目錄到參考組件的相對路徑。  
@@ -103,7 +104,7 @@ ms.lasthandoff: 05/04/2018
  顯示參考組件的目錄路徑。  
   
  **身分識別**  
- 針對.NET Frameworkassemblies 中，顯示的完整路徑。 針對 COM 元件，則會顯示 GUID。  
+ 針對 .NET Framework 組件，則會顯示完整路徑。 針對 COM 元件，則會顯示 GUID。  
   
  **Label**  
  顯示參考的標籤。  
@@ -120,6 +121,6 @@ ms.lasthandoff: 05/04/2018
  **版本**  
  顯示參考組件的版本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)   
  [使用專案屬性](../ide/working-with-project-properties.md)

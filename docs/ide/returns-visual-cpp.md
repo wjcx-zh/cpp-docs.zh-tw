@@ -1,5 +1,5 @@
 ---
-title: '&lt;傳回&gt;（Visual c + +） |Microsoft 文件'
+title: '&lt;returns&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336732"
 ---
-# <a name="ltreturnsgt-visual-c"></a>&lt;傳回&gt;（Visual c + +）
+# <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt; (Visual C++)
 \<returns> 標記應該用於方法宣告的註解中，以描述傳回值。  
   
 ## <a name="syntax"></a>語法  
@@ -55,5 +56,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

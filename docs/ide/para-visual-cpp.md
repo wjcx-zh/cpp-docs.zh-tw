@@ -1,5 +1,5 @@
 ---
-title: '&lt;para&gt; （Visual c + +） |Microsoft 文件'
+title: '&lt;para&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325113"
 ---
-# <a name="ltparagt-visual-c"></a>&lt;para&gt; （Visual c + +）
+# <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
 \<para> 標記是用於 [\<summary>](../ide/summary-visual-cpp.md)、[\<remarks>](../ide/remarks-visual-cpp.md) 或 [\<returns>](../ide/returns-visual-cpp.md) 等標記內，並可讓您新增文字的結構。  
   
 ## <a name="syntax"></a>語法  
@@ -43,5 +44,5 @@ ms.lasthandoff: 05/04/2018
 ## <a name="example"></a>範例  
  如需使用 \<para> 的範例，請參閱 [\<summary>](../ide/summary-visual-cpp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

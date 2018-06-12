@@ -1,5 +1,5 @@
 ---
-title: '&lt;權限&gt;（Visual c + +） |Microsoft 文件'
+title: '&lt;permission&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324079"
 ---
-# <a name="ltpermissiongt-visual-c"></a>&lt;權限&gt;（Visual c + +）
-\<permission> 標記可讓您記載成員存取權。 <xref:System.Security.PermissionSet> 可讓您指定成員的存取權。  
+# <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
+\<permission> 標記可讓您記載成員存取權。 <xref:System.Security.PermissionSet> 可讓您指定成員存取權。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>備註  
  編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
- Visual C++ 編譯器會透過文件註解嘗試一次解決 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 請參閱[ \<seealso >](../ide/seealso-visual-cpp.md)如需詳細資訊。  
+ Visual C++ 編譯器會透過文件註解嘗試一次解決 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](../ide/seealso-visual-cpp.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -63,5 +64,5 @@ public ref class TestClass {
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

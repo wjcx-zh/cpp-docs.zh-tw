@@ -1,5 +1,5 @@
 ---
-title: NMake 屬性頁 (c + + Windows) |Microsoft 文件
+title: NMake 屬性頁 (Windows C++)| Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,52 +21,53 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327456"
 ---
 # <a name="nmake-property-page"></a>NMake 屬性頁
-**NMake**屬性頁可讓您指定 NMake 專案的建置設定。  
+**NMake** 屬性頁可讓您指定 NMake 專案的建置設定。  
   
- 如需 NMake 專案的詳細資訊，請參閱[建立 Makefile 專案](../ide/creating-a-makefile-project.md)。 Non_Windows MakeFile 專案，請參閱[MakeFile 專案屬性 （Linux c + +）](../linux/prop-pages/makefile-linux.md)，[一般專案屬性 (c + + Android Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page)或[NMake 屬性 （Android c + +）](/visualstudio/cross-platform/nmake-android-prop-page).
+ 如需 NMake 專案的詳細資訊，請參閱[建立 Makefile 專案](../ide/creating-a-makefile-project.md)。 對於非 Windows MakeFile 專案，請參閱 [MakeFile 專案屬性 (Linux C++)](../linux/prop-pages/makefile-linux.md)、[一般專案屬性 (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) 或 [NMake 屬性 (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page)。
   
- **NMake**屬性頁包含下列屬性。  
+ [NMake] 屬性頁包含下列屬性。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
- **建置命令列**  
- 指定要在執行時命令**建置**按一下**建置**功能表。  
+ **Build 命令列**  
+ 指定在 [建置] 功能表上按一下 [Build] 時要執行的命令。  
   
- **重建所有的命令列**  
- 指定要在執行時命令**全部重建**按一下**建置**功能表。  
+ **Rebuild All 命令列**  
+ 指定在 [建置] 功能表上按一下 [Rebuild All] 時要執行的命令。  
   
- **清除命令列**  
- 指定要在執行時命令**清除**按一下**建置**功能表。  
+ **Clean 命令列**  
+ 指定在 [建置] 功能表上按一下 [Clean] 時要執行的命令。  
   
  **輸出**  
- 指定將包含命令列的輸出檔案的名稱。 根據預設，此檔案名稱根據專案名稱。  
+ 指定將包含命令列輸出的檔案名稱。 根據預設，這個檔案名稱是根據專案名稱。  
   
  **前置處理器定義**  
- 指定的來源檔案使用任何前置處理器定義。 預設值取決於目前的平台和組態。  
+ 指定原始程式檔使用的任何前置處理器定義。 預設值取決於目前的平台和組態。  
   
- **包含搜尋路徑**  
- 指定在哪裡編譯器搜尋 include 檔的目錄。  
+ **Include 搜尋路徑**  
+ 指定編譯器搜尋 Include 檔的目錄。  
   
  **強制包含**  
- 指定前置處理器會自動處理即使它們未包含在專案檔中的檔案。  
+ 指定前置處理器會自動處理的檔案，即使它們未包含在專案檔中。  
   
  **組件搜尋路徑**  
- 指定的目錄，.NET Framework 哪裡搜尋時它會解析.NET 組件。  
+ 指定 .NET Framework 嘗試解析 .NET 組件時搜尋的目錄。  
   
  **強制使用組件**  
- 指定自動處理.NET Framework 的組件。  
+ 指定 .NET Framework 自動處理的組件。  
   
  **其他選項**  
- 指定 IntelliSense，它會剖析 c + + 檔案時所要使用任何其他編譯器的參數。  
+ 指定 IntelliSense 剖析 C++ 檔案時要使用的任何其他編譯器參數。  
   
- 如需有關如何存取資訊**NMake**屬性頁上，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
+ 如需如何存取 [NMake] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
- 如需如何以程式設計方式存取此物件的成員資訊，請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>。  
+ 如需如何以程式設計方式存取此物件成員的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)   
  [如何：在 Makefile 專案中啟用 IntelliSense](../ide/how-to-enable-intellisense-for-makefile-projects.md)

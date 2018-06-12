@@ -1,5 +1,5 @@
 ---
-title: 事件處理常式精靈 |Microsoft 文件
+title: 事件處理常式精靈 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,34 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 544ce4cd0f4ed9a7f3592e5ec1691fb3734b8772
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340004"
 ---
 # <a name="event-handler-wizard"></a>事件處理常式精靈
-此精靈會將對話方塊控制項的事件處理常式加入至您選擇的類別。 如果您加入事件處理常式從[屬性 視窗](/visualstudio/ide/reference/properties-window)，您可以將它只會加入可實作對話方塊中的類別。 請參閱[加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)如需詳細資訊。  
+此精靈會將對話方塊控制項的事件處理常式新增至您選擇的類別。 如果您從[屬性視窗](/visualstudio/ide/reference/properties-window)新增事件處理常式，則只能將它新增至實作對話方塊的類別。 請參閱[新增對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)以取得詳細資訊。  
   
  **命令名稱**  
- 識別選取的控制項，為其加入事件處理常式。 無法使用此方塊。  
+ 指出為其新增事件處理常式的所選取控制項。 此方塊無法使用。  
   
  **訊息類型**  
- 顯示所選控制項的目前可能的訊息處理常式的清單。  
+ 顯示所選取控制項目前可能的訊息處理常式的清單。  
   
- **函式的處理常式名稱**  
- 顯示新增至處理事件的函式的名稱。 根據預設，名稱根據訊息類型和命令，前面加上的 「 開啟 」。 例如，按鈕呼叫`IDC_BUTTON1`，訊息類型`BN_CLICKED`顯示函式的處理常式名稱`OnBnClickedButton1`。  
+ **函式處理常式名稱**  
+ 顯示新增來處理事件的函式名稱。 根據預設，名稱是依據訊息類型和命令，並在前面加上 "On"。 例如，對於稱為 `IDC_BUTTON1` 的按鈕，訊息類型 `BN_CLICKED` 顯示函式處理常式名稱為 `OnBnClickedButton1`。  
   
  **類別清單**  
- 顯示可用的類別，您可以新增事件處理常式。 [選取] 對話方塊的類別會以紅色顯示。  
+ 顯示您可以新增事件處理常式的可用類別。 所選取對話方塊的類別會以紅色顯示。  
   
  **處理常式描述**  
- 為選取的項目提供描述**訊息類型**方塊。 無法使用此方塊。  
+ 為 [訊息類型] 方塊中選取的項目提供描述。 此方塊無法使用。  
   
  **新增和編輯**  
- 將訊息處理常式加入至選取的類別或物件，並讓您加入控制項告知處理常式程式碼，然後開啟新的函式的文字編輯器。  
+ 將訊息處理常式新增至選取的類別或物件，然後開啟文字編輯器到新函式，讓您能夠新增控制項通知處理常式的程式碼。  
   
  **編輯程式碼**  
- 開啟文字編輯器來選取現有的函式，以便您可以新增或編輯控制項告知處理常式程式碼。  
+ 開啟文字編輯器到選取的現有函式，讓您能夠新增或編輯控制項通知處理常式的程式碼。  
   
-## <a name="see-also"></a>另請參閱  
- [加入事件處理常式](../ide/adding-an-event-handler-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [新增事件處理常式](../ide/adding-an-event-handler-visual-cpp.md)

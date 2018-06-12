@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 版本中 visual c + + 工具和功能 |Microsoft 文件
+title: Visual Studio 版本中的 Visual C++ 工具和功能 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -18,11 +18,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337245"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual c + + 工具和 Visual Studio 版本中的功能
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 版本中的 Visual C++ 工具和功能
 
 下表顯示可用在 Visual Studio 中使用的 Visual C++ 功能。 儲存格中的 X 表示功能可用；空白儲存格表示功能不可用。 括號括住的附註表示功能可用，但有所限制。
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 |平台|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio 企業版|
 |Windows 桌面||X|X|X|
 |通用 Windows 平台 ((電話、平板電腦、電腦、Xbox、IoT 和 HoloLens))|X||X|X|
-|Microsoft 市集 8.1|||X|X|
+|Microsoft Store 8.1|||X|X|
 |Windows Phone 8.0|||X|X|
 |Android|||X|X|
 |iOS|||X|X|
@@ -181,9 +182,9 @@ ms.lasthandoff: 05/04/2018
 |程式碼對應和相依性圖形|||唯讀|X|
 |程式碼對應偵錯||||X|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [安裝 Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[在 Visual Studio 中最新消息](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Visual Studio 的新功能](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)<br/>
 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686)<br/>

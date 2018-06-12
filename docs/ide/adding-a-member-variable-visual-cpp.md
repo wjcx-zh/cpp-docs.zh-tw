@@ -1,5 +1,5 @@
 ---
-title: 加入成員變數 （Visual c + +） |Microsoft 文件
+title: 新增成員變數 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,48 +19,49 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: fa2a8ef8f7bcdc2d90893acdad98705c9588a5d5
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325727"
 ---
 # <a name="adding-a-member-variable--visual-c"></a>加入成員變數 (Visual C++)
-您可以使用 類別檢視的類別中加入成員變數。 成員變數可以是做為[資料交換和驗證資料](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈是特別設計的相關資訊並使用原始程式檔的適當位置中插入項目。 您可以加入成員變數從[對話方塊編輯器](../windows/dialog-editor.md)中[資源檢視](../windows/resource-view-window.md)，或從[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
+您可以使用 [類別檢視] 將成員變數新增至類別。 成員變數可以是用於[資料交換和資料驗證](../mfc/dialog-data-exchange-and-validation.md)，也可以是泛型。 資料成員變數精靈是特別設計來取得相關資訊並用來在原始程式檔的適當位置插入項目。 您可以從[資源檢視](../windows/resource-view-window.md)中的[對話方塊編輯器](../windows/dialog-editor.md)，或從[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)新增成員變數。  
   
 > [!NOTE]
->  當您設計和實作對話方塊，您可能會發現它更有效率使用對話方塊編輯器加入對話方塊控制項，然後實作控制項的成員變數。  
+>  當您設計和實作對話方塊時，可能會發現使用對話方塊編輯器新增對話方塊控制項，然後實作控制項的成員變數這樣的做法更有效率。  
   
-### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>若要使用加入成員變數精靈中的資源檢視中加入對話方塊控制項的成員變數  
+### <a name="to-add-a-member-variable-for-a-dialog-control-in-resource-view-using-the-add-member-variable-wizard"></a>使用 [新增成員變數精靈] 中的 [資源檢視] 新增對話方塊控制項的成員變數  
   
-1.  在資源檢視中，展開專案節點，[對話方塊] 節點來顯示專案的對話方塊中的清單。  
+1.  在 [資源檢視] 中，展開專案節點及對話方塊節點，顯示專案的對話方塊清單。  
   
-2.  按兩下您要加入成員變數，在對話方塊編輯器中開啟的對話方塊。  
+2.  按兩下您要新增成員變數的對話方塊，在對話方塊編輯器中開啟它。  
   
-3.  在對話方塊編輯器中顯示的對話方塊，以滑鼠右鍵按一下您要加入成員變數的控制項。  
+3.  在對話方塊編輯器中顯示的對話方塊中，以滑鼠右鍵按一下您要新增成員變數的控制項。  
   
-4.  在捷徑功能表，按一下 **加入變數**顯示[加入成員變數精靈](../ide/add-member-variable-wizard.md)。  
+4.  在捷徑功能表上，按一下 [新增變數]，顯示[新增成員變數精靈](../ide/add-member-variable-wizard.md)。  
   
     > [!NOTE]
-    >  中已提供預設值**控制項 ID**。  
+    >  [控制項識別碼] 中已提供預設值。  
   
-5.  提供適當的精靈方塊中的資訊。 請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)如需詳細資訊。  
+5.  在適當的精靈方塊中提供資訊。 如需詳細資訊，請參閱[對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)。  
   
-6.  按一下**完成**定義和實作程式碼加入專案，並關閉精靈。  
+6.  按一下 [完成]，將定義和實作程式碼新增至專案，然後關閉精靈。  
   
-### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>若要加入成員變數，從 類別檢視使用 加入成員變數精靈  
+### <a name="to-add-a-member-variable-from-class-view-using-the-add-member-variable-wizard"></a>使用 [新增成員變數精靈] 從 [類別檢視] 新增成員變數  
   
-1.  在[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，展開專案節點，以顯示專案中的類別。  
+1.  在[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)中，展開專案節點，顯示專案中的類別。  
   
-2.  以滑鼠右鍵按一下您要加入變數的類別。  
+2.  以滑鼠右鍵按一下您要新增變數的類別。  
   
-3.  在捷徑功能表，按一下 **新增**，然後按一下 **加入變數**以顯示 加入成員變數精靈。  
+3.  在捷徑功能表上，依序按一下 [新增]、[新增變數]，顯示 [新增成員變數精靈]。  
   
-4.  提供適當的精靈方塊中的資訊。 請參閱[加入成員變數精靈](../ide/add-member-variable-wizard.md)如需詳細資訊。  
+4.  在適當的精靈方塊中提供資訊。 如需詳細資料，請參閱[新增成員變數精靈](../ide/add-member-variable-wizard.md)。  
   
-5.  按一下**完成**定義和實作程式碼加入專案，並關閉精靈。  
+5.  按一下 [完成]，將定義和實作程式碼新增至專案，然後關閉精靈。  
   
-## <a name="see-also"></a>另請參閱  
- [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入類別](../ide/adding-a-class-visual-cpp.md)   
- [加入成員函式](../ide/adding-a-member-function-visual-cpp.md)   
+## <a name="see-also"></a>請參閱  
+ [使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [類別](../ide/adding-a-class-visual-cpp.md)   
+ [成員函式](../ide/adding-a-member-function-visual-cpp.md)   
  [MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)   
  [巡覽類別結構](../ide/navigating-the-class-structure-visual-cpp.md)

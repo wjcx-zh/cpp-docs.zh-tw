@@ -1,5 +1,5 @@
 ---
-title: 轉散發 ATL 應用程式 |Microsoft 文件
+title: 轉散發 ATL 應用程式 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,9 +19,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c824dd4ae174a4418c6744e592dd62dc54b9595
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326380"
 ---
 # <a name="redistributing-an-atl-application"></a>轉散發 ATL 應用程式
 從 Visual Studio 2012 開始，Active Template Library (ATL) 是僅限標頭的程式庫。 ATL 專案不會動態連結至 ATL 選項。 可轉散發 ATL 程式庫不是必要的。  
@@ -34,11 +35,11 @@ filename /regserver
   
  其中 `filename` 是可執行檔案的名稱。  
   
- 在 Visual Studio 2010 中，ATL 專案可以建置成 MinDependency 或 MinSize 組態。 MinDependency 組態是您會取得當您設定**ATL 用法**屬性**靜態連結 ATL**上**一般**屬性頁，並設定**執行階段程式庫**屬性**多執行緒 (/ MT)** 上**程式碼產生**屬性頁 （C/c + + 資料夾）。  
+ 在 Visual Studio 2010 中，ATL 專案可以建置成 MinDependency 或 MinSize 組態。 當您在 [一般] 屬性頁上將 [ATL 用法] 屬性設為 [靜態連結 ATL]，且在 [程式碼產生] 屬性頁 (C/C++ 資料夾) 上將 [執行階段程式庫] 屬性設為 [多執行緒 (/MT)] 時，就會得到 MinDependency 組態。  
   
- MinSize 組態是您會取得當您設定**ATL 用法**屬性**動態連結 ATL**上**一般**屬性頁上或組**執行階段程式庫**屬性**多執行緒 DLL (/ MD)** 上**程式碼產生**屬性頁 （C/c + + 資料夾）。  
+ 當您在 [一般] 屬性頁上將 [ATL 用法] 屬性設為 [動態連結 ATL]，或在 [程式碼產生] 屬性頁 (C/C++ 資料夾) 上將 [執行階段程式庫] 屬性設為 [多執行緒 DLL (/MD)] 時，就會得到 MinSize 組態。  
   
- MinSize 會讓輸出檔案一樣，但可能需要的小 ATL100.dll 和 Msvcr100.dll (如果您選取**多執行緒 DLL (/ MD)** 選項) 會在目標電腦上。 ATL100.dll 應該在目標電腦上註冊，以確保所有 ATL 的功能都會出現。 ATL100.dll 包含 ANSI 和 Unicode 匯出。  
+ MinSize 會讓輸出檔案盡可能的小，但目標電腦上需要有 ATL100.dll 和 Msvcr100.dll (如果您選取 [多執行緒 DLL (/MD)] 選項)。 ATL100.dll 應該在目標電腦上註冊，以確保所有 ATL 的功能都會出現。 ATL100.dll 包含 ANSI 和 Unicode 匯出。  
   
  如果為 MinDependency 目標建置 ATL 或 OLE DB 範本專案，目標電腦上不必安裝和註冊 ATL100.dll，雖然您可能會得到較大的程式映像。  
   
@@ -52,5 +53,5 @@ filename /regserver
   
  至於 OLE DB 範本應用程式，請確定目標電腦有最新版的 Microsoft Data Access Components (MDAC) 檔案。 如需詳細資訊，請參閱[轉散發資料庫支援檔案](../ide/redistributing-database-support-files.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

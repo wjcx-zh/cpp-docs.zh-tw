@@ -1,5 +1,5 @@
 ---
-title: 建議使用的文件註解 （Visual c + +） 標籤 |Microsoft 文件
+title: 建議使用的文件註解標記 (Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,34 +14,35 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 1b25ad029a59c4b23bcab093b3742f16f7ca9175
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328616"
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>建議使用的文件註解標記 (Visual C++)
-Visual c + + 編譯器將會處理在程式碼中的文件註解，並建立.xdc 檔案以供每個編譯單位中，並 xdcmake.exe 會處理到.xml 檔.xdc 檔。 處理要建立文件的.xml 檔案是必須位於您網站實作詳細資料。  
+Visual C++ 編譯器將會處理您程式碼中的文件註解，並為每個編譯單位建立 .xdc 檔案，而 xdcmake.exe 會將 .xdc 檔處理成 .xml 檔。 處理 .xml 檔以建立文件是必須在您網站實作的細部工作。  
   
- 標記會在建構，例如型別上處理和類型成員。  
+ 標記是在類型和類型成員這類建構上處理。  
   
- 標記必須緊接著類型或成員。  
+ 標記必須緊接在類型或成員之前。  
   
 > [!NOTE]
->  文件註解無法套用至命名空間，或在超出定義的屬性和事件;文件註解必須在類別內宣告。  
+>  文件註解無法套用至命名空間，或針對屬性和事件的非常規定義；文件註解必須是針對類別內宣告。  
   
- 編譯器會處理任何為有效 XML 的標記。 下列標記會提供使用者文件中的常用的功能：  
+ 編譯器會處理任何為有效 XML 的標記。 下列標記提供使用者文件中的常用功能：  
   
 ||||  
 |-|-|-|  
 |[\<c>](../ide/c-visual-cpp.md)|[\<code>](../ide/code-visual-cpp.md)|[\<example>](../ide/example-visual-cpp.md)|  
-|[\<例外狀況 >](../ide/exception-visual-cpp.md)1|[\<包含 >](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
-|[\<para>](../ide/para-visual-cpp.md)|[\<param >](../ide/param-visual-cpp.md)1|[\<paramref >](../ide/paramref-visual-cpp.md)1|  
-|[\<權限 >](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
-|[\<請參閱 >](../ide/see-visual-cpp.md)1|[\<另請參閱 >](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
+|[\<exception>](../ide/exception-visual-cpp.md)1|[\<include>](../ide/include-visual-cpp.md)1|[\<list>](../ide/list-visual-cpp.md)|  
+|[\<para>](../ide/para-visual-cpp.md)|[\<param>](../ide/param-visual-cpp.md)1|[\<paramref>](../ide/paramref-visual-cpp.md)1|  
+|[\<permission>](../ide/permission-visual-cpp.md)1|[\<remarks>](../ide/remarks-visual-cpp.md)|[\<returns>](../ide/returns-visual-cpp.md)|  
+|[\<see>](../ide/see-visual-cpp.md)1|[\<seealso>](../ide/seealso-visual-cpp.md)1|[\<summary>](../ide/summary-visual-cpp.md)|  
 |[\<value>](../ide/value-visual-cpp.md)|||  
   
  1. 編譯器會驗證語法。  
   
- 在目前版本中，Visual c + + 編譯器不支援`<paramref>`，其他 Visual Studio 編譯器所支援的標記。 Visual c + + 可能支援`<paramref>`未來的版本。  
+ 在目前版本中，Visual C++ 編譯器不支援 `<paramref>`，其他 Visual Studio 編譯器支援此標記。 Visual C++ 可能在未來的版本支援 `<paramref>`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

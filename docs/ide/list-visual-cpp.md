@@ -1,5 +1,5 @@
 ---
-title: '&lt;清單&gt;（Visual c + +） |Microsoft 文件'
+title: '&lt;list&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323975"
 ---
-# <a name="ltlistgt-visual-c"></a>&lt;清單&gt;（Visual c + +）
+# <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 \<listheader> 區塊用來定義資料表或定義清單的標題資料列。 定義資料表時，您只需要提供標題中詞彙的項目。  
   
 ## <a name="syntax"></a>語法  
@@ -75,5 +76,5 @@ ms.lasthandoff: 05/04/2018
 class MyClass {};  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

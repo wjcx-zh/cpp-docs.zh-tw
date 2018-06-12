@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 專案類型 |Microsoft 文件
+title: Visual C++ 專案類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/30/2017
 ms.technology:
@@ -22,13 +22,14 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339978"
 ---
 # <a name="visual-c-project-types"></a>Visual C++ 專案類型
 
-您可以使用專案範本，來建立適用於您要建立之專案類型的基本程式結構、功能表、工具列、圖示、參考及 `#include` 陳述式。 Visual Studio 包括各種類型的 Visual C++ 專案範本，並為它們中的許多提供精靈，以便您可以在建立專案時，自訂專案。 立即建立專案之後，您可以建置並執行應用程式。它是很好的作法，當您開發應用程式或間歇性建置。
+您可以使用專案範本，來建立適用於您要建立之專案類型的基本程式結構、功能表、工具列、圖示、參考及 `#include` 陳述式。 Visual Studio 包括各種類型的 Visual C++ 專案範本，並為它們中的許多提供精靈，以便您可以在建立專案時，自訂專案。 在您建立專案之後，您就可以立即對其進行建置，並執行應用程式；在您開發應用程式時，間歇地進行建置是一個很好的做法。
 
 您無需使用範例來建立專案，但在大部分情況下，使用範本會更有效率，因為與從頭建立專案相比，使用範本可以更輕鬆地修改所提供的專案檔及結構。  
   
@@ -37,25 +38,25 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="project-templates"></a>專案範本
 
-Visual Studio 中包含的專案範本的產品版本及您已安裝的工作負載而定。 如果您已安裝桌面開發搭配 c + + 的工作負載，Visual Studio 的這些 Visual c + + 專案範本。
+Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工作負載。 如果您已安裝使用 C++ 的桌面開發工作負載，Visual Studio 就具有這些 Visual C++ 專案範本。
 
 ### <a name="windows-desktop"></a>Windows 桌面
 
 |專案範本|描述|  
 |----------------------|-----------------------------| 
-|[Windows 主控台應用程式](../windows/creating-a-console-application.md)|建立 Windows 主控台應用程式的專案。|
-|[Windows 桌面應用程式](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|建立 Windows 桌面 (Win32) 應用程式的專案。|
-|[動態連結程式庫](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|建立動態連結程式庫 (DLL) 專案。|
-|[靜態程式庫](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|建立靜態程式庫 (LIB) 的專案。|
-|Windows 桌面精靈|使用其他選項建立 Windows 傳統型應用程式和程式庫的精靈。|
+|[Windows 主控台應用程式](../windows/creating-a-console-application.md)|用於建立 Windows 主控台應用程式的專案。|
+|[Windows 傳統型應用程式](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|用於建立 Windows 傳統型 (Win32) 應用程式的專案。|
+|[動態連結程式庫](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|用於建立動態連結程式庫 (DLL) 的專案。|
+|[靜態程式庫](../windows/walkthrough-creating-and-using-a-static-library-cpp.md)|用於建立靜態程式庫 (LIB) 的專案。|
+|Windows 傳統式精靈|使用其他選項建立 Windows 傳統型應用程式和程式庫的精靈。|
 
 ### <a name="general"></a>一般
 
 |專案範本|描述|
 |----------------------|-----------------------------|
-|空專案|用於建立應用程式、 程式庫或 DLL 的空白專案。 您必須新增任何程式碼或所需的資源。|
-|[Makefile 專案](../ide/creating-a-makefile-project.md)|專案以使用外部建置系統。|
-|共用項目專案|用於多個專案之間共用檔案的專案。|
+|空專案|用於建立應用程式、程式庫或 DLL 的空白專案。 您必須新增任何所需的程式碼或資源。|
+|[Makefile 專案](../ide/creating-a-makefile-project.md)|用於使用外部建置系統的專案。|
+|共用的項目專案|用於在多個專案之間共用檔案的專案。|
 
 ### <a name="atl"></a>ATL
 
@@ -67,40 +68,40 @@ Visual Studio 中包含的專案範本的產品版本及您已安裝的工作負
 
 |專案範本|描述|
 |----------------------|-----------------------------|
-|[原生單元測試專案](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|包含原生 c + + 單元測試專案。|
+|[原生單元測試專案](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|包含原生 C++ 單元測試的專案。|
 
 ### <a name="mfc"></a>MFC
 
-如果您加入 MFC 和 ATL 支援 Visual Studio 安裝的元件，這些專案範本會加入至 Visual Studio。
+如果您將 MFC 和 ATL 支援元件新增至 Visual Studio 安裝環境，這些專案範本就會新增至 Visual Studio。
 
 |專案範本|描述|
 |----------------------|-----------------------------|
-|[MFC 應用程式](../mfc/reference/creating-an-mfc-application.md)|建立使用 Microsoft Foundation Class (MFC) 程式庫的應用程式的專案。|
-|[MFC ActiveX 控制項](../mfc/reference/creating-an-mfc-activex-control.md)|建立使用 MFC 程式庫的 ActiveX 控制項的專案。|
-|[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)|建立使用 MFC 程式庫的動態連結程式庫的專案。|
+|[MFC 應用程式](../mfc/reference/creating-an-mfc-application.md)|用於建立使用 MFC 程式庫之應用程式的專案。|
+|[MFC ActiveX 控制項](../mfc/reference/creating-an-mfc-activex-control.md)|用於建立使用 MFC 程式庫之 ActiveX 控制項的專案。|
+|[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)|用於建立使用 MFC 程式庫之動態連結程式庫的專案。|
 
 ### <a name="windows-universal-apps"></a>Windows 通用應用程式
 
-如果您將 c + + Windows 通用平台工具元件加入 Visual Studio 安裝，這些專案範本會加入至 Visual Studio。
+如果您將 C++ Windows 通用平台工具元件新增至 Visual Studio 安裝環境，這些專案範本就會新增至 Visual Studio。
 
-如需 c + + 中的 Windows 通用應用程式的概觀，請參閱[通用 Windows 應用程式 （c + +）](../windows/universal-windows-apps-cpp.md)。
+如需 C++ 的 Windows 通用應用程式的概觀，請參閱[通用 Windows 應用程式 (C++)](../windows/universal-windows-apps-cpp.md)。
 
 |專案範本|描述|
 |----------------------|-----------------------------|
-|空白應用程式|沒有預先定義的控制項或配置之單一頁面通用 Windows 平台 (UWP) 應用程式專案。|
-|DirectX 11 應用程式|使用 DirectX 11 之通用 Windows 平台應用程式專案。|
-|DirectX 12 應用程式|使用 DirectX 12 之通用 Windows 平台應用程式專案。|
-|DirectX 11 和 XAML 應用程式|使用 DirectX 11 和 XAML 之通用 Windows 平台應用程式專案。|
-|單元測試應用程式|若要建立通用 Windows 平台 (UWP) 應用程式的單元測試應用程式專案。|
-|DLL|原生動態連結程式庫 (DLL)，可供通用 Windows 平台應用程式或執行階段元件專案。|
-|靜態程式庫|用於可供通用 Windows 平台應用程式或執行階段元件的原生靜態連結程式庫 (LIB) 的專案。|
-|Windows 執行階段元件|可供通用 Windows 平台應用程式，不論語言撰寫的應用程式之 Windows 執行階段元件專案。|
-|Windows 應用程式封裝的專案|建立 UWP 封裝的專案啟用側邊載入或透過 Microsoft 市集分散式的桌面應用程式。|
+|空白應用程式|不具預先定義的控制項或配置之單一頁面通用 Windows 平台 (UWP) 應用程式的專案。|
+|DirectX 11 應用程式|使用 DirectX 11 之通用 Windows 平台應用程式的專案。|
+|DirectX 12 應用程式|使用 DirectX 12 之通用 Windows 平台應用程式的專案。|
+|DirectX 11 和 XAML 應用程式|使用 DirectX 11 和 XAML 之通用 Windows 平台應用程式的專案。|
+|單元測試應用程式|用於為通用 Windows 平台 (UWP) 應用程式建立單元測試應用程式的專案。|
+|DLL|可供通用 Windows 平台應用程式或執行階段元件使用之原生動態連結程式庫 (DLL) 的專案。|
+|靜態程式庫|可供通用 Windows 平台應用程式或執行階段元件使用之原生靜態連結程式庫 (LIB) 的專案。|
+|Windows 執行階段元件|不論撰寫應用程式的程式設計語言為何，可供通用 Windows 平台應用程式使用之 Windows 執行階段元件的專案。|
+|Windows 應用程式封裝專案|建立可讓傳統型應用程式透過 Microsoft Store 側載或散發之 UWP 套件的專案。|
 
 ## <a name="todo-comments"></a>TODO 註解
 
-專案範本產生的許多檔案都包含 TODO 註解，以協助您識別您可以提供自己原始程式碼的位置。 如需如何加入程式碼的詳細資訊，請參閱[使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)和[使用的資源檔](../windows/working-with-resource-files.md)。
+專案範本產生的許多檔案都包含 TODO 註解，以協助您識別您可以提供自己原始程式碼的位置。 如需如何新增程式碼的詳細資訊，請參閱[使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)和[使用資源檔](../windows/working-with-resource-files.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)   

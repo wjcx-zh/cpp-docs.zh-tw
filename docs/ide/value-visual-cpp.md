@@ -1,5 +1,5 @@
 ---
-title: '&lt;值&gt;（Visual c + +） |Microsoft 文件'
+title: '&lt;value&gt; (Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325392"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;值&gt;（Visual c + +）
-\<值 > 標記可讓您描述的屬性和屬性存取子方法。 請注意，當您使用 Visual Studio 整合式的開發環境中的程式碼精靈加入屬性，它會新增[\<摘要 >](../ide/summary-visual-cpp.md)新屬性的標記。 您接著應該手動新增 \<value> 標記，來描述屬性所代表的值。  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
+\<value> 標記可讓您描述屬性和屬性存取子方法。 請注意，當您在 Visual Studio 整合式開發環境中使用程式碼精靈新增屬性時，會新增新屬性的 [\<summary>](../ide/summary-visual-cpp.md) 標記。 您接著應該手動新增 \<value> 標記，來描述屬性所代表的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,5 +65,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

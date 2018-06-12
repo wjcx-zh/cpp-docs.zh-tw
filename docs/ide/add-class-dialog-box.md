@@ -1,5 +1,5 @@
 ---
-title: 加入類別對話方塊 |Microsoft 文件
+title: 新增類別對話方塊 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,20 +18,21 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339770"
 ---
 # <a name="add-class-dialog-box"></a>加入類別對話方塊
 [加入類別]  對話方塊包含的範本可讓您：  
   
--   開啟對應的程式碼精靈，如果有的話。 如需詳細資訊，請參閱[使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)。  
+-   開啟對應的程式碼精靈，如果有的話。 如需詳細資訊，請參閱[使用程式碼精靈新增功能](../ide/adding-functionality-with-code-wizards-cpp.md)。  
   
  \-或-  
   
 -   在專案中加入適當的檔案和原始程式碼，自動建立新類別。  
   
- 您可以存取**加入類別**對話方塊從**專案**功能表上，**方案總管 中**，或[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。  
+ 您可以從 [專案] 功能表、[方案總管] 或[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，存取 [新增類別] 對話方塊。  
   
 > [!NOTE]
 >  當您嘗試加入不適合目前專案的類別時，您會收到錯誤訊息。 按一下 [確定]  返回 [加入類別]  對話方塊。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/04/2018
 |--------------|------------|  
 |MFC 類別|[MFC 加入類別精靈](../mfc/reference/mfc-add-class-wizard.md)|  
 |來自 ActiveX 控制項的 MFC 類別|[從 ActiveX 控制項新增類別精靈](../ide/add-class-from-activex-control-wizard.md)|  
-|TypeLib 的 MFC 類別|[從 Typelib 精靈加入類別](../mfc/reference/add-class-from-typelib-wizard.md)|  
+|TypeLib 的 MFC 類別|[從 Typelib 新增類別精靈](../mfc/reference/add-class-from-typelib-wizard.md)|  
 |MFC ODBC 消費者|[MFC ODBC 消費者精靈](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
   
 ### <a name="generic-classes"></a>泛型類別  
@@ -80,9 +81,9 @@ ms.lasthandoff: 05/04/2018
 |--------------|------------|  
 |泛型 C++ 類別|[泛型 C++ 類別精靈](../ide/generic-cpp-class-wizard.md)|  
   
-## <a name="see-also"></a>另請參閱  
- [加入成員函式](../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
+## <a name="see-also"></a>請參閱  
+ [成員函式](../ide/adding-a-member-function-visual-cpp.md)   
+ [成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
  [覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)   
  [巡覽類別結構](../ide/navigating-the-class-structure-visual-cpp.md)

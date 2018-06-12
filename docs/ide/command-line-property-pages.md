@@ -1,5 +1,5 @@
 ---
-title: 命令列屬性頁 |Microsoft 文件
+title: 命令列屬性頁 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,18 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327807"
 ---
 # <a name="command-line-property-pages"></a>命令列屬性頁
-大部分的屬性頁資料夾包含**命令列**屬性頁。 此頁面顯示已設定的資料夾中的哪些屬性。 **命令列**屬性頁也包含**其他選項**方塊可以在其中指定有效的工具，但它沒有任何屬性的資料夾中。  
+大部分的屬性頁資料夾包含 [命令列] 屬性頁。 此頁面顯示在資料夾中已設定哪些屬性。 [命令列] 屬性頁也包含 [其他選項] 方塊，您可以在其中指定對工具有效，但資料夾中沒有任何屬性的屬性。  
   
- 您在編輯方塊中輸入任何命令將會傳遞至工具的資料夾。 任何驗證或檢查會完成輸入，也不會有任何相依性檢查。  
+ 您在編輯方塊中輸入的任何命令將會傳遞至資料夾的工具。 不會對輸入進行任何驗證或檢查，也不會有任何相依性檢查。  
   
- 如需有關如何存取詳細**命令列**屬性頁中，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
+ 如需如何存取 [命令列] 屬性頁的資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)   
  [.Lib 檔作為連結器輸入](../build/reference/dot-lib-files-as-linker-input.md)

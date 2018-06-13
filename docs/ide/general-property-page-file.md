@@ -16,10 +16,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 523ac16a647116f4d18da7e516adb4f0e6bb7fc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33324031"
 ---
 # <a name="general-property-page-file"></a>一般屬性頁 (檔案)
@@ -38,7 +38,7 @@ ms.locfileid: "33324031"
 
 如需如何存取 [組態屬性] 節點下的 [一般] 屬性頁的詳細資訊，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。
 
-若是非 Windows 專案，請參閱 [Linux C++ 屬性頁參考](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->。
+若為非 Windows 專案，請參閱 [Linux C++ 屬性頁參考](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->。
 
 ## <a name="see-also"></a>另請參閱
 

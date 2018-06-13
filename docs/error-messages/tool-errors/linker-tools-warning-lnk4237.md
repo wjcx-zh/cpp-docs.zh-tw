@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302863"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>連結器工具警告 LNK4237
 從 'dll'; 匯入時指定了請使用 /subsystem: console 或 /subsystem: windows。  

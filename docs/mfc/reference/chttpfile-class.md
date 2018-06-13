@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372615"
 ---
 # <a name="chttpfile-class"></a>Cinternetfile 類別
 提供在 HTTP 伺服器上要求和讀取檔案的功能。  

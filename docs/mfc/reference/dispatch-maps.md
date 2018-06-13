@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377092"
 ---
 # <a name="dispatch-maps"></a>分派對應
 OLE Automation 提供方式呼叫方法，並跨應用程式中存取屬性。 Microsoft Foundation 類別庫發送這些要求所提供的機制就是 「 分派對應 」 指定的物件函式和屬性，以及資料類型和屬性本身的內部和外部名稱函式引數。  

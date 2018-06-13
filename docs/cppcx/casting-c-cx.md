@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090953"
 ---
 # <a name="casting-ccx"></a>轉型 (C++/CX)
 適用於 Windows 執行階段類型的四個不同的轉換運算子： [static_cast 運算子](../cpp/static-cast-operator.md)， [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)， **safe_cast 運算子**，和[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。 如果無法執行轉換，`safe_cast` 和 `static_cast` 會擲回例外狀況。此外， [static_cast 運算子](../cpp/static-cast-operator.md) 也可以執行編譯階段類型檢查。 如果`dynamic_cast` 無法轉換類型，則會傳回 `nullptr` 。 雖然 `reinterpret_cast` 會傳回非 null 值，但是可能無效。 因此，我們建議您不要使用 `reinterpret_cast` ，除非您知道轉型成功。 此外，我們建議您不要使用 c-style 轉型您 C + /CX 程式碼，因為它們是相同`reinterpret_cast`。  

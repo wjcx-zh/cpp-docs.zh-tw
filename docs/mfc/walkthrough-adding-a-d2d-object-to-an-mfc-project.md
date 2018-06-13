@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384016"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>逐步解說：將 D2D 物件加入至 MFC 專案
 本逐步解說教導如何新增基本 Direct2D (D2D) Visual c + +，Microsoft Foundation 類別庫 (MFC) 專案物件，並接著建置專案所列印的應用程式"Hello，world"為漸層的背景。  

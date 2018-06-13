@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374561"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 建立和初始化單一或多個同時網際網路工作階段，並視需要描述您與 Proxy 伺服器的連接。  

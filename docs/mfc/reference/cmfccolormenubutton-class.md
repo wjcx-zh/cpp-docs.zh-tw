@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370701"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 類別
 `CMFCColorMenuButton`類別支援功能表命令或工具列按鈕，啟動色彩選擇器對話方塊。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380080"
 ---
 # <a name="wsadata-structure"></a>WSADATA 結構
 `WSADATA` 結構用於儲存由呼叫傳回至 `AfxSocketInit` 全域函式的 Windows 通訊端初始化資訊。  

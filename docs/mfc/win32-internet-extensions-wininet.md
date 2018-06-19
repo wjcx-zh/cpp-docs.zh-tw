@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383957"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 網際網路擴充功能 (WinInet)
 網際網路用戶端應用程式是可從網路資料來源 （伺服器） 使用網際網路通訊協定，例如 gopher、 FTP 或 HTTP 存取資訊的程式。 網際網路用戶端應用程式可能會存取要擷取資料，例如對應天氣、 股票價格或頭條，例如的伺服器。 網際網路用戶端可以透過外部網路 （網際網路） 或 （有時候稱為內部網路） 的內部網路存取伺服器。  

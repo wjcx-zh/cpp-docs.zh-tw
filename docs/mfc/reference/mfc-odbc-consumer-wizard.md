@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371420"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 消費者精靈
 在這裡插入摘要的 「 搜尋結果 」。  

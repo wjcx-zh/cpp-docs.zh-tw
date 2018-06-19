@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375920"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 類別
 `CMultiPaneFrameWnd`類別會擴充[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)。 這可以支援多個窗格。 而不是一種控制列的單一內嵌控制代碼`CMultiPaneFrameWnd`包含[CPaneContainerManager 類別](../../mfc/reference/cpanecontainermanager-class.md)物件，可讓使用者將一一停駐`CMultiPaneFrameWnd`到另一個，並以動態方式建立多個浮點，定位windows。  

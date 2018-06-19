@@ -155,6 +155,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377933"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 類別
 在工具列上的影像。 `CMFCToolBarImages`類別會管理從應用程式資源，或從檔案載入工具列影像。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172621"
 ---
 # <a name="compiler-error-c2276"></a>編譯器錯誤 C2276
 'operator': 界限的成員函式運算式中不合法的操作  

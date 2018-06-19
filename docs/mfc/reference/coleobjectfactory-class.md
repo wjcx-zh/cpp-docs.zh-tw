@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375933"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 類別
 實作建立 OLE 物件 (例如伺服器、Automation 物件和文件) 的 OLE Class Factory。  

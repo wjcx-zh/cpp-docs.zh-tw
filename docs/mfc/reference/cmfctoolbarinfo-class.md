@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369358"
 ---
 # <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo 類別
 包含在各種狀態下工具列影像的資源 ID。 `CMFCToolBarInfo` 是 helper 類別，做為參數的[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  

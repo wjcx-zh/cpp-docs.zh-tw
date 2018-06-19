@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166110"
 ---
 # <a name="compiler-error-c2242"></a>編譯器錯誤 C2242
 typedef 名稱不可以跟隨類別/結構/等位  

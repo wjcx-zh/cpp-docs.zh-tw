@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383983"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets：連接埠和通訊端位址
 本文說明的詞彙 「 連接埠 」 和 「 位址 」 做為與 Windows 通訊端搭配使用。  

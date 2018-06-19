@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381799"
 ---
 # <a name="using-chotkeyctrl"></a>使用 CHotKeyCtrl
 熱鍵控制項，類別所代表[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)，是一個視窗，顯示使用者輸入此功能，例如 CTRL + SHIFT + Q 的按鍵組合的文字表示。 它也會以虛擬按鍵碼和表示移位狀態的一組旗標的形式，來保持此按鍵的內部表示。 熱鍵控制項不會實際設定熱鍵，是否設定取決於您的程式  (如需標準虛擬按鍵碼的清單，請參閱 Winuser.h.)。  

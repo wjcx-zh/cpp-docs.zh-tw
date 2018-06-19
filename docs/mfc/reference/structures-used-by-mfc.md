@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371341"
 ---
 # <a name="structures-used-by-mfc"></a>MFC 使用的結構
 下表列出從各種成員函式呼叫的結構。 如需個別結構使用量詳細資訊，請參閱類別和成員函式清單的每個結構中所述。  

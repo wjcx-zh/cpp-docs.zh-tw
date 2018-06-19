@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372055"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 類別
 與[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md)，提供豐富的編輯控制項的 MFC 的文件檢視架構內容中的功能。  

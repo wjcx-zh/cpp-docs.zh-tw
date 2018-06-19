@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376274"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC 精靈和對話方塊
 Microsoft Foundation Class (MFC) 精靈會產生各種元件和物件的未定案程式碼。 您可以藉由開啟的專案中的捷徑功能表執行精靈**方案總管 中**，然後選擇**新增**，**類別**。  

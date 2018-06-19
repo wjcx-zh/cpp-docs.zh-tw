@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109595"
 ---
 # <a name="greater-stlclr"></a>greater (STL/CLR)
 此範本類別描述函式，呼叫時，則傳回 true 只有第一個引數是大於第二個。 您可以使用它指定其引數類型方面的函式物件。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374146"
 ---
 # <a name="logpen-structure"></a>LOGPEN 結構
 `LOGPEN`結構會定義樣式、 寬度和色彩的畫筆、 繪圖物件，用來繪製線條和框線。 [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)函式使用`LOGPEN`結構。  

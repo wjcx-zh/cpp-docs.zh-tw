@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385622"
 ---
 # <a name="using-ctooltipctrl"></a>Using CToolTipCtrl
 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)類別會封裝工具提示控制項，小型的快顯視窗顯示單行文字描述的應用程式中工具用途的功能。 工具提示大部分時間都在隱藏狀態，只有在使用者將游標放置在工具上並停留約二分之一秒時才會顯現。 工具提示會出現在游標周圍，在使用者按一下滑鼠按鈕或將游標移開工具時就會消失。  

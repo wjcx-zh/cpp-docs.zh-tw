@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382846"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>在工具列控制項中使用影像清單
 根據預設，在工具列控制項中的按鈕所使用的影像會儲存成單一的點陣圖。 不過，您也可以儲存按鈕影像的影像清單集合中。 工具列控制項物件可以使用最多三個不同的影像清單：  

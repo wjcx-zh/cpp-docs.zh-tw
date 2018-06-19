@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335499"
 ---
 # <a name="active-documents"></a>主動式文件
 主動式文件擴充了 OLE 的複合文件技術。 這些擴充功能是做為管理檢視的額外介面提供，如此物件就可以在容器內運作，同時保持對其顯示和列印功能的控制能力。 這個處理序能夠同時以外部框架 (例如 Microsoft Office Binder 或 Microsoft Internet Explorer) 和原生框架 (例如產品本身的檢視區) 顯示文件。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296792"
 ---
 # <a name="compiler-warning-level-4-c4918"></a>編譯器警告 (層級 4) C4918
 'character' : 在 pragma 最佳化清單中的無效字元  

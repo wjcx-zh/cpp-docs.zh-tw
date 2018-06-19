@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300419"
 ---
 # <a name="bscmake-error-bk1506"></a>BSCMAKE 錯誤 BK1506
 無法開啟檔案 'filename' [: 原因]  

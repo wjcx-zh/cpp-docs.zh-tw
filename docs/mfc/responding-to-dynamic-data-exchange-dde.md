@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379199"
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>回應動態資料交換 (DDE)
 (如果副檔名已向應用程式註冊或關聯)，框架視窗可以回應動態資料交換 (DDE) 要求，從檔案管理員開啟檔案。 請參閱[殼層註冊](../mfc/special-cwinapp-services.md)。  

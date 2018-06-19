@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289668"
 ---
 # <a name="compiler-warning-level-3-c4357"></a>編譯器警告 (層級 3) C4357
 param 陣列引數的型式引數清單中委派 'del' 略過產生 'function' 時  

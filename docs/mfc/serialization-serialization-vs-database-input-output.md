@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379573"
 ---
 # <a name="serialization-serialization-vs-database-inputoutput"></a>序列化： 序列化 vs。資料庫輸入/輸出
 這篇文章說明何時以檔案為基礎的輸入/輸出 (I/O) 和其他技術的適當使用文件物件和序列化，因為應用程式讀取，並將資料寫入針對每個交易，與資料庫應用程式。 如果您不使用序列化，您也不需要開啟檔案、 儲存，而且將儲存為命令。 涵蓋的主題包括：  

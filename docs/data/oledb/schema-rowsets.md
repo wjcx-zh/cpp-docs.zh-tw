@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104278"
 ---
 # <a name="schema-rowsets"></a>結構描述資料列集
 結構描述 （或中繼資料） 是任何資訊的資料庫結構或組織，例如有關提供者、 資料列集、 資料表、 資料行或除了實際的資料庫內容的其他資訊。 OLE DB 可讓您取得這類資訊而不使用結構描述資料列集開啟資料列集。  

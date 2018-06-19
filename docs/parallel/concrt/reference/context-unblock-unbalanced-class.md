@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685745"
 ---
 # <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced 類別
 這個類別描述時擲回的例外狀況呼叫`Block`和`Unblock`方法`Context`物件未正確配對。  

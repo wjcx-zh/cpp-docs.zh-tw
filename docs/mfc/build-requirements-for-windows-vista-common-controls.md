@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342156"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 通用控制項的組建需求
 Microsoft Foundation Class (MFC) 程式庫支援 Windows 通用控制項 6.1 版。 通用控制項包含在 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 中，而程式庫則包含在 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)] 中。 程式庫會提供新的方法，以增強現有類別，以及新的類別和方法，可支援[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]通用控制項。 當您建置應用程式時，您應該遵循下列章節中描述的編譯和移轉需求。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297332"
 ---
 # <a name="global-constants-in-c"></a>C++ 的全域常數
 C + + 的全域常數具有靜態連結。 這是不同於 c。如果您嘗試使用的全域常數在多個檔案的 c + + 中，就會發生無法解析的外部錯誤。 編譯器最佳化全域常數，保留供變數沒有留下。  

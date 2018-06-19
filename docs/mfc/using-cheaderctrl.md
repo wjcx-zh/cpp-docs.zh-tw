@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382446"
 ---
 # <a name="using-cheaderctrl"></a>使用 CHeaderCtrl
 使用標題控制項，類別所代表[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)，以顯示資料行標頭，如需單欄式清單。 例如，標題控制項會是適用於實作試算表中的資料行控制。  

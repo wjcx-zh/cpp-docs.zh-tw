@@ -113,6 +113,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377583"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl 類別
 封裝 Rebar 控制項的功能，這個控制項是子視窗的容器。  

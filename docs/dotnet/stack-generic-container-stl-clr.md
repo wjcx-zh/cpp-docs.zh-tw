@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162595"
 ---
 # <a name="stackgenericcontainer-stlclr"></a>stack::generic_container (STL/CLR)
 容器配接器的泛型介面的型別。  

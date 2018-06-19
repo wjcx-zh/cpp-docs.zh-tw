@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372443"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>建立表單架構的 MFC 應用程式
 表單是讓使用者存取，並盡可能地變更資料的控制項的對話方塊。 若要開發應用程式中使用者選取 從選取的表單。 一般而言，表單架構應用程式可以讓使用者存取表單按一下**新增**從**檔案**功能表。 對話方塊架構應用程式，這並不提供使用者存取**新增**選項**檔案**功能表上，也會被視為表單架構應用程式。  

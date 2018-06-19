@@ -279,6 +279,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379043"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 封裝「清單檢視控制項」的功能，顯示項目集合，其中每個項目是由圖示 (來自影像清單) 和標籤所組成的。  

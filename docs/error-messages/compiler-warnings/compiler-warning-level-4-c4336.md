@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295242"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>編譯器警告 (層級 4) C4336
 匯入交互參考的類型程式庫 'type_lib1' 匯入 'type_lib2' 之前  

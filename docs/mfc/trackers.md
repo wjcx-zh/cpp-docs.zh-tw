@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381533"
 ---
 # <a name="trackers"></a>追蹤器
 [CRectTracker](../mfc/reference/crecttracker-class.md)類別會提供您的應用程式和您的使用者，藉由提供各種不同的顯示樣式中的矩形項目之間的使用者介面。 這些樣式包含實線、 影線，或虛線框線;包含陰影的模式，它涵蓋了項目;可位於外部或內部框線的調整大小控點。 追蹤器通常用於搭配 OLE 項目，也就是物件衍生自`COleClientItem`。 追蹤程式矩形提供項目的目前狀態的視覺提示。  

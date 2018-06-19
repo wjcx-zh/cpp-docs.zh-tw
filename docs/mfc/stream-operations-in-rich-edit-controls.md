@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379921"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Rich Edit 控制項中的資料流作業
 您可以使用資料流將資料傳入或傳出 rich edit 控制項傳送 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 資料流由定義[EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891)結構，指定緩衝區和應用程式定義的回呼函式。  

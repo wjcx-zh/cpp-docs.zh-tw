@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385189"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>使用程式碼精靈的控制項類型安全存取
 如果您熟悉 DDX 功能，您可以使用中的控制項屬性[加入成員變數精靈](../ide/add-member-variable-wizard.md)建立類型安全存取。 這個方法會比建立不使用程式碼精靈的控制項容易的。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382775"
 ---
 # <a name="using-image-lists-with-header-controls"></a>搭配使用影像清單與標題控制項
 標頭項目可以顯示的標題項目內的影像。 此映像，在相關聯的影像清單中，儲存為 16 x 16 像素，並有相同的特性清單檢視控制項中所使用的圖示影像。 若要成功實作這種行為，必須先建立和初始化映像清單、 將清單與標題控制項中，關聯，然後修改的屬性，將會顯示映像的標頭項目。  

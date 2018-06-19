@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33158517"
 ---
 # <a name="param-array-and-ellipsis"></a>Param 陣列和省略
 Param 陣列來解析多載函式呼叫的優先順序已經從 Managed Extensions for c + + Visual c + +。  

@@ -109,6 +109,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377567"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 類別
 `COleIPFrameWndEx` 類別會實作支援 MFC 的 OLE 容器。 您必須從 `COleIPFrameWndEx` 類別衍生應用程式的就地框架視窗類別，而不是從 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md)類別來衍生。 

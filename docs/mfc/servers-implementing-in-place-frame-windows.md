@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380860"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>伺服器：實作就地編輯框架視窗
 本文說明如果不使用應用程式精靈來建立您的伺服器應用程式，則必須實作自己的視覺化編輯伺服器應用程式的就地框架視窗。 除了遵循本文概述的程序，您可以使用現有的就地框架視窗類別從應用程式精靈產生應用程式或 Visual c + + 提供的範例。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370138"
 ---
 # <a name="mfc-class-wizard"></a>MFC 類別精靈
 可讓您將訊息和訊息處理常式加入至專案中的類別。 您也可以啟動其他精靈，或將類別加入您的專案。  

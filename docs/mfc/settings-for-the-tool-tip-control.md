@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379947"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>工具提示控制項的設定
 您可以將工具提示控制項 ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) 設為作用中或非作用中。 當您將它設為作用中時，當游標位於工具上時，會出現工具提示控制項。 當您將它設為非作用中時，即使游標位於工具上，也不會出現工具提示控制項。 呼叫 [Activate](../mfc/reference/ctooltipctrl-class.md#activate) 啟用或停用工具提示控制項。  

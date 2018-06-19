@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342585"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Automation 用戶端：使用類型程式庫
 Automation 用戶端必須具有伺服器物件的屬性和方法的相關資訊，如果用戶端管理伺服器的物件。 屬性有資料類型。方法通常會傳回值，而且接受參數。 用戶端需要所有這些資料類型的相關資訊，才能以靜態方式將繫結至該伺服器物件類型。  

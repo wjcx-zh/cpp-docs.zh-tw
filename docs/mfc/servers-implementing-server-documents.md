@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380272"
 ---
 # <a name="servers-implementing-server-documents"></a>伺服器：實作伺服器文件
 本文說明如果您未指定應用程式精靈中的 OLE 伺服器選項，成功實作伺服器文件時，必須採取的步驟。  

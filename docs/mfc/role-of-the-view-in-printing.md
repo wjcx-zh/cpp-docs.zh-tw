@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379251"
 ---
 # <a name="role-of-the-view-in-printing"></a>檢視在列印中的角色
 您的檢視在列印其相關文件方面也扮演兩個重要角色。  

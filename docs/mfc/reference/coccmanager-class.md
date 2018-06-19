@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376108"
 ---
 # <a name="coccmanager-class"></a>COccManager 類別
 管理各種自訂控制項網站；由 `COleControlContainer` 和 `COleControlSite` 物件實作。  
@@ -357,7 +358,7 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 ### <a name="remarks"></a>備註  
  如果找不到任何 ActiveX 控制項，分析範本，並建立新的範本，包含只有非 ActiveX 控制項。 此程序期間找到任何 ActiveX 控制項加入至`ppOleDlgItems`。  
   
- 如果在範本中，沒有 ActiveX 控制項**NULL**傳回*。*  
+ 如果在範本中，沒有 ActiveX 控制項**NULL**傳回 *。*  
   
 > [!NOTE]
 >  為新範本將會在釋出配置的記憶體`PostCreateDialog`函式。  

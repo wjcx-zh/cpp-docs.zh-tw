@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370828"
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>MFC 應用程式精靈、產生的類別
 本主題列出基底類別和專案產生的檔案的名稱。 根據預設，名稱為基礎，您在中指定的專案名稱**新增專案對話方塊**。 您可以變更大部分的名稱，如下所示：  

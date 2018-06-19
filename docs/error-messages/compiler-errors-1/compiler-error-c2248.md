@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172128"
 ---
 # <a name="compiler-error-c2248"></a>編譯器錯誤 C2248
 '*成員*': 無法存取'*access_level*'宣告中類別的成員'*類別*'  

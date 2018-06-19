@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382927"
 ---
 # <a name="special-cwinapp-services"></a>特殊 CWinApp 服務
 除了執行訊息迴圈，並讓您有機會初始化應用程式和之後，清除[CWinApp](../mfc/reference/cwinapp-class.md)提供數個其他服務。  

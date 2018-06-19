@@ -1946,6 +1946,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338178"
 ---
 # <a name="arm-intrinsics"></a>ARM 內建
 Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關 ARM 的詳細資訊，請參閱[ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?LinkId=522049)和[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 資訊中心網站上。  
@@ -2364,8 +2365,8 @@ void _MoveFromCoprocessor64(
 |__code_seg|void __code_seg(const char *)|  
 |__debugbreak|void __cdecl \__debugbreak(void)|  
 |__fastfail|__declspec （noreturn) void \__fastfail (不帶正負號的 int)|  
-|__nop|void __nop(void)**附註：**在 ARM 平台，如果在目標架構實作其中一個，此函式會產生 NOP 指令; 否則就不會變更的程式或 CPU 狀態的替代指令產生 — 比方說， `MOV r8, r8`。 這在功能上等於\__nop 其他硬體架構內建函式。 因為最佳化因素，目標架構可能會略過不會影響程式或 CPU 狀態的指令，所以指令不一定會消耗 CPU 週期。 因此，請勿使用\__nop 管理程式碼順序的執行時間，除非您確定 CPU 會有內建函式。 相反地，您可以使用\__nop 對齊特定 32 位元界限位址的下一個指令內建函式。|  
-|__yield|void __yield(void)**附註：**在 ARM 平台，此函式會產生 YIELD 指令，指出執行緒執行的工作，可以暫時停止執行 — 例如，單一執行緒存取鎖，而不對程式造成負面影響。 這可讓 CPU 在執行週期中執行其他工作，這樣才不會浪費。|  
+|__nop|void __nop(void)**附註：** 在 ARM 平台，如果在目標架構實作其中一個，此函式會產生 NOP 指令; 否則就不會變更的程式或 CPU 狀態的替代指令產生 — 比方說， `MOV r8, r8`。 這在功能上等於\__nop 其他硬體架構內建函式。 因為最佳化因素，目標架構可能會略過不會影響程式或 CPU 狀態的指令，所以指令不一定會消耗 CPU 週期。 因此，請勿使用\__nop 管理程式碼順序的執行時間，除非您確定 CPU 會有內建函式。 相反地，您可以使用\__nop 對齊特定 32 位元界限位址的下一個指令內建函式。|  
+|__yield|void __yield(void)**附註：** 在 ARM 平台，此函式會產生 YIELD 指令，指出執行緒執行的工作，可以暫時停止執行 — 例如，單一執行緒存取鎖，而不對程式造成負面影響。 這可讓 CPU 在執行週期中執行其他工作，這樣才不會浪費。|  
 |_AddressOfReturnAddress|void * _AddressOfReturnAddress(void)|  
 |_BitScanForward|unsigned char _BitScanForward(unsigned long * _Index, unsigned long _Mask)|  
 |_BitScanReverse|unsigned char _BitScanReverse(unsigned long * _Index, unsigned long _Mask)|  

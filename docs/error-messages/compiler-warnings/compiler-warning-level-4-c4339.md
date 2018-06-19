@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295791"
 ---
 # <a name="compiler-warning-level-4-c4339"></a>編譯器警告 (層級 4) C4339
 'type'：偵測到在 WinRT 或 CLR 中繼資料中使用未定義的類型 - 使用此類型可能造成執行階段例外狀況  

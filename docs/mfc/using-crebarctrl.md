@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383305"
 ---
 # <a name="using-crebarctrl"></a>使用 CReBarCtrl
 Rebar 控制項可當做子視窗的容器。 這些子視窗通常是其他控制項，可指派給 Rebar 控制項群組列。 Rebar 控制項可以包含一個或多個群組列，而且每個群組列都具有移駐夾列、點陣圖、文字標籤和子視窗中的任何組合。 不過，群組列不能包含一個以上的子視窗。  

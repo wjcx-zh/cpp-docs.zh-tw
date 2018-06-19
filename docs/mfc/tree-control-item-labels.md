@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381507"
 ---
 # <a name="tree-control-item-labels"></a>樹狀目錄控制項目標籤
 您通常會指定項目的標籤時項目加入至樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 `InsertItem`成員函式可以傳遞[TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456)結構，定義項目的屬性，包括字串，包含標籤的文字。 `InsertItem` 有數個多載，可以使用各種不同的參數組合呼叫。  

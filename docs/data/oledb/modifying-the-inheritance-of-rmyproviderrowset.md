@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106228"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>修改 RMyProviderRowset 的繼承
 若要加入`IRowsetLocate`介面的簡單唯讀提供者範例，請修改繼承的**RMyProviderRowset**。 一開始， **RMyProviderRowset**繼承自`CRowsetImpl`。 您需要修改它繼承自**CRowsetBaseImpl**。  

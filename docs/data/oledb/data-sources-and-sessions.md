@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100001"
 ---
 # <a name="data-sources-and-sessions"></a>資料來源和工作階段
 下圖顯示連接和存取資料來源支援的類別。 每個類別為基礎的標準 OLE DB 元件實作。  

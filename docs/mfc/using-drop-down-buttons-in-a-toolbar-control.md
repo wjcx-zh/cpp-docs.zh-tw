@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383249"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>在工具列控制項中使用下拉按鈕
 除了標準按鈕，工具列也可以具有下拉式按鈕。 下拉式按鈕通常會以附加向下箭號的目前狀態。  

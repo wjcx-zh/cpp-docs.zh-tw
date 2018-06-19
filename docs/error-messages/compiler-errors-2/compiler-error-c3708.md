@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275219"
 ---
 # <a name="compiler-error-c3708"></a>編譯器錯誤 C3708
 'interface': 不當使用 'keyword';必須是相容的事件來源的成員  

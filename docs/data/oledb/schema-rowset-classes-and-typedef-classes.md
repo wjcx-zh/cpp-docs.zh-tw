@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111441"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>結構描述資料列集類別和 Typedef 類別
 結構描述是資料庫物件所擁有，或已建立的特定使用者的集合。 類別目錄可以包含一或多個結構描述，但必須永遠包含呼叫 INFORMATION_SCHEMA，包含檢視和網域資訊結構描述的結構描述。 OLE DB 中的結構描述資訊使用預先定義的結構描述資料列集，擷取，並包含型別、 資料表、 資料行、 索引、 檢視、 判斷提示和條件約束、 統計資料、 字元集、 定序，以及網域。  

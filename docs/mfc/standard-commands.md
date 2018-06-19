@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380142"
 ---
 # <a name="standard-commands"></a>標準命令
 架構定義許多標準命令訊息。 這些命令的 ID 通常會採用下列格式：  

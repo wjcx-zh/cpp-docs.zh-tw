@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377897"
 ---
 # <a name="cview-class"></a>CView 類別
 提供使用者定義的檢視類別的基本功能。  
@@ -733,7 +734,7 @@ virtual BOOL OnScroll(
  如果捲軸的程式碼，包含目前捲動方塊位置**SB_THUMBTRACK**; 否則會無法使用。 根據初始的捲軸範圍，`nPos`可以是負數，而且應該轉換成`int`如有必要。  
   
  `bDoScroll`  
- 決定是否應實際捲動指定的動作。 如果**為 TRUE，**則捲動應該發生; 如果**FALSE**，然後捲動應該不會發生。  
+ 決定是否應實際捲動指定的動作。 如果**為 TRUE，** 則捲動應該發生; 如果**FALSE**，然後捲動應該不會發生。  
   
 ### <a name="return-value"></a>傳回值  
  如果`bDoScroll`是**TRUE**實際上捲動檢視，然後傳回非零，否則為 0。 如果`bDoScroll`是**FALSE**，然後您會有傳回值傳回`bDoScroll`已**TRUE**，即使實際上沒有進行捲動。  
@@ -755,7 +756,7 @@ virtual BOOL OnScrollBy(
  水平及垂直，捲動瀏覽的像素數目。  
   
  `bDoScroll`  
- 判斷是否捲動檢視。 如果**為 TRUE，**捲動才會發生; 然後**FALSE**，然後捲動不會發生。  
+ 判斷是否捲動檢視。 如果**為 TRUE，** 捲動才會發生; 然後**FALSE**，然後捲動不會發生。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果檢視能夠捲動;否則便是 0。  

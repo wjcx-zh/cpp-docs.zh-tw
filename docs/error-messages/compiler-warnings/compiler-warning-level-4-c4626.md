@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295132"
 ---
 # <a name="compiler-warning-level-4-c4626"></a>編譯器警告 (層級 4) C4626
 'derived class'：指派運算子已隱含定義為刪除，因為基底類別指派運算子無法存取或已被刪除  

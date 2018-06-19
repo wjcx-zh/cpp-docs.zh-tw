@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381107"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>一般 Gopher 用戶端應用程式中的步驟
 下表顯示的步驟，您可能會在一般 gopher 用戶端應用程式中執行。  

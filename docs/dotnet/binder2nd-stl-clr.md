@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107840"
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
 此範本類別描述一個引數函式，呼叫時，會傳回與提供的第一個引數和其預存的第二個引數呼叫其預存的雙引數函式。 您可以使用它指定根據其預存函式的函式物件。  

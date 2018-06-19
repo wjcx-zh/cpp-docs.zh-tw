@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098598"
 ---
 # <a name="consumer-wizard-generated-methods"></a>消費者精靈產生的方法
 ATL OLE DB 消費者精靈和 MFC 應用程式精靈產生的您應該注意的特定功能。 請注意，某些方法會實作以不同的方式在屬性化專案中，因此有一些警告。以下被涵蓋每個案例。 如需檢視插入程式碼的相關資訊，請參閱 [插入程式碼偵錯](/visualstudio/debugger/how-to-debug-injected-code)。  

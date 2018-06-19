@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370872"
 ---
 # <a name="how-to-create-a-release-build"></a>如何：建立發行的組建
 ### <a name="to-generate-a-release-build-of-your-program"></a>若要產生您的程式的發行組建  

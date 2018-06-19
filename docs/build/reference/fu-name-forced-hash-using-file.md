@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375671"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (命名強制的 #using 檔案)
 您可以使用做為傳遞的檔案名稱替代編譯器選項[#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)原始程式碼中。  

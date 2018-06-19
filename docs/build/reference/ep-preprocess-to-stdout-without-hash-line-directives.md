@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375379"
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (前置處理至 stdout 不加 #line 指示詞)
 前置處理 C 和 c + + 原始程式檔，並將前置處理過的檔案複製到標準輸出裝置。  

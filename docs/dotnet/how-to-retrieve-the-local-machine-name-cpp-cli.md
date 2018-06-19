@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128637"
 ---
 # <a name="how-to-retrieve-the-local-machine-name-ccli"></a>如何：擷取本機電腦名稱 (C++/CLI)
 下列程式碼範例示範如何擷取本機電腦名稱 （為它的電腦名稱會出現在網路上）。 您可以完成此作業取得<xref:System.Environment.MachineName%2A>中定義的字串<xref:System.Environment>命名空間。  

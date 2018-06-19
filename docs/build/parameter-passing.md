@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369353"
 ---
 # <a name="parameter-passing"></a>參數傳遞
 前四個整數引數會傳入暫存器。 整數值會在 RCX、 RDX、 R8 和 R9 中傳遞 （在由左到右的順序）。 五個引數和更新版本會在堆疊上傳遞。 所有引數是在暫存器中靠右對齊。 這是讓被呼叫端可以略過暫存器的較高的位元，如果需要可以存取暫存器所需的部分。  

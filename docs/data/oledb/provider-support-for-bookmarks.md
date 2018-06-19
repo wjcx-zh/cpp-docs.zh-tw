@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112504"
 ---
 # <a name="provider-support-for-bookmarks"></a>提供者書籤支援
 本主題中的此範例會將`IRowsetLocate`介面`CMyProviderRowset`類別。 幾乎在所有情況下，在您開始將介面加入至現有的 COM 物件。 然後就可以測試它，藉由新增更多呼叫從取用者範本。 此範例示範如何：  

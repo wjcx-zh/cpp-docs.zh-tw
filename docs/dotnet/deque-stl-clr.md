@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111142"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有隨機存取的物件。 使用容器`deque`管理序列的項目看起來像連續區塊存放裝置，但它可以擴張或縮小任一端而不需要複製任何剩餘的項目。 因此它可以有效實作`double-ended queue`。 (因此名稱。)  

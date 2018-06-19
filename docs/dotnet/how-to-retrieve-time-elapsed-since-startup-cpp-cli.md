@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132826"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>如何：擷取自啟動後經過的時間 (C++/CLI)
 下列程式碼範例示範如何判斷滴答計數，或啟動的 Windows 以來經過的毫秒數。 這個值會儲存在<xref:System.Environment.TickCount%2A?displayProperty=fullName>成員，因為它是 32 位元值，會重設為零大約每隔 24.9 天。  

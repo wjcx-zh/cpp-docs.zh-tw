@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159973"
 ---
 # <a name="partialsort-stlclr"></a>partial_sort (STL/CLR)
 將範圍中指定的較小項目數目排列成非遞減排列，或是依據二元述詞指定的順序準則。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374004"
 ---
 # <a name="fo-object-file-name"></a>/Fo (目的檔名稱)
 指定要使用的目的檔 (.obj) 名稱或目錄，而不使用預設值。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367988"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>如何：將自訂建置步驟加入至 MSBuild 專案
 自訂建置步驟會在組建中使用者定義的步驟。 自訂建置步驟的行為如同任何其他*命令工具*步驟中，例如標準編譯或連結工具的步驟。  

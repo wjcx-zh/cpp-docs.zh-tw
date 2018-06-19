@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366290"
 ---
 # <a name="crect-class"></a>CRect 類別
 類似於 Windows [RECT](../../mfc/reference/rect-structure1.md)結構。  

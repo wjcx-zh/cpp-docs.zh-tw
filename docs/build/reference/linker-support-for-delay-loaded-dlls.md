@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375580"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>延遲載入 DLL 的連結器支援
 Visual c + + 連結器現在支援 Dll 的延遲的載入。 這讓您使用 Windows SDK 函式需要**LoadLibrary**和**GetProcAddress**來實作延遲載入 DLL。  

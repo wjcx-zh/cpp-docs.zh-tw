@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359310"
 ---
 # <a name="interfaces-atl"></a>介面 (ATL)
 介面是物件會公開其功能給外界的方式。 在 COM 中，介面是由物件所實作的函式的指標 （例如 c + + vtable) 的資料表。 資料表代表介面，以及它所指向的功能是該介面的方法。 物件可以公開其選擇的介面。  

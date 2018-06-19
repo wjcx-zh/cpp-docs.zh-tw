@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357212"
 ---
 # <a name="iunknown-implementation-classes"></a>IUnknown 實作類別
 下列類別會實作**IUnknown**和相關的方法：  

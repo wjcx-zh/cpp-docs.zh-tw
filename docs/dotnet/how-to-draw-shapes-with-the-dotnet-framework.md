@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130031"
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>如何：使用 .NET Framework 繪製圖案
 下列程式碼範例使用<xref:System.Drawing.Graphics>類別以修改<xref:System.Windows.Forms.Form.OnPaint%2A>事件處理常式來擷取指標<xref:System.Drawing.Graphics>主要表單的物件。 此指標然後用來設定表單的背景色彩和繪製一條線與弧線使用<xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName>和<xref:System.Drawing.Graphics.DrawArc%2A>方法。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369048"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>如何：在 C/C++ 應用程式中嵌入資訊清單
 建議您使用 C/c + + 應用程式 （或程式庫） 有其資訊清單嵌入最終的二進位檔，因為這樣可保證在大部分情況下正確的執行階段行為。 根據預設，[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]嘗試建置專案，從原始程式檔時，內嵌資訊清單，請參閱[Visual Studio 中的資訊清單產生](../build/manifest-generation-in-visual-studio.md)如需詳細資訊。 但是如果使用 nmake 建置應用程式，會需要現有 makefile 的某些變更。 本節示範如何變更現有的 makefile，將會自動內嵌於最終二進位檔的資訊清單。  

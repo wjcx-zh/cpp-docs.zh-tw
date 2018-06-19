@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374170"
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>明確卸載延遲載入的 DLL
 [/延遲](../../build/reference/delay-delay-load-import-settings.md): unload 連結器選項可讓您卸載為延遲載入 DLL。 根據預設，當您的程式碼卸載 DLL (使用 /delay: unload 和 **__FUnloadDelayLoadedDLL2**)，延遲載入匯入保留在匯入位址表 (IAT)。 不過，如果您使用 /delay: unload 連結器命令列上，則 helper 函式將支援明確卸載 DLL，正在 IAT 重設為其原始形式。現在無效指標將會覆寫。 IAT 是中的欄位[ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md)其中包含一份原始 IAT 的位址 （如果有的話）。  

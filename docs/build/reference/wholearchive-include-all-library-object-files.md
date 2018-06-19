@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376865"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE （包含所有的程式庫物件檔案）
 Force 連結器在連結的可執行檔中的靜態程式庫中包含物件的所有檔案。  

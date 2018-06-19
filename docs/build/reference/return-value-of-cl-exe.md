@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374589"
 ---
 # <a name="return-value-of-clexe"></a>cl.exe 的傳回值
 cl.exe 傳回零，代表成功 (沒有錯誤)，否則即傳回非零。  

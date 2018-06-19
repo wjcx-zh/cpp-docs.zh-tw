@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358825"
 ---
 # <a name="understanding-parse-trees"></a>了解剖析樹狀結構
 您可以定義一個或多個剖析樹狀結構中登錄器指令碼，其中每個剖析樹狀目錄具有下列格式：  

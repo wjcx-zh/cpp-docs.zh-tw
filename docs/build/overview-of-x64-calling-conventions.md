@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374904"
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 呼叫慣例概觀
 兩個重要差異 x86 和[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]是 64 位元定址功能，以及一般的 16 個 64 位元暫存器設定一般用途。 展開指定的登錄設定，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]使用[__fastcall](../cpp/fastcall.md)呼叫慣例和 risc 例外狀況處理模型。 `__fastcall`慣例是使用前四個引數和堆疊框架的暫存器傳遞其他引數。  

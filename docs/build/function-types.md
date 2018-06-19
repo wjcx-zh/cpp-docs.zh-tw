@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367647"
 ---
 # <a name="function-types"></a>函式類型
 基本上有兩種類型的函式。 畫面格函式呼叫需要堆疊框架的函式。 不需要堆疊框架的函式稱為分葉函式。  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366363"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 這個類別會提供智慧型指標類別使用以 COM 為基礎的記憶體常式的基礎。  

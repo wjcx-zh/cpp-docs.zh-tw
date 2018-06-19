@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387949"
 ---
 # <a name="specifying-calling-conventions"></a>指定呼叫慣例
 **Microsoft 特定的**  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371160"
 ---
 # <a name="library"></a>LIBRARY
 會告知連結來建立 DLL。 同時，連結會建立匯入程式庫，除非在組建中使用.exp 檔。  

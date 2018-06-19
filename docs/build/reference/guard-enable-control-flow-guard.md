@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377400"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (啟用控制流程防護)
 啟用控制流程防護安全性檢查的編譯器產生。  

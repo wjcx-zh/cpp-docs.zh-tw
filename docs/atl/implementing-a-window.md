@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357009"
 ---
 # <a name="implementing-a-window"></a>實作視窗
 類別[CWindowImpl](../atl/reference/cwindowimpl-class.md)可讓您實作一個視窗，並處理它的訊息。 ATL 中處理訊息為基礎的訊息對應。 本章節將說明：  

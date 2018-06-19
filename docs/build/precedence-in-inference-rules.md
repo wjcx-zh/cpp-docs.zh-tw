@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368482"
 ---
 # <a name="precedence-in-inference-rules"></a>推斷規則的優先順序
 如果有多重定義推斷規則，NMAKE 就會使用最高優先順序的定義。 下列清單顯示的優先順序從最高到最低：  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359041"
 ---
 # <a name="default-atl-project-configurations"></a>預設的 ATL 專案組態
 ATL 專案精靈會根據預設，建立兩個專案組態：  

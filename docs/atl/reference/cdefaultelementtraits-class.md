@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360958"
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits 類別
 這個類別會提供預設的方法和函式集合類別。  

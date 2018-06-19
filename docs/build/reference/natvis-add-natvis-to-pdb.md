@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377098"
 ---
 # <a name="natvis-add-natvis-to-pdb"></a>/ NATVIS （加入至 PDB 的 Natvis）
   

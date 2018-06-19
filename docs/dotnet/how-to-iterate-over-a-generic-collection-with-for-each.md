@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128023"
 ---
 # <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>如何：使用 for each 反覆查看泛型集合
 [泛型](../windows/generics-cpp-component-extensions.md)Visual c + + 的功能可讓您建立泛型集合。  

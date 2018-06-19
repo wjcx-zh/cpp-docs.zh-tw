@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377228"
 ---
 # <a name="v-version-number"></a>/V (版本號碼)
 已取代。 .Obj 檔案中內嵌的文字字串。  

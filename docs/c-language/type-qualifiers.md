@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389981"
 ---
 # <a name="type-qualifiers"></a>類型限定詞
 類型限定詞會提供兩個屬性的其中一個給識別項。 **const** 類型限定詞會將物件宣告為不可修改。 `volatile` 類型限定詞會宣告一個項目，其值可由超出項目所在程式之控制範圍的項目 (例如同時執行的執行緒) 合法變更。  

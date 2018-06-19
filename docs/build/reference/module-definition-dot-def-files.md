@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374722"
 ---
 # <a name="module-definition-def-files"></a>模組定義檔案 (.Def)
 模組定義 (.def) 檔會提供連結器匯出、 屬性和連結的程式的其他資訊的相關資訊。 建置 DLL 時，便最有用.def 檔。 因為有[連結器選項](../../build/reference/linker-options.md)可用而不是模組定義陳述式，.def 檔案通常不是必要。 您也可以使用[__declspec （dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md)做為指定的方式匯出的函式。  

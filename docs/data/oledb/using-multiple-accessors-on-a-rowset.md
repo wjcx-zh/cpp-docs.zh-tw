@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111311"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>在資料列集上使用多重存取子
 有三個您要使用多重存取子的基本案例：  

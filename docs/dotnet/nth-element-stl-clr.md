@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132891"
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 分割範圍的項目正確放`n`th 項目範圍中的順序，讓它前面的所有元素小於或等於它，而且序列中在它後面的所有項目會大於或等於它。  

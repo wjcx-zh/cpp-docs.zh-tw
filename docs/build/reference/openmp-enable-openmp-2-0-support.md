@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378726"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (啟用 OpenMP 2.0 支援)
 可讓編譯器處理`#pragma` [omp](../../preprocessor/omp.md)。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374823"
 ---
 # <a name="link-input-files"></a>LINK 輸入檔
 您可以提供連結器與包含物件、 匯入和標準程式庫、 資源、 模組定義和輸入的命令檔。 連結不使用副檔名來做出假設檔案的內容。 相反地，連結會檢查每個輸入的檔案，以判斷它是何種檔案。  

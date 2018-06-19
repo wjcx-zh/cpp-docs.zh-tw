@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362170"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList 類別
 建構 COM 介面指標的清單時，這個類別會提供有用的方法。  

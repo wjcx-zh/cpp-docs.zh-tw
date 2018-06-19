@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127831"
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>如何：將標準字串轉換為 System::String
 本主題顯示如何轉換 c + + 標準程式庫字串 ([\<字串 >](../standard-library/string.md)) 至<xref:System.String>。  

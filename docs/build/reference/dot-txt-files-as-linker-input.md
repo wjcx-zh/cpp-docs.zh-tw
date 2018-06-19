@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369899"
 ---
 # <a name="txt-files-as-linker-input"></a>.Txt 檔做為連結器輸入
 LINK 可接受各種文字檔案做為其他的輸入。 [命令檔](../../build/reference/link-command-files.md)規範 (@) 和[基底位址](../../build/reference/base-base-address.md)（/ 基底） [/DEF](../../build/reference/def-specify-module-definition-file.md)，和[/](../../build/reference/order-put-functions-in-order.md)所有的選項會指定文字檔案。 這些檔案可以具有任何副檔名，不只是.txt。  

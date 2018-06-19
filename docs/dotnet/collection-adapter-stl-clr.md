@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114441"
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter (STL/CLR)
 包裝 STL/CLR 容器做為.NET 集合。 A`collection_adapter`是範本類別描述一個簡單的 STL/CLR 容器物件。 它會包裝基底類別程式庫 (BCL) 介面，並傳回您用於管理受控制的序列的迭代器配對。  

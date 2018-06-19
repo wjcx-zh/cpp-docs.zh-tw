@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374748"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>最佳化 Pragma 和關鍵字
 關鍵字和您在 C 或 c + + 程式碼中使用的 pragma 會影響最佳化：  

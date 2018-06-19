@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373370"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (命名強制的包含檔)
 造成前置處理器處理指定的標頭檔。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369756"
 ---
 # <a name="predefined-rules"></a>預先定義的規則
 預先定義的推斷規則使用 NMAKE 所提供的命令和選項巨集。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128348"
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改原生函式中的參考類別
 您可以將參考類別與 CLR 陣列傳遞至原生函式，並修改類別中，使用 PInvoke 服務。  

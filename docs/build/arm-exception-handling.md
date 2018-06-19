@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366259"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外狀況處理
 Windows on ARM 對非同步硬體產生的例外狀況和同步軟體產生的例外狀況，使用相同的結構化例外狀況處理機制。 語言專屬例外狀況處理常式使用語言協助程式函式，以 Windows 結構化例外狀況處理為基礎，進行建置。 本文件描述 Windows on ARM 中的例外狀況處理，以及由 MASM 和 Visual C++ 編譯器產生之程式碼所使用的語言協助程式。  

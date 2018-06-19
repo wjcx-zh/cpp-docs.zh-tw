@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365291"
 ---
 # <a name="cfiletime-class"></a>CFileTime 類別
 這個類別會提供管理與檔案相關聯的日期和時間值的方法。  

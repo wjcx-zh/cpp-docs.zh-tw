@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368830"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>使用 __declspec(dllimport) 匯入至應用程式
 使用公用符號的 DLL 所定義的程式，即稱為匯入它們。 當您建立標頭檔，用於您的 Dll，建立應用程式使用 **__declspec （dllimport)** 公用符號的宣告。 關鍵字 **__declspec （dllimport)** 不論您匯出.def 檔案，或與運作方式都 **__declspec （dllexport)** 關鍵字。  

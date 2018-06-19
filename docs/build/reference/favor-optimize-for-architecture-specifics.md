@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376217"
 ---
 # <a name="favor-optimize-for-architecture-specifics"></a>/favor (專為架構最佳化)
 **/favor:** `option`產生針對特定的架構，或為 AMD 和 Intel 架構中微-架構最佳化的程式碼。  

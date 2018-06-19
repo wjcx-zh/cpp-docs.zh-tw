@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391583"
 ---
 # <a name="heapset"></a>_heapset
 檢查堆積是否達到基本的一致性，並將可用的項目設定為指定的值。  

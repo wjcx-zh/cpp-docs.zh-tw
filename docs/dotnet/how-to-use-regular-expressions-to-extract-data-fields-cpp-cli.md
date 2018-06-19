@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129664"
 ---
 # <a name="how-to-use-regular-expressions-to-extract-data-fields-ccli"></a>如何：使用規則運算式擷取資料欄位 (C++/CLI)
 下列程式碼範例示範如何使用規則運算式來擷取格式化字串中的資料。 下列程式碼範例使用<xref:System.Text.RegularExpressions.Regex>類別來指定對應至電子郵件地址的模式。 這個模式會包含可用來擷取使用者和主機名稱部分，每個電子郵件地址的欄位識別碼。 <xref:System.Text.RegularExpressions.Match>類別用來執行實際的模式比對。 如果給定的電子郵件地址是有效的會擷取並顯示的使用者名稱和主機名稱。  

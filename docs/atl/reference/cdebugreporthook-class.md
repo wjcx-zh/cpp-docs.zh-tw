@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360246"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 類別
 使用此類別將偵錯報表傳送至具名的管道。  

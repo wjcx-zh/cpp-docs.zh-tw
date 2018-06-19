@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376910"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (前置處理至 stdout)
 前置處理 C 和 c + + 原始程式檔，並將前置處理過的檔案複製到標準輸出裝置。  

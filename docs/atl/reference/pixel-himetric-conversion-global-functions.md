@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359422"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 轉換全域函式
 這些函式提供支援來回轉換像素和 himetric 為單位。  

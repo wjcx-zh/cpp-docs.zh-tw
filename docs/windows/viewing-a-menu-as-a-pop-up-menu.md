@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891015"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>以快顯功能表方式檢視功能表
 一般來說，當您使用功能表編輯器時，功能表資源會顯示為功能表列。 不過，當程式執行時，您可能有加入至應用程式功能表列的功能表資源。  

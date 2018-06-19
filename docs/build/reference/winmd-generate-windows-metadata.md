@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376175"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (產生 Windows 中繼資料)
 啟用產生 Windows 執行階段中繼資料 (.winmd) 檔案。  

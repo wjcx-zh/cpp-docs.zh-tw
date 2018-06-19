@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371459"
 ---
 # <a name="other-lib-output"></a>其他 LIB 輸出
 在預設模式中，您可以使用 /LIST 選項來顯示結果的程式庫的相關資訊。 您可以將此輸出重新導向至檔案。  

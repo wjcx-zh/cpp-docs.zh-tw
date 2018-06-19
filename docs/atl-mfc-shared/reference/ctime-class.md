@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366545"
 ---
 # <a name="ctime-class"></a>CTime 類別
 代表絕對時間和日期。  
@@ -187,7 +188,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
 - **CTime (__time64_t);** 建構`CTime`物件從 **__time64_t**型別。 這個建構函式必須要有 UTC 時間，並將結果轉換成當地時間，再儲存該結果。  
   
-- **CTime （int，int，...）。**建構`CTime`物件從本地時間元件，每個元件都受限於下列範圍：  
+- **CTime （int，int，...）。** 建構`CTime`物件從本地時間元件，每個元件都受限於下列範圍：  
   
     |元件|範圍|  
     |---------------|-----------|  
@@ -200,7 +201,7 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
   
      這個建構函式會讓適當轉換為 UTC。 偵錯版本的 Mfc 程式庫判斷提示，如果一個或多個時間元件會超出範圍。 您必須先驗證再呼叫的引數。 這個建構函式必須要有本機時間。  
   
-- **CTime （單字、 字;）**建構`CTime`從指定的 MS-DOS 日期和時間值的物件。 這個建構函式必須要有本機時間。  
+- **CTime （單字、 字;）** 建構`CTime`從指定的 MS-DOS 日期和時間值的物件。 這個建構函式必須要有本機時間。  
   
 - **CTime (const SYSTEMTIME&AMP; （& s));** 建構`CTime`物件從`SYSTEMTIME`結構。 這個建構函式必須要有本機時間。  
   

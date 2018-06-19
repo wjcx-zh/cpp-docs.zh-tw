@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890423"
 ---
 # <a name="stand-alone-attributes"></a>獨立屬性
 獨立屬性不能進行 c + + 關鍵字，但更像一行程式碼。 獨立屬性陳述式需要在行尾的分號。  

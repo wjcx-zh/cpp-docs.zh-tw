@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378323"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u (取消定義符號)
 **/U**編譯器選項取消定義指定的前置處理器符號。 **/U**編譯器選項取消定義編譯器定義的 Microsoft 特定符號。  

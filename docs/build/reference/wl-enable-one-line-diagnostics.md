@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376783"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (啟用一行診斷)
 將其他資訊附加至錯誤或警告訊息。  

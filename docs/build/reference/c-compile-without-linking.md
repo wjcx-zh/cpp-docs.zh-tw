@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370432"
 ---
 # <a name="c-compile-without-linking"></a>/c (編譯而不連結)
 可防止自動呼叫連結。  

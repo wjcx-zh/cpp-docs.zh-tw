@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369324"
 ---
 # <a name="calculating-necessary-values"></a>計算需要的值
 計算方式是延遲 helper 常式需要兩項重要的資訊。 為了這個目的，有兩個內嵌函式 delayhlp.cpp 計算這項資訊。  

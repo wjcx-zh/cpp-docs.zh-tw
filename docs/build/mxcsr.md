@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368622"
 ---
 # <a name="mxcsr"></a>MxCsr
 暫存器狀態也會包含 MxCsr。 呼叫慣例會將此暫存器分割為變動性部分與靜態部分。 動態部分所組成的 6 的狀態旗標，MXCSR [0:5]，而 MXCSR [6:15] 暫存器的其餘部分會被視為靜態。  

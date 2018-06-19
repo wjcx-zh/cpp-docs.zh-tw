@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110460"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>通過 OLE DB 一致性測試
 若要讓提供者更為一致，Data Access SDK 會提供一組 OLE DB 一致性測試。 測試檢查您的提供者的所有層面，並提供您合理做為您提供者函式預期的保證。 您可以在 Microsoft Data Access SDK 中找到 OLE DB 一致性測試。 本節著重於您應該將一致性測試執行。 如需執行 OLE DB 一致性測試的詳細資訊，請參閱 SDK。  

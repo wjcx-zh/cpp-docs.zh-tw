@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372213"
 ---
 # <a name="heap"></a>/HEAP
 設定堆積的大小 (位元組)。 這個選項只適用於可執行檔。  

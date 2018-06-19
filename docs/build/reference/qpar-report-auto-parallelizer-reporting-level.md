@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376010"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (自動平行化工具報告層級)
 可讓編譯器的報告功能[Auto-parallelizer](../../parallel/auto-parallelization-and-auto-vectorization.md) ，並在編譯期間指定的層級的資訊訊息輸出。  

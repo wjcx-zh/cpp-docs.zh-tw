@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891090"
 ---
 # <a name="type-forwarding-ccli"></a>類型轉送 (C++/CLI)
 *類型轉送*可讓您進入類型一個組件 （A） 從另一個組件 （B），這樣就表示您不需要重新編譯使用組件 a 的用戶端  

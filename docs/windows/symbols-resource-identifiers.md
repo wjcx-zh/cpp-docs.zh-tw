@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891840"
 ---
 # <a name="symbols-resource-identifiers"></a>符號：資源識別項
 符號是由兩部分所組成的資源識別碼 (ID)：對應至整數值 (符號值) 的文字字串 (符號名稱)。 例如:   

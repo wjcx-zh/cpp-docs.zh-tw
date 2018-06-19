@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377753"
 ---
 # <a name="mutual-imports"></a>交互匯入
 在匯入是雙向 （或循環），匯出或匯入到另一個可執行檔的檔案將呈現的複雜性。 例如，兩個 Dll 從匯入符號彼此相互遞迴函式類似。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372148"
 ---
 # <a name="fixing-release-build-problems"></a>解決發行組建的問題
 如果您的程式碼會產生編譯錯誤，從 偵錯組建來發行組建切換之後，有一些您應該檢查的區域。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363242"
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>什麼是 ATL 控制項裝載應用程式開發介面？
 ATL 的控制項裝載應用程式開發介面是可做為 ActiveX 控制項容器的任何視窗函式的集合。 這些函式可以是靜態或動態連結至您的專案，因為它們都可做為原始碼和 ATL90.dll 所公開。 下表所列出的控制項裝載函式。  

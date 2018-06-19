@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373149"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (啟用 _penter 攔截函式)
 會呼叫`_penter`函式的每個方法或函式開頭。  

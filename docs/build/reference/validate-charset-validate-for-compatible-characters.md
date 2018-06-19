@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377384"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset （驗證相容的字元）
 驗證的原始程式檔文字只包含字元可表示為 utf-8。  

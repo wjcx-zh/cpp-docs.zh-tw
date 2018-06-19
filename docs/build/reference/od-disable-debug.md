@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376256"
 ---
 # <a name="od-disable-debug"></a>/Od (停用 (偵錯))
 會關閉在程式中的所有最佳化，並加速進行編譯。  

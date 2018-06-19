@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366103"
 ---
 # <a name="catlfile-class"></a>CAtlFile 類別
 這個類別會提供 Windows 的精簡型包裝函式的檔案處理應用程式開發介面。  

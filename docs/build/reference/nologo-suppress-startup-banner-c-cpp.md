@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373838"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (隱藏程式啟始資訊) (C/C++)
 隱藏著作權橫幅編譯器啟動時的顯示和編譯期間顯示的參考用訊息。  

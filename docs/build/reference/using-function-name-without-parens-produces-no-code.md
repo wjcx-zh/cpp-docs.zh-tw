@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373978"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>使用不帶 () 的函式名稱不會產生程式碼
 在您的程式中宣告的函式名稱使用時沒有括號，編譯器不會產生程式碼。 無論函式接受參數，因為編譯器會計算函式的位址。不過，函式呼叫運算子 」 （）"不存在，因為沒有進行呼叫。 這個結果會是如下所示：  

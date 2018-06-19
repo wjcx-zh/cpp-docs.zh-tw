@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372652"
 ---
 # <a name="dumpbin-reference"></a>DUMPBIN 參考
 Microsoft COFF 二進位檔傾印工具 (DUMPBIN。EXE) 顯示通用物件檔案格式 (COFF) 的二進位檔案的相關資訊。 您可以使用 DUMPBIN 檢查 COFF 物件檔、 COFF 物件、 可執行檔和動態連結程式庫 (Dll) 的標準程式庫。  

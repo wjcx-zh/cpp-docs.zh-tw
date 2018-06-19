@@ -101,6 +101,7 @@ ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/14/2018
+ms.locfileid: "34153141"
 ---
 # <a name="multimap-class"></a>multimap 類別
 

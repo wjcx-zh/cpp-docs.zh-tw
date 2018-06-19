@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377815"
 ---
 # <a name="notification-hooks"></a>告知攔截
 告知攔截稱為之前在 helper 常式會執行下列動作：  

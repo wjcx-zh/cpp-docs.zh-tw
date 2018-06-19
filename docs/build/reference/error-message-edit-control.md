@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369610"
 ---
 # <a name="error-message-edit-control"></a>錯誤訊息編輯控制項
 **錯誤訊息**方塊包含的系統錯誤訊息或輸入的值為基礎的模組錯誤訊息文字。  

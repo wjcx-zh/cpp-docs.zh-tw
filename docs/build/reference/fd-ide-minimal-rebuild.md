@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373396"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD (IDE 最少重建)
 **/FD**不公開給使用者，除了在[命令列](../../ide/command-line-property-pages.md)c + + 專案屬性頁**屬性頁**對話方塊中，如果且只有[/Gm （啟用最少重建）](../../build/reference/gm-enable-minimal-rebuild.md)也未選取。 **/FD**以外沒有作用，從開發環境。 **/FD**的輸出中未公開**cl /？**。  

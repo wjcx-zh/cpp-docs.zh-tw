@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355248"
 ---
 # <a name="debugging-and-exceptions-classes"></a>偵錯和例外狀況類別
 這些類別會提供例外狀況處理和偵錯支援。  

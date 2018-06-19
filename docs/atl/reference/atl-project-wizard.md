@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357901"
 ---
 # <a name="atl-project-wizard"></a>ATL 專案精靈
 Active Template Library (ATL) 是一組樣板架構 c + + 類別，可簡化撰寫小又快速的 COM 物件。 ATL 專案精靈建立的專案具有以包含 COM 物件之結構。  

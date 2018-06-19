@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372805"
 ---
 # <a name="order-of-cl-options"></a>CL 選項的順序
 選項可以出現的任何位置上 CL 命令列中，除了 /link 選項，它必須出現在上一次。 編譯器選項中指定的開頭[CL 環境變數](../../build/reference/cl-environment-variables.md)，然後讀取命令列從左到右 — 處理遇到它們的順序的命令檔。 每個選項會套用至命令列上的所有檔案。 如果 CL 發生衝突的選項，它會使用最右邊的選項。  

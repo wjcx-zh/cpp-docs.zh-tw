@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369886"
 ---
 # <a name="cc-build-tools"></a>C/C++ 建置工具
 Visual c + + 會提供下列的命令列工具來檢視或操作組建輸出：  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375210"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>卸載延遲載入的 DLL
 預設提供的延遲載入 helper 會檢查以查看延遲載入描述元 pUnloadIAT 欄位中是否有一個指標，以及原始匯入位址表 (IAT)。 若是如此，它會將指標儲存至匯入的延遲描述項清單中。 這可讓 helper 函式，以尋找 DLL 支援明確卸載該 DLL 的名稱。  

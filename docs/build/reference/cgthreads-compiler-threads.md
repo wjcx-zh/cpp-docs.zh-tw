@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371417"
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS (編譯器執行緒)
 設定在指定連結時間程式碼產生時要用於最佳化和程式碼產生的 cl.exe 執行緒數目。  

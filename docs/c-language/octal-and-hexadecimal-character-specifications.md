@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387384"
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八進位和十六進位字元規格
 **\\***ooo* 的序列表示您可以將 ASCII 字元集中的任何字元，指定為三位數的八進位字元碼。 八進位整數的數值會指定所需字元或寬字元的值。  

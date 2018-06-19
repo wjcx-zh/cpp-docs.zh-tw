@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373289"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (傳遞選項給連結器)
 將一或多個連結器選項傳遞至連結器。  

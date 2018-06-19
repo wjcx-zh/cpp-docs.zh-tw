@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892487"
 ---
 # <a name="srwlocksrwlock-constructor"></a>SRWLock::SRWLock 建構函式
 初始化 SRWLock 類別的新執行個體。  

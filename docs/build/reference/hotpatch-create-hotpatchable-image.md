@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376201"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (建立可線上修補的影像)
 準備映像進行 Hotpatch。  

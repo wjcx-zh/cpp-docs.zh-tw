@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375593"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (指定 winmd 檔案)
 指定所產生的 Windows 執行階段中繼資料 (.winmd) 輸出檔的檔案名稱[/WINMD](../../build/reference/winmd-generate-windows-metadata.md)連結器選項。  

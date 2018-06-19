@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133415"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>如何：診斷和修正組件相容性問題 (C++/CLI)
 本主題說明在編譯時期參考的組件的版本不符合在執行階段，參考的組件版本時，會發生什麼情況以及如何避免發生問題。  

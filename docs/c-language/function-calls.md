@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387859"
 ---
 # <a name="function-calls"></a>函式呼叫
 「函式呼叫」是一種運算式，會將控制項和引數 (如果有的話) 傳遞至函式，且具有下列形式：  

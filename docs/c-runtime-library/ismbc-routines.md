@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392571"
 ---
 # <a name="ismbc-routines"></a>_ismbc 常式
 每一個 **_ismbc** 常式都會測試指定的多位元組字元 `c` 是否符合指定的條件。  

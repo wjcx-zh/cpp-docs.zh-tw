@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378713"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (使用先行編譯標頭檔)
 指示編譯器將使用目前編譯中現有的先行編譯標頭 (.pch) 檔案。  

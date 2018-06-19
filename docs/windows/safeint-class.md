@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891333"
 ---
 # <a name="safeint-class"></a>SafeInt 類別
 擴充整數基本項目，來協助防止整數溢位，並讓您比較不同類型的整數。  

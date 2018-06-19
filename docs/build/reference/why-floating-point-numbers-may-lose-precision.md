@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376133"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>浮點數會失去精確度的原因
 浮點十進位值通常不需要實際的二進位表示法。 這是造成副作用的 CPU 如何代表浮動點資料。 基於這個理由，您可能會流失有效位數，以及一些浮點運算可能會產生非預期的結果。  

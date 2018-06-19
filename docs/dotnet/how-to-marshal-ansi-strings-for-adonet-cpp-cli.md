@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137467"
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>如何：封送處理 ADO.NET 的 ANSI 字串 (C++/CLI)
 示範如何將原生字串 (`char *`) 到資料庫及如何封送處理<xref:System.String?displayProperty=fullName>從原生字串至資料庫。  

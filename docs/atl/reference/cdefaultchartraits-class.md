@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361723"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits 類別
 這個類別提供兩個靜態函式之間大寫和小寫字元轉換。  

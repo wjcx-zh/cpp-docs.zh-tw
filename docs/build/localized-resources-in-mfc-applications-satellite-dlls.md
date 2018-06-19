@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369113"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 應用程式中的當地語系化資源：附屬 DLL
 MFC 7.0 和更新的版本會提供對附屬 Dll，協助建立當地語系化成多國語言的應用程式的功能的增強的支援。 附屬 dll[資源專用 DLL](../build/creating-a-resource-only-dll.md) ，其中包含特定語言的當地語系化的應用程式的資源。 當應用程式開始執行時，MFC 會自動載入當地語系化的資源，則最適合的環境。 例如，您可能會有兩個附屬 Dll，其中包含您的資源和另一個包含德文轉譯法文翻譯的英文語言資源的應用程式。 在英文語言的系統上執行應用程式時，它會使用英文的資源。 如果法文的系統上執行，它會使用法文的資源;如果安裝德文系統上執行，它會使用德文的資源。  

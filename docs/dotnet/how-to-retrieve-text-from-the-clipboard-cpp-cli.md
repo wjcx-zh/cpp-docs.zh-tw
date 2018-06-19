@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127899"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>如何：從剪貼簿擷取文字 (C++/CLI)
 下列程式碼範例使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>成員函式傳回的指標<xref:System.Windows.Forms.IDataObject>介面。 可以查詢資料的格式為這個介面，然後用來擷取實際的資料。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424302"
 ---
 # <a name="initializers"></a>初始設定式
 初始設定式指定變數的初始值。 您可以初始化下列內容中的變數：  

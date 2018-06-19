@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374241"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (需要簽章檢查)
 指定必須檢查在載入時間的二進位檔映像的數位簽章。  

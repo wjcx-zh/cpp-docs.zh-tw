@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374787"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/FS (強制同步 PDB 寫入)
 強制寫入要程式資料庫 (PDB) 檔案，建立[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)或[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)— 透過 MSPDBSRV 序列化。EXE。  

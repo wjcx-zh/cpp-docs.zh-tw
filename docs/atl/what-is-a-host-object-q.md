@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357730"
 ---
 # <a name="what-is-a-host-object"></a>何謂主機物件
 主物件是 COM 物件，表示 ATL 提供特定視窗的 ActiveX 控制項容器。 主應用程式物件的子類別容器視窗中，因此它可以反映至控制項的訊息，其提供必要的容器介面，以供控制項，且它會公開[IAxWinHostWindow](../atl/reference/iaxwinhostwindow-interface.md)和[IAxWinAmbientDispatch](../atl/reference/iaxwinambientdispatch-interface.md)介面，可讓您設定控制項的環境。  

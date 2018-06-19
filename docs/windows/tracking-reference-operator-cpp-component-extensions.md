@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890855"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>追蹤參考運算子 (C++ 元件擴充功能)
 A*追蹤參考*(`%`) 的行為類似一般的 c + + 參考 (`&`) 之處在於當物件指派給追蹤參考，此物件的參考計數會遞增。  

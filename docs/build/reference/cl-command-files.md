@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369873"
 ---
 # <a name="cl-command-files"></a>CL 命令檔
 命令檔是文字檔，其中包含選項和檔名，否則輸入[命令列](../../build/reference/compiler-command-line-syntax.md)或指定使用[CL 環境變數](../../build/reference/cl-environment-variables.md)。 CL 可以接受做為引數在 CL 環境變數，或在命令列編譯器命令檔。 與命令列或 CL 環境變數不同的是，命令檔可讓您使用多行選項和檔名。  

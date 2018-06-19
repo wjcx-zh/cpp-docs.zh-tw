@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365050"
 ---
 # <a name="security-global-functions"></a>安全性全域函式
 這些函式提供修改 SID 和 ACL 物件的支援。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368118"
 ---
 # <a name="inline-files-in-a-makefile"></a>Makefile 中的內嵌檔
 內嵌檔包含您指定 makefile 中的文字。 可以在命令中使用其名稱，做為輸入 （例如，LINK 命令檔），或它可以將命令傳遞給作業系統。 建立檔案的命令執行時在磁碟上建立檔案。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112091"
 ---
 # <a name="supporting-notifications"></a>支援告知
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>上的提供者和取用者實作連接點介面  

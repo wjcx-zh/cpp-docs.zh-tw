@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133322"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 COM 字串
 本主題會示範如何 BSTR （偏好在 COM 程式設計中的基本字串格式） 傳遞從 managed 到 unmanaged 函式，反之亦然。 與其他字串類型間的互通性，請參閱下列主題：  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368924"
 ---
 # <a name="binding-imports"></a>繫結匯入
 連結器預設行為是建立可繫結的匯入位址表延遲載入 dll。 如果 DLL 已繫結，則 helper 函式會嘗試使用的繫結的資訊，而不是呼叫**GetProcAddress**上每一個參考匯入。 如果時間戳記或慣用的位址不相符所載入的 DLL，則 helper 函式假設繫結匯的入位址表已過期，而不存在，會繼續。  

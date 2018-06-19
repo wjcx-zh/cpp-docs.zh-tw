@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130421"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>如何：從原生 C++ 類別接收 Windows Form 事件
 您可以啟用原生 c + + 類別，從受管理的 Windows Form 控制項或其他形式的 MFC 巨集對應格式引發的事件接收回呼。 相似執行相同工作的控制項檢視和對話方塊中的接收事件。  

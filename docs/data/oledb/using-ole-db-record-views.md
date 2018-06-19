@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111269"
 ---
 # <a name="using-ole-db-record-views"></a>使用 OLE DB 資料錄檢視
 如果您想要在 MFC 應用程式中顯示 OLE DB 資料列集資料，您應該使用 MFC 類別[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)。 從資料錄檢視物件建立`COleDBRecordView`可讓您在 MFC 控制項中顯示資料庫記錄。 資料錄檢視是直接連接至所建立的 OLE DB 資料列集物件的對話方塊表單檢視`CRowset`範本類別。 取得資料列集物件的控制代碼很簡單：  

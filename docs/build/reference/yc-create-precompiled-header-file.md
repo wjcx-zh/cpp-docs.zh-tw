@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378658"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (建立先行編譯標頭檔)
 指示編譯器建立代表某一點的編譯狀態的先行編譯標頭 (.pch) 檔案。  

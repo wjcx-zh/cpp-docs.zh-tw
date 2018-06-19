@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373331"
 ---
 # <a name="delay-delay-load-import-settings"></a>/DELAY (延遲載入匯入設定)
 ```  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367975"
 ---
 # <a name="intrinsics-and-inline-assembly"></a>內建和內嵌組譯
 其中一個條件約束的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]編譯器為沒有內嵌組譯工具支援。 函式，這表示無法寫入 C 或 c + + 中是必須寫入副程式，或由編譯器所支援的內建函式。 某些函式在有些則不是機密的效能。 效能區分函式應該實作為內建函式。  

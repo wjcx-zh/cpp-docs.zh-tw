@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373019"
 ---
 # <a name="output-file-f-options"></a>輸出檔 (/F) 選項
 輸出檔選項建立，或重新命名輸出檔案。 它們會影響在 CL 環境變數，在命令列，或任何指令檔中指定的所有 C 或 c + + 原始程式檔。  

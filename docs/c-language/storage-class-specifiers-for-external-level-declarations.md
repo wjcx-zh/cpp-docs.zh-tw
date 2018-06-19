@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392113"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部層級宣告的儲存類別指定名稱
 外部變數是指在檔案範圍的變數。 這些變數是在任何函式之外定義，因此可能可供許多函式使用。 由於函式只能在外部層級定義，因此不可為巢狀。 根據預設，對相同名稱之外部變數和函式的所有參考都是相同物件的參考，這表示它們具有「外部連結」 (您可以使用 **static** 關鍵字覆寫此項。 如需有關 **static** 的詳細資訊，請參閱本節稍後的資訊)。  

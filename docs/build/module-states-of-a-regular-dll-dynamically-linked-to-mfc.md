@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369366"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>動態連結至 MFC 的標準的 MFC DLL 的模組狀態
 動態連結至 MFC DLL 的 一般 MFC DLL 的能力可讓非常複雜的某些設定。 比方說，標準的 MFC DLL 和其使用的可執行檔可以同時動態連結至 MFC DLL 以及任何 MFC 擴充 Dll。  

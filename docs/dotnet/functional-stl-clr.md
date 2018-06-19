@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112832"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 包括 STL/CLR 標頭`<cliext/functional>`來定義範本類別和相關的範本委派函式的數目。  

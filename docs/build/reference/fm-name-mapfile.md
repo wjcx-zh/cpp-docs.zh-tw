@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374273"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (命名對應檔)
 會告知連結器，以產生對應檔，其中包含對應的.exe 檔或 DLL 中的出現的順序中的區段清單。  

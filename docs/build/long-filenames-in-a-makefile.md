@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367624"
 ---
 # <a name="long-filenames-in-a-makefile"></a>Makefile 中的長檔名
 將長檔名以雙引號括住，，如下所示：  

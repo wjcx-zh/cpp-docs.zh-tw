@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368794"
 ---
 # <a name="language-specific-handler"></a>語言特定處理常式
 每當設定旗標 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER，語言特定處理常式的相對位址會出現在 UNWIND_INFO。 上一節所述，做為搜尋例外狀況處理常式的一部分，或是回溯的一部分呼叫語言特定處理常式。 它有下列的原型：  

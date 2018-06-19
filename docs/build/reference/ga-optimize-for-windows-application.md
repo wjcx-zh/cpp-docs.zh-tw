@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374254"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA (針對 Windows 應用程式最佳化)
 在.exe 檔案的執行緒區域儲存區 (TLS) 變數存取更有效率的程式碼的結果。  

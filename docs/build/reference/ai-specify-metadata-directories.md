@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369428"
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI (指定中繼資料目錄)
 指定編譯器要搜尋的目錄，以解析傳遞給 `#using` 指示詞的檔案參考。  

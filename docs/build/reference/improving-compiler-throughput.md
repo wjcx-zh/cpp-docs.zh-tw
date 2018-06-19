@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371430"
 ---
 # <a name="improving-compiler-throughput"></a>改善編譯器處理量
 使用先行編譯標頭檔更快建置您的專案。 這很重要，如果您使用 ATL、 MFC 或 Windows SDK 標頭檔。  

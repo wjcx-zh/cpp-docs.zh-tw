@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375294"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge (啟用堆疊探查)
 啟動堆疊探查每個函式呼叫所需要的儲存體的本機變數。  

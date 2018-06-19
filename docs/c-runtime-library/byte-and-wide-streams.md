@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389880"
 ---
 # <a name="byte-and-wide-streams"></a>位元組和寬資料流
 位元組資料流會將檔案視為位元組順序。 在程式內，資料流是相同的位元組順序。  

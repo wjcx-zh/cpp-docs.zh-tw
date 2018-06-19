@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367182"
 ---
 # <a name="exception-handling-x64"></a>例外狀況處理 (x64)
 本章節將討論結構化例外狀況處理和 c + + 例外狀況處理行為上[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  

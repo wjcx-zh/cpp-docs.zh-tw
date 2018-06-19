@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371352"
 ---
 # <a name="errlook-reference"></a>ERRLOOK 參考
 ERRLOOK 公用程式，可從 [工具] 功能表**錯誤查閱**，擷取系統錯誤訊息或模組錯誤訊息根據輸入的值。 ERRLOOK 擷取錯誤訊息文字會自動您拖放到 Visual Studio 偵錯工具中的十六進位或十進位值，如果**值**編輯控制項。 您也可以輸入值，藉由輸入**值**編輯控制項，或藉由從剪貼簿 貼上它和按一下**查閱**。  

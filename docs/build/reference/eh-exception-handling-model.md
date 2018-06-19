@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379103"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外狀況處理模型)
 指定編譯器所使用的例外狀況處理類型、何時要繼續最佳化例外狀況檢查，以及是否要終結因例外狀況而超出範圍的 C++ 物件。 如果沒有指定 **/EH** ，編譯器就會同時攔截非同步結構化例外狀況和 C++ 例外狀況，但不會終結因非同步例外狀況而超出範圍的 C++ 物件。  

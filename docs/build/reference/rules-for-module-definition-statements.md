@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376386"
 ---
 # <a name="rules-for-module-definition-statements"></a>模組定義陳述式的規則
 下列語法規則套用至.def 檔案中的所有陳述式。 每個陳述式的說明特定陳述式適用於其他規則。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368170"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>隔離應用程式和並存組件的概念
 如果某個應用程式的所有元件都是 [並存組件](http://msdn.microsoft.com/library/aa375190) ，那麼就可以將這個應用程式視為 [隔離的應用程式](http://msdn.microsoft.com/library/ff951640)。 並存組件是資源的集合，是一組共同部署的 DLL、Windows 類別、COM 伺服器、類型程式庫或介面，可供應用程式在執行階段使用。 一般而言，並存組件是一至數個 DLL，  

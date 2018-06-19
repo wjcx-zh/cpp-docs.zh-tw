@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376435"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (最佳化全域資料)
 將全域資料封裝在 COMDAT 區段中以進行最佳化。  

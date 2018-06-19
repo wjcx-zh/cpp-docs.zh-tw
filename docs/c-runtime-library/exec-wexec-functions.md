@@ -68,6 +68,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451520"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 函式
 每個此系列中的函式都會載入並執行新處理序：  

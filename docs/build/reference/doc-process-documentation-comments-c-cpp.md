@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371277"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (處理文件註解) (C/C++)
 在原始程式碼檔，並建立.xdc 檔的每個來源的程式碼檔案具有文件註解，請讓編譯器處理文件註解。  

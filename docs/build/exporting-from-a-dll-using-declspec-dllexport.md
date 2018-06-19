@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368544"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>使用 __declspec(dllexport) 從 DLL 匯出
 導入的 Microsoft **__export** 16 位元編譯器版本的 Visual c + + 允許編譯器自動產生匯出名稱，並將它們放在.lib 檔案。 然後就像靜態.lib 連結 DLL 使用這個.lib 檔案。  

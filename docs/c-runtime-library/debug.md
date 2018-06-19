@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387540"
 ---
 # <a name="debug"></a>_DEBUG
 當您指定 /MTd 或 /MDd 選項時，編譯器會定義 `_DEBUG`。 這些選項指定 C 執行階段程式庫的偵錯版本。  

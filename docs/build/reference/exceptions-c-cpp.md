@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373383"
 ---
 # <a name="exceptions-cc"></a>例外狀況 (C/C++)
 發生失敗時，可能會引發兩個例外狀況代碼：  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367078"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>從 Visual Basic 應用程式中呼叫 DLL 函式
 Visual Basic 應用程式 （或依照 pascal 命名法或 Fortran 等其他語言中的應用程式） C/c + + DLL 中呼叫函式，函式必須使用正確的呼叫慣例，而由編譯器所做的任何名稱裝飾不匯出。  

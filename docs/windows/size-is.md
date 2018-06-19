@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889669"
 ---
 # <a name="sizeis"></a>size_is
 指定的記憶體大小配置大小的指標，調整大小的指標和單一或多維度陣列的指標。  

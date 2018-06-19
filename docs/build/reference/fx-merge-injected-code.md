@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373864"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx (合併插入的程式碼)
 產生每個原始程式檔的複本，並將插入的程式碼合併到原始程式檔中。  

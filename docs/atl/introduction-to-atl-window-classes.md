@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356682"
 ---
 # <a name="introduction-to-atl-window-classes"></a>ATL 視窗類別簡介
 下列的 ATL 類別的實作和管理 windows 設計的：  

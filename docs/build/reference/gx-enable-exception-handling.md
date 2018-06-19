@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376711"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (啟用例外狀況處理)
 已取代。 啟用同步例外狀況處理使用函式假設宣告可透過`extern "C"`絕不會擲回例外狀況。  

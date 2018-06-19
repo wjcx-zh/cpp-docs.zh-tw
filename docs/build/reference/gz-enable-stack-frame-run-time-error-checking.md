@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373549"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (啟用堆疊框架執行階段錯誤檢查)
 執行相同的作業為[/RTC （執行階段錯誤檢查）](../../build/reference/rtc-run-time-error-checks.md)選項。 已取代。  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378453"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (執行階段錯誤檢查)
 用來啟用和停用之執行階段錯誤檢查功能搭配[runtime_checks](../../preprocessor/runtime-checks.md) pragma。  

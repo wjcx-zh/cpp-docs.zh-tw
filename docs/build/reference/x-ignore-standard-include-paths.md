@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376464"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (忽略標準 Include 路徑)
 防止編譯器搜尋 include 檔 PATH 和 INCLUDE 環境變數中指定的目錄中。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362215"
 ---
 # <a name="supporting-idispeventimpl"></a>支援 IDispEventImpl
 此範本類別[IDispEventImpl](../atl/reference/idispeventimpl-class.md)可用來對 ATL 類別中的連接點接收提供支援。 連接點接收可讓您的類別來處理從外部 COM 物件引發的事件。 這些連接點接收對應的事件接收對應，您的類別所提供。  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366584"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集  
  這些巨集會輸入至其 COM 對應物件的介面，以便存取它們所`QueryInterface`。 COM 對應中的項目順序是順序介面會檢查相符**IID**期間`QueryInterface`。  

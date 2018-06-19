@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375281"
 ---
 # <a name="link-command-files"></a>LINK 命令檔
 您可以連結的命令檔的形式傳遞命令列引數。 若要指定至連結器的命令檔，請使用下列語法：  

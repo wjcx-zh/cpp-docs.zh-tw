@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373097"
 ---
 # <a name="structure-of-a-library"></a>程式庫結構
 文件庫包含 COFF 物件。 文件庫中的物件包含函式和資料，以便在程式中其他物件的外部參照。 文件庫中的物件有時稱為 「 程式庫成員。  

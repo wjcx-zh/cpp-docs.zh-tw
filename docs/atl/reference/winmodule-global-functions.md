@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362293"
 ---
 # <a name="winmodule-global-functions"></a>WinModule 全域函式
 這些函式提供的支援`_AtlCreateWndData`結構的作業。  

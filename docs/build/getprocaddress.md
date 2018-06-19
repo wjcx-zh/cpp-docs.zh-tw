@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367962"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 明確連結的 DLL 呼叫的處理序[GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212)取得 DLL 中匯出函式的位址。 您可以使用傳回的函式指標呼叫 DLL 函式。 **GetProcAddress**接受做為參數的 DLL 模組控制代碼 (由傳回**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**)，並採用您想要的函式名稱若要呼叫或函式的匯出序數。  

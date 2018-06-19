@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130860"
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>如何：使用規則運算式重新整理資料 (C++/CLI)
 下列程式碼範例示範如何使用.NET Framework 規則運算式支援，以重新排列或重新格式化資料。 下列程式碼範例使用<xref:System.Text.RegularExpressions.Regex>和<xref:System.Text.RegularExpressions.Match>類別以從字串中擷取姓氏和名字，並以反向順序顯示這些名稱項目。  

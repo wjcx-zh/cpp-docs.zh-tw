@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128289"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>如何：指定 out 參數
 這個範例會示範如何指定函式參數是輸出參數以及如何從 C# 程式呼叫該函式。  

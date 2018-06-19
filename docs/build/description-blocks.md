@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367104"
 ---
 # <a name="description-blocks"></a>描述區塊
 描述區塊是以相依性 （選擇性） 後面接著命令區塊：  

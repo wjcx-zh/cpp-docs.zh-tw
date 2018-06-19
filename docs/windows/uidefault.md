@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890147"
 ---
 # <a name="uidefault"></a>uidefault
 表示型別資訊成員的使用者介面中顯示的預設成員。  

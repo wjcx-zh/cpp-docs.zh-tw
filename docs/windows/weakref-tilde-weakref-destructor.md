@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889884"
 ---
 # <a name="weakrefweakref-destructor"></a>WeakRef::~WeakRef 解構函式
 取消初始化 WeakRef 類別目前的執行個體。  

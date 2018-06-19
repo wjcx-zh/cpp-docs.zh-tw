@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892523"
 ---
 # <a name="semaphoreoperator-operator"></a>Semaphore::operator= 運算子
 將指定的控制代碼從號誌物件移至目前的號誌物件。  

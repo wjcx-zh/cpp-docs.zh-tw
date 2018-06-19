@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889900"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>對話方塊編輯器的疑難排解
 以下是幾個您應該注意在對話方塊編輯器中工作時的問題。  

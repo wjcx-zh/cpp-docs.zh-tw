@@ -21,9 +21,10 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367264"
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Makefile 前置處理中的運算式
-**！如果**或**！ELSE IF** `constantexpression` （以十進位或 C 語言標記） 的整數常數、 字串常數或命令所組成。 使用括號群組運算式。 運算式中使用 c-style 帶正負號長整數算術。數字是範圍-2147483648 到 2147483647 的 32 位元二補數格式。  
+**！如果**或 **！ELSE IF** `constantexpression` （以十進位或 C 語言標記） 的整數常數、 字串常數或命令所組成。 使用括號群組運算式。 運算式中使用 c-style 帶正負號長整數算術。數字是範圍-2147483648 到 2147483647 的 32 位元二補數格式。  
   
  運算式可以使用執行的運算子，常數值、 命令、 字串、 巨集，以及檔案系統路徑的結束代碼。  
   

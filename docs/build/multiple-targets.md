@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368183"
 ---
 # <a name="multiple-targets"></a>多重目標
 NMAKE 評估成單一的相依性的多個目標為不同的描述區塊中所指定的每個。  

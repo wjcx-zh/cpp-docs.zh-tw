@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375252"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (啟用防護檢查)
 指定在可執行映像中進行控制流程防護檢查的支援。  

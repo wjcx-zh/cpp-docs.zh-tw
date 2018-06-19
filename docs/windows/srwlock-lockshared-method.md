@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33895745"
 ---
 # <a name="srwlocklockshared-method"></a>SRWLock::LockShared 方法
 取得 SRWLock 物件以共用模式。  

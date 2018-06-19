@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375889"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (消除重複字串)
 可讓編譯器在執行期間在程式映像和記憶體中建立一份完全相同的字串。 這種最佳化稱為*字串共用*，可建立較小的程式。  

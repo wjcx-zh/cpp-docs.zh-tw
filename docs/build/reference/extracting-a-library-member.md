@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371238"
 ---
 # <a name="extracting-a-library-member"></a>引出程式庫成員
 您可以使用程式庫來建立包含現有的程式庫之成員的複製目的檔 (.obj)。 若要擷取成員的複本，請使用下列語法：  

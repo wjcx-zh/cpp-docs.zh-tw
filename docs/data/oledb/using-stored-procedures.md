@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112234"
 ---
 # <a name="using-stored-procedures"></a>使用預存程序
 預存程序是儲存在資料庫中的可執行物件。 呼叫預存程序是類似於叫用 SQL 命令。 可以使用預存程序 （而不是執行或準備用戶端應用程式中的陳述式） 的資料來源上提供幾項優點，包括較高的效能、 降低的網路負荷，並改善的一致性和精確度。  

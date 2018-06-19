@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377534"
 ---
 # <a name="y-precompiled-headers"></a>/Y (先行編譯標頭檔)
 產生和使用的先行編譯標頭，則會影響下列編譯器選項：  

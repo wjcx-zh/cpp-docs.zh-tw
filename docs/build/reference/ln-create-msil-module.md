@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375307"
 ---
 # <a name="ln-create-msil-module"></a>/LN (建立 MSIL 模組)
 指定不應將組件資訊清單插入輸出檔中。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375658"
 ---
 # <a name="specifying-the-pathname"></a>指定路徑名稱
 每個輸出檔案的選項可接受*pathname*引數可以指定的位置和輸出檔案的名稱。 引數可以包含磁碟機名稱、 目錄和檔案名稱。 不允許空間選項與引數之間。  

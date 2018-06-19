@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387950"
 ---
 # <a name="multidimensional-arrays-c"></a>多維陣列 (C)
 註標運算式也可以擁有多個註標，如下所示：  

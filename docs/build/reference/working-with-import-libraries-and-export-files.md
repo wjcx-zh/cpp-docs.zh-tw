@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377928"
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>與匯入程式庫和匯出檔案一起使用
 您可以使用 LIB /DEF 選項來建立匯入程式庫和匯出檔案。 連結會使用匯出檔建置程式，其中包含匯出 （通常是動態連結程式庫 (DLL)），並且會使用匯入程式庫來解析參考之其他程式中匯出。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375837"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (產生內建函式)
 取代一些函式呼叫與內建函式或其他特殊形式的函數，可協助您的應用程式的執行速度。  

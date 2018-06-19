@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374761"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr (建立 .Sbr 檔案)
 建立 .sbr 檔案。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362267"
 ---
 # <a name="invoking-scripts"></a>叫用指令碼
 [使用可置換的參數 （登錄器的前置處理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)討論取代對應，會提及的註冊機構方法**AddReplacement**。 在註冊機構有八個特定的指令碼之後，其他方法下表, 描述了所有。  

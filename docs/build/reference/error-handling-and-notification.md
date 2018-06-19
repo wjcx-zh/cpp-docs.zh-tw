@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373214"
 ---
 # <a name="error-handling-and-notification"></a>錯誤處理和告知
 如需有關錯誤處理和通知的詳細資訊，請參閱[了解 Helper 函式](understanding-the-helper-function.md)。  

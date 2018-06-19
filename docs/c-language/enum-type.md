@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382753"
 ---
 # <a name="enum-type"></a>enum 類型
 **ANSI 3.5.2.2**：針對表示列舉類型的值所選擇的整數類型  

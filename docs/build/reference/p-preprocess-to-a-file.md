@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377140"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (前置處理至檔案)
 前置處理 C 和 c + + 原始程式檔，並將前置處理過的輸出寫入檔案。  

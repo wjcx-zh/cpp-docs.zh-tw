@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364017"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>建置 C/C++ 並存組件
 A [-並存組件](http://msdn.microsoft.com/library/windows/desktop/ff951640)是資源集合 — 的 Dll、 windows 類別、 COM 伺服器、 類型程式庫或介面群組 — 適用於應用程式在執行階段使用。 將 Dll 重新封裝組件中的主要優點是在同一時間應用程式可以使用多個版本的組件，並可服務目前已安裝的組件的更新版本。  

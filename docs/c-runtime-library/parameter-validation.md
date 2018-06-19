@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450247"
 ---
 # <a name="parameter-validation"></a>參數驗證
 大部分的安全性增強 CRT 函式和許多預先存在的函式都會驗證其參數。 這可能包括檢查 **NULL** 的指標、檢查落在有效範圍的整數，或檢查列舉值是否有效。 找到無效的參數時，就會執行無效的參數處理常式。  

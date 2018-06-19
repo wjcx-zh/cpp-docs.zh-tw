@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374891"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN 選項
 選項包含選項規範，這是虛線 （-） 或斜線 （/），後面接著選項的名稱。 選項名稱不能為縮寫。 某些選項可接受指定的引數，在冒號 （:） 之後。 選項規格內允許任何空格或定位字元。 使用一個或多個空格或定位字元分隔命令列上的選項規格。 選項名稱及其關鍵字或檔名引數並不區分大小寫。 大部分的選項會套用到所有二進位檔案，一些適用於特定類型的檔案。 根據預設，DUMPBIN 會將資訊傳送到標準輸出。 使用[/out](../../build/reference/out-dumpbin.md)選項可將輸出傳送至檔案。  

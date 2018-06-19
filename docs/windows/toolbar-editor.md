@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891307"
 ---
 # <a name="toolbar-editor"></a>工具列編輯器
 工具列編輯器可讓您建立工具列資源，並將點陣圖轉換成工具列資源。 工具列編輯器會以圖形方式真實地顯示應用程式完成後的工具列和按鈕。  

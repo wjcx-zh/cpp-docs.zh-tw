@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892835"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>視窗窗格 (圖示影像編輯器)
 影像編輯器 視窗通常會以分隔列分隔的兩個窗格中顯示的影像。 檢視是實際大小和其他變大時 （預設的放大係數是 6）。 這兩個窗格中的檢視表會自動更新： 一個窗格中的變更會立即顯示在其他。 兩個窗格，方便您處理您的映像，在其中您可以區分個別像素為單位，在相同的時間，觀察您的工作對映像的實際大小 檢視的放大檢視。  

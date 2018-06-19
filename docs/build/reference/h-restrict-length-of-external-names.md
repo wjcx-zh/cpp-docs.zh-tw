@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377557"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (限制外部名稱的長度)
 已取代。 限制外部名稱的長度。  

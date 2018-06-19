@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372431"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (程式碼產生執行緒)
 設定 cl.exe 執行緒的數目，以用於最佳化及程式碼產生。  

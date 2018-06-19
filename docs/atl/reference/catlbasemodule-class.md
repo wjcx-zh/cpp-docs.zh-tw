@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360315"
 ---
 # <a name="catlbasemodule-class"></a>CAtlBaseModule 類別
 這個類別具現化每個 ATL 專案中。  

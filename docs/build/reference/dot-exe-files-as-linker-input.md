@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372399"
 ---
 # <a name="exe-files-as-linker-input"></a>.Exe 檔做為連結器輸入
 [MS-DOS Stub 檔名](../../build/reference/stub-ms-dos-stub-file-name.md)（/ 虛設常式） 選項指定.exe 檔案所執行的 MS-DOS 的名稱。 連結會檢查指定的檔案，以確保它是有效的 MS-DOS 程式。  

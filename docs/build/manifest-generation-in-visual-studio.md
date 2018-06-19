@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370445"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>在 Visual Studio 中產生資訊清單
 產生資訊清單檔案的特定專案可以在專案中控制**屬性頁**對話方塊。 在**組態屬性**索引標籤上，按一下 **連結器**，然後**資訊清單檔案**，然後**產生資訊清單**。 根據預設新專案的專案屬性會設定為產生資訊清單檔案。 不過它可能是停用產生資訊清單的專案使用**產生資訊清單**專案的屬性。 當這個屬性設定為**是**，在產生此專案的資訊清單。 否則，連結器時，會忽略組件資訊解決相依性的應用程式程式碼，並不會產生資訊清單。  

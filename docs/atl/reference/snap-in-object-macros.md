@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363906"
 ---
 # <a name="snap-in-object-macros"></a>嵌入式管理單元物件巨集
 這些巨集嵌入式管理單元擴充功能提供支援。  

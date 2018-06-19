@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374540"
 ---
 # <a name="lib-files-as-linker-input"></a>.Lib 檔做為連結器輸入
 連結接受 COFF 標準程式庫和 COFF 匯入程式庫，這兩種通常有副檔名。 lib。 標準程式庫包含的物件，並且會 LIB 工具來建立。 匯入程式庫包含匯出的其他程式的相關資訊，而且會建立每個連結的建置包含匯出的程式時，或由 LIB 工具。 如需使用 LIB 建立標準或匯入程式庫的資訊，請參閱[LIB 參考](../../build/reference/lib-reference.md)。 如需使用連結來建立匯入程式庫的詳細資訊，請參閱[/DLL](../../build/reference/dll-build-a-dll.md)選項。  

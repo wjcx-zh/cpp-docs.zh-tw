@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892653"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive 方法
 嘗試取得 SRWLock 中的物件目前或指定 SRWLock 物件的獨佔模式。 如果呼叫成功時，呼叫的執行緒會採用鎖定擁有的權。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377296"
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 導入了一個或多個區段`definitions`所存取規範，在您的專案輸出檔案中的區段。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379090"
 ---
 # <a name="overview-of-arm-abi-conventions"></a>ARM ABI 慣例概觀
 此針對 Windows on ARM 處理器程式碼編譯的應用程式二進位介面 (ABI) 是以標準 ARM EABI 為基礎。 本文章重點說明 Windows on ARM 和標準之間的主要差異。 如需標準 ARM EABI 的詳細資訊，請參閱[應用程式二進位介面 (ABI)，ARM 架構的](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)。  

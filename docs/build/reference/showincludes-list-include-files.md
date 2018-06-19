@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378336"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes (列示包含檔)
 可讓編譯器輸出的包含檔清單。 巢狀包含的檔案也會顯示 （檔案所包含從您所包含的檔案）。  

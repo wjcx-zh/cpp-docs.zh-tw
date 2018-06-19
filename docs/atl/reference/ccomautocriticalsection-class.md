@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357225"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection 類別
 `CComAutoCriticalSection` 提供方法來取得和釋放重要區段物件的擁有權。  

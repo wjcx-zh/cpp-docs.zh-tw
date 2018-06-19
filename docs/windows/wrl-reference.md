@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890940"
 ---
 # <a name="wrl-reference"></a>WRL 參考
 本節包含的 Windows 執行階段 c + + 樣板程式庫 (WRL) 的參考資訊。  

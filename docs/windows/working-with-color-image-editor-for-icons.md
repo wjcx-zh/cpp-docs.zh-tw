@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891655"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>使用色彩 (圖示影像編輯器)
 影像編輯器包含許多功能，特別是處理及自訂色彩。 您可以設定前景或背景色彩、 界限的區域填滿色彩，或選取要做為目前的前景或背景色彩映像上的色彩。 您可以使用工具在[影像編輯器工具列](../windows/toolbar-image-editor-for-icons.md)以及色彩調色盤中[色彩視窗](../windows/colors-window-image-editor-for-icons.md)建立映像。  

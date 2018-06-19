@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367117"
 ---
 # <a name="defining-a-rule"></a>定義規則
 *Fromext*代表相依的檔案，副檔名和*toext*代表目標檔案的副檔名。  

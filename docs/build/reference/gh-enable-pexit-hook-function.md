@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374501"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (啟用 _pexit 攔截函式)
 呼叫`_pexit`函式的每個方法或函式結尾。  

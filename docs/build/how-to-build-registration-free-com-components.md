@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367855"
 ---
 # <a name="how-to-build-registration-free-com-components"></a>如何：建置免註冊的 COM 元件
 免註冊 COM 元件是內建於 Dll 的資訊清單的 COM 元件。  

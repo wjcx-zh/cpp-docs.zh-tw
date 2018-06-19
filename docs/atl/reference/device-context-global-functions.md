@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358585"
 ---
 # <a name="device-context-global-functions"></a>裝置內容的全域函式
 此函式會建立指定裝置的裝置內容。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383078"
 ---
 # <a name="elements-of-c"></a>C 的元素
 本節說明 C 程式語言的項目，包括用來建構 C 程式的名稱、數字和字元。 ANSI C 語言將這些元件標記為語彙基元。  

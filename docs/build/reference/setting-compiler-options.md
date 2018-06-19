@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375802"
 ---
 # <a name="setting-compiler-options"></a>設定編譯器選項
 C 和 C++ 編譯器選項可以在開發環境中設定，也可以在命令列上設定。  

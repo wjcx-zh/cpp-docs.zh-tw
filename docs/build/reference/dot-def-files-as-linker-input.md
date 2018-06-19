@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370523"
 ---
 # <a name="def-files-as-linker-input"></a>.Def 檔做為連結器輸入
 請參閱[模組定義 (.def) 檔](../../build/reference/module-definition-dot-def-files.md)如需詳細資訊。 使用[/DEF](../../build/reference/def-specify-module-definition-file.md)指定.def 檔名的選項。  

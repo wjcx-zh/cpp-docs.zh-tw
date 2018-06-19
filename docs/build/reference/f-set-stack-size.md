@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373136"
 ---
 # <a name="f-set-stack-size"></a>/F (設定堆疊大小)
 設定程式的堆疊大小 （位元組）。  

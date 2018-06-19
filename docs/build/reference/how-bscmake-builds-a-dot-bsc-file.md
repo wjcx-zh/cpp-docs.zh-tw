@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373484"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE 如何建置 .Bsc 檔
 BSCMAKE 建立或重建.bsc 檔中可以最有效率的方式。 若要避免潛在的問題，請務必了解建置程序。  

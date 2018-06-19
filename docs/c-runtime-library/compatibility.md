@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390478"
 ---
 # <a name="compatibility"></a>相容性
 通用 C 執行階段程式庫 (UCRT) 支援與 C++ 相容所需的大部分 C 標準程式庫。 除了 \<tgmath.h> 中所定義的泛型巨集及 \<complex.h> 中的 Strict 類型相容性之外，其會實作 C99 (ISO/IEC 9899:1999) 程式庫。 UCRT 也會實作 POSIX.1 的大型子集 (ISO/IEC 9945-1:1996，POSIX 系統應用程式開發介面) C 程式庫，但不全然符合任何特定的 POSIX 標準。  此外，UCRT 會實作數個 Microsoft 特有但不包含在標準之中的函式與巨集。  

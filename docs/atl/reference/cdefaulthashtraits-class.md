@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361508"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 類別
 這個類別提供靜態函式來計算雜湊值。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376243"
 ---
 # <a name="stacksize"></a>STACKSIZE
 設定堆疊的大小 (以位元組為單位)。  

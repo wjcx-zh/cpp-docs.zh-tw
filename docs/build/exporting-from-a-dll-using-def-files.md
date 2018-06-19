@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369743"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>使用 .DEF 檔從 DLL 匯出
 將模組定義 (.def) 檔是文字檔，其中包含描述各種屬性之 DLL 的一個或多個模組陳述式。 如果您不使用 **__declspec （dllexport)** 關鍵字匯出的 DLL 函式，DLL 需要.def 檔。  

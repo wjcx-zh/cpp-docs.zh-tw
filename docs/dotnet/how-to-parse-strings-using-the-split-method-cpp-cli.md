@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132017"
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>如何：使用 Split 方法剖析字串 (C++/CLI)
 下列程式碼範例示範如何使用<xref:System.String.Split%2A?displayProperty=fullName>方法，以從字串擷取的每個字。 建構及藉由呼叫會剖析字串，包含多種類型的文字分隔符號<xref:System.String.Split%2A>分隔符號的清單。 然後，在句子中的每個單字會個別顯示。  

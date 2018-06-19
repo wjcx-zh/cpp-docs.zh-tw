@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388665"
 ---
 # <a name="c-identifiers"></a>C 識別項
 「識別項」或「符號」是您在程式中為變數、類型、函式及標籤提供的名稱。 識別項名稱的拼字和大小寫不可以與任何關鍵字相同。 您不能將關鍵字 (C 或 Microsoft) 當做識別項；關鍵字僅保留供特殊使用。 您可以在變數、類型或函式的宣告中指定識別項以建立該識別項。 在此範例中，`result` 是整數變數的識別項，且 `main` 和 `printf` 是函式的是識別項名稱。  

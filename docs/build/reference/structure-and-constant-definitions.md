@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376029"
 ---
 # <a name="structure-and-constant-definitions"></a>結構和常數定義
 預設 helper 常式會使用數種結構來與通訊的攔截函式以及在任何例外狀況。 以下是通知] 和 [失敗值、 資訊結構，以及傳遞給攔截程序的函數來攔截指標類型：  

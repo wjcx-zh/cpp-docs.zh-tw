@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358123"
 ---
 # <a name="date-type"></a>DATE 類型
 **日期**類型會實作使用 8 位元組浮點數。 日期會以累進整數從 1899 年 12 月 30 日午夜時間為零。 小時值會表示為絕對值的數字的小數部分。 下表說明數個日期，連同其**日期**類型數值對等項目：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369301"
 ---
 # <a name="msbuild-visual-c"></a>MSBuild (Visual C++)
 您可以使用**MSBuild**建置 Visual c + + 應用程式從命令提示字元工具。 建置程序是在專案檔 (.vcxproj)，您可以建立和編輯資訊所控制。 專案檔指定為基礎的組建選項建置階段、 條件和事件。  

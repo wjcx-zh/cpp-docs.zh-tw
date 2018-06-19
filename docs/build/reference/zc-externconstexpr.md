@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378414"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc:externConstexpr （啟用 extern constexpr 變數）
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 
 1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
 
-1. 新增 **/Zc:externConstexpr**或 **/Zc:externConstexpr-** 至**其他選項：**窗格。
+1. 新增 **/Zc:externConstexpr**或 **/Zc:externConstexpr-** 至**其他選項：** 窗格。
 
 ## <a name="see-also"></a>另請參閱
 

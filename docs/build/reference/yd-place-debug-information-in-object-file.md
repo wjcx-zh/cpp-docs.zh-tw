@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378229"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (將偵錯資訊置入目的檔)
 從先行編譯標頭 (.pch) 檔案搭配使用時建立完整的偵錯資訊置於所有目的檔置[/Yc](../../build/reference/yc-create-precompiled-header-file.md)和[/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)選項。 已取代。  

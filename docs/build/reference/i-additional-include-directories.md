@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373123"
 ---
 # <a name="i-additional-include-directories"></a>/I (其他 Include 目錄)
 將目錄加入至搜尋 include 檔的目錄清單。  

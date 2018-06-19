@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369938"
 ---
 # <a name="kinds-of-dlls"></a>DLL 的類型
 本主題提供資訊以協助您決定要建置的 DLL 的種類。  

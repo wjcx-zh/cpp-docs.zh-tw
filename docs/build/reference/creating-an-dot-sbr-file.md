@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371079"
 ---
 # <a name="creating-an-sbr-file"></a>建立 .Sbr 檔
 BSCMAKE 的輸入的檔是.sbr 檔案。 編譯器會建立.sbr 檔案以供在編譯每個目的檔 (.obj)。 當您建立或更新您的瀏覽資訊檔時，為您的專案的所有.sbr 檔必須都是可用磁碟空間。  

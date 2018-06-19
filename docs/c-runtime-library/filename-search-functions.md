@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391798"
 ---
 # <a name="filename-search-functions"></a>檔案名稱搜尋函式
 這些函式會針對指定的檔案名稱進行搜尋或關閉搜尋：  

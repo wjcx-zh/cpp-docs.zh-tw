@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360145"
 ---
 # <a name="building-cc-isolated-applications"></a>建置 C/C++ 隔離應用程式
 隔離的應用程式只依賴-並存組件，並繫結至其使用資訊清單的相依性。 不需要完全隔離，才能執行正確 Windows; 上的應用程式不過，由投資導致完全隔離的應用程式，如果您需要服務應用程式在未來可能節省時間。 讓您完全隔離的應用程式的優點的資訊，請參閱[隔離的應用程式](http://msdn.microsoft.com/library/aa375190)。  

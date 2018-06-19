@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361354"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT 類別
 這個類別提供的自動資源清除`GetBuffer`和`ReleaseBuffer`呼叫上的現有`CStringT`物件。  

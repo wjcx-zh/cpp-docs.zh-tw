@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371963"
 ---
 # <a name="lib-input-files"></a>LIB 輸入檔
 LIB 所預期的輸入的檔而定的模式，這正在使用它下, 表所示。  

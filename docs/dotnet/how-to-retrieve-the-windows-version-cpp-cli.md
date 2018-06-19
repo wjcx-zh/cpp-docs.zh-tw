@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128263"
 ---
 # <a name="how-to-retrieve-the-windows-version-ccli"></a>如何：擷取 Windows 版本 (C++/CLI)
 下列程式碼範例示範如何擷取目前的作業系統的平台和版本資訊。 這項資訊會儲存在<xref:System.Environment.OSVersion%2A?displayProperty=fullName>屬性組成廣泛條款中描述的 Windows 版本的列舉和<xref:System.Environment.Version%2A>物件，其中包含作業系統的確切的組建。  

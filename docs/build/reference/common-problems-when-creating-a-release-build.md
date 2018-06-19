@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373162"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>建立發行組建時的常見問題
 在開發期間，您通常將建置和測試您的專案的偵錯組建。 如果您再建置您的應用程式的發行組建時，您可能會發生存取違規。  

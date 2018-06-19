@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359778"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 屬性頁精靈
 此精靈[加入 ATL 專案屬性頁](../../atl/reference/adding-an-atl-property-page.md)或具有 ATL 支援的 MFC 專案。 ATL 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的一或多個 COM 物件。  

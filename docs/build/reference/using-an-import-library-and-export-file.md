@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378593"
 ---
 # <a name="using-an-import-library-and-export-file"></a>使用匯入程式庫和匯出檔案
 當程式 （可執行檔或 DLL） 將匯出到另一個程式，它也會從匯入，或如果兩個以上的程式來匯出和匯入到彼此，來連結這些程式的命令必須配合循環匯出。  

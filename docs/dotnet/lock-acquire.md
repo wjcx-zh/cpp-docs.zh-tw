@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138965"
 ---
 # <a name="lockacquire"></a>lock::acquire
 取得物件，選擇性地等候一段指定的時間，或完全不用，取得鎖定的鎖定。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371937"
 ---
 # <a name="lib-reference"></a>LIB 參考
 Microsoft 程式庫管理員 (LIB.exe) 建立，並管理通用物件檔案格式 (COFF) 物件檔案的程式庫。 LIB 也可用來建立匯出檔案和匯入程式庫，以參考匯出的定義。  

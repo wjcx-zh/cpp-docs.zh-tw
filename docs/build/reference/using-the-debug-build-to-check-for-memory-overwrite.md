@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376689"
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>使用偵錯版檢查記憶體覆寫
 若要使用偵錯版檢查記憶體覆寫，您必須先重建專案，以偵錯。 然後，移至您的應用程式的最前頭`InitInstance`函式，並加入下行：  

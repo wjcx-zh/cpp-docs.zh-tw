@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390262"
 ---
 # <a name="file-attribute-constants"></a>檔案屬性常數
 ## <a name="syntax"></a>語法  

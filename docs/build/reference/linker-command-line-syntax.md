@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376162"
 ---
 # <a name="linker-command-line-syntax"></a>連結器命令列語法
 若要執行連結。EXE，使用下列命令語法：  

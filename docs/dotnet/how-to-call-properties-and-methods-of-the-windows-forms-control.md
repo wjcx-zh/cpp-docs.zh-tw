@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131351"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：呼叫 Windows Form 控制項的屬性和方法
 因為[CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)將指標傳回至<xref:System.Windows.Forms.Control?displayProperty=fullName>，而非指標和`WindowsControlLibrary1::UserControl1`，建議您在加入使用者控制項類型的成員，並將它在初始化[IView::OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). 現在您可以呼叫方法和屬性使用`m_ViewControl`。  

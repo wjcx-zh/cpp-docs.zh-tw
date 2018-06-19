@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33895771"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 類別
 `SafeInt`類別會使用`SafeIntException`來找出原因數學作業無法完成。  

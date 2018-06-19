@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369847"
 ---
 # <a name="checking-for-memory-overwrites"></a>檢查記憶體覆寫
 如果您將堆積操作函式的呼叫上取得存取違規，很可能您的程式已損毀堆積。 這種狀況的一般症狀會是：  

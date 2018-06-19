@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912767"
 ---
 # <a name="alloctext"></a>alloc_text
 為要放置指定之函式定義的程式碼區段命名。 pragma 必須在函式宣告子與具名函式的函式定義之間發生。  

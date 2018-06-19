@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325262"
 ---
 # <a name="nmake-fatal-error-u1000"></a>NMAKE 嚴重錯誤 U1000
 語法錯誤: ')' 巨集引動過程中遺失  

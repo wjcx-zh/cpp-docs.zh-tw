@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348100"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE 通用對話方塊類別
 這些類別會透過實作幾個標準 OLE 對話方塊來處理一般 OLE 工作。 它們也針對 OLE 功能提供一致的使用者介面。  

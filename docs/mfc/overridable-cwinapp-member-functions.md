@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347707"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>可覆寫的 CWinApp 成員函式
 [CWinApp](../mfc/reference/cwinapp-class.md)提供數個索引鍵可覆寫成員函式 (`CWinApp`類別從這些成員會覆寫[CWinThread](../mfc/reference/cwinthread-class.md)，從中`CWinApp`衍生):  

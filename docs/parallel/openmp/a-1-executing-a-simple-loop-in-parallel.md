@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686122"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1 平行執行簡單迴圈
 下列範例示範如何平行處理簡單迴圈使用`parallel for`指示詞 ([區段 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md)在頁面上 16)。 迴圈反覆運算變數是根據預設，私用，因此不需要明確指定 private 子句中。  

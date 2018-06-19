@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302577"
 ---
 # <a name="linker-tools-warning-lnk4092"></a>連結器工具警告 LNK4092
 共用的可寫入區段 'section' 含有重新配置。映像可能無法正確執行  

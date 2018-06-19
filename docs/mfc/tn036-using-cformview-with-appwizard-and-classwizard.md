@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379870"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036：搭配使用 CFormView 與 AppWizard 及 ClassWizard
 本技術提示說明如何修改 AppWizard 產生應用程式，使其用於`CFormView`而不使用預設`CView`如同其主要檢視類別。 這是直接使用此版本的 Visual c + + 支援。  

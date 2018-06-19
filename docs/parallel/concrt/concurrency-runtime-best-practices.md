@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695638"
 ---
 # <a name="concurrency-runtime-best-practices"></a>並行執行階段最佳作法
 本節描述可協助您有效運用並行執行階段的最佳作法。 這些最佳作法適用於[平行模式程式庫](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)，而[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。  

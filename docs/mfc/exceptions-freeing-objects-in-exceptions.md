@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347824"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>例外狀況：釋放例外狀況中的物件
 本文說明需和例外狀況發生時釋放物件的方法。 主題包括：  

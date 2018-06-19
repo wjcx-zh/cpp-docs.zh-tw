@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332123"
 ---
 # <a name="accessing-the-embedded-month-calendar-control"></a>存取內嵌月曆控制項
 您可以從存取內嵌的月曆控制項物件`CDateTimeCtrl`物件呼叫[GetMonthCalCtrl](../mfc/reference/cdatetimectrl-class.md#getmonthcalctrl)成員函式。  

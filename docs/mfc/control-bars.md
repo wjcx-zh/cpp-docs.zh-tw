@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347895"
 ---
 # <a name="control-bars"></a>控制列
 「控制列」是工具列、狀態列和對話方塊列的一般名稱。 MFC 類別`CToolBar`， `CStatusBar`， `CDialogBar`， `COleResizeBar`，和**CReBar**衍生自類別[CControlBar](../mfc/reference/ccontrolbar-class.md)，它會實作它們的一般功能。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347743"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse 類別
 `D2D1_ELLIPSE` 的包裝函式。  

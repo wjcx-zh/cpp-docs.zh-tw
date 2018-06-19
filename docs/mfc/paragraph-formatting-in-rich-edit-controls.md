@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348113"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Rich Edit 控制項中的段落格式化
 您可以使用 rich edit 控制項的成員函式 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 來格式化段落和擷取格式化資訊。 段落格式屬性包含對齊、定位點、縮排和編號。  

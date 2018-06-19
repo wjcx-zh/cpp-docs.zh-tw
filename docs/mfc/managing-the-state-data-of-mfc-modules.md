@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347691"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>管理 MFC 模組的狀態資料
 本文討論 MFC 模組的狀態資料，以及當執行 (執行時路徑程式碼會經過應用程式) 流程進入而模組離開時，這個狀態如何更新。 也會探討使用 `AFX_MANAGE_STATE` 和 `METHOD_PROLOGUE` 巨集切換模組狀態。  

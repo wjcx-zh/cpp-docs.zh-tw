@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380204"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>從對話方塊物件擷取資料
 架構提供簡單的方法初始化控制項在對話方塊中的值，以及從控制項擷取值。 更耗費人力手動方法會呼叫函式，例如`SetDlgItemText`和`GetDlgItemText`類別成員函式`CWnd`，套用至控制項視窗。 這些函式，存取每個控制項，分別可設定或取得它的值，呼叫函式，例如`SetWindowText`和`GetWindowText`。 架構的方法會自動初始化和擷取。  

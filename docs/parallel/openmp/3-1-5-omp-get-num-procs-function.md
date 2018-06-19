@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705311"
 ---
 # <a name="315-ompgetnumprocs-function"></a>3.1.5 omp_get_num_procs 函式
 `omp_get_num_procs`函式會傳回所提供的程式時呼叫的函式的處理器數目。 格式如下：  

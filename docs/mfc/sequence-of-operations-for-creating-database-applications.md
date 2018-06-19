@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381325"
 ---
 # <a name="sequence-of-operations-for-creating-database-applications"></a>建立資料庫應用程式的作業順序
 下表顯示您的角色和架構的角色中撰寫資料庫應用程式。  

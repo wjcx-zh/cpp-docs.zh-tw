@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319308"
 ---
 # <a name="math-error-m6203"></a>運算錯誤 M6203
 'function': _OVERFLOW 錯誤  

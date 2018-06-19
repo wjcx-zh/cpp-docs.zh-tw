@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296207"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>編譯器警告 (層級 2) C4948
 'accessor' 的傳回型別不符合對應 setter 的最後一個參數類型  

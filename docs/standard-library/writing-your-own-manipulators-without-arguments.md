@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857749"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>撰寫不含引數的操作工具
 

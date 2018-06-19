@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385985"
 ---
 # <a name="writing-mfc-applications"></a>撰寫 MFC 應用程式
 本文說明開發應用程式的初始步驟。 首先，您必須決定您要撰寫的應用程式種類。 有幾個選項都中有所討論[應用程式設計選擇](../mfc/application-design-choices.md)。 您的應用程式會：  

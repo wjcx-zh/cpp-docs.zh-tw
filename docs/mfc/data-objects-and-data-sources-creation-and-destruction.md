@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347944"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>資料物件和資料來源：建立和解構
 發行項中所述[資料物件和資料來源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)，資料物件和資料來源代表資料傳輸的兩端。 本文說明建立和終結這些物件和來源的時機，以適當地執行資料傳輸，包括：  

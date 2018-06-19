@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347187"
 ---
 # <a name="memory-management-examples"></a>記憶體管理：範例
 本文說明 MFC 如何執行框架配置和堆積配置每個記憶體配置一般的三種：  

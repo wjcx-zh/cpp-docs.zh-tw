@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692086"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>如何：使用可組合的類別改善效能
 這個範例示範如何使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別來計算中的數字的總和[std:: array](../../standard-library/array-class-stl.md)是質數的物件。 `combinable`類別藉由排除共用的狀態可改善效能。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695794"
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock 和 omp_init_nest_lock 函式
 這些函式提供初始化鎖定的唯一方法。 每個函式會初始化參數相關聯的鎖定*鎖定*供後續呼叫中使用。 格式如下：  

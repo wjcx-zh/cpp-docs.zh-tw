@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347161"
 ---
 # <a name="dragging-images-from-an-image-list"></a>從影像清單拖曳影像
 [CImageList](../mfc/reference/cimagelist-class.md)包含在螢幕上拖曳影像的函式。 拖曳函式平滑且沒有游標閃爍地移動彩色影像。 遮罩影像和未遮罩影像都可以拖曳。  

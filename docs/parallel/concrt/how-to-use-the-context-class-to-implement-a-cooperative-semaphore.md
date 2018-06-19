@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693740"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>如何：使用內容類別實作合作式信號
 本主題示範如何使用 concurrency:: context 類別實作合作式信號類別。  

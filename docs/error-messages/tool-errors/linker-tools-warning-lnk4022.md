@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300367"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>連結器工具警告 LNK4022
 找不到符號 'symbol' 的唯一相符項目  

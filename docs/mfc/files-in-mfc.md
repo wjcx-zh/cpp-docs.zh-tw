@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347077"
 ---
 # <a name="files-in-mfc"></a>MFC 中的檔案
 在 Microsoft Foundation 類別庫 (MFC)，類別[CFile](../mfc/reference/cfile-class.md)處理一般檔案 I/O 作業。 這系列文章說明如何開啟和關閉檔案以及讀取和寫入資料至檔案。 它也說明檔案狀態作業。 如需如何使用 MFC 物件架構序列化功能做為替代方式的讀取和寫入資料檔案中的說明，請參閱文章[序列化](../mfc/serialization-in-mfc.md)。  

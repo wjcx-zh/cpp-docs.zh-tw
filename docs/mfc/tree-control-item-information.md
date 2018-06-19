@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385361"
 ---
 # <a name="tree-control-item-information"></a>樹狀目錄控制項目資訊
 樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 具有許多成員函式會擷取控制項項目相關資訊。 [GetItem](../mfc/reference/ctreectrl-class.md#getitem)成員函式會擷取部分或所有項目相關聯的資料。 這項資料可以包含項目的文字、狀態、影像、子項目計數和應用程式定義的 32 位元資料值。 另外還有[SetItem](../mfc/reference/ctreectrl-class.md#setitem)函式，可以設定某些或所有項目相關聯的資料。  

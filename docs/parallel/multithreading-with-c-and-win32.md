@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687539"
 ---
 # <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 進行多執行緒處理
 Microsoft Visual c + + 建立多執行緒應用程式提供支援。 您應該考慮使用多個執行緒，如果您的應用程式需要執行耗費資源的作業，可能導致使用者介面沒有回應。  

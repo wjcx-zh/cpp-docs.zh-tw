@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357554"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>加入 ATL OLE DB 提供者
 使用此精靈將 ATL OLE DB 提供者加入至專案。 ATL OLE DB 提供者是由資料來源、 工作階段、 命令和資料列集類別所組成。 專案必須已建立為 ATL COM 應用程式。  

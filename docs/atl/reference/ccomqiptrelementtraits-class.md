@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361927"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits 類別
 建立 COM 介面指標的集合時，這個類別會提供方法、 靜態函式和有用的 typedef。  

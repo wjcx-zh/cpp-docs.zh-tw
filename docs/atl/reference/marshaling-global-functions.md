@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362823"
 ---
 # <a name="marshaling-global-functions"></a>封送處理的全域函式
 這些函式提供封送處理，並將封送處理資料轉換成介面指標的支援。  

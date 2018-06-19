@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409572"
 ---
 # <a name="basic-concepts--c"></a>基本概念 （c + +）
 本節說明了解 c + + 對很重要的概念。 C 程式設計人員會熟悉許多這些概念，但有些微的差異，可能會造成非預期的程式結果。 其中包含下列主題：  

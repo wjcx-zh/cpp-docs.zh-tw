@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420079"
 ---
 # <a name="punctuators-c"></a>標點符號 （c + +）
 在 C++ 中的標點符號對於編譯器具有語法和語意上的含意，但本身並不指定產生值的作業。 不論是單獨或組合，有些標點符號也可以是 C++ 運算子，或對前置處理器具有重大意義。  

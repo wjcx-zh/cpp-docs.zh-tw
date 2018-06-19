@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365544"
 ---
 # <a name="ccomcontrol-class"></a>CComControl 類別
 這個類別會提供方法來建立及管理 ATL 的控制項。  

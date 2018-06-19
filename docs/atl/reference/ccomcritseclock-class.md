@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358882"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 類別
 這個類別會提供用以鎖定及解除鎖定的關鍵區段物件的方法。  

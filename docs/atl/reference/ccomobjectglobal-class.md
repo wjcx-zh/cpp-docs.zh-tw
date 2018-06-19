@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362439"
 ---
 # <a name="ccomobjectglobal-class"></a>CComObjectGlobal 類別
 這個類別會管理上包含的模組的參考計數程式`Base`物件。  

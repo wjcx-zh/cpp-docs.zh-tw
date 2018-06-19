@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355721"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>實作的自訂字串管理員 （基本的方法）
 若要自訂的記憶體配置方案，字串資料是使用 ATL 提供最簡單的方式**CAtlStringMgr**類別，但提供您自己的記憶體配置常式。 建構函式**CAtlStringMgr**接受單一參數： 指標`IAtlMemMgr`物件。 `IAtlMemMgr` 是提供到堆積的泛型介面的抽象基底類別。 使用`IAtlMemMgr`介面， **CAtlStringMgr**配置、 重新配置，然後釋放用來儲存字串資料的記憶體。 您可以實作`IAtlMemMgr`介面，或是使用其中一個五個 ATL 提供的記憶體管理員類別。 ATL 提供的記憶體管理員只會包裝現有的記憶體配置設備：  

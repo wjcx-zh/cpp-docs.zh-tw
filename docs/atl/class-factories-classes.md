@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355341"
 ---
 # <a name="class-factories-classes"></a>類別的 Factory 類別
 下列類別實作，或支援類別處理站：  

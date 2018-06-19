@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355489"
 ---
 # <a name="mmc-snap-in-classes"></a>MMC 嵌入式管理單元的類別
 下列類別會提供開發 Microsoft Management Console (MMC) 嵌入式管理單元元件的支援：  

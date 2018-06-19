@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364362"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 類別
 提供的預設實作`IDispatch`雙重介面的一部分。  

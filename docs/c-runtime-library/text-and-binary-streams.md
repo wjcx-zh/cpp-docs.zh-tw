@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410927"
 ---
 # <a name="text-and-binary-streams"></a>文字和二進位資料流
 文字資料流是由一或多行可寫入到文字導向顯示器以便供讀取的文字所組成。 從文字資料流讀取時，程式會讀取每一行結尾的 `NL` (新行)。 寫入到文字資料流時，程式會寫入 `NL` 以表示行尾。 為符合目標環境中表示檔案中之文字的不同慣例，程式庫函式可以修改在程式與文字資料流之間傳輸的字元數目與表示數目。  

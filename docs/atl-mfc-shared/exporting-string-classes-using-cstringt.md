@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356392"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>匯出使用 CStringT 的字串類別
 在過去，MFC 開發人員必須衍生自`CString`他們自己的字串類別特製化。 在 Microsoft Visual c + +.NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md)類別已被呼叫的樣板類別[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。 這會提供數個優點：  

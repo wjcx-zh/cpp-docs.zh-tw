@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419925"
 ---
 # <a name="objects-own-resources-raii"></a>物件擁有資源 (RAII)
 請確定物件自己的資源。 此原則就是也稱為 「 資源擷取是初始化 」 或 「 RAII。 」  

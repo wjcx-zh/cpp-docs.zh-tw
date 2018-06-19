@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360184"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>設定靜態連結的註冊機構的程式碼 （只有 c + +）
 C + + 用戶端可以建立註冊機構的程式碼的靜態連結。 靜態連結的註冊機構的剖析器會將大約 5 K，加入至發行組建。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420846"
 ---
 # <a name="variantt-member-functions"></a>_variant_t 成員函式
 如需有關資訊`_variant_t`成員函式，請參閱[_variant_t 類別](../cpp/variant-t-class.md)。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357917"
 ---
 # <a name="using-contained-windows"></a>使用包含的 Windows
 ATL 實作包含的 windows [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)。 包含的視窗表示可委派給容器物件，而不是在它自己的類別中處理這些訊息的視窗。  

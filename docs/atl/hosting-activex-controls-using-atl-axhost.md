@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356249"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>裝載 ActiveX 控制項使用 ATL 類別
 本主題中的範例將示範如何建立 AXHost 以及如何裝載 ActiveX 控制項使用不同的 ATL 函式。 它也示範如何存取控制與接收事件 (使用[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) 從裝載的控制項。 此範例會裝載子視窗或主視窗中的日曆控制項。  

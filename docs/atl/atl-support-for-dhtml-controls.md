@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355518"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>DHTML 控制項的 ATL 支援
 使用 ATL，您可以建立的控制項時動態 HTML (DHTML) 功能。 ATL DHTML 控制項：  

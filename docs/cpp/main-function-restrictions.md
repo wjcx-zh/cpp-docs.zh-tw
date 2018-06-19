@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419681"
 ---
 # <a name="main-function-restrictions"></a>main 函式限制
 數個限制**主要**不會套用到其他的 c + + 函式的函式。 **主要**函式：  

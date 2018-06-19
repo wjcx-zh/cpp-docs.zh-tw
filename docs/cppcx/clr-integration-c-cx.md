@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086892"
 ---
 # <a name="clr-integration-ccx"></a>CLR 整合 (C++/CX)
 某些 Windows 執行階段類型接收特殊處理，在 C + + /CX 和 common language runtime (CLR) 為基礎的語言。 這篇文章討論一種語言的數個類型如何對應到另一種語言。 例如，CLR 將 Windows.Foundation.IVector 對應到 System.Collections.IList、將 Windows.Foundation.IMap 對應到 System.Collections.IDictionary 等等。 同樣地，C + + /CX 特別對應的類型，例如 platform:: delegate 和 platform:: string。  

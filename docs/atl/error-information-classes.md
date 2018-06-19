@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354213"
 ---
 # <a name="error-information-classes"></a>錯誤的資訊類別
 下列類別會指出如何處理資訊時發生錯誤：  

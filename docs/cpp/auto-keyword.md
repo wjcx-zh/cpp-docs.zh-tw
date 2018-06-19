@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409995"
 ---
 # <a name="auto-keyword"></a>auto 關鍵字
 `auto` 關鍵字是一個宣告指定名稱。 不過，C++ 標準為此關鍵字定義了原始和修訂的意義。 Visual c + + 2010 之前,`auto`關鍵字會宣告中的變數*自動*儲存類別，也就是具有區域存留期的變數。 從 Visual c + + 2010，開始`auto`關鍵字宣告的型別推算其宣告中的初始化運算式的變數。 [/Zc: auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md)編譯器選項可控制的意義`auto`關鍵字。  

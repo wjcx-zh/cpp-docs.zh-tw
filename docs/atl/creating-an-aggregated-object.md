@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355016"
 ---
 # <a name="creating-an-aggregated-object"></a>建立彙總的物件
 彙總委派**IUnknown**呼叫，提供在外部物件的指標**IUnknown**內部物件。  

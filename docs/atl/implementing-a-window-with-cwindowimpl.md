@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356543"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>實作 CWindowImpl 的視窗
 若要實作一個視窗，衍生自`CWindowImpl`。 在衍生類別中，宣告的訊息對應和訊息處理常式函式。 您現在可以使用您的類別，以三個不同的方式：  

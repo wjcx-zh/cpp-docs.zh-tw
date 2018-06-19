@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362580"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>將控制項放在網頁上 (ATL 教學課程，第 7 部分)
 現在已完成您的控制項。 若要查看您在真實世界的情況下運作的控制項，請將它放在網頁上。 定義您的控制項時，已建立包含控制項的 HTML 檔。 開啟 PolyCtl.htm 檔案從**方案總管 中**，您可以看到您在網頁上的控制項。  

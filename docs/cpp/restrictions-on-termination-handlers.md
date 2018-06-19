@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420578"
 ---
 # <a name="restrictions-on-termination-handlers"></a>終止處理常式的限制
 您無法使用 `goto` 陳述式跳至 `__try` 陳述式區塊或 `__finally` 陳述式區塊內  您必須改為透過一般控制流程進入陳述式區塊。 (不過，您可以跳出 `__try` 陳述式區塊)。您也無法在 `__finally` 區塊內將例外狀況處理常式或終止處理常式設為巢狀。  

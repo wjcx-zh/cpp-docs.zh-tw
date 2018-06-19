@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357840"
 ---
 # <a name="using-a-template-library"></a>使用範本程式庫
 範本是有些許類似巨集。 如同巨集，叫用範本會使它 （具有適當的參數替代） 依序展開您已撰寫的程式碼。 不過，樣板更進一步此項可讓您當做參數傳遞的類型為基礎的新類別的建立。 這些新的類別會實作型別安全方式來執行範本程式碼中所編寫的作業。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365252"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 類別
 這個類別定義根據 c + + 標準程式庫集合的列舉程式介面。  

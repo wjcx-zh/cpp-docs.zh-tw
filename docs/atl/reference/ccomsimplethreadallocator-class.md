@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360916"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator 類別
 這個類別會管理類別的執行緒選取`CComAutoThreadModule`。  

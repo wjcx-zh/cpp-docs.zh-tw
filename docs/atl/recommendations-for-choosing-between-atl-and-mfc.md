@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357319"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>ATL 和 MFC 所選擇的建議
 在開發元件和應用程式時，您可以選擇兩種方法，ATL 和 MFC （Microsoft Foundation 類別程式庫）。  

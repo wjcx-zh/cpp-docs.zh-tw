@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355603"
 ---
 # <a name="message-handler-functions"></a>訊息處理常式函式
 ATL 提供三種類型的訊息處理常式函式：  

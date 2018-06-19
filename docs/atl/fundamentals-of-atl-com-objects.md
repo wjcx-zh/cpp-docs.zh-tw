@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358286"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 物件的基本概念
 下圖顯示的類別和介面，可用來定義 ATL COM 物件之間的關聯性。  

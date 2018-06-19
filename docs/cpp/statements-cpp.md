@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422777"
 ---
 # <a name="statements-c"></a>陳述式 (C++)
 C++ 陳述式是控制物件如何以及以什麼順序進行操作的程式項目。 本節包括：  

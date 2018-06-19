@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368986"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch (最小 CPU 架構)
 架構選項為程式碼產生指定架構。 選取您要使用的基底硬體架構，了解該目標平台的 /arch 選項。  

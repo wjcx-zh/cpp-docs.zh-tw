@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364946"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 這個精靈設定 OLE DB 取用者類別與資料繫結到指定的 OLE DB 提供者存取指定的資料來源所需。  
@@ -59,15 +60,15 @@ ms.lasthandoff: 05/03/2018
   
      對於 SQL 資料：  
   
-    1. **選取或輸入伺服器名稱：**按一下以顯示所有已註冊的資料伺服器在網路上，下拉式清單功能表，然後選取其中一個。  
+    1. **選取或輸入伺服器名稱：** 按一下以顯示所有已註冊的資料伺服器在網路上，下拉式清單功能表，然後選取其中一個。  
   
-    2. **輸入要登入伺服器的資訊：**輸入使用者名稱和密碼來登入資料伺服器。  
+    2. **輸入要登入伺服器的資訊：** 輸入使用者名稱和密碼來登入資料伺服器。  
   
-    3. **選取的資料庫伺服器上：**按一下下拉式清單功能表以顯示所有已註冊的資料庫伺服器上的資料，然後選取其中一個。  
+    3. **選取的資料庫伺服器上：** 按一下下拉式清單功能表以顯示所有已註冊的資料庫伺服器上的資料，然後選取其中一個。  
   
          -或-  
   
- **附加資料庫檔案做為資料庫名稱：**指定要做為資料庫檔案，輸入明確的路徑名稱。  
+ **附加資料庫檔案做為資料庫名稱：** 指定要做為資料庫檔案，輸入明確的路徑名稱。  
   
         > [!NOTE]
         >  There is a security problem with the "Allow saving of password" feature of the Data Link Properties dialog box. In "Enter information to log on to the server," there are two radio buttons:  
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
          1. **Specify the source of data:** You can use a data source name or a connection string.  
   
- **使用資料來源名稱：**這個下拉式清單會顯示在您的電腦中註冊的資料來源。 您可以設定資料來源使用 ODBC 資料來源管理員事先-或-**使用連接字串：** ，或者輸入的連接字串，您已取得，或按一下**建置**按鈕。**選取資料來源** 對話方塊隨即出現。 選取檔案或電腦的資料來源，然後按一下**確定**。  
+ **使用資料來源名稱：** 這個下拉式清單會顯示在您的電腦中註冊的資料來源。 您可以設定資料來源使用 ODBC 資料來源管理員事先-或-**使用連接字串：** ，或者輸入的連接字串，您已取得，或按一下**建置**按鈕。**選取資料來源** 對話方塊隨即出現。 選取檔案或電腦的資料來源，然後按一下**確定**。  
   
         > [!NOTE]
         >  You can obtain a connection string by viewing the properties of an existing connection in Server Explorer, or you can create a connection by double-clicking **Add Connection** in Server Explorer.  
@@ -96,9 +97,9 @@ ms.lasthandoff: 05/03/2018
          4. Click **Test Connection**; if the test succeeds, click **OK**. If not, check your logon information, try another database, or try another data server.  
   
  **進階**  
- **網路設定：**指定**模擬等級**（的伺服器才可使用時模擬用戶端; 直接對應至 RPC 模擬層級的模擬層級） 和**保護層級**（用戶端與伺服器之間傳送的資料保護層級直接對應至 RPC 保護層級）。  
+ **網路設定：** 指定**模擬等級**（的伺服器才可使用時模擬用戶端; 直接對應至 RPC 模擬層級的模擬層級） 和**保護層級**（用戶端與伺服器之間傳送的資料保護層級直接對應至 RPC 保護層級）。  
   
- **其他：**中**連接逾時**，指定的逾時發生之前所允許的閒置時間的秒數。 在**存取權限**，指定資料連接的存取權限。  
+ **其他：** 中**連接逾時**，指定的逾時發生之前所允許的閒置時間的秒數。 在**存取權限**，指定資料連接的存取權限。  
   
      如需進階的初始化屬性的詳細資訊，請參閱每個特定的 OLE DB 提供者所隨附的文件。  
   

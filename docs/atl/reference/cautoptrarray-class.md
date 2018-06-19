@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358947"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 類別
 建構智慧型指標的陣列時，這個類別會提供有用的方法。  

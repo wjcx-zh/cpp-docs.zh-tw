@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355121"
 ---
 # <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT::Run 函式
 **執行**包含呼叫`PreMessageLoop`， `RunMessageLoop`，和`PostMessageLoop`。 之後，呼叫`PreMessageLoop`先儲存服務的執行緒識別碼。 服務會使用這個識別碼來自動關閉傳送**WM_QUIT**訊息使用 Win32 API 函式[PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946)。  

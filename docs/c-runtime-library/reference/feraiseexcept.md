@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32398633"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -76,7 +77,7 @@ int feraiseexcept(
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 
-**Microsoft 特定的：**中指定的例外狀況*excepts*會依照順序 FE_INVALID，引發 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 不過，FE_INEXACT 可以引發 FE_OVERFLOW 或 FE_UNDERFLOW 引發時，即使在未指定*excepts*。 **結束 Microsoft 專有**
+**Microsoft 特定的：** 中指定的例外狀況*excepts*會依照順序 FE_INVALID，引發 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 不過，FE_INEXACT 可以引發 FE_OVERFLOW 或 FE_UNDERFLOW 引發時，即使在未指定*excepts*。 **結束 Microsoft 專有**
 
 ## <a name="requirements"></a>需求
 

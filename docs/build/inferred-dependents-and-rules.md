@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368040"
 ---
 # <a name="inferred-dependents-and-rules"></a>推斷相依和規則
 如果有適用的推斷規則，nmake 就會假設為目標的推斷的相依。 規則適用於：  
@@ -30,9 +31,9 @@ ms.lasthandoff: 05/03/2018
   
 -   *fromext*具有目標的基底名稱以及檔案的副檔名存在於目前或指定的目錄中的相符項目。  
   
--   *fromext*處於[。尾碼](../build/dot-directives.md); 沒有其他*fromext*在比對規則有較高**。尾碼**優先順序。  
+-   *fromext*處於[。尾碼](../build/dot-directives.md); 沒有其他*fromext*在比對規則有較高 **。尾碼**優先順序。  
   
--   沒有明確的相依具有較高**。尾碼**優先順序。  
+-   沒有明確的相依具有較高 **。尾碼**優先順序。  
   
  推斷相依項目可能會導致未預期的副作用。 如果目標的描述區塊包含命令，NMAKE 就會執行這些命令，而不是命令中的規則。  
   

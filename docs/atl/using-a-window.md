@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358390"
 ---
 # <a name="using-a-window"></a>使用視窗
 類別[CWindow](../atl/reference/cwindow-class.md)可讓您使用的視窗。 一旦您將附加到視窗上的以`CWindow`物件，您就可以呼叫`CWindow`管理視窗的方法。 `CWindow` 也包含`HWND`運算子，將轉換`CWindow`物件`HWND`。 因此，您可以傳遞`CWindow`任何需要的視窗控制代碼的函式的物件。 您可以輕鬆地混合`CWindow`方法呼叫和 Win32 函式呼叫，而不建立任何暫存物件。  

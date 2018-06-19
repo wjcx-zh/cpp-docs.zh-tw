@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358765"
 ---
 # <a name="options-atl-property-page-wizard"></a>選項, ATL 屬性頁精靈
 使用精靈的這個頁面來定義您要建立的屬性頁的執行緒模型和彙總層級。  

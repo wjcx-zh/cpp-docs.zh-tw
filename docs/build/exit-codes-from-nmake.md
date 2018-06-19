@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367091"
 ---
 # <a name="exit-codes-from-nmake"></a>NMAKE 的結束代碼
 NMAKE 會傳回下列結束代碼：  

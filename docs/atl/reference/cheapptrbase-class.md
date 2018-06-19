@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364564"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 類別
 這個類別會構成數個堆積智慧型指標類別的基礎。  

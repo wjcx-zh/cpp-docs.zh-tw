@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367468"
 ---
 # <a name="dynamic-parameter-stack-area-construction"></a>動態參數堆疊區域建構
 如果使用框架指標，則選項會動態建立參數堆疊區域存在。 未進行此設定目前[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]編譯器。  

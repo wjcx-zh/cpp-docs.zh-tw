@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359658"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 類別
 這個引數的介面卡類別可讓任一資源名稱 ( `LPCTSTR`s) 或資源識別碼 ( **UINT**s) 而不需要將 ID 為字串，使用呼叫端傳遞至函式**MAKEINTRESOURCE**巨集。  

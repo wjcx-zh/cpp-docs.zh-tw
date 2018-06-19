@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418883"
 ---
 # <a name="linkage-in-names-with-block-scope"></a>區塊範圍的名稱連結
 下列連結規則適用於具有區塊範圍的名稱 (區域名稱)：  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409273"
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 和 MBCS 資料類型
 

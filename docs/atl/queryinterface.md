@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356957"
 ---
 # <a name="queryinterface"></a>QueryInterface
 雖然沒有的機制之物件可以用來表示它提供以靜態方式 （它具現化之前） 的功能，但基本的 COM 機制是使用**IUnknown**方法呼叫[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421269"
 ---
 # <a name="selection-statements-c"></a>選擇陳述式 (C++)
 C + + 選擇陳述式[如果](../cpp/if-else-statement-cpp.md)和[切換](../cpp/switch-statement-cpp.md)，提供了有條件執行的程式碼區段的方法。  

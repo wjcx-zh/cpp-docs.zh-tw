@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360341"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>測試修改過的 ATL DHTML 控制項
 試試看您新的控制項，以查看它如何運作。  

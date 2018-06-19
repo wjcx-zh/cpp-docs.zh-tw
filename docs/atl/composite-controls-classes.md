@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355360"
 ---
 # <a name="composite-controls-classes"></a>複合控制項類別
 下列類別會提供支援建立複合控制項  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422380"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字串和 I/O 格式化 (現代 C++)
 C + + [iostreams](../standard-library/iostream.md)能夠格式化字串 I/O。 例如，下列程式碼示範如何設定 cout 來格式化整數，以十六進位方式，先關閉目前的狀態儲存及重新設定，之後，因為一旦狀態格式傳遞給 cout，它維持該狀態的變更，不只是針對一個線條之前輸出程式碼。  

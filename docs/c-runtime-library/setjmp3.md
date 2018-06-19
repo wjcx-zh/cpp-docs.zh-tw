@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408363"
 ---
 # <a name="setjmp3"></a>_setjmp3
 內部 CRT 函式。 `setjmp` 函式的新實作。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360122"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr 類別
 此類別代表介面，以`CStringT`記憶體管理員。  

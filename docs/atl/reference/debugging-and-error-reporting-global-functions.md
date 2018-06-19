@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364878"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>偵錯和錯誤報告全域函式
 這些函式提供有用的偵錯和追蹤功能。  

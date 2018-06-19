@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357541"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 類別
 建構的智慧型指標清單時，這個類別會提供有效的方法。  

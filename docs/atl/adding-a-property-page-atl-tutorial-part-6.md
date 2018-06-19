@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361586"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>加入屬性頁 (ATL 教學課程，第 6 部分)
 屬性頁會實作為個別的 COM 物件，讓他們所需進行共用。 在此步驟中，您將進行下列工作，以加入至控制項的屬性頁：  

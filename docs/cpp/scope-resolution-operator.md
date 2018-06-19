@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420934"
 ---
 # <a name="scope-resolution-operator-"></a>範圍解析運算子：::
 範圍解析運算子 `::` 可用來識別及區分不同範圍內使用的識別項。 如需範圍的詳細資訊，請參閱[範圍](../cpp/scope-visual-cpp.md)。  

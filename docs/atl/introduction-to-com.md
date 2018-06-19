@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356171"
 ---
 # <a name="introduction-to-com"></a>COM 簡介
 COM 是基本 「 物件模型 」 上的 ActiveX 控制項和 OLE 已內建。 COM，允許物件來公開其功能給其他元件和主控件應用程式。 它會定義如何物件會公開本身和跨處理序和跨網路，此公開資訊的運作方式。 COM 也會定義物件的生命週期。  

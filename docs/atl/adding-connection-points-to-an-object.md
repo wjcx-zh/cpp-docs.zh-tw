@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356588"
 ---
 # <a name="adding-connection-points-to-an-object"></a>將連接點加入物件
 [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)示範如何建立具有連接點支援的控制項、 如何加入事件，以及如何實作連接點。 ATL 實作連接點與[IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)類別。  

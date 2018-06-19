@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424045"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 在 C + + 11 和更新版本中，lambda 運算式，通常稱為*lambda*— 是方便的方式定義匿名函式物件的 ( *closure*) 叫用，或是做為引數的位置函式。 Lambda 通常用來封裝要傳遞給演算法或非同步方法的數行程式碼。 本文定義什麼是 Lambda、Lambda 與其他程式設計技術的比較、描述 Lamdba 的優點並提供基本範例。  

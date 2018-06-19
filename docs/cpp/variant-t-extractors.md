@@ -63,6 +63,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423314"
 ---
 # <a name="variantt-extractors"></a>_variant_t 擷取器
 **Microsoft 特定的**  
@@ -104,13 +105,13 @@ operator unsigned __int64() const;
   
 -   **運算子 double （)** 擷取**double**整數值。  
   
--   **運算子 CY （）**擷取**CY**物件。  
+-   **運算子 CY （）** 擷取**CY**物件。  
   
 -   **運算子 bool （)** 擷取`bool`值。  
   
--   **運算子 DECIMAL （）**擷取**十進位**值。  
+-   **運算子 DECIMAL （）** 擷取**十進位**值。  
   
--   **運算子 BYTE （）**擷取**位元組**值。  
+-   **運算子 BYTE （）** 擷取**位元組**值。  
   
 -   **運算子 _bstr_t （)** 擷取封裝在字串`_bstr_t`物件。  
   

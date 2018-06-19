@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357254"
 ---
 # <a name="message-maps-atl"></a>訊息對應 (ATL)
 與特定訊息、 命令或通知的訊息對應產生關聯的處理常式函式。 使用 ATL 的[訊息對應巨集](../atl/reference/message-map-macros-atl.md)，您可以指定視窗的訊息對應。 中的視窗程序`CWindowImpl`， `CDialogImpl`，和`CContainedWindowT`導向至其訊息對應視窗的訊息。  

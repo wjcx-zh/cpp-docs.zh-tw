@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354951"
 ---
 # <a name="formatting-time-automation-classes"></a>格式化的經過時間： Automation 類別
 #### <a name="to-format-a-time"></a>若要設定時間的格式  

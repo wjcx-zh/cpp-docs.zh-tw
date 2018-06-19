@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422159"
 ---
 # <a name="tilestatic-keyword"></a>tile_static 關鍵字
 `tile_static` 關鍵字用於宣告可供執行緒磚中所有執行緒存取的變數。 變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。 如需有關如何使用圖格的詳細資訊，請參閱[使用磚](../parallel/amp/using-tiles.md)。  

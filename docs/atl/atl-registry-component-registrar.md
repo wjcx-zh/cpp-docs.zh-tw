@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354896"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 登錄元件 (登錄器)
 ATL 登錄器最佳化存取系統登錄的自訂介面。 在註冊機構是 無限制執行緒，可讓靜態連結的程式碼針對 c + + 用戶端。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357401"
 ---
 # <a name="application-settings-atl-project-wizard"></a>應用程式設定, ATL 專案精靈
 使用**應用程式設定**設計基本功能並將新的 ATL 專案在 ATL 專案精靈 頁面。  

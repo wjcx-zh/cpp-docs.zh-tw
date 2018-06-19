@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358321"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>針對 BSTR 配置及釋放記憶體
 當您建立`BSTR`s 和 COM 物件之間傳遞它們，您必須要特別小心視為它們使用，以避免記憶體流失的記憶體。 當`BSTR`會保持在介面內，您必須釋放其記憶體，當您在使用它。 不過，當`BSTR`介面不成功，接收物件負責其記憶體管理。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366909"
 ---
 # <a name="conflicts-with-the-x86-compiler"></a>與 x86 編譯器衝突
 資料類型都大於 4 個位元組會不自動對齊堆疊上使用 x86 編譯器進行編譯的應用程式。 因為編譯器會是 4 位元組對齊的堆疊、 大於 4 個位元組，比方說，64 位元整數的任何項目無法自動對齊 8 位元組位址的 x86 架構。  

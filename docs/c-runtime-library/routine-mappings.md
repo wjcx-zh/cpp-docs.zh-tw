@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415490"
 ---
 # <a name="routine-mappings"></a>常式對應
 泛型文字常式對應是在 TCHAR.H 中定義。 `_tccpy` 和 `_tclen` 對應至 MBCS 模型中的函式，為求完整性，它們會對應至 SBCS 和 Unicode 模式中的巨集或內嵌函式。 如需泛型文字常式的相關資訊，請參閱對應的 `SBCS`、`_MBCS` 或 `_UNICODE` 相關常式的＜說明＞主題。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357811"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>實作的自訂字串管理員 （進階方法）
 在特殊情況下，您可以實作自訂字串管理員不只是變更堆積用來配置記憶體。 在此情況下，您必須以手動方式實作[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)介面做為您的自訂字串管理員。  

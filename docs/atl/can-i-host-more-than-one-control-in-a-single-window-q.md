@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356420"
 ---
 # <a name="can-i-host-more-than-one-control-in-a-single-window"></a>可以裝載多個控制項中的單一視窗嗎？
 您不可以裝載多個控制項中單一 ATL 主控視窗。 每個主機視窗被設計來保存 （這允許簡易的機制，可以處理訊息反映和控制每個環境的屬性） 一次只有一個控制項。 不過，若要讓使用者看到多個控制項的單一視窗中，它是建立多個主控件 windows 做為該視窗的子系的簡單方式。  

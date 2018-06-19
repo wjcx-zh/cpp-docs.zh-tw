@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413132"
 ---
 # <a name="stream-states"></a>資料流狀態
 資料流的有效狀態和狀態轉換如下圖所示。  

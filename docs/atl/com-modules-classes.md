@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354977"
 ---
 # <a name="com-modules-classes"></a>COM 模組類別
 下列類別提供 COM 模組中的支援：  

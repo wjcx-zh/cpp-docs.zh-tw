@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363080"
 ---
 # <a name="cnoworkerthread-class"></a>CNoWorkerThread 類別
 使用此類別做為引數`MonitorClass`樣板參數，如果您想要停用動態快取維護的快取類別。  

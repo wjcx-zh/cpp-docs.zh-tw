@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355042"
 ---
 # <a name="dual-interfaces-and-atl"></a>雙重介面和 ATL
 雙重介面可讓它為 dispinterface 方法或 vtable 方法存取的方法。 本節涵蓋一些 ATL 觀點的雙重介面的功能。  

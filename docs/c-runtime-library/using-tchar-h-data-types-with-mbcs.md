@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412647"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>搭配 _MBCS 使用 TCHAR.H 資料類型
 

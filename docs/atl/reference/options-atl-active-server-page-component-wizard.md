@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364537"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>選項, ATL Active Server Page 元件精靈
 您可以使用 ATL Active Server Page 元件精靈的這個頁面來設計以提升的效率及錯誤支援物件。  

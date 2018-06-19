@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357678"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>識別 DHTML 控制項專案的項目
 大部分 DHTML 控制項的程式碼完全像那樣建立任何 ATL 的控制項。 泛型程式碼的基本了解，逐步[ATL 教學課程](../atl/active-template-library-atl-tutorial.md)，並參閱的章節[ATL 專案建立](../atl/reference/creating-an-atl-project.md)和[ATL COM 物件基礎觀念](../atl/fundamentals-of-atl-com-objects.md)。  

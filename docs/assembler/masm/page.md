@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057986"
 ---
 # <a name="page"></a>PAGE
 第一個指示詞設定行*長度*和字元*寬度*的程式清單。 如果不指定任何引數，就會產生分頁符號。 第二個指示詞遞增區段數目，並將頁碼重設為 1。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356449"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 函式的第三個參數所識別的名稱`NOTIFY_HANDLER`中訊息對應巨集。  

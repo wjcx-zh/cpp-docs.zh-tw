@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357502"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 類別
 這個類別是安全性屬性結構的精簡型包裝函式。  

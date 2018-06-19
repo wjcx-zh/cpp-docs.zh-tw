@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263823"
 ---
 # <a name="compiler-error-c3645"></a>編譯器錯誤 C3645
 'function': __clrcall 不可使用於編譯為原生程式碼的函式  

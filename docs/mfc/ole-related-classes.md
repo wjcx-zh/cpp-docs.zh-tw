@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348511"
 ---
 # <a name="ole-related-classes"></a>OLE 相關類別
 這些類別提供數種不同服務，範圍從例外狀況到檔案輸入和輸出。  

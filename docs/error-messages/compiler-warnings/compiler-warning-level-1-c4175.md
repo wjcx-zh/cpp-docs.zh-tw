@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278154"
 ---
 # <a name="compiler-warning-level-1-c4175"></a>編譯器警告 (層級 1) C4175
 \#pragma component(browser, on)： 必須在命令列上指定瀏覽器資訊  

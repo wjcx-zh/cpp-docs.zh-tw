@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371578"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 類別
 定義實作多重文件介面 (MDI) 的文件範本。  

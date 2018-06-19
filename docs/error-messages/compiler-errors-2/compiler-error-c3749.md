@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270771"
 ---
 # <a name="compiler-error-c3749"></a>編譯器錯誤 C3749
 'attribute': 自訂屬性不能在函式  

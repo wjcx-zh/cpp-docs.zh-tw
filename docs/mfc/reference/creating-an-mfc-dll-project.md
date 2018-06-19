@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374051"
 ---
 # <a name="creating-an-mfc-dll-project"></a>建立 MFC DLL 專案
 MFC DLL 是二進位檔案，可做為多個應用程式可以同時使用的函式的共用程式庫。 若要建立 MFC DLL 專案的最簡單方式是使用 MFC DLL 精靈。  

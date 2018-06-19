@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349463"
 ---
 # <a name="message-handling-and-command-targets"></a>訊息處理和命令目標
 命令分派介面`IOleCommandTarget`定義一個簡單且可延伸機制，來查詢及執行命令。 這項機制會比自動化的簡單`IDispatch`因為它會完全依賴一組標準的命令; 命令很少需要引數，並不涉及任何類型資訊 （型別安全就會受到影響的命令引數）。  

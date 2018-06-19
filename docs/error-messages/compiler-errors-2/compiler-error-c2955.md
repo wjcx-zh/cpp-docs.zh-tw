@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245945"
 ---
 # <a name="compiler-error-c2955"></a>編譯器錯誤 C2955
 'identifier': 使用類別樣板或別名泛型需要範本或泛型引數清單  

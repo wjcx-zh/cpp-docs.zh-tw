@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863320"
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>變更影像屬性 (圖示影像編輯器)
 您可以設定或修改的映像使用內容[屬性 視窗](/visualstudio/ide/reference/properties-window)。  

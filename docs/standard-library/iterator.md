@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860667"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -65,9 +66,9 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 |[end](../standard-library/iterator-functions.md#end)|擷取迭代器，指向在指定的容器中最後一個項目後面的項目。|
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|建立可以在指定的容器前面插入項目的迭代器。|
 |[inserter](../standard-library/iterator-functions.md#inserter)|迭代器配接器，將新的項目新增至容器中指定的插入點。|
-|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|建立其他演算法可使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。 **注意：**這個函式是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
+|[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|建立其他演算法可使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。 **注意：** 這個函式是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 |[make_move_iterator](../standard-library/iterator-functions.md#make_move_iterator)|傳回移動迭代器，其中包含所提供的迭代器，做為其儲存的基底迭代器。|
-|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|建立其他演算法可使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。 **注意：**這個函式是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
+|[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|建立其他演算法可使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。 **注意：** 這個函式是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 |[next](../standard-library/iterator-functions.md#next)|反覆運算指定的次數，並傳回新的迭代器位置。|
 |[prev](../standard-library/iterator-functions.md#prev)|以反向方向反覆運算指定的次數，並傳回新的迭代器位置。|
 
@@ -90,7 +91,7 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將元素插入到 **Container** 類型的容器中，其中會透過它所儲存的受保護 **pointer** 物件 (稱為容器) 來存取該容器。|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|一種類別，可為代表雙向迭代器的 **iterator_category** 函式提供傳回類型。|
-|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|類別，使用隨機存取、已檢查的迭代器來存取陣列。 **注意：**這個類別是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|類別，使用隨機存取、已檢查的迭代器來存取陣列。 **注意：** 這個類別是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 |[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|一種類別，可為代表正向迭代器的 **iterator_category** 函式提供傳回類型。|
 |[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將元素插入到 **Container** 類型的容器中，其中會透過它所儲存的受保護 **pointer** 物件 (稱為容器) 來存取該容器。|
 |[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|一種類別，可為代表輸入迭代器的 **iterator_category** 函式提供傳回類型。|
@@ -105,7 +106,7 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 |[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|一種類別，可為代表輸出迭代器的 **iterator_category** 函式提供傳回類型。|
 |[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|一種類別，可為代表隨機存取迭代器的 **iterator_category** 函式提供傳回類型。|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|此樣板類別描述行為類似隨機存取迭代器，只不過是反向方向的物件。|
-|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|類別，使用隨機存取、未檢查的迭代器來存取陣列。 **注意：**這個類別是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
+|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|類別，使用隨機存取、未檢查的迭代器來存取陣列。 **注意：** 這個類別是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 
 ## <a name="see-also"></a>另請參閱
 

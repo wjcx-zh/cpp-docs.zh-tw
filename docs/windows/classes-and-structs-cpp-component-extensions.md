@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864911"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>類別和結構 (C++ 元件擴充功能)
 宣告類別或結構的*物件存留期*會自動管理。 當物件不再可存取或超出範圍時，Visual C++ 會自動捨棄配置給物件的記憶體。  

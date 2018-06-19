@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368042"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 類別
 `CDialogEx` 類別會指定對話方塊的背景影像和背景色彩。  

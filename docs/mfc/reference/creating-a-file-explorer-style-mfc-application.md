@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370151"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>建立檔案總管樣式的 MFC 應用程式
 許多 Windows 系統應用程式會使用檔案總管 中的使用者介面 (UI)。 當您啟動檔案總管 中時，例如，您會看到的分割線的用戶端區域的垂直分割的應用程式。 工作區的左半部提供巡覽和瀏覽功能，以及用戶端區域的右側會顯示詳細資料與選取項目相關的左窗格中。 當使用者按一下左窗格中的項目時，應用程式會重新填入右窗格。 MDI 應用程式中，您可以使用命令上**檢視**功能表變更顯示在右窗格中的詳細資料量。 （SDI 或多個最上層文件應用程式中，您可以變更的詳細資料，使用工具列按鈕）。  

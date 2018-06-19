@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371630"
 ---
 # <a name="mapping-messages-to-functions"></a>將訊息對應到函式
 [屬性] 視窗可讓您將訊息處理常式 （MFC 使用者介面類別的成員函式） 的繫結至您的應用程式資源所產生的訊息。 他們使用[MFC 訊息對應](../../mfc/messages-and-commands-in-the-framework.md)建立繫結。  

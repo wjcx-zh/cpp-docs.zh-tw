@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352831"
 ---
 # <a name="programmatic-printing"></a>以程式設計方式列印
 OLE 提供方法來唯一識別持續性文件 (**GetClassFile**) 並將它們載入至其相關聯的程式碼 (`CoCreateInstance`， **queryinterface （iid_ipersistfile)**， **Queryinterface （iid_ipersiststorage)**， **ipersistfile:: Load**，和**ipersiststorage:: Load**)。 為了要進一步啟用列印文件，使用中文件內含項目 (使用現有的 OLE 設計，一開始並未隨附於 OLE 2.0) 會引入基底標準列印介面 `IPrint`，通常可透過可以載入文件類型的持續性狀態的物件取得。 主動式文件的每個檢視可以選擇性地支援**IPrint**介面，以提供這些功能。  

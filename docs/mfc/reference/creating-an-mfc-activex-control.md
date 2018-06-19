@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373285"
 ---
 # <a name="creating-an-mfc-activex-control"></a>建立 MFC ActiveX 控制項
 ActiveX 控制項程式是功能的設計用來提供特定類型給父應用程式的模組化程式。 例如，您可以建立使用按鈕等控制項在對話方塊中或在網頁中使用的工具列。  

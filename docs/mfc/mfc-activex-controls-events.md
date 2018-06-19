@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348386"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX 控制項：事件
 ActiveX 控制項使用事件通知發生有問題的控制項的容器。 事件的常見範例包含控制項時，使用鍵盤和變更控制項的狀態中輸入的資料點選。 這些動作發生時，控制項就會引發事件來警示容器。  

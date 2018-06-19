@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350493"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE 背景：實作策略
 視您的應用程式而定，實作新增 OLE 支援的可行策略有四種：  

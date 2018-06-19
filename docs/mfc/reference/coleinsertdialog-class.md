@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374877"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 類別
 用於 OLE 的 [插入物件] 對話方塊。  

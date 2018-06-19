@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352525"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 控制項：加入自訂事件
 自訂事件與不同的內建事件的類別不會自動引發`COleControl`。 自訂的事件會辨識某些動作，由控制項開發人員，為事件。 自訂事件的事件對應項目都由`EVENT_CUSTOM`巨集。 下列章節實作 ActiveX 控制項專案使用 ActiveX 控制項精靈所建立的自訂事件。  

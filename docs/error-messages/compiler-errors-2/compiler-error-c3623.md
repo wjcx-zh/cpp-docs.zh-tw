@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254893"
 ---
 # <a name="compiler-error-c3623"></a>編譯器錯誤 C3623
 'variable': Managed 或 WinRT 型別中不支援位元欄位  

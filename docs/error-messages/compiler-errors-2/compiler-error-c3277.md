@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250012"
 ---
 # <a name="compiler-error-c3277"></a>編譯器錯誤 C3277
 無法在受管理的 'type' 內部定義 unmanaged 的列舉 'enum'  

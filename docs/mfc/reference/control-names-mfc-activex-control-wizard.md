@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369306"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈、控制項名稱
 指定之名稱的控制項類別和屬性頁類別的型別名稱，並輸入您的控制項的識別項。 除了**簡短名稱**，單獨進行編輯的所有其他欄位。 如果您變更的文字**簡短名稱**，變更會反映在此頁面中的所有其他欄位的名稱。 這項命名行為被為了讓您開發您的控制項時容易識別的所有名稱。  

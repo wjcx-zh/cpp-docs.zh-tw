@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377118"
 ---
 # <a name="coledocument-class"></a>COleDocument 類別
 支援視覺化編輯之 OLE 文件的基底類別。  

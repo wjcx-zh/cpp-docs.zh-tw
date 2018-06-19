@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348803"
 ---
 # <a name="dialog-bars"></a>對話方塊列
 對話方塊列是工具列、 一種的[控制列](../mfc/control-bars.md)可以包含任何類型的控制項。 因為它具有非強制回應對話方塊的特性[CDialogBar](../mfc/reference/cdialogbar-class.md)物件提供功能更強大的工具列。  

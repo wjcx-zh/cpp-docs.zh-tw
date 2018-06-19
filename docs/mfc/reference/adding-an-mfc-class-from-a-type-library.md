@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355112"
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>從類型程式庫加入 MFC 類別
 使用此精靈，從可用的型別程式庫中的介面建立的 MFC 類別。 您可以加入至 MFC 類別[MFC 應用程式](../../mfc/reference/creating-an-mfc-application.md)、 [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md)，或[MFC ActiveX 控制項](../../mfc/reference/creating-an-mfc-activex-control.md)。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348205"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>標準 Windows 訊息的處理常式
 預設的標準 Windows 訊息處理常式 (**WM_**) 預先定義的類別中`CWnd`。 類別庫以訊息名稱作為這些處理常式的基礎。 例如，`WM_PAINT` 訊息的處理常式在 `CWnd` 宣告如下:  

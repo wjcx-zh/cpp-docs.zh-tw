@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245436"
 ---
 # <a name="compiler-error-c2909"></a>編譯器錯誤 C2909
 'identifier': 函式樣板的明確具現化必須有傳回類型  

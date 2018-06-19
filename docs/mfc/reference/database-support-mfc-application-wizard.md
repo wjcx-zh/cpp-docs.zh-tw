@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372240"
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 應用程式精靈、資料庫支援
 此頁面提供選項，可讓您指定的資料庫層級支援 （再加上資料來源，如有必要） 為您的專案。  

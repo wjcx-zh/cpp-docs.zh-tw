@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300809"
 ---
 # <a name="linker-tools-warning-lnk4099"></a>連結器工具警告 LNK4099
 PDB 'filename' 找不到與 '物件/library' 或 'path';如同沒有偵錯資訊般連結物件  

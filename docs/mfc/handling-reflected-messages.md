@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348972"
 ---
 # <a name="handling-reflected-messages"></a>處理反映訊息
 訊息反映可讓您處理訊息的控制項，例如`WM_CTLCOLOR`， **WM_COMMAND**，和**WM_NOTIFY**，控制項本身。 這可讓控制項更具獨立 (Self-Contained) 性及可移植性。 搭配 Windows 通用控制項以及 ActiveX 控制項 (先前稱為 OLE 控制項) 使用的機制。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369882"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO 結構
 `pVer` 成員函式的 `CHttpServer::GetExtensionVersion` 參數會指向這個結構。 它提供 ISA 版本號碼和 ISA 的文字描述。  

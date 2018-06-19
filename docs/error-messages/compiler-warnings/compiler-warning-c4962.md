@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272096"
 ---
 # <a name="compiler-warning-c4962"></a>編譯器警告 C4962
 'function': 特性指引最佳化已停用，因為最佳化導致分析資料變成不一致  

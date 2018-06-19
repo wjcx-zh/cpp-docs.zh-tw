@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245423"
 ---
 # <a name="compiler-error-c2902"></a>編譯器錯誤 C2902
 'token': 'template' 之後有未預期的語彙基元，必須是識別項  

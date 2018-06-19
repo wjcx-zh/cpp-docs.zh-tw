@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864225"
 ---
 # <a name="changing-the-names-of-symbol-header-files"></a>變更符號標頭檔的名稱
 通常會在 Resource.h 中儲存所有符號定義。 不過，您可能需要變更這 Include 檔案名稱，好讓您可以，比方說在相同目錄中處理多個資源檔。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299236"
 ---
 # <a name="linker-tools-error-lnk1245"></a>連結器工具錯誤 LNK1245
 無效的子系統 '' 指定子系統;/SUBSYSTEM 必須是 WINDOWS、 WINDOWSCE 或 CONSOLE  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369173"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 類別
 類別的物件`CSemaphore`表示 「 號誌 」 — 允許有限的數目的執行緒在一或多個處理序存取持續目前存取指定之資源的執行緒數目的計數的同步處理物件。  

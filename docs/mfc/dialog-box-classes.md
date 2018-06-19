@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351685"
 ---
 # <a name="dialog-box-classes"></a>對話方塊類別
 類別`CDialog`和其衍生的類別封裝對話方塊中的功能。 對話方塊是一種特殊的視窗中，因為`CDialog`衍生自`CWnd`。 衍生您的對話方塊類別從`CDialog`或其中一個使用的通用對話方塊類別為標準的對話方塊，例如開啟或儲存檔案、 列印、 選取的字型或色彩，初始化搜尋和取代作業，或執行各種 OLE 相關作業。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863526"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>使用插入運算子和控制格式
 

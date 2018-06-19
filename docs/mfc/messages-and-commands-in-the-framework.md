@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348872"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>架構中的訊息和命令
 Microsoft windows 所撰寫的應用程式是 「 訊息導向 」。 為了回應事件，例如滑鼠點按動作、 按鍵、 視窗移動等等，Windows 會將訊息傳送至適當視窗。 架構應用程式處理 Windows 訊息，就像適用於 Windows 的任何其他應用程式。 但是，framework 也提供一些增強功能使處理訊息更輕鬆、 更易於維護，且更好封裝。  

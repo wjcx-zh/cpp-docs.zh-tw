@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254329"
 ---
 # <a name="compiler-error-c3018"></a>編譯器錯誤 C3018
 'var1'：OpenMP 'for' 測試或增量必須使用索引變數 'var2'  

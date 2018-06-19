@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349905"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>資料物件和資料來源：管理
 建立資料物件或資料來源之後，您可以執行的數字的資料，例如插入和移除資料，列舉資料的格式，以及其他更多資訊的一般作業。 本文說明完成最常見的作業所需的技巧。 主題包括：  

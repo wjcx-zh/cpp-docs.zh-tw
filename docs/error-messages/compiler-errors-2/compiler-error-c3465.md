@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254032"
 ---
 # <a name="compiler-error-c3465"></a>編譯器錯誤 C3465
 若要使用類型 'type'，您必須參考組件 'assembly'  

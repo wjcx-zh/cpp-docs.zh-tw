@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352059"
 ---
 # <a name="frame-windows"></a>框架視窗
 當應用程式執行 windows 時，使用者會與文件框架視窗中顯示的互動。 文件框架視窗包含兩個主要元件： 框架和框架的內容。 文件框架視窗可以是[單一文件介面](../mfc/sdi-and-mdi.md)(SDI) 框架視窗或[多重文件介面](../mfc/sdi-and-mdi.md)(MDI) 子視窗。 Windows 會處理大部分與框架視窗的使用者的互動： 移動和調整視窗大小、 關閉，和最小化和最大化它。 您可以管理內部框架的內容。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296516"
 ---
 # <a name="compiler-warning-level-1-c4999"></a>編譯器警告 (層級 1) C4999
 未知的警告 從 [說明] 功能表中，選擇 [技術支援] 命令或開啟技術支援說明檔以取得詳細資訊  

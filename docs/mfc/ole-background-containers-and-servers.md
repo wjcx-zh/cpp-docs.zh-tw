@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348543"
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE 背景：容器和伺服器
 容器應用程式是一種應用程式，可以將內嵌或連結項目加入到本身的文件中。 容器應用程式管理的文件必須能夠儲存和顯示 OLE 文件元件，以及應用程式本身所建立的資料。 容器應用程式也必須允許使用者插入新項目，或啟動時所需的伺服器應用程式來編輯現有的項目。 文件中列出的容器應用程式的使用者介面需求[容器： 使用者介面問題](../mfc/containers-user-interface-issues.md)。  

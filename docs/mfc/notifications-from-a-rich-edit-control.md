@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353849"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>來自 Rich Edit 控制項的告知
 通知訊息報告事件影響 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 它們可以處理由父視窗，或使用訊息反映由 rich edit 控制項本身。 Rich edit 控制項支援的所有編輯控制項以及數個其他項目搭配使用的通知訊息。 您可以判斷哪些通知訊息 rich edit 控制項傳送其父視窗藉由設定它的 「 事件遮罩 」。  

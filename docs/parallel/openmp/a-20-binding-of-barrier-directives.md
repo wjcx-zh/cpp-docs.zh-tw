@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691403"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20 繫結 barrier 指示詞
 指示詞的繫結規則呼叫**屏障**指示詞繫結至最接近的封閉式`parallel`指示詞。 如需詳細指示詞繫結的詳細資訊，請參閱[區段 2.8](../../parallel/openmp/2-8-directive-binding.md) 32 頁面上。  

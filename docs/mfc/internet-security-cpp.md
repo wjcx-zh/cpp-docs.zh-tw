@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348846"
 ---
 # <a name="internet-security-c"></a>網際網路安全性 (C++)
 程式碼的安全性是開發人員和使用者的網際網路應用程式的主要問題。 會有危險： 惡意程式碼、 已遭竄改的程式碼和程式碼從未知的站台或多位作者。  

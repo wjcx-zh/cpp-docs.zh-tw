@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685732"
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>如何：建立使用特定排程器原則的代理程式
 代理程式是以非同步方式運作，與其他元件可解決較大型的運算工作的應用程式元件。 代理程式通常具有設定的生命週期，並維護狀態。  

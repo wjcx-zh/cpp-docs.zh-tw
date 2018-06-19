@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351806"
 ---
 # <a name="providing-windowless-activation"></a>提供無視窗啟用
 視窗建立程式碼 (也就是所有項目，當您呼叫**CreateWindow**) 會使執行。 維護螢幕上視窗的控制項必須管理視窗的訊息。 因此，無視窗控制項與視窗型控制項相較之下速度更快。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349613"
 ---
 # <a name="general-mfc-topics"></a>一般 MFC 主題
 本系列文章包含 Microsoft Foundation Class (MFC) 程式庫的技術詳細資料，並提供 MFC 架構以及其主要元件和子系統的概觀。  

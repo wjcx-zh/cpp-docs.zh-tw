@@ -322,6 +322,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372543"
 ---
 # <a name="internal-classes"></a>內部類別
 在 MFC 內部使用下列類別。 為求完整起見，本節會說明這些內部類別，但是它們並不適合直接在您的程式碼中使用。  

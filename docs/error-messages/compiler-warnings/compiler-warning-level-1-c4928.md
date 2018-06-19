@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296272"
 ---
 # <a name="compiler-warning-level-1-c4928"></a>編譯器警告 (層級 1) C4928
 不合法的 copy-initialization; 已經隱含套用一個以上的使用者定義的轉換  

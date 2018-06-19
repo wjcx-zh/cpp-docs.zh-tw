@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860342"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 列舉
 表示非同步作業如何嘗試轉換為終止狀態的完成，或錯誤應該行為相對於用戶端要求已取消的狀態。  

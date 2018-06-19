@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863695"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>加入對話方塊控制項的事件處理常式
 針對已在類別和相關聯的專案對話方塊中，您可以利用一些捷徑時建立事件處理常式。 您可以快速建立預設控制項通知事件，或有任何適用的 Windows 訊息的處理常式。  

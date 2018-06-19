@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373794"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>MFC 應用程式精靈、使用者介面功能
 本主題說明您可用來指定您的應用程式的外觀的選項。 可供您專案的使用者介面功能取決於您在中指定的應用程式類型[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)MFC 應用程式精靈頁面。 例如，如果您建立單一文件介面應用程式，您無法加入子框架樣式。  

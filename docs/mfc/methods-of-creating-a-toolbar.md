@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348631"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>建立工具列的方法
 MFC 提供兩個類別來建立工具列： [CToolBar](../mfc/reference/ctoolbar-class.md)和[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CToolBar` 提供所有工具列通用控制項的功能，也可以處理許多必要的通用控制項設定和結構。不過，產生可執行檔通常會大於使用建立`CToolBarCtrl`。  

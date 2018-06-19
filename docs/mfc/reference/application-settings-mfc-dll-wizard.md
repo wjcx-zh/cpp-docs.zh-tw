@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348676"
 ---
 # <a name="application-settings-mfc-dll-wizard"></a>MFC DLL 精靈、應用程式設定
 使用 MFC DLL 精靈的這個頁面來設計和加入新的 MFC DLL 專案的基本功能。  

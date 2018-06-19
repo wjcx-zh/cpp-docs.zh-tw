@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348566"
 ---
 # <a name="device-contexts"></a>裝置內容
 裝置內容會包含顯示或印表機等裝置的繪圖屬性相關資訊的 Windows 資料結構。 所有的繪製呼叫是透過裝置內容物件，此物件會封裝 Windows Api 來繪製線條、 圖形和文字。 裝置內容允許 Windows 中的裝置獨立繪圖。 裝置內容可以用來繪製到螢幕、 印表機或中繼檔。  

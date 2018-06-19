@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355557"
 ---
 # <a name="ole-background"></a>OLE 背景
 OLE 是一種機制，可讓使用者建立和編輯包含由多個應用程式所建立的項目或「物件」的文件。  

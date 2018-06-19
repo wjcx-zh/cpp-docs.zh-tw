@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249807"
 ---
 # <a name="compiler-error-c3155"></a>編譯器錯誤 C3155
 屬性索引子中不允許屬性  

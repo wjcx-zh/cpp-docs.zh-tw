@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349040"
 ---
 # <a name="ole-container-classes"></a>OLE 容器類別
 容器應用程式會使用這些類別。 同時`COleLinkingDoc`和`COleDocument`管理集合的`COleClientItem`物件。 而不是衍生您的文件類別，從**CDocument**，您會從它衍生`COleLinkingDoc`或`COleDocument`，視您是否要支援的連結文件中內嵌的物件。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302194"
 ---
 # <a name="compiler-warning-level-1-c4912"></a>編譯器警告 (層級 1) C4912
 'attribute': 屬性在巢狀 UDT 上有未定義的行為，可能受到忽略  

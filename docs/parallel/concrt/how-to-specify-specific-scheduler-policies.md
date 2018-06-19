@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685781"
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>如何：指定特定排程器原則
 排程器原則可讓您控制的排程器在管理工作時使用的策略。 本主題示範如何使用排程器原則，來增加列印進度指示器，以在主控台工作的執行緒優先權。  

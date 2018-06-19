@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864238"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>將功能表命令和 MFC 應用程式內的狀態列文字建立關聯
 您的應用程式可以針對使用者可能選取的每一個功能表命令顯示描述性文字。 做法是使用 [屬性] 視窗中的 [ **提示** ] 屬性，將文字字串指派給每一個功能表命令。 如果您在 [字串表](../windows/string-editor.md) 中具有其識別碼與命令相同的字串，則當使用者將滑鼠停留在功能表項目時，MFC 應用程式將在執行中應用程式的狀態列中自動顯示此字串資源。  

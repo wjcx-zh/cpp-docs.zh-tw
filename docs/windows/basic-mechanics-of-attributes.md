@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864930"
 ---
 # <a name="basic-mechanics-of-attributes"></a>屬性的基本機制
 有三種方式，將屬性插入您的專案。 首先，您可以將其插入手動插入原始程式碼。 第二，您可以將其插入在專案中使用屬性方格的物件。 最後，您可以將其插入使用不同的精靈。 如需有關如何使用 [屬性] 視窗和各種精靈的詳細資訊，請參閱[建立和管理 Visual c + + 專案](../ide/creating-and-managing-visual-cpp-projects.md)。  

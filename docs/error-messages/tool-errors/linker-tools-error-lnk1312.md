@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300442"
 ---
 # <a name="linker-tools-error-lnk1312"></a>連結器工具錯誤 LNK1312
 檔案無效或損毀： 無法匯入組件  

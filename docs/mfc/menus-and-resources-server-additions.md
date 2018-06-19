@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351347"
 ---
 # <a name="menus-and-resources-server-additions"></a>功能表和資源：伺服器新增
 這篇文章會說明需要功能表和其他視覺編輯伺服器 （元件） 應用程式中的資源進行的變更。 伺服器應用程式需要許多的新增項目，功能表結構和其他資源，因為它可以啟動在三種模式之一： 獨立、 內嵌的或在地方。 中所述[功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)發行項，最多四組功能表。 所有四個用於 MDI 全伺服應用程式，而只有三個適用於迷你伺服程式。 應用程式精靈會建立功能表配置所需的您想要的伺服器類型。 您可能需要某項自訂作業。  

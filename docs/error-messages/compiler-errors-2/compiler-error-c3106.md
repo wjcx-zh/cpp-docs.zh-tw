@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248143"
 ---
 # <a name="compiler-error-c3106"></a>編譯器錯誤 C3106
 'attribute': 未具名引數必須在具名引數之前  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348602"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>MFC 中的屬性工作表和屬性頁
 屬性工作表，也稱為索引標籤對話方塊，為包含屬性頁的對話方塊。 每個屬性頁對話方塊範本資源為基礎，並包含的控制項。 加上最上層顯示 索引標籤。 [] 索引標籤命名頁面，並指出其用途。 使用者按一下來選取一組控制項的屬性工作表中的索引標籤。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366300"
 ---
 # <a name="cmemoryexception-class"></a>Afxthrowmemoryexception 類別
 表示記憶體不足例外狀況。  

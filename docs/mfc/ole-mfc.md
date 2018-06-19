@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349222"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
 在您的程式中實作 OLE 功能，會影響您的使用者介面，幾種方式：  

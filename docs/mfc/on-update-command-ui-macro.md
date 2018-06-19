@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348479"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI 巨集
 使用**屬性**視窗連接使用者介面物件的命令目標物件中的命令更新處理常式。 它會自動連接使用者介面物件的 ID 與 `ON_UPDATE_COMMAND_UI` 巨集，並在將處理更新的物件中建立處理常式。 請參閱[訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)如需詳細資訊。  

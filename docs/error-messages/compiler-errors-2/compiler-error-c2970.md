@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246535"
 ---
 # <a name="compiler-error-c2970"></a>編譯器錯誤 C2970
 'class': 樣板參數 'param': 'arg': 運算式包含具有內部連結的物件不能當做非類型引數  

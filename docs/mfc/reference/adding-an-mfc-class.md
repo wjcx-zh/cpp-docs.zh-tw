@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355388"
 ---
 # <a name="adding-an-mfc-class"></a>加入 MFC 類別
 若要新增至您的專案從 Microsoft Foundation Class (MFC) 程式庫類別衍生的類別，請使用**加入類別**命令可從[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)。 指定新類別的名稱、 選取的基底類別，並選取 [與相關聯，所以 （如果有的話）] 對話方塊中的識別碼。 程式碼精靈建立標頭檔與實作檔，並將它們加入至您的專案。  

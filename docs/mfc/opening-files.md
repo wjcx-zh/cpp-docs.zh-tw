@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352759"
 ---
 # <a name="opening-files"></a>開啟檔案
 在 MFC 中，最常見的開啟檔案方式是一個兩階段的程序。  

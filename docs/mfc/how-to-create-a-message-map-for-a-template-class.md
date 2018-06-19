@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354776"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>如何：建立樣板類別的訊息對應
 MFC 中的訊息對應提供有效方法將 Windows 訊息導向到適當的 C++ 物件執行個體。 MFC 訊息對應目標的範例，包括應用程式類別、文件和檢視類別、控制項類別等等。  

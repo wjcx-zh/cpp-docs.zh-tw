@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265670"
 ---
 # <a name="compiler-error-c3738"></a>編譯器錯誤 C3738
 'calling_convention': 明確具現化的呼叫慣例，必須符合要具現化的範本  

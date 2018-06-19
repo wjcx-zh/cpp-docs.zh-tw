@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254851"
 ---
 # <a name="compiler-error-c3180"></a>編譯器錯誤 C3180
 'type name': 名稱超過中繼資料 'limit' 個字元的限制  

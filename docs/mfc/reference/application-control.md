@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355908"
 ---
 # <a name="application-control"></a>應用程式控制
 OLE 會需要大幅控制應用程式，以及它們的物件。 OLE 系統 Dll 必須能夠啟動和應用程式自動發行、 協調其實際執行和修改物件，等等。 本主題中的函式符合這些需求。 除了由 OLE 系統 Dll，呼叫這些函式必須有時稱為以及應用程式。 

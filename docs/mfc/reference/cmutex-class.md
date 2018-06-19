@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372456"
 ---
 # <a name="cmutex-class"></a>CMutex 類別
 代表 「 mutex"— 允許執行緒互斥存取資源的同步處理物件。  

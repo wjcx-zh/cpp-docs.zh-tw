@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351659"
 ---
 # <a name="keyboard-and-mouse-customization"></a>鍵盤和滑鼠自訂
 MFC 可讓應用程式的使用者自訂處理鍵盤和滑鼠輸入的方式。 使用者可以藉由指派命令的鍵盤快速鍵自訂鍵盤輸入。 使用者也可以選取在特定應用程式視窗中按兩下時應執行的命令，藉此自訂滑鼠輸入。 本主題將說明如何自訂應用程式的輸入。  

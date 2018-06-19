@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348917"
 ---
 # <a name="dao-classes"></a>DAO 類別
 這些類別會搭配其他應用程式架構類別讓您輕鬆存取資料存取物件 (DAO) 資料庫，使用相同的資料庫引擎與 Microsoft Visual Basic 和 Microsoft Access。 DAO 類別也可以存取各種不同的資料庫的開放式資料庫連接 (ODBC) 驅動程式可用。  

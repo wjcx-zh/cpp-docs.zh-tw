@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355678"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>處理輸入/輸出的建議
 無論您使用以檔案為基礎的 I/O 或不是取決於您如何回應下列決策樹狀結構中的問題：  

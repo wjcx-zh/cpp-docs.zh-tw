@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349154"
 ---
 # <a name="manipulating-image-lists"></a>管理影像清單
 [取代](../mfc/reference/cimagelist-class.md#replace)成員函式取代影像清單中的映像 ([CImageList](../mfc/reference/cimagelist-class.md)) 與新的映像。 如果需要動態增加影像清單物件中的影像數目，此函式也很有用。 [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount)函式會動態變更影像清單中所儲存的影像數目。 如果您增加影像清單的大小，請呼叫**取代**將影像加入至新的映像位置。 如果您縮小影像清單的大小，則會釋放超出新的大小之外的影像。  

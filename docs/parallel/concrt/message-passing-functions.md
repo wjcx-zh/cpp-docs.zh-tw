@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688046"
 ---
 # <a name="message-passing-functions"></a>訊息傳遞函式
 非同步代理程式程式庫提供幾個函式可讓您傳遞元件之間的訊息。  

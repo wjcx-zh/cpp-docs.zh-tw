@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694546"
 ---
 # <a name="thread-local-storage-tls"></a>執行緒區域儲存區
 執行緒區域儲存區 (Thread Local Storage，TLS) 是一種方法，讓指定之多執行緒處理序中的每個執行緒用來配置位置，以儲存執行緒特定資料。 動態繫結 （執行階段） 的執行緒特定資料透過 TLS API 支援 ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801)， [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812)， [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818)，和[TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). 如需有關如何在 Windows 上實作執行緒區域儲存區的詳細資訊，請參閱[執行緒區域儲存區 (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx)。  除了現有的 API 實作以外，Win32 和 Visual C++ 編譯器現在支援靜態繫結 (載入時間) 的個別執行緒資料。  

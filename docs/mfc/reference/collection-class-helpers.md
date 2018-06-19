@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374834"
 ---
 # <a name="collection-class-helpers"></a>集合類別 Helper
 集合類別`CMap`， `CList`，和`CArray`樣板化的全域 helper 函式用於等目的的比較、 複製和序列化項目。 為您的基礎類別實作的一部分`CMap`， `CList`，和`CArray`，您必須使用符合您地圖、 清單或陣列中儲存的資料類型的版本覆寫視需要這些函式。 如需覆寫 helper 函式時，例如`SerializeElements`，請參閱文章[集合： 如何製作類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意， **ConstructElements**和**DestructElements**已被取代。  

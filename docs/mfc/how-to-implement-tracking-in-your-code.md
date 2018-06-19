@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349732"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>如何：在您的程式碼中實作追蹤
 若要追蹤 OLE 項目，您必須處理特定項目，例如按一下項目或更新文件檢視相關的事件。 在所有情況下，這就足夠宣告暫存[CRectTracker](../mfc/reference/crecttracker-class.md)物件，並透過此物件來管理項目。  

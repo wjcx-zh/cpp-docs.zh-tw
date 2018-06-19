@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376035"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準對話方塊資料驗證常式
 本主題列出用於通用的 MFC 對話方塊控制項的標準對話方塊資料驗證 (DDV) 常式。  

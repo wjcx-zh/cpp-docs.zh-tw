@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863565"
 ---
 # <a name="attribute-requirements"></a>屬性需求
 C + + 屬性所列的需求描述專案類型、 編譯器設定及所需屬性的其他資訊才能運作。 以下將詳述的資訊類別。  

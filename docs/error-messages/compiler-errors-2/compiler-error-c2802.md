@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236653"
 ---
 # <a name="compiler-error-c2802"></a>編譯器錯誤 C2802
 靜態成員 'operator operator' 具有沒有型式參數  

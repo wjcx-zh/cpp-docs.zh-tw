@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860381"
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>變更符號&#39;s 數值
 您可以使用單一資源相關聯的符號，[屬性 視窗](/visualstudio/ide/reference/properties-window)變更符號值。 您可以使用[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)若要變更目前未指派給資源的符號值。 如需詳細資訊，請參閱[變更未指定的符號](../windows/changing-unassigned-symbols.md)。  

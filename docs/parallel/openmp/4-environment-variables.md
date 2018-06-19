@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690997"
 ---
 # <a name="4-environment-variables"></a>4.環境變數
 本章節描述 OpenMP C 和 c + + 應用程式開發介面的環境變數 （或對等平台特定的機制），控制平行程式碼的執行。  環境變數名稱必須是大寫。 指派給它們的值不區分大小寫，而且可能會有開頭和尾端空白字元。  修改程式啟動之後的值都會被忽略。  

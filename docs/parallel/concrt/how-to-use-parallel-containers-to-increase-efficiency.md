@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696197"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>如何：使用平行容器提高效率
 本主題示範如何使用平行容器有效率地儲存及存取資料，以平行方式。  

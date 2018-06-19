@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349109"
 ---
 # <a name="list-items-and-image-lists"></a>清單項目和影像清單
 清單控制項中的"item"([CListCtrl](../mfc/reference/clistctrl-class.md)) 圖示、 標籤和可能是其他資訊 （「 子項） 所組成。  

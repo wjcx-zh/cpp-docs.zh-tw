@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861353"
 ---
 # <a name="boxing--c-component-extensions"></a>Boxing (C++ 元件擴充功能)
 Visual c + + 編譯器可以將實值類型轉換為呼叫處理序中的物件*boxing*，並將物件轉換為呼叫處理序中的實值型別*unboxing*。  

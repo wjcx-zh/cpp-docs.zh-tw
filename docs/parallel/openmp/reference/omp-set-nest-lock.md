@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691010"
 ---
 # <a name="ompsetnestlock"></a>omp_set_nest_lock
 區塊執行緒執行，直到鎖定可用為止。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349353"
 ---
 # <a name="deriving-a-class-from-cobject"></a>從 CObject 衍生類別
 這篇文章描述最小的步驟，自[CObject](../mfc/reference/cobject-class.md)。 其他`CObject`類別文章說明利用特定的所需的步驟`CObject`功能，例如序列化和診斷的偵錯支援。  

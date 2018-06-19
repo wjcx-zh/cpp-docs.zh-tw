@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371096"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>結構、樣式、回呼和訊息對應
 本節說明 MFC 程式庫和 MFC 訊息對應使用的結構、樣式和回呼函式。  

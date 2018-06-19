@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694065"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>比較並行執行階段和其他並行模型
 本文件說明並行執行階段和其他技術在功能和程式設計模型方面的差異。 藉由了解並行執行階段優點與其他程式設計模型優點的比較結果，您可以選取最符合應用程式需求的技術。  

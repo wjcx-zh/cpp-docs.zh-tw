@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297218"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>編譯器警告 (層級 4) C4256
 'function': 具有虛擬基底類別建構函式有 '...';可能不相容與舊版本的 Visual c + + 呼叫  

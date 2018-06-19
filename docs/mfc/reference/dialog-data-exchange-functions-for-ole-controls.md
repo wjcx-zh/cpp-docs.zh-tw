@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375969"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE 控制項的對話方塊資料交換函式
 本主題列出用來交換資料屬性對話方塊、 表單檢視或控制項檢視物件中 OLE 控制項和對話方塊、 表單檢視或控制項檢視物件的資料成員間的 DDX_OC 函式。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863448"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 新增到 COM 對應之目標類別的介面項目。  

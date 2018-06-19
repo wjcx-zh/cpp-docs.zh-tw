@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861788"
 ---
 # <a name="changing-the-properties-of-a-resource"></a>變更資源的屬性
 ### <a name="to-edit-the-properties-of-a-resource"></a>編輯資源的屬性  

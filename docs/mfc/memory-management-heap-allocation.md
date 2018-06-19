@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352408"
 ---
 # <a name="memory-management-heap-allocation"></a>記憶體管理：堆積配置
 堆積可為程式保留所需的記憶體配置。 這是屬於程式碼和堆疊以外的區域。 典型的 C 程式使用函式`malloc`和**可用**配置及取消配置堆積記憶體。 MFC 的偵錯版本提供修改的過的 c + + 內建運算子**新**和**刪除**配置及取消配置堆積記憶體中的物件。  

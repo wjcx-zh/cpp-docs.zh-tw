@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351359"
 ---
 # <a name="how-to-customize-the-application-button"></a>如何：自訂應用程式按鈕
 當您按一下 [應用程式] 按鈕時，會顯示命令的功能表。 通常，功能表包含檔案的相關命令例如**開啟**，**儲存**，**列印**，和**結束**。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293822"
 ---
 # <a name="compiler-warning-level-4-c4232"></a>編譯器警告 (層級 4) C4232
 使用非標準擴充: 'identifier': dllimport 'dllimport' 的位址並非靜態，不保證唯一  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374519"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>建立 Web 瀏覽器樣式的 MFC 應用程式
 Web 瀏覽器樣式應用程式可以存取資訊 （例如 HTML 或主動式文件） 網際網路或內部網路，以及資料夾，在本機檔案系統和網路上。 藉由從應用程式的檢視類別的衍生[CHtmlView](../../mfc/reference/chtmlview-class.md)，有效地您藉由提供 WebBrowser 控制項的檢視進行應用程式的網頁瀏覽器。  

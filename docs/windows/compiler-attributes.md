@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860654"
 ---
 # <a name="compiler-attributes"></a>編譯器屬性
 編譯器屬性會提供各種功能。  

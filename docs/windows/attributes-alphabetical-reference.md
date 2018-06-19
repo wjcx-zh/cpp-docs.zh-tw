@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862451"
 ---
 # <a name="attributes-alphabetical-reference"></a>依字母順序排列的屬性參考
 使用 Visual c + + 中的下列屬性。  

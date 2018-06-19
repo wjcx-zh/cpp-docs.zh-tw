@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352001"
 ---
 # <a name="internet-information-by-topic"></a>依主題分類的網際網路資訊
 如需程式設計與特定網際網路技術資訊，請參閱：  

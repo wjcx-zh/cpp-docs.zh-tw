@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302093"
 ---
 # <a name="linker-tools-error-lnk2039"></a>連結器工具錯誤 LNK2039
 匯入的 ref 類別\<類型 >'，它定義於.obj; 它應該是其中一種匯入或定義，但非兩者皆是  

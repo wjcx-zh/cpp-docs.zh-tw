@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693987"
 ---
 # <a name="ischeduler-structure"></a>IScheduler 結構
 工作排程器抽象概念的介面。 並行執行階段的資源管理員會使用這個介面與工作排程器通訊。  

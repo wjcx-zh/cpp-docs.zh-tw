@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348657"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>建立網際網路用戶端應用程式的 MFC 類別
 MFC 提供下列類別和全域函式撰寫網際網路用戶端應用程式。 縮排指出類別衍生自上面未縮排行類別。 `CGopherFile` 和`CHttpFile`衍生自`CInternetFile`，例如。 AFXINET 中宣告這些類別和全域函式。H，除了`CFileFind`，宣告於 AFX。H.  

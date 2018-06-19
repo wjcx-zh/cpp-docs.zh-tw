@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350425"
 ---
 # <a name="ole-server-classes"></a>OLE 伺服器類別
 伺服器應用程式會使用這些類別。 伺服器文件衍生自`COleServerDoc`而不是從**CDocument**。 請注意，因為`COleServerDoc`衍生自`COleLinkingDoc`，伺服器文件也可以支援連結的容器。  

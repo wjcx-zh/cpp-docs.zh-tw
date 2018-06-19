@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860599"
 ---
 # <a name="changing-the-properties-of-a-string"></a>變更字串屬性
 ### <a name="to-change-a-string-or-its-identifier"></a>若要變更的字串或其識別項  

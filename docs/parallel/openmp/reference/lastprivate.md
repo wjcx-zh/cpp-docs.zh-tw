@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696223"
 ---
 # <a name="lastprivate"></a>lastprivate
 指定變數的版本，封入內容設定等於私用版本的任何執行緒執行的最後一個反覆項目 （如迴圈建構） 或最後一節 （#pragma 區段）。  

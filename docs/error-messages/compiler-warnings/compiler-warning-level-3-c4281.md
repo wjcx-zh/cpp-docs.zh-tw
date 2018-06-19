@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302444"
 ---
 # <a name="compiler-warning-level-3-c4281"></a>編譯器警告 (層級 3) C4281
 'operator->' 透過遞迴類型 'type'  

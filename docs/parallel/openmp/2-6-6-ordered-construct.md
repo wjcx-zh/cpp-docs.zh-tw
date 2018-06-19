@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690341"
 ---
 # <a name="266-ordered-construct"></a>2.6.6 ordered 建構
 結構化的區塊，下列**排序**指示詞會在循序迴圈執行反覆項目所在的順序執行。 語法**排序**指示詞時，如下所示：  

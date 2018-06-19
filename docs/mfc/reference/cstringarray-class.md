@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375502"
 ---
 # <a name="cstringarray-class"></a>CStringArray 類別
 支援陣列[CString](../../atl-mfc-shared/using-cstring.md)物件。  

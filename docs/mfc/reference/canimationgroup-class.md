@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355629"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 類別
 實作動畫群組，其結合了動畫分鏡腳本動畫物件，定義動畫的轉換。  

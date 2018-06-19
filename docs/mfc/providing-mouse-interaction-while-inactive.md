@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349671"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>非現用時提供滑鼠互動
 如果未立即啟動您的控制項，您可能仍然希望它處理`WM_SETCURSOR`和`WM_MOUSEMOVE`訊息，即使控制項有沒有自己的視窗。 這可藉由啟用`COleControl`的實作`IPointerInactive`介面，預設會停用。 (請參閱*ActiveX SDK*此介面的說明。)若要啟用它，包括`pointerInactive`旗標所傳回的集合中的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags):  

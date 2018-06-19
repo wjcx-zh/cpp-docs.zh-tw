@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350939"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource 類別
 抽象類別，提供介面來建立及管理 D2D 資源，例如筆刷、 圖層和文字。  

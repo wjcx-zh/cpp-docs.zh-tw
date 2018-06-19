@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351111"
 ---
 # <a name="property-sheets-mfc"></a>屬性工作表 (MFC)
 本系列文件說明如何實作 MFC 應用程式中屬性工作表的支援。 屬性工作表亦稱為標籤對話方塊，可提供在對話方塊中管理大量控制項的方式。 屬性工作表包含屬性頁，每個屬性頁都以不同的對話方塊範本資源為基礎。 您可以將對話方塊的控制項分割為邏輯群組，並將每個群組個別放置於其屬性頁。  

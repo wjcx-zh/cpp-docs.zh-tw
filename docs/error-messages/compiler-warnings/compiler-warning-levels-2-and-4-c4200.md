@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294946"
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>編譯器警告 (層級 2 和 4) C4200
 使用非標準擴充：結構/等位中大小為零的陣列  

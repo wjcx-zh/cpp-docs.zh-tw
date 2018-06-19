@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302603"
 ---
 # <a name="linker-tools-error-lnk2023"></a>連結器工具錯誤 LNK2023
 不正確的 dll 或進入點\<dll 或進入點 >  

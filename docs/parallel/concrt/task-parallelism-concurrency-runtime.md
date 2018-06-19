@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695320"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>工作平行處理原則 (並行執行階段)
 並行執行階段，*工作*是執行特定作業，且通常會與其他工作平行執行的工作單位。 工作可以分解成其他更細部的工作，並組織成*工作群組*。  

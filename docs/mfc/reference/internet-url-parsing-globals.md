@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374794"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>網際網路 URL 剖析全域和 Helper
 當用戶端將查詢傳送至網際網路伺服器時，您可以使用其中一個 URL 剖析全域來擷取用戶端的相關資訊。 Helper 函式會提供其他的網際網路功能。

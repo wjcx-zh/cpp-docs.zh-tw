@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371793"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 類別
 `CMFCMaskedEdit`類別支援遮罩的編輯控制項，會驗證使用者輸入，根據遮罩，並顯示根據範本驗證的結果。  

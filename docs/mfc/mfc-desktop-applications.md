@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350231"
 ---
 # <a name="mfc-desktop-applications"></a>MFC 桌面應用程式
 Microsoft Foundation Class (MFC) 程式庫提供許多 Win32 與 COM 應用程式開發介面的物件導向包裝函式。 雖然這個程式庫可以用來建立非常簡單的桌面應用程式，但還是在您需要開發包含多個控制項的較複雜使用者介面時最有用。 您可以使用 MFC 來建立 Office 樣式使用者介面的應用程式。  

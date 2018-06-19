@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302272"
 ---
 # <a name="bscmake-error-bk1514"></a>BSCMAKE 錯誤 BK1514
 所有。截斷 SBR 檔案，檔名中找不到  

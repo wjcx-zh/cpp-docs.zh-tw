@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371156"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC 類別物件的類型轉換
 類型轉換巨集提供一個可以指向特定類別，不論檢查合法的轉型的物件指標的指定的指標轉型。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348357"
 ---
 # <a name="processing-tab-control-notification-messages"></a>處理索引標籤控制項通知訊息
 當使用者按一下索引標籤或按鈕，此索引標籤控制項 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 會傳送通知訊息至其父視窗。 如果您想要執行動作以作為回應，請處理這些訊息。 例如，當使用者按一下索引標籤，您可以在預設之前顯示頁面上的控制項資料。  

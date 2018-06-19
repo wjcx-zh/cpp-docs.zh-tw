@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685589"
 ---
 # <a name="15-normative-references"></a>1.5 規範參考
 -   ISO/IEC 9899: 1999，*資訊技術的程式設計語言-C*。此 API OpenMP 規格是指 ISO/IEC 9899: 1999 C99。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348819"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>刪除 CObject 集合中的所有物件
 本文說明如何刪除集合中的所有物件 (不需刪除集合物件本身)。  

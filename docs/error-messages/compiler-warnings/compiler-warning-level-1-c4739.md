@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281901"
 ---
 # <a name="compiler-warning-level-1-c4739"></a>編譯器警告 (層級 1) C4739
 變數 'var' 的參考超過了它的儲存空間  

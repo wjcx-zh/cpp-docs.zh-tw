@@ -283,6 +283,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694039"
 ---
 # <a name="norm4-class"></a>norm_4 類別
 表示短向量的四個一般數字。  

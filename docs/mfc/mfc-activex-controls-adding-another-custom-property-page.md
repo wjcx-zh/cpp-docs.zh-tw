@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350777"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控制項：加入另一個自訂屬性頁
 有時候，ActiveX 控制項將會有更多超過可合理地容納在單一的屬性頁面上的屬性。 在此情況下，您可以將屬性頁加入 ActiveX 控制項以顯示這些屬性。  

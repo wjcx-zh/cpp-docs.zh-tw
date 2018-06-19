@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354297"
 ---
 # <a name="exceptions-database-exceptions"></a>例外狀況：資料庫例外狀況
 本文說明如何處理資料庫例外狀況。 是否使用 MFC 類別開放式資料庫連接 (ODBC) 或 MFC 類別的資料存取物件 (DAO)，適用於大部分的這篇文章中的資料。 明確地標示為只適用於一個或其他模型。 主題包括：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384071"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets：從通訊端類別衍生
 本文將說明一些您可以藉由從其中一個通訊端類別衍生您自己的類別取得的功能。  

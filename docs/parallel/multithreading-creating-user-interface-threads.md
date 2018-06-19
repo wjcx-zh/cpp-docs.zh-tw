@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688865"
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>多執行緒：建立使用者介面執行緒
 使用者介面執行緒通常用於處理使用者輸入，並回應個別執行緒執行的應用程式其他部分的使用者事件。 主應用程式執行緒 (中提供您`CWinApp`-衍生的類別) 已經建立並啟動。 本主題說明建立其他的使用者介面執行緒所需的步驟。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348524"
 ---
 # <a name="message-handling-and-mapping"></a>訊息處理和對應
 此系列的文章描述 MFC 架構如何處理訊息和命令以及如何連接至其處理函式。  

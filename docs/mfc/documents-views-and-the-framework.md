@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349515"
 ---
 # <a name="documents-views-and-the-framework"></a>文件、檢視和架構
 MFC 架構的核心是文件和檢視的概念。 文件是一種在編輯工作階段與使用者進行互動的資料物件。 它由`New`或**開啟**命令**檔案**功能表上，通常會儲存在檔案中。 (標準 MFC 文件，衍生自類別**CDocument**，不同於主動式文件和 OLE 複合文件。)檢視是一種使用者與文件互動的視窗物件。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249884"
 ---
 # <a name="compiler-error-c3238"></a>編譯器錯誤 C3238
 'type': 具有這個名稱的類型已轉送至組件 'assembly'  

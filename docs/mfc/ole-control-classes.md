@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355348"
 ---
 # <a name="ole-control-classes"></a>OLE 控制項類別
 這些是您在撰寫 OLE 控制項時使用的主要類別。 `COleControlModule` OLE 控制項模組中的類別就像[CWinApp](../mfc/reference/cwinapp-class.md)應用程式中的類別。 每個模組會實作一個或多個 OLE 控制項；這些控制項是由 `COleControl` 物件表示。 這些控制項會使用 `CConnectionPoint` 物件與其容器通訊。  

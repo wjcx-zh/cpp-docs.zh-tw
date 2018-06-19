@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860690"
 ---
 # <a name="chaininterfacesverify-method"></a>ChainInterfaces::Verify 方法
 確認每個介面定義的範本參數`I0`透過`I9`繼承自 IUnknown 和/或 IInspectable，而且`I0`繼承自`I1`透過`I9`。  

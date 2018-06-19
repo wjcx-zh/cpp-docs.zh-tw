@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270839"
 ---
 # <a name="compiler-warning-level-1-c4024"></a>編譯器警告 （層級 1） C4024
 'function': 不同類型的型式和實質參數 'number'  

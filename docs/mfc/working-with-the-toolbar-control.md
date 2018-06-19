@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385933"
 ---
 # <a name="working-with-the-toolbar-control"></a>使用工具列控制項
 這篇文章說明如何存取[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件基礎[CToolBar](../mfc/reference/ctoolbar-class.md)進一步控制工具列。 這是進階的主題。  

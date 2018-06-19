@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256515"
 ---
 # <a name="compiler-error-c3210"></a>編譯器錯誤 C3210
 'type': 存取宣告只能套用至基底類別成員  

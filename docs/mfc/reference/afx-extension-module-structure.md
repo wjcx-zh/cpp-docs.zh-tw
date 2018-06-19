@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349251"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 結構
 `AFX_EXTENSION_MODULE` MFC 擴充 Dll 的初始化期間用來容納 MFC 擴充 DLL 模組的狀態。  

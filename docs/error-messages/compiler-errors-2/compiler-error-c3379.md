@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258279"
 ---
 # <a name="compiler-error-c3379"></a>編譯器錯誤 C3379
 'class': 巢狀的類別不能有當做其宣告的一部分的組件存取規範  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351611"
 ---
 # <a name="abcfloat-structure"></a>ABCFLOAT 結構
 `ABCFLOAT`結構包含 A、 B 和 C 字型字元寬度。  

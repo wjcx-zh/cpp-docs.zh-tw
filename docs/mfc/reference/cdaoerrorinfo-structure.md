@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366625"
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo 結構
 `CDaoErrorInfo`結構包含的資料存取物件 (DAO) 定義的物件時發生錯誤的相關資訊。  

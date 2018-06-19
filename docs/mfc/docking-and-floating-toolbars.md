@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352785"
 ---
 # <a name="docking-and-floating-toolbars"></a>停駐和浮動工具列
 Mfc 程式庫支援可停駐工具列。 可以連接，或停駐任一側的父視窗，可停駐工具列或卸離或浮動，在自己的迷你框架視窗中。 本文說明如何在您的應用程式中使用可停駐工具列。  

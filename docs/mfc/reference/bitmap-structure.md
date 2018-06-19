@@ -21,9 +21,10 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351633"
 ---
 # <a name="bitmap-structure"></a>BITMAP 結構
-**點陣圖**結構會定義高度、 寬度、 色彩格式和位元值的邏輯點陣圖**。**  
+**點陣圖**結構會定義高度、 寬度、 色彩格式和位元值的邏輯點陣圖 **。**  
   
 ## <a name="syntax"></a>語法  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265304"
 ---
 # <a name="compiler-error-c3661"></a>編譯器錯誤 C3661
 明確覆寫清單找不到要覆寫任何方法  

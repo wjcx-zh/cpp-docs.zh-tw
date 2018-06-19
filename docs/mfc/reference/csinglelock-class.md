@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372965"
 ---
 # <a name="csinglelock-class"></a>CSingleLock 類別
 代表多執行緒程式用來控制單一資源存取的存取控制機制。  

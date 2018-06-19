@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690061"
 ---
 # <a name="27-data-environment"></a>2.7 資料環境
 本節提供的指示詞和幾個子句，如下所示的平行區域，在執行期間控制資料環境：  

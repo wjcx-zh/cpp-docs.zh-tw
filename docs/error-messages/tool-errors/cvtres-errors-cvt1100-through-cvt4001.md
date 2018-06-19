@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293724"
 ---
 # <a name="cvtres-errors-cvt1100-through-cvt4001"></a>CVTRES 錯誤 CVT1100 至 CVT4001
 

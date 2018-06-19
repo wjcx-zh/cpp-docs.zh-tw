@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371999"
 ---
 # <a name="mfc-application-wizard"></a>MFC 應用程式精靈
 MFC 應用程式精靈產生應用程式，編譯時，實作 Windows 可執行檔 (.exe) 應用程式的基本功能。 MFC 起始應用程式包括 c + + 來源 (.cpp) 檔案、 資源 (.rc) 檔、 標頭 (.h) 檔案和專案 (.vcxproj) 檔案。 產生起始檔案中的程式碼是以 MFC 為基礎。  

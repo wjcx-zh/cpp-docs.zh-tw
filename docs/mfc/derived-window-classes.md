@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351488"
 ---
 # <a name="derived-window-classes"></a>衍生的視窗類別
 您可以建立直接從 windows [CWnd](../mfc/reference/cwnd-class.md)，或衍生新的視窗類別，從`CWnd`。 這是通常建立您自己的自訂 windows 的方式。 不過，大部分的 windows 架構程式中使用而建立從其中一個`CWnd`-衍生的 MFC 所提供的框架視窗類別。  

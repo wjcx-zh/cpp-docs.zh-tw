@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864593"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string"></a>將格式或特殊字元加入至字串
 ### <a name="to-add-formatting-or-special-characters-to-a-string"></a>若要加入格式或特殊字元的字串  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349209"
 ---
 # <a name="drawing-tool-classes"></a>繪圖工具類別
 這些類別會封裝繪圖工具，可用來在裝置內容上繪製。  

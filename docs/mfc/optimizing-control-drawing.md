@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351290"
 ---
 # <a name="optimizing-control-drawing"></a>最佳化控制項繪圖
 當指示控制項將其本身拉入到容器提供的裝置內容中時，它通常會選取 GDI 物件 (例如畫筆、筆刷和字型) 到裝置內容中，執行其繪製作業，然後還原先前的 GDI 物件。 如果容器具有要引入的多個控制項相同的裝置內容，因此它需要的每個控制項選取 GDI 物件則可以儲存如果控制項不會個別還原先前選取的物件。 在拉入所有的控制項之後，容器就可以自動還原原始物件。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350350"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI 索引標籤式群組
 多重文件介面 (MDI) 索引的群組功能可讓多個文件介面 (MDI) 應用程式，顯示一或多個索引的視窗 (或群組的索引標籤式視窗，又稱為*索引標籤式群組*) 在 MDI 工作區中。 索引視窗可以垂直或水平對齊。 如果應用程式裝載多個 MDI 索引群組，則群組會以分隔器分隔。  

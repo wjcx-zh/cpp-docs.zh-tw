@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860849"
 ---
 # <a name="callback-function-windows-runtime-c-template-library"></a>Callback 函式 (Windows 執行階段 C++ 樣板程式庫)
 建立成員函式是回呼方法的物件。  

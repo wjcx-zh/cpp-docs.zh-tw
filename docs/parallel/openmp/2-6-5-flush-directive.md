@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692333"
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush 指示詞
 **排清**指示詞，是否明確或隱含的請指定"跨執行緒 「 序列點的實作，才能確保小組中的所有執行緒都有一致 （下方） 中指定特定物件的檢視記憶體。 這表示上一個評估的運算式參考那些物件都已完成，而且還沒有開始後續評估。 例如，編譯器必須從暫存器物件的值還原記憶體中，並且硬體可能需要排清寫入緩衝區的記憶體，並重新載入記憶體中物件的值。  

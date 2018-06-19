@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356182"
 ---
 # <a name="file-io-classes"></a>檔案 I/O 類別
 這些類別會提供介面，以傳統的磁碟檔案、 記憶體中的檔案、 主動式資料流和 Windows 通訊端。 所有的類別衍生自`CFile`可以搭配`CArchive`執行序列化的物件。  

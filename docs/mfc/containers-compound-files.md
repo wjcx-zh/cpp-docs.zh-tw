@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348341"
 ---
 # <a name="containers-compound-files"></a>容器：複合檔案
 本文說明複合檔案的元件和實作，以及於 OLE 應用程式使用複合檔案的優點和缺點。  

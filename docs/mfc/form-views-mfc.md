@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349039"
 ---
 # <a name="form-views-mfc"></a>表單檢視 (MFC)
 您可以將表單加入支援 MFC 程式庫，包括任何 Visual c + + 應用程式[表單架構應用程式](../mfc/reference/creating-a-forms-based-mfc-application.md)(其中的檢視類別衍生自`CFormView`)。 如果沒有一開始建立您的應用程式，以支援表單，Visual c + + 會將這項支援您，當您插入新的表單。 SDI 或 MDI 應用程式中，它會實作預設[文件/檢視架構](../mfc/document-view-architecture.md)，當使用者選擇`New`命令 (根據預設，在**檔案**功能表)，Visual c + + 會提示使用者從可用的表單中選擇。  

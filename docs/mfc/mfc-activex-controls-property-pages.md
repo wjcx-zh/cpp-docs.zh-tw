@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351741"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控制項：屬性頁
 屬性頁面可讓 ActiveX 控制項使用者檢視和變更 ActiveX 控制項的屬性。 藉由叫用控制項屬性對話方塊，其中包含提供自訂的圖形化介面來檢視及編輯控制項屬性的一或多個屬性頁中存取這些屬性。  

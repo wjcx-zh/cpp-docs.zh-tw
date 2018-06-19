@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248976"
 ---
 # <a name="compiler-error-c3063"></a>編譯器錯誤 C3063
 運算子 'operator': 所有運算元必須都具有相同的列舉類型  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861541"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>變更控制項的定位順序
 定位順序是以 TAB 鍵輸入的焦點從某個控制項移動到下一個的對話方塊內的順序。 通常從左到右，從上到下對話方塊中，就會繼續在定位順序。 每個控制項都**Tabstop**屬性，可決定控制項是否會收到輸入的焦點。  

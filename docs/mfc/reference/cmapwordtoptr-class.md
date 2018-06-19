@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366990"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr 類別
 支援以 16 位元字組為索引鍵的 void 指標對應。  

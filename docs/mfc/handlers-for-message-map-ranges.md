@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351718"
 ---
 # <a name="handlers-for-message-map-ranges"></a>訊息對應範圍的處理常式
 本文說明如何將一個範圍的訊息對應到單一訊息處理函式 （而不是只有一個函式對應一個訊息）。  

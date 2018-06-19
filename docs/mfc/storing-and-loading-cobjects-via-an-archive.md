@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380724"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>透過封存儲存及載入 CObjects
 儲存及載入`CObject`透過封存 s 需要額外的考量。 在某些情況下，您應該呼叫`Serialize`函式的物件，其中`CArchive`物件是參數的`Serialize`呼叫，而不是使用**< \<** 或**>>** 操作員`CArchive`。 謹記在心的重要事實是`CArchive` **>>** 運算子建構`CObject`根據記憶體中`CRuntimeClass`先前寫入檔案中所儲存的保存的資訊。  

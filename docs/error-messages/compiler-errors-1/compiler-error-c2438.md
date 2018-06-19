@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225534"
 ---
 # <a name="compiler-error-c2438"></a>編譯器錯誤 C2438
 'identifier': 無法初始化靜態類別資料，透過建構函式  

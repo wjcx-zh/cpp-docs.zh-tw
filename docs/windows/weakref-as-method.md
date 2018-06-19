@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890678"
 ---
 # <a name="weakrefas-method"></a>WeakRef::As 方法
 設定指定的 ComPtr 指標參數代表指定的介面。  

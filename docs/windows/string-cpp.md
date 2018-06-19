@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889016"
 ---
 # <a name="string-c"></a>string (C++)
 表示一維`char`， `wchar_t`，**位元組**（或對等） 陣列或這類陣列的指標必須視為字串。  

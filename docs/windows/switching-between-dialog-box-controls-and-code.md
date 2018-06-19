@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891918"
 ---
 # <a name="switching-between-dialog-box-controls-and-code"></a>在對話方塊控制項和程式碼之間切換
 在 MFC 應用程式，您可以按兩下對話方塊控制項跳至其處理常式程式碼，或快速建立虛設常式處理常式函式。  

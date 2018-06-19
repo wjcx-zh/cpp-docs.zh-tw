@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227657"
 ---
 # <a name="compiler-error-c2505"></a>編譯器錯誤 C2505
 'symbol': '__declspec(modifer)' 只能套用至宣告或定義的全域物件或靜態資料成員  

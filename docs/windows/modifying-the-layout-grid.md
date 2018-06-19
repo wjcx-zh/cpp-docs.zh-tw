@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880315"
 ---
 # <a name="modifying-the-layout-grid"></a>修改配置格線
 當您放置或排列控制項在對話方塊中的時，您可以使用版面配置方格的更精確的位置。 方格開啟時，控制項便會出現 「 對齊 」 格線的虛線如同 magnetized。 您可以開啟和關閉此 「 貼齊格線 」 功能，並變更版面配置方格資料格的大小。  

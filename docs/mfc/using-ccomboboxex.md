@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381757"
 ---
 # <a name="using-ccomboboxex"></a>使用 CComboBoxEx
 擴充的下拉式方塊控制項是提供項目影像的原生支援標準下拉式方塊控制項擴充功能。 這些映像可用來表示下拉式方塊，例如目前所選取及未選取的項目中的個別項目的狀態。 若要讓項目影像更容易存取，控制項會提供影像清單的支援。  

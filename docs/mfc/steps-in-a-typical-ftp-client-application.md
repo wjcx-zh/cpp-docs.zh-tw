@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381120"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>一般 FTP 用戶端應用程式中的步驟
 一般 FTP 用戶端應用程式建立[CInternetSession](../mfc/reference/cinternetsession-class.md)和[CFtpConnection](../mfc/reference/cftpconnection-class.md)物件。 請注意，這些 MFC WinInet 類別實際上並控制 proxy 型別設定;IIS 會執行。  

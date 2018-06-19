@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243720"
 ---
 # <a name="compiler-error-c3039"></a>編譯器錯誤 C3039
 'var': OpenMP 'for' 陳述式中的索引變數不可為削減變數  

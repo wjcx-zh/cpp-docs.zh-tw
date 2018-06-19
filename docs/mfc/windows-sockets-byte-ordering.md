@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385153"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets：位元組順序
 本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文涵蓋位元組順序。 其他問題包含於下列文章中： [Windows Sockets： 封鎖](../mfc/windows-sockets-blocking.md)和[Windows Sockets： 轉換字串](../mfc/windows-sockets-converting-strings.md)。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380705"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>MFC 模組狀態的啟用內容支援
 MFC 會使用由使用者模組所提供的資訊清單資源來建立啟用內容。 如需如何建立啟用內容的詳細資訊，請參閱下列主題：  

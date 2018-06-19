@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385732"
 ---
 # <a name="tree-control-notification-messages"></a>樹狀目錄控制項通知訊息
 樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 會傳送下列通知訊息做為**WM_NOTIFY**訊息：  

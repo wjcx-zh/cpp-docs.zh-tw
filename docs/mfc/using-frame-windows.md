@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381913"
 ---
 # <a name="using-frame-windows"></a>使用框架視窗
 MFC 架構會建立文件框架視窗，和其檢視與文件 — 實作的新功能和開啟檔案 功能表命令的一部分。 架構會為您執行大部分的框架視窗的工作，因為您播放的小型角色建立、 使用和終結這些視窗中。 您可以不過，明確地建立自己的框架視窗和子視窗的特殊用途。  

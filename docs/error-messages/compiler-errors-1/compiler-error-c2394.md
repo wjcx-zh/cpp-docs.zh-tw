@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197737"
 ---
 # <a name="compiler-error-c2394"></a>編譯器錯誤 C2394
 'your_type:: operator'op'": CLR 或 WinRToperator 不正確。 至少一個參數必須是下列類型：'T^'、'T^%'、'T^&'，其中 T = 'your_type'  

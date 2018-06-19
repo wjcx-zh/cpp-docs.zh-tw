@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227391"
 ---
 # <a name="fatal-error-c1207"></a>嚴重錯誤 C1207
 所安裝的執行階段版本不支援 Managed 樣板  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688566"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>使用 C++ 和 MFC 進行多執行緒處理
 Microsoft Foundation Class (MFC) 程式庫提供支援多執行緒應用程式。 本主題描述處理程序和執行緒，以及 MFC 方法多執行緒。  

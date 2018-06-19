@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383714"
 ---
 # <a name="technical-notes-by-number"></a>依編號顯示的技術提示
 下面的技術附註會列出數值與最近寫入的技術提示第一次。 如需依類別目錄的清單，請參閱[依分類區分的技術提示](../mfc/technical-notes-by-category.md)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385787"
 ---
 # <a name="using-cimagelist"></a>使用 CImageList
 影像清單，類別所代表[CImageList](../mfc/reference/cimagelist-class.md)，是相同大小的影像，其中每一個都可以參考它的索引集合。 影像清單用來有效管理大量圖示或點陣圖。 影像清單因為它們不是視窗; 將本身不是控制項不過，這些認證用於多種不同類型的控制項，包括清單控制項 ([CListCtrl](../mfc/reference/clistctrl-class.md))，樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))，和索引標籤控制項 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385225"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>逐步解說：使用 MFC 建立功能區應用程式
 本逐步解說示範如何使用**MFC 應用程式精靈**建立預設具有功能區的應用程式。 接著，您可以展開功能區加入**自訂**具有功能區分類**我的最愛**功能區面板，然後將加入一些常用命令至面板。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383678"
 ---
 # <a name="using-ctabctrl"></a>使用 CTabCtrl
 「索引標籤控制項」類似於筆記本裡的分隔頁或檔案櫃中的標籤資料夾。 使用此索引標籤控制項，類別所代表[CTabCtrl](../mfc/reference/ctabctrl-class.md)，若要顯示多頁的資訊或控制項給使用者，一次，建議的對等或邏輯關聯性，每個頁面之間的格式。  

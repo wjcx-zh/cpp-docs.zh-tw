@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382069"
 ---
 # <a name="window-procedure-entry-points"></a>視窗程序進入點
 為了保護 MFC 視窗程序，模組會具有特殊視窗程序的實作進行靜態連結。 當模組與 MFC 連結 (Link) 時，就會自動進行連結 (Linkage)。 此視窗程序使用`AFX_MANAGE_STATE`巨集來適當地設定有效的模組狀態，然後呼叫**AfxWndProc**，而後者會委派至`WindowProc`成員函式的適當`CWnd`-衍生物件。  

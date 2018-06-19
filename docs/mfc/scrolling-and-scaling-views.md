@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379264"
 ---
 # <a name="scrolling-and-scaling-views"></a>捲動和縮放檢視
 MFC 支援捲動和檢視，檢視會自動調整為其顯示在框架視窗的大小。 類別`CScrollView`支援這兩種檢視。  

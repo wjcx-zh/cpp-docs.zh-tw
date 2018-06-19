@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889341"
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>設定下拉式方塊和下拉式清單的大小
 當您將它加入至對話方塊中，您可以調整大小的下拉式方塊。 您也可以指定下拉式清單方塊的大小。  

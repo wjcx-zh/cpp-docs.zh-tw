@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383889"
 ---
 # <a name="using-property-sheets-in-your-application"></a>在應用程式中使用屬性工作表
 若要在您的應用程式中使用屬性工作表，請完成下列步驟：  

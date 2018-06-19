@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692742"
 ---
 # <a name="a23---examples-of-the-ordered-directive"></a>A.23 ordered 指示詞範例
 它是可以有多個已排序的區段，並有`for`指定與`ordered`子句。 第一個範例是不相容，因為下列 API 會指定：  

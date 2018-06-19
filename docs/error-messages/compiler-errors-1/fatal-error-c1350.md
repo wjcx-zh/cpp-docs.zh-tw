@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198439"
 ---
 # <a name="fatal-error-c1350"></a>嚴重錯誤 C1350
 載入 dll 'dll' 時發生錯誤： 找不到 dll  

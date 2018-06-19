@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385212"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets：如何搭配使用通訊端與封存
 這篇文章說明如何[CSocket](../mfc/reference/csocket-class.md)物件[CSocketFile](../mfc/reference/csocketfile-class.md)物件，和[CArchive](../mfc/reference/carchive-class.md)物件會結合，以便簡化傳送和接收資料透過 Windows通訊端。  

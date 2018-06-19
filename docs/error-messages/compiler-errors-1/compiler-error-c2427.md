@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196905"
 ---
 # <a name="compiler-error-c2427"></a>編譯器錯誤 C2427
 'class': 無法在此範圍中定義類別  

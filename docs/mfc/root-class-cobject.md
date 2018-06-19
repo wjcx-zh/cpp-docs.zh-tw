@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385066"
 ---
 # <a name="root-class-cobject"></a>根類別：CObject
 大部分的 Microsoft Foundation Class (MFC) 程式庫中的類別被衍生自類別階層架構的根目錄中單一基底類別。 `CObject` 提供數個實用的功能，以從其衍生的負荷極低的所有類別。 如需有關`CObject`和其功能，請參閱[使用 CObject](../mfc/using-cobject.md)。  

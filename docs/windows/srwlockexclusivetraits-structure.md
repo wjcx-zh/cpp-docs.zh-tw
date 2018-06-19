@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889273"
 ---
 # <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits 結構
 描述一般特性 SRWLock 類別，以獨佔的鎖定模式。  

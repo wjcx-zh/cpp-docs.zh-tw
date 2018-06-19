@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383805"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>建置 MFC 應用程式的作業順序
 下表說明當您開發 MFC 應用程式時，通常會遵循的一般順序。  

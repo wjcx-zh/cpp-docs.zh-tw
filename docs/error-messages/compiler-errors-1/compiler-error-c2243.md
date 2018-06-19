@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172585"
 ---
 # <a name="compiler-error-c2243"></a>編譯器錯誤 C2243
 'conversion type' 從 'type1' 至 'type2' 的轉換已經存在，但無法存取  

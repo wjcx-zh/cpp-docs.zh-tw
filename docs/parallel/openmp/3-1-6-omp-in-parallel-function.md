@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686278"
 ---
 # <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel 函式
 **Omp_in_parallel**函式會傳回非零值，如果呼叫以平行方式執行的平行區域的動態範圍內; 否則它會傳回 0。 格式如下：  

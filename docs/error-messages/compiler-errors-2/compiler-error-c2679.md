@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231809"
 ---
 # <a name="compiler-error-c2679"></a>編譯器錯誤 C2679
 二元 'operator': 找不到運算子的使用右方運算元類型 'type' （或沒有可接受的轉換）  

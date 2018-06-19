@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891733"
 ---
 # <a name="win32-predefined-symbols"></a>Win32 預先定義的符號
 這些符號定義在 Win32 標頭檔，並支援標準的 Windows 應用程式函式和動作。 常見的 UI 項目主要用於這些符號。 當您正在使用資源編輯器中的控制項時，這些符號會出現在[屬性 視窗](/visualstudio/ide/reference/properties-window)通用控制項相關聯。 比方說，如果您的工具列應該會顯示應用程式圖示，其圖示可以是與符號 IDI_SMALL 中 [屬性] 視窗相關聯。  

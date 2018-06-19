@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381773"
 ---
 # <a name="servers"></a>伺服器
 伺服器應用程式 （或元件應用程式） 建立 OLE 項目 （或元件） 供容器應用程式。 視覺化編輯伺服應用程式也支援視覺化編輯或就地啟用。 OLE 伺服器的另一種是[automation 伺服程式](../mfc/automation-servers.md)。 某些伺服器應用程式支援只建立內嵌項目。其他支援內嵌和連結項目的建立。 部分支援的連結，雖然這個狀況非常罕見。 所有伺服器應用程式必須都支援啟動容器應用程式，當使用者想要編輯的項目。 應用程式可以同時為容器和伺服器。 換句話說，它可以同時將資料合併至其文件，並建立可以做為項目合併至其他應用程式的文件的資料。  

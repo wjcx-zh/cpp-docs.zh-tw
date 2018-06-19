@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382294"
 ---
 # <a name="using-cobject"></a>使用 CObject
 [CObject](../mfc/reference/cobject-class.md)適用於大部分 Microsoft Foundation 類別庫 (MFC) 是根基底類別。 `CObject`類別包含許多有用的功能，您可能想要併入您自己的程式物件，包括序列化支援、 執行階段類別資訊，以及物件的診斷輸出。 如果您衍生您的類別從`CObject`，您的類別可以利用這些弱點`CObject`功能。  

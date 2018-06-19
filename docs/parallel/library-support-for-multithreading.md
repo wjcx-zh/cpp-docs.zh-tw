@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685668"
 ---
 # <a name="library-support-for-multithreading"></a>多執行緒的程式庫支援
 所有的 CRT 版本現在支援多執行緒處理，但某些函式的非鎖定版本除外。 請參閱[多執行緒程式庫效能](../c-runtime-library/multithreaded-libraries-performance.md)如需詳細資訊。  

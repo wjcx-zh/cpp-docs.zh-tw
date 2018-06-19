@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226359"
 ---
 # <a name="fatal-error-c1077"></a>嚴重錯誤 C1077
 編譯器限制：不能有超過 <數字> 個的命令列選項  

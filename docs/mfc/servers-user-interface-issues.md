@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379667"
 ---
 # <a name="servers-user-interface-issues"></a>伺服器：使用者介面問題
 伺服器應用程式都會一些必須加入使用者介面的功能，以提供 OLE 項目給容器應用程式。 如需功能表和其他資源，您必須加入至伺服器應用程式的詳細資訊，請參閱[功能表和資源： 伺服器加入](../mfc/menus-and-resources-server-additions.md)。  

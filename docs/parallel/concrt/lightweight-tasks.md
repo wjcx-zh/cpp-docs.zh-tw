@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687409"
 ---
 # <a name="lightweight-tasks"></a>輕量型工作
 本文件說明並行執行階段中的輕量型工作的角色。 A*輕量型工作*是直接從排程的工作`concurrency::Scheduler`或`concurrency::ScheduleGroup`物件。 輕量型工作類似您所提供的 Windows api 函式[CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453)函式。 因此，輕量工作會很有用，當您調整現有程式碼以使用並行執行階段的排程功能時。 並行執行階段本身會使用輕量型工作來排程非同步代理程式，並傳送非同步訊息區之間的訊息。  

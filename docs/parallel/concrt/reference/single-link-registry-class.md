@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690022"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 類別
 `single_link_registry` 物件是只管理單一來源或目標區塊的 `network_link_registry`。  

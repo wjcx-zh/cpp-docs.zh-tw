@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381708"
 ---
 # <a name="tree-control-label-editing"></a>樹狀目錄控制項標籤編輯
 使用者可以直接編輯項目的樹狀目錄控制項標籤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 具有**CTREECTRL**樣式。 按一下具有焦點的項目標籤，使用者就可以開始進行編輯。 應用程式會開始使用編輯[EditLabel](../mfc/reference/ctreectrl-class.md#editlabel)成員函式。 當編輯開始和取消或完成時，樹狀目錄控制項會傳送通知。 當編輯完成時，您可以視狀況負責更新項目的標籤。  

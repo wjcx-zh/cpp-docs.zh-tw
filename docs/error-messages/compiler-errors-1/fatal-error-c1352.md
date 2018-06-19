@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226815"
 ---
 # <a name="fatal-error-c1352"></a>嚴重錯誤 C1352
 函式 'function' (位於模組 'file' 中) 的 MSIL 無效或損毀  

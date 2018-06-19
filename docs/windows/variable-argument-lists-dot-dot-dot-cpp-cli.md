@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889819"
 ---
 # <a name="variable-argument-lists--ccli"></a>變數引數清單 (...) (C++/CLI)
 此範例示範如何使用`...`實作具有可變數目的引數的函式的 Visual c + + 語法。  

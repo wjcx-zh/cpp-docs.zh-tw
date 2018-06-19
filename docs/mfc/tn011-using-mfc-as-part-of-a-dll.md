@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384706"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011：將 MFC 當成 DLL 的一部分來使用
 此提示說明標準的 MFC Dll，讓您使用 MFC 程式庫做為 Windows 動態連結程式庫 (DLL) 的一部分。 它假設您熟悉 Windows DLL 並知道如何建置它們。 如需 MFC 擴充 Dll，您可以建立擴充功能的 MFC 程式庫，請參閱[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)。  

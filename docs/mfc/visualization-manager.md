@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384211"
 ---
 # <a name="visualization-manager"></a>視覺化管理員
 視覺化管理員是控制整個應用程式的外觀的物件。 其會成為單一類別您可以在其中放置您的應用程式的所有繪圖程式碼。 MFC 程式庫包含數個視覺管理員。 如果您想要建立您的應用程式的自訂檢視，您也可以建立您自己的視覺管理員。 下列影像顯示相同的應用程式，啟用不同的視覺管理員時：  

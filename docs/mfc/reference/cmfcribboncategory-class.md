@@ -145,6 +145,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377966"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 類別
 `CMFCRibbonCategory`類別會實作功能區索引標籤，其中包含一組[功能區面板](../../mfc/reference/cmfcribbonpanel-class.md)。  

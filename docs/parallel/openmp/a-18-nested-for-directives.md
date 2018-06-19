@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690864"
 ---
 # <a name="a18---nested-for-directives"></a>A.18 巢狀使用指示詞
 下列範例會`for`指示詞的巢狀 ([區段 2.9](../../parallel/openmp/2-9-directive-nesting.md)在頁面上 33) 相容因為內部和外部`for`指示詞繫結至不同的平行區域：  

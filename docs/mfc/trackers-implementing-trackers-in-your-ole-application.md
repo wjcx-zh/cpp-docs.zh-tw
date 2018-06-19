@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381546"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>追蹤器：在 OLE 應用程式中實作追蹤器
 追蹤器提供圖形介面，可讓使用者與 OLE 用戶端項目互動。 藉由使用不同的追蹤器樣式，OLE 用戶端項目的顯示可以包含陰影的框線，調整控點大小，或是各種其他視覺效果。 本文說明：  

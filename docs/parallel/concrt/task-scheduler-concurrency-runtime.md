@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689317"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>工作排程器 (並行執行階段)
 文件中這一部分的主題將說明並行執行階段工作排程器的重要功能。 工作排程器適用於您想要微調使用並行執行階段之現有程式碼的效能時。  

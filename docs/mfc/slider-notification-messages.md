@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381975"
 ---
 # <a name="slider-notification-messages"></a>滑桿通知訊息
 滑桿控制項的使用者動作其父視窗會傳送通知父`WM_HSCROLL`或`WM_VSCROLL`的滑桿控制項的方向而定的訊息。 若要處理這些訊息，加入處理常式`WM_HSCROLL`和`WM_VSCROLL`父視窗的訊息。 [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll)和[OnVScroll](../mfc/reference/cwnd-class.md#onvscroll)通知程式碼、 滑桿和指標的位置，會傳遞給成員函式[CSliderCtrl](../mfc/reference/csliderctrl-class.md)物件。 請注意，指標類型為**CScrollBar \*** 儘管它指向`CSliderCtrl`物件。 您可能需要類型轉換這個指標，如果您需要管理滑桿控制項。  

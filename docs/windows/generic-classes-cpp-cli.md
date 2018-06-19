@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881396"
 ---
 # <a name="generic-classes-ccli"></a>泛型類別 (C++/CLI)
 泛型類別宣告使用下列格式：  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888841"
 ---
 # <a name="setting-accelerator-properties"></a>設定快速鍵屬性
 您可以在設定快速鍵屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)在任何時間。 您也可以使用快速鍵編輯器來修改快速鍵對應表中的快速鍵屬性。 使用 [屬性] 視窗或快速鍵編輯器所做的變更會有相同的結果：編輯會立即反映在快速鍵對應表中。  

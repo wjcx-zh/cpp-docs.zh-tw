@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890284"
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>文字工具對話方塊 (圖示影像編輯器)
 使用**文字工具**對話方塊，即可將文字加入至資料指標、 點陣圖或圖示的資源。  

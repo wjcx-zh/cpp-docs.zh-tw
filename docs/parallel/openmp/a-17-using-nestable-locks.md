@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689905"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17 使用可巢狀鎖定
 下列範例 (如[第 3.2 節](../../parallel/openmp/3-2-lock-functions.md)在頁面上 41) 示範如何使用可巢狀鎖定同步處理更新至整個結構以及其中一個成員。  

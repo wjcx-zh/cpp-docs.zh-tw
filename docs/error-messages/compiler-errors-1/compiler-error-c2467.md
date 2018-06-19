@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225639"
 ---
 # <a name="compiler-error-c2467"></a>編譯器錯誤 C2467
 匿名 '使用者定義的型別' 的宣告不合法  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381032"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>使用測試容器測試屬性和事件
 隨附於 Visual C++ 的 Test Container 應用程式是一個 ActiveX 控制項容器，用於測試和偵錯 ActiveX 控制項。 Test Container 可讓控制項開發人員藉由變更其屬性、叫用其方法和引發其事件來測試控制項的功能。 Test Container 可以顯示資料繫結通知的記錄，並提供測試 ActiveX 控制項永續性的功能：您可以將屬性儲存至資料流或到子儲存區、重新載入它們以及檢查已儲存的資料流資料。 本節說明如何使用 Test Container 的基本功能。 如需詳細資訊，請選取**協助**功能表執行 Test Container 時。  

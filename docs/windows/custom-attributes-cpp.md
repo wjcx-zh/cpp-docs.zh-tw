@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887022"
 ---
 # <a name="custom-attributes-c"></a>自訂屬性 (C++)
 自訂屬性是強類型的技術，可讓使用者擴充中繼資料。 此主題將說明如何使用屬性： 指定參數和目標。  

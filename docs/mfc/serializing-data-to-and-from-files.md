@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380428"
 ---
 # <a name="serializing-data-to-and-from-files"></a>將資料序列化至檔案以及從檔案序列化資料
 持續性的基本概念是物件應該要能夠寫入目前的狀態，由其成員變數，永續性儲存體的值。 稍後，您可以重新讀取，或 「 還原序列化時，「 物件的狀態從永續性儲存體建立物件。 此處的重點是物件本身位負責讀取及撰寫自己的狀態。 因此，對於持續性類別，就必須實作基本的序列化作業。  

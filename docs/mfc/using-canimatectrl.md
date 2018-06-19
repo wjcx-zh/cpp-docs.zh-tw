@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381614"
 ---
 # <a name="using-canimatectrl"></a>使用 CAnimateCtrl
 動畫控制項，此類別所代表[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)，是一種視窗中音訊視訊交錯格式 (AVI) 格式顯示剪輯-標準的 Windows 視訊與音訊格式。 AVI 短片是一系列的點陣圖框架，例如電影。  

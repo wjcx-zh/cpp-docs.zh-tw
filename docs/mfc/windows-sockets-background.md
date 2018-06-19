@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384933"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets：背景
 本文說明的本質與用途的 Windows 通訊端。 發行項也：  

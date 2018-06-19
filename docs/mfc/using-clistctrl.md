@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382982"
 ---
 # <a name="using-clistctrl"></a>使用 CListCtrl
 使用清單控制項顯示圖示與標籤的所有排列，就像檔案總管或文字的單欄式清單 (含有或不含圖示) 中的顯示一樣。 四個可能的 「 檢視 」 （不要與 MFC 檢視混淆） 說明您可以在清單控制項中 — 圖示檢視、 小圖示檢視、 清單檢視和報表檢視，請參閱中的檢視[CListCtrl](../mfc/reference/clistctrl-class.md)類別概觀。  

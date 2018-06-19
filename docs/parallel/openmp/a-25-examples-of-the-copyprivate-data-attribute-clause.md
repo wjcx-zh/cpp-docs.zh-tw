@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691686"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25 copyprivate 資料屬性子句範例
 **範例 1:** `copyprivate`子句 ([區段 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md)在頁面上 32) 可用來廣播由單一執行緒直接私用變數中的其他執行緒的所有執行個體所取得的值。  

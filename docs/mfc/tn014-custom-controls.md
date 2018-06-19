@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384578"
 ---
 # <a name="tn014-custom-controls"></a>TN014：自訂控制項
 本附註將描述自訂和自繪控制項的 MFC 支援。 它也描述動態子類別化，並描述之間的關聯性[CWnd](../mfc/reference/cwnd-class.md)物件和`HWND`s。  

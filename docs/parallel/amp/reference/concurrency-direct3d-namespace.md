@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687383"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 命名空間
 `direct3d`命名空間提供支援 D3D 互通性函式。 它可讓您順暢使用 D3D 資源 AMP 程式碼中的計算，以及允許在 AMP 建立 D3D 程式碼中，而不需要建立重複的中繼複本的資源使用。 您可以逐步進行加速使用 c + + AMP 計算密集區段 DirectX 應用程式，並從 AMP 計算所產生的資料上使用 D3D API。  

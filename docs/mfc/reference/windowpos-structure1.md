@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379290"
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS 結構 1
 `WINDOWPOS`結構包含之大小和視窗的位置相關資訊。  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381084"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC 中的狀態列實作
 A [CStatusBar](../mfc/reference/cstatusbar-class.md)物件是一種控制列的資料列文字輸出窗格。 輸出窗格通常用來做為訊息列和狀態指示器。 範例包括簡要說明選取的功能表命令的功能表說明訊息行和顯示 SCROLL LOCK、 NUM LOCK 和其他按鍵的狀態指標。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385387"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
 [第 1 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)本逐步解說示範如何將 Office Fluent 功能區加入至傳統的 Scribble 應用程式。 此部分顯示如何加入功能區面板和控制項，使用者可以使用而不是功能表和命令。  

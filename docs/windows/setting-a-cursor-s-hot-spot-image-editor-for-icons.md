@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889403"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>設定資料指標&#39;s 作用點 （圖示影像編輯器）
 作用點的[游標](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)是點至 Windows 追蹤游標的位置參考。 根據預設，設定作用點至左上角 （座標 0，0） 的資料指標。 中的作用點屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)顯示作用點座標。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891905"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>選取多個功能表或功能表命令
 您可以選取多個功能表名稱或功能表命令，來執行大量作業，例如刪除或變更屬性。  

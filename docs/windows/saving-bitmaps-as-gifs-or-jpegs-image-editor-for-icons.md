@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890177"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>將點陣圖儲存為 GIF 或 JPEG (圖示影像編輯器)
 當您建立點陣圖時，影像會建立以點陣圖格式 (.bmp)。 為 GIF 或 JPEG 或其他圖形的格式，不過，可以儲存映像。  

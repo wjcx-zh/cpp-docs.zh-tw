@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242124"
 ---
 # <a name="compiler-error-c2934"></a>編譯器錯誤 C2934
 'class': type-class-id 已經重複定義為 'identifier' 的巢狀 'item'  

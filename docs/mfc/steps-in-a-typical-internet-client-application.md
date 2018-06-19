@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381270"
 ---
 # <a name="steps-in-a-typical-internet-client-application"></a>一般網際網路用戶端應用程式中的步驟
 下表顯示的步驟，您可能會執行一般網際網路用戶端應用程式中。  

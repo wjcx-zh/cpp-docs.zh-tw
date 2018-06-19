@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381006"
 ---
 # <a name="using-an-unclipped-device-context"></a>使用未裁剪的裝置內容
 如果您完全確定您的控制項不會繪製到其用戶端矩形之外，您也可以停用 `IntersectClipRect` 所進行的 `COleControl` 呼叫，以獲得小而可偵測的速度增益。 若要這樣做，請移除**colecontrol:: Getcontrolflags**集中所傳回的旗標的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如:   

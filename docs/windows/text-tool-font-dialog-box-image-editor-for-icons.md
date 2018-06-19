@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890424"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>文字工具字型對話方塊 (圖示影像編輯器)
 指定當您使用的字型設定[文字工具對話方塊](../windows/text-tool-dialog-box-image-editor-for-icons.md)的[影像編輯器](../windows/image-editor-for-icons.md)。  

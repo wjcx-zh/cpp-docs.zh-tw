@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382869"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>初始化 CWnd 物件的時機
 您無法建立您自己的子視窗或任何 Windows API 函式呼叫的建構函式中`CWnd`-衍生物件。 這是因為`HWND`如`CWnd`物件尚未建立。 必須以進行最特定的 Windows 初始設定，例如新增子視窗[OnCreate](../mfc/reference/cwnd-class.md#oncreate)訊息處理常式。  

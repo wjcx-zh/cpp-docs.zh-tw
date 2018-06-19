@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381689"
 ---
 # <a name="servers-implementing-a-server"></a>伺服器：實作伺服器
 本文說明 MFC 應用程式精靈建立視覺化編輯伺服器應用程式的程式碼。 如果您不使用應用程式精靈，這篇文章會列出，您必須撰寫程式碼以實作伺服器應用程式的區域。  

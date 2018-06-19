@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386050"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 常式
 > [!NOTE]
@@ -84,7 +85,7 @@ DDV_Custom(pDX,
   
  `DoDataExchange`成員函式，就像`Serialize`成員函式-它會負責取得或設定資料至/從外部的表單 （在此情況下對話方塊中控制項） 來源/目的地類別中的成員資料。 `pDX`參數已經進行資料交換的內容，類似於`CArchive`參數`CObject::Serialize`。 `pDX` (`CDataExchange`物件) 的方向旗標很像`CArchive`方向旗標：  
   
--   如果**！ m_bSaveAndValidate**，然後將資料狀態載入控制項。  
+-   如果 **！ m_bSaveAndValidate**，然後將資料狀態載入控制項。  
   
 -   如果`m_bSaveAndValidate`，然後設定控制項中的資料狀態。  
   

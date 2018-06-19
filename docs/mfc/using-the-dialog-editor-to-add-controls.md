@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381942"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>使用對話方塊編輯器加入控制項
 當您建立您的對話方塊範本資源與[對話方塊編輯器](../windows/dialog-editor.md)，您將控制項拖曳調色盤的控制項，並放在對話方塊中。 這會加入該控制項類型的規格的對話方塊範本資源。 當您建構對話方塊物件並呼叫其**建立**或`DoModal`成員函式，架構會建立 Windows 控制項，並將它放在畫面上的對話視窗中。  

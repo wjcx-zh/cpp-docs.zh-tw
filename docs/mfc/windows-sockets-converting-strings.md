@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383756"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets：轉換字串
 本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文涵蓋轉換的字串。 其他問題包含在[Windows Sockets： 封鎖](../mfc/windows-sockets-blocking.md)和[Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)。  

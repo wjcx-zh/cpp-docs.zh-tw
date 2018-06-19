@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882771"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>繪製線條或封閉圖形 (圖示影像編輯器)
 影像編輯器工具繪製線條和封閉的圖形的運作方式相同： 您將插入點放在一個點並拖曳至另一個。 程式行、 這些點是端點。 封閉圖形，這些點為對角的矩形。  

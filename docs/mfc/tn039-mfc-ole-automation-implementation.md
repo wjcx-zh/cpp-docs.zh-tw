@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385335"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE Automation 實作
 > [!NOTE]
@@ -146,7 +147,7 @@ property Y    (DISPID)0x00010002
  值，指定屬性的型別。  
   
 ## <a name="remarks"></a>備註  
- 這個巨集，就像`DISP_PROPERTY`，不同之處在於它可接受的其他引數。 其他引數， *pfnAfterSet，*應傳回任何項目並不採用任何參數 'void OnPropertyNotify()' 的成員函式。 將呼叫**之後**成員變數已被修改。  
+ 這個巨集，就像`DISP_PROPERTY`，不同之處在於它可接受的其他引數。 其他引數， *pfnAfterSet，* 應傳回任何項目並不採用任何參數 'void OnPropertyNotify()' 的成員函式。 將呼叫**之後**成員變數已被修改。  
   
 ## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM — 巨集描述  
   

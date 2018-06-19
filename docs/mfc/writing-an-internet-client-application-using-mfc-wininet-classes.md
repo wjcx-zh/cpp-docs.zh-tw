@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384432"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>使用 MFC WinInet 類別建立網際網路用戶端應用程式
 所有網際網路用戶端應用程式的基礎都是網際網路工作階段。 MFC 網際網路工作階段實作為類別的物件[CInternetSession](../mfc/reference/cinternetsession-class.md)。 使用這個類別，您就可以建立一個網際網路工作階段或多個同時執行的工作階段。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/04/2018
   
 -   如果您使用 `CInternetSession::OpenURL` 建立您的伺服器連接，則呼叫 `OpenURL` 會傳回 `CStdioFile`。  
   
--   如果使用**cinternetsession:: Getftpconnection**， `GetGopherConnection`，或`GetHttpConnection`建立伺服器連接，您必須呼叫`CFtpConnection::OpenFile`， `CGopherConnection::OpenFile`，或**chttpconnection::，**分別傳回`CInternetFile`， `CGopherFile`，或`CHttpFile`分別。  
+-   如果使用**cinternetsession:: Getftpconnection**， `GetGopherConnection`，或`GetHttpConnection`建立伺服器連接，您必須呼叫`CFtpConnection::OpenFile`， `CGopherConnection::OpenFile`，或**chttpconnection::，** 分別傳回`CInternetFile`， `CGopherFile`，或`CHttpFile`分別。  
   
  根據您要建立根據一般網際網路用戶端實作網際網路用戶端應用程式中的步驟而有所不同**OpenURL**或使用其中一種通訊協定特定用戶端**GetConnection**函式。  
   

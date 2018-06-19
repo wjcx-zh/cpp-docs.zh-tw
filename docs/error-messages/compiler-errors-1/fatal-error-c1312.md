@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198465"
 ---
 # <a name="fatal-error-c1312"></a>嚴重錯誤 C1312
 函式中的條件式分支太多。 請簡化或重整原始程式碼。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235606"
 ---
 # <a name="compiler-error-c2743"></a>編譯器錯誤 C2743
 'type': 無法攔截原生類型具有 __clrcall 解構函式或複製建構函式  

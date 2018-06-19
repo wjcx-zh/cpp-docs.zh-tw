@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690591"
 ---
 # <a name="a2---specifying-conditional-compilation"></a>A.2 指定條件式編譯
 下列範例說明使用 OpenMP 巨集的條件式編譯使用`_OPENMP`([2.2 節](../../parallel/openmp/2-2-conditional-compilation.md)在 8 頁面上)。 使用 /openmp 編譯`_OPENMP`會變成已定義巨集。  

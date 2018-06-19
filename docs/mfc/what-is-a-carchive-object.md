@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383825"
 ---
 # <a name="what-is-a-carchive-object"></a>什麼是 CArchive 物件
 `CArchive` 物件針對將可序列化物件寫入 `CFile` 物件或從該物件讀取可序列化物件，提供一項類型安全緩衝機制。 通常 `CFile` 物件代表磁碟檔案，不過其可以是記憶體檔案 (`CSharedFile` 物件)，或許代表剪貼簿。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687643"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 **OMP_NUM_THREADS**環境變數設定預設在執行期間，所使用的執行緒數目，除非明確地變更該數字藉由呼叫**omp_set_num_threads**程式庫常式或明確**num_threads**子句**平行**指示詞。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385595"
 ---
 # <a name="user-interface-objects-and-command-ids"></a>使用者介面物件和命令 ID
 功能表項目、工具列按鈕和快速鍵是能夠產生命令的「使用者介面物件」。 每一個這類使用者介面物件均具有 ID. 您可透過指派相同的 ID 給物件和命令，來建立使用者介面物件和命令的關聯。 中所述[訊息](../mfc/messages.md)，命令會實作為特殊訊息。 以下「架構中的命令」一圖中顯示架構如何管理命令。 當使用者介面物件產生命令時 (例如 `ID_EDIT_CLEAR_ALL`，應用程式中的其中一個物件會如下圖處理命令)，即透過文件的訊息對應呼叫文件物件的 `OnEditClearAll` 函式。  

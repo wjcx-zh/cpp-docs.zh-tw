@@ -43,6 +43,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686434"
 ---
 # <a name="int2-class"></a>int_2 類別
 表示兩個整數的短向量。  

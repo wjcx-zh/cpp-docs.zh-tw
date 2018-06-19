@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382762"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>樹狀目錄控制項拖放作業
 樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 會傳送通知，當使用者開始拖曳項目。 控制項傳送[TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504)通知訊息，當使用者開始拖曳項目具有滑鼠左鍵和[TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509)通知訊息，當使用者開始拖曳[右] 按鈕。 您可以防止樹狀控制項傳送這些通知樹狀目錄控制項**TVS_DISABLEDRAGDROP**樣式。  

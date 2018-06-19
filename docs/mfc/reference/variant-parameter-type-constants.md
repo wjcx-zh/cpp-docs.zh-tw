@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379856"
 ---
 # <a name="variant-parameter-type-constants"></a>變異參數類型常數
 本主題會列出新的常數，以指出變異參數類型設計為使用 Microsoft Foundation 類別庫的 OLE 控制項類別。  

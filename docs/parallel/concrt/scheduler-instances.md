@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693857"
 ---
 # <a name="scheduler-instances"></a>排程器執行個體
 本文件說明並行執行階段，以及如何使用排程器執行個體的角色[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)和[concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別來建立和管理排程器執行個體。 當您想要建立明確排程原則關聯與特定類型的工作負載，排程器執行個體很有用。 例如，您可以建立一個排程器執行個體，在高權限的執行緒優先順序上執行一些工作，並使用預設排程器在正常的執行緒優先順序上執行其他工作。  

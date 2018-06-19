@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379628"
 ---
 # <a name="status-bars"></a>狀態列
 狀態列賦與應用程式可向使用者顯示訊息和有用的資訊，而不會中斷使用者的工作。 通常顯示在視窗底部，狀態列會有"窗格 」 包括 「 指示器 」 和 「 訊息列 」。 指標給 SCROLL LOCK 的這類事件的狀態是否巨集錄製已開啟，依此類推。 [狀態] 列上的訊息列可以顯示工具列按鈕或功能表項目，以滑鼠指向使用者或程式的狀態相關資訊。  

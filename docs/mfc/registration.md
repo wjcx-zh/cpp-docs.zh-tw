@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381166"
 ---
 # <a name="registration"></a>註冊
 當使用者要將 OLE 項目插入至應用程式時，OLE 會顯示物件類型清單以供選擇。 OLE 會從系統註冊資料庫中取得此清單，其中包含所有伺服器應用程式提供的資訊。 當伺服器註冊其本身時，其放入系統註冊資料庫的項目 (登錄) 會說明其所提供的每個物件類型、副檔名和通往的路徑，以及其他資訊。  

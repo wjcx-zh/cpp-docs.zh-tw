@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198842"
 ---
 # <a name="fatal-error-c1353"></a>嚴重錯誤 C1353
 中繼資料作業失敗: 未安裝執行階段或版本不符  

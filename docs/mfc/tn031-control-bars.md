@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385322"
 ---
 # <a name="tn031-control-bars"></a>TN031：控制列
 > [!NOTE]
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/04/2018
   
 -   支援衍生類別的實作。  
   
- C++ 控制列物件通常會內嵌為 `CFrameWnd` 衍生類別的成員，而且會在終結父 `HWND` 和物件時遭到清除。 如果您需要將控制列物件配置到堆積上，您可以直接將 **m_bAutoDestruct** 成員設定為 **TRUE** ，讓控制列在終結**時「**刪除此物件 `HWND` 」。  
+ C++ 控制列物件通常會內嵌為 `CFrameWnd` 衍生類別的成員，而且會在終結父 `HWND` 和物件時遭到清除。 如果您需要將控制列物件配置到堆積上，您可以直接將 **m_bAutoDestruct** 成員設定為 **TRUE** ，讓控制列在終結**時「** 刪除此物件 `HWND` 」。  
   
 > [!NOTE]
 >  如果您建立自己的 `CControlBar`衍生類別，而非使用其中一個 MFC 的衍生類別 (例如 `CStatusBar`、 `CToolBar`或 `CDialogBar`)，您必須設定 `m_dwStyle` 資料成員。 您可以在 **Create**的覆寫中達成這個目的：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243655"
 ---
 # <a name="compiler-error-c3050"></a>編譯器錯誤 C3050
 'type1': ref 類別不可從 'type1' 繼承  

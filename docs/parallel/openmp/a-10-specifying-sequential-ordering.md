@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690074"
 ---
 # <a name="a10---specifying-sequential-ordering"></a>A.10 指定循序排序
 排序區段 ([區段 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md)在頁面上 22) 可用於循序排序的輸出以平行方式完成的工作。 下列程式會列印出順序中的索引：  

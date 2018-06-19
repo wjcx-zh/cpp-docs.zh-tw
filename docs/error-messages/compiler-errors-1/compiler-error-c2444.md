@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196528"
 ---
 # <a name="compiler-error-c2444"></a>編譯器錯誤 C2444
 'identifier': 使用 ANSI 原型，找到 'type'，必須是 '{' 或 ';'  

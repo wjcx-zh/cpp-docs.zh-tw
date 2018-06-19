@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383389"
 ---
 # <a name="where-to-find-message-maps"></a>哪裡可以找到訊息對應
 當您使用應用程式精靈建立新的基本架構應用程式時，應用程式精靈會為您撰寫訊息對應，它會建立每個命令目標類別。 這包括衍生的應用程式、 文件、 檢視和框架視窗類別。 這些訊息對應部分已經有為特定的訊息和預先定義的命令，應用程式精靈所提供的項目，而有些是您將加入的處理常式的只是預留位置。  

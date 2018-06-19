@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345182"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外狀況：攔截及刪除例外狀況
 下列指示和範例示範如何攔截和刪除例外狀況。 如需有關**再試一次**，**攔截**，和`throw`關鍵字，請參閱[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)。  

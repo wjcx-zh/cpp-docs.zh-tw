@@ -49,6 +49,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846928"
 ---
 # <a name="directoryentry-class"></a>directory_entry 類別
 
@@ -199,7 +200,7 @@ file_status symlink_status(error_code& ec) const noexcept;
 
 **標頭：** \<實驗/檔案系統&gt;
 
-**命名空間：**std::experimental::filesystem
+**命名空間：** std::experimental::filesystem
 
 ## <a name="see-also"></a>另請參閱
 

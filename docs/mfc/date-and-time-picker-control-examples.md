@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341971"
 ---
 # <a name="date-and-time-picker-control-examples"></a>日期時間選擇器控制項範例
 [CMNCTRL1](../visual-cpp-samples.md)範例示範的各種屬性`CDateTimeCtrl`類別。 個別的頁面包含日期和時間選擇器控制項，使用者可以藉由變更各種屬性，測試控制項的基本功能操作。  

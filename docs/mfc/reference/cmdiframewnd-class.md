@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374035"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 類別
 提供 Windows 多重文件介面 (MDI) 框架視窗的功能，以及管理視窗的成員。  

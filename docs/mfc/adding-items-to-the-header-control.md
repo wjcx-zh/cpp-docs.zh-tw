@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342731"
 ---
 # <a name="adding-items-to-the-header-control"></a>將項目加入至標題控制項
 建立標題控制項之後 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 在其父視窗中，加入許多 「 標頭項目 」 所需： 通常每欄一個。  

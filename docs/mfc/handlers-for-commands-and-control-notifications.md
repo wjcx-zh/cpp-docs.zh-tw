@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347229"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>命令和控制項告知的處理常式
 沒有命令或控制項通知訊息的預設處理常式。 因此，您只能依照慣例為這些類別的訊息命名您的處理常式。 當您將命令或控制項通知對應到處理常式時，[屬性] 視窗會根據命令 ID 或控制通知碼建議一個名稱。 您可以接受建議的名稱、加以變更或予以取代。  

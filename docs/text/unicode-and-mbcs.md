@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857346"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode 和 MBCS
 Microsoft Foundation Classes (MFC) 程式庫、 Visual c + +、 C 執行階段程式庫和 Visual c + + 開發環境會啟用可協助您的國際化程式設計。 它們提供：  

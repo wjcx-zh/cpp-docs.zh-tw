@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372253"
 ---
 # <a name="msg-structure1"></a>MSG 結構 1
 `MSG`結構包含從執行緒訊息佇列的訊息資訊。  

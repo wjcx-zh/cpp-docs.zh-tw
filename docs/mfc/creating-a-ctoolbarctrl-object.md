@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341690"
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>建立 CToolBarCtrl 物件
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件包含數個內部資料結構 — 一份按鈕影像點陣圖、 的按鈕標籤字串清單，以及一份`TBBUTTON`結構 — 的關聯一個影像和/或字串的位置、 樣式、 狀態和按鈕的命令識別碼。 每個這些資料結構的項目都有以零為起始的索引。 您可以使用之前`CToolBarCtrl`物件，您必須設定這些資料結構。 如需資料結構的清單，請參閱[工具列控制項](controls-mfc.md)Windows SDK 中。 字串清單，只可以用於按鈕標籤。您無法從工具列擷取字串。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344161"
 ---
 # <a name="-constructors-comment"></a>// 建構函式註解
 `// Constructors` > 一節的 MFC 類別宣告會宣告建構函式 （在 c + + 意義），以及實際使用的物件所需的任何初始化函式。 例如，`CWnd::Create`是建構函式 > 一節中，因為當您使用`CWnd`物件，它必須 「 完整 」 來建構第一次呼叫 c + + 建構函式，然後再呼叫**建立**函式。 一般而言，這些成員是公用的。  

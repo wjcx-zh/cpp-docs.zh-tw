@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290487"
 ---
 # <a name="compiler-warning-level-3-c4636"></a>編譯器警告 (層級 3) C4636
 套用至 'construct' 的 XML 文件註解: 標記必須是非空白的 '' 屬性。  

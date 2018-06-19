@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345087"
 ---
 # <a name="internet-and-networking-classes"></a>網際網路和網路類別
 這些類別可讓您使用 Windows Sockets 或 Win32 Internet (WinInet) 與另一部電腦交換資訊。 也有一組操作 Windows Sockets 的類別。  

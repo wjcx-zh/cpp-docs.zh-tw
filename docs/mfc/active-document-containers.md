@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339016"
 ---
 # <a name="active-document-containers"></a>主動式文件容器
 主動式文件容器，例如 Microsoft Office Binder 或 Internet Explorer 中，可讓您能夠使用不同的應用程式類型 （而不是強迫您建立及使用多個應用程式框架每個在單一的範圍內的數個文件文件類型）。  

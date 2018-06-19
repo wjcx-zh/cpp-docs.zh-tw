@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318772"
 ---
 # <a name="project-build-error-prj0013"></a>專案建置錯誤 PRJ0013
 系統資源可能會非常低。 無法建立啟動建置所需的管道。  

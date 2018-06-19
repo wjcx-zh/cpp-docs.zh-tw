@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344620"
 ---
 # <a name="containers-client-item-notifications"></a>容器：用戶端項目通知
 本文討論 MFC 架構在伺服器應用程式修改用戶端應用程式的文件中的項目時所呼叫的可覆寫函式。  

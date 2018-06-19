@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346132"
 ---
 # <a name="enabling-tool-tips"></a>啟用工具提示
 您可以讓工具提示支援視窗的子控制項 (例如在表單檢視或對話方塊的控制項)。  

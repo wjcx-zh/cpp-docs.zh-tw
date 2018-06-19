@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685758"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>執行緒控制的 C 執行階段程式庫函式
 所有 Win32 程式都必須至少一個執行緒。 任何執行緒可以建立額外的執行緒。 執行緒可以快速完成其工作，然後結束，或它可以保持使用中程式的存留期間。  

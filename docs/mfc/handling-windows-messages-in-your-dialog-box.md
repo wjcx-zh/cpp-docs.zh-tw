@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343804"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>處理對話方塊的 Windows 訊息
 對話方塊為視窗式，可在您提供適當的處理函式時處理 Windows 訊息。 當您使用 [加入類別精靈] 建立對話方塊類別時，精靈會將空白的訊息對應新增到類別中。 使用 [屬性] 視窗來對應您希望類別處理的所有 Windows 訊息或命令。  

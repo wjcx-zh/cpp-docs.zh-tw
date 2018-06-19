@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347931"
 ---
 # <a name="reading-and-writing-files"></a>讀取和寫入檔案
 如果您使用 C 執行階段程式庫檔案處理函式，則會出現熟悉 MFC 讀取和寫入作業。 本文說明直接讀取和寫入直接`CFile`物件。 您可以也不要緩衝處理的檔案 I/O [CArchive](../mfc/reference/carchive-class.md)類別。  

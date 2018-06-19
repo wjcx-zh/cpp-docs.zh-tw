@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341796"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>Automation 伺服程式：物件存留期問題
 當 Automation 用戶端建立或啟用 OLE 項目時，伺服器會傳遞該物件的指標給用戶端。 在用戶端建立透過呼叫 OLE 函式物件的參考[iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)。 這個參考是作用中直到用戶端呼叫[Iunknown](http://msdn.microsoft.com/library/windows/desktop/ms682317)。 (以 MFC 程式庫的 OLE 類別撰寫的用戶端應用程式不需要建立這些呼叫；架構也是如此)。這個 OLE 系統和伺服器本身可能會建立對物件的參考。 只要物件的外部參考仍然有效，伺服器就不應終結物件。  

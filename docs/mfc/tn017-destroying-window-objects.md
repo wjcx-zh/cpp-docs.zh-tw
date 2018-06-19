@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384299"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017：終結視窗物件
 此附註將描述使用[CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)方法。 使用這個方法，如果您想要執行的自訂的配置`CWnd`-衍生物件。 此提示也會說明為什麼您應該使用[cwnd:: Destroywindow](../mfc/reference/cwnd-class.md#destroywindow)終結 c + + 視窗物件，而不是`delete`運算子。  

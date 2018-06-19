@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341706"
 ---
 # <a name="declaring-message-handler-functions"></a>宣告訊息處理函式
 某些規則和慣例控管訊息處理常式函式的名稱。 這些是根據訊息類別，如下列主題中所述：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343372"
 ---
 # <a name="destroying-window-objects"></a>終結視窗物件
 必須小心使用您自己的子視窗終結時使用者完成與視窗的 c + + 視窗物件。 不會終結這些物件，如果您的應用程式將不會復原其記憶體。 幸運的是，架構會管理視窗的解構與框架視窗、 檢視和對話方塊的建立。 如果您建立其他視窗，您必須負責終結它們。  

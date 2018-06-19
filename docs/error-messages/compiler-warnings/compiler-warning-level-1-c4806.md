@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283389"
 ---
 # <a name="compiler-warning-level-1-c4806"></a>編譯器警告 (層級 1) C4806
 'operation': 不安全的作業：類型 'type' 升至類型 'type' 後沒有值可以等於所給的常數  

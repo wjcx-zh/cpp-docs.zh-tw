@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318057"
 ---
 # <a name="project-build-warning-prj0041"></a>專案建置警告 PRJ0041
 找不到遺漏相依性的檔案 'file' 的 ' 相依性'。 您的專案仍會建置，但可能會繼續顯示為過期，直到找到這個檔案。  

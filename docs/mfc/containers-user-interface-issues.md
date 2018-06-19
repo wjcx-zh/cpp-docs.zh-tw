@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341185"
 ---
 # <a name="containers-user-interface-issues"></a>容器：使用者介面問題
 您必須加入適當管理連結和內嵌的項目容器應用程式的使用者介面的許多功能。 這些功能包括變更功能表結構和應用程式處理的事件。 如需詳細資訊，請的詳細資訊，請參閱下列文章：  

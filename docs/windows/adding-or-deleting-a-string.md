@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858753"
 ---
 # <a name="adding-or-deleting-a-string"></a>加入或刪除字串
 您可以快速地插入新項目插入使用字串編輯器的字串資料表。 會放置在資料表結尾的新字串，並指定下一個可用的識別項。 然後，您可以編輯中的識別碼、 值或 Caption 屬性[屬性 視窗](/visualstudio/ide/reference/properties-window)視。  

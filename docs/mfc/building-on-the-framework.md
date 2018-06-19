@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341550"
 ---
 # <a name="building-on-the-framework"></a>在架構上建置
 您在設定應用程式與 MFC 架構中的角色是提供特定應用程式的原始程式碼，並藉由定義訊息和回應的命令連接元件。 您使用 c + + 語言和標準 c + + 技術從所提供的類別庫衍生您自己的應用程式特定類別以及覆寫，將它擴大基底類別的行為。  

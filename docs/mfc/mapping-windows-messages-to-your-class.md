@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346265"
 ---
 # <a name="mapping-windows-messages-to-your-class"></a>將 Windows 訊息對應到您的類別
 如果您需要您的對話方塊，來處理 Windows 訊息時，會覆寫適當的處理常式函式。 若要這樣做，請使用 [屬性] 視窗[對應的訊息](../mfc/reference/mapping-messages-to-functions.md)到對話方塊類別。 此寫入每個訊息的訊息對應項目，並將訊息處理常式成員函式加入至類別。 使用 Visual c + + 原始程式碼編輯器中的訊息處理常式撰寫程式碼。  

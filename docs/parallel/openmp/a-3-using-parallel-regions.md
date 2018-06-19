@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689892"
 ---
 # <a name="a3---using-parallel-regions"></a>A.3 使用平行區域
 `parallel`指示詞 ([2.3 節](../../parallel/openmp/2-3-parallel-construct.md)在 8 頁面上) 可用於粗略平行的程式。 在下列範例中，每個執行緒在平行區域決定全域陣列的哪個部分`x`運作，根據執行緒數：  

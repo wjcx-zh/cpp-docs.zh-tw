@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347626"
 ---
 # <a name="message-handlers"></a>訊息處理常式
 在 MFC 中，專用*處理常式*函式會處理每個個別的訊息。 訊息處理函式是類別的成員函式。 本文件使用條款*訊息處理常式成員函式*，*訊息處理常式函式*，*訊息處理常式*，和*處理常式*交換使用。 有些類型的訊息處理常式也稱為「命令處理常式」。  

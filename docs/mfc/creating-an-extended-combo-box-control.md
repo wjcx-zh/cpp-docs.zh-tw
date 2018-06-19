@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341208"
 ---
 # <a name="creating-an-extended-combo-box-control"></a>建立擴充的下拉式方塊控制項
 建立擴充的下拉式方塊控制項的方式取決於您是使用控制項在對話方塊中還是非對話方塊視窗中建立。  

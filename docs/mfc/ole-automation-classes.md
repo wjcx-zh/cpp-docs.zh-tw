@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342874"
 ---
 # <a name="ole-automation-classes"></a>OLE Automation 類別
 這些類別可支援 automation 用戶端 （控制其他應用程式的應用程式）。 Automation 伺服程式 （可由其他應用程式的應用程式） 支援透過[分派對應](../mfc/reference/dispatch-maps.md)。  

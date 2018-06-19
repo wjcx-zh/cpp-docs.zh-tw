@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688579"
 ---
 # <a name="tiledextent-class"></a>tiled_extent 類別
 A`tiled_extent`物件是`extent`細分成一段、 兩段或 3d 圖格的範圍空間一到三個維度的物件。  

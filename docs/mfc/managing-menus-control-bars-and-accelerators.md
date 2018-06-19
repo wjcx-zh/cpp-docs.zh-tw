@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345738"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>管理功能表、控制列和快速鍵
 框架視窗管理使用者介面物件的更新，包括功能表、工具列按鈕、狀態列和快速鍵。 也會管理在 MDI 應用程式中共用的功能表列。  

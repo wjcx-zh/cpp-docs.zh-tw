@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343521"
 ---
 # <a name="documentview-creation"></a>文件/檢視建立
 架構會提供實作`New`和**開啟**命令 （和其他項目） 上**檔案**功能表。 建立新文件及其相關聯的檢視和框架視窗是應用程式物件、 文件範本，新建立的文件和框架視窗之間的合作式投入時間。 下表摘要說明哪些物件建立什麼。  

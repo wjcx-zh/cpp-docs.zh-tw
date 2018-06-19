@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342601"
 ---
 # <a name="debugging-support-classes"></a>偵錯支援類別
 MFC 提供下列類別，以協助您偵錯動態記憶體配置問題。  

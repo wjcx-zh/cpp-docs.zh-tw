@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341958"
 ---
 # <a name="command-routing-classes"></a>命令路由類別
 當使用者透過使用滑鼠選擇功能表或控制列按鈕來與應用程式互動時，應用程式會從受影響的使用者介面物件傳送訊息至適當的命令目標物件。 命令目標類別衍生自`CCmdTarget`包含[CWinApp](../mfc/reference/cwinapp-class.md)， [CWnd](../mfc/reference/cwnd-class.md)， [CDocTemplate](../mfc/reference/cdoctemplate-class.md)， [CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)，並從它們衍生的類別。 架構支援自動的命令路由，以便可以由目前在應用程式中作用中的最適當物件來處理命令。  

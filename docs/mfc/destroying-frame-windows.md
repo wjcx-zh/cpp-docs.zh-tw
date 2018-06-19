@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343472"
 ---
 # <a name="destroying-frame-windows"></a>終結框架視窗
 MFC 架構會管理視窗解構，以及建立這些 framework 文件和檢視相關聯的視窗。 如果您建立其他視窗，您必須負責終結它們。  

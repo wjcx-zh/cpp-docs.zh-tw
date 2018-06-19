@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342826"
 ---
 # <a name="containers-implementing-a-container"></a>容器：實作容器
 本文摘要說明實作容器的程序，並指向提供詳細說明實作容器之其他文件。 它也會列出您可以實作的選擇性 OLE 功能，以及描述這些功能的文件。  

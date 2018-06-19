@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345061"
 ---
 # <a name="frame-window-classes-windows"></a>框架視窗類別 (Windows)
 框架視窗是應用程式或應用程式一部分的框架的視窗。 框架視窗通常會包含其他視窗，例如檢視、 工具列和狀態列。 如果是`CMDIFrameWnd`，它們可能包含`CMDIChildWnd`間接物件。  

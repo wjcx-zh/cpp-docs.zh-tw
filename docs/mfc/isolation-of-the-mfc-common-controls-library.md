@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346811"
 ---
 # <a name="isolation-of-the-mfc-common-controls-library"></a>MFC 通用控制項程式庫的隔離
 通用控制項程式庫現在在 MFC 中是隔離的，可讓不同的模組 (例如，使用者 DLL) 透過在其資訊清單中指定版本，來使用不同版本的通用控制項程式庫。  

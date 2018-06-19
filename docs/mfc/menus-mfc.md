@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346967"
 ---
 # <a name="menus-mfc"></a>功能表 (MFC)
 MFC 提供兩個可協助您使用功能表的項目：  

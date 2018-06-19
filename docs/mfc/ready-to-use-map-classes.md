@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348058"
 ---
 # <a name="ready-to-use-map-classes"></a>立即可用的對應類別
 下列類別是已備妥要使用的對應類別。  

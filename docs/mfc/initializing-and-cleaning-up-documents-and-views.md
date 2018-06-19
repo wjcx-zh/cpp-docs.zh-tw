@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346359"
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>初始化及清除文件和檢視
 在文件和檢視之後，使用下列方針以進行初始化和清除：  

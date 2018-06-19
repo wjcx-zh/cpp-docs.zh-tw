@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346252"
 ---
 # <a name="printing-and-print-preview"></a>列印和預覽列印
 MFC 透過類別的程式的文件支援列印和預覽列印[CView](../mfc/reference/cview-class.md)。 基本列印和預覽列印，只是覆寫檢視類別的[OnDraw](../mfc/reference/cview-class.md#ondraw)成員函式，您必須這麼做。 該函式可以繪製畫面上，印表機裝置內容中，實際的印表機上的檢視，或裝置內容，用於模擬您在螢幕上的印表機。  

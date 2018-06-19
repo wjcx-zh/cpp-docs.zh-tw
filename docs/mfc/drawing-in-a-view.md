@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346161"
 ---
 # <a name="drawing-in-a-view"></a>在檢視中繪圖
 在您的應用程式中的幾乎所有繪製在檢視中，就會發生`OnDraw`成員函式，您必須在您的檢視類別中覆寫。 (例外狀況是滑鼠繪製、 述[解譯使用者輸入透過檢視](../mfc/interpreting-user-input-through-a-view.md)。)您`OnDraw`覆寫：  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691537"
 ---
 # <a name="parallel-patterns-library-ppl"></a>平行模式程式庫 (PPL)
 平行模式程式庫 (PPL) 提供命令式程式設計模型，可提升開發並存應用程式時的延展性和方便性。 PPL 建置在並行執行階段的排程和資源管理元件上。 其提供在資料上平行作用的泛型、類型安全演算法和容器，可提升應用程式程式碼與基礎執行緒機制之間的抽象層級。 PPL 有提供共用狀態的替代方案，也可以讓您開發可調整大小的應用程式。  

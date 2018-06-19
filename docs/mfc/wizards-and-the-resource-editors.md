@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383830"
 ---
 # <a name="wizards-and-the-resource-editors"></a>精靈和資源編輯器
 Visual c + + MFC 程式設計，以及許多整合式的資源編輯器中包含數個精靈，供使用。 對 ActiveX 控制項的程式設計， [ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)用途很像，MFC 應用程式精靈。 雖然您可以撰寫 MFC 應用程式，這些工具大部分都沒有，工具將可大幅簡化和加速您的工作。  

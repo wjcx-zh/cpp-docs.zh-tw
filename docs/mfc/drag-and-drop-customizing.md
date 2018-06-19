@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344239"
 ---
 # <a name="drag-and-drop-customizing"></a>拖放：自訂
 拖放功能的預設實作對大部分應用程式而言已經足夠。 不過，不過應用程式可能需要變更這個標準行為。 本文說明變更這些預設值的必要步驟。 此外，您可以使用這項技術建立不支援將複合文件作為放置來源的應用程式。  

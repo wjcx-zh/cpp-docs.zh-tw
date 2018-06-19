@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347213"
 ---
 # <a name="html-basics"></a>HTML 的基本概念
 大部分的瀏覽器有檢查您所瀏覽網頁的 HTML 原始檔的功能。 當您檢視原始碼時，您會看到一些 HTML (超文字標記語言) 標記，周圍以角括弧 (<>) 包圍，其中為文字。  

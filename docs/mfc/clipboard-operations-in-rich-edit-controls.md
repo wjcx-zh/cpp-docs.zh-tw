@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341280"
 ---
 # <a name="clipboard-operations-in-rich-edit-controls"></a>Rich Edit 控制項中的剪貼簿流作業
 您的應用程式可以將剪貼簿內容貼至 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 使用最適合使用剪貼簿格式或特定的剪貼簿格式。 您也可以判斷 Rich Edit 控制項是否可以貼上剪貼簿格式。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342267"
 ---
 # <a name="-operations-comment"></a>// 作業註解
 `// Operations` MFC 類別宣告區段包含您可以在要讓它執行動作，或執行的動作 （執行作業） 的物件上呼叫成員函式。 這些函式是通常非**const**因為它們通常會有副作用。 它們可能是虛擬或虛擬根據類別的需求而定。 一般而言，這些成員是公用的。  

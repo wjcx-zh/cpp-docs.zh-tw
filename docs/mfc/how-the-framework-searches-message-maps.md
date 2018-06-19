@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345777"
 ---
 # <a name="how-the-framework-searches-message-maps"></a>架構如何搜尋訊息對應
 架構會搜尋相符項目與內送訊息中的訊息對應資料表。 一旦您撰寫您希望類別處理，並寫入對應的處理常式的每個訊息的訊息對應項目時，架構會自動呼叫您的處理常式。 下列主題將說明訊息對應搜尋：  

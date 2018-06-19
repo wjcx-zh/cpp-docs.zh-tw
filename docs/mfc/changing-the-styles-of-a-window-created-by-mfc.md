@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345725"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>變更 MFC 所建立之視窗的樣式
 其版`WinMain`函式，MFC 會為您註冊數個標準的視窗類別。 因為您通常不編輯 MFC 的`WinMain`，該函式給予您沒有機會變更 MFC 預設視窗樣式。 本文說明如何變更現有的應用程式中的這類的預先登錄的視窗類別樣式。  

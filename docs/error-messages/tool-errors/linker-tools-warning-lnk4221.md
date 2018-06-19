@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301004"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>連結器工具警告 LNK4221
 這個物件檔案沒有定義任何以前未定義的公用符號，所以不會使用任何使用這個程式庫的連結作業  

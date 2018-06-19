@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342471"
 ---
 # <a name="adding-controls-by-hand"></a>以手動方式加入控制項
 您可以[將控制項加入對話方塊中，使用對話方塊編輯器](../mfc/using-the-dialog-editor-to-add-controls.md)或將它們加入您自己，以程式碼。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342533"
 ---
 # <a name="clipboard-using-the-ole-clipboard-mechanism"></a>剪貼簿：使用 OLE 剪貼簿機制
 OLE 使用標準格式和部分 OLE 特定格式來透過剪貼簿傳輸資料。  

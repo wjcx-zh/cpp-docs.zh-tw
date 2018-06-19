@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316721"
 ---
 # <a name="missing-function-body-or-variable"></a>遺漏函式主體或變數
 只要函式原型，編譯器可以繼續執行而沒有錯誤，但連結器無法解析位址的呼叫，因為沒有任何函式程式碼或變數保留的空間。 建立連結器必須解析的函式呼叫之前，將不會看到這個錯誤。  

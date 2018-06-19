@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344145"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>將多個檢視加入至單一文件
 在建立使用 Microsoft Foundation Class (MFC) 程式庫的單一文件介面 (SDI) 應用程式，每個文件類型為單一檢視類型相關聯。 在某些情況下，最好能夠切換文件的新檢視目前的檢視。  

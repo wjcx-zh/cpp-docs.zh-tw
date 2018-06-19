@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301157"
 ---
 # <a name="linker-tools-warning-lnk4086"></a>連結器工具警告 LNK4086
 進入點 'function' 不是 'number' 個位元組引數; 使用 __stdcall映像可能無法執行  

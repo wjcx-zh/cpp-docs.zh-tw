@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343963"
 ---
 # <a name="dialog-box-components-in-the-framework"></a>架構中的對話方塊元件
 在 MFC 架構中，對話方塊具有兩個元件：  

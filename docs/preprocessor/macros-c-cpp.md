@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850179"
 ---
 # <a name="macros-cc"></a>巨集 (C/C++)
 前置處理會展開巨集不是前置處理器指示詞的所有行的 (不需要的線條**#** 作為第一個非空格字元) 和中的某些指示詞不會略過一部分的組件條件式編譯。 「條件式編譯」指示詞可讓您隱藏原始程式檔某些部分的編譯，方法是透過測試常數運算式或識別項，判斷在前置處理期間，哪些文字區塊會傳遞到編譯器上，以及哪些文字區塊會從原始程式檔中移除。  

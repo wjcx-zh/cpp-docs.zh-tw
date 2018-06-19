@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346057"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外狀況：使用 MFC 巨集和 C++ 例外狀況
 這篇文章討論撰寫使用 MFC 例外狀況處理巨集和 c + + 例外狀況處理關鍵字的程式碼的考量。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344304"
 ---
 # <a name="menu-sample-list"></a>功能表範例清單
 請參閱下列說明建立、 編輯和更新功能表之範例程式：  

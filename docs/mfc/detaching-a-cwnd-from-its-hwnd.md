@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342675"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>從 HWND 中斷連結 CWnd
 如果您需要避免物件-`HWND`關聯性，MFC 提供另一個`CWnd`成員函式，[卸離](../mfc/reference/cwnd-class.md#detach)，這與 Windows 視窗中斷連線的 c + + 視窗物件。 這可防止解構函式物件終結時終結 Windows 視窗。  

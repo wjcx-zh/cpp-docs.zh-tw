@@ -39,6 +39,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856029"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文字和字串
 開發國際市場的應用程式的重要層面是本機的字元集足夠表示法。 ASCII 字元集定義字元 0x00 到 0x7F 範圍內。 有其他的字元集，主要歐洲的會定義哪些字元 0x00 到 0x7F 範圍內具有相同 ASCII 字元集，及也定義 0x80 設 0xFF 的擴充的字元。 因此，8 位元、 單一位元組字元組 (SBCS) 就足以代表 ASCII 字元集，以及用於許多歐洲語言的字集。 不過，某些非歐洲，日文如漢字等字元集，包括更多的字元比單一位元組的編碼配置可以代表，因此需要多位元組字元集 (MBCS) 的編碼方式。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856413"
 ---
 # <a name="accelerator-editor"></a>快速鍵編輯器
 快速鍵對應表是一種 Windows 資源，其中包含快速鍵清單 (也稱為快速鍵) 和與其相關聯的命令識別項。 程式可有多個快速鍵對應表。  

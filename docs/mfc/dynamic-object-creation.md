@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346642"
 ---
 # <a name="dynamic-object-creation"></a>動態物件建立
 本文說明如何在執行階段動態建立物件。 程序會使用執行階段類別資訊，如本文所述[存取執行階段類別資訊](../mfc/accessing-run-time-class-information.md)。  

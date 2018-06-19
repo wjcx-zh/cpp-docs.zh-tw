@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344944"
 ---
 # <a name="file-and-database-classes"></a>檔案和資料庫類別
 這些類別可讓您將資訊儲存到資料庫或磁碟檔案。 有三組資料庫類別 (例如 OLE DB、ODBC 和 DAO) 提供類似的功能。 OLE DB 群組是使用 OLE DB 實作並搭配 OLE DB 消費者範本一起運作，DAO 群組是使用資料存取物件實作，而 ODBC 群組則是使用開放式資料庫連接實作。 還有一組類別是用於操作標準的檔案、主動式資料流和 HTML 資料流。  

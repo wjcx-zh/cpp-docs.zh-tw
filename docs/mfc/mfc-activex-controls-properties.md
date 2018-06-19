@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347103"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控制項：屬性
 ActiveX 控制項就會引發事件，其控制項容器與通訊。 容器會使用方法和屬性與控制項進行通訊。 方法和屬性類似的用途及目的，分別為成員函式和 c + + 類別的成員變數。 屬性是 ActiveX 控制項的任何容器中公開的資料成員。 屬性會提供包含 ActiveX 控制項，例如 Automation 用戶端和 ActiveX 控制項容器應用程式的介面。  

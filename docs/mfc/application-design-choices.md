@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347756"
 ---
 # <a name="application-design-choices"></a>應用程式設計選擇
 這篇文章討論針對網際網路程式設計時所要考慮的設計問題。  

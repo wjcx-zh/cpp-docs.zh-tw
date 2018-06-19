@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343278"
 ---
 # <a name="destroying-the-list-control"></a>終結清單控制項
 如果您將內嵌程式[CListCtrl](../mfc/reference/clistctrl-class.md)物件的檢視或對話方塊類別資料成員當做其擁有者被終結時終結。 如果您使用[CListView](../mfc/reference/clistview-class.md)，架構會在終結檢視時終結控制項。  

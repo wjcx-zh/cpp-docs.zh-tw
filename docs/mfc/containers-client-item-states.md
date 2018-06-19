@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342169"
 ---
 # <a name="containers-client-item-states"></a>容器：用戶端項目狀態
 本文說明不同的用戶端項目在其存留期間通過的狀態。  

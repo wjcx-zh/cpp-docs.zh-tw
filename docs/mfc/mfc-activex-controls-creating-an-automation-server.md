@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346759"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控制項：建立 Automation 伺服程式
 您可以為 Automation 伺服程式為了以程式設計方式將該控制項內嵌在另一個應用程式和控制項中呼叫方法，從應用程式開發 MFC ActiveX 控制項。 這類控制項仍可裝載 ActiveX 控制項容器中。  

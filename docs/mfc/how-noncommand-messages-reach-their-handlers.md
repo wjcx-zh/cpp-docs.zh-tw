@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343878"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>非命令訊息如何連接其處理常式
 與命令不同，標準 Windows 訊息不會透過鏈結的命令目標路由，但通常會由 Windows 會傳送訊息的視窗。 視窗可能是主框架視窗、 MDI 子視窗、 標準控制項、 對話方塊、 檢視或其他種類之子視窗。  

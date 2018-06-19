@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347837"
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的對話方塊
 當使用者執行 OLE 功能之應用程式時，但有些的時候應用程式時需要使用者的資訊才能執行作業。 MFC OLE 類別提供對話方塊，以收集必要的資訊的數的字。 本主題列出由 OLE 對話方塊處理的工作和顯示這些對話方塊所需的類別。 如需 OLE 對話方塊，以及用來自訂其行為的結構的詳細資訊，請參閱[MFC 參考](../mfc/mfc-desktop-applications.md)。  

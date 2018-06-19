@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343753"
 ---
 # <a name="frame-window-styles-c"></a>框架視窗樣式 (C++)
 就架構框架視窗也適用於大部分程式中，但您可以使用進階函式來取得額外的彈性[PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow)和 MFC 全域函式[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass). `PreCreateWindow` 是的成員函式`CWnd`。  

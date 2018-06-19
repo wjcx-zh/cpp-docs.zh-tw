@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689801"
 ---
 # <a name="a4---using-the-nowait-clause"></a>A.4 使用 nowait 子句
 如果有多個獨立的迴圈的平行區域內，您可以使用`nowait`子句 ([區段 2.4.1](../../parallel/openmp/2-4-1-for-construct.md) 11 頁面上) 若要避免隱含的屏障結尾`for`指示詞，如下所示：  

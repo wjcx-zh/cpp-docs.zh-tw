@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334843"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>存取集合的所有成員
 MFC 陣列集合類別 (範本型和非範本型) 使用索引來存取其項目。 MFC 清單和對應集合類別 (範本型和非範本型) 使用 **POSITION** 類型的指標來描述集合中的指定位置。 若要存取這些集合的一或多個成員，請先將位置指標初始化，然後將該位置重複傳遞給集合，並要求它傳回下一個項目。 集合不負責維護反覆項目進度的相關狀態資訊。 該資訊會保留在位置指示器中。 但若指定特定位置，集合會負責傳回下一個元素。  

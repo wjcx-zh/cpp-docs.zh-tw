@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692622"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>逐步解說：建立代理程式架構應用程式
 本主題描述如何建立基本的代理程式架構應用程式。 在本逐步解說，您可以建立以非同步方式從文字檔讀取資料的代理程式。 應用程式使用 adler-32 總和檢查碼演算法計算總和檢查碼的該檔案的內容。  

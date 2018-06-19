@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298125"
 ---
 # <a name="c-runtime-error-r6026"></a>C 執行階段錯誤 R6026
 沒有足夠的空間 stdio 初始化  

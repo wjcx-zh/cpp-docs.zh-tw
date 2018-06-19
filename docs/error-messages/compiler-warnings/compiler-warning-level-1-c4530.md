@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283321"
 ---
 # <a name="compiler-warning-level-1-c4530"></a>編譯器警告 (層級 1) C4530
 C + + 例外狀況處理常式使用，但回溯語意不會啟用。 指定 /EHsc  

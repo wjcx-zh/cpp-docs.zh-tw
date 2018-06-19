@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342757"
 ---
 # <a name="header-control-examples"></a>標題控制項範例
 如需標題控制項的範例，請參閱[標題控制項](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。  

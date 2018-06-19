@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343771"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>對話方塊資料交換和驗證
 對話資料交換 (Dialog Data Exchange，DDX) 是一種初始化對話方塊中的控制項和收集使用者所輸入資料的簡單方法。 對話資料驗證 (DDV) 則是驗證對話方塊中的資料項目的一種簡單方法。 若要充分運用 DDX 和 DDV，在對話方塊中，使用[加入成員變數精靈](../ide/add-member-variable-wizard.md)建立資料成員並設定其資料類型和指定驗證規則。  

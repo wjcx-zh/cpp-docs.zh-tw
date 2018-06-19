@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345709"
 ---
 # <a name="creating-stack-and-queue-collections"></a>建立堆疊和佇列集合
 這篇文章說明如何建立其他資料結構，例如[堆疊](#_core_stacks)和[佇列](#_core_queues)，從 MFC 清單類別。 這些範例會使用衍生自 `CList` 的類別，不過除非您需要新增其他功能，否則您可以直接使用 `CList`。  

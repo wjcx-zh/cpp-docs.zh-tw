@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278414"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>編譯器警告 (層級 1) C4489
 'specifier': 不允許在介面方法 'method';覆寫規範只允許在 ref 類別和實值類別方法  

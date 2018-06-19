@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339225"
 ---
 # <a name="create-a-new-linux-project"></a>建立新的 Linux 專案
 為 Linux 撰寫程式碼時，您可以選擇建立 Visual Studio 專案或 CMake 專案。 本主題描述如何建立 Visual Studio 專案。 如需 CMake 專案的資訊，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382589"
 ---
 # <a name="walkthroughs-mfc"></a>逐步解說 (MFC)
 本節包含逐步解說與新的 MFC 程式庫功能相關聯的各種工作的文件。  

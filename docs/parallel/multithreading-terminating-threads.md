@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689580"
 ---
 # <a name="multithreading-terminating-threads"></a>多執行緒：結束執行緒
 有兩種一般情況會導致執行緒終止： 控制函式會結束，或不允許執行緒執行到完成為止。 如果文書處理器用於列印背景的執行緒，控制函式就會在列印成功完成的話正常結束。 如果使用者想要取消列印，不過，有提前終止列印背景的執行緒。 本主題說明如何實作每種情況以及如何終止之後取得執行緒的結束代碼。  

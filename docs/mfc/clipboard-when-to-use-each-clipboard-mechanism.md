@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341922"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>剪貼簿：何時使用每個剪貼簿機制
 請遵循這些指導方針中使用剪貼簿：  

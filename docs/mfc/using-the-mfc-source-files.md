@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384331"
 ---
 # <a name="using-the-mfc-source-files"></a>使用 MFC 原始程式檔
 MFC 程式庫提供完整的原始程式碼。 標頭檔 (.h) 位於 \atlmfc\include 目錄中，實作檔 (.cpp) 位於 \atlmfc\src\mfc 目錄。  

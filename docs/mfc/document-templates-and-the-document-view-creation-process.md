@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348087"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>文件範本和文件/檢視建立流程
 若要管理複雜的程序建立文件與其相關的檢視和框架視窗，架構會使用兩個文件範本類別： [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI 應用程式和[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) MDI 應用程式。 `CSingleDocTemplate` 一次可以建立和儲存一種類型的文件。 `CMultiDocTemplate` 可保留一種類型的多個開啟文件清單。  

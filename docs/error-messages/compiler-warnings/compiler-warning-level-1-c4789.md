@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282983"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>編譯器警告 (層級 1) C4789
 大小 N 位元組的緩衝區 'identifier' 會溢位；將從位移 L 開始寫入 M 位元組  

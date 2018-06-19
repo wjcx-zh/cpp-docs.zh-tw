@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857895"
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>指定便捷鍵至功能表命令
 您可以為您的功能表與功能表命令指派便捷鍵 (助憶鍵，可讓使用者透過鍵盤選取功能表)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342195"
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>使用程式碼精靈建立對話方塊類別
 下表列出程式碼精靈會協助您管理的對話方塊相關工作。  

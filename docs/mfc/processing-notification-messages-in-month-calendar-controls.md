@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346909"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>處理月曆控制項中的通知訊息
 當使用者月曆控制項 （選取日期和/或檢視不同的月份），與控制項互動 (`CMonthCalCtrl`) 會傳送通知訊息至其父視窗，通常是檢視或對話方塊物件。 如果您想要執行動作以作為回應，請處理這些訊息。 比方說，當使用者選取新的月份，若要檢視，您可以提供一組應該反白的日期。  

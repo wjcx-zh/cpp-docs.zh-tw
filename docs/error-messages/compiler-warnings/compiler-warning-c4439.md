@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286951"
 ---
 # <a name="compiler-warning-c4439"></a>編譯器警告 C4439
 'function': 函式簽章中有 managed 類型的定義必須有 __clrcall 呼叫慣例  

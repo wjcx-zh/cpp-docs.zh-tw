@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381247"
 ---
 # <a name="spin-button-member-functions"></a>微調按鈕成員函式
 有數個成員函式可用來微調控制項 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md))。 請使用這些函式變更微調按鈕的下列屬性。  

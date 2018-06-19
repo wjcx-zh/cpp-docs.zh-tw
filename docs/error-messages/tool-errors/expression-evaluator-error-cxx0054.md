@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294306"
 ---
 # <a name="expression-evaluator-error-cxx0054"></a>運算式評估工具錯誤 CXX0054
 註冊在中斷點運算式中不合法  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373165"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>定義反映訊息的訊息處理常式
 當您建立新的 MFC 控制項類別之後時，您可以為它定義訊息處理常式。 反映的訊息處理常式可讓您的控制項類別之前父系所收到的訊息處理自己的訊息。 您可以使用 MFC [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)函式可從您的控制項傳送訊息至父視窗。  

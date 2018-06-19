@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347148"
 ---
 # <a name="ordering-items-in-the-header-control"></a>排序標題控制項中的項目
 一旦您[項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)，您可以操作或取得與下列函式順序有關的資訊：  

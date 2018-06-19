@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342962"
 ---
 # <a name="derived-message-maps"></a>衍生訊息對應
 在處理訊息期間，檢查類別本身的訊息對應並不是訊息對應劇本的結束。 發生什麼情況類別`CMyView`(衍生自`CView`) 的訊息沒有相符的項目  

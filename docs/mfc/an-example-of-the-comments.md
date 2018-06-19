@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340880"
 ---
 # <a name="an-example-of-the-comments"></a>註解的範例
 下列類別的部分清單`CChildFrame`使用大部分的標準 MFC 採用其類別中使用它們的方式，將類別成員的註解：  

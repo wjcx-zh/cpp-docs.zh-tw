@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856901"
 ---
 # <a name="asyncuuid"></a>async_uuid
 指定指示 MIDL 編譯器定義 COM 介面的同步和非同步版本的 UUID。  

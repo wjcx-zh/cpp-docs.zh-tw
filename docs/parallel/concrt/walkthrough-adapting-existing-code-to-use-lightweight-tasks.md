@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688540"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>逐步解說：改寫現有程式碼以使用輕量型工作
 本主題說明如何調整現有程式碼使用 Windows API 來建立和執行使用輕量型工作的執行緒。  

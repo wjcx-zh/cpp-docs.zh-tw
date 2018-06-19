@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298765"
 ---
 # <a name="linker-tools-error-lnk1201"></a>連結器工具錯誤 LNK1201
 寫入程式資料庫 'filename'; 時發生錯誤檢查有足夠的磁碟空間、 無效路徑或特殊權限不足  

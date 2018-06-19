@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290299"
 ---
 # <a name="compiler-warning-level-1-c4905"></a>編譯器警告 (層級 1) C4905
 寬字串常值轉換成 'LPSTR'  

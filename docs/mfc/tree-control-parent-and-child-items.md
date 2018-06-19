@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382511"
 ---
 # <a name="tree-control-parent-and-child-items"></a>樹狀目錄控制項的父和子項目
 樹狀結構控制項中的任何項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 可以有子項目，稱為子項目，與它相關聯的清單。 有一個或多個子項目的項目稱為父項目。 子項目會在其父項目下方以縮排顯示，表示其附屬於父代。 沒有父代的項目會位於階層架構的頂端並稱為根項目。  

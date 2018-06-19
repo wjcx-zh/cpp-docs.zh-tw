@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347769"
 ---
 # <a name="mfc-com"></a>MFC COM
 MFC 的子集為了支援 COM，雖然大部分的 Active Template Library (ATL) 設計的 COM 程式設計。 本節的主題描述在 MFC 的 COM 支援  

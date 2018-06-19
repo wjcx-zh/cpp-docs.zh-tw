@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347918"
 ---
 # <a name="containers-advanced-features"></a>容器：進階功能
 本文描述將選擇性進階功能合併至現有容器應用程式中的必要步驟。 這些功能包括：  

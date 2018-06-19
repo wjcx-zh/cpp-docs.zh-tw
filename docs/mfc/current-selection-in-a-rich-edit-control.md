@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345006"
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Rich Edit 控制項中目前的選取範圍
 使用者可以選取 rich edit 控制項中的文字 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 使用滑鼠或鍵盤。 目前的選取範圍是選取的字元的範圍或選取的任何字元的插入點的位置。 應用程式可以取得目前的選取範圍的相關資訊，設定目前的選取項目，判斷當目前的選取範圍變更和顯示或隱藏選取項目反白顯示。  

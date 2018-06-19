@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341244"
 ---
 # <a name="commonly-added-member-functions"></a>常加入的成員函式
 如果您的對話方塊包含 [確定] 或 [取消] 以外的按鈕，您需要在您回應它們產生的控制項通知訊息的對話方塊類別中撰寫訊息處理常式成員函式。 如需範例，請參閱[Scribble](../visual-cpp-samples.md)範例程式。 您也可以在對話方塊中，處理從其他控制項的控制項通知訊息。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688930"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 類別
 `multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。  

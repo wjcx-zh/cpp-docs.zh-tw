@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342849"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>將索引標籤加入至索引標籤控制項
 在建立索引標籤控制項後 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))，新增您需要的索引。  

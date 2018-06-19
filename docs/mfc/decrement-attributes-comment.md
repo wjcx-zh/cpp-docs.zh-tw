@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342916"
 ---
 # <a name="-attributes-comment"></a>// 屬性註解
 MFC 類別宣告的 `// Attributes` 區段包含物件的公用屬性。 通常這些屬性是成員變數，或是 Get/Set 函式。 「Get」和「Set」函式不一定是虛擬的。 「 Get 」 函式通常是**const**，因為在大部分情況下沒有副作用。 這些成員通常是公用、受保護的私用屬性，一般會在實作區段中。  

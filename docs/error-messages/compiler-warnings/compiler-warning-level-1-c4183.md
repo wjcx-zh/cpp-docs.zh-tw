@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277468"
 ---
 # <a name="compiler-warning-level-1-c4183"></a>編譯器警告 （層級 1） C4183
 'identifier': 遺漏傳回類型;假設為傳回 'int' 的成員函式  

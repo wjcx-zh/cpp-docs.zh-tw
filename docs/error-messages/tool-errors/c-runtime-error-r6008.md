@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299873"
 ---
 # <a name="c-runtime-error-r6008"></a>C 執行階段錯誤 R6008
 引數的空間不足  

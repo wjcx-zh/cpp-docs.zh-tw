@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301537"
 ---
 # <a name="command-line-warning-d9028"></a>命令列警告 D9028
 最少重建失敗，還原成一般建置  

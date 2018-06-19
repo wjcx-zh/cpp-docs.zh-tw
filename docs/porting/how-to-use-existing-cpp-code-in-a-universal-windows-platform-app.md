@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33847968"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>做法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 在 UWP 環境中執行傳統型程式的最簡單方式，可能是使用傳統型橋接器技術。 其中包括 Desktop App Converter，這會將現有應用程式封裝為 UWP 應用程式，而不需要變更程式碼。 如需詳細資訊，請參閱 [Bring your desktop app to the Universal Windows Platform (UWP) with the Desktop Bridge](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root) (使用傳統型橋接器將您的傳統型應用程式移轉至通用 Windows 平台 (UWP))。

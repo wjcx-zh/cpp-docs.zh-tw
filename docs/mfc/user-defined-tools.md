@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384344"
 ---
 # <a name="user-defined-tools"></a>使用者定義類型
 MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的使用者指定的程式的特殊命令。 您可以使用自訂程序來管理使用者定義的工具。 不過，您無法使用此程序如果應用程式物件不衍生自[CWinAppEx 類別](../mfc/reference/cwinappex-class.md)。 如需有關自訂的詳細資訊，請參閱[MFC 自訂](../mfc/customization-for-mfc.md)。  

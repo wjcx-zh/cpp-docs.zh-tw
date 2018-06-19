@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345881"
 ---
 # <a name="automation"></a>Automation
 Automation (先前稱為 OLE Automation) 可讓應用程式操作另一個應用程式中實作的物件，或者公開物件以便提供給其他程式操作。  

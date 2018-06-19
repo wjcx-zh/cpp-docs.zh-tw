@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858483"
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>對話方塊上控制項的排列方式
 對話方塊編輯器提供配置工具，可對齊，並自動調整控制項的大小。 對於大部分的工作，您可以使用[對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)。 所有的對話方塊編輯器工具列命令也可提供格式 功能表上，而且大部分都有[攠摝坫](../windows/accelerator-keys-for-the-dialog-editor.md)。  

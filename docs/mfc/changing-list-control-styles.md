@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344838"
 ---
 # <a name="changing-list-control-styles"></a>變更清單控制項樣式
 您可以變更清單控制項的視窗樣式 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 在任何時間之後建立它。 藉由變更視窗樣式，您可以變更的檢視控制項使用的類型。 比方說，若要模擬 [總管] 中，您可能會提供功能表項目或工具列按鈕控制項不同的檢視之間的切換： 圖示檢視、 清單檢視中，等等。  

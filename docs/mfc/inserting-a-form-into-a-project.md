@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344129"
 ---
 # <a name="inserting-a-form-into-a-project"></a>將表單插入專案中
 表單控制項提供方便的容器。 您可以輕鬆地插入 MFC 為基礎的形式您的應用程式，只要應用程式支援的 MFC 程式庫。  

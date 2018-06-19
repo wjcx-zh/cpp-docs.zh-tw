@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344213"
 ---
 # <a name="containers-client-items"></a>容器：用戶端項目
 本文說明哪些用戶端項目以及應用程式應該從哪些類別衍生其用戶端項目。  

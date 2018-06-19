@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318723"
 ---
 # <a name="resource-compiler-error-rc2113"></a>資源編譯器錯誤 RC2113
 在對話方塊中預期為 END  

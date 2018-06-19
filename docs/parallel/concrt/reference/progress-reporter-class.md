@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686561"
 ---
 # <a name="progressreporter-class"></a>progress_reporter 類別
 進度報告程式類別允許報告特定類型的進度通知。 每個 progress_reporter 物件都會繫結至特定非同步動作或作業。  

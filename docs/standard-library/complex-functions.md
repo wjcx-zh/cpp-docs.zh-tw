@@ -49,6 +49,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848605"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函式
 
@@ -765,7 +766,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="remarks"></a>備註
 
-複數 *a + bi* 的範數為 *(a*<sup>2</sup> *+ b*<sup>2</sup>*)。* 複數的範數為其模數的平方。 複數的模數是代表複數的向量長度量值。 複數 *a + bi* 的模數為 `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*)，*寫為 *&#124;a + bi&#124;。*
+複數 *a + bi* 的範數為 *(a*<sup>2</sup> *+ b*<sup>2</sup>*)。* 複數的範數為其模數的平方。 複數的模數是代表複數的向量長度量值。 複數 *a + bi* 的模數為 `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*)，* 寫為 *&#124;a + bi&#124;。*
 
 ### <a name="example"></a>範例
 

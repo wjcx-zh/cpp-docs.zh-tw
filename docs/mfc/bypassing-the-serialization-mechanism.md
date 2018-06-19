@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343641"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>略過序列化機制
 如您所見，架構提供了預設的方式從檔案讀取和寫入資料。 將封存物件序列化符合許許多多應用程式的需求。 這類應用程式會將檔案完全讀入記憶體，讓使用者更新檔案，然後再將更新的版本寫入磁碟。  

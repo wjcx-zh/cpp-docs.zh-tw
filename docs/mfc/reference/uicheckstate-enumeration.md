@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375418"
 ---
 # <a name="uicheckstate-enumeration"></a>UICheckState 列舉
 描述命令的使用者介面項目核取狀態。  

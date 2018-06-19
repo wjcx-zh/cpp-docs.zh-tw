@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341345"
 ---
 # <a name="creating-an-active-document-container-application"></a>建立主動式文件容器應用程式
 建立主動式文件容器應用程式的最簡單及最推薦的方式是使用 [MFC 應用程式精靈] 建立 MFC EXE 容器應用程式，然後將應用程式修改為支援主動式文件內含項目。  

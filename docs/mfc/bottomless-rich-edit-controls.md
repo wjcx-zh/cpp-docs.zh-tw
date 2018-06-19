@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343307"
 ---
 # <a name="bottomless-rich-edit-controls"></a>無底邊 Rich Edit 控制項
 您的應用程式可以調整 rich edit 控制項的大小 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 視需要因此一律會做為其內容的大小相同。 Rich edit 控制項傳送給其父視窗支援此所謂的 「 無底邊 」 功能[EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983)每當其內容的大小變更的通知訊息。  

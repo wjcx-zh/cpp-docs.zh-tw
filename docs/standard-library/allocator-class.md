@@ -49,6 +49,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848059"
 ---
 # <a name="allocator-class"></a>allocator 類別
 
@@ -85,7 +86,7 @@ class allocator
 
 這些 **Type** 指定指標和參考必須為所配置元素接受的格式 ([allocator::pointer](#pointer) 不一定與所有配置器的 **Type**\* 相同，即使它針對 **allocator** 類別明顯定義此類型也是如此)。
 
-**C++ 11 和更新版本：**若要在您的配置器中啟用移動運算，請使用最小的配置器介面與實作複製建構函式、== 和 != 運算子、配置及解除配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
+**C++ 11 和更新版本：** 若要在您的配置器中啟用移動運算，請使用最小的配置器介面與實作複製建構函式、== 和 != 運算子、配置及解除配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
 
 ## <a name="members"></a>成員
 

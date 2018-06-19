@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345384"
 ---
 # <a name="-overridables-comment"></a>// 可覆寫函式註解
 MFC 類別宣告的 `// Overridables` 區段含有當您需要修改基底類別行為時，您可以在衍生類別中覆寫的虛擬函式。 這些虛擬函式的名稱通常是以「On」為開頭，不過並非絕對必要。 此處的函式是專門用來覆寫，經常會實作或提供某種「回呼」或「攔截」。 一般來說，這些成員是受到保護的。  

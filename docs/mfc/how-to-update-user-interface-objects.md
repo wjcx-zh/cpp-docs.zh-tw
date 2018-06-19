@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346203"
 ---
 # <a name="how-to-update-user-interface-objects"></a>如何：更新使用者介面物件
 通常，功能表項目和工具列按鈕有一種以上的狀態。 例如，目前內容未提供的功能表項目會變成灰色 (表示停用)。 功能表項目也可以是已核取或未核取。 工具列按鈕若無法使用也可以關閉，也可以是已核取。  

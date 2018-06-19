@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849609"
 ---
 # <a name="macros-and-c"></a>巨集和 C++
 C++ 提供的新功能，其中取代了一些由 ANSI C 前置處理器提供的功能。 這些新功能可強化此語言的類型安全及可預測性：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283376"
 ---
 # <a name="compiler-warning-level-1-c4819"></a>編譯器警告 (層級 1) C4819
 檔案包含無法在目前字碼頁 (數字) 中表示的字元。 請以 Unicode 格式儲存檔案，以防止資料遺失。  

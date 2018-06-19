@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338051"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
 

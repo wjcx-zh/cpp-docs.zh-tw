@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343537"
 ---
 # <a name="document-template-classes"></a>文件樣板類別
 文件範本物件的文件、 檢視和框架視窗物件的新文件時建立或建立檢視。  

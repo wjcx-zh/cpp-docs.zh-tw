@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342303"
 ---
 # <a name="creating-a-rebar-control"></a>建立 Rebar 控制項
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md)應該建立物件，在父物件顯示之前。 如此可以將繪製發生問題的可能性降到最低。  

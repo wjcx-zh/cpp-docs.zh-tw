@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345676"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>記憶體管理：可調整大小的記憶體區塊
 **新**和**刪除**運算子，文件所述[記憶體管理： 範例](../mfc/memory-management-examples.md)，適合用於配置和解除配置的固定大小的記憶體區塊和物件。 有時候，您的應用程式可能需要可調整大小的記憶體區塊。 您必須使用標準 C 執行階段程式庫函式[malloc](../c-runtime-library/reference/malloc.md)， [realloc](../c-runtime-library/reference/realloc.md)，和[可用](../c-runtime-library/reference/free.md)來管理堆積上的可調整大小的記憶體區塊。  

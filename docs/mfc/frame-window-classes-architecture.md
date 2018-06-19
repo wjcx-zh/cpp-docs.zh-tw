@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344174"
 ---
 # <a name="frame-window-classes-architecture"></a>框架視窗類別 (架構)
 在文件/檢視架構中，框架視窗會是包含 [檢視] 視窗的視窗。 它們也支援讓控制列附加至它們。  

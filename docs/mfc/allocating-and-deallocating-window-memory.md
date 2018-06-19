@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341455"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>配置和解除配置視窗記憶體
 不使用 c + +**刪除**終結框架視窗或檢視表的運算子。 請改為呼叫`CWnd`成員函式`DestroyWindow`。 框架視窗，因此，應該會在堆積上配置運算子**新**。 配置框架視窗上的堆疊框架或全域時務必謹慎。 其他視窗應該盡可能在堆疊框架上配置。  

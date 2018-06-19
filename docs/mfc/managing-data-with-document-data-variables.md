@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344957"
 ---
 # <a name="managing-data-with-document-data-variables"></a>使用文件資料變數管理資料
 實作您的文件資料做為文件類別的成員變數。 例如，Scribble 程式會宣告型別的資料成員`CObList`— 將指標儲存至的連結的清單`CObject`物件。 這份清單用來儲存構成手繪線條的點陣列。  

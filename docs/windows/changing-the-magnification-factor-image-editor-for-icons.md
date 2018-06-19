@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856995"
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>變更縮放比例倍數 (圖示影像編輯器)
 根據預設，影像編輯器會在實際大小和實際大小的 6 倍在右窗格中檢視的左窗格中顯示的檢視。 縮放比例倍數 （在工作區底部的 [狀態] 列中所見） 是映像的實際大小和顯示的大小間比例。 預設因數為 6，範圍是從 1 到 10。  

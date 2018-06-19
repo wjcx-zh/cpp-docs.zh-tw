@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297725"
 ---
 # <a name="bscmake-errors-bk1500-through-bk4505"></a>BSCMAKE 錯誤 BK1500 至 BK4505
 

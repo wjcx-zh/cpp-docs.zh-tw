@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344113"
 ---
 # <a name="mapi-samples"></a>MAPI 範例
 請參閱下列範例程式，其說明 Microsoft 訊息應用程式開發介面 (MAPI) 功能：  

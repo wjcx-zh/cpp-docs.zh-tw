@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345100"
 ---
 # <a name="ole-db-classes"></a>OLE DB 類別
 在 MFC 的 OLE DB 支援目前類別所組成[COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)。 `COleDBRecordView` 在控制項中，透過直接連線到 [表單] 檢視中顯示資料庫記錄[CRowset](../data/oledb/crowset-class.md)物件。 如需 OLE DB 消費者樣板的詳細資訊，請參閱[清單的 OLE DB 消費者樣板](../data/oledb/ole-db-consumer-templates-reference.md)。  

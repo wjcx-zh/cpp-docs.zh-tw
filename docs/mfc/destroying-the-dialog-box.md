@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343920"
 ---
 # <a name="destroying-the-dialog-box"></a>終結對話方塊
 強制回應對話方塊通常堆疊框架上建立和終結時所建立的函式會結束。 當物件超出範圍時，會呼叫對話方塊物件的解構函式。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383493"
 ---
 # <a name="toolbar-tool-tips"></a>工具列工具提示
 工具提示會顯示工具列按鈕的用途的簡短描述當您將滑鼠指標移至按鈕的一段時間的小型快顯視窗。 當您使用具有工具列的應用程式精靈建立應用程式時，為您提供工具提示支援。 這篇文章會說明這兩個工具提示支援應用程式精靈，以及如何將工具提示支援加入至您的應用程式所建立。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347529"
 ---
 # <a name="mapi"></a>MAPI
 本文說明用戶端訊息應用程式開發人員的 Microsoft 訊息應用程式開發介面 (MAPI)。 MFC 提供的類別中 MAPI 子集支援**CDocument**但不會封裝整個 API。 如需詳細資訊，請參閱[MFC 中的 MAPI 支援](../mfc/mapi-support-in-mfc.md)。  

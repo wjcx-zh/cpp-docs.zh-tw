@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316890"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>連結器工具警告 LNK4254
 區段 'section1' （位移） 合併到 'section2' (offset) 有不同的屬性  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347242"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC 網際網路程式設計工作
 本節包含將網際網路支援加入至您應用程式的詳細步驟。 其中的主題包含如何使用 MFC 類別以使您現有的應用程式支援網際網路，以及如何將主動式文件支援加入至現有的 COM 元件。 您要建立包含文件最新股價、 匹茲堡橄欖球分數和南極洲 microsoft 最新溫度提供數個技術可幫助您這樣做，透過網際網路。  

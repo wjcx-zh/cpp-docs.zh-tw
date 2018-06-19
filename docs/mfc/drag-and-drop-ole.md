@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344328"
 ---
 # <a name="drag-and-drop-ole"></a>拖放 (OLE)
 OLE 的拖放功能主要是複製並貼上資料的捷徑。 當您使用 [剪貼簿] 複製或貼上資料時，需要幾個步驟。 您選取的資料，請按一下**剪下**或**複製**從**編輯**功能表上，移至目的地檔案、 視窗或應用程式中，將游標放在想要的位置，然後按一下**貼上**從**編輯**功能表。  

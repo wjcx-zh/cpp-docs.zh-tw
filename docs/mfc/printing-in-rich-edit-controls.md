@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347659"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Rich Edit 控制項中的列印
 您所見的 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 來呈現指定的裝置，例如印表機其輸出。 您也可以指定的 rich edit 控制項的輸出裝置格式化的文字。  

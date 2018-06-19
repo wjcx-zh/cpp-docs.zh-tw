@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383341"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>在擴充的下拉式方塊控制項中使用影像清單
 擴充的下拉式方塊控制項的主要功能是能夠將映像從影像清單與下拉式方塊控制項中的個別項目產生關聯。 每個項目是可以顯示三個不同的映像： 一個為其選取的狀態，另一個適用於其未選取的狀態，以及協力廠商的覆疊影像。  

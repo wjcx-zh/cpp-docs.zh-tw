@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687448"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>使用 Lambda、函式物件和限制函式
 做為引數的呼叫中指定您想要在加速器上執行的 c + + AMP 程式碼[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 您可以提供 lambda 運算式或函式物件 （仿函式），當做該引數。 此外，lambda 運算式或函式物件可以呼叫 c + + AMP 限制函式。 本主題會使用陣列加法演算法，來示範 lambda、 函式物件和限制函式。 下列範例會顯示沒有 c + + AMP 程式碼的演算法。 會建立兩個長度相同的 1 維陣列。 對應的整數項目都會加入，並儲存在第三個 1 維陣列。 不使用 c + + AMP。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342939"
 ---
 # <a name="creating-document-frame-windows"></a>建立文件框架視窗
 [文件/檢視建立](../mfc/document-view-creation.md)示範如何[CDocTemplate](../mfc/reference/cdoctemplate-class.md)物件協調建立框架視窗、 文件和檢視，和它們一起連接。 三個[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)引數`CDocTemplate`建構函式指定框架視窗、 文件和文件範本建立以動態方式以回應使用者命令，例如新的命令，在檔案上的檢視類別功能表或 MDI 視窗功能表的 [新視窗] 命令。 建立檢視和文件框架視窗時，文件範本會儲存這項資訊供日後使用。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291696"
 ---
 # <a name="compiler-warning-level-2-c4285"></a>編譯器警告 (層級 2) C4285
 傳回型別 'identifier:: operator->' 是遞迴的如果套用使用中置標記法  

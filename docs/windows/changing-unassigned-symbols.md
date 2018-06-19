@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855379"
 ---
 # <a name="changing-unassigned-symbols"></a>變更未指定的符號
 在[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可以編輯或刪除尚未指派給資源或物件的現有符號。  

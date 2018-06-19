@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344200"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>文件/檢視架構的替代方案
 MFC 應用程式通常使用文件/檢視架構管理資訊、檔案格式以及對使用者的資料視覺呈現。 對於大部分的桌面應用程式，文件/檢視架構是適當且有效率的應用程式架構。 這種架構會將資料與檢視分開，而且在大部分情況下，可簡化您的應用程式並減少冗餘碼。  

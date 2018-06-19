@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340844"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>文件/檢視架構的優點
 若要使用 MFC 文件/檢視架構的主要優點是結構支援多個檢視的相同文件特別好。 （如果您不需要多個檢視的文件/檢視表的小型負擔增加會過度應用程式中，您可以避免架構。 [文件/檢視架構的替代方案](../mfc/alternatives-to-the-document-view-architecture.md)。)  

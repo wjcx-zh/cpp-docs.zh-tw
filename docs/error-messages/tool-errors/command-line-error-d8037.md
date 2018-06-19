@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298807"
 ---
 # <a name="command-line-error-d8037"></a>命令列錯誤 D8037
 無法建立暫存 il 檔案;舊 il 檔案的初始狀態的暫存目錄  

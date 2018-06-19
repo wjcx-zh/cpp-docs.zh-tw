@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343001"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp：應用程式類別
 在 MFC 中的主要應用程式類別，會封裝 Windows 作業系統應用程式的初始化、執行和終止。 在架構上建置的應用程式必須有一個並只有一個物件的類別衍生自[CWinApp](../mfc/reference/cwinapp-class.md)。 在建立視窗之前，會先建構這個物件。  

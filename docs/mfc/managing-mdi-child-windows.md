@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344931"
 ---
 # <a name="managing-mdi-child-windows"></a>管理 MDI 子視窗
 MDI 主框架視窗 （其中每個應用程式） 包含特殊子視窗呼叫**MDICLIENT**視窗。 **MDICLIENT**視窗會管理主框架視窗的工作區，而其本身具有子視窗： 文件視窗中，衍生自`CMDIChildWnd`。 由於文件視窗本身是框架視窗 (MDI 子視窗)，因此也可以有自己的子視窗。 在所有這些情況中，父視窗會管理其子視窗，並將一些命令轉送給它們。  

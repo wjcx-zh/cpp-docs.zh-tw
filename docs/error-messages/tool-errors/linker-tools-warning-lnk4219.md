@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301131"
 ---
 # <a name="linker-tools-warning-lnk4219"></a>連結器工具警告 LNK4219
 修復名稱修復溢位。 目標 '目標 symbol name' 超出範圍，插入 thunk  

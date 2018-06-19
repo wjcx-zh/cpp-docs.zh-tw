@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334882"
 ---
 # <a name="active-documents-on-the-internet"></a>網際網路上的主動式文件
 主動式文件提供傳統的內嵌物件的擴充功能。 主動式文件可能會多頁，而且會顯示整個工作區中。 它們執行傳統功能表交涉，且可以就地與伺服器應用程式中開啟的視窗中編輯。 而不是顯示為以陰影的框線括住的小矩形，主動式文件會是完整的畫面格和一律就地啟用作用中。  

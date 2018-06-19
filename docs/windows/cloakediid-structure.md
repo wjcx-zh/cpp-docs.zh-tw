@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856156"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 結構
 指出 RuntimeClass、Implements 和 ChainInterfaces 範本指定介面無法在 IID 清單中存取。  

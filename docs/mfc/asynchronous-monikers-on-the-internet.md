@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343359"
 ---
 # <a name="asynchronous-monikers-on-the-internet"></a>網際網路上的非同步 Moniker
 由於網路存取的速度很慢，網際網路需要加入新的方法至應用程式設計。 應用程式應該以非同步方式執行網路存取，避免讓使用者介面失去作用。 MFC 類別[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)下載檔案時，提供非同步支援。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323546"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>編譯器內建和組件語言
 本文件章節包含關於編譯器內建功能和組合語言的資訊。  

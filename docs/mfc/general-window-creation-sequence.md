@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346512"
 ---
 # <a name="general-window-creation-sequence"></a>一般視窗建立順序
 當您建立您自己的資源，例如子視窗的視窗時，架構會使用許多相同的程序中所述[文件/檢視建立](../mfc/document-view-creation.md)。  

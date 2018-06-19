@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345832"
 ---
 # <a name="commonly-overridden-member-functions"></a>常被覆寫的成員函式
 下表列出 `CDialog` 衍生類別中很可能覆寫的成員函式。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292096"
 ---
 # <a name="compiler-warning-level-3-c4792"></a>編譯器警告 (層級 3) C4792
 使用 sysimport 宣告並從機器碼參考的函式 'function'; 匯入程式庫需要連結  

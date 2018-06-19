@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340524"
 ---
 # <a name="writeeflags"></a>__writeeflags
 指定的值寫入程式狀態和控制 (EFLAGS) 註冊。  

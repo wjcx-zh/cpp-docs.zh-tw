@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329432"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 

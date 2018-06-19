@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300640"
 ---
 # <a name="linker-tools-error-lnk1256"></a>連結器工具錯誤 LNK1256
 ALINK 作業失敗：原因  

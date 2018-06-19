@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695414"
 ---
 # <a name="a-examples"></a>答： 範例
 以下是此文件中定義的建構的範例。 請注意，指示詞後面的陳述式是複合只在必要時，非複合陳述式就會縮排對於在它前面的指示詞。

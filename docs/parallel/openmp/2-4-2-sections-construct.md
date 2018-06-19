@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688280"
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections 建構
 **區段**指示詞會識別 noniterative 工作共用建構，可指定一組建構將會分割為個執行緒在一個小組。 每個區段在小組中的執行緒所執行一次。 語法**區段**指示詞時，如下所示：  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334291"
 ---
 # <a name="accessing-file-status"></a>存取檔案狀態
 `CFile` 也支援取得檔案狀態，包括檔案是否存在、建立和修改日期和時間、邏輯大小和路徑。  

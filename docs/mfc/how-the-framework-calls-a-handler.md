@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343608"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>架構如何呼叫處理常式
 下列主題會先檢查如何架構會將命令路由，然後檢查其他訊息和控制項告知如何傳送至 windows:  

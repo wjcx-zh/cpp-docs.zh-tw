@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693336"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>逐步解說：使用聯結以避免死結
 本主題使用哲學家用餐問題，說明如何使用[concurrency:: join](../../parallel/concrt/reference/join-class.md)類別避免應用程式中的死結。 在軟體應用程式中，當兩個或多個處理序都保留資源，且互相等候另一個處理序釋放某些其他資源時，就會發生「死結」。  

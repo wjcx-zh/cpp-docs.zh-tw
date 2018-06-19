@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317654"
 ---
 # <a name="project-build-error-prj0030"></a>專案建置錯誤 PRJ0030
 巨集展開發生錯誤。 評估遞迴超過 32 個層級為 $（巨集）。  

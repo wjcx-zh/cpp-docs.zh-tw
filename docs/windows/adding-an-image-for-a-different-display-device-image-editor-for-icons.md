@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857359"
 ---
 # <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>加入不同顯示裝置的影像 (圖示影像編輯器)
 ### <a name="to-add-an-image-for-a-different-display-device"></a>若要加入不同顯示裝置的影像  

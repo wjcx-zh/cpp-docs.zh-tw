@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854648"
 ---
 # <a name="buffer-overflow"></a>緩衝區溢位
 變動字元大小會造成問題，當您將字元放到緩衝區。 請考慮下列程式碼中的字串字元複製到， `sz`，緩衝區`rgch`:  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383782"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>在日期時間選擇器控制項中使用回呼欄位
 除了定義日期和時間選擇器欄位的標準格式字元以外，您也可以將自訂格式字串的某些部分指定為回呼欄位，以自訂輸出。 若要宣告回呼欄位，請在格式字串主體的任何位置包含一個或多個 "X" 字元 (ASCII 碼 88)。 例如，下列字串 "Today is: 'yy'/'MM'/'dd' (Day 'X')" 可讓日期和時間選擇器控制項以年、月、日、年的天數來顯示目前的值。  

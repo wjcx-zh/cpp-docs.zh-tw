@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342890"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>自訂標頭項目&#39;s 外觀
 藉由設定*dwStyle*參數，當您初次建立標題控制項 ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create))、 您可以定義的外觀和行為的標頭項目，或標頭控制本身。  

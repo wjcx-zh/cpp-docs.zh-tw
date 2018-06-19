@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33848774"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 本移植案例研究的設計，是為了讓您了解什麼是典型移植專案、您可能遇到的問題類型，並提供一些可用於解決移植問題的一般秘訣和訣竅。 這不是最終移植指南，因為移植專案的體驗主要取決於程式碼的細節。  

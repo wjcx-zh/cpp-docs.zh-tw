@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343849"
 ---
 # <a name="exported-dll-function-entry-points"></a>匯出的 DLL 函式進入點
 DLL 的匯出函式，使用[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)巨集來維護適當的全域狀態時從 DLL 模組切換到呼叫應用程式的 DLL。  

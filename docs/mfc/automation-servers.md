@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343940"
 ---
 # <a name="automation-servers"></a>Automation 伺服程式
 Automation 可讓您的應用程式操作另一個應用程式中實作的物件，或者公開物件，以便可以操作該物件。 Automation 伺服器是公開可程式化物件 （稱為 Automation 物件） 給其他應用程式的應用程式 (稱為[Automation 用戶端](../mfc/automation-clients.md))。 Automation 伺服器有時稱為 Automation 元件。  

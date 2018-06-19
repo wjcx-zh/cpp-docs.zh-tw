@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384058"
 ---
 # <a name="using-views"></a>使用檢視
 檢視的責任是以圖形方式顯示給使用者的文件的資料，以及為接受和解譯使用者輸入為文件上的作業。 您在撰寫您的檢視類別的工作如下：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300824"
 ---
 # <a name="linker-tools-error-lnk1215"></a>連結器工具錯誤 LNK1215
 中繼資料作業失敗 (HRESULT): 錯誤  

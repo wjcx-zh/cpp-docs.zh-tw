@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343508"
 ---
 # <a name="ole-classes"></a>OLE 類別
 OLE 類別可與其他應用程式架構類別搭配使用，讓您輕鬆存取 ActiveX 應用程式開發介面，讓您的程式以最簡單的方法提供 ActiveX 功能給使用者。 您可以使用 ActiveX 來：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385881"
 ---
 # <a name="types-of-image-lists"></a>影像清單的類型
 有兩種類型的影像清單 ([CImageList](../mfc/reference/cimagelist-class.md)): 非遮罩和遮罩。 「 非遮罩的影像清單 」 包含色彩的點陣圖，其中包含一或多個映像。 「 遮罩的影像清單 」 包含兩個相同大小的點陣圖。 第一個是色彩的點陣圖，其中包含這些影像，以及第二個是單色點陣圖，其中包含一系列的遮罩，其中每個映像中的第一個點陣圖。  

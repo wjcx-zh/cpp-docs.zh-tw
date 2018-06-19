@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347356"
 ---
 # <a name="implementing-working-areas-in-list-controls"></a>在清單控制項中實作工作區域
 根據預設，清單控制項排列標準格線樣式中的所有項目。 不過，另一個支援的方法，工作區的清單項目排列成矩形的群組。 實作工作區域的清單控制項的影像，請參閱 Windows SDK 中使用清單檢視控制項。  

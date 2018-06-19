@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347327"
 ---
 # <a name="property-sheets-as-wizards"></a>屬性工作表做為精靈
 精靈屬性工作表的主要特性是所提供的巡覽隨附 [下一步]、[完成]、[上一步] 和 [取消] 按鈕，而非索引標籤。 您需要呼叫[cpropertysheet:: Domodal](../mfc/reference/cpropertysheet-class.md#setwizardmode)之前先呼叫[cpropertysheet:: Setwizardmode](../mfc/reference/cpropertysheet-class.md#domodal)屬性工作表物件，利用這項功能。  

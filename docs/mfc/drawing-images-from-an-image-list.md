@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345205"
 ---
 # <a name="drawing-images-from-an-image-list"></a>從影像清單描繪影像
 若要繪製影像，請使用[cimagelist:: Draw](../mfc/reference/cimagelist-class.md#draw)成員函式。 您將會指定裝置內容物件指標、繪製之影像索引、裝置內容中要繪製影像的位置，以及指出繪製樣式的一組旗標。  

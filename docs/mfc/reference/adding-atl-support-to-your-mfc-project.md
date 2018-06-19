@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347064"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>將 ATL 支援加入至 MFC 專案
 如果您已經建立以 MFC 為基礎的應用程式，然後您可以新增支援的 Active Template Library (ATL) 中輕鬆地執行將 ATL 支援加入至 MFC 專案精靈。  

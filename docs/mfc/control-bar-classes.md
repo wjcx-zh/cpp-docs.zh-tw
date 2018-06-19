@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342016"
 ---
 # <a name="control-bar-classes"></a>控制列類別
 控制列會附加至框架視窗。 它們包含按鈕、 狀態窗格或對話方塊範本。 自由浮動控制列，也稱為工具板由附加至這些[CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md)物件。  

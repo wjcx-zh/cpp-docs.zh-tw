@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345022"
 ---
 # <a name="initinstance-member-function"></a>InitInstance 成員函式
 Windows 作業系統可讓您執行相同應用程式的多個複本或「執行個體」。 `WinMain` 呼叫[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)每次啟動應用程式的新執行個體。  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380873"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056：當地語系化 MFC 元件的安裝
 這個技術提示討論的是當地語系化 MFC 元件的安裝，現在已經過時。  

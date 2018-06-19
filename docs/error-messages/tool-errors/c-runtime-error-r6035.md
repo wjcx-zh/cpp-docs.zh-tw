@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299743"
 ---
 # <a name="c-runtime-error-r6035"></a>C 執行階段錯誤 R6035
 依賴該安全性 cookie 的函式作用中時，Microsoft Visual c + + 執行階段程式庫，錯誤 R6035-此應用程式中的模組正在初始化模組的全域安全性 cookie。  呼叫 __security_init_cookie 稍早所示。  

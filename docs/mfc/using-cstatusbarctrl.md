@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383546"
 ---
 # <a name="using-cstatusbarctrl"></a>使用 CStatusBarCtrl
 您可以使用狀態列控制項 ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) 來建立反映各種應用程式的狀態資訊的控制項視窗。 狀態視窗可以分割為多個部分，以顯示多種類型的資訊。  

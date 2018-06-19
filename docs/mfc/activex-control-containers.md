@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338971"
 ---
 # <a name="activex-control-containers"></a>ActiveX 控制項容器
 ActiveX 控制項容器是一種完全支援 ActiveX 控制項的容器，可以將其合併至自己的視窗或對話方塊中。 ActiveX 控制項可讓您在許多開發專案中重複使用的軟體項目。 控制項可讓您應用程式的使用者存取資料庫、監視資料，以及在您的應用程式中做出各種選擇。 如需 ActiveX 控制項的詳細資訊，請參閱文章[MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)。  

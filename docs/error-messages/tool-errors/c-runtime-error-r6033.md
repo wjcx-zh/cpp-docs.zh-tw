@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299990"
 ---
 # <a name="c-runtime-error-r6033"></a>C 執行階段錯誤 R6033
 嘗試使用從原生程式碼初始化期間這個組件的 MSIL 程式碼。 這表示您的應用程式中的 bug。 最有可能是呼叫 MSIL 編譯的結果 (/ clr) 函式從原生的建構函式，或從 DllMain。  

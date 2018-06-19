@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687656"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>如何：管理排程器執行個體
 排程器執行個體，可讓您將特定的排程原則與各種類型的工作負載產生關聯。 本主題包含兩個基本範例示範如何建立及管理排程器執行個體。  

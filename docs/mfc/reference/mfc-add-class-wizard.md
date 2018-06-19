@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373407"
 ---
 # <a name="mfc-add-class-wizard"></a>MFC 加入類別精靈
 使用此程式碼精靈，將類別新增至現有的 MFC 專案，或將類別加入支援 MFC 的 ATL 專案。 您也可以加入至 Win32 專案 MFC 支援的 MFC 類別。 建立您的專案時指定的功能會決定在此對話方塊中可用的選項。  

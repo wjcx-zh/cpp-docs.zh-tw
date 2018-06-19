@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854934"
 ---
 # <a name="activationfactoryactivationfactory-constructor"></a>ActivationFactory::ActivationFactory 建構函式
 初始化 ActivationFactory 類別。  

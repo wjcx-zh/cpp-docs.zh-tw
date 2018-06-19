@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345037"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>應用程式精靈所建立的框架視窗類別
 當您使用[應用程式精靈](../ide/creating-desktop-projects-by-using-application-wizards.md)應用程式精靈建立基本架構應用程式，應用程式、 文件和檢視類別，除了建立應用程式的主框架視窗的衍生的框架視窗類別。 此類別預設稱為 `CMainFrame`，包含此類別的檔案名稱為 MAINFRM.H 和 MAINFRM.CPP。  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347090"
 ---
 # <a name="menus-and-resources-ole"></a>功能表和資源 (OLE)
 本系列文件說明如何使用功能表和 MFC OLE 文件應用程式中的資源。  

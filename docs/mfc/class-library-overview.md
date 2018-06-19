@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346896"
 ---
 # <a name="class-library-overview"></a>類別庫概觀
 本概觀分類，並說明在 Microsoft Foundation 類別庫 (MFC) 9.0 版的類別。 在 MFC 中，同時採用兩者，類別會構成應用程式架構，適用於 Windows API 撰寫的應用程式的架構。 填入您的應用程式特有的程式碼為您的程式設計工作。  

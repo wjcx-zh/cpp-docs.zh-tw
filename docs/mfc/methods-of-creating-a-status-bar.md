@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346925"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>建立狀態列的方法
 MFC 提供兩個類別建立狀態列： [CStatusBar](../mfc/reference/cstatusbar-class.md)和[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) （包裝 Windows 通用控制項 API）。 `CStatusBar` 提供的所有功能的通用控制項狀態列，它會自動與互動功能表和工具列，以及處理許多必要的通用控制項設定和結構。不過，產生可執行檔通常會大於使用建立`CStatusBarCtrl`。  

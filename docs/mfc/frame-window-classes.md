@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347882"
 ---
 # <a name="frame-window-classes"></a>框架視窗類別
 每個應用程式有一個 「 主框架視窗，」 通常具有其標題中的 應用程式名稱的桌面視窗。 每份文件通常有一個 「 文件框架視窗 」。 文件框架視窗包含至少一個檢視，其呈現文件的資料。  

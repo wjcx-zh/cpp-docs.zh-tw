@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346333"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>ActiveX 控制項容器：將控制項插入控制項容器應用程式中
 您可以從 ActiveX 控制項容器應用程式存取 ActiveX 控制項之前，您必須加入 ActiveX 控制項容器應用程式使用[插入 ActiveX 控制項](../windows/insert-activex-control-dialog-box.md) 對話方塊。  

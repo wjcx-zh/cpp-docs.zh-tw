@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342425"
 ---
 # <a name="creating-modal-dialog-boxes"></a>建立強制回應對話方塊
 若要建立強制回應對話方塊中，呼叫兩個公用建構函式中宣告的任何一個[CDialog](../mfc/reference/cdialog-class.md)。 接下來，呼叫對話方塊物件的[DoModal](../mfc/reference/cdialog-class.md#domodal)成員函式來顯示對話方塊和管理與其互動，直到使用者選擇 [確定] 或 [取消]。 由 `DoModal` 進行的這個管理會讓對話方塊強制回應。 對於強制回應對話方塊，`DoModal` 會載入對話方塊資源。  

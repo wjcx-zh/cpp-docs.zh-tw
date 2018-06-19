@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342081"
 ---
 # <a name="creating-the-dialog-resource"></a>建立對話方塊資源
 設計[對話方塊](../mfc/dialog-boxes.md)並且建立對話方塊資源，則使用[對話方塊編輯器](../windows/dialog-editor.md)。 在對話方塊編輯器中，您可以：  

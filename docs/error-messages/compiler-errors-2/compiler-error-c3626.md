@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266164"
 ---
 # <a name="compiler-error-c3626"></a>編譯器錯誤 C3626
 'keyword': '__event' 關鍵字只能用於 COM 介面、 成員函式和是委派指標的資料成員  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162321"
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 樣板類別，包裝一組迭代器，可用來實作數個基底類別程式庫 (BCL) 介面。 您可以使用 range_adapter 來操作 STL/CLR 範圍，就好像 BCL 集合。  

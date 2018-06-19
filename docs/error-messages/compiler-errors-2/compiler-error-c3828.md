@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267416"
 ---
 # <a name="compiler-error-c3828"></a>編譯器錯誤 C3828
 'object type': 正在建立的執行個體受管理時，不允許位置引數或 WinRTclasses  

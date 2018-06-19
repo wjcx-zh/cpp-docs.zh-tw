@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161430"
 ---
 # <a name="resource-management-classes"></a>資源管理類別
 這些類別提供 Managed 類別的自動管理。  

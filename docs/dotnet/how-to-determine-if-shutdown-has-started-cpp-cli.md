@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137698"
 ---
 # <a name="how-to-determine-if-shutdown-has-started-ccli"></a>如何：判斷是否已開始關機 (C++/CLI)
 下列程式碼範例示範如何判斷是否在應用程式或.NET Framework 已目前終止。 這可用於存取.NET Framework 中的靜態項目，因為在關機，這些建構函式，系統會完成，且無法可靠地使用。 藉由檢查<xref:System.Environment.HasShutdownStarted%2A>屬性第一次，您可以避免潛在的失敗不會存取這些項目。  

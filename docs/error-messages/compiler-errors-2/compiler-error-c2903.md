@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248251"
 ---
 # <a name="compiler-error-c2903"></a>編譯器錯誤 C2903
 'identifier': 符號不是類別樣板，也不是函式樣板  

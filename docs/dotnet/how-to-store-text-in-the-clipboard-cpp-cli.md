@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138515"
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>如何：將文字儲存在剪貼簿中 (C++/CLI)
 下列程式碼範例使用<xref:System.Windows.Forms.Clipboard>中定義的物件<xref:System.Windows.Forms>命名空間來儲存字串。 這個物件會提供兩個成員函式：<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>和<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>。 會儲存在剪貼簿的資料傳送任何物件衍生自<xref:System.Object>至<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>。  

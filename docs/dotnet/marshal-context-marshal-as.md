@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136203"
 ---
 # <a name="marshalcontextmarshalas"></a>marshal_context::marshal_as
 在特定資料物件上執行封送處理，以便在 Managed 資料類型和原生資料類型之間進行轉換。  

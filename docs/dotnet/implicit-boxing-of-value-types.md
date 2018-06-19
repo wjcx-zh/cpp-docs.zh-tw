@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132215"
 ---
 # <a name="implicit-boxing-of-value-types"></a>實值類型的隱含 Boxing
 實值類型的 boxing 已從 Managed Extensions for c + + Visual c + +。  

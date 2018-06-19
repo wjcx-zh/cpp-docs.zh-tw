@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107411"
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 指定 `COLUMN_ENTRY` 巨集輸入、輸出或輸入/輸出之後的 `SET_PARAM_TYPE` 巨集。  

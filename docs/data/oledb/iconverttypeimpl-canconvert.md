@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099884"
 ---
 # <a name="iconverttypeimplcanconvert"></a>IConvertTypeImpl::CanConvert
 命令或上一個資料列集，請提供可用性資訊的型別轉換。  

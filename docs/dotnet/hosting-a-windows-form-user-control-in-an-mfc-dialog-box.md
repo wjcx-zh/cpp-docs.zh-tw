@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129433"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載至 MFC 對話方塊中
 MFC ActiveX 控制項是特殊類型裝載 Windows Form 控制項和使用 ActiveX 介面及屬性和方法的控制項與通訊<xref:System.Windows.Forms.Control>類別。 我們建議您使用.NET Framework 的屬性和方法在控制項上運作。  

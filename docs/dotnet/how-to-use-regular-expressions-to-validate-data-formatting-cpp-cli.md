@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129612"
 ---
 # <a name="how-to-use-regular-expressions-to-validate-data-formatting-ccli"></a>如何：使用規則運算式驗證資料格式 (C++/CLI)
 下列程式碼範例示範如何使用規則運算式確認字串的格式。 在下列程式碼範例中，字串應該包含有效的電話號碼。 下列程式碼範例會使用字串"\d{3}-\d{3}-\d{4}"來指出每個欄位代表有效的電話號碼。 在字串"d"表示數字，和"d"後面的引數指出必須要有的數字的數目。 在此情況下，數字，才能以破折號分隔。  

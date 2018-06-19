@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138674"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載成 MFC 對話方塊
 MFC 提供此範本類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) ，讓您可以裝載 Windows Form 使用者控制項 (<xref:System.Windows.Forms.UserControl>) 強制或非強制回應 MFC 對話方塊中。 `CWinFormsDialog` 從 MFC 類別衍生[CDialog](../mfc/reference/cdialog-class.md)，因此可以啟動為強制回應或非強制回應對話方塊。  

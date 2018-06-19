@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271366"
 ---
 # <a name="compiler-warning-level-1-c4344"></a>編譯器警告 (層級 1) C4344
 行為變更： 使用明確樣板引數會導致呼叫 'function'  

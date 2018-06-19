@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164992"
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>靜態 Const 整數連結不再是常值
 宣告常數成員的類別已從 Managed Extensions for c + + Visual c + +。  

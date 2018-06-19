@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248847"
 ---
 # <a name="compiler-error-c3136"></a>編譯器錯誤 C3136
 'interface': COM 介面只可以繼承自其他 COM 介面，不是 COM 介面 'interface'。  

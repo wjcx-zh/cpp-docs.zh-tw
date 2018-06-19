@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137673"
 ---
 # <a name="managed-types-ccli"></a>Managed 類型 (C++/CLI)
 Visual c + + 可讓您透過 managed 型別，以便支援 common language runtime 的功能並受限於的優點和限制的執行階段的.NET 功能存取。  

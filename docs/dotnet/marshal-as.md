@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133775"
 ---
 # <a name="marshalas"></a>marshal_as
 這個方法會將原生和 managed 環境之間的資料轉換。  

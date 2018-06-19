@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161443"
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 放棄擁有權的 COM 物件，傳回物件的指標。  

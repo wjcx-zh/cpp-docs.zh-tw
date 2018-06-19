@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130123"
 ---
 # <a name="how-to-write-a-binary-file-ccli"></a>如何：寫入二進位檔案 (C++/CLI)
 下列程式碼範例會示範寫入檔案的二進位資料。 兩個類別<xref:System.IO>會使用命名空間：<xref:System.IO.FileStream>和<xref:System.IO.BinaryWriter>。 <xref:System.IO.FileStream> 代表實際的檔案，而<xref:System.IO.BinaryWriter>提供介面，可讓您存取二進位資料流。  

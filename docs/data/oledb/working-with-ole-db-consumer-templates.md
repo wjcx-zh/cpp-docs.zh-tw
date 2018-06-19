@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108259"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 消費者樣板
 下列主題提供如何在一般情況下使用 OLE DB 消費者樣板的部分範例：  

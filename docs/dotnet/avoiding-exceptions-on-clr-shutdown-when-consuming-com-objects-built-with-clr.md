@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103508"
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>當使用以 /clr 建置的 COM 物件時防止 CLR 關閉之例外狀況
 Common language runtime (CLR) 進入關機模式，一旦原生函式具有有限的 CLR 服務的存取權。 COM 物件時嘗試呼叫版本上使用編譯 **/clr**、 CLR 轉換為原生程式碼，然後再轉換回服務 （這定義在 managed 程式碼） Iunknown 呼叫 managed 程式碼。 CLR 會防止回 managed 程式碼呼叫，因為它是在關機模式。  

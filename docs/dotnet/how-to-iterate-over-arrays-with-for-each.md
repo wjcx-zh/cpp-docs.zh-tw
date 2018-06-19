@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130499"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>如何：使用 for each 反覆查看陣列
 本主題示範如何使用[針對每個，在](../dotnet/for-each-in.md)關鍵字上不同類型的陣列。  

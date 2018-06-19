@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254405"
 ---
 # <a name="compiler-error-c3282"></a>編譯器錯誤 C3282
 泛型參數清單只能出現在受管理或 WinRTclasses、 結構或函式  

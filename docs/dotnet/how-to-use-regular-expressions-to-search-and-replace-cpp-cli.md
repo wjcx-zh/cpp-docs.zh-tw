@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132410"
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>如何：使用規則運算式進行搜尋和取代 (C++/CLI)
 下列程式碼範例示範如何規則運算式類別<xref:System.Text.RegularExpressions.Regex>可用來執行搜尋和取代。 做法是使用<xref:System.Text.RegularExpressions.Regex.Replace%2A>方法。 使用的版本會採用兩個字串做為輸入： 將修改字串和要插入的區段取代 （如果有的話） 字串的比對模式提供給<xref:System.Text.RegularExpressions.Regex>物件。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269253"
 ---
 # <a name="compiler-error-c3803"></a>編譯器錯誤 C3803
 'property': 屬性有其存取子 'accessor' 的其中一個與不相容的型別  

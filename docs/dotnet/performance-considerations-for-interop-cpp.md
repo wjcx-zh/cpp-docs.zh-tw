@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164046"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Interop 的效能考量 (C++)
 本主題提供指導方針，以減少對執行階段效能的 managed/unmanaged interop 轉換效果。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252552"
 ---
 # <a name="compiler-error-c3284"></a>編譯器錯誤 C3284
 泛型參數 'parameter' 的條件約束 (屬於函式 'function') 必須符合泛型參數 'parameter' 的條件約束 (屬於函式 'function')  

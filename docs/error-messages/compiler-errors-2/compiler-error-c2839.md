@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255581"
 ---
 # <a name="compiler-error-c2839"></a>編譯器錯誤 C2839
 無效的傳回型別 'type' 針對多載的 'operator ->'  

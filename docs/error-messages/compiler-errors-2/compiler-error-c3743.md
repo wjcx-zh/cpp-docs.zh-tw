@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266512"
 ---
 # <a name="compiler-error-c3743"></a>編譯器錯誤 C3743
 可以只攔截/取消攔截整個介面當 event_receiver 的 'layout_dependent' 參數為 true 時  

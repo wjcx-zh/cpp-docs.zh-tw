@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130761"
 ---
 # <a name="how-to-detect-clr-compilation"></a>如何：偵測 /clr 編譯
 使用`_MANAGED`或`_M_CEE`巨集，請參閱模組會使用編譯 **/clr**。 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)。  

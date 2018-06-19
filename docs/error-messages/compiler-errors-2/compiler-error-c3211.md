@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249179"
 ---
 # <a name="compiler-error-c3211"></a>編譯器錯誤 C3211
 'explicit specialization' : 明確特製化使用的是部分特製化語法，請改用樣板 <>  

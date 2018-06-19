@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127847"
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>如何：擷取檔案資訊 (C++/CLI)
 下列程式碼範例示範<xref:System.IO.FileInfo>類別。 當您擁有的檔案名稱時，您可以使用這個類別來擷取檔案如下的檔案大小、 目錄、 完整名稱，以及日期和時間相關的資訊建立和上次修改。  

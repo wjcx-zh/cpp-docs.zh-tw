@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272704"
 ---
 # <a name="compiler-error-c3891"></a>編譯器錯誤 C3891
 'var': 常值資料成員不能做為左值  

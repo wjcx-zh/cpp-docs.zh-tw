@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129745"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>如何：存取 System::String 中的字元
 您可以存取的字元<xref:System.String>物件的未受管理的高效能呼叫函式採用`wchar_t*`字串。 這個方法會產生的第一個字元的內部指標<xref:System.String>物件。 此指標可以可直接操作或釘選並傳遞至函式必須要有一般`wchar_t`字串。  

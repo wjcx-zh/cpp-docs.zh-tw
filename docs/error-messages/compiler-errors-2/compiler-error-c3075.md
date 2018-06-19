@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255545"
 ---
 # <a name="compiler-error-c3075"></a>編譯器錯誤 C3075
 'instance' : 不可將參考類型的執行個體 'type' 嵌入實值類型中  

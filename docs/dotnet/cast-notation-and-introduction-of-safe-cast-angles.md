@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111636"
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>轉換通知和 safe_cast 的簡介&lt;&gt;
 轉型的表示法已從 Managed Extensions for c + + Visual c + +。  

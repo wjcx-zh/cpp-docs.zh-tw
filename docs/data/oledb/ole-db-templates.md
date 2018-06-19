@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109569"
 ---
 # <a name="ole-db-templates"></a>OLE DB 樣板
 OLE DB 範本可讓 OLE DB 資料存取更為容易。 Visual c + + 提供的範本類別，其中實作許多常用的 OLE DB 介面。 您可以使用 Visual c + + 取用者範本撰寫 OLE DB 用戶端 （消費者） 應用程式，以及提供者範本撰寫應用程式伺服器 （提供者）。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163484"
 ---
 # <a name="replace-stlclr"></a>replace (STL/CLR)
 檢查範圍內的每個項目，如果符合指定的值則予以取代。  

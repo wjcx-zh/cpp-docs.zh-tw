@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130460"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 Unicode 字串
 本主題會示範一個 facet 的 Visual c + + 的互通性。 如需詳細資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  

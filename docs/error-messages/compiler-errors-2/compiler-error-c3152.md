@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249407"
 ---
 # <a name="compiler-error-c3152"></a>編譯器錯誤 C3152
 'construct'：'keyword' 只能套用至類別、結構或虛擬成員函式  

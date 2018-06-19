@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160012"
 ---
 # <a name="ptroperator-gt"></a>ptr::operator-&gt;
 成員存取運算子，用來在擁有的 COM 物件上呼叫方法。  

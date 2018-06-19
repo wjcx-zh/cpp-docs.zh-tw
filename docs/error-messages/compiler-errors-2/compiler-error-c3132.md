@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252383"
 ---
 # <a name="compiler-error-c3132"></a>編譯器錯誤 C3132
 ' 函式參數 ': 參數陣列只能套用至型別 '受管理的一維陣列' 的型式引數  

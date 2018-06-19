@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248992"
 ---
 # <a name="compiler-error-c3228"></a>編譯器錯誤 C3228
 'function': 'param' 的泛型類型引數不可為 'type'，它必須是實值類型或控制代碼類型  

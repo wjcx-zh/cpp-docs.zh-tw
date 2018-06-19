@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100365"
 ---
 # <a name="idbinitializeimplmpcutlpropinfo"></a>IDBInitializeImpl::m_pCUtlPropInfo
 DB 屬性資訊的實作物件的指標。  

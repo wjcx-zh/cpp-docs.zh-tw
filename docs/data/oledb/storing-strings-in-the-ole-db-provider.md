@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106982"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>將字串儲存於 OLE DB 提供者內
 MyProviderRS.h，在 ATL OLE DB 提供者精靈會建立稱為 「 預設使用者記錄`CWindowsFile`。 若要處理的兩個字串，請修改`CWindowsFile`或加入您自己的使用者記錄，如下列程式碼所示：  

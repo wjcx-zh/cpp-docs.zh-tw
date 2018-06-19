@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114480"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用 Managed 例外狀況中的基本概念
 本主題討論在 managed 應用程式中處理的例外狀況。 也就是使用編譯的應用程式 **/clr**編譯器選項。  

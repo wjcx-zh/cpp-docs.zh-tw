@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138773"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>如何：在 C++/CLI 中使用陣列
 本文說明如何使用陣列，在 C + + /CLI。  

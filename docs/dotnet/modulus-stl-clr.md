@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134470"
 ---
 # <a name="modulus-stlclr"></a>modulus (STL/CLR)
 此範本類別描述函式，呼叫時，會傳回第一個引數，第二個模數。 您可以使用它指定其引數類型方面的函式物件。  

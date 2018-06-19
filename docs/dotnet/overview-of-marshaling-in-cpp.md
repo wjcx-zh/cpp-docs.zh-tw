@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137130"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中封送處理的概觀
 在混合模式中，您有時必須封送處理您原生與 managed 型別之間的資料。 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] 導入了封送處理程式庫，可協助您封送處理，並將資料轉換的簡單方式。  

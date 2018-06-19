@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247413"
 ---
 # <a name="compiler-error-c3206"></a>編譯器錯誤 C3206
 'function' : 'param' 的類型引數無效，類別類型 'typename' 遺漏類型引數清單  

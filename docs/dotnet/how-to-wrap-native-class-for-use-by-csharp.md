@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128689"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包裝原生類別以便讓 C# 使用
 這個範例示範如何在包裝原生 c + + 類別，讓它可供以 C# 或其他.NET 語言撰寫的程式碼。  

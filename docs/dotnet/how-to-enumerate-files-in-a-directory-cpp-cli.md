@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127886"
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>如何：列舉目錄中的檔案 (C++/CLI)
 下列程式碼範例示範如何擷取目錄中檔案的清單。 此外，會列舉子目錄。 下列程式碼範例使用<xref:System.IO.Directory.GetFiles%2A><xref:System.IO.Directory.GetFiles%2A>和<xref:System.IO.Directory.GetDirectories%2A>方法，以顯示 C:\Windows 目錄的內容。  

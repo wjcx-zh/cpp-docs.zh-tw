@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112676"
 ---
 # <a name="testing-the-read-only-provider"></a>測試唯讀提供者
 若要測試的提供者，您需要取用者。 如果取用者可以比對與提供者，它可幫助。 OLE DB 消費者樣板是 OLE DB 的精簡型包裝函式，而且與提供者 COM 物件相符。 來源隨附的取用者範本，因為很容易進行偵錯與它們的提供者。 消費者樣板也是開發取用者應用程式非常小且更快速的方式。  

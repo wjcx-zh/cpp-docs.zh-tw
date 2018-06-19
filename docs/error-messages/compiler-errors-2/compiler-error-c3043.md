@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250536"
 ---
 # <a name="compiler-error-c3043"></a>編譯器錯誤 C3043
 OpenMP 'critical' 指示詞不能以巢狀方式置於相同名稱的 'critical' 指示詞中  

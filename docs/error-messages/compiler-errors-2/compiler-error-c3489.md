@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253314"
 ---
 # <a name="compiler-error-c3489"></a>編譯器錯誤 C3489
 預設擷取模式為傳值方式時需要 'var'  

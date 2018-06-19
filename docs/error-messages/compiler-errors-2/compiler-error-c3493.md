@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257312"
 ---
 # <a name="compiler-error-c3493"></a>編譯器錯誤 C3493
 無法隱含擷取 'var'，因為未指定預設的擷取模式  

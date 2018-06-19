@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096648"
 ---
 # <a name="crowsetaddrefrows"></a>CRowset::AddRefRows
 呼叫[irowset:: Addrefrows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) （藉由一個） 會遞增參考計數相關聯的目前資料列控制代碼。  

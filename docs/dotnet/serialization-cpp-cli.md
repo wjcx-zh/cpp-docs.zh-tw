@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164555"
 ---
 # <a name="serialization-ccli"></a>序列化 (C++/CLI)
 序列化 （儲存狀態的物件或成員到永久性媒體的程序） 的 managed 類別 （包括個別欄位或屬性） 會受到<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>類別。  

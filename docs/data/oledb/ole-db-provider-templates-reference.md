@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112416"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供者樣板參考
 類別和介面的 OLE DB 提供者樣板可以分為下列類別。 參考資料也包含下列資訊[OLE DB 提供者樣板巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)。  

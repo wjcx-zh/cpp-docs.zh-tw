@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251120"
 ---
 # <a name="compiler-error-c3203"></a>編譯器錯誤 C3203
 'type'：特製化的類別樣板或泛型，無法做為樣板或泛型參數 'param' 的樣板或泛型引數，必須是實數類型  

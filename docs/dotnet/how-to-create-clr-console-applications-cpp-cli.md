@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132566"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>如何：建立 CLR 主控台應用程式 (C++/CLI)
 您可以使用主控台應用程式範本，建立已經有基本專案參考及檔案的主控台應用程式專案。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135114"
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>在類別或介面中的成員宣告 (C++/CLI)
 屬性和運算子的宣告具有已廣泛地進行修改從 Managed Extensions for c + + Visual c + +，隱藏暴露在 Managed Extensions 設計的基礎實作詳細資料。 也已修改事件宣告。  

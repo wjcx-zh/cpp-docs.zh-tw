@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276707"
 ---
 # <a name="compiler-warning-level-1-c4224"></a>編譯器警告 (層級 1) C4224
 使用非標準擴充： 型式參數 'identifier' 先前已定義為類型  

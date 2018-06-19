@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248521"
 ---
 # <a name="compiler-error-c3190"></a>編譯器錯誤 C3190
 '具現化' 提供的範本引數不是 'type' 的任何成員函式的明確具現化  

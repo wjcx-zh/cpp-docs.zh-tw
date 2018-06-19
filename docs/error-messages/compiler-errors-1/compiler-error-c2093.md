@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170709"
 ---
 # <a name="compiler-error-c2093"></a>編譯器錯誤 C2093
 'variable1': 不可以使用 自動變數 'variable2' 的位址初始化  

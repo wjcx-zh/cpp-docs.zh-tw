@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137989"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`hash_multimap`若要管理的項目序列的雜湊表，儲存雙向的每個資料表項目連結清單節點，以及儲存一個項目每個節點。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  

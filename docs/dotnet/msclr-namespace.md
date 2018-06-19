@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132904"
 ---
 # <a name="msclr-namespace"></a>msclr 命名空間
 `msclr` 命名空間包含 C++ 支援程式庫的所有類別。 如需有關這些類別的詳細資訊，請參閱[c + + 支援程式庫](../dotnet/cpp-support-library.md)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163006"
 ---
 # <a name="randomshuffle-stlclr"></a>random_shuffle (STL/CLR)
 重新排列一系列`N`的其中一個範圍中的項目`N`！ 排列方式隨機選取的其中一個。  

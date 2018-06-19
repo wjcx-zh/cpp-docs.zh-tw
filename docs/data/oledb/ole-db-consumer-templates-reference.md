@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112052"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB 消費者樣板參考
 OLE DB 消費者樣板包含下列類別。 參考資料也包含在主題[OLE DB 消費者樣板的巨集](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  

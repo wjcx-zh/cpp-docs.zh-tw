@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104395"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
 當您使用 ATL OLE DB 消費者精靈 建立消費者時，精靈會在您指定資料行對應中每個欄位的使用者記錄類別中產生的資料成員。 每個資料成員的類型是`DWORD`並包含對應至其個別欄位的狀態值。  

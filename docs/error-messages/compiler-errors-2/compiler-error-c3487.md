@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256333"
 ---
 # <a name="compiler-error-c3487"></a>編譯器錯誤 C3487
 'return type'：所有傳回運算式必須推算為相同類型：先前是 'return type'  

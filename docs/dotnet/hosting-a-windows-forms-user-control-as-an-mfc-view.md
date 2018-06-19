@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137623"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>將 Windows Form 使用者控制項裝載為 MFC 檢視
 MFC 使用 CWinFormsView 類別來裝載 Windows Form 使用者控制項在 MFC 檢視中。 MFC Windows Form 檢視是 ActiveX 控制項。 使用者控制項裝載為子系的原生的檢視，並佔用整個工作區的原生的檢視。  

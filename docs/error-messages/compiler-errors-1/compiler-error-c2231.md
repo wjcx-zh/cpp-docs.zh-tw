@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168551"
 ---
 # <a name="compiler-error-c2231"></a>編譯器錯誤 C2231
 '。 ': 左運算元指向 'class-key'，請使用 '->'  

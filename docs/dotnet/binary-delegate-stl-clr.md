@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105760"
 ---
 # <a name="binarydelegate-stlclr"></a>binary_delegate (STL/CLR)
 Genereic 類別描述兩個引數的委派。 您可以使用它指定的委派，以其引數和傳回型別。  

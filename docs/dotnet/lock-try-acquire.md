@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137506"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 取得等待指定的時間量，且傳回物件的鎖定`bool`回報成功的擷取，而不是擲回例外狀況。  

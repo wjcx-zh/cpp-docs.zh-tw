@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247689"
 ---
 # <a name="compiler-error-c3239"></a>編譯器錯誤 C3239
 'type': Common Language Runtime 不允許內部/Pin 指標的指標  

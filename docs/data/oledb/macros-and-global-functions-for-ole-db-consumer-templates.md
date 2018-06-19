@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114311"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB 消費者樣板的巨集和全域函式
 OLE DB 消費者樣板可包括下列巨集和全域函式：  

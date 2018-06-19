@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112741"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 提供者樣板 (C++)
 OLE DB 是 Microsoft 通用資料存取策略中很重要的一部分。 OLE DB 設計可讓您從任何資料來源的高效能資料存取。 可透過 OLE DB 不論它是否來自資料庫檢視任何表格式資料。 這種彈性提供極大的電源。  

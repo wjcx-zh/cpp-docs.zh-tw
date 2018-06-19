@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164592"
 ---
 # <a name="sealing-a-virtual-function"></a>密封虛擬函式
 密封虛擬函式的語法已從 Managed Extensions for c + + Visual c + +。  

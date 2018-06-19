@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136686"
 ---
 # <a name="operatorlt-multiset-stlclr"></a>運算子&lt;(multiset) (STL/CLR)
 清單小於比較。  

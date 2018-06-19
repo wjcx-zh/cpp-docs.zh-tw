@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167128"
 ---
 # <a name="upperbound-stlclr"></a>upper_bound (STL/CLR)
 在已排序範圍中尋找值大於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167833"
 ---
 # <a name="unarydelegatenoreturn-stlclr"></a>unary_delegate_noreturn (STL/CLR)
 Genereic 類別描述一個引數委派，會傳回`void`。 您可以使用它指定其引數類型方面的委派。  

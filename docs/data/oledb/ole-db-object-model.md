@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111077"
 ---
 # <a name="ole-db-object-model"></a>OLE DB 物件模型
 OLE DB 物件模型包含下列物件或元件。 第四個物件或 （資料來源、 工作階段、 命令和資料列集） 所列出的元件，可讓您連接到資料來源並加以檢視。 顯示時使用的資料與相關聯的其餘部分，從存取子中，開始。  

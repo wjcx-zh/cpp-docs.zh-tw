@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33126183"
 ---
 # <a name="hashsetgenericreverseiterator-stlclr"></a>hash_set::generic_reverse_iterator (STL/CLR)
 反向迭代器使用容器的泛型介面型別。  

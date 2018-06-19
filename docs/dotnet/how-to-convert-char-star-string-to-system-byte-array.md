@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129485"
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>如何：將 char * 字串轉換為 System::Byte 陣列
 要轉換的最有效方式`char *`字串至<xref:System.Byte>陣列是使用<xref:System.Runtime.InteropServices.Marshal>類別。  

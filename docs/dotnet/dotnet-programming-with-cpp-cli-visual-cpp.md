@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110242"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>以 C++/CLI 進行 .NET 程式設計 (Visual C++)
 下列主題將說明 Visual C++ 如何將目標設為 .NET 平台。  

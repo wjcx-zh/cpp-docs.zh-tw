@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263864"
 ---
 # <a name="compiler-error-c3709"></a>編譯器錯誤 C3709
 'function': 不適當的語法指定事件在 __hook /\__unhook  

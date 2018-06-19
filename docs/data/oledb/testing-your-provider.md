@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104785"
 ---
 # <a name="testing-your-provider"></a>測試提供者
 發行的提供者之前，您應該執行下列測試，依照所示的順序。 這些測試確認正確大部分潛在的使用者提供者的功能。  

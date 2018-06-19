@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138436"
 ---
 # <a name="how-to-migrate-to-clr"></a>如何：移轉至 /clr
 本主題討論編譯原生程式碼時，會發生的問題 **/clr** (請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊)。 **/clr**可讓 Visual c + + 模組，以叫用，並叫用.NET 組件從同時保留與未受管理模組的相容性。 請參閱[混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)和[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)如需使用編譯的優點 **/clr**。  

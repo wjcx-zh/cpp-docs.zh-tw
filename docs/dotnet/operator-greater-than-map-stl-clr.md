@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135452"
 ---
 # <a name="operatorgt-map-stlclr"></a>運算子&gt;(map) (STL/CLR)
 大於比較清單。  

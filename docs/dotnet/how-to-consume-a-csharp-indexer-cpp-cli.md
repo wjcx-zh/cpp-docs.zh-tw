@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127402"
 ---
 # <a name="how-to-consume-a-c-indexer-ccli"></a>如何：使用 C# 索引子 (C++/CLI)
 Visual c + + 不包含索引子。它具有索引的屬性。 若要使用 C# 索引子，存取索引子，就好像索引的屬性。  

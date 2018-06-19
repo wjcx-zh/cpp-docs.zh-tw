@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109374"
 ---
 # <a name="hashmapvaluecomp-stlclr"></a>hash_map::value_comp (STL/CLR)
 將複製兩個項目值的順序委派。  

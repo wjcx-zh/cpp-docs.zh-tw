@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107434"
 ---
 # <a name="fill-stlclr"></a>fill (STL/CLR)
 將相同的新值指派到指定範圍內的每個項目。  

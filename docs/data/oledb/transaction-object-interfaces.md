@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104548"
 ---
 # <a name="transaction-object-interfaces"></a>異動物件介面
 交易物件上的資料來源定義不可部分完成的工作單位，並判斷這些工作單位如何彼此相關。 此物件不直接支援 OLE DB 提供者樣板 （也就是說，您必須建立自己的物件）。  

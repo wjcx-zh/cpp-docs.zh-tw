@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270881"
 ---
 # <a name="compiler-warning-c4867"></a>編譯器警告 C4867
 'function': 函式呼叫遺漏引數清單。使用 '呼叫' 建立成員的指標  

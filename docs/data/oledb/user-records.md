@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109803"
 ---
 # <a name="user-records"></a>使用者資料錄
 若要使用靜態存取子 (也就是存取子，衍生自**CAccessor)**，您取用者都必須有使用者記錄。 使用者資料錄是 c + + 類別，包含要處理輸入或輸出的資料元素。 ATL OLE DB 消費者精靈產生使用者記錄您的消費者。 您可以將方法加入至選擇性工作，例如處理命令的使用者記錄中。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129807"
 ---
 # <a name="lowerbound-stlclr"></a>lower_bound (STL/CLR)
 第一個元素的位置中尋找已排序的範圍具有值小於或等於指定的值，其中順序準則可能可由二元述詞指定。  

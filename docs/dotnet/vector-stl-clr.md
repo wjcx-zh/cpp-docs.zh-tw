@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172634"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有隨機存取的物件。 使用容器`vector`管理的項目序列，做為連續的區塊存放裝置。 區塊會實作為隨成長的陣列。  

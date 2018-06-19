@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138035"
 ---
 # <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
 本文示範如何使用介面中宣告事件和函式來叫用事件，以及實作介面的類別以及事件處理常式。  

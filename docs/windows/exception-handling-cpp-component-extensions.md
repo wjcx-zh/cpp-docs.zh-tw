@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877731"
 ---
 # <a name="exception-handling--c-component-extensions"></a>例外狀況處理 (C++ 元件擴充功能)
 使用應用程式編譯 **/ZW**編譯器選項或 **/clr**編譯器選項都使用*例外狀況*處理程式執行期間發生意外的錯誤。 下列主題將討論 C++/CX 或 C++/CLI 應用程式中的例外狀況處理。  

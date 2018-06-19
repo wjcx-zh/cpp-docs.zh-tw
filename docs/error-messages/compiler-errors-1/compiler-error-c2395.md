@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225426"
 ---
 # <a name="compiler-error-c2395"></a>編譯器錯誤 C2395
 'your_type::operator'op'' : CLR or WinRT 運算子無效。 至少一個參數必須是下列類型：'T'、'T%'、'T&'、'T^'、'T^%'、'T^&'，其中 T = 'your_type'  

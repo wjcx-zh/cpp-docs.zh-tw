@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883589"
 ---
 # <a name="comptrdetach-method"></a>ComPtr::Detach 方法
 這會解除關聯`ComPtr`從它所代表的物件。  

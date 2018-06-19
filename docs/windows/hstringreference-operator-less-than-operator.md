@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877289"
 ---
 # <a name="hstringreferenceoperatorlt-operator"></a>Hstringreference:: Operator&lt;運算子
 指出第一個參數是否小於第二個參數。  

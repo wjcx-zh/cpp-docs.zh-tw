@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880188"
 ---
 # <a name="resource-symbols-dialog-box"></a>資源符號對話方塊
 **資源符號**對話方塊可讓您加入新的資源符號、 變更符號會顯示，或跳到原始程式碼中正在使用中的位置。  

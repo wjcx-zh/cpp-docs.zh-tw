@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686928"
 ---
 # <a name="multithread-programs"></a>多執行緒程式
 執行緒基本上是透過程式執行的路徑。 它也是 Win32 排程執行的最小單位。 執行緒堆疊時，狀態 CPU 暫存器，以及系統排程器之執行清單中的項目所組成。 每個執行緒共用處理序的所有資源。  

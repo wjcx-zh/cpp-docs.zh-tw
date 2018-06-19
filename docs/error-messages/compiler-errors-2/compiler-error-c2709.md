@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230129"
 ---
 # <a name="compiler-error-c2709"></a>編譯器錯誤 C2709
 'identifier' : 型式參數長度 (以位元組為單位) 和先前的宣告不同  

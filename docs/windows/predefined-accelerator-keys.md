@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880791"
 ---
 # <a name="predefined-accelerator-keys"></a>預先定義的快速鍵
 Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其中有部分是用於 Windows 環境的虛擬按鍵。 其他則支援瀏覽器或 Unicode 應用程式。 您可以在任何加速器中使用任何此類按鍵。  

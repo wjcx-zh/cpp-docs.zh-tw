@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881714"
 ---
 # <a name="comptrinternalrelease-method"></a>ComPtr::InternalRelease 方法
 在與這個 ComPtr 相關聯的介面上，執行 COM 釋放作業。  

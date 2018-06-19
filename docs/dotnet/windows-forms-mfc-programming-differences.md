@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172667"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Form/MFC 程式設計的差異
 中的主題[在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)描述 Windows Form 的 MFC 支援。 如果您不熟悉.NET Framework 或 MFC 程式設計，本主題會提供程式設計的差異，兩者之間的背景資訊。  

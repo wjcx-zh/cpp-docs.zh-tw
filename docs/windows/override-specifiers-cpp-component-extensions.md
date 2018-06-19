@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882758"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>覆寫規範 (C++ 元件擴充功能)
 *覆寫規範*修改如何繼承的型別和繼承型別的成員在衍生類型中的行為。  

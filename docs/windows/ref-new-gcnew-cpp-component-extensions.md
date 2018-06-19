@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879057"
 ---
 # <a name="ref-new-gcnew--c-component-extensions"></a>ref new 和 gcnew (C++ 元件擴充功能)
 `ref new`彙總關鍵字，其配置的記憶體回收該物件會變成無法存取，並傳回控制代碼時所收集的類型執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 到配置的物件。  

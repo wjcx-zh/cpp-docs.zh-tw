@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686610"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>避免具有多執行緒程式的問題區域
 有幾個建立、 連結或執行多執行緒 C 程式中可能會遇到的問題。 下表將說明一些較常見的問題。 (如從 MFC 的觀點的類似討論，請參閱[多執行緒： 程式設計提示](../parallel/multithreading-programming-tips.md)。)  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170852"
 ---
 # <a name="compiler-error-c2283"></a>編譯器錯誤 C2283
 'identifier': 不允許在未命名的結構上使用純虛擬函式規範或抽象覆寫規範  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877998"
 ---
 # <a name="iidis"></a>iid_is
 指定的介面指標所指向的 COM 介面的 IID。  

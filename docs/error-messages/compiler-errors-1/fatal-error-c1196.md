@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199011"
 ---
 # <a name="fatal-error-c1196"></a>嚴重錯誤 C1196
 'identifier': 在類型程式庫 'typelib' 中找到的識別項不是有效的 C++ 識別項  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872831"
 ---
 # <a name="dialog-editor-states-guides-and-grids"></a>對話方塊編輯器狀態 (輔助線和格線)
 您可以使用對話方塊編輯器中的三種不同狀態的其中一個排列控制項的對話方塊：  

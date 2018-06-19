@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889302"
 ---
 # <a name="safeint-functions"></a>SafeInt 函式
 SafeInt 程式庫提供幾個函式，您可以使用而建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。 如果您想要保護單一數學作業從整數的溢位時，您可以使用這些函式。 如果您想要保護多個數學作業時，您應該建立`SafeInt`物件。 若要建立更有效率`SafeInt`比使用這些函式數次的物件。  

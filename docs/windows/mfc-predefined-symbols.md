@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882056"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 預先定義的符號
 MFC 專案一定會包含數個支援 windows 的標頭檔。 新增這些透過 #include 陳述式在 StdAfx.h 檔案中：  

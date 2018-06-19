@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686067"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num 函式
 `omp_get_thread_num`函式會傳回執行緒數目，其小組中，執行此函式的執行緒。 執行緒數字就是介於 0 和**omp_get_num_threads()**-1，（含)。 主要的小組是執行緒 0。  

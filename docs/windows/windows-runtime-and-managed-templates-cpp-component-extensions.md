@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891359"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 執行階段和 Managed 樣板 (C++ 元件擴充功能)
 範本可讓您定義 Windows 執行階段或通用語言執行平台 (CLR) 類型的原型，然後使用不同的範本型別參數具現化該類型的變化。  

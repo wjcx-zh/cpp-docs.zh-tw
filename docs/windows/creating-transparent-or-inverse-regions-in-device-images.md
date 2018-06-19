@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882546"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>在裝置影像中建立透明或反向區域 (圖示影像編輯器)
 在[影像編輯器](../windows/image-editor-for-icons.md)，初始的圖示或游標影像的透明的屬性。 圖示和游標影像是矩形，雖然許多不會出現，因為組件的映像皆為透明的;基礎映像，在螢幕上的顯示的圖示或游標。 當您拖曳圖示時，映像的組件可能會出現反轉的色彩。 設定螢幕色彩和反向色彩中的建立這種效果[色彩視窗](../windows/colors-window-image-editor-for-icons.md)。  

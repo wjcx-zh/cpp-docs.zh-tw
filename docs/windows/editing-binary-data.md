@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33884472"
 ---
 # <a name="editing-binary-data"></a>編輯二進位資料
 ### <a name="to-edit-a-resource-in-the-binary-editor"></a>若要編輯的二進位編輯器中的資源  

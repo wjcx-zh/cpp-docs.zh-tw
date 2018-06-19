@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243159"
 ---
 # <a name="compiler-error-c2879"></a>編譯器錯誤 C2879
 'symbol': 只有現有命名空間可以由命名空間別名定義授與不同的名稱  

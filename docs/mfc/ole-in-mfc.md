@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353624"
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 這些文件說明使用 MFC 的 OLE 程式設計基本概念。 MFC 提供最簡易的方法撰寫使用 OLE 的程式：  

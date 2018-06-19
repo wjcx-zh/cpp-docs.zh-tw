@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345535"
 ---
 # <a name="exceptions-ole-exceptions"></a>例外狀況：OLE 例外狀況
 在 OLE 中處理例外狀況所用的技術和設備，與處理其他例外狀況的技術和設備相同。 如需例外狀況處理的詳細資訊，請參閱文章[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)。  

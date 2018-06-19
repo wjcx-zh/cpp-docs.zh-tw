@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345751"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>MFC 資料庫應用程式中的檔案功能表
 如果您建立 MFC 資料庫應用程式，而不使用序列化，如何應該您解譯開啟、 關閉、 儲存，和將儲存為命令在 [檔案] 功能表上有此問題的樣式指南，這裡是一些建議：  

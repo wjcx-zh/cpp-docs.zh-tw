@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846151"
 ---
 # <a name="define-directive-cc"></a>#define 指示詞 (C/C++)
 `#define`建立*巨集*，這是識別項或參數化識別項與語彙基元字串的關聯。 定義巨集之後，編譯器就可以使用語彙基元字串替代原始程式檔中出現的每個識別項。  

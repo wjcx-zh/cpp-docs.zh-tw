@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352154"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>多重文件類型、檢視和框架視窗
 [Document/View Creation](../mfc/document-view-creation.md)(文件/檢視建立) 中描述文件、其檢視及其框架視窗之間的標準關聯性。 許多應用程式支援單一文件類型 (但可能開啟該類型的多份文件)，該類型具有單一文件檢視，而且每份文件只有一個框架視窗。 但有些應用程式可能需要更改一或多個預設。  

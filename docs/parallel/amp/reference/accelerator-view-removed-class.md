@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688150"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed 類別
 由於 Windows 逾時偵測與復原機制的基礎的 DirectX 呼叫失敗時擲回例外狀況。  

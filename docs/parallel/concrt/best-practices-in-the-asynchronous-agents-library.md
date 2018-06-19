@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692661"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>非同步代理程式程式庫中的最佳做法
 本文件說明如何有效地運用非同步代理程式程式庫。 以行動為基礎程式設計的模型和同處理序訊息傳遞，以進行粗略的資料流程和管線工作，將會升級代理程式程式庫。  

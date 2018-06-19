@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319965"
 ---
 # <a name="resource-compiler-error-rc2109"></a>資源編譯器錯誤 RC2109
 必須是數值對話常數  

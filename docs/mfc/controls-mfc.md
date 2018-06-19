@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353673"
 ---
 # <a name="controls-mfc"></a>控制項 (MFC)
 控制項是使用者可以與之互動，以輸入或操作資料的物件。 它們通常會出現在對話方塊或工具列中。 本主題系列涵蓋三種主要的控制項︰  

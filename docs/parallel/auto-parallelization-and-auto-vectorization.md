@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688462"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動平行處理和自訂向量化
 Auto-Parallelizer 和 Auto-Vectorizer 的設計目的是為您程式碼中的迴圈提供自動效能提升。  

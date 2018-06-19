@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350051"
 ---
 # <a name="documentview-architecture"></a>文件/檢視架構
 依預設，MFC 應用程式精靈建立的應用程式的基本架構文件類別和檢視類別。 MFC 將資料管理分成這兩個類別。 文件會將資料儲存和管理列印資料，並協調更新多個檢視的資料。 檢視會顯示資料，並管理它，包括選取和編輯使用者互動。  

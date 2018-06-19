@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349658"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支援
 MFC 提供支援的 Microsoft 訊息應用程式介面 (MAPI) 類別中的子集**CDocument**。 具體來說， **CDocument**了郵件支援是否存在於使用者的電腦上的成員函式，如果是，允許標準命令 ID 是一個傳送郵件命令**ID_FILE_SEND_MAIL**. MFC 處理常式函式，此命令可讓使用者透過電子郵件將文件傳送。  

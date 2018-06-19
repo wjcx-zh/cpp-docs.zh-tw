@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341293"
 ---
 # <a name="command-targets"></a>命令目標
 圖[架構中的命令](../mfc/user-interface-objects-and-command-ids.md)顯示使用者介面物件，例如功能表項目，以及在架構呼叫來執行產生的命令在按下的物件時的處理常式函式之間的連線。  

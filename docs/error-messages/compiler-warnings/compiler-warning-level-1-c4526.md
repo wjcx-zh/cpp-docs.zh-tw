@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282895"
 ---
 # <a name="compiler-warning-level-1-c4526"></a>編譯器警告 (層級 1) C4526
 'function': 靜態成員函式不能覆寫虛擬函式 ' 虛擬 function'override 略過，將會隱藏虛擬函式  

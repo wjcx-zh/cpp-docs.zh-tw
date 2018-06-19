@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693090"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>逐步解說：建立資料流程代理程式
 本文件將示範如何建立資料流程，而不是控制流程為基礎的代理程式型應用程式。  

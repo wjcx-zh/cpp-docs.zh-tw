@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375625"
 ---
 # <a name="editing-a-message-handler"></a>編輯訊息處理常式
 一旦您已經定義的訊息處理常式，您可以移至成員函式的定義，以加入或修改程式碼。  

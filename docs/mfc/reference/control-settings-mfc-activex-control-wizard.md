@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371858"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈、控制項設定
 使用精靈的這個頁面，指定控制項的行為方式。 比方說，您可以將基底控制項類型的標準 Windows 控制項、 最佳化其行為和外觀，或表示控制項可以做為其他控制項的容器。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290864"
 ---
 # <a name="compiler-warning-level-3-c4013"></a>編譯器警告 （層級 3） C4013
 ' function' 未定義。假設 extern 傳回整數  

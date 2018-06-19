@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295372"
 ---
 # <a name="automatic-function-scope-variables"></a>自動 (函式範圍) 變數
 函式中宣告的變數只可以使用該函式的範圍內。  

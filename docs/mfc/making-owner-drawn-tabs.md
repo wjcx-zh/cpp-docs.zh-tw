@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346499"
 ---
 # <a name="making-owner-drawn-tabs"></a>建立主控描繪索引標籤
 您可以定義索引標籤控制項的個別項目 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 為主控描繪項目。 如需詳細資訊，請參閱[主控描繪索引標籤](http://msdn.microsoft.com/library/windows/desktop/bb760550)Windows SDK 中。  

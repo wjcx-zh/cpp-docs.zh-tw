@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33840732"
 ---
 # <a name="using-directive-cclr"></a>#using 指示詞 (C + + CLR)
 中繼資料匯入編譯的程式[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/07/2018
   
  為了讓編譯器可以辨認組件 （而非模組） 中的型別，它需要強制解析類型，您可以執行，例如，藉由定義類型的執行個體。 如果您繼承自類型的組件中沒有其他方法解決編譯器，例如，組件中的型別名稱，型別名稱會隨後即可得知編譯器。  
   
- 匯入從使用的原始程式碼建置的中繼資料時[__declspec （thread)](../cpp/thread.md)，執行緒語意不會保存在中繼資料。 例如，宣告變數 **__declspec （thread)**、 已編譯的.NET Framework common language runtime 的組建，然後再匯入透過程式中`#using`，將不再有 **__declspec (執行緒）**變數上的語意。  
+ 匯入從使用的原始程式碼建置的中繼資料時[__declspec （thread)](../cpp/thread.md)，執行緒語意不會保存在中繼資料。 例如，宣告變數 **__declspec （thread)**、 已編譯的.NET Framework common language runtime 的組建，然後再匯入透過程式中`#using`，將不再有 **__declspec (執行緒）** 變數上的語意。  
   
  在 `#using` 所參考的檔案中，所有匯入的類型 (Managed 和原生) 都是可用的，不過，編譯器會將原生類型視為宣告而不是定義。  
   

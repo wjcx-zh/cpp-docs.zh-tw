@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342903"
 ---
 # <a name="month-calendar-control-examples"></a>月曆控制項範例
 [CMNCTRL1](../visual-cpp-samples.md)範例應用程式示範的各種屬性`CMonthCalCtrl`類別。 此控制項位於範例中的另一個索引標籤，主要示範基本功能，可讓使用者動態修改特定屬性。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376040"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 類別
 `CSettingsStoreSP`類別是協助程式類別可讓您建立的執行個體[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  

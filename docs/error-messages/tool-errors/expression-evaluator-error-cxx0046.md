@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296648"
 ---
 # <a name="expression-evaluator-error-cxx0046"></a>運算式評估工具錯誤 CXX0046
 所需的成員函式的引數清單  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373536"
 ---
 # <a name="document-template-strings-mfc-application-wizard"></a>MFC 應用程式精靈、文件樣板字串
 在 MFC 應用程式精靈的這個頁面上，提供或修改下列選項，以協助文件管理和當地語系化。 文件樣板字串可包含應用程式，供**文件/檢視架構支援**中[應用程式類型](../../mfc/reference/application-type-mfc-application-wizard.md)。 不提供對話方塊。 因為大部分的文件樣板字串是否可見並使用應用程式的使用者，他們會當地語系化成**資源語言**中指出**應用程式類型**精靈頁面。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357555"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控制項：加入內建屬性
 內建屬性與不同的自訂屬性的類別已實作`COleControl`。 `COleControl` 包含控制項支援通用屬性的預先定義的成員函式。 某些常見的內容包含控制項的標題和前景和背景色彩。 如需其他內建屬性的資訊，請參閱[加入屬性精靈 所支援的內建屬性](#_core_stock_properties_supported_by_classwizard)本文稍後。 內建屬性的分派對應項目一律都會加**DISP_STOCKPROP**。  

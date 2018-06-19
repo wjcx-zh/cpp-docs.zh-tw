@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691348"
 ---
 # <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29 在 critical 建構中使用工作共用建構
 下列範例示範如何使用工作共用建構內`critical`建構。 這個範例是相容，因為工作共用建構和`critical`建構請不要繫結至相同的平行區域。  

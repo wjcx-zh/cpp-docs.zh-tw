@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693139"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. 新功能及 2.0 版中的說明
 本附錄摘要中將 1.0 版移到 2.0 版的 OpenMP C/c + + 規格的金鑰變更。 下列項目會加入規格的新功能：  

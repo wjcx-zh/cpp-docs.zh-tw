@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349425"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>透過檢視解譯使用者輸入
 檢視的其他成員函式處理，並解譯所有使用者輸入。 您通常會在您要處理的檢視類別定義訊息處理常式成員函式：  

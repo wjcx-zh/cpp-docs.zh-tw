@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695258"
 ---
 # <a name="concurrency-namespace-enums"></a>concurrency 命名空間列舉
 ||||  
@@ -101,7 +102,7 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_YIELD`|表示的內容，產生動作的事件類型。|  
   
 ### <a name="requirements"></a>需求  
- **標頭：** concrt.h**命名空間：**並行
+ **標頭：** concrt.h**命名空間：** 並行
 
 ##  <a name="concrt_traceflags"></a>  Concrt_TraceFlags 列舉  
  事件類型的追蹤旗標。  

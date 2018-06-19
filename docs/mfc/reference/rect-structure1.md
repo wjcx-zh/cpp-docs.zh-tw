@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372589"
 ---
 # <a name="rect-structure1"></a>RECT 結構 1
 `RECT` 結構定義矩形的左上角和右下角的座標。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301381"
 ---
 # <a name="expression-evaluator-error-cxx0067"></a>運算式評估工具錯誤 CXX0067
 不支援的函式評估  

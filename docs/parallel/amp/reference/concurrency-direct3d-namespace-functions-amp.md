@@ -33,6 +33,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693724"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: direct3d 命名空間函式 (AMP)
 ||||  
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/07/2018
 |[step](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>需求
-**標頭：** amp.h**命名空間：**並行
+**標頭：** amp.h**命名空間：** 並行
   
 ##  <a name="abs"></a>  abs  
  傳回引數的絕對值  

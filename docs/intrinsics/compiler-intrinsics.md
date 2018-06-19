@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339012"
 ---
 # <a name="compiler-intrinsics"></a>編譯器內建
 大部份的函式都包含在程式庫中，但有些函式是內建 (也就是內建) 到編譯器。 這些稱為內建函式或內建。  

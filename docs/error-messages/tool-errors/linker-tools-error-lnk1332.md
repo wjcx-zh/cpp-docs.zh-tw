@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299782"
 ---
 # <a name="linker-tools-error-lnk1332"></a>連結器工具錯誤 LNK1332
 偵測到\<計數 > Windows 執行階段類型已匯入一個模組並定義於另一個模組  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317345"
 ---
 # <a name="project-build-error-prj0036"></a>專案建置錯誤 PRJ0036
 Web Deployment Tool 的 '其他檔案' 屬性包含無效的項目。  

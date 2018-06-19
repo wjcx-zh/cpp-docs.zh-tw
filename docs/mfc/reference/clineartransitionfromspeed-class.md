@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366905"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed 類別
 封裝線性速度轉換。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317670"
 ---
 # <a name="project-build-error-prj0020"></a>專案建置錯誤 PRJ0020
 工具 '工具' 屬性 'property' 包含無效的檔名 'file'。  

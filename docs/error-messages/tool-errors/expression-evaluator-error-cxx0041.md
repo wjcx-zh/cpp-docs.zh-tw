@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299119"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>運算式評估工具錯誤 CXX0041
 類別項目必須是靜態成員或成員函式  

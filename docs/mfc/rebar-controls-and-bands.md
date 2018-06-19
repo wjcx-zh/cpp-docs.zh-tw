@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349847"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 控制項和群組列
 Rebar 控制項的主要用途是做為子視窗、 通用對話方塊控制項、 功能表、 工具列和等等的容器。 這個內含項目會受到概念的 「 矩形 」。 每個 rebar 群組列可以包含移駐夾列、 點陣圖、 文字標籤和子視窗的任何組合。  

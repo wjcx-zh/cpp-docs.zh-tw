@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690266"
 ---
 # <a name="44-ompnested"></a>4.4 OMP_NESTED
 `OMP_NESTED`環境變數啟用或停用巢狀平行處理原則，除非啟用或停用藉由呼叫巢狀平行處理原則`o` **mp_set_nested**程式庫常式。 如果設定為**TRUE**，啟用巢狀平行處理原則; 如果設定為**FALSE**、 巢狀平行處理原則已停用。 預設值是**FALSE**。  

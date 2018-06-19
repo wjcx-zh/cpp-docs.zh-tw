@@ -55,6 +55,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694748"
 ---
 # <a name="accelerator-class"></a>accelerator 類別
 快速鍵會是最適合用於資料平行運算的硬體功能。 快速鍵可能連接到 （例如 GPU) PCIe 匯流排的裝置，或可能是主要的 CPU 上設定的延伸的指令。  

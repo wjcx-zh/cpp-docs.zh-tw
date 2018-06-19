@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346854"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>加入 MFC ODBC 消費者
 MFC ODBC 消費者包含 ODBC 資料錄集類別和資料繫結的必要存取資料來源。  

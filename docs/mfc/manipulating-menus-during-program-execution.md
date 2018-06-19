@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344278"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>程式執行期間管理功能表
 使用類別 `CMenu` 即時操作功能表和功能表項目。 `CMenu` 會封裝 Windows `HMENU` 控制代碼並提供成員函式以使用功能表。  

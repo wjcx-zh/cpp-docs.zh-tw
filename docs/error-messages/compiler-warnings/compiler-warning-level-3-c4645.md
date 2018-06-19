@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292905"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>編譯器警告 (層級 3) C4645
 使用 __declspec(noreturn) 宣告的函式有傳回的陳述式  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375059"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈
 ActiveX 控制項是特定類型的[automation 伺服程式](../../mfc/automation-servers.md); 它是可重複使用的元件。 裝載 ActiveX 控制項的應用程式是[自動化用戶端](../../mfc/automation-clients.md)該控制項。 如果您的目標是建立可重複使用元件，然後使用這個精靈來建立您的控制項。 請參閱[MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)如需詳細資訊。  

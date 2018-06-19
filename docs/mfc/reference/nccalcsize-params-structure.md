@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369719"
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS 結構
 `NCCALCSIZE_PARAMS`結構包含的應用程式可以使用時處理資訊`WM_NCCALCSIZE`計算大小、 位置和視窗的工作區的有效內容的訊息。  

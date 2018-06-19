@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379186"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>在清單控制項中捲動、排列、排序和尋找
 清單控制項 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 根據預設，您可以捲動。 如需詳細資訊，請參閱[捲軸位置](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK 中和[捲動](../mfc/reference/clistctrl-class.md#scroll)成員函式。  

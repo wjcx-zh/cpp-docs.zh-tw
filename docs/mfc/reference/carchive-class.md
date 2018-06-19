@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357533"
 ---
 # <a name="carchive-class"></a>CArchive 類別
 可讓您將複雜的網路的物件儲存在永久二進位格式 （通常是磁碟儲存體），之後會刪除這些物件仍然存在。  
@@ -329,7 +330,7 @@ void MapObject(const CObject* pOb);
 ### <a name="remarks"></a>備註  
  例如，您可能不會序列化文件，但您會將序列化文件部分的項目。 藉由呼叫`MapObject`，您允許這些項目或子物件，參考文件。 此外，序列化的子項目可以序列化其`m_pDocument`返回指標。  
   
- 您可以呼叫`MapObject`當您要儲存並載入從`CArchive`物件。 `MapObject` 將指定的物件加入至所維護的內部資料結構`CArchive`物件在序列化和還原序列化，但不同於[ReadObject](#readobject)和[WriteObject](#writeobject) **，**未呼叫序列化的物件。  
+ 您可以呼叫`MapObject`當您要儲存並載入從`CArchive`物件。 `MapObject` 將指定的物件加入至所維護的內部資料結構`CArchive`物件在序列化和還原序列化，但不同於[ReadObject](#readobject)和[WriteObject](#writeobject) **，** 未呼叫序列化的物件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization#18](../../mfc/codesnippet/cpp/carchive-class_7.h)]  

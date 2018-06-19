@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375036"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 格式和訊息方塊顯示
 提供數個函數來格式化和剖析`CString`物件。 您可以使用這些函式，只要有操作`CString`物件，但它們會特別有用，會出現在訊息方塊文字的字串進行格式化。  

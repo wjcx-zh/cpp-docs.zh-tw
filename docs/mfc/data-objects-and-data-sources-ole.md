@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342975"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>資料物件和資料來源 (OLE)
 使用剪貼簿或拖放功能執行資料傳輸時，資料會有來源端和目的端。 某個應用程式會提供複製資料，而另一個應用程式會接受貼上文字。 每個傳輸端需要執行不同的作業來成功傳輸相同資料。 Microsoft Foundation Class (MFC) 程式庫提供代表各傳輸端的兩個類別：  

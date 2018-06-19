@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351426"
 ---
 # <a name="mfc-application-architecture-classes"></a>MFC 應用程式架構類別
 這個分類中的類別參與架構應用程式的架構。 它們提供常用的功能給大部分的應用程式。 您填入架構以新增應用程式特定的功能。 一般來說，您會藉由從架構類別衍生新類別，然後加入新的成員或覆寫現有的成員函式來進行。  

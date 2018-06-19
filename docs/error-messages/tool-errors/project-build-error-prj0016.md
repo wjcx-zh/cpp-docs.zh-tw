@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319048"
 ---
 # <a name="project-build-error-prj0016"></a>專案建置錯誤 PRJ0016
 使用者的安全性設定會防止建立處理程序。 這些設定所需的建置。  

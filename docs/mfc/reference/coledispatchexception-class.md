@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373382"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 類別
 處理 OLE `IDispatch` 介面 (OLE Automation 的主要部分) 特定的例外狀況。  

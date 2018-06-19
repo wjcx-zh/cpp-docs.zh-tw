@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846372"
 ---
 # <a name="managed-unmanaged"></a>managed、unmanaged
 啟用函式層級控制項，用於編譯 Managed 或 Unmanaged 的函式。  

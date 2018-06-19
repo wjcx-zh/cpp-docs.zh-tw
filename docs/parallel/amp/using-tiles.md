@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692986"
 ---
 # <a name="using-tiles"></a>使用磚
 若要最大化的加速應用程式，您可以使用並排顯示。 並排顯示執行緒分成相等矩形的子集或*磚*。 如果您使用適當的並排顯示大小和並排顯示的演算法，您可以從 c + + AMP 程式碼來取得更多的加速。 並排顯示的基本元件如下：  

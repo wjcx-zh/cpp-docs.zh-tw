@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33264112"
 ---
 # <a name="compiler-error-c3747"></a>編譯器錯誤 C3747
 遺漏預設型別參數： 參數 param  

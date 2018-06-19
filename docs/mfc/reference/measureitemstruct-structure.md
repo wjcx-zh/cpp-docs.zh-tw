@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372266"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 結構
 `MEASUREITEMSTRUCT`結構會告知 Windows 的主控描繪控制項或功能表項目的維度。  

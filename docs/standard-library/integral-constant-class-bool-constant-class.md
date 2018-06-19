@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33844532"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant 類別、bool_constant 類別
 

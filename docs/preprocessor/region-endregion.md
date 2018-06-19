@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839443"
 ---
 # <a name="region-endregion"></a>region、endregion
 **#pragma 區域**可讓您指定一段程式碼，您可以展開或摺疊時使用[大綱功能](/visualstudio/ide/outlining)Visual Studio 程式碼編輯器。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379979"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>設定對話方塊的背景色彩
 您可以藉由處理對話方塊視窗的 `WM_CTLCOLOR` 訊息，設定您的對話方塊的背景色彩。 設定的色彩只會用於指定的對話方塊。  

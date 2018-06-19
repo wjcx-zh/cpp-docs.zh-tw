@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373634"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN 結構
 在網際網路位址系列產品中`SOCKADDR_IN`結構可由 Windows 通訊端來指定連接通訊端的本機或遠端的端點位址。  

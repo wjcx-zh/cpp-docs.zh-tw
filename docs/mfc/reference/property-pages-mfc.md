@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376554"
 ---
 # <a name="property-pages-mfc"></a>屬性頁 (MFC)
 屬性頁來檢視及編輯支援對話方塊資料交換 (DDX) 為基礎的資料對應機制的可自訂的圖形化介面中顯示特定的 OLE 控制項屬性的目前值。  

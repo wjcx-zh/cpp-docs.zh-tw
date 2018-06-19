@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351949"
 ---
 # <a name="add-class-from-typelib-wizard"></a>從 Typelib 加入類別精靈
 您可以使用此精靈，從可用的型別程式庫加入 MFC 類別。 精靈會建立從選取的類型程式庫加入每個介面的類別。  

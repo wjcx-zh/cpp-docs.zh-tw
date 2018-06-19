@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375333"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 類別
 做為 ActiveX 控制項的控制項容器。  

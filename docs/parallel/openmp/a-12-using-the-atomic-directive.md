@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691402"
 ---
 # <a name="a12---using-the-atomic-directive"></a>A.12 使用 atomic 指示詞
 下列範例可避免競爭情形 (同時更新項目的*x*由多個執行緒) 使用`atomic`指示詞 ([區段 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md)在 19 頁面上):  

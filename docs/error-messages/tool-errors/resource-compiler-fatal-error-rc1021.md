@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320153"
 ---
 # <a name="resource-compiler-fatal-error-rc1021"></a>資源編譯器嚴重錯誤 RC1021
 無效的前置處理器命令 'string'  

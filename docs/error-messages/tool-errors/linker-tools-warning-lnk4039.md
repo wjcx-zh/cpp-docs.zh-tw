@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300315"
 ---
 # <a name="linker-tools-warning-lnk4039"></a>連結器工具警告 LNK4039
 區段以 /SECTION 選項指定 ' name' 不存在  

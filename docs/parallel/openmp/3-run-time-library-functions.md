@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688111"
 ---
 # <a name="3-run-time-library-functions"></a>3.執行階段程式庫函式
 本章節描述 OpenMP C 和 c + + 執行階段程式庫函式。 標頭 **\<omp.h >** 會宣告兩種類型，可用來控制和查詢的平行執行環境，並鎖定函式，可用來同步處理資料的存取權的幾個函式。  

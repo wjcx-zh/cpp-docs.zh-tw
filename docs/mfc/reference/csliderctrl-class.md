@@ -89,6 +89,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377154"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 提供 Windows 通用滑桿控制項的功能。  

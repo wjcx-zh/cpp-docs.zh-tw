@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375599"
 ---
 # <a name="csocket-class"></a>CSocket 類別
 衍生自`CAsyncSocket`、 繼承其封裝的 Windows 通訊端應用程式開發介面，並代表比更高的抽象層級`CAsyncSocket`物件。  

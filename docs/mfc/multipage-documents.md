@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355268"
 ---
 # <a name="multipage-documents"></a>多頁文件
 本文描述 Windows 列印通訊協定並說明如何列印包含多個頁面的文件。 本文包括下列主題：  
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/04/2018
   
  這會造成問題，當您覆寫[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)檢視類別： 您無法將值傳遞`SetMaxPage`函式的[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構，因為您不知道的長度文件。 如果使用者在使用 [列印] 對話方塊未指定停止的頁碼，架構就不知道應於何時停止列印迴圈。 唯一判斷何時停止列印迴圈的方式是印出文件然後看它何時結束。 您的檢視類別必須在列印時檢查文件的結尾，然後在到達尾端時告知架構。  
   
- 架構仰賴檢視類別的[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)函式來得知其何時停止。 在呼叫每個 `OnPrepareDC` 之後，架構會檢查名為 `CPrintInfo` 的 `m_bContinuePrinting` 結構的成員。 預設值是**，則為 TRUE。** 只要該值保持不變，架構就會繼續進行列印迴圈。 如果設定為**FALSE**，架構會停止。 若要執行列印時分頁，覆寫`OnPrepareDC`檢查文件結尾是否已達到，而且設定`m_bContinuePrinting`至**FALSE**時有。  
+ 架構仰賴檢視類別的[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)函式來得知其何時停止。 在呼叫每個 `OnPrepareDC` 之後，架構會檢查名為 `CPrintInfo` 的 `m_bContinuePrinting` 結構的成員。 預設值是 **，則為 TRUE。** 只要該值保持不變，架構就會繼續進行列印迴圈。 如果設定為**FALSE**，架構會停止。 若要執行列印時分頁，覆寫`OnPrepareDC`檢查文件結尾是否已達到，而且設定`m_bContinuePrinting`至**FALSE**時有。  
   
  預設實作`OnPrepareDC`設定`m_bContinuePrinting`至**FALSE**如果目前頁面大於 1。 這表示，如果未指定文件的長度，架構會假設文件的長度為一頁。 這樣一來，您必須在呼叫 `OnPrepareDC` 的基底類別版本時特別小心。 不要假設`m_bContinuePrinting`將**TRUE**之後呼叫基底類別版本。  
   

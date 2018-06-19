@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691647"
 ---
 # <a name="ordered-openmp-clauses"></a>ordered (OpenMP 子句)
 平行上需要[如](../../../parallel/openmp/reference/for-openmp.md)陳述式如果[排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)指示詞是用在迴圈中。  

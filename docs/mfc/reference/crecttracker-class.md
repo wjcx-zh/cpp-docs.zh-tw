@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375904"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 類別
 可讓項目以顯示、 移動和調整大小不同的方式。  
@@ -426,7 +427,7 @@ BOOL TrackRubberBand(
  裝置目前的滑鼠位置相對於用戶端區域的座標。  
   
  `bAllowInvert`  
- 如果**為 TRUE，**矩形可以是反向沿著 x 軸或 y 軸，否則**FALSE**。  
+ 如果**為 TRUE，** 矩形可以是反向沿著 x 軸或 y 軸，否則**FALSE**。  
   
 ### <a name="return-value"></a>傳回值  
  如果滑鼠移動，而且矩形不是空的則為非零否則便是 0。  

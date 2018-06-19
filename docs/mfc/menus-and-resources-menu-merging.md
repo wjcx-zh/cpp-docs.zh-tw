@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351962"
 ---
 # <a name="menus-and-resources-menu-merging"></a>功能表和資源：功能表合併
 這篇文章說明 OLE 文件的應用程式來處理視覺化編輯，並就地啟用正確的必要步驟。 就地啟用會帶來的挑戰容器和伺服器 （元件） 的應用程式。 使用者會保留在同一個框架視窗 （在容器文件的內容），但實際上正在執行另一個應用程式 （伺服器）。 這需要的資源的容器和伺服器應用程式之間進行協調。  

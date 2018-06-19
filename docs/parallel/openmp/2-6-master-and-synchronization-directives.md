@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695427"
 ---
 # <a name="26-master-and-synchronization-directives"></a>2.6 主執行緒和同步處理指示詞
 下列各節說明：  

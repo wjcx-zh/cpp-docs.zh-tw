@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379738"
 ---
 # <a name="registering-window-classes"></a>註冊視窗類別
 傳統 Windows 程式設計中的視窗「類別」會定義「類別」(而不是 C++ 類別) 的特性，該類別可以建立任意數目的視窗。 這種類別可用於建立視窗的樣板或模型。  

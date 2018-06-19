@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375767"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 類別
 字典集合類別，這個類別會將唯一的 `CString` 物件對應至 `CObject` 指標。  

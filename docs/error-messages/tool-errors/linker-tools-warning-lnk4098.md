@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301703"
 ---
 # <a name="linker-tools-warning-lnk4098"></a>連結器工具警告 LNK4098
 其他程式庫; 使用預設的程式庫 'library' 發生衝突使用 /nodefaultlib: library  

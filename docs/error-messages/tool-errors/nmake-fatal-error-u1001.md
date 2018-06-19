@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316006"
 ---
 # <a name="nmake-fatal-error-u1001"></a>NMAKE 嚴重錯誤 U1001
 語法錯誤： 不合法的字元 'character' 巨集  

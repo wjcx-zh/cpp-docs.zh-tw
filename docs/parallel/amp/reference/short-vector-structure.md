@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705285"
 ---
 # <a name="shortvector-structure"></a>short_vector 結構
 short_vector 提供有用的一般程式設計短向量的 metaprogramming 定義。  

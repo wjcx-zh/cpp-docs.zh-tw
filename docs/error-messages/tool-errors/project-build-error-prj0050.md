@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318509"
 ---
 # <a name="project-build-error-prj0050"></a>專案建置錯誤 PRJ0050
 無法註冊輸出。 請確定您有適當的權限可以修改登錄。  

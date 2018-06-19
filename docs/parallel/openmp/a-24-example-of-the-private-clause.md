@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691384"
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24 private 指示詞範例
 `private`子句 ([區段 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)頁面 25 上) 的平行區域才會生效的語彙範圍的區域，而不在區域的動態範圍。  因此，在下列範例中，使用任何變數內`for`常式中的迴圈*f*指的是私用複本的，而在中的使用方式常式*g*參考到全域。  

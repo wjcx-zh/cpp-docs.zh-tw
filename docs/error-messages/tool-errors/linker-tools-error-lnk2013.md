@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299847"
 ---
 # <a name="linker-tools-error-lnk2013"></a>連結器工具錯誤 LNK2013
 修復類型修復溢位。 目標 'symbol name' 超出範圍  

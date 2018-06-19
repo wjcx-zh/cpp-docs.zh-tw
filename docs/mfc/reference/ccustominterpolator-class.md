@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355795"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 類別
 實作基本 Interpolator。  

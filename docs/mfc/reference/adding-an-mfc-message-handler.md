@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353722"
 ---
 # <a name="adding-an-mfc-message-handler"></a>加入 MFC 訊息處理常式
 您可以[加入訊息處理常式中使用 [屬性] 視窗](../../mfc/reference/mapping-messages-to-functions.md)（成員函式會處理 Windows 訊息） 類別和對應的 Windows 訊息至訊息處理常式。 您也可以加入[任何對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。  

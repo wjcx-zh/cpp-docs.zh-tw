@@ -127,6 +127,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377619"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 `CMDIChildWndEx`類別會提供功能的 Windows 多重文件介面 (MDI) 子視窗。 它會擴充功能的[CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)。 當 MDI 應用程式使用特定 MFC 類別時，Framework 必須有這個類別。  

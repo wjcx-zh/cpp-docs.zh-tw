@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692741"
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel 建構
 下列指示詞定義平行的區域，而是由多個執行緒以平行方式執行程式的區域。 這是開始平行執行的基本結構。  

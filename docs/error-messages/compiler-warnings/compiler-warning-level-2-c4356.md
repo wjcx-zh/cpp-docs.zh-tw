@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291592"
 ---
 # <a name="compiler-warning-level-2-c4356"></a>編譯器警告 (層級 2) C4356
 'member': 無法透過衍生類別初始化靜態資料成員  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302655"
 ---
 # <a name="cvtres-fatal-error-cvt1100"></a>CVTRES 嚴重錯誤 CVT1100
 重複的資源-類型： 類型名稱： 名稱、 語言:、 旗標： 旗標、 大小： 大小  

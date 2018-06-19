@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375349"
 ---
 # <a name="data-types-mfc"></a>資料類型 (MFC)
 本主題列出最常在 MFC 程式庫中使用的資料類型。 大部分的資料類型與 Platform Software Development Kit (SDK) 中的相同，其他的則是 MFC 獨有。  

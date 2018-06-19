@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282128"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>編譯器警告 (層級 1) C4251
 'identifier': 類別 'type' 必須有類別 'type2' 的用戶端所使用的 dll 介面  

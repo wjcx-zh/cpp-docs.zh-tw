@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314336"
 ---
 # <a name="linker-tools-error-lnk2004"></a>連結器工具錯誤 LNK2004
 'target;' 的 gp 相對修復溢位short 區段 'section' 是太大，或超出範圍。  

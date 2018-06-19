@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846528"
 ---
 # <a name="loop"></a>迴圈
 控制 auto-parallelizer 考量迴圈程式碼的方式，及/或從 auto-vectorizer 排除迴圈的考量。  

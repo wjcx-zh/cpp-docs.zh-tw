@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695362"
 ---
 # <a name="graphics-c-amp"></a>圖形 (C++ AMP)
 C + + AMP 包含在多個 Api [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md)命名空間可讓您存取 Gpu 的紋理支援。 以下是一些常見的情節：  

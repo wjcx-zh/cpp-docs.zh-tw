@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272314"
 ---
 # <a name="compiler-error-c3807"></a>編譯器錯誤 C3807
 'type': 具有 ComImport 屬性的類別不可衍生自 'type2'，允許只介面實作  

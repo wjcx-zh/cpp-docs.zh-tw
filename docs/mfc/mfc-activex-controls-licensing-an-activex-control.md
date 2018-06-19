@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353922"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控制項：授權 ActiveX 控制項
 授權支援 ActiveX 控制項的選用功能可讓您控制哪些使用者能夠使用或散發控制項。 (如需額外的授權問題的詳細討論，請參閱中的授權問題[升級現有的 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)。)  

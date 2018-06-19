@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841656"
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>以使用者群組的成員身分執行
 本主題說明如何將 Windows 使用者帳戶設定為「使用者群組」的成員 (不同於「系統管理員」群組)，藉由降低受到惡意程式碼感染的機會，以提升安全性。  

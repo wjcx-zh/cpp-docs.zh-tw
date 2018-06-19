@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839815"
 ---
 # <a name="deprecated-cc"></a>deprecated (C/C++)
 **取代**pragma 可讓您指出，函式、 類型或任何其他識別項可能不再支援未來版本，或應該不會再使用。  

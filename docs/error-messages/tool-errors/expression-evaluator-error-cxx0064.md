@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302132"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>運算式評估工具錯誤 CXX0064
 無法在繫結的虛擬成員函式上設定中斷點  

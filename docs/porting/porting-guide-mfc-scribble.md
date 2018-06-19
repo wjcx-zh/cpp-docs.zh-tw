@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845904"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 本主題是介紹 Visual C++ 專案升級程序之幾個主題中的第一個主題，該程序會將在舊版 Visual Studio 中建立的專案升級至 Visual Studio 2017。 這些主題以範例來介紹升級程序，從一個很簡單的專案開始，再移到稍微更複雜的專案。 在本主題中，我們將討論特定專案 MFC Scribble 的升級程序。 它很適合做為 C++ 專案升級程序的基本入門。  

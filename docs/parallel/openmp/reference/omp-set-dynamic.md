@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691946"
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
 指出可以調整的執行階段的後續平行區域中的可用執行緒數目。  

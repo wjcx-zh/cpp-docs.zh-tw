@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354085"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控制項：繪製 ActiveX 控制項
 本文將描述 ActiveX 控制項繪製程序，以及如何修改繪製程式碼以最佳化這個程序  (請參閱[最佳化控制項繪圖](../mfc/optimizing-control-drawing.md)的技術如何不讓控制項個別藉此最佳化繪製還原先前選取的 GDI 物件。 在繪製所有控制項之後，容器就可以自動還原原始物件)。  

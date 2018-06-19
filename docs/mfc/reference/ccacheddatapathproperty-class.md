@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355456"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 類別
 實作非同步傳輸且在記憶體檔案中快取的 OLE 控制項屬性。  

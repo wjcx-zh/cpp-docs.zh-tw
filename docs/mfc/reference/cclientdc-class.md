@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348903"
 ---
 # <a name="cclientdc-class"></a>CClientDC 類別
 呼叫 Windows 函式會負責[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在建構階段和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在解構階段。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353494"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控制項：序列化
 本文將討論如何將 ActiveX 控制項。 序列化是讀取或寫入至永續性儲存體中，例如磁碟檔案的程序。 Microsoft Foundation Class (MFC) 程式庫中類別的序列化提供內建支援`CObject`。 `COleControl` 擴充此一支援透過內容交換機制使用的 ActiveX 控制項。  

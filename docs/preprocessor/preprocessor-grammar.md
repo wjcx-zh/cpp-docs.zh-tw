@@ -21,11 +21,12 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843362"
 ---
 # <a name="preprocessor-grammar"></a>前置處理器文法
 **#define***識別碼**語彙基元字串*選擇加入    
   
- *#* **定義***識別碼*[**(** *識別碼*選擇**，** *...* **，** *識別碼*選擇 **)**]*語彙基元字串*選擇加入    
+ *#* **定義***識別碼*[**(** *識別碼*選擇 **，** *...* **，** *識別碼*選擇 **)**]*語彙基元字串*選擇加入    
   
  **defined(**  *identifier* **)**  
   

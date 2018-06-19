@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377003"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 類別
 用來建立對話方塊使用 HTML，而不是實作其使用者介面對話方塊資源。  

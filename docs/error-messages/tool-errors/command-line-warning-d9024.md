@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296909"
 ---
 # <a name="command-line-warning-d9024"></a>命令列警告 D9024
 無法識別的來源檔案類型 'filename'，檔案假設是 object  

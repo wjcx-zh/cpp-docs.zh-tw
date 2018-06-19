@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299197"
 ---
 # <a name="linker-tools-warning-lnk4073"></a>連結器工具警告 LNK4073
 無法建立.ilk 檔; 的對應非累加連結中  

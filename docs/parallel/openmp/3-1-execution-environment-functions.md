@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690035"
 ---
 # <a name="31-execution-environment-functions"></a>3.1 執行環境函式
 本節中所述的函式會影響，並監視執行緒、 處理器和平行環境：  

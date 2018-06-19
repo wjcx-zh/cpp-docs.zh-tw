@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344359"
 ---
 # <a name="general-class-design-philosophy"></a>一般類別設計原理
 Microsoft Windows 的設計是 c + + 語言變得熱門之前。 由於數千個應用程式使用 C 語言的 Windows 應用程式開發介面 (API)，該介面會維護可預見的未來。 因此必須之上程序的 C 語言應用程式開發介面建置任何 c + + Windows 介面。 這可確保 c + + 應用程式能夠與 C 應用程式並存。  

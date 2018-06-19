@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358640"
 ---
 # <a name="control-classes"></a>控制項類別
 控制項類別會封裝各種不同的範圍從靜態文字控制項到樹狀目錄控制項的標準 Windows 控制項。 此外，MFC 提供了一些新的控制項，包括具有點陣圖和控制列按鈕。  

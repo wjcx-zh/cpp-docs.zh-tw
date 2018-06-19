@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338584"
 ---
 # <a name="active-technology-on-the-internet"></a>網際網路上的 Active 技術
 Active 技術是一種開放平台，可讓開發人員為全域網路或為公司的內部網路 (稱為內部網路) 建立令人興奮、動態內容和應用程式。 Microsoft 針對網際網路程式設計提供的主要技術如下。  

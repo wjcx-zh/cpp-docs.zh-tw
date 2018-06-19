@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380249"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>陣列、清單和對應的樣板類別
 這些集合類別是參數會判斷存放在彙總中物件類型的範本。 `CArray`、`CMap` 和 `CList` 類別會使用通常必須自訂的全域 helper 函式。 如需這些 helper 函式的詳細資訊，請參閱[集合類別 Helper](../mfc/reference/collection-class-helpers.md)。 具有類型的指標類別是類別庫中其他類別的包裝函式。 使用這些包裝函式，您可以讓編譯器進行類型檢查，以協助您避免錯誤。 如需有關使用這些類別的詳細資訊，請參閱[集合](../mfc/collections.md)。  

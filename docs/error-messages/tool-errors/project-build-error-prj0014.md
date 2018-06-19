@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316153"
 ---
 # <a name="project-build-error-prj0014"></a>專案建置錯誤 PRJ0014
 用來控制繁衍的處理序的工作物件失敗。  建置無法繼續。  

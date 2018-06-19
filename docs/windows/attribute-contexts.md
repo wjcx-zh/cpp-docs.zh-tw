@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860329"
 ---
 # <a name="attribute-contexts"></a>屬性內容
 C + + 屬性可以使用四個基本的欄位描述： 將它們套用至目標 (**套用至**) 或不屬於可重複，(**Repeatable**)、 所需的其他屬性 (存在**必要屬性**)，並與其他屬性的不相容 (**屬性無效**)。 在每個屬性的參考主題中的表格會列出這些欄位。 下面會描述每一個欄位。  

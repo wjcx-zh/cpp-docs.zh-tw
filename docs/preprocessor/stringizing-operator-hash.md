@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33841695"
 ---
 # <a name="stringizing-operator-"></a>字串化運算子 (#)
 數字符號或 「 字串化 」 的運算子 (**#**) 將巨集參數轉換為字串常值中，而不會擴充參數定義。 只會搭配接受引數的巨集使用。 如果出現在巨集定義的型式參數之前，巨集引動過程傳入的實質引數會以引號括住並且將視為字串常值。 然後字串常值會取代巨集定義中每個字串化運算子和型式參數的組合。  

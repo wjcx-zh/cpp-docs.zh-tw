@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350480"
 ---
 # <a name="output-device-context-classes"></a>輸出(裝置內容) 類別
 這些類別會封裝之不同類型的裝置在 Windows 中可用的內容。  

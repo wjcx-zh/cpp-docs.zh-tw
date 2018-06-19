@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33844786"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/07/2018
 
 **x86 特定**
 
-**_Disable**和**（_e)** 內建函式產生核心模式指示停用/啟用插斷，而且可能會在核心模式驅動程式中很有用。
+**_Disable**和 **（_e)** 內建函式產生核心模式指示停用/啟用插斷，而且可能會在核心模式驅動程式中很有用。
 
 ### <a name="example"></a>範例
 

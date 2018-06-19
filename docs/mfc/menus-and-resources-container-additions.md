@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350649"
 ---
 # <a name="menus-and-resources-container-additions"></a>功能表和資源：容器新增
 這篇文章會說明需要功能表和其他視覺編輯容器應用程式中的資源進行的變更。  

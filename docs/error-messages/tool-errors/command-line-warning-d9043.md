@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294745"
 ---
 # <a name="command-line-warning-d9043"></a>命令列警告 D9043
 無效的值 'warning_level' 的 'compiler_option';假設 '4999';程式碼分析警告不會支援警告層級產生關聯  

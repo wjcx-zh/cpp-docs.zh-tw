@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360962"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 工具列實作
 工具列是[控制列](../mfc/control-bars.md)包含控制項的點陣圖影像。 這些映像可像按鈕、 核取方塊或選項按鈕。 MFC 提供類別[CToolbar](../mfc/reference/ctoolbar-class.md)管理工具列。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286080"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>編譯器警告 (層級 1) C4383
 'instance_dereference_operator': 控制代碼取值的意義可以變更，當使用者定義的 'operator' 運算子存在時，將這個運算子撰寫運算元的明確宣告靜態函式  

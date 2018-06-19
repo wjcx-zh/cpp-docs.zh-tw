@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380929"
 ---
 # <a name="tn047-relaxing-database-transaction-requirements"></a>TN047：放寬資料庫異動需求
 這個技術提示討論 MFC ODBC 資料庫類別的交易需求，現在已過時。 在 MFC 4.2 之前的資料庫類別所需資料指標會保留在資料錄集之後**CommitTrans**或**復原**作業。 ODBC 驅動程式和 DBMS 並不支援此層級的資料指標保留，如果資料庫類別未啟用交易。  

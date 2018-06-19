@@ -60,6 +60,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378965"
 ---
 # <a name="record-field-exchange-functions"></a>資料錄欄位交換函式
 本主題列出資料錄欄位交換 （RFX，Bulk RFX 和 DFX） 使用資料錄集物件與其資料來源之間的資料傳輸自動化，以及執行其他作業資料的函數。  

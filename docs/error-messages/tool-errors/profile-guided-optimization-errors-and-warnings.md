@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317316"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>特性指引最佳化錯誤和警告
 本章節提供組建工具所產生的錯誤之參考資訊。 使用特定的錯誤訊息的說明，請按一下 [輸出] 視窗中的錯誤號碼，然後按下 F1 時，輸入中的錯誤號碼**尋找**方塊在索引中，或按一下適當的連結：  

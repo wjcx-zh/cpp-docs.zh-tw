@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842764"
 ---
 # <a name="phases-of-translation"></a>轉譯階段
 C 和 C++ 程式是由一個或多個原始程式檔所組成，每個原始程式檔會包含一些程式文字。 原始程式檔連同其 include 檔 (使用 `#include` 前置處理器指示詞所包含的檔案) 稱為「轉譯單位」，但不包括條件式編譯指示詞 (例如 `#if`) 所移除的程式碼區段。  

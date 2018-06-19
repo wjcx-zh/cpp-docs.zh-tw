@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367389"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 類別
 支援使用人類看得懂的格式文字的資料流導向診斷輸出。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691855"
 ---
 # <a name="single"></a>single
 可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。  

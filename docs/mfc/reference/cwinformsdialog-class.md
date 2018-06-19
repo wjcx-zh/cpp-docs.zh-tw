@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371555"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 類別
 裝載 Windows Form 使用者控制項的 MFC 對話方塊類別包裝函式。  

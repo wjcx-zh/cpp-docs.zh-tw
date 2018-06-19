@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842227"
 ---
 # <a name="token-pasting-operator-"></a>語彙基元帶入的運算子 (##)
 雙數字符號或 「 語彙基元帶入 」 運算子 (**##**)，有時稱為 「 合併 」 運算子，用於物件和函式類似巨集。 它可讓不同的語彙基元聯結成單一語彙基元，因此不可以是巨集定義中的第一個或最後一個語彙基元。  

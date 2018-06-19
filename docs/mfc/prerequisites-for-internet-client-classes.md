@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354033"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>網際網路用戶端類別的必要條件
 有些網際網路用戶端 （例如讀取檔案） 所採取的動作 （在此情況下，建立網際網路連線） 中有一些必要的動作。 下表列出一些用戶端動作的必要條件。  

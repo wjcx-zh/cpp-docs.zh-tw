@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354897"
 ---
 # <a name="idle-loop-processing"></a>閒置迴圈處理
 許多應用程式會「在背景」進行耗時的處理。 有時候會因為效能考量而使用多執行緒進行此類工作。 執行緒會涉及額外的開發負荷，因此不建議如 MFC 會閒置時間工作等簡單的工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函式。 本文會著重於閒置處理的部分。 如需多執行緒處理，請參閱[多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845137"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/07/2018
 
 **標頭：**\<codecvt>
 
-**命名空間：**stdt
+**命名空間：** stdt
 
 ## <a name="see-also"></a>另請參閱
 

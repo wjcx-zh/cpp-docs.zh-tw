@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358254"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 類別
 實作回呼，當動畫管理員的狀態變更時由動畫 API 呼叫。  

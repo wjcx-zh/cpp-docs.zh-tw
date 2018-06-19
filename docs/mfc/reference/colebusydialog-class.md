@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374366"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 類別
 用於 OLE 的 [伺服器沒有回應] 或 [伺服器忙碌] 對話方塊。  

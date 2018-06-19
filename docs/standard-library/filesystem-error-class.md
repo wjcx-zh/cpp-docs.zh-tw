@@ -19,6 +19,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845488"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error 類別
 
@@ -80,7 +81,7 @@ const char *what() const noexcept;
 
 **標頭：** \<filesystem >
 
-**命名空間：**std::experimental::filesystem
+**命名空間：** std::experimental::filesystem
 
 ## <a name="see-also"></a>另請參閱
 

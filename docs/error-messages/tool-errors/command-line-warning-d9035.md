@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296981"
 ---
 # <a name="command-line-warning-d9035"></a>命令列警告 D9035
 選項 'option' 已被取代，未來版本將移除  

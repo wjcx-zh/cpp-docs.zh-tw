@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352421"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 自訂屬性與不同的內建屬性的自訂屬性不已實作的`COleControl`類別。 自訂屬性用來公開某些狀態或 ActiveX 控制項，以程式設計人員使用控制項的外觀。  

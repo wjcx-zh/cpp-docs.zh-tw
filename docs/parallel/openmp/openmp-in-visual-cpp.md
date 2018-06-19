@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691140"
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++ 中的 OpenMP
 OpenMP C 和 c + + 應用程式開發介面可讓您撰寫的應用程式，有效率地使用多個處理器。 Visual c + + 支援 OpenMP 2.0 標準。  

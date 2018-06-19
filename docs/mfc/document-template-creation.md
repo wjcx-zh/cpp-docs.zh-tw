@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345790"
 ---
 # <a name="document-template-creation"></a>文件樣板建立
 在回應中建立新文件時`New`或**開啟**命令**檔案**功能表上，文件範本也會建立新的框架視窗，以檢視文件。  

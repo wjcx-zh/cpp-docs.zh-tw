@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692648"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 指示詞
 `threadprivate`指示詞讓具名的檔案範圍、 命名空間範圍或靜態的區塊範圍變數中指定*變數清單*執行緒私用。 *變數清單*是沒有不完整類型的變數的逗號分隔清單。 語法`threadprivate`指示詞時，如下所示：  

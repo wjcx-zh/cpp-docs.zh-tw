@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294891"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4223"></a>編譯器警告 (層級 1 和 4) C4223
 使用非標準擴充： 非左值陣列轉換成指標  

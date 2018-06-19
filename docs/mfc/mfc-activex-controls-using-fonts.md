@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355135"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 控制項：使用字型
 如果您的 ActiveX 控制項中顯示文字，您可以允許控制項使用者藉由變更 font 屬性變更的文字外觀。 會實作為字型物件字型屬性，而且可以是下列其中一種： 內建或自訂。 內建字型屬性是預先實作的字型屬性，您可以使用 [加入屬性精靈] 來新增。 自訂的字型屬性都未預先實作，讓控制項開發人員決定屬性的行為和使用方式。  

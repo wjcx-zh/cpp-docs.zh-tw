@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373911"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 介面
 管理從命令來源物件傳送至使用者控制項的命令。  

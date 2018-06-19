@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293750"
 ---
 # <a name="compiler-warning-level-4-c4460"></a>編譯器警告 (層級 4) C4460
 WinRT 或 CLR 運算子 'operator'，具有以傳址方式傳遞的參數。 WinRT 或 CLR 運算子 'operator' 具有來自 C++ 運算子 'operator' 的不同語意，您是否想要以傳值方式傳遞?  

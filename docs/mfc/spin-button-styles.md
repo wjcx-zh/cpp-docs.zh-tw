@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380093"
 ---
 # <a name="spin-button-styles"></a>微調按鈕樣式
 許多微調按鈕的設定 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) 樣式所控制。 您可以設定下列樣式使用**屬性**對話方塊編輯器中的視窗。  

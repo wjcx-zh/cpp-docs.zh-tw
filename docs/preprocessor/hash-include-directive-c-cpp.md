@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843544"
 ---
 # <a name="include-directive-cc"></a>#include 指示詞 (C/C++)
 指示前置處理器，將指定之檔案的內容當做已在指示詞出現之處出現於原始程式中一般來處理。  

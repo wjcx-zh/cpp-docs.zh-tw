@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694936"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. 使用排程子句
 在平行區域有至少一個障礙，其結尾並且可能有其他障礙內。 在每個障礙，其他小組成員必須等到抵達的最後一個執行緒。 這個等候時間降到最低，使所有執行緒都到達屏障在同一時間應該發佈共用的工作。 如果共用部分工作包含在**如**建構，`schedule`子句可用於此用途。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366121"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL 精靈產生的類別和函式
 MFC DLL 精靈產生的程式碼會取決於您所建立的 DLL 和您所選取的選項的種類。 MFC DLL 精靈產生兩種形式的標準 MFC Dll 相同的程式碼。  

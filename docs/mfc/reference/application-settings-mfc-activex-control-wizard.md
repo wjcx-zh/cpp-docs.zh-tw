@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351598"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>應用程式設定，MFC ActiveX 控制項精靈
 您可使用 [MFC ActiveX 控制項精靈] 的這個頁面來設計基本功能並將其加入新的 MFC ActiveX 專案。 這些設定是套用至應用程式本身，而不是控制項的任何特定功能或項目。  

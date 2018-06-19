@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687461"
 ---
 # <a name="2721-private"></a>2.7.2.1 private
 `private`子句宣告為私用小組的每個執行緒的變數清單中的變數。 語法`private`子句如下所示：  

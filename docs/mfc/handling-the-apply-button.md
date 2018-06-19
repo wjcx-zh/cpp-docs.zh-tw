@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345038"
 ---
 # <a name="handling-the-apply-button"></a>處理套用按鈕
 屬性工作表具有標準對話方塊所沒有的能力：它們可讓使用者在關閉屬性工作表之前套用所做的變更。 這可使用 [套用] 按鈕來完成。 本文將討論您可以用於正確實作這項功能的方法。  

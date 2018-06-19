@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281638"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>編譯器警告 (層級 1) C4436
 建構函式或解構函式中從虛擬基底 'class1' 到 'class2' 的 dynamic_cast 在使用部分建構的物件時可能會失敗        使用 /vd2 編譯，或在 #pragma vtordisp(2) 有效的情況下定義 'class2'  

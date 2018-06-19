@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341667"
 ---
 # <a name="application-framework"></a>應用程式架構
 MFC 程式庫的核心是以 C++ 形式封裝大部分的 Windows API。 程式庫類別代表視窗、對話方塊、裝置內容、通用 GDI 物件 (例如筆刷、畫筆、控制項和其他標準 Windows 項目)。 這些類別會將方便的 C++ 成員函式介面提供給所封裝的 Windows 結構。 如需有關使用這些類別的詳細資訊，請參閱[Windows 物件主題](../mfc/window-objects.md)。  

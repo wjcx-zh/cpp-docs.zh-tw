@@ -123,6 +123,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357237"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 提供 Windows 下拉式方塊的功能。  

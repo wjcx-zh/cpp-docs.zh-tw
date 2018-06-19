@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693919"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 結構
 排程器用來與並行執行階段的資源管理員通訊，以協調資源配置的介面。  

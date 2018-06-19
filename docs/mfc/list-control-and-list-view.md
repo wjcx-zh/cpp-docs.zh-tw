@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345995"
 ---
 # <a name="list-control-and-list-view"></a>清單控制項和清單檢視
 為了方便起見，MFC 以兩種方式封裝清單控制項。 您可以下列方式來使用清單控制項：  

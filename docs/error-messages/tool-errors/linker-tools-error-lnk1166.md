@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298148"
 ---
 # <a name="linker-tools-error-lnk1166"></a>連結器工具錯誤 LNK1166
 無法調整程式碼在位移 = 位移，va = 值  

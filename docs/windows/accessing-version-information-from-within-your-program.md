@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856267"
 ---
 # <a name="accessing-version-information-from-within-your-program"></a>從您的程式內存取版本資訊
 ### <a name="to-access-version-information-from-within-your-program"></a>存取程式內的版本資訊  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050281"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 區段、 結構或等位的結束標記*名稱*先前以開始[區段](../../assembler/masm/segment.md)，[結構](../../assembler/masm/struct-masm.md)， [UNION](../../assembler/masm/union.md)，或簡化的區段指示詞。  

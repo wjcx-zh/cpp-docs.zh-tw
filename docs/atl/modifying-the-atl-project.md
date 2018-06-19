@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355029"
 ---
 # <a name="modifying-the-atl-project"></a>修改 ATL 專案
 此時，複合控制項專案實作複合控制項所需的物件。 下一個步驟是加入任何控制項將會包含複合控制項，並處理任何必要的事件。  

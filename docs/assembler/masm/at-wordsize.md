@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050099"
 ---
 # <a name="wordsize"></a>@WordSize
 兩個 16 位元區段或四個 32 位元區段 （等同的數字）。  

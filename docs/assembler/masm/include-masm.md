@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054594"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 插入來源所提供的來源檔案的程式碼*filename*到目前的原始程式檔，在組件。  

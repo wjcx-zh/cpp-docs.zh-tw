@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356379"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>連結到該 CRT，在您的 ATL 專案
 [C 執行階段程式庫](../c-runtime-library/crt-library-features.md)(CRT) 提供許多有用的函式可讓程式設計工作更輕鬆在 ATL 開發期間。 所有的 ATL 專案將連結到 CRT 程式庫。 您可以看到連結中的方法的優缺點[優點和權衡取捨的方法用來連結到該 CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)。  

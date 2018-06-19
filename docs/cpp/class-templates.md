@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415682"
 ---
 # <a name="class-templates"></a>類別樣板
 本主題描述的特定 c + + 類別範本規則。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412708"
 ---
 # <a name="compiler-com-support"></a>編譯器 COM 支援
 ## <a name="microsoft-specific"></a>Microsoft 特定的  

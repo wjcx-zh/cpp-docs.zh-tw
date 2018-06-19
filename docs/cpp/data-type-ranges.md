@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418389"
 ---
 # <a name="data-type-ranges"></a>資料類型範圍
 Visual C++ 32 位元和 64 位元編譯器會辨識本文稍後所提供表格中的類型。  

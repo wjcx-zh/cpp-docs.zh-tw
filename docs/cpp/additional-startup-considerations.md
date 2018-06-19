@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409718"
 ---
 # <a name="additional-startup-considerations"></a>其他啟動考量
 在 C++ 中，物件建構和解構可能需要執行使用者程式碼。 因此，就一定要了解哪些初始化，才能進入**主要**，哪些解構函式結束之後叫用**主要**。 (如需建構和解構物件的詳細資訊，請參閱[建構函式](../cpp/constructors-cpp.md)和[解構函式](../cpp/destructors-cpp.md)。)  

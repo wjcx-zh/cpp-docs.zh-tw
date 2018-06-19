@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416167"
 ---
 # <a name="expressions-with-unary-operators"></a>具有一元運算子的運算式
 一元運算子只會在運算式中的一個運算元上作用。 一元運算子如下：  

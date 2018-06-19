@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420219"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft 專有的修飾詞
 本節將描述下列各層面 Microsoft 專有的 C++ 擴充功能：  

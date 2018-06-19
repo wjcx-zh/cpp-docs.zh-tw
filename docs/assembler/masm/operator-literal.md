@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054581"
 ---
 # <a name="operator-ltgt"></a>運算子 &lt;&gt;
 會將*文字*為單一常值的項目。  

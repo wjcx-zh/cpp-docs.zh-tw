@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054607"
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM 組合程式命令列參考
 本文章提供有關 Microsoft ARM 組譯工具的命令列資訊*armasm*，這將 ARMv7 Thumb 組件語言編譯成 Microsoft 實作的通用物件檔案格式 (COFF)。 連結器可以將連結的程式碼 COFF 與 ARM 組譯工具或管理員所建立的物件程式庫一起 C 編譯器，所產生之物件。  

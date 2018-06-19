@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417964"
 ---
 # <a name="how-to-design-for-exception-safety"></a>如何：例外狀況安全的設計
 其中一個例外狀況機制的優點是與例外狀況相關資料一起執行，直接從擲回例外狀況的陳述式跳躍到處理它的第一個 catch 陳述式。 處理常式可能是在呼叫堆疊的任意層級。 在 try 陳述式和 throw 陳述式之間呼叫的函式不必知道任何關於擲回例外狀況的事情。  然而，它們必須經過設計，才能在可能從底下傳播例外狀況的任何點意外地超出範圍，而這麼做並不會留下部分建立的物件、流失的記憶體或在無法使用狀態的資料結構。  

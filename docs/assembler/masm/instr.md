@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054529"
 ---
 # <a name="instr"></a>INSTR
 尋找第一個出現*textitem2*中*textitem1*。  

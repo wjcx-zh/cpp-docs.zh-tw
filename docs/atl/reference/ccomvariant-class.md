@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366012"
 ---
 # <a name="ccomvariant-class"></a>CComVariant 類別
 這個類別會包裝`VARIANT`類型，提供成員，表示儲存的資料類型。  

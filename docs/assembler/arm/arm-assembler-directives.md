@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053297"
 ---
 # <a name="arm-assembler-directives"></a>ARM 組合程式指示詞
 大部分的情況下，Microsoft ARM 組件會使用 ARM 組譯語言，而其記錄在第 7 章[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?linkid=246102)。 不過，有些組件指示詞的 Microsoft 實作，ARM 組件指示詞而有所不同。 本文說明的差異。  

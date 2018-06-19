@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049883"
 ---
 # <a name="data"></a>@data
 預設的資料群組的名稱。 以外的所有模型會評估為 DGROUP**一般**。 評估為**一般**下**一般**記憶體模型 （文字巨集）。  

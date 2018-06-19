@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408737"
 ---
 # <a name="spawn-constants"></a>spawn 常數
 ## <a name="syntax"></a>語法  

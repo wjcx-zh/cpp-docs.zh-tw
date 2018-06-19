@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354964"
 ---
 # <a name="elapsed-time-automation-classes"></a>經過時間： Automation 類別
 此程序顯示如何計算兩個之間的差異`CTime`物件和 get`CTimeSpan`結果。  

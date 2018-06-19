@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417258"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>複製建構函式和複製指派運算子 (C++)
 > [!NOTE]

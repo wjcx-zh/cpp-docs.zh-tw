@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412133"
 ---
 # <a name="compiler-limits"></a>編譯器限制
 C++ 標準會建議各種語言的建構限制。 下列是 Visual C++ 編譯器未實作所建議之限制的案例。 第一個數字是 ISO C++ 11 標準 (INCITS/ISO/IEC 14882-2011[2012], Annex B) 所建立的限制，第二個數字是 Visual C++ 所實作的限制：  

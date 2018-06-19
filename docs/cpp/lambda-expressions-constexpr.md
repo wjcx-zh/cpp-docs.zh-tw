@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418896"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr c + + 中的 Lambda 運算式
 **Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 可能會做為宣告的 lambda 運算式`constexpr`或 contant 運算式中使用時的每個資料成員初始設定它擷取或導入了常數運算式中允許使用。  

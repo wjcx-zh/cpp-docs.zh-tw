@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057399"
 ---
 # <a name="operator-low32"></a>運算子 LOW32
 傳回的低 32 位元*運算式*。 MASM 運算式是 64 位元值。  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32402783"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
 
@@ -81,7 +82,7 @@ int _mbtowc_l(
 
 ## <a name="remarks"></a>備註
 
-**Mbtowc**函式會將轉換*計數*或所指向的位元組更少*mbchar*，如果*mbchar*不**NULL**，對應的寬字元。 **mbtowc**會儲存在產生的寬字元*wchar，*如果*wchar*不**NULL**。 **mbtowc**不會檢查多個**MB_CUR_MAX**位元組。 **mbtowc**使用目前的地區設定進行地區設定相關行為。**_mbtowc_l**是完全相同，不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**Mbtowc**函式會將轉換*計數*或所指向的位元組更少*mbchar*，如果*mbchar*不**NULL**，對應的寬字元。 **mbtowc**會儲存在產生的寬字元*wchar，* 如果*wchar*不**NULL**。 **mbtowc**不會檢查多個**MB_CUR_MAX**位元組。 **mbtowc**使用目前的地區設定進行地區設定相關行為。**_mbtowc_l**是完全相同，不同之處在於它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

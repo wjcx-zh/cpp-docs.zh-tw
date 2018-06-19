@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049111"
 ---
 # <a name="datasize"></a>@DataSize
 0 代表**微小**，**小**，**媒體**，和**一般**模型，1 代表**COMPACT**和**大型**模型，以及 2**超大型**模型 （等同的數字）。  

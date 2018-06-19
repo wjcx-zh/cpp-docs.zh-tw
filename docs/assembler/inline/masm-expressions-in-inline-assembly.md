@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32048786"
 ---
 # <a name="masm-expressions-in-inline-assembly"></a>內嵌組譯碼中的 MASM 運算式
 ## <a name="microsoft-specific"></a>Microsoft 特定的  

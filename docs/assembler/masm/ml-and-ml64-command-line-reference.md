@@ -69,6 +69,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057795"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令列參考
 會組譯及連結一或多個組件語言原始程式檔。 命令列選項會區分大小寫。  

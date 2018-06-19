@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054441"
 ---
 # <a name="macro"></a>MACRO
 將標示巨集區塊呼叫*名稱*，並建立*參數*巨集呼叫時，傳遞引數的預留位置。  

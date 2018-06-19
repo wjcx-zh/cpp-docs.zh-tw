@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054149"
 ---
 # <a name=""></a>?
 在資料宣告中，值 「 組合器 」 配置，但不會初始化。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419907"
 ---
 # <a name="name-resolution-for-dependent-types"></a>相依類型的名稱解析
 使用**typename**在給定的限定的名稱識別的類型會告訴編譯器樣板定義中的限定名稱。 如需詳細資訊，請參閱[typename](../cpp/typename.md)。  

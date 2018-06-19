@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354651"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>格式化時間值： 一般用途類別
 下列程序示範如何格式化時間值。  

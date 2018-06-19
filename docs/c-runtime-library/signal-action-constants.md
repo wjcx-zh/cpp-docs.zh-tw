@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409432"
 ---
 # <a name="signal-action-constants"></a>signal 動作常數
 接收到插斷訊號時會採取的動作，需視 `func` 的值而定。  

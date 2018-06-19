@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056554"
 ---
 # <a name="operator-dup"></a>運算子 DUP
 指定*計數*數目的宣告*initialvalue*。  

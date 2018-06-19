@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409848"
 ---
 # <a name="bitwise-exclusive-or-operator-"></a>位元互斥 OR 運算子：^
 ## <a name="syntax"></a>語法  

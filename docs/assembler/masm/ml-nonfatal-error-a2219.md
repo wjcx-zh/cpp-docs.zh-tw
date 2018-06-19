@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056115"
 ---
 # <a name="ml-nonfatal-error-a2219"></a>ML 非嚴重錯誤 A2219
 **中的位移不正確的對齊方式的回溯程式碼**  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051742"
 ---
 # <a name="df"></a>DF
 配置並選擇性地為每個初始化 6 個位元組的儲存體`initializer`。 `DF` 是的同義字[FWORD](../../assembler/masm/fword.md)。  

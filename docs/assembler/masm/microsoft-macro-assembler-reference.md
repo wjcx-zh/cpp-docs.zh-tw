@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052823"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 巨集組合程式參考
 Microsoft Macro Assembler (MASM) 提供了許多優於內嵌組譯碼。 MASM 包含巨集語言，包含功能，例如迴圈、 算術、 和文字字串處理。 MASM 也讓您進一步控制硬體，因為它支援 386 486 及 Pentium 處理器的指令集。 藉由使用 MASM，您也可以降低時間和記憶體的負荷。  

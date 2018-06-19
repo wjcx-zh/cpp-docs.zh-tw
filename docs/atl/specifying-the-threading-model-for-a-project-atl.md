@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359632"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>指定專案的執行緒模型 (ATL)
 下列巨集，可用來指定執行緒模型的 ATL 專案：  

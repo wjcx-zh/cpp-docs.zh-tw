@@ -53,6 +53,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32405233"
 ---
 # <a name="printf-printfl-wprintf-wprintfl"></a>printf、_printf_l、wprintf、_wprintf_l
 

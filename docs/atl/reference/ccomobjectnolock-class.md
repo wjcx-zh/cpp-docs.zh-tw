@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361471"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 類別
 這個類別會實作**IUnknown**的非彙總的物件，但是不會遞增中建構函式的模組鎖定計數。  

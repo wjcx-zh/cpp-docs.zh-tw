@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055923"
 ---
 # <a name="operator-shl"></a>運算子 SHL
 傳回的結果移位的位元*運算式*左*計數*的位元數字。  

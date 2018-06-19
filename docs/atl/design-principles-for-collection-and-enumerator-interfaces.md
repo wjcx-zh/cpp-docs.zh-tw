@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354915"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>集合和列舉程式介面的設計原則
 有不同的設計原則，之後每一種介面：  

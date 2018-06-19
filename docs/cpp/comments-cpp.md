@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411750"
 ---
 # <a name="comments-c"></a>註解 （c + +）
 註解是會被編譯器忽略，但對程式設計人員而言很有用的文字。 註解通常用來標註程式碼供未來參考。 編譯器會將它們視為空白字元。 您可以使用在測試中的註解，讓特定的程式碼行未啟用;不過， `#if` / `#endif`效果更好，前置處理器指示詞，因為您可以圍繞包含註解的程式碼，但是您無法巢狀註解。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416654"
 ---
 # <a name="ellipses-and-variadic-templates"></a>省略符號和 Variadic 範本
 本文示範如何使用省略符號 (`...`) 與 c + + 的 variadic 樣板。 省略符號已在 C 和 c + + 中的許多用途。 其中包括對於函式的變數引數清單。 `printf()`函式的 C 執行階段程式庫是其中一個最知名的範例。  

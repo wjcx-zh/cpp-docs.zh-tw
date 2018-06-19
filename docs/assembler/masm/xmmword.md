@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056414"
 ---
 # <a name="xmmword"></a>XMMWORD
 使用 128 位元多媒體運算元的 MMX 和 SSE (XMM) 的指示。  

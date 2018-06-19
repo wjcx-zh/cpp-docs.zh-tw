@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356350"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>加入 ATL OLE DB 消費者
 使用此精靈將 ATL OLE DB 取用者加入至專案。 ATL OLE DB 取用者包含 OLE DB 存取子類別和資料繫結的必要存取資料來源。 專案必須建立當做 ATL COM 應用程式，或包含 ATL 支援 （這會自動新增 ATL OLE DB 消費者精靈） 的 MFC 或 Win32 應用程式。  

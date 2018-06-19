@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055677"
 ---
 # <a name="ifdef"></a>IFDEF
 如果組件會授與*名稱*是先前定義的標籤、 變數或符號。  

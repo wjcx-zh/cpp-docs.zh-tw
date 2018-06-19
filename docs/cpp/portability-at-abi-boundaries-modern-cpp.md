@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419657"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>ABI 界限上的可攜性 (現代 C++)
 使用可攜式類型與慣例二進位介面邊界。 「可攜式類型」是一種 C 內建的類型，或是只包含 C 內建類型的結構。 類別型別只能在呼叫端和被呼叫端同意在配置，呼叫慣例，依此類推。兩者都使用相同的編譯器和編譯器設定編譯時，這樣做才可行。  

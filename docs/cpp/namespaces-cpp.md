@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423672"
 ---
 # <a name="namespaces-c"></a>命名空間 (C++)
 命名空間是提供其內識別項 (類型、函式、變數等的名稱) 範圍的宣告式區域。 命名空間用來將程式碼組織成邏輯群組，以及防止特別在程式碼基底包含多個程式庫時可能會發生的名稱衝突。 在命名空間範圍的所有識別項都可以看得到彼此，沒有限制。 命名空間外部的識別項可以使用完整的名稱，每個識別項，例如存取成員`std::vector<std::string> vec;`，或藉由[using 宣告](../cpp/using-declaration.md)單一識別項 (`using std::string`)，或[using 指示詞](../cpp/namespaces-cpp.md#using_directives)針對命名空間中的所有識別項 (`using namespace std;`)。 標頭檔中的程式碼應該一律使用完整命名空間名稱。  

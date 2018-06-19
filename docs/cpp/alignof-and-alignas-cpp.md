@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407978"
 ---
 # <a name="alignof-and-alignas-c"></a>alignof 和 alignas (C++)
 `alignas` 類型規範是可攜性的 C++ 標準方式，用來指定變數和使用者定義類型的自訂對齊方式。 `alignof` 運算子同樣是標準的可攜性方式，用來取得指定類型或變數的對齊方式。  

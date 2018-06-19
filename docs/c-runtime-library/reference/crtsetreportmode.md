@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32403257"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -111,7 +112,7 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫：**僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+**程式庫：** 僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="see-also"></a>另請參閱
 

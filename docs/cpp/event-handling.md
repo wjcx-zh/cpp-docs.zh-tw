@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414616"
 ---
 # <a name="event-handling"></a>事件處理
 事件處理主要是支援 COM 類別 (c + + 類別可實作 COM 物件，通常會使用 ATL 類別或[coclass](../windows/coclass.md)屬性)。  如需詳細資訊，請參閱[COM 中的事件處理](../cpp/event-handling-in-com.md)。  

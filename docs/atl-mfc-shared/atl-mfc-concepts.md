@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354537"
 ---
 # <a name="atlmfc-concepts"></a>ATL/MFC 概念
 本節提供概念和以工作為基礎的主題可協助您使用 Active Template Library (ATL) 和 Microsoft Foundation Class (MFC) 程式庫之間共用的類別進行程式設計。  

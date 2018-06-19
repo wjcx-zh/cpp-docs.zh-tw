@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354178"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>將功能加入至複合控制項
 一旦您已插入任何必要的控制項複合控制項，牽涉到下一個步驟，加入新的功能。 這項新功能通常分為兩類：  

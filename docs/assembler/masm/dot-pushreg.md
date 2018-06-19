@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055143"
 ---
 # <a name="pushreg"></a>.PUSHREG
 會產生`UWOP_PUSH_NONVOL`針對指定的暫存器號碼使用目前的時差，以序言回溯程式碼項目。  

@@ -62,6 +62,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409380"
 ---
 # <a name="sal-annotations"></a>SAL 註釋
 如果檢查程式庫標頭檔，您可能會注意到一些不尋常的註釋，例如 `_In_z` 和 `_Out_z_cap_(_Size)`。 這些是 Microsoft 原始程式碼註釋語言 (SAL) 的範例，它提供一組註釋說明函式如何使用它的參數，例如，其關於參數的假設和完成時的保證。 標頭檔 \<sal.h> 定義註釋。  

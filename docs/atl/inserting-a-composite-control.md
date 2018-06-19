@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358686"
 ---
 # <a name="inserting-a-composite-control"></a>插入複合控制項
 **加入類別**對話方塊可讓您將 ATL 物件插入至專案。 存取此對話方塊，以滑鼠右鍵按一下專案名稱，在 [方案總管] 中，指向**新增**，然後按一下**加入類別**。  

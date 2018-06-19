@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424348"
 ---
 # <a name="smart-pointers-modern-c"></a>智慧型指標 (現代 C++)
 在現代 c + + 程式設計中，標準程式庫包含*智慧型指標*、 用來協助確保程式可用的記憶體和資源流失，和例外狀況之虞。  

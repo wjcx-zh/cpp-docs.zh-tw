@@ -25,6 +25,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056128"
 ---
 # <a name="operator-"></a>運算子 +
 第一個運算子會傳回*expression1*加上*expression2*。 第二個運算子變換正負號的*運算式*。  

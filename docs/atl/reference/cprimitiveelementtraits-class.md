@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359139"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits 類別
 這個類別會提供預設的方法和集合類別的函式組成的基本資料類型。  

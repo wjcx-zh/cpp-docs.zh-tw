@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353701"
 ---
 # <a name="can-i-reuse-a-host-window"></a>可以重複使用主控視窗嗎？
 不建議您重複使用主應用程式視窗。 若要確保您的程式碼的加強性，您應該主應用程式視窗的單一控制項存留期的存留期。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050346"
 ---
 # <a name="mmx"></a>.MMX
 可讓 MMX 或單指令，多個資料 (SIMD) 指令的組件。  

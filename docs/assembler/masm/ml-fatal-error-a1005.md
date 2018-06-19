@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050837"
 ---
 # <a name="ml-fatal-error-a1005"></a>ML 嚴重錯誤 A1005
 **組譯工具限制： 巨集完整的參數名稱資料表**  

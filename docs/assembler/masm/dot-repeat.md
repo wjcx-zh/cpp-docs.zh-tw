@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052446"
 ---
 # <a name="repeat"></a>.REPEAT
 會產生重複的區塊執行的程式碼*陳述式*直到`condition`變得則為 true。 [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)，會變成 true，當 CX 是零，可能會取代為[。直到](../../assembler/masm/dot-until.md)。 `condition`是選擇性的 with **。UNTILCXZ**。  

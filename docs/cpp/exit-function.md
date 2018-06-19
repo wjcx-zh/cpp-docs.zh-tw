@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412526"
 ---
 # <a name="exit-function"></a>exit 函式
 **結束**函式，在標準 include 檔中宣告\<stdlib.h >，會終止 c + + 程式。  

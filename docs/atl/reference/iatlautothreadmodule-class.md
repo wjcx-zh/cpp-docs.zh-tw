@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358778"
 ---
 # <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule 類別
 此類別代表介面`CreateInstance`方法。  

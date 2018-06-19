@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415448"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：建立和使用 CComPtr 和 CComQIPtr 執行個體
 在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 (或更精確地說是 COM 伺服器)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 如需 COM 基本概念的資訊，請參閱 [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355642"
 ---
 # <a name="enumerators-and-collections-classes"></a>列舉值和集合類別
 下列類別會提供支援 COM 集合和列舉型別：  

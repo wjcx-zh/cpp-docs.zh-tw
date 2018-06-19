@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356970"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>類別由 MFC 和 ATL 共用。
 下表列出 MFC 和 ATL 之間共用的類別  

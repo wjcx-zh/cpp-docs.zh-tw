@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420963"
 ---
 # <a name="using-atexit"></a>使用 atexit
 與[atexit](../c-runtime-library/reference/atexit.md)函式，您可以指定在程式結束之前執行結束處理函式。 執行結束處理函式之前，不會終結在呼叫 `atexit` 之前初始化的全域靜態物件。  

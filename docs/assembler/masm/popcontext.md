@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055296"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 還原目前的部分或全部`context`(儲存[PUSHCONTEXT](../../assembler/masm/pushcontext.md)指示詞)。 `context`可以**採用**， `RADIX`，**列出**， **CPU**，或**所有**。  

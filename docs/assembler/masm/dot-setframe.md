@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052582"
 ---
 # <a name="setframe"></a>.SETFRAME
 框架填滿註冊中使用指定的暫存器的回溯資訊的欄位和位移 (`reg`) 和位移 (`offset`)。 位移必須是 16 的倍數，且小於或等於 240。 這個指示詞也會產生`UWOP_SET_FPREG`指定登錄使用的目前位移，序言回溯程式碼項目。  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32400235"
 ---
 # <a name="fclose-fcloseall"></a>fclose、_fcloseall
 
@@ -71,7 +72,7 @@ int _fcloseall( void );
 
 **_Fcloseall**函式會關閉所有開啟的資料流，除了**stdin**， **stdout**， **stderr** (以及在 MS-DOS **_stdaux**和 **_stdprn**)。 它也會關閉，並刪除任何由建立暫存檔**tmpfile**。 在這兩個函式中，所有與資料流相關聯的緩衝區都會先排清再關閉。 關閉資料流時，會釋放系統配置的緩衝區。 使用使用者指派的緩衝區**setbuf**和**setvbuf**不會自動釋放。
 
-**注意︰**使用這些函式關閉資料流時，基礎檔案描述項和作業系統檔案控制代碼 (或通訊端) 以及資料流都會關閉。 因此，如果原先已開啟檔案為檔案處理或檔案描述項，並關閉與**fclose**，也不執行呼叫 **_close**若要關閉的檔案描述項; 請勿呼叫 Win32 函式**CloseHandle**關閉檔案控制代碼。
+**注意︰** 使用這些函式關閉資料流時，基礎檔案描述項和作業系統檔案控制代碼 (或通訊端) 以及資料流都會關閉。 因此，如果原先已開啟檔案為檔案處理或檔案描述項，並關閉與**fclose**，也不執行呼叫 **_close**若要關閉的檔案描述項; 請勿呼叫 Win32 函式**CloseHandle**關閉檔案控制代碼。
 
 **fclose**和 **_fcloseall**包含程式碼，以防止其他執行緒的干擾。 如需非鎖定版本的**fclose**，請參閱 **_fclose_nolock**。
 

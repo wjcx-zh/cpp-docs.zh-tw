@@ -39,6 +39,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32405597"
 ---
 # <a name="qsorts"></a>qsort_s
 
@@ -107,7 +108,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫︰**所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+**程式庫︰** 所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>範例
 

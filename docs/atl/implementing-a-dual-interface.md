@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356728"
 ---
 # <a name="implementing-a-dual-interface"></a>實作雙重介面
 您可以實作雙重介面使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)類別，可提供的預設實作`IDispatch`雙重介面中的方法。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  

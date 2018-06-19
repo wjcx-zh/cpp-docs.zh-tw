@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410177"
 ---
 # <a name="setapptype"></a>_set_app_type
 在啟動時使用的內部函式會告訴 CRT，應用程式是主控台應用程式或 GUI 應用程式。  

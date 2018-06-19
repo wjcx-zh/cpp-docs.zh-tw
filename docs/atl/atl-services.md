@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354788"
 ---
 # <a name="atl-services"></a>ATL 服務
 若要建立您的 ATL COM 物件，使其在服務中執行，只是服務 (EXE) 從清單中選取的伺服器選項，ATL 專案精靈 中。 精靈接著會建立一個衍生自類別`CAtlServiceModuleT`實作服務。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052595"
 ---
 # <a name="stack"></a>@stack
 如 DGROUP 附近的堆疊或遠堆疊 （文字巨集） 的堆疊。  

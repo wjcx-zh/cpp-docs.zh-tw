@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357853"
 ---
 # <a name="programming-with-ccombstr-atl"></a>使用 CComBSTR 進行程式設計 (ATL)
 ATL 類別[CComBSTR](../atl/reference/ccombstr-class.md)提供周圍的包裝函式`BSTR`資料型別。 雖然`CComBSTR`是有用的工具，在幾種情況需要注意。  

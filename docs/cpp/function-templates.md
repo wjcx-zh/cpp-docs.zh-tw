@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414533"
 ---
 # <a name="function-templates"></a>函式樣板
 類別樣板會根據在具現化時傳遞至類別的型別引數，定義一系列相關的類別。 函式樣板與類別樣板類似，但其定義一系列的函式。 使用函式樣板時，您可以指定一組根據相同的程式碼，但在不同類型或類別上運作的函式。 下列函式樣板會交換兩個項目：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358257"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>進行 ATL 物件變成無法建立
 您可以變更 atl COM 物件的屬性，讓用戶端無法直接建立物件。 在此情況下，物件會將透過方法呼叫所傳回的另一個物件而直接建立。  

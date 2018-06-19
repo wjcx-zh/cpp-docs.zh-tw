@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053200"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 會產生`UWOP_PUSH_MACHFRAME`回溯程式碼項目。 如果選擇性`code`指定，則回溯程式碼項目會指定為 1 的修飾詞。 否則修飾詞是 0。  

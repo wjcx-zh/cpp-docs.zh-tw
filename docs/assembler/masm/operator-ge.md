@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055774"
 ---
 # <a name="operator-ge"></a>運算子 GE
 如果為 true (-1) *expression1*大於或等於*expression2*，或如果不是傳回 false (0)。  

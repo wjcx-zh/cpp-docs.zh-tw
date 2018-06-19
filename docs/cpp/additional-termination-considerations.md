@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408142"
 ---
 # <a name="additional-termination-considerations"></a>其他終止考量
 您可以使用來終止 c + + 程式**結束**， `return`，或**中止**。 您可以使用 `atexit` 函式加入結束處理。 這些將在下列章節中討論。  

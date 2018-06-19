@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056235"
 ---
 # <a name="operator-"></a>運算子 :
 覆寫的預設區段*運算式*與`segment`。 `segment`可以區段暫存器、 群組名稱、 區段名稱或區段運算式。 *運算式*必須是常數。  

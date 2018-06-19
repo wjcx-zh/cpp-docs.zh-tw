@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409315"
 ---
 # <a name="unix"></a>UNIX
 若計畫將您的程式移植到 UNIX，請依照這些指導方針執行：  

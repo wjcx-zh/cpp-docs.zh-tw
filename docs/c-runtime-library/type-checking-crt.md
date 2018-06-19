@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409341"
 ---
 # <a name="type-checking-crt"></a>類型檢查 (CRT)
 編譯器會在可接受不定數目引數的函式上執行有限的類型檢查，如下所示：  

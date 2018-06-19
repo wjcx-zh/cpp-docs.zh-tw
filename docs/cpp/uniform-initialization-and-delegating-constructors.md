@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423518"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>統一初始設定和委派建構函式
 在現代 c + + 中，您可以使用*大括號初始化*任何型別，而不等號。 此外，您可以使用委派建構函式，來簡化您的程式碼，當您有多個建構函式會執行類似的工作。  

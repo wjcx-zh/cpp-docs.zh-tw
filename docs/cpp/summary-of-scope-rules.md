@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423866"
 ---
 # <a name="summary-of-scope-rules"></a>範圍規則摘要
 使用的名稱在其範圍內不可以模稜兩可 (其位置由多載決定)。 如果名稱表示一個函式，該函式必須明確指定參數的數目和類型。 如果名稱仍然模稜兩可，[成員存取](../cpp/member-access-control-cpp.md)套用規則。  

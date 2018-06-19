@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357273"
 ---
 # <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start 函式
 執行服務時， **_tWinMain**呼叫**CAtlServiceModuleT::WinMain**，接著呼叫`CAtlServiceModuleT::Start`。  

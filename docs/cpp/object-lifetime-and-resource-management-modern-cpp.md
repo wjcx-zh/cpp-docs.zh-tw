@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423492"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>物件存留期和資源管理 (現代 C++)
 不同於 Managed 語言，C++ 沒有記憶體回收 (GC)，其會在程式執行時自動釋出不再使用的記憶體資源。 在 C++ 中，資源管理與物件存留期有直接關係。 本文件說明影響 C++ 之物件存留期的因素，以及其管理方式。  

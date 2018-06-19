@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410797"
 ---
 # <a name="floating-point-coprocessor-and-calling-conventions"></a>浮點常數副處理器和呼叫慣例
 如果您要為浮點常式點副處理器撰寫組件，您必須保留浮點控制字詞並清除副處理器堆疊，除非您要傳回**float**或**double**值 （其 ST(0)) 應該傳回您的函式。  

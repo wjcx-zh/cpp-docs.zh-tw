@@ -29,6 +29,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051449"
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>在 __asm 區塊中使用 C 或 C++
 ## <a name="microsoft-specific"></a>Microsoft 特定的  

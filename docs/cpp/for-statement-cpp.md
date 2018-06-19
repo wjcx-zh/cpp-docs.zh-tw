@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417180"
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C++)
 重複執行陳述式，直到條件變成 false。 範圍架構 for 陳述式上的資訊，請參閱[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)。  

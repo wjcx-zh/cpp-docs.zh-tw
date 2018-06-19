@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049277"
 ---
 # <a name="instr"></a>@InStr
 尋找第一個出現的巨集函式*string2*中*string1*開始在*位置*內*string1*。 如果*位置*未出現，在開頭開始搜尋*string1*。 如果傳回的位置的整數或 0 *string2*找不到。  

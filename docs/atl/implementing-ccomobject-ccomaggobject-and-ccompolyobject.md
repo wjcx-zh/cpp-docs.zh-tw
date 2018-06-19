@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356337"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>實作 Ccomobject<、 CComAggObject 和 CComPolyObject
 樣板類別[Ccomobject<](../atl/reference/ccomobject-class.md)， [CComAggObject](../atl/reference/ccomaggobject-class.md)，和[CComPolyObject](../atl/reference/ccompolyobject-class.md)一律會繼承鏈結中最常衍生的類別。 他們要負責處理的方法中的所有**IUnknown**: `QueryInterface`， `AddRef`，和**發行**。 此外，`CComAggObject`和`CComPolyObject`（當用於彙總的物件） 提供特殊的參考計數和`QueryInterface`內部未知所需的語意。  

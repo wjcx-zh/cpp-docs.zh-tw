@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355800"
 ---
 # <a name="introduction-to-atl"></a>ATL 簡介
 ATL Active Template Library，一組樣板架構 c + + 類別與您可以輕鬆建立小型、 快速元件物件模型 (COM) 物件。 它有特殊的支援索引鍵的 COM 功能，包括： 內建的實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)， [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)， [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)，和`IDispatch`雙重;介面。標準的 COM 列舉程式介面。連接點。tear-off 介面。和 ActiveX 控制項。  

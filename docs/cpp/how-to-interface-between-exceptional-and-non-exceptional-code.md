@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417271"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：例外狀況和非例外狀況代碼之間的介面
 本文說明如何在 C++ 模組實作一致的例外狀況處理，以及如何將這些例外狀況與在例外狀況界限上的錯誤碼來回轉譯。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055361"
 ---
 # <a name="operator--masm"></a>運算子 ！ (MASM)
 會將`character`為常值字元，而不是做為運算子或符號。  

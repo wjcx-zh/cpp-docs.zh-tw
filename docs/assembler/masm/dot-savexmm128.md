@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057935"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 會產生 `UWOP_SAVE_XMM128`或`UWOP_SAVE_XMM128_FAR`回溯程式碼項目指定 xmm 暫存器和位移使用目前的序言位移。 MASM 會選擇最有效率的編碼方式。  

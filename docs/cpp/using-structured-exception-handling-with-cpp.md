@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421938"
 ---
 # <a name="using-structured-exception-handling-with-c"></a>在 C++ 中使用結構化例外狀況處理
 這些文章中所述的結構化例外狀況處理可搭配 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計，不建議使用。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理機制更有彈性，因為它可以處理任何類型的例外狀況。  

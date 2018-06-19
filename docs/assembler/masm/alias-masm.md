@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049163"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 **別名**指示詞建立函式的替代名稱。  這可讓您建立多個名稱，為函式，或建立文件庫可讓連結器 (LINK.exe) 將舊的函式對應至新的函式。  

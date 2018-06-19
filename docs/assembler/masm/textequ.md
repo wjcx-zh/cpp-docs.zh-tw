@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052956"
 ---
 # <a name="textequ"></a>TEXTEQU
 指派*textitem*至*名稱*。 *Textitem*可以是常值的字串常數前面加上`%`，或巨集函式所傳回的字串。  

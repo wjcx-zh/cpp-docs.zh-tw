@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420151"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>編譯時間封裝的 Pimpl (現代 C++)
 *Pimpl 慣用語*是現代 c + + 技巧隱藏降到最低的結合程度，並將介面的實作。 Pimpl 會簡稱為 「 指標來實作。 」 您可能已經熟悉概念，但知道的其他名稱，例如 Cheshire Cat 或編譯器防火牆慣用語。  

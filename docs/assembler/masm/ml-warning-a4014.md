@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056937"
 ---
 # <a name="ml-warning-a4014"></a>ML 警告 A4014
 指示和初始化的 BSS 區段中不支援的資料  

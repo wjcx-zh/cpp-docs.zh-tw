@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050918"
 ---
 # <a name="data"></a>.DATA
 當搭配[。模型](../../assembler/masm/dot-model.md)，啟動附近的資料區段為初始化的資料 （區段名稱 （_d））。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050931"
 ---
 # <a name="operator-not"></a>運算子 NOT
 傳回*運算式*反轉的所有位元。  

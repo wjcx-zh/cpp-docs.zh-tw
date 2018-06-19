@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418363"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>如何：建立和使用 shared_ptr 執行個體
 `shared_ptr` 類型是 C++ 標準程式庫中的一種智慧型指標，是為有一個以上的擁有者可能必須管理物件在記憶體中的存留期之情節而設計。 在您初始化 `shared_ptr` 之後，您可以函式引數中的值予以複製、傳送以及指派至其他 `shared_ptr` 執行個體。 所有執行個體都會指向相同的物件，並共用對一個每當新的 `shared_ptr` 加入、超出範圍或重設時會遞增和遞減參考計數的「控制區塊」的存取。 當參考計數達到零時，控制區塊會刪除記憶體資源和自己本身。  

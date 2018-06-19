@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358002"
 ---
 # <a name="atl-dialog-wizard"></a>ATL 對話方塊精靈
 此精靈將插入至專案 ATL 對話方塊物件，衍生自[CAxDialogImpl](../../atl/reference/caxdialogimpl-class.md)。 對話方塊衍生自`CAxDialogImpl`可以裝載 ActiveX 控制項。  

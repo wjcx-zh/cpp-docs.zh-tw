@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357241"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG**是 Windows NT 4.0 公用程式，可讓您在登錄中設定特定的 DCOM 的各種設定。 **DCOMCNFG**視窗有三頁： 預設安全性、 預設的內容和應用程式。 在 Windows 2000 第四個頁面上，預設的通訊協定，會出現。  

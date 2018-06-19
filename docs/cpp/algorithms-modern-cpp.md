@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412292"
 ---
 # <a name="algorithms-modern-c"></a>演算法 (現代 C++)
 對於現代的 c + + 程式設計中，我們建議您使用中的演算法[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。 以下是一些重要的範例：  

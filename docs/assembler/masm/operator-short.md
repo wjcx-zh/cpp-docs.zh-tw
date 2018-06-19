@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056323"
 ---
 # <a name="operator-short"></a>運算子 SHORT
 設定的型別*標籤*簡短。 所有跳到*標籤*必須簡短 (若要從跳躍指令-128 到 + 127 個位元組範圍內*標籤*)。  

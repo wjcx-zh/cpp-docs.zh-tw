@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421038"
 ---
 # <a name="lambda-expression-syntax"></a>Lambda 運算式語法
 本文示範 Lambda 運算式的語法和結構化項目。 如需 lambda 運算式的說明，請參閱[Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。  

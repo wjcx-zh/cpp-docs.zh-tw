@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412396"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 

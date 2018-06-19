@@ -23,6 +23,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255960"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 結構
 包含用於轉譯為各種目標，例如印表機、 中繼檔或 ActiveX 控制項的資訊。  

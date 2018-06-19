@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385786"
 ---
 # <a name="truncation-of-floating-point-values"></a>浮點值截斷
 **ANSI 3.2.1.4** 將浮點數轉換為較小的浮點數時，截斷或進位的方向  

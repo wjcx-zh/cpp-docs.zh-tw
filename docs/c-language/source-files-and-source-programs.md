@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391190"
 ---
 # <a name="source-files-and-source-programs"></a>原始程式檔和來源程式
 一個原始程式可分成一個或多個「原始程式檔」或「轉譯單位」。 輸入到編譯器者稱為「轉譯單位」。  

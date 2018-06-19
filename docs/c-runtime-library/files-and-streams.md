@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390514"
 ---
 # <a name="files-and-streams"></a>檔案和資料流
 透過讀取和寫入檔案，以便與目標環境溝通的程式。 檔案可以是：  

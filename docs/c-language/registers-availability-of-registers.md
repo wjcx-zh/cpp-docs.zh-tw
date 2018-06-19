@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383939"
 ---
 # <a name="registers-availability-of-registers"></a>暫存器：暫存器的可用性
 **ANSI 3.5.1**：可以使用暫存器儲存類別指定名稱，將物件實際置於暫存器中的範圍  

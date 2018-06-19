@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391674"
 ---
 # <a name="initializing-aggregate-types"></a>初始化彙總類型
 「彙總」類型是一種結構、等位或陣列類型。 如果彙總類型包含彙總類型的成員，則會以遞迴方式套用初始化規則。  

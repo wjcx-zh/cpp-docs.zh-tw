@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379558"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm、/vms、/vmv (一般用途表示)
 使用時機[/vmb、 /vmg （表示方法）](../../build/reference/vmb-vmg-representation-method.md)當做[表示方法](../../build/reference/vmb-vmg-representation-method.md)。 這些選項表示尚未發生類別定義的繼承模型。  

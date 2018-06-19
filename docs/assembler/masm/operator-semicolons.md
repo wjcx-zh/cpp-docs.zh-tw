@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32058016"
 ---
 # <a name="operator-"></a>運算子 ;;
 會將*文字*為巨集，只會出現在巨集定義中的註解。 清單不會顯示*文字*展開的巨集的位置。  

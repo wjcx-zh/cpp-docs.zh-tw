@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135023"
 ---
 # <a name="locklock"></a>lock::lock
 建構`lock`物件，並選擇性地等候一段指定的時間，或完全不用，取得鎖定。  

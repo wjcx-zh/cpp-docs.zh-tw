@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379233"
 ---
 # <a name="understanding-the-helper-function"></a>了解 Helper 函式
 連結器支援延遲載入 helper 函式是什麼實際上會在執行階段載入 DLL。 您可以修改透過撰寫自己的函式，並將它連結至您的程式，而不是使用 Delayimp.lib 中提供的 helper 函式來自訂其行為的 helper 函式。 一個 helper 函式是所有的延遲載入 Dll。  

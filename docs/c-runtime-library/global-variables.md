@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392035"
 ---
 # <a name="global-variables"></a>全域變數
 Microsoft C 執行階段程式庫會提供下列全域變數或巨集。 這些全域變數或巨集中，有一部分已被更安全的功能版本所取代，建議您使用這些版本而不使用全域變數。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354331"
 ---
 # <a name="atl-connection-point-classes"></a>ATL 連接點類別
 ATL 連接點，才能使用下列類別：  

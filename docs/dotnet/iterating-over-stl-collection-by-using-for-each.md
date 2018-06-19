@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131338"
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>使用每個反覆查看 c + + 標準程式庫集合
 `for each`關鍵字可以用來反覆查看 c + + 標準程式庫集合。  

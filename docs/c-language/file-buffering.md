@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382649"
 ---
 # <a name="file-buffering"></a>檔案緩衝
 **ANSI 4.9.3**：檔案緩衝的特性  

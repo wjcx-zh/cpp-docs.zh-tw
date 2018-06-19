@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386520"
 ---
 # <a name="renaming-with-a-name-that-exists"></a>以現有名稱重新命名
 **ANSI 4.9.4.2**：具有新名稱的檔案在呼叫 **rename** 函式之前即已存在時的作用  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380530"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (產生函式原型)
 已移除。 為原始程式檔中定義的每個函式建立函式原型，但不會編譯原始程式檔。  

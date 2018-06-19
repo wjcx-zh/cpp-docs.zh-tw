@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135855"
 ---
 # <a name="managed-types-ccl"></a>Managed 類型 (C++/CL)
 針對 managed 型別和建立的宣告和使用這些型別的物件語法已經大幅改變，從 Managed Extensions for c + + Visual c + +。 這是要提升其 ISO c + + 類型系統中的整合。 這些變更會以下列小節將詳細說明。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
  [解構函式語意的變更](../dotnet/changes-in-destructor-semantics.md)  
  討論不具決定性最終處理，`Finalize`與`Dispose`，針對參考的物件和使用明確的細節`Finalize`。  
   
- **注意：**委派的討論內容會延遲，直到[委派和事件](../dotnet/delegates-and-events.md)呈現其事件類別時，一般的主題內的成員具有[類別或介面中的成員宣告(C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
+ **注意：** 委派的討論內容會延遲，直到[委派和事件](../dotnet/delegates-and-events.md)呈現其事件類別時，一般的主題內的成員具有[類別或介面中的成員宣告(C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md).  
   
 ## <a name="see-also"></a>另請參閱  
  [C + + /CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)   

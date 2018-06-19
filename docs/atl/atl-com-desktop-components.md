@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255989"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 桌面元件
 ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別，可簡化程式設計的元件物件模型 (COM) 物件。 若要充分利用 ATL，強烈建議 COM 工作熟悉。  

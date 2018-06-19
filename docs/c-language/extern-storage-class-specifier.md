@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388724"
 ---
 # <a name="extern-storage-class-specifier"></a>extern 儲存類別指定名稱
 使用 `extern` 儲存類別規範宣告的變數是一個變數的參考，其與在任何程式原始程式檔的外部層級定義的變數具有相同名稱。 內部 `extern` 宣告用來使外部層級的變數定義在區塊內可見。 除非另外在外部層次宣告，否則使用 `extern` 關鍵字宣告的變數只有在其宣告的區塊中才可見。  

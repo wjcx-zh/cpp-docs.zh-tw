@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389277"
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C)
 **for** 陳述式可讓您依指定的次數重複執行陳述式或複合陳述式。 **for** 陳述式的主體會執行零或多次，直到的選擇性條件變成 false 為止。 您可以在 **for** 陳述式內使用選擇性的運算式，在 **for** 陳述式的執行期間進行初始化和變更值。  

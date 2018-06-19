@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391453"
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
 有些時間和日期常式使用 `_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 調整本機時間。 這些全域變數已為更安全的函式版本所取代，它們應該用來取代全域變數。  

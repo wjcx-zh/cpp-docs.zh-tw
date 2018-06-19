@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391440"
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各種 Windows 作業系統版本所支援的國家/地區清單，請參閱[國家語言支援 (NLS) API 參考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) \(英文\)。 在該清單中，國家/地區字串可以是 [Locale - Language Country/Region] \(地區設定 - 語言國家/地區\) 欄中的任何國家/地區值，或是 [Country or Region name abbreviation] \(國家或地區名稱縮寫\) 欄中的任何縮寫。 如需依 Windows 作業系統版本分類的其他語言支援資訊，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](http://msdn.microsoft.com/goglobal/bb896001.aspx) \(英文\)  

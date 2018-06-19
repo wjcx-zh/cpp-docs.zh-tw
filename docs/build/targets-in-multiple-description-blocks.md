@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380284"
 ---
 # <a name="targets-in-multiple-description-blocks"></a>多重描述區塊中的目標
 若要更新的目標使用不同的命令的多個描述區塊中，指定兩個連續冒號 （:） 目標之間的相依性。  

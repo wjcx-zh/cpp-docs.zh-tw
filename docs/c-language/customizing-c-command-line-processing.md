@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384394"
 ---
 # <a name="customizing-c-command-line-processing"></a>自訂 C 命令列處理
 如果您的程式不接受命令列引數，您可以隱藏執行命令列處理的程式庫常式用法，藉此稍微節省空間。 這個常式稱為 **_setargv** (在寬字元環境中則稱為 **_wsetargv**)，如[展開萬用字元引數](../c-language/expanding-wildcard-arguments.md)中所述。 若要隱藏其用途，請在包含 **main** 函式的檔案中定義不執行任何動作的常式，並將此常式命名為 **_setargv** (在寬字元環境中則命名為 **_wsetargv**)。 然後，您的 **_setargv** 或 **_wsetargv** 定義將會達成對 **_setargv** 或 **_wsetargv** 的呼叫，且不會載入程式庫版本。  

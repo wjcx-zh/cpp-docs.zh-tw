@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387736"
 ---
 # <a name="library-functions"></a>程式庫函式
 -   [NULL 巨集](../c-language/null-macro.md)  

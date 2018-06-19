@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381235"
 ---
 # <a name="c-unary-operators"></a>C 一元運算子
 一元運算子會出現在其運算元之前，以及從右邊連結到左邊。  

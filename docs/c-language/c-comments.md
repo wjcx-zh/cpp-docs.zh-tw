@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384342"
 ---
 # <a name="c-comments"></a>C 註解
 「註解」是一個以正斜線和星號組合 (<b>/\*</b>) 為開頭的字元序列，編譯器會將其視為一個空白字元或直接忽略。 註解可以包含可表示字元集的任何字元組合，其中包括新行字元，但不包括「結尾註解」分隔符號 (<b>\*/</b>)。 註解可佔用一行以上，但不可以是巢狀。  

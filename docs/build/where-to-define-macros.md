@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380910"
 ---
 # <a name="where-to-define-macros"></a>定義巨集的位置
 命令列、 指令檔、 makefile 或 Tools.ini 檔案中定義巨集。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132550"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>如何：從 Windows 登錄讀取資料 (C++/CLI)
 下列程式碼範例使用<xref:Microsoft.Win32.Registry.CurrentUser>從 Windows 登錄讀取資料的索引鍵。 首先，使用列舉子機碼<xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>方法，然後識別子機碼使用開啟<xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>方法。 根目錄機碼，例如每個子機碼由<xref:Microsoft.Win32.RegistryKey>類別。 最後，新<xref:Microsoft.Win32.RegistryKey>物件用來列舉的索引鍵/值組。  

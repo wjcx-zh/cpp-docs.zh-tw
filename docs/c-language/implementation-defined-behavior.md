@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383432"
 ---
 # <a name="implementation-defined-behavior"></a>實作定義的行為
 ANSI X3.159-1989，美國國家資訊系統標準 - 程式語言 - C，包含一個稱為＜可攜性問題＞的章節。 ANSI 章節列出 C 語言當中 ANSI 對每種特定實作開放的區域。 本節說明 Microsoft C 如何處理 C 語言中這些由實作定義的區域。  

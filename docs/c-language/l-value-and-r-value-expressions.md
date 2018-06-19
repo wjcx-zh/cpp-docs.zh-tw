@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386260"
 ---
 # <a name="l-value-and-r-value-expressions"></a>左值和右值運算式
 參考記憶體位置的運算式稱為「左值」運算式。 左值代表儲存區域的「定位程式」值或「左」值，表示它可以在等號 (**=**) 的左側出現。 左值通常是識別項。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387579"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 關係和等號比較運算子
 二元關係運算子和相等運算子會比較其第一個運算元與第二個運算元，以測試指定的關聯性是否有效。 如果測試的關聯性是 true，則關聯運算式的結果為 1，如果是 false，結果即為 0。 結果的類型是 `int`。  

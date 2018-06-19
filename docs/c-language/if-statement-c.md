@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387046"
 ---
 # <a name="if-statement-c"></a>if 陳述式 (C)
 **if** 陳述式可控制條件分支。 如果運算式的值為非零值，就會執行 **if** 陳述式的主體。 **if** 陳述式的語法有兩種形式。  

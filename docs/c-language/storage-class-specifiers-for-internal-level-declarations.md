@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385760"
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>內部層級宣告的儲存類別指定名稱
 您只能在內部層級使用四個 *storage-class-specifier* 終端項當中的任何一個，以進行變數宣告。 如果您省略此類宣告中的 *storage-class-specifier*，預設儲存類別會是 **auto**。因此，C 程式很少使用 **auto** 關鍵字。  

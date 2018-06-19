@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138479"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`multiset`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。  

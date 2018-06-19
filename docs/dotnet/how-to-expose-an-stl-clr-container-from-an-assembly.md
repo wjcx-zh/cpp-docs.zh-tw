@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140169"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>如何：從組件公開 STL/CLR 容器
 STL/CLR 容器，例如`list`和`map`會實作為範本 ref 類別。 C + + 範本會在編譯時期具現化，因為有完全相同的簽章，但位於不同的組件的兩個範本類別是不同類型。 這表示，無法跨組件界限使用的樣板類別。  

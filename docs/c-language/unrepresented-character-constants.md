@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385708"
 ---
 # <a name="unrepresented-character-constants"></a>未表示的字元常數
 **ANSI 3.1.3.4** 內含字元或逸出序列的整數字元常數值，無法使用寬字元常數的基礎執行字元集或擴充字元集表示  

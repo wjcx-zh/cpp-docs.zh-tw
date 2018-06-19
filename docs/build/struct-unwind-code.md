@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390095"
 ---
 # <a name="struct-unwindcode"></a>struct UNWIND_CODE
 回溯程式碼陣列用來記錄會影響靜態暫存器和 RSP 初構中的一系列的作業。 每個程式碼項目具有下列格式：  

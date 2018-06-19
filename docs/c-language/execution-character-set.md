@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382821"
 ---
 # <a name="execution-character-set"></a>執行字元集
 這個內容通常是指「執行字元集」。 執行字元集不一定要與撰寫 C 程式使用的來源字元集相同。 執行字元集包含來源字元集內的所有字元，另外還包括 null 字元、新行字元、退格鍵、水平定位字元、垂直定位字元、歸位字元和逸出序列。 來源和執行字元集在其他實作中可能不同。  

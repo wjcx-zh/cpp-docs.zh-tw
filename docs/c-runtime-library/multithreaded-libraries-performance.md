@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390409"
 ---
 # <a name="multithreaded-libraries-performance"></a>多執行緒程式庫效能
 單一執行緒 CRT 已不再提供使用。 本主題會討論從多執行緒程式庫取得最大效能的方法。  

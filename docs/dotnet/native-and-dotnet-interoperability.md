@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134087"
 ---
 # <a name="native-and-net-interoperability"></a>原生和 .NET 互通性
 Visual c + + 支援了互通性功能，可讓 managed 和 unmanaged 建構共存並交互操作在相同的組件內，甚至相同的檔案。 這項功能，例如 P/Invoke 的小型子集會受到其他.NET 語言，但大部分的 Visual c + + 所提供的互通性支援不適用於其他語言。  

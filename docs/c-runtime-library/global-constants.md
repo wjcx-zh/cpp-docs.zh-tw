@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391466"
 ---
 # <a name="global-constants"></a>全域常數
 Microsoft 執行階段程式庫包含程式庫常式所使用之全域常數的定義。 若要使用這些常數，請包含適當的標頭檔，如每個常數說明中所示。 下表列出全域常數。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255974"
 ---
 # <a name="worker-archetype"></a>背景工作原型
 類別符合*工作者*原型提供程式碼以處理序的工作項目排入佇列的執行緒集區上。  

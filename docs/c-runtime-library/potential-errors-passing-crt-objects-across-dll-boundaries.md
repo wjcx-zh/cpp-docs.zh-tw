@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391255"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤
 當您將 C 執行階段 (CRT) 物件 (例如檔案控制代碼、地區設定和環境變數) 傳遞進出 DLL (跨 DLL 界限的函式呼叫) 時，如果 DLL 以及呼叫 DLL 的檔案使用不同複本的 CRT 程式庫，可能會發生未預期的行為。  

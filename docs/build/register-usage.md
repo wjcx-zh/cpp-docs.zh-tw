@@ -17,6 +17,7 @@ ms.sourcegitcommit: 4fc6869067d533b175207befd2dc60346afee285
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225215"
 ---
 # <a name="register-usage"></a>暫存器使用方式
 

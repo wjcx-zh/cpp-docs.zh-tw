@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381651"
 ---
 # <a name="c-constants"></a>C 常數
 「常數」(constant) 是數字、字元，或是可在程式中當成值使用的字元字串。 使用常數代表不能修改的浮點數、整數、列舉或字元值。  

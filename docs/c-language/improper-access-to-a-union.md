@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383588"
 ---
 # <a name="improper-access-to-a-union"></a>不適當的等位存取
 **ANSI 3.3.2.3**：使用不同類型的成員存取等位物件的成員  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387774"
 ---
 # <a name="statements-c"></a>陳述式 (C)
 C 程式的陳述式控制程式執行流程。 在 C 中，和其他程式語言一樣，可以使用數種不同的陳述式執行迴圈，選取要執行的其他陳述式，以及傳輸控制項。 在簡短的[陳述式語法的概觀](../c-language/overview-of-c-statements.md)之後，本節會按字母順序說明 C 陳述式：  

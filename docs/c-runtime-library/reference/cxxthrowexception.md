@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32395656"
 ---
 # <a name="cxxthrowexception"></a>_CxxThrowException
 
@@ -63,7 +64,7 @@ extern "C" void __stdcall _CxxThrowException(
 
 ## <a name="requirements"></a>需求
 
-**來源︰**Throw.cpp
+**來源︰** Throw.cpp
 
 ## <a name="see-also"></a>另請參閱
 

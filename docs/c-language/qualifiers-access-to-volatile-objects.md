@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384674"
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>限定詞：對 Volatile 物件的存取
 **ANSI 3.5.5.3**：構成具有 volatile 限定類型之物件存取的條件  

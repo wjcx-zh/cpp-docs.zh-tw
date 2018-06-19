@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385428"
 ---
 # <a name="do-while-statement-c"></a>do-while 陳述式 (C)
 `do-while` 陳述式可讓您重複陳述式或複合陳述式，直到指定的運算式變成 false 為止。  

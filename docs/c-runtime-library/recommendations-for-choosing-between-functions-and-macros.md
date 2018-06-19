@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389630"
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>在函式和巨集之間選擇的建議
 大部分的 Microsoft 執行階段程式庫常式都是編譯或組合函式，但有些常式會實作為巨集。 當標頭檔案同時宣告常式的函式和巨集版本時，巨集定義會有較高的優先權，因為它一律會出現在函式宣告之後。 當您叫用同時實作為函式和巨集的常式時，有兩種方法可以強制編譯器使用函式版本：  

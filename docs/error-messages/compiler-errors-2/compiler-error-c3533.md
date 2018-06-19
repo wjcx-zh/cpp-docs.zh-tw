@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458910"
 ---
 # <a name="compiler-error-c3533"></a>編譯器錯誤 C3533
 'type': 參數不能有包含 'auto' 類型  

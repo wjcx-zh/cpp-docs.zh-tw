@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380101"
 ---
 # <a name="specifying-an-inline-file"></a>指定內嵌檔
 指定兩個角括弧 (<<) 命令中其中*filename*出現。 角括號不可為巨集展開。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383822"
 ---
 # <a name="including-bracketed-filenames"></a>包含有括號的檔案名稱
 **ANSI 3.8.2**：尋找可包含原始程式檔的方法  

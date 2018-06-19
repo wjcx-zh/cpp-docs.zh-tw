@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164013"
 ---
 # <a name="compiler-error-c2042"></a>編譯器錯誤 C2042
 signed 及 unsigned 關鍵字是互斥的  

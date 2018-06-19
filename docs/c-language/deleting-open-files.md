@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382243"
 ---
 # <a name="deleting-open-files"></a>刪除開啟檔案
 **ANSI 4.9.4.1**：移除函式在開啟檔案上會造成的影響  

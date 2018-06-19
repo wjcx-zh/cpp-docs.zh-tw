@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137415"
 ---
 # <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>如何：封送處理 ADO.NET 的 SAFEARRAY (C++/CLI)
 示範如何將原生`SAFEARRAY`到資料庫及如何封送處理為原生資料庫從 managed 的陣列`SAFEARRAY`。  

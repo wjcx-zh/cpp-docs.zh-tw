@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392493"
 ---
 # <a name="ismbb-routines"></a>_ismbb 常式
 使用目前的地區設定或指定的 LC_CTYPE 轉換狀態分類，測試指定的整數值 `c` 是否符合特定條件。  

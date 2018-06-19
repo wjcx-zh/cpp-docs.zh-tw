@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387479"
 ---
 # <a name="lifetime"></a>存留期
 「存留期」是有變數或函式的程式執行的期間。 識別項儲存期決定其存留期。  

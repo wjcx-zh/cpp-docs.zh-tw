@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379597"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (建立核心模式二進位檔)
 建立可以在 Windows 核心中執行的二進位檔。  

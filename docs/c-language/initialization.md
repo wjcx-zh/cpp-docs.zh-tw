@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382844"
 ---
 # <a name="initialization"></a>初始化
 「初始設定式」是指派給將宣告之變數的值或值序列。 您可以在變數宣告中將初始設定式套用於宣告子，將變數設定為初始值。 初始設定式的值會被指派給該變數。  

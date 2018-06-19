@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387141"
 ---
 # <a name="ciatan2"></a>_CIatan2
 計算的 *x* / *y* 的反正切值，其中 *x* 和 *y* 是堆疊的頂端值。  
@@ -50,7 +51,7 @@ void __cdecl _CIatan2();
  產生的值會推入至堆疊的頂端。  
   
 ## <a name="requirements"></a>需求  
- **平台：**x86  
+ **平台：** x86  
   
 ## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

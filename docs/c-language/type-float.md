@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390931"
 ---
 # <a name="type-float"></a>類型 float
 浮點數使用的是 IEEE (電子電機工程師協會) 格式。 浮點類型的單精確度值有 4 個位元組，包括正負號位元、8 位元的超 127 二進位指數和 23 位元的尾數。 尾數表示介於 1.0 和 2.0 之間的數字。 因為尾數的高序位位元永遠為 1，因此不會儲存在數字中。 若是 float 類型，此表示的範圍大約從 3.4E-38 到 3.4E+38。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387787"
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法類運算子
 乘法類運算子會執行乘法 (**\***)、除法 (**/**) 和餘數 (`%`) 運算。  

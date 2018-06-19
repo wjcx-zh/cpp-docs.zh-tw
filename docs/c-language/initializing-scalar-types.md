@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392357"
 ---
 # <a name="initializing-scalar-types"></a>初始化純量類型
 初始化純量類型時，會將 *assignment-expression* 的值指派給變數。 指派適用的轉換規則。 (如需轉換規則的詳細資訊，請參閱[類型轉換](../c-language/type-conversions-c.md))。  

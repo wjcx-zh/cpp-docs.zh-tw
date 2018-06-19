@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383720"
 ---
 # <a name="pointer-subtraction"></a>指標減法
 **ANSI 3.3.6、4.1.1**：用來保存相同陣列兩個元素指標之間差異的整數類型，即 **ptrdiff_t**  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463088"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯 C++ AMP 應用程式
 本主題示範如何使用 c + + Accelerated Massive Parallelism (c + + AMP) 若要善用圖形處理單元 (GPU) 的應用程式進行偵錯。 它會使用平行縮減程式，有個加總整數的大型陣列。 這個逐步解說將說明下列工作：  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385253"
 ---
 # <a name="signed-bitwise-operations"></a>帶正負號的位元運算
 **ANSI 3.3**：帶正負號整數位元運算的結果  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385041"
 ---
 # <a name="storage-of-bit-fields"></a>位元欄位的儲存
 **ANSI 3.5.2.1**：在 int 內位元欄位的配置順序  

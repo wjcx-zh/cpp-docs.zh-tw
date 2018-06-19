@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386066"
 ---
 # <a name="c-storage-classes"></a>C 儲存類別
 變數的「儲存類別」可判斷項目的存留期為「全域」或「區域」。 C 將這兩個存留期稱為「靜態」和「自動」。 具有全域存留期的項目會持續存在，並且在程式的整個執行過程中保有值。 所有函式都具有全域存留期。  

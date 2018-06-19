@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382886"
 ---
 # <a name="default-signals"></a>預設訊號
 **ANSI 4.7.1.1** 如果沒有在呼叫訊號處理常式之前執行 **signal (***sig***, SIG_DFL)** 的同等項，會封鎖所執行的訊號  

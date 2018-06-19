@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388840"
 ---
 # <a name="outp-outpw"></a>outp、outpw
 這些 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_outp, _outpw, _outpd](../c-runtime-library/outp-outpw-outpd.md) 。  

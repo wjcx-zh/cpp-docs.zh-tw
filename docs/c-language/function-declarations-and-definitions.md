@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384989"
 ---
 # <a name="function-declarations-and-definitions"></a>函式宣告和定義
 函式原型會建立函式的名稱、其傳回型別，以及其正式參數的類型和數目。 函式定義包括函式主體。  

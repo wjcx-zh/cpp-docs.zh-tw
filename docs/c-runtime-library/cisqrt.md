@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386198"
 ---
 # <a name="cisqrt"></a>_CIsqrt
 計算堆疊頂端值的平方根。  
@@ -50,7 +51,7 @@ void __cdecl _CIsqrt();
  產生的值會推入至堆疊的頂端。  
   
 ## <a name="requirements"></a>需求  
- **平台：**x86  
+ **平台：** x86  
   
 ## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357489"
 ---
 # <a name="implementing-property-pages"></a>實作屬性頁
 屬性頁可讓您為 COM 物件實作`IPropertyPage`或**IPropertyPage2**介面。 ATL 提供實作透過屬性頁支援[ATL 屬性頁精靈](../atl/reference/atl-property-page-wizard.md)中[加入類別對話方塊](../ide/add-class-dialog-box.md)。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358624"
 ---
 # <a name="atl-encoding-reference"></a>ATL 編碼方式參考
 在一般的網際網路標準，例如 uuencode 十六進位、 範圍和 UTF8 編碼方式會受到 atlenc.h 中找到的程式碼。  

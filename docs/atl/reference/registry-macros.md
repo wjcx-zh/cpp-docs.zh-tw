@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365213"
 ---
 # <a name="registry-macros"></a>登錄巨集
 這些巨集會定義有用的型別程式庫和登錄設備。  

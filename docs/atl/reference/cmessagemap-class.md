@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359015"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 類別
 這個類別可讓物件的訊息對應是由另一個物件的存取。  

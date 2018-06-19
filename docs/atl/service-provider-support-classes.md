@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361599"
 ---
 # <a name="service-provider-support-classes"></a>服務提供者支援類別
 下列類別會提供服務提供者的支援：  

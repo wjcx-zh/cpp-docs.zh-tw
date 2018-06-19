@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368404"
 ---
 # <a name="pseudotargets"></a>虛擬目標
 虛擬目標是用來取代在相依的檔案名稱的標籤。 將它解譯為不存在，且為已過期的檔案。 NMAKE 假設虛擬目標的時間戳記是最新的所有相依性。 如果不有任何相依項目，則會假設目前的時間。 如果虛擬目標做為目標，一律執行它的命令。 虛擬目標做為相依性也必須出現為其他相依性中的目標。 不過，該相依性不需要有命令區塊。  

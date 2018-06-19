@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418812"
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists 陳述式
 `__if_not_exists` 陳述式會測試指定識別項是否存在。 如果識別項不存在，就會執行指定的陳述式區塊。  

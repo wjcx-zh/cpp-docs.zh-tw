@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089161"
 ---
 # <a name="platformmtathreadattribute-class"></a>Platform::MTAThreadAttribute 類別
 指出應用程式的執行緒模型為多執行緒 Apartment (MTA)。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365990"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl 類別
 這個類別提供的實作`IDispatch`方法，而不從類型程式庫取得類型資訊。  

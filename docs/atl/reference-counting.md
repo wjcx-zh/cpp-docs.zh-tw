@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358244"
 ---
 # <a name="reference-counting"></a>參考計數
 COM 本身不會自動嘗試從記憶體移除物件，其認定不再使用物件時。 相反地，物件的程式設計人員必須移除未使用的物件。 程式設計人員決定是否可以移除物件根據參考計數。  

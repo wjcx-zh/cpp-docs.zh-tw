@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363255"
 ---
 # <a name="aggregates-and-unions"></a>彙總和等位
 其他類型，例如陣列、 結構和等位，有更嚴格的對齊需求可確保一致彙總和等位的儲存體和資料擷取。 以下是陣列、 結構和等位的定義：  

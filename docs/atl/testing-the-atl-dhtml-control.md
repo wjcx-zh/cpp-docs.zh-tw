@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361862"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>測試 ATL DHTML 控制項
 當您建立專案之後時，您可以建置及測試範例控制項。 這麼做之前，請使用類別檢視 和 方案總管 中檢查專案。 您的專案項目中更詳細說明[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  

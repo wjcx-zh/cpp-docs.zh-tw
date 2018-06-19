@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358908"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>變更繪圖程式碼 (ATL 教學課程，第 4 部分)
 根據預設，控制項的繪圖程式碼會顯示與文字**PolyCtl**。 在此步驟中，您將變更的程式碼，以顯示更有趣的東西。 涉及下列工作：  

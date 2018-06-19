@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366243"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency 類別
 `CComCurrency` 有方法和運算子可建立及管理 CURRENCY 物件。  

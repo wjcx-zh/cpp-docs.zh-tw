@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365024"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 類別
 這個類別會提供列舉的項目儲存在陣列中的 COM 列舉程式介面的實作。  

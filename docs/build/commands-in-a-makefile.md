@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366870"
 ---
 # <a name="commands-in-a-makefile"></a>Makefile 中的命令
 描述區塊或推斷規則指定一段命令執行的相依性已過時。 NMAKE 會顯示每個命令之前執行，除非 /S， **。無訊息**， **！CMDSWITCHES**，或使用 @。 如果描述區塊後面沒有接命令區塊，NMAKE 會尋找相符的推斷規則。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363965"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 簡單物件精靈
 此精靈可將基本的 COM 物件插入至專案。 使用精靈的這個頁面來指定識別的 c + + 類別和物件和它的 COM 功能檔案的名稱。  

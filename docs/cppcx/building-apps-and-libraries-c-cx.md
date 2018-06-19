@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086339"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>建置應用程式和程式庫 (C++/CX)
 本節中的主題提供的一些詳細資訊，產生的通用 Windows 平台應用程式或 Windows 執行階段元件中使用建置系統。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364150"
 ---
 # <a name="service-map-macros"></a>服務對應巨集
 這些巨集會定義服務對應和項目。  

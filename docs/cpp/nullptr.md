@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419639"
 ---
 # <a name="nullptr"></a>nullptr
 指定類型為 `std::nullptr_t` 的 Null 指標常數，此指標常數可以轉換成任何原始指標類型。  雖然您可使用關鍵字 `nullptr` 而不含任何標頭，但如果您的程式碼使用類型 `std::nullptr_t`，則必須透過包含標頭 `<cstddef>` 來加以定義。  

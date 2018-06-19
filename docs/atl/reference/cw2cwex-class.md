@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363278"
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX 類別
 這個類別由字串轉換巨集`CW2CTEX`和`CT2CWEX`，和 typedef `CW2W`。  

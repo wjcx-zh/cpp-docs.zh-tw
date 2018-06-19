@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420833"
 ---
 # <a name="startup-and-termination-c"></a>啟動和終止 (C++)
 程式啟動和終止引導式使用兩個函式：[主要](../cpp/main-program-startup.md)和[結束](../cpp/program-termination.md)。 其他啟動和終止程式碼可能會執行。  

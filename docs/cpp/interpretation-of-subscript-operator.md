@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420469"
 ---
 # <a name="interpretation-of-subscript-operator"></a>註標運算子的解譯
 就如同其他運算子，註標運算子一樣 (**[]**) 可以由使用者重新加以定義。 註標運算子的預設行為 (如果未多載) 是使用下列方法結合陣列名稱和註標：  

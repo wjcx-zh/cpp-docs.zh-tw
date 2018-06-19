@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361414"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 類別
 這個類別會提供實作在集區執行緒的 apartment model COM 伺服器的方法。  

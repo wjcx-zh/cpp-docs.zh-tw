@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356491"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控制項
 ATL 控制項精靈提供起始程式碼，並讓您可以建置並執行控制項，您可以看到專案檔中寫入方法的方式與 DHTML 方式呼叫控制項的 c + + 程式碼使用分派方法。 您可以新增任何分派方法的介面。 然後，您可以呼叫 HTML 資源中的方法。  

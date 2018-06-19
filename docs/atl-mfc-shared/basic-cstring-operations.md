@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359090"
 ---
 # <a name="basic-cstring-operations"></a>基本 CString 運算
 本主題說明下列基本[CString](../atl-mfc-shared/reference/cstringt-class.md)作業：  

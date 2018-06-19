@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102904"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor 類別
 可讓您存取資料來源做為字串資料，當您在不知道資料存放區的結構描述 （基礎結構）。  

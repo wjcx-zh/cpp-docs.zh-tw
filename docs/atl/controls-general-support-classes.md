@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354851"
 ---
 # <a name="controls-general-support-classes"></a>控制項： 一般支援類別
 下列類別會提供一般支援，ATL 控制項：  

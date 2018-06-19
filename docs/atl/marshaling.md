@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360096"
 ---
 # <a name="marshaling"></a>封送處理
 封送處理 COM 技術可讓一個處理序，以用於另一個處理序中物件所公開的介面。 封送處理 COM 提供程式碼 （或使用的介面實作項所提供的程式碼） 中，將方法的參數封裝成可移動的跨處理序 （以及跨網路在其他電腦上執行的處理序） 的格式和解壓縮這些參數另一端。 同樣地，COM 必須執行相同的步驟，在從呼叫傳回。  

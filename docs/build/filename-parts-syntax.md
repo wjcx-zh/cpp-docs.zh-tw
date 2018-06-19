@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367481"
 ---
 # <a name="filename-parts-syntax"></a>檔名部分語法
 在命令中的檔名部分語法表示第一個相依檔案名稱 （這可能是隱含的相依性） 的元件。 檔名元件是檔案的磁碟機、 路徑、 基底名稱和副檔名為指定的不存在於磁碟上。 使用 **%s**來代表完整的檔名。 使用 **%&#124;**[*部分*]**F** (分隔號字元後面的百分比符號) 來代表組件的檔名，其中*部分*可以是零或多個下列字母，依照任何順序。  

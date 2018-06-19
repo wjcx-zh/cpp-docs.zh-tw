@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355383"
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>優點及用來連結到該 CRT 之方法的缺點
 您的專案可以使用 CRT 連結，以動態方式或以靜態方式。 下表概述的優點和權衡取捨中選擇要使用的方法。  

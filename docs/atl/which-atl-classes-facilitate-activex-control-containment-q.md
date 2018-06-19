@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361943"
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>哪些 ATL 類別簡化 ActiveX 控制項內含項目？
 ATL 的控制項裝載程式碼不需要您使用任何 ATL 類別。您可以直接建立 **"AtlAxWin80"** 視窗並使用必要的控制項裝載 API (如需詳細資訊，請參閱**為何，ATL 控制項裝載 API**。 不過，下列類別簡化內含項目功能使用。  

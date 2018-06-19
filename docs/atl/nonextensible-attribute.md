@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355629"
 ---
 # <a name="nonextensible-attribute"></a>nonextensible 屬性
 如果將不在執行階段擴充雙重介面 (也就是您將不會提供方法或屬性，透過**idispatch:: Invoke**不提供透過 vtable)，您應該套用**nonextensible**介面定義的屬性。 此屬性會提供可用來啟用完整的程式碼驗證，在編譯時期的用戶端語言 （例如 Visual Basic) 的資訊。 如果未提供這個屬性，bug 可能會隱藏在用戶端程式碼直到執行階段。  

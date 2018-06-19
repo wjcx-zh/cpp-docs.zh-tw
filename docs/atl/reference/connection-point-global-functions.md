@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362787"
 ---
 # <a name="connection-point-global-functions"></a>連接點全域函式
 這些函式提供的連接點的支援，並接收對應。  

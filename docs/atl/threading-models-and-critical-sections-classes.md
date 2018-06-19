@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359914"
 ---
 # <a name="threading-models-and-critical-sections-classes"></a>執行緒模型和關鍵區段類別
 下列類別定義的執行緒模型和關鍵區段：  

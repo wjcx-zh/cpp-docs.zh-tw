@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367143"
 ---
 # <a name="function-pointers"></a>函式指標
 函式指標是只要指向各自的函式的標籤。 沒有任何資料表的目錄 (TOC) 函式指標的需求。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354877"
 ---
 # <a name="using-cstringt"></a>使用 CStringT
 本節中的主題說明使用此範本類別的程式設計[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。  

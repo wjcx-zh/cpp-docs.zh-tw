@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413904"
 ---
 # <a name="c-exception-handling"></a>C++ 例外狀況處理
 C++ 語言內建擲回和攔截例外狀況支援。 使用 C++ 設計程式時，您應盡可能使用本節所述的內建 C++ 例外狀況支援。  

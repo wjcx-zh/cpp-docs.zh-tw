@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368531"
 ---
 # <a name="importing-function-calls-using-declspecdllimport"></a>使用 __declspec(dllimport) 匯入函式呼叫
 下列程式碼範例示範如何使用 **_declspec(dllimport)** 從 DLL 匯入函式呼叫，為應用程式。 假設`func1`是位於與.exe 檔案，其中包含不同的 DLL 函式**主要**函式。  

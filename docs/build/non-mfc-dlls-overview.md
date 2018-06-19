@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368638"
 ---
 # <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概觀
 非 MFC 的 DLL 會在內部，不會使用 MFC 的 DLL，而且在 DLL 中匯出的函式可以由呼叫 MFC 或非 MFC 可執行檔。 函式通常被匯出從非 MFC DLL 使用標準 C 介面。  

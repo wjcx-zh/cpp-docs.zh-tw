@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359791"
 ---
 # <a name="site-information-classes"></a>站台資訊類別
 下列類別允許物件與其站台通訊：  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414583"
 ---
 # <a name="expressions-c"></a>運算式 (C++)
 本節將描述 C++ 運算式。 運算式是提供下列其中一種或多種用途的運算子和運算元序列：  

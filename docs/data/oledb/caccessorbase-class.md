@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090792"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase 類別
 OLE DB 樣板中的所有存取子是衍生自這個類別。 `CAccessorBase` 可讓一個資料列集來管理多個存取子。 它也會提供繫結參數和輸出資料行。  

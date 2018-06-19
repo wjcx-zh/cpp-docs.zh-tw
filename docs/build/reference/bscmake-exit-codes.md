@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369224"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE 結束代碼
 BSCMAKE 傳回結束代碼 （也稱為傳回碼或錯誤的程式碼） 的作業系統或呼叫端程式。  

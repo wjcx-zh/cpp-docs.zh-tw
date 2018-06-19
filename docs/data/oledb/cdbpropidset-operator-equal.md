@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093281"
 ---
 # <a name="cdbpropidsetoperator-"></a>CDBPropIDSet::operator =
 將一個屬性 ID 集的內容指派至另一個 ID 屬性集。  

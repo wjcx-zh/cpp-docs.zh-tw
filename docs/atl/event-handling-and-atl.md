@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354928"
 ---
 # <a name="event-handling-and-atl"></a>事件處理和 ATL
 本節示範如何使用 ATL 接收事件 它涵蓋了 COM 事件處理中的原則以及接收使用 ATL 所提供的支援的事件的細節  

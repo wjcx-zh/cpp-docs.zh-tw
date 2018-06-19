@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355848"
 ---
 # <a name="implementing-a-dialog-box"></a>實作對話方塊
 ATL 專案中加入對話方塊中的兩種方式： 使用 ATL 對話方塊精靈或手動將它加入。  

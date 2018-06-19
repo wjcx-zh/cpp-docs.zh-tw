@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359901"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 類別
 這個類別會提供方法來取得及釋放重要區段物件的擁有權。  
@@ -80,7 +81,7 @@ CComCriticalSection() throw();
 ```  
   
 ### <a name="remarks"></a>備註  
- 設定[m_sec](#m_sec)為 NULL 的資料成員**。**  
+ 設定[m_sec](#m_sec)為 NULL 的資料成員 **。**  
   
 ##  <a name="init"></a>  CComCriticalSection::Init  
  呼叫 Win32 函式[InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472)，其中初始化中包含的關鍵區段物件[m_sec](#m_sec)資料成員。  

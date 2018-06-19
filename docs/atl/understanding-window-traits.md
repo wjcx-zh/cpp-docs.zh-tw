@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362364"
 ---
 # <a name="understanding-window-traits"></a>了解視窗特性
 視窗特性類別提供標準化的樣式，用於建立 ATL 視窗物件的簡單方法。 做為範本參數所接受視窗特性[CWindowImpl](../atl/reference/cwindowimpl-class.md)與其他 ATL 視窗類別，做為提供預設視窗樣式類別層級的方式。  

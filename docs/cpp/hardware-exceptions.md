@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413956"
 ---
 # <a name="hardware-exceptions"></a>硬體例外狀況
 大部分可由作業系統辨識的標準例外狀況是硬體定義的例外狀況。 Windows 可辨識某些低階軟體例外狀況，不過，作業系統通常最適合處理這些例外狀況。  

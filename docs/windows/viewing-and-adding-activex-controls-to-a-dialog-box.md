@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891162"
 ---
 # <a name="viewing-and-adding-activex-controls-to-a-dialog-box"></a>檢視 ActiveX 控制項以及將 ActiveX 控制項加入對話方塊
 Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。  

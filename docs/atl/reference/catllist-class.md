@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366428"
 ---
 # <a name="catllist-class"></a>CAtlList 類別
 這個類別會提供方法來建立和管理清單物件。  

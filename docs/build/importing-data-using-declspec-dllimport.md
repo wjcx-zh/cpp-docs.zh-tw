@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368508"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>使用 __declspec(dllimport) 匯入資料
 在使用資料的情況下 **__declspec （dllimport)** 是方便項目，以便移除一層間接取值。 當您從 DLL 匯入資料時，您仍然必須透過匯入位址表。 之前 **__declspec （dllimport)**，這代表您必須記得要存取資料從 DLL 匯出時執行額外的間接取值層級：  

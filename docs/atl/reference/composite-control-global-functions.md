@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366597"
 ---
 # <a name="composite-control-global-functions"></a>複合控制項全域函式
 這些函式會提供建立對話方塊，以及建立、 裝載和授權 ActiveX 控制項的支援。  

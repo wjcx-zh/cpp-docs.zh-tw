@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361810"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>與 C 樣式字串相關的 CString
 A [CString](../atl-mfc-shared/using-cstring.md)物件包含的字元字串資料。 `CString` 繼承一組[方法與運算子](../atl-mfc-shared/reference/cstringt-class.md)類別樣板中所定義[CStringT](../atl-mfc-shared/reference/cstringt-class.md)來處理字串資料。 (`CString`是`typedef`的特製化`CStringT`若要使用的字元資料類型，`CString`支援。)  

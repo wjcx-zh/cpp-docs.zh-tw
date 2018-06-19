@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356304"
 ---
 # <a name="implementing-the-event-handling-interface"></a>實作事件處理介面
 ATL 可協助您處理事件所需的全部三個元素： 實作事件介面、 通知事件來源，並取消通知事件來源。 您必須採取的確切步驟取決於事件介面和應用程式的效能需求的型別。  

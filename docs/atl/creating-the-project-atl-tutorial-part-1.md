@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357714"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 本教學課程會逐步引導您完成未使用屬性的 ATL 專案來建立顯示多邊形 ActiveX 物件。 物件包含的選項讓使用者變更邊的多邊形和程式碼以重新整理顯示的數目。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423949"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 類型限定詞，可以用來宣告程式中的物件可以由硬體修改。  

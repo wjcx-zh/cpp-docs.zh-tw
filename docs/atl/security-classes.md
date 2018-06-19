@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362335"
 ---
 # <a name="security-classes"></a>安全性類別
 這些類別是常見的 Win32 安全性類別和物件的包裝函式。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094331"
 ---
 # <a name="chainpropertyset"></a>CHAIN_PROPERTY_SET
 這個巨集鏈結在一起，屬性群組。  

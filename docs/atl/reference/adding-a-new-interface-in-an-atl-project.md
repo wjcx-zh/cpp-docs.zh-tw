@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356741"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 專案中加入新的介面
 當您將介面加入物件或控制項時，您會建立介面的附加虛設常式的函式的每個方法。 在物件或控制項，您可以加入目前現有的類型程式庫中找到的介面。 此外，您可以在其中加入介面的類別必須實作[BEGIN_COM_MAP](com-map-macros.md#begin_com_map)巨集或，如果專案屬性，您必須先`coclass`屬性。  

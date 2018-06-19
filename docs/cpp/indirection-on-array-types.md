@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418835"
 ---
 # <a name="indirection-on-array-types"></a>陣列類型的間接取值
 使用間接取值運算子 (**\***) 上*n*-維度的陣列型別會產生*n*-1 維陣列。 如果*n*為 1，在產生的純量 （或陣列元素）。  

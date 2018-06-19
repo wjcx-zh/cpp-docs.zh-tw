@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089294"
 ---
 # <a name="caccessorbaseisautoaccessor"></a>CAccessorBase::IsAutoAccessor
 如果資料會自動移動作業期間擷取存取子，則傳回 true。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368222"
 ---
 # <a name="makefile-preprocessing"></a>Makefile 前置處理
 您可以使用前置處理器指示詞和運算式控制 NMAKE 工作階段。 Makefile 中的或 Tools.ini 可以放置前置處理指示。 Using 指示詞，您可以有條件地處理在 makefile，顯示錯誤訊息、 包含其他 makefile、 取消巨集，並開啟或關閉特定選項。  

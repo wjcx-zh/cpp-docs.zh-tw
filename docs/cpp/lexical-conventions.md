@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419124"
 ---
 # <a name="lexical-conventions"></a>語彙慣例
 本節將介紹 C++ 程式的基本項目。 您可以使用這些稱為「語彙項目」或「語彙基元」的項目，建構用來建構完整程式的陳述式、定義，宣告等等。 本節將討論下列語彙項目：

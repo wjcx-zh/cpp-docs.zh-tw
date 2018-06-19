@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356462"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>加入 ATL Active Server Page 元件
 Active Template Library (ATL) 將物件加入至您的專案，您的專案必須已建立以 ATL COM 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，您可以選取**加入 ATL 支援加入至 MFC**從[加入類別對話方塊](../../ide/add-class-dialog-box.md)對話方塊中，或者您可以[MFC 應用程式中加入 ATL 物件](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)實作 MFC 應用程式的 ATL 支援。  

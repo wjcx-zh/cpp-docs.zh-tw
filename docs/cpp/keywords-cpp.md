@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424759"
 ---
 # <a name="keywords-c"></a>關鍵字 （c + +）
 關鍵字是具有特殊意義的預先定義保留識別項。 您不能在程式中將關鍵字當做識別項使用。 下列是 Microsoft C++ 的保留關鍵字。 名稱前面有底線的就是 Microsoft 擴充功能。  

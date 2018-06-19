@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364538"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 類別
 `CComMultiThreadModel` 提供具備執行緒安全的方法來遞增和遞減變數的值。  

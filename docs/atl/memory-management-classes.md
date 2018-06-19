@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356504"
 ---
 # <a name="memory-management-classes"></a>記憶體管理類別
 這些類別提供堆積的指標、 智慧型指標和其他記憶體配置常式的支援。  

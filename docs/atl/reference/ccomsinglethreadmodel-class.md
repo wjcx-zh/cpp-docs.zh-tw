@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365096"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel 類別
 這個類別提供方法遞增和遞減之變數的值。  

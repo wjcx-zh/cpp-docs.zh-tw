@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367936"
 ---
 # <a name="image-format"></a>映像格式
 可執行映像格式為 PE32 +。 可執行映像 （Dll 和 Exe） 限於大小上限為 2 gb，因此可以用來解決靜態影像資料的 32 位元加上位移的相對位址。 此資料包括匯入位址表，字串常數、 靜態全域資料，以及等等。  

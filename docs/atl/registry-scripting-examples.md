@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361885"
 ---
 # <a name="registry-scripting-examples"></a>登錄指令碼範例
 本主題中的指令碼範例將示範如何新增到系統登錄機碼、 註冊 COM 註冊機構的伺服器，以及指定多個剖析樹狀結構。  

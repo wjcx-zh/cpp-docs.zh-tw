@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355557"
 ---
 # <a name="date-and-time"></a>日期和時間
 MFC 支援的日期和時間使用數個不同的方式。 它們包括：  

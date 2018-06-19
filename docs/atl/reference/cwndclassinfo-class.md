@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365760"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 類別
 這個類別會提供方法，以註冊視窗類別的資訊。  

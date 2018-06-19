@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086969"
 ---
 # <a name="namespaces-reference-ccx"></a>命名空間參考 (C++/CX)
 本節中的文件說明命名空間，可以支援編譯器的 C + + /CX。  

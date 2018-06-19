@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424466"
 ---
 # <a name="using-declaration"></a>using 宣告
 Using 宣告引入宣告式所在區域名稱 using 宣告會出現。  

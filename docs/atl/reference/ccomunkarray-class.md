@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364414"
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray 類別
 這個類別會儲存**IUnknown**指標，以及設計用於為參數，以[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)範本類別。  

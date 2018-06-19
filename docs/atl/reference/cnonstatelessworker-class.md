@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359603"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 類別
 從執行緒集區接收要求，並將它們傳遞到會建立並終結背景工作物件中，每個要求。  

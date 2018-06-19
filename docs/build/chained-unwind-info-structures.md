@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366948"
 ---
 # <a name="chained-unwind-info-structures"></a>鏈結的回溯資訊結構
 如果設定 UNW_FLAG_CHAININFO 旗標，則回溯資訊結構是一個次要且共用的例外狀況處理常式/鏈結-資訊位址欄位會包含主要的回溯資訊。 下列程式碼擷取主要回溯的詳細資訊，但前提`unwindInfo`是具有 UNW_FLAG_CHAININFO 結構的旗標組。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360776"
 ---
 # <a name="bitfields"></a>位元欄位
 結構的位元欄位限制為 64 位元，而且可以類型為帶正負號 int、 不帶正負號的 int、 int64、 或不帶正負號的 int64。 跨越類型界限的位元欄位會略過對齊的下一個類型的對齊方式的位元欄位的位元。 例如，整數的位元欄位不能跨越 32 位元界限。  

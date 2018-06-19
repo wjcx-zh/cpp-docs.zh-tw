@@ -13,6 +13,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363780"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414672"
 ---
 # <a name="expressions-with-binary-operators"></a>具有二元運算子的運算式
 二元運算子會在運算式中的兩個運算元上作用。 二元運算子為：  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421054"
 ---
 # <a name="overloading-unary-operators"></a>多載一元運算子
 可以多載的一元運算子如下：  

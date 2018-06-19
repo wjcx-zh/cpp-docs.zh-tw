@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355871"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>使用 ATL 和 C 執行階段程式碼進行程式設計
 本章節將討論使用 C 執行階段程式庫 (CRT) 與靜態或動態連結的優點。  

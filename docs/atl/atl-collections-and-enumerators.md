@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356774"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 集合和列舉程式
 A`collection`是 COM 物件，提供的介面，可讓您存取資料項 （原始資料或其他物件） 的群組。 一種介面，依循標準提供一組物件的存取權就所謂的*集合介面*。  

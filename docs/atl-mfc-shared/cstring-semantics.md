@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356575"
 ---
 # <a name="cstring-semantics"></a>CString 語意
 即使[CString](../atl-mfc-shared/reference/cstringt-class.md)物件所能成長的動態物件，它們做為內建基本類型和簡單的類別。 每個`CString`物件都代表唯一的值。 `CString` 物件應該想像成實際的字串，而不是字串的指標。  

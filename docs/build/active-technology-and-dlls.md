@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360109"
 ---
 # <a name="active-technology-and-dlls"></a>Active 技術和 DLL
 Active 技術可讓物件伺服程式完整地於 DLL 內實作。 此類型的伺服器稱為同處理序伺服器。 MFC 不完全支援同處理序伺服器的視覺化編輯的所有功能主要是因為 Active 技術不提供伺服器連線到容器的主要訊息迴圈的方式。 MFC 需要存取容器應用程式的訊息迴圈，以處理快速鍵和閒置時間處理。  

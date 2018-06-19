@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363456"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID 類別
 這個類別會提供包裝函式**CreateWindow**和**CreateWindowEx**。  

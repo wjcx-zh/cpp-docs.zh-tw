@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360416"
 ---
 # <a name="alloca"></a>alloca
 [_alloca](../c-runtime-library/reference/alloca.md)必須是 16 位元組對齊，並且還必須使用框架指標。  

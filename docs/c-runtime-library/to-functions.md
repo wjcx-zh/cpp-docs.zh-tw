@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413202"
 ---
 # <a name="to-functions"></a>to 函式
 每個 **to** 函式和其相關聯巨集 (如果有的話) 都會將單一字元轉換為另一個字元。  

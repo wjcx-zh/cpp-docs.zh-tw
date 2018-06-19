@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363525"
 ---
 # <a name="atl-control-wizard"></a>ATL 控制項精靈
 ATL 專案 （或具有 ATL 支援的 MFC 專案） 插入 ATL 控制項。 您可以使用此精靈將控制項的三種：  

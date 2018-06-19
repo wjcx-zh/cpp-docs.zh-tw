@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359175"
 ---
 # <a name="ccomqiptr-class"></a>CComQIPtr 類別
 用來管理 COM 介面指標的智慧型指標類別。  

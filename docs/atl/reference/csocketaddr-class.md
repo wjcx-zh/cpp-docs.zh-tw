@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363392"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 類別
 這個類別會提供主機名稱轉換成主機位址，支援 IPv4 和 IPV6 格式的方法。  

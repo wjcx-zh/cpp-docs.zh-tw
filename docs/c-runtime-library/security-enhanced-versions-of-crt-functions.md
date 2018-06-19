@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418532"
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>CRT 函式的安全性增強版本
 

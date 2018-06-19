@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360027"
 ---
 # <a name="scope-of-atl"></a>ATL 的範圍
 ATL 可讓您輕鬆建立 COM 物件、 automation 伺服程式和 ActiveX 控制項。 ATL 提供基本的 COM 介面的許多的內建支援。  

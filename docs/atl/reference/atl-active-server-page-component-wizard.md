@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359126"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 元件精靈
 此精靈會插入至專案的 Active Server Pages (ASP) 元件。 Microsoft 網際網路資訊服務 (IIS) 會使用 ASP 元件，其增強的網頁開發架構的一部分。  

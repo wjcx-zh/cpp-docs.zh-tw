@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358895"
 ---
 # <a name="stock-properties-atl-control-wizard"></a>內建屬性, ATL 控制項精靈
 在精靈的此頁面會識別內建控制項支援的屬性。 根據預設，會識別沒有屬性。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912975"
 ---
 # <a name="null-directive"></a>Null 指示詞
 Null 前置處理器指示詞是單一數字符號 (**#**) 單獨的一行。 沒有任何作用。  

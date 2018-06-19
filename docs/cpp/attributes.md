@@ -9,6 +9,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416193"
 ---
 # <a name="attributes-in-c"></a>C + + 中的屬性
 
@@ -40,7 +41,7 @@ void Foo(int);
 
 - `[[carries_dependency]]` 指定函式會傳播資料相依性順序與執行緒同步處理。 屬性可以套用至一或多個參數，以指定傳入的引數傳送至函式主體的相依性。 屬性可以套用至函式本身，以指定的傳回值會移到函式的相依性。 編譯器可以使用這項資訊來產生更有效率的程式碼。
 
-- `[[deprecated]]` **Visual Studio 2015 和更新版本：**指定，函式不為了在使用，而且可能會存在在未來的版本的程式庫介面。 編譯器可以使用此用戶端程式碼嘗試呼叫函式時，產生參考用訊息。 可以套用至類別、 typedef 名稱、 變數、 非靜態資料成員、 函式、 命名空間、 列舉型別、 列舉值，或樣板特製化的宣告。  
+- `[[deprecated]]` **Visual Studio 2015 和更新版本：** 指定，函式不為了在使用，而且可能會存在在未來的版本的程式庫介面。 編譯器可以使用此用戶端程式碼嘗試呼叫函式時，產生參考用訊息。 可以套用至類別、 typedef 名稱、 變數、 非靜態資料成員、 函式、 命名空間、 列舉型別、 列舉值，或樣板特製化的宣告。  
 
 - `[[fallthrough]]` **2017 和更新版本的 visual Studio:** (適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性可用的內容中[切換](switch-statement-cpp.md)編譯器 （或任何人讀取提示陳述式程式碼），目的是 fallthrough 行為。 Visual c + + 編譯器目前不會在警告上 fallthrough 行為，所以此屬性不有任何效果編譯器行為。
 

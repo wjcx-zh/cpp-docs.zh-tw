@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367156"
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>舊版程式碼的浮點支援 (Visual C++)
 MMX 和浮點的堆疊暫存器 (MM0-MM7/ST0-ST7) 會保留在內容切換。  對這些暫存器沒有明確呼叫慣例。  核心模式程式碼中嚴格禁止您使用這些暫存器。  

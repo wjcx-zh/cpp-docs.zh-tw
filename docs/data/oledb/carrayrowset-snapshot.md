@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089434"
 ---
 # <a name="carrayrowsetsnapshot"></a>CArrayRowset::Snapshot
 將整個資料列集讀取至記憶體，建立其影像或快照。  

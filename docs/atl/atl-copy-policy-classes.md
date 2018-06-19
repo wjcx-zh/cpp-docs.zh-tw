@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358523"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 複製原則類別
 複製原則類別是[公用程式類別](../atl/utility-classes.md)用來初始化、 複製和刪除資料。 複製原則類別可讓您定義的資料，任何類型的複製語意，並定義不同的資料類型之間的轉換。  

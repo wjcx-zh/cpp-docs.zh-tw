@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423414"
 ---
 # <a name="value-types-modern-c"></a>實值類型 (現代 C++)
 C + + 類別並不會預設實值類型。 本主題提供簡介性概觀的實值類型以及與其用途相關的問題。  

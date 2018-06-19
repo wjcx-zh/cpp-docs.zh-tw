@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092590"
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC：ODBC 資料指標程式庫
 本主題描述 ODBC 資料指標程式庫，並說明如何使用它。 如需詳細資訊，請參閱:  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355457"
 ---
 # <a name="calling-c-code-from-dhtml"></a>從 DHTML 呼叫 c + + 程式碼
 DHTML 控制項可以裝載於容器，例如測試容器或 Internet Explorer。 請參閱[使用測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)如何存取測試容器的資訊。  

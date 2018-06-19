@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088150"
 ---
 # <a name="platformintptr-value-class"></a>Platform::IntPtr 實值類別
 表示大小適用於平台、帶正負號的指標或控制代碼 (32 位元或 64 位元)。  

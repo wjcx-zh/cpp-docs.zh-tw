@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421415"
 ---
 # <a name="results-of-calling-example"></a>呼叫範例的結果
 ## <a name="microsoft-specific"></a>Microsoft 特定的  

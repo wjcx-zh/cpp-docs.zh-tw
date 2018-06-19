@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090295"
 ---
 # <a name="odbc-basics"></a>ODBC 的基本概念
 本主題提供開放式資料庫連接 (ODBC) 的基本概念：  

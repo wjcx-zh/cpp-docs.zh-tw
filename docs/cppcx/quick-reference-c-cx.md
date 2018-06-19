@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092554"
 ---
 # <a name="quick-reference-ccx"></a>快速參考 (C++/CX)
 Windows 執行階段支援只能在值得信任的作業系統環境中執行，使用授權的函式、 資料類型及裝置，而且會透過散發 Microsoft Store 的通用 Windows 平台 (UWP) 應用程式。 C + + /CX 可簡化應用程式撰寫為 Windows 執行階段。 本文是快速參考;如需更完整的文件，請參閱[型別系統](../cppcx/type-system-c-cx.md)和[執行階段平台的元件擴充功能](http://go.microsoft.com/fwlink/p/?linkid=228720)。  

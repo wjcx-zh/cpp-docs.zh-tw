@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422322"
 ---
 # <a name="specifiers"></a>規範
 本主題描述*decl 規範*（宣告規範） 元件[宣告](declarations-and-definitions-cpp.md)。  

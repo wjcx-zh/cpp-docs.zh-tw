@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363054"
 ---
 # <a name="registry-data-exchange-macros"></a>登錄資料交換巨集
 這些巨集執行登錄資料交換作業。  

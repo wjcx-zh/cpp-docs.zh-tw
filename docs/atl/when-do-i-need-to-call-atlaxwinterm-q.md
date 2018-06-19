@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360158"
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>何時需要呼叫 AtlAxWinTerm？
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)取消註冊 **"AtlAxWin80"** 視窗類別。 您應該呼叫此函式 （如果您不需要再建立主應用程式視窗） 終結所有現有的主控件 windows。 如果您未呼叫此函式，視窗類別會自動取消註冊處理序終止時。  

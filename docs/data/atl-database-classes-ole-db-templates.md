@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089048"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL 資料庫類別 (OLE DB 樣板)
 Microsoft 提供數種實作的 OLE DB，一組 COM 介面，可讓您統一存取各種資訊來源和格式的資料。  OLE DB 已正式被取代。這份文件是針對開發人員會維護舊版的程式碼。 新的應用程式應該使用 ODBC 連接到 SQL 資料來源。

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356983"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 類別
 此類別代表固定的字元緩衝區的字串物件。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417405"
 ---
 # <a name="scanf-type-field-characters"></a>scanf 類型欄位字元
 下列資訊適用於任何 `scanf` 系列的函式，包含安全版本，例如 `scanf_s`。  

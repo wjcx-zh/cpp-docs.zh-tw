@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354864"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Active Template Library (ATL) 教學課程
 ATL 被為了簡化的程序建立有效率、 有彈性的輕量型控制項。 本教學課程將引導您完成建立 ActiveX 控制項，來示範許多 ATL 和 COM 的基本概念。  

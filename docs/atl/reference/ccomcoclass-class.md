@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365458"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 類別
 這個類別會提供方法來建立執行個體的類別，並取得其屬性。  

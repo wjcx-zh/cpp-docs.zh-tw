@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089362"
 ---
 # <a name="displaying-and-manipulating-data-in-a-form"></a>顯示和操作表單中的資料
 許多資料存取應用程式選取的資料，並顯示在表單中的欄位。 資料庫類別[CRecordView](../../mfc/reference/crecordview-class.md)可讓您[CFormView](../../mfc/reference/cformview-class.md)直接連接至資料錄集物件的物件。 使用資料錄檢視[對話方塊資料交換 (DDX)](../../mfc/dialog-data-exchange-and-validation.md)將從資料錄集的目前記錄的欄位的值移到表單上的控制項，並將更新的資訊移回資料錄集。 資料錄集，亦會使用其欄位資料成員和資料表中對應的資料行之間移動資料，資料來源上的資料錄欄位交換 (RFX)。  

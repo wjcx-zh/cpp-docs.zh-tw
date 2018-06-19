@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365594"
 ---
 # <a name="cadapt-class"></a>CAdapt 類別
 此範本用來包裝重新定義傳址 (address-of) 運算子的類別，以傳回物件位址以外的內容。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097402"
 ---
 # <a name="cdatasource-class"></a>CDataSource 類別
 對應至 OLE DB 資料來源物件，其表示透過提供者與資料來源的連線。  

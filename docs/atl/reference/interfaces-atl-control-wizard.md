@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362348"
 ---
 # <a name="interfaces-atl-control-wizard"></a>介面, ATL 控制項精靈
 在精靈的此頁面會識別此控制項支援的介面。 根據預設，支援的介面是通常使用的大部分的容器。  

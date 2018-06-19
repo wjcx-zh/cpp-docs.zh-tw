@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362124"
 ---
 # <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 類別
 這個類別是 helper [CSimpleArray](../../atl/reference/csimplearray-class.md)類別。  

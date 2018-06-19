@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363657"
 ---
 # <a name="composite-control-macros"></a>複合控制項巨集
 這些巨集會定義事件接收對應和項目。  

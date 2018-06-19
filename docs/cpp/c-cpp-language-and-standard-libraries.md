@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412539"
 ---
 # <a name="cc-language-and-standard-libraries"></a>C/c + + 語言和標準程式庫
 本節的文件包括指導方針與 ISO 標準 C 和 c + + 的 Microsoft 實作的參考內容。  

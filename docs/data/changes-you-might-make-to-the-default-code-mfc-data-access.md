@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088361"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>您可能對預設程式碼所做的變更 (MFC 資料存取)
 [MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)寫入您選取單一資料表中的所有記錄的資料錄集類別。 您經常會想要以下列一種或多種方式修改該行為：  

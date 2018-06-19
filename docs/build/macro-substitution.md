@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368066"
 ---
 # <a name="macro-substitution"></a>巨集替換
 當*巨集名稱*叫用時，每次發生*string1*其定義的字串會被取代*string2*。  

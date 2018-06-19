@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358921"
 ---
 # <a name="specifying-property-pages"></a>指定屬性頁
 當您建立 ActiveX 控制項時，您通常要與屬性頁，可以用來設定控制項的屬性產生關聯。 控制容器使用**ISpecifyPropertyPages**介面，以找出哪些屬性頁面可以用來設定控制項的屬性。 您必須實作此介面上您的控制項。  

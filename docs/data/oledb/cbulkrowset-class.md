@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090719"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 類別
 擷取和操作多個資料列控制代碼，透過單一呼叫中擷取大量資料處理的資料列。  

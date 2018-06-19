@@ -42,6 +42,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366454"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 類別
 這個類別會提供實作的嵌入式管理單元節點物件的方法。  

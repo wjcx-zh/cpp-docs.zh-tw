@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418259"
 ---
 # <a name="friend-c"></a>friend (C++)
 在某些情況下，它會授與不是類別的成員函式或個別的類別中的所有成員的成員層級存取較為方便。 只有類別實作器才能宣告它的 friend 是誰。 函式或類別不能將它自己宣告為任何類別的 friend。 在類別定義中，使用`friend`關鍵字和非成員函式或其他類別，以授與其存取類別的 private 和 protected 成員的名稱。         在樣板定義中，型別參數可以宣告為 friend。  

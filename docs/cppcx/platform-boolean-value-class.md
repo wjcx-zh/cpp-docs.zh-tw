@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086521"
 ---
 # <a name="platformboolean-value-class"></a>Platform::Boolean 實值類別
 表示布林值。 相當於 `bool`。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367355"
 ---
 # <a name="command-macros-and-options-macros"></a>命令巨集和選項巨集
 命令巨集是預先定義的 Microsoft 產品。 選項巨集代表這些產品的選項，並預設為未定義。 同時預先定義的推斷規則中使用，而且可以用於描述區塊或使用者定義的推斷規則。 命令巨集可以重新定義，來表示部分或全部的命令列，包括選項。 如果未定義選項巨集就會產生 null 字串。  

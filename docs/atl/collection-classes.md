@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361325"
 ---
 # <a name="collection-classes"></a>集合類別
 下列類別提供陣列、 清單、 對應和也特性方法，可幫助的比較與項目存取的支援。  

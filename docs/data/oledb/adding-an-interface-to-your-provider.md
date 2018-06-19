@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093542"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>將介面加入至提供者
 決定您想要將介面加入 （通常是資料來源、 資料列集、 命令或工作階段物件 OLE DB 提供者精靈所建立） 的物件。 很可能您要加入至介面的物件是目前不支援您的提供者的其中一個。 在此情況下，執行 ATL OLE DB 提供者精靈來建立物件。 以滑鼠右鍵按一下 類別檢視中的專案中，按一下**加入類別**從**新增**功能表，然後再按一下**ATL OLE DB 提供者**。 您可能想要放在個別的目錄中的介面程式碼，然後將檔案複製到提供者專案。  

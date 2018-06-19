@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087730"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 實值類別
 表示物件的大小。 SizeT 是不帶正負號的資料類型。  

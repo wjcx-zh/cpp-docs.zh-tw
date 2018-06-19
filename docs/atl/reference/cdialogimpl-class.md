@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365135"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 類別
 這個類別會提供方法來建立強制回應或非強制回應對話方塊。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422393"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移運算子 (&gt; &gt;和&lt; &lt;)
 位元移位運算子是右移位運算子 (>>)，會將位元的*shift 運算式*右到左移位運算子 (<<)，會將位元的*移位運算式*左邊。 <sup>1</sup>  

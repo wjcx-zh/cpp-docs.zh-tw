@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360650"
 ---
 # <a name="automation-in-a-dll"></a>DLL 中的 Automation
 當您選擇的 Automation 選項在 MFC DLL 精靈時，精靈會讓您獲得下列：  

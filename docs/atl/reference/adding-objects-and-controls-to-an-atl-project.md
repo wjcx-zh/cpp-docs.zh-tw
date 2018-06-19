@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357769"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項加入至 ATL 專案
 您可以使用其中一個 ATL 程式碼精靈加入 ATL 或 MFC 為基礎的專案中的物件或控制項。 針對每個 COM 物件或控制項您加入，亦即，精靈會產生的.cpp 和.h 檔案，以及指令碼為基礎的登錄支援.rgs 檔。 在 Visual Studio 中有下列的 ATL 程式碼精靈：  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362383"
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 類別
 這個類別會實作基本的強制回應對話方塊。  

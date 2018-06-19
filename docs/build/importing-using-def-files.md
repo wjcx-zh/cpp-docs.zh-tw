@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368853"
 ---
 # <a name="importing-using-def-files"></a>使用 .DEF 檔匯入
 如果您選擇使用 **__declspec （dllimport)** .def 檔，以及您應該變更.def 檔案，使用常數取代的資料來減少撰寫程式碼不正確會導致問題的可能性：  

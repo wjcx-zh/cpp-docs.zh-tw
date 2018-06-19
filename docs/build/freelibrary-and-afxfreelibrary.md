@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367507"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 和 AfxFreeLibrary
 明確連結的 DLL 呼叫的處理序[FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)函式時不再需要 DLL 模組。 這個函式會遞減模組的參考計數，並參考計數為零，如果取消對應從處理序的位址空間。  

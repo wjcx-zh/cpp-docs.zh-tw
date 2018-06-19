@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091141"
 ---
 # <a name="columnentry"></a>COLUMN_ENTRY
 表示資料列集中的特定資料行之繫結的資料列集。  

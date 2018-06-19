@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361941"
 ---
 # <a name="using-idispeventsimpleimpl"></a>使用 IDispEventSimpleImpl
 當使用`IDispEventSimpleImpl`來處理事件，您必須：  

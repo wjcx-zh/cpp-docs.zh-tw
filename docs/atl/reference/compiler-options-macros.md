@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365849"
 ---
 # <a name="compiler-options-macros"></a>編譯器選項巨集
 這些巨集來控制特定的編譯器功能。  

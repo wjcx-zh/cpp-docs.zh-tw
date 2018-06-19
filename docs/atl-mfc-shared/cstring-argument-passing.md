@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356826"
 ---
 # <a name="cstring-argument-passing"></a>CString 引數傳遞
 這篇文章說明如何將傳遞[CString](../atl-mfc-shared/reference/cstringt-class.md)物件為函式，以及如何傳回`CString`從函式的物件。  

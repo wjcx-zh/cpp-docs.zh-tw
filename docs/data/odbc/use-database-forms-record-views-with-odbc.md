@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089813"
 ---
 # <a name="use-database-forms-record-views-with-odbc"></a>使用 ODBC 的資料庫表單 (資料錄檢視)
 某些應用程式，例如輸入資料或資料檢視需要表單時，對話方塊樣式控制項的檢視。  

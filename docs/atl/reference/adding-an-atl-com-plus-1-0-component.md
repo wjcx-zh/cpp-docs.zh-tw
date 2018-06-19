@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355787"
 ---
 # <a name="adding-an-atl-com-10-component"></a>加入 ATL COM + 1.0 元件
 此精靈會將物件加入至您的專案，支援 COM + 1.0 服務，包含交易。  

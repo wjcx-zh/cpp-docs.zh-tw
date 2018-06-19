@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858142"
 ---
 # <a name="locales-and-code-pages"></a>地區設定和字碼頁
 地區設定識別碼反映當地慣例和語言特定地理區域。 一種指定語言可以在一個以上的國家/地區使用，例如巴西和葡萄牙都說葡萄牙語。 反過來說，一個國家/地區可能有一種以上的官方語言。 例如，加拿大有兩種語言： 英文和法文。 因此，加拿大有兩個不同的地區設定： 加拿大英文和加拿大法文。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。  

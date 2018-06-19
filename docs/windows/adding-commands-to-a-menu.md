@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856315"
 ---
 # <a name="adding-commands-to-a-menu"></a>將命令加入至功能表
 ### <a name="to-add-commands-to-a-menu"></a>將命令新增至功能表  

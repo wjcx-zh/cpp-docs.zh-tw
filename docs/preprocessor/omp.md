@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849466"
 ---
 # <a name="omp"></a>omp
 接受一個或多個 OpenMP 指示詞，以及選擇性的指示詞子句。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860186"
 ---
 # <a name="attributed-programming-concepts"></a>屬性化程式設計概念
 Visual c + + 包含各種不同的內容，以協助您在程式中使用屬性。 屬性，Visual c + + 的新功能被設計來簡化 COM 程式設計和.NET Framework 通用語言執行階段開發。 當您將屬性納入原始程式檔時，編譯器會搭配提供者動態連結程式庫 (DLL)，以插入程式碼或修改產生的目的檔中的程式碼。 有幫助的.idl 檔案、 介面、 類型程式庫與其他 COM 元件建立的屬性。 在整合式的開發環境 (IDE) 中，由精靈和 [屬性] 視窗所支援屬性。  

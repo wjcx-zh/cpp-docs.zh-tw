@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342042"
 ---
 # <a name="creating-the-list-control"></a>建立清單控制項
 如何控制清單 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 建立取決於您是直接使用控制項或是使用類別[CListView](../mfc/reference/clistview-class.md)改為。 如果您使用`CListView`，架構建構檢視其文件/檢視建立順序的一部分。 建立清單檢視中建立清單控制項 （這兩者是相同的動作）。 在檢視中建立控制項[OnCreate](../mfc/reference/cwnd-class.md#oncreate)處理常式函式。 在此情況下，此控制項是準備好要加入項目，透過呼叫[GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)。  

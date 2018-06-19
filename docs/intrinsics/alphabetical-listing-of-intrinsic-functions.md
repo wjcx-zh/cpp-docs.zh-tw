@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336501"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>依字母順序列出內建函式
 下列章節將說明在部分或所有架構上可用的 Microsoft 特定內建函式。 其他支援的內建函式會由處理器製造商記錄在標頭檔或他們的網站中。 請參閱[ARM 內建](../intrinsics/arm-intrinsics.md)， [x86 內建函式](../intrinsics/x86-intrinsics-list.md)，和[x64 內建函式](../intrinsics/x64-amd64-intrinsics-list.md)製造商文件連結的章節。 這裡; 不記錄針對它們實作的內建函式的 C 執行階段程式庫 (CRT) 函式這些函式會記載於[C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)。  

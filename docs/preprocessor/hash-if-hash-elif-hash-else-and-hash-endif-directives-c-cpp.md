@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846645"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指示詞 (C/C++)
 `#if` 指示詞搭配 `#elif`、`#else` 和 `#endif` 指示詞可控制原始程式檔的部分編譯。 如果您撰寫的運算式 (在 `#if` 之後) 包含非零值，緊接在 `#if` 指示詞之後的折線圖組會保留在轉譯單位中。  

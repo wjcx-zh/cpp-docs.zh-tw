@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857723"
 ---
 # <a name="changing-the-properties-of-a-toolbar-button"></a>變更工具列按鈕的屬性
 ### <a name="to-change-the-properties-of-a-toolbar-button"></a>若要變更工具列按鈕的屬性  

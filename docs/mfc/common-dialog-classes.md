@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342211"
 ---
 # <a name="common-dialog-classes"></a>通用對話方塊類別
 除了類別之外[CDialog](../mfc/reference/cdialog-class.md)，MFC 還提供數個類別衍生自`CDialog`的封裝通常使用的對話方塊下, 表所示。 封裝的對話方塊稱為 「 通用對話方塊 」，則 Windows 通用對話方塊程式庫的一部分 (COMMDLG。DLL)。 對話方塊範本資源和程式碼，這些類別提供 Windows 通用對話方塊屬於 Windows 3.1 和更新版本的版本。  

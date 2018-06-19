@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856693"
 ---
 # <a name="character-assignment"></a>字元設定
 請考慮下列範例中的，在其中`while`迴圈會掃描字串，將 'X' 以外的所有字元都複製到另一個字串：  

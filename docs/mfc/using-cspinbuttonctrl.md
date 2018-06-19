@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384396"
 ---
 # <a name="using-cspinbuttonctrl"></a>使用 CSpinButtonCtrl
 *微調按鈕*控制項 (也稱為*上下*控制項) 提供一對箭號，讓使用者可以按一下以調整值。 這個值稱為*目前位置*。 此位置會保持在微調按鈕的範圍內。 當使用者按一下向上箭號時，此位置會朝最大值移動，當使用者按一下向下箭號時，此位置會朝最小值移動。  

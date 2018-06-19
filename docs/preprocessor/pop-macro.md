@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849635"
 ---
 # <a name="popmacro"></a>pop_macro
 設定的值*macro_name*巨集，以這個巨集的堆疊頂端的值。  

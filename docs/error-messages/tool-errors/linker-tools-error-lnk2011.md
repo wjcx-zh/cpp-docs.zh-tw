@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300741"
 ---
 # <a name="linker-tools-error-lnk2011"></a>連結器工具錯誤 LNK2011
 先行編譯的物件; 中沒有被連結映像可能無法執行  

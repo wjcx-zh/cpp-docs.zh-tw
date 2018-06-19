@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316289"
 ---
 # <a name="project-build-error-prj0004"></a>專案建置錯誤 PRJ0004
 無法產生 '工具 5d; 工具的命令列。  

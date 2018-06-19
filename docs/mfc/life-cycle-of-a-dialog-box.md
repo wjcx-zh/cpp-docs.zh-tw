@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346177"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>對話方塊的生命週期
 在對話方塊的生命週期，在使用者叫用對話方塊中，通常內建立並初始化對話方塊物件的命令處理常式，使用者互動對話方塊中，和對話框會關閉。  

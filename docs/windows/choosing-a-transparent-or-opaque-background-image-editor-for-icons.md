@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857908"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>選擇透明或不透明背景 (圖示影像編輯器)
 當您移動或複製選取範圍，從映像時，任何像素選取範圍中符合目前的背景色彩是，根據預設，透明的;它們不會遮住目標位置中的像素為單位。  

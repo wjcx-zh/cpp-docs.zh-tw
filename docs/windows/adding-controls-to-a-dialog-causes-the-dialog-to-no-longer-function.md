@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858990"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>將控制項加入至對話方塊會造成對話方塊無法使用
 之後，將通用控制項或 rich edit 控制項加入對話方塊中，它不會出現測試對話方塊中，或將不會出現對話方塊本身時。  

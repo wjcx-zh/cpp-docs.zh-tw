@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857834"
 ---
 # <a name="aligning-controls-on-a-guide"></a>對齊輔助線上的控制項
 控制項的調整大小控點貼齊輔助線時移動控制項，以及控制項貼齊輔助線 （如果不有任何控制項先前貼齊輔助線）。 當移動時的指南時，以及移動會貼齊至它的控制項。 其中一個指南移動時，會調整大小控制項貼齊至一個以上的指南。  

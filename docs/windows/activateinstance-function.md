@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855571"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 函式
 註冊並擷取在指定的類別識別碼中所定義之指定類型的執行個體  

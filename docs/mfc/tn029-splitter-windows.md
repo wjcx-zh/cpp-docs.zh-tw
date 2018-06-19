@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384719"
 ---
 # <a name="tn029-splitter-windows"></a>TN029：分隔視窗
 此提示描述 MFC [CSplitterWnd 類別](../mfc/reference/csplitterwnd-class.md)，這樣會提供分割視窗，並管理其他窗格視窗的調整大小。  

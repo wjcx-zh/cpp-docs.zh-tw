@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301355"
 ---
 # <a name="linker-tools-error-lnk1181"></a>連結器工具錯誤 LNK1181
 無法開啟輸入的檔案 'filename'  

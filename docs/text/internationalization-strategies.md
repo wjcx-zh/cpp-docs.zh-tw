@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856592"
 ---
 # <a name="internationalization-strategies"></a>國際化策略
 根據您的目標作業系統和市場，您有數個國際化策略：  

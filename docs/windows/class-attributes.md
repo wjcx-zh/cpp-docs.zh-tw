@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861437"
 ---
 # <a name="class-attributes"></a>類別屬性
 下列屬性套用至[類別](../cpp/class-cpp.md)c + + 關鍵字。  

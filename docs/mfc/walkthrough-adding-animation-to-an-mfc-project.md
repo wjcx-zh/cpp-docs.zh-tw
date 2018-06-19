@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384745"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>逐步解說：將動畫加入至 MFC 專案
 本逐步解說教導如何將基本的動畫的物件加入至 Visual c + +，Microsoft Foundation 類別庫 (MFC) 專案。  

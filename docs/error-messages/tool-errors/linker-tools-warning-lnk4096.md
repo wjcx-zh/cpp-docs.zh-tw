@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300601"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>連結器工具警告 LNK4096
 / 對於 Windows 95 及 Windows 98; 無效基底值 「 數字 」映像可能無法執行  

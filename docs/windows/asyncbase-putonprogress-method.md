@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859783"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress 方法
 將進度事件處理常式的位址設定為指定的值。  

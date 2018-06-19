@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385140"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028：即時線上說明支援
 此提示描述在 MFC 中指派 [說明] 內容 ID 和其他說明議題的規則。 即時線上說明支援需要可用於 Visual C++ 的說明編譯器。  

@@ -40,6 +40,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33845826"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator 類別
 
@@ -138,7 +139,7 @@ directory_iterator& operator++(int);
 
 **標頭：**\<experimental/filesystem>
 
-**命名空間：**std::experimental::filesystem
+**命名空間：** std::experimental::filesystem
 
 ## <a name="see-also"></a>另請參閱
 

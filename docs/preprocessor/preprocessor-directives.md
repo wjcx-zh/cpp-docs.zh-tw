@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849882"
 ---
 # <a name="preprocessor-directives"></a>前置處理器指示詞
 前置處理器指示詞，例如`#define`和 **#ifdef**，通常用來使原始程式易於變更和在不同的執行環境中易於編譯。 原始程式檔中的指示詞會指示前置處理器執行特定動作。 例如，前置處理器可以取代文字中的語彙基元、將其他檔案的內容插入原始程式檔，或是透過移除文字區段來隱藏編譯檔案的一部分。 在巨集展開之前，會辨識並執行前置處理器程式行。 因此，如果巨集展開成類似前置處理器命令的程式碼，前置處理器就無法辨識該命令。  

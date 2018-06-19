@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345289"
 ---
 # <a name="array-list-and-map-classes"></a>陣列、清單和對應類別
 對於處理資料彙總，類別庫會提供集合類別群組 (陣列、清單和對應)，其可保留各種物件而預先定義的類型。 集合的大小設定可動態調整。 這些類別可用於任何程式，不論是否是為 Windows 撰寫。 但是，對於實作定義應用程式架構中文件類別的資料結構卻是最有用。 您可以從這些類別快速取得特製化的集合類別，或者可以根據範本類別建立類別。 如需這些方法的詳細資訊，請參閱文章[集合](../mfc/collections.md)。 如需範本集合類別的清單，請參閱文章[陣列、 清單和對應的樣板類別](../mfc/template-classes-for-arrays-lists-and-maps.md)。  

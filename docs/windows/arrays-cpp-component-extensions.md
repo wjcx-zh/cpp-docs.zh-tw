@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862718"
 ---
 # <a name="arrays-c-component-extensions"></a>陣列 (C++ 元件擴充功能)
 `Platform::Array<T>`類型在 C + + /CX 中，或`array`關鍵字在 C + + CLI，會宣告陣列的指定型別和初始值。  

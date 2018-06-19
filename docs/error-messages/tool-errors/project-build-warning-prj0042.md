@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316825"
 ---
 # <a name="project-build-warning-prj0042"></a>專案建置警告 PRJ0042
 **檔案的自訂建置步驟 ' 輸出 property '**   

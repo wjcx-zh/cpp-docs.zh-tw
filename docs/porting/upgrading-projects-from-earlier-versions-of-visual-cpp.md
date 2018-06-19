@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849726"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>從舊版的 Visual C++ 升級專案
 在大部分情況下，您都可以開啟在舊版 Visual Studio 中建立的專案。 不過，開啟時 Visual Studio 會將專案升級。 如果您儲存此升級的專案，在舊版本中便無法開啟。  

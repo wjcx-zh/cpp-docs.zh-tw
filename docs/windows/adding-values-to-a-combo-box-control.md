@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858964"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>將值加入至下拉式方塊控制項
 您可以將值加入至下拉式方塊控制項，只要您有開啟的對話方塊編輯器。  

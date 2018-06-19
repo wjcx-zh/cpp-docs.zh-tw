@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296337"
 ---
 # <a name="compiler-warning-level-4-c4623"></a>編譯器警告 (層級 4) C4623
 '`derived class`'：預設建構函式已隱含定義為刪除，因為基底類別預設建構函式無法存取或已被刪除  

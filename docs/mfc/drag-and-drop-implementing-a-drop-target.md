@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344265"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>拖放：實作置放目標
 本文概述如何讓您的應用程式的置放目標。 實作置放目標需要稍微多一些工作會比實作置放來源，但是它仍然相當簡單。 這些技術也適用於非 OLE 應用程式。  

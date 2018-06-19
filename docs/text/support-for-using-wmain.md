@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856484"
 ---
 # <a name="support-for-using-wmain"></a>wmain 使用的支援
 Visual c + + 支援定義**wmain**函式和傳遞 Unicode 應用程式的寬字元引數。 宣告型式參數**wmain**，使用格式類似於**主要**。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如:   

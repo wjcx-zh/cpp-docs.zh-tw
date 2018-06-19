@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334057"
 ---
 # <a name="accessing-run-time-class-information"></a>存取執行階段類別資訊
 本文說明如何在執行階段存取物件之類別的資訊。  

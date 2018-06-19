@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343495"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance 成員函式
 [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance)類別成員函式[CWinApp](../mfc/reference/cwinapp-class.md)一份您的應用程式終止時，通常是因為使用者結束應用程式每次呼叫。  

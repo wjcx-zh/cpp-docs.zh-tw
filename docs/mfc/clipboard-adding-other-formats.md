@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342143"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪貼簿：加入其他格式
 本主題說明如何展開的清單支援的格式，特別是針對 OLE 支援。 本主題[剪貼簿： 複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)說明支援複製及貼上剪貼簿中所需的最小實作。 如果這是所有您實作，就放在剪貼簿上只有格式`CF_METAFILEPICT`， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，且可能`CF_LINKSOURCE`。 大部分的應用程式需要比這三個剪貼簿格式。  

@@ -103,6 +103,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863422"
 ---
 # <a name="map-class"></a>map 類別
 
@@ -231,7 +232,7 @@ map 會藉由呼叫 [key_compare](#key_compare) 類型的預存函式物件，�
 
 **標頭：**\<map>
 
-**命名空間：**std
+**命名空間：** std
 
 ## <a name="allocator_type"></a>  map::allocator_type
 

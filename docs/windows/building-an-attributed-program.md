@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862273"
 ---
 # <a name="building-an-attributed-program"></a>建置屬性化程式
 Visual c + + 屬性放入您的程式碼之後，您可能想 Visual c + + 編譯器，來為您產生類型程式庫和.idl 檔案。 下列連結器選項可協助您組建.tlb 和.idl 檔案：  

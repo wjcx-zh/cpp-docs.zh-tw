@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860056"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win 32 應用程式精靈、應用程式設定
 使用精靈的這個頁面來設定 Win32 專案的選項。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345956"
 ---
 # <a name="example-of-active-document-containment-office-binder"></a>主動式文件內含項目範例：Office 文件夾
 Microsoft Office Binder 是現用文件容器的範例。 Office Binder 如一般容器一樣包含兩個主要窗格。 左窗格包含對應至 Binder 中的現用文件的圖示。 每份文件稱為*區段*內繫結器。 例如，Binder 可以包含 Word 文件、PowerPoint 檔和 Excel 試算表等等。  

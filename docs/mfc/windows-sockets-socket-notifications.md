@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385576"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets：通訊端告知
 本文說明通知中的函式的通訊端類別。 這些成員函式是在架構呼叫以通知您重要事件的通訊端物件的回呼函式。 通知函式會：  

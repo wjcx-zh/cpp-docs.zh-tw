@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857567"
 ---
 # <a name="adding-version-information-for-another-language"></a>加入其他語言的版本資訊
 ### <a name="to-add-version-information-for-another-language-new-info-block"></a>加入另一種語言的版本資訊 (新增資訊區塊)  

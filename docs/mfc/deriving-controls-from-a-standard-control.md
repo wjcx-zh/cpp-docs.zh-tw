@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344496"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>從標準控制項衍生控制項
 如同使用任何[CWnd](../mfc/reference/cwnd-class.md)-衍生的類別，您可以從現有的控制項類別衍生新類別，以修改控制項的行為。  

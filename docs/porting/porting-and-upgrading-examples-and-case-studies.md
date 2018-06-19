@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33850140"
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>移植和升級：範例和案例研究
 您可以藉由檢閱成功移轉案例，來了解從舊版 Visual C++ 移轉至目前版本時可能會遇到的問題類型。  

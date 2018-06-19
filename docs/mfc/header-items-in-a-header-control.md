@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344918"
 ---
 # <a name="header-items-in-a-header-control"></a>標題控制項中的標題項目
 您有相當大的控制權的外觀和行為的標題項目組成標題控制項 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md))。 每個標題項目可以有字串、點陣圖影像、來自相關聯影像清單的影像，或與其關聯之應用程式所定義的 32 位元值。 字串、點陣圖或影像會在標題項目中顯示。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861382"
 ---
 # <a name="com-attributes"></a>COM 屬性
 COM 屬性會插入程式碼以支援 COM 開發和.NET Framework 通用語言執行階段開發的多個區域。 這些區域範圍自訂介面實作和支援的現有的介面來支援內建屬性、 方法和事件。 此外，可以找到支援複合和 ActiveX 控制項的實作。  

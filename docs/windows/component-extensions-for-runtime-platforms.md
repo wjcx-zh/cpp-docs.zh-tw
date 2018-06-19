@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862636"
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>執行階段平台的元件擴充功能
 Visual C++ 提供語言擴充功能，協助您針對執行階段平台進行程式設計。 使用 C + + /CX 中，您可以程式設計通用 Windows 平台應用程式和元件，編譯成原生程式碼。 雖然您可以透過 Windows 執行階段 COM 介面，直接對程式設計的方式建立通用 Windows 平台應用程式使用 C + + /CX 中，您可以使用建構函式、 例外狀況和其他現代 c + + 程式設計語言。 若要啟用 c + + 程式設計.NET 平台上 managed 的執行環境中，您可以使用 C + + /CLI。  

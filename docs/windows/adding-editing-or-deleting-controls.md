@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856709"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>加入、編輯或刪除控制項
 使用對話方塊編輯器，您可以新增、 調整大小、 編輯和刪除控制項在對話方塊中。 您也可以編輯的控制項，例如它的 ID 屬性或它是否會最初顯示在執行階段。  

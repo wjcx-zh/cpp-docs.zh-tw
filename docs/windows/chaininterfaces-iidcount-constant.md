@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859998"
 ---
 # <a name="chaininterfacesiidcount-constant"></a>ChainInterfaces::IidCount 常數
 介面 Id 的範本參數所指定的介面中所包含的總數`I0`透過`I9`。  

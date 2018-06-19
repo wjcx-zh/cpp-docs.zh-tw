@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857710"
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>變更符號或符號名稱 (ID)
 當您建立新的資源或資源物件時，開發環境會為其指派預設的符號名稱，例如 IDD_DIALOG1。 您可以使用[屬性 視窗](/visualstudio/ide/reference/properties-window)來變更預設的符號名稱，或變更已與資源相關聯的所有符號的名稱。  

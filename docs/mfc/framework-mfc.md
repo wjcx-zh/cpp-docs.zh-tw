@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344392"
 ---
 # <a name="framework-mfc"></a>架構 (MFC)
 您會使用 MFC 程式庫架構進行的工作有很大部分是基於一些主要類別和數個 Visual C++ 工具。 某些類別會封裝大部分的 Win32 應用程式開發介面 (API)。 其他類別會封裝應用程式概念 (例如文件、檢視和應用程式本身)。 而其餘的類別則會封裝 OLE 功能、ODBC 和 DAO 資料存取功能。  

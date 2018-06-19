@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385413"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002：持續性物件資料格式
 此提示描述支援持續性的 c + + 物件和物件資料的格式，它會儲存在檔案中的 MFC 常式。 這只適用於具有類別[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)巨集。  

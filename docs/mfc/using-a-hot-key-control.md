@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382940"
 ---
 # <a name="using-a-hot-key-control"></a>使用熱鍵控制項
 熱鍵控制項的一般使用方式會遵循下列模式：  

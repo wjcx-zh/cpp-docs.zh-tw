@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858698"
 ---
 # <a name="international-enabling"></a>啟用國際化
 大部分傳統的 C 和 c + + 程式碼可進行假設字元和字串操作，不適用於國際化應用程式。 MFC 和執行階段程式庫支援 MBCS 或 Unicode，仍會有您必須執行的工作。 若要引導您，本節會說明 Visual c + + 中的 「 國際啟用 」 的意義：  

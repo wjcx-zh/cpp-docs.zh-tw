@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858077"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>將功能表命令和快速鍵建立關聯
 常常會有想讓功能表命令與快速鍵組合發出相同程式命令的時候。 若要達成這項目的，請使用功能表編輯器，將相同的資源識別項指派給功能表命令與應用程式快速鍵對應表中的項目。 您可以接著編輯功能表命令的 [標題](../windows/menu-command-properties.md) ，以顯示快速鍵的名稱。  

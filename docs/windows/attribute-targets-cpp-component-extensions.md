@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862019"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>屬性目標 (C++ 元件擴充功能)
 屬性使用規範可讓您指定屬性目標。  每個屬性的用途都是套用至特定語言項目。 例如，屬性可能會定義為只套用至類別和結構。  下列清單中顯示可以使用自訂屬性的語法項目。 您也可以將這些值結合起來使用 (使用邏輯 OR)。  

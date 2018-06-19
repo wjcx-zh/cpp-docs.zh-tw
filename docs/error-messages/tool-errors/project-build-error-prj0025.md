@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316981"
 ---
 # <a name="project-build-error-prj0025"></a>專案建置錯誤 PRJ0025
 批次檔 'file' 包含無法轉譯為使用者 ANSI 字碼頁的 Unicode 內容。  

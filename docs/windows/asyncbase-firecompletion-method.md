@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859731"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion 方法
 完成事件處理常式，會叫用，或重設內部進行委派。  

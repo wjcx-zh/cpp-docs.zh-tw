@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859673"
 ---
 # <a name="unicode-programming-summary"></a>Unicode 程式設計摘要
 若要充分利用 Unicode 的 MFC 與 C 執行階段支援，您需要：  

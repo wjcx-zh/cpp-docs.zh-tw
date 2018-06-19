@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849869"
 ---
 # <a name="inlinedepth"></a>inline_depth
 指定內嵌啟發式搜尋深度，這樣一來，如果函式的深度 (在呼叫圖形中) 大於 `n`，就不會將該函式內嵌。  

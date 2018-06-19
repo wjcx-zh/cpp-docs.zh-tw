@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860290"
 ---
 # <a name="chaininterfacescancastto-method"></a>ChainInterfaces::CanCastTo 方法
 指出指定的介面識別碼可轉換成每個定義的非預設的範本參數特製化。  

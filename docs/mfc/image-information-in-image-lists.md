@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343709"
 ---
 # <a name="image-information-in-image-lists"></a>影像清單中的影像資訊
 [CImageList](../mfc/reference/cimagelist-class.md)包含數個會擷取影像清單中的資訊函式。 [GetImageInfo](../mfc/reference/cimagelist-class.md#getimageinfo)成員函式會填滿`IMAGEINFO`包含影像和遮罩點陣圖的色彩平面和每像素的位元數目及周框的控制代碼的單一映像的相關資訊的結構影像點陣圖內影像。 您可以使用此項資訊直接操作影像的點陣圖。  

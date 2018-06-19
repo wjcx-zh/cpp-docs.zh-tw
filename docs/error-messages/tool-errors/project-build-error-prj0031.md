@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318317"
 ---
 # <a name="project-build-error-prj0031"></a>專案建置錯誤 PRJ0031
 自訂建置的 '輸出' 屬性 'macro_expansion' 跳檔案 'file' 包含 '巨集' 而它評估。  

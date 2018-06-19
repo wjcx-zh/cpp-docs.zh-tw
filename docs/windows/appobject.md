@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856969"
 ---
 # <a name="appobject"></a>appobject
 識別為的應用程式物件，這是完整的.exe 應用程式相關聯，並指出函數和屬性的 coclass 供全域使用在這個 coclass[類型程式庫](../mfc/automation-clients-using-type-libraries.md)。  

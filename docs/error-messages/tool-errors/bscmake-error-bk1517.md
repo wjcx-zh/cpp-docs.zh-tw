@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298547"
 ---
 # <a name="bscmake-error-bk1517"></a>BSCMAKE 錯誤 BK1517
 sbrfile 以 /Yc 和 /Yu 編譯原始程式檔  

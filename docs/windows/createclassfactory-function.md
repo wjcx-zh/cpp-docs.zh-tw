@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870469"
 ---
 # <a name="createclassfactory-function"></a>CreateClassFactory 函式
 建立會產生指定類別之執行個體的處理站。  

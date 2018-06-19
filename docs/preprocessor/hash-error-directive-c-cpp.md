@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33905568"
 ---
 # <a name="error-directive-cc"></a>#error 指示詞 (C/C++)
 `#error` 指示詞會在編譯時期發出使用者指定的錯誤訊息並終止編譯。  

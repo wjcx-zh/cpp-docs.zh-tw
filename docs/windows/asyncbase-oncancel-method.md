@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865819"
 ---
 # <a name="asyncbaseoncancel-method"></a>AsyncBase::OnCancel 方法
 當在衍生類別中覆寫時，取消非同步作業。  

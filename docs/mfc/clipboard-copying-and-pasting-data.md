@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343346"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>剪貼簿：複製和貼上資料
 本主題說明實作複製和貼上從剪貼簿 OLE 應用程式所需的最小工作。 建議您閱讀[資料物件和資料來源 (OLE)](../mfc/data-objects-and-data-sources-ole.md)主題後再繼續。  

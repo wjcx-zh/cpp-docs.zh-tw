@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877263"
 ---
 # <a name="import"></a>import
 指定包含的定義您想要從您主要的 IDL 中參考的另一個.idl、.odl 或標頭檔。  

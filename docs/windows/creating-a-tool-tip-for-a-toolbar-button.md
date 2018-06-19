@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871763"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button"></a>建立工具列按鈕的工具提示
 ### <a name="to-create-a-tool-tip"></a>若要建立工具提示  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878888"
 ---
 # <a name="includelib-c"></a>includelib (C++)
 會導致的.idl 或.h 檔案包含在產生的.idl 檔案。  

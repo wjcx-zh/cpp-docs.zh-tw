@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347003"
 ---
 # <a name="making-and-using-controls"></a>建立及使用控制項
 在 Visual c + + 中進行大部分的對話方塊控制項[對話方塊編輯器](../windows/dialog-editor.md)。 但是，您也可以在任何對話方塊或視窗中建立控制項。  

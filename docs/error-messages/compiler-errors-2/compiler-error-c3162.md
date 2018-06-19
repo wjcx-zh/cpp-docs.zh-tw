@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253796"
 ---
 # <a name="compiler-error-c3162"></a>編譯器錯誤 C3162
 'type': 具有解構函式的參考型別不能為靜態資料成員 'member' 的型別  

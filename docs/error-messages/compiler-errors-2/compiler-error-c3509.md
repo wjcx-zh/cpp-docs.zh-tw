@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257411"
 ---
 # <a name="compiler-error-c3509"></a>編譯器錯誤 C3509
 'type': 無效的 Automation 傳回類型。當參數標示為 'retval'，傳回型別必須是 'void'、 'HRESULT' 或 'SCODE'  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888730"
 ---
 # <a name="shrinking-or-stretching-part-of-an-image-image-editor-for-icons"></a>縮小或延伸影像的一部分 (圖示影像編輯器)
 ### <a name="to-shrink-or-stretch-part-of-an-image"></a>若要縮小或延伸影像的一部分  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345236"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>動畫控制項傳送的告知
 動畫控制項 ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) 會傳送通知訊息的兩個不同的類型。 傳送通知的形式[WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591)訊息。  

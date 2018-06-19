@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879353"
 ---
 # <a name="literal-c-component-extensions"></a>literal (C++ 元件擴充功能)
 變數 （資料成員） 標示為`literal`中 **/clr**編譯相當於原生的`static const`變數。  

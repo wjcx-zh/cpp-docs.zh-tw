@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343690"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>自訂工具列控制項的外觀
 類別`CToolBarCtrl`提供許多會影響外觀 （甚至是偶爾行為） 的工具列物件的樣式。 藉由設定修改工具列物件`dwCtrlStyle`參數`CToolBarCtrl::Create`(或`CToolBar::CreateEx`) 成員函式，當您第一次建立工具列控制項時。  

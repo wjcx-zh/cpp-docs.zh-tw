@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098377"
 ---
 # <a name="crowsetcrowset"></a>CRowset::CRowset
 建立新`CRowset`物件，並將它與 （選擇性） 關聯[IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx)當做參數提供的介面。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878693"
 ---
 # <a name="generic-interfaces-visual-c"></a>泛型介面 (Visual C++)
 套用至類別型別參數的限制會套用至型別參數在介面上的相同 (請參閱[泛型類別 (C + + /CLI)](../windows/generic-classes-cpp-cli.md))。  

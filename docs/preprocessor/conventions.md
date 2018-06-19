@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33912663"
 ---
 # <a name="conventions"></a>慣例
 許多慣例會針對語法的不同元件使用不同的字型屬性。 符號和字型如下：  

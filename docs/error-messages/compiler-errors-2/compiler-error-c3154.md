@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251107"
 ---
 # <a name="compiler-error-c3154"></a>編譯器錯誤 C3154
 必須是 '、' 之前省略符號。 非逗號分隔的省略符號參數陣列函式上不支援。  

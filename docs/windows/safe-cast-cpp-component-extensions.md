@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891512"
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast (C++ 元件擴充功能)
 如果成功，`safe_cast` 作業會傳回指定的運算式做為指定的類型，否則會擲回 `InvalidCastException`。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341893"
 ---
 # <a name="creating-windows"></a>建立視窗
 架構會自動建立架構程式中的大部分的您所需的視窗。 [文件/檢視建立](../mfc/document-view-creation.md)示範如何在架構建立框架視窗與文件和檢視相關聯。 但為了特殊用途而您可以建立您自己的視窗，包括您自己的子視窗的框架視窗或檢視表 — 除了架構所提供的 windows。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347174"
 ---
 # <a name="message-sending-and-receiving"></a>訊息傳送和接收
 思考處理序中傳送的部分，以及架構如何回應。  

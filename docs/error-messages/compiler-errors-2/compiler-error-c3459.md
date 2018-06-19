@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255341"
 ---
 # <a name="compiler-error-c3459"></a>編譯器錯誤 C3459
 'attribute' : 屬性只允許出現在類別索引子 (預設索引的屬性) 上  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342055"
 ---
 # <a name="deprecated-ansi-apis"></a>已被取代的 ANSI 應用程式開發介面
 Microsoft Foundation Class (MFC) 程式庫移轉朝類別和方法，根據 Unicode 字元集。 因此，ANSI 版本的幾個 MFC 方法已被取代。 在未來的應用程式中使用這些方法的 Unicode 版本。  

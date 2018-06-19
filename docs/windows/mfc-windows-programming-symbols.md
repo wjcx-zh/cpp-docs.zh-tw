@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882689"
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows 程式開發符號
 這些符號也是 MFC 支援檔案的一部分，但是它們可以支援標準的 Windows 應用程式函式和動作。 這些符號主要用於功能表。 當您使用功能表功能表編輯器中時，這些符號會出現在 [屬性] 視窗功能表的常見命令與相關聯。 比方說，如果您的應用程式檔案功能表與 [結束] 命令，該命令會與相關聯的符號 ID_APP_EXIT 中[屬性視窗](/visualstudio/ide/reference/properties-window)。  

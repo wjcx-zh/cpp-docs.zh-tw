@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875535"
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator= 運算子
 將另一個 HStringReference 物件的值移至目前 HStringReference 物件。  

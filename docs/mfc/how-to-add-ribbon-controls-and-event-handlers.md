@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344415"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>如何：加入功能區控制項和事件處理常式
 功能區控制項是項目，例如按鈕和下拉式方塊中，您加入至面板。 面板會顯示一組相關控制項的功能區列區域。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247272"
 ---
 # <a name="compiler-error-c3060"></a>編譯器錯誤 C3060
 'member': Friend 函式不可使用限定名稱在類別中定義 (只可以宣告)  

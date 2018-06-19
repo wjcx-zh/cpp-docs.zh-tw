@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267169"
 ---
 # <a name="compiler-error-c3848"></a>編譯器錯誤 C3848
 具有類型 'type' 的運算式會失去某些 const-volatile 限定詞才能呼叫 'function'  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346096"
 ---
 # <a name="header-control-and-list-control"></a>標題控制項和清單控制項
 在大部分情況下，您將使用內嵌在此標題控制項[CListCtrl](../mfc/reference/clistctrl-class.md)或[CListView](../mfc/reference/clistview-class.md)物件。 不過，有個別的標頭控制項物件需要這樣做，例如操作資料、 排列在資料行或資料列中的情況[CView](../mfc/reference/cview-class.md)-衍生物件。 在這些情況下，您需要進一步控制的外觀和內嵌的標題控制項的預設行為。  

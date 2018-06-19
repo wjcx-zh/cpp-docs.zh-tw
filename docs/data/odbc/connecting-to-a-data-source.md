@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088387"
 ---
 # <a name="connecting-to-a-data-source"></a>連接資料來源
 ODBC 資料來源是一組特定的資料，以存取該資料，以及可以使用資料來源名稱所描述的資料來源中的位置所需的資訊。 從您程式的觀點來看，資料來源包括資料、 DBMS、 網路 （如果有的話） 和 ODBC。  

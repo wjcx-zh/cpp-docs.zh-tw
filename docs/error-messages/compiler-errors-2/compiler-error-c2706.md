@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232642"
 ---
 # <a name="compiler-error-c2706"></a>編譯器錯誤 C2706
 不合法的 __except 沒有相符\_或 (遺漏 '}' 中\_或區塊？)  

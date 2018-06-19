@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233314"
 ---
 # <a name="compiler-error-c2784"></a>編譯器錯誤 C2784
 'declaration'：無法從 'type' 推算 'type' 的樣板引數  

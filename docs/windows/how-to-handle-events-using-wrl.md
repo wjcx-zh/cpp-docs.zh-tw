@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881149"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>如何：使用 WRL 處理事件
 本文件說明如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 訂閱和處理 Windows 執行階段物件的事件。  

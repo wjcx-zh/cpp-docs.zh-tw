@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269050"
 ---
 # <a name="compiler-error-c3798"></a>編譯器錯誤 C3798
 'specifier': 屬性宣告不能有覆寫規範 （應該置於屬性 get/set 方法）  

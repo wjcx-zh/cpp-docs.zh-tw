@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345637"
 ---
 # <a name="orchestrating-other-window-actions"></a>協調其他視窗動作
 框架視窗會組織 semimodal 狀態，如即時線上說明和預覽列印。 如需在預覽列印中框架視窗角色的說明，請參閱[列印和預覽列印](../mfc/printing-and-print-preview.md)。  

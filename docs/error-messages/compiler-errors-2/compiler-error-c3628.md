@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266411"
 ---
 # <a name="compiler-error-c3628"></a>編譯器錯誤 C3628
 'base class': managed 或 WinRTclasses 僅支援公用繼承  

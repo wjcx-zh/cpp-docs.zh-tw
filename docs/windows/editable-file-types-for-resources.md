@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870246"
 ---
 # <a name="editable-file-types-for-resources"></a>可編輯的資源檔類型
 您可以開啟下列類型的檔案，並編輯所包含的資源。  

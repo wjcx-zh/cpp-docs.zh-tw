@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870547"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 結構
 特製化 CriticalSection 物件，以支援無效的重要區段或釋放重要區段的函式。  

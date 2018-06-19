@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282661"
 ---
 # <a name="compiler-warning-level-1-c4743"></a>編譯器警告 (層級 1) C4743
 '*類型*'有不同的大小'*file1*'和'*file2*':*數目*和*數目*位元組  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867099"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的泛型文字對應
 若要簡化國際用於程式碼的傳輸[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]執行階段程式庫提供[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-許多資料類型、 常式與其他物件的特定泛用文字對應。 您可以使用這些對應，Tchar.h，撰寫可針對單一位元組，多位元組，來編譯的泛型程式碼中所定義或[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字元集，根據您定義使用資訊清單常數`#define`陳述式。 泛用文字對應[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]所沒有的擴充功能[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]相容。  

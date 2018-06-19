@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877692"
 ---
 # <a name="odl"></a>odl
 識別為物件描述語言 (ODL) 介面的介面。 MIDL 編譯器不需要**odl**屬性; 它會辨識僅為具有較舊的.odl 檔的相容性。  

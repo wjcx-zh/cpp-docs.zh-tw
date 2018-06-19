@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343252"
 ---
 # <a name="exceptions-examining-exception-contents"></a>例外狀況：檢查例外狀況內容
 雖然**攔截**區塊的引數可以是幾乎任何資料類型，MFC 函式會擲回例外狀況衍生自類別類型的`CException`。 若要攔截 MFC 函式所擲回例外狀況，接著，您撰寫**攔截**其引數是指標的區塊來`CException`物件 (或物件衍生自`CException`，例如`CMemoryException`)。 根據例外狀況的確切類型，您可以檢查例外狀況物件的資料成員，來收集例外狀況特定原因的相關資訊。  

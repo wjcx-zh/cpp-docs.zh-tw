@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108269"
 ---
 # <a name="data-access-using-adonet-ccli"></a>使用 ADO.NET 進行資料存取 (C++/CLI)
 ADO.NET 是.NET Framework API 進行資料存取，並提供電源和易用性不符合先前資料的存取方案。 本章節描述與 ADO.NET 特有 Visual c + + 的使用者，例如原生類型封送處理的問題。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341468"
 ---
 # <a name="command-ids"></a>命令 ID
 命令的完整說明單獨命令識別碼 (以編碼**WM_COMMAND**訊息)。 這個識別碼被指派給產生命令的使用者介面物件。 一般而言，識別碼是名為它們指派給使用者介面物件的功能。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256492"
 ---
 # <a name="compiler-error-c3456"></a>編譯器錯誤 C3456
 不能在 Managed 或 WinRT 類別宣告上使用 [source_annotation_attribute]  

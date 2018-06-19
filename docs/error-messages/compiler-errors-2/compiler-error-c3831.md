@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268051"
 ---
 # <a name="compiler-error-c3831"></a>編譯器錯誤 C3831
 'member': 'class' 不能釘選的資料成員或成員函式傳回 pin 指標  

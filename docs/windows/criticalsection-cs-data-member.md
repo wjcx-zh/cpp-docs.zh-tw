@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882559"
 ---
 # <a name="criticalsectioncs-data-member"></a>CriticalSection::cs_ 資料成員
 宣告重要區段的資料成員。  

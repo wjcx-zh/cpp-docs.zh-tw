@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346008"
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>一階段和兩階段的物件建構
 您可以建立圖形物件，例如畫筆和筆刷的兩個技術之間選擇：  

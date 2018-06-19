@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345982"
 ---
 # <a name="mapping-messages"></a>對應訊息
 每個可以接收訊息或命令的架構類別皆有其自己的「訊息對應」。 架構會使用訊息對應將訊息和命令連接到它們的處理函式。 任何衍生自類別 `CCmdTarget` 的類別皆可有訊息對應。 其他文件會詳細解釋訊息對應並說明用法。  

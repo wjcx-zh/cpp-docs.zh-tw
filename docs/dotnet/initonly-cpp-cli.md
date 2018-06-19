@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130551"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 **initonly**是即時線上關鍵字表示該變數的指派可能是只做為宣告或在相同類別中的靜態建構函式的一部分。  

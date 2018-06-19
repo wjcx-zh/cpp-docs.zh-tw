@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345551"
 ---
 # <a name="collections"></a>集合
 MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型：  

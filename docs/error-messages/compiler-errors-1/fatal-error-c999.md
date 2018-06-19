@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227094"
 ---
 # <a name="fatal-error-c999"></a>嚴重錯誤 C999
 不明訊息-請選擇 Visual c + + 說明 功能表上的技術支援 命令或開啟技術支援說明檔，如需詳細資訊  

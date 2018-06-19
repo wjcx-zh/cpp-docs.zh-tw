@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232195"
 ---
 # <a name="compiler-error-c2652"></a>編譯器錯誤 C2652
 'identifier': 不合法的複製建構函式： 第一個參數不得為 'identifier'  

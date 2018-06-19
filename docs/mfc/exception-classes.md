@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344892"
 ---
 # <a name="exception-classes"></a>例外狀況類別
 類別庫提供根據類別 `CException` 的例外狀況處理機制。 應用程式架構用其程式碼使用例外狀況，而您也可以用您的程式碼來使用例外狀況。 如需詳細資訊，請參閱文章[例外狀況](../mfc/exception-handling-in-mfc.md)。 您可以從 `CException`衍生您自己的例外狀況類型。  

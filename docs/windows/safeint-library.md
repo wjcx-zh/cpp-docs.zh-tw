@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892048"
 ---
 # <a name="safeint-library"></a>SafeInt 程式庫
 SafeInt 函式庫可以在應用程式執行數學運算時，協助防止可能產生的整數溢位情形。  

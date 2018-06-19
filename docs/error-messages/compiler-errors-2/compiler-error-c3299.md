@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249897"
 ---
 # <a name="compiler-error-c3299"></a>編譯器錯誤 C3299
 'member_function' : 無法指定條件約束，因為它們是繼承自基底方法  

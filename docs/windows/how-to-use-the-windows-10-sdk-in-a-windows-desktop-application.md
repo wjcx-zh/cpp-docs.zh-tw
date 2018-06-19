@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882820"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>如何：在 Windows 桌面應用程式中使用 Windows 10 SDK
 當您建立傳統 Windows 桌面專案在 Visual Studio 2017 時，它會設定預設使用 c + + 桌面工作負載已安裝，或上次更新時已安裝的 Windows 10 sdk 版本來建置。 這個 Windows SDK 版本是與所有最新的 Windows 版本相容。 如果您想要以較早版本的 SDK 為目標，您可以開啟專案 |屬性，然後選擇 從可用的 Windows SDK 版本下拉式清單中的其他 SDK 版本。  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096336"
 ---
 # <a name="crowsetundo"></a>CRowset::Undo
 復原自上次擷取資料列所做的變更或[更新](../../data/oledb/crowset-update.md)。  

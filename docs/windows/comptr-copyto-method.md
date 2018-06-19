@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870867"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo 方法
 複製與這個 ComPtr 的指定指標，相關聯的目前或指定的介面。  

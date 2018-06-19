@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342614"
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>從 CDocument 衍生文件類別
 文件包含並管理您的應用程式資料。 若要使用 MFC 應用程式精靈提供的文件類別，您必須執行下列作業：  

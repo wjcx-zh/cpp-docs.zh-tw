@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270960"
 ---
 # <a name="compiler-error-c3849"></a>編譯器錯誤 C3849
 運算式的類型 'type' 的函式樣式呼叫會失去所有數字可用運算子多載的 const 及/或 volatile 限定詞  

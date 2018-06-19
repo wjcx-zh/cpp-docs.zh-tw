@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128575"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>如何：使用 .NET Framework 顯示影像
 下列程式碼範例會修改 OnPaint 事件處理常式，以擷取指標<xref:System.Drawing.Graphics>主要表單的物件。 <xref:System.Windows.Forms.Form.OnPaint%2A>函式適用於 Windows Forms 應用程式，很可能是使用 Visual Studio 應用程式精靈建立。  

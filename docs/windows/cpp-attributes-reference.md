@@ -20,11 +20,12 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870841"
 ---
 # <a name="c-attributes-reference"></a>C++ 屬性參考
 Microsoft 定義了一組簡化 COM 程式設計與.NET Framework 通用語言執行階段開發的屬性。 當您將屬性納入原始程式檔時，編譯器會搭配提供者來插入程式碼，或修改產生的目的檔中的程式碼的 Dll。  
   
- **注意：**如果您要尋找 c + + 標準屬性，請參閱[屬性](../cpp/attributes.md)。  
+ **注意：** 如果您要尋找 c + + 標準屬性，請參閱[屬性](../cpp/attributes.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [概念](../windows/attributed-programming-concepts.md)  

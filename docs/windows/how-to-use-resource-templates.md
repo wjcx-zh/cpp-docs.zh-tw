@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882728"
 ---
 # <a name="how-to-use-resource-templates"></a>如何：使用資源範本
 資源範本是您已儲存為 .rct 檔案的自訂資源。 資源範本之後可以做為建立其他資源的起點。 資源範本可節省在開發共用功能的其他資源或資源群組的時間，例如標準控制項和其他重複的項目。 例如，您可能想要在數個對話方塊中包含 [說明] 按鈕和公司標誌的圖示。 若要快速地執行，請建立新對話方塊範本並使用標誌與 [說明] 按鈕加以自訂。  

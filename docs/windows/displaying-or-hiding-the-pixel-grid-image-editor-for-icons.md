@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882923"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>顯示或隱藏像素格線 (圖示影像編輯器)
 所有 4 個或更高的縮放比例的影像編輯器窗格，您可以顯示分隔映像中的個別像素格線。  

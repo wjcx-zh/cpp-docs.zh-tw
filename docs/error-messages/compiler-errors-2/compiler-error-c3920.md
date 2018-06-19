@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270276"
 ---
 # <a name="compiler-error-c3920"></a>編譯器錯誤 C3920
 ' 運算子 ': 無法定義後置遞增/遞減 WinRT 或 CLR 運算子。 呼叫後置 WinRT 或 CLR 運算子將會呼叫對應的前置 WinRT 或 CLR 運算子 (op_Increment/op_Decrement)，但是會具有後置語意  

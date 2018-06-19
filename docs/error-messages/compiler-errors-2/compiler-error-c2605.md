@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236188"
 ---
 # <a name="compiler-error-c2605"></a>編譯器錯誤 c2605:
 'name': 這個方法已保留在 Managed 或 WinRT 類別中  

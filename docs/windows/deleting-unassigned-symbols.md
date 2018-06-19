@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882936"
 ---
 # <a name="deleting-unassigned-symbols"></a>刪除未指定的符號
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>刪除未指派 (未使用) 的符號  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342130"
 ---
 # <a name="creating-the-date-and-time-picker-control"></a>建立日期時間選擇器控制項
 建立日期和時間選擇器控制項的方式取決於您是使用控制項在對話方塊中還是非對話方塊視窗中建立。  

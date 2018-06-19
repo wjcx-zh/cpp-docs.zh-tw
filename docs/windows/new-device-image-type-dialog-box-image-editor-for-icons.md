@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879616"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>新&lt;裝置&gt;影像類型對話方塊 （圖示影像編輯器）
 可讓您建立指定類型的新裝置映像。 若要開啟**新增\<裝置 > 影像**對話方塊中，按一下 **新映像類型**上**映像**功能表。  

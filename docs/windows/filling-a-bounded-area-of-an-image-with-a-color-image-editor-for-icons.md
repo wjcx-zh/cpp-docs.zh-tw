@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880565"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>以色彩填滿影像的封閉區域 (圖示影像編輯器)
 影像編輯器提供**填滿**工具以便填滿任何以目前的繪圖色彩或背景色彩與影像區域。  

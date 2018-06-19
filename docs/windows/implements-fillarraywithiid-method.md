@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875717"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid 方法
 將插入至指定的陣列項目目前的第零個範本參數所指定的介面 ID。  

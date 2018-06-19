@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227513"
 ---
 # <a name="fatal-error-c1094"></a>嚴重錯誤 C1094
 '-Zmval1': 命令列選項不一致，用來建置先行編譯標頭的值 ('-Zmval2')  

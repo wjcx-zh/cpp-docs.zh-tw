@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878108"
 ---
 # <a name="generics--c-component-extensions"></a>泛型 (C++ 元件擴充功能)
 泛型是參數化的類型和方法。 在這一節中，您將了解 Windows 執行階段和通用語言執行平台 (CLR) 都支援的泛型功能，以及只有通用語言執行平台 (CLR) 支援的泛型功能。 此外，您還會了解如何在 Visual C++ 中撰寫自己的泛型方法和類型，以及如何在 Visual C++ 中使用以 .NET Framework 語言撰寫的泛型類型。 最後，本節將提供泛型和 C++ 範本的比較。  

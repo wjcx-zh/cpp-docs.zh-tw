@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346109"
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>MFC 如何讓您更輕鬆地建立網際網路用戶端應用程式
 Microsoft Foundation Classes 會封裝 Win32 Internet Extension (WinInet) 函式，並且提供 MFC 程式設計人員熟悉的內容。 MFC 提供三種網際網路檔案類別 ([CInternetFile](../mfc/reference/cinternetfile-class.md)， [Cinternetfile](../mfc/reference/chttpfile-class.md)，和[CGopherFile](../mfc/reference/cgopherfile-class.md)) 衍生自[Cgopherfile](../mfc/reference/cstdiofile-class.md)類別. 這些類別除了讓 `CStdioFile` 用於本機檔案的程式設計人員熟悉擷取與操作網際網路資料外，您還可以使用這些類別以一致、透明的方式處理本機檔案和網際網路檔案。  

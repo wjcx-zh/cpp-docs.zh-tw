@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882702"
 ---
 # <a name="property--c-component-extensions"></a>property (C++ 元件擴充功能)
 宣告*屬性*，這是成員函式的行為模式，以及存取資料成員或陣列元素。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291137"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>編譯器警告 (層級 3) C4738
 在記憶體中儲存 32 位元浮點結果，可能會損失效能  

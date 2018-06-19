@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105900"
 ---
 # <a name="using-manual-accessors"></a>使用手動存取子
 有四個項目時處理未知的命令：  

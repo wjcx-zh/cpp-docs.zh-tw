@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128276"
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>如何：使用規則運算式進行簡單對應 (C++/CLI)
 下列程式碼範例會使用規則運算式來尋找正確的子字串相符項目。 搜尋由靜態<xref:System.Text.RegularExpressions.Regex.IsMatch%2A>方法，這個方法會採用兩個字串做為輸入。 第一個是要搜尋的字串和第二個是要在其中搜尋的模式。  

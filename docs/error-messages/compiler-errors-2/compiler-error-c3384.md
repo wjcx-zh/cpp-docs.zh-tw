@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251402"
 ---
 # <a name="compiler-error-c3384"></a>編譯器錯誤 C3384
 'type_parameter': 數值條件約束和 ref 條件約束互斥  

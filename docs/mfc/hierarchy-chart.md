@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345159"
 ---
 # <a name="hierarchy-chart"></a>階層架構圖表
 下圖代表 MFC 類別衍生自`CObject`:  

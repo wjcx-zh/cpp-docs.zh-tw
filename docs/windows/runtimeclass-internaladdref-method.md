@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888520"
 ---
 # <a name="runtimeclassinternaladdref-method"></a>RuntimeClass::InternalAddRef 方法
 目前的 RuntimeClass 物件的參考計數遞增。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342627"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>例外狀況：建構函式中的例外狀況
 當擲回例外狀況的建構函式中，清除任何物件，而且記憶體配置您所做之前擲回例外狀況，如所述[例外狀況： 從您的函式擲回的例外狀況](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)。  

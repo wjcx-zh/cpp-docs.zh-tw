@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345816"
 ---
 # <a name="exchanging-data"></a>交換資料
 如同大多數對話方塊，在屬性工作表和應用程式之間的資料交換，是屬性工作表的其中一個最重要的函式。 本文說明如何完成這項工作。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870073"
 ---
 # <a name="comptrasweak-method"></a>ComPtr::AsWeak 方法
 擷取目前物件的弱式參考。  

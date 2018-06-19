@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888642"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>選取前景或背景色彩 (圖示影像編輯器)
 除了**橡皮擦**，工具上**影像編輯器**工具列繪製以目前前景或背景色彩您分別按滑鼠左鍵或右鍵時。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890573"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>指定對話方塊的位置和大小
 位置和一個對話方塊，並將位置和大小的控制項內，會以對話方塊單位測量。 個別控制項和對話方塊中的值會出現在右下角 Visual Studio 狀態列選取它們。  

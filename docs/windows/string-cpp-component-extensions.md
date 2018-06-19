@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889234"
 ---
 # <a name="string--c-component-extensions"></a>字串 (C++ 元件擴充功能)
 Visual c + + 編譯器支援*字串*，這是物件，表示為一連串字元的文字。 Visual c + + 支援字串變數，其值是隱含的和常值，其值為明確加上引號的字串。  

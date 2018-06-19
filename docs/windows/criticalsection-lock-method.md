@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871321"
 ---
 # <a name="criticalsectionlock-method"></a>CriticalSection::Lock 方法
 等候指定的重要區段物件的擁有權。 函數會傳回擁有權授與呼叫執行緒時。  

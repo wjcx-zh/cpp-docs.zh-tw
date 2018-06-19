@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33285638"
 ---
 # <a name="compiler-warning-level-1-c4652"></a>編譯器警告 (層級 1) C4652
 編譯器選項 'option' 與先行編譯標頭; 不一致目前的命令列選項會覆寫先行編譯標頭中定義  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340160"
 ---
 # <a name="active-document-servers"></a>主動式文件伺服程式
 裝載其他應用程式類型文件的主動式文件伺服程式 (例如 Word、Excel、PowerPoint) 稱為主動式文件。 和 OLE 內嵌物件 (只在其他文件的頁面中顯示) 不同的是，主動式文件提供完整的介面以及建立這些物件之伺服器應用程式的完整原生功能。 使用者可以使用他們最喜愛的應用程式完整功能 (如果支援主動式文件) 來建立文件，也可以將產生的專案視為單一實體。  

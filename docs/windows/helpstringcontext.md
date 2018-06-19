@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874573"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 指定.hlp 或.chm 檔案中的說明主題的識別碼。  

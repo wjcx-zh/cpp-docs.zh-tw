@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879324"
 ---
 # <a name="grouping-radio-buttons-on-a-dialog-box"></a>群組對話方塊上的選項按鈕
 當您在對話方塊中加入選項按鈕時，請在 [屬性] 視窗中為群組的第一個按鈕設定 [群組] 屬性，把它們當成群組處理。 然後，這個選項按鈕的控制項識別碼就會出現在 [[加入成員變數精靈]](../ide/add-member-variable-wizard.md)中，讓您為選項按鈕群組加入成員變數。  

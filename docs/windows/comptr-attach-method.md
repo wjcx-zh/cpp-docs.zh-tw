@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870099"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach 方法
 將這個 ComPtr 與目前範本類型參數所指定的介面類型產生關聯。  

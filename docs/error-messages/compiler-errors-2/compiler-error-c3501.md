@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253422"
 ---
 # <a name="compiler-error-c3501"></a>編譯器錯誤 C3501
 沒有為 ProgID 'progid' 註冊的 typelib  

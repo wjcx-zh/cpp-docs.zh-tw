@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253104"
 ---
 # <a name="compiler-error-c3347"></a>編譯器錯誤 C3347
 'arg': 未在屬性 idl_module 中指定所需的引數  

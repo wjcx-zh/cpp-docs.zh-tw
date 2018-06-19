@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870233"
 ---
 # <a name="comptrgetaddressof-method"></a>ComPtr::GetAddressOf 方法
 擷取 [ptr_](../windows/comptr-ptr-data-member.md) 資料成員的位址，其中包含這個 ComPtr 所代表之介面的指標。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882572"
 ---
 # <a name="dialog-editor-tab-toolbox"></a>工具箱、對話方塊編輯器索引標籤
 對話方塊編輯器索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您正在對話方塊編輯器中。 若要將控制項加入新的對話方塊中，將控制項從 [工具箱] 拖曳至您所建立的對話方塊 (如需詳細資訊，請參閱[將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md))。 然後移動控制項，或變更其大小和形狀。  

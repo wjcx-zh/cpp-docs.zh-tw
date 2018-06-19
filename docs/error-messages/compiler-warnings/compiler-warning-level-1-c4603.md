@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282294"
 ---
 # <a name="compiler-warning-level-1-c4603"></a>編譯器警告 (層級 1) C4603
 '\<識別項 >': 巨集未定義或定義是不同，在使用先行編譯標頭之後  

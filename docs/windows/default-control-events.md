@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874092"
 ---
 # <a name="default-control-events"></a>預設控制項事件
 下列控制項名稱有隨附的預設事件：  

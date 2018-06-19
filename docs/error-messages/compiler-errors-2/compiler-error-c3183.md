@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252467"
 ---
 # <a name="compiler-error-c3183"></a>編譯器錯誤 C3183
 無法在 Managed 或 WinRT 類型 'type' 內部定義未命名的類別、結構或等位  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281030"
 ---
 # <a name="compiler-warning-level-1-c4624"></a>編譯器警告 (層級 1) C4624
 'derived class'：解構函式已隱含定義為被刪除，因為基底類別解構函式無法存取或已遭刪除  

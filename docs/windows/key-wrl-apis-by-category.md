@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881454"
 ---
 # <a name="key-wrl-apis-by-category"></a>依分類區分的重要 WRL 應用程式開發介面
 下表列出主 Windows 執行階段 c + + 樣板程式庫類別、 結構、 函數和巨集。 會省略 helper 命名空間和類別中的建構。 這些清單會擴大，命名空間所排列的 API 文件。  

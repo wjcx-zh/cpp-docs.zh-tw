@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872292"
 ---
 # <a name="creating-new-symbols"></a>建立新的符號
 當您開始新的專案時，您可能會發現先對應符號名稱，再建立將指派到的資源很方便。  

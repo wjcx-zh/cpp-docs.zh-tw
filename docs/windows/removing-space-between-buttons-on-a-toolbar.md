@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877959"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>移除工具列按鈕之間的空白
 下列程序會示範如何移除工具列按鈕之間的空格。  

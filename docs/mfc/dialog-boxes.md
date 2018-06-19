@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346671"
 ---
 # <a name="dialog-boxes"></a>對話方塊
 Windows 應用程式經常與使用者已透過對話方塊。 類別[CDialog](../mfc/reference/cdialog-class.md)管理對話方塊中，Visual c + + 對話方塊編輯器容易設計對話方塊和建立對話方塊樣板資源，以及程式碼精靈簡化初始化的程序提供的介面和正在驗證的控制項在對話方塊中，並收集使用者輸入的值。  

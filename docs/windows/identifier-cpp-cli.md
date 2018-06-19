@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877679"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 可讓您使用 Visual c + + 關鍵字當做識別項。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274585"
 ---
 # <a name="compiler-warning-level-1-c4445"></a>編譯器警告 (層級 1) C4445
 'function'：在 WinRT 或 Managed 類型中，虛擬方法不可為私用  

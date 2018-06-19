@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870086"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 方法
 傳回 ComPtr 物件，代表指定介面 ID 所識別的介面。  

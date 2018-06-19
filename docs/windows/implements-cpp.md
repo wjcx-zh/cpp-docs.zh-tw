@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880679"
 ---
 # <a name="implements-c"></a>implements (C++)
 指定強制為成員的 IDL coclass 的分派介面。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883130"
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>自訂影像對話方塊 (圖示影像編輯器)
 可讓您建立新的映像的自訂大小與色彩數目。

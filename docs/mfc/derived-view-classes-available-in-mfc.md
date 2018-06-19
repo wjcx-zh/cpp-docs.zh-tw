@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345660"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC 中的可用衍生檢視類別
 下表顯示在 MFC 的檢視類別和其彼此的關聯性。 檢視類別的功能取決於從它衍生的 MFC 檢視類別。  

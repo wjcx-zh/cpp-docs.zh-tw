@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879499"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>明確覆寫 (C++ 元件擴充功能)
 本主題討論如何明確覆寫基底類別或介面的成員。 具名 （明確） 覆寫只應該用於覆寫具有名稱不同之衍生方法的方法。  

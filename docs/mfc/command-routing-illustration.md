@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341132"
 ---
 # <a name="command-routing-illustration"></a>命令路由說明
 為了說明，請考慮來自 MDI 應用程式的 [編輯] 功能表中 [全部清除] 功能表項目的命令訊息。 假設這個命令的處理函式正好是應用程式的文件類別的成員函式。 以下是該命令在使用者選擇功能表項目後抵達其處理常式的方式：  

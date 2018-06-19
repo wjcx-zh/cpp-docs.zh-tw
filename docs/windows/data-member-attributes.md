@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871701"
 ---
 # <a name="data-member-attributes"></a>資料成員屬性
 下列屬性套用至類別、 coclass 或介面中的資料成員。  

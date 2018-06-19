@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892471"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock 方法
 等待目前的物件或指定的控制代碼相關聯的號誌物件處於信號狀態，或超過指定逾時間隔。  

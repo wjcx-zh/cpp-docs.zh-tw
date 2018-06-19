@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271600"
 ---
 # <a name="compiler-error-c3915"></a>編譯器錯誤 C3915
 'type' 已沒有預設索引屬性 （類別索引子）  

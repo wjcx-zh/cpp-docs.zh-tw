@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865832"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支援
 Mbcs 的新版 Windows 上執行時，Visual c + + 開發系統 （包括整合式原始檔的程式碼編輯器]、 [偵錯工具和命令列工具） 已 MBCS 啟用，除了 [記憶體] 視窗。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268314"
 ---
 # <a name="compiler-error-c3860"></a>編譯器錯誤 C3860
 下列類別類型名稱的型別引數清單必須列出參數的型別參數清單中使用的順序  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270660"
 ---
 # <a name="compiler-error-c3888"></a>編譯器錯誤 C3888
 'name' : C++/CLI 不支援與這個常值資料成員關聯的常數運算式  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890586"
 ---
 # <a name="version-information-editor"></a>版本資訊編輯器
 版本資訊包含公司和產品識別碼、產品版本號碼，以及版權和商標通知。 您可以使用版本資訊編輯器建立和維護這項資料，將之儲存在版本資訊資源中。 應用程式不需要版本資訊資源，但這卻是收集應用程式識別資訊的好地方。 安裝程式 API 也使用版本資訊。  

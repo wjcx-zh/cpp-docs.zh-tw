@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282947"
 ---
 # <a name="compiler-warning-level-1-c4407"></a>編譯器警告 (層級 1) C4407
 不同成員指標表示法之間的轉換，編譯器可能會產生不正確的程式碼  

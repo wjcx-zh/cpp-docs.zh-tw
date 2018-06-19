@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874794"
 ---
 # <a name="making-controls-the-same-width-height-or-size"></a>讓控制項同寬、同高或相同大小
 您可以調整一群主控項的大小為基礎的控制項。 您也可以[調整控制項根據其標題文字的維度](../windows/sizing-individual-controls.md)。  

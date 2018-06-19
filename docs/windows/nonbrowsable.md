@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877364"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 表示某個介面成員不會顯示在屬性瀏覽器。  

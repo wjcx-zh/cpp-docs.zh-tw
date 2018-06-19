@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249950"
 ---
 # <a name="compiler-error-c3222"></a>編譯器錯誤 C3222
 'parameter'：無法對 Managed 或 WinRT 類型或泛型函式的成員函式宣告預設引數  

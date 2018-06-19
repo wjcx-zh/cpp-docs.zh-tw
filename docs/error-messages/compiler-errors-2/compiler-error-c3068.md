@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256551"
 ---
 # <a name="compiler-error-c3068"></a>編譯器錯誤 C3068
 'function': 'naked' 函式不能包含需要的物件會回溯發生 c + + 例外狀況  

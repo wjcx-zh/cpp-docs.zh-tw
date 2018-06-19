@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883524"
 ---
 # <a name="creating-a-console-application"></a>建立主控台應用程式
 建立 Win32 主控台應用程式的最簡單方式是使用 Win32 應用程式精靈。  

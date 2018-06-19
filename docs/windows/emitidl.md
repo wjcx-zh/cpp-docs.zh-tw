@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876588"
 ---
 # <a name="emitidl"></a>emitidl
 指定是否會處理所有後續的 IDL 屬性，並放入產生的.idl 檔案。  

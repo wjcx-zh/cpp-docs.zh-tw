@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095111"
 ---
 # <a name="work-with-odbc-and-drivers"></a>使用 ODBC 和驅動程式
 ODBC，可讓您撰寫不依賴只有一個資料庫管理系統 (DBMS) 的應用程式。 您可以撰寫一個應用程式可操作您的使用者具有正確的 DBMS 專屬的 ODBC 驅動程式的多個 dbms。  

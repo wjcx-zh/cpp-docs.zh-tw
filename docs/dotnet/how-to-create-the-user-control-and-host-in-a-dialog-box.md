@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136349"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>如何：建立使用者控制項並裝載至對話方塊中
 這篇文章中的步驟假設您正在建立對話方塊架構 ([CDialog 類別](../mfc/reference/cdialog-class.md)) Microsoft Foundation Classes (MFC) 專案，但是您也可以將 Windows Form 控制項的支援加入現有的 MFC 對話方塊。  

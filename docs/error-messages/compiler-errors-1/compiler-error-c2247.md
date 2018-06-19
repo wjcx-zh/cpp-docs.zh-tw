@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172309"
 ---
 # <a name="compiler-error-c2247"></a>編譯器錯誤 C2247
 ' identifier' 無法存取，因為 'class' 會使用繼承自 'class' 的 'specifier'  

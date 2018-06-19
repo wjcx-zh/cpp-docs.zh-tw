@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112130"
 ---
 # <a name="declaration-of-a-clr-array"></a>CLR 陣列的宣告
 宣告的語法，具現化，並初始化 managed 的陣列已從 Managed Extensions for c + + Visual c + +。  

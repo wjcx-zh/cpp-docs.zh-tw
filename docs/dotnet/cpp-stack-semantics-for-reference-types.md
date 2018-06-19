@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111350"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>參考類型的 C++ 堆疊語意
 Visual C++ 2005 之前只能使用 `new` 運算子建立參考類型的執行個體，這麼做會在記憶體回收堆積上建立物件。 不過，您現在可以使用與您用來在堆疊上建立原生類型之執行個體相同的語法建立參考類型的執行個體。 因此，您不需要使用[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)建立參考類型的物件。 然後，當物件超出範圍時，編譯器會呼叫物件的解構函式。  

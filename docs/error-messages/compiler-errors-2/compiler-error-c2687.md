@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233014"
 ---
 # <a name="compiler-error-c2687"></a>編譯器錯誤 C2687
 'type': 例外狀況宣告不能是 'void' 或代表不完整的類型或指標或參考不完整的類型  

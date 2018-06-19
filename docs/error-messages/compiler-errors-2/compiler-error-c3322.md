@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250077"
 ---
 # <a name="compiler-error-c3322"></a>編譯器錯誤 C3322
 'property': 不是屬性 (attribute) 'attribute' 的有效屬性 (property)  

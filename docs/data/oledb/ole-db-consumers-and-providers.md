@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111386"
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB 消費者和提供者
 OLE DB 架構使用模型的消費者和提供者。 取用者可讓資料的要求。 提供者回應這些要求將資料放在以表格式格式，並將其傳回給取用者。 任何呼叫，可讓取用者必須實作提供者中。  

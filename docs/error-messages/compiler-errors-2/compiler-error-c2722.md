@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236374"
 ---
 # <a name="compiler-error-c2722"></a>編譯器錯誤 C2722
 ':: 運算子 ': 不合法的下列運算子命令。使用 '運算子 operator operator'  

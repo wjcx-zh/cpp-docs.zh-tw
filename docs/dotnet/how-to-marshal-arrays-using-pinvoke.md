@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132527"
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>如何：使用 PInvoke 封送處理陣列
 本主題說明如何原生函式接受 C 樣式字串可以使用 CLR 字串型別呼叫<xref:System.String>使用.NET Framework 平台叫用支援。 Visual c + + 程式設計人員會建議 （自動），而是使用 c + + Interop 功能，因為 P/Invoke 提供極少的編譯時間錯誤報告，不是類型安全，就必須等待冗長實作。 如果未受管理的應用程式開發介面會封裝為 DLL 不是可用的原始程式碼，P/Invoke 是唯一的選項 (否則請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md))。  

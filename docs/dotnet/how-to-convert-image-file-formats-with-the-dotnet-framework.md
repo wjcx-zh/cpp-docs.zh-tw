@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130054"
 ---
 # <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>如何：使用 .NET Framework 轉換影像檔格式
 下列程式碼範例示範<xref:System.Drawing.Image?displayProperty=fullName>類別和<xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName>列舉用來轉換並儲存映像檔案。 下列程式碼載入.jpg 檔案的映像，然後將它儲存在.gif 和.bmp 檔案格式。  

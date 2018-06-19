@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244106"
 ---
 # <a name="compiler-error-c2833"></a>編譯器錯誤 C2833
 'operator operator' 不是可辨認的運算子或類型  

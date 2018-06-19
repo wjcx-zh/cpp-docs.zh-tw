@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113183"
 ---
 # <a name="exceptions-in-ccli"></a>C++/CLI 中的例外狀況
 文件的本節文章說明例外狀況處理 C + CLI，以及與標準例外狀況處理差異。  

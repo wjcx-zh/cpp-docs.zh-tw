@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136609"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送處理結構
 本文件說明如何在原生函式接受 C 樣式結構可以從呼叫 managed 函式中使用 P/Invoke。 雖然我們建議您使用 c + + Interop 功能，而不是 P/Invoke P/Invoke 提供極少的編譯時間錯誤報告，因為不是類型安全，就必須等待冗長當 unmanaged 應用程式開發介面會封裝為 DLL，而且不是原始碼實作可用，P/Invoke 是唯一的選項。 否則，請參閱下列文件：  

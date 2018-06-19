@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135209"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>如何：使用反映實作外掛程式元件架構 (C++/CLI)
 下列程式碼範例示範如何使用反映來實作簡單的 「 外掛程式 」 架構。 第一個清單是應用程式，而第二個是外掛程式。 應用程式是填入本身的任何表單為基礎的類別做為命令列引數提供的外掛程式 DLL 中找到多個文件格式。  

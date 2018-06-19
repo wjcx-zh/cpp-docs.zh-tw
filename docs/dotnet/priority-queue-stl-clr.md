@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172536"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 此範本類別描述控制不同長度排序項目序列的有限存取的物件。 您可以使用容器配接器`priority_queue`來管理其優先順序佇列為基礎容器。  

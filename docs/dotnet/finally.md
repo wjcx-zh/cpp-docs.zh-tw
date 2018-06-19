@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111467"
 ---
 # <a name="finally"></a>finally
 除了`try`和`catch`子句、 CLR 例外狀況處理支援`finally`子句。 語意都完全相同`__finally`封鎖結構化例外狀況處理 (SEH)。 A`__finally`區塊可以依照`try`或`catch`區塊。  

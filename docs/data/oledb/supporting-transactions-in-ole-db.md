@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110337"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>支援 OLE DB 中的異動
 A[交易](../../data/transactions-mfc-data-access.md)是群組，或批次，一系列的資料來源的更新，讓不是全部成功就無法認可一次就 （如果有任何一個將會失敗） 就無法認可任何的方法和回復整個交易。 此程序可確保資料來源上的結果的完整性。  

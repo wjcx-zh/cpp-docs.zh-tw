@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128793"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>如何：使用 gcnew 建立實值類型及使用隱含 Boxing
 使用[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)值類型會建立 boxed 實的值類型，可以接著放置 managed、 記憶體回收堆積。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129365"
 ---
 # <a name="how-to-read-a-binary-file-ccli"></a>如何：讀取二進位檔案 (C++/CLI)
 下列程式碼範例示範如何從檔案讀取二進位資料，使用兩個類別從<xref:System.IO?displayProperty=fullName>命名空間：<xref:System.IO.FileStream>和<xref:System.IO.BinaryReader>。 <xref:System.IO.FileStream> 代表實際檔案。 <xref:System.IO.BinaryReader> 提供可讓您存取二進位資料流介面。  

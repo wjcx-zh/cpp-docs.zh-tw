@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127977"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>如何：測試是否相等 (C++/CLI)
 在下列範例中，使用 Managed Extensions for c + + 的相等測試為基礎的控制代碼的參考。  

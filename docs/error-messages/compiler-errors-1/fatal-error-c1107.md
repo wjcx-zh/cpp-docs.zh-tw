@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199927"
 ---
 # <a name="fatal-error-c1107"></a>嚴重錯誤 C1107
 找不到組件 'file': 請指定組件搜尋路徑，請使用 /AI 或設定 LIBPATH 環境變數  

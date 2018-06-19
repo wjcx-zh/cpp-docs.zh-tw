@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129784"
 ---
 # <a name="how-to-hold-reference-to-value-type-in-native-type"></a>如何：以原生類型存放實值類型的參考
 使用`gcroot`boxed 類型保留在原生類型中，實值類型的參考。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855275"
 ---
 # <a name="mbcs-programming-tips"></a>MBCS 程式設計提示
 在新的開發，您應該為終端使用者可能看到的所有字串使用 Unicode 字元編碼。 MBCS 是由 Unicode 取代的舊版技術。 本節為必須維護使用 MBCS 且不適合轉換為 Unicode 之現有程式的開發人員提供提示。 此建議適用於 MFC 應用程式和撰寫而非 MFC 應用程式。 主題包括：  

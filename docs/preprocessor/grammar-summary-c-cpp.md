@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849141"
 ---
 # <a name="grammar-summary-cc"></a>文法摘要 (C/C++)
 本節描述前置處理器的正式文法。 它涵蓋前置處理器指示詞的語法，並討論運算子[前置處理器](../preprocessor/preprocessor.md)和[Pragma 指示詞](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。  

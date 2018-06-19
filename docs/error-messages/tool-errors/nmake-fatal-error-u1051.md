@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317410"
 ---
 # <a name="nmake-fatal-error-u1051"></a>NMAKE 嚴重錯誤 U1051
 記憶體不足  
@@ -33,4 +34,4 @@ ms.lasthandoff: 05/04/2018
   
 2.  增加 Windows NT 分頁檔或 Windows 分頁檔的大小。  
   
-3.  如果只使用 makefile 的一部分，請將 makefile 分割成不同的檔案或使用**！如果**前置處理器指示詞來限制所 NMAKE 必須處理的數量。 **！如果**指示詞包含**！如果**， `!IFDEF`， **！IFNDEF**， **！ELSE IF**， **！其他** `IFDEF`，和**！其他** `IFNDEF`。
+3.  如果只使用 makefile 的一部分，請將 makefile 分割成不同的檔案或使用 **！如果**前置處理器指示詞來限制所 NMAKE 必須處理的數量。 **！如果**指示詞包含 **！如果**， `!IFDEF`， **！IFNDEF**， **！ELSE IF**， **！其他** `IFDEF`，和 **！其他** `IFNDEF`。

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322675"
 ---
 # <a name="nmake-fatal-error-u1034"></a>NMAKE 嚴重錯誤 U1034
 語法錯誤： 遺漏分隔符號  

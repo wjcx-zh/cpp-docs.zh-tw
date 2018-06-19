@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33854050"
 ---
 # <a name="accelerator-modifier-property"></a>快速鍵輔助按鍵屬性
 以下是合法的快速鍵對應表中的修飾詞屬性的項目。  

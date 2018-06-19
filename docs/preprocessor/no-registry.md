@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849661"
 ---
 # <a name="noregistry"></a>no_registry
 `no_registry` 會告知編譯器不要搜尋以 `#import` 匯入之類型程式庫的登錄。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296672"
 ---
 # <a name="compiler-warning-level-3-c4278"></a>編譯器警告 (層級 3) C4278
 'identifier': 類型程式庫 'tlb' 中的識別項已經是巨集;使用 'rename' 限定詞  

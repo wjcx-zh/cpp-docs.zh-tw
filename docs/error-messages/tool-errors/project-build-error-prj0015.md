@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316445"
 ---
 # <a name="project-build-error-prj0015"></a>專案建置錯誤 PRJ0015
 從您的系統遺漏 NULL 裝置。 我們目前無法啟動組建。  

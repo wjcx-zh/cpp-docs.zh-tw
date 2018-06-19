@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303585"
 ---
 # <a name="compiler-warning-level-4-c4816"></a>編譯器警告 (層級 4) C4816
 'param' : 參數具有大小為零且將被截斷的陣列 (除非物件是透過傳址方式傳遞)  

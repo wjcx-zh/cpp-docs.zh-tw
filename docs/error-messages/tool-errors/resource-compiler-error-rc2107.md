@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318424"
 ---
 # <a name="resource-compiler-error-rc2107"></a>資源編譯器錯誤 RC2107
 **必須是數字命令值**  

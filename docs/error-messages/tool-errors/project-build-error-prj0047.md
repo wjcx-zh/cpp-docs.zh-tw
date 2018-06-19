@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326042"
 ---
 # <a name="project-build-error-prj0047"></a>專案建置錯誤 PRJ0047
 無法繼續暫停的處理序。  建置已失敗。  

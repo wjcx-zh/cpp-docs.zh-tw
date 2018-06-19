@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325912"
 ---
 # <a name="active-document-classes"></a>主動式文件類別
 主動式文件可以在整個用戶端視窗中的網頁瀏覽器，例如 Internet Explorer 5.5，或在使用中的容器，例如 Microsoft Office Binder 支援主動式文件中顯示。  

@@ -20,9 +20,10 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849570"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ 前置處理器參考
-*C/c + + 前置處理器參考 》*說明前置處理器，因為它實作在 Microsoft C/c + +。 前置處理器會先對 C 和 C++ 檔案執行初步作業，再將檔案傳遞至編譯器。 您可以使用前置處理器，有條件地編譯程式碼、插入檔案、指定編譯時間錯誤訊息，以及將電腦特定規則加入至程式碼區段。  
+*C/c + + 前置處理器參考 》* 說明前置處理器，因為它實作在 Microsoft C/c + +。 前置處理器會先對 C 和 C++ 檔案執行初步作業，再將檔案傳遞至編譯器。 您可以使用前置處理器，有條件地編譯程式碼、插入檔案、指定編譯時間錯誤訊息，以及將電腦特定規則加入至程式碼區段。  
   
 ## <a name="in-this-section"></a>本節內容  
  [前置處理器指示詞](../preprocessor/preprocessor-directives.md)  

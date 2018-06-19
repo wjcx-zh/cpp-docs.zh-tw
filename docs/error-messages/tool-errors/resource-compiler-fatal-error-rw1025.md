@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320010"
 ---
 # <a name="resource-compiler-fatal-error-rw1025"></a>資源編譯器嚴重錯誤 RW1025
 堆積記憶體不足  

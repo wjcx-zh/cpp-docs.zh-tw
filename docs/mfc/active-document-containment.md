@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332669"
 ---
 # <a name="active-document-containment"></a>主動式文件內含項目
 主動式文件內含項目是一種技術，提供要使用的文件，而不是強迫您建立及用於每個文件類型的多個應用程式框架中的單一框架。 它會與基本 OLE 技術的 OLE 適用於只有單一內容可以為作用中的複合文件中內嵌的物件。 使用中文件內含項目，您可以啟用整個文件 （也就是整個應用程式，包括相關聯的功能表、 工具列和等等） 單一框架的內容中。  

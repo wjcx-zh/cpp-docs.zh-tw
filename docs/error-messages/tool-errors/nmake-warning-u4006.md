@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327823"
 ---
 # <a name="nmake-warning-u4006"></a>NMAKE 警告 U4006
 未定義的特殊巨集: '巨集名稱'  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385176"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets：使用類別 CAsyncSocket
 這篇文章說明如何使用類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 請注意，這個類別會封裝 Windows Sockets API，在非常低的層級。 `CAsyncSocket` 是以供程式設計人員清楚詳細資料中的網路通訊，但想回呼的方便性，不論網路事件的通知。 根據這項假設，本文章提供基本的指令。 您可能應該考慮使用`CAsyncSocket`如果您想要處理的 MFC 應用程式中的多個網路通訊協定的 Windows Sockets 簡易，但不是想要犠牲彈性。 您也可能會認為可以直接自行比您無法使用模型類別的程式設計詳細的通訊，以取得更好的效率`CSocket`。  

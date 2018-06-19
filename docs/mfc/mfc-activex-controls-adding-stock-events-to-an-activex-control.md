@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359334"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控制項：將內建事件加入至 ActiveX 控制項
 內建事件與不同的自訂事件類別會自動引發[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl` 包含引發事件，從一般動作所產生的預先定義的成員函式。 某些常見的動作由實作`COleControl`併入單一-並按兩下-clicks 上控制、 鍵盤事件和變更滑鼠按鈕的狀態。 內建事件的事件對應項目一律會置於**EVENT_STOCK**前置詞。  

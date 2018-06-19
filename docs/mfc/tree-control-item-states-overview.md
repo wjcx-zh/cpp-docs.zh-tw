@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383145"
 ---
 # <a name="tree-control-item-states-overview"></a>樹狀目錄控制項目狀態概觀
 樹狀結構控制項中的每個項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 具有目前狀態。 例如，項目可選取、停用、展開等等。 在大部分的情況下，樹狀目錄控制項會自動設定項目的狀態以反映使用者動作，例如選擇項目。 不過，您也可以設定項目的狀態使用[SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate)成員函式並擷取項目所使用的目前狀態[GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate)成員函式。 如需項目狀態的完整清單，請參閱[樹狀檢視控制項常數](http://msdn.microsoft.com/library/windows/desktop/bb759985)Windows SDK 中。  

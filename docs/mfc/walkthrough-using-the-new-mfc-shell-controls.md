@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385092"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>逐步解說：使用新的 MFC Shell 控制項
 在此逐步解說中，您會建立類似檔案總管的應用程式。 您將建立包含兩個窗格的視窗。 左的窗格將包含[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)桌面上顯示階層式檢視中的物件。 在右窗格會包含[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)的左窗格中選取的資料夾中顯示的檔案。  

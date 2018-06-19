@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370916"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 類別
 為您管理預設狀態的快速存取工具列並放置在功能區列上的協助程式類別 ( [CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md))。  

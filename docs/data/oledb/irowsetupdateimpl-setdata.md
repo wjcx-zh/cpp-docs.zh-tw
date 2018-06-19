@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103664"
 ---
 # <a name="irowsetupdateimplsetdata"></a>IRowsetUpdateImpl::SetData
 設定一或多個資料行中的資料值。  

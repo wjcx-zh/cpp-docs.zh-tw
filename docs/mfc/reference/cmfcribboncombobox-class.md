@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371510"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 類別
 `CMFCRibbonComboBox`類別會實作可以加入功能區列、 功能區面板或功能區的快顯功能表的下拉式方塊控制項。  

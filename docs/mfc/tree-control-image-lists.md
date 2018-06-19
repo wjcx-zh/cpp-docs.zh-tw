@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382189"
 ---
 # <a name="tree-control-image-lists"></a>樹狀目錄控制項影像清單
 樹狀結構控制項中的每個項目 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 可以有一組與其相關聯的點陣圖影像。 項目的標籤左邊顯示的影像。 當選取的項目，並不選取項目顯示的其他時，會顯示一個影像。 例如，項目可能會顯示開啟的資料夾，選取時，關閉的資料夾時未選取。  

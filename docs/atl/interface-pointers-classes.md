@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355531"
 ---
 # <a name="interface-pointers-classes"></a>介面指標類別
 下列類別會管理指定的介面指標：  

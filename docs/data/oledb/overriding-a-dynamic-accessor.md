@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107853"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>覆寫動態存取子
 當您使用動態存取子例如`CDynamicAccessor`，命令**開啟**方法會建立存取子，會自動根據開啟的資料列集的資料行資訊。 您可以覆寫動態存取子，來控制完全資料行的繫結方式。  

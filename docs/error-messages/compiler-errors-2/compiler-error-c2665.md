@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235776"
 ---
 # <a name="compiler-error-c2665"></a>編譯器錯誤 C2665
 'function': 沒有任何數字 1 多載可以轉換參數 number2 從類型 'type'  

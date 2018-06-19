@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368139"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 類別
 支援以 `CString` 物件為索引鍵的 `CString` 物件對應。  

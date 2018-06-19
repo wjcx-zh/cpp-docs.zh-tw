@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367967"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 提供便利的方式，來偵測記憶體流失的問題在程式中。  

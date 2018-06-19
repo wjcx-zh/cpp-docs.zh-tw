@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380542"
 ---
 # <a name="slider-control-styles"></a>滑桿控制項樣式
 滑桿控制項 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 可以具有垂直或水平方向。 它們可以在其中一側具有刻度標記，或兩側皆有或兩側皆沒有。 它們也可以用來指定連續值的範圍。 這些屬性是藉由使用滑桿控制樣式來控制，您在建立滑桿控制項時會指定該樣式。  

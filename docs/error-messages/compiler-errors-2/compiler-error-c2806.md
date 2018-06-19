@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237454"
 ---
 # <a name="compiler-error-c2806"></a>編譯器錯誤 C2806
 'operator operator' 具有太多型式參數  

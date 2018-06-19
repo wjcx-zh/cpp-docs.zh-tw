@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371927"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>MFC 加入類別精靈、文件範本字串
 精靈的這個頁面只是為了符合下列準則的類別有：  

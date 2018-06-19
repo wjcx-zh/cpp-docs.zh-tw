@@ -87,6 +87,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377845"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd 類別
 提供分割視窗 (這是包含多個窗格的視窗) 的功能。  

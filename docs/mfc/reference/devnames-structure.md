@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371474"
 ---
 # <a name="devnames-structure"></a>DEVNAMES 結構
 `DEVNAMES` 結構包含可識別印表機的驅動程式、裝置和輸出連接埠名稱的字串。  

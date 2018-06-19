@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128221"
 ---
 # <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：判斷影像是否為原生或 CLR
 其中一種方式來判斷是否已建置映像，是使用 common language runtime **dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355428"
 ---
 # <a name="atl-window-classes"></a>ATL 視窗類別
 ATL 包含數個類別，可讓您使用及實作 windows。 這些類別，其他 ATL 類別一樣，提供有效率的實作，不會造成您的程式碼的負荷。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367226"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 結構
 `CDaoQueryDefInfo`結構包含 recordset 物件定義的資料存取物件 (DAO) 的相關資訊。  

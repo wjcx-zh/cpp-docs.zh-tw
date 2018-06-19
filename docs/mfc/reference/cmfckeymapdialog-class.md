@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369030"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 類別
 `CMFCKeyMapDialog`類別支援將命令對應至鍵盤上的按鍵的控制項。  

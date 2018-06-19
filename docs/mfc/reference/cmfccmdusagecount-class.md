@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369238"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 類別
 追蹤 Windows 訊息，例如當使用者從功能表選取項目使用方式的計數。  

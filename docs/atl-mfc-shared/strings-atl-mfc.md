@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355476"
 ---
 # <a name="strings-atlmfc"></a>字串 (ATL/MFC)
 幾乎所有的程式會使用字串資料。 Visual c + + 提供數種方式來管理此字串資料。  

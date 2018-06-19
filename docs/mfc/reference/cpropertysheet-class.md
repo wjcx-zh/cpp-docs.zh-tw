@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377458"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 類別
 表示屬性工作表，也稱為索引標籤對話方塊。  

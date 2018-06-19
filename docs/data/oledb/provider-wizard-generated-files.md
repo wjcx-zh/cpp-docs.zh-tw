@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106004"
 ---
 # <a name="provider-wizard-generated-files"></a>提供者精靈產生的檔案
 ATL OLE DB 提供者精靈會產生下列檔案。 下列主題會使用簡短名稱"MyProvider"，但是實際的檔案名稱取決於建立提供者時所做的選擇。  

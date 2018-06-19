@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356550"
 ---
 # <a name="providing-flicker-free-activation"></a>提供避免重繪閃動
 如果您的控制項繪製本身在非現用和現用狀態 （並不會使用無視窗啟用），您可以排除繪製作業以及非使用中之間的轉換時正常發生的視覺重繪和作用中狀態。 若要這樣做，請包含**noFlickerActivate**旗標所傳回的集合中的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如:   

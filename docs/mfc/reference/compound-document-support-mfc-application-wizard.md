@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368305"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>MFC 應用程式精靈、複合文件支援
 在 MFC 應用程式精靈的這個頁面上，表示何種層級應用程式會提供複合和作用中的文件支援。 您的應用程式必須支援文件/檢視架構，用來支援複合文件和文件範本。  

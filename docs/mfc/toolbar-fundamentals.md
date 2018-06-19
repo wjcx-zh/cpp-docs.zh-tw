@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383970"
 ---
 # <a name="toolbar-fundamentals"></a>工具列基本概念
 本文說明基本的 MFC 實作，可讓您透過應用程式精靈中選取選項，將預設工具列新增至您的應用程式。 涵蓋的主題包括：  

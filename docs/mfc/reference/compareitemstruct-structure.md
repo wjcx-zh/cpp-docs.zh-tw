@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368627"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 結構
 `COMPAREITEMSTRUCT`結構提供的識別項和應用程式提供兩個項目的已排序的主控描繪清單方塊或下拉式方塊中的資料。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163201"
 ---
 # <a name="standard-conversions-and-implicit-boxing"></a>標準轉換和隱含 Boxing
 在需要進行 Boxing 的轉換時，編譯器會選擇進行標準轉換。  

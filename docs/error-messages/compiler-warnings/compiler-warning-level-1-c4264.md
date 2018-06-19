@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276538"
 ---
 # <a name="compiler-warning-level-1-c4264"></a>編譯器警告 (層級 1) C4264
 'virtual_function': 沒有覆寫基底類別' '; 的虛擬成員函式函式已隱藏  

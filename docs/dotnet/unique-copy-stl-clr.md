@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164067"
 ---
 # <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
 將來源範圍的項目複製到目的範圍，但是彼此相鄰的重複項目除外。  

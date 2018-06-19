@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372834"
 ---
 # <a name="connection-maps"></a>連接對應
 OLE 控制項都能將介面公開給其他應用程式。 這些介面只允許從容器的存取，至該控制項。 如果 OLE 控制項想要存取外部的其他 OLE 物件的介面，必須先建立的連接點。 此連接點可讓連出外部的分派對應，例如事件對應或通知函式的存取控制。  

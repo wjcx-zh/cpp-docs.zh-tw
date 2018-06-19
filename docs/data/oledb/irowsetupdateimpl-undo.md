@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104457"
 ---
 # <a name="irowsetupdateimplundo"></a>IRowsetUpdateImpl::Undo
 復原自上次擷取或更新的資料列的任何變更。  

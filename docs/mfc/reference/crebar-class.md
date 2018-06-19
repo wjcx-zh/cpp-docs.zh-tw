@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371138"
 ---
 # <a name="crebar-class"></a>CReBar 類別
 提供 Rebar 控制項配置、持續性和狀態資訊的控制列。  

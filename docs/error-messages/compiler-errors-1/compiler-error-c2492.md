@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197360"
 ---
 # <a name="compiler-error-c2492"></a>編譯器錯誤 C2492
 '*變數*': 具有執行緒儲存期的資料可能不會有 dll 介面    

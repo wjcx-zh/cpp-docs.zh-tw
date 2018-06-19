@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110350"
 ---
 # <a name="changes-in-constructor-initialization-order"></a>建構函式初始設定順序的變更
 類別建構函式的初始化順序已從 Managed Extensions for c + + Visual c + +。  

@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357011"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 類別
 協助應用程式啟動時剖析命令列。  

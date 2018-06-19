@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170300"
 ---
 # <a name="compiler-error-c2175"></a>編譯器錯誤 C2175
 '地區設定': 無效的地區設定  

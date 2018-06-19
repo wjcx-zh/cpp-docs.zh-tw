@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373191"
 ---
 # <a name="toolbar-control-styles"></a>ToolBar 控制項樣式
 [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)具有一組決定外觀的樣式旗標和按鈕的行為。 您可以藉由呼叫設定這些旗標的組合[CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)。 本主題列出樣式旗標值及其意義。  

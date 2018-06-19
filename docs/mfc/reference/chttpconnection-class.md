@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367642"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 類別
 管理您與 HTTP 伺服器的連接。  

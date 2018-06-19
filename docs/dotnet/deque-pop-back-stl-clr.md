@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107112"
 ---
 # <a name="dequepopback-stlclr"></a>deque::pop_back (STL/CLR)
 移除最後一個項目。  

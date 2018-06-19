@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102003"
 ---
 # <a name="irowsetimplmbreset"></a>IRowsetImpl::m_bReset
 用來判斷是否資料列集上定義資料指標位置的位元旗標。  

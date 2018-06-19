@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127210"
 ---
 # <a name="how-to-unbox"></a>如何：Unbox
 顯示如何進行 Unbox 處理和修改值。  

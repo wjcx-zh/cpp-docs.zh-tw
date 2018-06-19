@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33194927"
 ---
 # <a name="compiler-error-c2384"></a>編譯器錯誤 C2384
 'member'：無法將 __declspec(thread) 套用至 Managed 或 WinRT 類別的成員  

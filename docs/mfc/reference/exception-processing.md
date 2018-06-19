@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376984"
 ---
 # <a name="exception-processing"></a>例外狀況處理
 當程式執行時，可能會發生的異常狀況時，稱為 「 例外狀況 」 的錯誤數目。 這些可能包括用完記憶體、 資源配置錯誤，以及找不到檔案。  

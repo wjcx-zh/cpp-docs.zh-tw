@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233158"
 ---
 # <a name="compiler-error-c2677"></a>編譯器錯誤 C2677
 二元 'operator': 沒有全域運算子找到其可接受類型 'type' （或沒有可接受的轉換）  

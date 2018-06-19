@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106267"
 ---
 # <a name="findif-stlclr"></a>find_if (STL/CLR)
 在範圍中找出滿足特定條件的第一個項目的位置。  

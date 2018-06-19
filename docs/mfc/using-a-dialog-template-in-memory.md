@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381234"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>使用記憶體中的對話方塊範本
 而不是使用所提供的方法[對話方塊建立資料表](../mfc/creating-a-dialog-class-with-code-wizards.md)，您可以從記憶體中的對話方塊範本，間接建立任何一種對話方塊。 如需詳細資訊，請參閱類別[CDialog](../mfc/reference/cdialog-class.md)中*MFC 參考*。  

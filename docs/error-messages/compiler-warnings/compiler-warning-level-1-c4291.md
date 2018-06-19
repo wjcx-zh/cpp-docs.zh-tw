@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282375"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>編譯器警告 (層級 1) C4291
 'declaration': 沒有相符的 delete 運算子找到。如果初始設定擲回例外狀況，將不會釋放記憶體  

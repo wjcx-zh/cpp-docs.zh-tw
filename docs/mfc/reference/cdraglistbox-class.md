@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367207"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 類別
 除了提供 Windows 清單方塊中，功能`CDragListBox`類別可讓使用者在清單方塊內移動清單方塊項目，例如檔案名稱。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107174"
 ---
 # <a name="ole-db-programming"></a>OLE DB 程式設計
 Microsoft OLE DB 是舊版技術。新的應用程式則是必要的資料存取 API 針對連結的 SQL 伺服器。 所有其他新的應用程式應該使用 ODBC。 目前的 OLE DB provider for SQL Server 是 SQLNCLI11。DLL。 SQL Server 2016 仍會出貨的提供者。 這份文件適用於開發人員會維護已經使用 OLE DB 的現有應用程式。

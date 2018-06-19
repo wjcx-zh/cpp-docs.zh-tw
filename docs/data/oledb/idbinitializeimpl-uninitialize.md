@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100895"
 ---
 # <a name="idbinitializeimpluninitialize"></a>IDBInitializeImpl::Uninitialize
 數位資料來源物件未初始化的狀態，藉由釋放內部資源，例如屬性支援。  

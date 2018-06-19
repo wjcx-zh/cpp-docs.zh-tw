@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381344"
 ---
 # <a name="toolbars"></a>工具列
 工具列一系列的文章描述 MFC 工具列，以及如何建立和使用它們。  

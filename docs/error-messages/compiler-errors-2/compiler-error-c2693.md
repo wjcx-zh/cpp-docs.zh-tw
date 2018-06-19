@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232770"
 ---
 # <a name="compiler-error-c2693"></a>編譯器錯誤 C2693
 'operator' : 對 Managed 或 WinRT 陣列參考的非法比較  

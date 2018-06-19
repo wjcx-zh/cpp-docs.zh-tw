@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319806"
 ---
 # <a name="project-build-warning-prj0049"></a>專案建置警告 PRJ0049
 參考的目標 '\<參考 >' 需要.NET Framework \<m >，此專案的目標 framework 執行將會失敗  

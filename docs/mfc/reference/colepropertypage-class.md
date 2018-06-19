@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376206"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage 類別
 用來將自訂控制項的屬性顯示在類似對話方塊的圖形介面中。  

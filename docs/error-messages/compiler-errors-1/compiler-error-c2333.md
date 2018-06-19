@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195278"
 ---
 # <a name="compiler-error-c2333"></a>編譯器錯誤 C2333
 'function': 函式宣告; 中的錯誤略過函式主體  

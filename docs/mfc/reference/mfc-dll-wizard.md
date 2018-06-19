@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372153"
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL 精靈
 當您使用 MFC DLL 精靈建立 MFC DLL 專案時，您會得到工作起始應用程式具有內建功能，，編譯時，將實作的基本功能[DLL](../../build/dlls-in-visual-cpp.md)。 MFC 入門程式包括 c + + 來源 (.cpp) 檔案、 資源 (.rc) 檔，以及專案 (.vcxproj) 檔案。 起始檔案中產生的程式碼是以 MFC 為基礎。 如需詳細資訊，請參閱您的專案在 Visual Studio 中，針對所產生的 Readme.txt 中的檔案詳細資料和[類別和 MFC DLL 精靈所產生的函式](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

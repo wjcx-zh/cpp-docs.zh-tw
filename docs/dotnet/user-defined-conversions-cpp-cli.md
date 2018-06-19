@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170644"
 ---
 # <a name="user-defined-conversions-ccli"></a>使用者定義轉換 (C++/CLI)
 項目中的型別轉換為參考或值類型或參考類型的執行個體時，本節會討論使用者定義轉換 (UDC)。  

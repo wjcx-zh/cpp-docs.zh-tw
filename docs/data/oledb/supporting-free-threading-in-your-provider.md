@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108510"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>在提供者內支援無限制執行緒
 所有 OLE DB 提供者類別是安全執行緒，並據以設定登錄項目。 它是效能的個不錯的主意支援無限制執行緒可協助您提供高層級，在多使用者情況下。 為了協助保持您的提供者具備執行緒安全，您必須確認您的程式碼會正確地封鎖。 每當您撰寫或儲存資料時，您必須封鎖與關鍵區段的存取權。  

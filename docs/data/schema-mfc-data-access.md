@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104694"
 ---
 # <a name="schema--mfc-data-access"></a>結構描述 (MFC 資料存取)
 資料庫結構描述說明資料庫中的資料表和資料庫檢視的目前結構。 一般情況下，精靈產生的程式碼會假設資料錄集所存取的資料表之結構描述將不會變更，但是資料庫類別可以處理某些結構描述變更，例如加入、重新排列或刪除未繫結的資料行。 如果某個資料表變更，您就必須以手動方式更新該資料表的資料錄集，然後重新編譯應用程式。  

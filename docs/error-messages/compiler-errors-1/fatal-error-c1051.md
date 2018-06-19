@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198244"
 ---
 # <a name="fatal-error-c1051"></a>嚴重錯誤 C1051
 程式資料庫檔案 'pdbfile'，格式已過時，將其刪除並重新編譯  

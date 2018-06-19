@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371708"
 ---
 # <a name="message-maps-mfc"></a>訊息對應 (MFC)
 參考的此區段會列出所有[訊息對應巨集](../../mfc/reference/message-map-macros-mfc.md)」 和 「 全部[CWnd](../../mfc/reference/cwnd-class.md)訊息對應項目，以及相對應的成員函式原型：  

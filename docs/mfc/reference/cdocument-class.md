@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377036"
 ---
 # <a name="cdocument-class"></a>CDocument 類別
 提供使用者定義的文件類別的基本功能。  
@@ -1067,7 +1068,7 @@ virtual void SetPathName(
  指向要做為文件路徑的字串。  
   
  `bAddToMRU`  
- 決定是否在檔案名稱加入至最近使用的 (MRU) 檔案清單。 如果**為 TRUE，**加入檔案名稱; 如果**FALSE**，會將其加入。  
+ 決定是否在檔案名稱加入至最近使用的 (MRU) 檔案清單。 如果**為 TRUE，** 加入檔案名稱; 如果**FALSE**，會將其加入。  
   
 ### <a name="remarks"></a>備註  
  值而定`bAddToMRU`加入，或未加入至應用程式所維護的 MRU 清單的路徑。 請注意，某些文件相關聯的磁碟檔案。 只有當您正在覆寫開啟和儲存檔案架構所使用的預設實作，請呼叫此函式。  

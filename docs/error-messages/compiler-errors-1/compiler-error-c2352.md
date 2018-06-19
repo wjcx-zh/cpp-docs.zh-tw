@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196162"
 ---
 # <a name="compiler-error-c2352"></a>編譯器錯誤 C2352
 'class::function'：非靜態成員函式的不合法呼叫  

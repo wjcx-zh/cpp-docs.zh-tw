@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169800"
 ---
 # <a name="compiler-error-c2139"></a>編譯器錯誤 C2139
 'type': 未定義的類別不允許做為編譯器內建類型特性 '特性' 的引數  

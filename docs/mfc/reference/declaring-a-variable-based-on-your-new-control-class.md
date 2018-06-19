@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370610"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>根據新控制項類別來宣告變數
 當您建立 MFC 控制項類別之後時，您可以宣告變數，它為基礎。 若要提供新的變數的內容，您必須開啟對話方塊編輯器，並編輯您要重複使用控制項的對話方塊。 此外，對話方塊中，必須已有與其相關聯的類別。 如需使用對話方塊編輯器中的資訊，請參閱[對話方塊編輯器](../../windows/dialog-editor.md)。  

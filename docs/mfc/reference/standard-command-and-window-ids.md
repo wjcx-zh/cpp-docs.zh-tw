@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371646"
 ---
 # <a name="standard-command-and-window-ids"></a>標準命令和視窗 ID
 MFC 程式庫在 Afxres.h 中定義了數種標準命令和視窗 ID。 這些 ID 最常用在資源編輯器以及 [屬性] 視窗中，以將訊息對應至處理函式。 所有標準命令都有**ID_** 前置詞。 例如，當您使用功能表編輯器時，您通常要繫結開啟檔案 功能表項目至標準`ID_FILE_OPEN`命令 id。  

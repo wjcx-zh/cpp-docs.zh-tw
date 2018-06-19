@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129693"
 ---
 # <a name="lock-class"></a>lock 類別
 這個類別會自動進行同步處理從多個執行緒存取物件的鎖定。  當建構它取得的鎖定和終結該版本時鎖定。  

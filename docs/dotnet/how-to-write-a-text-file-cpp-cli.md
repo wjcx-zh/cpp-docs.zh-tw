@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131237"
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>如何：寫入文字檔 (C++/CLI)
 下列程式碼範例示範如何建立文字檔案，並將文字寫入至使用<xref:System.IO.StreamWriter>類別，定義於<xref:System.IO>命名空間。 <xref:System.IO.StreamWriter>建構函式會採用要建立檔案的名稱。 如果檔案存在，則會覆寫 (除非您將為 true，則當做第二個<xref:System.IO.StringWriter>建構函式引數)。  

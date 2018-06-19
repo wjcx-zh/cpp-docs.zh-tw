@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376362"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 類別
 有一列點陣圖按鈕和選擇性分隔線的控制列。  

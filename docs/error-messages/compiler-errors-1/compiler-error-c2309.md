@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174892"
 ---
 # <a name="compiler-error-c2309"></a>編譯器錯誤 C2309
 catch 處理常式必須括號括住例外狀況宣告  

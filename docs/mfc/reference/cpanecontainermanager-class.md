@@ -121,6 +121,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377105"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager 類別
 `CPaneContainerManager`類別會管理儲存體和目前的停駐配置的顯示。  

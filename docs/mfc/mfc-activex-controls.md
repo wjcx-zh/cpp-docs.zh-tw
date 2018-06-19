@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361331"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控制項
 ActiveX 控制項是可重複使用的軟體元件為基礎的元件物件模型 (COM) 支援各種不同的 OLE 功能，並可自訂以符合多個軟體需求。 ActiveX 控制項的設計並適用於一般的 ActiveX 控制項容器中以及在網際網路上，在 全球資訊網網頁中。 您可以建立 ActiveX 控制項與 MFC，描述在這裡，或使用[Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md)。  

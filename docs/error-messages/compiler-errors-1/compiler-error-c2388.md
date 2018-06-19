@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198660"
 ---
 # <a name="compiler-error-c2388"></a>編譯器錯誤 C2388
 'symbol': 符號不可宣告與這兩個 __declspec(appdomain) 和\__declspec(process)  

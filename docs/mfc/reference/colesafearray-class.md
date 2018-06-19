@@ -75,6 +75,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376873"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 類別
 類別，用來處理任意類型和維度的陣列。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103415"
 ---
 # <a name="irowsetinfoimplgetspecification"></a>IRowsetInfoImpl::GetSpecification
 傳回介面指標上建立此資料列集的物件 （命令或工作階段）。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270947"
 ---
 # <a name="compiler-warning-c4972"></a>編譯器警告 C4972
 直接修改或將 Unbox 作業的結果視為左值，將無法驗證  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367499"
 ---
 # <a name="cevent-class"></a>CEvent 類別
 表示事件，這是可讓一個執行緒通知發生事件的另一個執行緒的同步處理物件。  

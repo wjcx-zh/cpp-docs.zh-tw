@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370545"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView 類別
 提供可將 Windows Form 控制項裝載為 MFC 檢視的一般功能。  

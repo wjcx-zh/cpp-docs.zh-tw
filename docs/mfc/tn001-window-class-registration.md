@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383850"
 ---
 # <a name="tn001-window-class-registration"></a>TN001：視窗類別註冊
 此提示描述註冊特殊的 MFC 常式[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es 所需的 Microsoft Windows。 特定`WNDCLASS`討論 MFC 和 Windows 所使用的屬性。  

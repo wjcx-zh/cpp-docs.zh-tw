@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169695"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 包括 STL/CLR 標頭`<cliext/utility>`來定義範本類別`pair`和數個支援的樣板函式。  

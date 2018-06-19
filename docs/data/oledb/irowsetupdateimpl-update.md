@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104239"
 ---
 # <a name="irowsetupdateimplupdate"></a>IRowsetUpdateImpl::Update
 會傳送自上次擷取或更新資料列所做的變更。  

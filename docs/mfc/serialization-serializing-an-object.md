@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379654"
 ---
 # <a name="serialization-serializing-an-object"></a>序列化：序列化物件
 發行項[序列化： 製作可序列化類別](../mfc/serialization-making-a-serializable-class.md)示範如何讓類別能夠進行序列化。 一旦您擁有可序列化的類別，您可以將與檔案，以透過該類別的物件序列化[CArchive](../mfc/reference/carchive-class.md)物件。 本文說明：  

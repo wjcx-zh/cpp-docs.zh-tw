@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169539"
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>實值類型和行為 (C++/CLI)
 實值型別已變更以各種方式從 Managed Extensions for c + + Visual c + +。 在本節中，我們查看 CLR 列舉型別和值的類別類型，以及查看 boxing 和 boxed 到 CLR 堆積上，執行個體存取，以及查看內部和 pin 指標。 此區域中已有更詳盡的語言變更。  

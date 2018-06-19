@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33224761"
 ---
 # <a name="compiler-error-c2391"></a>編譯器錯誤 C2391
 'identifier': 'friend' 不能在類型定義  

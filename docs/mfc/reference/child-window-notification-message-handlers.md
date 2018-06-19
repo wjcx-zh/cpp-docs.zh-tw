@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367168"
 ---
 # <a name="child-window-notification-message-handlers"></a>子視窗通知訊息處理常式
 有五個類別的子視窗通知訊息：  

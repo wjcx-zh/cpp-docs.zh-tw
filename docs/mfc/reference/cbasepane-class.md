@@ -181,6 +181,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357955"
 ---
 # <a name="cbasepane-class"></a>CBasePane 類別
 MFC 中的所有窗格的基底類別。  
@@ -679,7 +680,7 @@ virtual BOOL CreateEx(
 |-----------|-----------------|  
 |`AFX_CBRS_FLOAT`|可以浮動窗格。|  
 |`AFX_CBRS_AUTOHIDE`|[] 窗格支援自動隱藏模式|  
-|`AFX_CBRS_RESIZE`|[] 窗格可調整大小。 **重要事項：**未實作此樣式。|  
+|`AFX_CBRS_RESIZE`|[] 窗格可調整大小。 **重要事項：** 未實作此樣式。|  
 |`AFX_CBRS_CLOSE`|可以關閉窗格。|  
 |`AFX_CBRS_AUTO_ROLLUP`|它會浮動時，窗格可以彙總。|  
 |`AFX_CBRS_REGULAR_TABS`|當一個窗格停駐於另一個具有此樣式的窗格時，會建立一般的索引標籤式的視窗。 (如需詳細資訊，請參閱[CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)。)|  

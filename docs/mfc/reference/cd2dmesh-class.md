@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357422"
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh 類別
 ID2D1Mesh 包裝函式。  

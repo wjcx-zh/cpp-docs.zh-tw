@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383441"
 ---
 # <a name="slider-control-member-functions"></a>滑桿控制項成員函式
 應用程式可以呼叫滑桿控制項成員函式，來擷取滑桿控制項的相關資訊 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md))，並變更其特性。  

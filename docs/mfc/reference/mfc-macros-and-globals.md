@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375682"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 巨集和全域
 Mfc 程式庫可以分成兩個主要區段: （1） 的 MFC 類別和 （2） 巨集和全域變數。 如果函式或變數不是類別的成員，它是全域函式或變數。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105916"
 ---
 # <a name="foreach-stlclr"></a>for_each (STL/CLR)
 將指定的函式物件以正向順序套用至範圍內的每個項目，並傳回函式物件。  

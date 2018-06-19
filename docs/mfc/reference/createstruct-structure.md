@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370867"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 結構
 `CREATESTRUCT`結構會定義初始化參數傳遞至應用程式的視窗程序。  

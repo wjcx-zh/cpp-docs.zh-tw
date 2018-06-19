@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162234"
 ---
 # <a name="rotatecopy-stlclr"></a>rotate_copy (STL/CLR)
 交換來源範圍內兩個相鄰範圍的項目，並將結果複製到目的範圍。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367486"
 ---
 # <a name="cnotsupportedexception-class"></a>CNotSupportedException 類別
 表示因要求不支援的功能而產生的例外狀況。  

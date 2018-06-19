@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112065"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>使用 OLE DB 提供者樣板
 若要深入了解如何使用 OLE DB 提供者範本，請參閱下列主題：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109296"
 ---
 # <a name="hashmapmappedtype-stlclr"></a>hash_map::mapped_type (STL/CLR)
 與每個索引鍵關聯的對應值類型。  

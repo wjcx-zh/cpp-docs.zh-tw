@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385267"
 ---
 # <a name="window-objects"></a>視窗物件
 MFC 提供類別[CWnd](../mfc/reference/cwnd-class.md)封裝`HWND`視窗的控制代碼。 `CWnd` 物件是 C++ 視窗物件，與表示 Windows 視窗但包含它的 `HWND` 有所區別。 使用 `CWnd` 衍生您自己的子視窗類別，或使用衍生自 `CWnd` 的其中一個 MFC 類別。 `CWnd` 類別是所有視窗的基底類別，包括框架視窗、對話方塊、子視窗、控制項及控制列，例如工具列。 了解[c + + 視窗物件和 HWND 之間的關聯性](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)是使用 MFC 的有效程式設計非常重要。  

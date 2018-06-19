@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275145"
 ---
 # <a name="compiler-error-c3923"></a>編譯器錯誤 C3923
 'member'：WinRT 或 Managed 類別的成員函式中不允許有區域類別、結構或等位定義  

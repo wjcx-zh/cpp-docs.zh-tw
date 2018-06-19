@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131302"
 ---
 # <a name="managed-types-and-the-main-function-ccli"></a>Managed 類型和 main 函式 (C++/CLI)
 在撰寫應用程式使用 **/clr**的引數**main （)** 函式不能是 managed 型別。  

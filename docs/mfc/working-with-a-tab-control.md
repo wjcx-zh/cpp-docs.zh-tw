@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383158"
 ---
 # <a name="working-with-a-tab-control"></a>使用索引標籤控制項
 最簡單的方式使用索引標籤控制項 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 是使用對話方塊編輯器加入至對話方塊範本資源。 您也可以單獨使用索引標籤控制項。 MFC 呼叫**InitCommonControls**您。 主要工作如下：  

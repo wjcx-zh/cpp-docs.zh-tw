@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372176"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager 類別
 維護工具提示的執行階段資訊。 `CTooltipManager` 類別會在每個應用程式具現化一次。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385254"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows Sockets：作業順序
 這篇文章並存，說明一系列的伺服器通訊端和用戶端通訊端作業。 由於通訊端使用`CArchive`物件，它們一定是[串流處理通訊端](../mfc/windows-sockets-stream-sockets.md)。  

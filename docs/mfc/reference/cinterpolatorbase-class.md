@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367756"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 類別
 實作回呼，當動畫 API 必須計算動畫變數的新值時由此 API 呼叫。  

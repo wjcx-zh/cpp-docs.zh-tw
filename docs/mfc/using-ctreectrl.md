@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382215"
 ---
 # <a name="using-ctreectrl"></a>使用 CTreeCtrl
 樹狀結構控制項中的類別所代表[CTreeCtrl](../mfc/reference/ctreectrl-class.md)，是一個視窗，顯示在磁碟上的項目，例如標題在文件中的索引，或檔案和目錄中的項目階層式清單。 每個項目都包含標籤和選擇性點陣圖影像，因此，每個項目都可以擁有與自己相關的子項目清單。 使用者可以按一下項目以展開和摺疊子項目的關聯清單。 [檔案總管] 位於左方窗格中的目錄樹狀即是一種樹狀目錄控制項的範例。  

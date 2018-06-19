@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369748"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager 類別
 可讓不同的命令與特定使用者[CView](../../mfc/reference/cview-class.md)當使用者在該檢視內部按兩下時物件。  

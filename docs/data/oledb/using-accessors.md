@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104993"
 ---
 # <a name="using-accessors"></a>使用存取子
 下列主題說明如何判斷哪一種存取子是最適合您資料的應用程式以及如何使用不同類型的存取子可用：  

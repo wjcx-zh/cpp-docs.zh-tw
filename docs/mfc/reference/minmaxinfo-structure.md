@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369514"
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO 結構
 `MINMAXINFO`結構包含以最大化視窗的大小和位置和大小的最小和最大追蹤相關資訊。  

@@ -349,6 +349,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378939"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 開發 OLE 控制項的強大基底類別。  
@@ -3338,7 +3339,7 @@ CFont* SelectFontObject(
  若要參考[CFontHolder](../../mfc/reference/cfontholder-class.md)物件，代表要選取的字型。  
   
 ### <a name="return-value"></a>傳回值  
- 先前選取的字型指標。 呼叫端已經完成使用的所有繪圖作業時*fontHolder，*它應該藉由傳遞為參數，以重新選取先前選取的字型[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)。  
+ 先前選取的字型指標。 呼叫端已經完成使用的所有繪圖作業時*fontHolder，* 它應該藉由傳遞為參數，以重新選取先前選取的字型[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)。  
   
 ##  <a name="selectstockfont"></a>  COleControl::SelectStockFont  
  選取放入裝置內容的內建字型屬性。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198023"
 ---
 # <a name="compiler-error-c2477"></a>編譯器錯誤 C2477
 'member': 無法透過衍生類別初始化靜態資料成員  

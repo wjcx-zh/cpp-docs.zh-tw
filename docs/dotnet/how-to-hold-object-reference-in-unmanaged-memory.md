@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128728"
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>如何：在 Unmanaged 記憶體中存放物件參考
 您可以使用 gcroot.h，包裝<xref:System.Runtime.InteropServices.GCHandle>、 unmanaged 記憶體中保留 CLR 物件參考。 或者，您可以使用`GCHandle`直接。  

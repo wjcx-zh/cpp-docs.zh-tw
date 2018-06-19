@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386913"
 ---
 # <a name="conditional-expression-operator"></a>條件運算式運算子
 C 有一個三元運算子：條件運算式運算子 (**? :**)。  

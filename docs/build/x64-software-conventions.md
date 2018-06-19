@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380884"
 ---
 # <a name="x64-software-conventions"></a>x64 軟體慣例
 本節將說明呼叫慣例的方法，Visual c + + [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]，x86 的 64 位元延伸架構。  

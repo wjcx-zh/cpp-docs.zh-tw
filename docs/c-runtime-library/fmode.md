@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390118"
 ---
 # <a name="fmode"></a>_fmode
 `_fmode` 變數會設定文字或二進位轉譯的預設檔案轉譯模式。 這個全域變數已為 [_get_fmode](../c-runtime-library/reference/get-fmode.md) 和 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 的更安全版本所取代，它們應該用來取代全域變數。 它會在 Stdlib.h 中宣告，如下所示。  

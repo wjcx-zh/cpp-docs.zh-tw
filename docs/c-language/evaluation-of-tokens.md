@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383049"
 ---
 # <a name="evaluation-of-tokens"></a>語彙基元評估
 當編譯器解譯語彙基元時，會盡可能將更多字元納入單一語彙基元中，再進行至下一個語彙基元。 因此，如果語彙基元未以空白字元正確分隔，編譯器就可能因為上述行為而無法依照您預期的方式解譯語彙基元。 以下列運算式為例：  

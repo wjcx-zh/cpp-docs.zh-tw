@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388990"
 ---
 # <a name="global-variables-and-standard-types"></a>全域變數和標準類型
 Microsoft 執行階段程式庫包含程式庫常式所使用之[全域變數](../c-runtime-library/global-variables.md)、[控制旗標](../c-runtime-library/control-flags.md)以及[標準類型](../c-runtime-library/standard-types.md)的定義。 在程式中宣告這些變數、旗標和類型，或者包含適當的標頭檔，便可加以存取。  

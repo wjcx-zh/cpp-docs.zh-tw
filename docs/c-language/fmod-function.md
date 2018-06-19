@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384407"
 ---
 # <a name="fmod-function"></a>fmod 函式
 **ANSI 4.5.6.4** 當 `fmod` 函式的第二個引數為零時，是否發生定義域錯誤或者傳回零  

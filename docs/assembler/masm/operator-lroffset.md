@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056586"
 ---
 # <a name="operator-lroffset"></a>運算子 LROFFSET
 傳回的位移*運算式*。 與相同**位移**，不過會產生載入器解決的位移，可讓 Windows 將程式碼區段的重新放置。  

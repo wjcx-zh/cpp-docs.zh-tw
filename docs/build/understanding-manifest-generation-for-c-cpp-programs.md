@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381621"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>了解 C/C++ 程式的資訊清單產生過程
 A[資訊清單](http://msdn.microsoft.com/library/aa375365)可以是外部的 XML 檔案或資源的 XML 文件內嵌於應用程式或組件。 資訊清單的[隔離應用程式](http://msdn.microsoft.com/library/aa375190)用來管理的名稱和共用的並存組件的應用程式應繫結在執行階段版本。 並存組件資訊清單指定名稱、 版本、 資源和其他組件及其相依性。  

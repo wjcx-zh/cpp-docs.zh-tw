@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380611"
 ---
 # <a name="types-and-storage"></a>類型和儲存區
 本章節描述的列舉型別和儲存體的資料型別[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]架構。  

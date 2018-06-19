@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379714"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (省略預設程式庫名稱)
 省略預設 C 執行階段程式庫名稱，從.obj 檔案。 根據預設，編譯器會將程式庫名稱置入 .obj 檔案中，以將連結器導向至正確的程式庫。  

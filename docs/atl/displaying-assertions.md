@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354275"
 ---
 # <a name="displaying-assertions"></a>顯示判斷提示
 如果用戶端連線到您的服務會停止回應，服務可能已判斷提示與顯示訊息方塊，您不能以查看。 您可以使用 Visual c + + 偵錯工具偵錯您的程式碼來確認此 (請參閱[使用工作管理員](../atl/using-task-manager.md)稍早在這一節)。  

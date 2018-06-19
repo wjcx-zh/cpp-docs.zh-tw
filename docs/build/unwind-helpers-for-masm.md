@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380245"
 ---
 # <a name="unwind-helpers-for-masm"></a>MASM 的回溯 Helper
 若要撰寫適當的組件常式，有一組可用以平行方式，與實際組件指示來建立適當的.pdata 和.xdata 的虛擬作業。 有一組提供的巨集也簡化最常見的用法的虛擬作業使用。  

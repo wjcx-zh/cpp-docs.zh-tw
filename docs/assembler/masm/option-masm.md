@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057717"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 啟用和停用 「 組合器 」 的功能。  

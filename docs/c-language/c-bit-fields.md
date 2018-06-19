@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385672"
 ---
 # <a name="c-bit-fields"></a>C 位元欄位
 除了結構或等位成員的宣告子之外，結構宣告子也可以指定為位元數目 (稱為「位元欄位」)。 其長度是依冒號從欄位名稱的宣告子所設定。 位元欄位會以整數類型解譯。  

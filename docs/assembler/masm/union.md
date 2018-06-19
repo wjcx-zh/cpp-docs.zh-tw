@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057665"
 ---
 # <a name="union"></a>UNION
 宣告一或多個資料類型的聯集。 *Fielddeclarations*必須是有效的資料定義。 省略[結束](../../assembler/masm/ends-masm.md)*名稱*索引標籤上的巢狀**UNION**定義。  

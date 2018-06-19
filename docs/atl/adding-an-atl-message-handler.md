@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354152"
 ---
 # <a name="adding-an-atl-message-handler"></a>加入 ATL 訊息處理常式
 若要加入至控制項的訊息處理常式 （成員函式會處理 Windows 訊息），第一次在 類別檢視選取的控制項。 然後開啟**屬性**視窗中，選取**訊息**圖示，並按一下下拉箭號控制相反必要的訊息方塊中。 這會將訊息處理常式的宣告中控制項的標頭檔和控制項的.cpp 檔案中的處理常式的基本架構實作。 它也會新增訊息對應，並新增處理常式項目。  

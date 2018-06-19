@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354063"
 ---
 # <a name="dual-interfaces-and-events"></a>雙重介面和事件
 雖然也可以設計成雙重事件介面，但是有許多良好的設計的理由不這樣做。 基本的原因是事件來源只會引發事件，透過 vtable 或透過`Invoke`，不能同時。 如果事件來源就會引發為直接 vtable 方法呼叫，事件`IDispatch`絕不會使用方法，並明確的介面應該已經純 vtable 介面。 如果事件來源就會引發事件與呼叫`Invoke`、 絕不會使用 vtable 方法，而且很清楚介面已被分配介面。 如果您定義事件介面為雙重介面時，您將會要求用戶端實作絕不會使用介面的一部分。  

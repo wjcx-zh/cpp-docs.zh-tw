@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383185"
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>引數數目可變的呼叫
 部分參數清單的末端可以用逗號後面接著三個句號 (**, ...**) 的省略符號標記法，來表示可能有更多傳遞至函式的引數，不過未提供這些引數的相關資訊。 類型檢查不會在這類引數上執行。 至少有一個參數前面必須加上省略符號標記法，而且省略符號標記法必須是參數清單中的最後一個語彙基元。 未使用省略符號標記法時，如果函式收到的參數不是參數清單中所宣告的參數，表示函式的行為尚未定義。  

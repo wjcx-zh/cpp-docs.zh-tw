@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354629"
 ---
 # <a name="class-information-classes"></a>類別資訊
 下列類別提供用來擷取類別資訊的支援：  

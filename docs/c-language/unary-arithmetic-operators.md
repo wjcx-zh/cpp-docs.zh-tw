@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390364"
 ---
 # <a name="unary-arithmetic-operators"></a>一元算術運算子
 下列清單中討論 C 的一元加法、算術負數、補數和邏輯負運算子：  

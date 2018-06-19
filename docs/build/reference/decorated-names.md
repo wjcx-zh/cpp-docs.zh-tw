@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379376"
 ---
 # <a name="decorated-names"></a>裝飾名稱
 C 和 C++ 程式中的函式、資料和物件在內部以其裝飾名稱表示。 A*裝飾名稱*為編譯器所編譯的物件、 資料或函式定義期間建立編碼的字串。 它會記錄呼叫慣例、類型、函式參數和其他資訊，並連同名稱一起記錄。 此名稱裝飾，也稱為*名稱修飾 （name-mangling)*、 協助連結器尋找正確的函式和物件時可執行檔。  

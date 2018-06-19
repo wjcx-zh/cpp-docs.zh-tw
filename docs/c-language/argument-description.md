@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385080"
 ---
 # <a name="argument-description"></a>引數描述
 **main** 與 **wmain** 函式中的 `argc` 參數是整數，負責指定要從命令列傳遞到程式的引數數目。 由於程式名稱會視為引數，因此 `argc` 的值至少會是一。  

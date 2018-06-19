@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379506"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>改善時間關鍵程式碼的秘訣
 撰寫快速的程式碼需要瞭解應用程式的所有層面，以及它如何與系統互動。 本主題建議一些較明顯程式設計技巧的替代選擇，以協助您確定程式碼中時間關鍵的部分效能令人滿意。  

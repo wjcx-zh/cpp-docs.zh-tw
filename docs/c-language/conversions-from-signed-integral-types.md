@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391622"
 ---
 # <a name="conversions-from-signed-integral-types"></a>從帶正負號整數類型的轉換
 將帶正負號的整數轉換為大小相等或大小較大的不帶正負號整數時，若帶正負號整數值不為負值，則其值不變。 轉換是透過帶正負號整數的帶正負號擴充方式所進行。 若將帶正負號整數轉換為較短的帶正負號整數，則會截斷高序位的位元。 其結果會解譯為不帶正負號的值，如此範例中所示。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381703"
 ---
 # <a name="c-tokens"></a>C 語彙基元
 在 C 原始程式中，編譯器會辨識的基本項目為「語彙基元」。 語彙基元為編譯器無法解析為元件項目的原始程式文字。  

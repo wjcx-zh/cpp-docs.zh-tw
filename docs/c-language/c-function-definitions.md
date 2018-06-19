@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389939"
 ---
 # <a name="c-function-definitions"></a>C 函式定義
 函式定義會指定函式的名稱、預期收到的參數類型及數目，以及其傳回型別。 函式定義也包括函式主體與其區域變數的宣告，以及決定該函式之行為的陳述式。  

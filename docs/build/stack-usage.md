@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379854"
 ---
 # <a name="stack-usage"></a>堆疊使用方式
 目前的 RSP 位址以外的所有記憶體會被都視為 volatile： 使用者偵錯工作階段或中斷處理常式期間作業系統或偵錯工具中，可能會覆寫這個記憶體。 因此，必須一律設定 RSP，再嘗試讀取或寫入至堆疊框架的值。  

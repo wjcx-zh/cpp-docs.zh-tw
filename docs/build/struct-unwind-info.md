@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383237"
 ---
 # <a name="struct-unwindinfo"></a>struct UNWIND_INFO
 回溯資料資訊結構用來記錄的影響函式的堆疊指標和靜態暫存器儲存在堆疊上的位置：  

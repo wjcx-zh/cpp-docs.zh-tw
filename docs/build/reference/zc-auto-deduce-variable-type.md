@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379571"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (推算變數類型)
 
@@ -45,7 +46,7 @@ C++ 標準為 `auto` 關鍵字定義了原始和修訂的意義。 之前[!INCLU
 
 1. 選取**組態屬性** > **C/c + +** > **命令列**屬性頁。
 
-1. 新增 **/zc: auto**或 **/Zc:auto-** 至**其他選項：**窗格。
+1. 新增 **/zc: auto**或 **/Zc:auto-** 至**其他選項：** 窗格。
 
 ## <a name="see-also"></a>另請參閱
 

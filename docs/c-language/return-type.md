@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390183"
 ---
 # <a name="return-type"></a>傳回型別
 函式的傳回型別會建立函式傳回值的大小和類型，並且對應於下列語法中的類型規範：  

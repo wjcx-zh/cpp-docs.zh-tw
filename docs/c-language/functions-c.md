@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385412"
 ---
 # <a name="functions-c"></a>函式 (C)
 函式是 C 中的基本模組化單位。函式通常設計用來執行特定工作，且其名稱通常會反映該工作。 函式包含宣告和陳述式。 本節將描述如何宣告、定義及呼叫 C 函式。 其他討論的主題包括：  

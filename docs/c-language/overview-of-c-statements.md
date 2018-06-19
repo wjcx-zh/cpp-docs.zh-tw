@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387173"
 ---
 # <a name="overview-of-c-statements"></a>C 陳述式概觀
 C 陳述式包含語彙基元、運算式和其他陳述式。 形成另一個陳述式元件的陳述式稱為封入陳述式的「主體」。 本節中討論由下列語法指定的每種陳述式類型。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380699"
 ---
 # <a name="unwind-data-definitions-in-c"></a>C 中的回溯資料定義
 回溯資料的 C 描述如下：  

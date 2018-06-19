@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387895"
 ---
 # <a name="ansi-c-compliance"></a>ANSI C 合規性
 執行階段系統中所有 Microsoft 特定識別碼 (例如函式、巨集、常數、變數與類型定義) 的命名慣例都符合 ANSI 標準。 在此文件中，依照 ANSI/ISO C 標準的所有執行階段函式都標示為與 ANSI 相容。 符合 ANSI 標準的應用程式應該只使用這些與 ANSI 相容的函式。  

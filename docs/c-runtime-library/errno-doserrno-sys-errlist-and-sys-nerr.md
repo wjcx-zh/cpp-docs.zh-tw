@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392415"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 全域巨集，具有程式執行期間所設定的錯誤碼，以及用於顯示的錯誤碼的字串對應項目。  

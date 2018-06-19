@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382477"
 ---
 # <a name="remainders"></a>餘數
 **ANSI 3.3.5**：整數除法上餘數的正負號  

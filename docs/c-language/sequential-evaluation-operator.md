@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388483"
 ---
 # <a name="sequential-evaluation-operator"></a>循序評估運算子
 循序評估運算子 (也稱為「逗號運算子」) 是由左至右依序評估其兩個運算元。  

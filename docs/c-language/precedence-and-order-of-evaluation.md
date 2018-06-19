@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392181"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>優先順序和評估順序
 C 運算子的優先順序和順序關聯性會影響運算式中運算元的群組和求值。 有其他優先順序更高或更低的運算子存在時，運算子的優先順序才有意義。 具有較高優先順序運算子的運算式會先進行求值。 優先順序也可以用「繫結」(Binding) 這個詞描述。 具有較高優先順序的運算子可視為具有更緊密的繫結。  

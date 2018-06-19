@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388597"
 ---
 # <a name="parsing-c-command-line-arguments"></a>剖析 C 命令列引數
 **Microsoft 特定的**  

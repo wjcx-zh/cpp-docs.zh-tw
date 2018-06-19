@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380650"
 ---
 # <a name="blank-lines"></a>空白行
 **ANSI 4.9.2** 是否會在寫出至文字資料流時，在讀入的新行字元前方寫入空白字元  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384476"
 ---
 # <a name="largest-array-size"></a>陣列大小上限
 **ANSI 3.3.3.4、4.1.1**：保留陣列大小上限所需的整數型別，即 **size_t** 的大小  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380797"
 ---
 # <a name="behavior-of-identifiers"></a>識別碼的行為
 -   [沒有外部連結的有效字元數](../c-language/significant-characters-without-external-linkage.md)  

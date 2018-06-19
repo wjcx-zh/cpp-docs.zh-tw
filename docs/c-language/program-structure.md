@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385952"
 ---
 # <a name="program-structure"></a>程式結構
 本節提供 C 程式和程式執行的概觀。 另外也會介紹對於了解 C 程式和元件來說很重要的詞彙和功能。 討論的主題包括：  

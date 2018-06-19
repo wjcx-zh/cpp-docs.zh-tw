@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383861"
 ---
 # <a name="range-of-char-values"></a>char 值的範圍
 **ANSI 3.2.1.1**："plain" **char** 的值範圍是否與 **signed char** 或 `unsigned char` 相同  

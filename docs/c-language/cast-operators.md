@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381768"
 ---
 # <a name="cast-operators"></a>轉型運算子
 類型轉換提供了一個明確的轉換方法，可在特定情況下轉換物件的類型。  

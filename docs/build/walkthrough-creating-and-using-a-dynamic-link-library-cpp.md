@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392584"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說： 建立和使用您自己動態連結程式庫 （c + +）
 

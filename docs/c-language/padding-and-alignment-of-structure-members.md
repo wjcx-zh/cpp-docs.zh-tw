@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385373"
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>結構成員的填補和對齊
 **ANSI 3.5.2.1**：結構成員的填補和對齊，以及位元欄位是否可以跨儲存單位邊界  

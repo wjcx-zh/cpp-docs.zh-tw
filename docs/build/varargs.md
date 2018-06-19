@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380504"
 ---
 # <a name="varargs"></a>Varargs
 如果將參數傳遞透過 varargs （例如，省略引數），基本上是正常的參數傳遞適用於包括溢出的第五個和後續引數。 它負責再次被呼叫端的傾印的引數，其位址。 只有浮點數值整數和浮點暫存器將會包含浮點值萬一被呼叫端必須是整數暫存器中的數值。  

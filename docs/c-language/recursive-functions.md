@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386926"
 ---
 # <a name="recursive-functions"></a>遞迴函式
 C 程式中的所有函式可以透過遞迴方式呼叫，即函式可以呼叫本身。 遞迴呼叫的數目受限於堆疊的大小。 如需設定堆疊大小的連結器選項相關資訊，請參閱 [/STACK (堆疊配置)](../build/reference/stack-stack-allocations.md) (/STACK) 連結器選項。 每次呼叫函式就會為參數及 **auto** 和 **register** 變數配置新的儲存空間，以避免覆寫先前尚未完成呼叫的值。 只有在建立參數的函數執行個體中才能直接存取這些參數。 之前的參數無法直接存取，以確保函式的執行個體。  

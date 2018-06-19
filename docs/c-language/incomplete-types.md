@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384368"
 ---
 # <a name="incomplete-types"></a>不完整的類型
 不完整類型是一種描述識別項的類型，但缺少判斷識別項大小所需的資訊。 「不完整類型」可以是：  

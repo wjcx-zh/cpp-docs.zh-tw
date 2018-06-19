@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353959"
 ---
 # <a name="aggregation"></a>彙總
 但有些的時候，當物件的實作項想要利用預先建置的另一個物件所提供的服務。 此外，還可能想要顯示的第一個自然一部分此第二個物件。 COM 完成這兩個目標透過內含項目和彙總。  

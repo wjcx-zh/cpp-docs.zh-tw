@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049902"
 ---
 # <a name="comment-masm"></a>COMMENT (MASM)
 會將所有視為*文字*之間，或為註解分隔符號的同一行上。  

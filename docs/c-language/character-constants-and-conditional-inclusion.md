@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381804"
 ---
 # <a name="character-constants-and-conditional-inclusion"></a>字元常數和條件式包含
 **ANSI 3.8.1**：單一字元的字元常數值在控制條件式包含的常數運算式中，是否符合執行字元集中的相同字元常數的值。 這類字元常數是否可以有負數值  

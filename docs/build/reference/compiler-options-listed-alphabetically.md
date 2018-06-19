@@ -18,6 +18,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379623"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 

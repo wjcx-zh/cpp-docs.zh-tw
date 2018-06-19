@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056457"
 ---
 # <a name=""></a>@@:
 定義之間才可辨識的程式碼標籤*label1*和*label2*，其中*label1*為程式碼的開頭或先前`@@:`標籤和*label2*為程式碼結尾或下一個`@@:`標籤。 請參閱[ @B ](../../assembler/masm/at-b.md)和[ @F ](../../assembler/masm/at-f.md)。  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381222"
 ---
 # <a name="atexit-function-c"></a>atexit 函式 (C)
 **ANSI 4.10.4.3** 引數的值不是零、EXIT_SUCCESS 或 EXIT_FAILURE 時，`atexit` 函式所傳回的狀態  

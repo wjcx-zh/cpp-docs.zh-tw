@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386387"
 ---
 # <a name="cilog10"></a>_CIlog10
 執行堆疊頂端值的 `log10` 運算。  
@@ -50,7 +51,7 @@ void __cdecl _CIlog10();
  產生的值會推入至堆疊的頂端。  
   
 ## <a name="requirements"></a>需求  
- **平台：**x86  
+ **平台：** x86  
   
 ## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

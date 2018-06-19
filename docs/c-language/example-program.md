@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387628"
 ---
 # <a name="example-program"></a>範例程式
 下列 C 原始程式包含兩個原始程式檔。 它提供 C 程式中各種宣告和定義的概觀。 本書的其餘章節說明如何撰寫這些宣告、定義和初始化，以及如何使用 **static** 和 `extern` 之類的 C 關鍵字。 `printf` 函式會在 C 標頭檔 STDIO.H 中宣告。  

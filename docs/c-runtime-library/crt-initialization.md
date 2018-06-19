@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389698"
 ---
 # <a name="crt-initialization"></a>CRT 初始化
 本主題描述 CRT 如何在機器碼中初始化全域狀態。  

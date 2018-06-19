@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381817"
 ---
 # <a name="c-abstract-declarators"></a>C 抽象宣告子
 抽象宣告子是一個沒有識別項的宣告子，由一個或多個指標、陣列或函式修飾符組成。 指標修飾詞 (**\***) 永遠會位於宣告子的識別項之前，陣列 (**[ ]**) 和函式 ( **( )** ) 修飾詞會位於識別項的後方。 知道這一點後，您就可以判斷識別項會出現在抽象宣告子的哪個位置，並據以解譯宣告子。 如需複雜宣告子的詳細資訊和範例，請參閱[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)。 通常可使用 `typedef` 來簡化宣告子。 請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。  

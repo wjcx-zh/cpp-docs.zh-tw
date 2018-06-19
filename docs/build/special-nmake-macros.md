@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380010"
 ---
 # <a name="special-nmake-macros"></a>特殊的 NMAKE 巨集
 NMAKE 提供數個特殊巨集來表示不同的檔名和命令。 其中一個使用這些巨集是預先定義的推斷規則中。 所有巨集，例如 NMAKE 所提供的巨集會區分大小寫。  

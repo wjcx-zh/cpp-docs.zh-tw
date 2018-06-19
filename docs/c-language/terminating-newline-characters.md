@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385106"
 ---
 # <a name="terminating-newline-characters"></a>終止新行字元
 **ANSI 4.9.2** 文字資料流的最後一行是否需要終止新行字元  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384381"
 ---
 # <a name="postfix-operators"></a>後置運算子
 後置運算子在運算式評估時具有最高優先順序 (具有更緊密的繫結)。  

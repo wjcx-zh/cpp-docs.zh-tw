@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354096"
 ---
 # <a name="data-transfer-classes"></a>資料傳輸類別
 下列類別會支援各種類型的資料傳輸：  

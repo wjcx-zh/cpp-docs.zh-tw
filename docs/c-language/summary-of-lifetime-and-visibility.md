@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389776"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>存留期和可視性的摘要
 下表是多數識別項的存留期和可視性的特性摘要。 前三欄註明定義存留期和可視性的屬性。 若識別項帶有前三欄指定的屬性，其存留期和可視性就如第四和第五欄所示。 不過，此表只包含部分可能的情況。 如需詳細資訊，請參閱[儲存類別](../c-language/c-storage-classes.md)。  

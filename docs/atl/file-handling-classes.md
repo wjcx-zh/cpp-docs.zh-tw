@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353946"
 ---
 # <a name="file-handling-classes"></a>檔案處理類別
 這些類別會提供方法來處理檔案、 暫存檔案，以及記憶體對應檔。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380271"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (增強最佳化的偵錯)
 在非偵錯組建中產生適用於最佳化程式碼的增強型偵錯資訊。  

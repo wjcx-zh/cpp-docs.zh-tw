@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380444"
 ---
 # <a name="wildcards-and-nmake"></a>萬用字元和 NMAKE
 NMAKE 會展開檔案名稱使用萬用字元 (* 和？) 相依性的行。 在命令中指定萬用字元傳遞至命令。NMAKE 不會展開它。  

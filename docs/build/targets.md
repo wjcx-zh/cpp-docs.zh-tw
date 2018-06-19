@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380258"
 ---
 # <a name="targets"></a>目標
 在相依性的行中，指定一個或多個目標，使用任何有效的檔名、 目錄名稱，或[虛擬目標](../build/pseudotargets.md)。 使用一或多個空格或定位點分隔多個目標。 目標不區分大小寫。 允許使用路徑與檔名。 目標不能超過 256 個字元。 冒號前面的目標是單一字元，如果使用空格分隔。否則，NMAKE 會解譯為磁碟機代碼字母冒號組合。  

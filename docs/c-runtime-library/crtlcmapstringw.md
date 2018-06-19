@@ -32,6 +32,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451949"
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 將一個字元字串對應至另一個字元字串，並執行指定的地區設定相關轉換。 此函式也可用來產生輸入字串的排序鍵。  

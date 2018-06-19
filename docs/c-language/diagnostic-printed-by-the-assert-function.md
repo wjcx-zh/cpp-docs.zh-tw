@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382873"
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>assert 函式所列印的診斷
 **ANSI 4.2** 由 **assert** 函式所列印的診斷，以及該函式的終止行為  

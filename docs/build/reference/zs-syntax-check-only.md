@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380041"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs (僅檢查語法)
 告訴編譯器檢查命令列上的來源檔案的語法。  

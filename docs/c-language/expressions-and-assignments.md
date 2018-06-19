@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382711"
 ---
 # <a name="expressions-and-assignments"></a>運算式和指派
 本節說明如何構成運算式以及在 C 語言中指派值。 常數、識別項、字串和函式呼叫全都是在運算式中管理的運算元。 C 語言包含所有常用的語言運算子。 本節將涵蓋這些運算子，以及 C 或 Microsoft C 獨有的運算子。討論的主題包括：  

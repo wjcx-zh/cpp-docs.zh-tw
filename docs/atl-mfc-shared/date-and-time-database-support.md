@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353884"
 ---
 # <a name="date-and-time-database-support"></a>日期和時間： 資料庫支援
 從 4.0 版，MFC 資料庫程式設計使用[COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)和[COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md)類別來代表日期和時間資料。 這些類別，也用在自動化中，都衍生自類別[COleVariant](../mfc/reference/colevariant-class.md)。 它們提供更好的支援，以管理日期和時間資料一樣， [CTime](../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)。  

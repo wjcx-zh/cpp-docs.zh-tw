@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384669"
 ---
 # <a name="function-body"></a>函式主體
 「函式主體」是複合陳述式，其中包含指定函式功能的陳述式。  

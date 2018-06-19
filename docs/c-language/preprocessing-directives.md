@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385607"
 ---
 # <a name="preprocessing-directives"></a>前置處理指示詞
 -   [字元常數和條件式包含](../c-language/character-constants-and-conditional-inclusion.md)  

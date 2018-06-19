@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383250"
 ---
 # <a name="bitwise-shift-operators"></a>位元移位運算子
 移位運算子會按照第二個運算元所指定的位置數目將其第一個運算元左移 (`<<`) 或右移 (`>>`)。  

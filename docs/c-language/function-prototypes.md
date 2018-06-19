@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390557"
 ---
 # <a name="function-prototypes"></a>函式原型
 函式宣告在函式定義之前，並且會指定函式的名稱、傳回型別、儲存類別和其他屬性。 函式宣告也必須建立函式引數的類型和識別項，才能成為原型。  

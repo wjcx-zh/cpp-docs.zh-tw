@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387443"
 ---
 # <a name="cisin"></a>_CIsin
 
@@ -53,7 +54,7 @@ void __cdecl _CIsin();
 
 ## <a name="requirements"></a>需求
 
-**平台：**x86
+**平台：** x86
 
 ## <a name="see-also"></a>另請參閱
 

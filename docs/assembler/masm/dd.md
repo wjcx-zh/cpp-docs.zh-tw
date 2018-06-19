@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050671"
 ---
 # <a name="dd"></a>DD
 配置及選擇性的儲存體初始化雙字組 （4 個位元組），每個`initializer`。 `DD` 是的同義字[DWORD](../../assembler/masm/dword.md)。  

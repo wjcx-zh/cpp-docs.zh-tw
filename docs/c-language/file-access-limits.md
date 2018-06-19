@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381505"
 ---
 # <a name="file-access-limits"></a>檔案存取限制
 **ANSI 4.9.3**：相同檔案是否可以多次開啟  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388902"
 ---
 # <a name="one-dimensional-arrays"></a>一維陣列
 後置運算式 (postfix expression) 後面跟著以方括號 (**[ ]**) 括住的運算式，是以註標方式來表示的陣列物件元素。 當註標運算式如下表示時，代表 *expression* 於 *postfix-expression* 之外的所在位置位址值：  

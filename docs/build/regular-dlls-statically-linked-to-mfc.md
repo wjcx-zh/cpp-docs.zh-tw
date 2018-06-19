@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383744"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>一般 MFC 靜態連結至 MFC 的 Dll
 MFC DLL 靜態連結至 MFC 一般是在內部使用 MFC 的 DLL，而且在 DLL 中匯出的函式可以由呼叫 MFC 或非 MFC 可執行檔。 如同名稱所說明，這類型的 DLL 是建置使用 MFC 靜態連結程式庫版本。 函式通常是從一般使用標準 C 介面的 MFC DLL 匯出。 如需如何撰寫、 建置及使用 MFC 的標準 DLL 的範例，請參閱範例[DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)。  

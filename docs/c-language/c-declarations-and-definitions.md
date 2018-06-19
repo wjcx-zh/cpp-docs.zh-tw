@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381561"
 ---
 # <a name="c-declarations-and-definitions"></a>C 宣告和定義
 「宣告」會在特定變數、函式或類型及其屬性之間建立關聯。 [宣告概觀](../c-language/overview-of-declarations.md)中提供了 `declaration` 非終端項的 ANSI 語法。 宣告也會指定識別項可以存取的位置和時間 (識別項的「連結」)。 如需連結的詳細資訊，請參閱[存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)。  

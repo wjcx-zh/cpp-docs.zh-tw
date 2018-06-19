@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391944"
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>格式規格欄位：scanf 和 wscanf 函式
 這裡的資訊適用於整個 `scanf` 系列函式，包括安全的版本，並會說明所用符號，通知 `scanf` 函式如何將輸入資料流 (例如 `scanf` 的輸入資料流 `stdin`) 剖析為插入至程式變數中的值。  

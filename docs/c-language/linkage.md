@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383520"
 ---
 # <a name="linkage"></a>連結
 識別項名稱在不同範圍中可能會參考不同的識別項。 在不同範圍或相同範圍中宣告多次的識別項，可藉由稱為「連結」(Linkage) 的處理序參考相同的識別項或函式。 連結會判斷程式中可以參考識別項的部分 (其「可視性」)。 連結分成三種：[內部](../c-language/internal-linkage.md)、[外部](../c-language/external-linkage.md)和[無連結](../c-language/no-linkage.md)。  

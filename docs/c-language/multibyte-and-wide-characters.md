@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384196"
 ---
 # <a name="multibyte-and-wide-characters"></a>多位元組字元和寬字元
 多位元組字元是由一個或多個位元組序列組成的字元。 每個位元組序列表示擴充字元集的單一字元。 多位元組字元用於如漢字等字元集。  

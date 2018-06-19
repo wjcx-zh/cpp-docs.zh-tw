@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385916"
 ---
 # <a name="using-the-additive-operators"></a>使用加法類運算子
 下列範例 (其中說明加法和減法運算子) 使用這些宣告：  

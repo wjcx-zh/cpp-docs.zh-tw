@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381781"
 ---
 # <a name="converting-multibyte-characters"></a>轉換多位元組字元
 **ANSI 3.1.3.4**：目前的地區設定，用來將多位元組字元針對寬字元常數轉換成對應的寬字元 (程式碼)  

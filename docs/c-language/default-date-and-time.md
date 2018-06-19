@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382737"
 ---
 # <a name="default-date-and-time"></a>預設日期和時間
 **ANSI 3.8.8**：日期和時間各自的轉譯無法使用時，_DATE\_ 和 _TIME\_ 的定義  

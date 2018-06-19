@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390056"
 ---
 # <a name="name-spaces"></a>命名空間
 編譯器會設定「命名空間」以區別不同類型的項目所使用的識別項。 每個命名空間內的名稱都必須是唯一的，才能避免衝突發生，但是相同的名稱可能會出現在多個命名空間中。 這表示，假設項目位於不同的命名空間中，您可以將同一個識別項用於兩個或多個不同的項目。 編譯器可以根據程式中識別項的語法內容解析參考。  

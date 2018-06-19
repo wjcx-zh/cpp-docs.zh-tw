@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386628"
 ---
 # <a name="wide-characters"></a>寬字元
 **ANSI 3.1.3.4** 整數字元常數的值，其中含有多於一個字元，或者含有包括多於一個多位元組字元的寬字元常數  

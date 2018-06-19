@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387007"
 ---
 # <a name="side-effects"></a>副作用
 運算式的評估順序是由特定實作定義，但語言保證特定評估順序者除外 (如[評估的優先順序和順序](../c-language/precedence-and-order-of-evaluation.md)中所述)。 例如，副作用會在下列函式呼叫中發生：  

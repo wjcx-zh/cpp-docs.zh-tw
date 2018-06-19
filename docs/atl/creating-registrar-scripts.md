@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354429"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 登錄器指令碼會提供資料驅動，而不是驅動應用程式開發介面存取系統登錄。 由於指令碼新增至登錄機碼中只需要一個或兩個線條通常更有效率的資料驅動的存取。  

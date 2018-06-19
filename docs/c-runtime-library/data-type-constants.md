@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392142"
 ---
 # <a name="data-type-constants"></a>資料類型常數
 資料類型常數是整數資料類型所允許值的實作相關範圍。 下列常數指定整數資料類型的範圍，並定義於 LIMITS.H 中。  

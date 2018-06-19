@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391174"
 ---
 # <a name="union-declarations"></a>等位宣告
 「等位宣告」會指定一組變數值，以及選擇性地指定命名等位的標記。 變數值稱為等位的「成員」，而且可以具有不同的類型。 等位類似其他語言中的「變異記錄」。  

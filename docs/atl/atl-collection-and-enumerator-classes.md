@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354442"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>ATL 集合和列舉值類別
 ATL 提供下列類別，以協助您實作集合和列舉程式。  

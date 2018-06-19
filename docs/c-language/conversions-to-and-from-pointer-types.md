@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384290"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>指標類型的轉換
 一種值類型的指標可以轉換成另一種類型的指標。 不過，由於儲存區中不同類型會有不同的對齊需求和大小，因此結果可能會是未定義。 物件指標可以轉換成類型需要較不嚴格或同等嚴格之儲存對齊的物件指標，並且在不經變更的情況下轉換回原物件指標。  

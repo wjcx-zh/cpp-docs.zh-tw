@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388853"
 ---
 # <a name="usual-arithmetic-conversions"></a>一般算術轉換
 大部分的 C 運算子會執行類型轉換，將運算式的運算元轉換為一般類型，或是將短值擴充為電腦作業中使用的整數大小。 C 運算子執行的轉換取決於特定運算子與運算元的類型。 不過，許多運算子會對整數和浮動類型的運算元執行類似轉換。 這些轉換稱為「算術轉換」。 將運算元的值轉換成相容的類型並不會變更其值。  

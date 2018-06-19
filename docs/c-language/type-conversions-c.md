@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387235"
 ---
 # <a name="type-conversions-c"></a>類型轉換 (C)
 類型轉換取決於指定的運算子以及運算元或運算子的類型。 下列情況會執行類型轉換：  

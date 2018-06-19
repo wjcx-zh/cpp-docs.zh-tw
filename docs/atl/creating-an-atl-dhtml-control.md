@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354165"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>建立 ATL DHTML 控制項
 ATL 控制項精靈會自動建立 DHTML 控制項的程序。 它會產生必要的資源檔案，包括包含範例程式碼的 HTML 檔案。  

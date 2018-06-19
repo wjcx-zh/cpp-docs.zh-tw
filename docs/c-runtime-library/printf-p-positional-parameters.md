@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391310"
 ---
 # <a name="printfp-positional-parameters"></a>printf_p 位置參數
 位置參數會提供根據數字指定的功能，其中引數會取代至格式字串中的欄位。 您可以使用下列位置參數 `printf` 函式：  

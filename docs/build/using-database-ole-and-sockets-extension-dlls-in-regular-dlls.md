@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391401"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>在 MFC 的標準 Dll 中使用資料庫、 OLE 和通訊端 MFC 擴充 Dll
 當您使用 MFC 擴充 DLL 從標準的 MFC DLL，如果 MFC 擴充 DLL 不有線網路到**CDynLinkLibrary**物件鏈結的標準 MFC DLL，您可能會遇到一或多個一組相關的問題。 因為 MFC 資料庫、 OLE 和通訊端的偵錯版本支援的 Dll 會實作為 MFC 擴充 Dll，您可能會看到類似的問題，如果您使用這些 MFC 功能，即使您未明確使用任何您自己的 MFC 擴充 Dll。 某些徵兆如下：  

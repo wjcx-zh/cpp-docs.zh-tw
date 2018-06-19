@@ -16,6 +16,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34246231"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性
 

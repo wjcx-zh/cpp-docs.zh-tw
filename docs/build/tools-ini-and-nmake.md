@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380546"
 ---
 # <a name="toolsini-and-nmake"></a>Tools.ini 和 NMAKE
 NMAKE 讀取 Tools.ini 之前它會讀取 makefile，除非使用 /R。 它會尋找 Tools.ini 第一次在目前的目錄，然後初始化環境變數所指定的目錄中。 NMAKE 中的設定初始設定檔案區段的開頭`[NMAKE]`，而且可以包含任何 makefile 的資訊。 指定數字符號開頭的個別行上的註解 （#）。  

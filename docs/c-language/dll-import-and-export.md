@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383013"
 ---
 # <a name="dll-import-and-export"></a>DLL 匯入及匯出
 **Microsoft 特定的**  

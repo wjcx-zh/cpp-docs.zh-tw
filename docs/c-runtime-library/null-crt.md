@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387605"
 ---
 # <a name="null-crt"></a>NULL (CRT)
 **NULL** 是搭配許多指標作業和函式使用的 null 指標值。 它相當於 0。 **NULL** 定義於下列標頭檔中：CRTDBG.H、LOCALE.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H、TCHAR.H、TIME.H 及 WCHAR.H。  

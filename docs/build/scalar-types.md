@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381167"
 ---
 # <a name="scalar-types"></a>純量類型
 雖然資料的存取權可以源自任何對齊，建議您使用資料對齊自然界限，以避免發生效能損失 （或多個類別） 上。 列舉常數的整數，而且會被視為 32 位元整數。 下表描述的型別定義和建議的儲存體，因為它適用於使用下列的對齊值：  

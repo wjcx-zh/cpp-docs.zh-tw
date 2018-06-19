@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057769"
 ---
 # <a name="proc"></a>PROC
 呼叫程序區塊的開始與結束標記*標籤*。 區塊中的陳述式可以呼叫與**呼叫**指令或[INVOKE](../../assembler/masm/invoke.md)指示詞。  

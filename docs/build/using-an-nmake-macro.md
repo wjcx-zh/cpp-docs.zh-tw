@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380572"
 ---
 # <a name="using-an-nmake-macro"></a>使用 NMAKE 巨集
 若要使用巨集，請其名稱前面加上貨幣符號 （$），如下所示的括號括住。  

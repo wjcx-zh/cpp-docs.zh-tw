@@ -45,6 +45,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388824"
 ---
 # <a name="escape-sequences"></a>逸出序列
 由一個反斜線 (**\\**)，後面加上一個字母或數字組合所組成的字元組合，稱為「逸出序列」。 若要表示新行字元、單引號或字元常數中的某些其他字元，您必須使用逸出序列。 逸出序列視為單一字元，因此是有效的字元常數。  

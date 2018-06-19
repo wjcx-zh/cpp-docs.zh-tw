@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379532"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (啟用其他安全性檢查)
 加入建議的安全性開發週期 (SDL) 檢查。 這些檢查包括額外的安全性相關警告 (視為錯誤)，以及其他安全程式碼產生功能。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391896"
 ---
 # <a name="structure-declarations"></a>結構宣告
 「結構宣告」會命名一個類型，並指定可能具有不同類型之變數值的序列 (稱為結構的「成員」或「欄位」)。 選擇性識別項 (稱為「標記」) 會為結構類型提供名稱，並且可以在後續參考結構類型時使用。 該結構類型的變數會保留由該類型定義的整個序列。 C 中的結構類似於其他語言中稱為「記錄」的類型。  

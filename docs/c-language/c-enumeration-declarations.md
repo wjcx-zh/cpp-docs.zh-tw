@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389737"
 ---
 # <a name="c-enumeration-declarations"></a>C 列舉宣告
 列舉是由一組具名整數常數所組成。 列舉類型宣告會提供 (選擇性) 列舉標記的名稱，以及定義具名整數識別項集合 (稱為「列舉集合」、「列舉程式常數」、「列舉程式」或「成員」)。 具有列舉類型的變數會儲存該類型所定義列舉集合的其中一個值。  

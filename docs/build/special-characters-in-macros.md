@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380169"
 ---
 # <a name="special-characters-in-macros"></a>巨集中的特殊字元
 定義會指定註解後，數字符號 （#）。 若要指定常值的數字符號在巨集中，使用插入號 (^)，做為 ^ #。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384840"
 ---
 # <a name="type-long-double"></a>類型 long double
 `long double` 類型與 [double](../c-language/type-double.md) 類型相同。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385572"
 ---
 # <a name="truncation-of-text-files"></a>文字檔截斷
 **ANSI 4.9.3** 文字資料流上的寫入作業是否會導致相關聯的檔案於該點之後被截斷  

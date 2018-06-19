@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380468"
 ---
 # <a name="unprototyped-functions"></a>沒有原型的函式
 對於完全原型的函式，呼叫端會傳遞整數值以整數和浮點數的值做為雙精確度。 僅限浮點值，整數暫存器和浮點暫存器將會包含浮點值萬一被呼叫端必須是整數暫存器中的數值。  

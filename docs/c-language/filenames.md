@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382311"
 ---
 # <a name="filenames"></a>檔案名稱
 **ANSI 4.9.3**：組成有效檔案名稱的規則  

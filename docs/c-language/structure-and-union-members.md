@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392246"
 ---
 # <a name="structure-and-union-members"></a>結構和等位成員
 「成員選取運算式」(Member-selection Expression) 會參考結構和等位的成員。 這類運算式具有所選取成員的值和類型。  

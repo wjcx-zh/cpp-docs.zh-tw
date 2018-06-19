@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056375"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 儲存目前的部分或全部`context`： 區段登錄假設基數值、 清單和 cref 旗標或處理器/處理器值。 `context`可以**採用**， `RADIX`，**列出**， **CPU**，或**所有**。  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389126"
 ---
 # <a name="lccollatecpfunc"></a>___lc_collate_cp_func
 內部 CRT 函式。 擷取執行緒的目前定序字碼頁。  

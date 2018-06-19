@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379636"
 ---
 # <a name="managing-a-library"></a>管理程式庫
 LIB 的預設模式是建立或修改的 COFF 物件程式庫。 當您未指定 /EXTRACT （若要將物件複製到檔案） 或 /DEF （若要建置之匯入程式庫），在此模式會執行 LIB。  

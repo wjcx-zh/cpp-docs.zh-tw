@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380598"
 ---
 # <a name="stack-allocation"></a>堆疊配置
 函式的初構會負責配置堆疊空間給區域變數，儲存的暫存器，堆疊參數和暫存器參數。  

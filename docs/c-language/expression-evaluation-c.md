@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382724"
 ---
 # <a name="expression-evaluation-c"></a>運算式評估 (C)
 涉及指派、一元遞增、一元遞減或呼叫函式的運算式可能會產生評估以外的後果 (副作用)。 到達「序列點」時，在序列點之前的全部內容 (包括任何副作用) 一定會先完成評估，然後才會對序列點之後的任何內容進行評估。  

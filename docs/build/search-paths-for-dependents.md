@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380481"
 ---
 # <a name="search-paths-for-dependents"></a>相依的搜尋路徑
 每個相依都有選擇性的搜尋路徑，指定方式如下：  

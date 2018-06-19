@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379428"
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮點表示
 Microsoft Visual c + + 是 IEEE 數值標準一致。 有三種內部實際數字。 實際\*4 和 real\*8 Visual c + + 中使用。 實際\*4 宣告使用 word **float**。 實際\*使用 word 來宣告 8 **double**。 在 Windows 32 位元程式設計`long double`資料類型會對應至**double**。 沒有，不過，組件語言支援使用真正的計算 * 10 個資料類型。  

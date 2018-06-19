@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391203"
 ---
 # <a name="return-statement-c"></a>return 陳述式 (C)
 `return` 陳述式可終止函式的執行，並且將控制權還給呼叫函式。 執行作業會在進行呼叫的函式中緊接著呼叫之後繼續進行。 `return` 陳述式也可將值傳回至呼叫函式。 如需詳細資訊，請參閱[傳回型別](../c-language/return-type.md)。  

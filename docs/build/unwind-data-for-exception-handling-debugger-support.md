@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380429"
 ---
 # <a name="unwind-data-for-exception-handling-debugger-support"></a>回溯資料以進行例外狀況處理與偵錯工具支援
 本章節討論例外狀況處理和偵錯支援所需的資料結構。  

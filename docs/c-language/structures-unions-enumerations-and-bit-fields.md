@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384714"
 ---
 # <a name="structures-unions-enumerations-and-bit-fields"></a>結構、等位、列舉和位元欄位
 -   [不適當的等位存取](../c-language/improper-access-to-a-union.md)  

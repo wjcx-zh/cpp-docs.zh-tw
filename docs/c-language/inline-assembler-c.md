@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384316"
 ---
 # <a name="inline-assembler-c"></a>內嵌組譯工具 (C)
 **Microsoft 特定的**  

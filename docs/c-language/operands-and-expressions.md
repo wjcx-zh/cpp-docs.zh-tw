@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383443"
 ---
 # <a name="operands-and-expressions"></a>運算元和運算式
 「運算元」是運算子執行所在的實體。 「運算式」是運算子和運算元的序列，用於執行下列動作的任意組合：  

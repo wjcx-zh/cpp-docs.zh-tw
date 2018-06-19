@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384538"
 ---
 # <a name="declarations-and-types"></a>宣告和類型
 本節將描述變數、函式及類型的宣告和初始化。 C 語言包括一組標準的基本資料類型。 您也可以根據已定義的類型宣告新類型，藉此加入自己的資料類型，稱為「衍生類型」(Derived Type)。 我們將討論下列主題：  

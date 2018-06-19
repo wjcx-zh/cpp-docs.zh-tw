@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057535"
 ---
 # <a name="operator-opattr"></a>運算子 OPATTR
 傳回文字定義的模式和範圍*運算式*。 低位元組等同所傳回的位元組[。型別](../../assembler/masm/operator-dot-type.md)。 高位元組包含其他資訊。  

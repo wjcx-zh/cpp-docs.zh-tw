@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385523"
 ---
 # <a name="significant-characters-with-external-linkage"></a>有外部連結的有效字元數
 **ANSI 3.1.2**：有外部連結的有效字元數  

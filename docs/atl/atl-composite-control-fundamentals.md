@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354613"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL 複合控制項基本概念
 複合控制項是一種可以包含 （類似於對話方塊中） 的 ActiveX 控制項的其他 ActiveX 控制項或 Windows 控制項。 建置複合控制項之後，它可以插入任何地方可以裝載 ActiveX 控制項。  

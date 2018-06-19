@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354591"
 ---
 # <a name="current-time-general-purpose-classes"></a>目前時間： 一般用途類別
 下列程序示範如何建立`CTime`物件，並將它初始化為目前時間。  

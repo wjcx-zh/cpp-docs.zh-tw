@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382019"
 ---
 # <a name="unwind-procedure"></a>回溯程序
 回溯程式碼陣列是以遞減順序排序。 例外狀況發生時，完整的內容會儲存的內容記錄中的作業系統。 例外狀況分派邏輯然後叫用時，它會重複執行下列步驟，以找出例外狀況處理常式。  

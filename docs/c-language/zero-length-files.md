@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384963"
 ---
 # <a name="zero-length-files"></a>零長度檔案
 **ANSI 4.9.3** 長度為零的檔案是否確實存在  

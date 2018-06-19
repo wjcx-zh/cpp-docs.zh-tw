@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382230"
 ---
 # <a name="null-macro"></a>NULL 巨集
 **ANSI 4.1.5**：巨集 NULL 會針對其展開的 null 指標常數  

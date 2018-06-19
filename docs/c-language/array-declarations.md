@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386900"
 ---
 # <a name="array-declarations"></a>陣列宣告
 「陣列宣告」會為陣列命名並指定其元素的類型。 它也可以定義陣列中元素的數目。 具有陣列類型的變數會視為是陣列元素類型的指標。  

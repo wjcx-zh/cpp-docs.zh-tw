@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388811"
 ---
 # <a name="controlling-streams"></a>控制資料流
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) 會傳回類型為 `FILE` 之物件的位址。 您可以使用此位址作為數個程式庫函式的 `stream` 引數，以在開啟檔案上執行各種作業。 針對位元組資料流，所有輸入發生的情況都會有如每個字元是透過呼叫 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) 的方式讀取，且所有輸出發生的情況都會有如每個字元是透過呼叫 [fputc](../c-runtime-library/reference/fputc-fputwc.md) 的方式寫入。 針對寬資料流，所有輸入發生的情況都會有如每個字元是透過呼叫 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) 的方式讀取，且所有輸出發生的情況都會有如每個字元是透過呼叫 [fputwc](../c-runtime-library/reference/fputc-fputwc.md) 的方式寫入。  

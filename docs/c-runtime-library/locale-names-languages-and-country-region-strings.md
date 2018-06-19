@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391811"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>地區設定名稱、語言和國家/地區字串
 針對 `setlocale` 和 `_create_locale` 函式的 *locale* 引數，可使用 Windows NLS API 支援的地區設定名稱、語言、國家/地區碼和字碼頁來設定。 *locale* 引數有下列形式：  

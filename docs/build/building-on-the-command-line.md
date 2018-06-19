@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379272"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>在命令列上建置 C/c + + 程式碼
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380445"
 ---
 # <a name="special-characters-in-a-makefile"></a>Makefile 中的特殊字元
 若要使用 NMAKE 特殊字元做為常值字元，將插入號 (^) 前面。 NMAKE 會忽略其他字元在前面的插入號。 特殊字元都是：  

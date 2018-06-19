@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383900"
 ---
 # <a name="punctuation-and-special-characters"></a>標點符號和特殊字元
 C 字元集中的標點符號和特殊字元有許多用途，從組織程式文字到定義由編譯器或編譯程式執行的工作都包含在內。這些字元不指定要執行的作業。 部分標點符號也是運算子 (請參閱 [運算子](../c-language/c-operators.md))。 編譯器會透過內容判斷其用法。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088137"
 ---
 # <a name="platformfailureexception-class"></a>Platform::FailureException 類別
 作業失敗時擲回。 這是 E_FAIL HRESULT 的對等用法。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093255"
 ---
 # <a name="beginparammap"></a>BEGIN_PARAM_MAP
 標記參數對應項目的開頭。  

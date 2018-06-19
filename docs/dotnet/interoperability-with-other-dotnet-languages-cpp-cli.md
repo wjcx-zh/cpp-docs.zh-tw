@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129095"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>與其他 .NET 程式設計語言間的互通性 (C++/CLI)
 本節中的主題顯示如何在 Visual c + +，從使用或提供的功能，以 C# 或 Visual Basic 撰寫的組件中建立組件。  

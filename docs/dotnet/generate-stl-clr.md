@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105949"
 ---
 # <a name="generate-stlclr"></a>generate (STL/CLR)
 將函式物件產生的值指派給範圍內的每個項目。  

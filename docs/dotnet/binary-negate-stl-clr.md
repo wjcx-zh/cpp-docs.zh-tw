@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108482"
 ---
 # <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
 此範本類別描述函式，呼叫時，會傳回邏輯不屬於其預存的兩個引數函式。 您可以使用它指定根據其預存函式的函式物件。  

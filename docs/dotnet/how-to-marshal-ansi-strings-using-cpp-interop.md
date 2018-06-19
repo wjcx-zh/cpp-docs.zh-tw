@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129391"
 ---
 # <a name="how-to-marshal-ansi-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 ANSI 字串
 本主題會示範如何 ANSI 字串使用 c + + Interop，但是.NET Framework 傳遞<xref:System.String>代表以 Unicode 格式的字串轉換成 ANSI 是額外的步驟。 與其他字串類型間的互通性，請參閱下列主題：  

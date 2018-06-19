@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132683"
 ---
 # <a name="maxelement-stlclr"></a>max_element (STL/CLR)
 在指定的範圍內尋找第一個最大項目，其中順序準則可由二元述詞指定。  

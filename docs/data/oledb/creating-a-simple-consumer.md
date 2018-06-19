@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098520"
 ---
 # <a name="creating-a-simple-consumer"></a>建立簡單消費者
 使用 ATL 專案精靈 和 ATL OLE DB 消費者精靈產生的 OLE DB 樣板取用者。  

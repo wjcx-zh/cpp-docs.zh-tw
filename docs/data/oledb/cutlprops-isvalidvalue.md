@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101961"
 ---
 # <a name="cutlpropsisvalidvalue"></a>CUtlProps::IsValidValue
 用來驗證之前設定屬性的值。  

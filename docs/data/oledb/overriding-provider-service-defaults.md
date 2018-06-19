@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110076"
 ---
 # <a name="overriding-provider-service-defaults"></a>覆寫提供者服務預設值
 提供者的登錄值**OLEDB_SERVICES**傳回的預設值為[DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx)資料來源物件上的初始化屬性。  

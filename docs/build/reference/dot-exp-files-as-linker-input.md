@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371095"
 ---
 # <a name="exp-files-as-linker-input"></a>.Exp 檔做為連結器輸入
 匯出 (.exp) 檔案包含匯出函式和資料的項目相關資訊。 當 LIB 建立匯入程式庫時，它也會建立.exp 檔。 當您連結至匯出和匯入從另一個程式，直接或間接的程式，您可以使用.exp 檔。 如果您連結.exp 檔，連結不會產生匯入程式庫，因為它會假設 LIB 已經建立一個。 如需有關.exp 檔案和匯入程式庫的詳細資訊，請參閱[使用匯入程式庫和匯出檔案](../../build/reference/working-with-import-libraries-and-export-files.md)。  

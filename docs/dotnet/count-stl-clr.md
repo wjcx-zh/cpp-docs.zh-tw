@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105006"
 ---
 # <a name="count-stlclr"></a>count (STL/CLR)
 傳回範圍中值符合指定值的項目數目。  

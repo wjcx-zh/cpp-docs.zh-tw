@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130967"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>如何：以原生類型宣告控制代碼
 您無法宣告原生類型中的控制代碼類型。 vcclr.h 提供類型安全包裝函式範本`gcroot`來參考 c + + 堆積的 CLR 物件。 此範本可讓您在原生類型中嵌入虛擬控制代碼，並將它視為基礎型別。 在大部分情況下，您可以使用`gcroot`物件做為內嵌類型，而不用任何轉型。 不過，在使用[針對每個，在](../dotnet/for-each-in.md)，您必須使用`static_cast`擷取基礎受管理的參考。  

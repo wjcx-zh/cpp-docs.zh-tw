@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107483"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB 應用程式的資源集中化
 若要充分利用在您的應用程式集區，您必須確定取得透過資料來源的 OLE DB 服務會叫用**IDataInitialize**或**IDBPromptInitialize**。 如果您直接使用`CoCreateInstance`要叫用提供者的 CLSID 為基礎的提供者，沒有 OLE DB 服務會叫用。  

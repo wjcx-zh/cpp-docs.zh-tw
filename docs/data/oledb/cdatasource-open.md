@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097064"
 ---
 # <a name="cdatasourceopen"></a>CDataSource::Open
 開啟資料來源使用的連接**CLSID**， **ProgID**，或`CEnumerator`moniker 或以定位程式對話方塊提示使用者。  

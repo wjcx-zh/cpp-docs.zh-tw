@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098143"
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand`類別是提供者命令物件的實作。 它提供的實作`IAccessor`， `ICommandText`，和**ICommandProperties**介面。 `IAccessor`介面是一個資料列集相同。 命令物件會使用存取子，指定繫結參數。 資料列集物件會使用它們來指定繫結的輸出資料行。 `ICommandText`介面是有用的方式，指定的命令加 1。 這個範例會使用`ICommandText`稍後介面時，它會加入自訂程式碼; 它也會覆寫`ICommand::Execute`方法。 **ICommandProperties**介面會處理所有命令和資料列集物件的屬性。  

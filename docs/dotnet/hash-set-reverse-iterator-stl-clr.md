@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128744"
 ---
 # <a name="hashsetreverseiterator-stlclr"></a>hash_set::reverse_iterator (STL/CLR)
 受控制序列的反向迭代器類型。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113755"
 ---
 # <a name="friend-assemblies-c"></a>Friend 組件 (C++)
 適用於執行階段，如*friend 組件*語言功能可讓位於命名空間範圍或全域範圍中的一個或多個用戶端組件或.netmodule 可以存取的組件元件的類型。  

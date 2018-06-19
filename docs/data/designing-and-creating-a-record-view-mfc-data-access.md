@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089908"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>設計和建立記錄檢視 (MFC 資料存取)
 您可以建立資料錄檢視類別與[MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)。 如果您使用應用程式精靈，它會為它建立資料錄檢視類別和對話方塊樣板資源 (不含控制項)。 您必須使用 Visual C++ 的對話方塊編輯器來將控制項加入對話方塊樣板資源。 另一方面，如果您使用**加入類別**，您必須先建立對話方塊樣板資源在對話方塊編輯器，然後建立資料錄檢視類別。  

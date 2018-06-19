@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111181"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB 資源集中化和服務
 若要與 OLE DB 共用，或與任何 OLE DB 服務工作，您的提供者必須支援所有物件的彙的總。 這是任何 OLE DB 1.5 或更新版本的提供者的需求。 它是利用服務的關鍵。 不支援彙總的提供者無法共用，而沒有其他服務所提供。  

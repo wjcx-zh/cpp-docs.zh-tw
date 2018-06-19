@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097168"
 ---
 # <a name="columnentrytypesize"></a>COLUMN_ENTRY_TYPE_SIZE
 表示在資料庫中的特定資料行的繫結。 支援`type`和`size`參數。  

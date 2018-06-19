@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106202"
 ---
 # <a name="debug-class-ccli"></a>Debug 類別 (C++/CLI)
 當使用<xref:System.Diagnostics.Debug>Visual c + + 應用程式中的行為不會偵錯和發行組建之間變更。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131955"
 ---
 # <a name="min-stlclr"></a>min (STL/CLR)
 比較兩個物件並傳回兩者較小者，其中順序準則可由二元述詞指定。  

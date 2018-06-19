@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134409"
 ---
 # <a name="language-keywords-ccli"></a>語言關鍵字 (C++/CLI)
 從 Managed Extensions for c + + 變更為 Visual c + + 的數個語言關鍵字。  

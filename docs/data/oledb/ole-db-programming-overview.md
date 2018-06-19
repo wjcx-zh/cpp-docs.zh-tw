@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106189"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 程式設計概觀
 OLE DB 是一種高效能、 以 COM 為基礎的資料庫技術。 它提供存取資料，不論它會儲存的表單的常見方式。 在一般商務的情況下，大量的資訊會儲存在公司資料庫外部。 循序編製索引的檔案、 個人資料庫 （例如存取）、 試算表 （例如 Excel)、 專案計劃應用程式 （例如專案） 和 （例如 Outlook) 的電子郵件 （例如 FAT 或 NTFS） 的檔案系統中找到這項資訊。 OLE DB 可讓您以相同的方式，存取任何種類的資料存放區，只要資料存放區有 OLE DB 提供者。

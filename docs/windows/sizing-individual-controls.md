@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890101"
 ---
 # <a name="sizing-individual-controls"></a>調整個別控制項的大小
 您可以使用調整大小控點來調整控制項大小。 當滑鼠指標位於調整大小控點時，它會變更形狀，以指示中的控制項可以調整大小的指示。 使用中的調整大小控點都穩固。如果是中空的調整大小控點，控制項無法調整大小該軸。  

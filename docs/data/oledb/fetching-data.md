@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101197"
 ---
 # <a name="fetching-data"></a>擷取資料
 開啟資料來源、 工作階段，以及資料列集物件之後，您可以擷取資料。 根據您使用存取子類型，您可能需要繫結資料行。  

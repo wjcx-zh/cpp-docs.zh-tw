@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100040"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 類別
 提供的實作[IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx)介面。  

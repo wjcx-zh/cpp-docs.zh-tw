@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096115"
 ---
 # <a name="command-object-interfaces"></a>命令物件介面
 命令物件會使用`IAccessor`介面以指定參數繫結。 取用者可以呼叫`IAccessor::CreateAccessor`，它會將陣列傳遞`DBBINDING`結構。 `DBBINDING` 包含有關 （例如類型和長度） 的資料行繫結資訊。 提供者會接收此結構，並判斷應該傳送之資料的方式，以及是否需要轉換。  

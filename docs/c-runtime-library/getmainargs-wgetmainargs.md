@@ -35,6 +35,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451282"
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs、__wgetmainargs
 叫用命令列剖析，並將 `main()` 的引數複製回傳入的指標。  

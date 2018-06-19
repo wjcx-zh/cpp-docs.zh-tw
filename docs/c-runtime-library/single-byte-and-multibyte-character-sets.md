@@ -24,6 +24,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451884"
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>單位元組和多位元組字元集
 

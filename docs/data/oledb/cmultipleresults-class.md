@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096216"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 類別
 如果您想要處理多個結果集的命令，使用`CMultipleResults`如`CCommand`樣板引數*TMultiple*。  

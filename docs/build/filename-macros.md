@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458858"
 ---
 # <a name="filename-macros"></a>檔名巨集
 檔名巨集是預先定義為相依性 （在磁碟上的不完整的檔名規格） 中指定的檔名。 這些巨集不需要括在括號時叫用。指定只是 $ 所示。  

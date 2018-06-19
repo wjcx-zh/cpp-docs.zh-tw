@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129147"
 ---
 # <a name="inplacemerge-stlclr"></a>inplace_merge (STL/CLR)
 將兩個連續排序範圍內的項目結合成單一排序範圍，其中順序準則可由二元述詞指定。  

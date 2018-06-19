@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106306"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>從預存程序使用多重結果集
 大多數的預存程序傳回多個結果集。 這類預存程序通常包含一個或多個 select 陳述式。 取用者必須考慮此選項可處理所有結果集。  

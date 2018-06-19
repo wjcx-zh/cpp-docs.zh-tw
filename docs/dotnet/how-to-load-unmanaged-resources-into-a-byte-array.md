@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130145"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：將 Unmanaged 資源載入至位元組陣列
 本主題將討論幾種方式可以載入到 unmanaged 的資源<xref:System.Byte>陣列。  

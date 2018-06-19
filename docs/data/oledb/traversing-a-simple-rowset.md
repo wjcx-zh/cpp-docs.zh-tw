@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102947"
 ---
 # <a name="traversing-a-simple-rowset"></a>往返簡單資料列集
 下列範例顯示不包含命令的快速簡便的資料庫存取。 下列的消費者程式碼，在 ATL 專案中，從名為的資料表擷取記錄*演出者*在 Microsoft Access 資料庫中使用 Microsoft OLE DB Provider for ODBC。 程式碼會建立[CTable](../../data/oledb/ctable-class.md)資料表物件的存取子，根據使用者資料錄類別`CArtists`。 它會開啟連接、 開啟連線時，工作階段並開啟工作階段上的資料表。  

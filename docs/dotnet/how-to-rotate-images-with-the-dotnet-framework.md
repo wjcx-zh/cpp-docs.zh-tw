@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129030"
 ---
 # <a name="how-to-rotate-images-with-the-net-framework"></a>如何：使用 .NET Framework 旋轉影像
 下列程式碼範例示範如何使用<xref:System.Drawing.Image?displayProperty=fullName>類別來從磁碟載入影像、 旋轉 90 度，並將它儲存為新的.jpg 檔案。  

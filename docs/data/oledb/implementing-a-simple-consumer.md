@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112559"
 ---
 # <a name="implementing-a-simple-consumer"></a>實作簡單消費者
 下列主題示範如何編輯 MFC 應用程式精靈和 ATL OLE DB 消費者精靈 建立簡單消費者所建立的檔案。 這個範例包含下列部分：  

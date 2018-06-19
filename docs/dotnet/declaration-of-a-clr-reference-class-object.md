@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112006"
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 參考類別物件的宣告
 語法來宣告和具現化參考類別類型的物件已從 Managed Extensions for c + + Visual c + +。  

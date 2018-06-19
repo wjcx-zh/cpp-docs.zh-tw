@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885450"
 ---
 # <a name="hstringdetach-method"></a>HString::Detach 方法
 解除指定的 HString 物件從其基礎值的關聯。  

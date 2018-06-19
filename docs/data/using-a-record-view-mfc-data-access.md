@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104639"
 ---
 # <a name="using-a-record-view--mfc-data-access"></a>使用記錄檢視 (MFC 資料存取)
 本主題說明通常如何自訂精靈為您撰寫的資料錄檢視的預設程式碼。 一般而言，在您想要限制與資料錄選取[篩選](../data/odbc/recordset-filtering-records-odbc.md)或[參數](../data/odbc/recordset-parameterizing-a-recordset-odbc.md)，也或許是[排序](../data/odbc/recordset-sorting-records-odbc.md)資料錄、 自訂 SQL 陳述式。  

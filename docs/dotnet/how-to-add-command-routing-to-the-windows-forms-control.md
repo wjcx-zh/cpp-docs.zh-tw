@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133645"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>如何：新增命令傳送至 Windows Form 控制項
 [CWinFormsView](../mfc/reference/cwinformsview-class.md)將命令和更新命令 UI 訊息路由傳送至使用者控制項，允許它處理 MFC 命令 （例如，框架功能表項目和工具列按鈕）。  

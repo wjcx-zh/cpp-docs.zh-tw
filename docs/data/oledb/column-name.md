@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097519"
 ---
 # <a name="columnname"></a>COLUMN_NAME
 表示資料列集中的特定資料行之繫結的資料列集。 類似於[COLUMN_ENTRY](../../data/oledb/column-entry.md)，只不過此巨集接受資料行名稱，而不是資料行編號。  

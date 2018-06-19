@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105887"
 ---
 # <a name="boxing-ccli"></a>Boxing (C++/CLI)
 Boxing 是實值類型轉換成類型的程序`object`或實值型別所實作的任何介面類型。 當 common language runtime (CLR) box 實值類型時，它會將值包裝在`System.Object`並將它儲存在 managed 堆積上。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。  

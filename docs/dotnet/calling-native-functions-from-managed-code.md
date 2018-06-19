@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112039"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>從 Managed 程式碼呼叫原生函式
 Common language runtime 提供的平台叫用服務或 PInvoke，可讓 managed 程式碼能夠呼叫 C 樣式函式在原生動態連結程式庫 (Dll)。 相同的資料封送處理會用於執行階段和 「 它只著作 」 或 IJW、 機制的 COM 互通性。  

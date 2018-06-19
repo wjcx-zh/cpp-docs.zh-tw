@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108266"
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>Boxed 值的追蹤控制代碼
 參考實值類型的追蹤控制代碼的使用方式已經從 Managed Extensions for c + + Visual c + +。  

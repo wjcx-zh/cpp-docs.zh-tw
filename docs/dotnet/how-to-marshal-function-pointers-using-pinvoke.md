@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132173"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送處理函式指標
 本主題說明如何在受管理的委派時與互通 unmanaged 函式使用.NET Framework P/Invoke 功能可用來代替函式指標。 不過，Visual c + + 程式設計人員會建議 （自動），而是使用 c + + Interop 功能，因為 P/Invoke 提供極少的編譯時間錯誤報告，不是類型安全，就必須等待冗長實作。 如果未受管理的應用程式開發介面會封裝為 DLL 不是可用的原始程式碼，P/Invoke 是唯一的選項。 否則，請參閱下列主題：  

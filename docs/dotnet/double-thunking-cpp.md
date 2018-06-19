@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111204"
 ---
 # <a name="double-thunking-c"></a>Double Thunking (C++)
 Double thunking 指的是效能的 Visual c + + managed 函式，以及在程式執行的受管理的內容呼叫的函式呼叫才能呼叫 managed 函式呼叫函式的原生進入點時，您可能遇到損失。 本主題討論 double thunking 的發生位置，以及避免可改善效能。  

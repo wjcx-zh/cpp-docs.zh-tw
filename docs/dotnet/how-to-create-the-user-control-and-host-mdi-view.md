@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136479"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：建立使用者控制項並裝載 MDI 檢視
 下列步驟示範如何建立.NET Framework 使用者控制項，撰寫使用者控制項中的控制項類別程式庫 （特別是，Windows 控制項程式庫專案），然後將專案編譯成組件。 從 MFC 應用程式使用衍生自的類別可以使用控制項[CView 類別](../mfc/reference/cview-class.md)和[CWinFormsView 類別](../mfc/reference/cwinformsview-class.md)。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888471"
 ---
 # <a name="synclocktislocked-method"></a>SyncLockT::IsLocked 方法
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  

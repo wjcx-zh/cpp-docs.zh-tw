@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128650"
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>如何：使用 for each 反覆查看使用者定義的集合
 Managed 集合的類別需要一個將控制代碼傳回至列舉值類別或介面的非私用 GetEnumerator 函式。  列舉值類別必須包含非靜態 MoveNext 函式和 Current 屬性的宣告。  

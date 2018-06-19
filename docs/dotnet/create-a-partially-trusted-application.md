@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108994"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>如何：移除 CRT 程式庫 DLL 的相依性以建立部分信任的應用程式
 本主題討論如何建立使用 Visual c + + 所移除的相依性 msvcm90.dll 部分信任的 Common Language Runtime 應用程式。  

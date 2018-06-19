@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112104"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 消費者樣板 (C++)
 OLE DB 消費者樣板可以支援 OLE DB 2.6 版規格 (OLE DB 消費者樣板是以 OLE DB 2.6 做為測試對象，但並不支援規格裡的每一個介面)。消費者樣板可將為實作 OLE DB 消費者而必須撰寫的程式碼數量降到最低。 此樣板提供了：  

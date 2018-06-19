@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093892"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC：使用不具文件和檢視的資料庫類別
 有時候您可能不想使用在您的資料庫應用程式架構的文件/檢視架構。 本主題說明：  

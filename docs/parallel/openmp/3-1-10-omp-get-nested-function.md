@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686717"
 ---
 # <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 函式
 `omp_get_nested`函式會傳回非零值，如果已啟用巢狀平行處理原則和 0 已停用。 如需有關巢狀平行處理原則的詳細資訊，請參閱節 3.1.9 在 40 頁面上。 格式如下：  

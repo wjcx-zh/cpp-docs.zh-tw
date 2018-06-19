@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688267"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>如何：使用訊息區篩選條件
 本文件將示範如何使用篩選函數，以啟用非同步化訊息區塊接受或拒絕該訊息的裝載根據訊息。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383236"
 ---
 # <a name="user-interface-elements-mfc"></a>使用者介面項目 (MFC)
 如需如何使用 Microsoft Foundation Class (MFC) 程式庫中建立您的應用程式的使用者介面的資訊，請參閱下列主題。  

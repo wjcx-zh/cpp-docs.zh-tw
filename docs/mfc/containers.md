@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342182"
 ---
 # <a name="containers"></a>容器
 容器應用程式是一種應用程式，可以將內嵌或連結項目加入到本身的文件中。 由容器應用程式管理的文件必須能夠儲存和顯示 OLE 複合文件元件以及由應用程式本身建立的資料。 容器應用程式也必須允許使用者插入新項目或編輯現有的項目。  

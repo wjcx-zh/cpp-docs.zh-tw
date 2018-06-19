@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382550"
 ---
 # <a name="using-an-animation-control"></a>使用動畫控制項
 動畫控制項的一般使用方式會遵循下列模式：  

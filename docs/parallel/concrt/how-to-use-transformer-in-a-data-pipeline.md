@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686577"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>如何：在資料管線中使用轉換程式
 本主題包含基本範例，示範如何使用[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)在資料管線中的類別。 如需更完整的範例執行映像處理時，用以在資料管線，請參閱[逐步解說： 建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。  

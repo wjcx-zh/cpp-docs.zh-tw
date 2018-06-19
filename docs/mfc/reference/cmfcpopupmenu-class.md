@@ -175,6 +175,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377716"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 類別
 實作 Windows 快顯功能表功能，並加入功能 (例如 Tear-Off 功能表和工具提示) 進行擴充。

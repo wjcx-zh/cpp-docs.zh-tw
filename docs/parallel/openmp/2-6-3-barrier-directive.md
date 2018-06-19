@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689788"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 barrier 指示詞
 **屏障**指示詞會同步處理在小組中的所有執行緒。 當遇到，小組中的每個執行緒會等到所有其他已經達到這個點為止。 語法**屏障**指示詞時，如下所示：  

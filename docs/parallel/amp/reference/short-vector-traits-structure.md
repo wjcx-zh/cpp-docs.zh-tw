@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688898"
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 結構
 short_vector_traits 允許擷取基礎向量長度和短向量類型的純量型別或純量類型  

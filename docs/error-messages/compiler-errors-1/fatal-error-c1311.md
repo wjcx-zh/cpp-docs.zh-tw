@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226670"
 ---
 # <a name="fatal-error-c1311"></a>嚴重錯誤 1311
 COFF 格式無法以靜態方式初始化 'var' 的位址數目 （位元組)  

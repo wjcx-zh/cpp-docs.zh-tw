@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382268"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051：現在和將來使用 CTL3D
 這個技術提示 (先前討論 CTL3D 和 MFC) 現在已經過時。 控制項的 3D 效果會由 MFC 自動實作。  

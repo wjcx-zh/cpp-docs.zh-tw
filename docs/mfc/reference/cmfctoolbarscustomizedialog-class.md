@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378177"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog 類別
 非強制回應索引標籤對話方塊 ( [CPropertySheet 類別](../../mfc/reference/cpropertysheet-class.md))，可讓使用者自訂工具列、 功能表、 鍵盤快速鍵、 使用者定義的工具和應用程式中的視覺化樣式。 使用者通常會選取 [ **工具** ] 功能表中的 [ **自訂** ]，以存取這個對話方塊。  

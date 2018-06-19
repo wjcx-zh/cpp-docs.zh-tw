@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344100"
 ---
 # <a name="messages"></a>訊息
 中的訊息迴圈**執行**類別成員函式`CWinApp`擷取佇列的各種事件所產生的訊息。 例如，當使用者按一下滑鼠時，Windows 會傳送數個滑鼠相關訊息，例如當按下滑鼠左鍵時會傳送 `WM_LBUTTONDOWN`，當放開滑鼠左鍵時會傳送 `WM_LBUTTONUP`。 架構的應用程式訊息迴圈實作會將訊息分派至適當視窗。  

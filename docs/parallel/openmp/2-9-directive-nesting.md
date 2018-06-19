@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691335"
 ---
 # <a name="29-directive-nesting"></a>2.9 巢狀使用指示詞
 動態巢狀指示詞必須遵守下列規則：  

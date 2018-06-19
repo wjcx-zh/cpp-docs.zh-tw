@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690087"
 ---
 # <a name="a27---use-of-c99-variable-length-arrays"></a>A.27 使用 C99 可變長度陣列
 下列範例會示範如何使用可變長度陣列 C99 (VLAs) 中`firstprivate`指示詞 ([區段 2.7.2.2](../../parallel/openmp/2-7-2-2-firstprivate.md) 26 頁面上)。  

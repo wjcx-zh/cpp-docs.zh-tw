@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241754"
 ---
 # <a name="compiler-error-c3019"></a>編譯器錯誤 C3019
 在 OpenMP 'for' 陳述式的遞增值具有格式不正確  

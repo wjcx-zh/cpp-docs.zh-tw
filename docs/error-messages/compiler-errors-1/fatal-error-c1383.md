@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226970"
 ---
 # <a name="fatal-error-c1383"></a>嚴重錯誤 C1383
 編譯器選項 /GL 與所安裝 Common Language Runtime 的版本不相容  

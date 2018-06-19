@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382163"
 ---
 # <a name="using-cricheditctrl"></a>使用 CRichEditCtrl
 Rich edit 控制項是使用者可以輸入和編輯文字的視窗。 文字字元和段落格式，可以指派，而且可包含內嵌的 OLE 物件。 表示 rich edit 控制項在 MFC 中由[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)類別。  

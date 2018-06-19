@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385534"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets：搭配使用通訊端與封存
 本文說明[CSocket 程式設計模型](#_core_the_csocket_programming_model)。 類別[CSocket](../mfc/reference/csocket-class.md)提供通訊端支援，在較高層級的抽象類別比[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket` 使用 MFC 序列化通訊協定的版本來傳遞資料，經由 MFC 通訊端物件來回[CArchive](../mfc/reference/carchive-class.md)物件。 `CSocket` 會提供封鎖 (同時管理 Windows 訊息的背景處理)，並且可讓您存取 `CArchive`，它可管理有關通訊的多個層面，否則您必須使用原始 API 或 `CAsyncSocket` 類別才能自行管理這些層面。  

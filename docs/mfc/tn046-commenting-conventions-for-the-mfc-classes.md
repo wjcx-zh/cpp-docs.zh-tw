@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380821"
 ---
 # <a name="tn046-commenting-conventions-for-the-mfc-classes"></a>TN046：MFC 類別的註解慣例
 這個技術提示原本是描述用來註解 MFC 類別的慣例。 這項資訊現在涵蓋於[MFC： 使用 MFC 原始程式檔](../mfc/using-the-mfc-source-files.md)。  

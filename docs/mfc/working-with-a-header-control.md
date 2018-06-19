@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383028"
 ---
 # <a name="working-with-a-header-control"></a>使用標題控制項
 若要使用的標頭控制項的簡易方式 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 是搭配清單控制項，請參閱 <<c4> [ 使用 CListCtrl](../mfc/using-clistctrl.md)稍後在本主題系列中。 您也可以單獨使用時，使用標題控制項。 MFC 呼叫**InitCommonControls**您。 主要工作如下：  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693259"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>如何：轉換使用取消的 OpenMP 迴圈來使用並行執行階段
 某些平行迴圈不需要執行所有的反覆項目。 例如，搜尋值的演算法可以終止之後在找到的值。 OpenMP 不提供一個機制來中斷平行迴圈。 不過，您可以使用布林值或旗標，以便表示方案已找到迴圈的反覆項目。 並行執行階段提供功能，可讓一項工作來取消尚未開始的其他工作。  

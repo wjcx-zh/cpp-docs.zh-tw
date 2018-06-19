@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383743"
 ---
 # <a name="view-classes-architecture"></a>檢視類別 (架構)
 `CView` 其衍生的類別是代表框架視窗的工作區的子視窗。 檢視可顯示資料，並接受輸入的文件。  

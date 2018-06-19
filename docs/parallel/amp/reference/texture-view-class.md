@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696262"
 ---
 # <a name="textureview-class"></a>texture_view 類別
 提供對紋理的寫入權限和讀取權限。 `texture_view` 只可以用來讀取其值類型的紋理`int`， `unsigned int`，或`float`具有預設值 32 位元 bpse。 若要閱讀其他紋理的格式，使用`texture_view<const value_type, _Rank>`。  

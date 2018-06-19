@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348220"
 ---
 # <a name="printing"></a>列印
 Microsoft Windows 實作與裝置無關的顯示。 在 MFC 中，這表示相同的繪製呼叫，在`OnDraw`負責繪圖和其他裝置，例如印表機上顯示您的檢視類別成員函式。 預覽列印，目標裝置是模擬的印表機輸出到顯示器。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381189"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>索引標籤和索引標籤控制項屬性
 您有相當大的控制權的外觀和行為的索引標籤控制項所組成的索引標籤 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 每個索引標籤可以有標籤、 圖示、 項目狀態和與其相關聯的應用程式定義的 32 位元值。 對於每個索引標籤上，您可以顯示圖示、 標籤，或兩者。  

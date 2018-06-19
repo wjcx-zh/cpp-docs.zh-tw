@@ -21,9 +21,10 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379469"
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT 結構
-`WINDOWPLACEMENT`結構包含在螢幕上視窗的位置之詳細資訊**。**  
+`WINDOWPLACEMENT`結構包含在螢幕上視窗的位置之詳細資訊 **。**  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,12 +41,12 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
   
 #### <a name="parameters"></a>參數  
  *length*  
- 指定長度，以位元組為單位結構**。**  
+ 指定長度，以位元組為單位結構 **。**  
   
  `flags`  
  指定旗標控制最小化的視窗與方法還原視窗的位置。 這個成員可以是下列其中一個或兩個下列旗標：  
   
-- **WPF_SETMINPOSITION**指定 x-和 y-位置的最小化視窗，可以指定**。** 這個旗標必須指定座標在中設定**ptMinPosition**成員。  
+- **WPF_SETMINPOSITION**指定 x-和 y-位置的最小化視窗，可以指定 **。** 這個旗標必須指定座標在中設定**ptMinPosition**成員。  
   
 - **WPF_RESTORETOMAXIMIZED**指定的 [還原] 視窗會最大化，不論它大化已最小化之前。 此設定無效，只還原視窗在下一次。 它不會變更預設的還原作業行為。 這個旗標時才有效唯一**SW_SHOWMINIMIZED**指定值**showCmd**成員。  
   

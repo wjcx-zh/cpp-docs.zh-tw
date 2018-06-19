@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385761"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>不使用程式碼精靈的控制項類型安全存取
 要建立類型安全存取控制項的第一個方法就是使用內嵌成員函式，將類別 `CWnd` 的 `GetDlgItem` 成員函式的傳回類型轉換為適當的 C++ 控制項類型，如下列範例所示：  

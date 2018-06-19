@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236127"
 ---
 # <a name="compiler-error-c2748"></a>編譯器錯誤 C2748
 Managed 或 WinRT 陣列建立必須有陣列大小或陣列初始設定式  

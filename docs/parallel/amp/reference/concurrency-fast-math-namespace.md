@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692154"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math 命名空間
 中的函式`fast_math`命名空間包含降低精確度，支援唯一的單精確度 (`float`)，並呼叫 DirectX 內建函式。 兩種版本的每個函式，例如`cos`和`cosf`。 這兩個版本，並傳回`float`，但每個呼叫相同的 DirectX 內建函式。  

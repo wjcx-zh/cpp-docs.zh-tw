@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380065"
 ---
 # <a name="testing-internet-applications"></a>測試網際網路應用程式
 在網際網路上有一些獨一無二的測試挑戰，特別是在 Web 伺服器上執行的應用程式。 您的初始測試可能會使用單一使用者的用戶端連接到測試伺服器來進行。 這對於偵錯您的程式碼將會非常有用。  

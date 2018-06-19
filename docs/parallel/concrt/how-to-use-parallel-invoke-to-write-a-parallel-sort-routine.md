@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689164"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>如何：使用 parallel_invoke 撰寫平行排序常式
 本文件說明如何使用[parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke)演算法，以改善 bitonic 排序演算法的效能。 雙調排序演算法以遞迴方式會輸入的序列分成較小排序的資料分割。 Bitonic 排序演算法可以平行執行，因為每個分割區作業無關的所有其他作業。  

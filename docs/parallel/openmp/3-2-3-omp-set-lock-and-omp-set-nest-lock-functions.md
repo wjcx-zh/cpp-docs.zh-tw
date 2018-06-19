@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689710"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock 和 omp_set_nest_lock 函式
 所有這些函式會封鎖執行函式，直到指定的鎖定可用，然後設定 鎖定的執行緒。 如果已解除鎖定使用簡單的鎖定。 如果已解除鎖定，或它已經由執行緒執行函式擁有使用可巢狀的鎖定。 格式如下：  

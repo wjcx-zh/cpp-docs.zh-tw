@@ -34,6 +34,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692141"
 ---
 # <a name="tiledindex-class"></a>tiled_index 類別
 提供的索引[tiled_extent](tiled-extent-class.md)物件。 此類別具有存取項目相對於本機的並排顯示來源和相對於來源通用的屬性。 如需並排顯示空間的詳細資訊，請參閱[使用磚](../../../parallel/amp/using-tiles.md)。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381019"
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 本文說明提供在 Microsoft Foundation Class 程式庫 (MFC) 以允許之間保存物件的序列化機制執行您的程式。  

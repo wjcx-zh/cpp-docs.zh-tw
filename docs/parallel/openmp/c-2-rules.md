@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694988"
 ---
 # <a name="c2-rules"></a>C.2 規則
 標記法節將說明 6.1 C 標準。 此文法附錄顯示 OpenMP C 和 c + + 的指示詞的基本語言文法的延伸模組。  

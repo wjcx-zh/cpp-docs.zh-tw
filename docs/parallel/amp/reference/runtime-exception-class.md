@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695742"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 類別
 C + + Accelerated Massive Parallelism (AMP) 程式庫中的例外狀況的基底類型。  

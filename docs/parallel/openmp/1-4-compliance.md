@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687227"
 ---
 # <a name="14-compliance"></a>1.4 符合標準
 OpenMP C/c + + 應用程式開發介面的實作是*OpenMP 相容*如果辨識，並會保留此規格中，所有項目的語意章節 1、 2、 3、 4 中所配置和附錄 c 附錄 A、 B、 D、 E 和 F 的資訊之用，而且不規格的一部分。 包含的 API 子集的實作不 OpenMP 標準。  

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345136"
 ---
 # <a name="dialog-data-exchange"></a>對話方塊資料交換
 如果您使用 DDX 機制，通常您會在 `OnInitDialog` 處理常式或對話方塊建構函式中，設定對話方塊物件成員變數的初始值設定。 立即在對話方塊顯示之前，框架的 DDX 機制會將成員變數的值傳送至對話方塊中，出現的位置中的控制項時對話方塊本身顯示以回應`DoModal`或**建立**. `OnInitDialog` 的 `CDialog` 預設實作會呼叫類別 `UpdateData` 的 `CWnd` 成員函式，以初始化對話方塊中的控制項。  

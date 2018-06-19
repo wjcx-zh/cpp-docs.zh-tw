@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384107"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020：ID 命名和編號慣例
 此提示說明 ID 命名和編號慣例 MFC 2.0 使用的資源、 命令、 字串、 控制項和子視窗。  

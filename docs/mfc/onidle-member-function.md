@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350363"
 ---
 # <a name="onidle-member-function"></a>OnIdle 成員函式
 當正在不處理任何 Windows 訊息時，架構會呼叫[CWinApp](../mfc/reference/cwinapp-class.md)成員函式[OnIdle](../mfc/reference/cwinapp-class.md#onidle) （MFC 程式庫參考中所述）。  

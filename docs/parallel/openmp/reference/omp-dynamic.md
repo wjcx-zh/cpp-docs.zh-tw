@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695807"
 ---
 # <a name="ompdynamic"></a>OMP_DYNAMIC
 指定執行階段 OpenMP 是否可調整的平行區域中的執行緒數目。  

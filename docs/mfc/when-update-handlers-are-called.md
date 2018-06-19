@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384130"
 ---
 # <a name="when-update-handlers-are-called"></a>呼叫更新處理常式的時機
 假設使用者在 [檔案] 功能表上按一下滑鼠，即產生 `WM_INITMENUPOPUP` 訊息。 架構的更新機制會統一更新 [檔案] 功能表上的所有項目，之後使用者才能看到功能表下拉式清單。  

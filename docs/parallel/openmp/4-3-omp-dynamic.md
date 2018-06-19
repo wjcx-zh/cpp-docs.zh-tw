@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686668"
 ---
 # <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 **OMP_DYNAMIC**環境變數啟用或停用動態調整可用的平行區域執行的執行緒數目，除非明確地啟用或停用藉由呼叫動態調整**omp_set_dynamic**程式庫常式。 其值必須是**TRUE**或**FALSE**。  

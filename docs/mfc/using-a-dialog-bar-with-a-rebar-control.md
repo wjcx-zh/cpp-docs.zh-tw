@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382902"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>搭配使用對話方塊列與 Rebar 控制項
 中所述[Rebar 控制項和群組列](../mfc/rebar-controls-and-bands.md)，每個群組列可以包含只有一個子視窗 （或控制項）。 如果您想要有一個以上的子視窗，每個群組列，這可能是一項限制。 方便的因應措施是使用多個控制項建立對話方塊列資源，然後將 rebar 群組列 （包含對話方塊列） 新增至 rebar 控制項。  

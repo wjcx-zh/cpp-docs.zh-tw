@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692850"
 ---
 # <a name="multithreading-and-locales"></a>多執行緒和地區設定
 C 執行階段程式庫和 c + + 標準程式庫提供支援變更程式的地區設定。 本主題討論使用多執行緒應用程式中的兩個程式庫的地區設定功能時，會發生的問題。  

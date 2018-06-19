@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693337"
 ---
 # <a name="sampler-class"></a>sampler 類別
 取樣器類別會彙總使用的紋理取樣的取樣組態資訊。  

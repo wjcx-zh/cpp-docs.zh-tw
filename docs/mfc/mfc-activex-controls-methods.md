@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348305"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX 控制項：方法
 ActiveX 控制項就會引發事件本身以及其控制項容器之間的通訊。 容器也可以透過方法和屬性溝通與控制項。 方法也會呼叫函式。  

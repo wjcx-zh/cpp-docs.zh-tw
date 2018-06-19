@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235359"
 ---
 # <a name="compiler-error-c2753"></a>編譯器錯誤 C2753
 '*範本*': 部分特製化不能符合主要樣板的引數清單  

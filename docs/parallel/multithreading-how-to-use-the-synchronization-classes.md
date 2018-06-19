@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689021"
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>多執行緒：如何使用同步類別
 撰寫多執行緒應用程式時，同步處理執行緒之間的資源存取權是常見的問題。 有兩個或多個執行緒同時存取相同的資料可能會導致不必要和無法預期的結果。 例如，一個執行緒可能在更新結構的內容而另一個執行緒正在讀取相同結構的內容。 它是未知資料讀取的執行緒會收到： 舊的資料、 新撰寫的資料，或可能是兩者的混合。 MFC 提供一些同步處理和同步處理存取類別，來協助解決這個問題。 本主題說明可用的類別，以及如何使用它們來建立一般的多執行緒應用程式中的安全執行緒類別。  

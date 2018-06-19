@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689606"
 ---
 # <a name="a30---use-of-reprivatization"></a>A.30 使用重新設為私用
 下列範例會示範 reprivatization 的變數。 可以標示為私用變數`private`巢狀指示詞中一次。 它們沒有封入平行區域中的共用。  

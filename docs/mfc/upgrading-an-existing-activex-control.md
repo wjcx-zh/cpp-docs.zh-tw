@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385303"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 現有的 ActiveX 控制項 （先前稱為 OLE 控制項） 可用不經修改網際網路上。 不過，您可以修改控制項以改善其效能。 當使用您在網頁上的控制項，還有其他考量。 .Ocx 檔案與所有支援的檔案必須是目標電腦上，或透過網際網路下載。 這可讓程式碼大小和下載時間的重要考量。 下載可封裝在簽署的.cab 檔案。 您可以標示為安全用於指令碼，以及用於初始化安全控制項。  

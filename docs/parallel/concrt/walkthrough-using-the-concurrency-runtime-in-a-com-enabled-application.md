@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692544"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>逐步解說：在啟用 COM 的應用程式中使用並行執行階段
 本文件將示範如何使用並行執行階段中使用元件物件模型 (COM) 的應用程式。  

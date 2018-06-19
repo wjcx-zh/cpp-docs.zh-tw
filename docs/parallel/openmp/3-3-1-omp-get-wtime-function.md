@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689489"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 函式
 `omp_get_wtime`函式會傳回雙精確度浮點數值等於耗用的時鐘時間 （秒），因為某些 「 時間過去 」。  實際"過去的時間 」 是任意的但它保證不會在應用程式執行期間變更。 格式如下：  

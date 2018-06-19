@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386141"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>使用類別來編寫 Windows 應用程式
 Microsoft Foundation Class (MFC) 程式庫中的類別結合在一起構成 「 應用程式架構 」 在您建置所在的 Windows 作業系統應用程式。 在非常廣泛的層級，架構會定義應用程式的基本架構，並提供標準的使用者介面的實作，可以置於基本架構。 您身為程式設計人員的工作是填入其餘的基本架構中，這是每個專屬於您的應用程式。 您可以取得開始使用 MFC 應用程式精靈建立著手起始應用程式的檔案。 您可以使用 Microsoft Visual c + + 資源編輯器來設計您的使用者介面項目以視覺化的方式，類別檢視命令，這些項目連接的程式碼，和類別庫來實作您應用程式特定的邏輯。  

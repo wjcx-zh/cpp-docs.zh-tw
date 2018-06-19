@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381842"
 ---
 # <a name="window-dialog-and-control-classes"></a>視窗、對話方塊和控制項類別
 類別`CWnd`和其衍生的類別會封裝`HWND`，Windows 視窗的控制代碼。 `CWnd` 可以用於本身，或做為基底衍生新類別。 類別庫所提供的衍生的類別代表各種 windows。  

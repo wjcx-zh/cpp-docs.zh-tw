@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378414"
 ---
 # <a name="coblist-class"></a>CObList 類別
 排序清單的非唯一的 fSupports`CObject`指標可循序或依指標值。  

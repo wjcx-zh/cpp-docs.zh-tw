@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380597"
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>設定個別項目的影像
 擴充的下拉式方塊項目所使用的影像的不同類型取決於中的值`iImage`， **iSelectedImage**，和**iOverlay**成員[COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746)結構。 每個值是控制項的相關聯的影像清單中的映像的索引。 根據預設，這些成員會設定為 0，使控制項來不顯示項目的任何影像。 如果您想要使用特定的項目以映像，您可以修改結構同理，當插入下拉式方塊項目或是藉由修改現有的下拉式方塊項目。  

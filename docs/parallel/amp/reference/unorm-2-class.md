@@ -43,6 +43,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685979"
 ---
 # <a name="unorm2-class"></a>unorm_2 類別
 表示兩個不帶正負號的一般數字的短向量。  

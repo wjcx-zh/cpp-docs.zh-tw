@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241219"
 ---
 # <a name="compiler-error-c2912"></a>編譯器錯誤 C2912
 明確特製化 'declaration' 不是函式樣板的特製化  

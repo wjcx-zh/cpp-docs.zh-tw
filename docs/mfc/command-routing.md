@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346278"
 ---
 # <a name="command-routing"></a>命令傳送
 處理命令時，您只需負責在命令與其處理函式之間建立訊息對應連接，而這項工作可透過 [屬性] 視窗來完成。 您也必須撰寫大部分的命令處理常式。  

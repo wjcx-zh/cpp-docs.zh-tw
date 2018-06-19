@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231845"
 ---
 # <a name="compiler-error-c2739"></a>編譯器錯誤 C2739
 'number'：明確的 Managed 或 WinRT 陣列維度必須是介於 1 到 32 之間  

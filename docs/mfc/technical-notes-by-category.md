@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383866"
 ---
 # <a name="technical-notes-by-category"></a>依分類區分的技術提示
 技術提示分成下列類別。 如需技術資訊數值清單，請參閱[依數字的技術提示](../mfc/technical-notes-by-number.md)。  

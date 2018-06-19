@@ -74,6 +74,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385521"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022：標準命令實作
 > [!NOTE]
@@ -180,7 +181,7 @@ ms.lasthandoff: 05/04/2018
   
      `CWinApp::OnFilePrintSetup` 有非常簡單的實作，建立`CPrintDialog`物件並呼叫**CWinApp::DoPrintDialog**實作函式。 這會設定應用程式的預設印表機設定。  
   
-     一般需要自訂此命令可讓每個文件的印表機設定，應該儲存與文件儲存時。 若要這樣做，您應該加入中的訊息對應處理常式您**CDocument**類別會建立`CPrintDialog`物件，請使用適當的印表機屬性將它初始化 (通常**hDevMode**和**hDevNames**)，呼叫**CPrintDialog::DoModal，**並儲存變更的印表機的設定。 健全的實作，您應該查看的實作**CWinApp::DoPrintDialog**偵測錯誤和**CWinApp::UpdatePrinterSelection**合理的預設值處理和追蹤整個系統的印表機變更。  
+     一般需要自訂此命令可讓每個文件的印表機設定，應該儲存與文件儲存時。 若要這樣做，您應該加入中的訊息對應處理常式您**CDocument**類別會建立`CPrintDialog`物件，請使用適當的印表機屬性將它初始化 (通常**hDevMode**和**hDevNames**)，呼叫**CPrintDialog::DoModal，** 並儲存變更的印表機的設定。 健全的實作，您應該查看的實作**CWinApp::DoPrintDialog**偵測錯誤和**CWinApp::UpdatePrinterSelection**合理的預設值處理和追蹤整個系統的印表機變更。  
   
 -   ID_FILE_PRINT 標準列印目前文件的功能  
   

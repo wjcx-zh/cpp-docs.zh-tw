@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197256"
 ---
 # <a name="fatal-error-c1121"></a>嚴重錯誤 C1121
 呼叫 CryptoAPI 失敗，請重新安裝 Visual Studio 或作業系統  

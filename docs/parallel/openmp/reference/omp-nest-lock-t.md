@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691738"
 ---
 # <a name="ompnestlockt"></a>omp_nest_lock_t
 保留鎖定的相關資訊的下列項目類型： 是否鎖定，而且執行緒的識別擁有鎖定和巢狀的計數。  

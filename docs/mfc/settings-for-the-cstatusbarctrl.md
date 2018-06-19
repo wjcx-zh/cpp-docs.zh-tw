@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380158"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl 的設定
 預設位置[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)狀態視窗底端的父視窗，但您可以指定`CCS_TOP`讓它出現在父視窗工作區頂端的樣式。  

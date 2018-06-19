@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693191"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>逐步解說：矩陣乘法
 此逐步解說示範如何使用 c + + AMP 加速矩陣乘法的執行。 會呈現兩種演算法，另一個則沒有可並排顯示，另一個並排顯示。  

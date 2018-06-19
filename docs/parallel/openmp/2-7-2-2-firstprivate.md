@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687396"
 ---
 # <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
 **Firstprivate**子句提供所提供的功能的超集**私人**子句。 語法**firstprivate**子句如下所示：  

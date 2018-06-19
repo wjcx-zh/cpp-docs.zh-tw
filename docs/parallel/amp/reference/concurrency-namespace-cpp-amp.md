@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693373"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 命名空間 (C++ AMP)
 提供類別和資料平行硬體加速的 c + + 程式碼執行的函式。 如需詳細資訊，請參閱[c + + AMP 概觀](../cpp-amp-overview.md)  

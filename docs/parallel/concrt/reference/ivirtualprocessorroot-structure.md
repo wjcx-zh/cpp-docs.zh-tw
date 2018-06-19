@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692420"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 結構
 執行緒 Proxy 可以在其上執行的硬體執行緒的抽象概念。  

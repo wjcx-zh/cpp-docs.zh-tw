@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693103"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>平行診斷工具 (並行執行階段)
 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 可廣泛支援多執行緒應用程式的偵錯和分析。  

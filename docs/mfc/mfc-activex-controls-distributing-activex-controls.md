@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358803"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控制項：散發 ActiveX 控制項
 本文將討論與轉散發 ActiveX 控制項相關的幾個問題：  

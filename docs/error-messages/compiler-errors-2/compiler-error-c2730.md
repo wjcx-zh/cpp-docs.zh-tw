@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229116"
 ---
 # <a name="compiler-error-c2730"></a>編譯器錯誤 C2730
 'class' : 不可為它自己的基底類別  

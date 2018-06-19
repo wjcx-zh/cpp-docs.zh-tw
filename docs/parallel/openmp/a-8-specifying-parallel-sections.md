@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694052"
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8 指定平行處理區段
 在下列範例中，(如[區段 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md)在頁面上 14) 函式*xaxis*， *y 軸*，和*zaxis*可同時執行。 第一個`section`指示詞是選擇性的。  請注意，所有`section`指示詞需要的語彙範圍中出現`parallel sections`建構。  

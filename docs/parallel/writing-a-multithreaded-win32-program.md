@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689970"
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>撰寫多執行緒 Win32 程式
 當您撰寫多執行緒程式時，您必須協調其行為和[程式的資源的運用](#_core_sharing_common_resources_between_threads)。 您也必須確定每個執行緒會收到[自己的堆疊](#_core_thread_stacks)。  

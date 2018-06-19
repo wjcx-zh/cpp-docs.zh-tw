@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694091"
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
 平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 也可以撰寫工作與其他工作，使用接續 ( `then`)，和聯結 ( `when_all`) 和 choice ( `when_any`) 模式。  

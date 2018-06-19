@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692778"
 ---
 # <a name="texture-class"></a>texture 類別
 紋理是將資料彙總上`accelerator_view`範圍網域中。 它是變數，其中每個項目範圍網域中的集合。 每個變數會保存至 c + + 基本類型對應的值 ( `unsigned int`， `int`， `float`， `double`)、 純量類型 ( `norm`，或`unorm`)，或短向量類型。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688293"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry 類別
 `network_link_registry` 抽象基底類別會管理來源和目標區塊之間的連結。  

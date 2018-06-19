@@ -135,6 +135,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378164"
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 類別
 `CPaneContainer`類別是由 MFC 實作停駐模型的基本元件。 這個類別的物件儲存兩個停駐窗格的指標或 `CPaneContainer.` 的兩個執行個體的指標，也存放分隔窗格 (或容器) 的分割線的指標。 Framework 可以將容器巢狀於容器內部，建置表示複雜停駐配置的二進位樹狀目錄。 二進位樹狀目錄的根儲存在[CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)物件。  

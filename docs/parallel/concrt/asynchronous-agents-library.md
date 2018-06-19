@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688992"
 ---
 # <a name="asynchronous-agents-library"></a>非同步代理程式程式庫
 非同步代理程式程式庫 (或簡稱*代理程式程式庫*) 提供可讓您增加啟用並行的應用程式開發之穩定性的程式設計模型。 代理程式程式庫是 c + + 樣板程式庫可提升行動為基礎的程式設計模型和同處理序訊息傳遞，以進行粗略的資料流程和管線工作。 代理程式程式庫為基礎的並行執行階段的排程及資源管理元件。  

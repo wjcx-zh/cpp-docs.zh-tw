@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690503"
 ---
 # <a name="a21---scoping-variables-with-the-private-clause"></a>A.21 使用 private 子句設定變數範圍
 值`i`和`j`在下列範例中並未定義在平行區域從結束：  

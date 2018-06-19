@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229685"
 ---
 # <a name="compiler-error-c2567"></a>編譯器錯誤 C2567
 無法開啟 'file' 中的中繼資料，檔案可能已刪除或移動  

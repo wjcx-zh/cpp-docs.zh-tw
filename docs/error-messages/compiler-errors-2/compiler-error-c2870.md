@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243485"
 ---
 # <a name="compiler-error-c2870"></a>編譯器錯誤 C2870
 'name': 命名空間定義必須出現在檔案範圍，或立即在其他命名空間定義  

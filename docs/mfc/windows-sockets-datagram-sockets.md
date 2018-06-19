@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383938"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows Sockets：資料包通訊端
 本文說明兩種可用的 Windows Socket 類型之一資料包通訊端。 (另一種是[資料流通訊端](../mfc/windows-sockets-stream-sockets.md)。)  

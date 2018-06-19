@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380899"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050：MFC/OLE 通用對話方塊 (MFCUIx32)
 這個附註最初涵蓋一些問題以及 MFC 未來將提供與使用的 OLE 通用對話方塊。 OLE 通用對話方塊現在已提供做為元件內建至系統 (OLEDLG.DLL) 並且已完整記錄至產品文件內。  

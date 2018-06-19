@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689983"
 ---
 # <a name="multithreading-programming-tips"></a>多執行緒：程式設計提示
 存取資料時，多執行緒應用程式會需要更嚴格的小心比單一執行緒應用程式。 因為有多個，獨立路徑中執行的同時使用多執行緒應用程式中，演算法、 資料或兩者都必須知道該資料無法一次使用一個以上的執行緒。 本主題說明撰寫多執行緒應用程式使用 Microsoft Foundation Class (MFC) 程式庫時，避免潛在的問題的技術。  

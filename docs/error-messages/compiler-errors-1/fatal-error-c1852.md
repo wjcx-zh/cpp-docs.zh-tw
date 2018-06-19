@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199507"
 ---
 # <a name="fatal-error-c1852"></a>嚴重錯誤 C1852
 'filename' 是無效的先行編譯標頭檔  

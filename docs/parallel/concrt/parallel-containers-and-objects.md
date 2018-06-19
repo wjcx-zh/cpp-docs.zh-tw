@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694742"
 ---
 # <a name="parallel-containers-and-objects"></a>平行容器和物件
 平行模式程式庫 (PPL) 包含數個容器和物件，提供安全執行緒存取其項目。  

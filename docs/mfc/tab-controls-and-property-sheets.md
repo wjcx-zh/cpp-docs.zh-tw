@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385868"
 ---
 # <a name="tab-controls-and-property-sheets"></a>索引標籤控制項和屬性工作表
 屬性工作表具有多頁對話方塊或 「 索引標籤對話方塊 」 可以顯示最多 24 對話方塊範本資源給使用者。 屬性工作表的範例，請參閱 Windows 顯示內容 對話方塊或下列 MFC 範例應用程式：  

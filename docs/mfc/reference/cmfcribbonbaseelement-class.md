@@ -247,6 +247,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378677"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 類別
 `CMFCRibbonBaseElement`類別是基底類別，您可以加入的所有項目的[功能區列](../../mfc/reference/cmfcribbonbar-class.md)。 功能區項目的範例包括功能區按鈕、功能區核取方塊和功能區下拉式方塊。  

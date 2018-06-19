@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198686"
 ---
 # <a name="compiler-error-c2436"></a>編譯器錯誤 C2436
 'identifier': 成員函式或建構函式初始設定式清單中的巢狀的類別  

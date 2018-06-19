@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384693"
 ---
 # <a name="tn006-message-maps"></a>TN006：訊息對應
 此提示描述 MFC 訊息對應工具。  

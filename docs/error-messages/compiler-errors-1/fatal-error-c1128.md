@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226261"
 ---
 # <a name="fatal-error-c1128"></a>嚴重錯誤 C1128
 區段數目超過目的檔格式的限制： 請以 /bigobj 編譯  

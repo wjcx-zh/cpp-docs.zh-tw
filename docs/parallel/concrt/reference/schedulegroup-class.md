@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688683"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 類別
 代表排程群組的抽象概念。 排程群組會將一組相關的工作組織在一起，以讓這些工作獲得暫時緊密排程在一起的優勢，其方法如下：透過在同一個群組中執行另一個工作再移至另一個群組；透過再同一個 NUMA 節點或實體通訊端的同一個群組內執行多個項目。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692687"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 結構
 資源管理員所定義的拓撲節點介面。 節點可包含一個或多個執行資源。  

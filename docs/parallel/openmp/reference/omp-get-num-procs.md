@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691426"
 ---
 # <a name="ompgetnumprocs"></a>omp_get_num_procs
 傳回函式呼叫時的可用處理器的數目。  

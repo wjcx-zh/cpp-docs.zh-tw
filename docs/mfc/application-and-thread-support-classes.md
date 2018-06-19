@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341306"
 ---
 # <a name="application-and-thread-support-classes"></a>應用程式和執行緒支援類別
 每個應用程式有只有一個應用程式物件。此物件會協調執行的程式中的其他物件，並衍生自`CWinApp`。  

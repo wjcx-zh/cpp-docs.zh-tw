@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688787"
 ---
 # <a name="schedule-groups"></a>排程群組
 本文件說明並行執行階段中的排程群組的角色。 A*排程群組*視為，或分組，相關的工作。 每一個排程器有一或多個排程群組。 當您需要在工作之間有高度位置關係時 (例如一個相關工作的群組可因為在相同處理器節點上執行而受益)，請使用排程群組。 當您的應用程式都有特定品質需求，例如，當您想要限制配置給一組工作的處理資源量，相反地，使用排程器執行個體。 如需排程器執行個體的詳細資訊，請參閱[排程器執行個體](../../parallel/concrt/scheduler-instances.md)。  

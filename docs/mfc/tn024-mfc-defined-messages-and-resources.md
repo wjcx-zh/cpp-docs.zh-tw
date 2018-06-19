@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385608"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定義的訊息和資源
 > [!NOTE]
@@ -161,7 +162,7 @@ ms.lasthandoff: 05/04/2018
  如需詳細資訊，請參閱的實作`CMiniFrameWnd`。  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- 當視窗在其 「 最上層群組 」 中的啟用或停用時，此訊息會傳送至最上層視窗。 如果它是最上層視窗 （沒有父系或擁有者），或隸屬於這種視窗，視窗會是最上層群組的一部分。 這個訊息是使用中的類似**WM_ACTIVATEAPP，**但在其中 （通常在 OLE 應用程式） 的單一視窗階層架構中混用 windows 屬於不同的程序的情況下運作。  
+ 當視窗在其 「 最上層群組 」 中的啟用或停用時，此訊息會傳送至最上層視窗。 如果它是最上層視窗 （沒有父系或擁有者），或隸屬於這種視窗，視窗會是最上層群組的一部分。 這個訊息是使用中的類似**WM_ACTIVATEAPP，** 但在其中 （通常在 OLE 應用程式） 的單一視窗階層架構中混用 windows 屬於不同的程序的情況下運作。  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP，WM_HELPHITTEST，WM_EXITHELPMODE  
  即時線上說明的實作中，會使用這些訊息。 請參閱[技術附註 28](../mfc/tn028-context-sensitive-help-support.md)如需詳細資訊。  

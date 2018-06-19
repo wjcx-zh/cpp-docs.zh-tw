@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689268"
 ---
 # <a name="multithreading-creating-worker-threads"></a>多執行緒：建立背景工作執行緒
 背景工作執行緒通常用來處理使用者應該不需要等待要繼續使用您的應用程式的背景工作。 重新計算和幕後列印等工作是背景工作執行緒的良好範例。 本主題詳細說明建立工作者執行緒的必要步驟。 主題包括：  

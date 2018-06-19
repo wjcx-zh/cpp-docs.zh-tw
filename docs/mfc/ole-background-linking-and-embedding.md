@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347275"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE 背景：連結與內嵌
 在容器應用程式中使用 [貼上] 命令可以建立內嵌元件或內嵌項目。 內嵌項目的來源資料會儲存為包含該項目之 OLE 文件的一部分。 如此一來，文書處理器文件的文件檔案就可以包含文字，也可以包含點陣圖、圖表、公式，或任何其他類型的資料。  

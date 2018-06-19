@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690438"
 ---
 # <a name="a31---thread-safe-lock-functions"></a>A.31 安全執行緒鎖定函式
 下列 c + + 範例示範如何初始化在平行區域中的鎖定陣列使用`omp_init_lock`([區段 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) 42 頁面上)。  

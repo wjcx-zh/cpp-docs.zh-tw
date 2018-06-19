@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382687"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>在對話方塊中使用通用控制項
 Windows 通用控制項可用於[對話方塊](../mfc/dialog-boxes.md)，表單檢視、 記錄檢視，以及根據對話方塊範本的其他任何視窗。 下列含次要變更的程序，也可處理表單。  

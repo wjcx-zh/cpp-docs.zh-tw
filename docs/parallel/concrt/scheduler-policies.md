@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690403"
 ---
 # <a name="scheduler-policies"></a>排程器原則
 本文件說明並行執行階段中的排程器原則的角色。 A*排程器原則*控制排程器在管理工作時使用的策略。 例如，請考慮要求某些工作執行 `THREAD_PRIORITY_NORMAL` 以及要求其他工作執行 `THREAD_PRIORITY_HIGHEST` 的應用程式。  您可以建立兩個排程器執行個體：一個將 `ContextPriority` 原則指定為 `THREAD_PRIORITY_NORMAL`，另一個將同一個原則指定為 `THREAD_PRIORITY_HIGHEST`。  

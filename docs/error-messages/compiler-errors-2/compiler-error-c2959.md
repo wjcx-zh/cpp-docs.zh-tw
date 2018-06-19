@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243789"
 ---
 # <a name="compiler-error-c2959"></a>編譯器錯誤 C2959
 泛型類別或函式可能不是樣板的成員  

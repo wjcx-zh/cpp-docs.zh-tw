@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890408"
 ---
 # <a name="transmitas"></a>transmit_as
 指示編譯器將呈現的型別用戶端和伺服器應用程式管理，與傳輸類型產生關聯。  

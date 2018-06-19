@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384777"
 ---
 # <a name="turning-off-the-activate-when-visible-option"></a>關閉可見時啟動選項
 控制項有兩種基本狀態： 作用中和非使用中。 傳統上，這些狀態已由控制項是否具有視窗辨別。 作用中的控制項具有視窗;非現用控制項不提供支援。 無視窗啟用引入，這樣的區別不再通用的但仍適用於許多控制項。  

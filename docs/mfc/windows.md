@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384461"
 ---
 # <a name="windows"></a>Windows
 此系列文章涵蓋在 MFC 架構中的視窗物件。 所有的 MFC 視窗是衍生自類別[CWnd](../mfc/reference/cwnd-class.md)，包括框架視窗、 檢視、 對話方塊和控制項。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381367"
 ---
 # <a name="type-safe-access-to-controls-in-a-dialog-box"></a>對話方塊中之控制項的類型安全存取
 對話方塊中的控制項可以使用 MFC 控制項類別的介面，例如 `CListBox` 和 `CEdit`。 您可以建立控制項物件，並將它附加至對話方塊控制項。 然後可以透過其類別介面來存取該控制項，呼叫成員函式以便在控制項上作業。 這裡所述的方法是專門設計來提供對控制項的型別安全存取。 這對於編輯方塊和清單方塊之類的控制項而言特別實用。  

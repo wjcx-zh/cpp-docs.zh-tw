@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690607"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>使用 accelerator 和 accelerator_view 物件
 您可以使用[accelerator](../../parallel/amp/reference/accelerator-class.md)和[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)類別來指定裝置或模擬器上執行您的 c + + AMP 程式碼。 系統可能會有數個裝置或不同的記憶體數量、 共用的記憶體支援，偵錯支援或雙精確度支援模擬器。 C + + Accelerated Massive Parallelism (c + + AMP) 提供 Api，可用來檢查可用的快速鍵、 設定另一個做為預設值，指定多個位於 accelerator_views 的多個呼叫 parallel_for_each，並執行特殊的偵錯工作。  

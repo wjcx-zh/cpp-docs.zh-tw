@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385813"
 ---
 # <a name="using-csliderctrl"></a>使用 CSliderCtrl
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md)類別代表滑桿控制項，這也稱為 trackbar。 「滑桿控制項」是包含一個滑桿和選擇性刻度標記的視窗。 當使用者使用滑鼠或方向鍵移動滑桿時，滑桿控制項會傳送通知訊息以指出變更。  

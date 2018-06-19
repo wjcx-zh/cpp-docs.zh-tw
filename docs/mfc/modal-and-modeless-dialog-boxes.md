@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346557"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>強制回應和非強制回應對話方塊
 您可以使用類別[CDialog](../mfc/reference/cdialog-class.md)來管理兩種類型的對話方塊：  

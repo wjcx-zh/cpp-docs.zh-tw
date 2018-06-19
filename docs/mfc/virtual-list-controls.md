@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384188"
 ---
 # <a name="virtual-list-controls"></a>虛擬清單控制項
 虛擬清單控制項是具有清單檢視控制項**LVS_OWNERDATA**樣式。 這個樣式可讓控制項最多支援項目計數`DWORD`(預設項目計數只會延伸到`int`)。 不過，此樣式所提供的最大優點是能夠一次只能有在記憶體中的資料項目的子集。 這可讓虛擬清單檢視控制項本身的資訊，大型資料庫搭配使用特定的方法，存取資料的已備妥。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379680"
 ---
 # <a name="selecting-a-graphic-object-into-a-device-context"></a>選取圖形物件放入裝置內容中
 本主題適用於使用中視窗的裝置內容的圖形物件。 之後您[建立繪圖物件](../mfc/one-stage-and-two-stage-construction-of-objects.md)，您必須放入裝置內容，來取代預設的物件儲存於該處選取它：  

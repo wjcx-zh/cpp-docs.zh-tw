@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379992"
 ---
 # <a name="reflected-window-message-ids"></a>反映視窗訊息 ID
 一種較快建立 ActiveX 控制項或其他特殊控制項的方法是子類別化一個視窗。 如需詳細資訊，請參閱[MFC ActiveX 控制項： 子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。  

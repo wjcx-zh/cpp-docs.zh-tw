@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383328"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;和&gt;&gt;運算子
 `CArchive` 提供 <\<和 >> 用於寫入和讀取簡單資料類型的運算子以及`CObject`s 和檔案。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274687"
 ---
 # <a name="compiler-error-c3736"></a>編譯器錯誤 C3736
 'event': 必須是方法，或如果是 managed 事件，您可以選擇的資料成員  

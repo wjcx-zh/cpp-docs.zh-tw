@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690484"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>從 OpenMP 移轉至並行執行階段
 並行執行階段支援多種不同的程式設計模型。 這些模型有可能相互重疊，但或許也可彌補其他程式庫之模型的不足之處。 在此文件區段比較[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)為並行執行階段，並提供有關如何移轉現有的 OpenMP 程式碼以使用並行執行階段的範例。  

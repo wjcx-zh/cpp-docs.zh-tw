@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385907"
 ---
 # <a name="using-ctoolbarctrl"></a>使用 CToolBarCtrl
 您可以使用工具列控制項 ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) 來建立包含按鈕和選擇性空間的控制項視窗。 工具列控制項視窗中的每個按鈕都會在使用者選取它時，傳送命令訊息到父視窗。 通常，工具列中的按鈕對應於應用程式功能表中的項目，為使用者提供其他更直接的方式來存取應用程式的命令。  

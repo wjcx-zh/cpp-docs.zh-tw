@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233468"
 ---
 # <a name="compiler-error-c2752"></a>編譯器錯誤 C2752
 'template': 一個以上的部分特製化符合樣板引數清單  

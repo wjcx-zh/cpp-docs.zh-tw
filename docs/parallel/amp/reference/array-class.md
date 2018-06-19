@@ -37,6 +37,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694702"
 ---
 # <a name="array-class"></a>array 類別
 表示用來將資料移至對應的資料容器。  
@@ -673,7 +674,7 @@ Array_view 或 const array_view 物件根據以 ElementType 並從 N 減少到 1
 
 ### <a name="remarks"></a>備註
 有時候很方便，如同它是線性的一維陣列，可能是不同的值型別比來源陣列檢視多維陣列。 您可以使用這個方法可達到這個目的。
-**注意：**型別重新解譯使用不同的值類型的陣列物件，而是可能不安全的作業。 我們建議您小心使用這項功能。 
+**注意：** 型別重新解譯使用不同的值類型的陣列物件，而是可能不安全的作業。 我們建議您小心使用這項功能。 
 
 下列程式碼提供一個範例。
 

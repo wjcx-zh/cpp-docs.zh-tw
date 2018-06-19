@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690113"
 ---
 # <a name="walkthrough-implementing-futures"></a>逐步解說：實作未來
 本主題說明如何在您的應用程式中實作未來。 本主題示範如何結合現有的功能在並行執行階段中轉換成的更多。  

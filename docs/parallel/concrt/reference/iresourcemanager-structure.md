@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693493"
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 結構
 並行執行階段資源管理員的介面。 這是排程器用來與資源管理員通訊的介面。  

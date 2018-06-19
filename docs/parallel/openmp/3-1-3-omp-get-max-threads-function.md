@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687507"
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads 函式
 **Omp_get_max_threads**函式傳回一個整數，保證至少會用來組成一個小組，如果沒有在平行區域的執行緒數目一樣大**num_threads**子句即將此時所發現的程式碼中。 格式如下：  

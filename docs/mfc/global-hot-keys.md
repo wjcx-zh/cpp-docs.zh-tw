@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344226"
 ---
 # <a name="global-hot-keys"></a>全域熱鍵
 全域熱鍵是與特定藉視窗相關聯。 它可讓使用者啟動視窗中，從系統的任何部分。 應用程式設定特定視窗的全域快速鍵傳送[WM_SETHOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646284)至該視窗的訊息。 比方說，如果`m_HotKeyCtrl`是[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)物件和`pMainWnd`是指標，要在按下便捷鍵時要啟動視窗中，您可以使用下列程式碼產生關聯的熱鍵控制項中指定所指向視窗`pMainWnd`。  

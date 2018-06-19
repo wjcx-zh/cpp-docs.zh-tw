@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693545"
 ---
 # <a name="241-for-construct"></a>2.4.1 for 建構
 **如**指示詞會識別反覆性工作共用建構，可指定相關聯的迴圈的反覆項目，則會以平行方式執行。 反覆項目**如**迴圈分散於存在於小組執行的平行建構，它會繫結的執行緒。 語法**如**建構如下所示：  

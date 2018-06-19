@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689177"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 類別
 `task_continuation_context` 類別可讓您指定您想要執行接續的位置。 僅適用於 Windows 執行階段應用程式從這個類別。 針對非 Windows 執行階段應用程式，工作接續的執行內容會是取決於執行階段，而且不可設定。  

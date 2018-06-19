@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688124"
 ---
 # <a name="264-atomic-construct"></a>2.6.4 atomic 建構
 `atomic`指示詞可確保特定的記憶體位置會以不可分割方式，更新，而不是公開多個可能性同時撰寫執行緒。 語法`atomic`指示詞時，如下所示：  

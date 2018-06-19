@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688202"
 ---
 # <a name="taskhandle-class"></a>task_handle 類別
 `task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。  

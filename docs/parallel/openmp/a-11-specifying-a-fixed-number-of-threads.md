@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686535"
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11 指定固定的執行緒數目
 有些程式依賴固定、 預先指定的數字，要正確執行的執行緒。  動態調整的執行緒數目的預設值是由實作定義，因為這類程式可以選擇關閉動態執行緒功能和設定明確地確保可攜性的執行緒數目。 下列範例示範如何使用執行此動作`omp_set_dynamic`([區段 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 39 頁面上)，和`omp_set_num_threads`([區段 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) 36 頁面上):  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687267"
 ---
 # <a name="21-directive-format"></a>2.1 指示詞格式
 在文法正式指定 OpenMP 指示詞的語法[旓紵 C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)，和非正式地，如下所示：  

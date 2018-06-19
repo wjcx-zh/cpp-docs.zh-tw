@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689112"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28 使用 num_threads 子句
 下列範例會示範`num_threads`子句 ([2.3 節](../../parallel/openmp/2-3-parallel-construct.md)在 8 頁面上)。 最多 10 個執行緒執行平行區域時。  

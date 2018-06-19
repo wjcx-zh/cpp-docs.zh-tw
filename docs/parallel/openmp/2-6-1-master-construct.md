@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689551"
 ---
 # <a name="261-master-construct"></a>2.6.1 master 建構
 **主要**指示詞會識別指定的結構化的區塊由小組主要執行緒執行的建構。 語法**主要**指示詞時，如下所示：  

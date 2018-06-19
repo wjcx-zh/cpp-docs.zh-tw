@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891590"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar"></a>顯示或隱藏對話方塊編輯器工具列
 當您開啟對話方塊編輯器時，對話方塊編輯器工具列會自動出現在您的方案的頂端。  

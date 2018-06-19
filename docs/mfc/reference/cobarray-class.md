@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377910"
 ---
 # <a name="cobarray-class"></a>CObArray 類別
 支援 `CObject` 指標的陣列。  

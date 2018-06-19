@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227272"
 ---
 # <a name="fatal-error-c1197"></a>嚴重錯誤 C1197
 無法參考 'mscorlib.dll_1'，因為程式已經參考 'mscorlib.dll_2'  

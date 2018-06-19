@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384084"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016：搭配使用 C++多重繼承與 MFC
 此提示說明如何對於 Microsoft Foundation Classes 搭配使用多重繼承 (MI)。 使用 MI 不需要 MFC。 MI 未使用於任何 MFC 類別，並且不需要撰寫類別庫。  

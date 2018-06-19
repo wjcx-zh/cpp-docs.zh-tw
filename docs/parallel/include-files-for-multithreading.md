@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685797"
 ---
 # <a name="include-files-for-multithreading"></a>多執行緒的 Include 檔
 標準 include 檔的文件庫中實作時，宣告 C 執行階段程式庫函式。 如果您使用[完全最佳化](../build/reference/ox-full-optimization.md)(/ Ox) 或[fastcall 呼叫慣例](../build/reference/gd-gr-gv-gz-calling-convention.md)(/ Gr) 選項，編譯器會假設所有函數都應該使用暫存器呼叫慣例。 執行階段程式庫函式已使用的 C 呼叫慣例，在編譯和標準 include 檔案中的宣告會告訴編譯器產生正確的外部參考，這些函式。  

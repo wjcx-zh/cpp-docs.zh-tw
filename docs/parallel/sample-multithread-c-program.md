@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687988"
 ---
 # <a name="sample-multithread-c-program"></a>多執行緒 C 程式範例
 Bounce.c 是一個多執行緒程式範例，建立新執行緒的每個時間字母或**A**型別。 每個執行緒退笑臉，在螢幕的不同色彩。 最多 32 個執行緒可以建立。 程式的正常終止，就會發生時`q`或**Q**型別。 編譯和連結 Bounce.c 的相關資訊，請參閱[編譯和連結多執行緒程式](../parallel/compiling-and-linking-multithread-programs.md)。  

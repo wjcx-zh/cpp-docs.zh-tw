@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694325"
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14 使用 flush 指示詞不搭配清單
 下列範例 (如[區段 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md)在 20 頁面上) 區分出受影響的共用的物件`flush`指示詞沒有從共用不受影響的物件清單：  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693802"
 ---
 # <a name="synchronization-data-structures"></a>同步處理資料結構
 並行執行階段提供許多可讓您從多個執行緒進行同步存取共用資料的資料結構。 當您共用不常修改的資料時，這些資料結構是很有用。 同步處理物件，例如關鍵區段，會造成其他執行緒等候，直到有可用的共用的資源。 因此，如果您使用這類物件，以同步存取經常使用的資料，您可以在應用程式中遺失延展性。 [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)提供[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別，可讓您以共用資源在數個執行緒或工作，而不需要同步處理。 如需有關`combinable`類別，請參閱[平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)。  

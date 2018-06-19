@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691046"
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE**僅適用於**如**和**平行的**有排程類型的指示詞**執行階段**。 所有這類迴圈的排程類型和區塊大小可以藉由設定這個環境變數，任何可辨識的排程類型，並選擇性設定在執行階段*chunk_size*。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33839056"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>修正程式庫內部項目上的相依性
 

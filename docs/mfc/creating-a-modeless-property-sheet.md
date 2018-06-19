@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342718"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>建立非強制回應屬性工作表
 一般來說，您建立屬性工作表為強制回應。 當使用強制回應屬性工作表時，使用者必須先關閉屬性工作表之前使用的應用程式的任何其他部分。 本文描述您可用來建立可讓使用者使用應用程式的其他部分時，將屬性工作表保持開啟的非強制回應屬性工作表的方法。  

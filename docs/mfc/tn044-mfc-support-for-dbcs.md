@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380301"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044：DBCS 的 MFC 支援
 本技術提示說明在 MFC 中對於「雙位元組字元集」或 DBCS 的支援。 此資訊，以及支援 UNICODE 現在在 MFC 的有關*類別庫參考*。  

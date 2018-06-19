@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241800"
 ---
 # <a name="compiler-error-c2928"></a>編譯器錯誤 C2928
 明確具現化; 'identifier' 不是函式或樣板類別 (Template-Class) 的靜態資料成員  

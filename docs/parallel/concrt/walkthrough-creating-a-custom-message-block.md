@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694673"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>逐步解說：建立自訂訊息區
 本文件說明如何建立依優先順序排序內送訊息的自訂訊息區塊類型。  

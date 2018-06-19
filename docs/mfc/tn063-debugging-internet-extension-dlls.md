@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380461"
 ---
 # <a name="tn063-debugging-internet-mfc-extension-dlls"></a>TN063： 偵錯網際網路 MFC 擴充 Dll
 這項資訊已過期且已移除。  

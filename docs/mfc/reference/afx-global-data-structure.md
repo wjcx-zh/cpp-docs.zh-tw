@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357224"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
 `AFX_GLOBAL_DATA` 結構包含的欄位和方法，用於管理架構，或自訂應用程式外觀和行為。  

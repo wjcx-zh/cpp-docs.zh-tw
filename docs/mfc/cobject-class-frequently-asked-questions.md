@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343563"
 ---
 # <a name="cobject-class-frequently-asked-questions"></a>CObject 類別：常見問題集
 本章節包含 `CObject` 類別的相關問題。  

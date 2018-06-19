@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349258"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控制項：加入內建方法
 內建方法與自訂方法的類別已實作[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含預先定義的成員函式，可支援您的控制項重新整理方法。 此內建方法的分派對應項目是**DISP_STOCKFUNC_REFRESH**。  

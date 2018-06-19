@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382147"
 ---
 # <a name="tree-control-item-position"></a>樹狀目錄控制項目位置
 當項目加入樹狀結構控制項中設定項目的初始位置 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 使用`InsertItem`成員函式。 成員函式呼叫指定的父項目控點，而且要插入新項目之後的項目控制代碼。 第二個控制代碼必須找出給定的父代的其中一個子項目，或其中一個值： `TVI_FIRST`， `TVI_LAST`，或`TVI_SORT`。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691192"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>如何：使用排程群組來影響執行順序
 並行執行階段，工作都會排定的順序不具決定性。 不過，您可以使用排程的原則來影響執行工作順序。 本主題示範如何使用排程群組，並搭配[concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey)排程器原則來影響執行工作順序。  

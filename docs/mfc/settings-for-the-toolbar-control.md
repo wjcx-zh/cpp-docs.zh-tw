@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379703"
 ---
 # <a name="settings-for-the-toolbar-control"></a>工具列控制項的設定
 工具列上的按鈕可以顯示點陣圖、字串或兩者皆可。 根據預設，影像大小設定為 16 x 15 像素。 所有按鈕寬度都相同，預設為 24 x 22 像素。 工具列的高度取決於按鈕的高度，工具列的寬度也根據預設與父視窗的用戶端區的寬度相同。  

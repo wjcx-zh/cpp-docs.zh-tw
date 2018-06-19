@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245798"
 ---
 # <a name="compiler-error-c2919"></a>編譯器錯誤 C2919
 type'：運算子不能用在 WinRT 類型的已發行介面上  

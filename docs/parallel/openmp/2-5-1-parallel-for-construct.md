@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687149"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for 建構
 **平行的**指示詞是捷徑**平行**包含只有一個區域**如**指示詞。 語法**平行的**指示詞時，如下所示：  

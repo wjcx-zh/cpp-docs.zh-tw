@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689034"
 ---
 # <a name="completionfuture-class"></a>completion_future 類別
 表示未來對應 c + + AMP 的非同步作業。  

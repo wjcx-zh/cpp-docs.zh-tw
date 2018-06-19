@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695245"
 ---
 # <a name="a7---using-the-reduction-clause"></a>A.7 使用 reduction 子句
 下列範例會示範 reduction 子句 ([區段 2.7.2.6](../../parallel/openmp/2-7-2-6-reduction.md)在頁面上 28):  

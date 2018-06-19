@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347730"
 ---
 # <a name="mfc-and-atl"></a>MFC 和 ATL
 Microsoft Foundation Classes (MFC) 透過 Win32 提供 C++ 物件導向包裝函式，以便快速開發原生桌面應用程式。 Active Template Library (ATL) 是簡化 COM 開發，並且廣泛用於建立 ActiveX 控制項的包裝函式程式庫。  

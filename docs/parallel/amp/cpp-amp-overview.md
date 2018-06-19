@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694624"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 C + + Accelerated Massive Parallelism (c + + AMP) 藉由運用在獨立圖形顯示卡的圖形處理單元 (GPU) 之類的資料平行硬體加速執行 c + + 程式碼。 藉由使用 c + + AMP，您可以撰寫多維度資料的演算法，因此可加快執行異質硬體上使用平行處理原則。 C++ AMP 程式設計模型包含多維陣列、索引、記憶體傳輸、並排顯示和數學函式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何將 cpu 移到 GPU 上, 一步，這樣可以改善效能。  

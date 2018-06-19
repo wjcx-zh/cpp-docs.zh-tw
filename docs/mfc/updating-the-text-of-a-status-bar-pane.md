@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384474"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>更新狀態列窗格的文字
 本文說明如何變更 MFC 狀態列窗格中顯示的文字。 狀態列，類別的視窗物件[CStatusBar](../mfc/reference/cstatusbar-class.md) — 包含多個 「 窗格 」。 每個窗格是您可用來顯示資訊的 [狀態] 列的一個矩形區域。 比方說，許多應用程式會顯示在最右邊的窗格中按下 CAPS LOCK、 NUM LOCK 和其他按鍵的狀態。 應用程式通常也會顯示資訊文字中最左邊的窗格 （窗格 0），有時也稱為 「 訊息窗格 」。 例如，預設 MFC 狀態列會使用 [訊息] 窗格來顯示字串，用以說明目前所選取的功能表項目或工具列按鈕。 在圖[狀態列](../mfc/status-bar-implementation-in-mfc.md)顯示從應用程式精靈建立 MFC 應用程式的狀態列。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197243"
 ---
 # <a name="fatal-error-c1120"></a>嚴重錯誤 C1120
 呼叫 getprocaddress 失敗 'function'  

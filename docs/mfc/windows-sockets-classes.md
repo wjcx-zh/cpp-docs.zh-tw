@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382124"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets 類別
 Windows Sockets 提供一個與網路通訊協定無關的方法，可在兩部電腦之間溝通。 這些通訊端可以是同步 (您的程式會等待直到完成通訊) 或非同步 (您的程式在通訊進行時會繼續執行)。  

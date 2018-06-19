@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693753"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 類別
 代表與呼叫內容相關之目前排程器的抽象概念。  

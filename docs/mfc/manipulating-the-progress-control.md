@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347399"
 ---
 # <a name="manipulating-the-progress-control"></a>管理進度控制項
 有三種方式來變更進度控制項的目前位置 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md))。  

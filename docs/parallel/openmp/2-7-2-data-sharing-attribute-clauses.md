@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691898"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 資料共用屬性子句
 數個指示詞會接受子句可讓使用者控制共用的變數屬性區域的持續時間。 共用屬性子句僅適用於中的指示詞子句會出現語彙範圍的變數。 並非所有的下列子句允許所有指示詞。 指示詞將詳述的特定指示詞為有效的子句清單。  

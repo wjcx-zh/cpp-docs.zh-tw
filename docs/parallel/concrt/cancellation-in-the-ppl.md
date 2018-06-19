@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694832"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消
 本文件說明取消在平行模式程式庫 (PPL) 中的角色、如何取消平行工作，以及如何判斷平行工作取消的時間。  

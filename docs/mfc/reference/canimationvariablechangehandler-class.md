@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350988"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 類別
 實作回呼，當動畫變數的值變更時由動畫 API 呼叫。  

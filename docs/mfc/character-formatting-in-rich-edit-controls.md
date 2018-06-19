@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349476"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Rich Edit 控制項中的字元格式化
 您可以使用 rich edit 控制項的成員函式 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 來格式化字元，以及擷取格式設定資訊。 字元，您可以指定字體、 大小、 色彩和效果，例如粗體、 斜體和受保護。  

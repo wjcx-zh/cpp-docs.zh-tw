@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234090"
 ---
 # <a name="compiler-error-c2678"></a>編譯器錯誤 C2678
 二元 'operator'：未定義使用左方運算元類型 'type' 的運算子 (或是沒有可接受的轉換)  

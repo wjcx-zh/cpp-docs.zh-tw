@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686980"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 結構
 代表排程器的指標。 這個類別是為了允許使用 shared_ptr 共用存留期的規格，或只是使用原始指標的簡單參考。  

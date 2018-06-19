@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380106"
 ---
 # <a name="styles-for-the-progress-control"></a>進度控制項的樣式
 當您一開始建立進度控制項 ([cprogressctrl:: Create](../mfc/reference/cprogressctrl-class.md#create))，使用`dwStyle`參數來指定進度控制項的所需的視窗樣式。 下列清單詳細說明了適用的視窗樣式。 控制項會忽略除了此清單所列以外的所有視窗樣式。 您必須將控制項建立為子視窗，通常會以對話方塊為父代。  

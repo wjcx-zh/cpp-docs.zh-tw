@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687721"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>舊版程式碼的多執行緒支援 (Visual C++)
 Visual c + + 可讓您能夠同時執行多個執行緒同時執行。 使用多執行緒處理，您可以分割背景工作、 管理同時的輸入資料流、 管理使用者介面，以及執行更多。  

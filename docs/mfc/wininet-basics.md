@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385920"
 ---
 # <a name="wininet-basics"></a>WinInet 基本概念
 您可以使用 WinInet 加入 FTP 支援下載和上傳您的應用程式中的檔案。 您可以覆寫[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)並用`dwContext`進度資訊提供給使用者，當您搜尋和下載檔案的參數。  

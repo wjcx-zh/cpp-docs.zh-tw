@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890696"
 ---
 # <a name="windows-desktop-applications-c"></a>Windows 桌面應用程式 (C++)
 本節討論如何建立可在視窗中執行的 c + + 桌面應用程式。  

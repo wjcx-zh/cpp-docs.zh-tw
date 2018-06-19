@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385464"
 ---
 # <a name="template-based-classes"></a>樣板架構類別
 本文說明 MFC 3.0 版和更新版本中的型別安全樣板型集合類別。 使用這些範本來建立類型安全集合，會比較方便，有助於比使用非根據樣板的集合類別更有效地提供類型安全。  

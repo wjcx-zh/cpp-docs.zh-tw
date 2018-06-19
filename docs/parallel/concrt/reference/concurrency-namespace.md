@@ -35,6 +35,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695183"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空間
 `Concurrency` 命名空間提供可讓您存取並行執行階段 (C++ 的並行程式設計架構) 的類別和函式。 如需詳細資訊，請參閱[並行執行階段](../../../parallel/concrt/concurrency-runtime.md)。  

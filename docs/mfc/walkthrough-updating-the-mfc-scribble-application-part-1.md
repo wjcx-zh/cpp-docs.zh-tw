@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385105"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分）
 本逐步解說示範如何修改現有的 MFC 應用程式使用功能區使用者介面。 Visual Studio 支援 Office 2007 功能區和 Windows 7 Scenic 功能區。 如需功能區使用者介面的詳細資訊，請參閱[功能區](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN 網站上。  

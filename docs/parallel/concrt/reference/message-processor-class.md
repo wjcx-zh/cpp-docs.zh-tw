@@ -26,6 +26,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689385"
 ---
 # <a name="messageprocessor-class"></a>message_processor 類別
 `message_processor` 類別是處理 `message` 物件的抽象基底類別。 訊息順序方面沒有一定的保證。  

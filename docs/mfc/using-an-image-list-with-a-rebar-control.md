@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381741"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>搭配使用影像清單與 Rebar 控制項
 除了其他方面，每個 Rebar 群組列還可以包含關聯影像清單中的影像。 下列程序詳述用於顯示 Rebar 群組列中影像的必要步驟。  

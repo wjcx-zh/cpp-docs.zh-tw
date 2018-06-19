@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696146"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>在 UWP 應用程式中使用 c + + AMP
 在 GPU （圖形處理單元） 或其他計算加速器上執行計算，您可以在通用 Windows 平台 (UWP) 應用程式中使用 c + + AMP (c + + Accelerated Massive Parallelism)。 然而，C++ AMP 並未提供可直接搭配 Windows 執行階段類型使用的 API，而 Windows 執行階段也未提供 C++ AMP 的包裝函式。 當您在程式碼中使用 Windows 執行階段類型 (包括您自行建立的類型) 時，必須將這些類型轉換成與 C++ AMP 相容的類型。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384367"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets：使用封存的通訊端範例
 本文件提供使用類別的範例[CSocket](../mfc/reference/csocket-class.md)。 此範例會採用`CArchive`序列化資料，透過通訊端的物件。 請注意，這不是文件序列化或檔案。  

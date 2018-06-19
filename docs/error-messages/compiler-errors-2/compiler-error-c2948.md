@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243518"
 ---
 # <a name="compiler-error-c2948"></a>編譯器錯誤 C2948
 明確具現化;儲存類別規範 'specifier' 特製化上不允許  

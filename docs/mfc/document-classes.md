@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346613"
 ---
 # <a name="document-classes"></a>文件類別
 建立的文件範本物件的文件類別物件來管理應用程式的資料。 您將會從這些類別的其中一個，您的文件衍生類別。  

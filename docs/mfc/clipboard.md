@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341100"
 ---
 # <a name="clipboard"></a>剪貼簿
 此系列文章說明如何在 MFC 應用程式中實作 Windows 剪貼簿的支援。 兩種方式使用 Windows 剪貼簿：  

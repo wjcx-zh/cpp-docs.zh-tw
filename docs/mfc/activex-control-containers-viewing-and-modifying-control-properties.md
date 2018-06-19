@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340290"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 控制項容器：檢視和修改控制項屬性
 當您將 ActiveX 控制項插入至專案時，檢視和變更 ActiveX 控制項支援的屬性會很有幫助。 本文將討論如何使用 Visual C++ 資源編輯器來進行此動作。  

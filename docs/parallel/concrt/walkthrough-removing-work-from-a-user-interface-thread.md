@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694283"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>逐步解說：從使用者介面執行緒中移除工作
 本文件將示範如何使用並行執行階段移到背景工作執行緒在 Microsoft Foundation Classes (MFC) 應用程式中的使用者介面 (UI) 執行緒所執行的工作。 本文件也會示範如何改善長時間的繪圖作業的效能。  

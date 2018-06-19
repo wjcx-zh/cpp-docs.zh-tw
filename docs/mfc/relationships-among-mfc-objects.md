@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379515"
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 物件關聯性
 為了協助放置文件/檢視建立程序，請考慮一個執行中程式：一個文件、一個用來包含檢視的框架視窗，以及與文件關聯的檢視。  

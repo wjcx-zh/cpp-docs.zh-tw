@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689476"
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections 建構
 **平行區段**指示詞提供快顯表單來指定**平行**包含只有一個區域**區段**指示詞。 語意都完全相同，若要明確指定**平行**指示詞後面緊跟著**區段**指示詞。 語法**平行區段**指示詞時，如下所示：  

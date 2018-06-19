@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692228"
 ---
 # <a name="parallel-programming-in-visual-c"></a>以 Visual C++ 進行平行程式設計
 Visual c + + 提供的下列技術，可協助您建立多執行緒和平行的程式，利用多核心和 GPU 用於一般用途的程式設計。  

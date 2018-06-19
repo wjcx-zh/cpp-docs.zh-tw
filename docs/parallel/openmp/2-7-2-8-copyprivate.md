@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691599"
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 **Copyprivate**子句提供一個機制，從一個小組成員的值廣播到的其他成員使用私用變數。 它會提供這類共用的變數會很難 （例如，在需要不同的變數在每個層級的遞迴函式） 時，使用共用的變數值的替代方案。 **Copyprivate**子句只能出現在**單一**指示詞。  

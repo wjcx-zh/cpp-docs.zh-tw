@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695690"
 ---
 # <a name="2724-shared"></a>2.7.2.4 shared
 這個子句共用變數出現在*變數清單*小組中的所有執行緒之間。 在小組內的所有執行緒都存取相同的儲存區的**共用**變數。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693246"
 ---
 # <a name="extent-class-c-amp"></a>extent 類別 (C++ AMP)
 代表向量*N*整數值，指定的界限*N*-維度具有 0 的原點的空間。 在向量中的值為從最大顯著性到最小顯著性排序。  

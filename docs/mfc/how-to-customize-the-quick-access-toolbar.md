@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349642"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>如何：自訂快速存取工具列
 快速存取工具列 (QAT) 是包含一組命令的可自訂工具列，命令是顯示在 [應用程式] 按鈕旁或類別索引標籤下。 下圖將顯示一般的快速存取工具列。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>在快速存取工具列上新增或移除命令  
   
-1.  在**屬性**視窗中，按一下  **QAT 項目**，然後按一下省略符號按鈕**（...）**.  
+1.  在**屬性**視窗中，按一下  **QAT 項目**，然後按一下省略符號按鈕 **（...）**.  
   
 2.  在**QAT 項目編輯器**對話方塊中，使用**新增**和**移除**按鈕，以修改快速存取工具列上的命令清單。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871337"
 ---
 # <a name="creating-moving-and-editing-toolbar-buttons"></a>建立、移動和編輯工具列按鈕
 您可以輕鬆地建立、 移動、 複製和編輯工具列按鈕。  

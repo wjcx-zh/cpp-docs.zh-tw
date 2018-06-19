@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881906"
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>圖示和游標：顯示裝置的影像資源 (圖示影像編輯器)
 圖示和游標為圖形化資源，可包含不同類型之顯示裝置的多種影像 (不同的大小和色彩配置)。 此外，游標具有「作用點」(hot spot)，Windows 會用它來追蹤游標的位置。 您可以使用影像編輯器來建立及編輯圖示和游標，就像是點陣圖和其他影像一樣。  

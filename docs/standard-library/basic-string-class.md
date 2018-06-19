@@ -131,6 +131,7 @@ ms.sourcegitcommit: 2998488d63f2dd9cbfa1f5cb9a403883b2246949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34047562"
 ---
 # <a name="basicstring-class"></a>basic_string 類別
 

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372356"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>如何：在 Visual Studio 開發環境中設定 LIB.EXE 選項
 ### <a name="to-set-libexe-options-in-the-visual-studio-development-environment"></a>若要設定程式庫。在 Visual Studio 開發環境中的 EXE 選項  

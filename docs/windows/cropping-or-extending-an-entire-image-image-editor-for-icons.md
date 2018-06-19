@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871610"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>裁剪或擴充整個影像 (圖示影像編輯器)
 下列程序顯示如何裁剪或擴充整個影像。  

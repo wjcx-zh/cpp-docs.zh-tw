@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880674"
 ---
 # <a name="editing-managed-resource-files"></a>編輯 Managed 資源檔
 Managed 的資源檔 (.resx) 是 XML 檔案。 將 managed 的資源檔加入至您的專案，從**加入新項目**對話方塊中， **Managed 資源編輯器**預設會開啟。  

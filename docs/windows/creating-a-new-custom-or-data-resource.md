@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871828"
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>建立新的自訂或資料資源
 您可以建立新的自訂或資料資源，方法是將資源放在使用一般資源指令碼 (.rc) 檔語法的個別檔案中，然後以滑鼠右鍵按一下方案總管中的專案，再按一下捷徑功能表中的 [資源包含]  來包含該檔案。  

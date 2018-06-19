@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875873"
 ---
 # <a name="guide-settings-dialog-box"></a>輔助線設定對話方塊
 ## <a name="layout-guides"></a>版面配置輔助線  

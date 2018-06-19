@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880993"
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++ 中的泛型概觀
 泛型是通用語言執行平台 (CLR) 所支援的參數化類型。 參數化類型是以使用泛型時指定的未知型別參數定義的類型。  

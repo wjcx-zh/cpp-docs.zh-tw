@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358110"
 ---
 # <a name="active-template-library-atl-concepts"></a>Active Template Library (ATL) 概念
 Active Template Library (ATL) 是一組樣板架構 c + + 類別可讓您建立小型、 快速元件物件模型 (COM) 物件。 它有索引鍵的 COM 功能，包括內建實作、 雙重介面、 標準的 COM 列舉程式介面、 連接點、 tear-off 介面和 ActiveX 控制項的特殊支援。  

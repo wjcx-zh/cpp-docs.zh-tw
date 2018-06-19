@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171818"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 程式庫參考
 STL/CLR 程式庫是子集的 c + + 標準程式庫與 c + + 和.NET Framework common language runtime (CLR) 搭配使用的封裝。 STL/CLR，您可以使用所有的容器、 迭代器和受管理的環境中的標準程式庫的演算法。  

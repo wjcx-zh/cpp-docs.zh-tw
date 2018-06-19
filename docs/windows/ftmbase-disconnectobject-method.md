@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872997"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject 方法
 強制釋放物件的所有外部連接。 物件的伺服器會呼叫這個方法之前關閉物件的實作。  

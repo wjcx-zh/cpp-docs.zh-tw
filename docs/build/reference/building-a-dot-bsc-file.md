@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369002"
 ---
 # <a name="building-a-bsc-file"></a>建置 .Bsc 檔
 BSCMAKE 可以建立新的瀏覽資訊檔從新建立的.sbr 檔案。 它也可以維護現有的.bsc 檔使用上次組建之後所變更的物件檔案的.sbr 檔案。  

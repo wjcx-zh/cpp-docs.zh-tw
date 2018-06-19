@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168746"
 ---
 # <a name="compiler-error-c2301"></a>編譯器錯誤 C2301
 '->~identifier' 的左邊必須指向類別/結構/等位  

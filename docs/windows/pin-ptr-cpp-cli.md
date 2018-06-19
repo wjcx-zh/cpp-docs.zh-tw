@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880162"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 宣告*pin 指標*，這僅適用於 common language runtime。  

@@ -58,6 +58,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417323"
 ---
 # <a name="fundamental-types--c"></a>基本類型 (C++)
 C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料類型能夠處理整數。 浮點類型可以指定可能有小數部分的值。  

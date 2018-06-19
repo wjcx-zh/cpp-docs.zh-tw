@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875483"
 ---
 # <a name="mutexoperator-operator"></a>Mutex::operator= 運算子
 指派 （移動） 指定的 Mutex 物件傳遞給目前的 Mutex 物件。  

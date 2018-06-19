@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371443"
 ---
 # <a name="look-up-button"></a>查詢按鈕
 按一下**查閱**擷取錯誤訊息對應至輸入的系統或模組值。 十六進位或十進位格式 （包括負的十進位值），就可以輸入值。 模組中所列**搜尋錯誤的其他模組**也會搜尋對話方塊。  

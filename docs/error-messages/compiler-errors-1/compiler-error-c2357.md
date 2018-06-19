@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196577"
 ---
 # <a name="compiler-error-c2357"></a>編譯器錯誤 C2357
 'identifier': 必須是 'type' 類型的函式  

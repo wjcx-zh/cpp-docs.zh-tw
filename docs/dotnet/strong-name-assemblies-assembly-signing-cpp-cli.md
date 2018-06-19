@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169188"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>強式名稱組件 (組件簽署) (C++/CLI)
 本主題討論如何登入您的組件，通常稱為賦予您的組件強式名稱。  

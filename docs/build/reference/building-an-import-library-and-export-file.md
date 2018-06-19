@@ -40,6 +40,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372096"
 ---
 # <a name="building-an-import-library-and-export-file"></a>建置匯入程式庫和匯出檔案
 若要建置之匯入程式庫和匯出檔案，使用下列語法：  

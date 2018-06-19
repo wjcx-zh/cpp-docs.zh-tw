@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874612"
 ---
 # <a name="ftmbasemarshalinterface-method"></a>FtmBase::MarshalInterface 方法
 初始化 proxy 物件，在某些用戶端處理序中的所需的資料寫入資料流。  

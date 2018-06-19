@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880357"
 ---
 # <a name="mutextraitsunlock-method"></a>MutexTraits::Unlock 方法
 版本的共用資源的獨佔控制。  

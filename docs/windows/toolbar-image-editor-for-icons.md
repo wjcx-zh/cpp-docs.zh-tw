@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890550"
 ---
 # <a name="toolbar-image-editor-for-icons"></a>工具列 (圖示影像編輯器)
 **影像編輯器**工具列包含繪圖、 繪製、 輸入文字、 清除和操作檢視工具。 它也包含選項選取器，與您可以選取使用各項工具的選項。 例如，您可以選擇不同的筆刷寬度、 縮放比例倍數和線條樣式。  

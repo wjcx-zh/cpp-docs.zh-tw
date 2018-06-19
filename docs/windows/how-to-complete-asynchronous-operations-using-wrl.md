@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881519"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>如何：使用 WRL 完成非同步作業
 本文件說明如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 若要啟動非同步作業和作業完成時執行工作。  

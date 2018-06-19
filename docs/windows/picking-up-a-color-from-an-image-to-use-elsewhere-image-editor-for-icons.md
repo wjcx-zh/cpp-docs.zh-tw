@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877406"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>從影像中揀選色彩以用於他處 (圖示影像編輯器)
 **選取色彩**，或色彩揀選工具可讓任何色彩為影像上的目前的前景色彩或背景色彩，視您按左邊或右邊的滑鼠按鈕。 若要取消**選取色彩**工具，請選擇另一個工具。  

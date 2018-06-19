@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892679"
 ---
 # <a name="runtimeclassdecrementreference-method"></a>RuntimeClass::DecrementReference 方法
 遞減目前 RuntimeClass 物件的參考計數。  

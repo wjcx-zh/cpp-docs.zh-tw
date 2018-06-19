@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098000"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>異動：異動如何影響更新 (ODBC)
 若要更新[資料來源](../../data/odbc/data-source-odbc.md)透過編輯緩衝區 （交易外使用的相同方法） 使用的交易期間所管理。 資料錄集的欄位資料成員共同做為編輯緩衝區，其中包含目前的記錄資料錄集備份期間暫時`AddNew`或**編輯**。 期間**刪除**作業，目前的記錄不會備份在交易內。 如需編輯緩衝區和更新將目前記錄的儲存方式的詳細資訊，請參閱[資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)。  

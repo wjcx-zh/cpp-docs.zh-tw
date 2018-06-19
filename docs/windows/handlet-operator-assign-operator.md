@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873923"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= 運算子
 將指定之 HandleT 物件的值移至目前 HandleT 物件。  

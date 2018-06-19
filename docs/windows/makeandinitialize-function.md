@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877588"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize 函式
 初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同模組中定義的元件。  

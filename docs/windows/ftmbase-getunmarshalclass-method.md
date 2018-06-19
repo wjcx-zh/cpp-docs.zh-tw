@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873299"
 ---
 # <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass 方法
 取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 載入此 DLL 來建立未初始化的執行個體的 proxy。  

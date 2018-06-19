@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871158"
 ---
 # <a name="cppquote"></a>cpp_quote
 指定的字串，不能包含引號字元，發出至產生的.idl 檔案。  

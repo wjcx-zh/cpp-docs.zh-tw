@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166682"
 ---
 # <a name="synchronization-lock-class"></a>同步處理 (lock 類別)
 提供一種機制，可自動化取得物件的同步存取鎖定。  

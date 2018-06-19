@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875854"
 ---
 # <a name="dialog-editor"></a>對話方塊編輯器
 對話方塊編輯器可讓您建立或編輯對話方塊資源。 在 [資源檢視] 視窗中對話方塊的.rc 檔上按兩下，即可開啟對話方塊編輯器 (**檢視&#124;資源檢視**)。 請注意，[資源檢視] 在 Express 版中無法使用。  

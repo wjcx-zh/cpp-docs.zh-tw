@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872623"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>轉換點陣圖為工具列
 轉換點陣圖，您可以建立新的工具列。 將點陣圖圖形將轉換成工具列按鈕影像。 通常，點陣圖包含數個按鈕的影像在單一的點陣圖，每個按鈕的一個映像。 映像可以是任何規模。預設為 16 個像素寬和影像的高度。 您可以指定按鈕中的映像大小[新增工具列資源對話方塊](../windows/new-toolbar-resource-dialog-box.md)當您選擇從工具列編輯器**映像**影像編輯器中的功能表。  

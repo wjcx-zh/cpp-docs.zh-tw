@@ -23,6 +23,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33953955"
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 在物件中放入記錄。 連結器會檢查這些記錄是否有不相符之處。  

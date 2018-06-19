@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878901"
 ---
 # <a name="generics-and-templates-visual-c"></a>泛型和樣板 (Visual C++)
 泛型和範本都是參數化類型中提供支援這兩種語言功能。 不過，它們不相同，且有不同用途。 本主題提供許多差異的概觀。  

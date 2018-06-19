@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33885148"
 ---
 # <a name="editing-properties-for-an-activex-control"></a>編輯 ActiveX 控制項的屬性
 獨立廠商所提供的 ActiveX 控制項可能都配有其自己的內容和特性。 ActiveX 控制項的屬性會顯示在 [屬性] 視窗中。 此外，ActiveX 控制項的寫入器所建立的任何屬性頁面會顯示在**屬性頁**對話方塊 (若要檢視特定的 ActiveX 控制項的屬性頁面，按一下 [屬性頁中的按鈕[屬性] 視窗](/visualstudio/ide/reference/properties-window))。  

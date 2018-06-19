@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880240"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>在對話方塊編輯器中自訂控制項
 對話方塊編輯器可讓您使用現有的 「 自訂 」 或 「 使用者 」 控制項在對話方塊範本中。  

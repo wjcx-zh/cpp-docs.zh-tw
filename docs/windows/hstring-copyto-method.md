@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874768"
 ---
 # <a name="hstringcopyto-method"></a>HString::CopyTo 方法
 複製目前 HString HSTRING 物件的物件。  

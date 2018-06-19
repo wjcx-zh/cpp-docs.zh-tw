@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874203"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase 函式
 擷取[ModuleBase](../windows/modulebase-class.md)允許遞增和遞減參考計數的指標[RuntimeClass](../windows/runtimeclass-class.md)物件。  

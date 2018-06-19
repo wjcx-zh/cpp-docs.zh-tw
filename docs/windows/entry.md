@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872311"
 ---
 # <a name="entry"></a>entry
 識別 DLL 中的進入點在模組中指定的匯出函式或常數。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382498"
 ---
 # <a name="servers-server-items"></a>伺服器：伺服器項目
 當容器啟動伺服器以便使用者可以編輯內嵌或連結的 OLE 項目時，伺服器應用程式會建立「伺服器項目」。 伺服器項目是其類別衍生自 `COleServerItem` 的物件，在伺服器文件和容器應用程式之間提供介面。  

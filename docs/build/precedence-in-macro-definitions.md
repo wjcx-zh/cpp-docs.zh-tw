@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368609"
 ---
 # <a name="precedence-in-macro-definitions"></a>巨集定義的優先順序
 如果巨集有多個定義，NMAKE 就會使用最高優先順序的定義。 下列清單顯示的優先順序，從最高到最低：  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  預先定義的巨集，例如[CC](../build/command-macros-and-options-macros.md)和[AS](../build/command-macros-and-options-macros.md)  
   
- 您可以使用 /E，讓繼承自環境變數，以覆寫具有相同名稱的 makefile 巨集的巨集。 使用**！UNDEF**覆寫命令列。  
+ 您可以使用 /E，讓繼承自環境變數，以覆寫具有相同名稱的 makefile 巨集的巨集。 使用 **！UNDEF**覆寫命令列。  
   
 ## <a name="see-also"></a>另請參閱  
  [定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)

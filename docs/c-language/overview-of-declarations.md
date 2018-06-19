@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392623"
 ---
 # <a name="overview-of-declarations"></a>宣告概觀
 「宣告」會指定一組識別項的解譯和屬性。 如果宣告也為以識別項命名的物件或函式保留儲存區，則稱為「定義」。 變數、函式和類型的 C 宣告具有下列語法：  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880253"
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>自訂色彩選取器對話方塊 (圖示影像編輯器)
 此對話方塊可讓您自訂您的映像您使用的色彩。 如需詳細資訊，請參閱[自訂或變更色彩](../windows/customizing-or-changing-colors-image-editor-for-icons.md)。  

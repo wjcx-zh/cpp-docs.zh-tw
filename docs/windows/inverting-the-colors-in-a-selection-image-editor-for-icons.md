@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874076"
 ---
 # <a name="inverting-the-colors-in-a-selection-image-editor-for-icons"></a>反轉選取範圍內的色彩 (圖示影像編輯器)
 影像編輯器可方便您反轉所選影像部分中的色彩，以便指出影像如何以反轉的色彩顯示。  

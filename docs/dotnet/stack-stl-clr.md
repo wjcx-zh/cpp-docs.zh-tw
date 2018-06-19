@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172440"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 此範本類別描述控制不同長度序列的項目可存取後進先出的物件。 您可以使用容器配接器`stack`管理向下推送堆疊基礎容器。  

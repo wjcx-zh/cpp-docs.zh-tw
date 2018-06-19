@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226130"
 ---
 # <a name="fatal-error-c1016"></a>嚴重錯誤 C1016
 \#ifdef 必須是識別項 #ifndef 必須是識別項  

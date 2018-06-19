@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871036"
 ---
 # <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>轉換影像的格式 (圖示影像編輯器)
 您可以在影像編輯器中開啟 GIF 或 JPEG 影像，並將它們儲存為點陣圖。 此外，您可以開啟點陣圖檔案，並將它儲存為 GIF 或 JPEG。 您使用的影像不需要在開發環境中編輯專案的一部分 (請參閱[獨立影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md))。  

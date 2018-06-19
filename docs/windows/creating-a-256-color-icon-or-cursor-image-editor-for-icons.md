@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872357"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>建立 256 色圖示或游標 (圖示影像編輯器)
 使用影像編輯器，圖示和游標可能會調整大小大 (64 × 64) 256 色調色盤可從中選擇。 建立資源之後, 會選取裝置影像樣式。  

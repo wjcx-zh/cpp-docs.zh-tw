@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382375"
 ---
 # <a name="using-cmonthcalctrl"></a>使用 CMonthCalCtrl
 月曆控制項 ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) 實作類似行事曆的使用者介面。 這提供使用者一個用於輸入或選取日期之非常直接易懂和辨識的方法。 藉由使用現有的資料類型，控制項也提供應用程式取得和設定控制項中日期資訊的方法。 根據預設，月曆控制項會顯示目前的日期和月份。 不過，使用者也可捲動到之前及後續月份，並選取特定月份和/或年份。  

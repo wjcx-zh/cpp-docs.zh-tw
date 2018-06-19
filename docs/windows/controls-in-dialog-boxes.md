@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873117"
 ---
 # <a name="controls-in-dialog-boxes"></a>對話方塊中的控制項
 您可以將控制項加入對話方塊方塊中，使用[對話方塊編輯器索引標籤](../windows/dialog-editor-tab-toolbox.md)中[工具箱視窗](/visualstudio/ide/reference/toolbox)，可讓您選擇您想要並將它拖曳至 對話方塊的控制項。 根據預設，[工具箱] 視窗設定為自動隱藏。 對話方塊編輯器開啟時，它會為方案的左邊界的索引標籤出現。 不過，您可以釘選 [工具箱] 視窗進入位置，即可**自動隱藏**視窗右上角的按鈕。 如需有關如何控制這個視窗行為的詳細資訊，請參閱[視窗管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)。  

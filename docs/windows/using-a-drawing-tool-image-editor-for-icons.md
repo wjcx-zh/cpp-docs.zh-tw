@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891668"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>使用繪圖工具 (圖示影像編輯器)
 影像編輯器的徒手繪製和清除的工具的運作方式相同： 您選取的工具，如有必要，[選取前景和背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)和大小和形狀的選項。 然後將指標移至映像和按一下或拖曳來繪製及清除。  

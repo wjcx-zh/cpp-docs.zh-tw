@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880526"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>影像功能表 (圖示影像編輯器)
 影像編輯器在作用中時才出現，[影像] 功能表有可用於編輯影像色彩調色盤和設定映像編輯器視窗選項的命令。 此外，使用裝置映像的命令所提供使用圖示和游標。  

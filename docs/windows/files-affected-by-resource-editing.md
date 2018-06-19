@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874352"
 ---
 # <a name="files-affected-by-resource-editing"></a>受資源編輯影響的檔案
 Visual Studio 環境會在您的資源編輯工作階段期間使用下表中顯示的檔案。  

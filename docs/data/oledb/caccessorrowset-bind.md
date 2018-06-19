@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088325"
 ---
 # <a name="caccessorrowsetbind"></a>CAccessorRowset::Bind
 建立繫結，如果您指定**bBind**為 false [ccommand:: Open](../../data/oledb/ccommand-open.md)。  

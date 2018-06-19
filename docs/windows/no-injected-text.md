@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880344"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 防止編譯器插入程式碼，因為屬性使用。  

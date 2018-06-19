@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413482"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引數傳遞和命名慣例
 **Microsoft 特定的**  

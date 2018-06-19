@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874378"
 ---
 # <a name="eventsourceremove-method"></a>EventSource::Remove 方法
 刪除指定的事件註冊語彙基元所代表與目前的 EventSource 物件相關聯的事件處理常式集合的事件處理常式。  

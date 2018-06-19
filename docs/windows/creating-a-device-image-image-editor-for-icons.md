@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873221"
 ---
 # <a name="creating-a-device-image-image-editor-for-icons"></a>建立裝置影像 (圖示影像編輯器)
 當您建立新的圖示或游標資源時，影像編輯器第一次建立特定的樣式 （32 × 32、 16 個色彩圖示和 32 × 單色 32） 的映像。 您可以將映像不同大小和樣式加入至初始圖示或游標，並視需要編輯每個額外的映像，適用於不同顯示裝置。 您也可以從現有的映像類型，或從圖形程式建立的點陣圖執行剪下和貼上作業，以編輯映像。  

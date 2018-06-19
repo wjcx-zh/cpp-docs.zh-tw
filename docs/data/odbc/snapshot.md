@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094760"
 ---
 # <a name="snapshot"></a>快照
 快照集是資料錄集，以反映資料的靜態檢視表存在於快照集的建立的時間。 當您開啟了快照集，並移至的所有記錄時，它所包含的記錄集合，其值不會變更之前呼叫重建快照**Requery**。  

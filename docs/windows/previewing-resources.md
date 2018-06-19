@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878667"
 ---
 # <a name="previewing-resources"></a>預覽資源
 預覽您的資源，可讓您檢視圖形化的資源，但不開啟它們。 預覽功能也適用於可執行檔後您編譯因為資源識別元變成數字。 這些數字識別元通常不會提供足夠的資訊，因為預覽資源可協助您快速識別它們。  

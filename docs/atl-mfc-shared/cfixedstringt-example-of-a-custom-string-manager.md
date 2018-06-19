@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359545"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT： 範例的自訂字串管理員
 ATL 程式庫實作類別所使用的自訂字串管理員的其中一個範例[CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md)，稱為**CFixedStringMgr**。 `CFixedStringT` 衍生自[CStringT](../atl-mfc-shared/reference/cstringt-class.md)並實作一部分配置其字元資料字串`CFixedStringT`物件本身為字串所指定的長度小於**t_nChars**樣板參數的`CFixedStringT`。 使用此方法時，不需要字串堆積，除非字串的長度超過固定緩衝區的大小。 因為`CFixedStringT`不一定不使用的堆積來配置其字串資料，它不能使用**CAtlStringMgr**做為其字串管理員。 它會使用自訂字串管理員 (**CFixedStringMgr**)，它會實作[IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md)介面。 這個介面會討論[實作的自訂字串管理員 （進階方法）](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)。  

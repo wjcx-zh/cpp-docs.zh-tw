@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875093"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol"></a>開啟指定符號的資源編輯器
 當您瀏覽中的符號[資源符號對話方塊](../windows/resource-symbols-dialog-box.md)，您可能會想在特定符號的使用方式的詳細資訊。 **檢視使用**按鈕讓您快速取得這項資訊。  

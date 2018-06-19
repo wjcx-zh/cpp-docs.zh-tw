@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232047"
 ---
 # <a name="compiler-error-c2577"></a>編譯器錯誤 C2577
 'member': 解構函式/完成項不能有傳回型別  

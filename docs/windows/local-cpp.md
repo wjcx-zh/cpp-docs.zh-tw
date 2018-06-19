@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877913"
 ---
 # <a name="local-c"></a>local (C++)
 介面標頭中使用時，可讓您使用 MIDL 編譯器為標頭產生器。 個別的函式中使用時，會指定產生的任何虛設常式區域的程序。  

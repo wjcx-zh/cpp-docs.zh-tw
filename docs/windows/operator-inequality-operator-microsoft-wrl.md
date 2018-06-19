@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876393"
 ---
 # <a name="operator-operator-microsoftwrl"></a>operator!= 運算子 (Microsoft::WRL)
 不等比較運算子，如[ComPtr](../windows/comptr-class.md)和[ComPtrRef](../windows/comptrref-class.md)物件。  

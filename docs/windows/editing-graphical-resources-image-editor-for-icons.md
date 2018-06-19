@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882494"
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>編輯圖形資源 (圖示影像編輯器)
 圖形化資源是您定義您的應用程式的影像。 您可以繪製徒手，或使用圖形繪製。 您可以選取組件映像的編輯、 翻轉或調整大小，或您可以從選取的組件的映像來建立自訂筆刷，並使用該筆刷繪製。 您可以定義映像內容，以不同的格式，儲存映像，然後將影像從一種格式轉換為另一個。  

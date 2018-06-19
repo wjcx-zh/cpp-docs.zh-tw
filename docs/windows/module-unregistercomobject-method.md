@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881932"
 ---
 # <a name="moduleunregistercomobject-method"></a>Module::UnregisterCOMObject 方法
 取消註冊一或多個 COM 物件，如此可防止其他應用程式無法連線到它們。  

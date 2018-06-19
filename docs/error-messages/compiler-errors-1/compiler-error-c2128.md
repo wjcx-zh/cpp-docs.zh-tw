@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168148"
 ---
 # <a name="compiler-error-c2128"></a>編譯器錯誤 C2128
 'function': alloc_text/same_seg 僅適用使用 C 連結的函式  

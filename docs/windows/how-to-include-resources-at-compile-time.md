@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880146"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>如何：在編譯時期包含資源
 通常可簡單且容易使用一個資源指令碼 (.rc) 檔中所有資源的預設排列方式。 不過，您可以將資源新增其他檔案中加入目前專案在編譯時期列出它們在**編譯時期指示詞**方塊中[資源包含對話方塊](../windows/resource-includes-dialog-box.md)。  

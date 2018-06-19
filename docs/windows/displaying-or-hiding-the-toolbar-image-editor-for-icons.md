@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872984"
 ---
 # <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>顯示或隱藏工具列 (圖示影像編輯器)
 因為許多繪圖工具都可從[鍵盤](../windows/accelerator-keys-image-editor-for-icons.md)，可能會很有用隱藏影像編輯器工具列。  

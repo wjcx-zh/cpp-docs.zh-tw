@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879161"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>如何：在專案外開啟資源指令碼檔 (獨立式)
 您可以檢視 .rc 檔中的資源，而不需要開啟一個專案。 .Rc 檔會在相對於在文件視窗中開啟[資源檢視](../windows/resource-view-window.md)視窗 （如同在專案內開啟檔案時）。  

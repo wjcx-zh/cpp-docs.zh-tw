@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229144"
 ---
 # <a name="compiler-error-c2645"></a>編譯器錯誤 C2645
 成員指標沒有限定的名稱 (找到 ':: *')  

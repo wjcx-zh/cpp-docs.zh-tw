@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877536"
 ---
 # <a name="new-toolbar-resource-dialog-box"></a>新增工具列資源對話方塊
 新增工具列資源對話方塊可讓您指定您要加入至工具列資源的按鈕的高度與寬度。 預設為 16 × 15 像素。  

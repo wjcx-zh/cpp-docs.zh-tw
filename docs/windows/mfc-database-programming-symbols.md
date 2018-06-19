@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877601"
 ---
 # <a name="mfc-database-programming-symbols"></a>MFC 資料庫程式開發符號
 當已經加入資料庫的支援，則此資料表中的符號只會出現 MFC 專案中。 它們支援的 MFC 連接 SQL server 和資料庫程式撰寫。  

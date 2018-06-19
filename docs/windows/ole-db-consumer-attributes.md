@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876016"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB 消費者屬性
 OLE DB 消費者屬性插入程式碼，根據[OLE DB 消費者樣板](../data/oledb/ole-db-consumer-templates-reference.md)，以建立使用 OLE DB 取用者會執行工作，例如開啟資料表，執行命令，以及存取資料。  

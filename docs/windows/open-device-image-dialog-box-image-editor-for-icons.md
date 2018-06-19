@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881701"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>開啟&lt;裝置&gt;影像對話方塊 （圖示影像編輯器）
 您可以使用此對話方塊來開啟裝置映像。 它會列出目前的資源 （屬於目前資源的影像） 中的現有裝置映像。  

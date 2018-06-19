@@ -23,9 +23,10 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368466"
 ---
 # <a name="null-and-undefined-macros"></a>Null 和未定義的巨集
-Null 和未定義的巨集展開為 null 的字串，但巨集定義為 null 的字串會被視為前置處理運算式中定義。 若要定義巨集做為 null 的字串，指定沒有字元除了命令列或命令檔中的等號 （=） 後面的空格或定位字元和雙引號括住的 null 字串或定義 ("")。 若要取消定義巨集，使用**！UNDEF。** 如需詳細資訊，請參閱[Makefile 前置處理指示詞](../build/makefile-preprocessing-directives.md)。  
+Null 和未定義的巨集展開為 null 的字串，但巨集定義為 null 的字串會被視為前置處理運算式中定義。 若要定義巨集做為 null 的字串，指定沒有字元除了命令列或命令檔中的等號 （=） 後面的空格或定位字元和雙引號括住的 null 字串或定義 ("")。 若要取消定義巨集，使用 **！UNDEF。** 如需詳細資訊，請參閱[Makefile 前置處理指示詞](../build/makefile-preprocessing-directives.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)

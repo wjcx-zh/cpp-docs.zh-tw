@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878859"
 ---
 # <a name="menu-command-properties"></a>功能表命令屬性
 下列資訊的組織方式是根據您選取功能表命令時出現在 [屬性視窗](/visualstudio/ide/reference/properties-window) 的 [功能表] 屬性。 雖然 [屬性] 視窗也可讓您依類別檢視這些屬性，但這些是依字母順序列出  

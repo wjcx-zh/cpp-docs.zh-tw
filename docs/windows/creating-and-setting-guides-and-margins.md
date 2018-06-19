@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873507"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>建立、設定輔助線和邊界
 不論您要移動控制項，加入控制項，或重新排列目前的配置，指南可協助您將控制項的對話方塊內，精確地對齊。 指南跨編輯器和對應的箭號，尺規 （頂端和左側的 對話方塊編輯器） 中顯示的對話方塊會顯示為藍色的虛線。  

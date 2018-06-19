@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875519"
 ---
 # <a name="how-to-create-a-resource-script-file"></a>如何：建立資源指令碼檔
 > [!NOTE]

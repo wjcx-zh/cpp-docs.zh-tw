@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877832"
 ---
 # <a name="purpose-of-attributes"></a>屬性用途
 屬性會指示目前無法在 c + + 擴充而不需要傳統的語言結構。 屬性可讓提供者 (個別 Dll)，以動態方式擴充語言功能。 屬性的主要目標是簡化 COM 元件，除了增加元件開發人員的產能等級的撰寫。 屬性可以套用到幾乎可在任何 c + + 建構，例如類別、 資料成員或成員函式。 以下是提供這項新技術的優勢的反白顯示：  

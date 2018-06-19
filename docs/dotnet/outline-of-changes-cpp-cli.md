@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138297"
 ---
 # <a name="outline-of-changes-ccli"></a>變更大綱 (C++/CLI)
 此外框會顯示某些變更的範例中的語言，從 Managed Extensions for c + +，Visual c + +。 請遵循隨附的每個項目，如需詳細資訊的連結。  

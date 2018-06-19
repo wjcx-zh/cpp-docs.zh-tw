@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883948"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock 方法
 嘗試進入重要區段，而不會封鎖。 如果呼叫成功，則呼叫的執行緒會關鍵區段的擁有權。  

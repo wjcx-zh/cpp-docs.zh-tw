@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876510"
 ---
 # <a name="eventsource-class"></a>EventSource 類別
 表示非 agile 的事件。 EventSource 成員函式加入、 移除及叫用事件處理常式。 敏捷式軟體開發的事件，請使用[AgileEventSource](agileeventsource-class.md)。 

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168642"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>使用可驗證的組件搭配 SQL Server (C++/CLI)
 擴充預存程序，封裝成動態連結程式庫 (Dll)，提供方法來擴充 SQL Server 功能，透過使用 Visual c + + 開發的函式。 擴充預存程序會實作為 Dll 內的函式。 除了函數以外，擴充預存程序也可以定義[使用者定義型別](../cpp/classes-and-structs-cpp.md)和[彙總函式](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da)（例如，SUM 或 AVG）。  

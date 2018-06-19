@@ -26,6 +26,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954085"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef 和 #ifndef 指示詞 (C/C++)
 **#Ifdef**和 **#ifndef**指示詞會執行相同的工作`#if`指示詞搭配使用時**定義**( *的識別項* ).  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368573"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>匯入和匯出內嵌函式
 匯入的函式可以定義為內嵌。 效果大致上是相同定義的標準函式內嵌。呼叫函式會展開到內嵌程式碼，很像巨集。 一種支援 c + + DLL 中某些其成員函式為了提高效率而內嵌類別，這是來說相當有用。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879668"
 ---
 # <a name="resource-includes-dialog-box"></a>資源包含對話方塊
 您可以使用**Resource Includes**對話方塊來修改環境的一般工作安排儲存專案.rc 檔和所有中的所有資源的[符號](../windows/symbols-resource-identifiers.md)Resource.h 中。  

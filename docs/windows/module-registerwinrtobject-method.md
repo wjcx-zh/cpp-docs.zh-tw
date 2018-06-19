@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874950"
 ---
 # <a name="moduleregisterwinrtobject-method"></a>Module::RegisterWinRTObject 方法
 註冊一個或多個 Windows 執行階段物件，讓其他應用程式可以連接到它們。  

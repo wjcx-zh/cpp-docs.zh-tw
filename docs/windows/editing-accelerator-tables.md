@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872935"
 ---
 # <a name="editing-accelerator-tables"></a>編輯快速鍵對應表
 在 Visual c + + 中，您可以直接與就地編輯快速鍵編輯器中編輯快速鍵對應表。  

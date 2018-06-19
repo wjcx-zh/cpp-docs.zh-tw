@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34256076"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 結構
 ATL 中的視窗化程式碼使用  

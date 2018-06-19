@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873832"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>定義對話方塊控制項的成員變數
 若要定義任何對話方塊控制項 (按鈕除外) 的成員變數，您可以使用下列方法。  

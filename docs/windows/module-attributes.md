@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875262"
 ---
 # <a name="module-attributes"></a>模組屬性
 下列屬性只能套用至[模組](../windows/module-cpp.md)屬性。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872061"
 ---
 # <a name="evening-the-spacing-between-controls"></a>均等控制項之間的間距
 對話方塊編輯器可讓您選取的最外層控制項之間的平均空間控制項。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371911"
 ---
 # <a name="cl-invokes-the-linker"></a>CL 叫用連結器
 CL 自動叫用編譯除非使用了 /c 選項之後的連結器。 編譯期間建立的.obj 檔案的名稱以及任何其他命令列上指定的檔案名稱，CL 會傳遞至連結器。 連結器會使用 LINK 環境變數中所列的選項。 您可以使用 /link 選項指定 CL 命令列上的連結器選項。 /Link 選項後面接著的選項會覆寫 LINK 環境變數中。 下表中的選項會抑制連結。  

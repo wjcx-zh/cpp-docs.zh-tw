@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878875"
 ---
 # <a name="override--c-component-extensions"></a>override (C++ 元件擴充功能)
 `override` 即時線上關鍵字表示，類型成員會覆寫基底類別或基底介面成員。  

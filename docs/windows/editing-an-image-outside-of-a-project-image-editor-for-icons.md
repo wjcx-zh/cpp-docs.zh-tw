@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873010"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>編輯專案外的影像 (圖示影像編輯器)
 您可以開啟和編輯在開發環境中的映像，您可以按照任何圖形應用程式。 您使用的影像不一定的獨立式編輯 Visual Studio 專案的一部分。  

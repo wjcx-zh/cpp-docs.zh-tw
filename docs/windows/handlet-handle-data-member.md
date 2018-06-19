@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871901"
 ---
 # <a name="handlethandle-data-member"></a>HandleT::handle_ 資料成員
 包含 HandleT 物件所代表的控制代碼。  

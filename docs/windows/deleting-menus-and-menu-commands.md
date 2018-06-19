@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871376"
 ---
 # <a name="deleting-menus-and-menu-commands"></a>刪除功能表和功能表命令
 ### <a name="to-delete-a-menu-or-menu-command"></a>刪除功能表或功能表命令  

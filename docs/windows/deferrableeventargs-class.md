@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872093"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs 類別
 範本類別，用於延期的事件引數類型。  

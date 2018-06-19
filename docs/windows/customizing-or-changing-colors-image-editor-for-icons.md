@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871233"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>自訂或變更色彩 (圖示影像編輯器)
 影像編輯器[色彩調色盤](../windows/colors-window-image-editor-for-icons.md)一開始會顯示 16 個標準色彩。 除了顯示的色彩以外，您還可以自行建立自訂色彩。 您可以接著[儲存和載入自訂的調色盤](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  

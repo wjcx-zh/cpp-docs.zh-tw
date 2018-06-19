@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876328"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus"></a>在現有的功能表之間插入新的功能表
 ### <a name="to-insert-a-new-menu-between-existing-menus"></a>在現有的功能表間插入新的功能表  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33173720"
 ---
 # <a name="compiler-error-c2213"></a>編譯器錯誤 C2213
 'modifier': __based 的引數不合法  

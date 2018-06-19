@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877147"
 ---
 # <a name="insert-activex-control-dialog-box"></a>插入 ActiveX 控制項對話方塊
 此對話方塊可讓您[插入您的對話方塊中的 ActiveX 控制項](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)時使用[對話方塊編輯器](../windows/dialog-editor.md)。  

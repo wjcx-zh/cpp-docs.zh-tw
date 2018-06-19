@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879844"
 ---
 # <a name="how-to-copy-resources"></a>如何：複製資源
 您可以從一個檔案複製資源，到另一個，而不需要變更它們，或者您可以[變更語言或條件的資源，同時將它複製](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)。  

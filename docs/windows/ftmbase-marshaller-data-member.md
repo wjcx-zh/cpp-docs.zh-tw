@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872698"
 ---
 # <a name="ftmbasemarshaller-data-member"></a>FtmBase::marshaller_ 資料成員
 保留無限制執行緒封送處理器的參考。  

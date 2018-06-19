@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135881"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>如何：擴充封送處理程式庫
 本主題說明如何擴充封送處理程式庫提供更多資料類型之間轉換。 使用者可以擴充封送處理程式庫目前不支援任何資料轉換。  

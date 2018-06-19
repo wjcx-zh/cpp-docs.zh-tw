@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892785"
 ---
 # <a name="switchis"></a>switch_is
 指定的運算式或做為選取的等位成員的聯集判別識別項。  

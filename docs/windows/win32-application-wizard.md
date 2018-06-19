@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891421"
 ---
 # <a name="win32-application-wizard"></a>Win32 應用程式精靈
 Visual C++ Win32 應用程式精靈可讓您建立四種類型的專案 (請見下表標題列)。 在每個案例中，您都可以為開啟的專案類型指定適合的其他選項。 下表指出每種應用程式類型可使用的選項。  

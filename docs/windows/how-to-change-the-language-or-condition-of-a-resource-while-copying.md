@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880133"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>如何：在複製資源時變更其語言或條件
 在資源中複製時，您可以變更其語言屬性或條件屬性，或兩者。  

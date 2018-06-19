@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873897"
 ---
 # <a name="flipping-an-image-image-editor-for-icons"></a>翻轉影像 (圖示影像編輯器)
 您可以翻轉或旋轉的影像：  

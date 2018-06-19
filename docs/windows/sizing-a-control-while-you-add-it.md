@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889683"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>加入控制項時調整它的大小
 ### <a name="to-size-a-control-while-you-add-it"></a>若要調整控制項的大小，而您將它加入  

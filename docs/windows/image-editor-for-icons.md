@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879278"
 ---
 # <a name="image-editor-for-icons"></a>圖示影像編輯器
 影像編輯器具有用於建立及編輯影像的多功能工具組，以及可協助您建立工具列點陣圖的功能。 除了點陣圖、圖示和游標之外，您還可使用 [ **影像** ] 功能表上的命令和 [ **影像編輯器** ] 工具列上的工具編輯 GIF 或 JPEG 格式的影像。  

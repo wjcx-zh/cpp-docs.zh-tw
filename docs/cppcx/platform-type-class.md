@@ -21,6 +21,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255534"
 ---
 # <a name="platformtype-class"></a>Platform::Type 類別
 包含與類型 (特別是此項)、字串名稱和 typecode 相關的執行階段資訊。 藉由呼叫取得[object:: gettype](../cppcx/platform-object-class.md#gettype)任何物件或使用[typeid](../windows/typeid-cpp-component-extensions.md)操作員的類別或結構的名稱。  

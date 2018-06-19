@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159401"
 ---
 # <a name="pushheap-stlclr"></a>push_heap (STL/CLR)
 將在範圍結尾的項目加入至由範圍中之前項目所組成的現有堆積。  

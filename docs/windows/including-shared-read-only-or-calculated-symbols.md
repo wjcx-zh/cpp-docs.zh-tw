@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879223"
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>包含共用 (唯讀) 或計算符號
 當開發環境第一次讀取另一個應用程式所建立的資源檔時，會將所有包含的標頭檔標示為唯讀。 接著，您可以使用[資源包含對話方塊](../windows/resource-includes-dialog-box.md)新增額外的唯讀符號標頭檔。  

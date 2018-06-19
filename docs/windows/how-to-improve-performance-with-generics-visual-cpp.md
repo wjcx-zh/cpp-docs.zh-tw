@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877562"
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：使用泛型改善效能 (Visual C++)
 使用泛型可以根據型別參數建立可重複使用的程式碼。 型別參數的實際類型會延後，直到用戶端程式碼呼叫它為止。 如需有關泛型的詳細資訊，請參閱[泛型](../windows/generics-cpp-component-extensions.md)。  

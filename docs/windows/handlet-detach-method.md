@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878459"
 ---
 # <a name="handletdetach-method"></a>HandleT::Detach 方法
 取消目前 HandleT 物件從其基礎控制代碼的關聯。  

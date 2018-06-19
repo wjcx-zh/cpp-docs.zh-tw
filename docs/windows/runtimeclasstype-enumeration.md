@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892399"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType 列舉
 指定的型別[RuntimeClass](../windows/runtimeclass-class.md)支援的執行個體。  

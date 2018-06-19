@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878830"
 ---
 # <a name="generic-functions-ccli"></a>泛型函式 (C++/CLI)
 泛型函式會宣告具有型別參數的函式。 呼叫時，會使用實際的類型，而不是型別參數。  

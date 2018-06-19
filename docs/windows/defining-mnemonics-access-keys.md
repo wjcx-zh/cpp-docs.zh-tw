@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873689"
 ---
 # <a name="defining-mnemonics-access-keys"></a>定義助憶鍵 (便捷鍵)
 一般來說，鍵盤使用者輸入的焦點一個控制項之間移動的對話方塊中使用 TAB 和方向鍵金鑰。 不過，您可以定義便捷鍵 （助憶鍵，或按一下 容易記住名稱），可讓使用者選擇的控制項按單一索引鍵。  

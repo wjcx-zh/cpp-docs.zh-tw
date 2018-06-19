@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880855"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface class (C++ 元件擴充功能)
 宣告介面。  原生介面上的資訊，請參閱[__interface](../cpp/interface.md)。  

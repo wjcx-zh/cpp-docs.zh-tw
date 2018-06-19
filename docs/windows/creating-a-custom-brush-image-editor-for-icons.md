@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873143"
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>建立自訂筆刷 (圖示影像編輯器)
 自訂筆刷為矩形拾取，並使用類似影像編輯器的備妥的筆刷的映像的一部分。 您可以在選取項目執行的所有作業，您可以都執行以及自訂筆刷。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878170"
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>載入調色盤色彩對話方塊 (圖示影像編輯器)
 您可以使用此對話方塊來載入特殊色彩調色盤，在您的專案中使用。 如需詳細資訊，請參閱[儲存及載入不同的色彩調色盤](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)。  

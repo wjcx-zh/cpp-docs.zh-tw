@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889858"
 ---
 # <a name="source-c"></a>source (C++)
 在類別上指定的連接點的 COM 物件的來源介面。 在屬性或方法中，會指出成員傳回的物件或為資料來源的事件的 VARIANT。  

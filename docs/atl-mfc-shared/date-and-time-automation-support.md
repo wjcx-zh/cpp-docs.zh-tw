@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357590"
 ---
 # <a name="date-and-time-automation-support"></a>日期和時間： 自動化支援
 本文說明如何利用的日期和時間管理相關的類別程式庫服務。 描述程序包括：  

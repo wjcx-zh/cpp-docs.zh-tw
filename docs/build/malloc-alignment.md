@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368661"
 ---
 # <a name="malloc-alignment"></a>malloc 對齊
 [malloc](../c-runtime-library/reference/malloc.md)保證會傳回已適當地對齊儲存具有基本的對齊方式，以及任何物件配置的記憶體無法容納的記憶體。 A*基本對齊*是小於或等於不對齊規格的實作所支援的最大對齊的對齊方式。 (在 Visual c + + 中，這是所需的對齊`double`，或 8 個位元組。 在以 64 位元平台為目標的程式碼中，則為 16 個位元組)。比方說，四個位元組配置則會支援任何四個位元組或較小物件的界限上對齊。  

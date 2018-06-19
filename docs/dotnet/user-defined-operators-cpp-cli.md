@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33174146"
 ---
 # <a name="user-defined-operators-ccli"></a>使用者定義的運算子 (C++/CLI)
 Managed 類型的使用者定義運算子允許為靜態成員或是執行個體成員，或位於全域範圍。 不過，不是以 Visual C++ 語言撰寫的程式中，只有靜態運算子可以透過用戶端的中繼資料可取得。  

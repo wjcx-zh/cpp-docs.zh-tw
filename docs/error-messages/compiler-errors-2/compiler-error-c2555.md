@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230579"
 ---
 # <a name="compiler-error-c2555"></a>編譯器錯誤 C2555
 'class1::function1': 覆寫虛擬函式傳回類型不同，而且不是從 'class2::function2' 的 covariant  

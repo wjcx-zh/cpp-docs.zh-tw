@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168837"
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>在原生類型中巢狀化之實值類型的版本問題 (C++/CLI)
 請考慮用來建置用戶端組件的帶正負號 （強式名稱） 組件元件。 元件包含在用戶端當做類型使用的原生的等位、 類別或陣列成員的實值類型。 如果未來版本的元件變更的大小或實值類型的配置，用戶端必須重新編譯。  

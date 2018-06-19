@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876832"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType 列舉
 指定模組是否應支援同處理序伺服程式或跨處理序伺服程式。  

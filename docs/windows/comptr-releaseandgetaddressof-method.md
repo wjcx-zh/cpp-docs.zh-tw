@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883795"
 ---
 # <a name="comptrreleaseandgetaddressof-method"></a>ComPtr::ReleaseAndGetAddressOf 方法
 釋放與這個 ComPtr 相關聯的介面，然後擷取 [ptr_](../windows/comptr-ptr-data-member.md) 資料成員的位址，其中包含已釋放之介面的指標。  

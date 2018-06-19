@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883338"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>泛型型別參數的條件約束 (C++/CLI)
 在泛型類型或方法宣告中，您可以使用條件約束限定型別參數。 條件約束是做為型別引數使用的類型必須符合的需求。 例如，條件約束可能是指，類型引數必須實作特定介面或從特定類別繼承。  

@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878804"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接執行個體化 WRL 元件
 了解如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL)[Microsoft::WRL::Make](../windows/make-function.md)和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函式來具現化元件，以從模組，定義它。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881165"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>物件控制代碼運算子 (^) (C++ 元件擴充功能)
 *控制代碼宣告子*(`^`，唸成"hat")，修改型別[規範](../cpp/overview-of-declarators.md)來表示，在宣告的物件應該自動刪除當系統決定此物件是無法存取。  

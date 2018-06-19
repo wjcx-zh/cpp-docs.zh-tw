@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241496"
 ---
 # <a name="compiler-error-c2923"></a>編譯器錯誤 C2923
 'type': 對參數 'param' 而言，'identifier' 不是有效的樣板類型引數  

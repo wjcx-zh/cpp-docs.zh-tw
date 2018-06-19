@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33173134"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 STL/CLR 程式庫已在 c + + 標準程式庫中找到的相同容器，但它的.NET framework 的 managed 環境中執行。 如果您已經熟悉 c + + 標準程式庫，STL/CLR 是以繼續使用您升級至目標 common language runtime (CLR) 的程式碼時已開發之技巧的最佳方式。  

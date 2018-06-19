@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879831"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>在工具列的按鈕之間插入空白
 一般情況下，若要插入按鈕之間的空白，只是將它們拖曳搶奪工具列上。 若要移除的空間，請將它們拖曳朝向彼此。  

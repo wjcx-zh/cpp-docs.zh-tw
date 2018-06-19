@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880175"
 ---
 # <a name="partial--c-component-extensions"></a>partial (C++ 元件擴充功能)
 `partial`關鍵字可讓相同的 ref 類別，來撰寫彼此獨立，而且在不同檔案中的不同部分。  

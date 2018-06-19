@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872038"
 ---
 # <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>顯示或隱藏色彩視窗 (圖示影像編輯器)
 ### <a name="to-display-colors-window"></a>若要顯示色彩視窗  

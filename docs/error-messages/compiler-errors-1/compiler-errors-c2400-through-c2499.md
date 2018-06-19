@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237441"
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>編譯器錯誤 C2400 到 C2499
 

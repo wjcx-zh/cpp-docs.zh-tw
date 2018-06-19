@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877043"
 ---
 # <a name="modulereleasenotifierrelease"></a>Module::ReleaseNotifier::Release
 如果物件以參數的建構，會刪除目前的 module:: releasenotifier 物件`true`。  

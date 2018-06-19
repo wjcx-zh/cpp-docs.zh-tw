@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230945"
 ---
 # <a name="compiler-error-c2600"></a>編譯器錯誤 C2600
 'function'：無法定義編譯器產生的特殊成員函式 (必須先在類別中宣告)  

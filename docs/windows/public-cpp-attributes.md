@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881727"
 ---
 # <a name="public-c-attributes"></a>public (C++ 屬性)
 可確保 typedef 將移到型別程式庫，即使它並未參考從.idl 檔中。  

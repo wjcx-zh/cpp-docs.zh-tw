@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873559"
 ---
 # <a name="finding-binary-data"></a>尋找二進位資料
 您可以搜尋 ASCII 字串或十六進位位元組。 例如，若要尋找"Hello"，您可以針對在字串中搜尋"Hello"或"48 65 6C 6c 6F 」 （十六進位對等項目）。  

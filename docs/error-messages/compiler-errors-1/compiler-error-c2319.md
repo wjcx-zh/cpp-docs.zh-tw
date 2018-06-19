@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222390"
 ---
 # <a name="compiler-error-c2319"></a>編譯器錯誤 C2319
 'try/catch' 之後必須是複合陳述式。 遺漏 '{'  

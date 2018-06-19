@@ -40,6 +40,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451190"
 ---
 # <a name="cgets-cgetws"></a>_cgets、_cgetws
 從主控台取得字元字串。 您現在已有這些函式更安全的版本可以使用，請參閱 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  

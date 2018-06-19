@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135579"
 ---
 # <a name="operatorgt-queue-stlclr"></a>運算子&gt;（佇列） (STL/CLR)
 佇列大於此數目比較。  

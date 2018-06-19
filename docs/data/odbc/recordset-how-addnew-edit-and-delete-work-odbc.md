@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094126"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>資料錄集：AddNew、Edit 和 Delete 的運作方式 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -85,7 +86,7 @@ ms.lasthandoff: 05/04/2018
     4.  預存的記錄會還原至編輯緩衝區。 前記錄`AddNew`呼叫是目前無論再次**插入**成功地執行陳述式。  
   
     > [!TIP]
-    >  完整控制的新記錄，執行下列方法： 設定的任何欄位，將會有值，並明確地設定所有的欄位也會藉由呼叫保留 Null 值`SetFieldNull`欄位和參數的指標與**，則為 TRUE** （預設值）。 如果您想要確保資料不會寫入資料來源，呼叫`SetFieldDirty`欄位和參數的指標與**FALSE**，且切勿修改欄位的值。 若要判斷欄位是否可為 Null，請呼叫`IsFieldNullable`。  
+    >  完整控制的新記錄，執行下列方法： 設定的任何欄位，將會有值，並明確地設定所有的欄位也會藉由呼叫保留 Null 值`SetFieldNull`欄位和參數的指標與 **，則為 TRUE** （預設值）。 如果您想要確保資料不會寫入資料來源，呼叫`SetFieldDirty`欄位和參數的指標與**FALSE**，且切勿修改欄位的值。 若要判斷欄位是否可為 Null，請呼叫`IsFieldNullable`。  
   
     > [!TIP]
     >  若要偵測資料錄集的資料成員的值變更時，MFC 會使用**PSEUDO_NULL**適用於每個您可以儲存在資料錄集的資料類型值。 如果您必須明確將欄位設定為**PSEUDO_NULL**值和欄位發生的狀況已標記為 Null，您必須也呼叫`SetFieldNull`，第一個參數中的欄位的位址傳遞和**FALSE**第二個參數中。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255749"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 類別和結構
 Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋找特定的類別，請參閱[ATL 類別概觀](../../atl/atl-class-overview.md)。  

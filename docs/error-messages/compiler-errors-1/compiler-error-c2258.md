@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167947"
 ---
 # <a name="compiler-error-c2258"></a>編譯器錯誤 C2258
 不合法的純虛擬函式語法，必須是 '= 0'  

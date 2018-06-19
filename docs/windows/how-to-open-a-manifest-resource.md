@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881838"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>如何：開啟資訊清單資源
 如果您從 [ [資源檢視](../windows/resource-view-window.md)] 開啟資訊清單資源，資源會以二進位格式開啟。 若要以更利於檢視的格式檢視資訊清單資源的內容，您必須從 [方案總管] 開啟資源。  

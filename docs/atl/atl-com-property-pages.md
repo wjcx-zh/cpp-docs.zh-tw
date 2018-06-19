@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357528"
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 屬性頁
 COM 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的一或多個 COM 物件。 屬性頁大量使用 ActiveX 控制項提供豐富的使用者介面可讓要在設計階段設定控制項屬性。  

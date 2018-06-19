@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876900"
 ---
 # <a name="moving-a-toolbar-button"></a>移動工具列按鈕
 ### <a name="to-move-a-toolbar-button"></a>若要移動工具列按鈕  

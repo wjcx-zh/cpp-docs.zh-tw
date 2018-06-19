@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882085"
 ---
 # <a name="disabling-guides"></a>停用輔助線
 若要停用貼齊輔助線效果，您可以搭配滑鼠使用特殊按鍵。 使用 ALT 鍵停用選取本指南的貼齊的效果。 移動的指南與 SHIFT 鍵可防止貼齊的控制項移動輔助線。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875730"
 ---
 # <a name="finding-a-string"></a>尋找字串
 您可以搜尋的一或多個字串在字串資料表中，並使用[規則運算式](/visualstudio/ide/using-regular-expressions-in-visual-studio)與**檔案中尋找**命令 (**編輯**功能表) 以找出所有的執行個體的字串符合的模式。  

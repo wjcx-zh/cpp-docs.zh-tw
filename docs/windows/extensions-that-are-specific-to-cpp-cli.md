@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872610"
 ---
 # <a name="extensions-that-are-specific-to-ccli"></a>C++/CLI 專用的擴充功能
 本節的文件中說明的下列語言功能僅適用於 C + + /CLI。  

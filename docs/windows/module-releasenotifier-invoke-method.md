@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876198"
 ---
 # <a name="modulereleasenotifierinvoke-method"></a>Module::ReleaseNotifier::Invoke 方法
 實作時，會發行在模組中的最後一個物件時呼叫的事件處理常式。  

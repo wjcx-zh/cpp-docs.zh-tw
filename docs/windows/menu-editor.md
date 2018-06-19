@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879434"
 ---
 # <a name="menu-editor"></a>功能表編輯器
 功能表允許您以有邏輯和容易尋找的方式排列命令。 使用功能表編輯器，您可以直接使用非常接近已完成應用程式的功能表列來建立和編輯功能表。  

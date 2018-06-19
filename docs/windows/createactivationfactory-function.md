@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883426"
 ---
 # <a name="createactivationfactory-function"></a>CreateActivationFactory 函式
 建立會產生指定類別之執行個體 (由 Windows 執行階段啟動) 的處理站。  

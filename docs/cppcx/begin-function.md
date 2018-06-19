@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086508"
 ---
 # <a name="begin-function"></a>begin 函式
 傳回迭代器，指向指定的介面參數所存取之集合的開頭。  

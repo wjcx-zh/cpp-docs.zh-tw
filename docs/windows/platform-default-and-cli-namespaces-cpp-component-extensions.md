@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880735"
 ---
 # <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Platform、default 和 cli 命名空間 (C++ 元件擴充功能)
 命名空間會限定語言項目的名稱，因此名稱不會與原始程式碼中其他位置的相同名稱發生衝突。 例如，名稱衝突可能會阻止編譯器可辨識的[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。 編譯器會使用命名空間，但是命名空間不會保留在編譯的組件中。  

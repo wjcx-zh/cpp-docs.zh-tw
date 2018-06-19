@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880494"
 ---
 # <a name="deleting-an-entry-from-an-accelerator-table"></a>刪除快速鍵對應表中的項目
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>刪除快速鍵對應表中的項目  

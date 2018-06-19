@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890099"
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>選取影像的範圍 (圖示影像編輯器)
 選取工具可用來定義您要剪下、 複製、 清除、 調整大小、 反轉，或移動影像區域。 與**矩形選取範圍**工具，您可以定義及選取影像的矩形區域。 與**不規則的選取**工具，您可以繪製徒手畫的外框，您要剪下、 複製或其他作業選取的區域。  

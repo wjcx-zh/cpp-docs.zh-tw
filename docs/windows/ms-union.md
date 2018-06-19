@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882033"
 ---
 # <a name="msunion"></a>ms_union
 控制 nonencapsulated 等位的網路資料表示對齊方式。  

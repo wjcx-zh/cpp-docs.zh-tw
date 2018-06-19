@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876848"
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>編輯影像部分範圍 (圖示影像編輯器)
 您可以執行標準的編輯作業： 剪下、 複製、 清除和移動 — 上[選取](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)、 選取範圍是整個映像或只是它的一部分。 由於影像編輯器會使用 Windows 剪貼簿，您可以在影像編輯器和其他 Windows 應用程式之間傳輸映像。  

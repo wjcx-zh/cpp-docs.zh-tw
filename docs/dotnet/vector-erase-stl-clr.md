@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170004"
 ---
 # <a name="vectorerase-stlclr"></a>vector::erase (STL/CLR)
 移除位於指定位置的項目。  

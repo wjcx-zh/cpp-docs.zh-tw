@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873572"
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>格線設定對話方塊 (圖示影像編輯器)
 可讓您指定格線設定您的映像，並顯示格線透過編輯映像。 格線可用於編輯映像，但不是會儲存為影像本身的一部分。  

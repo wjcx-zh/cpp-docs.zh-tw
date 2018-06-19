@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171086"
 ---
 # <a name="compiler-error-c2170"></a>編譯器錯誤 C2170
 'identifier': 未宣告為函式，無法當做內建  

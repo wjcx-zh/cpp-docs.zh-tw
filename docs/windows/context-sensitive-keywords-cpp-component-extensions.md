@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871519"
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>視內容而有所區別的關鍵字 (C++ 元件擴充功能)
 *即時線上關鍵字*是只在特定內容中才能辨識的語言項目。 在特定內容之外，內容相關性關鍵字可以是使用者定義的符號。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874729"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>建立圖示或其他影像 (圖示影像編輯器)
 您可以建立新的影像 （點陣圖、 圖示、 游標或工具列），然後使用影像編輯器，以自訂其外觀。 您也可以建立新的點陣圖，模仿[範本](../windows/how-to-use-resource-templates.md)。  

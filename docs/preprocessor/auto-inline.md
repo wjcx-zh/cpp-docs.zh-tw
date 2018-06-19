@@ -23,6 +23,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954017"
 ---
 # <a name="autoinline"></a>auto_inline
 排除範圍內定義的任何函式所在**關閉**指定其視為自動內嵌展開的候選項目。  

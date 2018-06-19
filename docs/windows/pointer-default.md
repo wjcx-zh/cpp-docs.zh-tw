@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877458"
 ---
 # <a name="pointerdefault"></a>pointer_default
 指定最上層會顯示在參數清單的指標除外的所有指標的指標預設屬性。  

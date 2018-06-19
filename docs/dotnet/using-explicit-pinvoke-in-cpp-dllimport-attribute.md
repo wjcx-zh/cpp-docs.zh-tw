@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169500"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>在 C++ 中使用明確的 PInvoke (DllImport 屬性)
 .NET Framework 提供明確的平台叫用 （或 PInvoke） 功能與`Dllimport`屬性，以允許受管理的應用程式呼叫 Dll 內封裝的 unmanaged 函式。 Unmanaged 的 Api 會封裝為 Dll，以及不提供原始程式碼的情況下需要明確的 PInvoke。 呼叫 Win32 函式，例如，需要 PInvoke。 否則，請使用隱含 P {叫用，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)如需詳細資訊。  

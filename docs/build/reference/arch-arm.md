@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369860"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 為 ARM 上的程式碼產生指定架構。 另請參閱[/arch (x86)](../../build/reference/arch-x86.md)和[/arch (x64)](../../build/reference/arch-x64.md)。  

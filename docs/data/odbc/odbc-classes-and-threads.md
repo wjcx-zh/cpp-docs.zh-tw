@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090584"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC 類別和執行緒
 從 MFC 4.2 開始，沒有多執行緒 MFC ODBC 類別的支援。 不過請注意，MFC 不提供多執行緒支援適用於 DAO 類別。  

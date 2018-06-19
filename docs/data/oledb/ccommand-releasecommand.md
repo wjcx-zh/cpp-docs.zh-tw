@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094874"
 ---
 # <a name="ccommandreleasecommand"></a>CCommand::ReleaseCommand
 釋放參數存取子，然後再釋放命令本身。  

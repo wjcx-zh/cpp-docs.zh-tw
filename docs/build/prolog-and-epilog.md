@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372005"
 ---
 # <a name="prolog-and-epilog"></a>初構和終解
 配置堆疊空間每個函式，呼叫其他函式，將儲存靜態暫存器，或使用例外狀況處理必須有個別的函式表格項目相關聯的回溯資料中所述的位址限制的初構 (請參閱[例外狀況處理 (x64)](../build/exception-handling-x64.md))。 初構儲存暫存器，在他們的住家地址中如有需要，將推入靜態暫存器堆疊上的引數、 區域變數和暫存檔，配置堆疊的固定的部分，並選擇性地建立框架指標。 關聯的回溯資料必須描述初構中的動作，因此必須提供要復原的初構程式碼的效果所需的資訊。  

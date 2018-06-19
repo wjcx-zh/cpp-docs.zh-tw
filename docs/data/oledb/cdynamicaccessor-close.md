@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089307"
 ---
 # <a name="cdynamicaccessorclose"></a>CDynamicAccessor::Close
 所有資料行解除繫結，釋放配置的記憶體，並釋放[IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx)類別中的介面指標。  

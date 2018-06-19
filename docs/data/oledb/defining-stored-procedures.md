@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101298"
 ---
 # <a name="defining-stored-procedures"></a>定義預存程序
 然後再呼叫預存程序，您必須先定義，使用[DEFINE_COMMAND](../../data/oledb/define-command.md)巨集。 當您定義命令時，則代表參數以問號 （？） 做為參數標記：  

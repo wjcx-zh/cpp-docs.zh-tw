@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102601"
 ---
 # <a name="irowsetimplgetdata"></a>IRowsetImpl::GetData
 資料擷取的資料列的資料列集的副本。  

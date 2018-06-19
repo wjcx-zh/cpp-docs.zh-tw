@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367816"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC 擴充 Dll： 概觀
 MFC 擴充 DLL 是通常會實作衍生自現有 Mfc 程式庫類別的可重複使用類別的 DLL。 使用 MFC （也稱為 MFC 的共用版本） 的動態連結程式庫版本建立 MFC 擴充 Dll。 只有 MFC 可執行檔 （應用程式或 MFC 的標準 Dll） 所建置的 MFC 的共用版本可以使用 MFC 擴充 DLL。 使用 MFC 擴充 DLL，可以從 MFC 衍生新的自訂類別，然後提供這個擴充的版本的 MFC 應用程式呼叫 DLL。  

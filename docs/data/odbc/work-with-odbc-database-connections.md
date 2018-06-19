@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094139"
 ---
 # <a name="work-with-odbc-database-connections"></a>使用 ODBC 資料庫連接
 下列主題說明如何連接至 ODBC 資料來源。  

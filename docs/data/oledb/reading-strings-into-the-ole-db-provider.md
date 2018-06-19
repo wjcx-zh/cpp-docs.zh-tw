@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110164"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>將字串讀入 OLE DB 提供者內
 `RMyProviderRowset::Execute`函式的形式開啟檔案，並讀取字串。 取用者傳遞給提供者的檔案名稱，藉由呼叫[icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)。 提供者接收的檔案名稱，並將它儲存在成員變數`m_szCommandText`。 `Execute` 讀取的檔案名稱`m_szCommandText`。 如果檔案名稱無效，或檔案無法使用，`Execute`會傳回錯誤。 否則，它會開啟檔案，並在呼叫`fgets`來擷取字串。 針對每個設定的字串讀取`Execute`建立使用者資料錄的執行個體 (`CAgentMan`) 並將它放入陣列。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104483"
 ---
 # <a name="using-bookmarks"></a>使用書籤
 開啟資料列集之前，您必須告訴提供者想要使用書籤。 若要這樣做，請設定**DBPROP_BOOKMARKS**屬性**true**在您的屬性集。 提供者會擷取書籤做為資料行是零，因此您必須使用特殊的巨集`BOOKMARK_ENTRY`和`CBookmark`類別，如果您使用靜態存取子。 `CBookmark` 位置引數是以位元組為單位的書籤緩衝區的長度是範本類別。 所需的書籤緩衝區的長度，取決於提供者。 如果您使用的 ODBC OLE DB 提供者，如下列範例所示，緩衝區必須是 4 個位元組。  

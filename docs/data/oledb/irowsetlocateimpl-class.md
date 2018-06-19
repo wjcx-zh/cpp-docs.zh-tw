@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111025"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 類別
 實作 OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)介面，從資料列集擷取任意資料列。  

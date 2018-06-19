@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093226"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>資料錄集：資料錄集選取資料錄的方式 (ODBC)
 本主題適用於 MFC ODBC 類別。  

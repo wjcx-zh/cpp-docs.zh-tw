@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092466"
 ---
 # <a name="strings-ccx"></a>字串 (C++/CX)
 Windows 執行階段中的文字表示在 C + + /CX 的[platform:: string 類別](../cppcx/platform-string-class.md)。 使用`Platform::String Class`當您將字串傳遞來回 Windows 執行階段類別中的方法，或您與其他 Windows 執行階段元件互動跨應用程式二進位介面 (ABI) 界限時。 `Platform::String Class` 提供適用於幾個常見字串作業的方法，但它並不是針對完整功能的字串類別而設計的。 您可以在 C++ 模組中使用 Standard C++ 字串型别 (如 [wstring](../standard-library/basic-string-class.md) ) 進行任何重要的文字處理，然後將最終的結果轉換成 [Platform::String^](../cppcx/platform-string-class.md) ，再將其傳入或傳出公用介面。 `wstring` 或 `wchar_t*` 與 `Platform::String`之間可進行簡單而有效的轉換。  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364215"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 類別
 這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總物件的介面。 根據定義，彙總的物件會包含在外部物件。 `CComAggObject`類別是類似於[Ccomobject< 類別](../../atl/reference/ccomobject-class.md)，只不過它會公開給外部用戶端直接存取的介面。  

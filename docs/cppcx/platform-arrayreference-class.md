@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089110"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 類別
 `ArrayReference` 是最佳化類型，當您想要使用輸入資料填入 C-style 陣列時，可以使用它來替代輸入參數中的 [Platform::Array^](../cppcx/platform-array-class.md) 。  

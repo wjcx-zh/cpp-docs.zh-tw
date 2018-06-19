@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366779"
 ---
 # <a name="comments-in-a-makefile"></a>Makefile 中的註解
 在前面的註解以 number sign （#）。 NMAKE 會忽略從數字符號到下一個新行字元的文字。 例如：  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365516"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 類別
 這個類別建立背景工作執行緒或使用現有，等候一或多個核心物件控點，而且其中一個控點會收到信號時，執行指定的用戶端函式。  

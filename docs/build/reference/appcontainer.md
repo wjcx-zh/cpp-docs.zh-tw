@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368430"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 必須在應用程式容器中執行的執行檔標記 — 例如，Microsoft 市集或通用 Windows 應用程式。  

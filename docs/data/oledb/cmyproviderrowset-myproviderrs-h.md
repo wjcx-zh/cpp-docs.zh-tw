@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097337"
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
 精靈會產生資料列集物件的項目。 在此種情況下，稱為 `CMyProviderRowset`。 `CMyProviderRowset`類別繼承自呼叫 OLE DB 提供者類別`CRowsetImpl`，它會實作所有必要的介面，如資料列集物件。 下列程式碼示範的繼承鏈結`CRowsetImpl`:  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106540"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供者內參考屬性
 找到想要的內容屬性群組和屬性識別碼。 如需詳細資訊，請參閱[OLE DB 屬性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程式設計人員參考*。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086840"
 ---
 # <a name="attributes-ccx"></a>屬性 (C++/CX)
 屬性是一種特殊的 ref 類別，可附加至 Windows 執行階段類型和方法，以指定建立中繼資料時的特定行為的方括號中。 數個預先定義的屬性，例如[Windows::Foundation::Metadata::WebHostHidden](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.webhosthiddenattribute.aspx)— 常用於 C + + /CX 程式碼。 此範例顯示如何將屬性套用至類別：  

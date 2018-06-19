@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090220"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>轉散發 ODBC 元件給您的客戶
 如果您將 ODBC 管理員程式的功能併入您的應用程式時，必須也要散發給您的使用者執行這些程式的檔案。 這些 ODBC 檔案位於 \OS\System 的目錄中的 Visual c + + CD-ROM。 Redistrb.wri 檔案和相同的目錄中的授權合約包含一份您可以重新發佈的 ODBC 檔案。  

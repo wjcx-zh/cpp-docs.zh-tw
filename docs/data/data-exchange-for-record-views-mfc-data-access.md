@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089410"
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>記錄檢視的資料交換 (MFC 資料存取)
 當您使用[加入類別](../mfc/reference/adding-an-mfc-odbc-consumer.md)資料錄檢視的對話方塊範本資源中的控制項對應至資料錄集的欄位，架構會管理雙向的資料交換 — 從記錄集到控制項和控制項至資料錄集。 使用 DDX 機制意味著您不需要自行撰寫程式碼以來回傳輸資料。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110434"
 ---
 # <a name="explicit-override-of-an-interface-member"></a>介面成員的明確覆寫
 宣告明確介面成員的類別中覆寫的語法已從 Managed Extensions for c + + Visual c + +。  

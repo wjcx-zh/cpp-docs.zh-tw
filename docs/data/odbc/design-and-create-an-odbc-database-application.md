@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088595"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>設計和建立 ODBC 資料庫應用程式
 這些主題可協助您設計及設定 ODBC 資料庫應用程式。  

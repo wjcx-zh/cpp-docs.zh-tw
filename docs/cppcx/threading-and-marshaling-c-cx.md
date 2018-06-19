@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093115"
 ---
 # <a name="threading-and-marshaling-ccx"></a>執行緒和封送處理 (C++/CX)
 在大部分情況下，可以從任何執行緒存取的 Windows 執行階段類別，例如標準 c + + 物件，執行個體。 這類類別都稱為 "Agile"。 不過，少數隨附於 Windows 的 Windows 執行階段類別的非 agile 的而且必須要當做 COM 物件，比標準的 c + + 物件。 您不必非常了解 COM 才能使用非 agile 的類別，但是必須將類別的執行緒模型及其封送處理行為納入考量。 針對這些必須使用非 Agile 類別之執行個體的少見情況，本文將提供背景知識和指引供您參考。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367442"
 ---
 # <a name="fpcsr"></a>FpCsr
 暫存器狀態也包含將 x87 FPU 控制字組。 呼叫慣例會要求此暫存器為靜態。  

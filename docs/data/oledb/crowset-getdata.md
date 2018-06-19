@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096440"
 ---
 # <a name="crowsetgetdata"></a>CRowset::GetData
 資料擷取的資料列的資料列集的副本。  

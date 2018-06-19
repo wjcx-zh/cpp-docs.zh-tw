@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092567"
 ---
 # <a name="installing-database-support-mfcatl"></a>安裝資料庫支援 (MFC/ATL)
 Visual c + + 不包含任何資料庫的產品。 以  

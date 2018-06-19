@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368690"
 ---
 # <a name="masm-macros"></a>MASM 巨集
 為了簡化使用[未經處理的虛擬作業](../build/raw-pseudo-operations.md)，有一組巨集，ksamd64.inc，可用來建立一般的程序序言和結尾中定義。  

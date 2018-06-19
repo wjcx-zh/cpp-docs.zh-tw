@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092427"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 類別
 以 Agile 物件來表示具有 MashalingBehavior=Standard 的物件，可大幅降低發生執行階段執行緒例外狀況的機會。 `Agile<T>` 可讓非 Agile 物件呼叫相同或不同的執行緒，或者從中被呼叫。 如需詳細資訊，請參閱[執行緒和封送處理](../cppcx/threading-and-marshaling-c-cx.md)。  

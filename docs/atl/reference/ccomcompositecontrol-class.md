@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365405"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl 類別
 這個類別會提供實作複合控制項所需的方法。  

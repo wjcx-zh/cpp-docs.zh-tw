@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090520"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 類別
 代表應用程式執行期間所發生的 COM 錯誤。 COMException 是一組預先定義的標準例外狀況所適用的基底類別。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363855"
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection 類別
 這個類別會提供方法來取得及釋放重要區段物件的擁有權。  

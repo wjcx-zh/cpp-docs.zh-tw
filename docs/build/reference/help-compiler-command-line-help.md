@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371381"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (編譯器命令列說明)
 顯示編譯器選項清單至標準輸出。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096102"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 類別
 使用 OLE DB 列舉值物件，會公開[ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx)介面，以傳回描述所有的資料來源和列舉值的資料列集。  
@@ -47,7 +48,7 @@ class CEnumerator :
  您可以擷取**ISourcesRowset**間接從這個類別的資料。  
   
 ## <a name="requirements"></a>需求  
- **標頭：**atldbcli.h  
+ **標頭：** atldbcli.h  
   
 ## <a name="see-also"></a>另請參閱  
  [DBViewer](../../visual-cpp-samples.md)   

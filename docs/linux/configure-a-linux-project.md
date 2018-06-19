@@ -19,6 +19,7 @@ ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/21/2018
+ms.locfileid: "34422676"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 本主題描述如何設定 Visual Studio Linux 專案。 如需 CMake Linux 專案的資訊，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。

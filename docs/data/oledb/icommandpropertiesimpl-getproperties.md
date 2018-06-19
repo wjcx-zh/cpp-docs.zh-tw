@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099715"
 ---
 # <a name="icommandpropertiesimplgetproperties"></a>ICommandPropertiesImpl::GetProperties
 傳回使用命令的屬性對應的所有要求的屬性集。  

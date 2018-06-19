@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092942"
 ---
 # <a name="working-with-documents-and-views"></a>使用文件和檢視
 Microsoft Foundation Classes (MFC) 程式庫會依賴許多其功能的文件/檢視架構。 一般來說，文件會儲存您的資料，並檢視顯示在框架視窗的工作區中，並管理使用者與資料互動。 檢視會與取得及更新資料的文件通訊。 您可以使用資料庫類別的架構，或未安裝。  

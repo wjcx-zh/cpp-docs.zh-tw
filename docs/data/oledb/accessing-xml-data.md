@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093398"
 ---
 # <a name="accessing-xml-data"></a>存取 XML 資料
 有兩種不同的方法，從資料來源擷取 XML 資料： 一個是使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md)和其他用途[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。  

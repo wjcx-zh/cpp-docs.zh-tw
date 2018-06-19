@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091676"
 ---
 # <a name="platformbox-class"></a>Platform::Box 類別
 允許將實值類型 (例如 `Windows::Foundation::DateTime` ) 或純量類型 (例如 `int` ) 儲存在 `Platform::Object` 類型中。 通常不需要明確使用 `Box` ，因為當您將實值類型轉換成 `Object^`時，將會隱含地進行 Boxing 作業。  

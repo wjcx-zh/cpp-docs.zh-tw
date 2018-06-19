@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090641"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>以第二個記錄集填入清單方塊 (MFC 資料存取)
 根據預設，資料錄檢視與單一資料錄集物件相關聯，其欄位會對應至資料錄檢視的控制項。 有時您可能想要將清單方塊或下拉式方塊控制項置於資料錄檢視中，並填入第二個資料錄集物件中的值。 使用者可以使用清單方塊來選取要在資料錄檢視中顯示的新類別的資訊。 本主題將說明如何和何時執行該操作。  

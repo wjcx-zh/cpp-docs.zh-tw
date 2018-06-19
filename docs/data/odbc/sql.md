@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093239"
 ---
 # <a name="sql"></a>SQL
 SQL （結構化查詢語言） 是定義、 查詢、 修改和控制的資料與關聯式資料庫，可讓進行通訊的方式。 您可以使用 SQL 語法，來建構會擷取記錄，根據您指定的準則的陳述式。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364189"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 類別
 `CComMultiThreadModelNoCS` 提供安全執行緒方法遞增和遞減變數的值，而不需要重要區段的鎖定或解除鎖定功能。  

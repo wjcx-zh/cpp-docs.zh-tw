@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090049"
 ---
 # <a name="catalog-information--mfc-data-access"></a>目錄資訊 (MFC 資料存取)
 資料來源中的資料表可以納入資料表名稱及這些資料表中的資料行，還有資料表權限、主要與外部索引鍵名稱的相關資訊，以及預先定義的查詢或預存程序的相關資訊，以及資料表上的索引和資料表統計資料的相關資訊。  

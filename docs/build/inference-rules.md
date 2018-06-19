@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368417"
 ---
 # <a name="inference-rules"></a>推斷規則
 推斷規則提供命令可以更新目標，並推斷目標的相依性。 推斷規則中的延伸符合單一目標，且具有相同的基底名稱的相依。 推斷規則是使用者定義或預先定義的。預先定義的規則可以重新定義。  

@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100560"
 ---
 # <a name="cviewtableusage-cviewtableinfo"></a>CViewTableUsage、CViewTableInfo
 呼叫 typedef 類別**CViewTableUsage**來實作其參數類別**CViewTableInfo**。  

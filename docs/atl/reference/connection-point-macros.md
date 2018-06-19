@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362926"
 ---
 # <a name="connection-point-macros"></a>連接點巨集
 這些巨集會定義連接點對應和項目。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096934"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>建立簡單唯讀提供者
 當您已建立的 OLE DB 提供者使用 ATL 專案精靈 和 ATL OLE DB 提供者精靈時，您可以新增您想要支援其他功能。 開始檢查的取用者，以及在哪些情況下傳送的資料類型來設計您的提供者。 它是特別重要，判斷是否需要支援的命令、 交易和其他選擇性的物件。 良好的設計 design up front 可加速實作和測試。  

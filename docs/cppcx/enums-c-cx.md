@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087377"
 ---
 # <a name="enums-ccx"></a>列舉 (C++/CX)
 C + + /CX 支援`public enum class`關鍵字，類似於標準 c + + `scoped  enum`。 當您使用以 `public enum class` 關鍵字所宣告的列舉程式時，您必須使用列舉識別項來限定每一個列舉值的範圍。  

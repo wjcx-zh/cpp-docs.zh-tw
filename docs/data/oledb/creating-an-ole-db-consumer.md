@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096687"
 ---
 # <a name="creating-an-ole-db-consumer"></a>建立 OLE DB 消費者
 您可以建立 OLE DB 樣板取用者，不論 ATL OLE DB 消費者精靈，但建議的方法是使用精靈。 取用者可以在任何支援 ATL 應用程式中運作  

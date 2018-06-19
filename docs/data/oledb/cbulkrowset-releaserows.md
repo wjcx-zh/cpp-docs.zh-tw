@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094923"
 ---
 # <a name="cbulkrowsetreleaserows"></a>CBulkRowset::ReleaseRows
 呼叫[irowset:: Releaserows](https://msdn.microsoft.com/en-us/library/ms719771.aspx)目前從大量資料列集擷取的所有資料列的參考計數遞減。  

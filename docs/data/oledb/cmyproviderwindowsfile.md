@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097922"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 精靈會建立類別可以包含一個資料列的資料;在此情況下，它會呼叫`CMyProviderWindowsFile`。 下列程式碼的`CMyProviderWindowsFile`是產生的精靈，並列出目錄中的所有檔案使用**WIN32_FIND_DATA**結構。 `CMyProviderWindowsFile` 繼承自**WIN32_FIND_DATA**結構：  

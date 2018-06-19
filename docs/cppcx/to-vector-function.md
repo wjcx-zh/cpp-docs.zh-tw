@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087967"
 ---
 # <a name="tovector-function"></a>to_vector 函式
 傳回 `std::vector` ，其值與指定的 IVector 或 IVectorView 參數的基礎集合相同。  

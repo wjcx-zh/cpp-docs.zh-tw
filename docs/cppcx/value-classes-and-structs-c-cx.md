@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090708"
 ---
 # <a name="value-classes-and-structs-ccx"></a>實值類別與結構 (C++/CX)
 A*實值結構*或*實值類別*是一個 Windows 執行階段相容的 POD （「 一般舊資料結構 」）。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。  

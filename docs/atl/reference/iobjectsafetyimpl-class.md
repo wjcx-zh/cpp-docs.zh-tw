@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364033"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 類別
 這個類別提供的預設實作`IObjectSafety`介面，以允許用戶端會擷取和設定物件的安全性層級。  

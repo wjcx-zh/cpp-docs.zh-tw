@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087812"
 ---
 # <a name="access-to-odbc-and-sql"></a>存取 ODBC 和 SQL
 Mfc 程式庫封裝的多個 Windows 應用程式開發介面呼叫，並仍然可讓您直接呼叫任何 Windows API 函式。 資料庫類別可讓您充分 ODBC API 相同的彈性。 資料庫類別可避免您的 ODBC 的複雜性，而您可以直接從任何地方呼叫 ODBC API 函式在程式中。  

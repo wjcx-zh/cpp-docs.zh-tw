@@ -68,9 +68,10 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097545"
 ---
 # <a name="cprocedureparameters-cprocedureparaminfo"></a>CProcedureParameters、CProcedureParamInfo
-呼叫 typedef 類別**CProcedureParameters**來實作其參數類別**、 CProcedureParamInfo**。  
+呼叫 typedef 類別**CProcedureParameters**來實作其參數類別 **、 CProcedureParamInfo**。  
   
 ## <a name="remarks"></a>備註  
  請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  

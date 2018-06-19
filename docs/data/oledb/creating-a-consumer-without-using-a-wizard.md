@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097688"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>未使用精靈建立消費者
 下列範例假設您要加入至現有的 ATL 專案 OLE DB 取用者支援。 如果您想要將 OLE DB 取用者支援加入至 MFC 應用程式，您應該執行 MFC 應用程式精靈，以建立所有支援的必要和 MFC 常式所需執行應用程式會叫用。  

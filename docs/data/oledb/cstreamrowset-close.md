@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100596"
 ---
 # <a name="cstreamrowsetclose"></a>CStreamRowset::Close
 版本[ISequentialStream](https://msdn.microsoft.com/en-us/library/ms718035.aspx)類別中的介面指標。  

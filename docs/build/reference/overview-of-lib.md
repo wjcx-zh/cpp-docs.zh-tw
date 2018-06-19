@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379194"
 ---
 # <a name="overview-of-lib"></a>LIB 概觀
 LIB 建立標準程式庫、 匯入程式庫，和匯出的檔案，您可以使用[連結](../../build/reference/linker-options.md)時建置程式。 從命令提示字元執行 LIB。  

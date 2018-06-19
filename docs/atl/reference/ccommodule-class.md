@@ -46,6 +46,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366467"
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 為準，ATL 7.0`CComModule`已被取代： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  

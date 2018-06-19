@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090506"
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>資料來源：以程式設計方式建立 ODBC 資料來源資料表
 本主題說明如何建立資料表的資料來源，使用`ExecuteSQL`類別成員函式`CDatabase`，傳遞字串，其中包含此函式**CREATE TABLE** SQL 陳述式。  

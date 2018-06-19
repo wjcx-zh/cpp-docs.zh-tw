@@ -21,9 +21,10 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368957"
 ---
 # <a name="recursion-macros"></a>遞迴巨集
-您可以使用遞迴巨集來呼叫 NMAKE 以遞迴方式。 遞迴工作階段會繼承命令列和環境變數巨集和 Tools.ini 資訊。 不會繼承 makefile 定義推斷規則或**。尾碼**和**。珍貴**規格。 若要傳遞到工作階段遞迴 NMAKE 巨集，設定環境變數設定，遞迴呼叫之前，定義巨集遞迴呼叫，在命令中或 Tools.ini 中定義的巨集。  
+您可以使用遞迴巨集來呼叫 NMAKE 以遞迴方式。 遞迴工作階段會繼承命令列和環境變數巨集和 Tools.ini 資訊。 不會繼承 makefile 定義推斷規則或 **。尾碼**和 **。珍貴**規格。 若要傳遞到工作階段遞迴 NMAKE 巨集，設定環境變數設定，遞迴呼叫之前，定義巨集遞迴呼叫，在命令中或 Tools.ini 中定義的巨集。  
   
 |巨集|定義|  
 |-----------|----------------|  

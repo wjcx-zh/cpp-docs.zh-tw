@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103339"
 ---
 # <a name="idbpropertiesimplgetproperties"></a>IDBPropertiesImpl::GetProperties
 傳回目前所設定的資料來源物件或目前設於初始化屬性群組中的屬性值的資料來源、 資料來源資訊，以及初始化屬性群組中的屬性值列舉值。  

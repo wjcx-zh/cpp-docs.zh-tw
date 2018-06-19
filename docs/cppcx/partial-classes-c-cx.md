@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091851"
 ---
 # <a name="partial-classes-ccx"></a>部分類別 (C++/CX)
 部分類別是支援下列案例的建構：您要修改一部分的類別定義，而自動產生程式碼軟體 (例如 XAML 設計工具) 也在相同的類別中修改程式碼。 使用部分類別可防止設計工具覆寫您的程式碼。 在 Visual Studio 專案中，會對產生的檔案自動套用 `partial` 修飾詞。  

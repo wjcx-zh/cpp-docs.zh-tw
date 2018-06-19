@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094643"
 ---
 # <a name="cbulkrowsetmovetobookmark"></a>CBulkRowset::MoveToBookmark
 擷取書籤所標記的資料列或從該書籤位移至指定位置 (`lSkip`) 的資料列。  

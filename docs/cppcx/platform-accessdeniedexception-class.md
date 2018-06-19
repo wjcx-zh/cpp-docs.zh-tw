@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087610"
 ---
 # <a name="platformaccessdeniedexception-class"></a>Platform::AccessDeniedException 類別
 當存取資源或功能遭拒時擲回。  

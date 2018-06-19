@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105201"
 ---
 # <a name="retrieving-a-blob"></a>擷取 BLOB
 您可以擷取各種二進位大型物件 (BLOB)。 您可以使用**DBTYPE_BYTES**擷取 BLOB 以位元組為單位的序列，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱[BLOB 與 OLE 物件](https://msdn.microsoft.com/en-us/library/ms711511.aspx)中*OLE DB 程式設計人員參考*。  

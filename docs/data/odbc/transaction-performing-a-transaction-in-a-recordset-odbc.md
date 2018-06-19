@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094601"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>異動：在一個資料錄集內執行異動 (ODBC)
 本主題說明如何在資料錄集執行交易。  

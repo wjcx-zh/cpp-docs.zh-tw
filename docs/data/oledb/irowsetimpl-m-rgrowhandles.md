@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101743"
 ---
 # <a name="irowsetimplmrgrowhandles"></a>IRowsetImpl::m_rgRowHandles
 目前回應中的提供者所包含的資料列控制代碼的對應`GetNextRows`。  

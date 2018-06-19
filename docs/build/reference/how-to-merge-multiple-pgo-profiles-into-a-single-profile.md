@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372278"
 ---
 # <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>如何：將多個 PGO 設定檔合併至單一設定檔
 

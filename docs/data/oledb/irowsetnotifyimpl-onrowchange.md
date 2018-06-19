@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105604"
 ---
 # <a name="irowsetnotifyimplonrowchange"></a>IRowsetNotifyImpl::OnRowChange
 告知消費者的資料列的第一個變更或是任何會影響整個資料列的變更。  

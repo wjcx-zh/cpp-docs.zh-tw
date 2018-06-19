@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366932"
 ---
 # <a name="dependents"></a>相依性
 在相依性的行中，指定零或多個相依項目之後的冒號 （:） 或雙冒號 （:），使用任何有效的檔名或[虛擬目標](../build/pseudotargets.md)。 使用一或多個空格或定位點分隔多個相依性。 相依性不區分大小寫。 允許使用路徑與檔名。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091981"
 ---
 # <a name="consumer-wizard-generated-classes"></a>消費者精靈產生的類別
 當您使用 [ATL OLE DB 消費者精靈] 產生消費者時，您可以選擇使用 OLE DB 樣板或 OLE DB 屬性。 在這兩種情況下，精靈都會產生一個命令類別和一個使用者記錄類別。 命令類別包含程式碼，可以開啟資料來源和您在精靈中指定的資料列集。 使用者記錄類別包含您所選取之資料庫資料表的資料行對應。 不過，所產生的程式碼在每個案例中會有所不同：  

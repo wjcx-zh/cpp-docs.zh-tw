@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366792"
 ---
 # <a name="callercallee-saved-registers"></a>呼叫端/被呼叫端儲存的暫存器
 在函式呼叫終結 RAX、 RCX、 RDX、 R8、 R9 R10、 R11 會視為 volatile，而且必須考慮的暫存器 (除非否則安全-可證明分析，例如整個程式最佳化)。  

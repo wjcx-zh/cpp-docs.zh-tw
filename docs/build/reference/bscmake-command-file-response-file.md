@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369561"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE 命令檔 (回應檔)
 您可以提供的命令檔中的命令列輸入部分或全部。 指定命令檔，請使用下列語法：  

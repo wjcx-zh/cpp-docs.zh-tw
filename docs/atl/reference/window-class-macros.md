@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364228"
 ---
 # <a name="window-class-macros"></a>視窗類別巨集
 這些巨集會定義視窗類別的公用程式。  

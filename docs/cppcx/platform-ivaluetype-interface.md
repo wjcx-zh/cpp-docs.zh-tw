@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089255"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType 介面
 `Platform::IValueType` 是實值類別和實值結構所實作的基礎結構介面。 無法在程式碼中明確使用。  

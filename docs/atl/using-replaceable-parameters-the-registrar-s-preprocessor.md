@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362280"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>使用可置換的參數 (在註冊機構&#39;s 前置處理器)
 可置換的參數允許註冊機構的用戶端指定執行階段資料。 若要這樣做，請在註冊機構會維護所在進入指令碼中可置換的參數相關聯的值取代對應。 在註冊機構會讓這些項目，在執行階段。  

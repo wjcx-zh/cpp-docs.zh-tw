@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088059"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>安裝和開始使用 ODBC
 下列主題可協助您安裝的元件。 您要開始使用開放式資料庫連接 (ODBC)。  

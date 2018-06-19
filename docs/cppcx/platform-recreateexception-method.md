@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087825"
 ---
 # <a name="platformrecreateexception-method"></a>Platform::ReCreateException 方法
 這個方法僅供內部使用，使用者程式碼並不需要。 請改用 exception:: createexception 方法。

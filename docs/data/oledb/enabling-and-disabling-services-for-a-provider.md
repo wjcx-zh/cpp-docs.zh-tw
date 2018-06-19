@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099728"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>啟用和停用提供者的服務
 個別的 OLE DB 服務可以啟用或停用存取單一提供者的所有應用程式的預設值。 這是藉由新增**OLEDB_SERVICES**提供者下的登錄項目具有的 CLSID，`DWORD`值，指定要啟用或停用的服務下, 表所示。  

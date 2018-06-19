@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096242"
 ---
 # <a name="cenumeratoraccessormszparsename"></a>CEnumeratorAccessor::m_szParseName
 要傳遞至字串[IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604)取得 moniker，以便在資料來源或列舉值。  

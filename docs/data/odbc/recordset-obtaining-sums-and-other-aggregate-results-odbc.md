@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092069"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>資料錄集：取得 SUM 和其他彙總結果 (ODBC)
 本主題適用於 MFC ODBC 類別。  

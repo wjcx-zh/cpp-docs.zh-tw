@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369769"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 專案中使用建置事件
 建置事件是一個命令，[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]執行建置流程中的特定階段。 *建置前*建置開始前，就會發生事件;*連結前*連結步驟開始; 之前發生的事件和*建置後*組建之後發生的事件已成功結束。 只有在相關聯的建置步驟發生時，才會發生建置事件。 例如，連結前事件不會發生連結步驟不會執行。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091556"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 類別
 代表應用程式執行期間所發生的錯誤。 自訂例外狀況類別不能衍生自 `Platform::Exception`類別。 如果您需要自訂例外狀況，您可以使用 `Platform::COMException` 並指定應用程式特定的 HRESULT。  

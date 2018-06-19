@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092030"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>資料錄欄位交換：RFX 函式的使用
 本主題說明如何使用 RFX 函式呼叫的主體構成您`DoFieldExchange`覆寫。  

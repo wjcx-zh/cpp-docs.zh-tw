@@ -41,6 +41,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366389"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 類別
 代表相對時間、 時間範圍。  

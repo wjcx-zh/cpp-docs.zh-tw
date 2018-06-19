@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092880"
 ---
 # <a name="use-the-odbc-cursor-library"></a>使用 ODBC 資料指標程式庫
 ODBC 管理捲動資料錄集，透過資料指標程式庫。 這些主題說明如何使用資料指標程式庫。  

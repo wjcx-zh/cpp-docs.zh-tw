@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098676"
 ---
 # <a name="commands-and-tables"></a>命令和資料表
 命令和資料表可讓您存取資料列集。也就是開啟資料列集、 執行命令和資料行繫結。 [CCommand](../../data/oledb/ccommand-class.md)和[CTable](../../data/oledb/ctable-class.md)類別具現化的命令和資料表的物件，分別。 這些類別衍生自[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)如下圖所示。  

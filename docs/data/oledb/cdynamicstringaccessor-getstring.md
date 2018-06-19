@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096544"
 ---
 # <a name="cdynamicstringaccessorgetstring"></a>CDynamicStringAccessor::GetString
 擷取指定資料行的資料做為字串。  

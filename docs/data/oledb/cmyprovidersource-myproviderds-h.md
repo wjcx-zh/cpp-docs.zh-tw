@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098650"
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource (MyProviderDS.H)
 提供者類別使用多重繼承。 下列程式碼顯示資料來源物件的繼承鏈結：  

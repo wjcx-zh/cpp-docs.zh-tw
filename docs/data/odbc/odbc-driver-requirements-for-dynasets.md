@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089229"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>動態集的 ODBC 驅動程式需求
 在 MFC ODBC 資料庫類別中，動態集是資料錄集與動態屬性。它們會維持已同步處理與資料來源所規定的方式。 MFC 動態集 （但不是順向資料錄集） 需要層級 2 API 的一致性與 ODBC 驅動程式。 如果驅動程式您[資料來源](../../data/odbc/data-source-odbc.md)符合層級 1 應用程式開發介面設定，您仍然可以使用可更新和唯讀快照集和順向資料錄集，但不是使用動態集。 不過，如果支援擴充的擷取和索引鍵集驅動資料指標層級 1 驅動程式可以支援 dynaset。  

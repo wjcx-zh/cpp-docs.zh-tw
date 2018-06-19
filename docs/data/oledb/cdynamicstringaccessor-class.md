@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097594"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 類別
 讓您能在不知道資料庫結構描述 (資料庫的基礎結構) 的情況下，存取資料來源。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107814"
 ---
 # <a name="transactions--mfc-data-access"></a>交易 (MFC 資料存取)
 異動的概念是特別開發來處理一些情況，其中資料庫的結果狀態取決於一系列的作業是否全部成功。 之所以如此，是因為後續的作業可能會修改之前作業的結果。 在這種情況下，如果任何一個作業失敗，產生的狀態可能會不確定。  

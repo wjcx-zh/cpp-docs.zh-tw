@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091154"
 ---
 # <a name="crowsetgetdatahere"></a>CRowset::GetDataHere
 從目前資料列擷取資料，並將它放入指定的緩衝區。  

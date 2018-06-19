@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097376"
 ---
 # <a name="crowsetimplmrgrowdata"></a>CRowsetImpl::m_rgRowData
 根據預設，`CAtlArray`上的使用者資料錄的樣板引數，templatizes `CRowsetImpl`。  

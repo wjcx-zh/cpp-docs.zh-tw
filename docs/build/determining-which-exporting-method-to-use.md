@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368755"
 ---
 # <a name="determining-which-exporting-method-to-use"></a>決定要使用哪一個匯出方法
 您可以使用兩種方式匯出檔案：.def 檔或 `__declspec(dllexport)` 關鍵字。 為了協助您決定針對您的 DLL 使用哪種方式較好，請考慮下列問題：  

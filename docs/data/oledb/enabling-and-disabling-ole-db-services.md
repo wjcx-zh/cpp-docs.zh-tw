@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099468"
 ---
 # <a name="enabling-and-disabling-ole-db-services"></a>啟用和停用 OLE DB 服務
 OLE DB 服務元件管理員會比較所支援的要判斷個別的服務元件是否無法叫用來滿足取用者要求的擴充的功能的提供者取用者指定的屬性。 例如，如果應用程式要求可捲動資料指標，提供者只支援順向資料指標，服務元件管理員會叫用用戶端資料指標引擎服務元件，以提供可捲動的功能。 如果應用程式依賴預設提供者的資料列集上支援的擴充功能和應用程式未明確設定要求的功能，功能可能不會出現在資料列集傳回用戶端上的屬性資料指標引擎。 若要互通，應用程式應該設定屬性，以明確地要求擴充的功能所需。  

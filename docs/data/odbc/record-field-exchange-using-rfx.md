@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091994"
 ---
 # <a name="record-field-exchange-using-rfx"></a>資料錄欄位交換：RFX 的使用
 本主題說明您如何使用 RFX 相對於架構。  

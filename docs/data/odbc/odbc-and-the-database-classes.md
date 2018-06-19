@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088463"
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC 和資料庫類別
 MFC ODBC 資料庫類別封裝在您將正常自行在成員函式的 ODBC API 函式呼叫[CDatabase](../../mfc/reference/cdatabase-class.md)和[CRecordset](../../mfc/reference/crecordset-class.md)類別。 例如，複雜的 ODBC 呼叫順序，傳回記錄的儲存位置、 處理錯誤狀況和其他作業的繫結會為您管理資料庫類別。 如此一來，您可以使用相當簡單的類別介面來透過資料錄集物件。  

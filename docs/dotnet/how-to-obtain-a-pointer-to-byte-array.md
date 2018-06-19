@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127964"
 ---
 # <a name="how-to-obtain-a-pointer-to-byte-array"></a>如何：取得位元組陣列的指標
 您可以取得中的陣列區塊的指標<xref:System.Byte>的第一個元素的位址，並將其指派給指標的陣列。  

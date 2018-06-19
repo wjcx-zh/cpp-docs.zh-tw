@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100612"
 ---
 # <a name="implementing-the-simple-read-only-provider"></a>實作簡單唯讀提供者
 本主題中的擴充的範例示範如何編輯精靈建立的檔案建立簡單唯讀提供者，從文字檔讀取一組兩個字串。 若要從精靈的 檔案中建立此提供者，請加入程式碼以完成下列工作：  

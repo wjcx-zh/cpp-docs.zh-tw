@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095462"
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>轉換提供者不支援的資料
 當取用者要求提供者不支援的資料類型時，OLE DB 提供者範本的程式碼`IRowsetImpl::GetData`呼叫 Msdadc.dll 来轉換的資料類型。  

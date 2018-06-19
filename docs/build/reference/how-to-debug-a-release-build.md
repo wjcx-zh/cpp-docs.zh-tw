@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374475"
 ---
 # <a name="how-to-debug-a-release-build"></a>如何：偵錯發行的組建
 您可以偵錯應用程式的發行組建。  

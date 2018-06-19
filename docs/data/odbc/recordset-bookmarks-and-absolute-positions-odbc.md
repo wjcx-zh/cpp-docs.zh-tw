@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091313"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>資料錄集：書籤和絕對位置 (ODBC)
 本主題適用於 MFC ODBC 類別。  

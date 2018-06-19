@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090282"
 ---
 # <a name="data-access-programming-mfcatl"></a>Data Access Programming (MFC/ATL)
 Visual C++ 多年來提供了數種使用資料庫的方式。 2011 年，Microsoft 宣佈它正在校準 ODBC 做為慣用技術，以從原生程式碼存取 SQL Server 產品。 ODBC 是一種業界標準，使用它可讓您在多個平台和資料來源間自由攜帶程式碼。 大多數的 SQL 資料庫產品和許多 NoSQL 產品都支援 ODBC。 您可以呼叫低階的 ODBC API 直接使用 ODBC，或者可以使用 MFC ODBC 包裝函式類別，或協力廠商的 C++ 包裝函式程式庫。 

@@ -46,6 +46,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094426"
 ---
 # <a name="cassertions-cassertioninfo"></a>CAssertions、CAssertionInfo
 呼叫 typedef 類別**CAssertions**來實作其參數類別**CAssertionInfo**。  

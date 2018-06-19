@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091650"
 ---
 # <a name="record-field-exchange-rfx"></a>資料錄欄位交換 (RFX)
 MFC ODBC 資料庫類別自動化資料來源之間移動資料和[資料錄集](../../data/odbc/recordset-odbc.md)物件。 當您衍生自[CRecordset](../../mfc/reference/crecordset-class.md) ，請勿使用大量資料列擷取的資料傳輸的資料錄欄位交換 (RFX) 機制。  

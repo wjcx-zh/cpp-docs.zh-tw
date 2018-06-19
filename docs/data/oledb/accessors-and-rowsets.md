@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094491"
 ---
 # <a name="accessors-and-rowsets"></a>存取子和資料列集
 若要設定及擷取資料，OLE DB 樣板會使用存取子和資料列集，透過[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)類別。 這個類別可以處理不同類型的多個存取子。  

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094822"
 ---
 # <a name="platformstring-class"></a>Platform::String 類別
 用來代表文字之 Unicode 字元的循序集合。 如需詳細資訊和範例，請參閱[字串](../cppcx/strings-c-cx.md)。  

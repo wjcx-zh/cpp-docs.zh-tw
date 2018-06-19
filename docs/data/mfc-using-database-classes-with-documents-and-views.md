@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091864"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC：使用具有文件和檢視的資料庫類別
 使用或不使用文件/檢視架構，您可以使用 MFC 資料庫類別。 本主題將強調使用文件和檢視。 它會說明：  

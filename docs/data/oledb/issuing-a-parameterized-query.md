@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104571"
 ---
 # <a name="issuing-a-parameterized-query"></a>發出參數型查詢
 下列範例會發出簡單參數化的查詢，以便從 Microsoft Access 資料庫中的資料表擷取時間欄位 （亦即超過 30） 的記錄。 若要支援此參數，使用者資料錄必須擁有其他的對應。 下列程式碼，在 ATL 專案中，使用`CCommand`類別而不是`CTable`中前一個範例中，使用類別[往返簡單資料列集](../../data/oledb/traversing-a-simple-rowset.md)。  

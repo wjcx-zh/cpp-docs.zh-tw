@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096996"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>使用精靈建立 OLE DB 消費者
 此程序示範如何使用 ATL 專案精靈 和 ATL OLE DB 消費者精靈產生 OLE DB 樣板取用者，並接著主要的程式碼的主控台應用程式擷取及顯示來自資料庫資料表的資料修改。  

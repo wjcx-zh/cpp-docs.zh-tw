@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364998"
 ---
 # <a name="ioleinplaceobjectwindowlessimpl-class"></a>IOleInPlaceObjectWindowlessImpl 類別
 這個類別會實作**IUnknown** ，並提供可讓無視窗控制項接收視窗訊息，並參與拖放作業的方法。  

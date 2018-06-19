@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090444"
 ---
 # <a name="open-database-connectivity-odbc"></a>開放式資料庫連接 (ODBC)
 Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫連接 (ODBC) 進行程式設計的類別。 Visual Studio 2015 和 SQL Server 2012 ODBC 為連接至 SQL 資料來源的慣用的方法。

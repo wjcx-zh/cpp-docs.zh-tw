@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101688"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供者內動態繫結資料行
 請確定您真正需要的是動態的資料行繫結。 因為您可能需要它：  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089148"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC：設定 ODBC 資料來源
 若要使用[資料來源](../../data/odbc/data-source-odbc.md)所開發的應用程式，您必須使用 ODBC 管理員來設定它。 ODBC 管理員記錄的可用資料來源，其在 Windows 登錄中的連接資訊。 使用 ODBC 管理員來新增、 修改和刪除資料來源中的**資料來源**對話方塊中，可以新增或刪除 ODBC 驅動程式。  

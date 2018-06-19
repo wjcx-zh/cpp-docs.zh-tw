@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096921"
 ---
 # <a name="cenumeratoropen"></a>CEnumerator::Open
 列舉值，繫結 moniker，如果其中一個指定，則擷取的資料列集列舉值，藉由呼叫[isourcesrowset:: Getsourcesrowset](https://msdn.microsoft.com/en-us/library/ms711200.aspx)。  

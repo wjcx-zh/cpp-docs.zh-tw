@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107099"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>應用程式精靈所建立的記錄檢視程式碼 (MFC 資料存取)
 [MFC 應用程式精靈](../mfc/reference/database-support-mfc-application-wizard.md)覆寫檢視`OnInitialUpdate`和`OnGetRecordset`成員函式。 在架構建立框架視窗、文件和檢視之後，它會呼叫 `OnInitialUpdate` 來初始化檢視。 `OnInitialUpdate` 從文件中取得指向資料錄集的指標。 基底類別呼叫[cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate)函式會開啟資料錄集。 下列程式碼將示範此程序`CRecordView`:  

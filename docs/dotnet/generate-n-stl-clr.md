@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110608"
 ---
 # <a name="generaten-stlclr"></a>generate_n (STL/CLR)
 將函式物件產生的值指派給範圍內的指定項目數，並返回到超過最後一個指定值的位置。  

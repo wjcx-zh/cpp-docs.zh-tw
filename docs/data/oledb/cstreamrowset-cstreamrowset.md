@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099858"
 ---
 # <a name="cstreamrowsetcstreamrowset"></a>CStreamRowset::CStreamRowset
 執行個體化並初始化`CStreamRowset`物件。  

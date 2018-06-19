@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099312"
 ---
 # <a name="endpropsetmap"></a>END_PROPSET_MAP
 標記集對應項目屬性的結尾。  

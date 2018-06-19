@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089709"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接呼叫 ODBC API 函式
 資料庫類別提供更簡單的介面，以[資料來源](../../data/odbc/data-source-odbc.md)比 ODBC。 如此一來，這些類別不會封裝所有 ODBC API。 類別的功能之外的任何功能，您必須直接呼叫 ODBC API 函式。 例如，您必須呼叫 ODBC 目錄函數 (**:: SQLColumns**， **:: SQLProcedures**， **:: SQLTables**，等等) 直接。  

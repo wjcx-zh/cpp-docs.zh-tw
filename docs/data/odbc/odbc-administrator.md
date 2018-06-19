@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090191"
 ---
 # <a name="odbc-administrator"></a>ODBC 管理員
 ODBC 管理員註冊及設定[資料來源](../../data/odbc/data-source-odbc.md)可供您在本機或網路上。 精靈會在您的使用者連接到資料來源的應用程式中建立的程式碼使用 ODBC 管理員所提供的資訊。  

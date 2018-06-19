@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104005"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>決定使用哪一種存取子
 在編譯時期或執行階段，您可以判斷資料列集的資料類型。  

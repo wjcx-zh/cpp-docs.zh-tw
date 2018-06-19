@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371508"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (前置處理輸出檔名稱)
 指定輸出檔名稱[/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)編譯器選項會將前置處理過的輸出。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102806"
 ---
 # <a name="isessionpropertiesimplgetproperties"></a>ISessionPropertiesImpl::GetProperties
 傳回清單中的屬性**DBPROPSET_SESSION**目前所設定的工作階段的屬性群組。  

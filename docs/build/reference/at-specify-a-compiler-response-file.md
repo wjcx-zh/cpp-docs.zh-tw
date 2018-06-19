@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369574"
 ---
 # <a name="-specify-a-compiler-response-file"></a>@ (指定編譯器回應檔)
 指定編譯器回應檔。  

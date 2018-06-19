@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093516"
 ---
 # <a name="use-odbc-to-work-with-other-users"></a>與其他使用者共同使用 ODBC
 其中多個使用者正在使用相同的 ODBC 資料庫環境中使用 ODBC。  

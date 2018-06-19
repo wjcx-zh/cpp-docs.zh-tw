@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096531"
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession (MyProviderSess.H)
 MyProviderSess.H 包含宣告和實作的 OLE DB 工作階段物件。 資料來源物件建立的工作階段物件，並代表消費者和提供者之間的交談。 多個同時進行的工作階段可以有一個資料來源開啟。 繼承清單`CMyProviderSession`遵循：  

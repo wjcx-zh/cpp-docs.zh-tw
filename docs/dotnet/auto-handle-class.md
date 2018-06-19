@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103274"
 ---
 # <a name="autohandle-class"></a>auto_handle 類別
 自動資源管理可用來將 managed 型別中嵌入虛擬控制代碼。  

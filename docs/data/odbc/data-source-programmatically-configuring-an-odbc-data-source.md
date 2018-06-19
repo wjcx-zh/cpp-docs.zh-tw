@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091968"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>資料來源：以程式設計方式設定 ODBC 資料來源
 本主題說明如何以程式設計方式設定開放式資料庫連接 (ODBC) 資料來源名稱。 這可讓您彈性來存取資料而不未強制使用者明確使用 ODBC 管理員或其他程式來指定資料來源的名稱。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094773"
 ---
 # <a name="blobname"></a>BLOB_NAME
 搭配`BEGIN_COLUMN_MAP`和`END_COLUMN_MAP`繫結的二進位大型物件 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx))。 類似於[BLOB_ENTRY](../../data/oledb/blob-entry.md)，只不過此巨集接受的資料行名稱，而不是資料行編號。  

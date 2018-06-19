@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111246"
 ---
 # <a name="record-views--mfc-data-access"></a>記錄檢視 (MFC 資料存取)
 本節僅適用於 MFC ODBC 類別。 OLE DB 資料錄檢視的相關資訊，請參閱[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)和[使用 OLE DB 資料錄檢視](../data/oledb/using-ole-db-record-views.md)。  

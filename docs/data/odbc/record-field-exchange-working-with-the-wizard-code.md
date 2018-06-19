@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092505"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>資料錄欄位交換：精靈程式碼的使用
 本主題說明的程式碼，MFC 應用程式精靈和**加入類別**(中所述[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 以支援 RFX 和您可能要變更程式碼的方式撰寫。  

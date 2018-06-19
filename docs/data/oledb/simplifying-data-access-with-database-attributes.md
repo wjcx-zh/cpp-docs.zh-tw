@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111711"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>以資料庫屬性簡化資料存取
 本主題示範如何使用資料庫屬性，以簡化資料庫作業。  

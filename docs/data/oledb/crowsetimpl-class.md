@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098715"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 類別
 提供標準的 OLE DB 資料列集實作，而不需要許多實作介面的多重繼承。  

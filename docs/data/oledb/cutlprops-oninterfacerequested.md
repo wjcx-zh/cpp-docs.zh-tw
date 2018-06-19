@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099767"
 ---
 # <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
 當取用者呼叫方法的其中一個物件建立介面來處理要求的選擇性的介面。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104519"
 ---
 # <a name="comptr"></a>com::ptr
 可當做 CLR 類別成員使用之 COM 物件的包裝函式。 包裝函式也會自動執行 COM 物件，其解構函式呼叫時釋放物件上的擁有的參考的存留期管理。 類似於[CComPtr 類別](../atl/reference/ccomptr-class.md)。  

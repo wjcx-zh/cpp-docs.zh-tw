@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094165"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>使用 MFC ODBC 資料錄集
 這些主題說明如何使用透過 MFC 的 ODBC 資料錄集。  

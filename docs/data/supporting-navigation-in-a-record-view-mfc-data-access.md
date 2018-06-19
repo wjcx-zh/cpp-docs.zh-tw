@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102380"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>支援記錄檢視的巡覽 (MFC 資料存取)
 本主題說明如何支援在記錄間移動您[CRecordView](../mfc/reference/crecordview-class.md)類別，包括下列資訊：  

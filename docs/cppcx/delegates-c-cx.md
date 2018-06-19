@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092384"
 ---
 # <a name="delegates-ccx"></a>委派 (C++/CX)
 `delegate`關鍵字用來宣告參考類型，這是 Windows 執行階段對等的標準 c + + 函式物件。 委派宣告類似於函式簽章，會指定其包裝函式必須有的傳回類型和參數類型。 這是使用者定義的委派宣告：  

@@ -1,7 +1,7 @@
 ---
 title: 加入控制項 (ATL 教學課程，第 2 部分) |Microsoft 文件
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358572"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238704"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>加入控制項 (ATL 教學課程，第 2 部分)
 在此步驟中，您將控制項加入您的專案，建置，和測試在網頁上。  
@@ -26,7 +26,7 @@ ms.locfileid: "32358572"
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>將物件新增至 ATL 專案  
   
-1.  在 類別檢視，以滑鼠右鍵按一下多邊形專案。  
+1.  在**方案總管 中**，以滑鼠右鍵按一下多邊形專案。  
   
 2.  指向**新增**捷徑功能表，然後按一下 **新項目**子功能表中。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "32358572"
 |**簡短名稱**|您輸入控制項的名稱。|  
 |**類別**|實作控制項建立的 c + + 類別名稱。|  
 |**.h 檔案**|若要包含的 c + + 類別定義建立的檔案。|  
-|**.cpp 檔案中**|若要包含的 c + + 類別實作所建立的檔案。|  
+|**.cpp 檔**|若要包含的 c + + 類別實作所建立的檔案。|  
 |**CoClass**|這個控制項的元件類別名稱。|  
 |**Interface**|其自訂的方法和屬性，控制將實作的介面名稱。|  
 |**Type**|控制項的描述。|  

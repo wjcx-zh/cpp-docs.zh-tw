@@ -53,7 +53,7 @@ ms.locfileid: "33340511"
   
     -   ELEMENT_TYPE_PTR 會表示為 '*'，緊接在已修改的類型之後。  
   
-    -   ELEMENT_TYPE_BYREF 會表示為 '@'，緊接在已修改的類型之後。  
+    -   ELEMENT_TYPE_BYREF 會表示為 '\@'，緊接在已修改的類型之後。  
   
     -   ELEMENT_TYPE_PINNED 會表示為 '^'，緊接在已修改的類型之後。 Visual C++ 編譯器永遠不會產生這個。  
   

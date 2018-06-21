@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283336"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271366"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式  
   
@@ -321,7 +321,7 @@ MFC 中提供下列下拉式方塊樣式。 如需在 Windows 中的下拉式方
 |`ES_NOHIDESEL`|一般來說，編輯控制項，當控制項失去輸入的焦點，以及反轉選取範圍，當控制項收到輸入的焦點時隱藏選取項目。 指定`ES_NOHIDESEL`刪除此預設動作。|  
 |`ES_NUMBER`|允許輸入至編輯控制項的數字。|  
 |`ES_OEMCONVERT`|在編輯控制項中輸入的文字會從 ANSI 字元集轉換，然後回到 ANSI 和 OEM 字元集。 這可確保適當的字元轉換，當應用程式呼叫`AnsiToOem`將編輯控制項中的 ANSI 字串轉換成 OEM 字元的 Windows 函式。 這個樣式是最有用之編輯控制項都包含檔案名稱。|  
-|`ES_PASSWORD`|會顯示為星號的所有字元 (**\***) 輸入至編輯控制項。 應用程式可以使用`SetPasswordChar`成員函式來變更顯示的字元。|  
+|`ES_PASSWORD`|會顯示為星號的所有字元 (**\\\***) 輸入至編輯控制項。 應用程式可以使用`SetPasswordChar`成員函式來變更顯示的字元。|  
 |`ES_READONLY`|可防止使用者輸入或編輯文字編輯控制項中。|  
 |`ES_RIGHT`|中的單行或多行編輯控制項靠右對齊文字。|  
 |`ES_UPPERCASE`|將所有輸入至編輯控制項為大寫字元轉換。|  

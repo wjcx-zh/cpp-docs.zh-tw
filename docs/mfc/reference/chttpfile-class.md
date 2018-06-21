@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372615"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271343"
 ---
 # <a name="chttpfile-class"></a>Cinternetfile 類別
 提供在 HTTP 伺服器上要求和讀取檔案的功能。  
@@ -115,7 +115,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  修改新的標頭的語意。 可以是下列其中一項：  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` 合併相同的名稱，請使用旗標新增到後續的標頭中找到的第一個標頭的標頭。 比方說，「 接受： 文字 / *"後面接著"接受： 音訊 /\*"形成一個標頭會導致"接受： 文字 /\*音訊 /\*"。 這是由呼叫的應用程式，以確保凝聚力配置相對於與聯合或個別標頭傳送的要求所接收的資料。  
+- `HTTP_ADDREQ_FLAG_COALESCE` 合併相同的名稱，請使用旗標新增到後續的標頭中找到的第一個標頭的標頭。 比方說，「 接受： 文字 /\*"後面接著"接受： 音訊 /\*"形成一個標頭會導致"接受： 文字 /\*音訊 /\*"。 這是由呼叫的應用程式，以確保凝聚力配置相對於與聯合或個別標頭傳送的要求所接收的資料。  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` 執行移除並新增至取代目前標頭。 標頭名稱會用來移除目前的標頭，以及完整的值會用來加入新的標頭。 如果標頭值是空白，而且標頭，則會將它移除。 如果不是空的標頭值取代。  
   

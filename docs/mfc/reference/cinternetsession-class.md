@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0f885ad5ef8202e7826a8f53dc5df832eecc372
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374561"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271330"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 建立和初始化單一或多個同時網際網路工作階段，並視需要描述您與 Proxy 伺服器的連接。  
@@ -498,10 +498,10 @@ CStdioFile* OpenURL(
   
 |URL 類型|Returns|  
 |--------------|-------------|  
-|file://|**Cgopherfile\***|  
-|http://|**Cinternetfile\***|  
-|gopher://|**CGopherFile\***|  
-|ftp: / /|**CInternetFile\***|  
+|file://|**Cgopherfile\\\***|  
+|http://|**Cinternetfile\\\***|  
+|gopher://|**CGopherFile\\\***|  
+|ftp: / /|**CInternetFile\\\***|  
   
 ### <a name="remarks"></a>備註  
  參數`dwFlags`必須包含**INTERNET_FLAG_TRANSFER_ASCII**或**INTERNET_FLAG_TRANSFER_BINARY**，但非兩者。 剩餘的旗標可以結合的位元`OR`運算子 ( **&#124;**)。  

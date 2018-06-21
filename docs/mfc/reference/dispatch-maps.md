@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5af6a8644514b18af3397fb22d54d42f649eed09
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377092"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271314"
 ---
 # <a name="dispatch-maps"></a>分派對應
 OLE Automation 提供方式呼叫方法，並跨應用程式中存取屬性。 Microsoft Foundation 類別庫發送這些要求所提供的機制就是 「 分派對應 」 指定的物件函式和屬性，以及資料類型和屬性本身的內部和外部名稱函式引數。  
@@ -163,20 +163,20 @@ DISP_FUNCTION(
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const VARIANT\*** 或**變數 （& s)**|  
+|**VTS_VARIANT**|**const VARIANT\\ \*** 或**變數 （& s)**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**short\***|  
-|**VTS_PI4**|**長\***|  
-|**VTS_PR4**|**浮點數\***|  
-|**VTS_PR8**|**double\***|  
-|**VTS_PCY**|**CY\***|  
-|**VTS_PDATE**|**日期\***|  
-|**VTS_PBSTR**|**BSTR\***|  
-|**VTS_PDISPATCH**|**LPDISPATCH\***|  
-|**VTS_PSCODE**|**SCODE\***|  
-|**VTS_PBOOL**|**BOOL\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
-|**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
+|**VTS_PI2**|**短\\\***|  
+|**VTS_PI4**|**長\\\***|  
+|**VTS_PR4**|**浮點數\\\***|  
+|**VTS_PR8**|**double\\\***|  
+|**VTS_PCY**|**CY\\\***|  
+|**VTS_PDATE**|**日期\\\***|  
+|**VTS_PBSTR**|**BSTR\\\***|  
+|**VTS_PDISPATCH**|**LPDISPATCH\\\***|  
+|**VTS_PSCODE**|**SCODE\\\***|  
+|**VTS_PBOOL**|**BOOL\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
+|**VTS_PUNKNOWN**|**LPUNKNOWN\\\***|  
 |**VTS_NONE**|沒有參數|  
 
 ### <a name="requirements"></a>需求  

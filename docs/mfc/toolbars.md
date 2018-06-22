@@ -37,7 +37,7 @@ ms.locfileid: "33381344"
   
 -   [範例](../mfc/toolbar-sample-list.md)  
   
- 如需 MFC 工具列的詳細資訊，請參閱文件 Q232017，"如何:: 新增文字至工具列按鈕，「 Microsoft 知識庫中在http://support.microsoft.com。  
+ 如需 MFC 工具列的詳細資訊，請參閱文件 Q232017，"如何:: 新增文字至工具列按鈕，「 Microsoft 知識庫中在 http://support.microsoft.com 。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   

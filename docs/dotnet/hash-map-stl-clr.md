@@ -7,24 +7,114 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map
+- cliext::hash_map::begin
+- cliext::hash_map::bucket_count
+- cliext::hash_map::clear
+- cliext::hash_map::const_iterator
+- cliext::hash_map::const_reference
+- cliext::hash_map::const_reverse_iterator
+- cliext::hash_map::count
+- cliext::hash_map::difference_type
+- cliext::hash_map::empty
+- cliext::hash_map::end
+- cliext::hash_map::equal_range
+- cliext::hash_map::erase
+- cliext::hash_map::find
+- cliext::hash_map::generic_container
+- cliext::hash_map::generic_iterator
+- cliext::hash_map::generic_reverse_iterator
+- cliext::hash_map::generic_value
+- cliext::hash_map::hash_delegate
+- cliext::hash_map::hash_map
+- cliext::hash_map::hasher
+- cliext::hash_map::insert
+- cliext::hash_map::iterator
+- cliext::hash_map::key_comp
+- cliext::hash_map::key_compare
+- cliext::hash_map::key_type
+- cliext::hash_map::load_factor
+- cliext::hash_map::lower_bound
+- cliext::hash_map::make_value
+- cliext::hash_map::mapped_type
+- cliext::hash_map::max_load_factor
+- cliext::hash_map::operator=
+- cliext::hash_map::operator
+- cliext::hash_map::rbegin
+- cliext::hash_map::reference
+- cliext::hash_map::rehash
+- cliext::hash_map::rend
+- cliext::hash_map::reverse_iterator
+- cliext::hash_map::size
+- cliext::hash_map::size_type
+- cliext::hash_map::swap
+- cliext::hash_map::to_array
+- cliext::hash_map::upper_bound
+- cliext::hash_map::value_comp
+- cliext::hash_map::value_compare
+- cliext::hash_map::value_type
 dev_langs:
 - C++
 helpviewer_keywords:
 - <cliext/hash_map> header [STL/CLR]
 - <hash_map> header [STL/CLR]
 - hash_map class [STL/CLR]
+- begin member [STL/CLR]
+- bucket_count member [STL/CLR]
+- clear member [STL/CLR]
+- const_iterator member [STL/CLR]
+- const_reference member [STL/CLR]
+- const_reverse_iterator member [STL/CLR]
+- count member [STL/CLR]
+- difference_type member [STL/CLR]
+- empty member [STL/CLR]
+- end member [STL/CLR]
+- equal_range member [STL/CLR]
+- erase member [STL/CLR]
+- find member [STL/CLR]
+- generic_container member [STL/CLR]
+- generic_iterator member [STL/CLR]
+- generic_reverse_iterator member [STL/CLR]
+- generic_value member [STL/CLR]
+- hash_delegate member [STL/CLR]
+- hash_map member [STL/CLR]
+- hasher member [STL/CLR]
+- insert member [STL/CLR]
+- iterator member [STL/CLR]
+- key_comp member [STL/CLR]
+- key_compare member [STL/CLR]
+- key_type member [STL/CLR]
+- load_factor member [STL/CLR]
+- lower_bound member [STL/CLR]
+- make_value member [STL/CLR]
+- mapped_type member [STL/CLR]
+- max_load_factor member [STL/CLR]
+- operator= member [STL/CLR]
+- operator member [STL/CLR]
+- rbegin member [STL/CLR]
+- reference member [STL/CLR]
+- rehash member [STL/CLR]
+- rend member [STL/CLR]
+- reverse_iterator member [STL/CLR]
+- size member [STL/CLR]
+- size_type member [STL/CLR]
+- swap member [STL/CLR]
+- to_array member [STL/CLR]
+- upper_bound member [STL/CLR]
+- value_comp member [STL/CLR]
+- value_compare member [STL/CLR]
+- value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ad09cf718e2e76cbed99c5628a3eafc5104ad03f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c42a1d546af7818d0eb9d3d97d395f74d5acccf
+ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33111799"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305780"
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`hash_map`若要管理的項目序列的雜湊表，儲存雙向的每個資料表項目連結清單節點，以及儲存一個項目每個節點。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  
@@ -57,68 +147,73 @@ template<typename Key,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>參數  
+### <a name="parameters"></a>參數  
  Key  
  受控制序列中項目的索引鍵的元件類型。  
   
  對應  
  受控制序列中項目的其他元件的類型。  
+
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
-## <a name="members"></a>成員  
+ **命名空間：** cliext  
+
+## <a name="declarations"></a>宣告  
   
 |類型定義|描述|  
 |---------------------|-----------------|  
-|[hash_map::const_iterator (STL/CLR)](../dotnet/hash-map-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
-|[hash_map::const_reference (STL/CLR)](../dotnet/hash-map-const-reference-stl-clr.md)|項目的常數參考類型。|  
-|[hash_map::const_reverse_iterator (STL/CLR)](../dotnet/hash-map-const-reverse-iterator-stl-clr.md)|用於受控制序列的常數反向迭代器類型。|  
-|[hash_map::difference_type (STL/CLR)](../dotnet/hash-map-difference-type-stl-clr.md)|兩個項目之間的 （可能是帶正負號） 距離的類型。|  
-|[hash_map::generic_container (STL/CLR)](../dotnet/hash-map-generic-container-stl-clr.md)|容器的泛型介面型別。|  
-|[hash_map::generic_iterator (STL/CLR)](../dotnet/hash-map-generic-iterator-stl-clr.md)|泛型介面，該容器的迭代器類型。|  
-|[hash_map::generic_reverse_iterator (STL/CLR)](../dotnet/hash-map-generic-reverse-iterator-stl-clr.md)|容器的泛型介面的反向迭代器類型。|  
-|[hash_map::generic_value (STL/CLR)](../dotnet/hash-map-generic-value-stl-clr.md)|泛型介面的容器項目的類型。|  
-|[hash_map::hasher (STL/CLR)](../dotnet/hash-map-hasher-stl-clr.md)|索引鍵雜湊的委派。|  
-|[hash_map::iterator (STL/CLR)](../dotnet/hash-map-iterator-stl-clr.md)|受控制序列之迭代器的類型。|  
-|[hash_map::key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)|兩個索引鍵排序的委派。|  
-|[hash_map::key_type (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)|排序索引鍵的類型。|  
-|[hash_map::mapped_type (STL/CLR)](../dotnet/hash-map-mapped-type-stl-clr.md)|每個索引鍵相關聯的對應值的型別。|  
-|[hash_map::reference (STL/CLR)](../dotnet/hash-map-reference-stl-clr.md)|項目的參考類型。|  
-|[hash_map::reverse_iterator (STL/CLR)](../dotnet/hash-map-reverse-iterator-stl-clr.md)|受控制序列的反向迭代器類型。|  
-|[hash_map::size_type (STL/CLR)](../dotnet/hash-map-size-type-stl-clr.md)|（非負數） 之間的距離的兩個項目類型。|  
-|[hash_map::value_compare (STL/CLR)](../dotnet/hash-map-value-compare-stl-clr.md)|兩個項目值順序的委派。|  
-|[hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)|元素的類型。|  
+|[hash_map::const_iterator (STL/CLR)](#const_iterator)|用於受控制序列的常數迭代器類型。|  
+|[hash_map::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|  
+|[hash_map::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|  
+|[hash_map::difference_type (STL/CLR)](#difference_type)|兩個項目之間的 （可能是帶正負號） 距離的類型。|  
+|[hash_map::generic_container (STL/CLR)](#generic_container)|容器的泛型介面型別。|  
+|[hash_map::generic_iterator (STL/CLR)](#generic_iterator)|泛型介面，該容器的迭代器類型。|  
+|[hash_map::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型介面的反向迭代器類型。|  
+|[hash_map::generic_value (STL/CLR)](#generic_value)|泛型介面的容器項目的類型。|  
+|[hash_map::hasher (STL/CLR)](#hasher)|索引鍵雜湊的委派。|  
+|[hash_map::iterator (STL/CLR)](#iterator)|受控制序列之迭代器的類型。|  
+|[hash_map::key_compare (STL/CLR)](#key_compare)|兩個索引鍵排序的委派。|  
+|[hash_map::key_type (STL/CLR)](#key_type)|排序索引鍵的類型。|  
+|[hash_map::mapped_type (STL/CLR)](#mapped_type)|每個索引鍵相關聯的對應值的型別。|  
+|[hash_map::reference (STL/CLR)](#reference)|項目的參考類型。|  
+|[hash_map::reverse_iterator (STL/CLR)](#reverse_iterator)|受控制序列的反向迭代器類型。|  
+|[hash_map::size_type (STL/CLR)](#size_type)|（非負數） 之間的距離的兩個項目類型。|  
+|[hash_map::value_compare (STL/CLR)](#value_compare)|兩個項目值順序的委派。|  
+|[hash_map::value_type (STL/CLR)](#value_type)|元素的類型。|  
   
 |成員函式|描述|  
 |---------------------|-----------------|  
-|[hash_map::begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md)|指定受控制序列的開頭。|  
-|[hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)|計算值區數目。|  
-|[hash_map::clear (STL/CLR)](../dotnet/hash-map-clear-stl-clr.md)|移除所有項目。|  
-|[hash_map::count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)|計算指定的索引鍵相符的項目。|  
-|[hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)|測試項目是否不存在。|  
-|[hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)|指定受控制序列的結尾。|  
-|[hash_map::equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)|尋找符合指定之索引鍵的範圍。|  
-|[hash_map::erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md)|移除位於指定位置的項目。|  
-|[hash_map::find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)|尋找符合指定之索引鍵的元素。|  
-|[hash_map::hash_delegate (STL/CLR)](../dotnet/hash-map-hash-delegate-stl-clr.md)|將複製的索引鍵的雜湊的委派。|  
-|[hash_map::hash_map (STL/CLR)](../dotnet/hash-map-hash-map-stl-clr.md)|建構容器物件。|  
-|[hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)|加入項目。|  
-|[hash_map::key_comp (STL/CLR)](../dotnet/hash-map-key-comp-stl-clr.md)|將複製兩個索引鍵的順序委派。|  
-|[hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)|計算每個值區的平均項目數。|  
-|[hash_map::lower_bound (STL/CLR)](../dotnet/hash-map-lower-bound-stl-clr.md)|尋找符合指定之索引鍵的範圍開頭。|  
-|[hash_map::make_value (STL/CLR)](../dotnet/hash-map-make-value-stl-clr.md)|建構值物件。|  
-|[hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md)|取得或設定每個 Bucket 最大項目數。|  
-|[hash_map::rbegin (STL/CLR)](../dotnet/hash-map-rbegin-stl-clr.md)|指定反向受控制序列的開頭。|  
-|[hash_map::rehash (STL/CLR)](../dotnet/hash-map-rehash-stl-clr.md)|重建雜湊資料表。|  
-|[hash_map::rend (STL/CLR)](../dotnet/hash-map-rend-stl-clr.md)|指定反向受控制序列的結尾。|  
-|[hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)|計算元素的數目。|  
-|[hash_map::swap (STL/CLR)](../dotnet/hash-map-swap-stl-clr.md)|交換兩個容器的內容。|  
-|[hash_map::to_array (STL/CLR)](../dotnet/hash-map-to-array-stl-clr.md)|將受控制的序列複製到新的陣列。|  
-|[hash_map::upper_bound (STL/CLR)](../dotnet/hash-map-upper-bound-stl-clr.md)|尋找符合指定之索引鍵的範圍結尾。|  
-|[hash_map::value_comp (STL/CLR)](../dotnet/hash-map-value-comp-stl-clr.md)|將複製兩個項目值的順序委派。|  
+|[hash_map::begin (STL/CLR)](#begin)|指定受控制序列的開頭。|  
+|[hash_map::bucket_count (STL/CLR)](#bucket_count)|計算值區數目。|  
+|[hash_map::clear (STL/CLR)](#clear)|移除所有項目。|  
+|[hash_map::count (STL/CLR)](#count)|計算指定的索引鍵相符的項目。|  
+|[hash_map::empty (STL/CLR)](#empty)|測試項目是否不存在。|  
+|[hash_map::end (STL/CLR)](#end)|指定受控制序列的結尾。|  
+|[hash_map::equal_range (STL/CLR)](#equal_range)|尋找符合指定之索引鍵的範圍。|  
+|[hash_map::erase (STL/CLR)](#erase)|移除位於指定位置的項目。|  
+|[hash_map::find (STL/CLR)](#find)|尋找符合指定之索引鍵的元素。|  
+|[hash_map::hash_delegate (STL/CLR)](#hash_delegate)|將複製的索引鍵的雜湊的委派。|  
+|[hash_map::hash_map (STL/CLR)](#hash_map)|建構容器物件。|  
+|[hash_map::insert (STL/CLR)](#insert)|加入項目。|  
+|[hash_map::key_comp (STL/CLR)](#key_comp)|將複製兩個索引鍵的順序委派。|  
+|[hash_map::load_factor (STL/CLR)](#load_factor)|計算每個值區的平均項目數。|  
+|[hash_map::lower_bound (STL/CLR)](#lower_bound)|尋找符合指定之索引鍵的範圍開頭。|  
+|[hash_map::make_value (STL/CLR)](#make_value)|建構值物件。|  
+|[hash_map::max_load_factor (STL/CLR)](#max_load_factor)|取得或設定每個 Bucket 最大項目數。|  
+|[hash_map::rbegin (STL/CLR)](#rbegin)|指定反向受控制序列的開頭。|  
+|[hash_map::rehash (STL/CLR)](#rehash)|重建雜湊資料表。|  
+|[hash_map::rend (STL/CLR)](#rend)|指定反向受控制序列的結尾。|  
+|[hash_map::size (STL/CLR)](#size)|計算元素的數目。|  
+|[hash_map::swap (STL/CLR)](#swap)|交換兩個容器的內容。|  
+|[hash_map::to_array (STL/CLR)](#to_array)|將受控制的序列複製到新的陣列。|  
+|[hash_map::upper_bound (STL/CLR)](#upper_bound)|尋找符合指定之索引鍵的範圍結尾。|  
+|[hash_map::value_comp (STL/CLR)](#value_comp)|將複製兩個項目值的順序委派。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|[hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)|取代受控制的序列。|  
-|[hash_map::operator (STL/CLR)](../dotnet/hash-map-operator-stl-clr.md)|將索引鍵對應至其相關聯的對應值。|  
+|[hash_map::operator= (STL/CLR)](#op_as)|取代受控制的序列。|  
+|[hash_map::operator (STL/CLR)](#op)|將索引鍵對應至其相關聯的對應值。|  
   
 ## <a name="interfaces"></a>介面  
   
@@ -165,17 +260,2674 @@ template<typename Key,
   
  清除，或移除項目會呼叫解構函式的儲存值。 終結容器清除所有項目。 因此，其項目類型是 ref 類別的容器可確保，任何項目存留期比長容器。 不過請注意，容器的控制代碼，並會`not`摧毀其項目。  
   
-## <a name="requirements"></a>需求  
- **標頭：** \<cliext/hash_map >  
+## <a name="members"></a>成員
+
+## <a name="begin"></a> hash_map:: begin (STL/CLR)
+指定受控制序列的開頭。  
   
- **命名空間：** cliext  
+### <a name="syntax"></a>語法  
   
-## <a name="see-also"></a>另請參閱  
- [hash_map](../dotnet/hash-map-stl-clr.md)   
- [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
- [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
- [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
- [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
- [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
- [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
- [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)
+```  
+iterator begin();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回指定的受控制序列中，或空序列結尾之外的第一個元素的雙向迭代器。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更受控制的序列中，但其狀態的開頭。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_begin.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect first two items   
+    Myhash_map::iterator it = c1.begin();   
+    System::Console::WriteLine("*begin() = [{0} {1}]",   
+        it->first, it->second);   
+    ++it;   
+    System::Console::WriteLine("*++begin() = [{0} {1}]",   
+        it->first, it->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+*begin() = [a 1]  
+*++begin() = [b 2]  
+```  
+
+## <a name="bucket_count"></a> hash_map::bucket_count (STL/CLR)
+計算值區數目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+int bucket_count();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回目前的 bucket 數目。 您可以使用它來判斷雜湊資料表的大小。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_bucket_count.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1 = gcnew Myhash_map;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect current parameters   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.25f);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+
+## <a name="clear"></a> hash_map:: clear (STL/CLR)
+移除所有項目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+void clear();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式可有效地呼叫[hash_map:: erase (STL/CLR)](../dotnet/hash-map-erase-stl-clr.md) `(` [hash_map:: begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md) `(),` [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`())`. 您可以使用它來確定受控制的序列是空白。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_clear.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+  
+// display contents " [a 1] [b 2]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
+  
+## <a name="const_iterator"></a> hash_map:: const_iterator (STL/CLR)
+用於受控制序列的常數迭代器類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef T2 const_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T2`，可做為受控制序列的常數的雙向迭代器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_const_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    Myhash_map::const_iterator cit = c1.begin();   
+    for (; cit != c1.end(); ++cit)   
+        System::Console::Write(" [{0} {1}]", cit->first, cit->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+``` 
+
+## <a name="const_reference"></a> hash_map:: const_reference (STL/CLR)
+項目的常數參考類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef value_type% const_reference;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述項目的常數參考。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_const_reference.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    Myhash_map::const_iterator cit = c1.begin();   
+    for (; cit != c1.end(); ++cit)   
+        {   // get a const reference to an element   
+        Myhash_map::const_reference cref = *cit;   
+        System::Console::Write(" [{0} {1}]", cref->first, cref->second);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```   
+
+## <a name="const_reverse_iterator"></a> hash_map:: const_reverse_iterator (STL/CLR)
+受控制序列的常數反向迭代器型別...  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef T4 const_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T4`，可做為受控制序列的常數反向迭代器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_const_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" reversed   
+    Myhash_map::const_reverse_iterator crit = c1.rbegin();   
+    for (; crit != c1.rend(); ++crit)   
+        System::Console::Write(" [{0} {1}]", crit->first, crit->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
+  
+## <a name="count"></a> hash_map:: count (STL/CLR)
+尋找符合指定索引鍵的項目數目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+size_type count(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式具有對等順序，與受控制序列中傳回的項目數`key`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目數目。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_count.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("count(L'A') = {0}", c1.count(L'A'));   
+    System::Console::WriteLine("count(L'b') = {0}", c1.count(L'b'));   
+    System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+``` 
+
+## <a name="difference_type"></a> hash_map:: difference_type (STL/CLR)
+兩個項目之間的帶正負號距離的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef int difference_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述負可能是項目計數。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_difference_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// compute positive difference   
+    Myhash_map::difference_type diff = 0;   
+    for (Myhash_map::iterator it = c1.begin(); it != c1.end(); ++it)   
+        ++diff;   
+    System::Console::WriteLine("end()-begin() = {0}", diff);   
+  
+// compute negative difference   
+    diff = 0;   
+    for (Myhash_map::iterator it = c1.end(); it != c1.begin(); --it)   
+        --diff;   
+    System::Console::WriteLine("begin()-end() = {0}", diff);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+begin()-end() = -3  
+```   
+
+## <a name="empty"></a> hash_map:: empty (STL/CLR)
+測試項目是否不存在。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+bool empty();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會對空的受控制序列傳回 true。 它相當於[hash_map:: size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`。 您可以使用它來測試是否 hash_map 是空的。  
+  
+### <a name="example"></a>範例  
+  
+```  
+// cliext_hash_map_empty.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    System::Console::WriteLine("empty() = {0}", c1.empty());   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    System::Console::WriteLine("empty() = {0}", c1.empty());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="end"></a> hash_map:: end (STL/CLR)
+指定受控制序列的結尾。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator end();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回雙向迭代器，指向受控制序列的結尾之外。 您使用它來取得指定受控制序列的結尾的迭代器其狀態不改變受控制序列的長度變更時。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_end.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect last two items   
+    Myhash_map::iterator it = c1.end();   
+    --it;   
+    --it;   
+    System::Console::WriteLine("*-- --end() = [{0} {1}]",   
+        it->first, it->second);   
+    ++it;   
+    System::Console::WriteLine("*--end() = [{0} {1}]",   
+        it->first, it->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --end() = [b 2]  
+*--end() = [c 3]  
+```  
+  
+## <a name="equal_range"></a> hash_map:: equal_range (STL/CLR)
+尋找符合指定之索引鍵的範圍。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+cliext::pair<iterator, iterator> equal_range(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ `key`  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回迭代器的一組`cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目範圍。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_equal_range.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+typedef Myhash_map::pair_iter_iter Pairii;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// display results of failed search   
+    Pairii pair1 = c1.equal_range(L'x');   
+    System::Console::WriteLine("equal_range(L'x') empty = {0}",   
+        pair1.first == pair1.second);   
+  
+// display results of successful search   
+    pair1 = c1.equal_range(L'b');   
+    for (; pair1.first != pair1.second; ++pair1.first)   
+        System::Console::Write(" [{0} {1}]",   
+            pair1.first->first, pair1.first->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
+
+## <a name="erase"></a> hash_map:: erase (STL/CLR)
+移除位於指定位置的項目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator erase(iterator where);  
+iterator erase(iterator first, iterator last);  
+bool erase(key_type key)  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要清除範圍的開頭。  
+  
+ key  
+ 若要清除的機碼值。  
+  
+ last  
+ 若要清除的範圍的結尾。  
+  
+ 其中  
+ 若要清除的項目。  
+  
+### <a name="remarks"></a>備註  
+ 第一個成員函式中移除指向受控制序列的項目`where`，並傳回指定移除的項目之外剩餘的第一個元素的迭代器或[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`如果沒有這類元素存在。 您可以使用它來移除單一項目。  
+  
+ 第二個成員函式範圍中移除受控制序列的項目 [`first`， `last`)，並傳回指定任何移除的項目之外剩餘的第一個元素的迭代器或`end()`如果沒有這個項目存在... 您可以使用它來移除零或多個連續的項目。  
+  
+ 第三個成員函式中移除索引鍵具有對等順序受控制任何的序列項目至`key`，並傳回已移除項目的數目的計數。 您可以使用它來移除並計算所有符合指定之索引鍵的項目。  
+  
+ 每個項目清除接受受控制序列的項目數目對數值成比例的時間。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_erase.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    cliext::hash_map<wchar_t, int> c1;   
+    c1.insert(cliext::hash_map<wchar_t, int>::make_value(L'a', 1));   
+    c1.insert(cliext::hash_map<wchar_t, int>::make_value(L'b', 2));   
+    c1.insert(cliext::hash_map<wchar_t, int>::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (cliext::hash_map<wchar_t, int>::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// erase an element and reinspect   
+    cliext::hash_map<wchar_t, int>::iterator it =   
+        c1.erase(c1.begin());   
+    System::Console::WriteLine("erase(begin()) = [{0} {1}]",   
+        it->first, it->second);   
+  
+// add elements and display " b c d e"   
+    c1.insert(cliext::hash_map<wchar_t, int>::make_value(L'd', 4));   
+    c1.insert(cliext::hash_map<wchar_t, int>::make_value(L'e', 5));   
+    for each (cliext::hash_map<wchar_t, int>::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// erase all but end   
+    it = c1.end();   
+    it = c1.erase(c1.begin(), --it);   
+    System::Console::WriteLine("erase(begin(), end()-1) = [{0} {1}]",   
+        it->first, it->second);   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+// erase end   
+    System::Console::WriteLine("erase(L'x') = {0}", c1.erase(L'x'));   
+    System::Console::WriteLine("erase(L'e') = {0}", c1.erase(L'e'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+erase(begin()) = [b 2]  
+ [b 2] [c 3] [d 4] [e 5]  
+erase(begin(), end()-1) = [e 5]  
+size() = 1  
+erase(L'x') = 0  
+erase(L'e') = 1  
+```  
+
+## <a name="find"></a> hash_map:: find (STL/CLR)
+尋找符合指定之索引鍵的元素。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator find(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 至少一個項目是否在受控制序列中有對等順序，與`key`，成員函式會傳回指定其中一個這些項目的迭代器，否則它會傳回[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md) `()`. 您可以使用它來尋找元素目前受控制序列之符合指定之索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_find.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("find {0} = {1}",   
+        L'A', c1.find(L'A') != c1.end());   
+  
+    Myhash_map::iterator it = c1.find(L'b');   
+    System::Console::WriteLine("find {0} = [{1} {2}]",   
+        L'b', it->first, it->second);   
+  
+    System::Console::WriteLine("find {0} = {1}",   
+        L'C', c1.find(L'C') != c1.end());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+find A = False  
+find b = [b 2]  
+find C = False  
+```  
+
+## <a name="generic_container"></a> hash_map::generic_container (STL/CLR)
+容器的泛型介面型別。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Microsoft::VisualC::StlClr::  
+    IHash<GKey, GValue>  
+    generic_container;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述此樣板容器類別的泛型介面。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_generic_container.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Myhash_map::generic_container^ gc1 = %c1;   
+    for each (Myhash_map::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// modify generic and display original   
+    gc1->insert(Myhash_map::make_value(L'd', 4));   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// modify original and display generic   
+    c1.insert(Myhash_map::make_value(L'e', 5));   
+    for each (Myhash_map::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3] [d 4] [e 5]  
+```  
+
+## <a name="generic_iterator"></a> hash_map::generic_iterator (STL/CLR)
+迭代器使用容器的泛型介面型別。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Microsoft::VisualC::StlClr::Generic::  
+    ContainerBidirectionalIterator<generic_value>  
+    generic_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型所描述泛型的迭代器，可以搭配這個範本容器類別的泛型介面。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_generic_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Myhash_map::generic_container^ gc1 = %c1;   
+    for each (Myhash_map::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Myhash_map::generic_iterator gcit = gc1->begin();   
+    Myhash_map::generic_value gcval = *gcit;   
+    System::Console::Write(" [{0} {1}]", gcval->first, gcval->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+``` 
+
+## <a name="generic_reverse_iterator"></a> hash_map::generic_reverse_iterator (STL/CLR)
+反向迭代器使用容器的泛型介面型別。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Microsoft::VisualC::StlClr::Generic::  
+    ReverseRandomAccessIterator<generic_value>  
+    generic_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型所描述泛型反向迭代器，可以搭配這個範本容器類別的泛型介面。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_generic_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Myhash_map::generic_container^ gc1 = %c1;   
+    for each (Myhash_map::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Myhash_map::generic_reverse_iterator gcit = gc1->rbegin();   
+    Myhash_map::generic_value gcval = *gcit;   
+    System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[c 3]  
+```   
+
+## <a name="generic_value"></a> hash_map::generic_value (STL/CLR)
+使用容器的泛型介面的項目類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef GValue generic_value;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型所描述型別的物件`GValue`描述使用的預存的項目值與此範本容器類別的泛型介面。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_generic_value.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Myhash_map::generic_container^ gc1 = %c1;   
+    for each (Myhash_map::value_type elem in gc1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Myhash_map::generic_iterator gcit = gc1->begin();   
+    Myhash_map::generic_value gcval = *gcit;   
+    System::Console::WriteLine(" [{0} {1}]", gcval->first, gcval->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1]  
+```  
+
+## <a name="hash_delegate"></a> hash_map::hash_delegate (STL/CLR)
+尋找符合指定之索引鍵的元素。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+hasher^ hash_delegate();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回用來將索引鍵的值轉換成整數的委派。 您可以使用它來雜湊索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_hash_delegate.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    Myhash_map::hasher^ myhash = c1.hash_delegate();   
+  
+    System::Console::WriteLine("hash(L'a') = {0}", myhash(L'a'));   
+    System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+``` 
+
+## <a name="hash_map"></a> hash_map:: hash_map (STL/CLR)
+建構容器物件。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+hash_map();  
+explicit hash_map(key_compare^ pred);  
+hash_map(key_compare^ pred, hasher^ hashfn);  
+hash_map(hash_map<Key, Mapped>% right);  
+hash_map(hash_map<Key, Mapped>^ right);  
+template<typename InIter>  
+    hash_maphash_map(InIter first, InIter last);  
+template<typename InIter>  
+    hash_map(InIter first, InIter last,  
+        key_compare^ pred);  
+template<typename InIter>  
+    hash_map(InIter first, InIter last,  
+        key_compare^ pred, hasher^ hashfn);  
+hash_map(System::Collections::Generic::IEnumerable<GValue>^ right);  
+hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,  
+    key_compare^ pred);  
+hash_map(System::Collections::Generic::IEnumerable<GValue>^ right,  
+    key_compare^ pred, hasher^ hashfn);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要插入範圍的開頭。  
+  
+ hashfn  
+ 雜湊值區的對應索引鍵的函式。  
+  
+ last  
+ 要插入範圍的結尾。  
+  
+ pred  
+ 排序受控制序列的述詞。  
+  
+ 向右  
+ 要插入的物件或範圍。  
+  
+### <a name="remarks"></a>備註  
+ 建構函式：  
+  
+ `hash_map();`  
+  
+ 使用預設排序述詞，初始化受控制的序列的任何項目， `key_compare()`，並使用預設雜湊函式。 您可以使用它來指定空的初始受控制的序列，使用預設排序述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `explicit hash_map(key_compare^ pred);`  
+  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞和預設雜湊函數。  
+  
+ 建構函式：  
+  
+ `hash_map(key_compare^ pred, hasher^ hashfn);`  
+  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `hash_map(hash_map<Key, Mapped>% right);`  
+  
+ 初始化受控制的序列與順序 [`right.begin()`， `right.end()`)、 排序的述詞，預設值和預設雜湊函式。 您用它來指定 hash_map 物件所控制之序列的複本初始受控制的序列`right`使用預設排序述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `hash_map(hash_map<Key, Mapped>^ right);`  
+  
+ 初始化受控制的序列與順序 [`right->begin()`， `right->end()`)、 排序的述詞，預設值和預設雜湊函式。 您用它來指定 hash_map 物件所控制之序列的複本初始受控制的序列`right`使用預設排序述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `template<typename InIter> hash_map(InIter first, InIter last);`  
+  
+ 初始化受控制的序列與順序 [`first`， `last`)、 排序的述詞，預設值和預設雜湊函式。 您可以使用它來製作受控制的序列的其他順序，排序述詞和雜湊函式的預設值。  
+  
+ 建構函式：  
+  
+ `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred);`  
+  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來製作受控制的序列的另一個序列，以指定順序的述詞和預設雜湊函數。  
+  
+ 建構函式：  
+  
+ `template<typename InIter> hash_map(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
+  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來製作受控制的序列的另一個序列，以指定順序的述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `hash_map(System::Collections::Generic::IEnumerable<Key>^ right);`  
+  
+ 初始化受控制的序列的列舉值所指定的順序與`right`、 排序的述詞，預設值和預設雜湊函式。 您可以使用它來進行受控制的序列排序述詞和雜湊函式的預設值所列舉值，描述的另一個序列的複本。  
+  
+ 建構函式：  
+  
+ `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
+  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來進行受控制的序列的列舉值，指定排序述詞和預設雜湊函式與所描述的另一個序列的複本。  
+  
+ 建構函式：  
+  
+ `hash_map(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
+  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來進行受控制的序列的列舉值，指定排序述詞和雜湊函式與所描述的另一個序列的複本。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_construct.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+int myfun(wchar_t key)   
+    { // hash a key   
+    return (key ^ 0xdeadbeef);   
+    }   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+// construct an empty container   
+    Myhash_map c1;   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an ordering rule   
+    Myhash_map c2 = cliext::greater_equal<wchar_t>();   
+    System::Console::WriteLine("size() = {0}", c2.size());   
+  
+    c2.insert(c1.begin(), c1.end());   
+    for each (Myhash_map::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an ordering rule and hash function   
+    Myhash_map c2h(cliext::greater_equal<wchar_t>(),   
+        gcnew Myhash_map::hasher(&myfun));   
+    System::Console::WriteLine("size() = {0}", c2h.size());   
+  
+    c2h.insert(c1.begin(), c1.end());   
+    for each (Myhash_map::value_type elem in c2h)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range   
+    Myhash_map c3(c1.begin(), c1.end());   
+    for each (Myhash_map::value_type elem in c3)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range and an ordering rule   
+    Myhash_map c4(c1.begin(), c1.end(),   
+        cliext::greater_equal<wchar_t>());   
+    for each (Myhash_map::value_type elem in c4)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range and an ordering rule and hash function   
+    Myhash_map c4h(c1.begin(), c1.end(),   
+        cliext::greater_equal<wchar_t>(),   
+        gcnew Myhash_map::hasher(&myfun));   
+    for each (Myhash_map::value_type elem in c4h)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration   
+    Myhash_map c5(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<   
+            Myhash_map::value_type>^)%c3);   
+    for each (Myhash_map::value_type elem in c5)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration and an ordering rule   
+    Myhash_map c6(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<   
+            Myhash_map::value_type>^)%c3,   
+                cliext::greater_equal<wchar_t>());   
+    for each (Myhash_map::value_type elem in c6)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration and an ordering rule and hash function   
+    Myhash_map c6h(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<   
+            Myhash_map::value_type>^)%c3,   
+                cliext::greater_equal<wchar_t>(),   
+                gcnew Myhash_map::hasher(&myfun));   
+    for each (Myhash_map::value_type elem in c6h)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine();   
+  
+// construct by copying another container   
+    Myhash_map c7(c4);   
+    for each (Myhash_map::value_type elem in c7)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct by copying a container handle   
+    Myhash_map c8(%c3);   
+    for each (Myhash_map::value_type elem in c8)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+```   
+
+## <a name="hasher"></a> hash_map::hasher (STL/CLR)
+索引鍵雜湊的委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
+    hasher;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述的委派，將索引鍵的值轉換為整數。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_hasher.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    Myhash_map::hasher^ myhash = c1.hash_delegate();   
+  
+    System::Console::WriteLine("hash(L'a') = {0}", myhash(L'a'));   
+    System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
+  
+## <a name="insert"></a> hash_map:: insert (STL/CLR)
+加入項目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+cliext::pair<iterator, bool> insert(value_type val);  
+iterator insert(iterator where, value_type val);  
+template<typename InIter>  
+    void insert(InIter first, InIter last);  
+void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要插入範圍的開頭。  
+  
+ last  
+ 要插入範圍的結尾。  
+  
+ 向右  
+ 若要插入的列舉型別。  
+  
+ val  
+ 要插入索引鍵的值。  
+  
+ 其中  
+ 若要插入 （只有提示） 的容器中的位置。  
+  
+### <a name="remarks"></a>備註  
+ 每個成員函式插入其餘運算元所指定的順序。  
+  
+ 第一個成員函式插入具有值的項目儘量`val`，並傳回一組值`X`。 如果`X.second`為 true，`X.first`指定新插入的項目，否則為`X.first`指定對等項目與項目排序已存在，且會插入任何新元素。 您可以使用它來插入單一項目。  
+  
+ 第二個成員函式插入值的項目`val`，並使用`where`做為提示 （若要改善效能），並傳回指定的新插入的元素的迭代器。 您可以使用它來插入這可能是您知道的項目旁的單一項目。  
+  
+ 第三個成員函式會插入序列 [`first`， `last`)。 您可以使用它來插入其他順序從複製的零或多個項目。  
+  
+ 第四個成員函式會插入所指定的序列`right`。 您可以使用它來插入列舉所描述的順序。  
+  
+ 每個項目插入將會受控制序列中的項目數目對數值成比例的時間。 可能會插入在平攤常數時間，不過，給定的指定項目插入點至相鄰的提示。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_insert.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+typedef Myhash_map::pair_iter_bool Pairib;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// insert a single value, unique and duplicate   
+    Pairib pair1 =   
+        c1.insert(Myhash_map::make_value(L'x', 24));   
+    System::Console::WriteLine("insert([L'x' 24]) = [{0} {1}] {2}",   
+        pair1.first->first, pair1.first->second, pair1.second);   
+  
+    pair1 = c1.insert(Myhash_map::make_value(L'b', 2));   
+    System::Console::WriteLine("insert([L'b' 2]) = [{0} {1}] {2}",   
+        pair1.first->first, pair1.first->second, pair1.second);   
+  
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// insert a single value with hint   
+    Myhash_map::iterator it =   
+        c1.insert(c1.begin(), Myhash_map::make_value(L'y', 25));   
+    System::Console::WriteLine("insert(begin(), [L'y' 25]) = [{0} {1}]",   
+        it->first, it->second);   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// insert an iterator range   
+    Myhash_map c2;   
+    it = c1.end();   
+    c2.insert(c1.begin(), --it);   
+    for each (Myhash_map::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// insert an enumeration   
+    Myhash_map c3;   
+    c3.insert(   // NOTE: cast is not needed   
+        (System::Collections::Generic::   
+            IEnumerable<Myhash_map::value_type>^)%c1);   
+    for each (Myhash_map::value_type elem in c3)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+insert([L'x' 24]) = [x 24] True  
+insert([L'b' 2]) = [b 2] False  
+ [a 1] [b 2] [c 3] [x 24]  
+insert(begin(), [L'y' 25]) = [y 25]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+ [a 1] [b 2] [c 3] [x 24]  
+ [a 1] [b 2] [c 3] [x 24] [y 25]  
+```  
+
+## <a name="iterator"></a> hash_map:: iterator (STL/CLR)
+受控制序列之迭代器的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef T1 iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T1`，可做為受控制序列的雙向迭代器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    Myhash_map::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        System::Console::Write(" [{0} {1}]", it->first, it->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="key_comp"></a> hash_map:: key_comp (STL/CLR)
+將複製兩個索引鍵的順序委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+key_compare^key_comp();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_key_comp.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    Myhash_map::key_compare^ kcomp = c1.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+  
+// test a different ordering rule   
+    Myhash_map c2 = cliext::greater<wchar_t>();   
+    kcomp = c2.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+``` 
+
+## <a name="key_compare"></a> hash_map:: key_compare (STL/CLR)
+兩個索引鍵排序的委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
+    key_compare;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型是同義字，以決定排序索引鍵引數的委派。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_key_compare.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    Myhash_map::key_compare^ kcomp = c1.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+  
+// test a different ordering rule   
+    Myhash_map c2 = cliext::greater<wchar_t>();   
+    kcomp = c2.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```   
+
+## <a name="key_type"></a> hash_map:: key_type (STL/CLR)
+排序索引鍵的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Key key_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型是範本參數 `Key`的同義字。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_key_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" using key_type   
+    for (Myhash_map::iterator it = c1.begin(); it != c1.end(); ++it)   
+        {   // store element in key_type object   
+        Myhash_map::key_type val = it->first;   
+  
+        System::Console::Write(" {0}", val);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+``` 
+
+## <a name="load_factor"></a> hash_map::load_factor (STL/CLR)
+計算每個值區的平均項目數。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+float load_factor();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式傳回`(float)` [hash_map:: size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md) `() /` [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)`()`。 您可以使用它來判斷平均的貯體大小。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_load_factor.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1 = gcnew Myhash_map;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect current parameters   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.25f);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```   
+
+## <a name="lower_bound"></a> hash_map:: lower_bound (STL/CLR)
+尋找符合指定之索引鍵的範圍開頭。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator lower_bound(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式判斷第一個項目`X`雜湊至相同的值區為受控制序列中`key`且具有對等順序，以`key`。 如果沒有這類元素存在，它會傳回[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; 否則它會傳回迭代器，指定`X`。 您可以使用它來尋找項目序列的開頭目前受控制序列之符合指定之索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_lower_bound.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("lower_bound(L'x')==end() = {0}",   
+        c1.lower_bound(L'x') == c1.end());   
+  
+    Myhash_map::iterator it = c1.lower_bound(L'a');   
+    System::Console::WriteLine("*lower_bound(L'a') = [{0} {1}]",   
+        it->first, it->second);   
+    it = c1.lower_bound(L'b');   
+    System::Console::WriteLine("*lower_bound(L'b') = [{0} {1}]",   
+        it->first, it->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = [a 1]  
+*lower_bound(L'b') = [b 2]  
+```  
+
+## <a name="make_value"></a> hash_map::make_value (STL/CLR)
+建構值物件。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+static value_type make_value(key_type key, mapped_type mapped);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 若要使用的金鑰值。  
+  
+ 對應  
+ 要搜尋的對應的值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式傳回`value_type`物件的索引鍵是`key`、 其對應的值為`mapped`。 您可以使用它來撰寫適用於數個其他成員函式物件。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_make_value.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="mapped_type"></a> hash_map:: mapped_type (STL/CLR)
+與每個索引鍵關聯的對應值類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Mapped mapped_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型是範本參數 `Mapped`的同義字。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_mapped_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" using mapped_type   
+    for (Myhash_map::iterator it = c1.begin(); it != c1.end(); ++it)   
+        {   // store element in mapped_type object   
+        Myhash_map::mapped_type val = it->second;   
+  
+        System::Console::Write(" {0}", val);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+1 2 3  
+```  
+
+## <a name="max_load_factor"></a> hash_map::max_load_factor (STL/CLR)
+取得或設定每個 Bucket 最大項目數。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+float max_load_factor();  
+void max_load_factor(float new_factor);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ new_factor  
+ 新的最大載入因數來儲存。  
+  
+### <a name="remarks"></a>備註  
+ 第一個成員函式會傳回目前儲存的最大載入因數。 您可以使用它來判斷最大平均貯體大小。  
+  
+ 第二個成員函式會取代使用存放區的最大載入因數`new_factor`。 沒有自動重新後續插入之前發生。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_max_load_factor.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1 = gcnew Myhash_map;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect current parameters   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.25f);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+
+## <a name="op_as"></a> hash_map:: operator = (STL/CLR)
+取代受控制的序列。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+hash_map<Key, Mapped>% operator=(hash_map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 要複製的容器。  
+  
+### <a name="remarks"></a>備註  
+ 成員運算子複製`right`物件，然後傳回`*this`。 您使用它將受控制序列取代為 `right` 中受控制序列的複本。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_operator_as.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Myhash_map c2;   
+    c2 = c1;   
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+``` 
+
+## <a name="op"></a> hash_map::operator(STL/CLR)
+將索引鍵對應至其相關聯的對應值。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+mapped_type operator[](key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 此成員函式以尋找具有對等順序的項目努力時`key`。 如果找到，它會傳回相關聯的對應的值。否則，它會插入`value_type(key, mapped_type())`並傳回相關聯 （預設值） 的對應值。 您使用它來查閱對應值，指定其相關聯的金鑰，或如果找不到任何索引鍵存在一個項目。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_operator_sub.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("c1[{0}] = {1}",   
+        L'A', c1[L'A']);   
+    System::Console::WriteLine("c1[{0}] = {1}",   
+        L'b', c1[L'b']);   
+  
+// redisplay altered contents   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// alter mapped values and redisplay   
+    c1[L'A'] = 10;   
+    c1[L'c'] = 13;   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [a 1] [A 0] [b 2] [c 3]  
+ [a 1] [A 10] [b 2] [c 13]  
+```  
+
+## <a name="rbegin"></a> hash_map:: rbegin (STL/CLR)
+指定反向受控制序列的開頭。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+reverse_iterator rbegin();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回指定受控制序列中，或空的序列開頭以外路徑的最後一個元素的反向迭代器。 因此，它會指定`beginning`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更受控制的序列相反的順序出現，但其狀態的開頭。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_rbegin.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect first two items in reversed sequence   
+    Myhash_map::reverse_iterator rit = c1.rbegin();   
+    System::Console::WriteLine("*rbegin() = [{0} {1}]",   
+        rit->first, rit->second);   
+    ++rit;   
+    System::Console::WriteLine("*++rbegin() = [{0} {1}]",   
+        rit->first, rit->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+*rbegin() = [c 3]  
+*++rbegin() = [b 2]  
+```   
+
+## <a name="reference"></a> hash_map:: reference (STL/CLR)
+項目的參考類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef value_type% reference;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述項目的參考。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_reference.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    Myhash_map::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        {   // get a reference to an element   
+        Myhash_map::reference ref = *it;   
+        System::Console::Write(" [{0} {1}]", ref->first, ref->second);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="rehash"></a> hash_map::rehash (STL/CLR)
+重建雜湊資料表。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+void rehash();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會重建雜湊表，如此可確保[hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md) `() <=` [hash_map::max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md)。 否則，雜湊表的大小會增加只有在必要時插入後。 （它永遠不會自動減少大小。）您可以使用它來調整的雜湊資料表大小。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_rehash.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1 = gcnew Myhash_map;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect current parameters   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.25f);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+
+## <a name="rend"></a> hash_map:: rend (STL/CLR)
+指定反向受控制序列的結尾。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+reverse_iterator rend();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回以外的位置開始，指向受控制序列的反向迭代器。 因此，它會指定`end`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更結尾受控制的序列相反的順序出現，但它的狀態。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_rend.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// inspect first two items in reversed sequence   
+    Myhash_map::reverse_iterator rit = c1.rend();   
+    --rit;   
+    --rit;   
+    System::Console::WriteLine("*-- --rend() = [{0} {1}]",   
+        rit->first, rit->second);   
+    ++rit;   
+    System::Console::WriteLine("*--rend() = [{0} {1}]",   
+        rit->first, rit->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+*-- --rend() = [b 2]  
+*--rend() = [a 1]  
+```  
+
+## <a name="reverse_iterator"></a> hash_map:: reverse_iterator (STL/CLR)
+受控制序列的反向迭代器類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef T3 reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述未指定類型 `T3` 的物件，其可用作受控制序列的反向迭代器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" reversed   
+    Myhash_map::reverse_iterator rit = c1.rbegin();   
+    for (; rit != c1.rend(); ++rit)   
+        System::Console::Write(" [{0} {1}]", rit->first, rit->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
+
+## <a name="size"></a> hash_map:: size (STL/CLR)
+計算元素的數目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+size_type size();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的項目數。 如果您在意順序是否具有非零的大小，請參閱[hash_map:: empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_size.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0} after clearing", c1.size());   
+  
+// add elements and clear again   
+    c1.insert(Myhash_map::make_value(L'd', 4));   
+    c1.insert(Myhash_map::make_value(L'e', 5));   
+    System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+  
+## <a name="size_type"></a> hash_map:: size_type (STL/CLR)
+兩個項目之間的帶正負號距離的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef int size_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述負的項目計數。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_size_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// compute positive difference   
+    Myhash_map::size_type diff = 0;   
+    for (Myhash_map::iterator it = c1.begin(); it != c1.end(); ++it)   
+        ++diff;   
+    System::Console::WriteLine("end()-begin() = {0}", diff);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
+
+## <a name="swap"></a> hash_map:: swap (STL/CLR)
+交換兩個容器的內容。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+void swap(hash_map<Key, Mapped>% right);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 要交換內容的容器。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會交換 `this` 和 `right` 之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_swap.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// construct another container with repetition of values   
+    Myhash_map c2;   
+    c2.insert(Myhash_map::make_value(L'd', 4));   
+    c2.insert(Myhash_map::make_value(L'e', 5));   
+    c2.insert(Myhash_map::make_value(L'f', 6));   
+    for each (Myhash_map::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// swap and redisplay   
+    c1.swap(c2);   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    for each (Myhash_map::value_type elem in c2)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+[d 4] [e 5] [f 6]  
+[d 4] [e 5] [f 6]  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="to_array"></a> hash_map::to_array (STL/CLR)
+將受控制的序列複製到新的陣列。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+cli::array<value_type>^ to_array();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列的陣列。 您可以使用它來取得陣列的形式受控制序列的複本。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_to_array.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// copy the container and modify it   
+    cli::array<Myhash_map::value_type>^ a1 = c1.to_array();   
+  
+    c1.insert(Myhash_map::make_value(L'd', 4));   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+// display the earlier array copy   
+    for each (Myhash_map::value_type elem in a1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
+
+## <a name="upper_bound"></a> hash_map:: upper_bound (STL/CLR)
+尋找符合指定之索引鍵的範圍結尾。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator upper_bound(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式決定的最後一個項目`X`雜湊至相同的值區為受控制序列中`key`且具有對等順序，以`key`。 如果沒有這類元素存在，或如果`X`是最後一個項目，在受控制序列中，它會傳回[hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; 否則它會傳回迭代器，指定之外的第一個項目`X`. 您可以使用它來目前受控制序列之符合指定之索引鍵中尋找的項目序列的結尾。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_upper_bound.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]"   
+    for each (Myhash_map::value_type elem in c1)   
+        System::Console::Write(" [{0} {1}]", elem->first, elem->second);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("upper_bound(L'x')==end() = {0}",   
+        c1.upper_bound(L'x') == c1.end());   
+  
+    Myhash_map::iterator it = c1.upper_bound(L'a');   
+    System::Console::WriteLine("*upper_bound(L'a') = [{0} {1}]",   
+        it->first, it->second);   
+    it = c1.upper_bound(L'b');   
+    System::Console::WriteLine("*upper_bound(L'b') = [{0} {1}]",   
+        it->first, it->second);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
+
+## <a name="value_comp"></a> hash_map:: value_comp (STL/CLR)
+將複製兩個項目值的順序委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+value_compare^ value_comp();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個項目值。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_value_comp.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    Myhash_map::value_compare^ kcomp = c1.value_comp();   
+  
+    System::Console::WriteLine("compare([L'a', 1], [L'a', 1]) = {0}",   
+        kcomp(Myhash_map::make_value(L'a', 1),   
+            Myhash_map::make_value(L'a', 1)));   
+    System::Console::WriteLine("compare([L'a', 1], [L'b', 2]) = {0}",   
+        kcomp(Myhash_map::make_value(L'a', 1),   
+            Myhash_map::make_value(L'b', 2)));   
+    System::Console::WriteLine("compare([L'b', 2], [L'a', 1]) = {0}",   
+        kcomp(Myhash_map::make_value(L'b', 2),   
+            Myhash_map::make_value(L'a', 1)));   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare([L'a', 1], [L'a', 1]) = True  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
+
+## <a name="value_compare"></a> hash_map::value_compare (STL/CLR)
+兩個項目值順序的委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
+    value_compare;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型是委派，其值的引數的順序會決定的同義字。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_value_compare.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    Myhash_map::value_compare^ kcomp = c1.value_comp();   
+  
+    System::Console::WriteLine("compare([L'a', 1], [L'a', 1]) = {0}",   
+        kcomp(Myhash_map::make_value(L'a', 1),   
+            Myhash_map::make_value(L'a', 1)));   
+    System::Console::WriteLine("compare([L'a', 1], [L'b', 2]) = {0}",   
+        kcomp(Myhash_map::make_value(L'a', 1),   
+            Myhash_map::make_value(L'b', 2)));   
+    System::Console::WriteLine("compare([L'b', 2], [L'a', 1]) = {0}",   
+        kcomp(Myhash_map::make_value(L'b', 2),   
+            Myhash_map::make_value(L'a', 1)));   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare([L'a', 1], [L'a', 1]) = True  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
+
+## <a name="value_type"></a> hash_map:: value_type (STL/CLR)
+元素的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef generic_value value_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個類型與 `generic_value`同義。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_map_value_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_map>   
+  
+typedef cliext::hash_map<wchar_t, int> Myhash_map;   
+int main()   
+    {   
+    Myhash_map c1;   
+    c1.insert(Myhash_map::make_value(L'a', 1));   
+    c1.insert(Myhash_map::make_value(L'b', 2));   
+    c1.insert(Myhash_map::make_value(L'c', 3));   
+  
+// display contents " [a 1] [b 2] [c 3]" using value_type   
+    for (Myhash_map::iterator it = c1.begin(); it != c1.end(); ++it)   
+        {   // store element in value_type object   
+        Myhash_map::value_type val = *it;   
+        System::Console::Write(" [{0} {1}]", val->first, val->second);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  

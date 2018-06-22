@@ -7,31 +7,117 @@ ms.technology:
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set
+- cliext::hash_set::begin
+- cliext::hash_set::bucket_count
+- cliext::hash_set::clear
+- cliext::hash_set::const_iterator
+- cliext::hash_set::const_reference
+- cliext::hash_set::const_reverse_iterator
+- cliext::hash_set::count
+- cliext::hash_set::difference_type
+- cliext::hash_set::empty
+- cliext::hash_set::end
+- cliext::hash_set::equal_range
+- cliext::hash_set::erase
+- cliext::hash_set::find
+- cliext::hash_set::generic_container
+- cliext::hash_set::generic_iterator
+- cliext::hash_set::generic_reverse_iterator
+- cliext::hash_set::generic_value
+- cliext::hash_set::hash_delegate
+- cliext::hash_set::hash_set
+- cliext::hash_set::hasher
+- cliext::hash_set::insert
+- cliext::hash_set::iterator
+- cliext::hash_set::key_comp
+- cliext::hash_set::key_compare
+- cliext::hash_set::key_type
+- cliext::hash_set::load_factor
+- cliext::hash_set::lower_bound
+- cliext::hash_set::make_value
+- cliext::hash_set::max_load_factor
+- cliext::hash_set::operator=
+- cliext::hash_set::rbegin
+- cliext::hash_set::reference
+- cliext::hash_set::rehash
+- cliext::hash_set::rend
+- cliext::hash_set::reverse_iterator
+- cliext::hash_set::size
+- cliext::hash_set::size_type
+- cliext::hash_set::swap
+- cliext::hash_set::to_array
+- cliext::hash_set::upper_bound
+- cliext::hash_set::value_comp
+- cliext::hash_set::value_compare
+- cliext::hash_set::value_type
 dev_langs:
 - C++
 helpviewer_keywords:
 - <cliext/hash_set> header [STL/CLR]
 - hash_set class [STL/CLR]
 - <hash_set> header [STL/CLR]
+- begin member [STL/CLR]
+- bucket_count member [STL/CLR]
+- clear member [STL/CLR]
+- const_iterator member [STL/CLR]
+- const_reference member [STL/CLR]
+- const_reverse_iterator member [STL/CLR]
+- count member [STL/CLR]
+- difference_type member [STL/CLR]
+- empty member [STL/CLR]
+- end member [STL/CLR]
+- equal_range member [STL/CLR]
+- erase member [STL/CLR]
+- find member [STL/CLR]
+- generic_container member [STL/CLR]
+- generic_iterator member [STL/CLR]
+- generic_reverse_iterator member [STL/CLR]
+- generic_value member [STL/CLR]
+- hash_delegate member [STL/CLR]
+- hash_set member [STL/CLR]
+- hasher member [STL/CLR]
+- insert member [STL/CLR]
+- iterator member [STL/CLR]
+- key_comp member [STL/CLR]
+- key_compare member [STL/CLR]
+- key_type member [STL/CLR]
+- load_factor member [STL/CLR]
+- lower_bound member [STL/CLR]
+- make_value member [STL/CLR]
+- max_load_factor member [STL/CLR]
+- operator= member [STL/CLR]
+- rbegin member [STL/CLR]
+- reference member [STL/CLR]
+- rehash member [STL/CLR]
+- rend member [STL/CLR]
+- reverse_iterator member [STL/CLR]
+- size member [STL/CLR]
+- size_type member [STL/CLR]
+- swap member [STL/CLR]
+- to_array member [STL/CLR]
+- upper_bound member [STL/CLR]
+- value_comp member [STL/CLR]
+- value_compare member [STL/CLR]
+- value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 63b43a116848ff67deb9c62c04849aa5afc6dbc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba3494599c57160bf87a10e53aa2143d9e2b78c0
+ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137519"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305734"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`hash_set`若要管理的項目序列的雜湊表，儲存雙向的每個資料表項目連結清單節點，以及儲存一個項目每個節點。 每個項目的值用做為索引鍵，排序順序。  
   
  在以下描述`GValue`相同`GKey`，這又是相同`Key`後者是 ref 型別，除非在這種情況下很`Key^`。  
   
-## <a name="syntax"></a>語法  
+### <a name="syntax"></a>語法  
   
 ```  
 template<typename Key>  
@@ -50,60 +136,65 @@ template<typename Key>
 #### <a name="parameters"></a>參數  
  Key  
  受控制序列中項目的索引鍵的元件類型。  
+
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
+ **命名空間：** cliext  
+
 ## <a name="members"></a>成員  
   
 |類型定義|描述|  
 |---------------------|-----------------|  
-|[hash_set::const_iterator (STL/CLR)](../dotnet/hash-set-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
-|[hash_set::const_reference (STL/CLR)](../dotnet/hash-set-const-reference-stl-clr.md)|項目的常數參考類型。|  
-|[hash_set::const_reverse_iterator (STL/CLR)](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)|用於受控制序列的常數反向迭代器類型。|  
-|[hash_set::difference_type (STL/CLR)](../dotnet/hash-set-difference-type-stl-clr.md)|兩個項目之間的 （可能是帶正負號） 距離的類型。|  
-|[hash_set::generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)|容器的泛型介面型別。|  
-|[hash_set::generic_iterator (STL/CLR)](../dotnet/hash-set-generic-iterator-stl-clr.md)|泛型介面，該容器的迭代器類型。|  
-|[hash_set::generic_reverse_iterator (STL/CLR)](../dotnet/hash-set-generic-reverse-iterator-stl-clr.md)|容器的泛型介面的反向迭代器類型。|  
-|[hash_set::generic_value (STL/CLR)](../dotnet/hash-set-generic-value-stl-clr.md)|泛型介面的容器項目的類型。|  
-|[hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)|索引鍵雜湊的委派。|  
-|[hash_set::iterator (STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)|受控制序列之迭代器的類型。|  
-|[hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)|兩個索引鍵排序的委派。|  
-|[hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)|排序索引鍵的類型。|  
-|[hash_set::reference (STL/CLR)](../dotnet/hash-set-reference-stl-clr.md)|項目的參考類型。|  
-|[hash_set::reverse_iterator (STL/CLR)](../dotnet/hash-set-reverse-iterator-stl-clr.md)|受控制序列的反向迭代器類型。|  
-|[hash_set::size_type (STL/CLR)](../dotnet/hash-set-size-type-stl-clr.md)|（非負數） 之間的距離的兩個項目類型。|  
-|[hash_set::value_compare (STL/CLR)](../dotnet/hash-set-value-compare-stl-clr.md)|兩個項目值順序的委派。|  
-|[hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)|元素的類型。|  
+|[hash_set::const_iterator (STL/CLR)](#const_iterator)|用於受控制序列的常數迭代器類型。|  
+|[hash_set::const_reference (STL/CLR)](#const_reference)|項目的常數參考類型。|  
+|[hash_set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|用於受控制序列的常數反向迭代器類型。|  
+|[hash_set::difference_type (STL/CLR)](#difference_type)|兩個項目之間的 （可能是帶正負號） 距離的類型。|  
+|[hash_set::generic_container (STL/CLR)](#generic_container)|容器的泛型介面型別。|  
+|[hash_set::generic_iterator (STL/CLR)](#generic_iterator)|泛型介面，該容器的迭代器類型。|  
+|[hash_set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|容器的泛型介面的反向迭代器類型。|  
+|[hash_set::generic_value (STL/CLR)](#generic_value)|泛型介面的容器項目的類型。|  
+|[hash_set::hasher (STL/CLR)](#hasher)|索引鍵雜湊的委派。|  
+|[hash_set::iterator (STL/CLR)](#iterator)|受控制序列之迭代器的類型。|  
+|[hash_set::key_compare (STL/CLR)](#key_compare)|兩個索引鍵排序的委派。|  
+|[hash_set::key_type (STL/CLR)](#key_type)|排序索引鍵的類型。|  
+|[hash_set::reference (STL/CLR)](#reference)|項目的參考類型。|  
+|[hash_set::reverse_iterator (STL/CLR)](#reverse_iterator)|受控制序列的反向迭代器類型。|  
+|[hash_set::size_type (STL/CLR)](#size_type)|（非負數） 之間的距離的兩個項目類型。|  
+|[hash_set::value_compare (STL/CLR)](#value_compare)|兩個項目值順序的委派。|  
+|[hash_set::value_type (STL/CLR)](#value_type)|元素的類型。|  
   
 |成員函式|描述|  
 |---------------------|-----------------|  
-|[hash_set::begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)|指定受控制序列的開頭。|  
-|[hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)|計算值區數目。|  
-|[hash_set::clear (STL/CLR)](../dotnet/hash-set-clear-stl-clr.md)|移除所有項目。|  
-|[hash_set::count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)|計算指定的索引鍵相符的項目。|  
-|[hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)|測試項目是否不存在。|  
-|[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)|指定受控制序列的結尾。|  
-|[hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)|尋找符合指定之索引鍵的範圍。|  
-|[hash_set::erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)|移除位於指定位置的項目。|  
-|[hash_set::find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)|尋找符合指定之索引鍵的元素。|  
-|[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)|將複製的索引鍵的雜湊的委派。|  
-|[hash_set::hash_set (STL/CLR)](../dotnet/hash-set-hash-set-stl-clr.md)|建構容器物件。|  
-|[hash_set::insert (STL/CLR)](../dotnet/hash-set-insert-stl-clr.md)|加入項目。|  
-|[hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)|將複製兩個索引鍵的順序委派。|  
-|[hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)|計算每個值區的平均項目數。|  
-|[hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)|尋找符合指定之索引鍵的範圍開頭。|  
-|[hash_set::make_value (STL/CLR)](../dotnet/hash-set-make-value-stl-clr.md)|建構值物件。|  
-|[hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)|取得或設定每個 Bucket 最大項目數。|  
-|[hash_set::rbegin (STL/CLR)](../dotnet/hash-set-rbegin-stl-clr.md)|指定反向受控制序列的開頭。|  
-|[hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md)|重建雜湊資料表。|  
-|[hash_set::rend (STL/CLR)](../dotnet/hash-set-rend-stl-clr.md)|指定反向受控制序列的結尾。|  
-|[hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)|計算元素的數目。|  
-|[hash_set::swap (STL/CLR)](../dotnet/hash-set-swap-stl-clr.md)|交換兩個容器的內容。|  
-|[hash_set::to_array (STL/CLR)](../dotnet/hash-set-to-array-stl-clr.md)|將受控制的序列複製到新的陣列。|  
-|[hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)|尋找符合指定之索引鍵的範圍結尾。|  
-|[hash_set::value_comp (STL/CLR)](../dotnet/hash-set-value-comp-stl-clr.md)|將複製兩個項目值的順序委派。|  
+|[hash_set::begin (STL/CLR)](#begin)|指定受控制序列的開頭。|  
+|[hash_set::bucket_count (STL/CLR)](#bucket_count)|計算值區數目。|  
+|[hash_set::clear (STL/CLR)](#clear)|移除所有項目。|  
+|[hash_set::count (STL/CLR)](#count)|計算指定的索引鍵相符的項目。|  
+|[hash_set::empty (STL/CLR)](#empty)|測試項目是否不存在。|  
+|[hash_set::end (STL/CLR)](#end)|指定受控制序列的結尾。|  
+|[hash_set::equal_range (STL/CLR)](#equal_range)|尋找符合指定之索引鍵的範圍。|  
+|[hash_set::erase (STL/CLR)](#erase)|移除位於指定位置的項目。|  
+|[hash_set::find (STL/CLR)](#find)|尋找符合指定之索引鍵的元素。|  
+|[hash_set::hash_delegate (STL/CLR)](#hash_delegate)|將複製的索引鍵的雜湊的委派。|  
+|[hash_set::hash_set (STL/CLR)](#hash_set)|建構容器物件。|  
+|[hash_set::insert (STL/CLR)](#insert)|加入項目。|  
+|[hash_set::key_comp (STL/CLR)](#key_comp)|將複製兩個索引鍵的順序委派。|  
+|[hash_set::load_factor (STL/CLR)](#load_factor)|計算每個值區的平均項目數。|  
+|[hash_set::lower_bound (STL/CLR)](#lower_bound)|尋找符合指定之索引鍵的範圍開頭。|  
+|[hash_set::make_value (STL/CLR)](#make_value)|建構值物件。|  
+|[hash_set::max_load_factor (STL/CLR)](#max_load_factor)|取得或設定每個 Bucket 最大項目數。|  
+|[hash_set::rbegin (STL/CLR)](#rbegin)|指定反向受控制序列的開頭。|  
+|[hash_set::rehash (STL/CLR)](#rehash)|重建雜湊資料表。|  
+|[hash_set::rend (STL/CLR)](#rend)|指定反向受控制序列的結尾。|  
+|[hash_set::size (STL/CLR)](#size)|計算元素的數目。|  
+|[hash_set::swap (STL/CLR)](#swap)|交換兩個容器的內容。|  
+|[hash_set::to_array (STL/CLR)](#to_array)|將受控制的序列複製到新的陣列。|  
+|[hash_set::upper_bound (STL/CLR)](#upper_bound)|尋找符合指定之索引鍵的範圍結尾。|  
+|[hash_set::value_comp (STL/CLR)](#value_comp)|將複製兩個項目值的順序委派。|  
   
 |運算子|描述|  
 |--------------|-----------------|  
-|[hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)|取代受控制的序列。|  
+|[hash_set::operator= (STL/CLR)](#op)|取代受控制的序列。|  
   
 ## <a name="interfaces"></a>介面  
   
@@ -116,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|維護群組的具類型的項目。|  
 |IHash\<索引鍵、 值 >|維護泛型容器。|  
   
-## <a name="remarks"></a>備註  
+### <a name="remarks"></a>備註  
  物件可配置及釋放它為雙向連結清單中的個別節點所控制的序列的儲存體。 若要加快存取速度，物件也會維護有效管理整份清單為一連串個子，指標至清單 （雜湊資料表） 的變動長度陣列或值區。 它會將項目插入藉由改變節點，而非由複製到另一個節點的內容之間的連結會保持已排序的值區。 這表示您可以插入和移除項目，自由地不干擾其餘項目。  
   
  物件，排序它所控制藉由呼叫預存的委派物件類型的每個貯體[hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)。 當您建構 hash_set; 時，您可以指定預存的委派物件如果您指定沒有委派的物件時，預設值是比較`operator<=(key_type, key_type)`。  
@@ -149,17 +240,2554 @@ template<typename Key>
   
  清除，或移除項目會呼叫解構函式的儲存值。 終結容器清除所有項目。 因此，其項目類型是 ref 類別的容器可確保，任何項目存留期比長容器。 不過請注意，容器的控制代碼，並會`not`摧毀其項目。  
   
-## <a name="requirements"></a>需求  
- **標頭：** \<cliext/hash_set >  
+## <a name="begin"></a> hash_set:: begin (STL/CLR)
+指定受控制序列的開頭。  
   
- **命名空間：** cliext  
+### <a name="syntax"></a>語法  
   
-## <a name="see-also"></a>另請參閱  
- [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
- [hash_set](../dotnet/hash-set-stl-clr.md)   
- [hash_set](../dotnet/hash-set-stl-clr.md)   
- [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
- [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
- [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
- [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
- [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)
+```  
+iterator begin();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回指定的受控制序列中，或空序列結尾之外的第一個元素的雙向迭代器。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更受控制的序列中，但其狀態的開頭。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_begin.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first two items   
+    Myhash_set::iterator it = c1.begin();   
+    System::Console::WriteLine("*begin() = {0}", *it);   
+    System::Console::WriteLine("*++begin() = {0}", *++it);   
+    return (0);   
+    }  
+  
+```  
+
+## <a name="bucket_count"></a> hash_set::bucket_count (STL/CLR)
+計算值區數目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+int bucket_count();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回目前的 bucket 數目。 您可以使用它來判斷雜湊資料表的大小。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_bucket_count.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect current parameters   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.25f);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+``` 
+
+## <a name="clear"></a> hash_set:: clear (STL/CLR)
+移除所有項目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+void clear();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式可有效地呼叫[hash_set:: erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set:: begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`())`. 您可以使用它來確定受控制的序列是空白。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_clear.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+// add elements and clear again   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+  
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
+
+## <a name="const_iterator"></a> hash_set:: const_iterator (STL/CLR)
+用於受控制序列的常數迭代器類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef T2 const_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T2`，可做為受控制序列的常數的雙向迭代器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_const_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c"   
+    Myhash_set::const_iterator cit = c1.begin();   
+    for (; cit != c1.end(); ++cit)   
+        System::Console::Write(" {0}", *cit);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="const_reference"></a> hash_set:: const_reference (STL/CLR)
+項目的常數參考類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef value_type% const_reference;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述項目的常數參考。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_const_reference.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    Myhash_set::const_iterator cit = c1.begin();   
+    for (; cit != c1.end(); ++cit)   
+        {   // get a const reference to an element   
+        Myhash_set::const_reference cref = *cit;   
+        System::Console::Write(" {0}", cref);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="const_reverse_iterator"></a> hash_set:: const_reverse_iterator (STL/CLR)
+受控制序列的常數反向迭代器型別...  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef T4 const_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T4`，可做為受控制序列的常數反向迭代器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_const_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c" reversed   
+    Myhash_set::const_reverse_iterator crit = c1.rbegin();   
+    for (; crit != c1.rend(); ++crit)   
+        System::Console::Write(" {0}", *crit);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+c b a  
+```  
+  
+## <a name="count"></a> hash_set:: count (STL/CLR)
+尋找符合指定索引鍵的項目數目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+size_type count(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式具有對等順序，與受控制序列中傳回的項目數`key`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目數目。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_count.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("count(L'A') = {0}", c1.count(L'A'));   
+    System::Console::WriteLine("count(L'b') = {0}", c1.count(L'b'));   
+    System::Console::WriteLine("count(L'C') = {0}", c1.count(L'C'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
+
+## <a name="difference_type"></a> hash_set:: difference_type (STL/CLR)
+兩個項目之間的帶正負號距離的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef int difference_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述負可能是項目計數。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_difference_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// compute positive difference   
+    Myhash_set::difference_type diff = 0;   
+    for (Myhash_set::iterator it = c1.begin(); it != c1.end(); ++it)   
+        ++diff;   
+    System::Console::WriteLine("end()-begin() = {0}", diff);   
+  
+// compute negative difference   
+    diff = 0;   
+    for (Myhash_set::iterator it = c1.end(); it != c1.begin(); --it)   
+        --diff;   
+    System::Console::WriteLine("begin()-end() = {0}", diff);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
+
+## <a name="empty"></a> hash_set:: empty (STL/CLR)
+測試項目是否不存在。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+bool empty();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會對空的受控制序列傳回 true。 它相當於[hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)`() == 0`。 您可以使用它來測試是否 hash_set 是空的。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_empty.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    System::Console::WriteLine("empty() = {0}", c1.empty());   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    System::Console::WriteLine("empty() = {0}", c1.empty());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+
+## <a name="end"></a> hash_set:: end (STL/CLR)
+指定受控制序列的結尾。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator end();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回雙向迭代器，指向受控制序列的結尾之外。 您使用它來取得指定受控制序列的結尾的迭代器其狀態不改變受控制序列的長度變更時。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_end.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect last two items   
+    Myhash_set::iterator it = c1.end();   
+    --it;   
+    System::Console::WriteLine("*-- --end() = {0}", *--it);   
+    System::Console::WriteLine("*--end() = {0}", *++it);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+```  
+
+## <a name="equal_range"></a> hash_set:: equal_range (STL/CLR)
+尋找符合指定之索引鍵的範圍。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+cliext::pair<iterator, iterator> equal_range(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回迭代器的一組`cliext::pair<iterator, iterator>(` [hash_set:: lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md) `(key),` [hash_set:: upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)`(key))`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目範圍。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_equal_range.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+typedef Myhash_set::pair_iter_iter Pairii;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// display results of failed search   
+    Pairii pair1 = c1.equal_range(L'x');   
+    System::Console::WriteLine("equal_range(L'x') empty = {0}",   
+        pair1.first == pair1.second);   
+  
+// display results of successful search   
+    pair1 = c1.equal_range(L'b');   
+    for (; pair1.first != pair1.second; ++pair1.first)   
+        System::Console::Write(" {0}", *pair1.first);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+equal_range(L'x') empty = True  
+ b  
+``` 
+
+## <a name="erase"></a> hash_set:: erase (STL/CLR)
+移除位於指定位置的項目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator erase(iterator where);  
+iterator erase(iterator first, iterator last);  
+bool erase(key_type key)  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要清除範圍的開頭。  
+  
+ key  
+ 若要清除的機碼值。  
+  
+ last  
+ 若要清除的範圍的結尾。  
+  
+ 其中  
+ 若要清除的項目。  
+  
+### <a name="remarks"></a>備註  
+ 第一個成員函式中移除指向受控制序列的項目`where`，並傳回指定移除的項目之外剩餘的第一個元素的迭代器或[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`如果沒有這類元素存在。 您可以使用它來移除單一項目。  
+  
+ 第二個成員函式範圍中移除受控制序列的項目 [`first`， `last`)，並傳回指定任何移除的項目之外剩餘的第一個元素的迭代器或`end()`如果沒有這個項目存在... 您可以使用它來移除零或多個連續的項目。  
+  
+ 第三個成員函式中移除索引鍵具有對等順序受控制任何的序列項目至`key`，並傳回已移除項目的數目的計數。 您可以使用它來移除並計算所有符合指定之索引鍵的項目。  
+  
+ 每個項目清除接受受控制序列的項目數目對數值成比例的時間。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_erase.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// erase an element and reinspect   
+    System::Console::WriteLine("erase(begin()) = {0}",   
+        *c1.erase(c1.begin()));   
+  
+// add elements and display " b c d e"   
+    c1.insert(L'd');   
+    c1.insert(L'e');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// erase all but end   
+    Myhash_set::iterator it = c1.end();   
+    System::Console::WriteLine("erase(begin(), end()-1) = {0}",   
+        *c1.erase(c1.begin(), --it));   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
+
+## <a name="find"></a> hash_set:: find (STL/CLR)
+尋找符合指定之索引鍵的元素。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator find(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 至少一個項目是否在受控制序列中有對等順序，與`key`，成員函式會傳回指定其中一個這些項目的迭代器，否則它會傳回[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `()`. 您可以使用它來尋找元素目前受控制序列之符合指定之索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_find.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("find {0} = {1}",   
+        L'A', c1.find(L'A') != c1.end());   
+    System::Console::WriteLine("find {0} = {1}",   
+        L'b', *c1.find(L'b'));   
+    System::Console::WriteLine("find {0} = {1}",   
+        L'C', c1.find(L'C') != c1.end());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```   
+
+## <a name="generic_container"></a> hash_set::generic_container (STL/CLR)
+容器的泛型介面型別。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Microsoft::VisualC::StlClr::  
+    IHash<GKey, GValue>  
+    generic_container;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述此樣板容器類別的泛型介面。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_generic_container.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Myhash_set::generic_container^ gc1 = %c1;   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// modify generic and display original   
+    gc1->insert(L'd');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// modify original and display generic   
+    c1.insert(L'e');   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
+
+## <a name="generic_iterator"></a> hash_set::generic_iterator (STL/CLR)
+迭代器使用容器的泛型介面型別。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Microsoft::VisualC::StlClr::Generic::  
+    ContainerBidirectionalIterator<generic_value>  
+    generic_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型所描述泛型的迭代器，可以搭配這個範本容器類別的泛型介面。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_generic_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Myhash_set::generic_container^ gc1 = %c1;   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Myhash_set::generic_iterator gcit = gc1->begin();   
+    Myhash_set::generic_value gcval = *gcit;   
+    System::Console::WriteLine(" {0}", gcval);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+a  
+```  
+
+## <a name="generic_reverse_iterator"></a> hash_set::generic_reverse_iterator (STL/CLR)
+反向迭代器使用容器的泛型介面型別。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Microsoft::VisualC::StlClr::Generic::  
+    ReverseRandomAccessIterator<generic_value>  
+    generic_reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型所描述泛型反向迭代器，可以搭配這個範本容器類別的泛型介面。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_generic_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Myhash_set::generic_container^ gc1 = %c1;   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Myhash_set::generic_reverse_iterator gcit = gc1->rbegin();   
+    Myhash_set::generic_value gcval = *gcit;   
+    System::Console::WriteLine(" {0}", gcval);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+c  
+```  
+  
+## <a name="generic_value"></a> hash_set::generic_value (STL/CLR)
+使用容器的泛型介面的項目類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef GValue generic_value;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型所描述型別的物件`GValue`描述使用的預存的項目值與此範本容器類別的泛型介面。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_generic_value.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct a generic container   
+    Myhash_set::generic_container^ gc1 = %c1;   
+    for each (wchar_t elem in gc1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// get an element and display it   
+    Myhash_set::generic_iterator gcit = gc1->begin();   
+    Myhash_set::generic_value gcval = *gcit;   
+    System::Console::WriteLine(" {0}", gcval);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+a  
+```  
+
+## <a name="hash_delegate"></a> hash_set::hash_delegate (STL/CLR)
+尋找符合指定之索引鍵的元素。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+hasher^ hash_delegate();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回用來將索引鍵的值轉換成整數的委派。 您可以使用它來雜湊索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_hash_delegate.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    Myhash_set::hasher^ myhash = c1.hash_delegate();   
+  
+    System::Console::WriteLine("hash(L'a') = {0}", myhash(L'a'));   
+    System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
+
+## <a name="hash_set"></a> hash_set:: hash_set (STL/CLR)
+建構容器物件。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+hash_set();  
+explicit hash_set(key_compare^ pred);  
+hash_set(key_compare^ pred, hasher^ hashfn);  
+hash_set(hash_set<Key>% right);  
+hash_set(hash_set<Key>^ right);  
+template<typename InIter>  
+    hash_sethash_set(InIter first, InIter last);  
+template<typename InIter>  
+    hash_set(InIter first, InIter last,  
+        key_compare^ pred);  
+template<typename InIter>  
+    hash_set(InIter first, InIter last,  
+        key_compare^ pred, hasher^ hashfn);  
+hash_set(System::Collections::Generic::IEnumerable<GValue>^ right);  
+hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,  
+    key_compare^ pred);  
+hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,  
+    key_compare^ pred, hasher^ hashfn);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要插入範圍的開頭。  
+  
+ hashfn  
+ 雜湊值區的對應索引鍵的函式。  
+  
+ last  
+ 要插入範圍的結尾。  
+  
+ pred  
+ 排序受控制序列的述詞。  
+  
+ 向右  
+ 要插入的物件或範圍。  
+  
+### <a name="remarks"></a>備註  
+ 建構函式：  
+  
+ `hash_set();`  
+  
+ 使用預設排序述詞，初始化受控制的序列的任何項目， `key_compare()`，並使用預設雜湊函式。 您可以使用它來指定空的初始受控制的序列，使用預設排序述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `explicit hash_set(key_compare^ pred);`  
+  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞和預設雜湊函數。  
+  
+ 建構函式：  
+  
+ `hash_set(key_compare^ pred, hasher^ hashfn);`  
+  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `hash_set(hash_set<Key>% right);`  
+  
+ 初始化受控制的序列與順序 [`right.begin()`， `right.end()`)、 排序的述詞，預設值和預設雜湊函式。 您用它來指定 hash_set 物件所控制之序列的複本初始受控制的序列`right`使用預設排序述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `hash_set(hash_set<Key>^ right);`  
+  
+ 初始化受控制的序列與順序 [`right->begin()`， `right->end()`)、 排序的述詞，預設值和預設雜湊函式。 您用它來指定 hash_set 物件所控制之序列的複本初始受控制的序列`right`使用預設排序述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `template<typename InIter> hash_set(InIter first, InIter last);`  
+  
+ 初始化受控制的序列與順序 [`first`， `last`)、 排序的述詞，預設值和預設雜湊函式。 您可以使用它來製作受控制的序列的其他順序，排序述詞和雜湊函式的預設值。  
+  
+ 建構函式：  
+  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred);`  
+  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來製作受控制的序列的另一個序列，以指定順序的述詞和預設雜湊函數。  
+  
+ 建構函式：  
+  
+ `template<typename InIter> hash_set(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
+  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來製作受控制的序列的另一個序列，以指定順序的述詞和雜湊函式。  
+  
+ 建構函式：  
+  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right);`  
+  
+ 初始化受控制的序列的列舉值所指定的順序與`right`、 排序的述詞，預設值和預設雜湊函式。 您可以使用它來進行受控制的序列排序述詞和雜湊函式的預設值所列舉值，描述的另一個序列的複本。  
+  
+ 建構函式：  
+  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
+  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來進行受控制的序列的列舉值，指定排序述詞和預設雜湊函式與所描述的另一個序列的複本。  
+  
+ 建構函式：  
+  
+ `hash_set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
+  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來進行受控制的序列的列舉值，指定排序述詞和雜湊函式與所描述的另一個序列的複本。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_construct.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+int myfun(wchar_t key)   
+    { // hash a key   
+    return (key ^ 0xdeadbeef);   
+    }   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+// construct an empty container   
+    Myhash_set c1;   
+    System::Console::WriteLine("size() = {0}", c1.size());   
+  
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct with an ordering rule   
+    Myhash_set c2 = cliext::greater_equal<wchar_t>();   
+    System::Console::WriteLine("size() = {0}", c2.size());   
+  
+    c2.insert(c1.begin(), c1.end());   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct with an ordering rule and hash function   
+    Myhash_set c2h(cliext::greater_equal<wchar_t>(),   
+        gcnew Myhash_set::hasher(&myfun));   
+    System::Console::WriteLine("size() = {0}", c2h.size());   
+  
+    c2h.insert(c1.begin(), c1.end());   
+    for each (wchar_t elem in c2h)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range   
+    Myhash_set c3(c1.begin(), c1.end());   
+    for each (wchar_t elem in c3)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range and an ordering rule   
+    Myhash_set c4(c1.begin(), c1.end(),   
+        cliext::greater_equal<wchar_t>());   
+    for each (wchar_t elem in c4)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct with an iterator range and an ordering rule and hash function   
+    Myhash_set c4h(c1.begin(), c1.end(),   
+        cliext::greater_equal<wchar_t>(),   
+        gcnew Myhash_set::hasher(&myfun));   
+    for each (wchar_t elem in c4h)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration   
+    Myhash_set c5(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<wchar_t>^)%c3);   
+    for each (wchar_t elem in c5)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration and an ordering rule   
+    Myhash_set c6(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<wchar_t>^)%c3,   
+            cliext::greater_equal<wchar_t>());   
+    for each (wchar_t elem in c6)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct with an enumeration and an ordering rule and hash function   
+    Myhash_set c6h(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<wchar_t>^)%c3,   
+            cliext::greater_equal<wchar_t>(),   
+                gcnew Myhash_set::hasher(&myfun));   
+    for each (wchar_t elem in c6h)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine();   
+  
+// construct from a generic container   
+    Myhash_set c7(c4);   
+    for each (wchar_t elem in c7)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct by copying another container   
+    Myhash_set c8(%c3);   
+    for each (wchar_t elem in c8)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
+  
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+```  
+
+## <a name="hasher"></a> hash_set::hasher (STL/CLR)
+索引鍵雜湊的委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+Microsoft::VisualC::StlClr::UnaryDelegate<GKey, int>  
+    hasher;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述的委派，將索引鍵的值轉換為整數。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_hasher.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    Myhash_set::hasher^ myhash = c1.hash_delegate();   
+  
+    System::Console::WriteLine("hash(L'a') = {0}", myhash(L'a'));   
+    System::Console::WriteLine("hash(L'b') = {0}", myhash(L'b'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+hash(L'a') = 1616896120  
+hash(L'b') = 570892832  
+```  
+
+## <a name="insert"></a> hash_set:: insert (STL/CLR)
+加入項目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+cliext::pair<iterator, bool> insert(value_type val);  
+iterator insert(iterator where, value_type val);  
+template<typename InIter>  
+    void insert(InIter first, InIter last);  
+void insert(System::Collections::Generic::IEnumerable<value_type>^ right);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要插入範圍的開頭。  
+  
+ last  
+ 要插入範圍的結尾。  
+  
+ 向右  
+ 若要插入的列舉型別。  
+  
+ val  
+ 要插入索引鍵的值。  
+  
+ 其中  
+ 若要插入 （只有提示） 的容器中的位置。  
+  
+### <a name="remarks"></a>備註  
+ 每個成員函式插入其餘運算元所指定的順序。  
+  
+ 第一個成員函式插入具有值的項目儘量`val`，並傳回一組值`X`。 如果`X.second`為 true，`X.first`指定新插入的項目，否則為`X.first`指定對等項目與項目排序已存在，且會插入任何新元素。 您可以使用它來插入單一項目。  
+  
+ 第二個成員函式插入值的項目`val`，並使用`where`做為提示 （若要改善效能），並傳回指定的新插入的元素的迭代器。 您可以使用它來插入這可能是您知道的項目旁的單一項目。  
+  
+ 第三個成員函式會插入序列 [`first`， `last`)。 您可以使用它來插入其他順序從複製的零或多個項目。  
+  
+ 第四個成員函式會插入所指定的序列`right`。 您可以使用它來插入列舉所描述的順序。  
+  
+ 每個項目插入將會受控制序列中的項目數目對數值成比例的時間。 可能會插入在平攤常數時間，不過，給定的指定項目插入點至相鄰的提示。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_insert.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+typedef Myhash_set::pair_iter_bool Pairib;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert a single value, unique and duplicate   
+    Pairib pair1 = c1.insert(L'x');   
+    System::Console::WriteLine("insert(L'x') = [{0} {1}]",   
+        *pair1.first, pair1.second);   
+  
+    pair1 = c1.insert(L'b');   
+    System::Console::WriteLine("insert(L'b') = [{0} {1}]",   
+        *pair1.first, pair1.second);   
+  
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert a single value with hint   
+    System::Console::WriteLine("insert(begin(), L'y') = {0}",   
+        *c1.insert(c1.begin(), L'y'));   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert an iterator range   
+    Myhash_set c2;   
+    Myhash_set::iterator it = c1.end();   
+    c2.insert(c1.begin(), --it);   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// insert an enumeration   
+    Myhash_set c3;   
+    c3.insert(   // NOTE: cast is not needed   
+        (System::Collections::Generic::IEnumerable<wchar_t>^)%c1);   
+    for each (wchar_t elem in c3)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+insert(L'x') = [x True]  
+insert(L'b') = [b False]  
+ a b c x  
+insert(begin(), L'y') = y  
+ a b c x y  
+ a b c x  
+ a b c x y  
+```  
+
+## <a name="iterator"></a> hash_set:: iterator (STL/CLR)
+受控制序列之迭代器的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef T1 iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T1`，可做為受控制序列的雙向迭代器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c"   
+    Myhash_set::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        System::Console::Write(" {0}", *it);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
+將複製兩個索引鍵的順序委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+key_compare^key_comp();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_key_comp.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    Myhash_set::key_compare^ kcomp = c1.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+  
+// test a different ordering rule   
+    Myhash_set c2 = cliext::greater<wchar_t>();   
+    kcomp = c2.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+
+## <a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
+將複製兩個索引鍵的順序委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+key_compare^key_comp();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_key_comp.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    Myhash_set::key_compare^ kcomp = c1.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+  
+// test a different ordering rule   
+    Myhash_set c2 = cliext::greater<wchar_t>();   
+    kcomp = c2.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+
+## <a name="key_compare"></a> hash_set:: key_compare (STL/CLR)
+兩個索引鍵排序的委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
+    key_compare;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型是同義字，以決定排序索引鍵引數的委派。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_key_compare.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    Myhash_set::key_compare^ kcomp = c1.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+  
+// test a different ordering rule   
+    Myhash_set c2 = cliext::greater<wchar_t>();   
+    kcomp = c2.key_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+
+## <a name="key_type"></a> hash_set:: key_type (STL/CLR)
+排序索引鍵的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef Key key_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型是範本參數 `Key`的同義字。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_key_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c" using key_type   
+    for (Myhash_set::iterator it = c1.begin(); it != c1.end(); ++it)   
+        {   // store element in key_type object   
+        Myhash_set::key_type val = *it;   
+  
+        System::Console::Write(" {0}", val);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="load_factor"></a> hash_set::load_factor (STL/CLR)
+計算每個值區的平均項目數。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+float load_factor();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式傳回`(float)` [hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`。 您可以使用它來判斷平均的貯體大小。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_load_factor.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect current parameters   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.25f);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+
+## <a name="lower_bound"></a> hash_set:: lower_bound (STL/CLR)
+尋找符合指定之索引鍵的範圍開頭。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator lower_bound(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式判斷第一個項目`X`雜湊至相同的值區為受控制序列中`key`且具有對等順序，以`key`。 如果沒有這類元素存在，它會傳回[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; 否則它會傳回迭代器，指定`X`。 您可以使用它來尋找項目序列的開頭目前受控制序列之符合指定之索引鍵。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_lower_bound.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("lower_bound(L'x')==end() = {0}",   
+        c1.lower_bound(L'x') == c1.end());   
+  
+    System::Console::WriteLine("*lower_bound(L'a') = {0}",   
+        *c1.lower_bound(L'a'));   
+    System::Console::WriteLine("*lower_bound(L'b') = {0}",   
+        *c1.lower_bound(L'b'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = a  
+*lower_bound(L'b') = b  
+```  
+
+## <a name="make_value"></a> hash_set::make_value (STL/CLR)
+建構值物件。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+static value_type make_value(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 若要使用的金鑰值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式傳回`value_type`物件的索引鍵是`key`。 您可以使用它來撰寫適用於數個其他成員函式物件。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_make_value.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(Myhash_set::make_value(L'a'));   
+    c1.insert(Myhash_set::make_value(L'b'));   
+    c1.insert(Myhash_set::make_value(L'c'));   
+  
+// display contents " a b c"   
+    for each (Myhash_set::value_type elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="max_load_factor"></a> hash_set::max_load_factor (STL/CLR)
+取得或設定每個 Bucket 最大項目數。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+float max_load_factor();  
+void max_load_factor(float new_factor);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ new_factor  
+ 新的最大載入因數來儲存。  
+  
+### <a name="remarks"></a>備註  
+ 第一個成員函式會傳回目前儲存的最大載入因數。 您可以使用它來判斷最大平均貯體大小。  
+  
+ 第二個成員函式會取代使用存放區的最大載入因數`new_factor`。 沒有自動重新後續插入之前發生。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_max_load_factor.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect current parameters   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.25f);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    return (0);   
+    }  
+  
+```  
+
+## <a name="op"></a> hash_set::operator = (STL/CLR)
+取代受控制的序列。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+hash_set<Key>% operator=(hash_set<Key>% right);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 要複製的容器。  
+  
+### <a name="remarks"></a>備註  
+ 成員運算子複製`right`物件，然後傳回`*this`。 您使用它將受控制序列取代為 `right` 中受控制序列的複本。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_operator_as.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c"   
+    for each (Myhash_set::value_type elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// assign to a new container   
+    Myhash_set c2;   
+    c2 = c1;   
+// display contents " a b c"   
+    for each (Myhash_set::value_type elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+a b c  
+```  
+
+## <a name="rbegin"></a> hash_set:: rbegin (STL/CLR)
+指定反向受控制序列的開頭。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+reverse_iterator rbegin();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回指定受控制序列中，或空的序列開頭以外路徑的最後一個元素的反向迭代器。 因此，它會指定`beginning`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更受控制的序列相反的順序出現，但其狀態的開頭。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_rbegin.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first two items in reversed sequence   
+    Myhash_set::reverse_iterator rit = c1.rbegin();   
+    System::Console::WriteLine("*rbegin() = {0}", *rit);   
+    System::Console::WriteLine("*++rbegin() = {0}", *++rit);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+```  
+
+## <a name="reference"></a> hash_set:: reference (STL/CLR)
+項目的參考類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef value_type% reference;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述項目的參考。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_reference.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    Myhash_set::iterator it = c1.begin();   
+    for (; it != c1.end(); ++it)   
+        {   // get a reference to an element   
+        Myhash_set::reference ref = *it;   
+        System::Console::Write(" {0}", ref);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  
+
+## <a name="rehash"></a> hash_set::rehash (STL/CLR)
+重建雜湊資料表。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+void rehash();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會重建雜湊表，如此可確保[hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)。 否則，雜湊表的大小會增加只有在必要時插入後。 （它永遠不會自動減少大小。）您可以使用它來調整的雜湊資料表大小。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_rehash.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect current parameters   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// change max_load_factor and redisplay   
+    c1.max_load_factor(0.25f);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    System::Console::WriteLine();   
+  
+// rehash and redisplay   
+    c1.rehash(100);   
+    System::Console::WriteLine("bucket_count() = {0}", c1.bucket_count());   
+    System::Console::WriteLine("load_factor() = {0}", c1.load_factor());   
+    System::Console::WriteLine("max_load_factor() = {0}",   
+        c1.max_load_factor());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+
+## <a name="rend"></a> hash_set:: rend (STL/CLR)
+指定反向受控制序列的結尾。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+reverse_iterator rend();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回以外的位置開始，指向受控制序列的反向迭代器。 因此，它會指定`end`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更結尾受控制的序列相反的順序出現，但它的狀態。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_rend.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// inspect first two items   
+    Myhash_set::reverse_iterator rit = c1.rend();   
+    --rit;   
+    System::Console::WriteLine("*-- --rend() = {0}", *--rit);   
+    System::Console::WriteLine("*--rend() = {0}", *++rit);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+```  
+
+## <a name="reverse_iterator"></a> hash_set:: reverse_iterator (STL/CLR)
+受控制序列的反向迭代器類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef T3 reverse_iterator;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述未指定類型 `T3` 的物件，其可用作受控制序列的反向迭代器。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_reverse_iterator.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c" reversed   
+    Myhash_set::reverse_iterator rit = c1.rbegin();   
+    for (; rit != c1.rend(); ++rit)   
+        System::Console::Write(" {0}", *rit);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+c b a  
+```  
+
+## <a name="size"></a> hash_set:: size (STL/CLR)
+計算元素的數目。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+size_type size();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的項目數。 如果您在意順序是否具有非零的大小，請參閱[hash_set:: empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_size.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    System::Console::WriteLine("size() = {0} starting with 3", c1.size());   
+  
+// clear the container and reinspect   
+    c1.clear();   
+    System::Console::WriteLine("size() = {0} after clearing", c1.size());   
+  
+// add elements and clear again   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    System::Console::WriteLine("size() = {0} after adding 2", c1.size());   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+
+## <a name="size_type"></a> hash_set:: size_type (STL/CLR)
+兩個項目之間的帶正負號距離的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef int size_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 此類型描述負的項目計數。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_size_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// compute positive difference   
+    Myhash_set::size_type diff = 0;   
+    for (Myhash_set::iterator it = c1.begin(); it != c1.end(); ++it)   
+        ++diff;   
+    System::Console::WriteLine("end()-begin() = {0}", diff);   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
+
+## <a name="swap"></a> hash_set:: swap (STL/CLR)
+交換兩個容器的內容。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+void swap(hash_set<Key>% right);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 要交換內容的容器。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會交換 `this` 和 `right` 之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_swap.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// construct another container with repetition of values   
+    Myhash_set c2;   
+    c2.insert(L'd');   
+    c2.insert(L'e');   
+    c2.insert(L'f');   
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// swap and redisplay   
+    c1.swap(c2);   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    for each (wchar_t elem in c2)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+d e f  
+d e f  
+a b c  
+```  
+
+## <a name="to_array"></a> hash_set::to_array (STL/CLR)
+將受控制的序列複製到新的陣列。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+cli::array<value_type>^ to_array();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列的陣列。 您可以使用它來取得陣列的形式受控制序列的複本。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_to_array.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// copy the container and modify it   
+    cli::array<wchar_t>^ a1 = c1.to_array();   
+  
+    c1.insert(L'd');   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+// display the earlier array copy   
+    for each (wchar_t elem in a1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c d  
+a b c  
+```  
+
+## <a name="upper_bound"></a> hash_set:: upper_bound (STL/CLR)
+尋找符合指定之索引鍵的範圍結尾。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+iterator upper_bound(key_type key);  
+```  
+  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
+  
+### <a name="remarks"></a>備註  
+ 成員函式決定的最後一個項目`X`雜湊至相同的值區為受控制序列中`key`且具有對等順序，以`key`。 如果沒有這類元素存在，或如果`X`是最後一個項目，在受控制序列中，它會傳回[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; 否則它會傳回迭代器，指定之外的第一個項目`X`. 您可以使用它來目前受控制序列之符合指定之索引鍵中尋找的項目序列的結尾。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_upper_bound.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display initial contents " a b c"   
+    for each (wchar_t elem in c1)   
+        System::Console::Write(" {0}", elem);   
+    System::Console::WriteLine();   
+  
+    System::Console::WriteLine("upper_bound(L'x')==end() = {0}",   
+        c1.upper_bound(L'x') == c1.end());   
+  
+    System::Console::WriteLine("*upper_bound(L'a') = {0}",   
+        *c1.upper_bound(L'a'));   
+    System::Console::WriteLine("*upper_bound(L'b') = {0}",   
+        *c1.upper_bound(L'b'));   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+ a b c  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = b  
+*upper_bound(L'b') = c  
+```  
+
+## <a name="value_comp"></a> hash_set:: value_comp (STL/CLR)
+將複製兩個項目值的順序委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+value_compare^ value_comp();  
+```  
+  
+### <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個項目值。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_value_comp.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    Myhash_set::value_compare^ kcomp = c1.value_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+
+## <a name="value_compare"></a> hash_set:: value_compare (STL/CLR)
+兩個項目值順序的委派。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
+    value_compare;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 類型是委派，其值的引數的順序會決定的同義字。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_value_compare.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    Myhash_set::value_compare^ kcomp = c1.value_comp();   
+  
+    System::Console::WriteLine("compare(L'a', L'a') = {0}",   
+        kcomp(L'a', L'a'));   
+    System::Console::WriteLine("compare(L'a', L'b') = {0}",   
+        kcomp(L'a', L'b'));   
+    System::Console::WriteLine("compare(L'b', L'a') = {0}",   
+        kcomp(L'b', L'a'));   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+
+## <a name="value_type"></a> hash_set:: value_type (STL/CLR)
+元素的類型。  
+  
+### <a name="syntax"></a>語法  
+  
+```  
+typedef generic_value value_type;  
+```  
+  
+### <a name="remarks"></a>備註  
+ 這個類型與 `generic_value`同義。  
+  
+### <a name="example"></a>範例  
+  
+```cpp  
+// cliext_hash_set_value_type.cpp   
+// compile with: /clr   
+#include <cliext/hash_set>   
+  
+typedef cliext::hash_set<wchar_t> Myhash_set;   
+int main()   
+    {   
+    Myhash_set c1;   
+    c1.insert(L'a');   
+    c1.insert(L'b');   
+    c1.insert(L'c');   
+  
+// display contents " a b c" using value_type   
+    for (Myhash_set::iterator it = c1.begin(); it != c1.end(); ++it)   
+        {   // store element in value_type object   
+        Myhash_set::value_type val = *it;   
+  
+        System::Console::Write(" {0}", val);   
+        }   
+    System::Console::WriteLine();   
+    return (0);   
+    }  
+  
+```  
+  
+```Output  
+a b c  
+```  

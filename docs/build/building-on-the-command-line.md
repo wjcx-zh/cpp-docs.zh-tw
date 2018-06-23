@@ -1,7 +1,7 @@
 ---
 title: 在命令列上建置 C/c + + 程式碼 |Microsoft 文件
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379272"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322312"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>在命令列上建置 C/c + + 程式碼
 
@@ -51,7 +51,7 @@ ms.locfileid: "32379272"
 
 如果您將其中一個，實際的開始功能表資料夾和捷徑名稱也不同取決於您安裝 Visual Studio 版本和安裝暱稱。 例如，如果您有 Visual Studio 2017 安裝，且您已指定它安裝暱稱的*預覽*，名為開發人員命令提示字元捷徑**VS 2017 （預覽）的開發人員命令提示字元**，名為的資料夾中**Visual Studio 2017**。
 
-如果您已安裝[建置工具的 Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=840931) （其中也包括 Visual Studio 2015 Update 3 編譯器工具組），只有特定架構的原生或跨工具開發人員命令提示字元安裝選項並不是一般**開發人員命令提示字元**捷徑。
+如果您已安裝[建置工具的 Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) （其中也包括 Visual Studio 2015 Update 3 編譯器工具組），只有特定架構的原生或跨工具開發人員命令提示字元安裝選項並不是一般**開發人員命令提示字元**捷徑。
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>若要開啟 開發人員命令提示字元視窗

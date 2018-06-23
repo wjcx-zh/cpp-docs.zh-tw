@@ -106,12 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d5fb04d31451ac4c49a0a2c11a3699b8a670a6c4
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704746"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322328"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>編譯器警告 C4800 透過 C5999
 
@@ -250,3 +250,4 @@ ms.locfileid: "34704746"
 |編譯器警告 （層級 3） C5042|'*宣告*': 在區塊範圍函式宣告不能指定 'inline' 標準 c + + 中，移除 'inline' 規範|
 |編譯器警告 （層級 2） C5043|'*規格*': 例外狀況規格與上一個宣告不符|
 |編譯器警告 （層級 4） C5044|命令列選項的引數*選項*指向的路徑 '*路徑*' 不存在|
+|[編譯器警告 C5045](c5045.md)|編譯器會插入 Spectre 緩和記憶體負載，如果 /Qspectre 切換指定|

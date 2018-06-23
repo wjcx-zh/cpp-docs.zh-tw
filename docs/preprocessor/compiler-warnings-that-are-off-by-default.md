@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c1187d0fcfec45a21a358c8d20c4f3684f17feb3
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705562"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322390"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
@@ -89,7 +89,7 @@ Visual Studio 2015 和更新版本中，預設會關閉下列警告：
 |[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) （層級 1）|'*operator1*': 逗號之前的運算子無效; 您是否想'*operator2*' 嗎？|
 |[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) （層級 1）|運算式無效; 必須是具有副作用的運算式|
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) （層級 3）|'__assume' 包含作用 '*效果*'|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （層級 4）|Visual c + + 7.1; 以來變更的告知性： catch 語意不再攔截結構化例外狀況 (SEH)|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （層級 4）|告知性： catch 語意從 Visual c + + 7.1; 變更不再攔截結構化例外狀況 (SEH)|
 |C4574 （層級 4）|'*識別碼*'定義為' 0': 您是否想要使用 ' #if*識別碼*'？|
 |C4577 （層級 1）|任何例外狀況處理模式指定; 使用 ' noexcept'不保證終止的例外狀況。 指定 /EHsc|
 |C4582 （層級 4）|'*類型*': 未隱含呼叫建構函式|
@@ -153,12 +153,14 @@ Visual Studio 2015 和更新版本中，預設會關閉下列警告：
 |[C5038](../error-messages/compiler-warnings/c5038.md) （層級 4）|資料成員 '*member1*'將初始化資料成員之後'*member2*' <sup>15.3</sup>|
 |C5039 （層級 4）|'*函式*': 指標或參考可能會擲回函式傳遞至下-/ehc extern C 函式。 如果此函式會擲回的例外狀況，可能會發生未定義的行為。 <sup>15.5</sup>|
 |C5042 （層級 3）|'*函式*': 在區塊範圍函式宣告不能指定 'inline' 標準 c + + 中，移除 'inline' 規範<sup>15.5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|編譯器會插入 Spectre 如何避免記憶體載入，指定 /Qspectre 參數<sup>15.7</sup>|
 
-<sup>14.1</sup>這項警告是可用以啟動 Visual Studio 2015 Update 1。<br>
-<sup>14.3</sup>這項警告是可用以啟動 Visual Studio 2015 Update 3。<br>
-<sup>15.3</sup>這項警告是可用以啟動 Visual Studio 2017 15.3 版本。<br>
-<sup>15.5</sup>這項警告是可用以啟動 Visual Studio 2017 15.5 版本。<br>
-<sup>權限</sup>此警告為關閉，除非[/ 寬鬆-](../build/reference/permissive-standards-conformance.md)編譯器選項設定。
+<sup>14.1</sup>這項警告是可用以啟動 Visual Studio 2015 Update 1。  
+<sup>14.3</sup>這項警告是可用以啟動 Visual Studio 2015 Update 3。  
+<sup>15.3</sup>這項警告是可用以啟動 Visual Studio 2017 15.3 版本。  
+<sup>15.5</sup>這項警告是可用以啟動 Visual Studio 2017 15.5 版本。  
+<sup>15.7</sup>這項警告是可用以啟動 Visual Studio 2017 15.7 版本。  
+<sup>權限</sup>此警告為關閉，除非[/ 寬鬆-](../build/reference/permissive-standards-conformance.md)編譯器選項設定。  
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>在舊版中預設關閉警告
 

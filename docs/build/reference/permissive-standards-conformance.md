@@ -1,6 +1,6 @@
 ---
 title: -寬鬆-（標準一致性） |Microsoft 文件
-ms.date: 11/11/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379311"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322260"
 ---
 # <a name="permissive--standards-conformance"></a>寬鬆 /-（標準的一致性）
 
@@ -50,7 +50,7 @@ ms.locfileid: "32379311"
 
 **/ 寬鬆-** 選項會使用一致性支援目前的編譯器版本以判斷哪些語言建構會不合格。 選項不會判斷是否您的程式碼是否符合特定版本的 c + + 標準。 若要啟用的最新草稿標準的所有實作的編譯器支援，請使用[/std:latest](../../build/reference/std-specify-language-standard-version.md)選項。 若要限制目前已實作 C + + 17 標準的編譯器支援，請使用[/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)選項。 若要限制為更符合 C + + 14 標準的編譯器支援，請使用[/std:c + + 14](../../build/reference/std-specify-language-standard-version.md)選項，預設值。
 
-不所有 C + + 11、 C + + 14 中或 C + + 17 標準符合在 Visual Studio 2017 Visual c + + 編譯器支援的程式碼。 **/ 寬鬆-** 選項可能無法偵測出問題有關兩階段的名稱查閱的某些層面，繫結到臨時非 const 的參考、 視為直接初始化中的複本初始化，允許在多個使用者定義轉換初始化或替代的語彙基元的邏輯運算子，以及其他不受支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。
+不所有 C + + 11、 C + + 14 中或 C + + 17 標準符合在 Visual Studio 2017 Visual c + + 編譯器支援的程式碼。 根據 Visual Studio 中，版本 **/ 寬鬆-** 選項可能無法偵測出關於兩階段的名稱查閱的某些層面，繫結到臨時非 const 的參考、 複製 init 視為直接初始化，允許的問題多個使用者定義的轉換中初始化或替代語彙基元的邏輯運算子，以及其他不受支援的一致性區域。 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。 若要取得充分 **/ 寬鬆-**，更新為最新版本的 Visual Studio。
 
 ### <a name="how-to-fix-your-code"></a>如何修正您的程式碼
 
@@ -202,11 +202,11 @@ class CFoo : public ICustom
 
 ```cpp
 // Fix for example 2
-// First, create the *.idl file. The vc140.idl generated file can be 
-// used to automatically obtain a *.idl file for the interfaces with 
-// annotation. Second, add a midl step to your build system to make 
-// sure that the C++ interface definitions are outputted. 
-// Last, adjust your existing code to use ATL directly as shown in 
+// First, create the *.idl file. The vc140.idl generated file can be
+// used to automatically obtain a *.idl file for the interfaces with
+// annotation. Second, add a midl step to your build system to make
+// sure that the C++ interface definitions are outputted.
+// Last, adjust your existing code to use ATL directly as shown in
 // the atl implementation section.
 
 -- IDL  FILE--
@@ -286,7 +286,7 @@ struct MyString
 
 extern bool cond;
 
-MyString s; 
+MyString s;
 // Using /std:c++14, /permissive- or /Zc:ternary behavior
 // is to prefer MyString("A") over (const char*)s
 // but under /std:c++17 this line causes error C2445:
@@ -309,23 +309,23 @@ void myassert(const char* text, const char* file, int line);
 您可能也會看到的範本 metaprogramming，可能會在將變更條件運算子的結果型別中的錯誤 **/Zc:ternary**和 **/ 寬鬆-**。 若要解決此問題是使用單向[std::remove_reference](../../standard-library/remove-reference-class.md)上產生的型別。
 
 ```cpp
-// Example 4: different result types 
+// Example 4: different result types
 extern bool cond;
 extern int count;
-char  a = 'A'; 
-const char  b = 'B'; 
-decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary 
-const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary 
+char  a = 'A';
+const char  b = 'B';
+decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
+const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up-partial"></a>兩階段的名稱查閱 （部分）
+#### <a name="two-phase-name-look-up"></a>兩階段的名稱查閱
 
-當 **/ 寬鬆-** 選項設在 Visual Studio 2017 15.3 版本中，編譯器會剖析函式和類別識別相依及非相依名稱兩階段的名稱，視需要的範本中所使用的樣板定義查閱。 在此版本中，執行名稱相依性分析。 特別是，樣板定義的內容中未宣告為非相依名稱會導致診斷訊息所需的 ISO c + + 標準。 不過，需要不是引數相依查閱定義內容中的非相依名稱的繫結。
+當 **/ 寬鬆-** 設定選項時，編譯器會剖析函式和類別識別相依及非相依名稱的兩階段的名稱查閱所需的範本中所使用的範本定義。 在 Visual Studio 2017 版本 15.3，被執行名稱的相依性分析。 特別是，樣板定義的內容中未宣告為非相依名稱會導致診斷訊息所需的 ISO c + + 標準。 在 Visual Studio 2017 15.7 版本，也是完成需要的引數相依查閱定義內容中的非相依名稱的繫結。
 
 ```cpp
 // dependent base
 struct B {
-    void g();
+    void g() {}
 };
 
 template<typename T>
@@ -346,60 +346,106 @@ int main()
 }
 ```
 
+如果您想兩階段查閱而言，舊版的行為，但否則想 **/ 寬鬆-** 行為，新增 **/Zc:twoPhase-** 選項。
+
 ### <a name="windows-header-issues"></a>Windows 標頭的問題
 
 **/ 寬鬆-** 選項是 Windows 套件，Windows 改建立者更新 SDK (10.0.16299.0) 之前, 的版本或 Windows Driver Kit (WDK) 版本 1709年過於嚴格。 我們建議您更新至最新版本的 Windows 套件，才能使用 **/ 寬鬆-** Windows 或裝置驅動程式碼中。
 
-Windows 改建立者更新 SDK (10.0.16299.0) 或 Windows Driver Kit (WDK) 1709年中的特定標頭檔仍會有問題，使它們與使用的不相容 **/ 寬鬆-**。 若要解決這些問題，我們建議您限制只有那些原始程式碼檔需要它們，並將移除使用這些標頭 **/ 寬鬆-** 選項，當您編譯這些特定的原始程式碼檔。 下列問題專屬於 Windows 改建立者更新 SDK (10.0.16299.0):
+在 Windows 年 4 月 2018年更新 SDK (10.0.17134.0)、 Windows 改建立者更新 SDK (10.0.16299.0) 或 Windows Driver Kit (WDK) 1709年中的特定標頭檔仍會有問題，使它們與使用的不相容 **/permissive-**. 若要解決這些問題，我們建議您限制只有那些原始程式碼檔需要它們，並將移除使用這些標頭 **/ 寬鬆-** 選項，當您編譯這些特定的原始程式碼檔。
 
-#### <a name="issue-in-umqueryh"></a>在 um\Query.h 中的問題
+釋出這些 WinRT WRL 標頭在 Windows 年 4 月 2018年更新 SDK (10.0.17134.0) 不是與全新 **/ 寬鬆-**。 若要解決這些問題，請不要使用 **/ 寬鬆-**，或使用 **/ 寬鬆-** 與 **/Zc:twoPhase-** 時使用這些標頭：
 
-當使用 **/ 寬鬆-** 編譯器參數，`tagRESTRICTION`結構不會編譯因為 case(RTOr) 成員 '。
+- Winrt/wrl/async.h 中的問題
 
-```cpp
-struct tagRESTRICTION
-    {
-    ULONG rt;
-    ULONG weight;
-    /* [switch_is][switch_type] */ union _URes
-        {
-        /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
-        /* [case()] */ NODERESTRICTION pxr;
-        /* [case()] */ VECTORRESTRICTION vr;
-        /* [case()] */ NOTRESTRICTION nr;
-        /* [case()] */ CONTENTRESTRICTION cr;
-        /* [case()] */ NATLANGUAGERESTRICTION nlr;
-        /* [case()] */ PROPERTYRESTRICTION pr;
-        /* [default] */  /* Empty union arm */
-        } res;
-    };
-```
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(491): error C3861: 'CheckValidStateForDelegateCall': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(509): error C3861: 'TraceProgressNotificationStart': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
+   ```
 
-若要解決此問題，編譯包含不含 Query.h **/ 寬鬆-** 選項。
+- 在 winrt/wrl/implements.h 中的問題
 
-#### <a name="issue-in-umcellularapioemh"></a>在 um\cellularapi_oem.h 中的問題
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
+   ```
 
-當使用 **/ 寬鬆-** 編譯器參數、 的向前宣告`enum UICCDATASTOREACCESSMODE`會導致警告：
+釋出這些使用者模式標頭在 Windows 年 4 月 2018年更新 SDK (10.0.17134.0) 不是與全新 **/ 寬鬆-**。 若要解決這些問題，請勿使用 **/ 寬鬆-** 時使用這些標頭：
 
-```cpp
-typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
-```
+- Um/Tune.h 中的問題
 
-不限範圍列舉的向前宣告是 Microsoft 擴充功能。 若要解決此問題，編譯包含不含 cellularapi_oem.h **/ 寬鬆-** 選項，或使用[/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 轉為無回應的選項。
+   ```Output
+   C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(559): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
+   ```
 
-#### <a name="issue-in-umomscripth"></a>在 um\omscript.h 中的問題
+- 在 um/spddkhlp.h 中的問題
 
-在 C + + 03 中，從字串常值轉換成 BSTR (即的 typedef ' wchar_t *') 是已被取代，但允許。 在 C + + 11 中，不再允許轉換。
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
+   ```
 
-```cpp
-virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
-    /* [in] */ __RPC__in BSTR propname,
-    /* [in] */ __RPC__in BSTR expression,
-    /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
-```
+- Um/refptrco.h 中的問題
 
-若要解決此問題，編譯包含不含 omscript.h **/ 寬鬆-** 選項，或使用 **/Zc:strictStrings-** 改為。
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(342): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   ```
+
+這些問題專屬於 Windows 改建立者更新 SDK (10.0.16299.0) 中的使用者模式標頭：
+
+- 在 um/Query.h 中的問題
+
+   當使用 **/ 寬鬆-** 編譯器參數，`tagRESTRICTION`結構不會編譯因為 case(RTOr) 成員 '。
+
+   ```cpp
+   struct tagRESTRICTION
+   {
+       ULONG rt;
+       ULONG weight;
+       /* [switch_is][switch_type] */ union _URes
+       {
+           /* [case()] */ NODERESTRICTION ar;
+           /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
+           /* [case()] */ NODERESTRICTION pxr;
+           /* [case()] */ VECTORRESTRICTION vr;
+           /* [case()] */ NOTRESTRICTION nr;
+           /* [case()] */ CONTENTRESTRICTION cr;
+           /* [case()] */ NATLANGUAGERESTRICTION nlr;
+           /* [case()] */ PROPERTYRESTRICTION pr;
+           /* [default] */  /* Empty union arm */
+       } res;
+   };
+   ```
+
+   若要解決此問題，編譯包含不含 Query.h **/ 寬鬆-** 選項。
+
+- 在 um/cellularapi_oem.h 中的問題
+
+   當使用 **/ 寬鬆-** 編譯器參數、 的向前宣告`enum UICCDATASTOREACCESSMODE`會導致警告：
+
+   ```cpp
+   typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
+   ```
+
+   不限範圍列舉的向前宣告是 Microsoft 擴充功能。 若要解決此問題，編譯包含不含 cellularapi_oem.h **/ 寬鬆-** 選項，或使用[/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 轉為無回應的選項。
+
+- 在 um/omscript.h 中的問題
+
+   在 C + + 03 中，從字串常值轉換成 BSTR (即的 typedef ' wchar_t *') 是已被取代，但允許。 在 C + + 11 中，不再允許轉換。
+
+   ```cpp
+   virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
+       /* [in] */ __RPC__in BSTR propname,
+       /* [in] */ __RPC__in BSTR expression,
+       /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
+   ```
+
+   若要解決此問題，編譯包含不含 omscript.h **/ 寬鬆-** 選項，或使用 **/Zc:strictStrings-** 改為。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
@@ -407,7 +453,7 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-1. 在下**組態屬性**，依序展開**C/c + +** 資料夾，然後選擇 **語言**屬性頁。
+1. 選取**組態屬性** > **C/c + +** > **語言**屬性頁。
 
 1. 變更**一致性模式**屬性值設定為**是 (/ 寬鬆-)**。 選擇**確定**或**套用**以儲存變更。
 
@@ -425,5 +471,5 @@ virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器選項](../../build/reference/compiler-options.md)   
-[設定編譯器選項](../../build/reference/setting-compiler-options.md)
+- [編譯器選項](../../build/reference/compiler-options.md)
+- [設定編譯器選項](../../build/reference/setting-compiler-options.md)

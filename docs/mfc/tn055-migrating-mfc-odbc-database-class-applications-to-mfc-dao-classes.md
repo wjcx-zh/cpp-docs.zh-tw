@@ -1,7 +1,7 @@
 ---
 title: TN055： 將移轉至 MFC DAO 類別的 MFC ODBC 資料庫類別應用程式 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -24,98 +24,99 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c346ca05a72917af615ecd6704a96ff9c190350
-ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
+ms.openlocfilehash: cce09994cf7dabdff1508ae5e12778ce6032624b
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36271418"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322507"
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：將 MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
-> [!NOTE]
->  Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 呤魽您畷樾[OLE DB 樣板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO 中維護現有應用程式。  
-  
- **概觀**  
-  
- 在大部分情況下，可能需要將使用 MFC 的 ODBC 資料庫類別的應用程式移轉至 MFC 的 DAO 資料庫類別。 這個技術提示將詳細說明 MFC ODBC 與 DAO 類別之間的大多數差異。 在考慮差異的情況下，如有需要，將應用程式從 ODBC 類別移轉至 MFC 類別應該不困難。  
-  
- **為什麼要從 ODBC 移轉至 DAO**  
-  
- 您想要將應用程式從 ODBC 資料庫類別移轉至 DAO 資料庫類別的原因有許多種，但是這項決定不見得簡單或淺顯易懂。 務必記住的是，DAO 所使用的 Microsoft Jet 資料庫引擎可以讀取您擁有其 ODBC 驅動程式的任何 ODBC 資料來源。 雖然使用 ODBC 資料庫類別或直接自行呼叫 ODBC 可能更有效率，不過 Microsoft Jet 資料庫引擎可以讀取 ODBC 資料。  
-  
- 以下是幾個容易決定 ODBC/DAO 的簡單情況。 例如，如果您只需要存取採用 Microsoft Jet 引擎可直接讀取之格式的資料 (Access 格式、Excel 格式等)，很明顯就是選擇使用 DAO 資料庫類別。  
-  
- 如果您的資料位於伺服器或各種不同的伺服器上，情況就會較為複雜。 在這種情況下，就不容易決定應使用 ODBC 資料庫類別或 DAO 資料庫類別。 如果您要進行像是異質聯結 (聯結不同伺服器上多種格式的資料，如 SQL Server 和 Oracle) 這類作業，則 Microsoft Jet 資料庫引擎將自動執行聯結，而不會強迫您執行必要的工作，就像使用 ODBC 資料庫類別或直接呼叫 ODBC 時一樣。 如果您使用的 ODBC 驅動程式支援驅動程式資料指標，最佳選擇可能是 ODBC 資料庫類別。  
-  
- 要做出選擇可能很複雜，因此您可能想要撰寫範例程式碼，依據您的特殊需求測試各種方法的效能。 這個技術提示假設您已決定從 ODBC 資料庫類別移轉至 DAO 資料庫類別。  
-  
- **ODBC 資料庫類別與 MFC DAO 資料庫類別之間的相似處**  
-  
- MFC ODBC 類別的原始設計是根據 Microsoft Access 和 Microsoft Visual Basic 中持續使用的 DAO 物件模型。 這表示，ODBC 和 MFC DAO 類別之間有許多通用的功能，不過本節中不會全部列出。 一般而言，程式設計模型都是一樣的。  
-  
- 以下強調幾個相似之處：  
-  
--   ODBC 和 DAO 類別都有使用基礎資料庫管理系統 (DBMS) 進行管理的資料庫物件。  
-  
--   兩者都有資料錄集物件，代表一組從該 DBMS 傳回的結果。  
-  
--   DAO 資料庫和資料錄集物件的成員幾乎與 ODBC 類別完全相同。  
-  
--   在這兩組類別中，除了在物件和成員名稱上有些變更之外，擷取資料的程式碼是一樣的。 雖然需要變更，不過從 ODBC 類別轉換成 DAO 類別時，名稱變更的過程相當直接。  
-  
- 例如，在這兩種模型中，擷取資料的程序是建立並開啟資料庫物件、建立並開啟資料錄集物件，以及巡覽 (移動) 執行某項作業的資料。  
-  
- **ODBC 和 DAO MFC 類別之間的差異**  
-  
- DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節僅就類似類別和功能之間的差異詳細說明。  
-  
- 類別之間可能最顯著的差異是類似類別和全域函式的名稱變更。 下列清單將顯示與資料庫類別相關的物件、方法和全域函式的名稱變更：  
-  
-|類別或函式|MFC DAO 類別中的對等用法|  
-|-----------------------|-----------------------------------|  
-|`CDatabase`|`CDaoDatabase`|  
-|`CDatabase::ExecuteSQL`|`CDaoDatabase::Execute`|  
-|`CRecordset`|`CDaoRecordset`|  
-|`CRecordset::GetDefaultConnect`|`CDaoRecordset::GetDefaultDBName`|  
-|`CFieldExchange`|`CDaoFieldExchange`|  
-|`RFX_Bool`|`DFX_Bool`|  
-|`RFX_Byte`|`DFX_Byte`|  
-|`RFX_Int`|`DFX_Short`|  
-|`RFX_Long`|`DFX_Long`|  
-||`DFX_Currency`|  
-|`RFX_Single`|`DFX_Single`|  
-|`RFX_Double`|`DFX_Double`|  
-|**RFX_Date \\\***|**DFX_Date** (`COleDateTime`-基礎)|  
-|`RFX_Text`|`DFX_Text`|  
-|`RFX_Binary`|`DFX_Binary`|  
-|`RFX_LongBinary`|`DFX_LongBinary`|  
-  
- \*    `RFX_Date`函式根據`CTime`和**TIMESTAMP_STRUCT**。  
-  
- 以下列出功能上的主要變更，這些變更可能會影響您的應用程式，並且需要進行較複雜的名稱變更。  
-  
--   常數和巨集，用來指出像是資料錄集開放類型和資料錄集開放選項已變更這類情況。  
-  
-     若使用 ODBC 類別，MFC 需要透過巨集或列舉的類型定義這些選項。  
-  
-     若使用 DAO 類別，DAO 會在標頭檔 (DBDAOINT.H) 中提供這些選項的定義。 因此，資料錄集類型是 `CRecordset` 的列舉成員，不過在 DAO 中則是常數。 例如，您可以使用**快照**時指定的型別`CRecordset`ODBC 中，但**DB_OPEN_SNAPSHOT**時指定的型別`CDaoRecordset`。  
-  
--   預設資料錄集類型`CRecordset`是**快照**時的預設資料錄集類型`CDaoRecordset`是**動態**（請參閱下方的附註有關 ODBC 類別快照的其他問題）。  
-  
--   ODBC `CRecordset` 類別可以選擇建立順向資料錄集類型。 在 `CDaoRecordset` 類別中，順向並不是資料錄集類型，而是特定資料錄集類型的屬性 (或選項)。  
-  
--   開啟 `CRecordset` 物件時的僅附加資料錄集，是指可以讀取和附加資料錄集的資料。 若使用 `CDaoRecordset` 物件，僅附加選項實際上是表示資料錄集的資料只能附加 (而不能讀取)。  
-  
--   ODBC 類別的異動成員函式是 `CDatabase` 的成員，並且會在資料庫層級執行動作。 在 DAO 類別中，異動成員函式是較高層級類別 (`CDaoWorkspace`) 的成員，因此可能會影響共用同一個工作區 (異動空間) 的多個 `CDaoDatabase` 物件。  
-  
--   例外狀況類別已變更。 **CDBExceptions** ODBC 類別中擲回和**CDaoExceptions**在 DAO 類別中。  
-  
--   `RFX_Date` 使用`CTime`和**TIMESTAMP_STRUCT**物件，而**DFX_Date**使用`COleDateTime`。 `COleDateTime`幾乎完全相同`CTime`，但是為依據的 8 位元 OLE**日期**而不是 4 位元組`time_t`讓它能容納更大範圍的資料。  
-  
-    > [!NOTE]
-    >  DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的文件，如果快照集 (**STATIC_CURSORS**) 處於唯讀狀態。  
-  
-## <a name="see-also"></a>另請參閱  
- [依數字的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 
+> [!NOTE]
+> Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 呤魽您畷樾[OLE DB 樣板](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO 中維護現有應用程式。
+
+## <a name="overview"></a>總覽
+
+在大部分情況下，可能需要將使用 MFC 的 ODBC 資料庫類別的應用程式移轉至 MFC 的 DAO 資料庫類別。 這個技術提示將詳細說明 MFC ODBC 與 DAO 類別之間的大多數差異。 在考慮差異的情況下，如有需要，將應用程式從 ODBC 類別移轉至 MFC 類別應該不困難。
+
+## <a name="why-migrate-from-odbc-to-dao"></a>為什麼要從 ODBC 移轉至 DAO
+
+您想要將應用程式從 ODBC 資料庫類別移轉至 DAO 資料庫類別的原因有許多種，但是這項決定不見得簡單或淺顯易懂。 務必記住的是，DAO 所使用的 Microsoft Jet 資料庫引擎可以讀取您擁有其 ODBC 驅動程式的任何 ODBC 資料來源。 雖然使用 ODBC 資料庫類別或直接自行呼叫 ODBC 可能更有效率，不過 Microsoft Jet 資料庫引擎可以讀取 ODBC 資料。
+
+以下是幾個容易決定 ODBC/DAO 的簡單情況。 例如，如果您只需要存取採用 Microsoft Jet 引擎可直接讀取之格式的資料 (Access 格式、Excel 格式等)，很明顯就是選擇使用 DAO 資料庫類別。
+
+如果您的資料位於伺服器或各種不同的伺服器上，情況就會較為複雜。 在這種情況下，就不容易決定應使用 ODBC 資料庫類別或 DAO 資料庫類別。 如果您要進行像是異質聯結 (聯結不同伺服器上多種格式的資料，如 SQL Server 和 Oracle) 這類作業，則 Microsoft Jet 資料庫引擎將自動執行聯結，而不會強迫您執行必要的工作，就像使用 ODBC 資料庫類別或直接呼叫 ODBC 時一樣。 如果您使用的 ODBC 驅動程式支援驅動程式資料指標，最佳選擇可能是 ODBC 資料庫類別。
+
+要做出選擇可能很複雜，因此您可能想要撰寫範例程式碼，依據您的特殊需求測試各種方法的效能。 這個技術提示假設您已決定從 ODBC 資料庫類別移轉至 DAO 資料庫類別。
+
+## <a name="similarities-between-odbc-database-classes-and-mfc-dao-database-classes"></a>ODBC 資料庫類別與 MFC DAO 資料庫類別之間的相似處
+
+MFC ODBC 類別的原始設計是根據 Microsoft Access 和 Microsoft Visual Basic 中持續使用的 DAO 物件模型。 這表示，ODBC 和 MFC DAO 類別之間有許多通用的功能，不過本節中不會全部列出。 一般而言，程式設計模型都是一樣的。
+
+以下強調幾個相似之處：
+
+- ODBC 和 DAO 類別都有使用基礎資料庫管理系統 (DBMS) 進行管理的資料庫物件。
+
+- 兩者都有資料錄集物件，代表一組從該 DBMS 傳回的結果。
+
+- DAO 資料庫和資料錄集物件的成員幾乎與 ODBC 類別完全相同。
+
+- 在這兩組類別中，除了在物件和成員名稱上有些變更之外，擷取資料的程式碼是一樣的。 雖然需要變更，不過從 ODBC 類別轉換成 DAO 類別時，名稱變更的過程相當直接。
+
+例如，在這兩種模型中，擷取資料的程序是建立並開啟資料庫物件、建立並開啟資料錄集物件，以及巡覽 (移動) 執行某項作業的資料。
+
+## <a name="differences-between-odbc-and-dao-mfc-classes"></a>ODBC 和 DAO MFC 類別之間的差異
+
+DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節僅就類似類別和功能之間的差異詳細說明。
+
+類別之間可能最顯著的差異是類似類別和全域函式的名稱變更。 下列清單將顯示與資料庫類別相關的物件、方法和全域函式的名稱變更：
+
+|類別或函式|MFC DAO 類別中的對等用法|
+|-----------------------|-----------------------------------|
+|`CDatabase`|`CDaoDatabase`|
+|`CDatabase::ExecuteSQL`|`CDaoDatabase::Execute`|
+|`CRecordset`|`CDaoRecordset`|
+|`CRecordset::GetDefaultConnect`|`CDaoRecordset::GetDefaultDBName`|
+|`CFieldExchange`|`CDaoFieldExchange`|
+|`RFX_Bool`|`DFX_Bool`|
+|`RFX_Byte`|`DFX_Byte`|
+|`RFX_Int`|`DFX_Short`|
+|`RFX_Long`|`DFX_Long`|
+||`DFX_Currency`|
+|`RFX_Single`|`DFX_Single`|
+|`RFX_Double`|`DFX_Double`|
+|`RFX_Date`<sup>1</sup>|`DFX_Date` (`COleDateTime`-基礎)|
+|`RFX_Text`|`DFX_Text`|
+|`RFX_Binary`|`DFX_Binary`|
+|`RFX_LongBinary`|`DFX_LongBinary`|
+
+<sup>1</sup> `RFX_Date`函式根據`CTime`和`TIMESTAMP_STRUCT`。
+
+以下列出功能上的主要變更，這些變更可能會影響您的應用程式，並且需要進行較複雜的名稱變更。
+
+- 常數和巨集，用來指出像是資料錄集開放類型和資料錄集開放選項已變更這類情況。
+
+   若使用 ODBC 類別，MFC 需要透過巨集或列舉的類型定義這些選項。
+
+   若使用 DAO 類別，DAO 會在標頭檔 (DBDAOINT.H) 中提供這些選項的定義。 因此，資料錄集類型是 `CRecordset` 的列舉成員，不過在 DAO 中則是常數。 例如，您可以使用`snapshot`時指定的型別`CRecordset`ODBC 中，但`DB_OPEN_SNAPSHOT`時指定的型別`CDaoRecordset`。
+
+- 預設資料錄集類型`CRecordset`是`snapshot`時的預設資料錄集類型`CDaoRecordset`是`dynaset`（請參閱下方的附註有關 ODBC 類別快照的其他問題）。
+
+- ODBC `CRecordset` 類別可以選擇建立順向資料錄集類型。 在 `CDaoRecordset` 類別中，順向並不是資料錄集類型，而是特定資料錄集類型的屬性 (或選項)。
+
+- 開啟 `CRecordset` 物件時的僅附加資料錄集，是指可以讀取和附加資料錄集的資料。 若使用 `CDaoRecordset` 物件，僅附加選項實際上是表示資料錄集的資料只能附加 (而不能讀取)。
+
+- ODBC 類別的異動成員函式是 `CDatabase` 的成員，並且會在資料庫層級執行動作。 在 DAO 類別中，異動成員函式是較高層級類別 (`CDaoWorkspace`) 的成員，因此可能會影響共用同一個工作區 (異動空間) 的多個 `CDaoDatabase` 物件。
+
+- 例外狀況類別已變更。 `CDBExceptions` ODBC 類別中擲回和`CDaoExceptions`在 DAO 類別中。
+
+- `RFX_Date` 使用`CTime`和`TIMESTAMP_STRUCT`物件，而`DFX_Date`使用`COleDateTime`。 `COleDateTime`幾乎完全相同`CTime`，但是為依據的 8 位元 OLE`DATE`而不是 4 位元組`time_t`讓它能容納更大範圍的資料。
+
+   > [!NOTE]
+   > DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的文件，如果快照集 (`STATIC_CURSORS`) 處於唯讀狀態。
+
+## <a name="see-also"></a>另請參閱
+
+[依編號顯示的技術提示](../mfc/technical-notes-by-number.md)  
+[依分類區分的技術提示](../mfc/technical-notes-by-category.md)  

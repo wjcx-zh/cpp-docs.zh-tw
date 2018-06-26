@@ -1,7 +1,7 @@
 ---
 title: 決定要轉散發哪些 DLL | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 06/08/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -18,20 +18,20 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3ca079fc69fe10f15a55812eaa55d4ba2d2ab04
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2a7b52e2c4d45d92f10b535b9d2d23b5a1e1a043
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337596"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253863"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>決定要轉散發哪些 DLL
 
 當您建置應用程式時，如果該應用程式使用 Visual Studio 所提供的程式庫 DLL，則應用程式使用者的電腦上也必須要有這些 DLL，應用程式才能執行。 因為大部分的使用者可能未安裝 Visual Studio，因此您必須為他們提供這些 Dll。 Visual Studio 可讓這些 DLL 成為您能夠包含在應用程式安裝程式中的「可轉散發檔案」。
 
-為了使可轉散發 DLL 更容易包含在您的安裝程式中，這些 DLL 會以獨立的「可轉散發套件」形式提供。 這些是特定架構的可執行檔，使用集中部署將可轉散發檔案安裝在使用者的電腦上。 例如，vcredist\_x86.exe 會為 x86 電腦安裝 32 位元程式庫、vcredist\_x64.exe 會為 x64 電腦安裝 32 位元和 64 位元程式庫，而 vcredist\_ARM.exe 會為 ARM 電腦安裝程式庫。 由於 Microsoft 可以使用 Windows Update 服務個別更新這些程式庫，因此建議集中部署。 除了 Visual Studio 安裝中的複本，您也可以從 [VisualStudio.com/下載](https://www.visualstudio.com/downloads/)的＜其他工具與架構＞一節，下載目前的可轉散發套件。
+為了使可轉散發 DLL 更容易包含在您的安裝程式中，這些 DLL 會以獨立的「可轉散發套件」形式提供。 這些是特定架構的可執行檔，使用集中部署將可轉散發檔案安裝在使用者的電腦上。 例如，vcredist\_x86.exe 會為 x86 電腦安裝 32 位元程式庫、vcredist\_x64.exe 會為 x64 電腦安裝 32 位元和 64 位元程式庫，而 vcredist\_ARM.exe 會為 ARM 電腦安裝程式庫。 由於 Microsoft 可以使用 Windows Update 服務個別更新這些程式庫，因此建議集中部署。 除了 Visual Studio 安裝中的複本，您也可以下載目前的可轉散發套件。 如需最新版與舊版工具組所支援之最新可轉散發套件的連結，請參閱[最新支援的 Visual C++ 下載](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。 您可以在 [Microsoft 下載中心](http://go.microsoft.com/fwlink/p/?LinkId=158431)搜尋「Visual C++ 可轉散發套件」，來尋找可轉散發套件的特定舊版。
 
-您要部署之可轉散發套件的主要版本號碼必須符合用來建立應用程式的 Visual Studio 工具組版本。 Visual Studio 2017 和 Visual Studio 2015 具有相容的工具組版本號碼，這表示 Visual Studio 2017 可轉散發檔案可供使用 2015 版工具組建置的應用程式使用。 雖然它們可能相容，但不支援在透過 2017 版工具組建置的應用程式中使用 2015 版可轉散發檔案。 僅支援使用與您的工具組版本相同或更新的可轉散發套件。 如需舊版工具組所支援之最新可轉散發套件的連結，請參閱[最新支援的 Visual C++ 下載](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads)。 您可以在 [Microsoft 下載中心](http://go.microsoft.com/fwlink/p/?LinkId=158431)搜尋「Visual C++ 可轉散發套件」，來尋找可轉散發套件的特定舊版。
+您要部署之可轉散發套件的主要版本號碼必須符合用來建立應用程式的 Visual Studio 工具組版本，且次要版本必須為相同或更新版本。 Visual Studio 2017 和 Visual Studio 2015 具有相容的工具組版本號碼，這表示 Visual Studio 2017 可轉散發檔案可供使用 2015 版工具組建置的應用程式使用。 雖然它們可能相容，但不支援在透過 2017 版工具組建置的應用程式中使用 2015 版可轉散發檔案。 僅支援使用與您的工具組版本相同或更新的可轉散發套件。
 
 在安裝程式中包含可轉散發 DLL 的另一種方式是使用「合併模組」。 這些 Microsoft 安裝程式模組隨附於您的應用程式安裝程式中，並由它進行安裝。 您可以在 \\VC\\Redist\MSVC\\*version*\\MergeModules\\ 下的 Visual Studio 安裝目錄中找到可轉散發 DLL 的合併模組。 在舊版 Visual Studio 中，您可以在 \\Program Files 或 \\Program Files (x86) 目錄的 Common Files\\Merge Modules 子目錄中找到這些檔案。 如需使用這些檔案的詳細資訊，請參閱[使用合併模組來轉散發元件](../ide/redistributing-components-by-using-merge-modules.md)。
 
@@ -41,7 +41,7 @@ ms.locfileid: "33337596"
 
 取得相依性清單後，請將它與 Microsoft Visual Studio 安裝目錄下 Redist.txt 檔案中的連結清單進行比較，或是與您 Visual Studio 複本《Microsoft 軟體授權條款》的＜可散發程式碼檔案＞一節中所指之可轉散發 DLL 的「可轉散發清單」進行比較。 若為 Visual Studio 2017，請參閱 [Microsoft Visual Studio 2017 的可散發程式碼 (含公用程式、擴充性及 BuildServer 檔案)](http://go.microsoft.com/fwlink/p/?linkid=823098)。 若為 Visual Studio 2015，請參閱 [Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 的可散發程式碼 (含公用程式與 BuildServer 檔案)](http://go.microsoft.com/fwlink/p/?linkid=799794)。 若為 Visual Studio 2013，可在 [Microsoft Visual Studio 2013 和 Microsoft Visual Studio 2013 SDK 的可散發程式碼](http://go.microsoft.com/fwlink/p/?LinkId=313603)線上取得此清單。
 
-在 Visual Studio 2015 之前的 Visual Studio 版本中，C 執行階段程式庫 (CRT) 是以可轉散發 DLL 形式 msvc*version*.dll 隨附。 從 Visual Studio 2015 開始，CRT 中的函式已重構為 vcruntime 和 UCRT。 UCRT 現在是在 Windows 10 中的系統元件，由 Windows Update 管理。 所有 Windows 10 作業系統都可以使用此元件。 若要將您的應用程式部署到舊版作業系統，您也可能需要轉散發 UCRT。 Visual Studio 可轉散發檔案中包含舊版 UCRT，只能安裝在 Windows 10 之前的作業系統上，而且只有尚未安裝任何 UCRT 版本時才能安裝。 如需適用於舊版系統且可作為 Microsoft 系統更新套件安裝的 UCRT 版本，請參閱 Microsoft 下載中心的 [Windows 10 通用 C 執行階段](https://www.microsoft.com/en-us/download/details.aspx?id=48234)。
+在 Visual Studio 2015 之前的 Visual Studio 版本中，C 執行階段程式庫 (CRT) 是以可轉散發 DLL 形式 msvc*version*.dll 隨附。 從 Visual Studio 2015 開始，CRT 中的函式已重構為 vcruntime 和 UCRT。 UCRT 現在是在 Windows 10 中的系統元件，由 Windows Update 管理。 所有 Windows 10 作業系統都可以使用此元件。 若要將您的應用程式部署到舊版作業系統，您也可能需要轉散發 UCRT。 Visual Studio 可轉散發檔案中包含舊版 UCRT，只能安裝在 Windows 10 之前的作業系統上，而且只有尚未安裝任何 UCRT 版本時才能安裝。 如需適用於舊版系統且可作為 Microsoft 系統更新套件安裝的 UCRT 版本，請參閱 Microsoft 下載中心的 [Windows 10 通用 C 執行階段](https://www.microsoft.com/download/details.aspx?id=48234)。
 
 並不是 Visual Studio 中包含的檔案都可讓您轉散發；您只能轉散發 Redist.txt 或線上「REDIST 清單」中指定的檔案。 您不能轉散發偵錯版本的應用程式以及各種 Visual C++ 偵錯 DLL。 如需詳細資訊，請參閱[選擇部署方法](../ide/choosing-a-deployment-method.md)。
 

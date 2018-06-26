@@ -19,20 +19,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5d6498d1ecb20b47070cb26bf1a9d732340e266
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 301e15b11b05f9ccbeaee63aead486f1cc6c405c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349658"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931898"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC 中的 MAPI 支援
-MFC 提供支援的 Microsoft 訊息應用程式介面 (MAPI) 類別中的子集**CDocument**。 具體來說， **CDocument**了郵件支援是否存在於使用者的電腦上的成員函式，如果是，允許標準命令 ID 是一個傳送郵件命令**ID_FILE_SEND_MAIL**. MFC 處理常式函式，此命令可讓使用者透過電子郵件將文件傳送。  
+MFC 提供支援的 Microsoft 訊息應用程式介面 (MAPI) 類別中的子集`CDocument`。 具體來說，`CDocument`了郵件支援是否存在於使用者的電腦上的成員函式，如果是這樣，啟用標準命令 ID 是 ID_FILE_SEND_MAIL 傳送郵件命令。 MFC 處理常式函式，此命令可讓使用者透過電子郵件將文件傳送。  
   
 > [!TIP]
 >  雖然 MFC 不會封裝整個 MAPI 函數集，您可以仍然呼叫 MAPI 函式直接，只需時，就可以直接從 MFC 程式中呼叫 Win32 API 函式。  
   
- 提供 「 傳送郵件應用程式中的命令是非常簡單。 MFC 提供封裝文件的實作 (亦即**CDocument**-衍生物件) 做為附件和傳送郵件。 此附件相當於將儲存的檔案儲存命令 （序列化） 至郵件訊息的文件的內容。 此實作會呼叫使用者的電腦上讓使用者有機會處理郵件，並新增至郵件訊息的主旨和訊息文字的郵件用戶端。 使用者會看到其熟悉的郵件應用程式的使用者介面。 這項功能由兩個提供**CDocument**成員函式：`OnFileSendMail`和`OnUpdateFileSendMail`。  
+ 提供 「 傳送郵件應用程式中的命令是非常簡單。 MFC 提供封裝文件的實作 (亦即`CDocument`-衍生物件) 做為附件和傳送郵件。 此附件相當於將儲存的檔案儲存命令 （序列化） 至郵件訊息的文件的內容。 此實作會呼叫使用者的電腦上讓使用者有機會處理郵件，並新增至郵件訊息的主旨和訊息文字的郵件用戶端。 使用者會看到其熟悉的郵件應用程式的使用者介面。 這項功能由兩個提供`CDocument`成員函式：`OnFileSendMail`和`OnUpdateFileSendMail`。  
   
  MAPI 需要讀取要傳送附件的檔案。 如果應用程式保持其資料檔案為開啟狀態期間`OnFileSendMail`函式呼叫，必須以允許多個處理程序存取檔案共用模式開啟檔案。  
   
@@ -41,7 +41,7 @@ MFC 提供支援的 Microsoft 訊息應用程式介面 (MAPI) 類別中的子集
   
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>實作傳送郵件命令與 MFC  
   
-1.  若要加入功能表項目的命令 ID 是使用 Visual c + + 功能表編輯器**ID_FILE_SEND_MAIL**。  
+1.  使用 Visual c + + 功能表編輯器中加入命令 ID 是 ID_FILE_SEND_MAIL 功能表項目。  
   
      此命令 ID 是由的 framework AFXRES 中提供。H. 這個命令可以加入任何功能表上，但它通常會加入至**檔案**功能表。  
   
@@ -50,7 +50,7 @@ MFC 提供支援的 Microsoft 訊息應用程式介面 (MAPI) 類別中的子集
      [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]  
   
     > [!NOTE]
-    >  此訊息對應適用於文件，從其中衍生**CDocument**或**COleDocument** — 它挑選正確的基底類別，在任一情況下，即使是衍生的文件類別中的訊息對應。  
+    >  此訊息對應適用於文件，從其中衍生`CDocument`或`COleDocument`— 它挑選正確的基底類別，在任一情況下，即使是衍生的文件類別中的訊息對應。  
   
 3.  建置您的應用程式。  
   
@@ -61,7 +61,7 @@ MFC 提供支援的 Microsoft 訊息應用程式介面 (MAPI) 類別中的子集
   
  如需相關資訊，請參閱[MAPI](../mfc/mapi.md)概觀。  
   
- 如需有關**CDocument**成員函式可讓 MAPI，請參閱：  
+ 如需有關`CDocument`成員函式可讓 MAPI，請參閱：  
   
 -   [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)  
   

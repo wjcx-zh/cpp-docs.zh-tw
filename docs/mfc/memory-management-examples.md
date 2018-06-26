@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 21efd095a1d8e89c140ef39072a753c300a3043b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347187"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929303"
 ---
 # <a name="memory-management-examples"></a>記憶體管理：範例
 本文說明 MFC 如何執行框架配置和堆積配置每個記憶體配置一般的三種：  
@@ -99,7 +99,7 @@ ms.locfileid: "33347187"
   
      [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]  
   
-     如果引數`CPerson`建構函式是指向`char`，是框架配置的陳述式：  
+     如果引數`CPerson`建構函式是指向**char**，是框架配置的陳述式：  
   
      [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]  
   

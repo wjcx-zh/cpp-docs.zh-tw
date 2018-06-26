@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345136"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930855"
 ---
 # <a name="dialog-data-exchange"></a>對話方塊資料交換
-如果您使用 DDX 機制，通常您會在 `OnInitDialog` 處理常式或對話方塊建構函式中，設定對話方塊物件成員變數的初始值設定。 立即在對話方塊顯示之前，框架的 DDX 機制會將成員變數的值傳送至對話方塊中，出現的位置中的控制項時對話方塊本身顯示以回應`DoModal`或**建立**. `OnInitDialog` 的 `CDialog` 預設實作會呼叫類別 `UpdateData` 的 `CWnd` 成員函式，以初始化對話方塊中的控制項。  
+如果您使用 DDX 機制，通常您會在 `OnInitDialog` 處理常式或對話方塊建構函式中，設定對話方塊物件成員變數的初始值設定。 立即在對話方塊顯示之前，框架的 DDX 機制會將成員變數的值傳送至對話方塊中，出現的位置中的控制項時對話方塊本身顯示以回應`DoModal`或`Create`。 `OnInitDialog` 的 `CDialog` 預設實作會呼叫類別 `UpdateData` 的 `CWnd` 成員函式，以初始化對話方塊中的控制項。  
   
  相同的機制將值從傳送控制項至成員變數當使用者按一下 [確定] 按鈕 (或者每當您呼叫`UpdateData`與引數的成員函式**TRUE**)。 對話方塊資料驗證機制會驗證您所指定驗證規則的所有資料項目。  
   

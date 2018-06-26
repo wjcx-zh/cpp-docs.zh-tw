@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7184a6e8df67dfd220173c42bfa3e0580bd2cd3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0f00e4f660036e73e96d4beb999d37453bdf26
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349463"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929352"
 ---
 # <a name="message-handling-and-command-targets"></a>訊息處理和命令目標
 命令分派介面`IOleCommandTarget`定義一個簡單且可延伸機制，來查詢及執行命令。 這項機制會比自動化的簡單`IDispatch`因為它會完全依賴一組標準的命令; 命令很少需要引數，並不涉及任何類型資訊 （型別安全就會受到影響的命令引數）。  
@@ -33,7 +33,7 @@ ms.locfileid: "33349463"
   
  `IOleCommandTarget` 處理下列案例：  
   
--   使用物件時就地啟用，通常會顯示物件的工具列和物件的工具列可能有對於某些像容器命令的按鈕**列印**，**預覽列印**， **儲存**， `New`，**縮放**，和其他人。 （標準建議的物件移除就地啟用這類按鈕的工具列中，或至少停用。 此設計可讓這些命令會啟用，而且傳送到正確的處理常式。）目前沒有任何機制來分派這些命令的容器物件。  
+-   使用物件時就地啟用，通常會顯示物件的工具列和物件的工具列可能有對於某些像容器命令的按鈕**列印**，**預覽列印**， **儲存**，**新增**，**縮放**，和其他人。 （標準建議的物件移除就地啟用這類按鈕的工具列中，或至少停用。 此設計可讓這些命令會啟用，而且傳送到正確的處理常式。）目前沒有任何機制來分派這些命令的容器物件。  
   
 -   當主動式文件內嵌在主動式文件容器 （例如 Office Binder) 中時，容器可能要將命令傳送這類**列印**，**版面**，**屬性**，和其他人所包含的主動式文件。  
   
@@ -56,7 +56,7 @@ interface IOleCommandTarget : IUnknown
     }  
 ```  
   
- `QueryStatus`以下方法會測試是否識別具有集合了一組特定的命令， **GUID**，支援。 此呼叫將填入陣列**OLECMD**值 （結構） 具有支援的命令，以及傳回文字，描述命令和/或狀態資訊的名稱清單。 當呼叫端想要叫用命令時，它可以傳遞的命令 (和組**GUID**) 至**Exec**選項和引數，以及取得傳回值。  
+ `QueryStatus`以下方法會測試是否識別具有集合了一組特定的命令， **GUID**，支援。 此呼叫將填入陣列**OLECMD**值 （結構） 具有支援的命令，以及傳回文字，描述命令和/或狀態資訊的名稱清單。 當呼叫端想要叫用命令時，它可以傳遞的命令 (和組**GUID**) 至`Exec`選項和引數，以及取得傳回值。  
   
 ## <a name="see-also"></a>另請參閱  
  [主動式文件容器](../mfc/active-document-containers.md)

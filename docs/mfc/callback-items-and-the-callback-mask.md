@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95c896308970ffc6a2040657927dc127eee278ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f3608fbc0c7e34de4ae67ae60a12af23e9ac885
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342770"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931684"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>回呼項目和回呼遮罩
 對於其各個項目中，清單檢視控制項通常會儲存標籤文字、項目圖示的影像清單索引，和一組用於項目狀態的位元旗標。 如果您的應用程式已經儲存某個項目的一些資訊，將個別項目定義為回呼項目會很有用。  
@@ -29,13 +29,13 @@ ms.locfileid: "33342770"
   
  除了定義回呼項目之外，您也可以修改控制項的回呼遮罩。 這個遮罩是一組指定儲存目前資料之應用程式 (而不是控制項) 項目狀態的位元旗標。 回呼遮罩適用於所有控制項的項目，與套用至特定項目的回呼項目指定不同。 回呼遮罩預設為零，表示控制項正在追蹤所有項目的狀態。 若要變更此預設行為，請將遮罩初始化為下列值的任何組合：  
   
--   `LVIS_CUT` 項目已標示為 剪下和貼上作業。  
+-   **LVIS_CUT**項目已標示為 剪下和貼上作業。  
   
--   `LVIS_DROPHILITED` 項目是做為拖放目標反白顯示。  
+-   **LVIS_DROPHILITED**做為拖放目標的項目會反白顯示。  
   
--   `LVIS_FOCUSED` 項目具有焦點。  
+-   **LVIS_FOCUSED**項目有焦點。  
   
--   `LVIS_SELECTED` 選取的項目。  
+-   **LVIS_SELECTED**選取項目。  
   
 -   **LVIS_OVERLAYMASK**應用程式會儲存每個項目目前的覆疊影像的影像清單索引。  
   

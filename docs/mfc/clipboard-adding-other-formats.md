@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342143"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932014"
 ---
 # <a name="clipboard-adding-other-formats"></a>剪貼簿：加入其他格式
-本主題說明如何展開的清單支援的格式，特別是針對 OLE 支援。 本主題[剪貼簿： 複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)說明支援複製及貼上剪貼簿中所需的最小實作。 如果這是所有您實作，就放在剪貼簿上只有格式`CF_METAFILEPICT`， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，且可能`CF_LINKSOURCE`。 大部分的應用程式需要比這三個剪貼簿格式。  
+本主題說明如何展開的清單支援的格式，特別是針對 OLE 支援。 本主題[剪貼簿： 複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)說明支援複製及貼上剪貼簿中所需的最小實作。 如果這是所有您實作，就放在剪貼簿上只有格式**CF_METAFILEPICT**， **CF_EMBEDSOURCE**， **CF_OBJECTDESCRIPTOR**，且可能**CF_LINKSOURCE**。 大部分的應用程式需要比這三個剪貼簿格式。  
   
 ##  <a name="_core_registering_custom_formats"></a> 登錄自訂格式  
  若要建立您自己的自訂格式，請遵循相同的程序登錄任何自訂剪貼簿格式時，您會使用： 傳遞至格式的名稱**RegisterClipboardFormat**函式，並使用它的傳回值為格式識別碼。  

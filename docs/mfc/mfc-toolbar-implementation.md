@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360962"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929221"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 工具列實作
 工具列是[控制列](../mfc/control-bars.md)包含控制項的點陣圖影像。 這些映像可像按鈕、 核取方塊或選項按鈕。 MFC 提供類別[CToolbar](../mfc/reference/ctoolbar-class.md)管理工具列。  
@@ -44,7 +44,7 @@ ms.locfileid: "33360962"
 > [!NOTE]
 >  根據 MFC 4.0 版，工具列工具提示會實作與使用 Windows 95 和更新版本的功能，而不之前的實作特定 MFC。  
   
- 回溯相容性，MFC 會保留舊的工具列實作類別中**COldToolBar**。 舊版的 MFC 的文件描述**COldToolBar**下`CToolBar`。  
+ 回溯相容性，MFC 會保留舊的工具列實作類別中`COldToolBar`。 舊版的 MFC 的文件描述`COldToolBar`下`CToolBar`。  
   
  應用程式精靈中選取 [工具列] 選項，在程式中建立第一個工具列。 您也可以建立其他工具列。  
   

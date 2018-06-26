@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523fc0f5c87712cd61ec0709d94edcb7bcbde72c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fd3376e19d7780922102240ae1bfaa1b4eb89b2b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348218"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931719"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX 控制項：存取環境屬性
 本文將討論如何 ActiveX 控制項可以存取其控制項容器之環境的屬性。  
@@ -44,7 +44,7 @@ ms.locfileid: "33348218"
 -   [AmbientFont](../mfc/reference/colecontrol-class.md#ambientfont)  
   
     > [!NOTE]
-    >  呼叫端必須呼叫**Release （)** 上傳回的字型。  
+    >  呼叫端必須呼叫`Release( )`上傳回的字型。  
   
 -   [AmbientForeColor](../mfc/reference/colecontrol-class.md#ambientforecolor)  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33348218"
   
 -   [AmbientShowGrabHandles](../mfc/reference/colecontrol-class.md#ambientshowgrabhandles)  
   
- 如果環境屬性的值變更 （透過某些動作的容器）、 **OnAmbientPropertyChanged**呼叫控制項的成員函式。 覆寫此成員函式，來處理這類通知。 參數**OnAmbientPropertyChanged**受影響的環境屬性的分派識別碼。 這個分派 ID 的值可能是**DISPID_UNKNOWN**，表示一或多個環境的屬性已變更，但屬性所影響的資訊無法使用。  
+ 如果環境屬性的值變更 （透過某些動作的容器）、`OnAmbientPropertyChanged`呼叫控制項的成員函式。 覆寫此成員函式，來處理這類通知。 參數`OnAmbientPropertyChanged`受影響的環境屬性的分派識別碼。 這個分派識別碼的值可能是 DISPID_UNKNOWN，表示一或多個環境的屬性已變更，但無法使用哪些屬性受到影響的資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)

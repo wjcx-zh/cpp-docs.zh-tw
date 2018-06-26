@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379238"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931732"
 ---
 # <a name="rubber-banding-and-trackers"></a>拖放矩形和追蹤器
 另一個追蹤器隨附的功能是「拖放矩形」選取範圍，可讓使用者透過在要選取的項目附近拖曳縮放矩形來選取多個 OLE 項目。 當使用者放開滑鼠左鍵時，將會選取使用者在區域中選取的項目，並可供使用者操作。 例如，使用者可以將選取項目拖曳到另一個容器應用程式。  
   
- 您的應用程式的 `WM_LBUTTONDOWN` 處理函式中必須有一些額外的程式碼，才能實作這項功能。  
+ 實作這項功能需要您的應用程式 WM_LBUTTONDOWN 處理常式函式中的某些其他程式碼。  
   
  下列程式碼範例實作拖放矩形選取範圍和其他功能。  
   

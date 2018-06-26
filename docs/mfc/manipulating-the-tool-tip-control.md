@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346434"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929824"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>管理工具提示控制項
 `CToolTipCtrl` 類別提供一組成員函式，其可以控制 `CToolTipCtrl` 物件和工具提示視窗的各種屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "33346434"
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor)和[SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor)擷取和設定文字色彩的工具提示視窗。  
   
- 為了讓工具提示控制項的重要的訊息，例如通知**WM_LBUTTONXXX**訊息，您必須將訊息轉送至工具提示控制項。 這項轉送的最佳方法是對進行呼叫[Relayevent](../mfc/reference/ctooltipctrl-class.md#relayevent)，請在`PreTranslateMessage`函式的主控視窗。 下列範例說明可能的方法 (假設工具提示控制項名為 `m_ToolTip`)：  
+ 為了讓工具提示控制項的重要的訊息，例如 WM_LBUTTONXXX 訊息通知您必須將訊息轉送至工具提示控制項。 這項轉送的最佳方法是對進行呼叫[Relayevent](../mfc/reference/ctooltipctrl-class.md#relayevent)，請在`PreTranslateMessage`函式的主控視窗。 下列範例說明可能的方法 (假設工具提示控制項名為 `m_ToolTip`)：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   

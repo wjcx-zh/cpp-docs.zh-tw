@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 264a3b5618b1c153219d5dee838af38bd7f49f49
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349307"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931056"
 ---
 # <a name="memory-management-frame-allocation"></a>記憶體管理：框架配置
 配置框架時會從呼叫函式時設定的「堆疊框架」取用框架名稱。 堆疊框架是一個記憶體區域，會暫時保留函式的引數以及任何為函式區域定義的變數。 框架變數通常稱為「自動」變數，因為編譯器會自動為其配置空間。  
@@ -42,7 +42,7 @@ ms.locfileid: "33349307"
   
  [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- 對於區域函式變數，此範圍轉換會在函式結束時發生，不過，如果使用巢狀大括弧，框架變數的範圍可能會小於函式。 框架變數的這個自動刪除是非常重要的。 在簡單的基本類型的情況下 (例如`int`或**位元組**)、 陣列或資料結構，自動刪除時僅會回收變數所使用的記憶體。 因為變數已超出範圍，所以是無法存取的。 不過，若是 C++ 物件，自動刪除的程序則較為複雜。  
+ 對於區域函式變數，此範圍轉換會在函式結束時發生，不過，如果使用巢狀大括弧，框架變數的範圍可能會小於函式。 框架變數的這個自動刪除是非常重要的。 在簡單的基本類型的情況下 (例如**int**或**位元組**)、 陣列或資料結構，自動刪除時僅會回收變數所使用的記憶體。 因為變數已超出範圍，所以是無法存取的。 不過，若是 C++ 物件，自動刪除的程序則較為複雜。  
   
  當物件定義為框架變數時，會自動在遇到這個定義的點叫用其建構函式。 當物件超出範圍時，會在回收物件的記憶體之前自動叫用其解構函式。 此自動建構和解構非常方便使用，不過您必須留意自動呼叫，尤其是對解構函式。  
   

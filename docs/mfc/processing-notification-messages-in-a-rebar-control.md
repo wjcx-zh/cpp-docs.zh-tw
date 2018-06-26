@@ -17,35 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a06df0bdfe8d1b81b4285fc86378f3da99882698
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1d42d129ab7b7d2e98ae1126b8f32f68b1f356
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348412"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931823"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>處理 Rebar 控制項中的通知訊息
 在 Rebar 控制項的父類別中，請為任何一個您要處理的 Rebar 控制項 (`OnChildNotify`) 通知訊息建立一個 switch 陳述式的 `CReBarCtrl` 處理常式函式。 當使用者拖曳物件到 Rebar 控制項上方、變更 Rebar 群組列的配置、從 Rebar 控制項刪除群組列等等時，就會傳送通知給父視窗。  
   
  下列通知訊息可以由 Rebar 控制項物件傳送：  
   
--   **RBN_AUTOSIZE** ，由 rebar 控制項傳送 (使用建立**RBS_AUTOSIZE**樣式) 當 rebar 自動調整其大小。  
+-   RBN_AUTOSIZE，由 rebar 控制項 （使用 RBS_AUTOSIZE 樣式建立） 傳送當 rebar 自動調整其大小。  
   
--   **RBN_BEGINDRAG**使用者開始拖曳群組列時，由 rebar 控制項傳送。  
+-   當使用者開始拖曳群組列的 rebar 控制項傳送 RBN_BEGINDRAG。  
   
--   **RBN_CHILDSIZE**調整寬線的子視窗的大小時，由 rebar 控制項傳送。  
+-   RBN_CHILDSIZE 傳送，由 rebar 控制項寬線的子視窗調整大小時。  
   
--   **RBN_DELETEDBAND**被刪除後，由 rebar 控制項傳送。  
+-   RBN_DELETEDBAND 傳送，由 rebar 控制項之後被刪除。  
   
--   **RBN_DELETINGBAND**即將被刪除時，由 rebar 控制項傳送。  
+-   RBN_DELETINGBAND，由 rebar 控制項即將被刪除時傳送。  
   
--   **RBN_ENDDRAG**使用者停止拖曳群組列時，由 rebar 控制項傳送。  
+-   當使用者停止拖曳群組列的 rebar 控制項傳送 RBN_ENDDRAG。  
   
--   **RBN_GETOBJECT** ，由 rebar 控制項傳送 (使用建立**RBS_REGISTERDROP**樣式) 當物件已拖曳至控制項中。  
+-   RBN_GETOBJECT，由 rebar 控制項 （使用 RBS_REGISTERDROP 樣式建立） 傳送當物件已拖曳至控制項中。  
   
--   **RBN_HEIGHTCHANGE**它的高度變更時，由 rebar 控制項傳送。  
+-   RBN_HEIGHTCHANGE，由 rebar 控制項高度變更時傳送。  
   
--   **RBN_LAYOUTCHANGED**使用者變更控制項的寬線的版面配置時，由 rebar 控制項傳送。  
+-   RBN_LAYOUTCHANGED，由 rebar 控制項使用者變更控制項的寬線的版面配置時傳送。  
   
  如需有關這些通知的詳細資訊，請參閱[Rebar 控制項參考](http://msdn.microsoft.com/library/windows/desktop/bb774375)Windows SDK 中。  
   

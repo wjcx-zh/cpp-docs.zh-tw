@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344496"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932243"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>從標準控制項衍生控制項
 如同使用任何[CWnd](../mfc/reference/cwnd-class.md)-衍生的類別，您可以從現有的控制項類別衍生新類別，以修改控制項的行為。  
   
 ### <a name="to-create-a-derived-control-class"></a>建立衍生的控制項類別  
   
-1.  從現有的控制項類別衍生您的類別，並選擇性地覆寫**建立**，使其提供需要的引數給基底類別成員函式**建立**函式。  
+1.  從現有的控制項類別衍生您的類別，並選擇性地覆寫`Create`，使其提供需要的引數給基底類別成員函式`Create`函式。  
   
 2.  提供訊息處理常式成員函式和訊息對應項目以修改控制項在回應特定 Windows 訊息時的行為。 請參閱[將訊息對應到函式](../mfc/reference/mapping-messages-to-functions.md)。  
   

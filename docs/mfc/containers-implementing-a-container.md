@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3693cb7d52a048045f4745b69b45cacc4defc75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 066c032a18b2fedc88884b7e6eee55f07fcf43ad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342826"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930071"
 ---
 # <a name="containers-implementing-a-container"></a>容器：實作容器
 本文摘要說明實作容器的程序，並指向提供詳細說明實作容器之其他文件。 它也會列出您可以實作的選擇性 OLE 功能，以及描述這些功能的文件。  
   
 #### <a name="to-prepare-your-cwinapp-derived-class"></a>若要準備您的 CWinApp 衍生類別  
   
-1.  藉由呼叫初始化 OLE 程式庫**AfxOleInit**中`InitInstance`成員函式。  
+1.  藉由呼叫初始化 OLE 程式庫`AfxOleInit`中`InitInstance`成員函式。  
   
 2.  在 `CDocTemplate::SetContainerInfo` 中呼叫 `InitInstance`，指派當內嵌項目就地啟動時使用的功能表和快速鍵資源。 如需有關本主題的詳細資訊，請參閱[啟用](../mfc/activation-cpp.md)。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33342826"
   
 2.  覆寫 `IsSelected` 以確認傳遞給它的項目目前是否已選取。  
   
-3.  實作**OnInsertObject**訊息處理常式，以顯示**插入物件** 對話方塊。  
+3.  實作`OnInsertObject`訊息處理常式，以顯示**插入物件** 對話方塊。  
   
 4.  實作 `OnSetFocus` 訊息處理常式以從檢視將焦點移至就地啟動 OLE 內嵌項目。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "33342826"
   
 1.  自[COleClientItem](../mfc/reference/coleclientitem-class.md)。 這個類別的物件代表已內嵌或連結至您的 OLE 文件的項目。  
   
-2.  覆寫**OnChange**， `OnChangeItemPosition`，和`OnGetItemPosition`。 這些函式處理調整大小、定位和修改內嵌和連結項目。  
+2.  覆寫`OnChange`， `OnChangeItemPosition`，和`OnGetItemPosition`。 這些函式處理調整大小、定位和修改內嵌和連結項目。  
   
- 應用程式精靈將為您衍生類別，但您可能需要覆寫**OnChange**和其他函式在之前程序中的步驟 2 一起列出。 因為這些函式的實作每個應用程式都不同，需要對大部分的應用程式自訂基本架構實作。 這個範例，請參閱 MFC 範例[DRAWCLI](../visual-cpp-samples.md)和[容器](../visual-cpp-samples.md)。  
+ 應用程式精靈將為您衍生類別，但您可能需要覆寫`OnChange`和其他函式在之前程序中的步驟 2 一起列出。 因為這些函式的實作每個應用程式都不同，需要對大部分的應用程式自訂基本架構實作。 這個範例，請參閱 MFC 範例[DRAWCLI](../visual-cpp-samples.md)和[容器](../visual-cpp-samples.md)。  
   
  您必須將多個項目加入至容器應用程式的功能表結構以支援 OLE。 如需這些的詳細資訊，請參閱[功能表和資源： 容器新增](../mfc/menus-and-resources-container-additions.md)。  
   

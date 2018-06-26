@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345182"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928765"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外狀況：攔截及刪除例外狀況
-下列指示和範例示範如何攔截和刪除例外狀況。 如需有關**再試一次**，**攔截**，和`throw`關鍵字，請參閱[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)。  
+下列指示和範例示範如何攔截和刪除例外狀況。 如需有關**再試一次**，**攔截**，和**擲回**關鍵字，請參閱[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)。  
   
  您的例外狀況處理常式必須刪除其所處理的例外狀況物件，因為每當程式碼攔截例外狀況時，若無法刪除例外狀況就會導致記憶體流失。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33345182"
 -   執行會傳回從**攔截**區塊。  
   
 > [!NOTE]
->  刪除時`CException`，使用**刪除**成員函式來刪除例外狀況。 請勿使用**刪除**關鍵字，因為它可能會失敗，如果例外狀況不是在堆積上。  
+>  刪除時`CException`，使用`Delete`成員函式來刪除例外狀況。 請勿使用**刪除**關鍵字，因為它可能會失敗，如果例外狀況不是在堆積上。  
   
 #### <a name="to-catch-and-delete-exceptions"></a>攔截和刪除例外狀況  
   

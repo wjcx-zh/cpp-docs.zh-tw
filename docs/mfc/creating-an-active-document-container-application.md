@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341345"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929441"
 ---
 # <a name="creating-an-active-document-container-application"></a>建立主動式文件容器應用程式
 建立主動式文件容器應用程式的最簡單及最推薦的方式是使用 [MFC 應用程式精靈] 建立 MFC EXE 容器應用程式，然後將應用程式修改為支援主動式文件內含項目。  
@@ -36,7 +36,7 @@ ms.locfileid: "33341345"
   
 3.  選取**MFC 應用程式**從右窗格。  
   
-4.  將專案命名`MyProj`，按一下 **確定**。  
+4.  將專案命名*MyProj*，按一下 **確定**。  
   
 5.  選取**複合文件支援**頁面。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "33341345"
   
 9. 在 [MFC 應用程式精靈] 完成產生應用程式的程序時，使用 [方案總管] 開啟下列檔案：  
   
-    -   MyProjview.cpp  
+    -   *MyProjview.cpp*  
   
-10. 在 MyProjview.cpp 中進行下列變更：  
+10. 在*MyProjview.cpp*，進行下列變更：  
   
     -   以下列程式碼取代 `CMyProjView::OnPreparePrinting` 中的函式內容：  
   

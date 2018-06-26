@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfa84326286b03f3ed0154138ed7f847440df284
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aac3c9ba284abc634af2fbeb25633b812e07f926
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347148"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928566"
 ---
 # <a name="ordering-items-in-the-header-control"></a>排序標題控制項中的項目
 一旦您[項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)，您可以操作或取得與下列函式順序有關的資訊：  
@@ -40,7 +40,7 @@ ms.locfileid: "33347148"
   
      擷取特定標頭項目的索引值。  
   
- 除了先前的成員函式之外，`HDS_DRAGDROP` 樣式允許使用者拖放標題控制項內的標題項目。 如需詳細資訊，請參閱[提供為標題項目拖放支援](../mfc/providing-drag-and-drop-support-for-header-items.md)。  
+ 除了先前的成員函式，HDS_DRAGDROP 樣式允許使用者拖放標題控制項內的標頭項目。 如需詳細資訊，請參閱[提供為標題項目拖放支援](../mfc/providing-drag-and-drop-support-for-header-items.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)

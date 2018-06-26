@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350845"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930348"
 ---
 # <a name="dynamic-layout"></a>動態版面配置
 Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以調整大小，而且您可以控制配置調整大小的變更的方式。 例如，您可以將對話方塊底部的按鈕附加至下邊緣，使其永遠保持在底部。 您也可以設定特定的控制項，例如清單方塊、編輯方塊和文字欄位，在使用者展開對話方塊時展開。  
@@ -31,7 +31,7 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
   
  ![調整大小之後的對話方塊。] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- 您可以在 IDE 的資源編輯器中指定每個控制項的詳細資料，以便控制動態配置，也可以用程式設計方式進行，亦即存取特定控制項的 CMFCDynamicLayout 物件並設定屬性。  
+ 您可以在資源編輯器在 IDE 中，指定每個控制項的詳細資料，以便控制動態配置，或者您可以藉由存取，以程式設計方式操作`CMFCDynamicLayout`特定控制項的物件，並設定屬性。  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>在資源編輯器中設定動態配置屬性  
  您可以使用資源編輯器設定對話方塊的動態配置行為，而不需要撰寫任何程式碼。  
@@ -61,7 +61,7 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
   
 1.  在對話方塊類別的實作程式碼中，尋找或建立一個您要為對話指定動態配置的位置。 例如，您可能會想要在對話方塊中加入 `AdjustLayout` 這樣的方法，並從需要變更配置的位置呼叫它。 您可能會先從建構函式呼叫它，或在變更對話方塊後呼叫。  
   
-2.  對話方塊中，針對呼叫[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，CWnd 類別的方法。 GetDynamicLayout 會將指標傳回 CMFCDynamicLayout 物件。  
+2.  對話方塊中，針對呼叫[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，方法`CWnd`類別。 `GetDynamicLayout` 將指標傳回至`CMFCDynamicLayout`物件。  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
   
 9. 使用者調整對話方塊中，在下一次[cmfcdynamiclayout:: Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust)會呼叫方法，它會實際套用設定。  
   
-10. 如果您想要停用動態配置，呼叫[cwnd:: Enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout)與`FALSE`與`bEnabled`參數。  
+10. 如果您想要停用動態配置，呼叫[cwnd:: Enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout)與**FALSE**與*bEnabled*參數。  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
 
  ```  
   
-     具名的資源必須參考包含配置資訊的對話方塊，其形式為資源檔中的 AFX_DIALOG_LAYOUT 項目，如下列範例所示：  
+     具名的資源必須參考包含配置資訊的形式對話方塊**AFX_DIALOG_LAYOUT**項目中的資源檔，如下列範例所示：  
   
  '' * / / * / / * / / AFX_DIALOG_LAYOUT * / /  
  

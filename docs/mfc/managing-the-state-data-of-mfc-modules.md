@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347691"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930512"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>管理 MFC 模組的狀態資料
-本文討論 MFC 模組的狀態資料，以及當執行 (執行時路徑程式碼會經過應用程式) 流程進入而模組離開時，這個狀態如何更新。 也會探討使用 `AFX_MANAGE_STATE` 和 `METHOD_PROLOGUE` 巨集切換模組狀態。  
+本文討論 MFC 模組的狀態資料，以及當執行 (執行時路徑程式碼會經過應用程式) 流程進入而模組離開時，這個狀態如何更新。 也將討論切換模組狀態與 AFX_MANAGE_STATE 和 METHOD_PROLOGUE 巨集。  
   
 > [!NOTE]
 >  「模組」一詞在這裡指的是可執行的程式，或者獨立於應用程式的其他部分運作的 DLL (或一組 DLL)，不過使用的是 MFC DLL 的共用複本。 ActiveX 控制項是模組的典型例子。  

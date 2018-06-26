@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a2e6e5eeab0be13eb64052eb9e90a570dcc5124d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352525"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929048"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 控制項：加入自訂事件
-自訂事件與不同的內建事件的類別不會自動引發`COleControl`。 自訂的事件會辨識某些動作，由控制項開發人員，為事件。 自訂事件的事件對應項目都由`EVENT_CUSTOM`巨集。 下列章節實作 ActiveX 控制項專案使用 ActiveX 控制項精靈所建立的自訂事件。  
+自訂事件與不同的內建事件的類別不會自動引發`COleControl`。 自訂的事件會辨識某些動作，由控制項開發人員，為事件。 EVENT_CUSTOM 巨集來表示事件對應項目，對於自訂事件。 下列章節實作 ActiveX 控制項專案使用 ActiveX 控制項精靈所建立的自訂事件。  
   
 ##  <a name="_core_adding_a_custom_event_with_classwizard"></a> 加入與自訂事件加入事件精靈  
  下列程序會加入特定的自訂事件，ClickIn。 您可以使用此程序新增其他自訂的事件。 取代為您自訂事件的名稱和參數與 ClickIn 事件名稱及其參數。  
@@ -48,13 +48,13 @@ ms.locfileid: "33352525"
   
      這會開啟 加入事件精靈。  
   
-4.  在**事件名稱**方塊中，先選取現有的事件，然後按一下 **自訂**選項按鈕，然後輸入`ClickIn`。  
+4.  在**事件名稱**方塊中，先選取現有的事件，然後按一下 **自訂**選項按鈕，然後輸入*ClickIn*。  
   
 5.  在**內部名稱**方塊中，輸入此事件引發函式的名稱。 此範例中，使用加入事件精靈所提供的預設值 (`FireClickIn`)。  
   
-6.  加入參數，呼叫`xCoord`(型別`OLE_XPOS_PIXELS`)，並使用**參數名稱**和**參數型別**控制項。  
+6.  加入參數，呼叫*xCoord* (型別*OLE_XPOS_PIXELS*)，並使用**參數名稱**和**參數型別**控制項。  
   
-7.  新增第二個參數，呼叫`yCoord`(型別`OLE_YPOS_PIXELS`)。  
+7.  新增第二個參數，呼叫*yCoord* (型別*OLE_YPOS_PIXELS*)。  
   
 8.  按一下**完成**建立的事件。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33352525"
  這一行會指派特定的 ID 編號，取自加入事件精靈的 [事件] 清單中的事件位置 ClickIn 事件。 [事件] 清單中的項目可讓容器以預測事件。 例如，它可能會提供事件引發時執行的處理常式程式碼。  
   
 ##  <a name="_core_calling_fireclickin"></a> 呼叫 FireClickIn  
- 既然您已加入使用加入事件精靈 ClickIn 自訂事件，您必須決定要引發此事件時。 您可以呼叫`FireClickIn`適當的動作就會發生。 這個討論而言，此控制項會使用`InCircle`函式內`WM_LBUTTONDOWN`引發 ClickIn 事件，當使用者按一下圓形或橢圓形的區域內部的訊息處理常式。 下列程序加入`WM_LBUTTONDOWN`處理常式。  
+ 既然您已加入使用加入事件精靈 ClickIn 自訂事件，您必須決定要引發此事件時。 您可以呼叫`FireClickIn`適當的動作就會發生。 這個討論而言，此控制項會使用`InCircle`內引發 ClickIn 事件，當使用者按一下圓形或橢圓形的區域內部的 WM_LBUTTONDOWN 訊息處理常式的函式。 下列程序加入 WM_LBUTTONDOWN 處理常式。  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>加入訊息處理常式加入事件精靈  
   
@@ -92,13 +92,13 @@ ms.locfileid: "33352525"
   
      [屬性] 視窗會顯示一份可以由 ActiveX 控制項的訊息。 已經以粗體顯示任何訊息都有指派給它的處理常式函式。  
   
-4.  從 [屬性] 視窗中，選取您想要處理的訊息。 此範例中，選取`WM_LBUTTONDOWN`。  
+4.  從 [屬性] 視窗中，選取您想要處理的訊息。 此範例中，選取 WM_LBUTTONDOWN。  
   
 5.  在右側下拉式清單方塊中，從選取**\<新增 > OnLButtonDown**。  
   
 6.  按兩下跳至訊息處理常式程式碼，在實作類別檢視中新的處理常式函式 (。ActiveX 控制項的 CPP) 檔案。  
   
- 下列程式碼範例會呼叫**InCircle**函式每次控制視窗中按下滑鼠左的按鈕。 此範例位於`WM_LBUTTONDOWN`處理常式函式， `OnLButtonDown`，請在[Circ 範例](../visual-cpp-samples.md)抽象。  
+ 下列程式碼範例會呼叫`InCircle`函式每次控制視窗中按下滑鼠左的按鈕。 此範例位於 WM_LBUTTONDOWN 處理常式函式， `OnLButtonDown`，請在[Circ 範例](../visual-cpp-samples.md)抽象。  
   
  [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]  
   

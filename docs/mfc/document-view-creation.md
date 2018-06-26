@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb89180db8e1a6cce2c40bbb4bae0965b972afa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343521"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931849"
 ---
 # <a name="documentview-creation"></a>文件/檢視建立
-架構會提供實作`New`和**開啟**命令 （和其他項目） 上**檔案**功能表。 建立新文件及其相關聯的檢視和框架視窗是應用程式物件、 文件範本，新建立的文件和框架視窗之間的合作式投入時間。 下表摘要說明哪些物件建立什麼。  
+架構會提供實作**新增**和**開啟**命令 （和其他項目） 上**檔案**功能表。 建立新文件及其相關聯的檢視和框架視窗是應用程式物件、 文件範本，新建立的文件和框架視窗之間的合作式投入時間。 下表摘要說明哪些物件建立什麼。  
   
 ### <a name="object-creators"></a>物件建立者  
   

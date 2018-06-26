@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfdff6023beeedfa14d37e5b404fa3c223691b85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f8214b2f40926cc4ab1471dce99ce5215362011
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349040"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930486"
 ---
 # <a name="ole-container-classes"></a>OLE 容器類別
-容器應用程式會使用這些類別。 同時`COleLinkingDoc`和`COleDocument`管理集合的`COleClientItem`物件。 而不是衍生您的文件類別，從**CDocument**，您會從它衍生`COleLinkingDoc`或`COleDocument`，視您是否要支援的連結文件中內嵌的物件。  
+容器應用程式會使用這些類別。 同時`COleLinkingDoc`和`COleDocument`管理集合的`COleClientItem`物件。 而不是衍生您的文件類別，從`CDocument`，您會從它衍生`COleLinkingDoc`或`COleDocument`，視您是否要支援的連結文件中內嵌的物件。  
   
  使用`COleClientItem`物件以代表從另一個文件中內嵌或連結至另一個文件的文件中的每個 OLE 項目。  
   

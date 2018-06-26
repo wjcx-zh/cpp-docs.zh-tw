@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d80dc3d02a7530ee54c9ff26cd0a03465bd77cdd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: acbbd4ec8e075abbcbbeeaf199cae0d3a8d3c41a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345038"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930448"
 ---
 # <a name="handling-the-apply-button"></a>處理套用按鈕
 屬性工作表具有標準對話方塊所沒有的能力：它們可讓使用者在關閉屬性工作表之前套用所做的變更。 這可使用 [套用] 按鈕來完成。 本文將討論您可以用於正確實作這項功能的方法。  
@@ -33,11 +33,11 @@ ms.locfileid: "33345038"
   
  如果您不想為使用者提供 [套用] 功能，不一定非要移除 [套用] 按鈕不可。 您可以將它停用，對於使用 Windows 未來版本會提供之標準屬性工作表支援的應用程式中，這是常見的作法。  
   
- 若要呈報頁面為正在修改，並啟用 [套用] 按鈕，請呼叫**cpropertypage:: Setmodified (TRUE)**。 如果有任何網頁呈報為已修改，不論目前作用中的網頁是否已修改，[套用] 按鈕都會維持啟用狀態。  
+ 若要呈報頁面為正在修改，並啟用 [套用] 按鈕，請呼叫`CPropertyPage::SetModified( TRUE )`。 如果有任何網頁呈報為已修改，不論目前作用中的網頁是否已修改，[套用] 按鈕都會維持啟用狀態。  
   
  您應該呼叫[cpropertypage:: Setmodified](../mfc/reference/cpropertypage-class.md#setmodified)每當使用者變更網頁中的任何設定。 若要偵測當使用者變更頁面中的設定的一種方式為每個屬性頁中的控制項實作變更通知處理常式，例如**EN_CHANGE**或**BN_CLICKED**。  
   
- 若要實作 [套用] 按鈕的功用，屬性工作表必須呼叫其擁有者，或者應用程式的其他外部物件，如此就可套用目前屬性頁中的設定。 同時，屬性工作表應該停用 [套用] 按鈕藉由呼叫**cpropertypage:: Setmodified (FALSE)** 套用到外部物件修改的所有頁面。  
+ 若要實作 [套用] 按鈕的功用，屬性工作表必須呼叫其擁有者，或者應用程式的其他外部物件，如此就可套用目前屬性頁中的設定。 同時，屬性工作表應該停用 [套用] 按鈕藉由呼叫`CPropertyPage::SetModified( FALSE )`套用到外部物件修改的所有頁面。  
   
  如需此程序的範例，請參閱 MFC 一般範例[PROPDLG](../visual-cpp-samples.md)。  
   

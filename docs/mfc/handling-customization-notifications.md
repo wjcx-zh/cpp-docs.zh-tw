@@ -57,17 +57,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b95af9c0562c4b3210cbcdd7b9ce6216a5d49fb
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353691"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930013"
 ---
 # <a name="handling-customization-notifications"></a>處理自訂告知
 Windows 工具列通用控制項內建自訂功能 (包括系統定義的自訂對話方塊)，可讓使用者插入、刪除或重新排列工具列按鈕。 應用程式會判斷是否可以使用自訂功能，並控制使用者可自訂工具列的範圍。  
   
- 您可以為工具列指定 `CCS_ADJUSTABLE` 樣式，來將這些自訂功能提供給使用者。 自訂功能可讓使用者將按鈕拖曳至新的位置，或者拖曳出工具列以移除按鈕。 此外，使用者可以按兩下工具列顯示 [自訂工具列]  對話方塊，讓使用者加入、刪除及重新排列工具列按鈕。 應用程式可以使用 [[自訂]](../mfc/reference/ctoolbarctrl-class.md#customize) 成員函式來顯示此對話方塊。  
+ 您可以將這些自訂功能提供給使用者為工具列指定**CCS_ADJUSTABLE**樣式。 自訂功能可讓使用者將按鈕拖曳至新的位置，或者拖曳出工具列以移除按鈕。 此外，使用者可以按兩下工具列顯示 [自訂工具列]  對話方塊，讓使用者加入、刪除及重新排列工具列按鈕。 應用程式可以使用 [[自訂]](../mfc/reference/ctoolbarctrl-class.md#customize) 成員函式來顯示此對話方塊。  
   
  工具列控制項會在自訂程序中的每個步驟，將通知訊息傳送至父視窗。 如果使用者按住 SHIFT 鍵並開始拖曳按鈕，工具列會自動處理拖曳作業。 工具列會將 **TBN_QUERYDELETE** 通知訊息傳送至父視窗，以判斷是否可刪除此按鈕。 如果父視窗傳回 **FALSE**，則結束拖曳作業。 否則，工具列會擷取滑鼠輸入，並等候使用者放開滑鼠按鈕。  
   
@@ -165,7 +165,7 @@ Windows 工具列通用控制項內建自訂功能 (包括系統定義的自訂�
  與通知相關聯的按鈕索引。  
   
  **tbButton**  
- `TBBUTTON` 結構，其中包含與通知相關聯的工具列按鈕的相關資訊。  
+ **TBBUTTON**與通知相關聯的結構，其中包含的工具列按鈕的相關資訊。  
   
  **cchText**  
  按鈕文字中的字元計數。  

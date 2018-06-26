@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbde67e61a38190a2e26884659d273b55a63f89e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07131c64097457bd6a8035b5fe100ba376d49fbd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382095"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931153"
 ---
 # <a name="ribbon-designer-mfc"></a>功能區設計工具 (MFC)
 功能區設計工具可讓您建立和自訂 MFC 應用程式中的功能區。 功能區是可將命令組織成邏輯群組的使用者介面 (UI) 項目。 這些群組可出現在跨視窗頂端區域中的個別索引標籤上。 功能區取代了功能表列和工具列。 功能區可大幅改善應用程式可用性。 如需詳細資訊，請參閱[功能區](http://go.microsoft.com/fwlink/p/?linkid=129233)。 下圖顯示功能區。  
@@ -34,7 +34,7 @@ ms.locfileid: "33382095"
 ## <a name="understanding-the-ribbon-designer"></a>了解功能區設計工具  
  功能區設計工具會建立功能區並將其儲存為資源。 當您建立功能區資源時，功能區設計工具會執行下列三項動作：  
   
--   新增專案資源定義指令碼 (*.rc) 中的項目。 在下列範例中，`IDR_RIBBON` 是識別功能區資源的唯一名稱，`RT_RIBBON_XML` 是資源類型，而 `ribbon.mfcribbon-ms` 是資源檔的名稱。  
+-   新增專案資源定義指令碼 (*.rc) 中的項目。 在下列範例中，IDR_RIBBON 是識別功能區資源的唯一名稱、 RT_RIBBON_XML 資源類型，然後 ribbon.mfcribbon ms 是資源檔的名稱。  
   
  ```  
     IDR_RIBBON RT_RIBBON_XML      "res\\ribbon.mfcribbon-ms"  

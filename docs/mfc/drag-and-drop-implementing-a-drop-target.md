@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 414437f044869fef7ae48883a88688ad50c9ac5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33088477c579cbdfe48140b806c6376b520e470c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344265"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928914"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>拖放：實作置放目標
 本文概述如何讓您的應用程式的置放目標。 實作置放目標需要稍微多一些工作會比實作置放來源，但是它仍然相當簡單。 這些技術也適用於非 OLE 應用程式。  
@@ -30,7 +30,7 @@ ms.locfileid: "33344265"
   
 1.  將成員變數加入至您想要的置放目標的應用程式中的每個檢視。 這個成員變數必須屬於型別`COleDropTarget`或從其衍生的類別。  
   
-2.  從您的檢視類別函式會處理`WM_CREATE`訊息 (通常`OnCreate`)，呼叫新的成員變數`Register`成員函式。 `Revoke` 將會自動呼叫您在檢視時終結。  
+2.  從您的檢視類別函式會處理**WM_CREATE**訊息 (通常`OnCreate`)，呼叫新的成員變數`Register`成員函式。 `Revoke` 將會自動呼叫您在檢視時終結。  
   
 3.  覆寫下列函式。 如果您想在應用程式的相同的行為，會覆寫檢視類別中的這些函式。 如果您想要修改在隔離狀況中的行為，或想要啟用拖放上非`CView`windows 中，覆寫這些函式，在您`COleDropTarget`-衍生的類別。  
   

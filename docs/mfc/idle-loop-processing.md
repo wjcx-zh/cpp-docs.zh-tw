@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 20be85f7089f2a53b067d7287780159de51a8c86
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354897"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929552"
 ---
 # <a name="idle-loop-processing"></a>閒置迴圈處理
 許多應用程式會「在背景」進行耗時的處理。 有時候會因為效能考量而使用多執行緒進行此類工作。 執行緒會涉及額外的開發負荷，因此不建議如 MFC 會閒置時間工作等簡單的工作[OnIdle](../mfc/reference/cwinthread-class.md#onidle)函式。 本文會著重於閒置處理的部分。 如需多執行緒處理，請參閱[多執行緒主題](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "33354897"
  使用 MFC 開發的應用程式中，主要訊息迴圈中`CWinThread`類別包含呼叫的訊息迴圈[PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API。 這個迴圈也會在各個訊息之間呼叫 `OnIdle` 的 `CWinThread` 成員函式。 應用程式可以藉由覆寫 `OnIdle` 函式，在閒置時間處理這些訊息。  
   
 > [!NOTE]
->  **執行**， `OnIdle`，和其他成員函式現在是類別的成員`CWinThread`而不是類別的`CWinApp`。 `CWinApp` 衍生自 `CWinThread`。  
+>  `Run``OnIdle`，和其他成員函式現在是類別的成員`CWinThread`而不是類別的`CWinApp`。 `CWinApp` 衍生自 `CWinThread`。  
   
  如需執行閒置處理的詳細資訊，請參閱[OnIdle](../mfc/reference/cwinthread-class.md#onidle)中*MFC 參考*。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "33354897"
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  
   
- 這個嵌入在函式中的程式碼，會在需要執行閒置處理時執行迴圈。 在該迴圈內的巢狀的迴圈重複呼叫**PeekMessage**。 只要該呼叫傳回非零的值，迴圈就會呼叫 `CWinThread::PumpMessage` 執行一般訊息轉譯和分派。 雖然 `PumpMessage` 並未記載，但您可以檢查 Visual C++ 安裝的 \atlmfc\src\mfc 目錄中，ThrdCore.Cpp 檔案的原始程式碼。  
+ 這個嵌入在函式中的程式碼，會在需要執行閒置處理時執行迴圈。 在該迴圈內的巢狀的迴圈重複呼叫`PeekMessage`。 只要該呼叫傳回非零的值，迴圈就會呼叫 `CWinThread::PumpMessage` 執行一般訊息轉譯和分派。 雖然 `PumpMessage` 並未記載，但您可以檢查 Visual C++ 安裝的 \atlmfc\src\mfc 目錄中，ThrdCore.Cpp 檔案的原始程式碼。  
   
  一旦內部迴圈結束，外部迴圈便會搭配一個或多個對 `OnIdle` 的呼叫以執行閒置處理。 第一次呼叫是供 MFC 使用。 您可以建立其他對 `OnIdle` 的呼叫，以完成您的背景工作。  
   

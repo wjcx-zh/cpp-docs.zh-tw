@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345790"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928018"
 ---
 # <a name="document-template-creation"></a>文件樣板建立
-在回應中建立新文件時`New`或**開啟**命令**檔案**功能表上，文件範本也會建立新的框架視窗，以檢視文件。  
+在回應中建立新文件時**新增**或**開啟**命令**檔案**功能表上，文件範本也會建立新的框架視窗，以檢視文件。  
   
  文件範本建構函式會指定哪些類型的文件、 視窗和範本可以建立的檢視。 這取決於您傳遞至文件範本建構函式的引數。 下列程式碼說明如何建立[CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)範例應用程式：  
   

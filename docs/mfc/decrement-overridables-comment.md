@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345384"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928723"
 ---
 # <a name="-overridables-comment"></a>// 可覆寫函式註解
 MFC 類別宣告的 `// Overridables` 區段含有當您需要修改基底類別行為時，您可以在衍生類別中覆寫的虛擬函式。 這些虛擬函式的名稱通常是以「On」為開頭，不過並非絕對必要。 此處的函式是專門用來覆寫，經常會實作或提供某種「回呼」或「攔截」。 一般來說，這些成員是受到保護的。  
@@ -31,7 +31,7 @@ MFC 類別宣告的 `// Overridables` 區段含有當您需要修改基底類別
   
  `virtual void OnDraw( ) = 0;`  
   
- 中的範例清單裡類別`CStdioFile`，請在[註解的範例](../mfc/an-example-of-the-comments.md)，此清單包含沒有可覆寫 > 一節。 類別**CDocument**，相反地，會列出大約 10 的可覆寫成員函式。  
+ 中的範例清單裡類別`CStdioFile`，請在[註解的範例](../mfc/an-example-of-the-comments.md)，此清單包含沒有可覆寫 > 一節。 類別`CDocument`，相反地，會列出大約 10 的可覆寫成員函式。  
   
  在一些類別中，您也可能會看到 `// Advanced Overridables` 註解。 這些是只有進階程式設計人員才應該嘗試覆寫的函式。 您可能永遠不需要覆寫這些函式。  
   

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347213"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929086"
 ---
 # <a name="html-basics"></a>HTML 的基本概念
 大部分的瀏覽器有檢查您所瀏覽網頁的 HTML 原始檔的功能。 當您檢視原始碼時，您會看到一些 HTML (超文字標記語言) 標記，周圍以角括弧 (<>) 包圍，其中為文字。  
@@ -30,7 +30,7 @@ ms.locfileid: "33347213"
   
 1.  開啟 [記事本] 或任何純文字編輯器。  
   
-2.  從**檔案**功能表上，選擇`New`。  
+2.  從**檔案**功能表上，選擇**新增**。  
   
 3.  輸入下列各行：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33347213"
   
 4.  從**檔案**功能表上，選擇**儲存**，並將檔案儲存為 c:\webpages\First.htm。 讓檔案在編輯器中保持開啟狀態。  
   
-5.  切換至您的瀏覽器，並從**檔案**功能表上，選擇**開啟**，或類型`file://C:/webpages/first.htm`瀏覽器的 URL 編輯方塊中。 您應該會看到一個空白網頁，其視窗標題為 "Top HTML Tags"。  
+5.  切換至您的瀏覽器，並從**檔案**功能表上，選擇**開啟**，或類型*file://C:/webpages/first.htm*瀏覽器的 URL 編輯方塊中。 您應該會看到一個空白網頁，其視窗標題為 "Top HTML Tags"。  
   
      請注意標記是成對的，而且會包含在角括弧中。 標記不區分大小寫，不過，大小寫通常用來讓標記引人注意。  
   

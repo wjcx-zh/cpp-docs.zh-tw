@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358803"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928878"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 控制項：散發 ActiveX 控制項
 本文將討論與轉散發 ActiveX 控制項相關的幾個問題：  
@@ -60,7 +60,7 @@ ms.locfileid: "33358803"
  安裝程式，您可以提供您的 ActiveX 控制項應該建立特殊的 Windows 目錄的子目錄，並安裝控制項。OCX 檔案。  
   
 > [!NOTE]
->  使用 Windows **GetWindowsDirectory**安裝程式中的 API 來取得 Windows 目錄的名稱。 若要從您的公司或產品的名稱衍生子目錄名稱。  
+>  使用 Windows`GetWindowsDirectory`安裝程式中的 API 來取得 Windows 目錄的名稱。 若要從您的公司或產品的名稱衍生子目錄名稱。  
   
  安裝程式必須安裝在 Windows 系統目錄中的必要可轉散發的 DLL 檔案。 如果的任何 Dll 已經存在於使用者的電腦上，安裝程式應該比較您正在安裝的版本。 只有當其版本號碼高於已安裝的檔案，請重新安裝檔案。  
   
@@ -71,14 +71,14 @@ ms.locfileid: "33358803"
   
  如果您想要的話，您可以撰寫安裝程式將改為直接登錄此控制項。  
   
- 使用**LoadLibrary** Windows API，以載入控制項 DLL。 接下來，使用**GetProcAddress**取得"DllRegisterServer"函式的位址。 最後，呼叫`DllRegisterServer`函式。 下列程式碼範例示範一個可行的方法，其中`hLib`儲存控制項程式庫的控制代碼和`lpDllEntryPoint`儲存"DllRegisterServer"函式的位址。  
+ 使用`LoadLibrary`Windows API，以載入控制項 DLL。 接下來，使用`GetProcAddress`取得"DllRegisterServer"函式的位址。 最後，呼叫`DllRegisterServer`函式。 下列程式碼範例示範一個可行的方法，其中`hLib`儲存控制項程式庫的控制代碼和`lpDllEntryPoint`儲存"DllRegisterServer"函式的位址。  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
  直接註冊控制項的優點是，您不需要叫用及載入不同的處理序 (也就是 「 REGSVR32 」) 來減少安裝時間。 此外，因為註冊是內部處理序，安裝程式來處理錯誤，並發生未預期的情況下，優於外部處理序可以。  
   
 > [!NOTE]
->  安裝程式會安裝 ActiveX 控制項之前，應該呼叫**OleInitialize**。 安裝程式完成時，呼叫**OleUnitialize**。 這可確保 OLE 系統 Dll 中註冊的 ActiveX 控制項的適當狀態。  
+>  安裝程式會安裝 ActiveX 控制項之前，應該呼叫`OleInitialize`。 安裝程式完成時，呼叫`OleUnitialize`。 這可確保 OLE 系統 Dll 中註冊的 ActiveX 控制項的適當狀態。  
   
  您應該註冊 MFCx0.DLL。  
   

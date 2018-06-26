@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8e9ff08054fbef3f15283395d7eb150551926dc
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343849"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928621"
 ---
 # <a name="exported-dll-function-entry-points"></a>匯出的 DLL 函式進入點
 DLL 的匯出函式，使用[AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)巨集來維護適當的全域狀態時從 DLL 模組切換到呼叫應用程式的 DLL。  
   
  呼叫時，這個巨集會將 `pModuleState` (`AFX_MODULE_STATE` 結構的指標，其中包含模組的全域資料) 設定為函式所包含範圍其餘部分的有效模組狀態。 離開包含巨集的範圍之後，會自動還原前一個有效的模組狀態。  
   
- 此切換達成方式是建構的執行個體**AFX_MODULE_STATE**堆疊上的類別。 在其建構函式中，這個類別會取得目前模組狀態的指標，並將其儲存在成員變數中，然後再將 `pModuleState` 設定為新的有效模組狀態。 在其解構函式中，這個類別會將儲存在其成員變數中的指標還原成有效的模組狀態。  
+ 此切換達成方式是建構的執行個體`AFX_MODULE_STATE`堆疊上的類別。 在其建構函式中，這個類別會取得目前模組狀態的指標，並將其儲存在成員變數中，然後再將 `pModuleState` 設定為新的有效模組狀態。 在其解構函式中，這個類別會將儲存在其成員變數中的指標還原成有效的模組狀態。  
   
  如果您有匯出函式 (例如在 DLL 中啟動對話方塊)，則您必須將下列程式碼加入至函式的開頭：  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e528ea7901518112c255eefbfb1e674fddee04e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d03966cb61e1ccab3f8f3886638efdf95a534a73
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355656"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930309"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>最佳化持續性和初始化
 根據預設，持續性和控制項中的初始化會由`DoPropExchange`成員函式。 在典型的控制項，此函式包含數個呼叫**PX_** 函式 (`PX_Color`，`PX_Font`等等)，其中每一個屬性。  
@@ -45,7 +45,7 @@ ms.locfileid: "33355656"
   
  [!code-cpp[NVC_MFC_AxOpt#3](../mfc/codesnippet/cpp/optimizing-persistence-and-initialization_3.cpp)]  
   
- 請注意，在負載情況下，會使用暫存變數，則會指派它的值，而不是轉型`m_boolProp`至**位元組**參考。 轉型技術會導致只有一個位元組的`m_boolProp`遭到修改，但未初始化的剩餘的位元組會保留。  
+ 請注意，在負載情況下，會使用暫存變數，則會指派它的值，而不是轉型*m_boolProp*至**位元組**參考。 轉型技術會導致只有一個位元組的*m_boolProp*遭到修改，但未初始化的剩餘的位元組會保留。  
   
  針對相同的控制項，您可以藉由覆寫最佳化控制項的初始化[COleControl::OnResetState](../mfc/reference/colecontrol-class.md#onresetstate) ，如下所示：  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fdff45963419b3676ea8ca6b1bf0239348387dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9fe7f9b4b97fd17e73c3dd9f113a87d8f087b93c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347837"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929659"
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE 中的對話方塊
 當使用者執行 OLE 功能之應用程式時，但有些的時候應用程式時需要使用者的資訊才能執行作業。 MFC OLE 類別提供對話方塊，以收集必要的資訊的數的字。 本主題列出由 OLE 對話方塊處理的工作和顯示這些對話方塊所需的類別。 如需 OLE 對話方塊，以及用來自訂其行為的結構的詳細資訊，請參閱[MFC 參考](../mfc/mfc-desktop-applications.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "33347837"
  編輯連結 對話方塊可讓使用者變更連結物件的來源的相關資訊。 更新連結 對話方塊會驗證目前的對話方塊中的所有連結項目的來源，並顯示 編輯連結 對話方塊，如有必要。 當使用者選擇 [編輯] 功能表的連結會顯示 [編輯連結] 對話方塊。 複合文件第一次開啟時，通常會顯示更新的連結 對話方塊。 使用[COleLinksDialog](../mfc/reference/colelinksdialog-class.md)或[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)類別中，您要根據的對話方塊中顯示。  
   
  *伺服器忙碌或伺服器沒有回應*  
- 當使用者嘗試啟動項，而且伺服器目前無法處理要求時，通常是因為伺服器正在使用另一位使用者或工作時，會顯示 [伺服器忙碌] 對話方塊。 如果伺服器不會完全回應啟動要求，會顯示 [伺服器沒有回應] 對話方塊。 這些對話方塊會顯示透過`COleMessageFilter`根據 OLE 介面的實作， **IMessageFilter**，而且使用者可以決定是否要再次嘗試啟動要求。 使用[COleBusyDialog](../mfc/reference/colebusydialog-class.md)類別來顯示此對話方塊。  
+ 當使用者嘗試啟動項，而且伺服器目前無法處理要求時，通常是因為伺服器正在使用另一位使用者或工作時，會顯示 [伺服器忙碌] 對話方塊。 如果伺服器不會完全回應啟動要求，會顯示 [伺服器沒有回應] 對話方塊。 這些對話方塊會顯示透過`COleMessageFilter`根據 OLE 介面的實作， `IMessageFilter`，而且使用者可以決定是否要再次嘗試啟動要求。 使用[COleBusyDialog](../mfc/reference/colebusydialog-class.md)類別來顯示此對話方塊。  
   
 ## <a name="see-also"></a>另請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   

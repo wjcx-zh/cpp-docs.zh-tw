@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54cc874fd3c95123446ab81b920bfe0fce52df5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cae180ca71b89732e073b9039483b8b46366a42a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347090"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929630"
 ---
 # <a name="menus-and-resources-ole"></a>功能表和資源 (OLE)
 本系列文件說明如何使用功能表和 MFC OLE 文件應用程式中的資源。  
@@ -54,10 +54,10 @@ ms.locfileid: "33347090"
   
 |資源名稱|使用|  
 |-------------------|---------|  
-|**IDR_MAINFRAME**|使用 MDI 應用程式如果沒有檔案開啟，或開啟的檔案無論 SDI 應用程式。 這是在非 OLE 應用程式中使用的標準功能表。|  
-|**IDR_\<專案 > 類型**|檔案開啟時，MDI 應用程式中使用。 執行獨立應用程式時使用。 這是在非 OLE 應用程式中使用的標準功能表。|  
-|**IDR_\<專案 > TYPE_SRVR_IP**|物件開啟時就地使用伺服器或容器。|  
-|**IDR_\<專案 > TYPE_SRVR_EMB**|如果不使用就地啟用開啟物件，使用的伺服器應用程式。|  
+|IDR_MAINFRAME|使用 MDI 應用程式如果沒有檔案開啟，或開啟的檔案無論 SDI 應用程式。 這是在非 OLE 應用程式中使用的標準功能表。|  
+|IDR_\<專案 > 類型|檔案開啟時，MDI 應用程式中使用。 執行獨立應用程式時使用。 這是在非 OLE 應用程式中使用的標準功能表。|  
+|IDR_\<專案 > TYPE_SRVR_IP|物件開啟時就地使用伺服器或容器。|  
+|IDR_\<專案 > TYPE_SRVR_EMB|如果不使用就地啟用開啟物件，使用的伺服器應用程式。|  
   
  每個這些資源名稱代表功能表和通常快速鍵對應表。 不會使用應用程式精靈建立的 MFC 應用程式中，應該使用類似的配置。  
   

@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 791694bfa1bcd7472be4691d9aef133b80ccace4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357555"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930126"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 控制項：加入內建屬性
-內建屬性與不同的自訂屬性的類別已實作`COleControl`。 `COleControl` 包含控制項支援通用屬性的預先定義的成員函式。 某些常見的內容包含控制項的標題和前景和背景色彩。 如需其他內建屬性的資訊，請參閱[加入屬性精靈 所支援的內建屬性](#_core_stock_properties_supported_by_classwizard)本文稍後。 內建屬性的分派對應項目一律都會加**DISP_STOCKPROP**。  
+內建屬性與不同的自訂屬性的類別已實作`COleControl`。 `COleControl` 包含控制項支援通用屬性的預先定義的成員函式。 某些常見的內容包含控制項的標題和前景和背景色彩。 如需其他內建屬性的資訊，請參閱[加入屬性精靈 所支援的內建屬性](#_core_stock_properties_supported_by_classwizard)本文稍後。 內建屬性永遠都會加 DISP_STOCKPROP 分派對應項目。  
   
  這篇文章描述如何將 ActiveX 控制項，使用 [加入屬性精靈] （在此情況下，標題） 的內建屬性，並說明修改之產生的程式碼。 主題包括：  
   
@@ -81,16 +81,16 @@ ms.locfileid: "33357555"
   
 |屬性|分派對應項目|如何存取值|  
 |--------------|------------------------|-------------------------|  
-|**外觀**|**DISP_STOCKPROP_APPEARANCE （)**|值可做為存取**m_sAppearance**。|  
-|`BackColor`|**DISP_STOCKPROP_BACKCOLOR （)**|值，藉由呼叫可存取`GetBackColor`。|  
-|`BorderStyle`|**DISP_STOCKPROP_BORDERSTYLE （)**|值可做為存取**m_sBorderStyle**。|  
-|**標題**|**DISP_STOCKPROP_CAPTION （)**|值，藉由呼叫可存取`InternalGetText`。|  
-|**已啟用**|**DISP_STOCKPROP_ENABLED （)**|值可做為存取**m_bEnabled**。|  
-|**字型**|**DISP_STOCKPROP_FONT （)**|請參閱文章[MFC ActiveX 控制項： 使用字型](../mfc/mfc-activex-controls-using-fonts.md)使用量。|  
-|`ForeColor`|**DISP_STOCKPROP_FORECOLOR （)**|值，藉由呼叫可存取`GetForeColor`。|  
-|**hWnd**|**DISP_STOCKPROP_HWND （)**|值可做為存取`m_hWnd`。|  
-|**Text**|**DISP_STOCKPROP_TEXT （)**|值，藉由呼叫可存取`InternalGetText`。 這個屬性等同於**標題**，除了屬性名稱。|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|值那樣 m_lReadyState 或 `GetReadyState`|  
+|`Appearance`|DISP_STOCKPROP_APPEARANCE （)|值可做為存取`m_sAppearance`。|  
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR （)|值，藉由呼叫可存取`GetBackColor`。|  
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE （)|值可做為存取`m_sBorderStyle`。|  
+|`Caption`|DISP_STOCKPROP_CAPTION （)|值，藉由呼叫可存取`InternalGetText`。|  
+|`Enabled`|DISP_STOCKPROP_ENABLED （)|值可做為存取`m_bEnabled`。|  
+|`Font`|DISP_STOCKPROP_FONT （)|請參閱文章[MFC ActiveX 控制項： 使用字型](../mfc/mfc-activex-controls-using-fonts.md)使用量。|  
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR （)|值，藉由呼叫可存取`GetForeColor`。|  
+|`hWnd`|DISP_STOCKPROP_HWND （)|值可做為存取`m_hWnd`。|  
+|`Text`|DISP_STOCKPROP_TEXT （)|值，藉由呼叫可存取`InternalGetText`。 這個屬性等同於`Caption`，除了屬性名稱。|  
+|`ReadyState`|DISP_STOCKPROP_READYSTATE()|值可做為存取`m_lReadyState`或 `GetReadyState`|  
   
 ##  <a name="_core_stock_properties_and_notification"></a> 內建屬性和通知  
  大部分的內建屬性都可以覆寫的通知函式。 例如，每當`BackColor`屬性變更，`OnBackColorChanged`呼叫函式 （控制項類別的成員函式）。 預設實作 (在`COleControl`) 呼叫`InvalidateControl`。 如果您想要採取其他動作以回應此情況下，請覆寫這個函式。  

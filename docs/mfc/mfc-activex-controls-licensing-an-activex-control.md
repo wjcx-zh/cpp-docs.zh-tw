@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 725e6cf167ec01635a3072f09ecaa2f5055b1891
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b1e8f0c54cf4d409aedb99fc3195b927d5f127
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353922"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929740"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 控制項：授權 ActiveX 控制項
 授權支援 ActiveX 控制項的選用功能可讓您控制哪些使用者能夠使用或散發控制項。 (如需額外的授權問題的詳細討論，請參閱中的授權問題[升級現有的 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)。)  
@@ -44,7 +44,7 @@ ms.locfileid: "33353922"
  實作授權的 ActiveX 控制項可讓您，做為控制項開發人員，以判斷其他人使用 ActiveX 控制項的方式。 您將控制購買提供控制項和。與採購者可能但未散發控制項，此協議的授權檔案。授權檔案，請使用控制項的應用程式。 這可防止撰寫新的應用程式，不需從您的控制項第一次授權使用控制項，該應用程式的使用者。  
   
 ##  <a name="_core_overview_of_activex_control_licensing"></a> 授權 ActiveX 控制項的概觀  
- 若要提供 ActiveX 控制項授權支援[COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)類別提供幾個函式中的實作**IClassFactory2**介面： **IClassFactory2:: RequestLicKey**， **IClassFactory2::GetLicInfo**，和**IClassFactory2::CreateInstanceLic**。 當容器應用程式開發人員提出的要求建立控制項，呼叫的執行個體`GetLicInfo`進行驗證的控制項。授權的檔案存在。 如果控制項係授權使用，可建立及放置在容器中控制項的執行個體。 開發人員建構容器應用程式完成後，另一個函式呼叫，這次`RequestLicKey`，進行。 此函數會傳回該容器應用程式的授權金鑰 （簡單的字元字串）。 傳回的索引鍵則會內嵌在應用程式中。  
+ 若要提供 ActiveX 控制項授權支援[COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)類別提供幾個函式中的實作`IClassFactory2`介面： `IClassFactory2::RequestLicKey`， `IClassFactory2::GetLicInfo`，和`IClassFactory2::CreateInstanceLic`。 當容器應用程式開發人員提出的要求建立控制項，呼叫的執行個體`GetLicInfo`進行驗證的控制項。授權的檔案存在。 如果控制項係授權使用，可建立及放置在容器中控制項的執行個體。 開發人員建構容器應用程式完成後，另一個函式呼叫，這次`RequestLicKey`，進行。 此函數會傳回該容器應用程式的授權金鑰 （簡單的字元字串）。 傳回的索引鍵則會內嵌在應用程式中。  
   
  下圖示範授權的 ActiveX 控制項容器應用程式開發期間將會使用驗證。 如先前所述，容器應用程式開發人員必須正確。若要建立控制項的執行個體的開發電腦上安裝的授權檔案。  
   
@@ -79,15 +79,15 @@ ms.locfileid: "33353922"
   
 -   [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)  
   
-     確認控制項可讓設計階段使用狀況，檢查有系統控制授權檔案。 由架構呼叫此函式處理期間**IClassFactory2::GetLicInfo**和**IClassFactory::CreateInstanceLic**。  
+     確認控制項可讓設計階段使用狀況，檢查有系統控制授權檔案。 由架構呼叫此函式處理期間`IClassFactory2::GetLicInfo`和`IClassFactory::CreateInstanceLic`。  
   
 -   [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)  
   
-     控制 DLL 從要求的唯一索引鍵。 此索引鍵是內嵌在容器應用程式和更新版本中，用於搭配`VerifyLicenseKey`，以建立控制項的執行個體。 由架構呼叫此函式處理期間**IClassFactory2::RequestLicKey**。  
+     控制 DLL 從要求的唯一索引鍵。 此索引鍵是內嵌在容器應用程式和更新版本中，用於搭配`VerifyLicenseKey`，以建立控制項的執行個體。 由架構呼叫此函式處理期間`IClassFactory2::RequestLicKey`。  
   
 -   [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)  
   
-     確認內嵌的金鑰和控制項的唯一索引鍵都相同。 這可讓容器建立其使用的控制項的執行個體。 由架構呼叫此函式處理期間**IClassFactory2::CreateInstanceLic** ，且可以提供自訂的驗證的授權金鑰。 預設實作會執行字串比較。 如需詳細資訊，請參閱[自訂授權的 ActiveX 控制項](#_core_customizing_the_licensing_of_an_activex_control)在本文稍後。  
+     確認內嵌的金鑰和控制項的唯一索引鍵都相同。 這可讓容器建立其使用的控制項的執行個體。 由架構呼叫此函式處理期間`IClassFactory2::CreateInstanceLic`，且可以提供自訂的驗證的授權金鑰。 預設實作會執行字串比較。 如需詳細資訊，請參閱[自訂授權的 ActiveX 控制項](#_core_customizing_the_licensing_of_an_activex_control)在本文稍後。  
   
 ###  <a name="_core_header_file_modifications"></a> 標頭檔案修改  
  ActiveX 控制項精靈會將下列程式碼置於控制項標頭檔。 在此範例中，兩個成員函式的`CSampleCtrl`的物件`factory`宣告，一個是驗證控制項的目前狀態。授權檔以及另一個擷取的授權金鑰，以用於包含控制項的應用程式：  
@@ -100,7 +100,7 @@ ms.locfileid: "33353922"
  [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]  
   
 > [!NOTE]
->  如果您修改**szLicString**以任何方式，您也必須修改控制項中的第一行。授權檔案，或授權無法正常運作。  
+>  如果您修改`szLicString`以任何方式，您也必須修改控制項中的第一行。授權檔案，或授權無法正常運作。  
   
  ActiveX 控制項精靈會將下列程式碼置於控制項實作檔定義的控制項類別`VerifyUserLicense`和`GetLicenseKey`函式：  
   

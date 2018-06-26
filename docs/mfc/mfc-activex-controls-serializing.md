@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9db6ff6c0cdda01875e4968e4d92ca087ad2b57
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353494"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930057"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 控制項：序列化
 本文將討論如何將 ActiveX 控制項。 序列化是讀取或寫入至永續性儲存體中，例如磁碟檔案的程序。 Microsoft Foundation Class (MFC) 程式庫中類別的序列化提供內建支援`CObject`。 `COleControl` 擴充此一支援透過內容交換機制使用的 ActiveX 控制項。  
@@ -77,7 +77,7 @@ ms.locfileid: "33353494"
  如需有關這些屬性交換函式的詳細資訊，請參閱[持續性的 OLE 控制項的](../mfc/reference/persistence-of-ole-controls.md)中*MFC 參考*。  
   
 ##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> 自訂 DoPropExchange 的預設行為  
- 預設實作**DoPropertyExchange** （如先前的主題中所示） 會呼叫基底類別`COleControl`。 這將會序列化的屬性會自動受到`COleControl`，它會使用更多的儲存空間比序列化控制項的自訂屬性。 移除這個呼叫可讓您只在您認為重要的屬性進行序列化的物件。 當儲存或載入控制項物件，除非您明確地新增控制項已實作的任何內建屬性狀態不會序列化**PX_** 呼叫它們。  
+ 預設實作`DoPropertyExchange`（如先前的主題中所示） 會呼叫基底類別`COleControl`。 這將會序列化的屬性會自動受到`COleControl`，它會使用更多的儲存空間比序列化控制項的自訂屬性。 移除這個呼叫可讓您只在您認為重要的屬性進行序列化的物件。 當儲存或載入控制項物件，除非您明確地新增控制項已實作的任何內建屬性狀態不會序列化**PX_** 呼叫它們。  
   
 ##  <a name="_core_implementing_version_support"></a> 實作版本支援  
  版本支援讓修改過的 ActiveX 控制項，加入新的持續性屬性，而且仍然能夠偵測並載入控制項的較早版本所建立的永續性狀態。 若要讓控制項的版本可供其永續性資料的一部分，呼叫[COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion)控制項的`DoPropExchange`函式。 如果使用 ActiveX 控制項精靈 」 來建立 「 ActiveX 控制項，此呼叫會自動插入。 如果不需要版本支援，也可以加以移除。 不過，在控制項大小的成本很小 （4 個位元組） 的版本支援可提供增加更多彈性。  
@@ -87,7 +87,7 @@ ms.locfileid: "33353494"
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- 您可以使用任何`DWORD`做為版本號碼。 ActiveX 控制項精靈所產生的專案使用 **_wVerMinor**和 **_wVerMajor**作為預設值。 這些是定義專案的 ActiveX 控制項類別的實作檔中的全域常數。 中的其餘部分您`DoPropExchange`函式，您可以呼叫[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)隨時擷取您要儲存或擷取的版本。  
+ 您可以使用任何**DWORD**做為版本號碼。 ActiveX 控制項精靈所產生的專案使用`_wVerMinor`和`_wVerMajor`作為預設值。 這些是定義專案的 ActiveX 控制項類別的實作檔中的全域常數。 中的其餘部分您`DoPropExchange`函式，您可以呼叫[CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion)隨時擷取您要儲存或擷取的版本。  
   
  在下列範例中，此範例控制項的第 1 版有"ReleaseDate"屬性。 第 2 版，將 「 OriginalDate"屬性。 如果控制項指示從舊的版本載入永續性狀態，它會初始化為預設值的新屬性的成員變數。  
   

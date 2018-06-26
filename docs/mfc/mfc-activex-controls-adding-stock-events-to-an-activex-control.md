@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359334"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930783"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 控制項：將內建事件加入至 ActiveX 控制項
-內建事件與不同的自訂事件類別會自動引發[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl` 包含引發事件，從一般動作所產生的預先定義的成員函式。 某些常見的動作由實作`COleControl`併入單一-並按兩下-clicks 上控制、 鍵盤事件和變更滑鼠按鈕的狀態。 內建事件的事件對應項目一律會置於**EVENT_STOCK**前置詞。  
+內建事件與不同的自訂事件類別會自動引發[COleControl](../mfc/reference/colecontrol-class.md)。 `COleControl` 包含引發事件，從一般動作所產生的預先定義的成員函式。 某些常見的動作由實作`COleControl`併入單一-並按兩下-clicks 上控制、 鍵盤事件和變更滑鼠按鈕的狀態。 事件對應內建事件一律會置於 EVENT_STOCK 前置詞的項目。  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> 內建支援的事件加入事件精靈  
  `COleControl`類別會提供十個內建的事件，如下表所示。 您可以指定您想要在控制項中使用的事件[加入事件精靈](../ide/add-event-wizard.md)。  
@@ -76,7 +76,7 @@ ms.locfileid: "33359334"
 |KeyPress|**void FireKeyPress (簡短\***`pnChar`**)** |引發的時機`WM_CHAR`接收訊息。<br /><br /> 事件對應項目： **EVENT_STOCK_KEYPRESS （)**|  
 |KeyUp|**void FireKeyUp (簡短**`nChar` **，short**`nShiftState`**)** |引發的時機`WM_SYSKEYUP`或`WM_KEYUP`接收訊息。<br /><br /> 事件對應項目： **EVENT_STOCK_KEYUP （)**|  
 |MouseDown|**void FireMouseDown (簡短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |如果有任何引發**BUTTONDOWN**收到 （左、 置中或右）。 將滑鼠擷取之前引發此事件。<br /><br /> 事件對應項目： **EVENT_STOCK_MOUSEDOWN （)**|  
-|MouseMove|**void FireMouseMove (簡短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |引發的時機`WM_MOUSEMOVE`接收訊息。<br /><br /> 事件對應項目： **EVENT_STOCK_MOUSEMOVE （)**|  
+|MouseMove|**void FireMouseMove (簡短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |當收到 WM_MOUSEMOVE 訊息時引發。<br /><br /> 事件對應項目： **EVENT_STOCK_MOUSEMOVE （)**|  
 |MouseUp|**void FireMouseUp (簡短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)** |如果有任何引發**BUTTONUP**收到 （左、 置中或右）。 引發此事件之前，會釋放滑鼠捕捉。<br /><br /> 事件對應項目： **EVENT_STOCK_MOUSEUP （)**|  
 |ReadyStateChange|**void FireReadyStateChange （)**|發生於控制項會轉換到下一步的就緒狀態，因為收到的資料量。<br /><br /> 事件對應項目： **EVENT_STOCK_READYSTATECHANGE （)**|  
   
@@ -102,7 +102,7 @@ ms.locfileid: "33359334"
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- 加入這個程式碼就會引發 KeyPress 事件時`WM_CHAR`收到訊息，且控制項為使用中。 KeyPress 事件可以在其他時間引發藉由呼叫其引發的函式 (例如， `FireKeyPress`) 從控制項的程式碼中。  
+ 加入這個程式碼就會引發 KeyPress 事件時收到 WM_CHAR 訊息，而控制項則使用中。 KeyPress 事件可以在其他時間引發藉由呼叫其引發的函式 (例如， `FireKeyPress`) 從控制項的程式碼中。  
   
  加入事件精靈會將下列程式碼行加入至控制項。IDL 檔案：  
   

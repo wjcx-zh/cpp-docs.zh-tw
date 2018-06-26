@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d0c75325c62a92f65c56f2c76350bf752228fd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350425"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932217"
 ---
 # <a name="ole-server-classes"></a>OLE 伺服器類別
-伺服器應用程式會使用這些類別。 伺服器文件衍生自`COleServerDoc`而不是從**CDocument**。 請注意，因為`COleServerDoc`衍生自`COleLinkingDoc`，伺服器文件也可以支援連結的容器。  
+伺服器應用程式會使用這些類別。 伺服器文件衍生自`COleServerDoc`而不是從`CDocument`。 請注意，因為`COleServerDoc`衍生自`COleLinkingDoc`，伺服器文件也可以支援連結的容器。  
   
  `COleServerItem`類別代表文件或其他文件中內嵌或連結至文件的一部分。  
   

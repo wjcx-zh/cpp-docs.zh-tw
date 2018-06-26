@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d903d183675ae4b79d4610fe4413cfd8bf0e704c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329812"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928940"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文件/檢視架構的簡介
 在一般 MFC 應用程式中文件和檢視是成對的。 資料會儲存在文件中，不過檢視具有資料的存取權限。 將文件從檢視中分離，會將資料的儲存和維護從其顯示分隔開來。  
@@ -37,7 +37,7 @@ ms.locfileid: "33329812"
 ## <a name="gaining-access-to-document-data-from-the-view"></a>從檢視獲得文件資料的存取權  
  檢視存取其文件的資料與[GetDocument](../mfc/reference/cview-class.md#getdocument)函式，其會傳回指標，文件，或者製作檢視類別 c + +`friend`文件類別。 當檢視準備繪製或進行操作時，會利用其資料存取權來取得資料。  
   
- 例如，從檢視[OnDraw](../mfc/reference/cview-class.md#ondraw)成員函式，檢視使用**GetDocument**以取得文件指標。 然後，它會使用該指標來存取文件中的 `CString` 資料成員。 檢視會傳遞字串至 `TextOut` 函式。 若要查看此範例的程式碼，請參閱[在檢視中繪圖](../mfc/drawing-in-a-view.md)。  
+ 例如，從檢視[OnDraw](../mfc/reference/cview-class.md#ondraw)成員函式，檢視使用`GetDocument`以取得文件指標。 然後，它會使用該指標來存取文件中的 `CString` 資料成員。 檢視會傳遞字串至 `TextOut` 函式。 若要查看此範例的程式碼，請參閱[在檢視中繪圖](../mfc/drawing-in-a-view.md)。  
   
 ## <a name="user-input-to-the-view"></a>使用者輸入到檢視  
  檢視也會其本身內將按一下滑鼠動作解譯為選取或編輯資料。 同樣地，也可以將按鍵輸入解譯為資料輸入或編輯。 假設使用者在管理文字的檢視中輸入字串。 檢視會取得文件的指標，並使用指標將新資料傳遞至文件 (以某些資料結構儲存資料)。  

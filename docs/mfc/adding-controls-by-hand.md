@@ -20,23 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efe510c4376255c24470a799b5dde17021894bf0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c39f2d7803630aaaef6e803e90bf332c74937a71
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342471"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930611"
 ---
 # <a name="adding-controls-by-hand"></a>以手動方式加入控制項
 您可以[將控制項加入對話方塊中，使用對話方塊編輯器](../mfc/using-the-dialog-editor-to-add-controls.md)或將它們加入您自己，以程式碼。  
   
  若要建立您自己的控制項物件，您通常會內嵌 c + + 在 c + + 對話方塊的控制項物件或框架視窗物件。 Framework 中其他許多物件，例如控制項需要兩階段建構。 您應該呼叫控制項的**建立**一部分建立父對話方塊或框架視窗的成員函式。 對話方塊中，通常這是[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)，和框架視窗中[OnCreate](../mfc/reference/cwnd-class.md#oncreate)。  
   
- 下列範例示範您可以宣告`CEdit`物件衍生的對話方塊類別的類別宣告中，然後呼叫**建立**成員函式中的`OnInitDialog`。 因為`CEdit`物件宣告為內嵌物件，它會自動建構對話方塊物件的建構，但仍然必須初始化使用它自己時**建立**成員函式。  
+ 下列範例示範您可以宣告`CEdit`物件衍生的對話方塊類別的類別宣告中，然後呼叫`Create`成員函式中的`OnInitDialog`。 因為`CEdit`物件宣告為內嵌物件，它會自動建構對話方塊物件的建構，但仍然必須初始化使用它自己時`Create`成員函式。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
   
- 下列`OnInitDialog`函式中設定一個矩形，然後呼叫**建立**建立 Windows 編輯控制項，並將它附加至未初始化`CEdit`物件。  
+ 下列`OnInitDialog`函式中設定一個矩形，然後呼叫`Create`建立 Windows 編輯控制項，並將它附加至未初始化`CEdit`物件。  
   
  [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
   

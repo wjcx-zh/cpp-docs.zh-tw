@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351718"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930819"
 ---
 # <a name="handlers-for-message-map-ranges"></a>訊息對應範圍的處理常式
 本文說明如何將一個範圍的訊息對應到單一訊息處理函式 （而不是只有一個函式對應一個訊息）。  
@@ -96,7 +96,7 @@ ms.locfileid: "33351718"
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- 單一命令的處理常式函式通常不接受任何參數。 更新處理常式函式，除了訊息對應範圍的處理常式函式需要額外的參數， `nID`，型別**UINT**。 這個參數是第一個參數。 額外的參數配合指定使用者實際選擇的命令所需的額外的命令 ID。  
+ 單一命令的處理常式函式通常不接受任何參數。 更新處理常式函式，除了訊息對應範圍的處理常式函式需要額外的參數， *nID*，型別**UINT**。 這個參數是第一個參數。 額外的參數配合指定使用者實際選擇的命令所需的額外的命令 ID。  
   
  如需更新處理常式函式的參數需求的詳細資訊，請參閱[範例為某個範圍的命令識別碼](#_core_example_for_a_range_of_command_ids)。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33351718"
   
 -   兩個的命令 Id，開頭和結尾連續範圍。  
   
-     以下是`ID_VIEW_ZOOM25`和`ID_VIEW_ZOOM300`。  
+     以下是**ID_VIEW_ZOOM25**和**ID_VIEW_ZOOM300**。  
   
 -   命令處理常式函式名稱。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "33351718"
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- 類似，而可能會更廣的更新處理常式函式大小寫。 要寫入相當常見`ON_UPDATE_COMMAND_UI`的命令數目的處理常式，並尋找自行撰寫，或複製，相同的程式碼重複。 解決方法是將命令 Id，其中一個更新處理常式函式使用的範圍對應`ON_UPDATE_COMMAND_UI_RANGE`巨集。 命令 Id 必須形成連續範圍。 如需範例，請參閱**OnUpdateZoom**處理常式及其`ON_UPDATE_COMMAND_UI_RANGE`HIERSVR 範例的檢視類別中的訊息對應項目。  
+ 類似，而可能會更廣的更新處理常式函式大小寫。 要寫入相當常見`ON_UPDATE_COMMAND_UI`的命令數目的處理常式，並尋找自行撰寫，或複製，相同的程式碼重複。 解決方法是將命令 Id，其中一個更新處理常式函式使用的範圍對應`ON_UPDATE_COMMAND_UI_RANGE`巨集。 命令 Id 必須形成連續範圍。 如需範例，請參閱`OnUpdateZoom`處理常式及其`ON_UPDATE_COMMAND_UI_RANGE`HIERSVR 範例的檢視類別中的訊息對應項目。  
   
- 更新處理常式函式，針對單一命令通常會接受一個參數， `pCmdUI`，型別**CCmdUI\***。 不同於處理常式函式，如訊息對應範圍的更新處理常式函式不需要額外的參數， `nID`，型別**UINT**。 若要指定哪個指令使用者實際上選擇所需的命令 ID 位於`CCmdUI`物件。  
+ 更新處理常式函式，針對單一命令通常會接受一個參數， *pCmdUI*，型別`CCmdUI*`。 不同於處理常式函式，如訊息對應範圍的更新處理常式函式不需要額外的參數， *nID*，型別**UINT**。 若要指定哪個指令使用者實際上選擇所需的命令 ID 位於`CCmdUI`物件。  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> 控制項 Id 範圍的範例  
  另一個有趣的情況下對應至單一處理常式的某一範圍的控制項 Id 的控制項通知訊息。 假設使用者可以按一下任何 10 個按鈕。 若要將所有 10 個按鈕對應至一個處理常式，您的訊息對應項目看起來會像這樣：  
@@ -136,7 +136,7 @@ ms.locfileid: "33351718"
   
 -   控制項的連續範圍相關聯控制項 ID 的值。  
   
-     這些是這裡`IDC_BUTTON1`和`IDC_BUTTON10`。  
+     這些是這裡**IDC_BUTTON1**和**IDC_BUTTON10**。  
   
 -   訊息處理常式函式的名稱。  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c4e6c7744c3d5328985eee24e67ee1eb359fb3c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350008"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931014"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外狀況：3.0 版例外狀況巨集的變更
 這是進階的主題。  
@@ -46,13 +46,13 @@ ms.locfileid: "33350008"
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- 被擲回做**CException\***，即使它建構為**CCustomException**。 **攔截**MFC 版本 2.5 和較早的使用中的巨集`CObject::IsKindOf`測試在執行階段類型。 因為運算式  
+ 被擲回做`CException*`，即使它建構為`CCustomException`。 **攔截**MFC 版本 2.5 和較早的使用中的巨集`CObject::IsKindOf`測試在執行階段類型。 因為運算式  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
  為 true，第一個 catch 區塊攔截例外狀況。 3.0 版，實作許多例外狀況處理巨集使用 c + + 例外狀況，可擲回的第二個 catch 區塊符合`CException`。  
   
- 這很類似的程式碼。 它通常會顯示當例外狀況物件傳遞至另一個函式可接受泛型**CException\*** 執行 「 預先擲回 「 處理中，且最後會擲回例外狀況。  
+ 這很類似的程式碼。 它通常會顯示當例外狀況物件傳遞至另一個函式可接受泛型`CException*`執行 「 預先擲回 「 處理中，且最後會擲回例外狀況。  
   
  若要解決這個問題，將擲回運算式從函式呼叫的程式碼，編譯器會產生例外狀況時的已知型別的實際發生例外狀況。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33350008"
   
  [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- 使用**擲回**中捕捉區塊會導致指標`e`遭到刪除，以便在外部 catch 站台將會收到無效的指標。 使用`THROW_LAST`重新擲回`e`。  
+ 使用**擲回**中捕捉區塊會導致指標`e`遭到刪除，以便在外部 catch 站台將會收到無效的指標。 使用**THROW_LAST**重新擲回`e`。  
   
  如需詳細資訊，請參閱[例外狀況： 攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
   

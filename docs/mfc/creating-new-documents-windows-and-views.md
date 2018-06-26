@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d929f4d7419e027a1018c4b0b33a4e42416613
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c0abc53e1a24d822605c9e5bfd7ab8276b32f82
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343411"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931202"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>建立新文件、視窗和檢視
 下圖提供文件、檢視和框架視窗的建立程序概觀。 將焦點放在提供詳細資料之參與物件的其他文件。  
@@ -55,10 +55,10 @@ ms.locfileid: "33343411"
  ![建立檢視順序](../mfc/media/vc387l3.gif "vc387l3")  
 建立檢視的序列  
   
- 如需架構如何初始化新的文件、 檢視和框架視窗物件的資訊，請參閱 < 類別[CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)， [CFrameWnd](../mfc/reference/cframewnd-class.md)， [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)，和[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) MFC 程式庫參考中。 另請參閱[技術提示 22](../mfc/tn022-standard-commands-implementation.md)，其中說明建立和初始化程序進一步的 framework 的標準命令可用於其討論`New`和**開啟**中的項目**檔案**功能表。  
+ 如需架構如何初始化新的文件、 檢視和框架視窗物件的資訊，請參閱 < 類別[CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)， [CFrameWnd](../mfc/reference/cframewnd-class.md)， [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)，和[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) MFC 程式庫參考中。 另請參閱[技術提示 22](../mfc/tn022-standard-commands-implementation.md)，其中說明建立和初始化程序進一步的 framework 的標準命令可用於其討論**新增**和**開啟**中的項目**檔案**功能表。  
   
 ##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> 初始化您自己加入至這些類別  
- 上述圖也建議可以覆寫成員函式以初始化應用程式物件的點。 在您檢視類別的 `OnInitialUpdate` 覆寫，是初始化檢視的最佳位置。 在建立框架視窗，以及並在框架視窗內的檢視附加至其文件後，會立即呼叫 `OnInitialUpdate`。 例如，若您的視圖是捲動檢視 (衍生自 `CScrollView` 而非 `CView`)，您應該根據您的 `OnInitialUpdate` 覆寫的文件大小來設定視圖大小。 (此程序所述類別的描述[CScrollView](../mfc/reference/cscrollview-class.md)。)您可以覆寫**CDocument**成員函式`OnNewDocument`和`OnOpenDocument`提供特定應用程式初始化文件。 通常必須覆寫兩個，因為文件可以用兩種方式建立。  
+ 上述圖也建議可以覆寫成員函式以初始化應用程式物件的點。 在您檢視類別的 `OnInitialUpdate` 覆寫，是初始化檢視的最佳位置。 在建立框架視窗，以及並在框架視窗內的檢視附加至其文件後，會立即呼叫 `OnInitialUpdate`。 例如，若您的視圖是捲動檢視 (衍生自 `CScrollView` 而非 `CView`)，您應該根據您的 `OnInitialUpdate` 覆寫的文件大小來設定視圖大小。 (此程序所述類別的描述[CScrollView](../mfc/reference/cscrollview-class.md)。)您可以覆寫`CDocument`成員函式`OnNewDocument`和`OnOpenDocument`提供特定應用程式初始化文件。 通常必須覆寫兩個，因為文件可以用兩種方式建立。  
   
  在大部分情況下，您的覆寫應該呼叫基底類別版本。 如需詳細資訊，請參閱類別的具名的成員函式[CDocument](../mfc/reference/cdocument-class.md)， [CView](../mfc/reference/cview-class.md)， [CFrameWnd](../mfc/reference/cframewnd-class.md)，和[CWinApp](../mfc/reference/cwinapp-class.md) MFC 中程式庫參考。  
   

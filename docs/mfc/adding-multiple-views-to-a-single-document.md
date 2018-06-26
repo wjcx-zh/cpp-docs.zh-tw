@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb40b356b5601e19c33083c7b731a1dc411de3c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c48f4525c01149840ca74eee249263eac27c24cf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344145"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928697"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>將多個檢視加入至單一文件
 在建立使用 Microsoft Foundation Class (MFC) 程式庫的單一文件介面 (SDI) 應用程式，每個文件類型為單一檢視類型相關聯。 在某些情況下，最好能夠切換文件的新檢視目前的檢視。  
@@ -46,14 +46,14 @@ ms.locfileid: "33344145"
   
  本主題的其餘部分會假設下列：  
   
--   名稱`CWinApp`-衍生的物件是`CMyWinApp`，和`CMyWinApp`宣告，然後在 MYWINAPP 中定義。H 和 MYWINAPP。CPP。  
+-   名稱`CWinApp`-衍生的物件是`CMyWinApp`，和`CMyWinApp`已宣告和定義於*MYWINAPP。H*和*MYWINAPP。CPP*。  
   
--   `CNewView` 是的新名稱`CView`-衍生物件，和`CNewView`宣告，然後在 NEWVIEW 中定義。H 和 NEWVIEW。CPP。  
+-   `CNewView` 是的新名稱`CView`-衍生物件，和`CNewView`已宣告和定義於*NEWVIEW。H*和*NEWVIEW。CPP*。  
   
 ##  <a name="vcconmodifyexistingapplicationa1"></a> 修改現有的應用程式類別  
  檢視之間切換應用程式，您要加入成員變數來儲存檢視表，並將其切換的方法來修改應用程式類別。  
   
- 將下列程式碼加入至宣告`CMyWinApp`MYWINAPP 中。H:  
+ 將下列程式碼加入至宣告`CMyWinApp`中*MYWINAPP。H*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33344145"
   
  上次修改應用程式類別需要包括定義 Windows 訊息的新標頭檔 (**WM_INITIALUPDATE**) 切換函式中使用。  
   
- 包含部分 MYWINAPP 中插入下列這行。CPP:  
+ 包含一節中插入下列這行*MYWINAPP。CPP*:  
   
  [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
@@ -72,7 +72,7 @@ ms.locfileid: "33344145"
   
  一旦您將類別加入至專案，您需要變更某些檢視類別成員的存取範圍。  
   
- 修改 NEWVIEW。藉由變更從的存取規範 H`protected`至**公用**建構函式和解構函式。 這可讓類別來建立和摧毀動態和修改的檢視外觀，才能顯示。  
+ 修改*NEWVIEW。H*藉由變更從的存取規範**保護**至**公用**建構函式和解構函式。 這可讓類別來建立和摧毀動態和修改的檢視外觀，才能顯示。  
   
  儲存變更並繼續下一個步驟。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "33344145"
 ##  <a name="vcconswitchingfunctiona4"></a> 實作切換函式  
  在上一個步驟中，您可以加入程式碼，建立並初始化新的檢視物件。 實作切換的方法，為最後的主要部分`SwitchView`。  
   
- 在您的應用程式的實作檔結尾類別 (MYWINAPP。CPP)，加入下列方法定義：  
+ 在您的應用程式類別的實作檔結尾 (*MYWINAPP。CPP*)，加入下列方法定義：  
   
  [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   

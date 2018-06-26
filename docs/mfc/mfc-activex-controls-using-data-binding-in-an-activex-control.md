@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353269"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929727"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結
 ActiveX 控制項的功能更強大的用途是資料繫結，可讓資料庫中的特定欄位繫結控制項的屬性。 當使用者修改此繫結屬性中的資料時，控制項告知的資料庫和要求更新資料錄欄位。 然後資料庫就會通知控制項的成功或失敗的要求。  
@@ -51,7 +51,7 @@ ActiveX 控制項的功能更強大的用途是資料繫結，可讓資料庫中
  它可建立資料繫結的內建屬性，雖然可能會想[可繫結的 get/set 方法](#vchowcreatingbindablegetsetmethod)。  
   
 > [!NOTE]
->  內建屬性有**可繫結**和**requestedit**預設屬性。  
+>  內建屬性有`bindable`和`requestedit`預設屬性。  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>若要加入的繫結的內建屬性，使用 加入屬性精靈  
   

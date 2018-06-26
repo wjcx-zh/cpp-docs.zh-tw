@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec9757a463bce7ef873720f229b70da695deae8d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf25b84c4ee9808210d2dbf2f5115319a517c71b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334843"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931934"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>存取集合的所有成員
 MFC 陣列集合類別 (範本型和非範本型) 使用索引來存取其項目。 MFC 清單和對應集合類別 (範本型和非範本型) 使用 **POSITION** 類型的指標來描述集合中的指定位置。 若要存取這些集合的一或多個成員，請先將位置指標初始化，然後將該位置重複傳遞給集合，並要求它傳回下一個項目。 集合不負責維護反覆項目進度的相關狀態資訊。 該資訊會保留在位置指示器中。 但若指定特定位置，集合會負責傳回下一個元素。  
@@ -51,7 +51,7 @@ MFC 陣列集合類別 (範本型和非範本型) 使用索引來存取其項目
   
      此範例使用具類型的指標陣列，其中包含 `CPerson` 物件的指標。 此陣列衍生自類別 `CObArray`，這是其中一個預先定義的非範本類別。 `GetAt` 傳回 `CPerson` 物件的指標。 針對具類型的指標集合類別 (陣列或清單)，第一個參數會指定基底類別，第二個參數會指定要儲存的類型。  
   
-     `CTypedPtrArray`類別也會多載 **[]** 運算子，讓您可以使用慣用的陣列註標語法來存取元素的陣列。 上述 `for` 迴圈主體中的陳述式可替代成  
+     `CTypedPtrArray`類別也會多載 **[]** 運算子，讓您可以使用慣用的陣列註標語法來存取元素的陣列。 主體中的陳述式的替代方式**如**上面的迴圈  
   
      [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]  
   

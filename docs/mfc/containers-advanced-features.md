@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d2999e82bd05d75cb8637ba7404c36cdc2be047a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347918"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932168"
 ---
 # <a name="containers-advanced-features"></a>容器：進階功能
 本文描述將選擇性進階功能合併至現有容器應用程式中的必要步驟。 這些功能包括：  
@@ -70,13 +70,13 @@ ms.locfileid: "33347918"
   
     -   藉由呼叫物件的 `COleTemplateServer` 成員函式，將 `ConnectTemplate` 物件連接至您的文件範本。  
   
-    -   呼叫**coletemplateserver:: Registerall**成員函式，以向 OLE 系統中的所有類別物件。  
+    -   呼叫`COleTemplateServer::RegisterAll`成員函式，以向 OLE 系統中的所有類別物件。  
   
-    -   呼叫 `COleTemplateServer::UpdateRegistry`。 如果應用程式啟動時並未帶有 "/Embedded" 參數，則 `UpdateRegistry` 的唯一參數應該是 `OAT_CONTAINER`。 這樣會將應用程式註冊為可支援內嵌物件連結的容器。  
+    -   呼叫 `COleTemplateServer::UpdateRegistry`。 唯一的參數來`UpdateRegistry`應該*OAT_CONTAINER*如果不使用"/embedded"參數啟動應用程式。 這樣會將應用程式註冊為可支援內嵌物件連結的容器。  
   
          如果應用程式啟動時帶有 "/Embedded" 參數，則不應該顯示其主視窗，就像伺服器應用程式一樣。  
   
- MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)實作這項功能。 如需有關如何進行這項作業的範例，請參閱本範例應用程式的 OCLIENT.CPP 檔案中的 `InitInstance` 函式。  
+ MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)實作這項功能。 如需執行方式的範例，請參閱`InitInstance`函式在*OCLIENT。CPP*本範例應用程式的檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [容器](../mfc/containers.md)   

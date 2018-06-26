@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334882"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930884"
 ---
 # <a name="active-documents-on-the-internet"></a>網際網路上的主動式文件
 主動式文件提供傳統的內嵌物件的擴充功能。 主動式文件可能會多頁，而且會顯示整個工作區中。 它們執行傳統功能表交涉，且可以就地與伺服器應用程式中開啟的視窗中編輯。 而不是顯示為以陰影的框線括住的小矩形，主動式文件會是完整的畫面格和一律就地啟用作用中。  
@@ -55,7 +55,7 @@ ms.locfileid: "33334882"
 |-------------------------|---------------------------------|  
 |使用複合檔案做為其儲存機制。|`IPersistStorage`.|  
 |支援主動式文件，包括從檔案建立的基礎內嵌功能。|`IPersistFile`、`IOleObject` 和 `IDataObject`。|  
-|支援就地啟用。|`IOleInPlaceObject` 和`IOleInPlaceActiveObject`(使用容器的`IOleInPlaceSite`和**IOleInPlaceFrame**介面)。|  
+|支援就地啟用。|`IOleInPlaceObject` 和`IOleInPlaceActiveObject`(使用容器的`IOleInPlaceSite`和`IOleInPlaceFrame`介面)。|  
 |支援包含這些新介面的使用中文件副檔名。 某些介面是選擇性的。|`IOleDocument`、`IOleDocumentView`、`IOleCommandTarget`和`IPrint`。|  
   
  MFC 提供支援，以擴充現有內嵌的伺服器支援主動式文件。  
@@ -68,7 +68,7 @@ ms.locfileid: "33334882"
   
 |類別型別|先前，衍生自|若要從衍生的變更|  
 |----------------|---------------------------|---------------------------|  
-|就地編輯框架|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|就地編輯框架|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |項目|`COleServerItem`|`CDocObjectServerItem`|  
   
  您也會變更在登錄中，輸入資訊的方式，並進行數個其他變更。 如果您的應用程式目前不有任何 COM 元件支援，您可以新增以執行應用程式精靈，並整合與您現有的應用程式的 COM 元件專屬的程式碼的伺服器支援。  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81d28a7c5fdb48201cc1f4f2998fd0904749445d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f8aaf1e485d7ba38a561639f81b36d494a98f2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351741"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930429"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控制項：屬性頁
 屬性頁面可讓 ActiveX 控制項使用者檢視和變更 ActiveX 控制項的屬性。 藉由叫用控制項屬性對話方塊，其中包含提供自訂的圖形化介面來檢視及編輯控制項屬性的一或多個屬性頁中存取這些屬性。  
@@ -80,13 +80,13 @@ ms.locfileid: "33351741"
   
 2.  按兩下**對話方塊**directory 圖示。  
   
-3.  開啟**IDD_PROPPAGE_SAMPLE**  對話方塊。  
+3.  開啟 [IDD_PROPPAGE_SAMPLE] 對話方塊。  
   
      ActiveX 控制項精靈會將專案名稱附加至結尾的對話方塊 ID，在此情況下，範例。  
   
 4.  拖放選取的控制項從工具箱拖曳至對話方塊中的區域。  
   
-5.  例如，文字標籤控制項 」 標題:"和編輯方塊控制項**IDC_CAPTION**識別碼就已足夠。  
+5.  例如，文字標籤控制項 」 標題:"和 IDC_CAPTION 識別碼的編輯方塊控制項已足夠。  
   
 6.  按一下**儲存**儲存變更 工具列上。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "33351741"
   
  [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- 此函式產生關聯的屬性頁的`m_caption`成員變數，其標題中，使用`DDP_TEXT`函式。  
+ 此函式產生關聯的屬性頁的*m_caption*成員變數，其標題中，使用`DDP_TEXT`函式。  
   
- 插入屬性頁控制項之後，您需要建立屬性頁控制項之間的連結`IDC_CAPTION`，實際的控制項屬性，標題、 使用和**DDP_Text**函式 （如上所述）。  
+ 插入屬性頁控制項之後，您需要建立屬性頁控制項、 IDC_CAPTION，與實際的控制項屬性之間的連結的標題，使用`DDP_Text`函式 （如上所述）。  
   
  [屬性頁](../mfc/reference/property-pages-mfc.md)不適用於其他對話方塊控制項類型，例如核取方塊，選項按鈕和清單方塊。 下表列出屬性頁的整組**DDP_** 函式和其用途：  
   
@@ -117,7 +117,7 @@ ms.locfileid: "33351741"
 |`DDP_LBString`|與控制項屬性的清單方塊中選取的字串。 選取的字串可以具有相同屬性的值為字母開頭，但需要不一定要完全符合。|  
 |`DDP_LBStringExact`|與控制項屬性的清單方塊中選取的字串。 選取的字串和屬性的字串值必須完全相符。|  
 |`DDP_Radio`|與控制項屬性的選項按鈕。|  
-|**DDP_Text**|與控制項屬性的文字。|  
+|`DDP_Text`|與控制項屬性的文字。|  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   

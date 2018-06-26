@@ -51,12 +51,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b8c6c5b6d27bdf4ce4c9ad46a75c21b9f47333
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349778"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930842"
 ---
 # <a name="graphic-objects"></a>圖形物件
 Windows 在裝置內容中提供各式各樣的可用繪圖工具。 它提供可繪製線條的畫筆、可填滿內部的筆刷和可繪製文字的字型。 MFC 提供相當於 Windows 中繪圖工具的圖形物件類別。 下表顯示可用的類別和對等的 Windows 繪圖裝置介面 (GDI) 控制代碼類型。  
@@ -82,7 +82,7 @@ Windows 在裝置內容中提供各式各樣的可用繪圖工具。 它提供�
   
  類別庫中的每個圖形物件類別都有一個建構函式，可讓您建立該類別的圖形物件，接著您必須使用適當的建立函式來初始化，例如 `CreatePen`。  
   
- 類別庫中的每個圖形物件類別都具有一個轉型運算子，可將MFC 物件轉型成相關聯的 Windows 控制代碼。 除非相關聯的物件與產生的控制代碼中斷連結，否則產生的控制代碼無效。 使用物件的**卸離**成員函式來卸離的控制代碼。  
+ 類別庫中的每個圖形物件類別都具有一個轉型運算子，可將MFC 物件轉型成相關聯的 Windows 控制代碼。 除非相關聯的物件與產生的控制代碼中斷連結，否則產生的控制代碼無效。 使用物件的`Detach`成員函式來卸離的控制代碼。  
   
  下列程式碼會將 `CPen` 物件轉型成 Windows 控制代碼：  
   

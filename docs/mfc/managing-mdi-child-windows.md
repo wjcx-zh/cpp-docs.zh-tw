@@ -22,17 +22,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edcdcbad2b7b3e70988579786c1c8cf28f734a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58ddef11e56da760bbecaa47f03dfa6c57dfa3ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344931"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929477"
 ---
 # <a name="managing-mdi-child-windows"></a>管理 MDI 子視窗
-MDI 主框架視窗 （其中每個應用程式） 包含特殊子視窗呼叫**MDICLIENT**視窗。 **MDICLIENT**視窗會管理主框架視窗的工作區，而其本身具有子視窗： 文件視窗中，衍生自`CMDIChildWnd`。 由於文件視窗本身是框架視窗 (MDI 子視窗)，因此也可以有自己的子視窗。 在所有這些情況中，父視窗會管理其子視窗，並將一些命令轉送給它們。  
+MDI 主框架視窗 （其中每個應用程式） 包含特殊子視窗呼叫 MDICLIENT 視窗。 MDICLIENT 視窗會管理主框架視窗的工作區，而其本身具有子視窗： 文件視窗中，衍生自`CMDIChildWnd`。 由於文件視窗本身是框架視窗 (MDI 子視窗)，因此也可以有自己的子視窗。 在所有這些情況中，父視窗會管理其子視窗，並將一些命令轉送給它們。  
   
- 在 MDI 框架視窗中，框架視窗會管理**MDICLIENT**視窗中，與控制列一起重新置放。 **MDICLIENT**視窗中，會管理所有 MDI 子框架視窗。 下圖顯示 MDI 框架視窗之間的關聯性及其**MDICLIENT**視窗和其子文件框架視窗。  
+ 在 MDI 框架視窗中，框架視窗會管理 MDICLIENT 視窗中，與控制列一起重新置放。 MDICLIENT 視窗中，會管理所有 MDI 子框架視窗。 下圖顯示 MDI 框架視窗、 其 MDICLIENT 視窗和它的子文件框架視窗之間的關聯性。  
   
  ![MDI 框架視窗中的子視窗](../mfc/media/vc37gb1.gif "vc37gb1")  
 MDI 框架視窗和子視窗  

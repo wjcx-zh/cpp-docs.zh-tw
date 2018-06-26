@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352785"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931885"
 ---
 # <a name="docking-and-floating-toolbars"></a>停駐和浮動工具列
 Mfc 程式庫支援可停駐工具列。 可以連接，或停駐任一側的父視窗，可停駐工具列或卸離或浮動，在自己的迷你框架視窗中。 本文說明如何在您的應用程式中使用可停駐工具列。  
@@ -62,7 +62,7 @@ Mfc 程式庫支援可停駐工具列。 可以連接，或停駐任一側的父
  請參閱 MFC 一般範例[DOCKTOOL](../visual-cpp-samples.md)範例。  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> 啟用停駐在框架視窗  
- 若要將工具列停駐在框架視窗，框架視窗 （或目的地） 必須啟用允許停駐。 這是使用[CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)函式，以採用一個`DWORD`樣式的一組參數的位元會指出框架視窗的哪一端接受停駐。 如果工具列即將停駐，且有多個可能要停駐的側邊，指示中的側邊參數傳遞至`EnableDocking`會以下列順序： 頂端、 底端、 左、 右。 如果您想要停駐控制項列隨處、 傳遞`CBRS_ALIGN_ANY`至`EnableDocking`。  
+ 若要將工具列停駐在框架視窗，框架視窗 （或目的地） 必須啟用允許停駐。 這是使用[CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking)函式，以採用一個*DWORD*樣式的一組參數的位元會指出框架視窗的哪一端接受停駐。 如果工具列即將停駐，且有多個可能要停駐的側邊，指示中的側邊參數傳遞至`EnableDocking`會以下列順序： 頂端、 底端、 左、 右。 如果您想要停駐控制項列隨處、 傳遞**CBRS_ALIGN_ANY**至`EnableDocking`。  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> 啟用工具列停駐  
  您已經備妥目的地停駐之後，您必須以類似的方式準備工具列 （或來源）。 呼叫[CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking)的每個您想要停駐工具列上，指定目的地邊工具列應該停駐。 如果所有的呼叫中指定的側邊`CControlBar::EnableDocking`符合停駐在框架視窗中已啟用的邊，無法在停駐工具列，它會浮動。 一旦浮動的話，它會維持浮動工具列，無法停駐在框架視窗。  

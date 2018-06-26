@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ac243333c8dc778486dd18323658f262c6d6610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b221bd97d9ee943e19b043bcc9be6aba0fa1672
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380204"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929591"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>從對話方塊物件擷取資料
 架構提供簡單的方法初始化控制項在對話方塊中的值，以及從控制項擷取值。 更耗費人力手動方法會呼叫函式，例如`SetDlgItemText`和`GetDlgItemText`類別成員函式`CWnd`，套用至控制項視窗。 這些函式，存取每個控制項，分別可設定或取得它的值，呼叫函式，例如`SetWindowText`和`GetWindowText`。 架構的方法會自動初始化和擷取。  
@@ -47,7 +47,7 @@ ms.locfileid: "33380204"
   
  DDX 和 DDV 會更詳細地說明[對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)。  
   
- 對於強制回應對話方塊，您可以擷取使用者輸入時任何資料`DoModal`傳回**IDOK**但對話方塊之前就會終結物件。 對於非強制回應對話方塊，您可以擷取資料從對話方塊物件隨時藉由呼叫`UpdateData`與引數**TRUE** ，然後存取對話方塊類別成員變數。 此主題會更詳細地討論[對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)。  
+ 對於強制回應對話方塊，您可以擷取使用者輸入時任何資料`DoModal`傳回 IDOK 但對話方塊之前就會終結物件。 對於非強制回應對話方塊，您可以擷取資料從對話方塊物件隨時藉由呼叫`UpdateData`與引數**TRUE** ，然後存取對話方塊類別成員變數。 此主題會更詳細地討論[對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)

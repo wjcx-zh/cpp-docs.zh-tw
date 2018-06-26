@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342487"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929035"
 ---
 # <a name="automation-clients"></a>Automation 用戶端
 Automation 可讓您的應用程式操作另一個應用程式中實作的物件，或者公開物件，以便可以操作該物件。 Automation 用戶端是可以操作公開的物件屬於另一個應用程式的應用程式。 公開物件的應用程式稱為 Automation 伺服器。 用戶端會藉由存取這些物件的屬性和函式管理伺服器應用程式的物件。  
@@ -38,7 +38,7 @@ Automation 可讓您的應用程式操作另一個應用程式中實作的物件
   
  靜態繫結的用戶端會使用用戶端應用程式中的 proxy 類別，以靜態方式連結。 這個類別提供伺服器應用程式的屬性和作業的型別安全 c + + 封裝 （encapsulation 的）。  
   
- 類別`COleDispatchDriver`提供自動化的用戶端的主要支援。 使用`Add New Item`對話方塊中，建立衍生自類別`COleDispatchDriver`。  
+ 類別`COleDispatchDriver`提供自動化的用戶端的主要支援。 使用**加入新項目**對話方塊中，建立衍生自類別`COleDispatchDriver`。  
   
  然後，您會指定描述的屬性和伺服器應用程式的物件的函式的型別程式庫檔。 加入項目 對話方塊會讀取此檔案，並建立`COleDispatchDriver`-衍生的類別，與您的應用程式可以呼叫以類型安全的方式存取 c + + 中的伺服器應用程式的物件的成員函式。 其他功能繼承自`COleDispatchDriver`簡化呼叫適當的 Automation 伺服器的程序。  
   

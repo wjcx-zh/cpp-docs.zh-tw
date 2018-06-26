@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87775c8afa1fa6eec8fbbdbbaa11bc9b5e6f1faa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a717ca80d84b884014a2567228829ffd87c5178
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349039"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930296"
 ---
 # <a name="form-views-mfc"></a>表單檢視 (MFC)
-您可以將表單加入支援 MFC 程式庫，包括任何 Visual c + + 應用程式[表單架構應用程式](../mfc/reference/creating-a-forms-based-mfc-application.md)(其中的檢視類別衍生自`CFormView`)。 如果沒有一開始建立您的應用程式，以支援表單，Visual c + + 會將這項支援您，當您插入新的表單。 SDI 或 MDI 應用程式中，它會實作預設[文件/檢視架構](../mfc/document-view-architecture.md)，當使用者選擇`New`命令 (根據預設，在**檔案**功能表)，Visual c + + 會提示使用者從可用的表單中選擇。  
+您可以將表單加入支援 MFC 程式庫，包括任何 Visual c + + 應用程式[表單架構應用程式](../mfc/reference/creating-a-forms-based-mfc-application.md)(其中的檢視類別衍生自`CFormView`)。 如果沒有一開始建立您的應用程式，以支援表單，Visual c + + 會將這項支援您，當您插入新的表單。 SDI 或 MDI 應用程式中，它會實作預設[文件/檢視架構](../mfc/document-view-architecture.md)，當使用者選擇**新增**命令 (根據預設，在**檔案**功能表)，VisualC + + 會提示使用者選擇從可用的表單。  
   
- 在 SDI 應用程式，當使用者選擇`New`命令時，表單的目前執行個體繼續執行，但如果找不到建立具有所選表單的應用程式的新執行個體。 MDI 應用程式中，表單的目前執行個體繼續執行，當使用者選擇`New`命令。  
+ 在 SDI 應用程式，當使用者選擇**新增**命令時，表單的目前執行個體繼續執行，但如果找不到建立具有所選表單的應用程式的新執行個體。 MDI 應用程式中，表單的目前執行個體繼續執行，當使用者選擇**新增**命令。  
   
 > [!NOTE]
 >  您可以將表單插入對話方塊架構應用程式 (其對話方塊類別為基礎的一個`CDialog`，另一個類別實作的任何檢視中)。 不過，不具有文件/檢視架構中，Visual c + + 不會自動實作**檔案**&#124;**新增**功能。 您必須建立方法，讓使用者檢視其他形式，例如，藉由實作索引標籤式的對話方塊具有各種屬性頁。  
@@ -43,7 +43,7 @@ ms.locfileid: "33349039"
   
      **WS_CHILD**= On  
   
-     `WS_BORDER`= Off  
+     **WS_BORDER**= 關閉  
   
      **WS_VISIBLE**= 關閉  
   
@@ -51,17 +51,17 @@ ms.locfileid: "33349039"
   
  應用程式的文件/檢視架構，**新表單**命令 （在類別檢視中按一下滑鼠右鍵） 也：  
   
--   建立**CDocument**-基礎類別  
+-   建立`CDocument`-基礎類別  
   
-     您不需要建立新的類別，您可以使用任何現有**CDocument**-基礎專案中的類別。  
+     您不需要建立新的類別，您可以使用任何現有`CDocument`-基礎專案中的類別。  
   
--   產生的文件範本 (衍生自**CDocument**) 與字串、 功能表和圖示的資源。  
+-   產生的文件範本 (衍生自`CDocument`) 與字串、 功能表和圖示的資源。  
   
      您也可以建立新範本當成基底類別。  
   
--   將呼叫加入**AddDocumentTemplate**應用程式中`InitInstance`程式碼。  
+-   將呼叫加入`AddDocumentTemplate`應用程式中`InitInstance`程式碼。  
   
-     Visual c + + 加入此程式碼，為您建立時，這會將表單加入可用的表單清單，當使用者選擇每個新表單`New`命令。 這個程式碼包含表單的相關聯的資源識別碼和相關聯的文件、 檢視和框架類別一起構成新的表單物件的名稱。  
+     Visual c + + 加入此程式碼，為您建立時，這會將表單加入可用的表單清單，當使用者選擇每個新表單**新增**命令。 這個程式碼包含表單的相關聯的資源識別碼和相關聯的文件、 檢視和框架類別一起構成新的表單物件的名稱。  
   
      文件範本做為文件、 框架視窗和檢視之間的連線。 單一文件，您可以建立許多範本。  
   

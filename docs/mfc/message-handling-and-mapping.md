@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348524"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931030"
 ---
 # <a name="message-handling-and-mapping"></a>訊息處理和對應
 此系列的文章描述 MFC 架構如何處理訊息和命令以及如何連接至其處理函式。  
   
  在傳統的 Windows 程式中，Windows 訊息是由視窗程序的大型 switch 陳述式來處理。 MFC 改為使用[訊息對應](../mfc/message-categories.md)直接將訊息對應至不同的類別成員函式。 訊息對應在這種用途下較虛擬函式更有效率，而且其允許訊息由最適當的 C++ 物件 (應用程式、文件、檢視等等) 進行處理。 您可以對應單一訊息或一個範圍的訊息、命令 ID 或控制項 ID。  
   
- **WM_COMMAND**訊息 — 通常是由功能表、 工具列按鈕或快速鍵產生 — 也使用訊息對應機制。 MFC 定義的標準[路由](../mfc/command-routing.md)命令之間的訊息應用程式，框架視窗、 檢視和程式中的主動式文件。 如果需要，您可以覆寫這個路由。  
+ WM_COMMAND 訊息 — 通常是由功能表、 工具列按鈕或快速鍵產生 — 也使用訊息對應機制。 MFC 定義的標準[路由](../mfc/command-routing.md)命令之間的訊息應用程式，框架視窗、 檢視和程式中的主動式文件。 如果需要，您可以覆寫這個路由。  
   
  訊息對應也提供了更新使用者介面物件 (例如功能表和工具列按鈕)、啟用或停用它們以符合目前內容的方法。  
   

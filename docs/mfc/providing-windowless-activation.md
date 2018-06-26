@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a42d952ade479c4eb117d21921c9b0feafb81cea
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351806"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931947"
 ---
 # <a name="providing-windowless-activation"></a>提供無視窗啟用
-視窗建立程式碼 (也就是所有項目，當您呼叫**CreateWindow**) 會使執行。 維護螢幕上視窗的控制項必須管理視窗的訊息。 因此，無視窗控制項與視窗型控制項相較之下速度更快。  
+視窗建立程式碼 (也就是所有項目，當您呼叫`CreateWindow`) 會使執行。 維護螢幕上視窗的控制項必須管理視窗的訊息。 因此，無視窗控制項與視窗型控制項相較之下速度更快。  
   
  無視窗控制項與視窗型控制項不同的另一項優點在於，無視窗控制項支援透明繪製及非矩形螢幕區域。 常見的透明控制項範例是具有透明背景的文字控制項。 控制項會繪製文字，但不會繪製背景，因此文字後方的所有內容都可清楚看見。 新式的表單通常會採用非矩形控制項，例如箭號和圓形按鈕。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33351806"
   
  如果您選取，將自動產生納入這個旗標的程式碼**無視窗啟用**選項[控制設定](../mfc/reference/control-settings-mfc-activex-control-wizard.md)MFC ActiveX 控制項精靈的頁面。  
   
- 啟用無視窗啟用之後，容器會將輸入訊息委派至控制項的 `IOleInPlaceObjectWindowless` 介面。 這個介面的 `COleControl` 實作會在適當調整滑鼠座標之後，透過您控制項的訊息對應分派訊息。 您可以將對應的項目加入至訊息對應，如此就可以像處理一般視窗訊息一樣地處理訊息。 在您為這些訊息的處理常式，請避免使用`m_hWnd`成員變數 （或任何成員函式，會使用它），其值不是先檢查**NULL**。  
+ 啟用無視窗啟用之後，容器會將輸入訊息委派至控制項的 `IOleInPlaceObjectWindowless` 介面。 這個介面的 `COleControl` 實作會在適當調整滑鼠座標之後，透過您控制項的訊息對應分派訊息。 您可以將對應的項目加入至訊息對應，如此就可以像處理一般視窗訊息一樣地處理訊息。 在您為這些訊息的處理常式，請避免使用*m_hWnd*成員變數 （或任何成員函式，會使用它），其值不是先檢查**NULL**。  
   
  `COleControl` 提供了適時從容器中叫用滑鼠擷取、鍵盤焦點、捲動和其他視窗服務的成員函式，包括：  
   

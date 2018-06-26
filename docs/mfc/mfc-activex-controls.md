@@ -25,15 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361331"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930093"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 控制項
-ActiveX 控制項是可重複使用的軟體元件為基礎的元件物件模型 (COM) 支援各種不同的 OLE 功能，並可自訂以符合多個軟體需求。 ActiveX 控制項的設計並適用於一般的 ActiveX 控制項容器中以及在網際網路上，在 全球資訊網網頁中。 您可以建立 ActiveX 控制項與 MFC，描述在這裡，或使用[Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md)。  
+ActiveX 控制項是可重複使用的軟體元件，以元件物件模型 (COM) 為基礎，支援各種不同的 OLE 功能並且可自訂以符合眾多軟體需求。 ActiveX 控制項的設計並適用於一般的 ActiveX 控制項容器中以及在網際網路上，在 全球資訊網網頁中。 您可以建立 ActiveX 控制項與 MFC，描述在這裡，或使用[Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md)。  
   
  ActiveX 控制項可以繪製本身在它自己的視窗中，回應事件 （例如按一下滑鼠），且會透過管理介面，其中包含屬性和方法類似於 Automation 物件。  
   
@@ -77,7 +77,7 @@ ActiveX 控制項容器和 ActiveX 控制項之間的通訊
   
  上圖中也會說明如何處理 （除了自動化和事件） 的其他 OLE 介面的控制項。  
   
- 所有與容器控制項的通訊由執行`COleControl`。 若要處理一些容器的要求， **COleControl**會呼叫控制項類別中實作的函式成員。 所有方法和某些屬性會在這種方式處理。 控制項的類別也可以藉由呼叫成員函式的起始與容器通訊`COleControl`。 以這種方式，會引發事件。  
+ 所有與容器控制項的通訊由執行`COleControl`。 若要處理一些容器的要求`COleControl`會呼叫控制項類別中實作的函式成員。 所有方法和某些屬性會在這種方式處理。 控制項的類別也可以藉由呼叫成員函式的起始與容器通訊`COleControl`。 以這種方式，會引發事件。  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> ActiveX 控制項的作用中和非使用中狀態  
  控制項有兩種基本狀態： 作用中和非使用中。 傳統上，這些狀態已由控制項是否具有視窗辨別。 作用中的控制項具有視窗;非現用控制項不提供支援。 無視窗啟用引入，這樣的區別不再通用的但仍適用於許多控制項。  

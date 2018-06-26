@@ -17,31 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5046ea7f3f3775cfe0009afe50f33a6ce6723cc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c02fb9e695fe206912f360dd1ad9907c6714cf1b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342169"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929714"
 ---
 # <a name="containers-client-item-states"></a>容器：用戶端項目狀態
 本文說明不同的用戶端項目在其存留期間通過的狀態。  
   
- 用戶端項目會經過數個狀態，如建立、 啟動、 修改和儲存。 每次的項目狀態變更時，這個架構會呼叫[COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange)與`OLE_CHANGED_STATE`通知。 第二個參數是從值**COleClientItem::ItemState**列舉型別。 它可以是下列其中一項：  
+ 用戶端項目會經過數個狀態，如建立、 啟動、 修改和儲存。 每次的項目狀態變更時，這個架構會呼叫[COleClientItem::OnChange](../mfc/reference/coleclientitem-class.md#onchange)與**OLE_CHANGED_STATE**通知。 第二個參數是從值`COleClientItem::ItemState`列舉型別。 它可以是下列其中一項：  
   
--   **COleClientItem::emptyState**  
+-   *COleClientItem::emptyState*  
   
--   **COleClientItem::loadedState**  
+-   *COleClientItem::loadedState*  
   
--   **COleClientItem::openState**  
+-   *COleClientItem::openState*  
   
--   **COleClientItem::activeState**  
+-   *COleClientItem::activeState*  
   
--   **COleClientItem::activeUIState**  
+-   *COleClientItem::activeUIState*  
   
  在空的狀態中，用戶端項目還不完全的項目。 已配置記憶體，但是它尚未已初始化 OLE 項目的資料。 這是透過呼叫建立的用戶端項目時的狀態**新**但尚未經過典型的兩個步驟建立第二個步驟。  
   
- 在第二個步驟中，執行透過呼叫`COleClientItem::CreateFromFile`或另一個 **CreateFrom * * * xxxx*函式，完全建立項目。 （從檔案或其他來源，例如剪貼簿） 的 OLE 資料聯`COleClientItem`-衍生物件。 現在項目是以載入狀態。  
+ 在第二個步驟中，執行透過呼叫`COleClientItem::CreateFromFile`或另一個`CreateFrom` *xxxx*函式，完全建立項目。 （從檔案或其他來源，例如剪貼簿） 的 OLE 資料聯`COleClientItem`-衍生物件。 現在項目是以載入狀態。  
   
  當項目具有已在伺服器的視窗中開啟而不是在容器文件中的位置中開啟時，它處於已開啟 （或完全開啟）。 在這個狀態下，交叉影線通常繪製透過容器的視窗，以表示此項目為作用中其他位置中的項目表示。  
   

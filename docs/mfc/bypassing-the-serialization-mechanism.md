@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a45779034534ce87bd6bd4f55dfda4985a36f01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9252e08fe672f111dcf2b289b1b12891022a318d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343641"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931083"
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>略過序列化機制
 如您所見，架構提供了預設的方式從檔案讀取和寫入資料。 將封存物件序列化符合許許多多應用程式的需求。 這類應用程式會將檔案完全讀入記憶體，讓使用者更新檔案，然後再將更新的版本寫入磁碟。  
@@ -34,7 +34,7 @@ ms.locfileid: "33343641"
   
  在這些情況下，您可以覆寫[序列化](../mfc/reference/cobject-class.md#serialize)函式，以不同方式來斡旋檔案動作透過[CFile](../mfc/reference/cfile-class.md)物件而非[CArchive](../mfc/reference/carchive-class.md)物件。  
   
- 您可以使用**開啟**，**讀取**，**寫入**，**關閉**，和`Seek`類別成員函式`CFile`開啟檔案檔案指標移到 （搜尋） 的特定點在檔案中，此時讀取記錄 （指定的位元組數），讓使用者更新記錄，再搜尋一次相同的點和記錄備份檔案的寫入。 架構會為您開啟檔案，所以您可以使用類別 `GetFile` 的 `CArchive` 成員函式取得 `CFile` 物件的指標。 用於更精密且更有彈性，您可以覆寫[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)和[OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument)類別成員函式`CWinApp`。 如需詳細資訊，請參閱類別[CFile](../mfc/reference/cfile-class.md)中*MFC 參考*。  
+ 您可以使用`Open`， `Read`， `Write`， `Close`，和`Seek`類別成員函式`CFile`開啟檔案，檔案指標移到 （搜尋） 檔案中的特定點讀取記錄 （指定的位元組數目) 的同時，讓使用者更新記錄，然後再次搜尋相同的點，並寫回至檔案記錄。 架構會為您開啟檔案，所以您可以使用類別 `GetFile` 的 `CArchive` 成員函式取得 `CFile` 物件的指標。 用於更精密且更有彈性，您可以覆寫[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)和[OnSaveDocument](../mfc/reference/cdocument-class.md#onsavedocument)類別成員函式`CWinApp`。 如需詳細資訊，請參閱類別[CFile](../mfc/reference/cfile-class.md)中*MFC 參考*。  
   
  在此案例中，您的 `Serialize` 覆寫不會執行任何動作，除非例如您在文件關閉時要其讀取和寫入檔案標頭以使其保持最新。  
   

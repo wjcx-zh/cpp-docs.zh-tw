@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358060"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931761"
 ---
 # <a name="mfc-library-versions"></a>MFC 程式庫版本
 
@@ -89,7 +89,7 @@ ANSI/MBCS MFC 程式庫版本支援這兩個單一位元組字元集的 ASCII，
 
 若要設定您的專案組態在 IDE 中使用單一位元組、 多位元組，或寬字元字串和字元支援 Unicode，使用**專案屬性**對話方塊。 在**組態屬性** > **一般**頁面上，設定**字元集**屬性**未設定**使用單一位元組字元集。 將屬性設定為**使用多位元組字元集**使用多位元組字元集，或**使用 Unicode 字元集**使用 Unicode 編碼為 utf-16。
 
-MFC 專案使用的前置處理器符號 **\_UNICODE**表示 utf-16 寬字元 Unicode 支援和 **\_MBCS**來指出 MBCS 支援。 這些選項互斥的專案中。
+MFC 專案使用的前置處理器符號\_表示 utf-16 寬字元 Unicode 支援的 UNICODE 和\_表示 MBCS 的 MBCS 支援。 這些選項互斥的專案中。
 
 ## <a name="mfc-static-library-naming-conventions"></a>MFC 靜態程式庫命名慣例
 

@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333826"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930657"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控制項容器：從 ActiveX 控制項中處理事件
 本文說明如何使用 [屬性] 視窗在 ActiveX 控制項容器中安裝 ActiveX 控制項的事件處理常式。 事件處理常式可用來接收通知 （控制項） 的特定事件並在回應中執行某些動作。 此通知會呼叫 「 引發 」 事件。  
@@ -46,7 +46,7 @@ ms.locfileid: "33333826"
   
  當您使用 [屬性] 視窗加入事件，事件對應項目 (`ON_EVENT`) 加入事件接收對應和事件處理常式函式加入至容器的實作 (。CPP) 檔案。  
   
- 下列範例宣告的事件處理常式，呼叫`OnClickInCircCtrl`，Circ 控制項**ClickIn**事件：  
+ 下列範例宣告的事件處理常式，呼叫`OnClickInCircCtrl`，Circ 控制項`ClickIn`事件：  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

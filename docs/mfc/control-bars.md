@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347895"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931787"
 ---
 # <a name="control-bars"></a>控制列
-「控制列」是工具列、狀態列和對話方塊列的一般名稱。 MFC 類別`CToolBar`， `CStatusBar`， `CDialogBar`， `COleResizeBar`，和**CReBar**衍生自類別[CControlBar](../mfc/reference/ccontrolbar-class.md)，它會實作它們的一般功能。  
+「控制列」是工具列、狀態列和對話方塊列的一般名稱。 MFC 類別`CToolBar`， `CStatusBar`， `CDialogBar`， `COleResizeBar`，和`CReBar`衍生自類別[CControlBar](../mfc/reference/ccontrolbar-class.md)，它會實作它們的一般功能。  
   
  控制列是一些顯示控制項列的視窗，使用者可以選取這些選項、執行命令，或者取得程式資訊。 控制列的類型包括工具列、對話方塊列和狀態列。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33347895"
 -   Rebar 類別[CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  根據 MFC 4.0 版，工具列、狀態列和工具提示是使用 comctl32.dll 中實作的系統功能進行實作，而不是使用特定 MFC 的舊版實作進行實作。 在 MFC 6.0 版**CReBar**，其中也包裝了 comctl32.dll 功能已加入。  
+>  根據 MFC 4.0 版，工具列、 狀態列和工具提示會使用實作中實作的系統功能*comctl32.dll*而不是之前的實作特定 MFC。 在 MFC 6.0 版`CReBar`，其中也包裝了 comctl32.dll 功能已加入。  
   
  以下簡要介紹控制列的類型。 如需詳細資訊，請參閱下列連結。  
   

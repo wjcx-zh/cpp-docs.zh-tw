@@ -21,15 +21,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b78e74b4b8d974fceaf5f854c9890cd7cdd1a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f58c8410de51a4692dd0e7f018d40eaa28c0dae8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344161"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929578"
 ---
 # <a name="-constructors-comment"></a>// 建構函式註解
-`// Constructors` > 一節的 MFC 類別宣告會宣告建構函式 （在 c + + 意義），以及實際使用的物件所需的任何初始化函式。 例如，`CWnd::Create`是建構函式 > 一節中，因為當您使用`CWnd`物件，它必須 「 完整 」 來建構第一次呼叫 c + + 建構函式，然後再呼叫**建立**函式。 一般而言，這些成員是公用的。  
+`// Constructors` > 一節的 MFC 類別宣告會宣告建構函式 （在 c + + 意義），以及實際使用的物件所需的任何初始化函式。 例如，`CWnd::Create`是建構函式 > 一節中，因為當您使用`CWnd`物件，它必須 「 完整 」 來建構第一次呼叫 c + + 建構函式，然後再呼叫`Create`函式。 一般而言，這些成員是公用的。  
   
  例如，類別`CStdioFile`有三個建構函式，其中會顯示在下方列出[註解的範例](../mfc/an-example-of-the-comments.md)。  
   

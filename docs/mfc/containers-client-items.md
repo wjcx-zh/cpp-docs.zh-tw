@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14979f1c5f11e9a229c408e33e7c17d8776a54a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a7b498ed1ddc3a3d040abde6ebcb7e27615b801
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344213"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929339"
 ---
 # <a name="containers-client-items"></a>容器：用戶端項目
 本文說明哪些用戶端項目以及應用程式應該從哪些類別衍生其用戶端項目。  
   
  用戶端項目是屬於 OLE 容器應用程式的文件中所包含或參考的另一個應用程式的資料項目。 其資料包含在文件中的用戶端項目乃為內嵌；會連結至其資料是儲存在容器文件所參考的其他位置的項目。  
   
- OLE 應用程式中的文件類別衍生自類別[COleDocument](../mfc/reference/coledocument-class.md)而不是從**CDocument**。 `COleDocument`類別繼承自**CDocument**使用 MFC 應用程式為基礎的文件/檢視架構必要的所有功能。 `COleDocument` 也會定義將文件當做 `CDocItem` 物件集合的介面。 會提供數個 `COleDocument` 成員函式，用於加入、擷取和刪除該集合的項目。  
+ OLE 應用程式中的文件類別衍生自類別[COleDocument](../mfc/reference/coledocument-class.md)而不是從`CDocument`。 `COleDocument`類別繼承自`CDocument`使用 MFC 應用程式為基礎的文件/檢視架構必要的所有功能。 `COleDocument` 也會定義將文件當做 `CDocItem` 物件集合的介面。 會提供數個 `COleDocument` 成員函式，用於加入、擷取和刪除該集合的項目。  
   
  每個容器應用程式應該從 `COleClientItem` 至少衍生一個類別。 這個類別的物件表示在這個 OLE 文件中內嵌或連結的項目。 除非從文件中刪除，否則這些物件會一直存在於包含這些物件的文件中。  
   

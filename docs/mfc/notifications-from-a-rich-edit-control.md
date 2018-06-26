@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c678af3444ef408a0a9c50e972942d67e2d3cf1b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 928728093ff6e2150578c4ba48f2d8081620a48d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353849"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931140"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>來自 Rich Edit 控制項的告知
 通知訊息報告事件影響 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 它們可以處理由父視窗，或使用訊息反映由 rich edit 控制項本身。 Rich edit 控制項支援的所有編輯控制項以及數個其他項目搭配使用的通知訊息。 您可以判斷哪些通知訊息 rich edit 控制項傳送其父視窗藉由設定它的 「 事件遮罩 」。  
@@ -31,13 +31,13 @@ ms.locfileid: "33353849"
   
  下面列出數個特定通知，以及它們的用法：  
   
--   **EN_MSGFILTER**處理**EN_MSGFILTER**通知可讓類別、 任一個的豐富編輯控制項或其父視窗、 篩選所有鍵盤和滑鼠輸入至控制項。 此處理常式可以防止鍵盤或滑鼠訊息處理，或可以藉由修改指定變更訊息[MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936)結構。  
+-   EN_MSGFILTER 處理 EN_MSGFILTER 通知可讓類別，可能是 rich edit 控制項或其父視窗，篩選所有鍵盤和滑鼠輸入至控制項。 此處理常式可以防止鍵盤或滑鼠訊息處理，或可以藉由修改指定變更訊息[MSGFILTER](http://msdn.microsoft.com/library/windows/desktop/bb787936)結構。  
   
--   **EN_PROTECTED**處理**EN_PROTECTED**通知訊息來偵測當使用者嘗試修改受保護的文字。 若要將文字範圍標示為受保護，您可以設定受保護的字元效果。 如需詳細資訊，請參閱[Rich Edit 控制項中的字元格式](../mfc/character-formatting-in-rich-edit-controls.md)。  
+-   EN_PROTECTED 處理 EN_PROTECTED 通知訊息，來偵測當使用者嘗試修改受保護的文字。 若要將文字範圍標示為受保護，您可以設定受保護的字元效果。 如需詳細資訊，請參閱[Rich Edit 控制項中的字元格式](../mfc/character-formatting-in-rich-edit-controls.md)。  
   
--   **EN_DROPFILES**您可以讓使用者將卸除 rich edit 控制項中的檔案處理**EN_DROPFILES**通知訊息。 指定[ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895)結構包含要卸除之檔案的相關資訊。  
+-   EN_DROPFILES 您可以讓使用者處理 EN_DROPFILES 通知訊息來卸除 rich edit 控制項中的檔案。 指定[ENDROPFILES](http://msdn.microsoft.com/library/windows/desktop/bb787895)結構包含要卸除之檔案的相關資訊。  
   
--   **EN_SELCHANGE**應用程式可以偵測到目前的選取範圍變更處理**EN_SELCHANGE**通知訊息。 指定通知訊息[SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952)結構，其中包含新的選取範圍的相關資訊。  
+-   目前的選取範圍變更處理 EN_SELCHANGE 通知訊息時，可以偵測 EN_SELCHANGE 應用程式。 指定通知訊息[SELCHANGE](http://msdn.microsoft.com/library/windows/desktop/bb787952)結構，其中包含新的選取範圍的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   

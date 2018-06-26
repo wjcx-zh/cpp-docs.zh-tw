@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 304b47918424a73e4feda9812c372cb28db0623e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 014c3aabb770dc35fdbf106f9a225e52285d201b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345848"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929672"
 ---
 # <a name="ready-to-use-list-classes"></a>立即可用的清單類別
 下列類別是立即可用的清單類別。  
@@ -32,7 +32,7 @@ ms.locfileid: "33345848"
  將 `CObject` 類別物件的指標或衍生自 `CObject` 之類別物件的指標儲存在連結清單中。  
   
  [CPtrList](../mfc/reference/cptrlist-class.md)  
- 將 `void` 的指標 (泛型指標) 儲存在連結清單中。  
+ 將指標儲存至**void** （泛型指標） 的連結清單中。  
   
  [CStringList](../mfc/reference/cstringlist-class.md)  
  將 `CString` 物件儲存在連結清單中。  

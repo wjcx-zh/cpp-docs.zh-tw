@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ab5bd34098ee1126e015e2a8368ef5b3c48fdbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d51589d9261d497c4c1f9185bd90b889e46eb34
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381166"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930686"
 ---
 # <a name="registration"></a>註冊
 當使用者要將 OLE 項目插入至應用程式時，OLE 會顯示物件類型清單以供選擇。 OLE 會從系統註冊資料庫中取得此清單，其中包含所有伺服器應用程式提供的資訊。 當伺服器註冊其本身時，其放入系統註冊資料庫的項目 (登錄) 會說明其所提供的每個物件類型、副檔名和通往的路徑，以及其他資訊。  
@@ -59,7 +59,7 @@ ms.locfileid: "33381166"
   
  當您的伺服器應用程式啟動時，您必須確保應用程式可執行執行個體註冊。 執行個體註冊會通知 OLE 系統 DLL，伺服器為使用中並且準備接收來自容器的要求。 它不會將項目加入至註冊資料庫。 呼叫 `ConnectTemplate` 定義的 `COleTemplateServer` 成員函式，以執行伺服器的執行個體註冊。 這會將 `CDocTemplate` 物件連線到 `COleTemplateServer` 物件。  
   
- `ConnectTemplate`函式接受三個參數： 伺服器的**CLSID**，指標`CDocTemplate`物件和旗標，指出伺服器是否支援多個執行個體。 miniserver 必須能夠支援多個執行個體，也就是它必須能夠同時執行伺服器的多個執行個體，每個容器一個執行個體。 因此，傳遞**TRUE**啟動 miniserver 時，此旗標。  
+ `ConnectTemplate`函式接受三個參數： 伺服器的*CLSID*，指標`CDocTemplate`物件和旗標，指出伺服器是否支援多個執行個體。 miniserver 必須能夠支援多個執行個體，也就是它必須能夠同時執行伺服器的多個執行個體，每個容器一個執行個體。 因此，傳遞**TRUE**啟動 miniserver 時，此旗標。  
   
  如果您要撰寫 miniserver，根據定義將始終由容器啟動。 您仍應該剖析命令列以檢查「/Embedding」選項。 這個選項不在命令列上表示使用者已嘗試啟動 miniserver 做為獨立應用程式。 如果發生這種情況，請向系統註冊資料庫註冊伺服器，然後向使用者顯示訊息方塊通知使用者，從容器應用程式啟動 miniserver。  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379515"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931648"
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 物件關聯性
 為了協助放置文件/檢視建立程序，請考慮一個執行中程式：一個文件、一個用來包含檢視的框架視窗，以及與文件關聯的檢視。  
@@ -53,7 +53,7 @@ ms.locfileid: "33379515"
  通常框架視窗會有一個檢視，不過有時候在分隔視窗中，同一個框架視窗會包含多個檢視。 框架視窗會保留目前使用中檢視的指標，該指標會在其他檢視啟動時的進行更新。  
   
 > [!NOTE]
->  主框架視窗的指標儲存在[m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)應用程式物件的成員變數。 在 `OnFileNew` 的 `InitInstance` 成員函式覆寫中呼叫 `CWinApp` 會為您設定 `m_pMainWnd`。 如果您未呼叫 `OnFileNew`，則必須自己在 `InitInstance` 中設定變數值 (如果命令列上存在 /Embedding，則 SDI COM 元件 (伺服器) 應用程式可能無法設定變數)。請注意，`m_pMainWnd` 現在是 `CWinThread` 類別的成員，而非 `CWinApp` 類別在的成員。  
+>  主框架視窗的指標儲存在[m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)應用程式物件的成員變數。 呼叫`OnFileNew`的覆寫中`InitInstance`成員函式`CWinApp`設定*m_pMainWnd*您。 如果您未呼叫 `OnFileNew`，則必須自己在 `InitInstance` 中設定變數值 (如果命令列上存在 /Embedding，則 SDI COM 元件 (伺服器) 應用程式可能無法設定變數)。請注意， *m_pMainWnd*現在是類別的成員`CWinThread`而不是`CWinApp`。  
   
 ## <a name="see-also"></a>另請參閱  
  [文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)   

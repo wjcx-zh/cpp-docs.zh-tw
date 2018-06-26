@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351835"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928360"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控制項：進階屬性實作
 本文說明實作進階屬性中的 ActiveX 控制項的相關主題：  
@@ -66,9 +66,9 @@ ms.locfileid: "33351835"
  此程式碼範例會呼叫`SetNotSupported`如果`m_bReadOnlyMode`資料成員是**TRUE**。 如果**FALSE**，則屬性會設定新的值。  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> 從屬性傳回的錯誤碼  
- 若要指出錯誤發生時嘗試取得或設定屬性，使用`COleControl::ThrowError`函式，其採用`SCODE`（狀態碼） 做為參數。 您可以使用預先定義的 `SCODE` 或自行定義一個。 取得一份預先定義`SCODE`s 和定義自訂指示`SCODE`s，請參閱[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)中發行項的 ActiveX 控制項： 進階主題。  
+ 若要指出錯誤發生時嘗試取得或設定屬性，使用`COleControl::ThrowError`函式，其採用 SCODE （狀態碼） 做為參數。 您可以使用預先定義的 SCODE 或定義您自己的其中一個。 如需預先定義的 SCODEs 和定義自訂 SCODEs 指示的清單，請參閱[處理您的 ActiveX 控制項中的錯誤](../mfc/mfc-activex-controls-advanced-topics.md)中發行項的 ActiveX 控制項： 進階主題。  
   
- 針對最常見預先定義的 helper 函式存在`SCODE`s，例如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted)。  
+ Helper 函式存在的最常見預先定義的 SCODEs，例如[colecontrol:: Setnotsupported](../mfc/reference/colecontrol-class.md#setnotsupported)， [colecontrol:: Getnotsupported](../mfc/reference/colecontrol-class.md#getnotsupported)，和[colecontrol:: Setnotpermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` 適用於做為傳回從錯誤中屬性的 Get 或 Set 函式或自動化方法。 這些只適用於適當的例外狀況處理常式會出現在堆疊上的時候。  

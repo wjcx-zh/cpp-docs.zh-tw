@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354014"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930000"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控制項：進階主題
 本文涵蓋開發 ActiveX 控制項相關的進階的主題。 它們包括：  
@@ -79,9 +79,9 @@ ms.locfileid: "33354014"
   
 8.  在**取得函式**和**設定函式** 方塊中，輸入 Get 和 Set 函式的唯一名稱，或接受預設名稱。  
   
-9. 加入參數，呼叫`row`(型別`short`)，並使用**參數名稱**和**參數型別**控制項。  
+9. 加入參數，呼叫*列*(型別*簡短*)，並使用**參數名稱**和**參數型別**控制項。  
   
-10. 加入第二個參數呼叫`column`(型別`short`)。  
+10. 加入第二個參數呼叫*資料行*(型別*簡短*)。  
   
 11. 按一下 [ **完成**]。  
   
@@ -111,48 +111,48 @@ ms.locfileid: "33354014"
   
 |錯誤|描述|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|不合法的函式呼叫|  
-|**CTL_E_OVERFLOW**|溢位|  
-|**CTL_E_OUTOFMEMORY**|記憶體不足|  
-|**CTL_E_DIVISIONBYZERO**|除數為零|  
-|**CTL_E_OUTOFSTRINGSPACE**|超出字串空間|  
-|**CTL_E_OUTOFSTACKSPACE**|用完堆疊空間|  
-|**CTL_E_BADFILENAMEORNUMBER**|不正確的檔名或數目|  
-|**CTL_E_FILENOTFOUND**|找不到檔案|  
-|**CTL_E_BADFILEMODE**|不正確的檔案模式|  
-|**CTL_E_FILEALREADYOPEN**|檔案已經開啟|  
-|**CTL_E_DEVICEIOERROR**|裝置 I/O 錯誤|  
-|**CTL_E_FILEALREADYEXISTS**|檔案已經存在|  
-|**CTL_E_BADRECORDLENGTH**|不正確的資料錄長度|  
-|**CTL_E_DISKFULL**|磁碟已滿|  
-|**CTL_E_BADRECORDNUMBER**|不正確的資料錄數目|  
-|**CTL_E_BADFILENAME**|不正確的檔案名稱|  
-|**CTL_E_TOOMANYFILES**|檔案太多|  
-|**CTL_E_DEVICEUNAVAILABLE**|裝置無法使用|  
-|**CTL_E_PERMISSIONDENIED**|權限遭拒|  
-|**CTL_E_DISKNOTREADY**|磁碟未就緒|  
-|**CTL_E_PATHFILEACCESSERROR**|路徑/檔案存取錯誤|  
-|**CTL_E_PATHNOTFOUND**|找不到路徑|  
-|**CTL_E_INVALIDPATTERNSTRING**|無效的模式字串|  
-|**CTL_E_INVALIDUSEOFNULL**|使用 NULL 無效|  
-|**CTL_E_INVALIDFILEFORMAT**|檔案格式無效|  
-|**CTL_E_INVALIDPROPERTYVALUE**|無效的屬性值|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|無效的屬性陣列索引|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|在執行階段不支援 Set|  
-|**CTL_E_SETNOTSUPPORTED**|不支援 Set (唯讀屬性)|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|須提供屬性陣列索引|  
-|**CTL_E_SETNOTPERMITTED**|不允許使用 Set|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|在執行階段不支援 Get|  
-|**CTL_E_GETNOTSUPPORTED**|不支援 Get (唯寫屬性)|  
-|**CTL_E_PROPERTYNOTFOUND**|找不到屬性|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|無效的剪貼簿格式|  
-|**CTL_E_INVALIDPICTURE**|無效的圖片|  
-|**CTL_E_PRINTERERROR**|圖片錯誤|  
-|**CTL_E_CANTSAVEFILETOTEMP**|無法將檔案儲存至 TEMP|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|找不到搜尋文字|  
-|**CTL_E_REPLACEMENTSTOOLONG**|取代文字太長|  
+|CTL_E_ILLEGALFUNCTIONCALL|不合法的函式呼叫|  
+|CTL_E_OVERFLOW|溢位|  
+|CTL_E_OUTOFMEMORY|記憶體不足|  
+|CTL_E_DIVISIONBYZERO|除數為零|  
+|CTL_E_OUTOFSTRINGSPACE|超出字串空間|  
+|CTL_E_OUTOFSTACKSPACE|用完堆疊空間|  
+|CTL_E_BADFILENAMEORNUMBER|不正確的檔名或數目|  
+|CTL_E_FILENOTFOUND|找不到檔案|  
+|CTL_E_BADFILEMODE|不正確的檔案模式|  
+|CTL_E_FILEALREADYOPEN|檔案已經開啟|  
+|CTL_E_DEVICEIOERROR|裝置 I/O 錯誤|  
+|CTL_E_FILEALREADYEXISTS|檔案已經存在|  
+|CTL_E_BADRECORDLENGTH|不正確的資料錄長度|  
+|CTL_E_DISKFULL|磁碟已滿|  
+|CTL_E_BADRECORDNUMBER|不正確的資料錄數目|  
+|CTL_E_BADFILENAME|不正確的檔案名稱|  
+|CTL_E_TOOMANYFILES|檔案太多|  
+|CTL_E_DEVICEUNAVAILABLE|裝置無法使用|  
+|CTL_E_PERMISSIONDENIED|權限遭拒|  
+|CTL_E_DISKNOTREADY|磁碟未就緒|  
+|CTL_E_PATHFILEACCESSERROR|路徑/檔案存取錯誤|  
+|CTL_E_PATHNOTFOUND|找不到路徑|  
+|CTL_E_INVALIDPATTERNSTRING|無效的模式字串|  
+|CTL_E_INVALIDUSEOFNULL|使用 NULL 無效|  
+|CTL_E_INVALIDFILEFORMAT|檔案格式無效|  
+|CTL_E_INVALIDPROPERTYVALUE|無效的屬性值|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|無效的屬性陣列索引|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|在執行階段不支援 Set|  
+|CTL_E_SETNOTSUPPORTED|不支援 Set (唯讀屬性)|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|須提供屬性陣列索引|  
+|CTL_E_SETNOTPERMITTED|不允許使用 Set|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|在執行階段不支援 Get|  
+|CTL_E_GETNOTSUPPORTED|不支援 Get (唯寫屬性)|  
+|CTL_E_PROPERTYNOTFOUND|找不到屬性|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|無效的剪貼簿格式|  
+|CTL_E_INVALIDPICTURE|無效的圖片|  
+|CTL_E_PRINTERERROR|圖片錯誤|  
+|CTL_E_CANTSAVEFILETOTEMP|無法將檔案儲存至 TEMP|  
+|CTL_E_SEARCHTEXTNOTFOUND|找不到搜尋文字|  
+|CTL_E_REPLACEMENTSTOOLONG|取代文字太長|  
   
- 如果有必要，請使用**CUSTOM_CTL_SCODE**巨集來定義自訂的錯誤代碼未涵蓋的情況，由其中一個標準的程式碼。 這個巨集參數應該是介於 1000年之間的整數和 32767 之間。 例如:   
+ 如有必要，使用 CUSTOM_CTL_SCODE 巨集來定義自訂錯誤程式碼的條件，未涵蓋的其中一個標準代碼。 這個巨集參數應該是介於 1000年之間的整數和 32767 之間。 例如:   
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -176,7 +176,7 @@ ms.locfileid: "33354014"
   
      -或-  
   
--   為對話方塊的項目宣告本機變數和子類別。 插入類似下列的程式碼 (`CMyCtrl`是包裝函式類別，`IDC_MYCTRL1`是控制項的識別碼):  
+-   為對話方塊的項目宣告本機變數和子類別。 插入類似下列的程式碼 (`CMyCtrl`是包裝函式類別，IDC_MYCTRL1 是控制項的識別碼):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

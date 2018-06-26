@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ed4e022326d650b1012ad5244d8b18e9c789cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1eb904d67463cefd9fecdb33c7367bfde79e27f8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348205"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928511"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>標準 Windows 訊息的處理常式
-預設的標準 Windows 訊息處理常式 (**WM_**) 預先定義的類別中`CWnd`。 類別庫以訊息名稱作為這些處理常式的基礎。 例如，`WM_PAINT` 訊息的處理常式在 `CWnd` 宣告如下:  
+預設的標準 Windows 訊息處理常式 (**WM_**) 預先定義的類別中`CWnd`。 類別庫以訊息名稱作為這些處理常式的基礎。 例如，處理常式**WM_PAINT**訊息中所宣告`CWnd`為：  
   
  `afx_msg void OnPaint();`  
   
@@ -39,13 +39,13 @@ ms.locfileid: "33348205"
  在某些情況下，處理常式應該呼叫基底類別中被覆寫的處理常式，讓基底類別和 Windows 能對訊息產生作用。 有關在何處呼叫覆寫的基底類別處理常式，端視情況而定。 有時，您必須先呼叫基底類別處理常式，有時最後才呼叫。 如果您選擇不自行處理訊息，有時您會有條件地呼叫基底類別處理常式。 有時您應該呼叫基底類別處理常式，然後根據基底類別處理常式傳回的值或狀態，有條件地執行您自己的處理常式程式碼。  
   
 > [!CAUTION]
->  如果您想要將它們傳遞給基底類別處理常式，修改傳遞至處理常式的引數並不安全。 例如，您可能會想要修改 `nChar` 處理常式的 `OnChar` 引數 (例如轉換為大寫)。 此行為相當不清楚，但是如果您需要完成此效果，請使用`CWnd`成員函式**SendMessage**改為。  
+>  如果您想要將它們傳遞給基底類別處理常式，修改傳遞至處理常式的引數並不安全。 例如，您可能會想要修改*nChar*引數的`OnChar`處理常式 (要轉換為大寫，例如)。 此行為相當不清楚，但是如果您需要完成此效果，請使用`CWnd`成員函式`SendMessage`改為。  
   
- 如何判斷時要覆寫指定的訊息屬性 視窗會寫入指定的訊息的處理常式函式的基本架構的正確方式 —`OnCreate`處理常式`WM_CREATE`，例如，它的建議形式描繪覆寫成員函式。 下列範例建議的處理常式先呼叫基底類別處理常式，並繼續進行，只在條件，但是不會傳回-1。  
+ 如何判斷時要覆寫指定的訊息屬性 視窗會寫入指定的訊息的處理常式函式的基本架構的正確方式 —`OnCreate`處理常式**WM_CREATE**，例如，它的形式描繪建議的覆寫的成員函式。 下列範例建議的處理常式先呼叫基底類別處理常式，並繼續進行，只在條件，但是不會傳回-1。  
   
  [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- 依照慣例，這些處理常式名稱是以「On」前置詞開頭。 其中一些處理常式不接受引數，而其他則接受數個引數。 除了 `void`以外，有些也具有傳回類型。 所有的預設處理常式**WM_** 訊息所述*MFC 參考*類別成員函式為`CWnd`名稱開頭為 「 On 」。 成員函式宣告中的`CWnd`前面會加上**afx_msg**。  
+ 依照慣例，這些處理常式名稱是以「On」前置詞開頭。 其中一些處理常式不接受引數，而其他則接受數個引數。 有些也具有傳回型別以外**void**。 所有的預設處理常式**WM_** 訊息所述*MFC 參考*類別成員函式為`CWnd`名稱開頭為 「 On 」。 成員函式宣告中的`CWnd`前面會加上**afx_msg**。  
   
 ## <a name="see-also"></a>另請參閱  
  [宣告訊息處理函式](../mfc/declaring-message-handler-functions.md)

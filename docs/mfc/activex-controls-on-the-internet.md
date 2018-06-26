@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352303"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931973"
 ---
 # <a name="activex-controls-on-the-internet"></a>網際網路上的 ActiveX 控制項
 ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開發可程式化軟體元件的主要架構，可用於各種不同的容器，包括網際網路上 COM 感知的 Web 瀏覽器。 所有 ActiveX 控制項都可以是網際網路控制項，並可將其功能加入現用文件或成為網頁的一部分。 網頁上的控制項可以使用指令碼彼此通訊。  
@@ -39,7 +39,7 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
  **若要在 ActiveX 控制項，控制項必須：**  
   
--   支援**IUnknown**介面。  
+-   支援`IUnknown`介面。  
   
 -   是個 COM 物件。  
   
@@ -85,7 +85,7 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>使用 MFC ActiveX 控制項精靈建立您的專案  
   
-1.  按一下`New`上**檔案**功能表。  
+1.  按一下**新增**上**檔案**功能表。  
   
 2.  選取**MFC ActiveX 控制項精靈**從 Visual c + + 專案，並命名您的專案。  
   
@@ -129,7 +129,7 @@ ActiveX 控制項是更新版本的 OLE 控制項規格。 控制項是用於開
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  實作**Get/Set**方法。 如**取得**，傳回字串。 對於 `Set`，載入屬性並呼叫 `SetModifiedFlag`。  
+5.  實作 `Get/Set` 方法。 如`Get`，傳回字串。 對於 `Set`，載入屬性並呼叫 `SetModifiedFlag`。  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b941820b439afc8b914142b412995df30f109c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbcedd8cf217c993511bdb84a89294d7e98d6bab
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351347"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930198"
 ---
 # <a name="menus-and-resources-server-additions"></a>功能表和資源：伺服器新增
 這篇文章會說明需要功能表和其他視覺編輯伺服器 （元件） 應用程式中的資源進行的變更。 伺服器應用程式需要許多的新增項目，功能表結構和其他資源，因為它可以啟動在三種模式之一： 獨立、 內嵌的或在地方。 中所述[功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)發行項，最多四組功能表。 所有四個用於 MDI 全伺服應用程式，而只有三個適用於迷你伺服程式。 應用程式精靈會建立功能表配置所需的您想要的伺服器類型。 您可能需要某項自訂作業。  
@@ -63,14 +63,14 @@ ms.locfileid: "33351347"
   
  第二個資料表是幾乎完全相同複本檢視的快速鍵對應表。 任何差異平行中所述完全開啟的功能表中所做的變更[伺服器功能表加入](#_core_server_menu_additions)。  
   
- 如需這些快速鍵對應表變更的範例，請比較**IDR_HIERSVRTYPE_SRVR_IP**和**IDR_HIERSVRTYPE_SRVR_EMB**快速鍵對應表與**IDR_MAINFRAME**在 HIERSVR。RC 檔包含在 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)。 檔案和視窗快速鍵就地資料表中遺失，而與副本中內嵌的資料表。  
+ 如需這些快速鍵對應表變更的範例，比較 IDR_MAINFRAME HIERSVR 中與 IDR_HIERSVRTYPE_SRVR_IP 和 IDR_HIERSVRTYPE_SRVR_EMB 快速鍵對應表。RC 檔包含在 MFC OLE 範例[HIERSVR](../visual-cpp-samples.md)。 檔案和視窗快速鍵就地資料表中遺失，而與副本中內嵌的資料表。  
   
 ##  <a name="_core_string_table_additions_for_server_applications"></a> 字串資料表加入伺服器應用程式  
  只能有一個字串資料表是必要的伺服器應用程式，以表示 OLE 初始化失敗的字串。 例如，以下是應用程式精靈產生的字串資料表項目：  
   
 |識別碼|String|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|OLE 初始化失敗。 請確定 OLE 程式庫的正確版本。|  
+|IDP_OLE_INIT_FAILED|OLE 初始化失敗。 請確定 OLE 程式庫的正確版本。|  
   
 ##  <a name="_core_mini.2d.server_additions"></a> Miniserver 新增項目  
  加入項目套用與以上所列的迷你伺服程式的完整伺服器。 迷你伺服程式無法在獨立模式中執行，因為其主功能表是小很多。 應用程式精靈所建立的主功能表還包含只有檔案 功能表，只包含項目結束和關於。 內嵌和就地功能表和迷你伺服程式的快速鍵都與完整伺服器相同的。  

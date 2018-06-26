@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83b3f4f54f467ca7f4fbd2a179fdbf01d54dfa89
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354297"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930234"
 ---
 # <a name="exceptions-database-exceptions"></a>例外狀況：資料庫例外狀況
 本文說明如何處理資料庫例外狀況。 是否使用 MFC 類別開放式資料庫連接 (ODBC) 或 MFC 類別的資料存取物件 (DAO)，適用於大部分的這篇文章中的資料。 明確地標示為只適用於一個或其他模型。 主題包括：  
@@ -54,7 +54,7 @@ ms.locfileid: "33354297"
   
 -   [m_nAfxDaoError](../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)包含從 MFC DAO 類別中的延伸的錯誤碼。 這些錯誤碼，具有的名稱格式**AFX_DAO_ERROR_XXX**，記錄中的資料成員底下`CDaoException`。  
   
--   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode)包含 OLE`SCODE`從 DAO，如果適用的話。 您很少必須具有此錯誤碼，不過工作。 通常的詳細資訊可在其他兩個資料成員中。 資料成員，如需詳細資訊請參閱關於`SCODE`值。  
+-   [m_scode](../mfc/reference/cdaoexception-class.md#m_scode)包含 OLE **SCODE**從 DAO，如果適用的話。 您很少必須具有此錯誤碼，不過工作。 通常的詳細資訊可在其他兩個資料成員中。 資料成員，如需詳細資訊請參閱關於**SCODE**值。  
   
  DAO 錯誤、 DAO 錯誤物件類型和 DAO 錯誤集合的其他資訊時才可使用類別[CDaoException](../mfc/reference/cdaoexception-class.md)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33354297"
  下列範例嘗試建構[CRecordset](../mfc/reference/crecordset-class.md)-衍生的堆積上物件**新**運算子，然後再開啟資料錄集 （適用於 ODBC 資料來源）。 適用於 DAO 類別中的類似範例，請參閱以下的 < DAO 例外狀況範例 >。  
   
 ### <a name="odbc-exception-example"></a>ODBC 例外狀況範例  
- [開啟](../mfc/reference/crecordset-class.md#open)成員函式可能會擲回例外狀況 (型別[CDBException](../mfc/reference/cdbexception-class.md)適用於 ODBC 類別)，因此這個程式碼括號**開啟**呼叫**再試一次**區塊。 後續**攔截**區塊將會攔截`CDBException`。 您可以檢查例外狀況呼叫的物件本身， `e`，但在此情況下就足夠了知道嘗試建立資料錄集失敗。 **攔截**區塊顯示訊息方塊，並清除刪除的資料錄集物件。  
+ [開啟](../mfc/reference/crecordset-class.md#open)成員函式可能會擲回例外狀況 (型別[CDBException](../mfc/reference/cdbexception-class.md)適用於 ODBC 類別)，因此這個程式碼括號`Open`呼叫**再試一次**區塊。 後續**攔截**區塊將會攔截`CDBException`。 您可以檢查例外狀況呼叫的物件本身， `e`，但在此情況下就足夠了知道嘗試建立資料錄集失敗。 **攔截**區塊顯示訊息方塊，並清除刪除的資料錄集物件。  
   
  [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]  
   

@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346372"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931810"
 ---
 # <a name="handling-tool-tip-notifications"></a>處理工具提示告知
-當您指定`TBSTYLE_TOOLTIPS`樣式工具列建立和管理工具提示控制項。 工具提示是文字的小型的快顯視窗，其中包含描述工具列按鈕行。 隱藏工具提示，才會出現只有當使用者將游標放在工具列按鈕並等待約二分之一秒。 工具提示會顯示資料指標附近。  
+當您指定**TBSTYLE_TOOLTIPS**樣式工具列建立和管理工具提示控制項。 工具提示是文字的小型的快顯視窗，其中包含描述工具列按鈕行。 隱藏工具提示，才會出現只有當使用者將游標放在工具列按鈕並等待約二分之一秒。 工具提示會顯示資料指標附近。  
   
  顯示工具提示之前， **TTN_NEEDTEXT**通知訊息會傳送給工具列的主控視窗擷取按鈕的描述性文字。 如果工具列的擁有者視窗`CFrameWnd` 視窗中，而不需要任何額外的工作，會顯示提示，因為工具`CFrameWnd`具有預設處理常式，如**TTN_NEEDTEXT**通知。 如果工具列的擁有者視窗不衍生自`CFrameWnd`，例如對話方塊或表單檢視，您必須將項目加入至主控視窗的訊息對應，並提供訊息對應中的通知處理常式。 主控視窗的訊息對應的項目如下所示：  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7facc4c712d070cffe9be5f07a236b2b04b972e9
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352421"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931911"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 自訂屬性與不同的內建屬性的自訂屬性不已實作的`COleControl`類別。 自訂屬性用來公開某些狀態或 ActiveX 控制項，以程式設計人員使用控制項的外觀。  
@@ -47,7 +47,7 @@ ms.locfileid: "33352421"
   
 -   參數化的實作  
   
-     加入屬性精靈 支援參數化的實作。 （有時稱為屬性陣列） 的參數化的屬性可以用來透過控制項的單一屬性來存取一組值。 分派對應項目巨集，此實作是`DISP_PROPERTY_PARAM`。 如需實作此類型的詳細資訊，請參閱[實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)文章 ActiveX 控制項： 進階主題。  
+     加入屬性精靈 支援參數化的實作。 （有時稱為屬性陣列） 的參數化的屬性可以用來透過控制項的單一屬性來存取一組值。 分派對應項目巨集，此實作是 DISP_PROPERTY_PARAM。 如需實作此類型的詳細資訊，請參閱[實作參數化屬性](../mfc/mfc-activex-controls-advanced-topics.md)文章 ActiveX 控制項： 進階主題。  
   
 ##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 使用加入屬性精靈來加入自訂屬性  
  下列程序示範如何將自訂屬性，CircleOffset，使用 Get/Set 方法的實作。 CircleOffset 自訂屬性可讓控制項的使用者，來彌補中央的控制項的週框圓形。 將非 Get/Set 方法的實作的自訂屬性的程序是非常類似。  
@@ -66,7 +66,7 @@ ms.locfileid: "33352421"
   
      這會開啟[加入屬性精靈](../ide/names-add-property-wizard.md)。  
   
-5.  在**屬性名稱**方塊中，輸入`CircleOffset`。  
+5.  在**屬性名稱**方塊中，輸入*CircleOffset*。  
   
 6.  在 [實作類型] 中，按一下 [Get/Set 方法] 。  
   

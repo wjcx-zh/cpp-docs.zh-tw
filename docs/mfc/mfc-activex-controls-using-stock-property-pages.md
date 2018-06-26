@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e8d54f87e4e018a004bbab503664fa1788f36c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eb8dc1bbdc496072df829531b0f10aaaca069a8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347126"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932191"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控制項：使用內建屬性頁
 這篇文章討論可用的 ActiveX 控制項，以及如何使用這些內建屬性頁。  
@@ -41,13 +41,13 @@ ms.locfileid: "33347126"
   
 -   [MFC ActiveX 控制項：新增另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
- MFC ActiveX 控制項用於提供三個內建屬性頁： **CLSID_CColorPropPage**， **CLSID_CFontPropPage**，和**CLSID_CPicturePropPage**。 這些頁面會分別顯示內建的色彩、 字型和圖片屬性的使用者介面。  
+ MFC ActiveX 控制項用於提供三個內建屬性頁： `CLSID_CColorPropPage`， `CLSID_CFontPropPage`，和`CLSID_CPicturePropPage`。 這些頁面會分別顯示內建的色彩、 字型和圖片屬性的使用者介面。  
   
  若要併入控制這些屬性頁，將其識別碼加入初始化控制項的屬性頁 Id 陣列的程式碼。 下列範例中，在這段程式碼，位於控制項實作檔 (。CPP) 初始化陣列，包含所有的三個內建屬性頁和 [預設] 屬性頁 (名為`CMyPropPage`在此範例中):  
   
  [!code-cpp[NVC_MFC_AxOpt#21](../mfc/codesnippet/cpp/mfc-activex-controls-using-stock-property-pages_1.cpp)]  
   
- 請注意，在屬性的計數頁面`BEGIN_PROPPAGEIDS`巨集，為 4。 這表示 ActiveX 控制項所支援的屬性頁的數目。  
+ 請注意，屬性頁中，在 BEGIN_PROPPAGEIDS 巨集的計數 4。 這表示 ActiveX 控制項所支援的屬性頁的數目。  
   
  在進行這些修改之後，重建您的專案。 控制項現在會有字型、 圖片和色彩屬性的屬性的頁。  
   

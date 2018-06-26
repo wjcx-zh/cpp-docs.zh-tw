@@ -16,22 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f02712f3df56bf2fc04fba736f28931250f7bcb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2005391c6d91ee09703194eb8b8062ecfe08ba77
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349258"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929795"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 控制項：加入內建方法
-內建方法與自訂方法的類別已實作[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含預先定義的成員函式，可支援您的控制項重新整理方法。 此內建方法的分派對應項目是**DISP_STOCKFUNC_REFRESH**。  
+內建方法與自訂方法的類別已實作[COleControl](../mfc/reference/colecontrol-class.md)。 例如，`COleControl`包含預先定義的成員函式，可支援您的控制項重新整理方法。 此內建方法的分派對應項目是 DISP_STOCKFUNC_REFRESH。  
   
  `COleControl` 支援兩個內建的方法： DoClick 和重新整理。 重新整理會叫用控制項的使用者，若要立即更新控制項的外觀。叫用 DoClick 引發控制項的 Click 事件。  
   
 |方法|分派對應項目|註解|  
 |------------|------------------------|-------------|  
 |`DoClick`|**DISP_STOCKPROP_DOCLICK （)**|引發 Click 事件。|  
-|**重新整理**|**DISP_STOCKPROP_REFRESH （)**|立即更新控制項的外觀。|  
+|`Refresh`|**DISP_STOCKPROP_REFRESH （)**|立即更新控制項的外觀。|  
   
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> 新增內建方法，使用加入方法精靈  
  新增內建的方法很簡單使用[加入方法精靈](../ide/add-method-wizard.md)。 下列程序示範如何將重新整理方法新增至使用 MFC ActiveX 控制項精靈所建立的控制項。  

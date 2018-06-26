@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd1fbce9e6dda649da8fe2e53fc7dc70db1da33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1cbcdeec6e39e104625d1b5d47c494915a821d38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354435"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930029"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：建立類型安全集合
 本文說明如何進行資料類型的類型安全集合。 主題包括：  
@@ -52,7 +52,7 @@ ms.locfileid: "33354435"
   
 3.  如果有必要，請實作[helper 函式](../mfc/reference/collection-class-helpers.md)和[SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements)。 如需實作這些函式的詳細資訊，請參閱[實作 Helper 函式](#_core_implementing_helper_functions)。  
   
- 這個範例顯示整數清單的宣告。 步驟 1 中的第一個參數是儲存為清單項目的資料類型。 第二個參數指定之資料的方式傳遞和傳回與成員函式的集合類別，例如**新增**和`GetAt`。  
+ 這個範例顯示整數清單的宣告。 步驟 1 中的第一個參數是儲存為清單項目的資料類型。 第二個參數指定之資料的方式傳遞和傳回與成員函式的集合類別，例如`Add`和`GetAt`。  
   
 ##  <a name="_core_implementing_helper_functions"></a> 實作 Helper 函式  
  範本型集合類別 `CArray`、`CList` 和 `CMap` 使用五個您可以視需要為衍生的集合類別自訂的全域 helper 函式。 如需這些 helper 函式的詳細資訊，請參閱[集合類別 Helper](../mfc/reference/collection-class-helpers.md)中*MFC 參考*。 對於大部分範本型集合類別的使用，需要實作序列化函式。  
@@ -66,10 +66,10 @@ ms.locfileid: "33354435"
   
  [!code-cpp[NVC_MFCCollections#9](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_3.cpp)]  
   
- 多載的插入運算子`CArchive`呼叫`CObject::Serialize`（或覆寫該函式） 每個**CPerson**物件。  
+ 多載的插入運算子`CArchive`呼叫`CObject::Serialize`（或覆寫該函式） 每個`CPerson`物件。  
   
 ##  <a name="_core_using_nontemplate_collection_classes"></a> 使用非範本集合類別  
- MFC 也支援使用 MFC 1.0 版導入的集合類別。 這些類別不是以範本為基礎。 它們可以用來包含資料的支援的型別`CObject*`， **UINT**， `DWORD`，和`CString`。 您可以使用這些預先定義的集合 (例如 `CObList`) 保有從 `CObject` 衍生的任何物件的集合。 MFC 也提供其他預先定義的集合來保有基本類型，例如**UINT**和讓指標 (`void`*)。 不過，一般而言，定義自己的類型安全集合來保有更特定類別的物件及其系出物件，通常蠻實用的。 請注意，使用不以範本為基礎的集合類別，比使用範本型類別的工作更多。  
+ MFC 也支援使用 MFC 1.0 版導入的集合類別。 這些類別不是以範本為基礎。 它們可以用來包含資料的支援的型別`CObject*`， `UINT`， `DWORD`，和`CString`。 您可以使用這些預先定義的集合 (例如 `CObList`) 保有從 `CObject` 衍生的任何物件的集合。 MFC 也提供其他預先定義的集合來保有基本類型，例如`UINT`和讓指標 (`void`*)。 不過，一般而言，定義自己的類型安全集合來保有更特定類別的物件及其系出物件，通常蠻實用的。 請注意，使用不以範本為基礎的集合類別，比使用範本型類別的工作更多。  
   
  有兩種方式可使用非範本集合建立類型安全集合：  
   

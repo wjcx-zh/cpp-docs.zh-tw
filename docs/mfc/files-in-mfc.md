@@ -24,18 +24,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30d220c928f2ca3fe0594d03d558d2d6dcfce773
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 64a8df138ef0d581bcc93bf836ee0935a634983d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347077"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930499"
 ---
 # <a name="files-in-mfc"></a>MFC 中的檔案
 在 Microsoft Foundation 類別庫 (MFC)，類別[CFile](../mfc/reference/cfile-class.md)處理一般檔案 I/O 作業。 這系列文章說明如何開啟和關閉檔案以及讀取和寫入資料至檔案。 它也說明檔案狀態作業。 如需如何使用 MFC 物件架構序列化功能做為替代方式的讀取和寫入資料檔案中的說明，請參閱文章[序列化](../mfc/serialization-in-mfc.md)。  
   
 > [!NOTE]
->  當您使用 MFC **CDocument**物件時，架構會為您執行大部分的序列化工作。 特別是，架構會建立並使用 `CFile` 物件。 您只需要撰寫程式碼中的覆寫`Serialize`類別成員函式**CDocument**。  
+>  當您使用 MFC`CDocument`物件時，架構會為您執行大部分的序列化工作。 特別是，架構會建立並使用 `CFile` 物件。 您只需要撰寫程式碼中的覆寫`Serialize`類別成員函式`CDocument`。  
   
  `CFile` 類別提供一般目的二進位檔案作業介面。 從 `CStdioFile` 衍生的 `CMemFile` 和 `CFile` 類別以及從 `CSharedFile` 衍生的 `CMemFile` 類別提供更為特製化的檔案服務。  
   

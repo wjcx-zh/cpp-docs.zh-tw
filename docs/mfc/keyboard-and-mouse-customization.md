@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8fda670198dd9bd03a6d944ce4db70542926bf41
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351659"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931576"
 ---
 # <a name="keyboard-and-mouse-customization"></a>鍵盤和滑鼠自訂
 MFC 可讓應用程式的使用者自訂處理鍵盤和滑鼠輸入的方式。 使用者可以藉由指派命令的鍵盤快速鍵自訂鍵盤輸入。 使用者也可以選取在特定應用程式視窗中按兩下時應執行的命令，藉此自訂滑鼠輸入。 本主題將說明如何自訂應用程式的輸入。  
@@ -61,7 +61,7 @@ MFC 可讓應用程式的使用者自訂處理鍵盤和滑鼠輸入的方式。 
   
  您的應用程式初始化滑鼠管理員之後，架構就會將**滑鼠**索引標籤來**自訂** 對話方塊。 如果您未加入任何檢視，則存取這個索引標籤將會產生未處理的例外狀況。 建立一份檢視之後,**滑鼠** 索引標籤是供使用者使用。  
   
- 當您將新的檢視加入至滑鼠管理員時，會指定該檢視的唯一 ID。 如果您想要支援滑鼠自訂視窗，您必須處理`WM_LBUTTONDBLCLICK`訊息並呼叫[CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick)函式。 當您呼叫這個函式時，其中一個參數會是該視窗的 ID。 程式設計人員必須責任追蹤 ID 編號以及與其相關聯的物件。  
+ 當您將新的檢視加入至滑鼠管理員時，會指定該檢視的唯一 ID。 如果您想要支援滑鼠自訂視窗，您必須處理 WM_LBUTTONDBLCLICK 訊息並呼叫[CWinAppEx::OnViewDoubleClick](../mfc/reference/cwinappex-class.md#onviewdoubleclick)函式。 當您呼叫這個函式時，其中一個參數會是該視窗的 ID。 程式設計人員必須責任追蹤 ID 編號以及與其相關聯的物件。  
   
 ## <a name="security-concerns"></a>安全性考量  
  中所述[使用者定義工具](../mfc/user-defined-tools.md)，使用者可以按兩下事件與項目建立關聯的使用者定義工具 ID。 當使用者按兩下檢視時，應用程式會尋找符合相關聯 ID 的使用者工具。 如果應用程式找到相符的工具，就會執行該工具。 如果應用程式找不到符合的工具，則會傳送包含該 ID 的 WM_COMMAND 訊息至按兩下的檢視。  

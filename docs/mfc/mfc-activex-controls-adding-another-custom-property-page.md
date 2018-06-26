@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9c3d9f4744ae01a7e251387bd342b77292d1c0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350777"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931605"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控制項：加入另一個自訂屬性頁
 有時候，ActiveX 控制項將會有更多超過可合理地容納在單一的屬性頁面上的屬性。 在此情況下，您可以將屬性頁加入 ActiveX 控制項以顯示這些屬性。  
@@ -48,7 +48,7 @@ ms.locfileid: "33350777"
   
 3.  展開**對話方塊**節點，然後選取**IDD_OLE_PROPPAGE_SMALL**。  
   
-4.  按一下`New`，將資源加入至您的專案。  
+4.  按一下**新增**，將資源加入至您的專案。  
   
 5.  選取新的屬性頁面範本，若要重新整理 [屬性] 視窗。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "33350777"
   
  [!code-cpp[NVC_MFC_AxUI#32](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_1.cpp)]  
   
- 請注意，您必須增加第二個參數`BEGIN_PROPPAGEIDS`為 2 的巨集 （屬性頁面計數） 1。  
+ 請注意，您必須增加 BEGIN_PROPPAGEIDS 巨集 （屬性頁面計數） 從 1 到 2 的第二個參數。  
   
  您也必須修改控制項實作檔 (。要包含的標頭的 CPP) 檔案 (。H） 檔案的新屬性頁類別。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "33350777"
   
      [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]  
   
-7.  修改的建構函式`CAddtlPropPage`以便**IDS_SAMPLE_ADDPPG_CAPTION**傳遞至`COlePropertyPage`建構函式，如下所示：  
+7.  修改的建構函式`CAddtlPropPage`以便 IDS_SAMPLE_ADDPPG_CAPTION 傳遞至`COlePropertyPage`建構函式，如下所示：  
   
      [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]  
   

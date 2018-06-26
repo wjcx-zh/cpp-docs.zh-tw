@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9a6495c23695f8cdedf45fbdd7cbc915b96873e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355691"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929604"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 控制項：當地語系化 ActiveX 控制項
 本文將討論當地語系化 ActiveX 控制項介面的程序。  
@@ -41,7 +41,7 @@ ms.locfileid: "33355691"
     > [!NOTE]
     >  如果未來的執行個體有不同的地區設定，則這種方法在某些情況下可能無法正常運作。  
   
--   使用**OnAmbientChanged**通知函式，以動態方式載入容器的地區設定正確的資源。  
+-   使用`OnAmbientChanged`通知函式，以動態方式載入容器的地區設定正確的資源。  
   
     > [!NOTE]
     >  這種方法可在控制項中運作，不過，當環境 LocaleID 屬性變更時，執行階段 DLL 不會動態更新其資源。 此外，ActiveX 控制項的執行階段 DLL 會使用執行緒地區設定來決定其資源的地區設定。  
@@ -98,7 +98,7 @@ ms.locfileid: "33355691"
   
  [!code-cpp[NVC_MFC_AxLoc#4](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_4.cpp)]  
   
- 將上述程式碼範例放入控制項，例如的覆寫的成員函式[colecontrol:: Onsetclientsite](../mfc/reference/colecontrol-class.md#onsetclientsite)。 此外，`m_hResDLL` 應該是控制項類別的成員變數。  
+ 將上述程式碼範例放入控制項，例如的覆寫的成員函式[colecontrol:: Onsetclientsite](../mfc/reference/colecontrol-class.md#onsetclientsite)。 此外， *m_hResDLL*應該是控制項類別的成員變數。  
   
  您可以使用類似的邏輯來當地語系化控制項的屬性頁。 若要當地語系化屬性頁，將下列範例類似的程式碼加入至屬性頁的實作檔 (中的覆寫[colepropertypage:: Onsetpagesite](../mfc/reference/colepropertypage-class.md#onsetpagesite)):  
   

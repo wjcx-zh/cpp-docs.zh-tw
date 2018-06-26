@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1fac5f83f19fab37604a14e239cf505891c737f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1ae83c3e41ebabf62ad98211f3943af2b535c806
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349847"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929503"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 控制項和群組列
 Rebar 控制項的主要用途是做為子視窗、 通用對話方塊控制項、 功能表、 工具列和等等的容器。 這個內含項目會受到概念的 「 矩形 」。 每個 rebar 群組列可以包含移駐夾列、 點陣圖、 文字標籤和子視窗的任何組合。  
@@ -43,7 +43,7 @@ Rebar 控制項的主要用途是做為子視窗、 通用對話方塊控制項�
   
  [InsertBand](../mfc/reference/crebarctrl-class.md#insertband)和[DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband)加入和移除 rebar 群組列。 [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband)和[MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband)會影響特定 rebar 群組列的目前大小。 [MoveBand](../mfc/reference/crebarctrl-class.md#moveband)變更特定 rebar 群組列的索引。 [ShowBand](../mfc/reference/crebarctrl-class.md#showband)顯示或隱藏使用者 rebar 群組列。  
   
- 下列範例示範如何將工具列頻外 (`m_wndToolBar`) 至現有的 rebar 控制項 (`m_wndReBar`)。 初始化所描述的頻外`rbi`結構，然後再呼叫`InsertBand`成員函式：  
+ 下列範例示範如何將工具列頻外 (*m_wndToolBar*) 至現有的 rebar 控制項 (*m_wndReBar*)。 初始化所描述的頻外`rbi`結構，然後再呼叫`InsertBand`成員函式：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   

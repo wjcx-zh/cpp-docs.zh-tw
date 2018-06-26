@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2255f28c1250096bfbeb1a9365c57f78e17e20d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d76717e68e37769cf55dceb4492ed78031c49e10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344620"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928220"
 ---
 # <a name="containers-client-item-notifications"></a>容器：用戶端項目通知
 本文討論 MFC 架構在伺服器應用程式修改用戶端應用程式的文件中的項目時所呼叫的可覆寫函式。  
@@ -32,11 +32,11 @@ ms.locfileid: "33344620"
   
 |通知|意義|  
 |------------------|-------------|  
-|`OLE_CHANGED`|OLE 項目的外觀已變更。|  
-|`OLE_SAVED`|已儲存 OLE 項目。|  
-|`OLE_CLOSED`|OLE 項目已關閉。|  
+|**OLE_CHANGED**|OLE 項目的外觀已變更。|  
+|**OLE_SAVED**|已儲存 OLE 項目。|  
+|**OLE_CLOSED**|OLE 項目已關閉。|  
 |**OLE_RENAMED**|伺服器文件，包含 OLE 項目已重新命名。|  
-|`OLE_CHANGED_STATE`|OLE 項目已從某個狀態變更為另一個。|  
+|**OLE_CHANGED_STATE**|OLE 項目已從某個狀態變更為另一個。|  
 |**OLE_CHANGED_ASPECT**|OLE 項目的繪圖外觀架構已變更。|  
   
  這些值是從**OLE_NOTIFICATION** AFXOLE 中定義的列舉。H.  
@@ -45,9 +45,9 @@ ms.locfileid: "33344620"
   
 |當第一個引數是|第二個引數|  
 |----------------------------|---------------------|  
-|`OLE_SAVED` 或 `OLE_CLOSED`|不使用。|  
-|`OLE_CHANGED`|指定 OLE 項目已變更的外觀。|  
-|`OLE_CHANGED_STATE`|描述輸入的狀態 (`emptyState`， **loadedState**， `openState`， `activeState`，或`activeUIState`)。|  
+|**OLE_SAVED**或**OLE_CLOSED**|不使用。|  
+|**OLE_CHANGED**|指定 OLE 項目已變更的外觀。|  
+|**OLE_CHANGED_STATE**|描述輸入的狀態 (*emptyState*， *loadedState*， *openState*， *activeState*，或*activeUIState*)。|  
   
  如需可以假設用戶端項目狀態的詳細資訊，請參閱[容器： 用戶端項目狀態](../mfc/containers-client-item-states.md)。  
   

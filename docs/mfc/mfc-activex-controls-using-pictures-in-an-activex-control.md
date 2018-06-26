@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354913"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930644"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片
 本文說明常見圖片類型和如何在 ActiveX 控制項中實作。 主題包括：  
@@ -71,11 +71,11 @@ ms.locfileid: "33354913"
      這些修改主要是針對負責 ActiveX 控制項繪製的若干函式。  
   
 ##  <a name="_core_additions_to_your_control_project"></a> 於控制項專案中加入項目  
- 若要為標準圖片屬性頁加入屬性頁 ID，請在控制項實作檔 (.CPP) 中的 `BEGIN_PROPPAGEIDS` 巨集之後插入下列這行程式碼：  
+ 若要加入屬性頁 ID 為標準圖片屬性頁，插入下列這行之後 BEGIN_PROPPAGEIDS 巨集，在控制項實作檔 (。CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- 您也必須將 `BEGIN_PROPPAGEIDS` 巨集的計數參數設成以 1 遞增。 下面這行程式碼可說明這點：  
+ 您也必須以一遞增 BEGIN_PROPPAGEIDS 巨集的計數參數。 下面這行程式碼可說明這點：  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "33354913"
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- 您不一定要將資料成員命名為 `m_pic`；任何名稱都可以使用。  
+ 不需要將資料成員命名*m_pic*; 任何名稱就夠了。  
   
  接著，加入一個支援圖片類型的自訂屬性：  
   
@@ -123,7 +123,7 @@ ms.locfileid: "33354913"
 >  控制項類別和函式名稱可能會與上述範例不同。  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> 於控制項專案中修改項目  
- 當您已經在控制項專案中加入了必要的項目之後，您需要修改幾種會影響 ActiveX 控制項轉譯的函式。 這些函式，即 `OnResetState`、 `OnDraw`和自訂圖片屬性的 Get/Set 函式位於控制項實作檔中。 請注意，在這個範例中，控制項類別名稱為 `CSampleCtrl`， `CPictureHolder` 資料成員名稱為 `m_pic`，而自訂圖片屬性名稱是 `ControlPicture`。  
+ 當您已經在控制項專案中加入了必要的項目之後，您需要修改幾種會影響 ActiveX 控制項轉譯的函式。 這些函式，即 `OnResetState`、 `OnDraw`和自訂圖片屬性的 Get/Set 函式位於控制項實作檔中。 (請注意在此範例會呼叫控制項類別`CSampleCtrl`、`CPictureHolder`資料成員稱為*m_pic*，而自訂圖片屬性名稱為`ControlPicture`。)  
   
  在 `OnResetState` 控制項函式中，將下列這行選擇性的程式碼加到 `COleControl::OnResetState`呼叫之後：  
   

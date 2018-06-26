@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08d86af5f54fb9dfe81327b4589d60e5290b2610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f8f167ac560fd8e2109c149f30841ecbe3c44fc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342156"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930972"
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 通用控制項的組建需求
 Microsoft Foundation Class (MFC) 程式庫支援 Windows 通用控制項 6.1 版。 通用控制項包含在 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 中，而程式庫則包含在 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)] 中。 程式庫會提供新的方法，以增強現有類別，以及新的類別和方法，可支援[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]通用控制項。 當您建置應用程式時，您應該遵循下列章節中描述的編譯和移轉需求。  
@@ -44,7 +44,7 @@ Microsoft Foundation Class (MFC) 程式庫支援 Windows 通用控制項 6.1 版
  從 Windows 通用控制項 6.1 版開始，ANSI 版本的幾個 MFC 方法已被取代。 如需詳細資訊，請參閱[已被取代的 ANSI Api](../mfc/deprecated-ansi-apis.md)。  
   
 ## <a name="migration-requirements"></a>移轉需求  
- 如果您使用 Visual Studio IDE 建置使用 Windows 通用控制項 6.1 版的新 MFC 應用程式，IDE 會自動宣告適當的資訊清單。 不過，如果您移轉舊版 Visual Studio 的現有的 MFC 應用程式，而且想要使用新的通用控制項，IDE 不會自動提供資訊清單資訊來升級您的應用程式。 您必須改為在 stdafx.h 檔案中手動插入下列原始程式碼：  
+ 如果您使用 Visual Studio IDE 建置使用 Windows 通用控制項 6.1 版的新 MFC 應用程式，IDE 會自動宣告適當的資訊清單。 不過，如果您移轉舊版 Visual Studio 的現有的 MFC 應用程式，而且想要使用新的通用控制項，IDE 不會自動提供資訊清單資訊來升級您的應用程式。 相反地，您必須手動插入下列程式碼置於您**stdafx.h**檔案：  
   
 ```  
 #ifdef UNICODE  

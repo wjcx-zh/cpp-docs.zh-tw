@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c50e7358d29e04c81a5e443d5b1a03881fed7f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 698d8a754716f6876f9a72a0d5043807a32d2089
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346057"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932204"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外狀況：使用 MFC 巨集和 C++ 例外狀況
 這篇文章討論撰寫使用 MFC 例外狀況處理巨集和 c + + 例外狀況處理關鍵字的程式碼的考量。  
@@ -51,7 +51,7 @@ ms.locfileid: "33346057"
   
  [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]  
   
- 發生問題的原因`e`執行會通過 「 內部 」 之外時，會刪除**攔截**區塊。 使用`THROW_LAST`巨集，而不是**擲回**陳述式會導致 「 外部 」**攔截**區塊來接收有效的指標：  
+ 發生問題的原因`e`執行會通過 「 內部 」 之外時，會刪除**攔截**區塊。 使用**THROW_LAST**巨集，而不是**擲回**陳述式會導致 「 外部 」**攔截**區塊來接收有效的指標：  
   
  [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]  
   

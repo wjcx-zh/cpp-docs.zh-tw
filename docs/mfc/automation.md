@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345881"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930598"
 ---
 # <a name="automation"></a>Automation
 Automation (先前稱為 OLE Automation) 可讓應用程式操作另一個應用程式中實作的物件，或者公開物件以便提供給其他程式操作。  
@@ -57,7 +57,7 @@ Automation (先前稱為 OLE Automation) 可讓應用程式操作另一個應用
  許多商業應用程式 (例如 Microsoft Excel 和 Microsoft Visual C++) 可讓您自動化其大部分的功能。 例如，在 Visual c + + 中，您可以撰寫 VBScript 巨集來自動化組建、 程式碼編輯，或偵錯工作的層面。  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> 在 Automation 內傳遞參數  
- 建立 Automation 方法的其中一項困難點是，要在 Automation 伺服器和用戶端之間傳遞資料時，提供一致的「安全」機制。 Automation 使用 **VARIANT** 類型來傳遞資料。 **VARIANT** 類型是一個標記的 union。 它具有一個值的資料成員 (為匿名 C++ union) 和一個表示儲存在 union 中資訊之類型的資料成員。 **VARIANT** 類型支援許多標準的資料類型：2 位元和 4 位元的整數、4 位元和 8 位元的浮點數、字串和布林值。 此外，它支援 `HRESULT` (OLE 錯誤碼)、 **CURRENCY** (固定點數字類型) 和 **DATE** (絕對日期和時間) 類型，以及 **IUnknown** 的指標和 `IDispatch` 介面。  
+ 建立 Automation 方法的其中一項困難點是，要在 Automation 伺服器和用戶端之間傳遞資料時，提供一致的「安全」機制。 Automation 使用 **VARIANT** 類型來傳遞資料。 **VARIANT** 類型是一個標記的 union。 它具有一個值的資料成員 (為匿名 C++ union) 和一個表示儲存在 union 中資訊之類型的資料成員。 **VARIANT** 類型支援許多標準的資料類型：2 位元和 4 位元的整數、4 位元和 8 位元的浮點數、字串和布林值。 此外，它支援**HRESULT** （OLE 錯誤碼）、**貨幣**（固定點數字類型），和**日期**（絕對日期和時間） 類型，以及指向`IUnknown`和`IDispatch`介面。  
   
  **VARIANT** 類型封裝在 [COleVariant](../mfc/reference/colevariant-class.md) 類別中。 支援 **CURRENCY** 和 **DATE** 的類別封裝在 [COleCurrency](../mfc/reference/colecurrency-class.md) 和 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 類別中。  
   

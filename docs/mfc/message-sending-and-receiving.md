@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b7ded8dd0c818b95d6f45a722bd7b8516d48ff1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 55f450085c446503ebf86960dbee1b0d930691c2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347174"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932000"
 ---
 # <a name="message-sending-and-receiving"></a>訊息傳送和接收
 思考處理序中傳送的部分，以及架構如何回應。  
   
  大部分的訊息都是使用者與程式互動的結果。 命令是透過按一下功能表項目或工具列按鈕或快速鍵產生。 使用者也可透過諸如移動或調整視窗大小來產生 Windows 訊息。 當發生程式啟動或終止 (例如視窗取得或失去焦點) 等事件時，就會傳送其他 Windows 訊息。 控制項通知訊息是透過滑鼠點選或其他使用者與控制項 (例如對話方塊中的按鈕或清單方塊控制向) 的互動而產生。  
   
- **執行**類別成員函式`CWinApp`擷取訊息並將其分派到適當的視窗。 大部分的命令訊息都會傳送到應用程式的主框架視窗。 由類別庫預先定義的 `WindowProc` 會收到訊息並視所接收訊息的分類，以不同的方式進行路由。  
+ `Run`類別成員函式`CWinApp`擷取訊息並將其分派到適當的視窗。 大部分的命令訊息都會傳送到應用程式的主框架視窗。 由類別庫預先定義的 `WindowProc` 會收到訊息並視所接收訊息的分類，以不同的方式進行路由。  
   
  現在請考慮處理序的接收部分。  
   

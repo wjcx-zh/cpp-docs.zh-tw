@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ad3e99399e4d5db45606accfd58512f3950f26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb7362e7b9ccb15d338c09da337a6af5077a9789
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355268"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929870"
 ---
 # <a name="multipage-documents"></a>多頁文件
 本文描述 Windows 列印通訊協定並說明如何列印包含多個頁面的文件。 本文包括下列主題：  
@@ -99,7 +99,7 @@ ms.locfileid: "33355268"
   
  `DoPreparePrinting` 接著會顯示 [列印] 對話方塊。 當它傳回時，`CPrintInfo` 結構會包含使用者指定的值。 如果使用者只想要列印某個選取範圍的頁面，則可以在 [列印] 對話方塊中指定開始和結束頁碼。 架構會擷取使用這些值`GetFromPage`和`GetToPage`函式的[CPrintInfo](../mfc/reference/cprintinfo-structure.md)。 如果使用者未指定列印範圍，架構會呼叫 `GetMinPage` 和 `GetMaxPage`，並使用傳回的值列印整份文件。  
   
- 為要列印的文件的每一頁，架構會呼叫兩個成員函式在檢視類別中， [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)和[OnPrint](../mfc/reference/cview-class.md#onprint)，並將每個函式傳遞兩個參數： 指標[CDC](../mfc/reference/cdc-class.md)物件以及一個指向`CPrintInfo`結構。 每次架構呼叫 `OnPrepareDC` 和 `OnPrint` 時，會傳遞不同的值給 `m_nCurPage` 結構的 `CPrintInfo` 成員。 在這種方式下，架構會指示檢視所要列印的頁面。  
+ 為要列印的文件的每一頁，架構會呼叫兩個成員函式在檢視類別中， [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)和[OnPrint](../mfc/reference/cview-class.md#onprint)，並將每個函式傳遞兩個參數： 指標[CDC](../mfc/reference/cdc-class.md)物件以及一個指向`CPrintInfo`結構。 每次架構呼叫`OnPrepareDC`和`OnPrint`，它會傳遞不同的值*m_nCurPage*隸屬`CPrintInfo`結構。 在這種方式下，架構會指示檢視所要列印的頁面。  
   
  [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)成員函式也用於螢幕顯示。 在繪製之前，它會調整裝置內容。 `OnPrepareDC` 的功能與列印類似，不過其中有兩個差異：首先，`CDC` 物件代表印表機內容而非螢幕裝置內容，其次，`CPrintInfo` 物件會做為第二個參數傳遞 (這個參數是**NULL**時`OnPrepareDC`稱為進行螢幕顯示。)覆寫 `OnPrepareDC` 視列印頁面調整裝置內容。 例如，您可以捲動檢視區原點和裁剪區域確定將會印出文件的適當部分。  
   
@@ -110,16 +110,16 @@ ms.locfileid: "33355268"
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> 印表機頁面 vs。文件頁面  
  當您參考頁碼時，區別頁面的印表機概念與頁面的文件概念有時候是必要的。 從印表機檢視的角度來說，一個頁面就是一張紙。 不過，一張紙不一定等於文件的一個頁面。 例如，如果您列印的是會摺疊紙張的報紙，則一張紙可能同時包含文件的第一頁和最後一頁。 同樣地，如果您列印的是試算表，則文件根本不是由頁面所組成。 相反地，一張紙可能包含第 1 列到第 20 列，第 6 行至第 10 行。  
   
- 所有頁碼中[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構參考印表機頁面。 架構會在每張紙張通過印表機時呼叫 `OnPrepareDC` 和 `OnPrint`。 當您覆寫[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)函式指定文件長度，您必須使用印表機頁面。 如果其中具有一對一的對應關係 (也就是印表機頁面等於文件頁面)，則這是容易的。 另一方面，如果文件頁面和印表機頁面無法直接對應，您必須在兩者之間進行轉譯。 例如，請考慮列印試算表的情形。 當覆寫 `OnPreparePrinting` 時，您必須計算列印整份試算表需要多少紙張，並在呼叫 `SetMaxPage` 的 `CPrintInfo` 成員函式時使用該值。 同樣地，覆寫 `OnPrepareDC` 時，您必須將 `m_nCurPage` 轉譯為會顯示在特定工作表上的行列範圍，然後據其調整檢視區的原點。  
+ 所有頁碼中[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構參考印表機頁面。 架構會在每張紙張通過印表機時呼叫 `OnPrepareDC` 和 `OnPrint`。 當您覆寫[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)函式指定文件長度，您必須使用印表機頁面。 如果其中具有一對一的對應關係 (也就是印表機頁面等於文件頁面)，則這是容易的。 另一方面，如果文件頁面和印表機頁面無法直接對應，您必須在兩者之間進行轉譯。 例如，請考慮列印試算表的情形。 當覆寫 `OnPreparePrinting` 時，您必須計算列印整份試算表需要多少紙張，並在呼叫 `SetMaxPage` 的 `CPrintInfo` 成員函式時使用該值。 同樣地，當覆寫`OnPrepareDC`，則必須將轉譯*m_nCurPage*插入資料列和資料行，將會出現在特定工作表上，然後據以調整檢視區原點的範圍。  
   
 ##  <a name="_core_print.2d.time_pagination"></a> 列印時分頁  
  在某些狀況下，您的檢視類別在實際列印前無法事先知道文件的長度。 例如，假設您的應用程式不是 WYSIWYG，則螢幕上文件的長度與列印時的長度無法對應。  
   
  這會造成問題，當您覆寫[OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting)檢視類別： 您無法將值傳遞`SetMaxPage`函式的[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構，因為您不知道的長度文件。 如果使用者在使用 [列印] 對話方塊未指定停止的頁碼，架構就不知道應於何時停止列印迴圈。 唯一判斷何時停止列印迴圈的方式是印出文件然後看它何時結束。 您的檢視類別必須在列印時檢查文件的結尾，然後在到達尾端時告知架構。  
   
- 架構仰賴檢視類別的[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)函式來得知其何時停止。 在呼叫每個 `OnPrepareDC` 之後，架構會檢查名為 `CPrintInfo` 的 `m_bContinuePrinting` 結構的成員。 預設值是 **，則為 TRUE。** 只要該值保持不變，架構就會繼續進行列印迴圈。 如果設定為**FALSE**，架構會停止。 若要執行列印時分頁，覆寫`OnPrepareDC`檢查文件結尾是否已達到，而且設定`m_bContinuePrinting`至**FALSE**時有。  
+ 架構仰賴檢視類別的[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)函式來得知其何時停止。 若要每次呼叫之後`OnPrepareDC`，架構會檢查的成員`CPrintInfo`結構稱為*m_bContinuePrinting*。 預設值是 **，則為 TRUE。** 只要該值保持不變，架構就會繼續進行列印迴圈。 如果設定為**FALSE**，架構會停止。 若要執行列印時分頁，覆寫`OnPrepareDC`檢查文件結尾是否已達到，而且設定*m_bContinuePrinting*至**FALSE**時有。  
   
- 預設實作`OnPrepareDC`設定`m_bContinuePrinting`至**FALSE**如果目前頁面大於 1。 這表示，如果未指定文件的長度，架構會假設文件的長度為一頁。 這樣一來，您必須在呼叫 `OnPrepareDC` 的基底類別版本時特別小心。 不要假設`m_bContinuePrinting`將**TRUE**之後呼叫基底類別版本。  
+ 預設實作`OnPrepareDC`設定*m_bContinuePrinting*至**FALSE**如果目前頁面大於 1。 這表示，如果未指定文件的長度，架構會假設文件的長度為一頁。 這樣一來，您必須在呼叫 `OnPrepareDC` 的基底類別版本時特別小心。 不要假設*m_bContinuePrinting*將**TRUE**之後呼叫基底類別版本。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
   

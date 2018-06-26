@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 33068a96d8d0ca0a228012385da6437c455468e5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346613"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928537"
 ---
 # <a name="document-classes"></a>文件類別
 建立的文件範本物件的文件類別物件來管理應用程式的資料。 您將會從這些類別的其中一個，您的文件衍生類別。  
@@ -29,7 +29,7 @@ ms.locfileid: "33346613"
  檢視物件的文件類別物件互動。 檢視物件表示視窗工作區、 顯示文件的資料，並允許使用者與它互動。 文件範本物件會建立文件和檢視。  
   
  [CDocument](../mfc/reference/cdocument-class.md)  
- 應用程式特定文件的基底類別。 衍生您的文件類別或類別從**CDocument**。  
+ 應用程式特定文件的基底類別。 衍生您的文件類別或類別從`CDocument`。  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
  用於複合文件的實作，以及基本的容器支援。 做為容器類別，衍生自[CDocItem](../mfc/reference/cdocitem-class.md)。 這個類別可用來當作基底類別的文件容器中，是基底類別`COleServerDoc`。  

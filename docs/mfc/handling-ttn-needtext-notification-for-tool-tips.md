@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7a4d6dc6edf122b5d9b5301768dea8389e771e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345913"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931960"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>處理工具提示的 TTN_NEEDTEXT 告知
 做為一部分[啟用工具提示](../mfc/enabling-tool-tips.md)，您處理**TTN_NEEDTEXT**將下列項目加入至主控視窗的訊息對應的訊息：  
@@ -48,7 +48,7 @@ ms.locfileid: "33345913"
  指標[NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258)結構。 此外也會討論這個結構中進一步[TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)。  
   
  `pResult`  
- 結果的程式碼之指標您可以設定才能傳回。 **TTN_NEEDTEXT**處理常式可以忽略`pResult`參數。  
+ 結果的程式碼之指標您可以設定才能傳回。 **TTN_NEEDTEXT**處理常式可以忽略*pResult*參數。  
   
  例如表單檢視通知處理常式中：  
   

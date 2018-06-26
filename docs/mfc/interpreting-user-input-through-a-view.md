@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3ade658046ad789a92bce044d12e5a6e76f7ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62d64ed9479f1d1003536f8c4944b53d04d696f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349425"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931986"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>透過檢視解譯使用者輸入
 檢視的其他成員函式處理，並解譯所有使用者輸入。 您通常會在您要處理的檢視類別定義訊息處理常式成員函式：  
@@ -44,7 +44,7 @@ ms.locfileid: "33349425"
   
  [訊息處理和對應的主題](../mfc/message-handling-and-mapping.md)說明如何將功能表項目與其他使用者介面物件指派給命令，以及如何將命令繫結至處理函式。 [訊息處理和對應的主題](../mfc/message-handling-and-mapping.md)也說明 MFC 將命令路由，並將標準 Windows 訊息傳送到包含處理常式的物件。  
   
- 例如，您的應用程式可能需要實作直接繪製在檢視中的滑鼠。 Scribble 範例示範如何處理`WM_LBUTTONDOWN`， `WM_MOUSEMOVE`，和`WM_LBUTTONUP`訊息分別若要開始，繼續進行，且結尾繪製的直線線段。 相反地，您有時可能需要解譯成選取在檢視中的按一下滑鼠。 您的檢視`OnLButtonDown`處理常式函式會判斷使用者是否已繪製，或是選取。 如果選取，此處理常式會判斷是否在檢視中的某些物件的界限內按一下，而且如果是這樣，alter 顯示畫面來顯示為已選取的物件。  
+ 例如，您的應用程式可能需要實作直接繪製在檢視中的滑鼠。 Scribble 範例示範如何處理 WM_LBUTTONDOWN、 WM_MOUSEMOVE 及 WM_LBUTTONUP 訊息分別以開始、 繼續和結束繪製的直線線段。 相反地，您有時可能需要解譯成選取在檢視中的按一下滑鼠。 您的檢視`OnLButtonDown`處理常式函式會判斷使用者是否已繪製，或是選取。 如果選取，此處理常式會判斷是否在檢視中的某些物件的界限內按一下，而且如果是這樣，alter 顯示畫面來顯示為已選取的物件。  
   
  您的檢視可能也會處理某些功能表命令，例如剪下、 複製、 貼上，或刪除選取的資料使用剪貼簿的 [編輯] 功能表命令。 這類處理常式會呼叫某些剪貼簿 相關的成員函式類別的`CWnd`傳送選取的資料項目或從剪貼簿。  
   

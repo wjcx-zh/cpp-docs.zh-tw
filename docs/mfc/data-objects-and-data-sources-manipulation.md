@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c3414734f40ee81689ffa2f160cbbab8306d2b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f276e85be33f3042b19ab7dc6158a4e9f856fb2e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349905"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929857"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>資料物件和資料來源：管理
 建立資料物件或資料來源之後，您可以執行的數字的資料，例如插入和移除資料，列舉資料的格式，以及其他更多資訊的一般作業。 本文說明完成最常見的作業所需的技巧。 主題包括：  
@@ -73,7 +73,7 @@ ms.locfileid: "33349905"
   
     -   呼叫資料物件的`BeginEnumFormats`成員函式來開始列舉剪貼簿上可用的格式。 然後呼叫`GetNextFormat`直到返回剪貼簿格式應用程式所支援或有沒有更多的格式。  
   
- 如果您使用`ON_UPDATE_COMMAND_UI`，您現在可以啟用貼上和，可能是 [編輯] 功能表上的選擇性貼上項目。 若要這樣做，請呼叫`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 如需有關哪個容器應用程式應與功能表項目和，請參閱 <<c0> [ 功能表和資源： 容器新增](../mfc/menus-and-resources-container-additions.md)。  
+ 如果您使用**ON_UPDATE_COMMAND_UI**，您現在可以啟用貼上和，可能是 [編輯] 功能表上的選擇性貼上項目。 若要這樣做，請呼叫`CMenu::EnableMenuItem`或`CCmdUI::Enable`。 如需有關哪個容器應用程式應與功能表項目和，請參閱 <<c0> [ 功能表和資源： 容器新增](../mfc/menus-and-resources-container-additions.md)。  
   
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> 從資料物件擷取資料  
  一旦您決定的資料格式，所有剩下的都只有從資料物件擷取資料。 若要這樣做，使用者會決定要放置資料和應用程式會呼叫適當的函式。 資料會是其中一個可用的下列媒體：  

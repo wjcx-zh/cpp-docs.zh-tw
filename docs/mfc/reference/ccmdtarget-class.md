@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dfc1c4d5cf753ae102d7656e94d63923004d2cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356488"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955657"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 Microsoft Foundation 類別庫訊息對應架構基底類別。  
@@ -131,7 +131,7 @@ void BeginWaitCursor();
 ```  
   
 ### <a name="remarks"></a>備註  
- 架構會呼叫此函式可讓使用者很忙碌中，例如當**CDocument**物件載入或儲存至檔案本身。  
+ 架構會呼叫此函式可讓使用者很忙碌中，例如當`CDocument`物件載入或儲存至檔案本身。  
   
  動作的`BeginWaitCursor`並不一定有效以外的單一訊息處理常式做為其他動作，例如`OnSetCursor`處理，可能會變更資料指標。  
   
@@ -159,16 +159,16 @@ BOOL DoOleVerb(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iVerb`  
+ *iVerb*  
  動詞命令的數值識別項。  
   
- `lpMsg`  
+ *lpMsg*  
  指標[MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958)結構描述 （例如按兩下） 叫用動詞命令的事件。  
   
- `hWndParent`  
+ *hWndParent*  
  文件視窗的控制代碼，包含物件。  
   
- `lpRect`  
+ *lpRect*  
  指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含的座標，以像素，定義物件之週框中*hwndParent*。  
   
 ### <a name="return-value"></a>傳回值  
@@ -228,11 +228,11 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppenumOleVerb`  
+ *ppenumOleVerb*  
  指標的指標[IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084)介面。  
   
 ### <a name="return-value"></a>傳回值  
- 如果物件支援至少一個 OLE 指令動詞則為 TRUE (在此情況下\*`ppenumOleVerb`指向**IEnumOLEVERB**列舉程式介面)，否則為 FALSE。  
+ 如果物件支援至少一個 OLE 指令動詞則為 TRUE (在此情況下\* *ppenumOleVerb*指向`IEnumOLEVERB`列舉程式介面)，否則為 FALSE。  
   
 ### <a name="remarks"></a>備註  
  此成員函式基本上是實作[IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)。  
@@ -245,11 +245,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDispatch`  
+ *lpDispatch*  
  `IDispatch` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CCmdTarget`物件相關聯`lpDispatch`。 此函數會傳回**NULL**如果`IDispatch`物件無法辨識為 Microsoft Foundation Class`IDispatch`物件。  
+ 指標`CCmdTarget`物件相關聯*lpDispatch*。 此函數會傳回**NULL**如果`IDispatch`物件無法辨識為 Microsoft Foundation Class`IDispatch`物件。  
   
 ### <a name="remarks"></a>備註  
  此函式的結果是成員函式呼叫的反向`GetIDispatch`。  
@@ -303,7 +303,7 @@ virtual UINT GetTypeInfoCount();
 ### <a name="remarks"></a>備註  
  此成員函式基本上會實作[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12)。  
   
- 在衍生的類別應該覆寫此函數來傳回所提供的 （0 或 1） 的類型資訊介面數目。 如果未覆寫， **GetTypeInfoCount**傳回 0。 若要覆寫，請使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeLib`和`GetTypeLibCache`。  
+ 在衍生的類別應該覆寫此函數來傳回所提供的 （0 或 1） 的類型資訊介面數目。 如果未覆寫，`GetTypeInfoCount`傳回 0。 若要覆寫，請使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeLib`和`GetTypeLibCache`。  
   
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  擷取對應於指定之 GUID 的類型描述。  
@@ -316,17 +316,17 @@ HRESULT GetTypeInfoOfGuid(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lcid`  
+ *lcid*  
  地區設定識別碼 ( `LCID`)。  
   
- `guid`  
+ *guid*  
  [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931)的類型描述。  
   
- `ppTypeInfo`  
+ *ppTypeInfo*  
  指標的指標`ITypeInfo`介面。  
   
 ### <a name="return-value"></a>傳回值  
- HRESULT，指出成功或失敗的呼叫。 如果成功的話，*`ppTypeInfo`指向類型資訊介面。  
+ HRESULT，指出成功或失敗的呼叫。 如果成功的話，* *ppTypeInfo*指向類型資訊介面。  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  取得類型程式庫的指標。  
@@ -338,14 +338,14 @@ virtual HRESULT GetTypeLib(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lcid`  
+ *lcid*  
  地區設定識別碼 ( `LCID`)。  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  指標的指標`ITypeLib`介面。  
   
 ### <a name="return-value"></a>傳回值  
- HRESULT，指出成功或失敗的呼叫。 如果成功的話，*`ppTypeLib`指向類型程式庫的介面。  
+ HRESULT，指出成功或失敗的呼叫。 如果成功的話，* *ppTypeLib*指向類型程式庫的介面。  
   
 ### <a name="remarks"></a>備註  
  在衍生的類別應該覆寫此成員函式 (如果未覆寫，`GetTypeLib`傳回 TYPE_E_CANTLOADLIBRARY)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeInfoCount`和`GetTypeLibCache`。  
@@ -358,27 +358,27 @@ virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標**CTypeLibCache**物件。  
+ 指標`CTypeLibCache`物件。  
   
 ### <a name="remarks"></a>備註  
- 在衍生的類別應該覆寫此成員函式 (如果未覆寫， **GetTypeLibCache**傳回 NULL)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeInfoCount`和`GetTypeLib`。  
+ 在衍生的類別應該覆寫此成員函式 (如果未覆寫，`GetTypeLibCache`傳回 NULL)。 使用[IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib)巨集，也會實作`GetTypeInfoCount`和`GetTypeLib`。  
   
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
- MFC 的實作會呼叫此函式**idispatch:: Invoke**判斷給定的自動化方法 (由`dispid`) 可以叫用。  
+ MFC 的實作會呼叫此函式`IDispatch::Invoke`判斷給定的自動化方法 (由*dispid*) 可以叫用。  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dispid`  
+ *dispid*  
  分派識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法可以叫用，否則為 FALSE，則為 TRUE。  
   
 ### <a name="remarks"></a>備註  
- 如果`IsInvokeAllowed`會傳回 TRUE， **Invoke**繼續進行呼叫的方法; 否則`Invoke`將會失敗，並傳回 E_UNEXPECTED。  
+ 如果`IsInvokeAllowed`會傳回 TRUE，`Invoke`繼續進行呼叫的方法; 否則`Invoke`將會失敗，並傳回 E_UNEXPECTED。  
   
  在衍生的類別可以覆寫此函數來傳回適當的值 (如果未覆寫， `IsInvokeAllowed` ，則傳回 TRUE)。 請特別參閱[COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)。  
   
@@ -411,17 +411,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  包含命令識別碼。  
   
- `nCode`  
- 識別命令通知程式碼。 請參閱**備註**如需有關值`nCode`。  
+ *則 nCode*  
+ 識別命令通知程式碼。 請參閱**備註**如需有關值*則 nCode*。  
   
- `pExtra`  
- 依據的值來使用`nCode`。 請參閱**備註**如需有關`pExtra`。  
+ *pExtra*  
+ 依據的值來使用*則 nCode*。 請參閱**備註**如需有關*pExtra*。  
   
- `pHandlerInfo`  
- 如果沒有**NULL**，`OnCmdMsg`填入**pTarget**和**pmf**成員`pHandlerInfo`結構，而不是分派命令。 此參數通常應該**NULL**。  
+ *pHandlerInfo*  
+ 如果沒有**NULL**，`OnCmdMsg`填入*pTarget*和*pmf*成員*pHandlerInfo*而不是分派結構命令。 此參數通常應該**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  如果處理訊息; 的非零，否則便是 0。  
@@ -433,9 +433,9 @@ virtual BOOL OnCmdMsg(
   
  在少數情況下，您可能想要覆寫此成員函式，來延伸架構的標準命令路由。 請參閱[技術提示 21](../../mfc/tn021-command-and-message-routing.md)的命令路由架構的進階詳細資料。  
   
- 如果您覆寫`OnCmdMsg`，您必須提供適當的值給`nCode`，命令通知程式碼和`pExtra`，而定的值`nCode`。 下表列出其對應的值：  
+ 如果您覆寫`OnCmdMsg`，您必須提供適當的值給*則 nCode*，命令通知程式碼和*pExtra*，而定的值*則 nCode*. 下表列出其對應的值：  
   
-|`nCode` 值|`pExtra` 值|  
+|*則 nCode*值|*pExtra*值|  
 |-------------------|--------------------|  
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
 |CN_EVENT|AFX_EVENT *|  

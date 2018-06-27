@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80b63c6bd44b6d3606b7807913f1e3ae1b4e33f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f53d96c6b4c30b79d9724421debd7ccc989b64f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372326"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955699"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
 封裝日期與時間選擇器控制項的功能。  
@@ -132,7 +132,7 @@ void CloseMonthCal() const;
  這個方法會傳送[DTM_CLOSEMONTHCAL](http://msdn.microsoft.com/library/windows/desktop/bb761753) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_dateTimeCtrl`，也就是用來以程式設計方式存取 日期和時間選擇器控制項。 下一個範例中會使用此變數。  
+ 下列程式碼範例會定義變數*m_dateTimeCtrl*，也就是用來以程式設計方式存取 日期和時間選擇器控制項。 下一個範例中會使用此變數。  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -153,16 +153,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定日期時間控制項樣式的組合。 請參閱[日期和時間選擇器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761728)如需有關日期和時間選擇器樣式的 Windows SDK 中。  
   
- `rect`  
+ *rect*  
  若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，也就是日期和時間選擇器控制項的大小與位置。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指標[CWnd](../../mfc/reference/cwnd-class.md)是日期和時間選擇器控制項的父視窗的物件。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定日期和時間選擇器控制項的控制項 id。  
   
 ### <a name="return-value"></a>傳回值  
@@ -192,7 +192,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸出] `pDateTimePickerInfo`|指標[DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729)收到將目前的日期和時間選擇器控制項的描述的結構。<br /><br /> 呼叫端會負責配置這個結構。 不過，這個方法會初始化`cbSize`結構的成員。|  
+|[out]*pDateTimePickerInfo*|指標[DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729)收到將目前的日期和時間選擇器控制項的描述的結構。<br /><br /> 呼叫端會負責配置這個結構。 不過，這個方法會初始化*cbSize*結構的成員。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -201,7 +201,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
  這個方法會傳送[DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_dateTimeCtrl`，也就是用來以程式設計方式存取 日期和時間選擇器控制項。 下一個範例中會使用此變數。  
+ 下列程式碼範例會定義變數*m_dateTimeCtrl*，也就是用來以程式設計方式存取 日期和時間選擇器控制項。 下一個範例中會使用此變數。  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -218,8 +218,8 @@ COLORREF GetMonthCalColor(int iColor) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `iColor`  
- `int`值，指定要擷取月份行事曆色彩區域。 如需值的清單，請參閱`iColor`參數[SetMonthCalColor](#setmonthcalcolor)。  
+ *iColor*  
+ **Int**值，指定要擷取月份行事曆色彩區域。 如需值的清單，請參閱*iColor*參數[SetMonthCalColor](#setmonthcalcolor)。  
   
 ### <a name="return-value"></a>傳回值  
  A **COLORREF**表示月曆控制項的指定部分的色彩設定，如果成功的值。 如果不成功，函式會傳回-1。  
@@ -286,10 +286,10 @@ DWORD GetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMinRange`  
+ *pMinRange*  
  指標[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含在允許的最早時間`CDateTimeCtrl`物件。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指標`COleDateTime`物件或`CTime`物件，其中包含在允許的最新時間`CDateTimeCtrl`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -326,12 +326,12 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
  指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)接收系統時間資訊的結構。 不能**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
- 在第一個版本中，如果已成功寫入時間則為非零`COleDateTime`物件; 否則為 0。 在第二個和第三個版本中，`DWORD`值等於**dwFlag**集合的成員[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構。 請參閱**備註**下面章節，如需詳細資訊。  
+ 在第一個版本中，如果已成功寫入時間則為非零`COleDateTime`物件; 否則為 0。 在第二個和第三個版本中，`DWORD`值等於*dwFlag*集合的成員[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構。 請參閱**備註**下面章節，如需詳細資訊。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769)、 Windows SDK 中所述。 中的 MFC 實作**GetTime**，您可以使用`COleDateTime`或`CTime`類別，或者您可以使用`SYSTEMTIME`結構中，儲存的時間資訊。  
+ 此成員函式實作的 Win32 訊息行為[DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769)、 Windows SDK 中所述。 中的 MFC 實作`GetTime`，您可以使用`COleDateTime`或`CTime`類別，或者您可以使用`SYSTEMTIME`結構中，儲存的時間資訊。  
   
- 傳回值`DWORD`在第二個和第三個版本中，以上版本，表示日期和時間選擇器控制項是否設定為 「 沒有日期 」 狀態，如下所示[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構成員`dwFlags`。 如果傳回的值等於**GDT_NONE**，控制項設定為 「 沒有日期 」 狀態，並使用**DTS_SHOWNONE**樣式。 如果傳回的值等於**GDT_VALID**，系統時間已成功儲存在目的地位置。  
+ 傳回值`DWORD`在第二個和第三個版本中，以上版本，表示日期和時間選擇器控制項是否設定為 「 沒有日期 」 狀態，如下所示[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構成員*將 dwFlags*。 如果傳回的值等於**GDT_NONE**，控制項設定為 「 沒有日期 」 狀態，並使用**DTS_SHOWNONE**樣式。 如果傳回的值等於**GDT_VALID**，系統時間已成功儲存在目的地位置。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
@@ -347,7 +347,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸出] `psize`|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構，包含控制項的理想大小。|  
+|[out]*psize*|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構，包含控制項的理想大小。|  
   
 ### <a name="return-value"></a>傳回值  
  傳回值永遠是`true`。  
@@ -356,7 +356,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
  這個方法會傳送[DTM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb761757) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_dateTimeCtrl`，也就是用來以程式設計方式存取 日期和時間選擇器控制項。 下一個範例中會使用此變數。  
+ 下列程式碼範例會定義變數*m_dateTimeCtrl*，也就是用來以程式設計方式存取 日期和時間選擇器控制項。 下一個範例中會使用此變數。  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -398,8 +398,8 @@ COLORREF SetMonthCalColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- `iColor`  
- `int` 值，指定設定月曆控制項的區域。 這個值可以是下列其中一項。  
+ *iColor*  
+ **int**值，指定設定月曆控制項的區域。 這個值可以是下列其中一項。  
   
 |值|意義|  
 |-----------|-------------|  
@@ -410,7 +410,7 @@ COLORREF SetMonthCalColor(
 |MCSC_TITLETEXT|設定用來顯示日曆標題內文字的色彩。|  
 |MCSC_TRAILINGTEXT|設定用來顯示標頭和結尾的日期文字的色彩。 標頭日期及其後日期會從目前的行事曆會出現之前與之後月份的天數。|  
   
- `ref`  
+ *ref*  
  A **COLORREF**值，表示將會設定為月份行事曆的指定區域的色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -432,10 +432,10 @@ void SetMonthCalFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hFont`  
+ *hFont*  
  將設定的字型的控制代碼。  
   
- `bRedraw`  
+ *bRedraw*  
  指定是否應該會重繪控制項立即時設定字型。 此參數設定為**TRUE**使控制項重繪其本身。  
   
 ### <a name="remarks"></a>備註  
@@ -445,7 +445,7 @@ void SetMonthCalFont(
  [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]  
   
 > [!NOTE]
->  如果您使用此程式碼，您要將您`CDialog`-衍生的類別呼叫`m_MonthFont`型別的**CFont**。  
+>  如果您使用此程式碼，您要將您`CDialog`-衍生的類別呼叫*m_MonthFont*型別的`CFont`。  
   
 ##  <a name="setmonthcalstyle"></a>  CDateTimeCtrl::SetMonthCalStyle  
  設定下拉式月曆控制項與目前的日期和時間選擇器控制項相關聯的樣式。  
@@ -458,7 +458,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `dwStyle`|新的月份行事曆控制項樣式，也就是的位元組合 (OR) 月份行事曆控制項樣式。 如需詳細資訊，請參閱[月份行事曆控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。|  
+|[in]*dwStyle*|新的月份行事曆控制項樣式，也就是的位元組合 (OR) 月份行事曆控制項樣式。 如需詳細資訊，請參閱[月份行事曆控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。|  
   
 ### <a name="return-value"></a>傳回值  
  下拉式月曆控制項先前的樣式。  
@@ -467,7 +467,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
  這個方法會傳送[DTM_SETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761778) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_dateTimeCtrl`，也就是用來以程式設計方式存取 日期和時間選擇器控制項。 下一個範例中會使用此變數。  
+ 下列程式碼範例會定義變數*m_dateTimeCtrl*，也就是用來以程式設計方式存取 日期和時間選擇器控制項。 下一個範例中會使用此變數。  
   
  [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
@@ -491,10 +491,10 @@ BOOL SetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pMinRange`  
+ *pMinRange*  
  指標[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含在允許的最早時間`CDateTimeCtrl`物件。  
   
- `pMaxRange`  
+ *pMaxRange*  
  指標`COleDateTime`物件或`CTime`物件，其中包含在允許的最新時間`CDateTimeCtrl`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -526,7 +526,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782)、 Windows SDK 中所述。 中的 MFC 實作**SetTime**，您可以使用`COleDateTime`或`CTime`類別，或者您可以使用`SYSTEMTIME`結構，來設定將時間資訊。  
+ 此成員函式實作的 Win32 訊息行為[DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782)、 Windows SDK 中所述。 中的 MFC 實作`SetTime`，您可以使用`COleDateTime`或`CTime`類別，或者您可以使用`SYSTEMTIME`結構，來設定將時間資訊。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  

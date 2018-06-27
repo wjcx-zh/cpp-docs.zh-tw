@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 696b0d63a7b81b550e99981f199132713fe8a6ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0d67012afe34cf3fe2c4633f2d838d1f3bfb49
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377036"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952527"
 ---
 # <a name="cdocument-class"></a>CDocument 類別
 提供使用者定義的文件類別的基本功能。  
@@ -228,7 +228,7 @@ class CDocument : public CCmdTarget
 ## <a name="remarks"></a>備註  
  文件表示使用者通常會隨即開啟，並開啟檔案 命令，並會以儲存檔案的命令，將資料的單元。  
   
- **CDocument**支援標準的作業，例如建立文件、 載入它，以及儲存它。 架構會管理使用介面所定義的文件**CDocument**。  
+ `CDocument` 支援標準的作業，例如建立文件、 載入它，以及儲存它。 架構會管理使用介面所定義的文件`CDocument`。  
   
  應用程式可以支援多個類型的文件。例如，應用程式可能支援試算表和文字文件。 文件的每種類型有關聯的文件範本。文件範本會指定哪些資源 （例如，功能表、 圖示或快速鍵對應資料表） 會使用該類型的文件。 每份文件包含與其相關聯的指標`CDocTemplate`物件。  
   
@@ -236,11 +236,11 @@ class CDocument : public CCmdTarget
   
  文件屬於 framework 的標準命令路由，因此接收命令，從標準使用者介面元件 （例如儲存檔案 功能表項目）。 文件接收轉送的現用檢視表的命令。 如果文件不會處理指定的命令，會轉送命令來管理它的文件範本。  
   
- 文件的資料修改時，每個自己的檢視必須反映這些修改。 **CDocument**提供[UpdateAllViews](#updateallviews)要通知的這類變更，檢視，讓這些檢視可以重新繪製視成員函式。 架構也會提示使用者關閉之前儲存已修改的檔案。  
+ 文件的資料修改時，每個自己的檢視必須反映這些修改。 `CDocument` 提供[UpdateAllViews](#updateallviews)要通知的這類變更，檢視，讓這些檢視可以重新繪製視成員函式。 架構也會提示使用者關閉之前儲存已修改的檔案。  
   
  若要實作典型的應用程式中的文件，您必須執行下列作業：  
   
--   自**CDocument**每種類型的文件。  
+-   自`CDocument`每種類型的文件。  
   
 -   加入成員變數來儲存每個文件的資料。  
   
@@ -248,9 +248,9 @@ class CDocument : public CCmdTarget
   
 -   覆寫[cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize)寫入和讀取文件的資料磁碟的文件類別中的成員函式。  
   
- **CDocument**支援傳送郵件透過文件是否有郵件支援 (MAPI)。 請參閱文章[MAPI](../../mfc/mapi.md)和[MFC 中的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)。  
+ `CDocument` 如果郵件支援 (MAPI) 存在於傳送郵件透過文件的支援。 請參閱文章[MAPI](../../mfc/mapi.md)和[MFC 中的 MAPI 支援](../../mfc/mapi-support-in-mfc.md)。  
   
- 如需有關**CDocument**，請參閱[序列化](../../mfc/serialization-in-mfc.md)，[文件/檢視架構的主題](../../mfc/document-view-architecture.md)，和[文件/檢視建立](../../mfc/document-view-creation.md)。  
+ 如需有關`CDocument`，請參閱[序列化](../../mfc/serialization-in-mfc.md)，[文件/檢視架構的主題](../../mfc/document-view-architecture.md)，和[文件/檢視建立](../../mfc/document-view-creation.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -270,7 +270,7 @@ void AddView(CView* pView);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pView`  
+ *pView*  
  要加入的檢視點。  
   
 ### <a name="remarks"></a>備註  
@@ -298,7 +298,7 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFrame`  
+ *pFrame*  
  指向框架視窗的 附加至文件的檢視。  
   
 ### <a name="return-value"></a>傳回值  
@@ -359,10 +359,10 @@ virtual POSITION FindChunk(
 ```  
   
 ### <a name="parameters"></a>參數  
- `guid`  
+ *guid*  
  指定要尋找區塊的 GUID。  
   
- `pid`  
+ *pid*  
  指定的區塊 (chunk) 若要尋找的 PID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -406,13 +406,13 @@ virtual CFile* GetFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFileName`  
+ *lpszFileName*  
  所需的檔案的路徑字串。 路徑可能為相對或絕對。  
   
- `pError`  
+ *pError*  
  現有檔案例外狀況物件，表示作業的完成狀態指標。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  共用及存取模式。 指定開啟檔案時要採取的動作。 您可以結合 CFile 建構函式中列出的選項[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)藉由使用位元 OR (&#124;) 運算子。 一個存取權限，以及一個共用選項是必要的。**modeCreate**和**modeNoInherit**是選擇性的模式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -439,14 +439,14 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `rPosition`  
+ *rPosition*  
  若要參考**位置**先前呼叫所傳回的值`GetNextView`或[GetFirstViewPosition](#getfirstviewposition)成員函式。 此值不能**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
- 檢視所識別的指標`rPosition`。  
+ 檢視所識別的指標*rPosition*。  
   
 ### <a name="remarks"></a>備註  
- 此函數會傳回所識別的檢視`rPosition`，然後設定`rPosition`至**位置**下一個檢視清單中的值。 如果擷取的檢視是在清單中，最後則`rPosition`設**NULL**。  
+ 此函數會傳回所識別的檢視*rPosition* ，然後設定*rPosition*至**位置**下一個檢視清單中的值。 如果擷取的檢視是在清單中，最後則*rPosition*設**NULL**。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
@@ -472,13 +472,13 @@ virtual BOOL GetThumbnail(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cx`  
+ */cx*  
  指定點陣圖的高度與寬度。  
   
- `phbmp`  
+ *phbmp*  
  此函式成功傳回時包含點陣圖的控制代碼。  
   
- `pdwAlpha`  
+ *pdwAlpha*  
  包含指定的 alpha 色板值，此函式成功傳回時為 DWORD。  
   
 ### <a name="return-value"></a>傳回值  
@@ -539,10 +539,10 @@ virtual HRESULT LoadDocumentFromStream(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStream`  
+ *pStream*  
  資料流的指標。 這個資料流是由 Shell 來提供。  
   
- `dwGrfMode`  
+ *dwGrfMode*  
  資料流的存取模式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -659,13 +659,13 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `deEvent`  
+ [in]*deEvent*  
  描述事件的型別列舉的資料型別。  
   
 ### <a name="remarks"></a>備註  
  文件事件可能會影響多個類別。 這個方法會負責處理會影響類別以外的文件事件[CDocument 類別](../../mfc/reference/cdocument-class.md)。 目前，唯一必須回應文件事件的類別是[CDataRecoveryHandler 類別](../../mfc/reference/cdatarecoveryhandler-class.md)。 `CDocument`類別具有其他可覆寫方法負責處理效果`CDocument`。  
   
- 下表列出可能的值為`deEvent`和它們對應到事件。  
+ 下表列出可能的值為*deEvent*和它們對應到事件。  
   
 |值|對應事件|  
 |-----------|-------------------------|  
@@ -684,10 +684,10 @@ virtual void OnDrawThumbnail(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dc`  
+ *dc*  
  裝置內容的參考。  
   
- `lprcBounds`  
+ *lprcBounds*  
  指定縮圖應該要繪製的區域的周的框。  
   
 ### <a name="remarks"></a>備註  
@@ -716,10 +716,10 @@ virtual HRESULT OnLoadDocumentFromStream(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStream`  
+ *pStream*  
  內送的資料流的指標。  
   
- `grfMode`  
+ *grfMode*  
  資料流的存取模式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -761,7 +761,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPathName`  
+ *lpszPathName*  
  要開啟的文件的路徑點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -791,7 +791,7 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `phwnd`  
+ *phwnd*  
  [out]此方法傳回時，包含從呼叫傳回 HWND 指標`GetFocus`函式，從預覽處理常式的前景執行緒。  
   
 ### <a name="return-value"></a>傳回值  
@@ -807,7 +807,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pmsg`  
+ *pmsg*  
  [in]視窗訊息指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -859,7 +859,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPathName`  
+ *lpszPathName*  
  指向檔案應該儲存的完整路徑。  
   
 ### <a name="return-value"></a>傳回值  
@@ -885,7 +885,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCmdUI`  
+ *pCmdUI*  
  指標[CCmdUI](../../mfc/reference/ccmdui-class.md)物件相關聯**ID_FILE_SEND_MAIL**命令。  
   
 ### <a name="remarks"></a>備註  
@@ -901,13 +901,13 @@ virtual void PreCloseFrame(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFrame`  
- 指標[CFrameWnd](../../mfc/reference/cframewnd-class.md)包含相關聯之**CDocument**物件。  
+ *pFrame*  
+ 指標[CFrameWnd](../../mfc/reference/cframewnd-class.md)包含相關聯之`CDocument`物件。  
   
 ### <a name="remarks"></a>備註  
  它會覆寫以提供自訂的清除作業，但請確定呼叫基底類別。  
   
- 預設值是`PreCloseFrame`不做任何動作**CDocument**。 **CDocument**-衍生的類別[COleDocument](../../mfc/reference/coledocument-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)使用這個成員函式。  
+ 預設值是`PreCloseFrame`不做任何動作`CDocument`。 `CDocument`-衍生的類別[COleDocument](../../mfc/reference/coledocument-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)使用這個成員函式。  
   
 ##  <a name="readnextchunkvalue"></a>  CDocument::ReadNextChunkValue  
  讀取的下一個區塊的值。  
@@ -917,8 +917,8 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ppValue`  
- [out]此函式傳回時，`ppValue`包含已讀取的值。  
+ *ppValue*  
+ [out]此函式傳回時， *ppValue*包含已讀取的值。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -935,16 +935,16 @@ virtual void ReleaseFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFile`  
+ *pFile*  
  釋出 CFile 物件的指標。  
   
- `bAbort`  
+ *bAbort*  
  指定檔案是否使用釋出`CFile::Close`或`CFile::Abort`。 **FALSE**如果檔案是使用釋出[CFile::Close](../../mfc/reference/cfile-class.md#close);**TRUE**如果檔案是使用釋出[cfile:: Abort](../../mfc/reference/cfile-class.md#abort)。  
   
 ### <a name="remarks"></a>備註  
- 如果`bAbort`是**TRUE**，`ReleaseFile`呼叫`CFile::Abort`，檔案會釋出。 `CFile::Abort` 不會擲回例外狀況。  
+ 如果*bAbort*是**TRUE**，`ReleaseFile`呼叫`CFile::Abort`，檔案會釋出。 `CFile::Abort` 不會擲回例外狀況。  
   
- 如果`bAbort`是**FALSE**，`ReleaseFile`呼叫`CFile::Close`和釋放檔案。  
+ 如果*bAbort*是**FALSE**，`ReleaseFile`呼叫`CFile::Close`和釋放檔案。  
   
  覆寫此成員函式，以釋放檔案之前，需要使用者動作。  
   
@@ -958,10 +958,10 @@ virtual void RemoveChunk(
 ```  
   
 ### <a name="parameters"></a>參數  
- `Guid`  
+ *Guid*  
  指定要移除區塊 (chunk) 的 GUID。  
   
- `Pid`  
+ *pid*  
  指定要移除區塊 (chunk) 的 PID。  
   
 ### <a name="remarks"></a>備註  
@@ -974,7 +974,7 @@ void RemoveView(CView* pView);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pView`  
+ *pView*  
  指向要移除的檢視。  
   
 ### <a name="remarks"></a>備註  
@@ -996,7 +996,7 @@ virtual void ReportSaveLoadException(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPathName`  
+ *lpszPathName*  
  在的文件的名稱會指向儲存或載入。  
   
  *e*  
@@ -1005,11 +1005,11 @@ virtual void ReportSaveLoadException(
  *bSaving*  
  旗標，指出哪一個作業正在進行。非零，如果文件儲存，0 如果載入文件。  
   
- `nIDPDefault`  
+ *nIDPDefault*  
  如果函式未指定更特定的顯示錯誤訊息的識別碼。  
   
 ### <a name="remarks"></a>備註  
- 預設實作會檢查例外狀況物件，並尋找特別說明原因的錯誤訊息。 如果找不到特定的訊息，或如果*e*是**NULL**，由指定的一般訊息`nIDPDefault`使用參數。 此函數接著會顯示訊息方塊包含錯誤訊息。 如果您想要提供額外的自訂錯誤訊息，請覆寫這個函式。 這是進階可覆寫。  
+ 預設實作會檢查例外狀況物件，並尋找特別說明原因的錯誤訊息。 如果找不到特定的訊息，或如果*e*是**NULL**，由指定的一般訊息*nIDPDefault*使用參數。 此函數接著會顯示訊息方塊包含錯誤訊息。 如果您想要提供額外的自訂錯誤訊息，請覆寫這個函式。 這是進階可覆寫。  
   
 ##  <a name="savemodified"></a>  CDocument::SaveModified  
  修改過的文件關閉前，由架構呼叫。  
@@ -1032,7 +1032,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pValue`  
+ *pValue*  
  指定要設定的區塊值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1048,11 +1048,11 @@ virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bModified`  
+ *bModified*  
  指出是否已修改文件的旗標。  
   
 ### <a name="remarks"></a>備註  
- 以一致的方式呼叫此函式，您可以確保架構會提示使用者關閉文件之前先儲存變更。 通常您應該使用的預設值**TRUE**如`bModified`參數。 若要標記乾淨的文件 （未修改），呼叫此函數中使用的值**FALSE**。  
+ 以一致的方式呼叫此函式，您可以確保架構會提示使用者關閉文件之前先儲存變更。 通常您應該使用的預設值**TRUE**如*bModified*參數。 若要標記乾淨的文件 （未修改），呼叫此函數中使用的值**FALSE**。  
   
 ##  <a name="setpathname"></a>  CDocument::SetPathName  
  呼叫此函式可指定文件的磁碟檔案的完整的路徑。  
@@ -1064,14 +1064,14 @@ virtual void SetPathName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPathName`  
+ *lpszPathName*  
  指向要做為文件路徑的字串。  
   
- `bAddToMRU`  
+ *bAddToMRU*  
  決定是否在檔案名稱加入至最近使用的 (MRU) 檔案清單。 如果**為 TRUE，** 加入檔案名稱; 如果**FALSE**，會將其加入。  
   
 ### <a name="remarks"></a>備註  
- 值而定`bAddToMRU`加入，或未加入至應用程式所維護的 MRU 清單的路徑。 請注意，某些文件相關聯的磁碟檔案。 只有當您正在覆寫開啟和儲存檔案架構所使用的預設實作，請呼叫此函式。  
+ 值而定*bAddToMRU*加入，或未加入至應用程式所維護的 MRU 清單的路徑。 請注意，某些文件相關聯的磁碟檔案。 只有當您正在覆寫開啟和儲存檔案架構所使用的預設實作，請呼叫此函式。  
   
 ##  <a name="settitle"></a>  CDocument::SetTitle  
  呼叫此函式可指定文件的標題 （框架視窗的標題列中顯示的字串）。  
@@ -1081,7 +1081,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszTitle`  
+ *lpszTitle*  
  指向要做為文件的標題字串。  
   
 ### <a name="remarks"></a>備註  
@@ -1098,19 +1098,19 @@ void UpdateAllViews(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pSender`  
+ *pSender*  
  指向修改文件中，檢視或**NULL**如果所有檢視更新。  
   
- `lHint`  
+ *lHint*  
  包含有關修改資訊。  
   
- `pHint`  
+ *pHint*  
  指向以儲存修改的相關資訊的物件。  
   
 ### <a name="remarks"></a>備註  
- 您呼叫之後，您應該呼叫此函式[SetModifiedFlag](#setmodifiedflag)成員函式。 此函式會通知附加至文件中，除了所指定的檢視每個檢視`pSender`，已經修改文件。 您通常呼叫此函式從檢視類別使用者透過檢視文件變更後。  
+ 您呼叫之後，您應該呼叫此函式[SetModifiedFlag](#setmodifiedflag)成員函式。 此函式會通知附加至文件中，除了所指定的檢視每個檢視*pSender*，已經修改文件。 您通常呼叫此函式從檢視類別使用者透過檢視文件變更後。  
   
- 此函數會呼叫[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)除了傳送的文件的檢視表的每個成員函式檢視，請傳遞`pHint`和`lHint`。 使用這些參數將資訊傳遞至相關的文件進行的修改檢視。 您可以編碼資訊使用`lHint`和 （或) 您可以定義[CObject](../../mfc/reference/cobject-class.md)-衍生類別來儲存所做的修改的相關資訊，並將該類別使用的物件傳遞`pHint`。 覆寫`CView::OnUpdate`成員函式中的您[CView](../../mfc/reference/cview-class.md)-衍生的類別，以最佳化更新檢視的顯示根據傳遞的資訊。  
+ 此函數會呼叫[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)除了傳送的文件的檢視表的每個成員函式檢視，請傳遞*pHint*和*lHint*。 使用這些參數將資訊傳遞至相關的文件進行的修改檢視。 您可以編碼資訊使用*lHint*和 （或) 您可以定義[CObject](../../mfc/reference/cobject-class.md)-衍生類別來儲存所做的修改的相關資訊，並將該類別使用的物件傳遞*pHint*. 覆寫`CView::OnUpdate`成員函式中的您[CView](../../mfc/reference/cview-class.md)-衍生的類別，以最佳化更新檢視的顯示根據傳遞的資訊。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]  

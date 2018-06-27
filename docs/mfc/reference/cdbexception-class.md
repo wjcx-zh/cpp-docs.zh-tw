@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368331"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952244"
 ---
 # <a name="cdbexception-class"></a>CDBException 類別
 表示資料庫類別引發的例外狀況。  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED**無法完成您的要求鎖定記錄進行更新，因為 ODBC 驅動程式不支援鎖定。  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**您呼叫`CRecordset::Update`或**刪除**沒有唯一索引鍵的資料表，而且變更多筆記錄。  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**您呼叫`CRecordset::Update`或`Delete`沒有唯一索引鍵的資料表，而且變更多筆記錄。  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD**您嘗試編輯或刪除先前刪除的記錄。 您必須在刪除後，捲動到新的目前記錄。  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES**您的要求無法完成動態集，因為 ODBC 驅動程式不支援的定位更新。  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED**您呼叫`CRecordset::Update`或**刪除**，但作業開始時找不到記錄。  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED**您呼叫`CRecordset::Update`或`Delete`，但作業開始時找不到記錄。  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED**嘗試載入 ODBC。DLL 失敗;Windows 找不到或無法載入此 DLL。 這個錯誤是嚴重威脅。  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY**您嘗試更新唯讀的資料錄集或資料來源是唯讀的。 資料錄集可以執行任何 update 作業或`CDatabase`相關聯的物件。  
   
-- **SQL_ERROR**函數失敗。 ODBC 函數所傳回的錯誤訊息**SQLError**會儲存在**m_strError**資料成員。  
+- **SQL_ERROR**函數失敗。 ODBC 函數所傳回的錯誤訊息`SQLError`會儲存在**m_strError**資料成員。  
   
 - **SQL_INVALID_HANDLE**函式失敗，因為無效的環境控制代碼、 連接控制代碼或陳述式控制代碼。 這會指出程式設計錯誤。 沒有其他資訊可從 ODBC 函數**SQLError**。  
   
@@ -132,11 +132,11 @@ class CDBException : public CException
 ### <a name="remarks"></a>備註  
  字串為形式"狀態: %s，原生: %ld，來源: %s"，其中描述值會取代格式化程式碼中的，依序：  
   
--   **SQLSTATE**、 null 結尾字串，包含五個字元中傳回錯誤碼*szSqlState* ODBC 函數的參數**SQLError**。 **SQLSTATE**值會列在 < 附錄 A， [ODBC 錯誤碼](https://msdn.microsoft.com/library/ms714687.aspx)，請在*ODBC 程式設計人員參考*。 範例: 「 S0022"。  
+-   **SQLSTATE**、 null 結尾字串，包含五個字元中傳回錯誤碼*szSqlState* ODBC 函數的參數`SQLError`。 **SQLSTATE**值會列在 < 附錄 A， [ODBC 錯誤碼](https://msdn.microsoft.com/library/ms714687.aspx)，請在*ODBC 程式設計人員參考*。 範例: 「 S0022"。  
   
--   中的原生錯誤碼，特定的資料來源，傳回*pfNativeError*參數**SQLError**函式。 範例： 207。  
+-   中的原生錯誤碼，特定的資料來源，傳回*pfNativeError*參數`SQLError`函式。 範例： 207。  
   
--   錯誤訊息文字中傳回*szErrorMsg*參數**SQLError**函式。 此訊息包含數個以方括弧括住的名稱。 當錯誤從其來源傳遞給使用者時，每個 ODBC 元件 （驅動程式，驅動程式管理員中的 資料來源） 將附加自己的名稱。 這項資訊有助於找出錯誤的來源。 範例: [Microsoft] [ODBC SQL Server Driver] [SQL Server]  
+-   錯誤訊息文字中傳回*szErrorMsg*參數`SQLError`函式。 此訊息包含數個以方括弧括住的名稱。 當錯誤從其來源傳遞給使用者時，每個 ODBC 元件 （驅動程式，驅動程式管理員中的 資料來源） 將附加自己的名稱。 這項資訊有助於找出錯誤的來源。 範例: [Microsoft] [ODBC SQL Server Driver] [SQL Server]  
   
  架構會將錯誤字串解譯，並將放入其元件**m_strStateNativeOrigin**; 如果**m_strStateNativeOrigin**包含資訊的多個錯誤，錯誤會以分隔換行。 架構對英數字元的錯誤文字**m_strError**。  
   

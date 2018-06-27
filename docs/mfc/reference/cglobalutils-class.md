@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d5e2c1938a975da956502f3b071c8c51c6ad48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ffd681a589f9e8cc1c9cc56139f7b155773038f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367473"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952081"
 ---
 # <a name="cglobalutils-class"></a>CGlobalUtils 類別
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -104,8 +104,8 @@ void AdjustRectToworkArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、out] `rect`  
- [輸入] `pRectDelta`  
+ [in、 out]*rect*  
+ [in]*pRectDelta*  
   
 ### <a name="remarks"></a>備註  
   
@@ -123,12 +123,12 @@ void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `barContainerManager`  
- [輸入] `pWndTodock`  
- [輸入] `ptMouse`  
- [輸出] `rectResult`  
- [輸出] `bDrawTab`  
- [輸出] `ppTargetBar`  
+ [in]*barContainerManager*  
+ [in]*pWndTodock*  
+ [in]*ptMouse*  
+ [out]*rectResult*  
+ [out]*bDrawTab*  
+ [out]*ppTargetBar*  
   
 ### <a name="remarks"></a>備註  
   
@@ -140,7 +140,7 @@ BOOL CanBeAttached(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -154,7 +154,7 @@ BOOL CanPaneBeInFloatingMultiPaneFrameWnd(CWnd* pWnd) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -176,14 +176,14 @@ BOOL CheckAlignment(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
- [輸入] `pBar`  
- [輸入] `nSensitivity`  
- [輸入] `pDockManager`  
- [輸入] `bOuterEdge`  
- [輸出] `dwAlignment`  
- [輸入] `dwEnabledDockBars`  
- [輸入] `lpRectBounds`  
+ [in]*點*  
+ [in]*pBar*  
+ [in]*nSensitivity*  
+ [in]*pDockManager*  
+ [in]*bOuterEdge*  
+ [out]*dwAlignment*  
+ [in]*dwEnabledDockBars*  
+ [in]*lpRectBounds*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -199,8 +199,8 @@ BOOL CyFromString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `cy`  
- [輸入] `psz`  
+ [out]*cy*  
+ [in]*psz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -216,8 +216,8 @@ BOOL DecimalFromString(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `decimal`  
- [輸入] `psz`  
+ [out]*十進位*  
+ [in]*psz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -233,8 +233,8 @@ void FlipRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、out] `rect`  
- [輸入] `nDegrees`  
+ [in、 out]*rect*  
+ [in]*nDegrees*  
   
 ### <a name="remarks"></a>備註  
   
@@ -249,9 +249,9 @@ void ForceAdjustLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、out] `pDockManager`  
- [輸入] `bForce`  
- [輸入] `bForceInvisible`  
+ [in、 out]*pDockManager*  
+ [in]*bForce*  
+ [in]*bForceInvisible*  
   
 ### <a name="remarks"></a>備註  
   
@@ -263,7 +263,7 @@ CDockingManager* GetDockingManager(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -277,7 +277,7 @@ DWORD GetOppositeAlignment(DWORD dwAlign);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwAlign`  
+ [in]*dwAlign*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -297,12 +297,12 @@ BOOL GetPaneAndAlignFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `barContainerManager`  
- [輸入] `pt`  
- [輸出] `ppTargetControlBar`  
- [輸出] `dwAlignment`  
- [輸出] `bTabArea`  
- [輸出] `bCaption`  
+ [in]*barContainerManager*  
+ [in]*pt*  
+ [out]*ppTargetControlBar*  
+ [out]*dwAlignment*  
+ [out]*bTabArea*  
+ [out]*bCaption*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -316,7 +316,7 @@ HICON GetWndIcon(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -333,9 +333,9 @@ void SetNewParent(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lstControlBars`  
- [輸入] `pNewParent`  
- [輸入] `bCheckVisibility`  
+ [in]*lstControlBars*  
+ [in]*pNewParent*  
+ [in]*bCheckVisibility*  
   
 ### <a name="remarks"></a>備註  
   
@@ -349,8 +349,8 @@ BOOL StringFromCy(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `str`  
- [輸入] `cy`  
+ [out]*str*  
+ [in]*cy*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -366,8 +366,8 @@ BOOL StringFromDecimal(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸出] `str`  
- [輸入] `decimal`  
+ [out]*str*  
+ [in]*十進位*  
   
 ### <a name="return-value"></a>傳回值  
   

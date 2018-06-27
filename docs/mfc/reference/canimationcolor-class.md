@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f564b70e850f3020956711ef15ab1fe9285a6ae4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 462882957999d607809e80908ae4a25c628f18d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354144"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951739"
 ---
 # <a name="canimationcolor-class"></a>CAnimationColor 類別
 實作紅色、綠色和藍色元件可以動畫顯示的色彩功能。  
@@ -121,13 +121,13 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRTransition`  
+ *pRTransition*  
  紅元件的轉換。  
   
- `pGTransition`  
+ *pGTransition*  
  綠元件的轉換。  
   
- `pBTransition`  
+ *pBTransition*  
  藍色元件為轉換。  
   
 ### <a name="remarks"></a>備註  
@@ -147,16 +147,16 @@ CAnimationColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- `color`  
+ *色彩*  
  指定預設色彩。  
   
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
- `nObjectID`  
+ *nObjectID*  
  指定物件識別碼。  
   
- `dwUserData`  
+ *dwUserData*  
  指定使用者定義的資料。  
   
 ### <a name="remarks"></a>備註  
@@ -170,7 +170,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*>& lst);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lst`  
+ *lst*  
  此函式傳回時，它會包含代表紅色、 綠色和藍色元件的三個 CAnimationVariable 物件的指標。  
   
 ##  <a name="getb"></a>  CAnimationColor::GetB  
@@ -233,7 +233,7 @@ BOOL GetValue(COLORREF& color);
 ```  
   
 ### <a name="parameters"></a>參數  
- `color`  
+ *色彩*  
  輸出。 此方法傳回時，包含目前的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -279,7 +279,7 @@ void operator=(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- `color`  
+ *色彩*  
  指定新動畫色彩的值。  
   
 ### <a name="remarks"></a>備註  
@@ -293,7 +293,7 @@ void SetDefaultValue(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- `color`  
+ *色彩*  
  指定新的預設值為紅色、 綠色和藍色元件。  
   
 ### <a name="remarks"></a>備註  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21c08dbd1d26e519fe7108018299d3d4e94854
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385534"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954363"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets：搭配使用通訊端與封存
 本文說明[CSocket 程式設計模型](#_core_the_csocket_programming_model)。 類別[CSocket](../mfc/reference/csocket-class.md)提供通訊端支援，在較高層級的抽象類別比[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket` 使用 MFC 序列化通訊協定的版本來傳遞資料，經由 MFC 通訊端物件來回[CArchive](../mfc/reference/carchive-class.md)物件。 `CSocket` 會提供封鎖 (同時管理 Windows 訊息的背景處理)，並且可讓您存取 `CArchive`，它可管理有關通訊的多個層面，否則您必須使用原始 API 或 `CAsyncSocket` 類別才能自行管理這些層面。  
@@ -47,7 +47,7 @@ ms.locfileid: "33385534"
   
 2.  使用物件來建立基礎**通訊端**處理。  
   
-     如`CSocket`用戶端物件，您通常應該使用預設的參數[建立](../mfc/reference/casyncsocket-class.md#create)，除非您需要資料包通訊端。 如`CSocket`伺服器物件，您必須指定中的連接埠**建立**呼叫。  
+     如`CSocket`用戶端物件，您通常應該使用預設的參數[建立](../mfc/reference/casyncsocket-class.md#create)，除非您需要資料包通訊端。 如`CSocket`伺服器物件，您必須指定中的連接埠`Create`呼叫。  
   
     > [!NOTE]
     >  `CArchive` 無法搭配資料包通訊端使用。 如果您要對資料包通訊端使用 `CSocket`，則必須使用類別，就像使用 `CAsyncSocket` 一樣，也就是沒有封存。 由於資料包並不可靠 (不保證會達到，而且可能會重複或未依照順序)，因此它們無法透過封存與序列化相容。 您會希望序列化作業能夠確實依序順利完成。 如果您嘗試對資料包使用 `CSocket` 搭配 `CArchive` 物件，MFC 判斷提示就會失敗。  
@@ -59,7 +59,7 @@ ms.locfileid: "33385534"
      如果伺服器通訊端，呼叫[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)開始接聽連接嘗試從用戶端。 在收到連線要求時，接受它藉由呼叫[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)。  
   
     > [!NOTE]
-    >  **接受**成員函式會採用新的空白參考`CSocket`做為其參數的物件。 您必須先建構這個物件，才能呼叫**接受**。 如果這個通訊端物件超出範圍，連接就會關閉。 請勿呼叫**建立**對這個新通訊端物件。  
+    >  `Accept`成員函式會採用新的空白參考`CSocket`做為其參數的物件。 您必須先建構這個物件，才能呼叫`Accept`。 如果這個通訊端物件超出範圍，連接就會關閉。 請勿呼叫`Create`對這個新通訊端物件。  
   
 4.  建立[CSocketFile](../mfc/reference/csocketfile-class.md)物件、 將相關聯`CSocket`與它的物件。  
   

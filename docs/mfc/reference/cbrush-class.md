@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355885"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954100"
 ---
 # <a name="cbrush-class"></a>CBrush 類別
 封裝 Windows 繪圖裝置介面 (GDI) 筆刷。  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>參數  
- `crColor`  
+ *crColor*  
  指定做為 RGB 色彩的筆刷的前景色彩。 如果影線筆刷，這個參數會指定影線色彩。  
   
- `nIndex`  
+ *nIndex*  
  指定的筆刷的影線類型。 它可以是下列值之一：  
   
 - `HS_BDIAGONAL` 在 45 度向下串聯 （由左到右）  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` 垂直影線  
   
- `pBitmap`  
+ *pBitmap*  
  指向`CBitmap`物件，指定與筆刷繪製的點陣圖。  
   
 ### <a name="remarks"></a>備註  
@@ -133,7 +133,7 @@ explicit CBrush(CBitmap* pBitmap);
   
  建構函式具有單一[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數建構實心筆刷使用指定的色彩。 指定 RGB 值的色彩，以及可以使用建構`RGB`WINDOWS 中的巨集。H.  
   
- 具有兩個參數的建構函式會建構規劃筆刷。 `nIndex`參數指定的索引影線圖樣。 `crColor`參數指定的色彩。  
+ 具有兩個參數的建構函式會建構規劃筆刷。 *NIndex*參數指定的索引影線圖樣。 *CrColor*參數指定的色彩。  
   
  建構函式`CBitmap`參數建構圖樣的筆刷。 參數會識別點陣圖。 點陣圖會假設已經建立使用[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [Bitmap](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)。 點陣圖，用於填滿模式中的最小大小是 8 x 8 像素。  
   
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  處理 DIB 方式在兩個版本各有不同：  
   
--   在第一個版本中，若要取得的控制代碼 DIB 您呼叫 Windows **GlobalAlloc**函式來配置全域記憶體區塊，並再將記憶體填入壓縮 DIB。  
+-   在第一個版本中，若要取得的控制代碼 DIB 您呼叫 Windows`GlobalAlloc`函式來配置全域記憶體區塊，並再將記憶體填入壓縮 DIB。  
   
--   在第二個版本，就不需要呼叫**GlobalAlloc**壓縮 DIB 配置記憶體。  
+-   在第二個版本，就不需要呼叫`GlobalAlloc`壓縮 DIB 配置記憶體。  
   
  壓縮的 DIB 組成`BITMAPINFO`緊接著定義點陣圖的像素的位元組陣列的資料結構。 點陣圖做為填滿模式應該是 8 x 8 像素。 如果點陣圖較大，Windows 會建立使用對應的前 8 的資料列和 8 的資料行的點陣圖左上角像素的位元的填滿模式。  
   
@@ -208,7 +208,7 @@ BOOL CreateDIBPatternBrush(
   
  使用下列 Windows 功能的相關資訊，請參閱 Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (僅針對相容性的 Windows 版本早於 3.0 撰寫的應用程式中提供此函式，使用**CreateDIBPatternBrushPt**函式。)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (僅針對相容性的 Windows 版本早於 3.0 撰寫的應用程式中提供此函式，使用`CreateDIBPatternBrushPt`函式。)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) （這個函式應使用的 win32 應用程式）。  
   
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  指定的筆刷的影線類型。 它可以是下列值之一：  
   
 - `HS_BDIAGONAL` 在 45 度向下串聯 （由左到右）  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` 垂直影線  
   
- `crColor`  
+ *crColor*  
  指定前景色彩的筆刷做為 RGB 色彩 （影線色彩）。 請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)如需詳細資訊的 Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBitmap`  
+ *pBitmap*  
  識別點陣圖。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 接著選取筆刷為任何支援點陣作業的裝置內容。 所識別的點陣圖`pBitmap`通常會藉由使用初始化[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [Bitmap](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [cbitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)函式。  
+ 接著選取筆刷為任何支援點陣作業的裝置內容。 所識別的點陣圖*pBitmap*通常會藉由使用初始化[CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)， [Bitmap](../../mfc/reference/cbitmap-class.md#createbitmapindirect)， [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)，或[CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)函式。  
   
  點陣圖做為填滿模式應該是 8 x 8 像素。 如果點陣圖大時，Windows 只會使用對應的前 8 個資料列和資料行的點陣圖左上角像素的位元。  
   
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>參數  
- `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)結構，指定的筆刷色彩。 指定 RGB 值的色彩，以及可以使用建構`RGB`WINDOWS 中的巨集。H.  
+ *crColor*  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)結構，指定的筆刷色彩。 色彩指定 RGB 值，並可用於建構與 WINDOWS 中 RGB 巨集。H.  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  指定的色彩索引。 此值對應至用來繪製其中 21 視窗元素的色彩。 請參閱[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)值清單的 Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hBrush`  
+ *hBrush*  
  `HANDLE` 為 Windows GDI 筆刷。  
   
 ### <a name="return-value"></a>傳回值  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLogBrush`  
+ *pLogBrush*  
  指向[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)包含筆刷的相關資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，和`pLogBrush`是有效的指標，傳回值是儲存在緩衝區的位元組數。  
+ 如果函式成功，和*pLogBrush*是有效的指標，傳回值是儲存在緩衝區的位元組數。  
   
- 如果函式成功，和`pLogBrush`是**NULL**，則傳回值是保存的資訊函式所需的位元組數目會儲存在緩衝區。  
+ 如果函式成功，和*pLogBrush*是**NULL**，則傳回值是保存的資訊函式所需的位元組數目會儲存在緩衝區。  
   
  如果函式失敗，傳回的值為 0。  
   

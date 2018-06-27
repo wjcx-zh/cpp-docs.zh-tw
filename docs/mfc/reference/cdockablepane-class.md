@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b00c40ded45d1d71b42c126e2461c404eb5223
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6565ea15a2440855aa7f22ef7bbe37d2f583fb71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378796"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957256"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 實作可以停駐在固定位置或包含於索引標籤式窗格的窗格。  
@@ -280,14 +280,14 @@ class CDockablePane : public CPane
   
 -   您可以拖曳窗格時顯示拖曳矩形。  
   
- 若要在應用程式中使用的停駐窗格，衍生您窗格的類別從`CDockablePane`類別。 請將內嵌衍生的物件到主框架視窗物件或控制窗格的執行個體的 window 物件。 然後呼叫[CDockablePane::Create](#create)方法或[cdockablepane:: Createex](#createex)方法，當您處理`WM_CREATE`主框架視窗中的訊息。 最後，設定窗格物件，藉由呼叫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)， [cbasepane:: Dockpane](../../mfc/reference/cbasepane-class.md#dockpane)，或[cdockablepane:: Attachtotabwnd](#attachtotabwnd)。  
+ 若要在應用程式中使用的停駐窗格，衍生您窗格的類別從`CDockablePane`類別。 請將內嵌衍生的物件到主框架視窗物件或控制窗格的執行個體的 window 物件。 然後呼叫[CDockablePane::Create](#create)方法或[cdockablepane:: Createex](#createex)方法，當您處理 WM_CREATE 訊息中的主框架視窗。 最後，設定窗格物件，藉由呼叫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)， [cbasepane:: Dockpane](../../mfc/reference/cbasepane-class.md#dockpane)，或[cdockablepane:: Attachtotabwnd](#attachtotabwnd)。  
   
 ## <a name="customization-tips"></a>自訂秘訣  
  下列秘訣適用於`CDockablePane`物件：  
   
 -   如果您呼叫[cdockablepane:: Attachtotabwnd](#attachtotabwnd)兩個非索引標籤式、 可停駐窗格的索引標籤式視窗的指標將會傳回`ppTabbedControlBar`參數。 您可以繼續使用此參數，將索引標籤新增至索引標籤式視窗。  
   
--   所建立的索引標籤式窗格種[cdockablepane:: Attachtotabwnd](#attachtotabwnd)取決於`CDockablePane`物件存放至`pTabControlBarAttachTo`參數。 您可以呼叫[cdockablepane:: Settabbedpanertc](#settabbedpanertc)要設定的索引標籤式窗格種類`CDockablePane`會建立。 預設類型取決於`dwTabbedStyle`的[CDockablePane::Create](#create)當您第一次建立`CDockablePane`。 如果`dwTabbedStyle`是預設的類型是的 AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md); 如果`dwTabbedStyle`是預設的類型是的 AFX_CBRS_REGULAR_TABS [CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)。  
+-   所建立的索引標籤式窗格種[cdockablepane:: Attachtotabwnd](#attachtotabwnd)取決於`CDockablePane`物件存放至*pTabControlBarAttachTo*參數。 您可以呼叫[cdockablepane:: Settabbedpanertc](#settabbedpanertc)要設定的索引標籤式窗格種類`CDockablePane`會建立。 預設類型取決於`dwTabbedStyle`的[CDockablePane::Create](#create)當您第一次建立`CDockablePane`。 如果*dwTabbedStyle*是預設的類型是的 AFX_CBRS_OUTLOOK_TABS [CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md); 如果*dwTabbedStyle* AFX_CBRS_REGULAR_TABS 預設類型為[CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)。  
   
 -   如果您想要一個可停駐窗格固定至另一個，呼叫[CDockablePane::DockToWindow](#docktowindow)方法。 [原始] 窗格中，必須停駐的地方之前呼叫這個方法。  
   
@@ -329,16 +329,16 @@ virtual CDockablePane* AttachToTabWnd(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pTabControlBarAttachTo`  
+ [in][out]*pTabControlBarAttachTo*  
  指定目前的窗格會將附加至 [目標] 窗格。 [目標] 窗格中必須是可停駐窗格。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  指定的停駐的方法。  
   
- [輸入] `bSetActive`  
+ [in]*bSetActive*  
  `TRUE` 若要啟用索引標籤式的窗格之後附加作業。否則， `FALSE`。  
   
- [輸出] `ppTabbedControlBar`  
+ [out]*ppTabbedControlBar*  
  包含附加作業所產生的索引標籤式的窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -347,13 +347,13 @@ virtual CDockablePane* AttachToTabWnd(
 ### <a name="remarks"></a>備註  
  當其中一個可停駐窗格附加到另一個窗格中使用此方法時，發生下列情況：  
   
-1.  這個架構會檢查是否目標窗格`pTabControlBarAttachTo`一般停駐窗格或它衍生自[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)。  
+1.  這個架構會檢查是否目標窗格*pTabControlBarAttachTo*一般停駐窗格或它衍生自[CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)。  
   
 2.  如果目標是索引標籤式的窗格，架構就會將目前的窗格，以索引標籤。  
   
 3.  如果目標是一般的停駐窗格，架構會建立索引標籤式的窗格。  
   
-    -   這個架構會呼叫`pTabControlBarAttachTo->CreateTabbedPane`。 新的索引標籤式窗格的樣式取決於`m_pTabbedControlBarRTC`成員。 根據預設，這個成員設定為執行階段類別的[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。 如果您要傳入`AFX_CBRS_OUTLOOK_TABS`樣式為`dwTabbedStyle`參數[CDockablePane::Create](#create)方法，執行階段類別物件設定為執行階段類別[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)。 您可以在任何時間，若要變更新的窗格樣式來變更這個成員。  
+    -   這個架構會呼叫`pTabControlBarAttachTo->CreateTabbedPane`。 新的索引標籤式窗格的樣式取決於`m_pTabbedControlBarRTC`成員。 根據預設，這個成員設定為執行階段類別的[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。 如果您要傳入`AFX_CBRS_OUTLOOK_TABS`樣式為*dwTabbedStyle*參數[CDockablePane::Create](#create)方法，執行階段類別物件設定為執行階段類別[CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md). 您可以在任何時間，若要變更新的窗格樣式來變更這個成員。  
   
     -   當這個方法會建立索引標籤式的窗格時，架構會取代指標`pTabControlBarAttachTo`（窗格是否停駐或浮動在多重迷你視窗） 與新的索引標籤式窗格的指標。  
   
@@ -375,10 +375,10 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bStretch`  
+ [in]*bStretch*  
  未使用。  
   
- [輸入] `bHorz`  
+ [in]*bHorz*  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
@@ -392,11 +392,11 @@ virtual BOOL CanAcceptMiniFrame(CPaneFrameWnd* pMiniFrame) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pMiniFrame`  
+ [in]*pMiniFrame*  
  指向 `CPaneFrameWnd` 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果`pMiniFrame`可以固定到窗格，否則`FALSE`。  
+ `TRUE` 如果*pMiniFrame*可以固定到窗格，否則`FALSE`。  
   
 ##  <a name="canacceptpane"></a>  CDockablePane::CanAcceptPane  
  判斷另一個窗格是否可以固定到目前的窗格。  
@@ -406,7 +406,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
+ [in]*pBar*  
  指定將目前的窗格停駐窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -417,7 +417,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
  若要啟用或停用特定窗格的停駐在衍生類別中的這個函式會覆寫。  
   
- 根據預設，這個方法會傳回`TRUE`如果`pBar`或其父代是型別`CDockablePane`。  
+ 根據預設，這個方法會傳回`TRUE`如果*pBar*或其父代是型別`CDockablePane`。  
   
 ##  <a name="canautohide"></a>  CDockablePane::CanAutoHide  
  決定是否窗格可以自動隱藏。  
@@ -469,7 +469,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bActiveTabOnly`  
+ [in]*bActiveTabOnly*  
  當您轉換`CTabbedPane`，指定`TRUE`轉換使用中索引標籤。指定`FALSE`轉換在窗格中的所有索引標籤。  
   
 ##  <a name="checkautohidecondition"></a>  CDockablePane::CheckAutoHideCondition  
@@ -495,7 +495,7 @@ virtual BOOL CheckStopSlideCondition(BOOL bDirection);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bDirection`  
+ [in]*bDirection*  
  `TRUE` 如果窗格是可見的。`FALSE`如果窗格為隱藏。  
   
 ### <a name="return-value"></a>傳回值  
@@ -514,11 +514,11 @@ virtual void CopyState(CDockablePane* pOrgBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pOrgBar`  
+ [in]*pOrgBar*  
  可停駐窗格的指標。  
   
 ### <a name="remarks"></a>備註  
- `CDockablePane::CopyState` 將複製的狀態`pOrgBar`到目前的窗格，藉由呼叫下列方法：  
+ `CDockablePane::CopyState` 將複製的狀態*pOrgBar*到目前的窗格，藉由呼叫下列方法：  
   
 - [CPane::CopyState](../../mfc/reference/cpane-class.md#copystate)  
   
@@ -558,37 +558,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszCaption`  
+ [in]*lpszCaption*  
  指定視窗名稱。  
   
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指定父視窗。  
   
- [輸入] `rect`  
- 指定的大小和視窗的位置中的用戶端座標`pParentWnd`。  
+ [in]*rect*  
+ 指定的大小和視窗的位置中的用戶端座標*pParentWnd*。  
   
- [輸入] `bHasGripper`  
+ [in]*bHasGripper*  
  `TRUE` 建立具有標題; 窗格否則， `FALSE`。  
   
- [輸入] `nID`  
+ [in]*nID*  
  指定的子視窗的識別碼。 此值必須是唯一，如果您想要儲存此停駐窗格的停駐狀態。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  指定視窗的樣式屬性。  
   
- [輸入] `dwTabbedStyle`  
+ [in]*dwTabbedStyle*  
  指定當使用者拖曳此窗格的標題上一個窗格時所建立的索引標籤式視窗的索引標籤式的樣式。  
   
- [輸入] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定的其他樣式屬性。  
   
- [in][out] `pContext`  
+ [in][out]*pContext*  
  指定視窗的建立內容。  
   
- [輸入] `lpszWindowName`  
+ [in]*lpszWindowName*  
  指定視窗名稱。  
   
- [輸入] `sizeDefault`  
+ [in]*sizeDefault*  
  指定視窗的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -597,9 +597,9 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  建立 Windows 窗格，並將它附加至`CDockablePane`物件。  
   
- 如果`dwStyle`視窗樣式`CBRS_FLOAT_MULTI`旗標，包含在迷你框架的其他窗格，可以浮動迷你框架。 根據預設，停駐窗格可以只浮動個別。  
+ 如果*dwStyle*視窗樣式`CBRS_FLOAT_MULTI`旗標，包含在迷你框架的其他窗格，可以浮動迷你框架。 根據預設，停駐窗格可以只浮動個別。  
   
- 如果`dwTabbedStyle`參數具有`AFX_CBRS_OUTLOOK_TABS`指定旗標，窗格建立 Outlook 樣式索引標籤式窗格，如果另一個窗格附加到這個窗格使用[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 根據預設，可停駐窗格建立類型的規則索引標籤式的窗格[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。  
+ 如果*dwTabbedStyle*參數具有`AFX_CBRS_OUTLOOK_TABS`指定旗標，窗格建立 Outlook 樣式索引標籤式窗格，如果另一個窗格附加到這個窗格使用[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 根據預設，可停駐窗格建立類型的規則索引標籤式的窗格[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。  
   
 ##  <a name="createdefaultpanedivider"></a>  CDockablePane::CreateDefaultPaneDivider  
  建立框架視窗的停駐窗格的預設分割線。  
@@ -612,20 +612,20 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwAlignment`  
- 指定主要畫面格的窗格會停駐端。 如果`dwAlignment`包含`CBRS_ALIGN_LEFT`或`CBRS_ALIGN_RIGHT`旗標，這個方法會建立垂直 ( `CPaneDivider::SS_VERT`) 分隔; 否則這個方法會建立在水平 ( `CPaneDivider::SS_HORZ`) 分隔。  
+ [in]*dwAlignment*  
+ 指定主要畫面格的窗格會停駐端。 如果*dwAlignment*包含`CBRS_ALIGN_LEFT`或`CBRS_ALIGN_RIGHT`旗標，這個方法會建立垂直 ( `CPaneDivider::SS_VERT`) 分隔; 否則這個方法會建立在水平 ( `CPaneDivider::SS_HORZ`) 分隔。  
   
- [輸入] `pParent`  
+ [in]*pParent*  
  父框架指標。  
   
- [輸入] `pSliderRTC`  
+ [in]*pSliderRTC*  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
  新建立的分割線，此方法傳回的指標或`NULL`如果分割線建立失敗。  
   
 ### <a name="remarks"></a>備註  
- `dwAlignment` 可以是下列值之一：  
+ *dwAlignment*可以是下列值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -652,34 +652,34 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwStyleEx`  
+ [in]*dwStyleEx*  
  指定新視窗的延伸的樣式屬性。  
   
- [輸入] `lpszCaption`  
+ [in]*lpszCaption*  
  指定視窗名稱。  
   
- [in][out] `pParentWnd`  
+ [in][out]*pParentWnd*  
  指定父視窗。  
   
- [輸入] `rect`  
- 指定的大小和視窗的位置中的用戶端座標`pParentWnd`。  
+ [in]*rect*  
+ 指定的大小和視窗的位置中的用戶端座標*pParentWnd*。  
   
- [輸入] `bHasGripper`  
+ [in]*bHasGripper*  
  `TRUE` 建立具有標題; 窗格否則， `FALSE`。  
   
- [輸入] `nID`  
+ [in]*nID*  
  指定的子視窗的識別碼。 此值必須是唯一，如果您想要儲存此停駐窗格的停駐狀態。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  指定視窗的樣式屬性。  
   
- [輸入] `dwTabbedStyle`  
+ [in]*dwTabbedStyle*  
  指定當使用者拖曳此窗格的標題上一個窗格時所建立的索引標籤式視窗的索引標籤式的樣式。  
   
- [輸入] `dwControlBarStyle`  
+ [in]*dwControlBarStyle*  
  指定的其他樣式屬性。  
   
- [in][out] `pContext`  
+ [in][out]*pContext*  
  指定視窗的建立內容。  
   
 ### <a name="return-value"></a>傳回值  
@@ -688,9 +688,9 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>備註  
  建立 Windows 窗格，並將它附加至`CDockablePane`物件。  
   
- 如果`dwStyle`視窗樣式`CBRS_FLOAT_MULTI`旗標，包含在迷你框架的其他窗格，可以浮動迷你框架。 根據預設，停駐窗格可以只浮動個別。  
+ 如果*dwStyle*視窗樣式`CBRS_FLOAT_MULTI`旗標，包含在迷你框架的其他窗格，可以浮動迷你框架。 根據預設，停駐窗格可以只浮動個別。  
   
- 如果`dwTabbedStyle`參數具有`AFX_CBRS_OUTLOOK_TABS`指定旗標，窗格建立 Outlook 樣式索引標籤式窗格，如果另一個窗格附加到這個窗格使用[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 根據預設，可停駐窗格建立類型的規則索引標籤式的窗格[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。  
+ 如果*dwTabbedStyle*參數具有`AFX_CBRS_OUTLOOK_TABS`指定旗標，窗格建立 Outlook 樣式索引標籤式窗格，如果另一個窗格附加到這個窗格使用[cdockablepane:: Attachtotabwnd](#attachtotabwnd)方法。 根據預設，可停駐窗格建立類型的規則索引標籤式的窗格[CTabbedPane](../../mfc/reference/ctabbedpane-class.md)。  
   
 ##  <a name="createtabbedpane"></a>  CDockablePane::CreateTabbedPane  
  從目前的窗格中建立索引標籤式的窗格。  
@@ -720,20 +720,20 @@ virtual BOOL DockPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `barContainerManager`  
+ [in]*barContainerManager*  
  正在停駐容器的容器管理員的參考。  
   
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
  `DWORD` 指定要為停駐容器 窗格的一邊。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果容器已成功停駐窗格。，否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- `dwAlignment` 可以是下列值之一：  
+ *dwAlignment*可以是下列值之一：  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -750,11 +750,11 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bWasDocked`  
+ [in]*bWasDocked*  
  方法傳回時，這個值包含`TRUE`窗格已成功停駐; 否則如果它包含`FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
- 如果窗格已停駐於索引標籤式視窗中，或如果已建立索引標籤式的視窗停駐，這個方法會傳回至索引標籤式視窗的指標。 如果窗格卻已成功停駐，則這個方法會傳回`this`指標。 如果停駐失敗，則這個方法會傳回`NULL`。  
+ 如果窗格已停駐於索引標籤式視窗中，或如果已建立索引標籤式的視窗停駐，這個方法會傳回至索引標籤式視窗的指標。 如果窗格卻已成功停駐，則這個方法會傳回**這**指標。 如果停駐失敗，則這個方法會傳回`NULL`。  
   
 ##  <a name="docktorecentpos"></a>  CDockablePane::DockToRecentPos  
  窗格停駐於其預存的停駐位置。  
@@ -780,20 +780,20 @@ virtual BOOL DockToWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pTargetWindow`  
+ [in][out]*pTargetWindow*  
  指定要停駐此窗格可停駐窗格。  
   
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
  指定窗格停駐的對齊方式。 可能是其中一個 CBRS_ALIGN_LEFT、 CBRS_ALIGN_TOP、 CBRS_ALIGN_RIGHT、 CBRS_ALIGN_BOTTOM 或 CBRS_ALIGN_ANY。 （在 afxres.h 中定義）。  
   
- [輸入] `lpRect`  
+ [in]*lpRect*  
  指定停駐窗格的矩形。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果已成功; 停駐窗格，否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 呼叫此方法以將一個窗格停駐到另一個窗格與所指定的對齊方式`dwAlignment`。  
+ 呼叫此方法以將一個窗格停駐到另一個窗格與所指定的對齊方式*dwAlignment*。  
   
 ##  <a name="drawcaption"></a>  CDockablePane::DrawCaption  
  繪製標題的停駐窗格 （也稱為 「 移駐夾 」）。  
@@ -805,10 +805,10 @@ virtual void DrawCaption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  表示用於繪製的裝置內容。  
   
- [輸入] `rectCaption`  
+ [in]*rectCaption*  
  指定窗格的標題的週框矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -824,13 +824,13 @@ void EnableAutohideAll(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用自動隱藏可停駐窗格; 的所有功能否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
  當使用者與保留`Ctrl`金鑰，並按一下 [釘選] 按鈕自動隱藏模式中，相同的容器中的所有其他窗格中切換窗格也會切換成自動隱藏模式。  
   
- 呼叫這個方法時`bEnable`設`FALSE`停用此功能為特定的窗格。  
+ 呼叫這個方法時*bEnable*設`FALSE`停用此功能為特定的窗格。  
   
 ##  <a name="enablegripper"></a>  CDockablePane::EnableGripper  
  顯示或隱藏標題 （也稱為 「 移駐夾 」）。  
@@ -840,7 +840,7 @@ virtual void EnableGripper(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用標題;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -908,10 +908,10 @@ virtual AFX_CS_STATUS GetDockingStatus(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pt`  
+ [in]*pt*  
  在螢幕座標中指標的位置。  
   
- [輸入] `nSensitivity`  
+ [in]*nSensitivity*  
  距離，單位為像素矩形邊緣指標必須在啟用停駐。  
   
 ### <a name="return-value"></a>傳回值  
@@ -949,7 +949,7 @@ int GetLastPercentInPaneContainer() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `int` ，指定在其容器中的窗格中所佔的空間百分比。  
+ *Int* ，指定在其容器中的窗格中所佔的空間百分比。  
   
 ### <a name="remarks"></a>備註  
  容器調整其版面配置時，會使用這個方法。  
@@ -964,10 +964,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectTabAreaTop`  
+ [in]*rectTabAreaTop*  
  `GetTabArea` 如果索引標籤位於頂端的窗格，請使用索引標籤區域填入此變數。 如果找到底部窗格的索引標籤，此變數會填入空的矩形。  
   
- [輸入] `rectTabAreaBottom`  
+ [in]*rectTabAreaBottom*  
  `GetTabArea` 如果索引標籤會位於窗格的底部，請使用索引標籤區域填入此變數。 如果索引標籤頂端的窗格中找到，則會將此變數填滿空的矩形。  
   
 ### <a name="remarks"></a>備註  
@@ -1011,24 +1011,24 @@ virtual int HitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
  指定要測試的點。  
   
- [輸入] `bDetectCaption`  
+ [in]*bDetectCaption*  
  `TRUE` 如果`HTCAPTION`應該會傳回點是否在窗格的標題; 否則`FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  下列其中一個值：  
   
-- `HTNOWHERE` 如果`point`不是處於可停駐窗格。  
+- `HTNOWHERE` 如果*點*不是處於可停駐窗格。  
   
-- `HTCLIENT` 如果`point`可停駐窗格的工作區中。  
+- `HTCLIENT` 如果*點*可停駐窗格的工作區中。  
   
-- `HTCAPTION` 如果`point`可停駐窗格的標題區域中。  
+- `HTCAPTION` 如果*點*可停駐窗格的標題區域中。  
   
-- `AFX_HTCLOSE` 如果`point`位於 [關閉] 按鈕。  
+- `AFX_HTCLOSE` 如果*點*位於 [關閉] 按鈕。  
   
-- `HTMAXBUTTON` 如果`point`固定按鈕上。  
+- `HTMAXBUTTON` 如果*點*固定按鈕上。  
   
 ##  <a name="isautohideallenabled"></a>  CDockablePane::IsAutohideAllEnabled  
  指出是否停駐窗格和容器中的所有其他窗格可以切換為自動隱藏模式。  
@@ -1193,7 +1193,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndOldParent`  
+ [in]*pWndOldParent*  
   
 ### <a name="remarks"></a>備註  
   
@@ -1217,10 +1217,10 @@ virtual void OnBeforeChangeParent(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndNewParent`  
+ [in]*pWndNewParent*  
  新的父視窗的指標。  
   
- [輸入] `bDelay`  
+ [in]*bDelay*  
  `BOOL` 指定是否要延遲重新計算停駐配置的如果未停駐窗格。 如需詳細資訊，請參閱[CDockablePane::UndockPane](#undockpane)。  
   
 ### <a name="remarks"></a>備註  
@@ -1238,10 +1238,10 @@ virtual BOOL OnBeforeFloat(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectFloat`  
+ [in]*rectFloat*  
  浮動狀態時，指定的位置和窗格的大小。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  指定的停駐的方法。 請參閱[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)取得一份可能的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1258,7 +1258,7 @@ virtual void OnPressButtons(UINT nHit);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nHit`  
+ [in]*nHit*  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -1272,7 +1272,7 @@ virtual void OnSlide(BOOL bSlideOut);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSlideOut`  
+ [in]*bSlideOut*  
  `TRUE` 若要顯示窗格。`FALSE`隱藏窗格。  
   
 ### <a name="remarks"></a>備註  
@@ -1299,13 +1299,13 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBarToReplaceWith`  
+ [in]*pBarToReplaceWith*  
  可停駐窗格的指標。  
   
- [輸入] `dockMethod`  
+ [in]*dockMethod*  
  未使用。  
   
- [輸入] `bRegisterWithFrame`  
+ [in]*bRegisterWithFrame*  
  如果`TRUE`，新的窗格已註冊之父系的舊窗格停駐的管理員。 舊的窗格窗格停駐的管理員所維護的清單中的索引處插入新的窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1333,16 +1333,16 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bMode`  
+ [in]*bMode*  
  `TRUE` 若要啟用自動隱藏模式。`FALSE`啟用一般停駐的模式。  
   
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
  指定自動隱藏 窗格，以建立的對齊方式。  
   
- [in][out] `pCurrAutoHideBar`  
+ [in][out]*pCurrAutoHideBar*  
  目前的自動隱藏工具列指標。 可以是`NULL`。  
   
- [輸入] `bUseTimer`  
+ [in]*bUseTimer*  
  指定是否要使用的自動隱藏效果，當使用者將窗格切換為自動隱藏模式，或立即隱藏窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1363,10 +1363,10 @@ void SetAutoHideParents(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pToolBar`  
+ [in]*pToolBar*  
  自動隱藏工具列的指標。  
   
- [輸入] `pBtn`  
+ [in]*pBtn*  
  自動隱藏按鈕的指標。  
   
 ##  <a name="setlastpercentinpanecontainer"></a>  CDockablePane::SetLastPercentInPaneContainer  
@@ -1377,8 +1377,8 @@ void SetLastPercentInPaneContainer(int n);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `n`  
- `int` ，指定在其容器中的窗格中所佔的空間百分比。  
+ [in]*n*  
+ **Int** ，指定在其容器中的窗格中所佔的空間百分比。  
   
 ### <a name="remarks"></a>備註  
  架構會調整版面配置時，使用新值 窗格。  
@@ -1391,7 +1391,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hRestoredSlider`  
+ [in]*hRestoredSlider*  
  窗格分割線 （滑桿） 控制代碼。  
   
 ### <a name="remarks"></a>備註  
@@ -1405,13 +1405,13 @@ void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRTC`  
+ [in]*pRTC*  
  索引標籤式窗格執行階段類別資訊。  
   
 ### <a name="remarks"></a>備註  
  呼叫此方法以設定索引標籤式窗格，以動態方式建立的執行階段類別資訊。 這可能是當使用者將一個窗格拖曳到另一個窗格中，標題，或如果您呼叫[cdockablepane:: Attachtotabwnd](#attachtotabwnd)以程式設計方式建立索引標籤式的窗格，從兩個可停駐窗格的方法。  
   
- 根據設定的預設執行階段類別`dwTabbedStyle`參數[CDockablePane::Create](#create)和[cdockablepane:: Createex](#createex)。 若要自訂新的索引標籤式的窗格，請從下列類別的其中一個衍生您的類別：  
+ 根據設定的預設執行階段類別*dwTabbedStyle*參數[CDockablePane::Create](#create)和[cdockablepane:: Createex](#createex)。 若要自訂新的索引標籤式的窗格，請從下列類別的其中一個衍生您的類別：  
   
 - [CBaseTabbedPane 類別](../../mfc/reference/cbasetabbedpane-class.md)  
   
@@ -1432,13 +1432,13 @@ virtual void ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要顯示窗格。`FALSE`隱藏窗格。  
   
- [輸入] `bDelay`  
+ [in]*bDelay*  
  `TRUE` 若要延遲調整停駐的配置。`FALSE`立即調整停駐的配置。  
   
- [輸入] `bActivate`  
+ [in]*bActivate*  
  `TRUE` 若要啟動窗格時顯示。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1454,10 +1454,10 @@ virtual void Slide(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSlideOut`  
+ [in]*bSlideOut*  
  `TRUE` 若要顯示窗格。`FALSE`隱藏窗格。  
   
- [輸入] `bUseTimer`  
+ [in]*bUseTimer*  
  `TRUE` 若要顯示或隱藏窗格中的，使用 自動隱藏效果;`FALSE`要顯示或隱藏窗格立即。  
   
 ### <a name="remarks"></a>備註  
@@ -1483,7 +1483,7 @@ virtual void UndockPane(BOOL bDelay = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bDelay`  
+ [in]*bDelay*  
  `TRUE` 若要延遲計算停駐的配置。`FALSE`立即重新計算停駐的配置。  
   
 ### <a name="remarks"></a>備註  

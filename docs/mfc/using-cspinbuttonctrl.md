@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b1e83977c1d75070e8878dfdcc53c7afca7a86
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bea2f2f51ed3b012ee9b5afe2572b2a6be9e0d57
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384396"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955478"
 ---
 # <a name="using-cspinbuttonctrl"></a>使用 CSpinButtonCtrl
 *微調按鈕*控制項 (也稱為*上下*控制項) 提供一對箭號，讓使用者可以按一下以調整值。 這個值稱為*目前位置*。 此位置會保持在微調按鈕的範圍內。 當使用者按一下向上箭號時，此位置會朝最大值移動，當使用者按一下向下箭號時，此位置會朝最小值移動。  
@@ -36,7 +36,7 @@ ms.locfileid: "33384396"
   
  通常，目前位置會顯示於附屬控制項中。 附屬控制項稱為*協同視窗*。 如需微調按鈕控制項的圖例，請參閱[關於上下按鈕控制項](http://msdn.microsoft.com/library/windows/desktop/bb759889)Windows SDK 中。  
   
- 在 Visual Studio 中，若要建立一個微調控制項以及一個編輯控制項協同視窗，請先將編輯控制項加入至對話方塊或視窗，然後再拖曳微調控制項。 選取微調控制項並設定其**Auto Buddy**和**設定 Buddy Integer**屬性**True**。 也設定**對齊**屬性。**Right Align**最常見。 這些設定將編輯控制項設定為協同視窗，因為它的定位順序直接位在編輯控制項之前。 編輯控制項會顯示整數，而微調控制項會內嵌在編輯控制項的右邊。 （選擇性） 您可以透過設定微調控制項的有效範圍內[cspinbuttonctrl:: Setrange](../mfc/reference/cspinbuttonctrl-class.md#setrange)方法。 微調控制項和協同視窗之間不需要透過事件處理常式進行溝通，它們會直接交換資料。 如果您將微調控制項用於其他用途，例如，若要依據視窗和對話方塊的序列查看各個頁面，請加入 `UDN_DELTAPOS` 訊息的處理常式並在其中執行自訂動作。  
+ 在 Visual Studio 中，若要建立一個微調控制項以及一個編輯控制項協同視窗，請先將編輯控制項加入至對話方塊或視窗，然後再拖曳微調控制項。 選取微調控制項並設定其**Auto Buddy**和**設定 Buddy Integer**屬性**True**。 也設定**對齊**屬性。**Right Align**最常見。 這些設定將編輯控制項設定為協同視窗，因為它的定位順序直接位在編輯控制項之前。 編輯控制項會顯示整數，而微調控制項會內嵌在編輯控制項的右邊。 （選擇性） 您可以透過設定微調控制項的有效範圍內[cspinbuttonctrl:: Setrange](../mfc/reference/cspinbuttonctrl-class.md#setrange)方法。 微調控制項和協同視窗之間不需要透過事件處理常式進行溝通，它們會直接交換資料。 如果您將微調控制項用於其他用途，例如逐頁查看一連串的視窗和對話方塊，然後新增 UDN_DELTAPOS 訊息的處理常式並執行自訂動作。  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
   

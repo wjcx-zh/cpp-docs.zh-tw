@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ef63cf5c781348e873512c8b2f5bb190ae4976
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62a775457d6da763a5c8426146d421a4cc958454
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358254"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955644"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler 類別
 實作回呼，當動畫管理員的狀態變更時由動畫 API 呼叫。  
@@ -90,10 +90,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pAnimationController`  
+ *pAnimationController*  
  動畫控制器，將會收到事件指標。  
   
- `ppManagerEventHandler`  
+ *ppManagerEventHandler*  
  輸出。 如果方法成功，它包含處理狀態更新為動畫管理員的 COM 物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -111,10 +111,10 @@ IFACEMETHOD(OnManagerStatusChanged)(
 ```  
   
 ### <a name="parameters"></a>參數  
- `newStatus`  
+ *newStatus*  
  新的狀態。  
   
- `previousStatus`  
+ *previousStatus*  
  先前的狀態。  
   
 ### <a name="return-value"></a>傳回值  
@@ -130,7 +130,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pAnimationController`  
+ *pAnimationController*  
  動畫控制器，將會收到事件指標。  
   
 ## <a name="see-also"></a>另請參閱  

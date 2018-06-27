@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ba9615f583069ec63946fe52840dc5bc4fa545e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73596ec5ec9f17b2007a6816bbe0ab90b1463430
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376459"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957100"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 類別
 `CDataRecoveryHandler`時，自動儲存文件中，如果應用程式非預期地結束進行還原。  
@@ -188,21 +188,21 @@ virtual BOOL AutosaveDocumentInfo(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pDocument`|指標`CDocument`儲存。|  
-|[輸入] `bResetModifiedFlag`|`TRUE` 表示`CDataRecoveryHandler`會考慮`pDocument`修改;`FALSE`表示架構會考慮`pDocument`是未修改。 請參閱 < 備註 > 一節，如需詳細資訊的影響，此旗標。|  
+|[in]*pDocument*|指標`CDocument`儲存。|  
+|[in]*bResetModifiedFlag*|`TRUE` 表示`CDataRecoveryHandler`會考慮*pDocument*修改;`FALSE`表示架構會考慮*pDocument*是未修改。 請參閱 < 備註 > 一節，如需詳細資訊的影響，此旗標。|  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果已設定適當的旗標和`pDocument`有效`CDocument`物件。  
+ `TRUE` 如果已設定適當的旗標和*pDocument*有效`CDocument`物件。  
   
 ### <a name="remarks"></a>備註  
  每個`CDocument`物件具有旗標，指出是否已變更從上次儲存之後。 使用[CDocument::IsModified](../../mfc/reference/cdocument-class.md#ismodified)來判斷這個旗標的狀態。 如果`CDocument`最後一個檔案之後, 並未變更`AutosaveDocumentInfo`刪除該文件的任何 autosaved 檔案。 如果文件已經從上次儲存後，關閉它會提示使用者儲存文件關閉前。  
   
 > [!NOTE]
->  使用`bResetModifiedFlag`將文件的狀態變更為 「 未修改可能會導致使用者遺失未儲存的資料。 如果架構將視為不想修改的文件，關閉它不會提示使用者儲存。  
+>  使用*bResetModifiedFlag*將文件的狀態變更為 「 未修改可能會導致使用者遺失未儲存的資料。 如果架構將視為不想修改的文件，關閉它不會提示使用者儲存。  
   
- 這個方法會擲回的例外狀況[ASSERT](diagnostic-services.md#assert)巨集如果`pDocument`不是有效`CDocument`物件。  
+ 這個方法會擲回的例外狀況[ASSERT](diagnostic-services.md#assert)巨集如果*pDocument*不是有效`CDocument`物件。  
   
- 請使用此方法，`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`或`AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL`必須在設定`m_dwRestartManagerSupportFlags`。   
+ 請使用此方法，`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`或`AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL`必須在設定*m_dwRestartManagerSupportFlags*。   
   
 ##  <a name="cdatarecoveryhandler"></a>  CDataRecoveryHandler::CDataRecoveryHandler  
  建構 `CDataRecoveryHandler` 物件。  
@@ -218,8 +218,8 @@ CDataRecoveryHandler(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `dwRestartManagerSupportFlags`|指出哪些選項重新啟動管理員支援。|  
-|[輸入] `nAutosaveInterval`|時，自動儲存之間的時間。 這個參數是以毫秒為單位。|  
+|[in]*dwRestartManagerSupportFlags*|指出哪些選項重新啟動管理員支援。|  
+|[in]*nAutosaveInterval*|時，自動儲存之間的時間。 這個參數是以毫秒為單位。|  
   
 ### <a name="remarks"></a>備註  
  MFC 架構會自動建立`CDataRecoveryHandler`當您使用您的應用程式的物件**新專案**精靈。 除非您要自訂的資料復原行為或重新啟動管理員，您不應建立`CDataRecoveryHandler`物件。  
@@ -237,15 +237,15 @@ virtual BOOL CreateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pDocument`|指標`CDocument`。 這個方法會建立這個文件資訊`CDocument`。|  
+|[in]*pDocument*|指標`CDocument`。 這個方法會建立這個文件資訊`CDocument`。|  
   
 ### <a name="return-value"></a>傳回值  
  預設實作會傳回 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
- 如果這個方法會檢查`pDocument`再增加文件已經是清單中的文件。 如果`pDocument`已經在清單中，這個方法與相關聯 autosaved 檔案刪除`pDocument`。  
+ 如果這個方法會檢查*pDocument*再增加文件已經是清單中的文件。 如果*pDocument*已經在清單中，這個方法與相關聯 autosaved 檔案刪除*pDocument*。  
   
- 請使用此方法，`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`或`AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL`必須在設定`m_dwRestartManagerSupportFlags`。 
+ 請使用此方法，`AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART`或`AFX_RESTARTMANAGER_AUTOSAVE_AT_INTERVAL`必須在設定*m_dwRestartManagerSupportFlags*。 
   
 ##  <a name="deleteallautosavedfiles"></a>  CDataRecoveryHandler::DeleteAllAutosavedFiles  
  刪除所有目前的 autosaved 檔案。  
@@ -269,7 +269,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `strAutosavedFile`|包含 autosaved 檔案名稱的字串。|  
+|[in]*strAutosavedFile*|包含 autosaved 檔案名稱的字串。|  
   
 ### <a name="return-value"></a>傳回值  
  預設實作永遠會傳回`TRUE`。  
@@ -285,11 +285,11 @@ virtual CString GenerateAutosaveFileName(const CString& strDocumentName) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strDocumentName`  
+ [in]*strDocumentName*  
  包含文件名稱的字串。 `GenerateAutosaveFileName` 使用此文件名稱以產生對應的自動儲存檔案名稱。  
   
 ### <a name="return-value"></a>傳回值  
- 從產生的自動儲存檔案名稱`strDocumentName`。  
+ 從產生的自動儲存檔案名稱*strDocumentName*。  
   
 ### <a name="remarks"></a>備註  
  每個文件名稱會有一對一的對應，以自動儲存檔案名稱。  
@@ -326,13 +326,13 @@ virtual CString GetDocumentListName(CDocument* pDocument) const;
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pDocument`|指標`CDocument`。 `GetDocumentListName` 從這個擷取的文件名稱`CDocument`。|  
+|[in]*pDocument*|指標`CDocument`。 `GetDocumentListName` 從這個擷取的文件名稱`CDocument`。|  
   
 ### <a name="return-value"></a>傳回值  
- 文件名稱，從`pDocument`。  
+ 文件名稱，從*pDocument*。  
   
 ### <a name="remarks"></a>備註  
- `CDataRecoveryHandler`使用中的索引鍵與文件名稱`m_mapDocNameToAutosaveName`， `m_mapDocNameToDocumentPtr`，和`m_mapDocNameToRestoreBool`。 這些參數會啟用`CDataRecoveryHandler`監視`CDocument`物件、 自動儲存檔案名稱和自動儲存設定。  
+ `CDataRecoveryHandler`使用中的索引鍵與文件名稱*m_mapDocNameToAutosaveName*， *m_mapDocNameToDocumentPtr*，和*m_mapDocNameToRestoreBool*。 這些參數會啟用`CDataRecoveryHandler`監視`CDocument`物件、 自動儲存檔案名稱和自動儲存設定。  
   
 ##  <a name="getnormaldocumenttitle"></a>  CDataRecoveryHandler::GetNormalDocumentTitle  
  擷取指定的文件的一般標題。  
@@ -346,7 +346,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pDocument`|指標`CDocument`。|  
+|[in]*pDocument*|指標`CDocument`。|  
   
 ### <a name="return-value"></a>傳回值  
  指定的文件的一般的標題。  
@@ -362,7 +362,7 @@ virtual CString GetRecoveredDocumentTitle(const CString& strDocumentTitle) const
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strDocumentTitle`  
+ [in]*strDocumentTitle*  
  一般文件的標題。  
   
 ### <a name="return-value"></a>傳回值  
@@ -433,7 +433,7 @@ virtual void QueryRestoreAutosavedDocuments();
 ### <a name="remarks"></a>備註  
  如果您的應用程式是 Unicode，這個方法會顯示[CTaskDialog](../../mfc/reference/ctaskdialog-class.md)給使用者。 否則，架構會使用[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)向使用者查詢。  
   
- 之後`QueryRestoreAutosavedDocuments`收集所有回應來自使用者，它將資訊儲存在成員變數`m_mapDocNameToRestoreBool`。 這個方法不會還原 autosaved 文件。  
+ 之後`QueryRestoreAutosavedDocuments`收集所有回應來自使用者，它將資訊儲存在成員變數*m_mapDocNameToRestoreBool*。 這個方法不會還原 autosaved 文件。  
   
 ##  <a name="readopendocumentlist"></a>  CDataRecoveryHandler::ReadOpenDocumentList  
  從登錄載入開啟的文件清單。  
@@ -446,7 +446,7 @@ virtual BOOL ReadOpenDocumentList();
  `TRUE` 表示`ReadOpenDocumentList`從登錄; 載入至少一個文件的資訊`FALSE`指出載入任何文件資訊。  
   
 ### <a name="remarks"></a>備註  
- 此函式會從登錄載入開啟的文件資訊，並將它儲存在成員變數`m_mapDocNameToAutosaveName`。  
+ 此函式會從登錄載入開啟的文件資訊，並將它儲存在成員變數*m_mapDocNameToAutosaveName*。  
   
  之後`ReadOpenDocumentList`載入所有的資料，它會從登錄中刪除文件資訊。  
   
@@ -462,17 +462,17 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pDocument`|要移除文件指標。|  
+|[in]*pDocument*|要移除文件指標。|  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE` 如果`pDocument`已從清單中，移除`FALSE`如果發生錯誤。  
+ `TRUE` 如果*pDocument*已從清單中，移除`FALSE`如果發生錯誤。  
   
 ### <a name="remarks"></a>備註  
  當使用者關閉文件時，架構會使用從開啟的文件的清單中移除這個方法。  
   
- 如果`RemoveDocumentInfo`找不到`pDocument`在開啟的文件清單中，它不做任何動作，並傳回`TRUE`。  
+ 如果`RemoveDocumentInfo`找不到*pDocument*在開啟的文件清單中，它不做任何動作，並傳回`TRUE`。  
   
- 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定`m_dwRestartManagerSupportFlags`。   
+ 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定*m_dwRestartManagerSupportFlags*。   
   
 ##  <a name="reopenpreviousdocuments"></a>  CDataRecoveryHandler::ReopenPreviousDocuments  
  會開啟先前開啟的文件。  
@@ -487,7 +487,7 @@ virtual BOOL ReopenPreviousDocuments();
 ### <a name="remarks"></a>備註  
  這個方法會開啟最近儲存的先前開啟的文件。 如果不儲存文件或 autosaved，`ReopenPreviousDocuments`開啟該檔案類型的範本為基礎的空白文件。  
   
- 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定`m_dwRestartManagerSupportFlags`。 如果未設定此參數，`ReopenPreviousDocuments`不做任何動作，並傳回`FALSE`。  
+ 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定*m_dwRestartManagerSupportFlags*。 如果未設定此參數，`ReopenPreviousDocuments`不做任何動作，並傳回`FALSE`。  
   
  如果沒有儲存先前開啟的文件的清單中的文件`ReopenPreviousDocuments`不做任何動作，並傳回`FALSE`。  
   
@@ -529,7 +529,7 @@ Virtual void SetAutosaveInterval(int nAutosaveInterval);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nAutosaveInterval`  
+ [in]*nAutosaveInterval*  
  新的自動儲存間隔以毫秒為單位。  
   
 ##  <a name="setautosavepath"></a>  CDataRecoveryHandler::SetAutosavePath  
@@ -544,7 +544,7 @@ virtual void SetAutosavePath(const CString& strAutosavePath);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `strAutosavePath`|儲存自動儲存檔案的路徑。|  
+|[in]*strAutosavePath*|儲存自動儲存檔案的路徑。|  
   
 ### <a name="remarks"></a>備註  
  變更自動儲存目錄不會移動目前 autosaved 檔案。  
@@ -561,7 +561,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `strRestartIdentifier`|重新啟動管理員唯一識別項。|  
+|[in]*strRestartIdentifier*|重新啟動管理員唯一識別項。|  
   
 ### <a name="remarks"></a>備註  
  重新啟動管理員會記錄在登錄中開啟的文件的相關資訊。 這項資訊會儲存具有唯一的重新啟動識別項，做為索引鍵。 重新啟動識別項是唯一的應用程式的每個執行個體，因為應用程式的多個執行個體可能會非預期地結束，並重新啟動管理員可以復原每個。  
@@ -578,7 +578,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `bSaveOnIdle`|`TRUE` 若要儲存在目前的閒置週期; 文件資訊`FALSE to not perform a save`.|  
+|[in]*bSaveOnIdle*|`TRUE` 若要儲存在目前的閒置週期; 文件資訊`FALSE to not perform a save`.|  
   
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager  
  設定是否重新啟動管理員先前的應用程式結束所造成。  
@@ -592,7 +592,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `bShutdownByRestartManager`|`TRUE` 指出重新啟動管理員造成應用程式結束。`FALSE`以指出應用程式已結束，因為其他原因。|  
+|[in]*bShutdownByRestartManager*|`TRUE` 指出重新啟動管理員造成應用程式結束。`FALSE`以指出應用程式已結束，因為其他原因。|  
   
 ### <a name="remarks"></a>備註  
  架構的行為上先前的結束是否非預期或已重新啟動管理員來起始而有所不同。  
@@ -609,15 +609,15 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pDocument`|儲存的文件指標。|  
+|[in]*pDocument*|儲存的文件指標。|  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果此方法刪除 autosaved 文件且已更新文件的資訊。`FALSE`如果發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 當使用者儲存文件時，應用程式會移除 autosaved 檔案，因為它已不再需要。 `UpdateDocumentInfo` 藉由呼叫刪除 autosaved 檔案[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)。 `UpdateDocumentInfo` 將資訊從`pDocument`清單目前開啟文件因為`RemoveDocumentInfo`刪除該資訊之後，但是已儲存文件仍為開啟。  
+ 當使用者儲存文件時，應用程式會移除 autosaved 檔案，因為它已不再需要。 `UpdateDocumentInfo` 藉由呼叫刪除 autosaved 檔案[CDataRecoveryHandler::RemoveDocumentInfo](#removedocumentinfo)。 `UpdateDocumentInfo` 將資訊從*pDocument*清單目前開啟文件因為`RemoveDocumentInfo`刪除該資訊之後，但是已儲存文件仍為開啟。  
   
- 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定`m_dwRestartManagerSupportFlags`。   
+ 若要使用此方法，`AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES`必須在設定*m_dwRestartManagerSupportFlags*。   
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)   

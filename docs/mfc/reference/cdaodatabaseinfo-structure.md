@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352736"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951929"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 結構
 `CDaoDatabaseInfo`結構包含的資料存取物件 (DAO) 定義的資料庫物件的相關資訊。  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>參數  
- `m_strName`  
+ *m_strName*  
  唯一名稱的資料庫物件。 若要直接擷取這個屬性，請呼叫[CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)。 如需詳細資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  指出是否可以變更資料庫。 若要直接擷取這個屬性，請呼叫[CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 可更新屬性 」。  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  表示 Microsoft Jet 資料庫引擎的版本。 若要直接擷取這個屬性的值，請呼叫資料庫物件的[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)成員函式。 如需詳細資訊，請參閱主題 DAO [說明] 中的 「 版本屬性 」。  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  指定文字的字串比較或排序的排序次序的順序。 可能的值包括：  
   
 - **dbSortGeneral**使用一般 （英文、 法文、 德文、 葡萄牙文、 義大利文和現代西班牙文） 的排序順序。  
@@ -99,7 +99,7 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  ODBC 資料庫上執行查詢時，就會發生 Microsoft Jet 資料庫引擎在逾時錯誤之前等候的秒數。 預設逾時值為 60 秒。 當 QueryTimeout 設定為 0 時，不會逾時，就會發生;這可能會造成程式停止回應。 若要直接擷取這個屬性的值，請呼叫資料庫物件的[GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout)成員函式。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < QueryTimeout 屬性 >。  
   
- `m_strConnect`  
+ *m_strConnect*  
  提供有關開啟的資料庫來源的資訊。 資訊關於連接字串，並直接擷取這個屬性的值的相關資訊，請參閱[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成員函式。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 連接屬性 >。  
   
 ## <a name="remarks"></a>備註  

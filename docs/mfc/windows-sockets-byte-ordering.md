@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fc3f586c7fc8861bfc29dade7b62e741bb0ffc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a95725565dee2b25fd7f2e39927fde88c9cddff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385153"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955998"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets：位元組順序
 本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文涵蓋位元組順序。 其他問題包含於下列文章中： [Windows Sockets： 封鎖](../mfc/windows-sockets-blocking.md)和[Windows Sockets： 轉換字串](../mfc/windows-sockets-converting-strings.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "33385153"
   
  [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- C + +`struct`是類別基本上相同的動作。 `Message`結構可以具有成員函式，例如`Serialize`上面所宣告成員函式。 `Serialize`成員函式可能會看起來像這樣：  
+ C + +**結構**是類別基本上相同的動作。 `Message`結構可以具有成員函式，例如`Serialize`上面所宣告成員函式。 `Serialize`成員函式可能會看起來像這樣：  
   
  [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   

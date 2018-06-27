@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6eb567babdea0d747e6b684f6373403cb685c6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356028"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956664"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 控制列類別的基底類別[CStatusBar](../../mfc/reference/cstatusbar-class.md)， [CToolBar](../../mfc/reference/ctoolbar-class.md)， [CDialogBar](../../mfc/reference/cdialogbar-class.md)， [CReBar](../../mfc/reference/crebar-class.md)，和[COleResizeBar](../../mfc/reference/coleresizebar-class.md)。  
@@ -141,21 +141,21 @@ virtual CSize CalcDynamicLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nLength`  
- 控制列，水平或垂直，取決於要求的維度`dwMode`。  
+ *nLength*  
+ 控制列，水平或垂直，取決於要求的維度*dwMode*。  
   
- `nMode`  
+ *nMode*  
  下列預先定義的旗標用來決定動態控制列的寬度與高度。 使用位元 OR (&#124;) 運算子來組合的旗標。  
   
 |版面配置模式旗標|意義|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|表示框架的大小是否應該自動縮放控制列。 如果在列不是一種停駐列 （不適用於停駐），設定。 未設定停駐或浮動列時 （適用於停駐）。 如果設定，`LM_STRETCH`忽略`nLength`並傳回根據維度`LM_HORZ`狀態。 `LM_STRETCH` 運作方式類似`bStretch`參數中使用[CalcFixedLayout](#calcfixedlayout); 請參閱該成員函式，如需有關之間自動縮放和方向的關聯性。|  
-|`LM_HORZ`|表示橫條圖是水平或垂直方向。 設定如果橫條圖是水平方向的而且如果它是垂直方向，未設定。 `LM_HORZ` 運作方式類似`bHorz`參數中使用[CalcFixedLayout](#calcfixedlayout); 請參閱該成員函式，如需有關之間自動縮放和方向的關聯性。|  
-|**LM_MRUWIDTH**|最近使用的動態的寬度。 會忽略`nLength`參數，然後使用記住最近使用的寬度。|  
-|`LM_HORZDOCK`|水平停駐的維度。 會忽略`nLength`參數並傳回具有最大寬度的動態大小。|  
-|`LM_VERTDOCK`|垂直停駐的維度。 會忽略`nLength`參數並傳回具有最大高度動態的大小。|  
-|`LM_LENGTHY`|如果設定`nLength`表示而不是寬度的高度 （Y 方向）。|  
-|`LM_COMMIT`|重設**LM_MRUWIDTH**浮動控制列的目前寬度。|  
+|`LM_STRETCH`|表示框架的大小是否應該自動縮放控制列。 如果在列不是一種停駐列 （不適用於停駐），設定。 未設定停駐或浮動列時 （適用於停駐）。 如果設定，`LM_STRETCH`忽略*nLength*並傳回根據維度`LM_HORZ`狀態。 `LM_STRETCH` 運作方式類似*bStretch*參數中使用[CalcFixedLayout](#calcfixedlayout); 請參閱該成員函式，如需有關之間自動縮放和方向的關聯性。|  
+|`LM_HORZ`|表示橫條圖是水平或垂直方向。 設定如果橫條圖是水平方向的而且如果它是垂直方向，未設定。 `LM_HORZ` 運作方式類似*bHorz*參數中使用[CalcFixedLayout](#calcfixedlayout); 請參閱該成員函式，如需有關之間自動縮放和方向的關聯性。|  
+|`LM_MRUWIDTH`|最近使用的動態的寬度。 會忽略*nLength*參數，然後使用記住最近使用的寬度。|  
+|`LM_HORZDOCK`|水平停駐的維度。 會忽略*nLength*參數並傳回具有最大寬度的動態大小。|  
+|`LM_VERTDOCK`|垂直停駐的維度。 會忽略*nLength*參數並傳回具有最大高度動態的大小。|  
+|`LM_LENGTHY`|如果設定*nLength*表示而不是寬度的高度 （Y 方向）。|  
+|`LM_COMMIT`|重設`LM_MRUWIDTH`浮動控制列的目前寬度。|  
   
 ### <a name="return-value"></a>傳回值  
  控制列的大小，單位為像素的[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
@@ -173,11 +173,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bStretch`  
- 指出軸是否應該自動縮放以框架的大小。 `bStretch`參數時，則為非零列 （不適用於停駐） 的停駐列並不是 0 停駐或浮動時 （適用於停駐）。  
+ *bStretch*  
+ 指出軸是否應該自動縮放以框架的大小。 *BStretch*參數時，則為非零列 （不適用於停駐） 的停駐列並不是 0 停駐或浮動時 （適用於停駐）。  
   
- `bHorz`  
- 表示橫條圖是水平或垂直方向。 `bHorz`參數為非零，如果列水平方向，而且它是 0，如果它是垂直方向。  
+ *bHorz*  
+ 表示橫條圖是水平或垂直方向。 *BHorz*參數為非零，如果列水平方向，而且它是 0，如果它是垂直方向。  
   
 ### <a name="return-value"></a>傳回值  
  控制列的大小，單位為像素的`CSize`物件。  
@@ -185,7 +185,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>備註  
  控制列，例如工具列可以水平或垂直適應按鈕中所包含的控制列。  
   
- 如果`bStretch`是**TRUE**，延伸所提供的方向沿著維度`bHorz`。 換句話說，如果`bHorz`是**FALSE**，垂直縮放控制項列。 如果`bStretch`是**FALSE**，沒有 「 延展 」，就會發生。 下表顯示可能的排列方式和產生的控制列樣式的`bStretch`和`bHorz`。  
+ 如果*bStretch*是**TRUE**，延伸所提供的方向沿著維度*bHorz*。 換句話說，如果*bHorz*是**FALSE**，垂直縮放控制項列。 如果*bStretch*是**FALSE**，沒有 「 延展 」，就會發生。 下表顯示可能的排列方式和產生的控制列樣式的*bStretch*和*bHorz*。  
   
 |bStretch|bHorz|自動縮放|方向|停駐/未停駐|  
 |--------------|-----------|----------------|-----------------|--------------------------|  
@@ -204,11 +204,11 @@ virtual void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  包含目前的控制列; 維度包括框線。  
   
- `bHorz`  
- 表示橫條圖是水平或垂直方向。 `bHorz`參數為非零，如果列水平方向，而且它是 0，如果它是垂直方向。  
+ *bHorz*  
+ 表示橫條圖是水平或垂直方向。 *BHorz*參數為非零，如果列水平方向，而且它是 0，如果它是垂直方向。  
   
 ### <a name="remarks"></a>備註  
  繪製控制項列之前呼叫此函式。  
@@ -230,7 +230,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指向要用於轉譯的框線和控制列的移駐夾的裝置內容。  
   
 ### <a name="remarks"></a>備註  
@@ -248,10 +248,10 @@ virtual void DrawBorders(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指向要用來呈現的控制列框線的裝置內容。  
   
- `rect`  
+ *rect*  
  A`CRect`物件，其中包含控制列的維度。  
   
 ### <a name="remarks"></a>備註  
@@ -267,10 +267,10 @@ virtual void DrawGripper(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指向要用來呈現控制項列移駐夾的裝置內容。  
   
- `rect`  
+ *rect*  
  A`CRect`物件，其中包含控制列移駐夾的維度。  
   
 ### <a name="remarks"></a>備註  
@@ -284,7 +284,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDockStyle`  
+ *dwDockStyle*  
  如果支援，指定是否將控制列支援停駐和側邊的可停駐控制列，其父視窗。 可以是下列一或多個項目：  
   
 - `CBRS_ALIGN_TOP` 可讓用戶端區域頂端停駐。  
@@ -325,7 +325,7 @@ CRect GetBorders() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A`CRect`物件，其中包含控制列物件的每一端的目前寬度 （以像素為單位）。 例如，值`left`成員的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，是左框線的寬度。  
+ A`CRect`物件，其中包含控制列物件的每一端的目前寬度 （以像素為單位）。 例如，值的*左*成員的[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，是左框線的寬度。  
   
 ##  <a name="getcount"></a>  CControlBar::GetCount  
  傳回的非`HWND`中的項目`CControlBar`物件。  
@@ -376,9 +376,9 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_bAutoDelete` 這類型的公用變數**BOOL**。  
+ *m_bAutoDelete*這類型的公用變數**BOOL**。  
   
- 控制列物件通常被內嵌於框架視窗物件。 在此情況下，`m_bAutoDelete`為 0，因為內嵌的控制列物件終結時終結框架視窗。  
+ 控制列物件通常被內嵌於框架視窗物件。 在此情況下， *m_bAutoDelete*為 0，因為內嵌的控制列物件終結時終結框架視窗。  
   
  將這個變數設為非零值，如果您配置`CControlBar`物件堆積，而且您不打算呼叫**刪除**。  
   
@@ -399,10 +399,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTarget`  
+ *pTarget*  
  指向主框架視窗的應用程式。 此指標會路由更新訊息時使用的。  
   
- `bDisableIfNoHndler`  
+ *bDisableIfNoHndler*  
  旗標，指出是否應該為已停用自動顯示沒有更新處理常式的控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -418,7 +418,7 @@ void SetBarStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  控制列所需的樣式。 可以是下列一或多個項目：  
   
 - `CBRS_ALIGN_TOP` 可讓控制列固定至頂端框架視窗的工作區。  
@@ -445,7 +445,7 @@ void SetBarStyle(DWORD dwStyle);
   
 - `CBRS_FLYBY` 會導致在相同的時間，以工具提示呈現要更新的訊息文字。  
   
-- **CBRS_GRIPPER**導致移駐夾，類似於使用中的寬線**CReBar**要繪製的任何物件， `CControlBar`-衍生的類別。  
+- `CBRS_GRIPPER` 會導致移駐夾，類似於使用中的寬線`CReBar`要繪製的任何物件， `CControlBar`-衍生的類別。  
   
 ### <a name="remarks"></a>備註  
  不會影響**WS_** （視窗樣式） 設定。  
@@ -476,7 +476,7 @@ void SetBorders(LPCRECT lpRect);
  *cyBottom*  
  控制列下框線的高度 （以像素為單位）。  
   
- `lpRect`  
+ *lpRect*  
  指標[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含每個控制列物件的框線的目前寬度 （以像素為單位）。  
   
 ### <a name="example"></a>範例  
@@ -492,7 +492,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  指標`CWnd`物件。  
   
 ### <a name="remarks"></a>備註  

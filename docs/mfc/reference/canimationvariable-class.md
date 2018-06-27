@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 207adbba4635b80ba7b60af53f920b1af376e93d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355946"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957295"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 類別
 表示動畫變數。  
@@ -141,7 +141,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTransition`  
+ *pTransition*  
  若要加入的轉換指標。  
   
 ### <a name="remarks"></a>備註  
@@ -158,13 +158,13 @@ void ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pController`  
+ *pController*  
  父動畫控制器指標。  
   
- `pStoryboard`  
+ *pStoryboard*  
  分鏡腳本指標。  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  如果為 TRUE，此方法應將取決於主要畫面格的轉換。  
   
 ### <a name="remarks"></a>備註  
@@ -178,7 +178,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  指定預設值。  
   
 ### <a name="remarks"></a>備註  
@@ -192,7 +192,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bAutodestroy`  
+ *bAutodestroy*  
  指定此方法是否應該刪除 transition 物件。  
   
 ### <a name="remarks"></a>備註  
@@ -206,7 +206,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pManager`  
+ *pManager*  
  動畫管理員指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -225,7 +225,7 @@ BOOL CreateTransitions(
 ```  
   
 ### <a name="parameters"></a>參數  
-`pLibrary`  
+*pLibrary*  
  指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
   
 ### <a name="return-value"></a>傳回值  
@@ -244,10 +244,10 @@ void EnableIntegerValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>參數  
- `pController`  
+ *pController*  
  父控制器指標。  
   
- `bEnable`  
+ *bEnable*  
  TRUE-啟用 FALSE-停用事件的事件。  
   
 ### <a name="remarks"></a>備註  
@@ -263,10 +263,10 @@ void EnableValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>參數  
- `pController`  
+ *pController*  
  父控制器指標。  
   
- `bEnable`  
+ *bEnable*  
  TRUE-啟用 FALSE-停用事件的事件。  
   
 ### <a name="remarks"></a>備註  
@@ -307,10 +307,10 @@ HRESULT GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblValue`  
+ *dblValue*  
  目前動畫變數的值。  
   
- `nValue`  
+ *n 值*  
  目前動畫變數的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -378,7 +378,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  指定新的預設值。  
   
 ### <a name="remarks"></a>備註  
@@ -392,7 +392,7 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentObject`  
+ *pParentObject*  
  包含此變數的動畫物件指標。  
   
 ### <a name="remarks"></a>備註  

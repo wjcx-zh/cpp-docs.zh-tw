@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfbe14743ffff91a4a1749f0394a6deb8f0547a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83ae0a746e31c211517563a018e5b7da18e3350a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367434"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955592"
 ---
 # <a name="cdockstate-class"></a>CDockState 類別
 序列化的 `CObject` 類別，這個類別會在持續性記憶體 (檔案) 中載入、卸載或清除一個或多個停駐控制列的狀態。  
@@ -107,7 +107,7 @@ void LoadState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszProfileName`  
+ *lpszProfileName*  
  指向以 null teminated 字串，指定在初始設定檔案或儲存狀態資訊的 Windows 登錄中的索引鍵中的區段名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -128,7 +128,7 @@ void SaveState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszProfileName`  
+ *lpszProfileName*  
  指向以 null teminated 字串，指定在初始設定檔案或儲存狀態資訊的 Windows 登錄中的索引鍵中的區段名稱。  
   
 ### <a name="remarks"></a>備註  

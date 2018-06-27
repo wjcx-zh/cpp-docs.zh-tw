@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382033"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953141"
 ---
 # <a name="tree-control-styles"></a>樹狀目錄控制項樣式
-樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 樣式管理樹狀目錄控制項的外觀。 當您建立的樹狀結構控制項時，您可以設定初始的樣式。 您可以擷取和變更之後建立的樹狀目錄控制項使用的樣式[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)和[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函式，指定**GWL_STYLE**的`nIndex`參數。 如需完整的樣式清單，請參閱[樹狀檢視控制項的視窗樣式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中。  
+樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 樣式管理樹狀目錄控制項的外觀。 當您建立的樹狀結構控制項時，您可以設定初始的樣式。 您可以擷取和變更之後建立的樹狀目錄控制項使用的樣式[GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584)和[SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) Windows 函式，指定**GWL_STYLE**的*nIndex*參數。 如需完整的樣式清單，請參閱[樹狀檢視控制項的視窗樣式](http://msdn.microsoft.com/library/windows/desktop/bb760013)Windows SDK 中。  
   
  **TVS_HASLINES**樣式，以增強樹狀目錄控制項階層架構的圖形表示法繪製線條的子系項目連結至其對應的父項目。 這個樣式不連結階層的根目錄中的項目。 若要這樣做，您需要結合**TVS_HASLINES**和**TVS_LINESATROOT**樣式。  
   

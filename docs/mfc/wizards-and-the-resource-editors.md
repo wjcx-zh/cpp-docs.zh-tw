@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383830"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951136"
 ---
 # <a name="wizards-and-the-resource-editors"></a>精靈和資源編輯器
 Visual c + + MFC 程式設計，以及許多整合式的資源編輯器中包含數個精靈，供使用。 對 ActiveX 控制項的程式設計， [ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)用途很像，MFC 應用程式精靈。 雖然您可以撰寫 MFC 應用程式，這些工具大部分都沒有，工具將可大幅簡化和加速您的工作。  
@@ -41,7 +41,7 @@ Visual c + + MFC 程式設計，以及許多整合式的資源編輯器中包含
 > [!NOTE]
 >  類別檢視也可協助您覆寫虛擬函式中的 MFC 類別。 選取類別並覆寫虛擬函式。 以下段落中所述相似與訊息處理程序的其餘部分。  
   
- 在 Windows 下執行的應用程式是[訊息導向](../mfc/message-handling-and-mapping.md)。 使用者動作和其他正在執行的程式中所發生的事件會導致將訊息傳送至 windows 程式中的 Windows。 例如，如果使用者按一下滑鼠在視窗中的，Windows 會傳送`WM_LBUTTONDOWN`訊息時按下滑鼠左鍵和`WM_LBUTTONUP`訊息時放開按鍵時。 Windows 也會傳送**WM_COMMAND**時使用者從功能表列選取命令訊息。  
+ 在 Windows 下執行的應用程式是[訊息導向](../mfc/message-handling-and-mapping.md)。 使用者動作和其他正在執行的程式中所發生的事件會導致將訊息傳送至 windows 程式中的 Windows。 例如，如果使用者按一下滑鼠在視窗中的，Windows 會傳送 WM_LBUTTONDOWN 訊息時按下滑鼠左鍵和 WM_LBUTTONUP 訊息生於放開按鍵時。 當使用者從功能表列選取命令時，Windows 也會傳送 WM_COMMAND 訊息。  
   
  在 MFC 架構中，各種物件，例如文件、 檢視、 框架視窗、 文件範本和應用程式物件，可以 「 處理 」 訊息。 這類物件提供 「 處理常式函數 」 做為其中一個其成員函式，並 framework 會將內送訊息對應至其處理常式。  
   

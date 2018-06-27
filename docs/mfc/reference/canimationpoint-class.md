@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c8c9aaaf212e98fdeff1e639bb09423304e643
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355158"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957399"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 類別
 實作可以動畫顯示其座標的點功能。  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pXTransition`  
+ *pXTransition*  
  指標轉換的 X 座標。  
   
- `pYTransition`  
+ *pYTransition*  
  指標轉換的 Y 座標。  
   
 ### <a name="remarks"></a>備註  
@@ -138,16 +138,16 @@ CAnimationPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- `ptDefault`  
+ *ptDefault*  
  指定預設點座標。  
   
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
- `nObjectID`  
+ *nObjectID*  
  指定物件識別碼。  
   
- `dwUserData`  
+ *dwUserData*  
  指定使用者定義的資料。  
   
 ### <a name="remarks"></a>備註  
@@ -161,7 +161,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
 ```  
   
 ### <a name="parameters"></a>參數  
- `lst`  
+ *lst*  
  函式傳回時，它會包含代表 X 和 Y 座標的兩個 CAnimationVariable 物件的指標。  
   
 ##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
@@ -185,7 +185,7 @@ BOOL GetValue(CPoint& ptValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ptValue`  
+ *ptValue*  
  輸出。 此方法傳回時，包含目前的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -255,7 +255,7 @@ void operator=(const CPoint& ptSrc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ptSrc`  
+ *ptSrc*  
  是指 CPoint 或點。  
   
 ### <a name="remarks"></a>備註  
@@ -269,7 +269,7 @@ void SetDefaultValue(const POINT& ptDefault);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ptDefault`  
+ *ptDefault*  
  指定預設點值。  
   
 ### <a name="remarks"></a>備註  

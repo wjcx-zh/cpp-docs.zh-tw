@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe1b1676c5d1944adf61f6ae4234a7e3478c3b9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 943d1bf01890696466638eca3c73839297807fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380142"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953118"
 ---
 # <a name="standard-commands"></a>標準命令
 架構定義許多標準命令訊息。 這些命令的 ID 通常會採用下列格式：  
   
  **ID_** *來源*_*項目*  
   
- 其中*來源*通常是功能表名稱和*項目*功能表項目。 例如，[檔案] 功能表上新命令的命令 ID 是 `ID_FILE_NEW`。 標準命令 ID 在文件中以粗體顯示。 程式設計人員定義的 ID 會以與周圍文字不同的字型顯示。  
+ 其中*來源*通常是功能表名稱和*項目*功能表項目。 例如，在 [檔案] 功能表上的新命令的命令 ID 是 ID_FILE_NEW。 標準命令 ID 在文件中以粗體顯示。 程式設計人員定義的 ID 會以與周圍文字不同的字型顯示。  
   
  下列是受支援之某些最重要的命令的清單：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "33380142"
  *OLE 命令 （[編輯] 功能表）*  
  插入新物件、 編輯連結、 貼上連結、 選擇性貼上和*typename*物件 （動詞命令）。  
   
- 此架構會為這些命令提供各種支援層級。 某些命令的支援僅限於定義的命令 ID，而其他的支援則為徹底的實作。 例如，此架構會藉由建立新文件物件、顯示 [開啟] 對話方塊以及開啟和讀取檔案，以實作 [檔案] 功能表上的 [開啟] 命令。 相較之下，您必須實作 [編輯] 功能表上的命令，因為等命令**ID_EDIT_COPY**取決於您要複製的資料的本質。  
+ 此架構會為這些命令提供各種支援層級。 某些命令的支援僅限於定義的命令 ID，而其他的支援則為徹底的實作。 例如，此架構會藉由建立新文件物件、顯示 [開啟] 對話方塊以及開啟和讀取檔案，以實作 [檔案] 功能表上的 [開啟] 命令。 相較之下，您必須實作命令在 [編輯] 功能表上自行，像是 ID_EDIT_COPY 命令取決於資料的本質，因為您要複製。  
   
  支援的命令的詳細資訊及提供實作的層級，請參閱[技術提示 22](../mfc/tn022-standard-commands-implementation.md)。 標準命令定義於檔案 AFXRES.H 中。  
   

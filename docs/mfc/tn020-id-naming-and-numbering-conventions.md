@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384107"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951363"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020：ID 命名和編號慣例
 此提示說明 ID 命名和編號慣例 MFC 2.0 使用的資源、 命令、 字串、 控制項和子視窗。  
@@ -68,7 +68,7 @@ ms.locfileid: "33384107"
 |IDM_|不使用 MFC 命令架構的功能表項目。|  
 |ID_|使用 MFC 的功能表命令的命令架構。|  
   
- 遵循 MFC 命令架構的命令必須有`ON_COMMAND`命令處理常式，而且可以有`ON_UPDATE_COMMAND_UI`處理常式。 如果這些命令處理常式會遵循 MFC 命令架構，它們將會正常運作是否它們繫結至功能表命令、 工具列按鈕或對話方塊列按鈕。 相同的 「 ID_"前置詞也用於顯示在程式的訊息列中的功能表提示字串。 大部分應用程式中的功能表項目應該遵循的 MFC 命令慣例。 所有標準命令 Id (例如， `ID_FILE_NEW`) 遵循這個慣例。  
+ 請遵循 MFC 命令架構的命令必須要有 ON_COMMAND 命令處理常式，而且可以具有 ON_UPDATE_COMMAND_UI 處理常式。 如果這些命令處理常式會遵循 MFC 命令架構，它們將會正常運作是否它們繫結至功能表命令、 工具列按鈕或對話方塊列按鈕。 相同的 「 ID_"前置詞也用於顯示在程式的訊息列中的功能表提示字串。 大部分應用程式中的功能表項目應該遵循的 MFC 命令慣例。 所有標準命令 Id (例如，ID_FILE_NEW) 遵循這個慣例。  
   
  MFC 也會使用 「 IDP_"做為一種特殊形式的字串 （而不是"IDS_")。 "IDP_"前置詞的字串會出現提示，也就是在訊息方塊中所使用的字串。 以預留位置表示字串取決於程式的"IDP_"字串可以包含"%1"和"%2"。 「 IDP_"字串通常會有與其相關聯的說明主題，且 「 IDS_"字串。 一律當地語系化"IDP_"字串，並 「 IDS_"字串可能不會進行當地語系化。  
   

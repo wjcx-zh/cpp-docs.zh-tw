@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eaefa40be2a6cf1d57326c2135d848fa08dbc87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c98703cbe68efc0ca7e40d3b25d0178d826855a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357685"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952602"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 類別
 表示 Windows Socket — 網路通訊的端點。  
@@ -136,19 +136,19 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::SendTo](#sendto)|將資料傳送到特定的目的地。|  
 |[CAsyncSocket::SendToEx](#sendtoex)|將資料傳送到特定的目的地 （控點 IPv6 位址）。|  
 |[CAsyncSocket::SetSockOpt](#setsockopt)|設定通訊端選項。|  
-|[CAsyncSocket::ShutDown](#shutdown)|停用**傳送**及/或**接收**通訊端上呼叫。|  
+|[CAsyncSocket::ShutDown](#shutdown)|停用`Send`及/或`Receive`通訊端上呼叫。|  
 |[CASyncSocket::Socket](#socket)|配置通訊端控制代碼。|  
   
 ### <a name="protected-methods"></a>保護方法  
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CAsyncSocket::OnAccept](#onaccept)|通知接聽的通訊端，其可接受暫止的連接要求，藉由呼叫**接受**。|  
+|[CAsyncSocket::OnAccept](#onaccept)|通知接聽的通訊端，其可接受暫止的連接要求，藉由呼叫`Accept`。|  
 |[CAsyncSocket::OnClose](#onclose)|告知通訊端通訊端連接到它已關閉。|  
 |[CAsyncSocket::OnConnect](#onconnect)|通知連接的通訊端，連線嘗試已完成，是否成功或錯誤。|  
 |[CAsyncSocket::OnOutOfBandData](#onoutofbanddata)|沒有要讀取通訊端，通常緊急郵件上的頻外資料通知接收通訊端。|  
-|[CAsyncSocket::OnReceive](#onreceive)|通知接聽通訊端沒有資料可以藉由呼叫擷取**接收**。|  
-|[CAsyncSocket::OnSend](#onsend)|它可以將資料傳送藉由呼叫會告知通訊端**傳送**。|  
+|[CAsyncSocket::OnReceive](#onreceive)|通知接聽通訊端沒有資料可以藉由呼叫擷取`Receive`。|  
+|[CAsyncSocket::OnSend](#onsend)|它可以將資料傳送藉由呼叫會告知通訊端`Send`。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -168,7 +168,7 @@ class CAsyncSocket : public CObject
   
  這個類別為基礎的假設您已了解網路通訊。 您必須負責處理封鎖，位元組順序的差異，並在 Unicode 和多位元組字元轉換設定 (MBCS) 字串。 如果您想更方便的介面，會為您管理這些問題，請參閱類別[CSocket](../../mfc/reference/csocket-class.md)。  
   
- 若要使用`CAsyncSocket`物件，呼叫其建構函式，然後呼叫[建立](#create)函式來建立基礎通訊端控制代碼 (型別`SOCKET`)，但不接受通訊端。 針對伺服器通訊端呼叫[接聽](#listen)成員函式，以及用戶端通訊端呼叫[連接](#connect)成員函式。 伺服器通訊端應該呼叫[接受](#accept)接收連線要求時的函式。 使用其餘`CAsyncSocket`函式，以實現通訊端之間的通訊。 完成時，摧毀`CAsyncSocket`物件是在堆積上建立; 解構函式自動呼叫[關閉](#close)函式。 `SOCKET`資料類型文件中所述[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)。  
+ 若要使用`CAsyncSocket`物件，呼叫其建構函式，然後呼叫[建立](#create)函式來建立基礎通訊端控制代碼 (型別`SOCKET`)，但不接受通訊端。 針對伺服器通訊端呼叫[接聽](#listen)成員函式，以及用戶端通訊端呼叫[連接](#connect)成員函式。 伺服器通訊端應該呼叫[接受](#accept)接收連線要求時的函式。 使用其餘`CAsyncSocket`函式，以實現通訊端之間的通訊。 完成時，摧毀`CAsyncSocket`物件是在堆積上建立; 解構函式自動呼叫[關閉](#close)函式。 **通訊端**資料類型文件中所述[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)。  
   
 > [!NOTE]
 >  當使用靜態連結的 MFC 應用程式中的次要執行緒中的 MFC 通訊端，您必須呼叫`AfxSocketInit`中使用通訊端初始化通訊端程式庫的每個執行緒。 根據預設，`AfxSocketInit`只能在主執行緒中呼叫。  
@@ -194,14 +194,14 @@ virtual BOOL Accept(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rConnectedSocket`  
+ *rConnectedSocket*  
  參考，識別新的通訊端，可供連線。  
   
- `lpSockAddr`  
- 指標[SOCKADDR](../../mfc/reference/sockaddr-structure.md)接收的連接位址的結構通訊端，因為知道網路上。 正確格式`lpSockAddr`引數取決於建立時建立通訊端位址系列。 如果`lpSockAddr`及/或`lpSockAddrLen`等於**NULL**，則會不傳回遠端位址接受通訊端的任何資訊。  
+ *lpSockAddr*  
+ 指標[SOCKADDR](../../mfc/reference/sockaddr-structure.md)接收的連接位址的結構通訊端，因為知道網路上。 正確格式*lpSockAddr*引數取決於建立時建立通訊端位址系列。 如果*lpSockAddr*及/或*lpSockAddrLen*等於**NULL**，則會不傳回遠端位址接受通訊端的任何資訊。  
   
- `lpSockAddrLen`  
- 中的位址長度的指標`lpSockAddr`以位元組為單位。 `lpSockAddrLen`是值結果參數： 一開始應該包含所指向的空間數量`lpSockAddr`; 在傳回時，它會包含傳回的位址的實際長度 （以位元組為單位）。  
+ *lpSockAddrLen*  
+ 中的位址長度的指標*lpSockAddr*以位元組為單位。 *LpSockAddrLen*是值結果參數： 一開始應該包含所指向的空間數量*lpSockAddr*; 在傳回時，它會包含傳回的位址的實際長度 （以位元組為單位）。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則為 0，並傳回特定的錯誤碼可以擷取藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
@@ -210,7 +210,7 @@ virtual BOOL Accept(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpSockAddrLen`引數是太小 (的大小大於或等於[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構)。  
+- **WSAEFAULT** *lpSockAddrLen*引數是太小 (的大小大於或等於[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構)。  
   
 - **WSAEINPROGRESS**封鎖 Windows Sockets 呼叫正在進行中。  
   
@@ -218,7 +218,7 @@ virtual BOOL Accept(
   
 - **WSAEMFILE**佇列是空的時接受的項目，而且沒有任何描述項可用。  
   
-- `WSAENOBUFS` 使用沒有緩衝區空間。  
+- **WSAENOBUFS**沒有緩衝區空間。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
@@ -227,9 +227,9 @@ virtual BOOL Accept(
 - **WSAEWOULDBLOCK**通訊端已標示為封鎖且所有連接都都會存在，才能被接受。  
   
 ### <a name="remarks"></a>備註  
- 這個常式會擷取第一個佇列中的擱置連線連接、 建立新的通訊端使用相同的屬性，為這個通訊端，和將其附加至`rConnectedSocket`。 如果沒有擱置中的連線會出現在佇列上**接受**傳回零和`GetLastError`會傳回錯誤。 接受通訊端 ( *rConnectedSocket)* 無法用來接受更多的連線。 開啟並在接聽，則會保留原始通訊端。  
+ 這個常式會擷取第一個佇列中的擱置連線連接、 建立新的通訊端使用相同的屬性，為這個通訊端，和將其附加至*rConnectedSocket*。 如果沒有擱置中的連線會出現在佇列上`Accept`傳回零和`GetLastError`會傳回錯誤。 接受通訊端 ( *rConnectedSocket)* 無法用來接受更多的連線。 開啟並在接聽，則會保留原始通訊端。  
   
- 引數`lpSockAddr`已知通訊層時連接的通訊端，位址會填入結果參數。 **接受**這類的使用與連線為基礎的通訊端型別**SOCK_STREAM**。  
+ 引數*lpSockAddr*已知通訊層時連接的通訊端，位址會填入結果參數。 `Accept` 這類的使用與連線為基礎的通訊端型別**SOCK_STREAM**。  
   
 ##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
  呼叫此成員函式可要求通訊端的事件通知。  
@@ -239,7 +239,7 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 ```  
   
 ### <a name="parameters"></a>參數  
- `lEvent`  
+ *lEvent*  
  位元遮罩指定的網路應用程式有興趣的事件組合。  
   
 - **FD_READ**要接收通知的整備進行讀取。  
@@ -269,7 +269,7 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
  此函式用來指定哪些 MFC 回呼通知函式會呼叫通訊端。 `AsyncSelect` 自動將此通訊端設定為封鎖模式。 如需詳細資訊，請參閱文章[Windows Sockets： 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
 ##  <a name="attach"></a>  CAsyncSocket::Attach  
- 呼叫此成員函式附加`hSocket`的控制代碼`CAsyncSocket`物件。  
+ 呼叫此成員函式附加*hSocket*的控制代碼`CAsyncSocket`物件。  
   
 ```  
 BOOL Attach(
@@ -277,10 +277,10 @@ BOOL Attach(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hSocket`  
+ *hSocket*  
  包含通訊端的控制代碼。  
   
- `lEvent`  
+ *lEvent*  
  位元遮罩指定的網路應用程式有興趣的事件組合。  
   
 - **FD_READ**要接收通知的整備進行讀取。  
@@ -316,17 +316,17 @@ BOOL Bind (
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSocketPort`  
+ *nSocketPort*  
  識別通訊端應用程式連接埠。  
   
- `lpszSocketAddress`  
- 網路位址時，小數點的數字，例如"128.56.22.8"。 傳遞**NULL**此參數表示的字串**CAsyncSocket**應接聽所有網路介面上的用戶端活動的執行個體。  
+ *lpszSocketAddress*  
+ 網路位址時，小數點的數字，例如"128.56.22.8"。 傳遞**NULL**此參數表示的字串`CAsyncSocket`應接聽所有網路介面上的用戶端活動的執行個體。  
   
- `lpSockAddr`  
+ *lpSockAddr*  
  指標[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構，其中包含要指派給此通訊端位址。  
   
- `nSockAddrLen`  
- 中的位址長度`lpSockAddr`以位元組為單位。  
+ *nSockAddrLen*  
+ 中的位址長度*lpSockAddr*以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則為 0，並傳回特定的錯誤碼可以擷取藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
@@ -337,7 +337,7 @@ BOOL Bind (
   
 - **WSAEADDRINUSE**指定的位址已在使用。 (請參閱**SO_REUSEADDR**通訊端選項底下[SetSockOpt](#setsockopt)。)  
   
-- **WSAEFAULT** `nSockAddrLen`引數是太小 (的大小大於或等於[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構)。  
+- **WSAEFAULT** *nSockAddrLen*引數是太小 (的大小大於或等於[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構)。  
   
 - **WSAEINPROGRESS**封鎖 Windows Sockets 呼叫正在進行中。  
   
@@ -345,12 +345,12 @@ BOOL Bind (
   
 - **WSAEINVAL**通訊端已經繫結至地址。  
   
-- `WSAENOBUFS` 沒有足夠的緩衝區可用，連接過多。  
+- **WSAENOBUFS**沒有足夠可用的緩衝區、 太多的連線。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 ### <a name="remarks"></a>備註  
- 這個常式會先用在未連接的資料流或資料流通訊端，後續**連接**或`Listen`呼叫。 它可以接受連線要求之前，接聽伺服器通訊端必須選取一個連接埠號碼並設為已知 Windows 通訊端藉由呼叫**繫結**。 **繫結**建立通訊端的本機關聯 （主機位址/連接埠號碼），將本機名稱指派到未命名的通訊端。  
+ 這個常式會先用在未連接的資料流或資料流通訊端，後續`Connect`或`Listen`呼叫。 它可以接受連線要求之前，接聽伺服器通訊端必須選取一個連接埠號碼並設為已知 Windows 通訊端藉由呼叫`Bind`。 `Bind` 將本機名稱指派給未命名的通訊端，以建立通訊端的本機關聯 （主機位址/連接埠號碼）。  
   
 ##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket  
  建構空白通訊端物件。  
@@ -360,7 +360,7 @@ CAsyncSocket();
 ```  
   
 ### <a name="remarks"></a>備註  
- 之後建構物件，您必須呼叫其**建立**成員函式來建立**通訊端**資料結構，並將其位址的繫結。 (在伺服器端的 Windows Sockets 通訊，接聽的通訊端建立要在中使用的通訊端時**接受**呼叫時，您不會呼叫**建立**該通訊端。)  
+ 之後建構物件，您必須呼叫其`Create`成員函式來建立**通訊端**資料結構，並將其位址的繫結。 (在伺服器端的 Windows Sockets 通訊，接聽的通訊端建立要在中使用的通訊端時`Accept`呼叫時，您不會呼叫`Create`該通訊端。)  
   
 ##  <a name="close"></a>  CAsyncSocket::Close  
  會關閉通訊端。  
@@ -370,9 +370,9 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式會釋放通訊端描述項，以便進一步參考將會失敗並出現錯誤**WSAENOTSOCK**。 如果這是基礎通訊端的最後一個參考，會捨棄相關聯的名稱資訊和佇列的資料。 通訊端物件的解構函式呼叫**關閉**您。  
+ 此函式會釋放通訊端描述項，以便進一步參考將會失敗並出現錯誤**WSAENOTSOCK**。 如果這是基礎通訊端的最後一個參考，會捨棄相關聯的名稱資訊和佇列的資料。 通訊端物件的解構函式呼叫`Close`您。  
   
- 如`CAsyncSocket`，但不適用於`CSocket`的語意**關閉**受到通訊端選項**SO_LINGER**和**SO_DONTLINGER**。 如需詳細資訊，請參閱成員函式`GetSockOpt`。  
+ 如`CAsyncSocket`，但不適用於`CSocket`的語意`Close`受到通訊端選項**SO_LINGER**和**SO_DONTLINGER**。 如需詳細資訊，請參閱成員函式`GetSockOpt`。  
   
 ##  <a name="connect"></a>  CAsyncSocket::Connect  
  呼叫此成員函式建立的未連接的資料流或資料包通訊端的連接。  
@@ -389,17 +389,17 @@ BOOL Connect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszHostAddress`  
+ *lpszHostAddress*  
  這個物件所連接的通訊端的網路位址： 電腦名稱，例如"ftp.microsoft.com"或小數點的數字，例如"128.56.22.8"。  
   
- `nHostPort`  
+ *nHostPort*  
  識別通訊端應用程式連接埠。  
   
- `lpSockAddr`  
+ *lpSockAddr*  
  指標[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構，其中包含連接的通訊端位址。  
   
- `nSockAddrLen`  
- 中的位址長度`lpSockAddr`以位元組為單位。  
+ *nSockAddrLen*  
+ 中的位址長度*lpSockAddr*以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則為 0，並傳回特定的錯誤碼可以擷取藉由呼叫[GetLastError](#getlasterror)。 如果這表示錯誤碼**WSAEWOULDBLOCK**，且您的應用程式使用的可覆寫的回呼，您的應用程式將會收到`OnConnect`連線作業完成時的訊息。 此成員函式適用於下列錯誤：  
@@ -420,7 +420,7 @@ BOOL Connect(
   
 - **WSAEDESTADDRREQ**目的地位址是必要項。  
   
-- **WSAEFAULT** `nSockAddrLen`引數不正確。  
+- **WSAEFAULT** *nSockAddrLen*引數不正確。  
   
 - **WSAEINVAL**不正確的主機位址。  
   
@@ -430,7 +430,7 @@ BOOL Connect(
   
 - **WSAENETUNREACH**無法透過此主機連接網路，這一次。  
   
-- `WSAENOBUFS` 使用沒有緩衝區空間。 無法連線通訊端。  
+- **WSAENOBUFS**沒有緩衝區空間。 無法連線通訊端。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
@@ -439,14 +439,14 @@ BOOL Connect(
 - **WSAEWOULDBLOCK**通訊端已標示為封鎖而且無法立即完成連線。  
   
 ### <a name="remarks"></a>備註  
- 如果解除繫結通訊端時，唯一的值由系統指派給本機關聯通訊端標示為繫結。 請注意，如果名稱結構的地址欄位是全部為零，**連接**會傳回零。 若要取得延伸錯誤資訊，請呼叫`GetLastError`成員函式。  
+ 如果解除繫結通訊端時，唯一的值由系統指派給本機關聯通訊端標示為繫結。 請注意，如果名稱結構的地址欄位是全部為零，`Connect`會傳回零。 若要取得延伸錯誤資訊，請呼叫`GetLastError`成員函式。  
   
  資料流通訊端 (型別**SOCK_STREAM**)，起始的作用中連接至外部的主機。 通訊端呼叫成功完成時，通訊端已傳送/接收資料。  
   
- 資料包通訊端 (型別**SOCK_DGRAM**)，設定預設的目的地，這將用於後續**傳送**和**接收**呼叫。  
+ 資料包通訊端 (型別**SOCK_DGRAM**)，設定預設的目的地，這將用於後續`Send`和`Receive`呼叫。  
   
 ##  <a name="create"></a>  CAsyncSocket::Create  
- 呼叫**建立**之後建構建立 Windows 通訊端，並將其連接的通訊端物件的成員函式。  
+ 呼叫`Create`之後建構建立 Windows 通訊端，並將其連接的通訊端物件的成員函式。  
   
 ```  
 BOOL Create(
@@ -457,13 +457,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSocketPort`  
+ *nSocketPort*  
  若要使用通訊端，或 0，如果您想要選取連接埠的 Windows Sockets 的已知通訊埠。  
   
- `nSocketType`  
+ *nSocketType*  
  **SOCK_STREAM**或**SOCK_DGRAM**。  
   
- `lEvent`  
+ *lEvent*  
  位元遮罩指定的網路應用程式有興趣的事件組合。  
   
 - **FD_READ**要接收通知的整備進行讀取。  
@@ -494,7 +494,7 @@ BOOL Create(
   
 - **WSAEMFILE**沒有更多檔案描述項可用。  
   
-- `WSAENOBUFS` 使用沒有緩衝區空間。 無法建立通訊端。  
+- **WSAENOBUFS**沒有緩衝區空間。 無法建立通訊端。  
   
 - **WSAEPROTONOSUPPORT**不支援指定的連接埠。  
   
@@ -503,22 +503,22 @@ BOOL Create(
 - **WSAESOCKTNOSUPPORT**指定的通訊端型別不支援此位址系列。  
   
 ### <a name="remarks"></a>備註  
- **建立**呼叫[通訊端](#socket)而且如果成功的話，它會呼叫[繫結](#bind)繫結至指定的位址的通訊端。 支援下列通訊端類型：  
+ `Create` 呼叫[通訊端](#socket)而且如果成功的話，它會呼叫[繫結](#bind)繫結至指定的位址的通訊端。 支援下列通訊端類型：  
   
 - **SOCK_STREAM**排序，提供可靠、 全雙工、 連線基礎位元組資料流。 針對網際網路位址家族，會使用傳輸控制通訊協定 (TCP)。  
   
 - **SOCK_DGRAM**支援資料流，也就是無連接且不可靠的封包的固定 （通常很短） 的最大長度。 針對網際網路位址家族，會使用使用者資料包通訊協定 (UDP)。  
   
     > [!NOTE]
-    >  **接受**成員函式會採用新的空白參考`CSocket`做為其參數的物件。 您必須先建構這個物件，才能呼叫**接受**。 請注意，如果這個通訊端物件超出範圍，連接會關閉。 請勿呼叫**建立**對這個新通訊端物件。  
+    >  `Accept`成員函式會採用新的空白參考`CSocket`做為其參數的物件。 您必須先建構這個物件，才能呼叫`Accept`。 請注意，如果這個通訊端物件超出範圍，連接會關閉。 請勿呼叫`Create`對這個新通訊端物件。  
   
 > [!IMPORTANT]
-> **建立**是**不**具備執行緒安全。  如果您將會呼叫它多執行緒環境中，就無法叫用同時由不同的執行緒，請務必保護每個呼叫 mutex 或其他同步鎖定。  
+> `Create` 是**不**具備執行緒安全。  如果您將會呼叫它多執行緒環境中，就無法叫用同時由不同的執行緒，請務必保護每個呼叫 mutex 或其他同步鎖定。  
   
  如需有關資料流和資料包通訊端的詳細資訊，請參閱文章[Windows Sockets： 背景](../../mfc/windows-sockets-background.md)和[Windows Sockets： 連接埠和通訊端位址](../../mfc/windows-sockets-ports-and-socket-addresses.md)和[Windows Sockets 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
 ##  <a name="detach"></a>  CAsyncSocket::Detach  
- 呼叫此成員函式，要卸離**通訊端**中處理`m_hSocket`資料成員從`CAsyncSocket`物件，並設定`m_hSocket`至**NULL**。  
+ 呼叫此成員函式，要卸離**通訊端**中處理*m_hSocket*資料成員從`CAsyncSocket`物件，並設定*m_hSocket*至**NULL**.  
   
 ```  
 SOCKET Detach();
@@ -532,11 +532,11 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hSocket`  
+ *hSocket*  
  包含通訊端的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CAsyncSocket`物件，或**NULL**如果沒有任何`CAsyncSocket`物件附加至`hSocket`。  
+ 指標`CAsyncSocket`物件，或**NULL**如果沒有任何`CAsyncSocket`物件附加至*hSocket*。  
   
 ### <a name="remarks"></a>備註  
  當指定時**通訊端**處理，如果`CAsyncSocket`物件沒有附加至控制代碼，則成員函式會傳回**NULL**。  
@@ -571,17 +571,17 @@ BOOL GetPeerName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rPeerAddress`  
+ *rPeerAddress*  
  若要參考`CString`接收小數點的數字 IP 位址的物件。  
   
- `rPeerPort`  
+ *rPeerPort*  
  若要參考**UINT**儲存連接埠。  
   
- `lpSockAddr`  
+ *lpSockAddr*  
  指標[SOCKADDR](../../mfc/reference/sockaddr-structure.md)接收對等通訊端的名稱的結構。  
   
- `lpSockAddrLen`  
- 中的位址長度的指標`lpSockAddr`以位元組為單位。 在傳回時，`lpSockAddrLen`引數中包含的實際大小`lpSockAddr`傳回以位元組為單位。  
+ *lpSockAddrLen*  
+ 中的位址長度的指標*lpSockAddr*以位元組為單位。 在傳回時， *lpSockAddrLen*引數中包含的實際大小*lpSockAddr*傳回以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則為 0，並傳回特定的錯誤碼可以擷取藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
@@ -590,7 +590,7 @@ BOOL GetPeerName(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpSockAddrLen`引數不足夠。  
+- **WSAEFAULT** *lpSockAddrLen*引數不足夠。  
   
 - **WSAEINPROGRESS**封鎖 Windows Sockets 呼叫正在進行中。  
   
@@ -611,10 +611,10 @@ BOOL GetPeerNameEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rPeerAddress`  
+ *rPeerAddress*  
  若要參考`CString`接收小數點的數字 IP 位址的物件。  
   
- `rPeerPort`  
+ *rPeerPort*  
  若要參考**UINT**儲存連接埠。  
   
 ### <a name="return-value"></a>傳回值  
@@ -624,7 +624,7 @@ BOOL GetPeerNameEx(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpSockAddrLen`引數不足夠。  
+- **WSAEFAULT** *lpSockAddrLen*引數不足夠。  
   
 - **WSAEINPROGRESS**封鎖 Windows Sockets 呼叫正在進行中。  
   
@@ -650,17 +650,17 @@ BOOL GetSockName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rSocketAddress`  
+ *rSocketAddress*  
  若要參考`CString`接收小數點的數字 IP 位址的物件。  
   
- `rSocketPort`  
+ *rSocketPort*  
  若要參考**UINT**儲存連接埠。  
   
- `lpSockAddr`  
+ *lpSockAddr*  
  指標[SOCKADDR](../../mfc/reference/sockaddr-structure.md)接收通訊端位址的結構。  
   
- `lpSockAddrLen`  
- 中的位址長度的指標`lpSockAddr`以位元組為單位。  
+ *lpSockAddrLen*  
+ 中的位址長度的指標*lpSockAddr*以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則為 0，並傳回特定的錯誤碼可以擷取藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
@@ -669,16 +669,16 @@ BOOL GetSockName(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpSockAddrLen`引數不足夠。  
+- **WSAEFAULT** *lpSockAddrLen*引數不足夠。  
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
-- **WSAEINVAL**通訊端已經沒有繫結與位址**繫結**。  
+- **WSAEINVAL**通訊端已經沒有繫結與位址`Bind`。  
   
 ### <a name="remarks"></a>備註  
- 這個呼叫時特別有用**連接**已進行呼叫，而這樣做不**繫結**首先; 此呼叫會提供您可以判斷本機關聯的已設定的唯一方法系統。  
+ 這個呼叫時特別有用`Connect`已進行呼叫，而這樣做不`Bind`首先; 此呼叫會提供您可以決定這已由系統設定本機關聯的唯一方法。  
   
  若要處理的 IPv6 位址，使用[CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
@@ -692,10 +692,10 @@ BOOL GetSockNameEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rSocketAddress`  
+ *rSocketAddress*  
  若要參考`CString`接收小數點的數字 IP 位址的物件。  
   
- `rSocketPort`  
+ *rSocketPort*  
  若要參考**UINT**儲存連接埠。  
   
 ### <a name="return-value"></a>傳回值  
@@ -705,18 +705,18 @@ BOOL GetSockNameEx(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpSockAddrLen`引數不足夠。  
+- **WSAEFAULT** *lpSockAddrLen*引數不足夠。  
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
-- **WSAEINVAL**通訊端已經沒有繫結與位址**繫結**。  
+- **WSAEINVAL**通訊端已經沒有繫結與位址`Bind`。  
   
 ### <a name="remarks"></a>備註  
  這個呼叫是相同[CAsyncSocket::GetSockName](#getsockname)不同之處在於它會處理 IPv6 位址以及為舊的通訊協定。  
   
- 這個呼叫時特別有用**連接**已進行呼叫，而這樣做不**繫結**首先; 此呼叫會提供您可以判斷本機關聯的已設定的唯一方法系統。  
+ 這個呼叫時特別有用`Connect`已進行呼叫，而這樣做不`Bind`首先; 此呼叫會提供您可以決定這已由系統設定本機關聯的唯一方法。  
   
 ##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt  
  呼叫此成員函式可擷取通訊端選項。  
@@ -730,16 +730,16 @@ BOOL GetSockOpt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nOptionName`  
+ *nOptionName*  
  要擷取值的通訊端選項。  
   
- `lpOptionValue`  
- 要求選項的值會傳回至緩衝區的指標。 選取的選項相關聯的值會傳回緩衝區中`lpOptionValue`。 所指向之整數`lpOptionLen`原本應該包含以位元組為單位; 緩衝區的大小，並在傳回時，它就會設定為傳回值的大小。 如**SO_LINGER**，這是大小的`LINGER`結構; 所有其他選項中，它會需要的大小**BOOL**或`int`，視使用的選項。 請參閱選項及其大小 < 備註 > 一節中的清單。  
+ *lpOptionValue*  
+ 要求選項的值會傳回至緩衝區的指標。 選取的選項相關聯的值會傳回緩衝區中*lpOptionValue*。 所指向之整數*lpOptionLen*原本應該包含以位元組為單位; 緩衝區的大小，並在傳回時，它就會設定為傳回值的大小。 如**SO_LINGER**，這是大小的`LINGER`結構; 所有其他選項中，它會需要的大小**BOOL**或**int**，視使用的選項。 請參閱選項及其大小 < 備註 > 一節中的清單。  
   
- `lpOptionLen`  
- 大小的指標`lpOptionValue`以位元組為單位的緩衝區。  
+ *lpOptionLen*  
+ 大小的指標*lpOptionValue*以位元組為單位的緩衝區。  
   
- `nLevel`  
+ *nLevel*  
  層級的定義選項。唯一支援的層級為**SOL_SOCKET**和**IPPROTO_TCP**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -749,7 +749,7 @@ BOOL GetSockOpt(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpOptionLen`引數無效。  
+- **WSAEFAULT** *lpOptionLen*引數無效。  
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
@@ -758,9 +758,9 @@ BOOL GetSockOpt(
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 ### <a name="remarks"></a>備註  
- `GetSockOpt` 擷取相關聯的任何狀態中的任何型別，通訊端通訊端選項的目前值，並且儲存中的結果`lpOptionValue`。 選項會影響通訊端作業，例如路由傳送封包，超出訊號範圍的資料傳輸，以及等等。  
+ `GetSockOpt` 擷取相關聯的任何狀態中的任何型別，通訊端通訊端選項的目前值，並且儲存中的結果*lpOptionValue*。 選項會影響通訊端作業，例如路由傳送封包，超出訊號範圍的資料傳輸，以及等等。  
   
- 支援下列選項`GetSockOpt`。 型別會識別所定址的資料型別`lpOptionValue`。 **TCP_NODELAY**選項會使用層級**IPPROTO_TCP**; 所有其他選項使用層級**SOL_SOCKET**。  
+ 支援下列選項`GetSockOpt`。 型別會識別所定址的資料型別*lpOptionValue*。 **TCP_NODELAY**選項會使用層級**IPPROTO_TCP**; 所有其他選項使用層級**SOL_SOCKET**。  
   
 |值|類型|意義|  
 |-----------|----------|-------------|  
@@ -769,26 +769,26 @@ BOOL GetSockOpt(
 |**SO_DEBUG**|**BOOL**|啟用偵錯。|  
 |**SO_DONTLINGER**|**BOOL**|如果為 true， **SO_LINGER**選項已停用。|  
 |**SO_DONTROUTE**|**BOOL**|路由會停用。|  
-|**SO_ERROR**|`int`|擷取錯誤狀態並清除。|  
+|**SO_ERROR**|**int**|擷取錯誤狀態並清除。|  
 |**SO_KEEPALIVE**|**BOOL**|傳送持續作用。|  
 |**SO_LINGER**|**延遲結構**|傳回目前的延遲選項。|  
 |**SO_OOBINLINE**|**BOOL**|在一般資料流中收到的頻外資料。|  
-|**SO_RCVBUF**|`int`|接收緩衝區大小。|  
+|**SO_RCVBUF**|**int**|接收緩衝區大小。|  
 |**SO_REUSEADDR**|**BOOL**|通訊端可以繫結已在使用一個位址。|  
-|**SO_SNDBUF**|`int`|傳送的緩衝區大小。|  
-|**SO_TYPE**|`int`|通訊端型別 (例如， **SOCK_STREAM**)。|  
+|**SO_SNDBUF**|**int**|傳送的緩衝區大小。|  
+|**SO_TYPE**|**int**|通訊端型別 (例如， **SOCK_STREAM**)。|  
 |**TCP_NODELAY**|**BOOL**|停用用於傳送聯合的 Nagle 演算法。|  
   
  不支援的柏克萊軟體發佈 (BSD) 選項`GetSockOpt`是：  
   
 |值|類型|意義|  
 |-----------|----------|-------------|  
-|**SO_RCVLOWAT**|`int`|收到下限標準。|  
-|**SO_RCVTIMEO**|`int`|接收逾時。|  
-|**SO_SNDLOWAT**|`int`|傳送下限標準。|  
-|**SO_SNDTIMEO**|`int`|傳送逾時。|  
+|**SO_RCVLOWAT**|**int**|收到下限標準。|  
+|**SO_RCVTIMEO**|**int**|接收逾時。|  
+|**SO_SNDLOWAT**|**int**|傳送下限標準。|  
+|**SO_SNDTIMEO**|**int**|傳送逾時。|  
 |**IP_OPTIONS**||取得 IP 標頭中的選項。|  
-|**TCP_MAXSEG**|`int`|取得 TCP 區段大小上限。|  
+|**TCP_MAXSEG**|**int**|取得 TCP 區段大小上限。|  
   
  呼叫`GetSockOpt`與不支援的選項會導致錯誤碼**WSAENOPROTOOPT**傳回`GetLastError`。  
   
@@ -802,11 +802,11 @@ BOOL IOCtl(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lCommand`  
+ *lCommand*  
  要在通訊端上執行的命令。  
   
- `lpArgument`  
- 參數的指標`lCommand`。  
+ *lpArgument*  
+ 參數的指標*lCommand*。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功，則為非零否則為 0，並傳回特定的錯誤碼可以擷取藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
@@ -815,7 +815,7 @@ BOOL IOCtl(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEINVAL** `lCommand`不是有效的命令，或`lpArgument`不是可接受參數`lCommand`，或此命令不是適用於提供通訊端類型。  
+- **WSAEINVAL** *lCommand*不是有效的命令，或*lpArgument*不是可接受參數*lCommand*，或此命令不適用通訊端提供的型別。  
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
@@ -824,13 +824,13 @@ BOOL IOCtl(
 ### <a name="remarks"></a>備註  
  這個常式可以用於任何狀態中的任何通訊端上。 它用來取得或擷取相關聯的通訊端，獨立的通訊協定與通訊子系統的作業參數。 支援下列命令：  
   
-- **FIONBIO**啟用或停用未封鎖模式通訊端上的。 `lpArgument`參數指向`DWORD`即為非零，如果未封鎖模式為啟用，如果它是停用。 如果`AsyncSelect`發出通訊端，則任何嘗試使用**IOCtl**設回封鎖模式通訊端將會失敗並**WSAEINVAL**。 若要設定回封鎖模式通訊端，並防止**WSAEINVAL**錯誤，應用程式必須先停用`AsyncSelect`藉由呼叫`AsyncSelect`與`lEvent`參數等於 0，然後呼叫**IOCtl**.  
+- **FIONBIO**啟用或停用未封鎖模式通訊端上的。 *LpArgument*參數指向`DWORD`即為非零，如果未封鎖模式為啟用，如果它是停用。 如果`AsyncSelect`發出通訊端，則任何嘗試使用`IOCtl`設回封鎖模式通訊端將會失敗並**WSAEINVAL**。 若要設定回封鎖模式通訊端，並防止**WSAEINVAL**錯誤，應用程式必須先停用`AsyncSelect`藉由呼叫`AsyncSelect`與*lEvent*參數等於 0，然後呼叫`IOCtl`.  
   
-- **FIONREAD**判斷可以與一個讀取的位元組數目上限**接收**從這個通訊端呼叫。 `lpArgument`參數指向`DWORD`所在**IOCtl**儲存結果。 如果此通訊端型別**SOCK_STREAM**， **FIONREAD**傳回單一的可讀取的資料總量**接收**; 這通常是相同的總數資料排入佇列的通訊端上。 如果此通訊端型別**SOCK_DGRAM**， **FIONREAD**傳回的第一個資料流大小排入佇列的通訊端上。  
+- **FIONREAD**判斷可以與一個讀取的位元組數目上限`Receive`從這個通訊端呼叫。 *LpArgument*參數指向`DWORD`所在`IOCtl`儲存結果。 如果此通訊端型別**SOCK_STREAM**， **FIONREAD**傳回單一的可讀取的資料總量`Receive`; 這通常是相同為在通訊端佇列的資料總量。 如果此通訊端型別**SOCK_DGRAM**， **FIONREAD**傳回的第一個資料流大小排入佇列的通訊端上。  
   
-- **SIOCATMARK**判斷是否已讀取的頻外的所有資料。 這只適用於類型的通訊端**SOCK_STREAM** ，已設定為任何超出訊號範圍的資料行中接收 ( **SO_OOBINLINE**)。 如果有任何不足的頻外資料正在不等待讀取，作業會傳回非零值。 否則它會傳回 0，並在下一個**接收**或`ReceiveFrom`對通訊端將會擷取部分或所有的資料前面 「 標記 」; 應用程式應該使用**SIOCATMARK**作業判斷是否有遺留的資料。 如果沒有任何一般資料前面 「 緊急 」 （超出頻外） 資料，它會接收訂單。 (請注意，**接收**或`ReceiveFrom`永遠不會混用相同的呼叫中的頻外和一般的資料。)`lpArgument`參數指向`DWORD`所在**IOCtl**儲存結果。  
+- **SIOCATMARK**判斷是否已讀取的頻外的所有資料。 這只適用於類型的通訊端**SOCK_STREAM** ，已設定為任何超出訊號範圍的資料行中接收 ( **SO_OOBINLINE**)。 如果有任何不足的頻外資料正在不等待讀取，作業會傳回非零值。 否則它會傳回 0，並在下一個`Receive`或`ReceiveFrom`對通訊端將會擷取部分或所有的資料前面 「 標記 」; 應用程式應該使用**SIOCATMARK**運算，判斷是否有任何資料會保留。 如果沒有任何一般資料前面 「 緊急 」 （超出頻外） 資料，它會接收訂單。 (請注意，`Receive`或`ReceiveFrom`永遠不會混用相同的呼叫中的頻外和一般的資料。)*LpArgument*參數指向`DWORD`所在`IOCtl`儲存結果。  
   
- 此函式是子集**ioctl()** 會用在 Berkeley 通訊端。 特別是，沒有任何命令，這相當於**FIOASYNC**，雖然**SIOCATMARK**是支援的只有通訊端層級命令。  
+ 此函式是子集`ioctl()`會用在 Berkeley 通訊端。 特別是，沒有任何命令，這相當於**FIOASYNC**，雖然**SIOCATMARK**是支援的只有通訊端層級命令。  
   
 ##  <a name="listen"></a>  CAsyncSocket::Listen  
  呼叫此成員函式來接聽內送連接要求。  
@@ -854,24 +854,24 @@ BOOL Listen(int nConnectionBacklog = 5);
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
-- **WSAEINVAL**通訊端已經沒有繫結與**繫結**或已連線。  
+- **WSAEINVAL**通訊端已經沒有繫結與`Bind`或已連線。  
   
 - **WSAEISCONN**通訊端已連線。  
   
 - **WSAEMFILE**沒有更多檔案描述項可用。  
   
-- `WSAENOBUFS` 使用沒有緩衝區空間。  
+- **WSAENOBUFS**沒有緩衝區空間。  
   
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 - **WSAEOPNOTSUPP**參考之通訊端不是支援的型別`Listen`作業。  
   
 ### <a name="remarks"></a>備註  
- 若要可接受連接，通訊端第一次建立與**建立**，連入連線的待處理項目指定`Listen`，然後以接受連接和**接受**。 `Listen` 僅適用於支援連接，也就是通訊端類型**SOCK_STREAM**。 這個通訊端會放入 「 被動 」 模式的連入連線認可，而暫止接受由處理程序排入佇列。  
+ 若要可接受連接，通訊端第一次建立與`Create`，連入連線的待處理項目指定`Listen`，然後以接受連接和`Accept`。 `Listen` 僅適用於支援連接，也就是通訊端類型**SOCK_STREAM**。 這個通訊端會放入 「 被動 」 模式的連入連線認可，而暫止接受由處理程序排入佇列。  
   
  此函式通常是由伺服器 （或任何想要接受連線的應用程式），可能會有一個以上的連線要求一次： 如果連線要求與抵達佇列已滿，用戶端會收到表示發生錯誤**WSAECONNREFUSED**。  
   
- `Listen` 嘗試將繼續運作所在，進而時沒有可用的連接埠 （描述）。 它會接受連線，直到清空佇列。 如果連接埠供稍後呼叫`Listen`或**接受**將會重新填滿目前或最近 」 待辦項目，「 佇列可能的話，並繼續接聽連入連線。  
+ `Listen` 嘗試將繼續運作所在，進而時沒有可用的連接埠 （描述）。 它會接受連線，直到清空佇列。 如果連接埠供稍後呼叫`Listen`或`Accept`將會重新填滿目前或最近 」 待辦項目，「 佇列可能的話，並繼續接聽連入連線。  
   
 ##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket  
  包含**通訊端**處理通訊端由這個封裝的`CAsyncSocket`物件。  
@@ -888,7 +888,7 @@ virtual void OnAccept(int nErrorCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nErrorCode`  
+ *nErrorCode*  
  通訊端上最近的錯誤。 適用於下列的錯誤代碼`OnAccept`成員函式：  
   
 - **0**函式執行成功。  
@@ -906,7 +906,7 @@ virtual void OnClose(int nErrorCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nErrorCode`  
+ *nErrorCode*  
  通訊端上最近的錯誤。 下列的錯誤代碼適用於`OnClose`成員函式：  
   
 - **0**函式執行成功。  
@@ -928,7 +928,7 @@ virtual void OnConnect(int nErrorCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nErrorCode`  
+ *nErrorCode*  
  通訊端上最近的錯誤。 下列的錯誤代碼適用於`OnConnect`成員函式：  
   
 - **0**函式執行成功。  
@@ -943,7 +943,7 @@ virtual void OnConnect(int nErrorCode);
   
 - **WSAEDESTADDRREQ**目的地位址是必要項。  
   
-- **WSAEFAULT** `lpSockAddrLen`引數不正確。  
+- **WSAEFAULT** *lpSockAddrLen*引數不正確。  
   
 - **WSAEINVAL**通訊端已經繫結至地址。  
   
@@ -953,7 +953,7 @@ virtual void OnConnect(int nErrorCode);
   
 - **WSAENETUNREACH**無法透過此主機連接網路，這一次。  
   
-- `WSAENOBUFS` 使用沒有緩衝區空間。 無法連線通訊端。  
+- **WSAENOBUFS**沒有緩衝區空間。 無法連線通訊端。  
   
 - **WSAENOTCONN**通訊端未連線。  
   
@@ -964,7 +964,7 @@ virtual void OnConnect(int nErrorCode);
 ### <a name="remarks"></a>備註  
   
 > [!NOTE]
->  在[CSocket](../../mfc/reference/csocket-class.md)、`OnConnect`絕不會呼叫通知函式。 進行連線，您只需呼叫**連接**，這會傳回時 （成功或錯誤），就可以完成連線。 連接告知的處理方式為 MFC 實作詳細資料。  
+>  在[CSocket](../../mfc/reference/csocket-class.md)、`OnConnect`絕不會呼叫通知函式。 進行連線，您只需呼叫`Connect`，這會傳回時 （成功或錯誤），就可以完成連線。 連接告知的處理方式為 MFC 實作詳細資料。  
   
  如需詳細資訊，請參閱[Windows Sockets： 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
@@ -979,7 +979,7 @@ virtual void OnOutOfBandData(int nErrorCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nErrorCode`  
+ *nErrorCode*  
  通訊端上最近的錯誤。 下列的錯誤代碼適用於`OnOutOfBandData`成員函式：  
   
 - **0**函式執行成功。  
@@ -992,14 +992,14 @@ virtual void OnOutOfBandData(int nErrorCode);
  MFC 支援的頻外的資料，但類別的使用者`CAsyncSocket`不建議使用它。 更簡單的方法是建立第二個通訊端，用來傳遞這類資料。 更多的頻外資料的詳細資訊，請參閱[Windows Sockets： 通訊端告知](../../mfc/windows-sockets-socket-notifications.md)。  
   
 ##  <a name="onreceive"></a>  CAsyncSocket::OnReceive  
- 由架構呼叫以通知這個通訊端可以藉由呼叫擷取緩衝區中沒有資料**接收**成員函式。  
+ 由架構呼叫以通知這個通訊端可以藉由呼叫擷取緩衝區中沒有資料`Receive`成員函式。  
   
 ```  
 virtual void OnReceive(int nErrorCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nErrorCode`  
+ *nErrorCode*  
  通訊端上最近的錯誤。 下列的錯誤代碼適用於`OnReceive`成員函式：  
   
 - **0**函式執行成功。  
@@ -1020,7 +1020,7 @@ virtual void OnSend(int nErrorCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nErrorCode`  
+ *nErrorCode*  
  通訊端上最近的錯誤。 下列的錯誤代碼適用於`OnSend`成員函式：  
   
 - **0**函式執行成功。  
@@ -1041,7 +1041,7 @@ void operator=(const CAsyncSocket& rSrc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rSrc`  
+ *rSrc*  
  若要將現有的參考`CAsyncSocket`物件。  
   
 ### <a name="remarks"></a>備註  
@@ -1071,21 +1071,21 @@ virtual int Receive(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  內送資料的的緩衝區。  
   
- `nBufLen`  
- 長度`lpBuf`以位元組為單位。  
+ *nBufLen*  
+ 長度*lpBuf*以位元組為單位。  
   
- `nFlags`  
- 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和`nFlags`參數。 後者的建構方式合併任何下列的值具有 c + +`OR`運算子：  
+ *nFlags*  
+ 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和*nFlags*參數。 後者的建構方式合併任何下列的值具有 c + +**或**運算子：  
   
 - **MSG_PEEK**窺視內送資料。 資料複製到緩衝區，但不是會從輸入佇列移除。  
   
 - **MSG_OOB**處理超出訊號範圍的資料。  
   
 ### <a name="return-value"></a>傳回值  
- 如果沒有發生錯誤，**接收**傳回接收的位元組數目。 如果連接已關閉，它會傳回 0。 否則，值為**SOCKET_ERROR**傳回，而且可以擷取特定的錯誤碼，藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
+ 如果沒有發生錯誤，`Receive`傳回接收的位元組數目。 如果連接已關閉，它會傳回 0。 否則，值為**SOCKET_ERROR**傳回，而且可以擷取特定的錯誤碼，藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
   
 - **WSANOTINITIALISED**成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必須先使用此 API。  
   
@@ -1099,13 +1099,13 @@ virtual int Receive(
   
 - **WSAEOPNOTSUPP MSG_OOB**已指定，但是通訊端不是型別**SOCK_STREAM**。  
   
-- **WSAESHUTDOWN**通訊端關閉，它不能呼叫**接收**之後通訊端上`ShutDown`以叫用`nHow`設為 0 或 2。  
+- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`Receive`之後通訊端上`ShutDown`以叫用*nHow*設為 0 或 2。  
   
-- **WSAEWOULDBLOCK**通訊端已標示為封鎖及**接收**將封鎖作業。  
+- **WSAEWOULDBLOCK**通訊端已標示為封鎖及`Receive`將封鎖作業。  
   
 - **WSAEMSGSIZE**資料包太大而無法放入指定的緩衝區，而且已被截斷。  
   
-- **WSAEINVAL**通訊端已經沒有繫結與**繫結**。  
+- **WSAEINVAL**通訊端已經沒有繫結與`Bind`。  
   
 - **WSAECONNABORTED**虛擬電路由於逾時或其他失敗已中止。  
   
@@ -1116,17 +1116,17 @@ virtual int Receive(
   
  類型的通訊端**SOCK_STREAM**，這會傳回目前可用但不超過提供的緩衝區的大小資訊。 如果已設定出頻外資料行中接收通訊端 (socket 選項**SO_OOBINLINE**) 和不足的頻外資料未讀取，會傳回只的頻外的資料。 應用程式可以使用**IOCtlSIOCATMARK**選項或[OnOutOfBandData](#onoutofbanddata)來判斷是否有更多的頻外遺留的資料讀取。  
   
- 資料包通訊端，資料被擷取自第一個加入佇列資料包，但不超過提供的緩衝區的大小。 如果資料包大於提供的緩衝區，緩衝區會填入資料包的第一個部分，超過的資料會遺失，和**接收**傳回值的**SOCKET_ERROR**錯誤程式碼設為**WSAEMSGSIZE**。 如果沒有連入的資料上通訊端，而值為**SOCKET_ERROR**傳回錯誤碼設定為**WSAEWOULDBLOCK**。 [OnReceive](#onreceive)回呼函式可用來判斷當資料抵達時。  
+ 資料包通訊端，資料被擷取自第一個加入佇列資料包，但不超過提供的緩衝區的大小。 如果資料包大於提供的緩衝區，緩衝區會填入資料包的第一個部分，超過的資料會遺失，和`Receive`傳回值的**SOCKET_ERROR**錯誤程式碼設為**WSAEMSGSIZE**。 如果沒有連入的資料上通訊端，而值為**SOCKET_ERROR**傳回錯誤碼設定為**WSAEWOULDBLOCK**。 [OnReceive](#onreceive)回呼函式可用來判斷當資料抵達時。  
   
- 如果通訊端型別**SOCK_STREAM**和遠端已關閉連線正常，**接收**立即完成時會收到 0 個位元組。 如果連接已重設，**接收**將會失敗並出現錯誤**WSAECONNRESET**。  
+ 如果通訊端型別**SOCK_STREAM**和遠端已關閉連線正常，`Receive`立即完成時會收到 0 個位元組。 如果連接已重設，`Receive`將會失敗並出現錯誤**WSAECONNRESET**。  
   
- **接收**應該針對每次只有一次呼叫[CAsyncSocket::OnReceive](#onreceive)呼叫。  
+ `Receive` 應該針對每次只有一次呼叫[CAsyncSocket::OnReceive](#onreceive)呼叫。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CAsyncSocket::OnReceive](#onreceive)。  
   
 ##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom  
- 呼叫此成員函式，來接收資料包 (datagram) 和儲存中的來源位址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構或`rSocketAddress`。  
+ 呼叫此成員函式，來接收資料包 (datagram) 和儲存中的來源位址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構或*rSocketAddress*。  
   
 ```  
 int ReceiveFrom(
@@ -1146,26 +1146,26 @@ int ReceiveFrom(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  內送資料的的緩衝區。  
   
- `nBufLen`  
- 長度`lpBuf`以位元組為單位。  
+ *nBufLen*  
+ 長度*lpBuf*以位元組為單位。  
   
- `rSocketAddress`  
+ *rSocketAddress*  
  若要參考`CString`接收小數點的數字 IP 位址的物件。  
   
- `rSocketPort`  
+ *rSocketPort*  
  若要參考**UINT**儲存連接埠。  
   
- `lpSockAddr`  
+ *lpSockAddr*  
  指標[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構，可保存傳回時的來源位址。  
   
- `lpSockAddrLen`  
- 中的來源位址長度的指標`lpSockAddr`以位元組為單位。  
+ *lpSockAddrLen*  
+ 中的來源位址長度的指標*lpSockAddr*以位元組為單位。  
   
- `nFlags`  
- 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和`nFlags`參數。 後者的建構方式合併任何下列的值具有 c + +`OR`運算子：  
+ *nFlags*  
+ 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和*nFlags*參數。 後者的建構方式合併任何下列的值具有 c + +**或**運算子：  
   
 - **MSG_PEEK**窺視內送資料。 資料複製到緩衝區，但不是會從輸入佇列移除。  
   
@@ -1178,11 +1178,11 @@ int ReceiveFrom(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpSockAddrLen`引數無效：`lpSockAddr`緩衝區太小，無法容納的對等地址。  
+- **WSAEFAULT** *lpSockAddrLen*引數無效： *lpSockAddr*緩衝區太小，無法容納的對等地址。  
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
-- **WSAEINVAL**通訊端已經沒有繫結與**繫結**。  
+- **WSAEINVAL**通訊端已經沒有繫結與`Bind`。  
   
 - **WSAENOTCONN**未連接通訊端 ( **SOCK_STREAM**只)。  
   
@@ -1190,7 +1190,7 @@ int ReceiveFrom(
   
 - **WSAEOPNOTSUPP MSG_OOB**已指定，但是通訊端不是型別**SOCK_STREAM**。  
   
-- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`ReceiveFrom`之後通訊端上`ShutDown`以叫用`nHow`設為 0 或 2。  
+- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`ReceiveFrom`之後通訊端上`ShutDown`以叫用*nHow*設為 0 或 2。  
   
 - **WSAEWOULDBLOCK**通訊端已標示為封鎖及`ReceiveFrom`將封鎖作業。  
   
@@ -1205,16 +1205,16 @@ int ReceiveFrom(
   
  若要處理的 IPv6 位址，使用[CAsyncSocket::ReceiveFromEx](#receivefromex)。  
   
- 類型的通訊端**SOCK_STREAM**，這會傳回目前可用但不超過提供的緩衝區的大小資訊。 如果已設定出頻外資料行中接收通訊端 (socket 選項**SO_OOBINLINE**) 和不足的頻外資料未讀取，會傳回只的頻外的資料。 應用程式可以使用**IOCtlSIOCATMARK**選項或`OnOutOfBandData`來判斷是否有更多的頻外遺留的資料讀取。 `lpSockAddr`和`lpSockAddrLen`參數也會被忽略**SOCK_STREAM**通訊端。  
+ 類型的通訊端**SOCK_STREAM**，這會傳回目前可用但不超過提供的緩衝區的大小資訊。 如果已設定出頻外資料行中接收通訊端 (socket 選項**SO_OOBINLINE**) 和不足的頻外資料未讀取，會傳回只的頻外的資料。 應用程式可以使用**IOCtlSIOCATMARK**選項或`OnOutOfBandData`來判斷是否有更多的頻外遺留的資料讀取。 *LpSockAddr*和*lpSockAddrLen*參數也會被忽略**SOCK_STREAM**通訊端。  
   
  資料包通訊端，資料被擷取自第一個加入佇列資料包，但不超過提供的緩衝區的大小。 如果資料包大於提供的緩衝區，緩衝區會填入訊息的第一個部分，超過的資料會遺失，和`ReceiveFrom`傳回值的**SOCKET_ERROR**錯誤程式碼設為**WSAEMSGSIZE**。  
   
- 如果`lpSockAddr`非零，而且通訊端的類型是**SOCK_DGRAM**，傳送資料，通訊端的網路位址會複製到對應[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構。 所指向的值`lpSockAddrLen`會初始化為此結構的大小和修改在傳回時，表示儲存於該處的位址的實際大小。 如果在通訊端，可使用任何內送資料`ReceiveFrom`等候資料到達除非通訊端的呼叫未封鎖。 這種情況下，值為**SOCKET_ERROR**傳回錯誤碼設定為**WSAEWOULDBLOCK**。 `OnReceive`回呼可以用來判斷當資料抵達時。  
+ 如果*lpSockAddr*非零，而且通訊端的類型是**SOCK_DGRAM**，傳送資料，通訊端的網路位址會複製到對應[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構。 所指向的值*lpSockAddrLen*會初始化為此結構的大小和修改在傳回時，表示儲存於該處的位址的實際大小。 如果在通訊端，可使用任何內送資料`ReceiveFrom`等候資料到達除非通訊端的呼叫未封鎖。 這種情況下，值為**SOCKET_ERROR**傳回錯誤碼設定為**WSAEWOULDBLOCK**。 `OnReceive`回呼可以用來判斷當資料抵達時。  
   
  如果通訊端型別**SOCK_STREAM**和遠端已關閉連線正常，`ReceiveFrom`立即完成時會收到 0 個位元組。  
   
 ##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx  
- 呼叫此成員函式，來接收資料包 (datagram) 和儲存中的來源位址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構或`rSocketAddress`（處理 IPv6 位址）。  
+ 呼叫此成員函式，來接收資料包 (datagram) 和儲存中的來源位址[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構或*rSocketAddress* （處理 IPv6 位址）。  
   
 ```  
 int ReceiveFromEx(
@@ -1226,20 +1226,20 @@ int ReceiveFromEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  內送資料的的緩衝區。  
   
- `nBufLen`  
- 長度`lpBuf`以位元組為單位。  
+ *nBufLen*  
+ 長度*lpBuf*以位元組為單位。  
   
- `rSocketAddress`  
+ *rSocketAddress*  
  若要參考`CString`接收小數點的數字 IP 位址的物件。  
   
- `rSocketPort`  
+ *rSocketPort*  
  若要參考**UINT**儲存連接埠。  
   
- `nFlags`  
- 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和`nFlags`參數。 後者的建構方式合併任何下列的值具有 c + +`OR`運算子：  
+ *nFlags*  
+ 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和*nFlags*參數。 後者的建構方式合併任何下列的值具有 c + +**或**運算子：  
   
 - **MSG_PEEK**窺視內送資料。 資料複製到緩衝區，但不是會從輸入佇列移除。  
   
@@ -1252,11 +1252,11 @@ int ReceiveFromEx(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpSockAddrLen`引數無效：`lpSockAddr`緩衝區太小，無法容納的對等地址。  
+- **WSAEFAULT** *lpSockAddrLen*引數無效： *lpSockAddr*緩衝區太小，無法容納的對等地址。  
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
-- **WSAEINVAL**通訊端已經沒有繫結與**繫結**。  
+- **WSAEINVAL**通訊端已經沒有繫結與`Bind`。  
   
 - **WSAENOTCONN**未連接通訊端 ( **SOCK_STREAM**只)。  
   
@@ -1264,7 +1264,7 @@ int ReceiveFromEx(
   
 - **WSAEOPNOTSUPP MSG_OOB**已指定，但是通訊端不是型別**SOCK_STREAM**。  
   
-- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`ReceiveFromEx`之後通訊端上`ShutDown`以叫用`nHow`設為 0 或 2。  
+- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`ReceiveFromEx`之後通訊端上`ShutDown`以叫用*nHow*設為 0 或 2。  
   
 - **WSAEWOULDBLOCK**通訊端已標示為封鎖及`ReceiveFromEx`將封鎖作業。  
   
@@ -1279,11 +1279,11 @@ int ReceiveFromEx(
   
  此函式是相同[CAsyncSocket::ReceiveFrom](#receivefrom)不同之處在於它會處理 IPv6 位址以及為舊的通訊協定。  
   
- 類型的通訊端**SOCK_STREAM**，這會傳回目前可用但不超過提供的緩衝區的大小資訊。 如果已設定出頻外資料行中接收通訊端 (socket 選項**SO_OOBINLINE**) 和不足的頻外資料未讀取，會傳回只的頻外的資料。 應用程式可以使用**IOCtlSIOCATMARK**選項或`OnOutOfBandData`來判斷是否有更多的頻外遺留的資料讀取。 `lpSockAddr`和`lpSockAddrLen`參數也會被忽略**SOCK_STREAM**通訊端。  
+ 類型的通訊端**SOCK_STREAM**，這會傳回目前可用但不超過提供的緩衝區的大小資訊。 如果已設定出頻外資料行中接收通訊端 (socket 選項**SO_OOBINLINE**) 和不足的頻外資料未讀取，會傳回只的頻外的資料。 應用程式可以使用**IOCtlSIOCATMARK**選項或`OnOutOfBandData`來判斷是否有更多的頻外遺留的資料讀取。 *LpSockAddr*和*lpSockAddrLen*參數也會被忽略**SOCK_STREAM**通訊端。  
   
  資料包通訊端，資料被擷取自第一個加入佇列資料包，但不超過提供的緩衝區的大小。 如果資料包大於提供的緩衝區，緩衝區會填入訊息的第一個部分，超過的資料會遺失，和`ReceiveFromEx`傳回值的**SOCKET_ERROR**錯誤程式碼設為**WSAEMSGSIZE**。  
   
- 如果`lpSockAddr`非零，而且通訊端的類型是**SOCK_DGRAM**，傳送資料，通訊端的網路位址會複製到對應[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構。 所指向的值`lpSockAddrLen`會初始化為此結構的大小和修改在傳回時，表示儲存於該處的位址的實際大小。 如果在通訊端，可使用任何內送資料`ReceiveFromEx`等候資料到達除非通訊端的呼叫未封鎖。 這種情況下，值為**SOCKET_ERROR**傳回錯誤碼設定為**WSAEWOULDBLOCK**。 `OnReceive`回呼可以用來判斷當資料抵達時。  
+ 如果*lpSockAddr*非零，而且通訊端的類型是**SOCK_DGRAM**，傳送資料，通訊端的網路位址會複製到對應[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構。 所指向的值*lpSockAddrLen*會初始化為此結構的大小和修改在傳回時，表示儲存於該處的位址的實際大小。 如果在通訊端，可使用任何內送資料`ReceiveFromEx`等候資料到達除非通訊端的呼叫未封鎖。 這種情況下，值為**SOCKET_ERROR**傳回錯誤碼設定為**WSAEWOULDBLOCK**。 `OnReceive`回呼可以用來判斷當資料抵達時。  
   
  如果通訊端型別**SOCK_STREAM**和遠端已關閉連線正常，`ReceiveFromEx`立即完成時會收到 0 個位元組。  
   
@@ -1298,21 +1298,21 @@ virtual int Send(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  包含要傳送的資料緩衝區。  
   
- `nBufLen`  
- 中的資料長度`lpBuf`以位元組為單位。  
+ *nBufLen*  
+ 中的資料長度*lpBuf*以位元組為單位。  
   
- `nFlags`  
- 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和`nFlags`參數。 後者的建構方式合併任何下列的值具有 c + +`OR`運算子：  
+ *nFlags*  
+ 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和*nFlags*參數。 後者的建構方式合併任何下列的值具有 c + +**或**運算子：  
   
 - **MSG_DONTROUTE**指定的資料不應該受限於路由。 Windows Sockets 供應商可以選擇忽略此旗標。  
   
 - **MSG_OOB**傳送不足的頻外資料 ( **SOCK_STREAM**只)。  
   
 ### <a name="return-value"></a>傳回值  
- 如果沒有發生錯誤，**傳送**傳回送出的字元總數。 (請注意，這可以是所指定的數目小於`nBufLen`。)否則，值為**SOCKET_ERROR**傳回，而且可以擷取特定的錯誤碼，藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
+ 如果沒有發生錯誤，`Send`傳回送出的字元總數。 (請注意，這可以是所指定的數目小於*nBufLen*。)否則，值為**SOCKET_ERROR**傳回，而且可以擷取特定的錯誤碼，藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
   
 - **WSANOTINITIALISED**成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必須先使用此 API。  
   
@@ -1322,11 +1322,11 @@ virtual int Send(
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
-- **WSAEFAULT** `lpBuf`引數不是有效的組件的使用者位址空間。  
+- **WSAEFAULT** *lpBuf*引數不是有效的組件的使用者位址空間。  
   
 - **WSAENETRESET**必須重設連接，因為 Windows Sockets 實作卸除它。  
   
-- `WSAENOBUFS` Windows Sockets 實作報告緩衝區死結。  
+- **WSAENOBUFS** Windows Sockets 實作報告緩衝區死結。  
   
 - **WSAENOTCONN**通訊端未連線。  
   
@@ -1334,22 +1334,22 @@ virtual int Send(
   
 - **WSAEOPNOTSUPP MSG_OOB**已指定，但是通訊端不是型別**SOCK_STREAM**。  
   
-- **WSAESHUTDOWN**通訊端關閉，它不能呼叫**傳送**之後通訊端上`ShutDown`以叫用`nHow`設為 1 或 2。  
+- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`Send`之後通訊端上`ShutDown`以叫用*nHow*設為 1 或 2。  
   
 - **WSAEWOULDBLOCK**通訊端已標示為封鎖，要求的作業會封鎖。  
   
 - **WSAEMSGSIZE**通訊端屬於型別**SOCK_DGRAM**，而且資料包大小超過支援的 Windows Sockets 實作的最大值。  
   
-- **WSAEINVAL**通訊端已經沒有繫結與**繫結**。  
+- **WSAEINVAL**通訊端已經沒有繫結與`Bind`。  
   
 - **WSAECONNABORTED**虛擬電路由於逾時或其他失敗已中止。  
   
 - **WSAECONNRESET**遠端重設此虛擬電路。  
   
 ### <a name="remarks"></a>備註  
- **傳送**用來寫入輸出的資料連接的資料流或資料包通訊端上。 資料包通訊端，必須小心不超過最大的 IP 封包大小基礎的子網路，這由提供**iMaxUdpDg**中的項目[WSADATA](../../mfc/reference/wsadata-structure.md)所傳回的結構`AfxSocketInit`。 如果資料太長，無法以不可分割方式傳遞的基礎通訊協定錯誤**WSAEMSGSIZE**傳回透過`GetLastError`，並在傳送任何資料。  
+ `Send` 用來寫入輸出的資料連接的資料流或資料包通訊端上。 資料包通訊端，必須小心不超過最大的 IP 封包大小基礎的子網路，這由提供**iMaxUdpDg**中的項目[WSADATA](../../mfc/reference/wsadata-structure.md)所傳回的結構`AfxSocketInit`。 如果資料太長，無法以不可分割方式傳遞的基礎通訊協定錯誤**WSAEMSGSIZE**傳回透過`GetLastError`，並在傳送任何資料。  
   
- 請注意，對資料包通訊端成功完成**傳送**並不表示已成功傳送資料。  
+ 請注意，對資料包通訊端成功完成`Send`並不表示已成功傳送資料。  
   
  在`CAsyncSocket`類型的物件**SOCK_STREAM**，寫入的位元組數目可以是介於 1 到所要求的長度，根據在本機和外部主機上的緩衝區可用性。  
   
@@ -1377,33 +1377,33 @@ int SendTo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  包含要傳送的資料緩衝區。  
   
- `nBufLen`  
- 中的資料長度`lpBuf`以位元組為單位。  
+ *nBufLen*  
+ 中的資料長度*lpBuf*以位元組為單位。  
   
- `nHostPort`  
+ *nHostPort*  
  識別通訊端應用程式連接埠。  
   
- `lpszHostAddress`  
+ *lpszHostAddress*  
  這個物件所連接的通訊端的網路位址： 電腦名稱，例如"ftp.microsoft.com"或小數點的數字，例如"128.56.22.8"。  
   
- `nFlags`  
- 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和`nFlags`參數。 後者的建構方式合併任何下列的值具有 c + +`OR`運算子：  
+ *nFlags*  
+ 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和*nFlags*參數。 後者的建構方式合併任何下列的值具有 c + +**或**運算子：  
   
 - **MSG_DONTROUTE**指定的資料不應該受限於路由。 Windows Sockets 供應商可以選擇忽略此旗標。  
   
 - **MSG_OOB**傳送不足的頻外資料 ( **SOCK_STREAM**只)。  
   
- `lpSockAddr`  
+ *lpSockAddr*  
  指標[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構，其中包含目標通訊端位址。  
   
- `nSockAddrLen`  
- 中的位址長度`lpSockAddr`以位元組為單位。  
+ *nSockAddrLen*  
+ 中的位址長度*lpSockAddr*以位元組為單位。  
   
 ### <a name="return-value"></a>傳回值  
- 如果沒有發生錯誤，`SendTo`傳回送出的字元總數。 (請注意，這可以是所指定的數目小於`nBufLen`。)否則，值為**SOCKET_ERROR**傳回，而且可以擷取特定的錯誤碼，藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
+ 如果沒有發生錯誤，`SendTo`傳回送出的字元總數。 (請注意，這可以是所指定的數目小於*nBufLen*。)否則，值為**SOCKET_ERROR**傳回，而且可以擷取特定的錯誤碼，藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
   
 - **WSANOTINITIALISED**成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必須先使用此 API。  
   
@@ -1413,13 +1413,13 @@ int SendTo(
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
-- **WSAEFAULT** `lpBuf`或`lpSockAddr`參數不是使用者位址空間的一部分或`lpSockAddr`引數是太小 (的大小大於或等於[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構)。  
+- **WSAEFAULT** *lpBuf*或*lpSockAddr*參數不是使用者位址空間的一部分或*lpSockAddr*引數是 （低於大小太小[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構)。  
   
 - **WSAEINVAL**主機名稱無效。  
   
 - **WSAENETRESET**必須重設連接，因為 Windows Sockets 實作卸除它。  
   
-- `WSAENOBUFS` Windows Sockets 實作報告緩衝區死結。  
+- **WSAENOBUFS** Windows Sockets 實作報告緩衝區死結。  
   
 - **WSAENOTCONN**未連接通訊端 ( **SOCK_STREAM**只)。  
   
@@ -1427,7 +1427,7 @@ int SendTo(
   
 - **WSAEOPNOTSUPP MSG_OOB**已指定，但是通訊端不是型別**SOCK_STREAM**。  
   
-- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`SendTo`之後通訊端上`ShutDown`以叫用`nHow`設為 1 或 2。  
+- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`SendTo`之後通訊端上`ShutDown`以叫用*nHow*設為 1 或 2。  
   
 - **WSAEWOULDBLOCK**通訊端已標示為封鎖，要求的作業會封鎖。  
   
@@ -1450,9 +1450,9 @@ int SendTo(
   
  請注意，成功完成`SendTo`並不表示已成功傳送資料。  
   
- `SendTo` 只會用於**SOCK_DGRAM**資料包傳送到特定的通訊端所識別的通訊端`lpSockAddr`參數。  
+ `SendTo` 只會用於**SOCK_DGRAM**資料包傳送到特定的通訊端所識別的通訊端*lpSockAddr*參數。  
   
- 若要傳送廣播 (上**SOCK_DGRAM**只)，在位址`lpSockAddr`參數應該使用特殊的 IP 位址建構**INADDR_BROADCAST** （定義於 Windows Sockets 標頭WINSOCK 的檔案。H） 並搭配預期的連接埠號碼。 或者，如果`lpszHostAddress`參數是**NULL**，通訊端設定為廣播。 通常不得為廣播資料包 (datagram) 超過大小的片段可能會發生，這表示資料包 （不含標頭） 的資料部分不可超過 512 個位元組。  
+ 若要傳送廣播 (上**SOCK_DGRAM**只)，在位址*lpSockAddr*參數應該使用特殊的 IP 位址建構**INADDR_BROADCAST** （定義Windows Sockets 標頭中的檔案 WINSOCK。H） 並搭配預期的連接埠號碼。 或者，如果*lpszHostAddress*參數是**NULL**，通訊端設定為廣播。 通常不得為廣播資料包 (datagram) 超過大小的片段可能會發生，這表示資料包 （不含標頭） 的資料部分不可超過 512 個位元組。  
   
  若要處理的 IPv6 位址，使用[CAsyncSocket::SendToEx](#sendtoex)。  
   
@@ -1469,27 +1469,27 @@ int SendToEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  包含要傳送的資料緩衝區。  
   
- `nBufLen`  
- 中的資料長度`lpBuf`以位元組為單位。  
+ *nBufLen*  
+ 中的資料長度*lpBuf*以位元組為單位。  
   
- `nHostPort`  
+ *nHostPort*  
  識別通訊端應用程式連接埠。  
   
- `lpszHostAddress`  
+ *lpszHostAddress*  
  這個物件所連接的通訊端的網路位址： 電腦名稱，例如"ftp.microsoft.com"或小數點的數字，例如"128.56.22.8"。  
   
- `nFlags`  
- 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和`nFlags`參數。 後者的建構方式合併任何下列的值具有 c + +`OR`運算子：  
+ *nFlags*  
+ 指定用來進行呼叫的方法。 此函式的語意由通訊端選項和*nFlags*參數。 後者的建構方式合併任何下列的值具有 c + +**或**運算子：  
   
 - **MSG_DONTROUTE**指定的資料不應該受限於路由。 Windows Sockets 供應商可以選擇忽略此旗標。  
   
 - **MSG_OOB**傳送不足的頻外資料 ( **SOCK_STREAM**只)。  
   
 ### <a name="return-value"></a>傳回值  
- 如果沒有發生錯誤，`SendToEx`傳回送出的字元總數。 (請注意，這可以是所指定的數目小於`nBufLen`。)否則，值為**SOCKET_ERROR**傳回，而且可以擷取特定的錯誤碼，藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
+ 如果沒有發生錯誤，`SendToEx`傳回送出的字元總數。 (請注意，這可以是所指定的數目小於*nBufLen*。)否則，值為**SOCKET_ERROR**傳回，而且可以擷取特定的錯誤碼，藉由呼叫[GetLastError](#getlasterror)。 此成員函式適用於下列錯誤：  
   
 - **WSANOTINITIALISED**成功[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必須先使用此 API。  
   
@@ -1499,13 +1499,13 @@ int SendToEx(
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
-- **WSAEFAULT** `lpBuf`或`lpSockAddr`參數不是使用者位址空間的一部分或`lpSockAddr`引數是太小 (的大小大於或等於[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構)。  
+- **WSAEFAULT** *lpBuf*或*lpSockAddr*參數不是使用者位址空間的一部分或*lpSockAddr*引數是 （低於大小太小[SOCKADDR](../../mfc/reference/sockaddr-structure.md)結構)。  
   
 - **WSAEINVAL**主機名稱無效。  
   
 - **WSAENETRESET**必須重設連接，因為 Windows Sockets 實作卸除它。  
   
-- `WSAENOBUFS` Windows Sockets 實作報告緩衝區死結。  
+- **WSAENOBUFS** Windows Sockets 實作報告緩衝區死結。  
   
 - **WSAENOTCONN**未連接通訊端 ( **SOCK_STREAM**只)。  
   
@@ -1513,7 +1513,7 @@ int SendToEx(
   
 - **WSAEOPNOTSUPP MSG_OOB**已指定，但是通訊端不是型別**SOCK_STREAM**。  
   
-- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`SendToEx`之後通訊端上`ShutDown`以叫用`nHow`設為 1 或 2。  
+- **WSAESHUTDOWN**通訊端關閉，它不能呼叫`SendToEx`之後通訊端上`ShutDown`以叫用*nHow*設為 1 或 2。  
   
 - **WSAEWOULDBLOCK**通訊端已標示為封鎖，要求的作業會封鎖。  
   
@@ -1538,9 +1538,9 @@ int SendToEx(
   
  請注意，成功完成`SendToEx`並不表示已成功傳送資料。  
   
- `SendToEx` 只會用於**SOCK_DGRAM**資料包傳送到特定的通訊端所識別的通訊端`lpSockAddr`參數。  
+ `SendToEx` 只會用於**SOCK_DGRAM**資料包傳送到特定的通訊端所識別的通訊端*lpSockAddr*參數。  
   
- 若要傳送廣播 (上**SOCK_DGRAM**只)，在位址`lpSockAddr`參數應該使用特殊的 IP 位址建構**INADDR_BROADCAST** （定義於 Windows Sockets 標頭WINSOCK 的檔案。H） 並搭配預期的連接埠號碼。 或者，如果`lpszHostAddress`參數是**NULL**，通訊端設定為廣播。 通常不得為廣播資料包 (datagram) 超過大小的片段可能會發生，這表示資料包 （不含標頭） 的資料部分不可超過 512 個位元組。  
+ 若要傳送廣播 (上**SOCK_DGRAM**只)，在位址*lpSockAddr*參數應該使用特殊的 IP 位址建構**INADDR_BROADCAST** （定義Windows Sockets 標頭中的檔案 WINSOCK。H） 並搭配預期的連接埠號碼。 或者，如果*lpszHostAddress*參數是**NULL**，通訊端設定為廣播。 通常不得為廣播資料包 (datagram) 超過大小的片段可能會發生，這表示資料包 （不含標頭） 的資料部分不可超過 512 個位元組。  
   
 ##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt  
  呼叫此成員函式，設定通訊端選項。  
@@ -1554,16 +1554,16 @@ BOOL SetSockOpt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nOptionName`  
+ *nOptionName*  
  這個值是設定通訊端選項。  
   
- `lpOptionValue`  
+ *lpOptionValue*  
  提供要求的選項的值時緩衝區的指標。  
   
- `nOptionLen`  
- 大小`lpOptionValue`以位元組為單位的緩衝區。  
+ *nOptionLen*  
+ 大小*lpOptionValue*以位元組為單位的緩衝區。  
   
- `nLevel`  
+ *nLevel*  
  層級的定義選項。唯一支援的層級為**SOL_SOCKET**和**IPPROTO_TCP**。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1573,11 +1573,11 @@ BOOL SetSockOpt(
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEFAULT** `lpOptionValue`不是處於有效的組件的處理序位址空間。  
+- **WSAEFAULT** *lpOptionValue*不是處於有效的組件的處理序位址空間。  
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
-- **WSAEINVAL** `nLevel`不正確，或在資訊`lpOptionValue`不正確。  
+- **WSAEINVAL** *nLevel*不正確，或在資訊*lpOptionValue*不正確。  
   
 - **WSAENETRESET**連線已逾時**SO_KEEPALIVE**設定。  
   
@@ -1590,13 +1590,13 @@ BOOL SetSockOpt(
 ### <a name="remarks"></a>備註  
  `SetSockOpt` 設定通訊端選項相關聯的任何狀態中的任何型別，通訊端的目前值。 雖然選項可以有多個通訊協定層級，但是此規格只會定義存在於最上方的 「 通訊端 」 層級的選項。 選項會影響通訊端作業，例如是否加速的資料收到一般資料流中，是否可以在通訊端，傳送廣播的訊息等等。  
   
- 有兩種類型的通訊端選項： 布林值的選項來啟用或停用的功能或行為和需要整數值或結構的選項。 若要啟用，則為 True 的選項，`lpOptionValue`點則為非零的整數。 若要停用此選項`lpOptionValue`指向等於零的整數。 `nOptionLen` 應該會等於**sizeof(BOOL)** 布林值的選項。 如需其他選項，`lpOptionValue`指向整數或結構，其中包含所需選項的值和`nOptionLen`是整數或結構的長度。  
+ 有兩種類型的通訊端選項： 布林值的選項來啟用或停用的功能或行為和需要整數值或結構的選項。 若要啟用，則為 True 的選項， *lpOptionValue*點則為非零的整數。 若要停用此選項*lpOptionValue*指向等於零的整數。 *nOptionLen*應該會等於**sizeof(BOOL)** 布林值的選項。 如需其他選項， *lpOptionValue*指向整數或結構，其中包含所需選項的值和*nOptionLen*是整數或結構的長度。  
   
- **SO_LINGER**時採取的動作未傳送的資料會排入佇列的通訊端的控制項和**關閉**函式呼叫以關閉通訊端。  
+ **SO_LINGER**時採取的動作未傳送的資料會排入佇列的通訊端的控制項和`Close`函式呼叫以關閉通訊端。  
   
  根據預設，不能繫結通訊端 (請參閱[繫結](#bind)) 至已在使用的本機位址。 在某些情況下，不過，它可能想要以這種方式的地址 」 重複使用 」。 因為本機與遠端位址的組合來唯一識別每個連接，所以沒有沒問題，有兩個繫結至相同的本機位址，只要遠端位址是不同的通訊端。  
   
- 若要通知 Windows Sockets 實作的**繫結**應該不允許在通訊端的呼叫，因為所需的位址已由另一個通訊端使用中，應用程式應該**SO_REUSEADDR**通訊端通訊端選項，然後再發出**繫結**呼叫。 注意選項即只在時解譯**繫結**呼叫： 因此不需要 （但無害） 來設定選項，也就是未繫結至現有的位址，通訊端上，設定或重設的選項之後**繫結**呼叫有任何影響或任何其他通訊端。  
+ 若要通知 Windows Sockets 實作的`Bind`應該不允許在通訊端的呼叫，因為所需的位址已由另一個通訊端使用中，應用程式應該**SO_REUSEADDR**通訊端選項通訊端，然後再發出`Bind`呼叫。 注意選項即只在時解譯`Bind`呼叫： 因此不需要 （但無害） 來設定選項，也就是未繫結至現有的位址，通訊端上，設定或重設選項時`Bind`呼叫有在這個或其他通訊端上沒有作用。  
   
  應用程式可以要求 Windows Sockets 實作啟用 「 保持運作 」 上的封包傳輸控制通訊協定 (TCP) 連接使用，藉由開啟**SO_KEEPALIVE**通訊端選項。 Windows Sockets 實作不需要支援持續作用的使用： 如果這樣做，精確語意依實作而定，但應該符合 4.2.3.6 的 RFC 1122: 「 網際網路主機需求 — 通訊層。 」 如果連接斷開"keep-alive"的結果，錯誤碼**WSAENETRESET**會傳回到任何呼叫正在進行中通訊端，而且任何後續呼叫都會失敗並**WSAENOTCONN**。  
   
@@ -1604,7 +1604,7 @@ BOOL SetSockOpt(
   
  Windows Sockets 供應器的某些實作輸出偵錯資訊，如果**SO_DEBUG**應用程式設定選項。  
   
- 支援下列選項`SetSockOpt`。 型別會識別所定址的資料型別`lpOptionValue`。  
+ 支援下列選項`SetSockOpt`。 型別會識別所定址的資料型別*lpOptionValue*。  
   
 |值|類型|意義|  
 |-----------|----------|-------------|  
@@ -1615,9 +1615,9 @@ BOOL SetSockOpt(
 |**SO_KEEPALIVE**|**BOOL**|傳送持續作用。|  
 |**SO_LINGER**|**延遲結構**|延遲**關閉**如果未傳送的資料是否都出現。|  
 |**SO_OOBINLINE**|**BOOL**|在一般資料流中收到的頻外資料。|  
-|**SO_RCVBUF**|`int`|指定接收緩衝區大小。|  
+|**SO_RCVBUF**|**int**|指定接收緩衝區大小。|  
 |**SO_REUSEADDR**|**BOOL**|允許繫結至已在使用位址的通訊端。 (請參閱[繫結](#bind)。)|  
-|**SO_SNDBUF**|`int`|指定傳送的緩衝區大小。|  
+|**SO_SNDBUF**|**int**|指定傳送的緩衝區大小。|  
 |**TCP_NODELAY**|**BOOL**|停用用於傳送聯合的 Nagle 演算法。|  
   
  不支援的柏克萊軟體發佈 (BSD) 選項`SetSockOpt`是：  
@@ -1625,12 +1625,12 @@ BOOL SetSockOpt(
 |值|類型|意義|  
 |-----------|----------|-------------|  
 |**SO_ACCEPTCONN**|**BOOL**|正在接聽通訊端|  
-|**SO_ERROR**|`int`|取得錯誤狀態並清除。|  
-|**SO_RCVLOWAT**|`int`|收到下限標準。|  
-|**SO_RCVTIMEO**|`int`|接收逾時|  
-|**SO_SNDLOWAT**|`int`|傳送下限標準。|  
-|**SO_SNDTIMEO**|`int`|傳送逾時。|  
-|**SO_TYPE**|`int`|通訊端類型。|  
+|**SO_ERROR**|**int**|取得錯誤狀態並清除。|  
+|**SO_RCVLOWAT**|**int**|收到下限標準。|  
+|**SO_RCVTIMEO**|**int**|接收逾時|  
+|**SO_SNDLOWAT**|**int**|傳送下限標準。|  
+|**SO_SNDTIMEO**|**int**|傳送逾時。|  
+|**SO_TYPE**|**int**|通訊端類型。|  
 |**IP_OPTIONS**||設定 IP 標頭中的選項欄位。|  
   
 ##  <a name="shutdown"></a>  CAsyncSocket::ShutDown  
@@ -1641,7 +1641,7 @@ BOOL ShutDown(int nHow = sends);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nHow`  
+ *nHow*  
  描述哪些類型的作業的旗標，也一律不再允許使用下列的列舉的值：  
   
 - **接收 = 0**  
@@ -1657,7 +1657,7 @@ BOOL ShutDown(int nHow = sends);
   
 - **WSAENETDOWN**網路子系統無法偵測到的 Windows Sockets 實作。  
   
-- **WSAEINVAL** `nHow`不正確。  
+- **WSAEINVAL** *nHow*不正確。  
   
 - **WSAEINPROGRESS**封鎖 Windows 通訊端作業正在進行中。  
   
@@ -1666,11 +1666,11 @@ BOOL ShutDown(int nHow = sends);
 - **WSAENOTSOCK**描述項不是通訊端。  
   
 ### <a name="remarks"></a>備註  
- `ShutDown` 適用於所有類型的通訊端若要停用接收、 傳輸，或兩者。 如果`nHow`是 0，則在後續接收通訊端將不允許。 這有不會影響的較低的通訊協定層。  
+ `ShutDown` 適用於所有類型的通訊端若要停用接收、 傳輸，或兩者。 如果*nHow*是 0，則在後續接收通訊端將不允許。 這有不會影響的較低的通訊協定層。  
   
- 傳輸控制通訊協定 (TCP)、 TCP 視窗不會變更，而且會傳入資料之前的視窗已用完，接受 （但未認可）。 針對使用者資料包通訊協定 (UDP) 中，輸入資料包所接受和排入佇列。 在任何情況下將 ICMP 錯誤封包會產生。 如果`nHow`為 1，後續的將不被允許。 TCP 通訊端，將會傳送 FIN。 設定`nHow`2 來停用這兩個傳送和接收 （如上所述）。  
+ 傳輸控制通訊協定 (TCP)、 TCP 視窗不會變更，而且會傳入資料之前的視窗已用完，接受 （但未認可）。 針對使用者資料包通訊協定 (UDP) 中，輸入資料包所接受和排入佇列。 在任何情況下將 ICMP 錯誤封包會產生。 如果*nHow*為 1，後續的將不被允許。 TCP 通訊端，將會傳送 FIN。 設定*nHow* 2 來停用這兩個傳送和接收 （如上所述）。  
   
- 請注意，`ShutDown`不會關閉通訊端，並連接到通訊端的資源將不之前不會釋放**關閉**呼叫。 應用程式不應依賴能夠重複使用的通訊端之後已被關閉。 特別是，Windows Sockets 實作不需要支援使用**連接**這類通訊端上。  
+ 請注意，`ShutDown`不會關閉通訊端，並連接到通訊端的資源將不之前不會釋放`Close`呼叫。 應用程式不應依賴能夠重複使用的通訊端之後已被關閉。 特別是，Windows Sockets 實作不需要支援使用`Connect`這類通訊端上。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CAsyncSocket::OnReceive](#onreceive)。  
@@ -1687,10 +1687,10 @@ BOOL Socket(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSocketType`  
+ *nSocketType*  
  指定`SOCK_STREAM`或`SOCK_DGRAM`。  
   
- `lEvent`  
+ *lEvent*  
  位元遮罩，指定的網路應用程式有興趣的事件組合。  
   
 - `FD_READ`： 想要接收通知的整備進行讀取。  
@@ -1705,10 +1705,10 @@ BOOL Socket(
   
 - `FD_CLOSE`： 想要接收通訊端關閉相關的通知。  
   
- `nProtocolType`  
+ *nProtocolType*  
  通訊協定以用於的通訊端的特定指示的位址系列。  
   
- `nAddressFormat`  
+ *nAddressFormat*  
  位址家族的規格。  
   
 ### <a name="return-value"></a>傳回值  

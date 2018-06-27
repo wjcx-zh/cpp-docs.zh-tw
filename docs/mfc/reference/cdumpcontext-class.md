@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367389"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955439"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 類別
 支援使用人類看得懂的格式文字的資料流導向診斷輸出。  
@@ -79,7 +79,7 @@ class CDumpContext
   
  `CDumpContext`類別有多載的插入 ( **<<**) 運算子`CObject`傾印物件的資料的指標。 如果您需要自訂的傾印格式進行衍生的物件時，會覆寫[CObject::Dump](../../mfc/reference/cobject-class.md#dump)。 大部分的 Microsoft Foundation classes 會實作覆寫`Dump`成員函式。  
   
- 不從衍生的類別`CObject`，例如`CString`， `CTime`，和`CTimeSpan`，有自己的多載`CDumpContext`插入運算子，以執行常用的結構，例如**CFileStatus**， `CPoint`，和`CRect`。  
+ 不從衍生的類別`CObject`，例如`CString`， `CTime`，和`CTimeSpan`，有自己的多載`CDumpContext`插入運算子，以執行常用的結構，例如`CFileStatus`， `CPoint`，和`CRect`.  
   
  如果您使用[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)或[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)巨集的實作您的類別，然後`CObject::Dump`會列印名稱您`CObject`-衍生的類別。 否則，它只會列印`CObject`。  
   
@@ -105,7 +105,7 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFile`  
+ *pFile*  
  指標`CFile`傾印目的地的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -180,10 +180,10 @@ void HexDump(
  *pby*  
  包含要傾印的位元組之緩衝區的指標。  
   
- `nBytes`  
+ *nBytes*  
  若要傾印的位元組數目。  
   
- `nWidth`  
+ *nWidth*  
  每行 （沒有輸出行的寬度），傾印的位元組數目上限。  
   
 ### <a name="remarks"></a>備註  
@@ -223,7 +223,7 @@ CDumpContext& operator<<(HFONT h);
  A`CDumpContext`參考。 使用傳回值，您可以撰寫多個插入單一的原始程式碼行上。  
   
 ### <a name="remarks"></a>備註  
- 插入運算子多載的`CObject`指標以及大部分的基本型別。 字元的指標會產生的字串內容; 傾印指標`void`導致只有位址的十六進位傾印。 A **LONGLONG**結果在 64 位元帶正負號的整數; 傾印A **ULONGLONG**產生的傾印的 64 位元不帶正負號的整數。  
+ 插入運算子多載的`CObject`指標以及大部分的基本型別。 字元的指標會產生的字串內容; 傾印指標**void**導致只有位址的十六進位傾印。 A **LONGLONG**結果在 64 位元帶正負號的整數; 傾印A **ULONGLONG**產生的傾印的 64 位元不帶正負號的整數。  
   
  如果您使用`IMPLEMENT_DYNAMIC`或`IMPLEMENT_SERIAL`巨集在實作您的類別，然後插入運算子，透過`CObject::Dump`，會列印名稱您`CObject`-衍生的類別。 否則，它只會列印`CObject`。 如果您覆寫`Dump`函式的類別，則您可以提供之物件的內容，而不是十六進位傾印更有意義的輸出。  
   

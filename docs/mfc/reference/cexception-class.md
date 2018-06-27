@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368029"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951705"
 ---
 # <a name="cexception-class"></a>CException 類別
 MFC 程式庫中所有例外狀況的基底類別。  
@@ -99,24 +99,24 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>參數  
  *b_AutoDelete*  
- 指定**TRUE**如果的記憶體`CException`已在堆積上配置物件。 這會導致`CException`時刪除物件**刪除**呼叫成員函式會刪除例外狀況。 指定**FALSE**如果`CException`物件在堆疊上，或全域物件。 在此情況下，`CException`物件沒有被刪除時**刪除**呼叫成員函式。  
+ 指定**TRUE**如果的記憶體`CException`已在堆積上配置物件。 這會導致`CException`時刪除物件`Delete`呼叫成員函式會刪除例外狀況。 指定**FALSE**如果`CException`物件在堆疊上，或全域物件。 在此情況下，`CException`物件沒有被刪除時`Delete`呼叫成員函式。  
   
 ### <a name="remarks"></a>備註  
  您通常不需要直接呼叫這個建構函式。 擲回例外狀況的函式應該建立的執行個體`CException`-衍生類別，並呼叫其建構函式，或它應該使用其中一個 MFC 擲回函式，例如[AfxThrowFileException](exception-processing.md#afxthrowfileexception)、 擲回預先定義的類型。 這份文件只為完整性而提供。  
   
 ##  <a name="delete"></a>  CException::Delete  
- 此函式會查看**CException**堆積上建立物件，如果是的話，它會呼叫**刪除**物件上的運算子。  
+ 此函式會查看`CException`堆積上建立物件，如果是的話，它會呼叫**刪除**物件上的運算子。  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>備註  
- 刪除時**CException**物件，請使用**刪除**成員函式來刪除例外狀況。 請勿使用**刪除**運算子直接管理，因為`CException`物件可能全域物件，或在堆疊上建立。  
+ 刪除時`CException`物件，請使用`Delete`成員函式來刪除例外狀況。 請勿使用**刪除**運算子直接管理，因為`CException`物件可能全域物件，或在堆疊上建立。  
   
  您可以指定在物件建構時，是否應刪除物件。 如需詳細資訊，請參閱[CException::CException](#cexception)。  
   
- 您只需要呼叫**刪除**如果您使用 c + +**再試一次**- **攔截**機制。 如果您使用 MFC 巨集**再試一次**和**攔截**，則這些巨集將會自動呼叫此函式。  
+ 您只需要呼叫`Delete`如果您使用 c + +**再試一次**- **攔截**機制。 如果您使用 MFC 巨集**再試一次**和**攔截**，則這些巨集將會自動呼叫此函式。  
   
 ### <a name="example"></a>範例  
  ```cpp  
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nType`  
+ *n*  
  指定訊息方塊樣式。 套用的任何組合[訊息方塊樣式](styles-used-by-mfc.md#message-box-styles)到方塊。 如果您未指定這個參數，預設值是**MB_OK**。  
   
  *nMessageID*  

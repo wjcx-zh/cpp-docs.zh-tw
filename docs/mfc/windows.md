@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384461"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950470"
 ---
 # <a name="windows"></a>Windows
 此系列文章涵蓋在 MFC 架構中的視窗物件。 所有的 MFC 視窗是衍生自類別[CWnd](../mfc/reference/cwnd-class.md)，包括框架視窗、 檢視、 對話方塊和控制項。  
   
- 發行項的第一個群組描述[視窗物件](../mfc/window-objects.md)一般。 此群組的 c + + 視窗物件、 它們如何封裝 HWND，及您如何使用它們建立您自己的視窗，例如子視窗時的一般資訊，請參閱。  
+ 發行項的第一個群組描述[視窗物件](../mfc/window-objects.md)一般。 此群組的 c + + 視窗物件的一般資訊，請參閱如何封裝`HWND`，及您如何使用它們時建立您自己的視窗，例如子視窗。  
   
  發行項的第二個群組描述[框架視窗](../mfc/frame-windows.md)— 放置內容周圍框架的視窗 — 尤其是。 請參閱有關框架視窗和其框架時，包括控制列和檢視的內容，MFC 架構如何管理此群組。  
   

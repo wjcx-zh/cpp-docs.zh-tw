@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356392"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952322"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 類別
 提供 Windows 通用動畫控制項的功能。  
@@ -146,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定動畫控制項的樣式。 適用於的 windows 中的 < 備註 > 一節和動畫控制項樣式中所述的樣式所述的任何組合[動畫控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK 中。  
   
- `rect`  
+ *rect*  
  指定動畫控制項的位置和大小。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。  
   
- `pParentWnd`  
- 指定動畫控制項的父視窗，通常`CDialog`。 它不得為**NULL。**  
+ *pParentWnd*  
+ 指定動畫控制項的父視窗，通常`CDialog`。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定動畫控制項的 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CAnimateCtrl`分成兩個步驟。 首先，呼叫建構函式，然後再呼叫**建立**，建立動畫控制項，並將它附加至`CAnimateCtrl`物件。  
+ 您建構`CAnimateCtrl`分成兩個步驟。 首先，呼叫建構函式，然後再呼叫`Create`，建立動畫控制項，並將它附加至`CAnimateCtrl`物件。  
   
  套用下列[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)動畫控制項。  
   
@@ -172,7 +172,7 @@ virtual BOOL Create(
   
 - **WS_DISABLED**很少  
   
- 如果您想要使用動畫控制項的延伸的視窗樣式，呼叫[CreateEx](#createex)而不是**建立**。  
+ 如果您想要使用動畫控制項的延伸的視窗樣式，呼叫[CreateEx](#createex)而不是`Create`。  
   
  除了上述所列的視窗樣式，您可能想要將一或多個動畫控制項樣式套用至動畫控制項。 請參閱 Windows SDK，如需詳細資訊[動畫控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)。  
   
@@ -192,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
+ *dwExStyle*  
+ 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱*dwExStyle*參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
- `dwStyle`  
+ *dwStyle*  
  指定動畫控制項的樣式。 套用視窗的任何組合和動畫控制項樣式中所述[動畫控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761886)Windows SDK 中。  
   
- `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ *rect*  
+ 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗*pParentWnd*。  
   
- `pParentWnd`  
+ *pParentWnd*  
  為控制項的父視窗的指標。  
   
- `nID`  
+ *nID*  
  控制項的子視窗識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -235,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFileName`  
+ *lpszFileName*  
  A`CString`物件或指標以 null 終止的字串，包含 AVI 檔案的名稱或 AVI 資源的名稱。 如果這個參數是**NULL**，系統會關閉先前針對動畫控制項中，開啟 AVI 短片，如果有的話。  
   
- `nID`  
+ *nID*  
  AVI 資源識別項。 如果這個參數是**NULL**，系統會關閉先前針對動畫控制項中，開啟 AVI 短片，如果有的話。  
   
 ### <a name="return-value"></a>傳回值  
@@ -269,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nFrom`  
+ *nFrom*  
  從播放開始畫面格的以零為起始索引。 值必須小於 65536。 值為 0 表示開頭為 AVI 短片中第一個框架。  
   
- `nTo`  
+ *若要*  
  畫面格的以零為起始索引位置播放結束。 值必須小於 65536。 值為-1 表示結尾 AVI 短片中的最後一個畫面格。  
   
  *nRep*  
@@ -295,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nTo`  
+ *若要*  
  要顯示的畫面格的以零為起始的索引。 值必須小於 65536。 值為 0 表示 AVI 短片中顯示第一個框架。 值為-1 表示顯示在播放 AVI 短片中最後一個畫面格。  
   
 ### <a name="return-value"></a>傳回值  

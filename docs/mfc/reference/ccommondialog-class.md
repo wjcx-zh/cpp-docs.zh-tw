@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f8c0aa6aaa4980466918eac2649cc246b2e6ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f53bdb19c6f40d73179b600051ecfaf6b69c94
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351185"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950631"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 類別
 封裝 Windows 通用對話方塊功能之類別的基底類別。  
@@ -83,7 +83,7 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  

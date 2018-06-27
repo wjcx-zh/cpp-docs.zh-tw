@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0d59aa8c30e9308448467bb198e898106e61f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4cf132de39eb630f314c1c5a99e629cbfb25394a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383782"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951123"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>在日期時間選擇器控制項中使用回呼欄位
 除了定義日期和時間選擇器欄位的標準格式字元以外，您也可以將自訂格式字串的某些部分指定為回呼欄位，以自訂輸出。 若要宣告回呼欄位，請在格式字串主體的任何位置包含一個或多個 "X" 字元 (ASCII 碼 88)。 例如，下列字串 "Today is: 'yy'/'MM'/'dd' (Day 'X')" 可讓日期和時間選擇器控制項以年、月、日、年的天數來顯示目前的值。  
@@ -39,23 +39,23 @@ ms.locfileid: "33383782"
  您可以重複 "X" 字元，以區別自訂字串的多個回呼欄位。 因此，格式字串 "XXddddMMMdd', 'yyyXXX" 包含兩個唯一的回呼欄位 "XX" 和 "XXX"。  
   
 > [!NOTE]
->  回呼欄位會被視為有效的欄位，讓您的應用程式必須準備好處理**DTN_WMKEYDOWN**通知訊息。  
+>  回呼欄位會被視為有效的欄位，讓您的應用程式必須準備好處理 DTN_WMKEYDOWN 通知訊息。  
   
  實作日期和時間選擇器控制項的回呼欄位，包含三個部分：  
   
 -   初始化自訂格式字串  
   
--   處理**DTN_FORMATQUERY**通知  
+-   處理 DTN_FORMATQUERY 通知  
   
--   處理**DTN_FORMAT**通知  
+-   處理 DTN_FORMAT 通知  
   
 ## <a name="initializing-the-custom-format-string"></a>初始化自訂格式字串  
  呼叫 `CDateTimeCtrl::SetFormat` 以初始化自訂字串。 如需詳細資訊，請參閱[使用自訂格式字串中的日期和時間選擇器控制項](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)。 設定自訂格式字串的位置通常是在包含對話方塊類別的 `OnInitDialog` 函式，或是包含檢視類別的 `OnInitialUpdate` 函式中。  
   
 ## <a name="handling-the-dtnformatquery-notification"></a>處理 DTN_FORMATQUERY 通知  
- 當控制項剖析格式字串，並遇到回呼欄位時，在應用程式傳送**DTN_FORMAT**和**DTN_FORMATQUERY**通知訊息。 回呼欄位字串包含通知，讓您可以判斷哪一個回呼欄位正在進行查詢。  
+ 當控制項剖析格式字串並遇到回呼欄位時，應用程式會傳送 DTN_FORMAT 和 DTN_FORMATQUERY 通知訊息。 回呼欄位字串包含通知，讓您可以判斷哪一個回呼欄位正在進行查詢。  
   
- **DTN_FORMATQUERY**通知傳送給擷取像素為單位，將會顯示在目前回呼欄位字串的最大容許大小。  
+ DTN_FORMATQUERY 通知會傳送至擷取像素為單位，將會顯示在目前回呼欄位字串的最大容許大小。  
   
  若要適當地計算這個值，您必須使用控制項的顯示字型，計算要替代之欄位的字串高度和寬度。 字串的實際計算輕鬆達成呼叫[GetTextExtentPoint32](http://msdn.microsoft.com/library/windows/desktop/dd144938) Win32 函式。 一旦決定大小後，請將值傳遞至應用程式並結束處理函式。  
   
@@ -63,10 +63,10 @@ ms.locfileid: "33383782"
   
  [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]  
   
- 計算目前回呼欄位的大小後，您必須為該欄位提供值。 這是處理常式**DTN_FORMAT**通知。  
+ 計算目前回呼欄位的大小後，您必須為該欄位提供值。 這是 DTN_FORMAT 告知的處理常式。  
   
 ## <a name="handling-the-dtnformat-notification"></a>處理 DTN_FORMAT 通知  
- **DTN_FORMAT**通知應用程式用來要求將被取代的字元字串。 下列範例說明其中一種方法：  
+ DTN_FORMAT 告知應用程式用於要求將被取代的字元字串。 下列範例說明其中一種方法：  
   
  [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]  
   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fb9a3ff1c27aade9f74a8ed95a8016829874ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76ccb2ec126ae57e39b1a4fab3a0bff82a353d71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384071"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953758"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets：從通訊端類別衍生
 本文將說明一些您可以藉由從其中一個通訊端類別衍生您自己的類別取得的功能。  
@@ -30,7 +30,7 @@ ms.locfileid: "33384071"
   
  此外，類別`CSocket`提供[OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending)成員函式 (進階可覆寫)。 通訊端會提取 windows 訊息時，MFC 會呼叫此函式。 您可以覆寫`OnMessagePending`至從 Windows 中尋找特定的訊息，並予以回應。  
   
- 預設版本`OnMessagePending`類別中提供`CSocket`會檢查訊息佇列`WM_PAINT`等候完成的封鎖呼叫時的訊息。 它會分派改善顯示品質的 [小畫家] 訊息。 除了用這種有用的項目，說明您可能會覆寫函式的其中一種方式自己。 另舉一例，請考慮使用`OnMessagePending`下列工作。 假設您在等候網路異動完成時顯示非強制回應對話方塊。 此對話方塊包含 [取消] 按鈕，使用者可使用取消花太長時間封鎖交易。 您`OnMessagePending`覆寫可能幫浦與這個非強制回應對話方塊相關的訊息。  
+ 預設版本`OnMessagePending`類別中提供`CSocket`等候完成的封鎖呼叫時檢查 WM_PAINT 訊息的訊息佇列。 它會分派改善顯示品質的 [小畫家] 訊息。 除了用這種有用的項目，說明您可能會覆寫函式的其中一種方式自己。 另舉一例，請考慮使用`OnMessagePending`下列工作。 假設您在等候網路異動完成時顯示非強制回應對話方塊。 此對話方塊包含 [取消] 按鈕，使用者可使用取消花太長時間封鎖交易。 您`OnMessagePending`覆寫可能幫浦與這個非強制回應對話方塊相關的訊息。  
   
  在您`OnMessagePending`覆寫，傳回**TRUE**或呼叫的基底類別版本傳回`OnMessagePending`。 如果您仍然想要完成的工作執行，請呼叫基底類別版本。  
   

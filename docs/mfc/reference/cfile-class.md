@@ -1,7 +1,7 @@
 ---
 title: CFile 類別 |Microsoft 文件
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -70,11 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4086b25fe675aaab1b484f21ec7e22e5603781
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0b1effa59dcbada04d6cb363345a69025fcfdbb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957481"
 ---
 # <a name="cfile-class"></a>CFile 類別
 MFC 檔案類別的基底類別。  
@@ -169,9 +170,9 @@ virtual void Abort();
 ### <a name="remarks"></a>備註  
  如果您無法關閉檔案然後再終結物件，解構函式會關閉它為您。  
   
- 當例外狀況處理、`CFile::Abort`不同於`CFile::Close`兩個重要的層面。 首先，**中止**函式不會擲回例外狀況失敗因為失敗會忽略**中止**。 第二個，**中止**則不會**ASSERT**如果檔案尚未開啟，或先前已關閉。  
+ 當例外狀況處理、`CFile::Abort`不同於`CFile::Close`兩個重要的層面。 首先，`Abort`函式不會擲回例外狀況失敗因為失敗會忽略`Abort`。 第二個，`Abort`則不會**ASSERT**如果檔案尚未開啟，或先前已關閉。  
   
- 如果您使用**新**配置`CFile`在堆積的物件，然後您必須關閉檔案後予以刪除。 **中止**設定`m_hFile`至`CFile::hFileNull`。  
+ 如果您使用**新**配置`CFile`在堆積的物件，然後您必須關閉檔案後予以刪除。 `Abort` 設定`m_hFile`至`CFile::hFileNull`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
@@ -197,20 +198,20 @@ CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hFile`  
+ *hFile*  
  要連結至 `CFile` 物件的檔案控制代碼。  
   
- `lpszFileName`  
+ *lpszFileName*  
  要連結至 `CFile` 物件的檔案相對或完整路徑。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  指定檔案之檔案存取選項的位元組合 (OR)。 如需可能的選項，請參閱＜備註＞一節。  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 物件的指標  
   
 ### <a name="remarks"></a>備註  
- 下列五個表格會列出 `nOpenFlags` 參數的可能選項。  
+ 下列五個表格列出可能的選項，如*nOpenFlags*參數。  
   
  請僅選擇下列其中一個檔案存取模式選項。 預設檔案存取模式為 `CFile::modeRead`，其是唯讀的。  
   
@@ -241,7 +242,7 @@ CAtlTransactionManager* pTM);
   
 |值|描述|  
 |-----------|-----------------|  
-|`CFile::modeCreate`|建立新檔案，如果檔案不存在。;如果檔案已經存在， [CFileException](../../mfc/reference/cfileexception-class.md) ，就會引發。|  
+|`CFile::modeCreate`|如果檔案不存在，請建立新檔案。 如果檔案已經存在，則會覆寫，並初始設定為零長度。|  
 |`CFile::modeNoTruncate`|如果檔案不存在，則建立新檔案；否則，如果檔案已經存在，則連結至 `CFile` 物件。|  
   
  請按照所述，選擇下列檔案快取選項。 根據預設，系統會使用尚未做為選項提供的一般目的快取配置。  
@@ -282,7 +283,7 @@ virtual void Close();
 ### <a name="remarks"></a>備註  
  如果您無法關閉檔案然後再終結物件，解構函式會關閉它為您。  
   
- 如果您使用**新**配置`CFile`在堆積的物件，然後您必須關閉檔案後予以刪除。 **關閉**設定`m_hFile`至`CFile::hFileNull`。  
+ 如果您使用**新**配置`CFile`在堆積的物件，然後您必須關閉檔案後予以刪除。 `Close` 設定`m_hFile`至`CFile::hFileNull`。  
   
 ### <a name="example"></a>範例  
  請參閱範例的[CFile::CFile](#cfile)。  
@@ -408,7 +409,7 @@ static BOOL PASCAL GetStatus(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rStatus`  
+ *rStatus*  
  使用者提供的參考**CFileStatus**結構將會接收的狀態資訊。 **CFileStatus**結構有下列欄位：  
   
 - **CTime m_ctime**建立檔案的日期和時間。  
@@ -423,10 +424,10 @@ static BOOL PASCAL GetStatus(
   
 - **char m_szFullName [_MAX_PATH]** Windows 字元集中的絕對檔案名稱。  
   
- `lpszFileName`  
+ *lpszFileName*  
  中的 Windows 字元字串也就是設定所需的檔案的路徑。 路徑可以是相對或絕對的或它可以包含網路路徑名稱。  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 物件的指標  
   
 ### <a name="return-value"></a>傳回值  
@@ -476,10 +477,10 @@ virtual void LockRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwPos`  
+ *dwPos*  
  鎖定的位元組範圍開頭的位元組位移。  
   
- `dwCount`  
+ *dwCount*  
  要鎖定之範圍中的位元組數目。  
   
 ### <a name="remarks"></a>備註  
@@ -515,7 +516,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="open"></a>  CFile::Open  
- 多載。 **開啟**設計用於與預設`CFile`建構函式。  
+ 多載。 `Open` 設計用於與預設`CFile`建構函式。  
   
 ```  
 virtual BOOL Open(
@@ -532,27 +533,27 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFileName`  
+ *lpszFileName*  
  所需的檔案的路徑字串。 可以是相對路徑、 絕對或網路名稱 (UNC)。  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  A **UINT** ，定義檔案的共用及存取模式。 它會指定要開啟檔案時所採取的動作。 您可以藉由使用位元 OR 結合選項 ( **&#124;** ) 運算子。 一個存取權限，以及一個共用選項是必要的。**modeCreate**和**modeNoInherit**是選擇性的模式。 請參閱[CFile](#cfile)建構函式模式選項的清單。  
   
- `pError`  
+ *pError*  
  將會收到失敗的作業狀態的現有檔案例外狀況物件指標。  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 物件的指標  
   
 ### <a name="return-value"></a>傳回值  
- 開啟已成功; 如果為非零否則便是 0。 `pError`參數才有意義就會傳回 0。  
+ 開啟已成功; 如果為非零否則便是 0。 *PError*參數才有意義就會傳回 0。  
   
 ### <a name="remarks"></a>備註  
  兩個功能會形成 「 安全 」 的方式開啟的檔案，其中失敗是正常、 預期的條件。  
   
- 雖然`CFile`建構函式將會擲回例外狀況時發生錯誤的情況，**開啟**會傳回**FALSE**錯誤狀況。 **開啟**仍然可以初始化[CFileException](../../mfc/reference/cfileexception-class.md)物件來描述錯誤，不過。 如果您並未提供`pError`參數，或是您傳遞**NULL**如`pError`，**開啟**會傳回**FALSE**並不會擲回`CFileException`。 如果您將指標傳遞給現有`CFileException`，和**開啟**在遇到錯誤，函式會填入它描述該錯誤的資訊。 都不區分大小將會在**開啟**擲回例外狀況。  
+ 雖然`CFile`建構函式將會擲回例外狀況時發生錯誤的情況，`Open`會傳回**FALSE**錯誤狀況。 `Open` 仍然可以初始化[CFileException](../../mfc/reference/cfileexception-class.md)物件來描述錯誤，不過。 如果您並未提供*pError*參數，或是您傳遞**NULL**如*pError*，`Open`會傳回**FALSE**並不會擲回`CFileException`. 如果您將指標傳遞給現有`CFileException`，和`Open`在遇到錯誤，函式會填入它描述該錯誤的資訊。 都不區分大小將會在`Open`擲回例外狀況。  
   
- 下表描述可能的結果**開啟**。  
+ 下表描述可能的結果`Open`。  
   
 |`pError`|發生錯誤|傳回值|CFileException 內容|  
 |--------------|------------------------|------------------|----------------------------|  
@@ -583,14 +584,14 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  接收從檔案讀取的資料是使用者提供的緩衝區指標。  
   
- `nCount`  
+ *nCount*  
  要從檔案讀取的位元組數目上限。 對於文字模式的檔案，換行字元傳回換行字元組算是單一字元。  
   
 ### <a name="return-value"></a>傳回值  
- 傳輸至緩衝區的位元組數目。 請注意，所有`CFile`類別，傳回的值可能小於`nCount`如果已到達檔案結尾。  
+ 傳輸至緩衝區的位元組數目。 請注意，所有`CFile`類別，傳回的值可能小於*nCount*如果已到達檔案結尾。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
@@ -607,10 +608,10 @@ static void PASCAL Remove(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFileName`  
+ *lpszFileName*  
  所需的檔案的路徑字串。 路徑可以是相對或絕對的而且只能包含網路名稱。  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 物件的指標  
   
 ### <a name="remarks"></a>備註  
@@ -632,13 +633,13 @@ static void PASCAL Rename(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszOldName`  
+ *lpszOldName*  
  舊的路徑。  
   
- `lpszNewName`  
+ *lpszNewName*  
  新的路徑。  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 物件的指標  
   
 ### <a name="remarks"></a>備註  
@@ -657,17 +658,17 @@ UINT nFrom);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lOff`  
+ *lOff*  
  若要移動檔案指標的位元組數目。 正值檔案指標移到結束時的檔案。負數值檔案指標移到朝向檔的開頭。  
   
- `nFrom`  
+ *nFrom*  
  要搜尋的位置。 請參閱 < 備註 > 一節提供可能的值。  
   
 ### <a name="return-value"></a>傳回值  
  如果該方法成功，檔案指標的位置否則，傳回值未定義，以及指向`CFileException`擲回例外狀況。  
   
 ### <a name="remarks"></a>備註  
- 下表列出可能的值為`nFrom`參數。  
+ 下表列出可能的值為*nFrom*參數。  
   
 |值|描述|  
 |-----------|-----------------|  
@@ -721,7 +722,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszNewName`  
+ *lpszNewName*  
  指定新路徑的字串指標。  
   
 ### <a name="remarks"></a>備註  
@@ -740,7 +741,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwNewLen`  
+ *dwNewLen*  
  所需的檔案，以位元組為單位的長度。 這個值可以是檔案的大於或小於目前長度。 檔案將會擴充或截斷依適當情況。  
   
 ### <a name="remarks"></a>備註  
@@ -762,13 +763,13 @@ static void PASCAL SetStatus(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFileName`  
+ *lpszFileName*  
  所需的檔案的路徑字串。 路徑可以是相對或絕對的而且只能包含網路名稱。  
   
  *status*  
  包含新的狀態資訊的緩衝區。 呼叫**GetStatus**成員函式來 prefill **CFileStatus**結構和目前的值，然後進行所需的變更。 如果值為 0，會不會更新對應的狀態項目。 請參閱[GetStatus](#getstatus)成員函式的說明**CFileStatus**結構。  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 物件的指標  
   
 ### <a name="remarks"></a>備註  
@@ -789,10 +790,10 @@ virtual void UnlockRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwPos`  
+ *dwPos*  
  要解除鎖定的位元組範圍開頭的位元組位移。  
   
- `dwCount`  
+ *dwCount*  
  若要解除鎖定範圍中的位元組數目。  
   
 ### <a name="remarks"></a>備註  
@@ -814,10 +815,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  使用者提供的緩衝區，其中包含要寫入檔案的資料指標。  
   
- `nCount`  
+ *nCount*  
  從緩衝區中要傳輸的位元組數目。 對於文字模式的檔案，換行字元傳回換行字元組算是單一字元。  
   
 ### <a name="remarks"></a>備註  

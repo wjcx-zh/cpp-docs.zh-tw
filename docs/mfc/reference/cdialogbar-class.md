@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5477921ff89c8bb0b23245d3848139a7c7c86444
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366710"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951552"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 類別
 在控制列中提供 Windows 非強制回應對話方塊的功能。  
@@ -53,7 +53,7 @@ class CDialogBar : public CControlBar
 ## <a name="remarks"></a>備註  
  對話方塊列類似的對話方塊，其中包含使用者可以使用 tab 鍵之間的標準 Windows 控制項。 另一個相似度為您建立來代表對話方塊列的對話方塊範本。  
   
- 建立和使用對話方塊列是類似於建立和使用`CFormView`物件。 首先，使用[對話方塊編輯器](../../windows/dialog-editor.md)定義對話方塊範本的樣式**WS_CHILD**和任何其他樣式。 範本必須沒有樣式**WS_VISIBLE**。 在您的應用程式程式碼中呼叫建構函式來建構`CDialogBar`物件，然後呼叫**建立**建立對話方塊列視窗，並將其附加至`CDialogBar`物件。  
+ 建立和使用對話方塊列是類似於建立和使用`CFormView`物件。 首先，使用[對話方塊編輯器](../../windows/dialog-editor.md)定義對話方塊範本的樣式**WS_CHILD**和任何其他樣式。 範本必須沒有樣式**WS_VISIBLE**。 在您的應用程式程式碼中呼叫建構函式來建構`CDialogBar`物件，然後呼叫`Create`建立對話方塊列視窗，並將其附加至`CDialogBar`物件。  
   
  如需有關`CDialogBar`，請參閱文章[對話方塊列](../../mfc/dialog-bars.md)和[技術提示 31](../../mfc/tn031-control-bars.md)，控制列。  
   
@@ -100,22 +100,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  父代的指標`CWnd`物件。  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  名稱的指標`CDialogBar`物件的對話方塊資源範本。  
   
- `nStyle`  
+ *nStyle*  
  工具列的樣式。 支援的其他工具列樣式如下：  
   
-- `CBRS_TOP` 控制列是在框架視窗的頂端。  
+- **CBRS_TOP**控制列是在框架視窗的頂端。  
   
-- `CBRS_BOTTOM` 控制列是在框架視窗的底部。  
+- **CBRS_BOTTOM**控制列是在框架視窗的底部。  
   
-- `CBRS_NOALIGN` 父代重新調整大小時未重新置放控制列。  
+- **CBRS_NOALIGN**父代重新調整大小時未重新置放控制列。  
   
-- `CBRS_TOOLTIPS` 控制列會顯示工具提示。  
+- **CBRS_TOOLTIPS**控制列會顯示工具提示。  
   
 - **CBRS_SIZE_DYNAMIC**控制列是動態的。  
   
@@ -123,21 +123,21 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING**浮動控制列。  
   
-- `CBRS_FLYBY` 狀態列會顯示按鈕的相關資訊。  
+- **CBRS_FLYBY**狀態列會顯示按鈕的相關資訊。  
   
 - **CBRS_HIDE_INPLACE**控制列不會顯示給使用者。  
   
- `nID`  
+ *nID*  
  對話方塊列控制項 ID。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  資源識別碼`CDialogBar`物件的對話方塊範本。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果您指定`CBRS_TOP`或`CBRS_BOTTOM`對齊樣式，對話方塊列的寬度是框架視窗和高度所指定的資源，就是`nIDTemplate`。 如果您指定`CBRS_LEFT`或`CBRS_RIGHT`對齊樣式，對話方塊列的高度是框架視窗和其寬度所指定的資源，就是`nIDTemplate`。  
+ 如果您指定**CBRS_TOP**或**CBRS_BOTTOM**對齊樣式，對話方塊列的寬度是框架視窗和高度所指定的資源，就是*nIDTemplate*. 如果您指定**CBRS_LEFT**或**CBRS_RIGHT**對齊樣式，對話方塊列的高度是框架視窗和其寬度所指定的資源，就是*nIDTemplate*.  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  

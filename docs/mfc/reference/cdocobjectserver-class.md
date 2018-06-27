@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367402"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956456"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 類別
 實作可讓一般 `COleDocument` 伺服器融入完整 DocObject 伺服器所需的其他 OLE 介面： `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`和 `IPrint`。  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>備註  
- `ActivateDocObject` 呼叫`IOleDocumentSite`的**ActivateMe**方法，但不會顯示檢視，因為它會等候如何設定及顯示檢視中，指定的呼叫中的特定指示[CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` 呼叫`IOleDocumentSite`的`ActivateMe`方法，但不會顯示檢視，因為它會等候如何設定及顯示檢視中，指定的呼叫中的特定指示[CDocObjectServer::OnActivateView](#onactivateview)。  
   
  在一起，`ActivateDocObject`和`OnActivateView`啟動並顯示 DocObject 檢視表。 DocObject 啟用不同於其他類型的 OLE 就地啟用。 DocObject 啟動會略過顯示就地影線框線和物件裝飾時 （例如調整大小控點）、 略過物件延伸函式，以及繪製捲軸檢視矩形相對於繪製其外 （如同標準矩形內就地啟用）。  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  是 DocObject 伺服器的用戶端的用戶端站台文件指標。  
   
- `pDocSite`  
+ *pDocSite*  
  指標`IOleDocumentSite`容器所實作的介面。  
   
 ### <a name="remarks"></a>備註  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ar`  
+ *ar*  
  A`CArchive`要序列化的檢視狀態的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ar`  
+ *ar*  
  A`CArchive`序列化的檢視狀態的物件。  
   
 ### <a name="remarks"></a>備註  

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354348"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952270"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 類別
 ID2D1RadialGradientBrush 包裝函式。  
@@ -133,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pResource`  
+ *pResource*  
  現有資源的介面。 不能是 NULL  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -152,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `gradientStops`  
+ *gradientStops*  
  D2D1_GRADIENT_STOP 結構陣列的指標。  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  值大於或等於 1，gradientStops 陣列中指定漸層停駐點的數目。  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  中心、 漸層的原點位移和半徑 x 和 y 半徑筆刷的漸層。  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  在哪種色彩漸層停駐點之間的插補執行空間。  
   
- `extendMode`  
+ *extendMode*  
  正規化 [0 1] 範圍以外的漸層的行為。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指標的不透明度和筆刷的轉換。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -184,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRenderTarget`  
+ *pRenderTarget*  
  呈現目標指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -289,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>參數  
- `point`  
+ *點*  
  漸層停駐橢圓形，筆刷的座標空間中的中心  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -300,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  漸層中心漸層的橢圓形的原點位移  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -311,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>參數  
- `radiusX`  
+ *radiusX*  
  漸層的橢圓形的 x 半徑。 此值為筆刷的座標空間  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -322,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>參數  
- `radiusY`  
+ *radiusY*  
  漸層的橢圓形的 y 半徑。 此值為筆刷的座標空間  
   
 ## <a name="see-also"></a>另請參閱  

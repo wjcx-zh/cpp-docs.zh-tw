@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2559b4917f16bb8ddc49b73ace8bda6e1a9bafc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e274a3fabf10e96aec41a92bb484f4ebcc5bf377
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367304"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955809"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 類別
 實作可以非同步載入的 OLE 控制項屬性。  
@@ -68,7 +68,7 @@ class CDataPathProperty : public CAsyncMonikerFile
 ## <a name="remarks"></a>備註  
  非同步屬性會在同步初始之後載入。  
   
- 類別`CDataPathProperty`衍生自**CAysncMonikerFile**。 若要實作 OLE 控制項非同步屬性，衍生自`CDataPathProperty`，並覆寫[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)。  
+ 類別`CDataPathProperty`衍生自`CAysncMonikerFile`。 若要實作 OLE 控制項非同步屬性，衍生自`CDataPathProperty`，並覆寫[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)。  
   
  如需如何在網際網路應用程式中使用非同步 moniker 以及 ActiveX 控制項的詳細資訊，請參閱下列文章：  
   
@@ -101,14 +101,14 @@ CDataPathProperty(LPCTSTR lpszPath, COleControl* pControl = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pControl`  
+ *pControl*  
  要與此相關聯的 OLE 控制項物件的指標`CDataPathProperty`物件。  
   
- `lpszPath`  
+ *lpszPath*  
  路徑可能是絕對或相對，用來建立非同步 moniker 所參考之屬性的實際絕對位置。 `CDataPathProperty` 使用 Url，而不是檔名。 如果您想`CDataPathProperty`物件的檔案，請在前面加上`file://`的路徑。  
   
 ### <a name="remarks"></a>備註  
- `COleControl`指向的物件`pControl`正由**開啟**和擷取由衍生類別。 如果`pControl`是**NULL**，搭配使用的控制項**開啟**應該與設定`SetControl`。 如果`lpszPath`是**NULL**，您可以透過路徑中傳遞**開啟**，或將它與`SetPath`。  
+ `COleControl`指向的物件`pControl`正由`Open`和擷取由衍生類別。 如果*pControl*是**NULL**，搭配使用的控制項`Open`應該與設定`SetControl`。 如果`lpszPath`是**NULL**，您可以透過路徑中傳遞`Open`，或將它與`SetPath`。  
   
 ##  <a name="getcontrol"></a>  CDataPathProperty::GetControl  
  呼叫此成員函式可擷取`COleControl`物件相關聯`CDataPathProperty`物件。  
@@ -121,7 +121,7 @@ COleControl* GetControl();
  OLE 控制項的指標相關聯的傳回`CDataPathProperty`物件。 **NULL**如果不是控制項相關聯。  
   
 ##  <a name="getpath"></a>  CDataPathProperty::GetPath  
- 呼叫此成員函式，若要擷取的路徑，設定何時`CDataPathProperty`建構，或在指定物件**開啟**，或前一個呼叫中指定`SetPath`成員函式。  
+ 呼叫此成員函式，若要擷取的路徑，設定何時`CDataPathProperty`建構，或在指定物件`Open`，或前一個呼叫中指定`SetPath`成員函式。  
   
 ```  
 CString GetPath() const;  
@@ -153,13 +153,13 @@ virtual BOOL Open(CFileException* pError = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pControl`  
+ *pControl*  
  要與此相關聯的 OLE 控制項物件的指標`CDataPathProperty`物件。  
   
- `pError`  
+ *pError*  
  檔案例外狀況的指標。 發生錯誤時，會設定為可能的原因。  
   
- `lpszPath`  
+ *lpszPath*  
  路徑可能是絕對或相對，用來建立非同步 moniker 所參考之屬性的實際絕對位置。 `CDataPathProperty` 使用 Url，而不是檔名。 如果您想`CDataPathProperty`物件的檔案，請在前面加上`file://`的路徑。  
   
 ### <a name="return-value"></a>傳回值  
@@ -168,9 +168,9 @@ virtual BOOL Open(CFileException* pError = NULL);
 ### <a name="remarks"></a>備註  
  函式會嘗試取得`IBindHost`從控制項的介面。  
   
- 然後再呼叫**開啟**沒有路徑，您必須設定屬性的路徑值。 這可以建構，或藉由呼叫物件時完成`SetPath`成員函式。  
+ 然後再呼叫`Open`沒有路徑，您必須設定屬性的路徑值。 這可以建構，或藉由呼叫物件時完成`SetPath`成員函式。  
   
- 然後再呼叫**開啟**不受控制，ActiveX 控制項 （先前稱為 OLE 控制項） 可與物件相關聯。 這可以建構，或藉由呼叫物件時完成`SetControl`。  
+ 然後再呼叫`Open`不受控制，ActiveX 控制項 （先前稱為 OLE 控制項） 可與物件相關聯。 這可以建構，或藉由呼叫物件時完成`SetControl`。  
   
  所有多載[CAsyncMonikerFile::Open](../../mfc/reference/casyncmonikerfile-class.md#open)您也可以從`CDataPathProperty`。  
   
@@ -192,7 +192,7 @@ void SetControl(COleControl* pControl);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pControl`  
+ *pControl*  
  非同步的 OLE 控制項，要與屬性相關聯的指標。  
   
 ##  <a name="setpath"></a>  CDataPathProperty::SetPath  
@@ -203,7 +203,7 @@ void SetPath(LPCTSTR lpszPath);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPath`  
+ *lpszPath*  
  路徑，但它可能是絕對或相對的以非同步方式載入的屬性。 `CDataPathProperty` 使用 Url，而不是檔名。 如果您想`CDataPathProperty`物件的檔案，請在前面加上`file://`的路徑。  
   
 ## <a name="see-also"></a>另請參閱  

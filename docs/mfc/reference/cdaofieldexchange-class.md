@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9e65b4880c80f8a4b0d9a192f316b16a92a3e69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368725"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953905"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 類別
 支援 DAO 資料庫類別使用的 DAO 資料錄欄位交換 (DFX) 常式。  
@@ -67,7 +67,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  DAO 資料錄欄位交換 (DFX) 是非常類似於 ODBC 為基礎之 MFC 資料庫類別中的資料錄欄位交換 (RFX) ( `CDatabase`， `CRecordset`)。 如果您了解 RFX，您會發現它不僅簡單易用，DFX。  
   
- A`CDaoFieldExchange`物件提供內容資訊所需的 DAO 資料錄欄位交換進行。 `CDaoFieldExchange` 物件支援數個作業，包括繫結參數和欄位資料成員，並在目前資料錄的欄位上設定各種旗標。 DFX 作業所定義之類型的資料錄集類別資料成員上`enum` **FieldType**中`CDaoFieldExchange`。 可能**FieldType**的值為：  
+ A`CDaoFieldExchange`物件提供內容資訊所需的 DAO 資料錄欄位交換進行。 `CDaoFieldExchange` 物件支援數個作業，包括繫結參數和欄位資料成員，並在目前資料錄的欄位上設定各種旗標。 DFX 作業所定義之類型的資料錄集類別資料成員上**列舉** **FieldType**中`CDaoFieldExchange`。 可能**FieldType**的值為：  
   
 - **CDaoFieldExchange::outputColumn**欄位資料成員。  
   
@@ -118,7 +118,7 @@ BOOL IsValidOperation();
 |**StoreField**|將目前的記錄儲存至快取。|  
 |**LoadField**|還原資料錄集中的快取的資料成員變數。|  
 |**FreeCache**|釋出用來檢查資料錄集中的 「 有所變更 」 欄位的快取。|  
-|`SetFieldNull`|欄位的狀態設定為 Null，而且值**PSEUDONULL**。|  
+|**SetFieldNull**|欄位的狀態設定為 Null，而且值**PSEUDONULL**。|  
 |**MarkForAddNew**|如果不是標示的欄位是 「 有所變更 」 **PSEUDONULL**。|  
 |**MarkForEdit**|將欄位標示 「 有所變更 」 如果不符合快取。|  
 |**SetDirtyField**|設定欄位值標示為 「 中途 」。|  
@@ -138,7 +138,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nFieldType`  
+ *nFieldType*  
  值為**列舉 FieldType**中宣告`CDaoFieldExchange`，這可以是下列其中一項：  
   
 - **CDaoFieldExchange::outputColumn**  
@@ -146,9 +146,9 @@ void SetFieldType(UINT nFieldType);
 - **CDaoFieldExchange::param**  
   
 ### <a name="remarks"></a>備註  
- 一般來說，ClassWizard 會為您撰寫此呼叫。 如果您撰寫自己的函式，並使用精靈 來撰寫您`DoFieldExchange`函式中，加入您自己的函式外部的欄位對應的呼叫。 如果您不使用精靈，不將欄位對應。 在呼叫之前呼叫 DFX 函式，一個用於您的類別，每個欄位資料成員，並且會識別做為欄位類型**CDaoFieldExchange::outputColumn**。  
+ 一般來說，ClassWizard 會為您撰寫此呼叫。 如果您撰寫自己的函式，並使用精靈 來撰寫您`DoFieldExchange`函式中，加入您自己的函式外部的欄位對應的呼叫。 如果您不使用精靈，不將欄位對應。 在呼叫之前呼叫 DFX 函式，一個用於您的類別，每個欄位資料成員，並且會識別做為欄位類型`CDaoFieldExchange::outputColumn`。  
   
- 如果您將參數化資料錄集類別，您應該加入 DFX 呼叫 （在欄位對應的） 之外的所有參數資料成員，並在之前呼叫這些呼叫`SetFieldType`。 將值傳遞**CDaoFieldExchange::param**。 (相反地，您可以使用[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)並設定其參數值。)  
+ 如果您將參數化資料錄集類別，您應該加入 DFX 呼叫 （在欄位對應的） 之外的所有參數資料成員，並在之前呼叫這些呼叫`SetFieldType`。 將值傳遞`CDaoFieldExchange::param`。 (相反地，您可以使用[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)並設定其參數值。)  
   
  一般情況下，每個群組的欄位資料成員或參數資料成員相關聯的 DFX 函式呼叫的前面必須有呼叫`SetFieldType`。 `nFieldType`每個參數`SetFieldType`呼叫識別遵循的 DFX 函式呼叫所代表的資料成員的型別`SetFieldType`呼叫。  
   

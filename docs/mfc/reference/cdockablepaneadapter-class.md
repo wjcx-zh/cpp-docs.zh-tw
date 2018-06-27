@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367288"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951029"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 類別
 提供 `CWnd`衍生窗格的停駐支援。  
@@ -90,13 +90,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
+ [in]*lpszProfileName*  
  設定檔名稱。  
   
- [輸入] `nIndex`  
+ [in]*nIndex*  
  設定檔的索引。  
   
- [輸入] `uiID`  
+ [in]*uiID*  
  窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -114,13 +114,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszProfileName`  
+ [in]*lpszProfileName*  
  設定檔名稱。  
   
- [輸入] `nIndex`  
+ [in]*nIndex*  
  設定檔索引 （預設為視窗的控制項 ID）。  
   
- [輸入] `uiID`  
+ [in]*uiID*  
  窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -135,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  將窗格配接器視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  

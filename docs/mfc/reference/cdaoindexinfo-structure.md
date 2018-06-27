@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367031"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954061"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 結構
 `CDaoIndexInfo`結構包含的資料存取物件 (DAO) 定義的索引物件的相關資訊。  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>參數  
- `m_strName`  
+ *m_strName*  
  唯一命名欄位的物件。 如需詳細資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  陣列的指標[CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md)指出哪些 tabledef 或資料錄集欄位在索引中的索引鍵欄位的物件。 每個物件識別在索引中的一個欄位。 預設索引順序為遞增。 索引物件只能有一個或多個欄位代表每一筆記錄的索引鍵。 這些可以遞增、 遞減或組合。  
   
- `m_nFields`  
- 儲存中的欄位數目`m_pFieldInfos`。  
+ *m_nFields*  
+ 儲存中的欄位數目*m_pFieldInfos*。  
   
  *m_bPrimary*  
  如果主要屬性為**TRUE**，index 物件表示主要索引。 主索引鍵是由一或多個唯一識別預先定義的順序中的資料表中的所有記錄的欄位所組成。 索引欄位必須是唯一的因為索引物件的唯一屬性也會設為**TRUE**在 DAO 中。 如果主索引鍵是由多個欄位所組成，每個欄位可以包含重複的值，但每個索引的所有欄位的值組合必須是唯一。 主索引鍵資料表的索引鍵所組成，並通常包含主索引鍵相同的欄位。  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  如需詳細資訊，請參閱本主題說明 DAO 中的 「 忽略 Null 屬性 」。  
   
- `m_bRequired`  
+ *m_bRequired*  
  指出 DAO 索引物件是否需要非 Null 值。 如果這個屬性是**TRUE**，index 物件不允許 Null 值。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 必要屬性 >。  
   
 > [!TIP]
@@ -106,7 +106,7 @@ struct CDaoIndexInfo {
   
  不會由 MFC 類別表示索引物件。 相反地，DAO 物件類別的基礎 MFC 物件[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)包含稱為索引集合的索引物件的集合。 這些類別提供成員函式來存取索引資訊的個別項目，或者您可以存取它們全部與`CDaoIndexInfo`藉由呼叫物件`GetIndexInfo`包含物件的成員函式。  
   
- `CDaoIndexInfo` 有一個建構函式和解構函式，才能正確地配置和解除配置中的索引欄位資訊`m_pFieldInfos`。  
+ `CDaoIndexInfo` 有一個建構函式和解構函式，才能正確地配置和解除配置中的索引欄位資訊*m_pFieldInfos*。  
   
  所擷取的資訊`GetIndexInfo`tabledef 物件成員函式會儲存在`CDaoIndexInfo`結構。 呼叫`GetIndexInfo`包含 tabledef 物件的索引集合中儲存的索引物件的成員函式。 `CDaoIndexInfo` 也會定義`Dump`成員函式在偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoIndexInfo`物件。  
   

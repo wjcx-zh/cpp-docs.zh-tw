@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366469"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953697"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 類別
 ID2D1DCRenderTarget 包裝函式。  
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTarget`  
+ *pTarget*  
  現有的轉譯目標介面。 不能是 NULL  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dc`  
+ *dc*  
  裝置內容的呈現目標發出繪製命令  
   
- `rect`  
+ *rect*  
  維度的裝置內容 (HDC) 呈現目標繫結至控制代碼  
   
 ### <a name="return-value"></a>傳回值  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>參數  
- `props`  
+ *屬性*  
  轉譯模式、 像素格式、 遠端處理選項、 DPI 的詳細資訊，以及所需的硬體呈現的最小 DirectX 支援。  
   
 ### <a name="return-value"></a>傳回值  

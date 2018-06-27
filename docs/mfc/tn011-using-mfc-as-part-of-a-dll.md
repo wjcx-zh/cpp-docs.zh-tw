@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b558bb373416338f4136a6142ca6d491b28b510
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384706"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951454"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011：將 MFC 當成 DLL 的一部分來使用
 此提示說明標準的 MFC Dll，讓您使用 MFC 程式庫做為 Windows 動態連結程式庫 (DLL) 的一部分。 它假設您熟悉 Windows DLL 並知道如何建置它們。 如需 MFC 擴充 Dll，您可以建立擴充功能的 MFC 程式庫，請參閱[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)。  
@@ -65,7 +65,7 @@ ms.locfileid: "33384706"
   
  將 API 放在 C 和 C++ 檔案都可包含的個別標頭中。 請參閱 MFC 進階概念範例的標頭 ScreenCap.h [DLLScreenCap](../visual-cpp-samples.md)的範例。 若要匯出函式，請在您的模組定義檔 (.DEF) 的 `EXPORTS` 區段中輸入那些函式，或者在您的函式定義包括 `__declspec(dllexport)`。 使用 `__declspec(dllimport)` 將這些函式匯入用戶端可執行檔。  
   
- 您必須新增`AFX_MANAGE_STATE`巨集的動態連結至 MFC 的標準 MFC Dll 中匯出的函式的開頭。 這個巨集會將目前的模組狀態設定為 DLL 的狀態。 若要使用這個巨集，請將以下程式碼行加入至從 DLL 匯出的函式開頭：  
+ 您必須在動態連結至 MFC 的標準 MFC Dll 中匯出的函式的開頭加入 AFX_MANAGE_STATE 巨集。 這個巨集會將目前的模組狀態設定為 DLL 的狀態。 若要使用這個巨集，請將以下程式碼行加入至從 DLL 匯出的函式開頭：  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   

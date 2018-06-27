@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a52846754bdf1293e03a47127ae8886e0f1cd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385463"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952422"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 實作
 > [!NOTE]
@@ -89,7 +89,7 @@ public:
 };  
 ```  
   
- 若要取得 IPrintInterface，如果您只需要[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，呼叫[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)使用`IID`的**IPrintInterface**。 `IID` 是唯一可識別介面的 128 位元數字。 您或 OLE 定義的每個介面都有 `IID`。 如果`pUnk`是指向[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)物件時，可能會從其擷取 IPrintInterface 的程式碼：  
+ 若要取得 IPrintInterface，如果您只需要[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，呼叫[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)使用`IID`的`IPrintInterface`。 `IID` 是唯一可識別介面的 128 位元數字。 您或 OLE 定義的每個介面都有 `IID`。 如果*pUnk*是指向[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)物件時，可能會從其擷取 IPrintInterface 的程式碼：  
   
 ```  
 IPrintInterface* pPrint = NULL;  
@@ -116,7 +116,7 @@ virtual void PrintObject();
 };  
 ```  
   
- 實作[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)都是完全一樣為這些實作上述。 **Cprintobj**會看起來像這樣：  
+ 實作[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)和[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)都是完全一樣為這些實作上述。 `CPrintObj::QueryInterface` 看起來會像下面這樣：  
   
 ```  
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)  
@@ -301,15 +301,15 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 2.  使用衍生類別定義中的 `DECLARE_INTERFACE_MAP` 函式。  
   
-3.  針對您想要支援的每個介面，使用類別定義中的 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 巨集。  
+3.  您想要支援每個介面，使用 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集，在類別定義中。  
   
-4.  在實作檔案中，使用 `BEGIN_INTERFACE_MAP` 和 `END_INTERFACE_MAP` 巨集來定義類別的介面對應。  
+4.  在實作檔案中，使用 BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP 巨集來定義類別的介面對應。  
   
-5.  針對受支援的每個 IID，使用 `BEGIN_INTERFACE_MAP` 和 `END_INTERFACE_MAP` 巨集之間的 `INTERFACE_PART` 巨集，將該 IID 對應至類別的特定「部分」。  
+5.  支援每個 IID，使用 INTERFACE_PART 巨集之間 BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP 巨集，將該 IID 對應至特定 「 部分 」 您的類別。  
   
 6.  實作代表您支援之介面的每個巢狀類別。  
   
-7.  使用 `METHOD_PROLOGUE` 巨集來存取父代的 `CCmdTarget` 衍生物件。  
+7.  使用 METHOD_PROLOGUE 巨集來存取父項、 `CCmdTarget`-衍生物件。  
   
 8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)可以委派給`CCmdTarget`這些函式的實作 (`ExternalAddRef`， `ExternalRelease`，和`ExternalQueryInterface`)。  
   
@@ -338,7 +338,7 @@ END_INTERFACE_PART(PrintObj)
 };  
 ```  
   
- 上述宣告會建立一個衍生自 `CCmdTarget` 的類別。 `DECLARE_INTERFACE_MAP` 巨集會告知架構這個類別會有自訂介面對應。 此外，`BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 巨集會定義巢狀類別，在此情況下會使用 CEditObj 和 CPrintObj 等名稱 (X 只能用來區分巢狀類別和 "C" 開頭的全域類別以及 "I" 開頭的介面類別)。 這些類別的兩個巢狀成員隨即建立：分別是 m_CEditObj 和 m_CPrintObj。 巨集會自動宣告[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)函式，因此您只會宣告函式特定到此介面：EditObject 和 PrintObject (使用 OLE 巨集`STDMETHOD`用以便`_stdcall`和虛擬關鍵字會提供適用於目標平台)。  
+ 上述宣告會建立一個衍生自 `CCmdTarget` 的類別。 DECLARE_INTERFACE_MAP 巨集會告知架構這個類別會有自訂介面對應。 此外，BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集會定義巢狀的類別，在此情況下使用 CEditObj 和 cprintobj 等名稱 （X 只能用來區分巢狀的類別的哪些開頭為"C"和介面類別的全域類別以"I"開頭）。 這些類別的兩個巢狀成員隨即建立：分別是 m_CEditObj 和 m_CPrintObj。 巨集會自動宣告[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)函式，因此您只會宣告函式特定到此介面：EditObject 和 PrintObject (使用 STDMETHOD 使用 OLE 巨集，讓 **_stdcall**和虛擬關鍵字會提供適用於目標平台)。  
   
  實作這個類別的介面對應：  
   
@@ -356,7 +356,7 @@ END_INTERFACE_MAP()
   
  這能分別讓 IID_IPrintInterface IID 和 m_CPrintObj 連結，讓 IID_IEditInterface 和 m_CEditObj 連結。 `CCmdTarget`實作[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`) 會將指標傳回 m_CPrintObj 和 m_CEditObj 要求時使用此對應。 不需要包含 `IID_IUnknown` 的項目；架構將在要求 `IID_IUnknown` 時使用對應中的第一個介面 (在此情況下為 m_CPrintObj)。  
   
- 即使`BEGIN_INTERFACE_PART`巨集自動宣告[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)函式，您仍然需要實作它們：  
+ 即使 BEGIN_INTERFACE_PART 巨集會自動宣告[AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)函式，您仍然需要實作它們：  
   
 ```  
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()  
@@ -404,10 +404,10 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 -   在兩個介面上宣告其中一種內建方法  
   
- 此外，架構會在內部使用訊息對應。 這可讓您從架構類別衍生，例如 `COleServerDoc`，已經支援特定介面並提供架構所提供之介面的取代或新增項目。 您可以執行這個動作，因為架構完全支援從基底類別繼承介面對應。 這就是為何 `BEGIN_INTERFACE_MAP` 接受基底類別的名稱做為其第二個參數的原因。  
+ 此外，架構會在內部使用訊息對應。 這可讓您從架構類別衍生，例如 `COleServerDoc`，已經支援特定介面並提供架構所提供之介面的取代或新增項目。 您可以執行這個動作，因為架構完全支援從基底類別繼承介面對應。 這是為什麼 BEGIN_INTERFACE_MAP 採用做為其第二個參數名稱的基底類別的原因。  
   
 > [!NOTE]
->  它通常無法僅藉由從 MFC 版本繼承介面的內嵌特製化，就能重複使用 OLE 介面之 MFC 內建實作的實作。 這是不可能因為使用`METHOD_PROLOGUE`巨集存取包含`CCmdTarget`-衍生的物件表示*固定的位移*內嵌物件的`CCmdTarget`-衍生物件。 例如，這就表示您無法從 `COleClientItem::XAdviseSink` 中的 MFC 實作衍生內嵌的 XMyAdviseSink，因為 XAdviseSink 依賴位於來自 `COleClientItem` 物件頂端的特定位移。  
+>  它通常無法僅藉由從 MFC 版本繼承介面的內嵌特製化，就能重複使用 OLE 介面之 MFC 內建實作的實作。 這是不可能因為 METHOD_PROLOGUE 巨集，以取得存取包含使用`CCmdTarget`-衍生的物件表示*固定的位移*內嵌物件的`CCmdTarget`-衍生物件。 例如，這就表示您無法從 `COleClientItem::XAdviseSink` 中的 MFC 實作衍生內嵌的 XMyAdviseSink，因為 XAdviseSink 依賴位於來自 `COleClientItem` 物件頂端的特定位移。  
   
 > [!NOTE]
 >  不過，您可以將所有您希望其成為 MFC 預設行為的函式委派給 MFC 實作。 這是 `COleFrameHook` 類別中 `IOleInPlaceFrame` (XOleInPlaceFrame) 的 MFC 實作 (它會將許多函數委派至 m_xOleInPlaceUIWindow)。 選擇此設計可減少實作許多介面之物件的執行階段大小，排除對返回指標的需求 (如前一節中使用的方式 m_pParent)。  
@@ -418,13 +418,13 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
  有兩種方式來使用彙總：(1) 使用支援彙總的 COM 物件，以及 (2) 實作可由另一個物件彙總的物件。 這些功能可以稱為「使用彙總物件」和「使物件彙總」。 MFC 兩者皆可支援。  
   
 ### <a name="using-an-aggregate-object"></a>使用彙總物件  
- 若要使用彙總物件，則必須有某種方式將彙總繫結到 QueryInterface 機制。 換句話說，彙總物件的行為必須如同物件的原生組件一般。 繫結到 MFC 的介面如何對應機制，除了`INTERFACE_PART`巨集，其中巢狀的物件對應至 IID，您也可以宣告彙總物件的一部分您`CCmdTarget`衍生的類別。 若要這樣做，需使用 `INTERFACE_AGGREGATE` 巨集。 這可讓您指定的成員變數 (必須是指標[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)或衍生類別)，這是整合到介面對應機制。 如果指標不是 NULL 時`CCmdTarget::ExternalQueryInterface`是呼叫，架構會自動呼叫彙總物件[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成員函式，如果`IID`要求不是其中一個原生`IID`s支援`CCmdTarget`物件本身。  
+ 若要使用彙總物件，則必須有某種方式將彙總繫結到 QueryInterface 機制。 換句話說，彙總物件的行為必須如同物件的原生組件一般。 如何為 INTERFACE_PART 巨集，除了在 MFC 的介面對應機制未繫結其中巢狀的物件對應至 IID，您也可以宣告彙總物件的一部分您`CCmdTarget`衍生的類別。 若要這樣做，使用 INTERFACE_AGGREGATE 巨集。 這可讓您指定的成員變數 (必須是指標[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)或衍生類別)，這是整合到介面對應機制。 如果指標不是 NULL 時`CCmdTarget::ExternalQueryInterface`是呼叫，架構會自動呼叫彙總物件[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成員函式，如果`IID`要求不是其中一個原生`IID`s支援`CCmdTarget`物件本身。  
   
 ##### <a name="to-use-the-interfaceaggregate-macro"></a>使用 INTERFACE_AGGREGATE 巨集  
   
 1.  宣告成員變數 (`IUnknown*`)，此變數包含指向彙總物件的指標。  
   
-2.  在介面對應中包含 `INTERFACE_AGGREGATE` 巨集，它會依名稱參考成員變數。  
+2.  在您介面對應中，依名稱參考成員變數包含 INTERFACE_AGGREGATE 巨集。  
   
 3.  在某個時間點 (通常是在 `CCmdTarget::OnCreateAggregates` 期間)，將成員變數初始化為 NULL 以外的成員變數。  
   
@@ -508,10 +508,10 @@ void EnableAggregation();
 ## <a name="remarks"></a>備註  
   
 #### <a name="parameters"></a>參數  
- `lpIID`  
+ *lpIID*  
  指向 IID 的遠端指標 (QueryInterface 的第一個引數)  
   
- `ppvObj`  
+ *ppvObj*  
  指向 IUnknown* 的指標 (QueryInterface 的第二個引數)  
   
 ## <a name="remarks"></a>備註  
@@ -550,7 +550,7 @@ DECLARE_INTERFACE_MAP
 ```  
   
 ## <a name="remarks"></a>備註  
- 在衍生自具有介面對應之 `CCmdTarget` 的任何類別中使用這個巨集。 其用法與 `DECLARE_MESSAGE_MAP` 非常類似。 這個巨集引動過程應該放在類別定義中，通常是在標頭 (.H) 檔案中。 具有 `DECLARE_INTERFACE_MAP` 的類別必須利用 `BEGIN_INTERFACE_MAP` 和 `END_INTERFACE_MAP` 巨集在實作檔案 (.CPP) 中定義介面對應。  
+ 在衍生自具有介面對應之 `CCmdTarget` 的任何類別中使用這個巨集。 使用 DECLARE_MESSAGE_MAP 一樣的方式非常類似。 這個巨集引動過程應該放在類別定義中，通常是在標頭 (.H) 檔案中。 DECLARE_INTERFACE_MAP 類別必須定義介面對應實作檔案中 (。CPP) 與 BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP 巨集。  
   
 ### <a name="begininterfacepart-and-endinterfacepart--macro-descriptions"></a>BEGIN_INTERFACE_PART 和 END_INTERFACE_PART - 巨集描述  
   
@@ -567,18 +567,18 @@ END_INTERFACE_PART(
 ## <a name="remarks"></a>備註  
   
 #### <a name="parameters"></a>參數  
- `localClass`  
+ *localClass*  
  實作介面的類別名稱。  
   
- `iface`  
+ *iface*  
  這個類別實作的介面名稱。  
   
 ## <a name="remarks"></a>備註  
- 針對類別將實作的每個介面，您必須具有 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 配對。 這些巨集會定義衍生自您定義之 OLE 介面的本機類別，並且定義該類別的內嵌成員變數。 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成員會自動宣告。 您必須包含對屬於所實作之介面的其他成員函式的宣告 (這些宣告位於 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 巨集之間)。  
+ 針對每個類別將實作的介面，您需要擁有 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 組。 這些巨集會定義衍生自您定義之 OLE 介面的本機類別，並且定義該類別的內嵌成員變數。 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379)，[發行](http://msdn.microsoft.com/library/windows/desktop/ms682317)，和[QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521)成員會自動宣告。 您必須包含對屬於所實作之介面的其他成員函式宣告 （這些宣告位於 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集之間）。  
   
- `iface` 引數是您想要實作的 OLE 介面，例如 `IAdviseSink` 或 `IPersistStorage` (或您自己的自訂介面)。  
+ *Iface*引數是您想要這類實作的 OLE 介面`IAdviseSink`，或`IPersistStorage`（或您自己的自訂介面）。  
   
- `localClass` 引數是將要定義之本機類別的名稱。 ' X' 將會自動加在名稱前面。 此命名慣例用來避免和相同名稱之全域類別的衝突。 此外，除了 'm_x' 前置詞以外，內嵌成員的名稱和 `localClass` 的名稱相同。  
+ *LocalClass*引數是將要定義之區域類別的名稱。 ' X' 將會自動加在名稱前面。 此命名慣例用來避免和相同名稱之全域類別的衝突。 此外，相同的內嵌成員名稱*localClass*命名除了 'm_x' 前置詞。  
   
  例如:   
   
@@ -621,14 +621,14 @@ END_INTERFACE_PART(MyAdviseSink)
 ## <a name="remarks"></a>備註  
   
 #### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  在其中定義介面對應的類別  
   
- `baseClass`  
- 從中衍生 `theClass` 的類別。  
+ *baseClass*  
+ 從中的類別*theClass*衍生自。  
   
 ## <a name="remarks"></a>備註  
- `BEGIN_INTERFACE_MAP` 和 `END_INTERFACE_MAP` 巨集在實作檔案中用來實際定義介面對應。 每個實作的介面都有一個以上的 `INTERFACE_PART` 巨集引動過程。 類別使用的每個彙總都有一個 `INTERFACE_AGGREGATE` 巨集引動過程。  
+ BEGIN_INTERFACE_MAP 和 END_INTERFACE_MAP 巨集在實作檔用於實際定義介面對應。 針對每個實作的介面都有一或多個 INTERFACE_PART 巨集引動過程。 類別會使用每個彙總，沒有一個 INTERFACE_AGGREGATE 巨集引動過程。  
   
 ### <a name="interfacepart--macro-description"></a>INTERFACE_PART - 巨集描述  
   
@@ -643,17 +643,17 @@ END_INTERFACE_PART(MyAdviseSink)
 ## <a name="remarks"></a>備註  
   
 #### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  包含介面對應的類別名稱。  
   
- `iid`  
+ *iid*  
  要對應到內嵌類別的 `IID`。  
   
- `localClass`  
+ *localClass*  
  本機類別的名稱 (減去 'X')。  
   
 ## <a name="remarks"></a>備註  
- 對於物件將支援的每個介面而言，這個巨集可在 `BEGIN_INTERFACE_MAP` 巨集和 `END_INTERFACE_MAP` 巨集之間使用。 它可讓您將 IID 對應至 `theClass` 和 `localClass` 所指定的成員。 'm_x' 將會自動新增至 `localClass`。 請注意，一個以上的 `IID` 會與單一成員相關聯。 當您只實作「最常衍生的」介面，並且想要提供所有中繼介面時，這會非常實用。 一個良好的範例是 `IOleInPlaceFrameWindow` 介面。 它的階層看起來像這樣：  
+ BEGIN_INTERFACE_MAP 巨集和 END_INTERFACE_MAP 巨集之間使用此巨集的每個物件將支援的介面。 它可讓您將 IID 對應至所指定的類別成員*theClass*和*localClass*。 'm_x' 將會加入至*localClass*自動。 請注意，一個以上的 `IID` 會與單一成員相關聯。 當您只實作「最常衍生的」介面，並且想要提供所有中繼介面時，這會非常實用。 一個良好的範例是 `IOleInPlaceFrameWindow` 介面。 它的階層看起來像這樣：  
   
 ```  
 IUnknown  
@@ -662,7 +662,7 @@ IUnknown
     IOleInPlaceFrameWindow 
 ```  
   
- 如果物件實作`IOleInPlaceFrameWindow`，用戶端可能`QueryInterface`任何這些介面： `IOleUIWindow`， `IOleWindow`，或[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，除了 「 最常衍生的 」 介面`IOleInPlaceFrameWindow`（即您實際是實作）。 若要處理這個問題，您可以使用一個以上的 `INTERFACE_PART` 巨集將每個基底介面對應至 `IOleInPlaceFrameWindow` 介面：  
+ 如果物件實作`IOleInPlaceFrameWindow`，用戶端可能`QueryInterface`任何這些介面： `IOleUIWindow`， `IOleWindow`，或[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)，除了 「 最常衍生的 」 介面`IOleInPlaceFrameWindow`（即您實際是實作）。 若要處理這個您可以使用多個 INTERFACE_PART 巨集將每個基底介面對應至`IOleInPlaceFrameWindow`介面：  
   
  在類別定義檔中：  
   
@@ -701,14 +701,14 @@ END_INTERFACE_MAP
 ## <a name="remarks"></a>備註  
   
 #### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  包含介面對應的類別名稱，  
   
- `theAggr`  
+ *theAggr*  
  要彙總的成員變數名稱。  
   
 ## <a name="remarks"></a>備註  
- 這個巨集可用來告知架構類別正在使用彙總物件。 它必須出現在 `BEGIN_INTERFACE_PART` 和 `END_INTERFACE_PART` 巨集之間。 彙總物件是不同的物件，衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 藉由使用彙總和 `INTERFACE_AGGREGATE` 巨集，您可以讓彙總支援的所有介面直接受物件支援。 `theAggr`引數就是衍生自類別的成員變數名稱[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) （直接或間接）。 所有 `INTERFACE_AGGREGATE` 巨集在位於介面對應中時必須遵循 `INTERFACE_PART` 巨集。  
+ 這個巨集可用來告知架構類別正在使用彙總物件。 它必須出現 BEGIN_INTERFACE_PART 和 END_INTERFACE_PART 巨集之間。 彙總物件是不同的物件，衍生自[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)。 使用彙總及 INTERFACE_AGGREGATE 巨集，您可以讓彙總支援的物件直接支援的所有介面。 *TheAggr*引數就是衍生自類別的成員變數名稱[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) （直接或間接）。 所有 INTERFACE_AGGREGATE 巨集必須都遵循 INTERFACE_PART 巨集放在介面對應中時。  
   
 ## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   

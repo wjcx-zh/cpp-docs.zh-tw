@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d7f200ee35489f37256023d28bdd3260bf48ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 176ad940e95fbbf18e4ea86800111b483ee32135
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382472"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953592"
 ---
 # <a name="simple-data-type-classes"></a>簡單資料類型類別
-下列類別會封裝繪圖座標、字元字串以及時間和日期資訊，以便於使用 C++ 語法。 這些物件廣泛當做類別庫中 Windows 類別的成員函式的參數使用。 因為`CPoint`， `CSize`，和`CRect`對應至**點**，**大小**，和`RECT`結構，分別在 Windows SDK 中，您可以使用這些物件C + + 類別，每當您可以使用這些 C-語言結構。 類別可透過其成員函式提供實用的介面。 `CStringT` 提供非常彈性的動態字元字串。 `CTime``COleDateTime`， `CTimeSpan`，和**COleTimeSpan**代表日期和時間值。 如需這些類別的詳細資訊，請參閱文章[日期和時間](../atl-mfc-shared/date-and-time.md)。  
+下列類別會封裝繪圖座標、字元字串以及時間和日期資訊，以便於使用 C++ 語法。 這些物件廣泛當做類別庫中 Windows 類別的成員函式的參數使用。 因為`CPoint`， `CSize`，和`CRect`對應至**點**，**大小**，和**RECT**結構，分別在 Windows SDK 中，只要您可以使用這些 C-語言結構，您可以使用這些 c + + 類別的物件。 類別可透過其成員函式提供實用的介面。 `CStringT` 提供非常彈性的動態字元字串。 `CTime``COleDateTime`， `CTimeSpan`，和`COleTimeSpan`代表日期和時間值。 如需這些類別的詳細資訊，請參閱文章[日期和時間](../atl-mfc-shared/date-and-time.md)。  
   
- 開頭的類別 」**COle**」 是 OLE 所提供的資料類型的封裝。 不論是否使用其他 OLE 功能，這些資料類型都可用於 Windows 程式。  
+ 開頭的類別 」`COle`」 是 OLE 所提供的資料類型的封裝。 不論是否使用其他 OLE 功能，這些資料類型都可用於 Windows 程式。  
   
  [CStringT 類別](../atl-mfc-shared/reference/cstringt-class.md)  
  保存字元字串。  

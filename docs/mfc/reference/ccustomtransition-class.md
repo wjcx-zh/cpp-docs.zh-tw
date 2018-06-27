@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39588a6835b3484fc3961e793596c1190f85f7c4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358037"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952748"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition 類別
 實作自訂的轉換。  
@@ -97,7 +97,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pInterpolator`  
+ *pInterpolator*  
  自訂 interpolator 指標。  
   
 ##  <a name="create"></a>  CCustomTransition::Create  
@@ -110,7 +110,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFactory`  
+ *pFactory*  
  轉換處理站，也就是負責建立的自訂轉換指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -161,7 +161,7 @@ void SetInitialValue(DOUBLE initialValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `initialValue`  
+ *initialValue*  
   
 ##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  設定初始的速度，將會套用到這項轉換相關聯的動畫變數。  
@@ -171,7 +171,7 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
 ### <a name="parameters"></a>參數  
- `initialVelocity`  
+ *initialVelocity*  
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

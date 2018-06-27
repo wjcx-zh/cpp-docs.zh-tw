@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366258"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951288"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 結構
 `CDaoRelationInfo`結構包含定義兩個資料表中的欄位之間的關聯性的相關資訊[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件。  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>參數  
- `m_strName`  
+ *m_strName*  
  關聯物件的唯一名稱。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  命名關聯性中的外部資料表。 外部資料表是用來包含外部索引鍵的資料表。 一般而言，您可以使用外部資料表來建立或強制執行參考完整性。 外部資料表通常是上一個對多關聯性的多邊。 外部資料表的範例包括包含代碼美國的狀態或加拿大地區或客戶訂單的資料表。  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  包含關聯性類型的相關資訊。 這個成員的值可以是下列其中一項：  
   
 - **dbRelationUnique**關聯性是一對一。  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade**刪除動作會串聯。  
   
- `m_pFieldInfos`  
- 陣列的指標[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)結構。 此陣列中包含關聯性中的每個欄位的一個的物件。 `m_nFields`資料成員可讓陣列項目的計數。  
+ *m_pFieldInfos*  
+ 陣列的指標[CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md)結構。 此陣列中包含關聯性中的每個欄位的一個的物件。 *M_nFields*資料成員可讓陣列項目的計數。  
   
- `m_nFields`  
- 數目`CDaoRelationFieldInfo`中的物件`m_pFieldInfos`資料成員。  
+ *m_nFields*  
+ 數目`CDaoRelationFieldInfo`中的物件*m_pFieldInfos*資料成員。  
   
 ## <a name="remarks"></a>備註  
  主要和次要上述參考表示所傳回的資訊是如何[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)類別中的成員函式`CDaoDatabase`。  

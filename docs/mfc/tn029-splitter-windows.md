@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384719"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957220"
 ---
 # <a name="tn029-splitter-windows"></a>TN029：分隔視窗
 此提示描述 MFC [CSplitterWnd 類別](../mfc/reference/csplitterwnd-class.md)，這樣會提供分割視窗，並管理其他窗格視窗的調整大小。  
@@ -66,7 +66,7 @@ ms.locfileid: "33384719"
  窗格中：  
  特定應用程式視窗，`CSplitterWnd`管理。 窗格通常是衍生自物件[CView 類別](../mfc/reference/cview-class.md)，但可以是任何[CWnd](../mfc/reference/cwnd-class.md)具有適當的子視窗識別碼。  
   
- 若要使用`CWnd`-衍生物件，傳遞`RUNTIME_CLASS`之物件的`CreateView`函式，如果您使用，就像`CView`-衍生的類別。 您的類別必須使用`DECLARE_DYNCREATE`和`IMPLEMENT_DYNCREATE`因為架構會在執行階段使用動態建立。 雖然有很多的程式碼`CSplitterWnd`專屬於`CView`類別[cobject:: Iskindof](../mfc/reference/cobject-class.md#iskindof)一律使用之前執行這些動作。  
+ 若要使用`CWnd`-衍生物件，傳遞至物件的 RUNTIME_CLASS`CreateView`函式，如果您使用，就像`CView`-衍生的類別。 您的類別必須使用 DECLARE_DYNCREATE 和 IMPLEMENT_DYNCREATE 因為架構會在執行階段使用動態建立。 雖然有很多的程式碼`CSplitterWnd`專屬於`CView`類別[cobject:: Iskindof](../mfc/reference/cobject-class.md#iskindof)一律使用之前執行這些動作。  
   
  分隔列：  
  位於資料列和資料行的窗格控制項。 它可用來調整大小的資料列或資料行的窗格。  
@@ -88,14 +88,14 @@ ms.locfileid: "33384719"
 [      ][      ][v]  
 ```  
   
- 當使用者將捲軸，`WM_VSCROLL`會將訊息傳送至這兩個檢視。 當任一個檢視設定捲軸列的位置時，將會設定共用的捲軸。  
+ 當使用者將捲軸時，WM_VSCROLL 訊息將傳送至這兩個檢視。 當任一個檢視設定捲軸列的位置時，將會設定共用的捲軸。  
   
  請注意，共用的捲軸最有用的類似的檢視物件。 如果您混在分隔器的不同類型的檢視，您可能必須撰寫特殊的程式碼，以協調其捲動位置。 任何`CView`-衍生的類別使用`CWnd`捲軸，如果存在的話，將會委派給共用的捲軸的應用程式開發介面。 `CScrollView`實作是一種`CView`類別支援共用的捲軸。 不從衍生的類別`CView`，依賴非控制項捲軸的類別或使用標準的 Windows 實作的類別 (例如， `CEditView`) 的共用的捲軸列功能不適用於`CSplitterWnd`。  
   
 ## <a name="minimum-sizes"></a>大小的下限。  
  每個資料列中，沒有最小資料列高度，而每個資料行沒有資料行寬度下限。 此最小值可確保不太小，無法顯示的完整的詳細資料 窗格。  
   
- 靜態分隔視窗的初始最小資料列的高度和資料行寬度是 0。 動態分隔視窗的初始最小資料列的高度和資料行寬度由設定`sizeMin`參數`CSplitterWnd::Create`函式。  
+ 靜態分隔視窗的初始最小資料列的高度和資料行寬度是 0。 動態分隔視窗的初始最小資料列的高度和資料行寬度由設定*sizeMin*參數`CSplitterWnd::Create`函式。  
   
  您可以使用，以變更這些最小大小[CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo)和[CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo)函式。  
   

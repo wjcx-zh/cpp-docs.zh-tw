@@ -14,15 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c76dc44993615e17ea3d99f9ac018a748e24d0a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6d4fcfbe8e8e7eb174f85ced03bec822b4968bde
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381006"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954331"
 ---
 # <a name="using-an-unclipped-device-context"></a>使用未裁剪的裝置內容
-如果您完全確定您的控制項不會繪製到其用戶端矩形之外，您也可以停用 `IntersectClipRect` 所進行的 `COleControl` 呼叫，以獲得小而可偵測的速度增益。 若要這樣做，請移除**colecontrol:: Getcontrolflags**集中所傳回的旗標的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如:   
+如果您完全確定您的控制項不會繪製到其用戶端矩形之外，您也可以停用 `IntersectClipRect` 所進行的 `COleControl` 呼叫，以獲得小而可偵測的速度增益。 若要這樣做，請移除*colecontrol:: Getcontrolflags*集中所傳回的旗標的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如:   
   
  [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]  
 [!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]  

@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357083"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957194"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 類別
 實作可以動畫顯示其邊緣的矩形功能。  
@@ -139,16 +139,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLeftTransition`  
+ *pLeftTransition*  
  指定的左半部的轉換。  
   
- `pTopTransition`  
+ *pTopTransition*  
  指定轉換的頂端。  
   
- `pRightTransition`  
+ *pRightTransition*  
  指定右端的轉換。  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  指定轉換的底部。  
   
 ### <a name="remarks"></a>備註  
@@ -187,34 +187,34 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  指定預設的矩形。  
   
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
- `nObjectID`  
+ *nObjectID*  
  指定物件識別碼。  
   
- `dwUserData`  
+ *dwUserData*  
  指定使用者定義的資料。  
   
- `pt`  
+ *pt*  
  左上角座標。  
   
- `sz`  
+ *sz*  
  矩形的大小。  
   
- `nLeft`  
+ *nLeft*  
  指定左界限的座標。  
   
- `nTop`  
+ *nTop*  
  指定繫結的上方座標。  
   
- `nRight`  
+ *nRight*  
  指定右界限的座標。  
   
- `nBottom`  
+ *nBottom*  
  指定繫結的下方座標。  
   
 ### <a name="remarks"></a>備註  
@@ -230,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lst`  
+ *lst*  
  函式傳回時，它會包含代表矩形的座標的四個 CAnimationVariable 物件的指標。  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -306,7 +306,7 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  輸出。 此方法傳回時，包含目前的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -381,7 +381,7 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  動畫矩形的新值。  
   
 ### <a name="remarks"></a>備註  
@@ -395,7 +395,7 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  指定左框線、 頂端、 右側和底部的新預設值。  
   
 ### <a name="remarks"></a>備註  

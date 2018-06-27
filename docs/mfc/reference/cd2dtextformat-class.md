@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352886"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955465"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 類別
 IDWriteTextFormat 包裝函式。  
@@ -117,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  CString 物件，其中包含字型家族的名稱。  
   
- `fontSize`  
+ *字型大小*  
  以 DIP （「 裝置獨立畫素"） 為單位之字型的邏輯大小。 DIPequals 1/96 英吋。  
   
- `fontWeight`  
+ *fontWeight*  
  值，指出 「 文字 」 物件的字型粗細。  
   
- `fontStyle`  
+ *fontStyle*  
  值，指出 「 文字 」 物件的字型樣式。  
   
- `fontStretch`  
+ *fontStretch*  
  值，指出 「 文字 」 物件的字型縮放。  
   
- `strFontLocale`  
+ *strFontLocale*  
  CString 物件，其中包含地區設定名稱。  
   
- `pFontCollection`  
+ *pFontCollection*  
  字型集合物件的指標。 當這是 NULL 時，表示系統字型集合。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
 ##  <a name="create"></a>  CD2DTextFormat::Create  

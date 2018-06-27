@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354190"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956229"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 類別
 CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 類別的基底類別。  
@@ -102,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `gradientStops`  
+ *gradientStops*  
  D2D1_GRADIENT_STOP 結構陣列的指標。  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  值大於或等於 1，gradientStops 陣列中指定漸層停駐點的數目。  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  在哪種色彩漸層停駐點之間的插補執行空間。  
   
- `extendMode`  
+ *extendMode*  
  正規化 [0 1] 範圍以外的漸層的行為。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指標的不透明度和筆刷的轉換。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  

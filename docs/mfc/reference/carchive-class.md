@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f11edef585e699d90d8d33839e0e446cb5a726db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0bfca3c6e42c8b4efa6cd29d86a30f36fc394f5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357533"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952501"
 ---
 # <a name="carchive-class"></a>CArchive 類別
 可讓您將複雜的網路的物件儲存在永久二進位格式 （通常是磁碟儲存體），之後會刪除這些物件仍然存在。  
@@ -156,9 +156,9 @@ void Abort ();
 ```  
   
 ### <a name="remarks"></a>備註  
- **CArchive**解構函式通常會呼叫**關閉**，這會清除任何未儲存的資料至相關聯`CFile`物件。 這可能會造成例外狀況。  
+ `CArchive`解構函式通常會呼叫`Close`，這會清除任何未儲存的資料至相關聯`CFile`物件。 這可能會造成例外狀況。  
   
- 當攔截這些例外狀況時，最好在其中使用**中止**，如此 destructing`CArchive`物件並不會進一步例外狀況。 當例外狀況處理、`CArchive::Abort`不會擲回例外狀況失敗因為不同的是[CArchive::Close](#close)，**中止**忽略失敗。  
+ 當攔截這些例外狀況時，最好在其中使用`Abort`，如此 destructing`CArchive`物件並不會進一步例外狀況。 當例外狀況處理、`CArchive::Abort`不會擲回例外狀況失敗因為不同的是[CArchive::Close](#close)，`Abort`忽略失敗。  
   
  如果您使用**新**配置`CArchive`在堆積的物件，然後您必須關閉檔案後予以刪除。  
   
@@ -177,23 +177,23 @@ CArchive(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFile`  
+ *pFile*  
  指標`CFile`是最終的來源或目的地的持續性資料的物件。  
   
- `nMode`  
- 指定物件是否會從載入或儲存至封存的旗標。 `nMode`參數必須要有下列值之一：  
+ *nMode*  
+ 指定物件是否會從載入或儲存至封存的旗標。 *NMode*參數必須要有下列值之一：  
   
 - **CArchive::load**載入從封存的資料。 只需要`CFile`讀取權限。  
   
 - **CArchive::store**將資料儲存至封存。 需要`CFile`寫入權限。  
   
-- **CArchive::bNoFlushOnDelete**可防止自動呼叫封存`Flush`封存解構函式呼叫時。 如果您設定此旗標時，您必須負責明確呼叫**關閉**解構函式呼叫之前。 如果不這麼做，您的資料將會損毀。  
+- **CArchive::bNoFlushOnDelete**可防止自動呼叫封存`Flush`封存解構函式呼叫時。 如果您設定此旗標時，您必須負責明確呼叫`Close`解構函式呼叫之前。 如果不這麼做，您的資料將會損毀。  
   
- `nBufSize`  
+ *nBufSize*  
  指定的內部檔案緩衝區大小，以位元組為單位的整數。 請注意，預設緩衝區大小是 4,096 個位元組。 如果您定期封存大型物件，您會改善效能，如果您使用較大的緩衝區大小是檔案的緩衝區大小的倍數。  
   
- `lpBuf`  
- 使用者提供的緩衝區大小的選擇性指標`nBufSize`。 如果您未指定這個參數，封存會配置從本機堆積緩衝區並釋出其物件終結時。 封存後仍沒有可用的使用者提供的緩衝區。  
+ *lpBuf*  
+ 使用者提供的緩衝區大小的選擇性指標*nBufSize*。 如果您未指定這個參數，封存會配置從本機堆積緩衝區並釋出其物件終結時。 封存後仍沒有可用的使用者提供的緩衝區。  
   
 ### <a name="remarks"></a>備註  
  建立封存之後，您無法變更此規格。  
@@ -213,7 +213,7 @@ void Close();
 ### <a name="remarks"></a>備註  
  不允許的封存上任何進一步的作業。 關閉封存之後，您可以建立在同一個檔案的另一個封存，或您可以關閉檔案。  
   
- 成員函式**關閉**可確保所有資料從封存都傳送至檔案，且它會讓封存無法使用。 若要完成從檔案傳輸到儲存體中，您必須先使用[CFile::Close](../../mfc/reference/cfile-class.md#close)然後摧毀`CFile`物件。  
+ 成員函式`Close`可確保所有資料從封存都傳送至檔案，且它會讓封存無法使用。 若要完成從檔案傳輸到儲存體中，您必須先使用[CFile::Close](../../mfc/reference/cfile-class.md#close)然後摧毀`CFile`物件。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CArchive::WriteString](#writestring)。  
@@ -260,7 +260,7 @@ UINT GetObjectSchema();
 ### <a name="remarks"></a>備註  
  呼叫此函式時才有效`CArchive`正在載入物件 ( [CArchive::IsLoading](#isloading)傳回非零)。 它應該是中的第一個呼叫`Serialize`函式和呼叫一次。 傳回值 ( **UINT**)-1 表示是未知的版本號碼。  
   
- A `CObject`-衍生的類別可能會使用**VERSIONABLE_SCHEMA**結合 (使用位元`OR`) 本身的結構描述版本 (在`IMPLEMENT_SERIAL`巨集) 建立 「 可控制版本物件，」 也就是物件其`Serialize`成員函式可以讀取多個版本。 預設 framework 功能 (不含**VERSIONABLE_SCHEMA**) 是版本不相符時擲回例外狀況。  
+ A `CObject`-衍生的類別可能會使用**VERSIONABLE_SCHEMA**結合 (使用位元**或**) 與結構描述版本 （在 IMPLEMENT_SERIAL 巨集） 也就是建立 「 可控制版本物件 」，物件，其`Serialize`成員函式可以讀取多個版本。 預設 framework 功能 (不含**VERSIONABLE_SCHEMA**) 是版本不相符時擲回例外狀況。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization#15](../../mfc/codesnippet/cpp/carchive-class_4.cpp)]  
@@ -324,11 +324,11 @@ void MapObject(const CObject* pOb);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pOb`  
+ *pOb*  
  要儲存之物件的常數指標。  
   
 ### <a name="remarks"></a>備註  
- 例如，您可能不會序列化文件，但您會將序列化文件部分的項目。 藉由呼叫`MapObject`，您允許這些項目或子物件，參考文件。 此外，序列化的子項目可以序列化其`m_pDocument`返回指標。  
+ 例如，您可能不會序列化文件，但您會將序列化文件部分的項目。 藉由呼叫`MapObject`，您允許這些項目或子物件，參考文件。 此外，序列化的子項目可以序列化其*m_pDocument*返回指標。  
   
  您可以呼叫`MapObject`當您要儲存並載入從`CArchive`物件。 `MapObject` 將指定的物件加入至所維護的內部資料結構`CArchive`物件在序列化和還原序列化，但不同於[ReadObject](#readobject)和[WriteObject](#writeobject) **，** 未呼叫序列化的物件。  
   
@@ -342,16 +342,16 @@ void MapObject(const CObject* pOb);
  [!code-cpp[NVC_MFCSerialization#21](../../mfc/codesnippet/cpp/carchive-class_10.cpp)]  
   
 ##  <a name="m_pdocument"></a>  CArchive::m_pDocument  
- 設定為**NULL**根據預設，此指標**CDocument**可以為任何項目設定的使用者`CArchive`想執行個體。  
+ 設定為**NULL**根據預設，此指標`CDocument`可以為任何項目設定的使用者`CArchive`想執行個體。  
   
 ```  
 CDocument* m_pDocument;  
 ```  
   
 ### <a name="remarks"></a>備註  
- This 指標的常見用法是，傳遞要序列化的所有物件的序列化程序的其他資訊。 這藉由初始化與文件指標 ( **CDocument**-衍生的類別)，要序列化，如有必要的文件中的物件可以存取文件的方式。 此指標也會使用`COleClientItem`序列化期間的物件。  
+ This 指標的常見用法是，傳遞要序列化的所有物件的序列化程序的其他資訊。 這藉由初始化與文件指標 ( `CDocument`-衍生的類別)，要序列化，如有必要的文件中的物件可以存取文件的方式。 此指標也會使用`COleClientItem`序列化期間的物件。  
   
- Framework 集`m_pDocument`使用者發出檔案時，正在序列化文件開啟或儲存命令。 如果您要序列化的物件連結與嵌入 (OLE) 容器文件開啟舊檔] 或 [儲存以外的原因，您必須明確設定`m_pDocument`。 例如，您需要執行此動作時序列化到剪貼簿容器文件。  
+ Framework 集*m_pDocument*使用者發出檔案時，正在序列化文件開啟或儲存命令。 如果您要序列化的物件連結與嵌入 (OLE) 容器文件開啟舊檔] 或 [儲存以外的原因，您必須明確設定*m_pDocument*。 例如，您需要執行此動作時序列化到剪貼簿容器文件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization#35](../../mfc/codesnippet/cpp/carchive-class_11.cpp)]  
@@ -412,12 +412,12 @@ CArchive& operator<<(LONGLONG dwdw);
 ### <a name="remarks"></a>備註  
  最後兩個以上的版本是特別針對儲存 64 位元整數。  
   
- 如果您使用`IMPLEMENT_SERIAL`巨集，在您類別的實作，則為多載插入運算子`CObject`呼叫受保護**WriteObject**。 此函式，接著呼叫`Serialize`函式的類別。  
+ 如果您在類別實作中，使用 IMPLEMENT_SERIAL 巨集，則插入運算子多載`CObject`呼叫受保護`WriteObject`。 此函式，接著呼叫`Serialize`函式的類別。  
   
  [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)插入運算子 (<<) 支援診斷傾印和儲存至封存。  
   
 ### <a name="example"></a>範例  
- 這個範例示範如何使用`CArchive`插入運算子 << 與`int`和`long`型別。  
+ 這個範例示範如何使用`CArchive`插入運算子 << 與**int**和**長**型別。  
   
  [!code-cpp[NVC_MFCSerialization#31](../../mfc/codesnippet/cpp/carchive-class_12.cpp)]  
   
@@ -494,12 +494,12 @@ CArchive& operator>>(LONGLONG& dwdw);
 ### <a name="remarks"></a>備註  
  最後兩個以上的版本是特別針對載入 64 位元整數。  
   
- 如果您使用`IMPLEMENT_SERIAL`巨集，在您類別的實作，然後擷取運算子多載`CObject`呼叫受保護**ReadObject**函式 （非零的執行階段類別的指標）。 此函式，接著呼叫`Serialize`函式的類別。  
+ 如果您在類別實作中，使用 IMPLEMENT_SERIAL 巨集，則擷取運算子多載`CObject`呼叫受保護`ReadObject`函式 （非零的執行階段類別的指標）。 此函式，接著呼叫`Serialize`函式的類別。  
   
  [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)引出運算子 (>>) 載入從封存的支援。  
   
 ### <a name="example"></a>範例  
- 這個範例示範如何使用`CArchive`引出運算子 >> 與`int`型別。  
+ 這個範例示範如何使用`CArchive`引出運算子 >> 與**int**型別。  
   
  [!code-cpp[NVC_MFCSerialization#33](../../mfc/codesnippet/cpp/carchive-class_14.cpp)]  
   
@@ -516,10 +516,10 @@ UINT Read(void* lpBuf, UINT nMax);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  從封存讀取使用者提供的緩衝區，以接收資料的指標。  
   
- `nMax`  
+ *nMax*  
  不帶正負號的整數，指定的位元組數目從封存讀取。  
   
 ### <a name="return-value"></a>傳回值  
@@ -528,7 +528,7 @@ UINT Read(void* lpBuf, UINT nMax);
 ### <a name="remarks"></a>備註  
  封存不會解譯的位元組。  
   
- 您可以使用**讀取**成員函式內您`Serialize`函式來讀取您的物件中所包含的一般結構。  
+ 您可以使用`Read`成員函式內您`Serialize`函式來讀取您的物件中所包含的一般結構。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization#24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]  
@@ -544,24 +544,24 @@ CRuntimeClass* ReadClass(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pClassRefRequested`  
+ *pClassRefRequested*  
  指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)對應到要求的類別參考的結構。 可以是**NULL**。  
   
- `pSchema`  
+ *pSchema*  
  結構描述之前儲存的執行階段類別的指標。  
   
- `pObTag`  
- 指的是物件的唯一的標記數目。 供內部使用的實作[ReadObject](#readobject)。 公開的進階程式設計; 僅限`pObTag`通常應該是**NULL**。  
+ *pObTag*  
+ 指的是物件的唯一的標記數目。 供內部使用的實作[ReadObject](#readobject)。 公開的進階程式設計; 僅限*pObTag*通常應該是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)結構。  
   
 ### <a name="remarks"></a>備註  
- 如果`pClassRefRequested`不**NULL**，`ReadClass`驗證封存的類別資訊是否相容於執行階段類別。 如果不相容，`ReadClass`將會擲回[CArchiveException](../../mfc/reference/carchiveexception-class.md)。  
+ 如果*pClassRefRequested*不**NULL**，`ReadClass`驗證封存的類別資訊是否相容於執行階段類別。 如果不相容，`ReadClass`將會擲回[CArchiveException](../../mfc/reference/carchiveexception-class.md)。  
   
  執行階段類別必須使用[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)，否則`ReadClass`將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
- 如果`pSchema`是**NULL**，結構描述的預存的類別可以藉由呼叫擷取[CArchive::GetObjectSchema](#getobjectschema)，否則**\*** `pSchema`會包含執行階段類別之前儲存的結構描述。  
+ 如果*pSchema*是**NULL**，結構描述的預存的類別可以藉由呼叫擷取[CArchive::GetObjectSchema](#getobjectschema); 否則 **\** * *pSchema*會包含執行階段類別之前儲存的結構描述。  
   
  您可以使用[SerializeClass](#serializeclass)而不是`ReadClass`，處理進行讀取和寫入的類別參考。  
   
@@ -576,16 +576,16 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pClass`  
+ *pClass*  
  常數指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)對應至您要讀取之物件的結構。  
   
 ### <a name="return-value"></a>傳回值  
  A [CObject](../../mfc/reference/cobject-class.md)必須安全地轉換成正確的指標使用衍生類別[cobject:: Iskindof](../../mfc/reference/cobject-class.md#iskindof)。  
   
 ### <a name="remarks"></a>備註  
- 通常會呼叫此函式`CArchive`擷取 ( **>>**) 的多載運算子[CObject](../../mfc/reference/cobject-class.md)指標。 **ReadObject**，又呼叫`Serialize`封存類別函式。  
+ 通常會呼叫此函式`CArchive`擷取 ( **>>**) 的多載運算子[CObject](../../mfc/reference/cobject-class.md)指標。 `ReadObject`又呼叫`Serialize`封存類別函式。  
   
- 如果您提供非零`pClass`參數，藉由取得[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)巨集，則此函式會驗證封存的物件的執行階段類別。 這是假設您已經使用`IMPLEMENT_SERIAL`類別的實作中的巨集。  
+ 如果您提供非零*pClass*參數，藉由取得[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)巨集，則此函式會驗證封存的物件的執行階段類別。 這是假設您在類別的實作中使用 IMPLEMENT_SERIAL 巨集。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CArchive::WriteObject](#writeobject)。  
@@ -599,13 +599,13 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
 ```  
   
 ### <a name="parameters"></a>參數  
- `rString`  
+ *rString*  
  若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md) ，就會在讀取從 CArchive 物件相關聯的檔案之後，包含結果的字串。  
   
- `lpsz`  
+ *lpsz*  
  指定使用者提供的緩衝區會接收以 null 結尾的文字字串的指標。  
   
- `nMax`  
+ *nMax*  
  指定要讀取的字元數目上限。 應該有一個大小大於或等於*lpsz*緩衝區。  
   
 ### <a name="return-value"></a>傳回值  
@@ -614,7 +614,7 @@ LPTSTR ReadString(LPTSTR lpsz, UINT nMax);
  傳回的版本中`LPTSTR`，包含文字資料的緩衝區的指標**NULL**如果已到達檔案結尾。  
   
 ### <a name="remarks"></a>備註  
- 成員函式的版本中`nMax`參數時，緩衝區會儲存高達限制為`nMax`-1 個字元。 停止讀取歸位字元傳回換行字元組。 一律會移除尾端新行字元。 在任一情況下，會附加 null 字元 ('\0')。  
+ 成員函式的版本中*nMax*參數時，緩衝區會儲存高達限制為*nMax* -1 個字元。 停止讀取歸位字元傳回換行字元組。 一律會移除尾端新行字元。 在任一情況下，會附加 null 字元 ('\0')。  
   
  [Carchive:: Read](#read)也會提供的文字模式的輸入，但它不會終止歸位字元傳回換行字元組。  
   
@@ -629,7 +629,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pClassRef`  
+ *pClassRef*  
  基底類別的執行階段類別物件的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -639,7 +639,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
   
  執行階段類別必須使用[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)，否則`SerializeClass`將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
- 使用[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)巨集，以擷取其值`pRuntimeClass`參數。 您必須使用基底類別[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)巨集。  
+ 使用[RUNTIME_CLASS](../../mfc/reference/run-time-object-model-services.md#runtime_class)巨集，以擷取其值*pRuntimeClass*參數。 您必須使用基底類別[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)巨集。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization#25](../../mfc/codesnippet/cpp/carchive-class_17.h)]  
@@ -652,7 +652,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGrowBy`  
+ *nGrowBy*  
  如果是必要的大小增加配置項目位置最小數目。  
   
 ### <a name="remarks"></a>備註  
@@ -664,18 +664,18 @@ void SetLoadParams(UINT nGrowBy = 1024);
  [!code-cpp[NVC_MFCSerialization#26](../../mfc/codesnippet/cpp/carchive-class_18.h)]  
   
 ##  <a name="setobjectschema"></a>  CArchive::SetObjectSchema  
- 呼叫此成員函式，來設定物件結構描述儲存在封存物件`nSchema`。  
+ 呼叫此成員函式，來設定物件結構描述儲存在封存物件*nSchema*。  
   
 ```  
 void SetObjectSchema(UINT nSchema);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSchema`  
+ *nSchema*  
  指定物件的結構描述。  
   
 ### <a name="remarks"></a>備註  
- 下次呼叫[GetObjectSchema](#getobjectschema)會傳回值儲存在`nSchema`。  
+ 下次呼叫[GetObjectSchema](#getobjectschema)會傳回值儲存在*nSchema*。  
   
  使用`SetObjectSchema`進行進階的版本控制; 比方說，當您想要強制執行特定版本中讀取`Serialize`衍生類別的函式。  
   
@@ -693,7 +693,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
  *nHashSize*  
  將對應的介面指標的雜湊資料表大小。 應該是質數。  
   
- `nBlockSize`  
+ *nBlockSize*  
  指定的記憶體配置資料粒度來擴充參數。 應該是 2 的為了達到最佳效能的乘冪。  
   
 ### <a name="remarks"></a>備註  
@@ -712,16 +712,16 @@ void Write(const void* lpBuf, INT nMax);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBuf`  
+ *lpBuf*  
  使用者提供的緩衝區，其中包含要寫入至封存的資料指標。  
   
- `nMax`  
+ *nMax*  
  指定要寫入至封存的位元組數目的整數。  
   
 ### <a name="remarks"></a>備註  
  封存不會格式化位元組。  
   
- 您可以使用**寫入**成員函式內您`Serialize`函式撰寫一般結構包含在您的物件。  
+ 您可以使用`Write`成員函式內您`Serialize`函式撰寫一般結構包含在您的物件。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization#23](../../mfc/codesnippet/cpp/carchive-class_20.cpp)]  
@@ -734,7 +734,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pClassRef`  
+ *pClassRef*  
  指標[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)對應到要求的類別參考的結構。  
   
 ### <a name="remarks"></a>備註  
@@ -757,13 +757,13 @@ void WriteObject(const CObject* pOb);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pOb`  
+ *pOb*  
  要儲存之物件的常數指標。  
   
 ### <a name="remarks"></a>備註  
- 通常會呼叫此函式`CArchive`插入 ( **<<**) 的多載運算子`CObject`。 **WriteObject**，又呼叫`Serialize`封存類別函式。  
+ 通常會呼叫此函式`CArchive`插入 ( **<<**) 的多載運算子`CObject`。 `WriteObject`又呼叫`Serialize`封存類別函式。  
   
- 您必須使用`IMPLEMENT_SERIAL`巨集，以啟用封存。 **WriteObject**寫入封存 ASCII 類別名稱。 這個類別名稱會在載入程序之後的期間進行驗證。 特殊的編碼配置會防止不必要的重複類別的多個物件的類別名稱。 這個配置也會防止備援儲存體做為目標的多個指標的物件。  
+ 您必須使用`IMPLEMENT_SERIAL`巨集，以啟用封存。 `WriteObject` 寫入封存 ASCII 類別名稱。 這個類別名稱會在載入程序之後的期間進行驗證。 特殊的編碼配置會防止不必要的重複類別的多個物件的類別名稱。 這個配置也會防止備援儲存體做為目標的多個指標的物件。  
   
  完全編碼方式 （包括 ASCII 類別名稱存在） 的物件是實作細節，並可能在未來變更的程式庫版本。  
   
@@ -783,7 +783,7 @@ void WriteString(LPCTSTR lpsz);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpsz`  
+ *lpsz*  
  指定包含 null 結尾的文字字串之緩衝區的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -791,7 +791,7 @@ void WriteString(LPCTSTR lpsz);
   
  `WriteString` 擲回例外狀況以回應數個條件，包括磁碟已滿的情況。  
   
- **寫入**也可供使用，但而不是終止 null 字元，它必須將要求的位元組數目寫入檔案。  
+ `Write` 也可供使用，但而不是終止 null 字元，它必須將要求的位元組數目寫入檔案。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCSerialization#30](../../mfc/codesnippet/cpp/carchive-class_23.cpp)]  

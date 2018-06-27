@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c577a153536b7c9a5def95915e802301841a485b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369664"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955023"
 ---
 # <a name="cfont-class"></a>CFont 類別
 封裝 Windows 繪圖裝置介面 (GDI) 字型並提供操作字型的成員函式。  
@@ -123,31 +123,31 @@ BOOL CreateFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nHeight`  
- 指定字型的所需的高度 （以邏輯單位表示）。 請參閱`lfHeight`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構描述的 Windows SDK 中。 數值的絕對值`nHeight`之後會將它轉換，則不能超過 16,384 裝置單位。 對於所有高度比較，字型對應工具會尋找所要求的大小不超過最大字型或最小字型如果所有字型都超過要求的大小。  
+ *nHeight*  
+ 指定字型的所需的高度 （以邏輯單位表示）。 請參閱`lfHeight`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構描述的 Windows SDK 中。 數值的絕對值*nHeight*之後會將它轉換，則不能超過 16,384 裝置單位。 對於所有高度比較，字型對應工具會尋找所要求的大小不超過最大字型或最小字型如果所有字型都超過要求的大小。  
   
- `nWidth`  
- 指定字型中的平均字元寬度 （以邏輯單位表示）。 如果`nWidth`為 0 時，裝置的外觀比例會比對可用的字型，尋找最接近的相符項目是由差異的絕對值決定 digitization 外觀比例。  
+ *nWidth*  
+ 指定字型中的平均字元寬度 （以邏輯單位表示）。 如果*nWidth*為 0 時，裝置的外觀比例會比對可用的字型，尋找最接近的相符項目是由差異的絕對值決定 digitization 外觀比例。  
   
- `nEscapement`  
+ *nEscapement*  
  指定之間斜度向量與顯示表面的 x 軸的角度 （以 0.1 度為單位）。 斜度向量是該行的第一個和最後一個字元的出處線。 從 x 軸逆時針計算角度。 請參閱`lfEscapement`中的成員`LOGFONT`結構的詳細資訊的 Windows SDK 中。  
   
- `nOrientation`  
+ *nOrientation*  
  指定字元的基準線與 x 軸之間的角度 （以 0.1 度為單位）。 從 y 方向是向下和順時針方向從 x 軸座標系統 y 方向已啟動的座標系統的 x 軸逆時針計算角度。  
   
- `nWeight`  
- 指定字型粗細 （以每 1000年有著色的像素）。 請參閱`lfWeight`中的成員`LOGFONT`結構的詳細資訊的 Windows SDK 中。 描述的值是近似值;實際的外觀取決於字樣。 有些字型只有`FW_NORMAL`， `FW_REGULAR`，和`FW_BOLD`加權。 如果`FW_DONTCARE`已指定，會使用預設權數。  
+ *nWeight*  
+ 指定字型粗細 （以每 1000年有著色的像素）。 請參閱*lfWeight*中的成員`LOGFONT`結構的詳細資訊的 Windows SDK 中。 描述的值是近似值;實際的外觀取決於字樣。 有些字型只有`FW_NORMAL`， `FW_REGULAR`，和`FW_BOLD`加權。 如果`FW_DONTCARE`已指定，會使用預設權數。  
   
- `bItalic`  
+ *bItalic*  
  指定字型是否為斜體。  
   
- `bUnderline`  
+ *bUnderline*  
  指定字型是否加上底線。  
   
- `cStrikeOut`  
+ *cStrikeOut*  
  指定字型中的字元是否為侵襲。指定刪除線的字型，如果設定為非零值。  
   
- `nCharSet`  
+ *nCharSet*  
  指定字型的字元 setSee`lfCharSet`中的成員`LOGFONT`值清單的 Windows SDK 中的結構。  
   
  OEM 字元集是系統而定。  
@@ -156,24 +156,24 @@ BOOL CreateFont(
   
  未使用的字型對應程式`DEFAULT_CHARSET`值。 應用程式可以使用此值，以允許的名稱和完整描述的邏輯字型的字型的大小。 如果具有指定名稱的字型不存在，可以指定字型取代任何字元集中的字型。 若要避免非預期的結果，應用程式應該使用`DEFAULT_CHARSET`盡量少用值。  
   
- `nOutPrecision`  
+ *nOutPrecision*  
  指定想要的輸出有效位數。 輸出精確度定義所要求的字型高度、 寬度、 字元方向、 斜度及字距必須符合輸出的程度。 請參閱`lfOutPrecision`中的成員`LOGFONT`一份值的詳細資訊的 Windows SDK 中的結構。  
   
- `nClipPrecision`  
+ *nClipPrecision*  
  指定所要的裁剪的有效位數。 裁剪有效位數會定義如何裁剪部分裁剪區域外的字元。 請參閱`lfClipPrecision`中的成員`LOGFONT`值清單的 Windows SDK 中的結構。  
   
  若要使用內嵌的唯讀字型，應用程式必須指定`CLIP_ENCAPSULATE`。  
   
- 若要達到一致的裝置、 細明體和向量字型的旋轉角度，應用程式可以使用 OR 運算子結合`CLIP_LH_ANGLES`值與任何其他`nClipPrecision`值。 如果`CLIP_LH_ANGLES`會設定位元、 所有字型的旋轉角度取決於座標系統的方向是慣用左手或右手拿。 (如需座標系統的方向的詳細資訊，請參閱描述`nOrientation`參數。)如果`CLIP_LH_ANGLES`是未設定，裝置字型一律旋轉以逆時針方向，但其他字型輪替是依存於座標系統的方向。  
+ 若要達到一致的裝置、 細明體和向量字型的旋轉角度，應用程式可以使用 OR 運算子結合`CLIP_LH_ANGLES`值與任何其他*nClipPrecision*值。 如果`CLIP_LH_ANGLES`會設定位元、 所有字型的旋轉角度取決於座標系統的方向是慣用左手或右手拿。 (如需座標系統的方向的詳細資訊，請參閱描述*nOrientation*參數。)如果`CLIP_LH_ANGLES`是未設定，裝置字型一律旋轉以逆時針方向，但其他字型輪替是依存於座標系統的方向。  
   
- `nQuality`  
+ *nQuality*  
  指定字型的輸出品質定義小心 GDI 必須嘗試比對的實際實體字型的邏輯字型屬性。 請參閱`lfQuality`中的成員`LOGFONT`值清單的 Windows SDK 中的結構。  
   
- `nPitchAndFamily`  
+ *nPitchAndFamily*  
  指定的字幅和家族的字型。 請參閱`lfPitchAndFamily`中的成員`LOGFONT`一份值的詳細資訊的 Windows SDK 中的結構。  
   
- `lpszFacename`  
- A`CString`或以 null 終止的字串，指定之字型的字體名稱的指標。 這個字串的長度不能超過 30 個字元。 Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619)函式可以用來列舉所有目前可用的字型。 如果`lpszFacename`是`NULL`，GDI 使用裝置獨立字樣。  
+ *lpszFacename*  
+ A`CString`或以 null 終止的字串，指定之字型的字體名稱的指標。 這個字串的長度不能超過 30 個字元。 Windows [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619)函式可以用來列舉所有目前可用的字型。 如果*lpszFacename*是`NULL`，GDI 使用裝置獨立字樣。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -183,7 +183,7 @@ BOOL CreateFont(
   
  `CreateFont`函式不會建立新的 Windows GDI 字型。 只選取最接近的相符項目，從可用的實體字型 GDI。  
   
- 應用程式可以使用預設設定大部分的參數建立的邏輯字型時。 應該永遠指定特定值的參數是`nHeight`和`lpszFacename`。 如果`nHeight`和`lpszFacename`未設定應用程式，所建立的邏輯字型是裝置而異。  
+ 應用程式可以使用預設設定大部分的參數建立的邏輯字型時。 應該永遠指定特定值的參數是*nHeight*和*lpszFacename*。 如果*nHeight*和*lpszFacename*未設定應用程式，所建立的邏輯字型是裝置而異。  
   
  當您完成使用`CFont`所建立的物件`CreateFont`函式，使用`CDC::SelectObject`放入裝置內容中選取不同的字型，然後刪除`CFont`不再需要的物件。  
   
@@ -198,7 +198,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpLogFont`  
+ *lpLogFont*  
  指向`LOGFONT`結構，定義的邏輯字型的特性。  
   
 ### <a name="return-value"></a>傳回值  
@@ -225,20 +225,20 @@ BOOL CreatePointFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nPointSize`  
+ *nPointSize*  
  要求的字型高度，單位為點的十分之一。 （例如，傳遞要求 12 點字型 120。）  
   
- `lpszFaceName`  
- A`CString`或以 null 終止的字串，指定之字型的字體名稱的指標。 這個字串的長度不能超過 30 個字元。 Windows **EnumFontFamilies**函式可以用來列舉所有目前可用的字型。 如果`lpszFaceName`是**NULL**，GDI 使用裝置獨立字樣。  
+ *lpszFaceName*  
+ A`CString`或以 null 終止的字串，指定之字型的字體名稱的指標。 這個字串的長度不能超過 30 個字元。 Windows **EnumFontFamilies**函式可以用來列舉所有目前可用的字型。 如果*lpszFaceName*是**NULL**，GDI 使用裝置獨立字樣。  
   
- `pDC`  
- 指標[CDC](../../mfc/reference/cdc-class.md)物件用來將轉換的高度以`nPointSize`到邏輯單元。 如果**NULL**，螢幕裝置內容用來進行轉換。  
+ *pDC*  
+ 指標[CDC](../../mfc/reference/cdc-class.md)物件用來將轉換的高度以*nPointSize*到邏輯單元。 如果**NULL**，螢幕裝置內容用來進行轉換。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為非零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 它會自動將轉換的高度以`nPointSize`到使用邏輯單元`CDC`指向的物件`pDC`。  
+ 它會自動將轉換的高度以*nPointSize*到使用邏輯單元`CDC`指向的物件*pDC*。  
   
  當您完成使用`CFont`所建立的物件`CreatePointFont`函式，請先選取的字型出裝置內容中，然後刪除`CFont`物件。  
   
@@ -255,17 +255,17 @@ BOOL CreatePointFontIndirect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpLogFont`  
+ *lpLogFont*  
  指向[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構，定義的邏輯字型的特性。 **LfHeight**隸屬`LOGFONT`結構為測量單位是點，而不是邏輯單元的十分之一。 (例如，設定**lfHeight**為要求 12 點字型 120。)  
   
- `pDC`  
+ *pDC*  
  指標[CDC](../../mfc/reference/cdc-class.md)物件用來將轉換的高度以**lfHeight**到邏輯單元。 如果**NULL**，螢幕裝置內容用來進行轉換。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，則為非零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 此函式會自動將轉換的高度以**lfHeight**到使用邏輯單元`CDC`指向的物件`pDC`傳遞之前`LOGFONT`到 Windows 的結構。  
+ 此函式會自動將轉換的高度以**lfHeight**到使用邏輯單元`CDC`指向的物件*pDC*傳遞之前`LOGFONT`到 Windows 的結構。  
   
  當您完成使用`CFont`所建立的物件`CreatePointFontIndirect`函式，請先選取的字型出裝置內容中，然後刪除`CFont`物件。  
   
@@ -280,7 +280,7 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hFont`  
+ *hFont*  
  **HFONT** Windows 字型的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  

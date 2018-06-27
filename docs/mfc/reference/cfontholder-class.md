@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6e85500f87c1ea88c46418d1f6b698a2d10976
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367512"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954113"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 類別
 實作內建字型屬性，並封裝 Windows 字型物件和 `IFont` 介面的功能。  
@@ -112,7 +112,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `strValue`  
+ *StrValue*  
  若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)要保存的顯示字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -126,7 +126,7 @@ LPFONTDISP GetFontDispatch();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CFontHolder`物件的**IFontDisp**介面。 請注意，呼叫此函式`GetFontDispatch`必須呼叫`IUnknown::Release`當它完成時，此介面指標上。  
+ 指標`CFontHolder`物件的`IFontDisp`介面。 請注意，呼叫此函式`GetFontDispatch`必須呼叫`IUnknown::Release`當它完成時，此介面指標上。  
   
 ### <a name="remarks"></a>備註  
  呼叫`InitializeFont`之前先呼叫`GetFontDispatch`。  
@@ -144,19 +144,19 @@ HFONT GetFontHandle(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cyLogical`  
+ *cyLogical*  
  以邏輯單位，繪製控制項的矩形的高度。  
   
- `cyHimetric`  
+ *cyHimetric*  
  高度，請在`MM_HIMETRIC`單位控制項。  
   
 ### <a name="return-value"></a>傳回值  
  物件控制代碼的字型。否則**NULL**。  
   
 ### <a name="remarks"></a>備註  
- 比率`cyLogical`和`cyHimetric`用來計算適當的顯示大小，以邏輯單位，以表示字型的點數大小的`MM_HIMETRIC`單位：  
+ 比率*cyLogical*和*cyHimetric*用來計算適當的顯示大小，以邏輯單位，以表示字型的點數大小的`MM_HIMETRIC`單位：  
   
- 顯示大小 = ( `cyLogical`  /  `cyHimetric`) X 字型大小  
+ 顯示大小 = ( *cyLogical* / *cyHimetric*) X 字型大小  
   
  不含任何參數的版本控制代碼傳回螢幕的正確調整大小的字型。  
   
@@ -170,16 +170,16 @@ void InitializeFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFontDesc`  
+ *pFontDesc*  
  字型描述結構的指標 ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782))，指定字型的特性。  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  容器的環境字型屬性的指標。  
   
 ### <a name="remarks"></a>備註  
- 如果`pFontDispAmbient`不**NULL**、`CFontHolder`物件所連接的複製品`IFont`容器的環境字型屬性所使用的介面。  
+ 如果*pFontDispAmbient*不**NULL**、`CFontHolder`物件所連接的複製品`IFont`容器的環境字型屬性所使用的介面。  
   
- 如果`pFontDispAmbient`是**NULL**，會建立新的字型物件可能是來自所指的字型描述`pFontDesc`或者，如果`pFontDesc`是**NULL**，從預設描述。  
+ 如果*pFontDispAmbient*是**NULL**，會建立新的字型物件可能是來自所指的字型描述*pFontDesc*或者，如果*pFontDesc*是**NULL**，從預設描述。  
   
  呼叫此函式之後建構`CFontHolder`物件。  
   
@@ -198,7 +198,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lptm`  
+ *lptm*  
  指標[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)來接收資訊的結構。  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
@@ -219,20 +219,20 @@ CFont* Select(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  裝置內容，在其中選取的字型。  
   
- `cyLogical`  
+ *cyLogical*  
  以邏輯單位，繪製控制項的矩形的高度。  
   
- `cyHimetric`  
+ *cyHimetric*  
  高度，請在`MM_HIMETRIC`單位控制項。  
   
 ### <a name="return-value"></a>傳回值  
  已被取代的字型指標。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[GetFontHandle](#getfonthandle)的討論`cyLogical`和`cyHimetric`參數。  
+ 請參閱[GetFontHandle](#getfonthandle)的討論*cyLogical*和*cyHimetric*參數。  
   
 ##  <a name="setfont"></a>  CFontHolder::SetFont  
  釋放任何現有的字型，並連接`CFontHolder`物件`IFont`介面。  

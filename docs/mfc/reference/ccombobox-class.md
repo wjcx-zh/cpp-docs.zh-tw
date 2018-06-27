@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90495f2eccfb31169653f6dcb09f2cf52e5a05dd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb514531e600243fe02f8b5a6a9cd91a30c14542
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357237"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952576"
 ---
 # <a name="ccombobox-class"></a>CComboBox 類別
 提供 Windows 下拉式方塊的功能。  
@@ -254,7 +254,7 @@ class CComboBox : public CWnd
   
  如果您將內嵌`CComboBox`物件在另一個視窗中的物件，您不需要終結。 如果您建立`CComboBox`物件在堆疊上，會自動終結。 如果您建立`CComboBox`使用堆積上的物件**新**函式，您必須呼叫**刪除**物件終結時終結 Windows 下拉式方塊。  
   
- **請注意**如果您想要處理`WM_KEYDOWN`和`WM_CHAR`訊息，您有子類別化下拉式方塊的編輯和清單方塊控制項中，衍生類別，從`CEdit`和`CListBox`，並將這些訊息的處理常式加入至衍生類別。 如需詳細資訊，請參閱[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)和[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。  
+ **請注意**您想要處理 WM_KEYDOWN 和 WM_CHAR 訊息時，如果您有子類別化下拉式方塊的編輯和清單方塊控制項中，衍生類別，從`CEdit`和`CListBox`，並將這些訊息的處理常式加入至衍生的類別。 如需詳細資訊，請參閱[ http://support.microsoft.com/default.aspxscid=kb; en-us-我們;Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)和[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -276,7 +276,7 @@ int AddString(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszString`  
+ *lpszString*  
  指向以 null 結束的字串被加入。  
   
 ### <a name="return-value"></a>傳回值  
@@ -324,7 +324,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  長指標[COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -366,25 +366,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwStyle`  
+ *dwStyle*  
  指定下拉式方塊樣式。 套用的任何組合[下拉式方塊樣式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)到方塊。  
   
- `rect`  
+ *rect*  
  指向的位置和大小的下拉式方塊。 可以是[RECT 結構](../../mfc/reference/rect-structure1.md)或`CRect`物件。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定下拉式方塊的父視窗 (通常`CDialog`)。 它不得為**NULL**。  
   
- `nID`  
+ *nID*  
  指定下拉式方塊的控制項 id。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 您建構`CComboBox`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫**建立**，建立 Windows 下拉式方塊，並將它附加至`CComboBox`物件。  
+ 您建構`CComboBox`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫`Create`，建立 Windows 下拉式方塊，並將它附加至`CComboBox`物件。  
   
- 當**建立**執行時，Windows 會傳送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)下拉式方塊的訊息。  
+ 當`Create`執行時，Windows 會傳送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)下拉式方塊的訊息。  
   
  這些訊息會由預設的[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)， [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)， [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成員函式在`CWnd`基底類別。 若要擴充的預設訊息處理，衍生自`CComboBox`、 將訊息對應新增到新的類別，並覆寫先前的訊息處理常式成員函式。 覆寫`OnCreate`，例如，若要執行所需的初始化新的類別。  
   
@@ -428,7 +428,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  Windows 的長指標[DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)結構，其中包含已刪除項目的相關資訊。 請參閱[CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)此結構描述。  
   
 ### <a name="remarks"></a>備註  
@@ -438,21 +438,21 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
  [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]  
   
 ##  <a name="deletestring"></a>  CComboBox::DeleteString  
- 刪除位置中的項目`nIndex`從下拉式方塊。  
+ 刪除位置中的項目*nIndex*從下拉式方塊。  
   
 ```  
 int DeleteString(UINT nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  指定要刪除之字串的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 如果傳回的值大於或等於 0，它是字串清單中所剩餘的計數。 傳回值是**CB_ERR**如果`nIndex`指定索引的項目數大於清單中。  
+ 如果傳回的值大於或等於 0，它是字串清單中所剩餘的計數。 傳回值是**CB_ERR**如果*nIndex*指定索引的項目數大於清單中。  
   
 ### <a name="remarks"></a>備註  
- 之後的所有項目`nIndex`現在下移一個位置。 例如，如果下拉式方塊包含兩個項目，刪除第一個項目會導致要現在會在第一個位置中的剩餘項目。 `nIndex`= 0，第一個位置中的項目。  
+ 之後的所有項目*nIndex*現在下移一個位置。 例如，如果下拉式方塊包含兩個項目，刪除第一個項目會導致要現在會在第一個位置中的剩餘項目。 *nIndex*= 0，第一個位置中的項目。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#9](../../mfc/reference/codesnippet/cpp/ccombobox-class_9.cpp)]  
@@ -467,8 +467,8 @@ int Dir(
 ```  
   
 ### <a name="parameters"></a>參數  
- `attr`  
- 可以是任何組合的`enum`值中所述[Getstatus](../../mfc/reference/cfile-class.md#getstatus)或下列值的任何組合：  
+ *attr*  
+ 可以是任何組合的**列舉**值中所述[Getstatus](../../mfc/reference/cfile-class.md#getstatus)或下列值的任何組合：  
   
 - **DDL_READWRITE**讀取或寫入檔案。  
   
@@ -478,15 +478,15 @@ int Dir(
   
 - **DDL_SYSTEM**檔案是系統檔案。  
   
-- **DDL_DIRECTORY**所指定的名稱`lpszWildCard`指定的目錄。  
+- **DDL_DIRECTORY**所指定的名稱*lpszWildCard*指定的目錄。  
   
 - **DDL_ARCHIVE**在封存檔案。  
   
-- **DDL_DRIVES**包含比對所指定之名稱的所有磁碟機`lpszWildCard`。  
+- **DDL_DRIVES**包含比對所指定之名稱的所有磁碟機*lpszWildCard*。  
   
 - **DDL_EXCLUSIVE** Exclusive 旗標。 如果設定 exclusive 旗標，會列出指定類型的檔案。 否則，會列出指定之型別的的檔案，除了 「 標準 」 檔案。  
   
- `lpszWildCard`  
+ *lpszWildCard*  
  指向檔案規格字串。 字串可以包含萬用字元 (例如，*。\*)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -506,13 +506,13 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構，其中包含所需的繪圖的類型資訊。  
   
 ### <a name="remarks"></a>備註  
  **ItemAction**隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。 請參閱[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)此結構描述。  
   
- 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作主控描繪的繪圖`CComboBox`物件。 此成員函式會終止之前，應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`。  
+ 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作主控描繪的繪圖`CComboBox`物件。 此成員函式會終止之前，應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件*lpDrawItemStruct*。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]  
@@ -527,10 +527,10 @@ int FindString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nStartAfter`  
- 包含要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目`nStartAfter`。 如果-1，會將整個清單方塊搜尋開頭。  
+ *nStartAfter*  
+ 包含要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目*nStartAfter*。 如果-1，會將整個清單方塊搜尋開頭。  
   
- `lpszString`  
+ *lpszString*  
  指向以 null 結束的字串，其中包含要搜尋的前置詞。 搜尋是大小寫無關，因此這個字串可以包含任何大寫和小寫字母。  
   
 ### <a name="return-value"></a>傳回值  
@@ -543,7 +543,7 @@ int FindString(
  [!code-cpp[NVC_MFC_CComboBox#12](../../mfc/reference/codesnippet/cpp/ccombobox-class_12.cpp)]  
   
 ##  <a name="findstringexact"></a>  CComboBox::FindStringExact  
- 呼叫`FindStringExact`尋找第一個清單方塊中的字串 （下拉式方塊），會比對字串中指定的成員函式`lpszFind`。  
+ 呼叫`FindStringExact`尋找第一個清單方塊中的字串 （下拉式方塊），會比對字串中指定的成員函式*lpszFind*。  
   
 ```  
 int FindStringExact(
@@ -552,17 +552,17 @@ int FindStringExact(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndexStart`  
- 指定要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目`nIndexStart`。 如果`nIndexStart`為-1，整個清單方塊會從一開始搜尋。  
+ *nIndexStart*  
+ 指定要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目*nIndexStart*。 如果*nIndexStart*為-1，整個清單方塊會從一開始搜尋。  
   
- `lpszFind`  
+ *lpszFind*  
  指向以 null 結束的字串搜尋。 這個字串可以包含完整的檔名，包括副檔名。 搜尋不區分大小寫，因此這個字串可以包含任何大寫和小寫字母。  
   
 ### <a name="return-value"></a>傳回值  
  相符的項目以零為起始索引或**CB_ERR**如果搜尋失敗。  
   
 ### <a name="remarks"></a>備註  
- 如果使用下拉式方塊但無需建立主控描繪樣式[CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式，`FindStringExact`會嘗試比對的值的 doubleword 值`lpszFind`。  
+ 如果使用下拉式方塊但無需建立主控描繪樣式[CBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式，`FindStringExact`會嘗試比對的值的 doubleword 值*lpszFind*。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#13](../../mfc/reference/codesnippet/cpp/ccombobox-class_13.cpp)]  
@@ -612,8 +612,8 @@ BOOL GetCueBanner(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸出] `lpszText`|收到的提示橫幅文字的緩衝區指標。|  
-|[輸入] `cchText`|緩衝區的大小，`lpszText`參數所指向。|  
+|[out]*lpszText*|收到的提示橫幅文字的緩衝區指標。|  
+|[in]*cchText*|緩衝區的大小， *lpszText*參數所指向。|  
   
 ### <a name="return-value"></a>傳回值  
  在第一個多載， [CString](../../atl-mfc-shared/using-cstring.md)物件，其中包含提示橫幅文字，如果它存在，否則`CString`長度為零的物件。  
@@ -747,14 +747,14 @@ DWORD_PTR GetItemData(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  包含下拉式方塊的清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  項目，與關聯的 32 位元值或**CB_ERR**如果發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 32 位元值可以設定與`dwItemData`參數[SetItemData](#setitemdata)成員函式呼叫。 使用`GetItemDataPtr`成員函式，如果要擷取的 32 位元值是指標 ( **void\***)。  
+ 32 位元值可以設定與*dwItemData*參數[SetItemData](#setitemdata)成員函式呼叫。 使用`GetItemDataPtr`成員函式，如果要擷取的 32 位元值是指標 ( **void\***)。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#21](../../mfc/reference/codesnippet/cpp/ccombobox-class_21.cpp)]  
@@ -767,7 +767,7 @@ void* GetItemDataPtr(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  包含下拉式方塊的清單方塊中的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -784,8 +784,8 @@ int GetItemHeight(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
- 指定下拉式方塊的高度是要擷取的元件。 如果`nIndex`參數為-1，將會擷取下拉式方塊編輯控制項 （或靜態文字） 部分的高度。 如果下拉式方塊擁有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式，`nIndex`指定其高度是要擷取之清單項目的以零為起始的索引。 否則，`nIndex`應該設定為 0。  
+ *nIndex*  
+ 指定下拉式方塊的高度是要擷取的元件。 如果*nIndex*參數為-1，將會擷取下拉式方塊編輯控制項 （或靜態文字） 部分的高度。 如果下拉式方塊擁有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式， *nIndex*指定其高度是要擷取之清單項目的以零為起始的索引。 否則， *nIndex*應該設定為 0。  
   
 ### <a name="return-value"></a>傳回值  
  高度 （以像素的方塊中指定的項目）。 如果發生錯誤，傳回值是 **CB_ERR** 。  
@@ -807,17 +807,17 @@ void GetLBText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  包含要複製的清單方塊字串以零為起始的索引。  
   
- `lpszText`  
+ *lpszText*  
  指向要接收字串緩衝區。 緩衝區必須有足夠的空間，如字串和結束的 null 字元。  
   
- `rString`  
+ *rString*  
  若要參考`CString`。  
   
 ### <a name="return-value"></a>傳回值  
- 字串，但不包括結束的 null 字元的長度 （以位元組為單位）。 如果`nIndex`未指定有效的索引，則傳回值是**CB_ERR**。  
+ 字串，但不包括結束的 null 字元的長度 （以位元組為單位）。 如果*nIndex*未指定有效的索引，則傳回值是**CB_ERR**。  
   
 ### <a name="remarks"></a>備註  
  這個成員的第二個表單函式的填滿`CString`物件項目的文字。  
@@ -833,11 +833,11 @@ int GetLBTextLen(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  包含清單方塊字串之以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 以位元組為單位，但不包括結束的 null 字元字串的長度。 如果`nIndex`未指定有效的索引，則傳回值是**CB_ERR**。  
+ 以位元組為單位，但不包括結束的 null 字元字串的長度。 如果*nIndex*未指定有效的索引，則傳回值是**CB_ERR**。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CComboBox::GetLBText](#getlbtext)。  
@@ -897,10 +897,10 @@ int InitStorage(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItems`  
+ *nItems*  
  指定要加入項目數目。  
   
- `nBytes`  
+ *nBytes*  
  指定的記憶體數量，以位元組為單位，來配置項目的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -909,7 +909,7 @@ int InitStorage(
 ### <a name="remarks"></a>備註  
  呼叫此函式之前加入的清單方塊部分中的項目數量龐大`CComboBox`。  
   
- 只有 Windows 95/98:`wParam`參數會限制為 16 位元值。 這表示清單方塊不能包含超過 32,767 個項目。 雖然項目數目有限制，在清單方塊中項目的總大小只會受到可用記憶體。  
+ 只有 Windows 95/98: *wParam*參數會限制為 16 位元值。 這表示清單方塊不能包含超過 32,767 個項目。 雖然項目數目有限制，在清單方塊中項目的總大小只會受到可用記憶體。  
   
  此函式可協助加速有大量的項目 (超過 100) 的清單方塊的初始化。 它 preallocates 讓後續的記憶體數量指定[AddString](#addstring)， [InsertString](#insertstring)，和[Dir](#dir)函式接受最短的時間。 您可以使用估計值的參數。 如果增長時，會配置一些額外的記憶體。如果您低估，超過預先配置的量的項目使用一般配置。  
   
@@ -926,10 +926,10 @@ int InsertString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  包含要接收字串之清單方塊中位置以零為基底的索引。 如果這個參數是-1，則會將字串加入至清單的結尾。  
   
- `lpszString`  
+ *lpszString*  
  指向要插入的 null 結尾字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -952,7 +952,7 @@ BOOL LimitText(int nMaxChars);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nMaxChars`  
+ *nMaxChars*  
  指定使用者可以輸入文字的長度 （以位元組為單位）。 這個參數是 0，如果文字長度會設定為 65535 個位元組。  
   
 ### <a name="return-value"></a>傳回值  
@@ -974,7 +974,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  長指標[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)結構。  
   
 ### <a name="remarks"></a>備註  
@@ -1020,10 +1020,10 @@ int SelectString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nStartAfter`  
- 包含要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目`nStartAfter`。 如果-1，會將整個清單方塊搜尋開頭。  
+ *nStartAfter*  
+ 包含要搜尋的第一個項目之前的項目以零為起始的索引。 當搜尋到清單方塊底端時，它會繼續從清單方塊的上方回所指定的項目*nStartAfter*。 如果-1，會將整個清單方塊搜尋開頭。  
   
- `lpszString`  
+ *lpszString*  
  指向以 null 結束的字串，其中包含要搜尋的前置詞。 搜尋是大小寫無關，因此這個字串可以包含任何大寫和小寫字母。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1059,7 +1059,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
  這個方法會傳送[CB_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb775897) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_combobox`，也就是用來以程式設計方式存取下拉式方塊控制項。 下一個範例中會使用此變數。  
+ 下列程式碼範例會定義變數*m_combobox*，也就是用來以程式設計方式存取下拉式方塊控制項。 下一個範例中會使用此變數。  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1076,11 +1076,11 @@ int SetCurSel(int nSelect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSelect`  
+ *請選取*  
  指定要選取之字串的以零為起始的索引。 如果-1，會移除任何目前的選取清單方塊中，並清除編輯控制項。  
   
 ### <a name="return-value"></a>傳回值  
- 選取訊息是否成功的項目以零為起始的索引。 傳回值是**CB_ERR**如果`nSelect`大於清單中的項目數或`nSelect`設為-1，這會清除選取項目。  
+ 選取訊息是否成功的項目以零為起始的索引。 傳回值是**CB_ERR**如果*選取*大於清單中的項目數或*選取*設為-1，這會清除選取項目。  
   
 ### <a name="remarks"></a>備註  
  如有必要，清單方塊顯示出來的字串 （如果清單方塊會顯示）。 下拉式方塊編輯控制項中的文字會變更以反映新的選取範圍。 會移除任何先前的選取清單方塊中。  
@@ -1096,7 +1096,7 @@ int SetDroppedWidth(UINT nWidth);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nWidth`  
+ *nWidth*  
  下拉式方塊的 像素為單位的清單方塊部分允許最小寬度。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1120,10 +1120,10 @@ BOOL SetEditSel(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nStartChar`  
+ *nStartChar*  
  指定的開始位置。 如果開始位置設定為-1，則會移除任何現有的選取範圍。  
   
- `nEndChar`  
+ *nEndChar*  
  指定的結束位置。 如果最後一個結束的位置設定為-1，然後的所有文字的開始位置選取編輯控制項中的字元。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1191,10 +1191,10 @@ int SetItemData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  包含要設定之項目的以零為起始的索引。  
   
- `dwItemData`  
+ *dwItemData*  
  包含與項目相關聯的新值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1216,10 +1216,10 @@ int SetItemDataPtr(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  包含的項目以零為起始的索引。  
   
- `pData`  
+ *pData*  
  包含與項目相關聯的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1241,15 +1241,15 @@ int SetItemHeight(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  指定要設定的清單項目高度或下拉式方塊編輯控制項 （或靜態文字） 部分的高度。  
   
- 如果下拉式方塊擁有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式，`nIndex`指定要設定，否則則為其高度的清單項目的以零為起始的索引`nIndex`必須是 0 和所有清單項目將會設定的高度。  
+ 如果下拉式方塊擁有[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式， *nIndex*指定要設定，否則則為其高度的清單項目的以零為起始的索引*nIndex*必須為 0而且，將會設定所有清單項目的高度。  
   
- 如果`nIndex`為-1，編輯控制項的高度或下拉式方塊的靜態文字部分設定。  
+ 如果*nIndex*為-1，編輯控制項的高度或下拉式方塊的靜態文字部分設定。  
   
- `cyItemHeight`  
- 指定的高度，單位為像素所識別的下拉式方塊元件`nIndex`。  
+ *cyItemHeight*  
+ 指定的高度，單位為像素所識別的下拉式方塊元件*nIndex*。  
   
 ### <a name="return-value"></a>傳回值  
  **CB_ERR**如果索引或高度無效，否則為 0。  
@@ -1268,7 +1268,7 @@ LCID SetLocale(LCID nNewLocale);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nNewLocale`  
+ *nNewLocale*  
  要設定的下拉式方塊的新的地區設定識別碼 (LCID) 值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1291,7 +1291,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `iMinVisible`|指定的最小的可見項目數目。|  
+|[in]*iMinVisible*|指定的最小的可見項目數目。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1300,7 +1300,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
  這個方法會傳送[CB_SETMINVISIBLE](http://msdn.microsoft.com/library/windows/desktop/bb775915) Windows SDK 中所述的訊息。  
   
 ### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_combobox`，也就是用來以程式設計方式存取下拉式方塊控制項。 下一個範例中會使用此變數。  
+ 下列程式碼範例會定義變數*m_combobox*，也就是用來以程式設計方式存取下拉式方塊控制項。 下一個範例中會使用此變數。  
   
  [!code-cpp[NVC_MFC_CComboBox_s1#1](../../mfc/reference/codesnippet/cpp/ccombobox-class_33.h)]  
   
@@ -1317,14 +1317,14 @@ int SetTopIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  指定清單方塊項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，零或**CB_ERR**如果發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- 系統會將清單方塊捲動直到其中一個所指定的項目`nIndex`會出現在清單頂端或最大捲軸範圍已達到。  
+ 系統會將清單方塊捲動直到其中一個所指定的項目*nIndex*會出現在清單頂端或最大捲軸範圍已達到。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CComboBox#40](../../mfc/reference/codesnippet/cpp/ccombobox-class_42.cpp)]  

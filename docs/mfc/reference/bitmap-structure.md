@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351633"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950299"
 ---
 # <a name="bitmap-structure"></a>BITMAP 結構
 **點陣圖**結構會定義高度、 寬度、 色彩格式和位元值的邏輯點陣圖 **。**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  以光柵行為單位指定點陣圖的高度。 高度必須大於 0。  
   
  *bmWidthBytes*  
- 指定每個光柵行的位元組數。 這個值必須是偶數，因為繪圖裝置介面 (GDI) 會假設點陣圖格式的位元值為整數 (2 位元組) 值陣列。 換句話說， **bmWidthBytes** \* 8 必須是下一個 16 的倍數大於或等於值時，取得**bmWidth**成員乘以**bmBitsPixel**成員。  
+ 指定每個光柵行的位元組數。 這個值必須是偶數，因為繪圖裝置介面 (GDI) 會假設點陣圖格式的位元值為整數 (2 位元組) 值陣列。 換句話說， *bmWidthBytes* \* 8 必須是下一個 16 的倍數大於或等於值時，取得*bmWidth*成員乘以*bmBitsPixel*成員。  
   
  *bmPlanes*  
  指定點陣圖中色彩平面的數目。  
@@ -60,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  在定義像素所需的每個平面上指定相鄰色彩位元數量。  
   
  *bmBits*  
- 指向點陣圖中位元值的位置。 **BmBits**成員必須是 1 位元組值陣列的長指標。  
+ 指向點陣圖中位元值的位置。 *BmBits*成員必須是 1 位元組值陣列的長指標。  
   
 ## <a name="remarks"></a>備註  
  目前所使用的點陣圖格式為單色和彩色。 單色點陣圖使用 1 位元 1 平面格式。 每個掃描的位元組皆為 16 的倍數。  

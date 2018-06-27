@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a56692320e35a5f115e0e267654b809ba491549c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385238"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953515"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033：MFC 的 DLL 版本
 此提示描述如何使用 MFCxx.DLL 和 mfcxxd.dll （其中 x 是 MFC 版本號碼） 指共用 MFC 應用程式與 MFC 擴充 Dll 的動態連結程式庫。 如需 MFC 的標準 Dll 的詳細資訊，請參閱[將 MFC 當成 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)。  
@@ -102,7 +102,7 @@ ms.locfileid: "33385238"
   
 -   MFC 擴充 DLL 必須提供特殊`DllMain`。 AppWizard 提供`DllMain`函式，您可以進行修改。  
   
--   MFC 擴充 DLL 通常會提供初始化常式，以建立**CDynLinkLibrary**如果 MFC 擴充 DLL 想要匯出`CRuntimeClass`es 或應用程式的資源。 在衍生的類別的**CDynLinkLibrary**可能會使用由 MFC 擴充 DLL 必須維護每個應用程式資料。  
+-   MFC 擴充 DLL 通常會提供初始化常式，以建立`CDynLinkLibrary`如果 MFC 擴充 DLL 想要匯出`CRuntimeClass`es 或應用程式的資源。 在衍生的類別的`CDynLinkLibrary`可能會使用由 MFC 擴充 DLL 必須維護每個應用程式資料。  
   
  以下更詳細說明這些考量。 您也應該參閱 MFC 進階概念範例[DLLHUSK](../visual-cpp-samples.md)因為它會說明：  
   
@@ -140,9 +140,9 @@ ms.locfileid: "33385238"
 ### <a name="changing-your-header-files"></a>變更標頭檔  
  MFC 擴充 DLL 的目標通常是匯出一或多個可以使用該功能的應用程式的一些常見的功能。 這可簡化為匯出的類別和全域函式可供用戶端應用程式。  
   
- 若要這樣做，您必須確定每個成員函式會標記為匯入或匯出適當。 這需要特殊的宣告： **__declspec （dllexport)** 和 **__declspec （dllimport)**。 當用戶端應用程式使用您的類別時，要將它們宣告為 **__declspec （dllimport)**。 建立 MFC 擴充 DLL 本身時，它們應該宣告為 **__declspec （dllexport)**。 此外，函式必須實際匯出，以便用戶端程式繫結至其在載入時間。  
+ 若要這樣做，您必須確定每個成員函式會標記為匯入或匯出適當。 這需要特殊的宣告：`__declspec(dllexport)`和`__declspec(dllimport)`。 當用戶端應用程式使用您的類別時，要將它們宣告為`__declspec(dllimport)`。 建立 MFC 擴充 DLL 本身時，它們應該宣告為`__declspec(dllexport)`。 此外，函式必須實際匯出，以便用戶端程式繫結至其在載入時間。  
   
- 若要匯出整個類別，請使用**AFX_EXT_CLASS**類別定義中。 定義此巨集做為架構 **__declspec （dllexport)** 時 **_AFXDLL**和`_AFXEXT`定義，但定義為 **__declspec （dllimport)** 時`_AFXEXT`未定義。 `_AFXEXT` 建置您的 MFC 擴充 DLL 時，如上面所述，是只會定義。 例如:   
+ 若要匯出整個類別，請使用`AFX_EXT_CLASS`類別定義中。 定義此巨集做為架構`__declspec(dllexport)`時`_AFXDLL`和`_AFXEXT`定義，但定義為`__declspec(dllimport)`時`_AFXEXT`未定義。 `_AFXEXT` 建置您的 MFC 擴充 DLL 時，如上面所述，是只會定義。 例如:   
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -150,7 +150,7 @@ class AFX_EXT_CLASS CExampleExport : public CObject
 ```  
   
 ### <a name="not-exporting-the-entire-class"></a>不會匯出整個類別  
- 有時您可能想要匯出只需要的個別成員類別。 例如，如果您要匯出`CDialog`-衍生的類別，您可能只需要將匯出的建構函式和`DoModal`呼叫。 您可以匯出使用 DLL 的這些成員。DEF 檔案，但您也可以使用**AFX_EXT_CLASS**的相同方式進行您需要匯出的個別成員上。  
+ 有時您可能想要匯出只需要的個別成員類別。 例如，如果您要匯出`CDialog`-衍生的類別，您可能只需要將匯出的建構函式和`DoModal`呼叫。 您可以匯出使用 DLL 的這些成員。DEF 檔案，但您也可以使用`AFX_EXT_CLASS`的相同方式進行您需要匯出的個別成員上。  
   
  例如:   
   
@@ -169,7 +169,7 @@ AFX_EXT_CLASS int DoModal();
   
  當您這樣做時，您可能會遇到其他問題因為您不再想要匯出類別的所有成員。 問題的方式是 MFC 巨集工作。 有幾個 MFC 的協助程式巨集實際宣告或定義的資料成員。 因此，這些資料成員也必須從您的 DLL 匯出。  
   
- 例如，`DECLARE_DYNAMIC`建置 MFC 擴充 DLL 時，如下所示定義巨集：  
+ 例如，DECLARE_DYNAMIC 巨集定義，如下所示建立 MFC 擴充 DLL 時：  
   
 ```  
 #define DECLARE_DYNAMIC(class_name) \  
@@ -184,9 +184,9 @@ protected: \
 \  
 ```  
   
- 開始行 「 靜態`AFX_DATA`"會宣告您的類別內的靜態物件。 若要正確匯出這個類別，並從用戶端存取執行階段資訊。EXE，您需要匯出這個靜態物件。 因為以修飾詞宣告靜態物件`AFX_DATA`，您只需要定義`AFX_DATA`是 **__declspec （dllexport)** 建置 DLL 時，它定義為 **__declspec（dllimport)** 建置您的用戶端可執行檔時。  
+ 開始行 「 靜態`AFX_DATA`"會宣告您的類別內的靜態物件。 若要正確匯出這個類別，並從用戶端存取執行階段資訊。EXE，您需要匯出這個靜態物件。 因為以修飾詞宣告靜態物件`AFX_DATA`，您只需要定義`AFX_DATA`是`__declspec(dllexport)`建置 DLL 時，它定義為`__declspec(dllimport)`建置您的用戶端可執行檔時。  
   
- 如上所述， **AFX_EXT_CLASS**已經在這種方式定義。 您只需要重新定義`AFX_DATA`是相同**AFX_EXT_CLASS**周圍類別定義。  
+ 如上所述，`AFX_EXT_CLASS`已經在這種方式定義。 您只需要重新定義`AFX_DATA`是相同`AFX_EXT_CLASS`周圍類別定義。  
   
  例如:   
   
@@ -201,12 +201,12 @@ class CExampleView : public CView
 #define AFX_DATA  
 ```  
   
- MFC 一定會使用`AFX_DATA`符號定義在其巨集，因此這項技術可用於所有這類案例中的資料項目上。 例如，它就能用於`DECLARE_MESSAGE_MAP`。  
+ MFC 一定會使用`AFX_DATA`符號定義在其巨集，因此這項技術可用於所有這類案例中的資料項目上。 例如，它就能用於 DECLARE_MESSAGE_MAP。  
   
 > [!NOTE]
 >  如果您要匯出整個類別，而不是所選的類別的成員，靜態資料成員會自動匯出。  
   
- 您可以使用相同的技巧，自動匯出`CArchive`引出運算子的類別使用`DECLARE_SERIAL`和`IMPLEMENT_SERIAL`巨集。 匯出封存運算子的類別宣告方括號 (位於。H 檔案） 為下列程式碼：  
+ 您可以使用相同的技巧，自動匯出`CArchive`引出運算子使用 DECLARE_SERIAL 和 IMPLEMENT_SERIAL 巨集的類別。 匯出封存運算子的類別宣告方括號 (位於。H 檔案） 為下列程式碼：  
   
 ```  
 #undef AFX_API  
@@ -221,9 +221,9 @@ class CExampleView : public CView
 ### <a name="limitations-of-afxext"></a>_AFXEXT 的限制  
  您可以使用 _**AFXEXT**您 MFC 擴充 Dll 只要您不需要多個圖層的 MFC 擴充 Dll 的前置處理器符號。 如果您有 MFC 擴充 Dll 呼叫，或衍生自類別，在您自己的 MFC 擴充 Dll，然後從 MFC 類別衍生，您必須使用您自己的前置處理器符號，以避免模稜兩可。  
   
- 問題是，在 Win32 中，您必須明確宣告為任何資料 **__declspec （dllexport)** 是否要從 DLL 匯出和 **__declspec （dllimport)** 是否要從 DLL 匯入。 當您定義`_AFXEXT`，MFC 標頭，確定**AFX_EXT_CLASS**定義正確。  
+ 問題是，在 Win32 中，您必須明確宣告為任何資料`__declspec(dllexport)`是否要從 DLL 匯出和`__declspec(dllimport)`是否要從 DLL 匯入。 當您定義`_AFXEXT`，MFC 標頭，確定`AFX_EXT_CLASS`定義正確。  
   
- 當您有多個圖層，一個符號例如**AFX_EXT_CLASS**不足夠，因為 MFC 擴充 DLL 可能會匯出新的類別，以及從另一個 MFC 擴充 DLL 匯入其他類別。 若要處理這個問題，使用特殊的前置處理器符號，指出您要建置 DLL 本身而非使用 DLL。 例如，假設有兩個 MFC 擴充 Dll、 A.DLL 和 B.DLL。 每個分別匯出 A.H 和 B.H 中的某些類別。 B.DLL 會使用 A.DLL 類別。 標頭檔看起來可能像這樣：  
+ 當您有多個圖層，一個符號例如`AFX_EXT_CLASS`不足夠，因為 MFC 擴充 DLL 可能會匯出新的類別，以及從另一個 MFC 擴充 DLL 匯入其他類別。 若要處理這個問題，使用特殊的前置處理器符號，指出您要建置 DLL 本身而非使用 DLL。 例如，假設有兩個 MFC 擴充 Dll、 A.DLL 和 B.DLL。 每個分別匯出 A.H 和 B.H 中的某些類別。 B.DLL 會使用 A.DLL 類別。 標頭檔看起來可能像這樣：  
   
 ```  
 /* A.H */  
@@ -249,10 +249,10 @@ class CLASS_DECL_B CExampleB : public CExampleA
   
  A.DLL 建置時，它內建與 **/D A_IMPL**而且 B.DLL 建置時，它會根據 **/D B_IMPL**。 每一個 dll 中使用不同的符號，匯出 CExampleB 和 CExampleA 建置 B.DLL 時匯入。 CExampleA，建置 A.DLL 時匯出並匯入由 B.DLL （或其他用戶端） 時。  
   
- 使用內建時，無法執行這種類型的分層**AFX_EXT_CLASS**和`_AFXEXT`前置處理器符號。 上述的技巧來解決這個問題，方式沒有不同的是建置其 OLE、 資料庫和網路 MFC 擴充 Dll 時，會使用 MFC 的機制。  
+ 使用內建時，無法執行這種類型的分層`AFX_EXT_CLASS`和`_AFXEXT`前置處理器符號。 上述的技巧來解決這個問題，方式沒有不同的是建置其 OLE、 資料庫和網路 MFC 擴充 Dll 時，會使用 MFC 的機制。  
   
 ### <a name="not-exporting-the-entire-class"></a>不會匯出整個類別  
- 同樣地，您必須採取特別注意，當您不想要匯出整個類別。 您必須確定建立的 MFC 巨集的必要資料項目都正確匯出。 作法是藉由重新定義**AFX_DATA**特定類別的巨集。 這應該在完成任何您不想要匯出整個類別的時間。  
+ 同樣地，您必須採取特別注意，當您不想要匯出整個類別。 您必須確定建立的 MFC 巨集的必要資料項目都正確匯出。 作法是藉由重新定義`AFX_DATA`特定類別的巨集。 這應該在完成任何您不想要匯出整個類別的時間。  
   
  例如:   
   
@@ -312,22 +312,22 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 }  
 ```  
   
- 呼叫`AfxInitExtensionModule`擷取模組執行階段類別 (`CRuntimeClass`結構) 以及其物件處理站 (`COleObjectFactory`物件) 使用更新版本時**CDynLinkLibrary**建立物件。 （選擇性） 呼叫`AfxTermExtensionModule`可讓 MFC 清理 MFC 擴充 DLL 每個處理序中斷連結時 (也就是當處理序結束，或可能是卸載 DLL， **FreeLibrary**呼叫) 從 MFC 擴充 DLL. 因為大部分的 MFC 擴充 Dll 不會以動態方式載入 （通常，這些連結透過其匯入程式庫），呼叫`AfxTermExtensionModule`通常並不需要。  
+ 呼叫`AfxInitExtensionModule`擷取模組執行階段類別 (`CRuntimeClass`結構) 以及其物件處理站 (`COleObjectFactory`物件) 使用更新版本時`CDynLinkLibrary`建立物件。 （選擇性） 呼叫`AfxTermExtensionModule`可讓 MFC 清理 MFC 擴充 DLL 每個處理序中斷連結時 (也就是當處理序結束，或可能是卸載 DLL，`FreeLibrary`呼叫) 從 MFC 擴充 DLL。 因為大部分的 MFC 擴充 Dll 不會以動態方式載入 （通常，這些連結透過其匯入程式庫），呼叫`AfxTermExtensionModule`通常並不需要。  
   
- 如果您的應用程式載入，而且會動態釋放 MFC 擴充 Dll，請務必呼叫`AfxTermExtensionModule`如上所示。 也請務必使用`AfxLoadLibrary`和`AfxFreeLibrary`(而不是 Win32 函式**LoadLibrary**和**FreeLibrary**) 如果您的應用程式使用多個執行緒，或者它會以動態方式載入 MFC擴充 DLL。 使用`AfxLoadLibrary`和`AfxFreeLibrary`確保執行時載入及卸載 MFC 擴充 DLL 的啟動和關閉程式碼而損毀全域 MFC 狀態。  
+ 如果您的應用程式載入，而且會動態釋放 MFC 擴充 Dll，請務必呼叫`AfxTermExtensionModule`如上所示。 也請務必使用`AfxLoadLibrary`和`AfxFreeLibrary`(而不是 Win32 函式`LoadLibrary`和`FreeLibrary`) 如果您的應用程式使用多個執行緒，或者它會以動態方式載入的 MFC 擴充 DLL。 使用`AfxLoadLibrary`和`AfxFreeLibrary`確保執行時載入及卸載 MFC 擴充 DLL 的啟動和關閉程式碼而損毀全域 MFC 狀態。  
   
- 標頭檔 AFXDLLX。H 包含特殊 MFC 擴充 Dll，例如的定義中使用的結構定義`AFX_EXTENSION_MODULE`和**CDynLinkLibrary**。  
+ 標頭檔 AFXDLLX。H 包含特殊 MFC 擴充 Dll，例如的定義中使用的結構定義`AFX_EXTENSION_MODULE`和`CDynLinkLibrary`。  
   
  全域*extensionDLL*必須宣告所示。 與不同的是 MFC 的 16 位元版本，您可以配置的記憶體，並在此期間，呼叫 MFC 函式，因為 MFCxx.DLL 完全初始化的時間您`DllMain`呼叫。  
   
 ### <a name="sharing-resources-and-classes"></a>共用資源和類別  
  簡單的 MFC 擴充 Dll 只需要將幾個低頻寬函式匯出至用戶端應用程式而無其他。 多個使用者介面大量 Dll 可能想要將資源和 c + + 類別匯出至用戶端應用程式。  
   
- 匯出資源是透過資源的清單。 每個應用程式是單向連結的清單**CDynLinkLibrary**物件。 大部分的載入資源的標準 MFC 實作資源時，尋找在目前的資源模組的第一個 (`AfxGetResourceHandle`) 如果不找到查核行程的清單**CDynLinkLibrary**嘗試載入的物件要求的資源。  
+ 匯出資源是透過資源的清單。 每個應用程式是單向連結的清單`CDynLinkLibrary`物件。 大部分的載入資源的標準 MFC 實作資源時，尋找在目前的資源模組的第一個 (`AfxGetResourceHandle`) 如果不找到查核行程的清單`CDynLinkLibrary`嘗試載入要求的資源物件。  
   
  相似的動態建立的 c + + 物件指定 c + + 類別名稱。 MFC 物件還原序列化機制需要將所有`CRuntimeClass`登錄，讓它可以藉由動態建立 c + + 物件的所需的類型，根據項目先前已儲存重新建構的物件。  
   
- 如果您想要使用您的 MFC 擴充 DLL 中的類別，用戶端應用程式`DECLARE_SERIAL`，則您必須匯出為用戶端應用程式可以看到您的類別。 這也藉由查核完成**CDynLinkLibrary**清單。  
+ 如果您想要使用您的 MFC 擴充 DLL 中的類別，用戶端應用程式`DECLARE_SERIAL`，則您必須匯出為用戶端應用程式可以看到您的類別。 這也藉由查核完成`CDynLinkLibrary`清單。  
   
  在 MFC 進階概念範例的情況下[DLLHUSK](../visual-cpp-samples.md)，清單看起來像這樣：  
   
@@ -344,14 +344,14 @@ head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE
   
  MFCxx.DLL 是根據資源和類別清單通常是最後一個項目。 MFCxx.DLL 包括所有標準 MFC 資源，包括所有標準命令 Id 的提示字串。 Dll 和用戶端應用程式本身不需要將它放在清單結尾可讓他們自己的標準 MFC 資源，但若要依賴 MFCxx.DLL 中共用的資源而的複本。  
   
- 合併至用戶端應用程式的命名空間的資源和所有 dll 的類別名稱都有缺點是，您應特別小心，哪些識別碼或名稱。 您可以當然停用這項功能不會匯出任何您的資源或**CDynLinkLibrary**用戶端應用程式的物件。 [DLLHUSK](../visual-cpp-samples.md)範例使用多個標頭檔來管理共用的資源命名空間。 請參閱[技術附註 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)如需使用共用的資源檔的秘訣。  
+ 合併至用戶端應用程式的命名空間的資源和所有 dll 的類別名稱都有缺點是，您應特別小心，哪些識別碼或名稱。 您可以當然停用這項功能不會匯出任何您的資源或`CDynLinkLibrary`用戶端應用程式的物件。 [DLLHUSK](../visual-cpp-samples.md)範例使用多個標頭檔來管理共用的資源命名空間。 請參閱[技術附註 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)如需使用共用的資源檔的秘訣。  
   
 ### <a name="initializing-the-dll"></a>初始化 DLL  
- 如上面所述，您通常會想要建立**CDynLinkLibrary**才能匯出您的資源和類別，用戶端應用程式的物件。 您必須提供初始化的 DLL 匯出的進入點。 使用最低限度，這是在 void 常式不接受引數並傳回任何內容，但它可以是任何您喜歡的項目。  
+ 如上面所述，您通常會想要建立`CDynLinkLibrary`才能匯出您的資源和類別，用戶端應用程式的物件。 您必須提供初始化的 DLL 匯出的進入點。 使用最低限度，這是在 void 常式不接受引數並傳回任何內容，但它可以是任何您喜歡的項目。  
   
- 每個想要使用您的 DLL 的用戶端應用程式必須呼叫這個初始化常式，如果您使用這個方法。 您也可能會配置此**CDynLinkLibrary**物件存放至您`DllMain`之後呼叫`AfxInitExtensionModule`。  
+ 每個想要使用您的 DLL 的用戶端應用程式必須呼叫這個初始化常式，如果您使用這個方法。 您也可能會配置此`CDynLinkLibrary`物件存放至您`DllMain`之後呼叫`AfxInitExtensionModule`。  
   
- 初始化常式必須建立**CDynLinkLibrary**物件在目前應用程式的堆積中，連線到您的 MFC 擴充 DLL 的資訊。 這可以使用下列：  
+ 初始化常式必須建立`CDynLinkLibrary`物件在目前應用程式的堆積中，連線到您的 MFC 擴充 DLL 的資訊。 這可以使用下列：  
   
 ```  
 extern "C" extern void WINAPI InitXxxDLL()  
@@ -361,13 +361,13 @@ extern "C" extern void WINAPI InitXxxDLL()
 }  
 ```  
   
- 常式的名稱， *InitXxxDLL*在此範例中，可以是您想要的任何項目。 不需要`extern "C"`，但是，這樣可讓您更輕鬆地維護的 [匯出] 清單。  
+ 常式的名稱， *InitXxxDLL*在此範例中，可以是您想要的任何項目。 不需要**extern"C"**，但是，這樣可讓您更輕鬆地維護的 [匯出] 清單。  
   
 > [!NOTE]
 >  如果您使用您從一般 MFC DLL 的 MFC 擴充 DLL，您必須匯出初始化函式。 使用任何 MFC 擴充 DLL 的類別或資源之前，必須與一般 MFC 的 DLL 呼叫此函數。  
   
 ### <a name="exporting-entries"></a>匯出的項目  
- 若要匯出您的類別的簡單方式是使用 **__declspec （dllimport)** 和 **__declspec （dllexport)** 上每個類別和您想要匯出的全域函式。 這可讓您更輕鬆，但效率比命名 （如下所述） 的每個進入點，因為您可以控制哪些函式會匯出較少，而且您無法依序數匯出的函式。 TESTDLL1 和 TESTDLL2 使用這個方法，若要匯出其項目。  
+ 若要匯出您的類別的簡單方式是使用`__declspec(dllimport)`和`__declspec(dllexport)`上每個類別和您想要匯出的全域函式。 這可讓您更輕鬆，但效率比命名 （如下所述） 的每個進入點，因為您可以控制哪些函式會匯出較少，而且您無法依序數匯出的函式。 TESTDLL1 和 TESTDLL2 使用這個方法，若要匯出其項目。  
   
  更有效率的方法 （和 MFCxx.DLL 所使用的方法） 不會匯出每個項目以手動方式來命名每個項目。DEF 檔案。 我們正在匯出選擇性匯出從我們的 DLL （也就是不所有項目），因為我們必須決定哪些我們想要匯出的特定介面。 這是很困難，因為您必須指定損害的名稱給連結器中的項目表單中。DEF 檔案。 不要匯出任何 c + + 類別，除非您真的需要的符號連結。  
   
@@ -376,10 +376,10 @@ extern "C" extern void WINAPI InitXxxDLL()
 ### <a name="cwinapp-vs-cdynlinklibrary"></a>CWinApp vs。CDynLinkLibrary  
  MFC 擴充 DLL 並沒有`CWinApp`-衍生自己的物件; 而是必須與中一起`CWinApp`-衍生的用戶端應用程式的物件。 這表示用戶端應用程式擁有主要訊息幫浦，閒置迴圈，依此類推。  
   
- 如果您的 MFC 擴充 DLL 需要維護額外的資料，每個應用程式，您可以衍生新的類別，從**CDynLinkLibrary**並建立常式上述 InitXxxDLL 中。 DLL 執行時，可以檢查目前的應用程式清單**CDynLinkLibrary**来找到該特定 MFC 擴充 DLL 的物件。  
+ 如果您的 MFC 擴充 DLL 需要維護額外的資料，每個應用程式，您可以衍生新的類別，從`CDynLinkLibrary`並建立常式上述 InitXxxDLL 中。 DLL 執行時，可以檢查目前的應用程式清單`CDynLinkLibrary`来找到該特定 MFC 擴充 DLL 的物件。  
   
 ### <a name="using-resources-in-your-dll-implementation"></a>您的 DLL 實作中使用的資源  
- 預設資源負載如上面所述，將逐步引導的清單**CDynLinkLibrary**尋找第一個 EXE 或 DLL，具有要求之資源的物件。 所有的 MFC 應用程式開發介面，以及內部的程式碼會使用所有`AfxFindResourceHandle`查核資源清單來尋找無論可能存在其中的任何資源。  
+ 預設資源負載如上面所述，將逐步引導的清單`CDynLinkLibrary`尋找第一個 EXE 或 DLL，具有要求之資源的物件。 所有的 MFC 應用程式開發介面，以及內部的程式碼會使用所有`AfxFindResourceHandle`查核資源清單來尋找無論可能存在其中的任何資源。  
   
  如果您想要只從特定位置中載入資源，使用 Api`AfxGetResourceHandle`和`AfxSetResourceHandle`儲存舊的控制代碼，並將新的控制代碼。 請務必還原舊的資源控制代碼傳回至用戶端應用程式之前。 TESTDLL2 這個範例會使用這種方法，明確載入功能表。  
   
@@ -452,9 +452,9 @@ extern "C" extern void WINAPI InitXxxDLL()
  MFC 的 16 位元版本需要一些特殊的技術，包括每個應用程式資料上的堆疊區段中，某些 80x86 組譯程式碼、 處理序專屬例外狀況內容和其他技術所建立的特殊區段。 Win32 直接支援同處理序資料在 DLL 中，這是您想在大多數情況。 在大部分情況 MFCxx.DLL 是只 NAFXCW。封裝在 DLL 中的 LIB。 如果您看一下 MFC 原始程式碼，您會發現很少 #ifdef _AFXDLL，因為有很少需要進行的特殊情況。 會有特別處理 （亦稱為 win32） Windows 3.1 上 Win32 特殊案例。 Win32 並不支援同處理序 DLL 的資料，因此 MFC DLL 必須使用執行緒區域儲存區 (TLS) 來取得處理程序的本機資料的 Win32 Api 直接。  
   
 ### <a name="impact-on-library-sources-additional-files"></a>對程式庫來源、 其他檔案的影響  
- 所造成的影響 **_AFXDLL**上標準的 MFC 類別程式庫來源和標頭版本是相當小。 沒有特殊版檔案 (AFXV_DLL。H），以及額外的標頭檔 (AFXDLL_。H） 包含主要 AFXWIN。H 標頭。 AFXDLL_。H 標頭包含**CDynLinkLibrary**類別和其他實作詳細資料，這兩者的 **_AFXDLL**應用程式和 MFC 擴充 Dll。 AFXDLLX。用於建立 MFC 擴充 Dll （如需詳細資訊請參閱以上） 提供 H 標頭。  
+ 所造成的影響 **_AFXDLL**上標準的 MFC 類別程式庫來源和標頭版本是相當小。 沒有特殊版檔案 (AFXV_DLL。H），以及額外的標頭檔 (AFXDLL_。H） 包含主要 AFXWIN。H 標頭。 AFXDLL_。H 標頭包含`CDynLinkLibrary`類別和其他實作詳細資料，這兩者的`_AFXDLL`應用程式和 MFC 擴充 Dll。 AFXDLLX。用於建立 MFC 擴充 Dll （如需詳細資訊請參閱以上） 提供 H 標頭。  
   
- MFC 程式庫在 MFC SRC 規則來源有一些額外的條件式程式碼底下 **_AFXDLL** #ifdef。 其他的原始程式檔 (DLLINIT。CPP) 包含額外的初始化程式碼和其他黏附共用版本的 MFC。  
+ MFC 程式庫在 MFC SRC 規則來源有一些額外的條件式程式碼底下`_AFXDLL`#ifdef。 其他的原始程式檔 (DLLINIT。CPP) 包含額外的初始化程式碼和其他黏附共用版本的 MFC。  
   
  若要建立 MFC 共用的版本，請提供其他檔案。 （請參閱下列如何建置 DLL 的詳細資料。）  
   
@@ -465,7 +465,7 @@ extern "C" extern void WINAPI InitXxxDLL()
 -   A。CLW 檔案 (MFCDLL。CLW) 被提供使用 ClassWizard 允許瀏覽 MFC 類別。 注意： 這項功能不是特定 MFC 的 DLL 版本。  
   
 ### <a name="memory-management"></a>記憶體管理  
- 使用 MFCxx.DLL 的應用程式會使用一般的記憶體配置器 MSVCRTxx.DLL，共用的 C 執行階段 DLL 所提供。 應用程式、 任何 MFC 擴充 Dll，以及 MFC Dll 本身會使用此共用的記憶體配置器。 使用的記憶體配置共用的 DLL，MFC Dll 可以配置應用程式，反之亦然，稍後會釋放的記憶體。 因為應用程式和 DLL 必須使用相同的配置器，您不應覆寫通用的 c + +`operator new`或`operator delete`。 相同的規則會套用到其餘的 C 執行階段記憶體配置常式 (例如`malloc`， `realloc`，**可用**，等等)。  
+ 使用 MFCxx.DLL 的應用程式會使用一般的記憶體配置器 MSVCRTxx.DLL，共用的 C 執行階段 DLL 所提供。 應用程式、 任何 MFC 擴充 Dll，以及 MFC Dll 本身會使用此共用的記憶體配置器。 使用的記憶體配置共用的 DLL，MFC Dll 可以配置應用程式，反之亦然，稍後會釋放的記憶體。 因為應用程式和 DLL 必須使用相同的配置器，您不應覆寫通用的 c + +**運算子 new**或**運算子 delete**。 相同的規則會套用到其餘的 C 執行階段記憶體配置常式 (例如**malloc**， **realloc**，**可用**，等等)。  
   
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>序數和類別 __declspec （dllexport） 和 DLL 命名  
  我們不會將`class` **__declspec （dllexport)** c + + 編譯器的功能。 相反地，匯出清單會包含 （MFCxx.DEF 和 MFCxxD.DEF） 的類別程式庫來源。 匯出只這些選取的一組 （函式和資料） 的進入點。 其他符號，例如 MFC 私用實作函式或類別，不會匯出序數沒有內建或非內建名稱表格中的字串名稱來完成所有的匯出。  

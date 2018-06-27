@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381084"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950444"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC 中的狀態列實作
 A [CStatusBar](../mfc/reference/cstatusbar-class.md)物件是一種控制列的資料列文字輸出窗格。 輸出窗格通常用來做為訊息列和狀態指示器。 範例包括簡要說明選取的功能表命令的功能表說明訊息行和顯示 SCROLL LOCK、 NUM LOCK 和其他按鍵的狀態指標。  
   
- 根據 MFC 4.0 版，狀態列會使用實作類別[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)，以封裝狀態列通用控制項。 回溯相容性，MFC 會保留舊的狀態 列實作類別中**COldStatusBar**。 舊版的 MFC 的文件描述**COldStatusBar**下`CStatusBar`。  
+ 根據 MFC 4.0 版，狀態列會使用實作類別[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)，以封裝狀態列通用控制項。 回溯相容性，MFC 會保留舊的狀態 列實作類別中`COldStatusBar`。 舊版的 MFC 的文件描述`COldStatusBar`下`CStatusBar`。  
   
  [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl)，成員函式新增到 MFC 4.0 可讓您利用狀態列自訂和其他功能的 Windows 通用控制項的支援。 `CStatusBar` 成員函式可讓您大部分的 Windows 通用控制項; 功能不過，當您呼叫`GetStatusBarCtrl`，您就能給予您狀態列更多狀態列的特性。 當您呼叫`GetStatusBarCtrl`，它會傳回參考`CStatusBarCtrl`物件。 您可以使用該參考來操作狀態列控制項。  
   

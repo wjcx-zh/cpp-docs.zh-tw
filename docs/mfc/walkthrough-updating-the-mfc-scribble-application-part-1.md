@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cfe91812d178618b1707f99aa10d6bd492109069
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385105"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956791"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說： 更新 MFC Scribble 應用程式 （第 1 部分）
 本逐步解說示範如何修改現有的 MFC 應用程式使用功能區使用者介面。 Visual Studio 支援 Office 2007 功能區和 Windows 7 Scenic 功能區。 如需功能區使用者介面的詳細資訊，請參閱[功能區](http://go.microsoft.com/fwlink/p/?linkid=129233)MSDN 網站上。  
@@ -186,31 +186,31 @@ ms.locfileid: "33385105"
   
 3.  您可以自訂的應用程式按鈕修改其屬性。 [] 功能表中已定義這段程式碼中使用的訊息識別碼 Scribble 1.0。  
   
-4.  在 [設計] 檢視中，按一下應用程式按鈕以顯示其內容。 變更屬性值，如下所示：**映像**至`IDB_RIBBON_MAIN`，**提示**至`File`，**金鑰**至`f`，**大型影像**至`IDB_RIBBON_FILELARGE`，和**Small Images**至`IDB_RIBBON_FILESMALL`。  
+4.  在 [設計] 檢視中，按一下應用程式按鈕以顯示其內容。 變更屬性值，如下所示：**映像**至*IDB_RIBBON_MAIN*，**提示**至*檔案*，**金鑰**若要*f*，**大型影像**至*IDB_RIBBON_FILELARGE*，和**Small Images**至*IDB_RIBBON_FILESMALL*。  
   
 5.  下列修改建立使用者按一下 [應用程式] 按鈕時出現的功能表。 按一下省略符號 (**...**) 旁邊**Main 項目**開啟**項目編輯器**。  
   
-    1.  按一下**新增**加入的按鈕。 變更**標題**至`&New`，**識別碼**至`ID_FILE_NEW`，**映像**至`0`，**映像的大型**至`0`.  
+    1.  按一下**新增**加入的按鈕。 變更**標題**至*新*，**識別碼**至*ID_FILE_NEW*，**映像**至*0*，**映像的大型**至*0*。  
   
-    2.  按一下**新增**加入的第二個按鈕。 變更**標題**至`&Save`，**識別碼**至`ID_FILE_SAVE`，**映像**至`2`，和**映像的大型**至`2`.  
+    2.  按一下**新增**加入的第二個按鈕。 變更**標題**至 *& 儲存*，**識別碼**至*ID_FILE_SAVE*，**映像**至*2*，和**映像的大型**至*2*。  
   
-    3.  按一下**新增**加入的第三個按鈕。 變更**標題**至`Save &As`，**識別碼**至`ID_FILE_SAVE_AS`，**映像**至`3`，和**映像的大型**至`3`.  
+    3.  按一下**新增**加入的第三個按鈕。 變更**標題**至*儲存 （& s) 做為*，**識別碼**至*ID_FILE_SAVE_AS*，**映像**至*3*，和**映像的大型**至*3*。  
   
-    4.  按一下**新增**加入的第四個按鈕。 變更**標題**至`&Print`，**識別碼**至`ID_FILE_PRINT`，**映像**至`4`，和**映像的大型**至`4`.  
+    4.  按一下**新增**加入的第四個按鈕。 變更**標題**至 *& 列印*，**識別碼**至*ID_FILE_PRINT*，**映像**至*4*，和**映像的大型**至*4*。  
   
     5.  變更**項目**類型**分隔符號**，然後按一下 **新增**。  
   
-    6.  變更**項目**類型**按鈕**。 按一下**新增**来加入第五個按鈕。 變更**標題**至`&Close`，**識別碼**至`ID_FILE_CLOSE`，**映像**至`5`，和**映像的大型**至`5`.  
+    6.  變更**項目**類型**按鈕**。 按一下**新增**来加入第五個按鈕。 變更**標題**至*與關閉*，**識別碼**至*ID_FILE_CLOSE*，**映像**至*5*，和**映像的大型**至*5*。  
   
 6.  下列修改建立子功能表下，您在上一個步驟中建立的 [列印] 按鈕。  
   
-    1.  按一下**列印**按鈕，變更**項目**類型**標籤**，然後按一下 **插入**。 變更**標題**至`Preview and print the document`。  
+    1.  按一下**列印**按鈕，變更**項目**類型**標籤**，然後按一下 **插入**。 變更**標題**至*預覽和列印文件*。  
   
-    2.  按一下**列印**按鈕，變更**項目**類型**按鈕**，然後按一下**插入**。 變更**標題**至`&Print`，**識別碼**至`ID_FILE_PRINT`，**映像**至`4`，和**映像的大型**至`4`.  
+    2.  按一下**列印**按鈕，變更**項目**類型**按鈕**，然後按一下**插入**。 變更**標題**至 *& 列印*，**識別碼**至*ID_FILE_PRINT*，**映像**至*4*，和**映像的大型**至*4*。  
   
-    3.  按一下**列印**按鈕，然後按一下**插入**加入的按鈕。 變更**標題**至`&Quick Print`，**識別碼**至`ID_FILE_PRINT_DIRECT`，**映像**至`7`，和**映像的大型**至`7`.  
+    3.  按一下**列印**按鈕，然後按一下**插入**加入的按鈕。 變更**標題**至 *& 快速列印*，**識別碼**至*ID_FILE_PRINT_DIRECT*，**映像**至*7*，和**映像的大型**至*7*。  
   
-    4.  按一下**列印**按鈕，然後按一下**插入**加入另一個按鈕。 變更**標題**至`Print Pre&view`，**識別碼**至`ID_FILE_PRINT_PREVIEW`，**映像**至`6`，和**映像的大型**至`6`.  
+    4.  按一下**列印**按鈕，然後按一下**插入**加入另一個按鈕。 變更**標題**至*列印前 （& s) 檢視*，**識別碼**至*ID_FILE_PRINT_PREVIEW*，**映像**至*6*，和**映像的大型**至*6*。  
   
     5.  您現在已經修改**Main 項目**。 按一下**關閉**結束**項目編輯器**。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "33385105"
   
     1.  在**屬性**視窗中，按一下省略符號 (**...**) 旁邊**按鈕**開啟**項目編輯器**。  
   
-    2.  按一下**新增**加入的按鈕。 變更**標題**至`E&xit`，**識別碼**至`ID_APP_EXIT`，**映像**至`8`。  
+    2.  按一下**新增**加入的按鈕。 變更**標題**至*E (& x)*，**識別碼**至*ID_APP_EXIT*，**映像**至*8*.  
   
  [[區段](#top)]  
   
@@ -233,7 +233,7 @@ ms.locfileid: "33385105"
     CMFCRibbonBar m_wndRibbonBar;  
  ```  
   
-2.  In the mainfrm.cpp file, add the following code before the final `return` statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
+2.  In the mainfrm.cpp file, add the following code before the final **return** statement at the end of the `CMainFrame::OnCreate` function. This creates an instance of the ribbon bar.  
   
  ``` *// Create the ribbon bar  
     if (!m_wndRibbonBar.Create(this))  
@@ -254,11 +254,11 @@ ms.locfileid: "33385105"
   
 #### <a name="to-add-a-home-category-and-edit-panel"></a>加入首頁類別目錄和編輯面板  
   
-1.  在 Scribble 程式需要只有一個類別目錄。 在 [設計] 檢視中，按一下**類別**以顯示其內容。 變更屬性值，如下所示：**標題**至`&Home`，**大型影像**至`IDB_RIBBON_HOMELARGE`， **Small Images**至`IDB_RIBBON_HOMESMALL`。  
+1.  在 Scribble 程式需要只有一個類別目錄。 在 [設計] 檢視中，按一下**類別**以顯示其內容。 變更屬性值，如下所示：**標題**至 *& 首頁*，**大型影像**至*IDB_RIBBON_HOMELARGE*， **Small Images**至*IDB_RIBBON_HOMESMALL*。  
   
-2.  每個功能區分類會組織成具名的面板。 每個面板包含一組執行相關的作業的控制項。 此類別目錄具有一個面板。 按一下**面板**，然後變更**標題**至`Edit`和**映像索引**至`0`。  
+2.  每個功能區分類會組織成具名的面板。 每個面板包含一組執行相關的作業的控制項。 此類別目錄具有一個面板。 按一下**面板**，然後變更**標題**至*編輯*和**映像索引**至*0*。  
   
-3.  若要**編輯** 面板中，加入按鈕負責清除文件的內容。 IDR_SCRIBBTYPE 功能表資源中已定義此按鈕的訊息識別碼。 指定`Clear All`按鈕文字和裝飾按鈕點陣圖的索引。 開啟**工具箱**，然後將拖曳**按鈕**至**編輯**面板。 按一下按鈕，然後變更**標題**至`Clear All`，**識別碼**至`ID_EDIT_CLEAR_ALL`，**映像索引**至`0`， **Large Image Index**至`0`。  
+3.  若要**編輯** 面板中，加入按鈕負責清除文件的內容。 IDR_SCRIBBTYPE 功能表資源中已定義此按鈕的訊息識別碼。 指定*全部清除*按鈕文字和裝飾按鈕點陣圖的索引。 開啟**工具箱**，然後將拖曳**按鈕**至**編輯**面板。 按一下按鈕，然後變更**標題**至*全部清除*，**識別碼**至*ID_EDIT_CLEAR_ALL*，**映像索引**至*0*，**大型影像索引**至*0*。  
   
 4.  儲存變更，然後建置並執行應用程式。 Scribble 應用程式應該會顯示，且它必須有功能區列上方的視窗中，而不是功能表列。 功能區列應該有一個分類，**首頁**，和**首頁**應該有一個面板，**編輯**。 您新增的功能區按鈕應該與現有的事件處理常式，而**開啟**，**關閉**，**儲存**，**列印**，和**全部清除**按鈕應該可正常運作。  
   

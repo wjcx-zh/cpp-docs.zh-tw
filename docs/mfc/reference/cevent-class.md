@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367499"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950881"
 ---
 # <a name="cevent-class"></a>CEvent 類別
 表示事件，這是可讓一個執行緒通知發生事件的另一個執行緒的同步處理物件。  
@@ -64,7 +64,7 @@ class CEvent : public CSyncObject
   
  `CEvent` 物件有兩種類型： 手動和自動。  
   
- 自動`CEvent`物件會自動返回未收到訊號 （無法使用） 的狀態後發行至少一個執行緒。 根據預設，`CEvent`物件是自動的除非您傳遞`TRUE`如`bManualReset`在建構期間的參數。  
+ 自動`CEvent`物件會自動返回未收到訊號 （無法使用） 的狀態後發行至少一個執行緒。 根據預設，`CEvent`物件是自動的除非您傳遞`TRUE`如*bManualReset*在建構期間的參數。  
   
  手動`CEvent`物件停留在所設定的狀態[SetEvent](#setevent)或[ResetEvent](#resetevent)另一個函式呼叫之前。 若要建立手動`CEvent`物件，傳遞`TRUE`如`bManualReset`在建構期間的參數。  
   
@@ -103,16 +103,16 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bInitiallyOwn`  
- 如果**TRUE**，如執行緒**CMultilock**或`CSingleLock`啟用物件。 否則，就必須等候所有想要存取資源的執行緒。  
+ *bInitiallyOwn*  
+ 如果**TRUE**，如執行緒`CMultilock`或`CSingleLock`啟用物件。 否則，就必須等候所有想要存取資源的執行緒。  
   
  *bManualReset*  
  如果**TRUE**，指定，事件物件的手動事件，否則事件物件是自動的事件。  
   
- `lpszName`  
+ *lpszName*  
  `CEvent` 物件的名稱。 如果物件會使用跨處理序界限，必須提供。 如果名稱符合現有的事件，建構函式會建置新`CEvent`物件會參考該名稱的事件。 如果名稱相符的現有同步處理物件的不是事件，建構將會失敗。 如果**NULL**，名稱會是 null。  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  事件物件的安全性屬性。 此結構的完整說明，請參閱[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。  
   
 ### <a name="remarks"></a>備註  

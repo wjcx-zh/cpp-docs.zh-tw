@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384578"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956843"
 ---
 # <a name="tn014-custom-controls"></a>TN014：自訂控制項
 本附註將描述自訂和自繪控制項的 MFC 支援。 它也描述動態子類別化，並描述之間的關聯性[CWnd](../mfc/reference/cwnd-class.md)物件和`HWND`s。  
@@ -100,11 +100,11 @@ ms.locfileid: "33384578"
 ## <a name="using-self-draw-controls-and-menus"></a>使用自繪控制項和功能表  
  若是自繪功能表，您必須同時覆寫 `OnMeasureItem` 和 `OnDrawItem` 方法。  
   
- 若是自繪清單方塊和下拉式方塊，您必須覆寫 `OnMeasureItem` 和 `OnDrawItem`。 您必須為清單方塊指定 `LBS_OWNERDRAWVARIABLE` 樣式，或是為對話方塊範本中的下拉式方塊指定 `CBS_OWNERDRAWVARIABLE` 樣式。 `OWNERDRAWFIXED` 樣式無法搭配自繪項目使用，因為在自繪控制項附加至清單方塊之前就已決定了固定的項目高度  (您可以使用方法[CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight)和[CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight)克服這項限制。)  
+ 若是自繪清單方塊和下拉式方塊，您必須覆寫 `OnMeasureItem` 和 `OnDrawItem`。 在對話方塊範本中，您必須指定 LBS_OWNERDRAWVARIABLE 樣式，清單方塊或下拉式方塊的 CBS_OWNERDRAWVARIABLE 樣式。 OWNERDRAWFIXED 樣式不適用於自繪項目，因為自繪控制項附加至清單方塊之前就已決定固定的項目高度。 (您可以使用方法[CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight)和[CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight)克服這項限制。)  
   
- 轉換成 `OWNERDRAWVARIABLE` 樣式會強制系統將 `NOINTEGRALHEIGHT` 樣式套用至控制項。 因為控制項無法計算可改變大小的項目之整數高度，所以會忽略 `INTEGRALHEIGHT` 的預設樣式，而且控制項永遠是 `NOINTEGRALHEIGHT`。 如果您的項目高度固定，就可以藉由將控制項大小指定為項目大小的整數倍數防止繪製部分項目。  
+ 切換至 OWNERDRAWVARIABLE 樣式，將會強制系統 NOINTEGRALHEIGHT 樣式套用至控制項。 因為控制項無法計算與變數可調整大小的項目之整數高度，INTEGRALHEIGHT 的預設樣式會被忽略，而且控制項永遠是 NOINTEGRALHEIGHT。 如果您的項目高度固定，就可以藉由將控制項大小指定為項目大小的整數倍數防止繪製部分項目。  
   
- 對於採用 `LBS_SORT` 或 `CBS_SORT` 模式的自繪清單方塊和下拉式方塊，您必須覆寫 `OnCompareItem` 方法。  
+ 若是自繪清單方塊和下拉式方塊和 LBS_SORT 或 CBS_SORT 樣式，您必須覆寫`OnCompareItem`方法。  
   
  對於自繪清單方塊和下拉式方塊，通常不會覆寫 `OnDeleteItem`。 如果您要執行任何特殊處理，可以覆寫 `OnDeleteItem`。 適用的情況是，每個清單方塊或下拉式方塊項目都儲存了額外的記憶體或其他資源。  
   

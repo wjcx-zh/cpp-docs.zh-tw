@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc0fe5a59a5efedc00850da03be84bb212d4a51f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4dcd12f3d2f57b947beb71385327f0ad1a14975d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352095"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953268"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 類別
 實作回呼，當發生計時事件時由動畫 API 呼叫。  
@@ -77,10 +77,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pAnimationController`  
+ *pAnimationController*  
  動畫控制器，將會收到事件指標。  
   
- `ppTimerEventHandler`  
+ *ppTimerEventHandler*  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
@@ -113,7 +113,7 @@ IFACEMETHOD(OnRenderingTooSlow)(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>參數  
- `fps`  
+ *每秒畫面格*  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功則為 S_OK否則 E_FAIL。  
@@ -126,7 +126,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pAnimationController`  
+ *pAnimationController*  
  動畫控制器，將會收到事件指標。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324e6411673a509bdf75954634ff9c6dffc5ce1f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354422"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952050"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush 類別
 ID2D1Brush 包裝函式。  
@@ -117,7 +117,7 @@ void Attach(ID2D1Brush* pResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pResource`  
+ *pResource*  
  現有資源的介面。 不能是 NULL  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
@@ -131,13 +131,13 @@ CD2DBrush(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指標的不透明度和筆刷的轉換。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
 ##  <a name="destroy"></a>  CD2DBrush::Destroy  
@@ -185,7 +185,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `transform`  
+ *transform*  
  這會傳回包含目前的呈現目標的轉換。 這個參數未初始化便傳遞  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
@@ -230,7 +230,7 @@ void SetOpacity(FLOAT opacity);
 ```  
   
 ### <a name="parameters"></a>參數  
- `opacity`  
+ *不透明度*  
  介於 0 到 1，指出筆刷的不透明度值。 這個值是以線性方式調整所有像素的筆刷填滿的 alpha 值的常數乘數。 在之前一起相乘範圍 0 到 1 壓制的不透明度值  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
@@ -241,7 +241,7 @@ void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 ```  
   
 ### <a name="parameters"></a>參數  
- `transform`  
+ *transform*  
  要套用到轉譯目標的轉換  
   
 ## <a name="see-also"></a>另請參閱  

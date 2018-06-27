@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385303"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955670"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 現有的 ActiveX 控制項 （先前稱為 OLE 控制項） 可用不經修改網際網路上。 不過，您可以修改控制項以改善其效能。 當使用您在網頁上的控制項，還有其他考量。 .Ocx 檔案與所有支援的檔案必須是目標電腦上，或透過網際網路下載。 這可讓程式碼大小和下載時間的重要考量。 下載可封裝在簽署的.cab 檔案。 您可以標示為安全用於指令碼，以及用於初始化安全控制項。  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  `-s 6144`參數保留在程式碼簽署封包中的空間。  
   
 ### <a name="the-version-tag"></a>版本標記  
- 請注意這裡`#Version`指定封包檔的資訊適用於所指定的控制項`CLASSID`參數`<OBJECT>`標記。  
+ 請注意這裡`#Version`指定封包檔的資訊適用於所指定的控制項*CLASSID*參數`<OBJECT>`標記。  
   
- 根據指定的版本，您可以強制下載您的控制項。 完整規格`OBJECT`標記包括`CODEBASE`參數，請參閱 W3C 參考。  
+ 根據指定的版本，您可以強制下載您的控制項。 完整規格`OBJECT`標記包括*程式碼基底*參數，請參閱 W3C 參考。  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> 在指令碼和初始化標記控制項安全  
  在網頁中使用的 ActiveX 控制項應該標示為安全用於指令碼和初始化如果實際上是安全。 安全控制項不會執行磁碟 IO，或直接存取的記憶體或電腦的暫存器。  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  下 OCX 96 指導方針，控制項必須一律會了解其在背景中的調色盤。  
   
- 不要使用環境的調色盤屬性的舊容器將會傳送`WM_QUERYNEWPALETTE`和`WM_PALETTECHANGED`訊息。 控制項可以覆寫`OnQueryNewPalette`和`OnPaletteChanged`來處理這些訊息。  
+ 不要使用環境的調色盤屬性的舊容器會傳送 WM_QUERYNEWPALETTE 和 WM_PALETTECHANGED 訊息。 控制項可以覆寫`OnQueryNewPalette`和`OnPaletteChanged`來處理這些訊息。  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer 瀏覽器安全性層級和控制行為  
  在瀏覽器的安全性層級，可由使用者設定的選項。 網頁可能包含作用中的內容可能會傷害使用者的電腦，因為瀏覽器會允許使用者選取安全性層級的選項。 根據瀏覽器實作的安全性層級的方式，控制項可能不完全下載，或憑證或警告訊息，讓使用者在執行階段選擇要下載此控制項將會顯示。 高、 中、 低安全性等級下在 Internet Explorer 的 ActiveX 控制項的行為如下所示。  

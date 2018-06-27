@@ -69,12 +69,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3790e2b4aa5987fbcf66d1913e25de5dfd97ea2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385521"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957207"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022：標準命令實作
 > [!NOTE]
@@ -90,16 +90,16 @@ ms.locfileid: "33385521"
 ## <a name="contents-of-this-technical-note"></a>這個技術提示的內容  
  每個命令 ID 是由兩個章節所述：  
   
--   標題： 命令 ID 的符號名稱 (例如， **ID_FILE_SAVE**) 後面接著冒號分隔 （例如，"來儲存目前文件 」） 命令的目的。  
+-   標題： 以冒號分隔的命令 ID (例如，ID_FILE_SAVE) 的符號名稱，後面接著命令 （例如，"來儲存目前文件 」） 的目的。  
   
 -   一或多個段落描述哪些類別實作命令，與預設實作的功能  
   
  大部分的預設命令實作被 prewired 架構的基底類別訊息對應中。 有一些需要明確的連接，衍生類別中的命令實作方式。 這些是 「 注意 」 下所述。 如果您在 AppWizard 選擇正確的選項，這些預設處理常式將為您產生的基本架構應用程式中連接。  
   
 ## <a name="naming-convention"></a>命名規範  
- 標準命令，請依照下列簡單的命名慣例，我們建議您盡可能使用。 大部分的標準命令位於應用程式的功能表列中的標準位置。 此命令的符號名稱開頭"ID_"後面加上標準的快顯功能表名稱，後面接著功能表項目名稱。 符號名稱是使用底線斷字法的上限情況下。 對於不會有標準功能表項目名稱的命令，邏輯命令定義名稱開頭為"ID_"(例如， **ID_NEXT_PANE**)。  
+ 標準命令，請依照下列簡單的命名慣例，我們建議您盡可能使用。 大部分的標準命令位於應用程式的功能表列中的標準位置。 此命令的符號名稱開頭"ID_"後面加上標準的快顯功能表名稱，後面接著功能表項目名稱。 符號名稱是使用底線斷字法的上限情況下。 對於不會有標準功能表項目名稱的命令，邏輯命令名稱開頭為"ID_"(例如，ID_NEXT_PANE) 定義。  
   
- 我們會使用前置詞"ID_"表示設計用來繫結至功能表項目、 工具列按鈕或其他命令的使用者介面物件的命令。 處理 「 ID_"命令的命令處理常式應該使用`ON_COMMAND`和`ON_UPDATE_COMMAND_UI`機制的 MFC 命令架構。  
+ 我們會使用前置詞"ID_"表示設計用來繫結至功能表項目、 工具列按鈕或其他命令的使用者介面物件的命令。 處理 「 ID_"命令的命令處理常式應該使用 ON_COMMAND 和 ON_UPDATE_COMMAND_UI 機制 MFC 命令架構。  
   
  我們建議您未遵循命令架構和需要功能表特定程式碼來啟用和停用這些功能表項目使用標準 「 IDM_"前置詞。 當然功能表特定命令的數目應該很小因為遵循 MFC 命令架構不僅 （因為它們都可以使用工具列） 讓命令處理常式是更為強大，但也可讓命令處理常式程式碼可重複使用。  
   
@@ -120,47 +120,47 @@ ms.locfileid: "33385521"
   
      `CWinApp::OnFileNew` 應用程式中實作此命令，以不同的方式視文件範本數目而定。 如果只有一個`CDocTemplate`，`CWinApp::OnFileNew`會建立該型別，以及適當的框架和檢視類別的新文件。  
   
-     如果有一個以上`CDocTemplate`，`CWinApp::OnFileNew`會提示使用者與對話方塊 (**AFX_IDD_NEWTYPEDLG**) 但是讓他們可以選取要使用的文件類型。 所選`CDocTemplate`用來建立文件。  
+     如果有一個以上`CDocTemplate`，`CWinApp::OnFileNew`將會提示使用者一個對話方塊 (AFX_IDD_NEWTYPEDLG)，但是讓他們選取哪些文件使用的型別。 所選`CDocTemplate`用來建立文件。  
   
-     一個常見的自訂的`ID_FILE_NEW`是要提供不同和文件類型的圖形化選項。 在此情況下您可以實作您自己**CMyApp::OnFileNew**並將它放在您的訊息對應，而不是`CWinApp::OnFileNew`。 沒有需要呼叫基底類別實作。  
+     ID_FILE_NEW 的一個常見的自訂是要提供不同和文件類型的圖形化選項。 在此情況下您可以實作您自己`CMyApp::OnFileNew`並將它放在您的訊息對應，而不是`CWinApp::OnFileNew`。 沒有需要呼叫基底類別實作。  
   
-     另一個常見的自訂`ID_FILE_NEW`是提供一個個別的命令建立每個類型的文件。 在此情況下，您應該定義新的命令識別碼，例如 ID_FILE_NEW_CHART 和 ID_FILE_NEW_SHEET。  
+     ID_FILE_NEW 的另一個常見的自訂是提供一個個別的命令可用於建立每個類型的文件。 在此情況下，您應該定義新的命令識別碼，例如 ID_FILE_NEW_CHART 和 ID_FILE_NEW_SHEET。  
   
 -   ID_FILE_OPEN 開啟現有文件。  
   
     > [!NOTE]
     >  您必須連接為您`CWinApp`-衍生類別的訊息對應，若要啟用這項功能。  
   
-     `CWinApp::OnFileOpen` 有非常簡單的實作，於呼叫**CWinApp::DoPromptFileName**後面`CWinApp::OpenDocumentFile`来開啟的檔案的檔案或路徑名稱。 `CWinApp`實作常式**DoPromptFileName**標準 FileOpen 對話方塊隨即開啟，並填入取自目前文件範本的副檔名。  
+     `CWinApp::OnFileOpen` 有非常簡單的實作，於呼叫`CWinApp::DoPromptFileName`後面`CWinApp::OpenDocumentFile`来開啟的檔案的檔案或路徑名稱。 `CWinApp`實作常式`DoPromptFileName`標準 FileOpen 對話方塊隨即開啟，並填入取自目前文件範本的副檔名。  
   
-     一個常見的自訂的`ID_FILE_OPEN`是來自訂 [開啟舊檔] 對話方塊或新增其他檔案篩選器。 若要自訂此的建議的方式是將預設實作取代您自己的 FileOpen 對話方塊中，並呼叫`CWinApp::OpenDocumentFile`文件的檔案或路徑名稱。 沒有需要呼叫基底類別。  
+     ID_FILE_OPEN 的一個常見的自訂是自訂 FileOpen 對話方塊或加入額外的檔案篩選器。 若要自訂此的建議的方式是將預設實作取代您自己的 FileOpen 對話方塊中，並呼叫`CWinApp::OpenDocumentFile`文件的檔案或路徑名稱。 沒有需要呼叫基底類別。  
   
 -   ID_FILE_CLOSE 關閉目前開啟的文件。  
   
-     **CDocument::OnFileClose**呼叫`CDocument::SaveModified`提示使用者儲存文件，如果它已經過修改，然後呼叫`OnCloseDocument`。 所有右邏輯，包括破壞文件，都是在`OnCloseDocument`常式。  
+     `CDocument::OnFileClose` 呼叫`CDocument::SaveModified`提示使用者儲存文件，如果它已經過修改，然後呼叫`OnCloseDocument`。 所有右邏輯，包括破壞文件，都是在`OnCloseDocument`常式。  
   
     > [!NOTE]
-    >  **ID_FILE_CLOSE**做以不同的方式從`WM_CLOSE`訊息或**SC_CLOSE**系統命令傳送至文件框架視窗。 關閉視窗會顯示文件的最後一個框架視窗時，才關閉文件。 關閉使用中文件**ID_FILE_CLOSE**才不會關閉文件，但所有顯示的文件的框架視窗將會關閉。  
+    >  ID_FILE_CLOSE 會以不同的方式從 WM_CLOSE 訊息或傳送至文件框架視窗 SC_CLOSE 系統命令。 關閉視窗會顯示文件的最後一個框架視窗時，才關閉文件。 關閉文件 ID_FILE_CLOSE 才不會關閉文件但所有顯示的文件的框架視窗將會關閉。  
   
 -   ID_FILE_SAVE 儲存目前的文件。  
   
-     實作會使用 helper 常式**CDocument::DoSave** ，可用來同時**OnFileSave**和**OnFileSaveAs**。 如果您儲存之前尚未儲存的文件 （也就是它並沒有為路徑名稱，如果是 FileNew） 或已讀取從唯讀的文件， **OnFileSave**邏輯有如**ID_FILE_SAVE_AS**命令，並要求使用者提供新的檔案名稱。 開啟檔案，並執行儲存的實際程序透過虛擬函式`OnSaveDocument`。  
+     實作會使用 helper 常式`CDocument::DoSave`，可用來同時`OnFileSave`和`OnFileSaveAs`。 如果您儲存之前尚未儲存的文件 （也就是它並沒有為路徑名稱，如果是 FileNew） 或已讀取從唯讀的文件，`OnFileSave`邏輯會作用，如同 ID_FILE_SAVE_AS 命令，並要求使用者提供新的檔案名稱. 開啟檔案，並執行儲存的實際程序透過虛擬函式`OnSaveDocument`。  
   
-     有兩個常見的原因，若要自訂**ID_FILE_SAVE**。 對於沒有儲存的文件，只要移除**ID_FILE_SAVE**功能表項目和工具列按鈕，從您的使用者介面。 此外也請確定您永遠不會變更您的文件 (也就是永遠不會呼叫`CDocument::SetModifiedFlag`) 和架構永遠不會造成要儲存文件。 對於某處儲存至磁碟檔以外的文件，定義新的命令，該作業。  
+     有兩個自訂 ID_FILE_SAVE 的常見原因。 對於沒有儲存的文件，只要 ID_FILE_SAVE 功能表項目和工具列按鈕從移除您的使用者介面。 此外也請確定您永遠不會變更您的文件 (也就是永遠不會呼叫`CDocument::SetModifiedFlag`) 和架構永遠不會造成要儲存文件。 對於某處儲存至磁碟檔以外的文件，定義新的命令，該作業。  
   
-     如果是`COleServerDoc`， **ID_FILE_SAVE**同時用於儲存的檔案 （適用於一般的文件） 並 （適用於內嵌的文件） 的檔案更新。  
+     如果是`COleServerDoc`，ID_FILE_SAVE 用於儲存的檔案 （適用於一般的文件） 及 （針對內嵌文件） 的檔案更新。  
   
-     如果文件資料會儲存在個別的磁碟檔案，但是您不想使用預設的**CDocument**序列化實作，您應該覆寫`CDocument::OnSaveDocument`而不是**OnFileSave**。  
+     如果文件資料會儲存在個別的磁碟檔案，但是您不想使用預設的`CDocument`序列化實作，您應該覆寫`CDocument::OnSaveDocument`而不是`OnFileSave`。  
   
 -   ID_FILE_SAVE_AS 儲存目前的文件不同的檔案名稱。  
   
-     **CDocument::OnFileSaveAs**實作會使用相同**CDocument::DoSave** helper 常式做為**OnFileSave**。 **OnFileSaveAs**就如同處理命令**ID_FILE_SAVE**如果文件儲存之前沒有任何檔案名稱。 **COleServerDoc::OnFileSaveAs**儲存一般文件資料檔案，或儲存表示 OLE 物件的伺服器文件的邏輯內嵌在其他應用程式是以個別檔案中的實作。  
+     `CDocument::OnFileSaveAs`實作會使用相同`CDocument::DoSave`helper 常式做為`OnFileSave`。 `OnFileSaveAs`如果文件不有任何檔案名稱在儲存之前一樣 ID_FILE_SAVE 處理命令。 `COleServerDoc::OnFileSaveAs` 實作的邏輯儲存一般文件資料檔案，或儲存表示 OLE 物件內嵌在其他應用程式是以個別檔案中的伺服器文件。  
   
-     如果您自訂的邏輯**ID_FILE_SAVE**，您可能會想要自訂**ID_FILE_SAVE_AS**類似的方式或 另存新檔 」 的作業可能會套用到您的文件。 如果不需要您可以從功能表列移除功能表項目。  
+     如果您自訂的 ID_FILE_SAVE 邏輯，您可能要以類似的方式自訂 ID_FILE_SAVE_AS 或者 另存新檔 」 的作業可能不適用於您的文件。 如果不需要您可以從功能表列移除功能表項目。  
   
 -   ID_FILE_SAVE_COPY_AS 來儲存複製目前文件以新名稱。  
   
-     **COleServerDoc::OnFileSaveCopyAs**實作是非常類似於**CDocument::OnFileSaveAs**，不同之處在於文件物件不 「 附加 」 到基礎檔案後儲存。 也就是記憶體中的文件的 「 修改 」 在儲存之前，如果它是仍 「 修改 」。 此外，此命令會具有不會影響路徑名稱或儲存在文件的標題。  
+     `COleServerDoc::OnFileSaveCopyAs`實作是非常類似於`CDocument::OnFileSaveAs`，不同之處在於文件物件不 「 附加 」 到基礎檔案後儲存。 也就是記憶體中的文件的 「 修改 」 在儲存之前，如果它是仍 「 修改 」。 此外，此命令會具有不會影響路徑名稱或儲存在文件的標題。  
   
 -   ID_FILE_UPDATE 通知儲存內嵌的文件容器。  
   
@@ -179,9 +179,9 @@ ms.locfileid: "33385521"
   
      此命令會叫用標準列印設定對話方塊，可讓使用者自訂印表機及列印設定至少這份文件或最多的所有文件在此應用程式。 您必須使用控制台中，若要變更預設的印表機設定整個系統。  
   
-     `CWinApp::OnFilePrintSetup` 有非常簡單的實作，建立`CPrintDialog`物件並呼叫**CWinApp::DoPrintDialog**實作函式。 這會設定應用程式的預設印表機設定。  
+     `CWinApp::OnFilePrintSetup` 有非常簡單的實作，建立`CPrintDialog`物件並呼叫`CWinApp::DoPrintDialog`實作函式。 這會設定應用程式的預設印表機設定。  
   
-     一般需要自訂此命令可讓每個文件的印表機設定，應該儲存與文件儲存時。 若要這樣做，您應該加入中的訊息對應處理常式您**CDocument**類別會建立`CPrintDialog`物件，請使用適當的印表機屬性將它初始化 (通常**hDevMode**和**hDevNames**)，呼叫**CPrintDialog::DoModal，** 並儲存變更的印表機的設定。 健全的實作，您應該查看的實作**CWinApp::DoPrintDialog**偵測錯誤和**CWinApp::UpdatePrinterSelection**合理的預設值處理和追蹤整個系統的印表機變更。  
+     一般需要自訂此命令可讓每個文件的印表機設定，應該儲存與文件儲存時。 若要這樣做，您應該加入中的訊息對應處理常式您`CDocument`類別會建立`CPrintDialog`物件，請使用適當的印表機屬性將它初始化 (通常*hDevMode*和*hDevNames*)，呼叫`CPrintDialog::DoModal`，並儲存變更的印表機的設定。 健全的實作，您應該查看的實作`CWinApp::DoPrintDialog`偵測錯誤和`CWinApp::UpdatePrinterSelection`對於合理的預設值處理及追蹤整個系統的印表機變更。  
   
 -   ID_FILE_PRINT 標準列印目前文件的功能  
   
@@ -190,26 +190,26 @@ ms.locfileid: "33385521"
   
      此命令會列印目前文件，或更正確地開始列印程序，牽涉到叫用標準的列印對話方塊，並執行列印引擎。  
   
-     **CView::OnFilePrint**可實作此命令與主要列印迴圈。 它會呼叫虛擬`CView::OnPreparePrinting`與 [列印] 對話方塊之使用者的提示。 然後它會準備輸出 DC 移至印表機、 列印進度 對話方塊隨即開啟 (**AFX_IDD_PRINTDLG**)，並將傳送`StartDoc`逸出到印表機。 **CView::OnFilePrint**也包含主要頁面導向列印迴圈。 針對每個頁面上，它會呼叫虛擬`CView::OnPrepareDC`後面`StartPage`逸出，然後呼叫虛擬`CView::OnPrint`分頁。 完成時，虛擬`CView::OnEndPrinting`呼叫時，並關閉 [列印] 進度對話方塊。  
+     `CView::OnFilePrint` 實作此命令和主要的列印迴圈。 它會呼叫虛擬`CView::OnPreparePrinting`與 [列印] 對話方塊之使用者的提示。 然後準備要移至印表機的輸出 DC，會開啟 [列印] 進度對話方塊 (AFX_IDD_PRINTDLG)，並傳送`StartDoc`逸出到印表機。 `CView::OnFilePrint` 也包含主要頁面導向列印迴圈。 針對每個頁面上，它會呼叫虛擬`CView::OnPrepareDC`後面`StartPage`逸出，然後呼叫虛擬`CView::OnPrint`分頁。 完成時，虛擬`CView::OnEndPrinting`呼叫時，並關閉 [列印] 進度對話方塊。  
   
-     MFC 列印架構被設計來攔截 (hook) 中列印和預覽列印的許多不同的方式。 您通常會發現各種`CView`適合任何頁面導向的列印工作的可覆寫函式。 只在使用印表機的非頁面導向輸出，您應該會發現需要取代的應用程式的情況下**ID_FILE_PRINT**實作。  
+     MFC 列印架構被設計來攔截 (hook) 中列印和預覽列印的許多不同的方式。 您通常會發現各種`CView`適合任何頁面導向的列印工作的可覆寫函式。 只在非網頁導向輸出使用的印表機的應用程式，應該您會發現需要取代 ID_FILE_PRINT 實作。  
   
 -   目前的文件 ID_FILE_PRINT_PREVIEW 輸入預覽列印模式。  
   
     > [!NOTE]
     >  您必須連接為您`CView`-衍生類別的訊息對應，若要啟用這項功能。  
   
-     **CView::OnFilePrintPreview**藉由呼叫記載的 helper 函式會啟動預覽列印模式**CView::DoPrintPreview**。 **CView::DoPrintPreview**是一樣的預覽列印迴圈的主要引擎**OnFilePrint**是列印迴圈的主要引擎。  
+     `CView::OnFilePrintPreview` 藉由呼叫記載的 helper 函式會啟動預覽列印模式`CView::DoPrintPreview`。 `CView::DoPrintPreview` 一樣是在預覽列印迴圈，主要引擎`OnFilePrint`是列印迴圈的主要引擎。  
   
-     預覽列印作業可以藉由傳遞不同的參數，以自訂各種方式**DoPrintPreview**。 請參閱[技術附註 30](../mfc/tn030-customizing-printing-and-print-preview.md)、 會討論的一些預覽列印的詳細資訊以及如何加以自訂。  
+     預覽列印作業可以藉由傳遞不同的參數，以自訂各種方式`DoPrintPreview`。 請參閱[技術附註 30](../mfc/tn030-customizing-printing-and-print-preview.md)、 會討論的一些預覽列印的詳細資訊以及如何加以自訂。  
   
--   **ID_FILE_MRU_FILE1**...**FILE16**檔案最近使用的命令 Id 範圍`list`。  
+-   ID_FILE_MRU_FILE1...FILE16 之檔案的最近使用的命令 Id 的範圍**清單**。  
   
-     **CWinApp::OnUpdateRecentFileMenu**是更進階的用途之一是更新命令 UI 處理常式`ON_UPDATE_COMMAND_UI`機制。 在功能表資源中，您只需要定義單一的功能表項目識別碼**ID_FILE_MRU_FILE1**。 該功能表項目會維持原先停用。  
+     `CWinApp::OnUpdateRecentFileMenu` 是為更進階的用途之一 ON_UPDATE_COMMAND_UI 機制更新命令 UI 處理常式。 在功能表資源中，您只需要具有識別碼 ID_FILE_MRU_FILE1 定義單一功能表項目。 該功能表項目會維持原先停用。  
   
      為 MRU 清單成長，多個功能表項目加入至清單。 標準`CWinApp`實作預設為標準的四個最近使用過的檔案限制。 您可以變更預設值，藉由呼叫`CWinApp::LoadStdProfileSettings`變大或較小的值。 MRU 清單會儲存在應用程式中。INI 檔案。 在您的應用程式中載入清單`InitInstance`函式，如果您呼叫`LoadStdProfileSettings`，並儲存您的應用程式結束時。 MRU 更新命令 UI 處理常式也會將轉換絕對路徑 [檔案] 功能表上顯示的相對路徑。  
   
-     **CWinApp::OnOpenRecentFile**是`ON_COMMAND`執行實際的命令處理常式。 它只會從 MRU 清單和呼叫取得檔案名稱`CWinApp::OpenDocumentFile`，其會開啟檔案並更新 MRU 清單的所有工作。  
+     `CWinApp::OnOpenRecentFile` 是執行實際的命令 ON_COMMAND 處理常式。 它只會從 MRU 清單和呼叫取得檔案名稱`CWinApp::OpenDocumentFile`，其會開啟檔案並更新 MRU 清單的所有工作。  
   
      不建議使用此命令處理常式的自訂。  
   
@@ -247,7 +247,7 @@ ms.locfileid: "33385521"
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView` 提供此命令，就會呼叫實作 helper 函式的實作**OnEditFindReplace**使用，並將先前的尋找/取代設定儲存在私用實作變數。 `CFindReplaceDialog`類別用來管理非強制回應對話方塊，提示使用者。  
+     `CEditView` 提供此命令，就會呼叫實作 helper 函式的實作`OnEditFindReplace`使用，並將先前的尋找/取代設定儲存在私用實作變數。 `CFindReplaceDialog`類別用來管理非強制回應對話方塊，提示使用者。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -257,7 +257,7 @@ ms.locfileid: "33385521"
   
      `CEditView` 提供的複製目前剪貼簿的資料取代所選取的文字使用這個命令實作`CEdit::Paste`。 如果沒有，命令會停用任何**CF_TEXT**剪貼簿中。  
   
-     **COleClientDoc**只是這個命令中提供的更新命令 UI 處理常式。 如果剪貼簿不包含內嵌 OLE 項目/物件，此命令將停用。 您必須負責撰寫實際執行的實際貼上命令處理常式。 如果您的 OLE 應用程式也可以貼上其他格式，您應該提供您自己更新命令 UI 處理常式在檢視或文件中的 (也就是某個位置之前**COleClientDoc**命令目標路由中)。  
+     `COleClientDoc` 此命令，只是提供的更新命令 UI 處理常式。 如果剪貼簿不包含內嵌 OLE 項目/物件，此命令將停用。 您必須負責撰寫實際執行的實際貼上命令處理常式。 如果您的 OLE 應用程式也可以貼上其他格式，您應該提供您自己更新命令 UI 處理常式在檢視或文件中的 (也就是某個位置之前`COleClientDoc`命令目標路由中)。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -291,7 +291,7 @@ ms.locfileid: "33385521"
   
      目前沒有任何標準的實作，此命令。 您必須針對每個實作此`CView`-衍生的類別。  
   
-     `CEditView` 提供此命令，就會呼叫實作 helper 函式的實作**OnEditFindReplace**使用，並將先前的尋找/取代設定儲存在私用實作變數。 `CFindReplaceDialog`類別用來管理非強制回應對話方塊，提示使用者。  
+     `CEditView` 提供此命令，就會呼叫實作 helper 函式的實作`OnEditFindReplace`使用，並將先前的尋找/取代設定儲存在私用實作變數。 `CFindReplaceDialog`類別用來管理非強制回應對話方塊，提示使用者。  
   
      如果您選擇實作此命令，我們建議使用此命令識別碼。  
   
@@ -319,15 +319,15 @@ ms.locfileid: "33385521"
   
 -   ID_WINDOW_NEW 開啟使用中文件的另一個視窗。  
   
-     **CMDIFrameWnd::OnWindowNew**使用目前的文件的文件範本建立另一個包含目前文件的另一個檢視的框架會實作這個強大的功能。  
+     `CMDIFrameWnd::OnWindowNew` 使用目前的文件的文件範本建立另一個包含目前文件的另一個檢視的框架會實作這個強大的功能。  
   
      大部分多個文件介面 (MDI) 視窗功能表命令，例如命令已停用，如果沒有任何作用中的 MDI 子視窗。  
   
-     不建議使用此命令處理常式的自訂。 如果您想要提供建立額外的檢視或框架視窗的命令，您可能會比較好的方式 ¬ 您自己的命令。 您可以複製程式碼從**CMDIFrameWnd::OnWindowNew**並加以修改以您慣用的特定框架和檢視類別。  
+     不建議使用此命令處理常式的自訂。 如果您想要提供建立額外的檢視或框架視窗的命令，您可能會比較好的方式 ¬ 您自己的命令。 您可以複製程式碼從`CMDIFrameWnd::OnWindowNew`並加以修改以您慣用的特定框架和檢視類別。  
   
 -   在 MDI 視窗底部的 ID_WINDOW_ARRANGE 排列圖示。  
   
-     `CMDIFrameWnd` 實作 helper 函式以實作此標準的 MDI 命令**OnMDIWindowCmd**。 此協助程式將命令 Id 對應至 MDI 視窗訊息，因此會共用大量程式碼。  
+     `CMDIFrameWnd` 實作 helper 函式以實作此標準的 MDI 命令`OnMDIWindowCmd`。 此協助程式將命令 Id 對應至 MDI 視窗訊息，因此會共用大量程式碼。  
   
      大部份 MDI 視窗功能表命令，例如命令已停用，如果沒有任何作用中的 MDI 子視窗。  
   
@@ -335,7 +335,7 @@ ms.locfileid: "33385521"
   
 -   ID_WINDOW_CASCADE 重疊顯示視窗重疊。  
   
-     `CMDIFrameWnd` 實作 helper 函式以實作此標準的 MDI 命令**OnMDIWindowCmd**。 此協助程式將命令 Id 對應至 MDI 視窗訊息，因此會共用大量程式碼。  
+     `CMDIFrameWnd` 實作 helper 函式以實作此標準的 MDI 命令`OnMDIWindowCmd`。 此協助程式將命令 Id 對應至 MDI 視窗訊息，因此會共用大量程式碼。  
   
      大部份 MDI 視窗功能表命令，例如命令已停用，如果沒有任何作用中的 MDI 子視窗。  
   
@@ -343,15 +343,15 @@ ms.locfileid: "33385521"
   
 -   ID_WINDOW_TILE_HORZ 磚 windows 水平。  
   
-     此命令中實作`CMDIFrameWnd`一樣**ID_WINDOW_CASCADE**、 但不同的 MDI 視窗訊息作業所用的。  
+     此命令中實作`CMDIFrameWnd`一樣 ID_WINDOW_CASCADE，除了作業使用不同的 MDI 視窗訊息。  
   
-     您的應用程式，您就應該挑選預設的並排方向。 您可以藉由變更視窗 」 磚 功能表項目的 ID 為**ID_WINDOW_TILE_HORZ**或**ID_WINDOW_TILE_VERT**。  
+     您的應用程式，您就應該挑選預設的並排方向。 您可以變更 ID_WINDOW_TILE_HORZ 或 ID_WINDOW_TILE_VERT 視窗 」 磚 功能表項目的識別碼。  
   
 -   ID_WINDOW_TILE_VERT 磚 windows 垂直。  
   
-     此命令中實作`CMDIFrameWnd`一樣**ID_WINDOW_CASCADE**、 但不同的 MDI 視窗訊息作業所用的。  
+     此命令中實作`CMDIFrameWnd`一樣 ID_WINDOW_CASCADE，除了作業使用不同的 MDI 視窗訊息。  
   
-     您的應用程式，您就應該挑選預設的並排方向。 您可以藉由變更視窗 」 磚 功能表項目的 ID 為**ID_WINDOW_TILE_HORZ**或**ID_WINDOW_TILE_VERT**。  
+     您的應用程式，您就應該挑選預設的並排方向。 您可以變更 ID_WINDOW_TILE_HORZ 或 ID_WINDOW_TILE_VERT 視窗 」 磚 功能表項目的識別碼。  
   
 -   分隔器 ID_WINDOW_SPLIT 鍵盤介面。  
   
@@ -369,7 +369,7 @@ ms.locfileid: "33385521"
   
 -   ID_APP_EXIT 結束應用程式。  
   
-     **CWinApp::OnAppExit**處理這個命令藉由傳送`WM_CLOSE`應用程式的主視窗的訊息。 正在關閉 （提示已變更的檔案，依此類推） 的應用程式的標準由`CFrameWnd`實作。  
+     `CWinApp::OnAppExit` 處理這個命令藉由傳送 WM_CLOSE 訊息至應用程式的主視窗。 正在關閉 （提示已變更的檔案，依此類推） 的應用程式的標準由`CFrameWnd`實作。  
   
      不建議使用此命令處理常式的自訂。 覆寫`CWinApp::SaveAllModified`或`CFrameWnd`建議關閉邏輯。  
   
@@ -422,7 +422,7 @@ ms.locfileid: "33385521"
   
 -   ID_NEXT_PANE 會移至下一個窗格  
   
-     `CView` 處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派**CSplitterWnd::OnNextPaneCmd**。 這會將現用檢視表移到分隔器的下一個窗格。  
+     `CView` 處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派`CSplitterWnd::OnNextPaneCmd`。 這會將現用檢視表移到分隔器的下一個窗格。  
   
      如果檢視不是分隔器或移至沒有下一個窗格，此命令會停用。  
   
@@ -430,7 +430,7 @@ ms.locfileid: "33385521"
   
 -   ID_PREV_PANE 前往上一個窗格  
   
-     `CView` 處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派**CSplitterWnd::OnNextPaneCmd**。 這會將上一個窗格中用來分隔移現用檢視表。  
+     `CView` 處理此命令為`CSplitterWnd`實作。 如果檢視是分隔視窗的一部分，此命令會將實作函式委派`CSplitterWnd::OnNextPaneCmd`。 這會將上一個窗格中用來分隔移現用檢視表。  
   
      如果檢視不是分隔器或移至沒有上一個窗格，此命令會停用。  
   
@@ -440,7 +440,7 @@ ms.locfileid: "33385521"
   
      目前沒有任何標準的實作，此命令。 您必須實作此作業對於您`CView`-衍生的類別，在目前的選取範圍中插入新的 OLE 項目/物件。  
   
-     所有的 OLE 用戶端應用程式應該實作此命令。 AppWizard，OLE 選項時，會建立基本架構實作**OnInsertObject**中檢視類別，您必須完成。  
+     所有的 OLE 用戶端應用程式應該實作此命令。 AppWizard，OLE 選項時，會建立基本架構實作`OnInsertObject`中檢視類別，您必須完成。  
   
      請參閱 MFC OLE 範例[OCLIENT](../visual-cpp-samples.md)此命令的完整實作的範例。  
   
@@ -452,42 +452,42 @@ ms.locfileid: "33385521"
   
 -   ID_OLE_VERB_FIRST...OLE 指令動詞的最後一個識別碼範圍  
   
-     `COleDocument` 使用此命令 ID 範圍的目前選取的 OLE 項目/物件支援的動詞。 因為指定的 OLE 項目/物件型別可以支援零個或多個自訂動詞命令必須在範圍內。 在您的應用程式功能表中，您應該有一個功能表項目識別碼為**ID_OLE_VERB_FIRST**。 當程式執行時，功能表將會更新與適當的功能表動詞描述 （或有許多動詞命令的快顯功能表）。 OLE 功能表的管理由`AfxOleSetEditMenu`，此命令的更新命令 UI 處理常式中完成。  
+     `COleDocument` 使用此命令 ID 範圍的目前選取的 OLE 項目/物件支援的動詞。 因為指定的 OLE 項目/物件型別可以支援零個或多個自訂動詞命令必須在範圍內。 在您的應用程式功能表中，您應該有一個功能表項目與 ID_OLE_VERB_FIRST 的識別碼。 當程式執行時，功能表將會更新與適當的功能表動詞描述 （或有許多動詞命令的快顯功能表）。 OLE 功能表的管理由`AfxOleSetEditMenu`，此命令的更新命令 UI 處理常式中完成。  
   
-     沒有明確的命令處理常式處理每個範圍中的命令 ID。 **COleDocument::OnCmdMsg**會覆寫以攔截這個範圍內的所有命令識別碼、 變成以零為起始的動詞命令的數字，並啟動該動詞命令的伺服器 (使用`COleClientItem::DoVerb`)。  
+     沒有明確的命令處理常式處理每個範圍中的命令 ID。 `COleDocument::OnCmdMsg` 會覆寫以攔截這個範圍內的所有命令識別碼、 變成以零為起始的動詞命令的數字，並啟動該動詞命令的伺服器 (使用`COleClientItem::DoVerb`)。  
   
      不建議自訂或其他使用此命令識別碼範圍。  
   
 -   ID_VIEW_TOOLBAR 切換工具列開啟 / 關閉  
   
-     `CFrameWnd` 處理這個命令，並更新命令 UI 處理常式來切換工具列的可見狀態。 工具列必須是子視窗框架的子視窗識別碼與`AFX_IDW_TOOLBAR`。 命令處理常式實際切換工具列視窗的可見性。 `CFrameWnd::RecalcLayout` 用來重新繪製其新的狀態與工具列的框架視窗。 更新命令 UI 處理常式會檢查功能表項目，則工具列會顯示。  
+     `CFrameWnd` 處理這個命令，並更新命令 UI 處理常式來切換工具列的可見狀態。 工具列必須與子視窗識別碼的 AFX_IDW_TOOLBAR 框架中的子視窗。 命令處理常式實際切換工具列視窗的可見性。 `CFrameWnd::RecalcLayout` 用來重新繪製其新的狀態與工具列的框架視窗。 更新命令 UI 處理常式會檢查功能表項目，則工具列會顯示。  
   
      不建議使用此命令處理常式的自訂。 如果您想要新增其他工具列，您會想要複製和修改命令處理常式和更新命令 UI 處理常式，此命令。  
   
 -   ID_VIEW_STATUS_BAR 會開啟和關閉切換狀態列  
   
-     中實作此命令`CFrameWnd`一樣**ID_VIEW_TOOLBAR**，除非其他子視窗 ID (**AFX_IDW_STATUS_BAR**) 使用。  
+     此命令中實作`CFrameWnd`就像 ID_VIEW_TOOLBAR，除了識別碼 (AFX_IDW_STATUS_BAR) 會使用不同的子視窗。  
   
 ## <a name="update-only-command-handlers"></a>僅更新命令處理常式  
- 在狀態列中的指標用數種標準命令 Id。 這些使用的相同處理機制的更新命令 UI 以顯示其目前的視覺狀態在應用程式的閒置時間。 由於使用者無法選取 （也就是說，您無法發送狀態列窗格），則它沒有任何意義有`ON_COMMAND`這些命令 Id 的處理常式。  
+ 在狀態列中的指標用數種標準命令 Id。 這些使用的相同處理機制的更新命令 UI 以顯示其目前的視覺狀態在應用程式的閒置時間。 由於使用者無法選取 （也就是說，您無法發送狀態列窗格），則它沒有任何意義有 ON_COMMAND 處理常式，這些命令 Id。  
   
--   **ID_INDICATOR_CAPS** : CAP 鎖定指示器。  
+-   ID_INDICATOR_CAPS: CAP 鎖定指示器。  
   
--   **ID_INDICATOR_NUM** : NUM lock 指標。  
+-   ID_INDICATOR_NUM: NUM lock 指標。  
   
--   **ID_INDICATOR_SCRL** : SCRL 鎖定指示器。  
+-   ID_INDICATOR_SCRL: SCRL 鎖定指示器。  
   
--   **ID_INDICATOR_KANA** ： 假名鎖定指示器 （僅適用於日文系統）。  
+-   ID_INDICATOR_KANA： 假名鎖定 （僅適用於日文系統） 的指標。  
   
- 會實作所有三個**CFrameWnd::OnUpdateKeyIndicator**，對應至適當的虛擬索引鍵使用的命令 ID 的實作協助程式。 一般實作啟用或停用 （停用狀態窗格 = 沒有文字）`CCmdUI`根據是否適當的虛擬機碼，所以目前鎖定的物件。  
+ 會實作所有三個`CFrameWnd::OnUpdateKeyIndicator`，對應至適當的虛擬索引鍵使用的命令 ID 的實作協助程式。 一般實作啟用或停用 （停用狀態窗格 = 沒有文字）`CCmdUI`根據是否適當的虛擬機碼，所以目前鎖定的物件。  
   
  不建議使用此命令處理常式的自訂。  
   
--   **ID_INDICATOR_EXT: EXT**結束選取的指標。  
+-   ID_INDICATOR_EXT： 擴充選取指標。  
   
--   **ID_INDICATOR_OVR： 關於**e**R**strike 指標。  
+-   ID_INDICATOR_OVR： 覆寫指標。  
   
--   **ID_INDICATOR_REC： 應收帳**ording 指標。  
+-   ID_INDICATOR_REC： 錄製的指標。  
   
  目前沒有任何標準的實作，這些指標。  
   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350881"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956830"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC 使用的回呼函式
 三個回呼函式會出現在 Mfc 程式庫。 這些回呼函式會傳遞至[cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects)， [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring)，和[cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)。 請注意，所有的回呼函式必須再傳回給 Windows，，因為無法跨回呼界限擲回例外狀況設陷 MFC 例外狀況。 如需例外狀況的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。  
@@ -53,11 +53,11 @@ int CALLBACK EXPORT ObjectFunc(
  *lpszLogObject*  
  指向[LOGPEN](../../mfc/reference/logpen-structure.md)或[LOGBRUSH](../../mfc/reference/logbrush-structure.md)資料結構，其中包含之物件的邏輯屬性相關資訊。  
   
- `lpData`  
+ *lpData*  
  指向傳遞至 `EnumObjects` 函式的應用程式所提供的資料。  
   
 ### <a name="return-value"></a>傳回值  
- 回呼函式會傳回 `int`。 這個傳回的值是使用者定義的。 如果回呼函式傳回 0，`EnumObjects` 會及早停止列舉。  
+ 回呼函式會傳回**int**。這個傳回的值是使用者定義的。 如果回呼函式傳回 0，`EnumObjects` 會及早停止列舉。  
   
 ### <a name="remarks"></a>備註  
  必須輸出實際的名稱。  
@@ -75,13 +75,13 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hDC`  
- 識別記憶體裝置內容的最少為點陣圖的寬度和高度所指定`nWidth`和`nHeight`至`GrayString`。  
+ *hDC*  
+ 識別記憶體裝置內容的最少為點陣圖的寬度和高度所指定*nWidth*和*nHeight*至`GrayString`。  
   
- `lpData`  
+ *lpData*  
  指向要繪製的字元字串。  
   
- `nCount`  
+ *nCount*  
  指定要輸出的字元數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  識別裝置內容。  
   
- `code`  
- 指定是否已發生錯誤。 如果沒有發生任何錯誤，它會為 0。 它是**SP_OUTOFDISK**如果列印管理員是目前的磁碟空間不足，而且會使用應用程式會等候更多磁碟空間。 如果`code`是**SP_OUTOFDISK**，應用程式不需要中止列印工作。 如果不存在，必須產生要列印管理員呼叫**PeekMessage**或**GetMessage** Windows 函式。  
+ *程式碼*  
+ 指定是否已發生錯誤。 如果沒有發生任何錯誤，它會為 0。 它是**SP_OUTOFDISK**如果列印管理員是目前的磁碟空間不足，而且會使用應用程式會等候更多磁碟空間。 如果*程式碼*是**SP_OUTOFDISK**，應用程式不需要中止列印工作。 如果不存在，必須產生要列印管理員呼叫`PeekMessage`或`GetMessage`Windows 函式。  
   
 ### <a name="return-value"></a>傳回值  
  中止處理常式函式的傳回值是如果列印的工作也會繼續執行，則為非零，0 如果被取消。  

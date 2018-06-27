@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5fb6e03e521b52e47b3c8853e2f6aa632614c55
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371539"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953397"
 ---
 # <a name="ceditview-class"></a>CEditView 類別
 檢視類別的類型，這個類型提供 Windows 編輯控制項功能，而且可用於實作簡單的文字編輯器功能。  
@@ -103,7 +103,7 @@ class CEditView : public CCtrlView
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|預設型別物件的樣式**CEditView。**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|預設型別物件的樣式`CEditView`。|  
   
 ## <a name="remarks"></a>備註  
  `CEditView`類別會提供下列額外的函數：  
@@ -160,7 +160,7 @@ CEditView();
 ```  
   
 ### <a name="remarks"></a>備註  
- 之後建構物件，您必須呼叫[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)函式使用編輯控制項之前。 如果您是衍生自`CEditView`並將它加入至範本使用`CWinApp::AddDocTemplate`，架構會呼叫這兩個建構函式和**建立**函式。  
+ 之後建構物件，您必須呼叫[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)函式使用編輯控制項之前。 如果您是衍生自`CEditView`並將它加入至範本使用`CWinApp::AddDocTemplate`，架構會呼叫這兩個建構函式和`Create`函式。  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  包含的預設樣式`CEditView`物件。  
@@ -170,7 +170,7 @@ static const DWORD dwStyleDefault;
 ```  
   
 ### <a name="remarks"></a>備註  
- 傳遞做為這個靜態成員`dwStyle`參數**建立**函數來取得的預設樣式`CEditView`物件。  
+ 傳遞做為這個靜態成員`dwStyle`參數`Create`函數來取得的預設樣式`CEditView`物件。  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  呼叫`FindText`函式來搜尋`CEditView`物件的文字緩衝區。  
@@ -183,20 +183,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFind`  
+ *lpszFind*  
  要找的文字。  
   
- `bNext`  
+ *bNext*  
  指定搜尋方向。 如果**TRUE**，搜尋方向是往緩衝區的結尾。 如果**FALSE**，搜尋方向是從緩衝區開頭。  
   
- `bCase`  
+ *bCase*  
  指定搜尋是否區分大小寫。 如果**TRUE**，搜尋不區分大小寫。 如果**FALSE**，搜尋不區分大小寫。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果找到搜尋文字否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 此函式所指定的文字的緩衝區中搜尋文字`lpszFind`開始所指定的方向中的目前選取範圍， `bNext`，與所指定的區分大小寫`bCase`。 如果找到文字，它將選取項目設定為找到的文字，並傳回非零值。 如果找不到文字，則函數會傳回 0。  
+ 此函式所指定的文字的緩衝區中搜尋文字*lpszFind*開始所指定的方向中的目前選取範圍， *bNext*，與所指定的區分大小寫*bCase*。 如果找到文字，它將選取項目設定為找到的文字，並傳回非零值。 如果找不到文字，則函數會傳回 0。  
   
  您通常不需要呼叫`FindText`作用，除非您覆寫`OnFindNext`，而它會呼叫`FindText`。  
   
@@ -252,7 +252,7 @@ void GetSelectedText(CString& strResult) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `strResult`  
+ *strResult*  
  若要參考`CString`要接收所選取的文字的物件。  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
@@ -266,7 +266,7 @@ LPCTSTR LockBuffer() const;
  編輯控制項的緩衝區的指標。  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- 搜尋的文字搜尋中所指定的文字的緩衝區`lpszFind`，所指定的方向`bNext`，與所指定的區分大小寫`bCase`。  
+ 搜尋的文字搜尋中所指定的文字的緩衝區*lpszFind*，所指定的方向*bNext*，與所指定的區分大小寫*bCase*。  
   
 ```  
 virtual void OnFindNext(
@@ -276,13 +276,13 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFind`  
+ *lpszFind*  
  要找的文字。  
   
- `bNext`  
+ *bNext*  
  指定搜尋方向。 如果**TRUE**，搜尋方向是往緩衝區的結尾。 如果**FALSE**，搜尋方向是從緩衝區開頭。  
   
- `bCase`  
+ *bCase*  
  指定搜尋是否區分大小寫。 如果**TRUE**，搜尋不區分大小寫。 如果**FALSE**，搜尋不區分大小寫。  
   
 ### <a name="remarks"></a>備註  
@@ -301,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFind`  
+ *lpszFind*  
  要找的文字。  
   
- `lpszReplace`  
+ *lpszReplace*  
  要取代搜尋文字的文字。  
   
- `bCase`  
+ *bCase*  
  指定搜尋是否區分大小寫。 如果**TRUE**，搜尋不區分大小寫。 如果**FALSE**，搜尋不區分大小寫。  
   
 ### <a name="remarks"></a>備註  
- `OnReplaceAll` 搜尋的文字搜尋中所指定的文字的緩衝區`lpszFind`，與所指定的區分大小寫`bCase`。 搜尋會從目前的選取範圍的開頭。 每次找到搜尋文字時，此函式取代該文字項目所指定的文字`lpszReplace`。 搜尋透過呼叫來完成[FindText](#findtext)。 在預設實作中， [OnTextNotFound](#ontextnotfound)如果找不到文字，則呼叫。  
+ `OnReplaceAll` 搜尋的文字搜尋中所指定的文字的緩衝區*lpszFind*，與所指定的區分大小寫*bCase*。 搜尋會從目前的選取範圍的開頭。 每次找不到搜尋文字，此函式所指定的文字取代文字的項目*lpszReplace*。 搜尋透過呼叫來完成[FindText](#findtext)。 在預設實作中， [OnTextNotFound](#ontextnotfound)如果找不到文字，則呼叫。  
   
- 如果不符合目前的選取範圍`lpszFind`，選取項目已更新為所指定之文字的第一個出現`lpszFind`而且不會執行取代。 這可讓使用者確認這是他們想要執行選取項目不符合所要取代的文字時。  
+ 如果不符合目前的選取範圍*lpszFind*，選取項目已更新為所指定之文字的第一個出現*lpszFind*而且不會執行取代。 這可讓使用者確認這是他們想要執行選取項目不符合所要取代的文字時。  
   
  覆寫`OnReplaceAll`變更方式`CEditView`-衍生的物件取代文字。  
   
@@ -329,20 +329,20 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFind`  
+ *lpszFind*  
  要找的文字。  
   
- `bNext`  
+ *bNext*  
  指定搜尋方向。 如果**TRUE**，搜尋方向是往緩衝區的結尾。 如果**FALSE**，搜尋方向是從緩衝區開頭。  
   
- `bCase`  
+ *bCase*  
  指定搜尋是否區分大小寫。 如果**TRUE**，搜尋不區分大小寫。 如果**FALSE**，搜尋不區分大小寫。  
   
- `lpszReplace`  
+ *lpszReplace*  
  要取代找到的文字的文字。  
   
 ### <a name="remarks"></a>備註  
- 此函式之後取代選取範圍，所指定的文字的下一個相符項目緩衝區中搜尋文字`lpszFind`，所指定的方向`bNext`，與所指定的區分大小寫`bCase`。 搜尋透過呼叫來完成[FindText](#findtext)。 如果找不到文字， [OnTextNotFound](#ontextnotfound)呼叫。  
+ 之後取代選取範圍，此函式搜尋的文字搜尋所指定的文字的下一個相符項目緩衝區*lpszFind*，所指定的方向*bNext*，使用區分大小寫所指定*bCase*。 搜尋透過呼叫來完成[FindText](#findtext)。 如果找不到文字， [OnTextNotFound](#ontextnotfound)呼叫。  
   
  覆寫`OnReplaceSel`變更方式`CEditView`-衍生的物件取代選取的文字。  
   
@@ -354,7 +354,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFind`  
+ *lpszFind*  
  要找的文字。  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
@@ -369,16 +369,16 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  印表機裝置內容的指標。  
   
  *rectLayout*  
  若要參考[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](../../mfc/reference/rect-structure1.md)指定文字為呈現的矩形。  
   
- `nIndexStart`  
+ *nIndexStart*  
  要轉譯的第一個字元的緩衝區內的索引。  
   
- `nIndexStop`  
+ *nIndexStop*  
  後面要呈現的最後一個字元的字元緩衝區中的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -397,21 +397,21 @@ void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- `ar`  
+ *ar*  
  若要參考`CArchive`序列化將文字儲存到的物件。  
   
 ### <a name="remarks"></a>備註  
  `SerializeRaw` 不同於`CEditView`的內部實作`Serialize`在於它讀取和寫入的文字，而不前置物件描述的資料。  
   
 ##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
- 呼叫`SetPrinterFont`設為所指定之字型的印表機字型`pFont`。  
+ 呼叫`SetPrinterFont`設為所指定之字型的印表機字型*pFont*。  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFont`  
+ *pFont*  
  類型的物件的指標`CFont`。 如果**NULL**，用於列印的字型為基礎的字型。  
   
 ### <a name="remarks"></a>備註  
@@ -425,7 +425,7 @@ void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nTabStops`  
+ *nTabStops*  
  對話方塊單位的每個定位停駐點的寬度。  
   
 ### <a name="remarks"></a>備註  

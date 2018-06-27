@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63b8d8dbde679d030eddd77fae6ca1fab519fdac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f040978c898dae3bfd4ca21c2cf9886fde9b5238
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385267"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951275"
 ---
 # <a name="window-objects"></a>視窗物件
 MFC 提供類別[CWnd](../mfc/reference/cwnd-class.md)封裝`HWND`視窗的控制代碼。 `CWnd` 物件是 C++ 視窗物件，與表示 Windows 視窗但包含它的 `HWND` 有所區別。 使用 `CWnd` 衍生您自己的子視窗類別，或使用衍生自 `CWnd` 的其中一個 MFC 類別。 `CWnd` 類別是所有視窗的基底類別，包括框架視窗、對話方塊、子視窗、控制項及控制列，例如工具列。 了解[c + + 視窗物件和 HWND 之間的關聯性](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)是使用 MFC 的有效程式設計非常重要。  
@@ -44,7 +44,7 @@ MFC 提供類別[CWnd](../mfc/reference/cwnd-class.md)封裝`HWND`視窗的控�
  `CWnd` 和其[衍生的視窗類別](../mfc/derived-window-classes.md)提供建構函式、 解構函式和成員函式來初始化物件、 建立基礎 Windows 結構，以及存取封裝`HWND`。 `CWnd` 也提供封裝 Windows API 的成員函式，用於傳送訊息、存取視窗的狀態、轉換座標、更新、捲動、存取 [剪貼簿]，以及許多其他工作。 採用 `HWND` 引數的大部分 Windows 視窗管理 API 都會封裝為 `CWnd` 的成員函式。 函式及其參數的名稱會保存在 `CWnd` 成員函式中。 如需詳細資訊會由封裝 Windows Api `CWnd`，請參閱類別[CWnd](../mfc/reference/cwnd-class.md)。  
   
 ## <a name="cwnd-and-windows-messages"></a>CWnd 和 Windows 訊息  
- `CWnd` 的其中一個主要目的是提供處理 Windows 訊息的介面，例如 `WM_PAINT` 或 `WM_MOUSEMOVE`。 成員函式的許多`CWnd`是標準訊息的處理常式 — 那些開頭為識別項**afx_msg**和前置詞 「 開啟 」，例如`OnPaint`和**OnMouseMove**。 [訊息處理和對應](../mfc/message-handling-and-mapping.md)涵蓋了訊息和訊息處理的詳細資訊。 其中的資訊同樣適用於架構的視窗，以及您基於特殊目的自行建立的視窗。  
+ 主要用途之一`CWnd`是以處理 Windows 訊息，例如 WM_PAINT 或 WM_MOUSEMOVE 提供的介面。 成員函式的許多`CWnd`是標準訊息的處理常式 — 那些開頭為識別項**afx_msg**和前置詞 「 開啟 」，例如`OnPaint`和`OnMouseMove`。 [訊息處理和對應](../mfc/message-handling-and-mapping.md)涵蓋了訊息和訊息處理的詳細資訊。 其中的資訊同樣適用於架構的視窗，以及您基於特殊目的自行建立的視窗。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
   

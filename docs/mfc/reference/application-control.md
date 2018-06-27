@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76d8ec079a7c3534211118e60c1d9d95a3a8510a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aa364ef0a817d46decef79b93e08bd5a359389d1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355908"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954036"
 ---
 # <a name="application-control"></a>應用程式控制
 OLE 會需要大幅控制應用程式，以及它們的物件。 OLE 系統 Dll 必須能夠啟動和應用程式自動發行、 協調其實際執行和修改物件，等等。 本主題中的函式符合這些需求。 除了由 OLE 系統 Dll，呼叫這些函式必須有時稱為以及應用程式。 
@@ -53,7 +53,7 @@ BOOL AFXAPI AfxOleCanExitApp();
  如果應用程式可結束則非零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如果對應用程式物件有未完成的參考，則不應該結束。 全域函式 `AfxOleLockApp` 和 `AfxOleUnlockApp` 分別會遞增和遞減應用程式物件的參考計數。 這個計數器為非零值時，應用程式不應該結束。 如果計數器是非零值，當使用者從 [系統] 功能表選擇 [關閉]，或從 [檔案] 功能表選擇 [結束] 時，應用程式的主視窗將會隱藏 (不會終結)。 架構會呼叫此函式**cframewnd:: Onclose**。  
+ 如果對應用程式物件有未完成的參考，則不應該結束。 全域函式 `AfxOleLockApp` 和 `AfxOleUnlockApp` 分別會遞增和遞減應用程式物件的參考計數。 這個計數器為非零值時，應用程式不應該結束。 如果計數器是非零值，當使用者從 [系統] 功能表選擇 [關閉]，或從 [檔案] 功能表選擇 [結束] 時，應用程式的主視窗將會隱藏 (不會終結)。 架構會呼叫此函式`CFrameWnd::OnClose`。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]  
@@ -147,7 +147,7 @@ void AFXAPI AfxOleUnlockApp();
 ### <a name="remarks"></a>備註  
  請參閱`AfxOleLockApp`以取得詳細資訊。  
   
- 當作用中物件的數目到達零時， **AfxOleOnReleaseAllObjects**呼叫。  
+ 當作用中物件的數目到達零時，`AfxOleOnReleaseAllObjects`呼叫。  
   
 ### <a name="example"></a>範例  
  請參閱範例的[AfxOleLockApp](#afxolelockapp)。  
@@ -164,10 +164,10 @@ BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  控制項的唯一類別 ID。  
   
- `lpszProgID`  
+ *lpszProgID*  
  控制項的唯一程式 ID。  
    
 ### <a name="return-value"></a>傳回值  
@@ -207,10 +207,10 @@ BOOL AFXAPI AfxOleRegisterServerClass(
 ```  
   
 ### <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  參考到伺服器的 OLE 類別識別碼。  
   
- `lpszClassName`  
+ *lpszClassName*  
  包含伺服器的物件的類別名稱的字串指標。  
   
  *lpszShortTypeName*  
@@ -219,7 +219,7 @@ BOOL AFXAPI AfxOleRegisterServerClass(
  *lpszLongTypeName*  
  包含伺服器的物件類型，例如"Microsoft Excel 5.0 圖表。 」 的完整名稱的字串指標  
   
- `nAppType`  
+ *nAppType*  
  值，取自**OLE_APPTYPE**列舉，指定 OLE 應用程式的類型。 可能的值如下所示：  
   
 - `OAT_INPLACE_SERVER` 伺服器具有完整伺服器的使用者介面。  
@@ -230,19 +230,19 @@ BOOL AFXAPI AfxOleRegisterServerClass(
   
 - `OAT_DISPATCH_OBJECT` `IDispatch`-支援的物件。  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  代表索引鍵和值加入至 OLE 系統登錄，如果不找到索引鍵的任何現有值的字串指標的陣列。  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  代表索引鍵和值加入至 OLE 系統登錄，如果登錄包含指定的索引鍵的現有值的字串指標的陣列。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功註冊伺服器類別，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 大部分的應用程式可以使用**COleTemplateServer::Register**註冊應用程式的文件類型。 如果您的應用程式系統登錄格式不符合一般模式，您可以使用`AfxOleRegisterServerClass`獲得更多控制。  
+ 大部分的應用程式可以使用`COleTemplateServer::Register`註冊應用程式的文件類型。 如果您的應用程式系統登錄格式不符合一般模式，您可以使用`AfxOleRegisterServerClass`獲得更多控制。  
   
- 登錄包含一組索引鍵和值。 `rglpszRegister`和`rglpszOverwrite`引數是以字串的指標的陣列，包含索引鍵和值區隔**NULL**字元 ( `'\0'`)。 每個這些字串可以具有可置換的參數，其位置標記的字元序列`%1`透過`%5`。  
+ 登錄包含一組索引鍵和值。 *RglpszRegister*和*rglpszOverwrite*引數是以字串的指標的陣列，包含索引鍵和值區隔**NULL**字元 ( `'\0'`). 每個這些字串可以具有可置換的參數，其位置標記的字元序列 *%1*透過 *%5*。  
   
  符號的資料會填入，如下所示：  
   
@@ -271,16 +271,16 @@ void AFXAPI AfxOleSetEditMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pClient`  
+ *pClient*  
  用戶端 OLE 項目的指標。  
   
- `pMenu`  
+ *pMenu*  
  若要更新功能表物件的指標。  
   
  *iMenuItem*  
  要更新的功能表項目的索引。  
   
- `nIDVerbMin`  
+ *nIDVerbMin*  
  命令 ID 對應至主要指令動詞。  
   
  *nIDVerbMax*  
@@ -290,7 +290,7 @@ void AFXAPI AfxOleSetEditMenu(
  轉換的功能表項目的 ID。  
   
 ### <a name="remarks"></a>備註  
- 如果伺服器辨識主要動詞命令，功能表項目會變成 「 動詞命令*typename*物件 」 和`nIDVerbMin`會傳送命令，當使用者選擇命令。 如果伺服器能辨識的數個動詞命令，則功能表項目會變成 「 *typename*物件 」，而且當使用者選擇命令，列出所有動詞命令的子功能表會出現。 當使用者選擇動詞命令的子功能表中，`nIDVerbMin`如果會選擇第一個指令動詞，傳送`nIDVerbMin`+ 1 會傳送第二個動詞會選擇，依此類推。 預設值`COleDocument`實作自動處理這項功能。  
+ 如果伺服器辨識主要動詞命令，功能表項目會變成 「 動詞命令*typename*物件 」 和*nIDVerbMin*會傳送命令，當使用者選擇命令。 如果伺服器能辨識的數個動詞命令，則功能表項目會變成 「 *typename*物件 」，而且當使用者選擇命令，列出所有動詞命令的子功能表會出現。 當使用者選擇動詞命令的子功能表中， *nIDVerbMin*如果會選擇第一個指令動詞，傳送*nIDVerbMin* + 1 會傳送第二個動詞會選擇，依此類推。 預設值`COleDocument`實作自動處理這項功能。  
   
  您必須擁有下列陳述式，在您的用戶端應用程式資源指令碼 (。RC) 檔案：  
   
@@ -311,10 +311,10 @@ BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );  
 ```
 ### <a name="parameters"></a>參數  
- `clsid`  
+ *clsid*  
  控制項的唯一類別 ID。  
   
- `lpszProgID`  
+ *lpszProgID*  
  控制項的唯一程式 ID。  
    
 ### <a name="return-value"></a>傳回值  

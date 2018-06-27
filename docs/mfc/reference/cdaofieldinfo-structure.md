@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e9e78a8137aa28acaa5f43e7549dc74566c7f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368403"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952194"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 結構
 `CDaoFieldInfo`結構包含的資料存取物件 (DAO) 定義的欄位物件的相關資訊。  
@@ -50,10 +50,10 @@ struct CDaoFieldInfo
 ```  
   
 #### <a name="parameters"></a>參數  
- `m_strName`  
+ *m_strName*  
  唯一命名欄位的物件。 如需詳細資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
   
- `m_nType`  
+ *m_nType*  
  值，指出欄位的資料類型。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 型別屬性 >。 這個屬性的值可以是下列其中一項：  
   
 - **dbBoolean**是/否，與相同**TRUE**/**FALSE**  
@@ -101,7 +101,7 @@ struct CDaoFieldInfo
 |**dbMemo**|0|備忘 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
 |**dbGUID**|16|全域唯一識別項/通用唯一識別碼，用以與遠端程序呼叫。|  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  指定特性 tabledef、 資料錄集、 querydef 或索引物件所包含的欄位物件。 傳回的值可以是加總這些常數，建立搭配 c + + 位元 OR (**&#124;**) 運算子：  
   
 - **dbFixedField**欄位大小固定的 （數值欄位的預設值）。  
@@ -119,16 +119,16 @@ struct CDaoFieldInfo
  *m_nOrdinalPosition*  
  值，指定您想要以 DAO 欄位物件表示要顯示相對於其他欄位的欄位的數字順序。 您可以將此屬性設[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < OrdinalPosition 屬性 >。  
   
- `m_bRequired`  
+ *m_bRequired*  
  指出 DAO 欄位物件是否需要非 Null 值。 如果這個屬性是**TRUE**，欄位不允許 Null 值。 如果所需的設定為**FALSE**，此欄位只能包含 Null 值，以及符合條件允許零長度字串和驗證規則的屬性設定所指定的值。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 必要屬性 >。 您可以設定這個屬性與 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  *m_bAllowZeroLength*  
  指出是否為空字串 ("") 是有效的值的文字或備忘資料類型的 DAO 欄位物件。 如果這個屬性是**TRUE**，空字串是有效的值。 您可以將此屬性設定為**FALSE**以確保，您無法使用空字串，來設定欄位的值。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 允許零長度字串屬性 」。 您可以設定這個屬性與 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  指定文字的字串比較或排序的排序次序的順序。 如需詳細資訊，請參閱 < 自訂 Windows 登錄設定的資料存取 > DAO [說明] 中的主題。 如需可能的值傳回的清單，請參閱**m_lCollatingOrder**隸屬[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)結構。 您可以設定這個屬性與 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  指定的值，在關聯，DAO 欄位中物件的外部資料表對應到主要資料表中的欄位名稱。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < ForeignName 屬性 >。  
   
  *m_strSourceField*  
@@ -137,12 +137,12 @@ struct CDaoFieldInfo
  *m_strSourceTable*  
  表示 DAO tabledef、 資料錄集或 querydef 物件所包含之欄位物件資料的原始來源資料表的名稱。 這個屬性會指出原始欄位物件相關聯的資料表名稱。 例如，您可以使用這個屬性來判斷其名稱為基礎的資料表中的欄位名稱無關的查詢欄位中的資料的原始來源。 如需詳細資訊，請參閱 DAO 說明主題 「 SourceField SourceTable 屬性 」。 您可以設定這個屬性與 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  值，這個值會驗證欄位中的資料，因為它已變更或加入至資料表。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 驗證規則屬性 >。 您可以設定這個屬性與 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  如需相關 tabledefs 的詳細資訊，請參閱**m_strValidationRule**隸屬[CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md)結構。  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  值，指定如果 DAO 欄位物件的值不符合驗證規則屬性設定所指定的驗證規則，會顯示您的應用程式之訊息的文字。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 驗證文字屬性 >。 您可以設定這個屬性與 tabledef [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。  
   
  *m_strDefaultValue*  

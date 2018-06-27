@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384084"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954854"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016：搭配使用 C++多重繼承與 MFC
 此提示說明如何對於 Microsoft Foundation Classes 搭配使用多重繼承 (MI)。 使用 MI 不需要 MFC。 MI 未使用於任何 MFC 類別，並且不需要撰寫類別庫。  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- 在此情況下，會包含 `CObject` 兩次。 這表示您需要一個方法使 `CObject` 方法或運算子的所有參考意義清楚。 `operator new`和[運算子 delete](../mfc/reference/cobject-class.md#operator_delete)都是必須明確指出兩個運算子。 做為另一個範例，下列程式碼會在編譯期間造成錯誤：  
+ 在此情況下，會包含 `CObject` 兩次。 這表示您需要一個方法使 `CObject` 方法或運算子的所有參考意義清楚。 **運算子 new**和[運算子 delete](../mfc/reference/cobject-class.md#operator_delete)都是必須明確指出兩個運算子。 做為另一個範例，下列程式碼會在編譯期間造成錯誤：  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>重新實作 CObject 方法  
- 當您建立具有兩個或多個 `CObject` 衍生的基底類別的新類別時，您應該實作要其他人使用的 `CObject` 方法。 運算子`new`和`delete`都是必要項並[傾印](../mfc/reference/cobject-class.md#dump)建議。 以下範例重新實作 `new` 和 `delete` 運算子以及 `Dump` 方法：  
+ 當您建立具有兩個或多個 `CObject` 衍生的基底類別的新類別時，您應該實作要其他人使用的 `CObject` 方法。 運算子**新**和**刪除**都是必要項並[傾印](../mfc/reference/cobject-class.md#dump)建議。 以下範例重新實作**新**和**刪除**運算子和`Dump`方法：  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  看起來也許虛擬繼承 `CObject` 函式會解決函式模稜兩可的問題，不過實際並不是這樣。 因為 `CObject` 中沒有成員資料，所以您並不需要虛擬繼承來防止產生基底類別成員資料的多個複本。 在稍早顯示的第一個範例中，`Dump` 虛擬方法仍然模稜兩可，因為它在 `CFrameWnd` 和 `CObList` 中的實作不一樣。 去除模稜兩可的最佳方式是遵照上一節所提出的建議。  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf 和執行階段類型  
- 在 `CObject` 中，MFC 支援的執行階段類型機制使用巨集 `DECLARE_DYNAMIC`、`IMPLEMENT_DYNAMIC`、`DECLARE_DYNCREATE`、`IMPLEMENT_DYNCREATE`、`DECLARE_SERIAL` 和 `IMPLEMENT_SERIAL`。 這些巨集可執行執行階段類型檢查，以保證安全向下轉型。  
+ Mfc 支援的執行階段類型機制`CObject`使用 DECLARE_DYNAMIC、 您的類別、 DECLARE_DYNCREATE、 IMPLEMENT_DYNCREATE、 DECLARE_SERIAL 和 IMPLEMENT_SERIAL 巨集。 這些巨集可執行執行階段類型檢查，以保證安全向下轉型。  
   
- 這些巨集只支援單一基底類別，並且會對多重繼承的類別以限定的方式執行。 您在 `IMPLEMENT_DYNAMIC` 或 `IMPLEMENT_SERIAL` 中指定的基底類別，應該是第一個 (或最左邊的) 基底類別。 這個位置可讓您只針對最左邊的基底類別進行類型檢查。 執行階段類型系統對於其他基底類別毫無所知。 在下列範例中，執行階段系統會對 `CFrameWnd` 進行類型檢查，但是對於 `CObList` 毫無所知。  
+ 這些巨集只支援單一基底類別，並且會對多重繼承的類別以限定的方式執行。 您在您的類別或 IMPLEMENT_SERIAL 中指定的基底類別應該是第一個 （或最左邊的） 基底類別。 這個位置可讓您只針對最左邊的基底類別進行類型檢查。 執行階段類型系統對於其他基底類別毫無所知。 在下列範例中，執行階段系統會對 `CFrameWnd` 進行類型檢查，但是對於 `CObList` 毫無所知。  
   
 ```  
 class CListWnd : public CFrameWnd,

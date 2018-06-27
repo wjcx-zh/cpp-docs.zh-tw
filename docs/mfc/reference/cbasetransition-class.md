@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356376"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953566"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 類別
 表示基本轉換。  
@@ -139,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStoryboard`  
+ *pStoryboard*  
  指標分鏡腳本，其中會以動畫顯示相關的變數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -156,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStoryboard`  
+ *pStoryboard*  
  指標分鏡腳本，其中會以動畫顯示相關的變數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -192,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLibrary`  
+ *pLibrary*  
  會建立標準轉換轉換程式庫指標。 自訂的轉換，它可以是 NULL。  
   
- `pFactory`  
+ *pFactory*  
  轉換處理站，會建立自訂的轉換指標。 標準轉換，它可以是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
@@ -255,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLibrary`  
+ *pLibrary*  
  會建立標準轉換轉換程式庫指標。 自訂的轉換，它可以是 NULL。  
   
- `pFactory`  
+ *pFactory*  
  轉換處理站，會建立自訂的轉換指標。 標準轉換，它可以是 NULL。  
   
 ### <a name="return-value"></a>傳回值  
@@ -345,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStart`  
+ *pStart*  
  主要畫面格，指定轉換的開頭。  
   
- `pEnd`  
+ *暫止*  
  指定在轉換結束一個主要畫面格。  
   
 ### <a name="remarks"></a>備註  
@@ -362,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pVariable`  
+ *pVariable*  
  相關的動畫變數的指標。  
   
 ### <a name="remarks"></a>備註  

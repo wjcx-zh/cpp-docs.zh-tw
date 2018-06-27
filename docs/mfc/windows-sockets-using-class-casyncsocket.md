@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc461a0a2325f768711f6d7529949ee24a1b4a25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385176"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954880"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets：使用類別 CAsyncSocket
 這篇文章說明如何使用類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 請注意，這個類別會封裝 Windows Sockets API，在非常低的層級。 `CAsyncSocket` 是以供程式設計人員清楚詳細資料中的網路通訊，但想回呼的方便性，不論網路事件的通知。 根據這項假設，本文章提供基本的指令。 您可能應該考慮使用`CAsyncSocket`如果您想要處理的 MFC 應用程式中的多個網路通訊協定的 Windows Sockets 簡易，但不是想要犠牲彈性。 您也可能會認為可以直接自行比您無法使用模型類別的程式設計詳細的通訊，以取得更好的效率`CSocket`。  
@@ -57,9 +57,9 @@ ms.locfileid: "33385176"
   
      [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
-     上述第一個建構函式建立`CAsyncSocket`堆疊上的物件。 第二個建構函式建立`CAsyncSocket`在堆積上。 第一個[建立](../mfc/reference/casyncsocket-class.md#create)上述的呼叫會使用預設參數建立資料流通訊端。 第二個**建立**呼叫會使用指定的連接埠和位址建立資料包通訊端。 (您可以使用**建立**使用何種建構方法的版本。)  
+     上述第一個建構函式建立`CAsyncSocket`堆疊上的物件。 第二個建構函式建立`CAsyncSocket`在堆積上。 第一個[建立](../mfc/reference/casyncsocket-class.md#create)上述的呼叫會使用預設參數建立資料流通訊端。 第二個`Create`呼叫會使用指定的連接埠和位址建立資料包通訊端。 (您可以使用`Create`使用何種建構方法的版本。)  
   
-     參數**建立**是：  
+     參數`Create`是：  
   
     -   「 連接埠 」: 短整數。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "33385176"
      接受連接之後, 您可以執行像是驗證密碼這類工作。  
   
     > [!NOTE]
-    >  **接受**成員函式會採用新的空白參考`CSocket`做為其參數的物件。 您必須先建構這個物件，才能呼叫**接受**。 如果這個通訊端物件超出範圍，連接就會關閉。 請勿呼叫**建立**對這個新通訊端物件。 如需範例，請參閱文章[Windows Sockets： 作業的順序](../mfc/windows-sockets-sequence-of-operations.md)。  
+    >  `Accept`成員函式會採用新的空白參考`CSocket`做為其參數的物件。 您必須先建構這個物件，才能呼叫`Accept`。 如果這個通訊端物件超出範圍，連接就會關閉。 請勿呼叫`Create`對這個新通訊端物件。 如需範例，請參閱文章[Windows Sockets： 作業的順序](../mfc/windows-sockets-sequence-of-operations.md)。  
   
 3.  藉由呼叫完成與其他通訊端通訊`CAsyncSocket`封裝 Windows Sockets API 函式物件的成員函式。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "33385176"
   
  如需這些詞彙與其他資訊的定義，請參閱[Windows Sockets： 封鎖](../mfc/windows-sockets-blocking.md)， [Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)， [Windows Sockets： 轉換字串](../mfc/windows-sockets-converting-strings.md).  
   
- 儘管有這些問題，類別**CAsycnSocket**可能會為您是適當的選擇，如果您的應用程式需要所有的彈性和您可以取得的控制項。 如果沒有，您應該考慮使用類別`CSocket`改為。 `CSocket` 隱藏許多從您的詳細資料： it 提取 Windows 訊息期間封鎖呼叫，並可讓您存取`CArchive`，它負責管理位元組順序的差異，並為您的字串轉換。  
+ 儘管有這些問題，類別`CAsycnSocket`可能會為您是適當的選擇，如果您的應用程式需要所有的彈性和您可以取得的控制項。 如果沒有，您應該考慮使用類別`CSocket`改為。 `CSocket` 隱藏許多從您的詳細資料： it 提取 Windows 訊息期間封鎖呼叫，並可讓您存取`CArchive`，它負責管理位元組順序的差異，並為您的字串轉換。  
   
  如需詳細資訊，請參閱:  
   

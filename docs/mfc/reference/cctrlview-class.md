@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353162"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955517"
 ---
 # <a name="cctrlview-class"></a>CCtrlView 類別
 調整文件檢視架構來配合 Windows 98 和 Windows NT 3.51 版 (含) 以後版本支援的通用控制項。  
@@ -91,10 +91,10 @@ CCtrlView(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszClass`  
+ *lpszClass*  
  檢視類別的 Windows 類別名稱。  
   
- `dwStyle`  
+ *dwStyle*  
  檢視類別的樣式。  
   
 ### <a name="remarks"></a>備註  
@@ -125,11 +125,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  繪圖發生在哪個裝置內容的指標。  
   
 ### <a name="remarks"></a>備註  
- `OnDraw` 通常會呼叫傳遞螢幕裝置內容所指定的螢幕上的`pDC`。  
+ `OnDraw` 通常會呼叫傳遞螢幕裝置內容所指定的螢幕上的*pDC*。  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  在建立附加至此 `CWnd` 物件的 Windows 視窗前呼叫。  

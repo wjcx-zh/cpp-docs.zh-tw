@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60e42aedd406e7478db83ecddca7d8b82230abc5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386089"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951990"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 資料庫類別的自訂 DFX 常式
 > [!NOTE]
@@ -134,19 +134,19 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 |運算|描述|  
 |---------------|-----------------|  
-|**AddToParameterList**|組建參數子句|  
-|**AddToSelectList**|組建的 SELECT 子句|  
-|**BindField**|設定繫結結構|  
-|**BindParam**|設定參數值|  
-|**修復**|設定 NULL 狀態|  
-|**AllocCache**|配置已變更的核取的快取|  
-|**StoreField**|將目前的記錄儲存至快取|  
-|**LoadField**|還原給成員值的快取|  
-|**FreeCache**|釋出快取|  
+|`AddToParameterList`|組建參數子句|  
+|`AddToSelectList`|組建的 SELECT 子句|  
+|`BindField`|設定繫結結構|  
+|`BindParam`|設定參數值|  
+|`Fixup`|設定 NULL 狀態|  
+|`AllocCache`|配置已變更的核取的快取|  
+|`StoreField`|將目前的記錄儲存至快取|  
+|`LoadField`|還原給成員值的快取|  
+|`FreeCache`|釋出快取|  
 |`SetFieldNull`|設定欄位的狀態 （& s） 值為 NULL|  
-|**MarkForAddNew**|標記欄位中途如果不是虛擬 NULL|  
-|**MarkForEdit**|如果中途的標記欄位不符合快取|  
-|**SetDirtyField**|設定欄位標示為中途的值|  
+|`MarkForAddNew`|標記欄位中途如果不是虛擬 NULL|  
+|`MarkForEdit`|如果中途的標記欄位不符合快取|  
+|`SetDirtyField`|設定欄位標示為中途的值|  
   
  下一節將說明每個作業的詳細`DFX_Text`。  
   
@@ -168,45 +168,45 @@ PopUpEmployeeData(emp.m_strFirstName,
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text 的詳細資料  
  如先前所述，說明 DFX 的運作方式的最佳方式是利用範例。 針對此用途的內部資訊透過`DFX_Text`應該運作相當可協助您提供的 DFX 至少有基本了解。  
   
- **AddToParameterList**  
- 這項作業會建立 SQL**參數**子句 ("`Parameters <param name>, <param type> ... ;`」) 所需的 Jet。 每個參數是名為和型別 （如 RFX 呼叫中指定）。 請參閱函數**CDaoFieldExchange::AppendParamType**函式，以查看個別類型的名稱。 如果是`DFX_Text`，使用的類型是`text`。  
+ `AddToParameterList`  
+ 這項作業會建立 SQL**參數**子句 ("`Parameters <param name>, <param type> ... ;`」) 所需的 Jet。 每個參數是名為和型別 （如 RFX 呼叫中指定）。 請參閱函數`CDaoFieldExchange::AppendParamType`函式，以查看個別類型的名稱。 如果是`DFX_Text`，使用的類型是**文字**。  
   
- **AddToSelectList**  
+ `AddToSelectList`  
  建置 SQL**選取**子句。 這會相當直截了當 DFX 呼叫所指定的資料行名稱只是因為附加 (「`SELECT <column name>, ...`")。  
   
- **BindField**  
+ `BindField`  
  最複雜的作業。 如先前所述這是 DAO 繫結結構會由`GetRows`設定。 您可以從程式碼中看到`DFX_Text`的結構中的資訊類型包括使用的 DAO 類型 (**DAO_CHAR**或**DAO_WCHAR**是`DFX_Text`)。 此外，使用繫結的型別也設定。 在前一節中`GetRows`描述僅簡單，但它是足以說明 MFC 使用的繫結的型別一定是直接定址的繫結 (**DAOBINDING_DIRECT**)。 此外可變長度資料行繫結 (例如`DFX_Text`) 回呼繫結使用，因此 MFC 可以控制記憶體配置和指定的位址是正確的長度。 這表示是 MFC 永遠可以辨識 DAO"where"放置資料，因此允許直接至成員變數繫結。 繫結結構的其餘部分會填入之類的位址的記憶體配置回呼函式和資料行繫結 （繫結資料行名稱） 的類型。  
   
- **BindParam**  
+ `BindParam`  
  這是簡單的作業呼叫`SetParamValue`參數成員中指定的參數值。  
   
- **修復**  
+ `Fixup`  
  填入**NULL**每個欄位的狀態。  
   
  `SetFieldNull`  
  這項作業只會將標示為每個欄位狀態**NULL**並將成員變數的值設定為**PSEUDO_NULL**。  
   
- **SetDirtyField**  
+ `SetDirtyField`  
  呼叫`SetFieldValue`每個欄位標示為已變更。  
   
  所有其餘的作業只處理使用的資料快取。 資料快取是額外的緩衝區，用來簡化某些項目是目前記錄中的資料。 比方說，您可以自動偵測這項 「 有所變更 」 欄位。 線上文件中所述就可以關閉完全或欄位層級。 緩衝區的實作會使用對應。 此對應用來比對資料的動態配置的複本與 「 繫結 」 欄位的位址 (或`CDaoRecordset`衍生的資料成員)。  
   
- **AllocCache**  
+ `AllocCache`  
  動態配置的快取的欄位值，並將它加入至地圖。  
   
- **FreeCache**  
+ `FreeCache`  
  刪除快取的欄位值，並將它從對應移除。  
   
- **StoreField**  
+ `StoreField`  
  將目前的欄位值複製到資料快取。  
   
- **LoadField**  
+ `LoadField`  
  將快取的值複製到欄位成員。  
   
- **MarkForAddNew**  
+ `MarkForAddNew`  
  檢查目前的欄位值是否非**NULL** ，並讓其中途如有必要。  
   
- **MarkForEdit**  
+ `MarkForEdit`  
  比較目前的欄位值與資料快取，並將標示為中途如有必要。  
   
 > [!TIP]

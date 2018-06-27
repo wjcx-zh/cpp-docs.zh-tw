@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c22db5aa9369d895b5a8d725148c841e3ffbfc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386050"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955888"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 常式
 > [!NOTE]
@@ -67,7 +67,7 @@ DDV_Custom(pDX,
   
  對話方塊資料交換常式和對話方塊資料驗證常式隨 MFC 提供的清單，請參閱 'afxdd_.h'。  
   
- 對話方塊資料僅是： 在成員資料**CMyDialog**類別。 它不會儲存在結構或類似的任何項目。  
+ 對話方塊資料僅是： 在成員資料`CMyDialog`類別。 它不會儲存在結構或類似的任何項目。  
   
 ## <a name="notes"></a>注意  
  雖然我們呼叫 「 對話方塊資料 」 時，所有功能都都可在任何衍生自的類別中`CWnd`並都不限於只是對話方塊。  
@@ -83,17 +83,17 @@ DDV_Custom(pDX,
 ## <a name="how-does-it-work"></a>它如何運作  
  您不需要了解下才能使用對話方塊資料。 不過，了解如何將在幕後將協助您撰寫您自己的 exchange 或驗證程序。  
   
- `DoDataExchange`成員函式，就像`Serialize`成員函式-它會負責取得或設定資料至/從外部的表單 （在此情況下對話方塊中控制項） 來源/目的地類別中的成員資料。 `pDX`參數已經進行資料交換的內容，類似於`CArchive`參數`CObject::Serialize`。 `pDX` (`CDataExchange`物件) 的方向旗標很像`CArchive`方向旗標：  
+ `DoDataExchange`成員函式，就像`Serialize`成員函式-它會負責取得或設定資料至/從外部的表單 （在此情況下對話方塊中控制項） 來源/目的地類別中的成員資料。 *PDX*參數已經進行資料交換的內容，類似於`CArchive`參數`CObject::Serialize`。 *PDX* (`CDataExchange`物件) 的方向旗標很像`CArchive`方向旗標：  
   
--   如果 **！ m_bSaveAndValidate**，然後將資料狀態載入控制項。  
+-   如果 ！*m_bSaveAndValidate*，然後將資料狀態載入控制項。  
   
--   如果`m_bSaveAndValidate`，然後設定控制項中的資料狀態。  
+-   如果*m_bSaveAndValidate*，然後設定控制項中的資料狀態。  
   
- 只會發生驗證時`m_bSaveAndValidate`設定。 值`m_bSaveAndValidate`BOOL 參數由`CWnd::UpdateData`。  
+ 只會發生驗證時*m_bSaveAndValidate*設定。 值*m_bSaveAndValidate* BOOL 參數由`CWnd::UpdateData`。  
   
  有三個其他有趣`CDataExchange`成員：  
   
-- `m_pDlgWnd`: 包含的控制項 [] 視窗 （通常的對話方塊）。 這是為了避免 DDX_ 和 DDV_ 全域函式的呼叫端傳遞 'this' 的每個 DDX/DDV 常式時。  
+- *m_pDlgWnd*： 包含控制項的視窗 （通常的對話方塊）。 這是為了避免 DDX_ 和 DDV_ 全域函式的呼叫端傳遞 'this' 的每個 DDX/DDV 常式時。  
   
 - `PrepareCtrl`與`PrepareEditCtrl`： 準備對話方塊控制項的資料交換。 儲存設定焦點，在驗證失敗時該控制項的控制代碼。 `PrepareCtrl` 用於 nonedit 控制項和`PrepareEditCtrl`來編輯控制項。  
   
@@ -139,7 +139,7 @@ DDV_Custom(pDX,
     > [!NOTE]
     >  這類任意運算式 ClassWizard 無法編輯，因此應該移之外的特殊格式註解 (/ / {{AFX_DATA_MAP(CMyClass))。  
   
- 具有**DoDialogExchange**成員函式包含條件式或具有混合的交換和驗證函式呼叫的任何其他有效的 c + + 陳述式。  
+ 具有`DoDialogExchange`成員函式包含條件式或具有混合的交換和驗證函式呼叫的任何其他有效的 c + + 陳述式。  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  

@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7674e9a25f4794d40a977fce914ab6ac0131de25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1ee27994a83206b576452d30b108f01c794353
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957485"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 類別
 定義文件範本基本功能的抽象基底類別。  
@@ -106,7 +107,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="remarks"></a>備註  
  您通常會在您的應用程式的實作建立一或多個文件範本`InitInstance`函式。 文件範本會定義三種類型的類別之間的關聯性：  
   
--   文件類別，衍生自**CDocument**。  
+-   文件類別，衍生自`CDocument`。  
   
 -   檢視類別，會顯示上面所列的文件類別的資料。 您也可以衍生此類別從`CView`， `CScrollView`， `CFormView`，或`CEditView`。 (您也可以使用`CEditView`直接。)  
   
@@ -144,7 +145,7 @@ virtual void AddDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDoc`  
+ *pDoc*  
  要加入的文件指標。  
   
 ### <a name="remarks"></a>備註  
@@ -162,7 +163,7 @@ CDocTemplate (
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDResource`  
+ *nIDResource*  
  指定的文件類型搭配使用的資源識別碼。 這可能包括功能表、 圖示、 快速鍵對應表和字串資源。  
   
  最多七 '\n' 字元分隔的子字串所組成的字串資源 （如果不包含子字串，則需要 '\n' 字元做為預留位置; 不過，不需要尾端的 '\n' 字元）;這些子字串會描述文件類型。 子字串的相關資訊，請參閱[GetDocString](#getdocstring)。 應用程式的資源檔中找到此字串資源。 例如:   
@@ -179,13 +180,13 @@ CDocTemplate (
   
  請注意，字串開頭為 '\n' 字元;這是因為第一個子字串不能用於 MDI 應用程式，因此就不會包含。 您可以編輯這個字串使用字串編輯器。整個字串會顯示為單一項目在字串編輯器中，不做為七個不同的項目。  
   
- `pDocClass`  
- 指向`CRuntimeClass`文件類別的物件。 這個類別是**CDocument**-衍生的類別定義以代表您的文件。  
+ *pDocClass*  
+ 指向`CRuntimeClass`文件類別的物件。 這個類別是`CDocument`-衍生的類別定義以代表您的文件。  
   
- `pFrameClass`  
+ *pFrameClass*  
  指向`CRuntimeClass`框架視窗類別的物件。 這個類別可以是`CFrameWnd`-衍生的類別，或者它可以是`CFrameWnd`本身如果您要為您的主框架視窗的預設行為。  
   
- `pViewClass`  
+ *pViewClass*  
  指向`CRuntimeClass`檢視類別的物件。 這個類別是`CView`-衍生的類別，您定義用來顯示文件。  
   
 ### <a name="remarks"></a>備註  
@@ -199,8 +200,8 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEndSession`  
- 指定要結束工作階段。 它是**TRUE**如果工作階段正在結束; 否則為**FALSE**。  
+ *bEndSession*  
+ 未使用。  
   
 ### <a name="remarks"></a>備註  
  此成員函式通常是做為檔案結束命令的一部分。 此函式的預設實作會呼叫[CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents)成員函式來刪除文件的資料，然後關閉所有檢視之框架視窗附加至文件。  
@@ -227,19 +228,19 @@ virtual CFrameWnd* CreateNewFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDoc`  
+ *pDoc*  
  新的框架視窗應參考的文件。 可以是**NULL**。  
   
- `pOther`  
+ *其他*  
  根據新的框架視窗所在的框架視窗。 可以是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  新建立的框架視窗時，指標或**NULL**如果發生錯誤。  
   
 ### <a name="remarks"></a>備註  
- `CreateNewFrame` 使用`CRuntimeClass`物件傳遞至建構函式來建立新的框架視窗與檢視和附加文件。 如果`pDoc`參數是**NULL**，架構會輸出追蹤訊息。  
+ `CreateNewFrame` 使用`CRuntimeClass`物件傳遞至建構函式來建立新的框架視窗與檢視和附加文件。 如果*pDoc*參數是**NULL**，架構會輸出追蹤訊息。  
   
- `pOther`參數用來實作新視窗的命令。 它提供用來建立新的框架視窗的模型上的框架視窗。 新的框架視窗通常會建立不可見的。 呼叫此函式可建立新檔案和開啟檔案的標準架構實作外部框架視窗。  
+ *其他*參數用來實作新視窗的命令。 它提供用來建立新的框架視窗的模型上的框架視窗。 新的框架視窗通常會建立不可見的。 呼叫此函式可建立新檔案和開啟檔案的標準架構實作外部框架視窗。  
   
 ##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
  建立的 OLE 框架視窗。  
@@ -252,20 +253,20 @@ CFrameWnd* CreateOleFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  畫面格的父視窗的指標。  
   
- `pDoc`  
+ *pDoc*  
  新的 OLE 框架視窗應參考的文件指標。  
   
- `bCreateView`  
+ *bCreateView*  
  決定框架以及是否建立檢視。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功; 框架視窗的指標否則**NULL**。  
   
 ### <a name="remarks"></a>備註  
- 如果`bCreateView`是零，則會建立空白的框架。  
+ 如果*bCreateView*是零，則會建立空白的框架。  
   
 ##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
  擷取相關聯的文件類型的字串。  
@@ -277,7 +278,7 @@ virtual BOOL GetDocString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rString`  
+ *rString*  
  若要參考`CString`函式傳回時，將包含字串的物件。  
   
  *index*  
@@ -321,7 +322,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)和[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)都會覆寫此純虛擬函式。 任何衍生自的類別`CDocTemplate`也必須覆寫這個函式。  
   
 ##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
- 擷取清單項目所識別`rPos`，然後設定`rPos`至**位置**清單中的下一個項目的值。  
+ 擷取清單項目所識別*Rpo*，然後設定*Rpo*至**位置**清單中的下一個項目的值。  
   
 ```  
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;  
@@ -331,11 +332,11 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
  此範本相關聯的文件的清單中的下一個文件指標。  
   
 ### <a name="parameters"></a>參數  
- `rPos`  
+ *Rpo*  
  若要參考**位置**先前呼叫所傳回的值[GetFirstDocPosition](#getfirstdocposition)或`GetNextDoc`。  
   
 ### <a name="remarks"></a>備註  
- 如果擷取的項目是在清單中，最後則新值`rPos`設**NULL**。  
+ 如果擷取的項目是在清單中，最後則新值*Rpo*設**NULL**。  
   
  您可以使用`GetNextDoc`向前反覆項目迴圈，如果您建立的初始位置，藉由呼叫[GetFirstDocPosition](#getfirstdocposition)。  
   
@@ -352,17 +353,17 @@ virtual void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pFrame`  
+ *pFrame*  
  需要初始更新框架視窗。  
   
- `pDoc`  
+ *pDoc*  
  框架的相關文件。 可以是**NULL**。  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  表示框架是否應該都變成可見且作用中。  
   
 ### <a name="remarks"></a>備註  
- 呼叫**IntitialUpdateFrame**之後建立新的框架與`CreateNewFrame`。 呼叫此函式可讓接收該框架視窗中檢視其`OnInitialUpdate`呼叫。 此外，如果有不是先前作用中的檢視，框架視窗的主要檢視變成使用中。主要的檢視是檢視的子識別碼**AFX_IDW_PANE_FIRST**。 最後，框架視窗也會看到如果`bMakeVisible`不是零。 如果`bMakeVisible`是零，則目前的焦點，框架視窗的可見狀態將保持不變。  
+ 呼叫**IntitialUpdateFrame**之後建立新的框架與`CreateNewFrame`。 呼叫此函式可讓接收該框架視窗中檢視其`OnInitialUpdate`呼叫。 此外，如果有不是先前作用中的檢視，框架視窗的主要檢視變成使用中。主要的檢視是檢視的子識別碼**AFX_IDW_PANE_FIRST**。 最後，框架視窗也會看到如果`bMakeVisible`不是零。 如果*bMakeVisible*是零，則目前的焦點，框架視窗的可見狀態將保持不變。  
   
  您不需要使用新檔案並開啟舊檔架構的實作時，呼叫此函式。  
   
@@ -386,11 +387,11 @@ virtual Confidence MatchDocType(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPathName`  
+ *lpszPathName*  
  要判斷型別之檔案的路徑名稱。  
   
- `rpDocMatch`  
- 如果所指定的檔案會指派比對文件，文件的指標`lpszPathName`已經開啟。  
+ *rpDocMatch*  
+ 如果所指定的檔案會指派比對文件，文件的指標*lpszPathName*已經開啟。  
   
 ### <a name="return-value"></a>傳回值  
  中的值**信心**列舉的定義如下：  
@@ -410,9 +411,9 @@ enum Confidence
 ### <a name="remarks"></a>備註  
  使用這個函數來決定要用於開啟檔案的文件範本的類型。 如果您的應用程式支援多個檔案類型，例如，您可以使用此函式來判斷哪些可用的文件範本會透過呼叫適用於指定的檔案`MatchDocType`開啟，並選擇根據範本中每個範本傳回的信心值。  
   
- 如果指定的檔案`lpszPathName`已經開啟，此函數會傳回**CDocTemplate::yesAlreadyOpen**複製的檔案和**CDocument**成為在物件的物件`rpDocMatch`。  
+ 如果指定的檔案*lpszPathName*已經開啟，此函數會傳回**CDocTemplate::yesAlreadyOpen**複製的檔案和**CDocument**物件插入在物件*rpDocMatch*。  
   
- 如果檔案未開啟，但是中的擴充功能`lpszPathName`符合所指定的延伸模組**CDocTemplate::filterExt**，此函數會傳回**CDocTemplate::yesAttemptNative**並設定`rpDocMatch`至**NULL**。 如需有關**CDocTemplate::filterExt**，請參閱[CDocTemplate::GetDocString](#getdocstring)。  
+ 如果檔案未開啟，但是中的擴充功能*lpszPathName*符合所指定的延伸模組**CDocTemplate::filterExt**，此函數會傳回**CDocTemplate::yesAttemptNative**並設定*rpDocMatch*至**NULL**。 如需有關**CDocTemplate::filterExt**，請參閱[CDocTemplate::GetDocString](#getdocstring)。  
   
  如果兩種情況下為 true，則此函數會傳回**CDocTemplate::yesAttemptForeign**。  
   
@@ -430,27 +431,27 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszPathName`  
+ [in]*lpszPathName*  
  指標，包含要開啟的文件的檔案路徑。  
   
- [輸入] `bAddToMRU`  
+ [in]*bAddToMRU*  
  `TRUE` 表示文件是其中一個最新的檔案。`FALSE`指出文件不是其中一個最新的檔案。  
   
 ### <a name="return-value"></a>傳回值  
- 其檔案的命名方式在文件的指標`lpszPathName`;`NULL`如果不成功。  
+ 其檔案的命名方式在文件的指標*lpszPathName*;`NULL`如果不成功。  
   
 ### <a name="remarks"></a>備註  
- 開啟的檔案的路徑由指定`lpszPathName`。 如果`lpszPathName`是`NULL`，來建立新的檔案，其中包含與此範本相關聯之類型的文件。  
+ 開啟的檔案的路徑由指定*lpszPathName*。 如果*lpszPathName*是`NULL`，來建立新的檔案，其中包含與此範本相關聯之類型的文件。  
   
 ##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
- 移除文件所指向`pDoc`從與此範本關聯的文件的清單。  
+ 移除文件所指向*pDoc*從與此範本關聯的文件的清單。  
   
 ```  
 virtual void RemoveDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDoc`  
+ *pDoc*  
  要移除文件的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -474,13 +475,13 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDOleInPlaceContainer`  
+ *nIDOleInPlaceContainer*  
  啟動內嵌的物件時所使用的資源識別碼。  
   
 ### <a name="remarks"></a>備註  
  呼叫此函式可設定要使用就地啟動 OLE 物件時使用的資源。 這些資源可能包含功能表和快速鍵對應表。 通常會呼叫此函式[Afxenablecontrolcontainer](../../mfc/reference/cwinapp-class.md#initinstance)函式的應用程式。  
   
- 與相關聯的功能表`nIDOleInPlaceContainer`包含分隔符號，讓啟動就地項目，若要合併的功能表與容器應用程式的功能表。 如需合併伺服器和容器的功能表的詳細資訊，請參閱文章[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
+ 與相關聯的功能表*nIDOleInPlaceContainer*包含分隔符號，讓啟動就地項目，若要合併的功能表與容器應用程式的功能表。 如需合併伺服器和容器的功能表的詳細資訊，請參閱文章[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
 ##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
  呼叫此函式可載入文件的預設標題，並顯示文件的標題列中。  
@@ -511,7 +512,7 @@ void SetServerInfo(
  *nIDOleEmbedding*  
  內嵌的物件會在個別視窗中開啟時使用的資源識別碼。  
   
- `nIDOleInPlaceServer`  
+ *nIDOleInPlaceServer*  
  就地啟動內嵌的物件時所使用的資源識別碼。  
   
  *pOleFrameClass*  
@@ -523,7 +524,7 @@ void SetServerInfo(
 ### <a name="remarks"></a>備註  
  呼叫此成員函式，來識別使用者要求內嵌物件的啟動時將伺服器應用程式所使用的資源。 這些資源包含功能表和快速鍵對應表。 通常會呼叫此函式`InitInstance`應用程式。  
   
- 與相關聯的功能表`nIDOleInPlaceServer`包含允許容器的功能表與 [伺服器] 功能表合併的分隔符號。 如需合併伺服器和容器的功能表的詳細資訊，請參閱文章[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
+ 與相關聯的功能表*nIDOleInPlaceServer*包含允許容器的功能表與 [伺服器] 功能表合併的分隔符號。 如需合併伺服器和容器的功能表的詳細資訊，請參閱文章[功能表和資源 (OLE)](../../mfc/menus-and-resources-ole.md)。  
   
 ##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
  建立一個子框架用於豐富預覽。  
@@ -535,10 +536,10 @@ CFrameWnd* CreatePreviewFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentWnd`  
+ *pParentWnd*  
  （通常是由 Shell 所提供） 的父視窗的指標。  
   
- `pDoc`  
+ *pDoc*  
  文件物件，可預覽其內容的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -557,13 +558,13 @@ void SetPreviewInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDPreviewFrame`  
+ *nIDPreviewFrame*  
  指定預覽畫面格的資源識別碼。  
   
- `pPreviewFrameClass`  
+ *pPreviewFrameClass*  
  指定預覽畫面格的執行階段類別資訊結構的指標。  
   
- `pPreviewViewClass`  
+ *pPreviewViewClass*  
  指定的 [預覽] 檢視的執行階段類別資訊結構的指標。  
   
 ### <a name="remarks"></a>備註  

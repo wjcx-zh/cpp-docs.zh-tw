@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eed5b60954d05094db610a233968c9c7dd83c704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1848e0fe6d3e09ea4707279e83293ae2dc0feb64
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350939"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950673"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource 類別
 抽象類別，提供介面來建立及管理 D2D 資源，例如筆刷、 圖層和文字。  
@@ -104,10 +104,10 @@ CD2DResource(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
 ##  <a name="create"></a>  CD2DResource::Create  
@@ -118,7 +118,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRenderTarget`  
+ *pRenderTarget*  
  呈現目標指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -173,7 +173,7 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRenderTarget`  
+ *pRenderTarget*  
  呈現目標指標。  
   
 ### <a name="return-value"></a>傳回值  

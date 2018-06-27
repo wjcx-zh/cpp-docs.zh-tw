@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4412e8db861ac522c0f1b1d7192bfbb83612d64c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b8e52750f6f4589f90048e248305b2f0f5b4855
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383412"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953070"
 ---
 # <a name="serialization-making-a-serializable-class"></a>序列化：建立可序列化的類別
 製作可序列化類別需要進行五個主要步驟。 以下會列出這些步驟，並在下列各節進行說明：  
@@ -71,7 +71,7 @@ ms.locfileid: "33383412"
  您也可以使用[carchive:: Read](../mfc/reference/carchive-class.md#read)和[carchive:: Write](../mfc/reference/carchive-class.md#write)成員函式來讀取和寫入大量不具類型的資料。  
   
 ##  <a name="_core_using_the_declare_serial_macro"></a> 使用 DECLARE_SERIAL 巨集  
- 在支援序列化的類別宣告中需要使用 `DECLARE_SERIAL` 巨集，如下所示：  
+ 將支援序列化的類別宣告中需要 DECLARE_SERIAL 巨集，如下所示：  
   
  [!code-cpp[NVC_MFCSerialization#3](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_3.h)]  
   
@@ -81,18 +81,18 @@ ms.locfileid: "33383412"
  這個建構函式可以宣告為 public、protected 或 private。 將其設定為 protected 或 private 有助於確保該函式只能由序列化函式使用。 建構函式必須讓物件處於可視需要刪除的狀態。  
   
 > [!NOTE]
->  如果忘記在使用 `DECLARE_SERIAL` 和 `IMPLEMENT_SERIAL` 巨集的類別中定義不使用引數的建構函式，則會在使用 `IMPLEMENT_SERIAL` 巨集的那一行收到「沒有預設的建構函式可使用」的編譯警告。  
+>  如果您忘記在使用 DECLARE_SERIAL 和 IMPLEMENT_SERIAL 巨集的類別中定義不使用引數的建構函式，您會收到 「 沒有預設建構函式使用 「 編譯器警告該行使用 IMPLEMENT_SERIAL 巨集的位置。  
   
 ##  <a name="_core_using_the_implement_serial_macro_in_the_implementation_file"></a> 在實作檔使用 IMPLEMENT_SERIAL 巨集  
- 當您從 `IMPLEMENT_SERIAL` 衍生一個可序列化類別時，`CObject` 巨集用來定義需要的各種函式。 您會在實作檔 (.CPP) 中為您的類別使用這個巨集。 巨集的前兩個引數為類別的名稱及其即時基底類別的名稱。  
+ IMPLEMENT_SERIAL 巨集用來定義不同的函式所需當您衍生可序列化的類別從`CObject`。 您會在實作檔 (.CPP) 中為您的類別使用這個巨集。 巨集的前兩個引數為類別的名稱及其即時基底類別的名稱。  
   
  這個巨集的第三個引數是結構描述編號。 結構描述數目基本上是類別之物件的版本號碼。 結構描述編號使用大於或等於 0 的整數 (請勿將這個結構描述編號與資料庫詞彙混淆)。  
   
  將物件讀取至記憶體時，MFC 序列化程式碼會檢查結構描述編號。 如果磁碟上物件的結構描述編號與記憶體中類別的結構描述編號不相符，程式庫會擲回 `CArchiveException`，防止您的程式讀取不正確版本的物件。  
   
- 如果您想要您`Serialize`成員函式可以讀取多個版本 — 也就是不同版本的應用程式所寫入的檔案，您可以使用值**VERSIONABLE_SCHEMA**做為引數`IMPLEMENT_SERIAL`巨集。 如需使用方式的詳細資訊和範例，請參閱類別 `GetObjectSchema` 的 `CArchive` 成員函式。  
+ 如果您想要您`Serialize`成員函式可以讀取多個版本 — 也就是不同版本的應用程式所寫入的檔案，您可以使用值*VERSIONABLE_SCHEMA* IMPLEMENT_SERIAL 引數巨集。 如需使用方式的詳細資訊和範例，請參閱類別 `GetObjectSchema` 的 `CArchive` 成員函式。  
   
- 下列範例顯示如何使用類別 `IMPLEMENT_SERIAL` 的 `CPerson`，該類別衍生自 `CObject`：  
+ 下列範例示範如何針對類別，使用 IMPLEMENT_SERIAL `CPerson`，也就是衍生自`CObject`:  
   
  [!code-cpp[NVC_MFCSerialization#4](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_4.cpp)]  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e46f7e65d6c2f9b5c0d29007cd31f660754957
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b264b2366ce4fb7234d5906222fb4f8aa750212
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355456"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951412"
 ---
 # <a name="ccacheddatapathproperty-class"></a>CCachedDataPathProperty 類別
 實作非同步傳輸且在記憶體檔案中快取的 OLE 控制項屬性。  
@@ -53,7 +53,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 ## <a name="remarks"></a>備註  
  記憶體檔案儲存在 RAM 中，而不是磁碟上，並可用於快速暫時的傳輸。  
   
- 連同**CAysncMonikerFile**和`CDataPathProperty`，`CCachedDataPathProperty`提供使用非同步 moniker 中 OLE 控制項的功能。 與`CCachedDataPathProperty`物件，您便能夠 URL 或檔案的來源，以非同步方式傳送資料，並將它儲存在記憶體檔案，透過`m_Cache`公用變數。 所有資料都會儲存在記憶體檔案中，而且不需要覆寫[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)除非您想要監看的通知，並回應。 例如，如果您要傳送的大型。GIF 檔案，而且想来通知您的控制項，詳細資料已送達，和它應該重繪其本身，覆寫`OnDataAvailable`進行通知。  
+ 連同`CAysncMonikerFile`和`CDataPathProperty`，`CCachedDataPathProperty`提供使用非同步 moniker 中 OLE 控制項的功能。 與`CCachedDataPathProperty`物件，您便能夠 URL 或檔案的來源，以非同步方式傳送資料，並將它儲存在記憶體檔案，透過`m_Cache`公用變數。 所有資料都會儲存在記憶體檔案中，而且不需要覆寫[OnDataAvailable](../../mfc/reference/casyncmonikerfile-class.md#ondataavailable)除非您想要監看的通知，並回應。 例如，如果您要傳送的大型。GIF 檔案，而且想来通知您的控制項，詳細資料已送達，和它應該重繪其本身，覆寫`OnDataAvailable`進行通知。  
   
  類別`CCachedDataPathProperty`衍生自`CDataPathProperty`。  
   
@@ -94,14 +94,14 @@ CCachedDataPathProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pControl`  
+ *pControl*  
  要與此相關聯的 ActiveX 控制項物件的指標`CCachedDataPathProperty`物件。  
   
- `lpszPath`  
+ *lpszPath*  
  路徑可能是絕對或相對，用來建立非同步 moniker 所參考之屬性的實際絕對位置。 `CCachedDataPathProperty` 使用 Url，而不是檔名。 如果您想`CCachedDataPathProperty`物件的檔案，前面加上 file:// 路徑。  
   
 ### <a name="remarks"></a>備註  
- `COleControl`指向的物件`pControl`正由[開啟](../../mfc/reference/cdatapathproperty-class.md#open)和擷取由衍生類別。 如果`pControl`是**NULL**，搭配使用的控制項**開啟**應該與設定[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)。 如果`lpszPath`是**NULL**，您可以透過路徑中傳遞**開啟**，或將它與[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)。  
+ `COleControl`指向的物件*pControl*正由[開啟](../../mfc/reference/cdatapathproperty-class.md#open)和擷取由衍生類別。 如果*pControl*是**NULL**，搭配使用的控制項`Open`應該與設定[SetControl](../../mfc/reference/cdatapathproperty-class.md#setcontrol)。 如果*lpszPath*是**NULL**，您可以透過路徑中傳遞`Open`，或將它與[SetPath](../../mfc/reference/cdatapathproperty-class.md#setpath)。  
   
 ##  <a name="m_cache"></a>  CCachedDataPathProperty::m_Cache  
  包含類別檔案名稱的記憶體快取到其中的資料。  

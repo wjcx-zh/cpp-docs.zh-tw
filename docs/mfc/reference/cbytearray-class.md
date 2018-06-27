@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352931"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951061"
 ---
 # <a name="cbytearray-class"></a>CByteArray 類別
 支援動態位元組陣列。  
@@ -112,7 +112,7 @@ class CByteArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|  
   
 ## <a name="remarks"></a>備註  
- `CByteArray` 引入 `IMPLEMENT_SERIAL` 巨集，以支援其項目的序列化和傾印。 如果封存，不論是透過多載插入儲存的位元組陣列 ( **<<**) 運算子或`Serialize`成員函式，每個項目，接著再，序列化。  
+ `CByteArray` 加入了 IMPLEMENT_SERIAL 巨集，以支援序列化和傾印其項目。 如果封存，不論是透過多載插入儲存的位元組陣列 ( **<<**) 運算子或`Serialize`成員函式，每個項目，接著再，序列化。  
   
 > [!NOTE]
 >  使用陣列之前，請先使用 `SetSize` 建立其大小，並為其配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  

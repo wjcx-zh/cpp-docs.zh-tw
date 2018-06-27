@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8fb0833fc82895f1f32fb5c93a6e6519bfe119c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23728966dfd6bd759c16b364da063c7f80687b5e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354617"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954487"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 類別
 ID2D1BitmapBrush 包裝函式。  
@@ -142,7 +142,7 @@ void Attach(ID2D1BitmapBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pResource`  
+ *pResource*  
  現有資源的介面。 不能是 NULL  
   
 ##  <a name="cd2dbitmapbrush"></a>  CD2DBitmapBrush::CD2DBitmapBrush  
@@ -176,28 +176,28 @@ CD2DBitmapBrush(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  擴充模式和插補模式點陣圖的筆刷的指標。  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  指標的不透明度和筆刷的轉換。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
- `uiResID`  
+ *uiResID*  
  資源的資源 ID 編號。  
   
- `lpszType`  
+ *lpszType*  
  以 null 終止的字串，其中包含的資源類型的指標。  
   
- `sizeDest`  
+ *sizeDest*  
  目的地點陣圖的大小。  
   
- `lpszImagePath`  
+ *lpszImagePath*  
  以 null 終止的字串，其中包含檔案名稱的指標。  
   
 ##  <a name="commoninit"></a>  CD2DBitmapBrush::CommonInit  
@@ -208,7 +208,7 @@ void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBitmapBrushProperties`  
+ *pBitmapBrushProperties*  
  指向點陣圖筆刷屬性。  
   
 ##  <a name="create"></a>  CD2DBitmapBrush::Create  
@@ -219,7 +219,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRenderTarget`  
+ *pRenderTarget*  
  呈現目標指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -331,7 +331,7 @@ void SetBitmap(CD2DBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBitmap`  
+ *pBitmap*  
  使用筆刷的點陣圖來源  
   
 ##  <a name="setextendmodex"></a>  CD2DBitmapBrush::SetExtendModeX  
@@ -342,7 +342,7 @@ void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```  
   
 ### <a name="parameters"></a>參數  
- `extendModeX`  
+ *extendModeX*  
  值，指定如何筆刷水平並排延伸超過其點陣圖的區域  
   
 ##  <a name="setextendmodey"></a>  CD2DBitmapBrush::SetExtendModeY  
@@ -353,7 +353,7 @@ void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```  
   
 ### <a name="parameters"></a>參數  
- `extendModeY`  
+ *extendModeY*  
  值，指定如何筆刷垂直並排延伸超過其點陣圖的區域  
   
 ##  <a name="setinterpolationmode"></a>  CD2DBitmapBrush::SetInterpolationMode  
@@ -364,7 +364,7 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `interpolationMode`  
+ *interpolationMode*  
  筆刷點陣圖是縮放或旋轉時使用的插補模式  
   
 ## <a name="see-also"></a>另請參閱  

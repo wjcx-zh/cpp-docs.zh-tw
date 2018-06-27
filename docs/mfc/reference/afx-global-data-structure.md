@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357224"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956303"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 結構
 `AFX_GLOBAL_DATA` 結構包含的欄位和方法，用於管理架構，或自訂應用程式外觀和行為。  
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>參數   
- `angle`  
+ *角度*  
  順時針旋轉的角度，以度為單位。  
   
- `center`  
+ *center*  
  旋轉中心點。  
   
- `matrix`  
+ *矩陣*  
  這個方法傳回時，包含新的旋轉轉換。 您必須為此參數來配置儲存空間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `pWnd`  
+ [in]*pWnd*  
  指向控制項視窗的指標。  
   
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `lpRect`  
+ [in]*lpRect*  
  指向限定要繪製區域的矩形的指標。 預設值是 `NULL`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `hTheme`  
+ [in]*hTheme*  
  視窗佈景主題資料的控制代碼，或 `NULL`。 如果此參數不是 `NULL` ，且支援佈景主題，則此架構會使用指定的佈景主題來繪製文字。 否則，此架構不會使用佈景主題來繪製文字。  
   
  請使用 [OpenThemeData](http://msdn.microsoft.com/library/windows/desktop/bb759821) 方法建立 `HTHEME`。  
   
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `iPartId`  
+ [in]*iPartId*  
  具有想要的文字外觀之控制項組件。 如需詳細資訊，請參閱 [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(組件和狀態) 表格中的 Parts 資料行。 如果此值為 0，則會使用預設字型來繪製文字；否則會使用裝置內容中所選取的字型。  
   
- [輸入] `iStateId`  
+ [in]*iStateId*  
  具有想要的文字外觀的控制項狀態。 如需詳細資訊，請參閱 [Parts and States](http://msdn.microsoft.com/library/windows/desktop/bb773210)(組件和狀態) 表格中的 States 資料行。  
   
- [輸入] `strText`  
+ [in]*strText*  
  要繪製的文字。  
   
- [輸入] `rect`  
+ [in]*rect*  
  在其中繪製指定文字的區域界限。  
   
- [輸入] `dwFlags`  
+ [in]*dwFlags*  
  旗標的位元組合 (OR)，指定如何繪製指定文字。  
   
- 如果`hTheme`參數是`NULL`或如果您沒有支援並啟用，主題`nFormat`參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)方法會描述有效的旗標。 如果支援佈景主題， `dwFlags` DrawThemeTextEx [方法的](http://msdn.microsoft.com/library/windows/desktop/bb773317) 參數會描述有效的旗標。  
+ 如果*hTheme*參數是`NULL`或如果您沒有支援並啟用，主題*nFormat*參數[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)描述有效的方法旗標。 如果支援佈景主題， *dwFlags*參數[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)方法會描述有效的旗標。  
   
- [輸入] `nGlowSize`  
+ [in]*nGlowSize*  
  繪製指定文字前已繪製在背景上的光暈效果大小。 預設值為 0。  
   
- [輸入] `clrText`  
+ [in]*clrText*  
  用來繪製指定文字的色彩。 預設值為預設色彩。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果使用佈景主題來繪製指定的文字;否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 佈景主題會定義應用程式的視覺化樣式。 如果 `hTheme` 參數為 `NULL`、不支援 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) 方法，或 [桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) 組合已停用，就不會使用佈景主題來繪製文字。  
+ 佈景主題會定義應用程式的視覺化樣式。 佈景主題不會用來繪製文字，如果*hTheme*參數是`NULL`，或如果[DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317)不支援的方法，或如果[桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)(DWM) 組合已停用。  
   
 ### <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
@@ -257,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 表示啟用協助工具支援，`FALSE` 則表示停用協助工具支援。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `strBuffer`  
+ [in]*strBuffer*  
  文字的緩衝區。  
   
- [輸入] `lpszTag`  
+ [in]*lpszTag*  
  一組的開頭和結尾 XML 標記名稱。  
   
- [輸出] `strTag`  
- 此方法傳回時，`strTag`參數包含文字的開頭和結尾 XML 之間的命名方式的標記`lpszTag`參數。 修剪任何開頭或尾端空白字元的結果。  
+ [out]*strTag*  
+ 此方法傳回時， *strTag*參數包含文字的開頭和結尾 XML 之間的命名方式的標記*lpszTag*參數。 修剪任何開頭或尾端空白字元的結果。  
   
- [輸入] `bIsCharsList`  
- `TRUE` 要轉換中的逸出字元的符號`strTag`參數插入實際逸出字元。`FALSE`不是用來執行轉換。預設值是`FALSE`。 如需詳細資訊，請參閱＜備註＞。  
+ [in]*bIsCharsList*  
+ `TRUE` 要轉換中的逸出字元的符號*strTag*參數插入實際逸出字元。`FALSE`不是用來執行轉換。預設值是`FALSE`。 如需詳細資訊，請參閱＜備註＞。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `TRUE`；否則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- XML 標記組包含名為開頭和結尾標記的開始和結束的指定緩衝區中的文字執行中的指示。 `strBuffer`參數指定的緩衝區中，而`lpszTag`參數指定的 XML 標記名稱。  
+ XML 標記組包含名為開頭和結尾標記的開始和結束的指定緩衝區中的文字執行中的指示。 *StrBuffer*參數指定的緩衝區中，而*lpszTag*參數指定的 XML 標記名稱。  
   
- 使用下表中的符號，編碼一組指定的緩衝區中的逸出字元。 指定`TRUE`如`bIsCharsList`參數轉換中的符號`strTag`成實際的逸出字元的參數。 下表會使用[_T()](../../c-runtime-library/data-type-mappings.md)巨集，以指定的符號和逸出字元字串。  
+ 使用下表中的符號，編碼一組指定的緩衝區中的逸出字元。 指定`TRUE`如*bIsCharsList*參數轉換中的符號*strTag*成實際的逸出字元的參數。 下表會使用[_T()](../../c-runtime-library/data-type-mappings.md)巨集，以指定的符號和逸出字元字串。  
   
 |符號|逸出字元|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `nColor`  
- 指定將擷取其色彩之使用者介面項目的值。 如需有效值的清單，請參閱`nIndex`參數[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
+ [in]*nColor*  
+ 指定將擷取其色彩之使用者介面項目的值。 如需有效值的清單，請參閱*nIndex*參數[GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)方法。  
   
 ### <a name="return-value"></a>傳回值  
  指定之使用者介面項目的 RGB 色彩值。 如需詳細資訊，請參閱＜備註＞。  
   
 ### <a name="remarks"></a>備註  
- 如果 `nColor` 參數超出範圍，則傳回值為零。 由於零也是有效的 RGB 值，您無法使用這個方法來判斷目前的作業系統是否支援系統色彩。 請改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，這個方法會傳回`NULL`若色彩不支援。  
+ 如果*nColor*參數超出範圍，則傳回值是零。 由於零也是有效的 RGB 值，您無法使用這個方法來判斷目前的作業系統是否支援系統色彩。 請改用[GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927)方法，這個方法會傳回`NULL`若色彩不支援。  
   
 ### <a name="see-also"></a>另請參閱  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>參數   
- [in、out] `info`  
+ [in、 out]*資訊*  
  A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175)結構，其中包含與非最小化視窗中非工作區相關聯的可擴充的度量資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 擷取字元的高度時執行文字水平空間。`FALSE`文字以垂直方式執行時擷取字元的高度。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>參數   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  D2D factory 和它所建立的資源的執行緒模型。  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  值，指定是否將共用或隔離寫入 factory 物件  
   
 ### <a name="return-value"></a>傳回值  
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `lpszClassNamePrefix`  
+ [in]*lpszClassNamePrefix*  
  要註冊之視窗類別的名稱。  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功則已註冊類別的限定的名稱否則，[資源例外狀況](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)。  
   
 ### <a name="remarks"></a>備註  
- 傳回值是 `lpszClassNamePrefix` 參數字串的冒號分隔清單，並且是表示目前應用程式執行個體之控制代碼的十六進位文字；應用程式游標，即識別項為 IDC_ARROW 的箭號游標；以及背景筆刷。 如需註冊 MFC 視窗類別的詳細資訊，請參閱[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
+ 傳回值是以冒號分隔的清單*lpszClassNamePrefix*參數字串和十六進位文字表示法之目前應用程式執行個體控制代碼的應用程式游標，即箭號識別項為 IDC_ARROW; 資料指標和背景的筆刷。 如需註冊 MFC 視窗類別的詳細資訊，請參閱[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)。  
   
 ### <a name="see-also"></a>另請參閱    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `hwnd`  
+ [in]*hwnd*  
  層疊視窗的控制代碼。  
   
- [輸入] `crKey`  
+ [in]*crKey*  
  透明色彩索引鍵[桌面視窗管理員](http://msdn.microsoft.com/library/windows/desktop/aa969540)使用來構成層疊的視窗。  
   
- [輸入] `bAlpha`  
+ [in]*bAlpha*  
  Alpha 值，用來描述層疊視窗的不透明度。  
   
- [輸入] `dwFlags`  
- 位元組合 (OR) 或旗標，指定要使用哪些方法參數。 指定 LWA_COLORKEY 以使用 `crKey` 參數做為透明色彩。 指定 LWA_ALPHA 使用 `bAlpha` 參數來判斷層疊視窗的不透明度。  
+ [in]*dwFlags*  
+ 位元組合 (OR) 或旗標，指定要使用哪些方法參數。 指定 LWA_COLORKEY 以使用*crKey*參數當做透明色彩。 指定 LWA_ALPHA 使用*bAlpha*參數，來判斷層疊視窗的不透明度。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果此方法成功。否則， `FALSE`。   
@@ -715,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>參數   
- [輸入] `lpLogFont`  
+ [in]*lpLogFont*  
  包含字型的屬性的結構指標。  
   
- [輸入] `bHorz`  
+ [in]*bHorz*  
  `TRUE` 若要指定的文字往返水平空間。`FALSE`來指定文字以垂直方式執行。  
   
 ### <a name="return-value"></a>傳回值  
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>參數   
- `pszPath`  
+ *pszPath*  
  [in]指標的顯示名稱。  
   
- `pbc`  
+ *pbc*  
  控制在剖析作業繫結內容的指標。  
   
- `riid`  
+ *riid*  
  參考介面識別碼。  
   
- `ppv`  
- [out]此函式傳回時，包含所要求的介面指標`riid`。 這通常會是`IShellItem`或`IShellItem2`。  
+ *ppv*  
+ [out]此函式傳回時，包含所要求的介面指標*riid*。 這通常會是`IShellItem`或`IShellItem2`。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果登錄成功。否則為錯誤值。  

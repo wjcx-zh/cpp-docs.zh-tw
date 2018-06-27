@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368978"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957074"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 類別
 可讓您在您的應用程式中實作的標準字串尋找/取代對話方塊。  
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  一次`CFindReplaceDialog`在建構物件，您必須呼叫[建立](#create)成員函式來建立和顯示對話方塊。  
   
- 使用[m_fr](#m_fr)結構，以初始化對話方塊中，然後再呼叫**建立**。 `m_fr`結構的類型是[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
+ 使用[m_fr](#m_fr)結構，以初始化對話方塊中，然後再呼叫`Create`。 `m_fr`結構的類型是[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
   
  為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)函式，並使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)框架中的訊息對應巨集處理已註冊的訊息的視窗。  
   
@@ -133,9 +133,9 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>備註  
- 因為`CFindReplaceDialog`物件非強制回應對話方塊，您必須先將它在堆積上建構，使用`new`運算子。  
+ 因為`CFindReplaceDialog`物件非強制回應對話方塊，您必須先將它在堆積上建構，使用**新**運算子。  
   
- 解構期間，架構會嘗試執行`delete this`指標 對話方塊。 如果您在堆疊上，建立對話方塊`this`指標不存在，而且可能造成未定義的行為。  
+ 解構期間，架構會嘗試執行**刪除此**指標 對話方塊。 如果您在堆疊上，建立對話方塊**這**指標不存在，而且可能造成未定義的行為。  
   
  如需有關建構`CFindReplaceDialog`物件，請參閱[CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)概觀。 使用[CFindReplaceDialog::Create](#create)成員函式來顯示對話方塊。  
   
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  這個參數設定為`TRUE`顯示**尋找** 對話方塊。 將它設定為`FALSE`顯示**尋找/取代** 對話方塊。  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  當對話方塊出現時的預設搜尋字串的指標。 如果`NULL`，對話方塊不包含預設的搜尋字串。  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  當對話方塊出現時，預設取代字串的指標。 如果`NULL`，對話方塊不包含預設值取代字串。  
   
- `dwFlags`  
+ *dwFlags*  
  一或多個旗標可用於自訂的對話方塊中，使用位元 OR 運算子結合在一起設定。 預設值是`FR_DOWN`，指定是要繼續往下方向搜尋。 請參閱[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)如需有關這些旗標的 Windows SDK 中的結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  對話方塊的父系或擁有者視窗的指標。 這是視窗，將會收到指出要求之尋找/取代動作的特殊訊息。 如果`NULL`，使用應用程式的主視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lParam`  
+ *lParam*  
  **Lparam**值傳遞至框架視窗的**OnFindReplace**成員函式。  
   
 ### <a name="return-value"></a>傳回值  

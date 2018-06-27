@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 486fd48a0d77c8c42a958dcb205854928fe00dc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385400"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952446"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041：MFC/OLE1 移轉到 MFC/OLE 2
 > [!NOTE]
@@ -85,9 +85,9 @@ ms.locfileid: "33385400"
 \oclient\mainview.cpp(288) : error C2664: 'CreateStaticFromClipboard' : cannot convert parameter 1 from 'char [1]' to 'enum ::tagOLERENDER '  
 ```  
   
- 上面的 naïve 結果錯誤，所有的**COleClientItem::CreateXXXX** MFC/OLE1 中的函式所需的唯一名稱可將傳遞至代表項目。 這是基礎 OLE API 的需求。 這是不必要的 MFC/OLE 2，因為 OLE 2 不會使用 DDE 做為基礎的通訊機制 （DDE 交談中使用的名稱）。 若要修正此問題，您可以移除**CreateNewName**以及它的所有參考函式。 所以可以輕鬆地找出每個 MFC/OLE 函數會預期在此版本中只要將游標放在呼叫，然後按下 f1 鍵。  
+ 上面的 naïve 結果錯誤，所有的`COleClientItem::CreateXXXX`MFC/OLE1 中的函式所需的唯一名稱可將傳遞至代表項目。 這是基礎 OLE API 的需求。 這是不必要的 MFC/OLE 2，因為 OLE 2 不會使用 DDE 做為基礎的通訊機制 （DDE 交談中使用的名稱）。 若要修正此問題，您可以移除`CreateNewName`以及它的所有參考函式。 所以可以輕鬆地找出每個 MFC/OLE 函數會預期在此版本中只要將游標放在呼叫，然後按下 f1 鍵。  
   
- 另一個區域非常不同的是 OLE 2 剪貼簿處理。 使用 OLE1，您可以使用 Windows 剪貼簿應用程式開發介面互動與剪貼簿。 OLE 2 做法是使用不同的機制。 MFC/OLE1 Api 假設剪貼簿複製之前已開啟`COleClientItem`到剪貼簿的物件。 這已不再需要，會導致所有 MFC/OLE 剪貼簿作業失敗。 當您編輯上移除相依性的程式碼時**CreateNewName**，您也應該移除的程式碼，開啟和關閉 Windows 剪貼簿。  
+ 另一個區域非常不同的是 OLE 2 剪貼簿處理。 使用 OLE1，您可以使用 Windows 剪貼簿應用程式開發介面互動與剪貼簿。 OLE 2 做法是使用不同的機制。 MFC/OLE1 Api 假設剪貼簿複製之前已開啟`COleClientItem`到剪貼簿的物件。 這已不再需要，會導致所有 MFC/OLE 剪貼簿作業失敗。 當您編輯上移除相依性的程式碼時`CreateNewName`，您也應該移除的程式碼，開啟和關閉 Windows 剪貼簿。  
   
 ```  
 \oclient\mainview.cpp(332) : error C2065: 'AfxOleInsertDialog' : undeclared identifier  
@@ -96,7 +96,7 @@ ms.locfileid: "33385400"
 \oclient\mainview.cpp(347) : error C2039: 'CreateNewObject' : is not a member of 'CRectItem'  
 ```  
   
- 這些錯誤會造成從**CMainView::OnInsertObject**處理常式。 處理 「 插入新物件 」 命令是另一個項目已稍微變更。 在此情況下，很簡單，只要合併的原始實作與 appwizard 提供新的 OLE 容器應用程式。 事實上，這是一種技術，您可以套用到移植其他應用程式。 在 MFC/OLE1，您必須顯示 「 插入的物件 」 對話方塊藉由呼叫**AfxOleInsertDialog**函式。 在此版本中建構**COleInsertObject**對話方塊物件並呼叫`DoModal`。 此外，與建立新的 OLE 項目**CLSID**而不是類別名稱字串。 最終結果看起來應該像這樣  
+ 這些錯誤會造成從`CMainView::OnInsertObject`處理常式。 處理 「 插入新物件 」 命令是另一個項目已稍微變更。 在此情況下，很簡單，只要合併的原始實作與 appwizard 提供新的 OLE 容器應用程式。 事實上，這是一種技術，您可以套用到移植其他應用程式。 在 MFC/OLE1，您必須顯示 「 插入的物件 」 對話方塊藉由呼叫`AfxOleInsertDialog`函式。 在此版本中建構`COleInsertObject`對話方塊物件並呼叫`DoModal`。 此外，與建立新的 OLE 項目**CLSID**而不是類別名稱字串。 最終結果看起來應該像這樣  
   
 ```  
 COleInsertDialog dlg;  
@@ -152,14 +152,14 @@ EndWaitCursor();
 > [!NOTE]
 >  插入新的物件可能會不同應用程式）：  
   
- 它也是必要包含\<afxodlgs.h >，其中包含的宣告**COleInsertObject**對話方塊類別，以及其他 MFC 提供的標準對話方塊。  
+ 它也是必要包含\<afxodlgs.h >，其中包含的宣告`COleInsertObject`對話方塊類別，以及其他 MFC 提供的標準對話方塊。  
   
 ```  
 \oclient\mainview.cpp(367) : error C2065: 'OLEVERB_PRIMARY' : undeclared identifier  
 \oclient\mainview.cpp(367) : error C2660: 'DoVerb' : function does not take 1 parameters  
 ```  
   
- 這些錯誤被因某些 OLE1 常數已變更為 OLE 2 的事實，即使它們是相同的概念。 在此情況下**OLEVERB_PRIMARY**已變更為`OLEIVERB_PRIMARY`。 在 OLE1 和 OLE 2 中，主要的動詞命令通常執行容器當使用者按兩下項目上。  
+ 這些錯誤被因某些 OLE1 常數已變更為 OLE 2 的事實，即使它們是相同的概念。 在此情況下`OLEVERB_PRIMARY`已變更為`OLEIVERB_PRIMARY`。 在 OLE1 和 OLE 2 中，主要的動詞命令通常執行容器當使用者按兩下項目上。  
   
  此外，`DoVerb`現在採用額外的參數，以檢視的指標 (`CView`*)。 這個參數只用於實作 「 視覺化編輯 」 （或就地啟用）。 現在您設定該參數為 NULL，因為您在此階段不實作這項功能。  
   
@@ -177,7 +177,7 @@ BOOL CRectItem::CanActivate()
 \oclient\rectitem.cpp(84) : error C2064: term does not evaluate to a function  
 ```  
   
- 在 MFC/OLE1， **COleClientItem::GetBounds**和**SetBounds**用來查詢與管理的項目範圍 (**左**和**頂端**成員永遠是零)。 MFC/OLE 2 中支援這種更直接`COleClientItem::GetExtent`和`SetExtent`，其處理**大小**或`CSize`改為。  
+ 在 MFC/OLE1，`COleClientItem::GetBounds`和`SetBounds`用來查詢與管理的項目範圍 (**左**和**頂端**成員永遠是零)。 MFC/OLE 2 中支援這種更直接`COleClientItem::GetExtent`和`SetExtent`，其處理**大小**或`CSize`改為。  
   
  您的新 SetItemRectToServer 的程式碼和 UpdateItemRectFromServer 呼叫看起來像這樣：  
   
@@ -239,14 +239,14 @@ BOOL CRectItem::SetItemRectToServer()
 \oclient\frame.cpp(50) : error C2064: term does not evaluate to a function  
 ```  
   
- 在 MFC/OLE1 同步 API 是從容器呼叫伺服器*模擬*，因為 OLE1 已在許多情況下原本就是非同步。 它是為了處理來自使用者的命令之前，先檢查進行中的未處理的非同步呼叫。 提供的 MFC/OLE1 **COleClientItem::InWaitForRelease**函式，這麼做。 在 MFC/OLE 2 這並非必要，這樣您就可以一起 CMainFrame 中移除的 OnCommand 覆寫。  
+ 在 MFC/OLE1 同步 API 是從容器呼叫伺服器*模擬*，因為 OLE1 已在許多情況下原本就是非同步。 它是為了處理來自使用者的命令之前，先檢查進行中的未處理的非同步呼叫。 提供的 MFC/OLE1`COleClientItem::InWaitForRelease`函式，這麼做。 在 MFC/OLE 2 這並非必要，這樣您就可以一起 CMainFrame 中移除的 OnCommand 覆寫。  
   
  此時 OCLIENT 會編譯及連結。  
   
 ## <a name="other-necessary-changes"></a>其他必要的變更  
  有幾個項目，不會進行要保持 OCLIENT 執行，不過。 最好是修正這些問題，現在而不是更新版本。  
   
- 首先，它不需要初始化 OLE 程式庫。 這是藉由呼叫**AfxOleInit**從`InitInstance`:  
+ 首先，它不需要初始化 OLE 程式庫。 這是藉由呼叫`AfxOleInit`從`InitInstance`:  
   
 ```  
 if (!AfxOleInit())  
@@ -282,7 +282,7 @@ Invalidate();
 }  
 ```  
   
- 在 MFC/OLE1，容器應用程式的衍生來源的文件類別**COleClientDoc**。 在 MFC/OLE 2 這個類別已被移除並取代`COleDocument`（這個新的組織可讓您更輕鬆地建立容器/伺服器應用程式）。 沒有`#define`對應**COleClientDoc**至`COleDocument`簡化移植到 MFC/OLE 2 例如 OCLIENT MFC/OLE1 應用程式。 未提供的功能之一`COleDocument`所提供的**COleClientDoc**是標準命令訊息對應項目。 這完成該伺服器應用程式，也使用`COleDocument`（間接），不會包含與它們的這些命令處理常式的額外負荷除非容器/伺服器應用程式。 您需要下列項目新增至 CMainDoc 訊息對應：  
+ 在 MFC/OLE1，容器應用程式的衍生來源的文件類別`COleClientDoc`。 在 MFC/OLE 2 這個類別已被移除並取代`COleDocument`（這個新的組織可讓您更輕鬆地建立容器/伺服器應用程式）。 沒有 **#define**對應`COleClientDoc`至`COleDocument`簡化移植到 MFC/OLE 2 例如 OCLIENT MFC/OLE1 應用程式。 未提供的功能之一`COleDocument`所提供的`COleClientDoc`是標準命令訊息對應項目。 這完成該伺服器應用程式，也使用`COleDocument`（間接），不會包含與它們的這些命令處理常式的額外負荷除非容器/伺服器應用程式。 您需要下列項目新增至 CMainDoc 訊息對應：  
   
 ```  
 ON_UPDATE_COMMAND_UI(ID_EDIT_PASTE,
@@ -328,13 +328,13 @@ AddDocTemplate(pTemplate);
   
  若要啟用就地啟用，有幾個步驟，需要變更在`CView`(CMainView) 衍生的類別，以及`COleClientItem`衍生類別 (CRectItem)。 所有這些覆寫由提供 AppWizard，大部分的實作會直接從預設 AppWizard 應用程式。  
   
- 在此通訊埠的第一個步驟中，就地啟用已停用網路完全覆寫`COleClientItem::CanActivate`。 若要允許就地啟用，就應該移除此覆寫。 此外，傳遞 NULL 給所有呼叫`DoVerb`（有其中兩個） 因為提供的檢視時才需要進行就地啟用。 若要完全實作就地啟用，是為了傳遞正確的檢視中`DoVerb`呼叫。 這些呼叫的其中一個是**CMainView::OnInsertObject**:  
+ 在此通訊埠的第一個步驟中，就地啟用已停用網路完全覆寫`COleClientItem::CanActivate`。 若要允許就地啟用，就應該移除此覆寫。 此外，傳遞 NULL 給所有呼叫`DoVerb`（有其中兩個） 因為提供的檢視時才需要進行就地啟用。 若要完全實作就地啟用，是為了傳遞正確的檢視中`DoVerb`呼叫。 這些呼叫的其中一個是`CMainView::OnInsertObject`:  
   
 ```  
 pItem->DoVerb(OLEIVERB_SHOW, this);
 ```  
   
- 另一個是在**CMainView::OnLButtonDblClk**:  
+ 另一個是在`CMainView::OnLButtonDblClk`:  
   
 ```  
 m_pSelection->DoVerb(OLEIVERB_PRIMARY, this);
@@ -389,7 +389,7 @@ ASSERT(GetDocument()->GetInPlaceActiveItem(this) == NULL);
 }  
 ```  
   
- 若要處理的情況，以便使用者按一下項目之外，您必須加入下列程式碼的開頭**CMainView::SetSelection**:  
+ 若要處理的情況，以便使用者按一下項目之外，您必須加入下列程式碼的開頭`CMainView::SetSelection`:  
   
 ```  
 if (pNewSel != m_pSelection || pNewSel == NULL)  
@@ -468,7 +468,7 @@ void CMainView::OnSize(UINT nType,
   
  此第一個錯誤指出大問題與`InitInstance`函式的伺服器。 OLE 伺服器所需的初始化可能是其中一個最大的變更，您必須對您的 MFC/OLE1 應用程式，並執行。 最佳做法是查看 AppWizard 建立的 OLE 伺服器，並修改為適當的程式碼。 以下是一些重點，請記住以下幾點：  
   
- 必須初始化 OLE 程式庫，藉由呼叫**AfxOleInit**  
+ 必須藉由呼叫初始化 OLE 程式庫 `AfxOleInit`  
   
  在 設定伺服器的資源控制代碼，您無法使用設定的執行階段類別資訊的文件範本物件上呼叫 SetServerInfo`CDocTemplate`建構函式。  
   
@@ -573,7 +573,7 @@ RegisterShellFileTypes();
   
  您會注意到，新的資源 ID、 IDR_HIERSVRTYPE_SRVR_EMB 是指上述程式碼。 這是要在編輯內嵌於其他容器文件時使用的功能表資源。 在 MFC/OLE1 特定編輯內嵌項目的功能表項目已修改即時。 使用完全不同的功能表結構，編輯內嵌項目，而不是編輯以檔案為基礎的文件時，可更輕鬆地提供這兩種不同的模式不同的使用者介面。 您稍後將會看到時編輯內嵌的物件就地, 使用完全不同的功能表資源。  
   
- 若要建立此資源，載入 Visual c + + 中的資源指令碼並將複製現有的 IDR_HIERSVRTYPE 功能表資源。 將新的資源重新命名為 IDR_HIERSVRTYPE_SRVR_EMB （這是 AppWizard 使用的相同命名慣例）。 接下來將變更 「 儲存的檔案 」 為 「 檔案更新; 」命令 ID 提供給它**ID_FILE_UPDATE**。 也會將變更 「 檔案另存新檔 」"複本存新檔 」。命令 ID 提供給它**ID_FILE_SAVE_COPY_AS**。 架構會提供這兩種命令的實作。  
+ 若要建立此資源，載入 Visual c + + 中的資源指令碼並將複製現有的 IDR_HIERSVRTYPE 功能表資源。 將新的資源重新命名為 IDR_HIERSVRTYPE_SRVR_EMB （這是 AppWizard 使用的相同命名慣例）。 接下來將變更 「 儲存的檔案 」 為 「 檔案更新; 」提供識別碼 ID_FILE_UPDATE 命令。 也會將變更 「 檔案另存新檔 」"複本存新檔 」。提供識別碼 ID_FILE_SAVE_COPY_AS 命令。 架構會提供這兩種命令的實作。  
   
 ```  
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations  
@@ -583,20 +583,20 @@ RegisterShellFileTypes();
 \hiersvr\svritem.h(60) : error C2501: 'OnSetData' : missing decl-specifiers  
 ```  
   
- 有數個錯誤所產生的覆寫`OnSetData`，因為它參考**OLESTATUS**型別。 **OLESTATUS**已 OLE1 傳回錯誤的方式。 這已變更為`HRESULT`在 OLE 2 中，雖然 MFC 通常會將轉換`HRESULT`到`COleException`包含錯誤。 在此特定情況下，覆寫`OnSetData`不再需要，因此最簡單的做法是將它移除。  
+ 有數個錯誤所產生的覆寫`OnSetData`，因為它參考**OLESTATUS**型別。 **OLESTATUS**已 OLE1 傳回錯誤的方式。 這已變更為**HRESULT**在 OLE 2 中，雖然 MFC 通常會將轉換**HRESULT**到`COleException`包含錯誤。 在此特定情況下，覆寫`OnSetData`不再需要，因此最簡單的做法是將它移除。  
   
 ```  
 \hiersvr\svritem.cpp(30) : error C2660: 'COleServerItem::COleServerItem' : function does not take 1 parameters  
 ```  
   
- `COleServerItem`建構函式會採用額外 'BOOL' 參數。 這個旗標決定記憶體管理會對`COleServerItem`物件。 設定為 TRUE，架構會處理這些物件的記憶體管理，就不再需要時加以刪除。 HIERSVR 使用**CServerItem** (衍生自`COleServerItem`) 做為其原生資料，因此您會將此旗標設為 FALSE 的一部分的物件。 這可讓 HIERSVR 判斷當刪除每個伺服器項目時。  
+ `COleServerItem`建構函式會採用額外 'BOOL' 參數。 這個旗標決定記憶體管理會對`COleServerItem`物件。 設定為 TRUE，架構會處理這些物件的記憶體管理，就不再需要時加以刪除。 HIERSVR 使用`CServerItem`(衍生自`COleServerItem`) 做為其原生資料，因此您會將此旗標設為 FALSE 的一部分的物件。 這可讓 HIERSVR 判斷當刪除每個伺服器項目時。  
   
 ```  
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class  
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class  
 ```  
   
- 這些錯誤表示，如有擁有尚未被覆寫 CServerItem 中某些 '純虛擬' 函式。 最有可能被原因 OnDraw 的參數清單已變更的事實。 若要修正這個錯誤，變更**cserveritem:: Ondraw** ，如下所示 （以及 svritem.h 中的宣告）：  
+ 這些錯誤表示，如有擁有尚未被覆寫 CServerItem 中某些 '純虛擬' 函式。 最有可能被原因 OnDraw 的參數清單已變更的事實。 若要修正這個錯誤，變更`CServerItem::OnDraw`，如下所示 （以及 svritem.h 中的宣告）：  
   
 ```  
 BOOL CServerItem::OnDraw(CDC* pDC,
@@ -634,7 +634,7 @@ return TRUE;
     int)__far const ' : cannot convert parameter 1 from 'int __far *' to 'struct ::tagPOINT __far *'  
 ```  
   
- CServerItem::CalcNodeSize 函式中的項目大小轉換成**HIMETRIC**而且儲存在**m_rectBounds**。 未記載 '**m_rectBounds**' 的成員`COleServerItem`不存在 (它已經由部分取代`m_sizeExtent`，但為 OLE 2 這個成員已稍微不同的使用方式比**m_rectBounds**OLE1 中)。 而不是設定**HIMETRIC**大小到此成員變數，您會將它傳回。 這個傳回值用於`OnGetExtent`的先前實作。  
+ CServerItem::CalcNodeSize 函式中的項目大小轉換成**HIMETRIC**而且儲存在*m_rectBounds*。 未記載 '*m_rectBounds*' 的成員`COleServerItem`不存在 (它已經由部分取代*m_sizeExtent*，但為 OLE 2 這個成員已稍微不同的使用方式比*m_rectBounds* OLE1 中)。 而不是設定**HIMETRIC**大小到此成員變數，您會將它傳回。 這個傳回值用於`OnGetExtent`的先前實作。  
   
 ```  
 CSize CServerItem::CalcNodeSize()  
@@ -660,7 +660,7 @@ CSize CServerItem::CalcNodeSize()
 }  
 ```  
   
- CServerItem 也會覆寫**COleServerItem::OnGetTextData**。 此函式 MFC/OLE 中已過時，並取代為不同的機制。 MFC OLE 範例 MFC 3.0 版[HIERSVR](../visual-cpp-samples.md)實作這項功能，藉由覆寫`COleServerItem::OnRenderFileData`。 這項功能並不重要這個基本的連接埠，所以您可以移除 OnGetTextData 覆寫。  
+ CServerItem 也會覆寫`COleServerItem::OnGetTextData`。 此函式 MFC/OLE 中已過時，並取代為不同的機制。 MFC OLE 範例 MFC 3.0 版[HIERSVR](../visual-cpp-samples.md)實作這項功能，藉由覆寫`COleServerItem::OnRenderFileData`。 這項功能並不重要這個基本的連接埠，所以您可以移除 OnGetTextData 覆寫。  
   
  有許多詳細錯誤 svritem.cpp 中的並未提及。 它們不是 「 實際 」 錯誤，只是先前的錯誤所造成的錯誤。  
   
@@ -729,7 +729,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```  
   
- 請注意參考**AfxGetApp()]-> [m_pMainWnd**。 就地啟用的伺服器時，它必須主視窗和設定 m_pMainWnd，但卻通常是不可見。 此外，此視窗是指*主要*應用程式視窗，MDI 框架視窗出現時的伺服器是完全開啟或執行獨立。 它並不是指使用中框架視窗，其中就地啟動時，框架視窗衍生自`COleIPFrameWnd`。 若要取得正確的使用中視窗，就地編輯，此版本的 MFC 將加入新的函式，即使`AfxGetMainWnd`。 一般而言，您應該使用此函式，而不是**AfxGetApp()]-> [m_pMainWnd**。 此程式碼需要變更，如下所示：  
+ 請注意參考 *`AfxGetApp()->m_pMainWnd*`。 就地啟用的伺服器時，它必須主視窗和設定 m_pMainWnd，但卻通常是不可見。 此外，此視窗是指*主要*應用程式視窗，MDI 框架視窗出現時的伺服器是完全開啟或執行獨立。 它並不是指使用中框架視窗，其中就地啟動時，框架視窗衍生自`COleIPFrameWnd`。 若要取得正確的使用中視窗，就地編輯，此版本的 MFC 將加入新的函式，即使`AfxGetMainWnd`。 一般而言，您應該使用此函式，而不是 *`AfxGetApp()->m_pMainWnd*`。 此程式碼需要變更，如下所示：  
   
 ```  
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,  
@@ -746,7 +746,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   已變更為選取範圍容器視窗捲動。  
   
- MFC 3.0 HIERSVR 範例也會使用其伺服器項目稍有不同的設計。 這有助於節省記憶體，並使您的連結更有彈性。 HIERSVR 2.0 版與每個節點在樹狀目錄中*是 a* `COleServerItem`。 `COleServerItem` 會更多的負擔，而不是絕對必要，每個這些節點，但`COleServerItem`需要為每個作用中的連結。 但大部分的情況下，有極少數的作用中連結在任何指定時間。 若要進行更有效率，在這個版本的 MFC HIERSVR 分隔節點從`COleServerItem`。 它有兩個 CServerNode 和**CServerItem**類別。 **CServerItem** (衍生自`COleServerItem`)，才會建立在必要時。 一旦容器 （或） 容器停止使用該特定連結至該特定節點，會刪除相關聯 CServerNode CServerItem 物件。 這項設計會更有效率且更有彈性。 當處理多個選取項目連結的成為它的彈性。 HIERSVR 下列兩個版本都不支援多重選取，但它會更輕鬆地新增 （並以支援這類的選取項目連結） 與 HIERSVR，MFC 3.0 版因為`COleServerItem`分開原生資料。  
+ MFC 3.0 HIERSVR 範例也會使用其伺服器項目稍有不同的設計。 這有助於節省記憶體，並使您的連結更有彈性。 HIERSVR 2.0 版與每個節點在樹狀目錄中*是 a* `COleServerItem`。 `COleServerItem` 會更多的負擔，而不是絕對必要，每個這些節點，但`COleServerItem`需要為每個作用中的連結。 但大部分的情況下，有極少數的作用中連結在任何指定時間。 若要進行更有效率，在這個版本的 MFC HIERSVR 分隔節點從`COleServerItem`。 它有兩個 CServerNode 和`CServerItem`類別。 `CServerItem` (衍生自`COleServerItem`)，才會建立在必要時。 一旦容器 （或） 容器停止使用該特定連結至該特定節點，會刪除相關聯 CServerNode CServerItem 物件。 這項設計會更有效率且更有彈性。 當處理多個選取項目連結的成為它的彈性。 HIERSVR 下列兩個版本都不支援多重選取，但它會更輕鬆地新增 （並以支援這類的選取項目連結） 與 HIERSVR，MFC 3.0 版因為`COleServerItem`分開原生資料。  
   
 ## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   

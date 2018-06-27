@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383493"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956290"
 ---
 # <a name="toolbar-tool-tips"></a>工具列工具提示
 工具提示會顯示工具列按鈕的用途的簡短描述當您將滑鼠指標移至按鈕的一段時間的小型快顯視窗。 當您使用具有工具列的應用程式精靈建立應用程式時，為您提供工具提示支援。 這篇文章會說明這兩個工具提示支援應用程式精靈，以及如何將工具提示支援加入至您的應用程式所建立。  
@@ -42,7 +42,7 @@ ms.locfileid: "33383493"
 ##  <a name="_core_activating_tool_tips"></a> 啟用工具提示  
  若要啟用應用程式中的工具提示，您必須執行兩件事：  
   
--   新增`CBRS_TOOLTIPS`其他樣式的樣式 (例如**WS_CHILD**， **WS_VISIBLE**，和其他**CBRS_** 樣式) 做為傳遞`dwStyle`參數[CToolBar::Create](../mfc/reference/ctoolbar-class.md#create)函式或在[SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)。  
+-   CBRS_TOOLTIPS 樣式加入其他樣式 (例如 WS_CHILD、 WS_VISIBLE，以及其他**CBRS_** 樣式) 做為傳遞*dwStyle*參數[CToolBar::Create](../mfc/reference/ctoolbar-class.md#create)函式或在[SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)。  
   
 -   下列程序所述，新增工具列的提示文字，以新行字元 ('\n') 分隔要包含工具列命令的命令列提示字元的字串資源。 字串資源共用的工具列按鈕的識別碼。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33383493"
 -   字串資料表項目具有相同 ID 的資源檔中的子控制項的工具提示字串。  
   
 ##  <a name="_core_fly_by_status_bar_updates"></a> Flyby 狀態列更新  
- 工具提示與相關功能是 「 立即 」 顯示狀態列更新。 根據預設，狀態 列上的訊息會描述特定工具列按鈕，啟動 按鈕時。 藉由`CBRS_FLYBY`清單中的樣式傳遞給`CToolBar::Create`，您可以讓滑鼠游標而不實際啟動按鈕通過工具列時更新這些訊息。  
+ 工具提示與相關功能是 「 立即 」 顯示狀態列更新。 根據預設，狀態 列上的訊息會描述特定工具列按鈕，啟動 按鈕時。 您傳遞至樣式的清單中包括 CBRS_FLYBY `CToolBar::Create`，您可以讓滑鼠游標而不實際啟動按鈕通過工具列時更新這些訊息。  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
   

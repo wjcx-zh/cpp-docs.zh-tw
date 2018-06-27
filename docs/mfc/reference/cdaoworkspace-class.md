@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b249f8069ba12772d21d170b67236a5f013290ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c9f347f4585e579ced7a12bba106fa251eed71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377210"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955191"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 類別
 從單一使用者的登入到登出，管理受密碼保護的具名資料庫工作階段。  
@@ -94,7 +94,7 @@ class CDaoWorkspace : public CObject
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|建構工作區物件。 之後，呼叫**建立**或**開啟**。|  
+|[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|建構工作區物件。 之後，呼叫`Create`或`Open`。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -168,7 +168,7 @@ class CDaoWorkspace : public CObject
   
  明確地開啟預設工作區中，或在工作區集合中，開啟現有的工作區中所述[開啟](#open)成員函式。  
   
- 關閉工作區，以結束工作區的工作階段[關閉](#close)成員函式。 **關閉**關閉任何資料庫，您還沒有關閉之前，回復所有未認可的交易。  
+ 關閉工作區，以結束工作區的工作階段[關閉](#close)成員函式。 `Close` 關閉任何資料庫，您還沒有關閉之前，回復所有未認可的交易。  
   
 ## <a name="transactions"></a>異動  
  DAO 管理層級之交易的工作區。因此，具有多個開啟的資料庫工作區上的交易套用至所有資料庫。 例如，如果這兩個資料庫有未認可的更新，而且您呼叫[CommitTrans](#committrans)，所有更新會認可。 如果您想要限制對單一資料庫的交易，其需要不同的工作區物件。  
@@ -201,7 +201,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>備註  
- **附加**將新建立的工作區的物件附加至資料庫引擎的工作區集合。 工作區不會保存之間資料庫引擎的工作階段。只有在記憶體中，不在磁碟上儲存它們。 您沒有附加工作區中。如果不這麼做，您仍然可以使用它。  
+ `Append` 新建立的工作區將物件附加至資料庫引擎的工作區集合。 工作區不會保存之間資料庫引擎的工作階段。只有在記憶體中，不在磁碟上儲存它們。 您沒有附加工作區中。如果不這麼做，您仍然可以使用它。  
   
  附加的工作區會保留在工作區集合的 作用中，在開啟狀態，直到您呼叫其[關閉](#close)成員函式。  
   
@@ -215,7 +215,7 @@ void BeginTrans();
 ```  
   
 ### <a name="remarks"></a>備註  
- 在您呼叫後**BeginTrans**，更新您對您資料或資料庫的結構會認可交易時，才會生效。 因為工作區定義單一的交易空間，交易套用在工作區中所有開啟的資料庫。 有兩種方式可以完成的交易：  
+ 在您呼叫後`BeginTrans`，更新您對您資料或資料庫的結構會認可交易時，才會生效。 因為工作區定義單一的交易空間，交易套用在工作區中所有開啟的資料庫。 有兩種方式可以完成的交易：  
   
 -   呼叫[CommitTrans](#committrans)成員函式來認可交易，並將變更儲存至資料來源。  
   
@@ -237,7 +237,7 @@ CDaoWorkspace();
   
 -   呼叫物件的[開啟](#open)成員函式，開啟 [預設] 工作區，或開啟工作區集合中的現有的物件。  
   
--   呼叫的物件或者[建立](#create)成員函式來建立新的 DAO 工作區物件。 此明確啟動新的工作區中工作階段，您可以透過指`CDaoWorkspace`物件。 在呼叫**建立**，您可以呼叫[附加](#append)如果您想要將工作區加入至資料庫引擎的工作區集合。  
+-   呼叫的物件或者[建立](#create)成員函式來建立新的 DAO 工作區物件。 此明確啟動新的工作區中工作階段，您可以透過指`CDaoWorkspace`物件。 在呼叫`Create`，您可以呼叫[附加](#append)如果您想要將工作區加入至資料庫引擎的工作區集合。  
   
  請參閱類別概觀的[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)有關當您需要明確建立`CDaoWorkspace`物件。 通常，您會使用以隱含方式建立，當您開啟的工作區[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件而不指定工作區，或當您開啟[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件，而不指定資料庫物件。 以此方式建立的 MFC DAO 物件使用 DAO 的預設工作區，其中會建立一次而重複使用。  
   
@@ -251,7 +251,7 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>備註  
- 關閉開啟的工作區物件釋放基礎的 DAO 物件，並區所屬的工作區集合中，如果它從集合中移除。 呼叫**關閉**是良好的程式設計作法。  
+ 關閉開啟的工作區物件釋放基礎的 DAO 物件，並區所屬的工作區集合中，如果它從集合中移除。 呼叫`Close`是良好的程式設計作法。  
   
 > [!CAUTION]
 >  關閉工作區物件便會關閉任何開啟的資料庫，在工作區中。 這會導致正在關閉，在資料庫中任何資料錄集開啟和任何擱置中的編輯或更新都會復原。 如需相關資訊，請參閱[CDaoDatabase::Close](../../mfc/reference/cdaodatabase-class.md#close)， [CDaoRecordset::Close](../../mfc/reference/cdaorecordset-class.md#close)， [CDaoTableDef::Close](../../mfc/reference/cdaotabledef-class.md#close)，和[CDaoQueryDef::Close](../../mfc/reference/cdaoquerydef-class.md#close)成員函式。  
@@ -268,10 +268,10 @@ void CommitTrans();
 ```  
   
 ### <a name="remarks"></a>備註  
- 交易包含資料庫的資料或它的結構，從呼叫之變更的一系列[BeginTrans](#begintrans)。 當您完成交易時，請認可或復原 （取消所做的變更） 與[復原](#rollback)。 根據預設，不含的交易，記錄的更新認可立即。 呼叫**BeginTrans**導致承諾的更新會延遲，直到您呼叫**CommitTrans**。  
+ 交易包含資料庫的資料或它的結構，從呼叫之變更的一系列[BeginTrans](#begintrans)。 當您完成交易時，請認可或復原 （取消所做的變更） 與[復原](#rollback)。 根據預設，不含的交易，記錄的更新認可立即。 呼叫`BeginTrans`導致承諾的更新會延遲，直到您呼叫`CommitTrans`。  
   
 > [!CAUTION]
->  在一個工作區中，交易都通用的工作區，並不限於只有一個資料庫或資料錄集。 如果您對多個資料庫或資料錄集區的交易內執行作業**CommitTrans**認可所有暫止的更新，和**復原**還原這些資料庫上的所有作業，資料錄集。  
+>  在一個工作區中，交易都通用的工作區，並不限於只有一個資料庫或資料錄集。 如果您對多個資料庫或資料錄集區的交易內執行作業`CommitTrans`認可所有暫止的更新，以及`Rollback`還原這些資料庫和資料錄集上的所有作業。  
   
  當您關閉資料庫或工作區，以暫止的交易時，會全部回復交易。  
   
@@ -298,17 +298,17 @@ static void PASCAL CompactDatabase(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszSrcName`  
+ *lpszSrcName*  
  關閉資料庫的現有名稱。 它可以是完整路徑和檔案名稱，例如"c:\\\MYDB。MDB"。 如果檔名的副檔名，您必須指定它。 如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (因為路徑字串中需要兩個反斜線"\\」 是 c + + 逸出字元。)  
   
- `lpszDestName`  
- 您要建立壓縮資料庫的完整路徑。 您也可以指定網路路徑做為與`lpszSrcName`。 您無法使用`lpszDestName`引數來指定相同的資料庫檔案`lpszSrcName`。  
+ *lpszDestName*  
+ 您要建立壓縮資料庫的完整路徑。 您也可以指定網路路徑做為與*lpszSrcName*。 您無法使用*lpszDestName*引數來指定相同的資料庫檔案*lpszSrcName*。  
   
- `lpszPassword`  
- 當您想要壓縮密碼保護的資料庫時，使用密碼。 請注意，如果您使用新版`CompactDatabase`採用的密碼，您必須提供所有參數。 此外，因為這是連接參數，它需要特殊格式，如下所示:;PWD = `lpszPassword`。 例如:;PWD ="高興"。 （前置分號是必要的）。  
+ *lpszPassword*  
+ 當您想要壓縮密碼保護的資料庫時，使用密碼。 請注意，如果您使用新版`CompactDatabase`採用的密碼，您必須提供所有參數。 此外，因為這是連接參數，它需要特殊格式，如下所示:;PWD = *lpszPassword*。 例如:;PWD ="高興"。 （前置分號是必要的）。  
   
- `lpszLocale`  
- 用來指定定序順序建立的字串運算式`lpszDestName`。 如果您省略這個引數所接受的預設值**dbLangGeneral** （請參閱下文），新資料庫的地區設定是舊的資料庫相同。 可能的值為：  
+ *lpszLocale*  
+ 用來指定定序順序建立的字串運算式*lpszDestName*。 如果您省略這個引數所接受的預設值**dbLangGeneral** （請參閱下文），新資料庫的地區設定是舊的資料庫相同。 可能的值為：  
   
 - **dbLangGeneral**英文、 德文、 法文、 葡萄牙文、 義大利文和現代西班牙文  
   
@@ -340,8 +340,8 @@ static void PASCAL CompactDatabase(
   
 - **dbLangTurkish**土耳其文  
   
- `nOptions`  
- 表示目標資料庫的一個或多個選項`lpszDestName`。 如果您省略這個引數所接受的預設值，`lpszDestName`會有相同的加密和相同的版本`lpszSrcName`。 您可以結合**dbEncrypt**或**dbDecrypt**選項搭配使用位元 OR 運算子版本選項的其中一個。 可能的值，指定資料庫格式，無法為資料庫引擎的版本，為：  
+ *nOptions*  
+ 表示目標資料庫的一個或多個選項*lpszDestName*。 如果您省略這個引數所接受的預設值， *lpszDestName*會有相同的加密和相同的版本*lpszSrcName*。 您可以結合**dbEncrypt**或**dbDecrypt**選項搭配使用位元 OR 運算子版本選項的其中一個。 可能的值，指定資料庫格式，無法為資料庫引擎的版本，為：  
   
 - **dbEncrypt**時壓縮加密資料庫。  
   
@@ -355,7 +355,7 @@ static void PASCAL CompactDatabase(
   
 - **dbVersion30**建立使用 Microsoft Jet 資料庫引擎版本 3.0 時壓縮的資料庫。  
   
- 您可以使用**dbEncrypt**或**dbDecrypt**選項引數來指定是否加密或解密資料庫，因為它會壓縮。 如果您省略加密常數，或同時包含**dbDecrypt**和**dbEncrypt**，`lpszDestName`會有相同的加密為`lpszSrcName`。 您可以選項引數中使用其中一個版本常數，指定資料格式壓縮資料庫的版本。 這個常數會影響的資料格式版本`lpszDestName`。 您可以指定只有一個版本的常數。 如果您省略版本常數`lpszDestName`會有相同的版本`lpszSrcName`。 您可以壓縮`lpszDestName`只為相同的版本或更新版本比`lpszSrcName`。  
+ 您可以使用**dbEncrypt**或**dbDecrypt**選項引數來指定是否加密或解密資料庫，因為它會壓縮。 如果您省略加密常數，或同時包含**dbDecrypt**和**dbEncrypt**， *lpszDestName*會有相同的加密為*lpszSrcName*. 您可以選項引數中使用其中一個版本常數，指定資料格式壓縮資料庫的版本。 這個常數會影響的資料格式版本*lpszDestName*。 您可以指定只有一個版本的常數。 如果您省略版本常數*lpszDestName*會有相同的版本*lpszSrcName*。 您可以壓縮*lpszDestName*只為相同的版本或更新版本比*lpszSrcName*。  
   
 > [!CAUTION]
 >  如果資料庫並未加密，則可能，即使您實作直接讀取二進位磁碟檔案構成資料庫的使用者/密碼安全性。  
@@ -382,13 +382,13 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  唯一名稱的新工作區中的物件最多 14 個字元字串。 您必須提供名稱。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
   
  *lpszUserName*  
- 工作區的擁有者的使用者名稱。 如需需求，請參閱`lpszDefaultUser`參數[SetDefaultUser](#setdefaultuser)成員函式。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 使用者名稱屬性 」。  
+ 工作區的擁有者的使用者名稱。 如需需求，請參閱*lpszDefaultUser*參數[SetDefaultUser](#setdefaultuser)成員函式。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 使用者名稱屬性 」。  
   
- `lpszPassword`  
+ *lpszPassword*  
  新的工作區中物件的密碼。 密碼可以多達 14 個字元，而且只能包含 ASCII (null) 0 以外的任何字元。 密碼會區分大小寫。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 密碼屬性 」。  
   
 ### <a name="remarks"></a>備註  
@@ -396,11 +396,11 @@ virtual void Create(
   
 1.  建構[CDaoWorkspace](#cdaoworkspace)物件。  
   
-2.  呼叫物件的**建立**建立基礎 DAO 工作區的成員函式。 您必須指定工作區名稱。  
+2.  呼叫物件的`Create`建立基礎 DAO 工作區的成員函式。 您必須指定工作區名稱。  
   
 3.  （選擇性） 呼叫[附加](#append)如果您想要將工作區加入至資料庫引擎的工作區集合。 您可以使用工作區，而不將它附加。  
   
- 之後**建立**呼叫時，工作區物件處於開啟狀態，可供使用。 您不會呼叫**開啟**之後**建立**。 您不會呼叫**建立**如果工作區已存在於工作區集合。 **建立**初始化 database engine，如果它不已經初始化應用程式。  
+ 之後`Create`呼叫時，工作區物件處於開啟狀態，可供使用。 您不會呼叫`Open`之後`Create`。 您不會呼叫`Create`如果工作區已存在於工作區集合。 `Create` 如果它不已經初始化應用程式，初始化 database engine。  
   
 ##  <a name="getdatabasecount"></a>  CDaoWorkspace::GetDatabaseCount  
  呼叫此成員函式擷取的工作區的資料庫集合中的 DAO 資料庫物件數目，在工作區中開啟的資料庫數目。  
@@ -432,13 +432,13 @@ void GetDatabaseInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  工作區的資料庫集合中，依索引查閱中的資料庫物件的以零為起始的索引。  
   
- `dbinfo`  
+ *dbinfo*  
  若要參考[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)物件，傳回要求的資訊。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定要擷取的資料庫有關的資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回：  
   
 - `AFX_DAO_PRIMARY_INFO` （預設值）名稱，可更新交易  
@@ -447,13 +447,13 @@ void GetDatabaseInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和次要資訊加上： 連接  
   
- `lpszName`  
+ *lpszName*  
  依名稱查閱資料庫物件名稱。 名稱是唯一名稱的新工作區中的物件最多 14 個字元的字串。  
   
 ### <a name="remarks"></a>備註  
  一個版本的函式可讓您依索引查詢資料庫。 另一個版本可讓您依名稱查閱資料庫。  
   
- 如需在傳回的資訊的說明`dbinfo`，請參閱[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員`dwInfoOptions`。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
+ 如需在傳回的資訊的說明*dbinfo*，請參閱[CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員*dwInfoOptions*。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
   
 ##  <a name="getinipath"></a>  CDaoWorkspace::GetIniPath  
  呼叫此成員函式，以取得 Microsoft Jet 資料庫的位置引擎的起始設定 Windows 登錄中。  
@@ -579,13 +579,13 @@ void GetWorkspaceInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  工作區集合中，依索引查閱中的資料庫物件的以零為起始的索引。  
   
- `wkspcinfo`  
+ *wkspcinfo*  
  若要參考[CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)物件，傳回要求的資訊。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定要擷取的工作區的相關資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回：  
   
 - `AFX_DAO_PRIMARY_INFO` （預設值）名稱  
@@ -594,11 +594,11 @@ void GetWorkspaceInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和次要資訊加上： 隔離 ODBCTrans  
   
- `lpszName`  
+ *lpszName*  
  依名稱查閱工作區中物件的名稱。 名稱是唯一名稱的新工作區中的物件最多 14 個字元的字串。  
   
 ### <a name="remarks"></a>備註  
- 如需在傳回的資訊的說明`wkspcinfo`，請參閱[CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員`dwInfoOptions`。 當您要求一個層級的資訊時，您會取得先前的層級的資訊。  
+ 如需在傳回的資訊的說明*wkspcinfo*，請參閱[CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員*dwInfoOptions*。 當您要求一個層級的資訊時，您會取得先前的層級的資訊。  
   
 ##  <a name="idle"></a>  CDaoWorkspace::Idle  
  呼叫**閒置**提供資料庫引擎執行的背景工作，可能不是最新因為密集資料處理的機會。  
@@ -608,18 +608,18 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nAction`  
+ *n 動作*  
  要在閒置處理期間所採取的動作。 目前唯一有效的動作是**dbFreeLocks**。  
   
 ### <a name="remarks"></a>備註  
  這通常是在多使用者，多工作業的環境中有不足夠，保留資料錄集中的所有記錄目前的背景處理時間，則為 true。  
   
 > [!NOTE]
->  呼叫**閒置**並不需要與使用 Microsoft Jet 資料庫引擎的 3.0 版建立的資料庫。 使用**閒置**僅針對使用舊版建立的資料庫。  
+>  呼叫`Idle`並不需要與使用 Microsoft Jet 資料庫引擎的 3.0 版建立的資料庫。 使用`Idle`僅針對使用舊版建立的資料庫。  
   
- 通常，會移除鎖定的讀取和本機動態類型資料錄集物件中的資料會更新 （包括滑鼠移動） 的任何其他動作不發生時，才。 如果您定期呼叫**閒置**，您可以提供跟上背景處理工作的方式釋出時間的資料庫引擎不需要讀取鎖定。 指定**dbFreeLocks**做為引數的常數會延遲處理，直到會釋放所有的讀取的鎖定。  
+ 通常，會移除鎖定的讀取和本機動態類型資料錄集物件中的資料會更新 （包括滑鼠移動） 的任何其他動作不發生時，才。 如果您定期呼叫`Idle`，您可以提供跟上背景處理工作的方式釋出時間的資料庫引擎不需要讀取鎖定。 指定**dbFreeLocks**做為引數的常數會延遲處理，直到會釋放所有的讀取的鎖定。  
   
- 此成員函式不會需要在單一使用者環境中，除非執行的應用程式的多個執行個體。 **閒置**成員函式可能會增加多使用者環境中的效能，因為它會強制 database engine，將資料排清至磁碟，釋放鎖定的記憶體。 您也可以藉由在交易期間作業釋放讀取的鎖定。  
+ 此成員函式不會需要在單一使用者環境中，除非執行的應用程式的多個執行個體。 `Idle`成員函式可能會增加多使用者環境中的效能，因為它會強制 database engine，將資料排清至磁碟，釋放鎖定的記憶體。 您也可以藉由在交易期間作業釋放讀取的鎖定。  
   
  如需相關資訊，請參閱主題 < 閒置方法 >，DAO [說明] 中。  
   
@@ -652,19 +652,19 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
- 若要開啟 DAO 工作區中物件的名稱 — 的唯一名稱的工作區最多 14 個字元字串。 接受預設值**NULL**明確地開啟預設工作區。 命名需求，請參閱`lpszName`參數[建立](#create)。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
+ *lpszName*  
+ 若要開啟 DAO 工作區中物件的名稱 — 的唯一名稱的工作區最多 14 個字元字串。 接受預設值**NULL**明確地開啟預設工作區。 命名需求，請參閱*lpszName*參數[建立](#create)。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 名稱屬性 」。  
   
 ### <a name="remarks"></a>備註  
  之後建構`CDaoWorkspace`物件，呼叫此成員函式，執行下列其中一項：  
   
--   明確地開啟預設工作區。 傳遞**NULL**如`lpszName`。  
+-   明確地開啟預設工作區。 傳遞**NULL**如*lpszName*。  
   
 -   開啟現有`CDaoWorkspace`物件、 工作區集合中，依名稱的成員。 傳遞現有的工作區中物件的有效名稱。  
   
- **開啟**放開啟狀態的工作區物件，如果它不已經初始化應用程式也會初始化 database engine。  
+ `Open` 將物件放入開啟狀態，如果它不已經初始化應用程式也會初始化 database engine。  
   
- 雖然許多`CDaoWorkspace`後建構 c + + 物件但之前呼叫成員函式只能呼叫，開啟工作區之後，下列成員函式，在資料庫引擎運作，就可以**開啟**:  
+ 雖然許多`CDaoWorkspace`後建構 c + + 物件但之前呼叫成員函式只能呼叫，開啟工作區之後，下列成員函式，在資料庫引擎運作，就可以`Open`:  
   
 ||||  
 |-|-|-|  
@@ -680,11 +680,11 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  路徑和檔名，現有的 Microsoft Jet 引擎資料庫檔案。 如果您省略路徑，則會搜尋目前的目錄。 如果您的系統支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如:"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (因為 path 字串中需要兩個反斜線"\\」 是 c + + 逸出字元。)  
   
 ### <a name="remarks"></a>備註  
- 您必須先關閉所指定的資料庫`lpszName`修復它之前。 在多使用者環境中，不能有其他使用者`lpszName`開啟，但是您要修復它。 如果`lpszName`未關閉，或不是可供獨佔使用，就會發生錯誤。  
+ 您必須先關閉所指定的資料庫*lpszName*修復它之前。 在多使用者環境中，不能有其他使用者*lpszName*開啟，但是您要修復它。 如果*lpszName*未關閉，或不是可供獨佔使用，就會發生錯誤。  
   
  此成員函式會嘗試修復資料庫已標記為可能已經損毀不完整的寫入作業。 如果使用 Microsoft Jet 資料庫引擎的應用程式可因為電源中斷或電腦的硬體問題而意外關閉，這可能會發生。 如果您完成作業並呼叫[關閉](../../mfc/reference/cdaodatabase-class.md#close)成員函式，或結束應用程式會以一般方式、 資料庫不會被標示為可能已經損毀。  
   
@@ -703,12 +703,12 @@ void Rollback();
 ### <a name="remarks"></a>備註  
   
 > [!CAUTION]
->  在一個工作空間物件中，交易都通用的工作區，並不限於只有一個資料庫或資料錄集。 如果您對多個資料庫或資料錄集區的交易內執行作業**復原**還原上的所有這些資料庫和資料錄集的所有作業。  
+>  在一個工作空間物件中，交易都通用的工作區，並不限於只有一個資料庫或資料錄集。 如果您對多個資料庫或資料錄集區的交易內執行作業`Rollback`還原上的所有這些資料庫和資料錄集的所有作業。  
   
- 如果您關閉工作區物件但不儲存或回復任何暫止交易時，會自動回復交易。 如果您呼叫[CommitTrans](#committrans)或**復原**情況下先呼叫[BeginTrans](#begintrans)，就會發生錯誤。  
+ 如果您關閉工作區物件但不儲存或回復任何暫止交易時，會自動回復交易。 如果您呼叫[CommitTrans](#committrans)或`Rollback`情況下先呼叫[BeginTrans](#begintrans)，就會發生錯誤。  
   
 > [!NOTE]
->  當您開始交易時，database engine 會記錄其作業中保留在工作站上 TEMP 環境變數所指定的目錄中的檔案。 如果交易記錄檔會耗盡您的暫存磁碟機上可用的存放裝置，database engine 將會導致擲回的 MFC `CDaoException` （DAO 錯誤 2004年）。 此時，如果您呼叫**CommitTrans**、 不定數目的作業就無法認可，但其餘未完成的作業都會遺失，且必須重新啟動作業。 呼叫**復原**釋出交易記錄檔，並回復在交易中的所有作業。  
+>  當您開始交易時，database engine 會記錄其作業中保留在工作站上 TEMP 環境變數所指定的目錄中的檔案。 如果交易記錄檔會耗盡您的暫存磁碟機上可用的存放裝置，database engine 將會導致擲回的 MFC `CDaoException` （DAO 錯誤 2004年）。 此時，如果您呼叫`CommitTrans`、 不定數目的作業就無法認可，但其餘未完成的作業都會遺失，且必須重新啟動作業。 呼叫`Rollback`釋出交易記錄檔，並回復在交易中的所有作業。  
   
 ##  <a name="setdefaultpassword"></a>  CDaoWorkspace::SetDefaultPassword  
  呼叫此成員函式設定工作區中建立的物件是不需要特定密碼時，會使用 database engine 的預設密碼。  
@@ -718,7 +718,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszPassword`  
+ *lpszPassword*  
  預設密碼。 密碼可以多達 14 個字元，而且只能包含 ASCII (null) 0 以外的任何字元。 密碼會區分大小寫。  
   
 ### <a name="remarks"></a>備註  
@@ -726,11 +726,11 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
   
  若要使用此成員函式：  
   
-1.  建構`CDaoWorkspace`物件但不要呼叫**建立**。  
+1.  建構`CDaoWorkspace`物件但不要呼叫`Create`。  
   
 2.  呼叫`SetDefaultPassword`而且，如果您喜歡， [SetDefaultUser](#setdefaultuser)。  
   
-3.  呼叫**建立**針對此工作區中的物件或後續的而不指定密碼。  
+3.  呼叫`Create`針對此工作區中的物件或後續的而不指定密碼。  
   
  根據預設，DefaultUser 屬性設定為"admin"和 DefaultPassword 屬性設定為空字串 ("")。  
   
@@ -744,7 +744,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszDefaultUser`  
+ *lpszDefaultUser*  
  預設的使用者名稱。 使用者名稱可以是 1-20 個字元，並將包含字母字元、 重音的字元、 數字、 空格和符號，除了:"（引號） / （斜線），\ （反斜線） \[ \] （括號）: （冒號）， &#124; (管道） \< (較少-符號)，> (大於-符號)、 + （加號） = （等於符號），;（分號），（逗號），（問號） * （星號），前置空格和控制字元 (ASCII 00 到 ASCII 31)。 如需相關資訊，請參閱主題 DAO [說明] 中的 「 使用者名稱屬性 」。  
   
 ### <a name="remarks"></a>備註  
@@ -752,11 +752,11 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
  若要使用此成員函式：  
   
-1.  建構`CDaoWorkspace`物件但不要呼叫**建立**。  
+1.  建構`CDaoWorkspace`物件但不要呼叫`Create`。  
   
 2.  呼叫`SetDefaultUser`而且，如果您喜歡， [SetDefaultPassword](#setdefaultpassword)。  
   
-3.  呼叫**建立**針對此工作區中的物件或後續的而不指定使用者名稱。  
+3.  呼叫`Create`針對此工作區中的物件或後續的而不指定使用者名稱。  
   
  根據預設，DefaultUser 屬性設定為"admin"和 DefaultPassword 屬性設定為空字串 ("")。  
   
@@ -805,7 +805,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nSeconds`  
+ *nSeconds*  
  當您嘗試登入 ODBC 資料庫時，就會發生錯誤之前的秒數。  
   
 ### <a name="remarks"></a>備註  

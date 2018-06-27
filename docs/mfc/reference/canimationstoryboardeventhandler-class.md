@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb7c89e6441379949386baecbddbb30f7c01ebff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: add30fe8bfe2c19973ff657ae05b739986965a9b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352219"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957113"
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>CAnimationStoryboardEventHandler 類別
 實作回呼，當腳本的狀態變更或更新腳本時由動畫 API 呼叫。  
@@ -89,10 +89,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pAnimationController`  
+ *pAnimationController*  
  動畫控制器，將會收到事件指標。  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
@@ -108,13 +108,13 @@ IFACEMETHOD(OnStoryboardStatusChanged) (
 ```  
   
 ### <a name="parameters"></a>參數  
- `storyboard`  
+ *分鏡腳本*  
  分鏡腳本的狀態已變更的指標。  
   
- `newStatus`  
+ *newStatus*  
  指定新分鏡腳本的狀態。  
   
- `previousStatus`  
+ *previousStatus*  
  指定上一個分鏡腳本的狀態。  
   
 ### <a name="return-value"></a>傳回值  
@@ -128,7 +128,7 @@ IFACEMETHOD(OnStoryboardUpdated) (__in IUIAnimationStoryboard* storyboard);
 ```  
   
 ### <a name="parameters"></a>參數  
- `storyboard`  
+ *分鏡腳本*  
  分鏡腳本，指標的已更新。  
   
 ### <a name="return-value"></a>傳回值  
@@ -142,7 +142,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pAnimationController`  
+ *pAnimationController*  
  動畫控制器，將會收到事件指標。  
   
 ## <a name="see-also"></a>另請參閱  

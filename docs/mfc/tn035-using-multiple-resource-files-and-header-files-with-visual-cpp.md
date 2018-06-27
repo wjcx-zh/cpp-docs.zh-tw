@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385374"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952407"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多個資源檔和標頭檔
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Visual c + + 編譯時。RC 檔，它定義**APSTUDIO_INVOKED**以及**RC_INVOKED**。 如果 AppWizard 建立的檔案結構損毀，而且 Visual C++ 讀取了上述 #error 行，就會報告嚴重錯誤並中止 .RC 檔案讀取。  
+ Visual c + + 編譯時。RC 檔，它定義`APSTUDIO_INVOKED`以及`RC_INVOKED`。 如果 AppWizard 建立的檔案結構損毀，而且 Visual C++ 讀取了上述 #error 行，就會報告嚴重錯誤並中止 .RC 檔案讀取。  
   
  **管理多個 Visual c + + 編輯所共用的符號。RC 檔**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE**是用於對話方塊資源，功能表資源，以及等等的下一個符號值。 資源符號值的有效範圍是 1 至 0x6FFF。  
+ `_APS_NEXT_RESOURCE_VALUE` 將用於對話方塊資源，功能表資源，以及等等的下一個符號值。 資源符號值的有效範圍是 1 至 0x6FFF。  
   
- **_APS_NEXT_COMMAND_VALUE**是用於命令識別的下一個符號值。 命令符號值的有效範圍是 0x8000 至 0xDFFF。  
+ `_APS_NEXT_COMMAND_VALUE` 將用於命令識別的下一個符號值。 命令符號值的有效範圍是 0x8000 至 0xDFFF。  
   
- **_APS_NEXT_CONTROL_VALUE**是將用於對話方塊控制項的下一個符號值。 對話方塊控制項符號值的有效範圍是 8 至 0xDFFF。  
+ `_APS_NEXT_CONTROL_VALUE` 要用於對話方塊控制項的下一個符號值。 對話方塊控制項符號值的有效範圍是 8 至 0xDFFF。  
   
- **_APS_NEXT_SYMED_VALUE**是您手動指派符號值符號瀏覽器中使用的新命令時，會發出下一個符號值。  
+ `_APS_NEXT_SYMED_VALUE` 您手動指派符號值時，會發出下一個符號值的新命令中使用符號瀏覽器。  
   
  建立新的 .RC 檔時，Visual C++ 一開始會使用比最低合法值稍微高的值。 AppWizard 也會將這些值初始化為一些較適合 MFC 應用程式的值。 如需 ID 值範圍的詳細資訊，請參閱[技術提示 20](../mfc/tn020-id-naming-and-numbering-conventions.md)。  
   
- 現在每當您建立新的資源檔，即使是在相同的專案，Visual c + + 定義相同 **_APS_NEXT\_** 值。 這表示，如果您在兩個不同 .RC 檔中加入 (舉例說) 多個對話方塊，很有可能會將相同的 #define 值指派給不同的對話方塊。 例如，第一個 .RC 檔的 IDD_MY_DLG1 和第二個 .RC 檔的 IDD_MY_DLG2 可能都有相同的指派數字 101。  
+ 現在每當您建立新的資源檔，即使是在相同的專案，Visual c + + 定義相同`_APS_NEXT_`值。 這表示，如果您在兩個不同 .RC 檔中加入 (舉例說) 多個對話方塊，很有可能會將相同的 #define 值指派給不同的對話方塊。 例如，第一個 .RC 檔的 IDD_MY_DLG1 和第二個 .RC 檔的 IDD_MY_DLG2 可能都有相同的指派數字 101。  
   
- 若要避免這種情況，您應該在不同 .RC 檔案中分別為每個 ID 定義域 (總共四個) 各自保留不同的數值範圍。 這樣做的手動更新 **_APS_NEXT**中每個值。RC 檔`before`您開始加入的資源。 例如，如果第一個。RC 檔會使用預設 **_APS_NEXT**值，那麼您可能想要指派下列 **_APS_NEXT**第二個值。RC 檔：  
+ 若要避免這種情況，您應該在不同 .RC 檔案中分別為每個 ID 定義域 (總共四個) 各自保留不同的數值範圍。 這樣做的手動更新`_APS_NEXT`中每個值。RC 檔**之前**您開始加入的資源。 例如，如果第一個。RC 檔會使用預設`_APS_NEXT`值，那麼您可能想要指派下列`_APS_NEXT`第二個值。RC 檔：  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

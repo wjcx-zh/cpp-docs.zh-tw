@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354278"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954742"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 類別
 ID2D1Bitmap 包裝函式。  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pResource`  
+ *pResource*  
  現有資源的介面。 不能是 NULL  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `uiResID`  
+ *uiResID*  
  資源的資源 ID 編號。  
   
- `lpszType`  
+ *lpszType*  
  以 null 終止的字串，其中包含的資源類型的指標。  
   
- `sizeDest`  
+ *sizeDest*  
  目的地點陣圖的大小。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
- `lpszPath`  
+ *lpszPath*  
  以 null 終止的字串，其中包含檔案名稱的指標。  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  點陣圖的控制代碼。  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBitmap`  
+ *pBitmap*  
  要複製的點陣圖  
   
- `destPoint`  
+ *destPoint*  
  在目前的點陣圖，也會複製區域指定 srcRect 所要的區域的左上角  
   
- `srcRect`  
+ *srcRect*  
  複製點陣圖的區域  
   
 ### <a name="return-value"></a>傳回值  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>參數  
- `srcData`  
+ *srcData*  
  要複製資料  
   
- `pitch`  
+ *點數*  
  分散或音調、 儲存在 srcData 來源點陣圖。 Stride 是掃瞄線 （在記憶體中的像素為單位的一個資料列） 的位元組計數。 可以從下列公式計算分散： 像素寬度 * 每個像素 + 記憶體填補位元組  
   
- `destRect`  
+ *destRect*  
  在目前的點陣圖，也會複製區域指定 srcRect 所要的區域的左上角  
   
 ### <a name="return-value"></a>傳回值  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRenderTarget`  
+ *pRenderTarget*  
  呈現目標，其中包含要複製的區域  
   
- `destPoint`  
+ *destPoint*  
  在目前的點陣圖，也會複製區域指定 srcRect 所要的區域的左上角  
   
- `srcRect`  
+ *srcRect*  
  若要複製的轉譯目標的區域  
   
 ### <a name="return-value"></a>傳回值  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pRenderTarget`  
+ *pRenderTarget*  
  呈現目標指標。  
   
 ### <a name="return-value"></a>傳回值  

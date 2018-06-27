@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eea701c33001ffa3585c2d5847f3056454b7850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dde1f005e53aff7ebe505d1ce619bf5c94410f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380158"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955452"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl 的設定
-預設位置[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)狀態視窗底端的父視窗，但您可以指定`CCS_TOP`讓它出現在父視窗工作區頂端的樣式。  
+預設位置[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)狀態視窗底端的父視窗，但您可以指定要讓它出現在父視窗工作區頂端的 CCS_TOP 樣式。  
   
- 您可以指定**SBARS_SIZEGRIP**包括最右邊的調整大小底框樣式`CStatusBarCtrl`狀態視窗。 調整大小的底框類似縮放框線；它是使用者可以按一下並拖曳調整父視窗大小的矩形區域。  
+ 您可以指定要包含在右邊的調整大小底框 SBARS_SIZEGRIP 樣式`CStatusBarCtrl`狀態視窗。 調整大小的底框類似縮放框線；它是使用者可以按一下並拖曳調整父視窗大小的矩形區域。  
   
 > [!NOTE]
->  如果您合併`CCS_TOP`和**SBARS_SIZEGRIP**樣式，產生的調整大小底框不是功能即使系統則會在狀態視窗中繪製它。  
+>  如果您結合 CCS_TOP 和 SBARS_SIZEGRIP 樣式，產生的調整大小底框不是功能即使系統則會在狀態視窗中繪製它。  
   
  狀態視窗的視窗程序會自動設定控制項視窗的初始大小和位置。 這個寬度與父視窗工作區的寬度相同。 高度根據目前選取到狀態視窗的裝置內容的字型度量資訊和視窗框線寬度。  
   
- 視窗程序會在收到 `WM_SIZE` 訊息時自動調整狀態視窗的大小。 通常，當父視窗大小變更時，父視窗會傳送 `WM_SIZE` 訊息到狀態視窗。  
+ 當它收到 WM_SIZE 訊息時，視窗程序會自動調整狀態視窗的大小。 通常，父視窗的大小變更時，父代就會傳送 WM_SIZE 訊息在狀態視窗。  
   
  您可以藉由呼叫設定狀態視窗的繪圖區域的最小高度[SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight)，指定最小高度，單位為像素。 繪圖區域不包括視窗框線。  
   

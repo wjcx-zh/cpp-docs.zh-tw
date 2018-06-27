@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c4a801952c6b29779c381237c291232ce2ef25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 44da620750fd9fcb241da3a195e294e24143acaa
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347743"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953579"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse 類別
 `D2D1_ELLIPSE` 的包裝函式。  
@@ -65,16 +65,16 @@ CD2DEllipse(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  來源矩形  
   
- `ellipse`  
+ *橢圓形*  
  來源橢圓形  
   
- `ptCenter`  
+ *ptCenter*  
  橢圓形的中心點。  
   
- `sizeRadius`  
+ *sizeRadius*  
  X 半徑和橢圓形的 Y 半徑。  
   
 ## <a name="see-also"></a>另請參閱  

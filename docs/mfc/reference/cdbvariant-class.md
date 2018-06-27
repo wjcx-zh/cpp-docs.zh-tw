@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369079"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951815"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 類別
 表示 MFC ODBC 類別的 Variant 資料類型。  
@@ -85,7 +85,7 @@ class CDBVariant
 |名稱|描述|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|包含型別的值**BOOL**。|  
-|[CDBVariant::m_chVal](#m_chval)|包含型別的值`unsigned char`。|  
+|[CDBVariant::m_chVal](#m_chval)|包含型別的值**unsigned char**。|  
 |[CDBVariant::m_dblVal](#m_dblval)|包含型別的值**double**。|  
 |[CDBVariant::m_fltVal](#m_fltval)|包含型別的值**float**。|  
 |[CDBVariant::m_iVal](#m_ival)|包含型別的值**簡短**。|  
@@ -127,9 +127,9 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果值[m_dwType](#m_dwtype)資料成員是**DBVT_DATE**， **DBVT_STRING**，或**DBVT_BINARY**，**清除**釋放等位的指標成員相關聯的記憶體。 **清除**設定`m_dwType`至**DBVT_NULL**。  
+ 如果值[m_dwType](#m_dwtype)資料成員是**DBVT_DATE**， **DBVT_STRING**，或**DBVT_BINARY**，`Clear`釋放的記憶體等位的指標成員相關聯。 `Clear` 設定`m_dwType`至**DBVT_NULL**。  
   
- `CDBVariant`解構函式呼叫**清除**。  
+ `CDBVariant`解構函式呼叫`Clear`。  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  儲存類型的值**BOOL**。  

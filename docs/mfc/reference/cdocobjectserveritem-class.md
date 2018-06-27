@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367044"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956624"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 類別
 實作 DocObject 伺服器專屬的 OLE 伺服器動詞命令。  
@@ -90,10 +90,10 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pServerDoc`  
+ *pServerDoc*  
  文件會包含新 DocObject 項目的指標。  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  指示發行的連結時，是否可以刪除物件。 將引數設**FALSE**如果`CDocObjectServerItem`物件是不可或缺的一部分文件的資料。 將它設定為**TRUE**如果物件是用來識別文件的資料可以刪除架構中的範圍的第二個結構。  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  

@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380272"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950824"
 ---
 # <a name="servers-implementing-server-documents"></a>伺服器：實作伺服器文件
 本文說明如果您未指定應用程式精靈中的 OLE 伺服器選項，成功實作伺服器文件時，必須採取的步驟。  
   
 #### <a name="to-define-a-server-document-class"></a>若要定義伺服器文件類別  
   
-1.  衍生您的文件類別，從`COleServerDoc`而不是**CDocument**。  
+1.  從 `COleServerDoc` 衍生您的文件類別，而不要從 `CDocument` 衍生。  
   
 2.  建立伺服器項目類別衍生自`COleServerItem`。  
   

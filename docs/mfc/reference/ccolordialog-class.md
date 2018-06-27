@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3888f054baab61bb7422403b0766d7f757914d1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef863a0eb8cec66e7f640a734088a98b1e8d7b83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357978"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952108"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 類別
 可讓您將色彩選取對話方塊中併入您的應用程式。  
@@ -80,7 +80,7 @@ class CColorDialog : public CCommonDialog
   
  若要建構`CColorDialog`物件、 使用提供的建構函式或衍生新類別，並使用您自己的自訂建構函式。  
   
- 一旦建構的對話方塊中，您可以設定或修改中的任何值[m_cc](#m_cc)結構，以初始化對話方塊的控制項的值。 `m_cc`結構的類型是[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)。  
+ 一旦建構的對話方塊中，您可以設定或修改中的任何值[m_cc](#m_cc)結構，以初始化對話方塊的控制項的值。 *M_cc*結構的類型是[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)。  
   
  初始化對話方塊的控制項之後呼叫`DoModal`成員函式，以顯示對話方塊，並允許使用者選取色彩。 `DoModal` 傳回使用者的選取項目中的其中一個對話方塊的 [確定] ( **IDOK**) 或 [取消] ( **IDCANCEL**) 按鈕。  
   
@@ -129,10 +129,10 @@ CColorDialog(
  *clrInit*  
  預設的色彩選擇。 如果未不指定任何值，則預設為 RGB(0,0,0) （黑色）。  
   
- `dwFlags`  
+ *dwFlags*  
  一組自訂函式和對話方塊外觀的旗標。 如需詳細資訊，請參閱[CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) Windows SDK 中的結構。  
   
- `pParentWnd`  
+ *pParentWnd*  
  對話方塊的父系或擁有者視窗的指標。  
   
 ### <a name="example"></a>範例  
@@ -197,7 +197,7 @@ CHOOSECOLOR m_cc;
 ```  
   
 ### <a name="remarks"></a>備註  
- 之後建構`CColorDialog`物件，您可以使用`m_cc`設定對話方塊中，會在呼叫之前的各個層面[DoModal](#domodal)成員函式。  
+ 之後建構`CColorDialog`物件，您可以使用*m_cc*設定對話方塊中，會在呼叫之前的各個層面[DoModal](#domodal)成員函式。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
@@ -231,18 +231,18 @@ virtual BOOL OnColorOK();
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
- 呼叫此函式之後呼叫`DoModal`強制中指定的色彩值目前的色彩選擇`clr`。  
+ 呼叫此函式之後呼叫`DoModal`強制中指定的色彩值目前的色彩選擇*clr*。  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>參數  
- `clr`  
+ *clr*  
  RGB 色彩值。  
   
 ### <a name="remarks"></a>備註  
- 訊息處理常式中呼叫此函式或`OnColorOK`。 對話方塊會自動更新的值為基礎的使用者選取`clr`參數。  
+ 訊息處理常式中呼叫此函式或`OnColorOK`。 對話方塊會自動更新的值為基礎的使用者選取*clr*參數。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CColorDialog::OnColorOK](#oncolorok)。  

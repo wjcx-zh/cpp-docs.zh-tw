@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48a8ccb49001b93ded52edc732fc59222775e6f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350894"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954023"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition 類別
 封裝常數的轉換。  
@@ -79,7 +79,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
 ##  <a name="create"></a>  CConstantTransition::Create  
@@ -92,7 +92,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pLibrary`  
+ *pLibrary*  
  指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
 
 ### <a name="return-value"></a>傳回值  

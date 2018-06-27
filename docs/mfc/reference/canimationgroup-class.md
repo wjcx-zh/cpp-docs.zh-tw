@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355629"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955731"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 類別
 實作動畫群組，其結合了動畫分鏡腳本動畫物件，定義動畫的轉換。  
@@ -144,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStoryboard`  
+ *pStoryboard*  
  分鏡腳本 COM 物件的指標。  
   
- `bAddDeep`  
+ *bAddDeep*  
  指定此方法是否應將取決於其他主要畫面格的分鏡腳本主要畫面格。  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -160,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStoryboard`  
+ *pStoryboard*  
  分鏡腳本 COM 物件的指標。  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  CAnimationGroup::Animate  
  以動畫顯示的群組。  
@@ -176,9 +176,9 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>傳回值  
  如果方法成功則為 TRUE否則為 FALSE。  
@@ -204,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentController`  
+ *pParentController*  
  動畫控制器可建立一組指標。  
   
- `nGroupID`  
+ *nGroupID*  
  指定 GroupID。  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -228,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pVariable`  
+ *pVariable*  
  動畫變數的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -328,10 +328,10 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTimer`  
+ *pTimer*  
  動畫計時器指標。  
   
- `time`  
+ *time*  
  指定排程動畫時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -348,7 +348,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  指定要終結的轉換方式。  
   
 ### <a name="remarks"></a>備註  

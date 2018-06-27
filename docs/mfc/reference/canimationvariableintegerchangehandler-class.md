@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55658efabf8c9df795ed8069d9659ebf0e01e364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fae1d569f49a50d3b7281e86c72fd12c69b40832
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352108"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956355"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler 類別
 實作回呼，當動畫變數的值變更時由動畫 API 呼叫。  
@@ -88,10 +88,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pAnimationController`  
+ *pAnimationController*  
  動畫控制器，將會收到事件指標。  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
@@ -108,16 +108,16 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ```  
   
 ### <a name="parameters"></a>參數  
- `storyboard`  
+ *分鏡腳本*  
  建立動畫變數分鏡腳本。  
   
- `variable`  
+ *變數*  
  已更新動畫變數。  
   
- `newValue`  
+ *newValue*  
  新的捨入的值。  
   
- `previousValue`  
+ *previousValue*  
  先前的捨入的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -131,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pAnimationController`  
+ *pAnimationController*  
  動畫控制器，將會收到事件指標。  
   
 ## <a name="see-also"></a>另請參閱  

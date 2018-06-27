@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366235"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951594"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 結構
 `CDaoParameterInfo`結構包含的資料存取物件 (DAO) 定義的參數物件的相關資訊。  
@@ -39,11 +39,11 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>參數  
- `m_strName`  
+ *m_strName*  
  唯一名稱的參數物件。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。  
   
- `m_nType`  
- 值，指出參數物件的資料類型。 如需可能值的清單，請參閱`m_nType`隸屬[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 型別屬性 >。  
+ *m_nType*  
+ 值，指出參數物件的資料類型。 如需可能值的清單，請參閱*m_nType*隸屬[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 如需詳細資訊，請參閱主題 DAO [說明] 中的 < 型別屬性 >。  
   
  *m_varValue*  
  參數的值，儲存在[COleVariant](../../mfc/reference/colevariant-class.md)物件。  

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c3804ccc4f9e30e2d287102c408c98a77c6833
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd6af2ab524711c591772c28ed47742e6aa406ad
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382927"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955868"
 ---
 # <a name="special-cwinapp-services"></a>特殊 CWinApp 服務
 除了執行訊息迴圈，並讓您有機會初始化應用程式和之後，清除[CWinApp](../mfc/reference/cwinapp-class.md)提供數個其他服務。  
@@ -61,7 +61,7 @@ ms.locfileid: "33382927"
   
  如果您想要初始化 GDI + 您的應用程式 (藉由呼叫[Initinstance](https://msdn.microsoft.com/library/ms534077)中您[InitInstance](../mfc/reference/cwinapp-class.md#initinstance)函式)，您必須隱藏 GDI + 背景執行緒。  
   
- 您可以藉由設定**Gdiplusstartupinput**隸屬[Suppressbackgroundthread](https://msdn.microsoft.com/library/ms534067)結構以**TRUE**。 當隱藏 GDI + 背景執行緒， **NotificationHook**和**NotificationUnhook**呼叫應該要對先前只進入和退出應用程式的訊息迴圈。 如需有關這些呼叫的詳細資訊，請參閱[GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)。 因此，若要呼叫的好地方**Initinstance**與攔截通知函式會在虛擬函式的覆寫[cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)，如下所示：  
+ 您可以藉由設定`SuppressBackgroundThread`隸屬[Suppressbackgroundthread](https://msdn.microsoft.com/library/ms534067)結構以**TRUE**。 當隱藏 GDI + 背景執行緒，`NotificationHook`和`NotificationUnhook`呼叫應該要對先前只進入和退出應用程式的訊息迴圈。 如需有關這些呼叫的詳細資訊，請參閱[GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068)。 因此，若要呼叫的好地方`GdiplusStartup`與攔截通知函式會在虛擬函式的覆寫[cwinapp:: Run](../mfc/reference/cwinapp-class.md#run)，如下所示：  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

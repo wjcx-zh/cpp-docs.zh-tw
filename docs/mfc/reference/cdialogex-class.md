@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368042"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951848"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 類別
 `CDialogEx` 類別會指定對話方塊的背景影像和背景色彩。  
@@ -90,16 +90,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nIDTemplate`  
+ [in]*nIDTemplate*  
  對話方塊範本資源識別碼。  
   
- [輸入] `lpszTemplateName`  
+ [in]*lpszTemplateName*  
  對話方塊範本資源名稱。  
   
- [輸入] `pParent`  
+ [in]*pParent*  
  父視窗的指標。 預設值是 `NULL`。  
   
- [輸入] `pParentWnd`  
+ [in]*pParentWnd*  
  父視窗的指標。 預設值是 `NULL`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -116,10 +116,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `color`  
+ [in]*色彩*  
  RGB 色彩值。  
   
- [輸入] `bRepaint`  
+ [in]*bRepaint*  
  `TRUE` 若要立即更新畫面。否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -142,19 +142,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `hBitmap`  
+ [in]*hBitmap*  
  背景影像控制代碼。  
   
- [輸入] `uiBmpResId`  
+ [in]*uiBmpResId*  
  背景影像的資源識別碼。  
   
- [輸入] `location`  
+ [in]*位置*  
  其中一個`CDialogEx::BackgroundLocation`指定影像位置的值。 有效值包括 BACKGR_TILE、 BACKGR_TOPLEFT、 BACKGR_TOPRIGHT、 BACKGR_BOTTOMLEFT 和 BACKGR_BOTTOMRIGHT。 預設值是 BACKGR_TILE。  
   
- [輸入] `bAutoDestroy`  
+ [in]*bAutoDestroy*  
  `TRUE` 若要自動損毀的背景影像。否則， `FALSE`。  
   
- [輸入] `bRepaint`  
+ [in]*bRepaint*  
  `TRUE` 若要立即重繪對話方塊中。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  

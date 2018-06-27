@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c51e252157b90423b35152c10a85f972feace72
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b4f013589b509781d217e521b680f1d529189a0a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348903"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954262"
 ---
 # <a name="cclientdc-class"></a>CClientDC 類別
 呼叫 Windows 函式會負責[GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871)在建構階段和[ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920)在解構階段。  
@@ -66,14 +66,14 @@ class CClientDC : public CDC
  **標題:** afxwin.h  
   
 ##  <a name="cclientdc"></a>  CClientDC::CClientDC  
- 建構`CClientDC`物件存取的工作區[CWnd](../../mfc/reference/cwnd-class.md)指向`pWnd`。  
+ 建構`CClientDC`物件存取的工作區[CWnd](../../mfc/reference/cwnd-class.md)指向*pWnd*。  
   
 ```  
 explicit CClientDC(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  視窗裝置內容物件存取其工作區中。  
   
 ### <a name="remarks"></a>備註  
@@ -92,7 +92,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>備註  
- `m_hWnd` 這是受保護的變數。  
+ *m_hWnd*是受保護的變數。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CClientDC::CClientDC](#cclientdc)。  

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2be47da802fd1168ec7b43c2f7701351b3c88d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382969"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951504"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003：將 Windows 控制代碼對應到物件
 此提示描述 MFC 支援對應 Windows 的常式物件的 c + + 物件的控制代碼。  
@@ -56,15 +56,15 @@ ms.locfileid: "33382969"
   
 -   通訊端 ([CSocket](../mfc/reference/csocket-class.md))  
   
- 這些物件的任何一個提供的控制代碼，您可以找到 MFC 包裝之物件的控制代碼藉由呼叫靜態方法`FromHandle`。 例如，假設呼叫 HWND`hWnd`下, 面將傳回的指標`CWnd`包裝`hWnd`:  
+ 這些物件的任何一個提供的控制代碼，您可以找到 MFC 包裝之物件的控制代碼藉由呼叫靜態方法`FromHandle`。 例如，假設呼叫 HWND *hWnd*下, 面將傳回的指標`CWnd`包裝*hWnd*:  
   
 ```  
 CWnd::FromHandle(hWnd)  
 ```  
   
- 如果`hWnd`沒有特定的包裝函式物件，暫時`CWnd`是用來包裝`hWnd`。 這可讓您能夠從任何控制代碼取得有效的 c + + 物件。  
+ 如果*hWnd*沒有特定的包裝函式物件，暫時`CWnd`是用來包裝*hWnd*。 這可讓您能夠從任何控制代碼取得有效的 c + + 物件。  
   
- 包裝函式物件之後，您可以從包裝函式類別的公用成員變數來擷取其控制代碼。 如果是`CWnd`，`m_hWnd`包含該物件的 HWND。  
+ 包裝函式物件之後，您可以從包裝函式類別的公用成員變數來擷取其控制代碼。 如果是`CWnd`， *m_hWnd*包含該物件的 HWND。  
   
 ## <a name="attaching-handles-to-mfc-objects"></a>附加至 MFC 物件的控制代碼  
  提供 Windows 物件的新建立的控制代碼的包裝函式物件和控制代碼，您可以建立關聯的兩個藉由呼叫`Attach`函式，如此範例所示：  
@@ -74,7 +74,7 @@ CWnd myWnd;
 myWnd.Attach(hWnd);
 ```  
   
- 這會永久對應建立關聯的項目`myWnd`和`hWnd`。 呼叫`CWnd::FromHandle(hWnd)`現在會傳回指標`myWnd`。 當`myWnd`已刪除，解構函式會自動終結`hWnd`經由呼叫 Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)函式。 如果這不預期，`hWnd`必須中斷連線`myWnd`之前`myWnd`終結 (離開的範圍時，通常`myWnd`已定義)。 `Detach`方法的做法。  
+ 這會永久對應建立關聯的項目*myWnd*和*hWnd*。 呼叫`CWnd::FromHandle(hWnd)`現在會傳回指標*myWnd*。 當*myWnd*已刪除，解構函式會自動終結*hWnd*經由呼叫 Windows [DestroyWindow](http://msdn.microsoft.com/library/windows/desktop/ms632682)函式。 如果這不預期， *hWnd*必須中斷連線*myWnd*之前*myWnd*終結 (離開的範圍時，通常*myWnd*已定義)。 `Detach`方法的做法。  
   
 ```  
 myWnd.Detach();

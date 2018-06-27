@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecde11ddb55992032b2a8b052e2897a384293bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b6b07040fbece5fae24fb2ca6be8985695eb0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382550"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950533"
 ---
 # <a name="using-an-animation-control"></a>使用動畫控制項
 動畫控制項的一般使用方式會遵循下列模式：  
@@ -30,11 +30,11 @@ ms.locfileid: "33382550"
   
 -   藉由呼叫載入動畫控制項的 AVI 短片[開啟](../mfc/reference/canimatectrl-class.md#open)成員函式。 如果動畫控制項位於對話方塊中，若要這樣做最好先在對話方塊類別[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)函式。  
   
--   藉由呼叫播放短片[播放](../mfc/reference/canimatectrl-class.md#play)成員函式。 如果動畫控制項位於對話方塊中，若要這樣做最好先在對話方塊類別**OnInitDialog**函式。 呼叫**播放**不需要動畫控制項有`ACS_AUTOPLAY`樣式設定。  
+-   藉由呼叫播放短片[播放](../mfc/reference/canimatectrl-class.md#play)成員函式。 如果動畫控制項位於對話方塊中，若要這樣做最好先在對話方塊類別`OnInitDialog`函式。 呼叫`Play`不需要動畫控制項有 ACS_AUTOPLAY 樣式設定。  
   
 -   如果您想要顯示的剪輯部分或播放它框架，使用`Seek`成員函式。 若要停止播放剪輯，請使用`Stop`成員函式。  
   
--   如果您不會立即終結控制項時，從記憶體移除剪輯藉由呼叫**關閉**成員函式。  
+-   如果您不會立即終結控制項時，從記憶體移除剪輯藉由呼叫`Close`成員函式。  
   
 -   如果動畫控制項位於對話方塊中，它和`CAnimateCtrl`物件將會自動終結。 否則，您必須確保控制項和 `CAnimateCtrl` 物件都已正確地終結。 終結控制項的自動關閉 AVI 短片。  
   

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e857d6f5bc2ebabb0f36a3c97e011a4f2a00d641
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384286"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953499"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059：使用 MFC MBCS/Unicode 轉換巨集
 > [!NOTE]
@@ -86,9 +86,9 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
   
  其中會因轉換而需要進行額外的呼叫，不過，使用巨集是簡單且有效的。  
   
- 每一個巨集的實作會使用 _alloca() 函式從堆疊中 (而不是堆積) 配置記憶體。 從堆疊配置記憶體會比在堆積上配置記憶體更加快速，而且會在函式結束時自動釋放記憶體。 此外，巨集會避免呼叫**MultiByteToWideChar** (或**WideCharToMultiByte**) 一次以上。 這是藉由配置比所需更多的記憶體來完成。 我們知道 MBC 會轉換成最多一個**WCHAR**而針對每個**WCHAR**我們將會在兩個 MBC 位元組最大值。 藉由配置比所需多一點，但一定足夠用於處理轉換第二次呼叫的記憶體，可避免第二次呼叫轉換函式。 Helper 函式呼叫**AfxA2Whelper**會降低必須完成才能執行轉換的引數推送的次數 (這會導致較小的程式碼中，於呼叫**MultiByteToWideChar**直接)。  
+ 每一個巨集的實作會使用 _alloca() 函式從堆疊中 (而不是堆積) 配置記憶體。 從堆疊配置記憶體會比在堆積上配置記憶體更加快速，而且會在函式結束時自動釋放記憶體。 此外，巨集會避免呼叫`MultiByteToWideChar`(或`WideCharToMultiByte`) 一次以上。 這是藉由配置比所需更多的記憶體來完成。 我們知道 MBC 會轉換成最多一個**WCHAR**而針對每個**WCHAR**我們將會在兩個 MBC 位元組最大值。 藉由配置比所需多一點，但一定足夠用於處理轉換第二次呼叫的記憶體，可避免第二次呼叫轉換函式。 Helper 函式呼叫`AfxA2Whelper`會降低必須完成才能執行轉換的引數推送的次數 (這會導致較小的程式碼中，於呼叫`MultiByteToWideChar`直接)。  
   
- 為了要讓巨集具有儲存暫存長度的空間，您必須在每個使用轉換巨集的函式中宣告名為 _convert 的區域變數。 這是藉由叫用**USES_CONVERSION**巨集，如上述範例所示。  
+ 為了要讓巨集具有儲存暫存長度的空間，您必須在每個使用轉換巨集的函式中宣告名為 _convert 的區域變數。 這是藉由叫用 USES_CONVERSION 巨集，如上述範例所示。  
   
  其中提供泛型轉換巨集和 OLE 專屬巨集。 這兩個不同的巨集將於下方討論。 所有巨集皆位於 AFXPRIV.H 在。  
   
@@ -105,7 +105,7 @@ W2A      (LPCWSTR) -> (LPSTR)
  除了轉換文字以外，也有巨集和 Helper 函式可轉換 `TEXTMETRIC`、`DEVMODE`、`BSTR` 和 OLE 配置的字串。 這些巨集已超出本文的討論範圍，而將 AFXPRIV。如需有關這些巨集 H。  
   
 ## <a name="ole-conversion-macros"></a>OLE 轉換巨集  
- OLE 轉換巨集專為處理預期的函式**OLESTR**字元。 如果檢查 OLE 標頭時，您會看到許多參考**LPCOLESTR**和**OLECHAR**。 這些類型用來以非專屬於平台的方法參考 OLE 介面中使用的字元類型。 **OLECHAR**對應至`char`在 Win16 和 Macintosh 平台和**WCHAR**在 Win32 中。  
+ OLE 轉換巨集專為處理預期的函式**OLESTR**字元。 如果檢查 OLE 標頭時，您會看到許多參考**LPCOLESTR**和**OLECHAR**。 這些類型用來以非專屬於平台的方法參考 OLE 介面中使用的字元類型。 **OLECHAR**對應至**char**在 Win16 和 Macintosh 平台和**WCHAR**在 Win32 中。  
   
  為了 mínimo el número de **#ifdef**最少的程式碼在 MFC 中的指示詞我們有類似的巨集的每一個轉換，OLE 字串所涵蓋的位置。 以下巨集最為常用：  
   
@@ -116,7 +116,7 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- 同樣地，其中也提供執行 `TEXTMETRIC`、`DEVMODE`、`BSTR` 和 OLE 配置字串相似的巨集。 如需詳細資訊，請參閱 AFXPRIV.H。  
+ 同樣地，有執行 TEXTMETRIC、 DEVMODE、 BSTR 和 OLE 配置字串相似的巨集。 如需詳細資訊，請參閱 AFXPRIV.H。  
   
 ## <a name="other-considerations"></a>其他考量  
  不要在緊密迴圈中使用巨集。 例如，不要撰寫以下類型的程式碼：  

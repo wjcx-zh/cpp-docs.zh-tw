@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed2f918a51c1dca1aa7e1713ac919102a599e38
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368933"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953343"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange 類別
 支援 Microsoft Foundation 類別使用的對話方塊資料交換 (DDX) 和對話方塊資料驗證 (DDV) 常式。  
@@ -75,7 +75,7 @@ class CDataExchange
   
  使用這個類別，如果您要撰寫資料交換常式的自訂資料類型或控制項，或如果您要撰寫您自己的資料驗證常式。 如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊](../../mfc/dialog-boxes.md)。  
   
- A`CDataExchange`物件提供 DDX 和 DDV，才會將所需的內容資訊。 旗標`m_bSaveAndValidate`是**FALSE** DDX 時用於填滿資料成員的對話方塊控制項的初始值。 旗標`m_bSaveAndValidate`是**TRUE** DDX 時用於設定成資料成員和 DDV 時用於驗證的資料值的對話方塊控制項的目前值。 如果 DDV 驗證失敗，DDV 程序將會顯示訊息方塊，說明輸入的錯誤。 然後會呼叫 DDV 程序**失敗**重新違規的控制項設定焦點，而且會擲回的例外狀況，並停止驗證程序。  
+ A`CDataExchange`物件提供 DDX 和 DDV，才會將所需的內容資訊。 旗標*m_bSaveAndValidate*是**FALSE** DDX 時用於填滿資料成員的對話方塊控制項的初始值。 旗標*m_bSaveAndValidate*是**TRUE** DDX 時用於設定成資料成員和 DDV 時用於驗證的資料值的對話方塊控制項的目前值。 如果 DDV 驗證失敗，DDV 程序將會顯示訊息方塊，說明輸入的錯誤。 然後會呼叫 DDV 程序`Fail`重新違規的控制項設定焦點，而且會擲回的例外狀況，並停止驗證程序。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CDataExchange`  
@@ -96,7 +96,7 @@ CDataExchange(
  *pDlgWnd*  
  包含控制項的父視窗指標。 這通常是[CDialog](../../mfc/reference/cdialog-class.md)-衍生物件。  
   
- `bSaveAndValidate`  
+ *bSaveAndValidate*  
  如果**TRUE**，這個物件會驗證資料，則控制項中的資料寫入至成員。 如果**FALSE**，這個物件將移從成員資料的控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -113,9 +113,9 @@ void Fail();
 ```  
   
 ### <a name="remarks"></a>備註  
- **失敗**焦點和選取範圍會還原至其驗證失敗 （如果沒有要還原的控制項） 的控制項。 **失敗**然後擲回例外狀況型別的[CUserException](../../mfc/reference/cuserexception-class.md)停止驗證程序。 例外狀況會導致訊息方塊，說明要顯示的錯誤。 DDV 驗證失敗後，使用者可以重新輸入不當控制項中的資料。  
+ `Fail` 將焦點和選取範圍還原至其驗證失敗 （如果沒有要還原的控制項） 的控制項。 `Fail` 然後擲回例外狀況型別的[CUserException](../../mfc/reference/cuserexception-class.md)停止驗證程序。 例外狀況會導致訊息方塊，說明要顯示的錯誤。 DDV 驗證失敗後，使用者可以重新輸入不當控制項中的資料。  
   
- 可以呼叫自訂 DDV 常式的實作項**失敗**從其驗證失敗時的常式。  
+ 可以呼叫自訂 DDV 常式的實作項`Fail`從其驗證失敗時的常式。  
   
  如需撰寫您自己的 DDX 和 DDV 常式的詳細資訊，請參閱[技術提示 26](../../mfc/tn026-ddx-and-ddv-routines.md)。 如需 DDX 和 DDV 的概觀，請參閱[對話方塊資料交換和驗證](../../mfc/dialog-data-exchange-and-validation.md)和[對話方塊主題](../../mfc/dialog-boxes.md)。  
   
@@ -153,7 +153,7 @@ HWND PrepareCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDC`  
+ *nIDC*  
  準備的 DDX 或 DDV 控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -176,7 +176,7 @@ HWND PrepareEditCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDC`  
+ *nIDC*  
  準備的 DDX 或 DDV 編輯控制項的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -199,7 +199,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDC`  
+ *nIDC*  
  備妥，DDX 或 DDV OLE 控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  

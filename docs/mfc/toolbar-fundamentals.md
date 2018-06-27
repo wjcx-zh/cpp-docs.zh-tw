@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383970"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951633"
 ---
 # <a name="toolbar-fundamentals"></a>工具列基本概念
 本文說明基本的 MFC 實作，可讓您透過應用程式精靈中選取選項，將預設工具列新增至您的應用程式。 涵蓋的主題包括：  
@@ -56,11 +56,11 @@ ms.locfileid: "33383970"
 -   管理工具列，包括停駐或浮動。  
   
 ##  <a name="_core_the_toolbar_in_code"></a> 在程式碼中的工具列  
- 工具列是[CToolBar](../mfc/reference/ctoolbar-class.md)物件宣告為您的應用程式的資料成員**CMainFrame**類別。 換句話說，工具列物件會內嵌在主框架視窗物件。 這表示它建立框架視窗，並在終結框架視窗時終結工具列 MFC 會建立工具列。 下列的部分類別宣告中的多個文件介面 (MDI) 應用程式中，會顯示內嵌的工具列和內嵌的狀態列的資料成員。 它也會顯示的覆寫`OnCreate`成員函式。  
+ 工具列是[CToolBar](../mfc/reference/ctoolbar-class.md)物件宣告為您的應用程式的資料成員`CMainFrame`類別。 換句話說，工具列物件會內嵌在主框架視窗物件。 這表示它建立框架視窗，並在終結框架視窗時終結工具列 MFC 會建立工具列。 下列的部分類別宣告中的多個文件介面 (MDI) 應用程式中，會顯示內嵌的工具列和內嵌的狀態列的資料成員。 它也會顯示的覆寫`OnCreate`成員函式。  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- 建立工具列中，就會發生**CMainFrame::OnCreate**。 MFC 呼叫[OnCreate](../mfc/reference/cwnd-class.md#oncreate)之後建立的視窗框架，但尚未變成可見之前。 預設值`OnCreate`應用程式精靈會產生會執行下列工具列工作：  
+ 建立工具列中，就會發生`CMainFrame::OnCreate`。 MFC 呼叫[OnCreate](../mfc/reference/cwnd-class.md#oncreate)之後建立的視窗框架，但尚未變成可見之前。 預設值`OnCreate`應用程式精靈會產生會執行下列工具列工作：  
   
 1.  呼叫`CToolBar`物件的[建立](../mfc/reference/ctoolbar-class.md#create)成員函式來建立基礎[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33383970"
 3.  呼叫函式來啟用停駐、 浮動和工具提示。 如需這些呼叫的詳細資訊，請參閱文章[停駐和浮動工具列](../mfc/docking-and-floating-toolbars.md)。  
   
 > [!NOTE]
->  MFC 一般範例[DOCKTOOL](../visual-cpp-samples.md)包括舊的和新的 MFC 工具列的圖例。 使用工具列**COldToolbar**必須使用在步驟 2 中的呼叫`LoadBitmap`(而非`LoadToolBar`) 以及`SetButtons`。 新的工具列需要呼叫`LoadToolBar`。  
+>  MFC 一般範例[DOCKTOOL](../visual-cpp-samples.md)包括舊的和新的 MFC 工具列的圖例。 使用工具列`COldToolbar`必須使用在步驟 2 中的呼叫`LoadBitmap`(而非`LoadToolBar`) 以及`SetButtons`。 新的工具列需要呼叫`LoadToolBar`。  
   
  停駐、 浮動和工具提示是選擇性的。 您可以移除從這些行`OnCreate`如果您偏好。 結果是會保持固定、 浮動、 變換位置無法，無法顯示工具提示的工具列。  
   

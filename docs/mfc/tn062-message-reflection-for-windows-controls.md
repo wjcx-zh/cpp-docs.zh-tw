@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 683281af3d029dca7e8060bb250a49f8e095d597
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384952"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954578"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062：Windows 控制項的訊息反映
 > [!NOTE]
@@ -54,25 +54,25 @@ ms.locfileid: "33384952"
   
  **何謂訊息反映**  
   
- Windows 控制項通常會傳送通知訊息至其父視窗。 比方說，許多控制項傳送控制色彩通知訊息 (`WM_CTLCOLOR`或其中一個變化) 至其父代允許提供繪製控制項的背景的筆刷的父系。  
+ Windows 控制項通常會傳送通知訊息至其父視窗。 比方說，許多控制項會傳送至其父代，以便提供繪製控制項的背景的筆刷父控制項色彩通知訊息 （WM_CTLCOLOR 或其中一個變化）。  
   
  在 Windows 和 MFC 4.0 版之前，父視窗，通常對話方塊中，負責處理這些訊息。 這表示，必須是父視窗的類別中處理訊息的程式碼，而且它具有需要處理該訊息的每個類別內的重複。 在上述情況中，每個想要使用自訂背景的控制項的對話方塊者必須處理控制項色彩通知訊息。 將能更輕鬆地重複使用程式碼，如果可寫入的控制項類別，會處理其本身的背景色彩。  
   
- 在 MFC 4.0 中的舊機制仍能運作，父視窗可以處理通知訊息。 此外，不過，MFC 4.0 促進重複使用藉由提供一項稱為 「 訊息反映 」 功能，可讓在子控制項視窗、 父視窗，或同時處理這些通知訊息。 在控制項背景色彩範例中，您現在可以撰寫自己的背景色彩設定藉由處理反映的控制項類別`WM_CTLCOLOR`訊息，而不需依賴父代。 (請注意，由於訊息反映 mfc 實作時，不由 Windows 中，父視窗類別必須衍生自`CWnd`運作的訊息反映。)  
+ 在 MFC 4.0 中的舊機制仍能運作，父視窗可以處理通知訊息。 此外，不過，MFC 4.0 促進重複使用藉由提供一項稱為 「 訊息反映 」 功能，可讓在子控制項視窗、 父視窗，或同時處理這些通知訊息。 在控制項背景色彩範例中，您現在可以撰寫處理反映的 WM_CTLCOLOR 訊息，設定其本身的背景色彩的控制項類別，而不需依賴父代。 (請注意，由於訊息反映 mfc 實作時，不由 Windows 中，父視窗類別必須衍生自`CWnd`運作的訊息反映。)  
   
- 舊版的 MFC 訊息反映類似的項目未藉由提供一些訊息，訊息為主控描繪清單方塊等虛擬函式 (`WM_DRAWITEM`等等)。 新的訊息反映機制是通用且一致。  
+ 舊版的 MFC 未類似訊息反映藉由提供一些訊息，例如訊息為主控描繪清單方塊 （WM_DRAWITEM，等等） 的虛擬函式。 新的訊息反映機制是通用且一致。  
   
  訊息反映與 4.0 之前的 MFC 版本撰寫的程式碼的回溯相容。  
   
- 如果您提供為特定的訊息處理常式，或某個範圍的父視窗的類別中的訊息，則會覆寫反映相同訊息的訊息處理常式，提供您不要在您自己的處理常式中呼叫基底類別處理常式函式。 例如，如果您處理`WM_CTLCOLOR`對話方塊類別，在您的處理將覆寫任何反映的訊息處理常式。  
+ 如果您提供為特定的訊息處理常式，或某個範圍的父視窗的類別中的訊息，則會覆寫反映相同訊息的訊息處理常式，提供您不要在您自己的處理常式中呼叫基底類別處理常式函式。 例如，如果您在對話方塊類別中處理 WM_CTLCOLOR，您的處理將會覆寫任何反映的訊息處理常式。  
   
- 如果您要在父視窗類別中，提供特定的處理常式**WM_NOTIFY**訊息或一個範圍的**WM_NOTIFY**才傳送這些訊息的子控制項沒有，您的處理常式會呼叫的訊息，不需要透過反映的訊息處理常式**ON_NOTIFY_REFLECT()**。 如果您使用**ON_NOTIFY_REFLECT_EX()** 在訊息對應中，您的訊息處理常式可能會或可能不允許的父視窗，以處理訊息。 如果處理常式傳回**FALSE**，父系，所傳回的呼叫時處理訊息**TRUE**不允許要處理它的父系。 請注意，處理反映的訊息是之前的通知訊息。  
+ 如果在父視窗類別中，您可以提供特定的 WM_NOTIFY 訊息或範圍的 WM_NOTIFY 訊息的處理常式，您的處理常式會傳送這些訊息的子控制項沒有透過反映的訊息處理常式時，才呼叫`ON_NOTIFY_REFLECT()`。 如果您使用`ON_NOTIFY_REFLECT_EX()`在訊息對應中，您的訊息處理常式可能會或可能不允許的父視窗，以處理訊息。 如果處理常式傳回**FALSE**，父系，所傳回的呼叫時處理訊息**TRUE**不允許要處理它的父系。 請注意，處理反映的訊息是之前的通知訊息。  
   
- 當**WM_NOTIFY**訊息傳送、 控制項則提供給第一個有機會處理它。 如果其他反映的訊息傳送時，父視窗已處理的第一個機會，控制項將接收反映的訊息。 若要這樣做，它需要的處理常式函式和控制項的類別訊息對應中的適當項目。  
+ WM_NOTIFY 訊息傳送時，控制項則提供給第一個有機會處理它。 如果其他反映的訊息傳送時，父視窗已處理的第一個機會，控制項將接收反映的訊息。 若要這樣做，它需要的處理常式函式和控制項的類別訊息對應中的適當項目。  
   
- 反映訊息的訊息對應巨集是比一般通知稍有不同： 它有 **_REFLECT**附加至其一般名稱。 比方說，以處理**WM_NOTIFY**訊息中的父代，您可以使用巨集`ON_NOTIFY`父系的訊息對應中。 若要處理反映的訊息中的子控制項，使用**ON_NOTIFY_REFLECT**中子控制項的訊息對應巨集。 在某些情況下，參數是不同，以及。 請注意，ClassWizard 的通常是為您新增的訊息對應項目，提供基本架構函數實作，使用正確的參數。  
+ 反映訊息的訊息對應巨集是比一般通知稍有不同： 它有 *_REFLECT*附加至其一般名稱。 比方說，以處理 WM_NOTIFY 訊息父系中的，您會使用在父系的訊息對應中 ON_NOTIFY 巨集。 若要處理反映的訊息中的子控制項，請在子控制項的訊息對應中使用 ON_NOTIFY_REFLECT 巨集。 在某些情況下，參數是不同，以及。 請注意，ClassWizard 的通常是為您新增的訊息對應項目，提供基本架構函數實作，使用正確的參數。  
   
- 請參閱[TN061: ON_NOTIFY 和 WM_NOTIFY 訊息](../mfc/tn061-on-notify-and-wm-notify-messages.md)有關新**WM_NOTIFY**訊息。  
+ 請參閱[TN061: ON_NOTIFY 和 WM_NOTIFY 訊息](../mfc/tn061-on-notify-and-wm-notify-messages.md)新 WM_NOTIFY 訊息上的資訊。  
   
  **訊息對應項目 」 和 「 反映訊息的處理常式函式原型**  
   
@@ -80,19 +80,19 @@ ms.locfileid: "33384952"
   
  ClassWizard 通常可以讓您將這些訊息對應項目，並提供基本架構的函式實作。 請參閱[定義反映訊息的訊息處理常式](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)如需有關如何定義反映訊息的處理常式資訊。  
   
- 若要將訊息名稱轉換為反映的巨集名稱，前面加上**ON_** 附加 **_REFLECT**。 例如，`WM_CTLCOLOR`變成**ON_WM_CTLCOLOR_REFLECT**。 （若要查看可反映的訊息，執行相反的轉換，如下表中的巨集項目上）。  
+ 若要將訊息名稱轉換為反映的巨集名稱，前面加上*ON_* 附加 *_REFLECT*。 例如，WM_CTLCOLOR 會變成 ON_WM_CTLCOLOR_REFLECT。 （若要查看可反映的訊息，執行相反的轉換，如下表中的巨集項目上）。  
   
  上述規則的三個例外狀況是，如下所示：  
   
--   巨集**WM_COMMAND**通知是**ON_CONTROL_REFLECT**。  
+-   WM_COMMAND 通知巨集是 ON_CONTROL_REFLECT。  
   
--   巨集**WM_NOTIFY**反射是**ON_NOTIFY_REFLECT**。  
+-   WM_NOTIFY 反射用巨集是 ON_NOTIFY_REFLECT。  
   
--   巨集`ON_UPDATE_COMMAND_UI`反射是**ON_UPDATE_COMMAND_UI_REFLECT**。  
+-   ON_UPDATE_COMMAND_UI 反射用巨集是 ON_UPDATE_COMMAND_UI_REFLECT。  
   
  在每一個上述的特殊情況下，您必須指定處理常式成員函式的名稱。 在其他情況下，您必須使用您的處理常式函式的標準名稱。  
   
- 參數的意義和函式傳回的值記載於函式名稱或函數名稱與下**上**前面加上。 比方說， **CtlColor**記載於`OnCtlColor`。 數個反映的訊息處理常式需要較少的參數，比在父視窗中類似的處理常式。 只符合下表中的名稱，與文件中的型式參數的名稱。  
+ 參數的意義和函式傳回的值記載於函式名稱或函數名稱與下*上*前面加上。 比方說，`CtlColor`記載於`OnCtlColor`。 數個反映的訊息處理常式需要較少的參數，比在父視窗中類似的處理常式。 只符合下表中的名稱，與文件中的型式參數的名稱。  
   
 |對應項目|函式原型|  
 |---------------|------------------------|  
@@ -110,7 +110,7 @@ ms.locfileid: "33384952"
 |**ON_WM_VSCROLL_REFLECT （)**|**afx_msg void VScroll (UINT** `nSBCode` **，UINT** `nPos` **);**|  
 |**ON_WM_PARENTNOTIFY_REFLECT （)**|**afx_msg void ParentNotify (UINT** `message` **，它加入 LPARAM** `lParam` **);**|  
   
- **ON_NOTIFY_REFLECT**和**ON_CONTROL_REFLECT**巨集有變化，以處理特定的訊息允許多個物件 （例如控制項和其父系）。  
+ ON_NOTIFY_REFLECT 和 ON_CONTROL_REFLECT 巨集有變化，以處理特定的訊息允許多個物件 （例如控制項和其父系）。  
   
 |對應項目|函式原型|  
 |---------------|------------------------|  
@@ -128,7 +128,7 @@ ms.locfileid: "33384952"
   
 2.  載入 Visual c + + 專案，使用建立新的類別稱為 ClassWizard`CYellowEdit`根據`CEdit`。  
   
-3.  將三個成員變數加入您`CYellowEdit`類別。 將前兩個**COLORREF**變數來保存的文字色彩和背景色彩。 將第三個`CBrush`物件會保留繪製背景的筆刷。 `CBrush`物件可讓您建立一次，只是在這之後，參考它的筆刷和時自動終結筆刷`CYellowEdit`終結控制項時。  
+3.  將三個成員變數加入您`CYellowEdit`類別。 將前兩個*COLORREF*變數來保存的文字色彩和背景色彩。 將第三個`CBrush`物件會保留繪製背景的筆刷。 `CBrush`物件可讓您建立一次，只是在這之後，參考它的筆刷和時自動終結筆刷`CYellowEdit`終結控制項時。  
   
 4.  初始化成員變數撰寫建構函式，如下所示：  
   
@@ -148,7 +148,7 @@ ms.locfileid: "33384952"
  }  
  ```  
   
-5.  使用 ClassWizard，加入處理常式反映`WM_CTLCOLOR`傳送訊息給您`CYellowEdit`類別。 請注意訊息名稱，您可以處理的訊息清單中前面的等號表示所反映的訊息。 這中所述[定義反映訊息的訊息處理常式](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)。  
+5.  使用 ClassWizard，加入要反映的 WM_CTLCOLOR 訊息的處理常式您`CYellowEdit`類別。 請注意訊息名稱，您可以處理的訊息清單中前面的等號表示所反映的訊息。 這中所述[定義反映訊息的訊息處理常式](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)。  
   
      ClassWizard 會為您加入下列的訊息對應巨集和基本架構函數：  
   

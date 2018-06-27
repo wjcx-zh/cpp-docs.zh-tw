@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369212"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952394"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 類別
 表示以資料存取物件 (DAO) 為基礎之 MFC 資料庫類別所引發的例外狀況。  
@@ -143,7 +143,7 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  Database engine 錯誤集合，依索引查閱中的錯誤資訊的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -187,11 +187,11 @@ void GetErrorInfo(int nIndex);
   
 |CDaoErrorInfo 成員|資訊|意義|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|錯誤碼|DAO 錯誤程式碼|  
+|`m_lErrorCode`|錯誤碼|DAO 錯誤程式碼|  
 |`m_strSource`|原始程式檔|物件或最初產生錯誤的應用程式的名稱|  
 |`m_strDescription`|描述|與錯誤相關聯的描述性字串|  
 |`m_strHelpFile`|說明檔|Windows 說明的檔案，使用者可以在其中取得問題的相關資訊的路徑|  
-|**m_lHelpContext**|說明內容|DAO [說明] 檔案中的主題，內容識別碼|  
+|`m_lHelpContext`|說明內容|DAO [說明] 檔案中的主題，內容識別碼|  
   
  如需中所包含的資訊的完整詳細資料`CDaoErrorInfo`物件，請參閱[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)結構。  
   

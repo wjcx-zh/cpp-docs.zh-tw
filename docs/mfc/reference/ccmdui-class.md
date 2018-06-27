@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356684"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954148"
 ---
 # <a name="ccmdui-class"></a>CCmdUI 類別
 只有在使用`ON_UPDATE_COMMAND_UI`中的處理常式`CCmdTarget`-衍生的類別。  
@@ -79,7 +79,7 @@ class CCmdUI
   
  當應用程式的使用者會提取下功能表每個功能表項目的需求，以得知是否它應該顯示為已啟用或停用。 功能表命令的目標是提供這項資訊藉由實作`ON_UPDATE_COMMAND_UI`處理常式。 針對每個命令的使用者介面物件，在您的應用程式中，使用 [屬性] 視窗來建立訊息對應項目，且函式原型，每個處理常式。  
   
- 提取 [] 功能表，架構搜尋，並呼叫每一項`ON_UPDATE_COMMAND_UI`處理常式中，每個處理常式會呼叫`CCmdUI`成員函式，如**啟用**和**檢查**，與然後架構適當地顯示每個功能表項目。  
+ 提取 [] 功能表，架構搜尋，並呼叫每一項`ON_UPDATE_COMMAND_UI`處理常式中，每個處理常式會呼叫`CCmdUI`成員函式，如`Enable`和`Check`，架構然後適當地顯示每個功能表項目。  
   
  功能表項目可以取代為控制列按鈕或其他命令的使用者介面物件，而不需要變更程式碼內`ON_UPDATE_COMMAND_UI`處理常式。  
   
@@ -119,7 +119,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bOn`  
+ *送行*  
  **TRUE**啟用項目， **FALSE**停用此功能。  
   
 ### <a name="example"></a>範例  
@@ -159,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>備註  
- **NULL**如果項目不是功能表。 如果子功能表快顯視窗，`m_nID`包含快顯功能表中的第一個項目識別碼。 如需詳細資訊，請參閱[技術提示 21](../../mfc/tn021-command-and-message-routing.md)。  
+ **NULL**如果項目不是功能表。 如果子功能表快顯視窗， *m_nID*包含快顯功能表中的第一個項目識別碼。 如需詳細資訊，請參閱[技術提示 21](../../mfc/tn021-command-and-message-routing.md)。  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  指標 (類型的`CWnd`) 視窗物件，例如工具或狀態的列，會傳送通知。  
@@ -179,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCheck`  
+ *n 檢查*  
  指定要設定的核取狀態。 如果取消核取 0，;如果檢查 1，;，若為 2，設定不定和。  
   
 ### <a name="remarks"></a>備註  
@@ -207,7 +207,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszText`  
+ *lpszText*  
  文字字串的指標。  
   
 ### <a name="example"></a>範例  

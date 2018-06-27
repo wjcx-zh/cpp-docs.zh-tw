@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a374496c731e33d13de3ece893fe2ff046d38e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371373"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952554"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pos`  
- [輸入] `nHeight`  
+ [in]*pos*  
+ [in]*nHeight*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -225,9 +225,9 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectToAlignBy`  
- [輸入] `rectResult`  
- [輸入] `bMoveImmediately`  
+ [in]*rectToAlignBy*  
+ [in]*rectResult*  
+ [in]*bMoveImmediately*  
   
 ### <a name="remarks"></a>備註  
   
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bStretch`  
- [輸入] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -256,7 +256,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
+ [in]*pBar*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `dwStyleEx`  
- [輸入] `dwStyle`  
- [輸入] `rect`  
- [輸入] `pParentWnd`  
- [輸入] `dwControlBarStyle`  
- [輸入] `pContext`  
+ [in]*dwStyleEx*  
+ [in]*dwStyle*  
+ [in]*rect*  
+ [in]*pParentWnd*  
+ [in]*dwControlBarStyle*  
+ [in]*pContext*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -298,9 +298,9 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentDockBar`  
- [輸入] `nOffset`  
- [輸入] `nRowHeight`  
+ [in]*pParentDockBar*  
+ [in]*nOffset*  
+ [in]*nRowHeight*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -317,9 +317,9 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
- [輸入] `dockMethod`  
- [輸入] `lpRect`  
+ [in]*pWnd*  
+ [in]*dockMethod*  
+ [in]*lpRect*  
   
 ### <a name="remarks"></a>備註  
   
@@ -333,10 +333,10 @@ virtual BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pBarToDock`  
- 要左邊的停駐窗格的指標`pTargetBar`。  
+ [in][out]*pBarToDock*  
+ 要左邊的停駐窗格的指標*pTargetBar*。  
   
- [in][out] `pTargetBar`  
+ [in][out]*pTargetBar*  
  [目標] 窗格的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -363,7 +363,7 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  要尋找窗格的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -379,7 +379,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRow`  
+ [in]*pRow*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -456,7 +456,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRow`  
+ [in]*pRow*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
- [輸入] `ptDelta`  
+ [in]*rect*  
+ [in]*ptDelta*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -501,9 +501,9 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
- [輸入] `nFlags`  
- [輸入] `ptOffset`  
+ [in]*pWnd*  
+ [in]*nFlags*  
+ [in]*ptOffset*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -517,7 +517,7 @@ virtual void OnInsertRow(POSITION pos);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pos`  
+ [in]*pos*  
   
 ### <a name="remarks"></a>備註  
   
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pos`  
- [輸入] `bByShow`  
+ [in]*pos*  
+ [in]*bByShow*  
   
 ### <a name="remarks"></a>備註  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRowToResize`  
- [輸入] `nOffset`  
+ [in]*pRowToResize*  
+ [in]*nOffset*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectAvailable`  
- [輸入] `nSide`  
- [輸入] `bExpand`  
- [輸入] `nOffset`  
+ [in]*rectAvailable*  
+ [in]*nSide*  
+ [in]*bExpand*  
+ [in]*nOffset*  
   
 ### <a name="remarks"></a>備註  
   
@@ -583,9 +583,9 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndInsertAfter`  
- [輸入] `rectWnd`  
- [輸入] `nFlags`  
+ [in]*pWndInsertAfter*  
+ [in]*rectWnd*  
+ [in]*nFlags*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pos`  
- [輸入] `bShow`  
+ [in]*pos*  
+ [in]*bShow*  
   
 ### <a name="remarks"></a>備註  
   
@@ -614,7 +614,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pt`  
+ [in]*pt*  
  要擷取之窗格的螢幕座標中的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
- [輸入] `point`  
+ [in]*rect*  
+ [in]*點*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
- [輸入] `dockMethod`  
+ [in]*pWnd*  
+ [in]*dockMethod*  
   
 ### <a name="remarks"></a>備註  
   
@@ -662,7 +662,7 @@ void RemoveRow(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRow`  
+ [in]*pRow*  
   
 ### <a name="remarks"></a>備註  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pOldBar`  
- [輸入] `pNewBar`  
+ [in]*pOldBar*  
+ [in]*pNewBar*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -691,7 +691,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectNewClientArea`  
+ [in]*rectNewClientArea*  
   
 ### <a name="remarks"></a>備註  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nNewWidth`  
- [輸入] `nNewHeight`  
+ [in]*nNewWidth*  
+ [in]*nNewHeight*  
   
 ### <a name="remarks"></a>備註  
   
@@ -721,9 +721,9 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRow`  
- [輸入] `nNewSize`  
- [輸入] `bAdjustLayout`  
+ [in]*pRow*  
+ [in]*nNewSize*  
+ [in]*bAdjustLayout*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -741,16 +741,16 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in][out] `pBar`  
+ [in][out]*pBar*  
  顯示或隱藏窗格指標。  
   
- [輸入] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要指定窗格會顯示;`FALSE`指定窗格為隱藏。  
   
- [輸入] `bDelay`  
+ [in]*bDelay*  
  `TRUE` 若要指定窗格的配置，應延遲窗格之後，才會顯示。否則， `FALSE`。  
   
- [輸入] `bActivate`  
+ [in]*bActivate*  
  不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -770,9 +770,9 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pRow`  
- [輸入] `bShow`  
- [輸入] `bAdjustLayout`  
+ [in]*pRow*  
+ [in]*bShow*  
+ [in]*bAdjustLayout*  
   
 ### <a name="remarks"></a>備註  
   
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFirstRow`  
- [輸入] `pSecondRow`  
+ [in]*pFirstRow*  
+ [in]*pSecondRow*  
   
 ### <a name="remarks"></a>備註  
   

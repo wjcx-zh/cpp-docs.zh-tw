@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f94d6fc19879da1dd1dcaa94ab7a177fb86d5186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df79b186aa515bba8d54083ad8a379aad36d2576
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369121"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954529"
 ---
 # <a name="cfileexception-class"></a>CFileException 類別
 表示檔案相關的例外狀況。  
@@ -102,20 +102,20 @@ CFileException(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cause`  
+ *可能的原因*  
  列舉型別變數，指出例外狀況的原因。 請參閱[CFileException::m_cause](#m_cause)取得一份可能的值。  
   
- `lOsError`  
- 操作系統特定的原因的例外狀況，如果有的話。 `lOsError`參數提供更多資訊`cause`沒有。  
+ *lOsError*  
+ 操作系統特定的原因的例外狀況，如果有的話。 *LOsError*參數提供更多資訊*導致*沒有。  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  包含名稱的字串會指向`CFile`造成例外狀況的物件。  
   
 ### <a name="remarks"></a>備註  
  請勿直接使用這個建構函式，但是而不是呼叫全域函式[AfxThrowFileException](exception-processing.md#afxthrowfileexception)。  
   
 > [!NOTE]
->  變數`lOsError`僅適用於`CFile`和`CStdioFile`物件。 `CMemFile`類別不會處理此錯誤的程式碼。  
+>  變數*lOsError*僅適用於`CFile`和`CStdioFile`物件。 `CMemFile`類別不會處理此錯誤的程式碼。  
   
 ##  <a name="errnotoexception"></a>  CFileException::ErrnoToException  
  將給定的執行階段程式庫的錯誤值來轉換`CFileException`列舉值時發生錯誤。  
@@ -125,7 +125,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nErrno`  
+ *nErrno*  
  整數錯誤程式碼執行階段 include 檔 ERRNO 中所定義。H.  
   
 ### <a name="return-value"></a>傳回值  
@@ -148,13 +148,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in、out] `lpszError`  
+ [in、 out]*lpszError*  
  收到的錯誤訊息的緩衝區指標。  
   
- [輸入] `nMaxError`  
+ [in]*nMaxError*  
  指定的緩衝區可以保存的字元數目上限。 這包括結束的 null 字元。  
   
- [in、out] `pnHelpContext`  
+ [in、 out]*pnHelpContext*  
  指標不帶正負號整數，會收到說明內容識別碼。 如果`NULL`，不傳回的任何識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -176,7 +176,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此資料成員是 `int` 類型的公用變數。 列舉程式及其意義如下：  
+ 此資料成員是類型的公用變數**int**。列舉程式及其意義如下：  
   
 - `CFileException::none` 0： 沒有發生錯誤。  
   
@@ -235,14 +235,14 @@ CString m_strFileName;
 ```  
   
 ##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException  
- 傳回列舉值，對應至給定`lOsError`值。 如果錯誤碼是未知，則此函數會傳回**CFileException::generic**。  
+ 傳回列舉值，對應至給定*lOsError*值。 如果錯誤碼是未知，則此函數會傳回**CFileException::generic**。  
   
 ```  
 static int PASCAL OsErrorToException(LONG lOsError);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lOsError`  
+ *lOsError*  
  操作系統特定的錯誤碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -252,34 +252,34 @@ static int PASCAL OsErrorToException(LONG lOsError);
  [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
 ##  <a name="throwerrno"></a>  CFileException::ThrowErrno  
- 建構`CFileException`物件對應至給定`nErrno`值，則會擲回例外狀況。  
+ 建構`CFileException`物件對應至給定*nErrno*值，則會擲回例外狀況。  
   
 ```  
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nErrno`  
+ *nErrno*  
  整數錯誤程式碼執行階段 include 檔 ERRNO 中所定義。H.  
   
- `lpszFileName`  
+ *lpszFileName*  
  造成例外狀況，如果使用字串，包含的檔案名稱的指標。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
 ##  <a name="throwoserror"></a>  CFileException::ThrowOsError  
- 擲回`CFileException`對應至給定`lOsError`值。 如果錯誤碼是未知，則函式會擲回的例外狀況編碼為**CFileException::generic**。  
+ 擲回`CFileException`對應至給定*lOsError*值。 如果錯誤碼是未知，則函式會擲回的例外狀況編碼為**CFileException::generic**。  
   
 ```  
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lOsError`  
+ *lOsError*  
  操作系統特定的錯誤碼。  
   
- `lpszFileName`  
+ *lpszFileName*  
  造成例外狀況，如果使用字串，包含的檔案名稱的指標。  
   
 ### <a name="example"></a>範例  

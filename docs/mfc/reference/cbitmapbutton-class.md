@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358351"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952176"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 類別
 建立以點陣圖影像 (而非文字) 標記的按鈕控制項。  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  在`CDialog`物件的[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)常式，呼叫`CBitmapButton`物件的[AutoLoad](#autoload)函數，當做參數使用按鈕的控制項 ID 和`CDialog`物件的**這**指標。  
   
- 如果您想要處理 Windows 通知訊息，例如**BN_CLICKED**、 傳送至其父代的點陣圖按鈕控制項 (通常的類別衍生自**CDialog)**，加入`CDialog`-衍生每個訊息的訊息對應項目和訊息處理常式成員函式的物件。 所傳送的通知`CBitmapButton`物件是由傳送那些相同[CButton](../../mfc/reference/cbutton-class.md)物件。  
+ 如果您想要處理 Windows 通知訊息，例如 BN_CLICKED，由點陣圖按鈕控制項傳送至其父代 (通常的類別衍生自`CDialog`)，加入`CDialog`-衍生的訊息對應項目和訊息處理常式成員的物件每個訊息的函式。 所傳送的通知`CBitmapButton`物件是由傳送那些相同[CButton](../../mfc/reference/cbutton-class.md)物件。  
   
  類別[CToolBar](../../mfc/reference/ctoolbar-class.md)點陣圖按鈕採取不同的方法。  
   
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  按鈕的控制項 id。  
   
- `pParent`  
+ *pParent*  
  擁有按鈕的物件指標。  
   
 ### <a name="return-value"></a>傳回值  

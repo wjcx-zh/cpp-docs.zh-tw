@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306004"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954867"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>逐步解說：將 D2D 物件加入至 MFC 專案
 
@@ -48,7 +48,7 @@ ms.locfileid: "36306004"
 
 1. 在**檔案**功能表上，指向**新增**，然後選擇 **專案**。
 
-2. 在**新專案**對話方塊中的，在左窗格中**已安裝的範本**，依序展開**Visual c + +** ，然後選取  **MFC**。 在中間窗格中，選取**MFC 應用程式**。 在 [名稱] 方塊中，輸入 `MFCD2DWalkthrough`。 選擇 [確定] 。
+2. 在**新專案**對話方塊中的，在左窗格中**已安裝的範本**，依序展開**Visual c + +** ，然後選取  **MFC**。 在中間窗格中，選取**MFC 應用程式**。 在**名稱**方塊中，輸入*MFCD2DWalkthrough*。 選擇 [確定] 。
 
 3. 在**MFC 應用程式精靈**，選擇**完成**不變更任何設定。
 
@@ -132,7 +132,7 @@ ms.locfileid: "36306004"
 
 3. 在**訊息**索引標籤上，選擇**加入自訂訊息**。
 
-4. 在**加入自訂訊息**對話方塊中，於**自訂 Windows 訊息**方塊中，輸入`AFX_WM_DRAW2D`。 在**訊息處理常式名稱**方塊中，輸入`OnDraw2D`。 選取**登錄訊息**選項，然後選擇**確定**。 這個動作會將訊息處理常式`AFX_WM_DRAW2D`傳送訊息給`CMFCD2DWalkthroughView`類別。
+4. 在**加入自訂訊息**對話方塊中，於**自訂 Windows 訊息**方塊中，輸入*AFX_WM_DRAW2D*。 在**訊息處理常式名稱**方塊中，輸入*OnDraw2D*。 選取**登錄訊息**選項，然後選擇**確定**。 這個動作會將訊息處理常式 AFX_WM_DRAW2D 郵件`CMFCD2DWalkthroughView`類別。
 
 5. 在**現有處理常式**方塊中，選取`OnDraw2D`。 選擇**編輯程式碼**顯示`CMFCD2DWalkthroughView::OnDraw2D`方法。 使用此程式碼`CMFCD2DWalkthroughView::OnDrawD2D`方法：
 

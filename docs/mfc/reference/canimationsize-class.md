@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3da7c168cc547ea32f57a145347d8ab2479482a6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354131"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954672"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 類別
 實作可以動畫顯示其維度的大小物件功能。  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCXTransition`  
+ *pCXTransition*  
  轉換寬度的指標。  
   
- `pCYTransition`  
+ *pCYTransition*  
  指標轉換的高度。  
   
 ### <a name="remarks"></a>備註  
@@ -138,16 +138,16 @@ CAnimationSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- `szDefault`  
+ *szDefault*  
  指定預設大小。  
   
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
- `nObjectID`  
+ *nObjectID*  
  指定物件識別碼。  
   
- `dwUserData`  
+ *dwUserData*  
  指定使用者定義的資料。  
   
 ### <a name="remarks"></a>備註  
@@ -163,7 +163,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lst`  
+ *lst*  
  函式傳回時，它會包含代表寬度與高度的兩個 CAnimationVariable 物件的指標。  
   
 ##  <a name="getcx"></a>  CAnimationSize::GetCX  
@@ -213,7 +213,7 @@ BOOL GetValue(CSize& szValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `szValue`  
+ *szValue*  
  輸出。 此方法傳回時，包含目前的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -257,7 +257,7 @@ void operator=(const CSize& szSrc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `szSrc`  
+ *szSrc*  
  是指 CSize 或大小。  
   
 ### <a name="remarks"></a>備註  
@@ -271,7 +271,7 @@ void SetDefaultValue(const CSize& szDefault);
 ```  
   
 ### <a name="parameters"></a>參數  
- `szDefault`  
+ *szDefault*  
  指定新的預設大小。  
   
 ### <a name="remarks"></a>備註  

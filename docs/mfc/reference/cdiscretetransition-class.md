@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366931"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957028"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 類別
 封裝離散的轉換。  
@@ -88,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `delay`  
+ *延遲*  
  所要依據的延遲時間的瞬間交換器的最終值的時間量。  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  結尾的轉換動畫變數的值。  
   
- `hold`  
+ *保存*  
  用來保存變數，在最後一個值的時間量。  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -106,7 +106,7 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
 
   

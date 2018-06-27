@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350793"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956443"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF 類別
 `D2D1_RECT_F`的包裝函式。  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|傳回`boolean`值，指出運算式是否包含任何有效的資料 ( `null`)。|  
+|[CD2DRectF::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 ( **null**)。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -81,19 +81,19 @@ CD2DRectF(
 ```  
   
 ### <a name="parameters"></a>參數  
- `rect`  
+ *rect*  
  來源矩形  
   
- `fLeft`  
+ *fLeft*  
  來源左方的座標  
   
- `fTop`  
+ *fTop*  
  來源的上方座標  
   
- `fRight`  
+ *驚喜*  
  來源右方座標  
   
- `fBottom`  
+ *fBottom*  
  來源下方座標  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  

@@ -100,12 +100,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43372dd34088b8adda3f5fc8a9f5573695f0c93c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 42680d4cd79c5079703a94361403efd858ef80f2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369999"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955263"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 類別
 管理與停駐位置位於相同水平或垂直列 (欄) 之窗格的清單。  
@@ -201,10 +201,10 @@ virtual void AddPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
- [輸入] `dockMethod`  
- [輸入] `lpRect`  
- [輸入] `bAddLast`  
+ [in]*pControlBar*  
+ [in]*dockMethod*  
+ [in]*lpRect*  
+ [in]*bAddLast*  
   
 ### <a name="remarks"></a>備註  
   
@@ -218,8 +218,8 @@ virtual void AddPaneFromRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
- [輸入] `dockMethod`  
+ [in]*pControlBar*  
+ [in]*dockMethod*  
   
 ### <a name="remarks"></a>備註  
   
@@ -233,10 +233,10 @@ virtual void ArrangePanes(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nMargin`  
+ [in]*nMargin*  
  以指定的位移，從資料列的左上角的第一個窗格的像素為單位。  
   
- [輸入] `nSpacing`  
+ [in]*nSpacing*  
  指定單位為像素的窗格間的間距。  
   
 ### <a name="remarks"></a>備註  
@@ -252,8 +252,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bStretch`  
- [輸入] `bHorz`  
+ [in]*bStretch*  
+ [in]*bHorz*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -270,9 +270,9 @@ CDockingPanesRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentDockBar`  
- [輸入] `nOffset`  
- [輸入] `nHeight`  
+ [in]*pParentDockBar*  
+ [in]*nOffset*  
+ [in]*nHeight*  
   
 ### <a name="remarks"></a>備註  
   
@@ -315,8 +315,8 @@ void FixupVirtualRects(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bMoveBackToVirtualRect`  
- [輸入] `pBarToExclude`  
+ [in]*bMoveBackToVirtualRect*  
+ [in]*pBarToExclude*  
   
 ### <a name="remarks"></a>備註  
   
@@ -328,7 +328,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bUseVirtualRect`  
+ [in]*bUseVirtualRect*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -342,7 +342,7 @@ virtual void GetAvailableSpace(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
   
 ### <a name="remarks"></a>備註  
   
@@ -354,7 +354,7 @@ void GetClientRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
   
 ### <a name="remarks"></a>備註  
   
@@ -390,8 +390,8 @@ void GetGroupFromPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBar`  
- [輸入] `lst`  
+ [in]*pBar*  
+ [in]*lst*  
   
 ### <a name="remarks"></a>備註  
   
@@ -414,7 +414,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bSkipHiddenBars`  
+ [in]*bSkipHiddenBars*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -494,7 +494,7 @@ void GetWindowRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
   
 ### <a name="remarks"></a>備註  
   
@@ -506,7 +506,7 @@ BOOL HasPane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
+ [in]*pControlBar*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -564,7 +564,7 @@ virtual void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nOffset`  
+ [in]*nOffset*  
   
 ### <a name="remarks"></a>備註  
   
@@ -599,14 +599,14 @@ void MovePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
- [輸入] `ptOffset`  
- [輸入] `bSwapControlBars`  
- [輸入] `hdwp`  
- [輸入] `rectTarget`  
- [輸入] `nOffset`  
- [輸入] `bForward`  
- [輸入] `nAbsolutOffset`  
+ [in]*pControlBar*  
+ [in]*ptOffset*  
+ [in]*bSwapControlBars*  
+ [in]*hdwp*  
+ [in]*rectTarget*  
+ [in]*nOffset*  
+ [in]*bForward*  
+ [in]*nAbsolutOffset*  
   
 ### <a name="remarks"></a>備註  
   
@@ -618,7 +618,7 @@ virtual void OnResizePane(CBasePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
+ [in]*pControlBar*  
   
 ### <a name="remarks"></a>備註  
   
@@ -639,7 +639,7 @@ virtual void RemovePane(CPane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
+ [in]*pControlBar*  
   
 ### <a name="remarks"></a>備註  
   
@@ -653,8 +653,8 @@ virtual BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pBarOld`  
- [輸入] `pBarNew`  
+ [in]*pBarOld*  
+ [in]*pBarNew*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -672,10 +672,10 @@ virtual void RepositionPanes(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rectNewParentBarArea`  
- [輸入] `nSide`  
- [輸入] `bExpand`  
- [輸入] `nOffset`  
+ [in]*rectNewParentBarArea*  
+ [in]*nSide*  
+ [in]*bExpand*  
+ [in]*nOffset*  
   
 ### <a name="remarks"></a>備註  
   
@@ -687,7 +687,7 @@ virtual int Resize(int nOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nOffset`  
+ [in]*nOffset*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -701,7 +701,7 @@ virtual int ResizeByPaneDivider(int);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `int`  
+ [in]*int*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -715,7 +715,7 @@ void ScreenToClient(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `rect`  
+ [in]*rect*  
   
 ### <a name="remarks"></a>備註  
   
@@ -729,8 +729,8 @@ void SetExtra(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nExtraSpace`  
- [輸入] `rowExtraAlign`  
+ [in]*nExtraSpace*  
+ [in]*rowExtraAlign*  
   
 ### <a name="remarks"></a>備註  
   
@@ -744,8 +744,8 @@ virtual void ShowDockSiteRow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShow`  
- [輸入] `bDelay`  
+ [in]*bShow*  
+ [in]*bDelay*  
   
 ### <a name="remarks"></a>備註  
   
@@ -760,9 +760,9 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pControlBar`  
- [輸入] `bShow`  
- [輸入] `bDelay`  
+ [in]*pControlBar*  
+ [in]*bShow*  
+ [in]*bDelay*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -776,7 +776,7 @@ virtual void UpdateVisibleState(BOOL bDelay);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bDelay`  
+ [in]*bDelay*  
   
 ### <a name="remarks"></a>備註  
   

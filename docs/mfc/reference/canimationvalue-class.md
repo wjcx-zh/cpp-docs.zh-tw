@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356534"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952094"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 類別
 實作有一個值的動畫物件功能。  
@@ -104,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTransition`  
+ *pTransition*  
  轉換物件的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -125,16 +125,16 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  指定預設值。  
   
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
- `nObjectID`  
+ *nObjectID*  
  指定物件識別碼。  
   
- `dwUserData`  
+ *dwUserData*  
  指定使用者定義的資料。  
   
 ### <a name="remarks"></a>備註  
@@ -150,7 +150,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lst`  
+ *lst*  
  函式傳回時，它包含 CAnimationVariable 表示動畫的值的指標。  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
@@ -162,10 +162,10 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblValue`  
+ *dblValue*  
  輸出。 此函式傳回時包含動畫變數的目前值。  
   
- `nValue`  
+ *n 值*  
  輸出。 此函式傳回時包含動畫變數的目前值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -229,10 +229,10 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblVal`  
+ *dblVal*  
  指定的值指派給動畫值。  
   
- `nVal`  
+ *nVal*  
  指定的值指派給動畫值。  
   
 ### <a name="remarks"></a>備註  
@@ -246,7 +246,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  指定預設值。  
   
 ### <a name="remarks"></a>備註  

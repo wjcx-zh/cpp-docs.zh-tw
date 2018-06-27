@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357386"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952218"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint 類別
 定義用來與其他 OLE 物件通訊的特殊介面類型，稱為「連接點」。  
@@ -66,7 +66,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|擷取控制項擁有連接對應的容器。|  
 |[CConnectionPoint::GetIID](#getiid)|擷取連接點的介面 ID。|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|擷取控制項所支援的連接點的最大數目。|  
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|擷取在連接項目的指標`pos`。|  
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|擷取在連接項目的指標*pos*。|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|啟動對應反覆項目，藉由傳回**位置**可以傳遞至值`GetNextConnection`呼叫。|  
 |[CConnectionPoint::OnAdvise](#onadvise)|由架構建立階層或中斷連線時呼叫。|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|擷取要求的接收介面的指標。|  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- `BEGIN_CONNECTION_PART`和`END_CONNECTION_PART`巨集宣告內嵌的類別， `XSampleConnPt` (衍生自`CConnectionPoint`)，用來實作這個特定的連接點。 如果您想要覆寫任何`CConnectionPoint`成員函式，或加入您自己的成員函式，將它們宣告這些兩個巨集之間。 例如，`CONNECTION_IID`巨集覆寫`CConnectionPoint::GetIID`成員函式時這些兩個巨集之間。  
+ BEGIN_CONNECTION_PART 和 END_CONNECTION_PART 巨集宣告內嵌的類別， `XSampleConnPt` (衍生自`CConnectionPoint`)，用來實作這個特定的連接點。 如果您想要覆寫任何`CConnectionPoint`成員函式，或加入您自己的成員函式，將它們宣告這些兩個巨集之間。 例如，CONNECTION_IID 巨集覆寫`CConnectionPoint::GetIID`成員函式時這些兩個巨集之間。  
   
  第二個程式碼片段插入至實作檔案 (。CPP) 的控制項類別。 此程式碼會實作連接對應，其中包含其他連接點， `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- 一旦這些程式碼片段插入，範例 OLE 控制項不僅會公開的連接點**ISampleSink**介面。  
+ 一旦這些程式碼片段插入，範例 OLE 控制項不僅會公開的連接點`ISampleSink`介面。  
   
  一般而言，連接點支援 「 多點傳送 」，也就是廣播至多個接收連線到相同的介面。 下列程式碼片段示範如何逐一查看每個接收連接點上完成 多點傳送：  
   
@@ -136,7 +136,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
  如果成功的話，容器; 的指標否則**NULL**。  
   
 ### <a name="remarks"></a>備註  
- 此函式通常由實作`BEGIN_CONNECTION_PART`巨集。  
+ 此函式通常是由 BEGIN_CONNECTION_PART 巨集實作。  
   
 ##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  由架構呼叫以擷取連接點的介面 ID。  
@@ -167,18 +167,18 @@ virtual int GetMaxConnections();
  如果您想要限制接收可連接到您的控制項數目會覆寫這個函式。  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
- 擷取在連接項目的指標`pos`。  
+ 擷取在連接項目的指標*pos*。  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>參數  
- `pos`  
+ *pos*  
  指定的參考**位置**傳回先前值`GetNextConnection`或[GetStartPosition](#getstartposition)呼叫。  
   
 ### <a name="return-value"></a>傳回值  
- 指定的連接元素的指標`pos`，則為 NULL。  
+ 指定的連接元素的指標*pos*，則為 NULL。  
   
 ### <a name="remarks"></a>備註  
  此函式是最適合用來逐一查看所有連線對應的項目。 當逐一查看，略過任何從此函數傳回的 null 值。  
@@ -210,7 +210,7 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bAdvise`  
+ *bAdvise*  
  **TRUE**，如果連接正在建立; 否則為**FALSE**。  
   
 ### <a name="remarks"></a>備註  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pUnkSink`  
+ *pUnkSink*  
  所要求的接收介面識別項。  
   
- `ppInterface`  
- 所識別的介面指標的指標`pUnkSink`。 如果物件不支援這個介面， \* `ppInterface`設**NULL**。  
+ *ppInterface*  
+ 所識別的介面指標的指標*pUnkSink*。 如果物件不支援這個介面， \* *ppInterface*設**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349251"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951178"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 結構
 `AFX_EXTENSION_MODULE` MFC 擴充 Dll 的初始化期間用來容納 MFC 擴充 DLL 模組的狀態。  
@@ -43,7 +43,7 @@ struct AFX_EXTENSION_MODULE
  *bInitialized*  
  **TRUE**如果 DLL 模組初始化具有`AfxInitExtensionModule`。  
   
- `hModule`  
+ *hModule*  
  指定 DLL 模組控制的代碼。  
   
  *hResource*  
@@ -60,13 +60,13 @@ struct AFX_EXTENSION_MODULE
   
 -   呼叫[AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule)並檢查傳回的值。  
   
--   建立**CDynLinkLibrary**物件如果將匯出的 DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件，或有它自己的自訂資源。  
+-   建立`CDynLinkLibrary`物件如果將匯出的 DLL [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)物件，或有它自己的自訂資源。  
   
  `AFX_EXTENSION_MODULE`結構用來保存一份 MFC 擴充 DLL 的模組狀態，包括 MFC 擴充 DLL 初始化之前執行的一般靜態物件建構的一部分的執行階段類別物件的副本`DllMain`是輸入。 例如:   
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- 模組資訊儲存在`AFX_EXTENSION_MODULE`結構複製到**CDynLinkLibrary**物件。 例如:   
+ 模組資訊儲存在`AFX_EXTENSION_MODULE`結構複製到`CDynLinkLibrary`物件。 例如:   
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   

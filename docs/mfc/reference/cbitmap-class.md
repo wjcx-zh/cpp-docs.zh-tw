@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 476e9b0bc5e9f4c3eec64e5d0d36d3f900988f48
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355859"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954211"
 ---
 # <a name="cbitmap-class"></a>CBitmap 類別
 封裝 Windows 繪圖裝置介面 (GDI) 點陣圖，並提供操作點陣圖的成員函式。  
@@ -130,26 +130,26 @@ BOOL CreateBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nWidth`  
+ *nWidth*  
  指定點陣圖的寬度 (以像素為單位)。  
   
- `nHeight`  
+ *nHeight*  
  指定點陣圖的高度 (以像素為單位)。  
   
- `nPlanes`  
+ *nPlanes*  
  指定點陣圖中色彩平面的數目。  
   
- `nBitcount`  
+ *nBitcount*  
  指定每個顯示像素的色彩位元數目。  
   
- `lpBits`  
+ *lpBits*  
  指向位元組陣列，其中包含初始點陣圖位元值。 如果為 **NULL**，則不會初始化新的點陣圖。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 若是彩色點陣圖， `nPlanes` 或 `nBitcount` 參數應設為 1。 如果這兩個參數都設為 1， `CreateBitmap` 會建立單色點陣圖。  
+ 若是彩色點陣圖，其中一個*nPlanes*或*nBitcount*參數應設為 1。 如果這兩個參數都設為 1， `CreateBitmap` 會建立單色點陣圖。  
   
  雖然無法直接選取點陣圖，顯示裝置，也可以選取作為 「 記憶體裝置內容 」 的目前點陣圖使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)並複製到任何相容的裝置內容中，使用[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)函式。  
   
@@ -158,14 +158,14 @@ BOOL CreateBitmap(
  如需詳細資訊，請參閱 **BITMAP** 結構中 **bmBits** 欄位的說明。 [點陣圖](../../mfc/reference/bitmap-structure.md)結構中所述[Bitmap](#createbitmapindirect)成員函式。  
   
 ##  <a name="createbitmapindirect"></a>  Bitmap  
- 初始化具有寬度、 高度和位元模式 （如果已指定） 所指向的結構中指定的點陣圖`lpBitmap`。  
+ 初始化具有寬度、 高度和位元模式 （如果已指定） 所指向的結構中指定的點陣圖*lpBitmap*。  
   
 ```  
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpBitmap`  
+ *lpBitmap*  
  指向[點陣圖](../../mfc/reference/bitmap-structure.md)包含點陣圖的相關資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -174,12 +174,12 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>備註  
  雖然無法直接選取點陣圖，顯示裝置，也可以選取做為記憶體裝置內容的目前點陣圖使用[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)並複製到任何相容的裝置內容中，使用[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)函式。 ( [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt)函式可以將目前的筆刷的點陣圖複製直接到顯示裝置內容。)  
   
- 如果**點陣圖**結構所指`lpBitmap`使用參數填入`GetObject`函式未指定點陣圖的位元和點陣圖未初始化。 若要初始化點陣圖，應用程式可以使用函式例如[cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973)位元複製的第一個參數所識別的點陣圖`CGdiObject::GetObject`為所建立的點陣圖`CreateBitmapIndirect`.  
+ 如果**點陣圖**結構所指*lpBitmap*使用參數填入`GetObject`函式未指定點陣圖的位元和點陣圖未初始化。 若要初始化點陣圖，應用程式可以使用函式例如[cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973)位元複製的第一個參數所識別的點陣圖`CGdiObject::GetObject`為所建立的點陣圖`CreateBitmapIndirect`.  
   
  當您完成使用`CBitmap`物件以建立`CreateBitmapIndirect`函式，請先選取點陣圖並移出裝置內容，然後刪除`CBitmap`物件。  
   
 ##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
- 初始化與所指定的裝置相容的點陣圖`pDC`。  
+ 初始化與所指定的裝置相容的點陣圖*pDC*。  
   
 ```  
 BOOL CreateCompatibleBitmap(
@@ -189,22 +189,22 @@ BOOL CreateCompatibleBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指定的裝置內容。  
   
- `nWidth`  
+ *nWidth*  
  指定點陣圖的寬度 (以像素為單位)。  
   
- `nHeight`  
+ *nHeight*  
  指定點陣圖的高度 (以像素為單位)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 點陣圖會具有相同色彩平面的數目或指定的裝置內容相同的每個像素的位元格式。 當做與所指定相容的任何記憶體裝置的目前點陣圖`pDC`。  
+ 點陣圖會具有相同色彩平面的數目或指定的裝置內容相同的每個像素的位元格式。 當做與所指定相容的任何記憶體裝置的目前點陣圖*pDC*。  
   
- 如果`pDC`是記憶體裝置內容，傳回的點陣圖中的裝置內容具有相同的格式，為目前選取的點陣圖。 「 記憶體裝置內容 」 是記憶體的表示顯示介面區塊。 它可以用來準備在記憶體中的映像，然後再將它們複製到相容的裝置的實際顯示介面。  
+ 如果*pDC*是記憶體裝置內容，傳回的點陣圖中的裝置內容具有相同的格式，為目前選取的點陣圖。 「 記憶體裝置內容 」 是記憶體的表示顯示介面區塊。 它可以用來準備在記憶體中的映像，然後再將它們複製到相容的裝置的實際顯示介面。  
   
  建立記憶體裝置內容時，GDI 會自動為它選取內建的單色點陣圖。  
   
@@ -213,7 +213,7 @@ BOOL CreateCompatibleBitmap(
  當您完成使用`CBitmap`物件以建立`CreateCompatibleBitmap`函式，請先選取點陣圖並移出裝置內容，然後刪除`CBitmap`物件。  
   
 ##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
- 初始化與所識別的裝置內容的可捨棄點陣圖`pDC`。  
+ 初始化與所識別的裝置內容的可捨棄點陣圖*pDC*。  
   
 ```  
 BOOL CreateDiscardableBitmap(
@@ -223,20 +223,20 @@ BOOL CreateDiscardableBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDC`  
+ *pDC*  
  指定裝置內容。  
   
- `nWidth`  
+ *nWidth*  
  指定點陣圖的寬度 （以位元為單位）。  
   
- `nHeight`  
+ *nHeight*  
  指定點陣圖的高度 （以位元為單位）。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 點陣圖會具有相同色彩平面的數目或指定的裝置內容相同的每個像素的位元格式。 應用程式可以做為與所指定的記憶體裝置的目前點陣圖選取此點陣圖`pDC`。  
+ 點陣圖會具有相同色彩平面的數目或指定的裝置內容相同的每個像素的位元格式。 應用程式可以做為與所指定的記憶體裝置的目前點陣圖選取此點陣圖*pDC*。  
   
  Windows 可以捨棄應用程式尚未選取顯示內容時，只有這個函式所建立的點陣圖。 如果未選取，並加以選取，嘗試更新版本的應用程式時，Windows 會捨棄點陣圖[cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject)函式會傳回**NULL**。  
   
@@ -250,7 +250,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hBitmap`  
+ *hBitmap*  
  指定 Windows GDI 點陣圖。  
   
 ### <a name="return-value"></a>傳回值  
@@ -267,7 +267,7 @@ int GetBitmap(BITMAP* pBitMap);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBitMap`  
+ *pBitMap*  
  指標[點陣圖結構](../../mfc/reference/bitmap-structure.md)將會收到在映像內容的結構。 此參數不得為 `NULL`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -285,10 +285,10 @@ DWORD GetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwCount`  
+ *dwCount*  
  要複製到緩衝區的位元組數目。  
   
- `lpBits`  
+ *lpBits*  
  將會收到點陣圖的緩衝區指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -311,7 +311,7 @@ CSize GetBitmapDimension() const;
  高度和寬度會假設已使用先前設定[SetBitmapDimension](#setbitmapdimension)成員函式。  
   
 ##  <a name="loadbitmap"></a>  Cbitmap:: Loadbitmap  
- 載入所命名的點陣圖資源`lpszResourceName`或中的 ID 編號識別`nIDResource`從應用程式的可執行檔。  
+ 載入所命名的點陣圖資源*lpszResourceName*或中的 ID 編號識別*nIDResource*從應用程式的可執行檔。  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
@@ -319,10 +319,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszResourceName`  
+ *lpszResourceName*  
  指向以 null 終止的字串，包含點陣圖資源的名稱。  
   
- `nIDResource`  
+ *nIDResource*  
  指定點陣圖資源的資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -331,7 +331,7 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="remarks"></a>備註  
  載入的點陣圖附加至`CBitmap`物件。  
   
- 如果所識別的點陣圖`lpszResourceName`不存在或如果沒有記憶體不足，無法載入點陣圖，函數會傳回 0。  
+ 如果所識別的點陣圖*lpszResourceName*不存在或如果沒有記憶體不足，無法載入點陣圖，函數會傳回 0。  
   
  您可以使用[CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject)所載入的函式來刪除點陣圖`LoadBitmap`函式，或`CBitmap`解構函式會為您刪除物件。  
   
@@ -356,17 +356,17 @@ BOOL LoadMappedBitmap(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDBitmap`  
+ *nIDBitmap*  
  點陣圖資源的識別碼。  
   
- `nFlags`  
+ *nFlags*  
  點陣圖的旗標。 可以是零或**CMB_MASKED**。  
   
- `lpColorMap`  
+ *lpColorMap*  
  指標**COLORMAP**結構，其中包含對應的點陣圖所需的色彩資訊。 如果這個參數是**NULL**，此函數會使用預設的色彩對應。  
   
  *nMapSize*  
- 色彩對應的數字所指`lpColorMap`。  
+ 色彩對應的數字所指*lpColorMap*。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -384,7 +384,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDBitmap`  
+ *nIDBitmap*  
  預先定義的 Windows 點陣圖的 ID 編號。 可能的值如下所示從 WINDOWS。H:  
   
 |||  
@@ -431,7 +431,7 @@ operator HBITMAP() const;
  如需有關使用圖形物件的詳細資訊，請參閱[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)Windows SDK 中。  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
- 設定所指定的位元值的位元點陣圖`lpBits`。  
+ 設定所指定的位元值的位元點陣圖*lpBits*。  
   
 ```  
 DWORD SetBitmapBits(
@@ -440,10 +440,10 @@ DWORD SetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwCount`  
- 指定所指向的位元組數目`lpBits`。  
+ *dwCount*  
+ 指定所指向的位元組數目*lpBits*。  
   
- `lpBits`  
+ *lpBits*  
  指向**位元組**陣列，其中包含要複製到其中的像素值`CBitmap`物件。 為了要能夠正確地呈現其影像點陣圖，值應格式化為符合 CBitmap 執行個體已建立時所指定的高度、 寬度和色彩深度值。 如需詳細資訊，請參閱[CBitmap::CreateBitmap](#createbitmap)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -459,10 +459,10 @@ CSize SetBitmapDimension(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nWidth`  
+ *nWidth*  
  指定的寬度 （以 0.1 公釐為單位） 的點陣圖。  
   
- `nHeight`  
+ *nHeight*  
  指定的高度 （單位 0.1 公釐） 的點陣圖。  
   
 ### <a name="return-value"></a>傳回值  

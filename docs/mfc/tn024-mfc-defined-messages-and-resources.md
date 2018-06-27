@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a21ae615a3f4c644f6f0aa7c8f1306378a00ae5c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385608"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957181"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024：MFC 定義的訊息和資源
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33385608"
   
  在 MFC private 標頭中宣告這些私用的 Windows 訊息和相關聯的參數結構 ' AFXPRIV。H'。 會收到警告，任何包含此標頭的程式碼可能必須倚賴未記載的行為，就會斷開在未來版本的 MFC。  
   
- 在少數的情況下不必處理這些訊息的其中一個，您應該使用`ON_MESSAGE`訊息對應巨集，並處理一般 LRESULT/WPARAM/LPARAM 格式中的訊息。  
+ 在極少數的需要來處理這些訊息的其中一個案例中，您應該使用 ON_MESSAGE 訊息對應巨集，並處理一般 LRESULT/WPARAM/LPARAM 格式中的訊息。  
   
  **WM_QUERYAFXWNDPROC**  
   
@@ -60,12 +60,12 @@ ms.locfileid: "33385608"
   
  **WM_SIZEPARENT**  
   
- 這個訊息由傳送框架視窗至其直屬子系調整大小期間 (**CFrameWnd::OnSize**呼叫`CFrameWnd::RecalcLayout`哪些呼叫`CWnd::RepositionBars`) 來重新調整位置周圍框架的側邊的控制列。 **AFX_SIZEPARENTPARAMS**結構用來呼叫包含父系和 HDWP （這可能是 NULL） 的目前可用的用戶端矩形`DeferWindowPos`降到最低重新繪製。  
+ 這個訊息由傳送框架視窗至其直屬子系調整大小期間 (`CFrameWnd::OnSize`呼叫`CFrameWnd::RecalcLayout`哪些呼叫`CWnd::RepositionBars`) 來重新調整位置周圍框架的側邊的控制列。 AFX_SIZEPARENTPARAMS 結構用來呼叫包含父系和 HDWP （這可能是 NULL） 的目前可用的用戶端矩形`DeferWindowPos`降到最低重新繪製。  
   
 |||  
 |-|-|  
 |wParam|未使用|  
-|lParam|位址**AFX_SIZEPARENTPARAMS**結構|  
+|lParam|AFX_SIZEPARENTPARAMS 結構的位址|  
 |傳回|不使用 (0)|  
   
  忽略訊息，指出視窗不會參與配置。  
@@ -82,7 +82,7 @@ ms.locfileid: "33385608"
   
  **WM_IDLEUPDATECMDUI**  
   
- 若要實作更新命令 UI 處理常式的閒置時間更新，此訊息會傳送閒置時間。 如果視窗 （通常是一種控制列） 會處理訊息，它會建立`CCmdUI`物件 （或衍生類別的物件），並呼叫**CCmdUI::DoUpdate**每個 「 項目 」 視窗中。 這會接著檢查`ON_UPDATE_COMMAND_UI`命令處理常式鏈結中物件的處理常式。  
+ 若要實作更新命令 UI 處理常式的閒置時間更新，此訊息會傳送閒置時間。 如果視窗 （通常是一種控制列） 會處理訊息，它會建立`CCmdUI`物件 （或衍生類別的物件），並呼叫`CCmdUI::DoUpdate`每個 「 項目 」 視窗中。 這會接著檢查 ON_UPDATE_COMMAND_UI 處理常式的命令處理常式鏈結中的物件。  
   
 |||  
 |-|-|  
@@ -90,11 +90,11 @@ ms.locfileid: "33385608"
 |lParam|不使用 (0)|  
 |傳回|不使用 (0)|  
   
- *bDisableIfNoHandler*為非零值以停用 UI 物件，如果有既不是`ON_UPDATE_COMMAND_UI`也`ON_COMMAND`處理常式。  
+ *bDisableIfNoHandler*為非零值以停用 UI 物件，如果沒有 ON_UPDATE_COMMAND_UI 或 ON_COMMAND 處理常式。  
   
  **WM_EXITHELPMODE**  
   
- 此訊息張貼至`CFrameWnd`，結束即時線上說明模式。 接收此訊息會終止由啟動強制回應迴圈**CFrameWnd::OnContextHelp。**  
+ 此訊息張貼至`CFrameWnd`，結束即時線上說明模式。 接收此訊息會終止由啟動強制回應迴圈`CFrameWnd::OnContextHelp`。  
   
 |||  
 |-|-|  
@@ -150,35 +150,35 @@ ms.locfileid: "33385608"
   
  **WM_FLOATSTATUS**  
   
- 此訊息會傳送給框架啟用或停用另一個最上層框架視窗時，框架視窗所擁有的所有快顯視窗。 會使用這個方法的實作**MFS_SYNCACTIVE**中`CMiniFrameWnd`，而這些快顯視窗的啟動與保持同步的上層框架視窗啟用。  
+ 此訊息會傳送給框架啟用或停用另一個最上層框架視窗時，框架視窗所擁有的所有快顯視窗。 會使用這個方法的實作中 MFS_SYNCACTIVE `CMiniFrameWnd`，而這些快顯視窗的啟動與保持同步的上層框架視窗啟用。  
   
 |||  
 |-|-|  
-|wParam|是下列值之一：<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|wParam|是下列值之一：<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|  
 |lParam|不使用 (0)|  
   
- 傳回的值應為非零如果**FS_SYNCACTIVE**是組和視窗將其啟動與父框架。 `CMiniFrameWnd` 傳回非零，當樣式設定為**MFS_SYNCACTIVE。**  
+ 傳回的值應為非零是否 FS_SYNCACTIVE 集然後視窗將其啟動與父框架。 `CMiniFrameWnd` 樣式設定為 MFS_SYNCACTIVE 時傳回非零。  
   
  如需詳細資訊，請參閱的實作`CMiniFrameWnd`。  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- 當視窗在其 「 最上層群組 」 中的啟用或停用時，此訊息會傳送至最上層視窗。 如果它是最上層視窗 （沒有父系或擁有者），或隸屬於這種視窗，視窗會是最上層群組的一部分。 這個訊息是使用中的類似**WM_ACTIVATEAPP，** 但在其中 （通常在 OLE 應用程式） 的單一視窗階層架構中混用 windows 屬於不同的程序的情況下運作。  
+ 當視窗在其 「 最上層群組 」 中的啟用或停用時，此訊息會傳送至最上層視窗。 如果它是最上層視窗 （沒有父系或擁有者），或隸屬於這種視窗，視窗會是最上層群組的一部分。 這個訊息是使用類似於 WM_ACTIVATEAPP，但是 （通常在 OLE 應用程式） 的單一視窗階層架構中混用 windows 屬於不同的程序的情況下的運作方式。  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP，WM_HELPHITTEST，WM_EXITHELPMODE  
  即時線上說明的實作中，會使用這些訊息。 請參閱[技術附註 28](../mfc/tn028-context-sensitive-help-support.md)如需詳細資訊。  
   
 ## <a name="mfc-private-resource-formats"></a>MFC 私用的格式建置資源  
- 目前，MFC 會定義兩個私用的資源格式： **RT_TOOLBAR**和**RT_DLGINIT**。  
+ 目前，MFC 會定義兩個私用的資源格式： RT_TOOLBAR 和 RT_DLGINIT。  
   
 ## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR 資源格式  
- AppWizard 所提供的預設工具列根據**RT_TOOLBAR** MFC 4.0 中引進的自訂資源。 您可以編輯這個資源，使用工具列編輯器。  
+ AppWizard 所提供的預設工具列根據 RT_TOOLBAR 」 自訂資源，MFC 4.0 中引進。 您可以編輯這個資源，使用工具列編輯器。  
   
 ## <a name="rtdlginit-resource-format"></a>RT_DLGINIT 資源格式  
  MFC 私人資源格式用來儲存額外的對話方塊的初始化資訊。 這包括儲存在下拉式方塊中的初始字串。 此資源的格式不是以手動方式編輯，但是由 Visual c + +。  
   
- Visual c + + 和這**RT_DLGINIT**資源不需要使用 MFC 的相關的功能，因為有使用中資源的資訊的 API 替代方案。 使用 Visual c + + 讓您更能更輕鬆地撰寫、 維護和轉換您的應用程式中。  
+ Visual c + + 和此 RT_DLGINIT 資源都不需要使用 MFC 的相關的功能，因為有使用中資源的資訊的 API 替代方案。 使用 Visual c + + 讓您更能更輕鬆地撰寫、 維護和轉換您的應用程式中。  
   
- 基本結構**RT_DLGINIT**資源如下所示：  
+ RT_DLGINIT 資源的基本結構如下所示：  
   
 ```  
 +---------------+    \  

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385387"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952426"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
 [第 1 部分](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)本逐步解說示範如何將 Office Fluent 功能區加入至傳統的 Scribble 應用程式。 此部分顯示如何加入功能區面板和控制項，使用者可以使用而不是功能表和命令。  
@@ -47,31 +47,31 @@ ms.locfileid: "33385387"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>若要將檢視面板和視窗面板加入至功能區列  
   
-1.  建立名為面板`View`，其中包含兩個核取方塊的切換狀態 列和工具列。  
+1.  建立名為面板*檢視*，其中包含兩個核取方塊的切換狀態 列和工具列。  
   
     1.  從**工具箱**，拖曳**面板**至**首頁**類別目錄。 拖放兩**核取方塊**面板。  
   
-    2.  按一下要修改其內容的面板。 變更**標題**至`View`。  
+    2.  按一下要修改其內容的面板。 變更**標題**至*檢視*。  
   
-    3.  按一下要修改其屬性的第一個核取方塊。 變更**識別碼**至`ID_VIEW_TOOLBAR`和**標題**至`Toolbar`。  
+    3.  按一下要修改其屬性的第一個核取方塊。 變更**識別碼**至*ID_VIEW_TOOLBAR*和**標題**至*工具列*。  
   
-    4.  按一下第二個核取方塊來修改其屬性。 變更**識別碼**至`ID_VIEW_STATUS_BAR`和**標題**至`Status Bar`。  
+    4.  按一下第二個核取方塊來修改其屬性。 變更**識別碼**至*ID_VIEW_STATUS_BAR*和**標題**至*狀態列*。  
   
-2.  建立名為面板`Window`具有分割按鈕。 當使用者按一下分割按鈕時，快顯功能表就會顯示已定義在 Scribble 應用程式中的三個命令。  
+2.  建立名為面板*視窗*具有分割按鈕。 當使用者按一下分割按鈕時，快顯功能表就會顯示已定義在 Scribble 應用程式中的三個命令。  
   
     1.  從**工具箱**，拖曳**面板**至**首頁**類別目錄。 然後將拖曳**按鈕**面板。  
   
-    2.  按一下要修改其內容的面板。 變更**標題**至`Window`。  
+    2.  按一下要修改其內容的面板。 變更**標題**至*視窗*。  
   
-    3.  按一下按鈕。 變更**標題**至`Windows`，**金鑰**至`w`，**大型影像索引**至`1`，和**Split Mode**若要`False`。 然後按一下省略符號 (**...**) 旁邊**功能表項目**開啟**項目編輯器** 對話方塊。  
+    3.  按一下按鈕。 變更**標題**至*Windows*，**金鑰**至*w*，**大型影像索引**至*1*，和**Split Mode**至*False*。 然後按一下省略符號 (**...**) 旁邊**功能表項目**開啟**項目編輯器** 對話方塊。  
   
     4.  按一下**新增**三次，以新增三個按鈕。  
   
-    5.  按一下第一個按鈕，然後變更**標題**至`New Window`，和**識別碼**至`ID_WINDOW_NEW`。  
+    5.  按一下第一個按鈕，然後變更**標題**至*新視窗*，和**識別碼**至*ID_WINDOW_NEW*。  
   
-    6.  按一下第二個按鈕，然後變更**標題**至`Cascade`，和**識別碼**至`ID_WINDOW_CASCADE`。  
+    6.  按一下第二個按鈕，然後變更**標題**至*Cascade*，和**識別碼**至*ID_WINDOW_CASCADE*。  
   
-    7.  按一下第三個按鈕，然後變更**標題**至`Tile`，和**識別碼**至`ID_WINDOW_TILE_HORZ`。  
+    7.  按一下第三個按鈕，然後變更**標題**至*磚*，和**識別碼**至*ID_WINDOW_TILE_HORZ*。  
   
 3.  儲存變更，然後建置並執行應用程式。 **檢視**和**視窗**應該顯示面板。 按一下按鈕，以確認它們可以正常運作。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385387"
   
 1.  從**工具箱**，拖曳**面板**至**首頁**類別目錄。 拖放兩**按鈕**面板。  
   
-2.  按一下要修改其內容的面板。 變更**標題**至`Help`。  
+2.  按一下要修改其內容的面板。 變更**標題**至*協助*。  
   
-3.  按一下第一個按鈕。 變更**標題**至`Help Topics`，和**識別碼**至`ID_HELP_FINDER`。  
+3.  按一下第一個按鈕。 變更**標題**至*說明主題*，和**識別碼**至*ID_HELP_FINDER*。  
   
-4.  按一下第二個按鈕。 變更**標題**至`About Scribble...`，和**識別碼**至`ID_APP_ABOUT`。  
+4.  按一下第二個按鈕。 變更**標題**至*有關 Scribble...*，和**識別碼**至*ID_APP_ABOUT*。  
   
 5.  儲存變更，然後建置並執行應用程式。 A**協助**應該會顯示包含兩個功能區按鈕的面板。  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385387"
   
 1.  從**工具箱**，拖曳**面板**至**首頁**類別目錄。 然後將拖曳**核取方塊**和兩個**下拉式方塊**面板。  
   
-2.  按一下要修改其內容的面板。 變更**標題**至`Pen`。  
+2.  按一下要修改其內容的面板。 變更**標題**至*畫筆*。  
   
-3.  按一下核取方塊。 變更**標題**至`Use Thick`，和**識別碼**至`ID_PEN_THICK_OR_THIN`。  
+3.  按一下核取方塊。 變更**標題**至*使用粗*，和**識別碼**至*ID_PEN_THICK_OR_THIN*。  
   
-4.  按一下第一個下拉式方塊。 變更**標題**至`Thin Pen`，**識別碼**至`ID_PEN_THIN_WIDTH`，**文字**至`2`，**類型**至`Drop List`，和**資料**至`1;2;3;4;5;6;7;8;9;`。  
+4.  按一下第一個下拉式方塊。 變更**標題**至*精簡畫筆*，**識別碼**至*ID_PEN_THIN_WIDTH*，**文字**至*2*，**類型**至*下拉清單*，和**資料**至*1，則為 2; 3; 4; 5; 6; 7、 8、 9;*。  
   
-5.  按一下第二個下拉式方塊。 變更**標題**至`Thick Pen`，**識別碼**至`ID_PEN_THICK_WIDTH`，**文字**至`5`，**類型**至`Drop List`，和**資料**至`5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`。  
+5.  按一下第二個下拉式方塊。 變更**標題**至*粗畫筆*，**識別碼**至*ID_PEN_THICK_WIDTH*，**文字**至*5*，**類型**至*下拉清單*，和**資料**至*5、 6; 7、 8; 9; 10; 11; 12; 13; 14，則為 15; 16; 17; 18; 19、 20;*。  
   
 6.  新的下拉式方塊未對應到任何現有的功能表項目。 因此，您必須建立畫筆的每個選項的功能表項目。  
   
     1.  在**資源檢視**視窗中，開啟 IDR_SCRIBBTYPE 功能表資源。  
   
-    2.  按一下**畫筆**開啟 p**en**功能表。 然後按一下 **在這裡輸入**和型別`Thi&n Pen`。  
+    2.  按一下**畫筆**開啟 p**en**功能表。 然後按一下 **在這裡輸入**和型別*這個 & n 畫筆*。  
   
-    3.  以滑鼠右鍵按一下您剛才輸入開啟的文字**屬性**視窗，然後再變更 ID 屬性`ID_PEN_THIN_WIDTH`。  
+    3.  以滑鼠右鍵按一下您剛才輸入開啟的文字**屬性**視窗，然後再變更 ID 屬性*ID_PEN_THIN_WIDTH*。  
   
     4.  您也必須建立事件處理常式的每個畫筆功能表項目。 以滑鼠右鍵按一下**這個 & n 畫筆**您剛剛建立，然後按一下功能表項目**加入事件處理常式**。 **事件處理常式精靈**隨即出現。  
   
@@ -142,9 +142,9 @@ m_nThinWidth = atoi (pThinComboBox]-> [GetItem(nCurSel));
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>若要加入的色彩按鈕畫筆面板  
   
-1.  新增 [色彩] 按鈕之前，請為其建立功能表項目。 在**資源檢視**視窗中，開啟 IDR_SCRIBBTYPE 功能表資源。 按一下**畫筆**以開啟 [畫筆] 功能表的功能表項目。 然後按一下 **在這裡輸入**和型別`&Color`。 以滑鼠右鍵按一下您剛才輸入顯示的文字**屬性**視窗。 變更要識別碼`ID_PEN_COLOR`。  
+1.  新增 [色彩] 按鈕之前，請為其建立功能表項目。 在**資源檢視**視窗中，開啟 IDR_SCRIBBTYPE 功能表資源。 按一下**畫筆**以開啟 [畫筆] 功能表的功能表項目。 然後按一下 **在這裡輸入**和型別 *（& s) 色彩*。 以滑鼠右鍵按一下您剛才輸入顯示的文字**屬性**視窗。 變更要識別碼*ID_PEN_COLOR*。  
   
 2.  現在加入 [色彩] 按鈕。 從**工具箱**，拖曳**色彩按鈕**至**畫筆**面板。  
   
-3.  按一下色彩按鈕。 變更**標題**至`Color`，**識別碼**至`ID_PEN_COLOR`， **SimpleLook**至`True`，**大型影像索引**至`1`，和**Split Mode**至`False`。  
+3.  按一下色彩按鈕。 變更**標題**至*色彩*，**識別碼**至*ID_PEN_COLOR*， **SimpleLook**至*True*，**大型影像索引**至*1*，和**Split Mode**至*False*。  
   
 4.  儲存變更，然後建置並執行應用程式。 新的色彩按鈕應該顯示在**畫筆**面板。 不過，它不能因為它還沒有的事件處理常式。 接下來的步驟示範如何加入 [色彩] 按鈕的事件處理常式。  
   

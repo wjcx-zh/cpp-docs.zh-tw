@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9f7a66b60d70231628ded5dc096bad702bf088
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 135bb279daf4c000c025ac6f8fa51a6b023e2d1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355600"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952540"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 類別
 所有動畫物件的基底類別。  
@@ -149,10 +149,10 @@ virtual BOOL ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pStoryboard`  
+ *pStoryboard*  
  分鏡腳本指標。  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  False 這個方法會加入只在不相依於主要畫面格的轉換。  
   
 ### <a name="return-value"></a>傳回值  
@@ -175,13 +175,13 @@ CAnimationBaseObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
- `nObjectID`  
+ *nObjectID*  
  指定物件識別碼。  
   
- `dwUserData`  
+ *dwUserData*  
  使用者定義資料，可以與動畫物件相關聯，並稍後在執行階段擷取。  
   
 ### <a name="remarks"></a>備註  
@@ -195,7 +195,7 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bAutodestroy`  
+ *bAutodestroy*  
  指定是否自動終結轉換物件，或只從相關的清單中移除它們。  
   
 ### <a name="remarks"></a>備註  
@@ -209,7 +209,7 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pVariable`  
+ *pVariable*  
  動畫變數的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -251,10 +251,10 @@ virtual void EnableIntegerValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pController`  
+ *pController*  
  父控制器指標。  
   
- `bEnable`  
+ *bEnable*  
  指定是否要啟用或停用整數值已變更事件。  
   
 ### <a name="remarks"></a>備註  
@@ -270,10 +270,10 @@ virtual void EnableValueChangedEvent(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pController`  
+ *pController*  
  父控制器指標。  
   
- `bEnable`  
+ *bEnable*  
  指定是否要啟用或停用變更值的事件。  
   
 ### <a name="remarks"></a>備註  
@@ -289,7 +289,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lst`  
+ *lst*  
  必須填入動畫物件中包含的動畫變數的清單。  
   
 ### <a name="remarks"></a>備註  
@@ -390,7 +390,7 @@ void SetAutodestroyTransitions(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bValue`  
+ *bValue*  
  指定自動終結旗標。  
   
 ### <a name="remarks"></a>備註  
@@ -406,10 +406,10 @@ void SetID(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nObjectID`  
+ *nObjectID*  
  指定新的物件識別碼。  
   
- `nGroupID`  
+ *nGroupID*  
  指定新的群組識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -433,7 +433,7 @@ void SetUserData (DWORD dwUserData);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwUserData`  
+ *dwUserData*  
  指定自訂的資料。  
   
 ### <a name="remarks"></a>備註  

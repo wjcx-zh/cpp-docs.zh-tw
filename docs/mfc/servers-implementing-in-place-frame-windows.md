@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380860"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956423"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>伺服器：實作就地編輯框架視窗
 本文說明如果不使用應用程式精靈來建立您的伺服器應用程式，則必須實作自己的視覺化編輯伺服器應用程式的就地框架視窗。 除了遵循本文概述的程序，您可以使用現有的就地框架視窗類別從應用程式精靈產生應用程式或 Visual c + + 提供的範例。  
@@ -32,13 +32,13 @@ ms.locfileid: "33380860"
   
 1.  從 `COleIPFrameWnd` 衍生就地框架視窗類別。  
   
-    -   在類別的標頭檔中使用 `DECLARE_DYNCREATE` 巨集。  
+    -   在您的類別標頭檔中使用 DECLARE_DYNCREATE 巨集。  
   
-    -   在類別中實作 (.cpp) 檔中使用 `IMPLEMENT_DYNCREATE` 巨集。 如此可讓架構建立此類別物件。  
+    -   類別實作 (.cpp) 檔中使用 IMPLEMENT_DYNCREATE 巨集。 如此可讓架構建立此類別物件。  
   
 2.  宣告框架視窗類別中的 `COleResizeBar` 成員。 如果您要支援在伺服器應用程式中就地調整大小，就必須如此。  
   
-     宣告`OnCreate`訊息處理常式 (使用**屬性**視窗)，並呼叫**建立**如您`COleResizeBar`成員，如果您已定義它。  
+     宣告`OnCreate`訊息處理常式 (使用**屬性**視窗)，並呼叫`Create`如您`COleResizeBar`成員，如果您已定義它。  
   
 3.  如果您有工具列，請在框架視窗類別中宣告 `CToolBar` 成員。  
   

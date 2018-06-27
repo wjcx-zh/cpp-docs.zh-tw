@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355407"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954656"
 ---
 # <a name="afx-messages"></a>AFX 訊息
 MFC 中使用這些訊息。  
@@ -89,7 +89,7 @@ MFC 中使用這些訊息。
   
 ||||||  
 |-|-|-|-|-|  
-|訊息|描述|[輸入] `wParam`|`lParam` （所有參數都是 [in] 除非另有指明）。|傳回值|  
+|訊息|描述|[in]*wParam*|*lParam* （所有參數都是 [in] 除非另有指明）。|傳回值|  
 |AFX_WM_ACCGETOBJECT|未使用。|未使用。|不適用。|不適用。|  
 |AFX_WM_ACCGETSTATE|用於協助工具支援。 傳送此訊息可`CMFCPopupMenu`或`CMFCRibbonPanelMenu`擷取目前項目的狀態。|可能是功能表按鈕或分隔符號項目的索引。|未使用。|項目狀態。 如果索引是無效的則為-1 0，表示功能表按鈕沒有任何特殊的屬性。 否則，它是下列旗標的組合：<br /><br /> TBBS_DISABLED： 項目已停用<br /><br /> TBBS_CHECKED — 檢查項目<br /><br /> TBBS_BUTTON — 項目是標準按鈕<br /><br /> TBBS_PRESSED： 按鈕已按下<br /><br /> TBBS_INDETERMINATE： 未定義的狀態<br /><br /> TBBS_SEPARATOR-而不是功能表按鈕，其他功能表項目之間的分隔的這個項目表單|  
 |AFX_WM_CHANGE_ACTIVE_TAB|架構會傳送此訊息可調整大小的控制列控制項。 處理此訊息，以接收來自通知`CMFCTabCtrl`物件當使用者變更作用中的索引標籤。|索引標籤的索引。|未使用。|為非零。|  
@@ -131,7 +131,7 @@ MFC 中使用這些訊息。
 |AFX_WM_UPDATETOOLTIPS|傳送至所有工具提示的擁有者以指出其工具提示控制項應重新建立。|應該處理此訊息的控制項類型。 請參閱稍後本主題的可能值的清單的資料表。|未使用。|未使用。|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` 將此訊息傳送至父框架中，當使用者按一下**協助**按鈕，或按一下 輸入說明模式**協助**標題按鈕或 F1 鍵。|未使用。|執行個體的指標`CMFCWindowsManagerDialog`。|未使用。|  
   
- 下表顯示的低序位文字值`lParam`AFX_WM_HSCROLL 方法的參數：  
+ 下表顯示的低序位文字值*lParam* AFX_WM_HSCROLL 方法的參數：  
   
 |||  
 |-|-|  
@@ -147,9 +147,9 @@ MFC 中使用這些訊息。
 |SB_THUMBTRACK|使用者正在拖曳捲軸方塊。 使用這個值，直到使用者放開滑鼠按鈕 AFX_WM_ON_HSCROLL 訊息會重複傳送。 高序位文字指出已拖曳捲動方塊的位置。|  
   
 > [!NOTE]
->  高序位字組的`lParam`SB_THUMBPOSITION 或 SB_THUMBTRACK 低序位字組時，參數會指定目前捲動方塊的位置; 否則不會使用這個字。  
+>  高序位字組的*lParam* SB_THUMBPOSITION 或 SB_THUMBTRACK 低序位字組時，參數會指定目前捲動方塊的位置; 否則不會使用這個字。  
   
- 下表列出的旗標值`lParam`AFX_WM_UPDATETOOLTIPS 訊息參數：  
+ 下表列出的旗標值*lParam* AFX_WM_UPDATETOOLTIPS 訊息參數：  
   
 |||  
 |-|-|  

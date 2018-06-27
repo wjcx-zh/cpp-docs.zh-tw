@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355795"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955085"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 類別
 實作基本 Interpolator。  
@@ -116,10 +116,10 @@ CCustomInterpolator(
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
- `finalValue`  
+ *finalValue*  
   
 ### <a name="remarks"></a>備註  
  您可以使用 CCustomInterpolator::Init 初始化持續時間和更新版本中的程式碼的最終值。  
@@ -135,13 +135,13 @@ virtual BOOL GetDependencies(
 ```  
   
 ### <a name="parameters"></a>參數  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  輸出。 Interpolator 的起始值而定的各個層面傳遞給 SetInitialValueAndVelocity。  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  輸出。 Interpolator 的初始速度而定的部分傳遞至 SetInitialValueAndVelocity。  
   
- `durationDependencies`  
+ *durationDependencies*  
  輸出。 Interpolator 的持續時間而定的部分傳遞至 SetDuration。  
   
 ### <a name="return-value"></a>傳回值  
@@ -155,7 +155,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  輸出。 轉換，以秒為單位的持續時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -169,7 +169,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>參數  
- `value`  
+ *值*  
  輸出。 變數在轉換結束最後的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -185,10 +185,10 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
- `finalValue`  
+ *finalValue*  
  變數在轉換結束最後的值。  
   
 ##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
@@ -201,7 +201,7 @@ virtual BOOL InterpolateValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- `value`  
+ *值*  
  輸出。 插補的值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -217,7 +217,7 @@ virtual BOOL InterpolateVelocity(
 ```  
   
 ### <a name="parameters"></a>參數  
- `velocity`  
+ *速度*  
  輸出。 在位移變數的速度。  
   
 ### <a name="return-value"></a>傳回值  
@@ -273,7 +273,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -289,10 +289,10 @@ virtual BOOL SetInitialValueAndVelocity(
 ```  
   
 ### <a name="parameters"></a>參數  
- `initialValue`  
+ *initialValue*  
  在開始轉換的變數的值。  
   
- `initialVelocity`  
+ *initialVelocity*  
  在開始轉換的變數的速度。  
   
 ### <a name="return-value"></a>傳回值  

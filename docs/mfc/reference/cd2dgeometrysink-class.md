@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355281"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952368"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 類別
 ID2D1GeometrySink 包裝函式。  
@@ -125,7 +125,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `arc`  
+ *弧線*  
  此圖中加入的圓弧線段  
   
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
@@ -136,7 +136,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bezier`  
+ *貝茲*  
  結構描述的控點和結束點，若要加入的貝茲曲線。  
   
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
@@ -149,7 +149,7 @@ void AddBeziers(
 ```  
   
 ### <a name="parameters"></a>參數  
- `beziers`  
+ *「 環圈 」*  
  描述建立貝茲曲線的貝茲區段陣列。 從 geometry 接收的目前位置 （結束點繪製的最後一個區段或 BeginFigure 所指定的位置） 繪製曲線到陣列中的第一個貝茲區段的結束點。 如果陣列包含額外的貝茲區段，每個後續的貝茲區段會使用上述的貝茲區段的結束點做為其起始點。  
   
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
@@ -160,7 +160,7 @@ void AddLine(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>參數  
- `point`  
+ *點*  
  若要繪製線條結束點。  
   
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
@@ -173,7 +173,7 @@ void AddLines(
 ```  
   
 ### <a name="parameters"></a>參數  
- `points`  
+ *點*  
  描述要繪製線條的一或多個點陣列。 線條會繪製幾何接收的目前點 （結束點繪製的最後一個區段或 BeginFigure 所指定的位置） 從陣列中的第一個點。 如果陣列包含額外的點，線條會繪製的第一個點從陣列中從第三個點，等第二個點的第二個點。 陣列的一連串的繪製線條的端點。  
   
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
@@ -184,7 +184,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bezier`  
+ *貝茲*  
  描述控制項控點和結束點的二次方貝茲曲線，若要加入的結構。  
   
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
@@ -197,7 +197,7 @@ void AddQuadraticBeziers(
 ```  
   
 ### <a name="parameters"></a>參數  
- `beziers`  
+ *「 環圈 」*  
  陣列的一連串的二次方貝茲區段。  
   
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
@@ -210,10 +210,10 @@ void BeginFigure(
 ```  
   
 ### <a name="parameters"></a>參數  
- `startPoint`  
+ *startPoint*  
  要開始新的圖形點。  
   
- `figureBegin`  
+ *figureBegin*  
  新的圖是否應中空或填滿。  
   
 ##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
@@ -224,7 +224,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pathGeometry`  
+ *pathGeometry*  
  CD2DPathGeometry 現有的物件。  
   
 ##  <a name="close"></a>  CD2DGeometrySink::Close  
@@ -245,7 +245,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `figureEnd`  
+ *figureEnd*  
  值，指出是否已關閉目前的圖形。 如果已關閉此圖中，在目前點和 BeginFigure 所指定的開始點之間繪製線條。  
   
 ##  <a name="get"></a>  CD2DGeometrySink::Get  
@@ -293,7 +293,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
 ### <a name="parameters"></a>參數  
- `fillMode`  
+ *fillMode*  
  用來判斷指定的點是否為幾何之一部分的方法。  
   
 ##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
@@ -304,7 +304,7 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
 ### <a name="parameters"></a>參數  
- `vertexFlags`  
+ *vertexFlags*  
  要套用至新的區段加入至這個幾何接收器筆劃和聯結選項。  
   
 ## <a name="see-also"></a>另請參閱  

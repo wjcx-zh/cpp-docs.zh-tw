@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 765f88ef021b333a563fd92f7e9c7806960902e1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356008"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956979"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 類別
 提供可在 ActiveX 控制項 (先前稱為 OLE 控制項) 中使用非同步 Moniker 的功能。  
@@ -121,7 +121,7 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>備註  
- 它不會建立`IBindHost`介面。 `IBindHost` 您提供時，才會使用**開啟**成員函式。  
+ 它不會建立`IBindHost`介面。 `IBindHost` 您提供時，才會使用`Open`成員函式。  
   
  如需說明的`IBindHost`介面，請參閱 Windows SDK。  
   
@@ -143,16 +143,16 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pUnkControlling`  
- 控制未知的指標 (外部**IUnknown**) 或**NULL**如果不使用彙總。  
+ *pUnkControlling*  
+ 控制未知的指標 (外部`IUnknown`) 或**NULL**如果不使用彙總。  
   
 ### <a name="return-value"></a>傳回值  
- 如果`pUnkControlling`不**NULL**，函式會傳回內部指標**IUnknown**上新的 COM 物件支援`IBindStatusCallback`。 如果`pUnkControlling`是**NULL**，此函數會傳回指標**IUnknown**上新的 COM 物件支援`IBindStatusCallback`。  
+ 如果*pUnkControlling*不**NULL**，函式會傳回內部指標`IUnknown`上新的 COM 物件支援`IBindStatusCallback`。 如果`pUnkControlling`是**NULL**，此函數會傳回指標`IUnknown`上新的 COM 物件支援`IBindStatusCallback`。  
   
 ### <a name="remarks"></a>備註  
- `CAsyncMonikerFile` 需要實作的 COM 物件`IBindStatusCallback`。 MFC 實作這類物件，而且彙總。 您可以覆寫`CreateBindStatusCallback`回到您自己的 COM 物件。 您的 COM 物件可以藉由呼叫項目彙總 MFC 實作`CreateBindStatusCallback`與 COM 物件的控制未知。 使用實作的 COM 物件`CCmdTarget`COM 支援可以擷取控制未知使用**CCmdTarget::GetControllingUnknown**。  
+ `CAsyncMonikerFile` 需要實作的 COM 物件`IBindStatusCallback`。 MFC 實作這類物件，而且彙總。 您可以覆寫`CreateBindStatusCallback`回到您自己的 COM 物件。 您的 COM 物件可以藉由呼叫項目彙總 MFC 實作`CreateBindStatusCallback`與 COM 物件的控制未知。 使用實作的 COM 物件`CCmdTarget`COM 支援可以擷取控制未知使用`CCmdTarget::GetControllingUnknown`。  
   
- 或者，您的 COM 物件可以委派給 MFC 實作藉由呼叫**CreateBindStatusCallback (NULL)**。  
+ 或者，您的 COM 物件可以委派給 MFC 實作藉由呼叫`CreateBindStatusCallback( NULL )`。  
   
  [CAsyncMonikerFile::Open](#open)呼叫`CreateBindStatusCallback`。  
   
@@ -166,7 +166,7 @@ virtual DWORD GetBindInfo() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 擷取的設定**IBindStatusCallBack**。 如需說明的`IBindStatusCallback`介面，請參閱 Windows SDK。  
+ 擷取的設定`IBindStatusCallBack`。 如需說明的`IBindStatusCallback`介面，請參閱 Windows SDK。  
   
 ### <a name="remarks"></a>備註  
  預設實作會設定為非同步，使用儲存媒體 （串流），並且將資料推送模型繫結。 如果您想要變更繫結的行為，請覆寫這個函式。  
@@ -184,7 +184,7 @@ IBinding* GetBinding() const;
  指標`IBinding`提供非同步傳輸開始時的介面。 傳回**NULL**如果基於任何理由傳輸無法以非同步方式進行。  
   
 ### <a name="remarks"></a>備註  
- 這可讓您控制的資料傳輸程序，透過`IBinding`介面，例如，與**IBinding::Abort**， **IBinding::Pause**，和**IBinding::Resume**.  
+ 這可讓您控制的資料傳輸程序，透過`IBinding`介面，例如，與`IBinding::Abort`， `IBinding::Pause`，和`IBinding::Resume`。  
   
  如需說明的`IBinding`介面，請參閱 Windows SDK。  
   
@@ -219,7 +219,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwSize`  
+ *dwSize*  
  累積數量 （以位元組為單位） 的繫結起可用的資料。 可以是零，表示的資料量不相關的作業，或沒有特定的數量變得可用。  
   
  *bscfFlag*  
@@ -259,47 +259,47 @@ virtual void OnProgress(
 ```  
   
 ### <a name="parameters"></a>參數  
- `ulProgress`  
- 指出目前的繫結作業中所示的預期最大值的相對進度`ulProgressMax`。  
+ *ulProgress*  
+ 指出目前的繫結作業中所示的預期最大值的相對進度*ulProgressMax*。  
   
- `ulProgressMax`  
- 表示預期的最大值的`ulProgress`呼叫期間`OnProgress`這項作業。  
+ *ulProgressMax*  
+ 表示預期的最大值的*ulProgress*呼叫期間`OnProgress`這項作業。  
   
- `ulStatusCode`  
+ *ulStatusCode*  
  提供繫結作業的進度相關的其他的資訊。 有效的值取自`BINDSTATUS`列舉型別。 可能的值，請參閱 < 備註 >。  
   
- `szStatusText`  
- 目前的進度，根據的值的相關資訊`ulStatusCode`。 可能的值，請參閱 < 備註 >。  
+ *szStatusText*  
+ 目前的進度，根據的值的相關資訊*ulStatusCode*。 可能的值，請參閱 < 備註 >。  
   
 ### <a name="remarks"></a>備註  
- 可能值`ulStatusCode`(和`szStatusText`每個值) 是：  
+ 可能值*ulStatusCode* (和*szStatusText*每個值) 是：  
   
  **BINDSTATUS_FINDINGRESOURCE**  
- 繫結作業正在尋找用來保存物件或繫結至儲存體資源。 `szStatusText`提供要搜尋的資源的顯示名稱 (例如"www.microsoft.com")。  
+ 繫結作業正在尋找用來保存物件或繫結至儲存體資源。 *SzStatusText*提供要搜尋的資源的顯示名稱 (例如"www.microsoft.com")。  
   
  **BINDSTATUS_CONNECTING**  
- 繫結作業正在連接到用來保存物件或繫結至儲存體資源。 `szStatusText`提供資源 （例如，IP 位址） 連接到的顯示名稱。  
+ 繫結作業正在連接到用來保存物件或繫結至儲存體資源。 *SzStatusText*提供資源 （例如，IP 位址） 連接到的顯示名稱。  
   
  **BINDSTATUS_SENDINGREQUEST**  
- 繫結作業要求的物件或繫結到的存放裝置。 `szStatusText`提供物件 （例如，檔案名稱） 的顯示名稱。  
+ 繫結作業要求的物件或繫結到的存放裝置。 *SzStatusText*提供物件 （例如，檔案名稱） 的顯示名稱。  
   
  **BINDSTATUS_REDIRECTING**  
- 繫結作業已經重新導向至不同的資料位置。 `szStatusText`提供新的資料位置的顯示名稱。  
+ 繫結作業已經重新導向至不同的資料位置。 *SzStatusText*提供新的資料位置的顯示名稱。  
   
  **BINDSTATUS_USINGCACHEDCOPY**  
- 繫結作業正在擷取快取副本的要求的物件或存放裝置。 `szStatusText`是**NULL**。  
+ 繫結作業正在擷取快取副本的要求的物件或存放裝置。 *SzStatusText*是**NULL**。  
   
  **BINDSTATUS_BEGINDOWNLOADDATA**  
- 繫結作業已經開始接收物件或繫結至儲存體。 `szStatusText`提供的資料位置的顯示名稱。  
+ 繫結作業已經開始接收物件或繫結至儲存體。 *SzStatusText*提供的資料位置的顯示名稱。  
   
  **BINDSTATUS_DOWNLOADINGDATA**  
- 繫結作業會繼續接收物件或繫結至儲存體。 `szStatusText`提供的資料位置的顯示名稱。  
+ 繫結作業會繼續接收物件或繫結至儲存體。 *SzStatusText*提供的資料位置的顯示名稱。  
   
  **BINDSTATUS_ENDDOWNLOADDATA**  
- 繫結作業已完成接收物件或繫結至儲存體。 `szStatusText`提供的資料位置的顯示名稱。  
+ 繫結作業已完成接收物件或繫結至儲存體。 *SzStatusText*提供的資料位置的顯示名稱。  
   
  **BINDSTATUS_CLASSIDAVAILABLE**  
- 正繫結至物件的執行個體是只建立。 `szStatusText`提供可讓用戶端有機會取消繫結作業中，視字串格式中的新物件的 CLSID。  
+ 正繫結至物件的執行個體是只建立。 *SzStatusText*提供可讓用戶端有機會取消繫結作業中，視字串格式中的新物件的 CLSID。  
   
 ##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  覆寫您繫結啟動時執行動作的衍生類別中的這個函式。  
@@ -319,7 +319,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hresult`  
+ *hresult*  
  `HRESULT`也就是錯誤或警告的值。  
   
  *szErrort*  
@@ -374,23 +374,23 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszURL`  
+ *lpszURL*  
  若要以非同步方式開啟檔案的指標。 檔案可以是任何有效的 URL 或檔案名稱。  
   
- `pError`  
+ *pError*  
  檔案例外狀況指標。 發生錯誤時，它就會設定為可能的原因。  
   
- `pMoniker`  
- 非同步 moniker 介面的指標`IMoniker`，是文件本身的 moniker 時，您可以使用擷取的組合中的精確 moniker **IOleClientSite::GetMoniker (** *OLEWHICHMK_容器* **)**，和建立路徑名稱的 moniker。 控制項要繫結，就可以使用這個 moniker，但這不是控制項應該儲存的 moniker。  
+ *pMoniker*  
+ 非同步 moniker 介面的指標`IMoniker`，是文件本身的 moniker 時，您可以使用擷取的組合中的精確 moniker `IOleClientSite::GetMoniker(OLEWHICHMK_CONTAINER)`，和建立路徑名稱的 moniker。 控制項要繫結，就可以使用這個 moniker，但這不是控制項應該儲存的 moniker。  
   
  *pBindHost*  
- 指標`IBindHost`將用於建立 moniker 從可能的相對路徑名稱的介面。 如果繫結主機無效或未提供 moniker，呼叫就會預設為**開啟 (** `lpszFileName` **，**`pError`**)**。 如需說明的`IBindHost`介面，請參閱 Windows SDK。  
+ 指標`IBindHost`將用於建立 moniker 從可能的相對路徑名稱的介面。 如果繫結主機無效或未提供 moniker，呼叫就會預設為`Open(lpszFileName,pError)`。 如需說明的`IBindHost`介面，請參閱 Windows SDK。  
   
- `pServiceProvider`  
- 指標`IServiceProvider`介面。 如果服務提供者無效或無法提供的服務`IBindHost`，呼叫預設值為**開啟 (** `lpszFileName` **，**`pError`**)**。  
+ *pServiceProvider*  
+ 指標`IServiceProvider`介面。 如果服務提供者無效或無法提供的服務`IBindHost`，呼叫預設值為`Open(lpszFileName,pError)`。  
   
  *pUnknown*  
- 指標**IUnknown**介面。 如果`IServiceProvider`找到時，此公式會查詢如`IBindHost`。 如果服務提供者無效或無法提供的服務`IBindHost`，呼叫預設值為**開啟 (** `lpszFileName` **，**`pError`**)**。  
+ 指標`IUnknown`介面。 如果`IServiceProvider`找到時，此公式會查詢如`IBindHost`。 如果服務提供者無效或無法提供的服務`IBindHost`，呼叫預設值為`Open(lpszFileName,pError)`。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功; 開啟檔案，則為非零否則便是 0。  
@@ -398,7 +398,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>備註  
  此呼叫會起始繫結程序。  
   
- 您可以使用 URL 或檔案名稱`lpszURL`參數。 例如:   
+ 您可以使用 URL 或檔案名稱*lpszURL*參數。 例如:   
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   

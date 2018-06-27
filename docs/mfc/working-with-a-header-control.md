@@ -15,15 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226b69c9521016a2d5abbbdb7225cbbec972db3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df916cddacd5a435ef5cb130f9f6f5b6a25d2d4c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383028"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952719"
 ---
 # <a name="working-with-a-header-control"></a>使用標題控制項
-若要使用的標頭控制項的簡易方式 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 是搭配清單控制項，請參閱 <<c4> [ 使用 CListCtrl](../mfc/using-clistctrl.md)稍後在本主題系列中。 您也可以單獨使用時，使用標題控制項。 MFC 呼叫**InitCommonControls**您。 主要工作如下：  
+若要使用的標頭控制項的簡易方式 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 是搭配清單控制項，請參閱 <<c4> [ 使用 CListCtrl](../mfc/using-clistctrl.md)稍後在本主題系列中。 您也可以單獨使用時，使用標題控制項。 MFC 呼叫`InitCommonControls`您。 主要工作如下：  
   
 -   [建立標題控制項](../mfc/creating-the-header-control.md)  
   

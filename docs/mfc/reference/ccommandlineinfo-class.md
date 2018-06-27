@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357011"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952381"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 類別
 協助應用程式啟動時剖析命令列。  
@@ -270,17 +270,17 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pszParam`  
+ *pszParam*  
  參數的旗標。  
   
  *bFlag*  
- 指出是否`pszParam`參數或是的旗標。  
+ 指出是否*pszParam*參數或是的旗標。  
   
- `bLast`  
+ *輻射性傳播*  
  指出這是最後一個參數或在命令列上的旗標。  
   
 ### <a name="remarks"></a>備註  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼叫`ParseParam`一次針對每個參數或在命令列上的旗標，傳遞的引數`pszParam`。 如果參數的第一個字元是 ' **-**' **/**'，它也會移除和*bFlag*設`TRUE`。 剖析的最後一個參數時`bLast`設`TRUE`。  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)呼叫`ParseParam`一次針對每個參數或在命令列上的旗標，傳遞的引數*pszParam*。 如果參數的第一個字元是 ' **-**' **/**'，它也會移除和*bFlag*設`TRUE`。 剖析的最後一個參數時*輻射性傳播*設`TRUE`。  
   
  此函式的預設實作會辨識下列旗標： `/p`， `/pt`， `/dde`， `/Automation`，和`/Embedding`下表, 所示：  
   

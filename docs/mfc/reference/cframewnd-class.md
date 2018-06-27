@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35a3fb35115e1fd86a2ccf168e048a697a17dc01
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0be95b0092db315dd3af7086770411b93eb2ae23
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378501"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955208"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 類別
 提供 Windows 單一文件介面 (SDI) 重疊或快顯框架視窗的功能，以及管理視窗的成員。  
@@ -152,7 +152,7 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::EnableDocking](#enabledocking)|可讓要停駐控制列。|  
 |[CFrameWnd::EndModalState](#endmodalstate)|結束框架視窗的強制回應狀態。 可讓所有停用 windows `BeginModalState`。|  
 |[CFrameWnd::FloatControlBar](#floatcontrolbar)|浮動控制列。|  
-|[CFrameWnd::GetActiveDocument](#getactivedocument)|傳回使用中**CDocument**物件。|  
+|[CFrameWnd::GetActiveDocument](#getactivedocument)|傳回使用中`CDocument`物件。|  
 |[CFrameWnd::GetActiveFrame](#getactiveframe)|傳回使用中`CFrameWnd`物件。|  
 |[CFrameWnd::GetActiveView](#getactiveview)|傳回使用中`CView`物件。|  
 |[CFrameWnd::GetControlBar](#getcontrolbar)|擷取控制列。|  
@@ -215,11 +215,11 @@ class CFrameWnd : public CWnd
   
 -   間接建構使用文件範本。  
   
- 您可以呼叫之前**建立**或`LoadFrame`，您必須建構使用 c + + 堆積上的框架視窗物件**新**運算子。 然後再呼叫**建立**，您也可以註冊視窗類別[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全域函式，可設定的畫面格的圖示和類別樣式。  
+ 您可以呼叫之前`Create`或`LoadFrame`，您必須建構使用 c + + 堆積上的框架視窗物件**新**運算子。 然後再呼叫`Create`，您也可以註冊視窗類別[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全域函式，可設定的畫面格的圖示和類別樣式。  
   
- 使用**建立**傳遞畫面格的建立參數為立即引數的成員函式。  
+ 使用`Create`傳遞畫面格的建立參數為立即引數的成員函式。  
   
- `LoadFrame` 需要較少的引數比**建立**，並改為從資源，包括畫面格的標題、 圖示、 快速鍵對應表，以及功能表中擷取大部分其預設值。 若要可供`LoadFrame`，所有這些資源必須具有相同的資源識別碼 (例如， **IDR_MAINFRAME**)。  
+ `LoadFrame` 需要較少的引數比`Create`，並改為從資源，包括畫面格的標題、 圖示、 快速鍵對應表，以及功能表中擷取大部分其預設值。 若要可供`LoadFrame`，所有這些資源必須具有相同的資源識別碼 (例如， **IDR_MAINFRAME**)。  
   
  當`CFrameWnd`物件包含檢視表和文件時，會間接建立而不是直接由程式設計人員，架構。 `CDocTemplate`物件協調框架的建立、 包含檢視中，建立和檢視，以適當的文件的連接。 參數的`CDocTemplate`建構函式指定`CRuntimeClass`三個類別的涉及 （文件、 框架和檢視）。 A`CRuntimeClass`物件可由架構來動態建立新的框架時使用者所指定 （例如，藉由使用新檔案 命令或多個文件介面 (MDI) 視窗中新的命令）。  
   
@@ -271,7 +271,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCmdShow`  
+ *nCmdShow*  
  指定要傳遞給參數[CWnd::ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)。 根據預設，框架會顯示，並正確地還原。  
   
 ### <a name="remarks"></a>備註  
@@ -279,7 +279,7 @@ virtual void ActivateFrame(int nCmdShow = -1);
   
  預設實作會啟用框架並將它帶到疊置順序的頂端和，如有必要，執行相同的步驟，應用程式的主框架視窗。  
   
- 覆寫此成員函式，若要變更啟動畫面格的方式。 例如，您可以強制要最大化的 MDI 子視窗。 新增適當的功能，然後呼叫其明確的基底類別版本`nCmdShow`。  
+ 覆寫此成員函式，若要變更啟動畫面格的方式。 例如，您可以強制要最大化的 MDI 子視窗。 新增適當的功能，然後呼叫其明確的基底類別版本*nCmdShow*。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]  
@@ -317,37 +317,37 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszClassName`  
+ *lpszClassName*  
  指向以 null 結束的字元字串，Windows 類別命名。 類別名稱可以是任何名稱登錄與`AfxRegisterWndClass`全域函式或**RegisterClass** Windows 函式。 如果**NULL**，會使用預先定義的預設`CFrameWnd`屬性。  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  指向以 null 結束的字元字串，表示視窗名稱。 做為標題列的文字。  
   
- `dwStyle`  
+ *dwStyle*  
  指定視窗[樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)屬性。 包含**FWS_ADDTOTITLE**樣式，如果您想要自動顯示在視窗中表示的文件名稱的標題列。  
   
- `rect`  
- 指定的大小和視窗的位置。 `rectDefault`值，可讓 Windows，指定新的視窗位置與大小。  
+ *rect*  
+ 指定的大小和視窗的位置。 *RectDefault*值，可讓 Windows，指定新的視窗位置與大小。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指定此框架視窗的父視窗。 這個參數應該是**NULL**的最上層框架視窗。  
   
  *lpszMenuName*  
  識別功能表資源，以用於視窗的名稱。 使用**MAKEINTRESOURCE**如果的功能表還包含整數識別碼，而非字串。 這個參數可以是**NULL**。  
   
- `dwExStyle`  
+ *dwExStyle*  
  指定延伸的視窗[樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)屬性。  
   
- `pContext`  
+ *pContext*  
  指定指向[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)結構。 這個參數可以是**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  如果初始化成功，則為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 建構`CFrameWnd`兩個步驟中的物件。 首先，叫用的建構函式，建構`CFrameWnd`物件，然後再呼叫**建立**，建立的 Windows 框架視窗，並將它附加至`CFrameWnd`物件。 **建立**初始化視窗的類別名稱和視窗名稱，並註冊其樣式、 父系及相關的功能表的預設值。  
+ 建構`CFrameWnd`兩個步驟中的物件。 首先，叫用的建構函式，建構`CFrameWnd`物件，然後再呼叫`Create`，建立的 Windows 框架視窗，並將它附加至`CFrameWnd`物件。 `Create` 初始化視窗的類別名稱和視窗名稱，並註冊其樣式、 父系及相關的功能表的預設值。  
   
- 使用`LoadFrame`而**建立**載入框架視窗中的資源，而不是指定其引數。  
+ 使用`LoadFrame`而不是`Create`載入框架視窗中的資源，而不是指定其引數。  
   
 ##  <a name="createview"></a>  CFrameWnd::CreateView  
  呼叫`CreateView`建立檢視，在範圍內。  
@@ -359,10 +359,10 @@ CWnd* CreateView(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pContext`  
+ *pContext*  
  指定檢視和文件的類型。  
   
- `nID`  
+ *nID*  
  檢視的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -382,15 +382,15 @@ void DockControlBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBar`  
+ *pBar*  
  指向要停駐控制列。  
   
- `nDockBarID`  
+ *nDockBarID*  
  決定哪些邊時應考量的停駐在框架視窗。 它可以是 0，或其中一個或多個項目：  
   
 - `AFX_IDW_DOCKBAR_TOP` 停駐在框架視窗的頂端。  
   
-- **AFX_IDW_DOCKBAR_BOTTOM**固定至框架視窗的底部。  
+- `AFX_IDW_DOCKBAR_BOTTOM` 停駐在框架視窗的底部。  
   
 - `AFX_IDW_DOCKBAR_LEFT` 停駐在框架視窗的左半部。  
   
@@ -398,11 +398,11 @@ void DockControlBar(
   
  如果為 0，則可以停駐控制列啟用停駐目的地框架視窗中的任一側。  
   
- `lpRect`  
+ *lpRect*  
  判斷在螢幕座標，其中將目的地框架視窗中非工作區停駐控制列。  
   
 ### <a name="remarks"></a>備註  
- 同時呼叫中指定的框架視窗的側邊的其中一個會停駐控制列[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)和[CFrameWnd::EnableDocking](#enabledocking)。 選擇的一端由`nDockBarID`。  
+ 同時呼叫中指定的框架視窗的側邊的其中一個會停駐控制列[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)和[CFrameWnd::EnableDocking](#enabledocking)。 選擇的側邊由*nDockBarID*。  
   
 ##  <a name="enabledocking"></a>  CFrameWnd::EnableDocking  
  呼叫此函式可啟用在框架視窗中的可停駐控制列。  
@@ -412,7 +412,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwDockStyle`  
+ *dwDockStyle*  
  指定的框架視窗哪一邊可以做為停駐控制列的網站。 它可以是下列一或多個項目：  
   
 - `CBRS_ALIGN_TOP` 可讓用戶端區域頂端停駐。  
@@ -452,13 +452,13 @@ void FloatControlBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBar`  
+ *pBar*  
  指向要浮動控制列。  
   
- `point`  
+ *點*  
  位置，在螢幕座標中放置控制列的左上的角。  
   
- `dwStyle`  
+ *dwStyle*  
  指定是否要在其新的框架視窗水平或垂直對齊控制列。 它可以是下列其中一項動作：  
   
 - `CBRS_ALIGN_TOP` 將垂直導向控制列。  
@@ -510,7 +510,7 @@ CView* GetActiveView() const;
  目前的指標[CView](../../mfc/reference/cview-class.md)。 如果沒有目前的檢視，會傳回**NULL**。  
   
 ### <a name="remarks"></a>備註  
- 此函數會傳回**NULL** MDI 主框架視窗呼叫時 ( `CMDIFrameWnd`)。 在 MDI 應用程式，MDI 主框架視窗沒有與其相關聯的檢視。 相反地，每個個別的子視窗 ( `CMDIChildWnd`) 有一或多個相關聯的檢視。 可取得 MDI 應用程式中使用中的檢視，可以先尋找作用中的 MDI 子視窗再尋找該子視窗的 使用中的檢視。 可以找到現用 MDI 子視窗呼叫函式`MDIGetActive`或**GetActiveFrame**如下列所示：  
+ 此函數會傳回**NULL** MDI 主框架視窗呼叫時 ( `CMDIFrameWnd`)。 在 MDI 應用程式，MDI 主框架視窗沒有與其相關聯的檢視。 相反地，每個個別的子視窗 ( `CMDIChildWnd`) 有一或多個相關聯的檢視。 可取得 MDI 應用程式中使用中的檢視，可以先尋找作用中的 MDI 子視窗再尋找該子視窗的 使用中的檢視。 可以找到現用 MDI 子視窗呼叫函式`MDIGetActive`或`GetActiveFrame`如下列所示：  
   
  [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]  
   
@@ -522,14 +522,14 @@ CControlBar* GetControlBar(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  控制列識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  控制列識別碼相關聯的指標  
   
 ### <a name="remarks"></a>備註  
- `nID`參數是指傳遞給唯一識別碼**建立**控制列的方法。 如需有關控制列的詳細資訊，請參閱標題為主題[控制列](../../mfc/control-bars.md)。  
+ *NID*參數是指傳遞給唯一識別碼`Create`控制列的方法。 如需有關控制列的詳細資訊，請參閱標題為主題[控制列](../../mfc/control-bars.md)。  
   
  `GetControlBar` 將傳回控制列，即使它浮動窗格，而且不是目前子視窗的框架。  
   
@@ -541,7 +541,7 @@ void GetDockState(CDockState& state) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `state`  
+ *state*  
  包含傳回時的框架視窗的控制列的目前狀態。  
   
 ### <a name="remarks"></a>備註  
@@ -603,14 +603,14 @@ virtual void GetMessageString(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  資源所需的訊息識別碼。  
   
- `rMessage`  
+ *rMessage*  
  `CString` 要放置訊息物件。  
   
 ### <a name="remarks"></a>備註  
- 預設實作只會載入所指定的字串`nID`從資源檔。 在狀態列中的訊息字串需要更新時，此函式是由架構呼叫。  
+ 預設實作只會載入所指定的字串*nID*從資源檔。 在狀態列中的訊息字串需要更新時，此函式是由架構呼叫。  
   
 ##  <a name="gettitle"></a>  CFrameWnd::GetTitle  
  擷取視窗物件的標題。  
@@ -632,16 +632,16 @@ void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDoc`  
+ *pDoc*  
  指向文件框架視窗是相關聯。 可以是**NULL**。  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  如果**TRUE**，表示框架都應該變成可見且作用中。 如果**FALSE**，沒有下階都已成為可見。  
   
 ### <a name="remarks"></a>備註  
  這可讓所有的檢視以接收該框架視窗中其`OnInitialUpdate`呼叫。  
   
- 此外，如果有不是先前作用中的檢視，框架視窗的主要檢視變成使用中。 主要的檢視是檢視的子識別碼**AFX_IDW_PANE_FIRST**。 最後，框架視窗也會看到如果`bMakeVisible`為非零值。 如果`bMakeVisible`是 0，則目前的焦點和框架視窗的可見狀態會保持不變。 您不需要使用新檔案並開啟舊檔架構的實作時，呼叫此函式。  
+ 此外，如果有不是先前作用中的檢視，框架視窗的主要檢視變成使用中。 主要的檢視是檢視的子識別碼**AFX_IDW_PANE_FIRST**。 最後，框架視窗也會看到如果*bMakeVisible*為非零值。 如果*bMakeVisible*是 0，則目前的焦點和框架視窗的可見狀態會保持不變。 您不需要使用新檔案並開啟舊檔架構的實作時，呼叫此函式。  
   
 ##  <a name="inmodalstate"></a>  CFrameWnd::InModalState  
  呼叫此成員函式，來檢查框架視窗是否為獨佔式或非強制回應。  
@@ -671,7 +671,7 @@ BOOL LoadAccelTable(LPCTSTR lpszResourceName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszResourceName`  
+ *lpszResourceName*  
  識別快速鍵資源的名稱。 使用**MAKEINTRESOURCE**如果資源識別出具有整數識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -692,7 +692,7 @@ void LoadBarState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszProfileName`  
+ *lpszProfileName*  
  初始設定 (INI) 檔案中的區段或儲存狀態資訊的 Windows 登錄中的索引鍵的名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -712,26 +712,26 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDResource`  
+ *nIDResource*  
  框架視窗相關聯的共用資源的識別碼。  
   
  *dwDefaultStyle*  
  畫面格的[樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 包含**FWS_ADDTOTITLE**樣式，如果您想要自動顯示在視窗中表示的文件名稱的標題列。  
   
- `pParentWnd`  
+ *pParentWnd*  
  畫面格的父指標。  
   
- `pContext`  
+ *pContext*  
  指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)結構。 這個參數可以是**NULL**。  
   
 ### <a name="remarks"></a>備註  
- 建構`CFrameWnd`兩個步驟中的物件。 首先，叫用的建構函式，建構`CFrameWnd`物件，然後再呼叫`LoadFrame`，其中會載入 Windows 框架視窗和相關聯的資源，並附加框架視窗至`CFrameWnd`物件。 `nIDResource`參數指定 [] 功能表、 快速鍵對應表、 圖示和框架視窗標題的字串資源。  
+ 建構`CFrameWnd`兩個步驟中的物件。 首先，叫用的建構函式，建構`CFrameWnd`物件，然後再呼叫`LoadFrame`，其中會載入 Windows 框架視窗和相關聯的資源，並附加框架視窗至`CFrameWnd`物件。 *NIDResource*參數指定 [] 功能表、 快速鍵對應表、 圖示和框架視窗標題的字串資源。  
   
- 使用**建立**成員函式而非`LoadFrame`當您想要指定所有框架視窗的建立參數。  
+ 使用`Create`成員函式而非`LoadFrame`當您想要指定所有框架視窗的建立參數。  
   
  這個架構會呼叫`LoadFrame`它會建立使用文件範本物件，在框架視窗。  
   
- 架構會使用`pContext`引數來指定要連接至框架視窗，包括任何物件所包含的檢視物件。 您可以設定`pContext`引數**NULL**當您呼叫`LoadFrame`。  
+ 架構會使用*pContext*引數來指定要連接至框架視窗，包括任何物件所包含的檢視物件。 您可以設定*pContext*引數**NULL**當您呼叫`LoadFrame`。  
   
 ##  <a name="m_bautomenuenable"></a>  CFrameWnd::m_bAutoMenuEnable  
  （這是預設值） 啟用此資料成員時，功能表項目，並沒有`ON_UPDATE_COMMAND_UI`或`ON_COMMAND`處理常式會自動停用使用者提取下功能表。  
@@ -772,7 +772,7 @@ virtual BOOL NegotiateBorderSpace(
   
 - **borderSet** = 3  
   
- `lpRectBorder`  
+ *lpRectBorder*  
  指標[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定框線的座標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -789,7 +789,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  控制列所顯示的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -821,10 +821,10 @@ virtual BOOL OnCreateClient(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpcs`  
+ *lpcs*  
  Windows 的指標[CREATESTRUCT](../../mfc/reference/createstruct-structure.md)結構。  
   
- `pContext`  
+ *pContext*  
  指標[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -833,7 +833,7 @@ virtual BOOL OnCreateClient(
 ### <a name="remarks"></a>備註  
  永遠不會呼叫此函式。  
   
- 此函式的預設實作會建立`CView`物件所提供的資訊`pContext`如果可能。  
+ 此函式的預設實作會建立`CView`物件所提供的資訊*pContext*如果可能。  
   
  覆寫此函數來覆寫傳入值`CCreateContext`物件或方法控制項框架視窗的主要工作區中建立的變更。 `CCreateContext`可以覆寫的成員如下所述[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)類別。  
   
@@ -863,7 +863,7 @@ virtual void OnSetPreviewMode(
  *bPreview*  
  指定要將應用程式放在預覽列印模式。 設定為**TRUE**預覽列印中放置**FALSE**取消預覽模式。  
   
- `pState`  
+ *pState*  
  指標**CPrintPreviewState**結構。  
   
 ### <a name="remarks"></a>備註  
@@ -889,8 +889,8 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pCmdUI`  
- 指標[CCmdUI](../../mfc/reference/ccmdui-class.md)物件，代表產生更新命令的功能表。 更新處理常式呼叫[啟用](../../mfc/reference/ccmdui-class.md#enable)成員函式`CCmdUI`物件透過`pCmdUI`更新使用者介面。  
+ *pCmdUI*  
+ 指標[CCmdUI](../../mfc/reference/ccmdui-class.md)物件，代表產生更新命令的功能表。 更新處理常式呼叫[啟用](../../mfc/reference/ccmdui-class.md#enable)成員函式`CCmdUI`物件透過*pCmdUI*更新使用者介面。  
   
 ##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout  
  當標準主控項列切換為開啟或關閉，或調整框架視窗的大小時，由架構呼叫。  
@@ -900,7 +900,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bNotify`  
+ *bNotify*  
  決定框架視窗的使用中就地項目是否要接收的版面配置變更通知。 如果**TRUE**，項目，則通知，否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
@@ -923,7 +923,7 @@ void SaveBarState(LPCTSTR lpszProfileName) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszProfileName`  
+ *lpszProfileName*  
  初始設定檔案中的區段或儲存狀態資訊的 Windows 登錄中的索引鍵的名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -937,7 +937,7 @@ void SetActivePreviewView(CView* pViewNew);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pViewNew`  
+ *pViewNew*  
  檢視，以啟用指標。  
   
 ### <a name="remarks"></a>備註  
@@ -955,7 +955,7 @@ void SetActiveView(
  *pViewNew*  
  指定指向[CView](../../mfc/reference/cview-class.md)物件，或**NULL**沒有作用中的檢視。  
   
- `bNotify`  
+ *bNotify*  
  指定檢視是否以收到的啟用通知。 如果**TRUE**，`OnActivateView`呼叫新的檢視; 如果**FALSE**，它不是。  
   
 ### <a name="remarks"></a>備註  
@@ -969,7 +969,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>參數  
- `state`  
+ *state*  
  將預存的狀態套用至框架視窗的控制列。  
   
 ### <a name="remarks"></a>備註  
@@ -986,7 +986,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `nState`|指定是否要顯示或隱藏功能表。 `nState`參數可以是下列值：<br /><br /> -如果它隱藏的但如果它會顯示就沒有作用，AFX_MBS_VISIBLE (0x01)-會顯示功能表。<br />-如果它是可見的但沒有任何作用，如果它隱藏 AFX_MBS_HIDDEN (0x02)-會隱藏功能表。|  
+|[in]*nState*|指定是否要顯示或隱藏功能表。 *NState*參數可以是下列值：<br /><br /> -如果它隱藏的但如果它會顯示就沒有作用，AFX_MBS_VISIBLE (0x01)-會顯示功能表。<br />-如果它是可見的但沒有任何作用，如果它隱藏 AFX_MBS_HIDDEN (0x02)-會隱藏功能表。|  
   
 ### <a name="return-value"></a>傳回值  
  `true` 如果此方法已成功變更功能表檢視狀態。，否則， `false`。  
@@ -1005,10 +1005,10 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[輸入] `nStyle`|指定功能表預設隱藏此項目，或為可見和具有焦點。 `nStyle`參數可以是下列值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示在任何時候，而依預設並沒有焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設隱藏功能表。 如果隱藏功能表上，按下 ALT 鍵以顯示功能表，並將焦點提供。 如果顯示的功能表上，按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （合 (OR)）-預設為隱藏功能表。 如果隱藏功能表上，按 F10 鍵，顯示功能表，並將焦點提供。 如果顯示的功能表上，按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵，以便隱藏，則會顯示功能表。|  
+|[in]*nStyle*|指定功能表預設隱藏此項目，或為可見和具有焦點。 *NStyle*參數可以是下列值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示在任何時候，而依預設並沒有焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設隱藏功能表。 如果隱藏功能表上，按下 ALT 鍵以顯示功能表，並將焦點提供。 如果顯示的功能表上，按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     （合 (OR)）-預設為隱藏功能表。 如果隱藏功能表上，按 F10 鍵，顯示功能表，並將焦點提供。 如果顯示的功能表上，按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵，以便隱藏，則會顯示功能表。|  
   
 ### <a name="remarks"></a>備註  
- 如果值`nStyle`參數不是有效的這個方法會判斷提示中偵錯模式而且引發[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在發行模式中。 發生其他執行階段錯誤時，這個方法偵錯模式中的判斷提示，並引發例外狀況衍生自[CException](../../mfc/reference/cexception-class.md)類別。  
+ 如果值*nStyle*參數不是有效的這個方法會判斷提示中偵錯模式而且引發[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在發行模式中。 發生其他執行階段錯誤時，這個方法偵錯模式中的判斷提示，並引發例外狀況衍生自[CException](../../mfc/reference/cexception-class.md)類別。  
   
  這個方法會影響狀態中撰寫的應用程式的功能表[!INCLUDE[windowsver](../../build/reference/includes/windowsver_md.md)]和更新版本。  
   
@@ -1021,10 +1021,10 @@ void SetMessageText(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszText`  
+ *lpszText*  
  指向要放在 [狀態] 列上的字串。  
   
- `nID`  
+ *nID*  
  字串放置在 [狀態] 列上的資源識別碼的字串。  
   
 ### <a name="remarks"></a>備註  
@@ -1038,7 +1038,7 @@ void SetProgressBarPosition(int nProgressPos);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nProgressPos`  
+ *nProgressPos*  
  指定要設定的位置。 它必須是所設定的範圍內`SetProgressBarRange`。  
   
 ### <a name="remarks"></a>備註  
@@ -1053,10 +1053,10 @@ void SetProgressBarRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nRangeMin`  
+ *nRangeMin*  
  最小值。  
   
- `nRangeMax`  
+ *nRangeMax*  
  最大值。  
   
 ### <a name="remarks"></a>備註  
@@ -1069,7 +1069,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ```  
   
 ### <a name="parameters"></a>參數  
- `tbpFlags`  
+ *tbpFlags*  
  控制進度按鈕的目前狀態的旗標。 指定的下列其中之一旗標，因為所有的狀態為互斥： TBPF_NOPROGRESS、 TBPF_INDETERMINATE、 TBPF_NORMAL、 TBPF_ERROR、 TBPF_PAUSED。  
   
 ### <a name="remarks"></a>備註  
@@ -1089,14 +1089,14 @@ BOOL SetTaskbarOverlayIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIDResource`  
- 指定要做為重疊圖示的資源識別碼。 請參閱描述`hIcon`如需詳細資訊。  
+ *nIDResource*  
+ 指定要做為重疊圖示的資源識別碼。 請參閱描述*hIcon*如需詳細資訊。  
   
- `lpcszDescr`  
+ *lpcszDescr*  
  提供重疊，協助工具所傳達的資訊的替代文字版本的字串指標。  
   
- `hIcon`  
- 要做為重疊圖示的控制代碼。 這應該是一個小型的圖示，測量 16 x 16 像素 96 dpi (dpi)。 如果重疊圖示已經套用到工作列按鈕時，就會取代該現有的覆疊。 這個值可以是 `NULL`。 如何`NULL`值的處理方式取決於是否工作列按鈕代表單一視窗或 windows 群組。 要釋放的呼叫應用程式負責`hIcon`不再需要時。  
+ *hIcon*  
+ 要做為重疊圖示的控制代碼。 這應該是一個小型的圖示，測量 16 x 16 像素 96 dpi (dpi)。 如果重疊圖示已經套用到工作列按鈕時，就會取代該現有的覆疊。 這個值可以是 `NULL`。 如何`NULL`值的處理方式取決於是否工作列按鈕代表單一視窗或 windows 群組。 要釋放的呼叫應用程式負責*hIcon*不再需要時。  
   
 ### <a name="return-value"></a>傳回值  
  `TRUE` 如果登錄成功。，`FALSE`如果 OS 版本比 Windows 7，或設定圖示時，發生錯誤。  
@@ -1111,7 +1111,7 @@ void SetTitle(LPCTSTR lpszTitle);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszTitle`  
+ *lpszTitle*  
  包含視窗物件的標題為字元字串指標。  
   
 ##  <a name="showcontrolbar"></a>  CFrameWnd::ShowControlBar  
@@ -1125,10 +1125,10 @@ void ShowControlBar(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pBar`  
+ *pBar*  
  將控制列來顯示或隱藏指標。  
   
- `bShow`  
+ *bShow*  
  如果**TRUE**，指定要顯示控制項列。 如果**FALSE**，指定要隱藏控制列。  
   
  *bDelay*  
@@ -1142,7 +1142,7 @@ void ShowOwnedWindows(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bShow`  
+ *bShow*  
  指定擁有的 windows 是否要顯示或隱藏。  
   
 ## <a name="see-also"></a>另請參閱  

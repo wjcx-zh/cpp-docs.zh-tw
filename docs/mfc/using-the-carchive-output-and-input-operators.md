@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b729caaa650fde72741497d3f4ab3c131f46ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 617157c3adce8521eb54156988cb098c0e709fd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383328"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953281"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>使用 CArchive &lt; &lt;和&gt;&gt;運算子
 `CArchive` 提供 <\<和 >> 用於寫入和讀取簡單資料類型的運算子以及`CObject`s 和檔案。  
@@ -40,13 +40,13 @@ ms.locfileid: "33383328"
   
      [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]  
   
- 通常，儲存和載入資料以及從透過在封存檔案`Serialize`函式的`CObject`-衍生的類別，必須以宣告**DECLARE_SERIALIZE**巨集。 若要參考`CArchive`物件傳遞至您`Serialize`函式。 您呼叫`IsLoading`函式的`CArchive`物件，以判斷是否`Serialize`被呼叫函式，從檔案載入資料，或將資料儲存到檔案。  
+ 通常，儲存和載入資料以及從透過在封存檔案`Serialize`函式的`CObject`-衍生的類別，您必須已經宣告與 DECLARE_SERIALIZE 巨集。 若要參考`CArchive`物件傳遞至您`Serialize`函式。 您呼叫`IsLoading`函式的`CArchive`物件，以判斷是否`Serialize`被呼叫函式，從檔案載入資料，或將資料儲存到檔案。  
   
  `Serialize`函式的可序列化`CObject`-衍生的類別通常具有下列格式：  
   
  [!code-cpp[NVC_MFCSerialization#9](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_3.cpp)]  
   
- 上述程式碼範本正好一個 AppWizard 建立的相同`Serialize`函式的文件 (的類別衍生自**CDocument)**。 這個程式碼範本可協助您撰寫程式碼，更輕鬆地檢視，因為儲存的程式碼並載入程式碼應該是平行進行，如下列範例所示：  
+ 上述程式碼範本正好一個 AppWizard 建立的相同`Serialize`函式的文件 (的類別衍生自`CDocument`)。 這個程式碼範本可協助您撰寫程式碼，更輕鬆地檢視，因為儲存的程式碼並載入程式碼應該是平行進行，如下列範例所示：  
   
  [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]  
   
@@ -54,7 +54,7 @@ ms.locfileid: "33383328"
   
 ||||  
 |-|-|-|  
-|`CObject*`|**大小和 CSize**|**float**|  
+|`CObject*`|**大小**和 `CSize`|**float**|  
 |**WORD**|`CString`|**點**和 `CPoint`|  
 |`DWORD`|**BYTE**|`RECT` 和 `CRect`|  
 |**Double**|**LONG**|`CTime` 和 `CTimeSpan`|  

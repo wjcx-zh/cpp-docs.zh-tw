@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff62b77e6bdec6b796750d27357d12667eb16386
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbc191baf452a4e695eee2eed00a8f679285dee1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378304"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952475"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 類別
 表示儲存的基底資料表或附加資料表定義。  
@@ -104,7 +104,7 @@ class CDaoTableDef : public CObject
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|建構**CDaoTableDef**物件。|  
+|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|建構 `CDaoTableDef` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -161,7 +161,7 @@ class CDaoTableDef : public CObject
   
 -   取得或設定使用的驗證條件`GetValidationRule`和`SetValidationRule`，而`GetValidationText`和`SetValidationText`成員函式。  
   
--   使用**開啟**成員函式來建立資料表類型、 動態集或快照集類型`CDaoRecordset`物件。  
+-   使用`Open`成員函式來建立資料表類型、 動態集或快照集類型`CDaoRecordset`物件。  
   
     > [!NOTE]
     >  DAO 資料庫類別是不同的基礎上開放式資料庫連接 (ODBC) 之 MFC 資料庫類別。 所有的 DAO 資料庫類別名稱有"CDao"前置詞。 您仍然可以使用 DAO 類別; 存取 ODBC 資料來源因為它們是 Microsoft Jet 資料庫引擎的特定 DAO 類別通常會提供更好的功能。  
@@ -176,7 +176,7 @@ class CDaoTableDef : public CObject
   
     -   若要建立新的資料表，請呼叫 tabledef 物件的[建立](#create)成員函式，提供資料表的名稱。 呼叫[CreateField](#createfield)和[CreateIndex](#createindex)將欄位和索引加入至資料表。  
   
-    -   呼叫[附加](#append)資料表的儲存方式附加至資料庫的 TableDefs 集合。 **建立**tabledef 放在開啟狀態，因此在呼叫**建立**沒有呼叫**開啟**。  
+    -   呼叫[附加](#append)資料表的儲存方式附加至資料庫的 TableDefs 集合。 `Create` tabledef 放在開啟狀態，因此在呼叫`Create`沒有呼叫`Open`。  
   
         > [!TIP]
         >  若要建立已儲存的資料表最簡單的方式是建立它們，並將它們儲存在使用 Microsoft Access 資料庫中。 然後您可以開啟，並在您的 MFC 程式碼中使用它們。  
@@ -203,7 +203,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>備註  
- 此函式會將物件附加至資料庫的 TableDefs 集合。 您可以使用 tabledef 作為暫存物件時定義未附加，但如果您想要儲存並使用它，您必須呼叫**附加**。  
+ 此函式會將物件附加至資料庫的 TableDefs 集合。 您可以使用 tabledef 作為暫存物件時定義未附加，但如果您想要儲存並使用它，您必須呼叫`Append`。  
   
 > [!NOTE]
 >  如果您嘗試附加未命名的 tabledef （包含 null 或空字串），MFC 會擲回例外狀況。  
@@ -233,7 +233,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pDatabase`  
+ *pDatabase*  
  指標[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)物件。  
   
 ### <a name="remarks"></a>備註  
@@ -247,9 +247,9 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>備註  
- 通常在呼叫**關閉**，您會刪除 tabledef 物件，如果其配置具有**新**。  
+ 通常在呼叫`Close`，您會刪除 tabledef 物件，如果其配置具有**新**。  
   
- 您可以呼叫[開啟](#open)呼叫之後，再次**關閉**。 這可讓您重複使用 tabledef 物件。  
+ 您可以呼叫[開啟](#open)呼叫之後，再次`Close`。 這可讓您重複使用 tabledef 物件。  
   
  如需相關資訊，請參閱主題 < 關閉方法 >，DAO [說明] 中。  
   
@@ -265,10 +265,10 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  包含的資料表名稱的字串指標。  
   
- `lAttributes`  
+ *lAttributes*  
  值，對應至 tabledef 物件所代表之資料表的特性。 您可以使用位元 OR 結合任何下列常數：  
   
 |常數|描述|  
@@ -281,11 +281,11 @@ virtual void Create(
  *lpszSrcTable*  
  包含來源資料表名稱的字串指標。 依預設，這個值會初始化為**NULL**。  
   
- `lpszConnect`  
+ *lpszConnect*  
  包含預設的連接字串的字串指標。 依預設，這個值會初始化為**NULL**。  
   
 ### <a name="remarks"></a>備註  
- 一旦您擁有具名 tabledef，您就可以呼叫[附加](#append)tabledef 儲存資料庫的 TableDefs 集合中。 在呼叫**附加**、 tabledef 處於開啟狀態，以及您可以使用它來建立[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件。  
+ 一旦您擁有具名 tabledef，您就可以呼叫[附加](#append)tabledef 儲存資料庫的 TableDefs 集合中。 在呼叫`Append`、 tabledef 處於開啟狀態，以及您可以使用它來建立[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)物件。  
   
  如需相關資訊，請參閱主題 < CreateTableDef 方法 >，DAO [說明] 中。  
   
@@ -303,10 +303,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  指向的字串運算式，指定這個欄位的名稱。  
   
- `nType`  
+ *n*  
  值，指出欄位的資料類型。 設定可以是下列值之一：  
   
 |類型|大小 (位元組)|描述|  
@@ -323,10 +323,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbLongBinary**|0|長的二進位檔 （OLE 物件）、 [CLongBinary](../../mfc/reference/clongbinary-class.md)或[CByteArray](../../mfc/reference/cbytearray-class.md)|  
 |**dbMemo**|0|備忘 ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
   
- `lSize`  
- 值，指出最大的大小，以位元組為單位的欄位，包含文字或包含文字或數值欄位的固定的大小。 `lSize`參數已忽略所有的文字欄位。  
+ *lSize*  
+ 值，指出最大的大小，以位元組為單位的欄位，包含文字或包含文字或數值欄位的固定的大小。 *LSize*參數已忽略所有的文字欄位。  
   
- `lAttributes`  
+ *lAttributes*  
  值，對應到特性的欄位，並且可以使用位元 OR 結合起來。  
   
 |常數|描述|  
@@ -337,17 +337,17 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbUpdatableField**|可以變更欄位值。|  
 |**dbDescending**|欄位以遞減排序 (Z-A 或 100-0) （僅適用於索引物件的欄位集合中的欄位物件） 的順序。 如果您省略這個常數，此欄位以遞增排序 (A-Z 或 0-100) 順序 （預設值）。|  
   
- `fieldinfo`  
+ *fieldinfo*  
  若要參考[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。  
   
 ### <a name="remarks"></a>備註  
- A **DAOField** (OLE) 物件建立並附加至的欄位集合**DAOTableDef** (OLE) 物件。 除了它使用來檢查物件屬性中，您也可以使用`CDaoFieldInfo`建構之輸入的參數的 tabledef 中建立新的欄位。 第一個版本`CreateField`容易使用，但是如果您想進行更細微的控制，您可以使用第二個版本`CreateField`，這個方法會接受`CDaoFieldInfo`參數。  
+ A **DAOField** (OLE) 物件建立並附加至的欄位集合`DAOTableDef`(OLE) 物件。 除了它使用來檢查物件屬性中，您也可以使用`CDaoFieldInfo`建構之輸入的參數的 tabledef 中建立新的欄位。 第一個版本`CreateField`容易使用，但是如果您想進行更細微的控制，您可以使用第二個版本`CreateField`，這個方法會接受`CDaoFieldInfo`參數。  
   
  如果您使用新版`CreateField`採用`CDaoFieldInfo`，您必須仔細設定參數的下列成員的每個`CDaoFieldInfo`結構：  
   
 - **m_strName**  
   
-- `m_nType`  
+- **m_nType**  
   
 - **m_lSize**  
   
@@ -367,7 +367,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 ```  
   
 ### <a name="parameters"></a>參數  
- `indexinfo`  
+ *indexinfo*  
  若要參考[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。  
   
 ### <a name="remarks"></a>備註  
@@ -379,9 +379,9 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
 - **m_strName**必須提供名稱。  
   
-- `m_pFieldInfos` 陣列必須指向`CDaoIndexFieldInfo`結構。  
+- **m_pFieldInfos**必須指向陣列`CDaoIndexFieldInfo`結構。  
   
-- `m_nFields` 必須指定陣列中的欄位數目`CDaoFieldInfo`結構。  
+- **m_nFields**必須指定陣列中的欄位數目`CDaoFieldInfo`結構。  
   
  剩餘的成員將會忽略的如果設定為**FALSE**。 此外， **m_lDistinctCount**索引建立期間，已忽略成員。  
   
@@ -394,10 +394,10 @@ void DeleteField(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  指標是與現有欄位名稱的字串運算式。  
   
- `nIndex`  
+ *nIndex*  
  資料表的以零為起始的欄位集合中，查閱索引欄位的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -414,10 +414,10 @@ void DeleteIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  指標，是現有的索引名稱的字串運算式。  
   
- `nIndex`  
+ *nIndex*  
  資料庫的以零為起始 TableDefs 集合中，依索引查閱的索引物件的陣列索引。  
   
 ### <a name="remarks"></a>備註  
@@ -491,14 +491,14 @@ COleDateTime GetDateCreated();
  如需相關資訊，請參閱 DAO 說明主題 「 DateCreated LastUpdated 屬性 」。  
   
 ##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
- 呼叫此函式可判斷日期和時間資料表基礎**CDaoTableDef**上次更新物件。  
+ 呼叫此函式可判斷日期和時間資料表基礎`CDaoTableDef`上次更新物件。  
   
 ```  
 COleDateTime GetDateLastUpdated();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 包含基礎資料表的日期和時間值**CDaoTableDef**上次更新物件。  
+ 包含基礎資料表的日期和時間值`CDaoTableDef`上次更新物件。  
   
 ### <a name="remarks"></a>備註  
  日期和時間設定被衍生自基底資料表已在其建立，或上次更新的電腦。 在多使用者環境中，使用者應該直接從檔案伺服器，以避免不一致; 取得這些設定也就是說，所有用戶端應該使用 「 標準 」 的時間來源，可能是從一部伺服器。  
@@ -537,13 +537,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  欄位集合中的物件資料表的以零為起始的欄位，依索引查閱的索引。  
   
- `fieldinfo`  
+ *fieldinfo*  
  若要參考[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定要擷取的欄位有關的資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回：  
   
 - `AFX_DAO_PRIMARY_INFO` （預設值）屬性名稱、 類型、 大小。 使用此選項，以最快的效能。  
@@ -552,13 +552,13 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和次要的資訊，加上： 驗證規則，驗證文字，預設值  
   
- `lpszName`  
+ *lpszName*  
  物件的名稱欄位，依名稱查閱的指標。 名稱是字串最多 64 個字元的唯一名稱的欄位。  
   
 ### <a name="remarks"></a>備註  
  一個版本的函式可讓您依索引查閱欄位。 另一個版本可讓您依名稱查閱欄位。  
   
- 如需傳回的資訊的說明，請參閱[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員`dwInfoOptions`。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
+ 如需傳回的資訊的說明，請參閱[CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員*dwInfoOptions*。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 「 屬性屬性 」。  
   
@@ -594,13 +594,13 @@ void GetIndexInfo(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  索引集合中的物件資料表的以零為起始的索引，查閱的集合中位置的數字索引。  
   
- `indexinfo`  
+ *indexinfo*  
  若要參考[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  指定的索引來擷取的相關資訊的選項。 以下列出可用的選項以及它們會導致此函數傳回：  
   
 - `AFX_DAO_PRIMARY_INFO` 名稱欄位資訊欄位。 使用此選項，以最快的效能。  
@@ -609,13 +609,13 @@ void GetIndexInfo(
   
 - `AFX_DAO_ALL_INFO` 主要和次要的資訊，加上： 相異計數量  
   
- `lpszName`  
+ *lpszName*  
  依名稱查閱索引物件的名稱指標。  
   
 ### <a name="remarks"></a>備註  
  一個版本的函式可讓您查詢的集合中位置的索引。 另一個版本可讓您依名稱查閱索引。  
   
- 如需傳回的資訊的說明，請參閱[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員`dwInfoOptions`。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
+ 如需傳回的資訊的說明，請參閱[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)結構。 此結構具有資訊上面所列的描述中的項目所對應的成員*dwInfoOptions*。 當您要求一個層級的資訊時，您會取得任何先前的層的資訊。  
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 「 屬性屬性 」。  
   
@@ -672,7 +672,7 @@ CString GetValidationRule();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- A **CString**會驗證欄位中的資料，因為它已變更或加入至資料表的物件。  
+ A`CString`會驗證欄位中的資料，因為它已變更或加入至資料表的物件。  
   
 ### <a name="remarks"></a>備註  
  與更新作業所使用驗證規則。 如果 tabledef 包含驗證規則，更新該 tabledef 必須符合預先決定的準則，才能在資料變更。 如果變更不符合準則，包含值的例外狀況[GetValidationText](#getvalidationtext)就會擲回。 如`CDaoTableDef`物件，這`CString`是唯讀的附加的資料表，以及在基底資料表的讀取/寫入。  
@@ -725,7 +725,7 @@ virtual void Open(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  指定的資料表名稱的字串指標。  
   
 ### <a name="remarks"></a>備註  
@@ -752,7 +752,7 @@ void SetAttributes(long lAttributes);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lAttributes`  
+ *lAttributes*  
  所表示的資料表的特性`CDaoTableDef`物件，而且可以是這些常數的總和：  
   
 |常數|描述|  
@@ -779,7 +779,7 @@ void SetConnect(LPCTSTR lpszConnect);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszConnect`  
+ *lpszConnect*  
  指向的字串運算式，指定要傳遞給 ODBC 或可安裝 ISAM 驅動程式的其他參數。  
   
 ### <a name="remarks"></a>備註  
@@ -816,7 +816,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  如果密碼是必要，但未提供，ODBC 驅動程式就會顯示登入對話方塊第一次資料表存取時，另一次，如果連接已關閉並重新開啟。  
   
- 您可以設定的連接字串`CDaoTableDef`藉由提供的來源引數物件**建立**成員函式。 您可以檢查以判斷型別、 路徑、 使用者識別碼、 密碼或資料庫的 ODBC 資料來源的設定。 如需詳細資訊，請參閱文件的特定驅動程式。  
+ 您可以設定的連接字串`CDaoTableDef`藉由提供的來源引數物件`Create`成員函式。 您可以檢查以判斷型別、 路徑、 使用者識別碼、 密碼或資料庫的 ODBC 資料來源的設定。 如需詳細資訊，請參閱文件的特定驅動程式。  
   
  如需相關資訊，請參閱主題 DAO [說明] 中的 < 連接屬性 >。  
   
@@ -828,7 +828,7 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  指向的字串運算式，指定資料表的名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -868,7 +868,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  驗證只支援使用 Microsoft Jet 資料庫引擎的資料庫。 運算式無法參考使用者定義函數、 網域彙總函式、 SQL 彙總函式或查詢。 驗證規則`CDaoTableDef`物件可參考該物件中的多個欄位。  
   
- 例如，針對名為欄位`hire_date`和`termination_date`，驗證規則可能是：  
+ 例如，針對名為欄位*hire_date*和*termination_date*，驗證規則可能是：  
   
  [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]  
   

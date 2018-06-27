@@ -20,26 +20,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97c42f59042490f6408fb457b12f4bdb1a2eeb88
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385335"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953356"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE Automation 實作
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。  
   
 ## <a name="overview-of-ole-idispatch-interface"></a>OLE IDispatch 介面的概觀  
- `IDispatch`介面是由其應用程式會公開方法和屬性，可讓其他應用程式，例如 Visual BASIC 或其他語言，例如使用的應用程式的功能的方式。 這個介面的最重要的部分是**idispatch:: Invoke**函式。 MFC 會使用 「 分派對應 」 實作**idispatch:: Invoke**。 分派對應提供的 MFC 實作資訊的配置或"shape"的程式`CCmdTarget`-衍生的類別，使它可以直接操作物件的屬性或呼叫成員函式，以滿足您物件內**Idispatch:: Invoke**要求。  
+ `IDispatch`介面是由其應用程式會公開方法和屬性，可讓其他應用程式，例如 Visual BASIC 或其他語言，例如使用的應用程式的功能的方式。 這個介面的最重要的部分是`IDispatch::Invoke`函式。 MFC 會使用 「 分派對應 」 實作`IDispatch::Invoke`。 分派對應提供的 MFC 實作資訊的配置或"shape"的程式`CCmdTarget`-衍生的類別，使它可以直接操作物件的屬性或呼叫成員函式，以滿足您物件內`IDispatch::Invoke`要求。  
   
  大部分的情況下，ClassWizard 和 MFC 合作以隱藏大部分的應用程式設計來自 OLE automation 的詳細資料。 程式設計人員專注於應用程式中公開的實際功能，而且不需要擔心基礎配管。  
   
  有些情況是，不過，就必須了解 MFC 進行幕後。 此提示會說明架構如何指派**DISPID**的成員函式和屬性。 MFC 會使用指派的演算法知識**DISPID**s 時，才需要時想要知道識別碼，例如當您建立 「 型別程式庫 」 您的應用程式物件。  
   
 ## <a name="mfc-dispid-assignment"></a>MFC DISPID 指派  
- 屬性和方法 （例如 obj 標定程式碼中的，雖然自動化 （Visual Basic 的使用者，例如），使用者會看到的實際名稱啟用自動化ShowWindow) 的實作**idispatch:: Invoke**不會收到的實際名稱。 為了最佳化時，它會接收**DISPID**，即 32 位元"magic cookie"，描述的方法或存取的屬性。 這些**DISPID**值會傳回從`IDispatch`透過呼叫另一個方法的實作**IDispatch::GetIDsOfNames**。 Automation 用戶端應用程式會呼叫`GetIDsOfNames`之後每個成員或屬性對於要存取，並快取它們，以便稍後呼叫**idispatch:: Invoke**。 如此一來，高度耗費資源的字串查閱只執行一次每次物件使用，而不是一次每個**idispatch:: Invoke**呼叫。  
+ 屬性和方法 （例如 obj 標定程式碼中的，雖然自動化 （Visual Basic 的使用者，例如），使用者會看到的實際名稱啟用自動化ShowWindow) 的實作`IDispatch::Invoke`不會收到的實際名稱。 為了最佳化時，它會接收**DISPID**，即 32 位元"magic cookie"，描述的方法或存取的屬性。 這些**DISPID**值會傳回從`IDispatch`透過呼叫另一個方法的實作`IDispatch::GetIDsOfNames`。 Automation 用戶端應用程式會呼叫`GetIDsOfNames`之後每個成員或屬性對於要存取，並快取它們，以便稍後呼叫`IDispatch::Invoke`。 如此一來，高度耗費資源的字串查閱只執行一次每次物件使用，而不是一次每個`IDispatch::Invoke`呼叫。  
   
  MFC 判斷**DISPID**每個方法的屬性會根據兩件事：  
   
@@ -131,23 +131,23 @@ property Y    (DISPID)0x00010002
 ## <a name="remarks"></a>備註  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  類別的名稱。  
   
- `pszName`  
+ *pszName*  
  屬性外部名稱。  
   
- `memberName`  
+ *成員名稱*  
  成員變數中儲存之屬性的名稱。  
   
- `pfnAfterSet`  
+ *pfnAfterSet*  
  屬性變更時要呼叫成員函式的名稱。  
   
- `vtPropType`  
+ *vtPropType*  
  值，指定屬性的型別。  
   
 ## <a name="remarks"></a>備註  
- 這個巨集，就像`DISP_PROPERTY`，不同之處在於它可接受的其他引數。 其他引數， *pfnAfterSet，* 應傳回任何項目並不採用任何參數 'void OnPropertyNotify()' 的成員函式。 將呼叫**之後**成員變數已被修改。  
+ 這個巨集就像 DISP_PROPERTY，不同之處在於它可接受的其他引數。 其他引數， *pfnAfterSet，* 應傳回任何項目並不採用任何參數 'void OnPropertyNotify()' 的成員函式。 將呼叫**之後**成員變數已被修改。  
   
 ## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM — 巨集描述  
   
@@ -165,26 +165,26 @@ property Y    (DISPID)0x00010002
 ## <a name="remarks"></a>備註  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  類別的名稱。  
   
- `pszName`  
+ *pszName*  
  屬性外部名稱。  
   
- `memberGet`  
+ *memberGet*  
  用來取得屬性的成員函式的名稱。  
   
- `memberSet`  
+ *成員集合*  
  用來設定屬性的成員函式的名稱。  
   
- `vtPropType`  
+ *vtPropType*  
  值，指定屬性的型別。  
   
- `vtsParams`  
+ *vtsParams*  
  空間的字串以 VTS_ 分隔每個參數。  
   
 ## <a name="remarks"></a>備註  
- 就像是`DISP_PROPERTY_EX`巨集，此巨集定義屬性，使用個別的 Get 和 Set 成員函式存取。 不過，這個巨集，可讓您指定之屬性的參數清單。 這是適用於其他方法實作會編製索引或參數化的屬性。 參數永遠都會放在第一次，後面接著新屬性的值。 例如:   
+ 更像 DISP_PROPERTY_EX 巨集，此巨集定義屬性，使用個別的 Get 和 Set 成員函式存取。 不過，這個巨集，可讓您指定之屬性的參數清單。 這是適用於其他方法實作會編製索引或參數化的屬性。 參數永遠都會放在第一次，後面接著新屬性的值。 例如:   
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -244,32 +244,32 @@ void CMyObject::SetItem(short row,
 ## <a name="remarks"></a>備註  
   
 ### <a name="parameters"></a>參數  
- `theClass`  
+ *theClass*  
  類別的名稱。  
   
- `pszName`  
+ *pszName*  
  屬性外部名稱。  
   
- `dispid`  
+ *dispid*  
  固定的屬性或方法的 DISPID。  
   
- `pfnGet`  
+ *pfnGet*  
  用來取得屬性的成員函式的名稱。  
   
- `pfnSet`  
+ *pfnSet*  
  用來設定屬性的成員函式的名稱。  
   
- `memberName`  
+ *成員名稱*  
  成員變數，將對應至屬性的名稱  
   
- `vtPropType`  
+ *vtPropType*  
  值，指定屬性的型別。  
   
- `vtsParams`  
+ *vtsParams*  
  空間的字串以 VTS_ 分隔每個參數。  
   
 ## <a name="remarks"></a>備註  
- 這些巨集可讓您指定**DISPID**而非讓 MFC 自動指派。 這些進階巨集具有相同的名稱，但該識別碼會附加至巨集名稱 (例如**DISP_PROPERTY_ID**) 和識別碼由參數之後指定`pszName`參數。 請參閱 AFXDISP。如需有關這些巨集 H。 **_ID**項目必須放在分派對應的結尾。 它們會影響自動**DISPID**中與非相同的方式產生 **_ID**巨集版本會 ( **DISPID**s 取決於位置)。 例如:   
+ 這些巨集可讓您指定**DISPID**而非讓 MFC 自動指派。 這些進階巨集具有相同的名稱，但該識別碼會附加至巨集名稱 (例如**DISP_PROPERTY_ID**) 和識別碼由參數之後指定*pszName*參數。 請參閱 AFXDISP。如需有關這些巨集 H。 **_ID**項目必須放在分派對應的結尾。 它們會影響自動**DISPID**中與非相同的方式產生 **_ID**巨集版本會 ( **DISPID**s 取決於位置)。 例如:   
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,
@@ -298,7 +298,7 @@ property Z     (DISPID)0x00000001
  指定固定**DISPID**可用以維護回溯相容性的先前已存在的分派介面，或實作特定系統定義的方法或屬性 (通常由負**DISPID**，例如**DISPID_NEWENUM**集合)。  
   
 #### <a name="retrieving-the-idispatch-interface-for-a-coleclientitem"></a>擷取 COleClientItem IDispatch 介面  
- 許多伺服器將會支援自動化在其文件物件連同 OLE 伺服器功能。 若要存取此 automation 介面，則必須直接存取**COleClientItem::m_lpObject**成員變數。 下列程式碼會擷取`IDispatch`介面物件衍生自`COleClientItem`。 如果您發現這項功能需要，您可以在應用程式中包含下列程式碼：  
+ 許多伺服器將會支援自動化在其文件物件連同 OLE 伺服器功能。 若要存取此 automation 介面，則必須直接存取`COleClientItem::m_lpObject`成員變數。 下列程式碼會擷取`IDispatch`介面物件衍生自`COleClientItem`。 如果您發現這項功能需要，您可以在應用程式中包含下列程式碼：  
   
 ```  
 LPDISPATCH CMyClientItem::GetIDispatch()  
@@ -346,7 +346,7 @@ return NULL;
 }  
 ```  
   
- 分派介面傳回的這個函式無法再直接使用或附加至`COleDispatchDriver`型別安全存取。 如果您直接使用它，請確定您呼叫其**發行**成員時透過指標 (`COleDispatchDriver`解構函式會依預設)。  
+ 分派介面傳回的這個函式無法再直接使用或附加至`COleDispatchDriver`型別安全存取。 如果您直接使用它，請確定您呼叫其`Release`成員時透過指標 (`COleDispatchDriver`解構函式會依預設)。  
   
 ## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   

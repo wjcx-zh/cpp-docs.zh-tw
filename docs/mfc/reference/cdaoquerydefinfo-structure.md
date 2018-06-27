@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367226"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952283"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 結構
 `CDaoQueryDefInfo`結構包含 recordset 物件定義的資料存取物件 (DAO) 的相關資訊。  
@@ -45,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>參數  
- `m_strName`  
+ *m_strName*  
  Recordset 物件的唯一名稱。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 名稱屬性 」。 呼叫[CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname)直接擷取這個屬性。  
   
- `m_nType`  
+ *m_nType*  
  值，指出作業的 recordset 物件類型。 值可以是下列其中一項：  
   
 - **dbQSelect**選取，查詢會選取記錄。  
@@ -78,13 +78,13 @@ struct CDaoQueryDefInfo
   
  如需詳細資訊，請參閱主題 DAO [說明] 中的 < 型別屬性 >。  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  日期和時間 querydef 所建立。 若要直接擷取 querydef 的建立的日期，請呼叫[GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated)成員函式`CDaoTableDef`與資料表相關聯的物件。 如需詳細資訊，請參閱下方的註解。 DAO [說明] 中，另請參閱本主題 「 DateCreated LastUpdated 屬性 」。  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  日期和時間的最新 querydef 所做的變更。 若要直接擷取上次更新資料表的日期，請呼叫[GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) querydef 成員函式。 如需詳細資訊，請參閱下方的註解。 和 DAO [說明] 中，請參閱主題"DateCreated LastUpdated 屬性 」。  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  指出是否可以變更 recordset 物件。 如果這個屬性是**TRUE**querydef 是可更新，否則，它不是。 可更新表示 recordset 物件的查詢定義可變更。 Recordset 物件的可更新的屬性設定為**TRUE**如果查詢定義可加以更新，即使不是可更新結果的資料錄集。 若要直接擷取這個屬性，呼叫 querydef [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate)成員函式。 如需詳細資訊，請參閱本主題說明 DAO 中的 「 可更新屬性 」。  
   
  *m_bReturnsRecords*  
@@ -93,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  定義 recordset 物件所執行之查詢的 SQL 陳述式。 SQL 屬性包含決定如何選取記錄、 群組和排序執行查詢時的 SQL 陳述式。 您可以使用查詢選取要包含在動態或快照集類型的資料錄集物件中的記錄。 您也可以定義來修改資料而不需傳回記錄的大量查詢。 您可以擷取這個屬性的值直接呼叫 querydef [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql)成員函式。  
   
- `m_strConnect`  
+ *m_strConnect*  
  提供有關通過查詢所用的資料庫來源的資訊。 這項資訊的形式的連接字串。 如需詳細資訊關於連接字串，並直接擷取這個屬性的值的相關資訊，請參閱[CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)成員函式。  
   
  *m_nODBCTimeout*  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367207"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955985"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 類別
 除了提供 Windows 清單方塊中，功能`CDragListBox`類別可讓使用者在清單方塊內移動清單方塊項目，例如檔案名稱。  
@@ -96,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含正在拖曳的項目座標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含正在拖曳的項目座標。  
   
 ### <a name="remarks"></a>備註  
@@ -134,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含 x 和 y 螢幕座標的資料指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -157,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nItem`  
+ *nItem*  
  插入點的以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -176,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  指定已卸除字串之以零為起始的索引。  
   
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含拖放站台的座標。  
   
 ### <a name="remarks"></a>備註  
  預設行為會將清單方塊項目和其資料複製到新位置，然後再刪除原始的項目。 覆寫此函式可自訂的預設行為，例如啟用清單項目拖曳到清單內的其他位置的複本。  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- 呼叫此函式可擷取的清單方塊項目以零為起始的索引位於`pt`。  
+ 呼叫此函式可擷取的清單方塊項目以零為起始的索引位於*pt*。  
   
 ```  
 int ItemFromPt(
@@ -192,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，其中包含在清單方塊內的點的座標。  
   
  *bAutoScroll*  

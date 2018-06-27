@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f925f8b6a5c522e22890ee2c1082ae8d709d2220
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cd2129ad4b2dc075893a730c0ba75de96dbebea0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381189"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952855"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>索引標籤和索引標籤控制項屬性
 您有相當大的控制權的外觀和行為的索引標籤控制項所組成的索引標籤 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))。 每個索引標籤可以有標籤、 圖示、 項目狀態和與其相關聯的應用程式定義的 32 位元值。 對於每個索引標籤上，您可以顯示圖示、 標籤，或兩者。  
   
- 此外，每個索引標籤項目可以有三種可能狀態： 已按下，未按下或反白顯示。 此狀態只可以設定來修改現有的索引標籤項目。 若要修改現有的索引標籤項目，擷取它呼叫[GetItem](../mfc/reference/ctabctrl-class.md#getitem)，修改`TCITEM`結構 (特別是**dwState**和**dwStateMask**資料成員)，然後傳回已修改`TCITEM`結構呼叫[SetItem](../mfc/reference/ctabctrl-class.md#setitem)。 如果您要清除所有索引標籤項目中的項目狀態`CTabCtrl`物件，呼叫以[DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall)。 此函式會重設 索引標籤的所有項目或所有項目，除了目前選取的狀態。  
+ 此外，每個索引標籤項目可以有三種可能狀態： 已按下，未按下或反白顯示。 此狀態只可以設定來修改現有的索引標籤項目。 若要修改現有的索引標籤項目，擷取它呼叫[GetItem](../mfc/reference/ctabctrl-class.md#getitem)，修改`TCITEM`結構 (特別是*dwState*和*dwStateMask*資料成員)，然後傳回已修改`TCITEM`結構呼叫[SetItem](../mfc/reference/ctabctrl-class.md#setitem)。 如果您要清除所有索引標籤項目中的項目狀態`CTabCtrl`物件，呼叫以[DeselectAll](../mfc/reference/ctabctrl-class.md#deselectall)。 此函式會重設 索引標籤的所有項目或所有項目，除了目前選取的狀態。  
   
  下列程式碼清除所有的索引標籤項目狀態，然後修改第三個項目的狀態：  
   

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0093c92604013e4c1aef4046f244d7bcd3f71958
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353321"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954474"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 類別
 D2D1_SIZE_F 包裝函式。  
@@ -48,7 +48,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|傳回`boolean`值，指出運算式是否包含任何有效的資料 ( `null`)。|  
+|[CD2DSizeF::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 ( **null**)。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
@@ -79,13 +79,13 @@ CD2DSizeF(
 ```  
   
 ### <a name="parameters"></a>參數  
- `size`  
+ *size*  
  來源的大小  
   
- `cx`  
+ */cx*  
  來源寬度  
   
- `cy`  
+ *cy*  
  來源高度  
   
 ##  <a name="isnull"></a>  CD2DSizeF::IsNull  

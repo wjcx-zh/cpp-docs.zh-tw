@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff998b8be93d1248775d49bcef7680f4c9777fd4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368344"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953671"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog 類別
 可讓您將字型選取對話方塊中併入您的應用程式。  
@@ -146,19 +146,19 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- L `plfInitial`  
+ *plfInitial*  
  指標[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)資料結構，可讓您設定部分字型的特性。  
   
- `charFormat`  
+ *charFormat*  
  指標[CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)資料結構，可讓您設定部分字型的特性在 rich edit 控制項。  
   
- `dwFlags`  
+ *dwFlags*  
  指定一或數個 choose-font 旗標。 可以使用位元 OR 運算子來合併一或數個預先設定的值。 如果您修改 `m_cf.Flag` 結構成員，請務必在您的變更中使用位元 OR 運算子，讓預設行為保持不變。 如需每個這些旗標的詳細資訊，請參閱描述[CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) Windows SDK 中的結構。  
   
- pdcPrinter  
+ *pdcPrinter*  
  printer-device 內容的指標。 若有提供，此參數會指向要選取字型之印表機的 printer-device 內容。  
   
- `pParentWnd`  
+ *pParentWnd*  
  字型對話方塊的父系或擁有者視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -198,7 +198,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `cf`  
+ *cf*  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881)結構，包含選取的字型的字元格式的相關資訊。  
   
 ##  <a name="getcolor"></a>  CFontDialog::GetColor  

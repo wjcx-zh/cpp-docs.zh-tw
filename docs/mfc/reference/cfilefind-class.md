@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de63a53e23f4ea22a6fe8df7ab55bfc57d409779
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376567"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955072"
 ---
 # <a name="cfilefind-class"></a>CFileFind 類別
 執行本機檔案搜尋，而且可的基底類別[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)和[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)，會執行網際網路檔案搜尋。  
@@ -159,7 +159,7 @@ CFileFind(CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 物件的指標  
   
 ### <a name="example"></a>範例  
@@ -188,7 +188,7 @@ virtual void CloseContext();
 ### <a name="remarks"></a>備註  
  關閉目前的搜尋控制代碼值所指定的檔案。 覆寫這個函式來變更預設行為。  
   
- 您必須呼叫[FindFile](#findfile)或[FindNextFile](#findnextfile)至少一次函式來擷取有效的搜尋控制代碼。 **FindFile**和`FindNextFile`函式使用的搜尋控制代碼來找出其名稱符合指定名稱的檔案。  
+ 您必須呼叫[FindFile](#findfile)或[FindNextFile](#findnextfile)至少一次函式來擷取有效的搜尋控制代碼。 `FindFile`和`FindNextFile`函式使用的搜尋控制代碼來找出其名稱符合指定名稱的檔案。  
   
 ##  <a name="findfile"></a>  CFileFind::FindFile  
  呼叫此成員函式，以開啟 檔案搜尋。  
@@ -200,17 +200,17 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pstrName`  
- 包含要尋找的檔案名稱的字串指標。 如果您要傳入**NULL**如`pstrName`， **FindFile**沒有萬用字元 (*。\*) 搜尋。  
+ *pstrName*  
+ 包含要尋找的檔案名稱的字串指標。 如果您要傳入**NULL**如*pstrName*， **FindFile**沒有萬用字元 (*。\*) 搜尋。  
   
  *dwUnused*  
- 要保留**FindFile**多型使用衍生的類別。 必須是 0。  
+ 要保留`FindFile`多型使用衍生的類別。 必須是 0。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊，請呼叫 Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>備註  
- 在呼叫**FindFile**若要開始檔案搜尋，請呼叫[FindNextFile](#findnextfile)擷取後續的檔案。 您必須呼叫`FindNextFile`至少一次之前呼叫了下列屬性的任何成員函式：  
+ 在呼叫`FindFile`若要開始檔案搜尋，請呼叫[FindNextFile](#findnextfile)擷取後續的檔案。 您必須呼叫`FindNextFile`至少一次之前呼叫了下列屬性的任何成員函式：  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -238,7 +238,7 @@ virtual BOOL FindFile(
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -292,7 +292,7 @@ virtual BOOL FindNextFile();
   
 - [IsDots](#isdots)  
   
-- [isHidden](#ishidden)  
+- [IsHidden](#ishidden)  
   
 - [IsNormal](#isnormal)  
   
@@ -318,10 +318,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTimeStamp`  
+ *pTimeStamp*  
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含的檔案所建立的時間。  
   
- `refTime`  
+ *refTime*  
  若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -435,10 +435,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `refTime`  
+ *refTime*  
  若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含上次存取檔案的時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -462,10 +462,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `pTimeStamp`  
+ *pTimeStamp*  
  指標[FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)結構，其中包含檔案上次被寫入的時間。  
   
- `refTime`  
+ *refTime*  
  若要參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -714,7 +714,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwMask`  
+ *dwMask*  
  指定一或多個檔案屬性，識別在[WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740)結構，找到的檔案。 若要搜尋多個屬性，使用的位元 OR (&#124;) 運算子。 下列屬性的任何組合都可接受的：  
   
 -   FILE_ATTRIBUTE_ARCHIVE 檔案會封存檔案。 應用程式標記檔案來進行備份或移除使用這個屬性。  

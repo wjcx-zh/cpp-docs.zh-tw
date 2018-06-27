@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370516"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956274"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 類別
 協助 FTP 伺服器的網際網路檔案搜尋。  
@@ -88,14 +88,14 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pConnection`  
+ *pConnection*  
  指標`CFtpConnection`物件。 您可以藉由呼叫取得 FTP 連接[cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)。  
   
- `dwContext`  
+ *dwContext*  
  內容識別項`CFtpFileFind`物件。 請參閱**備註**如需有關此參數。  
   
 ### <a name="remarks"></a>備註  
- 預設值為`dwContext`MFC 所傳送的`CFtpFileFind`物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CFtpFileFind`物件。 您可以覆寫預設值，您選擇的值來設定內容識別碼。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
+ 預設值為*dwContext* MFC 所傳送的`CFtpFileFind`物件從[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件建立`CFtpFileFind`物件。 您可以覆寫預設值，您選擇的值來設定內容識別碼。 內容識別碼會傳回到[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供其所識別的物件上的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
 ### <a name="example"></a>範例  
   請參閱本主題稍早類別概觀中的範例。  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pstrName`  
+ *pstrName*  
  包含要尋找的檔案名稱的字串指標。 如果**NULL**，呼叫將會搜尋萬用字元 （*）。  
   
- `dwFlags`  
+ *dwFlags*  
  描述如何處理此工作階段旗標。 可以與位元 OR 運算子結合這些旗標 (&#124;)，如下：  
   
 -   INTERNET_FLAG_RELOAD 從線上取得資料，即使在本機快取。 這是預設旗標。  

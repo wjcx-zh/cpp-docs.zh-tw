@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0be2e87f77e047e1b29d99e562a67bb9f4f1ee9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383850"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951974"
 ---
 # <a name="tn001-window-class-registration"></a>TN001：視窗類別註冊
 此提示描述註冊特殊的 MFC 常式[WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es 所需的 Microsoft Windows。 特定`WNDCLASS`討論 MFC 和 Windows 所使用的屬性。  
   
 ## <a name="the-problem"></a>問題  
- 屬性的[CWnd](../mfc/reference/cwnd-class.md)物件，例如`HWND`處理在 Windows 中，會儲存在兩個地方： 視窗物件和`WNDCLASS`。 名稱`WNDCLASS`例如傳遞至一般視窗建立函式[cwnd:: Create](../mfc/reference/cwnd-class.md#create)和[CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create)中`lpszClassName`參數。  
+ 屬性的[CWnd](../mfc/reference/cwnd-class.md)物件，例如`HWND`處理在 Windows 中，會儲存在兩個地方： 視窗物件和`WNDCLASS`。 名稱`WNDCLASS`例如傳遞至一般視窗建立函式[cwnd:: Create](../mfc/reference/cwnd-class.md#create)和[CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create)中*lpszClassName*參數。  
   
  這`WNDCLASS`必須註冊到四個方法的其中一個：  
   
@@ -46,15 +46,15 @@ ms.locfileid: "33383850"
   
 |欄位|描述|  
 |-----------|-----------------|  
-|`lpfnWndProc`|視窗程序，必須是 `AfxWndProc`|  
-|`cbClsExtra`|不使用 （應為零）|  
-|`cbWndExtra`|不使用 （應為零）|  
-|`hInstance`|自動填滿[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
-|`hIcon`|框架視窗的圖示如下所示|  
-|`hCursor`|資料指標，當滑鼠經過視窗中，請參閱下面的|  
-|`hbrBackground`|背景色彩，請參閱下面|  
-|`lpszMenuName`|不使用 （應為 NULL）|  
-|`lpszClassName`|類別名稱，請參閱下面|  
+|*lpfnWndProc*|視窗程序，必須是 `AfxWndProc`|  
+|*cbClsExtra*|不使用 （應為零）|  
+|*cbWndExtra*|不使用 （應為零）|  
+|*hInstance*|自動填滿[AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|*hIcon*|框架視窗的圖示如下所示|  
+|*hCursor*|資料指標，當滑鼠經過視窗中，請參閱下面的|  
+|*hbrBackground*|背景色彩，請參閱下面|  
+|*lpszMenuName*|不使用 （應為 NULL）|  
+|*lpszClassName*|類別名稱，請參閱下面|  
   
 ## <a name="provided-wndclasses"></a>提供 WNDCLASSes  
  舊版的 MFC （之前 MFC 4.0)，提供數個預先定義的視窗類別。 預設不會再提供這些視窗類別。 應用程式應該使用`AfxRegisterWndClass`以適當的參數。  
@@ -105,7 +105,7 @@ pWnd->Create(strWndClass, ...);
  `AfxRegisterWndClass` 將會擲回[CResourceException](../mfc/reference/cresourceexception-class.md)如果視窗類別登錄失敗 （因為不正確的參數，或 Windows 記憶體不足）。  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass 和 AfxRegisterClass 函式  
- 如果您想要的任何項目更複雜的什麼`AfxRegisterWndClass`提供，您可以呼叫 Windows API`RegisterClass`或 MFC 函式`AfxRegisterClass`。 `CWnd`， [CFrameWnd](../mfc/reference/cframewnd-class.md)和[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`函式會接受`lpszClassName`視窗類別的第一個參數的字串名稱。 您可以使用任何已註冊的視窗類別名稱，不論您用來註冊它的方法。  
+ 如果您想要的任何項目更複雜的什麼`AfxRegisterWndClass`提供，您可以呼叫 Windows API`RegisterClass`或 MFC 函式`AfxRegisterClass`。 `CWnd`， [CFrameWnd](../mfc/reference/cframewnd-class.md)和[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create`函式會接受*lpszClassName*視窗類別的第一個參數的字串名稱。 您可以使用任何已註冊的視窗類別名稱，不論您用來註冊它的方法。  
   
  請務必使用`AfxRegisterClass`(或`AfxRegisterWndClass`) 中的 Win32 DLL。 Win32 不會自動取消註冊 dll，登錄，因此您必須明確地取消登錄類別終止 DLL 的類別。 使用`AfxRegisterClass`而不是`RegisterClass`這可讓您自動處理。 `AfxRegisterClass` 會維護一份唯一類別，您的 DLL 註冊，而且將會自動取消登錄 DLL 終止時。 當您使用`RegisterClass`在 DLL 中，您必須確定 DLL 終止時，會取消註冊所有類別 (在您[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)函式)。 這樣可能會導致`RegisterClass`意外失敗，另一個用戶端應用程式嘗試使用您的 DLL。  
   

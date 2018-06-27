@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f349c955724b66ccc8cb1b19fc826ca0b8354258
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385092"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951945"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>逐步解說：使用新的 MFC Shell 控制項
 在此逐步解說中，您會建立類似檔案總管的應用程式。 您將建立包含兩個窗格的視窗。 左的窗格將包含[CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)桌面上顯示階層式檢視中的物件。 在右窗格會包含[CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)的左窗格中選取的資料夾中顯示的檔案。  
@@ -31,7 +31,7 @@ ms.locfileid: "33385092"
   
 1.  使用**MFC 應用程式精靈**建立新的 MFC 應用程式。 若要從執行精靈，**檔案**功能表中選取**新增**，然後選取**專案**。 **新專案**會顯示對話方塊。  
   
-2.  在**新專案**對話方塊方塊中，展開  **Visual c + +** 節點**專案類型**窗格，然後選取**MFC**。 然後，在**範本**窗格中，選取**MFC 應用程式**。 輸入專案的名稱，例如`MFCShellControls`按一下**確定**。 **MFC 應用程式精靈**隨即出現。  
+2.  在**新專案**對話方塊方塊中，展開  **Visual c + +** 節點**專案類型**窗格，然後選取**MFC**。 然後，在**範本**窗格中，選取**MFC 應用程式**。 輸入專案的名稱，例如*MFCShellControls*按一下**確定**。 **MFC 應用程式精靈**隨即出現。  
   
 3.  在**MFC 應用程式精靈**對話方塊中，按一下 **下一步**。 **應用程式類型**窗格會顯示。  
   
@@ -65,18 +65,21 @@ ms.locfileid: "33385092"
   
      現在，加入成員變數的型別`CMFCShellListCtrl`。 首先，尋找下列註解標頭檔：  
   
- '' * / / 產生訊息對應函式  
+ ``` 
+    // Generated message map functions  
  ```  
   
-     Immediately above that comment add this code:  
+     正上方的註解加入這段程式碼：  
   
  ```  
-    私用： CMFCShellListCtrl m_wndList;  
+    private: 
+    CMFCShellListCtrl m_wndList;  
  ```  
   
-2.  The **MFC Application Wizard** already created a `CMFCShellTreeCtrl` object in the `CMainFrame` class, but it is a protected member. We will access this object later. Therefore, create an accessor for it now. Open the MainFrm.h header file by double-clicking it in the **Solution Explorer**. Locate the following comment:  
+2.  **MFC 應用程式精靈**已經建立`CMFCShellTreeCtrl`物件存放至`CMainFrame`類別，但它是受保護的成員。 我們稍後會存取此物件。 因此，現在建立它的存取子。 按兩下開啟 MainFrm.h 標頭檔**方案總管 中**。 找出下列註解：  
   
- ``` *// Attributes  
+ ``` 
+    // Attributes  
  ```  
   
      立即在其下方加入下列方法宣告：  
@@ -84,66 +87,50 @@ ms.locfileid: "33385092"
  ```  
     public: 
     CMFCShellTreeCtrl& GetShellTreeCtrl();
-
  ```  
   
      接下來，開啟 MainFrm.cpp 原始程式檔中按兩下**方案總管 中**。 在該檔案最下方，加入下列方法定義：  
   
  ```  
     CMFCShellTreeCtrl& CMainFrame::GetShellTreeCtrl()  
- {  
-    return m_wndTree;  
- }  
+    {  
+        return m_wndTree;  
+    }  
  ```  
   
-3.  現在我們更新`CMFCShellControlsView`類別處理**WM_CREATE** windows 訊息。 開啟 MFCShellControlsView.h 標頭檔，然後按一下這行程式碼：  
+3.  現在我們更新`CMFCShellControlsView`WM_CREATE windows 訊息處理的類別。 開啟 MFCShellControlsView.h 標頭檔，然後按一下這行程式碼：  
   
  ```  
     class CMFCShellControlsView : public CView  
  ```  
   
-     接下來，在**屬性**視窗中，按一下 **訊息**圖示。 向下捲動，直到您找到**WM_CREATE**訊息。 從下拉式清單旁邊的清單**WM_CREATE**，選取**\<新增 > OnCreate**。 這會為我們的訊息處理常式，並且 MFC 訊息對應會自動更新。  
+     接下來，在**屬性**視窗中，按一下 **訊息**圖示。 向下捲動，直到您找到 WM_CREATE 訊息。 從下拉式清單 WM_CREATE 旁邊，選取*\<新增 > OnCreate*。 這會為我們的訊息處理常式，並且 MFC 訊息對應會自動更新。  
   
      在`OnCreate`方法現在我們將建立我們`CMFCShellListCtrl`物件。 尋找`OnCreate`中 MFCShellControlsView.cpp 方法定義來源檔案，並以下列程式碼取代它的實作：  
   
  ```  
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)  
- {  
-    if (CView::OnCreate(lpCreateStruct) == -1)  
-    return -1;  
- 
-    CRect rectDummy (0,
-    0,
-    0,
-    0);
-
-    m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
-    rectDummy,
-    this,
-    1);
-
- 
-    return 0;  
- }  
+    {  
+        if (CView::OnCreate(lpCreateStruct) == -1)  
+            return -1;  
+     
+        CRect rectDummy (0, 0, 0, 0);
+    
+        m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT, rectDummy, this, 1);
+    
+        return 0;  
+    }  
  ```  
   
-4.  重複上述步驟，但針對**WM_SIZE**訊息。 這會導致您的應用程式檢視，來重新繪製每次使用者變更應用程式視窗的大小。 取代為定義`OnSize`方法取代下列程式碼：  
+4.  重複上述步驟，但 WM_SIZE 訊息。 這會導致您的應用程式檢視，來重新繪製每次使用者變更應用程式視窗的大小。 取代為定義`OnSize`方法取代下列程式碼：  
   
  ```  
-    void CMFCShellControlsView::OnSize(UINT nType,
-    int cx,
-    int cy)  
- {  
-    CView::OnSize(nType,
-    cx,
-    cy);
-
-    m_wndList.SetWindowPos(NULL, -1, -1,
-    cx,
-    cy,  
-    SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
-
- }  
+    void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)  
+    {  
+        CView::OnSize(nType, cx, cy);
+    
+        m_wndList.SetWindowPos(NULL, -1, -1, cx, cy, SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
+    }  
  ```  
   
 5.  最後一個步驟是將連線`CMFCShellTreeCtrl`和`CMFCShellListCtrl`物件使用[CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist)方法。 呼叫這個方法之後,`CMFCShellListCtrl`會自動顯示在選取之項目的內容`CMFCShellTreeCtrl`。 我們會執行此作業`OnActivateView`方法，它會覆寫從[CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview)。  
@@ -152,30 +139,21 @@ ms.locfileid: "33385092"
   
  ```  
     protected: 
-    virtual void OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView);
-
+    virtual void OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView);
  ```  
   
      接下來，將此方法的定義加入至 MFCShellControlsView.cpp 原始程式檔：  
   
  ```  
-    void CMFCShellControlsView::OnActivateView(BOOL bActivate,  
-    CView* pActivateView,  
-    CView* pDeactiveView)   
- {  
-    if (bActivate&& AfxGetMainWnd() != NULL)  
- {  
- ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
-
- }  
- 
-    CView::OnActivateView(bActivate,
-    pActivateView,
-    pDeactiveView);
-
- }  
+    void CMFCShellControlsView::OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView)   
+    {  
+        if (bActivate&& AfxGetMainWnd() != NULL)  
+        {  
+            ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
+        }  
+     
+        CView::OnActivateView(bActivate, pActivateView, pDeactiveView);
+    }  
  ```  
   
      因為我們將會呼叫方法，從`CMainFrame`類別中，我們必須加入`#include`MFCShellControlsView.cpp 原始程式檔頂端指示詞：  
@@ -198,4 +176,3 @@ ms.locfileid: "33385092"
   
 ## <a name="see-also"></a>另請參閱  
  [逐步解說](../mfc/walkthroughs-mfc.md)
-

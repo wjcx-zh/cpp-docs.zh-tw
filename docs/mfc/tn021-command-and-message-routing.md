@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 22fcb3f9815e5100251e6bf478c6714fbb0b7df3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384946"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955718"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021：命令和訊息路由
 > [!NOTE]
@@ -34,11 +34,11 @@ ms.locfileid: "33384946"
  請參閱 Visual c + + 的一般詳細資料，在此處描述的架構上特別區分 Windows 訊息、 控制通知和命令。 這個附註會假設您很熟悉列印文件中所述的問題，並僅解決非常進階的主題。  
   
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>命令傳送和分派 MFC 1.0 發展至 MFC 2.0 的功能架構  
- Windows 具有**WM_COMMAND**多載之後可提供功能表命令對應鍵及對話方塊控制項通知的通知的訊息。  
+ Windows 具有多載之後可提供通知的功能表命令、 快速鍵和對話方塊控制項告知的 WM_COMMAND 訊息。  
   
- MFC 1.0 的有點藉由使用命令處理常式 (例如，"OnFileNew") 內建**CWnd**衍生類別呼叫以回應特定**WM_COMMAND**。 黏附以及稱為訊息對應的資料結構，並導致空間非常有效率的命令機制。  
+ MFC 1.0 的有點藉由使用命令處理常式 (例如，"OnFileNew") 內建`CWnd`衍生類別呼叫以回應特定的 WM_COMMAND。 黏附以及稱為訊息對應的資料結構，並導致空間非常有效率的命令機制。  
   
- MFC 1.0 也會提供額外的功能，來分隔命令訊息的通知控制項。 命令會以 16 位元識別碼，有時也稱為命令識別碼。 正常啟動命令**CFrameWnd** （也就是功能表中選取或翻譯的 accelerator） 取得路由傳送至各種不同的 其他視窗。  
+ MFC 1.0 也會提供額外的功能，來分隔命令訊息的通知控制項。 命令會以 16 位元識別碼，有時也稱為命令識別碼。 正常啟動命令`CFrameWnd`（也就是功能表中選取或翻譯的 accelerator） 取得路由傳送至各種不同的 其他視窗。  
   
  MFC 1.0 會使用命令傳送有限的意義上，針對多重文件介面 (MDI) 的實作。 （MDI 框架視窗會委派其作用中的 MDI 子視窗的命令）。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "33384946"
   
 -   也許在用於建立工具列的識別碼陣列。  
   
--   在**ON_COMMAND**巨集。  
+-   ON_COMMAND 巨集。  
   
--   也許在**ON_UPDATE_COMMAND_UI**巨集。  
+-   也許在 ON_UPDATE_COMMAND_UI 巨集。  
   
  目前，只有在需要的命令 Id 的 MFC 實作是 > = 0x8000 是 GOSUB 對話方塊/命令的實作。  
   
@@ -78,23 +78,23 @@ ms.locfileid: "33384946"
   
  您可以在一般的強制回應對話方塊，設定為適當的命令 id。 按鈕的外觀與一般按鈕 當使用者選取按鈕時，對話方塊 （通常是主框架視窗） 的擁有者會取得命令，就像任何其他命令一樣。 這就稱為 GOSUB 命令，因為它通常用來顯示其他對話方塊 (GOSUB 的第一個對話方塊)。  
   
- 您也可以呼叫此函式**CWnd::UpdateDialogControls**上您的對話方塊，並將它傳遞的主框架視窗的位址。 此函式將會啟用或停用您根據它們是否有命令處理常式之框架中的對話方塊控制項。 呼叫此函式會自動為您的控制列在您的應用程式閒置迴圈中，但您必須針對您想要讓這項功能的標準對話方塊直接呼叫它。  
+ 您也可以呼叫此函式`CWnd::UpdateDialogControls`上您的對話方塊，並將它傳遞的主框架視窗的位址。 此函式將會啟用或停用您根據它們是否有命令處理常式之框架中的對話方塊控制項。 呼叫此函式會自動為您的控制列在您的應用程式閒置迴圈中，但您必須針對您想要讓這項功能的標準對話方塊直接呼叫它。  
   
 ## <a name="when-onupdatecommandui-is-called"></a>ON_UPDATE_COMMAND_UI 呼叫時  
- 維持啟用/核取狀態的所有程式的功能表項目可以是高度耗費計算能力的問題。 啟用/核取功能表項目只在使用者選取快顯視窗時，才是常用的技巧。 MFC 2.0 實作**CFrameWnd**控點**WM_INITMENUPOPUP**訊息，判斷透過功能表的狀態使用的命令路由架構**ON_UPDATE_COMMAND_UI**處理常式。  
+ 維持啟用/核取狀態的所有程式的功能表項目可以是高度耗費計算能力的問題。 啟用/核取功能表項目只在使用者選取快顯視窗時，才是常用的技巧。 MFC 2.0 實作`CFrameWnd`WM_INITMENUPOPUP 訊息的處理，並使用命令路由架構決定功能表透過 ON_UPDATE_COMMAND_UI 處理常式的狀態。  
   
- **CFrameWnd**也會處理**WM_ENTERIDLE**描述目前功能表項目選取狀態列的 （也稱為訊息列） 的訊息。  
+ `CFrameWnd` 也可以處理 WM_ENTERIDLE 訊息來描述目前功能表項目選取狀態列的 （也稱為訊息列）。  
   
- 應用程式功能表結構編輯 Visual c + + 中，用來代表潛在的命令位於**WM_INITMENUPOPUP**時間。 **ON_UPDATE_COMMAND_UI**處理常式可以修改的狀態或文字的功能表或功能表的進階的用法 （例如檔案 MRU 清單或 OLE 動詞命令的快顯功能表），實際修改之前的功能表結構會繪製。  
+ Visual c + + 中，編輯的應用程式功能表結構用來代表潛在的命令適用於 WM_INITMENUPOPUP 階段。 ON_UPDATE_COMMAND_UI 處理常式可以修改的狀態或文字的功能表，或供進階使用 （檔案 MRU 清單或 OLE 動詞命令的快顯功能表），實際修改功能表結構功能表繪製前。  
   
- 相同的排序**ON_UPDATE_COMMAND_UI**工具列 （和其他控制項列） 進行處理時的應用程式進入其閒置迴圈。 請參閱*類別庫參考*和[技術提示 31](../mfc/tn031-control-bars.md)如需有關控制列。  
+ ON_UPDATE_COMMAND_UI 處理的相同排序基於工具列 （和其他控制項列） 應用程式時進入其閒置迴圈。 請參閱*類別庫參考*和[技術提示 31](../mfc/tn031-control-bars.md)如需有關控制列。  
   
 ## <a name="nested-pop-up-menus"></a>巢狀快顯功能表  
- 如果您使用巢狀的功能表結構，您會注意到**ON_UPDATE_COMMAND_UI**在兩個不同的情況下會呼叫第一個功能表項目的快顯功能表中的處理常式。  
+ 如果您使用巢狀的功能表結構，您會發現快顯功能表中的第一個功能表項目 ON_UPDATE_COMMAND_UI 處理常式會在兩個不同的情況下呼叫。  
   
- 首先，它是針對快顯功能表本身呼叫。 這是必要的因為快顯功能表中沒有識別碼，我們使用的快顯功能表的第一個功能表項目識別碼來參考整個快顯功能表。 在此情況下， **m_pSubMenu**成員變數**CCmdUI**物件會為非 NULL，將會為快顯功能表。  
+ 首先，它是針對快顯功能表本身呼叫。 這是必要的因為快顯功能表中沒有識別碼，我們使用的快顯功能表的第一個功能表項目識別碼來參考整個快顯功能表。 在此情況下， *m_pSubMenu*成員變數`CCmdUI`物件會為非 NULL，將會為快顯功能表。  
   
- 第二，它稱為之前所要繪製的快顯功能表中的功能表項目。 在此情況下，識別碼是指只第一個功能表項目和**m_pSubMenu**成員變數**CCmdUI**物件會是 NULL。  
+ 第二，它稱為之前所要繪製的快顯功能表中的功能表項目。 在此情況下，識別碼是指只第一個功能表項目和*m_pSubMenu*成員變數`CCmdUI`物件會是 NULL。  
   
  這可讓您啟用快顯功能表不同於其功能表項目，但您必須撰寫一些功能表感知程式碼。 例如，在具有下列結構的巢狀功能表：  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384865"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954591"
 ---
 # <a name="using-tree-controls"></a>使用樹狀目錄控制項
 樹狀目錄控制項的一般使用方式 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 遵循下列模式：  
@@ -31,7 +31,7 @@ ms.locfileid: "33384865"
   
 -   將資料放入控制項，藉由呼叫`CTreeCtrl`的[InsertItem](../mfc/reference/ctreectrl-class.md#insertitem)函式，針對每個資料項目執行一次。 `InsertItem` 控制代碼傳回至項目，以便日後參考，例如當加入子項目。 初始化資料的好時機處於`OnInitDialog`（適用於在對話方塊中的控制項） 或`OnInitialUpdate`（適用於檢視）。  
   
--   當使用者與控制項互動時，它會傳送各種通知訊息。 您可以指定函式，以處理每個您想要加上處理的訊息**ON_NOTIFY_REFLECT**巨集在控制項視窗的訊息對應，或藉由新增`ON_NOTIFY`父視窗的訊息對應巨集。 請參閱[樹狀目錄控制項通知訊息](../mfc/tree-control-notification-messages.md)本主題稍後的一份可能的通知。  
+-   當使用者與控制項互動時，它會傳送各種通知訊息。 您可以指定函式，以處理每個您想要在控制項視窗的訊息對應中加入 ON_NOTIFY_REFLECT 巨集或將 ON_NOTIFY 巨集加入至父視窗的訊息對應處理的訊息。 請參閱[樹狀目錄控制項通知訊息](../mfc/tree-control-notification-messages.md)本主題稍後的一份可能的通知。  
   
 -   呼叫各種 Set 成員函式以設定控制項的值。 您可以進行的變更包括設定縮排和變更文字、 影像或項目相關聯的資料。  
   

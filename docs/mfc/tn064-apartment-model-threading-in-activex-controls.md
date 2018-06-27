@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383184"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950431"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064：ActiveX 控制項中的 Apartment Model 執行緒
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33383184"
  啟用 apartment model 執行緒很容易大部分的控制項，特別是當他們有少量或沒有共用的資料。  
   
 ## <a name="protecting-shared-data"></a>保護共用資料  
- 如果您的控制項使用共用的資料，例如靜態成員變數，存取資料應受到保護以防止多個執行緒同時修改資料的重要區段。 若要設定針對此用途的重要區段，宣告類別的靜態成員變數`CCriticalSection`控制項的類別中。 使用`Lock`和**Unlock**這個關鍵區段的成員函式物件，只要您的程式碼存取的共用的資料。  
+ 如果您的控制項使用共用的資料，例如靜態成員變數，存取資料應受到保護以防止多個執行緒同時修改資料的重要區段。 若要設定針對此用途的重要區段，宣告類別的靜態成員變數`CCriticalSection`控制項的類別中。 使用`Lock`和`Unlock`這個關鍵區段的成員函式物件，只要您的程式碼存取的共用的資料。  
   
  例如，考慮需要維護共用的所有執行個體的字串控制項類別。 這個字串可以在靜態成員變數中維護，保護的重要區段。 控制項的類別宣告就會包含下列各項：  
   
@@ -81,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>註冊 Apartment 模型感知的控制項  
- 支援 apartment model 執行緒的控制項應該在其類別識別碼登錄項目中的 「 Apartment 」 值加上"ThreadingModel 」 的具名的值會指出在登錄中，這項功能*類別識別碼*\\ **InprocServer32**索引鍵。 若要使這個機碼來自動註冊您的控制項，傳遞`afxRegApartmentThreading`第六個參數中的旗標`AfxOleRegisterControlClass`:  
+ 支援 apartment model 執行緒的控制項應該在其類別識別碼登錄項目中的 「 Apartment 」 值加上"ThreadingModel 」 的具名的值會指出在登錄中，這項功能*類別識別碼*\\ **InprocServer32**索引鍵。 若要使這個機碼來自動註冊您的控制項，傳遞*afxRegApartmentThreading*第六個參數中的旗標`AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -108,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  如果您的控制項專案所產生 ControlWizard Visual c + + 版本 4.1 或更新版本中，已經會出現在您的程式碼這個旗標。 不不需要註冊的執行緒模型的任何變更。  
   
- 如果您的專案由舊版的 ControlWizard 產生，現有的程式碼將第六個參數有布林值。 如果現有的參數為 TRUE，將它變更為`afxRegInsertable | afxRegApartmentThreading`。 如果現有的參數為 FALSE，將它變更為`afxRegApartmentThreading`。  
+ 如果您的專案由舊版的 ControlWizard 產生，現有的程式碼將第六個參數有布林值。 如果現有的參數為 TRUE，將它變更為*afxRegInsertable | afxRegApartmentThreading*。 如果現有的參數為 FALSE，將它變更為*afxRegApartmentThreading*。  
   
- 如果您的控制項不符合 apartment model 執行緒的規則，您必須傳遞`afxRegApartmentThreading`此參數中。  
+ 如果您的控制項不符合 apartment model 執行緒的規則，您必須傳遞*afxRegApartmentThreading*此參數中。  
   
 ## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   

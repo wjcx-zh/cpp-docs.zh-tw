@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352602"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953096"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 類別
 表示序列化例外狀況  
@@ -69,7 +69,7 @@ class CArchiveException : public CException
  **標頭：** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- 建構`CArchiveException`儲存的值物件`cause`物件中。  
+ 建構`CArchiveException`儲存的值物件*導致*物件中。  
   
 ```  
 CArchiveException(
@@ -78,10 +78,10 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cause`  
+ *可能的原因*  
  列舉型別變數，指出例外狀況的原因。 如需列舉值的清單，請參閱[m_cause](#m_cause)資料成員。  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  包含名稱的字串會指向`CArchive`造成例外狀況的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -97,7 +97,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此資料成員是 `int` 類型的公用變數。 其值會由`CArchiveException`列舉型別。 列舉程式及其意義如下：  
+ 此資料成員是類型的公用變數**int**。其值會由`CArchiveException`列舉型別。 列舉程式及其意義如下：  
   
 - **CArchiveException::none**未發生任何錯誤。  
   

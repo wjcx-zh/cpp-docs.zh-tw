@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76325d2b078f51860cad7fa3fab61ed7c518a41c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 50e7cb936c55ced1f16a325a031dccd1edde7d06
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382846"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951903"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>在工具列控制項中使用影像清單
 根據預設，在工具列控制項中的按鈕所使用的影像會儲存成單一的點陣圖。 不過，您也可以儲存按鈕影像的影像清單集合中。 工具列控制項物件可以使用最多三個不同的影像清單：  
@@ -30,7 +30,7 @@ ms.locfileid: "33382846"
   
 -   停用映像清單包含目前已停用的工具列按鈕的影像。  
   
--   反白顯示的影像清單包含目前反白顯示的工具列按鈕的影像。 工具列會使用時，才使用此映像清單**TBSTYLE_FLAT**樣式。  
+-   反白顯示的影像清單包含目前反白顯示的工具列按鈕的影像。 只有在工具列會使用 TBSTYLE_FLAT 樣式時，才使用此映像清單。  
   
  這些映像清單時，使用工具列控制項將它們與產生關聯`CToolBarCtrl`物件。 此關聯完成藉由呼叫[CToolBarCtrl::SetImageList](../mfc/reference/ctoolbarctrl-class.md#setimagelist)， [SetDisabledImageList](../mfc/reference/ctoolbarctrl-class.md#setdisabledimagelist)，和[SetHotImageList](../mfc/reference/ctoolbarctrl-class.md#sethotimagelist)。  
   

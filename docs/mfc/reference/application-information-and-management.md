@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41b6aa602956c6dcdeda8f6b8c24c1be48c58ce2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ecb761caaeabdd9b4d77f1713bd79a812a3c1a9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358478"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952487"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 當您撰寫應用程式時，您會建立單一[CWinApp](../../mfc/reference/cwinapp-class.md)-衍生物件。 有時候，您可能想要取得此物件從外部的相關資訊`CWinApp`-衍生物件。 或者，您可能需要其他全域"mananger 」 物件的存取權。
@@ -84,7 +84,7 @@ CWinThread* AfxBeginThread(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pfnThreadProc`  
+ *pfnThreadProc*  
  指向以背景工作執行緒控制函式。 不能**NULL**。 此函式必須宣告，如下所示：  
   
  `UINT __cdecl MyControllingFunction( LPVOID pParam );`  
@@ -93,22 +93,22 @@ CWinThread* AfxBeginThread(
  物件的 RUNTIME_CLASS 衍生自[CWinThread](../../mfc/reference/cwinthread-class.md)。  
   
  *pParam*  
- 參數要傳遞給控制函式中的函式宣告的參數中所示`pfnThreadProc`。  
+ 參數要傳遞給控制函式中的函式宣告的參數中所示*pfnThreadProc*。  
   
- `nPriority`  
+ *nPriority*  
  所需的執行緒的優先權。 如需完整清單和描述可用的優先順序，請參閱[SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows SDK 中。  
   
- `nStackSize`  
+ *nStackSize*  
  指定的大小，以位元組為單位的新執行緒的堆疊。 如果為 0，堆疊大小預設堆疊大小相同與建立的執行緒。  
   
- `dwCreateFlags`  
+ *dwCreateFlags*  
  指定控制的執行緒建立的額外旗標。 這個旗標可以包含兩個值之一：  
   
 - **CREATE_SUSPENDED**暫停計數為其中一個啟動執行緒。 使用**CREATE_SUSPENDED**如果您想要初始化的任何成員資料`CWinThread`物件，例如[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)或衍生類別中，執行緒開始執行之前的任何成員。 當您初始化完成之後，使用[CWinThread::ResumeThread](../../mfc/reference/cwinthread-class.md#resumethread)開始執行的執行緒。 執行緒不會執行直到`CWinThread::ResumeThread`呼叫。  
   
 - **0**在建立後立即啟動執行緒。  
   
- `lpSecurityAttrs`  
+ *lpSecurityAttrs*  
  指向[ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定在執行緒的安全性屬性。 如果**NULL**，相同的安全性屬性，因為會使用建立的執行緒。 如需有關此結構的詳細資訊，請參閱 Windows SDK。  
   
 ### <a name="return-value"></a>傳回值  
@@ -175,7 +175,7 @@ void AFXAPI AfxEndThread(
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );  
 ```
 ### <a name="parameters"></a>參數  
- `lpszName`  
+ *lpszName*  
  包含資源 ID 之字串的指標。    
  *lpszType*  
  資源類型的指標。 如需資源類型的清單，請參閱[FindResource](http://msdn.microsoft.com/library/windows/desktop/ms648042) Windows SDK 中。  
@@ -225,7 +225,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
   
  使用 `AfxLoadLibrary` 對應 DLL 模組。  
   
- 務必使用`AfxFreeLibrary`和`AfxLoadLibrary`(而不是 Win32 函式**FreeLibrary**和**LoadLibrary**) 如果您的應用程式使用多個執行緒。 使用`AfxLoadLibrary`和`AfxFreeLibrary`可確保 MFC 擴充 DLL 會載入並卸載未損毀全域 MFC 狀態時執行的啟動和關閉程式碼。  
+ 務必使用`AfxFreeLibrary`和`AfxLoadLibrary`(而不是 Win32 函式`FreeLibrary`和`LoadLibrary`) 如果您的應用程式使用多個執行緒。 使用`AfxLoadLibrary`和`AfxFreeLibrary`可確保 MFC 擴充 DLL 會載入並卸載未損毀全域 MFC 狀態時執行的啟動和關閉程式碼。  
   
 ### <a name="example"></a>範例  
  請參閱範例的[AfxLoadLibrary](#afxloadlibrary)。  
@@ -297,12 +297,12 @@ CWnd* AFXAPI AfxGetMainWnd();
 ### <a name="return-value"></a>傳回值  
  如果伺服器具有在容器內就地使用中的物件，且此容器也正在使用中，則此函式會傳回包含就地使用中文件的框架視窗物件的指標。  
   
- 如果容器內沒有任何就地使用中的物件，或者應用程式並非 OLE 伺服器，則此函式只會傳回應用程式物件的 `m_pMainWnd`。  
+ 如果不是就地啟用作用中的容器中的物件，或您的應用程式不是 OLE 伺服器，此函式只會傳回*m_pMainWnd*應用程式物件。  
   
  如果從應用程式的主執行緒呼叫 `AfxGetMainWnd`，則它會根據上述規則傳回應用程式的主視窗。 如果從應用程式的次要執行緒呼叫函式時，則函式會傳回與發出呼叫的執行緒關聯的主視窗。  
   
 ### <a name="remarks"></a>備註  
- 如果您的應用程式不是 OLE 伺服器，則呼叫此函式和直接參考應用程式物件的 `m_pMainWnd` 成員的功用相同。  
+ 如果您的應用程式不是 OLE 伺服器，則呼叫此函式相當直接參考*m_pMainWnd*應用程式物件的成員。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCWindowing#129](../../mfc/reference/codesnippet/cpp/application-information-and-management_4.cpp)]  
@@ -329,7 +329,7 @@ BOOL AFXAPI AfxGetPerUserRegistration();
   **標頭**afxstat_.h    
   
 ##  <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle  
- 使用`HINSTANCE`應用程式的資源直接存取，例如，對 Windows 函式中呼叫此函數所傳回的控制代碼**FindResource**。  
+ 使用`HINSTANCE`應用程式的資源直接存取，例如，對 Windows 函式中呼叫此函數所傳回的控制代碼`FindResource`。  
   
 ```   
 extern HINSTANCE  AfxGetResourceHandle(); 
@@ -406,7 +406,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  從 `CWnd`衍生之物件的指標。  
    
 ### <a name="return-value"></a>傳回值  
@@ -442,14 +442,14 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>參數  
- [輸入] `pWnd`  
+ [in]*pWnd*  
  從 `CWnd`衍生之物件的指標。  
    
 ### <a name="return-value"></a>傳回值  
  如果提供的視窗是工具列物件為 `TRUE`；否則為 `FALSE`。  
    
 ### <a name="remarks"></a>備註  
- 如果 `TRUE` 衍生自 `pWnd`，這個方法會傳回 `CMFCToolBar`。 當您必須驗證函式或方法參數是否為 `CMFCToolBar` 物件時，這個方法就很有用。  
+ 這個方法會傳回`TRUE`如果*pWnd*衍生自`CMFCToolBar`。 當您必須驗證函式或方法參數是否為 `CMFCToolBar` 物件時，這個方法就很有用。  
    
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
@@ -510,7 +510,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
   
  每個處理序會維護每個載入的程式庫模組的參考計數。 此參考計數會遞增每次`AfxLoadLibrary`呼叫而且每次都會遞減`AfxFreeLibrary`呼叫。 在參考計數達到零時，模組就從呼叫處理序的位址空間取消對應，且控制代碼不再有效。  
   
- 務必使用`AfxLoadLibrary`和`AfxFreeLibrary`(而不是 Win32 函式**LoadLibrary**和**FreeLibrary**) 如果您的應用程式使用多個執行緒，而且它會以動態方式載入 MFC擴充 DLL。 使用`AfxLoadLibrary`和`AfxFreeLibrary`確保執行時載入及卸載 MFC 擴充 DLL 的啟動和關閉程式碼而損毀全域 MFC 狀態。  
+ 務必使用`AfxLoadLibrary`和`AfxFreeLibrary`(而不是 Win32 函式`LoadLibrary`和`FreeLibrary`) 如果您的應用程式使用多個執行緒，而且它會以動態方式載入的 MFC 擴充 DLL。 使用`AfxLoadLibrary`和`AfxFreeLibrary`確保執行時載入及卸載 MFC 擴充 DLL 的啟動和關閉程式碼而損毀全域 MFC 狀態。  
   
  使用`AfxLoadLibrary`應用程式中必須要動態連結至 MFC 的 DLL 版本; 的標頭檔`AfxLoadLibrary`，Afxdll_.h，僅包含如果 MFC 連結到 dll 的應用程式。 這是根據設計，因為您必須將連結至 MFC 的 DLL 版本使用或建立 MFC 擴充 Dll。  
   
@@ -567,7 +567,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="remarks"></a>備註  
  如果您使用這個函式，類別會在卸載 DLL 時自動解除登錄。  
   
- 在非 DLL 組建`AfxRegisterClass`識別項定義為巨集對應至 Windows 函式**RegisterClass**，因為登錄應用程式中的類別會自動解除登錄。 如果您使用`AfxRegisterClass`而不是**RegisterClass**，可以使用您的程式碼，而不需要在應用程式和 DLL 中的變更。  
+ 在非 DLL 組建`AfxRegisterClass`識別項定義為巨集對應至 Windows 函式`RegisterClass`，因為登錄應用程式中的類別會自動解除登錄。 如果您使用`AfxRegisterClass`而不是`RegisterClass`，可以使用您的程式碼，而不需要在應用程式和 DLL 中的變更。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_DLL#3](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]  
@@ -598,17 +598,17 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
   
 -   將圖示設定為標準的旗標 Windows 標誌圖示。  
   
- `hCursor`  
+ *hCursor*  
  指定將在從視窗類別建立之各個視窗中安裝的游標資源控制代碼。 如果您使用預設值是**0**，您會取得標準**IDC_ARROW**資料指標。  
   
  *hbrBackground*  
  指定將在從視窗類別建立之各個視窗中安裝的筆刷資源控制代碼。 如果您使用預設值是**0**，您必須**NULL**背景筆刷，視窗會您，根據預設，不會清除它的背景處理[WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055)。  
   
- `hIcon`  
+ *hIcon*  
  指定將在從視窗類別建立之各個視窗中安裝的圖示資源控制代碼。 如果您使用預設值是**0**，就會呈現標準的旗標 Windows 標誌圖示。  
   
 ### <a name="return-value"></a>傳回值  
- 包含類別名稱的以 NULL 結尾字串。 您可以傳遞至這個類別名稱**建立**成員函式中的`CWnd`或其他**CWnd-** 衍生類別來建立視窗。 此名稱是由 MFC 程式庫所產生。  
+ 包含類別名稱的以 NULL 結尾字串。 您可以傳遞至這個類別名稱`Create`成員函式中的`CWnd`或其他**CWnd-** 衍生類別來建立視窗。 此名稱是由 MFC 程式庫所產生。  
   
 > [!NOTE]
 >  傳回值是靜態緩衝區的指標。 若要儲存此字串，請將它指派給 `CString` 變數。  
@@ -636,7 +636,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** ( **HKCR**)。  
   
 ### <a name="remarks"></a>備註  
@@ -660,7 +660,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hInstResource`  
+ *hInstResource*  
  載入應用程式的資源的 .EXE 或 DLL 檔的執行個體或模組控制代碼。  
   
 ### <a name="example"></a>範例  
@@ -691,8 +691,8 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpwsaData`  
- 指標[WSADATA](../../mfc/reference/wsadata-structure.md)結構。 如果`lpwsaData`不等於`NULL`的位址`WSADATA`結構會填入呼叫`WSAStartup`。 此函式也可確保`WSACleanup`應用程式終止前，為您呼叫。  
+ *lpwsaData*  
+ 指標[WSADATA](../../mfc/reference/wsadata-structure.md)結構。 如果*lpwsaData*不等於`NULL`的位址`WSADATA`結構會填入呼叫`WSAStartup`。 此函式也可確保`WSACleanup`應用程式終止前，為您呼叫。  
   
 ### <a name="return-value"></a>傳回值  
  如果函式成功則為非零，否則為 0。  
@@ -730,16 +730,16 @@ BOOL AFXAPI AfxWinInit(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hInstance`  
+ *hInstance*  
  目前正在執行的模組控制代碼。  
   
  *hPrevInstance*  
  應用程式的上一個執行個體控制代碼。 Win32 應用程式，這個參數是一律**NULL**。  
   
- `lpCmdLine`  
+ *lpCmdLine*  
  指向以 null 終止的字串，指定命令列應用程式。  
   
- `nCmdShow`  
+ *nCmdShow*  
  指定會顯示 GUI 應用程式的主視窗的方式。  
   
 ### <a name="remarks"></a>備註  

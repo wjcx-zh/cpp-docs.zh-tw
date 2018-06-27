@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1627d11c5c55c62e39092882177ec893cefb89a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366417"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956514"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 類別
 CFolderPickerDialog 類別實作資料夾選擇器模式的 CFileDialog。  
@@ -75,16 +75,16 @@ explicit CFolderPickerDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszFolder`  
+ *lpszFolder*  
  初始的資料夾。  
   
- `dwFlags`  
+ *dwFlags*  
  讓您自訂對話方塊中的一個或多個旗標的組合。  
   
- `pParentWnd`  
+ *pParentWnd*  
  對話方塊物件的父系或擁有者視窗的指標。  
   
- `dwSize`  
+ *dwSize*  
  OPENFILENAME 結構的大小。  
   
 ### <a name="remarks"></a>備註  

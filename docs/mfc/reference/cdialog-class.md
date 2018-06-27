@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f36dae3c383aebedf7e8340188e78961066a30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ae7748c249cb9c7752b55d07bf10278c9c7f4ce
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374610"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955010"
 ---
 # <a name="cdialog-class"></a>CDialog 類別
 用於在螢幕上顯示對話方塊的基底類別。  
@@ -97,7 +97,7 @@ class CDialog : public CWnd
   
 |名稱|描述|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|若要執行的取消按鈕或 ESC 鍵的動作會覆寫。 預設會關閉對話方塊和**DoModal**傳回**IDCANCEL**。|  
+|[CDialog::OnCancel](#oncancel)|若要執行的取消按鈕或 ESC 鍵的動作會覆寫。 預設會關閉對話方塊和`DoModal`傳回**IDCANCEL**。|  
 |[CDialog::OnOK](#onok)|覆寫以執行強制回應對話方塊中的 [確定] 按鈕的動作。 預設會關閉對話方塊和`DoModal`傳回**IDOK**。|  
   
 ## <a name="remarks"></a>備註  
@@ -113,7 +113,7 @@ class CDialog : public CWnd
   
  資料對應會產生以自動處理的成員變數和對話方塊的控制項之間的資料交換。 資料對應提供初始化的控制項在對話方塊中，以適當的值的函式、 擷取資料，並驗證資料。  
   
- 若要建立強制回應對話方塊中，建構使用您的衍生的對話方塊類別的建構函式的堆疊上的物件，然後呼叫`DoModal`建立對話方塊視窗和其控制項。 如果您想要建立非強制回應對話方塊時，呼叫**建立**對話方塊類別的建構函式中。  
+ 若要建立強制回應對話方塊中，建構使用您的衍生的對話方塊類別的建構函式的堆疊上的物件，然後呼叫`DoModal`建立對話方塊視窗和其控制項。 如果您想要建立非強制回應對話方塊時，呼叫`Create`對話方塊類別的建構函式中。  
   
  您也可以建立在記憶體中的範本，使用[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)資料結構的 Windows SDK 中所述。 建構之後`CDialog`物件，呼叫[CreateIndirect](#createindirect)建立非強制回應對話方塊中或呼叫[InitModalIndirect](#initmodalindirect)和[DoModal](#domodal)建立強制回應對話方塊。  
   
@@ -166,13 +166,13 @@ CDialog();
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含的對話方塊範本資源名稱的以 null 結尾字串。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含對話方塊範本資源的識別碼。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設為主要的應用程式視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -182,10 +182,10 @@ CDialog();
   
  您的其中一種以上的方法建構強制回應對話方塊之後，請呼叫`DoModal`。  
   
- 若要建構非強制回應對話方塊，請使用 受保護的形式`CDialog`建構函式。 建構函式是受到保護，因為您必須衍生您自己的對話方塊類別來實作非強制回應對話方塊。 非強制回應對話方塊的建構是兩步驟程序。 第一次呼叫建構函式。然後呼叫**建立**成員函式來建立資源為基礎的對話方塊，或呼叫`CreateIndirect`從記憶體中的範本建立的對話方塊。  
+ 若要建構非強制回應對話方塊，請使用 受保護的形式`CDialog`建構函式。 建構函式是受到保護，因為您必須衍生您自己的對話方塊類別來實作非強制回應對話方塊。 非強制回應對話方塊的建構是兩步驟程序。 第一次呼叫建構函式。然後呼叫`Create`成員函式來建立資源為基礎的對話方塊，或呼叫`CreateIndirect`從記憶體中的範本建立的對話方塊。  
   
 ##  <a name="create"></a>  CDialog::Create  
- 呼叫**建立**建立使用對話方塊範本資源的非強制回應對話方塊。  
+ 呼叫`Create`建立使用對話方塊範本資源的非強制回應對話方塊。  
   
 ```  
 virtual BOOL Create(
@@ -199,30 +199,30 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  包含的對話方塊範本資源名稱的以 null 結尾字串。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向父視窗物件 (型別[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設為主要的應用程式視窗。  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  包含對話方塊範本資源的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
  這兩種形式傳回非零，如果對話方塊建立和初始化成功。否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 您可以將呼叫**建立**內之建構函式或呼叫建構函式之後叫用它。  
+ 您可以將呼叫`Create`內之建構函式或呼叫建構函式之後叫用它。  
   
- 兩種形式的**建立**對話方塊範本資源的存取權提供成員函式的範本名稱或範本 ID 編號 (例如 IDD_DIALOG1)。  
+ 兩種形式的`Create`對話方塊範本資源的存取權提供成員函式的範本名稱或範本 ID 編號 (例如 IDD_DIALOG1)。  
   
- 對於任一個表單，將指標傳遞至父視窗物件。 如果`pParentWnd`是**NULL**，對話方塊將會建立與設定主應用程式視窗為其父系或擁有者視窗。  
+ 對於任一個表單，將指標傳遞至父視窗物件。 如果*pParentWnd*是**NULL**，對話方塊將會建立與設定主應用程式視窗為其父系或擁有者視窗。  
   
- **建立**成員函式會傳回它建立對話方塊之後，立即。  
+ `Create`成員函式會傳回它建立對話方塊之後，立即。  
   
  使用**WS_VISIBLE**對話方塊範本中設定樣式，如果父視窗建立時，應該會出現對話方塊。 否則，您必須呼叫`ShowWindow`。 進一步對話方塊樣式及它們的應用程式，請參閱[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK 中的結構和[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)中*MFC 參考*。  
   
- 使用`CWnd::DestroyWindow`終結對話方塊中所建立的函式**建立**函式。  
+ 使用`CWnd::DestroyWindow`終結對話方塊中所建立的函式`Create`函式。  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
@@ -243,16 +243,16 @@ virtual BOOL CreateIndirect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  指向包含用來建立對話方塊中的對話方塊範本的記憶體。 此範本的形式是[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)結構和控制資訊，Windows SDK 中所述。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向對話方塊物件的父視窗物件 (型別[CWnd](../../mfc/reference/cwnd-class.md))。 如果是**NULL**，對話方塊物件的父視窗設為主要的應用程式視窗。  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  指向**DLGINIT**資源。  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  包含全域記憶體包含對話方塊範本的控制代碼。 此範本的形式是**DLGTEMPLATE**結構和每個控制項在對話方塊中的資料。  
   
 ### <a name="return-value"></a>傳回值  
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- `int`值，指定的值`nResult`參數傳遞給[CDialog::EndDialog](#enddialog)成員函式，用來關閉對話方塊。 傳回值為-1，如果函式無法建立對話方塊中，或**IDABORT**如果發生其他錯誤，在此情況下 [輸出] 視窗將包含錯誤資訊[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ **Int**值，指定的值*n 結果*參數傳遞給[CDialog::EndDialog](#enddialog)成員函式，用來關閉對話方塊。 傳回值為-1，如果函式無法建立對話方塊中，或**IDABORT**如果發生其他錯誤，在此情況下 [輸出] 視窗將包含錯誤資訊[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
   
 ### <a name="remarks"></a>備註  
  對話方塊中為使用中時，此成員函式會處理所有使用者互動。 這是讓對話方塊強制回應。也就是說，使用者無法互動與其他 windows 中，直到關閉對話方塊。  
@@ -296,11 +296,11 @@ void EndDialog(int nResult);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nResult`  
+ *n 結果*  
  包含要從對話方塊傳回至呼叫端的值`DoModal`。  
   
 ### <a name="remarks"></a>備註  
- 此成員函式會傳回`nResult`的傳回值為`DoModal`。 您必須使用`EndDialog`函式完成處理每次建立強制回應對話方塊。  
+ 此成員函式會傳回*n 結果*的傳回值為`DoModal`。 您必須使用`EndDialog`函式完成處理每次建立強制回應對話方塊。  
   
  您可以呼叫`EndDialog`在任何時間，即使是在[OnInitDialog](#oninitdialog)、 在對話方塊中，才會顯示這種情況下，您應該關閉或設定輸入的焦點之前。  
   
@@ -332,11 +332,11 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWndCtrl`  
+ *pWndCtrl*  
  識別要接收焦點的視窗 （控制）。  
   
 ### <a name="remarks"></a>備註  
- 若要取得的控制項 （子視窗） 做為傳遞指標`pWndCtrl`，呼叫`CWnd::GetDlgItem`成員函式，將指標傳回至[CWnd](../../mfc/reference/cwnd-class.md)物件。  
+ 若要取得的控制項 （子視窗） 做為傳遞指標*pWndCtrl*，呼叫`CWnd::GetDlgItem`成員函式，將指標傳回至[CWnd](../../mfc/reference/cwnd-class.md)物件。  
   
 ### <a name="example"></a>範例  
   請參閱範例的[CWnd::GetDlgItem](../../mfc/reference/cwnd-class.md#getdlgitem)。  
@@ -357,16 +357,16 @@ BOOL InitModalIndirect(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  指向包含用來建立對話方塊中的對話方塊範本的記憶體。 此範本的形式是[DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394)結構和控制資訊，Windows SDK 中所述。  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  包含全域記憶體包含對話方塊範本的控制代碼。 此範本的形式是**DLGTEMPLATE**結構和每個控制項在對話方塊中的資料。  
   
- `pParentWnd`  
+ *pParentWnd*  
  指向的父系或擁有者的視窗物件 (型別[CWnd](../../mfc/reference/cwnd-class.md)) 所屬之對話方塊物件。 如果是**NULL**，對話方塊物件的父視窗設為主要的應用程式視窗。  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  指向**DLGINIT**資源。  
   
 ### <a name="return-value"></a>傳回值  
@@ -385,7 +385,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpRect`  
+ *lpRect*  
  指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含對話方塊来轉換的座標。  
   
 ### <a name="remarks"></a>備註  
@@ -393,7 +393,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  **GetDialogBaseUnits** Windows 函式會傳回系統字型的大小資訊，但是您可以指定不同的字型，每個對話方塊中，如果您使用**DS_SETFONT**中設定樣式資源定義檔。 `MapDialogRect` Windows 函式會使用適當的字型，此對話方塊。  
   
- `MapDialogRect`成員函式取代對話方塊單位`lpRect`與畫面單位 （像素為單位），使矩形可以用來建立對話方塊或調整控制項的方塊內的位置。  
+ `MapDialogRect`成員函式取代對話方塊單位*lpRect*與畫面單位 （像素為單位），使矩形可以用來建立對話方塊或調整控制項的方塊內的位置。  
   
 ##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  將焦點移至對話方塊中的下一個控制項。  
@@ -472,7 +472,7 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFont`  
+ [in]*pFont*  
  指定將當做預設字型使用此對話方塊中的所有控制項的字型的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -501,7 +501,7 @@ void SetDefID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nID`  
+ *nID*  
  指定將成為預設的按鈕控制項的識別碼。  
   
 ##  <a name="sethelpid"></a>  CDialog::SetHelpID  

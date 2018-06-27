@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b91acd3537477e4213ea87dec77a97822b9e3d98
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356920"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955111"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 類別
 實作動畫控制器，提供用來建立和管理動畫的中央介面。  
@@ -227,7 +227,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pObject`  
+ *pObject*  
  動畫物件的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -246,10 +246,10 @@ BOOL AddKeyframeToGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
- `pKeyframe`  
+ *pKeyframe*  
  主要畫面格指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -268,10 +268,10 @@ BOOL AnimateGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定 GroupID。  
   
- `bScheduleNow`  
+ *bScheduleNow*  
  指定是否要立即熟練的動畫。  
   
 ### <a name="return-value"></a>傳回值  
@@ -296,10 +296,10 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定 GroupID。  
   
- `pGroup`  
+ *pGroup*  
  若要清除的動畫群組指標。  
   
 ### <a name="remarks"></a>備註  
@@ -321,16 +321,16 @@ CKeyFrame* CreateKeyframe(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定主要畫面格建立對象的群組識別碼。  
   
- `pTransition`  
+ *pTransition*  
  轉換指標。 這項轉換之後，主要畫面格就會插入分鏡腳本中。  
   
- `pKeyframe`  
+ *pKeyframe*  
  這個主要畫面格的基底主要畫面格指標。  
   
- `offset`  
+ *offset*  
  pKeyframe 指定的基底主要畫面格位移，以秒為單位。  
   
 ### <a name="return-value"></a>傳回值  
@@ -347,7 +347,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEnable`  
+ *bEnable*  
  指定是否要設定或釋放處理常式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -366,10 +366,10 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ```  
   
 ### <a name="parameters"></a>參數  
- `bEnable`  
+ *bEnable*  
  指定是否要設定或釋放處理常式。  
   
- `idleBehavior`  
+ *idleBehavior*  
  指定閒置計時器更新處理常式的行為。  
   
 ### <a name="return-value"></a>傳回值  
@@ -386,7 +386,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ```  
   
 ### <a name="parameters"></a>參數  
- `dwHandlerType`  
+ *dwHandlerType*  
  UI_ANIMATION_PHT_ 的組合加上旗標 （請參閱 < 備註 >），以指定的設定或釋放何種處理常式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -405,10 +405,10 @@ virtual BOOL EnableStoryboardEventHandler(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
- `bEnable`  
+ *bEnable*  
  指定是否要設定或釋放處理常式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -426,10 +426,10 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定的識別碼。  
   
- `pStoryboard`  
+ *pStoryboard*  
  分鏡腳本指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -449,13 +449,13 @@ BOOL FindAnimationObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pVariable`  
+ *pVariable*  
  動畫變數的指標。  
   
- `ppObject`  
+ *ppObject*  
  輸出。 包含動畫物件或 NULL 指標。  
   
- `ppGroup`  
+ *ppGroup*  
  輸出。 包含動畫群組所在的動畫物件或為 NULL 指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -619,7 +619,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroup`  
+ *pGroup*  
  動畫群組，已排程的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -638,19 +638,19 @@ virtual void OnAnimationIntegerValueChanged(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroup`  
+ *pGroup*  
  已變更的動畫群組會保留其值的動畫物件的指標。  
   
- `pObject`  
+ *pObject*  
  包含已變更其值的動畫變數的動畫物件指標。  
   
- `variable`  
+ *變數*  
  動畫變數的指標。  
   
- `newValue`  
+ *newValue*  
  指定新值。  
   
- `prevValue`  
+ *prevValue*  
  指定先前的值。  
   
 ### <a name="remarks"></a>備註  
@@ -666,10 +666,10 @@ virtual void OnAnimationManagerStatusChanged(
 ```  
   
 ### <a name="parameters"></a>參數  
- `newStatus`  
+ *newStatus*  
  新動畫管理員的狀態。  
   
- `previousStatus`  
+ *previousStatus*  
  前一個動畫管理員的狀態。  
   
 ### <a name="remarks"></a>備註  
@@ -703,7 +703,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>參數  
- `fps`  
+ *每秒畫面格*  
  每秒畫面格數中目前的畫面播放速率。  
   
 ### <a name="remarks"></a>備註  
@@ -722,19 +722,19 @@ virtual void OnAnimationValueChanged(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroup`  
+ *pGroup*  
  已變更的動畫群組會保留其值的動畫物件的指標。  
   
- `pObject`  
+ *pObject*  
  包含已變更其值的動畫變數的動畫物件指標。  
   
- `variable`  
+ *變數*  
  動畫變數的指標。  
   
- `newValue`  
+ *newValue*  
  指定新值。  
   
- `prevValue`  
+ *prevValue*  
  指定先前的值。  
   
 ### <a name="remarks"></a>備註  
@@ -748,7 +748,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroup`  
+ *pGroup*  
  即將開始的動畫的動畫群組指標。  
   
 ### <a name="remarks"></a>備註  
@@ -765,13 +765,13 @@ virtual BOOL OnHasPriorityCancel(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  擁有目前排程的分鏡腳本的群組。  
   
- `pGroupNew`  
+ *pGroupNew*  
  擁有新分鏡腳本的群組，其與 pGroupScheduled 所擁有的排定分鏡腳本發生排程衝突。  
   
- `priorityEffect`  
+ *priorityEffect*  
  如果 pGroupScheduled 具有較高的優先順序，可能會影響 pGroupNew。  
   
 ### <a name="return-value"></a>傳回值  
@@ -791,13 +791,13 @@ virtual BOOL OnHasPriorityCompress(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  擁有目前排程的分鏡腳本的群組。  
   
- `pGroupNew`  
+ *pGroupNew*  
  擁有新分鏡腳本的群組，其與 pGroupScheduled 所擁有的排定分鏡腳本發生排程衝突。  
   
- `priorityEffect`  
+ *priorityEffect*  
  如果 pGroupScheduled 具有較高的優先順序，可能會影響 pGroupNew。  
   
 ### <a name="return-value"></a>傳回值  
@@ -817,13 +817,13 @@ virtual BOOL OnHasPriorityConclude(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  擁有目前排程的分鏡腳本的群組。  
   
- `pGroupNew`  
+ *pGroupNew*  
  擁有新分鏡腳本的群組，其與 pGroupScheduled 所擁有的排定分鏡腳本發生排程衝突。  
   
- `priorityEffect`  
+ *priorityEffect*  
  如果 pGroupScheduled 具有較高的優先順序，可能會影響 pGroupNew。  
   
 ### <a name="return-value"></a>傳回值  
@@ -843,13 +843,13 @@ virtual BOOL OnHasPriorityTrim(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  擁有目前排程的分鏡腳本的群組。  
   
- `pGroupNew`  
+ *pGroupNew*  
  擁有新分鏡腳本的群組，其與 pGroupScheduled 所擁有的排定分鏡腳本發生排程衝突。  
   
- `priorityEffect`  
+ *priorityEffect*  
  如果 pGroupScheduled 具有較高的優先順序，可能會影響 pGroupNew。  
   
 ### <a name="return-value"></a>傳回值  
@@ -869,13 +869,13 @@ virtual void OnStoryboardStatusChanged(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroup`  
+ *pGroup*  
  已變更其狀態擁有的分鏡腳本動畫群組的指標。  
   
- `newStatus`  
+ *newStatus*  
  指定新的狀態。  
   
- `previousStatus`  
+ *previousStatus*  
  指定先前的狀態。  
   
 ### <a name="remarks"></a>備註  
@@ -889,7 +889,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pGroup`  
+ *pGroup*  
  擁有的分鏡腳本的群組指標。  
   
 ### <a name="remarks"></a>備註  
@@ -913,7 +913,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定動畫群組識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -929,10 +929,10 @@ void RemoveAnimationObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pObject`  
+ *pObject*  
  動畫物件的指標。  
   
- `bNoDelete`  
+ *bNoDelete*  
  如果此參數為 TRUE 時移除將不刪除物件。  
   
 ### <a name="remarks"></a>備註  
@@ -946,7 +946,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定的群組識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -962,10 +962,10 @@ BOOL ScheduleGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nGroupID`  
+ *nGroupID*  
  指定動畫群組排程的識別碼。  
   
- `time`  
+ *time*  
  指定排程的時間。  
   
 ### <a name="return-value"></a>傳回值  
@@ -982,7 +982,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pWnd`  
+ *pWnd*  
  若要設定的視窗物件的指標。  
   
 ### <a name="remarks"></a>備註  

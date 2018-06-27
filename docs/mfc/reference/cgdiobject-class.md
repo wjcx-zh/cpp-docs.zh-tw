@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369011"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956125"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 類別
 為各種 Windows 繪圖裝置介面 (GDI) 物件 (例如點陣圖、區域、筆刷、畫筆、調色盤和字型) 提供基底類別。  
@@ -114,7 +114,7 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hObject`  
+ *hObject*  
  A `HANDLE` Windows GDI 物件 (例如，`HPEN`或`HBRUSH`)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -128,7 +128,7 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>備註  
- 您絕對不要建立`CGdiObject`直接。 相反地，您建立物件從其衍生的類別，例如`CPen`或**Cbrush**。  
+ 您絕對不要建立`CGdiObject`直接。 相反地，您建立物件從其衍生的類別，例如`CPen`或`Cbrush`。  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  擷取控制代碼為其中一個預先定義的內建 Windows GDI 畫筆、 筆刷或字型，並將附加的 GDI 物件`CGdiObject`物件。  
@@ -138,7 +138,7 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- `nIndex`  
+ *nIndex*  
  常數，指定需要的內建物件的類型。 請參閱參數*fnObject*如[GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) Windows SDK 中針對適當的值的描述。  
   
 ### <a name="return-value"></a>傳回值  
@@ -193,7 +193,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>參數  
- `hObject`  
+ *hObject*  
  A `HANDLE` Windows GDI 物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -214,10 +214,10 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>參數  
- `nCount`  
- 指定要複製的位元組數目`lpObject`緩衝區。  
+ *nCount*  
+ 指定要複製的位元組數目*lpObject*緩衝區。  
   
- `lpObject`  
+ *lpObject*  
  指出使用者提供的緩衝區所接收的資訊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -306,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `obj`  
+ *obj*  
  指向現有的`CGdiObject`。  
   
 ### <a name="remarks"></a>備註  
@@ -320,7 +320,7 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `obj`  
+ *obj*  
  若要將現有的參考`CGdiObject`。  
   
 ### <a name="remarks"></a>備註  

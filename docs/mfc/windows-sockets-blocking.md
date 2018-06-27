@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 400114e557632c9a1dd11cc2f9ec5b3101eb8c37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ec6b8383f13e8b632163a1fe83a2cd79f7966c5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385946"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956183"
 ---
 # <a name="windows-sockets-blocking"></a>Windows Sockets：封鎖
 本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文包含封鎖問題。 其他問題包含於下列文章中： [Windows Sockets： 位元組順序](../mfc/windows-sockets-byte-ordering.md)和[Windows Sockets： 轉換字串](../mfc/windows-sockets-converting-strings.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "33385946"
  如果您使用，或衍生自類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，您必須自行管理這些問題。 如果您使用，或衍生自類別[CSocket](../mfc/reference/csocket-class.md)，MFC 會為您管理它們。  
   
 ## <a name="blocking"></a>封鎖  
- 通訊端可能會處於「封鎖模式」或「未封鎖模式」。 處於封鎖 (或同步) 模式下的通訊端函式在完成其動作之後才會傳回。 之所以將這種情形稱為封鎖，是因為函式呼叫的通訊端在呼叫傳回之前無法執行任何動作 (即遭到封鎖)。 呼叫**接收**成員函式，例如，可能需要很長的時間才能完成，因為要等待傳送的應用程式傳送 (這是如果您使用`CSocket`，或使用`CAsyncSocket`封鎖)。 如果`CAsyncSocket`物件處於未封鎖模式 （以非同步方式），則呼叫會立即傳回而目前錯誤碼，可擷取與[GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror)成員函式，是**WSAEWOULDBLOCK**，表示會有封鎖的呼叫已因為該模式未立即傳回。 (`CSocket`永遠不會傳回**WSAEWOULDBLOCK**。 而類別會為您管理封鎖的問題)。  
+ 通訊端可能會處於「封鎖模式」或「未封鎖模式」。 處於封鎖 (或同步) 模式下的通訊端函式在完成其動作之後才會傳回。 之所以將這種情形稱為封鎖，是因為函式呼叫的通訊端在呼叫傳回之前無法執行任何動作 (即遭到封鎖)。 呼叫`Receive`成員函式，例如，可能需要很長的時間才能完成，因為要等待傳送的應用程式傳送 (這是如果您使用`CSocket`，或使用`CAsyncSocket`封鎖)。 如果`CAsyncSocket`物件處於未封鎖模式 （以非同步方式），則呼叫會立即傳回而目前錯誤碼，可擷取與[GetLastError](../mfc/reference/casyncsocket-class.md#getlasterror)成員函式，是**WSAEWOULDBLOCK**，表示會有封鎖的呼叫已因為該模式未立即傳回。 (`CSocket`永遠不會傳回**WSAEWOULDBLOCK**。 而類別會為您管理封鎖的問題)。  
   
  32 位元和 64 位元作業系統 (例如 Windows 95 或 Windows 98) 下的通訊端行為與 16 位元作業系統 (例如 Windows 3.1) 下的通訊端行為不同。 和 16 位元作業系統不同的是，32 位元與 64 位元作業系統使用先佔式多工作業，並提供多執行緒。 在 32 位元和 64 位元作業系統下，您可以將通訊端放在不同的背景工作執行緒中。 您可以封鎖執行緒中的某個通訊端，而不會影響應用程式中的其他活動，而且不需花費計算時間在封鎖上。 如需多執行緒程式設計的詳細資訊，請參閱文章[多執行緒](../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "33385946"
   
  其餘的討論適用於以 16 位元作業系統為目標的程式設計人員：  
   
- 通常，如果您使用 `CAsyncSocket`，則應該避免使用封鎖作業，而改用非同步作業。 在非同步作業，從您收到的點**WSAEWOULDBLOCK**錯誤碼之後呼叫**接收**，比方說，等到您`OnReceive`成員函式呼叫以通知您可以重新讀取。 非同步呼叫會藉由呼叫回通訊端的適當的回呼通知函式，例如[OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)。  
+ 通常，如果您使用 `CAsyncSocket`，則應該避免使用封鎖作業，而改用非同步作業。 在非同步作業，從您收到的點**WSAEWOULDBLOCK**錯誤碼之後呼叫`Receive`，比方說，等到您`OnReceive`呼叫成員函式可通知您可以讀取一次。 非同步呼叫會藉由呼叫回通訊端的適當的回呼通知函式，例如[OnReceive](../mfc/reference/casyncsocket-class.md#onreceive)。  
   
  在視窗中不建議採用封鎖呼叫。 根據預設， [CAsyncSocket](../mfc/reference/casyncsocket-class.md)支援非同步呼叫，而且您必須管理封鎖自行使用回呼通知。 類別[CSocket](../mfc/reference/csocket-class.md)，相反地，是同步的。 它會提取 Windows 訊息並為您管理封鎖。  
   

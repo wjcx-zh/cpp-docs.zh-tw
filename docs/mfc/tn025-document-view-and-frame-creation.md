@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97db14dcb8c0b8b5b71823cf39d6bf36f0d19f25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383047"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956690"
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025：文件、檢視和框架建立
 > [!NOTE]
@@ -43,12 +43,12 @@ pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 AddDocTemplate(pTemplate);
 ```  
   
- 這一個 `CWinApp` 物件會擁有應用程式中的所有框架視窗。 應用程式的主框架視窗應儲存在**M_pmainwnd**; 通常設定`m_pMainWnd`中`InitInstance`如果您有不讓 AppWizard 為您的實作。 若是單一文件介面 (SDI)，這個 `CFrameWnd` 就會做為主應用程式框架視窗，也是唯一的文件框架視窗。 若是多重文件介面 (MDI)，這會是 MDI 框架 (`CMDIFrameWnd` 類別)，它會做為主應用程式框架視窗並且包含所有子 `CFrameWnd`。 每個子視窗都屬於 `CMDIChildWnd` 類別 (衍生自 `CFrameWnd`)，並且做為可能有多個文件框架視窗的其中一個。  
+ 這一個 `CWinApp` 物件會擁有應用程式中的所有框架視窗。 應用程式的主框架視窗應儲存在`CWinApp::m_pMainWnd`; 通常設定*m_pMainWnd*中`InitInstance`如果您有不讓 AppWizard 為您的實作。 若是單一文件介面 (SDI)，這個 `CFrameWnd` 就會做為主應用程式框架視窗，也是唯一的文件框架視窗。 若是多重文件介面 (MDI)，這會是 MDI 框架 (`CMDIFrameWnd` 類別)，它會做為主應用程式框架視窗並且包含所有子 `CFrameWnd`。 每個子視窗都屬於 `CMDIChildWnd` 類別 (衍生自 `CFrameWnd`)，並且做為可能有多個文件框架視窗的其中一個。  
   
 ## <a name="doctemplates"></a>DocTemplate  
  `CDocTemplate` 是文件的建立者與管理者。 它擁有本身所建立的文件。 如果您的應用程式使用下面所述的資源架構方法，就不需要衍生自 `CDocTemplate`。  
   
- 若是 SDI 應用程式，`CSingleDocTemplate` 類別會追蹤一份開啟的文件。 若是 MDI 應用程式，`CMultiDocTemplate` 類別會保留一份所有從該範本建立且目前開啟之文件的清單 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 會提供虛擬成員函式，用來在範本中加入或移除文件。 `CDocTemplate` 是的 friend **CDocument**因此我們可以設定受保護**cdocument:: M_pdoctemplate**返回指標，指向建立文件的文件範本。  
+ 若是 SDI 應用程式，`CSingleDocTemplate` 類別會追蹤一份開啟的文件。 若是 MDI 應用程式，`CMultiDocTemplate` 類別會保留一份所有從該範本建立且目前開啟之文件的清單 (`CPtrList`)。 `CDocTemplate::AddDocument` 和 `CDocTemplate::RemoveDocument` 會提供虛擬成員函式，用來在範本中加入或移除文件。 `CDocTemplate` 是的 friend`CDocument`因此我們可以設定受保護`CDocument::m_pDocTemplate`返回指標，指向建立文件的文件範本。  
   
  `CWinApp` 會處理預設的 `OnFileOpen` 實作，接著該實作就會查詢所有文件範本。 實作中包含尋找已開啟的文件，以及決定採用何種格式開啟新文件。  
   
@@ -57,13 +57,13 @@ AddDocTemplate(pTemplate);
  `CDocTemplate` 會保留未命名文件數目的計數。  
   
 ## <a name="cdocument"></a>CDocument  
- A **CDocument**擁有者是`CDocTemplate`。  
+ A`CDocument`擁有者是`CDocTemplate`。  
   
  文件會有一份目前正在檢視文件之已開啟檢視 (衍生自 `CView`) 的清單 (`CPtrList`)。  
   
  文件不會建立/終結檢視，不過它們會在建立之後互相連接。 當文件關閉時 (透過 [檔案]/[關閉])，所有連接的檢視都會關閉。 當文件中的最後一個檢視關閉時 (透過 [視窗]/[關閉])，文件將會關閉。  
   
- `CDocument::AddView`、`RemoveView` 介面可用來維護檢視清單。 **CDocument**為 friend 的`CView`因此我們可以設定**cview:: M_pdocument**返回指標。  
+ `CDocument::AddView`、`RemoveView` 介面可用來維護檢視清單。 `CDocument` 是的 friend`CView`因此我們可以設定`CView::m_pDocument`返回指標。  
   
 ## <a name="cframewnd"></a>CFrameWnd  
  `CFrameWnd` (也稱為框架) 的功能與在 MFC 1.0 中相同，不過，`CFrameWnd` 類別現在設計為可在多種情況下使用，而不需衍生新的類別。 衍生的類別 `CMDIFrameWnd` 和 `CMDIChildWnd` 也會經過強化，當中便已實作許多標準命令。  

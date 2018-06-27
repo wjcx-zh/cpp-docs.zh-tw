@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c033d33dd6b1e6c0ccd5bbdb4b6af6939521f592
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384130"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956170"
 ---
 # <a name="when-update-handlers-are-called"></a>呼叫更新處理常式的時機
-假設使用者在 [檔案] 功能表上按一下滑鼠，即產生 `WM_INITMENUPOPUP` 訊息。 架構的更新機制會統一更新 [檔案] 功能表上的所有項目，之後使用者才能看到功能表下拉式清單。  
+假設使用者按下滑鼠在產生 WM_INITMENUPOPUP 訊息的 [檔案] 功能表中。 架構的更新機制會統一更新 [檔案] 功能表上的所有項目，之後使用者才能看到功能表下拉式清單。  
   
  為了如此做，架構會沿著標準命令路由的路徑，路由快顯功能表中所有功能表項目的更新命令。 要路由的命令目標有機會更新所有功能表項目，其方式是透過比對更新命令與適當的訊息對應項目 (格式為 `ON_UPDATE_COMMAND_UI`) 以及呼叫「更新處理常式」函式。 因此，對於有六個功能表項目的功能表，會送出六個更新命令。如果對於功能表項目的命令 ID 存在更新處理常式，則會該呼叫處理常式進行更新。 否則，架構會檢查是否存在該命令 ID 的處理常式，並適當地啟用或停用功能表項目。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33384130"
   
  可以停用使用者介面物件的預設停用。 如需詳細資訊，請參閱[m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable)類別成員`CFrameWnd`中*MFC 參考*。  
   
- 功能表初始化在架構中為自動執行，當應用程式收到 `WM_INITMENUPOPUP` 訊息時便會發生。 在閒置迴圈期間，架構會搜尋按鈕更新處理常式的命令路由，方式就和搜尋功能表幾乎一樣。  
+ 功能表初始化是自動在架構中，應用程式收到 WM_INITMENUPOPUP 訊息時所發生的。 在閒置迴圈期間，架構會搜尋按鈕更新處理常式的命令路由，方式就和搜尋功能表幾乎一樣。  
   
 ## <a name="see-also"></a>另請參閱  
  [如何：更新使用者介面物件](../mfc/how-to-update-user-interface-objects.md)

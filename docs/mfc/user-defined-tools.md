@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3b755fc35c98652ab87231e9d8f58cde748bfc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b78e9a4fefad884f4ac683cd0c7f18688a5bdfe
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384344"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950810"
 ---
 # <a name="user-defined-tools"></a>使用者定義類型
 MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的使用者指定的程式的特殊命令。 您可以使用自訂程序來管理使用者定義的工具。 不過，您無法使用此程序如果應用程式物件不衍生自[CWinAppEx 類別](../mfc/reference/cwinappex-class.md)。 如需有關自訂的詳細資訊，請參閱[MFC 自訂](../mfc/customization-for-mfc.md)。  
@@ -32,11 +32,11 @@ MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的
 ## <a name="enabling-user-defined-tools-support"></a>啟用使用者定義工具支援  
  若要啟用應用程式中的使用者定義的工具，請呼叫[CWinAppEx::EnableUserTools](../mfc/reference/cwinappex-class.md#enableusertools)。 不過，您必須先定義數個常數中當做參數使用此呼叫的應用程式的資源檔中。  
   
- 資源編輯器中建立空的命令使用適當的命令識別碼。 在下列範例中，我們使用**ID_TOOLS_ENTRY**為命令識別碼。 此命令識別碼標記一個或多個功能表中，架構會插入使用者定義的工具的位置。  
+ 資源編輯器中建立空的命令使用適當的命令識別碼。 在下列範例中，我們使用`ID_TOOLS_ENTRY`為命令識別碼。 此命令識別碼標記一個或多個功能表中，架構會插入使用者定義的工具的位置。  
   
- 您必須設定保留某些連續識別碼來代表使用者定義的工具字串資料表中。 擱置在一旁的字串數目等於可定義使用者的使用者工具的最大數目。 在下列範例中，這些具名**ID_USER_TOOL1**透過**ID_USER_TOOL10**。  
+ 您必須設定保留某些連續識別碼來代表使用者定義的工具字串資料表中。 擱置在一旁的字串數目等於可定義使用者的使用者工具的最大數目。 在下列範例中，這些具名`ID_USER_TOOL1`透過`ID_USER_TOOL10`。  
   
- 您可以提供建議給使用者，以協助他們選取目錄和引數將會呼叫外部程式的工具。 若要這樣做，請在資源編輯器中建立兩個快顯功能表。 在下列範例中，這些具名**IDR_MENU_ARGS**和**IDR_MENU_DIRS**。 對於這些功能表中的每個命令，請在您的應用程式的字串資料表中定義的字串。 字串的資源識別碼必須等於命令 id。  
+ 您可以提供建議給使用者，以協助他們選取目錄和引數將會呼叫外部程式的工具。 若要這樣做，請在資源編輯器中建立兩個快顯功能表。 在下列範例中，這些具名`IDR_MENU_ARGS`和`IDR_MENU_DIRS`。 對於這些功能表中的每個命令，請在您的應用程式的字串資料表中定義的字串。 字串的資源識別碼必須等於命令 id。  
   
  您也可以建立衍生的類別從[CUserTool 類別](../mfc/reference/cusertool-class.md)來取代預設的實作。 若要這樣做，請將您的衍生類別的執行階段資訊傳遞 CWinAppEx::EnableUserTools，而不是 RUNTIME_CLASS 中第四個參數 ([CUserTool 類別](../mfc/reference/cusertool-class.md))。  
   
@@ -46,7 +46,7 @@ MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#1](../mfc/codesnippet/cpp/user-defined-tools_1.cpp)]  
   
- 在此範例中，工具 索引標籤將會包含在**自訂** 對話方塊。 此架構將會取代任何符合的命令 ID 的命令**ID_TOOLS_ENTRY**任何功能表與目前定義的使用者工具，每當使用者開啟該功能表的集合中。 命令 Id **ID_USER_TOOL1**透過**ID_USER_TOOL10**是保留供使用的使用者定義的工具。 類別[CUserTool 類別](../mfc/reference/cusertool-class.md)如何處理使用者工具的呼叫。 [工具] 索引標籤的**自訂**對話方塊會提供按鈕右邊的引數和目錄的項目欄位來存取功能表**IDR_MENU_ARGS**和**IDR_MENU_DIRS**.當使用者選取其中一個這些功能表命令時，架構將附加至適當的文字方塊具有等於命令 id。 資源識別碼的字串  
+ 在此範例中，工具 索引標籤將會包含在**自訂** 對話方塊。 此架構將會取代任何符合的命令 ID 的命令`ID_TOOLS_ENTRY`任何功能表與目前定義的使用者工具，每當使用者開啟該功能表的集合中。 命令 Id`ID_USER_TOOL1`透過`ID_USER_TOOL10`是保留供使用的使用者定義的工具。 類別[CUserTool 類別](../mfc/reference/cusertool-class.md)如何處理使用者工具的呼叫。 [工具] 索引標籤的**自訂**對話方塊會提供按鈕右邊的引數和目錄的項目欄位來存取功能表**IDR_MENU_ARGS**和**IDR_MENU_DIRS**.當使用者選取其中一個這些功能表命令時，架構將附加至適當的文字方塊具有等於命令 id。 資源識別碼的字串  
   
 ### <a name="including-predefined-tools"></a>其中包括預先定義的工具  
  如果您想要在應用程式啟動某些工具會預先定義，您必須覆寫[CFrameWnd::LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)應用程式的主視窗的方法。 在該方法中，您必須執行下列步驟。  

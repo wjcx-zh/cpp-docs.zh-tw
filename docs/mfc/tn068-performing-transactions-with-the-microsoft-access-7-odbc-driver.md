@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63cce7532d93b1bd44b6a44c526310bd894d5e07
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 653e1cf29ff2b2e2338df7e8e3a1e74d73a7d6fe
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384813"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950223"
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068：使用 Microsoft Access 7 ODBC 驅動程式執行異動
 > [!NOTE]
@@ -34,21 +34,21 @@ ms.locfileid: "33384813"
 ## <a name="overview"></a>總覽  
  如果資料庫應用程式執行的交易，您必須小心呼叫`CDatabase::BeginTrans`和`CRecordset::Open`應用程式中正確的順序。 Microsoft Access 7.0 驅動程式會使用 Microsoft Jet 資料庫引擎，和 Jet 需要您的應用程式沒有開始已開啟的資料指標的任何資料庫上的交易。 MFC ODBC 資料庫類別中，開啟的資料指標等同於開啟`CRecordset`物件。  
   
- 如果您開啟的資料錄集，然後再呼叫**BeginTrans**，您可能不會看到任何錯誤訊息。 不過，任何資料錄集更新您的應用程式會呼叫之後會變成永久`CRecordset::Update`，並更新將不會回復藉由呼叫**復原**。 若要避免這個問題，您必須呼叫**BeginTrans**第一次，然後開啟資料錄集。  
+ 如果您開啟的資料錄集，然後再呼叫`BeginTrans`，您可能不會看到任何錯誤訊息。 不過，任何資料錄集更新您的應用程式會呼叫之後會變成永久`CRecordset::Update`，並更新將不會回復藉由呼叫`Rollback`。 若要避免這個問題，您必須呼叫`BeginTrans`第一次，然後開啟資料錄集。  
   
- MFC 會檢查資料指標認可和回復行為的驅動程式功能。 類別`CDatabase`提供兩個成員函式，`GetCursorCommitBehavior`和`GetCursorRollbackBehavior`，來判斷在您開啟任何交易的效果`CRecordset`物件。 對於 Microsoft 存取 7.0 ODBC 驅動程式，這些成員函式會傳回`SQL_CB_CLOSE`因為 Access 驅動程式不支援資料指標保留。 因此，您必須呼叫`CRecordset::Requery`下列**CommitTrans**或**復原**作業。  
+ MFC 會檢查資料指標認可和回復行為的驅動程式功能。 類別`CDatabase`提供兩個成員函式，`GetCursorCommitBehavior`和`GetCursorRollbackBehavior`，來判斷在您開啟任何交易的效果`CRecordset`物件。 對於 Microsoft 存取 7.0 ODBC 驅動程式，這些成員函式會傳回`SQL_CB_CLOSE`因為 Access 驅動程式不支援資料指標保留。 因此，您必須呼叫`CRecordset::Requery`下列`CommitTrans`或`Rollback`作業。  
   
- 當您需要依序執行多個交易時，您不能呼叫**Requery**之後再啟動下一個與第一筆交易。 您必須先關閉資料錄集的下一個呼叫之前**BeginTrans**以滿足 Jet 的需求。 這個技術提示描述兩種方法可以處理這種情況：  
+ 當您需要依序執行多個交易時，您不能呼叫`Requery`之後再啟動下一個與第一筆交易。 您必須先關閉資料錄集的下一個呼叫之前`BeginTrans`以滿足 Jet 的需求。 這個技術提示描述兩種方法可以處理這種情況：  
   
--   關閉之後為每個資料錄集**CommitTrans**或**復原**作業。  
+-   關閉之後為每個資料錄集`CommitTrans`或`Rollback`作業。  
   
--   使用 ODBC API 函式**SQLFreeStmt**。  
+-   使用 ODBC API 函式`SQLFreeStmt`。  
   
 ## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>每個 CommitTrans 或回復作業之後關閉資料錄集  
- 之前啟動交易時，請確定已關閉資料錄集物件。 在呼叫**BeginTrans**，呼叫資料錄集的**開啟**成員函式。 資料錄集關閉後立即呼叫**CommitTrans**或**復原**。 請注意，重複開啟和關閉資料錄集可能會降低應用程式的效能。  
+ 之前啟動交易時，請確定已關閉資料錄集物件。 在呼叫`BeginTrans`，呼叫資料錄集的`Open`成員函式。 資料錄集關閉後立即呼叫`CommitTrans`或`Rollback`。 請注意，重複開啟和關閉資料錄集可能會降低應用程式的效能。  
   
 ## <a name="using-sqlfreestmt"></a>使用 SQLFreeStmt  
- 您也可以使用 ODBC API 函式**SQLFreeStmt**明確關閉資料指標之後結束交易。 若要啟動另一個交易，請呼叫**BeginTrans**後面`CRecordset::Requery`。 當呼叫**SQLFreeStmt**，您必須指定做為第一個參數的資料錄集的 HSTMT 和**SQL_CLOSE**做為第二個參數。 這個方法是關閉及開啟資料錄集的每筆交易的開頭比更快。 下列程式碼會示範如何實作這項技術：  
+ 您也可以使用 ODBC API 函式`SQLFreeStmt`明確關閉資料指標之後結束交易。 若要啟動另一個交易，請呼叫`BeginTrans`後面`CRecordset::Requery`。 當呼叫`SQLFreeStmt`，您必須指定做為第一個參數的資料錄集的 HSTMT 和*SQL_CLOSE*做為第二個參數。 這個方法是關閉及開啟資料錄集的每筆交易的開頭比更快。 下列程式碼會示範如何實作這項技術：  
   
 ```  
 CMyDatabase db;  
@@ -93,11 +93,11 @@ rs.Close();
 db.Close();
 ```  
   
- 若要實作這項技術的另一個方法是撰寫新的函式， **RequeryWithBeginTrans**，您可以呼叫您認可之後，啟動下一個交易或回復第一個。 若要編寫這類函式，執行下列步驟：  
+ 若要實作這項技術的另一個方法是撰寫新的函式， `RequeryWithBeginTrans`，您可以呼叫您認可之後，啟動下一個交易或回復第一個。 若要編寫這類函式，執行下列步驟：  
   
-1.  將程式碼複製**CRecordset::Requery （)** new 函式。  
+1.  將程式碼複製`CRecordset::Requery( )`new 函式。  
   
-2.  在呼叫之後立即新增下列各行**SQLFreeStmt**:  
+2.  在呼叫之後立即新增下列各行`SQLFreeStmt`:  
   
  `m_pDatabase->BeginTrans( );`  
   
@@ -131,7 +131,7 @@ db.CommitTrans();
 ```  
   
 > [!NOTE]
->  如果您需要變更資料錄集成員變數，請勿使用這項技術**m_strFilter**或`m_strSort`交易之間。 在此情況下，您應該關閉資料錄集之後每個, **CommitTrans**或**復原**作業。  
+>  如果您需要變更資料錄集成員變數，請勿使用這項技術*m_strFilter*或*m_strSort*交易之間。 在此情況下，您應該關閉資料錄集之後每個,`CommitTrans`或`Rollback`作業。  
   
 ## <a name="see-also"></a>另請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   

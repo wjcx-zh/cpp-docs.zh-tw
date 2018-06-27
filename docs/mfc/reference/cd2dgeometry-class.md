@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357070"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955098"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 類別
 ID2D1Geometry 包裝函式。  
@@ -141,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>參數  
- `pResource`  
+ *pResource*  
  現有資源的介面。 不能是 NULL  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -154,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -173,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>參數  
- `inputGeometry`  
+ *inputGeometry*  
  要結合與這個執行個體的幾何。  
   
- `combineMode`  
+ *combineMode*  
  若要執行合併操作類型。  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  要套用至合併前 inputGeometry 轉換。  
   
- `geometrySink`  
+ *geometrySink*  
  合併作業的結果。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點的幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -202,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>參數  
- `inputGeometry`  
+ *inputGeometry*  
  要測試的幾何。  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  要套用至 inputGeometry 轉換。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點的幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -225,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- `worldTransform`  
+ *worldTransform*  
  要套用至這個幾何計算其區域之前的轉換。  
   
- `area`  
+ *區域*  
  此方法傳回時，包含這種幾何形狀之轉換的扁平化新版區域的指標。 您必須為此參數來配置儲存空間。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點之幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -248,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>參數  
- `worldTransform`  
+ *worldTransform*  
  要計算其長度之前套用至幾何轉換。  
   
- `length`  
+ *length*  
  此方法傳回時，包含指標之幾何的長度。 已關閉的幾何，長度會包含隱含結尾區段。 您必須為此參數來配置儲存空間。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點之幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -273,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>參數  
- `length`  
+ *length*  
  沿著點和尋找的正切值的幾何距離。 如果這個距離較少然後 0，這個方法會計算幾何中的第一個點。 如果這個距離大於幾何的長度，此方法會計算幾何中的最後一個點。  
   
- `worldTransform`  
+ *worldTransform*  
  在之前計算指定的點和正切函數套用至的幾何轉換。  
   
- `point`  
+ *點*  
  指定沿著幾何距離位置。 如果是空的幾何，這個點會包含 NaN 作為其 x 和 y 值。  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  此方法傳回時，包含幾何的指定距離向量正切函數的指標。 此向量幾何是空的如果包含 NaN，因為它的 x 和 y 值。 您必須為此參數來配置儲存空間。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點之幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -320,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- `point`  
+ *點*  
  要測試的點。  
   
- `worldTransform`  
+ *worldTransform*  
  要套用至之前的內含項目測試的幾何轉換。  
   
- `contains`  
+ *包含*  
  這個方法傳回時，包含 bool 值是由幾何填滿的區域包含點，則為 TRUE，否則為 FALSE。 您必須為此參數來配置儲存空間。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  數值的精確度，但它的精確幾何的路徑與路徑交集的計算。 填滿遺漏小於容錯點仍會視為內。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -354,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- `worldTransform`  
- `bounds`  
+ *worldTransform*  
+ *界限*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -372,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>參數  
- `strokeWidth`  
+ *strokeWidth*  
  若要擴展之幾何的繪製控制項外框量。  
   
- `strokeStyle`  
+ *strokeStyle*  
  筆觸可擴展幾何的樣式。  
   
- `worldTransform`  
+ *worldTransform*  
  要套用到幾何，而且已圖案幾何幾何轉換之後的轉換。  
   
- `bounds`  
+ *界限*  
  這個方法傳回時，包含擴大幾何的範圍。 您必須為此參數來配置儲存空間。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點的幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -428,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>參數  
- `worldTransform`  
+ *worldTransform*  
  要套用至外框的幾何轉換。  
   
- `geometrySink`  
+ *geometrySink*  
  附加的幾何轉換的大綱 ID2D1SimplifiedGeometrySink。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點之幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -452,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>參數  
- `simplificationOption`  
+ *simplificationOption*  
  值，指定簡化的 geometry 是否應該包含曲線。  
   
- `worldTransform`  
+ *worldTransform*  
  要套用至簡單的幾何轉換。  
   
- `geometrySink`  
+ *geometrySink*  
  簡化的幾何附加 ID2D1SimplifiedGeometrySink。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點之幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -481,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- `point`  
+ *點*  
  若要測試的內含項目點。  
   
- `strokeWidth`  
+ *strokeWidth*  
  要套用的筆劃粗細。  
   
- `strokeStyle`  
+ *strokeStyle*  
  套用至筆觸的樣式。  
   
- `worldTransform`  
+ *worldTransform*  
  要套用至繪製幾何轉換。  
   
- `contains`  
+ *包含*  
  此方法傳回時，包含布林值的幾何筆觸包含指定的點; 如果設定為 TRUE否則為 FALSE。 您必須為此參數來配置儲存空間。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  數值的精確度，但它的精確幾何的路徑與路徑交集的計算。 遺漏筆劃小於容錯點仍會視為內。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -513,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>參數  
- `worldTransform`  
+ *worldTransform*  
  要套用至這個幾何，則為 NULL 的轉換。  
   
- `tessellationSink`  
+ *tessellationSink*  
  附加的目標鑲嵌 ID2D1TessellationSink。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點之幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  
@@ -538,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>參數  
- `strokeWidth`  
+ *strokeWidth*  
  要擴展之幾何的數量。  
   
- `strokeStyle`  
+ *strokeStyle*  
  要套用至的幾何或為 NULL 的筆劃的端點樣式。  
   
- `worldTransform`  
+ *worldTransform*  
  要套用到幾何擴展它之後的轉換。  
   
- `geometrySink`  
+ *geometrySink*  
  附加擴大的幾何 ID2D1SimplifiedGeometrySink。  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  距離點之幾何的多邊形近似值之間最大上限。 較小的值會產生更精確的結果，但會導致執行速度緩慢。  
   
 ### <a name="return-value"></a>傳回值  

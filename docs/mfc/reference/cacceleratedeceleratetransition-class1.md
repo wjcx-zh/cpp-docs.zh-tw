@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1dac40e91dd7b0a91c5d76b0d665d075e562267
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357841"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954704"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition 類別
 實作加速減速轉換。  
@@ -81,16 +81,16 @@ CAccelerateDecelerateTransition(
 ```  
   
 ### <a name="parameters"></a>參數  
- `duration`  
+ *持續時間*  
  轉換的持續時間。  
   
- `finalValue`  
+ *finalValue*  
  結尾的轉換動畫變數的值。  
   
- `accelerationRatio`  
+ *accelerationRatio*  
  所花費的時間，加快持續時間的比率。  
   
- `decelerationRatio`  
+ *decelerationRatio*  
  時間的比率在減速至持續時間。  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
@@ -103,7 +103,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
-`pLibrary`  
+*pLibrary*  
  指標[IUIAnimationTransitionLibrary 介面](https://msdn.microsoft.com/library/windows/desktop/dd371897)，其定義的標準轉換程式庫。  
   
 ### <a name="return-value"></a>傳回值  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 343d56ebf3f92dadeb286ae2fa44b6e735498215
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: facfa4d9f98100666f267920cbd18c24ae516e72
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355921"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951605"
 ---
 # <a name="cd2dtextlayout-class"></a>CD2DTextLayout 類別
 IDWriteTextLayout 包裝函式。  
@@ -119,19 +119,19 @@ CD2DTextLayout(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParentTarget`  
+ *pParentTarget*  
  呈現目標指標。  
   
- `strText`  
+ *strText*  
  CString 物件，其中包含要建立新 CD2DTextLayout 物件的字串。  
   
- `textFormat`  
+ *textFormat*  
  CString 物件，其中包含要套用至字串的格式。  
   
- `sizeMax`  
+ *sizeMax*  
  [配置] 方塊的大小。  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  表示擁有者 (pParentTarget) 將會終結物件。  
   
 ##  <a name="create"></a>  CD2DTextLayout::Create  
@@ -171,10 +171,10 @@ CString GetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `currentPosition`  
+ *currentPosition*  
  檢查文字的位置。  
   
- `textRange`  
+ *textRange*  
  具有相同的文字範圍的格式 currentPosition 所指定的位置處的文字。 這表示執行可讓您有確切的格式為指定的位置，包括但不是限於字型家族名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -190,10 +190,10 @@ CString GetLocaleName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `currentPosition`  
+ *currentPosition*  
  檢查文字的位置。  
   
- `textRange`  
+ *textRange*  
  具有相同的文字範圍的格式 currentPosition 所指定的位置處的文字。 這表示執行可讓您有確切的格式為指定的位置，包括但不是限於地區設定名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -246,10 +246,10 @@ BOOL SetFontFamilyName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pwzFontFamilyName`  
+ *pwzFontFamilyName*  
  TextRange 所指定的範圍內的整個文字字串，適用於字型家族名稱  
   
- `textRange`  
+ *textRange*  
  這項變更適用於文字範圍  
   
 ### <a name="return-value"></a>傳回值  
@@ -265,10 +265,10 @@ BOOL SetLocaleName(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pwzLocaleName`  
+ *pwzLocaleName*  
  以 null 結束的地區設定名稱字串  
   
- `textRange`  
+ *textRange*  
  這項變更適用於文字範圍  
   
 ### <a name="return-value"></a>傳回值  

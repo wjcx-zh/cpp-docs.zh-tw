@@ -1,7 +1,9 @@
 ---
 title: Visual C++ 中的 CMake 專案 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,18 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a65ae6cc58f649fee5f47b33a146263a3b6c55
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 38bcd102e94ac98aba56a4eb98b69df6d3f16111
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337427"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238561"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ 中的 CMake 專案
 
 本文假設您已熟悉 CMake，這是用於定義在多個平台上執行之建置程序的跨平台開放原始碼工具。
 
-直到最近，Visual Studio 使用者可以使用 CMake 產生 MSBuild 專案檔，再由 IDE 取用這些檔案供 IntelliSense、瀏覽和編譯之用。 從 Visual Studio 2017 開始，**適用於 CMake 的 Visual C++ 工具**元件使用 [開啟資料夾] 功能，讓 IDE 直接取用 CMake 專案檔 (例如 CMakeLists.txt) 供 IntelliSense 和瀏覽之用。 如果您使用 Visual Studio 產生器，則會產生暫存專案檔並傳遞至 msbuild.exe，但永遠不會載入供 IntelliSense 或瀏覽之用。 
+在 Visual Studio 2015 中，Visual Studio 使用者可以使用 [CMake 產生器](https://cmake.org/cmake/help/v3.9/manual/cmake-generators.7.html)來產生 MSBuild 專案檔，再由 IDE 取用這些檔案供 IntelliSense、瀏覽和編譯之用。 
+
+從 Visual Studio 2017 開始，**適用於 CMake 的 Visual C++ 工具**元件使用 [開啟資料夾] 功能，讓 IDE 直接取用 CMake 專案檔 (例如 CMakeLists.txt) 供 IntelliSense 和瀏覽之用。 如果您使用 Visual Studio 產生器，則會產生暫存專案檔並傳遞至 msbuild.exe，但永遠不會載入供 IntelliSense 或瀏覽之用。 
 
 **Visual Studio 2017 15.3 版**：提供對 Ninja 和 Visual Studio 產生器的支援。
 
@@ -33,6 +37,7 @@ ms.locfileid: "33337427"
 
 **Visual Studio 2017 15.5 版**：新增對匯入現有 CMake 快取的支援。 Visual Studio 會自動擷取自訂變數，並建立預先填入的 CMakeSettings.json 檔案。
 
+**Visual Studio 2017 15.7 版**：新增支援以停用自動快取產生、[方案總管] 中的 [Targets View] \(目標檢視\) 和單一檔案編譯。
 
 ## <a name="installation"></a>安裝
 
@@ -46,16 +51,25 @@ ms.locfileid: "33337427"
 
 - Visual Studio 會將 [CMake] 功能表項目新增至主功能表，並提供檢視和編輯 CMake 指令碼的命令。
 - [方案總管] 會顯示資料夾結構和檔案。
-- Visual Studio 會執行 CMake.exe，並為預設「組態」(即 x86 偵錯) 產生 CMake 快取。 CMake 命令列會連同 CMake 的其他輸出一起顯示在 [輸出] 視窗中。
+- Visual Studio 會執行 CMake.exe，並為預設「組態」(即 x86 偵錯) 產生 CMake 快取。 CMake 命令列會連同 CMake 的其他輸出一起顯示在 [輸出] 視窗中。  **Visual Studio 2017 15.7 版和更新版本**：可以在 [工具] | [選項] | [CMake] | [一般] 對話方塊中停用自動快取產生。
 - Visual Studio 會在背景開始編製原始程式檔的索引，以啟用 IntelliSense、瀏覽資訊、重構等。 Visual Studio 會在您工作時，監視編輯器和磁碟上的變更，以確保其索引與來源同步。
  
 您可以開啟包含任意數目之 CMake 專案的資料夾。 Visual Studio 會偵測並設定您工作區中的所有「根」CMakeLists.txt 檔案。 您可以對工作區中的所有 CMake 專案進行 CMake 作業 (設定、建置、偵錯)，以及 C++ IntelliSense 和瀏覽。
 
-![具有多個根檔案的 CMake 專案](media/cmake-multiple-roots.png) 
+![具有多個根檔案的 CMake 專案](media/cmake-multiple-roots.png)  
+
+**Visual Studio 2017 15.7 版和更新版本**：您也可以檢視依目標以邏輯方式組織的專案。 從 [方案總管] 工具列的下拉式清單中選擇 [Targets View] \(目標檢視\)：
+
+![CMake [Targets View] \(目標檢視\) 按鈕](media/cmake-targets-view.png)
 
 ## <a name="import-an-existing-cache"></a>匯入現有的快取
 
-當您匯入現有的 CMakeCache.txt 檔案時，Visual Studio 會自動擷取自訂變數，並根據這些變數建立預先填入的 CMakeSettings.json 檔案。 原始快取不會有任何修改，而且仍可從命令列或是透過用於產生的任何工具或 IDE 來使用。 新的 CMakeSettings.json 檔案會與專案的根 CMakeLists.txt 放在一起。 Visual Studio 會根據設定檔產生新的快取。 快取中的所有項目不會全部匯入。  產生器和編譯器位置等屬性會取代成已知適用於 IDE 的預設值。
+當您匯入現有的 CMakeCache.txt 檔案時，Visual Studio 會自動擷取自訂變數，並根據這些變數建立預先填入的 CMakeSettings.json 檔案。 原始快取不會有任何修改，而且仍可從命令列或是透過用於產生的任何工具或 IDE 來使用。 新的 CMakeSettings.json 檔案會與專案的根 CMakeLists.txt 放在一起。 Visual Studio 會根據設定檔產生新的快取。  
+
+
+**Visual Studio 2017 15.7 版和更新版本**：您可以在 [工具] | [選項] | [CMake] | [一般] 對話方塊中覆寫自動快取產生。
+
+快取中的所有項目不會全部匯入。  產生器和編譯器位置等屬性會取代成已知適用於 IDE 的預設值。
 
 ### <a name="to-import-an-existing-cache"></a>匯入現有的快取
 
@@ -100,7 +114,6 @@ ms.locfileid: "33337427"
 
 ![CMake 執行按鈕](media/cmake-run-button.png "CMake 執行按鈕")
 
-
 如果自上次建置以來已有所變更，[執行] 或 **F5** 命令會先建置專案。
 
 ## <a name="configure-cmake-debugging-sessions"></a>設定 CMake 偵錯工作階段
@@ -112,7 +125,7 @@ ms.locfileid: "33337427"
 
 您也可以從 [CMake] 功能表啟動偵錯工作階段。
 
-若要自訂您專案中任何可執行 CMake 目標的偵錯工具設定，請以滑鼠右鍵按一下特定 CMakeLists.txt 檔案，然後選取 [偵錯並啟動設定]。 當您在子功能表中選取 CMake 目標時，會建立稱為 launch.vs.json 的檔案。 此檔案會預先填入您已選取之 CMake 目標的相關資訊，並可讓您指定其他參數，例如程式引數或偵錯工具類型。 若要參考 CMakeSettings.json 檔案中的任何索引鍵，請在前面加上 "cmake" (launch.vs.json 中)。 下列範例顯示一個簡單的 launch.vs.json 檔案，它會提取目前所選組態之 CMakeSettings.json 檔案中的 "remoteCopySources" 索引鍵值：
+若要自訂您專案中任何可執行 CMake 目標的偵錯工具設定，請以滑鼠右鍵按一下特定 CMakeLists.txt 檔案，然後選取 [偵錯並啟動設定]。 當您在子功能表中選取 CMake 目標時，會建立稱為 launch.vs.json 的檔案。 此檔案會預先填入您已選取之 CMake 目標的相關資訊，並可讓您指定其他參數，例如程式引數或偵錯工具類型。 若要參考 CMakeSettings.json 檔案中的任何索引鍵，請在前面加上 "Cmake"。 (launch.vs.json 中)。 下列範例顯示一個簡單的 launch.vs.json 檔案，它會提取目前所選組態之 CMakeSettings.json 檔案中的 "remoteCopySources" 索引鍵值：
 
 ```json
 {
@@ -168,7 +181,6 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 
    ![CMake 主功能表的變更設定命令](media/cmake-change-settings.png)
 
-
 JSON IntelliSense 可協助您編輯 CMakeSettings.json 檔案：
 
    ![CMake JSON IntelliSense](media/cmake-json-intellisense.png "CMake JSON IntelliSense")
@@ -192,7 +204,6 @@ JSON IntelliSense 可協助您編輯 CMakeSettings.json 檔案：
 
 1. **name**：出現在 C++ 組態下拉式清單中的名稱。 此屬性值也可作為巨集 `${name}` 使用，以指定其他屬性值。 如需範例，請參閱 CMakeSettings.json 中的 **buildRoot** 定義。
 1. **generator**：對應至 **-G** 參數並指定要使用的產生器。 此屬性也可作為巨集 `${generator}` 使用，以協助指定其他屬性值。 Visual Studio 目前支援下列 CMake 產生器：
-
 
     - "Ninja"
     - "Visual Studio 14 2015"
@@ -363,3 +374,11 @@ CMakeSettings.json 現在支援繼承的環境。 此功能可讓您 (1) 繼承�
 - [開啟快取資料夾] 會將檔案總管視窗開啟至組建根資料夾。  
 - [清除快取] 會刪除組建根資料夾，讓後續 CMake 設定步驟從全新的快取開始。
 - [產生快取] 會強制執行產生步驟，即使 Visual Studio 認為環境處於最新狀態也一樣。
+ 
+**Visual Studio 2017 15.7 版和更新版本**：可以在 [工具] | [選項] | [CMake] | [一般] 對話方塊中停用自動快取產生。
+
+## <a name="single-file-compilation"></a>單一檔案編譯
+
+**Visual Studio 2017 15.7 版和更新版本**：若要在 CMake 專案中建置單一檔案，請以滑鼠右鍵按一下 [方案總管] 中的檔案，然後選擇 [編譯]。 您也可以使用 CMake 主功能表來建置目前已在編輯器中開啟的檔案：
+
+![CMake 單一檔案編譯](media/cmake-single-file-compile.png)

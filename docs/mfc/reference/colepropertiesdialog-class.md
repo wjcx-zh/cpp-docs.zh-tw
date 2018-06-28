@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371682"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040177"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 類別
 封裝 Windows 通用 OLE 物件屬性對話方塊。  
@@ -112,7 +112,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  目前正在存取其屬性的文件項目的指標。  
   
  *nScaleMin*  
@@ -121,7 +121,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  最大縮放比例百分比為文件項目影像。  
   
- `pParentWnd`  
+ *pParentWnd*  
  對話方塊的父系或擁有者的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -218,7 +218,7 @@ OLEUIVIEWPROPS m_vp;
  如需有關**OLEUIVIEWPROPS**結構，請參閱 Windows SDK。  
   
 ##  <a name="onapplyscale"></a>  COlePropertiesDialog::OnApplyScale  
- 縮放比例的值已變更，並選取 [確定] 或 套用時由架構呼叫。  
+ 縮放比例的值已變更，並選取 確定 或 套用時由架構呼叫。  
   
 ```  
 virtual BOOL OnApplyScale(
@@ -228,10 +228,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pItem`  
+ *pItem*  
  目前正在存取其屬性的文件項目的指標。  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  對話方塊標尺的數值。  
   
  *bRelativeToOrig*  
@@ -244,7 +244,7 @@ virtual BOOL OnApplyScale(
  預設實作不做任何動作。 您必須覆寫此函式可啟用縮放控制項。  
   
 > [!NOTE]
->  通用 OLE 物件屬性對話方塊中顯示之前，架構會呼叫這個函式**NULL**如`pItem`，-1 表示`nCurrentScale`。 這是為了判斷是否應該啟用縮放控制項。  
+>  通用 OLE 物件屬性對話方塊中顯示之前，架構會呼叫這個函式**NULL**如*pItem* ，-1 表示*nCurrentScale*。 這是為了判斷是否應該啟用縮放控制項。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 CIRC](../../visual-cpp-samples.md)   

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374506"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038327"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 類別
 用於資料傳輸以透過剪貼簿、拖放作業或內嵌 OLE 項目擷取各種格式的資料。  
@@ -107,7 +107,7 @@ void Attach(
  *lpDataObject*  
  指向 OLE 資料物件。  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **TRUE**如果應該 OLE 資料物件時釋放`COleDataObject`物件已終結，否則**FALSE**。  
   
 ### <a name="remarks"></a>備註  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
+ *cfFormat*  
  資料所要傳回的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  指向[STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812)會接收資料的結構。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料所要傳回的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值使用中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料所要傳回的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值使用中的其他欄位**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功則為非零；否則為 0。  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
+ *cfFormat*  
  資料所要傳回的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料所要傳回的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值使用中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料所要傳回的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值使用中的其他欄位**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  新的指標`CFile`或`CFile`-衍生的物件，其中包含資料，如果成功，否則**NULL**。  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
+ *cfFormat*  
  資料所要傳回的格式。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料所要傳回的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值使用中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述資料所要傳回的格式。 如果您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值使用中的其他欄位**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  包含資料成功; 如果在全域記憶體區塊的控制代碼否則**NULL**。  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)函式呼叫傳回時，收到格式資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>參數  
- `cfFormat`  
- 使用結構中的剪貼簿資料格式所指`lpFormatEtc`。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
+ *cfFormat*  
+ 使用結構中的剪貼簿資料格式所指*lpFormatEtc*。 這個參數可以是其中一個預先定義的剪貼簿格式或原生 Windows 所傳回的值[RegisterClipboardFormat](http://msdn.microsoft.com/library/windows/desktop/ms649049)函式。  
   
- `lpFormatEtc`  
- 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述所需的格式。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值`cfFormat`。 如果是**NULL**，預設值使用中的其他欄位**FORMATETC**結構。  
+ *lpFormatEtc*  
+ 指向[FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177)結構描述所需的格式。 只有當您想要指定所指定的剪貼簿格式之外的其他格式資訊，請為此參數提供值*cfFormat*。 如果是**NULL**，預設值使用中的其他欄位**FORMATETC**結構。  
   
 ### <a name="return-value"></a>傳回值  
  為非零，如果指定的格式，可用資料否則便是 0。  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>備註  
- `IDataObject`與`COleDataObject`藉由呼叫**附加**或`AttachClipboard`明確或由架構。 如果`bAutoRelease`參數**附加**是**FALSE**、`IDataObject`不會釋放物件。 在此情況下，呼叫端負責釋放`IDataObject`藉由呼叫[Iunknown](http://msdn.microsoft.com/library/windows/desktop/ms682317)。  
+ `IDataObject`與`COleDataObject`藉由呼叫`Attach`或`AttachClipboard`明確或由架構。 如果`bAutoRelease`參數`Attach`是**FALSE**、`IDataObject`不會釋放物件。 在此情況下，呼叫端負責釋放`IDataObject`藉由呼叫[Iunknown](http://msdn.microsoft.com/library/windows/desktop/ms682317)。  
   
 ## <a name="see-also"></a>另請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   

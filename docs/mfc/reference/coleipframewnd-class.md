@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370376"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040021"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 類別
 應用程式就地編輯視窗的基底。  
@@ -119,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- `lpPosRect`  
+ *lpPosRect*  
  指標`RECT`結構或`CRect`物件，其中包含的就地框架視窗的目前位置座標，以像素為單位，相對於用戶端區域中。  
   
- `lpClipRect`  
+ *lpClipRect*  
  指標`RECT`結構或`CRect`物件，其中包含的就地框架視窗的目前裁剪方框座標，以像素為單位，相對於用戶端區域中。  
   
 ### <a name="remarks"></a>備註  

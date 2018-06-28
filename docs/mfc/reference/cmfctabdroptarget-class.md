@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372910"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040983"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 類別
 提供索引標籤控制項和 OLE 程式庫之間的溝通機制。  
@@ -100,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pWnd`|未使用。|  
-|[輸入] `pDataObject`|在使用者拖曳物件的指標。|  
-|[輸入] `dwKeyState`|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
-|[輸入] `point`|用戶端座標中的資料指標的位置。|  
+|[in]*pWnd*|未使用。|  
+|[in]*pDataObject*|在使用者拖曳物件的指標。|  
+|[in]*dwKeyState*|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
+|[in]*點*|用戶端座標中的資料指標的位置。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果下拉式清單，就會發生在所指定的位置會造成的效果`point`。 它可以是下列一或多個項目：  
+ 如果下拉式清單，就會發生在所指定的位置會造成的效果*點*。 它可以是下列一或多個項目：  
   
 - `DROPEFFECT_NONE`  
   
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pWnd`|未使用。|  
+|[in]*pWnd*|未使用。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會呼叫`CMFCBaseTabCtrl::OnDragLeave`方法，以執行拖曳作業。  
@@ -156,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pWnd`|未使用。|  
-|[輸入] `pDataObject`|在使用者拖曳物件的指標。|  
-|[輸入] `dwKeyState`|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
-|[輸入] `point`|滑鼠指標在用戶端座標中的位置。|  
+|[in]*pWnd*|未使用。|  
+|[in]*pDataObject*|在使用者拖曳物件的指標。|  
+|[in]*dwKeyState*|包含輔助按鍵的狀態。 這是任意數目的下列組合： `MK_CONTROL`， `MK_SHIFT`， `MK_ALT`， `MK_LBUTTON`， `MK_MBUTTON`，和`MK_RBUTTON`。|  
+|[in]*點*|滑鼠指標在用戶端座標中的位置。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果下拉式清單，就會發生在所指定的位置會造成的效果`point`。 它可以是下列一或多個項目：  
+ 如果下拉式清單，就會發生在所指定的位置會造成的效果*點*。 它可以是下列一或多個項目：  
   
 - `DROPEFFECT_NONE`  
   
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pWnd`|未使用。|  
-|[輸入] `pDataObject`|在使用者拖曳物件的指標。|  
-|[輸入] `dropEffect`|預設拖放作業。|  
-|[輸入] `dropList`|未使用。|  
-|[輸入] `point`|滑鼠指標在用戶端座標中的位置。|  
+|[in]*pWnd*|未使用。|  
+|[in]*pDataObject*|在使用者拖曳物件的指標。|  
+|[in]*dropEffect*|預設拖放作業。|  
+|[in]*下拉清單*|未使用。|  
+|[in]*點*|滑鼠指標在用戶端座標中的位置。|  
   
 ### <a name="return-value"></a>傳回值  
  產生的置放效果。 它可以是下列一或多個項目：  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫`CMFCBaseTabCtrl::OnDrop`如果工具列 framework 是以自訂模式，可剪貼簿資料格式。 如果呼叫`CMFCBaseTabCtrl::OnDrop`傳回非零值，這個方法會傳回所指定的預設置放效果`dropEffect`。 否則，這個方法會傳回`DROPEFFECT_NONE`。 如需拖放效果的詳細資訊，請參閱[COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。  
+ 這個方法會呼叫`CMFCBaseTabCtrl::OnDrop`如果工具列 framework 是以自訂模式，可剪貼簿資料格式。 如果呼叫`CMFCBaseTabCtrl::OnDrop`傳回非零值，這個方法會傳回所指定的預設置放效果*dropEffect*。 否則，這個方法會傳回`DROPEFFECT_NONE`。 如需拖放效果的詳細資訊，請參閱[COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)。  
   
  如需自訂模式的詳細資訊，請參閱[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)。 如需剪貼簿資料格式的詳細資訊，請參閱[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)。  
   
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pOwner`|要登錄為置放目標的索引標籤控制項。|  
+|[in]*pOwner*|要登錄為置放目標的索引標籤控制項。|  
   
 ### <a name="return-value"></a>傳回值  
  如果登錄成功，則為非零否則便是 0。  

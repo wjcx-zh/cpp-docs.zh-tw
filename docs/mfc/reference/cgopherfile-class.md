@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366879"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040970"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile 類別
 提供在 Gopher 伺服器上尋找和讀取檔案的功能。  
@@ -46,7 +46,7 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|建構 `CGopherFile` 物件。|  
   
 ## <a name="remarks"></a>備註  
- Gopher 服務不允許使用者將資料寫入至 gopher 檔案，因為這項服務主要是做為找出資訊的功能表導向介面。 `CGopherFile`成員函式**寫入**， `WriteString`，和`Flush`並未實作`CGopherFile`。 呼叫這些函式上`CGopherFile`物件，會傳回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ Gopher 服務不允許使用者將資料寫入至 gopher 檔案，因為這項服務主要是做為找出資訊的功能表導向介面。 `CGopherFile`成員函式`Write`， `WriteString`，和`Flush`並未實作`CGopherFile`。 呼叫這些函式上`CGopherFile`物件，會傳回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
   
  若要深入了解如何`CGopherFile`運作方式與其他 MFC 網際網路類別，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。  
   
@@ -83,25 +83,25 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>參數  
- `hFile`  
+ *hFile*  
  控制代碼`HINTERNET`檔案。  
   
- `refLocator`  
+ *refLocator*  
  若要參考[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)物件。  
   
- `pConnection`  
+ *pConnection*  
  指標[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)物件。  
   
- `hSession`  
+ *hSession*  
  目前的網際網路工作階段控制代碼。  
   
- `pstrLocator`  
+ *pstrLocator*  
  用來找出 gopher 伺服器的字串指標。 請參閱[Gopher 工作階段](cgopherlocator-class.md)如需有關 gopher 定位器。  
   
  *dwLocLen*  
- 包含中的位元組數目為 DWORD `pstrLocator`。  
+ 包含中的位元組數目為 DWORD *pstrLocator*。  
   
- `dwContext`  
+ *dwContext*  
  正在開啟之檔案的內容識別碼指標。  
   
 ### <a name="remarks"></a>備註  

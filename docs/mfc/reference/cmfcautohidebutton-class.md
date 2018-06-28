@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375307"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038295"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 類別
 可顯示或隱藏 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) (設定為隱藏) 的按鈕。  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pParentBar`  
+ [in]*pParentBar*  
  為父工具列指標。  
   
- [輸入] `pAutoHideWnd`  
+ [in]*pAutoHideWnd*  
  指標[CDockablePane](../../mfc/reference/cdockablepane-class.md)物件。 此自動隱藏按鈕隱藏和顯示`CDockablePane`。  
   
- [輸入] `dwAlignment`  
+ [in]*dwAlignment*  
  值，指定按鈕的對齊方式，與主框架視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>備註  
  當您建立`CMFCAutoHideButton`物件，您必須使自動隱藏按鈕與特定`CDockablePane`。 使用者可以使用 [自動隱藏] 按鈕以隱藏和顯示相關聯`CDockablePane`。  
   
- `dwAlignment` 參數表示自動隱藏按鈕在應用程式中的位置。 這個參數可以是下列任何一個值：  
+ *DwAlignment*參數表示自動隱藏按鈕在應用程式所在的位置。 這個參數可以是下列任何一個值：  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rectBounds`  
+ [in]*rectBounds*  
  自動隱藏按鈕的週框。  
   
- [輸入] `rectBorderSize`  
+ [in]*rectBorderSize*  
  自動隱藏按鈕的每一端框線粗細。  
   
 ### <a name="remarks"></a>備註  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標。  
   
- [輸入] `rect`  
+ [in]*rect*  
  自動隱藏按鈕的週框。  
   
 ### <a name="remarks"></a>備註  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShow`  
+ [in]*bShow*  
  布林值，指定是否這個方法會顯示附加`CDockablePane`。  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShow`  
+ [in]*bShow*  
  布林值，指定是否要顯示自動隱藏按鈕。  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nOffset`  
+ [in]*nOffset*  
   
 ### <a name="remarks"></a>備註  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pNewBar`  
+ [in]*pNewBar*  
   
 ### <a name="remarks"></a>備註  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pFirstBarInGroup`  
+ [in]*pFirstBarInGroup*  
  群組中第一個列的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>參數  
- `bHighlight`  
+ *bHighlight*  
  指定新的自動隱藏按鈕狀態。 `TRUE` 表示按鈕會反白顯示，`FALSE`表示按鈕不會反白顯示。  
   
 ### <a name="remarks"></a>備註  

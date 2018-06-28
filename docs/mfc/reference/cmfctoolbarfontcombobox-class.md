@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3826a1a649cf4a2c3f292b660e90384edac2575e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373523"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040086"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 類別
 包含可讓使用者從系統字型的清單選取字型下拉式方塊控制項的工具列按鈕。  
@@ -64,7 +64,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
   
 2.  建構`CMFCToolBarFontComboBox`物件。  
   
-3.  在訊息處理常式來處理`AFX_WM_RESETTOOLBAR`訊息，請使用新的下拉式方塊按鈕取代原始的按鈕[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
+3.  處理 AFX_WM_RESETTOOLBAR 訊息的訊息處理常式，在 [原始] 按鈕，以取代新的下拉式方塊按鈕使用[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)。  
   
 4.  同步處理已選取下拉式方塊中的文件中的字型使用的字型[CMFCToolBarFontComboBox::SetFont](#setfont)方法。  
   
@@ -110,13 +110,13 @@ CMFCToolBarFontComboBox();
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `uiID`  
+ [in]*uiID*  
  下拉式方塊的命令識別碼。  
   
- [輸入] `iImage`  
+ [in]*iImage*  
  工具列影像的以零為起始的索引。 映像位於[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)物件[CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)類別會維護。  
   
- [輸入] `nFontType`  
+ [in]*nFontType*  
  下拉式方塊包含的字型類型。 這個參數可以是下列值的組合 (布林值 OR):  
   
  DEVICE_FONTTYPE  
@@ -125,23 +125,23 @@ CMFCToolBarFontComboBox();
   
  TRUETYPE_FONTTYPE  
   
- [輸入] `nCharSet`  
+ [in]*nCharSet*  
  如果設定為 DEFAULT_CHARSET，下拉式方塊包含所有字元集中的所有唯一名稱的字型。 （如果有具有相同名稱的兩種字型，下拉式方塊包含其中一個）。如果設定為有效的字元設定值，而下拉式方塊包含只在指定的字元集的字型。 請參閱[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)的可能字元清單設定。  
   
- [輸入] `dwStyle`  
+ [in]*dwStyle*  
  下拉式方塊樣式。 (請參閱[下拉式方塊樣式](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles))  
   
- [輸入] `iWidth`  
+ [in]*iWidth*  
  在編輯控制項的像素寬度。  
   
- [輸入] `nPitchAndFamily`  
+ [in]*nPitchAndFamily*  
  如果設定為 DEFAULT_PITCH，下拉式方塊包含不論字幅的字型。 如果設定為 FIXED_PITCH 或 VARIABLE_PITCH，下拉式方塊包含只與該音高類型的字型。 目前不支援字型系列為基礎的篩選。  
   
- [輸出] `pLstFontsExternal`  
+ [out]*pLstFontsExternal*  
  指標[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中儲存可用的字型。  
   
 ### <a name="remarks"></a>備註  
- 通常，`CMFCToolBarFontComboBox`物件使用的字型清單儲存於單一共用`CObList`物件。 如果您使用建構函式的第二個多載，提供的有效指標`pLstFontsExternal`、 該`CMFCToolBarFontComboBox`物件將會改為填滿`CObList`，`pLstFontsExternal`指向可用的字型。  
+ 通常，`CMFCToolBarFontComboBox`物件使用的字型清單儲存於單一共用`CObList`物件。 如果您使用建構函式的第二個多載，提供的有效指標*pLstFontsExternal*、 該`CMFCToolBarFontComboBox`物件將會改為填滿`CObList`， *pLstFontsExternal*指向以可用的字型。  
   
 ### <a name="example"></a>範例  
  下列範例示範如何建構`CMFCToolBarFontComboBox`物件。 此程式碼片段是 [WordPad 範例](../../visual-cpp-samples.md)的一部分。  
@@ -156,11 +156,11 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `iIndex`  
+ [in]*iIndex*  
  指定下拉式方塊項目的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
- 指標`CMFCFontInfo`物件。 如果`iIndex`未指定有效的項目索引，則傳回值是`NULL`。  
+ 指標`CMFCFontInfo`物件。 如果*iIndex*未指定有效的項目索引，則傳回值是`NULL`。  
   
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  指定高度，單位為像素字型下拉式方塊的下拉式方塊是否擁有者繪製樣式中的字元。  
@@ -183,20 +183,20 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `lpszName`  
+ [in]*lpszName*  
  指定字型名稱的前置詞。  
   
- [輸入] `nCharSet`  
+ [in]*nCharSet*  
  指定的字元集。  
   
- [輸入] `bExact`  
- 指定是否`lpszName`包含字型名稱或字型前置詞。  
+ [in]*bExact*  
+ 指定是否*lpszName*包含字型名稱或字型前置詞。  
   
 ### <a name="return-value"></a>傳回值  
  如果已成功; 選取的字型為非零否則便是 0。  
   
 ### <a name="remarks"></a>備註  
- 如果`bExact`是`TRUE`，這個方法會選取與您指定為名稱完全相符的字型`lpszName`。 如果`bExact`是`FALSE`，這個方法會選取開頭為指定之文字的字型`lpszName`，並使用您指定為字元集`nCharSet`。 如果`nCharSet`設定的字元集到 DEFAULT_CHARSET，將會忽略和只有`lpszName`將用來選取字型的字型。  
+ 如果*bExact*是`TRUE`，這個方法會選取與您指定為名稱完全相符的字型*lpszName*。 如果*bExact*是`FALSE`，這個方法會選取開頭為指定之文字的字型*lpszName* ，並使用您指定為字元集*nCharSet*. 如果*nCharSet*設定的字元集到 DEFAULT_CHARSET，將會忽略和只有*lpszName*將用來選取字型的字型。  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

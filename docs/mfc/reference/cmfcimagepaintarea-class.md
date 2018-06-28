@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368318"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037367"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 類別
 提供您用來修改影像編輯器 對話方塊中的映像的圖片區域。  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pParentDlg`|影像編輯器的父系對話方塊指標。|  
+|[in]*pParentDlg*|影像編輯器的父系對話方塊指標。|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  擷取目前的繪圖模式。  
@@ -122,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `pBitmap`|若要顯示新的點陣圖影像。|  
+|[in]*pBitmap*|若要顯示新的點陣圖影像。|  
   
 ### <a name="remarks"></a>備註  
- 如果`pBitmap`是`NULL`，這個方法會設定為零的可修改 [小畫家] 區域的大小。 否則，它提供的點陣圖影像的大小設定可修改 [小畫家] 區域的大小。  
+ 如果*pBitmap*是`NULL`，這個方法會設定為零的可修改 [小畫家] 區域的大小。 否則，它提供的點陣圖影像的大小設定可修改 [小畫家] 區域的大小。  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  設定目前繪圖的色彩。  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `color`|將新繪圖的色彩。|  
+|[in]*色彩*|將新繪圖的色彩。|  
   
 ### <a name="remarks"></a>備註  
  當您從映像編輯器調色盤列中選取色彩或色彩選擇器，架構會呼叫此方法來更新目前的繪圖色彩。 初始繪圖的色彩為黑色 (`COLORREF`值為 0)。  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |參數|描述|  
-|[輸入] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，指定目前的繪圖模式。|  
+|[in]*模式*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md)值，指定目前的繪圖模式。|  
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a67696289603697ddac541382d63f989881afaf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374172"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040856"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 類別
 實作編輯控制項放在功能區列上。  
@@ -181,16 +181,16 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  命令 ID 的`CMFCRibbonEdit`控制項。  
   
- [輸入] `nWidth`  
+ [in]*nWidth*  
  寬度，單位為像素的文字方塊`CMFCRibbonEdit`控制項。  
   
- [輸入] `lpszLabel`  
+ [in]*lpszLabel*  
  標籤`CMFCRibbonEdit`控制項。  
   
- [輸入] `nImage`  
+ [in]*nImage*  
  用於索引的小型影像`CMFCRibbonEdit`控制項。 使用的小型影像集合是由父功能區分類維護。  
   
 ### <a name="remarks"></a>備註  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `src`  
+ [in]*src*  
  來源 `CMFCRibbonEdit` 物件。  
   
 ### <a name="remarks"></a>備註  
- `src`參數必須是型別`CMFCRibbonEdit`。  
+ *Src*參數必須是型別`CMFCRibbonEdit`。  
   
 ##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  建立新的文字方塊，用於[CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md)物件。  
@@ -220,10 +220,10 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pWndParent`  
+ [in]*pWndParent*  
  父視窗的指標`CMFCRibbonEdit`物件。  
   
- [輸入] `dwEditStyle`  
+ [in]*dwEditStyle*  
  指定文字方塊的樣式。 您可以結合會在 < 備註 > 一節中所列出的視窗樣式[編輯控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775464)Windows SDK 中加以討論。  
   
 ### <a name="return-value"></a>傳回值  
@@ -273,10 +273,10 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nMin`  
+ [in]*nMin*  
  微調按鈕的最小的值。  
   
- [輸入] `nMax`  
+ [in]*nMax*  
  微調按鈕的最大值。  
   
 ### <a name="remarks"></a>備註  
@@ -290,7 +290,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標`CMFCRibbonEdit`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -318,7 +318,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標`CMFCRibbonEdit`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -355,7 +355,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bInFloatyMode`  
+ [in]*bInFloatyMode*  
  `TRUE` 如果`CMFCRibbonEdit`控制項為浮動的模式; 否則`FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -433,7 +433,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標`CMFCRibbonEdit`控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -446,7 +446,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標`CMFCRibbonEdit`控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -459,7 +459,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標`CMFCRibbonEdit`控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -478,22 +478,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
  裝置內容的指標`CMFCRibbonEdit`控制項。  
   
- [輸入] `strText`  
- 顯示文字[ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 類別")。  
+ [in]*strText*  
+ 顯示文字[cmfcribbonedit 類別](../../mfc/reference/cmfcribbonedit-class.md "")。  
   
- [輸入] `nTextOffset`  
+ [in]*nTextOffset*  
  像素為單位，從清單方塊來顯示文字的左邊算起的距離。  
   
- [輸入] `rect`  
+ [in]*rect*  
  顯示矩形`CMFCRibbonEdit`控制項。  
   
- [輸入] `bIsSelected`  
+ [in]*bIsSelected*  
  不使用這個參數。  
   
- [輸入] `bHighlighted`  
+ [in]*bHighlighted*  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -507,7 +507,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bEnable`  
+ [in]*bEnable*  
  `TRUE` 若要啟用控制項。`FALSE`停用控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -520,7 +520,7 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bHighlight`  
+ [in]*bHighlight*  
  `TRUE` 如果在指標位於界限`CMFCRibbonEdit`控制項等控制項，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -533,7 +533,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bIsMenuKey`  
+ [in]*bIsMenuKey*  
  `TRUE` 如果 keytip 顯示快顯功能表。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -549,7 +549,7 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -562,7 +562,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `point`  
+ [in]*點*  
  不使用這個參數。  
   
 ### <a name="remarks"></a>備註  
@@ -575,7 +575,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bIsRTL`  
+ [in]*bIsRTL*  
  `TRUE` 如果配置為從右至左。`FALSE`如果版面配置是由左到右。  
   
 ### <a name="remarks"></a>備註  
@@ -588,7 +588,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `bShow`  
+ [in]*bShow*  
  `TRUE` 若要顯示的控制項。`FALSE`隱藏控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -613,10 +613,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- `pParent`  
+ *pParent*  
  指標的父視窗`CMFCRibbonEdit`物件。  
   
- `data`  
+ *data*  
  協助工具資料`CMFCRibbonEdit`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -632,7 +632,7 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `strText`  
+ [in]*strText*  
  文字方塊的文字。  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
@@ -643,11 +643,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nAlign`  
+ [in]*nAlign*  
  文字對齊方式列舉值。 請參閱 < 備註 > 一節提供可能的值。  
   
 ### <a name="remarks"></a>備註  
- 參數`nAlign`是其中一個下編輯控制項樣式：  
+ 參數*nAlign*是其中一個下編輯控制項樣式：  
   
 - **ES_LEFT**為靠左對齊  
   
@@ -667,10 +667,10 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nWidth`  
+ [in]*nWidth*  
  寬度 （以像素的文字方塊）。  
   
- `bInFloatyMode`  
+ *bInFloatyMode*  
  `TRUE` 設定浮點模式; 寬度`FALSE`設定的一般模式的寬度。  
   
 ### <a name="remarks"></a>備註  

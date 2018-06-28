@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372693"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037721"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 類別
 `CMFCRibbonSlider`類別會實作可以加入功能區列或功能區狀態列的滑桿控制項。 功能區滑桿控制項類似出現在 Office 2007 應用程式中的縮放滑桿。  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nID`  
+ [in]*nID*  
  滑桿識別碼。  
   
- [in]。 `nWidth`  
+ [in]。 *nWidth*  
  滑桿寬度的像素。  
   
 ### <a name="remarks"></a>備註  
- 建構功能區滑桿，`nWidth`像素寬面板分類加入滑桿的位置中。 根據預設，滑動軸是水平的。  
+ 建構功能區滑桿， *nWidth*像素寬面板分類加入滑桿的位置中。 根據預設，滑動軸是水平的。  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  傳回目前的滑桿控制項的位置。  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `pDC`  
+ [in]*pDC*  
   
 ### <a name="remarks"></a>備註  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nPos`  
+ [in]*nPos*  
  指定要設定滑桿的位置。 這個位置是相對於滑桿的開頭。  
   
- [輸入] `bRedraw`  
+ [in]*bRedraw*  
  如果`TRUE`，滑桿會重新繪製。  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nMin`  
+ [in]*nMin*  
  指定滑桿控制項的最小值。  
   
- [輸入] `nMax`  
+ [in]*nMax*  
  指定滑桿控制項的最大值。  
   
 ### <a name="remarks"></a>備註  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in]。 `bSet`  
+ [in]。 *bSet*  
  `TRUE` 若要顯示 顯示比例按鈕。`FALSE`隱藏起來。  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>參數  
- [輸入] `nZoomIncrement`  
+ [in]*nZoomIncrement*  
  指定滑桿控制項的顯示比例增量。  
   
 ## <a name="see-also"></a>另請參閱  
